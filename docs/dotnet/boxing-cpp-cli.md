@@ -1,28 +1,23 @@
 ---
 title: Konwersja boxing (C + +/ CLI) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: f4ee27a8-6a34-432d-b9ec-39285d513b23
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e49c6f82099e6d7dbcfc47079d19228d7a91dc05
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b9898b4a640d2f3aa4e38ceb621521ffb301fed
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="boxing-ccli"></a>Konwersja boxing (C++/CLI)
 Opakowanie jest proces konwersji typu wartości na typ `object` lub do dowolnego typu interfejsu, który jest implementowany przez typ wartości. Jeśli środowisko uruchomieniowe języka wspólnego (CLR) pola typu wartości, jest zawijany wartość w `System.Object` i zapisuje go na stercie zarządzanej. Rozpakowywanie wyodrębnia typ wartości z obiektu. Opakowanie jest niejawne; Rozpakowywanie jest jawne.  

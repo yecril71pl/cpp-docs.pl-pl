@@ -1,13 +1,10 @@
 ---
-title: "Proste klasy typów danych | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Proste klasy typów danych | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.data
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - data classes [MFC]
 - simple data type classes [MFC]
 ms.assetid: 0d591d68-0a33-49e9-8a6d-90c90de5c16a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2b4df05d64cb97032477ca50ff4b0ce572829b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54d7f200ee35489f37256023d28bdd3260bf48ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="simple-data-type-classes"></a>Proste klasy typów danych
-Następujące klasy Hermetyzowanie rysowania współrzędne, ciągi znaków i czas i informacje o dacie, dzięki czemu wygodne użycie składni języka C++. Te obiekty są często używane jako parametry do funkcji Członkowskich klas systemu Windows w bibliotece klas. Ponieważ `CPoint`, `CSize`, i `CRect` odpowiadają **punktu**, **rozmiar**, i `RECT` struktury odpowiednio w zestawie SDK systemu Windows można użyć tych obiektów C++ klas wszędzie tam, gdzie można użyć tych konstrukcji języka C. Klasy zawierają użyteczne interfejsy za pośrednictwem ich funkcje Członkowskie. `CStringT`zapewnia bardzo elastyczne ciągi dynamicznych. `CTime`, `COleDateTime`, `CTimeSpan`, i **COleTimeSpan** reprezentują wartości godziny i daty. Aby uzyskać więcej informacji na temat tych klas, zobacz artykuł [datę i godzinę](../atl-mfc-shared/date-and-time.md).  
+Następujące klasy Hermetyzowanie rysowania współrzędne, ciągi znaków i czas i informacje o dacie, dzięki czemu wygodne użycie składni języka C++. Te obiekty są często używane jako parametry do funkcji Członkowskich klas systemu Windows w bibliotece klas. Ponieważ `CPoint`, `CSize`, i `CRect` odpowiadają **punktu**, **rozmiar**, i `RECT` struktury odpowiednio w zestawie SDK systemu Windows można użyć tych obiektów C++ klas wszędzie tam, gdzie można użyć tych konstrukcji języka C. Klasy zawierają użyteczne interfejsy za pośrednictwem ich funkcje Członkowskie. `CStringT` zapewnia bardzo elastyczne ciągi dynamicznych. `CTime`, `COleDateTime`, `CTimeSpan`, i **COleTimeSpan** reprezentują wartości godziny i daty. Aby uzyskać więcej informacji na temat tych klas, zobacz artykuł [datę i godzinę](../atl-mfc-shared/date-and-time.md).  
   
  Klasy, które zaczynają się od "**COle**" są encapsulations typów danych dostarczanych przez OLE. W programów systemu Windows, niezależnie od tego, czy są używane inne funkcje OLE można używać tych typów danych.  
   
@@ -58,7 +53,7 @@ Następujące klasy Hermetyzowanie rysowania współrzędne, ciągi znaków i cz
  [CRect](../atl-mfc-shared/reference/crect-class.md)  
  Zawiera współrzędne obszary prostokątne.  
   
- [Cimagelist —](../mfc/reference/cimagelist-class.md)  
+ [CImageList](../mfc/reference/cimagelist-class.md)  
  Udostępnia funkcję listy obrazów systemu Windows. Listy obrazów są używane przez formanty listy i drzewa. One mogą służyć do przechowywania i archiwum zestaw o tej samej wielkości map bitowych.  
   
  [COleVariant](../mfc/reference/colevariant-class.md)  

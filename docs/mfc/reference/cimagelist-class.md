@@ -1,12 +1,9 @@
 ---
-title: "Cimagelist — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Cimagelist — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CImageList
@@ -83,17 +80,15 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1dae44f60c61222659304bea4ee811999d50280b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54804ff4c6b2410aa47ea4d7cf5f5d3ab48316f9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cimagelist-class"></a>Cimagelist — klasa
 Udostępnia funkcje formantu listy typowych obrazu systemu Windows.  
@@ -176,7 +171,7 @@ class CImageList : public CObject
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxcmn.h  
   
-##  <a name="add"></a>CImageList::Add  
+##  <a name="add"></a>  CImageList::Add  
  Wywołanie tej funkcji, aby dodać jeden lub więcej obrazów lub ikony do listy obrazów.  
   
 ```  
@@ -214,7 +209,7 @@ int Add(HICON hIcon);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CImageList#1](../../mfc/reference/codesnippet/cpp/cimagelist-class_1.cpp)]  
   
-##  <a name="attach"></a>CImageList::Attach  
+##  <a name="attach"></a>  CImageList::Attach  
  Wywołanie tej funkcji do dołączenia do listy obrazów `CImageList` obiektu.  
   
 ```  
@@ -231,7 +226,7 @@ BOOL Attach(HIMAGELIST hImageList);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CImageList#2](../../mfc/reference/codesnippet/cpp/cimagelist-class_2.cpp)]  
   
-##  <a name="begindrag"></a>CImageList::BeginDrag  
+##  <a name="begindrag"></a>  CImageList::BeginDrag  
  Wywołanie tej funkcji, aby rozpocząć, przeciągając obrazu.  
   
 ```  
@@ -256,14 +251,14 @@ BOOL BeginDrag(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CImageList#3](../../mfc/reference/codesnippet/cpp/cimagelist-class_3.cpp)]  
   
-##  <a name="cimagelist"></a>CImageList::CImageList  
+##  <a name="cimagelist"></a>  CImageList::CImageList  
  Konstruuje `CImageList` obiektu.  
   
 ```  
 CImageList();
 ```  
   
-##  <a name="copy"></a>CImageList::Copy  
+##  <a name="copy"></a>  CImageList::Copy  
  Ta funkcja członkowska implementuje zachowanie funkcji Win32 [ImageList_Copy](http://msdn.microsoft.com/library/windows/desktop/bb761520), zgodnie z opisem w zestawie Windows SDK.  
   
 ```  
@@ -292,7 +287,7 @@ BOOL Copy(
   
 |Wartość|Znaczenie|  
 |-----------|-------------|  
-|`ILCF_MOVE`|Obraz źródłowy jest kopiowana na indeks obrazu docelowego. Ta operacja powoduje wielu wystąpień danego obrazu. `ILCF_MOVE`jest ustawieniem domyślnym.|  
+|`ILCF_MOVE`|Obraz źródłowy jest kopiowana na indeks obrazu docelowego. Ta operacja powoduje wielu wystąpień danego obrazu. `ILCF_MOVE` jest ustawieniem domyślnym.|  
 |`ILCF_SWAP`|Obraz źródłowy i docelowy wymiany pozycji w liście obrazu.|  
   
  `pSrc`  
@@ -304,7 +299,7 @@ BOOL Copy(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CImageList#6](../../mfc/reference/codesnippet/cpp/cimagelist-class_4.cpp)]  
   
-##  <a name="create"></a>CImageList::Create  
+##  <a name="create"></a>  CImageList::Create  
  Inicjuje listy obrazów i dołącza go do [CImageList](../../mfc/reference/cimagelist-class.md) obiektu.  
   
 ```  
@@ -407,7 +402,7 @@ BOOL Create(CImageList* pImageList);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CImageList#7](../../mfc/reference/codesnippet/cpp/cimagelist-class_5.cpp)]  
   
-##  <a name="deleteimagelist"></a>CImageList::DeleteImageList  
+##  <a name="deleteimagelist"></a>  CImageList::DeleteImageList  
  Wywołanie tej funkcji można usunąć listy obrazów.  
   
 ```  
@@ -420,7 +415,7 @@ BOOL DeleteImageList();
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CImageList#8](../../mfc/reference/codesnippet/cpp/cimagelist-class_6.cpp)]  
   
-##  <a name="deletetempmap"></a>CImageList::DeleteTempMap  
+##  <a name="deletetempmap"></a>  CImageList::DeleteTempMap  
  Wywoływana automatycznie przez `CWinApp` obsługi czas bezczynności, `DeleteTempMap` usuwa wszystkie tymczasowe `CImageList` obiekty utworzone przez [FromHandle](#fromhandle), ale zniszczy dowolnym uchwyty ( `hImageList`) tymczasowo skojarzone z **ImageList** obiektów.  
   
 ```  
@@ -430,7 +425,7 @@ static void PASCAL DeleteTempMap();
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CImageList#9](../../mfc/reference/codesnippet/cpp/cimagelist-class_7.cpp)]  
   
-##  <a name="detach"></a>CImageList::Detach  
+##  <a name="detach"></a>  CImageList::Detach  
  Wywołanie tej funkcji można odłączyć obiektu listy obrazów z `CImageList` obiektu.  
   
 ```  
@@ -446,7 +441,7 @@ HIMAGELIST Detach();
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CImageList::Attach](#attach).  
   
-##  <a name="dragenter"></a>CImageList::DragEnter  
+##  <a name="dragenter"></a>  CImageList::DragEnter  
  Podczas operacji przeciągania, blokuje aktualizacji do okna, określony przez `pWndLock` i wyświetla obraz przeciągania pozycji określonej przez `point`.  
   
 ```  
@@ -475,7 +470,7 @@ static BOOL PASCAL DragEnter(
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CImageList::BeginDrag](#begindrag).  
   
-##  <a name="dragleave"></a>CImageList::DragLeave  
+##  <a name="dragleave"></a>  CImageList::DragLeave  
  Odblokowuje okna, określony przez `pWndLock` i ukrywa obrazu przeciągania, umożliwiając okna do zaktualizowania.  
   
 ```  
@@ -492,7 +487,7 @@ static BOOL PASCAL DragLeave(CWnd* pWndLock);
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CImageList::EndDrag](#enddrag).  
   
-##  <a name="dragmove"></a>CImageList::DragMove  
+##  <a name="dragmove"></a>  CImageList::DragMove  
  Wywołanie tej funkcji, aby przenieść obrazu, który jest przeciągany podczas operacji przeciągania i upuszczania.  
   
 ```  
@@ -512,7 +507,7 @@ static BOOL PASCAL DragMove(CPoint pt);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CImageList#4](../../mfc/reference/codesnippet/cpp/cimagelist-class_8.cpp)]  
   
-##  <a name="dragshownolock"></a>CImageList::DragShowNolock  
+##  <a name="dragshownolock"></a>  CImageList::DragShowNolock  
  Pokazuje lub ukrywa obrazu przeciągania podczas operacji przeciągania, bez blokowania okna.  
   
 ```  
@@ -529,7 +524,7 @@ static BOOL PASCAL DragShowNolock(BOOL bShow);
 ### <a name="remarks"></a>Uwagi  
  [CImageList::DragEnter](#dragenter) funkcja blokuje wszystkie aktualizacje w oknie podczas operacji przeciągania. Jednak ta funkcja nie blokuje okna.  
   
-##  <a name="draw"></a>CImageList::Draw  
+##  <a name="draw"></a>  CImageList::Draw  
  Wywołanie tej funkcji do rysowania obrazu, który jest przeciągany podczas operacji przeciągania i upuszczania.  
   
 ```  
@@ -567,7 +562,7 @@ BOOL Draw(
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CImageList::SetOverlayImage](#setoverlayimage).  
   
-##  <a name="drawex"></a>CImageList::DrawEx  
+##  <a name="drawex"></a>  CImageList::DrawEx  
  Rysuje obraz elementu listy w kontekście określonego urządzenia.  
   
 ```  
@@ -612,7 +607,7 @@ BOOL DrawEx(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CImageList#10](../../mfc/reference/codesnippet/cpp/cimagelist-class_9.cpp)]  
   
-##  <a name="drawindirect"></a>CImageList::DrawIndirect  
+##  <a name="drawindirect"></a>  CImageList::DrawIndirect  
  Wywołanie tej funkcji Członkowskich do rysowania obrazu z listy obrazów.  
   
 ```  
@@ -705,7 +700,7 @@ BOOL DrawIndirect(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CImageList#11](../../mfc/reference/codesnippet/cpp/cimagelist-class_10.cpp)]  
   
-##  <a name="enddrag"></a>CImageList::EndDrag  
+##  <a name="enddrag"></a>  CImageList::EndDrag  
  Wywołanie tej funkcji, aby zakończyć operację przeciągania.  
   
 ```  
@@ -718,7 +713,7 @@ static void PASCAL EndDrag();
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CImageList#5](../../mfc/reference/codesnippet/cpp/cimagelist-class_11.cpp)]  
   
-##  <a name="extracticon"></a>CImageList::ExtractIcon  
+##  <a name="extracticon"></a>  CImageList::ExtractIcon  
  Wywołanie tej funkcji, aby utworzyć ikonę na podstawie obrazu i jego maskę powiązane w listy obrazów.  
   
 ```  
@@ -738,7 +733,7 @@ HICON ExtractIcon(int nImage);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CImageList#12](../../mfc/reference/codesnippet/cpp/cimagelist-class_12.cpp)]  
   
-##  <a name="fromhandle"></a>CImageList::FromHandle  
+##  <a name="fromhandle"></a>  CImageList::FromHandle  
  Zwraca wskaźnik do `CImageList` obiektu, gdy uchwyt do listy obrazów.  
   
 ```  
@@ -758,7 +753,7 @@ static CImageList* PASCAL FromHandle(HIMAGELIST hImageList);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CImageList#13](../../mfc/reference/codesnippet/cpp/cimagelist-class_13.cpp)]  
   
-##  <a name="fromhandlepermanent"></a>CImageList::FromHandlePermanent  
+##  <a name="fromhandlepermanent"></a>  CImageList::FromHandlePermanent  
  Zwraca wskaźnik do `CImageList` obiektu, gdy uchwyt do listy obrazów.  
   
 ```  
@@ -778,7 +773,7 @@ static CImageList* PASCAL FromHandlePermanent(HIMAGELIST hImageList);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CImageList#14](../../mfc/reference/codesnippet/cpp/cimagelist-class_14.cpp)]  
   
-##  <a name="getbkcolor"></a>CImageList::GetBkColor  
+##  <a name="getbkcolor"></a>  CImageList::GetBkColor  
  Wywołanie tej funkcji można pobrać bieżący kolor tła dla listy obrazów.  
   
 ```  
@@ -791,7 +786,7 @@ COLORREF GetBkColor() const;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CImageList::SetBkColor](#setbkcolor).  
   
-##  <a name="getdragimage"></a>CImageList::GetDragImage  
+##  <a name="getdragimage"></a>  CImageList::GetDragImage  
  Pobiera listę tymczasowego obrazu używanego do przeciągania.  
   
 ```  
@@ -810,7 +805,7 @@ static CImageList* PASCAL GetDragImage(
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli powodzenia wskaźnik do tymczasowej obrazu listy jest używana do przeciąganie; w przeciwnym razie **NULL**.  
   
-##  <a name="getimagecount"></a>CImageList::GetImageCount  
+##  <a name="getimagecount"></a>  CImageList::GetImageCount  
  Wywołanie tej funkcji, aby pobrać liczbę obrazów w listy obrazów.  
   
 ```  
@@ -823,7 +818,7 @@ int GetImageCount() const;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CImageList::ExtractIcon](#extracticon).  
   
-##  <a name="getimageinfo"></a>CImageList::GetImageInfo  
+##  <a name="getimageinfo"></a>  CImageList::GetImageInfo  
  Wywołanie tej funkcji można pobrać informacji o obrazie.  
   
 ```  
@@ -845,7 +840,7 @@ BOOL GetImageInfo(
 ### <a name="remarks"></a>Uwagi  
  `IMAGEINFO` Struktura zawiera informacje o obrazie w listy obrazów.  
   
-##  <a name="getsafehandle"></a>CImageList::GetSafeHandle  
+##  <a name="getsafehandle"></a>  CImageList::GetSafeHandle  
  Wywołanie tej funkcji można pobrać **m_hImageList** element członkowski danych.  
   
 ```  
@@ -858,7 +853,7 @@ HIMAGELIST GetSafeHandle() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CImageList#15](../../mfc/reference/codesnippet/cpp/cimagelist-class_15.cpp)]  
   
-##  <a name="m_himagelist"></a>CImageList::m_hImageList  
+##  <a name="m_himagelist"></a>  CImageList::m_hImageList  
  Uchwyt listy obrazów dołączonych do tego obiektu.  
   
  **HIMAGELIST m_hImageList;**  
@@ -869,7 +864,7 @@ HIMAGELIST GetSafeHandle() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CImageList#23](../../mfc/reference/codesnippet/cpp/cimagelist-class_16.cpp)]  
   
-##  <a name="operator_himagelist"></a>CImageList::operator HIMAGELIST  
+##  <a name="operator_himagelist"></a>  CImageList::operator HIMAGELIST  
  Użyj tego operatora, aby uzyskać dołączone dojście `CImageList` obiektu.  
   
 ```  
@@ -885,7 +880,7 @@ operator HIMAGELIST() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CImageList#16](../../mfc/reference/codesnippet/cpp/cimagelist-class_17.cpp)]  
   
-##  <a name="read"></a>CImageList::Read  
+##  <a name="read"></a>  CImageList::Read  
  Wywołanie tej funkcji można odczytać listy obrazów z archiwum.  
   
 ```  
@@ -902,7 +897,7 @@ BOOL Read(CArchive* pArchive);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CImageList#18](../../mfc/reference/codesnippet/cpp/cimagelist-class_18.cpp)]  
   
-##  <a name="remove"></a>CImageList::Remove  
+##  <a name="remove"></a>  CImageList::Remove  
  Wywołanie tej funkcji można usunąć obrazu z obiektu listy obrazów.  
   
 ```  
@@ -922,7 +917,7 @@ BOOL Remove(int nImage);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CImageList#19](../../mfc/reference/codesnippet/cpp/cimagelist-class_19.cpp)]  
   
-##  <a name="replace"></a>CImageList::Replace  
+##  <a name="replace"></a>  CImageList::Replace  
  Wywołanie tej funkcji, aby zamienić obrazu w listy obrazów z nowego obrazu.  
   
 ```  
@@ -961,7 +956,7 @@ int Replace(
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CImageList::SetImageCount](#setimagecount).  
   
-##  <a name="setbkcolor"></a>CImageList::SetBkColor  
+##  <a name="setbkcolor"></a>  CImageList::SetBkColor  
  Wywołanie tej funkcji, aby ustawić kolor tła dla listy obrazów.  
   
 ```  
@@ -978,7 +973,7 @@ COLORREF SetBkColor(COLORREF cr);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CImageList#20](../../mfc/reference/codesnippet/cpp/cimagelist-class_20.cpp)]  
   
-##  <a name="setdragcursorimage"></a>CImageList::SetDragCursorImage  
+##  <a name="setdragcursorimage"></a>  CImageList::SetDragCursorImage  
  Tworzy nowy obraz przeciągania, łącząc danego obrazu (zwykle obraz kursora myszy) z bieżącego obrazu przeciągania.  
   
 ```  
@@ -1000,7 +995,7 @@ BOOL SetDragCursorImage(
 ### <a name="remarks"></a>Uwagi  
  Ponieważ funkcji przeciągania korzystała z nowego obrazu podczas operacji przeciągania, należy używać systemu Windows [wartość](http://msdn.microsoft.com/library/windows/desktop/ms648396) Ukryj wskaźnik myszy rzeczywiste po wywołaniu funkcji `CImageList::SetDragCursorImage`. W przeciwnym razie system może być w dwóch kursory myszy w czasie trwania operacji przeciągania.  
   
-##  <a name="setimagecount"></a>CImageList::SetImageCount  
+##  <a name="setimagecount"></a>  CImageList::SetImageCount  
  Wywołanie tej funkcji Członkowskich zresetować liczbę obrazów w `CImageList` obiektu.  
   
 ```  
@@ -1022,7 +1017,7 @@ BOOL SetImageCount(UINT uNewCount);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CImageList#21](../../mfc/reference/codesnippet/cpp/cimagelist-class_21.cpp)]  
   
-##  <a name="setoverlayimage"></a>CImageList::SetOverlayImage  
+##  <a name="setoverlayimage"></a>  CImageList::SetOverlayImage  
  Wywołanie tej funkcji można dodać do listy obrazów, które mają być używane jako maski nakładki liczony od zera indeks obrazu.  
   
 ```  
@@ -1049,7 +1044,7 @@ BOOL SetOverlayImage(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CImageList#22](../../mfc/reference/codesnippet/cpp/cimagelist-class_22.cpp)]  
   
-##  <a name="write"></a>CImageList::Write  
+##  <a name="write"></a>  CImageList::Write  
  Wywołanie tej funkcji w celu zapisania obiektu listy obrazów do archiwum.  
   
 ```  

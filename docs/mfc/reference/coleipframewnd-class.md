@@ -1,12 +1,9 @@
 ---
 title: Klasa COleIPFrameWnd | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleIPFrameWnd
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - COleIPFrameWnd [MFC], OnCreateControlBars
 - COleIPFrameWnd [MFC], RepositionFrame
 ms.assetid: 24abb2cb-826c-4dda-a287-d8a8900a5763
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1833cbbbfb6706cffe73770bcd9b61ff755a645
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 466948653a5464a940a027e473e79c00dbf9a6ab
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleipframewnd-class"></a>Klasa COleIPFrameWnd
 Podstawa dla okna do edycji w miejscu aplikacji.  
@@ -65,7 +60,7 @@ class COleIPFrameWnd : public CFrameWnd
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -76,7 +71,7 @@ class COleIPFrameWnd : public CFrameWnd
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxole.h  
   
-##  <a name="coleipframewnd"></a>COleIPFrameWnd::COleIPFrameWnd  
+##  <a name="coleipframewnd"></a>  COleIPFrameWnd::COleIPFrameWnd  
  Konstruuje `COleIPFrameWnd` obiektu i inicjuje jego informacje o stanie w miejscu, który jest przechowywany w strukturze typu **OLEINPLACEFRAMEINFO**.  
   
 ```  
@@ -86,7 +81,7 @@ COleIPFrameWnd();
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji, zobacz [OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737) w zestawie Windows SDK.  
   
-##  <a name="oncreatecontrolbars"></a>COleIPFrameWnd::OnCreateControlBars  
+##  <a name="oncreatecontrolbars"></a>  COleIPFrameWnd::OnCreateControlBars  
  Wywołania framework `OnCreateControlBars` działać, jeśli element jest aktywowany do edycji w miejscu.  
   
 ```  
@@ -113,7 +108,7 @@ virtual BOOL OnCreateControlBars(
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja nie działa. Należy przesłonić tę funkcję, aby wykonać wszelkie specjalnego przetwarzania wymagany, gdy są tworzone paski sterowania.  
   
-##  <a name="repositionframe"></a>COleIPFrameWnd::RepositionFrame  
+##  <a name="repositionframe"></a>  COleIPFrameWnd::RepositionFrame  
  Wywołania framework `RepositionFrame` funkcji członkowskiej ułożyć paski sterowania i zmienia położenie okna do edycji w miejscu, wszystkie z nich jest widoczne.  
   
 ```  

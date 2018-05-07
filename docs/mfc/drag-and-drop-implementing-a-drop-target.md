@@ -1,13 +1,10 @@
 ---
-title: "Przeciąganie i upuszczanie: Implementowanie miejsca docelowego | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Przeciąganie i upuszczanie: Implementowanie miejsca docelowego | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - OLE drag and drop [MFC], drop target
 - drag and drop [MFC], drop target
 ms.assetid: 0689f1ec-5326-4008-b226-4b373c881358
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fc73eb6627e63b8013180b7608633a9ee424c92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 414437f044869fef7ae48883a88688ad50c9ac5f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drag-and-drop-implementing-a-drop-target"></a>Przeciąganie i upuszczanie: implementowanie miejsca docelowego
 W tym artykule opisano sposób wprowadzania aplikacji miejsca docelowego. Implementowanie miejsca docelowego przyjmuje nieco więcej pracy niż Implementowanie miejsca źródłowego, ale jest nadal stosunkowo proste. Metody te dotyczą także aplikacji innych niż OLE.  
@@ -34,7 +29,7 @@ W tym artykule opisano sposób wprowadzania aplikacji miejsca docelowego. Implem
   
 1.  Dodaj zmienną członkowską do każdego widoku w aplikacji, które mają być miejsca docelowego. Ta zmienna elementu członkowskiego musi być typu `COleDropTarget` lub klasą pochodną go.  
   
-2.  W klasie widoku funkcji, która obsługuje `WM_CREATE` komunikatu (zazwyczaj `OnCreate`), wywołaj nowej zmiennej członkowskiej `Register` funkcji członkowskiej. `Revoke`będzie ona wywoływana automatycznie dla możesz gdy widok zostanie zniszczony.  
+2.  W klasie widoku funkcji, która obsługuje `WM_CREATE` komunikatu (zazwyczaj `OnCreate`), wywołaj nowej zmiennej członkowskiej `Register` funkcji członkowskiej. `Revoke` będzie ona wywoływana automatycznie dla możesz gdy widok zostanie zniszczony.  
   
 3.  Zastąp następujące funkcje. Jeśli w całej aplikacji ma takie samo zachowanie, należy zastąpić te funkcje w klasie widoku. Aby zmodyfikować zachowanie w przypadku izolowanej lub chcesz włączyć porzucenie na inną niż`CView` z systemem windows, Zastąp te funkcje w Twojej `COleDropTarget`-klasy.  
   

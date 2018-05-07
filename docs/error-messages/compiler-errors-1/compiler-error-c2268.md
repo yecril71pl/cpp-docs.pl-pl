@@ -1,13 +1,10 @@
 ---
-title: "C2268 błąd kompilatora | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: C2268 błąd kompilatora | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C2268
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2268
 ms.assetid: 0ed055c9-3c6f-4df2-a5b6-85cf0e01a249
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b67ed29d083284a714fece22c36e09ec7aa0b66f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2a38269cbd3bf133841e42a4197e986deb3167ab
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2268"></a>C2268 błąd kompilatora
 "Funkcja" jest pomocnika biblioteki kompilatora wstępnie zdefiniowane. Biblioteka pomocników nie jest obsługiwana z opcją /GL; Skompiluj plik obiektu 'Plik' bez/GL.  

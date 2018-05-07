@@ -1,12 +1,9 @@
 ---
 title: Klasa CMDITabInfo | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMDITabInfo
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CMDITabInfo [MFC], m_style
 - CMDITabInfo [MFC], m_tabLocation
 ms.assetid: 988ae1b7-4f7f-4239-b88f-7e28b3291c5e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b670b26855f5edcfb955d3dd0f8150a999f3a8e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b95706603c8fe8a8f53be8cd0db405cd649271f2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmditabinfo-class"></a>Klasa CMDITabInfo
 `CMDITabInfo` Klasa jest używana do przekazania parametrów do [CMDIFrameWndEx::EnableMDITabbedGroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) metody. Grupy z kartami zestaw elementów członkowskich tej klasy, do sterowania zachowaniem MDI.  
@@ -102,7 +97,7 @@ class CMDITabInfo
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxmdiclientareawnd.h  
   
-##  <a name="m_bactivetabclosebutton_"></a>CMDITabInfo::m_bActiveTabCloseButton;  
+##  <a name="m_bactivetabclosebutton_"></a>  CMDITabInfo::m_bActiveTabCloseButton;  
  Określa, czy **Zamknij** przycisk jest wyświetlany na etykiecie aktywnej karty.  
   
 ```  
@@ -112,7 +107,7 @@ BOOL m_bActiveTabCloseButton;
 ### <a name="remarks"></a>Uwagi  
  Jeśli `TRUE`, zostanie wyświetlona etykieta karcie active **Zamknij** przycisku. **Zamknij** przycisk zostanie usunięty z prawym górnym rogu obszaru karty. W przeciwnym razie nie będą wyświetlane etykiety karcie active **Zamknij** przycisku. **Zamknij** przycisk pojawi się w prawym górnym rogu obszaru karty.  
   
-##  <a name="m_bautocolor"></a>CMDITabInfo::m_bAutoColor  
+##  <a name="m_bautocolor"></a>  CMDITabInfo::m_bAutoColor  
  Określa, czy każdej karcie MDI ma własną kolorów.  
   
 ```  
@@ -122,7 +117,7 @@ BOOL m_bAutoColor;
 ### <a name="remarks"></a>Uwagi  
  Jeśli `TRUE`, każda karta ma własną kolorów. Zestaw kolorów jest zarządzana przez biblioteki MFC. W przeciwnym razie będą wyświetlane w biały. Wartość domyślna to `FALSE`.  
   
-##  <a name="m_bdocumentmenu"></a>CMDITabInfo::m_bDocumentMenu  
+##  <a name="m_bdocumentmenu"></a>  CMDITabInfo::m_bDocumentMenu  
  Określa, czy poszczególne karty wyświetla menu podręczne, który zawiera listę otwartych dokumentów na prawej krawędzi obszaru karty.  
   
 ```  
@@ -132,7 +127,7 @@ BOOL m_bDocumentMenu;
 ### <a name="remarks"></a>Uwagi  
  Jeśli `TRUE`, system windows każdej karcie Wyświetla menu podręcznego zawierający listę otwartych dokumentów na prawej krawędzi obszaru karty; W przeciwnym razie okno karty są wyświetlane przyciski przewijania w prawej krawędzi obszaru karty. Wartość domyślna to `FALSE`.  
   
-##  <a name="m_benabletabswap"></a>CMDITabInfo::m_bEnableTabSwap  
+##  <a name="m_benabletabswap"></a>  CMDITabInfo::m_bEnableTabSwap  
  Określa, czy użytkownika można wymienić przez przeciągnięcie pozycji kart.  
   
 ```  
@@ -142,14 +137,14 @@ BOOL m_bEnableTabSwap;
 ### <a name="remarks"></a>Uwagi  
  Jeśli `TRUE`, użytkownik może zmienić położenie karty przez przeciągnięcie karty. W przeciwnym razie użytkownik nie można zmienić położenia karty. Wartość domyślna to `TRUE`.  
   
-##  <a name="m_bflatframe"></a>CMDITabInfo::m_bFlatFrame  
+##  <a name="m_bflatframe"></a>  CMDITabInfo::m_bFlatFrame  
  Określa, czy każde okno karta ma prosty ramki.  
   
 ```  
 BOOL m_bFlatFrame;  
 ```  
   
-##  <a name="m_btabclosebutton"></a>CMDITabInfo::m_bTabCloseButton  
+##  <a name="m_btabclosebutton"></a>  CMDITabInfo::m_bTabCloseButton  
  Określa, czy każde okno kartę Wyświetla **Zamknij** przycisku.  
   
 ```  
@@ -159,7 +154,7 @@ BOOL m_bTabCloseButton;
 ### <a name="remarks"></a>Uwagi  
  Jeśli `TRUE`, wyświetla okna każdej karcie **Zamknij** przycisk na prawej krawędzi karty. W przeciwnym razie **Zamknij** nie jest wyświetlany przycisk. Wartość domyślna to `TRUE`.  
   
-##  <a name="m_btabcustomtooltips"></a>CMDITabInfo::m_bTabCustomTooltips  
+##  <a name="m_btabcustomtooltips"></a>  CMDITabInfo::m_bTabCustomTooltips  
  Określa, czy karty wyświetlać elementy ToolTip.  
   
 ```  
@@ -169,7 +164,7 @@ BOOL m_bTabCustomTooltips;
 ### <a name="remarks"></a>Uwagi  
  Jeśli `TRUE`, wysyła aplikacji `AFX_WM_ON_GET_TAB_TOOLTIP` komunikat do ramki głównej. Ten komunikat można obsługiwać przy użyciu `ON_REGISTERED_MESSAGE` makra.  
   
-##  <a name="m_btabicons"></a>CMDITabInfo::m_bTabIcons  
+##  <a name="m_btabicons"></a>  CMDITabInfo::m_bTabIcons  
  Określa, czy mają być wyświetlane ikony na kartach MDI.  
   
 ```  
@@ -179,7 +174,7 @@ BOOL m_bTabIcons;
 ### <a name="remarks"></a>Uwagi  
  Jeśli `TRUE`, ikony są wyświetlane na każdej karcie MDI. W przeciwnym razie ikony nie są wyświetlane na kartach. Wartość domyślna to `FALSE`.  
   
-##  <a name="m_ntabbordersize"></a>CMDITabInfo::m_nTabBorderSize  
+##  <a name="m_ntabbordersize"></a>  CMDITabInfo::m_nTabBorderSize  
  Określa rozmiar obramowania okna w pikselach, każdej karty.  
   
 ```  
@@ -189,7 +184,7 @@ int m_nTabBorderSize;
 ### <a name="remarks"></a>Uwagi  
  [CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize) zwraca wartość domyślną.  
   
-##  <a name="m_style"></a>CMDITabInfo::m_style  
+##  <a name="m_style"></a>  CMDITabInfo::m_style  
  Określa styl etykiet kartę.  
   
 ```  
@@ -217,7 +212,7 @@ CMFCTabCtrl::Style m_style
  `STYLE_3D_ROUNDED_SCROLL`  
  Styl 3W z etykietami round kartę.  
   
-##  <a name="m_tablocation"></a>CMDITabInfo::m_tabLocation  
+##  <a name="m_tablocation"></a>  CMDITabInfo::m_tabLocation  
  Określa, czy etykiety karty znajdują się u góry lub u dołu strony.  
   
 ```  
@@ -231,7 +226,7 @@ CMFCTabCtrl::Location m_tabLocation;
   
 -   LOCATION_TOP: etykiety karty znajdują się w górnej części strony  
   
-##  <a name="serialize"></a>CMDITabInfo::Serialize  
+##  <a name="serialize"></a>  CMDITabInfo::Serialize  
  Odczytuje i zapisuje ten obiekt z archiwum lub do archiwum.  
   
 ```  
@@ -239,7 +234,7 @@ void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`ar`  
+ [in] `ar`  
  A [CArchive — klasa](../../mfc/reference/carchive-class.md) obiektu do zserializowania.  
   
 ## <a name="see-also"></a>Zobacz też  

@@ -1,12 +1,9 @@
 ---
 title: Klasa CInterpolatorBase | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CInterpolatorBase
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CInterpolatorBase [MFC], SetDuration
 - CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79cea720391127f52d441de8f02c53756790d4b2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0ca520fe89e04d984e6490c495f2622a6037c79
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cinterpolatorbase-class"></a>Klasa CInterpolatorBase
 Implementuje wywołanie zwrotne, które jest wywoływane przez interfejs API animacji, gdy należy obliczyć nową wartość zmiennej animacji.  
@@ -91,14 +86,14 @@ class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxanimationcontroller.h  
   
-##  <a name="cinterpolatorbase"></a>CInterpolatorBase::CInterpolatorBase  
+##  <a name="cinterpolatorbase"></a>  CInterpolatorBase::CInterpolatorBase  
  Tworzy obiekt CInterpolatorBase.  
   
 ```  
 CInterpolatorBase();
 ```  
   
-##  <a name="createinstance"></a>CInterpolatorBase::CreateInstance  
+##  <a name="createinstance"></a>  CInterpolatorBase::CreateInstance  
  Tworzy wystąpienie CInterpolatorBase i przechowuje wskaźnik do interpolatora niestandardowego, który będzie obsługiwał zdarzenia.  
   
 ```  
@@ -116,7 +111,7 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
   
 ### <a name="return-value"></a>Wartość zwracana  
   
-##  <a name="getdependencies"></a>CInterpolatorBase::GetDependencies  
+##  <a name="getdependencies"></a>  CInterpolatorBase::GetDependencies  
  Pobiera interpolatora zależności.  
   
 ```  
@@ -139,7 +134,7 @@ IFACEMETHOD(GetDependencies)(
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli metoda zakończy się powodzeniem, zwraca wartość S_OK. Jeśli nie ustawiono CCustomInterpolator lub niestandardowych implementacja zwraca wartość FALSE z metody GetDependencies zwraca E_FAIL.  
   
-##  <a name="getduration"></a>CInterpolatorBase::GetDuration  
+##  <a name="getduration"></a>  CInterpolatorBase::GetDuration  
  Pobiera interpolatora czasu trwania.  
   
 ```  
@@ -153,7 +148,7 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli metoda zakończy się powodzeniem, zwraca wartość S_OK. Jeśli nie ustawiono CCustomInterpolator lub niestandardowych implementacja zwraca wartość FALSE z metody GetDuration zwraca E_FAIL.  
   
-##  <a name="getfinalvalue"></a>CInterpolatorBase::GetFinalValue  
+##  <a name="getfinalvalue"></a>  CInterpolatorBase::GetFinalValue  
  Pobiera wartość końcowego, do którego prowadzi interpolatora.  
   
 ```  
@@ -167,7 +162,7 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli metoda zakończy się powodzeniem, zwraca wartość S_OK. Jeśli nie ustawiono CCustomInterpolator lub niestandardowych implementacja zwraca wartość FALSE z metody GetFinalValue zwraca E_FAIL.  
   
-##  <a name="interpolatevalue"></a>CInterpolatorBase::InterpolateValue  
+##  <a name="interpolatevalue"></a>  CInterpolatorBase::InterpolateValue  
  Interpolacji wartość danego przesunięcia.  
   
 ```  
@@ -186,7 +181,7 @@ IFACEMETHOD(InterpolateValue)(
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli metoda zakończy się powodzeniem, zwraca wartość S_OK. Jeśli nie ustawiono CCustomInterpolator lub niestandardowych implementacja zwraca wartość FALSE z metody InterpolateValue zwraca E_FAIL.  
   
-##  <a name="interpolatevelocity"></a>CInterpolatorBase::InterpolateVelocity  
+##  <a name="interpolatevelocity"></a>  CInterpolatorBase::InterpolateVelocity  
  Szybkość pracy od danego przesunięcia interpolacji  
   
 ```  
@@ -205,7 +200,7 @@ IFACEMETHOD(InterpolateVelocity)(
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli metoda zakończy się powodzeniem, zwraca wartość S_OK. Jeśli nie ustawiono CCustomInterpolator lub niestandardowych implementacja zwraca wartość FALSE z metody InterpolateVelocity zwraca E_FAIL.  
   
-##  <a name="setcustominterpolator"></a>CInterpolatorBase::SetCustomInterpolator  
+##  <a name="setcustominterpolator"></a>  CInterpolatorBase::SetCustomInterpolator  
  Przechowuje wskaźnik do interpolatora niestandardowego, który będzie obsługiwał zdarzenia.  
   
 ```  
@@ -216,7 +211,7 @@ void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
  `pInterpolator`  
  Wskaźnik do interpolatora niestandardowych.  
   
-##  <a name="setduration"></a>CInterpolatorBase::SetDuration  
+##  <a name="setduration"></a>  CInterpolatorBase::SetDuration  
  Ustawia czas trwania interpolatora  
   
 ```  
@@ -230,7 +225,7 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli metoda zakończy się powodzeniem, zwraca wartość S_OK. Jeśli nie ustawiono CCustomInterpolator lub niestandardowych implementacja zwraca wartość FALSE z metody SetDuration zwraca E_FAIL.  
   
-##  <a name="setinitialvalueandvelocity"></a>CInterpolatorBase::SetInitialValueAndVelocity  
+##  <a name="setinitialvalueandvelocity"></a>  CInterpolatorBase::SetInitialValueAndVelocity  
  Ustawia wartość początkową interpolatora i szybkość pracy.  
   
 ```  

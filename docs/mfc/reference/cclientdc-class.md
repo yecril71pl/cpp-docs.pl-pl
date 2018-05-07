@@ -1,12 +1,9 @@
 ---
-title: "Cclientdc — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Cclientdc — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CClientDC
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CClientDC [MFC], CClientDC
 - CClientDC [MFC], m_hWnd
 ms.assetid: 8a871d6b-06f8-496e-9fa3-9a5780848369
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a92fb471ee30e725cd97bff6cbda8d551c0bc859
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c51e252157b90423b35152c10a85f972feace72
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cclientdc-class"></a>Cclientdc — klasa
 Odpowiada on za wywoływanie funkcji Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) podczas konstruowania i [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) w chwili zniszczenia.  
@@ -69,7 +64,7 @@ class CClientDC : public CDC
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxwin.h  
   
-##  <a name="cclientdc"></a>CClientDC::CClientDC  
+##  <a name="cclientdc"></a>  CClientDC::CClientDC  
  Konstruuje `CClientDC` obiektu, który uzyskuje dostęp do obszaru klienckiego [CWnd](../../mfc/reference/cwnd-class.md) wskazywana przez `pWnd`.  
   
 ```  
@@ -88,7 +83,7 @@ explicit CClientDC(CWnd* pWnd);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#42](../../mfc/codesnippet/cpp/cclientdc-class_1.cpp)]  
   
-##  <a name="m_hwnd"></a>CClientDC::m_hWnd  
+##  <a name="m_hwnd"></a>  CClientDC::m_hWnd  
  `HWND` z `CWnd` wskaźnik został użyty do utworzenia `CClientDC` obiektu.  
   
 ```  
@@ -96,7 +91,7 @@ HWND m_hWnd;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `m_hWnd`jest zmienną chronionych.  
+ `m_hWnd` jest zmienną chronionych.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CClientDC::CClientDC](#cclientdc).  

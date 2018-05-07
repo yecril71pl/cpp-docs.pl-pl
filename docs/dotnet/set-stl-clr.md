@@ -1,12 +1,9 @@
 ---
 title: Ustaw (STL/CLR) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::set
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <set> header [STL/CLR]
 - set class [STL/CLR]
 ms.assetid: 27d3628c-741a-43a7-bef1-5085536f679e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9624f08c54629657e7f52c2c688d2083aa557a56
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6a7ebf4d15d85cb43a6f7101c70e444067a3f7b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="set-stlclr"></a>set (STL/CLR)
 Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp dwukierunkowego. Użyj kontenera `set` do zarządzania sekwencję elementów jako drzewo uporządkowanej zrównoważony (prawie) węzły, każdy przechowywania jeden element.  
@@ -127,7 +122,7 @@ template<typename Key>
   
  Obiekt delegowany musi nałożyć strict słabe porządkowanie dla kluczy typu [set::key_type (STL/CLR)](../dotnet/set-key-type-stl-clr.md). Oznacza to, na dowolne dwa klucze `X` i `Y`:  
   
- `key_comp()(X, Y)`Zwraca wyniku tego samego typu Boolean przy każdym wywołaniu.  
+ `key_comp()(X, Y)` Zwraca wyniku tego samego typu Boolean przy każdym wywołaniu.  
   
  Jeśli `key_comp()(X, Y)` ma wartość true, następnie `key_comp()(Y, X)` musi mieć wartość false.  
   

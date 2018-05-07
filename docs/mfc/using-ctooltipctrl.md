@@ -1,13 +1,10 @@
 ---
 title: Korzystanie z CToolTipCtrl | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CToolTipCtrl
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CToolTipCtrl class [MFC], creating tool tips
 - CToolTipCtrl class
 ms.assetid: 8fc58a04-4792-4223-a092-d349d11344da
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82785d29d57fcdbd64addbe69dcc90ed3d2c9829
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b08f2dfcff0c4df17def326e3a047507bb2a3c4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-ctooltipctrl"></a>Korzystanie z CToolTipCtrl
 [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) klasa hermetyzuje funkcjonalność formantem etykietki narzędzia, mała okno podręczne wyświetlające pojedynczy wiersz tekst opisujący cel narzędzia w aplikacji. Etykietka narzędzia, która jest niewidoczna w większości przypadków pojawiające się tylko po użytkownik umieszcza kursor na narzędzia i drugi pozostawia jej istnieje na około pół. Etykietka narzędzia, która pojawi się w pobliżu kursor i znika, gdy użytkownik kliknie przycisk myszy lub przenosi kursor poza narzędzie.  

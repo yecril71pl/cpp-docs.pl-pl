@@ -1,13 +1,10 @@
 ---
-title: "Schowek: Dodawanie innych formatów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Schowek: Dodawanie innych formatów | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,30 +15,28 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e6f7f21a64c062e2f210be9f13ce04428c397f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c28fd1d628d0aed79028e43d9cce383f3acbb4ae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clipboard-adding-other-formats"></a>Schowek: dodawanie innych formatów
 W tym temacie wyjaśniono, jak i rozwiń listę obsługiwanych formatów, szczególnie w przypadku obsługi. Temat [Schowek: kopiowanie i wkleić danych](../mfc/clipboard-copying-and-pasting-data.md) opisuje minimalne wykonania niezbędnych do obsługi kopiowanie i wklejanie ze Schowka. Jeśli to wszystkie zaimplementowaniem tylko formaty w Schowku znajduje są `CF_METAFILEPICT`, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**i prawdopodobnie `CF_LINKSOURCE`. Większości aplikacji potrzebna jest więcej formatów w Schowku niż tych trzech.  
   
-##  <a name="_core_registering_custom_formats"></a>Rejestrowanie niestandardowe formaty  
+##  <a name="_core_registering_custom_formats"></a> Rejestrowanie niestandardowe formaty  
  Aby utworzyć własne niestandardowe formaty, wykonaj tę samą procedurę, należy użyć podczas rejestrowania dowolnego niestandardowego formatu Schowka: przekazywania nazwy formatu **RegisterClipboardFormat** funkcji i używać jej wartości zwracany jako identyfikator formatu.  
   
-##  <a name="_core_placing_formats_on_the_clipboard"></a>Wprowadzenie do formatów w Schowku  
+##  <a name="_core_placing_formats_on_the_clipboard"></a> Wprowadzenie do formatów w Schowku  
  Aby dodać więcej formatów w Schowku znajduje, konieczne jest przesłonięcie `OnGetClipboardData` funkcji klasy pochodne albo `COleClientItem` lub `COleServerItem` (w zależności od tego, czy dane do skopiowania jest natywny). W tej funkcji należy użyć następującej procedury.  
   
 #### <a name="to-place-formats-on-the-clipboard"></a>Formaty do Schowka  
   
-1.  Utwórz `COleDataSource` obiektu.  
+1.  Tworzy obiekt `COleDataSource`.  
   
 2.  Przekazywanie tego źródła danych do funkcji, która dodaje z formatów danych natywnych do listy obsługiwanych formatów przez wywołanie metody `COleDataSource::CacheGlobalData`.  
   

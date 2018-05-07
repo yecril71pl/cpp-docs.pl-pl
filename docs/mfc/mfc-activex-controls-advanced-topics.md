@@ -1,13 +1,10 @@
 ---
-title: "Formanty MFC ActiveX: Tematy dotyczące zaawansowanego | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Formanty MFC ActiveX: Tematy dotyczące zaawansowanego | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2205862a438099c08801556f511ebf3c5e93a277
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb451abc3aabe52d9aeffbc92f80df38f02e0b99
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>Kontrolki ActiveX MFC: tematy zaawansowane
 W tym artykule omówiono Tematy zaawansowane powiązany Programowanie formantów ActiveX. Należą do nich następujące elementy:  
@@ -46,7 +41,7 @@ W tym artykule omówiono Tematy zaawansowane powiązany Programowanie formantów
   
 -   [Uzyskiwanie dostępu do formantów okna dialogowego, które nie są widoczne w czasie wykonywania](#_core_accessing_dialog_controls_that_are_invisible_at_run_time)  
   
-##  <a name="_core_using_database_classes_in_activex_controls"></a>Używanie klas baz danych w kontrolkach ActiveX  
+##  <a name="_core_using_database_classes_in_activex_controls"></a> Używanie klas baz danych w kontrolkach ActiveX  
  Klasy formantów ActiveX są częścią biblioteki klas, należy zastosować te same procedury i reguły dotyczące używania klas baz danych w przypadku standardowej aplikacji MFC Programowanie formantów ActiveX, korzystających z klasami baz danych MFC.  
   
  Ogólne omówienie klasami baz danych MFC, zobacz [klasami baz danych MFC (DAO i ODBC)](../data/mfc-database-classes-odbc-and-dao.md). Artykuł wprowadzono klasach MFC ODBC i MFC DAO klas i kieruje użytkownika, aby uzyskać więcej szczegółów, w zależności.  
@@ -54,7 +49,7 @@ W tym artykule omówiono Tematy zaawansowane powiązany Programowanie formantów
 > [!NOTE]
 >  Środowiska Visual C++ i kreatorów nie obsługują DAO (mimo że uwzględniono klasy DAO i nadal można ich używać). Firma Microsoft zaleca użycie [szablony OLE DB](../data/oledb/ole-db-programming.md) lub [ODBC i MFC](../data/odbc/odbc-and-mfc.md) dla nowych projektów. Obiekty DAO należy używać tylko w zachowaniu istniejących aplikacji.  
   
-##  <a name="_core_implementing_a_parameterized_property"></a>Implementowanie sparametryzowane  
+##  <a name="_core_implementing_a_parameterized_property"></a> Implementowanie sparametryzowane  
  Właściwość parametrycznego (nazywane również tablicy właściwości) to metoda udostępnianie jednorodnych kolekcję wartości jako jedna właściwość formantu. Na przykład służy sparametryzowane właściwości do udostępnienia tablicy lub słownika jako właściwość. W języku Visual Basic takiego dostępu do właściwości tablicy notacji:  
   
  [!code-vb[NVC_MFC_AxVb#1](../mfc/codesnippet/visualbasic/mfc-activex-controls-advanced-topics_1.vb)]  
@@ -106,7 +101,7 @@ W tym artykule omówiono Tematy zaawansowane powiązany Programowanie formantów
   
  Dla tej właściwości powinna być użyteczna, można zadeklarować zmiennej członkowskiej tablicą dwuwymiarową w klasie formantu typu **krótki**, do przechowywania wartości dla właściwości sparametryzowana. Można następnie zmodyfikuj funkcję Get, aby powrócić do wartości przechowywanej w odpowiednich wiersz i kolumnę, wskazane przez parametry i zmodyfikuj funkcję zestaw aktualizacji wartości odwołuje się parametry wierszy i kolumn.  
   
-##  <a name="_core_handling_errors_in_your_activex_control"></a>Obsługa błędów formantu ActiveX  
+##  <a name="_core_handling_errors_in_your_activex_control"></a> Obsługa błędów formantu ActiveX  
  Jeśli wystąpią błędy w formancie, konieczne może być raport o błędzie do formantu kontenera. Istnieją dwie metody zgłaszania błędów, w zależności od sytuacji, w której występuje błąd. Jeśli wystąpi błąd w wartości właściwości pobierania lub ustawiania funkcji, lub w implementacji metody automatyzacji OLE, powinny wywoływać formantu [COleControl::ThrowError](../mfc/reference/colecontrol-class.md#throwerror), które sygnały do kontrolki użytkownika wystąpił błąd. Jeśli błąd pojawia się w dowolnym momencie, powinny wywoływać formantu [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror), który generowane zdarzenie błędu.  
   
  Aby wskazać typ błędu, który wystąpił, kontrolki musi przejść pomyślnie kodu błędu `ThrowError` lub `FireError`. Kod błędu to kod stanu OLE, który ma wartość 32-bitowych. Jeśli to możliwe, wybierz kod błędu z standardowy zestaw kodów zdefiniowanych w OLECTL. Plik nagłówka H. W poniższej tabeli przedstawiono te kody.  
@@ -162,7 +157,7 @@ W tym artykule omówiono Tematy zaawansowane powiązany Programowanie formantów
   
  Jeśli tworzysz formantu ActiveX, aby zastąpić istniejący formant VBX zdefiniuj Twojej kody błędów kontrolki ActiveX z wartości liczbowych używanych przez formant VBX aby upewnić się, że kody błędów są zgodne.  
   
-##  <a name="_core_handling_special_keys_in_your_control"></a>Klawisze specjalne Obsługa w formancie  
+##  <a name="_core_handling_special_keys_in_your_control"></a> Klawisze specjalne Obsługa w formancie  
  W niektórych przypadkach można obsługiwać niektórych kombinacji klawiszy w specjalny sposób; na przykład, Wstaw nowy wiersz po naciśnięciu klawisza ENTER w tekście wielowierszowym polu formantu lub przenosić między grupy edycji kontroluje, gdy kierunkowe naciśnięty Identyfikatora klucza.  
   
  Jeśli klasą podstawową formantu ActiveX jest `COleControl`, można zastąpić [CWnd::PreTranslateMessage](../mfc/reference/cwnd-class.md#pretranslatemessage) do obsługi wiadomości, zanim kontenera przetwarza je. Korzystając z tej techniki, zawsze zwracają **TRUE** Jeśli obsługi wiadomości w zastąpienia z `PreTranslateMessage`.  
@@ -173,7 +168,7 @@ W tym artykule omówiono Tematy zaawansowane powiązany Programowanie formantów
   
  Więcej informacji dotyczących obsługi interfejsy klawiatury dla formantu ActiveX znajduje się w dokumentacji zestawu SDK ActiveX.  
   
-##  <a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a>Uzyskiwanie dostępu do formantów okna dialogowego, które nie są widoczne w czasie wykonywania  
+##  <a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a> Uzyskiwanie dostępu do formantów okna dialogowego, które nie są widoczne w czasie wykonywania  
  Można utworzyć kontrolki okna dialogowego, bez interfejsu użytkownika, które nie są widoczne w czasie wykonywania. Jeśli dodasz niewidoczne w czasie wykonywania formantu ActiveX — okno dialogowe i użyj [CWnd::GetDlgItem](../mfc/reference/cwnd-class.md#getdlgitem) do kontroli dostępu, kontrolka nie będzie działać poprawnie. Zamiast tego warto z nich korzystać z poniższych można uzyskać obiektu, który reprezentuje kontrolkę:  
   
 -   Za pomocą elementu członkowskiego zmiennej Kreatora dodawania, wybierz **zmiennej formantu** , a następnie wybierz identyfikator formantu. Wprowadź nazwę zmiennej elementu członkowskiego i wybierz klasy otoki formantu jako **— typ formantu**.  

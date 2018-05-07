@@ -1,12 +1,9 @@
 ---
 title: Klasa CPaneFrameWnd | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPaneFrameWnd
@@ -141,17 +138,15 @@ helpviewer_keywords:
 - CPaneFrameWnd [MFC], OnDrawBorder
 - CPaneFrameWnd [MFC], m_bUseSaveBits
 ms.assetid: ea3423a3-2763-482e-b763-817036ded10d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e93061da24ac148ac47d96f84d6dfcea67045235
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6846f50b0e89193992a42ea50e785009f31e6d19
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpaneframewnd-class"></a>Klasa CPaneFrameWnd
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -258,7 +253,7 @@ class CPaneFrameWnd : public CWnd
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -267,7 +262,7 @@ class CPaneFrameWnd : public CWnd
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxPaneFrameWnd.h  
   
-##  <a name="addpane"></a>CPaneFrameWnd::AddPane  
+##  <a name="addpane"></a>  CPaneFrameWnd::AddPane  
  Dodaje okienko.  
   
 ```  
@@ -275,10 +270,10 @@ virtual void AddPane(CBasePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pWnd`  
+ [in] `pWnd`  
  Okienko, aby dodać.  
   
-##  <a name="addremovepanefromgloballist"></a>CPaneFrameWnd::AddRemovePaneFromGlobalList  
+##  <a name="addremovepanefromgloballist"></a>  CPaneFrameWnd::AddRemovePaneFromGlobalList  
  Dodaje lub usuwa okienko z globalnej listy.  
   
 ```  
@@ -288,23 +283,23 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pWnd`  
+ [in] `pWnd`  
  Okienko, aby dodać lub usunąć.  
   
- [in]`bAdd`  
+ [in] `bAdd`  
  Jeśli zera, należy dodać okienka. Jeśli jest to 0, Usuń okienko.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli metoda zakończyło się pomyślnie; w przeciwnym razie 0.  
   
-##  <a name="adjustlayout"></a>CPaneFrameWnd::AdjustLayout  
+##  <a name="adjustlayout"></a>  CPaneFrameWnd::AdjustLayout  
  Dostosowuje układ okno ramowe minimalnej.  
   
 ```  
 virtual void AdjustLayout();
 ```  
   
-##  <a name="adjustpaneframes"></a>CPaneFrameWnd::AdjustPaneFrames  
+##  <a name="adjustpaneframes"></a>  CPaneFrameWnd::AdjustPaneFrames  
 
   
 ```  
@@ -313,7 +308,7 @@ virtual void AdjustPaneFrames();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="calcbordersize"></a>CPaneFrameWnd::CalcBorderSize  
+##  <a name="calcbordersize"></a>  CPaneFrameWnd::CalcBorderSize  
  Oblicza rozmiar obramowania dla mini okno.  
   
 ```  
@@ -321,13 +316,13 @@ virtual void CalcBorderSize(CRect& rectBorderSize) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`rectBorderSize`  
+ [out] `rectBorderSize`  
  Zawiera rozmiar wyrażony w pikselach obramowania mini okno.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda jest wywoływana przez platformę, by Oblicz rozmiar obramowania mini okno. Rozmiar zwróconego zależy od czy mini okno zawiera pasek narzędzi czy [CDockablePane](../../mfc/reference/cdockablepane-class.md).  
   
-##  <a name="calcexpecteddockedrect"></a>CPaneFrameWnd::CalcExpectedDockedRect  
+##  <a name="calcexpecteddockedrect"></a>  CPaneFrameWnd::CalcExpectedDockedRect  
  Oblicz oczekiwanego prostokąt zadokowanych okien.  
   
 ```  
@@ -340,25 +335,25 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pWndToDock`  
+ [in] `pWndToDock`  
  Wskaźnik do okna, aby dokowania.  
   
- [in]`ptMouse`  
+ [in] `ptMouse`  
  Lokalizacja myszy.  
   
- [out]`rectResult`  
+ [out] `rectResult`  
  Obliczony prostokąt.  
   
- [out]`bDrawTab`  
+ [out] `bDrawTab`  
  Jeśli `TRUE`, Rysuj karty. Jeśli `FALSE`, nie Rysuj karty.  
   
- [out]`ppTargetBar`  
+ [out] `ppTargetBar`  
  Wskaźnik do okienka docelowej.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda oblicza prostokąt okna zajmują użytkownika przeciągania okna do punktu określonego przez `ptMouse` i zadokowane go brak.  
   
-##  <a name="canbeattached"></a>CPaneFrameWnd::CanBeAttached  
+##  <a name="canbeattached"></a>  CPaneFrameWnd::CanBeAttached  
  Określa, czy bieżące okienko może być zadokowany do innego okienka lub ramki okna.  
   
 ```  
@@ -366,9 +361,9 @@ virtual BOOL CanBeAttached() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli okienko może być zadokowany do innego okienka lub ramki okna; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli okienko może być zadokowany do innego okienka lub ramki okna; w przeciwnym razie `FALSE`.  
   
-##  <a name="canbedockedtopane"></a>CPaneFrameWnd::CanBeDockedToPane  
+##  <a name="canbedockedtopane"></a>  CPaneFrameWnd::CanBeDockedToPane  
  Określa, czy okno ramowe minimalna może być zadokowany do okienka.  
   
 ```  
@@ -376,13 +371,13 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDockingBar`  
+ [in] `pDockingBar`  
  Okienko.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli można zadokowana mini ramki `pDockingBar`; w przeciwnym razie wartość 0.  
   
-##  <a name="checkgrippervisibility"></a>CPaneFrameWnd::CheckGripperVisibility  
+##  <a name="checkgrippervisibility"></a>  CPaneFrameWnd::CheckGripperVisibility  
 
   
 ```  
@@ -391,14 +386,14 @@ virtual void CheckGripperVisibility();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="converttotabbeddocument"></a>CPaneFrameWnd::ConvertToTabbedDocument  
+##  <a name="converttotabbeddocument"></a>  CPaneFrameWnd::ConvertToTabbedDocument  
  Konwertuje dokument z kartami okienka.  
   
 ```  
 virtual void ConvertToTabbedDocument();
 ```  
   
-##  <a name="create"></a>CPaneFrameWnd::Create  
+##  <a name="create"></a>  CPaneFrameWnd::Create  
  Tworzy mini okno i dołącza go do [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) obiektu.  
   
 ```  
@@ -411,28 +406,28 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszWindowName`  
+ [in] `lpszWindowName`  
  Określa tekst do wyświetlenia na mini okno.  
   
- [in]`dwStyle`  
+ [in] `dwStyle`  
  Określa styl okna. Aby uzyskać więcej informacji, zobacz [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in]`rect`  
+ [in] `rect`  
  Określa początkowy rozmiar i położenie okna mini.  
   
- [in] [out]`pParentWnd`  
+ [in] [out] `pParentWnd`  
  Określa ramki mini okno nadrzędne. Ta wartość nie może być `NULL`.  
   
- [in] [out]`pContext`  
+ [in] [out] `pContext`  
  Określa kontekst zdefiniowane przez użytkownika.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli okno została utworzona pomyślnie; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli okno została utworzona pomyślnie; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Mini okno jest tworzony w dwóch krokach. Najpierw tworzy platformę `CPaneFrameWnd` obiektu. Po drugie, wywołuje `Create` utworzyć mini okno systemu Windows i dołączenie go do `CPaneFrameWnd` obiektu.  
   
-##  <a name="createex"></a>CPaneFrameWnd::CreateEx  
+##  <a name="createex"></a>  CPaneFrameWnd::CreateEx  
  Tworzy mini okno i dołącza go do [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) obiektu.  
   
 ```  
@@ -446,31 +441,31 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`dwStyleEx`  
+ [in] `dwStyleEx`  
  Określa styl okna rozszerzonej. Aby uzyskać więcej informacji, zobacz [rozszerzone Style okna](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
   
- [in]`lpszWindowName`  
+ [in] `lpszWindowName`  
  Określa tekst do wyświetlenia na mini okno.  
   
- [in]`dwStyle`  
+ [in] `dwStyle`  
  Określa styl okna. Aby uzyskać więcej informacji, zobacz [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in]`rect`  
+ [in] `rect`  
  Określa początkowy rozmiar i położenie okna mini.  
   
- [in] [out]`pParentWnd`  
+ [in] [out] `pParentWnd`  
  Określa ramki mini okno nadrzędne. Ta wartość nie może być `NULL`.  
   
- [in] [out]`pContext`  
+ [in] [out] `pContext`  
  Określa kontekst zdefiniowane przez użytkownika.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli okno została utworzona pomyślnie; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli okno została utworzona pomyślnie; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Mini okno jest tworzony w dwóch krokach. Najpierw tworzy platformę `CPaneFrameWnd` obiektu. Po drugie, wywołuje `Create` utworzyć mini okno systemu Windows i dołączenie go do `CPaneFrameWnd` obiektu.  
   
-##  <a name="dockpane"></a>CPaneFrameWnd::DockPane  
+##  <a name="dockpane"></a>  CPaneFrameWnd::DockPane  
  Stacje dokujące okienko.  
   
 ```  
@@ -478,13 +473,13 @@ virtual CDockablePane* DockPane(BOOL& bWasDocked);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`bWasDocked`  
- `TRUE`Jeśli już zostało zadokowane okienku; w przeciwnym razie `FALSE`.  
+ [out] `bWasDocked`  
+ `TRUE` Jeśli już zostało zadokowane okienku; w przeciwnym razie `FALSE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli operacja zakończyła się powodzeniem, `CDockablePane` czy okienku zostało zadokowane do; w przeciwnym razie `NULL`.  
   
-##  <a name="findfloatingpanebyid"></a>CPaneFrameWnd::FindFloatingPaneByID  
+##  <a name="findfloatingpanebyid"></a>  CPaneFrameWnd::FindFloatingPaneByID  
  Znajduje okienka o identyfikatorze określonego formantu w globalnej listy przestawne okienka.  
   
 ```  
@@ -492,13 +487,13 @@ static CBasePane* FindFloatingPaneByID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nID`  
+ [in] `nID`  
  Reprezentuje identyfikator formantu okienka ma zostać znaleziony.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Okienko o identyfikatorze określony formant; w przeciwnym razie `NULL`, jeśli nie okienku ma identyfikator określonego formantu.  
   
-##  <a name="framefrompoint"></a>CPaneFrameWnd::FrameFromPoint  
+##  <a name="framefrompoint"></a>  CPaneFrameWnd::FrameFromPoint  
  Wyszukuje okno ramowe minimalnej, który zawiera określony punkt.  
   
 ```  
@@ -510,22 +505,22 @@ static CPaneFrameWnd* __stdcall FrameFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pt`  
+ [in] `pt`  
  Punkt we współrzędnych ekranu.  
   
- [in]`nSensitivity`  
+ [in] `nSensitivity`  
  Zwiększ obszar wyszukiwania okno ramowe mini przez ten rozmiar. Okno ramowe mini spełnia kryteria wyszukiwania, jeśli znajduje się w obszarze zwiększona danego punktu.  
   
- [in]`pFrameToExclude`  
+ [in] `pFrameToExclude`  
  Określa okno ramowe mini do wykluczenia z wyszukiwania.  
   
- [in]`bFloatMultiOnly`  
+ [in] `bFloatMultiOnly`  
  Jeśli `TRUE`, wyszukiwanie tylko okien ramowych minimalnej, które mają `CBRS_FLOAT_MULTI` stylu. Jeśli `FALSE`, wyszukiwanie wszystkich okien ramowych minimalnej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do mini ramkę okna zawierającą `pt`; w przeciwnym razie `NULL`.  
   
-##  <a name="getcaptionheight"></a>CPaneFrameWnd::GetCaptionHeight  
+##  <a name="getcaptionheight"></a>  CPaneFrameWnd::GetCaptionHeight  
  Zwraca wysokość minimalna ramki tytuł okna.  
   
 ```  
@@ -538,7 +533,7 @@ virtual int GetCaptionHeight() const;
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę metodę, aby określić wysokość minimalna ramki okna. Domyślnie, wysokość jest ustawiona wartość `SM_CYSMCAPTION`. Aby uzyskać więcej informacji, zobacz [funkcja GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385).  
   
-##  <a name="getcaptionrect"></a>CPaneFrameWnd::GetCaptionRect  
+##  <a name="getcaptionrect"></a>  CPaneFrameWnd::GetCaptionRect  
  Oblicza prostokątem tytuł okna mini ramki.  
   
 ```  
@@ -546,13 +541,13 @@ virtual void GetCaptionRect(CRect& rectCaption) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`rectCaption`  
+ [out] `rectCaption`  
  Zawiera rozmiar i położenie tytuł okna mini ramki, we współrzędnych ekranu.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda jest wywoływana przez platformę, aby obliczyć prostokątem tytuł okna mini ramki.  
   
-##  <a name="getcaptiontext"></a>CPaneFrameWnd::GetCaptionText  
+##  <a name="getcaptiontext"></a>  CPaneFrameWnd::GetCaptionText  
  Zwraca tekst podpisu.  
   
 ```  
@@ -565,7 +560,7 @@ virtual CString GetCaptionText();
 ### <a name="remarks"></a>Uwagi  
  Ta metoda jest wywoływana przez platformę, gdy Wyświetla tekst podpisu.  
   
-##  <a name="getdockingmanager"></a>CPaneFrameWnd::GetDockingManager  
+##  <a name="getdockingmanager"></a>  CPaneFrameWnd::GetDockingManager  
 
   
 ```  
@@ -576,7 +571,7 @@ CDockingManager* GetDockingManager() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getdockingmode"></a>CPaneFrameWnd::GetDockingMode  
+##  <a name="getdockingmode"></a>  CPaneFrameWnd::GetDockingMode  
  Zwraca tryb dokowania.  
   
 ```  
@@ -592,7 +587,7 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
   
 - `DT_SMART`  
   
-##  <a name="getfirstvisiblepane"></a>CPaneFrameWnd::GetFirstVisiblePane  
+##  <a name="getfirstvisiblepane"></a>  CPaneFrameWnd::GetFirstVisiblePane  
  Zwraca pierwszy widoczne okienko zawarte w oknie ramowym minimalnej.  
   
 ```  
@@ -602,7 +597,7 @@ virtual CWnd* GetFirstVisiblePane() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Pierwszego okienka w oknie mini ramki lub `NULL` Jeśli okno ramowe minimalnej nie zawiera żadnych okienka.  
   
-##  <a name="gethotpoint"></a>CPaneFrameWnd::GetHotPoint  
+##  <a name="gethotpoint"></a>  CPaneFrameWnd::GetHotPoint  
 
   
 ```  
@@ -613,7 +608,7 @@ CPoint GetHotPoint() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getpane"></a>CPaneFrameWnd::GetPane  
+##  <a name="getpane"></a>  CPaneFrameWnd::GetPane  
  Zwraca okienko, w którym znajduje się w oknie ramowym minimalnej.  
   
 ```  
@@ -625,7 +620,7 @@ virtual CWnd* GetPane() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getpanecount"></a>CPaneFrameWnd::GetPaneCount  
+##  <a name="getpanecount"></a>  CPaneFrameWnd::GetPaneCount  
  Zwraca liczbę okienka, które są zawarte w oknie ramowym minimalnej.  
   
 ```  
@@ -637,7 +632,7 @@ virtual int GetPaneCount() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getparent"></a>CPaneFrameWnd::GetParent  
+##  <a name="getparent"></a>  CPaneFrameWnd::GetParent  
 
   
 ```  
@@ -648,7 +643,7 @@ CWnd* GetParent();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getpinstate"></a>CPaneFrameWnd::GetPinState  
+##  <a name="getpinstate"></a>  CPaneFrameWnd::GetPinState  
 
   
 ```  
@@ -659,7 +654,7 @@ BOOL GetPinState() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getrecentfloatingrect"></a>CPaneFrameWnd::GetRecentFloatingRect  
+##  <a name="getrecentfloatingrect"></a>  CPaneFrameWnd::GetRecentFloatingRect  
 
   
 ```  
@@ -670,7 +665,7 @@ CRect GetRecentFloatingRect() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getvisiblepanecount"></a>CPaneFrameWnd::GetVisiblePaneCount  
+##  <a name="getvisiblepanecount"></a>  CPaneFrameWnd::GetVisiblePaneCount  
  Zwraca liczbę widoczne okienka, które są zawarte w oknie ramowym minimalnej.  
   
 ```  
@@ -682,7 +677,7 @@ virtual int GetVisiblePaneCount() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="hittest"></a>CPaneFrameWnd::HitTest  
+##  <a name="hittest"></a>  CPaneFrameWnd::HitTest  
  Określa, jaka część okno ramowe mini jest w danym momencie.  
   
 ```  
@@ -692,10 +687,10 @@ virtual LRESULT HitTest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`point`  
+ [in] `point`  
  Punkt do testowania.  
   
- [in]`bDetectCaption`  
+ [in] `bDetectCaption`  
  Jeśli `TRUE`, sprawdź punktu przed podpis. Jeśli `FALSE`, zignorować podpis.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -715,7 +710,7 @@ virtual LRESULT HitTest(
 |`HTBOTTOMLEFT`|Punkt znajduje się w lewym dolnym rogu.|  
 |`HTBOTTOMRIGHT`|Punkt znajduje się w prawym dolnym rogu.|  
   
-##  <a name="iscaptured"></a>CPaneFrameWnd::IsCaptured  
+##  <a name="iscaptured"></a>  CPaneFrameWnd::IsCaptured  
 
   
 ```  
@@ -726,7 +721,7 @@ BOOL IsCaptured() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="isdelayshow"></a>CPaneFrameWnd::IsDelayShow  
+##  <a name="isdelayshow"></a>  CPaneFrameWnd::IsDelayShow  
 
   
 ```  
@@ -737,7 +732,7 @@ BOOL IsDelayShow() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="isrolldown"></a>CPaneFrameWnd::IsRollDown  
+##  <a name="isrolldown"></a>  CPaneFrameWnd::IsRollDown  
  Określa, czy okno ramowe mini powinien wycofana w dół.  
   
 ```  
@@ -745,14 +740,14 @@ virtual BOOL IsRollDown() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli okno ramowe minimalnej musi wycofana. w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli okno ramowe minimalnej musi wycofana. w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda jest wywoływana przez platformę, by określić, czy okno ramowe mini powinien wycofana w dół. Funkcja rollup/rolldown jest włączona dla okno ramowe minimalnej, jeśli zawiera on co najmniej jeden okienku, który ma `AFX_CBRS_AUTO_ROLLUP` flagi. Ta flaga jest ustawiana po utworzeniu okienko. Aby uzyskać więcej informacji, zobacz [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).  
   
  Domyślnie platformę sprawdza, czy wskaźnik myszy znajduje się wewnątrz ramki mini okno prostokątem ustalenie, czy okno ma być przetwarzane w dół. Można zmienić to zachowanie w klasie pochodnej.  
   
-##  <a name="isrollup"></a>CPaneFrameWnd::IsRollUp  
+##  <a name="isrollup"></a>  CPaneFrameWnd::IsRollUp  
  Określa, czy okno ramowe mini powinny być rzutowane.  
   
 ```  
@@ -760,21 +755,21 @@ virtual BOOL IsRollUp() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli okno ramowe minimalnej musi rzutowane; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli okno ramowe minimalnej musi rzutowane; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda jest wywoływana przez platformę, by określić, czy okno ramowe mini powinny być rzutowane. Funkcja rollup/rolldown jest włączona dla okno ramowe minimalnej, jeśli zawiera on co najmniej jeden okienku, który ma `AFX_CBRS_AUTO_ROLLUP` flagi. Ta flaga jest ustawiana po utworzeniu okienko. Aby uzyskać więcej informacji, zobacz [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).  
   
  Domyślnie platformę sprawdza, czy wskaźnik myszy znajduje się wewnątrz ramki mini okno prostokątem ustalenie, czy okno ma być rzutowane. Można zmienić to zachowanie w klasie pochodnej.  
   
-##  <a name="killdockingtimer"></a>CPaneFrameWnd::KillDockingTimer  
+##  <a name="killdockingtimer"></a>  CPaneFrameWnd::KillDockingTimer  
  Zatrzymuje dokowania czasomierza.  
   
 ```  
 void KillDockingTimer();
 ```  
   
-##  <a name="loadstate"></a>CPaneFrameWnd::LoadState  
+##  <a name="loadstate"></a>  CPaneFrameWnd::LoadState  
  Ładuje stan okienka z rejestru.  
   
 ```  
@@ -784,16 +779,16 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszProfileName`  
+ [in] `lpszProfileName`  
  Nazwa profilu.  
   
- [in]`uiID`  
+ [in] `uiID`  
  Identyfikator okienka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli stan okienka został załadowany pomyślnie; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli stan okienka został załadowany pomyślnie; w przeciwnym razie `FALSE`.  
   
-##  <a name="m_busesavebits"></a>CPaneFrameWnd::m_bUseSaveBits  
+##  <a name="m_busesavebits"></a>  CPaneFrameWnd::m_bUseSaveBits  
  Określa, czy rejestrowanie klasy okna, które ma `CS_SAVEBITS` klasy stylu.  
   
 ```  
@@ -803,7 +798,7 @@ AFX_IMPORT_DATA static BOOL m_bUseSaveBits;
 ### <a name="remarks"></a>Uwagi  
  Ustaw ten statyczny element członkowski `TRUE` można zarejestrować klasy okna mini ramki, który ma `CS_SAVEBITS` stylu. Może to pomóc w zmniejszeniu, migotanie, gdy użytkownik przeciąga okno ramowe minimalnej.  
   
-##  <a name="onbeforedock"></a>CPaneFrameWnd::OnBeforeDock  
+##  <a name="onbeforedock"></a>  CPaneFrameWnd::OnBeforeDock  
  Określa, czy jest możliwe dokowania.  
   
 ```  
@@ -811,9 +806,9 @@ virtual BOOL OnBeforeDock();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli dokowanie jest możliwe; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli dokowanie jest możliwe; w przeciwnym razie `FALSE`.  
   
-##  <a name="oncheckrollstate"></a>CPaneFrameWnd::OnCheckRollState  
+##  <a name="oncheckrollstate"></a>  CPaneFrameWnd::OnCheckRollState  
  Określa, czy okno ramowe mini powinien wycofana w górę lub w dół.  
   
 ```  
@@ -825,14 +820,14 @@ virtual void OnCheckRollState();
   
  Domyślnie struktura wywołuje [CPaneFrameWnd::IsRollUp](#isrollup) i [CPaneFrameWnd::IsRollDown](#isrolldown) tylko rozciąga się i przywraca okno ramowe minimalnej. Mogą przesłaniać tę metodę w klasie pochodnej, aby użyć innego efektem.  
   
-##  <a name="ondocktorecentpos"></a>CPaneFrameWnd::OnDockToRecentPos  
+##  <a name="ondocktorecentpos"></a>  CPaneFrameWnd::OnDockToRecentPos  
  Stacje dokujące okno ramowe minimalnej na jego ostatniej pozycji.  
   
 ```  
 virtual void OnDockToRecentPos();
 ```  
   
-##  <a name="ondrawborder"></a>CPaneFrameWnd::OnDrawBorder  
+##  <a name="ondrawborder"></a>  CPaneFrameWnd::OnDrawBorder  
  Rysuje obramowanie okno ramowe minimalnej.  
   
 ```  
@@ -840,20 +835,20 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Kontekst urządzenia używany do rysowania obramowania.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda jest wywoływana przez platformę, by narysować obramowanie okno ramowe minimalnej.  
   
-##  <a name="onkillrolluptimer"></a>CPaneFrameWnd::OnKillRollUpTimer  
+##  <a name="onkillrolluptimer"></a>  CPaneFrameWnd::OnKillRollUpTimer  
  Zatrzymuje czasomierza rollup.  
   
 ```  
 virtual void OnKillRollUpTimer();
 ```  
   
-##  <a name="onmovepane"></a>CPaneFrameWnd::OnMovePane  
+##  <a name="onmovepane"></a>  CPaneFrameWnd::OnMovePane  
  Przesuwa okno ramowe mini wskazanego przesunięcia.  
   
 ```  
@@ -863,13 +858,13 @@ virtual void OnMovePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pBar`  
+ [in] `pBar`  
  Wskaźnik do okienka (zignorowany).  
   
- [in]`ptOffset`  
+ [in] `ptOffset`  
  Przesunięcie, przez którą chcesz przenieść okienko.  
   
-##  <a name="onpanerecalclayout"></a>CPaneFrameWnd::OnPaneRecalcLayout  
+##  <a name="onpanerecalclayout"></a>  CPaneFrameWnd::OnPaneRecalcLayout  
  Dostosowuje układ okienka w oknie ramowym minimalnej.  
   
 ```  
@@ -881,14 +876,14 @@ virtual void OnPaneRecalcLayout();
   
  Domyślnie okienku znajduje się do pokrycia obszaru klienckiego pełną okno ramowe minimalnej.  
   
-##  <a name="onsetrolluptimer"></a>CPaneFrameWnd::OnSetRollUpTimer  
+##  <a name="onsetrolluptimer"></a>  CPaneFrameWnd::OnSetRollUpTimer  
  Ustawia czasomierza rollup.  
   
 ```  
 virtual void OnSetRollUpTimer();
 ```  
   
-##  <a name="onshowpane"></a>CPaneFrameWnd::OnShowPane  
+##  <a name="onshowpane"></a>  CPaneFrameWnd::OnShowPane  
  Wywoływane przez platformę, gdy okienka w oknie ramowym mini jest ukryte lub wyświetlane.  
   
 ```  
@@ -898,16 +893,16 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pBar`  
+ [in] `pBar`  
  Okienko, który jest pokazywany lub ukryty.  
   
- [in]`bShow`  
- `TRUE`Jeśli jest wyświetlane okienku; `FALSE` Jeśli okienko jest ukrywane.  
+ [in] `bShow`  
+ `TRUE` Jeśli jest wyświetlane okienku; `FALSE` Jeśli okienko jest ukrywane.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywoływane przez platformę, gdy okienka w oknie ramowym mini jest pokazywany lub ukryty. Domyślna implementacja nie działa.  
   
-##  <a name="pin"></a>CPaneFrameWnd::Pin  
+##  <a name="pin"></a>  CPaneFrameWnd::Pin  
 
   
 ```  
@@ -915,11 +910,11 @@ void Pin(BOOL bPin = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bPin`  
+ [in] `bPin`  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="panefrompoint"></a>CPaneFrameWnd::PaneFromPoint  
+##  <a name="panefrompoint"></a>  CPaneFrameWnd::PaneFromPoint  
  Zwraca okienko, jeśli zawiera ona punkt dostarczone przez użytkownika w oknie ramowym minimalnej.  
   
 ```  
@@ -930,14 +925,14 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`point`  
+ [in] `point`  
  Punkt, który użytkownik kliknął we współrzędnych ekranu.  
   
- [in]`nSensitivity`  
+ [in] `nSensitivity`  
  Ten parametr nie jest używany.  
   
- [in]`bCheckVisibility`  
- `TRUE`Aby określić, że powinny być zwracane tylko widoczne okienka; w przeciwnym razie `FALSE`.  
+ [in] `bCheckVisibility`  
+ `TRUE` Aby określić, że powinny być zwracane tylko widoczne okienka; w przeciwnym razie `FALSE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Okienko, w którym użytkownik kliknął, lub `NULL` Jeśli okienko nie istnieje w tej lokalizacji.  
@@ -945,7 +940,7 @@ virtual CBasePane* PaneFromPoint(
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę metodę w celu uzyskania okienku, który zawiera danego punktu.  
   
-##  <a name="redrawall"></a>CPaneFrameWnd::RedrawAll  
+##  <a name="redrawall"></a>  CPaneFrameWnd::RedrawAll  
  Ponownie rysuje wszystkich okien ramowych minimalnej.  
   
 ```  
@@ -955,14 +950,14 @@ static void RedrawAll();
 ### <a name="remarks"></a>Uwagi  
  Ta metoda aktualizacji wszystkich okien ramowych mini wywołując [CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow) dla każdego okna.  
   
-##  <a name="removenonvalidpanes"></a>CPaneFrameWnd::RemoveNonValidPanes  
+##  <a name="removenonvalidpanes"></a>  CPaneFrameWnd::RemoveNonValidPanes  
  Wywoływane przez platformę, by usunąć okienka nie jest ważna.  
   
 ```  
 virtual void RemoveNonValidPanes();
 ```  
   
-##  <a name="removepane"></a>CPaneFrameWnd::RemovePane  
+##  <a name="removepane"></a>  CPaneFrameWnd::RemovePane  
  Usuwa okienko z okna mini ramki.  
   
 ```  
@@ -973,19 +968,19 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pWnd`  
+ [in] `pWnd`  
  Wskaźnik do okienka do usunięcia.  
   
- [in]`bDestroy`  
+ [in] `bDestroy`  
  Określa, co się dzieje z okno ramowe minimalnej. Jeśli `bDestroy` jest `TRUE`, ta metoda niszczy okno ramowe mini natychmiast. Jeśli jest `FALSE`, ta metoda niszczy okno ramowe mini z pewnym opóźnieniem.  
   
- [in]`bNoDelayedDestroy`  
+ [in] `bNoDelayedDestroy`  
  Jeśli `TRUE`opóźnione zniszczenie jest wyłączona. Jeśli `FALSE`opóźnione zniszczenie jest włączona.  
   
 ### <a name="remarks"></a>Uwagi  
  Platformę można zniszczyć okna ramowe mini natychmiast, albo z pewnym opóźnieniem. Niszczenie okien ramowych mini opóźnienia należy przekazać `FALSE` w `bNoDelayedDestroy` parametru. Opóźnione zniszczenie występuje podczas przetwarzania w ramach `AFX_WM_CHECKEMPTYMINIFRAME` wiadomości.  
   
-##  <a name="replacepane"></a>CPaneFrameWnd::ReplacePane  
+##  <a name="replacepane"></a>  CPaneFrameWnd::ReplacePane  
  Zastępuje jedno okienko na inny.  
   
 ```  
@@ -995,13 +990,13 @@ virtual void ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pBarOrg`  
+ [in] `pBarOrg`  
  Wskaźnik do oryginalnego okienka.  
   
- [in]`pBarReplaceWith`  
+ [in] `pBarReplaceWith`  
  Wskaźnik do okienka zastępuje oryginalnego okienka.  
   
-##  <a name="savestate"></a>CPaneFrameWnd::SaveState  
+##  <a name="savestate"></a>  CPaneFrameWnd::SaveState  
  Zapisuje stan okienka w rejestrze.  
   
 ```  
@@ -1011,16 +1006,16 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszProfileName`  
+ [in] `lpszProfileName`  
  Nazwa profilu.  
   
- [in]`uiID`  
+ [in] `uiID`  
  Identyfikator okienka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli stan okienka została zapisana pomyślnie; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli stan okienka została zapisana pomyślnie; w przeciwnym razie `FALSE`.  
   
-##  <a name="setcaptionbuttons"></a>CPaneFrameWnd::SetCaptionButtons  
+##  <a name="setcaptionbuttons"></a>  CPaneFrameWnd::SetCaptionButtons  
  Ustawia podpis przycisków.  
   
 ```  
@@ -1028,7 +1023,7 @@ virtual void SetCaptionButtons(DWORD dwButtons);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`dwButtons`  
+ [in] `dwButtons`  
  Alternatywy kombinację następujących wartości:  
   
 - `AFX_CAPTION_BTN_CLOSE`  
@@ -1039,7 +1034,7 @@ virtual void SetCaptionButtons(DWORD dwButtons);
   
 - `AFX_CAPTION_BTN_CUSTOMIZE`  
   
-##  <a name="setdelayshow"></a>CPaneFrameWnd::SetDelayShow  
+##  <a name="setdelayshow"></a>  CPaneFrameWnd::SetDelayShow  
 
   
 ```  
@@ -1047,11 +1042,11 @@ void SetDelayShow(BOOL bDelayShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bDelayShow`  
+ [in] `bDelayShow`  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setdockingmanager"></a>CPaneFrameWnd::SetDockingManager  
+##  <a name="setdockingmanager"></a>  CPaneFrameWnd::SetDockingManager  
 
   
 ```  
@@ -1059,11 +1054,11 @@ void SetDockingManager(CDockingManager* pManager);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pManager`  
+ [in] `pManager`  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setdockingtimer"></a>CPaneFrameWnd::SetDockingTimer  
+##  <a name="setdockingtimer"></a>  CPaneFrameWnd::SetDockingTimer  
  Ustawia czasomierz dokowania.  
   
 ```  
@@ -1071,10 +1066,10 @@ void SetDockingTimer(UINT nTimeOut);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nTimeOut`  
+ [in] `nTimeOut`  
  Wartość limitu czasu w milisekundach.  
   
-##  <a name="setdockstate"></a>CPaneFrameWnd::SetDockState  
+##  <a name="setdockstate"></a>  CPaneFrameWnd::SetDockState  
  Ustawia stan dokowania.  
   
 ```  
@@ -1082,10 +1077,10 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDockManager`  
+ [in] `pDockManager`  
  Wskaźnik do Menedżera dokowania.  
   
-##  <a name="sethotpoint"></a>CPaneFrameWnd::SetHotPoint  
+##  <a name="sethotpoint"></a>  CPaneFrameWnd::SetHotPoint  
 
   
 ```  
@@ -1093,11 +1088,11 @@ void SetHotPoint(CPoint& ptNew);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`ptNew`  
+ [in] `ptNew`  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setpredockstate"></a>CPaneFrameWnd::SetPreDockState  
+##  <a name="setpredockstate"></a>  CPaneFrameWnd::SetPreDockState  
  Wywoływane przez platformę, by ustawić predocking stanu.  
   
 ```  
@@ -1108,7 +1103,7 @@ virtual BOOL SetPreDockState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`preDockState`  
+ [in] `preDockState`  
  Możliwe wartości:  
   
 - `PDS_NOTHING`,  
@@ -1117,16 +1112,16 @@ virtual BOOL SetPreDockState(
   
 - `PDS_DOCK_TO_TAB`  
   
- [in]`pBarToDock`  
+ [in] `pBarToDock`  
  Wskaźnik do okienko, aby dokowania.  
   
- [in]`dockMethod`  
+ [in] `dockMethod`  
  Metoda dokowania. (Ten parametr jest ignorowany.)  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli okno ramowe mini jest zadokowany; `FALSE` Jeśli jest zadokowany.  
+ `TRUE` Jeśli okno ramowe mini jest zadokowany; `FALSE` Jeśli jest zadokowany.  
   
-##  <a name="sizetocontent"></a>CPaneFrameWnd::SizeToContent  
+##  <a name="sizetocontent"></a>  CPaneFrameWnd::SizeToContent  
  Dopasowuje rozmiar okno ramowe minimalnej, aby była ona odpowiednikiem zawartych w niej okienka.  
   
 ```  
@@ -1136,7 +1131,7 @@ virtual void SizeToContent();
 ### <a name="remarks"></a>Uwagi  
  Wywołanie tej metody, aby dostosować rozmiar ramki mini okno, aby rozmiar okienka zawartych w niej.  
   
-##  <a name="starttearoff"></a>CPaneFrameWnd::StartTearOff  
+##  <a name="starttearoff"></a>  CPaneFrameWnd::StartTearOff  
  Rys poza menu.  
   
 ```  
@@ -1144,13 +1139,13 @@ BOOL StartTearOff(CMFCPopu* pMenu);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pMenu`  
+ [in] `pMenu`  
  Wskaźnik do menu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli metoda zakończyło się pomyślnie; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli metoda zakończyło się pomyślnie; w przeciwnym razie `FALSE`.  
   
-##  <a name="storerecentdocksiteinfo"></a>CPaneFrameWnd::StoreRecentDockSiteInfo  
+##  <a name="storerecentdocksiteinfo"></a>  CPaneFrameWnd::StoreRecentDockSiteInfo  
 
   
 ```  
@@ -1158,11 +1153,11 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pBar`  
+ [in] `pBar`  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="storerecenttabrelatedinfo"></a>CPaneFrameWnd::StoreRecentTabRelatedInfo  
+##  <a name="storerecenttabrelatedinfo"></a>  CPaneFrameWnd::StoreRecentTabRelatedInfo  
 
   
 ```  
@@ -1172,8 +1167,8 @@ virtual void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDockingBar`  
- [in]`pTabbedBar`  
+ [in] `pDockingBar`  
+ [in] `pTabbedBar`  
   
 ### <a name="remarks"></a>Uwagi  
   

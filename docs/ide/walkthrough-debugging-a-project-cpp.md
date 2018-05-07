@@ -1,13 +1,10 @@
 ---
-title: "Wskazówki: Debugowanie projektu (C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Wskazówki: Debugowanie projektu (C++) | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c9789a7deafacf09ad615f416a446da4eba8150
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ecfda5e2549b3aa9be1f0471e301cc2a21c6fd5a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>Wskazówki: debugowanie projektu (C++)
 W tym przewodniku możesz zmodyfikować program, aby rozwiązać ten problem, który wykryte podczas testowania projektu.  
@@ -65,7 +60,7 @@ W tym przewodniku możesz zmodyfikować program, aby rozwiązać ten problem, kt
 7.  Kontynuować krokowe wykonywanie programu aż do jej zakończenia lub pozwolić na jego uruchomienia, wybierając **debugowania**, **Uruchom** paska menu lub wybierając klawisz F5.  
   
 ## <a name="next-steps"></a>Następne kroki  
- **Poprzedni:** [wskazówki: Testowanie projektu (C++)](../ide/walkthrough-testing-a-project-cpp.md) &#124; **Dalej:**[wskazówki: Wdrażanie Twojego programu (C++)](../ide/walkthrough-deploying-your-program-cpp.md)  
+ **Poprzedni:** [wskazówki: Testowanie projektu (C++)](../ide/walkthrough-testing-a-project-cpp.md) &#124; **dalej:**[wskazówki: Wdrażanie Twojego programu (C++)](../ide/walkthrough-deploying-your-program-cpp.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)   

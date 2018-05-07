@@ -1,13 +1,10 @@
 ---
-title: "Wyjątek podczas przetwarzania | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Wyjątek podczas przetwarzania | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.exceptions
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adad6183d15b378feb7ec96aedff6a0013a2dd24
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a24d78089e468a2020e0ecdb1fba34783965325
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exception-processing"></a>Przetwarzanie wyjątków
 Podczas program, może wystąpić wiele anomalii i błędy o nazwie "wyjątki". Mogą one obejmować brakiem pamięci, błędy alokacji zasobów i nie można odnaleźć plików.  
@@ -101,7 +96,7 @@ Podczas program, może wystąpić wiele anomalii i błędy o nazwie "wyjątki". 
 |-|-|  
 |[Afxabort —](#afxabort)|Wywołuje się, aby zakończyć aplikację, jeśli błąd krytyczny występuje.|  
   
-##  <a name="try"></a>SPRÓBUJ  
+##  <a name="try"></a>  SPRÓBUJ  
  Konfiguruje **SPRÓBUJ** bloku.  
   
 ```   
@@ -119,7 +114,7 @@ TRY
 ### <a name="requirements"></a>Wymagania
 Nagłówek: afx.h
 
-##  <a name="catch"></a>CATCH  
+##  <a name="catch"></a>  CATCH  
  Określa blok kodu, który przechwytuje pierwszego typu wyjątek zgłoszony w poprzednim **SPRÓBUJ** bloku.  
   
 ```   
@@ -149,7 +144,7 @@ CATCH(exception_class, exception_object_pointer_name)
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCExceptions#26](../../mfc/codesnippet/cpp/exception-processing_1.cpp)]  
   
-##  <a name="catch_all"></a>CATCH_ALL —  
+##  <a name="catch_all"></a>  CATCH_ALL —  
  Określa blok kodu, który przechwytuje wszystkie typy wyjątków zgłoszonych w poprzednim **SPRÓBUJ** bloku.  
   
 ```   
@@ -174,7 +169,7 @@ CATCH_ALL(exception_object_pointer_name)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afx.h  
 
-##  <a name="and_catch"></a>AND_CATCH —  
+##  <a name="and_catch"></a>  AND_CATCH —  
  Określa blok kodu dla Przechwytywanie typów wyjątków dodatkowe zgłoszony w poprzednich **SPRÓBUJ** bloku.  
   
 ```   
@@ -191,7 +186,7 @@ AND_CATCH(exception_class, exception_object_pointer_name)
 ### <a name="remarks"></a>Uwagi  
  Użyj **CATCH** makro catch jeden typ wyjątku, a następnie `AND_CATCH` makra, aby przechwycić każdego typu kolejne. Końcowy **SPRÓBUJ** zablokować z `END_CATCH` makra.  
   
- Kod wyjątku przetwarzania można przejrzeć obiekt wyjątku, w razie potrzeby uzyskać więcej informacji na temat określonego powodu wyjątku. Wywołanie `THROW_LAST` makra w `AND_CATCH` shift przetwarzania do następnej ramki Wyjątek zewnętrzny za pomocą bloku. `AND_CATCH`oznacza koniec poprzedniego **CATCH** lub `AND_CATCH` bloku.  
+ Kod wyjątku przetwarzania można przejrzeć obiekt wyjątku, w razie potrzeby uzyskać więcej informacji na temat określonego powodu wyjątku. Wywołanie `THROW_LAST` makra w `AND_CATCH` shift przetwarzania do następnej ramki Wyjątek zewnętrzny za pomocą bloku. `AND_CATCH` oznacza koniec poprzedniego **CATCH** lub `AND_CATCH` bloku.  
   
 > [!NOTE]
 >  `AND_CATCH` Blok jest zdefiniowany jako zakres C++ (ograniczona przez nawiasy klamrowe). Deklarowanie zmiennych w tym zakresie, należy pamiętać, że są one dostępne tylko w ramach tego zakresu. Dotyczy to również *exception_object_pointer_name* zmiennej.  
@@ -201,7 +196,7 @@ AND_CATCH(exception_class, exception_object_pointer_name)
   
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afx.h  
-##  <a name="and_catch_all"></a>AND_CATCH_ALL —  
+##  <a name="and_catch_all"></a>  AND_CATCH_ALL —  
  Określa blok kodu dla Przechwytywanie typów wyjątków dodatkowe zgłoszony w poprzednich **SPRÓBUJ** bloku.  
   
 ```   
@@ -215,7 +210,7 @@ AND_CATCH_ALL(exception_object_pointer_name)
 ### <a name="remarks"></a>Uwagi  
  Użyj **CATCH** makro catch jeden typ wyjątku, a następnie `AND_CATCH_ALL` makra, aby przechwycić wszystkie inne kolejne typy. Jeśli używasz `AND_CATCH_ALL`, koniec **SPRÓBUJ** zablokować z `END_CATCH_ALL` makra.  
   
- Kod wyjątku przetwarzania można przejrzeć obiekt wyjątku, w razie potrzeby uzyskać więcej informacji na temat określonego powodu wyjątku. Wywołanie `THROW_LAST` makra w `AND_CATCH_ALL` shift przetwarzania do następnej ramki Wyjątek zewnętrzny za pomocą bloku. `AND_CATCH_ALL`oznacza koniec poprzedniego **CATCH** lub `AND_CATCH_ALL` bloku.  
+ Kod wyjątku przetwarzania można przejrzeć obiekt wyjątku, w razie potrzeby uzyskać więcej informacji na temat określonego powodu wyjątku. Wywołanie `THROW_LAST` makra w `AND_CATCH_ALL` shift przetwarzania do następnej ramki Wyjątek zewnętrzny za pomocą bloku. `AND_CATCH_ALL` oznacza koniec poprzedniego **CATCH** lub `AND_CATCH_ALL` bloku.  
   
 > [!NOTE]
 >  `AND_CATCH_ALL` Bloku jest zdefiniowany jako zakres C++ (ograniczona klamrowym). Deklarowanie zmiennych w tym zakresie, należy pamiętać, że są one dostępne tylko w ramach tego zakresu.  
@@ -223,7 +218,7 @@ AND_CATCH_ALL(exception_object_pointer_name)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afx.h  
   
-##  <a name="end_catch"></a>END_CATCH —  
+##  <a name="end_catch"></a>  END_CATCH —  
  Oznacza koniec ostatniego **CATCH** lub `AND_CATCH` bloku.  
   
 ```   
@@ -236,7 +231,7 @@ END_CATCH
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afx.h  
   
-##  <a name="end_catch_all"></a>END_CATCH_ALL —  
+##  <a name="end_catch_all"></a>  END_CATCH_ALL —  
  Oznacza koniec ostatniego `CATCH_ALL` lub `AND_CATCH_ALL` bloku.  
   
 ```   
@@ -246,7 +241,7 @@ END_CATCH_ALL
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afx.h  
   
-##  <a name="throw"></a>THROW (MFC)  
+##  <a name="throw"></a>  THROW (MFC)  
  Zwraca określony wyjątek.  
   
 ```   
@@ -265,7 +260,7 @@ THROW(exception_object_pointer)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afx.h  
   
-##  <a name="throw_last"></a>THROW_LAST —  
+##  <a name="throw_last"></a>  THROW_LAST —  
  Zgłasza wyjątek z powrotem do następnego zewnętrzne **CATCH** bloku.  
   
 ```   
@@ -283,7 +278,7 @@ THROW_LAST()
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afx.h  
   
-##  <a name="afxthrowarchiveexception"></a>Afxthrowarchiveexception —  
+##  <a name="afxthrowarchiveexception"></a>  Afxthrowarchiveexception —  
  Zgłasza wyjątek archiwum.  
   
 ```   
@@ -300,7 +295,7 @@ void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afx.h  
   
-##  <a name="afxthrowfileexception"></a>Afxthrowfileexception —  
+##  <a name="afxthrowfileexception"></a>  Afxthrowfileexception —  
  Zgłasza wyjątek plików.  
   
 ```   
@@ -326,7 +321,7 @@ void AfxThrowFileException(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afx.h  
 
-## <a name="afxthrowinvalidargexception"></a>AfxThrowInvalidArgException
+## <a name="afxthrowinvalidargexception"></a>  AfxThrowInvalidArgException
 Zgłasza wyjątek nieprawidłowego argumentu.  
    
 ### <a name="syntax"></a>Składnia    
@@ -346,7 +341,7 @@ void AfxThrowInvalidArgException( );
  [THROW](#throw)
   
   
-##  <a name="afxthrowmemoryexception"></a>Afxthrowmemoryexception —  
+##  <a name="afxthrowmemoryexception"></a>  Afxthrowmemoryexception —  
  Zgłasza wyjątek pamięci.  
   
 ```   
@@ -359,7 +354,7 @@ void AfxThrowMemoryException();
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afx.h  
   
-##  <a name="afxthrownotsupportedexception"></a>Afxthrownotsupportedexception —  
+##  <a name="afxthrownotsupportedexception"></a>  Afxthrownotsupportedexception —  
  Zgłasza wyjątek, który jest wynikiem żądania nieobsługiwanej funkcji.  
   
 ```  
@@ -369,7 +364,7 @@ void AfxThrowNotSupportedException();
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afx.h  
   
-##  <a name="afxthrowresourceexception"></a>Afxthrowresourceexception —  
+##  <a name="afxthrowresourceexception"></a>  Afxthrowresourceexception —  
  Zgłasza wyjątek zasobów.  
   
 ```   
@@ -382,7 +377,7 @@ void  AfxThrowResourceException();
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afx.h  
   
-##  <a name="afxthrowuserexception"></a>Afxthrowuserexception —  
+##  <a name="afxthrowuserexception"></a>  Afxthrowuserexception —  
  Zgłasza wyjątek, aby zatrzymać operację użytkownika końcowego.  
   
 ```   
@@ -395,7 +390,7 @@ void AfxThrowUserException();
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afx.h  
   
-##  <a name="afxthrowoledispatchexception"></a>Afxthrowoledispatchexception —  
+##  <a name="afxthrowoledispatchexception"></a>  Afxthrowoledispatchexception —  
  Ta funkcja służy do zgłoszenia wyjątku w funkcji automatyzacji OLE.  
   
 ```   
@@ -432,7 +427,7 @@ void AFXAPI AfxThrowOleDispatchException(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afx.h  
   
-##  <a name="afxthrowoleexception"></a>Afxthrowoleexception —  
+##  <a name="afxthrowoleexception"></a>  Afxthrowoleexception —  
  Tworzy obiekt typu `COleException` i zgłasza wyjątek.  
   
 ``` 
@@ -453,7 +448,7 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdao.h  
   
-##  <a name="afxthrowdaoexception"></a>Afxthrowdaoexception —  
+##  <a name="afxthrowdaoexception"></a>  Afxthrowdaoexception —  
  Wywołanie tej funkcji, aby zgłosić wyjątek typu [CDaoException](../../mfc/reference/cdaoexception-class.md) z własnego kodu.  
   
 ```   
@@ -477,7 +472,7 @@ void AFXAPI AfxThrowDaoException(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdb.h  
   
-##  <a name="afxthrowdbexception"></a>Afxthrowdbexception —  
+##  <a name="afxthrowdbexception"></a>  Afxthrowdbexception —  
  Wywołanie tej funkcji, aby zgłosić wyjątek typu `CDBException` z własnego kodu.  
   
 ```  
@@ -505,7 +500,7 @@ void AfxThrowDBException(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afx.h  
   
-##  <a name="afxabort"></a>Afxabort —  
+##  <a name="afxabort"></a>  Afxabort —  
  Zakończenie domyślnej funkcji dostarczonych przez MFC.  
   
 ```   
@@ -513,7 +508,7 @@ void  AfxAbort();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `AfxAbort`jest wywoływana wewnętrznie przez funkcje Członkowskie MFC po błąd krytyczny, takich jak nieprzechwycony wyjątek nie mogą być obsługiwane. Możesz wywołać `AfxAbort` w rzadkich przypadkach, gdy wystąpi błąd krytyczny, z którego nie można odzyskać.  
+ `AfxAbort` jest wywoływana wewnętrznie przez funkcje Członkowskie MFC po błąd krytyczny, takich jak nieprzechwycony wyjątek nie mogą być obsługiwane. Możesz wywołać `AfxAbort` w rzadkich przypadkach, gdy wystąpi błąd krytyczny, z którego nie można odzyskać.  
   
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CATCH](#catch).  

@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCRibbonLabel | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonLabel
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CMFCRibbonLabel [MFC], CMFCRibbonLabel
 - CMFCRibbonLabel [MFC], SetACCData
 ms.assetid: 0346c891-83bf-4f20-b8a1-c84cf2aadced
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32732c08542ff766c265fda93b8cf09ad04387ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcbc552560325e844cf0812a3002088f829d6c60
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonlabel-class"></a>Klasa CMFCRibbonLabel
 Implementuje etykietę tekstową nieaktywne dla wstążki.  
@@ -74,7 +69,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxRibbonLabel.h  
   
-##  <a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel  
+##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel  
  Tworzy i inicjuje [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) obiekt, który wyświetla określony tekst.  
   
 ```  
@@ -84,13 +79,13 @@ CMFCRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszText`  
+ [in] `lpszText`  
  Tekst wyświetlany w etykiecie.  
   
- [in]`bIsMultiLine`  
- `TRUE`Aby określić, czy etykieta jest etykieta wielowierszowego; w przeciwnym razie `FALSE`.  
+ [in] `bIsMultiLine`  
+ `TRUE` Aby określić, czy etykieta jest etykieta wielowierszowego; w przeciwnym razie `FALSE`.  
   
-##  <a name="setaccdata"></a>CMFCRibbonLabel::SetACCData  
+##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
  Określa dane ułatwień dostępu dla bieżącego elementu label wstążki.  
   
 ```  
@@ -100,14 +95,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pParent`  
+ [in] `pParent`  
  Reprezentuje okno nadrzędne bieżącej etykiety wstążki.  
   
- [out]`data`  
+ [out] `data`  
  Obiekt typu `CAccessibilityData` który jest wypełniane przy użyciu danych dostępności bieżącej etykiety wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli `data` parametr został pomyślnie wypełnione przy użyciu danych dostępności bieżącej etykiety wstążki; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli `data` parametr został pomyślnie wypełnione przy użyciu danych dostępności bieżącej etykiety wstążki; w przeciwnym razie `FALSE`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

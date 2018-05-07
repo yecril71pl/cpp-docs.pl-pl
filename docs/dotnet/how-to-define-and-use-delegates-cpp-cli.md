@@ -1,30 +1,25 @@
 ---
-title: "Porady: Definiowanie obiektów delegowanych i korzystanie (C + +/ CLI) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Porady: Definiowanie obiektów delegowanych i korzystanie (C + +/ CLI) | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - delegates
 ms.assetid: 1cdf3420-89c1-47c0-b796-aa984020e0f8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7f400a03f1b9ae877ee7ec681cb038698a92598a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 57dfce7e57c79317961394c0379e957f08689ffe
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-and-use-delegates-ccli"></a>Porady: definiowanie obiektów delegowanych (C++/CLI) oraz korzystanie z nich
 W tym artykule przedstawiono sposób Definiowanie oraz stosowanie delegatów w języku C + +/ CLI.  

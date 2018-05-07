@@ -1,30 +1,25 @@
 ---
 title: Paski stanu | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - status bars
 - control bars [MFC], status bar
 ms.assetid: fcbc5029-1aab-4e14-adf7-419038a4935e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d9f79fe4def397346e3f44c6dbf50b2583888e5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ee2a1d9270c45bacbcaca7e5a0b2d7cbdd41ef5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="status-bars"></a>Paski stanu
 Paski stanu nadaj aplikacji miejsca do wyświetlania wiadomości i przydatne informacje do użytkownika bez przerywania pracy użytkownika. Zazwyczaj są wyświetlane w dolnej części okna, mieć paski stanu "okienka", które obejmują "wskaźniki" i "wiersz wiadomości". Wskaźniki zawierają stan czynności, takich jak blokady PRZEWIJANIA, czy rejestrowanie makra jest włączona, i tak dalej. Wiersz wiadomości na pasku stanu można wyświetlić informacje o stanie programu lub elementem paska narzędzi menu lub przycisku, który wskazuje użytkownika przy użyciu myszy.  

@@ -1,13 +1,10 @@
 ---
 title: 'TN033: Wersja dll biblioteki MFC | Dokumentacja firmy Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.dll
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - DLL version of MFC [MFC]
 - TN033
 ms.assetid: b6f1080b-b66b-4b1e-8fb1-926c5816392c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba51ca465bec2a6400106071fcba94d36ad100e2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a247ffc36b3e0eb3e52c6f04949c693597d73064
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033: wersja DLL biblioteki MFC
 Ta uwaga opisano, jak można użyć MFCxx.DLL i MFCxxD.DLL (gdzie x jest numerem wersji MFC) udostępniane biblioteki dołączanej dynamicznie aplikacji MFC i biblioteki DLL rozszerzeń MFC. Aby uzyskać więcej informacji na temat regularne biblioteki DLL MFC, zobacz [za pomocą MFC jako części biblioteki DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md).  
@@ -97,7 +92,7 @@ Ta uwaga opisano, jak można użyć MFCxx.DLL i MFCxxD.DLL (gdzie x jest numerem
   
 -   Wysyłanie aplikacji, która używa biblioteki współużytkowanej wymaga dostarczany MFCxx.DLL (i inne) biblioteki w programie. MFCxx.DLL jest dystrybuowany za darmo do dystrybucji, takich jak wiele bibliotek DLL, ale nadal należy zainstalować biblioteki DLL programu Instalatora. Ponadto muszą dostarczać MSVCRTxx.DLL, zawierający biblioteki C runtime, który jest używany zarówno przez Twojego programu oraz biblioteki DLL MFC, samodzielnie.  
   
-##  <a name="_mfcnotes_how_to_write_an_mfc_extension_dll"></a>Jak napisać bibliotekę DLL rozszerzenia MFC  
+##  <a name="_mfcnotes_how_to_write_an_mfc_extension_dll"></a> Jak napisać bibliotekę DLL rozszerzenia MFC  
  Biblioteka DLL rozszerzenia MFC jest biblioteki DLL zawierającej klasy i funkcje zapisane wzbogacać funkcji klas MFC. Biblioteka DLL rozszerzenia MFC używa udostępnionej biblioteki MFC dll w taki sam sposób jak aplikacja używa, kilka dodatkowe zagadnienia:  
   
 -   Proces kompilacji jest podobny do tworzenia aplikacji, która używa udostępnionej biblioteki MFC z kilku dodatkowych kompilatora i opcje konsolidatora.  
@@ -146,7 +141,7 @@ Ta uwaga opisano, jak można użyć MFCxx.DLL i MFCxxD.DLL (gdzie x jest numerem
   
  W tym celu należy upewnić się, że każda z funkcji Członkowskich jest oznaczony jako importowania lub eksportowania zależnie od potrzeb. Wymaga to specjalne deklaracje: **__declspec(dllexport)** i **__declspec(dllimport)**. W przypadku używania przez aplikacje klienckie klas mają być zadeklarowany jako **__declspec(dllimport)**. Podczas tworzenia rozszerzenia MFC DLL sam powinien być zadeklarowany jako **__declspec(dllexport)**. Ponadto funkcji musi być faktycznie eksportowany, dzięki czemu programy klienckie powiązać je w czasie ładowania.  
   
- Aby wyeksportować klasie całego, należy użyć **afx_ext_class —** w definicji klasy. To makro jest definiowana za pomocą framework jako **__declspec(dllexport)** podczas **_AFXDLL** i `_AFXEXT` jest zdefiniowany, ale zdefiniowany jako **__declspec(dllimport)** podczas `_AFXEXT` nie jest zdefiniowany. `_AFXEXT`jak opisano powyżej, jest zdefiniowana tylko podczas kompilowania bibliotekę DLL rozszerzenia MFC. Na przykład:  
+ Aby wyeksportować klasie całego, należy użyć **afx_ext_class —** w definicji klasy. To makro jest definiowana za pomocą framework jako **__declspec(dllexport)** podczas **_AFXDLL** i `_AFXEXT` jest zdefiniowany, ale zdefiniowany jako **__declspec(dllimport)** podczas `_AFXEXT` nie jest zdefiniowany. `_AFXEXT` jak opisano powyżej, jest zdefiniowana tylko podczas kompilowania bibliotekę DLL rozszerzenia MFC. Na przykład:  
   
 ```  
 class AFX_EXT_CLASS CExampleExport : public CObject  
@@ -387,9 +382,9 @@ extern "C" extern void WINAPI InitXxxDLL()
   
  Jeśli chcesz tylko załadować zasobów z określonego miejsca, przy użyciu interfejsów API `AfxGetResourceHandle` i `AfxSetResourceHandle` zapisać dojście stary i ustawić nowy uchwyt. Pamiętaj przywrócić stary dojście do zasobu przed zwróceniem do aplikacji klienckiej. Przykładowe TESTDLL2 korzysta z tej metody dla jawnego ładowania menu.  
   
- Przejście na liście ma wady jest wolniejsze i wymaga zarządzania zakresami identyfikator zasobu. Ma ona zaletą aplikacji klienta, który stanowi łącze do kilku bibliotek DLL rozszerzeń MFC można użyć dowolnego dostarczane do biblioteki DLL zasobu bez konieczności określania dojście wystąpienia biblioteki DLL. `AfxFindResourceHandle`Interfejs API służy do przejście listę zasobów do wyszukiwania dla danego dopasowania. Pobiera nazwę i typ zasobu, a zwraca dojście do zasobu którym najpierw zostało znalezione (lub wartość NULL).  
+ Przejście na liście ma wady jest wolniejsze i wymaga zarządzania zakresami identyfikator zasobu. Ma ona zaletą aplikacji klienta, który stanowi łącze do kilku bibliotek DLL rozszerzeń MFC można użyć dowolnego dostarczane do biblioteki DLL zasobu bez konieczności określania dojście wystąpienia biblioteki DLL. `AfxFindResourceHandle` Interfejs API służy do przejście listę zasobów do wyszukiwania dla danego dopasowania. Pobiera nazwę i typ zasobu, a zwraca dojście do zasobu którym najpierw zostało znalezione (lub wartość NULL).  
   
-##  <a name="_mfcnotes_writing_an_application_that_uses_the_dll_version"></a>Pisanie aplikacji, która korzysta z wersji biblioteki DLL  
+##  <a name="_mfcnotes_writing_an_application_that_uses_the_dll_version"></a> Pisanie aplikacji, która korzysta z wersji biblioteki DLL  
   
 ### <a name="application-requirements"></a>Wymagania dotyczące aplikacji  
  Aplikacja, która korzysta z udostępnionego wersji biblioteki MFC, należy wykonać kilka prostych reguł:  
@@ -419,7 +414,7 @@ extern "C" extern void WINAPI InitXxxDLL()
   
  Standardowych nagłówków MFC należy ten symbol do zdefiniowania:  
   
- **/ / MD**  
+ **/MD**  
  Aplikacja musi używać biblioteki DLL wersji biblioteki wykonawczej języka C  
   
  Wszystkie inne flagi kompilatora wykonaj domyślnych MFC (na przykład _DEBUG dla debugowania).  
@@ -446,7 +441,7 @@ extern "C" extern void WINAPI InitXxxDLL()
   
  Nie zaleca się ponowne tworzenie biblioteki DLL MFC.  
   
-##  <a name="_mfcnotes_how_the_mfc30.dll_is_implemented"></a>Implementowania MFCxx.DLL  
+##  <a name="_mfcnotes_how_the_mfc30.dll_is_implemented"></a> Implementowania MFCxx.DLL  
  W poniższej sekcji opisano, jak jest implementowane biblioteki MFC DLL (MFCxx.DLL i MFCxxD.DLL). Tutaj również nie są istotne, jeśli wszystkie chcesz zrobić jest zrozumienie biblioteki MFC DLL za pomocą aplikacji. Tutaj nie są istotne dla zrozumienia, jak napisać bibliotekę DLL rozszerzenia MFC, ale opis tej implementacji mogą pomóc napisać własny biblioteki DLL.  
   
 ### <a name="implementation-overview"></a>Przegląd wdrożenia  

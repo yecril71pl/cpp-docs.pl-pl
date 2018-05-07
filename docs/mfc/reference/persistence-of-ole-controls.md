@@ -1,13 +1,10 @@
 ---
-title: "Stan trwały formantów OLE | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Stan trwały formantów OLE | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.ole
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - OLE controls [MFC], persistence
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3452bccd4bdf94c84e4549f99829aaa087e1803b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e84e26bae83bd131b53d10e4561ddb60854a8a5e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="persistence-of-ole-controls"></a>Stan trwały formantów OLE
 Jeden możliwości formantów OLE jest właściwość trwałości (lub serializacji), co pozwala kontrolkę OLE do odczytu lub zapisu wartości właściwości do i z pliku lub strumienia. Aplikacji kontenera można użyć serializacji do przechowywania wartości właściwości formantu, nawet po aplikacji został zniszczony formantu. Wartości właściwości formantu OLE następnie można odczytać z pliku lub strumienia, gdy nowe wystąpienie kontrolki jest tworzona w późniejszym czasie.  
@@ -54,7 +49,7 @@ Jeden możliwości formantów OLE jest właściwość trwałości (lub serializa
   
  Ponadto `AfxOleTypeMatchGuid` globalne funkcja służy do testowania dopasowanie między `TYPEDESC` i danym identyfikatorem GUID.  
   
-##  <a name="px_blob"></a>Px_blob —  
+##  <a name="px_blob"></a>  Px_blob —  
  Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej do serializacji lub zainicjować właściwość, która przechowuje dane dużego obiektu binarnego (BLOB).  
   
 ```  
@@ -99,7 +94,7 @@ hBlobDefault
   
  Należy pamiętać, że `PX_Blob` spowoduje przydzielenie pamięci przy użyciu systemu Windows [działanie funkcji GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) interfejsu API, podczas ładowania właściwości typu obiektu BLOB. Jest odpowiedzialny za zwolnienie tej pamięci. W związku z tym powinny wywoływać destruktor formantu [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) na żadnej właściwości typu obiektu BLOB dojścia do zwolnienia Konfigurowanie wszystkie pamięci przydzielona do formantu.  
   
-##  <a name="px_bool"></a>Px_bool —  
+##  <a name="px_bool"></a>  Px_bool —  
  Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej do serializacji lub zainicjować właściwość typu **BOOL**.  
   
 ```  
@@ -142,7 +137,7 @@ bValue  ,
 ### <a name="remarks"></a>Uwagi  
  Wartość właściwości będzie można z zapisu lub odczytu zmienna odwołuje się `bValue`, gdzie to właściwe. Jeśli `bDefault` jest określony, będzie on używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, niepowodzenia procesu serializacji formantu.  
   
-##  <a name="px_color"></a>Px_color —  
+##  <a name="px_color"></a>  Px_color —  
  Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej do serializacji lub zainicjować właściwość typu **OLE_COLOR**.  
   
 ```  
@@ -184,7 +179,7 @@ clrDefault);
 ### <a name="remarks"></a>Uwagi  
  Wartość właściwości będzie można z zapisu lub odczytu zmienna odwołuje się `clrValue`, gdzie to właściwe. Jeśli `clrDefault` jest określony, będzie on używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, niepowodzenia procesu serializacji formantu.  
   
-##  <a name="px_currency"></a>Px_currency —  
+##  <a name="px_currency"></a>  Px_currency —  
  Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej do serializacji lub zainicjować właściwość typu **waluty**.  
   
 ```  
@@ -227,7 +222,7 @@ cyValue  ,
 ### <a name="remarks"></a>Uwagi  
  Wartość właściwości będzie można z zapisu lub odczytu zmienna odwołuje się `cyValue`, gdzie to właściwe. Jeśli `cyDefault` jest określony, będzie on używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, niepowodzenia procesu serializacji formantu.  
   
-##  <a name="px_datapath"></a>Px_datapath —  
+##  <a name="px_datapath"></a>  Px_datapath —  
  Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej do serializacji lub zainicjować właściwość ścieżki danych typu [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md).  
   
 ```  
@@ -263,7 +258,7 @@ pPX,
 ### <a name="remarks"></a>Uwagi  
  Właściwości ścieżki danych implementuje właściwości asynchronicznej formantu. Wartość właściwości będzie można z zapisu lub odczytu zmienna odwołuje się `dataPathProperty`, gdzie to właściwe.  
   
-##  <a name="px_double"></a>Px_double —  
+##  <a name="px_double"></a>  Px_double —  
  Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej do serializacji lub zainicjować właściwość typu **podwójne**.  
   
 ```  
@@ -306,7 +301,7 @@ doubleValue  ,
 ### <a name="remarks"></a>Uwagi  
  Wartość właściwości jest odczytu lub zapisu odwołuje się zmiennej `doubleValue`, gdzie to właściwe. Jeśli `doubleDefault` jest określony, będzie on używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, niepowodzenia procesu serializacji formantu.  
   
-##  <a name="px_font"></a>Px_font —  
+##  <a name="px_font"></a>  Px_font —  
  Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej do serializacji lub zainicjować właściwość czcionki typu.  
   
 ```  
@@ -352,7 +347,7 @@ pFontDispAmbient
 ### <a name="remarks"></a>Uwagi  
  Wartość właściwości jest odczytu lub zapisu do `font`, `CFontHolder` odwołać, jeśli to możliwe. Jeśli `pFontDesc` i `pFontDispAmbient` są określone, są one używane do inicjowania wartość domyślna właściwości, gdy jest wymagane. Te wartości są używane, jeśli z jakiegokolwiek powodu, niepowodzenia procesu serializacji formantu. Zazwyczaj należy przekazać **NULL** dla `pFontDesc` i otoczenia wartość zwrócona przez `COleControl::AmbientFont` dla `pFontDispAmbient`. Należy pamiętać, że obiekt czcionki zwracany przez `COleControl::AmbientFont` musi zostać zwolniona przez wywołanie do **IFontDisp::Release** funkcję elementu członkowskiego.  
   
-##  <a name="px_float"></a>Px_float —  
+##  <a name="px_float"></a>  Px_float —  
  Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej do serializacji lub zainicjować właściwość typu **float**.  
   
 ```  
@@ -395,7 +390,7 @@ floatValue  ,
 ### <a name="remarks"></a>Uwagi  
  Wartość właściwości jest odczytu lub zapisu odwołuje się zmiennej `floatValue`, gdzie to właściwe. Jeśli `floatDefault` jest określony, będzie on używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, niepowodzenia procesu serializacji formantu.  
   
-##  <a name="px_iunknown"></a>Px_iunknown —  
+##  <a name="px_iunknown"></a>  Px_iunknown —  
  Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej do serializacji lub zainicjować reprezentowanego przez obiekt o właściwości **IUnknown**-interfejsu pochodnego.  
   
 ```  
@@ -437,7 +432,7 @@ pUnkDefault
 ### <a name="remarks"></a>Uwagi  
  Wartość właściwości jest odczytu lub zapisu odwołuje się zmiennej *pUnk*odpowiednio. Jeśli `pUnkDefault` jest określony, będzie on używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, niepowodzenia procesu serializacji formantu.  
   
-##  <a name="px_long"></a>Px_long —  
+##  <a name="px_long"></a>  Px_long —  
  Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej do serializacji lub zainicjować właściwość typu **długi**.  
   
 ```  
@@ -480,7 +475,7 @@ lValue  ,
 ### <a name="remarks"></a>Uwagi  
  Wartość właściwości jest odczytu lub zapisu odwołuje się zmiennej `lValue`, gdzie to właściwe. Jeśli `lDefault` jest określony, będzie on używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, niepowodzenia procesu serializacji formantu.  
   
-##  <a name="px_picture"></a>Px_picture —  
+##  <a name="px_picture"></a>  Px_picture —  
  Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej do serializacji lub zainicjować właściwość obraz formantu.  
   
 ```  
@@ -523,7 +518,7 @@ pict  ,
 ### <a name="remarks"></a>Uwagi  
  Wartość właściwości jest odczytu lub zapisu odwołuje się zmiennej `pict`, gdzie to właściwe. Jeśli `pictDefault` jest określony, będzie on używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, niepowodzenia procesu serializacji formantu.  
   
-##  <a name="px_short"></a>Px_short —  
+##  <a name="px_short"></a>  Px_short —  
  Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej do serializacji lub zainicjować właściwość typu **krótki**.  
   
 ```  
@@ -566,7 +561,7 @@ sValue  ,
 ### <a name="remarks"></a>Uwagi  
  Wartość właściwości jest odczytu lub zapisu odwołuje się zmiennej `sValue`, gdzie to właściwe. Jeśli `sDefault` jest określony, będzie on używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, niepowodzenia procesu serializacji formantu.  
   
-##  <a name="px_ulong"></a>Px_ulong —  
+##  <a name="px_ulong"></a>  Px_ulong —  
  Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej do serializacji lub zainicjować właściwość typu **ULONG**.  
   
 ```  
@@ -609,7 +604,7 @@ ulValue  ,
 ### <a name="remarks"></a>Uwagi  
  Wartość właściwości jest odczytu lub zapisu odwołuje się zmiennej `ulValue`, gdzie to właściwe. Jeśli `ulDefault` jest określony, będzie on używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, niepowodzenia procesu serializacji formantu.  
   
-##  <a name="px_ushort"></a>Px_ushort —  
+##  <a name="px_ushort"></a>  Px_ushort —  
  Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej do serializacji lub zainicjować właściwość typu `unsigned` **krótki**.  
   
 ```  
@@ -652,7 +647,7 @@ usValue  ,
 ### <a name="remarks"></a>Uwagi  
  Wartość właściwości jest odczytu lub zapisu odwołuje się zmiennej *usValue*, gdzie to właściwe. Jeśli *usDefault* jest określony, będzie on używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, niepowodzenia procesu serializacji formantu.  
   
-##  <a name="px_string"></a>PXstring  
+##  <a name="px_string"></a>  PXstring  
  Wywołanie tej funkcji w ramach formantu **DoPropExchange** funkcji członkowskiej do serializacji lub zainicjować właściwości ciągu znaków.  
   
 ```  
@@ -695,7 +690,7 @@ strValue  ,
 ### <a name="remarks"></a>Uwagi  
  Wartość właściwości jest odczytu lub zapisu odwołuje się zmiennej `strValue`, gdzie to właściwe. Jeśli `strDefault` jest określony, będzie on używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, niepowodzenia procesu serializacji formantu.  
   
-##  <a name="px_vbxfontconvert"></a>Px_vbxfontconvert —  
+##  <a name="px_vbxfontconvert"></a>  Px_vbxfontconvert —  
  Wywołanie tej funkcji w ramach formantu `DoPropExchange` funkcji członkowskiej zainicjować właściwość czcionki konwertując właściwości powiązanych z czcionki formantu VBX.  
   
 ```  
@@ -718,9 +713,9 @@ pPX  ,
  Różna od zera, jeśli wymiany zakończyło się pomyślnie; 0 w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja ta powinna być używana tylko przez formant OLE, który został zaprojektowany jako bezpośredniej wymiany kontrolki VBX. Gdy środowiska projektowania Visual Basic konwertuje formularz zawierający formantu VBX odpowiednie zastąpienia kontrolkę OLE, wywoła formantu **IDataObject::SetData** funkcji, przekazywanie we właściwości zestawu zawiera dane właściwości formantu VBX. Ta operacja powoduje z kolei formantu `DoPropExchange` funkcji do wywołania. `DoPropExchange`można wywołać `PX_VBXFontConvert` przekonwertować właściwości związanych z czcionki formantu VBX (na przykład "FontName," "FontSize," itd.) w odpowiadających składników właściwość czcionki formantu OLE.  
+ Funkcja ta powinna być używana tylko przez formant OLE, który został zaprojektowany jako bezpośredniej wymiany kontrolki VBX. Gdy środowiska projektowania Visual Basic konwertuje formularz zawierający formantu VBX odpowiednie zastąpienia kontrolkę OLE, wywoła formantu **IDataObject::SetData** funkcji, przekazywanie we właściwości zestawu zawiera dane właściwości formantu VBX. Ta operacja powoduje z kolei formantu `DoPropExchange` funkcji do wywołania. `DoPropExchange` można wywołać `PX_VBXFontConvert` przekonwertować właściwości związanych z czcionki formantu VBX (na przykład "FontName," "FontSize," itd.) w odpowiadających składników właściwość czcionki formantu OLE.  
   
- `PX_VBXFontConvert`tylko powinna być wywoływana, gdy formant jest rzeczywiście przekształcany z aplikacji formularza VBX. Na przykład:  
+ `PX_VBXFontConvert` tylko powinna być wywoływana, gdy formant jest rzeczywiście przekształcany z aplikacji formularza VBX. Na przykład:  
   
  [!code-cpp[NVC_MFCActiveXControl#14](../../mfc/codesnippet/cpp/persistence-of-ole-controls_1.cpp)]  
 [!code-cpp[NVC_MFCActiveXControl#15](../../mfc/codesnippet/cpp/persistence-of-ole-controls_2.cpp)]  

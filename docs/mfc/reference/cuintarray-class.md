@@ -1,12 +1,9 @@
 ---
 title: Klasa CUIntArray | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CUIntArray
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: d71f3d8f-ef9f-4e48-9b69-7782c0e2ddf7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5132dddcdd707d6fef63627c48e4b5619cead084
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb8c7d46a2ffc2d569cc123d51aaebbf43b5e328
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cuintarray-class"></a>Klasa CUIntArray
 Obsługuje tablic liczb całkowitych bez znaku.  
@@ -118,7 +113,7 @@ class CUIntArray : public CObject
 ## <a name="remarks"></a>Uwagi  
  Całkowitą bez znaku lub **UINT**, różni się od słowa i doublewords w tym fizyczny rozmiar **UINT** można zmienić w zależności od docelowego środowisko pracy. A **UINT** jest taki sam rozmiar jak z bitowego.  
   
- `CUIntArray`zawiera [implement_dynamic —](run-time-object-model-services.md#implement_dynamic) makro do obsługi dostępu typu run-time i zrzucanie [CDumpContext](../../mfc/reference/cdumpcontext-class.md) obiektu. Zrzut liczbę całkowitą bez znaku poszczególnych elementów, należy do co najmniej 1 należy ustawić głębokość kontekstu zrzutu. Nie można zserializować tablice liczbę całkowitą bez znaku.  
+ `CUIntArray` zawiera [implement_dynamic —](run-time-object-model-services.md#implement_dynamic) makro do obsługi dostępu typu run-time i zrzucanie [CDumpContext](../../mfc/reference/cdumpcontext-class.md) obiektu. Zrzut liczbę całkowitą bez znaku poszczególnych elementów, należy do co najmniej 1 należy ustawić głębokość kontekstu zrzutu. Nie można zserializować tablice liczbę całkowitą bez znaku.  
   
 > [!NOTE]
 >  Przed rozpoczęciem korzystania z tablicy, użyj `SetSize` jego rozmiar i przydzielić pamięci dla niego. Jeśli nie używasz `SetSize`, dodawanie elementów do macierzy powoduje jego przydzielić często i skopiować. Częste zmiany alokacji i kopiowanie są mało wydajne i można fragmentu pamięci.  

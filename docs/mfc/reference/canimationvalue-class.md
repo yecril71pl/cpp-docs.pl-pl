@@ -1,12 +1,9 @@
 ---
 title: Klasa CAnimationValue | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationValue
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CAnimationValue [MFC], GetAnimationVariableList
 - CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b37801619fae84519dde000c922d34c4b9e1509
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 923b1b74a50fd13a57c1d9c7696f81acb28453e3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationvalue-class"></a>Klasa CAnimationValue
 Implementuje funkcje obiektu animacji, który ma jedną wartość.  
@@ -100,7 +95,7 @@ class CAnimationValue : public CAnimationBaseObject;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxanimationcontroller.h  
   
-##  <a name="addtransition"></a>CAnimationValue::AddTransition  
+##  <a name="addtransition"></a>  CAnimationValue::AddTransition  
  Dodaje przejście ma być stosowany do wartości.  
   
 ```  
@@ -114,7 +109,7 @@ void AddTransition(CBaseTransition* pTransition);
 ### <a name="remarks"></a>Uwagi  
  Wywołanie tej funkcji, aby dodać przejście do wewnętrznej listy przejść do zastosowania do zmiennej animacji. Po dodaniu przejścia nie są stosowane natychmiast i przechowywane w wewnętrznej liście. Przejścia są stosowane (dodany do scenorysu dla określonej wartości) podczas wywoływania CAnimationController::AnimateGroup.  
   
-##  <a name="canimationvalue"></a>CAnimationValue::CAnimationValue  
+##  <a name="canimationvalue"></a>  CAnimationValue::CAnimationValue  
  Tworzy obiekt CAnimationValue.  
   
 ```  
@@ -144,7 +139,7 @@ CAnimationValue(
 ### <a name="remarks"></a>Uwagi  
  Tworzy obiekt CAnimationValue z domyślnych właściwości: wartość domyślna to identyfikator grupy i identyfikator obiektu są ustawione na 0.  
   
-##  <a name="getanimationvariablelist"></a>CAnimationValue::GetAnimationVariableList  
+##  <a name="getanimationvariablelist"></a>  CAnimationValue::GetAnimationVariableList  
  Umieszcza zmiennej hermetyzowany animacji z listy.  
   
 ```  
@@ -157,7 +152,7 @@ virtual void GetAnimationVariableList(
  `lst`  
  Funkcja zwraca wartość, zawiera wskaźnik do CAnimationVariable reprezentujący wartość animowany.  
   
-##  <a name="getvalue"></a>CAnimationValue::GetValue  
+##  <a name="getvalue"></a>  CAnimationValue::GetValue  
  Pobiera bieżącą wartość.  
   
 ```  
@@ -178,7 +173,7 @@ BOOL GetValue(INT32& nValue);
 ### <a name="remarks"></a>Uwagi  
  Wywołanie tej funkcji można pobrać bieżącą wartość. Ta implementacja wywołuje metodę hermetyzowany obiektu modelu COM, a jeśli wystąpi błąd wywołania, ta metoda zwraca domyślną wartość, która wcześniej została ustawiona w konstruktorze lub SetDefaultValue.  
   
-##  <a name="getvariable"></a>CAnimationValue::GetVariable  
+##  <a name="getvariable"></a>  CAnimationValue::GetVariable  
  Zapewnia dostęp do zmiennej hermetyzowany animacji.  
   
 ```  
@@ -191,14 +186,14 @@ CAnimationVariable& GetVariable();
 ### <a name="remarks"></a>Uwagi  
  Ta metoda umożliwia dostęp do zmiennej hermetyzowany animacji. Z CAnimationVariable można uzyskać dostępu do obiektu źródłowego IUIAnimationVariable, w których wskaźnik może mieć wartość NULL, jeśli zmienna animacji nie został utworzony.  
   
-##  <a name="m_value"></a>CAnimationValue::m_value  
+##  <a name="m_value"></a>  CAnimationValue::m_value  
  Zmienna hermetyzowany animacji, która reprezentuje wartość animacji.  
   
 ```  
 CAnimationVariable m_value;  
 ```  
   
-##  <a name="operator_double"></a>CAnimationValue::operator o podwójnej PRECYZJI  
+##  <a name="operator_double"></a>  CAnimationValue::operator o podwójnej PRECYZJI  
  Udostępnia konwersja między CAnimationValue i o podwójnej PRECYZJI.  
   
 ```  
@@ -211,7 +206,7 @@ operator DOUBLE();
 ### <a name="remarks"></a>Uwagi  
  Udostępnia konwersja między CAnimationValue i o podwójnej PRECYZJI. Wewnętrznie ta metoda wywołuje GetValue i nie sprawdza błędy. W przypadku niepowodzenia GetValue zwrócona wartość będzie zawierać wcześniej ustawione w konstruktorze lub SetDefaultValue wartości domyślnej.  
   
-##  <a name="operator_int32"></a>CAnimationValue::operator INT32  
+##  <a name="operator_int32"></a>  CAnimationValue::operator INT32  
  Udostępnia konwersja między CAnimationValue i INT32.  
   
 ```  
@@ -224,7 +219,7 @@ operator INT32();
 ### <a name="remarks"></a>Uwagi  
  Udostępnia konwersja między CAnimationValue i INT32. Wewnętrznie ta metoda wywołuje GetValue i nie sprawdza błędy. W przypadku niepowodzenia GetValue zwrócona wartość będzie zawierać wcześniej ustawione w konstruktorze lub SetDefaultValue wartości domyślnej.  
   
-##  <a name="operator_eq"></a>CAnimationValue::operator =  
+##  <a name="operator_eq"></a>  CAnimationValue::operator =  
  Przypisuje wartość typu DOUBLE CAnimationValue.  
   
 ```  
@@ -242,7 +237,7 @@ void operator=(INT32 nVal);
 ### <a name="remarks"></a>Uwagi  
  Przypisuje wartość typu DOUBLE CAnimationValue. Ta wartość jest ustawiana jako wartości domyślnej dla zmiennej hermetyzowany animacji. Jeśli masz subskrypcję tego obiektu animacji na zdarzenia (ValueChanged lub IntegerValueChanged), należy ponownie włączyć te zdarzenia.  
   
-##  <a name="setdefaultvalue"></a>CAnimationValue::SetDefaultValue  
+##  <a name="setdefaultvalue"></a>  CAnimationValue::SetDefaultValue  
  Ustawia wartość domyślną.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "Cdaorecordset — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Cdaorecordset — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDaoRecordset
@@ -175,17 +172,15 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e50e83a2d52567d30901cea33cfccec3e236fe67
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 603cd1658af417dfbb7f2d8aa8022275e866a706
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaorecordset-class"></a>Cdaorecordset — klasa
 Reprezentuje zestaw rekordów wybrane źródła danych.  
@@ -327,7 +322,7 @@ class CDaoRecordset : public CObject
   
  Użyj obiektu elementu członkowskiego funkcji i danych elementów członkowskich do przewijania rekordów i działają na nich. Operacje dostępne są zależne od tego, czy obiekt jest zestaw rekordów typu tabeli dynamicznego zestawu rekordów i rekordów typu migawka, i czy jest można aktualizować tylko do odczytu — zależy od możliwości bazy danych lub Otwórz połączenie bazy danych (ODBC) źródło danych. Aby odświeżyć rekordy, które mogą zostały zmienione lub dodane po **Otwórz** wywołania, należy wywołać obiektu [Requery](#requery) funkcji członkowskiej. Wywołanie obiektu **Zamknij** elementu członkowskiego działać, a obiekt zniszczyć, po zakończeniu pracy z nim.  
   
- `CDaoRecordset`wymiana pól rekordów DAO (DFX) do obsługi odczytywanie i aktualizowanie pól rekordów z użyciem protokołu bezpieczne C++ członkami Twojej `CDaoRecordset` lub `CDaoRecordset`-klasy. Można też wdrożyć dynamiczne powiązanie kolumn w bazie danych, bez użycia za pomocą mechanizmu DFX [GetFieldValue](#getfieldvalue) i [SetFieldValue](#setfieldvalue).  
+ `CDaoRecordset` wymiana pól rekordów DAO (DFX) do obsługi odczytywanie i aktualizowanie pól rekordów z użyciem protokołu bezpieczne C++ członkami Twojej `CDaoRecordset` lub `CDaoRecordset`-klasy. Można też wdrożyć dynamiczne powiązanie kolumn w bazie danych, bez użycia za pomocą mechanizmu DFX [GetFieldValue](#getfieldvalue) i [SetFieldValue](#setfieldvalue).  
   
  Powiązane informacje zobacz temat "Zestawu rekordów do obiektu" w pomocy DAO.  
   
@@ -339,7 +334,7 @@ class CDaoRecordset : public CObject
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdao.h  
   
-##  <a name="addnew"></a>CDaoRecordset::AddNew  
+##  <a name="addnew"></a>  CDaoRecordset::AddNew  
  Wywołanie tej funkcji Członkowskich, aby dodać nowy rekord do rekordów typu tabeli lub dynamicznego.  
   
 ```  
@@ -377,7 +372,7 @@ virtual void AddNew();
   
  Aby uzyskać odpowiednie informacje zobacz tematy "AddNew — metoda", "Metoda CancelUpdate", "LastModified Property" i "EditMode Property" w pomocy DAO.  
   
-##  <a name="canappend"></a>CDaoRecordset::CanAppend  
+##  <a name="canappend"></a>  CDaoRecordset::CanAppend  
  Wywołanie tej funkcji Członkowskich, aby ustalić, czy wcześniej otwartych rekordów pozwala na dodawanie nowych rekordów przez wywołanie metody [AddNew](#addnew) funkcję elementu członkowskiego.  
   
 ```  
@@ -385,12 +380,12 @@ BOOL CanAppend() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli zestaw rekordów zezwala na dodawanie nowych rekordów; w przeciwnym razie 0. `CanAppend`Zwraca wartość 0, gdy otwarty zestaw rekordów jako tylko do odczytu.  
+ Różna od zera, jeśli zestaw rekordów zezwala na dodawanie nowych rekordów; w przeciwnym razie 0. `CanAppend` Zwraca wartość 0, gdy otwarty zestaw rekordów jako tylko do odczytu.  
   
 ### <a name="remarks"></a>Uwagi  
  Powiązane informacje zobacz temat "Dołącz Method" w pomocy DAO.  
   
-##  <a name="canbookmark"></a>CDaoRecordset::CanBookmark  
+##  <a name="canbookmark"></a>  CDaoRecordset::CanBookmark  
  Wywołanie tej funkcji elementu członkowskiego, aby określić, czy wcześniej otwartych rekordów umożliwia indywidualnie oznaczanie rekordów korzystanie z zakładek.  
   
 ```  
@@ -405,7 +400,7 @@ BOOL CanBookmark();
   
  Powiązane informacje zobacz temat "Bookmarkable Property" w pomocy DAO.  
   
-##  <a name="cancelupdate"></a>CDaoRecordset::CancelUpdate  
+##  <a name="cancelupdate"></a>  CDaoRecordset::CancelUpdate  
  `CancelUpdate` Funkcji członkowskiej anuluje wszystkie oczekujące aktualizacje z powodu [Edytuj](#edit) lub [AddNew](#addnew) operacji.  
   
 ```  
@@ -422,7 +417,7 @@ virtual void CancelUpdate();
   
  Powiązane informacje zobacz temat "CancelUpdate Method" w pomocy DAO.  
   
-##  <a name="canrestart"></a>CDaoRecordset::CanRestart  
+##  <a name="canrestart"></a>  CDaoRecordset::CanRestart  
  Wywołanie tej funkcji elementu członkowskiego, aby określić, czy zestaw rekordów zezwala na ponowne uruchomienie jej zapytania (na przykład aby odświeżyć swoje rekordy) przez wywołanie metody **Requery** funkcję elementu członkowskiego.  
   
 ```  
@@ -439,7 +434,7 @@ BOOL CanRestart();
   
  Powiązane informacje zobacz temat "Ponownego uruchamiania Property" w pomocy DAO.  
   
-##  <a name="canscroll"></a>CDaoRecordset::CanScroll  
+##  <a name="canscroll"></a>  CDaoRecordset::CanScroll  
  Wywołanie tej funkcji Członkowskich, aby ustalić, czy zestaw rekordów umożliwia przewijanie.  
   
 ```  
@@ -454,7 +449,7 @@ BOOL CanScroll() const;
   
  Powiązane informacje zobacz temat "Pozycjonowanie bieżącego rekordu wskaźnika z DAO" w pomocy DAO.  
   
-##  <a name="cantransact"></a>CDaoRecordset::CanTransact  
+##  <a name="cantransact"></a>  CDaoRecordset::CanTransact  
  Wywołanie tej funkcji elementu członkowskiego, aby określić, czy zestaw rekordów umożliwia transakcji.  
   
 ```  
@@ -467,7 +462,7 @@ BOOL CanTransact();
 ### <a name="remarks"></a>Uwagi  
  Powiązane informacje zobacz temat "Transakcje Property" w pomocy DAO.  
   
-##  <a name="canupdate"></a>CDaoRecordset::CanUpdate  
+##  <a name="canupdate"></a>  CDaoRecordset::CanUpdate  
  Wywołanie tej funkcji elementu członkowskiego, aby określić, czy można zaktualizować zestawu rekordów.  
   
 ```  
@@ -482,7 +477,7 @@ BOOL CanUpdate() const;
   
  Aby uzyskać odpowiednie informacje zobacz tematy "Metody AddNew", "Edytuj metodę", "Metody Delete", "Metody aktualizacji" i "Nadaje się do aktualizacji właściwości" w pomocy DAO.  
   
-##  <a name="cdaorecordset"></a>CDaoRecordset::CDaoRecordset  
+##  <a name="cdaorecordset"></a>  CDaoRecordset::CDaoRecordset  
  Konstruuje `CDaoRecordset` obiektu.  
   
 ```  
@@ -501,7 +496,7 @@ CDaoRecordset(CDaoDatabase* pDatabase = NULL);
   
  Przekaż **wartości NULL** Twojego Konstruktora zestawu rekordów mają `CDaoDatabase` obiekt utworzone i połączone można automatycznie. Jest to przydatny skrót, który nie wymaga do utworzenia i połączenia `CDaoDatabase` obiektu przed konstruowania zestawu rekordów. Jeśli `CDaoDatabase` obiektu nie jest otwarty, [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) dla Ciebie, która używa domyślny obszar roboczy zostanie również utworzony obiekt. Aby uzyskać więcej informacji, zobacz [CDaoDatabase::CDaoDatabase](../../mfc/reference/cdaodatabase-class.md#cdaodatabase).  
   
-##  <a name="close"></a>CDaoRecordset::Close  
+##  <a name="close"></a>  CDaoRecordset::Close  
  Zamykanie `CDaoRecordset` obiektu usuwa go z kolekcji otwieranie zestawów rekordów w skojarzonej bazie danych.  
   
 ```  
@@ -517,7 +512,7 @@ virtual void Close();
   
  Powiązane informacje zobacz temat "Metody Close" w pomocy DAO.  
   
-##  <a name="delete"></a>CDaoRecordset::Delete  
+##  <a name="delete"></a>  CDaoRecordset::Delete  
  Wywołanie tej funkcji elementu członkowskiego, aby usunąć rekord bieżący w otwarty obiekt zestawu rekordów dynamicznego lub typ tabeli.  
   
 ```  
@@ -538,7 +533,7 @@ virtual void Delete();
   
  Aby uzyskać odpowiednie informacje zobacz tematy "Metody AddNew", "Edytuj metodę", "Metody Delete", "Metody aktualizacji" i "Nadaje się do aktualizacji właściwości" w pomocy DAO.  
   
-##  <a name="dofieldexchange"></a>CDaoRecordset::DoFieldExchange  
+##  <a name="dofieldexchange"></a>  CDaoRecordset::DoFieldExchange  
  Struktura wywołuje funkcji członkowskiej do automatycznie wymiany danych między elementy członkowskie danych pola obiektu zestawu rekordów i odpowiednie kolumny bieżącego rekordu w źródle danych.  
   
 ```  
@@ -558,7 +553,7 @@ virtual void DoFieldExchange(CDaoFieldExchange* pFX);
   
  [!code-cpp[NVC_MFCDatabase#2](../../mfc/codesnippet/cpp/cdaorecordset-class_2.cpp)]  
   
-##  <a name="edit"></a>CDaoRecordset::Edit  
+##  <a name="edit"></a>  CDaoRecordset::Edit  
  Wywołanie tej funkcji Członkowskich do umożliwienia wprowadzania zmian dla bieżącego rekordu.  
   
 ```  
@@ -598,7 +593,7 @@ virtual void Edit();
   
  Aby uzyskać odpowiednie informacje zobacz tematy "Metody AddNew", "Edytuj metodę", "Metody Delete", "Metody aktualizacji" i "Nadaje się do aktualizacji właściwości" w pomocy DAO.  
   
-##  <a name="fillcache"></a>CDaoRecordset::FillCache  
+##  <a name="fillcache"></a>  CDaoRecordset::FillCache  
  Wywołanie tej funkcji Członkowskich w pamięci podręcznej przez określoną liczbę rekordów w zestawie.  
   
 ```  
@@ -623,11 +618,11 @@ void FillCache(
   
  Rejestruje pobranych z pamięci podręcznej nie uwzględniają zmiany wprowadzone współbieżnie źródła danych przez innych użytkowników.  
   
- `FillCache`pobiera tylko te rekordy, które nie są już w pamięci podręcznej. Aby wymusić aktualizację wszystkie buforowane dane, należy wywołać `SetCacheSize` funkcji członkowskiej z `lSize` parametru równa 0, wywołanie `SetCacheSize` ponownie, podając `lSize` parametru taki sam rozmiar pamięci podręcznej można początkowo żądana, a następnie wywołać `FillCache`.  
+ `FillCache` pobiera tylko te rekordy, które nie są już w pamięci podręcznej. Aby wymusić aktualizację wszystkie buforowane dane, należy wywołać `SetCacheSize` funkcji członkowskiej z `lSize` parametru równa 0, wywołanie `SetCacheSize` ponownie, podając `lSize` parametru taki sam rozmiar pamięci podręcznej można początkowo żądana, a następnie wywołać `FillCache`.  
   
  Powiązane informacje zobacz temat "FillCache Method" w pomocy DAO.  
   
-##  <a name="find"></a>CDaoRecordset::Find  
+##  <a name="find"></a>  CDaoRecordset::Find  
  Wywołanie tej funkcji członkowskich można znaleźć określony ciąg w zestawie rekordów typu dynamicznego lub migawek przy użyciu operatora porównania.  
   
 ```  
@@ -666,7 +661,7 @@ virtual BOOL Find(
   
  Powiązane informacje zobacz temat "FindNext FindFirst, FindLast, metody FindPrevious" w pomocy DAO.  
   
-##  <a name="findfirst"></a>CDaoRecordset::FindFirst  
+##  <a name="findfirst"></a>  CDaoRecordset::FindFirst  
  Wywołanie tej funkcji członkowskich można znaleźć pierwszy rekord, który pasuje określonego warunku.  
   
 ```  
@@ -716,7 +711,7 @@ BOOL FindFirst(LPCTSTR lpszFilter);
   
  Powiązane informacje zobacz temat "FindNext FindFirst, FindLast, metody FindPrevious" w pomocy DAO.  
   
-##  <a name="findlast"></a>CDaoRecordset::FindLast  
+##  <a name="findlast"></a>  CDaoRecordset::FindLast  
  Wywołanie tej funkcji członkowskich można znaleźć ostatni rekord, który pasuje określonego warunku.  
   
 ```  
@@ -754,7 +749,7 @@ BOOL FindLast(LPCTSTR lpszFilter);
   
  Powiązane informacje zobacz temat "FindNext FindFirst, FindLast, metody FindPrevious" w pomocy DAO.  
   
-##  <a name="findnext"></a>CDaoRecordset::FindNext  
+##  <a name="findnext"></a>  CDaoRecordset::FindNext  
  Wywołanie tej funkcji członkowskich można znaleźć dalej rekord, który pasuje określonego warunku.  
   
 ```  
@@ -792,7 +787,7 @@ BOOL FindNext(LPCTSTR lpszFilter);
   
  Powiązane informacje zobacz temat "FindNext FindFirst, FindLast, metody FindPrevious" w pomocy DAO.  
   
-##  <a name="findprev"></a>CDaoRecordset::FindPrev  
+##  <a name="findprev"></a>  CDaoRecordset::FindPrev  
  Wywołanie tej funkcji członkowskich można odnaleźć poprzedniego rekordu odpowiadającego określonego warunku.  
   
 ```  
@@ -830,7 +825,7 @@ BOOL FindPrev(LPCTSTR lpszFilter);
   
  Powiązane informacje zobacz temat "FindNext FindFirst, FindLast, metody FindPrevious" w pomocy DAO.  
   
-##  <a name="getabsoluteposition"></a>CDaoRecordset::GetAbsolutePosition  
+##  <a name="getabsoluteposition"></a>  CDaoRecordset::GetAbsolutePosition  
  Zwraca numer bieżącego rekordu obiektu zestawu rekordów.  
   
 ```  
@@ -853,7 +848,7 @@ long GetAbsolutePosition();
   
  Powiązane informacje zobacz temat "AbsolutePosition Property" w pomocy DAO.  
   
-##  <a name="getbookmark"></a>CDaoRecordset::GetBookmark  
+##  <a name="getbookmark"></a>  CDaoRecordset::GetBookmark  
  Wywołanie tej funkcji Członkowskich do uzyskania wartości zakładkę do określonego rekordu.  
   
 ```  
@@ -873,7 +868,7 @@ COleVariant GetBookmark();
   
  Powiązane informacje zobacz temat "Właściwość zakładki" w pomocy DAO.  
   
-##  <a name="getcachesize"></a>CDaoRecordset::GetCacheSize  
+##  <a name="getcachesize"></a>  CDaoRecordset::GetCacheSize  
  Wywołanie tej funkcji elementu członkowskiego w celu uzyskania liczby rekordów w pamięci podręcznej.  
   
 ```  
@@ -890,7 +885,7 @@ long GetCacheSize();
   
  Powiązane informacje zobacz temat "CacheSize właściwości CacheStart" w pomocy DAO.  
   
-##  <a name="getcachestart"></a>CDaoRecordset::GetCacheStart  
+##  <a name="getcachestart"></a>  CDaoRecordset::GetCacheStart  
  Wywołanie tej funkcji Członkowskich do uzyskania wartości zakładki pierwszy rekord w zestawie rekordów w pamięci podręcznej.  
   
 ```  
@@ -908,7 +903,7 @@ COleVariant GetCacheStart();
   
  Powiązane informacje zobacz temat "CacheSize właściwości CacheStart" w pomocy DAO.  
   
-##  <a name="getcurrentindex"></a>CDaoRecordset::GetCurrentIndex  
+##  <a name="getcurrentindex"></a>  CDaoRecordset::GetCurrentIndex  
  Wywołanie tej funkcji elementu członkowskiego, aby określić indeks aktualnie w użyciu indeksowanej tabeli `CDaoRecordset` obiektu.  
   
 ```  
@@ -925,7 +920,7 @@ CString GetCurrentIndex();
   
  Powiązane informacje zobacz temat "Indeksu obiektu", jak i definicja "bieżącego indeksu" w pomocy DAO.  
   
-##  <a name="getdatecreated"></a>CDaoRecordset::GetDateCreated  
+##  <a name="getdatecreated"></a>  CDaoRecordset::GetDateCreated  
  Wywołaj tę funkcję elementu członkowskiego, aby pobrać datę i godzinę utworzenia tabeli podstawowej.  
   
 ```  
@@ -940,7 +935,7 @@ COleDateTime GetDateCreated();
   
  Powiązane informacje zobacz temat "DateCreated właściwości LastUpdated" w pomocy DAO.  
   
-##  <a name="getdatelastupdated"></a>CDaoRecordset::GetDateLastUpdated  
+##  <a name="getdatelastupdated"></a>  CDaoRecordset::GetDateLastUpdated  
  Wywołanie tej funkcji Członkowskich pobrać datę i godzinę ostatniej aktualizacji schematu.  
   
 ```  
@@ -955,7 +950,7 @@ COleDateTime GetDateLastUpdated();
   
  Powiązane informacje zobacz temat "DateCreated właściwości LastUpdated" w pomocy DAO.  
   
-##  <a name="getdefaultdbname"></a>CDaoRecordset::GetDefaultDBName  
+##  <a name="getdefaultdbname"></a>  CDaoRecordset::GetDefaultDBName  
  Wywołanie tej funkcji członkowskich można określić nazwy bazy danych dla tego zestawu rekordów.  
   
 ```  
@@ -972,7 +967,7 @@ virtual CString GetDefaultDBName();
   
  [!code-cpp[NVC_MFCDatabase#4](../../mfc/codesnippet/cpp/cdaorecordset-class_4.cpp)]  
   
-##  <a name="getdefaultsql"></a>CDaoRecordset::GetDefaultSQL  
+##  <a name="getdefaultsql"></a>  CDaoRecordset::GetDefaultSQL  
  Struktura wywołuje tę funkcję elementu członkowskiego, aby pobrać domyślną instrukcję SQL, na której oparto zestawu rekordów.  
   
 ```  
@@ -989,7 +984,7 @@ virtual CString GetDefaultSQL();
   
  W przypadku przekazania pusty ciąg SQL do [Otwórz](#open), a następnie ta funkcja jest wywoływana w celu określenia nazwy tabeli lub SQL dla zestawu rekordów.  
   
-##  <a name="geteditmode"></a>CDaoRecordset::GetEditMode  
+##  <a name="geteditmode"></a>  CDaoRecordset::GetEditMode  
  Wywołanie funkcji członkowskiej można określić stanu elementu edycji, które jest jednym z następujących wartości:  
   
 ```  
@@ -1005,11 +1000,11 @@ short GetEditMode();
 |-----------|-----------------|  
 |**dbEditNone**|Nie edycji jest operacja w toku.|  
 |**dbEditInProgress**|**Edytuj** została wywołana.|  
-|**dbEditAdd**|`AddNew`została wywołana.|  
+|**dbEditAdd**|`AddNew` została wywołana.|  
   
  Powiązane informacje zobacz temat "EditMode Property" w pomocy DAO.  
   
-##  <a name="getfieldcount"></a>CDaoRecordset::GetFieldCount  
+##  <a name="getfieldcount"></a>  CDaoRecordset::GetFieldCount  
  Wywołaj tę funkcję elementu członkowskiego, aby pobrać liczbę pola (kolumny) zdefiniowane w zestawie rekordów.  
   
 ```  
@@ -1022,7 +1017,7 @@ short GetFieldCount();
 ### <a name="remarks"></a>Uwagi  
  Powiązane informacje zobacz temat "Właściwość Count" w pomocy DAO.  
   
-##  <a name="getfieldinfo"></a>CDaoRecordset::GetFieldInfo  
+##  <a name="getfieldinfo"></a>  CDaoRecordset::GetFieldInfo  
  Wywołanie tej funkcji członkowskich można uzyskać informacji o polach w zestawie rekordów.  
   
 ```  
@@ -1048,11 +1043,11 @@ void GetFieldInfo(
  `dwInfoOptions`  
  Opcje, które określają, które informacje dotyczące rekordów do pobrania. Dostępne opcje są wyświetlane tutaj wraz z co spowodują one funkcji do zwrócenia. Aby uzyskać najlepszą wydajność należy pobrać tylko poziom potrzebne informacje:  
   
-- `AFX_DAO_PRIMARY_INFO`(Ustawienie domyślne) Nazwa, typ, rozmiar, atrybuty  
+- `AFX_DAO_PRIMARY_INFO` (Ustawienie domyślne) Nazwa, typ, rozmiar, atrybuty  
   
-- `AFX_DAO_SECONDARY_INFO`Podstawowe informacje plus: numer pozycji, wymagane, Zezwalaj tabeli źródłowej zerowej długości, kolejność sortowania, obcego Nazwa pola źródła  
+- `AFX_DAO_SECONDARY_INFO` Podstawowe informacje plus: numer pozycji, wymagane, Zezwalaj tabeli źródłowej zerowej długości, kolejność sortowania, obcego Nazwa pola źródła  
   
-- `AFX_DAO_ALL_INFO`Informacje o podstawowych i pomocniczych, plus: tekst sprawdzania poprawności domyślna wartość reguły walidacji  
+- `AFX_DAO_ALL_INFO` Informacje o podstawowych i pomocniczych, plus: tekst sprawdzania poprawności domyślna wartość reguły walidacji  
   
  `lpszName`  
  Nazwa pola.  
@@ -1064,7 +1059,7 @@ void GetFieldInfo(
   
  Powiązane informacje zobacz temat "Właściwość Attributes" w pomocy DAO.  
   
-##  <a name="getfieldvalue"></a>CDaoRecordset::GetFieldValue  
+##  <a name="getfieldvalue"></a>  CDaoRecordset::GetFieldValue  
  Wywołanie tej funkcji Członkowskich do pobierania danych w zestawie rekordów.  
   
 ```  
@@ -1102,11 +1097,11 @@ virtual COleVariant GetFieldValue(int nIndex);
   
  Użyj `GetFieldValue` i [SetFieldValue](#setfieldvalue) dynamicznie powiązać pola w czasie wykonywania, a nie statycznie powiązanie kolumn za pomocą [DoFieldExchange](#dofieldexchange) mechanizmu.  
   
- `GetFieldValue`i `DoFieldExchange` mechanizmu można łączyć, aby zwiększyć wydajność. Na przykład użyć `GetFieldValue` do pobierania wartości, które są potrzebne tylko na żądanie i przypisz tego wywołania na przycisk "Więcej informacji" w interfejsie.  
+ `GetFieldValue` i `DoFieldExchange` mechanizmu można łączyć, aby zwiększyć wydajność. Na przykład użyć `GetFieldValue` do pobierania wartości, które są potrzebne tylko na żądanie i przypisz tego wywołania na przycisk "Więcej informacji" w interfejsie.  
   
  Powiązane informacje zobacz tematy "Pola obiektu" i "Wartość właściwości" w pomocy DAO.  
   
-##  <a name="getindexcount"></a>CDaoRecordset::GetIndexCount  
+##  <a name="getindexcount"></a>  CDaoRecordset::GetIndexCount  
  Wywołanie tej funkcji Członkowskich, aby określić liczbę indeksów dostępne w zestawie rekordów typu tabeli.  
   
 ```  
@@ -1117,11 +1112,11 @@ short GetIndexCount();
  Liczba indeksów w zestawie rekordów typu tabeli.  
   
 ### <a name="remarks"></a>Uwagi  
- `GetIndexCount`jest przydatne w przypadku wszystkich indeksów w zestawie rekordów w pętli. W tym celu użyj `GetIndexCount` w połączeniu z [GetIndexInfo](#getindexinfo). Wywołanie funkcji członkowskiej na dynamicznego lub zestawów rekordów typu migawka, MFC zgłasza wyjątek.  
+ `GetIndexCount` jest przydatne w przypadku wszystkich indeksów w zestawie rekordów w pętli. W tym celu użyj `GetIndexCount` w połączeniu z [GetIndexInfo](#getindexinfo). Wywołanie funkcji członkowskiej na dynamicznego lub zestawów rekordów typu migawka, MFC zgłasza wyjątek.  
   
  Powiązane informacje zobacz temat "Właściwość Attributes" w pomocy DAO.  
   
-##  <a name="getindexinfo"></a>CDaoRecordset::GetIndexInfo  
+##  <a name="getindexinfo"></a>  CDaoRecordset::GetIndexInfo  
  Wywołanie tej funkcji Członkowskich uzyskać różne rodzaje informacji na temat indeksu zdefiniowany w tabeli bazowej podstawowy zestaw rekordów.  
   
 ```  
@@ -1147,11 +1142,11 @@ void GetIndexInfo(
  `dwInfoOptions`  
  Opcje, które określają, które informacje o indeksie do pobrania. Dostępne opcje są wyświetlane tutaj wraz z co spowodują one funkcji do zwrócenia. Aby uzyskać najlepszą wydajność należy pobrać tylko poziom potrzebne informacje:  
   
-- `AFX_DAO_PRIMARY_INFO`(Ustawienie domyślne) Pola Nazwa pola informacji,  
+- `AFX_DAO_PRIMARY_INFO` (Ustawienie domyślne) Pola Nazwa pola informacji,  
   
-- `AFX_DAO_SECONDARY_INFO`Podstawowe informacje plus: podstawowej, Unique, klastra, IgnoreNulls wymagane, obcy  
+- `AFX_DAO_SECONDARY_INFO` Podstawowe informacje plus: podstawowej, Unique, klastra, IgnoreNulls wymagane, obcy  
   
-- `AFX_DAO_ALL_INFO`Informacje o podstawowych i pomocniczych plus: liczności unikatowych wartości  
+- `AFX_DAO_ALL_INFO` Informacje o podstawowych i pomocniczych plus: liczności unikatowych wartości  
   
  `lpszName`  
  Wskaźnik na nazwę obiektu indeksu wyszukiwania według nazwy.  
@@ -1163,7 +1158,7 @@ void GetIndexInfo(
   
  Powiązane informacje zobacz temat "Właściwość Attributes" w pomocy DAO.  
   
-##  <a name="getlastmodifiedbookmark"></a>CDaoRecordset::GetLastModifiedBookmark  
+##  <a name="getlastmodifiedbookmark"></a>  CDaoRecordset::GetLastModifiedBookmark  
  Wywołanie tej funkcji Członkowskich pobrać zakładki rekordu najbardziej ostatnio dodane lub zaktualizowane.  
   
 ```  
@@ -1180,7 +1175,7 @@ COleVariant GetLastModifiedBookmark();
   
  Powiązane informacje zobacz temat "LastModified Property" w pomocy DAO.  
   
-##  <a name="getlockingmode"></a>CDaoRecordset::GetLockingMode  
+##  <a name="getlockingmode"></a>  CDaoRecordset::GetLockingMode  
  Wywołanie tej funkcji Członkowskich w celu określenia typu w celu blokowania zestawu rekordów.  
   
 ```  
@@ -1199,7 +1194,7 @@ BOOL GetLockingMode();
   
  Aby uzyskać odpowiednie informacje zobacz tematy "LockEdits Property" i "Blokowania zachowanie w wielodostępnego aplikacji" w pomocy DAO.  
   
-##  <a name="getname"></a>CDaoRecordset::GetName  
+##  <a name="getname"></a>  CDaoRecordset::GetName  
  Wywołanie tej funkcji Członkowskich pobrać nazwy zestawu rekordów.  
   
 ```  
@@ -1214,7 +1209,7 @@ CString GetName();
   
  Aby uzyskać odpowiednie informacje zobacz temat "Właściwości Name" w pomocy DAO.  
   
-##  <a name="getparamvalue"></a>CDaoRecordset::GetParamValue  
+##  <a name="getparamvalue"></a>  CDaoRecordset::GetParamValue  
  Wywołanie tej funkcji Członkowskich pobrać bieżącą wartość określony parametr przechowywane w obiekcie źródłowym zostały DAOParameter.  
   
 ```  
@@ -1237,7 +1232,7 @@ virtual COleVariant GetParamValue(LPCTSTR lpszName);
   
  Powiązane informacje zobacz temat "Obiektu Parameter" w pomocy DAO.  
   
-##  <a name="getpercentposition"></a>CDaoRecordset::GetPercentPosition  
+##  <a name="getpercentposition"></a>  CDaoRecordset::GetPercentPosition  
  Podczas pracy z dynamicznego lub zestaw rekordów typu migawka, jeśli wywołujesz `GetPercentPosition` przed pełni wypełnianie zestawu rekordów, wielkość ruchu jest określana względem to liczba rekordów dostęp do określonych przez wywołanie metody [GetRecordCount](#getrecordcount).  
   
 ```  
@@ -1254,7 +1249,7 @@ float GetPercentPosition();
   
  Powiązane informacje zobacz temat "PercentPosition Property" w pomocy DAO.  
   
-##  <a name="getrecordcount"></a>CDaoRecordset::GetRecordCount  
+##  <a name="getrecordcount"></a>  CDaoRecordset::GetRecordCount  
  Wywołanie tej funkcji członkowskiej, aby dowiedzieć się, uzyskiwały ile rekordy w zestawie rekordów.  
   
 ```  
@@ -1265,7 +1260,7 @@ long GetRecordCount();
  Zwraca liczbę rekordów dostępne w obiekcie zestawu rekordów.  
   
 ### <a name="remarks"></a>Uwagi  
- `GetRecordCount`wskazuje liczbę rekordów są zawarte w dynamicznego lub zestaw rekordów typu migawka, dopóki dostęp do wszystkich rekordów. To wywołanie funkcji Członkowskich może zająć dużo czasu.  
+ `GetRecordCount` wskazuje liczbę rekordów są zawarte w dynamicznego lub zestaw rekordów typu migawka, dopóki dostęp do wszystkich rekordów. To wywołanie funkcji Członkowskich może zająć dużo czasu.  
   
  Po uzyskaniu ostatniego rekordu wartości zwracanej wskazuje całkowita liczba rekordów cofnąć usunięcia w zestawie rekordów. Aby wymusić ostatni rekord, aby można było uzyskać dostęp, należy wywołać `MoveLast` lub `FindLast` funkcji członkowskiej zestawu rekordów. Liczba SQL umożliwia również określić przybliżoną liczbę rekordów, które zwraca zapytanie.  
   
@@ -1279,7 +1274,7 @@ long GetRecordCount();
   
  Powiązane informacje zobacz temat "RecordCount Property" w pomocy DAO.  
   
-##  <a name="getsql"></a>CDaoRecordset::GetSQL  
+##  <a name="getsql"></a>  CDaoRecordset::GetSQL  
  Wywołanie tej funkcji Członkowskich uzyskanie instrukcji SQL, którego użyto do wybierania rekordów w zestawie rekordów, gdy została otwarta.  
   
 ```  
@@ -1299,7 +1294,7 @@ CString GetSQL() const;
   
  Powiązane informacje zobacz temat "SQL Property" w pomocy DAO.  
   
-##  <a name="gettype"></a>CDaoRecordset::GetType  
+##  <a name="gettype"></a>  CDaoRecordset::GetType  
  Wywołanie tej funkcji Członkowskich po otwarciu zestawu rekordów, można określić typu obiektu zestawu rekordów.  
   
 ```  
@@ -1318,7 +1313,7 @@ short GetType();
 ### <a name="remarks"></a>Uwagi  
  Powiązane informacje zobacz temat "Właściwość Type" w pomocy DAO.  
   
-##  <a name="getvalidationrule"></a>CDaoRecordset::GetValidationRule  
+##  <a name="getvalidationrule"></a>  CDaoRecordset::GetValidationRule  
  Wywołanie tej funkcji Członkowskich, aby ustalić reguły używane do sprawdzania poprawności danych.  
   
 ```  
@@ -1335,7 +1330,7 @@ CString GetValidationRule();
   
  Powiązane informacje zobacz temat "ValidationRule Property" w pomocy DAO.  
   
-##  <a name="getvalidationtext"></a>CDaoRecordset::GetValidationText  
+##  <a name="getvalidationtext"></a>  CDaoRecordset::GetValidationText  
  Wywołanie tej funkcji Członkowskich pobrać tekst właściwości komunikat obiektu podstawowego pola.  
   
 ```  
@@ -1348,7 +1343,7 @@ CString GetValidationText();
 ### <a name="remarks"></a>Uwagi  
  Powiązane informacje zobacz temat "Komunikat Property" w pomocy DAO.  
   
-##  <a name="isbof"></a>CDaoRecordset::IsBOF  
+##  <a name="isbof"></a>  CDaoRecordset::IsBOF  
  Wywołanie funkcji członkowskiej przed przewiń z rekordu do rekordu, aby dowiedzieć się czy przeszły przed pierwszy rekord zestawu rekordów.  
   
 ```  
@@ -1388,14 +1383,14 @@ BOOL IsBOF() const;
   
 ||IsBOF|IsEOF|  
 |------|-----------|-----------|  
-|**MoveFirst**,`MoveLast`|Różna od zera|Różna od zera|  
+|**MoveFirst**, `MoveLast`|Różna od zera|Różna od zera|  
 |**Przenieś** 0|Brak zmian|Brak zmian|  
 |`MovePrev`, **Przenieś** < 0|Różna od zera|Brak zmian|  
 |`MoveNext`, **Przenieś** > 0.|Brak zmian|Różna od zera|  
   
  Aby uzyskać odpowiednie informacje, zobacz temat "BOF, właściwości EOF" w pomocy DAO.  
   
-##  <a name="isdeleted"></a>CDaoRecordset::IsDeleted  
+##  <a name="isdeleted"></a>  CDaoRecordset::IsDeleted  
  Wywołanie tej funkcji Członkowskich, aby określić, czy bieżący rekord został usunięty.  
   
 ```  
@@ -1415,7 +1410,7 @@ BOOL IsDeleted() const;
   
  Aby uzyskać odpowiednie informacje zobacz tematy "Metody Delete", "LastModified Property" i "EditMode Property" w pomocy DAO.  
   
-##  <a name="iseof"></a>CDaoRecordset::IsEOF  
+##  <a name="iseof"></a>  CDaoRecordset::IsEOF  
  Wywołanie funkcji członkowskiej przewijania z rekordu do rekordu, aby dowiedzieć się czy przeszły poza ostatni rekord zestawu rekordów.  
   
 ```  
@@ -1455,14 +1450,14 @@ BOOL IsEOF() const;
   
 ||IsBOF|IsEOF|  
 |------|-----------|-----------|  
-|**MoveFirst**,`MoveLast`|Różna od zera|Różna od zera|  
+|**MoveFirst**, `MoveLast`|Różna od zera|Różna od zera|  
 |**Przenieś** 0|Brak zmian|Brak zmian|  
 |`MovePrev`, **Przenieś** < 0|Różna od zera|Brak zmian|  
 |`MoveNext`, **Przenieś** > 0.|Brak zmian|Różna od zera|  
   
  Aby uzyskać odpowiednie informacje, zobacz temat "BOF, właściwości EOF" w pomocy DAO.  
   
-##  <a name="isfielddirty"></a>CDaoRecordset::IsFieldDirty  
+##  <a name="isfielddirty"></a>  CDaoRecordset::IsFieldDirty  
  Wywołanie tej funkcji elementu członkowskiego, aby określić, czy element członkowski danych określonego pola z dynamicznego zostały oznaczone jako "zakłóconych" (zmienić).  
   
 ```  
@@ -1479,9 +1474,9 @@ BOOL IsFieldDirty(void* pv);
 ### <a name="remarks"></a>Uwagi  
  Dane w wszystkie elementy członkowskie danych pola z zanieczyszczeniu zostanie przeniesiona do rekordu w źródle danych podczas aktualizacji przez wywołanie do bieżącego rekordu **aktualizacji** funkcji członkowskiej klasy `CDaoRecordset` (po wywołaniu **Edytuj**lub `AddNew`). Z tym wiedzy, możesz wykonać dalsze czynności, takie jak unflagging element członkowski danych pola, aby oznaczyć kolumny, więc nie można zapisać w źródle danych.  
   
- `IsFieldDirty`jest implementowane za pośrednictwem `DoFieldExchange`.  
+ `IsFieldDirty` jest implementowane za pośrednictwem `DoFieldExchange`.  
   
-##  <a name="isfieldnull"></a>CDaoRecordset::IsFieldNull  
+##  <a name="isfieldnull"></a>  CDaoRecordset::IsFieldNull  
  Wywołanie tej funkcji elementu członkowskiego, aby określić, czy element członkowski danych określonego pola rekordów zostały oznaczone jako wartość Null.  
   
 ```  
@@ -1506,7 +1501,7 @@ BOOL IsFieldNull(void* pv);
 > [!NOTE]
 >  Jeśli używasz rekordów wiązania dynamicznego bez pochodny `CDaoRecordset`, należy użyć **VT_NULL** jak pokazano w przykładzie.  
   
-##  <a name="isfieldnullable"></a>CDaoRecordset::IsFieldNullable  
+##  <a name="isfieldnullable"></a>  CDaoRecordset::IsFieldNullable  
  Wywołanie tej funkcji Członkowskich, aby ustalić, czy element członkowski danych określone pole "nullable" (może być ustawiony na wartość Null; C++ **NULL** nie jest taka sama jak wartość Null, co w terminologii bazy danych, oznacza to "o wartości").  
   
 ```  
@@ -1523,7 +1518,7 @@ BOOL IsFieldNullable(void* pv);
 ### <a name="remarks"></a>Uwagi  
  Pola, które nie może mieć wartości Null, musi mieć wartość. Jeśli spróbujesz ustawić na wartość Null, podczas dodawania lub aktualizowania rekordu takiego pola źródła danych odrzuca dodawania lub aktualizacji, i **aktualizacji** spowoduje zgłoszenie wyjątku. Wyjątek występuje po wywołaniu **aktualizacji**, nie w przypadku wywołania `SetFieldNull`.  
   
-##  <a name="isopen"></a>CDaoRecordset::IsOpen  
+##  <a name="isopen"></a>  CDaoRecordset::IsOpen  
  Wywołanie tej funkcji Członkowskich, aby ustalić, czy zestaw rekordów jest otwarty.  
   
 ```  
@@ -1535,7 +1530,7 @@ BOOL IsOpen() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="m_bcheckcachefordirtyfields"></a>CDaoRecordset::m_bCheckCacheForDirtyFields  
+##  <a name="m_bcheckcachefordirtyfields"></a>  CDaoRecordset::m_bCheckCacheForDirtyFields  
  Flaga wskazująca, czy pola pamięci podręcznej zostaną automatycznie oznaczone jako dirty (zmienione) zawiera i Null.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1543,7 +1538,7 @@ BOOL IsOpen() const;
   
  Ustaw ten element członkowski danych przed wywołaniem **Otwórz**. Ten mechanizm jest przeznaczone głównie dla łatwość użycia. Wydajność może być niższa z powodu podwójnego buforowania pól, ponieważ zmiany zostały wprowadzone.  
   
-##  <a name="m_nfields"></a>CDaoRecordset::m_nFields  
+##  <a name="m_nfields"></a>  CDaoRecordset::m_nFields  
  Zawiera liczbę elementy członkowskie danych pola w klasie zestawu rekordów i liczba kolumn wybranych przez zestaw rekordów ze źródła danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1556,7 +1551,7 @@ BOOL IsOpen() const;
   
  Można powiązać kolumny dynamicznie przez zasadzie `CDaoRecordset::GetFieldValue` i `CDaoRecordset::SetFieldValue`. Jeśli tak zrobisz, nie trzeba zwiększyć liczby w `m_nFields` do uwzględnienia liczba funkcji DFX wywołań Twojej `DoFieldExchange` funkcji członkowskiej.  
   
-##  <a name="m_nparams"></a>CDaoRecordset::m_nParams  
+##  <a name="m_nparams"></a>  CDaoRecordset::m_nParams  
  Zawiera liczbę elementy członkowskie danych parametru w klasie rekordów — liczba parametrów przekazanych z zapytaniem w zestawie rekordów.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1569,7 +1564,7 @@ BOOL IsOpen() const;
   
  Powiązane informacje zobacz temat "Obiektu Parameter" w pomocy DAO.  
   
-##  <a name="m_pdaorecordset"></a>CDaoRecordset::m_pDAORecordset  
+##  <a name="m_pdaorecordset"></a>  CDaoRecordset::m_pDAORecordset  
  Zawiera wskaźnik do interfejsu OLE dla podstawowego obiektu zestawu rekordów DAO `CDaoRecordset` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1577,7 +1572,7 @@ BOOL IsOpen() const;
   
  Powiązane informacje zobacz temat "Zestawu rekordów do obiektu" w pomocy DAO.  
   
-##  <a name="m_pdatabase"></a>CDaoRecordset::m_pDatabase  
+##  <a name="m_pdatabase"></a>  CDaoRecordset::m_pDatabase  
  Zawiera wskaźnik do `CDaoDatabase` obiektu za pomocą których zestaw rekordów jest połączony ze źródłem danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1587,7 +1582,7 @@ BOOL IsOpen() const;
   
  Powiązane informacje zobacz temat "Obiektu bazy danych" w pomocy DAO.  
   
-##  <a name="m_strfilter"></a>CDaoRecordset::m_strFilter  
+##  <a name="m_strfilter"></a>  CDaoRecordset::m_strFilter  
  Zawiera ciąg, który jest używany do tworzenia **gdzie** klauzuli instrukcji SQL.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1597,7 +1592,7 @@ BOOL IsOpen() const;
   
  Powiązane informacje zobacz temat "Filtr właściwości" w pomocy DAO.  
   
-##  <a name="m_strsort"></a>CDaoRecordset::m_strSort  
+##  <a name="m_strsort"></a>  CDaoRecordset::m_strSort  
  Zawiera ciąg zawierający **ORDERBY** klauzuli instrukcji SQL bez słów zastrzeżonych **ORDERBY**.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1609,7 +1604,7 @@ BOOL IsOpen() const;
   
  Powiązane informacje zobacz temat "Właściwości sortowania" w pomocy DAO.  
   
-##  <a name="move"></a>CDaoRecordset::Move  
+##  <a name="move"></a>  CDaoRecordset::Move  
  Wywołanie tej funkcji Członkowskich, aby umieścić zestaw rekordów `lRows` rekordów z bieżącego rekordu.  
   
 ```  
@@ -1621,7 +1616,7 @@ virtual void Move(long lRows);
  Liczba rekordów do przeniesienia do przodu i do tyłu. Wartości dodatnie do przodu, Przenieś stronę końca zestawu rekordów. Wartości ujemne Wstecz, Przenieś stronę początku.  
   
 ### <a name="remarks"></a>Uwagi  
- Możesz przejść do przodu i do tyłu. `Move( 1 )`jest odpowiednikiem `MoveNext`, i `Move( -1 )` jest odpowiednikiem `MovePrev`.  
+ Możesz przejść do przodu i do tyłu. `Move( 1 )` jest odpowiednikiem `MoveNext`, i `Move( -1 )` jest odpowiednikiem `MovePrev`.  
   
 > [!CAUTION]
 >  Wywoływanie poszczególnych **Przenieś** funkcje zgłasza wyjątek, jeśli zestaw nie zawiera żadnych rekordów. Ogólnie rzecz biorąc, wywołać metodę `IsBOF` i `IsEOF` przed operacji przenoszenia w celu określenia, czy zestaw rekordów zawiera rekordy. Po wywołaniu metody **Otwórz** lub **Requery**, albo wywoływać `IsBOF` lub `IsEOF`.  
@@ -1638,7 +1633,7 @@ virtual void Move(long lRows);
   
  Powiązane informacje, zobacz tematy "Metody Move" i "MoveNext MoveFirst, MoveLast, metody MovePrevious" w pomocy DAO.  
   
-##  <a name="movefirst"></a>CDaoRecordset::MoveFirst  
+##  <a name="movefirst"></a>  CDaoRecordset::MoveFirst  
  Wywołanie tej funkcji Członkowskich, aby pierwszy rekord w zestawie rekordów (jeśli istnieją) bieżącego rekordu.  
   
 ```  
@@ -1666,7 +1661,7 @@ void MoveFirst();
   
  Powiązane informacje, zobacz tematy "Metody Move" i "MoveNext MoveFirst, MoveLast, metody MovePrevious" w pomocy DAO.  
   
-##  <a name="movelast"></a>CDaoRecordset::MoveLast  
+##  <a name="movelast"></a>  CDaoRecordset::MoveLast  
  Wywołanie tej funkcji Członkowskich, aby ostatniego rekordu (jeśli istnieją) w zestawie rekordów bieżącego rekordu.  
   
 ```  
@@ -1691,7 +1686,7 @@ void MoveLast();
   
  Powiązane informacje, zobacz tematy "Metody Move" i "MoveNext MoveFirst, MoveLast, metody MovePrevious" w pomocy DAO.  
   
-##  <a name="movenext"></a>CDaoRecordset::MoveNext  
+##  <a name="movenext"></a>  CDaoRecordset::MoveNext  
  Wywołanie tej funkcji Członkowskich dokonanie następnego rekordu w zestawie rekordów bieżącego rekordu.  
   
 ```  
@@ -1715,7 +1710,7 @@ void MoveNext();
   
  Powiązane informacje, zobacz tematy "Metody Move" i "MoveNext MoveFirst, MoveLast, metody MovePrevious" w pomocy DAO.  
   
-##  <a name="moveprev"></a>CDaoRecordset::MovePrev  
+##  <a name="moveprev"></a>  CDaoRecordset::MovePrev  
  Wywołanie tej funkcji Członkowskich dokonanie poprzedniego rekordu w zestawie rekordów bieżącego rekordu.  
   
 ```  
@@ -1741,7 +1736,7 @@ void MovePrev();
   
  Powiązane informacje, zobacz tematy "Metody Move" i "MoveNext MoveFirst, MoveLast, metody MovePrevious" w pomocy DAO.  
   
-##  <a name="open"></a>CDaoRecordset::Open  
+##  <a name="open"></a>  CDaoRecordset::Open  
  Wywołaj tę funkcję elementu członkowskiego, aby pobrać rekordy zestawu rekordów.  
   
 ```  
@@ -1840,7 +1835,7 @@ virtual void Open(
   
 |Wartość `lpszSQL` parametru|Wybrane rekordy są określane przez|Przykład|  
 |--------------------------------------|----------------------------------------|-------------|  
-|**WARTOŚĆ NULL**|Długość ciągu zwróconego przez `GetDefaultSQL`.||  
+|**NULL**|Długość ciągu zwróconego przez `GetDefaultSQL`.||  
 |Rozdzielana przecinkami lista tabledefs — co najmniej jeden i/lub querydef nazwy.|Wszystkie kolumny reprezentowane w `DoFieldExchange`.|`"Customer"`|  
 |**Wybierz** listy kolumn **FROM** listę tabel|Określonych kolumn z określonym tabledef(s) i/lub querydef(s).|`"SELECT CustId, CustName`<br /><br /> `FROM Customer"`|  
   
@@ -1863,7 +1858,7 @@ virtual void Open(
   
  Powiązane informacje zobacz temat "OpenRecordset Method" w pomocy DAO.  
   
-##  <a name="requery"></a>CDaoRecordset::Requery  
+##  <a name="requery"></a>  CDaoRecordset::Requery  
  Wywołanie tej funkcji Członkowskich odbudować (odświeżanie) zestawu rekordów.  
   
 ```  
@@ -1877,7 +1872,7 @@ virtual void Requery();
   
  Zestaw dynamiczny lub migawki, należy wywołać **Requery** dowolnej chwili, aby odbudować rekordów przy użyciu wartości parametrów. Ustaw nowe filtrowania lub sortowania przez ustawienie [m_strFilter](#m_strfilter) i [m_strSort](#m_strsort) przed wywołaniem **Requery**. Ustaw nowe parametry przez przypisanie wartości nowe elementy członkowskie danych parametru przed wywołaniem **Requery**.  
   
- Jeśli próba odbudować zestaw rekordów nie powiedzie się, zestaw rekordów jest zamknięty. Przed wywołaniem **Requery**, można określić, czy zestaw rekordów można ponowieniu wywołując [CanRestart](#canrestart) funkcję elementu członkowskiego. `CanRestart`nie gwarantuje, że **Requery** powiedzie się.  
+ Jeśli próba odbudować zestaw rekordów nie powiedzie się, zestaw rekordów jest zamknięty. Przed wywołaniem **Requery**, można określić, czy zestaw rekordów można ponowieniu wywołując [CanRestart](#canrestart) funkcję elementu członkowskiego. `CanRestart` nie gwarantuje, że **Requery** powiedzie się.  
   
 > [!CAUTION]
 >  Wywołanie **Requery** tylko po wywołaniu **Otwórz**.  
@@ -1891,7 +1886,7 @@ virtual void Requery();
   
  Powiązane informacje zobacz temat "Requery Method" w pomocy DAO.  
   
-##  <a name="seek"></a>CDaoRecordset::Seek  
+##  <a name="seek"></a>  CDaoRecordset::Seek  
  Wywołanie tej funkcji Członkowskich do zlokalizowania w obiekcie zestaw rekordów typu indeksowanej tabeli spełniającego określone kryteria dla bieżącego indeksu i upewnij, że rekord dla bieżącego rekordu rekordu.  
   
 ```  
@@ -1913,7 +1908,7 @@ BOOL Seek(
  Jedno z wyrażeń następujący ciąg: "<","\<=", "=" "> =", lub ">".  
   
  `pKey1`  
- Wskaźnik do [COleVariant](../../mfc/reference/colevariant-class.md) którego wartość odpowiada pierwszego pola w indeksie. Wymagany.  
+ Wskaźnik do [COleVariant](../../mfc/reference/colevariant-class.md) którego wartość odpowiada pierwszego pola w indeksie. Wymagana.  
   
  *pKey2*  
  Wskaźnik do `COleVariant` którego wartość odpowiada drugiego pola w indeksie, jeśli istnieje. Domyślnie **NULL**.  
@@ -1936,11 +1931,11 @@ BOOL Seek(
 ### <a name="remarks"></a>Uwagi  
  Przy użyciu drugiej wersji (tablica) `Seek` indeksy pól cztery lub więcej.  
   
- `Seek`Umożliwia wyszukiwanie zestawów rekordów typu tabeli indeksu wysokiej wydajności. Należy ustawić bieżącego indeksu przez wywołanie metody `SetCurrentIndex` przed wywołaniem `Seek`. Jeśli indeks identyfikuje nieunikatowy lub pól klucza, `Seek` lokalizuje pierwszy rekord, który spełnia kryteria. Jeśli indeks nie jest ustawiona, jest zwracany wyjątek.  
+ `Seek` Umożliwia wyszukiwanie zestawów rekordów typu tabeli indeksu wysokiej wydajności. Należy ustawić bieżącego indeksu przez wywołanie metody `SetCurrentIndex` przed wywołaniem `Seek`. Jeśli indeks identyfikuje nieunikatowy lub pól klucza, `Seek` lokalizuje pierwszy rekord, który spełnia kryteria. Jeśli indeks nie jest ustawiona, jest zwracany wyjątek.  
   
  Należy pamiętać, że jeśli nie utworzysz zestaw rekordów UNICODE, `COleVariant` obiekty muszą być jawnie deklarować ANSI. Można to zrobić za pomocą [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **,** `vtSrc` **)** formę — Konstruktor z `vtSrc` ustawioną `VT_BSTRT` (ANSI) lub za pomocą **COleVariant** funkcja [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **,** `vtSrc` **)** z `vtSrc` ustawioną `VT_BSTRT`.  
   
- Podczas wywoływania `Seek`, należy przekazać co najmniej jednej wartości klucza i operatora porównania ("<","\<=", "=" "> =", lub ">"). `Seek`przeszukanie określone pola klucza i lokalizuje pierwszy rekord, który spełnia kryteria określone przez `lpszComparison` i `pKey1`. Znaleziono jeden raz, `Seek` zwraca różną od zera co oznacza, że ten rekord bieżący. Jeśli `Seek` nie uda się znaleźć dopasowania, `Seek` zwraca zero, a bieżący rekord jest niezdefiniowany. Korzystając z obiektów DAO bezpośrednio, należy jawnie Sprawdź właściwość NoMatch.  
+ Podczas wywoływania `Seek`, należy przekazać co najmniej jednej wartości klucza i operatora porównania ("<","\<=", "=" "> =", lub ">"). `Seek` przeszukanie określone pola klucza i lokalizuje pierwszy rekord, który spełnia kryteria określone przez `lpszComparison` i `pKey1`. Znaleziono jeden raz, `Seek` zwraca różną od zera co oznacza, że ten rekord bieżący. Jeśli `Seek` nie uda się znaleźć dopasowania, `Seek` zwraca zero, a bieżący rekord jest niezdefiniowany. Korzystając z obiektów DAO bezpośrednio, należy jawnie Sprawdź właściwość NoMatch.  
   
  Jeśli `lpszComparison` to "=" "> =", lub ">", `Seek` rozpoczyna się od początku indeksu. Jeśli `lpszComparison` jest "<" lub "< =", `Seek` rozpoczyna się na końcu indeksu i wyszukuje Wstecz, o ile nie ma indeksu zduplikowanych wpisów na końcu. W takim przypadku `Seek` rozpoczyna się od dowolnego wpis między indeksu zduplikowane wpisy na końcu indeksu.  
   
@@ -1952,7 +1947,7 @@ BOOL Seek(
   
  Powiązane informacje zobacz temat "Wyszukiwanie Method" w pomocy DAO.  
   
-##  <a name="setabsoluteposition"></a>CDaoRecordset::SetAbsolutePosition  
+##  <a name="setabsoluteposition"></a>  CDaoRecordset::SetAbsolutePosition  
  Ustawia względną numer bieżącego rekordu obiektu zestawu rekordów.  
   
 ```  
@@ -1978,7 +1973,7 @@ void SetAbsolutePosition(long lPosition);
   
  Powiązane informacje zobacz temat "AbsolutePosition Property" w pomocy DAO.  
   
-##  <a name="setbookmark"></a>CDaoRecordset::SetBookmark  
+##  <a name="setbookmark"></a>  CDaoRecordset::SetBookmark  
  Wywołanie tej funkcji Członkowskich, aby umieścić zestaw rekordów na rekord zawierający zakładką.  
   
 ```  
@@ -1999,7 +1994,7 @@ void SetBookmark(COleVariant varBookmark);
   
  Powiązane informacje zobacz tematy "Właściwość zakładki" i Bookmarkable"w pomocy DAO.  
   
-##  <a name="setcachesize"></a>CDaoRecordset::SetCacheSize  
+##  <a name="setcachesize"></a>  CDaoRecordset::SetCacheSize  
  Wywołanie tej funkcji członkowskich można ustawić liczby rekordów w pamięci podręcznej.  
   
 ```  
@@ -2017,7 +2012,7 @@ void SetCacheSize(long lSize);
   
  Powiązane informacje zobacz temat "CacheSize właściwości CacheStart" w pomocy DAO.  
   
-##  <a name="setcachestart"></a>CDaoRecordset::SetCacheStart  
+##  <a name="setcachestart"></a>  CDaoRecordset::SetCacheStart  
  Wywołanie tej funkcji elementu członkowskiego, aby określić zakładki pierwszy rekord w zestawie rekordów w pamięci podręcznej.  
   
 ```  
@@ -2041,7 +2036,7 @@ void SetCacheStart(COleVariant varBookmark);
   
  Powiązane informacje zobacz temat CacheSize, właściwości CacheStart"w pomocy DAO.  
   
-##  <a name="setcurrentindex"></a>CDaoRecordset::SetCurrentIndex  
+##  <a name="setcurrentindex"></a>  CDaoRecordset::SetCurrentIndex  
  Wywołanie tej funkcji Członkowskich ustawić indeksu na zestaw rekordów typu tabeli.  
   
 ```  
@@ -2061,7 +2056,7 @@ void SetCurrentIndex(LPCTSTR lpszIndex);
   
  Powiązane informacje zobacz temat "Indeksu obiektu", jak i definicja "bieżącego indeksu" w pomocy DAO.  
   
-##  <a name="setfielddirty"></a>CDaoRecordset::SetFieldDirty  
+##  <a name="setfielddirty"></a>  CDaoRecordset::SetFieldDirty  
  Wywołanie tej funkcji Członkowskich do flagi element członkowski danych pól rekordów jako zmieniony lub jako bez zmian.  
   
 ```  
@@ -2099,9 +2094,9 @@ void SetFieldDirty(
   
  Oznacza to, nie można ustawić wszystkie **param** pól do **NULL**, jak w przypadku **outputColumn** pól.  
   
- `SetFieldDirty`jest implementowane za pośrednictwem `DoFieldExchange`.  
+ `SetFieldDirty` jest implementowane za pośrednictwem `DoFieldExchange`.  
   
-##  <a name="setfieldnull"></a>CDaoRecordset::SetFieldNull  
+##  <a name="setfieldnull"></a>  CDaoRecordset::SetFieldNull  
  Wywołanie tej funkcji Członkowskich do flagi element członkowski danych pól rekordów jako wartości Null (o specjalnie żadna wartość) lub inną niż Null.  
   
 ```  
@@ -2118,7 +2113,7 @@ void SetFieldNull(
  Różna od zera, jeśli element członkowski danych pole ma być oznaczone jako mający żadna wartość (Null). W przeciwnym razie równa 0, jeśli element członkowski danych pola być oznaczony jako inną niż Null.  
   
 ### <a name="remarks"></a>Uwagi  
- `SetFieldNull`Służy do pola powiązane w `DoFieldExchange` mechanizmu.  
+ `SetFieldNull` Służy do pola powiązane w `DoFieldExchange` mechanizmu.  
   
  Podczas dodawania nowego rekordu do zestawu rekordów, wszystkie elementy członkowskie danych pola są początkowo ustawiona na wartość Null i oznaczone jako "zakłóconych" (zmienione). Gdy można pobrać rekordu ze źródła danych, jej kolumn już mieć wartości albo mają wartość Null. Jeśli nie jest dokonanie pola wartość Null, [CDaoException](../../mfc/reference/cdaoexception-class.md) jest generowany.  
   
@@ -2137,7 +2132,7 @@ void SetFieldNull(
   
  zostanie ustawiona tylko **outputColumn** pól do **NULL**; **param** pól będzie to miało wpływu.  
   
-##  <a name="setfieldvalue"></a>CDaoRecordset::SetFieldValue  
+##  <a name="setfieldvalue"></a>  CDaoRecordset::SetFieldValue  
  Wywołanie tej funkcji członkowskich można ustawić wartości pola, według liczby porządkowej pozycji lub zmieniając wartość ciągu.  
   
 ```  
@@ -2181,7 +2176,7 @@ void SetFieldValue(
   
  Powiązane informacje zobacz tematy "Pola obiektu" i "Wartość właściwości" w pomocy DAO.  
   
-##  <a name="setfieldvaluenull"></a>CDaoRecordset::SetFieldValueNull  
+##  <a name="setfieldvaluenull"></a>  CDaoRecordset::SetFieldValueNull  
  Wywołanie tej funkcji członkowskich można ustawić pola na wartość Null.  
   
 ```  
@@ -2201,7 +2196,7 @@ void SetFieldValueNull(LPCTSTR lpszName);
   
  Powiązane informacje zobacz tematy "Pola obiektu" i "Wartość właściwości" w pomocy DAO.  
   
-##  <a name="setlockingmode"></a>CDaoRecordset::SetLockingMode  
+##  <a name="setlockingmode"></a>  CDaoRecordset::SetLockingMode  
  Wywołanie tej funkcji Członkowskich, aby ustawić typ blokady dla zestawu rekordów.  
   
 ```  
@@ -2223,7 +2218,7 @@ void SetLockingMode(BOOL bPessimistic);
   
  Podczas pracy ze źródłami danych ODBC, tryb blokowania jest zawsze optymistycznej.  
   
-##  <a name="setparamvalue"></a>CDaoRecordset::SetParamValue  
+##  <a name="setparamvalue"></a>  CDaoRecordset::SetParamValue  
  Wywołanie tej funkcji członkowskich można ustawić wartości parametru w zestawie rekordów w czasie wykonywania.  
   
 ```  
@@ -2252,7 +2247,7 @@ virtual void SetParamValue(
   
  Określ wartość do ustawienia jako `COleVariant` obiektu. Informacje o ustawianiu na żądaną wartość i wpisz Twojej `COleVariant` obiektów, zobacz klasę [COleVariant](../../mfc/reference/colevariant-class.md). Należy pamiętać, że jeśli nie utworzysz zestaw rekordów UNICODE, `COleVariant` obiektu musi być jawnie deklarować ANSI. Można to zrobić za pomocą [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **,** `vtSrc` **)** formę — Konstruktor z `vtSrc` ustawioną `VT_BSTRT` (ANSI) lub za pomocą **COleVariant** funkcja [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **,** `vtSrc` **)** z `vtSrc` ustawioną `VT_BSTRT`.  
   
-##  <a name="setparamvaluenull"></a>CDaoRecordset::SetParamValueNull  
+##  <a name="setparamvaluenull"></a>  CDaoRecordset::SetParamValueNull  
  Wywołanie tej funkcji Członkowskich, aby ustawić parametr na wartość Null.  
   
 ```  
@@ -2270,7 +2265,7 @@ void SetParamValueNull(LPCTSTR lpszName);
 ### <a name="remarks"></a>Uwagi  
  C++ **NULL** nie jest taka sama jak wartość Null, co w terminologii bazy danych, oznacza to "o wartości".  
   
-##  <a name="setpercentposition"></a>CDaoRecordset::SetPercentPosition  
+##  <a name="setpercentposition"></a>  CDaoRecordset::SetPercentPosition  
  Wywołanie tej funkcji Członkowskich, aby ustawić wartość, która zmienia przybliżonej lokalizacji bieżącego rekordu w obiekcie rekordów procentem rekordy w zestawie rekordów.  
   
 ```  
@@ -2291,7 +2286,7 @@ void SetPercentPosition(float fPosition);
   
  Powiązane informacje zobacz temat "PercentPosition Property" w pomocy DAO.  
   
-##  <a name="update"></a>CDaoRecordset::Update  
+##  <a name="update"></a>  CDaoRecordset::Update  
  Wywołanie tej funkcji Członkowskich po wywołaniu `AddNew` lub **Edytuj** funkcję elementu członkowskiego.  
   
 ```  

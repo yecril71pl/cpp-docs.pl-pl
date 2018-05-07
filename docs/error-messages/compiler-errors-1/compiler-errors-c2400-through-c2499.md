@@ -1,16 +1,12 @@
 ---
-title: "C2400 błędy kompilatora za pośrednictwem C2499 | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: C2400 błędy kompilatora za pośrednictwem C2499 | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2416
-- C2429
 - C2442
 - C2453
 - C2454
@@ -23,7 +19,6 @@ f1_keywords:
 - C2497
 helpviewer_keywords:
 - C2416
-- C2429
 - C2442
 - C2453
 - C2454
@@ -37,17 +32,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: f1f05572-af0b-497b-bde4-4c81ec01af3b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27327069f687c8d3ef33c97f4efbdeaac14bf1ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 208698ca27cadca128ec6e4ed1f99f1b9ea713f9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c2400-through-c2499"></a>C2400 błędy kompilatora za pośrednictwem C2499
 
@@ -88,7 +81,7 @@ Artykuły w tej sekcji dokumentacji opisano podzbiór komunikaty o błędach, kt
 |[Błąd kompilatora C2426](compiler-error-c2426.md)|"*tokenu*": niedozwolony operator w "*kontekstu*"|
 |[Błąd kompilatora C2427](compiler-error-c2427.md)|"*klasy*": nie można definiować klasy w tym zakresie|
 |[Błąd kompilatora C2428](compiler-error-c2428.md)|"*operacji*": nie jest dozwolone na operandzie typu "bool"|
-|C2429 błąd kompilatora|*Kontekst* "*kontekstu*"wymaga flagi kompilatora"*opcji*"|
+|[C2429 błąd kompilatora](compiler-error-c2429.md)|"*funkcji języka*"wymaga flagi kompilatora"*— opcja kompilatora*"|
 |[Błąd kompilatora C2430](compiler-error-c2430.md)|więcej niż jeden indeks rejestru w "*kontekstu*"|
 |[Błąd kompilatora C2431](compiler-error-c2431.md)|Niedozwolony indeks rejestru w "*kontekstu*"|
 |[Błąd kompilatora C2432](compiler-error-c2432.md)|niedozwolone odwołanie do 16-bitowych danych w "*kontekstu*"|
@@ -149,7 +142,7 @@ Artykuły w tej sekcji dokumentacji opisano podzbiór komunikaty o błędach, kt
 |[Błąd kompilatora C2491](compiler-error-c2491.md)|"*identyfikator*": definicja dllimport *funkcja* niedozwolone|
 |[Błąd kompilatora C2492](compiler-error-c2492.md)|"*zmiennej*": dane z okresem magazynu wątku mogą nie mieć interfejsu biblioteki dll|
 |[Błąd kompilatora C2493](compiler-error-c2493.md)|Niedozwolony formularz __based|
-|[Błąd kompilatora C2494](compiler-error-c2494.md)|"*— słowo kluczowe*" nie może zostać wywołany z poziomu wyrażenia filtru lub &#95; &#95; finally/bloku finally|
+|[Błąd kompilatora C2494](compiler-error-c2494.md)|"*— słowo kluczowe*" nie może zostać wywołany z poziomu wyrażenia filtru lub &#95; &#95;finally/bloku finally|
 |[Błąd kompilatora C2495](compiler-error-c2495.md)|"*identyfikator*": "__declspec(noexcept)" można stosować do deklaracji lub definicji funkcji|
 |[Błąd kompilatora C2496](compiler-error-c2496.md)|"*identyfikator*": "selectany" może być stosowany tylko do elementów danych z zewnętrznym powiązaniem|
 |C2497 błąd kompilatora|"*identyfikator*": "implementation_key" można stosować tylko do deklaracji funkcji|

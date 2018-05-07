@@ -1,13 +1,10 @@
 ---
 title: Kreator dodawania metody | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.method.overview
 dev_langs:
@@ -16,29 +13,27 @@ helpviewer_keywords:
 - Add Method Wizard [C++]
 - methods [C++], adding using wizards
 ms.assetid: b9a71b0e-9ecf-40fa-9f86-4200cb23d671
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63595fe7fda434b7ee16161bd3afdaf8a46fad82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc2ebd18640f0ab778cb45252691e63206861d53
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-method-wizard"></a>Kreator dodawania metody
 Ten kreator umożliwia dodawanie metody do interfejsu. W zależności od typu projektu lub typ interfejsu, do którego dodajesz metody Kreator wyświetli różne opcje.  
   
 ## <a name="names"></a>Nazwy  
  **Zwracany typ**  
- Typ danych zwracanych przez metodę. `HRESULT`Zaleca się dla wszystkich typów interfejsu, ponieważ zapewnia standardowy sposób zwracać błędów.  
+ Typ danych zwracanych przez metodę. `HRESULT` Zaleca się dla wszystkich typów interfejsu, ponieważ zapewnia standardowy sposób zwracać błędów.  
   
 |Typ interfejsu|Opis|  
 |--------------------|-----------------|  
-|Podwójna — interfejs|`HRESULT`., Niezmienne.|  
-|Niestandardowy interfejs|`HRESULT`., Niezmienne.|  
+|Podwójna — interfejs|`HRESULT`. Niezmienne.|  
+|Niestandardowy interfejs|`HRESULT`. Niezmienne.|  
 |Niestandardowy interfejs lokalnego|Podaj własny typ zwracany albo wybierz z listy.|  
 |Dispinterface|Podaj własny typ zwracany albo wybierz z listy.|  
 |Dispinterface kontrolki MFC ActiveX|W przypadku zastosowania metody akcji, zwracany typ jest ustawiona na odpowiednią wartość i jest niezmienne. W przypadku wybrania metody z **nazwę metody** listy i kliknij przycisk **niestandardowy** w obszarze **wybierz typ metody**, wybierz typ zwracany z listy.|  
@@ -76,9 +71,9 @@ Ten kreator umożliwia dodawanie metody do interfejsu. W zależności od typu pr
   
 |Atrybut parametru|Opis|Dozwolone kombinacje|  
 |-------------------------|-----------------|--------------------------|  
-|**W**|Wskazuje, że parametr jest przekazywany z procedury wywołującej do procedury wywoływanej.|**w** tylko<br /><br /> **w** i **out**|  
-|**Limit**|Wskazuje, że parametr wskaźnika jest zwracana z procedury wywoływanej do procedury wywołującej (z serwera do klienta).|**limit** tylko<br /><br /> **w** i **out**<br /><br /> **limit** i **retval**|  
-|**Retval**|Wskazuje, że parametr otrzymuje wartość zwrotną z elementu członkowskiego.|**retval** i out|  
+|**In**|Wskazuje, że parametr jest przekazywany z procedury wywołującej do procedury wywoływanej.|**w** tylko<br /><br /> **w** i **out**|  
+|**limit**|Wskazuje, że parametr wskaźnika jest zwracana z procedury wywoływanej do procedury wywołującej (z serwera do klienta).|**limit** tylko<br /><br /> **w** i **out**<br /><br /> **limit** i **retval**|  
+|**retval**|Wskazuje, że parametr otrzymuje wartość zwrotną z elementu członkowskiego.|**retval** i out|  
   
  **Typ parametru**  
  Ustawia typ danych parametru. Wybierz typ z listy.  

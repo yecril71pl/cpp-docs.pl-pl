@@ -1,12 +1,9 @@
 ---
-title: "Używanie dynamicznych metod dostępu | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Używanie dynamicznych metod dostępu | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 02/14/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - accessors [C++], dynamic
 - dynamic accessors
 ms.assetid: e5d5bfa6-2b1d-49d0-8ced-914666422431
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ce2763749537a77664f2971adac65b17e4bde28b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 700a959742fafd4478659ff08821b043aff8bc14
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-dynamic-accessors"></a>Używanie dynamicznych metod dostępu
 
@@ -105,7 +100,7 @@ int main(int argc, char* argv[] )
 }
 ```
 
-## <a name="using-cdynamicstringaccessor"></a>Using CDynamicStringAccessor
+## <a name="using-cdynamicstringaccessor"></a>Przy użyciu cdynamicstringaccessor —
 
 [Cdynamicstringaccessor —](../../data/oledb/cdynamicstringaccessor-class.md) działa, takich jak [cdynamicaccessor —](../../data/oledb/cdynamicaccessor-class.md), z wyjątkiem w jednym ze sposobów ważne. Gdy `CDynamicAccessor` żąda danych w formacie native zgłoszone przez dostawcę `CDynamicStringAccessor` żądań, że dostawca pobrać wszystkie dane uzyskiwane ze źródła danych jako dane ciągu. Jest to szczególnie przydatne w przypadku prostych zadań, które nie wymagają obliczenia wartości w magazynie danych, takie jak wyświetlanie lub drukowanie zawartość magazynu danych.
 
@@ -167,7 +162,7 @@ int main(int argc, char* argv[] )
 }
 ```
 
-## <a name="using-cdynamicparameteraccessor"></a>Using CDynamicParameterAccessor
+## <a name="using-cdynamicparameteraccessor"></a>Przy użyciu cdynamicparameteraccessor —
 
 [Cdynamicparameteraccessor —](../../data/oledb/cdynamicparameteraccessor-class.md) jest podobny do [cdynamicaccessor —](../../data/oledb/cdynamicaccessor-class.md), ale `CDynamicParameterAccessor` uzyskuje informacje o parametrach określonych przez wywołanie [ICommandWithParameters](/sql/relational-databases/native-client-ole-db-interfaces/icommandwithparameters) interfejs. Dostawca musi obsługiwać `ICommandWithParameters` dla konsumentów użyć tej klasy.
 

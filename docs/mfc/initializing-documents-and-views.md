@@ -1,13 +1,10 @@
 ---
-title: "Inicjowanie dokumentów i widoków | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Inicjowanie dokumentów i widoków | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - initializing objects [MFC], document objects
 - initializing views [MFC]
 ms.assetid: 33cb8643-8a16-478c-bc26-eccc734e3661
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f80d870f9804454dc652fdda00f34fcdb7a52062
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e46d130f535076c2591101ab57423db1130ef749
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="initializing-documents-and-views"></a>Inicjowanie dokumentów i widoków
 Dokumenty są tworzone na dwa różne sposoby, więc klasy dokumentu musi obsługiwać obu kierunkach. Po pierwsze użytkownik może utworzyć nowy, pusty dokument przy użyciu polecenia nowy plik. W takim przypadku Inicjowanie dokumentu w zastąpienia z [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) funkcji członkowskiej klasy [CDocument](../mfc/reference/cdocument-class.md). Po drugie użytkownik służy polecenie Otwórz w menu Plik można utworzyć nowego dokumentu, których zawartość są odczytywane z pliku. W takim przypadku Inicjowanie dokumentu w zastąpienia z [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) funkcji członkowskiej klasy **CDocument**. Zarówno inicjalizacji są takie same, należy wywołać typowych funkcji członkowskiej z obu zastąpienia lub `OnOpenDocument` można wywołać `OnNewDocument` do zainicjowania czystą dokumentu, a następnie Zakończ operacja otwierania.  

@@ -1,29 +1,24 @@
 ---
 title: Procedury walidacji danych standardowe okno dialogowe | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33566bcdfab1a618dc8ff79deb375b3f9d1221f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17b99d87db2fee3cf80c25157cdb2b2d2b54903b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Standardowe procedury walidacji danych okna dialogowego
 W tym temacie wymieniono standardowe procedury walidacji (DDV) danych, używany dla typowych formantów okna dialogowego MFC.  
@@ -53,7 +48,7 @@ W tym temacie wymieniono standardowe procedury walidacji (DDV) danych, używany 
   
 
   
-##  <a name="ddv_maxchars"></a>Ddv_maxchars —  
+##  <a name="ddv_maxchars"></a>  Ddv_maxchars —  
  Wywołanie `DDV_MaxChars` Aby sprawdzić, czy wielkość znaków w formancie skojarzone z *wartość* nie przekracza *nChars*.  
   
 ```   
@@ -79,7 +74,7 @@ void AFXAPI DDV_MaxChars(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdd_.h  
   
-##  <a name="ddv_minmaxbyte"></a>Ddv_minmaxbyte —  
+##  <a name="ddv_minmaxbyte"></a>  Ddv_minmaxbyte —  
  Wywołanie `DDV_MinMaxByte` Aby sprawdzić, czy wartość w formancie skojarzone z *wartość* wypada w okresie między `minVal` i `maxVal`.  
   
 ```   
@@ -109,7 +104,7 @@ void AFXAPI DDV_MinMaxByte(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdd_.h  
   
-##  <a name="ddv_minmaxdatetime"></a>Ddv_minmaxdatetime —  
+##  <a name="ddv_minmaxdatetime"></a>  Ddv_minmaxdatetime —  
  Wywołanie `DDV_MinMaxDateTime` Aby sprawdzić, czy wartości daty/godziny w selektora daty i godziny kontroli ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) skojarzone z *refValue* wypada w okresie między `refMinRange` i `refMaxRange`.  
   
 ```   
@@ -145,7 +140,7 @@ void AFXAPI DDV_MinMaxDateTime(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdd_.h  
   
-##  <a name="ddv_minmaxdouble"></a>Ddv_minmaxdouble —  
+##  <a name="ddv_minmaxdouble"></a>  Ddv_minmaxdouble —  
  Wywołanie `DDV_MinMaxDouble` Aby sprawdzić, czy wartość w formancie skojarzone z *wartość* wypada w okresie między `minVal` i `maxVal`.  
   
 ```   
@@ -175,7 +170,7 @@ void AFXAPI DDV_MinMaxDouble(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdd_.h  
   
-##  <a name="ddv_minmaxdword"></a>Ddv_minmaxdword —  
+##  <a name="ddv_minmaxdword"></a>  Ddv_minmaxdword —  
  Wywołanie `DDV_MinMaxDWord` Aby sprawdzić, czy wartość w formancie skojarzone z *wartość* wypada w okresie między `minVal` i `maxVal`.  
   
 ```   
@@ -205,7 +200,7 @@ void AFXAPI DDV_MinMaxDWord(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdd_.h  
   
-##  <a name="ddv_minmaxfloat"></a>Ddv_minmaxfloat —  
+##  <a name="ddv_minmaxfloat"></a>  Ddv_minmaxfloat —  
  Wywołanie `DDV_MinMaxFloat` Aby sprawdzić, czy wartość w formancie skojarzone z *wartość* wypada w okresie między `minVal` i `maxVal`.  
   
 ```   
@@ -235,7 +230,7 @@ void AFXAPI DDV_MinMaxFloat(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdd_.h  
   
-##  <a name="ddv_minmaxint"></a>Ddv_minmaxint —  
+##  <a name="ddv_minmaxint"></a>  Ddv_minmaxint —  
  Wywołanie `DDV_MinMaxInt` Aby sprawdzić, czy wartość w formancie skojarzone z *wartość* wypada w okresie między `minVal` i `maxVal`.  
   
 ```   
@@ -265,7 +260,7 @@ void AFXAPI DDV_MinMaxInt(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdd_.h  
   
-##  <a name="ddv_minmaxlong"></a>Ddv_minmaxlong —  
+##  <a name="ddv_minmaxlong"></a>  Ddv_minmaxlong —  
  Wywołanie `DDV_MinMaxLong` Aby sprawdzić, czy wartość w formancie skojarzone z *wartość* wypada w okresie między `minVal` i `maxVal`.  
   
 ```   
@@ -295,7 +290,7 @@ void AFXAPI DDV_MinMaxLong(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdd_.h  
   
-##  <a name="ddv_minmaxlonglong"></a>DDV_MinMaxLongLong  
+##  <a name="ddv_minmaxlonglong"></a>  DDV_MinMaxLongLong  
  Wywołanie `DDV_MinMaxLongLong` Aby sprawdzić, czy wartość w formancie skojarzone z *wartość* wypada w okresie między `minVal` i `maxVal`.  
   
 ```   
@@ -325,7 +320,7 @@ void AFXAPI DDV_MinMaxLongLong(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdd_.h  
   
-##  <a name="ddv_minmaxmonth"></a>Ddv_minmaxmonth —  
+##  <a name="ddv_minmaxmonth"></a>  Ddv_minmaxmonth —  
  Wywołanie `DDV_MinMaxMonth` Aby sprawdzić, czy wartość daty/godziny w kalendarzu miesięcznym kontroli ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) skojarzone z *refValue* wypada w okresie między `refMinRange` i `refMaxRange`.  
   
 ```   
@@ -361,7 +356,7 @@ void AFXAPI DDV_MinMaxMonth(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdd_.h  
   
-##  <a name="ddv_minmaxshort"></a>DDV_MinMaxShort  
+##  <a name="ddv_minmaxshort"></a>  DDV_MinMaxShort  
  Wywołanie `DDV_MinMaxShort` Aby sprawdzić, czy wartość w formancie skojarzone z *wartość* wypada w okresie między `minVal` i `maxVal`.  
   
 ```   
@@ -391,7 +386,7 @@ void AFXAPI DDV_MinMaxShort(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdd_.h  
   
-##  <a name="ddv_minmaxslider"></a>Ddv_minmaxslider —  
+##  <a name="ddv_minmaxslider"></a>  Ddv_minmaxslider —  
  Wywołanie `DDV_MinMaxSlider` Aby sprawdzić, czy wartość w formancie skojarzone z *wartość* wypada w okresie między `minVal` i `maxVal`.  
   
 ```   
@@ -421,7 +416,7 @@ void AFXAPI DDV_MinMaxSlider(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdd_.h  
   
-##  <a name="ddv_minmaxuint"></a>DDV_MinMaxUInt  
+##  <a name="ddv_minmaxuint"></a>  DDV_MinMaxUInt  
  Wywołanie `DDV_MinMaxUInt` Aby sprawdzić, czy wartość w formancie skojarzone z *wartość* wypada w okresie między `minVal` i `maxVal`.  
   
 ```   
@@ -451,7 +446,7 @@ void AFXAPI DDV_MinMaxUInt(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdd_.h  
   
-##  <a name="ddv_minmaxulonglong"></a>DDV_MinMaxULongLong  
+##  <a name="ddv_minmaxulonglong"></a>  DDV_MinMaxULongLong  
  Wywołanie `DDV_MinMaxULongLong` Aby sprawdzić, czy wartość w formancie skojarzone z *wartość* wypada w okresie między `minVal` i `maxVal`.  
   
 ```   

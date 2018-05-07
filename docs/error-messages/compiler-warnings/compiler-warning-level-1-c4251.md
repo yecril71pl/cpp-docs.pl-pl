@@ -1,12 +1,9 @@
 ---
-title: "Kompilatora (poziom 1) ostrzeżenie C4251 | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Kompilatora (poziom 1) ostrzeżenie C4251 | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4251
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4251
 ms.assetid: a9992038-f0c2-4fc4-a9be-4509442cbc1e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b220913d97755547a9cb35fe326f9fb9a06e40a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 366d66a38685e75e47d8921f9ebd525b334ced7e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4251"></a>Kompilator C4251 ostrzegawcze (poziom 1)
 "identyfikator": klasa 'type' musi mieć interfejsu biblioteki dll, który ma być używany przez klientów klasy "type2".  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  Można uniknąć, eksportowanie klas przez definiowanie przez bibliotekę DLL, która definiuje klasę z funkcji wirtualnych i zostanie funkcje można wywołać w celu utworzenia wystąpienia i usuwania obiektów tego typu.  Następnie można po prostu Wywołaj funkcje wirtualne w typie.  
   
- Aby uzyskać więcej informacji o eksportowaniu szablonów, zobacz [http://support.microsoft.com/default.aspx?scid=KB; EN-US; 168958](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958).  
+ Aby uzyskać więcej informacji o eksportowaniu szablonów, zobacz [ http://support.microsoft.com/default.aspx?scid=KB; EN-US; 168958](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958).  
   
  C4251 można zignorować, jeśli są pochodny typ w standardowa biblioteka C++, kompilowanie zlecenia debug (**/MTd**) i których dotyczy _Container_base komunikat o błędzie kompilatora.  
   

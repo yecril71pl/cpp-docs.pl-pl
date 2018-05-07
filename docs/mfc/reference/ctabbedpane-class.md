@@ -1,12 +1,9 @@
 ---
 title: Klasa CTabbedPane | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTabbedPane
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CTabbedPane [MFC], m_bTabsAlwaysTop
 - CTabbedPane [MFC], m_pTabWndRTC
 ms.assetid: f4dc5215-b789-4f2d-8c62-477aceda3578
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c18d8f5aed3a5adb66575dd05533aa19a1ba79b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1a6c42a4203fb1d0224f5f31e4123dca9a6fad65
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctabbedpane-class"></a>Klasa CTabbedPane
 Implementuje funkcje okienka zawierającego karty odłączane.  
@@ -154,7 +149,7 @@ pTabbedBar->GetUnderlyingWindow ()->EnableTabDetach (1,
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -171,7 +166,7 @@ pTabbedBar->GetUnderlyingWindow ()->EnableTabDetach (1,
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxTabbedPane.h  
   
-##  <a name="detachpane"></a>CTabbedPane::DetachPane  
+##  <a name="detachpane"></a>  CTabbedPane::DetachPane  
 
   
 ```  
@@ -181,14 +176,14 @@ virtual BOOL DetachPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pBar`  
- [in]`bHide`  
+ [in] `pBar`  
+ [in] `bHide`  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="enabletabautocolor"></a>CTabbedPane::EnableTabAutoColor  
+##  <a name="enabletabautocolor"></a>  CTabbedPane::EnableTabAutoColor  
  Włącza lub wyłącza automatyczne kolorowanie kart.  
   
 ```  
@@ -196,8 +191,8 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bEnable`  
- `TRUE`Aby włączyć automatyczne kolorowanie kart; w przeciwnym razie `FALSE`.  
+ [in] `bEnable`  
+ `TRUE` Aby włączyć automatyczne kolorowanie kart; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Użyj tej metody statyczne, aby włączyć lub wyłączyć automatyczne kolorowanie kart w wszystkich kartach okienka w aplikacji. Gdy ta funkcja jest włączona, każda karta jest wypełniane przez własną kolorów. Można znaleźć na liście kolorów, które są używane do kolorów karty przez wywołanie metody [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) metody.  
@@ -206,7 +201,7 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
   
  Ta opcja jest domyślnie wyłączona.  
   
-##  <a name="floattab"></a>CTabbedPane::FloatTab  
+##  <a name="floattab"></a>  CTabbedPane::FloatTab  
 
   
 ```  
@@ -218,16 +213,16 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pBar`  
- [in]`nTabID`  
- [in]`dockMethod`  
- [in]`bHide`  
+ [in] `pBar`  
+ [in] `nTabID`  
+ [in] `dockMethod`  
+ [in] `bHide`  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="gettabarea"></a>CTabbedPane::GetTabArea  
+##  <a name="gettabarea"></a>  CTabbedPane::GetTabArea  
  Zwraca rozmiar i położenie wartości obszar karty w oknie z kartami.  
   
 ```  
@@ -237,10 +232,10 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`rectTabAreaTop`  
+ [out] `rectTabAreaTop`  
  Zawiera rozmiar i położenie wartości obszar karty top, we współrzędnych ekranu.  
   
- [out]`rectTabAreaBottom`  
+ [out] `rectTabAreaBottom`  
  Zawiera rozmiar i położenie we współrzędnych ekranu obszaru karty dolnej.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -248,7 +243,7 @@ virtual void GetTabArea(
   
  Należy przesłonić tę metodę w `CTabbedPane`-klasy, aby zmienić to zachowanie.  
   
-##  <a name="gettabwnd"></a>CTabbedPane::GetTabWnd  
+##  <a name="gettabwnd"></a>  CTabbedPane::GetTabWnd  
 
   
 ```  
@@ -259,7 +254,7 @@ CMFCTabCtrl* GetTabWnd() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="hasautohidemode"></a>CTabbedPane::HasAutoHideMode  
+##  <a name="hasautohidemode"></a>  CTabbedPane::HasAutoHideMode  
 
   
 ```  
@@ -270,7 +265,7 @@ virtual BOOL HasAutoHideMode() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="istablocationbottom"></a>CTabbedPane::IsTabLocationBottom  
+##  <a name="istablocationbottom"></a>  CTabbedPane::IsTabLocationBottom  
  Określa, czy karty znajdują się w dolnej części okna.  
   
 ```  
@@ -278,11 +273,11 @@ virtual BOOL IsTabLocationBottom() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli wartości obszar karty znajduje się w dolnej części okna z kartami; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli wartości obszar karty znajduje się w dolnej części okna z kartami; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="m_btabsalwaystop"></a>CTabbedPane::m_bTabsAlwaysTop  
+##  <a name="m_btabsalwaystop"></a>  CTabbedPane::m_bTabsAlwaysTop  
  Domyślna lokalizacja dla kart w aplikacji.  
   
 ```  
@@ -296,7 +291,7 @@ AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
   
  Wartość domyślna to `FALSE`.  
   
-##  <a name="m_ptabwndrtc"></a>CTabbedPane::m_pTabWndRTC  
+##  <a name="m_ptabwndrtc"></a>  CTabbedPane::m_pTabWndRTC  
  Informacje o klasie czasu wykonywania dla niestandardowego `CMFCTabCtrl`-pochodzi z obiektu.  
   
 ```  
@@ -306,7 +301,7 @@ AFX_IMPORT_DATA static CRuntimeClass* m_pTabWndRTC;
 ### <a name="remarks"></a>Uwagi  
  Ustaw wartość tej zmiennej statycznego elementu członkowskiego na wskaźnik do informacji o klasie czasu wykonywania o `CMFCTabCtrl`-pochodnych obiektu, jeśli używasz niestandardowych okien z kartami wewnątrz okienka z kartami.  
   
-##  <a name="resettabs"></a>CTabbedPane::ResetTabs  
+##  <a name="resettabs"></a>  CTabbedPane::ResetTabs  
  Resetuje wszystkie okienka z kartami do stanu domyślnego.  
   
 ```  
@@ -316,7 +311,7 @@ static void ResetTabs();
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę metodę, aby przywrócić wszystkie okienka z kartami do stanu domyślnego. Po wywołaniu, ta metoda powoduje zresetowanie rozmiary obramowania i automatyczne kolor stanu wszystkich okienek z kartami.  
   
-##  <a name="settabautocolors"></a>CTabbedPane::SetTabAutoColors  
+##  <a name="settabautocolors"></a>  CTabbedPane::SetTabAutoColors  
  Ustawia listę kolorów niestandardowych, które są używane, gdy jest włączona funkcja automatycznego kolorów.  
   
 ```  
@@ -324,7 +319,7 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`arColors`  
+ [in] `arColors`  
  Zawiera tablicę kolorów, by ustawić.  
   
 ### <a name="remarks"></a>Uwagi  

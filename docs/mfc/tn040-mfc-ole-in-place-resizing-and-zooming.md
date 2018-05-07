@@ -1,13 +1,10 @@
 ---
-title: "TN040: MFC OLE w miejscu Zmienianie rozmiaru i powiększanie | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'TN040: MFC OLE w miejscu Zmienianie rozmiaru i powiększanie | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - zooming and in-place activation
 - in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1113da01e58ec00cd4420aab4424b1c20e127e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf8b90aed96135967167c8048f775fc7530f85d6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040: MFC/OLE — zmienianie rozmiaru i powiększanie w miejscu
 > [!NOTE]
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
  Przykład poprawnie powiększanie Zobacz przykład MFC OLE [HIERSVR](../visual-cpp-samples.md). Powiększanie HIERSVR jest złożona przez fakt, że wyświetla tekst i tekst, ogólnie rzecz biorąc, nie działa w sposób liniowy (wskazówek, Konwencji typograficznych, projekt szerokości i wysokości wszystkich skomplikować sprawy). Nadal, HIERSVR jest uzasadnione odwołanie wykonywania powiększanie prawidłowo, i dlatego jest samouczek MFC [BAZGROŁY](../visual-cpp-samples.md) (krok 7).  
   
- `COleServerDoc::GetZoomFactor`Określa współczynnika powiększenia na podstawie liczby różnych dostępnych metryk z kontenera lub ze stosowania sieci `COleServerItem` i `COleServerDoc` klasy. Krótko mówiąc bieżący współczynnika powiększenia jest określany przez następującej formuły:  
+ `COleServerDoc::GetZoomFactor` Określa współczynnika powiększenia na podstawie liczby różnych dostępnych metryk z kontenera lub ze stosowania sieci `COleServerItem` i `COleServerDoc` klasy. Krótko mówiąc bieżący współczynnika powiększenia jest określany przez następującej formuły:  
   
 ```  
 Position Rectangle (PR) / Container Extent (CE)  
@@ -64,7 +59,7 @@ Position Rectangle (PR) / Container Extent (CE)
   
  W zakresie kontenera jest nieco bardziej skomplikowane do obliczenia. Jeśli kontener została wywołana `COleServerItem::OnSetExtent` (w wyniku wywołania `COleClientItem::SetExtent`), ta wartość konwertowana na pikseli na podstawie liczby pikseli na cal logiczny jest w zakresie kontenera. Kontener nie została wywołana SetExtent (co jest zazwyczaj sytuacją), a następnie w zakresie kontenera jest rozmiar zwrócony z `COleServerItem::OnGetExtent`. Tak, jeśli kontener nie została wywołana SetExtent, platformę przyjęto założenie, że jeśli jak kontenera czy wywołano go o 100% fizycznych zakres (wartość zwracana z **COleServerItem::GetExtent**). Wyrażony w inny sposób ramach przyjęto założenie, że w kontenerze są wyświetlane 100% (nie więcej, nie mniejszą) elementu.  
   
- Należy pamiętać, że chociaż `COleServerItem::OnSetExtent` i `COleServerItem::OnGetExtent` mają podobne nazwy ich nie manipulowania tego samego atrybutu element. `OnSetExtent`jest wywoływana, aby umożliwić serwera wiedzieć, ile obiektu jest widoczny w kontenerze (niezależnie od współczynnika powiększenia) i `OnGetExtent` jest wywoływana przez kontener, aby określić rozmiar idealny obiektu.  
+ Należy pamiętać, że chociaż `COleServerItem::OnSetExtent` i `COleServerItem::OnGetExtent` mają podobne nazwy ich nie manipulowania tego samego atrybutu element. `OnSetExtent` jest wywoływana, aby umożliwić serwera wiedzieć, ile obiektu jest widoczny w kontenerze (niezależnie od współczynnika powiększenia) i `OnGetExtent` jest wywoływana przez kontener, aby określić rozmiar idealny obiektu.  
   
  Patrząc na każdy z interfejsów API związanego, możesz uzyskać jaśniejszy obraz:  
   

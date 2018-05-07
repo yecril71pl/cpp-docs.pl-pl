@@ -1,11 +1,8 @@
 ---
 title: Klasa platform::StringReference | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::StringReference::StringReference
@@ -16,17 +13,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c23960e392f39c44a57176e4afb81999783bad6c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 646a09dd46e123f0bc7eadc178e3741367e908ed
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformstringreference-class"></a>Klasa platform::StringReference
 Typem optymalizacji, który służy do przekazywania danych ciąg z `Platform::String^` parametrów do innych metod z co najmniej operacje kopiowania wejściowych.  

@@ -1,12 +1,9 @@
 ---
 title: Klasa CFormView | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFormView
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CFormView [MFC], CFormView
 - CFormView [MFC], IsInitDlgCompleted
 ms.assetid: a99ec313-36f0-4f28-9d2b-de11de14ac19
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 386e28631d20721f22eb2b778ffbe2e1d4b1824d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3486285b7b6430e9cd6f0e4a936aa3341bd72e0f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cformview-class"></a>Klasa CFormView
 Klasa podstawowa używana dla widoków formularza.  
@@ -66,7 +61,7 @@ class CFormView : public CScrollView
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -79,7 +74,7 @@ class CFormView : public CScrollView
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxext.h  
   
-##  <a name="cformview"></a>CFormView::CFormView  
+##  <a name="cformview"></a>  CFormView::CFormView  
  Konstruuje `CFormView` obiektu.  
   
 ```  
@@ -97,7 +92,7 @@ CFormView(UINT nIDTemplate);
 ### <a name="remarks"></a>Uwagi  
  Podczas tworzenia obiektu typu pochodną `CFormView`, wywołać za pomocą jednego z konstruktorów do utworzenia obiektu widoku i identyfikacji zasobu okna dialogowego, na której oparto widoku. Zasób można zidentyfikować przez nazwę (pass ciąg jako argument do konstruktora) lub za pomocą jego Identyfikatora (pass całkowitą bez znaku jako argument).  
   
- Kontrolki widoku formularza okna i podrzędne nie są tworzone do `CWnd::Create` jest wywoływana. `CWnd::Create`jest wywoływana przez platformę w ramach procesu tworzenia widoku i dokumentów, które wynikają z szablonu dokumentu.  
+ Kontrolki widoku formularza okna i podrzędne nie są tworzone do `CWnd::Create` jest wywoływana. `CWnd::Create` jest wywoływana przez platformę w ramach procesu tworzenia widoku i dokumentów, które wynikają z szablonu dokumentu.  
   
 > [!NOTE]
 >  Klasy pochodne *musi* podać własne konstruktora. W konstruktorze, należy wywołać konstruktora, `CFormView::CFormView`, o nazwy zasobu lub identyfikatorze jako argument opisane w poprzednim Przegląd klasy.  
@@ -107,7 +102,7 @@ CFormView(UINT nIDTemplate);
   
  [!code-cpp[NVC_MFCDocView#91](../../mfc/codesnippet/cpp/cformview-class_2.cpp)]  
   
-##  <a name="isinitdlgcompleted"></a>CFormView::IsInitDlgCompleted  
+##  <a name="isinitdlgcompleted"></a>  CFormView::IsInitDlgCompleted  
  Używane przez MFC, aby upewnić się, że ten Inicjowanie zostało zakończone przed wykonaniem innych operacji.  
   
 ```  

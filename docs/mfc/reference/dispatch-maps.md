@@ -1,13 +1,10 @@
 ---
-title: "Mapy wysyłania | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Mapy wysyłania | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - dispatch maps [MFC]
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3112c092a4e1d6eb970fb50153c543baa98ee853
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 313e465698da5799a107bc3bdbeb6d2cbbe47303
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dispatch-maps"></a>Mapy wysyłania
 Automatyzacja OLE udostępnia metody do wywołania metody i mieć dostęp do właściwości w aplikacjach. Mechanizm dostarczonych przez Microsoft Foundation Class Library na potrzeby rozsyłania te żądania jest "mapy wysyłania," który wyznacza wewnętrznych i zewnętrznych nazwy obiektu funkcje i właściwości, a także same właściwości i elementu typy danych argumenty funkcji.  
@@ -46,7 +41,7 @@ Automatyzacja OLE udostępnia metody do wywołania metody i mieć dostęp do wł
 |[DISP_PROPERTY_PARAM —](#disp_property_param)|Definiuje właściwości automatyzacji OLE, który przyjmuje nazwy i parametry funkcji Get i Set.|  
 |[DISP_DEFVALUE —](#disp_defvalue)|Powoduje, że właściwość istniejącej wartości domyślne obiektu.|  
   
-##  <a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP —  
+##  <a name="declare_dispatch_map"></a>  DECLARE_DISPATCH_MAP —  
  Jeśli `CCmdTarget`-klasy pochodnej w programie obsługuje automatyzacji OLE, że klasa musi zapewniać mapy wysyłania do udostępnienia metod i właściwości.  
   
 ```   
@@ -67,7 +62,7 @@ DECLARE_DISPATCH_MAP()
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxwin.h  
 
-##  <a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP —  
+##  <a name="begin_dispatch_map"></a>  BEGIN_DISPATCH_MAP —  
  Deklaruje definicji mapy wysyłania.  
   
 ```  
@@ -87,7 +82,7 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdisp.h  
 
-##  <a name="end_dispatch_map"></a>END_DISPATCH_MAP —  
+##  <a name="end_dispatch_map"></a>  END_DISPATCH_MAP —  
  Kończy definicję mapy wysyłania.  
   
 ```   
@@ -100,7 +95,7 @@ END_DISPATCH_MAP()
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdisp.h  
 
-##  <a name="disp_function"></a>DISP_FUNCTION —  
+##  <a name="disp_function"></a>  DISP_FUNCTION —  
  Definiuje funkcję automatyzacji OLE w mapie wysyłania.  
   
 ```   
@@ -143,7 +138,7 @@ DISP_FUNCTION(
 |`VT_BSTR`|`BSTR`|  
 |**VT_DISPATCH**|`LPDISPATCH`|  
 |`VT_ERROR`|`SCODE`|  
-|`VT_BOOL`|**WARTOŚĆ LOGICZNA**|  
+|`VT_BOOL`|**BOOL**|  
 |**VT_VARIANT**|**VARIANT**|  
 |**VT_UNKNOWN**|`LPUNKNOWN`|  
   
@@ -166,13 +161,13 @@ DISP_FUNCTION(
 |**VTS_BSTR**|`LPCSTR`|  
 |**VTS_DISPATCH**|`LPDISPATCH`|  
 |**VTS_SCODE**|`SCODE`|  
-|**VTS_BOOL**|**WARTOŚĆ LOGICZNA**|  
+|**VTS_BOOL**|**BOOL**|  
 |**VTS_VARIANT**|**Wariant Const\***  lub **VARIANT &**|  
 |**VTS_UNKNOWN**|`LPUNKNOWN`|  
 |**VTS_PI2**|**krótki\***|  
 |**VTS_PI4**|**długa\***|  
-|**VTS_PR4**|**float\***|  
-|**VTS_PR8**|**podwójne\***|  
+|**VTS_PR4**|**Float\***|  
+|**VTS_PR8**|**O podwójnej precyzji\***|  
 |**VTS_PCY**|**CY\***|  
 |**VTS_PDATE**|**DATA\***|  
 |**VTS_PBSTR**|**BSTR\***|  
@@ -186,7 +181,7 @@ DISP_FUNCTION(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdisp.h 
 
-##  <a name="disp_property"></a>DISP_PROPERTY —  
+##  <a name="disp_property"></a>  DISP_PROPERTY —  
  Definiuje właściwości automatyzacji OLE w mapie wysyłania.  
   
 ```   
@@ -224,7 +219,7 @@ DISP_PROPERTY(
 |`VT_BSTR`|`CString`|  
 |**VT_DISPATCH**|`LPDISPATCH`|  
 |`VT_ERROR`|`SCODE`|  
-|`VT_BOOL`|**WARTOŚĆ LOGICZNA**|  
+|`VT_BOOL`|**BOOL**|  
 |**VT_VARIANT**|**VARIANT**|  
 |**VT_UNKNOWN**|`LPUNKNOWN`|  
   
@@ -233,7 +228,7 @@ DISP_PROPERTY(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdisp.h 
 
-##  <a name="disp_property_ex"></a>DISP_PROPERTY_EX —  
+##  <a name="disp_property_ex"></a>  DISP_PROPERTY_EX —  
  Definiuje właściwości automatyzacji OLE i nazwy funkcje służące do pobierania i ustawiania wartości właściwości mapy wysyłania.  
   
 ```   
@@ -269,7 +264,7 @@ DISP_PROPERTY_EX(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdisp.h 
 
-##  <a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY —  
+##  <a name="disp_property_notify"></a>  DISP_PROPERTY_NOTIFY —  
  Definiuje właściwości automatyzacji OLE powiadomienie na mapie wysyłania.  
   
 ```   
@@ -313,14 +308,14 @@ DISP_PROPERTY_NOTIFY(
 |`VT_BSTR`|`CString`|  
 |**VT_DISPATCH**|`LPDISPATCH`|  
 |`VT_ERROR`|`SCODE`|  
-|`VT_BOOL`|**WARTOŚĆ LOGICZNA**|  
+|`VT_BOOL`|**BOOL**|  
 |**VT_VARIANT**|**VARIANT**|  
 |**VT_UNKNOWN**|`LPUNKNOWN`|  
 
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdisp.h 
 
-##  <a name="disp_property_param"></a>DISP_PROPERTY_PARAM —  
+##  <a name="disp_property_param"></a>  DISP_PROPERTY_PARAM —  
  Definiuje właściwość uzyskanie dostępu do oddzielnego **uzyskać** i `Set` funkcji elementów członkowskich.  
   
 ```   
@@ -375,7 +370,7 @@ DISP_PROPERTY_PARAM(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdisp.h 
 
-##  <a name="disp_defvalue"></a>DISP_DEFVALUE —  
+##  <a name="disp_defvalue"></a>  DISP_DEFVALUE —  
  Powoduje, że właściwość istniejącej wartości domyślne obiektu.  
   
 ```   

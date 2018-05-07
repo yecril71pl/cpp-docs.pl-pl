@@ -1,13 +1,10 @@
 ---
-title: "Serializacja: Ustawianie klasy jako możliwy do serializacji | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Serializacja: Ustawianie klasy jako możliwy do serializacji | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - serialization [MFC], serializable classes
 - no default constructor
 ms.assetid: 59a14d32-1cc8-4275-9829-99639beee27c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22bb8144f3c83ca98bffa2f95e73eff31ddb89be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4412e8db861ac522c0f1b1d7192bfbb83612d64c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serialization-making-a-serializable-class"></a>Serializacja: ustawianie klasy jako możliwej do serializacji
 Pięć głównych kroków są wymagane dokonanie klasę serializacji. Są one wymienione poniżej i wyjaśnione w poniższych sekcjach:  
@@ -52,10 +47,10 @@ Pięć głównych kroków są wymagane dokonanie klasę serializacji. Są one wy
   
  Jeśli należy wywołać `Serialize` bezpośrednio, a nie za pomocą >> i << operatorów [CArchive](../mfc/reference/carchive-class.md), ostatnie trzy kroki nie są wymagane do serializacji.  
   
-##  <a name="_core_deriving_your_class_from_cobject"></a>Wyprowadzanie klasy z obiektu CObject  
+##  <a name="_core_deriving_your_class_from_cobject"></a> Wyprowadzanie klasy z obiektu CObject  
  Protokół serializacji podstawowe i funkcje, które są zdefiniowane w `CObject` klasy. Przez wyprowadzanie klasy z `CObject` (lub z klasy pochodzącej od `CObject`), jak pokazano w poniższych deklaracja klasy `CPerson`, uzyskasz dostęp do serializacji protokołu i funkcjonalność `CObject`.  
   
-##  <a name="_core_overriding_the_serialize_member_function"></a>Zastępowanie serializować funkcji członkowskiej  
+##  <a name="_core_overriding_the_serialize_member_function"></a> Zastępowanie serializować funkcji członkowskiej  
  `Serialize` Funkcji członkowskiej, która jest zdefiniowana w `CObject` klasa, jest odpowiedzialny za faktycznie serializacji dane niezbędne do przechwytywania bieżącego stanu obiektu. `Serialize` Funkcja ma `CArchive` argument używaną do odczytywania i zapisywania danych obiektu. [CArchive](../mfc/reference/carchive-class.md) obiekt ma funkcją członkowską `IsStoring`, która wskazuje, czy `Serialize` jest przechowywanie (zapisywania danych) lub ładowania (Odczyt danych). Przy użyciu wyniki `IsStoring` jako przewodnik, albo wstawiania danych do obiektu w `CArchive` obiektu z operatorem wstawiania (**<\<**) lub wyodrębniania danych z operatorów wyodrębniania ( **>>**).  
   
  Należy wziąć pod uwagę klasę, która jest pochodną `CObject` i ma dwie nowe zmienne Członkowskie, typów `CString` i **WORD**. Poniższy fragment deklaracji klasy zawiera nowy element członkowski zmiennych i deklaracja przesłoniętych `Serialize` funkcji członkowskiej:  
@@ -74,12 +69,12 @@ Pięć głównych kroków są wymagane dokonanie klasę serializacji. Są one wy
   
  Można również użyć [CArchive::Read](../mfc/reference/carchive-class.md#read) i [CArchive::Write](../mfc/reference/carchive-class.md#write) funkcji elementów członkowskich do odczytywania i zapisywania dużych ilości danych bez typu.  
   
-##  <a name="_core_using_the_declare_serial_macro"></a>Przy użyciu declare_serial — makro  
+##  <a name="_core_using_the_declare_serial_macro"></a> Przy użyciu declare_serial — makro  
  `DECLARE_SERIAL` Makro jest wymagany w deklaracji klasy, które będą obsługiwać serializacji, jak pokazano poniżej:  
   
  [!code-cpp[NVC_MFCSerialization#3](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_3.h)]  
   
-##  <a name="_core_defining_a_constructor_with_no_arguments"></a>Definiowanie konstruktora bez argumentów  
+##  <a name="_core_defining_a_constructor_with_no_arguments"></a> Definiowanie konstruktora bez argumentów  
  Gdy ponownie program tworzy obiektów, ponieważ są one rozszeregować (ładowanych z dysku), MFC wymaga konstruktora domyślnego. Proces deserializacji wypełni wszystkie zmienne Członkowskie przy użyciu wartości wymagane ponownie utworzyć obiekt.  
   
  Ten konstruktor może być deklarowana publicznych, chronionych lub prywatnych. Jeśli będzie to chronionych lub prywatnych, pomocy, upewnij się, że będzie tylko służyć za pomocą funkcji serializacji. Konstruktor umieścić obiekt w stanie, który umożliwi można usunąć, jeśli to konieczne.  
@@ -87,7 +82,7 @@ Pięć głównych kroków są wymagane dokonanie klasę serializacji. Są one wy
 > [!NOTE]
 >  Jeśli zapomnisz do definiowania konstruktora bez argumentów w klasie, która używa `DECLARE_SERIAL` i `IMPLEMENT_SERIAL` makra, zostanie wyświetlone ostrzeżenie kompilatora "Brak domyślnego konstruktora dostępne" w wierszu gdzie `IMPLEMENT_SERIAL` makro jest używane.  
   
-##  <a name="_core_using_the_implement_serial_macro_in_the_implementation_file"></a>W pliku implementacji przy użyciu implement_serial — makro  
+##  <a name="_core_using_the_implement_serial_macro_in_the_implementation_file"></a> W pliku implementacji przy użyciu implement_serial — makro  
  `IMPLEMENT_SERIAL` Makro jest używane do definiowania różnych funkcji wymagane podczas serializacji klasa wyprowadzona z `CObject`. Używanie tego makra w pliku implementacji (. CPP) dla klasy. Pierwsze dwa argumenty makra są nazwę klasy i nazwę swojej klasy podstawowej bezpośrednim.  
   
  Trzeci argument to makro jest liczbą schematu. Liczba schematu jest zasadniczo numer wersji dla obiektów klasy. Użyj liczba całkowita większa lub równa 0, dla liczby schematu. (Nie należy mylić numer ten schemat terminologii bazy danych.)  

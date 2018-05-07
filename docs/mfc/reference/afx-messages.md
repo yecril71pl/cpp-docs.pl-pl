@@ -1,13 +1,10 @@
 ---
 title: Komunikaty AFX | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - SB_LINELEFT
 - SB_THUMBTRACK
@@ -73,17 +70,15 @@ dev_langs:
 helpviewer_keywords:
 - AFX messages [MFC]
 ms.assetid: 3d601f3c-af6d-47d3-8553-34f1318fa74f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41f300f285fb4eaf1a6154a21cbbabc0253fc730
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc11b3eb79f0d535775f073c772e40c4ed9e822c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="afx-messages"></a>Komunikaty AFX
 Komunikaty te są używane w MFC.  
@@ -93,7 +88,7 @@ Komunikaty te są używane w MFC.
   
 ||||||  
 |-|-|-|-|-|  
-|Komunikat|Opis|[in]`wParam`|`lParam`(Wszystkie parametry są [in] chyba że określono inaczej).|Wartość zwracana|  
+|Komunikat|Opis|[in] `wParam`|`lParam` (Wszystkie parametry są [in] chyba że określono inaczej).|Wartość zwracana|  
 |AFX_WM_ACCGETOBJECT|Nie używany.|Nie używany.|Nie dotyczy.|Nie dotyczy.|  
 |AFX_WM_ACCGETSTATE|Używany dla ułatwień dostępu pomocy technicznej. Ten komunikat, aby wysłać `CMFCPopupMenu` lub `CMFCRibbonPanelMenu` można pobrać stanu bieżącego elementu.|Indeks elementu, który może być przycisk menu i separatora.|Nie używany.|Stan elementu. Jeśli indeks jest nieprawidłowy, -1 jest równa 0, jeśli przycisku menu nie ma żadnych specjalnych atrybutów. W przeciwnym razie jest kombinacją następujące flagi:<br /><br /> TBBS_DISABLED — element jest wyłączony.<br /><br /> TBBS_CHECKED — element jest zaznaczony.<br /><br /> TBBS_BUTTON — element jest standardowe przycisku polecenia<br /><br /> TBBS_PRESSED — przycisk jest naciśnięty.<br /><br /> TBBS_INDETERMINATE — Niezdefiniowany stanu<br /><br /> TBBS_SEPARATOR — zamiast przycisku menu stanowi element odstęp między innymi elementami menu|  
 |AFX_WM_CHANGE_ACTIVE_TAB|Platformę wysyła wiadomość do formantu paska formantu o zmiennym rozmiarze. Przetwarzać tego komunikatu, aby otrzymywać powiadomienia z `CMFCTabCtrl` obiektów, gdy użytkownik zmienia aktywnej karty.|Indeks karty.|Nie używany.|Różna od zera.|  
@@ -103,13 +98,13 @@ Komunikaty te są używane w MFC.
 |AFX_WM_CHECKEMPTYMINIFRAME|Tylko do użytku wewnętrznego.|Nie dotyczy.|Nie dotyczy.|Nie dotyczy.|  
 |AFX_WM_CREATETOOLBAR|Wysyłane z `CMFCToolBarsListPropertyPage` gdy użytkownik tworzy nowy pasek narzędzi podczas procesu dostosowywania. Mogą przetwarzać tego komunikatu, można utworzyć wystąpienia niestandardowego obiektu pochodnego CMFCToolBar. Jeśli obsłużyć ten komunikat i tworzyć własne paski narzędzi, pomiń wywołanie domyślny program obsługi.|Nie używany.|Wskaźnik do ciągu zawierającego nazwę paska narzędzi.|Wskaźnik do nowo utworzonego paska narzędzi. Wartości NULL wskazuje, czy Anulowano Tworzenie narzędzi.|  
 |AFX_WM_CUSTOMIZEHELP|Wysyłane do głównego okna ramowego z arkusza właściwości dostosowywania `CMFCToolbarCustomize Dialog` gdy użytkownik naciśnie **pomocy** przycisku lub klawisza F1.|Określa stronę aktywnego arkusza właściwości dostosowywania.|Wskaźnik do `CMFCToolbarCustomize Dialog` obiektu.|Zero.|  
-|AFX_WM_CUSTOMIZETOOLBAR|`CMFCToolbarCustomize Dialog` Wysyła tę wiadomość, aby powiadomić ramka nadrzędny użytkownik tworzy nowy pasek narzędzi.|`TRUE`Po uruchomieniu dostosowania `FALSE` po zakończeniu dostosowywania.|Nie używany.|Zero.|  
+|AFX_WM_CUSTOMIZETOOLBAR|`CMFCToolbarCustomize Dialog` Wysyła tę wiadomość, aby powiadomić ramka nadrzędny użytkownik tworzy nowy pasek narzędzi.|`TRUE` Po uruchomieniu dostosowania `FALSE` po zakończeniu dostosowywania.|Nie używany.|Zero.|  
 |AFX_WM_DELETETOOLBAR|Wysyłany do głównego okna ramowego, gdy użytkownik należy usunąć w trybie Dostosowywanie paska narzędzi.<br /><br /> Przetwarzać tego komunikatu, aby podejmować dodatkowe akcje, gdy użytkownik usuwa w trybie Dostosowywanie paska narzędzi. Należy także wywołać domyślny program obsługi (`OnToolbarDelete`), które powoduje usunięcie paska narzędzi. Domyślny program obsługi zwraca wartość wskazującą, czy jest możliwe usuwanie na pasku narzędzi.|Nie używany.|Wskaźnik do `CMFCToolBar` obiektu do usunięcia.|Różna od zera, jeśli nie można usunąć pasek narzędzi; w przeciwnym razie 0.|  
-|AFX_WM_GETDOCUMENTCOLORS|`CMFCColorMenuButton`wysyła wiadomość do głównego okna ramowego można pobrać kolorów dokumentu.|Nie używany.|[w, out] Wskaźnik do `CList<COLORREF, COLORREF>` obiektu.|Zero.|  
+|AFX_WM_GETDOCUMENTCOLORS|`CMFCColorMenuButton` wysyła wiadomość do głównego okna ramowego można pobrać kolorów dokumentu.|Nie używany.|[w, out] Wskaźnik do `CList<COLORREF, COLORREF>` obiektu.|Zero.|  
 |AFX_WM_GETDRAGBOUNDS|Tylko do użytku wewnętrznego.|Nie dotyczy.|Nie dotyczy.|Nie dotyczy.|  
-|AFX_WM_HIGHLIGHT_RIBBON_LIST_ITEM|Wysyłany do głównego okna ramowego, gdy użytkownik wyróżnia elementu wstążki.|Indeks wyróżniony element|Wskaźnik do`CMFCBaseRibbonElement`|Nie używany.|  
+|AFX_WM_HIGHLIGHT_RIBBON_LIST_ITEM|Wysyłany do głównego okna ramowego, gdy użytkownik wyróżnia elementu wstążki.|Indeks wyróżniony element|wskaźnik do `CMFCBaseRibbonElement`|Nie używany.|  
 |AFX_WM_ON_AFTER_SHELL_COMMAND|Wysyłane do elementu nadrzędnego `CMFCShellListCtrl` lub `CMFCShellTreeCtrl` steruje po zakończeniu wykonywania polecenia powłoki użytkownika.|Identyfikator polecenia, które są wykonywane przez użytkownika|Nie używany.|Jeśli aplikacja przetwarza ten komunikat, powinien on zwrócić wartość zero.|  
-|AFX_WM_ON_BEFORE_SHOW_RIBBON_ITEM_MENU|Platformę wysyła wiadomość do nadrzędnego wstążki, przed wyświetleniem menu podręczne. Mogą przetwarzać tego komunikatu i zmodyfikować menu podręcznego w dowolnym momencie.|Nie używany.|Wskaźnik do`CMFCBaseRibbonElement`|Nie używany.|  
+|AFX_WM_ON_BEFORE_SHOW_RIBBON_ITEM_MENU|Platformę wysyła wiadomość do nadrzędnego wstążki, przed wyświetleniem menu podręczne. Mogą przetwarzać tego komunikatu i zmodyfikować menu podręcznego w dowolnym momencie.|Nie używany.|wskaźnik do `CMFCBaseRibbonElement`|Nie używany.|  
 |AFX_WM_ON_CANCELTABMOVE|Tylko do użytku wewnętrznego.|Nie dotyczy.|Nie dotyczy.||  
 |AFX_WM_ON_CHANGE_RIBBON_CATEGORY|Platformę wysyła wiadomość do ramki głównej, gdy użytkownik zmieni aktywnej kategorii kontroli wstążki.|Nie używany.|Wskaźnik do `CMFCRibbonBar` których kategorii została zmieniona.|Nie używany.|  
 |AFX_WM_ON_CLOSEPOPUPWINDOW|Platformę wysyła ten komunikat, aby poinformować o tym właściciela `CMFCDesktopAlertWnd` że okno zostanie zamknięte.|Nie używany.|Wskaźnik do `CMFCDesktopAlertWnd` obiektu.|Nie używany.|  
@@ -119,21 +114,21 @@ Komunikaty te są używane w MFC.
 |AFX_WM_ON_MOVE_TAB|Wysyłany do nadrzędnego okna z kartami, gdy użytkownik przeciąga kartę do nowej pozycji.|Liczony od zera indeks karty w oryginalnego położenia.|[out] Liczony od zera indeks kartę w nowej lokalizacji.|Zero.|  
 |AFX_WM_ON_MOVETABCOMPLETE|Tylko do użytku wewnętrznego.|Nie dotyczy.|Nie dotyczy.|Nie dotyczy.|  
 |AFX_WM_ON_MOVETOTABGROUP|Wysyłany do głównego okna ramowego, gdy użytkownik przesuwa okno podrzędne MDI z jednej grupy z kartami na inny.|Dojście do okna z kartami (`CMFCTabCtrl`) z której usunięto okna podrzędnego MDI.|[out] Dojście do okna z kartami (`CMFCTabCtrl`) do którego został wstawiony okna podrzędnego MDI.|Ignorowane.|  
-|AFX_WM_ON_PRESS_CLOSE_BUTTON|Wysyłane do elementu nadrzędnego `CDockablePane` gdy użytkownik kliknie **Zamknij** przycisk na podpis pasek sterowania.|Nie używany.|Wskaźnik do okienka zadokowane, na którym użytkownik kliknął **Zamknij** przycisku.|`TRUE`Jeśli nie można zamknąć okienko; w przeciwnym razie wartość FALSE.|  
+|AFX_WM_ON_PRESS_CLOSE_BUTTON|Wysyłane do elementu nadrzędnego `CDockablePane` gdy użytkownik kliknie **Zamknij** przycisk na podpis pasek sterowania.|Nie używany.|Wskaźnik do okienka zadokowane, na którym użytkownik kliknął **Zamknij** przycisku.|`TRUE` Jeśli nie można zamknąć okienko; w przeciwnym razie wartość FALSE.|  
 |AFX_WM_ON_RENAME_TAB|Wysyłane do nadrzędnego okna z kartami po kartę można edytować nazwy użytkownika.|Liczony od zera indeks karcie zmienioną nazwę.|[out] Wskaźnik do ciąg, który zawiera nową nazwę karty.|Różna od zera, jeśli aplikacja przetwarza tego komunikatu. platformę blokuje wyświetlanie wywołanie `CMFCBaseTabCtrl::SetTabLabel`.  Jeśli zero jest zwracany, następnie `CMFCBaseTabCtrl::SetTabLabel` jest wywoływana przez platformę.|  
 |AFX_WM_ON_RIBBON_CUSTOMIZE|Wysyłany do ramka nadrzędny, gdy użytkownik uruchamia dostosowania. Przetwarzać tego komunikatu, jeśli chcesz wyświetlić okno dialogowe własne dostosowania.|Nie używany.|Wskaźnik do sterowania wstążki do dostosowania.|Różna od zera, jeśli aplikacja przetwarza ten komunikat i wyświetla okno dialogowe własne dostosowania. Jeśli aplikacja zwraca zero, platformę wyświetlane okno dialogowe wbudowanych dostosowania.|  
 |AFX_WM_ON_TABGROUPMOUSEMOVE|Tylko do użytku wewnętrznego.|Nie dotyczy.|Nie dotyczy.|Nie dotyczy.|  
-|AFX_WM_POSTSETPREVIEWFRAME|Wysyłane do ramki głównej powiadomienia, że użytkownik zmienił tryb podglądu wydruku|`TRUE`Wskazuje, że ustawiono tryb podglądu wydruku. `FALSE`Wskazuje, że ten tryb podglądu wydruku jest wyłączony.|Nie używany.|Nie używany.|  
+|AFX_WM_POSTSETPREVIEWFRAME|Wysyłane do ramki głównej powiadomienia, że użytkownik zmienił tryb podglądu wydruku|`TRUE` Wskazuje, że ustawiono tryb podglądu wydruku. `FALSE` Wskazuje, że ten tryb podglądu wydruku jest wyłączony.|Nie używany.|Nie używany.|  
 |AFX_WM_PROPERTY_CHANGED|Wysyłany do właściciela właściwości kontrolki siatki (`CMFCPropertyGridCtrl`) podczas zmiany wartości właściwości wybranego użytkownika.|Identyfikator formantu listy właściwości.|Wskaźnik do właściwości (`CMFCPropertyGridProperty`) zmianie.|Nie używany.|  
 |AFX_WM_RESETCONTEXTMENU|Wysyłany do głównego okna ramowego, gdy użytkownik resetuje menu kontekstowe podczas dostosowywania.|Identyfikator zasobu menu kontekstowego.|Wskaźnik do bieżącego menu kontekstowego, `CMFCPopupMenu`.|Nie używany.|  
 |AFX_WM_RESETKEYBOARD|Platformę wysyła wiadomość do głównego okna ramowego, gdy użytkownik resetuje wszystkie klawiaturowymi podczas dostosowywania.|Nie używany.|Nie używany.|Nie używany.|  
 |AFX_WM_RESETMENU|Platformę wysyła wiadomość do właściciela menu (okno ramowe) gdy użytkownik resetuje menu ramki aplikacji podczas dostosowywania|Identyfikator zasobu menu.|Nie używany.|Nie używany.|  
 |AFX_WM_RESETPROMPT|Platformę wysyła tę wiadomość, gdy okno dialogowe Dostosowywanie resetuje użytkownika na pasku narzędzi z paska narzędzi. Domyślny program obsługi wyświetla komunikat z pytaniem, czy użytkownik chce zresetować na pasku narzędzi.|Nie używany.|Nie używany.|Nie używany.|  
 |AFX_WM_RESETTOOLBAR|A `CMFCToolBar` obiekt wysyła tę wiadomość, gdy pasek narzędzi zostanie przywrócony do stanu pierwotnego, oznacza to, ładowanych z zasobów. Przetwarzać tego komunikatu, aby ponownie przycisków paska narzędzi, których klasy pochodne `CMFCToolbarButton`. Aby uzyskać więcej informacji, zobacz `CMFCToolbarComboBoxButton`.|Identyfikator zasobu paska narzędzi, których stan został przywrócony.|Nie używany.|Zero.|  
-|AFX_WM_SHOWREGULARMENU|`CMFCToolbarMenuButton`obiekt wysyła wiadomość do jego właściciela, gdy użytkownik kliknie przycisk menu regularne. Przetwarzać tego komunikatu, zawsze należy używać `CMFCToolbarMenuButton` mają być wyświetlane menu podręczne, gdy użytkownik kliknie przycisk.|Identyfikator polecenia przycisku, który wysyła wiadomość.|Współrzędne ekranu kursora. Word znaczącymi bitami Określa współrzędną x. Word znaczących Określa współrzędną y.|Nie używany.|  
+|AFX_WM_SHOWREGULARMENU|`CMFCToolbarMenuButton` obiekt wysyła wiadomość do jego właściciela, gdy użytkownik kliknie przycisk menu regularne. Przetwarzać tego komunikatu, zawsze należy używać `CMFCToolbarMenuButton` mają być wyświetlane menu podręczne, gdy użytkownik kliknie przycisk.|Identyfikator polecenia przycisku, który wysyła wiadomość.|Współrzędne ekranu kursora. Word znaczącymi bitami Określa współrzędną x. Word znaczących Określa współrzędną y.|Nie używany.|  
 |AFX_WM_TOOLBARMENU|Wysyłany do głównego okna ramowego, gdy użytkownik zwolni prawy przycisk myszy, gdy wskaźnik myszy znajduje się w kliencie lub obszaru nieklienckiego okienka.|Nie używany.|Współrzędne ekranu wskaźnik myszy. Word znaczącymi bitami Określa współrzędną x. Word znaczących Określa współrzędną y.|Zero, jeśli aplikacja przetwarza tego komunikatu. w przeciwnym razie wartość różna od zera.|  
 |AFX_WM_UPDATETOOLTIPS|Wysłane do wszystkich właścicieli etykietka narzędzia, aby wskazać, że ich kontrolek typu etykieta powinien być tworzony ponownie.|Typ formantu, który powinien przetwarzać tego komunikatu. Znajdują się w tabeli w dalszej części tego tematu, aby uzyskać listę możliwych wartości.|Nie używany.|Nie używany.|  
-|AFX_WM_WINDOW_HELP|`CMFCWindowsManagerDialog`wysyła wiadomość do ramka nadrzędny, gdy użytkownik kliknie **pomocy** przycisk lub przejdzie do trybu pomocy, klikając **pomocy** przycisku Podpis lub klawisz F1.|Nie używany.|Wskaźnik do wystąpienia `CMFCWindowsManagerDialog`.|Nie używany.|  
+|AFX_WM_WINDOW_HELP|`CMFCWindowsManagerDialog` wysyła wiadomość do ramka nadrzędny, gdy użytkownik kliknie **pomocy** przycisk lub przejdzie do trybu pomocy, klikając **pomocy** przycisku Podpis lub klawisz F1.|Nie używany.|Wskaźnik do wystąpienia `CMFCWindowsManagerDialog`.|Nie używany.|  
   
  W poniższej tabeli przedstawiono wartości niższe słowo `lParam` parametru metody AFX_WM_HSCROLL:  
   
@@ -158,10 +153,10 @@ Komunikaty te są używane w MFC.
 |||  
 |-|-|  
 |Flaga|Wartość|  
-|AFX_TOOLTIP_TYPE_DEFAULT|0X0001|  
-|AFX_TOOLTIP_TYPE_TOOLBAR|0X0002|  
-|AFX_TOOLTIP_TYPE_TAB|0X0004|  
-|AFX_TOOLTIP_TYPE_MINIFRAME|0X0008|  
+|AFX_TOOLTIP_TYPE_DEFAULT|0x0001|  
+|AFX_TOOLTIP_TYPE_TOOLBAR|0x0002|  
+|AFX_TOOLTIP_TYPE_TAB|0x0004|  
+|AFX_TOOLTIP_TYPE_MINIFRAME|0x0008|  
 |AFX_TOOLTIP_TYPE_DOCKBAR|0x0010|  
 |AFX_TOOLTIP_TYPE_EDIT|0x0020|  
 |AFX_TOOLTIP_TYPE_BUTTON|0x0040|  

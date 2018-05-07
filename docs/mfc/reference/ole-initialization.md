@@ -1,13 +1,10 @@
 ---
 title: Inicjalizacja OLE | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - afxdisp/AfxOleInit
 - afxdisp/AfxEnableControlContainer
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - OLE initialization
 ms.assetid: aa8a54a7-24c3-4344-b2c6-dbcf6084fa31
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 014d0679be8a03b60c2e759b36c056b35784be78
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b8224cf27313b056b95990f514e02eb9d9c08cad
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-initialization"></a>Inicjalizacja OLE
 Zanim aplikacji można użyć usług systemowych OLE, musi zainicjować OLE systemowej biblioteki dll i sprawdź, czy są zainstalowane poprawne wersje bibliotek DLL. **Afxoleinit —** funkcja inicjuje OLE systemowej biblioteki dll.  
@@ -39,7 +34,7 @@ Zanim aplikacji można użyć usług systemowych OLE, musi zainicjować OLE syst
 |[AfxEnableControlContainer](#afxenablecontrolcontainer)|Wywołanie tej funkcji w obiektu application `InitInstance` funkcji, aby włączyć obsługę zawierania formantów OLE.| 
 
 
-## <a name="afxenablecontrolcontainer"></a>AfxEnableControlContainer
+## <a name="afxenablecontrolcontainer"></a> AfxEnableControlContainer
 Wywołanie tej funkcji w obiektu application `InitInstance` funkcji, aby włączyć obsługę zawierania formantów OLE.  
    
 ### <a name="syntax"></a>Składnia    
@@ -54,7 +49,7 @@ void AfxEnableControlContainer( );
  **Nagłówek:** afxdisp.h  
 
   
-##  <a name="afxoleinit"></a>Afxoleinit —  
+##  <a name="afxoleinit"></a>  Afxoleinit —  
  Inicjowanie obsługi aplikacji.  
   
 ``` 
@@ -75,7 +70,7 @@ BOOL AFXAPI AfxOleInit();
 >  Jeśli **afxoleinit —** jest wywoływana z biblioteki MFC DLL wywołanie zakończy się niepowodzeniem. Błąd występuje, ponieważ funkcja przyjęto założenie, że jeśli jest ona wywoływana z biblioteki DLL, systemu OLE był poprzednio inicjowany przez wywołanie aplikacji.  
   
 > [!NOTE]
->  Aplikacje MFC musi zostać zainicjowany jako pojedynczy wątków typu apartment (STA). Jeśli należy wywołać [funkcja CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) w Twojej `InitInstance` zastępowania, określ `COINIT_APARTMENTTHREADED` (zamiast `COINIT_MULTITHREADED`). Aby uzyskać więcej informacji, zobacz PRB: MFC aplikacja przestaje odpowiadać podczas inicjowania aplikacji jako wielowątkowe apartamentu (828643) w [http://support.microsoft.com/default.aspxscid=kb;en-us;828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
+>  Aplikacje MFC musi zostać zainicjowany jako pojedynczy wątków typu apartment (STA). Jeśli należy wywołać [funkcja CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) w Twojej `InitInstance` zastępowania, określ `COINIT_APARTMENTTHREADED` (zamiast `COINIT_MULTITHREADED`). Aby uzyskać więcej informacji, zobacz PRB: MFC aplikacja przestaje odpowiadać podczas inicjowania aplikacji jako wielowątkowe apartamentu (828643) w [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
 
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdisp.h

@@ -1,13 +1,10 @@
 ---
-title: "Wskazówki: Tworzenie projektu (C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Wskazówki: Tworzenie projektu (C++) | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65d7a4bf7e4b3fd519911a2a127ec0ac2723b630
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c8d04dc3692076b867302af0e793eaac7ed25cb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-building-a-project-c"></a>Wskazówki: tworzenie projektu (C++)
 W tym przewodniku celowo wprowadzać w swój kod, aby dowiedzieć się, jak wygląda błąd kompilacji i napraw błąd składni Visual C++. Podczas kompilowania projektu komunikat o błędzie wskazuje, co to jest problem i którym wystąpił.  
@@ -66,7 +61,7 @@ W tym przewodniku celowo wprowadzać w swój kod, aby dowiedzieć się, jak wygl
     ```  
   
 ## <a name="next-steps"></a>Następne kroki  
- **Poprzedni:** [wskazówki: Praca z projektami i rozwiązaniami (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) &#124; **Dalej:**[wskazówki: Testowanie projektu (C++)](../ide/walkthrough-testing-a-project-cpp.md)  
+ **Poprzedni:** [wskazówki: Praca z projektami i rozwiązaniami (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) &#124; **dalej:**[wskazówki: Testowanie projektu (C++)](../ide/walkthrough-testing-a-project-cpp.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)   

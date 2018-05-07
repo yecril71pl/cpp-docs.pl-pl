@@ -1,13 +1,10 @@
 ---
-title: "Rejestrowanie formantów OLE | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Rejestrowanie formantów OLE | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.ole
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - registering OLE controls
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b11e943b8aa6427517ecb5b32ddf6f56442f5d0a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7e51e4c425d3d16b57a2b1ce0d4fc2f585dc505d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="registering-ole-controls"></a>Rejestrowanie formantów OLE
 Formanty OLE, podobnie jak inne obiekty serwera OLE są dostępne przez inne aplikacje świadome OLE. Jest to osiągane przez rejestrowanie biblioteki typów i klasy formantu.  
@@ -43,9 +38,9 @@ Formanty OLE, podobnie jak inne obiekty serwera OLE są dostępne przez inne apl
 |[Afxoleunregisterclass —](#afxoleunregisterclass)|Usuwa z bazy danych rejestracji klasy formantu lub klasy strony właściwości.|  
 |[Afxoleunregistertypelib —](#afxoleunregistertypelib)|Usuwa biblioteki typu formantu z bazy danych rejestracji.|  
   
- `AfxOleRegisterTypeLib`Zazwyczaj jest wywoływana w celu wykonania Biblioteka DLL sterowania `DllRegisterServer`. Podobnie `AfxOleUnregisterTypeLib` jest wywoływana przez `DllUnregisterServer`. `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass`, i `AfxOleUnregisterClass` są zwykle nazywane `UpdateRegistry` funkcji członkowskiej klasy formantu strony fabryki lub właściwości.  
+ `AfxOleRegisterTypeLib` Zazwyczaj jest wywoływana w celu wykonania Biblioteka DLL sterowania `DllRegisterServer`. Podobnie `AfxOleUnregisterTypeLib` jest wywoływana przez `DllUnregisterServer`. `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass`, i `AfxOleUnregisterClass` są zwykle nazywane `UpdateRegistry` funkcji członkowskiej klasy formantu strony fabryki lub właściwości.  
   
-##  <a name="afxoleregistercontrolclass"></a>Afxoleregistercontrolclass —  
+##  <a name="afxoleregistercontrolclass"></a>  Afxoleregistercontrolclass —  
  Rejestruje klasy formantu z bazy danych rejestracji systemu Windows.  
   
 ```   
@@ -81,11 +76,11 @@ BOOL AFXAPI AfxOleRegisterControlClass(
  `nRegFlags`  
  Zawiera co najmniej jeden z następujących flag:  
   
-- `afxRegInsertable`Zapewnia kontrolę pojawią się w oknie dialogowym Wstaw obiekt dla obiektów OLE.  
+- `afxRegInsertable` Zapewnia kontrolę pojawią się w oknie dialogowym Wstaw obiekt dla obiektów OLE.  
   
-- `afxRegApartmentThreading`Ustawia model wątkowości w rejestrze ThreadingModel = apartamentu.  
+- `afxRegApartmentThreading` Ustawia model wątkowości w rejestrze ThreadingModel = apartamentu.  
   
-- `afxRegFreeThreading`Ustawia model wątkowości w rejestrze ThreadingModel = wolne.  
+- `afxRegFreeThreading` Ustawia model wątkowości w rejestrze ThreadingModel = wolne.  
   
      Możesz połączyć ze sobą dwie flagi `afxRegApartmentThreading` i `afxRegFreeThreading` można ustawić ThreadingModel = jednocześnie. Zobacz [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) w zestawie SDK systemu Windows, aby uzyskać więcej informacji o rejestracji modelu wątkowości.  
   
@@ -146,7 +141,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
  Różna od zera, jeśli klasa formant został zarejestrowany; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Umożliwia to kontrolę mają być używane przez kontenery, które są OLE-control. `AfxOleRegisterControlClass`aktualizuje rejestr przy użyciu nazwy i lokalizacji w systemie kontroli, a także ustawia model wątkowy obsługującego formantu w rejestrze. Aby uzyskać więcej informacji, zobacz [64 Uwaga techniczna](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Komórkowy Model wątkowości w OLE formantów," i [o procesów i wątków](http://msdn.microsoft.com/library/windows/desktop/ms681917) w zestawie Windows SDK.  
+ Umożliwia to kontrolę mają być używane przez kontenery, które są OLE-control. `AfxOleRegisterControlClass` aktualizuje rejestr przy użyciu nazwy i lokalizacji w systemie kontroli, a także ustawia model wątkowy obsługującego formantu w rejestrze. Aby uzyskać więcej informacji, zobacz [64 Uwaga techniczna](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Komórkowy Model wątkowości w OLE formantów," i [o procesów i wątków](http://msdn.microsoft.com/library/windows/desktop/ms681917) w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCAxCtl#11](../../mfc/reference/codesnippet/cpp/registering-ole-controls_1.cpp)]  
@@ -160,7 +155,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxctl.h  
   
-##  <a name="afxoleregisterpropertypageclass"></a>Afxoleregisterpropertypageclass —  
+##  <a name="afxoleregisterpropertypageclass"></a>  Afxoleregisterpropertypageclass —  
  Rejestruje klasy strony właściwości z bazy danych rejestracji systemu Windows.  
   
 ```  
@@ -184,7 +179,7 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
  `nRegFlags`  
  Może zawierać flagi:  
   
-- `afxRegApartmentThreading`Ustawia model wątkowości w rejestrze ThreadingModel = apartamentu.  
+- `afxRegApartmentThreading` Ustawia model wątkowości w rejestrze ThreadingModel = apartamentu.  
   
 > [!NOTE]
 >  W wersjach MFC przed MFC 4.2 `int` `nRegFlags` parametru nie jest dostępna. Należy zauważyć, że `afxRegInsertable` flaga nie jest prawidłową opcją dla strony właściwości i spowoduje ASSERT w MFC jest ustawiona  
@@ -193,12 +188,12 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
  Różna od zera, jeśli klasa formant został zarejestrowany; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Dzięki temu strony właściwości, które mają być używane przez kontenery, które są OLE-control. `AfxOleRegisterPropertyPageClass`zaktualizowanie rejestru o nazwie strony właściwości i jego lokalizacji w systemie, a także ustawia model wątkowy obsługującego formantu w rejestrze. Aby uzyskać więcej informacji, zobacz [64 Uwaga techniczna](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Komórkowy Model wątkowości w OLE formantów," i [o procesów i wątków](http://msdn.microsoft.com/library/windows/desktop/ms681917) w zestawie Windows SDK.  
+ Dzięki temu strony właściwości, które mają być używane przez kontenery, które są OLE-control. `AfxOleRegisterPropertyPageClass` zaktualizowanie rejestru o nazwie strony właściwości i jego lokalizacji w systemie, a także ustawia model wątkowy obsługującego formantu w rejestrze. Aby uzyskać więcej informacji, zobacz [64 Uwaga techniczna](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Komórkowy Model wątkowości w OLE formantów," i [o procesów i wątków](http://msdn.microsoft.com/library/windows/desktop/ms681917) w zestawie Windows SDK.  
   
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxctl.h  
   
-##  <a name="afxoleregistertypelib"></a>Afxoleregistertypelib —  
+##  <a name="afxoleregistertypelib"></a>  Afxoleregistertypelib —  
  Rejestruje biblioteki typów z bazy danych rejestracji systemu Windows i umożliwia biblioteki typów, które mają być używane przez inne kontenerów, które są OLE-control.  
   
 ```   
@@ -236,7 +231,7 @@ BOOL AfxOleRegisterTypeLib(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdisp.h  
   
-##  <a name="afxoleunregisterclass"></a>Afxoleunregisterclass —  
+##  <a name="afxoleunregisterclass"></a>  Afxoleunregisterclass —  
  Usuwa wpis klasy strony formantu lub właściwości z bazy danych rejestracji systemu Windows.  
   
 ```   
@@ -256,7 +251,7 @@ BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID);
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxctl.h  
   
-##  <a name="afxoleunregistertypelib"></a>Afxoleunregistertypelib —  
+##  <a name="afxoleunregistertypelib"></a>  Afxoleunregistertypelib —  
  Wywołanie tej funkcji, aby usunąć wpis biblioteki typu z bazy danych rejestracji systemu Windows.  
   
 ```   

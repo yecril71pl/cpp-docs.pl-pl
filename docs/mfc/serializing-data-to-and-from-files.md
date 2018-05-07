@@ -1,13 +1,10 @@
 ---
-title: "Serializacja danych do i z plików | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Serializacja danych do i z plików | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - data [MFC], serializing
 - document data [MFC]
 ms.assetid: b42a0c68-4bc4-4012-9938-5433a26d2c24
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d28b12e19b302f5576d2cd76c931e0036c208185
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec6bfbe647045a334af9fe95cd6d1ab40625a51f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serializing-data-to-and-from-files"></a>Serializacja danych do plików i z plików
 Zgodnie z podstawową koncepcją trwałości jest, że obiekt powinien mieć możliwość zapisywania swojego bieżącego stanu wskazanych przez wartości jego zmienne Członkowskie do magazynu trwałego. Później obiekt można ponownie utworzyć za odczytywanie lub "deserializacji", stan obiektu z magazynu trwałego. W tym miejscu klucza punktu jest odpowiedzialny za odczytywanie i zapisywanie własny stan samego obiektu. W związku z tym dla klasy były trwałe, musi on implementować operacji podstawowe serializacji.  
@@ -50,10 +45,10 @@ Zgodnie z podstawową koncepcją trwałości jest, że obiekt powinien mieć mo�
   
 -   [Pomijanie mechanizmu serializacji](../mfc/bypassing-the-serialization-mechanism.md)  
   
-##  <a name="_core_the_document.92.s_role_in_serialization"></a>Rola dokumentu w serializacji  
+##  <a name="_core_the_document.92.s_role_in_serialization"></a> Rola dokumentu w serializacji  
  Platformę automatycznie odpowiada Otwórz menu Plik, Zapisz i Zapisz jako polecenia przez wywołanie dokumentu `Serialize` funkcji członkowskiej, jeśli jest stosowana. `ID_FILE_OPEN` Polecenia, na przykład wywołuje funkcję obsługi wewnątrz obiektu application. W trakcie tego procesu użytkownik widzi i odpowiada okno dialogowe Otwieranie pliku i ramach uzyskuje nazwę pliku, który użytkownik wybierze. Tworzy w ramach `CArchive` obiektu ustawione dla ładowania danych do dokumentu i przekazuje archiwum do `Serialize`. Plik został już otwarty przez platformę. Kod w Twoim dokumencie `Serialize` funkcji członkowskiej odczytuje dane w za pomocą archiwum Rekonstruowanie obiekty danych, zgodnie z potrzebami. Aby uzyskać więcej informacji na temat serializacji, zobacz artykuł [szeregowanie](../mfc/serialization-in-mfc.md).  
   
-##  <a name="_core_the_data.92.s_role_in_serialization"></a>Rola danych w serializacji  
+##  <a name="_core_the_data.92.s_role_in_serialization"></a> Rola danych w serializacji  
  Ogólnie rzecz biorąc typu klasy danych powinno być możliwe do serializacji sam. Oznacza to gdy obiekt przekazywany do archiwum, obiekt wiedzieć, sposób sam zapisać w archiwum i samego odczytywać archiwum. MFC zapewnia obsługę dokonywania klas serializacji w ten sposób. W przypadku projektowania klasę, aby zdefiniować typu danych i planuje serializować dane tego typu projektu dla serializacji.  
   
 ## <a name="see-also"></a>Zobacz też  

@@ -1,12 +1,9 @@
 ---
 title: Klasa CHtmlEditView | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHtmlEditView
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CHtmlEditView [MFC], GetDHtmlDocument
 - CHtmlEditView [MFC], GetStartDocument
 ms.assetid: 166c8ba8-3fb5-4dd7-a9ea-5bca662d00f6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98964a48be8b8c36a3d6d5bd708a51b9963ae105
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 10f474ce860bf5d9071a93f17654123f4777efa7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chtmleditview-class"></a>Klasa CHtmlEditView
 Udostępnia funkcję edytowania platformy WebBrowser w kontekście architektury dokument/widok MFC.  
@@ -63,7 +58,7 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -82,14 +77,14 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxhtml.h  
   
-##  <a name="chtmleditview"></a>CHtmlEditView::CHtmlEditView  
+##  <a name="chtmleditview"></a>  CHtmlEditView::CHtmlEditView  
  Konstruuje `CHtmlEditView` obiektu.  
   
 ```  
 CHtmlEditView();
 ```  
   
-##  <a name="create"></a>CHtmlEditView::Create  
+##  <a name="create"></a>  CHtmlEditView::Create  
  Tworzy nowy obiekt okna.  
   
 ```  
@@ -128,7 +123,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda będzie także wywołać zawarte WebBrowser **Nawigacja** metodę, aby załadować dokument domyślny (zobacz [CHtmlEditView::GetStartDocument](#getstartdocument)).  
   
-##  <a name="getdhtmldocument"></a>CHtmlEditView::GetDHtmlDocument  
+##  <a name="getdhtmldocument"></a>  CHtmlEditView::GetDHtmlDocument  
  Zwraca **IHTMLDocument2** interfejsu w bieżącym dokumencie.  
   
 ```  
@@ -139,7 +134,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
  `ppDocument`  
  [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interfejsu.  
   
-##  <a name="getstartdocument"></a>CHtmlEditView::GetStartDocument  
+##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument  
  Pobiera nazwę dokument domyślny dla tego widoku.  
   
 ```  

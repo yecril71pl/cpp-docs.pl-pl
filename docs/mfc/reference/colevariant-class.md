@@ -1,12 +1,9 @@
 ---
 title: Klasa COleVariant | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleVariant
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c3c9d961c69616df05975f2d484d0bbfd43f514
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b7f0da1f53bf2c6b0e216195be37746eab9abd1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colevariant-class"></a>Klasa COleVariant
 Hermetyzuje [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) — typ danych.  
@@ -77,7 +72,7 @@ class COleVariant : public tagVARIANT
 |[COleVariant::operator LPVARIANT](#operator_lpvariant)|Konwertuje `COleVariant` obiekt do `LPVARIANT`.|  
 |[COleVariant::operator =](#operator_eq)|Kopie `COleVariant` wartość.|  
 |[COleVariant::operator ==](#operator_eq_eq)|Porównuje dwa `COleVariant` wartości.|  
-|[COleVariant::operator &lt; &lt;,&gt;&gt;](#operator_lt_lt__gt_gt)|Dane wyjściowe `COleVariant` do wartości `CArchive` lub `CDumpContext` i danych wejściowych `COleVariant` obiekt z `CArchive`.|  
+|[COleVariant::operator &lt; &lt;, &gt;&gt;](#operator_lt_lt__gt_gt)|Dane wyjściowe `COleVariant` do wartości `CArchive` lub `CDumpContext` i danych wejściowych `COleVariant` obiekt z `CArchive`.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ten typ danych jest używany w automatyzacji OLE. W szczególności [DISPPARAMS](http://msdn.microsoft.com/en-us/a16e5a21-766e-4287-b039-13429aa78f8b) struktura zawiera wskaźnik do tablicy **VARIANT** struktury. A **DISPPARAMS** struktura jest używana do przekazania parametrów do [IDispatch::Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d).  
@@ -99,7 +94,7 @@ class COleVariant : public tagVARIANT
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdisp.h  
   
-##  <a name="attach"></a>COleVariant::Attach  
+##  <a name="attach"></a>  COleVariant::Attach  
  Wywołanie tej funkcji można dołączyć podanego [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) obiektu do bieżącego `COleVariant` obiektu.  
   
 ```  
@@ -115,7 +110,7 @@ void Attach(VARIANT& varSrc);
   
  Aby uzyskać więcej informacji, zobacz [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) i [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) wpisów w zestawie Windows SDK.  
   
-##  <a name="colevariant"></a>COleVariant::COleVariant  
+##  <a name="colevariant"></a>  COleVariant::COleVariant  
  Konstruuje `COleVariant` obiektu.  
   
 ```  
@@ -213,7 +208,7 @@ COleVariant(LPCITEMIDLIST pidl);
   
  Aby uzyskać więcej informacji na temat `SCODE`, zobacz [struktury COM kody błędów](http://msdn.microsoft.com/library/windows/desktop/ms690088) w zestawie Windows SDK.  
   
-##  <a name="changetype"></a>COleVariant::ChangeType  
+##  <a name="changetype"></a>  COleVariant::ChangeType  
  Konwertuje typ wariantu wartości w tym `COleVariant` obiektu.  
   
 ```  
@@ -230,7 +225,7 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji, zobacz [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118), [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4), i [VariantChangeType](http://msdn.microsoft.com/en-us/48a51e32-95d7-4eeb-8106-f5043ffa2fd1) wpisów w zestawie Windows SDK.  
   
-##  <a name="clear"></a>COleVariant::Clear  
+##  <a name="clear"></a>  COleVariant::Clear  
  Czyści **VARIANT**.  
   
 ```  
@@ -242,7 +237,7 @@ void Clear();
   
  Aby uzyskać więcej informacji, zobacz `VARIANT`, `VARTYPE`, i `VariantClear` wpisów w zestawie Windows SDK.  
   
-##  <a name="detach"></a>COleVariant::Detach  
+##  <a name="detach"></a>  COleVariant::Detach  
  Odłącza odpowiadającego [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) obiektu z tego `COleVariant` obiektu.  
   
 ```  
@@ -257,7 +252,7 @@ VARIANT Detach();
   
  Aby uzyskać więcej informacji, zobacz [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118), [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4), i [VariantClear](http://msdn.microsoft.com/en-us/28741d81-8404-4f85-95d3-5c209ec13835) wpisów w zestawie Windows SDK.  
   
-##  <a name="getbytearrayfromvariantarray"></a>COleVariant::GetByteArrayFromVariantArray  
+##  <a name="getbytearrayfromvariantarray"></a>  COleVariant::GetByteArrayFromVariantArray  
  Pobiera tablicę bajtów z tablicy istniejące wariantu  
   
 ```  
@@ -268,7 +263,7 @@ void GetByteArrayFromVariantArray(CByteArray& bytes);
  `bytes`  
  Odwołanie do istniejącej [CByteArray](../../mfc/reference/cbytearray-class.md) obiektu.  
   
-##  <a name="operator_lpcvariant"></a>COleVariant::operator LPCVARIANT  
+##  <a name="operator_lpcvariant"></a>  COleVariant::operator LPCVARIANT  
  Ten operator rzutowania zwraca `VARIANT` struktury, którego wartość jest kopiowana z to `COleVariant` obiektu.  
   
 ```  
@@ -277,7 +272,7 @@ operator LPCVARIANT() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="operator_lpvariant"></a>COleVariant::operator LPVARIANT  
+##  <a name="operator_lpvariant"></a>  COleVariant::operator LPVARIANT  
  Wywołanie tego operatora rzutowania do dostępu do podstawowych `VARIANT` to struktura `COleVariant` obiektu.  
   
 ```  
@@ -289,7 +284,7 @@ operator LPVARIANT();
 > [!CAUTION]
 >  Zmiana wartości w **VARIANT** struktury używane przez wskaźnik zwracane przez tę funkcję zmieni wartość tego `COleVariant` obiektu.  
   
-##  <a name="operator_eq"></a>COleVariant::operator =  
+##  <a name="operator_eq"></a>  COleVariant::operator =  
  Te operatory przypisania przeciążone skopiuj wartość źródła do tego `COleVariant` obiektu.  
   
 ```  
@@ -312,7 +307,7 @@ const COleVariant& operator=(const CLongBinary& lbSrc);
 ### <a name="remarks"></a>Uwagi  
  Krótki opis każdego operatora następująco:  
   
-- **Operator = (** *varSrc***)** umożliwia skopiowanie istniejącej **VARIANT** lub `COleVariant` obiektu do tego obiektu.  
+- **Operator = (** *varSrc ***)** umożliwia skopiowanie istniejącej **VARIANT** lub `COleVariant` obiektu do tego obiektu.  
   
 - **Operator = (** `pSrc` **)** kopie **VARIANT** dostęp do obiektu `pSrc` do tego obiektu.  
   
@@ -338,7 +333,7 @@ const COleVariant& operator=(const CLongBinary& lbSrc);
   
  Aby uzyskać więcej informacji, zobacz [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) i [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) wpisów w zestawie Windows SDK.  
   
-##  <a name="operator_eq_eq"></a>COleVariant::operator ==  
+##  <a name="operator_eq_eq"></a>  COleVariant::operator ==  
  Ten operator porównuje dwie wartości typu variant i zwraca wartość niezerową, czy są równe; w przeciwnym razie 0.  
   
 ```  
@@ -346,7 +341,7 @@ BOOL operator==(const VARIANT& varSrc) const;
 BOOL operator==(LPCVARIANT pSrc) const;
 ```  
   
-##  <a name="operator_lt_lt__gt_gt"></a>COleVariant::operator &lt; &lt;,&gt;&gt;  
+##  <a name="operator_lt_lt__gt_gt"></a>  COleVariant::operator &lt; &lt;, &gt;&gt;  
  Dane wyjściowe `COleVariant` do wartości `CArchive` lub **CdumpContext** i danych wejściowych `COleVariant` obiekt z `CArchive`.  
   
 ```  
@@ -364,9 +359,9 @@ friend CArchive& AFXAPI operator>>(
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `COleVariant` Wstawiania (  **< \<** ) obsługuje operator diagnostycznych zrzucanie i przechowywania do archiwum. Wyodrębnianie (  **>>** ) — operator obsługuje ładowanie z archiwum.  
+ `COleVariant` Wstawiania ( **< \<**) obsługuje operator diagnostycznych zrzucanie i przechowywania do archiwum. Wyodrębnianie ( **>>**) — operator obsługuje ładowanie z archiwum.  
   
-##  <a name="setstring"></a>COleVariant::SetString  
+##  <a name="setstring"></a>  COleVariant::SetString  
  Ustawia ciąg do określonego typu.  
   
 ```  
@@ -381,7 +376,7 @@ void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
  **VARTYPE** nowego `COleVariant` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Parametr `vtSrc` musi być `VT_BSTR` (UNICODE) lub `VT_BSTRT` (ANSI). `SetString`zwykle jest używana do ustawioną ciągów ANSI, ponieważ wartość domyślna dla [COleVariant::COleVariant](#colevariant) konstruktora z ciągu lub parametru wskaźnik ciągu i nie **VARTYPE** jest UNICODE.  
+ Parametr `vtSrc` musi być `VT_BSTR` (UNICODE) lub `VT_BSTRT` (ANSI). `SetString` zwykle jest używana do ustawioną ciągów ANSI, ponieważ wartość domyślna dla [COleVariant::COleVariant](#colevariant) konstruktora z ciągu lub parametru wskaźnik ciągu i nie **VARTYPE** jest UNICODE.  
   
  Zestaw rekordów DAO kompilacji z systemem innym niż UNICODE oczekuje ciągów ANSI za. W związku z tym dla DAO funkcje używające `COleVariant` obiekty, jeśli nie utworzysz zestaw rekordów UNICODE, należy użyć **COleVariant::COleVariant (** `lpszSrc` **,** `vtSrc` **)**  forma konstruktora z `vtSrc` ustawioną `VT_BSTRT` (ANSI) lub użyj `SetString` z `vtSrc` ustawioną `VT_BSTRT` dokonanie ciągów ANSI. Na przykład `CDaoRecordset` funkcje [CDaoRecordset::Seek](../../mfc/reference/cdaorecordset-class.md#seek) i [CDaoRecordset::SetFieldValue](../../mfc/reference/cdaorecordset-class.md#setfieldvalue) użyć `COleVariant` obiektów jako parametry. Te obiekty muszą być ANSI, jeśli zestaw rekordów DAO nie jest UNICODE.  
   

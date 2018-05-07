@@ -1,13 +1,10 @@
 ---
-title: "Metody tworzenia paska narzędzi | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Metody tworzenia paska narzędzi | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,22 +15,20 @@ helpviewer_keywords:
 - toolbar controls [MFC], creating
 - CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: f19d8d65-d49f-445c-abe8-d47d3e4101c8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d93f8e43c933e9c8054e798c11754cc48bf54a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 052f1578386746f9a4d9892576f09b3b61547289
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="methods-of-creating-a-toolbar"></a>Metody tworzenia paska narzędzi
-MFC oferuje dwie klasy, aby utworzyć paski narzędzi: [ctoolbar —](../mfc/reference/ctoolbar-class.md) i [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) (który opakowuje interfejs API sterowania wspólne systemu Windows). `CToolBar`zawiera wszystkie funkcje formantu wspólnego narzędzi i obsługuje wiele wymagane typowe ustawienia kontroli i struktur dla Ciebie; jednak wynikowego pliku wykonywalnego zazwyczaj będzie większy niż utworzony przy użyciu `CToolBarCtrl`.  
+MFC oferuje dwie klasy, aby utworzyć paski narzędzi: [ctoolbar —](../mfc/reference/ctoolbar-class.md) i [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) (który opakowuje interfejs API sterowania wspólne systemu Windows). `CToolBar` zawiera wszystkie funkcje formantu wspólnego narzędzi i obsługuje wiele wymagane typowe ustawienia kontroli i struktur dla Ciebie; jednak wynikowego pliku wykonywalnego zazwyczaj będzie większy niż utworzony przy użyciu `CToolBarCtrl`.  
   
- `CToolBarCtrl`zazwyczaj powoduje mniejsze pliku wykonywalnego, a może chcieć użyć `CToolBarCtrl` Jeśli nie zamierzasz integrowanie narzędzi architekturę MFC. Jeśli planujesz używać `CToolBarCtrl` i integrowanie narzędzi architekturę MFC, należy zwrócić uwagę dodatkowe do komunikowania się manipulacji formantu paska narzędzi MFC. Ta komunikacja nie jest trudne; jest jednak dodatkowej pracy, który jest niepotrzebne, korzystając z `CToolBar`.  
+ `CToolBarCtrl` zazwyczaj powoduje mniejsze pliku wykonywalnego, a może chcieć użyć `CToolBarCtrl` Jeśli nie zamierzasz integrowanie narzędzi architekturę MFC. Jeśli planujesz używać `CToolBarCtrl` i integrowanie narzędzi architekturę MFC, należy zwrócić uwagę dodatkowe do komunikowania się manipulacji formantu paska narzędzi MFC. Ta komunikacja nie jest trudne; jest jednak dodatkowej pracy, który jest niepotrzebne, korzystając z `CToolBar`.  
   
  Visual C++ udostępnia dwa sposoby, aby móc korzystać z formantu wspólnego narzędzi.  
   

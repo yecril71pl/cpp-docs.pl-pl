@@ -1,13 +1,10 @@
 ---
-title: "Windows Sockets: Jak działają gniazda z archiwami | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Windows Sockets: Jak działają gniazda z archiwami | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Windows Sockets [MFC], with archives
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b6ff5f07e3662e61a7ba6260bb90459f3aebd7d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c03ae586e346be2ba1e7c71475b69318ded0dd18
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets: jak działają gniazda z archiwami
 W tym artykule opisano sposób [CSocket —](../mfc/reference/csocket-class.md) obiektu, [CSocketFile](../mfc/reference/csocketfile-class.md) obiektu, a [CArchive](../mfc/reference/carchive-class.md) obiektu połączone uprościć wysyłania i odbierania danych za pośrednictwem systemu Windows Gniazda.  
@@ -37,7 +32,7 @@ W tym artykule opisano sposób [CSocket —](../mfc/reference/csocket-class.md) 
   
  A `CArchive` obiektu zarządza buforu. Jeśli bufor przechowywania archiwum (wysyłającym) jest pełna, skojarzony `CFile` dokonuje zawartości buforu zapisu obiektu. Opróżnianie buforu archiwum dołączony do gniazda jest odpowiednikiem wysyłania komunikatu. Po zapełnieniu buforu archiwum (odbieranie) podczas ładowania `CFile` obiektu zatrzymuje odczytu do momentu bufor jest ponownie dostępny.  
   
- Klasa `CSocketFile` pochodną `CFile`, ale nie obsługuje [cfile —](../mfc/reference/cfile-class.md) funkcji elementów członkowskich, takich jak funkcje pozycjonowania (`Seek`, `GetLength`, `SetLength`i tak dalej), blokowania funkcji () `LockRange`, `UnlockRange`), lub `GetPosition` funkcji. Wszystkie [CSocketFile](../mfc/reference/csocketfile-class.md) wykonaj obiektu jest zapisu lub odczytu sekwencji bajtów do lub z skojarzony `CSocket` obiektu. Ponieważ plik nie jest elementem, operacje, takie jak `Seek` i `GetPosition` nie ma sensu. `CSocketFile`jest pochodną `CFile`, dlatego zazwyczaj będzie dziedziczyć wszystkie te funkcje Członkowskie. Aby temu zapobiec, nieobsługiwaną `CFile` funkcje Członkowskie zostały przesłonięte w `CSocketFile` wyrzucenie [CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md).  
+ Klasa `CSocketFile` pochodną `CFile`, ale nie obsługuje [cfile —](../mfc/reference/cfile-class.md) funkcji elementów członkowskich, takich jak funkcje pozycjonowania (`Seek`, `GetLength`, `SetLength`i tak dalej), blokowania funkcji () `LockRange`, `UnlockRange`), lub `GetPosition` funkcji. Wszystkie [CSocketFile](../mfc/reference/csocketfile-class.md) wykonaj obiektu jest zapisu lub odczytu sekwencji bajtów do lub z skojarzony `CSocket` obiektu. Ponieważ plik nie jest elementem, operacje, takie jak `Seek` i `GetPosition` nie ma sensu. `CSocketFile` jest pochodną `CFile`, dlatego zazwyczaj będzie dziedziczyć wszystkie te funkcje Członkowskie. Aby temu zapobiec, nieobsługiwaną `CFile` funkcje Członkowskie zostały przesłonięte w `CSocketFile` wyrzucenie [CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md).  
   
  `CSocketFile` Obiektu wywołuje element członkowski funkcji jego `CSocket` obiekt do wysyłania i odbierania danych.  
   

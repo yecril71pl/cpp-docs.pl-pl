@@ -1,12 +1,9 @@
 ---
 title: Klasa COleDispatchException | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDispatchException
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - COleDispatchException [MFC], m_strSource
 - COleDispatchException [MFC], m_wCode
 ms.assetid: 0e95c8be-e21a-490c-99ec-181c6a9a26d0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d90c59e4f85c871c113e51063ef1d50997bb508b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2ed492198c5c667fa1ffadcaa9a3bcc0461c16d4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledispatchexception-class"></a>Klasa COleDispatchException
 Obsługi wyjątków specyficzne dla OLE `IDispatch` interfejsu, który jest kluczowym elementem automatyzacji OLE.  
@@ -75,7 +70,7 @@ class COleDispatchException : public CException
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdisp.h  
   
-##  <a name="m_dwhelpcontext"></a>COleDispatchException::m_dwHelpContext  
+##  <a name="m_dwhelpcontext"></a>  COleDispatchException::m_dwHelpContext  
  Identyfikuje kontekst pomocy w aplikacji pomocy (. Plik HLP).  
   
 ```  
@@ -88,7 +83,7 @@ DWORD m_dwHelpContext;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).  
   
-##  <a name="m_strdescription"></a>COleDispatchException::m_strDescription  
+##  <a name="m_strdescription"></a>  COleDispatchException::m_strDescription  
  Zawiera opis ustne błąd, na przykład "Dysk jest zapełniony."  
   
 ```  
@@ -101,14 +96,14 @@ CString m_strDescription;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).  
   
-##  <a name="m_strhelpfile"></a>COleDispatchException::m_strHelpFile  
+##  <a name="m_strhelpfile"></a>  COleDispatchException::m_strHelpFile  
  Platformę wypełnia tego ciągu o nazwie pliku pomocy w aplikacji.  
   
 ```  
 CString m_strHelpFile;  
 ```  
   
-##  <a name="m_strsource"></a>COleDispatchException::m_strSource  
+##  <a name="m_strsource"></a>  COleDispatchException::m_strSource  
  Platformę wypełnia tego ciągu o nazwie aplikacji, która wygenerowała wyjątek.  
   
 ```  
@@ -118,7 +113,7 @@ CString m_strSource;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).  
   
-##  <a name="m_wcode"></a>COleDispatchException::m_wCode  
+##  <a name="m_wcode"></a>  COleDispatchException::m_wCode  
  Zawiera kod błędu specyficzne dla aplikacji.  
   
 ```  

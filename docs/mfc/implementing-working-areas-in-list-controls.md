@@ -1,30 +1,25 @@
 ---
-title: "Implementowanie obszarów roboczych w formantach listy | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Implementowanie obszarów roboczych w formantach listy | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - list controls [MFC], working areas
 - working areas in list control [MFC]
 ms.assetid: fbbb356b-3359-4348-8603-f1cb114cadde
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cefb8007fd9b73dda4c0e8a99e9ae9daa1bfcc34
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44b92fbda7f00c761059a44b5bf9483e2dfac814
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-working-areas-in-list-controls"></a>Implementowanie obszarów roboczych w kontrolkach listy
 Domyślnie przez kontrolki listy Rozmieszcza wszystkie elementy w sposób standardowy siatki. Jednak inna metoda jest obsługiwana, praca obszary Rozmieszcza elementy listy grup prostokątny. W przypadku obrazu formantu listy, który zawiera obszary robocze, zobacz za pomocą kontrolki widok listy w zestawie Windows SDK.  
@@ -34,7 +29,7 @@ Domyślnie przez kontrolki listy Rozmieszcza wszystkie elementy w sposób standa
   
  Obszary robocze można wyświetlić puste obramowania (w lewo, top lub prawej elementy) lub spowodować poziomy pasek przewijania będzie wyświetlana po zwykle nie istnieć jedna. Inny użycie wspólnej jest można utworzyć wiele obszary robocze, do których elementów można przeniesiony lub usunięty. Przy użyciu tej metody można utworzyć obszary, w ramach jednego widoku, który ma inną funkcję. Użytkownik może następnie skategoryzować elementy przez umieszczenie ich w inny obszar. Przykładem tego może być widokiem systemu plików, który ma obszaru do odczytu i zapisu plików i w innym obszarze plików tylko do odczytu. Jeśli element pliku zostały przeniesione do obszaru tylko do odczytu, automatycznie czy stanie tylko do odczytu. Przenoszenie plików z widoku tylko do odczytu do obszaru odczytu/zapisu spowodowałoby pliku odczytu/zapisu.  
   
- `CListCtrl`zawiera kilka funkcji elementów członkowskich do tworzenia i zarządzania obszary robocze w formancie z listy. [GetWorkAreas](../mfc/reference/clistctrl-class.md#getworkareas) i [SetWorkAreas](../mfc/reference/clistctrl-class.md#setworkareas) pobierać i ustawiać tablicę `CRect` obiektów (lub `RECT` struktury), który przechowywania obecnie implementowane obszary robocze dla formantu listy. Ponadto [GetNumberOfWorkAreas](../mfc/reference/clistctrl-class.md#getnumberofworkareas) pobiera bieżącą liczbę obszary robocze dla formantu listy (domyślnie 0).  
+ `CListCtrl` zawiera kilka funkcji elementów członkowskich do tworzenia i zarządzania obszary robocze w formancie z listy. [GetWorkAreas](../mfc/reference/clistctrl-class.md#getworkareas) i [SetWorkAreas](../mfc/reference/clistctrl-class.md#setworkareas) pobierać i ustawiać tablicę `CRect` obiektów (lub `RECT` struktury), który przechowywania obecnie implementowane obszary robocze dla formantu listy. Ponadto [GetNumberOfWorkAreas](../mfc/reference/clistctrl-class.md#getnumberofworkareas) pobiera bieżącą liczbę obszary robocze dla formantu listy (domyślnie 0).  
   
 ## <a name="items-and-working-areas"></a>Elementy i obszarów roboczych  
  Po utworzeniu obszaru roboczego elementy, które znajdują się w obszarze roboczym stać się członkami go. Podobnie jeśli element zostanie przeniesiony do obszaru roboczego, staje się on członkiem obszar roboczy, do której została przeniesiona. Jeśli element nie leży w dowolnym obszarze roboczym, staje się automatycznie członkiem pierwszego obszaru roboczego (indeks 0). Jeśli chcesz utworzyć element i umieścić w obszarze roboczym, należy utworzyć elementu i przenieś go do obszaru roboczego żądaną wywołaniem [SetItemPosition](../mfc/reference/clistctrl-class.md#setitemposition). Drugi przykład poniżej przedstawiono tej metody.  

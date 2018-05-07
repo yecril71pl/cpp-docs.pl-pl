@@ -1,12 +1,9 @@
 ---
-title: "Model obiektów OLE DB | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Model obiektów OLE DB | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - rowsets, OLE DB object model
 - OLE DB, object model
 ms.assetid: 1a274a25-c310-4430-a1ec-bd2bd8120eff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2cd8fb90b7418b45f6bc011e8d4d0db6e04c08df
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ba9fd9b7ba5503f6ed5e1837147524f5abc7c31b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-object-model"></a>Model obiektów OLE DB
 Model obiektów OLE DB obejmuje następujące składniki lub obiektów. Pierwsze cztery obiektów lub wymienione składniki (źródeł danych, sesji, poleceń i zestawy wierszy) umożliwiają połączenie ze źródłem danych i go wyświetlać. Rest, począwszy od metody dostępu, odnoszą się do pracy z danymi, gdy jest on wyświetlany.  

@@ -1,12 +1,9 @@
 ---
-title: "Błąd narzędzi konsolidatora LNK1104 | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Błąd narzędzi konsolidatora LNK1104 | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 05/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK1104
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c91853fe3310d8e577ac884545f86d1f4e1d4521
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2b832d4bceab88fbf3fbe8325a414669d11073c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk1104"></a>Błąd narzędzi konsolidatora LNK1104
 
@@ -101,4 +96,4 @@ Ten błąd może wystąpić, jeśli masz pliku niewystarczające uprawnienia dos
 
 Ten błąd może wystąpić, gdy nie ma wystarczającej ilości wolnego miejsca. Konsolidator używa pliki tymczasowe w kilku przypadkach. Nawet jeśli masz wystarczającą ilość miejsca na dysku, bardzo dużych łącza można warstwę lub fragmentu dostępne miejsce na dysku. Należy rozważyć użycie [od (optymalizacje)](../../build/reference/opt-optimizations.md) opcja; czynności przechodnie odczyty eliminacji COMDAT wszystkie pliki obiektów wiele razy.
 
-Jeśli *filename* nosi nazwę LNK*nnn*, która jest generowanych przez konsolidator pliku tymczasowego pliku, w zmiennej środowiskowej TMP podany katalog nie istnieje, lub więcej niż jedną Katalog może być określona dla zmiennej środowiskowej TMP. Dla zmiennej środowiskowej TMP powinna zostać określona ścieżka tylko jeden katalog.
+Jeśli *filename* nosi nazwę LNK*nnn*, czyli generowanych przez konsolidator pliku tymczasowego pliku, katalogu określonym w zmiennej środowiskowej TMP może nie istnieć lub może być więcej niż jeden katalog określona dla zmiennej środowiskowej TMP. Dla zmiennej środowiskowej TMP powinna zostać określona ścieżka tylko jeden katalog.

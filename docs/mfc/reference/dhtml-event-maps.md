@@ -1,13 +1,10 @@
 ---
-title: "Mapy zdarzeń DHTML | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Mapy zdarzeń DHTML | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.macros.shared
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - DHTML events [MFC], event map
 - DHTML events [MFC]
 ms.assetid: 9a2c8ae7-7216-4a5e-bc60-6b98695be0c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56e2ebb76da167b6d9d3a790d391dbe4e544bc6b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 224a0c9b837763574c53e8464885f02ec5413971
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dhtml-event-maps"></a>Mapy zdarzeń DHTML
 Następujące makra może służyć do obsługi zdarzeń DHTML.  
@@ -93,7 +88,7 @@ Następujące makra może służyć do obsługi zdarzeń DHTML.
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="begin_dhtml_event_map"></a>BEGIN_DHTML_EVENT_MAP —  
+##  <a name="begin_dhtml_event_map"></a>  BEGIN_DHTML_EVENT_MAP —  
  Oznacza początek mapy zdarzeń DHTML po umieszczeniu w pliku źródłowym dla klasy oznaczona `className`.  
   
 ```   
@@ -114,7 +109,7 @@ BEGIN_DHTML_EVENT_MAP(className)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="begin_dhtml_event_map_inline"></a>BEGIN_DHTML_EVENT_MAP_INLINE —  
+##  <a name="begin_dhtml_event_map_inline"></a>  BEGIN_DHTML_EVENT_MAP_INLINE —  
  Oznacza początek Mapa zdarzeń DHTML w definicji klasy dla `className`.  
   
 ```   
@@ -136,7 +131,7 @@ BEGIN_DHTML_EVENT_MAP_INLINE(className)
   **Nagłówek** afxdhtml.h  
 
   
-##  <a name="declare_dhtml_event_map"></a>DECLARE_DHTML_EVENT_MAP —  
+##  <a name="declare_dhtml_event_map"></a>  DECLARE_DHTML_EVENT_MAP —  
  Deklaruje mapy zdarzeń DHTML w definicji klasy.  
   
 ```   
@@ -155,7 +150,7 @@ DECLARE_DHTML_EVENT_MAP()
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event"></a>DHTML_EVENT —  
+##  <a name="dhtml_event"></a>  DHTML_EVENT —  
  Obsługuje (na poziomie dokumentu) identyfikowany przez zdarzenie `dispid` zainicjowany przez element HTML identyfikowane przez `elemName`.  
   
 ```   
@@ -178,7 +173,7 @@ DHTML_EVENT(dispid, elemName,  memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_axcontrol"></a>DHTML_EVENT_AXCONTROL —  
+##  <a name="dhtml_event_axcontrol"></a>  DHTML_EVENT_AXCONTROL —  
  Obsługuje zdarzenie identyfikowane przez `dispid` wywoływane przez formant ActiveX identyfikowane przez `controlName`.  
   
 ```   
@@ -201,7 +196,7 @@ DHTML_EVENT_AXCONTROL(dispid, controlName,  memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_class"></a>DHTML_EVENT_CLASS —  
+##  <a name="dhtml_event_class"></a>  DHTML_EVENT_CLASS —  
  Obsługuje (na poziomie dokumentu) identyfikowany przez zdarzenie `dispid` zainicjowany przez dowolnego elementu HTML przy użyciu klasy CSS identyfikowane przez `elemName`.  
   
 ```   
@@ -224,7 +219,7 @@ DHTML_EVENT_CLASS(dispid, elemName,  memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_element"></a>DHTML_EVENT_ELEMENT —  
+##  <a name="dhtml_event_element"></a>  DHTML_EVENT_ELEMENT —  
  Obsługuje (w elemencie identyfikowane przez `elemName`) identyfikowany przez zdarzenie `dispid`.  
   
 ```   
@@ -251,7 +246,7 @@ DHTML_EVENT_ELEMENT(dispid, elemName,  memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_onafterupdate"></a>DHTML_EVENT_ONAFTERUPDATE —  
+##  <a name="dhtml_event_onafterupdate"></a>  DHTML_EVENT_ONAFTERUPDATE —  
  Obsługuje (na poziomie dokumentu) **onafterupdate** pochodzi przez element HTML identyfikowane przez `elemName`.  
   
 ```   
@@ -271,7 +266,7 @@ DHTML_EVENT_ONAFTERUPDATE(elemName, memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_onbeforeupdate"></a>DHTML_EVENT_ONBEFOREUPDATE —  
+##  <a name="dhtml_event_onbeforeupdate"></a>  DHTML_EVENT_ONBEFOREUPDATE —  
  Obsługuje (na poziomie dokumentu) **onbeforeupdate** pochodzi przez element HTML identyfikowane przez `elemName`.  
   
 ```   
@@ -291,7 +286,7 @@ DHTML_EVENT_ONBEFOREUPDATE(elemName, memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_onblur"></a>DHTML_EVENT_ONBLUR —  
+##  <a name="dhtml_event_onblur"></a>  DHTML_EVENT_ONBLUR —  
  Obsługuje (na poziomie elementu) **onblur** zdarzeń. To jest zdarzenie nonbubbling.  
   
 ```   
@@ -311,7 +306,7 @@ DHTML_EVENT_ONBLUR(elemName, memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_onchange"></a>DHTML_EVENT_ONCHANGE —  
+##  <a name="dhtml_event_onchange"></a>  DHTML_EVENT_ONCHANGE —  
  Obsługuje (na poziomie elementu) `onchange` zdarzeń. To jest zdarzenie nonbubbling.  
   
 ```   
@@ -331,7 +326,7 @@ DHTML_EVENT_ONCHANGE(elemName, memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_onclick"></a>DHTML_EVENT_ONCLICK —  
+##  <a name="dhtml_event_onclick"></a>  DHTML_EVENT_ONCLICK —  
  Obsługuje (na poziomie dokumentu) **onclick** pochodzi przez element HTML identyfikowane przez `elemName`.  
   
 ```   
@@ -351,7 +346,7 @@ DHTML_EVENT_ONCLICK(elemName, memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_ondataavailable"></a>DHTML_EVENT_ONDATAAVAILABLE —  
+##  <a name="dhtml_event_ondataavailable"></a>  DHTML_EVENT_ONDATAAVAILABLE —  
  Obsługuje (na poziomie dokumentu) **ondataavailable** pochodzi przez element HTML identyfikowane przez `elemName`.  
   
 ```   
@@ -371,7 +366,7 @@ DHTML_EVENT_ONDATAAVAILABLE(elemName, memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_ondatasetchanged"></a>DHTML_EVENT_ONDATASETCHANGED —  
+##  <a name="dhtml_event_ondatasetchanged"></a>  DHTML_EVENT_ONDATASETCHANGED —  
  Obsługuje (na poziomie dokumentu) **ondatasetchanged** pochodzi przez element HTML identyfikowane przez `elemName`.  
   
 ```   
@@ -391,7 +386,7 @@ DHTML_EVENT_ONDATASETCHANGED(elemName, memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_ondatasetcomplete"></a>DHTML_EVENT_ONDATASETCOMPLETE —  
+##  <a name="dhtml_event_ondatasetcomplete"></a>  DHTML_EVENT_ONDATASETCOMPLETE —  
  Obsługuje (na poziomie dokumentu) **ondatasetcomplete** pochodzi przez element HTML identyfikowane przez `elemName`.  
   
 ```   
@@ -412,7 +407,7 @@ DHTML_EVENT_ONDATASETCOMPLETE(elemName, memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_ondblclick"></a>DHTML_EVENT_ONDBLCLICK —  
+##  <a name="dhtml_event_ondblclick"></a>  DHTML_EVENT_ONDBLCLICK —  
  Obsługuje (na poziomie dokumentu) **ondblclick** pochodzi przez element HTML identyfikowane przez `elemName`.  
   
 ```   
@@ -432,7 +427,7 @@ DHTML_EVENT_ONDBLCLICK(elemName, memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_ondragstart"></a>DHTML_EVENT_ONDRAGSTART —  
+##  <a name="dhtml_event_ondragstart"></a>  DHTML_EVENT_ONDRAGSTART —  
  Obsługuje (na poziomie dokumentu) **ondragstart** pochodzi przez element HTML identyfikowane przez `elemName`.  
   
 ```   
@@ -452,7 +447,7 @@ DHTML_EVENT_ONDRAGSTART(elemName, memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_onerrorupdate"></a>DHTML_EVENT_ONERRORUPDATE —  
+##  <a name="dhtml_event_onerrorupdate"></a>  DHTML_EVENT_ONERRORUPDATE —  
  Obsługuje (na poziomie dokumentu) **onerrorupdate** pochodzi przez element HTML identyfikowane przez `elemName`.  
   
 ```   
@@ -473,7 +468,7 @@ DHTML_EVENT_ONERRORUPDATE(elemName, memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_onfilterchange"></a>DHTML_EVENT_ONFILTERCHANGE —  
+##  <a name="dhtml_event_onfilterchange"></a>  DHTML_EVENT_ONFILTERCHANGE —  
  Obsługuje (na poziomie dokumentu) **onfilterchange** pochodzi przez element HTML identyfikowane przez `elemName`.  
   
 ```  
@@ -495,7 +490,7 @@ DHTML_EVENT_ONFILTERCHANGE(elemName, memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_onfocus"></a>DHTML_EVENT_ONFOCUS —  
+##  <a name="dhtml_event_onfocus"></a>  DHTML_EVENT_ONFOCUS —  
  Obsługuje (na poziomie elementu) **onfocus** zdarzeń. To jest zdarzenie nonbubbling.  
   
 ```  
@@ -517,7 +512,7 @@ DHTML_EVENT_ONFOCUS(elemName, memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_onhelp"></a>DHTML_EVENT_ONHELP —  
+##  <a name="dhtml_event_onhelp"></a>  DHTML_EVENT_ONHELP —  
  Obsługuje (na poziomie dokumentu) `onhelp` pochodzi przez element HTML identyfikowane przez `elemName`.  
   
 ```  
@@ -539,7 +534,7 @@ DHTML_EVENT_ONHELP(elemName, memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_onkeydown"></a>DHTML_EVENT_ONKEYDOWN —  
+##  <a name="dhtml_event_onkeydown"></a>  DHTML_EVENT_ONKEYDOWN —  
  Obsługuje (na poziomie dokumentu) **onkeydown** pochodzi przez element HTML identyfikowane przez `elemName`.  
   
 ```  
@@ -561,7 +556,7 @@ DHTML_EVENT_ONKEYDOWN(elemName, memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_onkeypress"></a>DHTML_EVENT_ONKEYPRESS —  
+##  <a name="dhtml_event_onkeypress"></a>  DHTML_EVENT_ONKEYPRESS —  
  Obsługuje (na poziomie dokumentu) **onkeypress** pochodzi przez element HTML identyfikowane przez `elemName`.  
   
 ```  
@@ -583,7 +578,7 @@ DHTML_EVENT_ONKEYPRESS(elemName, memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_onkeyup"></a>DHTML_EVENT_ONKEYUP —  
+##  <a name="dhtml_event_onkeyup"></a>  DHTML_EVENT_ONKEYUP —  
  Obsługuje (na poziomie dokumentu) **onkeyup** pochodzi przez element HTML identyfikowane przez `elemName`.  
   
 ```  
@@ -605,7 +600,7 @@ DHTML_EVENT_ONKEYUP(elemName, memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_onmousedown"></a>DHTML_EVENT_ONMOUSEDOWN —  
+##  <a name="dhtml_event_onmousedown"></a>  DHTML_EVENT_ONMOUSEDOWN —  
  Obsługuje (na poziomie dokumentu) **onmousedown** pochodzi przez element HTML identyfikowane przez `elemName`.  
   
 ```  
@@ -627,7 +622,7 @@ DHTML_EVENT_ONMOUSEDOWN(elemName, memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_onmousemove"></a>DHTML_EVENT_ONMOUSEMOVE —  
+##  <a name="dhtml_event_onmousemove"></a>  DHTML_EVENT_ONMOUSEMOVE —  
  Obsługuje (na poziomie dokumentu) `onmousemove` pochodzi przez element HTML identyfikowane przez `elemName`.  
   
 ```  
@@ -649,7 +644,7 @@ DHTML_EVENT_ONMOUSEMOVE(elemName, memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_onmouseout"></a>DHTML_EVENT_ONMOUSEOUT —  
+##  <a name="dhtml_event_onmouseout"></a>  DHTML_EVENT_ONMOUSEOUT —  
  Obsługuje (na poziomie dokumentu) **onmouseout** pochodzi przez element HTML identyfikowane przez `elemName`.  
   
 ```  
@@ -671,7 +666,7 @@ DHTML_EVENT_ONMOUSEOUT(elemName, memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_onmouseover"></a>DHTML_EVENT_ONMOUSEOVER —  
+##  <a name="dhtml_event_onmouseover"></a>  DHTML_EVENT_ONMOUSEOVER —  
  Obsługuje (na poziomie dokumentu) **onmouseover** pochodzi przez element HTML identyfikowane przez `elemName`.  
   
 ```  
@@ -693,7 +688,7 @@ DHTML_EVENT_ONMOUSEOVER(elemName, memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_onmouseup"></a>DHTML_EVENT_ONMOUSEUP —  
+##  <a name="dhtml_event_onmouseup"></a>  DHTML_EVENT_ONMOUSEUP —  
  Obsługuje (na poziomie dokumentu) **onmouseup** pochodzi przez element HTML identyfikowane przez `elemName`.  
   
 ```  
@@ -715,7 +710,7 @@ DHTML_EVENT_ONMOUSEUP(elemName, memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_onresize"></a>DHTML_EVENT_ONRESIZE —  
+##  <a name="dhtml_event_onresize"></a>  DHTML_EVENT_ONRESIZE —  
  Obsługuje (na poziomie elementu) **onresize** zdarzeń. To jest zdarzenie nonbubbling.  
   
 ```  
@@ -737,7 +732,7 @@ DHTML_EVENT_ONRESIZE(elemName, memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_onrowenter"></a>DHTML_EVENT_ONROWENTER —  
+##  <a name="dhtml_event_onrowenter"></a>  DHTML_EVENT_ONROWENTER —  
  Obsługuje (na poziomie dokumentu) **onrowenter** pochodzi przez element HTML identyfikowane przez `elemName`.  
   
 ```  
@@ -759,7 +754,7 @@ DHTML_EVENT_ONROWENTER(elemName, memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_onrowexit"></a>DHTML_EVENT_ONROWEXIT —  
+##  <a name="dhtml_event_onrowexit"></a>  DHTML_EVENT_ONROWEXIT —  
  Obsługuje (na poziomie dokumentu) **onrowexit** pochodzi przez element HTML identyfikowane przez `elemName`.  
   
 ```  
@@ -781,7 +776,7 @@ DHTML_EVENT_ONROWEXIT(elemName, memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_onselectstart"></a>DHTML_EVENT_ONSELECTSTART —  
+##  <a name="dhtml_event_onselectstart"></a>  DHTML_EVENT_ONSELECTSTART —  
  Obsługuje (na poziomie dokumentu) **onselectstart** pochodzi przez element HTML identyfikowane przez `elemName`.  
   
 ```  
@@ -803,7 +798,7 @@ DHTML_EVENT_ONSELECTSTART(elemName, memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="dhtml_event_tag"></a>DHTML_EVENT_TAG —  
+##  <a name="dhtml_event_tag"></a>  DHTML_EVENT_TAG —  
  Obsługuje (na poziomie dokumentu) identyfikowany przez zdarzenie `dispid` zainicjowany przez dowolnego elementu HTML przy tagu HTML identyfikowane przez `elemName`.  
   
 ```   
@@ -826,7 +821,7 @@ DHTML_EVENT_TAG(dispid, elemName,  memberFxn)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="end_dhtml_event_map"></a>END_DHTML_EVENT_MAP —  
+##  <a name="end_dhtml_event_map"></a>  END_DHTML_EVENT_MAP —  
  Oznacza koniec mapy zdarzeń DHTML.  
   
 ```   
@@ -839,7 +834,7 @@ END_DHTML_EVENT_MAP()
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="begin_dhtml_url_event_map"></a>BEGIN_DHTML_URL_EVENT_MAP —  
+##  <a name="begin_dhtml_url_event_map"></a>  BEGIN_DHTML_URL_EVENT_MAP —  
  Uruchamia definicji mapy zdarzeń DHTML i adres URL w wielostronicowe okna dialogowego.  
   
 ```  
@@ -856,7 +851,7 @@ BEGIN_DHTML_URL_EVENT_MAP()
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="begin_embed_dhtml_event_map"></a>BEGIN_EMBED_DHTML_EVENT_MAP —  
+##  <a name="begin_embed_dhtml_event_map"></a>  BEGIN_EMBED_DHTML_EVENT_MAP —  
  Uruchamia definicji mapy zdarzeń DHTML osadzonych w wielostronicowe okna dialogowego.  
   
 ```  
@@ -884,7 +879,7 @@ BEGIN_EMBED_DHTML_EVENT_MAP(className, mapName)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="begin_url_entries"></a>BEGIN_URL_ENTRIES —  
+##  <a name="begin_url_entries"></a>  BEGIN_URL_ENTRIES —  
  Uruchamia definicji wpisu mapy zdarzeń adres URL w wielostronicowe okna dialogowego.  
   
 ```  
@@ -905,7 +900,7 @@ BEGIN_URL_ENTRIES(className)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="declare_dhtml_url_event_map"></a>DECLARE_DHTML_URL_EVENT_MAP —  
+##  <a name="declare_dhtml_url_event_map"></a>  DECLARE_DHTML_URL_EVENT_MAP —  
  Deklaruje mapy zdarzeń DHTML i adres URL w definicji klasy.  
   
 ```  
@@ -921,7 +916,7 @@ DECLARE_DHTML_URL_EVENT_MAP()
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="end_dhtml_url_event_map"></a>END_DHTML_URL_EVENT_MAP —  
+##  <a name="end_dhtml_url_event_map"></a>  END_DHTML_URL_EVENT_MAP —  
  Oznacza koniec mapy zdarzeń DHTML i adres URL.  
   
 ```  
@@ -939,7 +934,7 @@ END_DHTML_URL_EVENT_MAP(className)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="end_embed_dhtml_event_map"></a>END_EMBED_DHTML_EVENT_MAP —  
+##  <a name="end_embed_dhtml_event_map"></a>  END_EMBED_DHTML_EVENT_MAP —  
  Oznacza koniec osadzonych mapy zdarzeń DHTML.  
   
 ```  
@@ -953,7 +948,7 @@ END_EMBED_DHTML_EVENT_MAP()
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="end_url_entries"></a>END_URL_ENTRIES —  
+##  <a name="end_url_entries"></a>  END_URL_ENTRIES —  
  Oznacza koniec wpisu mapy zdarzeń adresu URL.  
   
 ```  
@@ -967,7 +962,7 @@ END_URL_ENTRIES()
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdhtml.h  
   
-##  <a name="url_event_entry"></a>URL_EVENT_ENTRY —  
+##  <a name="url_event_entry"></a>  URL_EVENT_ENTRY —  
  Mapuje zasobu adresu URL lub kod HTML strony w wielostronicowe okna dialogowego.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "Routing TN021: Poleceń i komunikatów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Routing TN021: Poleceń i komunikatów | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.routing
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - command routing [MFC], technical note TN021
 - Windows messages [MFC], routing
 ms.assetid: b5952c8b-123e-406c-a36d-a6ac7c6df307
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1854be249db91257228e6dab70fc7ff2f50664ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a1061f4a7d4394cb84c26514795c406f78146df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn021-command-and-message-routing"></a>TN021: routing poleceń i komunikatów
 > [!NOTE]
@@ -200,7 +195,7 @@ void CMyApp::OnUpdateNewChart(CCmdUI* pCmdUI)
   
  Na Notatka boczna występują dwa **CWnd** klas pochodnych, gdzie czas utworzenia Style paska przewijania, które są określone w są kolor i nie są przekazywane do systemu Windows. Przekazany do procedury tworzenia **ws_hscroll —** i **ws_vscroll —** można niezależnie ustawić, ale po tworzenia nie można zmienić. Oczywiście należy bezpośrednio testów lub ustaw WS_SCROLL bitów stylów okna utworzonego.  
   
- Aby uzyskać **cmdiframewnd —** Style paska przewijania przekazywane w celu **Utwórz** lub **LoadFrame** są używane do tworzenia MDICLIENT. Jeśli chcesz mieć przewijany obszar MDICLIENT (takie jak Windows Menedżera programów) należy ustawić zarówno paska przewijania style (**ws_hscroll —** &#124; **Ws_vscroll —**) używany do tworzenia stylu **cmdiframewnd —**.  
+ Aby uzyskać **cmdiframewnd —** Style paska przewijania przekazywane w celu **Utwórz** lub **LoadFrame** są używane do tworzenia MDICLIENT. Jeśli chcesz mieć przewijany obszar MDICLIENT (takie jak Windows Menedżera programów) należy ustawić zarówno paska przewijania style (**ws_hscroll —** &#124; **ws_vscroll —**) używany do tworzenia stylu**Cmdiframewnd —**.  
   
  Aby uzyskać **CSplitterWnd** Style paska przewijania dotyczą pasków przewijania udostępnionego specjalne dla regionów podziału. Dla statyczne okna podziału zwykle nie ustawisz albo style paska przewijania. Dla dynamiczne okna podziału, zazwyczaj należy pasek zestaw stylów dla kierunku będzie podziału, czyli przewijania **ws_hscroll —** czy jest możliwe podzielenie wierszy, **ws_vscroll —** czy jest możliwe podzielenie kolumn.  
   

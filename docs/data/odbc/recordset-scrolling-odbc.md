@@ -2,12 +2,9 @@
 title: 'Zestaw rekordów: Przewijanie (ODBC) | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - scrolling [C++], recordsets
 - Move method (recordsets)
 ms.assetid: f38d2dcb-1e88-4e41-af25-98b00c276be4
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 34dcfb9cb1d45710accba2ee6155e3c741b727be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19058ec3d9a7840fc0e90be84f2734c49f2c8e85
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-scrolling-odbc"></a>Zestaw rekordów: przewijanie (ODBC)
 Ten temat dotyczy klasach MFC ODBC.  
@@ -44,7 +39,7 @@ Ten temat dotyczy klasach MFC ODBC.
   
 -   [W obszarze co okoliczności przewijanie jest i nie jest obsługiwana](#_core_when_scrolling_is_supported).  
   
-##  <a name="_core_scrolling_from_one_record_to_another"></a>Przewijania z jednego rekordu  
+##  <a name="_core_scrolling_from_one_record_to_another"></a> Przewijania z jednego rekordu  
  Klasa `CRecordset` zapewnia **Przenieś** funkcji elementów członkowskich do przewijania w zestawie rekordów. Te funkcje Przenieś bieżącego rekordu za pomocą zestawów wierszy. Jeśli zaimplementowano zbiorcze pobieranie z wiersza, **Przenieś** operacji zmiana zestawu rekordów według rozmiaru zestawu wierszy. Jeśli nie zaimplementowano wiersza zbiorcze pobieranie wywołanie **Przenieś** funkcja powoduje przeniesienie zestawu rekordów w jednym rekordzie zawsze. Aby uzyskać więcej informacji na temat zbiorcze pobieranie z wiersza, zobacz [zestaw rekordów: pobieranie rekordów zbiorczego (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
 > [!NOTE]
@@ -100,11 +95,11 @@ while( !rsCustSet.IsBOF( ) )
 rsCustSet.MoveFirst( );  
 ```  
   
- `IsEOF`Zwraca wartość niezerową, jeśli zestaw znajduje się poza ostatniego rekordu. `IsBOF`Zwraca wartość niezerową, jeśli zestaw rekordów jest ustawiony przed pierwszym rekordu (przed wszystkie rekordy). W obu przypadkach nie ma bieżącego rekordu do działania na. Wywołanie `MovePrev` podczas `IsBOF` jest już **TRUE** lub zadzwoń `MoveNext` podczas `IsEOF` jest już **TRUE**, zgłasza wyjątek w ramach `CDBException`. Można również użyć `IsBOF` i `IsEOF` do sprawdzenia pusty zestaw rekordów.  
+ `IsEOF` Zwraca wartość niezerową, jeśli zestaw znajduje się poza ostatniego rekordu. `IsBOF` Zwraca wartość niezerową, jeśli zestaw rekordów jest ustawiony przed pierwszym rekordu (przed wszystkie rekordy). W obu przypadkach nie ma bieżącego rekordu do działania na. Wywołanie `MovePrev` podczas `IsBOF` jest już **TRUE** lub zadzwoń `MoveNext` podczas `IsEOF` jest już **TRUE**, zgłasza wyjątek w ramach `CDBException`. Można również użyć `IsBOF` i `IsEOF` do sprawdzenia pusty zestaw rekordów.  
   
  Aby uzyskać więcej informacji na temat nawigacji zestawu rekordów, zobacz [zestaw rekordów: zakładki i położenia bezwzględne (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
   
-##  <a name="_core_when_scrolling_is_supported"></a>Podczas przewijania jest obsługiwane  
+##  <a name="_core_when_scrolling_is_supported"></a> Podczas przewijania jest obsługiwane  
  Pierwotnie zaprojektowanego SQL podane tylko do przodu przewijania, ale ODBC rozszerza możliwości przewijania. Dostępny poziom obsługi przewijanie zależy od sterowników ODBC aplikacja działa z poziomu zgodności interfejsu API ODBC w sterowniku, i określa, czy Biblioteka kursorów ODBC jest ładowany do pamięci. Aby uzyskać więcej informacji, zobacz [ODBC](../../data/odbc/odbc-basics.md) i [ODBC: Biblioteka kursorów ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).  
   
 > [!TIP]

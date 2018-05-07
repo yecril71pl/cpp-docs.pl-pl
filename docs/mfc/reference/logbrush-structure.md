@@ -1,13 +1,10 @@
 ---
 title: Struktura LOGBRUSH | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - LOGBRUSH
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LOGBRUSH structure [MFC]
 ms.assetid: 1bf96768-52c5-4444-9bb8-d41ba2e27e68
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec6cc9b61f837db4c9766c077fa60f4d9c2b95bd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6e02c156619e4ca36d268870c70ba783c41a352d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="logbrush-structure"></a>Struktura LOGBRUSH
 `LOGBRUSH` Struktury definiuje styl, kolor i wzorzec fizycznych pędzla. Jest on używany przez system Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487) i [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705) funkcji.  
@@ -68,17 +63,17 @@ typedef struct tag LOGBRUSH { /* lb */
  *lbHatch*  
  Określa styl kreskowania. Znaczenie zależy od styl pędzla zdefiniowane przez `lbStyle`. Jeśli `lbStyle` jest **BS_DIBPATTERN**, **lbHatch** elementu członkowskiego zawiera dojścia do spakowanej DIB. Jeśli `lbStyle` jest **BS_DIBPATTERNPT**, **lbHatch** elementu członkowskiego zawiera wskaźnik do spakowanej DIB. Jeśli `lbStyle` jest **BS_HATCHED**, **lbHatch** elementu członkowskiego Określa orientację pozwala utworzyć kreskowania linii. Może być jedną z następujących wartości:  
   
-- `HS_BDIAGONAL`Kreskowania górę, od lewej do prawej 45 stopni  
+- `HS_BDIAGONAL` Kreskowania górę, od lewej do prawej 45 stopni  
   
-- `HS_CROSS`Kreskowany poziome i pionowe  
+- `HS_CROSS` Kreskowany poziome i pionowe  
   
-- `HS_DIAGCROSS`Kreskowany 45 stopni  
+- `HS_DIAGCROSS` Kreskowany 45 stopni  
   
-- `HS_FDIAGONAL`Kreskowania 45 stopni w dół, od lewej do prawej  
+- `HS_FDIAGONAL` Kreskowania 45 stopni w dół, od lewej do prawej  
   
-- `HS_HORIZONTAL`Poziomy kreskowania  
+- `HS_HORIZONTAL` Poziomy kreskowania  
   
-- `HS_VERTICAL`Pionowy kreskowania  
+- `HS_VERTICAL` Pionowy kreskowania  
   
  Jeśli `lbStyle` jest **BS_PATTERN**, **lbHatch** jest dojścia do mapy bitowej, który definiuje wzorzec. Jeśli `lbStyle` jest **BS_SOLID** lub **BS_HOLLOW**, **lbHatch** jest ignorowana.  
   

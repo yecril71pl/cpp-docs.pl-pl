@@ -1,29 +1,24 @@
 ---
 title: Procedury wymiany danych standardowe okno dialogowe | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca598a9ac6a146457d24bcc80e54d003123d7dd4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f6c79a96439605bcf9ab670c1f75dda2d50169f6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Standardowe procedury wymiany danych w oknie dialogowym
 W tym temacie wymieniono standardowe procedury okna dialogowego danych programu exchange (DDX) używany dla typowych formantów okna dialogowego MFC.  
@@ -52,7 +47,7 @@ W tym temacie wymieniono standardowe procedury okna dialogowego danych programu 
 |[Ddx_slider —](#ddx_slider)|Inicjuje i pobiera bieżącej pozycji przycisku przewijania suwaka.|  
 |[Ddx_text —](#ddx_text)|Inicjuje lub pobiera bieżącą wartość formantu edycyjnego.|  
   
-##  <a name="ddx_cbindex"></a>Ddx_cbindex —  
+##  <a name="ddx_cbindex"></a>  Ddx_cbindex —  
  `DDX_CBIndex` Funkcji zarządzania transferem `int` tworzą dane między kontrolki pola kombi, w oknie dialogowym, widoku lub formantu widoku obiektu i `int` element członkowski danych okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
 ```  
@@ -69,7 +64,7 @@ void AFXAPI DDX_CBIndex(
  `nIDC`  
  Identyfikator zasobu kontrolki pola kombi, które są skojarzone z właściwości formantu.  
   
- *Indeks*  
+ *index*  
  Odwołanie do zmiennej członkowskiej — okno dialogowe, widoku Formularz lub formant widoku obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -80,7 +75,7 @@ void AFXAPI DDX_CBIndex(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdd_.h  
   
-##  <a name="ddx_cbstring"></a>Ddx_cbstring —  
+##  <a name="ddx_cbstring"></a>  Ddx_cbstring —  
  `DDX_CBString` Funkcji zarządzania transferem `CString` tworzą dane między formancie edycyjnym pola kombi formantu w oknie dialogowym, widoku lub formantu widoku obiektu i `CString` element członkowski danych okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
 ```  
@@ -111,7 +106,7 @@ void AFXAPI DDX_CBString(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdd_.h  
   
-##  <a name="ddx_cbstringexact"></a>Ddx_cbstringexact —  
+##  <a name="ddx_cbstringexact"></a>  Ddx_cbstringexact —  
  `DDX_CBStringExact` Funkcji zarządzania transferem `CString` tworzą dane między formancie edycyjnym pola kombi formantu w oknie dialogowym, widoku lub formantu widoku obiektu i `CString` element członkowski danych okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
 ```  
@@ -142,7 +137,7 @@ void AFXAPI DDX_CBStringExact(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdd_.h  
   
-##  <a name="ddx_check"></a>Ddx_check —  
+##  <a name="ddx_check"></a>  Ddx_check —  
  `DDX_Check` Funkcji zarządzania transferem `int` tworzą dane między kontrolkę pola wyboru w oknie dialogowym, widoku lub formantu widoku obiektu i `int` element członkowski danych okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
 ```  
@@ -170,7 +165,7 @@ void AFXAPI DDX_Check(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdd_.h  
   
-##  <a name="ddx_control"></a>Ddx_control —  
+##  <a name="ddx_control"></a>  Ddx_control —  
  `DDX_Control` Funkcji podklasy formantu, określony przez `nIDC`, okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
 ```  
@@ -198,7 +193,7 @@ void AFXAPI DDX_Control(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdd_.h  
   
-##  <a name="ddx_datetimectrl"></a>Ddx_datetimectrl —  
+##  <a name="ddx_datetimectrl"></a>  Ddx_datetimectrl —  
  `DDX_DateTimeCtrl` Funkcji zarządzania transferem danych daty i godziny między formant wyboru daty i godziny ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) w oknie dialogowym pole formularza widok obiektu lub i albo [ctime —](../../atl-mfc-shared/reference/ctime-class.md) lub [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) elementu członkowskiego danych obiektu okna dialogowego pola lub formularza widoku.  
   
 ```  
@@ -241,7 +236,7 @@ void AFXAPI DDX_DateTimeCtrl(
    
 
  
-## <a name="ddx_managedcontrol"></a>Ddx_managedcontrol —
+## <a name="ddx_managedcontrol"></a>  Ddx_managedcontrol —
 Tworzy kontrolkę .NET dopasowania identyfikatora formantu zasobu.  
    
 ### <a name="syntax"></a>Składnia  
@@ -263,7 +258,7 @@ void DDX_ManagedControl(
  Odwołanie do [klasy CWinFormsControl](cwinformscontrol-class.md) obiektu.  
    
 ### <a name="remarks"></a>Uwagi  
- `DDX_ManagedControl`wywołania [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) można utworzyć formantu, pasujące z identyfikatorem zasobu formantu. Użyj `DDX_ManagedControl` do tworzenia kontrolek z identyfikatorów zasobów w [CDialog::OnInitDialog](cdialog-class.md#oninitdialog). Dla danych programu exchange nie trzeba funkcje DDX/DDV za pomocą formantów formularzy systemu Windows.  
+ `DDX_ManagedControl` wywołania [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) można utworzyć formantu, pasujące z identyfikatorem zasobu formantu. Użyj `DDX_ManagedControl` do tworzenia kontrolek z identyfikatorów zasobów w [CDialog::OnInitDialog](cdialog-class.md#oninitdialog). Dla danych programu exchange nie trzeba funkcje DDX/DDV za pomocą formantów formularzy systemu Windows.  
   
  Aby uzyskać więcej informacji, zobacz [porady: czy powiązania danych DDX/ddv za pomocą interfejsu Windows Forms](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).  
    
@@ -276,7 +271,7 @@ void DDX_ManagedControl(
  
 
   
-##  <a name="ddx_ipaddress"></a>Ddx_ipaddress —  
+##  <a name="ddx_ipaddress"></a>  Ddx_ipaddress —  
  `DDX_IPAddress` Funkcji zarządza przesyłaniem danych między formantem adresu IP, a element członkowski danych klasy obiektu formantu widoku.  
   
 ```  
@@ -313,7 +308,7 @@ void AFXAPI DDX_IPAddress(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdd_.h  
   
-##  <a name="ddx_lbindex"></a>Ddx_lbindex —  
+##  <a name="ddx_lbindex"></a>  Ddx_lbindex —  
  `DDX_LBIndex` Funkcji zarządzania transferem `int` tworzą dane między pole listy w oknie dialogowym, widoku lub formantu widoku obiektu i `int` element członkowski danych okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
 ```  
@@ -330,7 +325,7 @@ void AFXAPI DDX_LBIndex(
  `nIDC`  
  Identyfikator zasobu kontrolkę pola listy, które są skojarzone z właściwości formantu.  
   
- *Indeks*  
+ *index*  
  Odwołanie do zmiennej członkowskiej — okno dialogowe, widoku Formularz lub formant widoku obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -341,7 +336,7 @@ void AFXAPI DDX_LBIndex(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdd_.h  
   
-##  <a name="ddx_lbstring"></a>Ddx_lbstring —  
+##  <a name="ddx_lbstring"></a>  Ddx_lbstring —  
  `DDX_LBString` Funkcji zarządzania transferem `CString` tworzą dane między pole listy w oknie dialogowym, widoku lub formantu widoku obiektu i `CString` element członkowski danych okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
 ```  
@@ -374,7 +369,7 @@ void AFXAPI DDX_LBString(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdd_.h  
   
-##  <a name="ddx_lbstringexact"></a>Ddx_lbstringexact —  
+##  <a name="ddx_lbstringexact"></a>  Ddx_lbstringexact —  
  `DDX_CBStringExact` Funkcji zarządzania transferem `CString` tworzą dane między kontrolki edycji z pole listy w oknie dialogowym, widoku lub formantu widoku obiektu i `CString` element członkowski danych okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
 ```  
@@ -407,7 +402,7 @@ void AFXAPI DDX_LBStringExact(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdd_.h  
   
-##  <a name="ddx_monthcalctrl"></a>Ddx_monthcalctrl —  
+##  <a name="ddx_monthcalctrl"></a>  Ddx_monthcalctrl —  
  `DDX_MonthCalCtrl` Funkcji zarządzania transferem danych Data między formant kalendarza miesięcznego ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) w okno dialogowe, widoku Formularz lub formant widoku obiektu i albo [ctime —](../../atl-mfc-shared/reference/ctime-class.md) lub [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) element członkowski danych okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
 ```  
@@ -444,7 +439,7 @@ void AFXAPI DDX_MonthCalCtrl(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdd_.h  
   
-##  <a name="ddx_radio"></a>Ddx_radio —  
+##  <a name="ddx_radio"></a>  Ddx_radio —  
  `DDX_Radio` Funkcji zarządzania transferem `int` tworzą dane między grupą radiowych formantu w oknie dialogowym, widoku lub formantu widoku obiektu i `int` element członkowski danych okno dialogowe, widoku Formularz lub formant widoku obiektu. Wartość `int` elementu członkowskiego danych jest określana, zgodnie z opcji, które w grupie jest zaznaczona.  
   
 ```  
@@ -474,7 +469,7 @@ void AFXAPI DDX_Radio(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdd_.h  
   
-##  <a name="ddx_scroll"></a>Ddx_scroll —  
+##  <a name="ddx_scroll"></a>  Ddx_scroll —  
  `DDX_Scroll` Funkcji zarządzania transferem `int` tworzą dane między formantu paska przewijania w oknie dialogowym, widoku lub formantu widoku obiektu i `int` element członkowski danych okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
 ```  
@@ -502,7 +497,7 @@ void AFXAPI DDX_Scroll(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdd_.h  
   
-##  <a name="ddx_slider"></a>Ddx_slider —  
+##  <a name="ddx_slider"></a>  Ddx_slider —  
  `DDX_Slider` Funkcji zarządzania transferem `int` danych między formantu suwaka w widoku okna dialogowego pola lub formularza i `int` elementu członkowskiego danych obiektu okna dialogowego pola lub formularza widoku.  
   
 ```  
@@ -530,7 +525,7 @@ void AFXAPI DDX_Slider(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxdd_.h  
   
-##  <a name="ddx_text"></a>Ddx_text —  
+##  <a name="ddx_text"></a>  Ddx_text —  
  `DDX_Text` Funkcji zarządzania transferem `int`, **UINT**, **długi**, `DWORD`, `CString`, **float**, lub  **Podwójna** danych między kontrolki edycji w oknie dialogowym, widok formularza lub kontrolować widoku i [cstring —](../../atl-mfc-shared/reference/cstringt-class.md) element członkowski danych okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
 ```  

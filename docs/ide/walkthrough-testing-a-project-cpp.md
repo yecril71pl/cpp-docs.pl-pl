@@ -1,13 +1,10 @@
 ---
-title: "Wskazówki: Testowanie projektu (C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Wskazówki: Testowanie projektu (C++) | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ba928d4a81252b76856273160af63ed8707e7e5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3a9455fa9bf3c9f903f5018a1263978913aa35b2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-testing-a-project-c"></a>Wskazówki: testowanie projektu (C++)
 Jeśli program jest uruchomiony w trybie debugowania, można użyć punktów przerwania, aby wstrzymać program, aby sprawdzić stan zmiennych i obiektów.  
@@ -69,7 +64,7 @@ Jeśli program jest uruchomiony w trybie debugowania, można użyć punktów prz
 9. Aby zatrzymać program, na pasku menu, wybierz **debugowania**, **Zatrzymaj debugowanie**, lub wybierz skrót klawiaturowy Shift + F5.  
   
 ## <a name="next-steps"></a>Następne kroki  
- **Poprzedni:** [wskazówki: Tworzenie projektu (C++)](../ide/walkthrough-building-a-project-cpp.md) &#124; **Dalej:**[wskazówki: debugowanie projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md)  
+ **Poprzedni:** [wskazówki: Tworzenie projektu (C++)](../ide/walkthrough-building-a-project-cpp.md) &#124; **dalej:**[wskazówki: debugowanie projektu (C++)](../ide/walkthrough-debugging-a-project-cpp.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)   

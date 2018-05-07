@@ -1,29 +1,24 @@
 ---
-title: "Atrybuty IDL, Dodaj Kreatora właściwości | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Atrybuty IDL, Dodaj Kreatora właściwości | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.prop.idlattributes
 dev_langs:
 - C++
 ms.assetid: 356ed666-79d0-4bd9-a5e7-cda679cbadbd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ec158c117161c5a5c2ffd23cef0d5c79c312ae7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 77931296d8d33337c4e630b7327a1ec8fd0a458f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idl-attributes-add-property-wizard"></a>Atrybuty IDL, Dodaj kreatora właściwości
 Ta strona kreatora właściwości umożliwia określenie jakiekolwiek ustawienia języka (IDL) definicji interfejsu dla właściwości.  
@@ -49,7 +44,7 @@ Ta strona kreatora właściwości umożliwia określenie jakiekolwiek ustawienia
 |**defaultcollelem**|Wskazuje, że właściwość jest funkcja dostępu do elementu domyślnej kolekcji. Zobacz [defaultcollelem —](http://msdn.microsoft.com/library/windows/desktop/aa366792) w *odwołania MIDL*.|  
 |**nonbrowsable**|Znaczniki elementu członkowskiego interfejsu lub dispinterface nie powinien być wyświetlany w przeglądarce właściwości. Zobacz [nonbrowsable —](http://msdn.microsoft.com/library/windows/desktop/aa367117) w *odwołania MIDL*.|  
 |**requestedit**|Wskazuje, że właściwość obsługuje **OnRequestEdit** powiadomień można znaleźć [requestedit —](http://msdn.microsoft.com/library/windows/desktop/aa367155) w *odwołania MIDL*. Do wykonania podstawowych właściwości ta opcja jest ustawieniem domyślnym i jest niezmienne.|  
-|**źródło**|Wskazuje, że element członkowski właściwości jest źródłem zdarzeń. Zobacz [źródła](http://msdn.microsoft.com/library/windows/desktop/aa367166) w *odwołania MIDL*.|  
+|**source**|Wskazuje, że element członkowski właściwości jest źródłem zdarzeń. Zobacz [źródła](http://msdn.microsoft.com/library/windows/desktop/aa367166) w *odwołania MIDL*.|  
 |**hidden**|Wskazuje, że właściwość istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika. Zobacz [ukryte](http://msdn.microsoft.com/library/windows/desktop/aa366861) w *odwołania MIDL*.|  
 |**restricted**|Określa, że właściwość nie może być wywoływana arbitralnie. Zobacz [ograniczeniami](http://msdn.microsoft.com/library/windows/desktop/aa367157) w *odwołania MIDL*.|  
 |`local`|Określa kompilatorowi MIDL, właściwość nie jest zdalna. Zobacz [lokalnego](http://msdn.microsoft.com/library/windows/desktop/aa367071) w *odwołania MIDL*.|  

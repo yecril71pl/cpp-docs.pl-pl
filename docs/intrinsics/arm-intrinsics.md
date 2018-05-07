@@ -1,12 +1,9 @@
 ---
-title: "Funkcje wewnętrzne ARM | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Funkcje wewnętrzne ARM | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - arm_neon/vsetq_lane_p8
@@ -1940,17 +1937,15 @@ helpviewer_keywords:
 - cl.exe compiler, intrinsics
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c34855fa3099fa9c91badba96d39b90f4c25792b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 305c4251808e7a9cbe152f3bbae043080dcb7d1e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="arm-intrinsics"></a>Funkcje wewnętrzne ARM
 Kompilator Visual C++ udostępnia następujące funkcje wewnętrzne na architekturze ARM. Aby uzyskać więcej informacji na temat ARM, zobacz [instrukcji obsługi architektury ARM](http://go.microsoft.com/fwlink/p/?LinkId=522049) i [przewodnik narzędzia asemblera ARM](http://go.microsoft.com/fwlink/p/?LinkId=246102) w witrynie Centrum informacyjne ARM.  
@@ -1972,7 +1967,7 @@ Kompilator Visual C++ udostępnia następujące funkcje wewnętrzne na architekt
 |_arm_qadd|QADD|_arm_qadd int (int _Rm, int _Rn)|  
 |_arm_qdadd|QDADD|_arm_qdadd int (int _Rm, int _Rn)|  
 |_arm_qdsub|QDSUB|int _arm_qdsub(int _Rm, int _Rn)|  
-|_arm_qsub|QSUB|int _arm_qsub(int _Rm, int _Rn)|  
+|_arm_qsub|QSUB|_arm_qsub int (int _Rm, int _Rn)|  
 |_arm_smlabb|SMLABB|int _arm_smlabb(int _Rn, int _Rm, int _Ra)|  
 |_arm_smlabt|SMLABT|int _arm_smlabt(int _Rn, int _Rm, int _Ra)|  
 |_arm_smlatb|SMLATB|int _arm_smlatb(int _Rn, int _Rm, int _Ra)|  
@@ -1989,17 +1984,17 @@ Kompilator Visual C++ udostępnia następujące funkcje wewnętrzne na architekt
 |_arm_smultt|SMULTT|int _arm_smultt(int _Rn, int _Rm)|  
 |_arm_smulwb|SMULWB|int _arm_smulwb(int _Rn, int _Rm)|  
 |_arm_smulwt|SMULWT|int _arm_smulwt(int _Rn, int _Rm)|  
-|_arm_sadd16|SADD16|int _arm_sadd16(int _Rn, int _Rm)|  
-|_arm_sadd8|SADD8|int _arm_sadd8(int _Rn, int _Rm)|  
+|_arm_sadd16|SADD16|int _arm_sadd16 (_Rn int, int _Rm)|  
+|_arm_sadd8|SADD8|int _arm_sadd8 (_Rn int, int _Rm)|  
 |_arm_sasx|SASX|int _arm_sasx(int _Rn, int _Rm)|  
-|_arm_ssax|SSAX|int _arm_ssax(int _Rn, int _Rm)|  
+|_arm_ssax|SSAX|_arm_ssax int (int _Rn, int _Rm)|  
 |_arm_ssub16|SSUB16|int _arm_ssub16 (_Rn int, int _Rm)|  
-|_arm_ssub8|SSUB8|int _arm_ssub8(int _Rn, int _Rm)|  
+|_arm_ssub8|SSUB8|int _arm_ssub8 (_Rn int, int _Rm)|  
 |_arm_shadd16|SHADD16|int _arm_shadd16 (_Rn int, int _Rm)|  
 |_arm_shadd8|SHADD8|int _arm_shadd8 (_Rn int, int _Rm)|  
 |_arm_shasx|SHASX|int _arm_shasx(int _Rn, int _Rm)|  
-|_arm_shsax|SHSAX|int _arm_shsax(int _Rn, int _Rm)|  
-|_arm_shsub16|SHSUB16|int _arm_shsub16(int _Rn, int _Rm)|  
+|_arm_shsax|SHSAX|_arm_shsax int (int _Rn, int _Rm)|  
+|_arm_shsub16|SHSUB16|int _arm_shsub16 (_Rn int, int _Rm)|  
 |_arm_shsub8|SHSUB8|int _arm_shsub8(int _Rn, int _Rm)|  
 |_arm_qadd16|QADD16|int _arm_qadd16(int _Rn, int _Rm)|  
 |_arm_qadd8|QADD8|int _arm_qadd8(int _Rn, int _Rm)|  
@@ -2009,17 +2004,17 @@ Kompilator Visual C++ udostępnia następujące funkcje wewnętrzne na architekt
 |_arm_qsub8|QSUB8|int _arm_qsub8(int _Rn, int _Rm)|  
 |_arm_uadd16|UADD16|unsigned int _arm_uadd16 (unsigned int _Rn, _Rm unsigned int)|  
 |_arm_uadd8|UADD8|unsigned int _arm_uadd8 (unsigned int _Rn, _Rm unsigned int)|  
-|_arm_uasx|UASX|unsigned int _arm_uasx(unsigned int _Rn, unsigned int _Rm)|  
+|_arm_uasx|UASX|_arm_uasx unsigned int (unsigned int _Rn, _Rm unsigned int)|  
 |_arm_usax|USAX|_arm_usax unsigned int (unsigned int _Rn, _Rm unsigned int)|  
 |_arm_usub16|USUB16|unsigned int _arm_usub16 (unsigned int _Rn, _Rm unsigned int)|  
 |_arm_usub8|USUB8|unsigned int _arm_usub8 (unsigned int _Rn, _Rm unsigned int)|  
 |_arm_uhadd16|UHADD16|unsigned int _arm_uhadd16 (unsigned int _Rn, _Rm unsigned int)|  
 |_arm_uhadd8|UHADD8|unsigned int _arm_uhadd8 (unsigned int _Rn, _Rm unsigned int)|  
 |_arm_uhasx|UHASX|unsigned int _arm_uhasx(unsigned int _Rn, unsigned int _Rm)|  
-|_arm_uhsax|UHSAX|unsigned int _arm_uhsax(unsigned int _Rn, unsigned int _Rm)|  
-|_arm_uhsub16|UHSUB16|unsigned int _arm_uhsub16(unsigned int _Rn, unsigned int _Rm)|  
-|_arm_uhsub8|UHSUB8|unsigned int _arm_uhsub8(unsigned int _Rn, unsigned int _Rm)|  
-|_arm_uqadd16|UQADD16|unsigned int _arm_uqadd16(unsigned int _Rn, unsigned int _Rm)|  
+|_arm_uhsax|UHSAX|_arm_uhsax unsigned int (unsigned int _Rn, _Rm unsigned int)|  
+|_arm_uhsub16|UHSUB16|unsigned int _arm_uhsub16 (unsigned int _Rn, _Rm unsigned int)|  
+|_arm_uhsub8|UHSUB8|unsigned int _arm_uhsub8 (unsigned int _Rn, _Rm unsigned int)|  
+|_arm_uqadd16|UQADD16|unsigned int _arm_uqadd16 (unsigned int _Rn, _Rm unsigned int)|  
 |_arm_uqadd8|UQADD8|unsigned int _arm_uqadd8 (unsigned int _Rn, _Rm unsigned int)|  
 |_arm_uqasx|UQASX|unsigned int _arm_uqasx(unsigned int _Rn, unsigned int _Rm)|  
 |_arm_uqsax|UQSAX|unsigned int _arm_uqsax(unsigned int _Rn, unsigned int _Rm)|  
@@ -2040,7 +2035,7 @@ Kompilator Visual C++ udostępnia następujące funkcje wewnętrzne na architekt
 |_arm_pkhbt|PKHBT|int _arm_pkhbt(int _Rn, int _Rm, unsigned int _Lsl_imm)|  
 |_arm_pkhtb|PKHTB|int _arm_pkhtb(int _Rn, int _Rm, unsigned int _Asr_imm)|  
 |_arm_usad8|USAD8|unsigned int _arm_usad8 (unsigned int _Rn, _Rm unsigned int)|  
-|_arm_usada8|USADA8|unsigned int _arm_usada8(unsigned int _Rn, unsigned int _Rm, unsigned int _Ra)|  
+|_arm_usada8|USADA8|unsigned int _arm_usada8 (unsigned int _Rn, _Rm unsigned int, _Ra unsigned int)|  
 |_arm_ssat|SSAT|_arm_ssat int (unsigned int _Sat_imm, _int _Rn, _ARMINTR_SHIFT_T _Shift_type, _Shift_imm unsigned int)|  
 |_arm_usat|USAT|_arm_usat int (unsigned int _Sat_imm, _int _Rn, _ARMINTR_SHIFT_T _Shift_type, _Shift_imm unsigned int)|  
 |_arm_ssat16|SSAT16|int _arm_ssat16 (unsigned int _Sat_imm, _int _Rn)|  
@@ -2054,7 +2049,7 @@ Kompilator Visual C++ udostępnia następujące funkcje wewnętrzne na architekt
 |_arm_smlsdx|SMLSDX|int _arm_smlsdx(int _Rn, int _Rm, int _Ra)|  
 |_arm_smmla|SMMLA|int _arm_smmla(int _Rn, int _Rm, int _Ra)|  
 |_arm_smmlar|SMMLAR|int _arm_smmlar(int _Rn, int _Rm, int _Ra)|  
-|_arm_smmls|SMMLS|int _arm_smmls(int _Rn, int _Rm, int _Ra)|  
+|_arm_smmls|SMMLS|_arm_smmls int (int _Rn, int _Rm int _Ra)|  
 |_arm_smmlsr|SMMLSR|int _arm_smmlsr(int _Rn, int _Rm, int _Ra)|  
 |_arm_smmul|SMMUL|int _arm_smmul(int _Rn, int _Rm)|  
 |_arm_smmulr|SMMULR|int _arm_smmulr(int _Rn, int _Rm)|  
@@ -2062,20 +2057,20 @@ Kompilator Visual C++ udostępnia następujące funkcje wewnętrzne na architekt
 |_arm_smlaldx|SMLALDX|__int64 _arm_smlaldx(\__int64 _RdHiLo, int _Rn, int _Rm)|  
 |_arm_smlsld|SMLSLD|__int64 _arm_smlsld(\__int64 _RdHiLo, int _Rn, int _Rm)|  
 |_arm_smlsldx|SMLSLDX|__int64 _arm_smlsldx(\__int64 _RdHiLo, int _Rn, int _Rm)|  
-|_arm_smuad|SMUAD|int _arm_smuad(int _Rn, int _Rm)|  
+|_arm_smuad|SMUAD|_arm_smuad int (int _Rn, int _Rm)|  
 |_arm_smuadx|SMUADX|int _arm_muadxs(int _Rn, int _Rm)|  
 |_arm_smusd|SMUSD|int _arm_smusd(int _Rn, int _Rm)|  
 |_arm_smusdx|SMUSDX|int _arm_smusdx(int _Rn, int _Rm)|  
-|_arm_smull|SMULL|__int64 _arm_smull(int _Rn, int _Rm)|  
+|_arm_smull|SMULL|__int64 _arm_smull (int _Rn, int _Rm)|  
 |_arm_umull|UMULL|_arm_umull __int64 bez znaku (unsigned int _Rn, _Rm unsigned int)|  
 |_arm_umaal|UMAAL|_arm_umaal __int64 bez znaku (unsigned int _RdLo, _RdHi unsigned int, _Rn unsigned int, _Rm unsigned int)|  
 |_arm_bfc|BFC|_arm_bfc unsigned int (unsigned int _Rd, _Lsb unsigned int, właściwości unsigned int)|  
 |_arm_bfi|BFI|_arm_bfi unsigned int (unsigned int _Rd, _Rn unsigned int, _Lsb unsigned int, właściwości unsigned int)|  
-|_arm_rbit|RBIT|unsigned int _arm_rbit(unsigned int _Rm)|  
-|_arm_sbfx|SBFX|int _arm_sbfx(int _Rn, unsigned int _Lsb, unsigned int _Width)|  
-|_arm_ubfx|UBFX|unsigned int _arm_ubfx(unsigned int _Rn, unsigned int _Lsb, unsigned int _Width)|  
+|_arm_rbit|RBIT|_arm_rbit unsigned int (unsigned int _Rm)|  
+|_arm_sbfx|SBFX|_arm_sbfx int (int _Rn, _Lsb unsigned int, właściwości unsigned int)|  
+|_arm_ubfx|UBFX|_arm_ubfx unsigned int (unsigned int _Rn, _Lsb unsigned int, właściwości unsigned int)|  
 |_arm_sdiv|SDIV|int _arm_sdiv(int _Rn, int _Rm)|  
-|_arm_udiv|UDIV|unsigned int _arm_udiv(unsigned int _Rn, unsigned int _Rm)|  
+|_arm_udiv|UDIV|_arm_udiv unsigned int (unsigned int _Rn, _Rm unsigned int)|  
 |__cps|CPS|void __cps (unsigned int _Ops, _Flags unsigned int, _Mode unsigned int)|  
 |__dmb|DMB|void __dmb (unsigned int `_Type`)<br /><br /> Wstawia operację bariery pamięci do strumienia instrukcji. Parametr `_Type` określa rodzaj bariera wymusza ograniczenia.<br /><br /> Aby uzyskać więcej informacji o rodzajach ograniczenia, które mogą być wymuszane, zobacz [ograniczenia bariery pamięci](#BarrierRestrictions).|  
 |__dsb|DSB|void __dsb (unsigned int _wprowadź)<br /><br /> Wstawia operację bariery pamięci do strumienia instrukcji. Parametr `_Type` określa rodzaj bariera wymusza ograniczenia.<br /><br /> Aby uzyskać więcej informacji o rodzajach ograniczenia, które mogą być wymuszane, zobacz [ograniczenia bariery pamięci](#BarrierRestrictions).|  
@@ -2128,7 +2123,7 @@ Kompilator Visual C++ udostępnia następujące funkcje wewnętrzne na architekt
 |_ReadStatusReg|MRS|int _ReadStatusReg(int)|  
 |_SubSatInt|QSUB|_SubSatInt int (int, int)|  
 |_WriteBankedReg|MSR|void _WriteBankedReg (int _Value, int _Reg)|  
-|_WriteStatusReg|MSR|void _WriteStatusReg(int, int, int)|  
+|_WriteStatusReg|MSR|void _WriteStatusReg (int, int, int)|  
   
  [[NEON](#top)]  
   
@@ -2378,7 +2373,7 @@ void _MoveFromCoprocessor64(
 |_bittestandcomplement|unsigned char _bittestandcomplement (Liczba długa * długim)|  
 |_bittestandreset|unsigned char _bittestandreset (Liczba długa * długim)|  
 |_bittestandset|unsigned char _bittestandset (Liczba długa * długim)|  
-|_byteswap_uint64|unsigned __int64 \__cdecl _byteswap_uint64(unsigned \__int64)|  
+|_byteswap_uint64|niepodpisane __int64 \__byteswap_uint64 — _cdecl (bez znaku \__int64)|  
 |_byteswap_ulong|_byteswap_ulong(unsigned long) __cdecl długa bez znaku|  
 |_byteswap_ushort|_byteswap_ushort — niepodpisane __cdecl krótka (short bez znaku)|  
 |_disable|void __cdecl _disable(void) **Uwaga:** na platformach ARM ta funkcja generuje instrukcji CPSID; funkcja ta jest dostępna jako funkcja wewnętrzna.|  
@@ -2388,7 +2383,7 @@ void _MoveFromCoprocessor64(
 |_ReadBarrier|void _ReadBarrier(void)|  
 |_ReadWriteBarrier|void _ReadWriteBarrier(void)|  
 |_ReturnAddress|void * _ReturnAddress(void)|  
-|_rotl|unsigned int __cdecl _rotl(unsigned int _Value, int _Shift)|  
+|_rotl|_rotl — __cdecl unsigned int (_Value unsigned int, int _Shift)|  
 |_rotl16|niepodpisane _rotl16 krótkich (bez znaku _Value krótkie, _Shift char bez znaku)|  
 |_rotl64|niepodpisane __int64 \__rotl64 — _cdecl (bez znaku \__Value _int64, int _Shift)|  
 |_rotl8|unsigned char _rotl8 (_Value char bez znaku, _Shift char bez znaku)|  
@@ -2435,8 +2430,8 @@ void _MoveFromCoprocessor64(
 |-------------------|------------------------|  
 |_InterlockedAdd|_InterlockedAdd długi (długi _volatile * długim)|  
 |_InterlockedAdd64|__int64 _InterlockedAdd64 (\__int64 volatile *, \__int64)|  
-|_InterlockedAdd64_acq|__int64 _InterlockedAdd64_acq(\__int64 volatile *, \__int64)|  
-|_InterlockedAdd64_nf|__int64 _InterlockedAdd64_nf(\__int64 volatile *, \__int64)|  
+|_InterlockedAdd64_acq|__int64 _InterlockedAdd64_acq (\__int64 volatile *, \__int64)|  
+|_InterlockedAdd64_nf|__int64 _InterlockedAdd64_nf (\__int64 volatile *, \__int64)|  
 |_InterlockedAdd64_rel|__int64 _InterlockedAdd64_rel (\__int64 volatile *, \__int64)|  
 |_InterlockedAdd_acq|_InterlockedAdd_acq długi (długo volatile * długim)|  
 |_InterlockedAdd_nf|_InterlockedAdd_nf długi (długo volatile * długim)|  
@@ -2448,7 +2443,7 @@ void _MoveFromCoprocessor64(
 |_InterlockedAnd16_rel|krótki _InterlockedAnd16_rel (krótka volatile *, krótki)|  
 |_InterlockedAnd64|__int64 _InterlockedAnd64 (\__int64 volatile *, \__int64)|  
 |_InterlockedAnd64_acq|__int64 _InterlockedAnd64_acq(\__int64 volatile *, \__int64)|  
-|_InterlockedAnd64_nf|__int64 _InterlockedAnd64_nf(\__int64 volatile *, \__int64)|  
+|_InterlockedAnd64_nf|__int64 _InterlockedAnd64_nf (\__int64 volatile *, \__int64)|  
 |_InterlockedAnd64_rel|__int64 _InterlockedAnd64_rel (\__int64 volatile *, \__int64)|  
 |_InterlockedAnd8|CHAR — _InterlockedAnd8 (char volatile *, char)|  
 |_InterlockedAnd8_acq|CHAR — _InterlockedAnd8_acq (char volatile *, char)|  
@@ -2494,8 +2489,8 @@ void _MoveFromCoprocessor64(
 |_InterlockedExchange16_acq|krótki _InterlockedExchange16_acq (krótka volatile * _Target krótki)|  
 |_InterlockedExchange16_nf|krótki _InterlockedExchange16_nf (krótka volatile * _Target krótki)|  
 |_InterlockedExchange64|__int64 _InterlockedExchange64 (\__int64 volatile * _Target, \__int64)|  
-|_InterlockedExchange64_acq|__int64 _InterlockedExchange64_acq(\__int64 volatile * _Target, \__int64)|  
-|_InterlockedExchange64_nf|__int64 _InterlockedExchange64_nf(\__int64 volatile * _Target, \__int64)|  
+|_InterlockedExchange64_acq|__int64 _InterlockedExchange64_acq (\__int64 volatile * _Target, \__int64)|  
+|_InterlockedExchange64_nf|__int64 _InterlockedExchange64_nf (\__int64 volatile * _Target, \__int64)|  
 |_InterlockedExchange8|CHAR — _InterlockedExchange8 (char volatile * _Target, char)|  
 |_InterlockedExchange8_acq|CHAR — _InterlockedExchange8_acq (char volatile * _Target, char)|  
 |_InterlockedExchange8_nf|CHAR — _InterlockedExchange8_nf (char volatile * _Target, char)|  
@@ -2506,13 +2501,13 @@ void _MoveFromCoprocessor64(
 |_InterlockedExchangeAdd16_rel|_InterlockedExchangeAdd16_rel krótkich (krótka volatile *, krótki)|  
 |_InterlockedExchangeAdd64|__int64 _InterlockedExchangeAdd64 (\__int64 volatile *, \__int64)|  
 |_InterlockedExchangeAdd64_acq|__int64 _InterlockedExchangeAdd64_acq(\__int64 volatile *, \__int64)|  
-|_InterlockedExchangeAdd64_nf|__int64 _InterlockedExchangeAdd64_nf(\__int64 volatile *, \__int64)|  
-|_InterlockedExchangeAdd64_rel|__int64 _InterlockedExchangeAdd64_rel(\__int64 volatile *, \__int64)|  
+|_InterlockedExchangeAdd64_nf|__int64 _InterlockedExchangeAdd64_nf (\__int64 volatile *, \__int64)|  
+|_InterlockedExchangeAdd64_rel|__int64 _InterlockedExchangeAdd64_rel (\__int64 volatile *, \__int64)|  
 |_InterlockedExchangeAdd8|CHAR _InterlockedExchangeAdd8 (char volatile *, char)|  
 |_InterlockedExchangeAdd8_acq|CHAR _InterlockedExchangeAdd8_acq (char volatile *, char)|  
 |_InterlockedExchangeAdd8_nf|CHAR _InterlockedExchangeAdd8_nf (char volatile *, char)|  
 |_InterlockedExchangeAdd8_rel|CHAR _InterlockedExchangeAdd8_rel (char volatile *, char)|  
-|_InterlockedExchangeAdd_acq|long _InterlockedExchangeAdd_acq(long volatile *, long)|  
+|_InterlockedExchangeAdd_acq|_InterlockedExchangeAdd_acq długi (długo volatile * długim)|  
 |_InterlockedExchangeAdd_nf|_InterlockedExchangeAdd_nf długi (długo volatile * długim)|  
 |_InterlockedExchangeAdd_rel|_InterlockedExchangeAdd_rel długi (długo volatile * długim)|  
 |_InterlockedExchangePointer|void * _InterlockedExchangePointer (void \* volatile \* _Target void \*)|  
@@ -2529,7 +2524,7 @@ void _MoveFromCoprocessor64(
 |_InterlockedIncrement64_acq|__int64 _InterlockedIncrement64_acq (\__int64 volatile *)|  
 |_InterlockedIncrement64_nf|__int64 _InterlockedIncrement64_nf (\__int64 volatile *)|  
 |_InterlockedIncrement64_rel|__int64 _InterlockedIncrement64_rel (\__int64 volatile *)|  
-|_InterlockedIncrement_acq|long _InterlockedIncrement_acq(long volatile *)|  
+|_InterlockedIncrement_acq|długie _InterlockedIncrement_acq(long volatile *)|  
 |_InterlockedIncrement_nf|długie _InterlockedIncrement_nf(long volatile *)|  
 |_InterlockedIncrement_rel|długie _InterlockedIncrement_rel(long volatile *)|  
 |_InterlockedOr|długie _InterlockedOr (długo volatile * długim)|  
@@ -2540,7 +2535,7 @@ void _MoveFromCoprocessor64(
 |_InterlockedOr64|__int64 _InterlockedOr64 (\__int64 volatile *, \__int64)|  
 |_InterlockedOr64_acq|__int64 _InterlockedOr64_acq(\__int64 volatile *, \__int64)|  
 |_InterlockedOr64_nf|__int64 _InterlockedOr64_nf(\__int64 volatile *, \__int64)|  
-|_InterlockedOr64_rel|__int64 _InterlockedOr64_rel(\__int64 volatile *, \__int64)|  
+|_InterlockedOr64_rel|__int64 _InterlockedOr64_rel (\__int64 volatile *, \__int64)|  
 |_InterlockedOr8|CHAR — _InterlockedOr8 (char volatile *, char)|  
 |_InterlockedOr8_acq|CHAR — _InterlockedOr8_acq (char volatile *, char)|  
 |_InterlockedOr8_nf|CHAR — _InterlockedOr8_nf (char volatile *, char)|  
@@ -2567,7 +2562,7 @@ void _MoveFromCoprocessor64(
   
  [[NEON](#top)]  
   
-### <a name="interlockedbittest-intrinsics"></a>_interlockedbittest Intrinsics  
+### <a name="interlockedbittest-intrinsics"></a>funkcje wewnętrzne _interlockedbittest  
  Funkcje wewnętrzne zwykły bittest blokowanego są wspólne dla wszystkich platform. Dodaje ARM `_acq`, `_rel`, i `_nf` wariantów, które właśnie modyfikować semantyka bariery operacji zgodnie z opisem w [_nf (nie ogranicznika) sufiks](#nf_suffix) we wcześniejszej części tego artykułu.  
   
 |Nazwa funkcji|Prototype — funkcja|  

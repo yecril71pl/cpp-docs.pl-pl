@@ -1,12 +1,9 @@
 ---
-title: "Carray — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Carray — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CArray
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CArray [MFC], SetAtGrow
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85e7bf9518ad96e5a67f2d19d3729e5813d3f84d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4e4e4fd0106687927706b0ba303035258de7e651
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="carray-class"></a>Carray — klasa
 Obsługuje tablic, które są podobne do tablic C, ale dynamicznie pozwala zmniejszyć i wzrostu w razie potrzeby.  
@@ -75,10 +70,10 @@ class CArray : public CObject
   
 #### <a name="parameters"></a>Parametry  
  `TYPE`  
- Parametr szablonu, który określa typ obiekty przechowywane w tablicy. `TYPE`jest parametrem, który jest zwracany przez `CArray`.  
+ Parametr szablonu, który określa typ obiekty przechowywane w tablicy. `TYPE` jest parametrem, który jest zwracany przez `CArray`.  
   
  `ARG` *_* `TYPE`  
- Parametr szablonu, który określa typ argumentu, który umożliwia dostęp do obiektów przechowywanych w tablicy. Często odwołanie do `TYPE`. `ARG_TYPE`jest to parametr przekazywany do `CArray`.  
+ Parametr szablonu, który określa typ argumentu, który umożliwia dostęp do obiektów przechowywanych w tablicy. Często odwołanie do `TYPE`. `ARG_TYPE` jest to parametr przekazywany do `CArray`.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -114,7 +109,7 @@ class CArray : public CObject
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Operator &#91; &#93;](#operator_at)|Ustawia lub pobiera element pod określonym indeksem.|  
+|[operator&#91;&#93;](#operator_at)|Ustawia lub pobiera element pod określonym indeksem.|  
   
 ## <a name="remarks"></a>Uwagi  
  Indeksy tablicy zawsze rozpoczynają się od pozycji 0. Można wybrać, czy do naprawienia górna granica lub Włącz tablicy, tak aby rozwinąć po dodaniu elementów poza bieżącą powiązany. Jest przydzielana pamięć ciągłym górnej granicy, nawet jeśli niektóre elementy mają wartość null.  
@@ -141,9 +136,9 @@ class CArray : public CObject
  `CArray`  
   
 ## <a name="requirements"></a>Wymagania  
- `Header:`afxtempl.h  
+ `Header:` afxtempl.h  
   
-##  <a name="add"></a>CArray::Add  
+##  <a name="add"></a>  CArray::Add  
  Dodaje nowy element do końca tablicy rośnie tablicy o 1.  
   
 ```  
@@ -166,7 +161,7 @@ INT_PTR Add(ARG_TYPE newElement);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#22](../../mfc/codesnippet/cpp/carray-class_1.cpp)]  
   
-##  <a name="append"></a>CArray::Append  
+##  <a name="append"></a>  CArray::Append  
  Wywołanie tej funkcji Członkowskich do dodania do końca innej zawartości tablicy.  
   
 ```  
@@ -188,7 +183,7 @@ INT_PTR Append(const CArray& src);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#23](../../mfc/codesnippet/cpp/carray-class_2.cpp)]  
   
-##  <a name="carray"></a>CArray::CArray  
+##  <a name="carray"></a>  CArray::CArray  
  Tworzy pustą tablicę.  
   
 ```  
@@ -201,7 +196,7 @@ CArray();
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#24](../../mfc/codesnippet/cpp/carray-class_3.cpp)]  
   
-##  <a name="copy"></a>CArray::Copy  
+##  <a name="copy"></a>  CArray::Copy  
  Użyj tej funkcji członkowskich można kopiować elementy tablicy jednego do drugiego.  
   
 ```  
@@ -220,7 +215,7 @@ void Copy(const CArray& src);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#25](../../mfc/codesnippet/cpp/carray-class_4.cpp)]  
   
-##  <a name="elementat"></a>CArray::ElementAt  
+##  <a name="elementat"></a>  CArray::ElementAt  
  Zwraca tymczasowego odwołanie do określonego elementu w tablicy.  
   
 ```  
@@ -241,7 +236,7 @@ const TYPE& ElementAt(INT_PTR nIndex) const;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [GetSize](#getsize).  
   
-##  <a name="freeextra"></a>CArray::FreeExtra  
+##  <a name="freeextra"></a>  CArray::FreeExtra  
  Zwalnia wszelkie dodatkowe pamięci przydzielony podczas tablicy został rozszerzony.  
   
 ```  
@@ -254,7 +249,7 @@ void FreeExtra();
 ### <a name="example"></a>Przykład  
   Zobacz przykład [GetData](#getdata).  
   
-##  <a name="getat"></a>CArray::GetAt  
+##  <a name="getat"></a>  CArray::GetAt  
  Zwraca element tablicy w określonym indeksie.  
   
 ```  
@@ -278,7 +273,7 @@ const TYPE& GetAt(INT_PTR nIndex) const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#26](../../mfc/codesnippet/cpp/carray-class_5.cpp)]  
   
-##  <a name="getcount"></a>CArray::GetCount  
+##  <a name="getcount"></a>  CArray::GetCount  
  Zwraca liczbę elementów tablicy.  
   
 ```  
@@ -294,7 +289,7 @@ INT_PTR GetCount() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#27](../../mfc/codesnippet/cpp/carray-class_6.cpp)]  
   
-##  <a name="getdata"></a>CArray::GetData  
+##  <a name="getdata"></a>  CArray::GetData  
  Aby uzyskać bezpośredni dostęp do elementów w tablicy, należy użyć tej funkcji elementu członkowskiego.  
   
 ```  
@@ -317,7 +312,7 @@ TYPE* GetData();
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#28](../../mfc/codesnippet/cpp/carray-class_7.cpp)]  
   
-##  <a name="getsize"></a>CArray::GetSize  
+##  <a name="getsize"></a>  CArray::GetSize  
  Zwraca rozmiar tablicy.  
   
 ```  
@@ -330,7 +325,7 @@ INT_PTR GetSize() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#29](../../mfc/codesnippet/cpp/carray-class_8.cpp)]  
   
-##  <a name="getupperbound"></a>CArray::GetUpperBound  
+##  <a name="getupperbound"></a>  CArray::GetUpperBound  
  Zwraca bieżący górna granica tej tablicy.  
   
 ```  
@@ -345,7 +340,7 @@ INT_PTR GetUpperBound() const;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CArray::GetAt](#getat).  
   
-##  <a name="insertat"></a>CArray::InsertAt  
+##  <a name="insertat"></a>  CArray::InsertAt  
  Pierwszą wersję `InsertAt` wstawia jednego elementu (lub wiele kopii elementu) od określonego indeksu tablicy.  
   
 ```  
@@ -388,7 +383,7 @@ void InsertAt(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#30](../../mfc/codesnippet/cpp/carray-class_9.cpp)]  
   
-##  <a name="isempty"></a>CArray::IsEmpty  
+##  <a name="isempty"></a>  CArray::IsEmpty  
  Określa, czy tablica jest pusta.  
   
 ```  
@@ -398,7 +393,7 @@ BOOL IsEmpty() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli macierz nie zawiera żadnych elementów; w przeciwnym razie 0.  
   
-##  <a name="operator_at"></a>CArray::operator\[\]  
+##  <a name="operator_at"></a>  CArray::operator \[\]  
  Indeks dolny są to wygodny zastępuje [SetAt](#setat) i [GetAt](#getat) funkcji.  
   
 ```  
@@ -421,7 +416,7 @@ const TYPE& operator[](int_ptr nindex) const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#34](../../mfc/codesnippet/cpp/carray-class_10.cpp)]  
   
-##  <a name="relocateelements"></a>CArray::RelocateElements  
+##  <a name="relocateelements"></a>  CArray::RelocateElements  
  Przenosi dane w buforze nowego podczas tablicy należy zwiększać i zmniejszać.  
   
 ```  
@@ -443,13 +438,13 @@ AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
  Liczba elementów w tablicy stary.  
   
 ### <a name="remarks"></a>Uwagi  
- `pNewData`zawsze jest wystarczająco duży do przechowywania wszystkich `pData` elementów.  
+ `pNewData` zawsze jest wystarczająco duży do przechowywania wszystkich `pData` elementów.  
   
  [Carray —](../../mfc/reference/carray-class.md) implementacja używa tej metody można skopiować do bufor nowego stare dane, gdy tablica należy zwiększać i zmniejszać (gdy [SetSize](#setsize) lub [FreeExtra](#freeextra) są nazywane). Domyślna implementacja tylko kopiuje dane.  
   
  Dla tablic, w którym element zawiera wskaźnik do jednego ze swoich własnych członków lub inną strukturę zawiera wskaźnik do jednego z elementów tablicy wskaźniki nie są aktualizowane w zwykłych kopii. W takim przypadku można rozwiązać wskaźniki zaimplementowanie specjalizacji `RelocateElements` z odpowiednich typów. Możesz również są odpowiedzialne za kopiowania danych.  
   
-##  <a name="removeall"></a>CArray::RemoveAll  
+##  <a name="removeall"></a>  CArray::RemoveAll  
  Usuwa wszystkie elementy z tej tablicy.  
   
 ```  
@@ -462,7 +457,7 @@ void RemoveAll();
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#31](../../mfc/codesnippet/cpp/carray-class_11.cpp)]  
   
-##  <a name="removeat"></a>CArray::RemoveAt  
+##  <a name="removeat"></a>  CArray::RemoveAt  
  Usuwa jeden lub więcej elementów, zaczynając od określonego indeksu tablicy.  
   
 ```  
@@ -486,7 +481,7 @@ void RemoveAt(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#32](../../mfc/codesnippet/cpp/carray-class_12.cpp)]  
   
-##  <a name="setat"></a>CArray::SetAt  
+##  <a name="setat"></a>  CArray::SetAt  
  Ustawia element tablicy w określonym indeksie.  
   
 ```  
@@ -504,14 +499,14 @@ void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
  Nowa wartość elementu mają być przechowywane w określonej pozycji.  
   
 ### <a name="remarks"></a>Uwagi  
- `SetAt`nie spowoduje tablicy się rozrastać. Użyj [SetAtGrow](#setatgrow) Jeśli chcesz tablicy, tak aby automatycznie powiększania.  
+ `SetAt` nie spowoduje tablicy się rozrastać. Użyj [SetAtGrow](#setatgrow) Jeśli chcesz tablicy, tak aby automatycznie powiększania.  
   
  Należy się upewnić, że wartość indeksu reprezentuje prawidłową pozycją w tablicy. Jeśli jest poza zakresem, wersja do debugowania biblioteki potwierdzeń.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [GetAt](#getat).  
   
-##  <a name="setatgrow"></a>CArray::SetAtGrow  
+##  <a name="setatgrow"></a>  CArray::SetAtGrow  
  Ustawia element tablicy w określonym indeksie.  
   
 ```  
@@ -534,7 +529,7 @@ void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#33](../../mfc/codesnippet/cpp/carray-class_13.cpp)]  
   
-##  <a name="setsize"></a>CArray::SetSize  
+##  <a name="setsize"></a>  CArray::SetSize  
  Określa rozmiar pusta lub istniejącej tablicy; przydziela pamięć, jeśli to konieczne.  
   
 ```  

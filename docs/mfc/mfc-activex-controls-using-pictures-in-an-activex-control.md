@@ -2,12 +2,9 @@
 title: 'Formanty MFC ActiveX: Używanie obrazów w formancie ActiveX | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - LPPICTUREDISP
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - OnResetState method [MFC]
 - CLSID_CPicturePropPage [MFC]
 ms.assetid: 2e49735c-21b9-4442-bb3d-c82ef258eec9
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a27e5ebb58056dfd14417adea211daf2c6ac2ddf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 313cbe53189a4a6e9b87b1723a166de83f56df05
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>Kontrolki ActiveX MFC: używanie obrazów w kontrolce ActiveX
 W tym artykule opisano typowe typ obrazu oraz jak ją wdrożyć w formantu ActiveX. Tematy obejmują:  
@@ -40,7 +35,7 @@ W tym artykule opisano typowe typ obrazu oraz jak ją wdrożyć w formantu Activ
   
 -   [Dodawanie do projektu kontroli](#_core_additions_to_your_control_project)  
   
-##  <a name="_core_overview_of_custom_picture_properties"></a>Przegląd właściwości niestandardowego obrazu  
+##  <a name="_core_overview_of_custom_picture_properties"></a> Przegląd właściwości niestandardowego obrazu  
  Typ obrazu jest jednym z grupy typów wspólnych dla niektórych formantów ActiveX. Typ obrazu obsługuje metapliki, map bitowych lub ikony i umożliwia użytkownikowi określenie obraz do wyświetlenia w formancie ActiveX. Niestandardowe właściwości obrazu są implementowane za pomocą obiektu obrazu i funkcje Get i Set, które umożliwiają sterowanie dostępem użytkowników do właściwości obrazu. Użytkownicy kontroli dostępu do niestandardowej właściwości obrazu za pomocą giełdowych strona właściwości obrazu.  
   
  Oprócz standardowych typ obrazu czcionek i kolorów są również dostępne typy. Aby uzyskać więcej informacji na temat używania standardowy typ czcionki formantu ActiveX, zobacz artykuł [kontrolki ActiveX MFC: przy użyciu czcionek](../mfc/mfc-activex-controls-using-fonts.md).  
@@ -59,7 +54,7 @@ W tym artykule opisano typowe typ obrazu oraz jak ją wdrożyć w formantu Activ
   
      Ta strona właściwości jest częścią grupy stron właściwości standardowych dostępne dla formantów ActiveX. Aby uzyskać więcej informacji na stronach właściwości formantu ActiveX, zobacz artykuł [kontrolki ActiveX MFC: przy użyciu strony właściwości zasobów](../mfc/mfc-activex-controls-using-stock-property-pages.md)  
   
-##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a>Implementowanie właściwości obrazu niestandardowego formantu ActiveX  
+##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> Implementowanie właściwości obrazu niestandardowego formantu ActiveX  
  Po wykonaniu czynności opisanych w tej sekcji formantu można wyświetlić obrazy wybrany przez użytkownika. Użytkownik może zmienić wyświetlany obraz, używając strony właściwości, który pokazuje bieżący obraz i ma przycisk Przeglądaj, który umożliwia użytkownikowi wybierz różnych obrazów.  
   
  Niestandardowe właściwości obrazu jest implementowane za pomocą proces podobny do wykonywania innych właściwości główną różnicą, że właściwość niestandardowa musi obsługiwać typ obrazu. Ponieważ przez formant ActiveX musi zostać narysowany element właściwości obrazu, liczba dodatki i zmiany muszą być wprowadzane do właściwości przed można zaimplementować pełni.  
@@ -74,7 +69,7 @@ W tym artykule opisano typowe typ obrazu oraz jak ją wdrożyć w formantu Activ
   
      Te modyfikacje zostaną wprowadzone do kilka funkcji, które są odpowiedzialne za rysunek formantu ActiveX.  
   
-##  <a name="_core_additions_to_your_control_project"></a>Dodawanie do projektu kontroli  
+##  <a name="_core_additions_to_your_control_project"></a> Dodawanie do projektu kontroli  
  Aby dodać identyfikator strony właściwości dla standardowej strony właściwości obrazu, Wstaw następujący wiersz po `BEGIN_PROPPAGEIDS` makra w pliku implementacji (. CPP):  
   
  [!code-cpp[NVC_MFC_AxPic#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_1.cpp)]  
@@ -103,7 +98,7 @@ W tym artykule opisano typowe typ obrazu oraz jak ją wdrożyć w formantu Activ
   
 5.  W **nazwa właściwości** wpisz nazwę właściwości. Na przykład w celach `ControlPicture` jest używany w tej procedurze.  
   
-6.  W **typ właściwości** wybierz opcję **IPictureDisp\* ** dla typu właściwości.  
+6.  W **typ właściwości** wybierz opcję **IPictureDisp\***  dla typu właściwości.  
   
 7.  Aby uzyskać **typ implementacji**, kliknij przycisk **metod Get/Set**.  
   
@@ -126,7 +121,7 @@ W tym artykule opisano typowe typ obrazu oraz jak ją wdrożyć w formantu Activ
 > [!NOTE]
 >  Nazwy klas i funkcji kontroli mogą różnić się od powyższego przykładu.  
   
-###  <a name="_core_modifications_to_your_control_project"></a>Zmiany do projektu kontroli  
+###  <a name="_core_modifications_to_your_control_project"></a> Zmiany do projektu kontroli  
  Po dokonaniu niezbędnych dodatki do projektu kontroli, należy zmodyfikować kilka funkcji, które mają wpływ na renderowanie formantu ActiveX. Te funkcje `OnResetState`, `OnDraw`, oraz funkcje Get i Set właściwości niestandardowych obrazów, znajdują się w pliku implementacji. (Należy pamiętać, że w tym przykładzie klasa kontroli jest nazywana `CSampleCtrl`, `CPictureHolder` nosi nazwę elementu członkowskiego danych `m_pic`, i nazwa właściwości niestandardowego obrazu jest `ControlPicture`.)  
   
  W formancie `OnResetState` działać, Dodaj następujący wiersz opcjonalne po wywołaniu `COleControl::OnResetState`:  

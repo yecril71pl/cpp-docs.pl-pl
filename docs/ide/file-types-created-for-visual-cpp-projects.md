@@ -1,13 +1,10 @@
 ---
-title: "Typy utworzone dla projektów Visual C++ plików | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Typy utworzone dla projektów Visual C++ plików | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90d7b1523c8a61405224fc21701b5203e2cfb006
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a7158e729d80d8b0456862ee6418f039b7f948fe
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>Typy plików utworzonych dla projektów Visual C++
 W tym temacie opisano wszystkie typy plików, które są skojarzone z projektów Visual C++ w klasycznej aplikacji klasycznych. Rzeczywiste pliki zawarte w projekcie zależą od opcji wybranych przy użyciu kreatora i typ projektu.  
@@ -75,7 +70,7 @@ W tym temacie opisano wszystkie typy plików, które są skojarzone z projektów
 |.h|Źródło|Nagłówek (Dołącz) pliku.|  
 |htm, HTML, .xsp, .asp, .htc, HTA, .xml|Zasób|Wspólne pliki sieci Web.|  
 |. HxC.|Projekt|Plik projektu pomocy.|  
-|ICO|Zasób|Ikona graficzne plik mapy bitowej.|  
+|.ico|Zasób|Ikona graficzne plik mapy bitowej.|  
 |.IDB|Trwa kompilowanie...|Plik stanu, zawierający informacje o zależnościach między pliki źródłowe i definicje klas, które mogą być używane przez kompilator podczas minimalna ponowna kompilacja i kompilacji przyrostowej. Użyj [/Fd](../build/reference/fd-program-database-file-name.md) opcję kompilatora, aby określić nazwę pliku .idb. Zobacz [/GM ponowną (Włącz minimalnego odbudować)](../build/reference/gm-enable-minimal-rebuild.md) Aby uzyskać więcej informacji.|  
 |.IDL|Trwa kompilowanie...|Plik języka definicji interfejsu. Zobacz [plik definicji interfejsu (IDL)](http://msdn.microsoft.com/library/windows/desktop/aa378712) w zestawie SDK systemu Windows, aby uzyskać więcej informacji.|  
 |.ilk|Konsolidacja|Plik konsolidowania przyrostowego. Zobacz [/INCREMENTAL](../build/reference/incremental-link-incrementally.md) Aby uzyskać więcej informacji.|  

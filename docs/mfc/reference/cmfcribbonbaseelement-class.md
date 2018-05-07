@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCRibbonBaseElement | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonBaseElement
@@ -241,17 +238,15 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93db9b8d8c56a23254972af29c7381e368766381
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 048bb65ae7e8c82df0d4003916da5d7a36a9b569
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Klasa CMFCRibbonBaseElement
 `CMFCRibbonBaseElement` Klasa jest klasą bazową dla wszystkich elementów, które można dodać do [pasek wstążki](../../mfc/reference/cmfcribbonbar-class.md). Przykłady elementów wstążki to wstążki przyciski wstążki pola wyboru i wstążki pola kombi.  
@@ -418,7 +413,7 @@ class CMFCRibbonBaseElement : public CObject
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxbaseribbonelement.h  
   
-##  <a name="addtokeylist"></a>CMFCRibbonBaseElement::AddToKeyList  
+##  <a name="addtokeylist"></a>  CMFCRibbonBaseElement::AddToKeyList  
  Dodaje właściwości keytip elementu wstążki do tablicy porady dotyczące klawiszy.  
   
 ```  
@@ -427,13 +422,13 @@ virtual void AddToKeyList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`arElems`  
+ [in] `arElems`  
  Odwołanie do [carray —](../../mfc/reference/carray-class.md) z poradami dotyczącymi klawiszy.  
   
 ### <a name="remarks"></a>Uwagi  
  Po włączeniu funkcji porady dotyczące klawiszy wstążki, platformę Wyświetla etykietki klawiszy wstążki, gdy użytkownik naciśnie klawisz F10 lub klawisz ALT.  
   
-##  <a name="addtolistbox"></a>CMFCRibbonBaseElement::AddToListBox  
+##  <a name="addtolistbox"></a>  CMFCRibbonBaseElement::AddToListBox  
  Dodaje element wstążki do wstążki określonego pola listy poleceń.  
   
 ```  
@@ -443,10 +438,10 @@ virtual int AddToListBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pWndListBox`  
+ [in] `pWndListBox`  
  Wskaźnik do pola listy poleceń.  
   
- [in]`bDeep`  
+ [in] `bDeep`  
  Ten parametr nie jest używany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -455,7 +450,7 @@ virtual int AddToListBox(
 ### <a name="remarks"></a>Uwagi  
  Platformę dodaje elementów wstążki do pola listy poleceń, aby umożliwić użytkownikowi dostosowywanie interfejsu użytkownika.  
   
-##  <a name="canbeaddedtoquickaccesstoolbar"></a>CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar  
+##  <a name="canbeaddedtoquickaccesstoolbar"></a>  CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar  
  Wskazuje, czy element wstążki może być dodany do paska narzędzi Szybki dostęp.  
   
 ```  
@@ -463,11 +458,11 @@ virtual BOOL CanBeAddedToQuickAccessToolBar() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli element można dodać; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli element można dodać; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="canbecompacted"></a>CMFCRibbonBaseElement::CanBeCompacted  
+##  <a name="canbecompacted"></a>  CMFCRibbonBaseElement::CanBeCompacted  
  Wskazuje, czy rozmiar elementu Wstążki można compact.  
   
 ```  
@@ -475,12 +470,12 @@ virtual BOOL CanBeCompacted() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli rozmiar elementu wstążki może być compact; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli rozmiar elementu wstążki może być compact; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Rozmiar elementu Wstążki można compact, pośrednie lub duży.  
   
-##  <a name="canbestretched"></a>CMFCRibbonBaseElement::CanBeStretched  
+##  <a name="canbestretched"></a>  CMFCRibbonBaseElement::CanBeStretched  
  Wskazuje, czy wysokość elementu wstążki wzrasta w pionie do wysokości wiersza wstążki.  
   
 ```  
@@ -493,7 +488,7 @@ virtual BOOL CanBeStretched();
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda zawsze zwraca wartość `TRUE`. Zastępuje tę metodę, aby wskazać, czy wysokość elementu wstążki wzrasta w pionie do wysokości wiersza wstążki.  
   
-##  <a name="canbestretchedhorizontally"></a>CMFCRibbonBaseElement::CanBeStretchedHorizontally  
+##  <a name="canbestretchedhorizontally"></a>  CMFCRibbonBaseElement::CanBeStretchedHorizontally  
  Wskazuje, czy można zmienić szerokość elementu wstążki.  
   
 ```  
@@ -506,7 +501,7 @@ virtual BOOL CanBeStretchedHorizontally();
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda zawsze zwraca wartość `FALSE`. Zastępuje tę metodę, aby wskazać, czy można zmienić szerokość elementu wstążki.  
   
-##  <a name="cleanupsizes"></a>CMFCRibbonBaseElement::CleanUpSizes  
+##  <a name="cleanupsizes"></a>  CMFCRibbonBaseElement::CleanUpSizes  
  Czyści ustawieniach wymiaru dla elementu wstążki.  
   
 ```  
@@ -516,7 +511,7 @@ virtual void CleanUpSizes();
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda nie działa. Zastępuje tę metodę w klasie pochodnej zresetowanie ustawień wymiarów dla elementu wstążki.  
   
-##  <a name="closepopupmenu"></a>CMFCRibbonBaseElement::ClosePopupMenu  
+##  <a name="closepopupmenu"></a>  CMFCRibbonBaseElement::ClosePopupMenu  
  Zamyka menu podręczne dla elementu wstążki.  
   
 ```  
@@ -525,7 +520,7 @@ virtual void ClosePopupMenu();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="copyfrom"></a>CMFCRibbonBaseElement::CopyFrom  
+##  <a name="copyfrom"></a>  CMFCRibbonBaseElement::CopyFrom  
  Kopiuje określony stan [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) jak bieżący obiekt.  
   
 ```  
@@ -533,12 +528,12 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`src`  
+ [in] `src`  
  Źródło [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="destroyctrl"></a>CMFCRibbonBaseElement::DestroyCtrl  
+##  <a name="destroyctrl"></a>  CMFCRibbonBaseElement::DestroyCtrl  
  Niszczy element wstążki.  
   
 ```  
@@ -548,7 +543,7 @@ virtual void DestroyCtrl();
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda nie działa. Zastępuje tę metodę w klasie pochodnej zniszczenie elementu wstążki.  
   
-##  <a name="drawimage"></a>CMFCRibbonBaseElement::DrawImage  
+##  <a name="drawimage"></a>  CMFCRibbonBaseElement::DrawImage  
  Rysuje obraz dla elementu wstążki.  
   
 ```  
@@ -559,13 +554,13 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do kontekstu urządzenia.  
   
- [in]`type`  
+ [in] `type`  
  Typ obrazu wyliczyć wartość. Zobacz sekcję uwag listę możliwych wartości.  
   
- [in]`rectImage`  
+ [in] `rectImage`  
  Prostokąt obrazu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -579,7 +574,7 @@ virtual void DrawImage(
  `RibbonImageSmall`  
  Niewielki rozmiar obraz 16 x 16 pikseli.  
   
-##  <a name="find"></a>CMFCRibbonBaseElement::Find  
+##  <a name="find"></a>  CMFCRibbonBaseElement::Find  
  Zwraca określony wskaźnik wskazuje bieżący obiekt.  
   
 ```  
@@ -587,7 +582,7 @@ virtual CMFCRibbonBaseElement* Find(const CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pElement`  
+ [in] `pElement`  
  Wskaźnik do elementu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -595,7 +590,7 @@ virtual CMFCRibbonBaseElement* Find(const CMFCRibbonBaseElement* pElement);
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="findbydata"></a>CMFCRibbonBaseElement::FindByData  
+##  <a name="findbydata"></a>  CMFCRibbonBaseElement::FindByData  
  Pobiera wskaźnik do elementu wstążki, jeśli zawiera określone dane.  
   
 ```  
@@ -603,7 +598,7 @@ virtual CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`dwData`  
+ [in] `dwData`  
  Dane skojarzone z elementem wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -611,7 +606,7 @@ virtual CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData);
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="findbyid"></a>CMFCRibbonBaseElement::FindByID  
+##  <a name="findbyid"></a>  CMFCRibbonBaseElement::FindByID  
  Pobiera wskaźnik do elementu wstążki, jeśli ten element jest identyfikowany przez identyfikator określonego polecenia.  
   
 ```  
@@ -619,7 +614,7 @@ virtual CMFCRibbonBaseElement* FindByID(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`uiCmdID`  
+ [in] `uiCmdID`  
  Identyfikator polecenia dla elementu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -627,7 +622,7 @@ virtual CMFCRibbonBaseElement* FindByID(UINT uiCmdID);
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="findbyoriginal"></a>CMFCRibbonBaseElement::FindByOriginal  
+##  <a name="findbyoriginal"></a>  CMFCRibbonBaseElement::FindByOriginal  
  Pobiera wskaźnik do bieżącego elementu wstążki, jeśli jego oryginalny element wstążki zgodny z elementem określonym wstążki.  
   
 ```  
@@ -635,7 +630,7 @@ virtual CMFCRibbonBaseElement* FindByOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pOriginal`  
+ [in] `pOriginal`  
  Wskaźnik do elementu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -644,7 +639,7 @@ virtual CMFCRibbonBaseElement* FindByOriginal(CMFCRibbonBaseElement* pOriginal);
 ### <a name="remarks"></a>Uwagi  
  Elementów wstążki, które są kopiowane do innego kontenera zachować wskaźnik do oryginalnego elementu wstążki.  
   
-##  <a name="getcompactsize"></a>CMFCRibbonBaseElement::GetCompactSize  
+##  <a name="getcompactsize"></a>  CMFCRibbonBaseElement::GetCompactSize  
  Zwraca compact rozmiar elementu wstążki.  
   
 ```  
@@ -652,7 +647,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do kontekstu urządzenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -661,7 +656,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 > [!NOTE]
 >  Rozmiar compact oznacza obcięte element wstążki (wyświetla mały obraz lub obraz bez tekstu).  
   
-##  <a name="getdata"></a>CMFCRibbonBaseElement::GetData  
+##  <a name="getdata"></a>  CMFCRibbonBaseElement::GetData  
  Pobiera dane użytkownika skojarzonego z elementem wstążki.  
   
 ```  
@@ -671,7 +666,7 @@ DWORD_PTR GetData() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Dane zdefiniowane przez użytkownika skojarzonego z elementem wstążki.  
   
-##  <a name="getdescription"></a>CMFCRibbonBaseElement::GetDescription  
+##  <a name="getdescription"></a>  CMFCRibbonBaseElement::GetDescription  
  Zwraca opis elementu wstążki.  
   
 ```  
@@ -681,7 +676,7 @@ virtual CString GetDescription() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Opis elementu wstążki. Opis jest wyświetlany na pasku stanu, lub w etykietce narzędzia lub po kliknięciu przycisku menu, jeśli element wstążki znajduje się na [CMFCRibbonMainPanel klasy](../../mfc/reference/cmfcribbonmainpanel-class.md).  
   
-##  <a name="getdroppeddown"></a>CMFCRibbonBaseElement::GetDroppedDown  
+##  <a name="getdroppeddown"></a>  CMFCRibbonBaseElement::GetDroppedDown  
  Pobiera wskaźnik do elementu wstążki, jeśli jego menu podręczne jest rozwijana.  
   
 ```  
@@ -693,7 +688,7 @@ virtual CMFCRibbonBaseElement* GetDroppedDown();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getelements"></a>CMFCRibbonBaseElement::GetElements  
+##  <a name="getelements"></a>  CMFCRibbonBaseElement::GetElements  
  Dodaje bieżącego elementu wstążki do określonej tablicy.  
   
 ```  
@@ -702,12 +697,12 @@ virtual void GetElements(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [w, out]`arElements`  
+ [w, out] `arElements`  
  Tablica elementów wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getelementsbyid"></a>CMFCRibbonBaseElement::GetElementsByID  
+##  <a name="getelementsbyid"></a>  CMFCRibbonBaseElement::GetElementsByID  
  Dodaje bieżącego elementu wstążki do określonej tablicy, jeśli bieżący element wstążki zawiera identyfikator określonego polecenia.  
   
 ```  
@@ -717,15 +712,15 @@ virtual void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`uiCmdID`  
+ [in] `uiCmdID`  
  Identyfikator polecenia elementu wstążki.  
   
- [in]`arElements`  
+ [in] `arElements`  
  Tablica elementów wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="gethighlighted"></a>CMFCRibbonBaseElement::GetHighlighted  
+##  <a name="gethighlighted"></a>  CMFCRibbonBaseElement::GetHighlighted  
  Pobiera wskaźnik do elementu wstążki podświetlony.  
   
 ```  
@@ -737,7 +732,7 @@ virtual CMFCRibbonBaseElement* GetHighlighted();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getid"></a>CMFCRibbonBaseElement::GetID  
+##  <a name="getid"></a>  CMFCRibbonBaseElement::GetID  
  Zwraca identyfikator polecenia elementu wstążki.  
   
 ```  
@@ -747,7 +742,7 @@ UINT GetID() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Identyfikator polecenia elementu wstążki.  
   
-##  <a name="getimagesize"></a>CMFCRibbonBaseElement::GetImageSize  
+##  <a name="getimagesize"></a>  CMFCRibbonBaseElement::GetImageSize  
  Zwraca rozmiar obrazu elementu wstążki.  
   
 ```  
@@ -757,7 +752,7 @@ virtual CSize GetImageSize(RibbonImageType R) const;
 ### <a name="return-value"></a>Wartość zwracana  
  Rozmiar obrazu elementu wstążki.  
   
-##  <a name="getintermediatesize"></a>CMFCRibbonBaseElement::GetIntermediateSize  
+##  <a name="getintermediatesize"></a>  CMFCRibbonBaseElement::GetIntermediateSize  
  Zwraca rozmiar elementu wstążki w jego stan pośredni.  
   
 ```  
@@ -765,13 +760,13 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do kontekstu urządzenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Rozmiar elementu wstążki w jego stan pośredni.  
   
-##  <a name="getkeys"></a>CMFCRibbonBaseElement::GetKeys  
+##  <a name="getkeys"></a>  CMFCRibbonBaseElement::GetKeys  
  Zwraca właściwości keytip, skojarzone z elementem wstążki.  
   
 ```  
@@ -781,7 +776,7 @@ LPCTSTR GetKeys() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Właściwości keytip skojarzone z elementem wstążki.  
   
-##  <a name="getkeytiprect"></a>CMFCRibbonBaseElement::GetKeyTipRect  
+##  <a name="getkeytiprect"></a>  CMFCRibbonBaseElement::GetKeyTipRect  
  Pobiera prostokąt granic właściwości keytip elementu wstążki.  
   
 ```  
@@ -791,11 +786,11 @@ virtual CRect GetKeyTipRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do kontekstu urządzenia.  
   
- [in]`bIsMenu`  
- `TRUE`Jeśli element wstążki Wyświetla menu podręczne. w przeciwnym razie `FALSE`.  
+ [in] `bIsMenu`  
+ `TRUE` Jeśli element wstążki Wyświetla menu podręczne. w przeciwnym razie `FALSE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zawsze zwraca prostokąt o wartości 0.  
@@ -803,7 +798,7 @@ virtual CRect GetKeyTipRect(
 ### <a name="remarks"></a>Uwagi  
  Zastępuje tę metodę w klasie pochodnej, aby zwrócić prostokąt granic właściwości keytip.  
   
-##  <a name="getkeytipsize"></a>CMFCRibbonBaseElement::GetKeyTipSize  
+##  <a name="getkeytipsize"></a>  CMFCRibbonBaseElement::GetKeyTipSize  
  Pobiera rozmiar tekstu właściwości keytip.  
   
 ```  
@@ -811,7 +806,7 @@ virtual CSize GetKeyTipSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do kontekstu urządzenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -819,7 +814,7 @@ virtual CSize GetKeyTipSize(CDC* pDC);
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getlocationingroup"></a>CMFCRibbonBaseElement::GetLocationInGroup  
+##  <a name="getlocationingroup"></a>  CMFCRibbonBaseElement::GetLocationInGroup  
  Określa lokalizację wyświetlania elementu wstążki w grupie wstążki.  
   
 ```  
@@ -840,7 +835,7 @@ RibbonElementLocation GetLocationInGroup() const;
 ### <a name="remarks"></a>Uwagi  
  Grupy elementów wstążki tylko są wyrównane w poziomie.  
   
-##  <a name="getmenukeys"></a>CMFCRibbonBaseElement::GetMenuKeys  
+##  <a name="getmenukeys"></a>  CMFCRibbonBaseElement::GetMenuKeys  
  Zwraca właściwości keytip menu dla elementu wstążki.  
   
 ```  
@@ -853,7 +848,7 @@ LPCTSTR GetMenuKeys() const;
 ### <a name="remarks"></a>Uwagi  
  Gdy została wywołana, właściwości keytip menu wyświetla menu podręczne.  
   
-##  <a name="getnotifyid"></a>CMFCRibbonBaseElement::GetNotifyID  
+##  <a name="getnotifyid"></a>  CMFCRibbonBaseElement::GetNotifyID  
  Pobiera identyfikator polecenia powiadomień dla elementu wstążki.  
   
 ```  
@@ -865,7 +860,7 @@ virtual UINT GetNotifyID();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getoriginal"></a>CMFCRibbonBaseElement::GetOriginal  
+##  <a name="getoriginal"></a>  CMFCRibbonBaseElement::GetOriginal  
  Pobiera w oryginalnym elemencie wstążki.  
   
 ```  
@@ -878,7 +873,7 @@ CMFCRibbonBaseElement* GetOriginal() const;
 ### <a name="remarks"></a>Uwagi  
  Elementów wstążki, które są kopiowane do innego kontenera zachować wskaźnik do oryginalnego elementu wstążki.  
   
-##  <a name="getparentcategory"></a>CMFCRibbonBaseElement::GetParentCategory  
+##  <a name="getparentcategory"></a>  CMFCRibbonBaseElement::GetParentCategory  
  Pobiera kategorii wstążki dla elementu wstążki.  
   
 ```  
@@ -890,7 +885,7 @@ CMFCRibbonCategory* GetParentCategory() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getparentpanel"></a>CMFCRibbonBaseElement::GetParentPanel  
+##  <a name="getparentpanel"></a>  CMFCRibbonBaseElement::GetParentPanel  
  Pobiera panelu wstążki, który zawiera element wstążki.  
   
 ```  
@@ -902,7 +897,7 @@ virtual CMFCRibbonPanel* GetParentPanel() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getparentribbonbar"></a>CMFCRibbonBaseElement::GetParentRibbonBar  
+##  <a name="getparentribbonbar"></a>  CMFCRibbonBaseElement::GetParentRibbonBar  
  Pobiera pasek wstążki nadrzędnego dla elementu wstążki.  
   
 ```  
@@ -914,7 +909,7 @@ CMFCRibbonBar* GetParentRibbonBar() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getparentwnd"></a>CMFCRibbonBaseElement::GetParentWnd  
+##  <a name="getparentwnd"></a>  CMFCRibbonBaseElement::GetParentWnd  
  Pobiera okna nadrzędnego dla elementu wstążki.  
   
 ```  
@@ -927,7 +922,7 @@ virtual CWnd* GetParentWnd() const;
 ### <a name="remarks"></a>Uwagi  
  Okno nadrzędne dla elementu wstążki jest [klasy CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) lub [cmfcribbonpanelmenubar —](http://msdn.microsoft.com/en-us/7bd4b986-8b7b-493e-9746-bd3161b78581).  
   
-##  <a name="getpressed"></a>CMFCRibbonBaseElement::GetPressed  
+##  <a name="getpressed"></a>  CMFCRibbonBaseElement::GetPressed  
  Pobiera wskaźnik do elementu wstążki, gdy użytkownik naciśnie obecnie go.  
   
 ```  
@@ -939,7 +934,7 @@ virtual CMFCRibbonBaseElement* GetPressed();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getquickaccesstoolbarid"></a>CMFCRibbonBaseElement::GetQuickAccessToolBarID  
+##  <a name="getquickaccesstoolbarid"></a>  CMFCRibbonBaseElement::GetQuickAccessToolBarID  
  Pobiera identyfikator polecenia elementu wstążki, gdy znajduje się w pasku narzędzi Szybki dostęp.  
   
 ```  
@@ -951,7 +946,7 @@ virtual UINT GetQuickAccessToolBarID() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getrect"></a>CMFCRibbonBaseElement::GetRect  
+##  <a name="getrect"></a>  CMFCRibbonBaseElement::GetRect  
  Zwraca prostokąt ograniczający elementu wstążki.  
   
 ```  
@@ -961,7 +956,7 @@ CRect GetRect() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Prostokąt ograniczający elementu wstążki. Pozycja prostokąta jest we współrzędnych elementu nadrzędnego kontrolki wstążki.  
   
-##  <a name="getregularsize"></a>CMFCRibbonBaseElement::GetRegularSize  
+##  <a name="getregularsize"></a>  CMFCRibbonBaseElement::GetRegularSize  
  Zwraca zwykłego rozmiaru elementu wstążki.  
   
 ```  
@@ -969,7 +964,7 @@ virtual CSize GetRegularSize(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do kontekstu urządzenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -980,7 +975,7 @@ virtual CSize GetRegularSize(CDC* pDC) = 0;
 > [!NOTE]
 >  Zwykły rozmiar jest maksymalna liczba elementów wstążki.  
   
-##  <a name="getsize"></a>CMFCRibbonBaseElement::GetSize  
+##  <a name="getsize"></a>  CMFCRibbonBaseElement::GetSize  
  Zwraca bieżący rozmiar elementu wstążki.  
   
 ```  
@@ -988,13 +983,13 @@ virtual CSize GetSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do kontekstu urządzenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Bieżący rozmiar elementu wstążki.  
   
-##  <a name="gettext"></a>CMFCRibbonBaseElement::GetText  
+##  <a name="gettext"></a>  CMFCRibbonBaseElement::GetText  
  Zwraca tekst skojarzony z elementem wstążki.  
   
 ```  
@@ -1004,7 +999,7 @@ LPCTSTR GetText() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Tekst skojarzony z elementem wstążki.  
   
-##  <a name="gettooltiptext"></a>CMFCRibbonBaseElement::GetToolTipText  
+##  <a name="gettooltiptext"></a>  CMFCRibbonBaseElement::GetToolTipText  
  Zwraca tekst etykietki narzędzia elementu wstążki.  
   
 ```  
@@ -1014,7 +1009,7 @@ virtual CString GetToolTipText() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Tekst etykietki narzędzia elementu wstążki.  
   
-##  <a name="gettoplevelribbonbar"></a>CMFCRibbonBaseElement::GetTopLevelRibbonBar  
+##  <a name="gettoplevelribbonbar"></a>  CMFCRibbonBaseElement::GetTopLevelRibbonBar  
  Pobiera pasek najwyższego poziomu wstążki dla elementu wstążki.  
   
 ```  
@@ -1026,7 +1021,7 @@ CMFCRibbonBar* GetTopLevelRibbonBar() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="hascompactmode"></a>CMFCRibbonBaseElement::HasCompactMode  
+##  <a name="hascompactmode"></a>  CMFCRibbonBaseElement::HasCompactMode  
  Określa, czy element wstążki ma tryb kompaktowy.  
   
 ```  
@@ -1034,14 +1029,14 @@ virtual BOOL HasCompactMode() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli element wstążki ma tryb kompaktowy. `FALSE`w przeciwnym razie wartość.  
+ `TRUE` Jeśli element wstążki ma tryb kompaktowy. `FALSE` w przeciwnym razie wartość.  
   
 ### <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
 >  Tryb kompaktowy elementu powoduje wyświetlenie tylko mały obraz.  
   
-##  <a name="hasintermediatemode"></a>CMFCRibbonBaseElement::HasIntermediateMode  
+##  <a name="hasintermediatemode"></a>  CMFCRibbonBaseElement::HasIntermediateMode  
  Określa, czy element wstążki ma tryb pośrednich.  
   
 ```  
@@ -1049,11 +1044,11 @@ virtual BOOL HasIntermediateMode() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli element wstążki ma pośredniego tryb `FALSE` inaczej. W trybie pośrednie elementu wyświetla mały obraz i tekst po prawej stronie obrazu.  
+ `TRUE` Jeśli element wstążki ma pośredniego tryb `FALSE` inaczej. W trybie pośrednie elementu wyświetla mały obraz i tekst po prawej stronie obrazu.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="haslargemode"></a>CMFCRibbonBaseElement::HasLargeMode  
+##  <a name="haslargemode"></a>  CMFCRibbonBaseElement::HasLargeMode  
  Określa, czy element wstążki ma trybie duży.  
   
 ```  
@@ -1061,12 +1056,12 @@ virtual BOOL HasLargeMode() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli element wstążki ma trybie duży. `FALSE`w przeciwnym razie wartość.  
+ `TRUE` Jeśli element wstążki ma trybie duży. `FALSE` w przeciwnym razie wartość.  
   
 ### <a name="remarks"></a>Uwagi  
  W trybie duży elementu można podjąć pełnej wysokości panelu nadrzędnego.  
   
-##  <a name="hasmenu"></a>CMFCRibbonBaseElement::HasMenu  
+##  <a name="hasmenu"></a>  CMFCRibbonBaseElement::HasMenu  
  Wskazuje, czy element wstążki menu.  
   
 ```  
@@ -1079,7 +1074,7 @@ virtual BOOL HasMenu() const;
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda zawsze zwraca wartość `FALSE`. Zastępuje tę metodę w klasie pochodnej, aby wskazać, czy element wstążki zawiera menu.  
   
-##  <a name="hittest"></a>CMFCRibbonBaseElement::HitTest  
+##  <a name="hittest"></a>  CMFCRibbonBaseElement::HitTest  
  Pobiera wskaźnik do elementu wstążki, jeśli określony punkt znajduje się w nim.  
   
 ```  
@@ -1087,7 +1082,7 @@ virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`point`  
+ [in] `point`  
  Ten parametr nie jest używany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1096,7 +1091,7 @@ virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda zawsze zwraca prawidłowego wskaźnika do elementu wstążki, jeśli istnieje. Zastępuje tę metodę, aby wskazać, czy punkt znajduje się w elemencie wstążki.  
   
-##  <a name="isalignbycolumn"></a>CMFCRibbonBaseElement::IsAlignByColumn  
+##  <a name="isalignbycolumn"></a>  CMFCRibbonBaseElement::IsAlignByColumn  
  Wskazuje, czy element wstążki jest wyrównane w pionie z innymi elementami Wstążki.  
   
 ```  
@@ -1109,7 +1104,7 @@ virtual BOOL IsAlignByColumn() const;
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda zawsze zwraca wartość `TRUE`. Zastępuje tę metodę w klasie pochodnej, aby wskazać, czy element pochodny wstążki jest wyrównane w pionie z innymi elementami Wstążki.  
   
-##  <a name="isalwayslargeimage"></a>CMFCRibbonBaseElement::IsAlwaysLargeImage  
+##  <a name="isalwayslargeimage"></a>  CMFCRibbonBaseElement::IsAlwaysLargeImage  
  Wskazuje, czy rozmiar obrazu elementu wstążki zawsze jest duża.  
   
 ```  
@@ -1117,12 +1112,12 @@ virtual BOOL IsAlwaysLargeImage() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli element wstążki rozmiar obrazu jest zawsze duże; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli element wstążki rozmiar obrazu jest zawsze duże; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Duży obraz rozmiar to 32 x 32 piksele.  
   
-##  <a name="isautorepeatmode"></a>CMFCRibbonBaseElement::IsAutoRepeatMode  
+##  <a name="isautorepeatmode"></a>  CMFCRibbonBaseElement::IsAutoRepeatMode  
  Wskazuje, czy element wstążki jest w trybie powtarzania automatycznie.  
   
 ```  
@@ -1130,7 +1125,7 @@ virtual BOOL IsAutoRepeatMode(int& nDelay) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nDelay`  
+ [in] `nDelay`  
  Ten parametr nie jest używany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1141,7 +1136,7 @@ virtual BOOL IsAutoRepeatMode(int& nDelay) const;
   
  W automatycznie trybie powtarzania, element wstążki odpowiada w określonych interwałach mierzony w milisekundach, do danych wejściowych przez użytkownika.  
   
-##  <a name="ischecked"></a>CMFCRibbonBaseElement::IsChecked  
+##  <a name="ischecked"></a>  CMFCRibbonBaseElement::IsChecked  
  Określa, czy jest zaznaczony element wstążki.  
   
 ```  
@@ -1149,9 +1144,9 @@ virtual BOOL IsChecked() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli zaznaczono element wstążki; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli zaznaczono element wstążki; w przeciwnym razie `FALSE`.  
   
-##  <a name="iscompactmode"></a>CMFCRibbonBaseElement::IsCompactMode  
+##  <a name="iscompactmode"></a>  CMFCRibbonBaseElement::IsCompactMode  
  Określa, czy element wstążki jest w trybie kompaktowym.  
   
 ```  
@@ -1159,9 +1154,9 @@ BOOL IsCompactMode() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli element wstążki jest w trybie kompaktowym; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli element wstążki jest w trybie kompaktowym; w przeciwnym razie `FALSE`.  
   
-##  <a name="isdefaultmenulook"></a>CMFCRibbonBaseElement::IsDefaultMenuLook  
+##  <a name="isdefaultmenulook"></a>  CMFCRibbonBaseElement::IsDefaultMenuLook  
  Wskazuje, czy element wstążki ustawienia są wyświetlane jako podręcznego polecenia.  
   
 ```  
@@ -1169,11 +1164,11 @@ BOOL IsDefaultMenuLook() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli element wstążki jest ustawiony na wartość są wyświetlane jako polecenia wyskakujących; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli element wstążki jest ustawiony na wartość są wyświetlane jako polecenia wyskakujących; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="isdisabled"></a>CMFCRibbonBaseElement::IsDisabled  
+##  <a name="isdisabled"></a>  CMFCRibbonBaseElement::IsDisabled  
  Określa, czy element wstążki jest wyłączone.  
   
 ```  
@@ -1181,9 +1176,9 @@ virtual BOOL IsDisabled() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli element wstążki jest wyłączony; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli element wstążki jest wyłączony; w przeciwnym razie `FALSE`.  
   
-##  <a name="isdroppeddown"></a>CMFCRibbonBaseElement::IsDroppedDown  
+##  <a name="isdroppeddown"></a>  CMFCRibbonBaseElement::IsDroppedDown  
  Określa, czy element wstążki Wyświetla menu podręczne i jest rozwijana.  
   
 ```  
@@ -1191,9 +1186,9 @@ virtual BOOL IsDroppedDown() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli element wstążki jest rozwijana i wyświetla menu podręczne; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli element wstążki jest rozwijana i wyświetla menu podręczne; w przeciwnym razie `FALSE`.  
   
-##  <a name="isfocused"></a>CMFCRibbonBaseElement::IsFocused  
+##  <a name="isfocused"></a>  CMFCRibbonBaseElement::IsFocused  
  Określa, czy element wstążki ma fokus.  
   
 ```  
@@ -1201,9 +1196,9 @@ virtual BOOL IsFocused() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli element wstążki ma fokus; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli element wstążki ma fokus; w przeciwnym razie `FALSE`.  
   
-##  <a name="isgalleryicon"></a>CMFCRibbonBaseElement::IsGalleryIcon  
+##  <a name="isgalleryicon"></a>  CMFCRibbonBaseElement::IsGalleryIcon  
  Wskazuje, czy element wstążki znajduje się w galerii wstążki.  
   
 ```  
@@ -1216,7 +1211,7 @@ virtual BOOL IsGalleryIcon() const;
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda zawsze zwraca wartość `FALSE`. Zastępuje tę metodę w klasie pochodnej, aby wskazać, czy element wstążki znajduje się w galerii wstążki.  
   
-##  <a name="ishighlighted"></a>CMFCRibbonBaseElement::IsHighlighted  
+##  <a name="ishighlighted"></a>  CMFCRibbonBaseElement::IsHighlighted  
  Określa, czy jest wyróżniony element wstążki.  
   
 ```  
@@ -1224,11 +1219,11 @@ virtual BOOL IsHighlighted() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli element wstążki jest wyróżniony; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli element wstążki jest wyróżniony; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="isintermediatemode"></a>CMFCRibbonBaseElement::IsIntermediateMode  
+##  <a name="isintermediatemode"></a>  CMFCRibbonBaseElement::IsIntermediateMode  
  Wskazuje, czy bieżący obraz dla elementu wstążki jest pośrednie rozmiar.  
   
 ```  
@@ -1236,12 +1231,12 @@ BOOL IsIntermediateMode() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli obraz dla elementu wstążki jest pośrednie rozmiaru. w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli obraz dla elementu wstążki jest pośrednie rozmiaru. w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Rozmiar obrazu pośredniego jest 16 x 16 pikseli.  
   
-##  <a name="islargemode"></a>CMFCRibbonBaseElement::IsLargeMode  
+##  <a name="islargemode"></a>  CMFCRibbonBaseElement::IsLargeMode  
  Wskazuje, czy bieżący obraz dla elementu wstążki jest duży rozmiar.  
   
 ```  
@@ -1249,12 +1244,12 @@ BOOL IsLargeMode() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli obraz dla elementu wstążki jest duży rozmiar; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli obraz dla elementu wstążki jest duży rozmiar; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Duży obraz rozmiar to 32 x 32 piksele.  
   
-##  <a name="ismenumode"></a>CMFCRibbonBaseElement::IsMenuMode  
+##  <a name="ismenumode"></a>  CMFCRibbonBaseElement::IsMenuMode  
  Wskazuje, czy element wstążki znajduje się w menu.  
   
 ```  
@@ -1262,11 +1257,11 @@ BOOL IsMenuMode() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli element wstążki znajduje się w menu. w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli element wstążki znajduje się w menu. w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="ispressed"></a>CMFCRibbonBaseElement::IsPressed  
+##  <a name="ispressed"></a>  CMFCRibbonBaseElement::IsPressed  
  Wskazuje, czy użytkownik kliknął element wstążki.  
   
 ```  
@@ -1274,9 +1269,9 @@ virtual BOOL IsPressed() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli użytkownik kliknął element wstążki; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli użytkownik kliknął element wstążki; w przeciwnym razie `FALSE`.  
   
-##  <a name="isqatmode"></a>CMFCRibbonBaseElement::IsQATMode  
+##  <a name="isqatmode"></a>  CMFCRibbonBaseElement::IsQATMode  
  Wskazuje, czy element wstążki znajduje się w pasku narzędzi Szybki dostęp.  
   
 ```  
@@ -1284,11 +1279,11 @@ BOOL IsQATMode() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli element wstążki znajduje się w pasku narzędzi Szybki dostęp; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli element wstążki znajduje się w pasku narzędzi Szybki dostęp; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="isseparator"></a>CMFCRibbonBaseElement::IsSeparator  
+##  <a name="isseparator"></a>  CMFCRibbonBaseElement::IsSeparator  
  Wskazuje, czy element wstążki jest wyświetlana separatora.  
   
 ```  
@@ -1296,11 +1291,11 @@ virtual BOOL IsSeparator() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli element wstążki jest wyświetlana separator; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli element wstążki jest wyświetlana separator; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="isshowgroupborder"></a>CMFCRibbonBaseElement::IsShowGroupBorder  
+##  <a name="isshowgroupborder"></a>  CMFCRibbonBaseElement::IsShowGroupBorder  
  Wskazuje, czy element wstążki znajduje się w grupie, która zawiera typowe obramowanie.  
   
 ```  
@@ -1308,11 +1303,11 @@ BOOL IsShowGroupBorder() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli element wstążki znajduje się w grupie, która wyświetla wspólną granicę; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli element wstążki znajduje się w grupie, która wyświetla wspólną granicę; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="isshowtooltiponbottom"></a>CMFCRibbonBaseElement::IsShowTooltipOnBottom  
+##  <a name="isshowtooltiponbottom"></a>  CMFCRibbonBaseElement::IsShowTooltipOnBottom  
  Wskazuje, czy element tooltip jest wyświetlany w elemencie wstążki.  
   
 ```  
@@ -1320,11 +1315,11 @@ virtual BOOL IsShowTooltipOnBottom() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli element tooltip jest wyświetlany w elemencie wstążki; `FALSE` Jeśli etykietka narzędzia jest wyświetlana w pobliżu wskaźnika.  
+ `TRUE` Jeśli element tooltip jest wyświetlany w elemencie wstążki; `FALSE` Jeśli etykietka narzędzia jest wyświetlana w pobliżu wskaźnika.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="istabstop"></a>CMFCRibbonBaseElement::IsTabStop  
+##  <a name="istabstop"></a>  CMFCRibbonBaseElement::IsTabStop  
  Wskazuje, czy element wstążki można wybrać za pomocą klawiatury.  
   
 ```  
@@ -1337,7 +1332,7 @@ virtual BOOL IsTabStop() const;
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda zawsze zwraca wartość `TRUE`. Zastępuje tę metodę, aby wskazać, czy element wstążki można wybrać za pomocą klawiatury.  
   
-##  <a name="istextalwaysonright"></a>CMFCRibbonBaseElement::IsTextAlwaysOnRight  
+##  <a name="istextalwaysonright"></a>  CMFCRibbonBaseElement::IsTextAlwaysOnRight  
  Wskazuje, czy po prawej stronie jest wyświetlany tekst elementu wstążki.  
   
 ```  
@@ -1345,11 +1340,11 @@ BOOL IsTextAlwaysOnRight() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli tekst elementu wstążki jest wyświetlany po prawej stronie; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli tekst elementu wstążki jest wyświetlany po prawej stronie; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="isvisible"></a>CMFCRibbonBaseElement::IsVisible  
+##  <a name="isvisible"></a>  CMFCRibbonBaseElement::IsVisible  
  Wskazuje, czy element wstążki jest aktualnie wyświetlany.  
   
 ```  
@@ -1357,11 +1352,11 @@ BOOL IsVisible() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli element wstążki są obecnie wyświetlane; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli element wstążki są obecnie wyświetlane; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="iswholerowheight"></a>CMFCRibbonBaseElement::IsWholeRowHeight  
+##  <a name="iswholerowheight"></a>  CMFCRibbonBaseElement::IsWholeRowHeight  
  Wskazuje, czy wysokość wyświetlania elementu wstążki jest taka sama jak wysokość wyświetlania panelu wstążki, który go zawiera.  
   
 ```  
@@ -1374,7 +1369,7 @@ virtual BOOL IsWholeRowHeight() const;
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda zawsze zwraca wartość `FALSE`. Zastępuje tę metodę, aby wskazać, czy wysokość wyświetlania elementu wstążki jest taka sama jak wysokość wyświetlania panelu wstążki, który go zawiera.  
   
-##  <a name="notifycommand"></a>CMFCRibbonBaseElement::NotifyCommand  
+##  <a name="notifycommand"></a>  CMFCRibbonBaseElement::NotifyCommand  
  Wysyła powiadomienie polecenia do okna nadrzędnego elementu wstążki.  
   
 ```  
@@ -1382,15 +1377,15 @@ BOOL NotifyCommand(BOOL bWithDelay = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bWithDelay`  
- `TRUE`Aby dodać powiadomienia polecenie do kolejki komunikatów okna nadrzędnego; `FALSE` można natychmiast wysłać wiadomości do okna nadrzędnego.  
+ [in] `bWithDelay`  
+ `TRUE` Aby dodać powiadomienia polecenie do kolejki komunikatów okna nadrzędnego; `FALSE` można natychmiast wysłać wiadomości do okna nadrzędnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli wiadomość została wysłana; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli wiadomość została wysłana; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="notifyhighlightlistitem"></a>CMFCRibbonBaseElement::NotifyHighlightListItem  
+##  <a name="notifyhighlightlistitem"></a>  CMFCRibbonBaseElement::NotifyHighlightListItem  
  Powiadamia okno nadrzędne paska wstążki, gdy użytkownik wyróżnia element wstążki, który znajduje się na liście.  
   
 ```  
@@ -1398,12 +1393,12 @@ virtual void NotifyHighlightListItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nIndex`  
+ [in] `nIndex`  
  Indeks elementu wstążki na liście.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="onaddtoqatoolbar"></a>CMFCRibbonBaseElement::OnAddToQAToolbar  
+##  <a name="onaddtoqatoolbar"></a>  CMFCRibbonBaseElement::OnAddToQAToolbar  
  Dodaje element wstążki do paska narzędzi Szybki dostęp określony.  
   
 ```  
@@ -1411,7 +1406,7 @@ virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`qat`  
+ [in] `qat`  
  Pasek narzędzi Szybki dostęp.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1419,7 +1414,7 @@ virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="onafterchangerect"></a>CMFCRibbonBaseElement::OnAfterChangeRect  
+##  <a name="onafterchangerect"></a>  CMFCRibbonBaseElement::OnAfterChangeRect  
  Aktualizuje etykietka narzędzia elementu wstążki.  
   
 ```  
@@ -1427,13 +1422,13 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Ten parametr nie jest używany.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda aktualizacji etykietka narzędzia elementu wstążki. Zastępuje tę metodę, aby zaktualizować element wstążki po zmianie jego prostokątny obszar wyświetlania.  
   
-##  <a name="onautorepeat"></a>CMFCRibbonBaseElement::OnAutoRepeat  
+##  <a name="onautorepeat"></a>  CMFCRibbonBaseElement::OnAutoRepeat  
  Aktualizuje element wstążki w odpowiedzi na dane wejściowe przez użytkownika.  
   
 ```  
@@ -1446,7 +1441,7 @@ virtual BOOL OnAutoRepeat();
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda zawsze zwracany `FALSE`. Zastępuje tę metodę do przetwarzania danych wejściowych przez użytkownika.  
   
-##  <a name="oncalctextsize"></a>CMFCRibbonBaseElement::OnCalcTextSize  
+##  <a name="oncalctextsize"></a>  CMFCRibbonBaseElement::OnCalcTextSize  
  Oblicza rozmiar tekst elementu wstążki.  
   
 ```  
@@ -1454,13 +1449,13 @@ virtual void OnCalcTextSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Ten parametr nie jest używany.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda nie działa. Zastępuje tę metodę do obliczania rozmiaru tekst elementu wstążki.  
   
-##  <a name="onchangemenuhighlight"></a>CMFCRibbonBaseElement::OnChangeMenuHighlight  
+##  <a name="onchangemenuhighlight"></a>  CMFCRibbonBaseElement::OnChangeMenuHighlight  
  Wywoływane przez platformę, gdy zaznaczenie dla elementu wstążki, który znajduje się w menu.  
   
 ```  
@@ -1469,16 +1464,16 @@ virtual void OnChangeMenuHighlight(CMFCRibbonPanelMenuBar* pPanelMenuBar
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pPanelMenuBar`  
+ [in] `pPanelMenuBar`  
  Ten parametr nie jest używany.  
   
- [in]`pHot`  
+ [in] `pHot`  
  Ten parametr nie jest używany.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda nie działa. Zastępuje tę metodę, aby zaktualizować element wstążki, który znajduje się w menu, gdy zmieni się zaznaczenie.  
   
-##  <a name="ondraw"></a>CMFCRibbonBaseElement::OnDraw  
+##  <a name="ondraw"></a>  CMFCRibbonBaseElement::OnDraw  
  Wywoływane przez platformę, by narysować elementem wstążki.  
   
 ```  
@@ -1486,13 +1481,13 @@ virtual void OnDraw(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do kontekstu urządzenia.  
   
 ### <a name="remarks"></a>Uwagi  
  Przesłania tę metodę w klasie pochodnej, jeśli chcesz dostosować rysowania elementu określonych wstążki.  
   
-##  <a name="ondrawkeytip"></a>CMFCRibbonBaseElement::OnDrawKeyTip  
+##  <a name="ondrawkeytip"></a>  CMFCRibbonBaseElement::OnDrawKeyTip  
  Wywoływane przez platformę, by narysować właściwości keytip elementu wstążki.  
   
 ```  
@@ -1503,18 +1498,18 @@ virtual void OnDrawKeyTip(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do kontekstu urządzenia.  
   
- [in]`rect`  
+ [in] `rect`  
  Prostokąt granic dla właściwości keytip.  
   
- [in]`bIsMenu`  
- `TRUE`w przypadku właściwości keytip dla przycisku menu podręcznego; w przeciwnym razie `FALSE`.  
+ [in] `bIsMenu`  
+ `TRUE` w przypadku właściwości keytip dla przycisku menu podręcznego; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="ondrawmenuimage"></a>CMFCRibbonBaseElement::OnDrawMenuImage  
+##  <a name="ondrawmenuimage"></a>  CMFCRibbonBaseElement::OnDrawMenuImage  
  Wywoływane przez platformę, podczas rysowania obrazu menu dla elementu wstążki.  
   
 ```  
@@ -1524,10 +1519,10 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do kontekstu urządzenia.  
   
- [in]`rect`  
+ [in] `rect`  
  Menu obrazu prostokąta.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1535,7 +1530,7 @@ virtual BOOL OnDrawMenuImage(
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="ondrawonlist"></a>CMFCRibbonBaseElement::OnDrawOnList  
+##  <a name="ondrawonlist"></a>  CMFCRibbonBaseElement::OnDrawOnList  
  Wywoływane przez platformę, by narysować elementem wstążki w polu listy poleceń.  
   
 ```  
@@ -1549,28 +1544,28 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do kontekstu urządzenia dla elementu wstążki.  
   
- [in]`strText`  
+ [in] `strText`  
  Wyświetlany tekst.  
   
- [in]`nTextOffset`  
+ [in] `nTextOffset`  
  Odległość w pikselach, po lewej stronie pola listy do wyświetlania tekstu.  
   
- [in]`rect`  
+ [in] `rect`  
  Prostokątny obszar wyświetlania elementu wstążki.  
   
- [in]`bIsSelected`  
+ [in] `bIsSelected`  
  Ten parametr nie jest używany.  
   
- [in]`bHighlighted`  
+ [in] `bHighlighted`  
  Ten parametr nie jest używany.  
   
 ### <a name="remarks"></a>Uwagi  
  Pole listy poleceń wyświetla elementów wstążki, aby umożliwić użytkownikom Dostosuj pasek narzędzi Szybki dostęp.  
   
-##  <a name="onkey"></a>CMFCRibbonBaseElement::OnKey  
+##  <a name="onkey"></a>  CMFCRibbonBaseElement::OnKey  
  Wywoływane przez platformę, gdy użytkownik naciśnie właściwości keytip i wstążki element ma fokus.  
   
 ```  
@@ -1578,15 +1573,15 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bIsMenuKey`  
- `TRUE`Jeśli właściwości keytip Wyświetla menu podręczne; w przeciwnym razie `FALSE`.  
+ [in] `bIsMenuKey`  
+ `TRUE` Jeśli właściwości keytip Wyświetla menu podręczne; w przeciwnym razie `FALSE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli zdarzenie zostało obsłużone; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli zdarzenie zostało obsłużone; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="onmenukey"></a>CMFCRibbonBaseElement::OnMenuKey  
+##  <a name="onmenukey"></a>  CMFCRibbonBaseElement::OnMenuKey  
  Wywoływane przez platformę, gdy użytkownik naciśnie właściwości keytip menu na panelu głównego.  
   
 ```  
@@ -1594,7 +1589,7 @@ virtual BOOL OnMenuKey(UINT nUpperChar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nUpperChar`  
+ [in] `nUpperChar`  
  Ten parametr nie jest używany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1603,7 +1598,7 @@ virtual BOOL OnMenuKey(UINT nUpperChar);
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda zawsze zwraca wartość `FALSE`. Przesłonić tę metodę, aby odpowiadać, gdy użytkownik naciśnie właściwości keytip menu na panelu głównego.  
   
-##  <a name="onprocesskey"></a>CMFCRibbonBaseElement::OnProcessKey  
+##  <a name="onprocesskey"></a>  CMFCRibbonBaseElement::OnProcessKey  
  Wywoływane przez platformę, gdy użytkownik naciśnie klawisz skrótu.  
   
 ```  
@@ -1611,7 +1606,7 @@ virtual BOOL OnProcessKey(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nChar`  
+ [in] `nChar`  
  Ten parametr nie jest używany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1620,7 +1615,7 @@ virtual BOOL OnProcessKey(UINT nChar);
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę, jeśli chcesz, aby element wstążki, aby przetworzyć klawisza skrótu.  
   
-##  <a name="onrtlchanged"></a>CMFCRibbonBaseElement::OnRTLChanged  
+##  <a name="onrtlchanged"></a>  CMFCRibbonBaseElement::OnRTLChanged  
  Wywoływane przez platformę, gdy układ zmienia kierunku.  
   
 ```  
@@ -1628,13 +1623,13 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bIsRTL`  
+ [in] `bIsRTL`  
  Ten parametr nie jest używany.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda nie działa. Zastępuje tę metodę, aby dopasować element wstążki zmianie kierunku układu. Domyślny kierunek układu jest od lewej do prawej.  
   
-##  <a name="onsetfocus"></a>CMFCRibbonBaseElement::OnSetFocus  
+##  <a name="onsetfocus"></a>  CMFCRibbonBaseElement::OnSetFocus  
  Wywoływane przez platformę, gdy element wstążki otrzymuje lub utraci fokus wprowadzania.  
   
 ```  
@@ -1644,7 +1639,7 @@ virtual void OnSetFocus(BOOL B);
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w klasie pochodnej, jeśli chcesz, aby aplikacja do obsługi fokusu elementu wstążki.  
   
-##  <a name="onshow"></a>CMFCRibbonBaseElement::OnShow  
+##  <a name="onshow"></a>  CMFCRibbonBaseElement::OnShow  
  Wywoływane przez platformę, by pokazać lub ukryć element wstążki.  
   
 ```  
@@ -1652,13 +1647,13 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bShow`  
+ [in] `bShow`  
  Ten parametr nie jest używany.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda nie działa. Zastępuje tę metodę, aby wyświetlić lub ukryć element wstążki.  
   
-##  <a name="onshowpopupmenu"></a>CMFCRibbonBaseElement::OnShowPopupMenu  
+##  <a name="onshowpopupmenu"></a>  CMFCRibbonBaseElement::OnShowPopupMenu  
  Wywoływane przez platformę przed elementem wstążki zawiera menu podręczne.  
   
 ```  
@@ -1668,7 +1663,7 @@ virtual void OnShowPopupMenu();
 ### <a name="remarks"></a>Uwagi  
  Ta metoda powiadamia okno nadrzędne paska wstążki, czy element wstążki będzie wyświetlane menu podręczne.  
   
-##  <a name="postmenucommand"></a>CMFCRibbonBaseElement::PostMenuCommand  
+##  <a name="postmenucommand"></a>  CMFCRibbonBaseElement::PostMenuCommand  
  Zamyka menu podręczne dla elementu Wstążki i wysyła komunikat zamknięcia do menu nadrzędnego.  
   
 ```  
@@ -1676,13 +1671,13 @@ void PostMenuCommand(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`uiCmdId`  
+ [in] `uiCmdId`  
  Parametr nie jest używany.  
   
 ### <a name="remarks"></a>Uwagi  
  Zamknij komunikat jest wysyłany tylko, jeśli element wstążki znajduje się w menu podręcznym.  
   
-##  <a name="redraw"></a>CMFCRibbonBaseElement::Redraw  
+##  <a name="redraw"></a>  CMFCRibbonBaseElement::Redraw  
  Aktualizuje wyświetlania elementu wstążki.  
   
 ```  
@@ -1692,7 +1687,7 @@ virtual void Redraw();
 ### <a name="remarks"></a>Uwagi  
  Ta metoda ponownie Rysuje prostokątny obszar wyświetlania elementu wstążki przez wywołanie metody [CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911) z `RDW_INVALIDATE`, `RDW_ERASE`, i `RDW_UPDATENOW` flagi zestawu.  
   
-##  <a name="setaccdata"></a>CMFCRibbonBaseElement::SetACCData  
+##  <a name="setaccdata"></a>  CMFCRibbonBaseElement::SetACCData  
  Ustawia dane ułatwień dostępu dla elementu wstążki.  
   
 ```  
@@ -1714,7 +1709,7 @@ virtual BOOL SetACCData(
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda ustawia dane ułatwień dostępu dla elementu Wstążki i zawsze zwraca `TRUE`. Zastępuje tę metodę, aby ustawić dostępność danych i zwracają wartość wskazuje powodzenie lub niepowodzenie.  
   
-##  <a name="setcompactmode"></a>CMFCRibbonBaseElement::SetCompactMode  
+##  <a name="setcompactmode"></a>  CMFCRibbonBaseElement::SetCompactMode  
  Ustawia rozmiar wyświetlania elementu wstążki.  
   
 ```  
@@ -1722,8 +1717,8 @@ virtual void SetCompactMode(BOOL bCompactMode = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bCompactMode`  
- `TRUE`Aby zmniejszyć rozmiar wyświetlania elementu wstążki; `FALSE` zwiększyć rozmiar wyświetlania elementu wstążki.  
+ [in] `bCompactMode`  
+ `TRUE` Aby zmniejszyć rozmiar wyświetlania elementu wstążki; `FALSE` zwiększyć rozmiar wyświetlania elementu wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
  Poniższa tabela zawiera podsumowanie logikę tej metody.  
@@ -1735,7 +1730,7 @@ virtual void SetCompactMode(BOOL bCompactMode = TRUE);
 |`TRUE`|Duże|Pośredni, jeśli jest to możliwe.|  
 |`FALSE`|CD|Pośredni, jeśli jest to możliwe; w przeciwnym razie duże.|  
   
-##  <a name="setdata"></a>CMFCRibbonBaseElement::SetData  
+##  <a name="setdata"></a>  CMFCRibbonBaseElement::SetData  
  Kojarzy elementu danych z elementem wstążki.  
   
 ```  
@@ -1743,10 +1738,10 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`dwData`  
+ [in] `dwData`  
  Wartość danych.  
   
-##  <a name="setdefaultmenulook"></a>CMFCRibbonBaseElement::SetDefaultMenuLook  
+##  <a name="setdefaultmenulook"></a>  CMFCRibbonBaseElement::SetDefaultMenuLook  
  Ustawia element wstążki były wyświetlane jako podręcznego polecenia.  
   
 ```  
@@ -1754,12 +1749,12 @@ void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bIsDefaultMenuLook`  
- `TRUE`można ustawić element wstążki były wyświetlane jako podręcznego polecenia; w przeciwnym razie `FALSE`.  
+ [in] `bIsDefaultMenuLook`  
+ `TRUE` można ustawić element wstążki były wyświetlane jako podręcznego polecenia; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setdescription"></a>CMFCRibbonBaseElement::SetDescription  
+##  <a name="setdescription"></a>  CMFCRibbonBaseElement::SetDescription  
  Ustawia opis elementu wstążki.  
   
 ```  
@@ -1767,13 +1762,13 @@ virtual void SetDescription(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszText`  
+ [in] `lpszText`  
  Opis elementu wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
  Platformę wyświetla nowy opis na pasku stanu, lub w etykietce narzędzia lub po kliknięciu przycisku menu.  
   
-##  <a name="setid"></a>CMFCRibbonBaseElement::SetID  
+##  <a name="setid"></a>  CMFCRibbonBaseElement::SetID  
  Ustawia identyfikator polecenia elementu wstążki.  
   
 ```  
@@ -1781,10 +1776,10 @@ virtual void SetID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nID`  
+ [in] `nID`  
  Identyfikator polecenia.  
   
-##  <a name="setinitialmode"></a>CMFCRibbonBaseElement::SetInitialMode  
+##  <a name="setinitialmode"></a>  CMFCRibbonBaseElement::SetInitialMode  
  Ustawia rozmiar początkowy dla elementu wstążki.  
   
 ```  
@@ -1792,13 +1787,13 @@ virtual void SetInitialMode(BOOL bOneRow = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bOneRow`  
- `TRUE`Aby ograniczyć rozmiar wyświetlania dla elementów wstążki, aby skompaktować lub pośredniego; w przeciwnym razie `FALSE`.  
+ [in] `bOneRow`  
+ `TRUE` Aby ograniczyć rozmiar wyświetlania dla elementów wstążki, aby skompaktować lub pośredniego; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Rozmiar wyświetlania elementów wstążki można compact, pośrednie lub duży.  
   
-##  <a name="setkeys"></a>CMFCRibbonBaseElement::SetKeys  
+##  <a name="setkeys"></a>  CMFCRibbonBaseElement::SetKeys  
  Ustawia porady dotyczące klawiszy dla elementu wstążki.  
   
 ```  
@@ -1808,13 +1803,13 @@ virtual void SetKeys(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszKeys`  
+ [in] `lpszKeys`  
  Właściwości keytip elementu wstążki.  
   
- [in]`lpszMenuKeys`  
+ [in] `lpszMenuKeys`  
  Właściwości keytip menu wyskakującego elementu wstążki.  
   
-##  <a name="setoriginal"></a>CMFCRibbonBaseElement::SetOriginal  
+##  <a name="setoriginal"></a>  CMFCRibbonBaseElement::SetOriginal  
  Ustawia w oryginalnym elemencie wstążki dla elementu wstążki.  
   
 ```  
@@ -1822,13 +1817,13 @@ virtual void SetOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pOriginal`  
+ [in] `pOriginal`  
  Wskaźnik do elementu wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
  Elementów wstążki, które są kopiowane do innego kontenera zachować wskaźnik do oryginalnego elementu wstążki.  
   
-##  <a name="setparentcategory"></a>CMFCRibbonBaseElement::SetParentCategory  
+##  <a name="setparentcategory"></a>  CMFCRibbonBaseElement::SetParentCategory  
  Ustawia kategoria nadrzędnego dla elementu wstążki.  
   
 ```  
@@ -1836,13 +1831,13 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pParent`  
+ [in] `pParent`  
  Wskaźnik do kategorii wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
  Grupy z kartami w formantów wstążki noszą nazwę kategorii.  
   
-##  <a name="setparentmenu"></a>CMFCRibbonBaseElement::SetParentMenu  
+##  <a name="setparentmenu"></a>  CMFCRibbonBaseElement::SetParentMenu  
  Ustawia element nadrzędny kontenera menu dla elementu wstążki.  
   
 ```  
@@ -1850,12 +1845,12 @@ virtual void SetParentMenu(CMFCRibbonPanelMenuBar* pMenuBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pMenuBar`  
+ [in] `pMenuBar`  
  Menu nadrzędnego.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setparentribbonbar"></a>CMFCRibbonBaseElement::SetParentRibbonBar  
+##  <a name="setparentribbonbar"></a>  CMFCRibbonBaseElement::SetParentRibbonBar  
  Ustawia pasek wstążki nadrzędnego dla elementu wstążki.  
   
 ```  
@@ -1863,12 +1858,12 @@ virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pRibbonBar`  
+ [in] `pRibbonBar`  
  Wskaźnik do nadrzędnego pasek wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setrect"></a>CMFCRibbonBaseElement::SetRect  
+##  <a name="setrect"></a>  CMFCRibbonBaseElement::SetRect  
  Ustawia wymiary prostokątny obszar wyświetlania elementu wstążki.  
   
 ```  
@@ -1876,12 +1871,12 @@ void SetRect(CRect rect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`rect`  
+ [in] `rect`  
  Wymiary prostokąta.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="settext"></a>CMFCRibbonBaseElement::SetText  
+##  <a name="settext"></a>  CMFCRibbonBaseElement::SetText  
  Ustawia tekst i właściwości keytip elementu wstążki.  
   
 ```  
@@ -1889,7 +1884,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszText`  
+ [in] `lpszText`  
  Tekst i właściwości keytip elementu wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1906,7 +1901,7 @@ SetText(_T("Margins\nm"))
 SetText(_T("Line Numbers\nln"))  
 ```  
   
-##  <a name="settextalwaysonright"></a>CMFCRibbonBaseElement::SetTextAlwaysOnRight  
+##  <a name="settextalwaysonright"></a>  CMFCRibbonBaseElement::SetTextAlwaysOnRight  
  Ustawia tekst elementu wstążki, aby wyświetlić po prawej stronie.  
   
 ```  
@@ -1914,12 +1909,12 @@ virtual void SetTextAlwaysOnRight(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bSet`  
- `TRUE`Aby wyświetlić tekst po prawej stronie; w przeciwnym razie `FALSE`.  
+ [in] `bSet`  
+ `TRUE` Aby wyświetlić tekst po prawej stronie; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="settooltiptext"></a>CMFCRibbonBaseElement::SetToolTipText  
+##  <a name="settooltiptext"></a>  CMFCRibbonBaseElement::SetToolTipText  
  Ustawia tekst etykietki narzędzia dla elementu wstążki.  
   
 ```  
@@ -1927,10 +1922,10 @@ virtual void SetToolTipText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszText`  
+ [in] `lpszText`  
  Tekst etykietki narzędzia.  
   
-##  <a name="setvisible"></a>CMFCRibbonBaseElement::SetVisible  
+##  <a name="setvisible"></a>  CMFCRibbonBaseElement::SetVisible  
  Określa widoczność elementu wstążki.  
   
 ```  
@@ -1938,12 +1933,12 @@ void SetVisible(BOOL bIsVisible);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bIsVisible`  
- `TRUE`Aby wyświetlić element wstążki; `FALSE` do ukrywania elementów wstążki.  
+ [in] `bIsVisible`  
+ `TRUE` Aby wyświetlić element wstążki; `FALSE` do ukrywania elementów wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="stretchhorizontally"></a>CMFCRibbonBaseElement::StretchHorizontally  
+##  <a name="stretchhorizontally"></a>  CMFCRibbonBaseElement::StretchHorizontally  
  Rozciąga szerokość elementu wstążki.  
   
 ```  
@@ -1953,7 +1948,7 @@ virtual void StretchHorizontally();
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda generuje błąd potwierdzenia w kompilacjach debugowania i dlatego nie należy wywoływać. Zastępuje tę metodę do rozciągania szerokość elementu wstążki.  
   
-##  <a name="stretchtowholerow"></a>CMFCRibbonBaseElement::StretchToWholeRow  
+##  <a name="stretchtowholerow"></a>  CMFCRibbonBaseElement::StretchToWholeRow  
  Zmienia wysokość wyświetlania elementu wstążki Podana wysokość wiersza.  
   
 ```  
@@ -1963,19 +1958,19 @@ virtual BOOL StretchToWholeRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Ten parametr nie jest używany.  
   
- [in]`nHeight`  
+ [in] `nHeight`  
  Wysokość wiersza.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli ustawiono wartość wysokości wyświetlania; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli ustawiono wartość wysokości wyświetlania; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Zastępuje tę metodę, aby zmienić wysokość wyświetlania elementu wstążki Podana wysokość wiersza.  
   
-##  <a name="updatetooltipinfo"></a>CMFCRibbonBaseElement::UpdateTooltipInfo  
+##  <a name="updatetooltipinfo"></a>  CMFCRibbonBaseElement::UpdateTooltipInfo  
  Aktualizuje tekst etykietki narzędzia, za pomocą polecenia zasobu dla elementu wstążki.  
   
 ```  
@@ -1984,7 +1979,7 @@ virtual void UpdateTooltipInfo();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="hasfocus"></a>CMFCRibbonBaseElement::HasFocus  
+##  <a name="hasfocus"></a>  CMFCRibbonBaseElement::HasFocus  
  Wskazuje, czy element nadrzędny ma fokus klawiatury.  
   
 ```  
@@ -1992,7 +1987,7 @@ virtual BOOL HasFocus() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli element wstążki ma fokus; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli element wstążki ma fokus; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
   

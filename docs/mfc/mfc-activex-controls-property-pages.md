@@ -1,13 +1,10 @@
 ---
-title: "Formanty MFC ActiveX: Strony właściwości | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Formanty MFC ActiveX: Strony właściwości | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CPropertyPageDialog class [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dde35df301c34a6c3a29c48d5ad145681b64a72e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 81d28a7c5fdb48201cc1f4f2998fd0904749445d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-property-pages"></a>Kontrolki ActiveX MFC: strony właściwości
 Strony właściwości umożliwiają użytkownikowi formantu ActiveX wyświetlanie i zmiana właściwości formantu ActiveX. Te właściwości są dostępne przez okno dialogowe właściwości formantu, który zawiera jeden lub więcej stron właściwości, które zapewniają dostosowany interfejs graficzny służący do wyświetlania i edytowania właściwości formantu.  
@@ -61,7 +56,7 @@ Okno dialogowe właściwości
   
  Informacje na używanie arkuszy właściwości w aplikacji MFC niż formantu ActiveX, zobacz [arkusze właściwości](../mfc/property-sheets-mfc.md).  
   
-##  <a name="_core_implementing_the_default_property_page"></a>Implementowanie domyślnej strony właściwości  
+##  <a name="_core_implementing_the_default_property_page"></a> Implementowanie domyślnej strony właściwości  
  Użycie Kreator kontrolek ActiveX do tworzenia projektu kontroli, Kreator kontrolek ActiveX udostępnia klasy strony właściwości domyślnej dla formantu pochodzące z [COlePropertyPage klasy](../mfc/reference/colepropertypage-class.md). Początkowo tej strony właściwości jest pusta, ale można dodać do niego żadnych kontrolka okna dialogowego lub zbiór kontrolek. Ponieważ Kreator kontrolek ActiveX tworzy tylko jedną właściwość klasy strony domyślnie klasy strony właściwości dodatkowe (również pochodną `COlePropertyPage`) musi być utworzony przy użyciu widoku klasy. Aby uzyskać więcej informacji dotyczących tej procedury, zobacz [kontrolki ActiveX MFC: Dodawanie strony właściwości niestandardowego innego](../mfc/mfc-activex-controls-adding-another-custom-property-page.md).  
   
  Implementowanie właściwości strony (w tym przypadku wartość domyślna) jest procesem trzech etapów:  
@@ -76,7 +71,7 @@ Okno dialogowe właściwości
   
  Na przykład celów, w poniższych procedurach Użyj prostego formantu (o nazwie "Test"). Przykład został utworzony przy użyciu Kreatora formantów ActiveX i zawiera tylko podstawowe właściwości podpisu.  
   
-##  <a name="_core_adding_controls_to_a_property_page"></a>Dodawanie formantów do strony właściwości  
+##  <a name="_core_adding_controls_to_a_property_page"></a> Dodawanie formantów do strony właściwości  
   
 #### <a name="to-add-controls-to-a-property-page"></a>Aby dodać kontrolki do strony właściwości  
   
@@ -96,7 +91,7 @@ Okno dialogowe właściwości
   
  Teraz, interfejs użytkownika został zmodyfikowany, należy połączyć w tym polu edycji właściwości podpisu. Odbywa się w poniższej sekcji, edytując `CSamplePropPage::DoDataExchange` funkcji.  
   
-##  <a name="_core_customizing_the_dodataexchange_function"></a>Dostosowywanie funkcji DoDataExchange  
+##  <a name="_core_customizing_the_dodataexchange_function"></a> Dostosowywanie funkcji DoDataExchange  
  Strony właściwości [CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) funkcja umożliwia link wartości właściwości strony rzeczywiste wartości właściwości w formancie. Do ustanawiania łącza, zamapuj pola strony właściwości odpowiednie do ich właściwości kontroli.  
   
  Te mapowania są implementowane przy użyciu strony właściwości **ddp_ —** funkcji. **Ddp_ —** funkcje działają podobnie **DDX_** funkcji używanych w standardowych oknach dialogowych MFC, z jednym wyjątkiem. Oprócz odwołanie do zmiennej członkowskiej **ddp_ —** funkcje pobierać nazwa właściwości formantu. Poniżej przedstawiono typowe wpisu w `DoDataExchange` funkcji dla strony właściwości.  

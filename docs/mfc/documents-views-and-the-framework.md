@@ -1,13 +1,10 @@
 ---
 title: Dokumenty, widoki i struktura | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - MFC object relationships
 - thread objects [MFC]
 ms.assetid: 409ddd9b-66ad-4625-84f7-bf55a41d697b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e48872907b07b0adf18cf17cca6ec6ecabe9e2de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2a30f2ccf1963fe2985794a2bf8eca0c49474cb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="documents-views-and-the-framework"></a>Dokumenty, widoki i struktura
 Istotą programu MFC framework są dokumentu i widoku. Dokument jest obiekt danych, z którą użytkownik wchodzi w interakcję w sesji. Jest tworzona przez `New` lub **Otwórz** na **pliku** menu i są zwykle zapisywane w pliku. (Dokumentów standardowego MFC, pochodzi z klasy **CDocument**, są inne niż dokumenty aktywne i dokumentów złożonych OLE.) Widok jest obiekt window, za pomocą którego użytkownik wchodzi w interakcję z dokumentu.  

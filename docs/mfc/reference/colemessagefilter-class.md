@@ -1,12 +1,9 @@
 ---
 title: Klasa COleMessageFilter | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleMessageFilter
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - COleMessageFilter [MFC], SetMessagePendingDelay
 - COleMessageFilter [MFC], SetRetryReply
 ms.assetid: b1fd1639-fac4-4fd0-bf17-15172deba13c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ea5972a46d6e8d5ff106ddcc1c8692a3cdd8ff3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 85161e7f3dd752c6df27afedf6276f8823e7ec6e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colemessagefilter-class"></a>Klasa COleMessageFilter
 Zarządza współbieżności wymagane przez interakcji w aplikacji OLE.  
@@ -95,14 +90,14 @@ class COleMessageFilter : public CCmdTarget
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  `COleMessageFilter`  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxole.h  
   
-##  <a name="beginbusystate"></a>COleMessageFilter::BeginBusyState  
+##  <a name="beginbusystate"></a>  COleMessageFilter::BeginBusyState  
  Wywołanie tej funkcji, aby rozpocząć stanu zajętości.  
   
 ```  
@@ -116,14 +111,14 @@ virtual void BeginBusyState();
   
  Domyślnie platformę przechodzi do stanu zajętości podczas przetwarzanie w stanie bezczynności, które jest wykonywane przez [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Gdy aplikacja jest obsługa **ON_COMMANDUPDATEUI** powiadomienia, połączenia przychodzące są obsługiwane później, po zakończeniu przetwarzanie w stanie bezczynności.  
   
-##  <a name="colemessagefilter"></a>COleMessageFilter::COleMessageFilter  
+##  <a name="colemessagefilter"></a>  COleMessageFilter::COleMessageFilter  
  Tworzy `COleMessageFilter` obiektu.  
   
 ```  
 COleMessageFilter();
 ```  
   
-##  <a name="enablebusydialog"></a>COleMessageFilter::EnableBusyDialog  
+##  <a name="enablebusydialog"></a>  COleMessageFilter::EnableBusyDialog  
  Włącza i wyłącza okna dialogowego zajęty, które jest wyświetlane, gdy wygaśnie opóźnienie komunikatów oczekujących (zobacz [SetRetryReply](#setretryreply)) podczas wywołania OLE.  
   
 ```  
@@ -134,7 +129,7 @@ void EnableBusyDialog(BOOL bEnableBusy = TRUE);
  *bEnableBusy*  
  Określa, czy okno dialogowe "zajęty" jest włączona.  
   
-##  <a name="enablenotrespondingdialog"></a>COleMessageFilter::EnableNotRespondingDialog  
+##  <a name="enablenotrespondingdialog"></a>  COleMessageFilter::EnableNotRespondingDialog  
  Włącza i wyłącza okno dialogowe "nie odpowiada", która jest wyświetlana, jeśli trwa oczekiwanie na wiadomość klawiatury lub myszy podczas OLE wywołania i wywołania został przekroczony.  
   
 ```  
@@ -145,7 +140,7 @@ void EnableNotRespondingDialog(BOOL bEnableNotResponding = TRUE);
  *bEnableNotResponding*  
  Określa, czy okno dialogowe "nie odpowiada" jest włączona.  
   
-##  <a name="endbusystate"></a>COleMessageFilter::EndBusyState  
+##  <a name="endbusystate"></a>  COleMessageFilter::EndBusyState  
  Wywołanie tej funkcji do końca stanu zajętości.  
   
 ```  
@@ -159,7 +154,7 @@ virtual void EndBusyState();
   
  Domyślnie platformę przechodzi do stanu zajętości podczas przetwarzanie w stanie bezczynności, które jest wykonywane przez [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Gdy aplikacja jest obsługa `ON_UPDATE_COMMAND_UI` powiadomienia, połączenia przychodzące są obsługiwane, po zakończeniu przetwarzanie w stanie bezczynności.  
   
-##  <a name="onmessagepending"></a>COleMessageFilter::OnMessagePending  
+##  <a name="onmessagepending"></a>  COleMessageFilter::OnMessagePending  
  Metoda wywoływana przez platformę do przetwarzania komunikatów, gdy wywołanie OLE jest w toku.  
   
 ```  
@@ -178,7 +173,7 @@ virtual BOOL OnMessagePending(const MSG* pMsg);
   
  Filtr komunikatu musi zarejestrować za pomocą wywołania [zarejestrować](#register) przed może zostać uaktywniony.  
   
-##  <a name="register"></a>COleMessageFilter::Register  
+##  <a name="register"></a>  COleMessageFilter::Register  
  Rejestruje filtr komunikatu w systemie OLE biblioteki dll.  
   
 ```  
@@ -193,7 +188,7 @@ BOOL Register();
   
  Filtr komunikatu domyślnej struktury jest automatycznie zarejestrowane podczas inicjowania i odwołane po zakończeniu.  
   
-##  <a name="revoke"></a>COleMessageFilter::Revoke  
+##  <a name="revoke"></a>  COleMessageFilter::Revoke  
  Wycofanie poprzedniej rejestracji wykonywane przez wywołanie do [zarejestrować](#register).  
   
 ```  
@@ -205,7 +200,7 @@ void Revoke();
   
  Domyślny filtr komunikat, który jest tworzony i automatycznie zarejestrowane przez platformę, automatycznie został odwołany.  
   
-##  <a name="setbusyreply"></a>COleMessageFilter::SetBusyReply  
+##  <a name="setbusyreply"></a>  COleMessageFilter::SetBusyReply  
  Ta funkcja ustawia aplikacji "zajęty odpowiedzi."  
   
 ```  
@@ -229,7 +224,7 @@ void SetBusyReply(SERVERCALL nBusyReply);
   
  Domyślnie jest zajęty odpowiedzi **SERVERCALL_RETRYLATER**. Odpowiedź ta powoduje, że aplikacja wywołująca ponowić próbę połączenia możliwie jak.  
   
-##  <a name="setmessagependingdelay"></a>COleMessageFilter::SetMessagePendingDelay  
+##  <a name="setmessagependingdelay"></a>  COleMessageFilter::SetMessagePendingDelay  
  Określa, jak długo aplikacja wywołująca czeka na odpowiedź o nazwie aplikacji przed podjęciem dalszych działań.  
   
 ```  
@@ -243,7 +238,7 @@ void SetMessagePendingDelay(DWORD nTimeout = 5000);
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja działa w połączeniu z [SetRetryReply](#setretryreply).  
   
-##  <a name="setretryreply"></a>COleMessageFilter::SetRetryReply  
+##  <a name="setretryreply"></a>  COleMessageFilter::SetRetryReply  
  Określa akcję aplikacja wywołująca po odebraniu odpowiedzi zajęty z aplikacji o nazwie.  
   
 ```  
@@ -257,7 +252,7 @@ void SetRetryReply(DWORD nRetryReply = 0);
 ### <a name="remarks"></a>Uwagi  
  W przypadku aplikacji o nazwie oznacza, że jest zajęty, aplikacja wywołująca może zadecydować o poczekaj, aż serwer nie jest już zajęty, aby ponowić próbę teraz lub spróbuj ponownie po upływie określonego czasu. Może również zdecydować je anulować całkowicie.  
   
- Odpowiedź wywołującego jest kontrolowany przez funkcje `SetRetryReply` i [SetMessagePendingDelay](#setmessagependingdelay). `SetRetryReply`Określa, jak długo aplikacja wywołująca powinna czekać między kolejnymi próbami dla danego połączenia. `SetMessagePendingDelay`Określa, jak długo aplikacja wywołująca czeka na odpowiedź z serwera przed podjęciem dalszych działań.  
+ Odpowiedź wywołującego jest kontrolowany przez funkcje `SetRetryReply` i [SetMessagePendingDelay](#setmessagependingdelay). `SetRetryReply` Określa, jak długo aplikacja wywołująca powinna czekać między kolejnymi próbami dla danego połączenia. `SetMessagePendingDelay` Określa, jak długo aplikacja wywołująca czeka na odpowiedź z serwera przed podjęciem dalszych działań.  
   
  Zwykle wartości domyślne są dozwolone i nie muszą zostać zmienione. Platformę ponowi próbę połączenia co `nRetryReply` milisekund, dopóki wywołania przechodzi przez lub opóźnienia komunikatów oczekujących utracił ważność. Wartość 0 dla `nRetryReply` określa natychmiastowego ponawiania i - 1 oznacza anulowania wywołania.  
   

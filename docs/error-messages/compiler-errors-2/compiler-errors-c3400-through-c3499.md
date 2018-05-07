@@ -1,12 +1,9 @@
 ---
-title: "C3400 błędy kompilatora za pośrednictwem C3499 | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: C3400 błędy kompilatora za pośrednictwem C3499 | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3401
@@ -107,17 +104,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: a5651dfb-c402-4e01-b3ae-28f371e51d6a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3842530bdec6a1247e8a6f5a4fc1f99d13a537ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bcc3a06a5c39aff2fea0850879a8d95f757e1b66
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c3400-through-c3499"></a>C3400 błędy kompilatora za pośrednictwem C3499
 
@@ -173,8 +168,8 @@ Artykuły w tej sekcji dokumentacji opisano podzbiór komunikaty o błędach, kt
 |C3441 błąd kompilatora|"*deklaracji*": "*— słowo kluczowe*" nie można zastosować po zdefiniowaniu klasy|
 |C3442 błąd kompilatora|Inicjowanie wielu elementów członkowskich Unii: "*Członek1*"i"*member2*"|
 |C3443 błąd kompilatora|Inicjator elementu członkowskiego domyślnego dla "*klasy*" jest rekursywny|
-|C3444 błąd kompilatora|Pusta klasa agregacji*klasy*' "{}" musi być zainicjowany|
-|C3445 błąd kompilatora|kopiowania listy Inicjalizacja "*typu*" nie można użyć jawny Konstruktor|
+|C3444 błąd kompilatora|Pusta klasa agregacji*klasy*"musi zostać zainicjowany z"{}"|
+|[C3445 błąd kompilatora](compiler-error-c3445.md)|kopiowania listy Inicjalizacja "*typu*" nie można użyć jawny Konstruktor|
 |[Błąd kompilatora C3446](compiler-error-c3446.md)|"*klasy*": Inicjator elementu członkowskiego domyślnego nie jest dozwolona dla elementu członkowskiego klasy wartości|
 |C3447 błąd kompilatora|Nieaktualne.|
 |C3448 błąd kompilatora|Nieaktualne.|

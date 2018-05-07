@@ -1,13 +1,10 @@
 ---
-title: "Strona właściwości kroku kompilacji niestandardowej: Ogólna | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Strona właściwości kroku kompilacji niestandardowej: Ogólna | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCCustomBuildStep.AdditionalInputs
 - VC.Project.VCCustomBuildStep.CustomBuildAfterTargets
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - project properties, custom build step
 - custom build step (general)
 ms.assetid: bd319741-0491-46c4-a428-7c61b4b46a02
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e57d6cf00843cd6604ef269235602ea1b5b5e9b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5d88bd738711058794a525217ba2640e8d52356d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-build-step-property-page-general"></a>Strona właściwości Niestandardowy krok budowania: ogólne
 Dla każdej kombinacji konfiguracji projektu i platformy docelowej w projekcie można określić niestandardowy krok wykonywany podczas kompilacji projektu.  
@@ -39,7 +34,7 @@ Dla każdej kombinacji konfiguracji projektu i platformy docelowej w projekcie m
 Dla wersji systemu Linux na tej stronie, zobacz [właściwości kroku kompilacji niestandardowej (Linux C++)](../linux/prop-pages/custom-build-step-linux.md).
   
 ## <a name="uielement-list"></a>Lista elementów UI  
- Wiersz polecenia  
+ **Wiersz polecenia**  
  Polecenie wykonywane przez krok niestandardowej kompilacji.  
   
  **Opis**  
@@ -48,10 +43,10 @@ Dla wersji systemu Linux na tej stronie, zobacz [właściwości kroku kompilacji
  **dane wyjściowe**  
  Plik wyjściowy, generowany przez krok niestandardowej kompilacji. To ustawienie jest wymagane, aby kompilacje przyrostowe działały poprawnie.  
   
- Dodatkowe zależności  
+ **Dodatkowe zależności**  
  Rozdzielana średnikami lista wszelkich dodatkowych plików wejściowych dla kroku niestandardowej kompilacji.  
   
- Wykonanie i wykonać przed  
+ **Wykonanie i wykonać przed**  
  Te opcje definiują, kiedy krok niestandardowej kompilacji jest uruchamiany w procesie kompilacji w stosunku do wymienionych celów. Najczęściej wymienione cele to BuildGenerateSources, BuildCompile i BuildLink, ponieważ stanowią one najważniejsze kroki procesu kompilacji. Inne często wymienione cele to Midl, CLCompile i Link.  
   
  Traktuj dane wyjściowe jako zawartość  

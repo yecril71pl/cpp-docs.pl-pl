@@ -1,13 +1,10 @@
 ---
-title: "Funkcje wymiany pól rekordów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Funkcje wymiany pól rekordów | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - AFXDB/RFX_Binary
 - AFXDB/RFX_Bool
@@ -54,17 +51,15 @@ helpviewer_keywords:
 - RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94491a2df64017ea381377af8518414e80130d6a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 564d797a30e4b2d8518c73c5f7589aae205b6907
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-functions"></a>Funkcje wymiany pól rekordów
 W tym temacie wymieniono wymiana pól rekordów (RFX RFX zbiorcze i DFX) funkcje używane do automatyzowania transferu danych między obiektem zestawu rekordów a źródłem danych i wykonywać inne operacje na danych.  
@@ -128,7 +123,7 @@ W tym temacie wymieniono wymiana pól rekordów (RFX RFX zbiorcze i DFX) funkcje
 
  =============================================
 
-## <a name="rfx_binary"></a>Rfx_binary —
+## <a name="rfx_binary"></a>  Rfx_binary —
 Transfery między elementy członkowskie danych pola z tablice bajtów `CRecordset` obiektu i kolumn w źródle danych ODBC typu rekordu **SQL_BINARY**, **SQL_VARBINARY**, lub **SQL_ LONGVARBINARY**.  
   
 ### <a name="syntax"></a>Składnia  
@@ -163,7 +158,7 @@ void RFX_Binary(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdb.h  
 
-## <a name="rfx_bool"></a>Rfx_bool —
+## <a name="rfx_bool"></a>  Rfx_bool —
 Transfer danych logicznych między elementy członkowskie danych pola z `CRecordset` obiektu i kolumn w źródle danych ODBC typu rekordu **SQL_BIT**.  
   
 ### <a name="syntax"></a>Składnia  
@@ -191,7 +186,7 @@ void RFX_Bool(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdb.h  
 
-## <a name="rfx_byte"></a>Rfx_byte —
+## <a name="rfx_byte"></a>  Rfx_byte —
 Transfery pojedynczy bajtów między elementy członkowskie danych pola z `CRecordset` obiektu i kolumn w źródle danych ODBC typu rekordu **SQL_TINYINT**.  
   
 ### <a name="syntax"></a>Składnia  
@@ -219,7 +214,7 @@ void RFX_Byte(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdb.h  
 
-## <a name="rfx_date"></a>Rfx_date —
+## <a name="rfx_date"></a>  Rfx_date —
 Transfery `CTime` lub **TIMESTAMP_STRUCT** danych między elementy członkowskie danych pola z `CRecordset` obiektu i kolumn w źródle danych ODBC typu rekordu **SQL_DATE**, **SQL_TIME**, lub **SQL_TIMESTAMP**.  
   
 ### <a name="syntax"></a>Składnia  
@@ -264,7 +259,7 @@ void RFX_Date(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdb.h  
 
-## <a name="rfx_double"></a>Rfx_double —
+## <a name="rfx_double"></a>  Rfx_double —
 Transfery **podwójne float** danych między elementy członkowskie danych pola z `CRecordset` obiektu i kolumn w źródle danych ODBC typu rekordu **SQL_DOUBLE**.  
   
 ### <a name="syntax"></a>Składnia  
@@ -292,7 +287,7 @@ void RFX_Double(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdb.h  
 
-## <a name="rfx_int"></a>Rfx_int —
+## <a name="rfx_int"></a>  Rfx_int —
 Transfer danych liczb całkowitych między elementy członkowskie danych pola z `CRecordset` obiektu i kolumn w źródle danych ODBC typu rekordu **SQL_SMALLINT**.  
   
 ### <a name="syntax"></a>Składnia  
@@ -320,7 +315,7 @@ void RFX_Int(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdb.h  
 
-## <a name="rfx_long"></a>Rfx_long —
+## <a name="rfx_long"></a>  Rfx_long —
 Transfer danych długich liczb całkowitych między elementy członkowskie danych pola z `CRecordset` obiektu i kolumn w źródle danych ODBC typu rekordu **SQL_INTEGER**.  
   
 ### <a name="syntax"></a>Składnia  
@@ -349,7 +344,7 @@ value );
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdb.h  
   
-## <a name="rfx_longbinary"></a>Rfx_longbinary —
+## <a name="rfx_longbinary"></a>  Rfx_longbinary —
 Transfery danych dużego obiektu binarnego (BLOB) przy użyciu klasy [clongbinary —](clongbinary-class.md) między elementy członkowskie danych pola z `CRecordset` obiektu i kolumn w źródle danych ODBC typu rekordu **SQL_LONGVARBINARY**lub **SQL_LONGVARCHAR**.  
   
 ### <a name="syntax"></a>Składnia  
@@ -377,7 +372,7 @@ void RFX_LongBinary(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdb.h  
 
-## <a name="rfx_single"></a>Rfx_single —
+## <a name="rfx_single"></a>  Rfx_single —
 Transfer danych zmiennoprzecinkowych między elementy członkowskie danych pola z `CRecordset` obiektu i kolumn w źródle danych ODBC typu rekordu **SQL_REAL**.  
   
 ### <a name="syntax"></a>Składnia  
@@ -406,7 +401,7 @@ void RFX_Single(
  **Nagłówek:** afxdb.h  
   
 
-## <a name="rfx_text"></a>Rfx_text —
+## <a name="rfx_text"></a>  Rfx_text —
 Transfery `CString` danych między elementy członkowskie danych pola z `CRecordset` obiektu i kolumn w źródle danych ODBC typu rekordu **SQL_LONGVARCHAR**, **SQL_CHAR**, **SQL_ VARCHAR**, **SQL_DECIMAL**, lub **SQL_NUMERIC**.  
   
 ### <a name="syntax"></a>Składnia  
@@ -438,7 +433,7 @@ void RFX_Text(
  Używany głównie dla parametrów. Liczba całkowita wskazująca typ danych parametru. Typ jest typem danych ODBC formularza **SQL_XXX**.  
   
  `nScale`  
- Określa skalę dla wartości typu ODBC **SQL_DECIMAL** lub **SQL_NUMERIC**. `nScale`jest przydatna podczas ustawiania wartości parametrów. Aby uzyskać więcej informacji, zobacz temat "Precyzja, skala długość i rozmiar wyświetlania" w dodatku D *ODBC SDK Podręcznik programisty*.  
+ Określa skalę dla wartości typu ODBC **SQL_DECIMAL** lub **SQL_NUMERIC**. `nScale` jest przydatna podczas ustawiania wartości parametrów. Aby uzyskać więcej informacji, zobacz temat "Precyzja, skala długość i rozmiar wyświetlania" w dodatku D *ODBC SDK Podręcznik programisty*.  
   
 ### <a name="remarks"></a>Uwagi  
  Dane w źródle danych typu jest zamapowana do i z `CString` w zestawie rekordów.  
@@ -468,7 +463,7 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
  **Nagłówek:** afxdb.h  
 
 
-## <a name="rfx_binary_bulk"></a>Rfx_binary_bulk —
+## <a name="rfx_binary_bulk"></a>  Rfx_binary_bulk —
 Przesyła wiele wierszy danych bajtowych z kolumną źródła danych ODBC do odpowiedniego tablicy w `CRecordset`-pochodzi z obiektu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -514,7 +509,7 @@ void RFX_Binary_Bulk(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdb.h  
 
-## <a name="rfx_bool_bulk"></a>Rfx_bool_bulk —
+## <a name="rfx_bool_bulk"></a>  Rfx_bool_bulk —
 Przesyła wiele wierszy danych logicznych z kolumną źródła danych ODBC do odpowiedniego tablicy w `CRecordset`-pochodzi z obiektu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -556,7 +551,7 @@ void RFX_Bool_Bulk(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdb.h  
 
-## <a name="rfx_byte_bulk"></a>Rfx_byte_bulk —
+## <a name="rfx_byte_bulk"></a>  Rfx_byte_bulk —
 Przesyła wiele wierszy bajtów jednego z kolumną źródła danych ODBC do odpowiedniego tablicy w `CRecordset`-pochodzi z obiektu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -598,7 +593,7 @@ void RFX_Byte_Bulk(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdb.h  
   
-## <a name="rfx_date_bulk"></a>Rfx_date_bulk —
+## <a name="rfx_date_bulk"></a>  Rfx_date_bulk —
 Przesyła wiele wierszy **TIMESTAMP_STRUCT** danych z kolumny źródła danych ODBC do odpowiedniego tablicy w `CRecordset`-pochodzi z obiektu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -640,7 +635,7 @@ void RFX_Date_Bulk(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdb.h  
 
-## <a name="rfx_double_bulk"></a>Rfx_double_bulk —
+## <a name="rfx_double_bulk"></a>  Rfx_double_bulk —
 Przesyła wiele wierszy danych podwójnej precyzji, zmiennoprzecinkowych z kolumną źródła danych ODBC do odpowiedniego tablicy w `CRecordset`-pochodzi z obiektu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -682,7 +677,7 @@ void RFX_Double_Bulk(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdb.h  
 
-## <a name="rfx_int_bulk"></a>Rfx_int_bulk —
+## <a name="rfx_int_bulk"></a>  Rfx_int_bulk —
 Transfer danych liczb całkowitych między elementy członkowskie danych pola z `CRecordset` obiektu i kolumn w źródle danych ODBC typu rekordu **SQL_SMALLINT**.  
   
 ### <a name="syntax"></a>Składnia  
@@ -710,7 +705,7 @@ void RFX_Int(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdb.h  
 
-## <a name="rfx_long_bulk"></a>Rfx_long_bulk —
+## <a name="rfx_long_bulk"></a>  Rfx_long_bulk —
 Przesyła wiele wierszy danych długich liczb całkowitych z kolumną źródła danych ODBC do odpowiedniego tablicy w `CRecordset`-pochodzi z obiektu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -752,7 +747,7 @@ void RFX_Long_Bulk(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdb.h  
 
-## <a name="rfx_single_bulk"></a>Rfx_single_bulk —
+## <a name="rfx_single_bulk"></a>  Rfx_single_bulk —
 Przesyła wiele wierszy danych zmiennoprzecinkowych z kolumną źródła danych ODBC do odpowiedniego tablicy w `CRecordset`-pochodzi z obiektu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -795,7 +790,7 @@ void RFX_Single_Bulk(
  **Nagłówek:** afxdb.h  
   
 
-## <a name="rfx_text_bulk"></a>Rfx_text_bulk —
+## <a name="rfx_text_bulk"></a>  Rfx_text_bulk —
 Przesyła wiele wierszy danych znakowych z kolumną źródła danych ODBC do odpowiedniego tablicy w `CRecordset`-pochodzi z obiektu.  
   
 ### <a name="syntax"></a>Składnia  
@@ -856,7 +851,7 @@ void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdb.h  
 
-## <a name="dfx_binary"></a>Dfx_binary —
+## <a name="dfx_binary"></a>  Dfx_binary —
 Transfery między elementy członkowskie danych pola z tablice bajtów [cdaorecordset —](cdaorecordset-class.md) obiektu i kolumny rekordu w źródle danych.  
   
 ### <a name="syntax"></a>Składnia  
@@ -899,7 +894,7 @@ void AFXAPI DFX_Binary(
  **Nagłówek:** afxdao.h  
   
 
-## <a name="dfx_bool"></a>Dfx_bool —
+## <a name="dfx_bool"></a>  Dfx_bool —
 Transfer danych logicznych między elementy członkowskie danych pola z [cdaorecordset —](cdaorecordset-class.md) obiektu i kolumny rekordu w źródle danych.  
   
 ### <a name="syntax"></a>Składnia  
@@ -937,7 +932,7 @@ void AFXAPI DFX_Bool(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdao.h  
 
-## <a name="dfx_byte"></a>Dfx_byte —
+## <a name="dfx_byte"></a>  Dfx_byte —
 Transfery pojedynczy bajtów między elementy członkowskie danych pola z [cdaorecordset —](cdaorecordset-class.md) obiektu i kolumny rekordu w źródle danych.  
   
 ### <a name="syntax"></a>Składnia  
@@ -975,7 +970,7 @@ void AFXAPI DFX_Byte(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdao.h  
 
-## <a name="dfx_currency"></a>Dfx_currency —
+## <a name="dfx_currency"></a>  Dfx_currency —
 Transfer danych walutowych między elementy członkowskie danych pola z [cdaorecordset —](cdaorecordset-class.md) obiektu i kolumny rekordu w źródle danych.  
   
 ### <a name="syntax"></a>Składnia  
@@ -1013,7 +1008,7 @@ void AFXAPI DFX_Currency(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdao.h  
 
-## <a name="dfx_datetime"></a>Dfx_datetime —
+## <a name="dfx_datetime"></a>  Dfx_datetime —
 Transfer danych Data i godzina między elementy członkowskie danych pola z [cdaorecordset —](cdaorecordset-class.md) obiektu i kolumny rekordu w źródle danych.  
   
 ### <a name="syntax"></a>Składnia  
@@ -1046,7 +1041,7 @@ void AFXAPI DFX_DateTime(
  Dane są zmapowane między typem **DAO_DATE** w DAO i wpisz [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) w zestawie rekordów.  
   
 > [!NOTE]
->  `COleDateTime`zastępuje [ctime —](../../atl-mfc-shared/reference/ctime-class.md) i **TIMESTAMP_STRUCT** w tym celu w klasach DAO. `CTime`i **TIMESTAMP_STRUCT** nadal są używane dla klas dostępu do danych ODBC.  
+>  `COleDateTime` zastępuje [ctime —](../../atl-mfc-shared/reference/ctime-class.md) i **TIMESTAMP_STRUCT** w tym celu w klasach DAO. `CTime` i **TIMESTAMP_STRUCT** nadal są używane dla klas dostępu do danych ODBC.  
   
 ### <a name="example"></a>Przykład  
  Zobacz [dfx_text —](#dfx_text).  
@@ -1054,7 +1049,7 @@ void AFXAPI DFX_DateTime(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdao.h  
 
-## <a name="dfx_double"></a>Dfx_double —
+## <a name="dfx_double"></a>  Dfx_double —
 Transfery **podwójne float** danych między elementy członkowskie danych pola z [cdaorecordset —](cdaorecordset-class.md) obiektu i kolumny rekordu w źródle danych.  
   
 ### <a name="syntax"></a>Składnia  
@@ -1092,7 +1087,7 @@ void AFXAPI DFX_Double(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdao.h  
 
-## <a name="dfx_long"></a>Dfx_long —
+## <a name="dfx_long"></a>  Dfx_long —
 Transfer danych długich liczb całkowitych między elementy członkowskie danych pola z [cdaorecordset —](cdaorecordset-class.md) obiektu i kolumny rekordu w źródle danych.  
   
 ### <a name="syntax"></a>Składnia  
@@ -1131,7 +1126,7 @@ void AFXAPI DFX_Long(
  **Nagłówek:** afxdao.h  
   
 
-## <a name="dfx_longbinary"></a>Dfx_longbinary —
+## <a name="dfx_longbinary"></a>  Dfx_longbinary —
 **Ważne** zaleca się, że używasz [dfx_binary —](#dfx_binary) zamiast tej funkcji.  
   
 ### <a name="syntax"></a>Składnia  
@@ -1165,7 +1160,7 @@ void AFXAPI DFX_LongBinary(
 >  Można kontrolować, czy dane są dwa razy buforowana domyślnie przez ustawienie [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).  
   
 ### <a name="remarks"></a>Uwagi  
- `DFX_LongBinary`to zapewnia zgodność z klas MFC ODBC. `DFX_LongBinary` Funkcja przesyła dane binarne dużych obiektów (BLOB) za pomocą klasy `CLongBinary` między elementy członkowskie danych pola z [cdaorecordset —](cdaorecordset-class.md) obiektu i kolumny rekordu w źródle danych. Dane są zmapowane między typem **DAO_BYTES** w DAO i wpisz [clongbinary —](clongbinary-class.md) w zestawie rekordów.  
+ `DFX_LongBinary` to zapewnia zgodność z klas MFC ODBC. `DFX_LongBinary` Funkcja przesyła dane binarne dużych obiektów (BLOB) za pomocą klasy `CLongBinary` między elementy członkowskie danych pola z [cdaorecordset —](cdaorecordset-class.md) obiektu i kolumny rekordu w źródle danych. Dane są zmapowane między typem **DAO_BYTES** w DAO i wpisz [clongbinary —](clongbinary-class.md) w zestawie rekordów.  
   
 ### <a name="example"></a>Przykład  
  Zobacz [dfx_text —](#dfx_text).  
@@ -1173,7 +1168,7 @@ void AFXAPI DFX_LongBinary(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdao.h  
 
-## <a name="dfx_short"></a>Dfx_short —
+## <a name="dfx_short"></a>  Dfx_short —
 Transfery krótka danych liczb całkowitych między elementy członkowskie danych pola z [cdaorecordset —](cdaorecordset-class.md) obiektu i kolumny rekordu w źródle danych.  
   
 ### <a name="syntax"></a>Składnia  
@@ -1206,7 +1201,7 @@ void AFXAPI DFX_Short(
  Danych jest mapowany między typem **DAO_I2** w DAO i wpisz **krótki** w zestawie rekordów.  
   
 > [!NOTE]
->  `DFX_Short`jest odpowiednikiem [rfx_int —](#rfx_int) dla klasy oparte na ODBC.  
+>  `DFX_Short` jest odpowiednikiem [rfx_int —](#rfx_int) dla klasy oparte na ODBC.  
   
 ### <a name="example"></a>Przykład  
  Zobacz [dfx_text —](#dfx_text).  
@@ -1215,7 +1210,7 @@ void AFXAPI DFX_Short(
  **Nagłówek:** afxdao.h  
   
 
-## <a name="dfx_single"></a>Dfx_single —
+## <a name="dfx_single"></a>  Dfx_single —
 Transfer danych zmiennoprzecinkowych między elementy członkowskie danych pola z [cdaorecordset —](cdaorecordset-class.md) obiektu i kolumny rekordu w źródle danych.  
   
 ### <a name="syntax"></a>Składnia  
@@ -1253,7 +1248,7 @@ void AFXAPI DFX_Single(
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdao.h  
 
-## <a name="dfx_text"></a>Dfx_text —
+## <a name="dfx_text"></a>  Dfx_text —
 Transfery `CString` danych między elementy członkowskie danych pola z [cdaorecordset —](cdaorecordset-class.md) obiektu i kolumny rekordu w źródle danych.  
   
 ### <a name="syntax"></a>Składnia  

@@ -1,13 +1,10 @@
 ---
-title: "Uzyskiwanie dostępu do wszystkich elementów członkowskich kolekcji | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Uzyskiwanie dostępu do wszystkich elementów członkowskich kolekcji | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ba2795c12695702b2e38034081e17d69c156d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec9757a463bce7ef873720f229b70da695deae8d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Uzyskiwanie dostępu do wszystkich elementów członkowskich kolekcji
 Klasy kolekcji tablic MFC — zarówno na podstawie szablonu, a nie — umożliwia dostęp do swoich elementów indeksów. Klasy kolekcji listy, a następnie mapować MFC — zarówno na podstawie szablonu i nie — użyj wskaźnika typu **pozycji** do opisywania określonej pozycji w kolekcji. Aby uzyskać dostęp do co najmniej jeden członkowie tych kolekcji, należy najpierw zainicjować wskaźnik położenia wielokrotnie przekazania tej pozycji do kolekcji i poproś go do zwrócenia następnego elementu. Kolekcja nie jest odpowiedzialny za konserwację stanu informacje postępie iteracji. Czy informacje są przechowywane w wskaźnik położenia. Jednak podane określonej pozycji, Kolekcja jest odpowiedzialny za zwrócenie następnego elementu.  
@@ -47,13 +42,13 @@ Klasy kolekcji tablic MFC — zarówno na podstawie szablonu, a nie — umożliw
   
 -   [Iteracja mapy](#_core_to_iterate_a_map)  
   
-### <a name="_core_to_iterate_an_array"></a>Do wykonywania iteracji tablicy  
+### <a name="_core_to_iterate_an_array"></a> Do wykonywania iteracji tablicy  
   
 1.  Użyj sekwencyjne numery indeksu z `GetAt` funkcji członkowskiej:  
   
      [!code-cpp[NVC_MFCCollections#12](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_1.cpp)]  
   
-     W tym przykładzie użyto tablicy typizowaną wskaźnika, które zawierają wskaźniki do `CPerson` obiektów. Tablica jest pochodną klasy `CObArray`, jeden z nieszablonu wstępnie zdefiniowanych klas. `GetAt`Zwraca wskaźnik do `CPerson` obiektu. Do klasy kolekcji typizowaną wskaźnika — tablice lub list — pierwszy parametr określa klasę podstawową; drugi parametr określa typ do przechowywania.  
+     W tym przykładzie użyto tablicy typizowaną wskaźnika, które zawierają wskaźniki do `CPerson` obiektów. Tablica jest pochodną klasy `CObArray`, jeden z nieszablonu wstępnie zdefiniowanych klas. `GetAt` Zwraca wskaźnik do `CPerson` obiektu. Do klasy kolekcji typizowaną wskaźnika — tablice lub list — pierwszy parametr określa klasę podstawową; drugi parametr określa typ do przechowywania.  
   
      `CTypedPtrArray` Klasy także przeciążenia **[** operator tak, aby można było używać zwyczajowe składni indeks dolny tablicy do dostępu do elementów tablicy. Zamiast instrukcji w treści `for` pętla powyżej  
   
@@ -61,15 +56,15 @@ Klasy kolekcji tablic MFC — zarówno na podstawie szablonu, a nie — umożliw
   
      Ten operator istnieje zarówno w **const** i nie-**const** wersji. **Const** wersji, który jest wywoływany dla **const** tablic, może się pojawić tylko po prawej stronie instrukcji przypisania.  
   
-### <a name="_core_to_iterate_a_list"></a>Aby przejść do listy  
+### <a name="_core_to_iterate_a_list"></a> Aby przejść do listy  
   
 1.  Użyj funkcji Członkowskich `GetHeadPosition` i `GetNext` do sposobu pracy użytkownika za pośrednictwem listy:  
   
      [!code-cpp[NVC_MFCCollections#14](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_3.cpp)]  
   
-     W tym przykładzie używane listy typizowaną wskaźnika do zawierają wskaźniki do `CPerson` obiektów. Deklaracja listy podobny dla tablicy w procedurze [iteracyjne tablicy](#_core_to_iterate_an_array) , ale jest pochodną klasy `CObList`. `GetNext`Zwraca wskaźnik do `CPerson` obiektu.  
+     W tym przykładzie używane listy typizowaną wskaźnika do zawierają wskaźniki do `CPerson` obiektów. Deklaracja listy podobny dla tablicy w procedurze [iteracyjne tablicy](#_core_to_iterate_an_array) , ale jest pochodną klasy `CObList`. `GetNext` Zwraca wskaźnik do `CPerson` obiektu.  
   
-### <a name="_core_to_iterate_a_map"></a>Do wykonywania iteracji mapy  
+### <a name="_core_to_iterate_a_map"></a> Do wykonywania iteracji mapy  
   
 1.  Użyj `GetStartPosition` na uzyskanie dostępu do początku mapy i `GetNextAssoc` uzyskanie wielokrotnie dalej kluczy i wartości z mapy, jak pokazano na poniższym przykładzie:  
   

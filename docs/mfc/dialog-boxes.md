@@ -1,13 +1,10 @@
 ---
 title: Okna dialogowe | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - CDialog class [MFC], MFC dialog boxes
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8117d175d59859c97a360ca6a6d2af559b403e32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c8de283d81aa9d260b891f285f06555dc67895f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-boxes"></a>Okna dialogowe
 Dla systemu Windows często komunikują się z aplikacjami użytkownika za pomocą okien dialogowych. Klasa [cdialog —](../mfc/reference/cdialog-class.md) udostępnia interfejs dla zarządzania okien dialogowych, Edytor okien dialogowych programu Visual C++ ułatwia projektowanie okien dialogowych i utworzyć ich zasobów szablonu okna dialogowego i kreatorów kodu uprościć proces inicjowania i Sprawdzanie poprawności formantów w oknie dialogowym i zbierania wartości wprowadzonej przez użytkownika.  

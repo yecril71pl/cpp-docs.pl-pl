@@ -1,24 +1,19 @@
 ---
 title: Podstawowe typy (C + +/ CX) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 885b996e94c1c3a3d55e48e0f37c5690ba084cf6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0da64edaa3f94ac9813408d936e3f83783e6b241
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fundamental-types-ccx"></a>Podstawowe typy (C + +/ CX)
 Oprócz standardowych C++ wbudowanych typów, C + +/ CX obsługuje system typu, który jest definiowana za pomocą architektury środowiska wykonawczego systemu Windows, zapewniając definicje typów dla podstawowych środowiska wykonawczego systemu Windows typy, które odpowiadają typom standard C++. C + +/ CX implementuje wartość logiczna, znaków i typy podstawowe liczbowe. Te definicje typów zdefiniowanych w `default` przestrzeni nazw, które nigdy nie musi być jawnie określona. Ponadto C + +/ CX udostępnia konkretnych implementacji i otoki dla niektórych typów środowiska wykonawczego systemu Windows i interfejsów.  
@@ -38,7 +33,7 @@ Oprócz standardowych C++ wbudowanych typów, C + +/ CX obsługuje system typu, 
 |-----------------------------------------------------------------------|----------------|-------------------------|---------------------|  
 |int8|8-bitową podpisem wartość liczbowa.|char podpisem|-128 do 127|  
 |uint8|8-bitowych unsigned wartość liczbowa.|unsigned char|0 do 255|  
-|int16|16-bitową liczbę całkowitą ze znakiem.|short|-32 768 do 32 767|  
+|Int16|16-bitową liczbę całkowitą ze znakiem.|short|-32 768 do 32 767|  
 |UInt16|16-bitową liczbę całkowitą bez znaku.|unsigned short|od 0 do 65 535|  
 |int32|Całkowita 32-bitowych.|int|-2,147,483,648 do 2 147 483 647|  
 |uint32|32-bitowa liczba całkowita bez znaku.|unsigned int|od 0 do 4 294 967 295|  

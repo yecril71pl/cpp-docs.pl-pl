@@ -1,13 +1,10 @@
 ---
-title: "Przeciąganie obrazów z listy obrazów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Przeciąganie obrazów z listy obrazów | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - image lists [MFC], dragging images from
 - images [MFC], dragging from image lists
 ms.assetid: af691db8-e4f0-4046-b7b9-9acc68d3713d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 792f112952493fe1ee86d52a6a235604ebee9db5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d54984cdc1dc7897fb4f5d1d9680c6a2b95a787d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dragging-images-from-an-image-list"></a>Przeciąganie obrazów z listy obrazów
 [Cimagelist —](../mfc/reference/cimagelist-class.md) obejmuje funkcje dla przeciąganie obrazu na ekranie. Funkcje przeciągania sprawnie, przenoszenie obrazu w kolorze i bez żadnych migania kursora. Obrazy zarówno maskowanego i zamaskowana można przeciągnąć.  
@@ -35,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
  [DragEnter](../mfc/reference/cimagelist-class.md#dragenter) funkcji członkowskiej ustawia początkowe położenie obrazu przeciągnij w ramach okna i rysuje obraz w pozycji. Parametry zawierają wskaźnik do okna, w którym do rysowania obrazu i punkt, który określa współrzędne początkowe położenie okna. Współrzędne są podawane względem oknie w lewym górnym rogu, nie obszaru klienckiego. To samo dotyczy wszystkich przeciąganie obrazu funkcje, których współrzędne jako parametry. Oznacza to, że należy kompensacji szerokości okna elementów, takich jak obramowania paska tytułu i paska menu, określając współrzędne. Jeśli określisz **NULL** uchwytu okna podczas wywoływania metody `DragEnter`funkcji przeciągania rysowania obrazu w kontekście urządzenia skojarzony z oknem pulpitu i współrzędne są podawane względem lewego górnego rogu ekranu.  
   
- `DragEnter`Umożliwia zablokowanie wszystkich aktualizacji do okna danego podczas operacji przeciągania. Jeśli trzeba dowolnego rysunku podczas operacji przeciągania, takich jak wyróżnianie obiekt docelowy operacji przeciągania i upuszczania, można ukryć przeciąganego obrazu przy użyciu [DragLeave](../mfc/reference/cimagelist-class.md#dragleave) funkcję elementu członkowskiego. Można również użyć [DragShowNoLock](../mfc/reference/cimagelist-class.md#dragshownolock) funkcję elementu członkowskiego.  
+ `DragEnter` Umożliwia zablokowanie wszystkich aktualizacji do okna danego podczas operacji przeciągania. Jeśli trzeba dowolnego rysunku podczas operacji przeciągania, takich jak wyróżnianie obiekt docelowy operacji przeciągania i upuszczania, można ukryć przeciąganego obrazu przy użyciu [DragLeave](../mfc/reference/cimagelist-class.md#dragleave) funkcję elementu członkowskiego. Można również użyć [DragShowNoLock](../mfc/reference/cimagelist-class.md#dragshownolock) funkcję elementu członkowskiego.  
   
  Wywołanie [EndDrag](../mfc/reference/cimagelist-class.md#enddrag) po zakończeniu przeciąganie obrazu.  
   

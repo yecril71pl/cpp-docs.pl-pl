@@ -2,11 +2,8 @@
 title: Klasa CMap | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMap
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd7c1b23e3c586bf89a86e17d85ee5b5050fbf37
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19b9c25659938e049807eb4e4b41dafd51ebe8e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmap-class"></a>Klasa CMap
 Klasa kolekcji słownik mapujący klucze unikatowe wartości.  
@@ -127,7 +122,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
  Niektóre funkcje Członkowskie wywołanie klasy funkcje globalne pomocy, które muszą być dostosowane dla większości zastosowań `CMap` klasy. Zobacz [pomocnicy klasy kolekcji](../../mfc/reference/collection-class-helpers.md) w sekcji makra i funkcje globalne `MFC Reference`.  
   
- `CMap`zastępuje [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) do obsługi serializacji i zrzucanie swoich elementów. Jeśli mapy jest przechowywany przy użyciu archiwum `Serialize`, każdy element mapy jest serializowany z kolei. Domyślna implementacja `SerializeElements` funkcja pomocnicza jest logiczną zapisu. Dla informacje o serializacji elementów kolekcji wskaźnika pochodną `CObject` lub innych typów zdefiniowanych przez użytkownika, zobacz [porady: tworzenie bezpiecznej kolekcji](../../mfc/how-to-make-a-type-safe-collection.md).  
+ `CMap` zastępuje [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) do obsługi serializacji i zrzucanie swoich elementów. Jeśli mapy jest przechowywany przy użyciu archiwum `Serialize`, każdy element mapy jest serializowany z kolei. Domyślna implementacja `SerializeElements` funkcja pomocnicza jest logiczną zapisu. Dla informacje o serializacji elementów kolekcji wskaźnika pochodną `CObject` lub innych typów zdefiniowanych przez użytkownika, zobacz [porady: tworzenie bezpiecznej kolekcji](../../mfc/how-to-make-a-type-safe-collection.md).  
   
  Diagnostycznych zrzut poszczególne elementy na mapie (klucze i wartości), należy do co najmniej 1 należy ustawić głębokość kontekstu zrzutu.  
   
@@ -143,7 +138,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxtempl.h  
   
-##  <a name="cmap"></a>CMap::CMap  
+##  <a name="cmap"></a>  CMap::CMap  
  Tworzy pusty mapy.  
   
 ```  
@@ -160,7 +155,7 @@ CMap(INT_PTR nBlockSize = 10);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#56](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
   
-##  <a name="cpair"></a>CMap::CPair  
+##  <a name="cpair"></a>  CMap::CPair  
  Zawiera wartość klucza i wartość skojarzonego obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -177,7 +172,7 @@ CMap(INT_PTR nBlockSize = 10);
 ### <a name="example"></a>Przykład  
  Przykład użycia, zobacz przykład [CMap::PLookup](#plookup).  
   
-##  <a name="getcount"></a>CMap::GetCount  
+##  <a name="getcount"></a>  CMap::GetCount  
  Pobiera liczbę elementów w planie.  
   
 ```  
@@ -190,7 +185,7 @@ INT_PTR GetCount() const;
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CMap::Lookup](#lookup).  
   
-##  <a name="gethashtablesize"></a>CMap::GetHashTableSize  
+##  <a name="gethashtablesize"></a>  CMap::GetHashTableSize  
  Określa liczbę elementów w tablicy skrótów do mapy.  
   
 ```  
@@ -203,7 +198,7 @@ UINT GetHashTableSize() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#57](../../mfc/codesnippet/cpp/cmap-class_2.cpp)]  
   
-##  <a name="getnextassoc"></a>CMap::GetNextAssoc  
+##  <a name="getnextassoc"></a>  CMap::GetNextAssoc  
  Pobiera element mapy pod `rNextPosition`, następnie aktualizuje `rNextPosition` do odwoływania się do następnego elementu na mapie.  
   
 ```  
@@ -237,7 +232,7 @@ void GetNextAssoc(
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CMap::SetAt](#setat).  
   
-##  <a name="getsize"></a>CMap::GetSize  
+##  <a name="getsize"></a>  CMap::GetSize  
  Zwraca liczbę elementów mapy.  
   
 ```  
@@ -253,7 +248,7 @@ INT_PTR GetSize() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
-##  <a name="getstartposition"></a>CMap::GetStartPosition  
+##  <a name="getstartposition"></a>  CMap::GetStartPosition  
  Uruchamia iteracji mapy zwracając **pozycji** wartości, które mogą zostać przekazane do `GetNextAssoc` wywołania.  
   
 ```  
@@ -269,7 +264,7 @@ POSITION GetStartPosition() const;
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CMap::SetAt](#setat).  
   
-##  <a name="inithashtable"></a>CMap::InitHashTable  
+##  <a name="inithashtable"></a>  CMap::InitHashTable  
  Inicjuje tablicy skrótów.  
   
 ```  
@@ -289,7 +284,7 @@ void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CMap::Lookup](#lookup).  
   
-##  <a name="isempty"></a>CMap::IsEmpty  
+##  <a name="isempty"></a>  CMap::IsEmpty  
  Określa, czy mapa jest pusta.  
   
 ```  
@@ -302,7 +297,7 @@ BOOL IsEmpty() const;
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CMap::RemoveAll](#removeall).  
   
-##  <a name="lookup"></a>CMap::Lookup  
+##  <a name="lookup"></a>  CMap::Lookup  
  Wyszukuje wartość mapowane na danym kluczem.  
   
 ```  
@@ -326,12 +321,12 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
  Różna od zera, jeśli znaleziono element; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- `Lookup`używa algorytmu wyznaczania wartości skrótu, aby szybko znaleźć map element za pomocą klucza, która dokładnie odpowiada danym kluczem.  
+ `Lookup` używa algorytmu wyznaczania wartości skrótu, aby szybko znaleźć map element za pomocą klucza, która dokładnie odpowiada danym kluczem.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
-##  <a name="operator_at"></a>[CMap::operator]  
+##  <a name="operator_at"></a>  [CMap::operator]  
  Zastępuje wygodne `SetAt` funkcję elementu członkowskiego.  
   
 ```  
@@ -356,7 +351,7 @@ VALUE& operator[](arg_key key);
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CMap::Lookup](#lookup).  
   
-##  <a name="pgetfirstassoc"></a>CMap::PGetFirstAssoc  
+##  <a name="pgetfirstassoc"></a>  CMap::PGetFirstAssoc  
  Zwraca pierwszy wpis obiektu mapy.  
   
 ```  
@@ -373,7 +368,7 @@ CPair* PGetFirstAssoc();
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#59](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
   
-##  <a name="pgetnextassoc"></a>CMap::PGetNextAssoc  
+##  <a name="pgetnextassoc"></a>  CMap::PGetNextAssoc  
  Pobiera element map wskazywana przez `pAssocRec`.  
   
 ```  
@@ -395,7 +390,7 @@ CPair *PGetNextAssoc(const CPair* pAssocRet);
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CMap::PGetFirstAssoc](#pgetfirstassoc).  
   
-##  <a name="plookup"></a>CMap::PLookup  
+##  <a name="plookup"></a>  CMap::PLookup  
  Wyszukuje wartość mapowane na danym kluczem.  
   
 ```  
@@ -416,7 +411,7 @@ CPair* PLookup(ARG_KEY key);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#60](../../mfc/codesnippet/cpp/cmap-class_5.cpp)]  
   
-##  <a name="removeall"></a>CMap::RemoveAll  
+##  <a name="removeall"></a>  CMap::RemoveAll  
  Usuwa wszystkie wartości z tej mapy przez wywołanie funkcji pomocnika globalne **destructelements —**.  
   
 ```  
@@ -429,7 +424,7 @@ void RemoveAll();
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#61](../../mfc/codesnippet/cpp/cmap-class_6.cpp)]  
   
-##  <a name="removekey"></a>CMap::RemoveKey  
+##  <a name="removekey"></a>  CMap::RemoveKey  
  Wyszukuje wpisu mapy odpowiadający podany klucz; następnie Jeśli klucz zostanie znaleziony, usuwa wpis.  
   
 ```  
@@ -452,7 +447,7 @@ BOOL RemoveKey(ARG_KEY key);
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CMap::SetAt](#setat).  
   
-##  <a name="setat"></a>CMap::SetAt  
+##  <a name="setat"></a>  CMap::SetAt  
  Podstawowy oznacza, że wstawić element na mapie.  
   
 ```  

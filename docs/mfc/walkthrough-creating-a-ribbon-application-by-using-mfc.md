@@ -1,30 +1,25 @@
 ---
-title: "Wskazówki: Tworzenie aplikacji wstążki za pomocą MFC | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Wskazówki: Tworzenie aplikacji wstążki za pomocą MFC | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ribbon application, creating (MFC)
 - creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfad78b64f72b9ee9a896832e008039aa241e2ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7f715830c110f03811202d2e98dc097bfe712208
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Wskazówki: tworzenie aplikacji wstążki za pomocą MFC
 Ten przewodnik przedstawia sposób użycia **Kreator aplikacji MFC** do tworzenia aplikacji, która domyślnie ma wstążki. Można następnie rozwiń węzeł wstążki, dodając **niestandardowy** wstążki kategorię, która ma **ulubione** wstążki panelu, a następnie dodać niektóre często używane polecenia do panelu.  

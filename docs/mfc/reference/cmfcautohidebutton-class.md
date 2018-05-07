@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCAutoHideButton | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCAutoHideButton
@@ -59,17 +56,15 @@ helpviewer_keywords:
 - CMFCAutoHideButton [MFC], ShowButton
 - CMFCAutoHideButton [MFC], UnSetAutoHideMode
 ms.assetid: c80e6b8b-25ca-4d12-9d27-457731028ab0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80f40b7ab03e79d38d36a1b25a4cd973a5077468
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 48dc35a5b3e7f6b12376a47d68a95602bed48c49
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcautohidebutton-class"></a>Klasa CMFCAutoHideButton
 Przycisk, który wyświetla lub ukrywa [klasy CDockablePane](../../mfc/reference/cdockablepane-class.md) skonfigurowanego do ukrycia.  
@@ -128,7 +123,7 @@ class CMFCAutoHideButton : public CObject
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxautohidebutton.h  
   
-##  <a name="bringtotop"></a>CMFCAutoHideButton::BringToTop  
+##  <a name="bringtotop"></a>  CMFCAutoHideButton::BringToTop  
 
   
 ```  
@@ -137,7 +132,7 @@ void BringToTop();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="create"></a>CMFCAutoHideButton::Create  
+##  <a name="create"></a>  CMFCAutoHideButton::Create  
  Tworzy i inicjuje automatyczne ukrywanie przycisku.  
   
 ```  
@@ -148,13 +143,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pParentBar`  
+ [in] `pParentBar`  
  Wskaźnik do narzędzi nadrzędnej.  
   
- [in]`pAutoHideWnd`  
+ [in] `pAutoHideWnd`  
  Wskaźnik do [CDockablePane](../../mfc/reference/cdockablepane-class.md) obiektu. Ten przycisk autoukrywania ukrywa i wskazuje, że `CDockablePane`.  
   
- [in]`dwAlignment`  
+ [in] `dwAlignment`  
  Wartość, która określa sposób wyrównania przycisku z głównego okna ramowego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -173,7 +168,7 @@ virtual BOOL Create(
   
 - `CBRS_ALIGN_BOTTOM`  
   
-##  <a name="getalignment"></a>CMFCAutoHideButton::GetAlignment  
+##  <a name="getalignment"></a>  CMFCAutoHideButton::GetAlignment  
  Pobiera Wyrównanie automatyczne ukrywanie przycisku.  
   
 ```  
@@ -194,7 +189,7 @@ DWORD GetAlignment() const;
   
 - `CBRS_ALIGN_BOTTOM`  
   
-##  <a name="getautohidewindow"></a>CMFCAutoHideButton::GetAutoHideWindow  
+##  <a name="getautohidewindow"></a>  CMFCAutoHideButton::GetAutoHideWindow  
  Zwraca [CDockablePane](../../mfc/reference/cdockablepane-class.md) obiekt skojarzony z przyciskiem autoukrywania.  
   
 ```  
@@ -207,7 +202,7 @@ CDockablePane* GetAutoHideWindow() const;
 ### <a name="remarks"></a>Uwagi  
  Aby skojarzyć przycisk autoukrywania z `CDockablePane`, przekazać `CDockablePane` jako parametr [CMFCAutoHideButton::Create](#create) metody.  
   
-##  <a name="getparenttoolbar"></a>CMFCAutoHideButton::GetParentToolBar  
+##  <a name="getparenttoolbar"></a>  CMFCAutoHideButton::GetParentToolBar  
 
   
 ```  
@@ -218,7 +213,7 @@ CMFCAutoHideBar* GetParentToolBar();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getrect"></a>CMFCAutoHideButton::GetRect  
+##  <a name="getrect"></a>  CMFCAutoHideButton::GetRect  
 
   
 ```  
@@ -229,7 +224,7 @@ CRect GetRect() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getsize"></a>CMFCAutoHideButton::GetSize  
+##  <a name="getsize"></a>  CMFCAutoHideButton::GetSize  
  Określa rozmiar przycisku autoukrywania.  
   
 ```  
@@ -242,7 +237,7 @@ CSize GetSize() const;
 ### <a name="remarks"></a>Uwagi  
  Obliczony rozmiar obejmuje rozmiar obramowania przycisku autoukrywania.  
   
-##  <a name="gettextsize"></a>CMFCAutoHideButton::GetTextSize  
+##  <a name="gettextsize"></a>  CMFCAutoHideButton::GetTextSize  
  Zwraca rozmiar etykiety tekst dla przycisku autoukrywania.  
   
 ```  
@@ -252,7 +247,7 @@ virtual CSize GetTextSize() const;
 ### <a name="return-value"></a>Wartość zwracana  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) obiekt, który zawiera rozmiar tekst dla przycisku autoukrywania.  
   
-##  <a name="isactive"></a>CMFCAutoHideButton::IsActive  
+##  <a name="isactive"></a>  CMFCAutoHideButton::IsActive  
  Wskazuje, czy automatycznie Ukryj przycisk jest aktywny.  
   
 ```  
@@ -260,12 +255,12 @@ BOOL IsActive() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli automatycznie Ukryj przycisk jest aktywny; `FALSE` inaczej.  
+ `TRUE` Jeśli automatycznie Ukryj przycisk jest aktywny; `FALSE` inaczej.  
   
 ### <a name="remarks"></a>Uwagi  
  Automatycznie Ukryj przycisk jest aktywny, gdy skojarzony [klasy CDockablePane](../../mfc/reference/cdockablepane-class.md) pokazaniem okna.  
   
-##  <a name="ishorizontal"></a>CMFCAutoHideButton::IsHorizontal  
+##  <a name="ishorizontal"></a>  CMFCAutoHideButton::IsHorizontal  
  Określa, czy przycisk autoukrywania jest pozioma lub pionowa.  
   
 ```  
@@ -278,7 +273,7 @@ BOOL IsHorizontal() const;
 ### <a name="remarks"></a>Uwagi  
  Platformę Ustawia orientację przestrzenną [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) obiektu po jego utworzeniu.  Orientacja można kontrolować przy użyciu `dwAlignment` parametru w [CMFCAutoHideButton::Create](#create) metody.  
   
-##  <a name="istop"></a>CMFCAutoHideButton::IsTop  
+##  <a name="istop"></a>  CMFCAutoHideButton::IsTop  
 
   
 ```  
@@ -289,7 +284,7 @@ BOOL IsTop() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="isvisible"></a>CMFCAutoHideButton::IsVisible  
+##  <a name="isvisible"></a>  CMFCAutoHideButton::IsVisible  
  Wskazuje, czy przycisk autoukrywania jest widoczny.  
   
 ```  
@@ -297,9 +292,9 @@ virtual BOOL IsVisible() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli przycisk jest widoczna; `FALSE` inaczej.  
+ `TRUE` Jeśli przycisk jest widoczna; `FALSE` inaczej.  
   
-##  <a name="ondraw"></a>CMFCAutoHideButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCAutoHideButton::OnDraw  
  Platformę wywołuje tę metodę, gdy go rysuje automatyczne ukrywanie przycisku.  
   
 ```  
@@ -307,13 +302,13 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do kontekstu urządzenia.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli chcesz dostosować wygląd przycisków autoukrywania w aplikacji, Utwórz nową klasę pochodną `CMFCAutoHideButton`. W klasie pochodnej przesłonić tę metodę.  
   
-##  <a name="ondrawborder"></a>CMFCAutoHideButton::OnDrawBorder  
+##  <a name="ondrawborder"></a>  CMFCAutoHideButton::OnDrawBorder  
  Struktura wywołuje tę metodę po go rysuje obramowanie przycisku autoukrywania.  
   
 ```  
@@ -324,19 +319,19 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do kontekstu urządzenia.  
   
- [in]`rectBounds`  
+ [in] `rectBounds`  
  Prostokąt ograniczający automatyczne ukrywanie przycisku.  
   
- [in]`rectBorderSize`  
+ [in] `rectBorderSize`  
  Grubość obramowania dla każdej strony automatyczne ukrywanie przycisku.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli chcesz dostosować obramowania przycisku autoukrywania w aplikacji, Utwórz nową klasę pochodną `CMFCAutoHideButton`. W klasie pochodnej przesłonić tę metodę.  
   
-##  <a name="onfillbackground"></a>CMFCAutoHideButton::OnFillBackground  
+##  <a name="onfillbackground"></a>  CMFCAutoHideButton::OnFillBackground  
  Struktura wywołuje tę metodę po zapełnieniu tła automatyczne ukrywanie przycisku.  
   
 ```  
@@ -346,16 +341,16 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do kontekstu urządzenia.  
   
- [in]`rect`  
+ [in] `rect`  
  Prostokąt ograniczający automatyczne ukrywanie przycisku.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli chcesz dostosować tła przycisków autoukrywania w aplikacji, Utwórz nową klasę pochodną `CMFCAutoHideButton`. W klasie pochodnej przesłonić tę metodę.  
   
-##  <a name="showattachedwindow"></a>CMFCAutoHideButton::ShowAttachedWindow  
+##  <a name="showattachedwindow"></a>  CMFCAutoHideButton::ShowAttachedWindow  
  Pokazuje lub ukrywa skojarzony [CDockablePane klasy](../../mfc/reference/cdockablepane-class.md).  
   
 ```  
@@ -363,10 +358,10 @@ void ShowAttachedWindow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bShow`  
+ [in] `bShow`  
  Wartość logiczna określająca, czy ta metoda, pokazuje dołączonego `CDockablePane`.  
   
-##  <a name="showbutton"></a>CMFCAutoHideButton::ShowButton  
+##  <a name="showbutton"></a>  CMFCAutoHideButton::ShowButton  
  Pokazuje lub ukrywa automatyczne ukrywanie przycisku.  
   
 ```  
@@ -374,10 +369,10 @@ virtual void ShowButton(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bShow`  
+ [in] `bShow`  
  Wartość logiczna określająca, czy wyświetlać przycisk autoukrywania.  
   
-##  <a name="move"></a>CMFCAutoHideButton::Move  
+##  <a name="move"></a>  CMFCAutoHideButton::Move  
 
   
 ```  
@@ -385,11 +380,11 @@ void Move(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nOffset`  
+ [in] `nOffset`  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="replacepane"></a>CMFCAutoHideButton::ReplacePane  
+##  <a name="replacepane"></a>  CMFCAutoHideButton::ReplacePane  
 
   
 ```  
@@ -397,11 +392,11 @@ void ReplacePane(CDockablePane* pNewBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pNewBar`  
+ [in] `pNewBar`  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="unsetautohidemode"></a>CMFCAutoHideButton::UnSetAutoHideMode  
+##  <a name="unsetautohidemode"></a>  CMFCAutoHideButton::UnSetAutoHideMode  
  Wyłącz tryb autoukrywania.  
   
 ```  
@@ -409,12 +404,12 @@ virtual void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pFirstBarInGroup`  
+ [in] `pFirstBarInGroup`  
  Wskaźnik do pierwszego paska w grupie.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="highlightbutton"></a>CMFCAutoHideButton::HighlightButton  
+##  <a name="highlightbutton"></a>  CMFCAutoHideButton::HighlightButton  
  Przedstawia przycisk Ukryj automatycznie.  
   
 ```  
@@ -423,11 +418,11 @@ virtual void HighlightButton(BOOL bHighlight);
   
 ### <a name="parameters"></a>Parametry  
  `bHighlight`  
- Określa nowe automatyczne ukrywanie stanu przycisku. `TRUE`Wskazuje przycisk zostanie wyróżniona, `FALSE` wskazuje przycisku nie są wyróżnione.  
+ Określa nowe automatyczne ukrywanie stanu przycisku. `TRUE` Wskazuje przycisk zostanie wyróżniona, `FALSE` wskazuje przycisku nie są wyróżnione.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="ishighlighted"></a>CMFCAutoHideButton::IsHighlighted  
+##  <a name="ishighlighted"></a>  CMFCAutoHideButton::IsHighlighted  
  Zwraca stan wyróżnienia przycisk Ukryj automatycznie.  
   
 ```  

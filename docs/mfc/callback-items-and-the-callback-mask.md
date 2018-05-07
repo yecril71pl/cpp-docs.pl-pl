@@ -1,30 +1,25 @@
 ---
-title: "Elementy wywołania zwrotnego i maska wywołania zwrotnego | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Elementy wywołania zwrotnego i maska wywołania zwrotnego | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - callback items in CListCtrl class [MFC]
 - CListCtrl class [MFC], callback item and callback mask
 ms.assetid: 67c1f76f-6144-453e-9376-6712f89430ae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24d9992b8a9db679b30624d85ede1a35bfd9826d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 95c896308970ffc6a2040657927dc127eee278ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="callback-items-and-the-callback-mask"></a>Elementy wywołania zwrotnego i maska wywołania zwrotnego
 Dla każdego z jego elementów formantu widoku listy zwykle przechowuje tekst etykiety, indeks obrazu listy ikon elementu i zestaw bit flagi stanu elementu. Poszczególne elementy można zdefiniować jako elementy wywołania zwrotnego, które są przydatne, jeśli aplikacja już przechowuje niektóre informacje dla elementu.  
@@ -33,13 +28,13 @@ Dla każdego z jego elementów formantu widoku listy zwykle przechowuje tekst et
   
  Oprócz definiujący elementy wywołania zwrotnego, można również zmodyfikować maska wywołania zwrotnego formantu. Ta maska ustawiono flagi bitów, które określają stanów elementu, dla których aplikacji, a nie formantu, zapisuje bieżące dane. Maska wywołania zwrotnego ma zastosowanie do wszystkich elementów formantu, w odróżnieniu od oznaczenie elementu wywołania zwrotnego, która ma zastosowanie do określonego elementu. Maska wywołania zwrotnego wynosi zero domyślnie, co oznacza, że kontrolka śledzi wszystkie stany elementu. Aby zmienić to zachowanie domyślne, należy zainicjować masce dowolną kombinację następujących wartości:  
   
--   `LVIS_CUT`Element jest oznaczony do operacji kopiowania i wklejania.  
+-   `LVIS_CUT` Element jest oznaczony do operacji kopiowania i wklejania.  
   
--   `LVIS_DROPHILITED`Element zostanie wyróżniona jako element docelowy przeciągania i upuszczania.  
+-   `LVIS_DROPHILITED` Element zostanie wyróżniona jako element docelowy przeciągania i upuszczania.  
   
--   `LVIS_FOCUSED`Element ma fokus.  
+-   `LVIS_FOCUSED` Element ma fokus.  
   
--   `LVIS_SELECTED`Element jest zaznaczony.  
+-   `LVIS_SELECTED` Element jest zaznaczony.  
   
 -   **LVIS_OVERLAYMASK** aplikacja przechowuje indeksu listy obrazów bieżącego obrazu nakładki dla każdego elementu.  
   

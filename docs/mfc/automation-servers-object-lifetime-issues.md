@@ -1,13 +1,10 @@
 ---
-title: "Serwery automatyzacji: Kwestie okresu istnienia obiektów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Serwery automatyzacji: Kwestie okresu istnienia obiektów | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Automation servers, object lifetime
 - servers, lifetime of Automation
 ms.assetid: 342baacf-4015-4a0e-be2f-321424f1cb43
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c9fab7af74dee482c5e8dffb327da9c037796fa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e27812c20a64f5472c29a66298bcdec30bf4ef2b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automation-servers-object-lifetime-issues"></a>Serwery automatyzacji: kwestie okresu istnienia obiektów
 Gdy klient automatyzacji tworzy lub uaktywnia element OLE, serwer przekazuje klienta wskaźnik tego obiektu. Odwołanie do obiektu poprzez wywołanie funkcji OLE nawiązaniu przez klienta [IUnknown::AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379). To odwołanie jest włączona do momentu połączenia klienta [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317). (Aplikacje klienckie napisany za pomocą biblioteki Microsoft Foundation klasy klasy OLE nie muszą wprowadzać tych wywołań; wykonuje tę platformę). OLE system i serwera może utworzyć odwołania do obiektu. Serwer nie należy zniszczyć obiektu tak długo, jak obowiązują zewnętrznych odwołań do obiektu.  

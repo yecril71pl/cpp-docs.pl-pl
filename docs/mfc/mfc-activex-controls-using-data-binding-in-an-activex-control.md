@@ -1,13 +1,10 @@
 ---
-title: "Formanty MFC ActiveX: Używanie powiązania danych w formancie ActiveX | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Formanty MFC ActiveX: Używanie powiązania danych w formancie ActiveX | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - bindable
 - requestedit
@@ -23,24 +20,22 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 691f832717f5a71c461316b725ee9a69d1350124
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ab5195cc2381e515688182ad73452b07afd06b98
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Kontrolki ActiveX MFC: używanie powiązania danych w kontrolce ActiveX
 Jest jednym z bardziej zaawansowanych zastosowań kontrolki ActiveX powiązania danych, dzięki czemu właściwości formantu można powiązać z określonego pola w bazie danych. Gdy użytkownik modyfikuje danych w tej właściwości powiązanej, formantu powiadamia bazy danych i żądań, że można zaktualizować pola rekordu. Bazy danych jest następnie powiadamia formantu powodzenie lub Niepowodzenie żądania.  
   
  W tym artykule omówiono po stronie kontrolki zadania. Implementowanie interakcji powiązania danych z bazy danych jest odpowiedzialny za formantu kontenera. Jak zarządzać interakcje bazy danych w sieci kontenera wykracza poza zakres tej dokumentacji. Jak przygotować kontroli dla powiązania danych znajduje się w dalszej części tego artykułu.  
   
- ![Diagram koncepcyjny przedstawiający danych &#45; powiązanej kontrolki](../mfc/media/vc374v1.gif "vc374v1")  
+ ![Diagram koncepcyjny danych&#45;formant powiązany z](../mfc/media/vc374v1.gif "vc374v1")  
 Diagram koncepcyjny formantu powiązanego z danymi  
   
  `COleControl` Klasa udostępnia dwie funkcje Członkowskie składające dane powiązanie łatwy do zaimplementowania. Pierwsza funkcja [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit), jest używany do żądania uprawnień do zmiany wartości właściwości. [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged), druga funkcja jest wywoływana po wartości właściwości została zmieniona.  
@@ -51,7 +46,7 @@ Diagram koncepcyjny formantu powiązanego z danymi
   
 -   [Tworzenie metody powiązania Get/Set](#vchowcreatingbindablegetsetmethod)  
   
-##  <a name="vchowcreatingbindablestockproperty"></a>Tworzenie powiązania właściwości standardowych  
+##  <a name="vchowcreatingbindablestockproperty"></a> Tworzenie powiązania właściwości standardowych  
  Możliwe jest tworzenie powiązanych z danymi właściwości podstawowych, chociaż jest bardziej prawdopodobne, że można [powiązania get/set, Metoda](#vchowcreatingbindablegetsetmethod).  
   
 > [!NOTE]
@@ -79,7 +74,7 @@ Diagram koncepcyjny formantu powiązanego z danymi
   
  Teraz można utworzyć projektu, który zarejestruje formantu. Po wstawieniu formantu w oknie dialogowym **pola danych** i **źródła danych** zostaną dodane właściwości i można teraz wybrać źródło danych i pola do wyświetlenia w formancie.  
   
-##  <a name="vchowcreatingbindablegetsetmethod"></a>Tworzenie metody powiązania Get/Set  
+##  <a name="vchowcreatingbindablegetsetmethod"></a> Tworzenie metody powiązania Get/Set  
  Oprócz powiązane z danymi pobierania/ustawiania metody, można również utworzyć [można powiązać właściwości standardowych](#vchowcreatingbindablestockproperty).  
   
 > [!NOTE]

@@ -1,12 +1,9 @@
 ---
 title: BLOB_NAME_STATUS | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - BLOB_NAME_STATUS
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - BLOB_NAME_STATUS macro
 ms.assetid: 4564e4a0-8e5e-436a-bd1e-012d2a1b8642
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4d55e65872a2939a8aa252f0a839ed41570bbcd4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: cadd0217c25aed21e6788b7eba7c8d0778624b9d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="blobnamestatus"></a>BLOB_NAME_STATUS
 Używane z `BEGIN_COLUMN_MAP` i `END_COLUMN_MAP` powiązać dużego obiektu binarnego ([obiektu BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx)). Podobnie jak [BLOB_NAME](../../data/oledb/blob-name.md), ale to makro również pobiera stan kolumny danych obiektów BLOB.  
@@ -42,7 +37,7 @@ BLOB_NAME_STATUS(pszName, IID, flags, data
  `pszName`  
  [in] Wskaźnik do nazwy kolumny. Nazwa musi być ciągiem Unicode. Można to zrobić przez umieszczenie "L" przed nazwą, na przykład: `L"MyColumn"`.  
   
- *IID*  
+ *IDENTYFIKATOR IID*  
  [in] Interfejs identyfikatora GUID, takich jak **IDD_ISequentialStream**, używana do pobrania obiektu BLOB.  
   
  `flags`  

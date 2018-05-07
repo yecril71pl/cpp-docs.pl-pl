@@ -1,12 +1,9 @@
 ---
 title: Klasa CWordArray | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWordArray
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 2ba2c194-2c6c-40ff-9db4-e9dbe57e1f57
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5804df97c54a111a02b79dc849c20c91ba8176b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf19865b4c11bb8305bea62b3682faebe39bef74
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwordarray-class"></a>Klasa CWordArray
 Obsługuje tablic słowa 16-bitowych.  
@@ -113,10 +108,10 @@ class CWordArray : public CObject
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CObArray::operator &#91; &#93;](../../mfc/reference/cobarray-class.md#operator_at)|Ustawia lub pobiera element pod określonym indeksem.|  
+|[CObArray::operator&#91;&#93;](../../mfc/reference/cobarray-class.md#operator_at)|Ustawia lub pobiera element pod określonym indeksem.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CWordArray`zawiera [implement_serial —](run-time-object-model-services.md#implement_serial) makro do obsługi serializacji i zrzucanie swoich elementów. Jeśli tablica słów jest przechowywany archiwum z operatorem przeciążone wstawiania lub z [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) funkcji członkowskiej, każdy element jest, więc serializacji.  
+ `CWordArray` zawiera [implement_serial —](run-time-object-model-services.md#implement_serial) makro do obsługi serializacji i zrzucanie swoich elementów. Jeśli tablica słów jest przechowywany archiwum z operatorem przeciążone wstawiania lub z [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) funkcji członkowskiej, każdy element jest, więc serializacji.  
   
 > [!NOTE]
 >  Przed rozpoczęciem korzystania z tablicy, użyj `SetSize` jego rozmiar i przydzielić pamięci dla niego. Jeśli nie używasz `SetSize`, dodawanie elementów do macierzy powoduje jego przydzielić często i skopiować. Częste zmiany alokacji i kopiowanie są mało wydajne i można fragmentu pamięci.  
@@ -133,7 +128,7 @@ class CWordArray : public CObject
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxcoll.h  
   
-##  <a name="icommandsource_interface"></a>Interfejs ICommandSource  
+##  <a name="icommandsource_interface"></a>  Interfejs ICommandSource  
  Zarządza polecenia przesyłane z obiektem źródłowym polecenia do kontrolki użytkownika.  
   
 ```  
@@ -147,7 +142,7 @@ interface class ICommandSource
   
  Aby uzyskać więcej informacji na temat używania formularzy systemu Windows, zobacz [za pomocą formantu użytkownika formularza systemu Windows w MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-##  <a name="addcommandhandler"></a>ICommandSource::AddCommandHandler  
+##  <a name="addcommandhandler"></a>  ICommandSource::AddCommandHandler  
  Dodaje programem obsługi do obiektu źródłowego polecenia.  
   
 ```  
@@ -168,7 +163,7 @@ void AddCommandHandler(
   
  Zobacz [porady: dodawanie do formantu formularzy systemu Windows Routing poleceń](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) przykład sposobu użycia `AddCommandHandler`.  
   
-##  <a name="addcommandrangehandler"></a>ICommandSource::AddCommandRangeHandler  
+##  <a name="addcommandrangehandler"></a>  ICommandSource::AddCommandRangeHandler  
  Dodaje grupę programy obsługi poleceń do obiektu źródłowego polecenia.  
   
 ```  
@@ -191,7 +186,7 @@ void AddCommandRangeHandler(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda mapuje ciągły zakres identyfikatorów poleceń do obsługi wiadomości i dodaje go do obiektu źródłowego polecenia. Służy to do obsługi grupy przycisków powiązane z jedną z metod.  
   
-##  <a name="addcommandrangeuihandler"></a>ICommandSource::AddCommandRangeUIHandler  
+##  <a name="addcommandrangeuihandler"></a>  ICommandSource::AddCommandRangeUIHandler  
  Dodaje grupę programów obsługi wiadomości polecenia interfejsu użytkownika do obiektu źródłowego polecenia.  
   
 ```  
@@ -214,7 +209,7 @@ void AddCommandRangeUIHandler(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda mapuje ciągły zakres identyfikatorów poleceń do obsługi komunikatów polecenia interfejsu pojedynczego użytkownika i dodaje go do obiektu źródłowego polecenia. Służy to do obsługi grupy przycisków powiązane z jedną z metod.  
   
-##  <a name="addcommanduihandler"></a>ICommandSource::AddCommandUIHandler  
+##  <a name="addcommanduihandler"></a>  ICommandSource::AddCommandUIHandler  
  Dodaje program obsługi komunikatów polecenia interfejsu użytkownika do obiektu źródłowego polecenia.  
   
 ```  
@@ -233,7 +228,7 @@ void AddCommandUIHandler(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda dodaje obsługi wiadomości polecenia interfejsu użytkownika `cmdHandler` do obiektu źródłowego polecenia i mapowania programu obsługi do `cmdID`.  
   
-##  <a name="postcommand"></a>ICommandSource::PostCommand  
+##  <a name="postcommand"></a>  ICommandSource::PostCommand  
  Zapisuje komunikat bez oczekiwania na przetworzenie.  
   
 ```  
@@ -247,7 +242,7 @@ void PostCommand(unsigned int command);
 ### <a name="remarks"></a>Uwagi  
  Ta metoda asynchronicznie zapisuje komunikat zamapowane na identyfikator określony przez `command`. Wywołuje [CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage) do umieszczenia wiadomości w kolejki komunikatów i zwraca okna bez oczekiwania na odpowiednie okno, aby przetworzyć komunikatu.  
   
-##  <a name="removecommandhandler"></a>ICommandSource::RemoveCommandHandler  
+##  <a name="removecommandhandler"></a>  ICommandSource::RemoveCommandHandler  
  Usuwa programem obsługi z obiektem źródłowym polecenia.  
   
 ```  
@@ -261,7 +256,7 @@ void RemoveCommandHandler(unsigned int cmdID);
 ### <a name="remarks"></a>Uwagi  
  Ta metoda usuwa mapowane na program obsługi poleceń `cmdID` od źródła obiektu polecenia.  
   
-##  <a name="removecommandrangehandler"></a>ICommandSource::RemoveCommandRangeHandler  
+##  <a name="removecommandrangehandler"></a>  ICommandSource::RemoveCommandRangeHandler  
  Usuwa grupę programy obsługi poleceń z obiektem źródłowym polecenia.  
   
 ```  
@@ -280,7 +275,7 @@ void RemoveCommandRangeUIHandler(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda usuwa grupę programów obsługi wiadomości, zamapowane na określone identyfikatory polecenia przez `cmdIDMin` i `cmdIDMax`, od źródła obiektu polecenia.  
   
-##  <a name="removecommandrangeuihandler"></a>ICommandSource::RemoveCommandRangeUIHandler  
+##  <a name="removecommandrangeuihandler"></a>  ICommandSource::RemoveCommandRangeUIHandler  
  Usuwa grupę programów obsługi wiadomości polecenia interfejsu użytkownika z obiektem źródłowym polecenia.  
   
 ```  
@@ -299,7 +294,7 @@ void RemoveCommandRangeUIHandler(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda usuwa grupę użytkownika interfejsu polecenie Programy obsługi wiadomości, zamapowane na określone identyfikatory polecenia przez `cmdIDMin` i `cmdIDMax`, od źródła obiektu polecenia.  
   
-##  <a name="removecommanduihandler"></a>ICommandSource::RemoveCommandUIHandler  
+##  <a name="removecommanduihandler"></a>  ICommandSource::RemoveCommandUIHandler  
  Usuwa program obsługi komunikatów polecenia interfejsu użytkownika z obiektem źródłowym polecenia.  
   
 ```  
@@ -313,7 +308,7 @@ void RemoveCommandUIHandler(unsigned int cmdID);
 ### <a name="remarks"></a>Uwagi  
  Ta metoda usuwa mapowane do obsługi wiadomości użytkownika interfejsu polecenia `cmdID` od źródła obiektu polecenia.  
   
-##  <a name="sendcommand"></a>ICommandSource::SendCommand  
+##  <a name="sendcommand"></a>  ICommandSource::SendCommand  
  Wysyła komunikat i czeka na jego przetworzenie przed zwróceniem.  
   
 ```  
@@ -327,7 +322,7 @@ void SendCommand(unsigned int command);
 ### <a name="remarks"></a>Uwagi  
  Ta metoda synchronicznie wysyła wiadomość zamapowane na identyfikator określony przez `command`. Wywołuje [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) można umieścić wiadomości w okna kolejki komunikatów i czeka, aż do tej procedury okna przed zwróceniem przetworzył wiadomość.  
   
-##  <a name="icommandtarget_interface"></a>Interfejs obiektu ICommandTarget  
+##  <a name="icommandtarget_interface"></a>  Interfejs obiektu ICommandTarget  
  Udostępnia kontrolkę użytkownika przy użyciu interfejsu do odbierania poleceń z obiektem źródłowym polecenia.  
   
 ```  
@@ -341,7 +336,7 @@ interface class ICommandTarget
   
  Aby uzyskać więcej informacji na temat używania formularzy systemu Windows, zobacz [za pomocą formantu użytkownika formularza systemu Windows w MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-##  <a name="initialize"></a>ICommandTarget::Initialize  
+##  <a name="initialize"></a>  ICommandTarget::Initialize  
  Inicjuje obiekt docelowy polecenia.  
   
 ```  
@@ -357,7 +352,7 @@ void Initialize(ICommandSource^ cmdSource);
   
  Ta metoda inicjuje obiekt docelowy polecenia i kojarzy ją z obiektem źródłowym określone polecenie `cmdSource`. Powinna być wywoływana w implementacji klasy formantu użytkownika. Podczas inicjowania, należy zarejestrować programy obsługi poleceń z obiektem źródłowym polecenia, wywołując [ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md) w `Initialize` implementacji. Zobacz [porady: Dodawanie polecenia routingu do formantu formularzy systemu Windows](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) przykład sposobu użycia `Initialize` w tym celu.  
   
-##  <a name="icommandui_interface"></a>Interfejs ICommandUI  
+##  <a name="icommandui_interface"></a>  Interfejs ICommandUI  
  Zarządza polecenia interfejsu użytkownika.  
   
 ```  
@@ -365,9 +360,9 @@ interface class ICommandUI
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ten interfejs udostępnia metody i właściwości, które zarządzają polecenia interfejsu użytkownika. `ICommandUI`przypomina [ccmdui — klasa](../../mfc/reference/ccmdui-class.md), ale `ICommandUI` jest używana dla aplikacji MFC, które współdziałają z składniki platformy .NET.  
+ Ten interfejs udostępnia metody i właściwości, które zarządzają polecenia interfejsu użytkownika. `ICommandUI` przypomina [ccmdui — klasa](../../mfc/reference/ccmdui-class.md), ale `ICommandUI` jest używana dla aplikacji MFC, które współdziałają z składniki platformy .NET.  
   
- `ICommandUI`jest używany w ramach `ON_UPDATE_COMMAND_UI` obsługi - klasy pochodnej. Gdy użytkownik aplikacji aktywuje (wybiera lub kliknięć) menu, każdy element menu jest wyświetlany jako włączona lub wyłączona. Elementem docelowym każdego polecenia menu udostępnia te informacje zaimplementowanie `ON_UPDATE_COMMAND_UI` obsługi. Dla każdego z obiektów interfejsu użytkownika poleceń w aplikacji umożliwiają utworzenie wpisu mapy wiadomości i prototypu funkcji obsługi każdego okna właściwości.  
+ `ICommandUI` jest używany w ramach `ON_UPDATE_COMMAND_UI` obsługi - klasy pochodnej. Gdy użytkownik aplikacji aktywuje (wybiera lub kliknięć) menu, każdy element menu jest wyświetlany jako włączona lub wyłączona. Elementem docelowym każdego polecenia menu udostępnia te informacje zaimplementowanie `ON_UPDATE_COMMAND_UI` obsługi. Dla każdego z obiektów interfejsu użytkownika poleceń w aplikacji umożliwiają utworzenie wpisu mapy wiadomości i prototypu funkcji obsługi każdego okna właściwości.  
   
  Aby uzyskać więcej informacji na temat sposobu `ICommandUI` interfejs jest używany w routing poleceń, zobacz [porady: Dodawanie polecenia routingu do formantu formularzy systemu Windows](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).  
   
@@ -375,7 +370,7 @@ interface class ICommandUI
   
  Aby uzyskać więcej informacji dotyczących sposobu zarządzania polecenia interfejsu użytkownika w MFC, zobacz [ccmdui — klasa](../../mfc/reference/ccmdui-class.md).  
   
-##  <a name="check"></a>ICommandUI::Check  
+##  <a name="check"></a>  ICommandUI::Check  
  Ustawia element interfejsu użytkownika dla tego polecenia w stanie odpowiedniego wyboru.  
   
 ```  
@@ -391,7 +386,7 @@ property UICheckState Check;
 |1|Sprawdź|  
 |2|Ustaw nieokreślony|  
   
-##  <a name="continuerouting"></a>ICommandUI::ContinueRouting  
+##  <a name="continuerouting"></a>  ICommandUI::ContinueRouting  
  Określa, że mechanizm routingu polecenia kontynuować routingu do bieżącej wiadomości w łańcuchu programów obsługi.  
   
 ```  
@@ -401,7 +396,7 @@ void ContinueRouting();
 ### <a name="remarks"></a>Uwagi  
  To jest funkcja Zaawansowane elementu członkowskiego, które mają być używane w połączeniu z [on_command_ex —](message-map-macros-mfc.md#on_command_ex) obsługi, która zwraca `FALSE`. Aby uzyskać więcej informacji, zobacz Uwaga techniczna [TN006: mapy komunikatów](../../mfc/tn006-message-maps.md).  
   
-##  <a name="enabled"></a>ICommandUI::Enabled  
+##  <a name="enabled"></a>  ICommandUI::Enabled  
  Włącza lub wyłącza element interfejsu użytkownika dla tego polecenia.  
   
 ```  
@@ -411,7 +406,7 @@ property bool Enabled;
 ### <a name="remarks"></a>Uwagi  
  Tej właściwości Włącza lub wyłącza element interfejsu użytkownika dla tego polecenia. Ustaw `Enabled` do `TRUE` Aby włączyć element, `FALSE` je wyłączyć.  
   
-##  <a name="id"></a>ICommandUI::ID  
+##  <a name="id"></a>  ICommandUI::ID  
  Pobiera identyfikator obiektu interfejsu użytkownika reprezentowanego przez `ICommandUI` obiektu.  
   
 ```  
@@ -421,7 +416,7 @@ property unsigned int ID;
 ### <a name="remarks"></a>Uwagi  
  Ta właściwość pobiera identyfikator (dojścia) element menu przycisku paska narzędzi lub innych obiektów interfejsu użytkownika reprezentowanego przez `ICommandUI` obiektu.  
   
-##  <a name="index"></a>ICommandUI::Index  
+##  <a name="index"></a>  ICommandUI::Index  
  Pobiera indeks obiektu interfejsu użytkownika reprezentowanego przez `ICommandUI` obiektu.  
   
 ```  
@@ -431,7 +426,7 @@ property unsigned int Index;
 ### <a name="remarks"></a>Uwagi  
  Ta właściwość pobiera indeks element menu przycisku paska narzędzi (dojścia) lub innego obiektu interfejsu użytkownika reprezentowanego przez `ICommandUI` obiektu.  
   
-##  <a name="radio"></a>ICommandUI::Radio  
+##  <a name="radio"></a>  ICommandUI::Radio  
  Ustawia element interfejsu użytkownika dla tego polecenia w stanie odpowiedniego wyboru.  
   
 ```  
@@ -441,7 +436,7 @@ property bool Radio;
 ### <a name="remarks"></a>Uwagi  
  Dana właściwość ustawia element interfejsu użytkownika dla tego polecenia do stanu odpowiedniego wyboru. Ustaw `Radio` do `TRUE` umożliwiające elementu; w przeciwnym razie `FALSE`.  
   
-##  <a name="text"></a>ICommandUI::Text  
+##  <a name="text"></a>  ICommandUI::Text  
  Ustawia tekst elementu interfejsu użytkownika dla tego polecenia.  
   
 ```  
@@ -451,7 +446,7 @@ property String^ Text;
 ### <a name="remarks"></a>Uwagi  
  Ta właściwość określa tekst elementu interfejsu użytkownika dla tego polecenia. Ustaw `Text` do uchwytu ciągu tekstowego.  
   
-##  <a name="iview_interface"></a>Interfejs IView  
+##  <a name="iview_interface"></a>  Interfejs IView  
  Implementuje kilka metod który [CWinFormsView](../../mfc/reference/cwinformsview-class.md) używa do wysyłania powiadomień widoku do zarządzanego formantu.  
   
 ```  
@@ -459,13 +454,13 @@ interface class IView
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `IView`implementuje kilka metod który `CWinFormsView` używa do przekazywania wspólnej powiadomienia widoku do hostowanej zarządzanego formantu. Są to [OnInitialUpdate](../../mfc/reference/iview-interface.md), [OnUpdate](../../mfc/reference/iview-interface.md) i [OnActivateView](../../mfc/reference/iview-interface.md).  
+ `IView` implementuje kilka metod który `CWinFormsView` używa do przekazywania wspólnej powiadomienia widoku do hostowanej zarządzanego formantu. Są to [OnInitialUpdate](../../mfc/reference/iview-interface.md), [OnUpdate](../../mfc/reference/iview-interface.md) i [OnActivateView](../../mfc/reference/iview-interface.md).  
   
- `IView`przypomina [CView](../../mfc/reference/cview-class.md), ale jest używana tylko z zarządzanych widoków i kontrolek.  
+ `IView` przypomina [CView](../../mfc/reference/cview-class.md), ale jest używana tylko z zarządzanych widoków i kontrolek.  
   
  Aby uzyskać więcej informacji na temat używania formularzy systemu Windows, zobacz [za pomocą formantu użytkownika formularza systemu Windows w MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-##  <a name="onactivateview"></a>IView::OnActivateView  
+##  <a name="onactivateview"></a>  IView::OnActivateView  
  Wywoływane przez MFC, gdy widok jest aktywowane lub dezaktywowane.  
   
 ```  
@@ -476,14 +471,14 @@ void OnActivateView(bool activate);
  `activate`  
  Wskazuje, czy widok jest aktywowane lub dezaktywowane.  
   
-##  <a name="oninitialupdate"></a>IView::OnInitialUpdate  
+##  <a name="oninitialupdate"></a>  IView::OnInitialUpdate  
  Wywoływane przez platformę po widoku najpierw jest dołączony do dokumentu, ale przed wyświetleniu widoku.  
   
 ```  
 void OnInitialUpdate();
 ```  
   
-##  <a name="onupdate"></a>IView::OnUpdate  
+##  <a name="onupdate"></a>  IView::OnUpdate  
  Metoda wywoływana przez MFC, po jego dokument został zmodyfikowany.  
   
 ```  

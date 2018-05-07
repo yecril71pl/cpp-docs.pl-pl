@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCAutoHideBar | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCAutoHideBar
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CMFCAutoHideBar [MFC], UpdateVisibleState
 - CMFCAutoHideBar [MFC], m_nShowAHWndDelay
 ms.assetid: 54c8d84f-de64-4efd-8a47-3ea0ade40a70
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fdf8ae6346335b54e22170d4397ac95e8918470
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d9c60ee3601cd4055e963997a6cd4f8bbd48b14
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcautohidebar-class"></a>Klasa CMFCAutoHideBar
 `CMFCAutoHideBar` Klasa jest klasą specjalnych narzędzi implementujący funkcja.  
@@ -117,7 +112,7 @@ class CMFCAutoHideBar : public CPane
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -130,7 +125,7 @@ class CMFCAutoHideBar : public CPane
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxautohidebar.h  
   
-##  <a name="addautohidewindow"></a>CMFCAutoHideBar::AddAutoHideWindow  
+##  <a name="addautohidewindow"></a>  CMFCAutoHideBar::AddAutoHideWindow  
  Dodaje funkcje do `CDockablePane` okna, który umożliwia automatyczne ukrywanie.  
   
 ```  
@@ -140,10 +135,10 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pAutoHideWnd`  
+ [in] `pAutoHideWnd`  
  W oknie, w którym chcesz ukryć.  
   
- [in]`dwAlignment`  
+ [in] `dwAlignment`  
  Wartość, która określa sposób wyrównania automatyczne ukrywanie przycisku w oknie aplikacji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -159,7 +154,7 @@ CMFCAutoHideButton* AddAutoHideWindow(
   
 - `CBRS_ALIGN_BOTTOM`  
   
-##  <a name="allowshowonpanemenu"></a>CMFCAutoHideBar::AllowShowOnPaneMenu  
+##  <a name="allowshowonpanemenu"></a>  CMFCAutoHideBar::AllowShowOnPaneMenu  
 
   
 ```  
@@ -170,7 +165,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="calcfixedlayout"></a>CMFCAutoHideBar::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>  CMFCAutoHideBar::CalcFixedLayout  
 
   
 ```  
@@ -180,14 +175,14 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bStretch`  
- [in]`bHorz`  
+ [in] `bStretch`  
+ [in] `bHorz`  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="cmfcautohidebar"></a>CMFCAutoHideBar::CMFCAutoHideBar  
+##  <a name="cmfcautohidebar"></a>  CMFCAutoHideBar::CMFCAutoHideBar  
  Tworzy obiekt CMFCAutoHideBar.  
   
 ```  
@@ -196,7 +191,7 @@ CMFCAutoHideBar();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="create"></a>CMFCAutoHideBar::Create  
+##  <a name="create"></a>  CMFCAutoHideBar::Create  
 
   
 ```  
@@ -211,19 +206,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszClassName`  
- [in]`dwStyle`  
- [in]`rect`  
- [in]`pParentWnd`  
- [in]`nID`  
- [in]`dwControlBarStyle`  
- [in]`pContext`  
+ [in] `lpszClassName`  
+ [in] `dwStyle`  
+ [in] `rect`  
+ [in] `pParentWnd`  
+ [in] `nID`  
+ [in] `dwControlBarStyle`  
+ [in] `pContext`  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getfirstahwindow"></a>CMFCAutoHideBar::GetFirstAHWindow  
+##  <a name="getfirstahwindow"></a>  CMFCAutoHideBar::GetFirstAHWindow  
  Zwraca wskaźnik do pierwszego automatyczne ukrywanie okna aplikacji.  
   
 ```  
@@ -235,7 +230,7 @@ CDockablePane* GetFirstAHWindow();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getvisiblecount"></a>CMFCAutoHideBar::GetVisibleCount  
+##  <a name="getvisiblecount"></a>  CMFCAutoHideBar::GetVisibleCount  
  Pobiera liczbę widocznych autoukrywania przycisków.  
   
 ```  
@@ -247,7 +242,7 @@ int GetVisibleCount();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="m_nshowahwnddelay"></a>CMFCAutoHideBar::m_nShowAHWndDelay  
+##  <a name="m_nshowahwnddelay"></a>  CMFCAutoHideBar::m_nShowAHWndDelay  
  Opóźnienie między chwili, gdy użytkownik umieszcza kursor myszy za pośrednictwem [klasy CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) i chwilą, gdy platformę Pokazuje okno skojarzone.  
   
 ```  
@@ -257,7 +252,7 @@ int CMFCAutoHideBar::m_nShowAHWndDelay = 400;
 ### <a name="remarks"></a>Uwagi  
  Gdy użytkownik umieszcza kursor myszy za pośrednictwem `CMFCAutoHideButton`, występuje niewielkie opóźnienie, zanim w ramach Wyświetla okno skojarzone. Ten parametr określa długość tej opóźnienie w milisekundach.  
   
-##  <a name="onshowcontrolbarmenu"></a>CMFCAutoHideBar::OnShowControlBarMenu  
+##  <a name="onshowcontrolbarmenu"></a>  CMFCAutoHideBar::OnShowControlBarMenu  
 
   
 ```  
@@ -265,13 +260,13 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`CPoint`  
+ [in] `CPoint`  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="removeautohidewindow"></a>CMFCAutoHideBar::RemoveAutoHideWindow  
+##  <a name="removeautohidewindow"></a>  CMFCAutoHideBar::RemoveAutoHideWindow  
  Usuwa i niszczy okno autoukrywania.  
   
 ```  
@@ -279,7 +274,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- CDockablePane *`pAutoHideWnd`  
+ CDockablePane * `pAutoHideWnd`  
  Automatyczne ukrywanie okna do usunięcia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -287,7 +282,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setactiveingroup"></a>CMFCAutoHideBar::SetActiveInGroup  
+##  <a name="setactiveingroup"></a>  CMFCAutoHideBar::SetActiveInGroup  
  Flagi automatyczne ukrywanie paska jako aktywne.  
   
 ```  
@@ -295,13 +290,13 @@ virtual void SetActiveInGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] WARTOŚĆ LOGICZNA`bActive`  
+ [in] WARTOŚĆ LOGICZNA `bActive`  
  Wartość TRUE, aby aktywna; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
  Zobacz [CPane::SetActiveInGroup](../../mfc/reference/cpane-class.md#setactiveingroup).  
   
-##  <a name="setrecentvisiblestate"></a>CMFCAutoHideBar::SetRecentVisibleState  
+##  <a name="setrecentvisiblestate"></a>  CMFCAutoHideBar::SetRecentVisibleState  
 
   
 ```  
@@ -309,11 +304,11 @@ void SetRecentVisibleState(BOOL bState);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bState`  
+ [in] `bState`  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="showautohidewindow"></a>CMFCAutoHideBar::ShowAutoHideWindow  
+##  <a name="showautohidewindow"></a>  CMFCAutoHideBar::ShowAutoHideWindow  
  Pokazuje okno autoukrywania.  
   
 ```  
@@ -324,11 +319,11 @@ BOOL ShowAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] CDockablePane *`pAutoHideWnd`  
- [in] WARTOŚĆ LOGICZNA`bShow`  
+ [in] CDockablePane * `pAutoHideWnd`  
+ [in] WARTOŚĆ LOGICZNA `bShow`  
  Wartość TRUE, aby wyświetlić okno.  
   
- [in] WARTOŚĆ LOGICZNA`bDelay`  
+ [in] WARTOŚĆ LOGICZNA `bDelay`  
  Ten parametr jest ignorowany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -336,7 +331,7 @@ BOOL ShowAutoHideWindow(
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="stretchpane"></a>CMFCAutoHideBar::StretchPane  
+##  <a name="stretchpane"></a>  CMFCAutoHideBar::StretchPane  
  Zmienia rozmiar paska autoukrywania w stanie zwinięte, aby dopasować `CMFCAutoHideButton` obiektu.  
   
 ```  
@@ -346,10 +341,10 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nLength`  
+ [in] `nLength`  
  Wartość nie jest używana w implementacji podstawowej. W implementacjach pochodnej Użyj tej wartości, aby określić czas, po zmianie rozmiaru okienka.  
   
- [in]`bVert`  
+ [in] `bVert`  
  Wartość nie jest używana w implementacji podstawowej. W implementacji pochodnej, użyj `TRUE` do obsługi w przypadku, gdy pasek autoukrywania zwinięciu pionowo, i `FALSE` w przypadku, gdy pasek autoukrywania zwinięciu poziomo.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -358,7 +353,7 @@ virtual CSize StretchPane(
 ### <a name="remarks"></a>Uwagi  
  Klasy pochodne mogą przesłaniać tę metodę, aby dostosować zachowanie.  
   
-##  <a name="unsetautohidemode"></a>CMFCAutoHideBar::UnSetAutoHideMode  
+##  <a name="unsetautohidemode"></a>  CMFCAutoHideBar::UnSetAutoHideMode  
  Wyłącza automatyczne ukrywanie tryb dla grupy autoukrywania pasków.  
   
 ```  
@@ -371,7 +366,7 @@ void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup)
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="updatevisiblestate"></a>CMFCAutoHideBar::UpdateVisibleState  
+##  <a name="updatevisiblestate"></a>  CMFCAutoHideBar::UpdateVisibleState  
  Wywoływane przez platformę, gdy automatyczne ukrywanie paska musi zostać narysowany ponownie.  
   
 ```  

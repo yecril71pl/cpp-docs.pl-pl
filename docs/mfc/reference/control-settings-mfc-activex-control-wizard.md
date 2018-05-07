@@ -1,13 +1,10 @@
 ---
-title: "Sterowanie ustawieniami, Kreator formantów MFC ActiveX | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Sterowanie ustawieniami, Kreator formantów MFC ActiveX | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.ctl.settings
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control settings
 ms.assetid: 2ccaa4fc-0d52-413e-afa3-ecd474c3f6f0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60828b7f40009a5fd88c7f0a7f820ede3de4aa93
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 2161cea739d918bc0f5772a6cb08c29082a6e670
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>Ustawienia kontrolki, kreator kontrolek ActiveX MFC
 Ta strona kreatora można określić sposób formantu ma zachowywać się. Można na przykład podstawowa formantu na standardowe typy formantów systemu Windows, zoptymalizować jego działanie i wygląd lub wskazują, że formant może działać jako kontener dla innych formantów.  

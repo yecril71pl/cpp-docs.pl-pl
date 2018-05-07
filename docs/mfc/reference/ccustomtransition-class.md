@@ -1,12 +1,9 @@
 ---
 title: Klasa CCustomTransition | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCustomTransition
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CCustomTransition [MFC], m_initialVelocity
 - CCustomTransition [MFC], m_pInterpolator
 ms.assetid: 5bd3f492-940f-4290-a38b-fa68eb8f8401
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b94fd32bd00a484c5f8e3ba9e86efc5a9637e4e2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 89c3ec260fad8b0e2f8224c639aa745a9101e8b7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccustomtransition-class"></a>Klasa CCustomTransition
 Implementuje niestandardowych przejścia.  
@@ -93,7 +88,7 @@ class CCustomTransition : public CBaseTransition;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxanimationcontroller.h  
   
-##  <a name="ccustomtransition"></a>CCustomTransition::CCustomTransition  
+##  <a name="ccustomtransition"></a>  CCustomTransition::CCustomTransition  
  Tworzy obiekt niestandardowych przejścia.  
   
 ```  
@@ -104,7 +99,7 @@ CCustomTransition(CCustomInterpolator* pInterpolator);
  `pInterpolator`  
  Wskaźnik do interpolatora niestandardowych.  
   
-##  <a name="create"></a>CCustomTransition::Create  
+##  <a name="create"></a>  CCustomTransition::Create  
  Wywołuje biblioteki przejścia do utworzenia obiektu hermetyzowany przejścia COM.  
   
 ```  
@@ -122,42 +117,42 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Uwagi  
  Tej metody można również ustawić wartość początkowa i prędkość początkowa ma zostać zastosowany do zmiennej animacji, który jest skojarzony z tym przejścia. W tym celu należy wywołać SetInitialValue i SetInitialVelocity przed platformę tworzy obiekt COM hermetyzowany przejścia (zdarza się to podczas wywoływania CAnimationController::AnimateGroup).  
   
-##  <a name="m_binitialvaluespecified"></a>CCustomTransition::m_bInitialValueSpecified  
+##  <a name="m_binitialvaluespecified"></a>  CCustomTransition::m_bInitialValueSpecified  
  Określa, czy z SetInitialValue określono wartość początkowa.  
   
 ```  
 BOOL m_bInitialValueSpecified;  
 ```  
   
-##  <a name="m_binitialvelocityspecified"></a>CCustomTransition::m_bInitialVelocitySpecified  
+##  <a name="m_binitialvelocityspecified"></a>  CCustomTransition::m_bInitialVelocitySpecified  
  Określa, czy prędkość początkowa określono z SetInitialVelocity.  
   
 ```  
 BOOL m_bInitialVelocitySpecified;  
 ```  
   
-##  <a name="m_initialvalue"></a>CCustomTransition::m_initialValue  
+##  <a name="m_initialvalue"></a>  CCustomTransition::m_initialValue  
  Przechowuje wartość początkowa.  
   
 ```  
 DOUBLE m_initialValue;  
 ```  
   
-##  <a name="m_initialvelocity"></a>CCustomTransition::m_initialVelocity  
+##  <a name="m_initialvelocity"></a>  CCustomTransition::m_initialVelocity  
  Przechowuje prędkość początkowa.  
   
 ```  
 DOUBLE m_initialVelocity;  
 ```  
   
-##  <a name="m_pinterpolator"></a>CCustomTransition::m_pInterpolator  
+##  <a name="m_pinterpolator"></a>  CCustomTransition::m_pInterpolator  
  Przechowuje wskaźnik do interpolatora niestandardowych.  
   
 ```  
 CCustomInterpolator* m_pInterpolator;  
 ```  
   
-##  <a name="setinitialvalue"></a>CCustomTransition::SetInitialValue  
+##  <a name="setinitialvalue"></a>  CCustomTransition::SetInitialValue  
  Ustawia wartość początkową, które mają zostać zastosowane do zmiennej animacji skojarzone z tym przejścia.  
   
 ```  
@@ -167,7 +162,7 @@ void SetInitialValue(DOUBLE initialValue);
 ### <a name="parameters"></a>Parametry  
  `initialValue`  
   
-##  <a name="setinitialvelocity"></a>CCustomTransition::SetInitialVelocity  
+##  <a name="setinitialvelocity"></a>  CCustomTransition::SetInitialVelocity  
  Ustawia początkowej szybkość pracy, które mają zostać zastosowane do zmiennej animacji skojarzone z tym przejścia.  
   
 ```  

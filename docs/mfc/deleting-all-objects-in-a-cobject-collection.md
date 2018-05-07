@@ -1,13 +1,10 @@
 ---
-title: "Usuwanie wszystkich obiektów z kolekcji CObject | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Usuwanie wszystkich obiektów z kolekcji CObject | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04f1edc7f181bdb23e050d2fa608c9b3a2056749
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f57e503e43bdb637b85e4642349203b9f2e8aa6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>Usuwanie wszystkich obiektów z kolekcji CObject
 W tym artykule opisano sposób usuwania wszystkich obiektów z kolekcji (bez usuwania samego obiektu kolekcji).  
@@ -47,7 +42,7 @@ W tym artykule opisano sposób usuwania wszystkich obiektów z kolekcji (bez usu
   
 -   [Mapy](#_core_to_delete_all_elements_in_a_map)  
   
-#### <a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>Aby usunąć wszystkie obiekty w postaci listy wskaźniki do CObject  
+#### <a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>  Aby usunąć wszystkie obiekty w postaci listy wskaźniki do CObject  
   
 1.  Użyj `GetHeadPosition` i `GetNext` do iterację na liście.  
   
@@ -63,7 +58,7 @@ W tym artykule opisano sposób usuwania wszystkich obiektów z kolekcji (bez usu
   
  Zwróć uwagę, różnica między usunięcie elementu obiektu i usuwanie samego elementu. Usunięcie elementu z listy jedynie usuwa listy odwołania do obiektu. Obiekt nadal istnieje w pamięci. Po usunięciu obiektu przestaje istnieje i jest odzyskać jego pamięci. W związku z tym jest ważne usunąć element natychmiast po elementu obiekt został usunięty, dzięki czemu listy nie spróbuj uzyskać dostęp do obiektów, które już istnieją.  
   
-#### <a name="_core_to_delete_all_elements_in_an_array"></a>Aby usunąć wszystkie elementy tablicy  
+#### <a name="_core_to_delete_all_elements_in_an_array"></a>  Aby usunąć wszystkie elementy tablicy  
   
 1.  Użyj `GetSize` i liczby całkowitej wartości indeksów do iteracji tablicy.  
   
@@ -77,7 +72,7 @@ W tym artykule opisano sposób usuwania wszystkich obiektów z kolekcji (bez usu
   
  Zgodnie z powyższym przykładzie listy można wywołać `RemoveAll` do usunięcia wszystkich elementów w tablicy lub `RemoveAt` można usunąć pojedynczego elementu.  
   
-#### <a name="_core_to_delete_all_elements_in_a_map"></a>Aby usunąć wszystkie elementy na mapie  
+#### <a name="_core_to_delete_all_elements_in_a_map"></a> Aby usunąć wszystkie elementy na mapie  
   
 1.  Użyj `GetStartPosition` i `GetNextAssoc` do iteracji tablicy.  
   

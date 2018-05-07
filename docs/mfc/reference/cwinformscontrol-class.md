@@ -1,12 +1,9 @@
 ---
 title: Klasa CWinFormsControl | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWinFormsControl
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2e6bf46cf28c3bca3d71f85cdd681745a0379bd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0d126c7e6ef77142f20a9dd9d7ed68c44ede5fc1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwinformscontrol-class"></a>Klasa CWinFormsControl
 Zapewnia podstawowe funkcje do hostowania kontrolki formularzy systemu Windows.  
@@ -85,7 +80,7 @@ class CWinFormsControl : public CWnd
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxwinforms.h  
   
-##  <a name="createmanagedcontrol"></a>CWinFormsControl::CreateManagedControl  
+##  <a name="createmanagedcontrol"></a>  CWinFormsControl::CreateManagedControl  
  Tworzy kontrolkę formularzy systemu Windows w kontenerze MFC.  
   
 ```  
@@ -144,7 +139,7 @@ inline BOOL CreateManagedControl(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda tworzy wystąpienie formantu formularzy systemu Windows programu .NET Framework w kontenerze MFC.  
   
- Typ danych .NET Framework akceptuje pierwszy przeciążenia metody `pType` tak, aby MFC można utworzyć wystąpienia nowy obiekt tego typu. `pType`musi być [typu](https://msdn.microsoft.com/en-us/library/system.type) — typ danych.  
+ Typ danych .NET Framework akceptuje pierwszy przeciążenia metody `pType` tak, aby MFC można utworzyć wystąpienia nowy obiekt tego typu. `pType` musi być [typu](https://msdn.microsoft.com/en-us/library/system.type) — typ danych.  
   
  Drugi przeciążenia metody tworzy formantu formularzy systemu Windows na podstawie `TManagedControl` parametru szablonu `CWinFormsControl` klasy. Rozmiar i położenie formantu jest oparta na `RECT` struktury przekazywany do metody. Tylko `dwStyle` ma znaczenie dla stylów.  
   
@@ -154,7 +149,7 @@ inline BOOL CreateManagedControl(
   
  Zobacz [za pomocą formantu użytkownika formularza systemu Windows w MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md) dla przykładów w formularzu systemu Windows kontrolki.  
   
-##  <a name="cwinformscontrol"></a>CWinFormsControl::CWinFormsControl  
+##  <a name="cwinformscontrol"></a>  CWinFormsControl::CWinFormsControl  
  Tworzy obiekt otoki formantu formularzy systemu Windows MFC.  
   
 ```  
@@ -164,7 +159,7 @@ CWinFormsControl();
 ### <a name="remarks"></a>Uwagi  
  Formant formularzy systemu Windows zostanie uruchomiony po wywołaniu [CWinFormsControl::CreateManagedControl](#createmanagedcontrol).  
   
-##  <a name="getcontrol"></a>CWinFormsControl::GetControl  
+##  <a name="getcontrol"></a>  CWinFormsControl::GetControl  
  Pobiera wskaźnik do formantu formularzy systemu Windows.  
   
 ```  
@@ -177,7 +172,7 @@ inline TManagedControl^ GetControl() const;
 ### <a name="example"></a>Przykład  
   Zobacz [CWinFormsControl::CreateManagedControl](#createmanagedcontrol).  
   
-##  <a name="getcontrolhandle"></a>CWinFormsControl::GetControlHandle  
+##  <a name="getcontrolhandle"></a>  CWinFormsControl::GetControlHandle  
  Pobiera dojścia do formantu formularzy systemu Windows.  
   
 ```  
@@ -188,9 +183,9 @@ inline HWND GetControlHandle() const;
  Zwraca dojście do formantu formularzy systemu Windows.  
   
 ### <a name="remarks"></a>Uwagi  
- `GetControlHandle`to metoda pomocnika, która zwraca uchwyt okna przechowywane w .NET Framework właściwości formantu. Wartość uchwyt okna jest kopiowany do [CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd) podczas wywołania [CWnd::Attach](../../mfc/reference/cwnd-class.md#attach).  
+ `GetControlHandle` to metoda pomocnika, która zwraca uchwyt okna przechowywane w .NET Framework właściwości formantu. Wartość uchwyt okna jest kopiowany do [CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd) podczas wywołania [CWnd::Attach](../../mfc/reference/cwnd-class.md#attach).  
   
-##  <a name="operator_-_gt"></a>CWinFormsControl::operator-&gt;  
+##  <a name="operator_-_gt"></a>  CWinFormsControl::operator-&gt;  
  Zastępuje [CWinFormsControl::GetControl](#getcontrol) w wyrażeniach.  
   
 ```  
@@ -202,7 +197,7 @@ inline TManagedControl^  operator->() const;
   
  Aby uzyskać więcej informacji na formularzach systemu Windows, zobacz [za pomocą formantu użytkownika formularza systemu Windows w MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-##  <a name="operator_tmanagedcontrol"></a>CWinFormsControl::operator TManagedControl ^  
+##  <a name="operator_tmanagedcontrol"></a>  CWinFormsControl::operator TManagedControl ^  
  Rzutuje typu jako wskaźnik do formantu formularzy systemu Windows.  
   
 ```  

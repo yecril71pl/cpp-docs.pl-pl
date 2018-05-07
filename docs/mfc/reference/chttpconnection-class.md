@@ -1,12 +1,9 @@
 ---
 title: Klasa CHttpConnection | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHttpConnection
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CHttpConnection [MFC], CHttpConnection
 - CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a5236a4a957c742074a1305ba2d4359da3ed967
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 808c88e3a98df12d35afa9ce207f57456520b169
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chttpconnection-class"></a>Klasa CHttpConnection
 Zarządza nawiązanie połączenia z serwerem HTTP.  
@@ -73,7 +68,7 @@ class CHttpConnection : public CInternetConnection
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxinet.h  
   
-##  <a name="chttpconnection"></a>CHttpConnection::CHttpConnection  
+##  <a name="chttpconnection"></a>  CHttpConnection::CHttpConnection  
  Ta funkcja elementu członkowskiego jest wywoływana w celu utworzenia `CHttpConnection` obiektu.  
   
 ```  
@@ -129,7 +124,7 @@ CHttpConnection(
 |--------------------|--------------------|---------------------------------|---------------------------------|  
 |**Wartość NULL** lub ""|**Wartość NULL** lub ""|"anonymous"|Nazwa e-mail użytkownika|  
 |Nie- **NULL** ciągu|**Wartość NULL** lub ""|`pstrUserName`|" "|  
-|**Wartość NULL** z systemem innym niż **NULL** ciągu|**BŁĄD**|**BŁĄD**||  
+|**Wartość NULL** z systemem innym niż **NULL** ciągu|**ERROR**|**ERROR**||  
 |Nie- **NULL** ciągu|Nie- **NULL** ciągu|`pstrUserName`|`pstrPassword`|  
   
  `dwFlags`  
@@ -138,7 +133,7 @@ CHttpConnection(
 ### <a name="remarks"></a>Uwagi  
  Nigdy nie twórz `CHttpConnection` bezpośrednio. Zamiast tworzenia obiektu przez wywołanie metody [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection).  
   
-##  <a name="openrequest"></a>CHttpConnection::OpenRequest  
+##  <a name="openrequest"></a>  CHttpConnection::OpenRequest  
  Wywołanie tej funkcji elementu członkowskiego, aby otworzyć połączenie HTTP.  
   
 ```  
@@ -185,9 +180,9 @@ CHttpFile* OpenRequest(
  Dowolna kombinacja flag INTERNET_ FLAG_ *. Opis możliwości w sekcji uwag `dwFlags` wartości.  
   
  `nVerb`  
- Liczba skojarzone z typem żądania HTTP. Może to być jedna z następujących czynności:  
+ Liczba skojarzone z typem żądania HTTP. Może to być jeden z następujących elementów:  
   
-|Typ żądania HTTP|`nVerb`wartość|  
+|Typ żądania HTTP|`nVerb` Wartość|  
 |-----------------------|-------------------|  
 |`HTTP_VERB_POST`|0|  
 |`HTTP_VERB_GET`|1|  
@@ -201,7 +196,7 @@ CHttpFile* OpenRequest(
  Wskaźnik do [CHttpFile](../../mfc/reference/chttpfile-class.md) żądanego obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- `dwFlags`może to być jedna z następujących czynności:  
+ `dwFlags` Może to być jedna z następujących czynności:  
   
 |Flaga Internet|Opis|  
 |-------------------|-----------------|  

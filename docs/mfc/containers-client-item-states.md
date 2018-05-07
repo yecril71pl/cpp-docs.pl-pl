@@ -1,13 +1,10 @@
 ---
 title: 'Kontenery: Stany elementu klienckiego | Dokumentacja firmy Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - lifetime, lifetime states and OLE container client items
 - client items and OLE containers
 ms.assetid: e7021caa-bd07-4adb-976e-f5f3d025bc53
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bcc43d4e8b32a8766eef7c50e45bece569ef5c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5046ea7f3f3775cfe0009afe50f33a6ce6723cc0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="containers-client-item-states"></a>Kontenery: stany elementu klienckiego
 W tym artykule opisano różne stany, które element Klient przechodzi w okresie użytkowania.  
@@ -45,7 +40,7 @@ W tym artykule opisano różne stany, które element Klient przechodzi w okresie
   
  W stanu pustego elementu klienta nie jest jeszcze całkowicie elementu. Pamięć została przydzielona dla niego, ale go nie została jeszcze zainicjowana z danymi elementu OLE. Jest to stan elementu klienta jest w został on utworzony za pośrednictwem wywołania **nowe** , ale nie zostało jeszcze poddane drugi etap tworzenia typowych dwuetapową.  
   
- W drugim kroku realizuje wywołanie `COleClientItem::CreateFromFile` lub innym **CreateFrom***xxxx* funkcji, całkowicie tworzenia elementu. Skojarzono danych OLE (z pliku lub z innego źródła, na przykład zawartość Schowka) `COleClientItem`-pochodzi z obiektu. Teraz elementu jest w stanie załadowany.  
+ W drugim kroku realizuje wywołanie `COleClientItem::CreateFromFile` lub innym **CreateFrom *** xxxx* funkcji, całkowicie tworzenia elementu. Skojarzono danych OLE (z pliku lub z innego źródła, na przykład zawartość Schowka) `COleClientItem`-pochodzi z obiektu. Teraz elementu jest w stanie załadowany.  
   
  Gdy element ma został otwarty w oknie serwera zamiast otwarty w miejsce w dokumencie kontenera, jest w stanie open (lub całkowicie otwarte). W tym stanie kreskowania jest zwykle rysowane przez reprezentacja elementu w oknie kontenera, aby wskazać, czy element jest aktywny w innym miejscu.  
   
@@ -53,7 +48,7 @@ W tym artykule opisano różne stany, które element Klient przechodzi w okresie
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontenery](../mfc/containers.md)   
- [Aktywacji](../mfc/activation-cpp.md)   
+ [aktywacji](../mfc/activation-cpp.md)   
  [Kontenery: Powiadomienia elementów klienckich](../mfc/containers-client-item-notifications.md)   
  [Trackery](../mfc/trackers.md)   
  [Klasa CRectTracker](../mfc/reference/crecttracker-class.md)

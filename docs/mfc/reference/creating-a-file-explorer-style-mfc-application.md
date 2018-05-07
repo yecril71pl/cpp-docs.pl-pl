@@ -1,13 +1,10 @@
 ---
-title: "Tworzenie aplikacji MFC w stylu Eksploratora plików | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Tworzenie aplikacji MFC w stylu Eksploratora plików | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfcexplorer.project
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - MFC applications [MFC], Windows Explorer-style
 - Explorer-style applications [MFC], creating
 ms.assetid: f843ab5d-2d5d-41ca-88a4-badc0d2f8052
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6098e451b4ebc4caf2bb7fad99ea2e407e4872c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a5b0f5d4bdabc987d4f4177f616ce756c351b8b5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>Tworzenie aplikacji MFC w stylu eksploratora plików
 Wiele aplikacji systemu Windows używa interfejsu użytkownika (UI) w Eksploratorze plików. Po ponownym uruchomieniu Eksploratora plików, na przykład pojawić aplikacji przy użyciu rozdzielacza pionowy pasek dzielenia obszaru klienckiego. Lewej obszaru klienckiego zapewnia nawigacji i funkcji przeglądania, i prawego obszaru klienckiego przedstawia szczegółowe informacje dotyczące zaznaczenie w okienku po lewej stronie. Po kliknięciu elementu w okienku po lewej stronie aplikacji repopulates okienku po prawej stronie. W aplikacji MDI, możesz użyć polecenia w **widoku** menu, aby zmienić poziom szczegółów wyświetlany w okienku po prawej stronie. (W SDI lub wiele dokumentów najwyższego poziomu aplikacji, można zmienić szczegóły, korzystając z przycisków paska narzędzi.)  

@@ -1,12 +1,9 @@
 ---
 title: Klasa CDCRenderTarget | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDCRenderTarget
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CDCRenderTarget [MFC], GetDCRenderTarget
 - CDCRenderTarget [MFC], m_pDCRenderTarget
 ms.assetid: aa8059c9-08e6-49e4-9b8c-00fa54077a61
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 502c9d7cedf782c6ce23ebaf22d30c9b0e5e7409
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4129f57d8985a6e3368a4caf3574669342f06bc0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdcrendertarget-class"></a>Klasa CDCRenderTarget
 Otoka dla ID2D1DCRenderTarget.  
@@ -90,7 +85,7 @@ class CDCRenderTarget : public CRenderTarget;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxrendertarget.h  
   
-##  <a name="attach"></a>CDCRenderTarget::Attach  
+##  <a name="attach"></a>  CDCRenderTarget::Attach  
  Dołącza istniejących renderowania interfejsu docelowych do obiektu  
   
 ```  
@@ -101,7 +96,7 @@ void Attach(ID2D1DCRenderTarget* pTarget);
  `pTarget`  
  Istniejący interfejs docelowego renderowania. Nie może mieć wartości NULL  
   
-##  <a name="binddc"></a>CDCRenderTarget::BindDC  
+##  <a name="binddc"></a>  CDCRenderTarget::BindDC  
  Wiąże kontekst urządzenia, do którego on wydaje polecenia rysowania obiektu docelowego renderowania  
   
 ```  
@@ -120,14 +115,14 @@ BOOL BindDC(
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli metoda zakończy się powodzeniem, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.  
   
-##  <a name="cdcrendertarget"></a>CDCRenderTarget::CDCRenderTarget  
+##  <a name="cdcrendertarget"></a>  CDCRenderTarget::CDCRenderTarget  
  Tworzy obiekt CDCRenderTarget.  
   
 ```  
 CDCRenderTarget();
 ```  
   
-##  <a name="create"></a>CDCRenderTarget::Create  
+##  <a name="create"></a>  CDCRenderTarget::Create  
  Tworzy CDCRenderTarget.  
   
 ```  
@@ -141,7 +136,7 @@ BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli metoda zakończy się powodzeniem, zwraca wartość PRAWDA. W przeciwnym razie zwraca wartość FALSE.  
   
-##  <a name="detach"></a>CDCRenderTarget::Detach  
+##  <a name="detach"></a>  CDCRenderTarget::Detach  
  Odłącza interfejs docelowy renderowania z obiektu  
   
 ```  
@@ -151,7 +146,7 @@ ID2D1DCRenderTarget* Detach();
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do odłączonego renderowania interfejs docelowy.  
   
-##  <a name="getdcrendertarget"></a>CDCRenderTarget::GetDCRenderTarget  
+##  <a name="getdcrendertarget"></a>  CDCRenderTarget::GetDCRenderTarget  
  Zwraca interfejs ID2D1DCRenderTarget  
   
 ```  
@@ -161,14 +156,14 @@ ID2D1DCRenderTarget* GetDCRenderTarget();
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do interfejsu ID2D1DCRenderTarget lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.  
   
-##  <a name="m_pdcrendertarget"></a>CDCRenderTarget::m_pDCRenderTarget  
+##  <a name="m_pdcrendertarget"></a>  CDCRenderTarget::m_pDCRenderTarget  
  Wskaźnik do obiektu ID2D1DCRenderTarget.  
   
 ```  
 ID2D1DCRenderTarget* m_pDCRenderTarget;  
 ```  
   
-##  <a name="operator_id2d1dcrendertarget_star"></a>CDCRenderTarget::operator ID2D1DCRenderTarget *  
+##  <a name="operator_id2d1dcrendertarget_star"></a>  CDCRenderTarget::operator ID2D1DCRenderTarget *  
  Zwraca interfejs ID2D1DCRenderTarget  
   
 ```  

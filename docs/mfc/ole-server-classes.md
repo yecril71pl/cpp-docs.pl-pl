@@ -1,13 +1,10 @@
 ---
-title: "Klasy serwerów OLE | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Klasy serwerów OLE | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.ole
 dev_langs:
@@ -18,27 +15,25 @@ helpviewer_keywords:
 - COM components, classes [MFC]
 - component classes [MFC]
 ms.assetid: 8e9b67a2-c0ff-479c-a8d6-19b36c5e6fc6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d23c7cb23d9221f8f2183c666a99c70ef149db3e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9fc737a3d11307dff917132bfd113896b4ad801f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-server-classes"></a>Klasy serwerów OLE
 Te klasy są używane przez serwer aplikacji. Dokumenty serwera są uzyskiwane z `COleServerDoc` , a nie z **CDocument**. Należy pamiętać, że ponieważ `COleServerDoc` jest pochodną `COleLinkingDoc`, dokumenty serwera można także kontenerów, które obsługuje łączenia.  
   
  `COleServerItem` Klasa reprezentuje dokumentu lub części dokumentu, która może być osadzony w innym dokumencie lub połączony.  
   
- `COleIPFrameWnd`i `COleResizeBar` obsługuje edycji w miejscu, gdy obiekt jest w kontenerze i `COleTemplateServer` obsługuje tworzenie pary dokument/widok, tak, aby obiektów OLE z innych aplikacji można edytowane.  
+ `COleIPFrameWnd` i `COleResizeBar` obsługuje edycji w miejscu, gdy obiekt jest w kontenerze i `COleTemplateServer` obsługuje tworzenie pary dokument/widok, tak, aby obiektów OLE z innych aplikacji można edytowane.  
   
  [COleServerDoc](../mfc/reference/coleserverdoc-class.md)  
- Używany jako klasa podstawowa dla klasy dokumentów aplikacji serwera. `COleServerDoc`obiekty dostarczają zbiorczego obsługi serwera za pomocą interakcji z `COleServerItem` obiektów. Visual możliwości edycji jest realizowane przy użyciu architektury dokument/widok biblioteki klas.  
+ Używany jako klasa podstawowa dla klasy dokumentów aplikacji serwera. `COleServerDoc` obiekty dostarczają zbiorczego obsługi serwera za pomocą interakcji z `COleServerItem` obiektów. Visual możliwości edycji jest realizowane przy użyciu architektury dokument/widok biblioteki klas.  
   
  [CDocItem](../mfc/reference/cdocitem-class.md)  
  Abstrakcyjna klasa podstawowa z `COleClientItem` i `COleServerItem`. Obiekty klas pochodnych `CDocItem` reprezentują części dokumentów.  

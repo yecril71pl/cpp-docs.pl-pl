@@ -1,13 +1,10 @@
 ---
-title: "Formanty MFC ActiveX: Dystrybucja formantów ActiveX | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Formanty MFC ActiveX: Dystrybucja formantów ActiveX | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - GetWindowsDirectory
 - GetSystemDirectory
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - registering controls
 - OLEPRO32.DLL
 ms.assetid: cd70ac9b-f613-4879-9e81-6381fdfda2a1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ce6602696f733ca3bac03441a58515c57e0dc1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c6658c972b9d9cdeececd43a89ac424964d2289
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>Kontrolki ActiveX MFC: dystrybucja kontrolek ActiveX
 W tym artykule opisano kilka problemów związanych z redystrybuowanie formantów ActiveX:  
@@ -55,12 +50,12 @@ W tym artykule opisano kilka problemów związanych z redystrybuowanie formantó
   
 -   [Rejestrowanie formantów](#_core_registering_controls)  
   
-##  <a name="_core_ansi_or_unicode_control_versions"></a>ANSI lub Unicode kontroli wersji  
+##  <a name="_core_ansi_or_unicode_control_versions"></a> ANSI lub Unicode kontroli wersji  
  Należy określić, czy należy wysłać wersji ANSI lub Unicode, lub obie. Ta decyzja zależy od przenośność czynniki związane z zestawów znaków ANSI i Unicode.  
   
  Formanty ANSI, które działa we wszystkich systemach operacyjnych Win32, umożliwiają maksymalny przenoszenia między różnymi systemami operacyjnymi Win32. Formanty Unicode działają w tylko systemu Windows NT (wersja 3.51 lub nowsza), ale nie w systemie Windows 95 lub Windows 98. Jeśli przenośność jest najważniejszą kwestią, wysyłki ANSI kontrolki. Jeżeli formantów będzie uruchamiany tylko w systemie Windows NT, mogą być formanty Unicode. Można również wybrać zarówno wysyłki i aplikacja, zainstaluj wersję najbardziej odpowiednie dla systemu operacyjnego użytkownika.  
   
-##  <a name="_core_installing_activex_controls_and_redistributable_dlls"></a>Instalowanie formantów ActiveX i pakietu redystrybucyjnego bibliotek DLL  
+##  <a name="_core_installing_activex_controls_and_redistributable_dlls"></a> Instalowanie formantów ActiveX i pakietu redystrybucyjnego bibliotek DLL  
  Instalator zapewniają z formantów ActiveX powinien tworzenia specjalnych podkatalogu w katalogu systemu Windows i zainstaluj kontrolki. OCX w nim plików.  
   
 > [!NOTE]
@@ -70,7 +65,7 @@ W tym artykule opisano kilka problemów związanych z redystrybuowanie formantó
   
  Ponieważ formantów ActiveX może być używana tylko w aplikacje kontenera OLE, jest niepotrzebna do dystrybucji pełny zestaw biblioteki DLL OLE z formantów. Można Załóżmy, że zawierającego aplikacji (lub systemu operacyjnego, sam) zawiera standardowe OLE bibliotek DLL zainstalowane.  
   
-##  <a name="_core_registering_controls"></a>Rejestrowanie formantów  
+##  <a name="_core_registering_controls"></a> Rejestrowanie formantów  
  Przed użyciem formantu odpowiednie wpisy należy utworzyć dla niego w bazie danych rejestracji systemu Windows. Niektóre kontenery formantów ActiveX Podaj element menu dla użytkowników zarejestrować nowe formanty, ale ta funkcja może nie być dostępne na wszystkich kontenerów. W związku z tym można z Instalatora, aby zarejestrować formanty, kiedy są instalowane.  
   
  Jeśli wolisz, możesz zapisywać Twoje Instalatora, aby zarejestrować formant bezpośrednio zamiast tego.  

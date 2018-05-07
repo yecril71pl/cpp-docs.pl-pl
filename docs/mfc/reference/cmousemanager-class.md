@@ -1,12 +1,9 @@
 ---
 title: Klasa CMouseManager | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMouseManager
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CMouseManager [MFC], SaveState
 - CMouseManager [MFC], SetCommandForDblClk
 ms.assetid: a4d05017-4e44-4a40-8b57-4ece0de20481
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d019bedd63e7b7700ec91309c9ccaa0a41bf1ed
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: c58469086089dafe2447446723e06d6aa20a845c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmousemanager-class"></a>Klasa CMouseManager
 Umożliwia użytkownikowi skojarzyć różne polecenia z określonego [CView](../../mfc/reference/cview-class.md) obiektu, gdy użytkownik kliknie dwukrotnie w tym widoku.  
@@ -80,7 +75,7 @@ class CMouseManager : public CObject
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxmousemanager.h  
   
-##  <a name="addview"></a>CMouseManager::AddView  
+##  <a name="addview"></a>  CMouseManager::AddView  
  Rejestruje [CView](../../mfc/reference/cview-class.md) obiekt z [klasy CMouseManager](../../mfc/reference/cmousemanager-class.md) do obsługi myszy niestandardowe zachowanie.  
   
 ```  
@@ -97,19 +92,19 @@ BOOL AddView(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`iViewId`  
+ [in] `iViewId`  
  Identyfikator widoku.  
   
- [in]`uiViewNameResId`  
+ [in] `uiViewNameResId`  
  Identyfikator ciągu zasobu, który odwołuje się do nazwy widoku.  
   
- [in]`uiIconId`  
+ [in] `uiIconId`  
  Identyfikator widoku ikon.  
   
- [in]`iId`  
+ [in] `iId`  
  Identyfikator widoku.  
   
- [in]`lpszViewName`  
+ [in] `lpszViewName`  
  Nazwa widoku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -127,7 +122,7 @@ BOOL AddView(
   
  [!code-cpp[NVC_MFC_StateCollection#4](../../mfc/reference/codesnippet/cpp/cmousemanager-class_1.cpp)]  
   
-##  <a name="getviewdblclickcommand"></a>CMouseManager::GetViewDblClickCommand  
+##  <a name="getviewdblclickcommand"></a>  CMouseManager::GetViewDblClickCommand  
  Zwraca polecenie, które jest wykonywane, gdy użytkownik kliknie dwukrotnie wewnątrz podana widoku.  
   
 ```  
@@ -135,7 +130,7 @@ UINT GetViewDblClickCommand(int iId) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`iId`  
+ [in] `iId`  
  Identyfikator widoku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -149,7 +144,7 @@ UINT GetViewIconId(int iViewId) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`iViewId`  
+ [in] `iViewId`  
  Identyfikator widoku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -158,7 +153,7 @@ UINT GetViewIconId(int iViewId) const;
 ### <a name="remarks"></a>Uwagi  
  Ta metoda zakończy się niepowodzeniem, jeśli widok nie jest najpierw zarejestrowany za pomocą [CMouseManager::AddView](#addview).  
   
-##  <a name="getviewidbyname"></a>CMouseManager::GetViewIdByName  
+##  <a name="getviewidbyname"></a>  CMouseManager::GetViewIdByName  
  Pobiera identyfikator widoku skojarzone z nazwą widoku.  
   
 ```  
@@ -166,7 +161,7 @@ int GetViewIdByName(LPCTSTR lpszName) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszName`  
+ [in] `lpszName`  
  Nazwa widoku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -175,7 +170,7 @@ int GetViewIdByName(LPCTSTR lpszName) const;
 ### <a name="remarks"></a>Uwagi  
  Ta metoda przeszuka zarejestrowanych przy użyciu widoków [CMouseManager::AddView](#addview).  
   
-##  <a name="getviewnames"></a>CMouseManager::GetViewNames  
+##  <a name="getviewnames"></a>  CMouseManager::GetViewNames  
  Pobiera listę nazw wszystkich zarejestrowanych widoku.  
   
 ```  
@@ -183,13 +178,13 @@ void GetViewNames(CStringList& listOfNames) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`listOfNames`  
+ [out] `listOfNames`  
  Odwołanie do `CStringList` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wypełnia parametr `listOfNames` z nazwami wszystkich zarejestrowanych przy użyciu widoków [CMouseManager::AddView](#addview).  
   
-##  <a name="loadstate"></a>CMouseManager::LoadState  
+##  <a name="loadstate"></a>  CMouseManager::LoadState  
  Ładuje stan [klasy CMouseManager](../../mfc/reference/cmousemanager-class.md) z rejestru.  
   
 ```  
@@ -197,7 +192,7 @@ BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszProfileName`  
+ [in] `lpszProfileName`  
  Ścieżka do klucza rejestru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -208,7 +203,7 @@ BOOL LoadState(LPCTSTR lpszProfileName = NULL);
   
  W większości przypadków nie trzeba bezpośrednio wywoływać tej funkcji. Jest on nazywany jako część procesu inicjalizacji obszaru roboczego. Aby uzyskać więcej informacji na temat procesu inicjowania obszaru roboczego zobacz [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate).  
   
-##  <a name="savestate"></a>CMouseManager::SaveState  
+##  <a name="savestate"></a>  CMouseManager::SaveState  
  Zapisuje stan [klasy CMouseManager](../../mfc/reference/cmousemanager-class.md) w rejestrze.  
   
 ```  
@@ -216,7 +211,7 @@ BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszProfileName`  
+ [in] `lpszProfileName`  
  Ścieżka do klucza rejestru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -227,7 +222,7 @@ BOOL SaveState(LPCTSTR lpszProfileName = NULL);
   
  W większości przypadków nie trzeba bezpośrednio wywoływać tej funkcji. Jest to w ramach procesu roboczego serializacji. Aby uzyskać więcej informacji o procesie roboczym serializacji, zobacz [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate).  
   
-##  <a name="setcommandfordblclk"></a>CMouseManager::SetCommandForDblClk  
+##  <a name="setcommandfordblclk"></a>  CMouseManager::SetCommandForDblClk  
  Kojarzy polecenia niestandardowych z widoku, który został wcześniej zarejestrowany przy użyciu Menedżera myszy.  
   
 ```  
@@ -237,10 +232,10 @@ void SetCommandForDblClk(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`iViewId`  
+ [in] `iViewId`  
  Identyfikator widoku.  
   
- [in]`uiCmd`  
+ [in] `uiCmd`  
  Identyfikator polecenia.  
   
 ### <a name="remarks"></a>Uwagi  

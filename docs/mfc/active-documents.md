@@ -1,13 +1,10 @@
 ---
 title: Dokumenty aktywne | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - views [MFC], active documents
 - active documents [MFC], views
 ms.assetid: 1378f18e-aaa6-420b-8501-4b974905baa0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52f3165f69d47f63fc52ae01bbbd1947e7755a43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7a391dda8f8ffee6cec3cebc9d03250336195db
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-documents"></a>Dokumenty aktywne
 Dokumenty aktywne rozszerzyć technologii złożonego dokumentu OLE. Rozszerzenia te są udostępniane w formie dodatkowe interfejsy, które zarządzają widoków, dzięki czemu obiekty mogą działać w kontenerach i jeszcze zachować kontrolę nad ich wyświetlania i funkcji drukowania. Ten proces pozwala na wyświetlanie dokumentów obcego ramki (na przykład Microsoft Office Binder lub programu Microsoft Internet Explorer) oraz ramek natywnych (na przykład portów widok tego produktu).  
@@ -58,7 +53,7 @@ interface IOleDocument : IUnknown
   
  Dokument aktywny, można utworzyć jeden lub więcej typów [widoków](#requirements_for_view_objects) swoich danych (na przykład normalne, konspektu, strony układu i tak dalej). Widoki działać tak jak filtry za pomocą których dane są widoczne. Nawet wtedy, gdy dokument ma tylko jeden typ widoku, może nadal chcesz obsługiwać wiele widoków jako sposób obsługi nowych funkcji okna (na przykład **nowe okno** elementu na **okna** menu pakietu Office aplikacje).  
   
-##  <a name="requirements_for_active_documents"></a>Wymagania dotyczące dokumentów aktywnych  
+##  <a name="requirements_for_active_documents"></a> Wymagania dotyczące dokumentów aktywnych  
  Aktywny dokument wyświetlany w kontenerze aktywny dokument musi:  
   
 -   Użyj plików złożonych OLE jego mechanizmu magazynowania zaimplementowanie `IPersistStorage`.  
@@ -71,7 +66,7 @@ interface IOleDocument : IUnknown
   
  Wiedzy o kiedy i jak używać interfejsów po stronie kontenera jest podany w tych wymagań.  
   
-##  <a name="requirements_for_view_objects"></a>Wymagania dotyczące obiekty widoku  
+##  <a name="requirements_for_view_objects"></a> Wymagania dotyczące obiekty widoku  
  Aktywny dokument można utworzyć co najmniej jeden widok swoich danych. Funkcjonalnie tych widoków są podobne do portów na konkretnej metody do wyświetlania danych. Jeśli aktywny dokument obsługuje tylko jeden widok, aktywny dokument i że pojedynczego widoku można zaimplementować przy użyciu jednej klasy. **IOleDocument::CreateView** zwraca ten sam obiekt `IOleDocumentView` wskaźnika interfejsu.  
   
  Może być reprezentowana kontenera dokumentów aktywnych, musi obsługiwać składnika widoku **IOleInPlaceObject** i **IOleInPlaceActiveObject** oprócz `IOleDocumentView`:  

@@ -1,12 +1,9 @@
 ---
 title: Klasa CKeyFrame | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CKeyFrame
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CKeyFrame [MFC], m_pExistingKeyFrame
 - CKeyFrame [MFC], m_pTransition
 ms.assetid: d050a562-20f6-4c65-8ce5-ccb3aef1a20e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03cfc0766dd15a2762612cf5f41e72ffb1c1885f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9a9e9ff3d6e3e4bcccf8e9ebd46f791f60f1cc37
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ckeyframe-class"></a>Klasa CKeyFrame
 Reprezentuje klatek kluczowych animacji.  
@@ -96,7 +91,7 @@ class CKeyFrame : public CBaseKeyFrame;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxanimationcontroller.h  
   
-##  <a name="addtostoryboard"></a>CKeyFrame::AddToStoryboard  
+##  <a name="addtostoryboard"></a>  CKeyFrame::AddToStoryboard  
  Dodaje kluczową do scenorysu.  
   
 ```  
@@ -118,7 +113,7 @@ virtual BOOL AddToStoryboard(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda dodaje kluczową do scenorysu. Jeśli zależy on od innych klatki kluczowej lub przejścia i bDeepAdd ma wartość TRUE, ta metoda próbuje dodać je rekursywnie.  
   
-##  <a name="addtostoryboardaftertransition"></a>CKeyFrame::AddToStoryboardAfterTransition  
+##  <a name="addtostoryboardaftertransition"></a>  CKeyFrame::AddToStoryboardAfterTransition  
  Dodaje kluczową do scenorysu po przejściu.  
   
 ```  
@@ -140,7 +135,7 @@ BOOL AddToStoryboardAfterTransition(
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja jest wywoływana przez platformę, by dodać kluczową do scenorysu po przejściu.  
   
-##  <a name="addtostoryboardatoffset"></a>CKeyFrame::AddToStoryboardAtOffset  
+##  <a name="addtostoryboardatoffset"></a>  CKeyFrame::AddToStoryboardAtOffset  
  Dodaje kluczową do scenorysu przy przesunięciu.  
   
 ```  
@@ -162,7 +157,7 @@ virtual BOOL AddToStoryboardAtOffset(
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja jest wywoływana przez platformę, by dodać kluczową do scenorysu przy przesunięciu.  
   
-##  <a name="ckeyframe"></a>CKeyFrame::CKeyFrame  
+##  <a name="ckeyframe"></a>  CKeyFrame::CKeyFrame  
  Tworzy klatki kluczowej, która jest zależna od przejścia.  
   
 ```  
@@ -187,7 +182,7 @@ CKeyFrame(
 ### <a name="remarks"></a>Uwagi  
  Skonstruowane klatki kluczowej będzie reprezentować konkretnego momentu w scenorysu, po zakończeniu przejścia.  
   
-##  <a name="getexistingkeyframe"></a>CKeyFrame::GetExistingKeyframe  
+##  <a name="getexistingkeyframe"></a>  CKeyFrame::GetExistingKeyframe  
  Zwraca wskaźnik do klatki kluczowej, który zależy od tego klatki kluczowej.  
   
 ```  
@@ -200,7 +195,7 @@ CBaseKeyFrame* GetExistingKeyframe();
 ### <a name="remarks"></a>Uwagi  
  Jest to metoda dostępu do klatki kluczowej, który zależy od tego klatki kluczowej.  
   
-##  <a name="getoffset"></a>CKeyFrame::GetOffset  
+##  <a name="getoffset"></a>  CKeyFrame::GetOffset  
  Zwraca przesunięcie od innych klatki kluczowej.  
   
 ```  
@@ -213,7 +208,7 @@ UI_ANIMATION_SECONDS GetOffset();
 ### <a name="remarks"></a>Uwagi  
  Tę metodę należy wywoływać ustalenie przesunięcie w sekundach od innych klatki kluczowej.  
   
-##  <a name="gettransition"></a>CKeyFrame::GetTransition  
+##  <a name="gettransition"></a>  CKeyFrame::GetTransition  
  Zwraca wskaźnik do przejścia, od którego ta klatki kluczowej zależny.  
   
 ```  
@@ -226,21 +221,21 @@ CBaseTransition* GetTransition();
 ### <a name="remarks"></a>Uwagi  
  Jest to metoda dostępu do przejścia na zależy od tego klatki kluczowej.  
   
-##  <a name="m_offset"></a>CKeyFrame::m_offset  
+##  <a name="m_offset"></a>  CKeyFrame::m_offset  
  Określa przesunięcie to klatki kluczowej z kluczową przechowywane w m_pExistingKeyFrame.  
   
 ```  
 UI_ANIMATION_SECONDS m_offset;  
 ```  
   
-##  <a name="m_pexistingkeyframe"></a>CKeyFrame::m_pExistingKeyFrame  
+##  <a name="m_pexistingkeyframe"></a>  CKeyFrame::m_pExistingKeyFrame  
  Przechowuje wskaźnik do istniejących keframe. Ta klatki kluczowej jest dodawany do scenorysu z m_offset do istniejących klatki kluczowej.  
   
 ```  
 CBaseKeyFrame* m_pExistingKeyFrame;  
 ```  
   
-##  <a name="m_ptransition"></a>CKeyFrame::m_pTransition  
+##  <a name="m_ptransition"></a>  CKeyFrame::m_pTransition  
  Przechowuje wskaźnik do transtion, który rozpoczyna się od tego klatki kluczowej.  
   
 ```  

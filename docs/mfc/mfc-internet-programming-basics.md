@@ -1,13 +1,10 @@
 ---
-title: "MFC — podstawy programowania Internetu | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: MFC — podstawy programowania Internetu | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c03cdca832dcf0627ad033082085661c3b26847
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: c7014a55ab51f8a1cbe66093763e9a094dc5f2a3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC — podstawy programowania Internetu
 Firma Microsoft udostępnia wiele interfejsów API do programowania aplikacji klienta i serwera. Wiele nowych aplikacji są zapisywane w Internecie, a jako technologie, przeglądarki możliwości i zmiany opcji zabezpieczeń, nowych typów aplikacji zostanie zapisany. Uruchamianie przeglądarki na komputerach klienckich, zapewnianie dostępu do sieci Web i wyświetlanie strony HTML, które zawierają tekst, grafiki, formantów ActiveX i dokumenty. Serwery FTP, HTTP i gopher usług i uruchamiania aplikacji rozszerzenia serwera przy użyciu CGI. Niestandardową aplikację można pobrać informacji o i udostępniać dane w Internecie.  
@@ -82,14 +77,14 @@ Firma Microsoft udostępnia wiele interfejsów API do programowania aplikacji kl
   
 -   [Obsługa ATL dla kontrolek DHTML](../atl/atl-support-for-dhtml-controls.md)  
   
-##  <a name="_core_web_sites_for_more_information"></a>Witryny sieci Web, aby uzyskać więcej informacji  
+##  <a name="_core_web_sites_for_more_information"></a> Witryny sieci Web, aby uzyskać więcej informacji  
  Aby uzyskać dodatkowe informacje na temat technologii Microsoft Internet, zobacz [Microsoft Developer Network (MSDN)](http://go.microsoft.com/fwlink/p/?linkid=56322) witryny sieci Web. (Łącza mogą ulec zmianie bez powiadomienia).  
   
  Witryny sieci Web dla deweloperów zawiera informacji o korzystaniu z narzędzi programistycznych firmy Microsoft i technologie i najważniejszych artykułów o najnowsze i kolejnych. Na tej stronie można przejść do wielu witryn powiązanych developer, łącznie z .NET i centrów Developer XML. Możesz również pobrać zestawów SDK w wersji beta i przykłady.  
   
  [Sieci World Wide Web konsorcjum W3C](http://go.microsoft.com/fwlink/p/?linkid=37125) publikuje specyfikacje dla kodu HTML, HTTP CGI i inne technologie sieci World Wide Web.  
   
-##  <a name="_core_more_internet_help"></a>Więcej pomocy z Internetu  
+##  <a name="_core_more_internet_help"></a> Więcej pomocy z Internetu  
  Sekcja OLE zestawu Windows SDK zawiera dodatkowe informacje na temat programowania OLE. Te informacje szczegółowe informacje na temat korzystania z funkcji Win32 WinInet, bezpośrednio, a nie za pośrednictwem klas MFC. Zawiera przegląd informacji dotyczących technologii internetowych.  
   
 ## <a name="see-also"></a>Zobacz też  

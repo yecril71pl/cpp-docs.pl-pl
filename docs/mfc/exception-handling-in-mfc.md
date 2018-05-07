@@ -1,13 +1,10 @@
 ---
-title: "Obsługa wyjątków w MFC | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Obsługa wyjątków w MFC | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -42,17 +39,15 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 544130f27fb01d0d29652087351c8a5bbc5bd5c7
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 0792ddf067f6289d612a9adb0c8ffeaf8e554ed6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exception-handling-in-mfc"></a>Obsługa wyjątków w MFC
 W tym artykule opisano dostępne w MFC mechanizmy obsługi wyjątków. Dostępne są dwa mechanizmy:  
@@ -78,7 +73,7 @@ W tym artykule opisano dostępne w MFC mechanizmy obsługi wyjątków. Dostępne
   
 -   [Dalsze informacje dotyczące wyjątków](#_core_further_reading_about_exceptions)  
   
-##  <a name="_core_when_to_use_exceptions"></a>Kiedy używać wyjątków  
+##  <a name="_core_when_to_use_exceptions"></a> Kiedy używać wyjątków  
  Trzy kategorie wyników może wystąpić, gdy funkcja jest wywoływana podczas wykonywania programu: normalnego wykonywania, wykonanie błędne lub nietypowe wykonanie. Poniżej opisano każdej kategorii.  
   
 -   Wykonanie normalnej  
@@ -95,7 +90,7 @@ W tym artykule opisano dostępne w MFC mechanizmy obsługi wyjątków. Dostępne
   
  Używanie wyjątków jest szczególnie przydatne dla nietypowe wykonanie.  
   
-##  <a name="_core_mfc_exception_support"></a>Obsługa wyjątków MFC  
+##  <a name="_core_mfc_exception_support"></a> Obsługa wyjątków MFC  
  Czy używa wyjątków języka C++, bezpośrednio lub za pomocą makr wyjątków MFC, użyć [cexception — klasa](../mfc/reference/cexception-class.md) lub `CException`-pochodnych obiektów, które może zostać zgłoszony przez platformę, lub przez aplikację.  
   
  W poniższej tabeli przedstawiono wstępnie zdefiniowane wyjątki udostępniane przez MFC.  
@@ -116,7 +111,7 @@ W tym artykule opisano dostępne w MFC mechanizmy obsługi wyjątków. Dostępne
 > [!NOTE]
 >  MFC obsługuje zarówno wyjątki C++ i makr wyjątków MFC. MFC nie obsługuje bezpośrednio programy obsługi wyjątków strukturalnych systemu Windows NT (SEH), zgodnie z opisem w [obsługi wyjątków strukturalnych](http://msdn.microsoft.com/library/windows/desktop/ms680657).  
   
-##  <a name="_core_further_reading_about_exceptions"></a>Dalsze informacje dotyczące wyjątków  
+##  <a name="_core_further_reading_about_exceptions"></a> Dalsze informacje dotyczące wyjątków  
  Następujące artykuły wyjaśniają, za pomocą biblioteki MFC dla przekazywanie wyjątek:  
   
 -   [Wyjątki: przechwytywanie i usuwanie wyjątków](../mfc/exceptions-catching-and-deleting-exceptions.md)  

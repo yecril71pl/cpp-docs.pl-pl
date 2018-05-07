@@ -1,22 +1,20 @@
 ---
-title: "Zmień nazwę | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Zmień nazwę | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/16/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- cpp-ide
+ms.topic: conceptual
 ms.assetid: 64b42a88-3bd9-4399-8b96-75bceffc353b
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7ca06ef5a11d674d35aff7276e14312c456c60e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7a064527f6afcbf91be3fb4e51180be647c1f506
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rename"></a>Zmień nazwę
 **Co:** pozwala zmienić identyfikatory symboli kodu, takich jak pola, zmienne lokalne, metody, obszary nazw, właściwości i typów.
@@ -32,7 +30,7 @@ ms.lasthandoff: 12/21/2017
    ![Wyróżniony kod](images/rename_highlight.png)
 
 1. Następnie wykonaj jedną z następujących czynności:
-   * **Klawiatury**
+   * **Keyboard**
      * Naciśnij klawisz **Ctrl + R**, następnie **Ctrl + R**.  (Należy pamiętać, że skrót klawiaturowy mogą być różne oparte na profil, który wybrano).
    * **Myszy**
      * Wybierz **Edytuj > Refaktoryzuj > Zmień nazwę**.

@@ -1,12 +1,9 @@
 ---
 title: Klasa CAnimationGroup | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationGroup
@@ -55,17 +52,15 @@ helpviewer_keywords:
 - CAnimationGroup [MFC], m_nGroupID
 - CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d047940ac1ef3103168aa40b53c726ce0767b52
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 11b78cf273fd510b8ce224004c759dcc5bbe3bec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationgroup-class"></a>Klasa CAnimationGroup
 Implementuje grupy animacji, które łączy scenorysu animacji, obiekty animacji i przejść do definiowania animacji.  
@@ -133,14 +128,14 @@ class CAnimationGroup;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxanimationcontroller.h  
   
-##  <a name="_dtorcanimationgroup"></a>CAnimationGroup:: ~ CAnimationGroup  
+##  <a name="_dtorcanimationgroup"></a>  CAnimationGroup:: ~ CAnimationGroup  
  Destruktor. Wywoływane, gdy trwa niszczenie grupy animacji.  
   
 ```  
 ~CAnimationGroup();
 ```  
   
-##  <a name="addkeyframes"></a>CAnimationGroup::AddKeyframes  
+##  <a name="addkeyframes"></a>  CAnimationGroup::AddKeyframes  
  Pomocnik, który dodaje klatek kluczowych do scenorysu.  
   
 ```  
@@ -154,7 +149,7 @@ void AddKeyframes(IUIAnimationStoryboard* pStoryboard, BOOL bAddDeep);
  `bAddDeep`  
  Określa, czy ta metoda należy dodać do kluczowych scenorysu, które są zależne od innych klatek.  
   
-##  <a name="addtransitions"></a>CAnimationGroup::AddTransitions  
+##  <a name="addtransitions"></a>  CAnimationGroup::AddTransitions  
  Pomocnik, który dodaje przejścia do scenorysu.  
   
 ```  
@@ -169,7 +164,7 @@ void AddTransitions(
   
  `bDependOnKeyframes`  
   
-##  <a name="animate"></a>CAnimationGroup::Animate  
+##  <a name="animate"></a>  CAnimationGroup::Animate  
  Animuje grupy.  
   
 ```  
@@ -190,7 +185,7 @@ BOOL Animate(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda utworzy wewnętrzny scenorysu i stosuje przejścia i harmonogramy animacji, jeśli bScheduleNow ma wartość TRUE. Jeśli bScheduleNow ma wartość FALSE, należy wywołać harmonogram, aby uruchomić animacji w określonym czasie.  
   
-##  <a name="applytransitions"></a>CAnimationGroup::ApplyTransitions  
+##  <a name="applytransitions"></a>  CAnimationGroup::ApplyTransitions  
  Dotyczy przejścia obiektów animacji.  
   
 ```  
@@ -200,7 +195,7 @@ void ApplyTransitions();
 ### <a name="remarks"></a>Uwagi  
  Ta metoda potwierdza w trybie debugowania, jeśli nie utworzono scenorysu. Go najpierw tworzy wszystkie przejścia, a następnie dodaje kluczowych "statyczny" (kluczowych, które są zależne od przesunięcia), dodaje przejścia, które nie są zależne od kluczowych dodaje klatek kluczowych w zależności od przejścia i innych kluczowych i ostatnio dodaje przejścia, które są zależne od kluczowych .  
   
-##  <a name="canimationgroup"></a>CAnimationGroup::CAnimationGroup  
+##  <a name="canimationgroup"></a>  CAnimationGroup::CAnimationGroup  
  Tworzy grupę animacji.  
   
 ```  
@@ -214,7 +209,7 @@ CAnimationGroup(CAnimationController* pParentController, UINT32 nGroupID);
  `nGroupID`  
  Określa identyfikator grupy.  
   
-##  <a name="createtransitions"></a>CAnimationGroup::CreateTransitions  
+##  <a name="createtransitions"></a>  CAnimationGroup::CreateTransitions  
  Pomocnik, która tworzy obiekty COM przejścia.  
   
 ```  
@@ -224,7 +219,7 @@ BOOL CreateTransitions();
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE jest metoda zakończy się powodzeniem, w przeciwnym razie wartość FALSE.  
   
-##  <a name="findanimationobject"></a>CAnimationGroup::FindAnimationObject  
+##  <a name="findanimationobject"></a>  CAnimationGroup::FindAnimationObject  
  Znajduje obiekt animacji, który zawiera zmienną określonego animacji.  
   
 ```  
@@ -238,7 +233,7 @@ CAnimationBaseObject* FindAnimationObject(IUIAnimationVariable* pVariable);
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do obiektu animacji lub wartość NULL, jeśli nie znaleziono obiektu animacji.  
   
-##  <a name="getgroupid"></a>CAnimationGroup::GetGroupID  
+##  <a name="getgroupid"></a>  CAnimationGroup::GetGroupID  
  Zwraca identyfikator grupy.  
   
 ```  
@@ -248,63 +243,63 @@ UINT32 GetGroupID() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Identyfikator grupy.  
   
-##  <a name="m_bautocleartransitions"></a>CAnimationGroup::m_bAutoclearTransitions  
+##  <a name="m_bautocleartransitions"></a>  CAnimationGroup::m_bAutoclearTransitions  
  Określa, jak wyczyścić przejścia z obiektów animacji, które należą do grupy. Jeśli ten element członkowski ma wartość PRAWDA, przejścia są usuwane automatycznie, gdy zaplanowano animacji. W przeciwnym razie należy ręcznie usunąć przejścia.  
   
 ```  
 BOOL m_bAutoclearTransitions;  
 ```  
   
-##  <a name="m_bautodestroyanimationobjects"></a>CAnimationGroup::m_bAutodestroyAnimationObjects  
+##  <a name="m_bautodestroyanimationobjects"></a>  CAnimationGroup::m_bAutodestroyAnimationObjects  
  Określa, jak można zniszczyć obiekty animacji. Jeśli ten parametr ma wartość TRUE, obiekty animacji zostanie automatycznie zniszczona, gdy grupa zostanie zniszczony. W przeciwnym razie animacji obiekty muszą zostać zniszczone ręcznie. Wartość domyślna to FALSE. Ta wartość TRUE tylko wtedy, gdy wszystkie obiekty animacji, które należą do grupy są dynamicznie przydzielane z nowy operator.  
   
 ```  
 BOOL m_bAutodestroyAnimationObjects;  
 ```  
   
-##  <a name="m_bautodestroykeyframes"></a>CAnimationGroup::m_bAutodestroyKeyframes  
+##  <a name="m_bautodestroykeyframes"></a>  CAnimationGroup::m_bAutodestroyKeyframes  
  Określa, jak można zniszczyć klatek. Jeśli ta wartość wynosi TRUE, wszystkich kluczowych są usuwane i zniszczone; w przeciwnym razie usuwane są tylko na liście. Wartość domyślna to TRUE.  
   
 ```  
 BOOL m_bAutodestroyKeyframes;  
 ```  
   
-##  <a name="m_lstanimationobjects"></a>CAnimationGroup::m_lstAnimationObjects  
+##  <a name="m_lstanimationobjects"></a>  CAnimationGroup::m_lstAnimationObjects  
  Zawiera listę obiektów animacji.  
   
 ```  
 CObList m_lstAnimationObjects;  
 ```  
   
-##  <a name="m_lstkeyframes"></a>CAnimationGroup::m_lstKeyFrames  
+##  <a name="m_lstkeyframes"></a>  CAnimationGroup::m_lstKeyFrames  
  Zawiera listę klatek.  
   
 ```  
 CObList m_lstKeyFrames;  
 ```  
   
-##  <a name="m_ngroupid"></a>CAnimationGroup::m_nGroupID  
+##  <a name="m_ngroupid"></a>  CAnimationGroup::m_nGroupID  
  Unikatowy identyfikator grupy animacji.  
   
 ```  
 UINT32 m_nGroupID;  
 ```  
   
-##  <a name="m_pparentcontroller"></a>CAnimationGroup::m_pParentController  
+##  <a name="m_pparentcontroller"></a>  CAnimationGroup::m_pParentController  
  Wskaźnik do kontrolera animacji, do której należy ta grupa.  
   
 ```  
 CAnimationController* m_pParentController;  
 ```  
   
-##  <a name="m_pstoryboard"></a>CAnimationGroup::m_pStoryboard  
+##  <a name="m_pstoryboard"></a>  CAnimationGroup::m_pStoryboard  
  Wskazuje scenorysu animacji. Ten wskaźnik jest prawidłowy tylko po wywołaniu na Animuj.  
   
 ```  
 ATL::CComPtr<IUIAnimationStoryboard> m_pStoryboard;  
 ```  
   
-##  <a name="removekeyframes"></a>CAnimationGroup::RemoveKeyframes  
+##  <a name="removekeyframes"></a>  CAnimationGroup::RemoveKeyframes  
  Usuwa i opcjonalnie niszczy wszystkich kluczowych, które należą do grupy animacji.  
   
 ```  
@@ -314,7 +309,7 @@ void RemoveKeyframes();
 ### <a name="remarks"></a>Uwagi  
  Jeśli m_bAutodestroyKeyframes element członkowski ma wartość PRAWDA, funkcja kluczowych są usuwane i niszczone, w przeciwnym razie kluczowych właśnie są usuwane z wewnętrzną listę klatek.  
   
-##  <a name="removetransitions"></a>CAnimationGroup::RemoveTransitions  
+##  <a name="removetransitions"></a>  CAnimationGroup::RemoveTransitions  
  Usuwa przejścia z obiektów animacji, które należą do grupy animacji.  
   
 ```  
@@ -324,7 +319,7 @@ void RemoveTransitions();
 ### <a name="remarks"></a>Uwagi  
  Jeśli flaga m_bAutoclearTransitions jest ustawiona na wartość TRUE, ta metoda pętli wszystkich obiektów animacji, które należą do grupy i wywołuje CAnimationObject::ClearTransitions(FALSE).  
   
-##  <a name="schedule"></a>CAnimationGroup::Schedule  
+##  <a name="schedule"></a>  CAnimationGroup::Schedule  
  Planuje animacji w określonym czasie.  
   
 ```  
@@ -344,7 +339,7 @@ BOOL Schedule(IUIAnimationTimer* pTimer, UI_ANIMATION_SECONDS time);
 ### <a name="remarks"></a>Uwagi  
  Wywołanie tej funkcji można zaplanować animacji w określonym czasie. Animuj należy wywołać z bScheduleNow wartość FALSE.  
   
-##  <a name="setautodestroytransitions"></a>CAnimationGroup::SetAutodestroyTransitions  
+##  <a name="setautodestroytransitions"></a>  CAnimationGroup::SetAutodestroyTransitions  
  Poleca się, że wszystkie obiekty animacji, które należą do grupy automatycznie zniszczyć przejścia.  
   
 ```  

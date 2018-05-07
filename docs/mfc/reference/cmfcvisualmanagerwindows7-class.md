@@ -2,11 +2,8 @@
 title: Klasa CMFCVisualManagerWindows7 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCVisualManagerWindows7
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CMFCVisualManagerWindows7 Class [MFC]
 ms.assetid: e8d87df1-0c09-4b58-8ade-4e911f796e42
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96168e569ff2207e43663f50989eb0686d3d52a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b6599ddf3663f56c651907fe3823849787a05b50
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>Klasa CMFCVisualManagerWindows7
 `CMFCVisualManagerWindows7` Daje aplikacji wygląd [!INCLUDE[win7](../../build/includes/win7_md.md)] aplikacji.  
@@ -73,7 +68,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |`CMFCVisualManagerWindows7::OnDrawMenuBorder`|Zastępuje [CMFCVisualManagerWindows::OnDrawMenuBorder](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawmenuborder)|  
 |`CMFCVisualManagerWindows7::OnDrawMenuCheck`|Zastępuje [CMFCVisualManager::OnDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenucheck)|  
 |`CMFCVisualManagerWindows7::OnDrawMenuLabel`|Zastępuje [CMFCVisualManager::OnDrawMenuLabel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenulabel)|  
-|`CMFCVisualManagerWindows7::OnDrawRadioButton`|Zastąpienia`CMFCVisualManager::OnDrawRadioButton`|  
+|`CMFCVisualManagerWindows7::OnDrawRadioButton`|Zastąpienia `CMFCVisualManager::OnDrawRadioButton`|  
 |`CMFCVisualManagerWindows7::OnDrawRibbonApplicationButton`|Zastępuje [CMFCVisualManager::OnDrawRibbonApplicationButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonapplicationbutton)|  
 |`CMFCVisualManagerWindows7::OnDrawRibbonButtonBorder`|Zastępuje [CMFCVisualManager::OnDrawRibbonButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonbuttonborder)|  
 |`CMFCVisualManagerWindows7::OnDrawRibbonCaption`|Zastępuje [CMFCVisualManager::OnDrawRibbonCaption](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncaption)|  
@@ -82,7 +77,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |`CMFCVisualManagerWindows7::OnDrawRibbonCategoryTab`|Zastępuje [CMFCVisualManager::OnDrawRibbonCategoryTab](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategorytab)|  
 |`CMFCVisualManagerWindows7::OnDrawRibbonDefaultPaneButton`|Zastępuje [CMFCVisualManager::OnDrawRibbonDefaultPaneButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbondefaultpanebutton)|  
 |`CMFCVisualManagerWindows7::OnDrawRibbonGalleryButton`|Zastępuje [CMFCVisualManager::OnDrawRibbonGalleryButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbongallerybutton)|  
-|`CMFCVisualManagerWindows7::OnDrawRibbonLaunchButton`|Zastąpienia`CMFCVisualManager::OnDrawRibbonLaunchButton`|  
+|`CMFCVisualManagerWindows7::OnDrawRibbonLaunchButton`|Zastąpienia `CMFCVisualManager::OnDrawRibbonLaunchButton`|  
 |`CMFCVisualManagerWindows7::OnDrawRibbonMenuCheckFrame`|Zastępuje [CMFCVisualManager::OnDrawRibbonMenuCheckFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonmenucheckframe)|  
 |`CMFCVisualManagerWindows7::OnDrawRibbonPanel`|Zastępuje [CMFCVisualManager::OnDrawRibbonPanel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonpanel)|  
 |`CMFCVisualManagerWindows7::OnDrawRibbonPanelCaption`|Zastępuje [CMFCVisualManager::OnDrawRibbonPanelCaption](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonpanelcaption)|  
@@ -127,21 +122,21 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxvisualmanagerwindows7.h  
   
-##  <a name="_dtorcmfcvisualmanagerwindows7"></a>CMFCVisualManagerWindows7:: ~ CMFCVisualManagerWindows7  
+##  <a name="_dtorcmfcvisualmanagerwindows7"></a>  CMFCVisualManagerWindows7:: ~ CMFCVisualManagerWindows7  
  Destruktor domyślne.  
   
 ```  
 virtual ~CMFCVisualManagerWindows7();
 ```  
   
-##  <a name="cmfcvisualmanagerwindows7"></a>CMFCVisualManagerWindows7::CMFCVisualManagerWindows7  
+##  <a name="cmfcvisualmanagerwindows7"></a>  CMFCVisualManagerWindows7::CMFCVisualManagerWindows7  
  Domyślny konstruktor.  
   
 ```  
 CMFCVisualManagerWindows7();
 ```  
   
-##  <a name="getribboneditbackgroundcolor"></a>CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor  
+##  <a name="getribboneditbackgroundcolor"></a>  CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor  
  Uzyskuje kolor tła pole edycji wstążki.  
   
 ```  
@@ -153,16 +148,16 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pEdit`  
+ [in] `pEdit`  
  Wskaźnik do kontrolki edycji. Ta wartość nie może być `NULL`.  
   
- [out]`bIsHighlighted`  
+ [out] `bIsHighlighted`  
  Zwraca czy zostanie wyróżniona pole wstążki.  
   
- [out]`bIsPaneHighlighted`  
+ [out] `bIsPaneHighlighted`  
  Zwraca `TRUE` czy wstążki panelu, który zawiera `pEdit` zostanie wyróżniona.  
   
- [out]`bIsDisabled`  
+ [out] `bIsDisabled`  
  Zwraca czy `pEdit` jest wyłączona.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -170,7 +165,7 @@ virtual COLORREF GetRibbonEditBackgroundColor (
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="onfillmenuimagerect"></a>CMFCVisualManagerWindows7::OnFillMenuImageRect  
+##  <a name="onfillmenuimagerect"></a>  CMFCVisualManagerWindows7::OnFillMenuImageRect  
  Struktura wywołuje tę metodę po zapełnieniu obszar wokół obrazu elementu menu.  
   
 ```  
@@ -182,16 +177,16 @@ virtual void OnFillMenuImageRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do kontekstu urządzenia przycisku menu.  
   
- [in]`pButton`  
+ [in] `pButton`  
  Wskaźnik do `CMFCToolBarButton`. Platformę wypełnienia tła dla tego przycisku.  
   
- [in]`rect`  
+ [in] `rect`  
  Prostokąt, który określa granice obszaru obrazu przycisku menu.  
   
- [in]`state`  
+ [in] `state`  
  Stan przycisku.  
   
 ### <a name="remarks"></a>Uwagi  

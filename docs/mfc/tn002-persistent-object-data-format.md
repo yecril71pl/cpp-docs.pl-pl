@@ -1,13 +1,10 @@
 ---
-title: "TN002: Format trwałych danych obiektu | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'TN002: Format trwałych danych obiektu | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.data
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - persistent C++ objects [MFC]
 - TN002
 ms.assetid: 553fe01d-c587-4c8d-a181-3244a15c2be9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca6a78f19b43ded59efb56b87f9fe3f44887a31a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ca145ff871e1c5ccff27bdebe473c6cb6f39073a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn002-persistent-object-data-format"></a>TN002: format trwałych danych obiektu
 Ta uwaga opisano procedury MFC, które obsługuje obiekty trwałe C++ i format danych obiektu, gdy jest on przechowywany w pliku. Dotyczy to tylko klas z [declare_serial —](../mfc/reference/run-time-object-model-services.md#declare_serial) i [implement_serial —](../mfc/reference/run-time-object-model-services.md#implement_serial) makra.  
@@ -77,7 +72,7 @@ ar>> pObj;        // calls ar.ReadObject(RUNTIME_CLASS(CObj))
   
  Jeśli obiekt nie został zapisany przed, istnieją dwie możliwości wziąć pod uwagę: zarówno obiekt i dokładne typ (czyli klasa) obiektu dopiero zaczynasz korzystać z tego kontekstu archiwum albo obiekt jest typu dokładne już widoczny. Aby ustalić, czy typ została napotkana, zapytania kod `m_pStoreMap` dla [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) obiekt, który jest zgodny `CRuntimeClass` obiekt skojarzony z obiektem zapisywany. Jeśli istnieje dopasowanie, `WriteObject` wstawia znacznik, który jest operacja `OR` z `wOldClassTag` i tego indeksu. Jeśli `CRuntimeClass` jest nowa w tym kontekście archiwum `WriteObject` przypisuje nowego identyfikatora PID do tej klasy i wstawia go do archiwum poprzedzony `wNewClassTag` wartość.  
   
- Deskryptor dla tej klasy zostanie wstawiony na za pomocą archiwum `CRuntimeClass::Store` metody. `CRuntimeClass::Store`Wstawia numer schematu klasy (patrz poniżej) i nazwę klasy tekstu ASCII. Należy pamiętać, że użycie nazwy tekstu ASCII nie gwarantuje unikatowości archiwum w aplikacjach. W związku z tym należy oznaczyć pliki danych, aby zapobiec uszkodzeniu. Następujące wstawiania informacji o klasie archiwum umieszcza obiektu do `m_pStoreMap` , a następnie wywołuje `Serialize` metodę, aby wstawić dane specyficzne dla klasy. Wprowadzenie do obiektu do `m_pStoreMap` przed wywołaniem `Serialize` uniemożliwia wiele kopii obiektu są zapisywane w magazynie.  
+ Deskryptor dla tej klasy zostanie wstawiony na za pomocą archiwum `CRuntimeClass::Store` metody. `CRuntimeClass::Store` Wstawia numer schematu klasy (patrz poniżej) i nazwę klasy tekstu ASCII. Należy pamiętać, że użycie nazwy tekstu ASCII nie gwarantuje unikatowości archiwum w aplikacjach. W związku z tym należy oznaczyć pliki danych, aby zapobiec uszkodzeniu. Następujące wstawiania informacji o klasie archiwum umieszcza obiektu do `m_pStoreMap` , a następnie wywołuje `Serialize` metodę, aby wstawić dane specyficzne dla klasy. Wprowadzenie do obiektu do `m_pStoreMap` przed wywołaniem `Serialize` uniemożliwia wiele kopii obiektu są zapisywane w magazynie.  
   
  Po powrocie do początkowego wywołującego (zazwyczaj główne sieci obiektów), należy wywołać [CArchive::Close](../mfc/reference/carchive-class.md#close). Jeśli planujesz do wykonywania innych [cfile —](../mfc/reference/cfile-class.md)operacji, należy wywołać `CArchive` metody [opróżnić](../mfc/reference/carchive-class.md#flush) aby zapobiec uszkodzeniu archiwum.  
   

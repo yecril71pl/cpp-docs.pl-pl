@@ -1,13 +1,10 @@
 ---
 title: 'Kontenery: Funkcje zaawansowane | Dokumentacja firmy Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e79b1c88996e835a907129fa5810d4c4dca0770
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1ff48585a7f3e19939e8d951c513a8d39c0de47e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="containers-advanced-features"></a>Kontenery: funkcje zaawansowane
 W tym artykule opisano kroki niezbędne do włączają opcjonalne funkcje zaawansowane do istniejących aplikacji kontenera. Te funkcje są:  
@@ -40,7 +35,7 @@ W tym artykule opisano kroki niezbędne do włączają opcjonalne funkcje zaawan
   
 -   [Połączenie osadzonych obiektów OLE](#_core_links_to_embedded_objects)  
   
-##  <a name="_core_creating_a_container_server_application"></a>Tworzenie aplikacji kontenera/serwera  
+##  <a name="_core_creating_a_container_server_application"></a> Tworzenie aplikacji kontenera/serwera  
  Aplikacja kontenera/serwera jest aplikacja, która działa jako kontener i serwer. Na przykład jest program Microsoft Word dla systemu Windows. Dokumenty Word dla systemu Windows można osadzić w innych aplikacjach, a można również osadzić elementy w dokumentach programu Word dla systemu Windows. Proces modyfikowania aplikacji kontenera zarówno kontener i pełny serwer (nie można utworzyć aplikacji kontenera/miniserver kombinacja) jest podobny do procesu tworzenia całego serwera.  
   
  Artykuł [serwery: Implementowanie serwera](../mfc/servers-implementing-a-server.md) Wyświetla liczbę zadań wymaganych do wdrożenia aplikacji serwera. Jeśli Konwertuj aplikacji kontenera do aplikacji kontenera/serwera, należy wykonać niektóre z tych samych zadań, dodawanie kodu do kontenera. Poniższa lista zawiera ważne zagadnienia, które należy wziąć pod uwagę:  
@@ -57,7 +52,7 @@ W tym artykule opisano kroki niezbędne do włączają opcjonalne funkcje zaawan
   
  Należy pamiętać, że nie można wstawić aplikacji MDI do siebie samego. Nie można wstawić aplikacji kontenera/serwera do tego samego, chyba że jest to aplikacja SDI.  
   
-##  <a name="_core_links_to_embedded_objects"></a>Łącza do osadzonych obiektów  
+##  <a name="_core_links_to_embedded_objects"></a> Łącza do osadzonych obiektów  
  Łącza do osadzonych obiektów funkcji umożliwia użytkownikowi utworzenie dokumentu o połączenie OLE osadzonego wewnątrz kontenera aplikacji. Na przykład utworzyć dokumentu w edytorze tekstu, zawierających osadzone arkusza kalkulacyjnego. Jeśli aplikacja obsługuje łącza do osadzonych obiektów, można go wkleić łącze do arkusza kalkulacyjnego zawarte w dokumencie edytora tekstów. Ta funkcja umożliwia aplikacji umożliwiająca użycie informacji zawartych w arkuszu kalkulacyjnym bez wiedzy o którym tekstów pierwotnie wiem.  
   
 #### <a name="to-link-to-embedded-objects-in-your-application"></a>Aby utworzyć łącze do osadzonych obiektów w aplikacji  

@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCRibbonCustomizePropertyPage | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonCustomizePropertyPage
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMFCRibbonCustomizePropertyPage [MFC], AddCustomCategory
 - CMFCRibbonCustomizePropertyPage [MFC], OnOK
 ms.assetid: ea32a99a-dfbe-401e-8975-aa191552532f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ad58cb0b062e25a52742eec5491489d3744a9ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b6c5501159cfdb46107b4fef34637195d52f465
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>Klasa CMFCRibbonCustomizePropertyPage
 Implementuje niestandardowej strony dla **Dostosuj** okno dialogowe w aplikacjach opartych na Wstążce.  
@@ -73,13 +68,13 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [Cdialog —](../../mfc/reference/cdialog-class.md)  
+ [CDialog](../../mfc/reference/cdialog-class.md)  
   
- [Cpropertypage —](../../mfc/reference/cpropertypage-class.md)  
+ [CPropertyPage](../../mfc/reference/cpropertypage-class.md)  
   
  [CMFCPropertyPage](../../mfc/reference/cmfcpropertypage-class.md)  
   
@@ -88,7 +83,7 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxribboncustomizedialog.h  
   
-##  <a name="addcustomcategory"></a>CMFCRibbonCustomizePropertyPage::AddCustomCategory  
+##  <a name="addcustomcategory"></a>  CMFCRibbonCustomizePropertyPage::AddCustomCategory  
  Dodaje kategorię niestandardową do **polecenia** pola kombi.  
   
 ```  
@@ -102,13 +97,13 @@ void AddCustomCategory(
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in]`lpszName`|Określa nazwę kategorii niestandardowej.|  
-|[in]`lstIDS`|Zawiera polecenie wstążki identyfikatorów ma być wyświetlany w kategorii niestandardowej.|  
+|[in] `lpszName`|Określa nazwę kategorii niestandardowej.|  
+|[in] `lstIDS`|Zawiera polecenie wstążki identyfikatorów ma być wyświetlany w kategorii niestandardowej.|  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda dodaje kategorię o nazwie `lpszName` do **polecenia** pola kombi. Po wybraniu przez użytkownika kategorii, polecenia określone w `lstIDS` znajdują się na liście polecenia.  
   
-##  <a name="cmfcribboncustomizepropertypage"></a>CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
+##  <a name="cmfcribboncustomizepropertypage"></a>  CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
  Konstruuje `CMFCRibbonCustomizePropertyPage` obiektu.  
   
 ```  
@@ -116,10 +111,10 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pRibbonBar`  
+ [in] `pRibbonBar`  
  Wskaźnik do sterowania wstążki, dla którego opcje, aby dostosować.  
   
-##  <a name="onok"></a>CMFCRibbonCustomizePropertyPage::OnOK  
+##  <a name="onok"></a>  CMFCRibbonCustomizePropertyPage::OnOK  
  Calleld przez system, gdy użytkownik kliknie **OK** na **Dostosuj** okno dialogowe.  
   
 ```  

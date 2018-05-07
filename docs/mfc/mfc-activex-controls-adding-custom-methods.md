@@ -1,37 +1,32 @@
 ---
 title: 'Formanty MFC ActiveX: Dodawanie metod niestandardowych | Dokumentacja firmy Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - PtInCircle custom method [MFC]
 ms.assetid: 8f8dc344-44a0-4021-8db5-4cdd3d700e18
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f79d4c5f7407e3de12ccf180a68b2b22e35bf10
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1cdf264bd0c2aa44bdeecc58b4bc8eb89c70fb91
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>Kontrolki ActiveX MFC: dodawanie metod niestandardowych
 Niestandardowe metody różnią się od metod standardowych, nie są już zaimplementowane przez `COleControl`. Należy podać implementacji dla każdej niestandardowej metody dodawany do formantu.  
   
  Użytkownik formantu ActiveX można wywołać metody niestandardowej w dowolnym momencie do wykonania akcji specyficzne dla formantu. Wpisu mapy wysyłania dla niestandardowej metody ma postać `DISP_FUNCTION`.  
   
-##  <a name="_core_adding_a_custom_method_with_classwizard"></a>Dodawanie niestandardowej metody z Kreator dodawania metody  
+##  <a name="_core_adding_a_custom_method_with_classwizard"></a> Dodawanie niestandardowej metody z Kreator dodawania metody  
  W poniższej procedurze przedstawiono Dodawanie niestandardowej metody PtInCircle do formantu ActiveX szkielet kodu. PtInCircle Określa, czy współrzędne przekazany do formantu są wewnątrz lub na zewnątrz okręgu. Tę samą procedurę można również dodać innych metod niestandardowych. Zastąp nazwę niestandardowej metody i jego parametrów dla nazwy metody PtInCircle i parametry.  
   
 > [!NOTE]
@@ -61,7 +56,7 @@ Niestandardowe metody różnią się od metod standardowych, nie są już zaimpl
   
 10. Kliknij przycisk **Zakończ**.  
   
-##  <a name="_core_classwizard_changes_for_custom_methods"></a>Dodaj metody kreatora zmiany dla metod niestandardowych  
+##  <a name="_core_classwizard_changes_for_custom_methods"></a> Dodaj metody kreatora zmiany dla metod niestandardowych  
  Po dodaniu niestandardowej metody Kreator dodawania metody sprawia, że pewne zmiany do nagłówka klasy formantu (. H) i implementacji (. Pliki CPP). Następujący wiersz jest dodawany do deklaracji mapy wysyłania nagłówka klasy formantu (. H) plików:  
   
  [!code-cpp[NVC_MFC_AxUI#18](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_1.h)]  

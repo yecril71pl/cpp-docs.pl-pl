@@ -1,13 +1,10 @@
 ---
 title: 'Menu i zasoby: dodatki do kontenera | Dokumentacja firmy Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - IDP_OLE_INIT_FAILED
 - IDP_FAILED_TO_CREATE
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 654efeaacd08e0d2c8c51cee012fd58dcbf071ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c71e8a79652a86ba412ef829ac1151256d1bf65
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="menus-and-resources-container-additions"></a>Menu i zasoby: dodatki do kontenera
 W tym artykule opisano zmiany, które należy wprowadzić do menu i innych zasobów w programie visual edycji aplikacji kontenera.  
@@ -52,7 +47,7 @@ W tym artykule opisano zmiany, które należy wprowadzić do menu i innych zasob
   
 -   [Dodatki tabeli ciągów](#_core_string_table_additions_for_container_applications)  
   
-##  <a name="_core_container_menu_additions"></a>Dodatkowe Menu kontenera  
+##  <a name="_core_container_menu_additions"></a> Dodatkowe Menu kontenera  
  Należy dodać następujące elementy do menu Edycja:  
   
 |Element|Cel|  
@@ -66,7 +61,7 @@ W tym artykule opisano zmiany, które należy wprowadzić do menu i innych zasob
   
  Jeśli chcesz obsługi aktywacji w miejscu z zawartych w niej elementów, należy utworzyć nowego menu aplikacji kontenera. W tym menu składa się z tego samego pliku menu i menu podręcznego okna używany, gdy pliki są otwarte, ale ma dwa separatory się między nimi. Te separatory są używane do wskazywania, gdzie element serwera (składnik) (aplikacja) należy umieścić jego menu po uaktywnieniu w miejscu. Aby uzyskać więcej informacji na temat tej techniki scalania menu, zobacz [menu i zasoby: scalanie Menu](../mfc/menus-and-resources-menu-merging.md).  
   
-##  <a name="_core_container_application_accelerator_table_additions"></a>Dodatki tabeli akceleratora do aplikacji kontenera  
+##  <a name="_core_container_application_accelerator_table_additions"></a> Dodatki tabeli akceleratora do aplikacji kontenera  
  Niewielkie zmiany w zasoby tabeli akceleratora aplikacji kontenera są niezbędne, jeśli aktywacja w miejscu są obsługiwane. Pierwsza zmiana umożliwia użytkownikowi naciśnij klawisz escape (ESC), aby anulować tryb edycji w miejscu. Dodaj następujący wpis do tabeli akceleratora główne:  
   
 |ID|Key|Typ|  
@@ -85,7 +80,7 @@ W tym artykule opisano zmiany, które należy wprowadzić do menu i innych zasob
 |**ID_PREV_PANE —**|SHIFT + VK_F6|**VIRTKEY**|  
 |**ID_CANCEL_EDIT_CNTR**|VK_ESCAPE —|**VIRTKEY**|  
   
-##  <a name="_core_string_table_additions_for_container_applications"></a>Ciąg tabeli dodatki do aplikacji kontenera  
+##  <a name="_core_string_table_additions_for_container_applications"></a> Ciąg tabeli dodatki do aplikacji kontenera  
  Większość zmian do tabel ciągów dla aplikacji kontenera odpowiadają elementów menu dodatkowe wspomnianego [dodatki do kontenera Menu](#_core_container_menu_additions). Dostarczają tekst wyświetlany w pasku stanu wyświetlania każdego elementu menu. Na przykład poniżej przedstawiono wpisów tabeli ciągów, generowanych przez Kreatora aplikacji:  
   
 |ID|String|  

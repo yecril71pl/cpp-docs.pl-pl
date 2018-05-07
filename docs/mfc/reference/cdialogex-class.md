@@ -2,11 +2,8 @@
 title: Klasa CDialogEx | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDialogEx
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CDialogEx [MFC], SetBackgroundColor
 - CDialogEx [MFC], SetBackgroundImage
 ms.assetid: a6ed3b1f-aef8-4b66-ac78-2160faf63c13
-caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c22e258c8306eab1f55fa94f875dde5b68256c71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42da6afd054f05bb37ac0b4ea8bf497a31e433b8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdialogex-class"></a>Klasa CDialogEx
 `CDialogEx` Klasa określa kolor tła i obraz tła okna dialogowego.  
@@ -68,18 +63,18 @@ class CDialogEx : public CDialog
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [Cdialog —](../../mfc/reference/cdialog-class.md)  
+ [CDialog](../../mfc/reference/cdialog-class.md)  
   
  [CDialogEx](../../mfc/reference/cdialogex-class.md)  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdialogex.h  
   
-##  <a name="cdialogex"></a>CDialogEx::CDialogEx  
+##  <a name="cdialogex"></a>  CDialogEx::CDialogEx  
  Konstruuje `CDialogEx` obiektu.  
   
 ```  
@@ -94,23 +89,23 @@ CDialogEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nIDTemplate`  
+ [in] `nIDTemplate`  
  Identyfikator zasobu szablonu — okno dialogowe.  
   
- [in]`lpszTemplateName`  
+ [in] `lpszTemplateName`  
  Nazwa zasobu szablonu — okno dialogowe.  
   
- [in]`pParent`  
+ [in] `pParent`  
  Wskaźnik do okna nadrzędnego. Wartość domyślna to `NULL`.  
   
- [in]`pParentWnd`  
+ [in] `pParentWnd`  
  Wskaźnik do okna nadrzędnego. Wartość domyślna to `NULL`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setbackgroundcolor"></a>CDialogEx::SetBackgroundColor  
+##  <a name="setbackgroundcolor"></a>  CDialogEx::SetBackgroundColor  
  Ustawia kolor tła okna dialogowego.  
   
 ```  
@@ -120,15 +115,15 @@ void SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`color`  
+ [in] `color`  
  Wartości kolorów RGB.  
   
- [in]`bRepaint`  
- `TRUE`Aby natychmiast zaktualizować ekranu; w przeciwnym razie `FALSE`. Wartość domyślna to `TRUE`.  
+ [in] `bRepaint`  
+ `TRUE` Aby natychmiast zaktualizować ekranu; w przeciwnym razie `FALSE`. Wartość domyślna to `TRUE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setbackgroundimage"></a>CDialogEx::SetBackgroundImage  
+##  <a name="setbackgroundimage"></a>  CDialogEx::SetBackgroundImage  
  Ustawia obraz tła okna dialogowego.  
   
 ```  
@@ -146,20 +141,20 @@ BOOL SetBackgroundImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`hBitmap`  
+ [in] `hBitmap`  
  Dojście do obrazu tła.  
   
- [in]`uiBmpResId`  
+ [in] `uiBmpResId`  
  Identyfikator zasobu obrazu tła.  
   
- [in]`location`  
+ [in] `location`  
  Jeden z `CDialogEx::BackgroundLocation` wartości, które określają lokalizację obrazu. Prawidłowe wartości to BACKGR_TILE, BACKGR_TOPLEFT BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT i BACKGR_BOTTOMRIGHT. Wartość domyślna to BACKGR_TILE.  
   
- [in]`bAutoDestroy`  
- `TRUE`Aby automatycznie zniszczyć obraz tła; w przeciwnym razie `FALSE`.  
+ [in] `bAutoDestroy`  
+ `TRUE` Aby automatycznie zniszczyć obraz tła; w przeciwnym razie `FALSE`.  
   
- [in]`bRepaint`  
- `TRUE`Aby natychmiast odświeżyć okno dialogowe; w przeciwnym razie `FALSE`.  
+ [in] `bRepaint`  
+ `TRUE` Aby natychmiast odświeżyć okno dialogowe; w przeciwnym razie `FALSE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  W drugiej metody przeciążenia składni `TRUE` przypadku powodzenia; w przeciwnym razie metody `FALSE`.  

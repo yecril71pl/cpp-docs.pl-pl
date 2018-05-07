@@ -1,12 +1,9 @@
 ---
 title: Klasa CHtmlEditDoc | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHtmlEditDoc
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CHtmlEditDoc [MFC], IsModified
 - CHtmlEditDoc [MFC], OpenURL
 ms.assetid: b2cca61f-e5d6-4099-b0d1-46bf85f0bd64
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1e60c3b175346268b2c6b755786adbd8eb86467
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de452365a02b69798c62e2eecfd8051afcf08bb8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chtmleditdoc-class"></a>Klasa CHtmlEditDoc
 Z [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), funkcje platformy edycji WebBrowser w kontekście architektury dokument widok MFC.  
@@ -63,7 +58,7 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CDocument](../../mfc/reference/cdocument-class.md)  
   
@@ -72,14 +67,14 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxhtml.h  
   
-##  <a name="chtmleditdoc"></a>CHtmlEditDoc::CHtmlEditDoc  
+##  <a name="chtmleditdoc"></a>  CHtmlEditDoc::CHtmlEditDoc  
  Konstruuje **CHtmlEditDoc** obiektu.  
   
 ```  
 CHtmlEditDoc();
 ```  
   
-##  <a name="getview"></a>CHtmlEditDoc::GetView  
+##  <a name="getview"></a>  CHtmlEditDoc::GetView  
  Pobiera [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) obiekt dołączony do tego dokumentu.  
   
 ```  
@@ -89,14 +84,14 @@ virtual CHtmlEditView* GetView() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wskaźnik do dokumentu **CHtmlEditView** obiektu.  
   
-##  <a name="ismodified"></a>CHtmlEditDoc::IsModified  
+##  <a name="ismodified"></a>  CHtmlEditDoc::IsModified  
  Zwraca, czy formant WebBrowser skojarzony widok zawiera dokument, który został zmodyfikowany przez użytkownika.  
   
 ```  
 virtual BOOL IsModified();
 ```  
   
-##  <a name="openurl"></a>CHtmlEditDoc::OpenURL  
+##  <a name="openurl"></a>  CHtmlEditDoc::OpenURL  
  Zostanie otwarty adres URL.  
   
 ```  

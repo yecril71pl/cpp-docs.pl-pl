@@ -1,12 +1,9 @@
 ---
 title: Klasa CDaoQueryDef | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDaoQueryDef
@@ -75,17 +72,15 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDAOQueryDef
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbade1dc41b0e195606b10598e92f86195662bba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 81e7d3b093da8127887878b2ac5f2af652f549c3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoquerydef-class"></a>Klasa CDaoQueryDef
 Reprezentuje definicji zapytania, lub "querydef" zazwyczaj jest to jeden zapisane w bazie danych.  
@@ -197,7 +192,7 @@ class CDaoQueryDef : public CObject
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdao.h  
   
-##  <a name="append"></a>CDaoQueryDef::Append  
+##  <a name="append"></a>  CDaoQueryDef::Append  
  Wywołanie funkcji członkowskiej po wywołaniu metody [Utwórz](#create) można utworzyć nowego obiektu querydef.  
   
 ```  
@@ -209,7 +204,7 @@ virtual void Append();
   
  Próba dołączenia obiektu querydef tymczasowego MFC zgłasza wyjątek typu [CDaoException](../../mfc/reference/cdaoexception-class.md).  
   
-##  <a name="canupdate"></a>CDaoQueryDef::CanUpdate  
+##  <a name="canupdate"></a>  CDaoQueryDef::CanUpdate  
  Wywołanie tej funkcji elementu członkowskiego, aby określić, czy można zmodyfikować obiektu querydef — takie jak zmiana jego nazwy lub parametrów SQL.  
   
 ```  
@@ -228,7 +223,7 @@ BOOL CanUpdate();
   
      Zależy to od tego, czy zostały zaimplementowane funkcje zabezpieczeń. MFC nie zapewnia obsługi zabezpieczeń; musisz zaimplementować ją samodzielnie za wywoływanie obiektów DAO bezpośrednio lub za pomocą programu Microsoft Access. Zobacz temat "Właściwości uprawnień" w pomocy DAO.  
   
-##  <a name="cdaoquerydef"></a>CDaoQueryDef::CDaoQueryDef  
+##  <a name="cdaoquerydef"></a>  CDaoQueryDef::CDaoQueryDef  
  Konstruuje **CDaoQueryDef** obiektu.  
   
 ```  
@@ -252,7 +247,7 @@ CDaoQueryDef(CDaoDatabase* pDatabase);
   
  Po zakończeniu z obiektem querydef wywołać jej [Zamknij](#close) funkcję elementu członkowskiego. Jeśli masz wskaźnik do obiektu querydef użyj **usunąć** operator zniszczenie obiektu języka C++.  
   
-##  <a name="close"></a>CDaoQueryDef::Close  
+##  <a name="close"></a>  CDaoQueryDef::Close  
  Wywołanie funkcji członkowskiej, po zakończeniu przy użyciu obiektu querydef.  
   
 ```  
@@ -262,7 +257,7 @@ virtual void Close();
 ### <a name="remarks"></a>Uwagi  
  Zamykanie querydef zwalnia obiekt DAO, ale nie niszczy zapisany obiekt querydef DAO lub języka C++ `CDaoQueryDef` obiektu. To nie jest taka sama jak [CDaoDatabase::DeleteQueryDef](../../mfc/reference/cdaodatabase-class.md#deletequerydef), które powoduje usunięcie querydef z bazy danych querydefs — kolekcja w DAO (Jeśli nie querydef tymczasowe).  
   
-##  <a name="create"></a>CDaoQueryDef::Create  
+##  <a name="create"></a>  CDaoQueryDef::Create  
  Wywołanie tej funkcji Członkowskich do utworzenia nowej kwerendy zapisany lub nowe zapytanie tymczasowego.  
   
 ```  
@@ -283,7 +278,7 @@ virtual void Create(
   
  Jeśli nie podasz instrukcję SQL w `lpszSQL`, nie można uruchomić zapytania z **Execute** , ale można go utworzyć zestaw rekordów. W takim przypadku MFC używa instrukcji SQL zestawu rekordów domyślne.  
   
-##  <a name="execute"></a>CDaoQueryDef::Execute  
+##  <a name="execute"></a>  CDaoQueryDef::Execute  
  Wywołanie tej funkcji elementu członkowskiego, aby uruchomić zapytanie, zdefiniowane przez obiekt querydef.  
   
 ```  
@@ -316,7 +311,7 @@ virtual void Execute(int nOptions = dbFailOnError);
   
 -   Przekazujący zapytania SQL  
   
- **Wykonanie** nie działa w przypadku zapytań zwracających rekordów, takich jak zapytania select. **Wykonanie** jest powszechnie używany do zbiorczego operację zapytania, takie jak **aktualizacji**, **Wstaw**, lub **SELECT INTO**, lub dla języka definicji danych (DDL) operacje.  
+ **Wykonanie** nie działa w przypadku zapytań zwracających rekordów, takich jak zapytania select. **Wykonanie** jest powszechnie używany do zbiorczego operację zapytania, takie jak **aktualizacji**, **Wstaw**, lub **SELECT INTO**, lub dla operacji (DDL) języka definicji danych.  
   
 > [!TIP]
 >  Preferowany sposób pracy z ODBC — źródła danych ma dołączyć tabel do programu Microsoft Jet (. Baza danych MDB). Aby uzyskać więcej informacji zobacz temat "Uzyskiwania dostępu do zewnętrznych baz danych z DAO" w pomocy DAO.  
@@ -327,7 +322,7 @@ virtual void Execute(int nOptions = dbFailOnError);
   
  **Wykonanie** nie zwraca zestawu rekordów. Przy użyciu **Execute** na zapytanie wybierające rekordy powoduje, że MFC do zgłoszenia wyjątku typu [CDaoException](../../mfc/reference/cdaoexception-class.md).  
   
-##  <a name="getconnect"></a>CDaoQueryDef::GetConnect  
+##  <a name="getconnect"></a>  CDaoQueryDef::GetConnect  
  Wywołanie tej funkcji członkowskich można pobrać ciągu połączenia skojarzone ze źródłem danych querydef.  
   
 ```  
@@ -345,7 +340,7 @@ CString GetConnect();
   
  Informacji dotyczących parametrów połączenia Zobacz temat "Połącz Property" w pomocy DAO.  
   
-##  <a name="getdatecreated"></a>CDaoQueryDef::GetDateCreated  
+##  <a name="getdatecreated"></a>  CDaoQueryDef::GetDateCreated  
  Wywołanie tej funkcji członkowskich można pobrać daty utworzenia obiektu querydef.  
   
 ```  
@@ -358,7 +353,7 @@ COleDateTime GetDateCreated();
 ### <a name="remarks"></a>Uwagi  
  Powiązane informacje zobacz temat "DateCreated właściwości LastUpdated" w pomocy DAO.  
   
-##  <a name="getdatelastupdated"></a>CDaoQueryDef::GetDateLastUpdated  
+##  <a name="getdatelastupdated"></a>  CDaoQueryDef::GetDateLastUpdated  
  Wywołanie funkcji członkowskiej można pobrać obiektu querydef datę ostatniej aktualizacji — gdy dowolne z jego właściwości zostały zmienione, takie jak jego nazwa, jego ciągu SQL lub parametrach połączenia.  
   
 ```  
@@ -371,7 +366,7 @@ COleDateTime GetDateLastUpdated();
 ### <a name="remarks"></a>Uwagi  
  Powiązane informacje zobacz temat "DateCreated właściwości LastUpdated" w pomocy DAO.  
   
-##  <a name="getfieldcount"></a>CDaoQueryDef::GetFieldCount  
+##  <a name="getfieldcount"></a>  CDaoQueryDef::GetFieldCount  
  Wywołaj tę funkcję elementu członkowskiego, aby pobrać liczbę pól w zapytaniu.  
   
 ```  
@@ -382,9 +377,9 @@ short GetFieldCount();
  Liczba pól zdefiniowanych w zapytaniu.  
   
 ### <a name="remarks"></a>Uwagi  
- `GetFieldCount`przydaje się do wszystkich pól w querydef w pętli. W tym celu użyj `GetFieldCount` w połączeniu z [GetFieldInfo](#getfieldinfo).  
+ `GetFieldCount` przydaje się do wszystkich pól w querydef w pętli. W tym celu użyj `GetFieldCount` w połączeniu z [GetFieldInfo](#getfieldinfo).  
   
-##  <a name="getfieldinfo"></a>CDaoQueryDef::GetFieldInfo  
+##  <a name="getfieldinfo"></a>  CDaoQueryDef::GetFieldInfo  
  Wywołanie tej funkcji Członkowskich uzyskać różne rodzaje informacji na temat pola zdefiniowane w querydef.  
   
 ```  
@@ -410,11 +405,11 @@ void GetFieldInfo(
  `dwInfoOptions`  
  Opcje, które określają, które informacje o polu do pobrania. Dostępne opcje są wyświetlane tutaj wraz z co spowodują one funkcja zwracająca:  
   
-- `AFX_DAO_PRIMARY_INFO`(Ustawienie domyślne) Nazwa, typ, rozmiar, atrybuty  
+- `AFX_DAO_PRIMARY_INFO` (Ustawienie domyślne) Nazwa, typ, rozmiar, atrybuty  
   
-- `AFX_DAO_SECONDARY_INFO`Informacje o podstawowym plus: porządkowym wymagane, Zezwalaj długości zerowej, pola źródła, obcego tabeli źródłowej, kolejność sortowania  
+- `AFX_DAO_SECONDARY_INFO` Informacje o podstawowym plus: porządkowym wymagane, Zezwalaj długości zerowej, pola źródła, obcego tabeli źródłowej, kolejność sortowania  
   
-- `AFX_DAO_ALL_INFO`Głównych i dodatkowych informacji plus: domyślna wartość tekst sprawdzania poprawności reguły walidacji  
+- `AFX_DAO_ALL_INFO` Głównych i dodatkowych informacji plus: domyślna wartość tekst sprawdzania poprawności reguły walidacji  
   
  `lpszName`  
  Ciąg zawierający nazwę żądanego pola wyszukiwania według nazwy. Można użyć [cstring —](../../atl-mfc-shared/reference/cstringt-class.md).  
@@ -422,7 +417,7 @@ void GetFieldInfo(
 ### <a name="remarks"></a>Uwagi  
  Opis informacje zwracane w `fieldinfo`, zobacz [cdaofieldinfo —](../../mfc/reference/cdaofieldinfo-structure.md) struktury. Ta struktura ma elementów członkowskich, które odpowiadają opisowe informacje w obszarze `dwInfoOptions` powyżej. Jeśli użytkownik żąda informacji o jeden poziom, możesz uzyskać wszystkie wcześniejsze poziomy również informacje.  
   
-##  <a name="getname"></a>CDaoQueryDef::GetName  
+##  <a name="getname"></a>  CDaoQueryDef::GetName  
  Wywołaj tę funkcję elementu członkowskiego, aby pobrać nazwę kwerendy reprezentowany przez querydef.  
   
 ```  
@@ -435,7 +430,7 @@ CString GetName();
 ### <a name="remarks"></a>Uwagi  
  QueryDef nazwy są unikatowe nazwy użytkownika. Aby uzyskać więcej informacji na temat nazw querydef zobacz temat "Właściwości Name" w pomocy DAO.  
   
-##  <a name="getodbctimeout"></a>CDaoQueryDef::GetODBCTimeout  
+##  <a name="getodbctimeout"></a>  CDaoQueryDef::GetODBCTimeout  
  Wywołanie tej funkcji członkowskich można pobrać bieżącego limitu czasu, zanim upłynie limit czasu zapytania do źródła danych ODBC.  
   
 ```  
@@ -451,7 +446,7 @@ short GetODBCTimeout();
 > [!TIP]
 >  Dołącz je do programu Microsoft Jet jest preferowany sposób pracy z tabel ODBC (. Baza danych MDB). Aby uzyskać więcej informacji zobacz temat "Uzyskiwania dostępu do zewnętrznych baz danych z DAO" w pomocy DAO.  
   
-##  <a name="getparametercount"></a>CDaoQueryDef::GetParameterCount  
+##  <a name="getparametercount"></a>  CDaoQueryDef::GetParameterCount  
  Wywołanie tej funkcji członkowskich można pobrać z liczbą parametrów w zapisanego zapytania.  
   
 ```  
@@ -462,11 +457,11 @@ short GetParameterCount();
  Liczba parametrów zdefiniowanych w zapytaniu.  
   
 ### <a name="remarks"></a>Uwagi  
- `GetParameterCount`jest przydatne w przypadku wszystkich parametrów w querydef w pętli. W tym celu użyj `GetParameterCount` w połączeniu z [GetParameterInfo](#getparameterinfo).  
+ `GetParameterCount` jest przydatne w przypadku wszystkich parametrów w querydef w pętli. W tym celu użyj `GetParameterCount` w połączeniu z [GetParameterInfo](#getparameterinfo).  
   
  Aby uzyskać odpowiednie informacje zobacz tematy "Obiektu Parameter", "W kolekcji Parameters" i "parametry deklaracji (SQL)" w pomocy DAO.  
   
-##  <a name="getparameterinfo"></a>CDaoQueryDef::GetParameterInfo  
+##  <a name="getparameterinfo"></a>  CDaoQueryDef::GetParameterInfo  
  Wywołanie tej funkcji Członkowskich, aby uzyskać informacje dotyczące parametru zdefiniowane w querydef.  
   
 ```  
@@ -492,7 +487,7 @@ void GetParameterInfo(
  `dwInfoOptions`  
  Opcje, które określają, które informacje dotyczące parametru do pobrania. Opcja dostępna w tym miejscu znajduje oraz co go powoduje, że funkcja zwraca:  
   
-- `AFX_DAO_PRIMARY_INFO`(Ustawienie domyślne) Nazwa, typ  
+- `AFX_DAO_PRIMARY_INFO` (Ustawienie domyślne) Nazwa, typ  
   
  `lpszName`  
  Ciąg zawierający nazwę parametru żądaną wyszukiwania według nazwy. Można użyć [cstring —](../../atl-mfc-shared/reference/cstringt-class.md).  
@@ -502,7 +497,7 @@ void GetParameterInfo(
   
  Powiązane informacje zobacz temat "parametry deklaracji (SQL)" w pomocy DAO.  
   
-##  <a name="getparamvalue"></a>CDaoQueryDef::GetParamValue  
+##  <a name="getparamvalue"></a>  CDaoQueryDef::GetParamValue  
  Wywołanie tej funkcji Członkowskich pobrać bieżącą wartość określony parametr przechowywanych w kolekcji parametrów querydef.  
   
 ```  
@@ -525,7 +520,7 @@ virtual COleVariant GetParamValue(int nIndex);
   
  Powiązane informacje zobacz temat "parametry deklaracji (SQL)" w pomocy DAO.  
   
-##  <a name="getrecordsaffected"></a>CDaoQueryDef::GetRecordsAffected  
+##  <a name="getrecordsaffected"></a>  CDaoQueryDef::GetRecordsAffected  
  Wywołanie tej funkcji elementu członkowskiego, aby określić liczbę rekordów wpłynęła na ostatnim wywołaniu [Execute](#execute).  
   
 ```  
@@ -540,7 +535,7 @@ long GetRecordsAffected();
   
  Powiązane informacje zawiera temat "RecordsAffected Property" w pomocy DAO.  
   
-##  <a name="getreturnsrecords"></a>CDaoQueryDef::GetReturnsRecords  
+##  <a name="getreturnsrecords"></a>  CDaoQueryDef::GetReturnsRecords  
  Wywołaj tę funkcję elementu członkowskiego, aby ustalić, czy querydef jest oparta na zapytanie zwracające rekordów.  
   
 ```  
@@ -555,7 +550,7 @@ BOOL GetReturnsRecords();
   
  Powiązane informacje zobacz temat "ReturnsRecords Property" w pomocy DAO.  
   
-##  <a name="getsql"></a>CDaoQueryDef::GetSQL  
+##  <a name="getsql"></a>  CDaoQueryDef::GetSQL  
  Wywołanie tej funkcji Członkowskich pobrać instrukcji SQL, który definiuje kwerendy, na której oparto querydef.  
   
 ```  
@@ -570,7 +565,7 @@ CString GetSQL();
   
  Aby uzyskać odpowiednie informacje zobacz tematy "SQL Property", "Porównanie z bazy danych aparatu SQL i ANSI SQL programu Microsoft Jet" i "Zapytań bazy danych z programu SQL w kod" w pomocy DAO.  
   
-##  <a name="gettype"></a>CDaoQueryDef::GetType  
+##  <a name="gettype"></a>  CDaoQueryDef::GetType  
  Wywołanie tej funkcji członkowskich można określić typu zapytania querydef.  
   
 ```  
@@ -610,7 +605,7 @@ short GetType();
   
  Informacje o ciągów SQL znajdują się w temacie [GetSQL](#getsql). Informacje o typach zapytania, zobacz [Execute](#execute).  
   
-##  <a name="isopen"></a>CDaoQueryDef::IsOpen  
+##  <a name="isopen"></a>  CDaoQueryDef::IsOpen  
  Wywołanie tej funkcji elementu członkowskiego, aby określić, czy `CDaoQueryDef` obiekt jest obecnie otwarty.  
   
 ```  
@@ -623,19 +618,19 @@ BOOL IsOpen() const;
 ### <a name="remarks"></a>Uwagi  
  Querydef musi być w stanie otwartym, aby użyć go do wywołania [Execute](#execute) lub utworzyć [cdaorecordset —](../../mfc/reference/cdaorecordset-class.md) obiektu. W celu uruchomienia querydef wywołanie otwarte albo [Utwórz](#create) (dla nowego querydef) lub [Otwórz](#open) (dla istniejących querydef).  
   
-##  <a name="m_pdatabase"></a>CDaoQueryDef::m_pDatabase  
+##  <a name="m_pdatabase"></a>  CDaoQueryDef::m_pDatabase  
  Zawiera wskaźnik do [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) obiekt skojarzony z obiektem querydef.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli potrzebujesz dostępu do bazy danych bezpośrednio za pomocą tego wskaźnika — na przykład uzyskać wskaźniki do innych querydef lub zestawu rekordów obiekty w kolekcjach bazy danych.  
   
-##  <a name="m_pdaoquerydef"></a>CDaoQueryDef::m_pDAOQueryDef  
+##  <a name="m_pdaoquerydef"></a>  CDaoQueryDef::m_pDAOQueryDef  
  Zawiera wskaźnik do interfejsu OLE dla obiekt querydef DAO.  
   
 ### <a name="remarks"></a>Uwagi  
  This, wskaźnik zapewnia kompletność oraz spójność z innych klas. Jednak ponieważ raczej pełni hermetyzuje MFC DAO querydefs — jesteś prawdopodobnie nie będzie on potrzebny. Jeśli używasz, zrobić ostrożnie — w szczególności nie należy zmieniać wartości wskaźnika, jeśli nie masz pewności, co robią.  
   
-##  <a name="open"></a>CDaoQueryDef::Open  
+##  <a name="open"></a>  CDaoQueryDef::Open  
  Wywołanie tej funkcji Członkowskich, aby otworzyć querydef wcześniej zapisanych w bazie danych querydefs — kolekcja.  
   
 ```  
@@ -649,7 +644,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 ### <a name="remarks"></a>Uwagi  
  Po otwarciu querydef można wywołać jej [Execute](#execute) funkcji członkowskiej lub użyj querydef utworzyć [cdaorecordset —](../../mfc/reference/cdaorecordset-class.md) obiektu.  
   
-##  <a name="setconnect"></a>CDaoQueryDef::SetConnect  
+##  <a name="setconnect"></a>  CDaoQueryDef::SetConnect  
  Wywołanie tej funkcji Członkowskich, aby ustawić parametry połączenia obiektu querydef.  
   
 ```  
@@ -670,7 +665,7 @@ void SetConnect(LPCTSTR lpszConnect);
   
  Aby uzyskać więcej informacji na temat struktury i przykłady składników ciąg połączenia parametry połączenia Zobacz temat "Połącz Property" w pomocy DAO.  
   
-##  <a name="setname"></a>CDaoQueryDef::SetName  
+##  <a name="setname"></a>  CDaoQueryDef::SetName  
  Wywołania funkcji członkowskiej, jeśli chcesz zmienić nazwę querydef, który nie jest tymczasowe.  
   
 ```  
@@ -684,7 +679,7 @@ void SetName(LPCTSTR lpszName);
 ### <a name="remarks"></a>Uwagi  
  QueryDef nazwy są unikatowe, zdefiniowane przez użytkownika nazwy. Możesz wywołać `SetName` przed querydef obiektu jest dołączany do querydefs — kolekcja.  
   
-##  <a name="setodbctimeout"></a>CDaoQueryDef::SetODBCTimeout  
+##  <a name="setodbctimeout"></a>  CDaoQueryDef::SetODBCTimeout  
  Wywołanie tej funkcji członkowskich można ustawić limitu czasu, zanim upłynie limit czasu zapytania do źródła danych ODBC.  
   
 ```  
@@ -700,7 +695,7 @@ void SetODBCTimeout(short nODBCTimeout);
   
  Wartością domyślną dla zapytania przekroczeń limitu czasu wynosi 60 sekund.  
   
-##  <a name="setparamvalue"></a>CDaoQueryDef::SetParamValue  
+##  <a name="setparamvalue"></a>  CDaoQueryDef::SetParamValue  
  Wywołanie tej funkcji członkowskich można ustawić wartości parametru w querydef w czasie wykonywania.  
   
 ```  
@@ -729,7 +724,7 @@ virtual void SetParamValue(
   
  Określ wartość do ustawienia jako `COleVariant` obiektu. Informacje o ustawianiu na żądaną wartość i wpisz Twojej `COleVariant` obiektów, zobacz klasę [COleVariant](../../mfc/reference/colevariant-class.md).  
   
-##  <a name="setreturnsrecords"></a>CDaoQueryDef::SetReturnsRecords  
+##  <a name="setreturnsrecords"></a>  CDaoQueryDef::SetReturnsRecords  
  Wywołanie tej funkcji Członkowskich jako część procesu konfigurowania przekazujący zapytanie SQL do zewnętrznej bazy danych.  
   
 ```  
@@ -743,7 +738,7 @@ void SetReturnsRecords(BOOL bReturnsRecords);
 ### <a name="remarks"></a>Uwagi  
  W takim przypadku należy utworzyć querydef i ustawienia swoich właściwości przy użyciu innych `CDaoQueryDef` funkcji elementów członkowskich. Aby uzyskać opis zewnętrznych baz danych, zobacz [SetConnect](#setconnect).  
   
-##  <a name="setsql"></a>CDaoQueryDef::SetSQL  
+##  <a name="setsql"></a>  CDaoQueryDef::SetSQL  
  Wywołanie tej funkcji członkowskich można ustawić instrukcji SQL, która wykonuje querydef.  
   
 ```  

@@ -1,30 +1,25 @@
 ---
-title: "Porady: deklarowanie specyfikatorów zastąpienia (C + +/ CLI) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Porady: deklarowanie specyfikatorów zastąpienia (C + +/ CLI) | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0f50e500cf25a18e86e107e22d58e6446d03379d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8119ab62ee37320074df401c3986b56f3ea6cbfa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Porady: deklarowanie specyfikatorów przesłonięć w kompilacjach kodu natywnego (C++/CLI)
 [zapieczętowane](../windows/sealed-cpp-component-extensions.md), [abstrakcyjny](../windows/abstract-cpp-component-extensions.md), i [zastąpienia](../windows/override-cpp-component-extensions.md) są dostępne w kompilacji, które nie używają **/ZW** lub [/CLR](../build/reference/clr-common-language-runtime-compilation.md).  

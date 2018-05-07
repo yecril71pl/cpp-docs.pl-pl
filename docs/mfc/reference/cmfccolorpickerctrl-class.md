@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCColorPickerCtrl | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCColorPickerCtrl
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11c015df63d3032a8616f7f19614376aa966d89b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad7e67cc32621fc30108767493c3a7bffd481b68
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccolorpickerctrl-class"></a>Klasa CMFCColorPickerCtrl
 `CMFCColorPickerCtrl` Klasa udostępnia funkcje dla formantu, który jest używany do wybierania kolorów.  
@@ -130,7 +125,7 @@ class CMFCColorPickerCtrl : public CButton
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -141,7 +136,7 @@ class CMFCColorPickerCtrl : public CButton
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxcolorpickerctrl.h  
   
-##  <a name="cmfccolorpickerctrl"></a>CMFCColorPickerCtrl::CMFCColorPickerCtrl  
+##  <a name="cmfccolorpickerctrl"></a>  CMFCColorPickerCtrl::CMFCColorPickerCtrl  
  Konstruuje `CMFCColorPickerCtrl` obiektu.  
   
 ```  
@@ -152,7 +147,7 @@ CMFCColorPickerCtrl();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="drawcursor"></a>CMFCColorPickerCtrl::DrawCursor  
+##  <a name="drawcursor"></a>  CMFCColorPickerCtrl::DrawCursor  
  Wywoływane przez platformę przed wyświetleniem kursora, który wskazuje wybranego koloru.  
   
 ```  
@@ -162,16 +157,16 @@ virtual void DrawCursor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Wskaźnik do kontekstu urządzenia.  
   
- [in]`rect`  
+ [in] `rect`  
  Określa prostokątny obszar wokół wybranego koloru.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę, gdy trzeba zmienić kształt kursora, który wskazuje wybranego koloru.  
   
-##  <a name="getcolor"></a>CMFCColorPickerCtrl::GetColor  
+##  <a name="getcolor"></a>  CMFCColorPickerCtrl::GetColor  
  Pobiera kolor wybranego przez użytkownika.  
   
 ```  
@@ -183,7 +178,7 @@ COLORREF GetColor() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="gethls"></a>CMFCColorPickerCtrl::GetHLS  
+##  <a name="gethls"></a>  CMFCColorPickerCtrl::GetHLS  
  Pobiera wartości odcień, jasność i nasycenie koloru przez użytkownika.  
   
 ```  
@@ -194,18 +189,18 @@ void GetHLS(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`hue`  
+ [out] `hue`  
  Wskaźnik do zmiennej typu double służącą do odbierania informacji hue.  
   
- [out]`luminance`  
+ [out] `luminance`  
  Wskaźnik do zmiennej typu double odbierająca jasności informacji.  
   
- [out]`saturation`  
+ [out] `saturation`  
  Wskaźnik do zmiennej typu double odbierająca nasycenie informacji.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="gethue"></a>CMFCColorPickerCtrl::GetHue  
+##  <a name="gethue"></a>  CMFCColorPickerCtrl::GetHue  
  Pobiera składnik hue kolor wybranego przez użytkownika.  
   
 ```  
@@ -217,7 +212,7 @@ double GetHue() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getluminance"></a>CMFCColorPickerCtrl::GetLuminance  
+##  <a name="getluminance"></a>  CMFCColorPickerCtrl::GetLuminance  
  Pobiera składnik jasności koloru przez użytkownika.  
   
 ```  
@@ -229,7 +224,7 @@ double GetLuminance() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getsaturation"></a>CMFCColorPickerCtrl::GetSaturation  
+##  <a name="getsaturation"></a>  CMFCColorPickerCtrl::GetSaturation  
  Pobiera wartość nasycenie koloru przez użytkownika.  
   
 ```  
@@ -241,7 +236,7 @@ double GetSaturation() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="selectcellhexagon"></a>CMFCColorPickerCtrl::SelectCellHexagon  
+##  <a name="selectcellhexagon"></a>  CMFCColorPickerCtrl::SelectCellHexagon  
  Ustawia bieżący kolor na kolor zdefiniowany przez określone składniki kolorów RGB lub sześciokąt określona komórka.  
   
 ```  
@@ -257,19 +252,19 @@ BOOL SelectCellHexagon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`R`  
+ [in] `R`  
  Składnik kolor czerwony.  
   
- [in]`G`  
+ [in] `G`  
  Składnik kolor zielony.  
   
- [in]`B`  
+ [in] `B`  
  Składnik niebieski.  
   
- [in]`x`  
+ [in] `x`  
  Współrzędna x kursor wskazuje sześciokąt komórki.  
   
- [in]`y`  
+ [in] `y`  
  Współrzędna y kursor wskazuje sześciokąt komórki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -280,7 +275,7 @@ BOOL SelectCellHexagon(
   
  Drugi przeciążenie tej metody ustawia bieżący kolor na kolor sześciokąt komórki, która jest wskazywana przez kursor określonej lokalizacji.  
   
-##  <a name="setcolor"></a>CMFCColorPickerCtrl::SetColor  
+##  <a name="setcolor"></a>  CMFCColorPickerCtrl::SetColor  
  Ustawia bieżący kolor do określonej wartości kolorów RGB.  
   
 ```  
@@ -288,12 +283,12 @@ void SetColor(COLORREF Color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`Color`  
+ [in] `Color`  
  Wartości kolorów RGB.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="sethls"></a>CMFCColorPickerCtrl::SetHLS  
+##  <a name="sethls"></a>  CMFCColorPickerCtrl::SetHLS  
  Ustawia bieżący kolor na określoną wartość koloru HLS.  
   
 ```  
@@ -305,21 +300,21 @@ void SetHLS(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`hue`  
+ [in] `hue`  
  Wartość hue.  
   
- [in]`luminance`  
+ [in] `luminance`  
  Wartość jasności.  
   
- [in]`saturation`  
+ [in] `saturation`  
  Nasycenie.  
   
- [in]`bInvalidate`  
- `TRUE`Aby wymusić okno, aby natychmiast zaktualizować na nowy kolor; w przeciwnym razie `FALSE`. Wartość domyślna to `TRUE`.  
+ [in] `bInvalidate`  
+ `TRUE` Aby wymusić okno, aby natychmiast zaktualizować na nowy kolor; w przeciwnym razie `FALSE`. Wartość domyślna to `TRUE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="sethue"></a>CMFCColorPickerCtrl::SetHue  
+##  <a name="sethue"></a>  CMFCColorPickerCtrl::SetHue  
  Zmienia odcienia, który aktualnie wybranego koloru.  
   
 ```  
@@ -327,12 +322,12 @@ void SetHue(double Hue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`Hue`  
+ [in] `Hue`  
  Wartość hue.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setluminance"></a>CMFCColorPickerCtrl::SetLuminance  
+##  <a name="setluminance"></a>  CMFCColorPickerCtrl::SetLuminance  
  Zmienia jasności aktualnie wybranego koloru.  
   
 ```  
@@ -340,12 +335,12 @@ void SetLuminance(double Luminance);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`Luminance`  
+ [in] `Luminance`  
  Wartość jasności.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setluminancebarwidth"></a>CMFCColorPickerCtrl::SetLuminanceBarWidth  
+##  <a name="setluminancebarwidth"></a>  CMFCColorPickerCtrl::SetLuminanceBarWidth  
  Ustawia szerokość paska jasności w formancie selektora kolorów.  
   
 ```  
@@ -353,13 +348,13 @@ void SetLuminanceBarWidth(int w);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`w`  
+ [in] `w`  
  Szerokość paska jasności (w pikselach).  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda służy do zmiany rozmiaru paska jasności, który znajduje się w **niestandardowy** kartę formantu selektora kolorów. `w` Parametr określa nową szerokość paska jasności. Wartość szerokości jest ignorowana, jeśli jego rozmiar przekracza trzy czwarte szerokość obszaru klienta.  
   
-##  <a name="setoriginalcolor"></a>CMFCColorPickerCtrl::SetOriginalColor  
+##  <a name="setoriginalcolor"></a>  CMFCColorPickerCtrl::SetOriginalColor  
  Ustawia kolor wybranego początkowej.  
   
 ```  
@@ -367,13 +362,13 @@ void SetOriginalColor(COLORREF ref);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`ref`  
+ [in] `ref`  
  Wartości kolorów RGB.  
   
 ### <a name="remarks"></a>Uwagi  
  Tę metodę można wywołać po zainicjowaniu formantu selektora kolorów.  
   
-##  <a name="setpalette"></a>CMFCColorPickerCtrl::SetPalette  
+##  <a name="setpalette"></a>  CMFCColorPickerCtrl::SetPalette  
  Ustawia bieżący paletę kolorów.  
   
 ```  
@@ -381,13 +376,13 @@ void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pPalette`  
+ [in] `pPalette`  
  Wskaźnik do paletę kolorów.  
   
 ### <a name="remarks"></a>Uwagi  
  Palety kolorów definiuje tablicy kolorów, które są prezentowane w formancie selektora kolorów.  
   
-##  <a name="setsaturation"></a>CMFCColorPickerCtrl::SetSaturation  
+##  <a name="setsaturation"></a>  CMFCColorPickerCtrl::SetSaturation  
  Zmienia nasycenie aktualnie wybranego koloru.  
   
 ```  
@@ -395,12 +390,12 @@ void SetSaturation(double Saturation);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`Saturation`  
+ [in] `Saturation`  
  Nasycenie.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="settype"></a>CMFCColorPickerCtrl::SetType  
+##  <a name="settype"></a>  CMFCColorPickerCtrl::SetType  
  Ustawia typ formantu selektora kolorów do wyświetlenia.  
   
 ```  
@@ -408,7 +403,7 @@ void SetType(COLORTYPE colorType);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`colorType`  
+ [in] `colorType`  
  Typ formantu selektora kolorów.  
   
  Typy są definiowane przez `CMFCColorPickerCtrl::COLORTYPE` wyliczenia. Możliwe typy `LUMINANCE`, `PICKER`, `HEX` i `HEX_GREYSCALE`. Jest to domyślny typ `PICKER`.  

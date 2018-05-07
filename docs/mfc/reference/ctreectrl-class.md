@@ -1,12 +1,9 @@
 ---
-title: "Ctreectrl — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Ctreectrl — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTreeCtrl
@@ -171,17 +168,15 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 573b81ce8d78cde67b63579caa5ed96bbe557ae3
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 44e7afd1362064faa19d013da1ee61d32d03227a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctreectrl-class"></a>Ctreectrl — klasa
 Udostępnia funkcje formantu widoku drzewa wspólne systemu Windows.  
@@ -300,7 +295,7 @@ class CTreeCtrl : public CWnd
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -309,7 +304,7 @@ class CTreeCtrl : public CWnd
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxcmn.h  
   
-##  <a name="create"></a>CTreeCtrl::Create  
+##  <a name="create"></a>  CTreeCtrl::Create  
  Jeśli określisz drzewie w szablonie — okno dialogowe, lub jeśli używasz [CTreeView —](../../mfc/reference/ctreeview-class.md), formantu drzewa jest tworzona automatycznie podczas tworzenia okna dialogowego lub widoku.  
   
 ```  
@@ -346,7 +341,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_1.cpp)]  
   
-##  <a name="createex"></a>CTreeCtrl::CreateEx  
+##  <a name="createex"></a>  CTreeCtrl::CreateEx  
  Wywołanie tej funkcji można utworzyć formantu (okno podrzędne) i skojarz ją z `CTreeCtrl` obiektu.  
   
 ```  
@@ -380,7 +375,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Uwagi  
  Użyj `CreateEx` zamiast [Utwórz](#create) dotyczyć rozszerzone style systemu Windows, określone przez wstępu rozszerzonego stylu Windows **WS_EX_**.  
   
-##  <a name="createdragimage"></a>CTreeCtrl::CreateDragImage  
+##  <a name="createdragimage"></a>  CTreeCtrl::CreateDragImage  
  Wywołanie tej funkcji do tworzenia przeciągania mapy bitowej dla danego elementu w kontrolce widok drzewa, tworzenie list obrazów mapy bitowej i Dodaj do listy obrazów mapy bitowej.  
   
 ```  
@@ -401,14 +396,14 @@ CImageList* CreateDragImage(HTREEITEM hItem);
   
  [!code-cpp[NVC_MFC_CTreeCtrl#2](../../mfc/reference/codesnippet/cpp/ctreectrl-class_2.cpp)]  
   
-##  <a name="ctreectrl"></a>CTreeCtrl::CTreeCtrl  
+##  <a name="ctreectrl"></a>  CTreeCtrl::CTreeCtrl  
  Konstruuje `CTreeCtrl` obiektu.  
   
 ```  
 CTreeCtrl();
 ```  
   
-##  <a name="deleteallitems"></a>CTreeCtrl::DeleteAllItems  
+##  <a name="deleteallitems"></a>  CTreeCtrl::DeleteAllItems  
  Wywołanie tej funkcji, aby usunąć wszystkie elementy z formantem widoku drzewa.  
   
 ```  
@@ -421,7 +416,7 @@ BOOL DeleteAllItems();
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#3](../../mfc/reference/codesnippet/cpp/ctreectrl-class_3.cpp)]  
   
-##  <a name="deleteitem"></a>CTreeCtrl::DeleteItem  
+##  <a name="deleteitem"></a>  CTreeCtrl::DeleteItem  
  Wywołanie tej funkcji, aby usunąć element z formantem widoku drzewa.  
   
 ```  
@@ -438,7 +433,7 @@ BOOL DeleteItem(HTREEITEM hItem);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#4](../../mfc/reference/codesnippet/cpp/ctreectrl-class_4.cpp)]  
   
-##  <a name="editlabel"></a>CTreeCtrl::EditLabel  
+##  <a name="editlabel"></a>  CTreeCtrl::EditLabel  
  Wywołanie tej funkcji, aby rozpocząć edycji w miejscu tekstu określonego elementu.  
   
 ```  
@@ -458,7 +453,7 @@ CEdit* EditLabel(HTREEITEM hItem);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#5](../../mfc/reference/codesnippet/cpp/ctreectrl-class_5.cpp)]  
   
-##  <a name="endeditlabelnow"></a>CTreeCtrl::EndEditLabelNow  
+##  <a name="endeditlabelnow"></a>  CTreeCtrl::EndEditLabelNow  
  Zakończenie operacji edycji na etykiecie elementu widok drzewa w formancie bieżący widok drzewa.  
   
 ```  
@@ -469,15 +464,15 @@ BOOL EndEditLabelNow(BOOL fCancelWithoutSave);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in]`fCancelWithoutSave`|`true`Aby odrzucić zmiany w elemencie widok drzewa przed zawierania operacji edycji lub `false` można zapisać zmian w elemencie widok drzewa przed zawierania wykonać operację.|  
+|[in] `fCancelWithoutSave`|`true` Aby odrzucić zmiany w elemencie widok drzewa przed zawierania operacji edycji lub `false` można zapisać zmian w elemencie widok drzewa przed zawierania wykonać operację.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
+ `true` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wysyła [TVM_ENDEDITLABELNOW](http://msdn.microsoft.com/library/windows/desktop/bb773564) komunikat, który jest opisany w zestawie SDK systemu Windows.  
   
-##  <a name="ensurevisible"></a>CTreeCtrl::EnsureVisible  
+##  <a name="ensurevisible"></a>  CTreeCtrl::EnsureVisible  
  Wywołanie tej funkcji, aby upewnić się, że element widoku drzewa jest widoczna.  
   
 ```  
@@ -497,7 +492,7 @@ BOOL EnsureVisible(HTREEITEM hItem);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#6](../../mfc/reference/codesnippet/cpp/ctreectrl-class_6.cpp)]  
   
-##  <a name="expand"></a>CTreeCtrl::Expand  
+##  <a name="expand"></a>  CTreeCtrl::Expand  
  Wywołanie tej funkcji, aby rozwinąć lub zwinąć na liście elementów podrzędnych, jeśli, skojarzone z elementem nadrzędnym podanego.  
   
 ```  
@@ -513,13 +508,13 @@ BOOL Expand(
  `nCode`  
  Flaga wskazująca typ akcji do wykonania. Ta flaga może mieć jedną z następujących wartości:  
   
-- `TVE_COLLAPSE`Zwinięcie listy.  
+- `TVE_COLLAPSE` Zwinięcie listy.  
   
-- `TVE_COLLAPSERESET`Zwija listy i usunięcie elementów podrzędnych. **TVIS_EXPANDEDONCE** zresetowania stanu flagi. Ta flaga musi być używany z `TVE_COLLAPSE` flagi.  
+- `TVE_COLLAPSERESET` Zwija listy i usunięcie elementów podrzędnych. **TVIS_EXPANDEDONCE** zresetowania stanu flagi. Ta flaga musi być używany z `TVE_COLLAPSE` flagi.  
   
-- `TVE_EXPAND`Rozwija listy.  
+- `TVE_EXPAND` Rozwija listy.  
   
-- `TVE_TOGGLE`Zwinięcie listy, jeśli obecnie jest rozwinięty, lub powiększa go, jeśli obecnie jest zwinięty.  
+- `TVE_TOGGLE` Zwinięcie listy, jeśli obecnie jest rozwinięty, lub powiększa go, jeśli obecnie jest zwinięty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
@@ -527,7 +522,7 @@ BOOL Expand(
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CTreeCtrl::EnsureVisible](#ensurevisible).  
   
-##  <a name="getbkcolor"></a>CTreeCtrl::GetBkColor  
+##  <a name="getbkcolor"></a>  CTreeCtrl::GetBkColor  
  Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [TVM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773570), zgodnie z opisem w zestawie Windows SDK.  
   
 ```  
@@ -540,7 +535,7 @@ COLORREF GetBkColor() const;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CTreeCtrl::SetTextColor](#settextcolor).  
   
-##  <a name="getcheck"></a>CTreeCtrl::GetCheck  
+##  <a name="getcheck"></a>  CTreeCtrl::GetCheck  
  Wywołanie tej funkcji Członkowskich, aby pobrać stan zaznaczenia elementu.  
   
 ```  
@@ -557,7 +552,7 @@ BOOL GetCheck(HTREEITEM hItem) const;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CTreeCtrl::SetCheck](#setcheck).  
   
-##  <a name="getchilditem"></a>CTreeCtrl::GetChildItem  
+##  <a name="getchilditem"></a>  CTreeCtrl::GetChildItem  
  Wywołanie tej funkcji można pobrać drzewa view elementów, które jest elementem podrzędnym elementu określony przez `hItem`.  
   
 ```  
@@ -574,7 +569,7 @@ HTREEITEM GetChildItem(HTREEITEM hItem) const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#7](../../mfc/reference/codesnippet/cpp/ctreectrl-class_7.cpp)]  
   
-##  <a name="getcount"></a>CTreeCtrl::GetCount  
+##  <a name="getcount"></a>  CTreeCtrl::GetCount  
  Wywołanie tej funkcji, aby pobrać liczbę elementów w kontrolce widok drzewa.  
   
 ```  
@@ -587,7 +582,7 @@ UINT GetCount() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#8](../../mfc/reference/codesnippet/cpp/ctreectrl-class_8.cpp)]  
   
-##  <a name="getdrophilightitem"></a>CTreeCtrl::GetDropHilightItem  
+##  <a name="getdrophilightitem"></a>  CTreeCtrl::GetDropHilightItem  
  Wywołanie tej funkcji można pobrać elementu, który jest miejscem docelowym operacji przeciągania i upuszczania.  
   
 ```  
@@ -600,7 +595,7 @@ HTREEITEM GetDropHilightItem() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#9](../../mfc/reference/codesnippet/cpp/ctreectrl-class_9.cpp)]  
   
-##  <a name="geteditcontrol"></a>CTreeCtrl::GetEditControl  
+##  <a name="geteditcontrol"></a>  CTreeCtrl::GetEditControl  
  Wywołanie tej funkcji można pobrać uchwytu formantu edycji używany do edytowania tekstu elementu widoku drzewa.  
   
 ```  
@@ -613,7 +608,7 @@ CEdit* GetEditControl() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#10](../../mfc/reference/codesnippet/cpp/ctreectrl-class_10.cpp)]  
   
-##  <a name="getextendedstyle"></a>CTreeCtrl::GetExtendedStyle  
+##  <a name="getextendedstyle"></a>  CTreeCtrl::GetExtendedStyle  
  Pobiera rozszerzone style, które używa bieżącej kontrolki widok drzewa.  
   
 ```  
@@ -626,7 +621,7 @@ DWORD GetExtendedStyle() const;
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wysyła [TVM_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb773580) komunikat, który jest opisany w zestawie SDK systemu Windows.  
   
-##  <a name="getfirstvisibleitem"></a>CTreeCtrl::GetFirstVisibleItem  
+##  <a name="getfirstvisibleitem"></a>  CTreeCtrl::GetFirstVisibleItem  
  Wywołanie tej funkcji można pobrać pierwszego widocznego elementu kontrolki widok drzewa.  
   
 ```  
@@ -639,7 +634,7 @@ HTREEITEM GetFirstVisibleItem() const;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CTreeCtrl::SetCheck](#setcheck).  
   
-##  <a name="getimagelist"></a>CTreeCtrl::GetImageList  
+##  <a name="getimagelist"></a>  CTreeCtrl::GetImageList  
  Wywołanie tej funkcji można pobrać uchwytu normalnej lub listy obrazów stan skojarzony z formantem widoku drzewa.  
   
 ```  
@@ -650,9 +645,9 @@ CImageList* GetImageList(UINT nImageList) const;
  `nImageList`  
  Typ listy obrazów do pobrania. Listy obrazów może być jedną z następujących wartości:  
   
-- `TVSIL_NORMAL`Pobiera na liście normalnego obrazu, który zawiera obrazy wybrane i nonselected dla elementu widoku drzewa.  
+- `TVSIL_NORMAL` Pobiera na liście normalnego obrazu, który zawiera obrazy wybrane i nonselected dla elementu widoku drzewa.  
   
-- `TVSIL_STATE`Pobiera stan listy obrazów, zawierający obrazy elementów widoku drzewa, które są w stanie zdefiniowane przez użytkownika.  
+- `TVSIL_STATE` Pobiera stan listy obrazów, zawierający obrazy elementów widoku drzewa, które są w stanie zdefiniowane przez użytkownika.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do listy obrazów formantu w przypadku powodzenia; w przeciwnym razie **NULL**.  
@@ -665,7 +660,7 @@ CImageList* GetImageList(UINT nImageList) const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#11](../../mfc/reference/codesnippet/cpp/ctreectrl-class_11.cpp)]  
   
-##  <a name="getindent"></a>CTreeCtrl::GetIndent  
+##  <a name="getindent"></a>  CTreeCtrl::GetIndent  
  Wywołanie tej funkcji można pobrać wielkość w pikselach, że elementów podrzędnych elementów tworzone jest wcięcie względem jego elementów nadrzędnych.  
   
 ```  
@@ -678,7 +673,7 @@ UINT GetIndent() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#12](../../mfc/reference/codesnippet/cpp/ctreectrl-class_12.cpp)]  
   
-##  <a name="getinsertmarkcolor"></a>CTreeCtrl::GetInsertMarkColor  
+##  <a name="getinsertmarkcolor"></a>  CTreeCtrl::GetInsertMarkColor  
  Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [TVM_GETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773590), zgodnie z opisem w zestawie Windows SDK.  
   
 ```  
@@ -691,7 +686,7 @@ COLORREF GetInsertMarkColor() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#13](../../mfc/reference/codesnippet/cpp/ctreectrl-class_13.cpp)]  
   
-##  <a name="getitem"></a>CTreeCtrl::GetItem  
+##  <a name="getitem"></a>  CTreeCtrl::GetItem  
  Wywołanie tej funkcji można pobrać atrybutów elementu widoku drzewa.  
   
 ```  
@@ -708,7 +703,7 @@ BOOL GetItem(TVITEM* pItem) const;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CTreeCtrl::DeleteItem](#deleteitem).  
   
-##  <a name="getitemdata"></a>CTreeCtrl::GetItemData  
+##  <a name="getitemdata"></a>  CTreeCtrl::GetItemData  
  Wywołanie tej funkcji można pobrać wartości specyficzne dla aplikacji 32-bitowych skojarzoną z określonym elementem.  
   
 ```  
@@ -725,7 +720,7 @@ DWORD_PTR GetItemData(HTREEITEM hItem) const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#14](../../mfc/reference/codesnippet/cpp/ctreectrl-class_14.cpp)]  
   
-##  <a name="getitemexpandedimageindex"></a>CTreeCtrl::GetItemExpandedImageIndex  
+##  <a name="getitemexpandedimageindex"></a>  CTreeCtrl::GetItemExpandedImageIndex  
  Pobiera indeks obrazu do wyświetlenia, jeśli określony element bieżącej kontrolki widok drzewa jest w stanie rozwinięte.  
   
 ```  
@@ -736,7 +731,7 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in]`hItem`|Dojście do elementu kontroli widoku drzewa.|  
+|[in] `hItem`|Dojście do elementu kontroli widoku drzewa.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Indeks obrazu do wyświetlenia, jeśli określony element jest w stanie rozwinięte.  
@@ -744,7 +739,7 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wysyła [TVM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb773596) komunikat, który jest opisany w zestawie SDK systemu Windows. Który komunikatu zwraca [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) strukturę, która opisuje element kontrolki widok drzewa, a następnie ta metoda pobiera `iExpandedImage` elementu członkowskiego z tej struktury.  
   
-##  <a name="getitemheight"></a>CTreeCtrl::GetItemHeight  
+##  <a name="getitemheight"></a>  CTreeCtrl::GetItemHeight  
  Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [TVM_GETITEMHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb773599), zgodnie z opisem w zestawie Windows SDK.  
   
 ```  
@@ -757,7 +752,7 @@ SHORT GetItemHeight() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#15](../../mfc/reference/codesnippet/cpp/ctreectrl-class_15.cpp)]  
   
-##  <a name="getitemimage"></a>CTreeCtrl::GetItemImage  
+##  <a name="getitemimage"></a>  CTreeCtrl::GetItemImage  
  Każdy element w kontrolce widok drzewa może mieć dwa obrazy mapy bitowej skojarzonych z nim.  
   
 ```  
@@ -788,7 +783,7 @@ BOOL GetItemImage(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#16](../../mfc/reference/codesnippet/cpp/ctreectrl-class_16.cpp)]  
   
-##  <a name="getitempartrect"></a>CTreeCtrl::GetItemPartRect  
+##  <a name="getitempartrect"></a>  CTreeCtrl::GetItemPartRect  
  Pobiera prostokąt ograniczający określonej części określonego elementu w bieżącym kontrolki widok drzewa.  
   
 ```  
@@ -802,12 +797,12 @@ BOOL GetItemPartRect(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in]`hItem`|Dojście do elementu kontroli widoku drzewa.|  
-|[in]`nPart`|Identyfikator części. należy wybrać opcję `TVGIPR_BUTTON`.|  
-|[out]`lpRect`|Wskaźnik do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Jeśli ta metoda zakończy się pomyślnie, struktura odbiera współrzędne prostokąt element określony przez `hItem` i `nPart`.|  
+|[in] `hItem`|Dojście do elementu kontroli widoku drzewa.|  
+|[in] `nPart`|Identyfikator części. należy wybrać opcję `TVGIPR_BUTTON`.|  
+|[out] `lpRect`|Wskaźnik do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Jeśli ta metoda zakończy się pomyślnie, struktura odbiera współrzędne prostokąt element określony przez `hItem` i `nPart`.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
+ `true` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
  Każdy element formantu drzewa jest ograniczone przez prostokąt grafiki. Zawsze, gdy zostanie kliknięty punkt, w tym prostokącie, element jest określany jako *trafień*. Ta metoda zwraca prostokąt największy tak, aby po kliknięciu punktu w prostokącie, identyfikowane przez element `hItem` parametr zostaje trafiony.  
@@ -824,7 +819,7 @@ BOOL GetItemPartRect(
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#5](../../mfc/reference/codesnippet/cpp/ctreectrl-class_18.cpp)]  
   
-##  <a name="getitemrect"></a>CTreeCtrl::GetItemRect  
+##  <a name="getitemrect"></a>  CTreeCtrl::GetItemRect  
  Wywołanie tej funkcji można pobrać prostokątem dla `hItem` i ustalić, czy nie jest on widoczny.  
   
 ```  
@@ -850,7 +845,7 @@ BOOL GetItemRect(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#17](../../mfc/reference/codesnippet/cpp/ctreectrl-class_19.cpp)]  
   
-##  <a name="getitemstate"></a>CTreeCtrl::GetItemState  
+##  <a name="getitemstate"></a>  CTreeCtrl::GetItemState  
  Zwraca stan określony przez element `hItem`.  
   
 ```  
@@ -872,7 +867,7 @@ UINT GetItemState(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#18](../../mfc/reference/codesnippet/cpp/ctreectrl-class_20.cpp)]  
   
-##  <a name="getitemstateex"></a>CTreeCtrl::GetItemStateEx  
+##  <a name="getitemstateex"></a>  CTreeCtrl::GetItemStateEx  
  Pobiera rozszerzony stan określonego elementu w bieżącym kontrolki widok drzewa.  
   
 ```  
@@ -883,7 +878,7 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in]`hItem`|Dojście do elementu kontroli widoku drzewa.|  
+|[in] `hItem`|Dojście do elementu kontroli widoku drzewa.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Rozszerzone stan elementu. Aby uzyskać więcej informacji, zobacz `uStateEx` członkiem [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) struktury.  
@@ -891,7 +886,7 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wysyła [TVM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb773596) komunikat, który jest opisany w zestawie SDK systemu Windows. Który komunikatu zwraca [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) struktury, który opisuje elementu kontrolki widok drzewa, a ta metoda pobiera `uStateEx` elementu członkowskiego z tej struktury.  
   
-##  <a name="getitemtext"></a>CTreeCtrl::GetItemText  
+##  <a name="getitemtext"></a>  CTreeCtrl::GetItemText  
  Zwraca tekst element określony przez `hItem`.  
   
 ```  
@@ -908,7 +903,7 @@ CString GetItemText(HTREEITEM hItem) const;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CTreeCtrl::GetNextItem](#getnextitem).  
   
-##  <a name="getlastvisibleitem"></a>CTreeCtrl::GetLastVisibleItem  
+##  <a name="getlastvisibleitem"></a>  CTreeCtrl::GetLastVisibleItem  
  Pobiera ostatni element nierozwiniętego węzła w bieżącym kontrolki widok drzewa.  
   
 ```  
@@ -931,7 +926,7 @@ HTREEITEM GetLastVisibleItem() const;
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#6](../../mfc/reference/codesnippet/cpp/ctreectrl-class_21.cpp)]  
   
-##  <a name="getlinecolor"></a>CTreeCtrl::GetLineColor  
+##  <a name="getlinecolor"></a>  CTreeCtrl::GetLineColor  
  Ta funkcja członkowska implementuje zachowanie komunikatu win32 [TVM_GETLINECOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773619), zgodnie z opisem w zestawie Windows SDK.  
   
 ```  
@@ -944,7 +939,7 @@ COLORREF GetLineColor() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#19](../../mfc/reference/codesnippet/cpp/ctreectrl-class_22.cpp)]  
   
-##  <a name="getnextitem"></a>CTreeCtrl::GetNextItem  
+##  <a name="getnextitem"></a>  CTreeCtrl::GetNextItem  
  Wywołanie tej funkcji można pobrać drzewa view elementów, które ma określonej relacji wskazywanym przez `nCode` parametru, do `hItem`.  
   
 ```  
@@ -960,27 +955,27 @@ HTREEITEM GetNextItem(
  `nCode`  
  Flaga wskazująca typ relacji do `hItem`. Ta flaga może być jedną z następujących wartości:  
   
-- `TVGN_CARET`Pobiera obecnie wybranego elementu.  
+- `TVGN_CARET` Pobiera obecnie wybranego elementu.  
   
-- `TVGN_CHILD`Pobiera pierwszy element podrzędny elementu określony przez `hItem` parametru.  
+- `TVGN_CHILD` Pobiera pierwszy element podrzędny elementu określony przez `hItem` parametru.  
   
-- `TVGN_DROPHILITE`Pobiera element, który jest miejscem docelowym operacji przeciągania i upuszczania.  
+- `TVGN_DROPHILITE` Pobiera element, który jest miejscem docelowym operacji przeciągania i upuszczania.  
   
-- `TVGN_FIRSTVISIBLE`Pobiera pierwszy element widoczny.  
+- `TVGN_FIRSTVISIBLE` Pobiera pierwszy element widoczny.  
   
-- `TVGN_LASTVISIBLE`Pobiera rozwinięte ostatniego elementu w drzewie. Nie pobiera ostatni element widoczny w oknie widoku drzewa.  
+- `TVGN_LASTVISIBLE` Pobiera rozwinięte ostatniego elementu w drzewie. Nie pobiera ostatni element widoczny w oknie widoku drzewa.  
   
-- `TVGN_NEXT`Pobiera element równorzędny dalej.  
+- `TVGN_NEXT` Pobiera element równorzędny dalej.  
   
-- `TVGN_NEXTVISIBLE`Pobiera następnego elementu widoczne poniżej określonego elementu.  
+- `TVGN_NEXTVISIBLE` Pobiera następnego elementu widoczne poniżej określonego elementu.  
   
-- `TVGN_PARENT`Pobiera element nadrzędny określonego elementu.  
+- `TVGN_PARENT` Pobiera element nadrzędny określonego elementu.  
   
-- `TVGN_PREVIOUS`Pobiera poprzedni element równorzędny.  
+- `TVGN_PREVIOUS` Pobiera poprzedni element równorzędny.  
   
-- `TVGN_PREVIOUSVISIBLE`Pobiera pierwszy element widoczny poprzedzający określony element.  
+- `TVGN_PREVIOUSVISIBLE` Pobiera pierwszy element widoczny poprzedzający określony element.  
   
-- `TVGN_ROOT`Pobiera pierwszy element podrzędny elementu głównego, którego częścią jest określony element.  
+- `TVGN_ROOT` Pobiera pierwszy element podrzędny elementu głównego, którego częścią jest określony element.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Dojście następnego elementu w przypadku powodzenia; w przeciwnym razie **NULL**.  
@@ -993,7 +988,7 @@ HTREEITEM GetNextItem(
   
  [!code-cpp[NVC_MFC_CTreeCtrl#20](../../mfc/reference/codesnippet/cpp/ctreectrl-class_23.cpp)]  
   
-##  <a name="getnextsiblingitem"></a>CTreeCtrl::GetNextSiblingItem  
+##  <a name="getnextsiblingitem"></a>  CTreeCtrl::GetNextSiblingItem  
  Wywołanie tej funkcji do pobrania następnej równorzędnym `hItem`.  
   
 ```  
@@ -1010,7 +1005,7 @@ HTREEITEM GetNextSiblingItem(HTREEITEM hItem) const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#21](../../mfc/reference/codesnippet/cpp/ctreectrl-class_24.cpp)]  
   
-##  <a name="getnextvisibleitem"></a>CTreeCtrl::GetNextVisibleItem  
+##  <a name="getnextvisibleitem"></a>  CTreeCtrl::GetNextVisibleItem  
  Wywołanie tej funkcji do pobrania następnej widoczne z `hItem`.  
   
 ```  
@@ -1027,7 +1022,7 @@ HTREEITEM GetNextVisibleItem(HTREEITEM hItem) const;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CTreeCtrl::SetCheck](#setcheck).  
   
-##  <a name="getparentitem"></a>CTreeCtrl::GetParentItem  
+##  <a name="getparentitem"></a>  CTreeCtrl::GetParentItem  
  Wywołanie tej funkcji można pobrać elementu nadrzędnego `hItem`.  
   
 ```  
@@ -1047,7 +1042,7 @@ HTREEITEM GetParentItem(HTREEITEM hItem) const;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CTreeCtrl::EnsureVisible](#ensurevisible).  
   
-##  <a name="getprevsiblingitem"></a>CTreeCtrl::GetPrevSiblingItem  
+##  <a name="getprevsiblingitem"></a>  CTreeCtrl::GetPrevSiblingItem  
  Wywołanie tej funkcji można pobrać poprzedniej równorzędnym `hItem`.  
   
 ```  
@@ -1064,7 +1059,7 @@ HTREEITEM GetPrevSiblingItem(HTREEITEM hItem) const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#22](../../mfc/reference/codesnippet/cpp/ctreectrl-class_25.cpp)]  
   
-##  <a name="getprevvisibleitem"></a>CTreeCtrl::GetPrevVisibleItem  
+##  <a name="getprevvisibleitem"></a>  CTreeCtrl::GetPrevVisibleItem  
  Wywołanie tej funkcji można pobrać poprzedniego elementu widoczne z `hItem`.  
   
 ```  
@@ -1081,7 +1076,7 @@ HTREEITEM GetPrevVisibleItem(HTREEITEM hItem) const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#23](../../mfc/reference/codesnippet/cpp/ctreectrl-class_26.cpp)]  
   
-##  <a name="getrootitem"></a>CTreeCtrl::GetRootItem  
+##  <a name="getrootitem"></a>  CTreeCtrl::GetRootItem  
  Wywołanie tej funkcji można pobrać elementu głównego kontrolki widoku drzewa.  
   
 ```  
@@ -1094,7 +1089,7 @@ HTREEITEM GetRootItem() const;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CTreeCtrl::EditLabel](#editlabel).  
   
-##  <a name="getscrolltime"></a>CTreeCtrl::GetScrollTime  
+##  <a name="getscrolltime"></a>  CTreeCtrl::GetScrollTime  
  Wywołanie tej funkcji Członkowskich do pobrania czasu maksymalną przewijania formantu widoku drzewa.  
   
 ```  
@@ -1107,7 +1102,7 @@ UINT GetScrollTime() const;
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja członkowska implementuje zachowanie komunikatu win32 [TVM_GETSCROLLTIME](http://msdn.microsoft.com/library/windows/desktop/bb773625), zgodnie z opisem w zestawie Windows SDK.  
   
-##  <a name="getselectedcount"></a>CTreeCtrl::GetSelectedCount  
+##  <a name="getselectedcount"></a>  CTreeCtrl::GetSelectedCount  
  Pobiera liczbę wybranych elementów w formancie bieżący widok drzewa.  
   
 ```  
@@ -1120,7 +1115,7 @@ UINT GetSelectedCount();
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wysyła [TVM_GETSELECTEDCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb773629) komunikat, który jest opisany w zestawie SDK systemu Windows.  
   
-##  <a name="getselecteditem"></a>CTreeCtrl::GetSelectedItem  
+##  <a name="getselecteditem"></a>  CTreeCtrl::GetSelectedItem  
  Wywołanie tej funkcji można pobrać zaznaczony element formantu widoku drzewa.  
   
 ```  
@@ -1133,7 +1128,7 @@ HTREEITEM GetSelectedItem() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#24](../../mfc/reference/codesnippet/cpp/ctreectrl-class_27.cpp)]  
   
-##  <a name="gettextcolor"></a>CTreeCtrl::GetTextColor  
+##  <a name="gettextcolor"></a>  CTreeCtrl::GetTextColor  
  Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [TVM_GETTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773633), zgodnie z opisem w zestawie Windows SDK.  
   
 ```  
@@ -1146,7 +1141,7 @@ COLORREF GetTextColor() const;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CTreeCtrl::SetTextColor](#settextcolor).  
   
-##  <a name="gettooltips"></a>CTreeCtrl::GetToolTips  
+##  <a name="gettooltips"></a>  CTreeCtrl::GetToolTips  
  Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [TVM_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb773729), zgodnie z opisem w zestawie Windows SDK.  
   
 ```  
@@ -1162,7 +1157,7 @@ CToolTipCtrl* GetToolTips() const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#25](../../mfc/reference/codesnippet/cpp/ctreectrl-class_28.cpp)]  
   
-##  <a name="getvisiblecount"></a>CTreeCtrl::GetVisibleCount  
+##  <a name="getvisiblecount"></a>  CTreeCtrl::GetVisibleCount  
  Wywołanie tej funkcji, aby pobrać liczbę widocznych elementów w kontrolce widok drzewa.  
   
 ```  
@@ -1175,7 +1170,7 @@ UINT GetVisibleCount() const;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CTreeCtrl::SetCheck](#setcheck).  
   
-##  <a name="hittest"></a>CTreeCtrl::HitTest  
+##  <a name="hittest"></a>  CTreeCtrl::HitTest  
  Wywołanie tej funkcji można określić lokalizacji określony punkt względem obszaru klienckiego formantu widoku drzewa.  
   
 ```  
@@ -1222,7 +1217,7 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#26](../../mfc/reference/codesnippet/cpp/ctreectrl-class_29.cpp)]  
   
-##  <a name="insertitem"></a>CTreeCtrl::InsertItem  
+##  <a name="insertitem"></a>  CTreeCtrl::InsertItem  
  Wywołanie tej funkcji, aby wstawić nowy element w kontrolce widok drzewa.  
   
 ```  
@@ -1295,7 +1290,7 @@ HTREEITEM InsertItem(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#27](../../mfc/reference/codesnippet/cpp/ctreectrl-class_30.cpp)]  
   
-##  <a name="itemhaschildren"></a>CTreeCtrl::ItemHasChildren  
+##  <a name="itemhaschildren"></a>  CTreeCtrl::ItemHasChildren  
  Ta funkcja służy do określenia, czy element drzewa określone przez `hItem` ma elementy podrzędne.  
   
 ```  
@@ -1315,7 +1310,7 @@ BOOL ItemHasChildren(HTREEITEM hItem) const;
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CTreeCtrl::GetSelectedItem](#getselecteditem).  
   
-##  <a name="mapaccidtoitem"></a>CTreeCtrl::MapAccIdToItem  
+##  <a name="mapaccidtoitem"></a>  CTreeCtrl::MapAccIdToItem  
  Mapuje identyfikator określony ułatwień dostępu do uchwytu elementu widok drzewa w formancie bieżący widok drzewa.  
   
 ```  
@@ -1326,7 +1321,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in]`uAccId`|Identyfikator ułatwień dostępu dla elementu w elemencie widoku drzewa.|  
+|[in] `uAccId`|Identyfikator ułatwień dostępu dla elementu w elemencie widoku drzewa.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Dojście do elementu widoku drzewa ( `HTREEITEM`), który odpowiada `uAccId` parametru. Aby uzyskać więcej informacji, zobacz `hItem` członkiem [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) struktury.  
@@ -1346,7 +1341,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#5](../../mfc/reference/codesnippet/cpp/ctreectrl-class_18.cpp)]  
   
-##  <a name="mapitemtoaccid"></a>CTreeCtrl::MapItemToAccID  
+##  <a name="mapitemtoaccid"></a>  CTreeCtrl::MapItemToAccID  
  Mapuje określony uchwyt elementu widok drzewa w formancie bieżący widok drzewa do identyfikatora ułatwień dostępu.  
   
 ```  
@@ -1357,7 +1352,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in]`hItem`|Dojście elementu widok drzewa w formancie. Aby uzyskać więcej informacji, zobacz `hItem` członkiem [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) struktury.|  
+|[in] `hItem`|Dojście elementu widok drzewa w formancie. Aby uzyskać więcej informacji, zobacz `hItem` członkiem [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) struktury.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Identyfikator ułatwień dostępu, który odpowiada identyfikatorowi `hItem` parametru.  
@@ -1377,7 +1372,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#2](../../mfc/reference/codesnippet/cpp/ctreectrl-class_31.cpp)]  
   
-##  <a name="select"></a>CTreeCtrl::Select  
+##  <a name="select"></a>  CTreeCtrl::Select  
  Wywołanie tej funkcji, aby wybrać element widoku drzewa danego, przewinąć element w widoku lub odświeżyć elementu w stylu służy do określania docelowych operacji przeciągania i upuszczania.  
   
 ```  
@@ -1393,11 +1388,11 @@ BOOL Select(
  `nCode`  
  Typ akcji do wykonania. Ten parametr może mieć jedną z następujących wartości:  
   
-- `TVGN_CARET`Ustawia zaznaczenie danego elementu.  
+- `TVGN_CARET` Ustawia zaznaczenie danego elementu.  
   
-- `TVGN_DROPHILITE`Ponownie rysuje danego elementu w stylu służy do określania docelowych operacji przeciągania i upuszczania.  
+- `TVGN_DROPHILITE` Ponownie rysuje danego elementu w stylu służy do określania docelowych operacji przeciągania i upuszczania.  
   
-- `TVGN_FIRSTVISIBLE`Przewija widok drzewa w pionie, tak aby podany element to pierwszy element widoczny.  
+- `TVGN_FIRSTVISIBLE` Przewija widok drzewa w pionie, tak aby podany element to pierwszy element widoczny.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
@@ -1408,7 +1403,7 @@ BOOL Select(
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CTreeCtrl::HitTest](#hittest).  
   
-##  <a name="selectdroptarget"></a>CTreeCtrl::SelectDropTarget  
+##  <a name="selectdroptarget"></a>  CTreeCtrl::SelectDropTarget  
  Wywołanie tej funkcji, aby odświeżyć elementu w stylu służy do określania docelowych operacji przeciągania i upuszczania.  
   
 ```  
@@ -1425,7 +1420,7 @@ BOOL SelectDropTarget(HTREEITEM hItem);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#9](../../mfc/reference/codesnippet/cpp/ctreectrl-class_9.cpp)]  
   
-##  <a name="selectitem"></a>CTreeCtrl::SelectItem  
+##  <a name="selectitem"></a>  CTreeCtrl::SelectItem  
  Wywołanie tej funkcji, aby wybrać element widoku drzewa danego.  
   
 ```  
@@ -1445,7 +1440,7 @@ BOOL SelectItem(HTREEITEM hItem);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#26](../../mfc/reference/codesnippet/cpp/ctreectrl-class_29.cpp)]  
   
-##  <a name="selectsetfirstvisible"></a>CTreeCtrl::SelectSetFirstVisible  
+##  <a name="selectsetfirstvisible"></a>  CTreeCtrl::SelectSetFirstVisible  
  Wywołanie tej funkcji do przewiń widok drzewa w pionie, tak aby podany element to pierwszy element widoczny.  
   
 ```  
@@ -1465,7 +1460,7 @@ BOOL SelectSetFirstVisible(HTREEITEM hItem);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#28](../../mfc/reference/codesnippet/cpp/ctreectrl-class_32.cpp)]  
   
-##  <a name="setautoscrollinfo"></a>CTreeCtrl::SetAutoscrollInfo  
+##  <a name="setautoscrollinfo"></a>  CTreeCtrl::SetAutoscrollInfo  
  Ustawia współczynnik autoscroll bieżącego formantu widoku drzewa.  
   
 ```  
@@ -1478,8 +1473,8 @@ BOOL SetAutoscrollInfo(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in]`uPixelsPerSec`|Liczba pikseli do Przewiń na sekundę.|  
-|[in]`uUpdateTime`|Interwał aktualizacji formantu.|  
+|[in] `uPixelsPerSec`|Liczba pikseli do Przewiń na sekundę.|  
+|[in] `uUpdateTime`|Interwał aktualizacji formantu.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zawsze zwraca `true`.  
@@ -1499,7 +1494,7 @@ BOOL SetAutoscrollInfo(
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#4](../../mfc/reference/codesnippet/cpp/ctreectrl-class_33.cpp)]  
   
-##  <a name="setbkcolor"></a>CTreeCtrl::SetBkColor  
+##  <a name="setbkcolor"></a>  CTreeCtrl::SetBkColor  
  Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [TVM_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773741), zgodnie z opisem w zestawie Windows SDK.  
   
 ```  
@@ -1516,7 +1511,7 @@ COLORREF SetBkColor(COLORREF clr);
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CTreeCtrl::SetTextColor](#settextcolor).  
   
-##  <a name="setcheck"></a>CTreeCtrl::SetCheck  
+##  <a name="setcheck"></a>  CTreeCtrl::SetCheck  
  Wywołanie tej funkcji członkowskich można ustawić stanu wyboru dla elementu formantu drzewa.  
   
 ```  
@@ -1546,7 +1541,7 @@ BOOL SetCheck(
   
  [!code-cpp[NVC_MFC_CTreeCtrl#30](../../mfc/reference/codesnippet/cpp/ctreectrl-class_35.cpp)]  
   
-##  <a name="setextendedstyle"></a>CTreeCtrl::SetExtendedStyle  
+##  <a name="setextendedstyle"></a>  CTreeCtrl::SetExtendedStyle  
  Ustawia rozszerzone style dla bieżącego formantu widoku drzewa.  
   
 ```  
@@ -1559,8 +1554,8 @@ DWORD SetExtendedStyle(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in]`dwExMask`|Maska bitowa określająca, które style w formancie bieżący widok drzewa dotyczy tej metody. Jeśli ten parametr ma wartość zero, jest ignorowany i wartość `dwExStyles` parametru jest przypisany do kontrolki widoku drzewa.<br /><br /> Określ zero lub bitowe połączenie (lub) style opisanego w [widok drzewa sterowania rozszerzone style](http://msdn.microsoft.com/library/windows/desktop/bb759981).|  
-|[in]`dwExStyles`|Maski, który określa style w bieżącym widoku drzewa sterowania można ustawić lub wyczyść pole wyboru.<br /><br /> Aby ustawić kombinacja style, określ bitowe połączenie (lub) style opisanego w [widok drzewa sterowania rozszerzone style](http://msdn.microsoft.com/library/windows/desktop/bb759981). Aby usunąć zestaw stylów, określ zero.|  
+|[in] `dwExMask`|Maska bitowa określająca, które style w formancie bieżący widok drzewa dotyczy tej metody. Jeśli ten parametr ma wartość zero, jest ignorowany i wartość `dwExStyles` parametru jest przypisany do kontrolki widoku drzewa.<br /><br /> Określ zero lub bitowe połączenie (lub) style opisanego w [widok drzewa sterowania rozszerzone style](http://msdn.microsoft.com/library/windows/desktop/bb759981).|  
+|[in] `dwExStyles`|Maski, który określa style w bieżącym widoku drzewa sterowania można ustawić lub wyczyść pole wyboru.<br /><br /> Aby ustawić kombinacja style, określ bitowe połączenie (lub) style opisanego w [widok drzewa sterowania rozszerzone style](http://msdn.microsoft.com/library/windows/desktop/bb759981). Aby usunąć zestaw stylów, określ zero.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość, która zawiera poprzedniej rozszerzone style formantu.  
@@ -1580,7 +1575,7 @@ DWORD SetExtendedStyle(
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#3](../../mfc/reference/codesnippet/cpp/ctreectrl-class_36.cpp)]  
   
-##  <a name="setimagelist"></a>CTreeCtrl::SetImageList  
+##  <a name="setimagelist"></a>  CTreeCtrl::SetImageList  
  Wywołanie tej funkcji, aby ustawić normalnej lub stan listy obrazów do drzewa wyświetlanie formantu i ponownie narysuj formantu przy użyciu nowych obrazów.  
   
 ```  
@@ -1596,9 +1591,9 @@ CImageList* SetImageList(
  `nImageListType`  
  Typ listy obrazów do ustawienia. Listy obrazów może być jedną z następujących wartości:  
   
-- `TVSIL_NORMAL`Ustawia na liście normalnego obrazu, który zawiera obrazy wybrane i nonselected dla elementu widoku drzewa. Nakładki obrazów, należy użyć tego stanu.  
+- `TVSIL_NORMAL` Ustawia na liście normalnego obrazu, który zawiera obrazy wybrane i nonselected dla elementu widoku drzewa. Nakładki obrazów, należy użyć tego stanu.  
   
-- `TVSIL_STATE`Ustawia stan listy obrazów, zawierający obrazy elementów widoku drzewa, które są w stanie zdefiniowane przez użytkownika.  
+- `TVSIL_STATE` Ustawia stan listy obrazów, zawierający obrazy elementów widoku drzewa, które są w stanie zdefiniowane przez użytkownika.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do poprzedniego listy obrazów. w przeciwnym razie **NULL**.  
@@ -1606,7 +1601,7 @@ CImageList* SetImageList(
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CTreeCtrl::GetImageList](#getimagelist).  
   
-##  <a name="setindent"></a>CTreeCtrl::SetIndent  
+##  <a name="setindent"></a>  CTreeCtrl::SetIndent  
  Wywołaj tę funkcję, aby ustawić szerokość wcięcia kontrolki widoku drzewa i narysuj element ponownie, aby odzwierciedlić nową szerokość formantu.  
   
 ```  
@@ -1620,7 +1615,7 @@ void SetIndent(UINT nIndent);
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CTreeCtrl::GetIndent](#getindent).  
   
-##  <a name="setinsertmark"></a>CTreeCtrl::SetInsertMark  
+##  <a name="setinsertmark"></a>  CTreeCtrl::SetInsertMark  
  Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [TVM_SETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb773753), zgodnie z opisem w zestawie Windows SDK.  
   
 ```  
@@ -1642,7 +1637,7 @@ BOOL SetInsertMark(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#31](../../mfc/reference/codesnippet/cpp/ctreectrl-class_37.cpp)]  
   
-##  <a name="setinsertmarkcolor"></a>CTreeCtrl::SetInsertMarkColor  
+##  <a name="setinsertmarkcolor"></a>  CTreeCtrl::SetInsertMarkColor  
  Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [TVM_SETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773755), zgodnie z opisem w zestawie Windows SDK.  
   
 ```  
@@ -1659,7 +1654,7 @@ COLORREF SetInsertMarkColor(COLORREF clrNew);
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CTreeCtrl::GetInsertMarkColor](#getinsertmarkcolor).  
   
-##  <a name="setitem"></a>CTreeCtrl::SetItem  
+##  <a name="setitem"></a>  CTreeCtrl::SetItem  
  Wywołanie tej funkcji można ustawić atrybutów elementu widoku drzewa.  
   
 ```  
@@ -1716,7 +1711,7 @@ BOOL SetItem(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#32](../../mfc/reference/codesnippet/cpp/ctreectrl-class_38.cpp)]  
   
-##  <a name="setitemdata"></a>CTreeCtrl::SetItemData  
+##  <a name="setitemdata"></a>  CTreeCtrl::SetItemData  
  Wywołanie tej funkcji, aby ustawić wartość specyficzne dla aplikacji 32-bitowych skojarzoną z określonym elementem.  
   
 ```  
@@ -1738,7 +1733,7 @@ BOOL SetItemData(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#33](../../mfc/reference/codesnippet/cpp/ctreectrl-class_39.cpp)]  
   
-##  <a name="setitemexpandedimageindex"></a>CTreeCtrl::SetItemExpandedImageIndex  
+##  <a name="setitemexpandedimageindex"></a>  CTreeCtrl::SetItemExpandedImageIndex  
  Ustawia indeks obrazu do wyświetlenia, jeśli określony element bieżącej kontrolki widok drzewa jest w stanie rozwinięte.  
   
 ```  
@@ -1751,11 +1746,11 @@ BOOL SetItemExpandedImageIndex(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in]`hItem`|Dojście do elementu kontroli widoku drzewa.|  
-|[in]`iExpandedImage`|Indeks obrazu do wyświetlenia, jeśli określony element jest w stanie rozwinięte.|  
+|[in] `hItem`|Dojście do elementu kontroli widoku drzewa.|  
+|[in] `iExpandedImage`|Indeks obrazu do wyświetlenia, jeśli określony element jest w stanie rozwinięte.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
+ `true` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wysyła [TVM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb773758) komunikat, który jest opisany w zestawie SDK systemu Windows. Ta metoda przypisuje `iExpandedImage` parametr `iExpandedImage` członkiem [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) struktury i korzysta z struktury w komunikacie.  
@@ -1770,7 +1765,7 @@ BOOL SetItemExpandedImageIndex(
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#8](../../mfc/reference/codesnippet/cpp/ctreectrl-class_40.cpp)]  
   
-##  <a name="setitemheight"></a>CTreeCtrl::SetItemHeight  
+##  <a name="setitemheight"></a>  CTreeCtrl::SetItemHeight  
  Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [TVM_SETITEMHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb773761), zgodnie z opisem w zestawie Windows SDK.  
   
 ```  
@@ -1787,7 +1782,7 @@ SHORT SetItemHeight(SHORT cyHeight);
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CTreeCtrl::GetItemHeight](#getitemheight).  
   
-##  <a name="setitemimage"></a>CTreeCtrl::SetItemImage  
+##  <a name="setitemimage"></a>  CTreeCtrl::SetItemImage  
  Kojarzy obrazów z elementu.  
   
 ```  
@@ -1820,7 +1815,7 @@ BOOL SetItemImage(
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CTreeCtrl::GetItemImage](#getitemimage).  
   
-##  <a name="setitemstate"></a>CTreeCtrl::SetItemState  
+##  <a name="setitemstate"></a>  CTreeCtrl::SetItemState  
  Ustawia stan określony przez element `hItem`.  
   
 ```  
@@ -1849,7 +1844,7 @@ BOOL SetItemState(
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CTreeCtrl::GetItemState](#getitemstate).  
   
-##  <a name="setitemstateex"></a>CTreeCtrl::SetItemStateEx  
+##  <a name="setitemstateex"></a>  CTreeCtrl::SetItemStateEx  
  Ustawia stan rozszerzonej określonego elementu w bieżącym kontrolki widok drzewa.  
   
 ```  
@@ -1862,11 +1857,11 @@ BOOL SetItemStateEx(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in]`hItem`|Dojście do elementu kontroli widoku drzewa.|  
-|[in]`uStateEx`|Rozszerzone stan elementu. Aby uzyskać więcej informacji, zobacz `uStateEx` członkiem [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) struktury.|  
+|[in] `hItem`|Dojście do elementu kontroli widoku drzewa.|  
+|[in] `uStateEx`|Rozszerzone stan elementu. Aby uzyskać więcej informacji, zobacz `uStateEx` członkiem [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) struktury.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
+ `true` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wysyła [TVM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb773758) komunikat, który jest opisany w zestawie SDK systemu Windows. Ta metoda przypisuje `uStateEx` parametr `uStateEx` członkiem [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) struktury i korzysta z struktury w komunikacie.  
@@ -1881,7 +1876,7 @@ BOOL SetItemStateEx(
   
  [!code-cpp[NVC_MFC_CTreeCtrl_s1#7](../../mfc/reference/codesnippet/cpp/ctreectrl-class_41.cpp)]  
   
-##  <a name="setitemtext"></a>CTreeCtrl::SetItemText  
+##  <a name="setitemtext"></a>  CTreeCtrl::SetItemText  
  Ustawia tekst element określony przez `hItem`.  
   
 ```  
@@ -1903,7 +1898,7 @@ BOOL SetItemText(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#34](../../mfc/reference/codesnippet/cpp/ctreectrl-class_42.cpp)]  
   
-##  <a name="setlinecolor"></a>CTreeCtrl::SetLineColor  
+##  <a name="setlinecolor"></a>  CTreeCtrl::SetLineColor  
  Wywołanie tej funkcji elementu członkowskiego, aby ustawić bieżący kolor linii dla formantu widoku drzewa.  
   
 ```  
@@ -1923,7 +1918,7 @@ COLORREF SetLineColor(COLORREF clrNew = CLR_DEFAULT);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#35](../../mfc/reference/codesnippet/cpp/ctreectrl-class_43.cpp)]  
   
-##  <a name="setscrolltime"></a>CTreeCtrl::SetScrollTime  
+##  <a name="setscrolltime"></a>  CTreeCtrl::SetScrollTime  
  Wywołanie tej funkcji Członkowskich, aby ustawić czas maksymalny przewijania formantu widoku drzewa.  
   
 ```  
@@ -1940,7 +1935,7 @@ UINT SetScrollTime(UINT uScrollTime);
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja członkowska implementuje zachowanie komunikatu win32 [TVM_SETSCROLLTIME](http://msdn.microsoft.com/library/windows/desktop/bb773767), zgodnie z opisem w zestawie Windows SDK.  
   
-##  <a name="settextcolor"></a>CTreeCtrl::SetTextColor  
+##  <a name="settextcolor"></a>  CTreeCtrl::SetTextColor  
  Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [TVM_SETTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb773769), zgodnie z opisem w zestawie Windows SDK.  
   
 ```  
@@ -1957,7 +1952,7 @@ COLORREF SetTextColor(COLORREF clr);
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#36](../../mfc/reference/codesnippet/cpp/ctreectrl-class_44.cpp)]  
   
-##  <a name="settooltips"></a>CTreeCtrl::SetToolTips  
+##  <a name="settooltips"></a>  CTreeCtrl::SetToolTips  
  Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [TVM_SETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb773772), zgodnie z opisem w zestawie Windows SDK.  
   
 ```  
@@ -1977,7 +1972,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CTreeCtrl::GetToolTips](#gettooltips).  
   
-##  <a name="showinfotip"></a>CTreeCtrl::ShowInfoTip  
+##  <a name="showinfotip"></a>  CTreeCtrl::ShowInfoTip  
  Wyświetla porady określonego elementu w bieżącym kontrolki widok drzewa.  
   
 ```  
@@ -1988,14 +1983,14 @@ void ShowInfoTip(HTREEITEM hItem);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in]`hItem`|Dojście do elementu widok drzewa w formancie. Aby uzyskać więcej informacji, zobacz `hItem` członkiem [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) struktury.|  
+|[in] `hItem`|Dojście do elementu widok drzewa w formancie. Aby uzyskać więcej informacji, zobacz `hItem` członkiem [TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459) struktury.|  
   
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji na temat różnic między etykietki narzędzi i infotips wyszukaj temat "Etykietki narzędzi i Infotips" w [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).  
   
  Ta metoda wysyła [TVM_SHOWINFOTIP](http://msdn.microsoft.com/library/windows/desktop/bb773779) komunikat, który jest opisany w zestawie SDK systemu Windows.  
   
-##  <a name="sortchildren"></a>CTreeCtrl::SortChildren  
+##  <a name="sortchildren"></a>  CTreeCtrl::SortChildren  
  Wywołanie tej funkcji, aby posortować alfabetycznie elementy podrzędne elementu nadrzędnego danego elementu w kontrolce widok drzewa.  
   
 ```  
@@ -2010,12 +2005,12 @@ BOOL SortChildren(HTREEITEM hItem);
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- `SortChildren`nie będzie recurse w drzewie; tylko bezpośrednie elementy podrzędne `hItem` będą sortowane.  
+ `SortChildren` nie będzie recurse w drzewie; tylko bezpośrednie elementy podrzędne `hItem` będą sortowane.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CTreeCtrl#37](../../mfc/reference/codesnippet/cpp/ctreectrl-class_45.cpp)]  
   
-##  <a name="sortchildrencb"></a>CTreeCtrl::SortChildrenCB  
+##  <a name="sortchildrencb"></a>  CTreeCtrl::SortChildrenCB  
  Wywołanie tej funkcji, aby posortować elementy widoku drzewa przy użyciu funkcji zdefiniowanym przez aplikację wywołania zwrotnego, która porównuje elementy.  
   
 ```  

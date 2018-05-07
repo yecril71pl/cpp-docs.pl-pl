@@ -1,13 +1,10 @@
 ---
-title: "Za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -29,18 +26,16 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 78d104a41f052f994a19ebe359c8d3e557274783
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a91c9833358744730b9ad9c63f5a14729d9d0968
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>Korzystanie z międzyoperacyjności języka C++ (niejawna funkcja PInvoke)
 W przeciwieństwie do innych języków .NET, Visual C++ obsługuje współdziałania umożliwiający zarządzane i niezarządzane kod, mogą znajdować się w tej samej aplikacji, a nawet w tym samym pliku (z [zarządzane, niezarządzane](../preprocessor/managed-unmanaged.md) pragm). Dzięki temu Visual C++ deweloperom zintegrowanie funkcji .NET do istniejących aplikacji Visual C++, bez zakłócania pozostałej części aplikacji.  

@@ -1,22 +1,20 @@
 ---
 title: Tworzenia deklaracji / definicji | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/16/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- cpp-ide
+ms.topic: conceptual
 ms.assetid: 6b1cdcb2-765e-4b93-8cef-92b861f64eba
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 889c8acf5e0ef0ed6a7ac90088a6188658d49d75
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 60d583ec47a3f9c5b61599a5945e3cfa0d375b1d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="create-declaration--definition"></a>Tworzenia deklaracji / definicji
 **Co:** pozwala natychmiast wygenerować deklaracji lub definicji funkcji.
@@ -32,7 +30,7 @@ ms.lasthandoff: 12/21/2017
    ![Wyróżniony kod](images/createdefinition_highlight.png)
 
 1. Następnie wykonaj jedną z następujących czynności:
-   * **Klawiatury**
+   * **Keyboard**
      * Naciśnij klawisz **Ctrl +.** Aby wyzwalacz **szybkie akcje i Refaktoryzacje** menu i wybierz **tworzenia deklaracji / definicji** z menu kontekstowego.
    * **Myszy**
      * Kliknij prawym przyciskiem myszy i wybierz **szybkie akcje i Refaktoryzacje** menu i wybierz **tworzenia deklaracji / definicji** z menu kontekstowego.

@@ -1,12 +1,9 @@
 ---
-title: "Błąd narzędzi konsolidatora LNK1181 | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Błąd narzędzi konsolidatora LNK1181 | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK1181
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK1181
 ms.assetid: 984b0db6-e331-4284-b2a7-a212fe96c486
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f5092d4f3ce7b4f96ca4dc5c1554483a7fc3a0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 617678e5453acdafaf72875857b0e0f9b84a110a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk1181"></a>Błąd narzędzi konsolidatora LNK1181
 Nie można otworzyć pliku wejściowego "filename"  
@@ -34,7 +29,7 @@ Nie można otworzyć pliku wejściowego "filename"
   
  Niektóre typowe przyczyny błędu LNK1181 obejmują:  
   
--   `filename`jest określany jako dodatkowe zależności w linii konsolidatora, ale plik nie istnieje.  
+-   `filename` jest określany jako dodatkowe zależności w linii konsolidatora, ale plik nie istnieje.  
   
 -   A **/libpath** instrukcji, która określa katalog zawierający `filename` brakuje.  
   

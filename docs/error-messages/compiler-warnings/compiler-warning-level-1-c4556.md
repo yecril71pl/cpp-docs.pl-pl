@@ -1,12 +1,9 @@
 ---
-title: "Kompilatora (poziom 1) ostrzeżenie C4556 | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Kompilatora (poziom 1) ostrzeżenie C4556 | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - xml
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - C4556
 ms.assetid: e4c0e296-b747-4db1-9608-30b8b74feac2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a55e969849a3f13464e372c1dcfe0aa0956a564d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 22d10f7dc73e0d5e39fcad8975114f7cb176b24d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4556"></a>Kompilator C4556 ostrzegawcze (poziom 1)
 wartość wewnętrznego argumentu natychmiastowego "wartość" jest poza zakresem "ich - górnej granicy"  

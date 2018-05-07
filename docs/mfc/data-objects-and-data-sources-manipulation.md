@@ -1,13 +1,10 @@
 ---
-title: "Obiekty danych i źródła danych: manipulowanie | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Obiekty danych i źródła danych: manipulowanie | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40bd83b2e472ff1b1e5d277c27a801b0750fb160
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b4c3414734f40ee81689ffa2f160cbbab8306d2b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Obiekty danych i źródła danych: operowanie
 Po utworzeniu obiektu danych lub źródła danych, można wykonywać wiele typowych operacji na danych, takich jak wstawianie i usuwanie danych wyliczania formatów, z których dane są, i inne. W tym artykule opisano niezbędne do zakończenia operacji najbardziej typowe techniki. Tematy obejmują:  
@@ -42,7 +37,7 @@ Po utworzeniu obiektu danych lub źródła danych, można wykonywać wiele typow
   
 -   [Pobieranie danych z obiektu danych](#_core_retrieving_data_from_a_data_object)  
   
-##  <a name="_core_inserting_data_into_a_data_source"></a>Wstawianie danych do źródła danych  
+##  <a name="_core_inserting_data_into_a_data_source"></a> Wstawianie danych do źródła danych  
  Jak dane są wstawiane do źródła danych zależy od tego, czy dane są dostarczane bezpośrednio lub na żądanie, w których średnia podano. Dostępne są następujące możliwości.  
   
 ### <a name="supplying-data-immediately-immediate-rendering"></a>Dostarczająca dane od razu (renderowania bezpośrednim)  
@@ -62,7 +57,7 @@ Po utworzeniu obiektu danych lub źródła danych, można wykonywać wiele typow
   
 -   Jeśli używasz `CFile` obiektu jako źródło danych, wywołaj `COleDataSource::DelayRenderFileData` zamiast `COleDataSource::DelayRenderData` w poprzedniej opcji. Po zażądaniu danych platforma wywoła `COleDataSource::OnRenderFileData`, który należy zastąpić.  
   
-##  <a name="_core_determining_the_formats_available_in_a_data_object"></a>Określanie dostępnych w obiekcie danych formatów  
+##  <a name="_core_determining_the_formats_available_in_a_data_object"></a> Określanie dostępnych w obiekcie danych formatów  
  Zanim aplikacja umożliwia użytkownikowi wkleić dane, trzeba wiedzieć, czy istnieją formaty Schowka, który może obsługiwać. Aby to zrobić, aplikacja powinna wykonaj następujące czynności:  
   
 1.  Utwórz `COleDataObject` obiektu i **FORMATETC** struktury.  
@@ -79,7 +74,7 @@ Po utworzeniu obiektu danych lub źródła danych, można wykonywać wiele typow
   
  Jeśli używasz `ON_UPDATE_COMMAND_UI`, można teraz włączyć Wklej i prawdopodobnie Wklej specjalne elementy menu Edycja. W tym celu należy wywołać `CMenu::EnableMenuItem` lub `CCmdUI::Enable`. Aby uzyskać więcej informacji o jakie kontenera aplikacji powinien elementów menu i kiedy, zobacz [menu i zasoby: dodatki do kontenera](../mfc/menus-and-resources-container-additions.md).  
   
-##  <a name="_core_retrieving_data_from_a_data_object"></a>Pobieranie danych z obiektu danych  
+##  <a name="_core_retrieving_data_from_a_data_object"></a> Pobieranie danych z obiektu danych  
  Po podjęciu decyzji dotyczącej format danych, wszystkie te pozostaje jest pobrać dane z obiektu danych. Aby to zrobić, użytkownik decyduje o tym, gdzie umieścić dane, a aplikacja wymaga odpowiedniej funkcji. Dane będą dostępne w jednym z następujących nośników:  
   
 |Średnia liczba godzin|Funkcji do wywołania|  

@@ -1,13 +1,10 @@
 ---
-title: "Initinstance — funkcja członkowska | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Initinstance — funkcja członkowska | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - InitInstance
 dev_langs:
@@ -18,20 +15,18 @@ helpviewer_keywords:
 - MFC, initializing
 - initializing MFC applications
 ms.assetid: 4ef09267-ff7f-4c39-91a0-57454a264f83
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96042b4d2931fb3709f992f6e43e408c919fe014
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bda38c7173feeccf878ee7befc3d27c0061ddb1e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="initinstance-member-function"></a>InitInstance — Funkcja członkowska
-System operacyjny Windows umożliwia uruchamianie więcej niż jedną kopię lub "instance" tej samej aplikacji. `WinMain`wywołania [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) za każdym razem uruchamia nowe wystąpienie aplikacji.  
+System operacyjny Windows umożliwia uruchamianie więcej niż jedną kopię lub "instance" tej samej aplikacji. `WinMain` wywołania [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) za każdym razem uruchamia nowe wystąpienie aplikacji.  
   
  Standardowe `InitInstance` implementacji tworzone przez Kreatora aplikacji MFC wykonuje następujące zadania:  
   
@@ -48,7 +43,7 @@ System operacyjny Windows umożliwia uruchamianie więcej niż jedną kopię lub
  Można dodać kodu inicjowania lub zmodyfikować kod napisany przez kreatora.  
   
 > [!NOTE]
->  Aplikacje MFC musi zostać zainicjowany jako pojedynczy wątków typu apartment (STA). Jeśli należy wywołać [funkcja CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) w Twojej `InitInstance` zastępowania, określ `COINIT_APARTMENTTHREADED` (zamiast `COINIT_MULTITHREADED`). Aby uzyskać więcej informacji, zobacz PRB: MFC aplikacja przestaje odpowiadać podczas inicjowania aplikacji jako wielowątkowe apartamentu (828643) w [http://support.microsoft.com/default.aspxscid=kb;en-us;828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
+>  Aplikacje MFC musi zostać zainicjowany jako pojedynczy wątków typu apartment (STA). Jeśli należy wywołać [funkcja CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) w Twojej `InitInstance` zastępowania, określ `COINIT_APARTMENTTHREADED` (zamiast `COINIT_MULTITHREADED`). Aby uzyskać więcej informacji, zobacz PRB: MFC aplikacja przestaje odpowiadać podczas inicjowania aplikacji jako wielowątkowe apartamentu (828643) w [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
   
 ## <a name="see-also"></a>Zobacz też  
  [CWinApp: klasa aplikacji](../mfc/cwinapp-the-application-class.md)

@@ -1,13 +1,10 @@
 ---
-title: "Operowanie listami obrazów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Operowanie listami obrazów | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - lists [MFC], image
 - CImageList class [MFC], manipulating
 ms.assetid: 043418f8-077e-4dce-b8bb-2b7b0d7b5156
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c2670f3935e2f4c482728000a268cb46cc9dbdd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 559cb87dbed412e706cc85b3db1120083b694991
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="manipulating-image-lists"></a>Operowanie listami obrazów
 [Zastąp](../mfc/reference/cimagelist-class.md#replace) funkcji członkowskiej zastępuje obraz w listy obrazów ([CImageList](../mfc/reference/cimagelist-class.md)) z nowego obrazu. Ta funkcja jest również przydatne w przypadku dynamicznie zwiększyć liczbę obrazów w obiekcie listy obrazów. [SetImageCount](../mfc/reference/cimagelist-class.md#setimagecount) funkcja dynamicznie zmienia liczbę obrazy przechowywane na liście obrazów. Jeśli możesz zwiększyć rozmiar listy obrazów, wywołanie **Zastąp** dodać obrazy do nowych miejsc obrazu. Jeśli musisz zmniejszyć rozmiar listy obrazów, obrazy, poza nowy rozmiar są zwalniane.  

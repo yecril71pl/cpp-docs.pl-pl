@@ -1,13 +1,10 @@
 ---
-title: "TN028: Obsługa pomocy kontekstowej | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'TN028: Obsługa pomocy kontekstowej | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.help
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8054fe4fae4aafa88c34833a5a2a92a6b9b44bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 58caed14e6b7080405cceb30cfb90623d28dc83e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028: obsługa pomocy kontekstowej
 Ta uwaga przedstawiono zasady przypisywania identyfikatorów kontekstów pomocy i inne problemy pomocy w MFC. Obsługa pomocy kontekstowej wymaga pomocy kompilatora, która jest dostępna w programie Visual C++.  
@@ -76,7 +71,7 @@ Ta uwaga przedstawiono zasady przypisywania identyfikatorów kontekstów pomocy 
   
  Niezależnie od tego, jak `ID_HELP` polecenia jest generowany, dopóki nie osiągnie programem obsługi jest kierowany jako normalne polecenia. Aby uzyskać więcej informacji o architekturze routing poleceń MFC, zapoznaj się [techniczne notatkę 21](../mfc/tn021-command-and-message-routing.md). Jeśli aplikacja ma włączone, pomocy `ID_HELP` polecenia będzie obsługiwany przez [CWinApp::OnHelp](../mfc/reference/cwinapp-class.md#onhelp). Obiekt aplikacji otrzymuje komunikat pomocy, a następnie przekierowuje odpowiednio polecenia. Jest to konieczne, ponieważ domyślny routing poleceń nie są wystarczające do określenia najbardziej specyficznego kontekstu.  
   
- `CWinApp::OnHelp`próbuje uruchomić WinHelp w następującej kolejności:  
+ `CWinApp::OnHelp` próbuje uruchomić WinHelp w następującej kolejności:  
   
 1.  Sprawdza, czy aktywny `AfxMessageBox` wywołać przy użyciu identyfikatora pomocy. Jeśli okno komunikatu jest obecnie aktywny, WinHelp jest uruchamiane w kontekście należy to okno.  
   
@@ -99,7 +94,7 @@ afx_msg LRESULT CWnd::OnCommandHelp(WPARAM wParam, LPARAM lParam)
  WM_COMMANDHELP jest prywatne Windows MFC komunikat jest odbierany przez aktywnego okna, gdy pomoc zostanie wywołana. Gdy okno odbiera ten komunikat, może ono wywołać metodę `CWinApp::WinHelp` z kontekstem zgodny stan wewnętrzny okna.  
   
  `lParam`  
- Zawiera obecnie kontekstu pomocy. `lParam`wynosi zero, jeśli nie zostały stwierdził brak kontekstu pomocy. Implementacja interfejsu `OnCommandHelp` można użyć Identyfikatora kontekstu w `lParam` można określić różne kontekstu lub można po prostu przekaż go do `CWinApp::WinHelp`.  
+ Zawiera obecnie kontekstu pomocy. `lParam` wynosi zero, jeśli nie zostały stwierdził brak kontekstu pomocy. Implementacja interfejsu `OnCommandHelp` można użyć Identyfikatora kontekstu w `lParam` można określić różne kontekstu lub można po prostu przekaż go do `CWinApp::WinHelp`.  
   
  `wParam`  
  Nie jest używany i będą miały wartość zero.  
@@ -115,7 +110,7 @@ afx_msg LRESULT CWnd::OnCommandHelp(WPARAM wParam, LPARAM lParam)
   
  W przypadku konkretnego translacji lub akcje biorąc umieścić w `PreTranslateMessage` funkcji, które nie powinny mieć miejsce w trybie SHIFT + F1 Pomoc, należy sprawdzić `m_bHelpMode` członkiem `CWinApp` przed wykonaniem tych operacji. `CDialog` Implementacja `PreTranslateMessage` sprawdza to przed wywołaniem `IsDialogMessage`, np. Powoduje wyłączenie kluczy "nawigacji okna dialogowego" na Niemodalne okna dialogowe w trybie SHIFT + F1. Ponadto `CWinApp::OnIdle` nadal jest wywoływana podczas tej pętli.  
   
- Jeśli użytkownik wybierze polecenie menu, jest on traktowany jak uzyskać pomoc dotyczącą tego polecenia (za pośrednictwem **WM_COMMANDHELP**, patrz poniżej). Gdy użytkownik kliknie widoczny obszar okna aplikacji, jest wybierana określające, czy jest nieklienckim lub kliknij klienta. `OnContextHelp`Mapowanie uchwytów nieklienckim kliknie automatycznie kliknięć klienta. Jeśli jest kliknij klienta, następnie wysyła **WM_HELPHITTEST** do okna, który został kliknięty. Jeśli okno zwróci wartość niezerową, ta wartość służy jako kontekst Aby uzyskać pomoc. Jeśli zmienna zwraca zero, `OnContextHelp` próbuje okno nadrzędne (i awarii, który nadrzędnego i tak dalej). Jeśli nie można ustalić kontekstu pomocy, wartością domyślną jest wysłać **id_default_help —** polecenia do głównego okna, która następnie (zwykle) jest mapowana na `CWinApp::OnHelpIndex`.  
+ Jeśli użytkownik wybierze polecenie menu, jest on traktowany jak uzyskać pomoc dotyczącą tego polecenia (za pośrednictwem **WM_COMMANDHELP**, patrz poniżej). Gdy użytkownik kliknie widoczny obszar okna aplikacji, jest wybierana określające, czy jest nieklienckim lub kliknij klienta. `OnContextHelp` Mapowanie uchwytów nieklienckim kliknie automatycznie kliknięć klienta. Jeśli jest kliknij klienta, następnie wysyła **WM_HELPHITTEST** do okna, który został kliknięty. Jeśli okno zwróci wartość niezerową, ta wartość służy jako kontekst Aby uzyskać pomoc. Jeśli zmienna zwraca zero, `OnContextHelp` próbuje okno nadrzędne (i awarii, który nadrzędnego i tak dalej). Jeśli nie można ustalić kontekstu pomocy, wartością domyślną jest wysłać **id_default_help —** polecenia do głównego okna, która następnie (zwykle) jest mapowana na `CWinApp::OnHelpIndex`.  
   
 ## <a name="wmhelphittest"></a>WM_HELPHITTEST  
   

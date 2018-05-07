@@ -1,12 +1,9 @@
 ---
 title: Implementowanie prostego konsumenta | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - clients, creating
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1ab109411117b99f816b094fca06ff08a4e7e3cb
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 841d982090503a1e72b1d6798a5f0eecdb543fe2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementowanie prostego konsumenta
 W następujących tematach opisano, jak edytować pliki tworzone przez Kreatora aplikacji MFC i ATL OLE DB Kreator konsumenta Tworzenie prostego konsumenta. Ten przykład zawiera następujące części:  

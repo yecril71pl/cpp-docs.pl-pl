@@ -1,12 +1,9 @@
 ---
-title: "Coledbrecordview — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Coledbrecordview — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDBRecordView
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - COleDBRecordView [MFC], OnGetRowset
 - COleDBRecordView [MFC], OnMove
 ms.assetid: 98612427-c4c9-4760-b7e1-85b17448add9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd827d729af5186d6872536cdaa3d8863d1f8d10
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b69aafa7f8b07d96d754d080e7fb5abd170e167
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledbrecordview-class"></a>Coledbrecordview — klasa
 Widok, który wyświetla rekordów bazy danych w kontrolkach.  
@@ -58,21 +53,21 @@ class COleDBRecordView : public CFormView
 |[COleDBRecordView::OnMove](#onmove)|Aktualizuje bieżącego rekordu (jeśli jest zanieczyszczony) w źródle danych, a następnie przechodzi do określonego rekordu (następnego, poprzedniego, pierwszego lub ostatniego).|  
   
 ## <a name="remarks"></a>Uwagi  
- Widok jest widokiem formularza bezpośrednio podłączone do `CRowset` obiektu. Widok jest tworzony na podstawie zasobu szablonu okna dialogowego i są wyświetlane pola `CRowset` obiektu w formantach szablonu okna dialogowego. `COleDBRecordView` Obiekt używa wymiana danych okna dialogowego (DDX) i nawigacyjne funkcje wbudowane w `CRowset`, aby zautomatyzować przepływ danych między kontrolek w formularzu i pola zestawu wierszy. `COleDBRecordView`również udostępnia domyślną implementację przenoszenia jako pierwszy dalej, poprzedniego lub ostatniego rekordu i interfejs aktualizowania rekordu w widoku.  
+ Widok jest widokiem formularza bezpośrednio podłączone do `CRowset` obiektu. Widok jest tworzony na podstawie zasobu szablonu okna dialogowego i są wyświetlane pola `CRowset` obiektu w formantach szablonu okna dialogowego. `COleDBRecordView` Obiekt używa wymiana danych okna dialogowego (DDX) i nawigacyjne funkcje wbudowane w `CRowset`, aby zautomatyzować przepływ danych między kontrolek w formularzu i pola zestawu wierszy. `COleDBRecordView` również udostępnia domyślną implementację przenoszenia jako pierwszy dalej, poprzedniego lub ostatniego rekordu i interfejs aktualizowania rekordu w widoku.  
   
- Możesz użyć funkcji DDX z **coledbrecordview —** Pobierz dane bezpośrednio z rekordów bazy danych i wyświetlić je w formancie okna dialogowego. Należy używać **DDX_\***  metod (takich jak `DDX_Text`), a nie **ddx_field —\***  funkcje (takie jak `DDX_FieldText`) z **coledbrecordview —** . `DDX_FieldText`nie będzie działać z **coledbrecordview —** ponieważ `DDX_FieldText` ma dodatkowy argument typu **crecordset —\***  (dla `CRecordView`) lub **cdaorecordset — \***  (dla `CDaoRecordView`).  
+ Możesz użyć funkcji DDX z **coledbrecordview —** Pobierz dane bezpośrednio z rekordów bazy danych i wyświetlić je w formancie okna dialogowego. Należy używać **DDX_\***  metod (takich jak `DDX_Text`), a nie **ddx_field —\***  funkcje (takie jak `DDX_FieldText`) z **coledbrecordview —** . `DDX_FieldText` nie będzie działać z **coledbrecordview —** ponieważ `DDX_FieldText` ma dodatkowy argument typu **crecordset —\***  (dla `CRecordView`) lub **cdaorecordset —\***  (dla `CDaoRecordView`).  
   
 > [!NOTE]
 >  Jeśli pracujesz z klas obiektów DAO (Data Access), a nie klasy OLE DB szablon konsumenta, należy użyć klasy [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) zamiast tego. Aby uzyskać więcej informacji, zobacz artykuł [omówienie: programowania bazy danych](../../data/data-access-programming-mfc-atl.md).  
   
- `COleDBRecordView`przechowuje informacje o pozycji użytkownika w zestawie wierszy, dzięki czemu widoku rekordu można zaktualizować interfejsu użytkownika. Gdy użytkownik zostanie przeniesiony do jednego z końców zestawu wierszy, widoku rekordu wyłącza obiekty interfejsu użytkownika — takich jak elementy menu lub przycisków paska narzędzi — przenoszenie więcej w tym samym kierunku.  
+ `COleDBRecordView` przechowuje informacje o pozycji użytkownika w zestawie wierszy, dzięki czemu widoku rekordu można zaktualizować interfejsu użytkownika. Gdy użytkownik zostanie przeniesiony do jednego z końców zestawu wierszy, widoku rekordu wyłącza obiekty interfejsu użytkownika — takich jak elementy menu lub przycisków paska narzędzi — przenoszenie więcej w tym samym kierunku.  
   
  Aby uzyskać więcej informacji na temat klasy zestawów wierszy, zobacz [przy użyciu OLE DB szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md) artykułu.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -87,7 +82,7 @@ class COleDBRecordView : public CFormView
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxoledb.h  
   
-##  <a name="coledbrecordview"></a>COleDBRecordView::COleDBRecordView  
+##  <a name="coledbrecordview"></a>  COleDBRecordView::COleDBRecordView  
  Konstruuje `COleDBRecordView` obiektu.  
   
 ```  
@@ -108,7 +103,7 @@ COleDBRecordView(UINT nIDTemplate);
 > [!NOTE]
 >  Klasy pochodne *musi* podać własne konstruktora. W konstruktorze, należy wywołać konstruktora, `COleDBRecordView::COleDBRecordView`, o nazwy zasobu lub identyfikatorze jako argument.  
   
-##  <a name="ongetrowset"></a>COleDBRecordView::OnGetRowset  
+##  <a name="ongetrowset"></a>  COleDBRecordView::OnGetRowset  
  Zwraca uchwyt dla **CRowset <>** obiekt skojarzony z widokiem rekordów.  
   
 ```  
@@ -130,7 +125,7 @@ virtual CRowset<>* OnGetRowset() = 0;
   
  Aby uzyskać dodatkowe informacje i przykłady, zobacz artykuł [widoków rekordów: Używanie widoku rekordu](../../data/using-a-record-view-mfc-data-access.md).  
   
-##  <a name="onmove"></a>COleDBRecordView::OnMove  
+##  <a name="onmove"></a>  COleDBRecordView::OnMove  
  Przenosi do innego rekordu w zestawie wierszy i wyświetlić jego pola w formantach rekordu w widoku.  
   
 ```  
@@ -141,13 +136,13 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  `nIDMoveCommand`  
  Jedna z następujących wartości Identyfikatora standardowego polecenia:  
   
-- `ID_RECORD_FIRST`— Przejście do pierwszego rekordu w zestawie rekordów.  
+- `ID_RECORD_FIRST` — Przejście do pierwszego rekordu w zestawie rekordów.  
   
-- `ID_RECORD_LAST`— Przejdź do ostatniego rekordu w zestawie rekordów.  
+- `ID_RECORD_LAST` — Przejdź do ostatniego rekordu w zestawie rekordów.  
   
-- `ID_RECORD_NEXT`— Przejście do następnego rekordu w zestawie rekordów.  
+- `ID_RECORD_NEXT` — Przejście do następnego rekordu w zestawie rekordów.  
   
-- `ID_RECORD_PREV`— Przejście do poprzedniego rekordu w zestawie rekordów.  
+- `ID_RECORD_PREV` — Przejście do poprzedniego rekordu w zestawie rekordów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli przeniesienie zakończyło się pomyślnie; w przeciwnym razie 0, jeśli żądanie przeniesienia zostało odrzucone.  

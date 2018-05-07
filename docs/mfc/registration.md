@@ -1,13 +1,10 @@
 ---
 title: Rejestracja | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - servers [MFC], installing
 - OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 636a0c2ff254957724511a067fa64533cb4837aa
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 1ab5bd34098ee1126e015e2a8368ef5b3c48fdbd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="registration"></a>Rejestracja
 Gdy użytkownik chce, aby wstawić element OLE do aplikacji, OLE wyświetla listę typów obiektów do wyboru. OLE pobiera tej listy z systemu bazie danych rejestracji, który zawiera informacje o wszystkich aplikacji serwera. Gdy serwer rejestruje się, wpisów, które następnie są umieszczane w bazie danych rejestracji systemu (rejestr) opis każdego typu obiektu, który dostarcza mu, rozszerzenia i ścieżki do samej siebie, między innymi informacje o pliku.  
@@ -41,7 +36,7 @@ Gdy użytkownik chce, aby wstawić element OLE do aplikacji, OLE wyświetla list
   
  Aby uzyskać szczegółowe informacje o bazie danych rejestracji systemu oraz format plików reg używane do aktualizowania go, zobacz *OLE Podręcznik programisty*.  
   
-##  <a name="_core_server_installation"></a>Instalacja serwera  
+##  <a name="_core_server_installation"></a> Instalacja serwera  
  Po zainstalowaniu aplikacji serwera, należy go zarejestrować wszystkich typów elementów OLE, które obsługuje. Może także zawierać serwera aktualizacji bazy danych rejestracji systemu, za każdym razem, gdy jest wykonywany jako aplikacja autonomiczna. Dzięki temu bazy danych rejestracji aktualne przypadku przeniesienia pliku wykonywalnego serwera.  
   
 > [!NOTE]
@@ -54,7 +49,7 @@ Gdy użytkownik chce, aby wstawić element OLE do aplikacji, OLE wyświetla list
   
  RegEdit Scala zawartość pliku tekstowego reg w bazie danych rejestracji. Aby sprawdzić bazy danych lub w celu jego naprawy Edytor rejestru. Należy zadbać, aby uniknąć usunięcia niezbędne zapisów OLE.  
   
-##  <a name="_core_server_initialization"></a>Inicjowanie serwera  
+##  <a name="_core_server_initialization"></a> Inicjowanie serwera  
  Po utworzeniu aplikacji serwera za pomocą Kreatora aplikacji, Kreator zakończy pracę wszystkich zadań inicjowania dla Ciebie automatycznie. W tej sekcji opisano, co należy zrobić ręcznie podczas pisania aplikacji serwera.  
   
  Gdy aplikacja serwera jest uruchamiana przez aplikacji kontenera, OLE systemowej biblioteki DLL dodać opcji "/ osadzania" do wiersza polecenia serwera. Aplikacja serwera zachowanie różni się w zależności od tego, czy została ona uruchomiona przez kontener, dlatego najpierw aplikacja powinna wykonać po jej rozpoczęciu wykonywania Sprawdź, czy "/ osadzania" lub "-Embedding" opcji w wierszu polecenia. Jeśli istnieje ten przełącznik, Załaduj zestaw zasobów, które Pokaż serwera jako albo aktywny w miejscu lub pełni otworzyć. Aby uzyskać więcej informacji, zobacz [menu i zasoby: dodatki do serwera](../mfc/menus-and-resources-server-additions.md).  

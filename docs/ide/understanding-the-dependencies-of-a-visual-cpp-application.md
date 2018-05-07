@@ -1,13 +1,10 @@
 ---
-title: "Poznanie zależności aplikacji Visual C++ | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Poznanie zależności aplikacji Visual C++ | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,22 +17,20 @@ helpviewer_keywords:
 - depends.exe
 - libraries [C++], application deployment issues
 ms.assetid: 62a44c95-c389-4c5f-82fd-07d7ef09dbf9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64b7974b16767d226df5e71e7f3ae0e61514ed37
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: da2aadeba69a8be29627650ba6ef24516098a8e3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-the-dependencies-of-a-visual-c-application"></a>Poznanie zależności aplikacji Visual C++
 Aby ustalić, które biblioteki Visual C++, zależy od aplikacji, można wyświetlić właściwości projektu. (W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz polecenie **właściwości** otworzyć **strony właściwości** okno dialogowe.) Można również użyć modułu przeszukiwania zależności (depends.exe), który daje bardziej wszechstronny obraz zależności.  
   
- W **strony właściwości** okno dialogowe, należy zbadać różnych stronach w obszarze **właściwości konfiguracji** zrozumieć zależności. Na przykład, jeśli projekt korzysta z bibliotek MFC i użytkownik wybierze **Użyj MFC**, **Użyj MFC w bibliotece DLL udostępnionych** na **właściwości konfiguracji**, **ogólne**  strony, aplikacji w czasie wykonywania jest zależna od biblioteki DLL MFC takich jak mfc\<wersji > .dll. Jeśli aplikacja nie używać MFC, może być zależna biblioteki CRT wybranie **biblioteki wykonawczej** wartość **Multi-threaded DLL debugowania (/ MDd)** lub **Multi-threaded DLL (/ MD)**na **właściwości konfiguracji**, **C/C++**, **generowania kodu** strony.  
+ W **strony właściwości** okno dialogowe, należy zbadać różnych stronach w obszarze **właściwości konfiguracji** zrozumieć zależności. Na przykład, jeśli projekt korzysta z bibliotek MFC i użytkownik wybierze **Użyj MFC**, **Użyj MFC w bibliotece DLL udostępnionych** na **właściwości konfiguracji**, **ogólne**  strony, aplikacji w czasie wykonywania jest zależna od biblioteki DLL MFC takich jak mfc\<wersji > .dll. Jeśli aplikacja nie używać MFC, może być zależna biblioteki CRT wybranie **biblioteki wykonawczej** wartość **Multi-threaded DLL debugowania (/ MDd)** lub **Multi-threaded DLL (/ MD)** na **właściwości konfiguracji**, **C/C++**, **generowania kodu** strony.  
   
  Bardziej zaawansowane można określić, które biblioteki DLL zależy od aplikacji jest Użyj Walkera zależności (depends.exe), aby otworzyć aplikację. Możesz pobrać narzędzie z [Walkera zależności](http://go.microsoft.com/fwlink/p/?LinkId=132640) witryny sieci web.  
   

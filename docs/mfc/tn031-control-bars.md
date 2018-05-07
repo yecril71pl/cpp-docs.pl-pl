@@ -1,13 +1,10 @@
 ---
 title: 'TN031: Paski sterowania | Dokumentacja firmy Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.controls.bars
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e4ea57f77c615ba439f2d07c3926cde5efa0c27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a1d5cc113177a9653e709c14f66682959276e7ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn031-control-bars"></a>TN031: paski sterowania
 > [!NOTE]
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
  Klasy pasków sterowania w MFC opisuje ta Uwaga: Ogólne [ccontrolbar —](#_mfcnotes_ccontrolbar), [cstatusbar —](#_mfcnotes_cstatusbar), [ctoolbar —](#_mfcnotes_ctoolbar), [cdialogbar —](#_mfcnotes_cdialogbar)i  **CDockBar**.  
   
-## <a name="_mfcnotes_ccontrolbar"></a>Ccontrolbar — 
+## <a name="_mfcnotes_ccontrolbar"></a> Ccontrolbar — 
   
  A **ControlBar** jest `CWnd`-pochodnej klasy, które:  
   
@@ -51,19 +46,19 @@ ms.lasthandoff: 12/21/2017
   
  Paski sterowania obsługuje dodatkowe style:  
   
-- `CBRS_TOP`(Opcja domyślna) Przypnij pasek sterowania do góry.  
+- `CBRS_TOP` (Opcja domyślna) Przypnij pasek sterowania do góry.  
   
-- `CBRS_BOTTOM`Przypnij pasek sterowania na dole.  
+- `CBRS_BOTTOM` Przypnij pasek sterowania na dole.  
   
-- `CBRS_NOALIGN`Nie zmienia położenie pasek sterowania, gdy zmienia rozmiar obiektu nadrzędnego.  
+- `CBRS_NOALIGN` Nie zmienia położenie pasek sterowania, gdy zmienia rozmiar obiektu nadrzędnego.  
   
  Klasy wyprowadzone z `CControlBar` zapewniają bardziej interesującego implementacji:  
   
-- `CStatusBar`Pasek stanu elementy są zawierającej tekst okienka paska stanu.  
+- `CStatusBar` Pasek stanu elementy są zawierającej tekst okienka paska stanu.  
   
-- `CToolBar`Pasek narzędzi elementy są wyrównane w wierszu przycisków mapy bitowej.  
+- `CToolBar` Pasek narzędzi elementy są wyrównane w wierszu przycisków mapy bitowej.  
   
-- `CDialogBar`Ramka pasek narzędzi zawierające standardowego systemu windows formantów (utworzone na podstawie zasobu szablonu okna dialogowego).  
+- `CDialogBar` Ramka pasek narzędzi zawierające standardowego systemu windows formantów (utworzone na podstawie zasobu szablonu okna dialogowego).  
   
 - **CDockBar** uogólniony miejsce dokowania dla innych `CControlBar` pochodnych obiektów. Określonego elementu członkowskiego, funkcje i zmienne, dostępne w tej klasie mogą ulec zmianie w przyszłych wersjach.  
   
@@ -104,7 +99,7 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
   
  MFC prywatnej komunikatów systemu Windows, w tym **WM_SIZEPARENT**, są udokumentowane w artykule [24 Uwaga techniczna](../mfc/tn024-mfc-defined-messages-and-resources.md).  
   
-## <a name="_mfcnotes_cstatusbar"></a>Cstatusbar —  
+## <a name="_mfcnotes_cstatusbar"></a>  Cstatusbar —  
   
  Pasek stanu jest pasek sterowania, który zawiera wiersz okienek tekstu wyjściowego. Istnieją dwa podstawowe sposoby użycia okienek tekstu wyjściowego:  
   
@@ -141,7 +136,7 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
   
  Pasek stanu obsługuje tylko jedno okienko stretchy zwykle pierwszego okienka. Rozmiar okienka naprawdę jest minimalny rozmiar. Jeśli na pasku stanu jest większy niż minimalny rozmiar wszystkich okienek, wszelkie dodatkowe szerokość otrzyma stretchy okienka. Domyślną aplikację z paskiem stanu ma wyrównany wskaźniki centralnych zasad dostępu, NUM i SCRL, ponieważ pierwszy okienko jest stretchy.  
   
-## <a name="_mfcnotes_ctoolbar"></a>Ctoolbar —  
+## <a name="_mfcnotes_ctoolbar"></a>  Ctoolbar —  
   
  Pasek narzędzi jest pasek sterowania z rzędu przycisków mapy bitowej, które mogą zawierać separatorów. Obsługiwane są dwa style przyciski: przyciski pole wyboru i przycisków. Mogą być wbudowane funkcje grupy opcji przyciskami pole wyboru i `ON_UPDATE_COMMAND_UI`.  
   
@@ -173,13 +168,13 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
  Dostosowywanie interfejsów API może służyć do przycisku identyfikatory, style, Dostosuj szerokość rozdzielacza i obrazu/symbolu, który jest używany do działania przycisku. Domyślnie nie należy używać tych interfejsów API.  
   
 ## <a name="ccmdui-support-for-ctoolbar"></a>Ctoolbar — ccmdui — Obsługa  
- Sposób przycisków paska narzędzi są aktualizowane zawsze odbywa się za pośrednictwem `ON_UPDATE_COMMAND_UI` mechanizmu. Na czas bezczynności, wywoła pasek narzędzi `ON_UPDATE_COMMAND_UI` obsługi z poleceniem o identyfikatorze przycisku. `ON_UPDATE_COMMAND_UI`nie jest wywoływany dla separatorów, ale jest ona wywoływana dla przycisków i pola wyboru przycisków.  
+ Sposób przycisków paska narzędzi są aktualizowane zawsze odbywa się za pośrednictwem `ON_UPDATE_COMMAND_UI` mechanizmu. Na czas bezczynności, wywoła pasek narzędzi `ON_UPDATE_COMMAND_UI` obsługi z poleceniem o identyfikatorze przycisku. `ON_UPDATE_COMMAND_UI` nie jest wywoływany dla separatorów, ale jest ona wywoływana dla przycisków i pola wyboru przycisków.  
   
  `ON_UPDATE_COMMAND_UI` Obsługi można wywołać:  
   
 - **Włącz**: Aby włączyć lub wyłączyć przycisku. To działanie jest równie przycisków i pola wyboru przycisków.  
   
-- `SetCheck`: Można ustawić stanu wyboru przycisku. To wywołanie dla przycisku paska narzędzi spowoduje wyłączenie w przycisk pola wyboru. `SetCheck`przyjmuje parametr, który może być 0 (nie jest zaznaczone), 1 (zaznaczone) lub 2 (nieokreślony)  
+- `SetCheck`: Można ustawić stanu wyboru przycisku. To wywołanie dla przycisku paska narzędzi spowoduje wyłączenie w przycisk pola wyboru. `SetCheck` przyjmuje parametr, który może być 0 (nie jest zaznaczone), 1 (zaznaczone) lub 2 (nieokreślony)  
   
 - `SetRadio`: Skrócona dla `SetCheck`.  
   
@@ -203,7 +198,7 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
   
 -   Maksymalnie = 0  
   
--   Wskaźnik myszy w dół = TBBS_PRESSED (&#124; żadnego inny styl)  
+-   Wskaźnik myszy w dół = TBBS_PRESSED (&#124; inny styl)  
   
 -   Wyłączone = TBBS_DISABLED  
   
@@ -213,7 +208,7 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
   
 -   Nieokreślony = TBBS_INDETERMINATE  
   
-##  <a name="_mfcnotes_cdialogbar"></a>Cdialogbar —  
+##  <a name="_mfcnotes_cdialogbar"></a> Cdialogbar —  
  Paska dialogowego jest pasek sterowania, który zawiera formanty standardowe systemu Windows. Go działa jak okna dialogowego, ponieważ zawiera formanty i obsługuje przełączania między nimi. On również działa jak okno dialogowe, gdyż używa do reprezentowania pasku szablonu okna dialogowego.  
   
  A `CDialogBar` służy do narzędzi podglądu wydruku, który zawiera standardowe formanty łącznik.  

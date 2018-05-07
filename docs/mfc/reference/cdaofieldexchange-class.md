@@ -1,12 +1,9 @@
 ---
 title: Klasa CDaoFieldExchange | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDaoFieldExchange
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_nOperation
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c4a62d3f9631d4e2807bf12e1eda3bd4b4f5112
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b4f702f619eb06a11cbbf7ec5be7407d12f7f445
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaofieldexchange-class"></a>Klasa CDaoFieldExchange
 Obsługuje procedury programu exchange (DFX) pól rekordów DAO używane przez klas baz danych DAO.  
@@ -61,7 +56,7 @@ class CDaoFieldExchange
 |[CDaoFieldExchange::m_prs](#m_prs)|Wskaźnik do zestawu rekordów, na których DFX wykonywane są operacje.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CDaoFieldExchange`nie ma klasy podstawowej.  
+ `CDaoFieldExchange` nie ma klasy podstawowej.  
   
  Klasa używana podczas pisania procedury wymiany danych dla typów danych niestandardowych; w przeciwnym razie nie będzie bezpośrednio używany tej klasy. DFX wymianie danych między elementy członkowskie danych pola z Twojej [cdaorecordset —](../../mfc/reference/cdaorecordset-class.md) obiekt i odpowiednie pola z bieżącego rekordu w źródle danych. DFX zarządza programu exchange w obu kierunkach ze źródła danych i w źródle danych. Zobacz [53 Uwaga techniczna](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) informacje na temat pisania niestandardowe procedury DFX.  
   
@@ -71,7 +66,7 @@ class CDaoFieldExchange
 > [!NOTE]
 >  Wymiana pól rekordów DAO (DFX) jest bardzo podobny do wymiana pól rekordów (RFX) w klasach bazy danych na podstawie ODBC MFC ( `CDatabase`, `CRecordset`). Jeśli znasz RFX będą dostępne DFX łatwy w użyciu.  
   
- A `CDaoFieldExchange` obiekt zapewnia informacje kontekstowe potrzebne do DAO wymiana pól rekordów została wykonana. `CDaoFieldExchange`obiekty obsługują szereg działań, włącznie z parametrów wiązania i elementy członkowskie danych pola i ustawienie flagi różnych pól bieżącego rekordu. DFX operacje są wykonywane na klasy rekordów elementy członkowskie danych typów zdefiniowanych przez `enum` **typu pola** w `CDaoFieldExchange`. Możliwe **typu pola** wartości to:  
+ A `CDaoFieldExchange` obiekt zapewnia informacje kontekstowe potrzebne do DAO wymiana pól rekordów została wykonana. `CDaoFieldExchange` obiekty obsługują szereg działań, włącznie z parametrów wiązania i elementy członkowskie danych pola i ustawienie flagi różnych pól bieżącego rekordu. DFX operacje są wykonywane na klasy rekordów elementy członkowskie danych typów zdefiniowanych przez `enum` **typu pola** w `CDaoFieldExchange`. Możliwe **typu pola** wartości to:  
   
 - **CDaoFieldExchange::outputColumn** dla elementy członkowskie danych pola.  
   
@@ -85,7 +80,7 @@ class CDaoFieldExchange
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdao.h  
   
-##  <a name="isvalidoperation"></a>CDaoFieldExchange::IsValidOperation  
+##  <a name="isvalidoperation"></a>  CDaoFieldExchange::IsValidOperation  
  Jeśli piszesz funkcji DFX wywołanie `IsValidOperation` na początku funkcji do określenia, czy można wykonać bieżącej operacji na typ elementu członkowskiego danych określonego pola ( **CDaoFieldExchange::outputColumn** lub **CDaoFieldExchange::param**).  
   
 ```  
@@ -100,7 +95,7 @@ BOOL IsValidOperation();
   
  Aby uzyskać dodatkowe informacje o pisaniu niestandardowe procedury DFX, zobacz [53 Uwaga techniczna](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md).  
   
-##  <a name="m_noperation"></a>CDaoFieldExchange::m_nOperation  
+##  <a name="m_noperation"></a>  CDaoFieldExchange::m_nOperation  
  Identyfikuje operacji do wykonania na [cdaorecordset —](../../mfc/reference/cdaorecordset-class.md) obiekt powiązany z obiektem exchange pola.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -129,12 +124,12 @@ BOOL IsValidOperation();
 |**DumpField**|Zrzuty zawartość pola (tylko debugowanie).|  
 |**MaxDFXOperation**|Używany do sprawdzania wejściowego.|  
   
-##  <a name="m_prs"></a>CDaoFieldExchange::m_prs  
+##  <a name="m_prs"></a>  CDaoFieldExchange::m_prs  
  Zawiera wskaźnik do [cdaorecordset —](../../mfc/reference/cdaorecordset-class.md) obiekt skojarzony z `CDaoFieldExchange` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="setfieldtype"></a>CDaoFieldExchange::SetFieldType  
+##  <a name="setfieldtype"></a>  CDaoFieldExchange::SetFieldType  
  Wywołanie `SetFieldType` w Twojej `CDaoRecordset` klasy `DoFieldExchange` zastąpienia.  
   
 ```  

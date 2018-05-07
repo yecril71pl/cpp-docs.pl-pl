@@ -1,29 +1,24 @@
 ---
-title: "Obsługa dokumentów złożonych, Kreator aplikacji MFC | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Obsługa dokumentów złożonych, Kreator aplikacji MFC | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.compdoc
 dev_langs:
 - C++
 ms.assetid: 42e1af83-12c4-438d-92eb-13835afdb148
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9390f3849cd7511054f1248205c5d2c408cb7e71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 361ad662ed0bc0f499b35c102502f86d063b8e5d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>Obsługa dokumentów złożonych, kreator aplikacji MFC
 Na tej stronie Kreatora aplikacji MFC wskazują, do jakiego poziomu aplikacji obsługuje złożone i aktywny dokument. Aplikacja musi obsługiwać architektury dokument/widok do obsługi dokumentów złożonych i szablonów dokumentów.  

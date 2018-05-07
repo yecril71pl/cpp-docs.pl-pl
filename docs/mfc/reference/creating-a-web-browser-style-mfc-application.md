@@ -1,13 +1,10 @@
 ---
-title: "Tworzenie aplikacji MFC w stylu przeglądarki sieci Web | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Tworzenie aplikacji MFC w stylu przeglądarki sieci Web | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfcweb.project
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Web browsers
 - Web applications [MFC], creating
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7b886f2f1eeed327c2f07f1776777771a5d6ad6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 20c7228b08200466bd62d1cdbbf7e2f66f8efebb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Tworzenie aplikacji MFC w stylu przeglądarki sieci Web
 Do aplikacji w stylu przeglądarki sieci Web ma dostęp do informacji z Internetu (na przykład HTML lub aktywne dokumenty) lub intranet, jak również folderów w lokalnym systemie plików, a w sieci. Przez wyprowadzanie klasy widoku aplikacji z [CHtmlView](../../mfc/reference/chtmlview-class.md), efektywnie ułatwić przeglądarki sieci Web aplikacji, zapewniając widoku za pomocą formantu WebBrowser.  
@@ -52,7 +47,7 @@ Do aplikacji w stylu przeglądarki sieci Web ma dostęp do informacji z Internet
   
  Ponieważ `CHtmlView` po prostu implementuje formant przeglądarki Microsoft Web, jego obsługę drukowania nie jest jak inny [CView](../../mfc/reference/cview-class.md)-klas pochodnych. Zamiast formant WebBrowser implementuje interfejs użytkownika drukarki i wydruku. W związku z tym `CHtmlView` jest obsługuje Podgląd wydruku i nie zapewnia platformę dla innych funkcji obsługi drukowania: na przykład [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting), [CView::OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting), i [CView::OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting), które są dostępne w innych aplikacjach MFC.  
   
- `CHtmlView`działa jako otoka dla formant przeglądarki sieci Web, co daje aplikacji widoku na sieci Web lub strony HTML. Kreator tworzy zastąpienia [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) funkcji w klasie widoku udostępnienie łącza nawigacji do witryny sieci Web Microsoft Visual C++:  
+ `CHtmlView` działa jako otoka dla formant przeglądarki sieci Web, co daje aplikacji widoku na sieci Web lub strony HTML. Kreator tworzy zastąpienia [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) funkcji w klasie widoku udostępnienie łącza nawigacji do witryny sieci Web Microsoft Visual C++:  
   
 ```  
 void CWebView::OnInitialUpdate()  

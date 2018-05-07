@@ -1,31 +1,26 @@
 ---
 title: 'Porady: wpisywanie tekstu do pliku (C + +/ CLI) | Dokumentacja firmy Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - files [C++], text
 - text files, writing in C++
 ms.assetid: 39ecdba6-84e0-485c-a202-84cf6d7b8d4a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 58b53159bab17ef0fddf5b26606889f89412856e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7e0ce3839a5d0a0668d921a2d64cb0cf7bd1c775
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-a-text-file-ccli"></a>Porady: wpisywanie tekstu do pliku tekstowego (C++/CLI)
 Poniższy przykład kodu pokazuje, jak utworzyć plik tekstowy i zapisywanie tekstu do niej przy użyciu <xref:System.IO.StreamWriter> klasy, która jest zdefiniowana w <xref:System.IO> przestrzeni nazw. <xref:System.IO.StreamWriter> Konstruktora pobiera nazwę pliku, który ma zostać utworzony. Jeśli plik istnieje, zostanie zastąpiony (chyba że przekazujesz True jako drugi <xref:System.IO.StringWriter> argumentów konstruktora).  

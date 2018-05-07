@@ -1,12 +1,9 @@
 ---
 title: Klasa COleDocObjectItem | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDocObjectItem
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 246c645dad5ed11fb5428e2f90ed9b9574696417
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af2b13b8da5f70cf55b47ddf3b7864f9f9151a40
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledocobjectitem-class"></a>Klasa COleDocObjectItem
 Zawieranie dokumentów aktywnych implements.  
@@ -93,7 +88,7 @@ class COleDocObjectItem : public COleClientItem
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CDocItem](../../mfc/reference/cdocitem-class.md)  
   
@@ -104,7 +99,7 @@ class COleDocObjectItem : public COleClientItem
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxole.h  
   
-##  <a name="coledocobjectitem"></a>COleDocObjectItem::COleDocObjectItem  
+##  <a name="coledocobjectitem"></a>  COleDocObjectItem::COleDocObjectItem  
  Wywołanie tej funkcji Członkowskich zainicjować `COleDocObjectItem` obiektu.  
   
 ```  
@@ -115,7 +110,7 @@ COleDocObjectItem(COleDocument* pContainerDoc = NULL);
  `pContainerDoc`  
  Wskaźnik do `COleDocument` obiektu działający jako kontener dokumentów aktywnych. Ten parametr musi być **NULL** umożliwiające **IMPLEMENT_SERIALIZE**. Zwykle elementy OLE są konstruowane z innej **NULL** wskaźnik dokumentu.  
   
-##  <a name="dodefaultprinting"></a>COleDocObjectItem::DoDefaultPrinting  
+##  <a name="dodefaultprinting"></a>  COleDocObjectItem::DoDefaultPrinting  
  Wywoływane przez platformę, by dokumentu przy użyciu ustawień domyślnych.  
   
 ```  
@@ -131,7 +126,7 @@ static HRESULT DoDefaultPrinting(
  `pInfo`  
  Wskaźnik do [cprintinfo —](../../mfc/reference/cprintinfo-structure.md) obiekt, który opisano zadania, które ma być drukowana.  
   
-##  <a name="execcommand"></a>COleDocObjectItem::ExecCommand  
+##  <a name="execcommand"></a>  COleDocObjectItem::ExecCommand  
  Wywołanie tej funkcji członkowskich można wykonać polecenia określone przez użytkownika.  
   
 ```  
@@ -159,8 +154,8 @@ HRESULT ExecCommand(
 |**E_UNEXPECTED**|Wystąpił nieoczekiwany błąd.|  
 |**E_FAIL**|Wystąpił błąd.|  
 |**E_NOTIMPL**|Wskazuje MFC sam powinien próbować tłumaczenie i wysyłać polecenia.|  
-|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup`ma wartość inną niż **NULL** , ale nie określa grupę rozpoznanego polecenia.|  
-|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID`Nie rozpoznano jako prawidłowego polecenia w pGroup grupy.|  
+|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup` ma wartość inną niż **NULL** , ale nie określa grupę rozpoznanego polecenia.|  
+|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID` Nie rozpoznano jako prawidłowego polecenia w pGroup grupy.|  
 |**OLECMDERR_DISABLED**|Polecenie identyfikowane przez `nCmdID` jest wyłączona i nie może zostać wykonana.|  
 |**OLECMDERR_NOHELP**|Obiekt wywołujący w opiniach pomocy w polecenie identyfikowane przez `nCmdID` , ale nie jest dostępna Pomoc.|  
 |**OLECMDERR_CANCELLED**|Użytkownik anulował wykonywania.|  
@@ -168,7 +163,7 @@ HRESULT ExecCommand(
 ### <a name="remarks"></a>Uwagi  
  `pguidCmdGroup` i `nCmdID` parametry razem identyfikują polecenie do wywołania. `nCmdExecOpt` Parametr określa dokładne akcję do wykonania.  
   
-##  <a name="getactiveview"></a>COleDocObjectItem::GetActiveView  
+##  <a name="getactiveview"></a>  COleDocObjectItem::GetActiveView  
  Wywołanie tej funkcji Członkowskich otrzymywać wskaźnik do `IOleDocumentView` interfejsu aktualnie aktywnego widoku.  
   
 ```  
@@ -181,7 +176,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 ### <a name="remarks"></a>Uwagi  
  Liczba odwołań w zwróconym `IOleDocumentView` wskaźnik nie jest zwiększany, zanim zostanie zwrócony przez tę funkcję.  
   
-##  <a name="getpagecount"></a>COleDocObjectItem::GetPageCount  
+##  <a name="getpagecount"></a>  COleDocObjectItem::GetPageCount  
  Wywołanie tej funkcji Członkowskich, aby pobrać liczbę stron w dokumencie.  
   
 ```  
@@ -200,7 +195,7 @@ BOOL GetPageCount(
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
   
-##  <a name="onprepareprinting"></a>COleDocObjectItem::OnPreparePrinting  
+##  <a name="onprepareprinting"></a>  COleDocObjectItem::OnPreparePrinting  
  Ta funkcja elementu członkowskiego jest wywoływana przez platformę, by przygotowywania dokumentu do druku.  
   
 ```  
@@ -223,7 +218,7 @@ static BOOL OnPreparePrinting(
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
   
-##  <a name="onprint"></a>COleDocObjectItem::OnPrint  
+##  <a name="onprint"></a>  COleDocObjectItem::OnPrint  
  Ta funkcja elementu członkowskiego jest wywoływana przez platformę, by wydrukować dokument.  
   
 ```  
@@ -243,7 +238,7 @@ static void OnPrint(
  `bPrintAll`  
  Określa, czy ma być drukowana całego dokumentu.  
   
-##  <a name="querycommand"></a>COleDocObjectItem::QueryCommand  
+##  <a name="querycommand"></a>  COleDocObjectItem::QueryCommand  
  Zapytania dotyczące stanu co najmniej jedno polecenie generowanych przez zdarzenia interfejsu użytkownika.  
   
 ```  
@@ -273,7 +268,7 @@ HRESULT QueryCommand(
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja członkowska emuluje funkcje [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) metody, zgodnie z opisem w zestawie Windows SDK.  
   
-##  <a name="release"></a>COleDocObjectItem::Release  
+##  <a name="release"></a>  COleDocObjectItem::Release  
  Zwalnia połączenia OLE połączonych elementów, a następnie zamyka go, jeśli był otwarty. Nie niszczy element klienta.  
   
 ```  

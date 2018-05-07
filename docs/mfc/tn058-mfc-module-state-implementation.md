@@ -1,13 +1,10 @@
 ---
-title: "TN058: Implementacja stanu modułu MFC | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'TN058: Implementacja stanu modułu MFC | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.implementation
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - DLLs [MFC], module states
 - process state [MFC]
 ms.assetid: 72f5b36f-b3da-4009-a144-24258dcd2b2f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed7bc195c771026ff3e58d53f9e3936791810e76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90e407299f67922aa855a51b9983af074cdbd4fc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn058-mfc-module-state-implementation"></a>TN058: implementacja stanu modułu MFC
 > [!NOTE]
@@ -55,15 +50,15 @@ ms.lasthandoff: 12/21/2017
   
  Jest rzadko, czy chcesz ustawić stan modułu i nie jest ustawiony ponownie. W większości przypadków chcesz "push" własny moduł stanu jako bieżący i następnie, po zakończeniu "pop" ponownie oryginalnej kontekstu. Jest to realizowane przez makro [afx_manage_state —](reference/extension-dll-macros.md#afx_manage_state) i klasy specjalnej **AFX_MAINTAIN_STATE**.  
   
- `CCmdTarget`zawiera specjalne funkcje obsługi przełączenie stanu modułu. W szczególności `CCmdTarget` klasy głównym używana do automatyzacji OLE i OLE COM punktów wejścia. Inne punkty wejścia, takich jak połączenie z systemu, te punkty wejścia, należy ustawić stan prawidłowy moduł. Jak jest danego `CCmdTarget` wie, co stanie modułu "Popraw" powinno być odpowiedź jest czy go "pamięta" co "bieżący" Stan modułu jest, gdy jest on tworzony, tak, aby można go ustawić bieżący stan modułu, do którego "zapamiętanych" o nazwie wartość, gdy jest ona nowsza. W związku z tym moduł określają, że dany `CCmdTarget` obiekt jest skojarzony z jest w stanie modułu, które były aktualne, gdy obiekt został utworzony. Zająć prosty przykład ładowania serwera INPROC, tworzenia obiektu i wywołanie metody.  
+ `CCmdTarget` zawiera specjalne funkcje obsługi przełączenie stanu modułu. W szczególności `CCmdTarget` klasy głównym używana do automatyzacji OLE i OLE COM punktów wejścia. Inne punkty wejścia, takich jak połączenie z systemu, te punkty wejścia, należy ustawić stan prawidłowy moduł. Jak jest danego `CCmdTarget` wie, co stanie modułu "Popraw" powinno być odpowiedź jest czy go "pamięta" co "bieżący" Stan modułu jest, gdy jest on tworzony, tak, aby można go ustawić bieżący stan modułu, do którego "zapamiętanych" o nazwie wartość, gdy jest ona nowsza. W związku z tym moduł określają, że dany `CCmdTarget` obiekt jest skojarzony z jest w stanie modułu, które były aktualne, gdy obiekt został utworzony. Zająć prosty przykład ładowania serwera INPROC, tworzenia obiektu i wywołanie metody.  
   
 1.  Biblioteki DLL ładowane przez OLE przy użyciu **LoadLibrary**.  
   
 2. **RawDllMain** nazywa się najpierw. Ustawia stan modułu do stanu znane statycznych modułu dla biblioteki DLL. Z tego powodu **RawDllMain** połączone statycznie do pliku DLL.  
   
-3.  Wywołania konstruktora fabryki klasy skojarzone z naszych obiektu. `COleObjectFactory`jest pochodną `CCmdTarget` i w związku z tym pamięta Państwa, w którym module wystąpienia. Jest to ważne — monit fabryki klasy do tworzenia obiektów zna teraz jakim stanie modułu, aby bieżący.  
+3.  Wywołania konstruktora fabryki klasy skojarzone z naszych obiektu. `COleObjectFactory` jest pochodną `CCmdTarget` i w związku z tym pamięta Państwa, w którym module wystąpienia. Jest to ważne — monit fabryki klasy do tworzenia obiektów zna teraz jakim stanie modułu, aby bieżący.  
   
-4. `DllGetClassObject`nosi nazwę można uzyskać fabryki klasy. MFC wyszukuje na liście fabryki klasy skojarzone z tym modułem i zwraca go.  
+4. `DllGetClassObject` nosi nazwę można uzyskać fabryki klasy. MFC wyszukuje na liście fabryki klasy skojarzone z tym modułem i zwraca go.  
   
 5. **COleObjectFactory::XClassFactory2::CreateInstance** jest wywoływana. Przed utworzeniem obiektu i przywróceniem go, ta funkcja ustawia stan modułu do stanu modułu, które były aktualne w kroku 3 (jedną, która była bieżąca podczas `COleObjectFactory` wystąpienia). Jest to realizowane wewnątrz [method_prologue —](com-interface-entry-points.md).  
   
@@ -87,7 +82,7 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState())
   
  Problemy z zasobami w bibliotekach DLL wystąpi, jeśli `AFX_MODULE_STATE` makro nie jest używany. Domyślnie MFC używa zasobów dojście aplikacji głównej do załadowania szablonu zasobów. Ten szablon faktycznie jest przechowywany w bibliotece DLL. Główną przyczyną jest informacji o stanie modułu MFC nie został przełączony przez `AFX_MODULE_STATE` makra. Dojście do zasobu jest odzyskiwana ze stanu modułu MFC. Nie przełączający stan modułu powoduje, że dojście niewłaściwego zasobu do użycia.  
   
- `AFX_MODULE_STATE`nie musi znajdować się w każdej funkcji w bibliotece DLL. Na przykład `InitInstance` może być wywoływany przez kod MFC w aplikacji bez `AFX_MODULE_STATE` ponieważ MFC automatycznie przenosi stan modułu przed `InitInstance` , a następnie przełącza ją tu później za `InitInstance` zwraca. Dotyczy to wszystkich programów obsługi mapy wiadomości. Regularne biblioteki DLL MFC faktycznie mają specjalne okna głównego procedury, która automatycznie zmienia stan modułu przed przesłaniem wiadomości.  
+ `AFX_MODULE_STATE` nie musi znajdować się w każdej funkcji w bibliotece DLL. Na przykład `InitInstance` może być wywoływany przez kod MFC w aplikacji bez `AFX_MODULE_STATE` ponieważ MFC automatycznie przenosi stan modułu przed `InitInstance` , a następnie przełącza ją tu później za `InitInstance` zwraca. Dotyczy to wszystkich programów obsługi mapy wiadomości. Regularne biblioteki DLL MFC faktycznie mają specjalne okna głównego procedury, która automatycznie zmienia stan modułu przed przesłaniem wiadomości.  
   
 ## <a name="process-local-data"></a>Dane lokalne procesu  
  Dane lokalne procesu nie będą takie nas bardzo ważne, gdyby nie został dla trudności modelu DLL systemach Win32. W systemach Win32 wszystkie biblioteki DLL udostępniać swoje dane globalne, nawet wtedy, gdy jest ładowany przez wiele aplikacji. Jest to bardzo różnią się od "rzeczywiste" modelu danych Win32 DLL, gdzie każdą bibliotekę DLL pobiera osobną kopię jego przestrzeni danych w każdym procesie, które dołącza do pliku DLL. Aby dodać do złożoności, danych przydzielone na stercie w systemach Win32 biblioteki DLL jest w rzeczywistości proces (przynajmniej w zakresie, ponieważ przechodzi własność). Należy wziąć pod uwagę następujące dane i kodu:  
@@ -141,9 +136,9 @@ void GetGlobalString(LPCTSTR lpsz, size_t cb)
 }  
 ```  
   
- MFC implementuje to w dwóch krokach. Najpierw jest warstwą Win32 **Tls\***  interfejsów API (**TlsAlloc**, **TlsSetValue**, **TlsGetValue**, itd.) który tylko dwa indeksów TLS na proces, niezależnie od tego, jak wiele bibliotek DLL należy użyć. Drugi, `CProcessLocal` szablonu mają dostęp do tych danych. Zastępuje on operator ->, czyli, co umożliwia intuicyjne składni, zobacz powyżej. Wszystkie obiekty, które są kodowane przez `CProcessLocal` musi pochodzić z `CNoTrackObject`. `CNoTrackObject`udostępnia alokatora niższego poziomu (**Funkcja LocalAlloc**/**LocalFree**) i destruktor wirtualny tak, aby MFC automatycznie można zniszczyć lokalnych obiektów procesu, gdy proces jest zakończone. Takie obiekty mogą mieć niestandardowe — destruktor, jeśli wymagane jest dodatkowe oczyszczanie. Powyższy przykład nie wymaga jednego, ponieważ kompilator wygeneruje destruktora domyślne można zniszczyć osadzonego `CString` obiektu.  
+ MFC implementuje to w dwóch krokach. Najpierw jest warstwą Win32 **Tls\***  interfejsów API (**TlsAlloc**, **TlsSetValue**, **TlsGetValue**, itd.) który tylko dwa indeksów TLS na proces, niezależnie od tego, jak wiele bibliotek DLL należy użyć. Drugi, `CProcessLocal` szablonu mają dostęp do tych danych. Zastępuje on operator ->, czyli, co umożliwia intuicyjne składni, zobacz powyżej. Wszystkie obiekty, które są kodowane przez `CProcessLocal` musi pochodzić z `CNoTrackObject`. `CNoTrackObject` udostępnia alokatora niższego poziomu (**Funkcja LocalAlloc**/**LocalFree**) i destruktor wirtualny tak, aby MFC automatycznie można zniszczyć lokalnych obiektów procesu, gdy proces jest zakończony. Takie obiekty mogą mieć niestandardowe — destruktor, jeśli wymagane jest dodatkowe oczyszczanie. Powyższy przykład nie wymaga jednego, ponieważ kompilator wygeneruje destruktora domyślne można zniszczyć osadzonego `CString` obiektu.  
   
- Istnieją inne ciekawe zalety tej metody. Są nie tylko wszystkie `CProcessLocal` obiektów zniszczone automatycznie, nie są skonstruować dopóki nie są potrzebne. `CProcessLocal::operator->`zostanie utworzenie wystąpienia skojarzonego obiektu jest ona wywoływana po raz pierwszy, a nie wcześniej. W powyższym przykładzie oznacza to, że "`strGlobal`" ciągu nie będzie można skonstruować dopiero po raz pierwszy **SetGlobalString** lub **GetGlobalString** jest wywoływana. W niektórych przypadkach może to pomóc zmniejszyć czas uruchamiania biblioteki DLL.  
+ Istnieją inne ciekawe zalety tej metody. Są nie tylko wszystkie `CProcessLocal` obiektów zniszczone automatycznie, nie są skonstruować dopóki nie są potrzebne. `CProcessLocal::operator->` zostanie utworzenie wystąpienia skojarzonego obiektu jest ona wywoływana po raz pierwszy, a nie wcześniej. W powyższym przykładzie oznacza to, że "`strGlobal`" ciągu nie będzie można skonstruować dopiero po raz pierwszy **SetGlobalString** lub **GetGlobalString** jest wywoływana. W niektórych przypadkach może to pomóc zmniejszyć czas uruchamiania biblioteki DLL.  
   
 ## <a name="thread-local-data"></a>Dane lokalne wątków  
  Podobne do przetwarzania danych lokalnych danych lokalnych wątku służy dane muszą być lokalne dla danego wątku. Oznacza to, że należy oddzielnego wystąpienia dane dla każdego wątku, który uzyskuje dostęp do tych danych. To wielokrotnie można zamiast mechanizmów szeroką gamę synchronizacji. Jeśli dane nie musi być współużytkowane przez wiele wątków, takich mechanizmów może być kosztowne i niepotrzebne. Załóżmy, że było `CString` obiektu (podobne jak w przypadku powyższego przykładu). Firma Microsoft może ułatwić wątków lokalnych, opakowując go przy użyciu `CThreadLocal` szablonu:  

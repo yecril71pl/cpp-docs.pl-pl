@@ -1,13 +1,10 @@
 ---
-title: "Zalecenia dotyczące wybierania klasy kolekcji | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Zalecenia dotyczące wybierania klasy kolekcji | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - collection classes [MFC], duplicates allowed
 - collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f389a621991418c054b62be477a64f02c4afaae2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 28527f9668b9ca6a9ef00cf399a04ce9bad65716
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>Zalecenia dotyczące wybierania klasy kolekcji
 Ten artykuł zawiera szczegółowe informacje ułatwiające wybieranie klasy kolekcji do potrzeb aplikacji.  
@@ -60,7 +55,7 @@ Ten artykuł zawiera szczegółowe informacje ułatwiające wybieranie klasy kol
   
 -   Kolumna 6 opisuje, czy każdy kształt umożliwia zduplikowane elementy.  
   
-### <a name="_core_collection_shape_features"></a>Kolekcja elementów kształtu  
+### <a name="_core_collection_shape_features"></a>  Kolekcja elementów kształtu  
   
 |Kształt|uporządkowane|Indeksowane|Wstaw element|Wyszukiwanie określonego elementu|Zduplikowane elementy|  
 |-----------|--------------|--------------|-----------------------|----------------------------------|-------------------------|  
@@ -70,7 +65,7 @@ Ten artykuł zawiera szczegółowe informacje ułatwiające wybieranie klasy kol
   
  Poniższa tabela [właściwości z kolekcji klasy MFC](#_core_characteristics_of_mfc_collection_classes), zawiera podsumowanie innych istotnych cech określonej klasy kolekcji MFC jako przewodnik do zaznaczenia. Wybór może zależeć od Określa, czy klasa jest oparte na szablonach C++, czy jego elementów może być Zserializowany za pośrednictwem dokumentu MFC [serializacji](../mfc/serialization-in-mfc.md) mechanizmu, czy jego elementy można utworzyć zrzutu za pomocą MFC na diagnostycznych zrzucanie mechanizmu, lub Określa, czy klasa jest bezpieczne, oznacza to, czy można zagwarantować typ elementów przechowywanych w i pobierane z kolekcją oparty na klasie.  
   
-### <a name="_core_characteristics_of_mfc_collection_classes"></a>Właściwości klasy kolekcji MFC  
+### <a name="_core_characteristics_of_mfc_collection_classes"></a>  Właściwości klasy kolekcji MFC  
   
 |Class|Używa języka C++<br /><br /> szablony|Może być<br /><br /> serializowany|Może być<br /><br /> utworzyć zrzutu|jest<br /><br /> bezpieczne|  
 |-----------|------------------------------|---------------------------|-----------------------|-----------------------|  

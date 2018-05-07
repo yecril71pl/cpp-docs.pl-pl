@@ -1,12 +1,9 @@
 ---
-title: "Cdaorecordview — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Cdaorecordview — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDaoRecordView
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CDaoRecordView [MFC], OnGetRecordset
 - CDaoRecordView [MFC], OnMove
 ms.assetid: 5aa7d0e2-bd05-413e-b216-80c404ce18ac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fffeed33d5b966faf511f60da740c39f2b91581
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07dc58332bc99cb01e9b6567eafe2cb5b96f1b9c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaorecordview-class"></a>Cdaorecordview — klasa
 Widok, który wyświetla rekordów bazy danych w kontrolkach.  
@@ -64,7 +59,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
 |[CDaoRecordView::OnMove](#onmove)|Jeśli bieżący rekord został zmieniony, aktualizuje w źródle danych, a następnie przechodzi do określonego rekordu (następnego, poprzedniego, pierwszego lub ostatniego).|  
   
 ## <a name="remarks"></a>Uwagi  
- Widok jest widokiem formularza bezpośrednio podłączone do `CDaoRecordset` obiektu. Widok jest tworzony na podstawie zasobu szablonu okna dialogowego i są wyświetlane pola `CDaoRecordset` obiektu w formantach szablonu okna dialogowego. `CDaoRecordView` Obiektu używa wymiana danych okna dialogowego (DDX) i wymiana pól rekordów DAO (DFX) do automatycznego przenoszenia danych między pól zestawu rekordów i kontrolek w formularzu. `CDaoRecordView`również udostępnia domyślną implementację przenoszenia jako pierwszy dalej, poprzedniego lub ostatniego rekordu i interfejs aktualizowania rekordu w widoku.  
+ Widok jest widokiem formularza bezpośrednio podłączone do `CDaoRecordset` obiektu. Widok jest tworzony na podstawie zasobu szablonu okna dialogowego i są wyświetlane pola `CDaoRecordset` obiektu w formantach szablonu okna dialogowego. `CDaoRecordView` Obiektu używa wymiana danych okna dialogowego (DDX) i wymiana pól rekordów DAO (DFX) do automatycznego przenoszenia danych między pól zestawu rekordów i kontrolek w formularzu. `CDaoRecordView` również udostępnia domyślną implementację przenoszenia jako pierwszy dalej, poprzedniego lub ostatniego rekordu i interfejs aktualizowania rekordu w widoku.  
   
 > [!NOTE]
 >  Klasy baz danych DAO różnią się od klasy baz danych MFC oparte na otwarte połączenie bazy danych (ODBC). Wszystkie nazwy klasy bazy danych DAO mają prefiks "CDao". Możesz nadal dostęp do źródła danych ODBC z klasy DAO; klasy DAO zazwyczaj oferują możliwości wyższego poziomu, ponieważ korzystają z aparatu bazy danych programu Microsoft Jet.  
@@ -77,14 +72,14 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
   
  Uzyskać informacji o implementacji domyślnej do przechodzenia między rekordami, zobacz `IsOnFirstRecord` i `IsOnLastRecord` i artykułu [przy użyciu widoku rekordu](../../data/using-a-record-view-mfc-data-access.md), która ma zastosowanie do obu `CRecordView` i `CDaoRecordView`.  
   
- `CDaoRecordView`przechowuje informacje o pozycji użytkownika w zestawie rekordów, dzięki czemu widoku rekordu można zaktualizować interfejsu użytkownika. Gdy użytkownik zostanie przeniesiony do jednego z końców zestawu rekordów, widoku rekordu wyłącza obiekty interfejsu użytkownika — takich jak elementy menu lub przycisków paska narzędzi — przenoszenie więcej w tym samym kierunku.  
+ `CDaoRecordView` przechowuje informacje o pozycji użytkownika w zestawie rekordów, dzięki czemu widoku rekordu można zaktualizować interfejsu użytkownika. Gdy użytkownik zostanie przeniesiony do jednego z końców zestawu rekordów, widoku rekordu wyłącza obiekty interfejsu użytkownika — takich jak elementy menu lub przycisków paska narzędzi — przenoszenie więcej w tym samym kierunku.  
   
  Aby uzyskać więcej informacji na temat deklarowanie i przy użyciu widoków rekordów i rekordów klas, zobacz "Projektowanie i tworzenie widoku rekordu" w artykule [widoków rekordów](../../data/record-views-mfc-data-access.md). Aby uzyskać więcej informacji na temat jak rekord widoków pracy i sposobu ich używania, zobacz artykuł [przy użyciu widoku rekordu](../../data/using-a-record-view-mfc-data-access.md). Wszystkie artykuły wymienione powyżej dotyczą zarówno `CRecordView` i `CDaoRecordView`.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -99,7 +94,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdao.h  
   
-##  <a name="cdaorecordview"></a>CDaoRecordView::CDaoRecordView  
+##  <a name="cdaorecordview"></a>  CDaoRecordView::CDaoRecordView  
  Podczas tworzenia obiektu typu pochodną `CDaoRecordView`, wywołanie jest używana dowolna forma konstruktora do zainicjowania obiektu widoku i identyfikacji zasobu okna dialogowego, na której oparto widoku.  
   
 ```  
@@ -127,7 +122,7 @@ explicit CDaoRecordView(UINT nIDTemplate);
   
  [!code-cpp[NVC_MFCDatabase#35](../../mfc/codesnippet/cpp/cdaorecordview-class_1.cpp)]  
   
-##  <a name="isonfirstrecord"></a>CDaoRecordView::IsOnFirstRecord  
+##  <a name="isonfirstrecord"></a>  CDaoRecordView::IsOnFirstRecord  
  Wywołanie tej funkcji elementu członkowskiego, aby określić, czy bieżący rekord jest pierwszy rekord w obiekcie rekordów skojarzonego z tym widokiem rekordu.  
   
 ```  
@@ -142,7 +137,7 @@ BOOL IsOnFirstRecord();
   
  Jeśli użytkownik przejdzie do pierwszego rekordu, wyłącza framework obiekty interfejsu użytkownika (na przykład elementów menu lub przycisków paska narzędzi) należy do przenoszenia do pierwszej lub poprzedniego rekordu.  
   
-##  <a name="isonlastrecord"></a>CDaoRecordView::IsOnLastRecord  
+##  <a name="isonlastrecord"></a>  CDaoRecordView::IsOnLastRecord  
  Wywołanie tej funkcji elementu członkowskiego, aby określić, czy bieżący rekord jest ostatni rekord w obiekcie rekordów skojarzonego z tym widokiem rekordu.  
   
 ```  
@@ -158,7 +153,7 @@ BOOL IsOnLastRecord();
 > [!CAUTION]
 >  Wynik tej funkcji jest niezawodne, z wyjątkiem tego widoku nie można wykryć koniec zestawu rekordów, dopóki użytkownik został przeniesiony poza go. Użytkownik może być konieczne przed widoku rekordu można określić, czy należy wyłączyć wszystkie obiekty interfejsu użytkownika do przechodzenia do następnego lub ostatni rekord przenieść poza ostatniego rekordu. Jeśli użytkownik przenosi poza ostatniego rekordu, a następnie jest przenoszony do ostatniego rekordu (lub przed nim), widoku rekordu można śledzić położenie użytkownika w zestawie rekordów i poprawnie wyłączyć obiekty interfejsu użytkownika.  
   
-##  <a name="ongetrecordset"></a>CDaoRecordView::OnGetRecordset  
+##  <a name="ongetrecordset"></a>  CDaoRecordView::OnGetRecordset  
  Zwraca wskaźnik do `CDaoRecordset`-pochodnych obiekt skojarzony z widokiem rekordów.  
   
 ```  
@@ -173,7 +168,7 @@ virtual CDaoRecordset* OnGetRecordset() = 0;
   
  Aby uzyskać dodatkowe informacje i przykłady, zobacz artykuł [widoków rekordów: Używanie widoku rekordu](../../data/using-a-record-view-mfc-data-access.md).  
   
-##  <a name="onmove"></a>CDaoRecordView::OnMove  
+##  <a name="onmove"></a>  CDaoRecordView::OnMove  
  Wywołanie tej funkcji Członkowskich, aby przenieść do innego rekordu w zestawie rekordów i wyświetlić jego pól w formantach widoku rekordu.  
   
 ```  
@@ -184,13 +179,13 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  `nIDMoveCommand`  
  Jedna z następujących wartości Identyfikatora standardowego polecenia:  
   
-- `ID_RECORD_FIRST`Przenieś na pierwszy rekord w zestawie rekordów.  
+- `ID_RECORD_FIRST` Przenieś na pierwszy rekord w zestawie rekordów.  
   
-- `ID_RECORD_LAST`Przejdź do ostatniego rekordu w zestawie rekordów.  
+- `ID_RECORD_LAST` Przejdź do ostatniego rekordu w zestawie rekordów.  
   
-- `ID_RECORD_NEXT`Przenieś do następnego rekordu w zestawie rekordów.  
+- `ID_RECORD_NEXT` Przenieś do następnego rekordu w zestawie rekordów.  
   
-- `ID_RECORD_PREV`Przenieś do poprzedniego rekordu w zestawie rekordów.  
+- `ID_RECORD_PREV` Przenieś do poprzedniego rekordu w zestawie rekordów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli przeniesienie zakończyło się pomyślnie; w przeciwnym razie 0, jeśli żądanie przeniesienia zostało odrzucone.  

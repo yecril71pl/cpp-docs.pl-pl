@@ -2,12 +2,9 @@
 title: Funkcje wywołania zwrotnego używane przez MFC | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.functions
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adcde434c12c11c1df7fc1367b658114f874b3c1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce96d90506176812ffb70b580c9d95a38c65fa19
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funkcje wywołania zwrotnego używane przez MFC
 Trzy funkcje wywołania zwrotnego są wyświetlane w programie Microsoft Foundation Class Library. Te funkcje wywołania zwrotnego są przekazywane do [CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC::GrayString](../../mfc/reference/cdc-class.md#graystring), i [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Należy pamiętać, że wszystkie funkcje wywołania zwrotnego musi przechwytują wyjątki MFC przed zwróceniem do systemu Windows, ponieważ nie może być wyjątek w granicach wywołania zwrotnego. Aby uzyskać więcej informacji o wyjątkach, zobacz artykuł [wyjątki](../../mfc/exception-handling-in-mfc.md).  
@@ -42,7 +37,7 @@ Trzy funkcje wywołania zwrotnego są wyświetlane w programie Microsoft Foundat
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxwin.h 
 
-## <a name="enum_objects"></a>Funkcja wywołania zwrotnego dla CDC::EnumObjects
+## <a name="enum_objects"></a> Funkcja wywołania zwrotnego dla CDC::EnumObjects
 *ObjectFunc* nazwy jest symbolem zastępczym dla nazwy funkcji aplikacji.  
   
 ### <a name="syntax"></a>Składnia  
@@ -66,7 +61,7 @@ int CALLBACK EXPORT ObjectFunc(
 ### <a name="remarks"></a>Uwagi  
  Musi być eksportowany rzeczywistą nazwą.  
   
-## <a name="graystring"></a>Funkcja wywołania zwrotnego dla CDC::GrayString
+## <a name="graystring"></a>  Funkcja wywołania zwrotnego dla CDC::GrayString
 *OutputFunc* to symbol zastępczy nazwą funkcji dostarczone przez aplikację wywołania zwrotnego.  
   
 ### <a name="syntax"></a>Składnia  
@@ -94,7 +89,7 @@ BOOL CALLBACK EXPORT OutputFunc(
 ### <a name="remarks"></a>Uwagi  
  Funkcja wywołania zwrotnego (*OutputFunc*) należy narysować obrazu względem współrzędnych (0,0) zamiast (*x*, *y*).  
 
-## <a name="setabortproc"></a>Funkcja wywołania zwrotnego dla CDC::SetAbortProc
+## <a name="setabortproc"></a>  Funkcja wywołania zwrotnego dla CDC::SetAbortProc
 Nazwa *AbortFunc* jest symbolem zastępczym dla nazwy funkcji aplikacji.  
   
 ### <a name="syntax"></a>Składnia  

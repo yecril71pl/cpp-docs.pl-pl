@@ -1,12 +1,9 @@
 ---
 title: Klasa CD2DBrush | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DBrush
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CD2DBrush [MFC], m_pBrush
 - CD2DBrush [MFC], m_pBrushProperties
 ms.assetid: 0d2c0857-2261-48a8-8ee0-a88cbf08499a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeacfecbc97942432b9bf19b23bf8a4cabe0a616
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 324e6411673a509bdf75954634ff9c6dffc5ce1f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dbrush-class"></a>Klasa CD2DBrush
 Otoka dla ID2D1Brush.  
@@ -106,14 +101,14 @@ class CD2DBrush : public CD2DResource;
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dbrush"></a>CD2DBrush:: ~ CD2DBrush  
+##  <a name="_dtorcd2dbrush"></a>  CD2DBrush:: ~ CD2DBrush  
  Destruktor. Wywoływane, gdy trwa niszczenie obiektu D2D pędzla.  
   
 ```  
 virtual ~CD2DBrush();
 ```  
   
-##  <a name="attach"></a>CD2DBrush::attach  
+##  <a name="attach"></a>  CD2DBrush::attach  
  Dołącza istniejący interfejs zasobów do obiektu  
   
 ```  
@@ -124,7 +119,7 @@ void Attach(ID2D1Brush* pResource);
  `pResource`  
  Interfejs istniejącego zasobu. Nie może mieć wartości NULL  
   
-##  <a name="cd2dbrush"></a>CD2DBrush::CD2DBrush  
+##  <a name="cd2dbrush"></a>  CD2DBrush::CD2DBrush  
  Tworzy obiekt CD2DBrush.  
   
 ```  
@@ -144,14 +139,14 @@ CD2DBrush(
  `bAutoDestroy`  
  Wskazuje, że obiekt zostanie zniszczony przez właściciela (pParentTarget).  
   
-##  <a name="destroy"></a>CD2DBrush::Destroy  
+##  <a name="destroy"></a>  CD2DBrush::Destroy  
  Niszczy obiektu CD2DBrush.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DBrush::detach  
+##  <a name="detach"></a>  CD2DBrush::detach  
  Odłącza interfejsu zasobów z obiektu  
   
 ```  
@@ -161,7 +156,7 @@ ID2D1Brush* Detach();
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do zasobów odłączyć interfejs.  
   
-##  <a name="get"></a>CD2DBrush::Get  
+##  <a name="get"></a>  CD2DBrush::Get  
  Zwraca interfejs ID2D1Brush  
   
 ```  
@@ -171,7 +166,7 @@ ID2D1Brush* Get();
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do interfejsu ID2D1Brush lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.  
   
-##  <a name="getopacity"></a>CD2DBrush::GetOpacity  
+##  <a name="getopacity"></a>  CD2DBrush::GetOpacity  
  Pobiera stopień nieprzezroczystości tego pędzla  
   
 ```  
@@ -181,7 +176,7 @@ FLOAT GetOpacity() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość z zakresu od 0 do 1, która wskazuje przezroczystość pędzla. Ta wartość jest mnożnik stałej, która liniowo skaluje alfa wartość wszystkie piksele wypełnił pędzla. Wartość nieprzezroczystości są zablokowane za pomocą w zakresie od 0 do 1 przed są pomnożenie  
   
-##  <a name="gettransform"></a>CD2DBrush::GetTransform  
+##  <a name="gettransform"></a>  CD2DBrush::GetTransform  
  Pobiera bieżący transformacji obiektu docelowego renderowania  
   
 ```  
@@ -192,7 +187,7 @@ void GetTransform(D2D1_MATRIX_3X2_F* transform) const;
  `transform`  
  Po powrocie z to zawiera transformacji bieżącego obiektu docelowego renderowania. Ten parametr jest przekazywany jako niezainicjowany  
   
-##  <a name="isvalid"></a>CD2DBrush::IsValid  
+##  <a name="isvalid"></a>  CD2DBrush::IsValid  
  Sprawdzanie poprawności zasobów  
   
 ```  
@@ -202,21 +197,21 @@ virtual BOOL IsValid() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli zasób jest nieprawidłowy; w przeciwnym razie wartość FALSE.  
   
-##  <a name="m_pbrush"></a>CD2DBrush::m_pBrush  
+##  <a name="m_pbrush"></a>  CD2DBrush::m_pBrush  
  Przechowuje wskaźnika do obiektu ID2D1Brush.  
   
 ```  
 ID2D1Brush* m_pBrush;  
 ```  
   
-##  <a name="m_pbrushproperties"></a>CD2DBrush::m_pBrushProperties  
+##  <a name="m_pbrushproperties"></a>  CD2DBrush::m_pBrushProperties  
  Właściwości pędzla.  
   
 ```  
 CD2DBrushProperties* m_pBrushProperties;  
 ```  
   
-##  <a name="operator_id2d1brush_star"></a>CD2DBrush::operator ID2D1Brush *  
+##  <a name="operator_id2d1brush_star"></a>  CD2DBrush::operator ID2D1Brush *  
  Zwraca interfejs ID2D1Brush  
   
 ```  
@@ -226,7 +221,7 @@ operator ID2D1Brush*();
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do interfejsu ID2D1Brush lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.  
   
-##  <a name="setopacity"></a>CD2DBrush::SetOpacity  
+##  <a name="setopacity"></a>  CD2DBrush::SetOpacity  
  Ustawia maksymalny stopień nieprzezroczystości tego pędzla  
   
 ```  
@@ -237,7 +232,7 @@ void SetOpacity(FLOAT opacity);
  `opacity`  
  Wartość z zakresu od 0 do 1, która wskazuje przezroczystość pędzla. Ta wartość jest mnożnik stałej, która liniowo skaluje alfa wartość wszystkie piksele wypełnił pędzla. Wartość nieprzezroczystości są zablokowane za pomocą w zakresie od 0 do 1 przed są pomnożenie  
   
-##  <a name="settransform"></a>CD2DBrush::SetTransform  
+##  <a name="settransform"></a>  CD2DBrush::SetTransform  
  Stosuje określona transformacja do obiektu docelowego renderowania, zastępując istniejące transformacji. Wszystkie kolejne operacje rysowania występują w przestrzeni po przekształceniu  
   
 ```  

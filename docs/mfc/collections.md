@@ -1,13 +1,10 @@
 ---
 title: Kolekcje | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - collection classes [MFC], lists
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e980f3f8fe86b621cb1494b08aec3fcdcb49f54
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: beae5370c86bf0142b29f029778083f3042ae931
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collections"></a>Kolekcje
 Microsoft Foundation Class Library zawiera klasy kolekcji do zarządzania grupami obiektów. Te klasy istnieją dwa typy:  
@@ -48,7 +43,7 @@ Microsoft Foundation Class Library zawiera klasy kolekcji do zarządzania grupam
 > [!NOTE]
 >  Jeśli kod używa już nieszablonu klasy kolekcji, można nadal z nich korzystać. Jeśli piszesz nowe klasy bezpiecznej kolekcji dla typów danych, zalecane jest użycie nowszej klasy oparte na szablonach.  
   
-##  <a name="_core_collection_shapes"></a>Kolekcja kształtów  
+##  <a name="_core_collection_shapes"></a> Kolekcja kształtów  
  Klasy kolekcji jest określony przez jego "kształtu" i typów elementów. Kształt odwołuje się do sposób obiekty są zorganizowane i przechowywane w kolekcji. MFC udostępnia trzy podstawowe kolekcji kształtów: list, stałych i map (znanej także jako słowniki). Można wybrać kształtu kolekcji, który jest najbardziej nadaje się do konkretnego problemu programowania.  
   
  Krótko później w tym temacie opisano każdego z trzech kształtów w określonej kolekcji. Aby porównać funkcje kształtów, aby określić, która jest najbardziej przydatna w przypadku programu, zobacz [zalecenia dotyczące wybierania klasy kolekcji](../mfc/recommendations-for-choosing-a-collection-class.md).  
@@ -65,7 +60,7 @@ Microsoft Foundation Class Library zawiera klasy kolekcji do zarządzania grupam
   
      Mapy jest kolekcją, które kojarzy z obiektem wartości klucza obiektu.  
   
-##  <a name="_core_the_template_based_collection_classes"></a>Klasy kolekcji oparte na szablonach  
+##  <a name="_core_the_template_based_collection_classes"></a> Klasy kolekcji oparte na szablonach  
  Najprostszym sposobem wykonania bezpiecznej kolekcji, który zawiera obiekty dowolnego typu jest użycia jednej z klas MFC na podstawie szablonu. Przykłady tych klas, zobacz przykład MFC [ZBIERANIE](../visual-cpp-samples.md).  
   
  W poniższej tabeli wymieniono klasy kolekcji oparte na szablonach MFC.  
@@ -77,7 +72,7 @@ Microsoft Foundation Class Library zawiera klasy kolekcji do zarządzania grupam
 |Kolekcje obiektów dowolnego typu|`CArray`|`CList`|`CMap`|  
 |Kolekcje wskaźników do obiektów dowolnego typu|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|  
   
-##  <a name="_core_the_collection_classes_not_based_on_templates"></a>Klasy kolekcji nie są oparte na szablonach  
+##  <a name="_core_the_collection_classes_not_based_on_templates"></a> Klasy kolekcji nie są oparte na szablonach  
  Jeśli aplikacja już używa klasy nieszablonu MFC, można nadal z nich korzystać. Dla nowych kolekcji, zalecamy użycie klasy oparte na szablonach. W poniższej tabeli wymieniono klasy kolekcji MFC, które nie są oparte na szablonach.  
   
 ### <a name="nontemplate-collection-classes"></a>Klasy kolekcji nieszablonu  

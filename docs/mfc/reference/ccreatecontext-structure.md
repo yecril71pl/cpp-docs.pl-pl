@@ -1,12 +1,9 @@
 ---
 title: Struktura CCreateContext | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCreateContext
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CCreateContext structure [MFC]
 ms.assetid: 337a0e44-d910-49a8-afc0-c7207666a9dc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 929ed0971f9b69bf8e98ae247957110e78ac33ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af6e81b9215aa6e7bc9e5f294a1d95aee4b51321
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccreatecontext-structure"></a>Struktura CCreateContext
 Używa w ramach `CCreateContext` struktury podczas tworzenia okna ramowe i widoki, które są skojarzone z dokumentu.  
@@ -37,7 +32,7 @@ struct CCreateContext
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- `CCreateContext`jest to struktura i nie ma klasy podstawowej.  
+ `CCreateContext` jest to struktura i nie ma klasy podstawowej.  
   
  Podczas tworzenia okna wartości w tej strukturze Podaj informacje używane do łączenia z części dokumentu do widoku jego dane. Należy użyć `CCreateContext` jeśli są zastępowanie części procesu tworzenia.  
   
@@ -45,7 +40,7 @@ struct CCreateContext
   
 |Element członkowski|Typ|Co to jest|  
 |------------|----------|--------------------|  
-|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass`do tworzenia nowego widoku.|  
+|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass` do tworzenia nowego widoku.|  
 |`m_pCurrentDoc`|`CDocument*`|Istniejący dokument ma zostać skojarzony z nowego widoku.|  
 |`m_pNewDocTemplate`|`CDocTemplate*`|Szablon dokumentu związane z tworzeniem okno ramowe MDI.|  
 |`m_pLastView`|`CView*`|Oryginalnego widoku, na którym są modelowane dodatkowe widoki, jak tworzenie widoków okna podziału lub tworzenie drugi widok w dokumencie.|  
@@ -56,7 +51,7 @@ struct CCreateContext
 > [!NOTE]
 >  Wszystkie wskaźniki w `CCreateContext` są opcjonalne i może być `NULL` nieokreślone lub nieznany.  
   
- `CCreateContext`jest używany przez funkcje Członkowskie kategorii "Zobacz też". Sprawdź opisy tych funkcji szczegółowe informacje, jeśli mają one zastąpione.  
+ `CCreateContext` jest używany przez funkcje Członkowskie kategorii "Zobacz też". Sprawdź opisy tych funkcji szczegółowe informacje, jeśli mają one zastąpione.  
   
  Oto kilka porad:  
   

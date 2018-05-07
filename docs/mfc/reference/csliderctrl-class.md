@@ -1,12 +1,9 @@
 ---
-title: "Csliderctrl — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Csliderctrl — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSliderCtrl
@@ -83,17 +80,15 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2788777b9a5014790e094cf39871b3e4d40750fe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0e5b0fac11c2472bbaf0d5f4a3ede7d4f5658f9b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csliderctrl-class"></a>Csliderctrl — klasa
 Udostępnia funkcje systemu Windows wspólnej suwaka.  
@@ -166,7 +161,7 @@ class CSliderCtrl : public CWnd
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -175,7 +170,7 @@ class CSliderCtrl : public CWnd
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxcmn.h  
   
-##  <a name="clearsel"></a>CSliderCtrl::ClearSel  
+##  <a name="clearsel"></a>  CSliderCtrl::ClearSel  
  Usuwa bieżące zaznaczenie w kontrolce slider.  
   
 ```  
@@ -186,7 +181,7 @@ void ClearSel(BOOL bRedraw = FALSE);
  `bRedraw`  
  Narysuj element ponownie flagi. Jeśli ten parametr ma **TRUE**, suwak jest narysowany ponownie po wyboru jest wyczyszczone; w przeciwnym razie nie jest rysowane suwaka.  
   
-##  <a name="cleartics"></a>CSliderCtrl::ClearTics  
+##  <a name="cleartics"></a>  CSliderCtrl::ClearTics  
  Usuwa bieżący znaczników za pomocą formantu suwaka.  
   
 ```  
@@ -197,7 +192,7 @@ void ClearTics(BOOL bRedraw = FALSE);
  `bRedraw`  
  Narysuj element ponownie flagi. Jeśli ten parametr ma **TRUE**, suwak jest narysowany ponownie po znaczniki zostały wyczyszczone; w przeciwnym razie nie jest rysowane suwaka.  
   
-##  <a name="create"></a>CSliderCtrl::Create  
+##  <a name="create"></a>  CSliderCtrl::Create  
  Tworzy formantu suwaka i dołącza go do `CSliderCtrl` obiektu.  
   
 ```  
@@ -231,7 +226,7 @@ virtual BOOL Create(
   
  Aby zastosować rozszerzone Style okna dla kontrolki suwaka, wywołaj [CreateEx](#createex) zamiast **Utwórz**.  
   
-##  <a name="createex"></a>CSliderCtrl::CreateEx  
+##  <a name="createex"></a>  CSliderCtrl::CreateEx  
  Tworzy kontrolkę (okno podrzędne) i kojarzy ją z `CSliderCtrl` obiektu.  
   
 ```  
@@ -265,14 +260,14 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Uwagi  
  Użyj `CreateEx` zamiast [Utwórz](#create) dotyczyć rozszerzone style systemu Windows, określone przez wstępu rozszerzonego stylu Windows **WS_EX_**.  
   
-##  <a name="csliderctrl"></a>CSliderCtrl::CSliderCtrl  
+##  <a name="csliderctrl"></a>  CSliderCtrl::CSliderCtrl  
  Konstruuje `CSliderCtrl` obiektu.  
   
 ```  
 CSliderCtrl();
 ```  
   
-##  <a name="getbuddy"></a>CSliderCtrl::GetBuddy  
+##  <a name="getbuddy"></a>  CSliderCtrl::GetBuddy  
  Pobiera dojścia do okna buddy formantu suwaka w podanej lokalizacji.  
   
 ```  
@@ -293,7 +288,7 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [TBM_GETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760178), zgodnie z opisem w zestawie Windows SDK. Opis elementu style formantu suwaka, zobacz [stylów formantu Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) w zestawie Windows SDK.  
   
-##  <a name="getchannelrect"></a>CSliderCtrl::GetChannelRect  
+##  <a name="getchannelrect"></a>  CSliderCtrl::GetChannelRect  
  Pobiera rozmiar i położenie prostokątem dla kontrolki suwaka kanału.  
   
 ```  
@@ -307,7 +302,7 @@ void GetChannelRect(LPRECT lprc) const;
 ### <a name="remarks"></a>Uwagi  
  Kanał jest obszar za pośrednictwem zostanie przesunięty suwak i zawierający wyróżnienie, gdy zaznaczony jest zakres.  
   
-##  <a name="getlinesize"></a>CSliderCtrl::GetLineSize  
+##  <a name="getlinesize"></a>  CSliderCtrl::GetLineSize  
  Pobiera rozmiar wiersza dla kontrolki suwaka.  
   
 ```  
@@ -320,7 +315,7 @@ int GetLineSize() const;
 ### <a name="remarks"></a>Uwagi  
  Ma wpływ na rozmiar wiersza, ile suwak przenosi dla **TB_LINEUP** i **TB_LINEDOWN** powiadomienia. Ustawieniem domyślnym dla rozmiar wiersza to 1.  
   
-##  <a name="getnumtics"></a>CSliderCtrl::GetNumTics  
+##  <a name="getnumtics"></a>  CSliderCtrl::GetNumTics  
  Pobiera liczbę znaczników w kontrolce slider.  
   
 ```  
@@ -330,7 +325,7 @@ UINT GetNumTics() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Liczba znaczników osi suwaka.  
   
-##  <a name="getpagesize"></a>CSliderCtrl::GetPageSize  
+##  <a name="getpagesize"></a>  CSliderCtrl::GetPageSize  
  Pobiera rozmiar strony dla kontrolki suwaka.  
   
 ```  
@@ -343,7 +338,7 @@ int GetPageSize() const;
 ### <a name="remarks"></a>Uwagi  
  Ma wpływ na rozmiar strony, ile suwak przenosi dla **TB_PAGEUP** i **TB_PAGEDOWN** powiadomienia.  
   
-##  <a name="getpos"></a>CSliderCtrl::GetPos  
+##  <a name="getpos"></a>  CSliderCtrl::GetPos  
  Pobiera bieżący pozycji suwaka w kontrolce slider.  
   
 ```  
@@ -353,7 +348,7 @@ int GetPos() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Bieżąca pozycja.  
   
-##  <a name="getrange"></a>CSliderCtrl::GetRange  
+##  <a name="getrange"></a>  CSliderCtrl::GetRange  
  Pobiera maksymalne i minimalne dla pozycji suwaka w kontrolce slider.  
   
 ```  
@@ -372,7 +367,7 @@ void GetRange(
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja skopiowanie wartości do liczb całkowitych, odwołuje się `nMin` i `nMax`.  
   
-##  <a name="getrangemax"></a>CSliderCtrl::GetRangeMax  
+##  <a name="getrangemax"></a>  CSliderCtrl::GetRangeMax  
  Pobiera maksymalną położenie suwaka w kontrolce slider.  
   
 ```  
@@ -382,7 +377,7 @@ int GetRangeMax() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Pozycja maksymalną formantu.  
   
-##  <a name="getrangemin"></a>CSliderCtrl::GetRangeMin  
+##  <a name="getrangemin"></a>  CSliderCtrl::GetRangeMin  
  Pobiera minimalną położenie suwaka w kontrolce slider.  
   
 ```  
@@ -392,7 +387,7 @@ int GetRangeMin() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Pozycja minimalna formantu.  
   
-##  <a name="getselection"></a>CSliderCtrl::GetSelection  
+##  <a name="getselection"></a>  CSliderCtrl::GetSelection  
  Pobiera początkowy i końcowy pozycji bieżące zaznaczenie w kontrolce slider.  
   
 ```  
@@ -408,7 +403,7 @@ void GetSelection(
  `nMax`  
  Odwołanie do liczba całkowita, która odbiera pozycji końcowej bieżącego zaznaczenia.  
   
-##  <a name="getthumblength"></a>CSliderCtrl::GetThumbLength  
+##  <a name="getthumblength"></a>  CSliderCtrl::GetThumbLength  
  Pobiera długość suwak w bieżącym TrackBar — formant.  
   
 ```  
@@ -421,7 +416,7 @@ int GetThumbLength() const;
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wysyła [TBM_GETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760201) komunikat, który jest opisany w zestawie SDK systemu Windows.  
   
-##  <a name="getthumbrect"></a>CSliderCtrl::GetThumbRect  
+##  <a name="getthumbrect"></a>  CSliderCtrl::GetThumbRect  
  Pobiera rozmiar i położenie prostokątem dla suwak w kontrolce slider.  
   
 ```  
@@ -432,7 +427,7 @@ void GetThumbRect(LPRECT lprc) const;
  `lprc`  
  Wskaźnik do `CRect` obiekt, który zawiera prostokątem na suwaku, gdy funkcja zwraca wartość.  
   
-##  <a name="gettic"></a>CSliderCtrl::GetTic  
+##  <a name="gettic"></a>  CSliderCtrl::GetTic  
  Pobiera położenie znacznika w kontrolce slider.  
   
 ```  
@@ -446,7 +441,7 @@ int GetTic(int nTic) const;
 ### <a name="return-value"></a>Wartość zwracana  
  Pozycja określonego znacznika lub - 1, gdy `nTic` nie określa prawidłowego indeksu.  
   
-##  <a name="getticarray"></a>CSliderCtrl::GetTicArray  
+##  <a name="getticarray"></a>  CSliderCtrl::GetTicArray  
  Pobiera adres tablicę zawierającą położenie znaczników osi dla kontrolki suwaka.  
   
 ```  
@@ -456,7 +451,7 @@ DWORD* GetTicArray() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Adres tablicę zawierającą pozycje znacznik osi dla kontrolki suwaka.  
   
-##  <a name="getticpos"></a>CSliderCtrl::GetTicPos  
+##  <a name="getticpos"></a>  CSliderCtrl::GetTicPos  
  Pobiera bieżącą pozycję fizycznych znacznika w kontrolce slider.  
   
 ```  
@@ -470,7 +465,7 @@ int GetTicPos(int nTic) const;
 ### <a name="return-value"></a>Wartość zwracana  
  Fizyczny pozycja, we współrzędnych klienta określonego znacznika lub - 1, gdy `nTic` nie określa prawidłowego indeksu.  
   
-##  <a name="gettooltips"></a>CSliderCtrl::GetToolTips  
+##  <a name="gettooltips"></a>  CSliderCtrl::GetToolTips  
  Pobiera dojścia do formantu tooltip przypisany do kontrolki suwaka, jeśli istnieje.  
   
 ```  
@@ -485,7 +480,7 @@ CToolTipCtrl* GetToolTips() const;
   
  Opis elementu style formantu suwaka, zobacz [stylów formantu Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) w zestawie Windows SDK.  
   
-##  <a name="setbuddy"></a>CSliderCtrl::SetBuddy  
+##  <a name="setbuddy"></a>  CSliderCtrl::SetBuddy  
  Przypisuje okno jako partner okna dla kontrolki suwaka.  
   
 ```  
@@ -513,7 +508,7 @@ CWnd* SetBuddy(
   
  Opis elementu style formantu suwaka, zobacz [stylów formantu Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) w zestawie Windows SDK.  
   
-##  <a name="setlinesize"></a>CSliderCtrl::SetLineSize  
+##  <a name="setlinesize"></a>  CSliderCtrl::SetLineSize  
  Ustawia rozmiar linii dla kontrolki suwaka.  
   
 ```  
@@ -530,7 +525,7 @@ int SetLineSize(int nSize);
 ### <a name="remarks"></a>Uwagi  
  Ma wpływ na rozmiar wiersza, ile suwak przenosi dla **TB_LINEUP** i **TB_LINEDOWN** powiadomienia.  
   
-##  <a name="setpagesize"></a>CSliderCtrl::SetPageSize  
+##  <a name="setpagesize"></a>  CSliderCtrl::SetPageSize  
  Ustawia rozmiar strony dla kontrolki suwaka.  
   
 ```  
@@ -547,7 +542,7 @@ int SetPageSize(int nSize);
 ### <a name="remarks"></a>Uwagi  
  Ma wpływ na rozmiar strony, ile suwak przenosi dla **TB_PAGEUP** i **TB_PAGEDOWN** powiadomienia.  
   
-##  <a name="setpos"></a>CSliderCtrl::SetPos  
+##  <a name="setpos"></a>  CSliderCtrl::SetPos  
  Ustawia bieżący pozycji suwaka w kontrolce slider.  
   
 ```  
@@ -558,7 +553,7 @@ void SetPos(int nPos);
  `nPos`  
  Określa nowe położenie suwaka.  
   
-##  <a name="setrange"></a>CSliderCtrl::SetRange  
+##  <a name="setrange"></a>  CSliderCtrl::SetRange  
  Ustawia zakresu (pozycje minimalną i maksymalną) suwak w kontrolce slider.  
   
 ```  
@@ -578,7 +573,7 @@ void SetRange(
  `bRedraw`  
  Flaga ponownego rysowania. Jeśli ten parametr ma **TRUE**, suwak jest narysowany ponownie po ustawiono zakres; w przeciwnym razie nie jest rysowane suwaka.  
   
-##  <a name="setrangemax"></a>CSliderCtrl::SetRangeMax  
+##  <a name="setrangemax"></a>  CSliderCtrl::SetRangeMax  
  Ustawia maksymalną wielkość zakresu suwak w kontrolce slider.  
   
 ```  
@@ -594,7 +589,7 @@ void SetRangeMax(
  `bRedraw`  
  Flaga ponownego rysowania. Jeśli ten parametr ma **TRUE**, suwak jest narysowany ponownie po ustawiono zakres; w przeciwnym razie nie jest rysowane suwaka.  
   
-##  <a name="setrangemin"></a>CSliderCtrl::SetRangeMin  
+##  <a name="setrangemin"></a>  CSliderCtrl::SetRangeMin  
  Ustawia minimalny zakres suwak w kontrolce slider.  
   
 ```  
@@ -610,7 +605,7 @@ void SetRangeMin(
  `bRedraw`  
  Flaga ponownego rysowania. Jeśli ten parametr ma **TRUE**, suwak jest narysowany ponownie po ustawiono zakres; w przeciwnym razie nie jest rysowane suwaka.  
   
-##  <a name="setselection"></a>CSliderCtrl::SetSelection  
+##  <a name="setselection"></a>  CSliderCtrl::SetSelection  
  Ustawia położenie datę początkową i końcową dla bieżącego zaznaczenia w kontrolce slider.  
   
 ```  
@@ -626,7 +621,7 @@ void SetSelection(
  `nMax`  
  Pozycja końcowa suwaka.  
   
-##  <a name="setthumblength"></a>CSliderCtrl::SetThumbLength  
+##  <a name="setthumblength"></a>  CSliderCtrl::SetThumbLength  
  Ustawia długość suwak w bieżącym formancie trackbar.  
   
 ```  
@@ -637,7 +632,7 @@ void SetThumbLength(int nLength);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in]`nLength`|Długość suwak w pikselach.|  
+|[in] `nLength`|Długość suwak w pikselach.|  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wymaga, aby mieć ustawioną TrackBar — formant [TBS_FIXEDLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760147) stylu.  
@@ -654,7 +649,7 @@ void SetThumbLength(int nLength);
   
  [!code-cpp[NVC_MFC_CSliderCtrl_s1#2](../../mfc/reference/codesnippet/cpp/csliderctrl-class_2.cpp)]  
   
-##  <a name="settic"></a>CSliderCtrl::SetTic  
+##  <a name="settic"></a>  CSliderCtrl::SetTic  
  Ustawia położenie znacznika w kontrolce slider.  
   
 ```  
@@ -668,7 +663,7 @@ BOOL SetTic(int nTic);
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli ustawiono znacznika; w przeciwnym razie 0.  
   
-##  <a name="setticfreq"></a>CSliderCtrl::SetTicFreq  
+##  <a name="setticfreq"></a>  CSliderCtrl::SetTicFreq  
  Określa częstotliwość, z których znaczników są widoczne w suwaka.  
   
 ```  
@@ -684,7 +679,7 @@ void SetTicFreq(int nFreq);
   
  Należy utworzyć kontrolki z `TBS_AUTOTICKS` styl, aby użyć tej funkcji. Aby uzyskać więcej informacji, zobacz [CSliderCtrl::Create](#create).  
   
-##  <a name="settipside"></a>CSliderCtrl::SetTipSide  
+##  <a name="settipside"></a>  CSliderCtrl::SetTipSide  
  Pozycji formantu tooltip używany przez TrackBar — formant.  
   
 ```  
@@ -701,7 +696,7 @@ int SetTipSide(int nLocation);
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja członkowska implementuje zachowanie komunikatu Win32 **TBM_SETTIPSIDE**, zgodnie z opisem w zestawie Windows SDK. Określa zasady używające **TBS_TOOLTIPS** styl wyświetlania etykietek narzędzi. Opis elementu style formantu suwaka, zobacz [stylów formantu Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) w zestawie Windows SDK.  
   
-##  <a name="settooltips"></a>CSliderCtrl::SetToolTips  
+##  <a name="settooltips"></a>  CSliderCtrl::SetToolTips  
  Przypisuje formantu tooltip do formantu suwaka.  
   
 ```  

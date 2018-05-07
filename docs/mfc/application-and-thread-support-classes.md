@@ -1,13 +1,10 @@
 ---
-title: "Obsługa aplikacji i wątków klas | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Obsługa aplikacji i wątków klas | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.support
 dev_langs:
@@ -20,31 +17,29 @@ helpviewer_keywords:
 - synchronization classes [MFC], multithreading
 - application support classes [MFC]
 ms.assetid: 3c1d14fd-c35c-48f1-86ce-1e0f9a32c36d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e443c2393d9d3a8a0f61df6adddb2c83e7672723
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f9f3877cf85e369756b15d565af1481fd6d258df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-and-thread-support-classes"></a>Klasy obsługi aplikacji i wątków
 Każda aplikacja ma jeden i tylko jeden obiekt aplikacji; Ten obiekt koordynuje innych obiektów w programie uruchomiony program i pochodzi z `CWinApp`.  
   
  Biblioteka Microsoft Foundation Class (MFC) obsługuje wiele wątków wykonywania w aplikacji. Wszystkie aplikacje muszą mieć co najmniej jeden wątek; Wątek używany przez Twoje `CWinApp` obiekt jest to podstawowy wątku.  
   
- `CWinThread`hermetyzuje część możliwości wątków systemu operacyjnego. Aby używanie wielu wątków łatwiejsze, MFC także synchronizacji klas obiektów interfejs C++ do obiektów synchronizacji Win32.  
+ `CWinThread` hermetyzuje część możliwości wątków systemu operacyjnego. Aby używanie wielu wątków łatwiejsze, MFC także synchronizacji klas obiektów interfejs C++ do obiektów synchronizacji Win32.  
   
 ## <a name="application-and-thread-classes"></a>Klasy aplikacji i wątków  
  [CWinApp](../mfc/reference/cwinapp-class.md)  
  Hermetyzuje kod, aby zainicjować, uruchamiania i zakończyć działanie aplikacji. Obiekt aplikacji będzie dziedziczyć po tej klasie.  
   
- [Cwinthread —](../mfc/reference/cwinthread-class.md)  
- Klasa podstawowa dla wszystkich wątków. Użyj bezpośrednio lub klasa wyprowadzona z `CWinThread` Jeśli Twoje wątku wykonuje funkcje interfejsu użytkownika. `CWinApp`jest pochodną `CWinThread`.  
+ [CWinThread](../mfc/reference/cwinthread-class.md)  
+ Klasa podstawowa dla wszystkich wątków. Użyj bezpośrednio lub klasa wyprowadzona z `CWinThread` Jeśli Twoje wątku wykonuje funkcje interfejsu użytkownika. `CWinApp` jest pochodną `CWinThread`.  
   
 ## <a name="synchronization-object-classes"></a>Klasy obiektu synchronizacji  
  [CSyncObject](../mfc/reference/csyncobject-class.md)  

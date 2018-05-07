@@ -1,13 +1,10 @@
 ---
-title: "Zestaw rekordów: Jak zestawy rekordów aktualizują rekordy (ODBC) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Zestaw rekordów: Jak zestawy rekordów aktualizują rekordy (ODBC) | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e38f2e62e9aa7b01680e9b2fd1e4a540ee552c3c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b16faf4c5ef0208c946cff123ecbe62b513e65ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-recordsets-update-records-odbc"></a>Zestaw rekordów: jak zestawy rekordów aktualizują rekordy (ODBC)
 Ten temat dotyczy klasach MFC ODBC.  
@@ -51,7 +46,7 @@ Ten temat dotyczy klasach MFC ODBC.
   
  [Zestaw rekordów: Więcej o aktualizacje (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) kończy wyjaśniający, jak transakcje wpływają na aktualizacje, wpływ aktualizacji Trwa zamykanie zestawu rekordów lub przewijanie i interakcje aktualizacje z aktualizacji innych wątków aktualizacji rekordów Użytkownicy.  
   
-##  <a name="_core_your_role_in_recordset_updating"></a>Twoja rola w aktualizowania rekordów  
+##  <a name="_core_your_role_in_recordset_updating"></a> Twoja rola w aktualizowania rekordów  
  W poniższej tabeli przedstawiono roli użytkownika za pomocą zestawów rekordów można dodać, edytować lub usuwać rekordy oraz platformę jest dla Ciebie.  
   
 ### <a name="recordset-updating-you-and-the-framework"></a>Aktualizowanie zestaw rekordów: Użytkownik i struktura  
@@ -66,7 +61,7 @@ Ten temat dotyczy klasach MFC ODBC.
   
  Aby uzyskać więcej informacji na temat transakcji, zobacz [transakcja (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="_core_the_edit_buffer"></a>Bufor edycji  
+##  <a name="_core_the_edit_buffer"></a> Bufor edycji  
  Podjęta zbiorczo, elementy członkowskie danych pola rekordów służyć jako bufor edycji, który zawiera jeden rekord — bieżącego rekordu. Operacje aktualizacji stosowanie tego buforu do obsługi bieżącego rekordu.  
   
 -   Po dodaniu rekordu buforu edycji jest używany do tworzenia nowego rekordu. Po dodaniu rekordu rekordu, który został wcześniej bieżącego staje się bieżącym ponownie.  
@@ -78,7 +73,7 @@ Ten temat dotyczy klasach MFC ODBC.
 > [!NOTE]
 >  Bufor edycji pełni żadnej roli w usuwania rekordów. Usunięcie bieżącego rekordu rekord jest oznaczone jako usunięte, a zestaw rekordów nie znajduje się "na"rekordu do momentu przewiń do innego rekordu.  
   
-##  <a name="_core_dynasets_and_snapshots"></a>Zestawy dynamiczne i migawki  
+##  <a name="_core_dynasets_and_snapshots"></a> Zestawy dynamiczne i migawki  
  [Zestawy dynamiczne](../../data/odbc/dynaset.md) odświeżyć zawartość rekordu przewijania w rekordzie. [Migawki](../../data/odbc/snapshot.md) są statyczne oświadczenia rekordów, więc zawartość rekordu nie są odświeżane, chyba że wywołujesz [Requery](../../mfc/reference/crecordset-class.md#requery). Aby korzystać z funkcji z zestawów dynamicznych, jest możliwe za pośrednictwem sterownika ODBC zgodny odpowiedniego poziomu obsługi interfejsu API ODBC. Aby uzyskać więcej informacji, zobacz [ODBC](../../data/odbc/odbc-basics.md) i [dynamiczny](../../data/odbc/dynaset.md).  
   
 ## <a name="see-also"></a>Zobacz też  

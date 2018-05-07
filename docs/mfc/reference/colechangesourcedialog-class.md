@@ -1,12 +1,9 @@
 ---
 title: Klasa COleChangeSourceDialog | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleChangeSourceDialog
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - COleChangeSourceDialog [MFC], IsValidSource
 - COleChangeSourceDialog [MFC], m_cs
 ms.assetid: d0e08be7-21ef-45e1-97af-fe27d99e3bac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9eccd25a175479c18a83b5d6ab96753a946e386
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 376b61dbbbfe734ecc49263718902dd387c7fce8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colechangesourcedialog-class"></a>Klasa COleChangeSourceDialog
 Używane dla okna dialogowego OLE Zmienianie źródła.  
@@ -90,11 +85,11 @@ class COleChangeSourceDialog : public COleDialog
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [Cdialog —](../../mfc/reference/cdialog-class.md)  
+ [CDialog](../../mfc/reference/cdialog-class.md)  
   
  [CCommonDialog](../../mfc/reference/ccommondialog-class.md)  
   
@@ -105,7 +100,7 @@ class COleChangeSourceDialog : public COleDialog
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxodlgs.h  
   
-##  <a name="colechangesourcedialog"></a>COleChangeSourceDialog::COleChangeSourceDialog  
+##  <a name="colechangesourcedialog"></a>  COleChangeSourceDialog::COleChangeSourceDialog  
  Ta funkcja tworzy `COleChangeSourceDialog` obiektu.  
   
 ```  
@@ -126,7 +121,7 @@ explicit COleChangeSourceDialog(
   
  Aby uzyskać więcej informacji, zobacz [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) struktury i [OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) funkcji w zestawie Windows SDK.  
   
-##  <a name="domodal"></a>COleChangeSourceDialog::DoModal  
+##  <a name="domodal"></a>  COleChangeSourceDialog::DoModal  
  Wywołanie tej funkcji, aby wyświetlić okno dialogowe OLE Zmienianie źródła.  
   
 ```  
@@ -153,7 +148,7 @@ virtual INT_PTR DoModal();
   
 - [GetItemName](#getitemname)  
   
-##  <a name="getdisplayname"></a>COleChangeSourceDialog::GetDisplayName  
+##  <a name="getdisplayname"></a>  COleChangeSourceDialog::GetDisplayName  
  Wywołanie tej funkcji można pobrać Pełna nazwa wyświetlana dla elementu połączonych klientów.  
   
 ```  
@@ -163,7 +158,7 @@ CString GetDisplayName();
 ### <a name="return-value"></a>Wartość zwracana  
  Źródło pełną nazwę wyświetlaną (moniker) [COleClientItem](../../mfc/reference/coleclientitem-class.md) określonym w konstruktorze.  
   
-##  <a name="getfilename"></a>COleChangeSourceDialog::GetFileName  
+##  <a name="getfilename"></a>  COleChangeSourceDialog::GetFileName  
  Wywołanie tej funkcji można pobrać części krótkiej nazwy pliku nazwę wyświetlaną dla elementu połączonych klientów.  
   
 ```  
@@ -176,7 +171,7 @@ CString GetFileName();
 ### <a name="remarks"></a>Uwagi  
  Krótka nazwa pliku wraz z krótkiej nazwy elementu daje Pełna nazwa wyświetlana.  
   
-##  <a name="getfromprefix"></a>COleChangeSourceDialog::GetFromPrefix  
+##  <a name="getfromprefix"></a>  COleChangeSourceDialog::GetFromPrefix  
  Wywołanie tej funkcji można pobrać poprzedni ciąg prefiksu dla tego źródła.  
   
 ```  
@@ -193,7 +188,7 @@ CString GetFromPrefix();
   
  Aby uzyskać więcej informacji, zobacz [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) struktury w zestawie Windows SDK.  
   
-##  <a name="getitemname"></a>COleChangeSourceDialog::GetItemName  
+##  <a name="getitemname"></a>  COleChangeSourceDialog::GetItemName  
  Wywołanie tej funkcji można pobrać części krótkiej nazwy elementu nazwę wyświetlaną dla elementu połączonych klientów.  
   
 ```  
@@ -206,7 +201,7 @@ CString GetItemName();
 ### <a name="remarks"></a>Uwagi  
  Krótka nazwa pliku wraz z krótkiej nazwy elementu daje Pełna nazwa wyświetlana.  
   
-##  <a name="gettoprefix"></a>COleChangeSourceDialog::GetToPrefix  
+##  <a name="gettoprefix"></a>  COleChangeSourceDialog::GetToPrefix  
  Wywołanie tej funkcji, aby uzyskać nowy ciąg prefiksu dla tego źródła.  
   
 ```  
@@ -223,7 +218,7 @@ CString GetToPrefix();
   
  Aby uzyskać więcej informacji, zobacz [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) struktury w zestawie Windows SDK.  
   
-##  <a name="m_cs"></a>COleChangeSourceDialog::m_cs  
+##  <a name="m_cs"></a>  COleChangeSourceDialog::m_cs  
  Ten element członkowski danych to struktura typu [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160).  
   
 ```  
@@ -231,11 +226,11 @@ OLEUICHANGESOURCE m_cs;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `OLEUICHANGESOURCE`Służy do sterowania zachowaniem okno dialogowe OLE Zmienianie źródła. Elementy członkowskie tej konstrukcji może być modyfikowany bezpośrednio.  
+ `OLEUICHANGESOURCE` Służy do sterowania zachowaniem okno dialogowe OLE Zmienianie źródła. Elementy członkowskie tej konstrukcji może być modyfikowany bezpośrednio.  
   
  Aby uzyskać więcej informacji, zobacz [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) struktury w zestawie Windows SDK.  
   
-##  <a name="isvalidsource"></a>COleChangeSourceDialog::IsValidSource  
+##  <a name="isvalidsource"></a>  COleChangeSourceDialog::IsValidSource  
  Wywołanie tej funkcji w celu ustalenia, czy nowe źródło jest prawidłowy.  
   
 ```  

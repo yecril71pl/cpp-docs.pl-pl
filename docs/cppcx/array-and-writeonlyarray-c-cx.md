@@ -1,24 +1,19 @@
 ---
 title: Tablica i WriteOnlyArray (C + +/ CX) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f06e63996024b3fade734a74acdfedf9ece5fba5
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 47c26ef4058cc3116d964740a93f7395c300b92b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Tablica i WriteOnlyArray (C + +/ CX)
 Za darmo można użyć regularne tablice w stylu języka C lub [std::array](../standard-library/array-class-stl.md) w języku C + +/ CX programu (mimo że [std::vector](../standard-library/vector-class.md) często jest lepszym rozwiązaniem), ale w API, który jest publikowany w metadanych, należy przekonwertować tablicy stylu języka C lub wektorów do [Platform::Array](../cppcx/platform-array-class.md) lub [Platform::WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) typu, w zależności od tego, jak jest używany. [Platform::Array](../cppcx/platform-array-class.md) typu nie jest tak efektywne ani wydajne jako [std::vector](../standard-library/vector-class.md), więc generalnie nie należy jej użycie w wewnętrzny kod, który wykonuje wiele operacji na tablicy elementy.  

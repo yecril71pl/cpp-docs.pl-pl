@@ -1,12 +1,9 @@
 ---
 title: Klasa CMFCToolBarComboBoxButton | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarComboBoxButton
@@ -73,17 +70,15 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7732d58c8e37683f670f6f13bb4df5f49e4ef24
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ddfa4d26ed0a4328714fbd1a921fe7c204ca3752
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>Klasa CMFCToolBarComboBoxButton
 Przycisk paska narzędzi, który zawiera kontrolki pola kombi ( [ccombobox — klasa](../../mfc/reference/ccombobox-class.md)).  
@@ -162,7 +157,7 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxtoolbarcomboboxbutton.h  
   
-##  <a name="additem"></a>CMFCToolBarComboBoxButton::AddItem  
+##  <a name="additem"></a>  CMFCToolBarComboBoxButton::AddItem  
  Dołącza unikatowy element do listy.  
   
 ```  
@@ -172,10 +167,10 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszItem`  
+ [in] `lpszItem`  
  Tekst elementu do dodania do listy.  
   
- [in]`dwData`  
+ [in] `dwData`  
  Dane skojarzone z elementem można dodać do listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -186,7 +181,7 @@ virtual INT_PTR AddItem(
   
  Jeśli tekst elementu jest już na liście, nowe dane są przechowywane wraz istniejący element. Wyszukaj element uwzględnia wielkość liter.  
   
-##  <a name="addsorteditem"></a>CMFCToolBarComboBoxButton::AddSortedItem  
+##  <a name="addsorteditem"></a>  CMFCToolBarComboBoxButton::AddSortedItem  
  Dodaje element do listy w kolejności określonej przez [porównania](#compare) metody.  
   
 ```  
@@ -196,10 +191,10 @@ virtual INT_PTR AddSortedItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszItem`  
+ [in] `lpszItem`  
  Tekst elementu do dodania do listy.  
   
- [in]`dwData`  
+ [in] `dwData`  
  Dane skojarzone z elementem można dodać do listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -208,7 +203,7 @@ virtual INT_PTR AddSortedItem(
 ### <a name="remarks"></a>Uwagi  
  Użyj tej funkcji, aby dodać elementy do listy w określonej kolejności.  
   
-##  <a name="canbestretched"></a>CMFCToolBarComboBoxButton::CanBeStretched  
+##  <a name="canbestretched"></a>  CMFCToolBarComboBoxButton::CanBeStretched  
  Wskazuje, czy można zmienić rozmiar przycisku pola kombi.  
   
 ```  
@@ -218,7 +213,7 @@ virtual BOOL CanBeStretched() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca `TRUE`.  
   
-##  <a name="cmfctoolbarcomboboxbutton"></a>CMFCToolBarComboBoxButton::CMFCToolBarComboBoxButton  
+##  <a name="cmfctoolbarcomboboxbutton"></a>  CMFCToolBarComboBoxButton::CMFCToolBarComboBoxButton  
  Konstruuje [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) obiektu.  
   
 ```  
@@ -230,16 +225,16 @@ CMFCToolBarComboBoxButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`uiID`  
+ [in] `uiID`  
  Identyfikator polecenia przycisku Nowy.  
   
- [in]`iImage`  
+ [in] `iImage`  
  Indeks obrazu skojarzonego z przycisku nowego obrazu.  
   
- [in]`dwStyle`  
+ [in] `dwStyle`  
  Styl przycisku Nowy.  
   
- [in]`iWidth`  
+ [in] `iWidth`  
  Szerokość w pikselach przycisku Nowy.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -247,7 +242,7 @@ CMFCToolBarComboBoxButton(
   
  Lista stylów przycisków paska narzędzi [style formantu ToolBar](../../mfc/reference/toolbar-control-styles.md)  
   
-##  <a name="cleardata"></a>CMFCToolBarComboBoxButton::ClearData  
+##  <a name="cleardata"></a>  CMFCToolBarComboBoxButton::ClearData  
  Usuwa dane zdefiniowane przez użytkownika.  
   
 ```  
@@ -257,7 +252,7 @@ virtual void ClearData();
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda nie działa. Przesłania tę metodę w klasie pochodnej, jeśli chcesz usunąć wszystkie dane zdefiniowane przez użytkownika.  
   
-##  <a name="compare"></a>CMFCToolBarComboBoxButton::Compare  
+##  <a name="compare"></a>  CMFCToolBarComboBoxButton::Compare  
  Porównuje dwa ciągi.  
   
 ```  
@@ -267,10 +262,10 @@ virtual int Compare(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszItem1`  
+ [in] `lpszItem1`  
  Pierwszy ciąg do porównania.  
   
- [in]`lpszItem2`  
+ [in] `lpszItem2`  
  Drugi ciąg do porównania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -289,7 +284,7 @@ virtual int Compare(
   
  Ta metoda jest wywoływana tylko z [AddSortedItem](#addsorteditem) metody.  
   
-##  <a name="copyfrom"></a>CMFCToolBarComboBoxButton::CopyFrom  
+##  <a name="copyfrom"></a>  CMFCToolBarComboBoxButton::CopyFrom  
  Kopiuje określony stan `CMFCToolBarComboBoxButton` jak bieżący obiekt.  
   
 ```  
@@ -297,10 +292,10 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`src`  
+ [in] `src`  
  Źródło `CMFCToolBarComboBoxButton` obiektu.  
   
-##  <a name="createcombo"></a>CMFCToolBarComboBoxButton::CreateCombo  
+##  <a name="createcombo"></a>  CMFCToolBarComboBoxButton::CreateCombo  
  Tworzy nowe pole kombi dla przycisku pola kombi.  
   
 ```  
@@ -310,16 +305,16 @@ virtual CComboBox* CreateCombo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pWndParent`  
+ [in] `pWndParent`  
  Wskaźnik do okna nadrzędnego przycisku.  
   
- [in]`rect`  
+ [in] `rect`  
  Prostokąt ograniczający pola kombi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do nowego pola kombi, jeśli metoda zakończyło się pomyślnie; w przeciwnym razie `NULL`.  
   
-##  <a name="createedit"></a>CMFCToolBarComboBoxButton::CreateEdit  
+##  <a name="createedit"></a>  CMFCToolBarComboBoxButton::CreateEdit  
  Tworzy nowe pole edycji dla przycisku pola kombi.  
   
 ```  
@@ -330,13 +325,13 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pWndParent`  
+ [in] `pWndParent`  
  Wskaźnik do okna nadrzędnego przycisku.  
   
- [in]`rect`  
+ [in] `rect`  
  Prostokąt ograniczający nowego pola edycji.  
   
- [in]`dwEditStyle`  
+ [in] `dwEditStyle`  
  Styl formantu nowe pola edycji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -345,7 +340,7 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
 ### <a name="remarks"></a>Uwagi  
  Struktura wywołuje tę metodę, podczas tworzenia nowego pola edycji dla przycisku pola kombi. Przesłonić tę metodę, aby zmienić sposób [CMFCToolBarComboBoxEdit](../../mfc/reference/cmfctoolbarcomboboxedit-class.md) jest tworzony.  
   
-##  <a name="deleteitem"></a>CMFCToolBarComboBoxButton::DeleteItem  
+##  <a name="deleteitem"></a>  CMFCToolBarComboBoxButton::DeleteItem  
  Usuwa określony element z listy.  
   
 ```  
@@ -355,21 +350,21 @@ BOOL DeleteItem(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`iIndex`  
+ [in] `iIndex`  
  Liczony od zera indeks elementu do usunięcia.  
   
- [in]`dwData`  
+ [in] `dwData`  
  Dane skojarzone z elementem, który ma zostać usunięty.  
   
- [in]`lpszText`  
+ [in] `lpszText`  
  Tekst elementu do usunięcia. Jeśli istnieje wiele elementów z tego samego tekstu, pierwszy element zostanie usunięty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli element został się i pomyślnie usunięto; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli element został się i pomyślnie usunięto; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="duplicatedata"></a>CMFCToolBarComboBoxButton::DuplicateData  
+##  <a name="duplicatedata"></a>  CMFCToolBarComboBoxButton::DuplicateData  
  Dane zdefiniowane przez użytkownika duplikaty.  
   
 ```  
@@ -379,7 +374,7 @@ virtual void DuplicateData();
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda nie działa. Należy przesłonić tę metodę w klasie pochodnej, jeśli chcesz skopiować wszystkie dane zdefiniowane przez użytkownika.  
   
-##  <a name="enablewindow"></a>CMFCToolBarComboBoxButton::EnableWindow  
+##  <a name="enablewindow"></a>  CMFCToolBarComboBoxButton::EnableWindow  
  Włącza lub wyłącza pola edycji i kombi.  
   
 ```  
@@ -387,13 +382,13 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bEnable`  
- `TRUE`Aby włączyć edit- and -kombi pól. `FALSE` wyłączyć pola edycji i kombi.  
+ [in] `bEnable`  
+ `TRUE` Aby włączyć edit- and -kombi pól. `FALSE` wyłączyć pola edycji i kombi.  
   
 ### <a name="remarks"></a>Uwagi  
  Po wyłączeniu formanty nie stanie się aktywne i nie akceptuje dane wejściowe użytkownika.  
   
-##  <a name="exporttomenubutton"></a>CMFCToolBarComboBoxButton::ExportToMenuButton  
+##  <a name="exporttomenubutton"></a>  CMFCToolBarComboBoxButton::ExportToMenuButton  
  Kopie identyfikator ciągu z tabeli ciągów aplikacji do menu określony za pomocą polecenia przycisk pola kombi.  
   
 ```  
@@ -401,13 +396,13 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out]`menuButton`  
+ [out] `menuButton`  
  Odwołanie do przycisku menu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zawsze `TRUE`.  
   
-##  <a name="finditem"></a>CMFCToolBarComboBoxButton::FindItem  
+##  <a name="finditem"></a>  CMFCToolBarComboBoxButton::FindItem  
  Zwraca indeks pierwszego elementu w polu listy, który zawiera określony ciąg.  
   
 ```  
@@ -415,7 +410,7 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszText`  
+ [in] `lpszText`  
  Tekst do wyszukania w polu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -423,7 +418,7 @@ int FindItem(LPCTSTR lpszText) const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getbycmd"></a>CMFCToolBarComboBoxButton::GetByCmd  
+##  <a name="getbycmd"></a>  CMFCToolBarComboBoxButton::GetByCmd  
  Pobiera wskaźnik do przycisku pole kombi ma identyfikator określonego polecenia.  
   
 ```  
@@ -433,18 +428,18 @@ static CMFCToolBarComboBoxButton* GetByCmd(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`uiCmd`  
+ [in] `uiCmd`  
  Identyfikator polecenia przycisk pola kombi.  
   
- [in]`bIsFocus`  
- `TRUE`Aby wyszukać tylko fokus przyciski; `FALSE` do wyszukania wszystkich przycisków.  
+ [in] `bIsFocus`  
+ `TRUE` Aby wyszukać tylko fokus przyciski; `FALSE` do wyszukania wszystkich przycisków.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do przycisku pole kombi; lub `NULL` Jeżeli nie znaleziono przycisku.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getcombobox"></a>CMFCToolBarComboBoxButton::GetComboBox  
+##  <a name="getcombobox"></a>  CMFCToolBarComboBoxButton::GetComboBox  
  Zwraca wskaźnik do pola kombi w pole kombi przycisk pola.  
   
 ```  
@@ -456,7 +451,7 @@ CComboBox* GetComboBox() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getcontextmenuid"></a>CMFCToolBarComboBoxButton::GetContextMenuID  
+##  <a name="getcontextmenuid"></a>  CMFCToolBarComboBoxButton::GetContextMenuID  
  Pobiera identyfikator zasobu menu skrótów dla przycisku pola kombi.  
   
 ```  
@@ -466,7 +461,7 @@ UINT GetContextMenuID();
 ### <a name="return-value"></a>Wartość zwracana  
  Identyfikator zasobu menu skrótów  
   
-##  <a name="getcount"></a>CMFCToolBarComboBoxButton::GetCount  
+##  <a name="getcount"></a>  CMFCToolBarComboBoxButton::GetCount  
  Zwraca liczbę elementów w polu listy.  
   
 ```  
@@ -478,7 +473,7 @@ INT_PTR GetCount() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getcountall"></a>CMFCToolBarComboBoxButton::GetCountAll  
+##  <a name="getcountall"></a>  CMFCToolBarComboBoxButton::GetCountAll  
  Pobiera liczbę elementów w polu listy przycisku pole kombi, który ma identyfikator określonego polecenia.  
   
 ```  
@@ -486,7 +481,7 @@ static int GetCountAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`uiCmd`  
+ [in] `uiCmd`  
  Identyfikator polecenia przycisk pola kombi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -494,7 +489,7 @@ static int GetCountAll(UINT uiCmd);
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getcursel"></a>CMFCToolBarComboBoxButton::GetCurSel  
+##  <a name="getcursel"></a>  CMFCToolBarComboBoxButton::GetCurSel  
  Pobiera indeks aktualnie zaznaczonego elementu w polu listy.  
   
 ```  
@@ -507,7 +502,7 @@ int GetCurSel() const;
 ### <a name="remarks"></a>Uwagi  
  Indeks pola listy jest liczony od zera.  
   
-##  <a name="getcurselall"></a>CMFCToolBarComboBoxButton::GetCurSelAll  
+##  <a name="getcurselall"></a>  CMFCToolBarComboBoxButton::GetCurSelAll  
  Zwraca indeks aktualnie zaznaczonego elementu w polu listy kombi pole przycisku, który ma identyfikator określonego polecenia.  
   
 ```  
@@ -515,7 +510,7 @@ static int GetCurSelAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`uiCmd`  
+ [in] `uiCmd`  
  Identyfikator polecenia przycisk pola kombi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -524,7 +519,7 @@ static int GetCurSelAll(UINT uiCmd);
 ### <a name="remarks"></a>Uwagi  
  Indeks pola listy jest liczony od zera.  
   
-##  <a name="geteditctrl"></a>CMFCToolBarComboBoxButton::GetEditCtrl  
+##  <a name="geteditctrl"></a>  CMFCToolBarComboBoxButton::GetEditCtrl  
  Zwraca wskaźnik do pola edycji w pole kombi przycisk pola.  
   
 ```  
@@ -536,7 +531,7 @@ virtual CEdit* GetEditCtrl();
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="gethwnd"></a>CMFCToolBarComboBoxButton::GetHwnd  
+##  <a name="gethwnd"></a>  CMFCToolBarComboBoxButton::GetHwnd  
  Zwraca uchwytu okna dla pola kombi.  
   
 ```  
@@ -546,7 +541,7 @@ virtual HWND GetHwnd();
 ### <a name="return-value"></a>Wartość zwracana  
  Uchwyt okna lub `NULL` Jeśli pole kombi nie jest skojarzony z obiektem okna.  
   
-##  <a name="getitem"></a>CMFCToolBarComboBoxButton::GetItem  
+##  <a name="getitem"></a>  CMFCToolBarComboBoxButton::GetItem  
  Zwraca ciąg skojarzony z elementem od określonego indeksu w polu listy.  
   
 ```  
@@ -554,7 +549,7 @@ LPCTSTR GetItem(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`iIndex`  
+ [in] `iIndex`  
  Liczony od zera indeks elementu w polu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -563,7 +558,7 @@ LPCTSTR GetItem(int iIndex=-1) const;
 ### <a name="remarks"></a>Uwagi  
  Parametr indeksu-1 zwraca ciąg aktualnie wybranego elementu.  
   
-##  <a name="getitemall"></a>CMFCToolBarComboBoxButton::GetItemAll  
+##  <a name="getitemall"></a>  CMFCToolBarComboBoxButton::GetItemAll  
  Zwraca ciąg skojarzony z elementem od określonego indeksu w polu listy przycisku pole kombi, który ma identyfikator określonego polecenia.  
   
 ```  
@@ -573,10 +568,10 @@ static LPCTSTR GetItemAll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`uiCmd`  
+ [in] `uiCmd`  
  Identyfikator polecenia przycisk pola kombi.  
   
- [in]`iIndex`  
+ [in] `iIndex`  
  Liczony od zera indeks elementu w polu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -585,7 +580,7 @@ static LPCTSTR GetItemAll(
 ### <a name="remarks"></a>Uwagi  
  Wartość indeksu,-1 zwraca ciąg aktualnie wybranego elementu.  
   
-##  <a name="getitemdata"></a>CMFCToolBarComboBoxButton::GetItemData  
+##  <a name="getitemdata"></a>  CMFCToolBarComboBoxButton::GetItemData  
  Zwraca dane skojarzone z elementem pod określonym indeksem w polu listy.  
   
 ```  
@@ -593,7 +588,7 @@ DWORD_PTR GetItemData(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`iIndex`  
+ [in] `iIndex`  
  Liczony od zera indeks elementu w polu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -602,7 +597,7 @@ DWORD_PTR GetItemData(int iIndex=-1) const;
 ### <a name="remarks"></a>Uwagi  
  Parametr indeksu-1 zwraca dane skojarzone z aktualnie wybranego elementu.  
   
-##  <a name="getitemdataall"></a>CMFCToolBarComboBoxButton::GetItemDataAll  
+##  <a name="getitemdataall"></a>  CMFCToolBarComboBoxButton::GetItemDataAll  
  Zwraca dane skojarzone z elementem pod określonym indeksem w polu listy przycisku pole kombi, który ma identyfikator określonego polecenia.  
   
 ```  
@@ -612,10 +607,10 @@ static DWORD_PTR GetItemDataAll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`uiCmd`  
+ [in] `uiCmd`  
  Identyfikator polecenia przycisk pola kombi.  
   
- [in]`iIndex`  
+ [in] `iIndex`  
  Liczony od zera indeks elementu w polu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -624,7 +619,7 @@ static DWORD_PTR GetItemDataAll(
 ### <a name="remarks"></a>Uwagi  
  Parametr indeksu-1 zwraca dane skojarzone z aktualnie wybranego elementu.  
   
-##  <a name="getitemdataptrall"></a>CMFCToolBarComboBoxButton::GetItemDataPtrAll  
+##  <a name="getitemdataptrall"></a>  CMFCToolBarComboBoxButton::GetItemDataPtrAll  
  Zwraca dane skojarzone z elementem pod określonym indeksem w polu listy przycisku pole kombi, który ma identyfikator określonego polecenia. Te dane są zwracane jako wskaźnik.  
   
 ```  
@@ -634,10 +629,10 @@ static void* GetItemDataPtrAll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`uiCmd`  
+ [in] `uiCmd`  
  Identyfikator polecenia przycisk pola kombi.  
   
- [in]`iIndex`  
+ [in] `iIndex`  
  Liczony od zera indeks elementu w polu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -645,7 +640,7 @@ static void* GetItemDataPtrAll(
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="getprompt"></a>CMFCToolBarComboBoxButton::GetPrompt  
+##  <a name="getprompt"></a>  CMFCToolBarComboBoxButton::GetPrompt  
  Zwraca ciąg monitu pole kombi przycisk pola.  
   
 ```  
@@ -658,7 +653,7 @@ virtual CString GetPrompt() const;
 ### <a name="remarks"></a>Uwagi  
  Ta metoda nie jest obecnie zaimplementowana.  
   
-##  <a name="gettext"></a>CMFCToolBarComboBoxButton::GetText  
+##  <a name="gettext"></a>  CMFCToolBarComboBoxButton::GetText  
  Pobiera tekst w polu edycji.  
   
 ```  
@@ -670,7 +665,7 @@ LPCTSTR GetText() const;
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="gettextall"></a>CMFCToolBarComboBoxButton::GetTextAll  
+##  <a name="gettextall"></a>  CMFCToolBarComboBoxButton::GetTextAll  
  Pobiera tekst w polu edycji przycisku pole kombi, który ma identyfikator określonego polecenia.  
   
 ```  
@@ -678,7 +673,7 @@ static LPCTSTR GetTextAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`uiCmd`  
+ [in] `uiCmd`  
  Identyfikator polecenia przycisk pola kombi określone.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -686,7 +681,7 @@ static LPCTSTR GetTextAll(UINT uiCmd);
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="hasfocus"></a>CMFCToolBarComboBoxButton::HasFocus  
+##  <a name="hasfocus"></a>  CMFCToolBarComboBoxButton::HasFocus  
  Wskazuje, czy pole kombi aktualnie ma fokus.  
   
 ```  
@@ -694,12 +689,12 @@ virtual BOOL HasFocus() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli pole kombi aktualnie ma fokus; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli pole kombi aktualnie ma fokus; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda zwraca również wartość `TRUE` Jeśli wszystkie okna podrzędnego pola kombi aktualnie ma fokus.  
   
-##  <a name="iscentervert"></a>CMFCToolBarComboBoxButton::IsCenterVert  
+##  <a name="iscentervert"></a>  CMFCToolBarComboBoxButton::IsCenterVert  
  Zwraca położenie w pionie przycisków pole kombi w aplikacji.  
   
 ```  
@@ -707,11 +702,11 @@ static BOOL IsCenterVert();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli jest wyśrodkowywana przycisków; `FALSE` Jeśli przycisków są wyrównane u góry.  
+ `TRUE` Jeśli jest wyśrodkowywana przycisków; `FALSE` Jeśli przycisków są wyrównane u góry.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="isflatmode"></a>CMFCToolBarComboBoxButton::IsFlatMode  
+##  <a name="isflatmode"></a>  CMFCToolBarComboBoxButton::IsFlatMode  
  Zwraca płaski wygląd przycisków pole kombi w aplikacji.  
   
 ```  
@@ -719,12 +714,12 @@ static BOOL IsFlatMode();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli przycisków płaski; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli przycisków płaski; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
- To domyślne płaski przycisków pola kombi`FALSE.`  
+ To domyślne płaski przycisków pola kombi `FALSE.`  
   
-##  <a name="isownerof"></a>CMFCToolBarComboBoxButton::IsOwnerOf  
+##  <a name="isownerof"></a>  CMFCToolBarComboBoxButton::IsOwnerOf  
  Wskazuje, czy określone dojście jest skojarzony z przycisk pola kombi lub jednego z jego elementów podrzędnych.  
   
 ```  
@@ -732,13 +727,13 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`hwnd`  
+ [in] `hwnd`  
  Uchwyt okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli dojście jest assocated za przycisk pola kombi lub jednej z jego elementów podrzędnych; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli dojście jest assocated za przycisk pola kombi lub jednej z jego elementów podrzędnych; w przeciwnym razie `FALSE`.  
   
-##  <a name="isribbonbutton"></a>CMFCToolBarComboBoxButton::IsRibbonButton  
+##  <a name="isribbonbutton"></a>  CMFCToolBarComboBoxButton::IsRibbonButton  
  Wskazuje, czy przycisk pola kombi znajduje się na panelu wstążki.  
   
 ```  
@@ -751,7 +746,7 @@ BOOL IsRibbonButton() const;
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda zawsze zwraca wartość `FALSE`, co oznacza, że pole kombi przycisk pola nigdy nie jest wyświetlana na panelu wstążki.  
   
-##  <a name="iswindowvisible"></a>CMFCToolBarComboBoxButton::IsWindowVisible  
+##  <a name="iswindowvisible"></a>  CMFCToolBarComboBoxButton::IsWindowVisible  
  Zwraca stan wyświetlania pole kombi przycisk pola.  
   
 ```  
@@ -761,7 +756,7 @@ virtual BOOL IsWindowVisible();
 ### <a name="return-value"></a>Wartość zwracana  
  Stan widoczności przycisku pola kombi.  
   
-##  <a name="notifycommand"></a>CMFCToolBarComboBoxButton::NotifyCommand  
+##  <a name="notifycommand"></a>  CMFCToolBarComboBoxButton::NotifyCommand  
  Wskazuje, czy przycisk pola kombi przetwarza wiadomości.  
   
 ```  
@@ -769,20 +764,20 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`iNotifyCode`  
+ [in] `iNotifyCode`  
  Komunikat powiadomienia, który jest skojarzony z poleceniem.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Określa, czy przycisk pola kombi przetwarza wiadomości.  
   
-##  <a name="onaddtocustomizepage"></a>CMFCToolBarComboBoxButton::OnAddToCustomizePage  
+##  <a name="onaddtocustomizepage"></a>  CMFCToolBarComboBoxButton::OnAddToCustomizePage  
  Wywoływane przez platformę, gdy przycisk zostanie dodany do **Dostosuj** okno dialogowe.  
   
 ```  
 virtual void OnAddToCustomizePage();
 ```  
   
-##  <a name="oncalculatesize"></a>CMFCToolBarComboBoxButton::OnCalculateSize  
+##  <a name="oncalculatesize"></a>  CMFCToolBarComboBoxButton::OnCalculateSize  
  Wywoływane przez platformę, by Oblicz rozmiar przycisku.  
   
 ```  
@@ -793,19 +788,19 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Kontekst urządzenia wyświetlającego przycisk pola kombi.  
   
- [in]`sizeDefault`  
+ [in] `sizeDefault`  
  Rozmiar domyślny przycisk pola kombi.  
   
- [in]`bHorz`  
- Stan dokowania paska narzędzi nadrzędnej. `TRUE`gdy pasek narzędzi jest zadokowany w poziomie i `FALSE` gdy pasek narzędzi jest zadokowany w pionie.  
+ [in] `bHorz`  
+ Stan dokowania paska narzędzi nadrzędnej. `TRUE` gdy pasek narzędzi jest zadokowany w poziomie i `FALSE` gdy pasek narzędzi jest zadokowany w pionie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  A `SIZE` struktury zawierającego wymiary pole kombi przycisku w pikselach.  
   
-##  <a name="onchangeparentwnd"></a>CMFCToolBarComboBoxButton::OnChangeParentWnd  
+##  <a name="onchangeparentwnd"></a>  CMFCToolBarComboBoxButton::OnChangeParentWnd  
  Wywoływane przez platformę, gdy przycisk pola kombi są wstawiane do nowego paska narzędzi.  
   
 ```  
@@ -813,10 +808,10 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pWndParent`  
+ [in] `pWndParent`  
  Wskaźnik do nowego nadrzędne paska narzędzi.  
   
-##  <a name="onclick"></a>CMFCToolBarComboBoxButton::OnClick  
+##  <a name="onclick"></a>  CMFCToolBarComboBoxButton::OnClick  
  Wywoływane przez platformę, gdy użytkownik kliknie przycisk pola kombi.  
   
 ```  
@@ -826,16 +821,16 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pWnd`  
+ [in] `pWnd`  
  Wskaźnik do okna nadrzędnego przycisku pola kombi.  
   
- [in]`bDelay`  
+ [in] `bDelay`  
  Zarezerwowane do użytku w klasie pochodnej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli metoda obsługi zdarzeń; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli metoda obsługi zdarzeń; w przeciwnym razie `FALSE`.  
   
-##  <a name="onctlcolor"></a>CMFCToolBarComboBoxButton::OnCtlColor  
+##  <a name="onctlcolor"></a>  CMFCToolBarComboBoxButton::OnCtlColor  
  Wywoływane przez platformę, gdy użytkownik zmieni kolor narzędzi nadrzędny można ustawić kolor przycisku pola kombi.  
   
 ```  
@@ -845,10 +840,10 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Kontekst urządzenia wyświetlającego przycisk pola kombi.  
   
- [in]`nCtlColor`  
+ [in] `nCtlColor`  
  Nieużywane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -857,7 +852,7 @@ virtual HBRUSH OnCtlColor(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda także ustawia kolor tekstu przycisku pola kombi.  
   
-##  <a name="ondraw"></a>CMFCToolBarComboBoxButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCToolBarComboBoxButton::OnDraw  
  Wywoływane przez platformę, by narysować przycisk pola kombi przy użyciu określonych stylów i opcje.  
   
 ```  
@@ -873,31 +868,31 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`Pdc`  
+ [in] `Pdc`  
  Kontekst urządzenia wyświetlającego przycisku.  
   
- [in]`rect`  
+ [in] `rect`  
  Prostokąt ograniczający przycisku.  
   
- [in]`pImages`  
+ [in] `pImages`  
  Kolekcja obrazów, która jest skojarzona z przyciskiem.  
   
- [in]`bHorz`  
- Stan dokowania paska narzędzi nadrzędnej. `TRUE`gdy pasek narzędzi jest zadokowany w poziomie i `FALSE` gdy pasek narzędzi jest zadokowany w pionie.  
+ [in] `bHorz`  
+ Stan dokowania paska narzędzi nadrzędnej. `TRUE` gdy pasek narzędzi jest zadokowany w poziomie i `FALSE` gdy pasek narzędzi jest zadokowany w pionie.  
   
- [in]`bCustomizeMode`  
+ [in] `bCustomizeMode`  
  Określa, czy aplikacja jest w trybie dostosowania.  
   
- [in]`bHighlight`  
+ [in] `bHighlight`  
  Określa, czy Rysowanie przycisk pola kombi wyróżnione.  
   
- [in]`bDrawBorder`  
+ [in] `bDrawBorder`  
  Określa, czy Rysowanie przycisk pola kombi z obramowanie.  
   
- [in]`bGrayDisabledButtons`  
- `TRUE`Rysowanie przyciemnione przyciski wyłączone; `FALSE` do użycia niepełnosprawnych obrazy kolekcji.  
+ [in] `bGrayDisabledButtons`  
+ `TRUE` Rysowanie przyciemnione przyciski wyłączone; `FALSE` do użycia niepełnosprawnych obrazy kolekcji.  
   
-##  <a name="ondrawoncustomizelist"></a>CMFCToolBarComboBoxButton::OnDrawOnCustomizeList  
+##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarComboBoxButton::OnDrawOnCustomizeList  
  Wywoływane przez platformę, by narysować przycisk pola kombi **polecenia** okienku **Dostosuj** okno dialogowe.  
   
 ```  
@@ -908,33 +903,33 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pDC`  
+ [in] `pDC`  
  Kontekst urządzenia wyświetlającego przycisk pola kombi.  
   
- [in]`rect`  
+ [in] `rect`  
  Prostokąt ograniczający przycisk pola kombi.  
   
- [in]`bSelected`  
- `TRUE`Jeśli pole kombi polu przycisk zostanie wybrany; w przeciwnym razie `FALSE`.  
+ [in] `bSelected`  
+ `TRUE` Jeśli pole kombi polu przycisk zostanie wybrany; w przeciwnym razie `FALSE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Szerokość w pikselach, przycisk pola kombi.  
   
-##  <a name="onglobalfontschanged"></a>CMFCToolBarComboBoxButton::OnGlobalFontsChanged  
+##  <a name="onglobalfontschanged"></a>  CMFCToolBarComboBoxButton::OnGlobalFontsChanged  
  Wywoływane przez platformę, by ustawić pole kombi czcionki przycisk pola po zmianie czcionki aplikacji.  
   
 ```  
 virtual void OnGlobalFontsChanged();
 ```  
   
-##  <a name="onmove"></a>CMFCToolBarComboBoxButton::OnMove  
+##  <a name="onmove"></a>  CMFCToolBarComboBoxButton::OnMove  
  Wywoływane przez platformę, by zmienić lokalizację przycisk pola kombi, gdy przesuwa narzędzi nadrzędnej.  
   
 ```  
 virtual void OnMove();
 ```  
   
-##  <a name="onshow"></a>CMFCToolBarComboBoxButton::OnShow  
+##  <a name="onshow"></a>  CMFCToolBarComboBoxButton::OnShow  
  Wywoływane przez platformę, gdy przycisk pola kombi jest ukryte lub wyświetlane.  
   
 ```  
@@ -942,10 +937,10 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bShow`  
+ [in] `bShow`  
  Czy mają być wyświetlany przycisk pola kombi.  
   
-##  <a name="onsize"></a>CMFCToolBarComboBoxButton::OnSize  
+##  <a name="onsize"></a>  CMFCToolBarComboBoxButton::OnSize  
  Wywoływane przez platformę, by zmienić rozmiar przycisku pole kombi, gdy narzędzi nadrzędnego zmienia rozmiar.  
   
 ```  
@@ -953,10 +948,10 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`iSize`  
+ [in] `iSize`  
  Szerokość nowy przycisk pola kombi.  
   
-##  <a name="onupdatetooltip"></a>CMFCToolBarComboBoxButton::OnUpdateToolTip  
+##  <a name="onupdatetooltip"></a>  CMFCToolBarComboBoxButton::OnUpdateToolTip  
  Wywoływane przez platformę, gdy użytkownik zmieni etykietka narzędzia dla przycisku pola kombi.  
   
 ```  
@@ -968,22 +963,22 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pWndParent`  
+ [in] `pWndParent`  
  Wskaźnik do okna nadrzędnego przycisk pola kombi.  
   
- [in]`iButtonIndex`  
+ [in] `iButtonIndex`  
  Identyfikator przycisk pola kombi.  
   
- [in]`wndToolTip`  
+ [in] `wndToolTip`  
  Etykietka narzędzia do skojarzenia z przycisk pola kombi.  
   
- [in]`str`  
+ [in] `str`  
  Tekst wskazówki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli metoda obsługi zdarzeń; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli metoda obsługi zdarzeń; w przeciwnym razie `FALSE`.  
   
-##  <a name="removeallitems"></a>CMFCToolBarComboBoxButton::RemoveAllItems  
+##  <a name="removeallitems"></a>  CMFCToolBarComboBoxButton::RemoveAllItems  
  Usuwa wszystkie elementy z listy i edytowania pól.  
   
 ```  
@@ -993,7 +988,7 @@ void RemoveAllItems();
 ### <a name="remarks"></a>Uwagi  
  Usuwa wszystkie elementy na liście pole i edytować kontrolki pola kombi.  
   
-##  <a name="selectitem"></a>CMFCToolBarComboBoxButton::SelectItem  
+##  <a name="selectitem"></a>  CMFCToolBarComboBoxButton::SelectItem  
  Wybiera element w polu listy.  
   
 ```  
@@ -1006,24 +1001,24 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`iIndex`  
+ [in] `iIndex`  
  Liczony od zera indeks elementu w polu listy.  
   
- [in]`bNotify`  
- `TRUE`Aby powiadomić przycisk pole kombi wyboru; w przeciwnym razie `FALSE`.  
+ [in] `bNotify`  
+ `TRUE` Aby powiadomić przycisk pole kombi wyboru; w przeciwnym razie `FALSE`.  
   
- [in]`dwData`  
+ [in] `dwData`  
  Dane skojarzone z elementu w polu listy.  
   
- [in]`lpszText`  
+ [in] `lpszText`  
  Tekst elementu w polu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli metoda zakończyło się pomyślnie; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli metoda zakończyło się pomyślnie; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="selectitemall"></a>CMFCToolBarComboBoxButton::SelectItemAll  
+##  <a name="selectitemall"></a>  CMFCToolBarComboBoxButton::SelectItemAll  
  Wybiera element w polu listy przycisku pole kombi, który ma identyfikator określonego polecenia.  
   
 ```  
@@ -1043,24 +1038,24 @@ static BOOL SelectItemAll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`uiCmd`  
+ [in] `uiCmd`  
  Identyfikator polecenia przycisku pole kombi, który zawiera pola listy.  
   
- [in]`iIndex`  
+ [in] `iIndex`  
  Liczony od zera indeks elementu w polu listy. Wartość -1 usuwa wszystkie bieżące zaznaczenie w polu listy i czyści pole edycji.  
   
- [in]`dwData`  
+ [in] `dwData`  
  Dane elementu w polu listy.  
   
- [in]`lpszText`  
+ [in] `lpszText`  
  Tekst elementu w polu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli metoda zakończyło się pomyślnie; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli metoda zakończyło się pomyślnie; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
   
-##  <a name="serialize"></a>CMFCToolBarComboBoxButton::Serialize  
+##  <a name="serialize"></a>  CMFCToolBarComboBoxButton::Serialize  
  Odczytuje obiekt z archiwum i zapisuje go do archiwum.  
   
 ```  
@@ -1068,13 +1063,13 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [w, out]`ar`  
+ [w, out] `ar`  
  `CArchive` Obiektu do zserializowania.  
   
 ### <a name="remarks"></a>Uwagi  
  Ustawienia w `CArchive` obiektu ustalić, czy ta metoda odczytuje i zapisuje do archiwum.  
   
-##  <a name="setaccdata"></a>CMFCToolBarComboBoxButton::SetACCData  
+##  <a name="setaccdata"></a>  CMFCToolBarComboBoxButton::SetACCData  
  Wypełnia określony `CAccessibilityData` obiektu przy użyciu danych dostępności z przycisk pola kombi.  
   
 ```  
@@ -1084,16 +1079,16 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`pParent`  
+ [in] `pParent`  
  Okno nadrzędne przycisk pola kombi.  
   
- [out]`data`  
+ [out] `data`  
  A `CAccessibilityData` obiekt, który odbiera dane dostępności z przycisk pola kombi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE`Jeśli metoda zakończyło się pomyślnie; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli metoda zakończyło się pomyślnie; w przeciwnym razie `FALSE`.  
   
-##  <a name="setcentervert"></a>CMFCToolBarComboBoxButton::SetCenterVert  
+##  <a name="setcentervert"></a>  CMFCToolBarComboBoxButton::SetCenterVert  
  Ustawia położenie w pionie przycisków pole kombi w aplikacji.  
   
 ```  
@@ -1101,13 +1096,13 @@ static void SetCenterVert(BOOL bCenterVert=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bCenterVert`  
- `TRUE`Aby wyśrodkować przycisk pola kombi na pasku narzędzi; `FALSE` , aby były wyrównane przycisk pola kombi na początku pasku narzędzi.  
+ [in] `bCenterVert`  
+ `TRUE` Aby wyśrodkować przycisk pola kombi na pasku narzędzi; `FALSE` , aby były wyrównane przycisk pola kombi na początku pasku narzędzi.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie przyciski pola kombi są wyrównane do górnej.  
   
-##  <a name="setcontextmenuid"></a>CMFCToolBarComboBoxButton::SetContextMenuID  
+##  <a name="setcontextmenuid"></a>  CMFCToolBarComboBoxButton::SetContextMenuID  
  Ustawia identyfikator zasobu menu skrótów pole kombi przycisk pola.  
   
 ```  
@@ -1115,10 +1110,10 @@ void SetContextMenuID(UINT uiResID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`uiResID`  
+ [in] `uiResID`  
  Identyfikator zasobu menu skrótów  
   
-##  <a name="setdropdownheight"></a>CMFCToolBarComboBoxButton::SetDropDownHeight  
+##  <a name="setdropdownheight"></a>  CMFCToolBarComboBoxButton::SetDropDownHeight  
  Ustawia wysokość pola listy, gdy jest rozwijana.  
   
 ```  
@@ -1126,13 +1121,13 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nHeight`  
+ [in] `nHeight`  
  Wysokość w pikselach pola listy.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna wysokość jest 150 pikseli.  
   
-##  <a name="setflatmode"></a>CMFCToolBarComboBoxButton::SetFlatMode  
+##  <a name="setflatmode"></a>  CMFCToolBarComboBoxButton::SetFlatMode  
  Ustawia płaski wygląd przycisków pole kombi w aplikacji.  
   
 ```  
@@ -1140,13 +1135,13 @@ static void SetFlatMode(BOOL bFlat=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`bFlat`  
- `TRUE`dla płaski wygląd; w przeciwnym razie `FALSE`.  
+ [in] `bFlat`  
+ `TRUE` dla płaski wygląd; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślny płaski przycisków pola kombi jest `FALSE`.  
   
-##  <a name="setstyle"></a>CMFCToolBarComboBoxButton::SetStyle  
+##  <a name="setstyle"></a>  CMFCToolBarComboBoxButton::SetStyle  
  Ustawia określony styl pole kombi przycisk pole i ponownie rysuje formantu, jeśli nie zostanie wyłączony.  
   
 ```  
@@ -1154,13 +1149,13 @@ virtual void SetStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`nStyle`  
+ [in] `nStyle`  
  Bitowe połączenie (lub) style paska narzędzi.  
   
 ### <a name="remarks"></a>Uwagi  
  Lista stylów przycisków paska narzędzi [style formantu ToolBar](../../mfc/reference/toolbar-control-styles.md)  
   
-##  <a name="settext"></a>CMFCToolBarComboBoxButton::SetText  
+##  <a name="settext"></a>  CMFCToolBarComboBoxButton::SetText  
  Ustawia tekst w polu edycji w pole kombi przycisk pola.  
   
 ```  
@@ -1168,7 +1163,7 @@ void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]`lpszText`  
+ [in] `lpszText`  
  Wskaźnik do ciągu, czy zawiera tekst pola edycji.  
   
 ## <a name="see-also"></a>Zobacz też  

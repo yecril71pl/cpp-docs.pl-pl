@@ -1,12 +1,9 @@
 ---
-title: "Cspinbuttonctrl — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Cspinbuttonctrl — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSpinButtonCtrl
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b00fc554c6ca677756cf6a9a9c7fa83cd9d255f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 43b0967309813603e4f683f35c3ca51dce99fd8c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cspinbuttonctrl-class"></a>Cspinbuttonctrl — klasa
 Udostępnia funkcje systemu Windows wspólnej przycisku pokrętła.  
@@ -103,7 +98,7 @@ class CSpinButtonCtrl : public CWnd
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -112,7 +107,7 @@ class CSpinButtonCtrl : public CWnd
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxcmn.h  
   
-##  <a name="create"></a>CSpinButtonCtrl::Create  
+##  <a name="create"></a>  CSpinButtonCtrl::Create  
  Tworzy kontrolkę przycisku pokrętła i dołącza go do `CSpinButtonCtrl` obiektu.  
   
 ```  
@@ -144,7 +139,7 @@ virtual BOOL Create(
   
  Aby utworzyć przycisku pokrętła z rozszerzone Style okna, należy wywołać [CSpinButtonCtrl::CreateEx](#createex) zamiast **Utwórz**.  
   
-##  <a name="createex"></a>CSpinButtonCtrl::CreateEx  
+##  <a name="createex"></a>  CSpinButtonCtrl::CreateEx  
  Tworzy kontrolkę (okno podrzędne) i kojarzy ją z `CSpinButtonCtrl` obiektu.  
   
 ```  
@@ -178,14 +173,14 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Uwagi  
  Użyj `CreateEx` zamiast [Utwórz](#create) dotyczyć rozszerzone style systemu Windows, określone przez wstępu rozszerzonego stylu Windows **WS_EX_**.  
   
-##  <a name="cspinbuttonctrl"></a>CSpinButtonCtrl::CSpinButtonCtrl  
+##  <a name="cspinbuttonctrl"></a>  CSpinButtonCtrl::CSpinButtonCtrl  
  Konstruuje `CSpinButtonCtrl` obiektu.  
   
 ```  
 CSpinButtonCtrl();
 ```  
   
-##  <a name="getaccel"></a>CSpinButtonCtrl::GetAccel  
+##  <a name="getaccel"></a>  CSpinButtonCtrl::GetAccel  
  Pobiera informacje o przyspieszenie dla przycisku pokrętła.  
   
 ```  
@@ -204,7 +199,7 @@ UINT GetAccel(
 ### <a name="return-value"></a>Wartość zwracana  
  Liczba struktur akceleratora pobrać.  
   
-##  <a name="getbase"></a>CSpinButtonCtrl::GetBase  
+##  <a name="getbase"></a>  CSpinButtonCtrl::GetBase  
  Pobiera bieżący podstawa przycisku pokrętła.  
   
 ```  
@@ -214,7 +209,7 @@ UINT GetBase() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Bieżąca wartość podstawową.  
   
-##  <a name="getbuddy"></a>CSpinButtonCtrl::GetBuddy  
+##  <a name="getbuddy"></a>  CSpinButtonCtrl::GetBuddy  
  Pobiera wskaźnik do bieżącego okna buddy.  
   
 ```  
@@ -224,7 +219,7 @@ CWnd* GetBuddy() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do bieżącego okna buddy.  
   
-##  <a name="getpos"></a>CSpinButtonCtrl::GetPos  
+##  <a name="getpos"></a>  CSpinButtonCtrl::GetPos  
  Pobiera bieżącą pozycję przycisku pokrętła.  
   
 ```  
@@ -243,7 +238,7 @@ int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;
 ### <a name="remarks"></a>Uwagi  
  Podczas przetwarzania wartość zwracana, formantu aktualizuje jego bieżącym położeniu oparte na podpis okna zaprzyjaźnionego. Formant zwraca błąd, jeśli nie ma żadnych zaprzyjaźnione okno lub jeśli podpis określa nieprawidłowy lub poza zakresem wartości.  
   
-##  <a name="getrange"></a>CSpinButtonCtrl::GetRange  
+##  <a name="getrange"></a>  CSpinButtonCtrl::GetRange  
  Pobiera górny i dolny limit (zakres) dla przycisku pokrętła.  
   
 ```  
@@ -259,7 +254,7 @@ void GetRange32(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *niższe*  
+ *Niższe*  
  Odwołanie do liczba całkowita, która odbiera dolnej granicy formantu.  
   
  *górny*  
@@ -271,7 +266,7 @@ void GetRange32(
 ### <a name="remarks"></a>Uwagi  
  Funkcja członkowska `GetRange32` pobiera zakres formantu przycisku pokrętła jako liczba całkowita 32-bitowych.  
   
-##  <a name="setaccel"></a>CSpinButtonCtrl::SetAccel  
+##  <a name="setaccel"></a>  CSpinButtonCtrl::SetAccel  
  Ustawia przyspieszenie dla przycisku pokrętła.  
   
 ```  
@@ -290,7 +285,7 @@ BOOL SetAccel(
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
   
-##  <a name="setbase"></a>CSpinButtonCtrl::SetBase  
+##  <a name="setbase"></a>  CSpinButtonCtrl::SetBase  
  Ustawia podstawa przycisku pokrętła.  
   
 ```  
@@ -307,7 +302,7 @@ int SetBase(int nBase);
 ### <a name="remarks"></a>Uwagi  
  Podstawową wartość określa, czy okno buddy zawiera numery cyfry dziesiętne lub szesnastkowe. Szesnastkowe nigdy nie mają znaku; Zalogowano liczb dziesiętnych.  
   
-##  <a name="setbuddy"></a>CSpinButtonCtrl::SetBuddy  
+##  <a name="setbuddy"></a>  CSpinButtonCtrl::SetBuddy  
  Ustawia buddy okna dla formantu przycisku pokrętła.  
   
 ```  
@@ -324,7 +319,7 @@ CWnd* SetBuddy(CWnd* pWndBuddy);
 ### <a name="remarks"></a>Uwagi  
  Pokrętła prawie zawsze jest skojarzony z innym oknie, takich jak kontrola edycji, który wyświetla zawartość. To inne okno jest nazywany "buddy" kontrolki pokrętła.  
   
-##  <a name="setpos"></a>CSpinButtonCtrl::SetPos  
+##  <a name="setpos"></a>  CSpinButtonCtrl::SetPos  
  Ustawia bieżącego położenia kontrolki przycisku pokrętła.  
   
 ```  
@@ -340,9 +335,9 @@ int SetPos32(int nPos);
  Poprzedniej pozycji (16-bitowych dokładność `SetPos`32- bitowy dokładności dla `SetPos32`).  
   
 ### <a name="remarks"></a>Uwagi  
- `SetPos32`Ustawia położenie 32-bitowych.  
+ `SetPos32` Ustawia położenie 32-bitowych.  
   
-##  <a name="setrange"></a>CSpinButtonCtrl::SetRange  
+##  <a name="setrange"></a>  CSpinButtonCtrl::SetRange  
  Ustawia górny i dolny limit (zakres) dla przycisku pokrętła.  
   
 ```  
@@ -357,8 +352,8 @@ void SetRange32(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nLower`i`nUpper`  
- Górny i dolny limit dla formantu. Dla `SetRange`, limit nie może być większa niż **UD_MAXVAL** lub mniej niż **UD_MINVAL**; Ponadto nie może przekraczać różnicę między dwiema granicami **UD_MAXVAL**. `SetRange32`nie nakłada żadnych ograniczeń na granicach; Użyj dowolnej liczby całkowite.  
+ `nLower` I `nUpper`  
+ Górny i dolny limit dla formantu. Dla `SetRange`, limit nie może być większa niż **UD_MAXVAL** lub mniej niż **UD_MINVAL**; Ponadto nie może przekraczać różnicę między dwiema granicami **UD_MAXVAL**. `SetRange32` nie nakłada żadnych ograniczeń na granicach; Użyj dowolnej liczby całkowite.  
   
 ### <a name="remarks"></a>Uwagi  
  Funkcja członkowska `SetRange32` ustawia zakresu 32-bitowego dla przycisku pokrętła.  

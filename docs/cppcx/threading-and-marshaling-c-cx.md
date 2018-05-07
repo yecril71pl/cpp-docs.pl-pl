@@ -1,11 +1,8 @@
 ---
-title: "Wątkowość i organizowanie (C + +/ CX) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Wątkowość i organizowanie (C + +/ CX) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - C4451
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - agility, C++/CX
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b1544f18d0d5206e178cf42705d9567fad2423c
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 60d96b46caea15b46e0d6300733efddb98a1b4da
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="threading-and-marshaling-ccx"></a>Wątkowość i organizowanie (C + +/ CX)
 W większość przypadków wystąpienia klas środowiska wykonawczego systemu Windows, takich jak standardowymi obiektami C++ są dostępne z dowolnego wątku. Takich klas są określane jako "agile". Jednak niewielkiej liczby klas środowiska wykonawczego systemu Windows, które są dostarczane z systemem Windows są z systemem innym niż agile i muszą być przetworzone więcej takich jak obiekty COM niż standardowymi obiektami C++. Nie trzeba być ekspert COM, używać klas agile, ale należy wziąć pod uwagę model wątkowości klasy i jego zachowanie marshalingu. Ten artykuł zawiera wskazówki dotyczące rzadkich scenariuszach, w których należy używać wystąpienia klasy agile i tła.  

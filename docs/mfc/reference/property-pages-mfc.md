@@ -1,13 +1,10 @@
 ---
-title: "Strony właściwości (MFC) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Strony właściwości (MFC) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e53260457470ef75ac706779cea323aa5b73da2a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0895cd22870b3a4a266e9be12f0000fae7f7101a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-pages-mfc"></a>Strony właściwości (MFC)
 Strony właściwości Wyświetl bieżące wartości właściwości specyficzne dla formantu OLE w można dostosowywać, interfejs graficzny służący do wyświetlania i edytowania dzięki obsłudze mechanizm mapowanie danych oparte na wymiana danych okna dialogowego (DDX).  
@@ -60,7 +55,7 @@ Strony właściwości Wyświetl bieżące wartości właściwości specyficzne d
 |[END_PROPPAGEIDS —](#end_proppageids)|Kończy się na liście identyfikatorów stron właściwości.|  
 |[PROPPAGEID —](#proppageid)|Deklaruje strony właściwości klasy formantu.|  
   
-##  <a name="ddp_cbindex"></a>Ddp_cbindex —  
+##  <a name="ddp_cbindex"></a>  Ddp_cbindex —  
  Wywołanie tej funkcji na stronie właściwości `DoDataExchange` funkcja synchronizacji wartość właściwości Liczba całkowita z indeksem bieżące zaznaczenie w polu kombi na stronie właściwości.  
   
 ```   
@@ -90,7 +85,7 @@ void AFXAPI DDP_CBIndex(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxctl.h  
   
-##  <a name="ddp_cbstring"></a>Ddp_cbstring —  
+##  <a name="ddp_cbstring"></a>  Ddp_cbstring —  
  Wywołanie tej funkcji na stronie właściwości `DoDataExchange` funkcja synchronizacji wartości właściwości ciągu z bieżącego zaznaczenia w polu kombi na stronie właściwości.  
   
 ```  
@@ -120,7 +115,7 @@ void AFXAPI DDP_CBString(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxctl.h  
   
-##  <a name="ddp_cbstringexact"></a>Ddp_cbstringexact —  
+##  <a name="ddp_cbstringexact"></a>  Ddp_cbstringexact —  
  Wywołanie tej funkcji na stronie właściwości `DoDataExchange` funkcji, aby zsynchronizować wartości właściwości ciągu, która dokładnie odpowiada bieżące zaznaczenie w polu kombi na stronie właściwości.  
   
 ```  
@@ -150,7 +145,7 @@ void AFXAPI DDP_CBStringExact(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxctl.h  
   
-##  <a name="ddp_check"></a>Ddp_check —  
+##  <a name="ddp_check"></a>  Ddp_check —  
  Wywołanie tej funkcji na stronie właściwości `DoDataExchange` funkcja synchronizacji wartości właściwości z kontrolkę pola wyboru skojarzonej właściwości strony.  
   
 ```   
@@ -180,7 +175,7 @@ void AFXAPI DDP_Check(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxctl.h  
   
-##  <a name="ddp_lbindex"></a>Ddp_lbindex —  
+##  <a name="ddp_lbindex"></a>  Ddp_lbindex —  
  Wywołanie tej funkcji na stronie właściwości `DoDataExchange` funkcja synchronizacji wartość właściwości Liczba całkowita z indeksem bieżące zaznaczenie w polu listy na stronie właściwości.  
   
 ```   
@@ -210,7 +205,7 @@ void AFXAPI DDP_LBIndex(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxctl.h  
   
-##  <a name="ddp_lbstring"></a>Ddp_lbstring —  
+##  <a name="ddp_lbstring"></a>  Ddp_lbstring —  
  Wywołanie tej funkcji na stronie właściwości `DoDataExchange` funkcja synchronizacji wartości właściwości ciągu z bieżące zaznaczenie w polu listy na stronie właściwości.  
   
 ```   
@@ -240,7 +235,7 @@ void AFXAPI DDP_LBString(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxctl.h  
   
-##  <a name="ddp_lbstringexact"></a>Ddp_lbstringexact —  
+##  <a name="ddp_lbstringexact"></a>  Ddp_lbstringexact —  
  Wywołanie tej funkcji na stronie właściwości `DoDataExchange` funkcji, aby zsynchronizować wartości właściwości ciągu, która dokładnie odpowiada bieżące zaznaczenie w polu listy na stronie właściwości.  
   
 ```   
@@ -270,7 +265,7 @@ void AFXAPI DDP_LBStringExact(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxctl.h  
   
-##  <a name="ddp_postprocessing"></a>Ddp_postprocessing —  
+##  <a name="ddp_postprocessing"></a>  Ddp_postprocessing —  
  Wywołanie tej funkcji na stronie właściwości `DoDataExchange` funkcji, aby zakończyć transferu wartości właściwości na stronie właściwości formantu po wartości właściwości są zapisywane.  
   
 ```   
@@ -289,7 +284,7 @@ void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxctl.h  
   
-##  <a name="ddp_radio"></a>Ddp_radio —  
+##  <a name="ddp_radio"></a>  Ddp_radio —  
  Wywołanie tej funkcji w formantu `DoPropExchange` funkcja synchronizacji wartości właściwości z kontrolkę przycisku radiowego skojarzonej właściwości strony.  
   
 ```   
@@ -319,7 +314,7 @@ void AFXAPI DDP_Radio(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxctl.h  
   
-##  <a name="ddp_text"></a>Ddp_text —  
+##  <a name="ddp_text"></a>  Ddp_text —  
  Wywołanie tej funkcji w formantu `DoDataExchange` funkcja synchronizacji wartości właściwości z skojarzonej właściwości formantu strony.  
   
 ```   
@@ -391,7 +386,7 @@ void AFXAPI DDP_Text(
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxctl.h  
   
-##  <a name="begin_proppageids"></a>BEGIN_PROPPAGEIDS —  
+##  <a name="begin_proppageids"></a>  BEGIN_PROPPAGEIDS —  
  Rozpoczyna się definicji listy identyfikatorów stron właściwości formantu.  
   
 ```   
@@ -413,7 +408,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxctl.h  
   
-##  <a name="end_proppageids"></a>END_PROPPAGEIDS —  
+##  <a name="end_proppageids"></a>  END_PROPPAGEIDS —  
  Kończy definicję listy identyfikator strony właściwości.  
   
 ```   
@@ -427,7 +422,7 @@ END_PROPPAGEIDS(class_name)
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxctl.h  
   
-##  <a name="proppageid"></a>PROPPAGEID —  
+##  <a name="proppageid"></a>  PROPPAGEID —  
  Dodaje strony właściwości do użycia przez formant OLE.  
   
 ```   

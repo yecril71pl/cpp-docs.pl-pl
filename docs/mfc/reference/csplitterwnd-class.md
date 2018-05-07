@@ -1,12 +1,9 @@
 ---
 title: Klasa CSplitterWnd | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSplitterWnd
@@ -81,17 +78,15 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 706425dd8d729937d310da9cc2f09eac8ec1ad57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 071eaeef6fbdbe4967d184936f5fb7bffb7786b7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csplitterwnd-class"></a>Klasa CSplitterWnd
 Udostępnia funkcję okna podziału okna, który zawiera wiele okienek.  
@@ -198,7 +193,7 @@ class CSplitterWnd : public CWnd
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [CCmdTarget —](../../mfc/reference/ccmdtarget-class.md)  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
@@ -207,7 +202,7 @@ class CSplitterWnd : public CWnd
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxext.h  
   
-##  <a name="activatenext"></a>CSplitterWnd::ActivateNext  
+##  <a name="activatenext"></a>  CSplitterWnd::ActivateNext  
  Wywoływane przez platformę, by wykonuje polecenie następne okienko lub poprzednie okienko.  
   
 ```  
@@ -221,7 +216,7 @@ virtual void ActivateNext(BOOL bPrev = FALSE);
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja członkowska jest polecenie wysokiego poziomu, który jest używany przez [CView](../../mfc/reference/cview-class.md) klasę, aby przekazać `CSplitterWnd` implementacji.  
   
-##  <a name="canactivatenext"></a>CSplitterWnd::CanActivateNext  
+##  <a name="canactivatenext"></a>  CSplitterWnd::CanActivateNext  
  Wywoływane przez platformę, by sprawdzić, czy polecenia następne okienko lub poprzednie okienko jest obecnie możliwe.  
   
 ```  
@@ -238,7 +233,7 @@ virtual BOOL CanActivateNext(BOOL bPrev = FALSE);
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja członkowska jest polecenie wysokiego poziomu, który jest używany przez [CView](../../mfc/reference/cview-class.md) klasę, aby przekazać `CSplitterWnd` implementacji.  
   
-##  <a name="create"></a>CSplitterWnd::Create  
+##  <a name="create"></a>  CSplitterWnd::Create  
  Aby utworzyć dynamiczne okno podziału, należy wywołać **Utwórz** funkcję elementu członkowskiego.  
   
 ```  
@@ -295,7 +290,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCWindowing#125](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_1.cpp)]  
   
-##  <a name="createscrollbarctrl"></a>CSplitterWnd::CreateScrollBarCtrl  
+##  <a name="createscrollbarctrl"></a>  CSplitterWnd::CreateScrollBarCtrl  
  Wywoływane przez platformę, by utworzyć udostępnionych pasek przewijania.  
   
 ```  
@@ -317,7 +312,7 @@ virtual BOOL CreateScrollBarCtrl(
 ### <a name="remarks"></a>Uwagi  
  Zastąpienie `CreateScrollBarCtrl` uwzględnienie dodatkowych formantów obok paska przewijania. Domyślnym zachowaniem jest utworzyć normalne formanty paska przewijania systemu Windows.  
   
-##  <a name="createstatic"></a>CSplitterWnd::CreateStatic  
+##  <a name="createstatic"></a>  CSplitterWnd::CreateStatic  
  Można utworzyć okna statyczny rozdzielacz, wywołaj `CreateStatic` funkcję elementu członkowskiego.  
   
 ```  
@@ -367,7 +362,7 @@ virtual BOOL CreateStatic(
   
  Zobacz "Podziału systemu Windows" w artykule [wiele typów dokumentów, widoków i okien ramowych](../../mfc/multiple-document-types-views-and-frame-windows.md), [29 Uwaga techniczna](../../mfc/tn029-splitter-windows.md)i `CSplitterWnd` Przegląd klasy, aby uzyskać więcej informacji na temat statyczne okna podziału.  
   
-##  <a name="createview"></a>CSplitterWnd::CreateView  
+##  <a name="createview"></a>  CSplitterWnd::CreateView  
  Tworzy panele dla okna dzielącego statycznych.  
   
 ```  
@@ -406,7 +401,7 @@ virtual BOOL CreateView(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCWindowing#4](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_2.cpp)]  
   
-##  <a name="csplitterwnd"></a>CSplitterWnd::CSplitterWnd  
+##  <a name="csplitterwnd"></a>  CSplitterWnd::CSplitterWnd  
  Wywołanie do skonstruowania `CSplitterWnd` obiektu.  
   
 ```  
@@ -416,7 +411,7 @@ CSplitterWnd();
 ### <a name="remarks"></a>Uwagi  
  Utworzyć `CSplitterWnd` obiektu w dwóch krokach. Najpierw należy wywołać konstruktora, który tworzy `CSplitterWnd` obiekt, a następnie wywołać [Utwórz](#create) funkcji członkowskiej, która tworzy okno podziału i dołącza go do `CSplitterWnd` obiektu.  
   
-##  <a name="deletecolumn"></a>CSplitterWnd::DeleteColumn  
+##  <a name="deletecolumn"></a>  CSplitterWnd::DeleteColumn  
  Usuwa kolumnę z okna podziału.  
   
 ```  
@@ -430,7 +425,7 @@ virtual void DeleteColumn(int colDelete);
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja elementu członkowskiego jest wywoływana przez platformę, by implementują logikę dynamiczne okno podziału (to znaczy, jeśli ma okna podziału **SPLS_DYNAMIC_SPLIT** styl). Można ją dostosować, wraz z funkcją wirtualną [CreateView](#createview), aby wdrożyć bardziej zaawansowane rozdzielaczy dynamicznych.  
   
-##  <a name="deleterow"></a>CSplitterWnd::DeleteRow  
+##  <a name="deleterow"></a>  CSplitterWnd::DeleteRow  
  Usuwa wiersz z okna podziału.  
   
 ```  
@@ -444,7 +439,7 @@ virtual void DeleteRow(int rowDelete);
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja elementu członkowskiego jest wywoływana przez platformę, by implementują logikę dynamiczne okno podziału (to znaczy, jeśli ma okna podziału **SPLS_DYNAMIC_SPLIT** styl). Można ją dostosować, wraz z funkcją wirtualną [CreateView](#createview), aby wdrożyć bardziej zaawansowane rozdzielaczy dynamicznych.  
   
-##  <a name="deleteview"></a>CSplitterWnd::DeleteView  
+##  <a name="deleteview"></a>  CSplitterWnd::DeleteView  
  Usuwa widok z okna podziału.  
   
 ```  
@@ -465,7 +460,7 @@ virtual void DeleteView(
   
  Ta funkcja elementu członkowskiego jest wywoływana przez platformę, by implementują logikę dynamiczne okno podziału (to znaczy, jeśli ma okna podziału **SPLS_DYNAMIC_SPLIT** styl). Można ją dostosować, wraz z funkcją wirtualną [CreateView](#createview), aby wdrożyć bardziej zaawansowane rozdzielaczy dynamicznych.  
   
-##  <a name="dokeyboardsplit"></a>CSplitterWnd::DoKeyboardSplit  
+##  <a name="dokeyboardsplit"></a>  CSplitterWnd::DoKeyboardSplit  
  Wykonuje polecenie podziału klawiatury, zwykle "podział okna".  
   
 ```  
@@ -478,7 +473,7 @@ virtual BOOL DoKeyboardSplit();
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja członkowska jest polecenie wysokiego poziomu, który jest używany przez [CView](../../mfc/reference/cview-class.md) klasę, aby przekazać `CSplitterWnd` implementacji.  
   
-##  <a name="doscroll"></a>CSplitterWnd::DoScroll  
+##  <a name="doscroll"></a>  CSplitterWnd::DoScroll  
  Wykonuje synchroniczne przewijanie podzielonych okien.  
   
 ```  
@@ -516,7 +511,7 @@ virtual BOOL DoScroll(
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja elementu członkowskiego jest wywoływana przez platformę, by wykonać Synchroniczne przewijanie podzielonych okien odebrania wiadomości przewijania widoku. Należy przesłonić, aby wymagać akcji przez użytkownika przed Synchroniczne przewijanie jest dozwolone.  
   
-##  <a name="doscrollby"></a>CSplitterWnd::DoScrollBy  
+##  <a name="doscrollby"></a>  CSplitterWnd::DoScrollBy  
  Przewija podzielone okna przez daną liczbę pikseli.  
   
 ```  
@@ -544,7 +539,7 @@ virtual BOOL DoScrollBy(
   
  Należy przesłonić, aby wymagać akcji przez użytkownika przed zezwoleniem przewijania.  
   
-##  <a name="getactivepane"></a>CSplitterWnd::GetActivePane  
+##  <a name="getactivepane"></a>  CSplitterWnd::GetActivePane  
  Określa aktywne okienko na podstawie fokusu lub aktywnego widoku w ramce.  
   
 ```  
@@ -566,7 +561,7 @@ virtual CWnd* GetActivePane(
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja elementu członkowskiego jest wywoływana przez platformę, by określić aktywne okienko okna podziału. Należy przesłonić, aby wymagać akcji przez użytkownika przed pobraniem aktywne okienko.  
   
-##  <a name="getcolumncount"></a>CSplitterWnd::GetColumnCount  
+##  <a name="getcolumncount"></a>  CSplitterWnd::GetColumnCount  
  Zwraca bieżącą liczbą kolumn w okienku.  
   
 ```  
@@ -576,7 +571,7 @@ int GetColumnCount() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca bieżącą liczbę kolumn w rozdzielacza. Dla statyczny rozdzielacz będzie to również maksymalną liczbę kolumn.  
   
-##  <a name="getcolumninfo"></a>CSplitterWnd::GetColumnInfo  
+##  <a name="getcolumninfo"></a>  CSplitterWnd::GetColumnInfo  
  Zwraca informacje o określonej kolumny.  
   
 ```  
@@ -596,7 +591,7 @@ void GetColumnInfo(
  `cxMin`  
  Odwołanie do `int` ustawioną Bieżąca minimalna szerokość kolumny.  
   
-##  <a name="getpane"></a>CSplitterWnd::GetPane  
+##  <a name="getpane"></a>  CSplitterWnd::GetPane  
  Zwraca okienko na określony wiersz i kolumnę.  
   
 ```  
@@ -615,7 +610,7 @@ CWnd* GetPane(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca okienko na określony wiersz i kolumnę. Okienko zwracane jest zwykle [CView](../../mfc/reference/cview-class.md)-klasy.  
   
-##  <a name="getrowcount"></a>CSplitterWnd::GetRowCount  
+##  <a name="getrowcount"></a>  CSplitterWnd::GetRowCount  
  Zwraca liczbę wierszy bieżącego okienka.  
   
 ```  
@@ -625,7 +620,7 @@ int GetRowCount() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca bieżącą liczbę wierszy w oknie podziału. Okna podziału statycznych będzie to również maksymalną liczbę wierszy.  
   
-##  <a name="getrowinfo"></a>CSplitterWnd::GetRowInfo  
+##  <a name="getrowinfo"></a>  CSplitterWnd::GetRowInfo  
  Zwraca informacje na określony wiersz.  
   
 ```  
@@ -648,7 +643,7 @@ void GetRowInfo(
 ### <a name="remarks"></a>Uwagi  
  Wywołanie tej funkcji Członkowskich, aby uzyskać informacje dotyczące określonego wiersza. `cyCur` Parametru jest wypełniony Bieżąca wysokość wiersza, a `cyMin` jest wypełniony minimalna wysokość wiersza.  
   
-##  <a name="getscrollstyle"></a>CSplitterWnd::GetScrollStyle  
+##  <a name="getscrollstyle"></a>  CSplitterWnd::GetScrollStyle  
  Zwraca styl udostępnionych pasek przewijania okna podziału.  
   
 ```  
@@ -664,7 +659,7 @@ DWORD GetScrollStyle() const;
   
  Jeśli zero, okna podziału nie zarządza aktualnie pasków przewijania udostępnionego.  
   
-##  <a name="idfromrowcol"></a>CSplitterWnd::IdFromRowCol  
+##  <a name="idfromrowcol"></a>  CSplitterWnd::IdFromRowCol  
  Pobiera obiekt podrzędny identyfikator okna dla okienka na określony wiersz i kolumnę.  
   
 ```  
@@ -689,7 +684,7 @@ int IdFromRowCol(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCWindowing#5](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_3.cpp)]  
   
-##  <a name="ischildpane"></a>CSplitterWnd::IsChildPane  
+##  <a name="ischildpane"></a>  CSplitterWnd::IsChildPane  
  Określa, czy `pWnd` jest obecnie okienko podrzędne tego okna podziału.  
   
 ```  
@@ -719,7 +714,7 @@ BOOL IsChildPane(
   
  Ta wersja jest już przestarzały i nie powinna być używana.  
   
-##  <a name="istracking"></a>CSplitterWnd::IsTracking  
+##  <a name="istracking"></a>  CSplitterWnd::IsTracking  
  Wywołanie tej funkcji elementu członkowskiego, aby określić, czy pasek podziału w oknie obecnie jest przenoszony.  
   
 ```  
@@ -729,7 +724,7 @@ BOOL IsTracking();
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli operacja rozdzielacz jest w toku; w przeciwnym razie 0.  
   
-##  <a name="ondrawsplitter"></a>CSplitterWnd::OnDrawSplitter  
+##  <a name="ondrawsplitter"></a>  CSplitterWnd::OnDrawSplitter  
  Renderuje Obraz okna podziału.  
   
 ```  
@@ -748,7 +743,7 @@ virtual void OnDrawSplitter(
   
 - **splitBox** rozdzielacza przeciągnij pole.  
   
-- `splitBar`Pasek, który znajduje się między dwoma podzielonych okien.  
+- `splitBar` Pasek, który znajduje się między dwoma podzielonych okien.  
   
 - **splitIntersection** przecięcie podzielonych okien. Ten element nie zostanie wywołany, gdy uruchomione w systemie Windows 95/98.  
   
@@ -762,7 +757,7 @@ virtual void OnDrawSplitter(
   
  Aby uzyskać więcej informacji na temat dynamiczne okna podziału, zobacz "Podziału systemu Windows" w artykule [wiele typów dokumentów, widoków i okien ramowych](../../mfc/multiple-document-types-views-and-frame-windows.md), [29 Uwaga techniczna](../../mfc/tn029-splitter-windows.md)i `CSplitterWnd` Przegląd klasy.  
   
-##  <a name="oninverttracker"></a>CSplitterWnd::OnInvertTracker  
+##  <a name="oninverttracker"></a>  CSplitterWnd::OnInvertTracker  
  Renderuje Obraz okna podziału być tym samym rozmiarze i kształcie co okno ramowe.  
   
 ```  
@@ -778,7 +773,7 @@ virtual void OnInvertTracker(const CRect& rect);
   
  Aby uzyskać więcej informacji na temat dynamiczne okna podziału, zobacz "Podziału systemu Windows" w artykule [wiele typów dokumentów, widoków i okien ramowych](../../mfc/multiple-document-types-views-and-frame-windows.md), [29 Uwaga techniczna](../../mfc/tn029-splitter-windows.md)i `CSplitterWnd` Przegląd klasy.  
   
-##  <a name="recalclayout"></a>CSplitterWnd::RecalcLayout  
+##  <a name="recalclayout"></a>  CSplitterWnd::RecalcLayout  
  Wywołanie w celu ponownego wyświetlenia okna podziału po dopasowaniu rozmiar wierszy lub kolumn.  
   
 ```  
@@ -793,7 +788,7 @@ virtual void RecalcLayout();
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CSplitterWnd::SetColumnInfo](#setcolumninfo).  
   
-##  <a name="setactivepane"></a>CSplitterWnd::SetActivePane  
+##  <a name="setactivepane"></a>  CSplitterWnd::SetActivePane  
  Ustawia okienko jako aktywne co w ramce.  
   
 ```  
@@ -818,7 +813,7 @@ virtual void SetActivePane(
   
  Określa okienku, podając wiersza i kolumny **lub** zapewniając `pWnd`.  
   
-##  <a name="setcolumninfo"></a>CSplitterWnd::SetColumnInfo  
+##  <a name="setcolumninfo"></a>  CSplitterWnd::SetColumnInfo  
  Wywołanie ustawiania informacji o określonej kolumny.  
   
 ```  
@@ -846,7 +841,7 @@ void SetColumnInfo(
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCWindowing#6](../../mfc/reference/codesnippet/cpp/csplitterwnd-class_4.cpp)]  
   
-##  <a name="setrowinfo"></a>CSplitterWnd::SetRowInfo  
+##  <a name="setrowinfo"></a>  CSplitterWnd::SetRowInfo  
  Wywołanie ustawiania informacji określony wiersz.  
   
 ```  
@@ -871,7 +866,7 @@ void SetRowInfo(
   
  Gdy w ramach Wyświetla okna podziału, układa okienkach kolumn i wierszy, zgodnie z ich idealne wymiarów, Praca z lewego górnego do prawego dolnego rogu obszaru klienckiego okna podziału.  
   
-##  <a name="setscrollstyle"></a>CSplitterWnd::SetScrollStyle  
+##  <a name="setscrollstyle"></a>  CSplitterWnd::SetScrollStyle  
  Określa, że nowy styl przewijania okna podziału udostępnionych pasek przewijania pomocy technicznej.  
   
 ```  
@@ -889,7 +884,7 @@ void SetScrollStyle(DWORD dwStyle);
 ### <a name="remarks"></a>Uwagi  
  Po utworzeniu paska przewijania nie zostanie on zniszczona nawet wtedy, gdy `SetScrollStyle` jest wywoływana bez tego stylu; zamiast tego są ukryte tych pasków przewijania. Dzięki temu paski przewijania zachować ich stanu, nawet jeśli są ukryte. Po wywołaniu `SetScrollStyle` należy wywołać [RecalcLayout](#recalclayout) wszystkie zmiany zaczęły obowiązywać.  
   
-##  <a name="splitcolumn"></a>CSplitterWnd::SplitColumn  
+##  <a name="splitcolumn"></a>  CSplitterWnd::SplitColumn  
  Wskazuje gdzie okno ramowe dzieli się pionowo.  
   
 ```  
@@ -904,11 +899,11 @@ virtual BOOL SplitColumn(int cxBefore);
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego jest wywoływana po utworzeniu okna dzielącego pionowej. `SplitColumn`wskazuje domyślną lokalizację, gdzie nastąpi podział.  
+ Ta funkcja elementu członkowskiego jest wywoływana po utworzeniu okna dzielącego pionowej. `SplitColumn` wskazuje domyślną lokalizację, gdzie nastąpi podział.  
   
- `SplitColumn`Metoda jest wywoływana przez platformę, by implementują logikę dynamiczne okno podziału (to znaczy, jeśli ma okna podziału **SPLS_DYNAMIC_SPLIT** styl). Można ją dostosować, wraz z funkcją wirtualną [CreateView](#createview), aby wdrożyć bardziej zaawansowane rozdzielaczy dynamicznych.  
+ `SplitColumn` Metoda jest wywoływana przez platformę, by implementują logikę dynamiczne okno podziału (to znaczy, jeśli ma okna podziału **SPLS_DYNAMIC_SPLIT** styl). Można ją dostosować, wraz z funkcją wirtualną [CreateView](#createview), aby wdrożyć bardziej zaawansowane rozdzielaczy dynamicznych.  
   
-##  <a name="splitrow"></a>CSplitterWnd::SplitRow  
+##  <a name="splitrow"></a>  CSplitterWnd::SplitRow  
  Wskazuje gdzie okno ramowe dzieli się poziomo.  
   
 ```  
@@ -923,11 +918,11 @@ virtual BOOL SplitRow(int cyBefore);
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego jest wywoływana po utworzeniu okna rozdzielacz poziomy. `SplitRow`wskazuje domyślną lokalizację, gdzie nastąpi podział.  
+ Ta funkcja elementu członkowskiego jest wywoływana po utworzeniu okna rozdzielacz poziomy. `SplitRow` wskazuje domyślną lokalizację, gdzie nastąpi podział.  
   
- `SplitRow`Metoda jest wywoływana przez platformę, by implementują logikę dynamiczne okno podziału (to znaczy, jeśli ma okna podziału **SPLS_DYNAMIC_SPLIT** styl). Można ją dostosować, wraz z funkcją wirtualną [CreateView](#createview), aby wdrożyć bardziej zaawansowane rozdzielaczy dynamicznych.  
+ `SplitRow` Metoda jest wywoływana przez platformę, by implementują logikę dynamiczne okno podziału (to znaczy, jeśli ma okna podziału **SPLS_DYNAMIC_SPLIT** styl). Można ją dostosować, wraz z funkcją wirtualną [CreateView](#createview), aby wdrożyć bardziej zaawansowane rozdzielaczy dynamicznych.  
   
-##  <a name="ondraw"></a>CSplitterWnd::OnDraw  
+##  <a name="ondraw"></a>  CSplitterWnd::OnDraw  
  Wywoływane przez platformę, by narysować okna podziału.  
   
 ```  
