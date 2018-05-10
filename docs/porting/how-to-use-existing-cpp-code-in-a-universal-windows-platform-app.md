@@ -1,27 +1,22 @@
 ---
-title: "Porady: używanie istniejącego kodu C++ w aplikacji platformy uniwersalnej systemu Windows | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Porady: używanie istniejącego kodu C++ w aplikacji platformy uniwersalnej systemu Windows | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67bed0f5cc3ad07ae7b726b9e120aa56120186e6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a3f8cb26a66fce9c4b87822ffbfa4005f3a2e758
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Porady: używanie istniejącego kodu C++ w aplikacji platformy uniwersalnej systemu Windows
 Najprostszym sposobem pobrania programu pulpitu w środowisku platformy uniwersalnej systemu Windows jest prawdopodobnie użycie technologii Mostek pulpitu. Obejmują one konwertera aplikacji pulpitu będzie pakietu istniejącej aplikacji jako aplikację platformy uniwersalnej systemu Windows bez kodu wymagane zmiany. Aby uzyskać więcej informacji, zobacz [przełączyć aplikację pulpitu do systemu Windows platformy Uniwersalnej z Mostek pulpitu](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root).
@@ -63,7 +58,7 @@ Pozostała część tego tematu opisano sposób portu biblioteki języka C++ (bi
   
 3.  [Eksportowanie biblioteki C++ do składnika środowiska wykonawczego systemu Windows](#BK_WinRTComponent)  
   
-##  <a name="BK_Win32DLL">Przy użyciu Win32 biblioteki DLL w aplikacji platformy uniwersalnej systemu Windows</a>  
+##  <a name="BK_Win32DLL"></a> Przy użyciu Win32 biblioteki DLL w aplikacji platformy uniwersalnej systemu Windows  
  Dla lepszej bezpieczeństwa i niezawodności uniwersalnych aplikacji systemu Windows uruchamiana w środowisku ograniczeniami środowiska uruchomieniowego, nie można po prostu użyć dowolnego natywnej biblioteki DLL sposób, jak w klasycznej aplikacji pulpitu systemu Windows. Jeśli masz kod źródłowy dla biblioteki DLL może portu kod, aby była uruchamiana na platformy uniwersalnej systemu Windows. Należy najpierw zmienić kilka ustawień projektu i metadanych pliku projektu do identyfikowania projektu jako projektu platformy uniwersalnej systemu Windows. Należy skompilować kod biblioteki przy użyciu opcji /ZW, dzięki czemu C + +/ CX. Niektóre wywołania interfejsu API nie są dozwolone w aplikacji platformy uniwersalnej systemu Windows ze względu na bardziej restrykcyjne kontrolki skojarzone z tym środowisku. Zobacz [Win32 i COM dla środowiska wykonawczego systemu Windows aplikacji i uniwersalnych systemu Windows aplikacji platformy Uniwersalnej](https://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
   
  Poniższa procedura ma zastosowanie w przypadku, gdy masz natywnej biblioteki DLL, która udostępnia funkcje przy użyciu atrybutu __declspec(dllexport).  
@@ -198,7 +193,7 @@ Pozostała część tego tematu opisano sposób portu biblioteki języka C++ (bi
   
     ```  
   
-##  <a name="BK_StaticLib">Przy użyciu natywnej biblioteki statycznej C++ w aplikacji platformy uniwersalnej systemu Windows</a>  
+##  <a name="BK_StaticLib"></a> Przy użyciu natywnej biblioteki statycznej C++ w aplikacji platformy uniwersalnej systemu Windows  
  Można używać natywnej biblioteki statycznej C++ w projekcie platformy uniwersalnej systemu Windows, ale istnieją pewne ograniczenia i pod uwagę. Początek przeczytaj to [tematu](https://msdn.microsoft.com/library/hh771041.aspx) o bibliotekach statycznych w języku C + +/ CX. Kod macierzysty w bibliotece statycznej można korzystać z aplikacji platformy uniwersalnej systemu Windows, ale nie zaleca się tworzenia typów publicznych ref w bibliotece statycznej. Jeśli kompilacja biblioteki statycznej z opcją /ZW, ostrzega bibliotekarza (faktycznie konsolidator kamuflażu):  
   
 ```  
@@ -219,7 +214,7 @@ LNK4264: archiving object file compiled with /ZW into a static library; note tha
   
      Nie dodawaj odwołanie w **odwołania** w węźle **Eksploratora rozwiązań**. Ten mechanizm działa tylko dla składników środowiska wykonawczego systemu Windows.  
   
-##  <a name="BK_WinRTComponent">Eksportowanie biblioteki C++ do składnika środowiska wykonawczego systemu Windows</a>  
+##  <a name="BK_WinRTComponent"></a> Eksportowanie biblioteki C++ do składnika środowiska wykonawczego systemu Windows  
  Jeśli chcesz korzystać z natywnych interfejsów API w bibliotece statycznej z aplikacji platformy uniwersalnej systemu Windows, a masz kod źródłowy dla natywnej biblioteki, można portu kod do składnika środowiska wykonawczego systemu Windows. Nie będzie już bibliotekę statyczną, będzie on biblioteki DLL. Może być używany w dowolnej aplikacji platformy uniwersalnej systemu Windows w języku C++, ale inaczej niż w przypadku biblioteki statycznej, można dodać typy ref i innych C + +/ CX konstrukcje, które są dostępne dla klientów w kodzie do aplikacji platformy uniwersalnej systemu Windows, niezależnie od języka. W związku z tym są dostępne następujące typy C#, Visual Basic lub JavaScript.  Podstawowa procedura polega na Utwórz projekt składnika środowiska wykonawczego systemu Windows, skopiuj do niego kod biblioteki statycznej i rozwiązać wszelkie błędy, które wynikają z przenoszenie kodu z kompilacji standard C++ do kompilacji /ZW.  
   
 #### <a name="to-port-a-c-library-to-a-windows-runtime-component"></a>Do portu biblioteki C++ do składnika środowiska wykonawczego systemu Windows  

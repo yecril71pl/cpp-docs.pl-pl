@@ -1,13 +1,10 @@
 ---
-title: "Wstępnie zdefiniowane klawisze skrótów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Wstępnie zdefiniowane klawisze skrótów | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.accelerator
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - keyboard shortcuts
 - keyboard shortcuts, predefined
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b04ab7fafba9f17aeba4f15f937972389467593c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa5b42fc846f3b4f21dc8045e67d8ebc347601ea
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="predefined-accelerator-keys"></a>Wstępnie zdefiniowane klawisze skrótów
 Istnieje szereg wstępnie zdefiniowane klawisze skrótów, które mogą być częścią projekt aplikacji systemu Windows. Niektóre z tych klawiszy wirtualnych są środowiska systemu Windows. Inne przeglądarki pomocy technicznej lub aplikacje Unicode. Można użyć dowolnej z tych kluczy w dowolnym akceleratora.  

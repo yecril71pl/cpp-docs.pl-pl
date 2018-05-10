@@ -1,13 +1,10 @@
 ---
 title: interior_ptr (C + +/ CLI) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - stdcli::language::interior_ptr
 - interior_ptr_cpp
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - interior_ptr keyword [C++]
 ms.assetid: 25160f74-569e-492d-9e3c-67ece7486baa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cd3e79306cb97413a833e039b0b333cb85b8e56d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a83182151ccb85b920a37713b70df53b383b8919
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
 *Wskaźnik wewnętrzny* deklaruje wskaźnik do wewnątrz typu odwołania, ale nie samego obiektu. Wskaźnik wewnętrzny może wskazywać dojścia odwołania, typu wartości, dojście do typu opakowanego, elementu członkowskiego typu zarządzanego lub element tablicy zarządzanej.  
@@ -61,7 +56,7 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
  *var*  
  Nazwa `interior_ptr` zmiennej.  
   
- *Inicjator*  
+ *initializer*  
  Element członkowski typu referencyjnego, element tablicy zarządzanej lub inny obiekt, który można przypisać do wskaźnika natywnego.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -73,11 +68,11 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
   
  Ponieważ wewnętrznych wskaźników istnieje tylko na stosie, pobieranie adresu wskaźnik wewnętrzny daje niezarządzanego wskaźnika.  
   
- `interior_ptr`niejawna konwersja na ma `bool`, dzięki czemu do wykorzystania w instrukcji warunkowej.  
+ `interior_ptr` niejawna konwersja na ma `bool`, dzięki czemu do wykorzystania w instrukcji warunkowej.  
   
  Informacje na temat sposobu zadeklarować wskaźnik wewnętrzny wskazującą na obiekt nie może zostać przeniesiona na stercie zbierane pamięci, zobacz [pin_ptr](../windows/pin-ptr-cpp-cli.md).  
   
- `interior_ptr`znajduje się w przestrzeni nazw cli.  Zobacz [platformy, domyślna i cli przestrzenie nazw](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) Aby uzyskać więcej informacji.  
+ `interior_ptr` znajduje się w przestrzeni nazw cli.  Zobacz [platformy, domyślna i cli przestrzenie nazw](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) Aby uzyskać więcej informacji.  
   
  Aby uzyskać więcej informacji o wewnętrznych wskaźników zobacz  
   

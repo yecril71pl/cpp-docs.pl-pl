@@ -1,13 +1,10 @@
 ---
 title: Eksportowanie z systemu UNIX do Win32 | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - porting to Win32 [C++]
 - Win32 applications [C++], migrating from UNIX
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b10ee9e9b5a53d6f9f936c4bc158db8ebfb6be13
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 628d032ff00205b3f511a613a866f025d62dc50a
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="porting-from-unix-to-win32"></a>Eksportowanie z systemu UNIX do Win32
 Podczas migrowania aplikacji z systemu UNIX do systemu Windows, masz kilka opcji:  
@@ -48,11 +43,11 @@ Podczas migrowania aplikacji z systemu UNIX do systemu Windows, masz kilka opcji
 ### <a name="unix-migration-guides"></a>Przewodniki migracji systemu UNIX  
  Przewodnik migracji aplikacji niestandardowe UNIX zawiera pomoc techniczną po migracji kodu z systemu UNIX do środowiska Win32.  
   
- [http://go.microsoft.com/fwlink/p/?LinkId=95428](http://go.microsoft.com/fwlink/p/?linkid=95428)  
+ [http://go.microsoft.com/fwlink/p/?linkid=95428](http://go.microsoft.com/fwlink/p/?linkid=95428)  
   
  Przewodnik po programie Project migracji Unix uzupełnia Przewodnik migracji aplikacji niestandardowe UNIX przez zapewnienie wysokiego poziomu pomocy w przypadku migrowania projektów znacznej z systemu UNIX do systemu Win32. Przewodnik zawiera wskazówki dotyczące zagadnień do uwzględnienia na każdym etapie migracji projektu. Przewodnik może zostać pobrana z:  
   
- [http://go.microsoft.com/fwlink/p/?LinkId=20012](http://go.microsoft.com/fwlink/p/?linkid=20012)  
+ [http://go.microsoft.com/fwlink/p/?linkid=20012](http://go.microsoft.com/fwlink/p/?linkid=20012)  
   
 ### <a name="microsoft-windows-services-for-unix-sfu"></a>Usługi systemu Microsoft Windows dla systemu UNIX (SFU)  
  Microsoft Windows Services dla systemu UNIX (SFU) udostępnia szeroką gamę między platformami usługi integracji systemu Windows w istniejących środowiskach systemu UNIX. Usługi dla systemu UNIX zapewnia udostępniania plików, dostępu zdalnego i administracji, synchronizacji haseł, wspólnego zarządzania katalogu, ze wspólnego zestawu narzędzi i powłoki.  
@@ -65,9 +60,9 @@ Podczas migrowania aplikacji z systemu UNIX do systemu Windows, masz kilka opcji
  Inna witryna firmy zapewnienie programów obsługi przenoszenia systemu UNIX do Win32.  
   
 ### <a name="c-boost-web-site"></a>Zwiększanie wyniku C++ witryny sieci Web  
- [http://Boost.sourceforge.NET/Regression-Logs/](http://boost.sourceforge.net/regression-logs/)  
+ [http://boost.sourceforge.net/regression-logs/](http://boost.sourceforge.net/regression-logs/)  
   
- [http://Boost.sourceforge.NET/Boost-build2/](http://boost.sourceforge.net/boost-build2/)  
+ [http://boost.sourceforge.net/boost-build2/](http://boost.sourceforge.net/boost-build2/)  
   
 ## <a name="porting-unix-applications-directly-to-win32"></a>Eksportowanie aplikacji systemu UNIX bezpośrednio do systemu Win32  
  Inną opcją jest przenoszenie aplikacji systemu UNIX bezpośrednio do systemu Win32. Przy użyciu biblioteki ANSI C/C++ i komercyjnych biblioteki kompilatora C, wiele tradycyjnego systemu wywołania zależał od aplikacji systemu UNIX są dostępne w aplikacji Win32.  

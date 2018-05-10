@@ -1,13 +1,10 @@
 ---
-title: "Wstawianie formantu ActiveX — okno dialogowe | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Wstawianie formantu ActiveX — okno dialogowe | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog.insertActiveXControls
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - Insert ActiveX Control dialog box
 - ActiveX controls [C++], adding to dialog boxes
 ms.assetid: 06638ea3-0726-40da-a989-9b89292d0e3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 148bdb20ed274b5bb3a9365f1e4c9fad160667c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2e0b25b7457ed11e297c3a4793bee4c93fc481d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="insert-activex-control-dialog-box"></a>Wstawianie kontrolki ActiveX — Okno dialogowe
 To okno dialogowe umożliwia [wstawianie formantów ActiveX do dialogowym](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md) podczas używania [Edytor okien dialogowych](../windows/dialog-editor.md).  
@@ -35,7 +30,7 @@ To okno dialogowe umożliwia [wstawianie formantów ActiveX do dialogowym](../wi
  **Kontrolki ActiveX**  
  Wyświetla listę formantów Active X. Wstawianie formantu z tego okna dialogowego nie generuje klasy otoki. Klasa otoki, należy użyć [widoku klasy](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925) ją stworzyć (Aby uzyskać więcej informacji, zobacz [Dodawanie klasy](../ide/adding-a-class-visual-cpp.md)). Jeśli w tym oknie dialogowym nie ma formantu ActiveX, spróbuj zainstalować kontroli zgodnie z instrukcjami dostawcy.  
   
- **Ścieżka**  
+ **Path**  
  Wyświetla plik, w którym znajduje się Kontrolka ActiveX.  
   
  Formanty można umieścić w oknie przybornika, by mieć łatwy dostęp. Aby uzyskać więcej informacji, zobacz [Dostosowywanie przybornika — okno dialogowe](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb).  

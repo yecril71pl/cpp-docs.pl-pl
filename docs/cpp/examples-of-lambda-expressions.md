@@ -1,34 +1,29 @@
 ---
-title: "Przykłady wyrażeń Lambda | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Przykłady wyrażeń Lambda | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3177896b8cfdff78b0af2aeb40873f31099ce7d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c83802dcc7382040d3b9f40bd0bbc2fe13d076f1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="examples-of-lambda-expressions"></a>Przykłady wyrażeń lambda
 W tym artykule przedstawiono sposób stosowania wyrażeń lambda w programach. Aby zapoznać się z omówieniem wyrażeń lambda, zobacz [wyrażenia Lambda](../cpp/lambda-expressions-in-cpp.md). Aby uzyskać więcej informacji o strukturze wyrażenia lambda, zobacz [składnia wyrażenia Lambda](../cpp/lambda-expression-syntax.md).  
   
-##  <a name="declaringLambdaExpressions"></a>Deklarowanie wyrażenia Lambda  
+##  <a name="declaringLambdaExpressions"></a> Deklarowanie wyrażenia Lambda  
   
 ### <a name="example-1"></a>Przykład 1  
  Ponieważ jest typu wyrażenia lambda, można przypisać go do `auto` zmiennej lub [funkcja](../standard-library/function-class.md) obiektów, jak pokazano poniżej:  
@@ -109,7 +104,7 @@ int main()
   
  [[w tym artykule](#top)]  
   
-##  <a name="callingLambdaExpressions"></a>Wywoływanie wyrażenia Lambda  
+##  <a name="callingLambdaExpressions"></a> Wywoływanie wyrażenia Lambda  
  Wyrażenie lambda można wywołać natychmiast, jak pokazano w następnym fragmencie kodu programu. Drugi fragment kodu przedstawia sposób przekazania wyrażenia lambda jako argumentu do algorytmów standardowa biblioteka C++ takich jak `find_if`.  
   
 ### <a name="example-1"></a>Przykład 1  
@@ -185,7 +180,7 @@ The first even number in the list is 42.
   
  [[w tym artykule](#top)]  
   
-##  <a name="nestingLambdaExpressions"></a>Zagnieżdżenia wyrażeń Lambda  
+##  <a name="nestingLambdaExpressions"></a> Zagnieżdżenia wyrażeń Lambda  
   
 ### <a name="example"></a>Przykład  
  Można zagnieżdżać wyrażenia lambda wewnątrz siebie, jak pokazano w poniższym przykładzie. Wewnętrzne wyrażenie lambda mnoży swój argument przez 2 i zwraca wynik. Wyrażenie zewnętrzne lambda wywołuje wyrażenie wewnętrzne lambda z jego argumentem i dodaje do wyniku 3.  
@@ -222,7 +217,7 @@ int main()
   
  [[w tym artykule](#top)]  
   
-##  <a name="higherOrderLambdaExpressions"></a>Funkcje wyższego rzędu Lambda  
+##  <a name="higherOrderLambdaExpressions"></a> Funkcje wyższego rzędu Lambda  
   
 ### <a name="example"></a>Przykład  
  Wiele języków programowania obsługuje pojęcie *funkcja wyższego rzędu.* Funkcja wyższego rzędu jest wyrażeniem lambda, które pobiera inne wyrażenie lambda jako argument, lub które zwraca wyrażenie lambda. Można użyć [funkcja](../standard-library/function-class.md) klasę, aby włączyć wyrażenia lambda C++ zachowuje się jak funkcja wyższego rzędu. W poniższym przykładzie przedstawiono wyrażenie lambda, które zwraca `function` obiekt i wyrażenia lambda, która przyjmuje `function` obiektu jako jej argument.  
@@ -271,7 +266,7 @@ int main()
   
  [[w tym artykule](#top)]  
   
-##  <a name="methodLambdaExpressions"></a>Za pomocą wyrażenia Lambda w funkcji  
+##  <a name="methodLambdaExpressions"></a> Za pomocą wyrażenia Lambda w funkcji  
   
 ### <a name="example"></a>Przykład  
  Można użyć wyrażenia lambda w treści funkcji. Wyrażenie lambda ma dostęp do dowolnej funkcji lub członka danych dostępnym dla funkcji otaczającej. Można jawnie lub niejawnie przechwytywać `this` wskaźnika w celu zapewnienia dostępu do funkcji i danych elementów członkowskich klasy otaczającej.  
@@ -366,7 +361,7 @@ int main()
   
  [[w tym artykule](#top)]  
   
-##  <a name="templateLambdaExpressions"></a>Z szablonami za pomocą wyrażenia Lambda  
+##  <a name="templateLambdaExpressions"></a> Z szablonami za pomocą wyrażenia Lambda  
   
 ### <a name="example"></a>Przykład  
  Ponieważ wyrażenia lambda mają typ, można ich użyć z szablonami języka C++. W poniższym przykładzie przedstawiono `negate_all` i `print_all` funkcji. `negate_all` Jednoargumentowego ma zastosowanie funkcja `operator-` do każdego elementu w `vector` obiektu. `print_all` Funkcja wyświetla każdy element `vector` obiektu do konsoli.  
@@ -430,7 +425,7 @@ After negate_all():
   
  [[w tym artykule](#top)]  
   
-##  <a name="ehLambdaExpressions"></a>Obsługa wyjątków  
+##  <a name="ehLambdaExpressions"></a> Obsługa wyjątków  
   
 ### <a name="example"></a>Przykład  
  Treść wyrażenia lambda kieruje się regułami dla obsługi wyjątków strukturalnych (SEH) i obsługi wyjątków C++. Można obsługiwać zgłoszony wyjątek w ciele wyrażenia lambda lub odroczyć obsługę wyjątków do zasięgu otaczającego. W poniższym przykładzie użyto `for_each` funkcji i wyrażenia lambda, aby wypełnić `vector` obiekt o wartości innej. Używa `try` / `catch` bloku do obsługi nieprawidłowy dostęp do pierwszego wektora.  
@@ -484,7 +479,7 @@ Caught 'invalid vector<T> subscript'.
   
  [[w tym artykule](#top)]  
   
-##  <a name="managedLambdaExpressions"></a>Za pomocą wyrażenia Lambda z typy zarządzane (C + +/ CLI)  
+##  <a name="managedLambdaExpressions"></a> Za pomocą wyrażenia Lambda z typy zarządzane (C + +/ CLI)  
   
 ### <a name="example"></a>Przykład  
  Klauzula przechwytywania wyrażenia lambda nie może zawierać zmiennej, która ma typ zarządzany. Jednak do listy parametrów wyrażenia lambda można przekazać argument, który ma typ zarządzany. Poniższy przykład zawiera wyrażenie lambda, która przechwytuje niezarządzane zmiennej lokalnej `ch` według wartości i ma <xref:System.String?displayProperty=fullName> obiektu jako jego parametr.  

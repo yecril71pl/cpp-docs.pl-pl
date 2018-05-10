@@ -1,28 +1,23 @@
 ---
-title: "Porady: Użyj winmdidl.exe i midlrt.exe, aby utworzyć pliki .h z metadanych systemu windows | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Porady: Użyj winmdidl.exe i midlrt.exe, aby utworzyć pliki .h z metadanych systemu windows | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cb17a3c60f7b3f9271ed5ff569d9cd139ce80fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 06fef7449a540fbd3cddc2d38c9ce7483a7b5d55
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Porady: Użyj winmdidl.exe i midlrt.exe, aby utworzyć pliki .h z metadanych systemu Windows
 Winmdidl.exe i midlrt.exe włączyć współdziałanie COM poziom natywnego kodu C++ i składników środowiska wykonawczego systemu Windows. Winmdidl.exe przyjmuje jako dane wejściowe plik winmd, który zawiera metadanych dla składnika środowiska wykonawczego systemu Windows i plik IDL. Midlrt.exe konwertuje tego pliku IDL pliki nagłówkowe, używające kod w języku C++. Zarówno narzędzia, uruchom w wierszu polecenia.  
@@ -54,7 +49,7 @@ Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:fil
  Wyświetla całkowity czas wykonania w danych wyjściowych konsoli.  
   
  firmy:\<dir >  
- Określa katalog danych wyjściowych. Jeśli ścieżka zawiera spacje, użyj cudzysłowów. Domyślny katalog wyjściowy jest  *\<dysku >*: \Users\\*\<nazwa użytkownika >*\AppData\Local\VirtualStore\Program pliki (x86) \Microsoft Visual Studio 12.0\\.  
+ Określa katalog danych wyjściowych. Jeśli ścieżka zawiera spacje, użyj cudzysłowów. Domyślny katalog wyjściowy jest  *\<dysku >*: \Users\\*\<nazwa użytkownika >* \AppData\Local\VirtualStore\Program pliki (x86) \Microsoft Visual Studio 12.0\\.  
   
  `/banner:<file>`  
  Określa plik, który zawiera niestandardowy tekst dołączana do domyślnego komunikat o prawach autorskich i numer wersji winmdidl u góry pliku .idl wygenerowany. Jeśli ścieżka zawiera spacje, użyj cudzysłowów.  

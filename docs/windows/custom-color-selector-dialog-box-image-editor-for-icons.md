@@ -1,13 +1,10 @@
 ---
-title: "Okno dialogowe selektora niestandardowego koloru (edytor obrazów dla ikon) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Okno dialogowe selektora niestandardowego koloru (edytor obrazów dla ikon) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.customcolorselector
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - Custom Color Selector dialog box
 - colors, image
 ms.assetid: 534d0c2a-b3f6-4f09-9346-3bbf85bb3dd7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b85b6b650fcff46371e86e61ab96e9d864c4c53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 76a278ad0a1ba67c7c8f9fb86d20ca842b92b1e2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="custom-color-selector-dialog-box-image-editor-for-icons"></a>Okno dialogowe wybierania niestandardowego koloru (Edytor obrazów dla ikon)
 To okno dialogowe pozwala dostosować kolory używane w przypadku obrazu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie lub zmiana kolorów](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
@@ -50,13 +45,13 @@ To okno dialogowe pozwala dostosować kolory używane w przypadku obrazu. Aby uz
  **Jaskr.**  
  Wyświetla listę jasność (jasność) definiowanej koloru. Wartości z zakresu od 0 do 240.  
   
- **Czerwony**  
+ **czerwony**  
  Określa wartość red definiowanej koloru. Wartości z zakresu od 0 do 255.  
   
- **Zielony**  
+ **zielony**  
  Określa wartość zielony definiowanej koloru. Wartości z zakresu od 0 do 255.  
   
- **Niebieski**  
+ **niebieski**  
  Określa wartość niebieski definiowanej koloru. Wartości z zakresu od 0 do 255.  
   
 ## <a name="requirements"></a>Wymagania  

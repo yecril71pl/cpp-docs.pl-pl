@@ -1,13 +1,10 @@
 ---
 title: SafeLessThan | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeLessThan
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeLessThan function
 ms.assetid: 9d85bc0d-8d94-4d59-9b72-ef3c63a120a0
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c490f02f6c27d517095ab3f75a31bb03fe14f63
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed6f114d13b006425cd3e94e898b2fe924ec732d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safelessthan"></a>SafeLessThan
 Określa, czy jeden numer jest mniejsza niż innym.  
@@ -42,14 +37,14 @@ inline bool SafeLessThan (
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in]`t`  
+ [in] `t`  
  Pierwsza liczba. To musi być typu T.  
   
- [in]`u`  
+ [in] `u`  
  Drugi numer. Musi to być typ U.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli `t` jest mniejsza niż `u`; w przeciwnym razie `false`.  
+ `true` Jeśli `t` jest mniejsza niż `u`; w przeciwnym razie `false`.  
   
 ## <a name="remarks"></a>Uwagi  
  Ta metoda zwiększa operator porównania standardowych, ponieważ `SafeLessThan` można porównać dwa różne typy numer.  

@@ -1,13 +1,10 @@
 ---
-title: "Wybieranie tła przezroczystego lub nieprzezroczystego (edytor obrazów dla ikon) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Wybieranie tła przezroczystego lub nieprzezroczystego (edytor obrazów dla ikon) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,25 +19,23 @@ helpviewer_keywords:
 - transparency, background
 - transparent backgrounds, images
 ms.assetid: 61b743d9-c86b-405d-9a81-0806431b4363
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4e73ac7122b31ab6880d7d27387937113dee70f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 244e6a63bc16b5e83bb8419dbe1b53741d566e56
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>Wybieranie tła przezroczystego lub nieprzezroczystego (Edytor obrazów dla ikon)
 Podczas przenoszenia lub skopiowane z obrazu pikseli w zaznaczeniu, które odpowiadają bieżący kolor tła są domyślnie przezroczyste; nie ograniczają pikseli w lokalizacji docelowej.  
   
  Można przełączyć na tło nieprzezroczyste przezroczyste tło (ustawienie domyślne) i z powrotem. Podczas używania narzędzia wyboru **przezroczyste tło** i **tło nieprzezroczyste** dostępne są opcje w selektorze opcja **edytor obrazów** paska narzędzi (jak pokazano poniżej).  
   
- ![Opcje tła &#45; przezroczystości](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")  
+ ![Opcje w tle &#45; przezroczystości](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")  
 Przezroczyste i nieprzezroczyste opcji paska narzędzi edytora obrazów  
   
 ### <a name="to-switch-between-a-transparent-and-opaque-background"></a>Aby przełączyć między tło przezroczyste i nieprzezroczyste  
@@ -51,7 +46,7 @@ Przezroczyste i nieprzezroczyste opcji paska narzędzi edytora obrazów
   
     -   **Przezroczyste tło T**: istniejący obraz pokazuje za pośrednictwem części zaznaczenie zgodne bieżący kolor tła.  
   
- \-lub -  
+ \- lub -  
   
 -   Na **obrazu** menu, wybierz lub wyczyść pole wyboru **Rysowanie nieprzezroczystych**.  
   

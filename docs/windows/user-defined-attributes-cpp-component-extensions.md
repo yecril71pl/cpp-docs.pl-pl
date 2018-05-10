@@ -1,31 +1,26 @@
 ---
-title: "Zdefiniowane przez użytkownika atrybuty (C++ Component Extensions) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Zdefiniowane przez użytkownika atrybuty (C++ Component Extensions) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - metadata, extending
 - custom attributes, extending metadata
 ms.assetid: 98b29048-a3ea-4698-8441-f149cdaec9fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d974e8526f983801ed011520f7f78ff8c6cb564
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 22f8dfa7e78568f100b0c58c881b9e84cb47a149
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="user-defined-attributes--c-component-extensions"></a>Atrybuty zdefiniowane przez użytkownika (C++ Component Extensions)
 Atrybuty niestandardowe umożliwiają rozszerzanie metadanych interfejsu, klasy lub struktury, — metoda, parametr lub wyliczenia.  

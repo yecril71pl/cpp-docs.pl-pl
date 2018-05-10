@@ -1,31 +1,26 @@
 ---
 title: nullptr (C++ Component Extensions) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - __nullptr keyword (C++)
 - nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: be7fcc147a5f6f4b96f7bf7dd68376613489946c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 33a276c383618531103a76b1f20c6ad478d57c10
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="nullptr--c-component-extensions"></a>nullptr (C++ Component Extensions)
 `nullptr` Reprezentuje — słowo kluczowe *wartość wskaźnika null*. Wartość wskaźnika pustego umożliwia wskazanie, czy dojście obiektu, wskaźnik wewnętrzny lub typu wskaźnika natywnego nie wskazuje obiekt.  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [TypeID](../cpp/typeid-operator.md)  
   
--   `throw nullptr`(mimo że `throw (Object^)nullptr;` będzie działać)  
+-   `throw nullptr` (mimo że `throw (Object^)nullptr;` będzie działać)  
   
  `nullptr` — Słowo kluczowe może być używana w inicjowania następujących typów wskaźnika:  
   

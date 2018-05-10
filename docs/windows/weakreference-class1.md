@@ -1,12 +1,9 @@
 ---
-title: "Weakreference — Class1 | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Weakreference — Class1 | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::WeakReference
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - WeakReference class
 ms.assetid: 3f4c956b-dbbd-49b1-8cfa-9509a9956c97
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8985434365cb8144fc2ee3680ef19c5b8ed99301
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a44b992138371ff33a9059990a5ec3e93689c679
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="weakreference-class1"></a>Weakreference — Class1
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  

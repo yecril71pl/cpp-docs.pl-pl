@@ -1,13 +1,10 @@
 ---
-title: "Funkcje ogólne (C + +/ CLI) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Funkcje ogólne (C + +/ CLI) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - methods [C++], generic
 - generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ebafa409680609d6e097b803be2b539ccdc7601
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66eb27b28a1b18942c0a8a9a77a877a2f0b2ef8c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-functions-ccli"></a>Funkcje ogólne (C++/CLI)
 Funkcja generyczna jest funkcja, która jest zadeklarowana za pomocą parametrów typu. Po wywołaniu, rzeczywiste typy są używane zamiast parametrów typu.  
@@ -66,7 +61,7 @@ return-type identifier<type-parameter identifier(s)>
  Dodatkowe informacje deklaratywne. Aby uzyskać więcej informacji na atrybuty i klasy atrybutów Zobacz atrybutów.  
   
  *Modyfikatory* (opcjonalnie)  
- Modyfikator dla funkcji, np. static.  `virtual`nie jest dozwolona, ponieważ metody wirtualne nie może być rodzajowy.  
+ Modyfikator dla funkcji, np. static.  `virtual` nie jest dozwolona, ponieważ metody wirtualne nie może być rodzajowy.  
   
  *zwracanego typu*  
  Typ zwracany przez metodę. Jeśli typem zwracanym jest void, brak wartości zwracanej jest wymagany.  
@@ -153,7 +148,7 @@ ref struct MyClass {
   
  **Przykład**  
   
- W poniższym przykładzie użyto funkcji ogólne do znajdowania pierwszego elementu w tablicy. Deklaruje `MyClass`, który dziedziczy z klasy podstawowej `MyBaseClass`. `MyClass`Zawiera ogólne funkcję `MyFunction`, które wywołuje innej funkcji ogólnego, `MyBaseClassFunction`, w obrębie klasy podstawowej. W **głównego**, ogólna funkcja `MyFunction`, jest wywoływana przy użyciu argumentów innego typu.  
+ W poniższym przykładzie użyto funkcji ogólne do znajdowania pierwszego elementu w tablicy. Deklaruje `MyClass`, który dziedziczy z klasy podstawowej `MyBaseClass`. `MyClass` Zawiera ogólne funkcję `MyFunction`, które wywołuje innej funkcji ogólnego, `MyBaseClassFunction`, w obrębie klasy podstawowej. W **głównego**, ogólna funkcja `MyFunction`, jest wywoływana przy użyciu argumentów innego typu.  
   
 ```  
 // generics_generic_function_3.cpp  

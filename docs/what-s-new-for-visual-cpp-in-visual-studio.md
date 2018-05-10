@@ -1,22 +1,21 @@
 ---
-title: "Nowości w języku Visual C++ w programie Visual Studio | Dokumentacja firmy Microsoft"
+title: Nowości w języku Visual C++ w programie Visual Studio | Dokumentacja firmy Microsoft
 ms.date: 11/15/2017
 ms.technology:
-- vs-ide-general
-ms.topic: article
+- cpp-ide
+ms.topic: conceptual
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 328862bdb85059735ef069df1c7a9be8c6651f77
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: 4996ce3e1943c2c76e959f54730042029e0ce518
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/08/2018
 ---
-# <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>Nowości w języku Visual C++ w[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]
+# <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>Nowości w języku Visual C++ w [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]
 
 [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] udostępnia wiele aktualizacji i poprawki dla środowiska Visual C++. Wprowadzeniu stałej ponad 250 usterek i zgłoszone problemy w narzędzi i kompilatora, wiele przesyłanych przez klientów za pośrednictwem [zgłosić Problem](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) i [Podaj sugestię](https://visualstudio.uservoice.com/) opcje w obszarze **Prześlij opinię** . Dziękujemy za zgłaszanie usterek! Aby uzyskać więcej informacji dotyczących nowości we wszystkich programu Visual Studio, odwiedź [nowości [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] ](https://go.microsoft.com/fwlink/p/?linkid=834481).
 
@@ -82,17 +81,17 @@ Visual C++ obsługuje jest AVX firmy Intel-512, łącznie z instrukcjami długo�
 - Zwiększenie wydajności: `basic_string::operator==` przed porównaniem ciągi są zawartości sprawdza rozmiar ciągu.
 - Zwiększenie wydajności: usunięty formant sprzężenia w `basic_string`, które było trudne analizowanie Optymalizator kompilatora. Należy pamiętać, że dla wszystkich ciągów krótkich wywoływania `reserve` nadal ma niezerową koszt nic nie rób.
 - Dodaliśmy \<żadnych\>, \<string_view\>, `apply()`, `make_from_tuple()`.
-- `std::vector`zostały zmienić prawidłowości i wydajności: aliasów podczas wstawiania i umieszczanie poprawnie jest teraz obsługiwany jako wymagane przez standardowe, wyjątek silnej gwarancji jest teraz udostępniany na żądanie przez Standard za pośrednictwem `move_if_noexcept()` i innych logiki i wstawiania/umieszczanie wykonywać operacje na elementach mniej.
+- `std::vector` zostały zmienić prawidłowości i wydajności: aliasów podczas wstawiania i umieszczanie poprawnie jest teraz obsługiwany jako wymagane przez standardowe, wyjątek silnej gwarancji jest teraz udostępniany na żądanie przez Standard za pośrednictwem `move_if_noexcept()` i innych logiki i wstawiania/umieszczanie wykonywać operacje na elementach mniej.
 - Standardowa biblioteka C++ unika teraz dereferencji ozdobne wskaźniki o wartości null.
 - Dodaje \<opcjonalne\>, \<variant\>, `shared_ptr::weak_type`, i \<cstdalign\>.
 - Włączone C ++ 14 `constexpr` w `min(initializer_list)`, `max(initializer_list)`, i `minmax(initializer_list)`, i `min_element()`, `max_element()`, i `minmax_element()`.
 - Ulepszone `weak_ptr::lock()` wydajności.
 - Stałe `std::promise` operator przypisania przenoszenia, która może spowodować wcześniej kod, aby zablokować nieustannego.
 - Błędy kompilatora przy użyciu stałej `atomic<T*>` niejawnej konwersji `T*`.
-- `pointer_traits<Ptr>`teraz, prawidłowo wykrywane `Ptr::rebind<U>`.
+- `pointer_traits<Ptr>` teraz, prawidłowo wykrywane `Ptr::rebind<U>`.
 - Stałe braku `const` kwalifikator w `move_iterator` operator odejmowania.
 - Stałe ciche Generowanie nieprawidłowego kodu dla stanowych allocators zdefiniowane przez użytkownika —, żądanie `propagate_on_container_copy_assignment` i `propagate_on_container_move_assignment`.
-- `atomic<T>`teraz zaakceptować przeciążony `operator&()`.
+- `atomic<T>` teraz zaakceptować przeciążony `operator&()`.
 - W celu zwiększenia przepływności kompilatora, nagłówki standardowa biblioteka C++ teraz uniknąć, włączając deklaracje dla funkcje wewnętrzne kompilatora niepotrzebne.
 - Nieznacznie poprawia diagnostyki kompilatora dla niepoprawne `bind()` wywołania.
 - Zwiększona wydajność `std::string` i `std::wstring` przenieść konstruktorów przez więcej niż trzy razy.
@@ -116,11 +115,11 @@ Zastosowano kilka dodatkowych funkcji C ++ 17. Aby uzyskać więcej informacji, 
 - Standardowa biblioteka kontenery teraz ograniczenie ich `max_size()` do `numeric_limits<difference_type>::max()` zamiast `max()` z `size_type`. Gwarantuje to, że wynik `distance()` na Iteratory z tego kontenera jest można przedstawić w zwracany typ `distance()`.
 - Stałe Brak specjalizacji `auto_ptr<void>`.
 - `for_each_n()`, `generate_n()`, I `search_n()` algorytmy wcześniej kompilacja nie powiodła się, jeśli długość argumentu nie jest typem całkowitym; teraz podejmować przekonwertować długości niecałkowity Iteratory `difference_type`.
-- `normal_distribution<float>`już nie emituje ostrzeżenia w standardowej bibliotece o zawężanie z typu double na float.
+- `normal_distribution<float>` już nie emituje ostrzeżenia w standardowej bibliotece o zawężanie z typu double na float.
 - Usunięto niektóre `basic_string` działań, które zostały porównanie z `npos` zamiast `max_size()` podczas sprawdzania dostępności maksymalny rozmiar overflow.
-- `condition_variable::wait_for(lock, relative_time, predicate)`oczekiwania przez cały czas względny w przypadku wznawiania fałszywe. Teraz będzie czekać przez tylko jeden interwał względne czasu.
-- `future::get()`teraz unieważnia `future`, ponieważ wymaga standardowego.
-- `iterator_traits<void *>`używane jako poważny błąd, ponieważ podjęto próbę formularza `void&`; teraz prawidłowo staje się puste struktury, aby umożliwić korzystanie z `iterator_traits` w "jest iteratora" techniki SFINAE warunki.
+- `condition_variable::wait_for(lock, relative_time, predicate)` oczekiwania przez cały czas względny w przypadku wznawiania fałszywe. Teraz będzie czekać przez tylko jeden interwał względne czasu.
+- `future::get()` teraz unieważnia `future`, ponieważ wymaga standardowego.
+- `iterator_traits<void *>` używane jako poważny błąd, ponieważ podjęto próbę formularza `void&`; teraz prawidłowo staje się puste struktury, aby umożliwić korzystanie z `iterator_traits` w "jest iteratora" techniki SFINAE warunki.
 - Ostrzeżenia zgłoszone przez Clang **- wsystem — nagłówki** zostały usunięte.
 - Usunięto również "Specyfikacja wyjątku w deklaracji niezgodność z poprzednią deklaracją" zgłoszone przez Clang **- Wmicrosoft-wyjątku spec**.
 - Usunięto również mem inicjator listy ostrzeżeń porządkowania zgłaszanych przez Clang i C1XX.
@@ -129,8 +128,8 @@ Zastosowano kilka dodatkowych funkcji C ++ 17. Aby uzyskać więcej informacji, 
 - Wiele `vector<bool>` operacje zostały oznaczone `noexcept`.
 - Biblioteki standardowej teraz będzie wymuszać pasującego alokatora `value_type` (tryb C ++ 17) z kreskowania ucieczki rezygnacji z.
 - Stałe niektóre warunki, w przypadku, gdy niezależne-range-insert into `basic_string` czy szyfrują zawartość ciągów. (Uwaga: niezależne-range-insert into wektory nadal jest zabronione przez standardowego.)
-- `basic_string::shrink_to_fit()`nie dotyczy programu przydzielania `propagate_on_container_swap`.
-- `std::decay`teraz obsługuje typy funkcji abominable (tj. Funkcja typy, które są cv kwalifikowaną lub kwalifikowaną ref).
+- `basic_string::shrink_to_fit()` nie dotyczy programu przydzielania `propagate_on_container_swap`.
+- `std::decay` teraz obsługuje typy funkcji abominable (tj. Funkcja typy, które są cv kwalifikowaną lub kwalifikowaną ref).
 - Zmienione dyrektyw prawidłowego uwzględniana wielkość liter i ukośniki, poprawy przenośność.
 - Ostrzeżenie C4061 stałej "moduł wyliczający"*modułu wyliczającego*"w switch wyliczenia"*wyliczenie*"nie jest jawnie obsługiwany przez etykietę case". To ostrzeżenie jest wyłączone domyślnie i został rozwiązany jako wyjątek do biblioteki standardowej zasady ogólne ostrzeżenia. (Standardowa biblioteka jest **/W4** czyszczenie, ale nie jest podejmowana próba można **/ścian** czyste. Wiele poza domyślnie ostrzeżenia są bardzo dużo i nie są przeznaczone do użycia na bieżąco.)
 - Ulepszone `std::list` debugowania kontroli. Lista wyboru teraz Iteratory `operator->()`, i `list::unique()` teraz oznacza Iteratory jako unieważnione.
@@ -143,9 +142,9 @@ Zastosowano kilka dodatkowych funkcji C ++ 17. Aby uzyskać więcej informacji, 
 - Zmienione `std::try_lock()` umożliwia rozwinięcie pakietu zamiast rekursji.
 - Ulepszone `std::lock()` algorytm unikania zakleszczenie w celu użycia `lock()` operacje zamiast Obracająca na `try_lock()` na wszystkich blokad.
 - Włączono optymalizację nazwanych wartości zwracanej w `system_category::message()`.
-- `conjunction`i `disjunction` teraz utworzyć wystąpienia N + 1 typów, zamiast 2N + 2 typów.
-- `std::function`nie tworzy przydzielania maszyny pomocy technicznej dla każdego wymazane typu można wywołać, ulepszanie przepływności i zmniejszenie rozmiaru .obj w programach, które przekazać wiele różnych wyrażeń lambda do `std::function`.
-- `allocator_traits<std::allocator>`zawiera wbudowane ręcznie `std::allocator` operacji zmniejszenia rozmiaru kodu w kodzie, który współdziała z `std::allocator` za pośrednictwem `allocator_traits` tylko (to znaczy w większość kodu).
+- `conjunction` i `disjunction` teraz utworzyć wystąpienia N + 1 typów, zamiast 2N + 2 typów.
+- `std::function` nie tworzy przydzielania maszyny pomocy technicznej dla każdego wymazane typu można wywołać, ulepszanie przepływności i zmniejszenie rozmiaru .obj w programach, które przekazać wiele różnych wyrażeń lambda do `std::function`.
+- `allocator_traits<std::allocator>` zawiera wbudowane ręcznie `std::allocator` operacji zmniejszenia rozmiaru kodu w kodzie, który współdziała z `std::allocator` za pośrednictwem `allocator_traits` tylko (to znaczy w większość kodu).
 - C ++ 11 alokatora minimalny interfejs jest teraz obsługiwany przez biblioteki standardowej wywoływania `allocator_traits` bezpośrednio, zamiast zawijania programu przydzielania w Wewnętrzna klasa `_Wrap_alloc`. To zmniejsza rozmiar kodu wygenerowany dla pomocy technicznej programu przydzielania, zwiększa możliwości Optymalizator Przyczyna o biblioteki standardowej kontenery w niektórych przypadkach i zapewnia lepsze debugowania (ponieważ spowoduje to wyświetlenie danego typu alokatora zamiast `_Wrap_alloc<your_allocator_type>` w Debuger).
 - Usunięte metaprogramowania, aby uzyskać dostosowane `allocator::reference`, które allocators — faktycznie nie są dozwolone dostosować. (Allocators — ułatwia kontenery, użyj wskaźników ozdobne, ale nie ozdobne odwołań.)
 - Kompilator frontonu został jednocześnie dekodowania Iteratory debugowania w opartej na zakresie dla pętle, poprawia wydajność debugowania kompilacji.
@@ -158,7 +157,7 @@ Zastosowano kilka dodatkowych funkcji C ++ 17. Aby uzyskać więcej informacji, 
 - Zakończono zmiana funkcji techniki SFINAE wyrażeń do `struct` i `void_t`— na podstawie.
 - Standardowa biblioteka algorytmów uniknąć teraz postincrementing Iteratory.
 - Ostrzeżenia obcięcie stałej, używając 32-bitowych allocators — w systemach 64-bitowych.
-- `std::vector`przypisania przenoszenia jest teraz bardziej efektywne w przypadku innych niż alokatora równości z systemem innym niż POCMA przez ponowne użycie buforu, gdy jest to możliwe.
+- `std::vector` przypisania przenoszenia jest teraz bardziej efektywne w przypadku innych niż alokatora równości z systemem innym niż POCMA przez ponowne użycie buforu, gdy jest to możliwe.
 
 #### <a name="readability-and-other-improvements"></a>Zwiększyć czytelność, a inne ulepszenia
 
@@ -201,25 +200,25 @@ Kilka funkcje standardowej biblioteki zostały dodane, przestarzałe lub usunię
 
 #### <a name="performance-fixes-and-improvements"></a>Ulepszenia i wydajności
 
-- `basic_string<char16_t>`teraz angażujący takie same `memcmp`, `memcpy`i podobne optymalizację, które `basic_string<wchar_t>` angażujący.
+- `basic_string<char16_t>` teraz angażujący takie same `memcmp`, `memcpy`i podobne optymalizację, które `basic_string<wchar_t>` angażujący.
 - Ograniczenie Optymalizator, który uniemożliwił wskaźników funkcji z możliwości wbudowanego udostępnianych przez naszych "unikać kopiowania funkcji" pracy w Visual Studio 2015 Update 3 zostały działał wokół, przywracanie wydajność `lower_bound(iter, iter, function pointer)`.
 - Obciążenie debugowania iteratora do weryfikacji kolejność danych wejściowych w celu `includes`, `set_difference`, `set_symmetric_difference`, i `set_union` został zmniejszony przez Odkodowywanie Iteratory przed zaewidencjonowaniem kolejności.
-- `std::inplace_merge`teraz nakłada się na elementy, które już znajdują się w pozycji.
+- `std::inplace_merge` teraz nakłada się na elementy, które już znajdują się w pozycji.
 - Konstruowanie `std::random_device` już tworzy, a następnie niszczy `std::string`.
-- `std::equal`i `std::partition` miał wątkowość skok przebiegu optymalizacji, która zapisuje porównania iteratora.
+- `std::equal` i `std::partition` miał wątkowość skok przebiegu optymalizacji, która zapisuje porównania iteratora.
 - Gdy `std::reverse` jest przekazywany wskaźników do trivially copyable `T`, teraz wyśle odręcznie zwektoryzowane implementacji.
 - `std::fill`, `std::equal`, i `std::lexicographical_compare` zostały nauczanych sposób wysłania do `memset` i `memcmp` dla `std::byte` i `gsl::byte` (i innych wyliczeniach typu char i Wylicz klasy). Należy pamiętać, że `std::copy` wywołuje przy użyciu `is_trivially_copyable` i w związku z tym nie wymagają żadnych zmian.
 - Standardowa biblioteka nie zawiera już którego tylko zachowanie było typów innych niż — trivially — które można zniszczyć destruktory puste nawiasy.
 
 #### <a name="correctness-fixes-in-visual-studio-2017-version-155"></a>Poprawność poprawki w Visual Studio 2017 wersji 15,5 cala
 
-- `std::partition`teraz razy predykatu N zamiast N + 1 godziny jako standard jest wymagane.
+- `std::partition` teraz razy predykatu N zamiast N + 1 godziny jako standard jest wymagane.
 - Naprawiono prób, aby uniknąć magicznych danych statycznych w wątkach w wersji 15 ustęp 3 w wersji 15,5 cala.
-- `std::atomic<T>`nie wymaga już `T` jako domyślne umożliwia konstrukcji.
+- `std::atomic<T>` nie wymaga już `T` jako domyślne umożliwia konstrukcji.
 - Sterty algorytmów trwać logarytmicznej już do potwierdzenia czasu liniowego, czy dane wejściowe są w rzeczywistości sterty włączenie debugowania iteratora.
-- `__declspec(allocator)`jest teraz chroniony dla C1XX zapobiec ostrzeżenia Clang, którego nie rozpoznaje tego declspec.
-- `basic_string::npos`jest teraz dostępna jako stałą czasu kompilacji.
-- `std::allocator`w trybie C ++ 17 teraz prawidłowo alokacji uchwytów nadmiernie wyrównane typy, oznacza to, typy którego wyrównanie jest większa niż `max_align_t`, chyba że zostaną wyłączone przez **/Zc:alignedNew-**.  Na przykład wektory obiektów z wyrównaniem 16 i 32-bajtowych będzie teraz prawidłowo wyrównać instrukcje SSE i AVX.
+- `__declspec(allocator)` jest teraz chroniony dla C1XX zapobiec ostrzeżenia Clang, którego nie rozpoznaje tego declspec.
+- `basic_string::npos` jest teraz dostępna jako stałą czasu kompilacji.
+- `std::allocator` w trybie C ++ 17 teraz prawidłowo alokacji uchwytów nadmiernie wyrównane typy, oznacza to, typy którego wyrównanie jest większa niż `max_align_t`, chyba że zostaną wyłączone przez **/Zc:alignedNew-**.  Na przykład wektory obiektów z wyrównaniem 16 i 32-bajtowych będzie teraz prawidłowo wyrównać instrukcje SSE i AVX.
 
 ## <a name="other-libraries"></a>Inne biblioteki
 
@@ -394,7 +393,7 @@ Poprawność wskaźnika inteligentnego, prawidłowe użycie globalnych inicjator
 
 Niektóre numery ostrzeżeń, które można znaleźć w wersji 15.3, nie są już dostępne w wersji 15.5. Ostrzeżenia te zostały zastąpione bardziej szczegółowymi operacjami sprawdzania.
 
-## <a name="unit-testing"></a>Testy jednostkowe
+## <a name="unit-testing"></a>Testowanie jednostek
 
 **Visual Studio 2017 wersji 15,5 cala**:
 

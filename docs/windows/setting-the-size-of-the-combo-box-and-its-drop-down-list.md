@@ -1,13 +1,10 @@
 ---
 title: Ustawianie rozmiaru pole kombi i jego listy rozwijanej | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog.combo
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - combo boxes, sizing
 - controls [C++], sizing
 ms.assetid: 51fb53cf-9ddf-4a20-962e-8553938e55ee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8cac985a4cc723e2e0b5db9812e29b8b9632f26
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1ee46502fee6f37d926580863dfc91edb276a846
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="setting-the-size-of-the-combo-box-and-its-drop-down-list"></a>Ustawianie rozmiaru pola kombi i jego listy rozwijanej
 Rozmiar pola kombi można zmienić po dodaniu go do okna dialogowego. Można również określić rozmiar pola listy rozwijanej.  
@@ -52,7 +47,7 @@ Rozmiar pola kombi można zmienić po dodaniu go do okna dialogowego. Można ró
   
 2.  Umożliwia zmianę początkowy rozmiar obszaru listy rozwijanej niższe uchwyt zmiany rozmiaru.  
   
-     ![Kombi &#45; rozmiaru pola w projekcie MFC](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")  
+     ![Kombi&#45;rozmiaru pola w projekcie MFC](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")  
   
 3.  Kliknij strzałkę listy rozwijanej ponownie, aby zamknąć część listy rozwijanej pola kombi.  
   

@@ -1,12 +1,9 @@
 ---
-title: "#Jeśli, #elif, #else i #endif — dyrektywy (C/C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: '#Jeśli, #elif, #else i #endif — dyrektywy (C/C++) | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#else'
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a684412b0b0b24cbb9067ef6ea4cf78810c37f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a9d4f941298159b8a3ea1aa3fe37efd1e6dc68ab
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if, #elif, #else i #endif — dyrektywy (C/C++)
 `#if` Dyrektywy z `#elif`, `#else`, i `#endif` dyrektywy, kompilacja formanty części pliku źródłowego. Jeśli wyrażenie (po `#if`) ma wartość różną od zera, grupa wiersza od razu po `#if` dyrektywy są przechowywane w jednostce tłumaczenia.  
@@ -53,11 +48,11 @@ ms.lasthandoff: 02/23/2018
  *Jeśli wiersz tekstu*  
   
  *Jeśli wiersz* :  
- **#if**  *constant-expression*  
+ **#if***wyrażenie stałej*   
   
- **#ifdef***identyfikator*   
+ **#ifdef***identyfikator*  
   
- **#ifndef***identyfikator*   
+ **#ifndef***identyfikator*  
   
  *elif części* :  
  *elif wiersza tekstu*  
@@ -88,7 +83,7 @@ ms.lasthandoff: 02/23/2018
   
  Preprocesora przetwarza wybranego *tekst* i przekazuje je do kompilatora. Jeśli *tekst* zawiera dyrektywy preprocesora preprocesora wykonuje te dyrektywy. Tylko bloki tekstu wybranych przez preprocesora są kompilowane.  
   
- Preprocesora wybiera jeden *tekst* elementu przez obliczenie wyrażenia stałej po każdym `#if` lub `#elif` dyrektywy aż do znalezienia true wyrażenie stałe (różną od zera). Go zaznacza cały tekst (w tym dyrektyw preprocesora, począwszy od  **#** ) do jego skojarzony `#elif`, `#else`, lub `#endif`.  
+ Preprocesora wybiera jeden *tekst* elementu przez obliczenie wyrażenia stałej po każdym `#if` lub `#elif` dyrektywy aż do znalezienia true wyrażenie stałe (różną od zera). Go zaznacza cały tekst (w tym dyrektyw preprocesora, począwszy od **#**) do jego skojarzony `#elif`, `#else`, lub `#endif`.  
   
  Jeśli wszystkie wystąpienia *wyrażenia* są ma wartość FAŁSZ, lub jeśli nie `#elif` dyrektywy wyświetlana, preprocesora wybiera bloku tekstu po `#else` klauzuli. Jeśli `#else` pominięcia klauzuli i wszystkie wystąpienia *wyrażenia* w `#if` bloku są false, nie bloku tekstu jest zaznaczone.  
   

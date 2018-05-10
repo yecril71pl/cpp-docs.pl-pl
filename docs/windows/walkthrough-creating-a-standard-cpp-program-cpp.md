@@ -1,13 +1,10 @@
 ---
-title: "Wskazówki: Tworzenie standardowego programu C++ (C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Wskazówki: Tworzenie standardowego programu C++ (C++) | Dokumentacja firmy Microsoft'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 f1_keywords:
 - vcfirstapp
 - vccreatefirst
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - command-line applications [C++], standard
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52066be1d67bddb7173841e9df6c5013c86ac0dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f563e318f2defcbf36139f1f6d49e3986db5f946
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Wskazówki: Tworzenie standardowego programu C++ (C++)
 Visual C++ w programie Visual Studio zintegrowane środowisko programistyczne (IDE) służy do tworzenia programy Standard C++. Wykonując kroki opisane w tym przewodniku, można utworzyć projekt, Dodaj nowy plik do projektu, zmodyfikuj plik, aby dodać kod w języku C++, a następnie skompilować i uruchomić program przy użyciu [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  

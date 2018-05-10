@@ -1,8 +1,8 @@
 ---
-title: "C4600 ostrzeżenia kompilatora za pośrednictwem C4799 | Dokumentacja firmy Microsoft"
+title: C4600 ostrzeżenia kompilatora za pośrednictwem C4799 | Dokumentacja firmy Microsoft
 ms.date: 11/17/2017
 ms.technology:
-- cpp-tools
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4602
@@ -68,14 +68,13 @@ dev_langs:
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5d7121e01b651e87630fe18bec21e3d999ed0e7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ad29989e89bfe60f2180ee48c411ebd4d3098ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>C4600 ostrzeżenia kompilatora za pośrednictwem C4799
 
@@ -164,7 +163,7 @@ Artykuły w tej sekcji dokumentacji opisano podzbiór komunikaty ostrzegawcze, k
 |[Kompilator C4687 ostrzeżenie (błąd)](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|"class": zapieczętowana klasa abstrakcyjna nie może implementować interfejsu "interface"|
 |Ostrzeżenie kompilatora (poziom 1) C4688|"ograniczenia": Lista ograniczeń zawiera prywatny typ zestawu "type"|
 |Ostrzeżenie kompilatora (poziom 1) C4689|"%c": nieobsługiwany znak w #pragma detect_mismatch; #pragma ignorowane|
-|Ostrzeżenie kompilatora (poziom 4) C4690|[emitidl (pop)]: więcej zdejmowań niż włożeń|
+|Ostrzeżenie kompilatora (poziom 4) C4690|[ emitidl ( pop ) ]: więcej zdejmowań niż włożeń|
 |[Ostrzeżenie kompilatora (poziom 1) C4691](../../error-messages/compiler-warnings/compiler-warning-level-1-c4691.md)|'type': oczekiwano typu odwołania w zestawie nieużywane 'Plik' typu zdefiniowanego w bieżącej jednostce tłumaczenia, zamiast tego użyć|
 |[Ostrzeżenie kompilatora (poziom 1) C4692](../../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)|'funkcja': podpis z nieprywatnego elementu członkowskiego zawiera typ macierzysty 'native_type' zestawu prywatnego|
 |[Ostrzeżenie kompilatora (poziom 1, błąd) C4693](../../error-messages/compiler-warnings/compiler-warning-c4693.md)|"class": zapieczętowana klasa abstrakcyjna nie może mieć żadnych wystąpienia elementów członkowskich "wystąpienia elementu członkowskiego"|
@@ -204,7 +203,7 @@ Artykuły w tej sekcji dokumentacji opisano podzbiór komunikaty ostrzegawcze, k
 |[Ostrzeżenie kompilatora (poziom 1) C4742](../../error-messages/compiler-warnings/compiler-warning-level-1-c4742.md)|"var" ma inne wyrównanie w 'plik1' i 'plik2': numer i|
 |[Ostrzeżenie kompilatora (poziom 1) C4743](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|'type' ma inny rozmiar 'plik1' i 'plik2': liczbę i liczba bajtów|
 |[Ostrzeżenie kompilatora (poziom 1) C4744](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|"var" ma inny typ w 'plik1' i 'plik2': "type1" i "type2".|
-|[Ostrzeżenie kompilatora C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|nietrwały dostęp "*wyrażenie*" podlega/volatile:\<iso &#124; ms > ustawienie; Rozważ użycie funkcji wewnętrznych __iso_volatile_load/store|
+|[Ostrzeżenie kompilatora C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|nietrwały dostęp "*wyrażenie*" podlega/volatile:\<iso&#124;ms > ustawienie; Rozważ użycie funkcji wewnętrznych __iso_volatile_load/store|
 |[Ostrzeżenie kompilatora (poziom 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|Wywołanie zarządzanego entrypoint: kodu zarządzanego nie mogą być uruchamiane w obszarze blokady modułu ładującego, włączając punktu wejścia biblioteki DLL i wywołania osiągnięte z punktu wejścia biblioteki DLL|
 |Ostrzeżenie kompilatora (poziom 4) C4749|obsługiwane warunkowo: makro offsetof zastosowane do typu non standard układu "*typu*"|
 |Ostrzeżenie kompilatora (poziom 1) C4750|"identyfikator": funkcja zawierająca _alloca() została wbudowana w pętlę|

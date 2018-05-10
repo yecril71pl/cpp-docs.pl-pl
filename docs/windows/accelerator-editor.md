@@ -1,13 +1,10 @@
 ---
-title: "Edytor klawiszy skrótów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Edytor klawiszy skrótów | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.accelerator.F1
 dev_langs:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], Accelerator editor
 - Accelerator editor
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e078dbd3dc8d462ef4bca6e6f1056afb9ce8724c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0e5ce1fcd71f6f49532d083c7cb2dcfce9ed644c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="accelerator-editor"></a>Edytor klawiszy skrótów
 Tabela akceleratora jest zasób systemu Windows, który zawiera listę klawisze skrótów (znanej także jako klawisze skrótu) i identyfikatory poleceń, które są skojarzone z nimi. Program może mieć więcej niż jednej tabeli akceleratora.  

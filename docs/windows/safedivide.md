@@ -1,13 +1,10 @@
 ---
 title: SafeDivide | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeDivide
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeDivide function
 ms.assetid: b5b27484-ad6e-46b1-ba9f-1c7120dd103b
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0d6d3b774cb014b8257cf412bf2dec2827abeda2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0264fbd8df7f1dec5d20b40a67299cb4502b72aa
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safedivide"></a>SafeDivide
 Dzieli dwie liczby w sposób zapewniający ochronę przed dzielenia przez zero.  
@@ -43,17 +38,17 @@ inline bool SafeDivide (
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in]`t`  
+ [in] `t`  
  Dzielnik. To musi być typu T.  
   
- [in]`u`  
+ [in] `u`  
  Dzielna. Musi to być typ U.  
   
- [out]`result`  
+ [out] `result`  
  Parametr gdzie `SafeDivide` zapisuje wynik.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli nie występują błędy; `false` w przypadku wystąpienia błędu.  
+ `true` Jeśli nie występują błędy; `false` w przypadku wystąpienia błędu.  
   
 ## <a name="remarks"></a>Uwagi  
  Ta metoda jest częścią [Biblioteka SafeInt](../windows/safeint-library.md) i jest przeznaczona dla operacji dzielenia pojedynczego bez tworzenia wystąpienia [safeint — klasa](../windows/safeint-class.md).  

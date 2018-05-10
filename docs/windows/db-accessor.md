@@ -1,13 +1,10 @@
 ---
-title: "db_accessor — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: db_accessor — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.db_accessor
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5faa84773fbf1fe15fd0223c97f0361f1215b149
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b81e55500a8ff44c887bed592c9472c5a8d3ea1d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="dbaccessor"></a>db_accessor
 Grupy **db_column —** atrybuty, które uczestniczą w `IAccessor`— na podstawie powiązania.  
@@ -42,10 +37,10 @@ Grupy **db_column —** atrybuty, które uczestniczą w `IAccessor`— na podsta
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *NUM*  
+ *num*  
  Określa liczbę metody dostępu (indeks całkowitą liczony od zera). Należy określić numery dostępu w rosnącej przy użyciu liczb całkowitych lub wartości określone.  
   
- *Automatycznie*  
+ *auto*  
  Wartość logiczna określająca, czy akcesor jest automatycznie pobierany (**TRUE**) lub nie pobrać (**FALSE**).  
   
 ## <a name="remarks"></a>Uwagi  

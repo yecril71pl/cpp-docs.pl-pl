@@ -1,31 +1,26 @@
 ---
 title: Atrybuty metody | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - method attributes
 - attributes [C++], reference topics
 ms.assetid: b2313352-480d-488b-8c35-6242ffd3a549
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f2413543e7638f47db13799e0549a415ee92c1c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d2efe55058ab2ace7530afee7255b2ba08377b0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="method-attributes"></a>Atrybuty metody
 Następujące atrybuty dotyczą metody w klasie, coclass lub interfejs.  
@@ -34,7 +29,7 @@ Następujące atrybuty dotyczą metody w klasie, coclass lub interfejs.
 |---------------|-----------------|  
 |[bindable](../windows/bindable.md)|Wskazuje, że właściwość obsługuje powiązanie danych.|  
 |[call_as](../windows/call-as.md)|Włącza funkcję nonremotable, która ma być zamapowany na funkcję zdalną.|  
-|[niestandardowe](../windows/custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|  
+|[custom](../windows/custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|  
 |[db_column](../windows/db-column.md)|Wiąże określonej kolumny zestawu wierszy.|  
 |[db_command](../windows/db-command.md)|Tworzy polecenia OLE DB.|  
 |[db_param](../windows/db-param.md)|Kojarzy zmiennej określonego elementu członkowskiego z parametrem wejściowych lub wyjściowych i rozgranicza zmiennej.|  
@@ -58,11 +53,11 @@ Następujące atrybuty dotyczą metody w klasie, coclass lub interfejs.
 |[propput](../windows/propput.md)|Określa funkcję ustawienie właściwości.|  
 |[propputref](../windows/propputref.md)|Określa ustawienie właściwości funkcję, która korzysta z odwołaniem zamiast wartości.|  
 |[ptr](../windows/ptr.md)|Określa wskaźnik jako pełne wskaźnika.|  
-|[zakres](../windows/range-cpp.md)|Określa zakresu wartości dozwoloną dla argumentów lub pól, których wartości są ustawione w czasie wykonywania.|  
+|[Zakres](../windows/range-cpp.md)|Określa zakresu wartości dozwoloną dla argumentów lub pól, których wartości są ustawione w czasie wykonywania.|  
 |[requestedit](../windows/requestedit.md)|Wskazuje, że właściwość obsługuje **OnRequestEdit** powiadomień.|  
 |[restricted](../windows/restricted.md)|Określa, czy członek modułu, interfejsem lub dispinterface nie może być wywoływana arbitralnie.|  
 |[satype](../windows/satype.md)|Określa typ danych **SAFEARRAY** struktury.|  
-|[źródło](../windows/source-cpp.md)|Określa formantu interfejsów źródłowych punktów połączenia w klasie. Właściwości lub metody **źródła** atrybut wskazuje, że element członkowski zwraca obiekt lub Typ VARIANT, który jest źródłem zdarzeń.|  
+|[source](../windows/source-cpp.md)|Określa formantu interfejsów źródłowych punktów połączenia w klasie. Właściwości lub metody **źródła** atrybut wskazuje, że element członkowski zwraca obiekt lub Typ VARIANT, który jest źródłem zdarzeń.|  
 |[synchronize](../windows/synchronize.md)|Synchronizuje dostęp do metody docelowej.|  
 |[vararg](../windows/vararg.md)|Określa, że funkcja zostać zmienną liczbę argumentów.|  
   

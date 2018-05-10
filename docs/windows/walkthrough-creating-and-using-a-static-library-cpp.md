@@ -1,31 +1,26 @@
 ---
-title: "Wskazówki: Tworzenie i używanie biblioteki statycznej (C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Wskazówki: Tworzenie i używanie biblioteki statycznej (C++) | Dokumentacja firmy Microsoft'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - libraries [C++], static
 - static libraries [C++]
 ms.assetid: 3cc36411-7d66-4240-851e-dacb9a8fd6ac
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3af6bc41d353f82bb1f95c73f079e530da19dba0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d136dae553f623cbd607a69ab710fa9c6fe6c91b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>Wskazówki: tworzenie i używanie biblioteki statycznej (C++)
 Ten przewodnik krok po kroku przedstawiono sposób tworzenia biblioteki statycznej (pliku lib) do użytku z aplikacjami C++. Używanie biblioteki statycznej jest to dobry sposób na ponowne użycie kodu. Zamiast ponownego wykonywania tej samej procedury w każdej aplikacji, która wymaga funkcji, zapisze je jeden raz w bibliotece statycznej i odwoływanie się z aplikacji. Kod powiązany z biblioteką statyczną staje się częścią aplikacji — nie trzeba zainstalować inny plik do kodu.  
@@ -45,7 +40,7 @@ Ten przewodnik krok po kroku przedstawiono sposób tworzenia biblioteki statyczn
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Po zrozumieniu podstaw języka C++.  
   
-##  <a name="BKMK_CreateLibProject"></a>Tworzenie projektu biblioteki statycznej  
+##  <a name="BKMK_CreateLibProject"></a> Tworzenie projektu biblioteki statycznej  
   
 #### <a name="to-create-a-static-library-project"></a>Aby utworzyć projekt biblioteki statycznej  
   
@@ -65,7 +60,7 @@ Ten przewodnik krok po kroku przedstawiono sposób tworzenia biblioteki statyczn
   
 8.  Wybierz **Zakończ** przycisk, aby utworzyć projekt.  
   
-##  <a name="BKMK_AddClassToLib"></a>Dodawanie klasy z biblioteką statyczną  
+##  <a name="BKMK_AddClassToLib"></a> Dodawanie klasy z biblioteką statyczną  
   
 #### <a name="to-add-a-class-to-the-static-library"></a>Aby dodać klasę z biblioteką statyczną  
   
@@ -86,7 +81,7 @@ Ten przewodnik krok po kroku przedstawiono sposób tworzenia biblioteki statyczn
     > [!NOTE]
     >  Podczas kompilowania w wierszu polecenia programu Visual Studio, należy utworzyć program w dwóch krokach. Najpierw uruchom **/ehsc /c cl MathFuncsLib.cpp** skompilować kod i Utwórz plik obiektu o nazwie **MathFuncsLib.obj**. ( **Cl** polecenia wywołuje kompilator Cl.exe i **/c** opcja określa Kompiluj bez konsolidacji. Aby uzyskać więcej informacji, zobacz [/c (Kompiluj bez konsolidacji)](../build/reference/c-compile-without-linking.md).) Po drugie, uruchom **lib MathFuncsLib.obj** link kodu i tworzenia biblioteki statycznej **MathFuncsLib.lib**. ( **Lib** Library Manager Lib.exe wywołuje polecenie. Aby uzyskać więcej informacji, zobacz [odwołanie do biblioteki LIB](../build/reference/lib-reference.md).)  
   
-##  <a name="BKMK_CreateAppToRefTheLib"></a>Tworzenie aplikacji konsoli C++, która odwołuje się do biblioteki statycznej  
+##  <a name="BKMK_CreateAppToRefTheLib"></a> Tworzenie aplikacji konsoli C++, która odwołuje się do biblioteki statycznej  
   
 #### <a name="to-create-a-c-console-app-that-references-the-static-library"></a>Aby utworzyć aplikację konsoli języka C++, która odwołuje się do biblioteki statycznej  
   
@@ -106,7 +101,7 @@ Ten przewodnik krok po kroku przedstawiono sposób tworzenia biblioteki statyczn
   
 8.  Wybierz **Zakończ** przycisk, aby utworzyć projekt.  
   
-##  <a name="BKMK_UseLibInApp"></a>Korzystając z funkcji z biblioteki statycznej w aplikacji  
+##  <a name="BKMK_UseLibInApp"></a> Korzystając z funkcji z biblioteki statycznej w aplikacji  
   
 #### <a name="to-use-the-functionality-from-the-static-library-in-the-app"></a>Aby korzystać z funkcji z biblioteki statycznej w aplikacji  
   
@@ -126,7 +121,7 @@ Ten przewodnik krok po kroku przedstawiono sposób tworzenia biblioteki statyczn
   
 6.  Tworzenie pliku wykonywalnego, wybierając **kompilacji**, **Kompiluj rozwiązanie** na pasku menu.  
   
-##  <a name="BKMK_RunApp"></a>Aplikację  
+##  <a name="BKMK_RunApp"></a> Aplikację  
   
 #### <a name="to-run-the-app"></a>Aby uruchomić aplikację  
   

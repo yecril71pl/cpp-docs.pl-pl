@@ -1,10 +1,7 @@
 ---
-title: "Funkcje przestrzeń nazw CONCURRENCY::Graphics | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Funkcje przestrzeń nazw CONCURRENCY::Graphics | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - amp_graphics/Concurrency::fast_math::copy_async
@@ -12,22 +9,20 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d360a322cdc4ae82ebded5a441152a075e8a5fc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8fc00f1754358eca0d6e90d484153b79c0a67130
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencygraphics-namespace-functions"></a>Funkcje przestrzeń nazw CONCURRENCY::Graphics
 |||  
 |-|-|  
-|[copy](#copy)|[copy_async](#copy_async)|  
+|[Kopiuj](#copy)|[copy_async](#copy_async)|  
   
 ##  <a name="copy"></a>  copy — funkcja (Namespace Concurrency::graphics)  
  Kopiuje tekstury źródła do buforu docelowego lub kopiuje bufor źródłowy do bufor docelowy. Formularz ogólny tej funkcji jest `copy(src, dest)`.  

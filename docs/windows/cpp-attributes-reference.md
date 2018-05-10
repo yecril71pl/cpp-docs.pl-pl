@@ -1,30 +1,25 @@
 ---
 title: Odwołanie atrybutów języka C++ | Dokumentacja firmy Microsoft
-ms.custom: ''
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: 'index-page '
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e371a89a42481f72d3523d8f21852f3f79d19fc7
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: 307f2e8e99e469face090acd19e7c5f28c5d9140
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="c-attributes-reference"></a>Atrybuty (C++)
 Microsoft definiuje zestaw atrybutów, które upraszczają programowanie COM i rozwoju środowiska uruchomieniowego języka wspólnego .NET Framework. Po dołączeniu atrybutów w plikach źródłowych kompilator współpracuje z dostawcą biblioteki dll, aby wstawić kod lub zmodyfikować kod w plikach wygenerowanego obiektu.  

@@ -1,13 +1,10 @@
 ---
-title: "Obsługa formatu Unicode | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Obsługa formatu Unicode | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 1/09/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,14 +17,13 @@ helpviewer_keywords:
 - Unicode [C++], installing support
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fde7674d30d84385eb1f94f42056a82bfaac99fe
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: b9d5a435339e366d70749d64e5aae9264fe12b1f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="support-for-unicode"></a>Obsługa formatu Unicode
 
@@ -46,8 +42,8 @@ Struktura MFC jest obsługą Unicode w całym i wykonuje MFC Unicode włączenie
 |Typ danych inne niż przenośna|Zastępuje to makro|
 |-----------------------------|----------------------------|
 |`char`, `wchar_t`|`_TCHAR`|
-|`char*`, `LPSTR` (Win32 typu danych)`LPWSTR`|`LPTSTR`|
-|`const char*`, `LPCSTR` (Win32 typu danych)`LPCWSTR`|`LPCTSTR`|
+|`char*`, `LPSTR` (Win32 typu danych) `LPWSTR`|`LPTSTR`|
+|`const char*`, `LPCSTR` (Win32 typu danych) `LPCWSTR`|`LPCTSTR`|
 
 Klasa `CString` używa `_TCHAR` podstawowym i zapewnia łatwe konwersje konstruktory i operatory. Większość operacje na ciągach standardu Unicode można pisać przy użyciu tej samej logiki, używany do obsługi zestawu znaków ANSI systemu Windows z wyjątkiem tego, że podstawowa jednostka operacji jest znakiem 16-bitową zamiast bajtów 8-bitową. W przeciwieństwie do pracy z zestawów znaków wielobajtowych, nie trzeba (i nie powinien) Traktuj znaków Unicode, tak jakby był on dwa różne bajty. Jednak masz radzenia sobie z możliwości pojedynczy znak reprezentowany przez para zastępcza znaki dwubajtowe. Ogólnie rzecz biorąc nie pisania kodu, który przyjęto założenie, że długość ciągu jest taka sama jak liczba znaków, czy wąskie lub szerokie, że zawiera on.
 

@@ -1,13 +1,10 @@
 ---
-title: "Wielowątkowość: Tworzenie wątków interfejsu użytkownika | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Wielowątkowość: Tworzenie wątków interfejsu użytkownika | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 f1_keywords:
 - CREATE_SUSPENDED
 - SECURITY_ATTRIBUTES
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - user interface threads [C++]
 - threading [MFC], user interface threads
 ms.assetid: 446925c1-db59-46ea-ae5b-d5ae5d5b91d8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 105685e0db4689978ef1e6f8615bb5e5f8acdd43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 480839316cc8d47b2af4be1cd81c0d02f09fad25
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-creating-user-interface-threads"></a>Wielowątkowość: tworzenie wątków interfejsu użytkownika
 Wątek interfejsu użytkownika jest najczęściej używany do obsługi danych wejściowych użytkownika zdarzeń i reagowanie na użytkownika niezależnie od wątków wykonywania innych części aplikacji. Wątku głównego aplikacji (w Twojej `CWinApp`-klasy) jest już utworzony i uruchomiona. W tym temacie opisano kroki niezbędne do tworzenia wątków interfejsu użytkownika.  
@@ -62,7 +57,7 @@ Wątek interfejsu użytkownika jest najczęściej używany do obsługi danych we
   
 -   (Opcjonalnie) Atrybuty wymaganymi. Wartość domyślna to te same prawa dostępu jako wątku nadrzędnej. Aby uzyskać więcej informacji na temat formatu informacji o zabezpieczeniach, zobacz [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) w [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
   
- `AfxBeginThread`wykonuje większość pracy należy. Tworzy nowy obiekt klasy, inicjowane z informacji podanych i wywołania [CWinThread::CreateThread](../mfc/reference/cwinthread-class.md#createthread) można uruchomić na wykonywaniu wątku. Testy zostały wprowadzone w całej procedury upewnij się, że wszystkie obiekty są deallocated prawidłowo w przypadku dowolnej części Tworzenie nie.  
+ `AfxBeginThread` wykonuje większość pracy należy. Tworzy nowy obiekt klasy, inicjowane z informacji podanych i wywołania [CWinThread::CreateThread](../mfc/reference/cwinthread-class.md#createthread) można uruchomić na wykonywaniu wątku. Testy zostały wprowadzone w całej procedury upewnij się, że wszystkie obiekty są deallocated prawidłowo w przypadku dowolnej części Tworzenie nie.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o?  
   

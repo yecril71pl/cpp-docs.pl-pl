@@ -1,13 +1,10 @@
 ---
-title: "Obraz Menu (edytor obrazów dla ikon) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Obraz Menu (edytor obrazów dla ikon) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Image menu
 ms.assetid: ac2b4d53-1919-4fd1-a0af-d3c085c45af2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49da8f90703190be068fe2d35a808b2cafed6f0c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8bfeeda8d358bf3144cd5c3168686561b3586581
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="image-menu-image-editor-for-icons"></a>Menu obrazu (Edytor obrazów dla ikon)
 Menu obrazu jest wyświetlana tylko wtedy, gdy edytor obrazów jest aktywna, ma poleceń edycji obrazów, zarządzanie palety kolorów i ustawienie Opcje okna edytora obrazów. Ponadto polecenia narzędzia obrazy urządzeń są dostępne podczas pracy z ikony i kursory.  

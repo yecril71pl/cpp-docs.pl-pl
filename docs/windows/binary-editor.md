@@ -1,13 +1,10 @@
 ---
-title: "Edytor plików binarnych | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Edytor plików binarnych | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.binary.F1
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - resource editors, Binary editor
 - Binary editor
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4dade674fb32615e23904e6dbaf03d6c6ee0a371
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d5deb511069830de5ea7aa542bb010f57be5af9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="binary-editor"></a>Edytor plików binarnych
 > [!WARNING]
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
  Edytor plików binarnych umożliwia edytowanie wszystkich zasobów na poziomie binarnym w formacie szesnastkowym lub w formacie ASCII. Można również użyć [znaleźć polecenia](/visualstudio/ide/reference/find-command) do wyszukiwania ciągów znaków ASCII lub bajty szesnastkowe. Edytor plików binarnych należy używać tylko wtedy, gdy należy wyświetlić lub drobne zmiany niestandardowych zasobów lub typy zasobów, które nie są obsługiwane przez środowisko Visual Studio.  
   
- Aby otworzyć edytora plików binarnych, należy najpierw wybrać **plik &#124; Nowy &#124; Plik** z menu głównego, wybierz plik, który chcesz edytować, a następnie kliknij strzałkę listy obok **Otwórz** przycisk, a następnie wybierz pozycję **Otwórz za pomocą &#124; Edytor plików binarnych**.  
+ Aby otworzyć edytora plików binarnych, należy najpierw wybrać **pliku &#124; nowy &#124; pliku** z menu głównego, wybierz plik, który chcesz edytować, a następnie kliknij strzałkę listy obok **Otwórz** przycisk, a następnie wybierz pozycję **Otwórz za pomocą &#124; edytora plików binarnych**.  
   
 > [!CAUTION]
 >  Edytowanie zasobów, takich jak okien dialogowych, obrazy lub menu w edytorze binarnym jest niebezpieczne. Niepoprawne edytowanie może spowodować uszkodzenie zasobów, dzięki czemu można odczytać w edytorze macierzystego.  

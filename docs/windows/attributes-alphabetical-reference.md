@@ -1,13 +1,10 @@
 ---
-title: "Alfabetyczny spis atrybutów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Alfabetyczny spis atrybutów | Dokumentacja firmy Microsoft
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: 'index-page '
+ms.topic: conceptual
 f1_keywords:
 - vc.attributes
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - attributes [C++]
 ms.assetid: fb2216ef-9fbd-44f4-afed-732aa99450e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2420ba0d023272a1e6a66687f567bf881b8af35f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5b8e0f40e0633d0ebabbbe2f5f226e0311b1c977
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attributes-alphabetical-reference"></a>Alfabetyczny spis atrybutów
 Następujące atrybuty są dostępne w programie Visual C++.  
@@ -45,7 +40,7 @@ Następujące atrybuty są dostępne w programie Visual C++.
 |[com_interface_entry —](../windows/com-interface-entry-cpp.md)|Dodaje wpis interfejs do mapy COM.|  
 |[control](../windows/control.md)|Określa, że typ zdefiniowany przez użytkownika jest formantu.|  
 |[cpp_quote](../windows/cpp-quote.md)|Emituje określony ciąg bez znaków cudzysłowu do wygenerowanego pliku nagłówka.|  
-|[niestandardowe](../windows/custom-cpp.md)|Umożliwia określenie własnych atrybutów.|  
+|[custom](../windows/custom-cpp.md)|Umożliwia określenie własnych atrybutów.|  
 |[db_accessor](../windows/db-accessor.md)|Wiąże kolumn w zestawie wierszy i wiąże je do odpowiednich map metody dostępu.|  
 |[db_column](../windows/db-column.md)|Wiąże określonej kolumny zestawu wierszy.|  
 |[db_command](../windows/db-command.md)|Wykonuje polecenia OLE DB.|  
@@ -76,13 +71,13 @@ Następujące atrybuty są dostępne w programie Visual C++.
 |[idl_quote](../windows/idl-quote.md)|Umożliwia korzystanie z atrybutów lub IDL konstrukcje, które nie są obsługiwane w bieżącej wersji programu Visual C++.|  
 |[iid_is](../windows/iid-is.md)|Określa identyfikator IID interfejsu COM wskazywana przez wskaźnik interfejsu.|  
 |[immediatebind](../windows/immediatebind.md)|Wskazuje, że bazy danych zostanie niezwłocznie powiadomiona o wszystkich zmianach właściwości obiektu powiązanego z danymi.|  
-|[implementuje](../windows/implements-cpp.md)|Określa wysyłania interfejsów, które muszą być członkami IDL coclass.|  
+|[Implementuje](../windows/implements-cpp.md)|Określa wysyłania interfejsów, które muszą być członkami IDL coclass.|  
 |[implements_category](../windows/implements-category.md)|Określa kategorii składników zaimplementowane dla klasy.|  
 |[import](../windows/import.md)|Określa innego pliku .idl, .odl — lub nagłówek definicjami, którego ma dotyczyć odwołanie z pliku .idl głównego.|  
 |[importidl](../windows/importidl.md)|Wstawia pliku .idl określony w pliku .idl wygenerowany.|  
 |[importlib](../windows/importlib.md)|Powoduje, że typy, które już zostały skompilowane w innej bibliotece typu dostępne do tworzenia biblioteki typów.|  
 |[in](../windows/in-cpp.md)|Wskazuje, że parametr zostanie przekazany z procedury wywołującej do procedury wywoływanej.|  
-|[obejmują](../windows/include-cpp.md)|Określa co najmniej jeden plik nagłówka do uwzględnienia w pliku .idl wygenerowany.|  
+|[include](../windows/include-cpp.md)|Określa co najmniej jeden plik nagłówka do uwzględnienia w pliku .idl wygenerowany.|  
 |[includelib —](../windows/includelib-cpp.md)|Powoduje, że pliku .idl lub .h do uwzględnienia w pliku .idl wygenerowany.|  
 |[last_is](../windows/last-is.md)|Określa indeks przekazywanych ostatnim elemencie tablicy.|  
 |[lcid](../windows/lcid.md)|Pozwala przekazać do funkcji identyfikator ustawień regionalnych.|  
@@ -100,7 +95,7 @@ Następujące atrybuty są dostępne w programie Visual C++.
 |[object](../windows/object-cpp.md)|Określa niestandardowy interfejs; synonimem atrybutu niestandardowego.|  
 |[odl](../windows/odl.md)|Identyfikuje interfejsu jako interfejsu język opisu obiektów (ODL).|  
 |[oleautomation](../windows/oleautomation.md)|Wskazuje, że interfejs jest zgodna z automatyzacji.|  
-|[opcjonalne](../windows/optional-cpp.md)|Określa opcjonalny parametr dla funkcji członkowskiej.|  
+|[Opcjonalne](../windows/optional-cpp.md)|Określa opcjonalny parametr dla funkcji członkowskiej.|  
 |[out](../windows/out-cpp.md)|Określa parametry wskaźnika, które zostaną zwrócone z procedury wywoływanej do procedury wywołującej (z serwera do klienta).|  
 |[pointer_default](../windows/pointer-default.md)|Określa domyślny atrybut wskaźnik dla wszystkich wskaźników z wyjątkiem wskaźniki najwyższego poziomu, które są wyświetlane na listach parametrem.|  
 |[pragma](../windows/pragma.md)|Emituje określony ciąg bez znaków cudzysłowu do pliku .idl wygenerowany.|  
@@ -110,7 +105,7 @@ Następujące atrybuty są dostępne w programie Visual C++.
 |[propputref](../windows/propputref.md)|Określa funkcję ustawienie właściwości, która korzysta z odwołaniem zamiast wartości.|  
 |[ptr](../windows/ptr.md)|Określa wskaźnik jako pełne wskaźnika.|  
 |[public](../windows/public-cpp-attributes.md)|Zapewnia, że typem typedef przejdzie do biblioteki typów nawet wtedy, gdy go nie odwołuje się w pliku .idl.|  
-|[zakres](../windows/range-cpp.md)|Określa zakresu wartości dozwoloną dla argumentów lub pól, których wartości są ustawione w czasie wykonywania.|  
+|[Zakres](../windows/range-cpp.md)|Określa zakresu wartości dozwoloną dla argumentów lub pól, których wartości są ustawione w czasie wykonywania.|  
 |[rdx](../windows/rdx.md)|Tworzy lub modyfikuje klucz rejestru.|  
 |[readonly](../windows/readonly-cpp.md)|Zabrania używania przypisania do zmiennej.|  
 |[ref](../windows/ref-cpp.md)|Identyfikuje wskaźnik odwołania.|  
@@ -121,18 +116,18 @@ Następujące atrybuty są dostępne w programie Visual C++.
 |[retval](../windows/retval.md)|Określa parametr, który otrzymuje wartość zwrotną z elementu członkowskiego.|  
 |[satype](../windows/satype.md)|Określa typ danych **SAFEARRAY**.|  
 |[size_is](../windows/size-is.md)|Określa rozmiar pamięci przydzielona dla wskaźników o rozmiarze o rozmiarze wskaźniki do wskaźników o rozmiarze i jedno - lub tablice wielowymiarowe.|  
-|[źródło](../windows/source-cpp.md)|Wskazuje, że elementem członkowskim klasy, właściwości lub metody jest źródłem zdarzeń.|  
+|[source](../windows/source-cpp.md)|Wskazuje, że elementem członkowskim klasy, właściwości lub metody jest źródłem zdarzeń.|  
 |[string](../windows/string-cpp.md)|Oznacza to, że jednowymiarowej tablicy `char`, `wchar_t`, **bajtów**, lub równoważne tablicy lub wskaźnika do tablicy takie muszą być traktowane jako ciąg.|  
 |[support_error_info](../windows/support-error-info.md)|Obsługuje raportowania błędów dla obiekt docelowy.|  
 |[switch_is](../windows/switch-is.md)|Określa wyrażenie lub identyfikator działający jako discriminant Unii, który wybiera element członkowski typu union.|  
 |[switch_type](../windows/switch-type.md)|Określa typ zmiennej używanej jako discriminant Unii.|  
 |[synchronize](../windows/synchronize.md)|Synchronizuje dostępu do metody.|  
-|[wątkowość](../windows/threading-cpp.md)|Określa model wątkowości dla obiekt COM.|  
+|[Wątkowość](../windows/threading-cpp.md)|Określa model wątkowości dla obiekt COM.|  
 |[transmit_as](../windows/transmit-as.md)|Instruuje kompilator, aby skojarzyć typu przedstawioną kompilowania aplikacji, które klienta i serwera, z typem przesyłane.|  
 |[uidefault](../windows/uidefault.md)|Wskazuje, że element członkowski typu informacji jest domyślny element członkowski do wyświetlenia w interfejsie użytkownika.|  
-|[unikatowe](../windows/unique-cpp.md)|Określa unikatowy wskaźnika.|  
+|[unique](../windows/unique-cpp.md)|Określa unikatowy wskaźnika.|  
 |[usesgetlasterror](../windows/usesgetlasterror.md)|Obiekt wywołujący informuje, że jeśli występuje błąd podczas wywoływania tej funkcji, wywołujący może wywoływać `GetLastError` można pobrać kod błędu.|  
-|[Identyfikator UUID](../windows/uuid-cpp-attributes.md)|Określa unikatowy identyfikator dla klasy ani interfejsu.|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Określa unikatowy identyfikator dla klasy ani interfejsu.|  
 |[v1_enum](../windows/v1-enum.md)|Określa, że przekazywane na określony typ wyliczeniowy jako jednostki 32-bitowe zamiast domyślnego 16-bitowych.|  
 |[vararg](../windows/vararg.md)|Określa, że funkcja zostać zmienną liczbę argumentów.|  
 |[Wersja](../windows/version-cpp.md)|Identyfikuje określoną wersją wśród wielu wersji interfejsu lub klasy.|  

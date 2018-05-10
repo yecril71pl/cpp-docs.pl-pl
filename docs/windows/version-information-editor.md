@@ -1,13 +1,10 @@
 ---
 title: Edytor informacji o wersji | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.version.F1
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - editors, Version Information
 - resource editors, Version Information editor
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7c221120bf7170025506fe49fe2ab6419ce66044
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 76a76dbb3d8b41c2366f354f9c3c8d66ccc3743f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="version-information-editor"></a>Edytor informacji o wersji
 Informacje o wersji składa się z firmy i identyfikator produktu, numer wersji produktu i praw autorskich i znak towarowy powiadomień. W edytorze informacje o wersji można tworzyć i obsługiwać te dane, które są przechowywane w zasobach informacji o wersji. Zasób informacje o wersji nie jest wymagane przez aplikację, ale jest to przydatne miejsce do zbierania informacji, która identyfikuje aplikację. Informacje o wersji jest również używane przez Instalatora interfejsów API.  

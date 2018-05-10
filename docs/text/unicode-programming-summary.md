@@ -1,30 +1,25 @@
 ---
 title: Podsumowanie programowania Unicode | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Unicode [C++], programming with
 - Unicode [C++], MFC and C run-time functions
 ms.assetid: a4c9770f-6c9c-447c-996b-980920288bed
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03ee8a4032b054eb670de160aea9ec54dcf80f4d
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 2a378d46c517dfc0fbb5857ad54bc31f4c34287b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="unicode-programming-summary"></a>Podsumowanie programowania Unicode
 Aby móc korzystać z obsługi czasu wykonywania MFC i C Unicode, musisz:  
@@ -90,13 +85,13 @@ Aby móc korzystać z obsługi czasu wykonywania MFC i C Unicode, musisz:
     pDC->TextOut( str, str.GetLength( ) );  
     ```  
   
-     `CDC::TextOut`pobiera liczbę znaków, nie liczba bajtów.  
+     `CDC::TextOut` pobiera liczbę znaków, nie liczba bajtów.  
   
 -   Użyj [fopen_s —, _wfopen_s —](../c-runtime-library/reference/fopen-s-wfopen-s.md) do otwierania plików Unicode.  
   
  Podsumowując, MFC i biblioteki wykonawczej zapewniają obsługę programowania Unicode:  
   
--   Z wyjątkiem funkcji Członkowskich klasy bazy danych, wszystkie funkcje MFC obsługują Unicode, łącznie z `CString`. `CString`udostępnia funkcje konwersji Unicode/ANSI.  
+-   Z wyjątkiem funkcji Członkowskich klasy bazy danych, wszystkie funkcje MFC obsługują Unicode, łącznie z `CString`. `CString` udostępnia funkcje konwersji Unicode/ANSI.  
   
 -   Biblioteki wykonawczej udostępnia wszystkie funkcje obsługi ciągów Unicode wersji. (Biblioteki wykonawczej również udostępnia przenośnych odpowiedniej wersji Unicode lub MBCS. Są to **_tcs** makra.)  
   

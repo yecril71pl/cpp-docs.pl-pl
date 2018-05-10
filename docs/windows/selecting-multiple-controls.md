@@ -1,13 +1,10 @@
 ---
-title: "Wybieranie wielu formantów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Wybieranie wielu formantów | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - controls [C++], selecting
 - controls [C++], removing from groups
 ms.assetid: efbdbade-0a3a-4328-b36e-a6376c06e8de
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b91e6d1bcadede053d1960cb15de6e2257190761
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 60da452fe4373d47f5278fa45520a45235f76df0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="selecting-multiple-controls"></a>Wybieranie wielu formantów
 ### <a name="to-select-multiple-controls"></a>Aby zaznaczyć wiele formantów  
@@ -38,11 +33,11 @@ ms.lasthandoff: 12/21/2017
   
      Po zwolnieniu przycisku myszy, wszystkie formanty wewnątrz i przecinające się są zaznaczone pola wyboru.  
   
-     \-lub -  
+     \- lub -  
   
 -   Naciśnij i przytrzymaj klawisz SHIFT, a następnie kliknij formanty, które powinny zostać uwzględnione w zaznaczeniu.  
   
-     \-lub -  
+     \- lub -  
   
 -   Naciśnij i przytrzymaj klawisz Ctrl i kliknij formanty, które powinny zostać uwzględnione w zaznaczeniu.  
   

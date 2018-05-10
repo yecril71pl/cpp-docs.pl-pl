@@ -1,13 +1,10 @@
 ---
-title: "Tworzenie obrazu urządzenia (edytor obrazów dla ikon) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Tworzenie obrazu urządzenia (edytor obrazów dla ikon) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.icon
 dev_langs:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - images [C++], creating for display devices
 - icons [C++], inserting
 ms.assetid: 5a536928-32df-4ace-beb1-1521ce3b871f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d68a9d35471e43296cade829700fc6c5b311ce2a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d8fc1ce4bd5a6e125ece7461d100950f255dee44
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-a-device-image-image-editor-for-icons"></a>Tworzenie obrazu urządzenia (Edytor obrazów dla ikon)
 Podczas tworzenia nowego zasobu ikony, obraz edytora najpierw tworzy obraz w określonym stylu (32 x 32, 16 kolorów dla ikony oraz 32 × 32 dla kursory w skali odcieni szarości). Można dodać obrazy w różnych rozmiarach i style do początkowej ikony lub kursor i edytować każdy dodatkowego obrazu w razie potrzeby dla różnych ekranów. Można również edytować obrazu za pomocą operacji kopiowania i wklejania z istniejącym typem obrazu lub mapy bitowej utworzonej w programie grafiki.  

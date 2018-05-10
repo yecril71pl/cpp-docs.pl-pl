@@ -1,12 +1,9 @@
 ---
-title: "Isource — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Isource — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - ISource
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - ISource class
 ms.assetid: c7b73463-42f6-4dcc-801a-81379b12d35a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 147623329d71da704529c12e27ce3c768c1b8145
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 27b1aa57a8c90c2f996aab3b8ee47797f15edd5b
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="isource-class"></a>ISource — Klasa
 `ISource` Klasa jest interfejsem źródła wszystkie bloki. Bloki źródła propagację wiadomości `ITarget` bloków.  
@@ -90,7 +85,7 @@ class ISource;
   
  **Namespace:** współbieżności  
   
-##  <a name="accept">Zaakceptuj</a> 
+##  <a name="accept"></a> Zaakceptuj 
 
  W przypadku przesłonięcia w klasie pochodnej, akceptuje wiadomość została przyjęta przez to `ISource` bloku przeniesieniem własności do obiektu wywołującego.  
   
@@ -128,7 +123,7 @@ virtual void acquire_ref(_Inout_ ITarget<T>* _PTarget) = 0;
 ### <a name="remarks"></a>Uwagi  
  Ta metoda jest wywoływana przez `ITarget` obiekt, który jest połączone z tym źródłem podczas `link_target` metody.  
   
-##  <a name="consume">Korzystać z</a> 
+##  <a name="consume"></a> Korzystać z 
 
  W przypadku przesłonięcia w klasie pochodnej, wykorzystuje komunikat wcześniej oferowane przez to `ISource` blokować i pomyślnie zastrzeżone przez element docelowy przeniesieniem własności do obiektu wywołującego.  
   
@@ -171,7 +166,7 @@ virtual void link_target(_Inout_ ITarget<T>* _PTarget) = 0;
  `_PTarget`  
  Wskaźnik do bloku docelowego są połączone z tym `ISource` bloku.  
   
-##  <a name="release">Zlecenia</a> 
+##  <a name="release"></a> Zlecenia 
 
  W przypadku przesłonięcia w klasie pochodnej, zwalnia Poprzednia rezerwacja wiadomości powiodło się.  
   

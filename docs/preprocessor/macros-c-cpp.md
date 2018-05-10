@@ -1,12 +1,9 @@
 ---
 title: Makra (C/C++) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,20 +12,18 @@ helpviewer_keywords:
 - preprocessor, macros
 - Visual C++, preprocessor macros
 ms.assetid: a7bfc5d4-2537-4fe0-bef0-70cec0b43388
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a230abc768b23afd74d1af8a9c178d39d453536a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6794cb56566e552a47f19d53f4092c1a9749969c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="macros-cc"></a>Makra (C/C++)
-Przetwarzanie wstępne rozszerza makra w wszystkie wiersze, które nie są dyrektywy preprocesora (wiersze, które nie mają  **#**  jako pierwszy znak z systemem innym niż biały) i w częściach niektóre dyrektywy, które nie są pomijane w ramach kompilacja warunkowa. Dyrektywy „kompilacji warunkowej” pozwalają na pomijanie kompilacji części pliku źródłowego przez testowanie wyrażenia stałego lub identyfikatora służącego do określania bloków tekstu, które są przekazywane do kompilatora i bloków tekstu, które są usuwane z pliku źródłowego podczas przetwarzania wstępnego.  
+Przetwarzanie wstępne rozszerza makra w wszystkie wiersze, które nie są dyrektywy preprocesora (wiersze, które nie mają **#** jako pierwszy znak z systemem innym niż biały) i w częściach niektóre dyrektywy, które nie są pomijane w ramach kompilacja warunkowa. Dyrektywy „kompilacji warunkowej” pozwalają na pomijanie kompilacji części pliku źródłowego przez testowanie wyrażenia stałego lub identyfikatora służącego do określania bloków tekstu, które są przekazywane do kompilatora i bloków tekstu, które są usuwane z pliku źródłowego podczas przetwarzania wstępnego.  
   
  Dyrektywa `#define` jest zazwyczaj używana do kojarzenia znaczących identyfikatorów ze stałymi, słowami kluczowymi i powszechnie używanymi instrukcjami lub wyrażeniami. Identyfikatory, które reprezentują stałe są czasami nazywane „stałymi symbolicznymi” lub „stałymi manifestu”. Identyfikatory, które reprezentują instrukcje lub wyrażenia są nazywane „makrami”. W tej dokumentacji preprocesora, używany jest jedynie termin „makro”.  
   

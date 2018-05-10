@@ -1,13 +1,10 @@
 ---
-title: "Rozmieszczanie przycisków poleceń po prawej lub dolnej części okna dialogowego | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Rozmieszczanie przycisków poleceń po prawej lub dolnej części okna dialogowego | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - buttons, arranging push buttons in dialog boxes
 - push buttons
 ms.assetid: 2e855cbf-90f8-4ff0-9511-508cf78e2cd5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a8bec8f1f8772693b82523d01d0e14db12665be0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3bf0ccd8954884b5ed1907c752b013ab2a33840d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="arranging-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Rozmieszczanie przycisków poleceń po prawej stronie lub u dołu okna dialogowego
 ### <a name="to-arrange-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Aby rozmieszczanie przycisków poleceń po prawej lub dolnej części okna dialogowego  

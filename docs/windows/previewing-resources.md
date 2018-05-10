@@ -1,13 +1,10 @@
 ---
-title: "Wyświetlanie podglądu zasobów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Wyświetlanie podglądu zasobów | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.resvw.resource.previewing
 - vs.resvw.resource.previewing
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - resource previews
 - code, viewing
 ms.assetid: d6abda66-0e2b-4ac3-a59a-a57b8c6fb70b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0eca56e607c916e28afc7bf513d853bcf6d94b81
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 32d0082d050ceb391a4346e2a4a38ff71c3cf2a3
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="previewing-resources"></a>Wyświetlanie podglądu zasobów
 Wyświetlanie podglądu zasobów służy do wyświetlania zasobów graficznych bez ich otwierania. Podgląd jest również przydatne dla plików wykonywalnych, po ich skompilowany, ponieważ zmiany numery identyfikatorów zasobów. Ponieważ te identyfikatory numeryczne często nie zawiera informacji wystarczających, wyświetlanie podglądu zasobów pomaga szybko zidentyfikować je.  
@@ -58,7 +53,7 @@ Wyświetlanie podglądu zasobów służy do wyświetlania zasobów graficznych b
   
 2.  W [okna właściwości](/visualstudio/ide/reference/properties-window), kliknij przycisk **strony właściwości** przycisku.  
   
-     \-lub -  
+     \- lub -  
   
 3.  Na **widoku** menu, kliknij przycisk **strony właściwości**.  
   

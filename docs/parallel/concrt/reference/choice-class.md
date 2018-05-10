@@ -1,12 +1,9 @@
 ---
 title: Klasa wyboru | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - choice
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77a02043a3a301760130b568380a0ca5d57994cc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 56b936e1ecb3864b7a7bb95f3e552c16d2ce81d0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="choice-class"></a>Klasa wyboru
 A `choice` bloku komunikatów jest blok wielu źródłach, jednego docelowego reprezentuje przepływ sterowania interakcji z zestawu źródeł. Blokowanie wybór będzie czekać do jednego z wielu źródeł, który zwróci komunikat i rozpropaguje indeksu źródła wytworzonego wiadomości.  
@@ -104,7 +99,7 @@ class choice: public ISource<size_t>;
   
  **Namespace:** współbieżności  
   
-##  <a name="accept">Zaakceptuj</a> 
+##  <a name="accept"></a> Zaakceptuj 
 
  Akceptuje wiadomość została przyjęta przez to `choice` bloku przeniesieniem własności do obiektu wywołującego.  
   
@@ -139,7 +134,7 @@ virtual void acquire_ref(_Inout_ ITarget<size_t>* _PTarget);
 ### <a name="remarks"></a>Uwagi  
  Ta metoda jest wywoływana przez `ITarget` obiekt, który jest połączone z tym źródłem podczas `link_target` metody.  
   
-##  <a name="ctor">Wybór</a> 
+##  <a name="ctor"></a> Wybór 
 
  Konstruuje `choice` bloku obsługi wiadomości.  
   
@@ -188,7 +183,7 @@ choice(
 ~choice();
 ```  
   
-##  <a name="consume">Korzystać z</a> 
+##  <a name="consume"></a> Korzystać z 
 
  Wykorzystuje komunikat wcześniej oferowane przez to `choice` wiadomości bloku oraz pomyślnie zastrzeżone przez element docelowy przeniesieniem własności do obiektu wywołującego.  
   
@@ -250,7 +245,7 @@ virtual void link_target(_Inout_ ITarget<size_t>* _PTarget);
  `_PTarget`  
  Wskaźnik do `ITarget` bloku, aby połączyć się z: `choice` bloku obsługi wiadomości.  
   
-##  <a name="release">Zlecenia</a> 
+##  <a name="release"></a> Zlecenia 
 
  Zwalnia Poprzednia rezerwacja wiadomości powiodło się.  
   

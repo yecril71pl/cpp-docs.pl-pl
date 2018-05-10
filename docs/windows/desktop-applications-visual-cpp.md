@@ -2,27 +2,22 @@
 title: Aplikacje klasyczne (Visual C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-caps.latest.revision: 17
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61f52dead8ca7ecad52b1cef4f1d87ffc5830386
-ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
+ms.openlocfilehash: f9c8180288374711db4e6d866c73a0bc8919caf2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="desktop-applications-visual-c"></a>Aplikacje klasyczne (Visual C++)
 A *aplikacją* w języku C++ jest aplikacji natywnej dostępnej pełny zestaw interfejsów API systemu Windows i albo działa w oknie lub w konsoli systemowej. Aplikacje w języku C++ można uruchomić w systemie Windows XP do systemu Windows 10 (chociaż systemu Windows XP jest już oficjalnie obsługiwana i istnieje wiele interfejsów API systemu Windows, które zostały wprowadzone od tego czasu).   Aplikacja różni się od aplikacji systemu Windows platformy Uniwersalnej, które można uruchomić na komputerach z systemem Windows 10, a także na konsoli XBox, Windows Phone, Surface Hub i innych urządzeniach. Aby uzyskać więcej informacji na temat pulpitu vs. Aplikacji platformy uniwersalnej systemu Windows, zobacz [Wybierz technologię](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx).  

@@ -1,29 +1,24 @@
 ---
 title: Historia 2003 2015 zmian Visual C++ | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/30/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1541029a8164e1c70e5599f20512dbecde543dc
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1447bcd0cb0a9bfff1d527f6a53eccf25e008f90
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historia 2003 2015 zmian Visual C++
 
@@ -305,7 +300,7 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
     |has_trivial_move_assign|is_trivially_move_assignable|  
     |has_trivial_destructor|is_trivially_destructible|  
   
--   **zasady Launch::any i launch::sync** niestandardowe zasady launch::any i launch::sync zostały usunięte. Dla launch::any, użyj uruchamiania: asynchroniczne &#124; uruchamianie: opóźnieniem. W przypadku launch::sync Użyj launch::deferred. Zobacz [launch — wyliczenie](../standard-library/future-enums.md#launch).  
+-   **zasady Launch::any i launch::sync** niestandardowe zasady launch::any i launch::sync zostały usunięte. Dla launch::any, użyj uruchamiania: asynchroniczne &#124; uruchomić: opóźnieniem. W przypadku launch::sync Użyj launch::deferred. Zobacz [launch — wyliczenie](../standard-library/future-enums.md#launch).  
   
 ####  <a name="BK_MFC"></a> MFC i ATL  
   
@@ -338,7 +333,7 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
   
 -   [Ulepszenia zgodność aktualizacji 3](#VS_Update3)  
   
-###  <a name="VS_RTM">Ulepszenia zgodność programu Visual Studio 2015</a>  
+###  <a name="VS_RTM"></a> Ulepszenia zgodność programu Visual Studio 2015  
   
 -   Opcja /Zc:forScope-  
   
@@ -2854,7 +2849,7 @@ C c;
   
      W programie Visual Studio 2012, rozpoznać E1 w wyrażeniu E1::b:: E1 w zakresie globalnym. W programie Visual Studio 2013, E1 w wyrażeniu E1::b jest rozpoznawany jako element typedef E2 definicji w main() i ma typ:: E2.  
   
--   Układ obiektu został zmieniony. W x64, układ obiektu klasy może się zmienić w porównaniu z poprzednimi wydaniami. Jeśli ma on funkcję wirtualną, ale nie ma klasy podstawowej, która ma funkcję wirtualną, model obiektu kompilatora wstawia wskaźnik do tablicy funkcji wirtualnych po układzie składowej danych. Oznacza to, że układ może nie być optymalny we wszystkich przypadkach. W poprzednich wersjach Optymalizacja x64 może spróbować poprawić układu dla Ciebie, ale ponieważ nie działa prawidłowo w sytuacjach złożonego kodu, został usunięty w programie Visual Studio 2013. Na przykład, rozważmy ten kod:  
+-   {1&gt;Układ obiektu został zmieniony.&lt;1} W x64, układ obiektu klasy może się zmienić w porównaniu z poprzednimi wydaniami. Jeśli ma on funkcję wirtualną, ale nie ma klasy podstawowej, która ma funkcję wirtualną, model obiektu kompilatora wstawia wskaźnik do tablicy funkcji wirtualnych po układzie składowej danych. Oznacza to, że układ może nie być optymalny we wszystkich przypadkach. W poprzednich wersjach Optymalizacja x64 może spróbować poprawić układu dla Ciebie, ale ponieważ nie działa prawidłowo w sytuacjach złożonego kodu, został usunięty w programie Visual Studio 2013. Na przykład, rozważmy ten kod:  
   
     ```cpp  
     __declspec(align(16)) struct S1 {  
@@ -2973,7 +2968,7 @@ C c;
   
 -   Metoda CDatabase::GetConnect zostaną usunięte. Aby zwiększyć bezpieczeństwo, parametry połączenia są obecnie przechowywane zaszyfrowane i zostaną odszyfrowane tylko w razie potrzeby; Nie można zwrócić jako zwykły tekst.  Ciąg można uzyskać za pomocą metody CDatabase::Dump.  
   
--   Podpis CWnd::OnPowerBroadcast zostanie zmieniona. Sygnatura tego programu obsługi komunikatu została zmieniona, aby przyjąć LPARAM jako drugi parametr.  
+-   {1&gt;Zmieniono sygnaturę CWnd::OnPowerBroadcast.&lt;1} Sygnatura tego programu obsługi komunikatu została zmieniona, aby przyjąć LPARAM jako drugi parametr.  
   
 -   Podpisy są zmieniane w celu uwzględnienia obsługi komunikatów. Listy parametrów dla poniższych funkcji zostały zmienione, aby używać nowo dodanych programów obsługi komunikatów ON_WM_*:  
   
@@ -3106,7 +3101,7 @@ C c;
   
 -   Usunięto AFX_GLOBAL_DATA::DwmExtendFrameIntoClientArea. Wywołanie Windows API bezpośrednio w systemie Windows Vista, Windows 7 i Windows 8.  
   
--   Removed AFX_GLOBAL_DATA::DwmDefWindowProc. Wywołanie Windows API bezpośrednio w systemie Windows Vista, Windows 7 i Windows 8.  
+-   Usunięto AFX_GLOBAL_DATA::DwmDefWindowProc. Wywołanie Windows API bezpośrednio w systemie Windows Vista, Windows 7 i Windows 8.  
   
 -   Zmieniona AFX_GLOBAL_DATA::DwmIsCompositionEnabled na IsDwmCompositionEnabled, aby wyeliminować kolizję nazw.  
   
@@ -3324,7 +3319,7 @@ C c;
   
     -   perf_object  
   
-    -   perfmon  
+    -   Monitora wydajności  
   
     -   request_handler  
   

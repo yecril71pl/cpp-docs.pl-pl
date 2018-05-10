@@ -1,13 +1,10 @@
 ---
-title: "Okno dialogowe dodawania zasobów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Okno dialogowe dodawania zasobów | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.insertresource
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - resources [Visual Studio], adding
 - Add Resource dialog box
 ms.assetid: e9fb6967-738f-47e8-ab58-728cf35b3af0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aab285109b34b1de2187e02956cfff2e5a0ba724
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c420a1d72aa4ceca7d71840fcccb451b6e0aba0f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="add-resource-dialog-box"></a>Okno dialogowe dodawania zasobów
 Użyj tego okna dialogowego, aby dodać zasoby do projektu aplikacji komputerowych Windows w języku C++.  

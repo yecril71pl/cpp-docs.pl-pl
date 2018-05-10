@@ -1,13 +1,10 @@
 ---
 title: emitidl | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.emitidl
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - emitidl attribute
 ms.assetid: 85b80c56-578e-4392-ac03-8443c74ebb7d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 55fc74eef3d2ead7312f7dca46f20c3a1ed7ba91
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e4c66ba8c49a405f9fdd93b1652626ab47488a53
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="emitidl"></a>emitidl
 Określa, czy wszystkie atrybuty IDL kolejne są przetwarzane i umieszczony w pliku .idl wygenerowany.  
@@ -38,7 +33,7 @@ Określa, czy wszystkie atrybuty IDL kolejne są przetwarzane i umieszczony w pl
 ```  
   
 ### <a name="parameters"></a>Parametry  
-*Stan*  
+*state*  
 Jedną z następujących wartości: **true**, **false**, **wymuszone**, **ograniczeniami**, **wypychania**, lub **pop**.  
   
 -   Jeśli **true**, wszystkie atrybuty kategorii IDL w pliku kodu źródłowego są umieszczane w pliku .idl wygenerowany. Jest to domyślne ustawienie dla **emitidl**.  

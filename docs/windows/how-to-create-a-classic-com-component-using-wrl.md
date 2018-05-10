@@ -1,28 +1,23 @@
 ---
-title: "Porady: tworzenie klasycznego składnika COM za pomocą biblioteki WRL | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Porady: tworzenie klasycznego składnika COM za pomocą biblioteki WRL | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 5efe7690-90d5-4c3c-9e53-11a14cefcb19
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4b665ae9ce10b4fbf5bd1baa7563e0f94b7fb991
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 00f00b265128ca388a3e9d4eb77631a320fbda81
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>Porady: tworzenie klasycznego składnika COM za pomocą biblioteki WRL
 Zestaw Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL) służy do tworzenia podstawowych składników modelu COM do użycia w aplikacjach klasycznych, a tylko dla aplikacji uniwersalnych platformy systemu Windows (UWP). Tworzenie składników COM Biblioteka szablonów C++ środowiska wykonawczego systemu Windows mogą wymagać mniejsza ilość kodu niż ATL. Aby uzyskać informacje o podzbiór COM, który obsługuje Biblioteka szablonów C++ środowiska wykonawczego systemu Windows, zobacz [Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).  

@@ -1,13 +1,10 @@
 ---
-title: "Wstępnie zdefiniowane symbole Win32 | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Wstępnie zdefiniowane symbole Win32 | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - symbols, Win32 predefined
 - Windows API [C++], predefined symbols
 ms.assetid: 45c8e193-ee2a-4024-bfc2-34d1ec9c9239
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 865d61611546e2550aaa241220dc226cea9f9b81
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f1ce2ed589d27cd1c0065692a2254bf334f9aa1b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="win32-predefined-symbols"></a>Wstępnie zdefiniowane symbole Win32
 Te symbole są definiowane w pliki nagłówkowe Win32 i obsługują standardowe funkcje aplikacji systemu Windows i działań. Te symbole są używane głównie z typowymi elementami interfejsu użytkownika. Podczas pracy z kontrolkami w edytory zasobów symbole te będą wyświetlane w [okna właściwości](/visualstudio/ide/reference/properties-window) skojarzone z formantów standardowych. Na przykład jeśli ikona aplikacji powinien być wyświetlany pasek narzędzi, ikony zostanie skojarzona z symbol IDI_SMALL w oknie właściwości.  

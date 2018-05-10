@@ -1,13 +1,10 @@
 ---
-title: "Przy użyciu tchar —. Typy danych H z kodem _MBCS | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Przy użyciu tchar —. Typy danych H z kodem _MBCS | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - tchar.h
 - TCHAR
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28255b2e47c48b89b0bd6aea044fe0c15c1f2a08
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: e80ecd123e3fc47705563156e33f46ecd99a0321
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>Używanie typów danych TCHAR.H z kodem _MBCS
 Gdy manifestu stała **_MBCS** jest zdefiniowana, danej procedury zwykłego tekstu mapuje jedną z następujących rodzajów procedury:  
@@ -48,7 +43,7 @@ Gdy manifestu stała **_MBCS** jest zdefiniowana, danej procedury zwykłego teks
     char * _tcsrev(char *);  
     ```  
   
-     W przypadku domyślnej prototypu dla `_tcsrev` mapuje `_mbsrev` za pośrednictwem thunk w Libc.lib. Spowoduje to zmianę typów `_mbsrev` parametry przychodzące i wychodzące wartością zwracaną z **_tchar — \***  (to znaczy `char`  **\*** ) do `unsigned` `char` **\***. Ta metoda gwarantuje dopasowania, gdy jest używany typ **_tchar —**, ale jest stosunkowo powolne ze względu na obciążenie wywołania funkcji.  
+     W przypadku domyślnej prototypu dla `_tcsrev` mapuje `_mbsrev` za pośrednictwem thunk w Libc.lib. Spowoduje to zmianę typów `_mbsrev` parametry przychodzące i wychodzące wartością zwracaną z **_tchar — \***  (to znaczy `char` **\***) do `unsigned` `char` **\***. Ta metoda gwarantuje dopasowania, gdy jest używany typ **_tchar —**, ale jest stosunkowo powolne ze względu na obciążenie wywołania funkcji.  
   
 -   Funkcja ze śródwierszowaniem przez włączenie następującą instrukcję preprocesora w kodzie.  
   

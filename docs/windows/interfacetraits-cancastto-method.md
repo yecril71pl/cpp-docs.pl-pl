@@ -1,12 +1,9 @@
 ---
-title: "InterfaceTraits::CanCastTo — metoda | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: InterfaceTraits::CanCastTo — metoda | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::InterfaceTraits::CanCastTo
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - CanCastTo method
 ms.assetid: 275847cb-69ea-42bf-910f-05ba6ef8b48d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d8dfe6c1873d9cf897494eb6157c2be3baeb435
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e2a0a37f4ef9fa8f2aa92405b4b2c01d99386555
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="interfacetraitscancastto-method"></a>InterfaceTraits::CanCastTo — Metoda
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -55,7 +50,7 @@ static __forceinline bool CanCastTo(
  Jeśli ta operacja zakończy się pomyślnie, `ppv` wskazuje określony przez interfejs `Base`. W przeciwnym razie `ppv` ma ustawioną wartość `nullptr`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli ta operacja zakończy się pomyślnie i `ptr` jest rzutowane na wskaźnik do `Base`; w przeciwnym razie `false` .  
+ `true` Jeśli ta operacja zakończy się pomyślnie i `ptr` jest rzutowane na wskaźnik do `Base`; w przeciwnym razie `false` .  
   
 ## <a name="remarks"></a>Uwagi  
  Wskazuje, czy określony wskaźnik mogą być rzutowane na wskaźnik do `Base`.  

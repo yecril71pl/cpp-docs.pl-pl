@@ -1,13 +1,10 @@
 ---
-title: "Okno dialogowe symboli zasobów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Okno dialogowe symboli zasobów | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.resourcesymbols
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - Resource Symbols dialog box
 - Change Symbol dialog box
 ms.assetid: 9706cde3-1f48-4fcd-bedb-2b03b455e3c1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0e21f60fb2ca90e9e4825e93103fa74be3563780
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 486d4c6c89a43c9d91c655911fa7fee8a31ebd32
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="resource-symbols-dialog-box"></a>Okno dialogowe symboli zasobów
 **Symbole zasobu** okno dialogowe służy do dodawania nowych symboli zasobów, Zmień symbole, które są wyświetlane lub przejść do lokalizacji w kodzie źródłowym, w którym symbol jest używany.  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
  **Nowy**  
  Otwiera okno dialogowe Nowy Symbol, dzięki czemu można zdefiniować nazwę i, jeśli to konieczne, wartość dla nowego identyfikatora zasobu symbolicznych. Aby uzyskać więcej informacji, zobacz [tworzenie nowych symboli](../windows/creating-new-symbols.md).  
   
- **Zmiany**  
+ **zmiany**  
  Otwiera okno dialogowe Zmienianie symbolu, dzięki czemu można zmienić nazwę lub wartość symbolu. Jeśli symbol jest formant lub zasobu w użyciu, symbol można zmienić tylko z odpowiedniego edytora zasobów. Aby uzyskać więcej informacji, zobacz [zmiana nieprzypisanych symboli](../windows/changing-unassigned-symbols.md).  
   
  **Wyświetl użycie**  

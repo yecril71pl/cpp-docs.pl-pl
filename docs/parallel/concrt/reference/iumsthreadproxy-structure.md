@@ -1,12 +1,9 @@
 ---
-title: "Iumsthreadproxy — struktura | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Iumsthreadproxy — struktura | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IUMSThreadProxy
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - IUMSThreadProxy structure
 ms.assetid: 61c69b7e-5c37-4048-bcb4-e75c536afd86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 484c5a8fe7f730bf772fb65dee087ccbe1ff6425
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: bbba2955adc14ef73a0ba9932756ace57c4136e6
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="iumsthreadproxy-structure"></a>IUMSThreadProxy — Struktura
 Abstrakcja dla wątku wykonywania. Jeśli Twoje harmonogramu przyznawane schedulable wątków (UMS) trybu użytkownika, należy ustawić wartość elementu zasad harmonogramu `SchedulerKind` do `UmsThreadDefault`i wdrożenie `IUMSScheduler` interfejsu. Wątki UMS są tylko w obsługiwanych systemach operacyjnych 64-bitowej wersji systemu Windows 7 lub nowszy.  

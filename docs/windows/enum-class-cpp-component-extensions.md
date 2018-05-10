@@ -1,28 +1,23 @@
 ---
 title: Wylicz klasy (C++ Component Extensions) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 876cab344f1177000f63740ca6c33bc1db1afefe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e17c5e2055ef478dc7cafd5a7b2677f47bb9e074
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="enum-class--c-component-extensions"></a>enum class (C++ Component Extensions)
 Deklaruje wyliczenie w zakresie przestrzeni nazw, który jest zdefiniowany przez użytkownika typ zawierający zestaw o nazwie moduły wyliczające stałe nazwane.  
@@ -46,7 +41,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
   
  **Parametry**  
   
- *dostęp*  
+ *Dostęp*  
  Dostępność wyliczenia, które mogą być `public` lub `private`.  
   
  *Identyfikator wyliczenia*  
@@ -102,10 +97,10 @@ accessenum structname [:type] { enumerator-list } var;
  `name`  
  Nazwa wyliczenia.  Nie są dozwolone anonimowe wyliczenia zarządzanych.  
   
- `type`(opcjonalnie)  
- Typ podstawowy elementu *identyfikatory*.  Może to być dowolnego typu skalarne, na przykład podpisem lub bez wersji int, krótka lub długa.  `bool`lub `char` również jest dozwolone.  
+ `type` (opcjonalnie)  
+ Typ podstawowy elementu *identyfikatory*.  Może to być dowolnego typu skalarne, na przykład podpisem lub bez wersji int, krótka lub długa.  `bool` lub `char` również jest dozwolone.  
   
- `var`(opcjonalnie)  
+ `var` (opcjonalnie)  
  Nazwa zmiennej typu wyliczenia.  
   
  **Uwagi**  

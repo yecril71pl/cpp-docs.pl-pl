@@ -1,22 +1,20 @@
 ---
-title: "Jak zgłosić Problem z zestawu narzędzi programu Visual C++ | Dokumentacja firmy Microsoft"
+title: Jak zgłosić Problem z zestawu narzędzi programu Visual C++ | Dokumentacja firmy Microsoft
 ms.date: 1/11/2018
 ms.technology:
-- cpp
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-ide
+ms.topic: conceptual
 dev_langs:
 - C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd7ba80e60251c56fd28a1c380d395e686fc27a4
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: e8be0a5e42caf12c4e1415cf88143b84a9971cd2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Jak zgłosić Problem z zestawu narzędzi programu Visual C++
 
@@ -108,7 +106,7 @@ Reprodukcja podano przykładowy kod źródłowy kompletny, niezależny odtwarzal
 
 Dobrym reprodukcja jest:
 
-- **Minimal.** Reprodukcje powinien być możliwie jak najmniejszy jeszcze nadal pokazują napotkany problem. Reprodukcje musi być złożony lub realistyczne; potrzebna jest tylko do wyświetlenia kodu, który odpowiada standardowej implementacji kompilatorem udokumentowany lub w przypadku braku diagnostycznych, kod, który nie jest zgodna. Najlepiej nadają się proste, aby punkt reprodukcje zawierających wystarczającego kod, aby zademonstrować problem. Jeśli można wyeliminować lub uprościć kod i pozostają zgodność i pozostanie bez zmian problem, należy to zrobić. Nie trzeba przeprowadzać obejmują zaradczych przykłady kodu, który działa. 
+- **Minimalny.** Reprodukcje powinien być możliwie jak najmniejszy jeszcze nadal pokazują napotkany problem. Reprodukcje musi być złożony lub realistyczne; potrzebna jest tylko do wyświetlenia kodu, który odpowiada standardowej implementacji kompilatorem udokumentowany lub w przypadku braku diagnostycznych, kod, który nie jest zgodna. Najlepiej nadają się proste, aby punkt reprodukcje zawierających wystarczającego kod, aby zademonstrować problem. Jeśli można wyeliminować lub uprościć kod i pozostają zgodność i pozostanie bez zmian problem, należy to zrobić. Nie trzeba przeprowadzać obejmują zaradczych przykłady kodu, który działa.
 
 - **Self-Contained.** Reprodukcje Unikaj niepotrzebnych zależności. Jeśli można odtworzyć problem bez bibliotek innych firm, należy to zrobić. Jeśli można odtworzyć problem bez dowolny kod biblioteki oprócz instrukcje prosty wyjściowy (na przykład `puts("this shouldn't compile");`, `std::cout << value;`, i `printf("%d\n", value);` zgadzasz), należy to zrobić. Jest idealne rozwiązanie w przykładzie można zmniejszenia do pliku kodu jednego źródła bez odwołania do żadnych nagłówków użytkownika. Zmniejszenie ilości kodu, który mamy można rozważyć jako możliwych współtwórca tego problemu jest enormously NAS.
 
@@ -116,13 +114,13 @@ Dobrym reprodukcja jest:
 
 - **Sprawdza, czy inne kompilatory** w razie potrzeby. Reprodukcje obejmujących przenośnego kodu C++ powinien sprawdzić zachowanie przed inne kompilatory, jeśli to możliwe. Standardowe określa poprawność programu i kompilator nie jest to doskonałe rozwiązanie, ale podczas Clang oraz GCC zaakceptować kodu bez Diagnostyka, a nie jest MSVC, istnieje duże prawdopodobieństwo, patrzy na usterkę w naszym kompilatora. (Inne możliwości obejmują różnic działania systemu Unix i systemu Windows lub różne poziomy implementacji standardów języka C++ i tak dalej). Z drugiej strony wszystkie kompilatory odrzucenia kodu, następnie jest prawdopodobne, że kod jest nieprawidłowa. Wyświetlanie różnych komunikatów o błędach mogą pomóc zdiagnozować problem samodzielnie.
 
-   Można znaleźć listy online kompilatory do testowania kodu przed w [kompilatory Online C++](https://isocpp.org/blog/2013/01/online-c-compilers) ISO C++ witryny sieci Web lub to wyselekcjonowanych [listy kompilatory C++ Online](https://arnemertz.github.io/online-compilers/) w witrynie GitHub. Oto kilka przykładów obejmują [Wandbox](https://wandbox.org/), [Explorer kompilatora](https://godbolt.org/), i [Coliru](http://coliru.stacked-crooked.com/). 
+   Można znaleźć listy online kompilatory do testowania kodu przed w [kompilatory Online C++](https://isocpp.org/blog/2013/01/online-c-compilers) ISO C++ witryny sieci Web lub to wyselekcjonowanych [listy kompilatory C++ Online](https://arnemertz.github.io/online-compilers/) w witrynie GitHub. Oto kilka przykładów obejmują [Wandbox](https://wandbox.org/), [Explorer kompilatora](https://godbolt.org/), i [Coliru](http://coliru.stacked-crooked.com/).
 
    > [!NOTE]
    > Kompilator online witryny sieci Web nie są powiązane z firmą Microsoft. Wiele witryn sieci Web online kompilatora są uruchamiane jako osobiste projektów, a niektóre z tych witrynach mogą być niedostępne po to odczytu, ale wyszukiwania stwierdzi, że inne osoby, których można używać.
 
 Problemy z kompilatora, konsolidatora i w bibliotekach, często pojawiają się w szczególności sposobów. Rodzaju problemy, które wystąpią określi, jakiego rodzaju reprodukcja należy uwzględnić w raporcie. Bez odpowiedniego reprodukcja nie mamy nic do badania. Poniżej przedstawiono niektóre rodzaje problemów, które mogą zobaczyć i instrukcje dotyczące generowania rodzaje reprodukcje musi być używane do zgłaszania każdego rodzaju problemów.
- 
+
 #### <a name="frontend-parser-crash"></a>Awaria serwera sieci Web (analizator)
 
 Awarie frontonu wystąpić podczas fazy analizy kompilatora. Zazwyczaj kompilator będzie emitować [krytyczny błąd C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) i referencyjne źródła plików i wierszy kod na którym wystąpił błąd; często zaznaczyć msc1.cpp pliku, ale możesz zignorować ten szczegółów.

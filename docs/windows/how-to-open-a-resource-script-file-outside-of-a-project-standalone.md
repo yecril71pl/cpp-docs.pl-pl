@@ -1,13 +1,10 @@
 ---
 title: 'Porady: otwieranie pliku skryptu zasobu spoza projektu (autonomicznego) | Dokumentacja firmy Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.resource
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - .rc files, viewing resources
 - resource script files, viewing resources
 ms.assetid: bc350c60-178d-4c5d-9a7e-6576b0c936e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2dd3bb3996fca1fd2c73ff98e7f391d27911ad15
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87dd0cb1e54b6e74c9c4f4fd7d9baff6461ad470
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-open-a-resource-script-file-outside-of-a-project-standalone"></a>Porady: otwieranie pliku skryptu zasobu spoza projektu (autonomicznego)
 Można wyświetlić zasobów w plik .rc, bez konieczności otwierania projektu. Plik .rc zostanie otwarty w oknie dokumentu w przeciwieństwie do otwierania w [widok zasobów](../windows/resource-view-window.md) okna (jak w przypadku plik jest otwarty w projekcie).  
@@ -64,7 +59,7 @@ Można wyświetlić zasobów w plik .rc, bez konieczności otwierania projektu. 
   
     -   Z **okna** menu, wybierz **nową grupę kart poziomy** lub **nową grupę kart pionowy**.  
   
-         \-lub -  
+         \- lub -  
   
     -   Kliknij prawym przyciskiem myszy jeden z .RC — pliki i wybierz polecenie **nową grupę kart poziomy** lub **nową grupę kart pionowy** z menu skrótów.  
   
