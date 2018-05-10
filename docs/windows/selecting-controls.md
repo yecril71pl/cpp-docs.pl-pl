@@ -1,13 +1,10 @@
 ---
-title: "Zaznaczanie formantów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Zaznaczanie formantów | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - size, controls
 - controls [C++], dominant
 ms.assetid: 27f05450-4550-4229-9f4c-2c9e06365596
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8bf795bacf40a90aaeec451315e4d0e75f7f71aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4a8d5260b721bf829c73f587ccd691db5543e40
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="selecting-controls"></a>Zaznaczanie kontrolek
 Wybierz formanty do rozmiaru, Dopasuj, przenieść, skopiować, lub usuń je, a następnie wykonaj operację, którą chcesz. W większości przypadków musisz wybrać więcej niż jeden formant za pomocą narzędzi rozmiaru i wyrównanie na [paska narzędzi edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  

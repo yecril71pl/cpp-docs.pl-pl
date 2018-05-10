@@ -1,31 +1,26 @@
 ---
-title: "Wstępnie zdefiniowane symbole ATL | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Wstępnie zdefiniowane symbole ATL | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - symbols, ATL predefined
 - ATL symbols
 ms.assetid: 60d8f4e6-6ed9-47f3-9051-e4bf34384456
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d56fcfa8fb65f183acfe96c3981023d06f5e524a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c00487b2bb7c7a67dfb81ffb638f5a46fc611bc
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="atl-predefined-symbols"></a>Wstępnie zdefiniowane symbole ATL
 Te symbole są definiowane w ATL pliki nagłówkowe, ale obsługuje standardowe funkcje aplikacji systemu Windows i działań. Symbole są używane głównie z okien dialogowych. Podczas pracy z okien dialogowych i formantów w [Edytor okien dialogowych](../windows/dialog-editor.md), te symbole będą wyświetlane w oknie właściwości skojarzone z formantów standardowych. Na przykład, jeśli Twoje okno dialogowe ma przycisk Anuluj, tego polecenia zostanie skojarzona z symbol IDCANCEL w [okna właściwości](/visualstudio/ide/reference/properties-window).  

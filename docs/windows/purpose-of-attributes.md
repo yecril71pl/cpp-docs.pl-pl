@@ -1,30 +1,25 @@
 ---
-title: "Cel atrybutów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Cel atrybutów | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], about attributes
 ms.assetid: 3aff8bfa-a2a3-4fcb-a2c6-1d96a2b4c68d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed20c29d017527d5c2ce0b0c5ab8053fc75dc6ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0ea3b731cc22d144e2e20dc70f14e6b0b76b1479
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="purpose-of-attributes"></a>Cel atrybutów
 Atrybuty rozszerzenia C++ w kierunkach nie jest obecnie możliwe bez przerywania klasycznego struktury języka. Atrybuty zezwalać dostawców (oddzielne dll), aby rozszerzyć funkcjonalność języka dynamicznie. Podstawowym celem atrybutów jest uproszczenie tworzenia składników modelu COM, oprócz zwiększeniu poziomu wydajności projektanta składników. Można zastosować atrybutów do niemal wszystkie konstrukcji języka C++, takich jak klasy, elementy członkowskie danych lub funkcji elementów członkowskich. Poniżej przedstawiono wyróżnienie korzyści zapewniane przez to nowa technologia:  
