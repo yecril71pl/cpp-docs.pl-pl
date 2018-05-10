@@ -1,30 +1,25 @@
 ---
-title: "SimpleActivationFactory::GetRuntimeClassName — metoda | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: SimpleActivationFactory::GetRuntimeClassName — metoda | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::SimpleActivationFactory::GetRuntimeClassName
 dev_langs:
 - C++
 ms.assetid: 3aa07487-9a42-46f8-8893-37ba6315e50b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73431c7a0f719579caf3df146b69dd8d7248d0a6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e001d0269c21026bdd00abcdd4d257f11d601cf6
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="simpleactivationfactorygetruntimeclassname-method"></a>SimpleActivationFactory::GetRuntimeClassName — Metoda
 
@@ -49,7 +44,7 @@ S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, która wskazu
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli &#95; &#95; WRL_STRICT &#95; &#95; jest zdefiniowany, błędu potwierdzenia jest emitowany Jeśli klasa określony przez `Base` parametr szablonu klasy nie jest pochodną [runtimeclass —](../windows/runtimeclass-class.md), lub nie jest skonfigurowana z WinRt lub WinRtClassicComMix [ Runtimeclasstype —](../windows/runtimeclasstype-enumeration.md) wartość wyliczenia.
+Jeśli &#95; &#95;WRL_STRICT&#95; &#95; jest zdefiniowany, błędu potwierdzenia jest emitowany Jeśli klasa określony przez `Base` parametr szablonu klasy nie jest pochodną [runtimeclass —](../windows/runtimeclass-class.md), lub nie jest skonfigurowany z WinRt lub WinRtClassicComMix [runtimeclasstype —](../windows/runtimeclasstype-enumeration.md) wartość wyliczenia.
 
 ## <a name="requirements"></a>Wymagania
 

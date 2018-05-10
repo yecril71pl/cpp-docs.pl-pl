@@ -1,12 +1,9 @@
 ---
-title: "uint_3 — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: uint_3 — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_3::get_xz
@@ -81,17 +78,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 5e22c277-9d4f-4a3a-b38c-a83d5fcab33c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 434089802bcb054bf07c7b20a48bc384d06693e3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: cfa05f5895c21f5ffdf00020efe1d1b1b881fec4
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="uint3-class"></a>uint_3 — Klasa
 Reprezentuje krótki Wektor trzech liczb całkowitych bez znaku.  
@@ -163,10 +158,10 @@ class uint_3;
 |----------|-----------------|  
 |uint_3::operator--||  
 |uint_3::operator % =||  
-|uint_3::operator&=||  
+|uint_3::operator & =||  
 |uint_3::operator * =||  
 |uint_3::operator / =||  
-|uint_3::operator^=||  
+|uint_3::operator ^ =||  
 |uint_3::operator&#124;=||  
 |uint_3::operator ~||  
 |uint_3::operator ++||  
@@ -194,7 +189,7 @@ class uint_3;
 |uint_3::g||  
 |uint_3::gb||  
 |uint_3::gbr||  
-|uint_3::gr||  
+|uint_3::GR||  
 |uint_3::grb||  
 |uint_3::r||  
 |uint_3::rb||  
@@ -225,7 +220,7 @@ class uint_3;
   
  **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a> uint_3 
+##  <a name="ctor"></a> uint_3 — 
 
  Domyślny konstruktor, inicjuje wszystkie elementy z 0.  
   

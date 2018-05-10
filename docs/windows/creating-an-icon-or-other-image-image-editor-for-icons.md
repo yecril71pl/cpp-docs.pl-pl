@@ -1,13 +1,10 @@
 ---
-title: "Tworzenie ikony lub innego obrazu (edytor obrazów dla ikon) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Tworzenie ikony lub innego obrazu (edytor obrazów dla ikon) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 dev_langs:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - graphics [C++], creating
 - Image editor [C++], creating images
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae1cc8525b0c93cff5564c2185d80480a632718b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2138e32b18f2e15de027e3cc04fb1bd7ee46ecd5
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-an-icon-or-other-image-image-editor-for-icons"></a>Tworzenie ikony lub innego obrazu (Edytor obrazów dla ikon)
 Możesz utworzyć nowy obraz (mapa bitowa, ikona, kursora lub paska narzędzi), a następnie do dostosowania jego wyglądu Edytor obrazu. Można również utworzyć nowej mapy bitowej deseniem po [szablonu](../windows/how-to-use-resource-templates.md).  

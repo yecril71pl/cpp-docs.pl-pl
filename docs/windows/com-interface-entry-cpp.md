@@ -1,13 +1,10 @@
 ---
-title: "com_interface_entry — (C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: com_interface_entry — (C++) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.com_interface_entry
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 58c74602c4170cbe0816dcdf14e0196cca44af42
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b0fb7de1987d77f19e04f867aac68cbcc67c1f1e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
 Dodaje interfejs wpis w mapie modelu COM klasy docelowej.  
@@ -122,7 +117,7 @@ END_COM_MAP()
   
 |||  
 |-|-|  
-|**Dotyczy**|**Klasa**,`struct`|  
+|**Dotyczy**|**Klasa**, `struct`|  
 |**Powtarzalne**|Tak|  
 |**Wymaganych atrybutów**|Co najmniej jeden z następujących: **coclass**, **progid**, lub **vi_progid —**.|  
 |**Nieprawidłowe atrybuty**|Brak|  

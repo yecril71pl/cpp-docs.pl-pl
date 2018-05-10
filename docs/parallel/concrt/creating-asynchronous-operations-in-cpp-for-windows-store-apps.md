@@ -1,30 +1,25 @@
 ---
-title: "Tworzenie operacji asynchronicznych w języku C++ dla aplikacji platformy uniwersalnej systemu Windows | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Tworzenie operacji asynchronicznych w języku C++ dla aplikacji platformy uniwersalnej systemu Windows | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99251cbf6627d07075dad3d7dfa3fd4d9651fea8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 24ea9cc47ea9fa78c5efaf6c922f9f01dd3ff963
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Tworzenie operacji asynchronicznych w języku C++ dla aplikacji platformy uniwersalnej systemu Windows
 Tym dokumencie opisano niektóre z najważniejszych należy wziąć pod uwagę w przypadku utworzenia puli wątków systemu Windows na podstawie operacji asynchronicznych w aplikacji Windows Runtime Uniwersalnej za pomocą klasy zadania.  
@@ -58,7 +53,7 @@ Tym dokumencie opisano niektóre z najważniejszych należy wziąć pod uwagę w
   
 -   [Przykład: Kontrolowanie wykonywania w aplikacji środowiska wykonawczego systemu Windows z C++ i XAML](#example-app)  
   
-##  <a name="create-async">Tworzenie operacji asynchronicznych</a>  
+##  <a name="create-async"></a> Tworzenie operacji asynchronicznych  
  Zadania i kontynuacji model można użyć w równoległych biblioteki wzorców (PLL) do definiowania zadania w tle, a także dodatkowe zadania, które będą uruchamiane po ukończeniu poprzedniego zadania. Ta funkcja jest zapewniana przez [concurrency::task](../../parallel/concrt/reference/task-class.md) klasy. Aby uzyskać więcej informacji na temat tego modelu i `task` , zobacz [równoległość zadań](../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
  Środowisko wykonawcze systemu Windows jest interfejsu programowania, które umożliwia tworzenie aplikacji platformy uniwersalnej systemu Windows, które można uruchamiać tylko w środowisku specjalne systemu operacyjnego. Takie aplikacje używać funkcji autoryzowanych, typy danych i urządzeń i są dystrybuowane za pomocą Microsoft Store. Środowisko wykonawcze systemu Windows jest reprezentowana przez *binarny interfejsu aplikacji* (ABI). ABI jest podstawowej kontraktu binarny, który udostępnia języków programowania, takich jak Visual C++ interfejsów API środowiska wykonawczego systemu Windows.  
@@ -68,10 +63,10 @@ Tym dokumencie opisano niektóre z najważniejszych należy wziąć pod uwagę w
  [Windows::Foundation::IAsyncAction](http://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)  
  Reprezentuje akcję asynchroniczną.  
   
- [Windows::Foundation::IAsyncActionWithProgress\<TProgress>](http://msdn.microsoft.com/library/windows/apps/br206581.aspx)  
+ [Windows::Foundation::IAsyncActionWithProgress\<TProgress >](http://msdn.microsoft.com/library/windows/apps/br206581.aspx)  
  Reprezentuje akcję asynchroniczną, która zgłasza postępu.  
   
- [Windows::Foundation::IAsyncOperation\<TResult>](http://msdn.microsoft.com/library/windows/apps/br206598.aspx)  
+ [Windows::Foundation::IAsyncOperation\<TResult >](http://msdn.microsoft.com/library/windows/apps/br206598.aspx)  
  Reprezentuje operację asynchroniczną, która zwraca wynik.  
   
  [Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress >](http://msdn.microsoft.com/library/windows/apps/br206594.aspx)  
@@ -142,7 +137,7 @@ Tym dokumencie opisano niektóre z najważniejszych należy wziąć pod uwagę w
   
  Przykłady, które używają `create_async` można utworzyć zadania asynchroniczne, które mogą być używane przez inne języki, zobacz [przy użyciu języka C++ w przykładowym Optymalizator podróży mapy Bing](http://msdn.microsoft.com/library/windows/apps/hh699891\(v=vs.110\).aspx) i [systemu Windows 8 operacji asynchronicznych w języku C++ z PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).  
   
-##  <a name="exethread">Kontrolowanie wątku wykonawczego</a>  
+##  <a name="exethread"></a> Kontrolowanie wątku wykonawczego  
  Środowisko wykonawcze systemu Windows używa modelu COM, model wątkowości. W tym modelu obiektów znajdują się w różnych apartamentach, w zależności od sposobu ich obsługi ich synchronizacji. Obiekty wątkowo znajdują się w wielowątkowej (MTA). Obiekty, które muszą być dostępne przez pojedynczy wątek znajdują się w jednowątkowego apartamentu (STA).  
   
  W aplikacji, która ma interfejsu użytkownika wątek ASTA (STA aplikacji) jest odpowiedzialny za przekazywanie komunikatów okien i tylko wątku w procesie, który umożliwia zaktualizowanie hostowanej STA interfejsu użytkownika. Ma to wpływ dwa. Najpierw aby umożliwić aplikacji będzie odpowiadać, wszystkie operacje We/Wy i użycie Procesora CPU nie powinien być uruchamiany w wątku ASTA. Po drugie wyniki, które pochodzą od wątki w tle musi być organizowany do ASTA można zaktualizować interfejsu użytkownika. W aplikacji platformy uniwersalnej systemu Windows w języku C++ `MainPage` i inne strony XAML wszystkie uruchomione na ATSA. W związku z tym kontynuacje zadań, które są zadeklarowane na ASTA są uruchamiane istnieje domyślnie, możesz zaktualizować formantów bezpośrednio w treści kontynuacji. Zagnieździć zadań w zadaniu innym, wszelkie kontynuacje w tym zadaniu zagnieżdżonych uruchamiać w MTA. W związku z tym należy wziąć pod uwagę, czy jawnie określać, na jakie kontekstu Uruchom te kontynuacje.  
@@ -168,7 +163,7 @@ Tym dokumencie opisano niektóre z najważniejszych należy wziąć pod uwagę w
 
 >  Nie wywołuj [concurrency::task::wait](reference/task-class.md#wait) w treści utrzymania uruchamianego na pozostaje tryb komórek jednowątkowych W przeciwnym razie zwraca środowiska uruchomieniowego [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) , ponieważ ta metoda umożliwia blokowanie bieżącego wątku i może spowodować, że aplikacja przestanie odpowiadać. Jednak możesz wywołać [concurrency::task::get](reference/task-class.md#get) metodę, aby odbierać wynik zadania poprzedzających kontynuację opartego na zadaniach.  
   
-##  <a name="example-app">Przykład: Kontrolowanie wykonywania w aplikacji środowiska wykonawczego systemu Windows z C++ i XAML</a>  
+##  <a name="example-app"></a> Przykład: Kontrolowanie wykonywania w aplikacji środowiska wykonawczego systemu Windows z C++ i XAML  
  Należy wziąć pod uwagę aplikacji C++ XAML, która odczytuje plik z dysku, znajduje najbardziej popularnych wyrazów w tym pliku, a następnie przedstawia wyniki w interfejsie użytkownika. Aby utworzyć tę aplikację, uruchomić, w programie Visual Studio, tworząc **pusta aplikacja (uniwersalna systemu Windows)** projektu i nazw `CommonWords`. W manifeście aplikacji, należy określić **biblioteki dokumentów** możliwości, aby umożliwić aplikacji dostęp do folderu dokumenty. Typ pliku tekstowego (.txt) należy również dodać do sekcji deklaracji w manifeście aplikacji. Aby uzyskać więcej informacji na temat możliwości aplikacji i deklaracje, zobacz [pakietów aplikacji i wdrażania](http://msdn.microsoft.com/library/windows/apps/hh464929.aspx).  
   
  Aktualizacja `Grid` element MainPage.xaml, aby uwzględnić `ProgressRing` elementu i `TextBlock` elementu. `ProgressRing` Wskazuje, że operacja jest w toku i `TextBlock` pokazuje wyniki obliczenia.  

@@ -1,10 +1,7 @@
 ---
-title: "CONCURRENCY::precise_math — przestrzeń nazw funkcji | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: CONCURRENCY::precise_math — przestrzeń nazw funkcji | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::precise_math::acos
@@ -97,17 +94,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1d329e13d686e7f378646105b4bcaed2dbb3a3a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 31648a07ff09ba5babebda06407ccade6a5d8fad
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>CONCURRENCY::precise_math — przestrzeń nazw funkcji
 ||||  
@@ -120,21 +115,21 @@ ms.lasthandoff: 02/23/2018
 |[cbrtf](#cbrtf)|[ceil](#ceil)|[ceilf](#ceilf)|  
 |[copysign —](#copysign)|[copysignf](#copysignf)|[COS](#cos)|  
 |[cosf](#cosf)|[COSH](#cosh)|[coshf](#coshf)|  
-|[cospi](#cospi)|[cospif](#cospif)|[erf](#erf)|  
-|[erfc](#erfc)|[erfcf](#erfcf)|[erfcinv](#erfcinv)|  
+|[cospi —](#cospi)|[cospif](#cospif)|[erf](#erf)|  
+|[ERFC](#erfc)|[erfcf](#erfcf)|[erfcinv —](#erfcinv)|  
 |[erfcinvf](#erfcinvf)|[erff](#erff)|[erfinv —](#erfinv)|  
 |[erfinvf](#erfinvf)|[EXP](#exp)|[exp10](#exp10)|  
 |[exp10f](#exp10f)|[exp2](#exp2)|[exp2f](#exp2f)|  
-|[expf](#expf)|[expm1 —](#expm1)|[expm1f](#expm1f)|  
+|[expf](#expf)|[expm1 —](#expm1)|[expm1f —](#expm1f)|  
 |[fabs —](#fabs)|[fabsf —](#fabsf)|[FLOOR](#floor)| 
 |[fdim](#fdim)|[fdimf](#fdimf)|| 
 |[floorf](#floorf)|[fma](#fma)|[fmaf](#fmaf)|
 [fmax](#fmax)|[fmaxf](#fmaxf)|| 
-|[fmin](#fmin)|[fminf](#fminf)|[fmod —](#fmod)|  
+|[fmin](#fmin)|[fminf —](#fminf)|[fmod —](#fmod)|  
 |[fmodf](#fmodf)|[fpclassify](#fpclassify)|[frexp](#frexp)|  
 |[frexpf](#frexpf)|[hypot](#hypot)|[hypotf](#hypotf)|  
 |[ilogb](#ilogb)|[ilogbf](#ilogbf)|[isfinite](#isfinite)|  
-|[isinf](#isinf)|[isnan](#isnan)|[isnormal —](#isnormal)|  
+|[isinf —](#isinf)|[isNaN](#isnan)|[isnormal —](#isnormal)|  
 |[ldexp](#ldexp)|[ldexpf](#ldexpf)|[lgamma](#lgamma)|  
 |[lgammaf](#lgammaf)|[log](#log)|[log10](#log10)|  
 |[log10f](#log10f)|[log1p](#log1p)|[log1pf](#log1pf)|  
@@ -144,12 +139,12 @@ ms.lasthandoff: 02/23/2018
 |[nearbyint](#nearbyint)|[nearbyintf](#nearbyintf)|[nextafter](#nextafter)|  
 |[nextafterf](#nextafterf)|[Fi](#phi)|[phif](#phif)|  
 |[Pow](#pow)|[powf](#powf)|[probit —](#probit)|  
-|[probitf](#probitf)|[rcbrt](#rcbrt)|[rcbrtf](#rcbrtf)|  
-|[remainder](#remainder)|[remainderf](#remainderf)|[remquo](#remquo)|  
+|[probitf —](#probitf)|[rcbrt](#rcbrt)|[rcbrtf](#rcbrtf)|  
+|[pozostałe](#remainder)|[remainderf](#remainderf)|[remquo](#remquo)|  
 |[remquof](#remquof)|[ROUND](#round)|[roundf](#roundf)|  
 |[rsqrt](#rsqrt)|[rsqrtf](#rsqrtf)|[scalb](#scalb)|  
 |[scalbf](#scalbf)|[scalbn](#scalbn)|[scalbnf](#scalbnf)|  
-|[signbit](#signbit)|[signbitf](#signbitf)|[sin](#sin)|  
+|[signbit](#signbit)|[signbitf](#signbitf)|[SIN](#sin)|  
 |[sincos —](#sincos)|[sincosf](#sincosf)|[sinf](#sinf)|  
 |[SINH](#sinh)|[sinhf](#sinhf)|[sinpi —](#sinpi)|  
 |[sinpif](#sinpif)|[sqrt](#sqrt)|[sqrtf](#sqrtf)|  
@@ -158,7 +153,7 @@ ms.lasthandoff: 02/23/2018
 |[tgamma](#tgamma)|[tgammaf](#tgammaf)|[TRUNC —](#trunc)|  
 |[truncf](#truncf)|  
   
-##  <a name="acos">ACOS</a>  
+##  <a name="acos"></a>  ACOS  
  Oblicza cosinus argumentu  
   
 ```  
@@ -189,7 +184,7 @@ inline float acosf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca arcus cosinus wartość argumentu  
   
-##  <a name="acosh">ACOSH</a>  
+##  <a name="acosh"></a>  ACOSH  
  Oblicza cosinus hiperboliczny argumentu  
   
 ```  
@@ -220,7 +215,7 @@ inline float acoshf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca odwrotny cosinus hiperboliczny wartość argumentu  
   
-##  <a name="asin">ASIN</a>  
+##  <a name="asin"></a>  ASIN  
  Oblicza sinus argumentu  
   
 ```  
@@ -237,7 +232,7 @@ inline double asin(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca arcus sinus wartość argumentu  
   
-##  <a name="asinf">asinf —</a>  
+##  <a name="asinf"></a>  asinf —  
  Oblicza sinus argumentu  
   
 ```  
@@ -251,7 +246,7 @@ inline float asinf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca arcus sinus wartość argumentu  
   
-##  <a name="asinh">ASINH</a>  
+##  <a name="asinh"></a>  ASINH  
  Oblicza sinus hiperboliczny argumentu  
   
 ```  
@@ -449,7 +444,7 @@ inline float ceilf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca limitu argumentu  
   
-##  <a name="copysign">copysign —</a>  
+##  <a name="copysign"></a>  copysign —  
  Tworzy wartość o wielkości _X oraz znak _Y  
   
 ```  
@@ -492,7 +487,7 @@ inline float copysignf(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość o wielkości _X oraz znak _Y  
   
-##  <a name="cos">COS</a>  
+##  <a name="cos"></a>  COS  
  Oblicza cosinus argumentu  
   
 ```  
@@ -523,7 +518,7 @@ inline float cosf(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca cosinus wartość argumentu  
   
-##  <a name="cosh">COSH</a>  
+##  <a name="cosh"></a>  COSH  
  Oblicza cosinus hiperboliczny wartość argumentu  
   
 ```  
@@ -678,7 +673,7 @@ inline float erff(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca błąd funkcji _X  
   
-##  <a name="erfinv">erfinv —</a>  
+##  <a name="erfinv"></a>  erfinv —  
  Oblicza błąd odwrotność funkcji _X  
   
 ```  
@@ -740,7 +735,7 @@ inline float exp10f(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość base 10 wykładniczej argumentu  
   
-##  <a name="expm1">expm1 —</a>  
+##  <a name="expm1"></a>  expm1 —  
  Oblicza wartość wykładniczą (podstawa e) argumentu, minus 1  
   
 ```  
@@ -752,7 +747,7 @@ inline double expm1(double exponent) restrict(amp);
   
 ### <a name="parameters"></a>Parametry  
  `exponent`  
- Termin wykładniczej  *n*  wyrażenia matematyczne `e` <sup> n </sup>, gdzie `e` jest podstawą logarytmu naturalnego.  
+ Termin wykładniczej *n* wyrażenia matematyczne `e` <sup>n</sup>, gdzie `e` jest podstawą logarytmu naturalnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość wykładniczą (podstawa e) argumentu, minus 1  
@@ -766,12 +761,12 @@ inline float expm1f(float exponent) restrict(amp);
   
 ### <a name="parameters"></a>Parametry  
  `exponent`  
- Termin wykładniczej  *n*  wyrażenia matematyczne `e` <sup> n </sup>, gdzie `e` jest podstawą logarytmu naturalnego.  
+ Termin wykładniczej *n* wyrażenia matematyczne `e` <sup>n</sup>, gdzie `e` jest podstawą logarytmu naturalnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość wykładniczą (podstawa e) argumentu, minus 1  
   
-##  <a name="exp">EXP</a>  
+##  <a name="exp"></a>  EXP  
  Oblicza base e wykładniczej argumentu  
   
 ```  
@@ -833,7 +828,7 @@ inline float exp2f(float _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wykładniczej argumentu base-2  
   
-##  <a name="fabs">fabs —</a>  
+##  <a name="fabs"></a>  fabs —  
  Zwraca wartość bezwzględną argumentu  
   
 ```  
@@ -850,7 +845,7 @@ inline double fabs(double _X) restrict(amp);
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość bezwzględną argumentu  
   
-##  <a name="fabsf">fabsf —</a>  
+##  <a name="fabsf"></a>  fabsf —  
  Zwraca wartość bezwzględną argumentu  
   
 ```  
@@ -897,7 +892,7 @@ inline float fdimf(
 ### <a name="return-value"></a>Wartość zwracana
 Różnica między _X i _Y Jeśli _X jest większa niż _Y; w przeciwnym razie, + 0. 
   
-##  <a name="floor">FLOOR</a>  
+##  <a name="floor"></a>  FLOOR  
  Oblicza Zaokrąglenie w dół argumentu  
   
 ```  
@@ -1076,7 +1071,7 @@ inline double fmod(
  Drugi argument zmiennoprzecinkowy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- W pozostałej części `_X` rozdzielonych `_Y`; oznacza to, że wartość `_X`  -  `_Y`  *n* , gdzie  *n*  jest całkowitą tak, aby wielkość `_X`  -  `_Y`  *n*  jest mniejsza od wielkości `_Y`.  
+ W pozostałej części `_X` rozdzielonych `_Y`; oznacza to, że wartość `_X`  -  `_Y` *n*, gdzie *n* jest liczbą całkowitą tak, aby wielkość `_X`  -  `_Y` *n* jest mniejsza od wielkości `_Y`.  
   
 ##  <a name="fmodf"></a>  fmodf —  
  Oblicza w pozostałej części pierwszy argument określony przez określony drugi argument.  
@@ -1095,7 +1090,7 @@ inline float fmodf(
  Drugi argument zmiennoprzecinkowy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- W pozostałej części `_X` rozdzielonych `_Y`; oznacza to, że wartość `_X`  -  `_Y`  *n* , gdzie  *n*  jest całkowitą tak, aby wielkość `_X`  -  `_Y`  *n*  jest mniejsza od wielkości `_Y`.  
+ W pozostałej części `_X` rozdzielonych `_Y`; oznacza to, że wartość `_X`  -  `_Y` *n*, gdzie *n* jest liczbą całkowitą tak, aby wielkość `_X`  -  `_Y` *n* jest mniejsza od wielkości `_Y`.  
   
 ##  <a name="fpclassify"></a>  fpclassify —  
  Klasyfikuje wartość argumentu, ponieważ NaN, nieskończone, normalny, subnormal, zero  
@@ -1862,7 +1857,7 @@ inline float remainderf(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca _X REM _Y  
   
-##  <a name="remquo"></a>  remquo  
+##  <a name="remquo"></a>  remquo —  
  Oblicza w pozostałej części pierwszy argument określony przez określony drugi argument. Również oblicza iloraz mantysy pierwszy argument określony przez mantysy drugi argument określony i Zwraca iloraz przy użyciu lokalizacji określonej w trzeci argument.  
   
 ```  

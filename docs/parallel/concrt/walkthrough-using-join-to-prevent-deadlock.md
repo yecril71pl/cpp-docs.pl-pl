@@ -1,13 +1,10 @@
 ---
-title: "Wskazówki: Używanie w celu zapobiegania zakleszczeniom | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Wskazówki: Używanie w celu zapobiegania zakleszczeniom | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894ff7da95f09b1aedaa8fd9d1d9b44f77017a8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5deb501cc05c2a771b6e14d5091b1baa95f2f622
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>Wskazówki: korzystanie ze złączy w celu zapobiegania zakleszczeniom
 W tym temacie używa lokali problem philosophers ilustrujący sposób użycia [concurrency::join](../../parallel/concrt/reference/join-class.md) klasę, aby zapobiec zakleszczenie w aplikacji. W aplikacji *zakleszczenie* występuje, gdy dwie lub więcej procesów każdego przechowywania zasobu i wzajemnie poczekaj, aż inny proces zwolnić innego zasobu.  
@@ -46,7 +41,7 @@ W tym temacie używa lokali problem philosophers ilustrujący sposób użycia [c
   
 - [Struktury danych synchronizacji](../../parallel/concrt/synchronization-data-structures.md)  
   
-##  <a name="top"></a>Sekcje  
+##  <a name="top"></a> Sekcje  
  Ten przewodnik zawiera następujące sekcje:  
   
 - [Lokali Problem Philosophers](#problem)  
@@ -55,7 +50,7 @@ W tym temacie używa lokali problem philosophers ilustrujący sposób użycia [c
   
 - [Przy użyciu w celu zapobiegania zakleszczeniom](#solution)  
   
-##  <a name="problem"></a>Lokali Problem Philosophers  
+##  <a name="problem"></a> Lokali Problem Philosophers  
  Lokali problem philosophers przedstawiono, jak zakleszczenie występuje w aplikacji. Ten problem pięć philosophers znajdują się w tabeli round. Każdy philosopher przełącza między myśląc i jedzenia. Każdy philosopher musi udostępniać chopstick po sąsiada po lewej stronie, druga chopstick z sąsiada po prawej stronie. Na poniższej ilustracji przedstawiono ten układ.  
   
  ![Problem Philosophers jadalni](../../parallel/concrt/media/dining_philosophersproblem.png "dining_philosophersproblem")  
@@ -64,7 +59,7 @@ W tym temacie używa lokali problem philosophers ilustrujący sposób użycia [c
   
  [[Górnej](#top)]  
   
-##  <a name="deadlock"></a>Implementacja prostego  
+##  <a name="deadlock"></a> Implementacja prostego  
  W poniższym przykładzie przedstawiono prosty stosowania lokali problem philosophers. `philosopher` Klasy, która jest pochodną [concurrency::agent](../../parallel/concrt/reference/agent-class.md), umożliwia każdego philosopher, które będą działać niezależnie. W przykładzie użyto udostępnionej macierzy [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md) obiektów, aby dać każdej `philosopher` obiekt wyłącznego dostępu do pary chopsticks.  
   
  Do wykonania na ilustracji, powiązania `philosopher` klasa reprezentuje jeden philosopher. `int` Każdego chopstick reprezentuje zmienną. `critical_section` Obiektów służyć jako posiadaczy, na których chopsticks rest. `run` Metody symuluje życia philosopher. `think` Metody symuluje czynność planowania i `eat` metody symuluje czynność jedzenia.  
@@ -87,7 +82,7 @@ W tym temacie używa lokali problem philosophers ilustrujący sposób użycia [c
   
  [[Górnej](#top)]  
   
-##  <a name="solution"></a>Przy użyciu w celu zapobiegania zakleszczeniom  
+##  <a name="solution"></a> Przy użyciu w celu zapobiegania zakleszczeniom  
  W tej sekcji pokazano, jak użyć funkcji przekazywania wiadomości i buforów komunikatów, aby wykluczyć ryzyko zakleszczenia.  
   
  Do powiązania w tym przykładzie do tego wcześniej `philosopher` klasy zastępuje wszystkie `critical_section` obiektu za pomocą [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) obiektu i `join` obiektu. `join` Obiektu służy jako kryterium, która dostarcza chopsticks do philosopher.  

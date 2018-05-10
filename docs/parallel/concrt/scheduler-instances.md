@@ -1,29 +1,24 @@
 ---
-title: "Wystąpienia harmonogramu | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Wystąpienia harmonogramu | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - scheduler instances
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1688a2b689b3fc3391e617f3d65d3c681f05a84f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f09a5708fd9140619eea60fb8e483c2e26165d1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-instances"></a>Wystąpienia harmonogramu
 W tym dokumencie opisano rolę wystąpienia harmonogramu w współbieżności środowiska wykonawczego i sposobu użycia [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) i [concurrency::CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) klasy Tworzenie i zarządzanie nimi wystąpienia harmonogramu. Wystąpienia harmonogramu są przydatne, jeśli chcesz skojarzyć z określonych rodzajów obciążeń jawne zasadami planowania. Na przykład można utworzyć jedno wystąpienie harmonogramu niektórych zadań godzinie priorytetu wątku z podwyższonym poziomem uprawnień i użyć domyślnego harmonogramu do wykonywania innych zadań podczas priorytetu wątku normalnego.  
@@ -31,7 +26,7 @@ W tym dokumencie opisano rolę wystąpienia harmonogramu w współbieżności ś
 > [!TIP]
 >  Współbieżność środowiska wykonawczego zapewnia harmonogram domyślny, i dlatego nie trzeba utworzyć w aplikacji. Harmonogram zadań ułatwia dostrojenie wydajności aplikacji, dlatego zaleca się uruchamiania z [równoległych biblioteki wzorców (PLL)](../../parallel/concrt/parallel-patterns-library-ppl.md) lub [biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md) w przypadku jesteś nowym użytkownikiem współbieżności środowiska wykonawczego.  
   
-##  <a name="top"></a>Sekcje  
+##  <a name="top"></a> Sekcje  
   
 -   [Harmonogram i currentscheduler — klasy](#classes)  
   
@@ -43,7 +38,7 @@ W tym dokumencie opisano rolę wystąpienia harmonogramu w współbieżności ś
   
 -   [Przykład](#example)  
   
-##  <a name="classes"></a>Harmonogram i currentscheduler — klasy  
+##  <a name="classes"></a> Harmonogram i currentscheduler — klasy  
  Harmonogram zadań umożliwia aplikacjom użyj jednej lub kilku *wystąpienia harmonogramu* można zaplanować pracę. [Concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) klasa reprezentuje wystąpienie harmonogramu i hermetyzuje funkcjonalność dotyczące planowania zadań.  
   
  Wątek, który jest dołączony do harmonogramu jest nazywany *kontekstu wykonywania*, lub po prostu *kontekstu*. W dowolnym momencie jeden harmonogram może być aktywne w bieżącym kontekście. Aktywnego harmonogramu jest także znana jako *bieżącego harmonogramu*. Współbieżność środowiska wykonawczego używa [concurrency::CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) klasy w celu zapewnienia dostępu do bieżącego harmonogramu. Bieżącego harmonogramu dla jednego kontekstu może się różnić od bieżącego harmonogramu dla innego kontekstu. Środowisko uruchomieniowe nie udostępnia reprezentację poziomie procesu bieżącego harmonogramu.  
@@ -54,7 +49,7 @@ W tym dokumencie opisano rolę wystąpienia harmonogramu w współbieżności ś
   
  [[Górnej](#top)]  
   
-##  <a name="creating"></a>Tworzenie wystąpienia harmonogramu  
+##  <a name="creating"></a> Tworzenie wystąpienia harmonogramu  
  Te trzy sposoby, aby utworzyć `Scheduler` obiektu:  
   
 -   Jeśli harmonogram nie istnieje, środowisko uruchomieniowe tworzy domyślnego harmonogramu automatycznie funkcjonalność aparatu plików wykonywalnych, na przykład równoległych algorytm można używać do wykonywania pracy. Harmonogram domyślny staje się bieżącego harmonogramu dla kontekstu, który inicjuje równoległych pracy.  
@@ -69,7 +64,7 @@ W tym dokumencie opisano rolę wystąpienia harmonogramu w współbieżności ś
   
  [[Górnej](#top)]  
   
-##  <a name="managing"></a>Zarządzanie okresem istnienia wystąpienia harmonogramu  
+##  <a name="managing"></a> Zarządzanie okresem istnienia wystąpienia harmonogramu  
  Środowisko uruchomieniowe używa mechanizmu liczenie odwołań w celu zarządzają okresem istnienia `Scheduler` obiektów.  
   
 
@@ -98,7 +93,7 @@ W tym dokumencie opisano rolę wystąpienia harmonogramu w współbieżności ś
   
  [[Górnej](#top)]  
   
-##  <a name="features"></a>Metody i funkcje  
+##  <a name="features"></a> Metody i funkcje  
  Ta sekcja zawiera podsumowanie ważne metody `CurrentScheduler` i `Scheduler` klasy.  
   
  Pomyśl o `CurrentScheduler` klasy jako pomocnika dla tworzenia harmonogramu do użycia w bieżącym kontekście. `Scheduler` Klasa umożliwia sterowanie harmonogramu, który należy do innego kontekstu.  
@@ -133,7 +128,7 @@ W tym dokumencie opisano rolę wystąpienia harmonogramu w współbieżności ś
   
  [[Górnej](#top)]  
   
-##  <a name="example"></a>Przykład  
+##  <a name="example"></a> Przykład  
  Podstawowe przykłady sposobu tworzenia i Zarządzanie wystąpieniem harmonogramu, zobacz [porady: Zarządzanie przypadkiem Planisty](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).  
   
 ## <a name="see-also"></a>Zobacz też  

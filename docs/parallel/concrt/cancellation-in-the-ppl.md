@@ -1,13 +1,10 @@
 ---
 title: Anulowanie w PPL | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 340942905ce252f7e4a40d8ae5366d5d154755d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a0c74ad5877a5b490414d96bf0f13b32309a21a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cancellation-in-the-ppl"></a>Anulowanie w PPL
 W tym dokumencie opisano roli anulowania w Biblioteka równoległych wzorców (PLL), jak anulować równoległych pracy i sposób określania, kiedy pracy równoległej została anulowana.  
@@ -53,7 +48,7 @@ W tym dokumencie opisano roli anulowania w Biblioteka równoległych wzorców (P
 
 
   
-##  <a name="top"></a>W tym dokumencie  
+##  <a name="top"></a> W tym dokumencie  
   
 - [Drzewa pracy równoległej](#trees)  
   
@@ -69,7 +64,7 @@ W tym dokumencie opisano roli anulowania w Biblioteka równoległych wzorców (P
   
 - [Kiedy nie należy używać anulowania](#when)  
   
-##  <a name="trees"></a>Drzewa pracy równoległej  
+##  <a name="trees"></a> Drzewa pracy równoległej  
  PPL używa zadań i zadań grup do zarządzania szczegółowych zadań i obliczeń. Grupy zadań do formularza można zagnieżdżać *drzew* pracy równoległych. Na poniższej ilustracji przedstawiono drzewa pracy równoległej. Na tej ilustracji `tg1` i `tg2` reprezentują grupy zadań; `t1`, `t2`, `t3`, `t4`, i `t5` reprezentują pracę, aby wykonać grupy zadań.  
   
  ![Drzewa pracy równoległej](../../parallel/concrt/media/parallelwork_trees.png "parallelwork_trees")  
@@ -82,20 +77,20 @@ W tym dokumencie opisano roli anulowania w Biblioteka równoległych wzorców (P
   
  [[Górnej](#top)]  
   
-##  <a name="tasks"></a>Anulowanie zadań równoległych  
+##  <a name="tasks"></a> Anulowanie zadań równoległych  
 
  Istnieje wiele sposobów, aby anulować pracy równoległych. Jest preferowany sposób użycia token anulowania. Grupy zadań również obsługa [concurrency::task_group::cancel](reference/task-group-class.md#cancel) — metoda i [concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel) metody. Końcowego należy zgłosić wyjątek w treści funkcji pracy zadania. Niezależnie od wybranej metody Dowiedz się, że anulowania nie występuje od razu. Chociaż nowa praca nie jest uruchomiona, jeśli zadania lub grupy zadań zostało anulowane, aktywną pracą musi sprawdzić i odpowiadanie na anulowanie.  
 
   
  Więcej przykładów, które anulowanie zadań równoległych, zobacz [wskazówki: łączenie za pomocą zadań i żądań XML HTTP](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md), [porady: Użyj anulowania, aby przerwać pętlę równoległą](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md), i [porady: użycie Obsługa aby przerwać pętlę równoległą wyjątków](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).  
   
-###  <a name="tokens"></a>Przy użyciu Token anulowania do anulowania pracy równoległych  
+###  <a name="tokens"></a> Przy użyciu Token anulowania do anulowania pracy równoległych  
  `task`, `task_group`, I `structured_task_group` klasy obsługuje anulowania przy użyciu anulowanie tokenów. Definiuje PPL [concurrency::cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md) i [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) klas w tym celu. Gdy używasz token anulowania do anulowania pracy środowiska uruchomieniowego nie można uruchomić nowej pracy, które subskrybuje tokenu. Można użyć pracy, który jest już aktywny [is_canceled](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled) funkcji członkowskiej token anulowania i zatrzymywania po może.  
   
 
  Aby zainicjować anulowanie, należy wywołać [concurrency::cancellation_token_source::cancel](reference/cancellation-token-source-class.md#cancel) metody. Uwzględniał anulowania w następujący sposób:  
   
--   Aby uzyskać `task` obiektów, użyj [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) funkcji. `cancel_current_task`Umożliwia anulowanie bieżącego zadania oraz wszystkie jego kontynuacje na podstawie wartości. (Nie spowoduje anulowania anulowania *tokenu* skojarzonego z zadania lub jej kontynuacje.)  
+-   Aby uzyskać `task` obiektów, użyj [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) funkcji. `cancel_current_task` Umożliwia anulowanie bieżącego zadania oraz wszystkie jego kontynuacje na podstawie wartości. (Nie spowoduje anulowania anulowania *tokenu* skojarzonego z zadania lub jej kontynuacje.)  
   
 -   Dla grup zadań i algorytmy równoległe, użyj [concurrency::is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling) funkcji wykrywania anulowania i jak najszybciej zwrócić z treści zadań po powrocie z tej funkcji `true`. (Nie należy wywoływać `cancel_current_task` z grupy zadań.)  
 
@@ -154,7 +149,7 @@ W tym dokumencie opisano roli anulowania w Biblioteka równoległych wzorców (P
   
 #### <a name="cancellation-tokens-and-task-composition"></a>Anulowanie tokenów i kompozycji zadania  
 
- [Współbieżności:: when_all HYPERLINK "http://msdn.microsoft.com/library/system.threading.tasks.task.whenall (v=VS.110).aspx" —](reference/concurrency-namespace-functions.md#when_all) i [concurrency::when_any](reference/concurrency-namespace-functions.md#when_all) funkcje ułatwiają compose wiele zadań do wykonania typowe wzorce. W tej sekcji opisano, jak te funkcje działają z tokenami anulowania.  
+ [Współbieżności:: HYPERLINK "http://msdn.microsoft.com/library/system.threading.tasks.task.whenall(v=VS.110).aspx" when_all —](reference/concurrency-namespace-functions.md#when_all) i [concurrency::when_any](reference/concurrency-namespace-functions.md#when_all) funkcje ułatwia utworzenie wielu zadań, aby zaimplementować typowe wzorce. W tej sekcji opisano, jak te funkcje działają z tokenami anulowania.  
   
  Gdy Podaj token anulowania na potrzeby albo `when_all` i `when_any` działanie, że funkcja anuluje tylko w przypadku, gdy token anulowania zostało anulowane lub jednego uczestnika zadań kończy się w stanie anulowane lub zgłasza wyjątek.  
   
@@ -164,7 +159,7 @@ W tym dokumencie opisano roli anulowania w Biblioteka równoległych wzorców (P
   
  [[Górnej](#top)]  
   
-###  <a name="cancel"></a>Przy użyciu Anuluj metodę, aby anulować pracy równoległych  
+###  <a name="cancel"></a> Przy użyciu Anuluj metodę, aby anulować pracy równoległych  
 
  [Concurrency::task_group::cancel](reference/task-group-class.md#cancel) i [concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel) metody ustawioną anulowane stanu grupy zadań. Po wywołaniu metody `cancel`, grupy zadań nie można uruchomić zadania w przyszłości. `cancel` Metody może być wywoływany przez wielu zadań podrzędnych. Anulowane zadanie sprawia, że [concurrency::task_group::wait](reference/task-group-class.md#wait) i [concurrency::structured_task_group::wait](reference/structured-task-group-class.md#wait) metod do zwrócenia [concurrency::canceled](reference/concurrency-namespace-enums.md#task_group_status).  
 
@@ -200,7 +195,7 @@ W tym dokumencie opisano roli anulowania w Biblioteka równoległych wzorców (P
   
  [[Górnej](#top)]  
   
-###  <a name="exceptions"></a>Używanie wyjątków można anulować pracy równoległych  
+###  <a name="exceptions"></a> Używanie wyjątków można anulować pracy równoległych  
  Użycie anulowanie tokenów i `cancel` metody są bardziej wydajne niż obsługi na anulowanie drzewa pracy równoległej wyjątków. Anulowanie tokenów i `cancel` metody anulowanie zadania i wszystkie zadania podrzędne w sposób góra dół. Z drugiej strony Obsługa wyjątków w sposób dołu do góry i musiał zrezygnować z każdej grupy zadań podrzędnych niezależnie jako wyjątek w górę propaguje. Temat [obsługi wyjątków](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md) wyjaśniono, jak współbieżności środowiska wykonawczego używa wyjątków do komunikowania się błędy. Jednak nie wszystkie wyjątki oznaczać błąd. Na przykład algorytmu wyszukiwania może spowodować anulowanie jego skojarzonego zadania, gdy znajdzie wynik. Jak wspomniano wcześniej, obsługa wyjątków jest jednak mniej wydajne niż przy użyciu `cancel` metodę, aby anulować pracy równoległych.  
   
 > [!CAUTION]
@@ -220,7 +215,7 @@ W tym dokumencie opisano roli anulowania w Biblioteka równoległych wzorców (P
   
  [[Górnej](#top)]  
   
-##  <a name="algorithms"></a>Anulowanie algorytmów równoległych  
+##  <a name="algorithms"></a> Anulowanie algorytmów równoległych  
  Równoległe algorytmów w PPL, na przykład `parallel_for`, tworzenie grup zadań. W związku z tym umożliwia wiele z tych samych metod anulowanie algorytmów równoległych.  
   
  Poniższe przykłady przedstawiają kilka sposobów anulowanie algorytmów równoległych.  
@@ -258,7 +253,7 @@ Caught 50
   
  [[Górnej](#top)]  
   
-##  <a name="when"></a>Kiedy nie należy używać anulowania  
+##  <a name="when"></a> Kiedy nie należy używać anulowania  
  Korzystanie z anulowania jest odpowiednie, gdy każdego członka grupy powiązanych zadań mogą zakończyć się w odpowiednim czasie. Istnieją sytuacje, w którym anulowania nie może być odpowiedni dla twojej aplikacji. Na przykład ponieważ anulowanie zadania jest współpracy, ogólną zestawu zadań nie spowoduje anulowanie zablokowanie poszczególnych zadań. Na przykład jeśli jedno zadanie nie została jeszcze uruchomiona, ale jego odblokowuje inne aktywne zadanie, go nie zostanie uruchomiona Jeśli grupy zadań została anulowana. Może to spowodować zakleszczenie w aplikacji. Drugi przykładem gdzie stosowania anulowania mogą nie być odpowiednie jest zadanie zostało anulowane, ale jego zadań podrzędnych wykonuje operację ważne, takich jak zwalnianie zasobu. Ponieważ ogólną zestawu zadań została anulowana po anulowaniu zadaniem nadrzędnym, ta operacja nie zostanie wykonany. Na przykład, który ilustruje tę sytuację, zobacz [opis sposobu anulowania i wyjątek obsługi wpływają na zniszczeniem obiektu](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction) części najlepsze rozwiązania w temacie Biblioteka równoległych wzorców.  
   
  [[Górnej](#top)]  

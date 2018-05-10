@@ -1,13 +1,10 @@
 ---
-title: "Ustawienie kursora &#39; s Hot miejscu (edytor obrazów dla ikon) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Ustawienie kursora&#39;s punktu aktywnego (edytor obrazów dla ikon) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.editing
 dev_langs:
@@ -16,20 +13,18 @@ helpviewer_keywords:
 - cursors, hot spots
 - hot spots
 ms.assetid: a610388a-45c8-43cd-98a2-fd31f29238b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1bcfccb7b9252bf28e5b180b1df6b6d36fcbfbd0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 527cdeabb6f45601641fcc64d3b82bb36652e002
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
-# <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>Ustawienie kursora &#39; s Hot miejscu (edytor obrazów dla ikon)
+# <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>Ustawienie kursora&#39;s punktu aktywnego (edytor obrazów dla ikon)
 Punkt aktywny o [kursora](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md) jest punktem na które Windows odwołuje się w bieżącej pozycji kursora śledzenia. Domyślnie punkt aktywny jest ustawiona w lewym górnym rogu kursora (współrzędne 0,0). Właściwości punktu aktywnego w [okna właściwości](/visualstudio/ide/reference/properties-window) zawiera współrzędne punktu aktywnego.  
   
 ### <a name="to-set-a-cursors-hot-spot"></a>Aby ustawić aktywnego punktu kursora  

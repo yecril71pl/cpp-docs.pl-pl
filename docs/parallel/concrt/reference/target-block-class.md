@@ -1,12 +1,9 @@
 ---
-title: "target_block — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: target_block — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - target_block
@@ -34,17 +31,15 @@ dev_langs:
 helpviewer_keywords:
 - target_block class
 ms.assetid: 3ce181b4-b94a-4894-bf7b-64fc09821f9f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2827e7bbb9a2c23804d90ccb729e990b84f3a442
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 754bc6add99974ff204c977e47f35486cc830d95
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="targetblock-class"></a>target_block — Klasa
 `target_block` Klasa jest abstrakcyjna klasa podstawowa, którego łącze podstawowe funkcje zarządzania i tylko sprawdzanie błędów dla elementu docelowego blokuje.  
@@ -263,7 +258,7 @@ void remove_sources();
 ### <a name="remarks"></a>Uwagi  
  Wszystkie bloki docelowy powinny wywoływać tej procedury można usunąć źródła w ich destruktora.  
   
-##  <a name="send">Wyślij</a> 
+##  <a name="send"></a> Wyślij 
 
  Synchronicznie przekazuje komunikat z bloku źródłowego do tego bloku docelowego.  
   

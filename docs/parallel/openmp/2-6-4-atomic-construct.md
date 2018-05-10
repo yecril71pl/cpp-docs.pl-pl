@@ -1,27 +1,22 @@
 ---
 title: 2.6.4 konstrukcja niepodzielna | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: e4232ef1-4058-42ce-9de0-0ca788312aba
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 629fff5b0bef507b775fbe1b5bfabadd50b790be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66f0dc8469d1d70b2697df1fe120f10142d90dbe
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="264-atomic-construct"></a>2.6.4 — konstrukcja niepodzielna
 `atomic` Dyrektywy zapewnia atomowo, aktualizowanie lokalizacji pamięci zamiast ujawnienie go możliwości wielu równoczesnych zapisywania wątków. Składnia `atomic` dyrektywy wygląda następująco:  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
 -   *wyrażenie* wyrażenie skalarne, typ i nie odwołuje się obiekt wskazywany przez *x*.  
   
--   `binop`nie jest przeciążony operator i jest jednym z +, *, -, / &, ^, &#124; <\<, lub >>.  
+-   `binop` nie jest przeciążony operator i jest jednym z +, *, -, / &, ^, &#124;, <\<, lub >>.  
   
  Mimo że jest zdefiniowane w implementacji czy implementację zastępuje wszystkie `atomic` dyrektywy z **krytyczne** dyrektywy, które mają taki sam unikatowy *nazwa*, `atomic` — dyrektywa zezwala lepsze optymalizacji. Dostępne są często sprzętu instrukcjami który można wykonać aktualizacji atomic o najmniejszej obciążenie.  
   

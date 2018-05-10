@@ -1,27 +1,22 @@
 ---
-title: "Użycie klauzuli num_threads A.28 | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Użycie klauzuli num_threads A.28 | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 26238da1-902c-49b4-9559-0fbc9eaf7f36
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 119ff2c78a90dc36baab38925b28ec6b2ff844dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 12289192d056acac684f28712ccf2aa1423b6c3e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="a28---use-of-numthreads-clause"></a>A.28   Użycie klauzuli num_threads
 W poniższym przykładzie pokazano `num_threads` klauzuli ([2.3 sekcji](../../parallel/openmp/2-3-parallel-construct.md) na stronie 8). Równoległego regionu została wykonana z maksymalnie 10 wątków.  

@@ -1,12 +1,9 @@
 ---
-title: "unorm_4 — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: unorm_4 — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::set_yxzw
@@ -277,17 +274,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: dd216a9d-95f7-4978-8e78-6cb9c781a7e9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e8c22389a739f5beafe1ff1a38799c9d1848ba9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e3186200fb01e13fcf3d79d162439a900abf6f4a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="unorm4-class"></a>unorm_4 — Klasa
 Reprezentuje krótki wektor czterech liczb normalne bez znaku.  
@@ -459,10 +454,10 @@ class unorm_4;
 |----------|-----------------|  
 |unorm_4::operator-||  
 |unorm_4::operator--||  
-|unorm_4::operator*=||  
+|unorm_4::operator * =||  
 |unorm_4::operator / =||  
-|unorm_4::operator++||  
-|unorm_4::operator+=||  
+|unorm_4::operator ++||  
+|unorm_4::operator +=||  
 |unorm_4::operator=||  
 |unorm_4::operator-=||  
   
@@ -510,7 +505,7 @@ class unorm_4;
 |unorm_4::brga||  
 |unorm_4::g||  
 |unorm_4::ga||  
-|unorm_4::gab||  
+|unorm_4::GAB||  
 |unorm_4::gabr||  
 |unorm_4::gar||  
 |unorm_4::garb||  
@@ -551,7 +546,7 @@ class unorm_4;
 |unorm_4::wyxz||  
 |unorm_4::wyz||  
 |unorm_4::wyzx||  
-|unorm_4::wz||  
+|unorm_4::wZ||  
 |unorm_4::wzx||  
 |unorm_4::wzxy||  
 |unorm_4::wzy||  

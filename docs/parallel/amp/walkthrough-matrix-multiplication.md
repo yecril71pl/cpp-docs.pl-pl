@@ -1,27 +1,22 @@
 ---
-title: "Wskazówki: Mnożenie macierzy | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Wskazówki: Mnożenie macierzy | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f91bed0b33ae29d7928ec7df3420eb4878b51eef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d0c61bff6251d5ae833611161ef7b1bb06e6f39a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Wskazówki: mnożenie macierzy
 Ten przewodnik krok po kroku przedstawiono sposób użycia C++ AMP w celu przyspieszenia wykonywania mnożenie macierzy. Dwa algorytmy są prezentowane, jeden bez kafelków i jeden z kafelków.  
@@ -52,13 +47,13 @@ Ten przewodnik krok po kroku przedstawiono sposób użycia C++ AMP w celu przysp
 ## <a name="multiplication-without-tiling"></a>Mnożenia bez kafelków  
  W tej sekcji należy wziąć pod uwagę mnożenia macierzy dwa, A i B, które są zdefiniowane w następujący sposób:  
   
- ![3 &#45; przez &#45; 2 macierzy](../../parallel/amp/media/campmatrixanontiled.png "campmatrixanontiled")  
+ ![3&#45;przez&#45;macierzy 2](../../parallel/amp/media/campmatrixanontiled.png "campmatrixanontiled")  
   
- ![2 &#45; przez &#45; 3 macierzy](../../parallel/amp/media/campmatrixbnontiled.png "campmatrixbnontiled")  
+ ![2&#45;przez&#45;3 macierzy](../../parallel/amp/media/campmatrixbnontiled.png "campmatrixbnontiled")  
   
  Macierzy 3 na 2 jest A i B jest macierzy 2 przez 3. Produkt multiplikujący a b jest następujące macierzy 3 x 3. Produkt jest obliczany przez pomnożenie wiersze A według kolumn B elementów.  
   
- ![3 &#45; przez &#45; 3 macierzy](../../parallel/amp/media/campmatrixproductnontiled.png "campmatrixproductnontiled")  
+ ![3&#45;przez&#45;3 macierzy](../../parallel/amp/media/campmatrixproductnontiled.png "campmatrixproductnontiled")  
   
 ### <a name="to-multiply-without-using-c-amp"></a>Aby pomnożyć bez korzystania z C++ AMP  
   
@@ -172,21 +167,21 @@ void main() {
   
  Aby skorzystać z kafelków w mnożenie macierzy, algorytm musi podziału macierzy na kafelkach i następnie skopiować dane kafelka w `tile_static` zmienne szybszy dostęp. W tym przykładzie macierzy jest podzielona na partycje w submatrices taki sam rozmiar. Znaleziono przez pomnożenie submatrices produktu. Macierzy dwa i ich produktów, w tym przykładzie są:  
   
- ![4 &#45; przez &#45; 4 macierzy](../../parallel/amp/media/campmatrixatiled.png "campmatrixatiled")  
+ ![4&#45;przez&#45;macierzy 4](../../parallel/amp/media/campmatrixatiled.png "campmatrixatiled")  
   
- ![4 &#45; przez &#45; 4 macierzy](../../parallel/amp/media/campmatrixbtiled.png "campmatrixbtiled")  
+ ![4&#45;przez&#45;macierzy 4](../../parallel/amp/media/campmatrixbtiled.png "campmatrixbtiled")  
   
- ![4 &#45; przez &#45; 4 macierzy](../../parallel/amp/media/campmatrixproducttiled.png "campmatrixproducttiled")  
+ ![4&#45;przez&#45;macierzy 4](../../parallel/amp/media/campmatrixproducttiled.png "campmatrixproducttiled")  
   
  Macierze są podzielone na partycje w macierzy cztery 2 x 2, które są zdefiniowane w następujący sposób:  
   
- ![4 &#45; przez &#45;4 macierzy podzielona na partycje do 2 &#45; w &#45; 2 sub &#45; macierze](../../parallel/amp/media/campmatrixapartitioned.png "campmatrixapartitioned")  
+ ![4&#45;przez&#45;4 macierzy podzielone na 2&#45;przez&#45;2 sub&#45;macierzy](../../parallel/amp/media/campmatrixapartitioned.png "campmatrixapartitioned")  
   
- ![4 &#45; przez &#45;4 macierzy podzielona na partycje do 2 &#45; w &#45; 2 sub &#45; macierze](../../parallel/amp/media/campmatrixbpartitioned.png "campmatrixbpartitioned")  
+ ![4&#45;przez&#45;4 macierzy podzielone na 2&#45;przez&#45;2 sub&#45;macierzy](../../parallel/amp/media/campmatrixbpartitioned.png "campmatrixbpartitioned")  
   
  Produkt A i B mogą teraz zapisywane i oblicza w następujący sposób:  
   
- ![4 &#45; przez &#45;4 macierzy podzielona na partycje do 2 &#45; w &#45; 2 sub &#45; macierze](../../parallel/amp/media/campmatrixproductpartitioned.png "campmatrixproductpartitioned")  
+ ![4&#45;przez&#45;4 macierzy podzielone na 2&#45;przez&#45;2 sub&#45;macierzy](../../parallel/amp/media/campmatrixproductpartitioned.png "campmatrixproductpartitioned")  
   
  Ponieważ macierze `a` za pośrednictwem `h` są macierzy 2 x 2, wszystkie produkty i sumy z nich są również macierzy 2 x 2. Również wynika, że A * B jest macierz 4 x 4 zgodnie z oczekiwaniami. Można szybko sprawdzić algorytmu, obliczenia wartości elementu w pierwszym wierszu, pierwsza kolumna w ramach produktu. W przykładzie, który byłby wartość elementu w pierwszym wierszu i pierwszą kolumnę `ae + bg`. Należy obliczyć pierwszej kolumny, pierwszy wiersz `ae` i `bg` dla każdego warunku. Tę wartość dla `ae` jest `1*1 + 2*5 = 11`. Wartość `bg` jest `3*1 + 4*5 = 23`. Końcowa wartość jest `11 + 23 = 34`, która jest poprawna.  
   

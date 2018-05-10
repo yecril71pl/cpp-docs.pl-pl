@@ -1,27 +1,22 @@
 ---
-title: "2.7.2 klauzule atrybutu udostępniania danych | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 2.7.2 klauzule atrybutu udostępniania danych | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 47347d3c-18bd-441f-99cf-7737564c417f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c63ece0feea0426fffbafa600f578e342e85fc2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ecc6efac6e3d7356e51dc0ec57009ca9e5a71890
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="272-data-sharing-attribute-clauses"></a>2.7.2 Klauzule atrybutu udostępniania danych
 Kilka dyrektyw zaakceptować klauzule, które umożliwiają użytkownikom kontrolowanie udostępniania atrybutów zmienne w czasie trwania regionu. Klauzule atrybutu udostępniania mają zastosowanie tylko do zmiennych w zakresie leksykalne dyrektywy, na której znajduje się klauzuli. Nie wszystkie z poniższych klauzul są dozwolone w wszystkie dyrektywy. Lista klauzule, które są prawidłowe w szczególności dyrektywy opisano z dyrektywą.  

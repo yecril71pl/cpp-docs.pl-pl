@@ -1,34 +1,29 @@
 ---
 title: Struktury danych synchronizacji | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - synchronization data structures
 ms.assetid: d612757d-e4b7-4019-a627-f853af085b8b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1dd1c47cad01e0324f8027593eb4933f70cd6191
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1f64acda5fe11cae3a40e4affc403ebb61d876de
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="synchronization-data-structures"></a>Struktury danych synchronizacji
 Współbieżność środowiska wykonawczego zawiera kilka struktury danych, które pozwalają synchronizujący dostęp do danych udostępnionych przez wiele wątków. Te struktury danych są przydatne, gdy udostępniasz dane, które rzadko modyfikacji. Obiekt synchronizacji, na przykład sekcja krytyczna, powoduje, że inne wątki poczekać, aż udostępniony zasób jest dostępny. W związku z tym Jeśli używasz takiego obiektu synchronizujący dostęp do danych, która jest często używane, zostaną utracone skalowalności w aplikacji. [Równoległych biblioteki wzorców (PLL)](../../parallel/concrt/parallel-patterns-library-ppl.md) zapewnia [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) klasy, która umożliwia udostępnianie zasobów między kilka wątków lub zadań bez konieczności synchronizacji. Aby uzyskać więcej informacji na temat `combinable` , zobacz [równoległe kontenery oraz obiekty](../../parallel/concrt/parallel-containers-and-objects.md).  
   
-##  <a name="top"></a>Sekcje  
+##  <a name="top"></a> Sekcje  
  W tym temacie opisano następujące typy bloku komunikatów asynchronicznych szczegółowo:  
   
 -   [critical_section](#critical_section)  
@@ -39,7 +34,7 @@ Współbieżność środowiska wykonawczego zawiera kilka struktury danych, któ
   
 -   [event](#event)  
   
-##  <a name="critical_section"></a>critical_section  
+##  <a name="critical_section"></a> critical_section  
  [Concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md) klasa reprezentuje obiekt współpracy wzajemne wykluczenie, zwracające do wykonywania innych zadań zamiast preempting je. Sekcje krytyczne są przydatne, gdy wiele wątków wymaga wyłącznego dostępu odczytu i zapisu do współużytkowanych danych.  
 
  `critical_section` Nie obsługującą jest klasa. [Concurrency::critical_section::lock](reference/critical-section-class.md#lock) metoda zgłasza wyjątek typu [concurrency::improper_lock](../../parallel/concrt/reference/improper-lock-class.md) gdy została wywołana przez wątek, który już jest właścicielem blokady.  
@@ -53,11 +48,11 @@ Współbieżność środowiska wykonawczego zawiera kilka struktury danych, któ
 |------------|-----------------|  
 |[lock](reference/critical-section-class.md#lock)|Uzyskuje sekcja krytyczna. Wywołanie kontekstu bloki do momentu jego uzyskuje blokady.|  
 |[try_lock](reference/critical-section-class.md#try_lock)|Próbuje uzyskać sekcja krytyczna, ale nie są blokowane.|  
-|[odblokowywanie](reference/critical-section-class.md#unlock)|Zwalnia sekcja krytyczna.|  
+|[unlock](reference/critical-section-class.md#unlock)|Zwalnia sekcja krytyczna.|  
   
  [[Górnej](#top)]  
   
-##  <a name="reader_writer_lock"></a>reader_writer_lock  
+##  <a name="reader_writer_lock"></a> reader_writer_lock  
  [Concurrency::reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) klasa udostępnia operacje wątkowo odczytu/zapisu do współużytkowanych danych. Blokady modułu odczytywania/zapisywania należy używać, gdy wiele wątków wymagają równoczesnych dostęp do odczytu do udostępnionych zasobów, ale rzadko zapisu do tego zasobu udostępnionego. Ta klasa udostępnia tylko jeden wątek zapisu obiektu w dowolnym momencie.  
   
  `reader_writer_lock` Klasy mogą wykonywać lepszym rozwiązaniem niż `critical_section` klasy, ponieważ `critical_section` wyłącznego dostępu do zasobu udostępnionego, co uniemożliwia dostęp do odczytu równoczesnych żądań obiektu.  
@@ -82,11 +77,11 @@ Współbieżność środowiska wykonawczego zawiera kilka struktury danych, któ
 |[try_lock](reference/reader-writer-lock-class.md#try_lock)|Próbuje uzyskać dostęp do odczytu i zapisu do blokady, ale nie są blokowane.|  
 |[lock_read](reference/reader-writer-lock-class.md#lock_read)|Uzyskuje dostęp tylko do odczytu do blokady.|  
 |[try_lock_read](reference/reader-writer-lock-class.md#try_lock_read)|Próbuje uzyskać dostęp tylko do odczytu do blokady, ale nie są blokowane.|  
-|[odblokowywanie](reference/reader-writer-lock-class.md#unlock)|Zwalnia blokadę.|  
+|[unlock](reference/reader-writer-lock-class.md#unlock)|Zwalnia blokadę.|  
   
  [[Górnej](#top)]  
   
-##  <a name="scoped_lock"></a>scoped_lock i scoped_lock_read  
+##  <a name="scoped_lock"></a> scoped_lock i scoped_lock_read  
  `critical_section` i `reader_writer_lock` klasy Podaj klasy zagnieżdżonej pomocnika, które upraszczają sposób pracy z obiektami wzajemne wykluczenie. Te klasy pomocy są określane jako *zakres blokady*.  
   
  `critical_section` Klasa zawiera [concurrency::critical_section::scoped_lock](reference/critical-section-class.md#critical_section__scoped_lock_class) klasy. Konstruktor uzyskuje dostęp do udostępnionych `critical_section` obiekt; destruktora wersjach dostęp do tego obiektu. `reader_writer_lock` Klasa zawiera [concurrency::reader_writer_lock::scoped_lock](reference/reader-writer-lock-class.md#scoped_lock_class) klasy, która jest podobny `critical_section::scoped_lock`, ale zarządza zapisu do dostarczonego `reader_writer_lock` obiektu. `reader_writer_lock` Klasa zawiera także [concurrency::reader_writer_lock::scoped_lock_read](reference/reader-writer-lock-class.md#scoped_lock_read_class) klasy. Ta klasa zarządza dostęp do odczytu do udostępnionych `reader_writer_lock` obiektu.  
@@ -97,7 +92,7 @@ Współbieżność środowiska wykonawczego zawiera kilka struktury danych, któ
 > [!NOTE]
 >  Jeśli używasz `critical_section::scoped_lock`, `reader_writer_lock::scoped_lock`, i `reader_writer_lock::scoped_lock_read` klas, ręcznie nie zwalnia dostępu do obiektu źródłowego wzajemne wykluczenie. To umieść środowiska uruchomieniowego w nieprawidłowym stanie.  
   
-##  <a name="event"></a>zdarzenia  
+##  <a name="event"></a> Zdarzenia  
  [Concurrency::event](../../parallel/concrt/reference/event-class.md) klasa reprezentuje obiekt synchronizacji, których stan mogą być sygnalizowane lub z systemem innym niż sygnalizowane. W przeciwieństwie do synchronizacji obiekty, takie jak sekcje krytyczne, których celem jest ochrona dostępu do danych udostępnionych, zdarzenia synchronizacji przepływ wykonania.  
   
  `event` Klasy jest przydatne, gdy jedno zadanie zakończy pracę na rzecz inne zadanie. Na przykład jedno zadanie może sygnalizować inne zadanie że może go odczytywać dane z połączeniem sieciowym lub z pliku.  

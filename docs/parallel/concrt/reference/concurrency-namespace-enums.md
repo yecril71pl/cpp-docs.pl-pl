@@ -1,10 +1,7 @@
 ---
-title: "Typy wyliczeniowe przestrzeń nazw współbieżności | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Typy wyliczeniowe przestrzeń nazw współbieżności | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CONCRT/concurrency::Agents_EventType
@@ -19,25 +16,23 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: def29c9253071bb13b2c128a0e581c14328bfa4a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 068aa89c10e92203ce0e826e3aaca101f4786cbb
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-enums"></a>Typy wyliczeniowe przestrzeń nazw współbieżności
 ||||  
 |-|-|-|  
 |[Agents_eventtype —](#agents_eventtype)|[ConcRT_EventType](#concrt_eventtype)|[Concrt_TraceFlags](#concrt_traceflags)|  
 |[CriticalRegionType](#criticalregiontype)|[DynamicProgressFeedbackType](#dynamicprogressfeedbacktype)|[PolicyElementKey](#policyelementkey)|  
-|[SchedulerType](#schedulertype)|[SchedulingProtocolType](#schedulingprotocoltype)|[SwitchingProxyState](#switchingproxystate)|  
-|[WinRTInitializationType](#winrtinitializationtype)|[agent_status](#agent_status)|[join_type](#join_type)|  
+|[Schedulertype —](#schedulertype)|[SchedulingProtocolType](#schedulingprotocoltype)|[SwitchingProxyState](#switchingproxystate)|  
+|[Winrtinitializationtype —](#winrtinitializationtype)|[agent_status](#agent_status)|[join_type](#join_type)|  
 |[message_status](#message_status)|[task_group_status](#task_group_status)|  
   
 ##  <a name="agent_status"></a>  agent_status — wyliczenie  
@@ -108,7 +103,7 @@ enum ConcRT_EventType;
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** concrt.h **Namespace:** współbieżności
 
-##  <a name="concrt_traceflags"></a>  Concrt_TraceFlags Enumeration  
+##  <a name="concrt_traceflags"></a>  Concrt_traceflags — wyliczenie  
  Flagi śledzenia dla typów zdarzeń  
   
 ```

@@ -1,13 +1,10 @@
 ---
-title: "Omówienie współbieżności środowiska wykonawczego | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Omówienie współbieżności środowiska wykonawczego | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c604ebc03204ca0dff24e2ceccdf6bb6dd543df
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 67f0497f600cf5d528b2c41601b7a02c08771861
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Omówienie współbieżności środowiska wykonawczego
 Ten dokument zawiera omówienie współbieżności środowiska wykonawczego. Opisuje korzyści ze współbieżności środowiska wykonawczego, kiedy należy używać go i interakcje jego składniki ze sobą i z systemu operacyjnego i aplikacji.  
@@ -127,7 +122,7 @@ Ten dokument zawiera omówienie współbieżności środowiska wykonawczego. Opi
 |Składnik|Pliki nagłówkowe|  
 |---------------|------------------|  
 |Biblioteka równoległych wzorców (PLL)|ppl.h<br /><br /> concurrent_queue.h<br /><br /> concurrent_vector.h|  
-|Biblioteki agentów asynchronicznych|agents.h|  
+|Biblioteki agentów asynchronicznych|Agents.h|  
 |Harmonogram zadań|concrt.h|  
 |Menedżer zasobów|concrtrm.h|  
   

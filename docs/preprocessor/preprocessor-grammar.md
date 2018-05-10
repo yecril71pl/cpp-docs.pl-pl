@@ -1,12 +1,9 @@
 ---
 title: Gramatyka preprocesora | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,38 +12,36 @@ helpviewer_keywords:
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02b3597b035e3ea4bfa1670aa405109f4c01a077
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d14a3e00e18a2d3ac69dd472ac4056a379ada224
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="preprocessor-grammar"></a>Gramatyka preprocesora
-**#define***identyfikator* *ciąg tokenu*opcjonalnych    
+**#define***identyfikator* *ciąg tokenu*opcjonalnych  
   
- *#* **Zdefiniuj***identyfikator*[**(** *identyfikator*opt**,** *...*  **,** *identyfikator*opt **)**] *ciąg tokenu*opcjonalnych    
+ *#* **Zdefiniuj***identyfikator*[**(** *identyfikator*opt **,** *...*  **,** *identyfikator*opt **)**] *ciąg tokenu*opcjonalnych  
   
- **Definicja (***identyfikator* **)**   
+ **Definicja (***identyfikator* **)**  
   
- **definicja***identyfikator*   
+ **definicja***identyfikator*  
   
- `#include` **"***path-spec***"**  
+ `#include` **"***ścieżka spec***"**  
   
  `#include` **\<***path-spec***>**  
   
- **#line***sekwencji cyfr***"** *filename* **"**opcjonalnych      
+ **#line***sekwencji cyfr***"** *filename* **"** opcjonalnych  
   
- *#* **undef***identyfikator*   
+ *#* **undef***identyfikator*  
   
- **#error***ciąg tokenu*   
+ **#error***ciąg tokenu*  
   
- **#pragma***ciąg tokenu*   
+ **#pragma***ciąg tokenu*  
   
  *warunkowe* :  
  *Jeśli część elif części*opt*część else*opt*endif wiersza*  
@@ -55,7 +50,7 @@ ms.lasthandoff: 02/23/2018
  *if-linetext*  
   
  *Jeśli wiersz* :  
- **#if**  *constant-expression*  
+ **#if***wyrażenie stałej*   
   
  **#ifdef***identyfikator*  
   
@@ -92,7 +87,7 @@ ms.lasthandoff: 02/23/2018
  *Token* :  
  *keyword*  
   
- *identifier*  
+ *Identyfikator*  
   
  *Stała*  
   

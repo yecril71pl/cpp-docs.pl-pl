@@ -1,12 +1,9 @@
 ---
 title: Klasa unbounded_buffer | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - unbounded_buffer
@@ -28,17 +25,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecddf2327e3b2e29dd3c9a857227c03d9e880ef4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: de5b268ca3f962461ecc7e64159efeeb56414ebe
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 `unbounded_buffer` Blok komunikatów jest wiele docelowych, wielu źródłach, uporządkowanych `propagator_block` można przechowywać niepowiązany liczba komunikatów.  
   
@@ -142,7 +137,7 @@ virtual message<_Type> * consume_message(
 ### <a name="remarks"></a>Uwagi  
  Podobnie jak `accept`, ale zawsze jest poprzedzony przez wywołanie `reserve`.  
   
-##  <a name="dequeue">Usuwania z kolejki</a> 
+##  <a name="dequeue"></a> Usuwania z kolejki 
 
  Usuwa element z `unbounded_buffer` bloku obsługi wiadomości.  
   
@@ -303,7 +298,7 @@ virtual bool supports_anonymous_source();
 ### <a name="return-value"></a>Wartość zwracana  
  `true` ponieważ bloku nie odłożyć oferowane wiadomości.  
   
-##  <a name="ctor">unbounded_buffer</a> 
+##  <a name="ctor"></a> unbounded_buffer 
 
  Konstruuje `unbounded_buffer` bloku obsługi wiadomości.  
   

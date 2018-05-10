@@ -1,13 +1,10 @@
 ---
 title: Tworzenia i ustawiania prowadnice i marginesy | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - guides, moving
 - margins, moving
 ms.assetid: fafa4545-8f00-436f-b590-300e76601156
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e767eaa8fbb91f0cf49c63d5d7aca3a05c5dd518
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b548f48fc079fe26ae43c0553bef27f2348bad6
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-and-setting-guides-and-margins"></a>Tworzenie i ustawianie prowadnic i marginesów
 Czy przenosisz formantów, dodawanie formantów lub zmienianie rozmieszczenia bieżący układ, przewodniki może pomóc wyrównywania formantów dokładnie w oknie dialogowym. Przewodniki są wyświetlane jako niebieskie linie przerywana przez okno dialogowe wyświetlane w edytorze i odpowiednie strzałki w linijki (w górnej i lewej strony Edytor okien dialogowych).  
@@ -52,7 +47,7 @@ Czy przenosisz formantów, dodawanie formantów lub zmienianie rozmieszczenia bi
   
 1.  Przeciągnij ją z okna dialogowego.  
   
- \-lub -  
+ \- lub -  
   
 -   Przeciągnij strzałkę odpowiedniego poza linijkę.  
   

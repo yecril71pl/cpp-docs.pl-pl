@@ -1,27 +1,22 @@
 ---
-title: "Za pomocą akceleratora i obiektów accelerator_view | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Za pomocą akceleratora i obiektów accelerator_view | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cc676407a88979679a362b3d36f361614524432
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 9e0f86467de8256eaecbfbf42765de551a1e2f6e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Używanie akceleratora i obiektów accelerator_view
 Można użyć [akceleratora](../../parallel/amp/reference/accelerator-class.md) i [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) klas, aby określić urządzenia lub emulatora do uruchomienia kodu C++ AMP na. System może mieć kilka urządzeń lub emulatory, które różnią się według ilości pamięci, obsługi pamięci udostępnionej, obsługę debugowania lub obsługę podwójnej precyzji. C++ Accelerated Massive Parallelism (C++ AMP) udostępnia interfejsy API, który służy do badania dostępne akceleratorów, Ustaw jako domyślny, określ accelerator_views wiele do wielu wywołań parallel_for_each i wykonać specjalne zadania debugowania.  

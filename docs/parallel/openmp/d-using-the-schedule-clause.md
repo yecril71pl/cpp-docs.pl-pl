@@ -1,27 +1,22 @@
 ---
 title: D. Zgodnie z harmonogramem klauzuli | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: bf3d8f51-ea05-4803-bf55-657c12e91efe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b51eeb36a4cffafde0e90586fec08d28b9672e5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8987c4505adfde8534d57346cd6725231efa022f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="d-using-the-schedule-clause"></a>D. Zgodnie z harmonogramem — klauzula
 Równoległego regionu ma co najmniej jeden bariery na jej końcu i mogą mieć dodatkowe bariery w niej. W każdej bariery ostatni wątek odebranie należy poczekać innych członków zespołu. Aby zminimalizować czas oczekiwania, pracy udostępniony powinien zostać przekazany tak, aby wszystkie wątki przyjeździe zapory w o tym samym czasie. Jeśli niektóre z udostępnionego pracy jest zawarta w **dla** konstrukcje, `schedule` klauzuli może służyć do tego celu.  
@@ -84,7 +79,7 @@ for(i=0; i<n; i++) {
 }  
 ```  
   
- Podobnie jak **dynamiczne**, **z przewodnikiem** zaplanować gwarancji, które nie wątek oczekuje na bariery dłużej niż Trwa inny wątek można wykonać jego iterację końcowego lub końcowego *k* Liczba iteracji, jeśli rozmiar fragmentu *k* jest określona. Wśród takie harmonogramy **z przewodnikiem** harmonogramu jest określony przez właściwość wymaga najmniejszej synchronizacji. Rozmiar fragmentu *k*, przypisze Typowa implementacja *q = ceiling(n/p)* iteracji, aby pierwszy dostępny wątku, ustaw  *n*  do większy z *n-q* i *p\*k*i powtórz przypisano wszystkich iteracji.  
+ Podobnie jak **dynamiczne**, **z przewodnikiem** zaplanować gwarancji, które nie wątek oczekuje na bariery dłużej niż Trwa inny wątek można wykonać jego iterację końcowego lub końcowego *k* Liczba iteracji, jeśli rozmiar fragmentu *k* jest określona. Wśród takie harmonogramy **z przewodnikiem** harmonogramu jest określony przez właściwość wymaga najmniejszej synchronizacji. Rozmiar fragmentu *k*, przypisze Typowa implementacja *q = ceiling(n/p)* iteracji, aby pierwszy dostępny wątku, ustaw *n* do większy z *n-q* i *p\*k*i powtórz przypisano wszystkich iteracji.  
   
  Gdy wybór optymalnego harmonogramu nie jest jako zwykły, podobnie jak w przypadku tych przykładach **środowiska uruchomieniowego** harmonogramu jest wygodną metodą eksperymentowanie z różne harmonogramy i rozmiarach, bez konieczności modyfikowania i skompiluj ponownie ten program. Można również go przydatne podczas optymalnego harmonogram zależy (w jakiś sposób wartości prognozowanych) danych wejściowych, do którego zastosowano program.  
   

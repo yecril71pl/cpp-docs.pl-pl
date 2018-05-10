@@ -1,27 +1,22 @@
 ---
 title: Korzystanie z C++ AMP w aplikacjach platformy uniwersalnej systemu Windows | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 85577298-2c28-4209-9470-eb21048615db
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 481ea5918e7572375fdafd9ba489da34730fef84
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5736c84f21535222de5659780968efd98e1467da
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-c-amp-in-uwp-apps"></a>Korzystanie z C++ AMP w aplikacjach platformy uniwersalnej systemu Windows
 C++ AMP (C++ Accelerated Massive Parallelism) w aplikacji Windows platformy Uniwersalnej służy do wykonywania obliczeń w procesora GPU (przetwarzania graficzny) lub innych akceleratorów obliczeniową. Jednak C++ AMP nie udostępnia interfejsy API do pracy bezpośrednio z typów środowiska wykonawczego systemu Windows i środowiska wykonawczego systemu Windows nie udostępnia otokę dla C++ AMP. Jeśli używasz typów środowiska wykonawczego systemu Windows w kodzie — łącznie z tymi, które zostały utworzone samodzielnie — muszą być konwertowane na typy, które są zgodne z C++ AMP.  

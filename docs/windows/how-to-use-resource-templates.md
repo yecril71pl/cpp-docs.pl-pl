@@ -1,13 +1,10 @@
 ---
-title: "Porady: użycie szablonów zasobów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Porady: użycie szablonów zasobów | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - resources [Visual Studio], templates
 - .rct files
 ms.assetid: bdfe7060-f98e-4859-8285-9c8570360e9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bace4f6d8835d9aece7679fa1bb89af3d7a20ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 534a86d10a4bcbc34e6cef29fbb77d7caa2c64b9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-use-resource-templates"></a>Porady: użycie szablonów zasobów
 Szablon zasobu jest zapisany jako plik .rct — zasób dostosowany. Szablon zasobu może następnie służyć jako punkt początkowy do tworzenia innych zasobów. Szablony zasobów zaoszczędzić czas podczas opracowywania dodatkowych zasobów lub grup zasobów, które mają funkcje, takie jak standardowych kontrolek i inne elementy powtórzony. Na przykład można objąć kilka okien dialogowych przycisk Pomoc i ikony logo firmy. Aby wykonać tak szybko, Utwórz nowy szablon — okno dialogowe i dostosować go za pomocą logo i przycisk Pomoc.  
@@ -61,7 +56,7 @@ Szablon zasobu jest zapisany jako plik .rct — zasób dostosowany. Szablon zaso
   
 1.  [Otwórz plik .rc jako autonomiczny plik](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
   
-2.  Na **pliku** menu, kliknij przycisk  **zapisać \<* Twojego filename*> jako **.  
+2.  Na **pliku** menu, kliknij przycisk **zapisać \< *Twojego filename*> jako**.  
   
 3.  Określ lokalizację, a następnie kliknij przycisk **OK**.  
   

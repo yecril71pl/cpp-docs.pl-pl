@@ -1,12 +1,9 @@
 ---
-title: "concurrent_vector — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: concurrent_vector — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_vector
@@ -42,17 +39,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1f196a4eaf8685a33b1ef4847e44f62015ed1ed
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e120e072fb3f56788cbf39fbbc3887f5c816f4ef
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentvector-class"></a>concurrent_vector — Klasa
 `concurrent_vector` Klasa jest klasą kontenerem sekwencji umożliwiająca losowe dostęp do dowolnych. Umożliwia bezpieczne współbieżności dołączenia, element dostępu, dostęp iteratora i operacji przechodzenia iteratora.  
@@ -107,13 +102,13 @@ class concurrent_vector: protected details::_Allocator_base<T,
 |[at](#at)|Przeciążone. Zapewnia dostęp do elementu pod danym indeksem w przypadku wektora współbieżnych. Ta metoda jest bezpieczne współbieżności dla operacji odczytu, a także podczas powiększania wektora, jak długo upewnieniu się, że wartość `_Index` jest mniejszy niż rozmiar wektora współbieżnych.|  
 |[back](#back)|Przeciążone. Zwraca odwołanie lub a `const` odwołania do ostatniego elementu w równoczesnych wektora. Jeśli równoczesnych wektora jest pusta, zwracana wartość jest niezdefiniowany. Ta metoda jest bezpieczne współbieżności.|  
 |[begin](#begin)|Przeciążone. Zwraca iteratora typu `iterator` lub `const_iterator` na początku równoczesnych wektora. Ta metoda jest bezpieczne współbieżności.|  
-|[capacity](#capacity)|Zwraca maksymalny rozmiar do którego równoczesnych wektora bez konieczności przydzielenie większej ilości pamięci. Ta metoda jest bezpieczne współbieżności.|  
+|[pojemność](#capacity)|Zwraca maksymalny rozmiar do którego równoczesnych wektora bez konieczności przydzielenie większej ilości pamięci. Ta metoda jest bezpieczne współbieżności.|  
 |[cbegin](#cbegin)|Zwraca iteratora typu `const_iterator` na początku równoczesnych wektora. Ta metoda jest bezpieczne współbieżności.|  
 |[cend](#cend)|Zwraca iteratora typu `const_iterator` na końcu równoczesnych wektora. Ta metoda jest bezpieczne współbieżności.|  
 |[Wyczyść](#clear)|Powoduje wymazanie wszystkich elementów w wektorze współbieżnych. Ta metoda nie jest bezpieczne współbieżności.|  
 |[crbegin](#crbegin)|Zwraca iteratora typu `const_reverse_iterator` na początku równoczesnych wektora. Ta metoda jest bezpieczne współbieżności.|  
 |[crend](#crend)|Zwraca iteratora typu `const_reverse_iterator` na końcu równoczesnych wektora. Ta metoda jest bezpieczne współbieżności.|  
-|[empty](#empty)|Testy, jeśli równoczesnych wektora jest pusta w momencie ta metoda jest wywoływana. Ta metoda jest bezpieczne współbieżności.|  
+|[pusty](#empty)|Testy, jeśli równoczesnych wektora jest pusta w momencie ta metoda jest wywoływana. Ta metoda jest bezpieczne współbieżności.|  
 |[Koniec](#end)|Przeciążone. Zwraca iteratora typu `iterator` lub `const_iterator` na końcu równoczesnych wektora. Ta metoda jest bezpieczne współbieżności.|  
 |[Front](#front)|Przeciążone. Zwraca odwołanie lub a `const` odwołanie do pierwszego elementu w przypadku wektora współbieżnych. Jeśli równoczesnych wektora jest pusta, zwracana wartość jest niezdefiniowany. Ta metoda jest bezpieczne współbieżności.|  
 |[get_allocator](#get_allocator)|Zwraca kopię programu przydzielania użyty do utworzenia wektora współbieżnych. Ta metoda jest bezpieczne współbieżności.|  
@@ -151,7 +146,7 @@ class concurrent_vector: protected details::_Allocator_base<T,
   
  **Namespace:** współbieżności  
   
-##  <a name="assign">Przypisz</a> 
+##  <a name="assign"></a> Przypisz 
 
  Powoduje usunięcie elementów wektora jednoczesnych, a następnie przypisuje do niego albo `_N` kopie `_Item`, lub wartości określonych przez zakres iteratora [ `_Begin`, `_End`). Ta metoda nie jest bezpieczne współbieżności.  
   
@@ -257,7 +252,7 @@ const_iterator cbegin() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Iteratora typu `const_iterator` na początku równoczesnych wektora.  
   
-##  <a name="cend">cend</a> 
+##  <a name="cend"></a> cend 
 
  Zwraca iteratora typu `const_iterator` na końcu równoczesnych wektora. Ta metoda jest bezpieczne współbieżności.  
   
@@ -268,7 +263,7 @@ const_iterator cend() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Iteratora typu `const_iterator` na końcu równoczesnych wektora.  
   
-##  <a name="clear">Wyczyść</a> 
+##  <a name="clear"></a> Wyczyść 
 
  Powoduje wymazanie wszystkich elementów w wektorze współbieżnych. Ta metoda nie jest bezpieczne współbieżności.  
   
@@ -372,7 +367,7 @@ const_reverse_iterator crbegin() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Iteratora typu `const_reverse_iterator` na początku równoczesnych wektora.  
   
-##  <a name="crend">crend</a> 
+##  <a name="crend"></a> crend 
 
  Zwraca iteratora typu `const_reverse_iterator` na końcu równoczesnych wektora. Ta metoda jest bezpieczne współbieżności.  
   
@@ -394,7 +389,7 @@ bool empty() const;
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli wektor był pusty w tej chwili wywołano funkcję `false` inaczej.  
   
-##  <a name="end">Koniec</a> 
+##  <a name="end"></a> Koniec 
 
  Zwraca iteratora typu `iterator` lub `const_iterator` na końcu równoczesnych wektora. Ta metoda jest bezpieczne współbieżności.  
   
@@ -407,7 +402,7 @@ const_iterator end() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Iteratora typu `iterator` lub `const_iterator` na końcu równoczesnych wektora.  
   
-##  <a name="front">Front</a> 
+##  <a name="front"></a> Front 
 
  Zwraca odwołanie lub a `const` odwołanie do pierwszego elementu w przypadku wektora współbieżnych. Jeśli równoczesnych wektora jest pusta, zwracana wartość jest niezdefiniowany. Ta metoda jest bezpieczne współbieżności.  
   
@@ -509,7 +504,7 @@ concurrent_vector& operator= (
 ### <a name="return-value"></a>Wartość zwracana  
  Odwołanie do tego `concurrent_vector` obiektu.  
   
-##  <a name="operator_at">Operator]</a> 
+##  <a name="operator_at"></a> Operator] 
 
  Zapewnia dostęp do elementu pod danym indeksem w przypadku wektora współbieżnych. Ta metoda jest bezpieczne współbieżności dla operacji odczytu, a także podczas powiększania wektora, jak długo upewnieniu się, że wartość `_Index` jest mniejszy niż rozmiar wektora współbieżnych.  
   
@@ -561,7 +556,7 @@ const_reverse_iterator rbegin() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Iteratora typu `reverse_iterator` lub `const_reverse_iterator` na początku równoczesnych wektora.  
   
-##  <a name="rend">rend</a> 
+##  <a name="rend"></a> rend 
 
  Zwraca iteratora typu `reverse_iterator` lub `const_reverse_iterator` na końcu równoczesnych wektora. Ta metoda jest bezpieczne współbieżności.  
   
@@ -589,7 +584,7 @@ void reserve(size_type _N);
 ### <a name="remarks"></a>Uwagi  
  `reserve` nie jest bezpieczne współbieżności. Należy się upewnić, że nie ma innych wątków są wywoływanie metod na równoczesnych wektor podczas wywoływania tej metody. Pojemność równoczesnych wektora po metoda zwraca może być większy niż żądany rezerwacji.  
   
-##  <a name="resize">Zmiana rozmiaru</a> 
+##  <a name="resize"></a> Zmiana rozmiaru 
 
  Zmienia rozmiar wektora równoczesnych żądany rozmiar, usunięcie lub dodawania elementów w razie potrzeby. Ta metoda nie jest bezpieczne współbieżności.  
   
@@ -625,7 +620,7 @@ void shrink_to_fit();
 ### <a name="remarks"></a>Uwagi  
  Ta metoda będzie wewnętrznie ponownie przydzielić pamięci przenoszenia elementów, unieważnienie wszystkich Iteratory. `shrink_to_fit` nie jest bezpieczne współbieżności. Należy się upewnić, że nie ma innych wątków są wywoływanie metod na równoczesnych wektor podczas wywoływania tej funkcji.  
   
-##  <a name="size">Rozmiar</a> 
+##  <a name="size"></a> Rozmiar 
 
  Zwraca liczbę elementów w wektorze współbieżnych. Ta metoda jest bezpieczne współbieżności.  
   

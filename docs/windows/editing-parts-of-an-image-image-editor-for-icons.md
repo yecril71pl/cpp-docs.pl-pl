@@ -1,13 +1,10 @@
 ---
-title: "Edytowanie części obrazu (edytor obrazów dla ikon) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Edytowanie części obrazu (edytor obrazów dla ikon) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - images [C++], pasting into
 - graphics [C++], editing
 ms.assetid: ff4f5fef-71a4-4fd8-825e-049399fed391
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: acd4859bf7c80cf2bbe6cd2d86c39d0fc596351d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b33a591a2f38062b5eaf81b0f56ab73a36f4c90c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="editing-parts-of-an-image-image-editor-for-icons"></a>Edytowanie części obrazu (Edytor obrazów dla ikon)
 Można wykonywać operacje edycji standard — wycinanie, kopiowanie, czyszczenia i przenoszenie — na [wybór](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), czy zaznaczenie jest całego obrazu lub tylko jego części. Ponieważ edytor obrazów używa Schowka systemu Windows, można przenieść obrazów między edytor obrazów i inne aplikacje dla systemu Windows.  

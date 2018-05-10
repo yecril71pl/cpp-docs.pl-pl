@@ -1,13 +1,10 @@
 ---
-title: "Tworzenie pędzla niestandardowego (edytor obrazów dla ikon) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Tworzenie pędzla niestandardowego (edytor obrazów dla ikon) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - graphics [C++], custom brushes
 - custom brushes
 ms.assetid: 750881aa-6f47-4de9-8ca6-a7a12afc6383
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38f376053635708372c09a37aa0810e4305db60a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a879850c00957568065150b6c6fc1c801c049fa2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-a-custom-brush-image-editor-for-icons"></a>Tworzenie pędzla niestandardowego (Edytor obrazów dla ikon)
 Pędzla niestandardowego jest prostokątny część obrazu, który Podnieś i użyj podobny do pędzli gotowe edytor obrazów. Wszystkie operacje, które można wykonywać na wybranych, można wykonywać na również pędzla niestandardowego.  
@@ -40,7 +35,7 @@ Pędzla niestandardowego jest prostokątny część obrazu, który Podnieś i u�
   
 2.  Zawierający **SHIFT** klucza w dół, kliknij w zaznaczeniu i przeciągnij go przez obraz.  
   
-     \-lub -  
+     \- lub -  
   
 3.  Z **obrazu** menu, wybierz **Użyj wyboru jako pędzel**.  
   

@@ -1,12 +1,9 @@
 ---
-title: "Accelerator — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Accelerator — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMPRT/accelerator
@@ -49,17 +46,15 @@ dev_langs:
 helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc98e31a9f5ae1f1ac347bfe312c0fddd9ddf7a8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b40177af3796a17d32e78e628c41ea694f69ed9f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="accelerator-class"></a>accelerator — Klasa
 Akceleratora jest możliwość sprzętu, która została zoptymalizowana pod kątem przetwarzania równoległego danych. Akceleratora może być urządzenie podłączone do magistrali PCIe (np. procesora GPU), lub można ją zestawu głównego procesora rozszerzonych instrukcji.  
@@ -117,12 +112,12 @@ class accelerator;
 |[dedicated_memory](#dedicated_memory)|Pobiera dedykowanej pamięci dla `accelerator`, w kilobajtach.|  
 |[default_accelerator](#default_accelerator)|Pobiera ciąg stałej dla domyślnej `accelerator`.|  
 |[default_cpu_access_type](#default_cpu_access_type)|Pobiera lub ustawia domyślny Procesor [access_type](concurrency-namespace-enums-amp.md#access_type)dla tablic i przydziałów pamięci niejawne wykonanych na tym `accelerator`.|  
-|[default_view](#default_view)|Pobiera domyślny `accelerator_view` obiektu, z którym skojarzony jest `accelerator`.|  
+|[default_view —](#default_view)|Pobiera domyślny `accelerator_view` obiektu, z którym skojarzony jest `accelerator`.|  
 |[Opis elementu](#description)|Pobiera krótki opis `accelerator` urządzenia.|  
 |[device_path](#device_path)|Pobiera ścieżkę do urządzenia.|  
 |[direct3d_ref](#direct3d_ref)|Pobiera ciąg stałej dla odwołania Direct3D `accelerator`.|  
 |[direct3d_warp](#direct3d_warp)|Pobiera ciąg stałej dla `accelerator` obiekt służącego do wykonywania kodu C++ AMP w wielordzeniowych procesorów CPU, które używają Streaming SIMD Extensions (SSE).|  
-|[has_display](#has_display)|Pobiera wartość logiczną wskazującą, czy `accelerator` jest dołączony do ekranu.|  
+|[has_display —](#has_display)|Pobiera wartość logiczną wskazującą, czy `accelerator` jest dołączony do ekranu.|  
 |[is_debug](#is_debug)|Wskazuje, czy `accelerator` ma włączone dla usługi raportowania błędów szeroką gamę warstwy debugowania.|  
 |[is_emulated —](#is_emulated)|Wskazuje, czy `accelerator` jest emulowane.|  
 |[supports_cpu_shared_memory](#supports_cpu_shared_memory)|Wskazuje, czy `accelerator` obsługuje współużytkowana pamięć.|  
@@ -182,7 +177,7 @@ accelerator(const accelerator& _Other);
 static const wchar_t cpu_accelerator[];  
 ```  
   
-##  <a name="create_view">create_view</a> 
+##  <a name="create_view"></a> create_view 
 
  Tworzy i zwraca `accelerator_view` obiektu na tego akceleratora przy użyciu określonego trybu kolejkowania wiadomości. Gdy tryb kolejkowania wiadomości nie jest określona, nowa `accelerator_view` używa [queuing_mode::immediate](concurrency-namespace-enums-amp.md#queuing_mode) tryb kolejkowania wiadomości.  
   
@@ -229,7 +224,7 @@ __declspec(property(get= get_default_cpu_access_type)) access_type default_cpu_a
 __declspec(property(get= get_default_view)) accelerator_view default_view;  
 ```  
   
-##  <a name="description">Opis elementu</a> 
+##  <a name="description"></a> Opis elementu 
 
  Pobiera krótki opis `accelerator` urządzenia.  
   
@@ -374,7 +369,7 @@ bool get_is_debug() const;
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli `accelerator` ma włączone dla usługi raportowania błędów szeroką gamę warstwy debugowania. W przeciwnym razie `false`.  
   
-##  <a name="get_is_emulated">get_is_emulated</a> 
+##  <a name="get_is_emulated"></a> get_is_emulated 
 
  Określa, czy `accelerator` jest emulowane.  
   
@@ -455,7 +450,7 @@ __declspec(property(get= get_has_display)) bool has_display;
 __declspec(property(get= get_is_debug)) bool is_debug;  
 ```  
   
-##  <a name="is_emulated">is_emulated —</a> 
+##  <a name="is_emulated"></a> is_emulated — 
 
  Pobiera wartość logiczną wskazującą, czy `accelerator` jest emulowane.  
   
@@ -566,7 +561,7 @@ __declspec(property(get= get_supports_double_precision)) bool supports_double_pr
 __declspec(property(get= get_supports_limited_double_precision)) bool supports_limited_double_precision;  
 ```  
   
-##  <a name="version">Wersja</a> 
+##  <a name="version"></a> Wersja 
 
  Pobiera wersję `accelerator`.  
   
@@ -764,7 +759,7 @@ bool operator== (const accelerator_view& _Other) const;
 __declspec(property(get= get_queuing_mode)) Concurrency::queuing_mode queuing_mode;  
 ```  
   
-##  <a name="version">Wersja</a> 
+##  <a name="version"></a> Wersja 
 
  Pobiera wersję [accelerator_view](accelerator-view-class.md).  
   

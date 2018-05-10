@@ -1,27 +1,22 @@
 ---
 title: 4.2 OMP_NUM_THREADS | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 49dd55dd-25d5-4a5a-a998-cc7f47b2dae2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c2b766d0e3be9b4f1d272a6e3fa205cfcb87039
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b6b4208d7fe7d453dd1f701d820a85fce5cd68ba
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="42-ompnumthreads"></a>4.2 OMP_NUM_THREADS
 **OMP_NUM_THREADS** zmiennej środowiskowej ustawia domyślną liczbę wątków używanych podczas wykonywania, chyba że ten numer zostanie jawnie zmieniona przez wywołanie metody **omp_set_num_threads** procedury biblioteki lub przez jawne **num_threads** klauzula w **równoległych** dyrektywy.  

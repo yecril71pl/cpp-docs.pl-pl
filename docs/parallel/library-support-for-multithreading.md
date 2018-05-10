@@ -1,30 +1,25 @@
 ---
-title: "Obsługa bibliotek na potrzeby wielowątkowości | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Obsługa bibliotek na potrzeby wielowątkowości | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - multithreading [C++], library support
 - threading [C++], library support
 ms.assetid: 54cf10d5-b800-481b-a149-b0ee373f41a1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9664d126471f3bbab49ec4d6e89cef8486821077
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5b25d506b5364dcbc26d3e32f5b0eb34188b30bd
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="library-support-for-multithreading"></a>Obsługa bibliotek na potrzeby wielowątkowości
 Wszystkie wersje CRT teraz obsługuje wiele wątków, z wyjątkiem wersji zablokowanie niektórych funkcji. Zobacz [wydajność bibliotek wielowątkowych](../c-runtime-library/multithreaded-libraries-performance.md) Aby uzyskać więcej informacji.  

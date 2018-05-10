@@ -1,13 +1,10 @@
 ---
 title: SafeEquals | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeEquals
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeEquals function
 ms.assetid: 6019627d-f170-413b-9abd-2b5b34396a72
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c6a608a80ea299f951e5f58e59ad57dad5876c1b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cfde61e9bcc32e3924e923dd55c8e6ca51cda0eb
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safeequals"></a>SafeEquals
 Porównuje dwie liczb do ustalenia, czy są równe.  
@@ -42,14 +37,14 @@ inline bool SafeEquals (
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [in]`t`  
+ [in] `t`  
  Pierwsza liczba do porównania. To musi być typu T.  
   
- [in]`u`  
+ [in] `u`  
  Druga liczba do porównania. Musi to być typ U.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli `t` i `u` są równe; w przeciwnym razie `false`.  
+ `true` Jeśli `t` i `u` są równe; w przeciwnym razie `false`.  
   
 ## <a name="remarks"></a>Uwagi  
  Rozszerza metodę `==` ponieważ `SafeEquals` można porównać dwa różne typy liczb.  

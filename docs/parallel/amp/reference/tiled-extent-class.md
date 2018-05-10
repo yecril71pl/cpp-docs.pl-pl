@@ -2,11 +2,8 @@
 title: tiled_extent — klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - tiled_extent
@@ -22,17 +19,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8370dbd381fa7005ea619ddb63b21bd227f68153
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 59ac4e878ee67e03498d4d29efe7c91d34c1b4c7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tiledextent-class"></a>tiled_extent — Klasa
 A `tiled_extent` obiekt jest `extent` obiektu wymiarów jednej do trzech dzielący miejsca zakresu w jednej, dwóch lub trójwymiarowy Kafelki.  
@@ -83,7 +78,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[get_tile_extent](#get_tile_extent)|Zwraca `extent` obiekt, który przechwytuje wartości `tiled_extent` argumentów szablonu `_Dim0`, `_Dim1`, i `_Dim2`.|  
-|[pad](#pad)|Zwraca nowy `tiled_extent` obiektu z zakresów dostosowana się być podzielna przez wymiary kafelka.|  
+|[Konsola](#pad)|Zwraca nowy `tiled_extent` obiektu z zakresów dostosowana się być podzielna przez wymiary kafelka.|  
 |[TRUNCATE](#truncate)|Zwraca nowy `tiled_extent` obiektu z zakresów dostosowana w dół do być podzielna przez wymiary kafelka.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
@@ -97,9 +92,9 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[tile_dim0 Constant](#tile_dim0)|Przechowuje długość najważniejszych wymiaru.|  
-|[tile_dim1 Constant](#tile_dim1)|Przechowuje długość dalej do najbardziej znaczących wymiaru.|  
-|[tile_dim2 Constant](#tile_dim2)|Przechowuje długość najmniej znaczący wymiaru.|  
+|[Stała tile_dim0](#tile_dim0)|Przechowuje długość najważniejszych wymiaru.|  
+|[Stała tile_dim1](#tile_dim1)|Przechowuje długość dalej do najbardziej znaczących wymiaru.|  
+|[Stała tile_dim2](#tile_dim2)|Przechowuje długość najmniej znaczący wymiaru.|  
 
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  

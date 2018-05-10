@@ -1,29 +1,24 @@
 ---
-title: "Funkcje zarządzania pamięcią | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Funkcje zarządzania pamięcią | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - memory management functions [Concurrency Runtime]
 ms.assetid: d303dd2a-dfa4-4d90-a508-f6aa290bb9ea
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 309080a807a1325bbf921657a152cff60e87cb95
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f0a298c7fb9e50bb17d37224b69ce342c54115d7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="memory-management-functions"></a>Funkcje zarządzania pamięcią
 W tym dokumencie opisano funkcje zarządzania pamięcią, udostępniające Aby przydzielić i zwolnić pamięć, w sposób równoczesnych współbieżności środowiska wykonawczego.  

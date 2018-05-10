@@ -1,13 +1,10 @@
 ---
-title: "Zaznaczanie obszaru obrazu (edytor obrazów dla ikon) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Zaznaczanie obszaru obrazu (edytor obrazów dla ikon) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.editing
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - images [C++], selecting
 - cursors [C++], selecting areas of
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3060c47af46a39358ac2e8a7ab5b573f50867869
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07cb7528e25604e873f6da92193a97cf79700799
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="selecting-an-area-of-an-image-image-editor-for-icons"></a>Zaznaczanie obszaru obrazu (Edytor obrazów dla ikon)
 Narzędzia wyboru umożliwia definiowanie obszar obrazu, który ma wycinanie, kopiowanie, wyczyść, rozmiar, Odwróć lub przenieść. Z **prostokąta zaznaczenia** narzędzia można zdefiniować i wybierz prostokątny obszar obrazu. Z **nieregularne wybór** narzędzia można narysować odręcznej konspektu obszaru chcesz wybrać wycinania, kopiowania lub innej operacji.  

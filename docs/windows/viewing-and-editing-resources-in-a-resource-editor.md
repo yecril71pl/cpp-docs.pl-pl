@@ -1,13 +1,10 @@
 ---
-title: "Wyświetlanie i edytowanie zasobów w edytorze zasobów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Wyświetlanie i edytowanie zasobów w edytorze zasobów | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.resourceview
 dev_langs:
@@ -22,18 +19,16 @@ helpviewer_keywords:
 - .rc files, viewing resources
 - resources [Visual Studio], editing
 ms.assetid: ba8bdc07-3f60-43c7-aa5c-d5dd11f0966e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 980264ab1857af214dcd24703980b8efa9a4d2dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1afa1377b222789243706cf3c5e61f45b4fcd1a1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="viewing-and-editing-resources-in-a-resource-editor"></a>Wyświetlanie i edytowanie zasobów w edytorze zasobów
 Każdy typ zasobu ma edytorze zasobów specyficznych dla tego typu zasobu. Można rozmieszczanie, zmienianie rozmiaru, Dodaj formanty i funkcje lub modyfikację aspektów zasobu za pomocą edytora skojarzone. Można również edytować zasobu w [formacie tekstowym](../windows/how-to-open-a-resource-script-file-in-text-format.md) i [format binarny](../windows/opening-a-resource-for-binary-editing.md).  

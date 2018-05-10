@@ -1,30 +1,25 @@
 ---
-title: "Wskazówki: Usuwanie pracy z wątku interfejsu użytkownika | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Wskazówki: Usuwanie pracy z wątku interfejsu użytkownika | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c32613aa6938b873a820fbb491fa2c507605a6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0502ce728c35b08d927cea48ee5b82756980aec5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Wskazówki: usuwanie pracy z wątku interfejs użytkownika
 Ten dokument przedstawiono sposób korzystania ze współbieżności środowiska wykonawczego można przenieść pracy, które jest przeprowadzane przez wątek interfejsu użytkownika (UI) w aplikacji Microsoft Foundation Classes (MFC) do wątku roboczego. Ten dokument również pokazano, jak poprawić wydajność długotrwałej operacji rysowania.  
@@ -46,7 +41,7 @@ Ten dokument przedstawiono sposób korzystania ze współbieżności środowiska
   
  Zalecamy również że rozumiesz podstawowe informacje dotyczące tworzenia aplikacji MFC i [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] przed skorzystaniem z tego przewodnika. Aby uzyskać więcej informacji na temat MFC, zobacz [aplikacji pulpitu MFC](../../mfc/mfc-desktop-applications.md). Aby uzyskać więcej informacji na temat [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)], zobacz [GDI +](https://msdn.microsoft.com/en-us/library/windows/desktop/ms533798).  
   
-##  <a name="top"></a>Sekcje  
+##  <a name="top"></a> Sekcje  
  Ten przewodnik zawiera następujące sekcje:  
   
 -   [Tworzenie aplikacji MFC](#application)  
@@ -59,7 +54,7 @@ Ten dokument przedstawiono sposób korzystania ze współbieżności środowiska
   
 -   [Dodawanie obsługi anulowania](#cancellation)  
   
-##  <a name="application"></a>Tworzenie aplikacji MFC  
+##  <a name="application"></a> Tworzenie aplikacji MFC  
  W tej sekcji opisano sposób tworzenia podstawowej aplikacji MFC.  
   
 ### <a name="to-create-a-visual-c-mfc-application"></a>Aby utworzyć aplikację Visual C++ MFC  
@@ -74,7 +69,7 @@ Ten dokument przedstawiono sposób korzystania ze współbieżności środowiska
   
      Sprawdź, czy aplikacja została pomyślnie utworzona tworzenia i uruchamiania go. Do skompilowania aplikacji, na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**. Jeśli aplikacja tworzy się pomyślnie, uruchom aplikację, klikając **Rozpocznij debugowanie** na **debugowania** menu.  
   
-##  <a name="serial"></a>Implementowanie Serial wersji aplikacji Mandelbrot  
+##  <a name="serial"></a> Implementowanie Serial wersji aplikacji Mandelbrot  
  W tej sekcji opisano sposób rysowania fraktalowy Mandelbrot. Ta wersja rysuje fraktalowy Mandelbrot do [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] [mapy bitowej](https://msdn.microsoft.com/library/ms534420.aspx) obiekt, a następnie kopiuje zawartość tej mapy bitowej do okna klienta.  
   
 #### <a name="to-implement-the-serial-version-of-the-mandelbrot-application"></a>Aby zaimplementować serial wersji aplikacji Mandelbrot  
@@ -123,7 +118,7 @@ Ten dokument przedstawiono sposób korzystania ze współbieżności środowiska
   
  [[Górnej](#top)]  
   
-##  <a name="removing-work"></a>Usuwanie pracy z wątku interfejsu użytkownika  
+##  <a name="removing-work"></a> Usuwanie pracy z wątku interfejsu użytkownika  
  W tej sekcji pokazano, jak usunąć rysowania pracy z wątku interfejsu użytkownika w aplikacji Mandelbrot. Przenosząc na rysunku pracy z wątku interfejsu użytkownika do wątku roboczego wątku interfejsu użytkownika można przetwarzania komunikatów wątku roboczego generuje obraz w tle.  
   
  Współbieżność środowiska wykonawczego zapewnia trzy sposoby uruchamiania zadań: [zadań grup](../../parallel/concrt/task-parallelism-concurrency-runtime.md), [agentów asynchronicznych](../../parallel/concrt/asynchronous-agents.md), i [zadań lekkich](../../parallel/concrt/task-scheduler-concurrency-runtime.md). Chociaż jeden z tych mechanizmów umożliwia usuwanie pracy z wątku interfejsu użytkownika, w tym przykładzie użyto [concurrency::task_group](reference/task-group-class.md) obiektu, ponieważ grupy zadań obsługuje anulowania. W tym przewodniku zastosowano anulowania później, aby zmniejszyć ilość pracy, które jest przeprowadzane, gdy zmieniany jest rozmiar okna klienta, a do wykonania oczyszczania, gdy okno zostanie zniszczone.  
@@ -162,7 +157,7 @@ Ten dokument przedstawiono sposób korzystania ze współbieżności środowiska
   
  [[Górnej](#top)]  
   
-##  <a name="performance"></a>Poprawianie wydajności rysowania  
+##  <a name="performance"></a> Poprawianie wydajności rysowania  
 
  Generowanie fraktalowy Mandelbrot są odpowiednimi kandydatami do paralelizacja, ponieważ obliczenia każdego piksela jest niezależna od wszystkich pozostałych obliczeń. Aby parallelize procedury rysunku, przekonwertować zewnętrznego `for` pętli w `CChildView::DrawMandelbrot` metody do wywołania [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorytmu w następujący sposób.  
 
@@ -173,7 +168,7 @@ Ten dokument przedstawiono sposób korzystania ze współbieżności środowiska
   
  [[Górnej](#top)]  
   
-##  <a name="cancellation"></a>Dodawanie obsługi anulowania  
+##  <a name="cancellation"></a> Dodawanie obsługi anulowania  
  W tej sekcji opisano sposób obsługi zmianę rozmiaru okna i anulować wszystkie aktywne zadania rysunku, gdy okno zostanie zniszczone.  
   
  Dokument [anulowanie w PPL](cancellation-in-the-ppl.md) wyjaśniono sposób anulowania działania w czasie wykonywania. Anulowanie jest współpraca; w związku z tym nie występuje od razu. Aby zatrzymać anulowanych zadań, środowisko uruchomieniowe zgłasza wyjątek wewnętrzny podczas wywołania kolejne zadania w czasie wykonywania. Poprzedniej sekcji przedstawia sposób użycia `parallel_for` algorytmu, aby poprawić wydajność rysowania zadań. Wywołanie `parallel_for` środowisko uruchomieniowe można zatrzymać zadania i w związku z tym umożliwia anulowanie do pracy.  

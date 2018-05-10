@@ -1,12 +1,9 @@
 ---
-title: "#Using — Dyrektywa (C + +/ CLR) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: '#Using — Dyrektywa (C + +/ CLR) | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - friend_as_cpp
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1c43acde6e4f755c6757fc933c80091ba05927c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 053c425a6bb8dcab0dc5cb94db1537f0fff3d9f8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-directive-cclr"></a>#using — dyrektywa (C + +/ CLR)
 Importuje metadane do programu skompilowane z [/CLR](../build/reference/clr-common-language-runtime-compilation.md).  
@@ -44,7 +39,7 @@ Importuje metadane do programu skompilowane z [/CLR](../build/reference/clr-comm
   
 #### <a name="parameters"></a>Parametry  
  `file`  
- An MSIL .dll, .exe, .netmodule, or .obj. Na przykład  
+ DLL MSIL, .exe, modułu .netmodule, lub. obiektu Na przykład  
   
  `#using <MyComponent.dll>`  
   
@@ -65,7 +60,7 @@ Importuje metadane do programu skompilowane z [/CLR](../build/reference/clr-comm
   
  Kompilator, aby rozpoznać typu w zestawie (nie w module), konieczne można wymusić można rozpoznać typu, co można zrobić, na przykład, definiując wystąpienia typu. Istnieją inne sposoby rozwiązania nazwy typów w zestawie dla kompilatora, na przykład, jeśli dziedziczyć z typu w zestawie, nazwa typu zostanie następnie stają się wiadomo kompilatora.  
   
- Podczas importowania metadanych skompilowane z kodu źródłowego, który używany [__declspec(thread)](../cpp/thread.md), semantyki wątku nie są zachowywane w metadanych. Na przykład Zmienna zadeklarowana ze **__declspec(thread)**skompilowanych w programie kompilacji dla platformy .NET Framework środowisko uruchomieniowe języka wspólnego, a następnie importować za pomocą `#using`, nie będą już dostępne **__declspec () Wątek)** semantyki zmiennej.  
+ Podczas importowania metadanych skompilowane z kodu źródłowego, który używany [__declspec(thread)](../cpp/thread.md), semantyki wątku nie są zachowywane w metadanych. Na przykład Zmienna zadeklarowana ze **__declspec(thread)** skompilowanych w programie kompilacji dla platformy .NET Framework środowisko uruchomieniowe języka wspólnego, a następnie importować za pomocą `#using`, nie będą już dostępne **__declspec () Wątek)** semantyki zmiennej.  
   
  Zaimportować wszystkie typy (zarządzane i natywne) w pliku odwołuje się `#using` są dostępne, ale kompilator natywnych typów traktuje jako deklaracje nie definicje.  
   

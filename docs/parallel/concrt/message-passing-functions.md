@@ -1,36 +1,31 @@
 ---
-title: "Funkcje przekazywania komunikatów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Funkcje przekazywania komunikatów | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - message passing functions
 ms.assetid: 42477c9e-a8a6-4dc4-a98e-93c6dc8c4dd0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9c2daa3f34ba4e73b28e11241d0f64680851fcc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9eecb7d2a45079ff14740167a192eafaab268150
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-passing-functions"></a>Funkcje przekazywania komunikatów
 Biblioteki agentów asynchronicznych zawiera kilka funkcji, które umożliwiają przekazywanie komunikatów między składnikami.  
   
  Te funkcje przekazywania komunikatów są używane z różnymi typami bloku komunikatów. Aby uzyskać więcej informacji o typach bloku komunikatów, które są zdefiniowane przez współbieżności środowiska wykonawczego, zobacz [bloki komunikatów asynchronicznych](../../parallel/concrt/asynchronous-message-blocks.md).  
   
-##  <a name="top"></a>Sekcje  
+##  <a name="top"></a> Sekcje  
  W tym temacie opisano następujące funkcje przekazywania komunikatów:  
   
 -   [Wyślij i asend —](#send)  
@@ -39,7 +34,7 @@ Biblioteki agentów asynchronicznych zawiera kilka funkcji, które umożliwiają
   
 -   [Przykłady](#examples)  
   
-##  <a name="send"></a>Wyślij i asend —  
+##  <a name="send"></a> Wyślij i asend —  
 
  [Concurrency::send](reference/concurrency-namespace-functions.md#send) funkcja wysyła komunikat do określonego obiektu docelowego synchronicznie i [concurrency::asend](reference/concurrency-namespace-functions.md#asend) funkcja wysyła komunikat do określonego obiektu docelowego asynchronicznie. Zarówno `send` i `asend` funkcje poczekaj docelowy wskazuje, że go zostanie ostatecznie zaakceptować lub odrzucić komunikat.  
   
@@ -49,7 +44,7 @@ Biblioteki agentów asynchronicznych zawiera kilka funkcji, które umożliwiają
   
  [[Górnej](#top)]  
   
-##  <a name="receive"></a>odbieranie i try_receive —  
+##  <a name="receive"></a> odbieranie i try_receive —  
 
  [Concurrency::receive](reference/concurrency-namespace-functions.md#receive) i [concurrency::try_receive](reference/concurrency-namespace-functions.md#try_receive) funkcje odczytać danych z danego źródła. `receive` Funkcja czeka na danych stanie się dostępna, podczas gdy `try_receive` funkcja zwraca natychmiast.  
   
@@ -57,7 +52,7 @@ Biblioteki agentów asynchronicznych zawiera kilka funkcji, które umożliwiają
   
  [[Górnej](#top)]  
   
-##  <a name="examples"></a>Przykłady  
+##  <a name="examples"></a> Przykłady  
  Aby uzyskać przykłady pokazujące, które używają `send` i `asend`, i `receive` funkcji, zobacz następujące tematy:  
   
 -   [Bloki komunikatów asynchronicznych](../../parallel/concrt/asynchronous-message-blocks.md)  

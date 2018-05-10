@@ -1,12 +1,9 @@
 ---
-title: "Runtimeclass — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Runtimeclass — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::RuntimeClass
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - RuntimeClass class
 ms.assetid: d52f9d1a-98e5-41f2-a143-8fb629dd0727
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5c75492b55cd1c238798d3500e2157738c3c58f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 26c3542f5bea21d1b705cd3253e6828ff73677df
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass — Klasa
 Reprezentuje klasę WinRT lub COM, która dziedziczy określonych interfejsów i zapewnia określonego środowiska wykonawczego systemu Windows, klasycznego modelu COM i obsługa słabe odwołanie.  
@@ -48,7 +43,7 @@ Parametr opcjonalny. Kombinacja jednego lub więcej [runtimeclasstype —](../wi
 Lista interfejsów obiekt implementuje poza IUnknown, IInspectable lub inne interfejsy kontrolowane przez [runtimeclasstype —](../windows/runtimeclasstype-enumeration.md). On również może zawierać listę innych klas pochodzących z szczególnie Microsoft::WRL::FtmBase powoduje, że obiekt elastyczne i spowodować, że plik implementacji interfejsu IMarshal.
   
 ## <a name="members"></a>Elementy członkowskie  
-`RuntimeClassInitialize`Funkcja, która inicjuje obiekt, jeśli makeandinitialize — funkcja szablonu jest używana do konstruowania obiektu. Zwraca wartość S_OK, jeśli obiekt został pomyślnie zainicjowany lub kod błędu modelu COM. Jeśli inicjowanie nie powiodło się. Kod błędu modelu COM są propagowane jako wartość zwracaną makeandinitialize —. Należy pamiętać, że metoda RuntimeClassInitialize nie jest wywoływana, gdy funkcja szablonu upewnij jest używana do konstruowania obiektu.
+`RuntimeClassInitialize` Funkcja, która inicjuje obiekt, jeśli makeandinitialize — funkcja szablonu jest używana do konstruowania obiektu. Zwraca wartość S_OK, jeśli obiekt został pomyślnie zainicjowany lub kod błędu modelu COM. Jeśli inicjowanie nie powiodło się. Kod błędu modelu COM są propagowane jako wartość zwracaną makeandinitialize —. Należy pamiętać, że metoda RuntimeClassInitialize nie jest wywoływana, gdy funkcja szablonu upewnij jest używana do konstruowania obiektu.
 
 ### <a name="public-constructors"></a>Konstruktory publiczne  
   

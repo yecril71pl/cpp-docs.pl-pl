@@ -1,12 +1,9 @@
 ---
-title: "Agent — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Agent — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - agent
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a4617007525fdd924dce7b09f1d351c7c18cc96
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fbc8542af8073b2cb95517ea39d89258afac633c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="agent-class"></a>agent — Klasa
 Klasa przeznaczona do użycia jako klasę podstawową dla wszystkich agentów niezależne. Służy do ukrycia stanu z innych agentów i interakcji, przy użyciu przekazywania wiadomości.  
@@ -130,7 +125,7 @@ bool cancel();
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli agent został anulowany, `false` inaczej. Nie można anulować agenta, jeśli rozpoczął już uruchomione lub zostało już zakończone.  
   
-##  <a name="done">Gotowe</a> 
+##  <a name="done"></a> Gotowe 
 
  Przenosi agenta do `agent_done` stan wskazujący, że agenta zostało ukończone.  
   
@@ -188,7 +183,7 @@ ISource<agent_status>* status_port();
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca źródła komunikat, który może wysyłać komunikaty o bieżący stan agenta.  
   
-##  <a name="wait">oczekiwania</a> 
+##  <a name="wait"></a> oczekiwania 
 
  Czeka na agenta zakończy się.  
   

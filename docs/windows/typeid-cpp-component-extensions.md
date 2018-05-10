@@ -1,30 +1,25 @@
 ---
 title: TypeID (C++ Component Extensions) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 20a3b1153bbb8a8502a54aa74998817abf191860
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db1efac0a38aaa11238452e418277f78dbcd6d9d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="typeid--c-component-extensions"></a>typeid (C++ Component Extensions)
 Pobiera wartość, która określa typ obiektu.  
@@ -77,15 +72,15 @@ type::typeid
   
  **Uwagi**  
   
- `typeid`jest używany do pobierania <xref:System.Type> dla typu w czasie kompilacji.  
+ `typeid` jest używany do pobierania <xref:System.Type> dla typu w czasie kompilacji.  
   
- `typeid`jest podobny do pobierania System::Type dla typu w czasie wykonywania za pomocą <xref:System.Type.GetType%2A> lub <xref:System.Object.GetType%2A>. Typeid akceptuje jednak tylko nazwę typu jako parametr.  Jeśli chcesz użyć wystąpienia typu można pobrać nazwy System::Type, użyj GetType.  
+ `typeid` jest podobny do pobierania System::Type dla typu w czasie wykonywania za pomocą <xref:System.Type.GetType%2A> lub <xref:System.Object.GetType%2A>. Typeid akceptuje jednak tylko nazwę typu jako parametr.  Jeśli chcesz użyć wystąpienia typu można pobrać nazwy System::Type, użyj GetType.  
   
- `typeid`musi mieć możliwość oceny nazwę typu (typ) w czasie kompilacji, podczas gdy GetType ocenia typ do zwrócenia w czasie wykonywania.  
+ `typeid` musi mieć możliwość oceny nazwę typu (typ) w czasie kompilacji, podczas gdy GetType ocenia typ do zwrócenia w czasie wykonywania.  
   
- `typeid`Nazwa typu macierzystego i wspólne alias środowiska uruchomieniowego języka dla nazwy typu macierzystego; zobacz [.NET Framework odpowiedniki typów natywnych języka C++ (C + +/ CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) Aby uzyskać więcej informacji.  
+ `typeid` Nazwa typu macierzystego i wspólne alias środowiska uruchomieniowego języka dla nazwy typu macierzystego; zobacz [.NET Framework odpowiedniki typów natywnych języka C++ (C + +/ CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) Aby uzyskać więcej informacji.  
   
- `typeid`współdziała również z natywnych typów, mimo że nadal zwróci System::Type.  Aby uzyskać struktury type_info —, należy użyć [typeid — Operator](../cpp/typeid-operator.md).  
+ `typeid` współdziała również z natywnych typów, mimo że nadal zwróci System::Type.  Aby uzyskać struktury type_info —, należy użyć [typeid — Operator](../cpp/typeid-operator.md).  
   
 ### <a name="requirements"></a>Wymagania  
  — Opcja kompilatora:   **/CLR**  

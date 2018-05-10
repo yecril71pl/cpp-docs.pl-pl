@@ -1,12 +1,9 @@
 ---
-title: "ChainInterfaces::Verify — metoda | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: ChainInterfaces::Verify — metoda | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::ChainInterfaces::Verify
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Verify method
 ms.assetid: c591e130-8686-4130-ba69-1aaedc250038
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d34d117091fd8807dfefda074e510910bf059560
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c83479434a936f32fb0f7367d8cd02c6676c74e7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="chaininterfacesverify-method"></a>ChainInterfaces::Verify — Metoda
 Sprawdza, czy każdy interfejs zdefiniowane przez parametry szablonu `I0` za pośrednictwem `I9` dziedziczy IUnknown i/lub IInspectable oraz że `I0` dziedziczy `I1` za pośrednictwem `I9`.  

@@ -1,12 +1,10 @@
 ---
-title: "Wskazówki: Tworzenie tradycyjnych aplikacji pulpitu systemu Windows (C++) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Wskazówki: Tworzenie tradycyjnych aplikacji pulpitu systemu Windows (C++) | Dokumentacja firmy Microsoft'
+ms.custom: get-started-article
 ms.date: 1/11/2018
-ms.reviewer: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,15 +13,14 @@ helpviewer_keywords:
 - Windows API [C++]
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce3c18abbace2181b2d31e0621b6e376021be68a
-ms.sourcegitcommit: c2e990450ccd528d85b2783fbc63042612987cfd
+ms.openlocfilehash: e5581292ec163a2e745802c66a87c14a8457f141
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Wskazówki: Tworzenie tradycyjnych aplikacji pulpitu systemu Windows (C++)
 
@@ -74,7 +71,7 @@ Wykonaj następujące kroki, aby utworzyć pierwszy projekt pulpitu systemu Wind
 
 Projekt został utworzony i pliku źródłowego jest otwarty w edytorze. Aby kontynuować, przejdź do [utworzyć kod](#create-the-code).
 
-### <a id="create-in-vs2017-rtm"></a>Aby utworzyć projekt pulpitu systemu Windows w programie Visual Studio 2017 RTM
+### <a id="create-in-vs2017-rtm"></a> Aby utworzyć projekt pulpitu systemu Windows w programie Visual Studio 2017 RTM
 
 1. Na **pliku** menu, wybierz **nowy** , a następnie wybierz **projektu**.
 
@@ -108,7 +105,7 @@ Następnie dowiesz się, jak utworzyć kodu dla aplikacji klasycznych systemu Wi
 
 ### <a name="to-start-a-windows-desktop-application"></a>Aby uruchomić aplikację pulpitu systemu Windows
 
-1. Podobnie jak każdy C aplikacji i C++ musi mieć `main` działać jako punktu początkowego systemu Windows, co aplikacja musi mieć `WinMain` funkcji. `WinMain`ma następującą składnię.
+1. Podobnie jak każdy C aplikacji i C++ musi mieć `main` działać jako punktu początkowego systemu Windows, co aplikacja musi mieć `WinMain` funkcji. `WinMain` ma następującą składnię.
 
    ```cpp
    int CALLBACK WinMain(
@@ -131,7 +128,7 @@ Następnie dowiesz się, jak utworzyć kodu dla aplikacji klasycznych systemu Wi
    #include <tchar.h>
    ```
 
-1. Oprócz `WinMain` funkcji, każda aplikacja pulpitu systemu Windows musi mieć również funkcja procedurę okna. Zazwyczaj nosi nazwę tej funkcji `WndProc` , ale można określić nazwę dowolne. `WndProc`ma następującą składnię.
+1. Oprócz `WinMain` funkcji, każda aplikacja pulpitu systemu Windows musi mieć również funkcja procedurę okna. Zazwyczaj nosi nazwę tej funkcji `WndProc` , ale można określić nazwę dowolne. `WndProc` ma następującą składnię.
 
    ```cpp
    LRESULT CALLBACK WndProc(
@@ -369,7 +366,7 @@ Następnie dowiesz się, jak utworzyć kodu dla aplikacji klasycznych systemu Wi
    }
    ```
 
-   `HDC`Ten kod jest dojścia do kontekstu urządzenia, który jest strukturą danych, która używa systemu Windows, aby umożliwić aplikacji do komunikowania się z podsystemem grafiki. `BeginPaint` i `EndPaint` funkcje upewnij się, że aplikacji zachowuje się jak dobrej obywateli i nie są używane przez dłuższy czas, niż jest wymagane do kontekstu urządzenia. Pomaga to zapewnić, że podsystem grafiki jest dostępny do użytku przez inne aplikacje.
+   `HDC` Ten kod jest dojścia do kontekstu urządzenia, który jest strukturą danych, która używa systemu Windows, aby umożliwić aplikacji do komunikowania się z podsystemem grafiki. `BeginPaint` i `EndPaint` funkcje upewnij się, że aplikacji zachowuje się jak dobrej obywateli i nie są używane przez dłuższy czas, niż jest wymagane do kontekstu urządzenia. Pomaga to zapewnić, że podsystem grafiki jest dostępny do użytku przez inne aplikacje.
 
 1. Aplikacji zwykle obsługuje wiele innych komunikatów, na przykład [WM_CREATE](https://msdn.microsoft.com/library/windows/desktop/ms632619) podczas tworzenia okna i [WM_DESTROY](https://msdn.microsoft.com/library/windows/desktop/ms632620) po zamknięciu okna. Poniższy kod przedstawia podstawowy, ale ukończona `WndProc` funkcji.
 

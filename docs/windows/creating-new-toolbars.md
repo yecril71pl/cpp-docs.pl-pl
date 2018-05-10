@@ -1,13 +1,10 @@
 ---
-title: "Tworzenie nowych pasków narzędzi | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Tworzenie nowych pasków narzędzi | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.toolbar
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - Toolbar editor, creating new toolbars
 - Insert Resource
 ms.assetid: 1b28264b-0718-4df8-9f65-979805d2efef
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4315d101f194b9c0ff1a66b9e7cf81dc778cf372
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b61d1c530272ecaba2cbeb36c21e158bd5a6b401
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-new-toolbars"></a>Tworzenie nowych pasków narzędzi
 ### <a name="to-create-a-new-toolbar"></a>Aby utworzyć nowy pasek narzędzi  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
      Jeśli występuje znak plus (+) obok pozycji **narzędzi** typ zasobu, oznacza to, że narzędzi szablony są dostępne. Kliknij znak plus, aby rozwinąć listę szablonów, wybierz szablon, a następnie kliknij przycisk **nowy**.  
   
-     \-lub -  
+     \- lub -  
   
 3.  [Konwertowanie istniejącej mapy bitowej na pasku narzędzi](../windows/converting-bitmaps-to-toolbars.md).  
   

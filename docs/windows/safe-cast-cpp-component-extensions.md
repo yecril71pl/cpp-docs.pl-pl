@@ -1,13 +1,10 @@
 ---
 title: safe_cast (C++ Component Extensions) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - safe_cast
 - safe_cast_cpp
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14bcf198d527fae51a579a2aa6e072a4c57424f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c889d39df4d900beba5c9b41015e62293fdbbcde
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast (C++ Component Extensions)
 `safe_cast` Operacji zwraca określone wyrażenie jako określony typ, w przypadku powodzenia; w przeciwnym razie zwraca `InvalidCastException`.  
@@ -52,7 +47,7 @@ expression
 ### <a name="remarks"></a>Uwagi  
   
 ## <a name="windows-runtime"></a>Środowisko wykonawcze systemu Windows  
- `safe_cast`Umożliwia zmianę typu określone wyrażenie. W sytuacjach, w pełni nieoczekiwany zmienna lub parametr być możliwa do przekonwertowania dla określonego typu można użyć polecenia safe_cast bez bloku try-catch do wykrywania programowania błędów podczas tworzenia. Aby uzyskać więcej informacji, zobacz [rzutowanie (C + +/ CX)](http://msdn.microsoft.com/library/windows/apps/hh755802.aspx).  
+ `safe_cast` Umożliwia zmianę typu określone wyrażenie. W sytuacjach, w pełni nieoczekiwany zmienna lub parametr być możliwa do przekonwertowania dla określonego typu można użyć polecenia safe_cast bez bloku try-catch do wykrywania programowania błędów podczas tworzenia. Aby uzyskać więcej informacji, zobacz [rzutowanie (C + +/ CX)](http://msdn.microsoft.com/library/windows/apps/hh755802.aspx).  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -73,7 +68,7 @@ expression
  Wyrażenie obliczane do dojścia do odwołanie lub typ wartości, typu wartości lub odwołanie śledzące do typu odwołanie lub wartość.  
   
 ### <a name="remarks"></a>Uwagi  
- `safe_cast`zgłasza wyjątek `InvalidCastException` Jeśli go nie można przekonwertować *wyrażenie* na typ określony przez *identyfikator typu*. Aby przechwycić `InvalidCastException`, określ [/EH (Model obsługi wyjątku)](../build/reference/eh-exception-handling-model.md) — opcja kompilatora i użyj instrukcji try/catch.  
+ `safe_cast` zgłasza wyjątek `InvalidCastException` Jeśli go nie można przekonwertować *wyrażenie* na typ określony przez *identyfikator typu*. Aby przechwycić `InvalidCastException`, określ [/EH (Model obsługi wyjątku)](../build/reference/eh-exception-handling-model.md) — opcja kompilatora i użyj instrukcji try/catch.  
   
 ### <a name="requirements"></a>Wymagania  
  — Opcja kompilatora: **/ZW**  
@@ -116,7 +111,7 @@ Caught expected exception: InvalidCastException
 ```  
   
 ## <a name="common-language-runtime"></a>środowiska uruchomieniowe w trakcie wykonania 
- `safe_cast`Umożliwia Zmień typ wyrażenia i generowanie kodu MSIL możliwe do zweryfikowania.  
+ `safe_cast` Umożliwia Zmień typ wyrażenia i generowanie kodu MSIL możliwe do zweryfikowania.  
   
 ### <a name="syntax"></a>Składnia  
   
@@ -145,9 +140,9 @@ expression
   
  Aby uzyskać więcej informacji na temat rzutowania zobacz [operatory rzutowania](../cpp/casting-operators.md).  
   
- `safe_cast`nie ma zastosowania **const_cast** (rzutowania z usuwaniem **const**).  
+ `safe_cast` nie ma zastosowania **const_cast** (rzutowania z usuwaniem **const**).  
   
- `safe_cast`znajduje się w przestrzeni nazw cli.  Zobacz [platformy, domyślna i cli przestrzenie nazw](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) Aby uzyskać więcej informacji.  
+ `safe_cast` znajduje się w przestrzeni nazw cli.  Zobacz [platformy, domyślna i cli przestrzenie nazw](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) Aby uzyskać więcej informacji.  
   
  Aby uzyskać więcej informacji na temat **safe_cas**t, zobacz:  
   

@@ -1,13 +1,10 @@
 ---
 title: idl_module | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.idl_module
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f052692686149b247a50c0d89e77797f4f48fab3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 11547a3fb1bd46a1e2edb8ce9dd0a6547464f796
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="idlmodule"></a>idl_module
 Określa punkt wejścia w pliku dll.  
@@ -55,7 +50,7 @@ function declaration
  **DllName** (opcjonalnie)  
  Plik .dll, który zawiera eksportu.  
   
- `uuid`(opcjonalnie)  
+ `uuid` (opcjonalnie)  
  Unikatowy identyfikator.  
   
  **HelpString —** (opcjonalnie)  

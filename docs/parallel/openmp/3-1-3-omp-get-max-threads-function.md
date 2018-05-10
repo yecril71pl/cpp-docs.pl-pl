@@ -1,27 +1,22 @@
 ---
 title: 3.1.3 funkcja omp_get_max_threads | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 5548897c-546e-4d19-b37b-a76f6b30a0a9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13aee27dc04afb8414a89bb8f30a98c8e73fb694
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2afa797cc74a50041f2ea24f76fa07ffe109072b
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="313-ompgetmaxthreads-function"></a>3.1.3 Funkcja omp_get_max_threads
 **Omp_get_max_threads** funkcja zwróci liczbę całkowitą, która może być przynajmniej tak duże jak liczba wątków, które będzie używane do utworzenia zespołu, jeśli równoległego regionu bez **num_threads** — klauzula zostały w tym momencie występujących w kodzie. Format jest następujący:  

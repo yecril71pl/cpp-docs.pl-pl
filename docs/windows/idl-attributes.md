@@ -1,13 +1,10 @@
 ---
 title: Atrybuty IDL | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - IDL files, attributes
 - .idl files
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 447c4369d7a80348dfb6c5eee54c49d76c1e8a4c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5c522c039a0471240ba319561485e8cc7f348aaa
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="idl-attributes"></a>atrybuty IDL
 Tradycyjnie utrzymywanie pliku .idl oznacza, że do:  
@@ -77,7 +72,7 @@ Tradycyjnie utrzymywanie pliku .idl oznacza, że do:
 |[immediatebind](../windows/immediatebind.md)|Wskazuje, że bazy danych zostanie niezwłocznie powiadomiona o wszystkich zmianach właściwości obiektu powiązanego z danymi.|  
 |[importlib](../windows/importlib.md)|Powoduje, że typy, które już zostały skompilowane w innej bibliotece typu dostępne do tworzenia biblioteki typów.|  
 |[import](../windows/import.md)|Określa innego pliku .idl, .odl — lub nagłówek definicjami, którego ma dotyczyć odwołanie z pliku .idl głównego.|  
-|[obejmują](../windows/include-cpp.md)|Określa co najmniej jeden plik nagłówka do uwzględnienia w pliku .idl wygenerowany.|  
+|[include](../windows/include-cpp.md)|Określa co najmniej jeden plik nagłówka do uwzględnienia w pliku .idl wygenerowany.|  
 |[includelib —](../windows/includelib-cpp.md)|Powoduje, że pliku .idl lub .h do uwzględnienia w pliku .idl wygenerowany.|  
 |[in](../windows/in-cpp.md)|Wskazuje, że parametr zostanie przekazany z procedury wywołującej do procedury wywoływanej.|  
 |[last_is](../windows/last-is.md)|Określa indeks przekazywanych ostatnim elemencie tablicy.|  
@@ -95,7 +90,7 @@ Tradycyjnie utrzymywanie pliku .idl oznacza, że do:
 |[object](../windows/object-cpp.md)|Określa niestandardowy interfejs; synonimem atrybutu niestandardowego.|  
 |[odl](../windows/odl.md)|Identyfikuje interfejsu jako interfejsu język opisu obiektów (ODL).|  
 |[oleautomation](../windows/oleautomation.md)|Wskazuje, że interfejs jest zgodna z automatyzacji.|  
-|[opcjonalne](../windows/optional-cpp.md)|Określa opcjonalny parametr dla funkcji członkowskiej.|  
+|[Opcjonalne](../windows/optional-cpp.md)|Określa opcjonalny parametr dla funkcji członkowskiej.|  
 |[out](../windows/out-cpp.md)|Określa parametry wskaźnika, które zostaną zwrócone z procedury wywoływanej do procedury wywołującej (z serwera do klienta).|  
 |[pointer_default](../windows/pointer-default.md)|Określa domyślny atrybut wskaźnik dla wszystkich wskaźników z wyjątkiem wskaźniki najwyższego poziomu, które są wyświetlane na listach parametrem.|  
 |[pragma](../windows/pragma.md)|Emituje określony ciąg bez znaków cudzysłowu do pliku .idl wygenerowany.|  
@@ -105,22 +100,22 @@ Tradycyjnie utrzymywanie pliku .idl oznacza, że do:
 |[propput](../windows/propput.md)|Określa funkcja ustawienie właściwości.|  
 |[ptr](../windows/ptr.md)|Określa wskaźnik jako pełne wskaźnika.|  
 |[public](../windows/public-cpp-attributes.md)|Zapewnia, że typem typedef przejdzie do biblioteki typów nawet wtedy, gdy go nie odwołuje się w pliku .idl.|  
-|[zakres](../windows/range-cpp.md)|Określa zakresu wartości dozwoloną dla argumentów lub pól, których wartości są ustawione w czasie wykonywania.|  
+|[Zakres](../windows/range-cpp.md)|Określa zakresu wartości dozwoloną dla argumentów lub pól, których wartości są ustawione w czasie wykonywania.|  
 |[readonly](../windows/readonly-cpp.md)|Zabrania używania przypisania do zmiennej.|  
 |[ref](../windows/ref-cpp.md)|Identyfikuje wskaźnik odwołania.|  
 |[requestedit](../windows/requestedit.md)|Wskazuje, że właściwość obsługuje **OnRequestEdit** powiadomień.|  
 |[restricted](../windows/restricted.md)|Określa, że biblioteki lub członkiem modułu, interfejsem lub dispinterface nie może być wywoływana arbitralnie.|  
 |[retval](../windows/retval.md)|Określa parametr, który otrzymuje wartość zwrotną z elementu członkowskiego.|  
 |[size_is](../windows/size-is.md)|Określa rozmiar pamięci przydzielona dla wskaźników o rozmiarze o rozmiarze wskaźniki do wskaźników o rozmiarze i jedno - lub tablice wielowymiarowe.|  
-|[źródło](../windows/source-cpp.md)|Wskazuje, że elementem członkowskim klasy, właściwości lub metody jest źródłem zdarzeń.|  
+|[source](../windows/source-cpp.md)|Wskazuje, że elementem członkowskim klasy, właściwości lub metody jest źródłem zdarzeń.|  
 |[string](../windows/string-cpp.md)|Oznacza to, że jednowymiarowej tablicy `char`, `wchar_t`, **bajtów**, lub równoważne tablicy lub wskaźnika do tablicy takie muszą być traktowane jako ciąg.|  
 |[switch_is](../windows/switch-is.md)|Określa wyrażenie lub identyfikator działający jako discriminant Unii, który wybiera element członkowski typu union.|  
 |[switch_type](../windows/switch-type.md)|Określa typ zmiennej używanej jako discriminant Unii.|  
 |[transmit_as](../windows/transmit-as.md)|Instruuje kompilator, aby skojarzyć typu przedstawioną kompilowania aplikacji, które klienta i serwera, z typem przesyłane.|  
 |[uidefault](../windows/uidefault.md)|Wskazuje, że element członkowski typu informacji jest domyślny element członkowski do wyświetlenia w interfejsie użytkownika.|  
-|[unikatowe](../windows/unique-cpp.md)|Określa unikatowy wskaźnika.|  
+|[unique](../windows/unique-cpp.md)|Określa unikatowy wskaźnika.|  
 |[usesgetlasterror](../windows/usesgetlasterror.md)|Obiekt wywołujący informuje, że jeśli występuje błąd podczas wywoływania tej funkcji, wywołujący może wywoływać `GetLastError` można pobrać kod błędu.|  
-|[Identyfikator UUID](../windows/uuid-cpp-attributes.md)|Określa unikatowy identyfikator dla klasy ani interfejsu.|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Określa unikatowy identyfikator dla klasy ani interfejsu.|  
 |[v1_enum](../windows/v1-enum.md)|Określa, że przekazywane na określony typ wyliczeniowy jako jednostki 32-bitowe zamiast domyślnego 16-bitowych.|  
 |[vararg](../windows/vararg.md)|Określa, że funkcja zostać zmienną liczbę argumentów.|  
 |[vi_progid](../windows/vi-progid.md)|Określa niezależny od wersji formularza identyfikatora ProgID.|  

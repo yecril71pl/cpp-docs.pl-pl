@@ -1,12 +1,9 @@
 ---
 title: Klasa czasomierza | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - timer
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - timer class
 ms.assetid: 4f4dea51-de9f-40f9-93f5-dd724c567b49
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5263c8bf156f190ba5572eacd8ff327be5e3f7a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8372e32b408b97a6ac652b0ff2ff5cc19de69b54
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="timer-class"></a>Klasa czasomierza
 A `timer` Blok obsługi wiadomości jest element docelowy jednym `source_block` mogą wysyłać wiadomości do jego obiektu docelowego po określonym okresie czasu lub w określonych odstępach czasu.  
@@ -68,7 +63,7 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
 |----------|-----------------|  
 |[Wstrzymaj](#pause)|Zatrzymuje `timer` bloku obsługi wiadomości. Jeśli jest powtarzanej `timer` wiadomości bloku, ponownym uruchomieniem przy kolejnej `start()` wywołania. Powtarzalnych czasomierze, ma ten sam efekt co `stop` wywołania.|  
 |[start](#start)|Uruchamia `timer` bloku obsługi wiadomości. Nazywa się określoną liczbę milisekund, po to, określona wartość będzie propagowane podrzędne jako `message`.|  
-|[stop](#stop)|Zatrzymuje `timer` bloku obsługi wiadomości.|  
+|[Zatrzymaj](#stop)|Zatrzymuje `timer` bloku obsługi wiadomości.|  
   
 ### <a name="protected-methods"></a>Metody chronione  
   
@@ -142,7 +137,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
  `_PTarget`  
  Wskaźnik do nowo połączonego obiektu docelowego.  
   
-##  <a name="pause">Wstrzymaj</a> 
+##  <a name="pause"></a> Wstrzymaj 
 
  Zatrzymuje `timer` bloku obsługi wiadomości. Jeśli jest powtarzanej `timer` wiadomości bloku, ponownym uruchomieniem przy kolejnej `start()` wywołania. Powtarzalnych czasomierze, ma ten sam efekt co `stop` wywołania.  
   
@@ -212,7 +207,7 @@ void start();
 void stop();
 ```  
   
-##  <a name="ctor">Czasomierz</a> 
+##  <a name="ctor"></a> Czasomierz 
 
  Konstruuje `timer` wiadomości blok, którego zostanie zastosowana danej wiadomości po upływie określonego czasu.  
   

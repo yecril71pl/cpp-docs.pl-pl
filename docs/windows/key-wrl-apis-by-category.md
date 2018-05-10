@@ -1,28 +1,23 @@
 ---
-title: "Kluczowe interfejsy API biblioteki WRL według kategorii | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Kluczowe interfejsy API biblioteki WRL według kategorii | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 7367bacf-6b7c-4ecd-a0ce-a662db46fc66
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ad38d1b24ca40b6209295f873bd44c54c3f6148
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9936c85443f893111b3c2b9de17ca80e6fb382b2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="key-wrl-apis-by-category"></a>Kluczowe interfejsy API biblioteki WRL według kategorii
 W poniższych tabelach przedstawiono podstawowe klasy, struktury, funkcjami i makrami Biblioteka szablonów C++ środowiska wykonawczego systemu Windows. Konstrukcje w pomocnika obszary nazw i klas są pomijane. Te listy rozszerzyć w dokumentacji interfejsu API, które są zorganizowane według przestrzeni nazw.  
@@ -36,7 +31,7 @@ W poniższych tabelach przedstawiono podstawowe klasy, struktury, funkcjami i ma
 |[ClassFactory, klasa](../windows/classfactory-class.md)|Implementuje podstawowych funkcji `IClassFactory` interfejsu.|  
 |[ComPtr, klasa](../windows/comptr-class.md)|Tworzy *wskaźnika inteligentnego* typu, który reprezentuje interfejs określonej przez parametr szablonu. Comptr — automatycznie przechowuje licznika odwołań do podstawowej wskaźnika interfejsu i zwalnia interfejsu, gdy liczba odwołań do zera.|  
 |[Event, klasa (Biblioteka szablonów języka C++ środowiska uruchomieniowego systemu Windows)](../windows/event-class-windows-runtime-cpp-template-library.md)|Reprezentuje zdarzenie.|  
-|[EventSource, klasa](../windows/eventsource-class.md)|Reprezentuje zdarzenie. `EventSource`Funkcje Członkowskie dodawania, usuwania i wywołanie procedury obsługi zdarzeń.|  
+|[EventSource, klasa](../windows/eventsource-class.md)|Reprezentuje zdarzenie. `EventSource` Funkcje Członkowskie dodawania, usuwania i wywołanie procedury obsługi zdarzeń.|  
 |[FtmBase, klasa](../windows/ftmbase-class.md)|Reprezentuje obiekt opcja.|  
 |[HandleT, klasa](../windows/handlet-class.md)|Reprezentuje uchwyt do obiektu.|  
 |[HString, klasa](../windows/hstring-class.md)|Zapewnia obsługę manipulowanie HSTRING uchwytów.|  

@@ -9,17 +9,16 @@ ms.technology:
 - cpp-ide
 ms.tgt_pltfrm: windows
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54d1f0cf2a6971435858a1a64bf3e163631822b5
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: c67b7fce0567c2c6daf18b625a2b759c31d0b040
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg: Menedżer pakietów C++ dla systemu Windows
 
@@ -31,7 +30,7 @@ Za pomocą jednego polecenia można pobrać źródeł i tworzenie biblioteki. vc
 
 ## <a name="sources-not-binaries"></a>Źródła nie plików binarnych
 
-Dla bibliotek w katalogu publiczne vcpkg pobiera źródeł zamiast danych binarnych [1]. Kompiluje tych źródeł przy użyciu 2017 usługi Visual Studio lub Visual Studio 2015, jeśli nie zainstalowano 2017 r. W języku C++, bardzo ważne jest zgodności żadnych bibliotek, których można użyć z tym samym kompilatora i wersja kompilatora jako prowadzący do niego kodu aplikacji. Za pomocą vcpkg, wyeliminuj lub co najmniej znacznie zmniejszyć ryzyko niedopasowanych pliki binarne i problemów, które mogą powodować. W zespołach, które są standaryzowane do określonej wersji kompilatora Visual C++ jednego elementu członkowskiego zespołu można użyć vcpkg pobieranie źródeł i Skompiluj zestaw plików binarnych, a następnie użyć polecenia Eksportuj do pliku zip pliki binarne i nagłówki dla innych członków zespołu. Aby uzyskać więcej informacji zobacz się, że eksportu skompilowane pliki binarne i nagłówki poniżej. 
+Dla bibliotek w katalogu publiczne vcpkg pobiera źródeł zamiast danych binarnych [1]. Kompiluje tych źródeł przy użyciu 2017 usługi Visual Studio lub Visual Studio 2015, jeśli nie zainstalowano 2017 r. W języku C++, bardzo ważne jest zgodności żadnych bibliotek, których można użyć z tym samym kompilatora i wersja kompilatora jako prowadzący do niego kodu aplikacji. Za pomocą vcpkg, wyeliminuj lub co najmniej znacznie zmniejszyć ryzyko niedopasowanych pliki binarne i problemów, które mogą powodować. W zespołach, które są standaryzowane do określonej wersji kompilatora Visual C++ jednego elementu członkowskiego zespołu można użyć vcpkg pobieranie źródeł i Skompiluj zestaw plików binarnych, a następnie użyć polecenia Eksportuj do pliku zip pliki binarne i nagłówki dla innych członków zespołu. Aby uzyskać więcej informacji zobacz się, że eksportu skompilowane pliki binarne i nagłówki poniżej.
 
 Jeśli tworzysz klonowania vcpkg z bibliotekami prywatnych w kolekcji portów, możesz dodać port, który pobiera wbudowane pliki binarne i nagłówki i zapisać pliku portfile.cmake, która po prostu kopiuje pliki do odpowiedniej lokalizacji.
 
@@ -86,6 +85,7 @@ Additional packages (*) will be installed to complete this operation.
 ```
 
 ## <a name="list-the-libraries-already-installed"></a>Wyświetlanie bibliotek już zainstalowane
+
 Po zainstalowaniu niektórych bibliotek, można użyć **listy vcpkg** co masz:
 
 ```cmd
@@ -113,61 +113,63 @@ Teraz możesz #include nagłówki po prostu, wpisując folderu/nagłówka i funk
 
 Jeśli musisz użyć określonej wersji biblioteki, która jest inna niż wersja w wystąpieniu active vcpkg, wykonaj następujące kroki:
 
-1. Wprowadź nowy klon vcpkg 
+1. Wprowadź nowy klon vcpkg
 1. Modyfikowanie portfile dla biblioteki w celu uzyskania wersji, które są potrzebne
 1. Uruchom **zainstalować vcpkg \<biblioteki >**.
 1. Użyj **vcpkg integracji projektu** do utworzenia pakietu NuGet, który odwołuje się do tej biblioteki, na podstawie na projekt.
 
 ## <a name="export-compiled-binaries-and-headers"></a>Eksportuj skompilowane pliki binarne i nagłówki
 
-Wymaganie wszyscy członkowie zespołu, aby pobrać i tworzenie bibliotek może być mało wydajne. Członek zespołu pojedynczego tej pracy, a następnie użyj **eksportu vcpkg** można utworzyć pliku zip, pliki binarne i nagłówki, które można łatwo udostępniać innych członków zespołu. 
+Wymaganie wszyscy członkowie zespołu, aby pobrać i tworzenie bibliotek może być mało wydajne. Członek zespołu pojedynczego tej pracy, a następnie użyj **eksportu vcpkg** można utworzyć pliku zip, pliki binarne i nagłówki, które można łatwo udostępniać innych członków zespołu.
 
 ## <a name="updateupgrade-installed-libraries"></a>Biblioteki zainstalować aktualizację/uaktualnienie
 
 Publiczny katalogu jest zawsze na bieżąco najnowsze wersje bibliotek. Aby określić, które biblioteki lokalnych są nieaktualne, użyj **aktualizacji vcpkg**. Jeśli wszystko jest gotowy do aktualizacji do najnowszej wersji katalogu publicznego kolekcji portów, uruchom **uaktualnienia vcpkg** polecenia próbę automatycznego pobrania i Odbuduj wybranych lub wszystkich zainstalowanych bibliotek, które są nieaktualne.
 
-Domyślnie **uaktualnienia** polecenie wyświetla tylko bibliotek, które są nieaktualne; nie uaktualnić ich. Aby przeprowadzić uaktualnienie, użyj **--przebiegu nie próbnego** opcji. 
+Domyślnie **uaktualnienia** polecenie wyświetla tylko bibliotek, które są nieaktualne; nie uaktualnić ich. Aby przeprowadzić uaktualnienie, użyj **--przebiegu nie próbnego** opcji.
 
 ```cmd
-  vcpkg upgrade --no-dry-run 
+  vcpkg upgrade --no-dry-run
 ```
 
 ### <a name="upgrade-options"></a>Opcje uaktualniania
 
-- **--przebiegu nie próbnego** uaktualnienia; Jeśli nie zostanie określony, polecenie znajduje się tylko nieaktualnych opakowania. 
-- **--Zachowaj będzie** kontynuuj instalowanie pakietów, nawet w przypadku awarii jednego. 
-- **--Trzykolumnowa \<t >** ustawić Trzykolumnowa domyślne niekwalifikowane pakietów. 
-- **główny — vcpkg \<ścieżka >** określ katalog vcpkg używany zamiast bieżącego katalogu lub katalogu narzędzia. 
+- **--przebiegu nie próbnego** uaktualnienia; Jeśli nie zostanie określony, polecenie znajduje się tylko nieaktualnych opakowania.
+- **--Zachowaj będzie** kontynuuj instalowanie pakietów, nawet w przypadku awarii jednego.
+- **--Trzykolumnowa \<t >** ustawić Trzykolumnowa domyślne niekwalifikowane pakietów.
+- **główny — vcpkg \<ścieżka >** określ katalog vcpkg używany zamiast bieżącego katalogu lub katalogu narzędzia.
 
 ### <a name="upgrade-example"></a>Przykład uaktualnienia
 
 ### <a name="per-project"></a>W projekcie
+
 Jeśli musisz użyć określonej wersji biblioteki, która jest inna niż wersja w wystąpieniu active vcpkg, wykonaj następujące kroki:
 
-1. Wprowadź nowy klon vcpkg 
+1. Wprowadź nowy klon vcpkg
 1. Modyfikowanie portfile dla biblioteki w celu uzyskania wersji, które są potrzebne
 1. Uruchom **zainstalować vcpkg \<biblioteki >**.
 1. Użyj **vcpkg integracji projektu** do utworzenia pakietu NuGet, który odwołuje się do tej biblioteki, na podstawie na projekt.
 
-
 ## <a name="export-compiled-binaries-and-headers"></a>Eksportuj skompilowane pliki binarne i nagłówki
-Wymaganie wszyscy członkowie zespołu, aby pobrać i tworzenie bibliotek może być mało wydajne. Członek zespołu pojedynczego tej pracy, a następnie użyj **eksportu vcpkg** można utworzyć pliku zip, pliki binarne i nagłówki, które można łatwo udostępniać innych członków zespołu. 
+
+Wymaganie wszyscy członkowie zespołu, aby pobrać i tworzenie bibliotek może być mało wydajne. Członek zespołu pojedynczego tej pracy, a następnie użyj **eksportu vcpkg** można utworzyć pliku zip, pliki binarne i nagłówki, które można łatwo udostępniać innych członków zespołu.
 
 ## <a name="updateupgrade-installed-libraries"></a>Biblioteki zainstalować aktualizację/uaktualnienie
+
 Publiczny katalogu jest zawsze na bieżąco najnowsze wersje bibliotek. Aby określić, które biblioteki lokalnych są nieaktualne, użyj **aktualizacji vcpkg**. Jeśli wszystko jest gotowy do aktualizacji do najnowszej wersji katalogu publicznego kolekcji portów, uruchom **uaktualnienia vcpkg** polecenia próbę automatycznego pobrania i Odbuduj wybranych lub wszystkich zainstalowanych bibliotek, które są nieaktualne.
 
-Domyślnie **uaktualnienia** polecenie wyświetla tylko bibliotek, które są nieaktualne; nie uaktualnić ich. Aby przeprowadzić uaktualnienie, użyj **--przebiegu nie próbnego** opcji. 
+Domyślnie **uaktualnienia** polecenie wyświetla tylko bibliotek, które są nieaktualne; nie uaktualnić ich. Aby przeprowadzić uaktualnienie, użyj **--przebiegu nie próbnego** opcji.
 
 ```cmd
-  vcpkg upgrade --no-dry-run 
+  vcpkg upgrade --no-dry-run
 ```
 
 ### <a name="upgrade-options"></a>Opcje uaktualniania
 
-- **--przebiegu nie próbnego** uaktualnienia; Jeśli nie zostanie określony, polecenie znajduje się tylko nieaktualnych opakowania. 
-- **--Zachowaj będzie** kontynuuj instalowanie pakietów, nawet w przypadku awarii jednego. 
-- **--Trzykolumnowa \<t >** ustawić Trzykolumnowa domyślne niekwalifikowane pakietów. 
-- **główny — vcpkg \<ścieżka >** określ katalog vcpkg używany zamiast bieżącego katalogu lub katalogu narzędzia. 
+- **--przebiegu nie próbnego** uaktualnienia; Jeśli nie zostanie określony, polecenie znajduje się tylko nieaktualnych opakowania.
+- **--Zachowaj będzie** kontynuuj instalowanie pakietów, nawet w przypadku awarii jednego.
+- **--Trzykolumnowa \<t >** ustawić Trzykolumnowa domyślne niekwalifikowane pakietów.
+- **główny — vcpkg \<ścieżka >** określ katalog vcpkg używany zamiast bieżącego katalogu lub katalogu narzędzia.
 
 ### <a name="upgrade-example"></a>Przykład uaktualnienia
 
@@ -187,24 +189,30 @@ If you are sure you want to rebuild the above packages, run this command with th
 ```
 
 ## <a name="contribute-new-libraries"></a>Współtworzenia nowe biblioteki
+
 Może zawierać żadnych bibliotek żądanych w kolekcji prywatnych portów. Sugerowanie nową biblioteką dla publicznych katalogu, należy otworzyć problemu na [GitHub vcpkg problem strony](https://github.com/Microsoft/vcpkg/issues).
 
 ## <a name="remove-a-library"></a>Usuwanie biblioteki
+
 Typ **vcpkg Usuń** Aby usunąć zainstalowane biblioteki. Jeśli inne biblioteki zależą od niej, zostanie wyświetlona prośba o Uruchom ponownie polecenie **--recurse**, co powoduje, że wszystkie podrzędne biblioteki do usunięcia.
 
 ## <a name="customize-vcpkg"></a>Customize vcpkg
-Można zmodyfikować z klonu vcpkg w żaden sposób, który chcesz. Można tworzyć wiele klony vcpkg i modyfikować portfiles w każdej z nich uzyskać określonych wersji biblioteki lub określić parametry wiersza polecenia. Na przykład w przedsiębiorstwie, jedna grupa deweloperów może działać na oprogramowanie, które ma jeden zestaw zależności, a inna grupa może mieć inny zestaw. Można skonfigurować dwie klonów vcpkg i zmodyfikować każdą z nich pobrać wersje bibliotek i przełączników kompilacji, itd., zgodnie z potrzebami. 
 
-## <a name="uninstall-vcpkg"></a>Uninstall vcpkg
-Po prostu Usuń katalog. 
+Można zmodyfikować z klonu vcpkg w żaden sposób, który chcesz. Można tworzyć wiele klony vcpkg i modyfikować portfiles w każdej z nich uzyskać określonych wersji biblioteki lub określić parametry wiersza polecenia. Na przykład w przedsiębiorstwie, jedna grupa deweloperów może działać na oprogramowanie, które ma jeden zestaw zależności, a inna grupa może mieć inny zestaw. Można skonfigurować dwie klonów vcpkg i zmodyfikować każdą z nich pobrać wersje bibliotek i przełączników kompilacji, itd., zgodnie z potrzebami.
+
+## <a name="uninstall-vcpkg"></a>Odinstaluj vcpkg
+
+Po prostu Usuń katalog.
 
 ## <a name="send-feedback-about-vcpkg"></a>Wyślij opinię o vcpkg
+
 Użyj **--ankiety** polecenie, aby wysłać opinię do firmy Microsoft o vcpkg, łącznie z raportami usterek i sugestie dotyczące funkcji.
 
 ## <a name="the-vcpkg-folder-hierarchy"></a>Hierarchia folderów vcpkg
-Wszystkie dane i funkcje vcpkg są niezależne w hierarchii jeden katalog o nazwie "instance". Nie ma żadnych ustawień rejestru lub zmiennych środowiskowych. Może mieć dowolną liczbę wystąpień vcpkg na maszynie, a nie przeszkadzają ze sobą. 
 
-Zawartość wystąpienia vcpkg jest: 
+Wszystkie dane i funkcje vcpkg są niezależne w hierarchii jeden katalog o nazwie "instance". Nie ma żadnych ustawień rejestru lub zmiennych środowiskowych. Może mieć dowolną liczbę wystąpień vcpkg na maszynie, a nie przeszkadzają ze sobą.
+
+Zawartość wystąpienia vcpkg jest:
 
 - buildtrees — zawiera podfoldery źródeł, z których każda biblioteka jest wbudowana
 - Dokumentacja — dokumentacja i przykłady
@@ -240,7 +248,8 @@ Zawartość wystąpienia vcpkg jest:
 |**vcpkg version**|Wyświetl informacje o wersji|
 |**Skontaktuj się z vcpkg**|Wyświetlanie informacji kontaktowych wysyłanie opinii|
 
-### <a name="options"></a>Opcje:
+### <a name="options"></a>Opcje
+
 |Opcja|Opis|
 |---------|---------|
 |**--Trzykolumnowa \<t >**|Określ Trzykolumnowa architektury docelowej. (domyślne: `%VCPKG_DEFAULT_TRIPLET%`, zobacz też **vcpkg pomocy Trzykolumnowa**)|

@@ -1,30 +1,25 @@
 ---
-title: "operator == — Operator (Microsoft::wrl —) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: operator == — Operator (Microsoft::wrl —) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::operator==
 dev_langs:
 - C++
 ms.assetid: 94f383a5-17a9-40c7-9d9c-778acdc54b27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92f87671b5efa9d4013ffd1d5d622ec225d65940
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 27d3ab799f9a71e6386d63106d72b72b7eec24ed
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator== Operator (Microsoft::WRL)
 Operator równości dla [comptr —](../windows/comptr-class.md) i [comptrref —](../windows/comptrref-class.md) obiektów.  
@@ -74,7 +69,7 @@ WRL_NOTHROW bool operator==(
  Odpowiedniego obiektu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli obiekty są równe; w przeciwnym razie `false`.  
+ `true` Jeśli obiekty są równe; w przeciwnym razie `false`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  

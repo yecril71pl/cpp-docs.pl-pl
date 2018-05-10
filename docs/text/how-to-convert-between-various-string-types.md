@@ -1,13 +1,10 @@
 ---
-title: "Porady: konwertowanie między rozmaitymi typami ciągów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Porady: konwertowanie między rozmaitymi typami ciągów | Dokumentacja firmy Microsoft'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15ebbbbb08d5415cdf55d9b98b44b327dc256879
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44b80fcafa15a472f4bfc68dd74ff0acc40bb2ad
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Porady: konwertowanie między rozmaitymi typami ciągów
 W tym temacie przedstawiono sposób konwertowania rozmaitymi typami ciągów Visual C++ do innych ciągów. Typy parametrów, które są objęte obejmują `char *`, `wchar_t*`, [_bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [cstring —](../atl-mfc-shared/using-cstring.md), [basic_string —](../standard-library/basic-string-class.md), i <xref:System.String?displayProperty=fullName>. We wszystkich przypadkach kopię ciąg ma zostać przekonwertowany do nowego typu. Wszelkie zmiany wprowadzone do nowego ciągu nie wpłynie na oryginalny ciąg znaków i na odwrót.  
@@ -474,9 +469,9 @@ Hello, World! (System::String)
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- W tym przykładzie pokazano, jak przekonwertować z `CString` na inne typy ciąg wymienionych powyżej. `CString`jest oparta na tchar — typ danych, który z kolei jest zależny od tego, czy symbol `_UNICODE` jest zdefiniowany. Jeśli `_UNICODE` nie jest zdefiniowana, `TCHAR` zdefiniowano CHAR i `CString` zawiera ciąg znaków wielobajtowych; Jeśli `_UNICODE` jest zdefiniowany, `TCHAR` jest zdefiniowane jako `wchar_t` i `CString` zawiera znaki dwubajtowe ciąg.  
+ W tym przykładzie pokazano, jak przekonwertować z `CString` na inne typy ciąg wymienionych powyżej. `CString` jest oparta na tchar — typ danych, który z kolei jest zależny od tego, czy symbol `_UNICODE` jest zdefiniowany. Jeśli `_UNICODE` nie jest zdefiniowana, `TCHAR` zdefiniowano CHAR i `CString` zawiera ciąg znaków wielobajtowych; Jeśli `_UNICODE` jest zdefiniowany, `TCHAR` jest zdefiniowane jako `wchar_t` i `CString` zawiera znaki dwubajtowe ciąg.  
   
- `CStringA`jest wielobajtowe ciągu zawsze wersji `CString`, `CStringW` jest tylko wersja ciąg znaków dwubajtowych. Ani `CStringA` ani `CStringW` użyj `_UNICODE` ustalenie, jak należy skompilować. `CStringA`i `CStringW` są używane w tym przykładzie wyjaśnienie niewielkie różnice w buforze rozmiar alokacji i dane wyjściowe obsługi.  
+ `CStringA` jest wielobajtowe ciągu zawsze wersji `CString`, `CStringW` jest tylko wersja ciąg znaków dwubajtowych. Ani `CStringA` ani `CStringW` użyj `_UNICODE` ustalenie, jak należy skompilować. `CStringA` i `CStringW` są używane w tym przykładzie wyjaśnienie niewielkie różnice w buforze rozmiar alokacji i dane wyjściowe obsługi.  
   
 ### <a name="code"></a>Kod  
   
@@ -830,8 +825,8 @@ Hello, World! (basic_string)
  [Porady: konwertowanie obiektu System::String na ciąg standardowy](../dotnet/how-to-convert-system-string-to-standard-string.md)   
  [Porady: konwertowanie obiektu System::String na wchar_t * lub char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)   
  [Programowanie przy użyciu CComBSTR](../atl/programming-with-ccombstr-atl.md)   
- [mbstowcs_s —, _mbstowcs_s_l —](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)   
+ [mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)   
  [wcstombs_s —, _wcstombs_s_l —](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)   
- [strcpy_s —, wcscpy_s —, _mbscpy_s —](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)   
+ [strcpy_s, wcscpy_s, _mbscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)   
  [strcat_s —, wcscat_s —, _mbscat_s —](../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md)   
  [pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)

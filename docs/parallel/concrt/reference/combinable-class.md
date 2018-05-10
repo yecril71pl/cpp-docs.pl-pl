@@ -1,12 +1,9 @@
 ---
-title: "combinable — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: combinable — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - combinable
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9bec5ce0e6679af71d8d3372fb939223691152a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 695081e6513965a89222d1108c632e2f22580184
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="combinable-class"></a>combinable — Klasa
 `combinable<T>` Obiektu mają na celu dostarczenie prywatnego wątku kopie danych, aby wykonać obliczenia podrzędnych lokalnej wątku zwolnienia blokady podczas algorytmy równoległe. Na koniec operacji równoległej obliczenia podrzędne prywatnego wątku można następnie scalić w wynik końcowy. Ta klasa można zamiast udostępnionego zmiennej i może spowodować zwiększenie wydajności, jeśli byłoby wiele rywalizacji udostępnionego zmiennej.  
@@ -53,7 +48,7 @@ class combinable;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[combinable](#ctor)|Przeciążone. Tworzy nową `combinable` obiektu.|  
+|[combinable —](#ctor)|Przeciążone. Tworzy nową `combinable` obiektu.|  
 |[~ combinable — destruktor](#dtor)|Niszczy `combinable` obiektu.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
@@ -63,7 +58,7 @@ class combinable;
 |[Wyczyść](#clear)|Czyści wszystkie pośrednie wyniki obliczeniową z poprzedniego użycia.|  
 |[Łączenie](#combine)|Oblicza wartość końcowego z zestawu obliczenia podrzędnych lokalnej wątku przez wywołanie metody łączenia podany obiekt.|  
 |[combine_each](#combine_each)|Oblicza końcowej z zestawu obliczenia podrzędnych lokalnej wątku przez wywołanie metody obiekt Połącz podany raz na lokalnej wątku podrzędnego obliczeń. Wynik końcowy jest zgromadzonych przez obiekt funkcji.|  
-|[local](#local)|Przeciążone. Zwraca odwołanie do obliczenia podrzędne prywatnego wątku.|  
+|[lokalne](#local)|Przeciążone. Zwraca odwołanie do obliczenia podrzędne prywatnego wątku.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
@@ -82,7 +77,7 @@ class combinable;
   
  **Namespace:** współbieżności  
   
-##  <a name="clear">Wyczyść</a> 
+##  <a name="clear"></a> Wyczyść 
 
  Czyści wszystkie pośrednie wyniki obliczeniową z poprzedniego użycia.  
   
@@ -128,7 +123,7 @@ combinable(const combinable& _Copy);
 ~combinable();
 ```  
   
-##  <a name="combine">Łączenie</a> 
+##  <a name="combine"></a> Łączenie 
 
  Oblicza wartość końcowego z zestawu obliczenia podrzędnych lokalnej wątku przez wywołanie metody łączenia podany obiekt.  
   

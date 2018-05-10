@@ -1,29 +1,24 @@
 ---
 title: Grupy harmonogramu | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - schedule groups
 ms.assetid: 03523572-5891-4d17-89ce-fa795605f28b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a61566878adc539af21e1645844eff27c5a8aec0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c1395fbc58d8a4d1d06cd93eea21c0f3d2dec8c6
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="schedule-groups"></a>Grupy harmonogramu
 Ten dokument zawiera opis roli grup harmonogramu współbieżność środowiska wykonawczego. A *grupy harmonogram* sposób tworzą koligacje lub grup, zadań powiązanych ze sobą. Każdy harmonogram ma jedną lub więcej grup harmonogramu. Grupy harmonogramu Użyj, jeśli wymagane jest wysoki stopień miejscowości spośród zadań, na przykład, gdy grupa powiązanych zadań korzystać z wykonania na tym samym węźle procesora. Z drugiej strony należy użyć wystąpienia harmonogramu, po aplikacji jakości określone wymagania, na przykład, jeśli chcesz ograniczyć ilość zasobów przetwarzania, które są przydzielone do zestawu zadań. Aby uzyskać więcej informacji na temat wystąpień harmonogramu, zobacz [wystąpienia harmonogramu](../../parallel/concrt/scheduler-instances.md).  

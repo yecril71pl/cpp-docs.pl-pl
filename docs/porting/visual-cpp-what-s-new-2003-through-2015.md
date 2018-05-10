@@ -1,30 +1,25 @@
 ---
-title: "Visual C++ Co &#39; s nowe 2003 za pośrednictwem 2015 | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Visual C++ co&#39;s nowe 2003 za pośrednictwem 2015 | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0e5090bc914648e527f335b261ad7838ad3d0bc
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4ae41c373257202cb08b7f8760acac4ad14dff19
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
-# <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ Co &#39; s nowe 2003 za pośrednictwem 2015
+# <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ co&#39;s nowe 2003 za pośrednictwem 2015
 
 Ta strona zbiera wszystkie "What's New" strony dla wszystkich wersji programu Visual C++ z programu Visual Studio 2015 do 2003. Te informacje jest udostępniane dla wygody, w przypadku może okazać się przydatne podczas uaktualniania z wcześniejszych wersji programu Visual C++.
 
@@ -46,7 +41,7 @@ W programie Visual Studio 2015 lub nowszego oraz bieżące ulepszenia kompilator
 
 - [Ulepszenia zgodność w programie Visual Studio 2015 Update 3](#VS_Update3)
 
-### <a name="VS_RTM">Ulepszenia zgodność programu Visual Studio 2015</a>
+### <a name="VS_RTM"></a> Ulepszenia zgodność programu Visual Studio 2015
 
 - **Opcja /Zc:forScope-** — opcja kompilatora **/Zc:forScope-** jest przestarzała i zostanie usunięta w przyszłej wersji.
 
@@ -503,7 +498,7 @@ W programie Visual Studio 2015 lub nowszego oraz bieżące ulepszenia kompilator
 
 - **Kopiowanie konstruktorów** zarówno [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] i programu Visual Studio 2015, kompilator generuje Konstruktor kopiujący dla klasy, jeśli tej klasy ma Konstruktor przenoszący zdefiniowane przez użytkownika, ale nie Konstruktor kopiujący zdefiniowane przez użytkownika. W Dev14 ten Konstruktor kopiujący niejawnie wygenerowany jest również oznaczone jako "= delete".
 
-### <a name="VS_Update1">Ulepszenia zgodność w programie Visual Studio 2015 Update 1</a>
+### <a name="VS_Update1"></a> Ulepszenia zgodność w programie Visual Studio 2015 Update 1
 
 - **Prywatne wirtualne klasy podstawowe i pośredniego dziedziczenia** poprzednie wersje kompilatora dozwolone klasy pochodnej w celu wywołania funkcji Członkowskich jego *pośrednio pochodzi* `private virtual` klasy podstawowej. To zachowanie starego było nieprawidłowe i nie jest zgodny ze standardem C++. Kompilator nie akceptuje kod napisany w ten sposób i w związku z tym problemów błąd kompilatora C2280.
 
@@ -996,7 +991,7 @@ W programie Visual Studio 2015 lub nowszego oraz bieżące ulepszenia kompilator
     }
    ```
 
-### <a name="VS_Update2">Ulepszenia zgodność w programie Visual Studio 2015 Update 2</a>
+### <a name="VS_Update2"></a> Ulepszenia zgodność w programie Visual Studio 2015 Update 2
 
 - **Dodatkowych ostrzeżeń i błędów może zostać utworzony w wyniku częściowej obsługi techniki SFINAE wyrażeń** poprzednie wersje kompilatora nie jest przetwarzany niektóre rodzaje wyrażeń wewnątrz `decltype` specyfikatory z powodu braku obsługi w wyrażeniu TECHNIKI SFINAE. To zachowanie starego było nieprawidłowe i nie jest zgodny ze standardem C++. Kompilator teraz analizuje tych wyrażeń i ma częściowej obsługi techniki SFINAE wyrażeń, z powodu trwającej zgodność ulepszenia. W związku z tym kompilator generuje teraz ostrzeżenia i błędy znalezione w wyrażeniach, że poprzednie wersje kompilatora nie jest przetwarzany.
 
@@ -1251,7 +1246,7 @@ W programie Visual Studio 2015 lub nowszego oraz bieżące ulepszenia kompilator
 
    Ustalenie kodu, który jest zapisany w ten sposób mogą wymagać czy definicje operatora można przenieść pliku nagłówka i do odpowiadający mu plik źródłowy.
 
-### <a name="VS_Update3">Ulepszenia zgodność w programie Visual Studio 2015 Update 3</a>
+### <a name="VS_Update3"></a> Ulepszenia zgodność w programie Visual Studio 2015 Update 3
 
 - **STD::is_convertable teraz wykrywane jest przypisanie własne** (standardowa biblioteka) poprzednie wersje `std::is_convertable` typu cechy nie poprawnie wykrył przypisanie własne typu klasy, po usunięciu jej Konstruktor kopiujący lub prywatnej. Teraz `std::is_convertable<>::value` jest ustawiana poprawnie `false` po zastosowaniu do typu klasy z konstruktorami kopiowania usunięte lub prywatnej.
 
@@ -1553,7 +1548,7 @@ To lepszą obsługę normy ISO C/C++ może wymagać zmiany istniejącego kodu, k
 - **Bardziej rozbudowane informacje o wyjątku.** C + +/ CX obsługuje nowy model błąd systemu Windows, który umożliwia przechwytywanie i propagowania informacji o wyjątkach sformatowanego między interfejsu binarne aplikacji (ABI); obejmuje to stosy wywołań i ciągi niestandardowych komunikatów.
 - **Obiekt:: ToString() jest teraz wirtualnego.** Teraz można zastąpić ToString w zdefiniowanych przez użytkownika typów ref środowiska wykonawczego systemu Windows.
 - **Obsługa przestarzałe interfejsy API.** Publiczne interfejsy API środowiska wykonawczego systemu Windows można teraz oznaczony jako przestarzały i podany niestandardowy komunikat, który jest wyświetlany jako ostrzeżenie kompilacji i zapewniają wskazówki dotyczące migracji.
-- Debuger ulepszenia. Obsługa debugowania międzyoperacyjnego native/JavaScript, diagnozowanie wyjątków środowiska wykonawczego systemu Windows i kod async debugowania (środowisko wykonawcze systemu Windows i PLL).
+- **Debuger ulepszenia.** Obsługa debugowania międzyoperacyjnego native/JavaScript, diagnozowanie wyjątków środowiska wykonawczego systemu Windows i kod async debugowania (środowisko wykonawcze systemu Windows i PLL).
   - Uwaga: Oprócz specyficzne dla języka C++ funkcji i ulepszeń, które zostały opisane w tej sekcji, inne rozszerzenia w programie Visual Studio również pomocnych lepsze aplikacje środowiska wykonawczego systemu Windows.
 
 ### <a name="diagnostics-enhancements"></a>Ulepszenia diagnostyki
@@ -1734,7 +1729,7 @@ Pokrycie kodu został zaktualizowany do dynamicznie dokumentu binarnych w czasie
 
 **decltype specyfikatora typu.** Specyfikator typu decltype zwraca typ określonego wyrażenia. Użycie specyfikatora typu decltype w połączeniu z auto — słowo kluczowe w celu zadeklarowania typu złożonego lub znanych tylko do kompilatora. Na przykład użyć kombinacji do zadeklarowania funkcji szablonu, którego typ zwracany zależy od typów argumentów szablonu. Lub zadeklarowania funkcji szablonu, który wywołuje innej funkcji, a następnie zwraca typ zwracany wywoływana funkcja.
 
-**Lambda Expressions.** Funkcje lambda mieć treści funkcji, ale bez nazwy. Funkcje lambda łączą najlepsze cechy wskaźników funkcji i funkcji obiektów.
+**Wyrażenia lambda.** Funkcje lambda mieć treści funkcji, ale bez nazwy. Funkcje lambda łączą najlepsze cechy wskaźników funkcji i funkcji obiektów.
 Użyj funkcji lambda przez siebie, jako parametr funkcji szablonu zamiast obiektem funkcji lub wraz z automatycznie — słowo kluczowe w celu zadeklarowania zmiennej o typie jest wyrażenie lambda.
 
 **Odwołanie do r-wartości.** Deklarator odwołania do r-wartości (& &) deklaruje odwołanie do r-wartości. Umożliwia odwołanie do r-wartości korzystanie z przenieść semantykę i doskonałego przekazywania dalej do zapisania konstruktorów bardziej wydajne, funkcje i szablony.

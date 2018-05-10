@@ -1,13 +1,10 @@
 ---
-title: "Zmienianie nazw symboli plików nagłówkowych | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Zmienianie nazw symboli plików nagłówkowych | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.changing.header
 dev_langs:
@@ -22,18 +19,16 @@ helpviewer_keywords:
 - symbols, symbol header files
 - Resource.h
 ms.assetid: b948284a-7899-402e-ab12-9f2c8480ca9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ccc7cc8662e33e5999ceafbcd8f029e2675341b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 953ac59958748bd58fa7e9027c595bf7905e5f27
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="changing-the-names-of-symbol-header-files"></a>Zmiana nazw symboli plików nagłówkowych
 Zwykle wszystkie definicje są zapisywane w Resource.h symbolu. Może jednak może być konieczna zmiana to obejmują nazwę pliku, dzięki czemu możesz na przykład pracować z więcej niż jeden plik zasobu w tym samym katalogu.  

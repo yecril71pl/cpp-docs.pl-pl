@@ -1,13 +1,10 @@
 ---
-title: "Edytowanie ciągu w zasobach informacji o wersji | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Edytowanie ciągu w zasobach informacji o wersji | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.version
 dev_langs:
@@ -16,25 +13,23 @@ helpviewer_keywords:
 - version information resources
 - resources [Visual Studio], editing version information
 ms.assetid: d3a7d4e4-7d31-47c2-902c-f50b8404ba4f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5add7bfb11b1c416853bb10ddbb2956885e181ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 80795f912ab41809b19e77bd33f56243541d4de1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="editing-a-string-in-a-version-information-resource"></a>Edytowanie ciągu w zasobach informacji o wersji
 ### <a name="to-edit-a-string-in-a-version-information-resource"></a>Aby edytować ciągu w zasobach informacji o wersji  
   
 1.  Kliknij raz element następnie ponownie wybierz go, aby rozpocząć edycji. Wprowadź zmiany bezpośrednio w tabeli informacje o wersji lub w [okna właściwości](/visualstudio/ide/reference/properties-window). Wprowadzone zmiany zostaną odzwierciedlone w obu miejscach.  
   
-     **Uwaga** podczas edytowania **FILEFLAGS** klucza w edytorze informacje o wersji, można zauważyć, nie można ustawić **debugowania**, **kompilacja prywatna**, lub  **Kompilacja specjalna** właściwości .RC — pliki (w oknie właściwości):  
+     **Uwaga** podczas edytowania **FILEFLAGS** klucza w edytorze informacje o wersji, można zauważyć, nie można ustawić **debugowania**, **kompilacja prywatna**, lub **Specjalne kompilacji** właściwości .RC — pliki (w oknie właściwości):  
   
     -   Ustawia Edytor informacje o wersji **debugowania** na podstawie właściwości o #ifdef skryptu zasobu **_DEBUG** kompilacji flagi.  
   

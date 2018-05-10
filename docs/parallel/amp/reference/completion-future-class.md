@@ -2,11 +2,8 @@
 title: completion_future — klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - completion_future
@@ -22,17 +19,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24f7012f7fdd9aaeb2443665187aba4eef483e0f
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 6b6aa7e9c160a7bedc6eed58a63c07ae7bb65913
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="completionfuture-class"></a>completion_future — Klasa
 Reprezentuje przyszłych odpowiadający C++ AMP operację asynchroniczną.  
@@ -57,7 +52,7 @@ class completion_future;
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[get](#get)|Czeka, aż do zakończenia skojarzonego operację asynchroniczną.|  
-|[then](#then)|Powiązany obiekt funkcja wywołania zwrotnego do `completion_future` obiektu ma być wykonywana w przypadku skojarzone operację asynchroniczną kończy działanie.|  
+|[następnie](#then)|Powiązany obiekt funkcja wywołania zwrotnego do `completion_future` obiektu ma być wykonywana w przypadku skojarzone operację asynchroniczną kończy działanie.|  
 |[to_task](#to_task)|Zwraca `task` obiektu odpowiadającego skojarzone operację asynchroniczną.|  
 |[Nieprawidłowa](#valid)|Pobiera wartość logiczną wskazującą, czy obiekt jest skojarzony z operacji asynchronicznej.|  
 |[oczekiwania](#wait)|Bloki przed zakończeniem skojarzone operacji asynchronicznej.|  

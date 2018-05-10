@@ -1,30 +1,25 @@
 ---
-title: "Wskazówki: Tworzenie aplikacji opartej o agentów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Wskazówki: Tworzenie aplikacji opartej o agentów | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a49c8deb9185b024dfcca977ab229bf594e05101
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78826bb9f00e77a80fb65dd3a3ceda7eedb38796
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Wskazówki: tworzenie aplikacji opartej o agentów
 W tym temacie opisano sposób tworzenia podstawowej aplikacji opartej o agentów. W ramach tego przewodnika można utworzyć agenta asynchronicznie odczytuje dane z pliku tekstowego. Aplikacja używa algorytmu sumy kontrolnej Adler 32 do obliczania sum kontrolnych zawartość tego pliku.  
@@ -40,7 +35,7 @@ W tym temacie opisano sposób tworzenia podstawowej aplikacji opartej o agentów
   
 - [Struktury danych synchronizacji](../../parallel/concrt/synchronization-data-structures.md)  
   
-##  <a name="top"></a>Sekcje  
+##  <a name="top"></a> Sekcje  
  W tym przewodniku pokazano, jak wykonać następujące zadania:  
   
 - [Tworzenie aplikacji konsoli](#createapplication)  
@@ -49,7 +44,7 @@ W tym temacie opisano sposób tworzenia podstawowej aplikacji opartej o agentów
   
 - [W aplikacji przy użyciu file_reader — klasa](#useagentclass)  
   
-##  <a name="createapplication"></a>Tworzenie aplikacji konsoli  
+##  <a name="createapplication"></a> Tworzenie aplikacji konsoli  
  W tej sekcji przedstawiono sposób tworzenia aplikacji konsoli Visual C++, która odwołuje się do pliki nagłówkowe, które ma być używany.  
   
 #### <a name="to-create-a-visual-c-application-by-using-the-win32-console-application-wizard"></a>Aby utworzyć aplikację Visual C++ przy użyciu kreatora aplikacji konsoli Win32  
@@ -70,7 +65,7 @@ W tym temacie opisano sposób tworzenia podstawowej aplikacji opartej o agentów
   
  [[Górnej](#top)]  
   
-##  <a name="createagentclass"></a>Tworzenie file_reader — klasa  
+##  <a name="createagentclass"></a> Tworzenie file_reader — klasa  
  W tej sekcji przedstawiono sposób tworzenia `file_reader` klasy. Środowisko uruchomieniowe planuje każdego agenta do wykonywania pracy w kontekście własny. W związku z tym można utworzyć agenta, który wykonuje pracę synchronicznie, ale wchodzi w interakcję z innymi składnikami asynchronicznie. `file_reader` Klasy odczytuje dane z danym pliku wejściowego i wysyła dane z tego pliku do elementu docelowego podanego składnika.  
   
 #### <a name="to-create-the-filereader-class"></a>Aby utworzyć klasę file_reader  
@@ -120,7 +115,7 @@ W tym temacie opisano sposób tworzenia podstawowej aplikacji opartej o agentów
   
  [[Górnej](#top)]  
   
-##  <a name="useagentclass"></a>W aplikacji przy użyciu file_reader — klasa  
+##  <a name="useagentclass"></a> W aplikacji przy użyciu file_reader — klasa  
  W tej sekcji przedstawiono sposób użycia `file_reader` klasy można odczytać zawartości pliku tekstowego. Przedstawiono również sposób tworzenia [concurrency::call](../../parallel/concrt/reference/call-class.md) obiekt, który odbiera dane tego pliku, a następnie oblicza sumy kontrolnej jego Adler-32.  
   
 #### <a name="to-use-the-filereader-class-in-your-application"></a>Aby użyć klasy file_reader w aplikacji  

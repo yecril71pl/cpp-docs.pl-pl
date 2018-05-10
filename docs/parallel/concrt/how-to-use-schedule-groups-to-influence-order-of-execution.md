@@ -1,30 +1,25 @@
 ---
-title: "Porady: Używanie grup harmonogramu do wywierania wpływu na kolejność wykonywania | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Porady: Używanie grup harmonogramu do wywierania wpływu na kolejność wykonywania | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - schedule groups, using [Concurrency Runtime]
 - using schedule groups [Concurrency Runtime]
 ms.assetid: 73124194-fc3a-491e-a23f-fbd7b5a4455c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcb37c1c14a9d09230bfa5d4fdce1da5eddfb4f3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c41617f562a0abefdecf74d52e7a886ad6326f9e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>Porady: używanie grup harmonogramu do wywierania wpływu na kolejność wykonywania
 Współbieżność środowiska wykonawczego kolejność zaplanowane zadania jest deterministyczna. Jednak służy zasad harmonogramu do wywierania wpływu na kolejność, w którym są uruchomione zadania. W tym temacie przedstawiono sposób używanie grup harmonogramu razem z [concurrency::SchedulingProtocol](reference/concurrency-namespace-enums.md#policyelementkey) zasad harmonogramu do wywierania wpływu na kolejność, w którym są uruchomione zadania.  

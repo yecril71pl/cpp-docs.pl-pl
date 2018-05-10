@@ -1,12 +1,9 @@
 ---
-title: "Extent — klasa (C++ AMP) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Extent — klasa (C++ AMP) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - extent
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a8606b01ac5d3676b06c93c373677f2eb85d954
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 901ba590d208db7c9cf3803e77e8481a2b896ea2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extent-class-c-amp"></a>extent — Klasa (C++ AMP)
 Reprezentuje wektorem *N* całkowitych wartości, które określają granice *N*-przestrzeni trójwymiarowej zawierający początek 0. Wartości w wektorze są uporządkowane od najważniejszych do najmniej znaczący.  
@@ -76,9 +71,9 @@ class extent;
 |[operator--](#operator_min_min)|Zmniejsza każdy element `extent` obiektu.|  
 |[operator%=](#operator_mod_eq)|Oblicza modułu (reszty) poszczególnych elementów `extent` obiektu, gdy ten element jest dzielona przez liczbę.|  
 |[operator*=](#operator_star_eq)|Mnoży każdy element `extent` obiektu liczbą.|  
-|[operator/=](#operator_min_eq)|Dzieli każdy element `extent` obiektu liczbą.|  
+|[/ = — operator](#operator_min_eq)|Dzieli każdy element `extent` obiektu liczbą.|  
 |[Extent::operator\[\]](#operator_at)|Zwraca element pod określonym indeksem.|  
-|[operator+](#operator_add)|Zwraca nowy `extent` obiektu, który jest tworzony przez dodanie odpowiednich `index` i `extent` elementy.|  
+|[operator +](#operator_add)|Zwraca nowy `extent` obiektu, który jest tworzony przez dodanie odpowiednich `index` i `extent` elementy.|  
 |[operator++](#operator_add_add)|Zwiększa każdy element `extent` obiektu.|  
 |[operator+=](#operator_add_eq)|Dodaje określoną liczbę do każdego elementu `extent` obiektu.|  
 |[operator=](#operator_eq)|Kopiuje zawartość innego `extent` obiektu do tego.|  
@@ -95,7 +90,7 @@ class extent;
  `extent`  
 
 
-## <a name="contains">zawiera</a> 
+## <a name="contains"></a> zawiera 
 
 Wskazuje, czy określony [indeksu](index-class.md) wartość znajduje się w obiekcie "zakresu".  
   
@@ -235,7 +230,7 @@ extent<_Rank>& operator+=(int _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>Wartość zwracana  
  Powstałe w ten sposób `extent` obiektu.  
   
-##  <a name="operator_min">operator-</a> 
+##  <a name="operator_min"></a> operator- 
 
 Tworzy nowy `extent` obiektu przez odjęcie ilości każdego elementu w określonej `index` obiekt odpowiadający mu element w tym `extent` obiektu.  
   
@@ -252,7 +247,7 @@ extent<_Rank> operator-(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>Wartość zwracana  
  Nowe `extent` obiektu.  
   
-##  <a name="operator_min_min">operator--</a> 
+##  <a name="operator_min_min"></a> operator-- 
 
 Zmniejsza każdego elementu w obiekcie "zakresu".  
   
@@ -319,7 +314,7 @@ extent<_Rank>& operator=(const extent<_Rank>& _Other) restrict(amp,cpu);
 ### <a name="return-value"></a>Wartość zwracana  
  Odwołanie do tego `extent` obiektu.  
   
-##  <a name="operator_at">Extent::operator</a>\[\] 
+##  <a name="operator_at"></a> Extent::operator \[\] 
 Zwraca element pod określonym indeksem.  
   
 ### <a name="syntax"></a>Składnia  
@@ -346,7 +341,7 @@ Przechowuje rangę obiektu "zakresu".
 static const int rank = _Rank;  
 ```  
   
-##  <a name="size">Rozmiar</a> 
+##  <a name="size"></a> Rozmiar 
 
 Zwraca całkowity rozmiar liniowej `extent` obiektu (w jednostkach elementów).  
   
@@ -356,7 +351,7 @@ Zwraca całkowity rozmiar liniowej `extent` obiektu (w jednostkach elementów).
 unsigned int size() const restrict(amp,cpu);  
 ```  
   
-## <a name="tile">Kafelek</a> 
+## <a name="tile"></a> Kafelek 
 
 Tworzy obiekt tiled_extent — z wymiarów określonego kafelka.
 

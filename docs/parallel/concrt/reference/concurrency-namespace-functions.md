@@ -2,9 +2,6 @@
 title: Funkcje przestrzeń nazw współbieżności | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - concrt/concurrency::Alloc
@@ -40,32 +37,30 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66cf776e02d286b04c4fe9338d74d6a9db196a68
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 9e1eed6fdbf5f676e5a7177affb7c38cd016fa4c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-functions"></a>Funkcje przestrzeń nazw współbieżności
 ||||  
 |-|-|-|  
-|[Alokacji](#alloc)|[CreateResourceManager](#createresourcemanager)|[DisableTracing](#disabletracing)|  
-|[EnableTracing](#enabletracing)|[W warstwie bezpłatna](#free)|[GetExecutionContextId](#getexecutioncontextid)|  
+|[Alokacji](#alloc)|[CreateResourceManager](#createresourcemanager)|[Disabletracing —](#disabletracing)|  
+|[Enabletracing —](#enabletracing)|[W warstwie bezpłatna](#free)|[GetExecutionContextId](#getexecutioncontextid)|  
 |[GetOSVersion](#getosversion)|[GetProcessorCount](#getprocessorcount)|[GetProcessorNodeCount](#getprocessornodecount)|  
 |[GetSchedulerId](#getschedulerid)|[Trace_agents_register_name](#trace_agents_register_name)|[asend —](#asend)|  
 |[cancel_current_task](#cancel_current_task)|[Wyczyść](#clear)|[create_async](#create_async)|  
 |[create_task](#create_task)|[get_ambient_scheduler](#get_ambient_scheduler)|[internal_assign_iterators](#internal_assign_iterators)|  
-|[interruption_point](#interruption_point)|[is_current_task_group_canceling](#is_current_task_group_canceling)|[make_choice](#make_choice)|  
+|[interruption_point](#interruption_point)|[is_current_task_group_canceling](#is_current_task_group_canceling)|[make_choice —](#make_choice)|  
 |[make_greedy_join](#make_greedy_join)|[make_join](#make_join)|[make_task](#make_task)|  
 |[parallel_buffered_sort](#parallel_buffered_sort)|[parallel_for](#parallel_for)|[parallel_for_each](#parallel_for_each)|  
 |[parallel_invoke](#parallel_invoke)|[parallel_radixsort](#parallel_radixsort)|[parallel_reduce](#parallel_reduce)|  
-|[parallel_sort](#parallel_sort)|[parallel_transform](#parallel_transform)|[receive](#receive)|  
+|[parallel_sort](#parallel_sort)|[parallel_transform](#parallel_transform)|[Odbieranie](#receive)|  
 |[run_with_cancellation_token](#run_with_cancellation_token)|[Wyślij](#send)|[set_ambient_scheduler](#set_ambient_scheduler)|  
 |[set_task_execution_resources](#set_task_execution_resources)|[swap](#swap)|[task_from_exception](#task_from_exception)|  
 |[task_from_result](#task_from_result)|[try_receive](#try_receive)|[oczekiwania](#wait)|  
@@ -172,7 +167,7 @@ __declspec(noinline) auto create_async(const _Function& _Func)
   
  Ta funkcja jest dostępna tylko do aplikacji środowiska wykonawczego systemu Windows.  
   
-##  <a name="createresourcemanager"></a>  CreateResourceManager  
+##  <a name="createresourcemanager"></a>  Createresourcemanager —  
  Zwraca interfejs, który reprezentuje pojedyncze wystąpienie Menedżera zasobów współbieżność środowiska wykonawczego. Menedżer zasobów jest odpowiedzialny za przydzielanie zasobów do transfery danych, które chcesz współpracować ze sobą.  
   
 ```
@@ -277,7 +272,7 @@ unsigned int __cdecl GetExecutionContextId();
 ### <a name="remarks"></a>Uwagi  
  Ta metoda służy do uzyskania identyfikatora kontekstu wykonywania przed przekazujesz `IExecutionContext` interfejsu jako parametr do dowolnej z metod oferowane przez Menedżera zasobów.  
   
-##  <a name="getosversion"></a>  GetOSVersion  
+##  <a name="getosversion"></a>  Getosversion —  
  Zwraca informacje o wersji systemu operacyjnego.  
   
 ```
@@ -303,7 +298,7 @@ unsigned int __cdecl GetProcessorCount();
 ### <a name="remarks"></a>Uwagi  
  [unsupported_os —](unsupported-os-class.md) jest generowany, jeśli system operacyjny nie jest obsługiwany przez współbieżności środowiska wykonawczego.  
   
-##  <a name="getprocessornodecount"></a>  GetProcessorNodeCount  
+##  <a name="getprocessornodecount"></a>  Getprocessornodecount —  
  Zwraca liczbę węzłów NUMA lub pakietów procesora na podstawowym systemie.  
   
 ```
@@ -318,7 +313,7 @@ unsigned int __cdecl GetProcessorNodeCount();
   
  [unsupported_os —](unsupported-os-class.md) jest generowany, jeśli system operacyjny nie jest obsługiwany przez współbieżności środowiska wykonawczego.  
   
-##  <a name="getschedulerid"></a>  GetSchedulerId  
+##  <a name="getschedulerid"></a>  Getschedulerid —  
  Zwraca unikatowy identyfikator, który można przypisać do harmonogramu, który implementuje `IScheduler` interfejsu.  
   
 ```
@@ -944,7 +939,7 @@ void parallel_invoke(
   
  Aby uzyskać więcej informacji, zobacz [algorytmy równoległe](../../../parallel/concrt/parallel-algorithms.md).  
   
-##  <a name="parallel_radixsort"></a>  parallel_radixsort  
+##  <a name="parallel_radixsort"></a>  parallel_radixsort —  
  Rozmieszcza elementy w określonym zakresie z systemem innym niż malejącej przy użyciu podstawa, algorytm sortowania. Jest to funkcja stabilna sortowania, które wymaga funkcji projekcji, które można wyświetlać elementy, które można sortować według kluczy typu Liczba całkowita bez znaku. Inicjowanie domyślnych jest wymagana dla elementów sortowane.  
   
 ```
@@ -1357,7 +1352,7 @@ bool send(ITarget<T>& _Trg, const T& _Data);
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji, zobacz [funkcji przekazywania wiadomości](../../../parallel/concrt/message-passing-functions.md).  
   
-##  <a name="set_ambient_scheduler"></a>  set_ambient_scheduler  
+##  <a name="set_ambient_scheduler"></a>  set_ambient_scheduler —  
   
 ```
 inline void set_ambient_scheduler(std::shared_ptr<::Concurrency::scheduler_interface> _Scheduler);

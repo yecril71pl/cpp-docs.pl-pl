@@ -1,12 +1,9 @@
 ---
-title: "Namespace współbieżności (C++ AMP) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Namespace współbieżności (C++ AMP) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMP/Concurrency
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a9f82baade21cdbde41fc49fd0bfe6163c0f6af
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 127c1b63693b128e9cdf23813bbfe8e0ec251f9d
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-c-amp"></a>Przestrzeń nazw współbieżności (C++ AMP)
 Zawiera klasy i funkcje, które przyspieszenie wykonywania kodu C++ na sprzęcie równoległe danych. Aby uzyskać więcej informacji, zobacz [Przegląd C++ AMP](../cpp-amp-overview.md)  
@@ -92,7 +87,7 @@ namespace Concurrency;
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[all_memory_fence](concurrency-namespace-functions-amp.md#all_memory_fence)|Wykonanie bloki wszystkie wątki na kafelku ukończenie wszystkich uzyskuje dostęp do pamięci.|  
-|[amp_uninitialize —](concurrency-namespace-functions-amp.md#amp_uninitialize)|Uninitializes środowiska uruchomieniowego C++ AMP.|  
+|[amp_uninitialize](concurrency-namespace-functions-amp.md#amp_uninitialize)|Uninitializes środowiska uruchomieniowego C++ AMP.|  
 |[atomic_compare_exchange](concurrency-namespace-functions-amp.md#atomic_compare_exchange)|Przeciążone. Jeśli wartość przechowywana we wskazanej lokalizacji porównuje pierwszy określonej wartości, drugi określona wartość jest przechowywane w tej samej lokalizacji co niepodzielną operację.|  
 |[atomic_exchange](concurrency-namespace-functions-amp.md#atomic_exchange)|Przeciążone. Ustawia wartość przechowywana we wskazanej lokalizacji do określonej wartości jako operacją niepodzielną.|  
 |[atomic_fetch_add](concurrency-namespace-functions-amp.md#atomic_fetch_add)|Przeciążone. Ustawia wartość przechowywana we wskazanej lokalizacji do sumę tę wartość i określoną wartość jako operacją niepodzielną.|  
@@ -104,7 +99,7 @@ namespace Concurrency;
 |[atomic_fetch_or](concurrency-namespace-functions-amp.md#atomic_fetch_or)|Przeciążone. Ustawia wartość przechowywana we wskazanej lokalizacji wartości bitowych `or` tę wartość i określoną wartość jako operacją niepodzielną.|  
 |[atomic_fetch_sub](concurrency-namespace-functions-amp.md#atomic_fetch_sub)|Przeciążone. Ustawia wartość przechowywana we wskazanej lokalizacji różnicy tę wartość i określoną wartość jako operacją niepodzielną.|  
 |[atomic_fetch_xor](concurrency-namespace-functions-amp.md#atomic_fetch_xor)|Przeciążone. Ustawia wartość przechowywana we wskazanej lokalizacji wartości bitowych `xor` tę wartość i określoną wartość jako operacją niepodzielną.|  
-|[copy](concurrency-namespace-functions-amp.md#copy)|Kopiuje obiekt C++ AMP. Spełniono wszystkie wymagania transferu danych synchroniczne. Nie można skopiować danych, gdy kod działa kod z akceleratora. Formularz ogólny tej funkcji jest `copy(src, dest)`.|  
+|[Kopiuj](concurrency-namespace-functions-amp.md#copy)|Kopiuje obiekt C++ AMP. Spełniono wszystkie wymagania transferu danych synchroniczne. Nie można skopiować danych, gdy kod działa kod z akceleratora. Formularz ogólny tej funkcji jest `copy(src, dest)`.|  
 |[copy_async](concurrency-namespace-functions-amp.md#copy_async)|Kopiuje obiekt C++ AMP i zwraca [completion_future](completion-future-class.md) który mogą być obsługiwane. Nie można skopiować danych, gdy kod działa z akceleratora. Formularz ogólny tej funkcji jest `copy(src, dest)`.|  
 |[direct3d_abort](concurrency-namespace-functions-amp.md#direct3d_abort)|Przerywa wykonywanie funkcji, która ma `restrict(amp)` Klauzula ograniczenia.|  
 |[direct3d_errorf](concurrency-namespace-functions-amp.md#direct3d_errorf)|Wyświetla ciąg formatowania do programu Visual Studio **dane wyjściowe** okno i zgłasza [runtime_exception —](runtime-exception-class.md) wyjątek, który ma tego samego formatowania ciągu.|  

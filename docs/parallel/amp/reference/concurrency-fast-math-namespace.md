@@ -1,29 +1,24 @@
 ---
-title: "CONCURRENCY::fast_math — Namespace | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: CONCURRENCY::fast_math — Namespace | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::fast_math
 dev_langs:
 - C++
 ms.assetid: 54fed939-9902-49db-9f29-e98fd9821508
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11c6f990cdcc4dab0a3526d338333183a0f5e889
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 04a9cd3d604b18e42202bccb287cce7c7416b51f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencyfastmath-namespace"></a>Concurrency::fast_math — Przestrzeń nazw
 Funkcje w `fast_math` przestrzeni nazw ma zmniejszenie dokładności, obsługuje tylko pojedynczej precyzji (`float`) i Wywołaj funkcje wewnętrzne DirectX. Dostępne są dwie wersje każdej funkcji, na przykład `cos` i `cosf`. Obie wersje przyjmować i zwracać `float`, a każdego wywołania tej samej technologii DirectX wewnętrznej.  
@@ -65,14 +60,14 @@ namespace fast_math;
 |[fmax](concurrency-fast-math-namespace-functions.md#fmax)|Określić maksymalną wartość liczbową argumentów|  
 |[fmaxf](concurrency-fast-math-namespace-functions.md#fmaxf)|Określić maksymalną wartość liczbową argumentów|  
 |[fmin](concurrency-fast-math-namespace-functions.md#fmin)|Określić minimalną wartość liczbową argumentów|  
-|[fminf](concurrency-fast-math-namespace-functions.md#fminf)|Określić minimalną wartość liczbową argumentów|  
+|[fminf —](concurrency-fast-math-namespace-functions.md#fminf)|Określić minimalną wartość liczbową argumentów|  
 |[fmod —](concurrency-fast-math-namespace-functions.md#fmod)|Oblicza resztę zmiennoprzecinkowe z _X/_Y|  
 |[fmodf](concurrency-fast-math-namespace-functions.md#fmodf)|Oblicza resztę zmiennoprzecinkowe z _X/_Y|  
 |[frexp](concurrency-fast-math-namespace-functions.md#frexp)|Pobiera mantysa i wykładnik _X|  
 |[frexpf](concurrency-fast-math-namespace-functions.md#frexpf)|Pobiera mantysa i wykładnik _X|  
 |[isfinite](concurrency-fast-math-namespace-functions.md#isfinite)|Określa, czy argument ma wartością skończoną|  
-|[isinf](concurrency-fast-math-namespace-functions.md#isinf)|Określa, czy argument jest nieskończoność.|  
-|[isnan](concurrency-fast-math-namespace-functions.md#isnan)|Określa, czy argument jest wartością typu NaN|  
+|[isinf —](concurrency-fast-math-namespace-functions.md#isinf)|Określa, czy argument jest nieskończoność.|  
+|[isNaN](concurrency-fast-math-namespace-functions.md#isnan)|Określa, czy argument jest wartością typu NaN|  
 |[ldexp](concurrency-fast-math-namespace-functions.md#ldexp)|Oblicza liczba rzeczywista z mantysa i wykładnik|  
 |[ldexpf](concurrency-fast-math-namespace-functions.md#ldexpf)|Oblicza liczba rzeczywista z mantysa i wykładnik|  
 |[log](concurrency-fast-math-namespace-functions.md#log)|Oblicza logarytm naturalny argumentu|  
@@ -91,7 +86,7 @@ namespace fast_math;
 |[rsqrtf](concurrency-fast-math-namespace-functions.md#rsqrtf)|Zwraca odwrotność pierwiastek kwadratowy argumentu|  
 |[signbit](concurrency-fast-math-namespace-functions.md#signbit)|Zwraca znak argumentu|  
 |[signbitf](concurrency-fast-math-namespace-functions.md#signbitf)|Zwraca znak argumentu|  
-|[sin](concurrency-fast-math-namespace-functions.md#sin)|Oblicza sinus wartość argumentu|  
+|[SIN](concurrency-fast-math-namespace-functions.md#sin)|Oblicza sinus wartość argumentu|  
 |[sincos —](concurrency-fast-math-namespace-functions.md#sincos)|Oblicza sinus i cosinus wartość _X|  
 |[sincosf](concurrency-fast-math-namespace-functions.md#sincosf)|Oblicza sinus i cosinus wartość _X|  
 |[sinf](concurrency-fast-math-namespace-functions.md#sinf)|Oblicza sinus wartość argumentu|  

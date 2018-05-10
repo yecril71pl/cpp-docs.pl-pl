@@ -1,13 +1,10 @@
 ---
-title: "Klasy ogólne (C + +/ CLI) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Klasy ogólne (C + +/ CLI) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22f2d00c4f8e07ea9d04e03c2e95190be056cbd9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07a5cb6abaca56901af26895b1304a9b7079ced9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-classes-ccli"></a>Klasy ogólne [C++/CLI]
 Klasy generycznej jest deklarowany przy użyciu następującej postaci:  
@@ -49,11 +44,11 @@ class-body
 ## <a name="remarks"></a>Uwagi  
  W powyższej składni używane są następujące warunki:  
   
- `attributes`(opcjonalnie)  
+ `attributes` (opcjonalnie)  
  Dodatkowe informacje deklaratywne. Aby uzyskać więcej informacji na atrybuty i klasy atrybutów Zobacz atrybutów.  
   
  *klucz klasy*  
- Albo `class` lub`typename`  
+ Albo `class` lub `typename`  
   
  *Typ — parametr-identyfikatory*,  
  Rozdzielana przecinkami lista identyfikatorów określenie nazwy parametrów typu.  
@@ -81,10 +76,10 @@ class-body
  *Treść klasy*  
  Treść klasy zawierające pola, funkcji Członkowskich itp.  
   
- *deklaratory*  
+ *Deklaratory*  
  Deklaracje zmiennych tego typu. Na przykład: `^` *identyfikator*[`,` ...]  
   
- Klasy ogólne, takie jak te można zadeklarować (należy pamiętać, że słowo kluczowe **klasy** może być używana zamiast **typename**). W tym przykładzie `ItemType`, `KeyType` i `ValueType` są nieznane typy, które są określone w punkcie gdzie typu. `HashTable<int, int>`Typ skonstruowanego typu ogólnego `HashTable<KeyType, ValueType>`. Liczba różne typy utworzone mogą zostać utworzone na podstawie pojedynczego typu ogólnego. Typy utworzone utworzone na podstawie klasy ogólne są traktowane jak innego typu klasy referencyjnej.  
+ Klasy ogólne, takie jak te można zadeklarować (należy pamiętać, że słowo kluczowe **klasy** może być używana zamiast **typename**). W tym przykładzie `ItemType`, `KeyType` i `ValueType` są nieznane typy, które są określone w punkcie gdzie typu. `HashTable<int, int>` Typ skonstruowanego typu ogólnego `HashTable<KeyType, ValueType>`. Liczba różne typy utworzone mogą zostać utworzone na podstawie pojedynczego typu ogólnego. Typy utworzone utworzone na podstawie klasy ogólne są traktowane jak innego typu klasy referencyjnej.  
   
 ```  
 // generic_classes_1.cpp  

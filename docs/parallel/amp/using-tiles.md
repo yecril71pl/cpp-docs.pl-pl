@@ -1,32 +1,27 @@
 ---
-title: "Użycie fragmentów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Użycie fragmentów | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aed7ed0ed32f73927f3755c0ba3733aaef084818
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4e3d1e37562e9e14bbbeda5a01198358b4615d3c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-tiles"></a>Użycie fragmentów
 Aby zmaksymalizować przyspieszenie aplikacji, można użyć kafelków. Kafelków dzieli wątków równy podzestawy prostokątne lub *Kafelki*. Użycie kafelka odpowiedni rozmiar i algorytm sąsiadującym przyspieszenie jeszcze więcej można uzyskać w kodzie C++ AMP. Podstawowe składniki kafelków są:  
   
-- `tile_static`zmienne. Główną zaletą kafelków jest bardziej wydajne z `tile_static` dostępu. Dostęp do danych w `tile_static` pamięci może być znacznie szybsze niż dostęp do danych w przestrzeni globalnej (`array` lub `array_view` obiektów). Wystąpienie `tile_static` zmiennej jest tworzony dla każdego kafelka, a wszystkie wątki na kafelku mają dostęp do zmiennej. W typowych algorytmu sąsiadującym, dane są kopiowane do `tile_static` raz z pamięci globalnej pamięci i uzyskać dostęp wiele razy z `tile_static` pamięci.  
+- `tile_static` zmienne. Główną zaletą kafelków jest bardziej wydajne z `tile_static` dostępu. Dostęp do danych w `tile_static` pamięci może być znacznie szybsze niż dostęp do danych w przestrzeni globalnej (`array` lub `array_view` obiektów). Wystąpienie `tile_static` zmiennej jest tworzony dla każdego kafelka, a wszystkie wątki na kafelku mają dostęp do zmiennej. W typowych algorytmu sąsiadującym, dane są kopiowane do `tile_static` raz z pamięci globalnej pamięci i uzyskać dostęp wiele razy z `tile_static` pamięci.  
   
 - [tile_barrier::wait — metoda](reference/tile-barrier-class.md#wait). Wywołanie `tile_barrier::wait` wstrzymuje wykonywanie bieżącego wątku, aż zostanie wszystkie wątki na kafelku tego samego wywołanie `tile_barrier::wait`. Nie gwarantuje kolejność wątki będą uruchamiane w, tylko wykonujące nie wątków na kafelku poza wywołanie `tile_barrier::wait` dopóki wszystkie wątki osiągnięto wywołania. Oznacza to, że za pomocą `tile_barrier::wait` metody, można wykonać zadania na podstawie kafelka przez Kafelek, a nie na poziomie wątku przez wątek. Algorytm kafelków typowe ma kod do zainicjowania `tile_static` pamięci dla całego kafelka następuje wywołanie `tile_barrer::wait`. Kod, który następuje `tile_barrier::wait` zawiera obliczenia, które wymagają dostępu do wszystkich `tile_static` wartości.  
 
@@ -40,7 +35,7 @@ Aby zmaksymalizować przyspieszenie aplikacji, można użyć kafelków. Kafelkó
 ## <a name="example-of-global-tile-and-local-indices"></a>Przykład globalnych kafelka, a lokalny indeksów  
  Poniższy diagram przedstawia macierz 8 x 9 danych, które są rozmieszczone na kafelkach 2 x 3.  
   
- ![8 &#45; przez &#45; 9 macierzy podzielona przez; do 2 &#45; #45; 3 Kafelki](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")  
+ ![8&#45;przez&#45;9 macierzy podzielone na 2&#45;przez&#45;3 Kafelki](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")  
   
  W poniższym przykładzie przedstawiono globalnych kafelka i lokalnego indeksy tego rozmieszczany macierzy. `array_view` Obiekt jest tworzony przy użyciu elementów typu `Description`. `Description` Zawiera globalny, Kafelek i lokalne Indeksy elementu w macierzy. Kod w wywołaniu `parallel_for_each` ustawia wartości globalnej, Kafelek i lokalne indeksów każdego elementu. Dane wyjściowe są wyświetlane wartości w `Description` struktury.  
   

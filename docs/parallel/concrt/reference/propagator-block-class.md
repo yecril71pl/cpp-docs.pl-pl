@@ -1,12 +1,9 @@
 ---
-title: "propagator_block — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: propagator_block — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - propagator_block
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - propagator_block class
 ms.assetid: 86aa75fd-eda5-42aa-aadf-25c0c1c9742d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ff6e543702fc366e72f1473f0f70608a1daabc6
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: eb908bf108bb3ddff375506225b9be97b2898ca5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="propagatorblock-class"></a>propagator_block — Klasa
 `propagator_block` Klasa jest abstrakcyjna klasa podstawowa dla bloków komunikatów, które są źródłowym i docelowym. Łączy funkcje obu `source_block` i `target_block` klasy.  
@@ -213,7 +208,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>Wartość zwracana  
  A [message_status —](concurrency-namespace-enums.md) wskazanie docelowy korzystam z komunikatu.  
   
-##  <a name="ctor"></a> propagator_block 
+##  <a name="ctor"></a> propagator_block — 
 
  Konstruuje `propagator_block` obiektu.  
   
@@ -249,7 +244,7 @@ void register_filter(filter_method const& _Filter);
 void remove_network_links();
 ```  
   
-##  <a name="send">Wyślij</a> 
+##  <a name="send"></a> Wyślij 
 
  Inicjuje synchronicznie wiadomość do tego bloku. Wywoływane przez `ISource` bloku. Po zakończeniu tej funkcji, komunikat już zostaną rozpropagowane w bloku.  
   

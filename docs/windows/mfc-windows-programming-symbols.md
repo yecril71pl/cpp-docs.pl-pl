@@ -1,13 +1,10 @@
 ---
 title: Symbole programowania Windows MFC | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - symbols, MFC
 - Windows programming MFC symbols [C++]
 ms.assetid: fcc2194d-b639-4e0c-be2c-75f5579f2780
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7d2d69cfdfd12f0a8dbdcf3a771e01db19da2c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1c4091853274d04d27eb060655650a071ea64d4c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="mfc-windows-programming-symbols"></a>Symbole programowania Windows MFC
 Te symbole należą również pliki obsługi MFC, ale obsługuje standardowe funkcje aplikacji systemu Windows i działań. Symbole są używane głównie z menu. Podczas pracy z menu w edytorze Menu symbole będą wyświetlane w oknie właściwości skojarzone z typowych poleceń menu. Na przykład, jeśli aplikacja ma menu plik przy użyciu polecenia Exit, tego polecenia zostanie skojarzona z id_app_exit — symbol w [okna właściwości](/visualstudio/ide/reference/properties-window).  

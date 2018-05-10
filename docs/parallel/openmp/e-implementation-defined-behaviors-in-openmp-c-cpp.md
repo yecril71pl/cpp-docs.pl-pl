@@ -1,27 +1,22 @@
 ---
 title: E. Zachowania w OpenMP C/C++ zdefiniowane w implementacji | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: b8d660ca-9bb3-4b6b-87af-45c67d43a731
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fe890248ad2eb3bcee024bf12ccf4039484e7b2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 598964ec6a12ac4c357efc04df78bfbe3af798a5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="e-implementation-defined-behaviors-in-openmp-cc"></a>E. Zdefiniowane w implementacji zachowania w OpenMP C/C++
 Ten dodatek zawiera podsumowanie zachowania, które są nazywane "zdefiniowane w implementacji" w tym interfejsie API.  Każdy zachowanie jest odsyłaczy do jego opis w specyfikacji głównego.  
@@ -65,14 +60,14 @@ Ten dodatek zawiera podsumowanie zachowania, które są nazywane "zdefiniowane w
   
      W programie Visual C++ liczba wątków jest określana przez system operacyjny.  
   
--   `OMP_SCHEDULE`Zmienna środowiskowa: domyślna wartość tej zmiennej środowiskowej jest zdefiniowane w implementacji (zobacz [4.1 sekcji](../../parallel/openmp/4-1-omp-schedule.md) na stronie 48).  
+-   `OMP_SCHEDULE` Zmienna środowiskowa: domyślna wartość tej zmiennej środowiskowej jest zdefiniowane w implementacji (zobacz [4.1 sekcji](../../parallel/openmp/4-1-omp-schedule.md) na stronie 48).  
   
      W programie Visual C++, jest typu harmonogramu `static` nie rozmiar fragmentu.  
   
--   `OMP_NUM_THREADS`Zmienna środowiskowa: Jeśli nie określono wartości dla `OMP_NUM_THREADS` zmiennej środowiskowej, lub jeśli określona wartość nie jest dodatnią liczbą całkowitą lub jeśli wartość jest większa niż maksymalna liczba wątków systemu może obsługiwać, liczbę wątków używanych jest zdefiniowane w implementacji (zobacz [4.2 sekcji](../../parallel/openmp/4-2-omp-num-threads.md) na stronie 48).  
+-   `OMP_NUM_THREADS` Zmienna środowiskowa: Jeśli nie określono wartości dla `OMP_NUM_THREADS` zmiennej środowiskowej, lub jeśli określona wartość nie jest dodatnią liczbą całkowitą lub jeśli wartość jest większa niż maksymalna liczba wątków systemu może obsługiwać, liczbę wątków używanych jest zdefiniowane w implementacji (zobacz [4.2 sekcji](../../parallel/openmp/4-2-omp-num-threads.md) na stronie 48).  
   
      W programie Visual C++ Jeśli określona wartość jest równa zero lub mniej, liczba wątków jest równa liczbie procesorów.  Jeśli wartość jest większa niż 64, liczba wątków to 64.  
   
--   `OMP_DYNAMIC`Zmienna środowiskowa: wartość domyślna to zdefiniowane w implementacji (zobacz [4.3 sekcji](../../parallel/openmp/4-3-omp-dynamic.md) na stronie 49).  
+-   `OMP_DYNAMIC` Zmienna środowiskowa: wartość domyślna to zdefiniowane w implementacji (zobacz [4.3 sekcji](../../parallel/openmp/4-3-omp-dynamic.md) na stronie 49).  
   
      W programie Visual C++, wartość domyślna to `FALSE`.

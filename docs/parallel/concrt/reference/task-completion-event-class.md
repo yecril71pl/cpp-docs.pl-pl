@@ -1,12 +1,9 @@
 ---
-title: "task_completion_event — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: task_completion_event — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - task_completion_event
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ec810fdb897a9a80dc803cdcc3f229bab186f09
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7b22b77affd41aa60769543ae2bea2ed495084ae
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event — Klasa
 `task_completion_event` Klasa umożliwia opóźnienie wykonania zadania, dopóki spełniony jest warunek lub uruchomić zadanie w odpowiedzi na zdarzenie zewnętrzne.  
@@ -100,7 +95,7 @@ bool set() const ;
 ### <a name="remarks"></a>Uwagi  
  Obecności wielu lub równoczesnych wywołań `set`, pierwsze wywołanie powiedzie się i jego wynik (jeśli istnieje), które będą przechowywane w zdarzenie ukończenia zadania. Pozostałe zestawy są ignorowane, a metoda zwróci wartość false. Jeśli zdarzenie ukończenia zadania, wszystkie zadania utworzone na podstawie zdarzeń natychmiast zostanie ukończona, czy jego kontynuacje, jeśli istnieje, zostanie zaplanowane. Zadanie ukończenia obiektów, które mają `_ResultType` innych niż `void` przekazuje wartość do ich kontynuacje.  
   
-##  <a name="set_exception">set_exception</a> 
+##  <a name="set_exception"></a> set_exception 
 
  Propaguje wyjątek, aby wszystkie zadania skojarzone z tym zdarzeniem.  
   

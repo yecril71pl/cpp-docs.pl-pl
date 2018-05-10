@@ -1,12 +1,9 @@
 ---
-title: "concurrent_unordered_set — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: concurrent_unordered_set — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_unordered_set
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_unordered_set class
 ms.assetid: c61f9a9a-4fd9-491a-9251-e300737ecf4b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 223a34c3cbc651f933b4ee7421030077ba8f878c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fd73b16725cfe4b30734673bb926d104af0d3264
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentunorderedset-class"></a>concurrent_unordered_set — Klasa
 `concurrent_unordered_set` Klasy jest kontenerem bezpieczne współbieżności kontrolujące zróżnicowanych długość sekwencję elementów typu K. Sekwencja jest reprezentowana w sposób umożliwiający bezpieczny współbieżności dołączenia, element dostępu, dostęp iteratora i operacji przechodzenia iteratora.  
@@ -100,7 +95,7 @@ template <typename K,
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[hash_function](#hash_function)|Zwraca obiekt funkcji skrótu przechowywaną.|  
-|[insert](#insert)|Przeciążone. Dodaje elementy `concurrent_unordered_set` obiektu.|  
+|[Wstaw](#insert)|Przeciążone. Dodaje elementy `concurrent_unordered_set` obiektu.|  
 |[key_eq](#key_eq)|Zwraca obiekt funkcja porównania równości przechowywane.|  
 |[swap](#swap)|Zamienia zawartość dwóch `concurrent_unordered_set` obiektów. Ta metoda nie jest bezpieczne współbieżności.|  
 |[unsafe_erase](#unsafe_erase)|Przeciążone. Usuwa elementy z `concurrent_unordered_set` w określonych pozycji. Ta metoda nie jest bezpieczne współbieżności.|  

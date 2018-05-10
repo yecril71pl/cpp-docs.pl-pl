@@ -1,30 +1,25 @@
 ---
 title: Operator uchwytu do obiektu (^) (C++ Component Extensions) | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - ^ handle to object [C++]
 ms.assetid: 70c411e6-be57-4468-a944-6ea7be89f392
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3e760181f48e4bfd197514b152701e94ac6e94a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb322f83163a9faf3314990baabbd0a34f1a67ae
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>Operator uchwytu do obiektu (^) (C++ Component Extensions)
 *Obsługi deklarator* (`^`, Wymowa "hat"), modyfikuje typ [specyfikator](../cpp/overview-of-declarators.md) oznacza, że zadeklarowane obiektu powinien automatycznie usunięta, gdy system sprawdza, czy obiekt jest nie jest już dostępny.  

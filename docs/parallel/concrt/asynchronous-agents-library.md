@@ -1,30 +1,25 @@
 ---
-title: "Biblioteki agentów asynchronicznych | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Biblioteki agentów asynchronicznych | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Agents Library
 - Asynchronous Agents Library
 ms.assetid: d2a72a31-8ba6-4220-ad7a-e403a6acaa42
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be12f47a6fb33350137a8f9b1c78ff75519c8af7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a8bb1ce7a0c449d5c09e49ad16435e7732ddfcc1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="asynchronous-agents-library"></a>Biblioteki agentów asynchronicznych
 Biblioteki agentów asynchronicznych (lub po prostu *biblioteki agentów*) zapewnia model programowania, który pozwala zwiększyć niezawodność rozwoju aplikacji z obsługą współbieżności. Biblioteki agentów jest Biblioteka szablonów C++, która wspiera aktora na podstawie modelu programowania i komunikatów w trakcie przekazywanie dla coarse-grained przepływu danych i przetwarzanie potokowe zadania. Biblioteki agentów opiera się na planowanie i składniki zarządzania współbieżności środowiska wykonawczego.  
@@ -36,7 +31,7 @@ Biblioteki agentów asynchronicznych (lub po prostu *biblioteki agentów*) zapew
   
  Biblioteki agentów składa się z trzech składników: *agentów asynchronicznych*, *bloki komunikatów asynchronicznych*, i *funkcje przekazywania komunikatów*. Agenci zarządzania stanem i użyj bloki komunikatów i funkcje przekazywania komunikatów, aby komunikować się ze sobą i składników zewnętrznych. Funkcje przekazywania komunikatów włączyć agentów do wysyłania i odbierania wiadomości do i z składników zewnętrznych. Bloki komunikatów asynchronicznych przechowywania wiadomości i włączyć agentów komunikowanie się w sposób zsynchronizowane.  
   
- Na poniższej ilustracji przedstawiono sposób dwaj agenci, użyj bloki komunikatów i funkcje przekazywania komunikatów do komunikacji. Na tej ilustracji `agent1` wysyła komunikat do `agent2` za pomocą [concurrency::send](reference/concurrency-namespace-functions.md#send) funkcji i [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) obiektu. `agent2`używa [concurrency::receive](reference/concurrency-namespace-functions.md#receive) funkcji, aby odczytać wiadomość. `agent2`wysyła komunikat do przy użyciu tej samej metody `agent1`. Strzałki przerywane przedstawiają przepływ danych między agentami. Stałe strzałki nawiązać agenci bloki komunikatów, które zapisu lub odczytu.  
+ Na poniższej ilustracji przedstawiono sposób dwaj agenci, użyj bloki komunikatów i funkcje przekazywania komunikatów do komunikacji. Na tej ilustracji `agent1` wysyła komunikat do `agent2` za pomocą [concurrency::send](reference/concurrency-namespace-functions.md#send) funkcji i [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) obiektu. `agent2` używa [concurrency::receive](reference/concurrency-namespace-functions.md#receive) funkcji, aby odczytać wiadomość. `agent2` wysyła komunikat do przy użyciu tej samej metody `agent1`. Strzałki przerywane przedstawiają przepływ danych między agentami. Stałe strzałki nawiązać agenci bloki komunikatów, które zapisu lub odczytu.  
   
  ![Składniki biblioteki agentów](../../parallel/concrt/media/agent_librarycomp.png "agent_librarycomp")  
   

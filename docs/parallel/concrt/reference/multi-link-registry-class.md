@@ -1,12 +1,9 @@
 ---
-title: "multi_link_registry — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: multi_link_registry — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - multi_link_registry
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f87da4852fff0256b5ca55cfd47d839531b8a03
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5fbe52298f267fabb2ba326e3e1c7b66f4ad49ef
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multilinkregistry-class"></a>multi_link_registry — Klasa
 `multi_link_registry` Obiekt jest `network_link_registry` który zarządza wiele bloków źródła lub wiele bloków docelowej.  
@@ -108,7 +103,7 @@ virtual iterator begin();
 ### <a name="remarks"></a>Uwagi  
  Wskazuje stan końcowy `NULL` łącza.  
   
-##  <a name="contains">zawiera</a> 
+##  <a name="contains"></a> zawiera 
 
  Wyszukiwanie `multi_link_registry` obiektu dla określonego bloku.  
   
@@ -123,7 +118,7 @@ virtual bool contains(_EType _Link);
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli został określony blok `false` inaczej.  
   
-##  <a name="count">Liczba</a> 
+##  <a name="count"></a> Liczba 
 
  Zlicza elementy `multi_link_registry` obiektu.  
   
@@ -134,7 +129,7 @@ virtual size_t count();
 ### <a name="return-value"></a>Wartość zwracana  
  Liczba elementów w `multi_link_registry` obiektu.  
   
-##  <a name="ctor"></a> multi_link_registry 
+##  <a name="ctor"></a> multi_link_registry — 
 
  Konstruuje `multi_link_registry` obiektu.  
   

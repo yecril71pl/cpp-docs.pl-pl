@@ -2,27 +2,22 @@
 title: Biblioteka szablonów C++ środowiska wykonawczego systemu Windows (WRL) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d362fdde185f5d9345977ca58d7679a448976555
-ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
+ms.openlocfilehash: 40d2ecbcfcd4121727bfe34bf2ffd571722b8a68
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows (WRL)
 Zestaw Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL) jest Biblioteka szablonów, które niskiego poziomu umożliwia tworzenie i używanie składnika środowiska wykonawczego systemu Windows.
@@ -95,7 +90,7 @@ Zestaw Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL) jest B
   
  Biblioteka szablonów C++ środowiska wykonawczego systemu Windows obsługuje funkcje COM, które są wymagane dla aplikacji platformy uniwersalnej systemu Windows. W związku z tym różni się od ATL ponieważ pominięto bezpośrednią obsługę COM funkcje takie jak:  
   
--   aggregation  
+-   Agregacji  
   
 -   implementacje standardowych  
   

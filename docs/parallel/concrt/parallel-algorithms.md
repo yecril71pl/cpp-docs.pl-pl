@@ -1,29 +1,24 @@
 ---
-title: "Algorytmy równoległe | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Algorytmy równoległe | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbabb499d67a2248ebaefa5cbc787afe2c6cfc08
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 365acd15c61b52631fc75018ab4c3a017d3eed8f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="parallel-algorithms"></a>Algorytmy równoległe
 Biblioteka równoległych wzorców (PLL) zapewnia algorytmów jednocześnie wykonywania pracy na kolekcji danych. Algorytmy te przypominają te udostępniane przez standardowa biblioteka C++.  
@@ -32,7 +27,7 @@ Biblioteka równoległych wzorców (PLL) zapewnia algorytmów jednocześnie wyko
  Algorytmy równoległe składają się z istniejące funkcje współbieżność środowiska wykonawczego. Na przykład [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorytm używa [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) obiektu w celu wykonania iteracji pętli równoległej. `parallel_for` Partycje algorytm pracy w optymalny sposób podana liczba dostępnych zasobów obliczeniowych.  
 
   
-##  <a name="top"></a>Sekcje  
+##  <a name="top"></a> Sekcje  
   
 - [Parallel_for algorytmu](#parallel_for)  
   
@@ -54,7 +49,7 @@ Biblioteka równoległych wzorców (PLL) zapewnia algorytmów jednocześnie wyko
   
     - [Wybieranie algorytmu sortowania](#choose_sort)  
   
-##  <a name="parallel_for"></a>Parallel_for algorytmu  
+##  <a name="parallel_for"></a> Parallel_for algorytmu  
 
  [Concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorytm wielokrotnie wykonuje to samo zadanie równocześnie. Każdy z tych zadań jest sparametryzowanych przez wartość iteracji. Ten algorytm jest przydatne w przypadku treści pętli, która nie współużytkowanie zasobów między iteracji pętli tego.  
   
@@ -96,7 +91,7 @@ Biblioteka równoległych wzorców (PLL) zapewnia algorytmów jednocześnie wyko
   
  [[Górnej](#top)]  
   
-##  <a name="parallel_for_each"></a>Parallel_for_each — algorytm  
+##  <a name="parallel_for_each"></a> Parallel_for_each — algorytm  
 
  [Concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algorytm wykonuje zadania w kontenerze iteracyjną, np. udostępnianych przez bibliotekę Standard C++ równolegle. Używa tej samej logiki partycjonowania który `parallel_for` algorytm.  
   
@@ -121,7 +116,7 @@ Biblioteka równoległych wzorców (PLL) zapewnia algorytmów jednocześnie wyko
   
  [[Górnej](#top)]  
   
-##  <a name="parallel_invoke"></a>Parallel_invoke — algorytm  
+##  <a name="parallel_invoke"></a> Parallel_invoke — algorytm  
 
  [Concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algorytm wykonuje zestaw zadań równolegle. Zwraca przed zakończeniem każdego zadania. Ten algorytm jest przydatne w przypadku kilku niezależnych zadania, które ma być wykonane w tym samym czasie.  
   
@@ -144,14 +139,14 @@ Biblioteka równoległych wzorców (PLL) zapewnia algorytmów jednocześnie wyko
   
  [[Górnej](#top)]  
   
-##  <a name="parallel_transform_reduce"></a>Parallel_transform — i parallel_reduce — algorytmów  
+##  <a name="parallel_transform_reduce"></a> Parallel_transform — i parallel_reduce — algorytmów  
 
  [Concurrency::parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform) i [concurrency::parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce) algorytmy są wersje równoległych algorytmów standardowa biblioteka C++ [std::transform](../../standard-library/algorithm-functions.md#transform)i [std::accumulate](../../standard-library/numeric-functions.md#accumulate)odpowiednio. Współbieżność środowiska wykonawczego wersji przypominają wersji standardowa biblioteka C++ z tą różnicą, że kolejność operacji nie jest określona, ponieważ są one wykonywane równolegle. Użyj tych algorytmów podczas pracy z zestawem jest wystarczająco duży, aby uzyskać korzyści w zakresie wydajności i skalowalności z przetwarzane równolegle.  
   
 > [!IMPORTANT]
 >  `parallel_transform` i `parallel_reduce` algorytmów obsługuje tylko dostęp losowy dwukierunkowe i do przodu Iteratory, ponieważ te Iteratory tworzy adresów pamięci stabilna. Ponadto te Iteratory musi mieć inną niż`const` l wartości.  
   
-###  <a name="parallel_transform"></a>Parallel_transform — algorytm  
+###  <a name="parallel_transform"></a> Parallel_transform — algorytm  
  Można użyć `parallel transform` algorytmu w celu wykonania wielu operacji paralelizacja danych. Możesz na przykład:  
   
 -   Dopasuj jasność obrazu i wykonywać innych operacji przetwarzania obrazów.  
@@ -174,7 +169,7 @@ Biblioteka równoległych wzorców (PLL) zapewnia algorytmów jednocześnie wyko
 > [!IMPORTANT]
 >  Iterator, wprowadzona w danych wyjściowych `parallel_transform` należy całkowicie nakładają się iteratora wejściowy lub nie nakładają się na wszystkich. Zachowanie tego algorytmu jest nieokreślony, jeżeli Iteratory wejściowymi i wyjściowymi częściowo pokrywają się.  
   
-###  <a name="parallel_reduce"></a>Parallel_reduce — algorytm  
+###  <a name="parallel_reduce"></a> Parallel_reduce — algorytm  
  `parallel_reduce` Algorytm jest przydatne w przypadku sekwencję operacji, które spełniają asocjacyjnej właściwości. (Ten algorytm nie wymagają przemienne właściwości). Poniżej podano niektóre czynności, które można wykonywać za pomocą `parallel_reduce`:  
   
 -   Należy pomnożyć sekwencji macierzy w celu utworzenia macierzy.  
@@ -191,7 +186,7 @@ Biblioteka równoległych wzorców (PLL) zapewnia algorytmów jednocześnie wyko
   
  W wielu przypadkach można traktować `parallel_reduce` jako skrót do użytku `parallel_for_each` algorytm razem z [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) klasy.  
   
-###  <a name="map_reduce_example"></a>Przykład: Wykonywanie mapowania i zmniejszyć równolegle  
+###  <a name="map_reduce_example"></a> Przykład: Wykonywanie mapowania i zmniejszyć równolegle  
 
  A *mapy* operacja dotyczy funkcji każdej wartości w sekwencji. A *zmniejszyć* operacji łączy elementy sekwencji w jedną wartość. Standardowa biblioteka C++ można użyć [std::transform](../../standard-library/algorithm-functions.md#transform) i [std::accumulate](../../standard-library/numeric-functions.md#accumulate) funkcji wykonywanie mapowania i zmniejszanie operacji. Jednak wiele problemów, można użyć `parallel_transform` algorytmu do wykonania tej operacji mapy równolegle i `parallel_reduce` algorytm operacji Zmniejsz równolegle.  
 
@@ -204,7 +199,7 @@ Biblioteka równoległych wzorców (PLL) zapewnia algorytmów jednocześnie wyko
   
  [[Górnej](#top)]  
   
-##  <a name="partitions"></a>Podziału pracy  
+##  <a name="partitions"></a> Podziału pracy  
  Aby parallelize operacji na źródle danych, jest kluczowy etap *partycji* źródła do sekcje, które mogą być jednocześnie udostępniane przez wiele wątków. Partycjonera Określa, jak algorytm równoległych powinien partycji zakresów między wątkami. Jak opisano wcześniej w tym dokumencie, PPL korzysta z domyślnego mechanizmu, który tworzy początkowej obciążeń i następnie używa algorytmu i zakres kradzież do równoważenie tych partycji, podczas obciążenia są niezrównoważone kradzież pracy partycjonowania. Na przykład po ukończeniu zakres iteracji jednego iteracji pętli środowiska uruchomieniowego ponownie dystrybuuje pracy z innych wątków tego wątku. Jednak w przypadku niektórych scenariuszy możesz określić inny mechanizm partycjonowania, który lepiej nadaje się do problemu.  
   
  `parallel_for`, `parallel_for_each`, I `parallel_transform` algorytmy zawiera przeciążone wersji, które przyjmują dodatkowy parametr `_Partitioner`. Ten parametr określa typ partycjonera dzielącą pracy. Oto rodzaje partycjonery definiujących PPL:  
@@ -239,7 +234,7 @@ Biblioteka równoległych wzorców (PLL) zapewnia algorytmów jednocześnie wyko
   
  [[Górnej](#top)]  
   
-##  <a name="parallel_sorting"></a>Sortowania równoległego  
+##  <a name="parallel_sorting"></a> Sortowania równoległego  
 
  PPL udostępnia trzy algorytmów sortowania: [concurrency::parallel_sort](reference/concurrency-namespace-functions.md#parallel_sort), [concurrency::parallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort), i [concurrency::parallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort). Sortowanie algorytmy są przydatne w przypadku zestaw danych, które mogą korzystać z sortowane równolegle. W szczególności sortowanie równolegle jest przydatna, jeśli masz dużego zestawu danych lub gdy sortowanie danych za pomocą operacji porównywania w praktyce kosztowne. Każdy z tych algorytmów sortuje elementów w miejscu.  
 
@@ -287,7 +282,7 @@ Biblioteka równoległych wzorców (PLL) zapewnia algorytmów jednocześnie wyko
   
  Funkcja wyznaczania wartości skrótu musi zwracać typ całkowity ([std::is_integral::value](../../standard-library/is-integral-class.md) musi być `true`). Ten typ całkowity musi być do przekonwertowania na typ `size_t`.  
   
-###  <a name="choose_sort"></a>Wybieranie algorytmu sortowania  
+###  <a name="choose_sort"></a> Wybieranie algorytmu sortowania  
  W wielu przypadkach `parallel_sort` zapewnia równowagę pamięci i szybkości. Jednak jako możesz zwiększyć rozmiar zestawu danych, liczba dostępnych procesorów lub złożoność funkcji porównania, `parallel_buffered_sort` lub `parallel_radixsort` mogą działać lepiej. Najlepszy sposób, aby ustalić, który algorytm sortowania do użycia w dowolnym danego scenariusza jest eksperymentu i miary, jak długo trwa sortowanie typowych danych w ramach konfiguracji reprezentatywny komputerów. W przypadku strategii dotyczącej sortowania, należy pamiętać o następujących wytycznych.  
   
 -   Rozmiar zestawu danych. W tym dokumencie *małych* zestaw danych zawiera mniej niż 1000 elementów *średni* zestaw danych zawiera między elementami 10 000 do 100 000, a *dużych* zestaw danych zawiera więcej niż 100 000 elementów.  
@@ -302,11 +297,11 @@ Biblioteka równoległych wzorców (PLL) zapewnia algorytmów jednocześnie wyko
   
  Nie może być wyodrębnienie sortowania w małym zestawie danych równolegle, nawet jeśli masz dużą liczbę dostępnych zasobów obliczeniowych lub z funkcji Porównaj lub funkcji skrótu wykonuje stosunkowo dużą ilość pracy. Można użyć [std::sort](../../standard-library/algorithm-functions.md#sort) funkcji, aby posortować małych zestawów danych. (`parallel_sort` i `parallel_buffered_sort` wywołać `sort` podczas określania rozmiaru fragmentu, który jest większy niż zestaw danych; jednak `parallel_buffered_sort` musi przydzielić miejsca O(N), co może zająć więcej czasu z powodu przydziału pamięci lub rywalizacji blokad.)  
   
- Jeśli musisz zachowywania pamięci lub Twoje alokatora podlega rywalizacji blokad, użyj `parallel_sort` do sortowania zestawu danych średniej wielkości. `parallel_sort`wymaga nie dodatkowe miejsce; inne algorytmy wymagają O(N) miejsca.  
+ Jeśli musisz zachowywania pamięci lub Twoje alokatora podlega rywalizacji blokad, użyj `parallel_sort` do sortowania zestawu danych średniej wielkości. `parallel_sort` wymaga nie dodatkowe miejsce; inne algorytmy wymagają O(N) miejsca.  
   
- Użyj `parallel_buffered_sort` sortowania średnich zestawów danych i gdy aplikacja spełnia dodatkowe wymagania dotyczące wolnego miejsca O(N). `parallel_buffered_sort`może być szczególnie przydatne, jeśli masz dużą liczbę zasobów obliczeniowych lub funkcja porównywania kosztowna lub funkcji skrótu.  
+ Użyj `parallel_buffered_sort` sortowania średnich zestawów danych i gdy aplikacja spełnia dodatkowe wymagania dotyczące wolnego miejsca O(N). `parallel_buffered_sort` może być szczególnie przydatne, jeśli masz dużą liczbę zasobów obliczeniowych lub funkcja porównywania kosztowna lub funkcji skrótu.  
   
- Użyj `parallel_radixsort` sortowania dużych zestawów danych, a także jeśli aplikacja spełnia dodatkowe wymagania dotyczące wolnego miejsca O(N). `parallel_radixsort`może być przydatny podczas operacji porównywania równoważne jest droższe lub gdy obie operacje jest dość kosztowna.  
+ Użyj `parallel_radixsort` sortowania dużych zestawów danych, a także jeśli aplikacja spełnia dodatkowe wymagania dotyczące wolnego miejsca O(N). `parallel_radixsort` może być przydatny podczas operacji porównywania równoważne jest droższe lub gdy obie operacje jest dość kosztowna.  
   
 > [!CAUTION]
 >  Implementowanie funkcji skrótu dobrej wymaga znasz zakres zestawu danych i jak każdy element w zestawie danych jest przekształcana do odpowiedniej wartości bez znaku. Ponieważ operacja wyznaczania wartości skrótu działa na wartości bez znaku, należy rozważyć innych strategii sortowania, jeśli nie można przedstawić wartości skrótu bez znaku.  
@@ -354,6 +349,6 @@ Biblioteka równoległych wzorców (PLL) zapewnia algorytmów jednocześnie wyko
   
  [parallel_buffered_sort — funkcja](reference/concurrency-namespace-functions.md#parallel_buffered_sort)  
   
- [parallel_radixsort — funkcja](reference/concurrency-namespace-functions.md#parallel_radixsort)
+ [parallel_radixsort Function](reference/concurrency-namespace-functions.md#parallel_radixsort)
 
 

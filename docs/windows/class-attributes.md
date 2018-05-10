@@ -1,31 +1,26 @@
 ---
-title: "Klasy atrybutów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Klasy atrybutów | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], class attributes
 - class attributes
 ms.assetid: fad04ea1-d8ff-46d4-bb42-2b4500a6ab60
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: afc3f277170dbbdf92f280d341bffb042ab70af2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8a932fdb1ef1d9e2af2acace901feaa95b6216d1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="class-attributes"></a>Atrybuty klasy
 Następujące atrybuty dotyczą [klasy](../cpp/class-cpp.md) słowa kluczowego języka C++.  
@@ -39,7 +34,7 @@ Następujące atrybuty dotyczą [klasy](../cpp/class-cpp.md) słowa kluczowego j
 |[coclass](../windows/coclass.md)|Tworzy kontrolkę ActiveX.|  
 |[com_interface_entry —](../windows/com-interface-entry-cpp.md)|Dodaje wpis interfejs do mapy COM.|  
 |[control](../windows/control.md)|Określa, że typ zdefiniowany przez użytkownika jest formantu.|  
-|[niestandardowe](../windows/custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|  
+|[custom](../windows/custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|  
 |[db_command](../windows/db-command.md)|Tworzy polecenia OLE DB.|  
 |[db_param](../windows/db-param.md)|Kojarzy zmiennej określonego elementu członkowskiego z parametrem wejściowych lub wyjściowych i rozgranicza zmiennej.|  
 |[db_source](../windows/db-source.md)|Tworzy połączenie ze źródłem danych.|  
@@ -53,17 +48,17 @@ Następujące atrybuty dotyczą [klasy](../cpp/class-cpp.md) słowa kluczowego j
 |[helpstringcontext](../windows/helpstringcontext.md)|Określa identyfikator tematu pomocy w formacie pliku .hlp lub .chm.|  
 |[helpstring](../windows/helpstring.md)|Określa ciąg znaków używany do opisania elementu, którego dotyczy.|  
 |[hidden](../windows/hidden.md)|Wskazuje, czy element istnieje, ale nie powinien być wyświetlany w przeglądarce zorientowanej na użytkownika.|  
-|[implementuje](../windows/implements-cpp.md)|Określa wysyłania interfejsów, które muszą być członkami IDL coclass.|  
+|[Implementuje](../windows/implements-cpp.md)|Określa wysyłania interfejsów, które muszą być członkami IDL coclass.|  
 |[implements_category](../windows/implements-category.md)|Określa kategorii składników zaimplementowane dla klasy.|  
 |[Moduł](../windows/module-cpp.md)|Określa blok biblioteki w pliku .idl.|  
 |[noncreatable](../windows/noncreatable.md)|Definiuje obiekt, który nie może występować samodzielnie.|  
 |[progid](../windows/progid.md)|Określa identyfikator ProgID dla formantu.|  
 |[registration_script](../windows/registration-script.md)|Wykonuje określoną rejestrację skryptu.|  
 |[requestedit](../windows/requestedit.md)|Wskazuje, że właściwość obsługuje **OnRequestEdit** powiadomień.|  
-|[źródło](../windows/source-cpp.md)|Określa formantu interfejsów źródłowych punktów połączenia w klasie. Właściwości lub metody **źródła** atrybut wskazuje, że element członkowski zwraca obiekt lub Typ VARIANT, który jest źródłem zdarzeń.|  
+|[source](../windows/source-cpp.md)|Określa formantu interfejsów źródłowych punktów połączenia w klasie. Właściwości lub metody **źródła** atrybut wskazuje, że element członkowski zwraca obiekt lub Typ VARIANT, który jest źródłem zdarzeń.|  
 |[support_error_info](../windows/support-error-info.md)|Obsługuje raportowania błędów dla obiekt docelowy.|  
-|[wątkowość](../windows/threading-cpp.md)|Określa model wątkowości dla formantu.|  
-|[Identyfikator UUID](../windows/uuid-cpp-attributes.md)|Określa unikatowy identyfikator dla klasy ani interfejsu.|  
+|[Wątkowość](../windows/threading-cpp.md)|Określa model wątkowości dla formantu.|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Określa unikatowy identyfikator dla klasy ani interfejsu.|  
 |[Wersja](../windows/version-cpp.md)|Identyfikuje określoną wersją wśród wielu wersji klasy.|  
 |[vi_progid](../windows/vi-progid.md)|Określa niezależny od wersji formularza identyfikatora ProgID.|  
   

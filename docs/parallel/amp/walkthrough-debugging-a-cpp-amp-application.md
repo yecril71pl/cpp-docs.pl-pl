@@ -1,13 +1,10 @@
 ---
-title: "Wskazówki: Debugowanie aplikacji C++ AMP | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Wskazówki: Debugowanie aplikacji C++ AMP | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cfc12a238ccaff90fa7c22e8a67d8e10d0796e6
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 2f1308462133c11c8f945416a13fb5542c1d2da8
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Wskazówki: debugowanie aplikacji C++ AMP
 W tym temacie przedstawiono sposób debugowania aplikacji, która używa C++ Accelerated Massive Parallelism (C++ AMP), aby móc korzystać z procesor graficzny (GPU). Używa programu redukcji równoległe podsumowuje dużą tablicę liczb całkowitych. W instruktażu przedstawiono następujące zagadnienia:  

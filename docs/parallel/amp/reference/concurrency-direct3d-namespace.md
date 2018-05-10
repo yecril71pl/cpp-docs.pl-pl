@@ -1,12 +1,9 @@
 ---
-title: "CONCURRENCY::Direct3D — Namespace | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: CONCURRENCY::Direct3D — Namespace | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::direct3d
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 607a3f25c2dfea5eee833f3608021547d8cd7c44
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9516e3f89d393405a5f71af569a50e46e381d579
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d — Przestrzeń nazw
 `direct3d` Przestrzeń nazw zawiera funkcje, które obsługują współdziałanie D3D. Go umożliwia bezproblemowe na użytek D3D zasobów obliczeniowych w kodzie AMP także Zezwalaj na korzystanie z zasobów utworzone w AMP w kodzie D3D bez tworzenia nadmiarowe kopie pośrednich. Można przyrostowo przyspieszanie znacznym obliczeń części aplikacji DirectX przy użyciu C++ AMP i na podstawie obliczenia AMP danych za pomocą interfejsu API D3D.  
@@ -71,7 +66,7 @@ namespace direct3d;
 |[imax](concurrency-direct3d-namespace-functions-amp.md#imax)|Porównuje dwie wartości, zwraca wartość, która jest większa.|  
 |[imin](concurrency-direct3d-namespace-functions-amp.md#imin)|Porównuje dwie wartości, zwraca wartość, która jest mniejsza.|  
 |[is_timeout_disabled](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|Zwraca wartość boolean flagę wskazującą, czy limit czasu jest wyłączona dla określonego accelerator_view.|  
-|[mad](concurrency-direct3d-namespace-functions-amp.md#mad)|Przeciążone. Wykonuje arytmetyczne mnożenia/Dodaj operacji na trzech argumentów: _X * _Y + _Z —|  
+|[mad —](concurrency-direct3d-namespace-functions-amp.md#mad)|Przeciążone. Wykonuje arytmetyczne mnożenia/Dodaj operacji na trzech argumentów: _X * _Y + _Z —|  
 |[make_array](concurrency-direct3d-namespace-functions-amp.md#make_array)|Utwórz tablicy ze wskaźnikiem interfejsu buforu D3D.|  
 |[hałasu](concurrency-direct3d-namespace-functions-amp.md#noise)|Generuje losowe wartości przy użyciu algorytmu szumu Perlin|  
 |[wartość w radianach](concurrency-direct3d-namespace-functions-amp.md#radians)|Konwertuje _X stopnie na radiany|  

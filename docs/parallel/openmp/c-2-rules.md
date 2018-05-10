@@ -1,32 +1,27 @@
 ---
-title: "C.2 reguły | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: C.2 reguły | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 4d52fef7-3eb7-4480-a335-8ed48681092b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5efa8d0e7cf4118362b7695bafcd4710b4021f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3bdf26435fdfeea2196b9ef281d656805f51bf2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="c2-rules"></a>C.2 Reguły
 Notacja została opisana w sekcji 6.1 C standard. Ten dodatek gramatyka zawiera rozszerzenia do gramatyki języka podstawowego dla dyrektywy OpenMP C i C++.  
   
- **/\*w języku C++ (ISO/IEC 14882:1998)\*/**  
+ **/\* w języku C++ (ISO/IEC 14882:1998) \*/**  
   
  *seq — instrukcja*:  
   
@@ -38,7 +33,7 @@ Notacja została opisana w sekcji 6.1 C standard. Ten dodatek gramatyka zawiera 
   
  *seq — instrukcja openmp — dyrektywa*  
   
- **/\*w C90 (ISO/IEC 9899:1990)\*/**  
+ **/\* w C90 (ISO/IEC 9899:1990) \*/**  
   
  *Lista instrukcji*:  
   
@@ -50,7 +45,7 @@ Notacja została opisana w sekcji 6.1 C standard. Ten dodatek gramatyka zawiera 
   
  *Lista instrukcji openmp — dyrektywa*  
   
- **/\*w C99 (ISO/IEC 9899:1999)\*/**  
+ **/\* w C99 (ISO/IEC 9899:1999) \*/**  
   
  *element bloku*:  
   
@@ -62,7 +57,7 @@ Notacja została opisana w sekcji 6.1 C standard. Ten dodatek gramatyka zawiera 
   
  *Instrukcja*:  
   
- **/\*Standardowa — instrukcje\*/**  
+ **/\* Standardowa — instrukcje \*/**  
   
  *konstrukcja OpenMP*  
   
@@ -150,7 +145,7 @@ Notacja została opisana w sekcji 6.1 C standard. Ten dodatek gramatyka zawiera 
   
  **Przewodnik**  
   
- **środowisko uruchomieniowe**  
+ **Środowisko uruchomieniowe**  
   
  *konstrukcja sekcji*:  
   
@@ -274,7 +269,7 @@ Notacja została opisana w sekcji 6.1 C standard. Ten dodatek gramatyka zawiera 
   
  *Deklaracja*:  
   
- **/\*deklaracje standardowe\*/**  
+ **/\* deklaracje standardowe \*/**  
   
  *threadprivate — dyrektywa*  
   
@@ -304,9 +299,9 @@ Notacja została opisana w sekcji 6.1 C standard. Ten dodatek gramatyka zawiera 
   
  *operatorem redukcji*:  
   
- *Jeden z*:  **+  \* -& ^ &#124; & & &#124; &#124;**  
+ *Jeden z*:  **+  \* -& ^ &#124; & &&#124;&#124;**  
   
- **/\*w języku C\*/**  
+ **/\* w języku C \*/**  
   
  *Zmienna listy*:  
   
@@ -314,7 +309,7 @@ Notacja została opisana w sekcji 6.1 C standard. Ten dodatek gramatyka zawiera 
   
  *Zmienna listy* **,** *identyfikator*  
   
- **/\*w języku C++\*/**  
+ **/\* w języku C++ \*/**  
   
  *Zmienna listy*:  
   

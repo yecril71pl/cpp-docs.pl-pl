@@ -1,12 +1,9 @@
 ---
-title: "uint_4 — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: uint_4 — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::ywx
@@ -277,17 +274,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 1cda9e2c-5970-4ced-ae54-d7ff3c6746f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d70672b5d862164607afefde3de758fdd269d60
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 490242014a907455a9511cd54f5e46a809318691
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="uint4-class"></a>uint_4 — Klasa
 Reprezentuje krótki wektor czterech liczb całkowitych bez znaku.  
@@ -310,7 +305,7 @@ class uint_4;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[uint_4 Constructor](#uint_4__ctor) |Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy z 0.|  
+|[uint_4 — Konstruktor](#uint_4__ctor) |Przeciążone. Domyślny konstruktor, inicjuje wszystkie elementy z 0.|  
 
   
 ### <a name="public-methods"></a>Metody publiczne  
@@ -460,10 +455,10 @@ class uint_4;
 |----------|-----------------|  
 |uint_4::operator-||  
 |uint_4::operator--||  
-|uint_4::operator*=||  
+|uint_4::operator * =||  
 |uint_4::operator / =||  
 |uint_4::operator ++||  
-|uint_4::operator+=||  
+|uint_4::operator +=||  
 |uint_4::operator=||  
 |uint_4::operator-=||  
   
@@ -482,7 +477,7 @@ class uint_4;
 |uint_4::ab||  
 |uint_4::abg||  
 |uint_4::abgr||  
-|uint_4::abr||  
+|uint_4::ABR||  
 |uint_4::abrg||  
 |uint_4::ag||  
 |uint_4::agb||  
@@ -615,7 +610,7 @@ class uint_4;
   
  **Namespace:** Concurrency::graphics  
   
-## <a name="uint_4__ctor"></a> uint_4 
+## <a name="uint_4__ctor"></a> uint_4 — 
 
 Domyślny konstruktor, inicjuje wszystkie elementy z 0.
   

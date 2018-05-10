@@ -1,13 +1,10 @@
 ---
-title: "db_source — | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: db_source — | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.db_source
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - db_source attribute
 ms.assetid: 0ec8bbf7-ade2-4899-bf4c-8608b92779bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18c4a4af3f8df4e3af5f6aae8f6643db553c7373
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b826e5d630b52062892001c26efda01b5c7293f4
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="dbsource"></a>db_source
 Tworzy połączenie ze źródłem danych.  
@@ -49,24 +44,24 @@ Tworzy połączenie ze źródłem danych.
  *Nazwa* (opcjonalnie)  
  Jeśli używasz `db_source` w klasie, *nazwa* jest wystąpieniem obiektu źródła danych, która ma `db_source` atrybut (Zobacz przykład 1). Jeśli używasz `db_source` wbudowany w implementacji metody, *nazwa* jest zmienna (lokalny do metody), która może służyć do uzyskiwania dostępu do danych źródła (Zobacz przykład 2). Przekaż to *nazwa* do `source_name` parametr **db_command —** do skojarzenia ze źródłem danych za pomocą polecenia.  
   
- `hresult`(opcjonalnie)  
+ `hresult` (opcjonalnie)  
  Identyfikuje zmienna, która odbierze `HRESULT` tego polecenia bazy danych. Jeśli zmienna nie istnieje, jej zostaną automatycznie dodane przez atrybut.  
   
 ## <a name="remarks"></a>Uwagi  
- `db_source`Tworzy [CDataSource](../data/oledb/cdatasource-class.md) i [CSession](../data/oledb/csession-class.md) obiektu, który łącznie stanowią połączenie ze źródłem danych konsumentów OLE DB.  
+ `db_source` Tworzy [CDataSource](../data/oledb/cdatasource-class.md) i [CSession](../data/oledb/csession-class.md) obiektu, który łącznie stanowią połączenie ze źródłem danych konsumentów OLE DB.  
   
  Jeśli używasz `db_source` w klasie, `CSession` obiektu stanie się członkiem tej klasy.  
   
  Jeśli używasz `db_source` w metodzie, wprowadzony kod zostanie wykonany w zakresie — metoda i `CSession` obiekt jest tworzony jako zmiennej lokalnej.  
   
- `db_source`dodaje właściwości źródła danych do klasy lub w metodzie. Jest on używany w połączeniu z **db_command —** (który bierze `db_source` *nazwa* parametr jako jego `source_name` parametru).  
+ `db_source` dodaje właściwości źródła danych do klasy lub w metodzie. Jest on używany w połączeniu z **db_command —** (który bierze `db_source` *nazwa* parametr jako jego `source_name` parametru).  
   
  Gdy dostawca atrybutu konsumenta stosuje ten atrybut do klasy, kompilator spowoduje zmianę nazwy klasy, która ma \_ *YourClassName*dostępu, gdzie *YourClassName* jest nazwa nadana klasy i kompilator utworzy klasy o nazwie *YourClassName*, co wynika ze \_ *YourClassName*metody dostępu.  W widoku klasy zostanie wyświetlona zarówno klasy.  
   
  Na przykład ten atrybut używany w aplikacji, zobacz przykłady [AtlAgent](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409) i [MultiRead](http://msdn.microsoft.com/en-us/5a2a915a-77dc-492f-94b2-1b809995dd5e).  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie wywołuje `db_source` dla klasy, aby utworzyć połączenie ze źródłem danych `ds` przy użyciu bazy danych Northwind. `ds`jest dojścia dla źródła danych, która jest używana wewnętrznie do `CMyCommand` klasy.  
+ W tym przykładzie wywołuje `db_source` dla klasy, aby utworzyć połączenie ze źródłem danych `ds` przy użyciu bazy danych Northwind. `ds` jest dojścia dla źródła danych, która jest używana wewnętrznie do `CMyCommand` klasy.  
   
 ```  
 // db_source_1.cpp  

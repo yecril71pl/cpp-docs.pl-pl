@@ -1,12 +1,9 @@
 ---
-title: "network_link_registry — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: network_link_registry — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - network_link_registry
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a029d02e5c40ff38a837ab8096a8b4713007ed5
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: dab0ad6aff391eb89ac59198fb8c173ecb362bbd
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry — Klasa
 `network_link_registry` Abstrakcyjna klasa podstawowa zarządza łącza między bloki źródłowe i docelowe.  
@@ -105,7 +100,7 @@ virtual iterator begin() = 0;
 ### <a name="remarks"></a>Uwagi  
  Wskazuje stan końcowy iteratora `NULL` łącza.  
   
-##  <a name="contains">zawiera</a> 
+##  <a name="contains"></a> zawiera 
 
  W przypadku przesłonięcia w klasie pochodnej, wyszukuje `network_link_registry` obiektu dla określonego bloku.  
   
@@ -120,7 +115,7 @@ virtual bool contains(_EType _Link) = 0;
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli znaleziono bloku, `false` inaczej.  
   
-##  <a name="count">Liczba</a> 
+##  <a name="count"></a> Liczba 
 
  W przypadku przesłonięcia w klasie pochodnej zwraca liczbę elementów w `network_link_registry` obiektu.  
   
@@ -148,5 +143,5 @@ virtual bool remove(_EType _Link) = 0;
   
 ## <a name="see-also"></a>Zobacz też  
  [Współbieżność Namespace](concurrency-namespace.md)   
- [single_link_registry Class](single-link-registry-class.md)   
+ [single_link_registry — klasa](single-link-registry-class.md)   
  [multi_link_registry, klasa](multi-link-registry-class.md)

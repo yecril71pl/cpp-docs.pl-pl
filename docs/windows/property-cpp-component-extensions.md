@@ -1,13 +1,10 @@
 ---
-title: "właściwości (C++ Component Extensions) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: właściwości (C++ Component Extensions) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - property_cpp
 - property
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b9d310043a2693eaef254256385becc0bcc7d501
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b763131fe91e2df2385f2c06bcba8bc759d695a1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="property--c-component-extensions"></a>property (C++ Component Extensions)
 Deklaruje *właściwość*, która jest funkcją członkowską, który zachowuje się oraz uzyskiwania dostępu do elementu członkowskiego danych lub element tablicy.  
@@ -169,7 +164,7 @@ modifier property type default[index];
   
  Ułatwienia dostępu w różnych jest dozwolony dla metod dostępu w bloku właściwości.  Oznacza to set, metoda może być publiczny i metody get mogą być prywatne.  Jednak jest błąd dla metody dostępu ma mniej restrykcyjną ułatwień dostępu, niż jest to w deklaracji samej właściwości.  
   
- `property`jest słowem kluczowym kontekstowa.  Aby uzyskać więcej informacji, zobacz [słowa kluczowe Context-Sensitive](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ `property` jest słowem kluczowym kontekstowa.  Aby uzyskać więcej informacji, zobacz [słowa kluczowe Context-Sensitive](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
   
 ### <a name="requirements"></a>Wymagania  

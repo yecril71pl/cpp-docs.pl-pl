@@ -1,12 +1,9 @@
 ---
-title: "concurrent_priority_queue — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: concurrent_priority_queue — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_priority_queue
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16a9114278cd9559a0a21191faeb87ee34b5a5df
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ed193eea8209611640b6d125d79ffec1748a7f7f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue — Klasa
 `concurrent_priority_queue` Klasy to kontener udostępniający wiele wątków jednocześnie elementów wypychania i pop. Elementy są zdjęte ze stosu w kolejności priorytetu, której priorytet jest określana przez obiekt podana jako argument szablonu.  
@@ -82,7 +77,7 @@ template <typename T,
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[Wyczyść](#clear)|Usuwa wszystkie elementy w równoczesnych priorytet. Ta metoda nie jest bezpieczne współbieżności.|  
-|[empty](#empty)|Testy, jeśli kolejka równoczesnych priorytet jest pusta w momencie ta metoda jest wywoływana. Ta metoda jest bezpieczne współbieżności.|  
+|[pusty](#empty)|Testy, jeśli kolejka równoczesnych priorytet jest pusta w momencie ta metoda jest wywoływana. Ta metoda jest bezpieczne współbieżności.|  
 |[get_allocator](#get_allocator)|Zwraca kopię alokatora użyta do skonstruowania równoczesnych priorytet kolejki. Ta metoda jest bezpieczne współbieżności.|  
 |[push](#push)|Przeciążone. Dodaje element do kolejki równoczesnych priorytet. Ta metoda jest bezpieczne współbieżności.|  
 |[Rozmiar](#size)|Zwraca liczbę elementów w kolejce równoczesnych priorytet. Ta metoda jest bezpieczne współbieżności.|  
@@ -106,7 +101,7 @@ template <typename T,
   
  **Namespace:** współbieżności  
   
-##  <a name="clear">Wyczyść</a> 
+##  <a name="clear"></a> Wyczyść 
 
  Usuwa wszystkie elementy w równoczesnych priorytet. Ta metoda nie jest bezpieczne współbieżności.  
   
@@ -234,7 +229,7 @@ void push(value_type&& _Elem);
  `_Elem`  
  Element ma zostać dodana do kolejki równoczesnych priorytet.  
   
-##  <a name="size">Rozmiar</a> 
+##  <a name="size"></a> Rozmiar 
 
  Zwraca liczbę elementów w kolejce równoczesnych priorytet. Ta metoda jest bezpieczne współbieżności.  
   

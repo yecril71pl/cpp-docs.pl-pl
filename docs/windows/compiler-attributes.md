@@ -1,31 +1,26 @@
 ---
 title: Atrybuty kompilatora | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - cl.exe compiler, attributes
 - attributes [C++], compiler
 ms.assetid: 53cd9bee-1521-48ec-b171-80feac2096cc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e83743859d4c4bdfb515df6008969a9cc7b56e2e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4366b5d804275f78ef1c3b4f1dd8e8e51b01b8c2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="compiler-attributes"></a>Atrybuty kompilatora
 Atrybuty kompilatora udostępniać różne funkcje.  
@@ -36,7 +31,7 @@ Atrybuty kompilatora udostępniać różne funkcje.
 |[event_receiver](../windows/event-receiver.md)|Tworzy odbiorca zdarzenia.|  
 |[event_source](../windows/event-source.md)|Tworzy źródła zdarzenia.|  
 |[export](../windows/export.md)|Powoduje, że struktura danych mają być umieszczone w pliku .idl.|  
-|[implementuje](../windows/implements-cpp.md)|Określa wysyłania interfejsów, które muszą być członkami IDL coclass.|  
+|[Implementuje](../windows/implements-cpp.md)|Określa wysyłania interfejsów, które muszą być członkami IDL coclass.|  
 |[importidl](../windows/importidl.md)|Wstawia pliku .idl określony w pliku .idl wygenerowany.|  
 |[importlib](../windows/importlib.md)|Powoduje, że typy, które już zostały skompilowane w innej bibliotece typu dostępne do tworzenia biblioteki typów.|  
 |[includelib —](../windows/includelib-cpp.md)|Powoduje, że pliku .idl lub .h do uwzględnienia w pliku .idl wygenerowany.|  

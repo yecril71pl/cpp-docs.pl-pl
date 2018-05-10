@@ -1,13 +1,10 @@
 ---
-title: "Najlepsze rozwiązania w bibliotece równoległych wzorców | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Najlepsze rozwiązania w bibliotece równoległych wzorców | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,24 +13,22 @@ helpviewer_keywords:
 - best practices, Parallel Patterns Library
 - Parallel Patterns Library, best practices
 ms.assetid: e43e0304-4d54-4bd8-a3b3-b8673559a9d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40629b25ebcc954ac19389fbc0abb3aef6e9374a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ce3a4745b52c518484d14eafd483625eed2a0da
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>Biblioteka wzorów równoległych — Najlepsze praktyki
 W tym dokumencie opisano jak najbardziej efektywne wykorzystanie równoległych biblioteki wzorców (PLL). PPL udostępnia ogólnego przeznaczenia kontenerów, obiektów i algorytmy do wykonywania równoległości szczegółowych.  
   
  Aby uzyskać więcej informacji o PPL, zobacz [równoległych biblioteki wzorców (PLL)](../../parallel/concrt/parallel-patterns-library-ppl.md).  
   
-##  <a name="top"></a>Sekcje  
+##  <a name="top"></a> Sekcje  
  Ten dokument zawiera następujące sekcje:  
   
 - [Nie Parallelize małych jednostek pętli](#small-loops)  
@@ -56,7 +51,7 @@ W tym dokumencie opisano jak najbardziej efektywne wykorzystanie równoległych 
   
 - [Upewnij się, że zmienne są prawidłowe w okresie istnienia zadania](#lifetime)  
   
-##  <a name="small-loops"></a>Nie Parallelize małych jednostek pętli  
+##  <a name="small-loops"></a> Nie Parallelize małych jednostek pętli  
  Paralelizacja jednostek pętli stosunkowo mały może spowodować skojarzone planowanie obciążenie ma przeważają korzyści przetwarzania równoległego. Rozważmy poniższy przykład, który dodaje każda para elementów w dwóch tablic.  
   
  [!code-cpp[concrt-small-loops#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_1.cpp)]  
@@ -65,7 +60,7 @@ W tym dokumencie opisano jak najbardziej efektywne wykorzystanie równoległych 
   
  [[Górnej](#top)]  
   
-##  <a name="highest"></a>Równoległość najwyższym możliwym poziomie Express  
+##  <a name="highest"></a> Równoległość najwyższym możliwym poziomie Express  
  Gdy parallelize kodu tylko na niskim poziomie, mogą stać się konstrukcja rozwidlenia sprzężenia, która nie obsługuje jako liczba wzrasta procesorów. A *rozwidlenia sprzężenia* konstrukcja jest konstrukcji, na którym jedno zadanie dzieli pracę na mniejsze równoległych zadań podrzędnych i czeka na tych zadań podrzędnych zakończyć. Każdy podzadanie można rekursywnie dzielenie się w dodatkowych podzadań.  
   
  Chociaż modelu rozwidlenia sprzężenia mogą być przydatne podczas rozwiązywania szerokiej gamy problemów, istnieją sytuacje, w którym zmniejszyć koszty synchronizacji skalowalności. Rozważmy na przykład następujący kod szeregowych, który przetwarza dane obrazu.  
@@ -92,7 +87,7 @@ W tym dokumencie opisano jak najbardziej efektywne wykorzystanie równoległych 
   
  [[Górnej](#top)]  
   
-##  <a name="divide-and-conquer"></a>Korzystanie z parallel_invoke do rozwiązywania problemów dzielenia oraz o  
+##  <a name="divide-and-conquer"></a> Korzystanie z parallel_invoke do rozwiązywania problemów dzielenia oraz o  
 
  A *dzielenia oraz o* problem jest formą konstrukcji rozwidlenia sprzężenia używa rekursji można przerwać zadania w podzadania. Oprócz [concurrency::task_group](reference/task-group-class.md) i [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) klas, można również użyć [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algorytm Rozwiązywanie problemów z dzielenia oraz o. `parallel_invoke` Algorytm ma składnię zwięzły więcej niż obiekty grupy zadań i jest przydatne w przypadku stała liczba równoległych zadań.  
   
@@ -106,7 +101,7 @@ W tym dokumencie opisano jak najbardziej efektywne wykorzystanie równoległych 
   
  [[Górnej](#top)]  
   
-##  <a name="breaking-loops"></a>Użyj anulowania lub obsługa aby przerwać pętlę równoległą wyjątków  
+##  <a name="breaking-loops"></a> Użyj anulowania lub obsługa aby przerwać pętlę równoległą wyjątków  
  PPL udostępnia dwa sposoby, aby anulować równoległych pracy wykonywanego przez grupy zadań lub równoległych algorytmu. Jednym ze sposobów jest użycie mechanizmu anulowania, które są udostępniane przez [concurrency::task_group](reference/task-group-class.md) i [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) klasy. Inny sposób jest Zgłoś wyjątek w treści funkcji pracy zadania. Mechanizm anulowania jest bardziej efektywne niż obsługi na anulowanie drzewa pracy równoległej wyjątków. A *drzewa pracy równoległej* jest grupą grup powiązane zadanie, w których niektóre grupy zadań zawierają inne grupy zadań. Mechanizm anulowania anuluje grupy zadań i jej grup podrzędnych zadania w sposób góra dół. Z drugiej strony Obsługa wyjątków w sposób dołu do góry i musiał zrezygnować z każdej grupy zadań podrzędnych niezależnie jako wyjątek w górę propaguje.  
   
 
@@ -132,7 +127,7 @@ W tym dokumencie opisano jak najbardziej efektywne wykorzystanie równoległych 
   
  [[Górnej](#top)]  
   
-##  <a name="object-destruction"></a>Zrozumienie wpływu zniszczeniem obiektu anulowania i obsługa wyjątków  
+##  <a name="object-destruction"></a> Zrozumienie wpływu zniszczeniem obiektu anulowania i obsługa wyjątków  
  Drzewa pracy równoległej zadania, które zostało anulowane zapobiega zadania podrzędne uruchamianie. Może to powodować problemy, jeśli jedno z zadań podrzędnych wykonuje operację, która jest istotne dla aplikacji, takich jak zwalnianie zasobu. Ponadto anulowanie zadania może spowodować wyjątek propagację za pośrednictwem destruktor obiektu i spowodować niezdefiniowane zachowanie aplikacji.  
   
  W poniższym przykładzie `Resource` klasa opisuje zasobu i `Container` klasa opisuje kontener, który zawiera zasoby. W jego destruktora `Container` klasy wywołania `cleanup` metody w dwóch jego `Resource` elementów członkowskich w równolegle, a następnie wywołania `cleanup` metody na jego trzeciej `Resource` elementu członkowskiego.  
@@ -162,7 +157,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[Górnej](#top)]  
   
-##  <a name="repeated-blocking"></a>Nie należy blokować wielokrotnie w równoległej pętli  
+##  <a name="repeated-blocking"></a> Nie należy blokować wielokrotnie w równoległej pętli  
 
  Równoległe pętli, takie jak [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) lub [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) który jest zdominowany przez blokowanie operacji może spowodować środowisko uruchomieniowe umożliwia tworzenie wielu wątków w krótkim czasie.  
 
@@ -179,7 +174,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[Górnej](#top)]  
   
-##  <a name="blocking"></a>Nie wykonuj blokowanie operacji anulowania pracy równoległych  
+##  <a name="blocking"></a> Nie wykonuj blokowanie operacji anulowania pracy równoległych  
 
  Jeśli to możliwe, nie należy wykonywać operacji blokowania przed wywołaniem [concurrency::task_group::cancel](reference/task-group-class.md#cancel) lub [concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel) metodę, aby anulować pracy równoległych.  
 
@@ -203,7 +198,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[Górnej](#top)]  
   
-##  <a name="shared-writes"></a>Nie zapisuj udostępnionych danych w równoległej pętli  
+##  <a name="shared-writes"></a> Nie zapisuj udostępnionych danych w równoległej pętli  
  Współbieżność środowiska wykonawczego zapewnia kilka struktury danych, na przykład [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md), synchronizowanych równoczesny dostęp do współużytkowanych danych. Te struktury danych są przydatne w wielu przypadkach, na przykład wielu zadań rzadko potrzebują dostępu współdzielonego do zasobu.  
   
  Rozważmy następujący przykład, który używa [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algorytmu i `critical_section` obiekt do obliczenia liczba liczb pierwszych w [std::array](../../standard-library/array-class-stl.md) obiektu. W tym przykładzie nie działa, ponieważ każdy wątek należy poczekać na dostęp do współdzielonej zmiennej `prime_sum`.  
@@ -224,7 +219,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[Górnej](#top)]  
   
-##  <a name="false-sharing"></a>Jeśli to możliwe, należy unikać udostępnianie False  
+##  <a name="false-sharing"></a> Jeśli to możliwe, należy unikać udostępnianie False  
  *Udostępnianie false* występuje, gdy wiele równoczesnych zadań, które są uruchomione na oddzielnych procesorów zapisu zmienne, które znajdują się na tym samym wierszu pamięci podręcznej. Jedno zadanie zapisuje dane w jednym zmiennych, unieważnienia wiersza pamięci podręcznej dla obu zmiennych. Każdemu procesorowi musi ponownie załadować wiersza pamięci podręcznej zawsze unieważnienia wiersza pamięci podręcznej. W związku z tym udostępnianie false może spowodować zmniejszenie wydajności w aplikacji.  
   
  Podstawowy przykład pokazuje dwóch poniższych równoczesnych zadań każdego zwiększyć wartości zmiennej licznika udostępnionego.  
@@ -245,7 +240,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[Górnej](#top)]  
   
-##  <a name="lifetime"></a>Upewnij się, że zmienne są prawidłowe w okresie istnienia zadania  
+##  <a name="lifetime"></a> Upewnij się, że zmienne są prawidłowe w okresie istnienia zadania  
  Podając wyrażenia lambda do grupy zadań lub równoległych algorytmu klauzuli przechwytywania określa, czy treść wyrażenia lambda uzyskuje dostęp do zmiennych w otaczającym zakresie, według wartości lub według odwołania. Jeśli zmienne do wyrażenia lambda przez odwołanie, musi zapewniać, że okres istnienia tej zmiennej będzie się powtarzać, zakończenie zadania.  
   
  Rozważmy następujący przykład, który definiuje `object` klasy i `perform_action` funkcji. `perform_action` Funkcja tworzy `object` zmiennej i asynchronicznie wykonuje akcję na tej zmiennej. Ponieważ zadanie nie jest gwarantowana, aby zakończyć działanie przed `perform_action` funkcja zwraca będzie awarii lub zachowują nieokreślony Jeśli `object` zmienna zostanie zniszczony, gdy zadanie jest uruchomione.  

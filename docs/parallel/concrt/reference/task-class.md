@@ -2,11 +2,8 @@
 title: Task — klasa (współbieżność środowiska wykonawczego) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - task
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80f56f02c8a26e87da3f402ecebf738304408eac
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 5887350d9ccdf6fc4a41d72ae8a70fa38d939390
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="task-class-concurrency-runtime"></a>task — Klasa (współbieżność środowiska wykonawczego)
 Biblioteka równoległych wzorców (PLL) `task` klasy. A `task` obiekt reprezentuje pracy, które mogą być wykonywane asynchronicznie, a równocześnie z innymi zadaniami i współbieżność środowiska wykonawczego pracy równoległej utworzonych przez algorytmy równoległe. Tworzy wynik typu `_ResultType` na pomyślne zakończenie. Zadania typu `task<void>` utworzyć żadnego wyniku. Zadania można czas potrzebny na i anulowane niezależnie od innych zadań. Mogą być składane również z innymi zadaniami za pomocą kontynuacje ( `then`), a sprzężenia ( `when_all`) i wyboru ( `when_any`) wzorce.  
@@ -69,7 +64,7 @@ class task;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[task](#ctor)|Przeciążone. Konstruuje `task` obiektu.|  
+|[Zadanie](#ctor)|Przeciążone. Konstruuje `task` obiektu.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -79,7 +74,7 @@ class task;
 |[is_apartment_aware](#is_apartment_aware)|Określa, czy zadanie dekoduje Windows Runtime `IAsyncInfo` interfejsu lub podrzędne takich zadań.|  
 |[is_done](#is_done)|Określa, czy zadanie zostało ukończone.|  
 |[scheduler](#scheduler)|Zwraca harmonogramu dla tego zadania|  
-|[then](#then)|Przeciążone. Dodaje zadania kontynuacji do tego zadania.|  
+|[następnie](#then)|Przeciążone. Dodaje zadania kontynuacji do tego zadania.|  
 |[oczekiwania](#wait)|Czeka na to zadanie do przejścia terminala. Istnieje możliwość `wait` do wykonania zadania w tekście, jeśli spełnione są wszystkie zależności zadania i jego ma nie już pobrane do wykonania w tle proces roboczy.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  

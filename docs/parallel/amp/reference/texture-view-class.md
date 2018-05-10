@@ -1,12 +1,9 @@
 ---
-title: "texture_view — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: texture_view — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - texture_view
@@ -23,17 +20,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72f88cc10da623cbda4f3426596fe07650bf4b46
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3db02d9cafb87c0f173546687ad01390e09b9f68
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="textureview-class"></a>texture_view — Klasa
 Zapewnia dostęp do odczytu i zapisu do tekstury. `texture_view` może służyć tylko do odczytu tekstury, którego typ wartości jest `int`, `unsigned int`, lub `float` , która ma domyślne bpse 32-bitowych. Aby odczytać inne formaty tekstury, należy użyć `texture_view<const value_type, _Rank>`.  
@@ -346,7 +341,7 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
   
 ### <a name="parameters"></a>Parametry  
  `_Other`  
- [1, 2] Copy Constructor  
+ [1, 2] Konstruktor kopiujący  
  Z możliwością zapisu `texture_view` obiektu.  
   
  [3] Copy Constructor  
@@ -355,7 +350,7 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 ### <a name="return-value"></a>Wartość zwracana  
  Odwołanie do tego `texture_view` wystąpienia.  
   
-##  <a name="operator_at">Operator]</a> 
+##  <a name="operator_at"></a> Operator] 
 
  Zwraca wartość elementu według indeksu.  
   
@@ -440,7 +435,7 @@ value_type operator() (
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość elementu indeksowane według `_Index`.  
   
-##  <a name="sample">próbki</a> 
+##  <a name="sample"></a> próbki 
 
  Przykłady na poziomie szczegółowości i określonych współrzędnych tekstury za pomocą próbkowania określonej konfiguracji.  
   

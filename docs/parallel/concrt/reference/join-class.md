@@ -1,12 +1,9 @@
 ---
-title: "JOIN — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: JOIN — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - join
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - join class
 ms.assetid: d2217119-70a1-40b6-809f-c1c13a571c3f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ee69daa9ec5570d89d407c980e4ff20deca6360
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a37b6d3dce5d41578999aa54c8dff2dd2271fe9e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="join-class"></a>join — Klasa
 A `join` Blok obsługi wiadomości jest element docelowy jednym wielu źródłach, uporządkowanych `propagator_block` które łączy ze sobą komunikaty typu `T` każdego z jego źródła.  
@@ -179,7 +174,7 @@ join(
   
  Typ `filter_method` jest obiekt podpisem `bool (T const &)` który jest wywoływany przez to `join` obsługi komunikatów bloku, aby ustalić, czy powinna obsługiwać komunikatu oferowany.  
   
-##  <a name="dtor"></a> ~join 
+##  <a name="dtor"></a> ~ join 
 
  Niszczy `join` bloku.  
   

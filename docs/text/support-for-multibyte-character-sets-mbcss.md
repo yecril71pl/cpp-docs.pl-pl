@@ -1,13 +1,10 @@
 ---
-title: "Obsługa zestawów znaków wielobajtowych (zestawy MBCS) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Obsługa zestawów znaków wielobajtowych (zestawy MBCS) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - _mbcs
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - MBCS [C++]
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c6c7bd1477f62e9c78b5e71dfe3723e804283d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b0381b570cbf9e900d44ac075876e63b6be14a8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>Obsługa zestawów znaków wielobajtowych (zestawy MBCS)
 Zestawy znaków wielobajtowych (zestawy MBCS) są to metoda starszych konieczna Obsługa zestawów znaków, takich jak japoński i chiński, której nie można przedstawić w pojedynczy bajt. Jeśli przeprowadzasz nowych aplikacji należy używać Unicode dla wszystkich łańcuchów tekstowych, z wyjątkiem prawdopodobnie ciągów systemu, które nie są widoczne dla użytkowników końcowych. MBCS to starszych technologia która nie jest zalecane w przypadku nowych wdrożeń.  

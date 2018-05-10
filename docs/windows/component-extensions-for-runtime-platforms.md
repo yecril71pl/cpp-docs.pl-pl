@@ -1,13 +1,10 @@
 ---
-title: "Component Extensions dla platform środowiska uruchomieniowego | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Component Extensions dla platform środowiska uruchomieniowego | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e32057e17614da98c78d877fe95180dd02500909
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e60a1285f54de6b1cbfe311d4d9cbbc547785176
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>Component Extensions dla platform środowiska uruchomieniowego
 Visual C++ udostępnia rozszerzenia języka aby program dla platform środowiska uruchomieniowego. Przy użyciu języka C + +/ CX, można program aplikacji platformy uniwersalnej systemu Windows i składników, które skompiluj do kodu natywnego. Mimo że można utworzyć aplikacji platformy uniwersalnej systemu Windows przez programowanie bezpośrednio przed interfejsy COM środowiska wykonawczego systemu Windows przy użyciu języka C + +/ CX, możesz pracować z konstruktorów wyjątków i innych modern C++ programowania idioms. Aby włączyć programowania w języku C++ w środowisku wykonania kodu zarządzanego na platformie .NET, można użyć C + +/ CLI.  
@@ -86,7 +81,7 @@ Visual C++ udostępnia rozszerzenia języka aby program dla platform środowiska
 |`gcnew`|Nie|Przydziela typy w stercie zbierane pamięci. Użyj zamiast `new` i `delete`.|[REF new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
 |`ref new`|Tak|Przydziela typem środowiska wykonawczego systemu Windows. Użyj zamiast `new` i `delete`.|[REF new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
 |`initonly`|Tak|Wskazuje, że element członkowski mogą być inicjowane tylko w deklaracji lub w konstruktorze statycznym.|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|  
-|`literal`|Tak|Tworzy zmienną literału.|[literału](../windows/literal-cpp-component-extensions.md)|  
+|`literal`|Tak|Tworzy zmienną literału.|[Literału](../windows/literal-cpp-component-extensions.md)|  
 |`nullptr`|Nie|Wskazuje, że dojście lub wskaźnik nie wskazuje na obiekt.|[nullptr](../windows/nullptr-cpp-component-extensions.md)|  
   
 ## <a name="template-constructs"></a>Konstrukcje szablonu  
@@ -116,18 +111,18 @@ Visual C++ udostępnia rozszerzenia języka aby program dla platform środowiska
 |[__identifier (C++/CLI)](../windows/identifier-cpp-cli.md)|(Środowisko wykonawcze systemu Windows i CLR) Umożliwia użycie słowa kluczowe jako identyfikatorów.|  
 |[Listy zmiennych argumentów (...) (C++/CLI)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)|(Środowisko wykonawcze systemu Windows i CLR) Włącza funkcję zmienną liczbę argumentów.|  
 |[Odpowiedniki typów natywnych języka C++ w programie .NET Framework (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)|Wyświetla listę typów CLR, które są używane zamiast typów całkowitych C++.|  
-|[elementu AppDomain](../cpp/appdomain.md) `__declspec` modyfikator|`__declspec`Modyfikator, która nakłada się, że zmienne statyczne i globalnych istnieje dla domeny appdomain.|  
+|[elementu AppDomain](../cpp/appdomain.md) `__declspec` modyfikator|`__declspec` Modyfikator, która nakłada się, że zmienne statyczne i globalnych istnieje dla domeny appdomain.|  
 |[Rzutowania w stylu języka C z/CLR (C + +/ CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)|Opisuje sposób interpretowania rzutowania w stylu języka C.|  
 |[__clrcall](../cpp/clrcall.md) konwencji wywoływania|Wskazuje zgodne CLR konwencję wywołania.|  
 |`__cplusplus_cli`|[Wstępnie zdefiniowane makra](../preprocessor/predefined-macros.md)|  
 |[Atrybuty niestandardowe](../windows/custom-attributes-cpp.md)|Opisuje sposób zdefiniowania własnych atrybuty CLR.|  
 |[Obsługa wyjątków](../windows/exception-handling-cpp-component-extensions.md)|Omówienie obsługi wyjątków.|  
-|[Jawne zastąpienia](../windows/explicit-overrides-cpp-component-extensions.md)|Pokazuje, jak funkcje Członkowskie mogą zastąpić dowolne elementy członkowskie.|  
+|[Jawne przesłonięcia](../windows/explicit-overrides-cpp-component-extensions.md)|Pokazuje, jak funkcje Członkowskie mogą zastąpić dowolne elementy członkowskie.|  
 |[Przyjazne zestawy (C++)](../dotnet/friend-assemblies-cpp.md)|W tym artykule omówiono, jak zestaw klienta można uzyskać dostęp do wszystkich typów w zestawie składnika.|  
 |[OPAKOWYWANIE](../windows/boxing-cpp-component-extensions.md)|Pokazuje, w wartości, które są opakowany typy warunków.|  
 |[Obsługa cech typu w kompilatorze](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)|W tym artykule omówiono sposób wykryć właściwości typów w czasie kompilacji.|  
 |[zarządzane, niezarządzane](../preprocessor/managed-unmanaged.md) dyrektywy pragma|Pokazuje, jak zarządzane i niezarządzane funkcje mogą współistnieć w tym samym module.|  
-|[proces](../cpp/process.md) `__declspec` modyfikator|`__declspec`Modyfikator, która nakłada się, że zmienne statyczne i globalnych istnieją na proces.|  
+|[proces](../cpp/process.md) `__declspec` modyfikator|`__declspec` Modyfikator, która nakłada się, że zmienne statyczne i globalnych istnieją na proces.|  
 |[Odbicie (C++/CLI)](../dotnet/reflection-cpp-cli.md)|Pokazuje informacje typu run-time wersję środowiska CLR.|  
 |[Ciąg](../windows/string-cpp-component-extensions.md)|W tym artykule omówiono konwersji kompilatora literałów ciągu do <xref:System.String>.|  
 |[Przekazywanie dalej typu (C++/CLI)](../windows/type-forwarding-cpp-cli.md)|Umożliwia przenoszenie typu w zestawie wysyłki do innego zestawu, aby kod klienta nie ma być ponownie kompilowane.|  

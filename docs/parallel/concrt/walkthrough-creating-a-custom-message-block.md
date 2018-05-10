@@ -1,30 +1,25 @@
 ---
-title: "Wskazówki: Tworzenie niestandardowego bloku komunikatów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Wskazówki: Tworzenie niestandardowego bloku komunikatów | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - creating custom message blocks Concurrency Runtime]
 - custom message blocks, creating [Concurrency Runtime]
 ms.assetid: 4c6477ad-613c-4cac-8e94-2c9e63cd43a1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ff7dd60dbb91d88377f481510ea0e213f18098a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa70cf40851815ff92f01405d47015afd2e3e444
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-a-custom-message-block"></a>Wskazówki: tworzenie niestandardowego bloku komunikatów
 Ten dokument zawiera opis sposobu tworzenia komunikat niestandardowy typ bloku, któremu porządkuje komunikaty przychodzące według priorytetu.  
@@ -38,7 +33,7 @@ Ten dokument zawiera opis sposobu tworzenia komunikat niestandardowy typ bloku, 
   
 - [Funkcje przekazywania komunikatów](../../parallel/concrt/message-passing-functions.md)  
   
-##  <a name="top"></a>Sekcje  
+##  <a name="top"></a> Sekcje  
  Ten przewodnik zawiera następujące sekcje:  
   
 - [Projektowanie niestandardowego bloku komunikatów](#design)  
@@ -47,7 +42,7 @@ Ten dokument zawiera opis sposobu tworzenia komunikat niestandardowy typ bloku, 
   
 - [Pełny przykład](#complete)  
   
-##  <a name="design"></a>Projektowanie niestandardowego bloku komunikatów  
+##  <a name="design"></a> Projektowanie niestandardowego bloku komunikatów  
  Bloki komunikatów uczestniczyć w czynność wysyłania i odbierania wiadomości. Blok komunikatów, który wysyła wiadomości jest nazywany *bloku źródłowego*. Blok komunikatów, który odbiera komunikaty nosi nazwę *blok docelowy*. Blok komunikatów, który zarówno wysyła i odbiera komunikaty nosi nazwę *bloku propagator*. Biblioteki agentów korzysta z klasy abstrakcyjnej [concurrency::ISource](../../parallel/concrt/reference/isource-class.md) do reprezentowania bloków źródła i klasa abstrakcyjna [concurrency::ITarget](../../parallel/concrt/reference/itarget-class.md) do reprezentowania bloki docelowej. Blok komunikatów typy tej czynności, jak źródeł pochodzi od `ISource`; bloku komunikatów typy tej czynności jako obiekty docelowe pochodzi od `ITarget`.  
   
  Mimo że może pochodzić z typ bloku komunikatów bezpośrednio z `ISource` i `ITarget`, biblioteka agentów definiuje trzy klas podstawowych, które wykonywać podobne funkcje, które są wspólne dla wszystkich typów bloku komunikatów, na przykład obsługa błędów i łączenie bloków komunikatów w sposób bezpieczny współbieżności. [Concurrency::source_block](../../parallel/concrt/reference/source-block-class.md) pochodną klasy `ISource` i wysyła wiadomości do innych bloków. [Concurrency::target_block](../../parallel/concrt/reference/target-block-class.md) pochodną klasy `ITarget` i odbiera komunikaty z innych bloków. [Concurrency::propagator_block](../../parallel/concrt/reference/propagator-block-class.md) pochodną klasy `ISource` i `ITarget` i wysyła wiadomości do innych bloków i odbiera komunikaty z innych bloków. Zalecane jest użycie tych trzech klas podstawowych do obsługi infrastruktury szczegóły, dzięki czemu można skupić się na zachowanie z bloku komunikatów.  
@@ -73,10 +68,10 @@ Ten dokument zawiera opis sposobu tworzenia komunikat niestandardowy typ bloku, 
   
  [[Górnej](#top)]  
   
-##  <a name="class"></a>Definiowanie priority_buffer — klasa  
+##  <a name="class"></a> Definiowanie priority_buffer — klasa  
  `priority_buffer` Klasa jest komunikat niestandardowy typ bloku, któremu porządkuje wiadomości przychodzących najpierw według priorytetu, a następnie według kolejności, w którym są odbierane wiadomości. `priority_buffer` Podobny klasy [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) klasy, ponieważ posiada kolejki komunikatów, a także ponieważ działa jako źródło i blok komunikatów docelowej i może mieć zarówno wielu źródeł i wielu obiekty docelowe. Jednak `unbounded_buffer` podstaw komunikatu propagacji tylko w kolejności, w którym odbiera komunikaty z jego źródeł.  
   
- `priority_buffer` Klasy odbiera komunikaty typu std::[krotki](../../standard-library/tuple-class.md) zawierających `PriorityType` i `Type` elementy. `PriorityType`odwołuje się do typ, który przechowuje priorytet każdy komunikat; `Type` odwołuje się do danych części wiadomości. `priority_buffer` Klasy wysyła komunikaty typu `Type`. `priority_buffer` Klasy zarządza także dwa kolejki komunikatów: [std::priority_queue](../../standard-library/priority-queue-class.md) obiektu dla komunikatów przychodzących i std::[kolejki](../../standard-library/queue-class.md) obiektu dla komunikatów wychodzących. Kolejność według priorytetu wiadomości jest przydatna, gdy `priority_buffer` obiekt odbiera jednocześnie wiele komunikatów lub gdy odbierze ona wiele komunikatów przed komunikaty są odczytywane przez konsumentów.  
+ `priority_buffer` Klasy odbiera komunikaty typu std::[krotki](../../standard-library/tuple-class.md) zawierających `PriorityType` i `Type` elementy. `PriorityType` odwołuje się do typ, który przechowuje priorytet każdy komunikat; `Type` odwołuje się do danych części wiadomości. `priority_buffer` Klasy wysyła komunikaty typu `Type`. `priority_buffer` Klasy zarządza także dwa kolejki komunikatów: [std::priority_queue](../../standard-library/priority-queue-class.md) obiektu dla komunikatów przychodzących i std::[kolejki](../../standard-library/queue-class.md) obiektu dla komunikatów wychodzących. Kolejność według priorytetu wiadomości jest przydatna, gdy `priority_buffer` obiekt odbiera jednocześnie wiele komunikatów lub gdy odbierze ona wiele komunikatów przed komunikaty są odczytywane przez konsumentów.  
   
  Oprócz siedmiu metod czy klasę, która pochodzi z `propagator_block` musi implementować `priority_buffer` klasy również zastąpienia `link_target_notification` i `send_message` metody. `priority_buffer` Klasy definiuje również dwie metody pomocnika publiczne, `enqueue` i `dequeue`i metodę pomocnika prywatnej `propagate_priority_order`.  
   
@@ -193,7 +188,7 @@ Ten dokument zawiera opis sposobu tworzenia komunikat niestandardowy typ bloku, 
   
  [[Górnej](#top)]  
   
-##  <a name="complete"></a>Pełny przykład  
+##  <a name="complete"></a> Pełny przykład  
  W poniższym przykładzie pokazano pełne definicji `priority_buffer` klasy.  
   
  [!code-cpp[concrt-priority-buffer#18](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_19.h)]  

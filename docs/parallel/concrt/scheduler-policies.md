@@ -1,29 +1,24 @@
 ---
 title: Zasady harmonogramu | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c2e669a429bebbfde19f54200610819d0849d8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d9c855260df34290d01f1eeeee89e8bfe8988de
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-policies"></a>Zasady harmonogramu
 Ten dokument zawiera opis roli zasad harmonogramu współbieżność środowiska wykonawczego. A *zasad harmonogramu* steruje strategii, używany w harmonogramie podczas zarządzania zadaniami. Rozważmy na przykład aplikację, która wymaga niektórych zadań do wykonania w `THREAD_PRIORITY_NORMAL` i innych zadań do wykonania w `THREAD_PRIORITY_HIGHEST`.  Można tworzyć dwa wystąpienia harmonogramu: jedną, która określa `ContextPriority` zasadach `THREAD_PRIORITY_NORMAL` oraz inne, które określa jednych zasad można `THREAD_PRIORITY_HIGHEST`.  
@@ -43,12 +38,12 @@ Ten dokument zawiera opis roli zasad harmonogramu współbieżność środowiska
   
 |Klucz zasad|Opis|Wartość domyślna|  
 |----------------|-----------------|-------------------|  
-|`SchedulerKind`|A [concurrency::SchedulerType](reference/concurrency-namespace-enums.md#schedulertype) wartość, która określa typ wątków używanych do planowania zadań.|`ThreadScheduler`(Użyj normalnej wątki). To jest jedyną poprawną wartością dla tego klucza.|  
+|`SchedulerKind`|A [concurrency::SchedulerType](reference/concurrency-namespace-enums.md#schedulertype) wartość, która określa typ wątków używanych do planowania zadań.|`ThreadScheduler` (Użyj normalnej wątki). To jest jedyną poprawną wartością dla tego klucza.|  
 |`MaxConcurrency`|`unsigned int` Wartość, która określa maksymalną liczbę zasobów współbieżności, które korzysta z harmonogramu.|[CONCURRENCY::MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources)|  
 |`MinConcurrency`|`unsigned int` Wartość, która określa minimalną liczbę zasobów współbieżności, które korzysta z harmonogramu.|`1`|  
 |`TargetOversubscriptionFactor`|`unsigned int` Wartość, która określa liczbę wątków ma zostać przydzielone do każdego zasobu przetwarzania.|`1`|  
 |`LocalContextCacheSize`|`unsigned int` Wartość, która określa maksymalną liczbę kontekstach, które mogą być buforowane w lokalnej kolejce każdego procesora wirtualnego.|`8`|  
-|`ContextStackSize`|`unsigned int` Wartość określająca rozmiar stosu, w kilobajtach, aby go zarezerwować dla każdego kontekstu.|`0`(Użyj domyślny rozmiar stosu)|  
+|`ContextStackSize`|`unsigned int` Wartość określająca rozmiar stosu, w kilobajtach, aby go zarezerwować dla każdego kontekstu.|`0` (Użyj domyślny rozmiar stosu)|  
 |`ContextPriority`|`int` Wartość, która określa priorytet wątku każdego kontekstu. Może to być dowolna wartość, które można przekazać do [wykonanie funkcji SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) lub `INHERIT_THREAD_PRIORITY`.|`THREAD_PRIORITY_NORMAL`|  
 
 |`SchedulingProtocol`| A [concurrency::SchedulingProtocolType](reference/concurrency-namespace-enums.md#schedulingprotocoltype) wartość, która określa planowania algorytm używany. |`EnhanceScheduleGroupLocality`|  

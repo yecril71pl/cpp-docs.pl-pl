@@ -2,9 +2,6 @@
 title: CONCURRENCY::fast_math — przestrzeń nazw funkcji | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::fast_math::acos
@@ -53,43 +50,41 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 537e257ade021f8662d75b9316d60a16a4133831
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 9bd20e2e1d88564c7e688e1e0c9c2392f1f4f2ac
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencyfastmath-namespace-functions"></a>CONCURRENCY::fast_math — przestrzeń nazw funkcji
 ||||  
 |-|-|-|  
-|[ACOS](#acos)|[acosf](#acosf)|[asin](#asin)|  
+|[ACOS](#acos)|[acosf](#acosf)|[ASIN](#asin)|  
 |[asinf —](#asinf)|[atan](#atan)|[atan2](#atan2)|  
 |[atan2f](#atan2f)|[atanf](#atanf)|[ceil](#ceil)|  
 |[ceilf](#ceilf)|[COS](#cos)|[cosf](#cosf)|  
-|[cosh](#cosh)|[coshf](#coshf)|[exp](#exp)|  
+|[COSH](#cosh)|[coshf](#coshf)|[EXP](#exp)|  
 |[exp2](#exp2)|[exp2f](#exp2f)|[expf](#expf)|  
-|[fabs](#fabs)|[fabsf](#fabsf)|[floor](#floor)|  
+|[fabs —](#fabs)|[fabsf —](#fabsf)|[FLOOR](#floor)|  
 |[floorf](#floorf)|[fmax](#fmax)|[fmaxf](#fmaxf)|  
-|[fmin](#fmin)|[fminf](#fminf)|[fmod](#fmod)|  
+|[fmin](#fmin)|[fminf —](#fminf)|[fmod —](#fmod)|  
 |[fmodf](#fmodf)|[frexp](#frexp)|[frexpf](#frexpf)|  
-|[isfinite](#isfinite)|[isinf](#isinf)|[isnan](#isnan)|  
+|[isfinite](#isfinite)|[isinf —](#isinf)|[isNaN](#isnan)|  
 |[ldexp](#ldexp)|[ldexpf](#ldexpf)|[log](#log)|  
 |[log10](#log10)|[log10f](#log10f)|[log2](#log2)|  
 |[log2f](#log2f)|[logf](#logf)|[modf](#modf)|  
-|[modff](#modff)|[pow](#pow)|[powf](#powf)|  
+|[modff](#modff)|[Pow](#pow)|[powf](#powf)|  
 |[ROUND](#round)|[roundf](#roundf)|[rsqrt](#rsqrt)|  
 |[rsqrtf](#rsqrtf)|[signbit](#signbit)|[signbitf](#signbitf)|  
-|[sin](#sin)|[sincos](#sincos)|[sincosf](#sincosf)|  
-|[sinf](#sinf)|[sinh](#sinh)|[sinhf](#sinhf)|  
+|[SIN](#sin)|[sincos —](#sincos)|[sincosf](#sincosf)|  
+|[sinf](#sinf)|[SINH](#sinh)|[sinhf](#sinhf)|  
 |[sqrt](#sqrt)|[sqrtf](#sqrtf)|[tan](#tan)|  
-|[tanf —](#tanf)|[tanh](#tanh)|[tanhf](#tanhf)|  
-|[trunc](#trunc)|[truncf](#truncf)|  
+|[tanf —](#tanf)|[TANH](#tanh)|[tanhf](#tanhf)|  
+|[TRUNC —](#trunc)|[truncf](#truncf)|  
   
 ##  <a name="acos"></a>  ACOS  
  Oblicza cosinus argumentu  
@@ -447,7 +442,7 @@ inline float fmaxf(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca maksymalną wartość liczbową argumentów  
   
-##  <a name="fmin"></a>  fmin  
+##  <a name="fmin"></a>  Fmin —  
  Określić minimalną wartość liczbową argumentów  
   
 ```  

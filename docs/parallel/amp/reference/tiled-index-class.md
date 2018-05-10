@@ -1,12 +1,9 @@
 ---
-title: "tiled_index — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: tiled_index — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - tiled_index
@@ -28,17 +25,15 @@ dev_langs:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1ecd2e852dd36e51b158db9a5c6cd13be5c8d5c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fd28ab01d0d4180cc518cff230eb7df8261f4940
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tiledindex-class"></a>tiled_index — Klasa
 Zapewnia to indeks w [tiled_extent —](tiled-extent-class.md) obiektu. Ta klasa ma właściwości, które mają dostęp do elementów pokrewny ze źródłem Kafelek lokalnego i pokrewne ze źródłem globalnego. Aby uzyskać więcej informacji o układzie sąsiadującym spacje, zobacz [przy użyciu Kafelki](../../../parallel/amp/using-tiles.md).  
@@ -102,9 +97,9 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 |[Stała lokalnego](#tiled_index__local)|Magazyny `index` obiektu rangę 1, 2 lub 3, który reprezentuje względnej indeks bieżącego fragmentu [tiled_extent —](tiled-extent-class.md) obiektu.|  
 |[Rank — stała](#tiled_index__rank)|Przechowuje rangę `tiled_index` obiektu.|  
 |[Tile — stała](#tiled_index__tile)|Magazyny `index` obiektu o randze 1, 2 lub 3, który reprezentuje współrzędne bieżącego fragmentu `tiled_extent` obiektu.|  
-|[tile_dim0 Constant](#tiled_index__tile_dim0)|Przechowuje długość najważniejszych wymiaru.|  
+|[Stała tile_dim0](#tiled_index__tile_dim0)|Przechowuje długość najważniejszych wymiaru.|  
 |[Stała tile_dim1](#tiled_index__tile_dim1)|Przechowuje długość dalej do najbardziej znaczących wymiaru.|  
-|[tile_dim2 Constant](#tiled_index__tile_dim2)|Przechowuje długość najmniej znaczący wymiaru.|  
+|[Stała tile_dim2](#tiled_index__tile_dim2)|Przechowuje długość najmniej znaczący wymiaru.|  
 |[tile_origin stała](#tiled_index__tile_origin)|Magazyny `index` obiektu współrzędnych stopień 1, 2 lub 3, który reprezentuje globalnej pochodzenia bieżący Kafelek w `tiled_extent` obiektu.|  
 
   
@@ -126,7 +121,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
  **Namespace:** współbieżności  
 
 
-## <a name="tiled_index__ctor">tiled_index — Konstruktor</a>  
+## <a name="tiled_index__ctor"></a>  tiled_index — Konstruktor  
 Inicjuje nowe wystąpienie klasy `tiled_index` klasy.  
   
 ## <a name="syntax"></a>Składnia  

@@ -1,13 +1,10 @@
 ---
-title: "Przegląd typów ogólnych w programie Visual C++ | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Przegląd typów ogólnych w programie Visual C++ | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - open constructed types [C++]
 - constructed types, closed [C++]
 ms.assetid: 21f10637-0fce-4916-b925-6c86a126d3aa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5082f603c64e796ef369044e3586ae5bfe85605a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19200e3c3c4ed67960905b697187dbb6b37a65e9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="overview-of-generics-in-visual-c"></a>Przegląd typów ogólnych w Visual C++
 Typy ogólne są obsługiwane przez środowisko uruchomieniowe języka wspólnego typy z parametrami. Sparametryzowany typ jest typem, który jest zdefiniowana z parametrem nieznany typ określona po ogólnego jest używany.  
@@ -77,7 +72,7 @@ Typy ogólne są obsługiwane przez środowisko uruchomieniowe języka wspólneg
  Ograniczenie jest ograniczenie typy, które mogą być używane jako parametr typu. Na przykład danej klasy ogólnej może zaakceptować tylko klasy, które dziedziczą z klasy określonej lub wykonania określonego interfejsu. Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące parametrów typu ogólnego (C + +/ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
   
 ## <a name="reference-types-and-value-types"></a>Typy odwołań i typów wartości  
- Typy dojść i typów wartości mogą zostać użyte jako argumentów typu. W definicji ogólne, w którym typ może być używany, składnia jest typy referencyjne. Na przykład  **->**  operator umożliwia dostęp do elementów członkowskich typu parametru typu, czy typ ostatecznie używany jest typem referencyjnym lub typem wartości. W przypadku typu wartości jako argument typu środowiska uruchomieniowego generuje kod, który korzysta z typów wartości bezpośrednio, bez konwersja boxing typów wartości.  
+ Typy dojść i typów wartości mogą zostać użyte jako argumentów typu. W definicji ogólne, w którym typ może być używany, składnia jest typy referencyjne. Na przykład **->** operator umożliwia dostęp do elementów członkowskich typu parametru typu, czy typ ostatecznie używany jest typem referencyjnym lub typem wartości. W przypadku typu wartości jako argument typu środowiska uruchomieniowego generuje kod, który korzysta z typów wartości bezpośrednio, bez konwersja boxing typów wartości.  
   
  Korzystając z typem referencyjnym jako argumentu typu ogólnego, należy użyć składni dojścia. Korzystając z typem wartości jako argumentu typu ogólnego, nazwa typu korzystać bezpośrednio.  
   

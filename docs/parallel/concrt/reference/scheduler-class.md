@@ -1,12 +1,9 @@
 ---
 title: Klasa harmonogramu | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - Scheduler
@@ -30,17 +27,15 @@ dev_langs:
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7431776a27668fc1f1c465377f1e947eb36ab99
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 97abec33d5fa4b372bc26874fd37397a2b78bb29
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-class"></a>Klasa harmonogramu
 Reprezentuje abstrakcję harmonogramu współbieżność środowiska wykonawczego.  
@@ -108,7 +103,7 @@ virtual void Attach() = 0;
   
  Ta metoda zgłosi [improper_scheduler_attach —](improper-scheduler-attach-class.md) wyjątek, jeśli ten harmonogram jest bieżącego harmonogramu Kontekst wywołania.  
   
-##  <a name="create">Utwórz</a> 
+##  <a name="create"></a> Utwórz 
 
  Tworzy nowy harmonogram, w których zachowanie jest opisane przez `_Policy` parametr, umieszcza początkowej odwołania na harmonogram i zwraca wskaźnik do niego.  
   
@@ -152,7 +147,7 @@ virtual ScheduleGroup* CreateScheduleGroup(location& _Placement) = 0;
   
  Należy pamiętać, że jeśli utworzono jawnie tego harmonogramu, trzeba zwolnić wszystkie odwołania można zaplanować grup, to przed zwolnieniem referencje w harmonogramie.  
   
-##  <a name="getnumberofvirtualprocessors">GetNumberOfVirtualProcessors</a> 
+##  <a name="getnumberofvirtualprocessors"></a> GetNumberOfVirtualProcessors 
 
  Zwraca bieżącą liczbę procesorów wirtualnych dla harmonogramu.  
   
@@ -256,7 +251,7 @@ static void __cdecl ResetDefaultSchedulerPolicy();
 ### <a name="remarks"></a>Uwagi  
  Tę metodę można wywołać podczas harmonogram domyślny istnieje w ramach procesu. Nie zostaną zastosowane zasady istniejący harmonogram domyślny. Jednak jeśli domyślny harmonogram zamknięcia, i zostały nowym domyślnym ma zostać utworzony w późniejszym czasie, nowy harmonogram użyje domyślne ustawienia zasad środowiska uruchomieniowego.  
   
-##  <a name="ctor">Harmonogram</a> 
+##  <a name="ctor"></a> Harmonogram 
 
  Obiekt `Scheduler` klasy można tylko utworzone za pomocą metody fabryki, albo niejawnie.  
   

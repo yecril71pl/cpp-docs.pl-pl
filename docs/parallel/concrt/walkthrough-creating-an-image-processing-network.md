@@ -1,30 +1,25 @@
 ---
-title: "Wskazówki: Tworzenie sieci przetwarzania obrazów | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Wskazówki: Tworzenie sieci przetwarzania obrazów | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b709179cb5bc0fefa3f342374c792656fa1e934
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e66de10879596b0e0877eb70f5ac95e082b8ae31
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Wskazówki: tworzenie sieci przetwarzania obrazów
 Ten dokument przedstawia sposób tworzenia sieci bloki komunikatów asynchronicznych, które przetwarzania obrazu.  
@@ -44,7 +39,7 @@ Ten dokument przedstawia sposób tworzenia sieci bloki komunikatów asynchronicz
   
  Zalecamy również że rozumiesz podstawowe informacje o [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] przed skorzystaniem z tego przewodnika.  
   
-##  <a name="top"></a>Sekcje  
+##  <a name="top"></a> Sekcje  
  Ten przewodnik zawiera następujące sekcje:  
   
 -   [Definiowanie funkcji przetwarzania obrazu](#functionality)  
@@ -53,7 +48,7 @@ Ten dokument przedstawia sposób tworzenia sieci bloki komunikatów asynchronicz
   
 -   [Pełny przykład](#complete)  
   
-##  <a name="functionality"></a>Definiowanie funkcji przetwarzania obrazu  
+##  <a name="functionality"></a> Definiowanie funkcji przetwarzania obrazu  
  W tej sekcji przedstawiono funkcje obsługi sieci przetwarzania obrazów używanych do pracy z obrazami, które są odczytywane z dysku.  
   
  Następujące funkcje `GetRGB` i `MakeColor`, Wyodrębnij i odpowiednio łączenie pojedynczych składników danego koloru.  
@@ -80,7 +75,7 @@ Ten dokument przedstawia sposób tworzenia sieci bloki komunikatów asynchronicz
   
  [[Górnej](#top)]  
   
-##  <a name="network"></a>Tworzenie sieci przetwarzania obrazów  
+##  <a name="network"></a> Tworzenie sieci przetwarzania obrazów  
  W tej sekcji opisano, jak utworzyć sieć bloki komunikatów asynchronicznych, które przetwarzania obrazu na każdym [!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)] obrazu (jpg) w podanym katalogu. Sieć wykonuje następujące operacje przetwarzania obrazów:  
   
 1.  Dla żadnego obrazu, który został utworzony przez niestandardowy należy przekonwertować na skali szarości.  
@@ -135,7 +130,7 @@ Ten dokument przedstawia sposób tworzenia sieci bloki komunikatów asynchronicz
 |`colormask`|A `transformer` obiekt, który usuwa zielony i niebieskiemu składnikowi koloru z obrazów, które mają dominującą kolor czerwony.|  
 |`darken`|A `transformer` obiekt, który przyciemnia obrazów, które mają dominującą kolor czerwony.|  
 |`sepiatone`|A `transformer` obiekt, który dotyczy sepia tonowania obrazów, które nie były edytowane przez niestandardowy i nie są głównie czerwony.|  
-|`save_bitmap`|A `transformer` obiekt, który zapisuje przetworzonych `image` na dysku jako mapy bitowej. `save_bitmap`pobiera oryginalna nazwa pliku z `map` obiektu i zmiany .bmp rozszerzenie nazwy pliku.|  
+|`save_bitmap`|A `transformer` obiekt, który zapisuje przetworzonych `image` na dysku jako mapy bitowej. `save_bitmap` pobiera oryginalna nazwa pliku z `map` obiektu i zmiany .bmp rozszerzenie nazwy pliku.|  
 |`delete_bitmap`|A `transformer` obiekt, który zwalnia pamięć dla obrazów.|  
 |`decrement`|A [concurrency::call](../../parallel/concrt/reference/call-class.md) obiekt, który działa jako węzeł terminali w sieci. Go zmniejsza `countdown_event` obiektu sygnalizują do aplikacji głównej, że obraz został przetworzony.|  
   
@@ -155,7 +150,7 @@ Ten dokument przedstawia sposób tworzenia sieci bloki komunikatów asynchronicz
   
  [[Górnej](#top)]  
   
-##  <a name="complete"></a>Pełny przykład  
+##  <a name="complete"></a> Pełny przykład  
  Poniższy kod przedstawia pełny przykład. `wmain` Zarządza funkcja [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] biblioteki i wywołania `ProcessImages` funkcja procesu [!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)] plików `Sample Pictures` katalogu.  
   
  [!code-cpp[concrt-image-processing-filter#15](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_14.cpp)]  
@@ -164,7 +159,7 @@ Ten dokument przedstawia sposób tworzenia sieci bloki komunikatów asynchronicz
   
  ![Przykładowe dane wyjściowe, na przykład](../../parallel/concrt/media/concrt_imageout.png "concrt_imageout")  
   
- `Lighthouse`został utworzony przez Alphin Tomasz i dlatego jest konwertowana na skali szarości. `Chrysanthemum`, `Desert`, `Koala`, i `Tulips` ma dominującą kolor czerwony i w związku z tym składniki kolor niebieski i zielony usunięte i są przyciemniane. `Hydrangeas`, `Jellyfish`, i `Penguins` spełniających kryteria domyślne, dlatego sepia toned.  
+ `Lighthouse` został utworzony przez Alphin Tomasz i dlatego jest konwertowana na skali szarości. `Chrysanthemum`, `Desert`, `Koala`, i `Tulips` ma dominującą kolor czerwony i w związku z tym składniki kolor niebieski i zielony usunięte i są przyciemniane. `Hydrangeas`, `Jellyfish`, i `Penguins` spełniających kryteria domyślne, dlatego sepia toned.  
   
  [[Górnej](#top)]  
   

@@ -1,12 +1,9 @@
 ---
-title: "Schedulerpolicy — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Schedulerpolicy — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - SchedulerPolicy
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fc8873fc4516b3c79685eacc91d3d4426b80901
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9f23e95bafa9920c520fa7c01518873769945770
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy — Klasa
 `SchedulerPolicy` Klasa zawiera zbiór pary klucz wartość, po jednej dla każdego elementu zasad, które określają zachowanie wystąpienia harmonogramu.  
@@ -48,7 +43,7 @@ class SchedulerPolicy;
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[SchedulerPolicy](#ctor)|Przeciążone. Tworzy nową zasadę harmonogramu i wypełnia wartości [zasad kluczy](concurrency-namespace-enums.md) obsługiwane przez współbieżność środowiska wykonawczego planiści i Menedżera zasobów.|  
-|[~SchedulerPolicy Destructor](#dtor)|Niszczy zasad harmonogramu.|  
+|[~ SchedulerPolicy — destruktor](#dtor)|Niszczy zasad harmonogramu.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -111,7 +106,7 @@ SchedulerPolicy& operator= (const SchedulerPolicy& _RhsPolicy);
 ### <a name="remarks"></a>Uwagi  
  Często najwygodniejsza sposób definiowania nowych zasad harmonogramu polega na skopiowaniu istniejących zasad i modyfikować za pomocą `SetPolicyValue` lub `SetConcurrencyLimits` metody.  
   
-##  <a name="ctor"></a> SchedulerPolicy 
+##  <a name="ctor"></a> Schedulerpolicy — 
 
  Tworzy nową zasadę harmonogramu i wypełnia wartości [zasad kluczy](concurrency-namespace-enums.md) obsługiwane przez współbieżność środowiska wykonawczego planiści i Menedżera zasobów.  
   

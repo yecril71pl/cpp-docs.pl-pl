@@ -1,12 +1,9 @@
 ---
-title: "Texture — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Texture — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - texture
@@ -26,17 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822797fb04104b28cf72f8d8ea4291a5ad283d20
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b16e449f3def7b4b86932e9806fa78d422466978
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="texture-class"></a>texture — Klasa
 Tekstura jest agregacji na danych `accelerator_view` w domenie zakresu. Jest kolekcja zmiennych, po jednej dla każdego elementu w zakresie domeny. Każda zmienna przechowuje wartość odpowiadającą typów pierwotnych języka C++ ( `unsigned int`, `int`, `float`, `double`), typem skalarnym ( `norm`, lub `unorm`), lub typu krótkich wektora.  
@@ -150,7 +145,7 @@ void copy_to(writeonly_texture_view<value_type, _Rank>& _Dest) const;
  `value_type`  
  Typ elementów w tekstury.  
   
-##  <a name="data">Dane</a> 
+##  <a name="data"></a> Dane 
 
  Zwraca wskaźnik Procesora do danych pierwotnych z tym tekstury.  
   
@@ -263,7 +258,7 @@ const value_type operator() (
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość elementu jest określona przez parametry.  
   
-##  <a name="operator_at">Operator]</a> 
+##  <a name="operator_at"></a> Operator] 
 
  Zwraca element pod określonym indeksem.  
   

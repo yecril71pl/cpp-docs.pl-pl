@@ -2,9 +2,6 @@
 title: CONCURRENCY::Direct3D — przestrzeń nazw funkcji (AMP) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::direct3d::abs
@@ -27,30 +24,28 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b200ce8329c10fe2257ca3ce9ca8cb61125390fc
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 57015cc84053216e76f3459170c3dde9a26bb43c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>CONCURRENCY::Direct3D — przestrzeń nazw funkcji (AMP)
 ||||  
 |-|-|-|  
-|[abs](#abs)|[ograniczenie](#clamp)|[countbits —](#countbits)|
+|[ABS](#abs)|[ograniczenie](#clamp)|[countbits —](#countbits)|
 |[create_accelerator_view](#create_accelerator_view)|||
 |[d3d_access_lock](#d3d_access_lock)|[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|  
-|[firstbithigh](#firstbithigh)|[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|  
+|[firstbithigh —](#firstbithigh)|[firstbitlow —](#firstbitlow)|[get_buffer](#get_buffer)|  
 |[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|  
 |[mad —](#mad)|[make_array](#make_array)|[hałasu](#noise)|  
-|[radians](#radians)|[rcp](#rcp)|[reversebits —](#reversebits)|  
-|[saturate](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|  
-|[step](#step)|[umax](#umax)|[umin](#umin)|  
+|[wartość w radianach](#radians)|[rcp](#rcp)|[reversebits —](#reversebits)|  
+|[saturate —](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|  
+|[Krok](#step)|[umax](#umax)|[umin](#umin)|  
 
 ## <a name="requirements"></a>Wymagania
 **Nagłówek:** amp.h **Namespace:** współbieżności
@@ -152,7 +147,7 @@ accelerator_view create_accelerator_view(
  Środowiska uruchomieniowego C++ AMP zawiera szczegółowe informacje o błędzie w trybie debugowania przy użyciu warstwy D3D debugowania, jeśli używasz `D3D11_CREATE_DEVICE_DEBUG` flagi.  
   
   
-##  <a name="d3d_access_lock"></a>  d3d_access_lock  
+##  <a name="d3d_access_lock"></a>  d3d_access_lock —  
  Blokady na accelerator_view na potrzeby bezpiecznego wykonywanie operacji D3D zasobów udostępnionych z accelerator_view. Accelerator_view i wszystkie zasoby C++ AMP skojarzone z tym accelerator_view wewnętrznie potrwać blokady podczas wykonywania operacji i blokuje, podczas gdy inny wątek utrzymuje blokadę dostępu D3D. Ta blokada jest niecykliczne: jest niezdefiniowane zachowanie w wywołaniu tej funkcji z wątku, który już utrzymuje blokadę. Jest niezdefiniowane zachowanie w celu wykonania operacji na accelerator_view lub dowolnego kontenera danych skojarzonego z accelerator_view z wątku, który utrzymuje blokadę dostępu D3D. Zobacz też scoped_d3d_access_lock, klasę RAII stylu dla zakresu blokowania dostępu D3D.  
   
 ```  
@@ -260,7 +255,7 @@ inline int imax(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca maksymalną wartość liczbową argumentów  
   
-##  <a name="imin"></a>  imin  
+##  <a name="imin"></a>  imin —  
  Określić minimalną wartość liczbową argumentów  
   
 ```  
@@ -279,7 +274,7 @@ inline int imin(
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca minimalną wartość liczbowa argumentów  
   
-##  <a name="is_timeout_disabled"></a>  is_timeout_disabled  
+##  <a name="is_timeout_disabled"></a>  is_timeout_disabled —  
  Zwraca wartość boolean flagę wskazującą, czy limit czasu jest wyłączona dla określonego accelerator_view. Odpowiada to flaga D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT dla tworzenia urządzenia Direct3D.  
   
 ```  

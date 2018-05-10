@@ -1,12 +1,9 @@
 ---
-title: "concurrent_unordered_map — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: concurrent_unordered_map — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_unordered_map
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_unordered_map class
 ms.assetid: b2d879dd-87ef-4af9-a266-a5443fd538b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d37feb147cc0604081479bfae0afca933c251bc8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 932cfe232b07a9020af450ad33bb34101827ac79
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentunorderedmap-class"></a>concurrent_unordered_map — Klasa
 `concurrent_unordered_map` Klasy jest kontenerem bezpieczne współbieżności, który określa sekwencję zróżnicowanych długość elementów typu `std::pair<const K, _Element_type>`. Sekwencja jest reprezentowana w sposób umożliwiający bezpieczny współbieżności dołączenia, element dostępu, dostęp iteratora i operacji przechodzenia iteratora.  
@@ -110,7 +105,7 @@ template <typename K,
 |----------|-----------------|  
 |[at](#at)|Przeciążone. Odnajduje element `concurrent_unordered_map` o określonej wartości klucza. Ta metoda jest bezpieczne współbieżności.|  
 |[hash_function](#hash_function)|Pobiera przechowywany obiekt funkcji mieszania.|  
-|[insert](#insert)|Przeciążone. Dodaje elementy `concurrent_unordered_map` obiektu.|  
+|[Wstaw](#insert)|Przeciążone. Dodaje elementy `concurrent_unordered_map` obiektu.|  
 |[key_eq](#key_eq)|Pobiera obiekt funkcja porównania równości przechowywane.|  
 |[swap](#swap)|Zamienia zawartość dwóch `concurrent_unordered_map` obiektów. Ta metoda nie jest bezpieczne współbieżności.|  
 |[unsafe_erase](#unsafe_erase)|Przeciążone. Usuwa elementy z `concurrent_unordered_map` w określonych pozycji. Ta metoda nie jest bezpieczne współbieżności.|  
@@ -200,7 +195,7 @@ const_iterator cend() const;
 void clear();
 ```  
   
-##  <a name="ctor"></a> concurrent_unordered_map 
+##  <a name="ctor"></a> concurrent_unordered_map — 
 
  Tworzy równoczesnych nieuporządkowaną mapy.  
   
@@ -489,7 +484,7 @@ size_type max_size() const;
 ### <a name="remarks"></a>Uwagi  
  Ta wartość górna granica faktycznie mogą być wyższe niż co faktycznie może przechowywać kontenera.  
   
-##  <a name="operator_at">Operator]</a> 
+##  <a name="operator_at"></a> Operator] 
 
  Znajduje lub wstawia element z określonym kluczem. Ta metoda jest bezpieczne współbieżności.  
   

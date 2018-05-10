@@ -1,12 +1,9 @@
 ---
 title: Klasa transformatora | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - transformer
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - transformer class
 ms.assetid: eea71925-7043-4a92-bfd4-dbc0ece5d081
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d53ec38ee10ca4d7997095fe8acddd957564c822
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ac9ea43e1d3f6f369b93e92e91fa3606cf7d6af5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transformer-class"></a>Klasa transformatora
 A `transformer` Blok obsługi wiadomości jest element docelowy jednym wielu źródłach, uporządkowanych `propagator_block` co mogą akceptować wiadomości danego typu i jest w stanie przechowywania niepowiązany liczba wiadomości jest innego typu.  
@@ -64,7 +59,7 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[transformer](#ctor)|Przeciążone. Konstruuje `transformer` bloku obsługi wiadomości.|  
-|[~transformer Destructor](#dtor)|Niszczy `transformer` bloku obsługi wiadomości.|  
+|[~ transformer — destruktor](#dtor)|Niszczy `transformer` bloku obsługi wiadomości.|  
   
 ### <a name="protected-methods"></a>Metody chronione  
   

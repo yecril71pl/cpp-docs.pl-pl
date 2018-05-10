@@ -1,13 +1,10 @@
 ---
 title: Atrybuty COM | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - attributes [COM]
 - COM, attributes
 ms.assetid: 52a5dd70-e8be-4bba-afd6-daf90fe689a0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 63e23f6a6520085ff5a5a072cb349d079615b6f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d37ba5c690b61840ad261e6ab966d0cc74c07c1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="com-attributes"></a>Atrybuty COM
 Atrybuty COM iniekcję kodu do obsługi wiele obszarów rozwoju COM i rozwoju środowiska uruchomieniowego języka wspólnego .NET Framework. Te obszary zakresu od implementacji niestandardowego interfejsu i pomocy technicznej istniejących interfejsów do obsługi właściwości podstawowych, metod i zdarzeń. Ponadto obsługa można znaleźć złożone i wykonywania formantu ActiveX.  
@@ -44,7 +39,7 @@ Atrybuty COM iniekcję kodu do obsługi wiele obszarów rozwoju COM i rozwoju ś
 |[requires_category](../windows/requires-category.md)|Określa wymagany składnik kategorii klasy.|  
 |[support_error_info](../windows/support-error-info.md)|Obsługuje raportowania błędów dla obiekt docelowy.|  
 |[synchronize](../windows/synchronize.md)|Synchronizuje dostępu do metody.|  
-|[wątkowość](../windows/threading-cpp.md)|Określa model wątkowości dla obiekt COM.|  
+|[Wątkowość](../windows/threading-cpp.md)|Określa model wątkowości dla obiekt COM.|  
 |[vi_progid](../windows/vi-progid.md)|Określa identyfikator ProgID niezależny od wersji dla formantu.|  
   
 ## <a name="see-also"></a>Zobacz też  

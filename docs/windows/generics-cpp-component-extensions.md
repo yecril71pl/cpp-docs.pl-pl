@@ -1,13 +1,10 @@
 ---
-title: "Typy ogólne (C++ Component Extensions) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Typy ogólne (C++ Component Extensions) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - generic_cpp
 - generic
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - generics [C++]
 ms.assetid: c7ccc316-a411-4c00-b2e2-f0c0eadc6cfd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 415da036c9ac2f285b97096368754f176d655eff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 968ccdc38906f2b9c279821cb34d166d03211562
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generics--c-component-extensions"></a>Typy ogólne (C++ Component Extensions)
 Typy ogólne są typy z parametrami i metody. W tej sekcji należy sprawdzić ogólne funkcje obsługiwane przez środowisko wykonawcze systemu Windows i środowisko uruchomieniowe języka wspólnego, a które są obsługiwane przez tylko środowiska CLR. Ponadto Dowiedz się, jak tworzyć własne metody ogólne i typy w programie Visual C++ i sposobu użycia typów ogólnych utworzone w języku .NET Framework w programie Visual C++. Ponadto ta sekcja zawiera porównanie typy ogólne i szablonów języka C++.  

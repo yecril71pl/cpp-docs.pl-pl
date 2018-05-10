@@ -1,13 +1,10 @@
 ---
-title: "Wielowątkowość z C++ i MFC | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Wielowątkowość z C++ i MFC | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - threading [MFC]
 - user interface threads [C++]
 ms.assetid: 979605f8-3988-44b5-ac9c-b8cce7fcce14
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14d076865cd83837e2de218ad0189c037c78cd83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 778602a0e9236ad8cc788d8a2306e8f2d143ec49
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-with-c-and-mfc"></a>Wielowątkowość z C++ i MFC
 Biblioteka Microsoft Foundation Class (MFC) zapewnia obsługę dla aplikacji wielowątkowych. W tym temacie opisano procesów i wątków oraz podejście MFC dla wielowątkowości.  
@@ -43,7 +38,7 @@ Biblioteka Microsoft Foundation Class (MFC) zapewnia obsługę dla aplikacji wie
   
  Jeśli chcesz, możesz utworzyć dodatkowe wątki w aplikacji. Można to zrobić, aby obsłużyć zadania tła lub konserwacji, jeśli nie chcesz, aby użytkownik oczekiwania na ich zakończenie. Wszystkie wątki w aplikacjach MFC są reprezentowane przez [cwinthread —](../mfc/reference/cwinthread-class.md) obiektów. W większości przypadków nie nawet masz można jawnie utworzyć te obiekty; Zamiast tego wywołaj funkcję pomocnika framework [afxbeginthread —](../mfc/reference/application-information-and-management.md#afxbeginthread), co powoduje `CWinThread` obiekt.  
   
- Dwa typy wątków odróżnia MFC: wątków interfejsu użytkownika i wątków roboczych. Wątki interfejsu użytkownika często są używane do obsługi danych wejściowych użytkownika i reagowanie na zdarzenia i komunikaty generowane przez użytkownika. Wątki robocze są często używane do ukończenia zadania, takie jak ponowne obliczanie, które nie wymagają danych wejściowych użytkownika. Interfejs API Win32 nie rozróżnianie wątków; po prostu musi ustalić adres początkowy wątku, więc można rozpocząć do wykonania wątku. MFC obsługuje wątków interfejsu użytkownika, podając specjalnie pompowania komunikatów zdarzeń w interfejsie użytkownika. `CWinApp`jest przykładem obiektu wątku interfejsu użytkownika, ponieważ dziedziczy `CWinThread` i obsługuje zdarzenia i komunikaty generowane przez użytkownika.  
+ Dwa typy wątków odróżnia MFC: wątków interfejsu użytkownika i wątków roboczych. Wątki interfejsu użytkownika często są używane do obsługi danych wejściowych użytkownika i reagowanie na zdarzenia i komunikaty generowane przez użytkownika. Wątki robocze są często używane do ukończenia zadania, takie jak ponowne obliczanie, które nie wymagają danych wejściowych użytkownika. Interfejs API Win32 nie rozróżnianie wątków; po prostu musi ustalić adres początkowy wątku, więc można rozpocząć do wykonania wątku. MFC obsługuje wątków interfejsu użytkownika, podając specjalnie pompowania komunikatów zdarzeń w interfejsie użytkownika. `CWinApp` jest przykładem obiektu wątku interfejsu użytkownika, ponieważ dziedziczy `CWinThread` i obsługuje zdarzenia i komunikaty generowane przez użytkownika.  
   
  Szczególną uwagę należy do sytuacji, gdy więcej niż jeden wątek może wymagać dostępu do tego samego obiektu. [Wielowątkowość: Porady dotyczące programowania](../parallel/multithreading-programming-tips.md) opisuje metody, których można pobrać wokół problemów, które mogą wystąpić w następujących sytuacjach. [Wielowątkowość: Jak używać klas synchronizacji](../parallel/multithreading-how-to-use-the-synchronization-classes.md) opisano, jak używać klas, które można zsynchronizować dostęp wiele wątków do pojedynczego obiektu.  
   

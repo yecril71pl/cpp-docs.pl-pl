@@ -1,12 +1,9 @@
 ---
-title: "Event — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Event — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - event
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2301e06554d99529c7d4e4e5215208dc4265970
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fb02865b20d1603be38192e770eb26627e6900e7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="event-class"></a>event — Klasa
 Zdarzenie resetowania ręcznego, która jawnie rozpoznaje współbieżności środowiska wykonawczego.  
@@ -54,7 +49,7 @@ class event;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[reset](#reset)|Resetuje zdarzenia do stanu sygnalizowane.|  
+|[Resetowanie](#reset)|Resetuje zdarzenia do stanu sygnalizowane.|  
 |[set](#set)|Sygnalizuje zdarzenia.|  
 |[oczekiwania](#wait)|Czeka na zdarzenie sygnalizuje stają się.|  
 |[wait_for_multiple](#wait_for_multiple)|Czeka na wiele zdarzeń stać się sygnalizowane.|  
@@ -124,7 +119,7 @@ void set();
 static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 ```  
   
-##  <a name="wait">oczekiwania</a> 
+##  <a name="wait"></a> oczekiwania 
 
  Czeka na zdarzenie sygnalizuje stają się.  
   

@@ -1,12 +1,9 @@
 ---
-title: "cancellation_token — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: cancellation_token — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - cancellation_token
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e95bfb264b1c6fbc4230cf38fc26b7b6a2c12a1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5d8741763295e96f3d0c221b687c8ef62fbfc55c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token — Klasa
 `cancellation_token` Klasa reprezentuje możliwość określenia, czy zażądano operacji do anulowania. Skojarzono danego tokenu `task_group`, `structured_task_group`, lub `task` zapewnienie niejawne anulowania. Można go również sondowany anulowania lub wywołania zwrotnego zarejestrowany dla przypadku, gdy skojarzony `cancellation_token_source` zostało anulowane.  
@@ -129,7 +124,7 @@ bool is_canceled() const;
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość `true` Jeśli token została anulowana, a w przeciwnym razie wartość `false`.  
   
-##  <a name="none">Brak</a> 
+##  <a name="none"></a> Brak 
 
  Zwraca token anulowania, który nigdy nie mogą podlegać anulowania.  
   

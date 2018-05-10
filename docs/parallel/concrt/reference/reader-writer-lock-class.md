@@ -1,12 +1,9 @@
 ---
 title: Klasa reader_writer_lock | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - reader_writer_lock
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75bea63c6e2f73ebd58434874758c4f20444958a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4a2f48a80efca0ec6e85a315b355a6482fb2096b
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="readerwriterlock-class"></a>reader_writer_lock — Klasa
 Składnik zapisywania — preferencji na podstawie kolejki czytnika-blokadę wirowania tylko lokalnie. Blokada najpierw przyznaje - najpierw out (FIFO) dostępu do zapisywania i starves czytników obciążenie ciągłego składników zapisywania.  
@@ -131,7 +126,7 @@ reader_writer_lock();
 ### <a name="remarks"></a>Uwagi  
  Oczekuje się, że blokada nie jest już przechowywany po uruchomieniu destruktor. Nadal stosowanie czytnika blokadę zapisu do destruct z blokadą przechowywać wyniki w formacie niezdefiniowane zachowanie.  
   
-##  <a name="scoped_lock_class">reader_writer_lock::scoped_lock — klasa</a>  
+##  <a name="scoped_lock_class"></a>  reader_writer_lock::scoped_lock — klasa  
  Wyjątek bezpieczne RAII otoki używany do uzyskania `reader_writer_lock` zablokować obiekty jako edytor.  
   
 ```
@@ -158,7 +153,7 @@ Niszczy `reader_writer_lock` obiektu i zwalnia blokadę podana w jego konstrukto
 ~scoped_lock();
 ```  
   
-##  <a name="scoped_lock_read_class">reader_writer_lock::scoped_lock_read — klasa</a>  
+##  <a name="scoped_lock_read_class"></a>  reader_writer_lock::scoped_lock_read — klasa  
  Wyjątek bezpieczne RAII otoki używany do uzyskania `reader_writer_lock` zablokować obiekty do odczytu.  
   
 ```

@@ -1,27 +1,22 @@
 ---
-title: "4. Zmienne środowiskowe | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 4. Zmienne środowiskowe | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 4ec7ed81-e9ca-46a1-84f8-8f9ce4587346
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cef1bac78afbcc8b852c3bd42e0904e1963137c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: edd4f795a3511358d2b95b93e180b9b21b964dd2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="4-environment-variables"></a>4. Zmienne środowiskowe
 W tym rozdziale opisano zmienne środowiskowe Openmpc i C++ interfejsu API (lub odpowiednik specyficznego dla platformy mechanizmów) umożliwiające sterowanie wykonywanie równoległe kodu.  Nazwy zmiennych środowiskowych muszą być pisane wielkimi literami. Przypisanych do nich wartości uwzględniana jest wielkość liter i może mieć wiodące i końcowe biały znak.  Zmiany w wartości po uruchomieniu programu są ignorowane.  

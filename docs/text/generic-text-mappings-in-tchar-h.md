@@ -1,13 +1,10 @@
 ---
-title: "Mapowania zwykłego tekstu w pliku Tchar.h | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Mapowania zwykłego tekstu w pliku Tchar.h | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - tchar.h
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 405e95e9eb8fb760e2688e164178cf9270f31877
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7ed29b03a37c9b911a954192152115b1458fd94
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Mapowania typ ogólny-tekst w pliku Tchar.h
 Aby uprościć transportowania kodu do użytku międzynarodowego [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] zapewnia biblioteki czasu wykonywania [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-określonego mapowania zwykłego tekstu dla wielu typów danych, procedury i innych obiektów. Można użyć tych mapowania, które są zdefiniowane w pliku Tchar.h do pisania kodu ogólnego, który może zostać skompilowany dla jednobajtowe, wielobajtowe, lub [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] znak zestawów, w zależności od manifestu stałą, której można zdefiniować przy użyciu `#define` instrukcji. Mapowania zwykłego tekstu są [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] rozszerzeń, które nie są [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] zgodne.  
@@ -52,22 +47,22 @@ Aby uprościć transportowania kodu do użytku międzynarodowego [!INCLUDE[TLA#t
   
 |Zdefiniuj #|Skompilowanej wersji|Przykład|  
 |---------------|----------------------|-------------|  
-|`_UNICODE`|[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)](znaków dwubajtowych)|`_tcsrev`mapuje`_wcsrev`|  
-|`_MBCS`|Znaków wielobajtowych|`_tcsrev`mapuje`_mbsrev`|  
-|Brak (domyślnie nie ma `_UNICODE` ani `_MBCS` zdefiniowana)|SBCS ([!INCLUDE[TLA#tla_ascii](../text/includes/tlasharptla_ascii_md.md)])|`_tcsrev`mapuje`strrev`|  
+|`_UNICODE`|[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] (znaków dwubajtowych)|`_tcsrev` Mapuje `_wcsrev`|  
+|`_MBCS`|Znaków wielobajtowych|`_tcsrev` Mapuje `_mbsrev`|  
+|Brak (domyślnie nie ma `_UNICODE` ani `_MBCS` zdefiniowana)|SBCS ([!INCLUDE[TLA#tla_ascii](../text/includes/tlasharptla_ascii_md.md)])|`_tcsrev` Mapuje `strrev`|  
   
  Na przykład funkcja zwykłego tekstu `_tcsrev`, która jest zdefiniowana w pliku Tchar.h, mapuje `_mbsrev` Jeśli zdefiniowano `_MBCS` w programie lub do `_wcsrev` Jeśli zdefiniowano `_UNICODE`. W przeciwnym razie `_tcsrev` mapuje `strrev`. Inne mapowanie typu danych znajdują się w pliku Tchar.h w celu ułatwienia programowania, ale `_TCHAR` jest najbardziej przydatna.  
   
 ### <a name="generic-text-data-type-mappings"></a>Mapowanie typu danych — zwykły tekst  
   
-|Zwykły tekst<br /><br /> Nazwa typu danych|_UNICODE — &<br /><br /> Nie zdefiniowano _MBCS|_MBCS<br /><br /> Definicja|_UNICODE —<br /><br /> Definicja|  
+|Zwykły tekst<br /><br /> Nazwa typu danych|_UNICODE — &AMP;<br /><br /> Nie zdefiniowano _MBCS|_MBCS<br /><br /> Definicja|_UNICODE —<br /><br /> Definicja|  
 |--------------------------------------|----------------------------------------|------------------------|---------------------------|  
 |`_TCHAR`|`char`|`char`|`wchar_t`|  
 |`_TINT`|`int`|`unsigned int`|`wint_t`|  
 |`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|  
 |`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|  
 |`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|  
-|`_T`lub`_TEXT`|Żadnego skutku (usuwane przez preprocesora)|Żadnego skutku (usuwane przez preprocesora)|`L`(konwertuje następujący znak lub ciąg do jego [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] odpowiednikiem)|  
+|`_T` lub `_TEXT`|Żadnego skutku (usuwane przez preprocesora)|Żadnego skutku (usuwane przez preprocesora)|`L` (konwertuje następujący znak lub ciąg do jego [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] odpowiednikiem)|  
   
  Aby uzyskać listę mapowania zwykłego tekstu, procedury, zmienne i inne obiekty, zobacz [mapowania zwykłego tekstu](../c-runtime-library/generic-text-mappings.md) w odwołaniu biblioteki czasu wykonywania.  
   

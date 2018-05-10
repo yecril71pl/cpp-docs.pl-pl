@@ -1,12 +1,9 @@
 ---
-title: "float_4 — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: float_4 — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_wyxz
@@ -277,17 +274,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f4e168215270cca2112efa43b7faa225b972c34
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f5420cbaf6710f12852575926fc6280e1a33ce66
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="float4-class"></a>float_4 — Klasa
 Reprezentuje krótki wektor cztery elementów przestawnych.  
@@ -493,7 +488,7 @@ class float_4;
 |float_4::ARG||  
 |float_4::ARGB||  
 |float_4::b||  
-|float_4::ba||  
+|float_4::BA||  
 |float_4::bag||  
 |float_4::bagr||  
 |float_4::bar||  
@@ -530,7 +525,7 @@ class float_4;
 |float_4::rabg||  
 |float_4::rag||  
 |float_4::ragb||  
-|float_4::rb||  
+|float_4::RB||  
 |float_4::rba||  
 |float_4::rbag||  
 |float_4::rbg||  
@@ -538,7 +533,7 @@ class float_4;
 |float_4::rg||  
 |float_4::rga||  
 |float_4::rgab||  
-|float_4::rgb||  
+|float_4::RGB||  
 |float_4::rgba||  
 |float_4::w||  
 |float_4::wx||  

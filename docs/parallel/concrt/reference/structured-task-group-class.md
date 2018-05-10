@@ -1,12 +1,9 @@
 ---
-title: "structured_task_group — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: structured_task_group — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - structured_task_group
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f8d2b9cdc71b6e8a7a0fe9e3bf3d3d3306af1da
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5cca5d20b89df97e27529d656e9a6553fd8a1820
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="structuredtaskgroup-class"></a>structured_task_group — Klasa
 `structured_task_group` Klasa reprezentuje kolekcję uporządkowany równoległych pracy. Można dodać do kolejki na poszczególnych zadań równoległych `structured_task_group` przy użyciu `task_handle` obiekty i zaczekaj na ich zakończenie lub kliknij przycisk Anuluj grupy zadań przed ich zakończeniem wykonywania, która spowoduje przerwanie wszystkich zadań, które nie zostały uruchomione wykonywania.  
@@ -202,7 +197,7 @@ structured_task_group(cancellation_token _CancellationToken);
 ### <a name="remarks"></a>Uwagi  
  Jeśli destruktor jest uruchamiana w wyniku normalnego wykonywania (na przykład nie odwijanie stosu z powodu wyjątku), a nie `wait` ani `run_and_wait` wywołaniu metody, destruktor może zgłaszać [missing_wait —](missing-wait-class.md) wyjątek.  
   
-##  <a name="wait">oczekiwania</a> 
+##  <a name="wait"></a> oczekiwania 
 
  Czeka, aż wszystkie działają na `structured_task_group` zostało zakończone lub została anulowana.  
   

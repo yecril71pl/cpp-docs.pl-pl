@@ -1,27 +1,22 @@
 ---
 title: 'Przewodnik przenoszenia: Aplikacja Scribble MFC | Dokumentacja firmy Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88be2baf2c2ce11be4594501ef12c2e339dec4dd
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: fe0ae0580be4ab062e3ff7ee0cedfb42e201272d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="porting-guide-mfc-scribble"></a>Przewodnik przenoszenia: Aplikacja Scribble MFC
 Ten temat jest pierwszy kilka tematów, które przedstawiono procedurę uaktualniania dla projektów Visual C++, które zostały utworzone w starszej wersji programu Visual Studio do programu Visual Studio 2017 r. W tych tematach przedstawiono proces uaktualniania przykładzie, rozpoczynając od projektu bardzo proste i przechodzenia do nich nieco bardziej skomplikowane. W tym temacie pracujemy przez proces uaktualniania dla konkretnego projektu, Bazgroły MFC. Jest on odpowiedni jako podstawowe wprowadzenie do procesu uaktualniania dla projektów C++.  

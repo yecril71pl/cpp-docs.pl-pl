@@ -1,12 +1,9 @@
 ---
-title: "array_view — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: array_view — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - array_view
@@ -35,17 +32,15 @@ dev_langs:
 helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54202618f578b9a5e6fd602924a37d7ea0825353
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2e53b4927b102fc64a32f73ca5be78e71954b45f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="arrayview-class"></a>array_view — Klasa
 Reprezentuje N-wielowymiarowy widok przez dane przechowywane w innym kontenerze.  
@@ -410,7 +405,7 @@ void copy_to(
  `_Dest`  
  Obiekt przeznaczony do skopiowania do.  
   
-##  <a name="data">Dane</a> 
+##  <a name="data"></a> Dane 
 
  Zwraca wskaźnik do dane pierwotne `array_view`.  
   
@@ -528,7 +523,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość elementu, który jest określony przez parametr lub parametrów.  
   
-##  <a name="operator_at">Operator]</a> 
+##  <a name="operator_at"></a> Operator] 
 
  Zwraca element, który jest określona przez parametry.  
   

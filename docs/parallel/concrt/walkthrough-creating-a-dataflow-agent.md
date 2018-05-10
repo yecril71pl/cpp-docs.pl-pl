@@ -1,30 +1,25 @@
 ---
-title: "Wskazówki: Tworzenie agenta przepływu danych | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: 'Wskazówki: Tworzenie agenta przepływu danych | Dokumentacja firmy Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - creating dataflow agents [Concurrency Runtime]
 - dataflow agents, creating [Concurrency Runtime]
 ms.assetid: 9db5ce3f-c51b-4de1-b79b-9ac2a0cbd130
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f92dc200f29f5fd20c8dd1cc27508b9c7cdf4ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 33f7c7cf5e64d2ddf751bb97ee1b617d09df6af3
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>Wskazówki: tworzenie agenta przepływu danych
 Ten dokument przedstawia sposób tworzenia aplikacji opartych na agenta, oparte na przepływu danych, zamiast przepływu sterowania.  
@@ -42,7 +37,7 @@ Ten dokument przedstawia sposób tworzenia aplikacji opartych na agenta, oparte 
   
 - [Instrukcje: korzystanie z filtra bloku komunikatów](../../parallel/concrt/how-to-use-a-message-block-filter.md)  
   
-##  <a name="top"></a>Sekcje  
+##  <a name="top"></a> Sekcje  
  Ten przewodnik zawiera następujące sekcje:  
   
 - [Tworzenie agenta podstawowy przepływ sterowania](#control-flow)  
@@ -51,7 +46,7 @@ Ten dokument przedstawia sposób tworzenia aplikacji opartych na agenta, oparte 
   
 - [Tworzenie agenta rejestrowania komunikatów](#logging)  
   
-##  <a name="control-flow"></a>Tworzenie agenta podstawowy przepływ sterowania  
+##  <a name="control-flow"></a> Tworzenie agenta podstawowy przepływ sterowania  
  Rozważmy następujący przykład, który definiuje `control_flow_agent` klasy. `control_flow_agent` Klasa działa na trzy buforów komunikatów: jeden wejściowy buforu i dwa wyjściowe buforów. `run` Metoda odczytuje z bufora źródłowego komunikat w pętli i używa instrukcji warunkowej przekierować przepływ wykonania programu. Agent zwiększa jeden licznik do zera, ujemnych wartości i zwiększa licznik innej wartości innej niż zero, dodatnią. Gdy agent otrzyma wartownik wartość zero, wysyła wartości liczników do buforów komunikatu wyjściowego. `negatives` i `positives` metody Włącz aplikacji na odczytywanie liczby wartości ujemnych i dodatnich od agenta.  
   
  [!code-cpp[concrt-dataflow-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_1.cpp)]  
@@ -60,7 +55,7 @@ Ten dokument przedstawia sposób tworzenia aplikacji opartych na agenta, oparte 
   
  [[Górnej](#top)]  
   
-##  <a name="dataflow"></a>Tworzenie agenta przepływu danych podstawowych  
+##  <a name="dataflow"></a> Tworzenie agenta przepływu danych podstawowych  
  W tej sekcji przedstawiono sposób konwertowania `control_flow_agent` klasy na potrzeby wykonania tego samego zadania przepływu danych modelu.  
   
  Działa agenta przepływu danych, tworząc sieci buforów komunikatów, z których każdy spełnia określone przeznaczenie. Niektóre bloki komunikatów użyć funkcji filtru, aby zaakceptować lub odrzucić komunikat na podstawie jego ładunku. Funkcja filtru gwarantuje, że blok komunikatów odbiera tylko niektóre wartości.  
@@ -130,7 +125,7 @@ There are 499477 positive numbers.
   
  [[Górnej](#top)]  
   
-##  <a name="logging"></a>Tworzenie agenta rejestrowania komunikatów  
+##  <a name="logging"></a> Tworzenie agenta rejestrowania komunikatów  
  W poniższym przykładzie przedstawiono `log_agent` klasy, która jest podobny `dataflow_agent` klasy. `log_agent` Klasa implementuje agenta rejestrowania asynchroniczne czy zapisuje komunikaty dziennika do pliku i do konsoli. `log_agent` Klasa umożliwia aplikacjom kategoryzowanie wiadomości celów informacyjnych, warning lub error. Umożliwia również aplikacji określić, czy każda kategoria dziennika są zapisywane do pliku i/lub konsoli. W tym przykładzie zapisuje wszystkie komunikaty dziennika do pliku i tylko komunikaty o błędach do konsoli.  
   
  [!code-cpp[concrt-log-filter#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_8.cpp)]  

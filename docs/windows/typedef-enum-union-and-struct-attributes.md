@@ -1,13 +1,10 @@
 ---
-title: "Element TypeDef, Enum, Unii i struct — atrybuty | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Element TypeDef, Enum, Unii i struct — atrybuty | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - typedef attributes
 - enum attributes
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2087d4ff4e4905324f9bbdfaa954287f033feafe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c14881afd000dc5fb4223a2ecfa9dcdc67e7b541
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Atrybuty Typedef, Enum, Union oraz Struct
 Następujące atrybuty dotyczą [typedef](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1), [struktury](../cpp/struct-cpp.md), i [wyliczenia](../cpp/enumerations-cpp.md) słowa kluczowe języka C++.  
@@ -38,7 +33,7 @@ Następujące atrybuty dotyczą [typedef](http://msdn.microsoft.com/en-us/cc96cf
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |[Case](../windows/case-cpp.md)|Używane z [switch_type —](../windows/switch-type.md) atrybutu w **Unii**.|  
-|[niestandardowe](../windows/custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|  
+|[custom](../windows/custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|  
 |[export](../windows/export.md)|Powoduje, że struktura danych mają być umieszczone w pliku .idl.|  
 |[first_is](../windows/first-is.md)|Określa indeks pierwszego elementu tablicy ma zostać przesłany.|  
 |[helpcontext](../windows/helpcontext.md)|Określa identyfikator kontekstu, która pozwala użytkownikowi oglądać informacje o tym elemencie w pliku pomocy.|  
@@ -50,31 +45,31 @@ Następujące atrybuty dotyczą [typedef](http://msdn.microsoft.com/en-us/cc96cf
 |[ref](../windows/ref-cpp.md)|Identyfikuje wskaźnik odwołania.|  
 |[switch_is](../windows/switch-is.md)|Określa wyrażenie lub identyfikator działający jako discriminant Unii, który wybiera element członkowski typu union.|  
 |[switch_type](../windows/switch-type.md)|Określa typ zmiennej używanej jako discriminant Unii.|  
-|[unikatowe](../windows/unique-cpp.md)|Określa unikatowy wskaźnika.|  
+|[unique](../windows/unique-cpp.md)|Określa unikatowy wskaźnika.|  
 |[wire_marshal](../windows/wire-marshal.md)|Określa typ danych, który będzie używany do przesłania zamiast typu dane specyficzne dla aplikacji.|  
   
 ### <a name="enum"></a>enum  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|[niestandardowe](../windows/custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|  
+|[custom](../windows/custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|  
 |[export](../windows/export.md)|Powoduje, że struktura danych mają być umieszczone w pliku .idl.|  
-|[Identyfikator UUID](../windows/uuid-cpp-attributes.md)|Określa unikatowy identyfikator dla klasy ani interfejsu.|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Określa unikatowy identyfikator dla klasy ani interfejsu.|  
 |[v1_enum](../windows/v1-enum.md)|Określa, że przekazywane na określony typ wyliczeniowy jako jednostki 32-bitowe zamiast domyślnego 16-bitowych.|  
   
 ### <a name="union"></a>unia  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|[niestandardowe](../windows/custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|  
+|[custom](../windows/custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|  
 |[export](../windows/export.md)|Powoduje, że struktura danych mają być umieszczone w pliku .idl.|  
 |[first_is](../windows/first-is.md)|Określa indeks pierwszego elementu tablicy ma zostać przesłany.|  
 |[last_is](../windows/last-is.md)|Określa indeks przekazywanych ostatnim elemencie tablicy.|  
 |[length_is](../windows/length-is.md)|Określa liczbę elementów tablicy ma zostać przesłany.|  
 |[max_is](../windows/max-is.md)|Określa maksymalną wartość indeksu tablicy prawidłowe.|  
 |[size_is](../windows/size-is.md)|Określa rozmiar pamięci przydzielona dla wskaźników o rozmiarze o rozmiarze wskaźniki do wskaźników o rozmiarze i jedno - lub tablice wielowymiarowe.|  
-|[unikatowe](../windows/unique-cpp.md)|Określa unikatowy wskaźnika.|  
-|[Identyfikator UUID](../windows/uuid-cpp-attributes.md)|Określa unikatowy identyfikator dla klasy ani interfejsu.|  
+|[unique](../windows/unique-cpp.md)|Określa unikatowy wskaźnika.|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Określa unikatowy identyfikator dla klasy ani interfejsu.|  
   
 ### <a name="nonencapsulated-union"></a>Nonencapsulated Unii  
   
@@ -93,7 +88,7 @@ Następujące atrybuty dotyczą [typedef](http://msdn.microsoft.com/en-us/cc96cf
 |[coclass](../windows/coclass.md)|Tworzy kontrolkę ActiveX.|  
 |[com_interface_entry —](../windows/com-interface-entry-cpp.md)|Dodaje wpis interfejs do mapy COM.|  
 |[control](../windows/control.md)|Określa, że typ zdefiniowany przez użytkownika jest formantu.|  
-|[niestandardowe](../windows/custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|  
+|[custom](../windows/custom-cpp.md)|Umożliwia zdefiniowanie własnego atrybutu.|  
 |[db_column](../windows/db-column.md)|Wiąże określonej kolumny zestawu wierszy.|  
 |[db_command](../windows/db-command.md)|Tworzy polecenia OLE DB.|  
 |[db_param](../windows/db-param.md)|Kojarzy zmiennej określonego elementu członkowskiego z parametrem wejściowych lub wyjściowych i rozgranicza zmiennej.|  
@@ -112,10 +107,10 @@ Następujące atrybuty dotyczą [typedef](http://msdn.microsoft.com/en-us/cc96cf
 |[max_is](../windows/max-is.md)|Określa maksymalną wartość indeksu tablicy prawidłowe.|  
 |[requires_category](../windows/requires-category.md)|Określa wymagany składnik kategorii klasy docelowej.|  
 |[size_is](../windows/size-is.md)|Określa rozmiar pamięci przydzielona dla wskaźników o rozmiarze o rozmiarze wskaźniki do wskaźników o rozmiarze i jedno - lub tablice wielowymiarowe.|  
-|[źródło](../windows/source-cpp.md)|W klasie określa interfejsów źródłowego obiektu COM dla punkty połączenia. W właściwości lub metody oznacza, że element członkowski zwraca obiekt lub Typ VARIANT, który jest źródłem zdarzeń.|  
-|[wątkowość](../windows/threading-cpp.md)|Określa model wątkowości dla obiekt COM.|  
-|[unikatowe](../windows/unique-cpp.md)|Określa unikatowy wskaźnika.|  
-|[Identyfikator UUID](../windows/uuid-cpp-attributes.md)|Określa unikatowy identyfikator dla klasy ani interfejsu.|  
+|[source](../windows/source-cpp.md)|W klasie określa interfejsów źródłowego obiektu COM dla punkty połączenia. W właściwości lub metody oznacza, że element członkowski zwraca obiekt lub Typ VARIANT, który jest źródłem zdarzeń.|  
+|[Wątkowość](../windows/threading-cpp.md)|Określa model wątkowości dla obiekt COM.|  
+|[unique](../windows/unique-cpp.md)|Określa unikatowy wskaźnika.|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Określa unikatowy identyfikator dla klasy ani interfejsu.|  
 |[Wersja](../windows/version-cpp.md)|Identyfikuje określoną wersją wśród wielu wersji klasy.|  
 |[vi_progid](../windows/vi-progid.md)|Określa niezależny od wersji formularza identyfikatora ProgID.|  
   

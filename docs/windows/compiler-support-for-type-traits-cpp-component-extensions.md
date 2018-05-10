@@ -1,13 +1,10 @@
 ---
-title: "Obsługa cech typu w kompilatorze (C++ Component Extensions) | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Obsługa cech typu w kompilatorze (C++ Component Extensions) | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - __is_simple_value_class
 - __has_trivial_destructor
@@ -69,18 +66,16 @@ helpviewer_keywords:
 - __is_simple_value_class keyword [C++]
 - __has_trivial_constructor keyword [C++]
 ms.assetid: cd440630-0394-48c0-a16b-1580b6ef5844
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c069645e91d9d895309f00c5f39ddda950084e07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c68e354e70f3976bffba12020ff1175142715fbc
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="compiler-support-for-type-traits-c-component-extensions"></a>Obsługa cech typu w kompilatorze (C++ Component Extensions)
 Obsługa kompilatora *wpisz cech*, które wskazują różnych cech typu w czasie kompilacji.  
@@ -287,7 +282,7 @@ Obsługa kompilatora *wpisz cech*, które wskazują różnych cech typu w czasie
   
      Zwraca wartość PRAWDA, jeśli typ ma destruktor wirtualny.  
   
-     `__has_virtual_destructor`destruktor wirtualny jest również działa na typy platform i wszelkie destruktora zdefiniowane przez użytkownika w typie platformy.  
+     `__has_virtual_destructor` destruktor wirtualny jest również działa na typy platform i wszelkie destruktora zdefiniowane przez użytkownika w typie platformy.  
   
     ```  
   
@@ -308,7 +303,7 @@ Obsługa kompilatora *wpisz cech*, które wskazują różnych cech typu w czasie
   
      Zwraca wartość PRAWDA, jeśli typ jest typem abstrakcyjnym. Aby uzyskać więcej informacji na typach abstrakcyjnych macierzystego, zobacz [abstrakcyjny](../windows/abstract-cpp-component-extensions.md).  
   
-     `__is_abstract`działa także dla typy platform. Interfejs z co najmniej jeden element członkowski jest abstrakcyjna, ponieważ jest typem odwołania z co najmniej jeden abstrakcyjny element członkowski. Aby uzyskać więcej informacji na typach abstrakcyjnych platformy, zobacz [klasy abstrakcyjne](../cpp/abstract-classes-cpp.md)  
+     `__is_abstract` działa także dla typy platform. Interfejs z co najmniej jeden element członkowski jest abstrakcyjna, ponieważ jest typem odwołania z co najmniej jeden abstrakcyjny element członkowski. Aby uzyskać więcej informacji na typach abstrakcyjnych platformy, zobacz [klasy abstrakcyjne](../cpp/abstract-classes-cpp.md)  
   
     ```  
   
@@ -329,7 +324,7 @@ Obsługa kompilatora *wpisz cech*, które wskazują różnych cech typu w czasie
   
      Zwraca wartość PRAWDA, jeśli pierwszy typ jest klasę podstawową drugi typ, jeśli oba typy są takie same.  
   
-     `__is_base_of`również działa na typy platform. Na przykład, zostanie zwrócona wartość PRAWDA, jeśli jest pierwszy typ [interfejsu klasy](../windows/interface-class-cpp-component-extensions.md) i drugi typ implementuje interfejs.  
+     `__is_base_of` również działa na typy platform. Na przykład, zostanie zwrócona wartość PRAWDA, jeśli jest pierwszy typ [interfejsu klasy](../windows/interface-class-cpp-component-extensions.md) i drugi typ implementuje interfejs.  
   
     ```  
   
@@ -459,7 +454,7 @@ Obsługa kompilatora *wpisz cech*, które wskazują różnych cech typu w czasie
   
      Zwraca wartość PRAWDA, jeśli typ jest klasy lub union ma konstruktora lub prywatnych lub chronionych elementów członkowskich niestatyczna, nie klas podstawowych i żadnych funkcji wirtualnych. Zobacz stanowiskami C++ standard sekcje 8.5.1/1, 9/4 i 3.9/10, aby uzyskać więcej informacji.  
   
-     `__is_pod`Zwraca wartość false w typach podstawowych.  
+     `__is_pod` Zwraca wartość false w typach podstawowych.  
   
     ```  
   

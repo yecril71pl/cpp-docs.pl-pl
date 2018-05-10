@@ -2,9 +2,6 @@
 title: Funkcje przestrzeń nazw współbieżności (AMP) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::all_memory_fence
@@ -20,17 +17,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 360c253860931f00e65575250d3944b05dc9c4a9
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 061587fae8728c6489296426a849075a6b4d00f0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Funkcje przestrzeń nazw współbieżności (AMP)
 ||||  
@@ -449,7 +444,7 @@ void copy(
  `value_type`  
  Typ danych elementów, które są kopiowane.  
   
-##  <a name="copy_async"></a>  copy_async  
+##  <a name="copy_async"></a>  copy_async —  
  Kopiuje obiekt C++ AMP i zwraca [completion_future](completion-future-class.md) obiekt, który może być obsługiwane. Nie można skopiować danych, uruchamiając kod na akceleratora.  Formularz ogólny tej funkcji jest `copy(src, dest)`.  
   
 ```  
@@ -566,7 +561,7 @@ void direct3d_errorf(
  ...) restrict(amp);
 ```  
   
-##  <a name="direct3d_printf"></a>  direct3d_printf  
+##  <a name="direct3d_printf"></a>  direct3d_printf —  
  Wyświetla ciąg formatowania w oknie danych wyjściowych programu Visual Studio. Jest ona wywoływana z funkcji z `restrict(amp)` Klauzula ograniczenia.  
   
 ```  
@@ -575,7 +570,7 @@ void direct3d_printf(
  ...) restrict(amp);
 ```  
   
-##  <a name="global_memory_fence"></a>  global_memory_fence  
+##  <a name="global_memory_fence"></a>  global_memory_fence —  
  Bloki wykonywanie wszystkich wątków na kafelku, dopóki wszystkie pamięci globalnej uzyskuje dostęp do zostały zakończone. Dzięki temu uzyskuje dostęp do pamięci globalnej są widoczne dla innych wątków na kafelku wątku i są wykonywane w kolejności, program.  
   
 ```  

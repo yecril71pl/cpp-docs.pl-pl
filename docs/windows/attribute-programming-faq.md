@@ -1,13 +1,10 @@
 ---
-title: "Atrybut programowania w języku — często zadawane pytania | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Atrybut programowania w języku — często zadawane pytania | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - attributes [C++], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76b7ad2c7acb9d232602c620a70cefabbecee531
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35b57c8813778cf0bbf8efbfcbee8466074b87f0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute-programming-faq"></a>Pogramowanie oparte na atrybutach - najczęściej zadawane pytania
 Ten temat zawiera odpowiedzi na poniższe często zadawane pytania:  
@@ -49,7 +44,7 @@ Ten temat zawiera odpowiedzi na poniższe często zadawane pytania:
   
 -   [W klasie pochodnej z klasy, która używa również atrybuty można używać atrybutów?](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)  
   
-##  <a name="vcconattributeprogrammmingfaqanchor1"></a>Co to jest HRESULT?  
+##  <a name="vcconattributeprogrammmingfaqanchor1"></a> Co to jest HRESULT?  
  `HRESULT` Jest typem proste danych, który jest często używane jako wartości zwracane przez atrybuty i ATL ogólnie. W poniższej tabeli opisano różne wartości. Więcej wartości znajdują się w pliku winerror.h pliku nagłówka.  
   
 |Nazwa|Opis|Wartość|  
@@ -66,7 +61,7 @@ Ten temat zawiera odpowiedzi na poniższe często zadawane pytania:
 |E_FAIL|Nieokreślony błąd|0x80004005|  
 |E_ACCESSDENIED|Ogólny błąd odmowy dostępu|0x80070005|  
   
-##  <a name="vcconattributeprogrammmingfaqanchor2"></a>Gdy trzeba określać nazwy parametru atrybutu?  
+##  <a name="vcconattributeprogrammmingfaqanchor2"></a> Gdy trzeba określać nazwy parametru atrybutu?  
  W większości przypadków Jeśli atrybut ma jeden parametr, że parametr nosi nazwę. Ta nazwa nie jest wymagana przy wstawianiu atrybutu w kodzie. Na przykład następujące użycie [agregowaniu](../windows/aggregatable.md) atrybutu:  
   
 ```  
@@ -97,13 +92,13 @@ class CMyClass
 |[helpcontext](../windows/helpcontext.md)|[helpfile](../windows/helpfile.md)|[helpstring](../windows/helpstring.md)|  
 |[helpstringcontext](../windows/helpstringcontext.md)|[helpstringdll](../windows/helpstringdll.md)|[id](../windows/id.md)|  
 |[iid_is](../windows/iid-is.md)|[import](../windows/import.md)|[importlib](../windows/importlib.md)|  
-|[obejmują](../windows/include-cpp.md)|[includelib —](../windows/includelib-cpp.md)|[last_is](../windows/last-is.md)|  
+|[include](../windows/include-cpp.md)|[includelib —](../windows/includelib-cpp.md)|[last_is](../windows/last-is.md)|  
 |[length_is](../windows/length-is.md)|[max_is](../windows/max-is.md)|[no_injected_text](../windows/no-injected-text.md)|  
 |[pointer_default](../windows/pointer-default.md)|[pragma](../windows/pragma.md)|[restricted](../windows/restricted.md)|  
-|[size_is](../windows/size-is.md)|[źródło](../windows/source-cpp.md)|[switch_is](../windows/switch-is.md)|  
+|[size_is](../windows/size-is.md)|[source](../windows/source-cpp.md)|[switch_is](../windows/switch-is.md)|  
 |[switch_type](../windows/switch-type.md)|[transmit_as](../windows/transmit-as.md)|[wire_marshal](../windows/wire-marshal.md)|  
   
-##  <a name="vcconattributeprogrammmingfaqanchor3"></a>W bloku attribute można używać komentarze?  
+##  <a name="vcconattributeprogrammmingfaqanchor3"></a> W bloku attribute można używać komentarze?  
  Można użyć zarówno jeden wiersz i wielowierszowe komentarze bloku atrybutu. Jednak nie można użyć albo stylu komentarza wewnątrz nawiasów zawierający parametry do atrybutu.  
   
  Dozwolone jest:  
@@ -125,16 +120,16 @@ class CMyClass
 ]  
 ```  
   
-##  <a name="vcconattributeprogrammmingfaqanchor4"></a>Jak atrybuty wchodzą w interakcje z dziedziczenia?  
+##  <a name="vcconattributeprogrammmingfaqanchor4"></a> Jak atrybuty wchodzą w interakcje z dziedziczenia?  
  Zarówno oparte na atrybutach i unattributed klasy mogą dziedziczyć innych klas, które mogą się być przypisywane lub nie. Wynik wynikających z atrybutami klasy jest taka sama jak wynikające z tej klasy po dostawcy atrybut ma przekształcone jego kod. Atrybuty nie są przesyłane do klasy poprzez dziedziczenie C++ pochodne. Dostawca atrybutu przekształca tylko kod w pobliżu jego atrybuty.  
   
-##  <a name="vcconattributeprogrammmingfaqanchor5"></a>Jak używać atrybutów w nonattributed Projekt ATL  
+##  <a name="vcconattributeprogrammmingfaqanchor5"></a> Jak używać atrybutów w nonattributed Projekt ATL  
  Masz nonattributed Projekt ATL, który ma pliku .idl, i chcesz rozpocząć dodawanie obiektów oparte na atrybutach. W takim przypadku Kreator dodawania klasy do zapewnienia kodu.  
   
-##  <a name="vcconattributeprogrammmingfaqanchor6"></a>Jak używać pliku .idl w projekcie z atrybutami?  
+##  <a name="vcconattributeprogrammmingfaqanchor6"></a> Jak używać pliku .idl w projekcie z atrybutami?  
  Masz pliku .idl, którego chcesz użyć w projekcie ATL przypisane. W takim przypadku należy użyć [importidl —](../windows/importidl.md) atrybutu, skompilować pliku .idl do pliku .h (zobacz [strony właściwości MIDL](../ide/midl-property-pages.md) w oknie dialogowym stron właściwości projektu), a następnie dołącz plik .h w projekcie .  
   
-##  <a name="vcconattributeprogrammmingfaqanchor7"></a>Można zmodyfikować kod, który jest wstrzyknięte przez atrybut?  
+##  <a name="vcconattributeprogrammmingfaqanchor7"></a> Można zmodyfikować kod, który jest wstrzyknięte przez atrybut?  
  Niektóre atrybuty iniekcję kodu do projektu. Wprowadzony kod można wyświetlić za pomocą [/Fx](../build/reference/fx-merge-injected-code.md) — opcja kompilatora. Istnieje również możliwość skopiować z pliku wprowadzony kod i wklej go do kodu źródłowego. Dzięki temu można zmodyfikować zachowanie atrybutu. Jednak należy zmodyfikować kod innych części.  
   
  Poniższy przykład jest wynikiem kopiowania wprowadzony kod do pliku kodu źródłowego:  
@@ -257,10 +252,10 @@ public:
 int main() {}  
 ```  
   
-##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a>Jak można użyć deklaracji interfejsu oparte na atrybutach?  
+##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a> Jak można użyć deklaracji interfejsu oparte na atrybutach?  
  Jeśli ma być deklaracja przekazująca dalej oparte na atrybutach interfejsu należy zastosować takie same atrybuty do deklaracja przekazująca dalej, które są stosowane do deklaracji interfejsu rzeczywiste. Należy także zastosować [wyeksportować](../windows/export.md) atrybutu użytkownika deklaracja przekazująca dalej.  
   
-##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a>W klasie pochodnej z klasy, która używa również atrybuty można używać atrybutów?  
+##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a> W klasie pochodnej z klasy, która używa również atrybuty można używać atrybutów?  
  Nie, za pomocą atrybutów w klasie pochodnej z klasy, który także używa atrybutów jest nieobsługiwane.  
   
 ## <a name="see-also"></a>Zobacz też  

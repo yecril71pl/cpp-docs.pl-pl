@@ -1,12 +1,9 @@
 ---
-title: "Currentscheduler — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Currentscheduler — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - CurrentScheduler
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d973b9ad7c5c7f81b5db85b3f8c5ccc49b5049b0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 71ca69f645e548b1913904f692eb1c5fae167a9a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler — Klasa
 Reprezentuje abstrakcję dla bieżącego harmonogramu, skojarzone z kontekstem wywołującego.  
@@ -56,7 +51,7 @@ class CurrentScheduler;
 |[Utwórz](#create)|Tworzy nowy harmonogram, w których zachowanie jest opisane przez `_Policy` parametru i dołącza go do kontekstu wywołania. Nowo utworzony harmonogram będzie bieżącego harmonogramu dla kontekstu wywołania.|  
 |[CreateScheduleGroup](#createschedulegroup)|Przeciążone. Tworzy nową grupę harmonogramu w ramach harmonogramu, skojarzone z kontekstem wywołującego. Wersja, która przyjmuje parametr `_Placement` powoduje, że zadania w grupie nowo utworzonego harmonogramu, aby być ukierunkowane pod kątem wykonywania w lokalizacji określonej w tym parametrze.|  
 |[Detach](#detach)|Odłącza bieżącego harmonogramu z kontekstu wywołania i przywraca wcześniej dołączone harmonogram jako bieżącego harmonogramu, jeśli taka istnieje. Po powrocie z tej metody, kontekst wywołania jest wtedy zarządzana przez harmonogram, który wcześniej był dołączony do kontekstu za pomocą `CurrentScheduler::Create` lub `Scheduler::Attach` metody.|  
-|[Get](#get)|Zwraca wskaźnik do harmonogramu, skojarzone z wywołania kontekstem, nazywane również bieżącego harmonogramu.|  
+|[Pobierz](#get)|Zwraca wskaźnik do harmonogramu, skojarzone z wywołania kontekstem, nazywane również bieżącego harmonogramu.|  
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Zwraca bieżącą liczbę procesorów wirtualnych harmonogramu, skojarzone z kontekstem wywołującego.|  
 |[GetPolicy](#getpolicy)|Zwraca kopię bieżącego harmonogramu utworzony za pomocą zasad.|  
 |[Id](#id)|Zwraca unikatowy identyfikator dla bieżącego harmonogramu.|  
@@ -75,7 +70,7 @@ class CurrentScheduler;
   
  **Namespace:** współbieżności  
   
-##  <a name="create">Utwórz</a> 
+##  <a name="create"></a> Utwórz 
 
  Tworzy nowy harmonogram, w których zachowanie jest opisane przez `_Policy` parametru i dołącza go do kontekstu wywołania. Nowo utworzony harmonogram będzie bieżącego harmonogramu dla kontekstu wywołania.  
   
@@ -149,7 +144,7 @@ static Scheduler* __cdecl Get();
 ### <a name="remarks"></a>Uwagi  
  Ta metoda spowoduje procesu domyślnego harmonogramu są tworzone i/lub dołączyć do wywoływania kontekstu, jeśli nie harmonogramu aktualnie skojarzony z kontekstem wywoływania. Żadne dodatkowe odwołanie jest umieszczona na `Scheduler` obiektu zwróconego przez tę metodę.  
   
-##  <a name="getnumberofvirtualprocessors">GetNumberOfVirtualProcessors</a> 
+##  <a name="getnumberofvirtualprocessors"></a> GetNumberOfVirtualProcessors 
 
  Zwraca bieżącą liczbę procesorów wirtualnych harmonogramu, skojarzone z kontekstem wywołującego.  
   

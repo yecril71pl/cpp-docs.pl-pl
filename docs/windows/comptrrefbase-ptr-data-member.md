@@ -1,12 +1,9 @@
 ---
-title: "Comptrrefbase::ptr_ — członek danych | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Comptrrefbase::ptr_ — członek danych | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::Details::ComPtrRefBase::ptr_
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - ptr_ data member
 ms.assetid: 9b1c07f9-531f-41c2-9ac0-f7cf49f5f586
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b8e205ff7073482af2186427592bf5c9319a7935
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d45181e5db5fe16b6eada23ba8d6c72193fe3ae
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="comptrrefbaseptr-data-member"></a>ComPtrRefBase::ptr_ — Członek danych
 Obsługuje infrastrukturę biblioteki WRL i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -41,7 +36,7 @@ T* ptr_;
  Wskaźnik do typu określonego przez parametr bieżącego szablonu.  
   
 ## <a name="remarks"></a>Uwagi  
- `ptr_`jest elementem członkowskim chronionych danych.  
+ `ptr_` jest elementem członkowskim chronionych danych.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  

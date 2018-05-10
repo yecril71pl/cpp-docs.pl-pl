@@ -1,13 +1,10 @@
 ---
-title: "Pisanie wielowątkowego programu Win32 | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Pisanie wielowątkowego programu Win32 | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,22 +20,20 @@ helpviewer_keywords:
 - mutex [C++]
 - threading [C++], thread stacks
 ms.assetid: 1415f47d-417f-4f42-949b-946fb28aab0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ede0e6dc1740f93f4905dc69b1927aee0d1a7ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d88add7830316ae192a728f9c9ff10320657eaf
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="writing-a-multithreaded-win32-program"></a>Pisanie wielowątkowego programu Win32
 Podczas pisania programu przy użyciu wielu wątków musi być dostosowana ich zachowania i [wykorzystania zasobów programu](#_core_sharing_common_resources_between_threads). Należy również upewnić się, że każdy wątek otrzyma [własną stosu](#_core_thread_stacks).  
   
-##  <a name="_core_sharing_common_resources_between_threads"></a>Udostępnianie wspólnych zasobów między wątkami  
+##  <a name="_core_sharing_common_resources_between_threads"></a> Udostępnianie wspólnych zasobów między wątkami  
   
 > [!NOTE]
 >  Omówienie podobne z punktu widzenia MFC, zobacz [Multithreading: Programowanie porady](../parallel/multithreading-programming-tips.md) i [Multithreading: kiedy używać klas synchronizacji](../parallel/multithreading-when-to-use-the-synchronization-classes.md).  
@@ -62,7 +57,7 @@ fwrite( data, sizeof( data ), 1, fp );
 ReleaseMutex( hIOMutex);  
 ```  
   
-##  <a name="_core_thread_stacks"></a>Stosy wątków  
+##  <a name="_core_thread_stacks"></a> Stosy wątków  
  Wszystkie miejsca na stosie domyślnej aplikacji jest przydzielony do pierwszego wątku do wykonania, znany jako wątku 1. W związku z tym należy określić ilość pamięci do przydzielenia oddzielne stosu dla każdego wątku dodatkowe program wymaga. System operacyjny przydziela miejsce dodatkowe stosu wątku, jeśli to konieczne, ale należy określić wartość domyślną.  
   
  Pierwszy argument `_beginthread` wywołanie jest wskaźnik do **BounceProc** funkcji, która wykonuje wątki. Drugi argument określa domyślny rozmiar stosu wątku. Ostatni argument jest identyfikator, który jest przekazywany do **BounceProc**. **BounceProc** używa numeru Identyfikacyjnego jako zalążek generatora liczb losowych oraz wybierz atrybut kolor wątku i wyświetlić znak.  

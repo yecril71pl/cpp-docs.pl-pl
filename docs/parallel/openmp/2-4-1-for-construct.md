@@ -1,27 +1,22 @@
 ---
 title: 2.4.1 dla konstrukcji | Dokumentacja firmy Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 27d2cbce-786b-4819-91d3-d55b2cc57a5e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd861da77b549a73edf9aeface714b0066d88344
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d5165c21f0bf6f2b9757550208d5e8e26a2bd3b1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="241-for-construct"></a>2.4.1 — dla konstrukcji
 **Dla** dyrektywy identyfikuje iteracyjne konstrukcji podziału pracy określający, że iteracji pętli skojarzone będą wykonywane równolegle. Iteracje **dla** pętli są rozproszone na wątków, które już istnieją w zespole wykonywanie równoległe konstrukcji, do którego jest on powiązany. Składnia **dla** konstrukcja wygląda następująco:  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  **lastprivate (** *zmiennej listy* **)**  
   
- **redukcja (** *operator* **:** *zmiennej listy***)**  
+ **redukcja (** *operator* **:** *zmiennej — lista ***)**  
   
  **uporządkowane**  
   
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
  **Dla** dyrektywy wprowadza ograniczenia w strukturze odpowiadającego **dla** pętli. W szczególności odpowiadającego **dla** pętli musi być kanoniczny kształtu:  
   
- **Aby uzyskać (** *wyrażenie init* **;** *b logicznej op var*; *wyrażenie incr***)**  
+ **Aby uzyskać (** *wyrażenie init* **;** *b logicznej op var*; *incr — wyrażenie ***)**  
   
  *init — wyrażenie*  
  Jeden z poniższych:  
@@ -103,9 +98,9 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|static|Gdy **harmonogram (statyczne,** *chunk_size***)** określono iteracji są podzielone na fragmenty o rozmiarze określonym przez *chunk_size*. Fragmenty są statycznie przypisane do wątki zespołu w sposób okrężnego według liczby wątków. Gdy nie *chunk_size* określono miejsca iteracji jest podzielona na fragmenty przybliżeniu równe w rozmiarze z jednym fragmencie przypisane do każdego wątku.|  
-|dynamic|Gdy **harmonogram (dynamiczny,** *chunk_size***)** określono iteracji dzielą się na szeregu fragmentów, każdy z nich zawiera *chunk_size* iteracji. Każdy fragment jest przypisany do wątku, który oczekuje na przydzielenie. Wątek wykonuje fragmentów iteracji i następnie czeka na jego dalej przypisania, dopóki nie pozostaną bez fragmentów do przypisania. Należy pamiętać, że ostatni fragment do przypisania może mieć mniejszej liczby iteracji. Gdy nie *chunk_size* jest określony, domyślnie przyjmuje wartość 1.|  
-|Przewodnik|Gdy **harmonogram (z przewodnikiem,** *chunk_size***)** określono iteracji są przypisane do wątków w fragmentów z zmniejszenie wielkości. Po zakończeniu jego przypisanej fragmentu iteracji wątku dynamicznie przypisano innego fragmentu, dopóki nie pozostaną none. Aby uzyskać *chunk_size* 1, rozmiar każdego fragmentu wynosi około liczby iteracji nieprzypisane podzielona przez liczbę wątków. Rozmiary około zmniejszyć wykładniczo do 1. Dla *chunk_size* z wartością *k* większa niż 1, rozmiar około zmniejszyć wykładniczo do *k*, z wyjątkiem tego, że ostatni fragment może mieć mniej niż  *k* iteracji. Gdy nie *chunk_size* jest określony, domyślnie przyjmuje wartość 1.|  
+|static|Gdy **harmonogram (statyczne,** *chunk_size ***)** określono iteracji są podzielone na fragmenty o rozmiarze określonym przez *chunk_size*. Fragmenty są statycznie przypisane do wątki zespołu w sposób okrężnego według liczby wątków. Gdy nie *chunk_size* określono miejsca iteracji jest podzielona na fragmenty przybliżeniu równe w rozmiarze z jednym fragmencie przypisane do każdego wątku.|  
+|dynamic|Gdy **harmonogram (dynamiczny,** *chunk_size ***)** określono iteracji dzielą się na szeregu fragmentów, każdy z nich zawiera *chunk_size* iteracji. Każdy fragment jest przypisany do wątku, który oczekuje na przydzielenie. Wątek wykonuje fragmentów iteracji i następnie czeka na jego dalej przypisania, dopóki nie pozostaną bez fragmentów do przypisania. Należy pamiętać, że ostatni fragment do przypisania może mieć mniejszej liczby iteracji. Gdy nie *chunk_size* jest określony, domyślnie przyjmuje wartość 1.|  
+|Przewodnik|Gdy **harmonogram (z przewodnikiem,** *chunk_size ***)** określono iteracji są przypisane do wątków w fragmentów z zmniejszenie wielkości. Po zakończeniu jego przypisanej fragmentu iteracji wątku dynamicznie przypisano innego fragmentu, dopóki nie pozostaną none. Aby uzyskać *chunk_size* 1, rozmiar każdego fragmentu wynosi około liczby iteracji nieprzypisane podzielona przez liczbę wątków. Rozmiary około zmniejszyć wykładniczo do 1. Dla *chunk_size* z wartością *k* większa niż 1, rozmiar około zmniejszyć wykładniczo do *k*, z wyjątkiem tego, że ostatni fragment może mieć mniej niż  *k* iteracji. Gdy nie *chunk_size* jest określony, domyślnie przyjmuje wartość 1.|  
 |środowisko uruchomieniowe|Gdy **schedule(runtime)** jest określony, decyzji dotyczących planowania została odroczona do środowiska wykonawczego. Harmonogram *rodzaj* i rozmiaru fragmenty można wybrać w czasie wykonywania przez ustawienie zmiennej środowiskowej **OMP_SCHEDULE**. Jeśli nie ustawiono tej zmiennej środowiskowej, wynikowy harmonogram jest zdefiniowane w implementacji. Gdy **schedule(runtime)** jest określony, *chunk_size* nie może być określony.|  
   
  W przypadku braku jawnie zdefiniowanych **harmonogram** klauzuli, domyślne **harmonogram** jest zdefiniowane w implementacji.  

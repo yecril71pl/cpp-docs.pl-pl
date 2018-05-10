@@ -1,12 +1,9 @@
 ---
-title: "source_block — klasa | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: source_block — klasa | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - source_block
@@ -42,17 +39,15 @@ dev_langs:
 helpviewer_keywords:
 - source_block class
 ms.assetid: fbdd4146-e8d0-42e8-b714-fe633f69ffbf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61b79d716aa836c14e18d9c0ac20210526b7fd52
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 64b9873ef6da00b4ef0fb03e43f61fa704484389
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sourceblock-class"></a>source_block — Klasa
 `source_block` Klasa jest abstrakcyjna klasa podstawowa dla bloków tylko do źródła. Ta klasa dostarcza łącze podstawowe funkcje zarządzania jako również jako wspólne sprawdzanie błędów.  
@@ -134,7 +129,7 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
   
  **Namespace:** współbieżności  
   
-##  <a name="accept">Zaakceptuj</a> 
+##  <a name="accept"></a> Zaakceptuj 
 
  Akceptuje wiadomość została przyjęta przez to `source_block` obiektu przeniesieniem własności do obiektu wywołującego.  
   
@@ -200,7 +195,7 @@ virtual void async_send(_Inout_opt_ message<_Target_type>* _Msg);
  `_Msg`  
  Wskaźnik do `message` obiektu do wysłania asynchronicznie.  
   
-##  <a name="consume">Korzystać z</a> 
+##  <a name="consume"></a> Korzystać z 
 
  Wykorzystuje komunikat wcześniej oferowane przez to `source_block` obiektu i pomyślnie zastrzeżone przez element docelowy przeniesieniem własności do obiektu wywołującego.  
   
@@ -324,7 +319,7 @@ virtual void propagate_to_any_targets(_Inout_opt_ message<_Target_type>* _PMessa
  `_PMessage`  
  Wskaźnik do elementu, który ma być propagowane.  
   
-##  <a name="release">Zlecenia</a> 
+##  <a name="release"></a> Zlecenia 
 
  Zwalnia Poprzednia rezerwacja wiadomości powiodło się.  
   
@@ -373,7 +368,7 @@ virtual void release_ref(_Inout_ ITarget<_Target_type>* _PTarget);
 ### <a name="remarks"></a>Uwagi  
  Ta metoda jest wywoływana przez `ITarget` obiekt, który jest jest rozłączony z tego źródła. Blok źródła może zwolnić wszystkie zasoby zarezerwowane dla blok docelowy.  
   
-##  <a name="remove_targets">remove_targets</a> 
+##  <a name="remove_targets"></a> remove_targets 
 
  Usuwa wszystkie linki docelowego dla tego bloku źródła. Ta powinna być wywoływana ze destruktor.  
   

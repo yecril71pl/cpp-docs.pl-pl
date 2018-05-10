@@ -1,13 +1,10 @@
 ---
-title: "Przegląd C++ AMP | Dokumentacja firmy Microsoft"
-ms.custom: 
+title: Przegląd C++ AMP | Dokumentacja firmy Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0ee5b9c04794c531e2fa16cee72d6eee607dfbd
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f8de31ab9009a84c04e594837a0c4fbf30758fea
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="c-amp-overview"></a>Przegląd C++ AMP
 C++ Accelerated Massive Parallelism (C++ AMP) przyspiesza wykonywanie kodu C++ dzięki wykorzystaniu danych równoległe sprzętu, takie jak procesor graficzny (GPU) na karcie odrębne grafika. Przy użyciu C++ AMP, można kodu algorytmy danych wielowymiarowych, dzięki czemu wykonanie może przyspieszyć przy użyciu równoległości w heterogenicznych sprzętu. Model programowania C++ AMP zawiera tablice wielowymiarowe, indeksowania, transfer pamięci, kafelków i bibliotekę matematyczna funkcji. Aby kontrolować sposób przenoszenia danych z Procesora GPU i na odwrót, dzięki czemu można zwiększyć wydajność, można użyć rozszerzenia języka C++ AMP.  

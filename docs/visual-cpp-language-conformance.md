@@ -1,23 +1,21 @@
 ---
-title: "Zgodność języka Visual C++ | Dokumentacja firmy Microsoft"
+title: Zgodność języka Visual C++ | Dokumentacja firmy Microsoft
 ms.date: 11/15/2017
 ms.technology:
 - cpp-language
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49aabbcc746470815db40f15fa00774d5e05bfe5
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: 722b1dadbdd5e1855ea8d8cc163de705f3e2cbcd
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="visual-c-language-conformance"></a>Zgodność języka Visual C++
 
@@ -57,22 +55,22 @@ Aby uzyskać więcej informacji na temat udoskonaleń zgodność i innych zmian 
 |&nbsp;&nbsp;[Właściwość typename N4051 w parametrów szablonu szablonu](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4051.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[Atrybuty N4266 dla obszarów nazw i moduły wyliczające](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4266.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[Literały znaków u8 N4267](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4267.html)|VS 2015 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[Zagnieżdżone N4230 definicji przestrzeni nazw](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4230.html)|VS 2015.3 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[Zagnieżdżone N4230 definicji przestrzeni nazw](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4230.html)|VS 2015.3 <sup> [17](#note_17)</sup>|
 |&nbsp;&nbsp;[N3928 zwięzłym static_assert](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3928.pdf)|VS 2017 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[Uogólniony P0184R0 opartej na zakresie dla pętle](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html)|VS 2017 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0188R1 atrybutu [[przepuszczająca]]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0188r1.pdf)|VS 2017 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0001R1 usuwanie rejestru — słowo kluczowe](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[Usuwanie P0002R1 operator ++ na bool](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[Przechwytywanie P0018R3 * to przez wartość](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0018r3.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0028R4 przy użyciu atrybutu przestrzeni nazw bez powtarzania](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0028r4.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0061R1 __has_include](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0061r1.html)|VS 2017 15.3 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0138R2 bezpośrednio listy inicjowania typów stałych wyliczeniowych z liczb całkowitych](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[Wyrażenia lambda constexpr P0170R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0170r1.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0189R1 atrybutu [[nodiscard]]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0189r1.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0212R1 atrybutu [[maybe_unused]]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0212r1.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[Powiązania P0217R3 strukturalnych](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0217r3.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0001R1 usuwanie rejestru — słowo kluczowe](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html)|2017 VS 15 USTĘP 3 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[Usuwanie P0002R1 operator ++ na bool](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html)|2017 VS 15 USTĘP 3 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[Przechwytywanie P0018R3 * to przez wartość](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0018r3.html)|2017 VS 15 USTĘP 3 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0028R4 przy użyciu atrybutu przestrzeni nazw bez powtarzania](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0028r4.html)|2017 VS 15 USTĘP 3 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0061R1 __has_include](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0061r1.html)|2017 VS 15 USTĘP 3 <sup> [14](#note_14)</sup>|
+|&nbsp;&nbsp;[P0138R2 bezpośrednio listy inicjowania typów stałych wyliczeniowych z liczb całkowitych](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf)|2017 VS 15 USTĘP 3 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[Wyrażenia lambda constexpr P0170R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0170r1.pdf)|2017 VS 15 USTĘP 3 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0189R1 atrybutu [[nodiscard]]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0189r1.pdf)|2017 VS 15 USTĘP 3 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0212R1 atrybutu [[maybe_unused]]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0212r1.pdf)|2017 VS 15 USTĘP 3 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[Powiązania P0217R3 strukturalnych](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0217r3.html)|2017 VS 15 USTĘP 3 <sup> [17](#note_17)</sup>|
 |&nbsp;&nbsp;[Jeśli constexpr P0292R2 — instrukcje](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0292r2.html)|2017 VS 15 USTĘP 3 <sup> [G](#note_G)</sup>|
-|&nbsp;&nbsp;[Instrukcje wyboru P0305R1 z inicjatorami](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0305r1.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[Instrukcje wyboru P0305R1 z inicjatorami](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0305r1.html)|2017 VS 15 USTĘP 3 <sup> [17](#note_17)</sup>|
 |&nbsp;&nbsp;[Literały P0245R1 Hexfloat](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0245r1.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[Stosowanie N4268 więcej argumentów szablonu bez typu](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4268.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[N4295 Fold wyrażenia](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4295.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
@@ -93,7 +91,7 @@ Aby uzyskać więcej informacji na temat udoskonaleń zgodność i innych zmian 
 |&nbsp;&nbsp;[Ignorowanie P0283R2 nierozpoznany atrybutów](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0283r2.html)|Nie|
 |&nbsp;&nbsp;[P0702R1 ustalania klasy Wnioskowanie argumentu szablonu dla konstruktorami listy inicjatorów](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0702r1.html)|Nie|
 |__Funkcje języka 20 podstawowe języka c ++__|__Obsługiwane__|
-|&nbsp;&nbsp;[Dodawanie P0306R4 &#95; &#95; VA_OPT &#95; &#95; Pominięcie przecinkami i usuwania przecinkami](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0306r4.pdf)|Nie|
+|&nbsp;&nbsp;[Dodawanie P0306R4 &#95; &#95;VA_OPT&#95; &#95; pominięcie przecinkami i usuwania przecinkami](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0306r4.pdf)|Nie|
 |&nbsp;&nbsp;[Inicjowanie wyznaczony P0329R4](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf)|Nie|
 |&nbsp;&nbsp;[Stosowanie P0409R2 lambda przechwytywania [=, to]](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html)|Nie|
 |&nbsp;&nbsp;[P0428R2 zwykłego składni szablonu dla ogólnego wyrażeń lambda](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r2.pdf)|Nie|
@@ -129,25 +127,25 @@ Aby uzyskać więcej informacji na temat udoskonaleń zgodność i innych zmian 
 |&nbsp;&nbsp;[Wycofano P0521R0 shared_ptr::unique()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0521r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[Zmienne wbudowane P0607R0 dla biblioteki standardowej](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0607r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[Wycofano P0618R0 \<codecvt >](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0618r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[N4562 Podstawowe informacje na temat biblioteki: search() Boyer Moore](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#func.searchers.boyer_moore)<br/>&nbsp;&nbsp;[P0253R1 ustalania poszukującego zwracane typy](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0253r1.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0031R0 constexpr dla \<tablicy > (ponownie) i \<iteratora >](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0031r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[Narzędzia do zarządzania Rozszerzanie pamięci P0040R3](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0040r3.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0084R2 Emplace typu zwracanego](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0084r2.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0152R1 atomic::is_always_lock_free](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0152r1.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0154R1 hardware_destructive_interference_size itp.](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0154r1.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[Zablokuj ze zmienną liczbą argumentów zmiana nazwy P0156R2\_zabezpieczenia do zakresie\_blokady](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0156r2.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[N4562 Podstawowe informacje na temat biblioteki: search() Boyer Moore](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#func.searchers.boyer_moore)<br/>&nbsp;&nbsp;[P0253R1 ustalania poszukującego zwracane typy](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0253r1.pdf)|2017 VS 15 USTĘP 3 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0031R0 constexpr dla \<tablicy > (ponownie) i \<iteratora >](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0031r0.html)|2017 VS 15 USTĘP 3 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[Narzędzia do zarządzania Rozszerzanie pamięci P0040R3](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0040r3.html)|2017 VS 15 USTĘP 3 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0084R2 Emplace typu zwracanego](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0084r2.pdf)|2017 VS 15 USTĘP 3 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0152R1 atomic::is_always_lock_free](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0152r1.html)|2017 VS 15 USTĘP 3 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0154R1 hardware_destructive_interference_size itp.](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0154r1.html)|2017 VS 15 USTĘP 3 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[Zablokuj ze zmienną liczbą argumentów zmiana nazwy P0156R2\_zabezpieczenia do zakresie\_blokady](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0156r2.html)|2017 VS 15 USTĘP 3 <sup> [17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0258R2 has_unique_object_representations](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0258r2.html)|2017 VS 15 USTĘP 3 <sup> [L](#note_L)</sup>|
-|&nbsp;&nbsp;[P0295R0 gcd(), lcm()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0295r0.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0295R0 gcd(), lcm()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0295r0.pdf)|2017 VS 15 USTĘP 3 <sup> [17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0298R3 std::byte](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0298r3.pdf)|VS 2017 15 ustęp 3 <sup> [17](#note_17), [bajtów](#note_byte)</sup>|
-|&nbsp;&nbsp;[P0403R1 UDL dla \<string_view > ("meow" sv itp.)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0403r1.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0418R2 atomic compare_exchange memory_order wymagania](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0418r2.html)|VS 2017 15.3 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[Common_type przeglądu P0435R1 —](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0435r1.pdf)<br />&nbsp;&nbsp;[Dostosowywanie P0548R1 typowe\_typ i czas trwania](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0548r1.pdf)|VS 2017 15.3 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0505R0 constexpr dla \<chrono > (ponownie)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0505r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0513R0 zatruwaniem wyznaczania wartości skrótu](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0513r0.pdf)<br />&nbsp;&nbsp;[P0599R1 noexcept wyznaczania wartości skrótu](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0599r1.pdf)|VS 2017 15.3 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[Oznaczenie P0516R0 shared_future — kopiowanie jako noexcept](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0516r0.html)|VS 2017 15.3 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[Konstruowanie P0517R0 future_error — z future_errc —](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0517r0.html)|VS 2017 15.3 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0558R1 rozpoznawania atomic<T> o nazwie niespójności klasy podstawowej](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0558r1.pdf)|VS 2017 15.3 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[Zmiana P0604R0 jest\_można wywołać wyniku/\_z do wywołania\_wyniku, jest\_wywoływać, jest\_nothrow\_wywoływać](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0604r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0403R1 UDL dla \<string_view > ("meow" sv itp.)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0403r1.html)|2017 VS 15 USTĘP 3 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0418R2 atomic compare_exchange memory_order wymagania](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0418r2.html)|2017 VS 15 USTĘP 3 <sup> [14](#note_14)</sup>|
+|&nbsp;&nbsp;[Common_type przeglądu P0435R1 —](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0435r1.pdf)<br />&nbsp;&nbsp;[Dostosowywanie P0548R1 typowe\_typ i czas trwania](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0548r1.pdf)|2017 VS 15 USTĘP 3 <sup> [14](#note_14)</sup>|
+|&nbsp;&nbsp;[P0505R0 constexpr dla \<chrono > (ponownie)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0505r0.html)|2017 VS 15 USTĘP 3 <sup> [17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0513R0 zatruwaniem wyznaczania wartości skrótu](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0513r0.pdf)<br />&nbsp;&nbsp;[P0599R1 noexcept wyznaczania wartości skrótu](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0599r1.pdf)|2017 VS 15 USTĘP 3 <sup> [14](#note_14)</sup>|
+|&nbsp;&nbsp;[Oznaczenie P0516R0 shared_future — kopiowanie jako noexcept](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0516r0.html)|2017 VS 15 USTĘP 3 <sup> [14](#note_14)</sup>|
+|&nbsp;&nbsp;[Konstruowanie P0517R0 future_error — z future_errc —](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0517r0.html)|2017 VS 15 USTĘP 3 <sup> [14](#note_14)</sup>|
+|&nbsp;&nbsp;[P0558R1 rozpoznawania atomic<T> o nazwie niespójności klasy podstawowej](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0558r1.pdf)|2017 VS 15 USTĘP 3 <sup> [14](#note_14)</sup>|
+|&nbsp;&nbsp;[Zmiana P0604R0 jest\_można wywołać wyniku/\_z do wywołania\_wyniku, jest\_wywoływać, jest\_nothrow\_wywoływać](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0604r0.html)|2017 VS 15 USTĘP 3 <sup> [17](#note_17)</sup>|
 |&nbsp;&nbsp;[N4562 Podstawowe informacje na temat biblioteki: \<algorytm > sample()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#alg.random.sample)|VS 2017|
 |&nbsp;&nbsp;[N4562 Podstawowe informacje na temat biblioteki: \<żadnych >](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#any)|VS 2017|
 |&nbsp;&nbsp;[N4562 Podstawowe informacje na temat biblioteki: \<opcjonalne >](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#optional)|VS 2017|
@@ -166,24 +164,24 @@ Aby uzyskać więcej informacji na temat udoskonaleń zgodność i innych zmian 
 |&nbsp;&nbsp;[P0025R1 clamp()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0025r1.html)|VS 2015.3|
 |&nbsp;&nbsp;[P0185R1 is_swappable, is_nothrow_swappable](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0185r1.html)|VS 2015.3|
 |&nbsp;&nbsp;[P0272R1 Non-const basic_string::data()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0272r1.html)|VS 2015.3|
-|&nbsp;&nbsp;[Poprawa N4387 pary i spójnej kolekcji](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4387.html)|VS 2015.2 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[Shared_mutex N4508 (Untimed)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4508.html)|VS 2015.2 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp;[Poprawa N4387 pary i spójnej kolekcji](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4387.html)|VS 2015.2 <sup> [14](#note_14)</sup>|
+|&nbsp;&nbsp;[Shared_mutex N4508 (Untimed)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4508.html)|VS 2015.2 <sup> [14](#note_14)</sup>|
 |&nbsp;&nbsp;[Usuwanie P0004R1 przestarzałe aliasów iostream](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0004r1.html)|VS 2015.2 <sup> [rem](#note_rem)</sup>|
-|&nbsp;&nbsp;[P0006R0 zmiennej szablonów dla cech typu w kompilatorze (is_same_v itp.)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0006r0.html)|VS 2015.2 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0007R1 as_const()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0007r1.html)|VS 2015.2 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0013R1 logiczny Operator cech typu w kompilatorze (łącznie itp.)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0013r1.html)|VS 2015.2 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[Owner_less — P0074R0\<>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0074r0.html)|VS 2015.2 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0092R1 \<chrono> floor(), ceil(), round(), abs()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0092r1.html)|VS 2015.2 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[Lock_guard P0156R0 ze zmienną liczbą argumentów](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0156r0.html)|VS 2015.2 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp;[P0006R0 zmiennej szablonów dla cech typu w kompilatorze (is_same_v itp.)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0006r0.html)|VS 2015.2 <sup> [14](#note_14)</sup>|
+|&nbsp;&nbsp;[P0007R1 as_const()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0007r1.html)|VS 2015.2 <sup> [14](#note_14)</sup>|
+|&nbsp;&nbsp;[P0013R1 logiczny Operator cech typu w kompilatorze (łącznie itp.)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0013r1.html)|VS 2015.2 <sup> [14](#note_14)</sup>|
+|&nbsp;&nbsp;[Owner_less — P0074R0\<>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0074r0.html)|VS 2015.2 <sup> [14](#note_14)</sup>|
+|&nbsp;&nbsp;[P0092R1 \<chrono > floor(), ceil(), round(), abs()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0092r1.html)|VS 2015.2 <sup> [14](#note_14)</sup>|
+|&nbsp;&nbsp;[Lock_guard P0156R0 ze zmienną liczbą argumentów](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0156r0.html)|VS 2015.2 <sup> [14](#note_14)</sup>|
 |&nbsp;&nbsp;[N3911 void_t](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3911.pdf)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[Unique_ptr N4089 bezpieczne konwersje w\<T [] >](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4089.pdf)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[N4169 invoke()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4169.html)|VS 2015 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[N4190 usuwanie operatorów auto_ptr, random_shuffle() i starych \<funkcjonalności > rzeczy](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4190.htm)|VS 2015 <sup>[rem](#note_rem)</sup>|
+|&nbsp;&nbsp;[N4190 usuwanie operatorów auto_ptr, random_shuffle() i starych \<funkcjonalności > rzeczy](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4190.htm)|VS 2015 <sup> [rem](#note_rem)</sup>|
 |&nbsp;&nbsp;[Noexcept N4258 czyszczenia](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4258.pdf)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[N4259 uncaught_exceptions()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4259.pdf)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[Reference_wrapper — N4277 Trivially Copyable](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4277.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[Insert_or_assign()/try_emplace() N4279 dla mapy/unordered_map](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4279.html)|VS 2015 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[N4280 size(), empty(), data()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4280.pdf)|VS 2015 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp;[N4280 size(), empty(), przyczyny](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4280.pdf)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[Unique_ptr N4366 dokładnie ograniczający przypisania](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4366.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[N4389 bool_constant](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4389.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[Standardowa biblioteka C11 P0063R3](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0063r3.html)|VS 2015 <sup>[C11](#note_C11), [14](#note_14)</sup>|
@@ -246,7 +244,7 @@ __15,5 cala 2017 VS__ wskazuje funkcje, które są obsługiwane w programie Visu
 <a name="note_L"></a>__L__ obsługiwany przez wewnętrznych kompilatora. Tym wewnętrznej nie jest jeszcze dostępna w Clang. Funkcja jest dostępna, ale jeszcze nie jest włączone w funkcji Intellisense.   
 <a name="note_14"></a>__14__ tych funkcji C ++ 17 są zawsze włączone, nawet wtedy, gdy [/std:c ++ 14](./build/reference/std-specify-language-standard-version.md) określono (ustawienie domyślne). To być spowodowane funkcję został wdrożony przed wprowadzeniem **/std** opcje lub powodu niepożądanie złożonych warunkowego implementacji.  
 <a name="note_17"></a>__17__ te funkcje są włączone przez [/std:c ++ 17](./build/reference/std-specify-language-standard-version.md) (lub [/std:c ++ najnowsze](./build/reference/std-specify-language-standard-version.md)) — opcja kompilatora.  
-<a name="note_byte"></a>__Bajt__ `std::byte` jest włączana przez [/std:c ++ 17](./build/reference/std-specify-language-standard-version.md) (lub [/std:c ++ najnowsze](./build/reference/std-specify-language-standard-version.md)), ale ponieważ może ona konflikt z nagłówkami zestaw Windows SDK w niektórych przypadkach, ma szczegółowych Wypisz makra. Można ją wyłączyć, definiując `_HAS_STD_BYTE` jako `0`.  
+<a name="note_byte"></a>__Bajt__ `std::byte` jest włączana przez [/std:c ++ 17](./build/reference/std-specify-language-standard-version.md) (lub [/std:c ++ najnowsze](./build/reference/std-specify-language-standard-version.md)), ale ponieważ może ona konflikt z nagłówkami zestaw Windows SDK w niektórych przypadkach, ma szczegółowych makro zrezygnować. Można ją wyłączyć, definiując `_HAS_STD_BYTE` jako `0`.  
 <a name="note_C11"></a>__C11__ uniwersalne środowisko CRT zaimplementowana części biblioteki standardowej C11, które są wymagane przez C ++ 17, z wyjątkiem C99 `strftime()` E/O alternatywnych konwersji Specyfikatory, C11 `fopen()` trybu wyłączności i C11 `aligned_alloc()`. Jest prawdopodobnie nie będzie zaimplementowana, ponieważ określona C11 `aligned_alloc()` w taki sposób, który nie jest zgodna z implementacją Microsoft `free()`, to znaczy, że `free()` musi mieć możliwość obsługi dużej wyrównany alokacji.  
 <a name="note_rem"></a>__rem__ funkcje usunięte podczas [/std:c ++ 17](./build/reference/std-specify-language-standard-version.md) (lub [/std:c ++ najnowsze](./build/reference/std-specify-language-standard-version.md)) określono opcję kompilatora. Te funkcje zostały makra Wypisz: `_HAS_AUTO_PTR_ETC`, `_HAS_FUNCTION_ALLOCATOR_SUPPORT`, `_HAS_OLD_IOSTREAMS_MEMBERS`, i `_HAS_UNEXPECTED`.
   
