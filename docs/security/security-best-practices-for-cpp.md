@@ -1,7 +1,7 @@
 ---
 title: Najlepsze rozwiązania dotyczące C++ | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/08/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -14,20 +14,22 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c7f0860daea5b2e90368c7068c6b13371af3fd8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
-ms.translationtype: HT
+ms.openlocfilehash: 35114d2fff4975cfca1681a7f5861c81bd979ef5
+ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="security-best-practices-for-c"></a>Najlepsze praktyki w zakresie zabezpieczeń dla C++
+
 Ten artykuł zawiera informacje o narzędziach zabezpieczeń i rozwiązań. Ich użycie nie oznacza, że aplikacje odporna na ataki, ale ułatwia udanych ataków rzadziej.  
   
-## <a name="visual-c-security-features"></a>Funkcje zabezpieczeń w programie Visual C++  
+## <a name="visual-c-security-features"></a>Funkcje zabezpieczeń w programie Visual C++
+
  Te funkcje zabezpieczeń są wbudowane w kompilatora Visual C++ i linker:  
   
  [/guard (Włącz ochronę przepływu sterowania)](../build/reference/guard-enable-control-flow-guard.md)  
@@ -84,14 +86,19 @@ Ten artykuł zawiera informacje o narzędziach zabezpieczeń i rozwiązań. Ich 
 -   Test na potencjalne błędy zgodności aplikacji, które wynikają z typowych pomyłek programowania.  
   
 -   Sprawdź aplikację w przypadku problemów związanych z pamięcią.  
-  s
+
 -   Zidentyfikuj potencjalne problemy w aplikacji.  
   
  Użycie narzędzia AppVerifier wchodzi w skład narzędzi zgodności aplikacji, która jest dostępna z [zgodności aplikacji](http://go.microsoft.com/fwlink/p/?linkid=91277) w witrynie TechNet.  
   
 
 ## <a name="windows-user-accounts"></a>Konta użytkownika systemu Windows  
- Przy użyciu konta systemu Windows użytkownika należące do deweloperów ujawnia grupy Administratorzy i--przez rozszerzenie — klienci na zagrożenia bezpieczeństwa. Aby uzyskać więcej informacji, zobacz [uruchamianie jako członek grupy Użytkownicy](running-as-a-member-of-the-users-group.md) i [jak (Kontrola konta) dotyczy Twoja aplikacja](how-user-account-control-uac-affects-your-application.md).  
+ Przy użyciu konta systemu Windows użytkownika należące do deweloperów ujawnia grupy Administratorzy i--przez rozszerzenie — klienci na zagrożenia bezpieczeństwa. Aby uzyskać więcej informacji, zobacz [uruchamianie jako członek grupy Użytkownicy](running-as-a-member-of-the-users-group.md) i [jak (Kontrola konta) dotyczy Twoja aplikacja](how-user-account-control-uac-affects-your-application.md).
+
+## <a name="guidance-for-speculative-execution-side-channels"></a>Wskazówki dotyczące rozważana kanały po stronie wykonywania
+
+Aby uzyskać informacje na temat identyfikowania i ograniczyć rozważana wykonywania po stronie kanał sprzętu luki w zabezpieczeniach oprogramowania C++, zobacz [wskazówki dla deweloperów języka C++ dla kanałów po stronie wykonywania Speculative](developer-guidance-speculative-execution.md).
+
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Security>   
