@@ -45,7 +45,7 @@ Możesz zaimportować zasobów graficznych (mapy bitowe, ikony kursory i paski n
   
 2.  Kliknij przycisk **importu** menu skrótów.  
   
-3.  Znajdź i wybierz nazwę pliku, mapa bitowa (bmp), ikona (.ico), kursora (.cur), plik Html (*.htm) lub innego pliku, który chcesz zaimportować.  
+3.  Znajdź i wybierz nazwę pliku, mapa bitowa (bmp), ikona (.ico), kursora (.cur), plik Html (.htm) lub innego pliku, który chcesz zaimportować.  
   
 4.  Kliknij przycisk **OK** można dodać zasobu do wybranego pliku w **zasobów** widoku.  
   
