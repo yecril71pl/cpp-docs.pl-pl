@@ -96,11 +96,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 863d0c84d772de389affc8167e3a0f69b0e0fabe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 25dffabfe01bb68af180d67b5b47dfee44ce30ff
+ms.sourcegitcommit: 39585672df8874fb5df4e70de97cd7f328fe9880
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="multimap-class"></a>multimap — Klasa
 
@@ -124,7 +124,7 @@ class multimap;
 
 `Traits` Typ, który udostępnia obiekt funkcji, które można porównać dwóch wartości elementu jako klucze sortowania w celu ustalenia, ich kolejność względną multimap. Predykat binarne `less<Key>` jest wartością domyślną.
 
-W języku C ++ 14 można włączyć heterogenicznych wyszukiwania, określając `std::less<>` lub `std::greater<>` predykatu, który nie ma typu parametrów. Aby uzyskać więcej informacji, zobacz [heterogenicznych wyszukiwanie w kontenerach asocjacyjnej](../standard-library/stl-containers.md#sequence_containers)
+W języku C ++ 14 można włączyć heterogenicznych wyszukiwania, określając `std::less<>` lub `std::greater<>` predykatu, który nie ma typu parametrów. Aby uzyskać więcej informacji, zobacz [heterogenicznych wyszukiwanie w kontenerach asocjacyjnej](../standard-library/stl-containers.md#heterogeneous-lookup-in-associative-containers-c14)
 
 `Allocator` Typ reprezentujący obiekt alokatora przechowywane, który hermetyzuje informacje szczegółowe o mapy alokacji i cofania alokacji pamięci. Ten argument jest opcjonalny, a wartość domyślna to `allocator<pair <const Key, Type> >`.
 

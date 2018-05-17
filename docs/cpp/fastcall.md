@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d69c97294795ed2f3f0b2d82ec8caa4734fa1f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03f286f21f213f5b2a193ccb824ba22b7c7c1f00
+ms.sourcegitcommit: 39585672df8874fb5df4e70de97cd7f328fe9880
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="fastcall"></a>__fastcall
 **Microsoft Specific**  
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 |-------------|--------------------|  
 |Kolejność przekazywania argumentów|Pierwsze dwie DWORD lub mniejsze argumenty, które znajdują się na liście argumentów od lewej do prawej są przekazywane w rejestrach ECX i EDX; wszystkie inne argumenty nie są przekazywane na stosie od prawej do lewej.|  
 |Odpowiedzialność za utrzymanie stosu|Wywoływana funkcja POP argumenty ze stosu.|  
-|Konwencja dekorowania nazw|Znak @ (@) jest prefiksem nazwy; znak następuje liczba bajtów (dziesiętna) w parametrze listy jest sufiks nazwy.|  
+|Konwencja dekorowania nazw|Znak (\@) jest prefiksem nazwy; znak następuje liczba bajtów (dziesiętna) w parametrze listy jest sufiks nazwy.|  
 |Konwencja translacji wielkości liter|Translacja wielkości liter nie jest wykonywana.|  
   
 > [!NOTE]
