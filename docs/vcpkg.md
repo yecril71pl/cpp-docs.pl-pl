@@ -1,10 +1,10 @@
 ---
-title: vcpkg — Menedżer pakietów C++ dla systemu Windows | Dokumentacja firmy Microsoft
+title: vcpkg — A C++ Menedżer pakietów dla systemu Windows, Linux i MacOS | Dokumentacja firmy Microsoft
 description: vcpkg jest wiersza polecenia Menedżera pakietów, które znacząco upraszcza nabycie i instalację open source biblioteki języka C++ w systemie Windows.
 keywords: vcpkg
 author: mikeblome
 ms.author: mblome
-ms.date: 04/06/2018
+ms.date: 05/14/2018
 ms.technology:
 - cpp-ide
 ms.tgt_pltfrm: windows
@@ -14,15 +14,15 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c67b7fce0567c2c6daf18b625a2b759c31d0b040
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ca2bfee3ac9e244402b8a987e30988384b96fcd2
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg: Menedżer pakietów C++ dla systemu Windows
+# <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Menedżer pakietów C++ dla systemu Windows, Linux i MacOS
 
-vcpkg jest Menedżer pakietów wiersza polecenia, które znacząco upraszcza nabycia i Instalacja bibliotek innych firm w systemie Windows. Jeśli projekt korzysta z bibliotek innych firm, firma Microsoft zaleca, użyj vcpkg mają być instalowane. vcpkg obsługuje zarówno open source i zastrzeżonych biblioteki. Wszystkie biblioteki w katalogu publicznego vcpkg zostały przetestowane na zgodność z programu Visual Studio 2015 i Visual Studio 2017 r. Począwszy od stycznia 2018 w katalogu są ponad 600 bibliotek i społecznością C++ jest dodanie więcej bibliotek w sposób ciągły.
+vcpkg jest Menedżer pakietów wiersza polecenia, które znacząco upraszcza nabycia i Instalacja bibliotek innych firm w systemach Windows, Linux i MacOS. Jeśli projekt korzysta z bibliotek innych firm, firma Microsoft zaleca, użyj vcpkg mają być instalowane. vcpkg obsługuje zarówno open source i zastrzeżonych biblioteki. Wszystkie biblioteki w wykazie systemu Windows vcpkg zostały przetestowane na zgodność z programu Visual Studio 2015 i Visual Studio 2017 r. Począwszy od 2018 może ma ponad 900 bibliotek w wykazie systemu Windows i za pośrednictwem 350 w wykazie systemu Linux/MacOS. Społeczność C++ dodaje więcej bibliotek do obie katalogi w sposób ciągły.
 
 ## <a name="simple-yet-flexible"></a>Proste, ale elastyczne
 
@@ -30,17 +30,19 @@ Za pomocą jednego polecenia można pobrać źródeł i tworzenie biblioteki. vc
 
 ## <a name="sources-not-binaries"></a>Źródła nie plików binarnych
 
-Dla bibliotek w katalogu publiczne vcpkg pobiera źródeł zamiast danych binarnych [1]. Kompiluje tych źródeł przy użyciu 2017 usługi Visual Studio lub Visual Studio 2015, jeśli nie zainstalowano 2017 r. W języku C++, bardzo ważne jest zgodności żadnych bibliotek, których można użyć z tym samym kompilatora i wersja kompilatora jako prowadzący do niego kodu aplikacji. Za pomocą vcpkg, wyeliminuj lub co najmniej znacznie zmniejszyć ryzyko niedopasowanych pliki binarne i problemów, które mogą powodować. W zespołach, które są standaryzowane do określonej wersji kompilatora Visual C++ jednego elementu członkowskiego zespołu można użyć vcpkg pobieranie źródeł i Skompiluj zestaw plików binarnych, a następnie użyć polecenia Eksportuj do pliku zip pliki binarne i nagłówki dla innych członków zespołu. Aby uzyskać więcej informacji zobacz się, że eksportu skompilowane pliki binarne i nagłówki poniżej.
+W przypadku bibliotek w wykazie systemu Windows vcpkg pobiera źródeł zamiast danych binarnych [1]. Kompiluje tych źródeł przy użyciu 2017 usługi Visual Studio lub Visual Studio 2015, jeśli nie zainstalowano 2017 r. W języku C++, bardzo ważne jest zgodności żadnych bibliotek, których można użyć z tym samym kompilatora i wersja kompilatora jako prowadzący do niego kodu aplikacji. Za pomocą vcpkg, wyeliminuj lub co najmniej znacznie zmniejszyć ryzyko niedopasowanych pliki binarne i problemów, które mogą powodować. W zespołach, które są standaryzowane do określonej wersji kompilatora Visual C++ jednego elementu członkowskiego zespołu można użyć vcpkg pobieranie źródeł i Skompiluj zestaw plików binarnych, a następnie użyć polecenia Eksportuj do pliku zip pliki binarne i nagłówki dla innych członków zespołu. Aby uzyskać więcej informacji, zobacz [eksportu skompilowane pliki binarne i nagłówki](#export_binaries_per_project) poniżej.
 
 Jeśli tworzysz klonowania vcpkg z bibliotekami prywatnych w kolekcji portów, możesz dodać port, który pobiera wbudowane pliki binarne i nagłówki i zapisać pliku portfile.cmake, która po prostu kopiuje pliki do odpowiedniej lokalizacji.
 
 [1] *Uwaga: niektóre zastrzeżone biblioteki źródła nie są dostępne. Vcpkg pobierze zgodne wbudowane plików binarnych w tych przypadkach.*
 
-## <a name="installation"></a>Instalacja
+## <a name="installation"></a>Instalacja 
 
 Klonowanie repozytorium vcpkg z usługi GitHub: https://github.com/Microsoft/vcpkg. Możesz pobrać do dowolnej lokalizacji folderu, preferowany.
 
-Uruchom program inicjujący w folderze głównym: **bootstrap vcpkg.bat**.
+Uruchom program inicjujący w folderze głównym: 
+- **bootstrap vcpkg.bat** (system Windows)
+- ./bootstrap-vcpkg.sh (Linux, MacOS)
 
 ## <a name="basic-tasks"></a>Podstawowe zadania
 
@@ -72,7 +74,11 @@ taglib      1.11.1-2   TagLib Audio Meta-Data Library
 
 ### <a name="install-a-library-on-your-local-machine"></a>Zainstaluj bibliotekę na komputerze lokalnym
 
-Po uzyskaniu nazwy biblioteki za pomocą **wyszukiwania vcpkg**, możesz użyć **vcpkg zainstalować** pobrać biblioteki i skompiluj go. vcpkg używa biblioteki portfile w katalogu portów. Jeśli Trzykolumnowa nie zostanie określony, vcpkg zainstaluje i kompilacji systemu Windows x86. Jeśli portfile określa zależności, vcpkg pobiera i instaluje te również. Po pobraniu, vcpkg tworzy bibliotekę przy użyciu, niezależnie od systemu, który korzysta z biblioteki kompilacji. Pliki projektów CMake i MSBuild są preferowane, ale upewnij jest obsługiwane wraz z innymi system kompilacji. Jeśli vcpkg nie może znaleźć określonej kompilacji systemu na komputerze lokalnym, pobiera i instaluje je.
+Po uzyskaniu nazwy biblioteki za pomocą **wyszukiwania vcpkg**, możesz użyć **vcpkg zainstalować** pobrać biblioteki i skompiluj go. vcpkg używa biblioteki portfile w katalogu portów. Jeśli Trzykolumnowa nie zostanie określony, vcpkg zainstaluje i Kompiluj Trzykolumnowa domyślny dla platformy docelowej: x86 windows, x64 linux.cmake lub x64 osx.cmake.
+
+Dla biblioteki systemu Linux vcpkg zależy od gcc instalowane na komputerze lokalnym. Na MacOS vcpkg używa Clang. 
+
+Jeśli portfile określa zależności, vcpkg pobiera i instaluje te również. Po pobraniu, vcpkg tworzy bibliotekę przy użyciu, niezależnie od systemu, który korzysta z biblioteki kompilacji. CMake i (w systemie Windows) projektów MSBuild są preferowane, ale nie jest obsługiwana upewnij wraz z innymi system kompilacji. Jeśli vcpkg nie może znaleźć określonej kompilacji systemu na komputerze lokalnym, pobiera i instaluje je.
 
 ```cmd
 > vcpkg install boost:x86-windows
@@ -82,6 +88,14 @@ The following packages will be built and installed:
   * bzip2:x86-windows
   * zlib:x86-windows
 Additional packages (*) will be installed to complete this operation.
+
+```
+
+Dla projektów CMAKE używać CMAKE_TOOLCHAIN_FILE udostępnić bibliotek z `find_package()`. Na przykład:  
+
+```cmd
+cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)
+cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg\scripts\buildsystems\vcpkg.cmake (Windows)
 ```
 
 ## <a name="list-the-libraries-already-installed"></a>Wyświetlanie bibliotek już zainstalowane
@@ -99,7 +113,7 @@ websocketpp:x86-windows 0.7.0    Library that implements RFC6455 The WebSocket P
 zlib:x86-windows        1.2.11   A compression library
 ```
 
-## <a name="integrate-with-visual-studio"></a>Integracja z programem Visual Studio
+## <a name="integrate-with-visual-studio-windows"></a>Integracja z programem Visual Studio (z systemem Windows)
 
 ### <a name="per-user"></a>Na użytkownika
 
@@ -118,7 +132,12 @@ Jeśli musisz użyć określonej wersji biblioteki, która jest inna niż wersja
 1. Uruchom **zainstalować vcpkg \<biblioteki >**.
 1. Użyj **vcpkg integracji projektu** do utworzenia pakietu NuGet, który odwołuje się do tej biblioteki, na podstawie na projekt.
 
-## <a name="export-compiled-binaries-and-headers"></a>Eksportuj skompilowane pliki binarne i nagłówki
+## <a name="target-linux-from-windows-via-wsl"></a>Linux docelowy z systemem Windows za pośrednictwem WSL
+
+Służy do tworzenia plików binarnych systemu Linux na komputerze z systemem Windows przy użyciu podsystemu systemu Windows dla systemu Linux (WSL). Postępuj zgodnie z instrukcjami, aby [Konfigurowanie WSL w systemie Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10)i skonfiguruj go przy użyciu [rozszerzenie programu Visual Studio dla systemu Linux](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/). Można umieścić wbudowanych bibliotekach dla systemów Windows i Linux w tym samym folderze i do niego dostęp z systemami Windows i WSL.
+
+
+## <a name="export_binaries_per_project"></a> Eksportuj skompilowane pliki binarne i nagłówki
 
 Wymaganie wszyscy członkowie zespołu, aby pobrać i tworzenie bibliotek może być mało wydajne. Członek zespołu pojedynczego tej pracy, a następnie użyj **eksportu vcpkg** można utworzyć pliku zip, pliki binarne i nagłówki, które można łatwo udostępniać innych członków zespołu.
 
@@ -241,7 +260,6 @@ Zawartość wystąpienia vcpkg jest:
 |**vcpkg integracji projektu**|Generowanie pakietu NuGet odwołujący się do poszczególnych użycia projektu programu VS|
 |**Eksport vcpkg \<pkg >... [opt...]**|Eksportowanie pakietu|
 |**Edytuj vcpkg \<pkg >**|Otwórz port do edycji (używa edytora %, domyślny kod)|
-|**Importuj vcpkg \<pkg >**|Importowanie biblioteki wbudowanych|
 |**Utwórz vcpkg \<pkg > \<adres url > [archivename]**|Tworzenie nowego pakietu|
 |**właścicielem vcpkg \<pat >**|Wyszukaj pliki w zainstalowanych pakietów|
 |**vcpkg cache**|Lista pamięci podręcznej skompilowany pakietów|

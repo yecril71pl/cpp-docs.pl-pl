@@ -16,11 +16,11 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 358bd57dc1c7272818b1dc542991caa59d3663d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc70f0a0f714cb6f5a2f4b28d922308d8fe4d645
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="platformtype-class"></a>Klasa platform::type
 Zawiera informacje czasu wykonywania o typie — w szczególności ciąg nazwy i elementu typecode. Można uzyskać przez wywołanie [Object::GetType](../cppcx/platform-object-class.md#gettype) dowolnego obiektu lub lub przy użyciu [typeid](../windows/typeid-cpp-component-extensions.md) operator na nazwę klasy lub struktury.  
@@ -54,8 +54,8 @@ public ref class Platform::Type :
   
 |||  
 |-|-|  
-|[operator typu ^](../cppcx/operator-subtracttype-hat.md)|Konwersja z umożliwia `Windows::UI::Xaml::Interop::TypeName` do `Platform::Type`.|  
-|[Operator Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-subtractwindows-ui-xaml-interop-typename.md)|Konwersja z umożliwia `Platform::Type` do `Windows::UI::Xaml::Interop::TypeName`.|  
+|[operator typu ^](../cppcx/operator-type-hat.md)|Konwersja z umożliwia `Windows::UI::Xaml::Interop::TypeName` do `Platform::Type`.|  
+|[Operator Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md)|Konwersja z umożliwia `Platform::Type` do `Windows::UI::Xaml::Interop::TypeName`.|  
   
 ### <a name="requirements"></a>Wymagania  
  **Minimalna obsługiwana klienta:** systemu Windows 8  

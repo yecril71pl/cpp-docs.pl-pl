@@ -18,11 +18,11 @@ author: mikeblome
 ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35114d2fff4975cfca1681a7f5861c81bd979ef5
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: 2a0ed67c85cbd42985448ef9eb1806931d1c294f
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="security-best-practices-for-c"></a>Najlepsze praktyki w zakresie zabezpieczeń dla C++
 
@@ -99,8 +99,7 @@ Ten artykuł zawiera informacje o narzędziach zabezpieczeń i rozwiązań. Ich 
 
 Aby uzyskać informacje na temat identyfikowania i ograniczyć rozważana wykonywania po stronie kanał sprzętu luki w zabezpieczeniach oprogramowania C++, zobacz [wskazówki dla deweloperów języka C++ dla kanałów po stronie wykonywania Speculative](developer-guidance-speculative-execution.md).
 
-  
 ## <a name="see-also"></a>Zobacz też  
- <xref:System.Security>   
- [Zabezpieczeń](/dotnet/standard/security/index)   
- [Jak kontrola konta użytkownika (UAC) wpływa na aplikację?](how-user-account-control-uac-affects-your-application.md)
+- <xref:System.Security>   
+- [Zabezpieczenia](/dotnet/standard/security/index)   
+- [Jak kontrola konta użytkownika (UAC) wpływa na aplikację?](how-user-account-control-uac-affects-your-application.md)

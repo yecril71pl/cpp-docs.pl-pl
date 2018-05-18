@@ -1,7 +1,7 @@
 ---
 title: Wdrożenia w programie Visual C++ | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 03/13/2018
+ms.date: 05/11/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -15,15 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9880272a09cde3bec0dbbbe03bfc30821591d6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b9dfdcdce618df3f2bfec64892f62aec20b6db9
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="deployment-in-visual-c"></a>Wdrożenie w Visual C++
 
 Instalacja aplikacji na komputerze innym niż komputer deweloperski nosi nazwę *wdrożenia*. Podczas wdrażania aplikacji Visual C++ na inny komputer, należy zainstalować zarówno aplikację i wszystkie pliki bibliotek, od których zależy. Program Visual Studio pozwala wdrożyć bibliotek języka Visual C++ oraz aplikacji na trzy sposoby: *centralny*, *lokalnego wdrożenia*, i *statycznego łączenia*. Centralne wdrażanie umieszcza pliki bibliotek w katalogu systemu Windows, gdy usługa Windows Update można zaktualizować je automatycznie. Wdrożenia lokalnego umieszcza pliki biblioteki w tym samym katalogu co aplikacja. Należy ponownie wdrożyć żadnych bibliotek lokalnie wdrożonych samodzielnie ich aktualizacji. Statyczne połączenie wiąże kod biblioteki do aplikacji. Należy ponowne skompilowanie i wdrożenie aplikacji mógł korzystać z żadnych aktualizacji do bibliotek, korzystając z statycznego łączenia.
+
+W programie Visual Studio 2015 biblioteki Microsoft C Runtime został zrefaktoryzowany do określonej wersji biblioteki lokalnego składniki i nowej biblioteki uniwersalnego C środowiska uruchomieniowego, która jest teraz częścią systemu Windows. Aby uzyskać szczegółowe informacje dotyczące wdrażania Universal CRT, zobacz [wdrożenia Universal CRT](universal-crt-deployment.md).
 
 ## <a name="central-deployment"></a>Wdrożenie centralne
 
@@ -57,6 +59,7 @@ Oprócz połączone dynamicznie biblioteki programu Visual Studio udostępnia wi
 
 Kolejność ładowania bibliotek języka Visual C++ jest zależny od systemu. Aby zdiagnozować problemy z modułem ładowania, użyj depends.exe lub where.exe. Aby uzyskać więcej informacji, zobacz [kolejność wyszukiwania biblioteki dll (system Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682586.aspx).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Wdrażanie natywnych aplikacji komputerowych](../ide/deploying-native-desktop-applications-visual-cpp.md)
+- [Wdrażanie natywnych aplikacji komputerowych](../ide/deploying-native-desktop-applications-visual-cpp.md)
+- [Wdrożenie usługi Universal CRT](universal-crt-deployment.md)

@@ -15,11 +15,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90d50ca37b90251a797f70129e4b8ce1778b4d73
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2fb459c10f7ead6960760c8d02b9a471a7b8f6c2
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="atl-com-desktop-components"></a>Składniki COM pulpitu ATL
 Odwołanie do biblioteki ATL dokumentów aktywnych szablonu Library (ATL), zestaw na podstawie szablonu klasy C++, które upraszczają programowanie obiektów składnika modelu COM (Object). Aby w pełni korzystać z ATL, zaleca się pracy znajomość COM.  
@@ -28,8 +28,8 @@ Odwołanie do biblioteki ATL dokumentów aktywnych szablonu Library (ATL), zesta
  [Przegląd klas ATL](../atl/atl-class-overview.md)  
  Zawiera linki do i krótkie opisy klasy ATL według kategorii.  
   
- [ATL — klasy](../atl/reference/atl-classes.md)  
- Zawiera materiały informacyjne dotyczące klas alfabetycznej.  
+ [Klasy i struktury ATL](../atl/reference/atl-classes.md)  
+ Zawiera materiały informacyjne dotyczące klas i struktur alfabetycznej.  
   
  [Funkcje ATL](../atl/reference/atl-functions.md)  
  Zawiera materiały informacyjne w przypadku funkcji globalnych alfabetycznej. Zawiera tematy organizowanie funkcje w kategorii.  
@@ -40,14 +40,11 @@ Odwołanie do biblioteki ATL dokumentów aktywnych szablonu Library (ATL), zesta
  [Makra ATL](../atl/reference/atl-macros.md)  
  Zawiera materiały informacyjne dotyczące makra alfabetycznej. Zawiera tematy organizowanie makra w kategorii.  
   
- [Struktury ATL](../atl/reference/atl-structures.md)  
- Zawiera materiały informacyjne dotyczące struktury alfabetycznej.  
-  
  [Definicje typów ATL](../atl/reference/atl-typedefs.md)  
  Zawiera definicje typów, alfabetycznej materiałów referencyjnych  
   
- [Archetypes](../atl/reference/atl-archetypes.md)  
- Zawiera łącza do archetypes ATL, będące teoretycznego klas, zapewniających zbiór metod, elementy członkowskie danych, statycznej funkcji, definicje typów lub inne funkcje, w porządku alfabetycznym.  
+ [Archetyp procesu roboczego](../atl/reference/worker-archetype.md)  
+ Zawiera łącza do archetype ATL procesu roboczego.  
   
  [Tematy przestarzałe ATL](http://msdn.microsoft.com/en-us/7af0223d-148e-4a4c-bf9c-3e916a3b67ec)  
  Zawiera materiały informacyjne dotyczące klas, makra i funkcje, które są przestarzałe lub przestarzałe.  

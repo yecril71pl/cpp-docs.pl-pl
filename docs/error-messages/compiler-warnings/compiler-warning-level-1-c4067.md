@@ -16,42 +16,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4eccec985e6a9e652f18c6513542942351ff6efc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ee6b48327e8754f9388e0df8f43009a5be70c97
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="compiler-warning-level-1-c4067"></a>Kompilator C4067 ostrzegawcze (poziom 1)
-nieoczekiwane tokeny dyrektywie preprocesora - oczekiwano nowego wiersza  
-  
- Kompilator znalezione i zignorowane dodatkowe znaki po dyrektywie preprocesora. To ostrzeżenie jest wyświetlane tylko w obszarze Zgodność ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).  
-  
-```  
-// C4067a.cpp  
-// compile with: /DX /Za /W1  
-#pragma warning(default:4067)  
-#if defined(X)  
-#else  
-#endif v   // C4067  
-int main()  
-{  
-}  
-```  
-  
-### <a name="to-resolve-this-warning-try-the-following"></a>Aby usunąć to ostrzeżenie, należy spróbować wykonać następujące czynności:  
-  
-1.  Kompiluj z użyciem **/Ze**.  
-  
-2.  Używać ograniczników do komentarzy:  
-  
-```  
-// C4067b.cpp  
-// compile with: /DX /Za /W1  
-#if defined(X)  
-#else  
-#endif  
-int main()  
-{  
-}  
+
+> nieoczekiwane tokeny dyrektywie preprocesora - oczekiwano nowego wiersza
+
+## <a name="remarks"></a>Uwagi
+
+Kompilator znalezione i zignorowane dodatkowe znaki po dyrektywie preprocesora. Może to być spowodowane znaków nieoczekiwany że typową przyczyną jest stray średnika po zakończeniu dyrektywy. Komentarze nie powoduje to ostrzeżenie. **/Za** — opcja kompilatora umożliwia to ostrzeżenie, aby uzyskać więcej dyrektywy preprocesora niż domyślne ustawienie.
+
+## <a name="example"></a>Przykład
+
+```cpp
+// C4067a.cpp
+// compile with: cl /EHsc /DX /W1 /Za C4067a.cpp
+#include <iostream>
+#include <string> s     // C4067
+#if defined(X);         // C4067
+std::string s{"X is defined"};
+#else
+std::string s{"X is not defined"};
+#endif;                 // C4067 only under /Za
+int main()
+{
+    std::cout << s << std::endl;
+}
+```
+
+Aby usunąć to ostrzeżenie, usuń znaki stray, lub przenieś je do blok komentarza. Określone ostrzeżenia C4067 mogą być wyłączone przez usunięcie **/Za** — opcja kompilatora.
+
+```cpp
+// C4067b.cpp
+// compile with: cl /EHsc /DX /W1 C4067b.cpp
+#include <iostream>
+#include <string>
+#if defined(X)
+std::string s{"X is defined"};
+#else
+std::string s{"X is not defined"};
+#endif
+int main()
+{
+    std::cout << s << std::endl;
+}
 ```

@@ -18,11 +18,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e04f5efae261a151489309e876298b56ec696db
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c8ba7be259a10ee1bf47bbdc401a2389adac2be
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="atldrawinfo-structure"></a>Struktura ATL_DRAWINFO
 Zawiera informacje używane do renderowania do różnych celów, takich jak drukarki, metaplik lub formantu ActiveX.  
@@ -96,8 +96,7 @@ struct ATL_DRAWINFO {
  **Nagłówek:** atlctl.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Struktury](../../atl/reference/atl-structures.md)   
- [IViewObject::Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655)   
+  [Klasy i struktury](../../atl/reference/atl-classes.md) [IViewObject::Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655)   
  [CComControlBase::OnDrawAdvanced](../../atl/reference/ccomcontrolbase-class.md#ondrawadvanced)
 
 
