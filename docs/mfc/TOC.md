@@ -136,7 +136,6 @@
 ### [Technologia Active w Internecie](active-technology-on-the-internet.md)
 ### [Podstawy WinInet](wininet-basics.md)
 ### [Podstawy HTML](html-basics.md)
-### [Podstawy HTTP](http-basics.md)
 ## [MFC — zadania związane z programowaniem Internetu](mfc-internet-programming-tasks.md)
 ### [Opcje do wyboru przy projektowaniu aplikacji](application-design-choices.md)
 ### [Pisanie aplikacji MFC](writing-mfc-applications.md)

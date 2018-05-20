@@ -1,7 +1,7 @@
 ---
 title: Style używane przez MFC | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/03/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -206,19 +206,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1e891c8b24e52b56bd6bed8fb7f931fdd8fb863
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6643a1c70b6a22126222d523de4426e1aebcf85b
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="styles-used-by-mfc"></a>Style używane przez MFC  
   
 Za pomocą następujących flag styl okna lub formantu wygląd i zachowanie można określić podczas tworzenia odpowiedni obiekt MFC. W większości przypadków te style są ustawiane w `dwStyle` parametr klasy `Create` funkcji.  
   
-<a name="button-styles"></a>  
-  
-## <a name="button-styles"></a>Style przycisku  
+## <a name="button-styles"></a> Style przycisku  
   
 Style przycisku dotyczą [klasy CButton](../../mfc/reference/cbutton-class.md) obiekty, takie jak przyciski radiowe, pól wyboru i przycisków. Określ kombinację style w `dwStyle` parametr [CButton::Create](../../mfc/reference/cbutton-class.md#create). Aby uzyskać więcej informacji na stylów przycisków w systemie Windows, temacie [style przycisku (system Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951).  
   
@@ -287,9 +285,7 @@ W poniższej tabeli wymieniono dodatkowe opcje, które można używać z dowolne
 |`BS_MULTILINE`|Koduje tekst przycisku, który ma wiele wierszy, jeśli ciąg tekstowy jest za długa, aby zmieścić ją w pojedynczym wierszu w prostokącie przycisku.|  
 |`BS_NOTIFY`|Włącza przycisk, aby wysłać `BN_DBLCLK`, `BN_KILLFOCUS`, i `BN_SETFOCUS` komunikatów powiadomień do jej okna nadrzędnego. Należy pamiętać, że przyciski wysyłania `BN_CLICKED` powiadomienia niezależnie od tego, czy ten styl jest określony.|  
   
-<a name="combo-box-styles"></a>  
-  
-## <a name="combo-box-styles"></a>Style pola kombi  
+## <a name="combo-box-styles"></a>  Style pola kombi  
   
 Następujące style pola kombi są dostępne w MFC. Aby uzyskać więcej informacji na temat style pola kombi w systemie Windows, zobacz [style pola kombi (system Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796).  
   
@@ -309,9 +305,7 @@ Następujące style pola kombi są dostępne w MFC. Aby uzyskać więcej informa
 |`CBS_SORT`|Automatycznie sortuje ciągi wprowadzona w polu listy.|  
 |`CBS_UPPERCASE`|Konwertuje na wielkie litery cały tekst w polu Wybór i listy.|  
   
-<a name="edit-styles"></a>  
-  
-## <a name="edit-styles"></a>Style edycji  
+## <a name="edit-styles"></a>  Style edycji  
   
 Edytuj style dotyczą [klasy CEdit](../../mfc/reference/cedit-class.md) obiektów. Określ kombinację style w `dwStyle` parametr [CEdit::Create](../../mfc/reference/cedit-class.md#create). Aby uzyskać więcej informacji na temat edytowania stylów formantu w systemie Windows, zobacz [edytowania stylów formantu (system Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
   
@@ -332,9 +326,7 @@ Edytuj style dotyczą [klasy CEdit](../../mfc/reference/cedit-class.md) obiektó
 |`ES_UPPERCASE`|Konwertuje wszystkie znaki na wielkie litery w trakcie wpisywania ich do kontrolki edycji.|  
 |`ES_WANTRETURN`|Określa, czy znak powrotu karetki można wstawiać, gdy użytkownik naciśnie klawisz ENTER podczas wprowadzania tekstu w formancie edycji wielu linii w oknie dialogowym. Bez tego stylu naciskając klawisz ENTER ma ten sam efekt co naciskając przycisk domyślny polach okna dialogowego. Ten styl nie ma wpływu na jeden wiersz formantów edycji.|  
   
-<a name="frame-window-styles-mfc"></a>  
-  
-## <a name="frame-window-styles"></a>Style okna ramowego  
+## <a name="frame-window-styles-mfc"></a> Style okna ramowego  
   
 Style okna ramowego dotyczą [cframewnd — klasa](../../mfc/reference/cframewnd-class.md) obiektów. Określ kombinację style w `dwStyle` parametr [CFrameWnd::Create](../../mfc/reference/cframewnd-class.md#create).  
   
@@ -342,11 +334,9 @@ Style okna ramowego dotyczą [cframewnd — klasa](../../mfc/reference/cframewnd
 |-----------|-----------------|  
 |`FWS_ADDTOTITLE`|Określa informacje do dołączenia do końca tytułu ramki okna. Na przykład "Microsoft rysowania — rysunek w dokument1". Można określić ciągi wyświetlane na karcie ciągi szablonu dokumentu w Kreatorze aplikacji. Aby wyłączyć tę opcję, należy zastąpić `CWnd::PreCreateWindow` funkcję elementu członkowskiego.|  
 |`FWS_PREFIXTITLE`|Zawiera nazwę dokumentu przed nazwą aplikacji w tytule okna ramki. Na przykład "Dokumentu — WordPad". Można określić ciągi wyświetlane na karcie ciągi szablonu dokumentu w Kreatorze aplikacji. Aby wyłączyć tę opcję, należy zastąpić `CWnd::PreCreateWindow` funkcję elementu członkowskiego.|  
-|`FWS_SNAPTOBARS`|Formanty rozmiaru okna ramowe ograniczający formantu paska po jej w przestawne okno zamiast zadokowane okno ramowe. Ten styl rozmiarów okna, aby dopasować pasek sterowania.|  
+|`FWS_SNAPTOBARS`|Formanty rozmiaru okna ramowe ograniczający formantu paska po jej w przestawne okno zamiast zadokowane okno ramowe. Ten styl rozmiarów okna, aby dopasować pasek sterowania.|
   
-<a name="list-box-styles"></a>  
-  
-## <a name="list-box-styles"></a>Style pola listy  
+## <a name="list-box-styles"></a> Style pola listy  
   
 Style pola listy dotyczą [clistbox — klasa](../../mfc/reference/clistbox-class.md) obiektów. Określ kombinację style w `dwStyle` parametr [CListBox::Create](../../mfc/reference/clistbox-class.md#create). Aby uzyskać więcej informacji na temat style pola listy, w systemie Windows, zobacz [style pola listy (system Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149).  
   
@@ -369,9 +359,7 @@ Style pola listy dotyczą [clistbox — klasa](../../mfc/reference/clistbox-clas
 |`LBS_USETABSTOPS`|Umożliwia okno listy rozpozna i rozszerzy znaki tabulacji podczas rysowania jego ciągów. Domyślne pozycji tabulatorów są 32 jednostki okna dialogowego. (Jednostki okna dialogowego jest odległość pozioma lub pionowa. Jednostki okna dialogowego w poziomie jest równa jednej czwartej bieżąca jednostka podstawowa szerokość okna dialogowego. Jednostki podstawowy okna dialogowego są obliczane na podstawie wysokość i szerokość bieżącej czcionki systemowej. `GetDialogBaseUnits` Systemu Windows funkcja zwraca bieżącego okna dialogowego podstawowej jednostki w pikselach.) Ten styl nie powinien być używany z `LBS_OWNERDRAWFIXED`.|  
 |`LBS_WANTKEYBOARDINPUT`|Właściciel pola listy otrzymuje `WM_VKEYTOITEM` lub `WM_CHARTOITEM` komunikatów przy każdym naciśnięciu klawisza, gdy pole listy ma wejściowych fokus. Umożliwia to aplikacji podczas przetwarzania specjalne przy użyciu klawiatury.|  
   
-<a name="message-box-styles"></a>  
-  
-## <a name="message-box-styles"></a>Style okna komunikatu  
+##<a name="message-box-styles"></a>  Style okna komunikatu  
   
 Style okna komunikatu dotyczą [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) elementów. Określ kombinację style w `nType` parametr `AfxMessageBox`. Aby uzyskać więcej informacji na temat Style okna komunikatu w systemie Windows, zobacz [MessageBox (system Windows) — funkcja](https://msdn.microsoft.com/library/windows/desktop/ms645505).  
   
@@ -412,9 +400,7 @@ Dostępne są następujące style okna komunikatu.
 |`MB_DEFBUTTON2`|Drugi przycisk jest ustawieniem domyślnym.|  
 |`MB_DEFBUTTON3`|Trzeci przycisk jest ustawieniem domyślnym.|  
   
-<a name="scroll-bar-styles"></a>  
-  
-## <a name="scroll-bar-styles"></a>Style paska przewijania  
+## <a name="scroll-bar-styles"></a> Style paska przewijania  
   
 Style paska przewijania dotyczą [klasy CScrollBar](../../mfc/reference/cscrollbar-class.md) obiektów. Określ kombinację style w `dwStyle` parametr [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Aby uzyskać więcej informacji na temat przewijania na pasku stylów formantu w systemie Windows, temacie [stylów formantu paska przewijania (system Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533).  
   
@@ -431,9 +417,7 @@ Style paska przewijania dotyczą [klasy CScrollBar](../../mfc/reference/cscrollb
 |`SBS_TOPALIGN`|Używane z `SBS_HORZ` stylu. Górnej krawędzi paska przewijania jest wyrównane do górnej krawędzi prostokąta określone w `Create` funkcję elementu członkowskiego. Pasek przewijania jest domyślna wysokość pasków przewijania systemu.|  
 |`SBS_VERT`|Określa pionowy pasek przewijania. Jeśli żadna `SBS_RIGHTALIGN` ani `SBS_LEFTALIGN` styl jest określony, pasek przewijania ma wysokość, szerokość i podane w pozycji `Create` funkcję elementu członkowskiego.|  
   
-<a name="static-styles"></a>  
-  
-## <a name="static-styles"></a>Style statyczne  
+## <a name="static-styles"></a> Style statyczne  
   
 Style statyczne dotyczą [klasy CStatic](../../mfc/reference/cstatic-class.md) obiektów. Określ kombinację style w `dwStyle` parametr [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Aby uzyskać więcej informacji na temat stylów formantu statycznych w systemie Windows, temacie [style formantu statyczne (system Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773).  
   
@@ -467,9 +451,7 @@ Style statyczne dotyczą [klasy CStatic](../../mfc/reference/cstatic-class.md) o
 |`SS_WHITERECT`|Określa prostokąt wypełniony kolorem używany do wypełnienia tła okna. Wartość domyślna jest białe.|  
 |`SS_WORDELLIPSIS`|Obcina tekst, który nie mieści się i dodaje elipsy.|  
   
-<a name="window-styles"></a>  
-  
-## <a name="window-styles"></a>Style okna  
+## <a name="window-styles"></a> Style okna  
   
 Style okna dotyczą [klasa CWnd](../../mfc/reference/cwnd-class.md) obiektów. Określ kombinację style w `dwStyle` parametr [CWnd::Create](../../mfc/reference/cwnd-class.md#create) lub [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Aby uzyskać więcej informacji na temat Style okna w systemie Windows, zobacz [Style okna (system Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600).  
   
@@ -503,9 +485,7 @@ Style okna dotyczą [klasa CWnd](../../mfc/reference/cwnd-class.md) obiektów. O
 |`WS_VISIBLE`|Tworzy okno, która jest widoczna od początku.|  
 |`WS_VSCROLL`|Tworzy okno ma pionowy pasek przewijania.|  
   
-<a name="extended-window-styles"></a>  
-  
-## <a name="extended-window-styles"></a>Rozszerzone Style okna  
+## <a name="extended-window-styles"></a> Rozszerzone Style okna  
   
 Rozszerzone Style okna dotyczą [klasa CWnd](../../mfc/reference/cwnd-class.md) obiektów. Określ kombinację style w `dwExStyle` parametr [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Aby uzyskać więcej informacji na temat rozszerzone Style okna w systemie Windows, zobacz [rozszerzone Style okna (system Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543).  
   
