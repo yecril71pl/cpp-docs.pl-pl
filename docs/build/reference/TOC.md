@@ -53,6 +53,7 @@
 #### [/favor (Optymalizacja pod kątem specyfiki architektury)](favor-optimize-for-architecture-specifics.md)
 #### [/FC (Pełna ścieżka pliku kodu źródłowego w Diagnostyce)](fc-full-path-of-source-code-file-in-diagnostics.md)
 #### [/fp (Określenie zachowania zmiennoprzecinkowego)](fp-specify-floating-point-behavior.md)
+##### [Optymalizacja zmiennopozycyjna Microsoft Visual C++](floating-point-optimization.md)
 #### [/FS (Wymuś synchroniczne zapisy do bazy PDB)](fs-force-synchronous-pdb-writes.md)
 #### [/GA (Optymalizuj dla aplikacji systemu Windows)](ga-optimize-for-windows-application.md)
 #### [/Gd, /Gr, /Gv, /Gz (Konwencja wywoływania)](gd-gr-gv-gz-calling-convention.md)

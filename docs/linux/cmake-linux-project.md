@@ -1,7 +1,9 @@
 ---
 title: Konfigurowanie projektu CMake systemu Linux w programie Visual Studio | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 10/25/2107
+ms.date: 04/28/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,11 +14,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 43d29513b41cc89f7d4b6ba4e33365dfa60a761a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a49d9364b7b39dfddd982519416c9a12b7adf9e6
+ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/21/2018
 ---
 # <a name="configure-a-linux-cmake-project"></a>Konfigurowanie projektu CMake systemu Linux
   
@@ -44,7 +46,8 @@ int main(int argc, char* argv[])
 }
 ```
 
-CMakeLists.txt: 
+CMakeLists.txt:
+
 ```cmd
 project (hello-cmake)
 add_executable(hello-cmake hello.cpp)
@@ -58,6 +61,8 @@ Domyślnie program Visual Studio wybiera pierwszy system zdalny na liście (w ob
 Po określeniu docelowego Linux źródła jest kopiowana do maszyny z systemem Linux. Następnie CMake jest uruchamiane na komputerze systemu Linux można wygenerować pamięci podręcznej CMake dla projektu.  
 
 ![Generowanie pamięci podręcznej CMake w systemie Linux](media/cmake-linux-1.png "Generowanie CMake pamięci podręcznej w systemie Linux")  
+
+**Visual Studio 2017 wersji 15.7 i nowszych:** aby zapewnić obsługę funkcji IntelliSense dla zdalnego nagłówków, Visual Studio automatycznie kopiuje je do katalogu na komputerze lokalnym systemu Windows. Aby uzyskać więcej informacji, zobacz [IntelliSense dla zdalnego nagłówków](configure-a-linux-project.md#remote_intellisense).
 
 ## <a name="debug-the-project"></a>Debugowanie projektu  
 Do debugowania kodu w systemie zdalnym, ustaw punkt przerwania, wybierz docelowy CMake jako element startowy z menu paska narzędzi obok ustawienia projektu, i kliknij przycisk Uruchom (lub naciśnij klawisz F5).
@@ -84,6 +89,7 @@ Aby zmienić domyślne ustawienia CMake, wybierz **CMake | Zmień ustawienia CMa
       "inheritEnvironments": [ "linux-x64" ]
 }
 ```
+
 `name` Wartość może być dowolne. `remoteMachineName` Wartość określa, które system zdalny do obiektu docelowego w przypadku, gdy masz więcej niż jeden. IntelliSense jest włączona dla tego pola ułatwiające wybranie prawo systemu. Pole `remoteCMakeListsRoot` Określa, gdzie źródła projektu zostaną skopiowane do systemu zdalnego. Pole `remoteBuildRoot` jest, gdzie zostaną wygenerowane dane wyjściowe kompilacji w systemie zdalnym. Dane wyjściowe także lokalnie kopiowany do lokalizacji określonej przez `buildRoot`.
 
 ## <a name="building-a-supported-cmake-release-from-source"></a>Tworzenie obsługiwanych wersji CMake ze źródła

@@ -1,7 +1,9 @@
 ---
 title: Konfigurowanie projektu C++ Linux w programie Visual Studio | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/15/2017
+ms.date: 04/28/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,11 +14,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 799eb17ec5cb34cdd0e266f389ad77cb427c7577
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8fc0c15f4e6ff7a9969c31c4d474bb42a9797b30
+ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/21/2018
 ---
 # <a name="configure-a-linux-project"></a>Konfigurowanie projektu systemu Linux
 W tym temacie opisano sposób konfigurowania projektu programu Visual Studio systemu Linux. Informacje CMake projekty systemu Linux, zobacz [Konfigurowanie projektu CMake Linux ](cmake-linux-project.md).
@@ -40,8 +42,10 @@ Aby zmienić ustawienia odnoszące się do komputera zdalnego systemu Linux, nal
 > [!NOTE]
 > Aby zmienić domyślne C i kompilatory C++ lub konsolidatora i Archiver używany do tworzenia projektu, należy użyć odpowiednie wpisy w **C/C++ > Ogólne** sekcji i **konsolidatora > Ogólne** sekcji.  Te mogą być skonfigurowane do niektórych wersji GCC lub nawet kompilatora Clang, np.
 
-## <a name="vc-directories"></a>Katalogi VC ++
-Domyślnie program Visual Studio nie ma żadnych plików dołączanych poziom systemu z komputera z systemem Linux.  Na przykład elementów w **/usr/include** katalogu nie są dostępne w programie Visual Studio.  Aby uzyskać pełne [IntelliSense](/visualstudio/ide/using-intellisense) pomocy technicznej, należy skopiować te pliki do określonej lokalizacji na komputerze deweloperskim, a następnie wskaż Visual Studio z tej lokalizacji.  Jedną z opcji jest skopiować pliki przy użyciu punktu połączenia usługi (Secure kopii).  W systemie Windows 10 można użyć [Bash w systemie Windows](https://msdn.microsoft.com/commandline/wsl/about) do uruchomienia punktu połączenia usługi.  W poprzednich wersjach systemu Windows, można użyć ciągu [PSCP (kopia Secure PuTTY)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
+## <a name="include-directories-and-intellisense-support"></a>Katalogi i obsługę funkcji IntelliSense
+
+**Visual Studio 2017 wersji 15.6 i starszych:** Domyślnie program Visual Studio nie ma żadnych plików dołączanych poziom systemu z komputera z systemem Linux.  Na przykład elementów w **/usr/include** katalogu nie są dostępne w programie Visual Studio.
+Aby uzyskać pełne [IntelliSense](/visualstudio/ide/using-intellisense) pomocy technicznej, należy skopiować te pliki do określonej lokalizacji na komputerze deweloperskim, a następnie wskaż Visual Studio z tej lokalizacji.  Jedną z opcji jest skopiować pliki przy użyciu punktu połączenia usługi (Secure kopii).  W systemie Windows 10 można użyć [Bash w systemie Windows](https://msdn.microsoft.com/commandline/wsl/about) do uruchomienia punktu połączenia usługi.  W poprzednich wersjach systemu Windows, można użyć ciągu [PSCP (kopia Secure PuTTY)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 
 Można skopiować pliki przy użyciu polecenia podobny do następującego:
 
@@ -52,6 +56,8 @@ Oczywiście, Zastąp **linux_username** i **remote_host** wartości powyżej co 
 Kiedy pliki są kopiowane, za pomocą **katalogi VC ++** elementu we właściwościach projektu programu Visual Studio stwierdzić, gdzie można znaleźć plików dołączanych dodatkowe, które właśnie zostały skopiowane.
 
 ![Katalogi VC ++](media/settings_directories.png)
+
+**Visual Studio 2017 wersji 15.7 i nowszych:** zobacz [zarządzania zdalnego nagłówki dla IntelliSense](#remote_intellisense).
 
 ## <a name="copy-sources"></a>Skopiuj źródeł
 Podczas kompilowania, plików źródłowych na komputerze, zostały skopiowane na komputerze z systemem Linux i kompilowane istnieje.  Domyślnie wszystkie źródła w projekcie programu Visual Studio są kopiowane do lokalizacji w powyższym ustawienia.  Dodatkowe źródła można również dodać do listy lub kopiowanie źródła można wyłączyć całkowicie, jest to wartość domyślna dla projektu pliku reguł programu make.
@@ -68,6 +74,20 @@ Podczas kompilowania, plików źródłowych na komputerze, zostały skopiowane n
 Ponieważ wszystkie kompilacji jest przeprowadzana na komputerze zdalnym, kilka dodatkowych zdarzeń kompilacji zostały dodane do sekcji Tworzenie zdarzenia we właściwościach projektu.  Są to **zdalnego zdarzenia Prekompilacyjnego**, **zdalnego zdarzenia Prekonsolidacyjnego**, i **zdalnego zdarzenia Postkompilacyjnego**i zostanie przeprowadzona na komputerze zdalnym przed lub po poszczególne kroki opisane w temacie proces.
 
 ![Zdarzenia kompilacji](media/settings_buildevents.png)
+
+## <a name="remote_intellisense"></a> IntelliSense dla zdalnego nagłówków (Visual Studio 2017 wersji 15.7 i nowsze)
+
+Po dodaniu nowego połączenia w **Menedżera połączeń**, Visual Studio automatycznie wykrywa katalogi dołączania dla kompilatora w systemie zdalnym. Visual Studio, a następnie zips i kopiuje pliki do katalogu na lokalnym komputerze z systemem Windows. Po tym gdy korzysta z tego połączenia w projekcie programu Visual Studio lub CMake nagłówków w tych katalogach służą do zapewniania IntelliSense.
+
+Ta funkcja jest zależna od maszyny Linux zip zainstalowane. Zip można zainstalować za pomocą tego polecenia get stanie:
+
+```cmd
+apt install zip
+```
+
+Aby zarządzać pamięć podręczną nagłówka, przejdź do **Narzędzia > Opcje, Cross Platform > Menedżera połączeń > zdalnego menedżera IntelliSense nagłówki**. Aby zaktualizować pamięci podręcznej nagłówka po wprowadzeniu zmian na komputerze z systemem Linux, wybierz połączenia zdalnego, a następnie wybierz **aktualizacji**. Wybierz **usunąć** usunąć nagłówki bez usuwania połączenia. Wybierz **Eksploruj** można otworzyć katalogu lokalnego w **Eksploratora plików**. Ten folder należy traktować jako tylko do odczytu. Aby pobrać nagłówki dla istniejącego połączenia, który został utworzony przed wersji 15 ustęp 3, wybierz opcję Połącz, a następnie wybierz **Pobierz**.
+
+![Nagłówek zdalny IntelliSense](media/remote-header-intellisense.png)
 
 ## <a name="see-also"></a>Zobacz też
 [Praca z właściwościami projektu](../ide/working-with-project-properties.md)  

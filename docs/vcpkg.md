@@ -14,11 +14,11 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca2bfee3ac9e244402b8a987e30988384b96fcd2
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: ca4c672000278fcfc00ba8c08a7a160faff151aa
+ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/21/2018
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Menedżer pakietów C++ dla systemu Windows, Linux i MacOS
 
@@ -30,7 +30,7 @@ Za pomocą jednego polecenia można pobrać źródeł i tworzenie biblioteki. vc
 
 ## <a name="sources-not-binaries"></a>Źródła nie plików binarnych
 
-W przypadku bibliotek w wykazie systemu Windows vcpkg pobiera źródeł zamiast danych binarnych [1]. Kompiluje tych źródeł przy użyciu 2017 usługi Visual Studio lub Visual Studio 2015, jeśli nie zainstalowano 2017 r. W języku C++, bardzo ważne jest zgodności żadnych bibliotek, których można użyć z tym samym kompilatora i wersja kompilatora jako prowadzący do niego kodu aplikacji. Za pomocą vcpkg, wyeliminuj lub co najmniej znacznie zmniejszyć ryzyko niedopasowanych pliki binarne i problemów, które mogą powodować. W zespołach, które są standaryzowane do określonej wersji kompilatora Visual C++ jednego elementu członkowskiego zespołu można użyć vcpkg pobieranie źródeł i Skompiluj zestaw plików binarnych, a następnie użyć polecenia Eksportuj do pliku zip pliki binarne i nagłówki dla innych członków zespołu. Aby uzyskać więcej informacji, zobacz [eksportu skompilowane pliki binarne i nagłówki](#export_binaries_per_project) poniżej.
+W przypadku bibliotek w wykazie systemu Windows vcpkg pobiera źródeł zamiast danych binarnych [1]. Kompiluje tych źródeł przy użyciu 2017 usługi Visual Studio lub Visual Studio 2015, jeśli nie zainstalowano 2017 r. W języku C++, bardzo ważne jest zgodności żadnych bibliotek, których można użyć z tym samym kompilatora i wersja kompilatora jako prowadzący do niego kodu aplikacji. Za pomocą vcpkg, wyeliminuj lub co najmniej znacznie zmniejszyć ryzyko niedopasowanych pliki binarne i problemów, które mogą powodować. W zespołach, które są standaryzowane do określonej wersji kompilatora jednego elementu członkowskiego zespołu można użyć vcpkg pobieranie źródeł i Skompiluj zestaw plików binarnych, a następnie użyć polecenia Eksportuj do pliku zip pliki binarne i nagłówki dla innych członków zespołu. Aby uzyskać więcej informacji, zobacz [eksportu skompilowane pliki binarne i nagłówki](#export_binaries_per_project) poniżej.
 
 Jeśli tworzysz klonowania vcpkg z bibliotekami prywatnych w kolekcji portów, możesz dodać port, który pobiera wbudowane pliki binarne i nagłówki i zapisać pliku portfile.cmake, która po prostu kopiuje pliki do odpowiedniej lokalizacji.
 
@@ -41,10 +41,9 @@ Jeśli tworzysz klonowania vcpkg z bibliotekami prywatnych w kolekcji portów, m
 Klonowanie repozytorium vcpkg z usługi GitHub: https://github.com/Microsoft/vcpkg. Możesz pobrać do dowolnej lokalizacji folderu, preferowany.
 
 Uruchom program inicjujący w folderze głównym: 
-- **bootstrap vcpkg.bat** (system Windows)
-- ./bootstrap-vcpkg.sh (Linux, MacOS)
 
-## <a name="basic-tasks"></a>Podstawowe zadania
+- **bootstrap vcpkg.bat** (system Windows)
+- **./bootstrap-vcpkg.sh** (Linux, MacOS)
 
 ## <a name="search-the-list-of-available-libraries"></a>Wyszukaj listę dostępnych bibliotek
 
@@ -132,6 +131,10 @@ Jeśli musisz użyć określonej wersji biblioteki, która jest inna niż wersja
 1. Uruchom **zainstalować vcpkg \<biblioteki >**.
 1. Użyj **vcpkg integracji projektu** do utworzenia pakietu NuGet, który odwołuje się do tej biblioteki, na podstawie na projekt.
 
+## <a name="integrate-with-visual-studio-code-linuxmacos"></a>Integracja z kodu programu Visual Studio (Linux/MacOS) 
+
+Uruchom **vcpkg integracji instalacji** do konfigurowania programu Visual Studio Code na systemie Linux/MacOS z lokalizacją vcpkg enlistement i włączenie funkcji IntelliSense w plikach źródłowych.
+
 ## <a name="target-linux-from-windows-via-wsl"></a>Linux docelowy z systemem Windows za pośrednictwem WSL
 
 Służy do tworzenia plików binarnych systemu Linux na komputerze z systemem Windows przy użyciu podsystemu systemu Windows dla systemu Linux (WSL). Postępuj zgodnie z instrukcjami, aby [Konfigurowanie WSL w systemie Windows 10](https://docs.microsoft.com/en-us/windows/wsl/install-win10)i skonfiguruj go przy użyciu [rozszerzenie programu Visual Studio dla systemu Linux](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/). Można umieścić wbudowanych bibliotekach dla systemów Windows i Linux w tym samym folderze i do niego dostęp z systemami Windows i WSL.
@@ -139,39 +142,7 @@ Służy do tworzenia plików binarnych systemu Linux na komputerze z systemem Wi
 
 ## <a name="export_binaries_per_project"></a> Eksportuj skompilowane pliki binarne i nagłówki
 
-Wymaganie wszyscy członkowie zespołu, aby pobrać i tworzenie bibliotek może być mało wydajne. Członek zespołu pojedynczego tej pracy, a następnie użyj **eksportu vcpkg** można utworzyć pliku zip, pliki binarne i nagłówki, które można łatwo udostępniać innych członków zespołu.
-
-## <a name="updateupgrade-installed-libraries"></a>Biblioteki zainstalować aktualizację/uaktualnienie
-
-Publiczny katalogu jest zawsze na bieżąco najnowsze wersje bibliotek. Aby określić, które biblioteki lokalnych są nieaktualne, użyj **aktualizacji vcpkg**. Jeśli wszystko jest gotowy do aktualizacji do najnowszej wersji katalogu publicznego kolekcji portów, uruchom **uaktualnienia vcpkg** polecenia próbę automatycznego pobrania i Odbuduj wybranych lub wszystkich zainstalowanych bibliotek, które są nieaktualne.
-
-Domyślnie **uaktualnienia** polecenie wyświetla tylko bibliotek, które są nieaktualne; nie uaktualnić ich. Aby przeprowadzić uaktualnienie, użyj **--przebiegu nie próbnego** opcji.
-
-```cmd
-  vcpkg upgrade --no-dry-run
-```
-
-### <a name="upgrade-options"></a>Opcje uaktualniania
-
-- **--przebiegu nie próbnego** uaktualnienia; Jeśli nie zostanie określony, polecenie znajduje się tylko nieaktualnych opakowania.
-- **--Zachowaj będzie** kontynuuj instalowanie pakietów, nawet w przypadku awarii jednego.
-- **--Trzykolumnowa \<t >** ustawić Trzykolumnowa domyślne niekwalifikowane pakietów.
-- **główny — vcpkg \<ścieżka >** określ katalog vcpkg używany zamiast bieżącego katalogu lub katalogu narzędzia.
-
-### <a name="upgrade-example"></a>Przykład uaktualnienia
-
-### <a name="per-project"></a>W projekcie
-
-Jeśli musisz użyć określonej wersji biblioteki, która jest inna niż wersja w wystąpieniu active vcpkg, wykonaj następujące kroki:
-
-1. Wprowadź nowy klon vcpkg
-1. Modyfikowanie portfile dla biblioteki w celu uzyskania wersji, które są potrzebne
-1. Uruchom **zainstalować vcpkg \<biblioteki >**.
-1. Użyj **vcpkg integracji projektu** do utworzenia pakietu NuGet, który odwołuje się do tej biblioteki, na podstawie na projekt.
-
-## <a name="export-compiled-binaries-and-headers"></a>Eksportuj skompilowane pliki binarne i nagłówki
-
-Wymaganie wszyscy członkowie zespołu, aby pobrać i tworzenie bibliotek może być mało wydajne. Członek zespołu pojedynczego tej pracy, a następnie użyj **eksportu vcpkg** można utworzyć pliku zip, pliki binarne i nagłówki, które można łatwo udostępniać innych członków zespołu.
+Wymaganie wszyscy członkowie zespołu, aby pobrać i tworzenie bibliotek może być mało wydajne. Członek zespołu pojedynczego tej pracy, a następnie użyj **eksportu vcpkg** można utworzyć pliku zip pliki binarne i nagłówków lub pakietu NuGet (format różnych dostępnych), który można łatwo udostępniać innych członków zespołu.
 
 ## <a name="updateupgrade-installed-libraries"></a>Biblioteki zainstalować aktualizację/uaktualnienie
 
@@ -225,7 +196,7 @@ Po prostu Usuń katalog.
 
 ## <a name="send-feedback-about-vcpkg"></a>Wyślij opinię o vcpkg
 
-Użyj **--ankiety** polecenie, aby wysłać opinię do firmy Microsoft o vcpkg, łącznie z raportami usterek i sugestie dotyczące funkcji.
+Użyj **vcpkg kontaktu — ankiety** polecenie, aby wysłać opinię do firmy Microsoft o vcpkg, łącznie z raportami usterek i sugestie dotyczące funkcji.
 
 ## <a name="the-vcpkg-folder-hierarchy"></a>Hierarchia folderów vcpkg
 
@@ -261,10 +232,9 @@ Zawartość wystąpienia vcpkg jest:
 |**Eksport vcpkg \<pkg >... [opt...]**|Eksportowanie pakietu|
 |**Edytuj vcpkg \<pkg >**|Otwórz port do edycji (używa edytora %, domyślny kod)|
 |**Utwórz vcpkg \<pkg > \<adres url > [archivename]**|Tworzenie nowego pakietu|
-|**właścicielem vcpkg \<pat >**|Wyszukaj pliki w zainstalowanych pakietów|
 |**vcpkg cache**|Lista pamięci podręcznej skompilowany pakietów|
 |**vcpkg version**|Wyświetl informacje o wersji|
-|**Skontaktuj się z vcpkg**|Wyświetlanie informacji kontaktowych wysyłanie opinii|
+|**Skontaktuj się z vcpkg--ankiety**|Wyświetlanie informacji kontaktowych wysyłanie opinii.|
 
 ### <a name="options"></a>Opcje
 
@@ -272,3 +242,4 @@ Zawartość wystąpienia vcpkg jest:
 |---------|---------|
 |**--Trzykolumnowa \<t >**|Określ Trzykolumnowa architektury docelowej. (domyślne: `%VCPKG_DEFAULT_TRIPLET%`, zobacz też **vcpkg pomocy Trzykolumnowa**)|
 |**--vcpkg-root \<path>**|Określ katalog główny vcpkg (domyślne: `%VCPKG_ROOT%`)|
+

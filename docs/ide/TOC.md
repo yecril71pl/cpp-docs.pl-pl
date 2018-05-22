@@ -71,6 +71,7 @@
 ## [Objaśnienie zależności aplikacji Visual C++](understanding-the-dependencies-of-a-visual-cpp-application.md)
 ## [Ustalanie, które biblioteki DLL są przeznaczone do ponownej dystrybucji](determining-which-dlls-to-redistribute.md)
 ## [Wybieranie metody wdrażania](choosing-a-deployment-method.md)
+## [Wdrożenie środowiska Universal CRT](universal-crt-deployment.md)
 ## [Ponowne dystrybuowanie plików programu Visual C++](redistributing-visual-cpp-files.md)
 ### [Ponowne dystrybuowanie składników za pomocą modułów scalania](redistributing-components-by-using-merge-modules.md)
 ### [Ponowne dystrybuowanie kontrolek ActiveX programu Visual C++](redistributing-visual-cpp-activex-controls.md)
