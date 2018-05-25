@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1522b292f04f1148722ddb0c85473c560372e88
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ebc1ff83840631074f04704e6df2a88437b8cc71
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="mallocdbg"></a>_malloc_dbg
 
@@ -63,16 +63,16 @@ void *_malloc_dbg(
 Żądany typ bloku pamięci: **_client_block —** lub **_normal_block —**.
 
 *Nazwa pliku*<br/>
-Wskaźnik na nazwę pliku źródłowego, który zażądał operacji alokacji lub NULL.
+Wskaźnik do nazwy pliku źródłowego, który żądanej operacji alokacji lub **NULL**.
 
 *numer wiersza*<br/>
-Numer wiersza w pliku źródłowym, gdzie zażądano operacji alokacji lub NULL.
+Numer w pliku źródłowym, której zażądano operacji alokacji wiersza lub **NULL**.
 
 *Filename* i *numer wiersza* parametry są dostępne tylko podczas **_malloc_dbg —** została jawnie wywołana lub [_crtdbg_map_alloc —](../../c-runtime-library/crtdbg-map-alloc.md)stała preprocesora została zdefiniowana.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Po pomyślnym ukończeniu ta funkcja zwraca wskaźnik do użytkownika części blok pamięci przydzielony, nowych funkcji programu obsługi lub zwraca wartość NULL. Pełny opis zwracany zachowania zobacz sekcję poniżej uwagi. Aby uzyskać więcej informacji o sposobie korzystania z nowych funkcji programu obsługi, zobacz [— funkcja malloc](malloc.md) funkcji.
+Po pomyślnym ukończeniu, ta funkcja zwraca wskaźnik do użytkownika części blok pamięci przydzielony, nowych funkcji programu obsługi lub zwraca **NULL**. Pełny opis zwracany zachowania zobacz sekcję poniżej uwagi. Aby uzyskać więcej informacji o sposobie korzystania z nowych funkcji programu obsługi, zobacz [— funkcja malloc](malloc.md) funkcji.
 
 ## <a name="remarks"></a>Uwagi
 

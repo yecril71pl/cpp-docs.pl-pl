@@ -75,11 +75,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07fff41a079d64f5416942dcb1fb3c9395b73e5d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9348b2797b137599e8c7f54e41e493003bc4fc58
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strnset-strnsetl-wcsnset-wcsnsetl-mbsnset-mbsnsetl"></a>_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
 
@@ -150,7 +150,7 @@ Zwraca wskaźnik do ciągu zmieniony.
 
 **_wcsnset —** i **_mbsnset —** znaków dwubajtowych i znaków wielobajtowych wersji **_strnset —**. Argumenty typu string i zwracana wartość **_wcsnset —** są znaków dwubajtowych ciągi; tych **_mbsnset —** są ciągami znaków wielobajtowych. Te trzy funkcje działają tak samo w przeciwnym razie wartość.
 
-**_mbsnset —** weryfikuje jego parametrów; Jeśli *str* wskaźnika o wartości null, jest program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli jest dozwolone wykonywanie, aby kontynuować, **_mbsnset —** zwraca wartość NULL i ustawia **errno** do **einval —**. **_strnset —** i **_wcsnset —** nie weryfikują ich parametrów.
+**_mbsnset —** weryfikuje jego parametrów; Jeśli *str* wskaźnika o wartości null, jest program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli jest dozwolone wykonywanie, aby kontynuować, **_mbsnset —** zwraca **NULL** i ustawia **errno** do **einval —**. **_strnset —** i **_wcsnset —** nie weryfikują ich parametrów.
 
 Wartość wyjściowa jest zagrożony ustawienie **lc_ctype —** ustawienie kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji bez **_l** Użyj sufiksu bieżące ustawienia regionalne tego zachowania zależnych od ustawień regionalnych; wersje z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych Przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 

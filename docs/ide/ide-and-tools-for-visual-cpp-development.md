@@ -60,7 +60,7 @@ Po utworzeniu projektu, wszystkie pliki projektu są wyświetlane w **Eksplorato
 
 Edytor kodu obsługuje również kilka funkcji, które są ze sobą znane jako Intellisense. Możesz umieść kursor nad metody i niektóre podstawowe dokumentacji dla niego. Po wpisaniu nazwy zmiennej klasy i a. lub ->, zostanie wyświetlona lista elementów członkowskich wystąpienia tej klasy. Jeśli wpiszesz nazwę klasy, a następnie::, zostanie wyświetlona lista statycznych elementów członkowskich. Po ponownym uruchomieniu, wpisując nazwę klasy lub metody, edytora kodu oferuje sugestie do wykonania instrukcji. Aby uzyskać więcej informacji, zobacz [za pomocą funkcji IntelliSense](/visualstudio/ide/using-intellisense).
 
-### <a name="code-snippets"></a>Wstawki kodu
+### <a name="code-snippets"></a>Fragmenty kodu
 
 Wstawki kodu Intellisense służy do generowania najczęściej używanych lub konstrukcje kodu złożonej z klawiszy skrótów. Aby uzyskać więcej informacji, zobacz [wstawki kodu](/visualstudio/ide/code-snippets).
 

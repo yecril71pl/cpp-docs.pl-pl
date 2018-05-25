@@ -55,11 +55,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a61c2ecd0546162a689278cebd45fe38c92f0a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 851de3810008532efa6683dd29d415560146f274
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="cscanf-cscanfl-cwscanf-cwscanfl"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
@@ -110,7 +110,7 @@ Liczba pól, które zostały pomyślnie przekonwertowany i przypisane. Wartość
 
 **_Cscanf —** funkcja odczytuje dane bezpośrednio z poziomu konsoli do lokalizacji podanej przez *argument*. [_Getche —](getch-getwch.md) funkcji umożliwia odczytywanie znaków. Każdy opcjonalny parametr musi być wskaźnikiem do zmienna typu, który odpowiada specyfikatorowi typu w *format*. Formanty format interpretacji dane wejściowe pola i ma tę samą tworzą i działać jako *format* parametr [scanf](scanf-scanf-l-wscanf-wscanf-l.md) funkcji. Gdy **_cscanf —** zwykle echa znak wejściowy nie ma, jeśli została ostatnim wywołaniu do **_ungetch —**.
 
-Ta funkcja weryfikuje jego parametrów. Jeśli format ma wartość NULL, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i funkcja zwraca **EOF**.
+Ta funkcja weryfikuje jego parametrów. Jeśli format jest **NULL**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i funkcja zwraca **EOF**.
 
 Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.
 

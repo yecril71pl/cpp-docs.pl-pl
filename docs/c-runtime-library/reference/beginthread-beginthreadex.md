@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f04d6bc5ab0864a1dfc27a1de8b09f1740f845d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8e12e25f64972335cb1a1199ae519de71d43067
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -89,22 +89,22 @@ Początkowy adres procedury, która rozpoczyna się wykonanie nowego wątku. Dla
 Rozmiar stosu dla nowego wątku lub 0.
 
 *arglist*<br/>
-Lista argumentów do przekazania do nowego wątku lub wartość NULL.
+Lista argumentów, które mają być przekazane do nowego wątku lub **NULL**.
 
 *Zabezpieczenia*<br/>
-Wskaźnik do [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) struktury, która określa, czy zwrócone dojście mogą być dziedziczone przez procesy podrzędne. Jeśli *zabezpieczeń* ma wartość NULL, dojście nie może być dziedziczona. Musi to być wartość NULL dla systemu Windows 95 aplikacji.
+Wskaźnik do [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) struktury, która określa, czy zwrócone dojście mogą być dziedziczone przez procesy podrzędne. Jeśli *zabezpieczeń* jest **NULL**, dojście nie może być dziedziczona. Musi być **NULL** dla aplikacji systemu Windows 95.
 
 *initflag*<br/>
 Flagi określające początkowy stan nowego wątku. Ustaw *initflag* na 0, aby natychmiast uruchomić lub do **CREATE_SUSPENDED** można utworzyć wątku, w stanie wstrzymania; użyj [ResumeThread](http://msdn.microsoft.com/library/windows/desktop/ms685086.aspx) do wykonania wątku. Ustaw *initflag* do **STACK_SIZE_PARAM_IS_A_RESERVATION** flagi używania *stack_size* jako pierwszy zarezerwować rozmiar stosu w bajtach; Jeśli ta flaga jest nie jest określony, *stack_size* Określa rozmiar zatwierdzenia.
 
 *thrdaddr*<br/>
-Wskazuje zmienna 32-bitowego, która odbiera identyfikator wątku. Jeśli ma wartość NULL, nie jest używane.
+Wskazuje zmienna 32-bitowego, która odbiera identyfikator wątku. Jeśli jest **NULL**, nie jest używany.
 
 ## <a name="return-value"></a>Wartość zwracana
 
 W przypadku powodzenia, każda z tych funkcji zwraca dojścia do nowo utworzonej wątku; jednak, czy nowo utworzony wątku istnieje zbyt szybko **_beginthread —** nie mogą zwracać prawidłowy uchwyt. (Zobacz Omówienie w sekcji uwag.) W przypadku wystąpienia błędu **_beginthread —** zwraca L-1 i **errno** ma ustawioną wartość **eagain —** jeżeli istnieją zbyt wiele wątków do **einval —** Jeśli wartością argumentu jest nieprawidłowy lub rozmiar stosu jest nieprawidłowy, lub do **eacces —** Jeśli za mało zasobów (np. pamięci). W przypadku wystąpienia błędu **_beginthreadex —** zwraca wartość 0, a **errno** i **_doserrno —** są ustawione.
 
-Jeśli *start_address* ma wartość NULL, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji **errno** do **einval —** i zwróć -1.
+Jeśli *start_address* jest **NULL**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji **errno** do **einval —** i zwróć -1.
 
 Aby uzyskać więcej informacji na temat tych i innych kody powrotu, zobacz [errno _doserrno —, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -137,7 +137,7 @@ Możesz wywołać [_endthread —](endthread-endthreadex.md) lub **_endthreadex 
 
 Alokacja stosu obsługi systemu operacyjnego podczas albo **_beginthread —** lub **_beginthreadex —** nazywa się; nie trzeba przekazać adres stosu wątku do jednej z tych funkcji. Ponadto *stack_size* argument może być 0, w którym w przypadku systemu operacyjnego korzysta z tej samej wartości jako stosu, który jest określony wątku głównego.
 
-*lista_argumentów* parametr do przekazania do nowo utworzonej wątku. Zazwyczaj jest to adres elementu danych, takiego jak ciąg znaków. *lista_argumentów* może mieć wartość NULL, jeśli nie jest wymagana, ale **_beginthread —** i **_beginthreadex —** należy podać niektóre wartości do przekazania do nowego wątku. Wszystkie wątki są zakończone, jeśli żadnego wątku wywołania [przerwać](abort.md), **zakończyć**, **_exit —**, lub **ExitProcess**.
+*lista_argumentów* parametr do przekazania do nowo utworzonej wątku. Zazwyczaj jest to adres elementu danych, takiego jak ciąg znaków. *lista_argumentów* może być **NULL** , jeśli nie jest to konieczne, ale **_beginthread —** i **_beginthreadex —** należy podać niektóre wartości do przekazania do nowego wątku. Wszystkie wątki są zakończone, jeśli żadnego wątku wywołania [przerwać](abort.md), **zakończyć**, **_exit —**, lub **ExitProcess**.
 
 Ustawienia regionalne nowego wątku został zainicjowany przy użyciu na proces globalne bieżących ustawień regionalnych informacji. Jeśli ustawienia regionalne dla każdego wątku jest włączona przez wywołanie do [_configthreadlocale —](configthreadlocale.md) (globalnie lub dla nowych wątków), Wątek można zmieniać tylko jego ustawienia regionalne niezależnie od innych wątków wywołując **setlocale** lub **_wsetlocale —**. Wątków, które nie mają Ustaw flagę ustawienia regionalne dla każdego wątku mogą wpływać na informacje o ustawień regionalnych w innych wątków, które nie mają także ustawić flagę ustawienia regionalne dla każdego wątku, a także wszystkie wątki nowo utworzona. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 

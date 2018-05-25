@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e538ff94a6cd49e4d766dfbca2798aa0daf0e462
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b472987b0cac41c57e5fd22b2eedecef522613b4
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath, _wfullpath
 
@@ -68,7 +68,7 @@ wchar_t *_wfullpath(
 ### <a name="parameters"></a>Parametry
 
 *absPath*<br/>
-Wskaźnik do bufor zawierający ścieżkę bezwzględną lub Pełna nazwa lub wartość NULL.
+Wskaźnik do bufor zawierający nazwę ścieżki bezwzględnej lub pełnego lub **NULL**.
 
 *relPath*<br/>
 Nazwa ścieżki względnej.
@@ -82,7 +82,7 @@ Każda z tych funkcji zwraca wskaźnik do buforu, zawierający nazwę ścieżkę
 
 ## <a name="remarks"></a>Uwagi
 
-**_Fullpath —** funkcja rozszerza nazwy ścieżki względnej w *relPath* ścieżka w pełni kwalifikowaną lub bezwzględną i magazyny to imię i nazwisko *absPath*. Jeśli *absPath* ma wartość NULL, **— funkcja malloc** służy można przydzielić bufora o długości wystarczające, aby pomieścić nazwę ścieżki. Jest odpowiedzialny za obiekt wywołujący, aby zwolnić tego buforu. Względna ścieżka Określa ścieżkę do innej lokalizacji z bieżącej lokalizacji (takich jak bieżący katalog roboczy: "."). Nazwa ścieżki jest rozszerzenie nazwy ścieżki względnej, stwierdzający całej ścieżki, które są wymagane do uzyskania żądanej lokalizacji z katalogu głównego systemu plików. W odróżnieniu od **_makepath —**, **_fullpath —** może zostać użyty do uzyskania nazwę ścieżki bezwzględnej ścieżki względne (*relPath*) zawierające ". /"lub".. / "w ich nazwy.
+**_Fullpath —** funkcja rozszerza nazwy ścieżki względnej w *relPath* ścieżka w pełni kwalifikowaną lub bezwzględną i magazyny to imię i nazwisko *absPath*. Jeśli *absPath* jest **NULL**, **— funkcja malloc** służy można przydzielić bufora o długości wystarczające, aby pomieścić nazwę ścieżki. Jest odpowiedzialny za obiekt wywołujący, aby zwolnić tego buforu. Względna ścieżka Określa ścieżkę do innej lokalizacji z bieżącej lokalizacji (takich jak bieżący katalog roboczy: "."). Nazwa ścieżki jest rozszerzenie nazwy ścieżki względnej, stwierdzający całej ścieżki, które są wymagane do uzyskania żądanej lokalizacji z katalogu głównego systemu plików. W odróżnieniu od **_makepath —**, **_fullpath —** może zostać użyty do uzyskania nazwę ścieżki bezwzględnej ścieżki względne (*relPath*) zawierające ". /"lub".. / "w ich nazwy.
 
 Na przykład aby użyć procedury środowiska wykonawczego języka C, aplikacja musi zawierać pliki nagłówkowe, zawierające deklaracje dla procedury. Każdy plik nagłówka obejmują instrukcji odwołuje się do lokalizacji pliku w sposób względny (od katalog roboczy aplikacji):
 

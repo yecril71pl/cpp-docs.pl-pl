@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 969de605ca02959d64795a6c8b09b80d4b6b6695
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ee9dec91e8e5173d3933b8637ec767bd160cc225
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="alignedoffsetreallocdbg"></a>_aligned_offset_realloc_dbg
 
@@ -70,10 +70,10 @@ Wartość wyrównania, która musi być całkowitą potęgą liczby 2.
 Przesunięcie alokacji pamięci, aby wymusić wyrównanie.
 
 *Nazwa pliku*<br/>
-Wskaźnik do nazwy pliku źródłowego, który zażądał **aligned_offset_realloc —** operacji ani mieć wartości NULL.
+Wskaźnik do nazwy pliku źródłowego, który zażądał **aligned_offset_realloc —** operacji lub **NULL**.
 
 *numer wiersza*<br/>
-Numer wiersza na plik źródłowy gdzie **aligned_offset_realloc —** operacja była żądana ani mieć wartości NULL.
+Numer wiersza na plik źródłowy gdzie **aligned_offset_realloc —** zażądano operacji lub **NULL**.
 
 ## <a name="return-value"></a>Wartość zwracana
 

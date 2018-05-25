@@ -42,11 +42,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 341ffb176a82845ec515e2ab2ff9a6d19b7773ea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a6b987faa30439f0f374838fe7fcd4d942b8cc7
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="creat-wcreat"></a>_creat, _wcreat
 
@@ -83,7 +83,7 @@ Te, w przypadku powodzenia zwracają deskryptorów plików do utworzonego pliku.
 |**EMFILE —**|Nie więcej deskryptorów plików są dostępne.|
 |**ENOENT —**|Nie można odnaleźć określonego pliku.|
 
-Jeśli *filename* ma wartość NULL, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji **errno** do **einval —** i zwróć -1.
+Jeśli *filename* jest **NULL**, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji **errno** do **einval —** i zwróć -1.
 
 Aby uzyskać więcej informacji na temat tych i innych kody powrotu, zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -97,7 +97,7 @@ Aby uzyskać więcej informacji na temat tych i innych kody powrotu, zobacz [_do
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcreat —**|**_creat**|**_creat**|**_wcreat**|
 
-Jeśli plik określony przez *filename* nie istnieje, plik jest tworzony przy użyciu ustawienia dane uprawnienie i jest otwarty do zapisu. Jeśli plik już istnieje, a jego ustawienie uprawnień umożliwia zapisywanie, **_creat —** obcina plik ma długość 0, niszczenie zawartość poprzedniego i otwarcie go do zapisu. Ustawienie uprawnień *pmode*, dotyczy tylko nowo utworzone pliki. Nowy plik odbiera ustawienia określonego uprawnienia po jego zamknięciu po raz pierwszy. Wyrażenie całkowite *pmode* zawiera jeden lub oba manifestu stałe **_s_iwrite —** i **_s_iread —**zdefiniowanej w SYS\Stat.h. Gdy zarówno stałe są podane, są połączone z bitowego or — operator ( **&#124;** ). *Pmode* parametr jest ustawiony na jedną z następujących wartości.
+Jeśli plik określony przez *filename* nie istnieje, plik jest tworzony przy użyciu ustawienia dane uprawnienie i jest otwarty do zapisu. Jeśli plik już istnieje, a jego ustawienie uprawnień umożliwia zapisywanie, **_creat —** obcina plik ma długość 0, niszczenie zawartość poprzedniego i otwarcie go do zapisu. Ustawienie uprawnień *pmode*, dotyczy tylko nowo utworzone pliki. Nowy plik odbiera ustawienia określonego uprawnienia po jego zamknięciu po raz pierwszy. Wyrażenie całkowite *pmode* zawiera jeden lub oba manifestu stałe **_s_iwrite —** i **_s_iread —** zdefiniowanej w SYS\Stat.h. Gdy zarówno stałe są podane, są połączone z bitowego or — operator ( **&#124;** ). *Pmode* parametr jest ustawiony na jedną z następujących wartości.
 
 |Wartość|Definicja|
 |-----------|----------------|
@@ -107,7 +107,7 @@ Jeśli plik określony przez *filename* nie istnieje, plik jest tworzony przy u�
 
 Jeśli uprawnienia do zapisu nie zostanie podany, plik jest tylko do odczytu. Wszystkie pliki są zawsze do odczytu; Nie można udzielić uprawnienia tylko do zapisu. Tryby **_s_iwrite —** i **_s_iread —** | **_s_iwrite —** następnie są równoważne. Pliki otwierane przy użyciu **_creat —** są zawsze otwierane w trybie zgodności (zobacz [_sopen —](sopen-wsopen.md)) z **_sh_denyno —**.
 
-**_creat —** stosuje bieżącą maskę pliku uprawnień do *pmode* przed ustawieniem uprawnienia (zobacz [_umask —](umask.md)). **_creat —** głównie w celu zachowania zgodności z poprzedniej biblioteki. Wywołanie **_otwórz** z **_o_creat —** i **_o_trunc —** w *oflag* parametru jest odpowiednikiem **_creat —**lub za nowy kod.
+**_creat —** stosuje bieżącą maskę pliku uprawnień do *pmode* przed ustawieniem uprawnienia (zobacz [_umask —](umask.md)). **_creat —** głównie w celu zachowania zgodności z poprzedniej biblioteki. Wywołanie **_otwórz** z **_o_creat —** i **_o_trunc —** w *oflag* parametru jest odpowiednikiem **_creat —** lub za nowy kod.
 
 ## <a name="requirements"></a>Wymagania
 

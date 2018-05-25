@@ -37,11 +37,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3309aee316c3b067c9bd0ade4e1064289cb4ddaf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a597ad1a72f903d08e848727045e05bf014879b1
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="gets-getws"></a>gets, _getws
 Pobiera wiersza ze `stdin` strumienia. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [gets_s —, _getws_s —](../c-runtime-library/reference/gets-s-getws-s.md).  
@@ -76,7 +76,7 @@ wchar_t *_getws(
  Lokalizacja magazynu dla ciągu wejściowego.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Jeśli to się powiedzie, zwraca jej argument. A `NULL` wskaźnik wskazuje błąd lub końca pliku. Użyj [ferror —](../c-runtime-library/reference/ferror.md) lub [feof —](../c-runtime-library/reference/feof.md) ustalenie, który wystąpił. Jeśli `buffer` jest `NULL`, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracają `NULL` ustawiono errno `EINVAL`.  
+ Jeśli to się powiedzie, zwraca jej argument. A **NULL** wskaźnik wskazuje błąd lub końca pliku. Użyj [ferror —](../c-runtime-library/reference/ferror.md) lub [feof —](../c-runtime-library/reference/feof.md) ustalenie, który wystąpił. Jeśli `buffer` jest **NULL**, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, te funkcje zwracają **NULL** ustawiono errno `EINVAL`.  
   
 ## <a name="remarks"></a>Uwagi  
  `gets` Funkcja odczytuje wiersz z Standardowy strumień wejściowy `stdin` i przechowuje ją w `buffer`. Wiersz składa się z wszystkich znaków, w tym pierwszym znakiem nowego wiersza ("\n"). `gets` następnie zastępuje znaku nowego wiersza znak null ('\0') przed powrotem z wiersza. Z kolei `fgets` funkcja zachowuje znaku nowego wiersza. `_getws` jest to wersja znaków dwubajtowych `gets`; jego argumentów i wartości zwracanej są ciągami znaków dwubajtowych.  

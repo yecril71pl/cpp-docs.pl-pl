@@ -27,11 +27,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b12bdb89a038ccd420748c1b855f21e1b9e4d93a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b25f94b1127d1212ed5f44235ce48b363c6124dc
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="crtlcmapstringw"></a>__crtLCMapStringW
 Mapuje jedną ciągu znaków do drugiego wykonywania określone przekształcenie zależnych od ustawień regionalnych. Tej funkcji można również generowanie klucza sortowania dla ciągu wejściowego.  
@@ -59,7 +59,7 @@ int __crtLCMapStringW(
  Wskaźnik do funkcji mapuje lub korzysta z sortowania generowania kluczy ciąg źródła. Ten parametr zakłada się, że ciąg Unicode.  
   
  `cchSrc`  
- Rozmiar w znaków ciągu wskazywana przez `lpSrcStr` parametru. Ten licznik można uwzględnić terminatorem NULL lub nie ma.  
+ Rozmiar w znaków ciągu wskazywana przez `lpSrcStr` parametru. Ten licznik można uwzględnić terminatorem null lub nie ma.  
   
  A `cchSrc` wartość -1 określa ciąg wskazywana przez `lpSrcStr` jest zerem. Jeśli jest to możliwe, a ta funkcja jest używany w trybie mapowania ciągów, funkcja obliczy długość ciągu, sama i null kończy zamapowanych ciąg przechowywane w `*lpDestStr`.  
   
@@ -70,9 +70,9 @@ int __crtLCMapStringW(
  Rozmiar w znakach bufor wskazywany przez `lpDestStr`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Jeśli wartość `cchDest` jest różna od zera, liczba znaków lub bajtów Jeśli `LCMAP_SORTKEY` jest określony, zapisywane w buforze oznacza Powodzenie. Licznik ten uwzględnia również miejsce dla terminatora o wartości NULL.  
+ Jeśli wartość `cchDest` jest różna od zera, liczba znaków lub bajtów Jeśli `LCMAP_SORTKEY` jest określony, zapisywane w buforze oznacza Powodzenie. Licznik ten uwzględnia również miejsce dla terminatora o wartości null.  
   
- Jeśli wartość `cchDest` jest 0, rozmiar buforu znaków lub liczbę bajtów Jeśli `LCMAP_SORTKEY` określono wymagane do odbierania przetłumaczonego ciągu lub sortowania klucza oznacza Powodzenie. Ten rozmiar miejscem terminatorem NULL.  
+ Jeśli wartość `cchDest` jest 0, rozmiar buforu znaków lub liczbę bajtów Jeśli `LCMAP_SORTKEY` określono wymagane do odbierania przetłumaczonego ciągu lub sortowania klucza oznacza Powodzenie. Ten rozmiar miejscem terminatorem null.  
   
  Zero oznacza błąd. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać `GetLastError` funkcji.  
   

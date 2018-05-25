@@ -45,11 +45,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4be0a1179f5b3195d5fafbaf679311c0dcf9edd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4bc9746d2c98f1799cbdd244e7fc4d465fd705fa
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 
@@ -108,7 +108,7 @@ Po przekształceniu wywołanie **strcmp —** z dwóch ciągów przekształcone 
 
 **wcsxfrm —** jest wersja znaków dwubajtowych **strxfrm —**; argumenty ciągu **wcsxfrm —** są wskaźnikami znaków dwubajtowych. Dla **wcsxfrm —**, po przekształcania ciągu, wywołanie **wcscmp —** z dwóch ciągów przekształcone daje wyniki identyczne z wywołania **wcscoll —** stosowane do oryginalny dwóch ciągów. **wcsxfrm —** i **strxfrm —** zachowują się tak samo w przeciwnym razie wartość. **wcsxfrm —** używa bieżące ustawienia regionalne dla jego działania zależnego od ustawień regionalnych; **_wcsxfrm_l —** korzysta z ustawień regionalnych przekazano zamiast bieżących ustawień regionalnych.
 
-Te funkcje walidację ich parametrów. Jeśli *strSource* jest wskaźnika o wartości null, lub *strDest* jest wskaźnik NULL (o ile liczba wynosi zero), lub jeśli *liczba* jest większa niż **int_max —**, wywołany program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji **errno** do **einval —** i zwracać **int_max —**.
+Te funkcje walidację ich parametrów. Jeśli *strSource* jest wskaźnika o wartości null, lub *strDest* jest **NULL** wskaźnika (chyba, że liczba wynosi zero), lub jeśli *liczba* jest większa niż **Int_max —**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji **errno** do **einval —** i zwracać **int_max —**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 

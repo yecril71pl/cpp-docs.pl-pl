@@ -16,11 +16,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e49c65a642dcee3e0f04fb5000a390fccae98ad
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e28ba5923d8b62973860c0ba503d13682b3c5e79
+ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="filename-macros"></a>Makra nazwy pliku
 Makra nazwy pliku są wstępnie zdefiniowane jako nazw plików określonych w zależności (specyfikacje nie pełna nazwa pliku na dysku). Tych makr nie muszą być ujęte w nawiasy, gdy została wywołana; Określ tylko $, jak pokazano.  
@@ -29,8 +29,8 @@ Makra nazwy pliku są wstępnie zdefiniowane jako nazw plików określonych w za
 |-----------|-------------|  
 |**$@**|Bieżący element docelowy Pełna nazwa (ścieżka, nazwa podstawowa, rozszerzenia), w obecnie określone.|  
 |**$$@**|Bieżący element docelowy Pełna nazwa (ścieżka, nazwa podstawowa, rozszerzenia), w obecnie określone. Prawidłowe tylko jako zależne od powstanie zależności.|  
-|**$\***|Bieżący element docelowy ścieżka i podstawowa nazwa minus rozszerzenie pliku.|  
-|**$\*\***|Wszystkie zależności bieżącą lokalizację docelową.|  
+|**$&#42;**|Bieżący element docelowy ścieżka i podstawowa nazwa minus rozszerzenie pliku.|  
+|**$&#42;&#42;**|Wszystkie zależności bieżącą lokalizację docelową.|  
 |**$?**|Wszystkie zależności z sygnaturą czasową nowsze niż bieżący element docelowy.|  
 |**$<**|Plik zależny z sygnaturą czasową nowsze niż bieżący element docelowy. Prawidłowe tylko w przypadku poleceń w regułach wnioskowania.|  
   

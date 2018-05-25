@@ -50,11 +50,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44f04031bd0d21ab0a4520820d433016497072e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ab2c33301f5746065e46dcba9f166679a330c98f
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="vsprintfp-vsprintfpl-vswprintfp-vswprintfpl"></a>_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
 
@@ -123,7 +123,7 @@ Funkcje te różnią się od **vsprintf_s —** i **vswprintf_s —** tylko w ty
 
 Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.
 
-Jeśli *buforu* lub *format* parametry są wskaźników NULL, jeśli liczba jest równa zero, lub jeśli ciąg formatu zawiera nieprawidłowe znaki formatowania, zostanie wywołany program obsługi nieprawidłowych parametrów, zgodnie z opisem w [ Sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli może kontynuować wykonywania, funkcje i ustaw **errno** do **einval —**.
+Jeśli *buforu* lub *format* parametry są **NULL** wskaźniki, jeśli liczba jest równa zero, lub jeśli ciąg formatu zawiera nieprawidłowe formatowanie znaków, nieprawidłowy parametr Program obsługi zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli może kontynuować wykonywania, funkcje i ustaw **errno** do **einval —**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 

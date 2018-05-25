@@ -30,11 +30,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e162c6b16e9ce9d0ea6763f5fb4c75d7975dc7bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 13707791b78de2c000535d60ed3f298046e4576c
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="getmainargs-wgetmainargs"></a>__getmainargs, __wgetmainargs
 Wywołuje wiersza polecenia analizy i kopiuje argumenty `main()` za pośrednictwem przekazanych wskaźników.  
@@ -63,10 +63,10 @@ _startupinfo * _StartInfo);
  Liczba całkowita, która zawiera liczbę argumentów, które należy wykonać w `argv`. Parametr `argc` jest zawsze większy lub równy 1.  
   
  `_Argv`  
- Tablica ciągów zakończonych znakiem null, która reprezentuje argumenty wiersza polecenia wprowadzone przez użytkownika programu. Według konwencji `argv[0]` polecenia, z którym program jest wywoływany, ARGV — [1] jest pierwszy argument wiersza polecenia i itd., dopóki ARGV — [argc —], która jest zawsze wartość NULL. Pierwszy argument wiersza polecenia jest zawsze `argv[1]` i jest ostatni z nich `argv[argc - 1]`.  
+ Tablica ciągów zakończonych znakiem null, która reprezentuje argumenty wiersza polecenia wprowadzone przez użytkownika programu. Według konwencji `argv[0]` polecenia, z którym program jest wywoływany, ARGV — [1] jest pierwszy argument wiersza polecenia i tak dalej, aż do ARGV — [argc —], która jest zawsze **NULL**. Pierwszy argument wiersza polecenia jest zawsze `argv[1]` i jest ostatni z nich `argv[argc - 1]`.  
   
  `_Env`  
- Tablica ciągów reprezentujących zmienne w środowisku użytkownika. Ta tablica zostało przerwane przez wpis wartości NULL.  
+ Tablica ciągów reprezentujących zmienne w środowisku użytkownika. Ta tablica jest został przerwany przez **NULL** wpisu.  
   
  `_DoWildCard`  
  Liczba całkowita który Jeśli ustawiona na 1 rozszerza symbole wieloznaczne w argumentach wiersza polecenia lub wartość 0 nie działają.  

@@ -41,11 +41,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0e4a4791092b93d04b06432a5294a11200ed879
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b6e8f5f4634ec93cab619c1e073fa8071691fe6
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strdupdbg-wcsdupdbg"></a>_strdup_dbg, _wcsdup_dbg
 
@@ -77,10 +77,10 @@ Ciąg źródłowy zerem.
 Żądany typ bloku pamięci: **_client_block —** lub **_normal_block —**.
 
 *Nazwa pliku*<br/>
-Wskaźnik do nazwy pliku, który jest Żądana operacja alokacji ani mieć wartości NULL.
+Wskaźnik do nazwy pliku źródłowego, który żądanej operacji alokacji lub **NULL**.
 
 *numer wiersza*<br/>
-Numer wiersza na plik źródłowy, której zażądano operacji alokacji, lub wartość NULL.
+Numer w pliku źródłowym, której zażądano operacji alokacji wiersza lub **NULL**.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -90,7 +90,7 @@ Każda z tych funkcji zwraca wskaźnik do lokalizacji magazynu dla skopiowanego 
 
 **_Strdup_dbg —** i **_wcsdup_dbg —** funkcje są takie same jak **_strdup —** i **_wcsdup —** z wyjątkiem tego, kiedy **_ DEBUGOWANIE** jest zdefiniowany, te funkcje przy użyciu wersji debugowania **— funkcja malloc**, **_malloc_dbg —**, można przydzielić pamięci dla zduplikowane parametry. Aby uzyskać informacje dotyczące debugowania funkcji **_malloc_dbg —**, zobacz [_malloc_dbg —](malloc-dbg.md).
 
-Nie trzeba jawnie wywołana w większości przypadków te funkcje. Zamiast tego można określić flagę **_crtdbg_map_alloc —**. Gdy **_crtdbg_map_alloc —** jest zdefiniowany, wywołań **_strdup —** i **_wcsdup —** są mapowane ponownie do **_strdup_dbg —** i **_ wcsdup_dbg —**odpowiednio z *blockType* ustawioną **_normal_block —**. W związku z tym nie trzeba jawnie wywoływać te funkcje, chyba że chcesz oznaczyć bloki sterty jako **_client_block —**. Aby uzyskać więcej informacji o typach bloku, zobacz [typów bloków w stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
+Nie trzeba jawnie wywołana w większości przypadków te funkcje. Zamiast tego można określić flagę **_crtdbg_map_alloc —**. Gdy **_crtdbg_map_alloc —** jest zdefiniowany, wywołań **_strdup —** i **_wcsdup —** są mapowane ponownie do **_strdup_dbg —** i **_ wcsdup_dbg —** odpowiednio z *blockType* ustawioną **_normal_block —**. W związku z tym nie trzeba jawnie wywoływać te funkcje, chyba że chcesz oznaczyć bloki sterty jako **_client_block —**. Aby uzyskać więcej informacji o typach bloku, zobacz [typów bloków w stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 

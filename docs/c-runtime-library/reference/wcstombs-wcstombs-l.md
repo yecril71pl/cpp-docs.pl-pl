@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: facc4855d1e36965eff7af70c5cb48f8fb77d419
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 604ca2d2172e340459d7d5cbf406f01c484750ff
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs, _wcstombs_l
 
@@ -94,11 +94,11 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli **wcstombs —** pomyślnie konwertuje ciąg znaków wielobajtowych, zwraca liczbę bajtów zapisanych w ciągu wielobajtowe dane wyjściowe, z wyłączeniem przerywanie **NULL** (jeśli istnieje). Jeśli *mbstr* argument jest **NULL**, **wcstombs —** zwraca wymagany rozmiar w bajtach ciągu docelowego. Jeśli **wcstombs —** napotka znaków dwubajtowych nie można przekonwertować znaków wielobajtowych, zwraca -1 rzutowany na typ **size_t** i ustawia **errno** do **eilseq —** .
+Jeśli **wcstombs —** pomyślnie konwertuje ciąg znaków wielobajtowych, zwraca liczbę bajtów zapisanych w ciągu wielobajtowe dane wyjściowe, bez przerywania null (jeśli istnieje). Jeśli *mbstr* argument jest **NULL**, **wcstombs —** zwraca wymagany rozmiar w bajtach ciągu docelowego. Jeśli **wcstombs —** napotka znaków dwubajtowych nie można przekonwertować znaków wielobajtowych, zwraca -1 rzutowany na typ **size_t** i ustawia **errno** do **eilseq —** .
 
 ## <a name="remarks"></a>Uwagi
 
-**Wcstombs —** funkcja konwertuje ciąg znaków dwubajtowych wskazywana przez *wcstr* do odpowiedniego wielobajtowych znaków i przechowuje wyniki w *mbstr* tablicy. *Liczba* parametr wskazuje maksymalną liczbę bajtów, które mogą być przechowywane w ciągu wyjściowego Wielobajtowe (to znaczy, że rozmiar *mbstr*). Ogólnie rzecz biorąc nie wiadomo, ile bajty będzie wymagane podczas konwertowania ciągu znaków dwubajtowych. Niektóre znaki dwubajtowe wymaga tylko jednego bajtu w ciągu wyjściowego; inne wymagają dwa. Jeśli istnieją dwa bajty w ciągu wielobajtowe danych wyjściowych dla każdego znaku dwubajtowego w ciągu wejściowym (w tym znaków dwubajtowych **NULL**), wynik jest gwarantowana w celu dopasowania.
+**Wcstombs —** funkcja konwertuje ciąg znaków dwubajtowych wskazywana przez *wcstr* do odpowiedniego wielobajtowych znaków i przechowuje wyniki w *mbstr* tablicy. *Liczba* parametr wskazuje maksymalną liczbę bajtów, które mogą być przechowywane w ciągu wyjściowego Wielobajtowe (to znaczy, że rozmiar *mbstr*). Ogólnie rzecz biorąc nie wiadomo, ile bajty będzie wymagane podczas konwertowania ciągu znaków dwubajtowych. Niektóre znaki dwubajtowe wymaga tylko jednego bajtu w ciągu wyjściowego; inne wymagają dwa. Jeśli istnieją dwa bajty w ciągu wielobajtowe danych wyjściowych dla każdego znaku dwubajtowego w ciągu wejściowym (w tym znaków typu wide null), wynik jest gwarancji.
 
 Jeśli **wcstombs —** napotka znak null znaków dwubajtowych (L '\0'), przed lub po *liczba* występuje i konwertuje ją na 8-bitowej 0 i powoduje zatrzymanie. W związku z tym ciąg znaków wielobajtowych *mbstr* jest zakończony wartością null tylko wtedy, gdy **wcstombs —** napotka znak null znaków dwubajtowych podczas konwersji. Jeśli sekwencje wskazywana przez *wcstr* i *mbstr* nakładają się zachowanie **wcstombs —** jest niezdefiniowana.
 

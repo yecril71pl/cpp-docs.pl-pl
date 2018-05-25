@@ -37,11 +37,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f60ea8dd05f9dffd6778c001e3f150f95744ae2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0c3bfc7b6abe5f0d5902a02c88e7d5ba16cb24ab
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="lfind"></a>_lfind
 
@@ -84,7 +84,7 @@ Jeśli klucz zostanie znaleziony, **_lfind —** zwraca wskaźnik do elementu ta
 
 **_Lfind —** funkcja wykonuje wyszukiwanie liniowe dla wartości *klucza* w tablicy *numer* z elementów *szerokość* bajtów. W odróżnieniu od **bsearch —**, **_lfind —** nie wymaga tablicy ma zostać posortowana. *Podstawowej* argument jest wskaźnik do podstawy tablicy do wyszukania. *Porównania* argument jest wskaźnik do procedury dostarczone przez użytkownika, która porównuje dwa elementy tablicy, a następnie zwraca wartość określającą ich relacji. **_lfind —** wywołania *porównania* rutynowych jeden lub więcej razy podczas wyszukiwania przekazywanie wskaźników do dwóch elementów tablicy przy każdym wywołaniu. *Porównania* procedury należy porównać elementy, a następnie wróć różną od zera (to znaczy elementy są różne) lub wartość 0 (tzn. elementy są identyczne).
 
-Ta funkcja weryfikuje jego parametrów. Jeśli *porównania*, *klucza* lub *numer* jest **NULL**, lub jeśli *podstawowej* ma wartość NULL i **numer*  jest różna od zera, lub jeśli *szerokość* jest mniejsza od zera, zostanie wywołany program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i funkcja zwraca **NULL**.
+Ta funkcja weryfikuje jego parametrów. Jeśli *porównania*, *klucza* lub *numer* jest **NULL**, lub jeśli *podstawowej* jest **NULL**i *numer* jest różna od zera, lub jeśli *szerokość* jest mniejsza od zera, zostanie wywołany program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i funkcja zwraca **NULL**.
 
 ## <a name="requirements"></a>Wymagania
 

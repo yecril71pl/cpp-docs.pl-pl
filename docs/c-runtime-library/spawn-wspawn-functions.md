@@ -55,11 +55,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 298e2a1abddc477e406bca17bce04999c6e09415
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0abf64c95e4293710226b2f4f38bc1fcf481b287
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn, _wspawn — Funkcje
 Każdy z `_spawn` funkcje tworzy i wykonuje nowy proces:  
@@ -137,12 +137,12 @@ Każdy z `_spawn` funkcje tworzy i wykonuje nowy proces:
   
  Wskaźniki argument można przekazać jako osobne argumentów (w `_spawnl`, `_spawnle`, `_spawnlp`, i `_spawnlpe`) lub w postaci tablicy wskaźników (w `_spawnv`, `_spawnve`, `_spawnvp`, i `_spawnvpe`). Należy podać co najmniej jednego argumentu `arg0` lub `argv`[0], do uruchomionego procesu. Konwencja ten argument jest nazwę programu, należy go wpisać w wierszu polecenia. Inną wartością nie generuje błędu.  
   
- `_spawnl`, `_spawnle`, `_spawnlp`, I `_spawnlpe` wywołania są zazwyczaj używane w przypadku, gdy liczba argumentów jest znany wcześniej. `arg0` Argument jest zwykle wskaźnik do `cmdname`. Argumenty `arg1` za pośrednictwem `argn` są wskaźnikami do ciągów znaków tworzących nowe listy argumentów. Po `argn`, musi istnieć `NULL` wskaźnik do znaku na końcu listy argumentów.  
+ `_spawnl`, `_spawnle`, `_spawnlp`, I `_spawnlpe` wywołania są zazwyczaj używane w przypadku, gdy liczba argumentów jest znany wcześniej. `arg0` Argument jest zwykle wskaźnik do `cmdname`. Argumenty `arg1` za pośrednictwem `argn` są wskaźnikami do ciągów znaków tworzących nowe listy argumentów. Po `argn`, musi istnieć **NULL** wskaźnik do znaku na końcu listy argumentów.  
   
- `_spawnv`, `_spawnve`, `_spawnvp`, I `_spawnvpe` wywołania są przydatne, gdy istnieje zmienna liczba argumentów dla nowego procesu. Wskaźniki do argumenty są przekazywane jako tablica `argv` *.* Argument `argv`[0] jest zwykle wskaźnik do ścieżki w trybie rzeczywistym lub nazwę programu w trybie chronionym i `argv`[1] za pomocą `argv`[`n`] są wskaźnikami do ciągów znaków tworzących nowe listy argumentów. Argument `argv`[`n` + 1] musi być `NULL` wskaźnik do znaku na końcu listy argumentów.  
+ `_spawnv`, `_spawnve`, `_spawnvp`, I `_spawnvpe` wywołania są przydatne, gdy istnieje zmienna liczba argumentów dla nowego procesu. Wskaźniki do argumenty są przekazywane jako tablica `argv` *.* Argument `argv`[0] jest zwykle wskaźnik do ścieżki w trybie rzeczywistym lub nazwę programu w trybie chronionym i `argv`[1] za pomocą `argv`[`n`] są wskaźnikami do ciągów znaków tworzących nowe listy argumentów. Argument `argv`[`n` + 1] musi być **NULL** wskaźnik do znaku na końcu listy argumentów.  
   
 ## <a name="environment-of-the-spawned-process"></a>Środowisko uruchomionego procesu  
- Otwórz pliki, które są, kiedy `_spawn` wywołanie pozostają otwarte w nowym procesie. W `_spawnl`, `_spawnlp`, `_spawnv`, i `_spawnvp` wywołań, nowy proces dziedziczy środowisko procesu wywołującego. Można użyć `_spawnle`, `_spawnlpe`, `_spawnve`, i `_spawnvpe` wpływu na środowisko dla nowego procesu przez przekazanie listę ustawień środowiska za pośrednictwem wywołania `envp` argumentu. Argument `envp` jest tablicy wskaźników znak każdego elementu (z wyjątkiem ostatniego elementu), które wskazuje definicji zmiennej środowiskowej ciągu zakończonego wartością null. Taki ciąg ma zazwyczaj postać `NAME` = `value` gdzie `NAME` to nazwa zmiennej środowiskowej i `value` jest wartość ciągu, do którego jest wartość tej zmiennej. (Należy pamiętać, że `value` nie jest ujęta w znaki podwójnego cudzysłowu.) Końcowy element `envp` tablicy powinna być `NULL`. Gdy `envp` jest `NULL`, działania zduplikowanego procesu dziedziczy ustawienia środowiska procesu nadrzędnego.  
+ Otwórz pliki, które są, kiedy `_spawn` wywołanie pozostają otwarte w nowym procesie. W `_spawnl`, `_spawnlp`, `_spawnv`, i `_spawnvp` wywołań, nowy proces dziedziczy środowisko procesu wywołującego. Można użyć `_spawnle`, `_spawnlpe`, `_spawnve`, i `_spawnvpe` wpływu na środowisko dla nowego procesu przez przekazanie listę ustawień środowiska za pośrednictwem wywołania `envp` argumentu. Argument `envp` jest tablicy wskaźników znak każdego elementu (z wyjątkiem ostatniego elementu), które wskazuje definicji zmiennej środowiskowej ciągu zakończonego wartością null. Taki ciąg ma zazwyczaj postać `NAME` = `value` gdzie `NAME` to nazwa zmiennej środowiskowej i `value` jest wartość ciągu, do którego jest wartość tej zmiennej. (Należy pamiętać, że `value` nie jest ujęta w znaki podwójnego cudzysłowu.) Końcowy element `envp` tablicy powinna być **NULL**. Gdy `envp` jest **NULL**, działania zduplikowanego procesu dziedziczy ustawienia środowiska procesu nadrzędnego.  
   
  `_spawn` Funkcji można przekazać wszystkie informacje o otwartych plików, w tym tryb tłumaczenia, do nowego procesu. Te informacje są przesyłane w trybie rzeczywistym za pomocą `C_FILE_INFO` wpis w środowisku. Kod uruchomienia zwykle przetwarza ten wpis, a następnie usuwa go ze środowiska. Jednak jeśli `_spawn` funkcja spowoduje utworzenie procesu-C, ten wpis pozostanie w środowisku. Drukowanie środowiska pokazuje grafiki znaków w ciągu definicję dla tego wpisu, ponieważ informacje środowiska są przekazywane w postaci binarnej w trybie rzeczywistym. Nie powinna mieć inne wpływ na normalne operacje. W trybie chronionym informacji o środowisku jest przekazywany w formie tekstu i dlatego nie zawiera grafiki znaków.  
   

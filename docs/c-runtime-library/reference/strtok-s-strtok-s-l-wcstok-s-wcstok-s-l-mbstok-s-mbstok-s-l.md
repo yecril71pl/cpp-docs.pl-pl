@@ -57,11 +57,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74be09a9a852d2bfd29b40a5d63583784e3f75a6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 467184acd7ef78ee52f1605d23f2d3b80e6adb83
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
@@ -129,7 +129,7 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca wskaźnik do następnego tokenu w *str*. Zwraca **NULL** gdy znajdują się żadnych kolejnych tokenów. Każde wywołanie modyfikuje *str* podstawiając **NULL** znaku dla pierwszego ogranicznika występujący po zwrócony tokenu.
+Zwraca wskaźnik do następnego tokenu w *str*. Zwraca **NULL** gdy znajdują się żadnych kolejnych tokenów. Każde wywołanie modyfikuje *str* podstawiając znak null dla pierwszego ogranicznika występujący po zwrócony tokenu.
 
 ### <a name="error-conditions"></a>Warunki błędów
 
@@ -143,7 +143,7 @@ Jeśli *str* jest **NULL** , ale *kontekstu* wskaźnik do wskaźnika prawidłowe
 
 ## <a name="remarks"></a>Uwagi
 
-**Strtok_s —** rodziny funkcji znajduje następny token w *str*. Zestaw znaków *ograniczniki* określa możliwe ograniczniki tokenu, który ma zostać odnaleziona w *str* w bieżącym wywołaniu. **wcstok_s —** i **_mbstok_s —** znaków dwubajtowych i znaków wielobajtowych wersji **strtok_s —**. Argumentów i wartości zwracanych z **wcstok_s —** i **_wcstok_s_l —** są znaków dwubajtowych ciągi; tych **_mbstok_s —** i **_mbstok_s_l —**są ciągami znaków wielobajtowych. Funkcje te działają tak samo w przeciwnym razie wartość.
+**Strtok_s —** rodziny funkcji znajduje następny token w *str*. Zestaw znaków *ograniczniki* określa możliwe ograniczniki tokenu, który ma zostać odnaleziona w *str* w bieżącym wywołaniu. **wcstok_s —** i **_mbstok_s —** znaków dwubajtowych i znaków wielobajtowych wersji **strtok_s —**. Argumentów i wartości zwracanych z **wcstok_s —** i **_wcstok_s_l —** są znaków dwubajtowych ciągi; tych **_mbstok_s —** i **_mbstok_s_l —** są ciągami znaków wielobajtowych. Funkcje te działają tak samo w przeciwnym razie wartość.
 
 Ta funkcja weryfikuje jego parametrów. Jeśli wystąpi błąd, tak jak w tabeli błędów program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji **errno** do **einval —** i zwracać **NULL**.
 

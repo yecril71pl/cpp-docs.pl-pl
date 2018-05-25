@@ -52,11 +52,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9a97dc0d1e52cb23e26eeb46e86c684b6bee9d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 02c28da8c066f51bb4366c7ed20e04266d37b074
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 
@@ -118,11 +118,11 @@ Liczba znaków zapisywane lub -1, jeśli wystąpił błąd.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Sprintf_p —** funkcji formatuje i przechowuje serii znaków i wartościami w *buforu*. Każdy argument w *argument_list* (jeśli istnieje) jest konwertowana i dane wyjściowe według specyfikacji formatu w *format*. *Format* używa argumentu [sformatować składnia specyfikacji dla funkcji printf i wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). A **NULL** znak jest dołączany za ostatni znak zapisywane. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane. Różnica między **_sprintf_p —** i **sprintf_s —** jest to, że **_sprintf_p —** parametrów pozycyjnych obsługuje, co umożliwia określenie kolejności, w którym znajdują się argumenty używane w ciągu formatu. Aby uzyskać więcej informacji, zobacz [printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).
+**_Sprintf_p —** funkcji formatuje i przechowuje serii znaków i wartościami w *buforu*. Każdy argument w *argument_list* (jeśli istnieje) jest konwertowana i dane wyjściowe według specyfikacji formatu w *format*. *Format* używa argumentu [sformatować składnia specyfikacji dla funkcji printf i wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Znak null jest dołączany za ostatni znak zapisywane. Jeśli kopiowanie odbywa się między nakładającymi się ciągami, zachowanie jest niezdefiniowane. Różnica między **_sprintf_p —** i **sprintf_s —** jest to, że **_sprintf_p —** parametrów pozycyjnych obsługuje, co umożliwia określenie kolejności, w którym znajdują się argumenty używane w ciągu formatu. Aby uzyskać więcej informacji, zobacz [printf_p parametry pozycyjne](../../c-runtime-library/printf-p-positional-parameters.md).
 
 **_swprintf_p —** jest wersja znaków dwubajtowych **_sprintf_p —**; argumenty wskaźnika **_swprintf_p —** są ciągami znaków dwubajtowych. Wykrywanie błędów kodowania **_swprintf_p —** może się różnić od w **_sprintf_p —**. **_swprintf_p —** i **fwprintf_p —** zachowują się tak samo, z wyjątkiem **_swprintf_p —** zapisuje dane wyjściowe z ciągiem, a nie do miejsca docelowego typu **pliku**, i **_swprintf_p —** wymaga *liczba* parametr, aby określić maksymalną liczbę znaków do zapisania. Wersje tych funkcji z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych przekazano zamiast bieżącego ustawienia regionalne wątku.
 
-**_sprintf_p —** zwraca liczbę bajtów przechowywanych w *buforu*, bez uwzględnienia przerywanie **NULL** znaków. **_swprintf_p —** zwraca liczbę przechowywanych w znaki dwubajtowe *buforu*, bez uwzględnienia przerywanie **NULL** szerokość znaku. Jeśli *buforu* lub *format* jest wskaźnika o wartości null, lub jeśli ciąg formatu zawiera nieprawidłowe znaki formatowania, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru ](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli wykonanie może kontynuować, następujące funkcje i ustaw **errno** do **einval —**.
+**_sprintf_p —** zwraca liczbę bajtów przechowywanych w *buforu*, bez uwzględnienia znak końcowy null. **_swprintf_p —** zwraca liczbę przechowywanych w znaki dwubajtowe *buforu*, bez uwzględnienia zakończenia null znaków dwubajtowych. Jeśli *buforu* lub *format* jest wskaźnika o wartości null, lub jeśli ciąg formatu zawiera nieprawidłowe znaki formatowania, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru ](../../c-runtime-library/parameter-validation.md). Zwróć -1, jeśli wykonanie może kontynuować, następujące funkcje i ustaw **errno** do **einval —**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 

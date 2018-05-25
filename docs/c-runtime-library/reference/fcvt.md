@@ -35,11 +35,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fefe9bbfc1904847af5594a4d663b1eb8299fc9b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 272b8e4ba5e57d71b4b785bceef7e5ea2f0ac7c2
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fcvt"></a>_fcvt
 
@@ -72,7 +72,7 @@ Wskaźnik do wskaźnika logowania przechowywanej.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_fcvt —** zwraca wskaźnik do ciągu znaków, wartość NULL w przypadku błędu.
+**_fcvt —** zwraca wskaźnik do ciągu znaków, **NULL** na błąd.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -86,7 +86,7 @@ Różnica między **_ecvt —** i **_fcvt —** jest interpretacji *liczba* para
 
 **_ecvt —** i **_fcvt —** do konwersji użyj pojedynczego statycznie przydzielonego buforu. Każde wywołanie do jednej z tych procedur niszczy wyniki poprzedniego wywołania.
 
-Ta funkcja weryfikuje jego parametrów. Jeśli *gru* lub *znak* ma wartość NULL, lub *liczba* wynosi 0, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i zostanie zwrócona wartość NULL.
+Ta funkcja weryfikuje jego parametrów. Jeśli *gru* lub *znak* jest **NULL**, lub *liczba* wynosi 0, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [parametru Sprawdzanie poprawności](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i **NULL** jest zwracany.
 
 ## <a name="requirements"></a>Wymagania
 

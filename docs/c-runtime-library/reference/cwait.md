@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a765a6a51a050b96dfd110c21810248b3bb58e16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 878c1c08dabe52a31a2bdf377c3e0bb167a9ae5d
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="cwait"></a>_cwait
 
@@ -58,7 +58,7 @@ intptr_t _cwait(
 ### <a name="parameters"></a>Parametry
 
 *termstat*<br/>
-Wskaźnik do buforu, na którym będzie przechowywany kod wyniku określony proces, lub wartość NULL.
+Wskaźnik do buforu, na którym będzie przechowywany kod wyniku określonego procesu, lub **NULL**.
 
 *procHandle*<br/>
 Dojście oczekiwania proces (oznacza to, że proces, który ma zostać przerwany przed **_cwait —** może zwrócić).
@@ -81,7 +81,7 @@ Aby uzyskać więcej informacji na temat tych i innych kody powrotu, zobacz [err
 
 **_Cwait —** funkcja czeka na zakończenie procesu identyfikator określony proces zapewnianej przez *procHandle*. Wartość *procHandle* przekazywany do **_cwait —** powinna być wartością zwracaną przez wywołanie [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) funkcja, która utworzyła określony proces. Jeśli identyfikator procesu kończy się przed **_cwait —** jest nazywany **_cwait —** natychmiast kończy pracę. **_cwait —** pozwala przez żaden proces, poczekaj, aż inny proces znany dla którego prawidłowego dojścia (*procHandle*) istnieje.
 
-*termstat* wskazuje buforu, na którym będzie przechowywany kod powrotny określony proces. Wartość *termstat* wskazuje, czy określony proces został przerwany zwykle przez wywołanie systemu Windows [ExitProcess](http://msdn.microsoft.com/library/windows/desktop/ms682658.aspx) interfejsu API. **ExitProcess** jest wywoływana wewnętrznie, gdy określony proces wywołuje **zakończyć** lub **_exit —**, zwraca z **głównego**, lub dociera do końca **głównego** . Aby uzyskać więcej informacji o wartość, która jest przekazywany z powrotem przy użyciu *termstat*, zobacz [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx). Jeśli **_cwait —** jest wywoływana przy użyciu wartości NULL dla *termstat*, nie znajduje się kod powrotny określonego procesu.
+*termstat* wskazuje buforu, na którym będzie przechowywany kod powrotny określony proces. Wartość *termstat* wskazuje, czy określony proces został przerwany zwykle przez wywołanie systemu Windows [ExitProcess](http://msdn.microsoft.com/library/windows/desktop/ms682658.aspx) interfejsu API. **ExitProcess** jest wywoływana wewnętrznie, gdy określony proces wywołuje **zakończyć** lub **_exit —**, zwraca z **głównego**, lub dociera do końca **głównego** . Aby uzyskać więcej informacji o wartość, która jest przekazywany z powrotem przy użyciu *termstat*, zobacz [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx). Jeśli **_cwait —** jest wywoływana przy użyciu **NULL** wartość *termstat*, nie znajduje się kod powrotny określonego procesu.
 
 *Akcji* parametru jest ignorowana przez system operacyjny Windows, ponieważ relacji nadrzędny podrzędny nie są zaimplementowane w tych środowiskach.
 

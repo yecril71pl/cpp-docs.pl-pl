@@ -42,11 +42,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92becad93e1d0375f3ecf1ec587daa877a4c8485
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b81ace9c9fe5cf21d93f7e7dd4a8b5f2f2c5d726
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="chdir-wchdir"></a>_chdir, _wchdir
 
@@ -70,7 +70,7 @@ int _wchdir(
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcje te zwracają wartość 0 w przypadku powodzenia. Zwracana wartość -1 oznacza błąd. Jeśli nie można odnaleźć określonej ścieżki, **errno** ustawiono **enoent —**. Jeśli *dirname* ma wartość NULL, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i funkcja zwraca wartość -1.
+Funkcje te zwracają wartość 0 w przypadku powodzenia. Zwracana wartość -1 oznacza błąd. Jeśli nie można odnaleźć określonej ścieżki, **errno** ustawiono **enoent —**. Jeśli *dirname* jest **NULL**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i funkcja zwraca wartość -1.
 
 ## <a name="remarks"></a>Uwagi
 

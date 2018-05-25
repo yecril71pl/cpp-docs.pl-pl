@@ -12,11 +12,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db800de12c0c0e4d7bef2a59a576f1d475e675da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fda9359da6ddc48248874227d58f0c184af45c54
+ms.sourcegitcommit: 9b442b44ee912822d06cabec826aac4a8d82ec75
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>Dodawanie właściwości do kontrolki (ALT — Samouczek, część 3)
 `IPolyCtl` to interfejs, który zawiera kontrolki niestandardowe metody i właściwości, a właściwość spowoduje dodanie do niej.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
      [!code-cpp[NVC_ATL_Windowing#46](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_3.cpp)]  
   
- `get_Sides` Metoda zwraca bieżącą wartość `Sides` właściwości za pośrednictwem `pVal` wskaźnika. W `put_Sides` użytkownika to ustawienie zapewnia kod metody `Sides` dozwolonej wartości dla właściwości. Wartość minimalna musi być 2, a ponieważ tablicę punktów będzie używany dla każdej strony, 100 jest uzasadnione limit wartości maksymalnej.  
+ `get_Sides` Metoda zwraca bieżącą wartość `Sides` właściwości za pośrednictwem `pVal` wskaźnika. W `put_Sides` użytkownika to ustawienie zapewnia kod metody `Sides` dozwolonej wartości dla właściwości. Wartość minimalna musi być 3, a ponieważ tablicę punktów będzie używany dla każdej strony, 100 jest uzasadnione limit wartości maksymalnej.  
   
  Istnieje już właściwość o nazwie `Sides`. W następnym kroku zostanie zmieniony kod rysowania z niego korzystać.  
   

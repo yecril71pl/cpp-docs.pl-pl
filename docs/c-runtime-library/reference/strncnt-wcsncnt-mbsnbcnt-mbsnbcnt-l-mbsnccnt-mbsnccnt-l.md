@@ -60,11 +60,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf9bebda262bde4dd3bb2484a95b7b57a6960d99
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 066431205ecd7aa2b193350ccda4a83decac0458
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strncnt-wcsncnt-mbsnbcnt-mbsnbcntl-mbsnccnt-mbsnccntl"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
 
@@ -118,7 +118,7 @@ Ustawienia regionalne do użycia.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_mbsnbcnt** i **_mbsnbcnt_l** zwraca liczbę bajtów znaleziono w pierwszym *liczba* znaków wielobajtowych *str*. **_mbsnccnt** i **_mbsnccnt_l** zwraca liczbę znaków znaleziono w pierwszym *liczba* bajtów *str*. Jeśli przed analizy napotkano znak NULL *str* ma ukończone, zwróć liczbę bajtów lub znaków znaleziono przed znakiem NULL. Jeśli *str* składa się z mniej niż *liczba* znaków lub bajtów zwracają liczba znaków lub bajtów w ciągu. Jeśli *liczba* jest mniejsza od zera, zwracają 0. W poprzednich wersjach, funkcje te były zwracanej wartości typu **int** zamiast **size_t**.
+**_mbsnbcnt** i **_mbsnbcnt_l** zwraca liczbę bajtów znaleziono w pierwszym *liczba* znaków wielobajtowych *str*. **_mbsnccnt** i **_mbsnccnt_l** zwraca liczbę znaków znaleziono w pierwszym *liczba* bajtów *str*. Jeśli przed analizy napotkano znak null *str* ma ukończone, zwróć liczbę bajtów lub znaków znaleziono przed znakiem null. Jeśli *str* składa się z mniej niż *liczba* znaków lub bajtów zwracają liczba znaków lub bajtów w ciągu. Jeśli *liczba* jest mniejsza od zera, zwracają 0. W poprzednich wersjach, funkcje te były zwracanej wartości typu **int** zamiast **size_t**.
 
 **_strncnt** zwraca liczbę znaków w pierwszym *liczba* bajtów ciągu jednobajtowe *str*. **_wcsncnt** zwraca liczbę znaków w pierwszym *liczba* znaki dwubajtowe ciągu znaków dwubajtowych *str*.
 
@@ -126,9 +126,9 @@ Ustawienia regionalne do użycia.
 
 **_mbsnbcnt** i **_mbsnbcnt_l** liczbę bajtów znaleziono w pierwszym *liczba* znaków wielobajtowych *str*. **_mbsnbcnt** i **_mbsnbcnt_l** Zastąp **mtob** i powinna być używana zamiast **mtob**.
 
-**_mbsnccnt** i **_mbsnccnt_l** liczbę znaleziono znaki w pierwszym *liczba* bajtów *str*. Jeśli **_mbsnccnt** i **_mbsnccnt_l** napotkasz wartość NULL w drugim bajtem znaków dwubajtowych, pierwszego bajtu również jest traktowany jako wartość NULL, a nie jest uwzględniony w liczba zwracanych wartości. **_mbsnccnt** i **_mbsnccnt_l** Zastąp **btom** i powinna być używana zamiast **btom**.
+**_mbsnccnt** i **_mbsnccnt_l** liczbę znaleziono znaki w pierwszym *liczba* bajtów *str*. Jeśli **_mbsnccnt** i **_mbsnccnt_l** napotkasz znak null w drugim bajtem znaków dwubajtowych, pierwszego bajtu również jest traktowany jako wartość null, a nie jest uwzględniony w liczba zwracanych wartości. **_mbsnccnt** i **_mbsnccnt_l** Zastąp **btom** i powinna być używana zamiast **btom**.
 
-Jeśli *str* jest wskaźnika o wartości null lub jest *liczba* ma wartość 0, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md), **errno** ustawiono **einval —**, a funkcja zwraca wartość 0.
+Jeśli *str* jest **NULL** wskaźnika lub *liczba* ma wartość 0, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md), **errno** ustawiono **einval —**, a funkcja zwraca wartość 0.
 
 Wartość wyjściowa jest zagrożony ustawienie **lc_ctype —** ustawienie kategorii ustawień regionalnych; zobacz [setlocale](setlocale-wsetlocale.md) Aby uzyskać więcej informacji. Wersje tych funkcji bez **_l** Użyj sufiksu bieżące ustawienia regionalne tego zachowania zależnych od ustawień regionalnych; wersje z **_l** sufiks są identyczne, z wyjątkiem tego, aby używały parametr ustawień regionalnych Przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 

@@ -34,11 +34,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 302cfae33e1567c2dc94c73156df005fcbb667f4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63514db5abe0a7cd531590dd419aa4b5931e7729
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="ecvt"></a>_ecvt
 
@@ -71,7 +71,7 @@ Znak przekonwertowany numer.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**_ecvt —** zwraca wskaźnik do ciąg cyfr; Wartość NULL, jeśli wystąpił błąd.
+**_ecvt —** zwraca wskaźnik do ciąg cyfr; **NULL** Jeśli wystąpił błąd.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -85,7 +85,7 @@ Różnica między **_ecvt —** i **_fcvt —** jest interpretacji *liczba* para
 
 **_ecvt —** i **_fcvt —** do konwersji użyj pojedynczego statycznie przydzielonego buforu. Każde wywołanie do jednej z tych procedur niszczy wynik poprzedniego wywołania.
 
-Ta funkcja weryfikuje jego parametrów. Jeśli *gru* lub *znak* ma wartość NULL, lub *liczba* wynosi 0, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i zostanie zwrócona wartość NULL.
+Ta funkcja weryfikuje jego parametrów. Jeśli *gru* lub *znak* jest **NULL**, lub *liczba* wynosi 0, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [parametru Sprawdzanie poprawności](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i **NULL** jest zwracany.
 
 ## <a name="requirements"></a>Wymagania
 

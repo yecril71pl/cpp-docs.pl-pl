@@ -43,11 +43,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2881cc0b026225674096127eba165b622483de3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b0ca776394b47f5209fbf034cbb10461c220634
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtime-wstrtime"></a>_strtime, _wstrtime
 
@@ -85,7 +85,7 @@ Zwraca wskaźnik do wynikowy ciąg znaków *timestr*.
 
 **_Strtime —** funkcja bieżącym czasem lokalnym są kopiowane do bufor wskazywany przez *timestr*. Czas jest w formacie **hh: mm:** gdzie **hh** to dwie cyfry reprezentującą godzinę w 24-godzinnego **mm** to dwie cyfry reprezentujący minut po godziny i **ss** to dwie cyfry reprezentujący sekund. Na przykład ciąg **18:23:44** reprezentuje 23 minut i 44 sekund po pełnej godzinie 6 Rozmiar buforu musi być co najmniej 9 bajtów.
 
-**_wstrtime —** jest wersja znaków dwubajtowych **_strtime —**; argumentów i wartości **_wstrtime —** są ciągami znaków dwubajtowych. Funkcje te działają tak samo w przeciwnym razie wartość. Jeśli *timestr* jest **NULL** wskaźnika lub, jeśli *timestr* jest sformatowany nieprawidłowo, nieprawidłowego parametru program obsługi zostanie wywołany, zgodnie z opisem w [parametru Sprawdzanie poprawności](../../c-runtime-library/parameter-validation.md). Jeśli wyjątek jest dozwolone, aby kontynuować, te funkcje zwracane wartości NULL i zestaw **errno** do **einval —** Jeśli *timestr* została wartość NULL lub ustaw **errno**do **erange —** Jeśli *timestr* jest niepoprawnie sformatowana.
+**_wstrtime —** jest wersja znaków dwubajtowych **_strtime —**; argumentów i wartości **_wstrtime —** są ciągami znaków dwubajtowych. Funkcje te działają tak samo w przeciwnym razie wartość. Jeśli *timestr* jest **NULL** wskaźnika lub, jeśli *timestr* jest sformatowany nieprawidłowo, nieprawidłowego parametru program obsługi zostanie wywołany, zgodnie z opisem w [parametru Sprawdzanie poprawności](../../c-runtime-library/parameter-validation.md). Jeśli wyjątek będzie mógł kontynuować, te funkcje zwracają **NULL** i ustaw **errno** do **einval —** Jeśli *timestr* został **NULL** lub ustaw **errno** do **erange —** Jeśli *timestr* jest niepoprawnie sformatowana.
 
 W języku C++ te funkcje mają przeciążenia szablonu, które wywołują odpowiedników nowsza, bezpieczne tych funkcji. Aby uzyskać więcej informacji, zobacz [Secure szablonu Overloads](../../c-runtime-library/secure-template-overloads.md).
 

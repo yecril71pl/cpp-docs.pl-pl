@@ -28,11 +28,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68de7c3ab3b823c1e3d08a13a9d7363232e9712e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c0105ccc5a40c4e5fe789814adfabe6c9749650
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="dllonexit"></a>__dllonexit
 Rejestruje procedura ma być wywoływana w momencie zakończenia.  
@@ -57,7 +57,7 @@ _onexit_t __dllonexit(   _onexit_t func,
  Wskaźnik do zmiennej, która odłączyć punktów na końcu listy funkcji do wykonania na.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- W przypadku powodzenia wskaźnika do funkcji użytkownika. W przeciwnym razie wartość wskaźnika NULL.  
+ W przypadku powodzenia wskaźnika do funkcji użytkownika. W przeciwnym razie **NULL** wskaźnika.  
   
 ## <a name="remarks"></a>Uwagi  
  `__dllonexit` Funkcji jest odpowiednikiem [_onexit —](../c-runtime-library/reference/onexit-onexit-m.md) działać z tą różnicą, że zmienne globalne używane przez tą funkcją nie są widoczne dla tej procedury. Zamiast zmiennych globalnych, korzysta z tej funkcji `pbegin` i `pend` parametrów.  

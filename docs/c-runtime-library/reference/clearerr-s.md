@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03259f0eff64eb23af87ae18dc68272b5a0bd02f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 34feccd2d4d6de53ed9c5a446bf6c7d065dd4e62
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="clearerrs"></a>clearerr_s
 
@@ -58,13 +58,13 @@ Wskaźnik do **pliku** — struktura
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zero w przypadku powodzenia; **Einval —** Jeśli *strumienia* ma wartość NULL.
+Zero w przypadku powodzenia; **Einval —** Jeśli *strumienia* jest **NULL**.
 
 ## <a name="remarks"></a>Uwagi
 
 **Clearerr_s —** funkcja resetuje wskaźnik błędów i wskaźnik plik końcowy *strumienia*. Wskaźniki błędów nie są automatycznie usuwane; Po ustawieniu wskaźnik błędów dla określonego strumienia operacji na strumieniu w dalszym ciągu zwracają wartość błąd do **clearerr_s —**, **clearerr —**, [fseek](fseek-fseeki64.md), **fsetpos —**, lub [rewind](rewind.md) jest wywoływana.
 
-Jeśli *strumienia* ma wartość NULL, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia **errno** do **einval —** i zwraca **einval —**.
+Jeśli *strumienia* jest **NULL**, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może kontynuować, ta funkcja ustawia **errno** do **einval —** i zwraca **einval —**.
 
 ## <a name="requirements"></a>Wymagania
 

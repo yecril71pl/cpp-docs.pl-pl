@@ -28,11 +28,11 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 5e491b9dc5035435fce16b704d28a71a1b0644de
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 12840a7b48be897573e2041aa06fc7fdc8d15297
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip —&gt; funkcji
 
@@ -125,7 +125,7 @@ T10 put_time(struct tm* _Tptr, const Elem* _Fmt);
 
 ### <a name="remarks"></a>Uwagi
 
-Manipulatora zwraca obiekt, który po wstawieniu do strumienia `str`, zachowuje się jak `formatted output function`. Funkcja dane wyjściowe wywołuje funkcję elementu członkowskiego `put` dla ustawień regionalnych aspekt `time_put` skojarzone z `str`. Funkcja dane wyjściowe używa `_Tptr` wskazująca czas struktury i `_Fmt` wskazująca na początku ciąg formatu zakończone NUL. W przypadku powodzenia wywołanie wstawia tekst literału ciągu formatu i przekonwertowane wartości ze struktury czasu. Zwraca manipulatora `str`.
+Manipulatora zwraca obiekt, który po wstawieniu do strumienia `str`, zachowuje się jak `formatted output function`. Funkcja dane wyjściowe wywołuje funkcję elementu członkowskiego `put` dla ustawień regionalnych aspekt `time_put` skojarzone z `str`. Funkcja dane wyjściowe używa `_Tptr` wskazująca czas struktury i `_Fmt` wskazująca na początku ciąg formatu zerem. W przypadku powodzenia wywołanie wstawia tekst literału ciągu formatu i przekonwertowane wartości ze struktury czasu. Zwraca manipulatora `str`.
 
 ## <a name="quoted"></a>  w cudzysłowach
 

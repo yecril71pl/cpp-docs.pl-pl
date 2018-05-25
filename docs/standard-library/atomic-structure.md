@@ -14,11 +14,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 298fe2751cf25355e2075a2870c34bf17cedc222
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7308c127bebd2185429509315ebafb3d83a7efea
+ms.sourcegitcommit: b0d5557dbb57128da560a0a4634312ec4a050a90
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="atomic-structure"></a>atomic — Struktura
 
@@ -63,7 +63,7 @@ struct atomic;
 
 Typ *Ty* musi być *trivially copyable*. Oznacza to, za pomocą [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) Aby kopiować bajty jego musi mieć prawidłową *Ty* obiekt, który porównuje taki sam jak oryginalny obiekt. [Compare_exchange_weak](#compare_exchange_weak) i [compare_exchange_strong](#compare_exchange_strong) Użyj funkcje Członkowskie [funkcji memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) do ustalenia, czy dwa *Ty* wartości są takie same. Te funkcje nie będą używać *Ty*— definicja **operator ==**. Funkcje Członkowskie **atomic** użyj **memcpy** można skopiować wartości typu *Ty*.
 
-Częściowa specjalizacja, ** atomic\<Ty * > **, istnieje dla wszystkich typów wskaźnika. Specjalizacja umożliwia dodanie przesunięcia wartości wskaźnika zarządzanych lub odejmowania przesunięcie od niego. Operacje arytmetyczne przyjmuje argumentu typu **ptrdiff_t —** i dostosować ten argument na podstawie rozmiaru *Ty* aby były spójne z adresem zwykłej arytmetyczne.
+Częściowa specjalizacja, **atomic\<Ty \* >** , istnieje dla wszystkich typów wskaźnika. Specjalizacja umożliwia dodanie przesunięcia wartości wskaźnika zarządzanych lub odejmowania przesunięcie od niego. Operacje arytmetyczne przyjmuje argumentu typu **ptrdiff_t —** i dostosować ten argument na podstawie rozmiaru *Ty* aby były spójne z adresem zwykłej arytmetyczne.
 
 Dla każdego typu całkowitego, z wyjątkiem istnieje specjalizacji **bool**. Każdy specjalizacji zawiera bogaty zestaw metod niepodzielne operacje arytmetyczne i logicznych.
 

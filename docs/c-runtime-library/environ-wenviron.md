@@ -23,11 +23,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98106cbcfb08f15b00ceed8b8b5f0db87da7303f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f66e0aa847c0835290895aa7412410b2350d617
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="environ-wenviron"></a>_environ, _wenviron
 `_environ` Zmienna jest wskaźnik do tablicy wskaźników do ciągów znaków wielobajtowych, które stanowi środowisko procesu. Tę zmienną globalną jest przestarzała bezpieczniejsze funkcjonalne wersje [getenv_s —, _wgetenv_s —](../c-runtime-library/reference/getenv-s-wgetenv-s.md) i [_putenv_s —, _wputenv_s —](../c-runtime-library/reference/putenv-s-wputenv-s.md), którego należy użyć zamiast zmiennej globalnej. `_environ` jest zadeklarowana w Stdlib.h.  
@@ -56,9 +56,9 @@ extern wchar_t **_wenviron;
   
  jest to wersja znaków dwubajtowych `_environ`. W programie, który używa `wmain` funkcji `_wenviron` został zainicjowany w momencie uruchamiania programu zgodnie z ustawieniami pobranych z środowiska systemu operacyjnego.  
   
- W programie, który używa `main`, `_wenviron` jest początkowo `NULL` ponieważ środowisko składa się z ciągów znaków wielobajtowych. W pierwszym wywołaniu `_wgetenv` lub `_wputenv`, odpowiednie środowisko ciąg znaków dwubajtowych jest tworzony i jest wskazywana przez `_wenviron`.  
+ W programie, który używa `main`, `_wenviron` jest początkowo **NULL** ponieważ środowisko składa się z ciągów znaków wielobajtowych. W pierwszym wywołaniu `_wgetenv` lub `_wputenv`, odpowiednie środowisko ciąg znaków dwubajtowych jest tworzony i jest wskazywana przez `_wenviron`.  
   
- Podobnie, w programie, który używa `wmain`, `_environ` jest początkowo `NULL` ponieważ środowisko składa się z ciągów znaków dwubajtowych. W pierwszym wywołaniu `_getenv` lub `_putenv`, odpowiednie środowisko ciąg znaków wielobajtowych jest tworzony i jest wskazywana przez `_environ`.  
+ Podobnie, w programie, który używa `wmain`, `_environ` jest początkowo **NULL** ponieważ środowisko składa się z ciągów znaków dwubajtowych. W pierwszym wywołaniu `_getenv` lub `_putenv`, odpowiednie środowisko ciąg znaków wielobajtowych jest tworzony i jest wskazywana przez `_environ`.  
   
  Gdy w programie jednocześnie istnieją dwie kopie środowiska (MBCS i Unicode), środowiska wykonawczego systemu muszą zachować obydwie kopie spowodować wolniejszy czasu wykonywania. Na przykład, gdy jest wywoływana `_putenv`, wywołanie `_wputenv` również jest wykonywane automatycznie, tak aby odpowiadały ciągów dwóch środowiska.  
   

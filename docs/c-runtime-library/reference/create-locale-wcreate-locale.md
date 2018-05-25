@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db4a762689907330b671e2720cf743ee957526a4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9be41a2d156a522c74349c3457295502ae6d4f43
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="createlocale-wcreatelocale"></a>_create_locale, _wcreate_locale
 
@@ -94,7 +94,7 @@ Ta funkcja weryfikuje *kategorii* i *ustawień regionalnych* parametrów. Jeśli
 
 *Ustawień regionalnych* argument jest wskaźnikiem do ciągu, który określa ustawienia regionalne. Informacje o formacie *ustawień regionalnych* argumentu, zobacz [nazwy lokalne, języki i ciągi Kraj/Region](../../c-runtime-library/locale-names-languages-and-country-region-strings.md).
 
-*Ustawień regionalnych* argument może zająć Nazwa ustawień regionalnych, ciąg języka ciąg języka i kod kraju/regionu, stronę kodową lub ciąg języka, kod kraju/regionu i strony kodowej. Zbiór nazwy dostępne lokalne, języki kodów kraju/regionu i strony kodowe obejmuje wszystkie punkty, które są obsługiwane przez interfejs API NLS systemu Windows z wyjątkiem stron kodowych, które wymagają więcej niż dwa bajty na znak — na przykład, UTF-7 i UTF-8. Jeśli podasz stronę kodową, takich jak UTF-7 lub UTF-8, **_create_locale** spowoduje niepowodzenie i zwrócić wartość NULL. Zestaw nazw ustawień regionalnych obsługiwane przez **_create_locale** opisanym w [nazwy lokalne, języki i ciągi Kraj/Region](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Ciągi kraj/region i język obsługiwany przez zestaw **_create_locale** są wymienione w [ciągi języka](../../c-runtime-library/language-strings.md) i [ciągi Kraj/Region](../../c-runtime-library/country-region-strings.md).
+*Ustawień regionalnych* argument może zająć Nazwa ustawień regionalnych, ciąg języka ciąg języka i kod kraju/regionu, stronę kodową lub ciąg języka, kod kraju/regionu i strony kodowej. Zbiór nazwy dostępne lokalne, języki kodów kraju/regionu i strony kodowe obejmuje wszystkie punkty, które są obsługiwane przez interfejs API NLS systemu Windows z wyjątkiem stron kodowych, które wymagają więcej niż dwa bajty na znak — na przykład, UTF-7 i UTF-8. Jeśli podasz stronę kodową, takich jak UTF-7 lub UTF-8, **_create_locale** spowoduje niepowodzenie i zwracać **NULL**. Zestaw nazw ustawień regionalnych obsługiwane przez **_create_locale** opisanym w [nazwy lokalne, języki i ciągi Kraj/Region](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Ciągi kraj/region i język obsługiwany przez zestaw **_create_locale** są wymienione w [ciągi języka](../../c-runtime-library/language-strings.md) i [ciągi Kraj/Region](../../c-runtime-library/country-region-strings.md).
 
 Aby uzyskać więcej informacji na temat ustawień regionalnych, zobacz [setlocale, _wsetlocale —](setlocale-wsetlocale.md).
 

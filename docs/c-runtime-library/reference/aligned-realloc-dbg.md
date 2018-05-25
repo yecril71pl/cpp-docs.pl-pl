@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 546ad1b4bb745274894754a185c57bacb82b0061
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1fd5854bc18cecda1fd3ffee4f28ec2fa5d2a68a
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="alignedreallocdbg"></a>_aligned_realloc_dbg
 
@@ -66,10 +66,10 @@ Rozmiar alokacji żądanej pamięci.
 Wartość wyrównania, która musi być całkowitą potęgą liczby 2.
 
 *Nazwa pliku*<br/>
-Wskaźnik do nazwy pliku źródłowego, który zażądał **realloc** operacji ani mieć wartości NULL.
+Wskaźnik do nazwy pliku źródłowego, który zażądał **realloc** operacji lub **NULL**.
 
 *numer wiersza*<br/>
-Numer wiersza na plik źródłowy gdzie **realloc** operacja była żądana ani mieć wartości NULL.
+Numer wiersza na plik źródłowy gdzie **realloc** zażądano operacji lub **NULL**.
 
 ## <a name="return-value"></a>Wartość zwracana
 

@@ -27,11 +27,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fa20222a4d64afa9fcb8d0c1a91e63db989dae2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 90c68ed56b52b57deb234717b3b95ec197d26318
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="rtdynamiccast"></a>__RTDynamicCast
 Implementacja interfejsu środowiska wykonawczego [dynamic_cast](../cpp/dynamic-cast-operator.md) operatora.  
@@ -65,7 +65,7 @@ PVOID __RTDynamicCast (
  `true` Jeśli dane wejściowe jest odwołaniem; `false` Jeśli wejściowy jest wskaźnik.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do odpowiedniego obiektu podrzędnego, w przypadku powodzenia; w przeciwnym razie wartość NULL.  
+ Wskaźnik do odpowiedniego obiektu podrzędnego, w przypadku powodzenia; w przeciwnym razie **NULL**.  
   
 ## <a name="exceptions"></a>Wyjątki  
  `bad_cast()` Jeśli w danych wejściowych `dynamic_cast<>` jest odwołaniem i Rzutowanie nie powiedzie się.  

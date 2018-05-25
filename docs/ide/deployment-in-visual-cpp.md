@@ -62,4 +62,4 @@ Kolejność ładowania bibliotek języka Visual C++ jest zależny od systemu. Ab
 ## <a name="see-also"></a>Zobacz także
 
 - [Wdrażanie natywnych aplikacji komputerowych](../ide/deploying-native-desktop-applications-visual-cpp.md)
-- [Wdrożenie usługi Universal CRT](universal-crt-deployment.md)
+- [Wdrożenie środowiska Universal CRT](universal-crt-deployment.md)

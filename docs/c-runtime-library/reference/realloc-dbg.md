@@ -35,11 +35,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91d04e78c6f3521c56cd74968a761a2d436e36bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3c4bb3eab58807805ec3c4fbc35611d268bbeee9
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="reallocdbg"></a>_realloc_dbg
 
@@ -69,16 +69,16 @@ Wskaźnik do bloku wcześniej alokacji pamięci.
 Żądany typ bloku reallocated: **_client_block —** lub **_normal_block —**.
 
 *Nazwa pliku*<br/>
-Wskaźnik do nazwy pliku źródłowego, który zażądał **realloc** operacji ani mieć wartości NULL.
+Wskaźnik do nazwy pliku źródłowego, który zażądał **realloc** operacji lub **NULL**.
 
 *numer wiersza*<br/>
-Numer wiersza na plik źródłowy gdzie **realloc** operacja była żądana ani mieć wartości NULL.
+Numer wiersza na plik źródłowy gdzie **realloc** zażądano operacji lub **NULL**.
 
 *Filename* i *numer wiersza* parametry są dostępne tylko podczas **_realloc_dbg —** została jawnie wywołana lub [_crtdbg_map_alloc —](../../c-runtime-library/crtdbg-map-alloc.md) stała preprocesora została zdefiniowana.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Po pomyślnym ukończeniu ta funkcja zwraca wskaźnik do użytkownika części bloku przydzielić pamięci, nowych funkcji programu obsługi albo zwraca wartość NULL. Pełny opis zwracany zachowania zobacz sekcję poniżej uwagi. Aby uzyskać więcej informacji o sposobie korzystania z nowych funkcji programu obsługi, zobacz [realloc](realloc.md) funkcji.
+Po pomyślnym ukończeniu, ta funkcja zwraca wskaźnik do użytkownika części bloku przydzielić pamięci, nowych funkcji programu obsługi albo zwraca **NULL**. Pełny opis zwracany zachowania zobacz sekcję poniżej uwagi. Aby uzyskać więcej informacji o sposobie korzystania z nowych funkcji programu obsługi, zobacz [realloc](realloc.md) funkcji.
 
 ## <a name="remarks"></a>Uwagi
 

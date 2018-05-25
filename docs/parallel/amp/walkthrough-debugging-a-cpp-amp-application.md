@@ -17,11 +17,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f1308462133c11c8f945416a13fb5542c1d2da8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1bf80276b5434804651bcc4507397e9479f6e494
+ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Wskazówki: debugowanie aplikacji C++ AMP
 W tym temacie przedstawiono sposób debugowania aplikacji, która używa C++ Accelerated Massive Parallelism (C++ AMP), aby móc korzystać z procesor graficzny (GPU). Używa programu redukcji równoległe podsumowuje dużą tablicę liczb całkowitych. W instruktażu przedstawiono następujące zagadnienia:  
@@ -228,7 +228,9 @@ Punkty przerwania Procesora
   
 3.  W **debugera, aby uruchomić** listy, wybierz **lokalnego debugera systemu Windows**.  
   
-4.  W **typ debugera** listy, wybierz **GPU tylko**.  
+4.  W **typ debugera** listy, upewnij się, że **automatycznie** jest zaznaczone.
+
+    **Automatycznie** jest wartością domyślną. Przed systemem Windows 10 **GPU tylko** jest wymagana wartość zamiast **automatycznie**.
   
 5.  Wybierz **OK** przycisku.  
   

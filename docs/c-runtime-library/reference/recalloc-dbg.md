@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8ce4941dcad2a9b02b853640076b71a97f68cbe
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3de6adddc4e7d95f3212c80666816d4855897388
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="recallocdbg"></a>_recalloc_dbg
 
@@ -81,7 +81,7 @@ Numer w pliku źródłowym, której zażądano operacji alokacji wiersza lub **N
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Po pomyślnym ukończeniu ta funkcja zwraca wskaźnik do użytkownika części bloku przydzielić pamięci, nowych funkcji programu obsługi albo zwraca wartość NULL. Pełny opis zwracany zachowania zobacz sekcję poniżej uwagi. Aby uzyskać więcej informacji o sposobie korzystania z nowych funkcji programu obsługi, zobacz [_recalloc —](recalloc.md) funkcji.
+Po pomyślnym ukończeniu, ta funkcja zwraca wskaźnik do użytkownika części bloku przydzielić pamięci, nowych funkcji programu obsługi albo zwraca **NULL**. Pełny opis zwracany zachowania zobacz sekcję poniżej uwagi. Aby uzyskać więcej informacji o sposobie korzystania z nowych funkcji programu obsługi, zobacz [_recalloc —](recalloc.md) funkcji.
 
 ## <a name="remarks"></a>Uwagi
 

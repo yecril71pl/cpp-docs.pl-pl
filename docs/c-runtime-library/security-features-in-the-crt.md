@@ -34,11 +34,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ce188ea5d28fa99d6133129edbace8e2886f0f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8195e9a7e37ac9fa9186118889d7717698d2b784
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="security-features-in-the-crt"></a>Funkcje zabezpieczeń w CRT
 Wiele funkcji CRT starego ma bezpieczniejsze nowszej wersji. Jeśli istnieje funkcja bezpieczny, starszej wersji mniej bezpieczne jest oznaczony jako przestarzały i nowa wersja ma `_s` sufiks ("zabezpieczenia").  
@@ -70,7 +70,7 @@ strcpy(szBuf, "test"); // warning: deprecated
   
 -   `Parameter Validation`. Parametry przekazane do funkcji CRT są weryfikowane, w obu tych funkcji bezpiecznego i wiele wersji istniejących funkcji. Te operacje sprawdzania poprawności obejmują:  
   
-    -   Sprawdzanie `NULL` wartości przekazane do funkcji.  
+    -   Sprawdzanie **NULL** wartości przekazane do funkcji.  
   
     -   Sprawdzanie wartości wyliczenia ważności.  
   
@@ -82,7 +82,7 @@ strcpy(szBuf, "test"); // warning: deprecated
   
 -   `Sized Buffers`. Bezpieczne funkcje wymagają, że rozmiar buforu przekazywane do dowolnej funkcji, która zapisuje w buforze. Bezpieczne wersji sprawdzić, czy bufor jest wystarczająco duży, przed zapisaniem, co pomaga uniknąć błędów przepełnienia buforu niebezpieczne, zezwalających na wykonanie złośliwego kodu. Funkcje te zwykle zwracają `errno` wpisz kod błędu, a następnie Wywołaj program obsługi nieprawidłowych parametrów, jeśli rozmiar buforu jest za mały. Funkcje, które odczytywać bufory wejściowe, takie jak `gets`, bezpiecznego wersje, które trzeba określić maksymalny rozmiar.  
   
--   `Null termination`. Niektóre funkcje, które po lewej stronie ciągi potencjalnie z systemem innym niż zakończone mają bezpiecznego wersje, które upewnij się, że parametry są prawidłowo zakończony znakiem null.  
+-   `Null termination`. Niektóre funkcje, które potencjalnie z systemem innym niż zakończone ciągów ma bezpiecznego wersje, które upewnij się, że ciągi prawidłowo zakończony wartością null.  
   
 -   `Enhanced error reporting`. Bezpieczne funkcje zwracają kodów błędów z więcej informacji o błędzie nie była dostępna z istniejących funkcji. Bezpieczne funkcje i wielu istniejących funkcji teraz ustawić `errno` i często zwracać `errno` kodu typu również, aby zapewnić lepsze raportowanie błędów.  
   

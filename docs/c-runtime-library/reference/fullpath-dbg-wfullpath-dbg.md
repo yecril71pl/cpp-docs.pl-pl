@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c7ff7b300473389281a7386d49843987456f116
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d04f3d7b53eca27d38a38b0bce284c17b15cae02
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg, _wfullpath_dbg
 
@@ -96,9 +96,9 @@ Każda funkcja zwraca wskaźnik do buforu, zawierający nazwę ścieżki bezwzgl
 
 ## <a name="remarks"></a>Uwagi
 
-**_Fullpath_dbg —** i **_wfullpath_dbg —** funkcje są takie same jak **_fullpath —** i **_wfullpath —** z wyjątkiem tego, kiedy **_DEBUG** jest zdefiniowany, te funkcje przy użyciu wersji debugowania **— funkcja malloc**, **_malloc_dbg —**, można przydzielić pamięci, jeśli wartość NULL jest przekazywany jako pierwszym parametrem. Aby uzyskać informacje dotyczące debugowania funkcji **_malloc_dbg —**, zobacz [_malloc_dbg —](malloc-dbg.md).
+**_Fullpath_dbg —** i **_wfullpath_dbg —** funkcje są takie same jak **_fullpath —** i **_wfullpath —** z wyjątkiem tego, kiedy **_DEBUG** jest zdefiniowany, te funkcje przy użyciu wersji debugowania **— funkcja malloc**, **_malloc_dbg —**, można przydzielić pamięci, jeśli **NULL** jest przekazywany jako pierwszego parametru. Aby uzyskać informacje dotyczące debugowania funkcji **_malloc_dbg —**, zobacz [_malloc_dbg —](malloc-dbg.md).
 
-Nie trzeba jawnie wywołana w większości przypadków te funkcje. Zamiast tego można zdefiniować **_crtdbg_map_alloc —** flagi. Gdy **_crtdbg_map_alloc —** jest zdefiniowany, wywołań **_fullpath —** i **_wfullpath —** są mapowane ponownie do **_fullpath_dbg —** i **_wfullpath_dbg —**odpowiednio z *blockType* ustawioną **_normal_block —**. W związku z tym nie trzeba jawnie wywoływać te funkcje, chyba że chcesz oznaczyć bloki sterty jako **_client_block —**. Aby uzyskać więcej informacji, zobacz [typów bloków w stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
+Nie trzeba jawnie wywołana w większości przypadków te funkcje. Zamiast tego można zdefiniować **_crtdbg_map_alloc —** flagi. Gdy **_crtdbg_map_alloc —** jest zdefiniowany, wywołań **_fullpath —** i **_wfullpath —** są mapowane ponownie do **_fullpath_dbg —** i **_wfullpath_dbg —** odpowiednio z *blockType* ustawioną **_normal_block —**. W związku z tym nie trzeba jawnie wywoływać te funkcje, chyba że chcesz oznaczyć bloki sterty jako **_client_block —**. Aby uzyskać więcej informacji, zobacz [typów bloków w stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 

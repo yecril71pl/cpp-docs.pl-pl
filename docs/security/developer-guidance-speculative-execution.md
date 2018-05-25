@@ -1,7 +1,7 @@
 ---
 title: Wskazówki dla deweloperów języka C++ rozważana kanałów po stronie wykonywania | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 05/03/2018
+ms.date: 05/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -18,25 +18,29 @@ author: mamillmsft
 ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a7e7ddb51f07f7fe6be1da017d8feae9cc4919e
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: 515e2223e67d86da12488d9880a1a0a258fc4bdf
+ms.sourcegitcommit: 4b2c3b0c720aef42bce7e1e5566723b0fec5ec7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Wskazówki dla deweloperów języka C++ rozważana kanałów po stronie wykonywania
 
 Ten artykuł zawiera wskazówki dla deweloperów, co ułatwi zidentyfikowanie i zmniejszenia rozważana wykonywania po stronie kanał sprzętu luki w zabezpieczeniach oprogramowania C++. Te luki w zabezpieczeniach może ujawnić poufne informacje w granicach zaufania i może mieć wpływ na oprogramowanie, które działa na procesorów, które obsługują rozważana, poza kolejnością wykonywania instrukcji. Ta klasa luk w zabezpieczeniach pierwszy opisanego w styczniu, 2018 oraz dodatkowe i wskazówki można znaleźć w [biuletyn zabezpieczeń firmy Microsoft](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002).
 
-Wskazówki podane w tym artykule jest powiązane z klasą luk w zabezpieczeniach reprezentowany przez CVE-2017-5753, znanej także jako wariant Spectre 1. Ta klasa luki w zabezpieczeniach sprzętu jest powiązany z kanałów po stronie, które mogą wystąpić z powodu wykonywania rozważana, który występuje w wyniku misprediction gałąź warunkowa. Kompilator Visual C++ w programie Visual Studio 2017 r (począwszy od wersji 15.5.5) obejmuje obsługę `/Qspectre` przełącznik udostępnia środki zaradcze kompilacji dla ograniczony zestaw wzorców kodowania potencjalnie narażone związane z CVE-2017-5753. W dokumentacji [/Qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) flagi zawiera więcej informacji na jego skutków i użycia. 
+Wskazówki podane w tym artykule jest powiązany z klasy luk w zabezpieczeniach reprezentowany przez:
+
+1. CVE-2017-5753, znanej także jako wariant Spectre 1. Ta klasa luki w zabezpieczeniach sprzętu jest powiązany z kanałów po stronie, które mogą wystąpić z powodu wykonywania rozważana, który występuje w wyniku misprediction gałąź warunkowa. Kompilator Visual C++ w programie Visual Studio 2017 r (począwszy od wersji 15.5.5) obejmuje obsługę `/Qspectre` przełącznika, który umożliwia ograniczenie kompilacji dla ograniczony zestaw wzorców kodowania potencjalnie narażone związane z 5753-CVE-2017 r. W dokumentacji [/Qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) flagi zawiera więcej informacji na jego skutków i użycia.
+
+2. CVE-2018-3639, nazywany również [rozważana obejścia magazynu (SSB)](https://aka.ms/sescsrdssb). Ta klasa luki w zabezpieczeniach sprzętu jest powiązany z kanałów po stronie, które mogą wystąpić z powodu wykonywania rozważana obciążenia wcześniejsze zależnych magazynu wyniku misprediction dostępu do pamięci.
 
 Dostępny wprowadzenie do wykonywania rozważana po stronie kanał luk w zabezpieczeniach znajdują się w prezentacji zatytułowany [przypadku Spectre i Meltdown](https://www.youtube.com/watch?v=_4O0zMW-Zu4) przez jeden z zespołów badawczych, które wykryte tych problemów.
 
 ## <a name="what-are-speculative-execution-side-channel-hardware-vulnerabilities"></a>Co to są luk w zabezpieczeniach sprzętu kanału po stronie wykonywania Speculative?
 
-Nowoczesne procesory zapewniają wyższy stopień wydajności poprzez użycie rozważana i poza kolejnością wykonywania instrukcji. Na przykład często odbywa się przez element docelowy gałęzi (warunkowe i indrect), dzięki czemu może rozpocząć speculatively wykonywania instrukcji w celu przewidywane gałęzi, co umożliwia uniknięcie wstrzymania, aż do rzeczywistego gałęzi docelowej rozwiązane. W przypadku, gdy Procesor później wykryje, że misprediction wystąpił, wszystkie stan komputera, który został obliczony speculatively zostaną odrzucone. Dzięki temu, że nie ma żadnych skutków pod względem architektury widoczne przewidzianych spekulacji.
+Nowoczesne procesory zapewniają wyższy stopień wydajności poprzez użycie rozważana i poza kolejnością wykonywania instrukcji. Na przykład często odbywa się przez element docelowy gałęzie (warunkowe i pośredniego), dzięki czemu może rozpocząć speculatively wykonywania instrukcji w celu przewidywane gałęzi unikając w ten sposób wstrzymania, aż do rzeczywistego gałęzi docelowych rozwiązane. W przypadku, gdy Procesor później wykryje, że misprediction wystąpił, wszystkie stan komputera, który został obliczony speculatively zostaną odrzucone. Dzięki temu, że nie ma żadnych skutków pod względem architektury widoczne przewidzianych spekulacji.
 
-Podczas wykonywania rozważana nie ma wpływu na architecturaly widoczności, jego pozostaw śladów w stanie architektury, takich jak różnych pamięci podręcznych, które są używane przez procesor CPU. Jest tych śladów rozważana wykonywania, który może powodować powstanie luk w zabezpieczeniach kanału po stronie. Aby lepiej zrozumieć to, należy wziąć pod uwagę następującego fragmentu kodu, który stanowi przykład CVE 2017 5753 (granice Sprawdź obejście):
+Podczas wykonywania rozważana nie ma wpływu na pod względem architektury widoczności, jego pozostaw śladów w stanie architektury, takich jak różnych pamięci podręcznych, które są używane przez procesor CPU. Jest tych śladów rozważana wykonywania, który może powodować powstanie luk w zabezpieczeniach kanału po stronie. Aby lepiej zrozumieć to, należy wziąć pod uwagę następującego fragmentu kodu, który stanowi przykład CVE 2017 5753 (granice Sprawdź obejście):
 
 ```cpp
 // A pointer to a shared memory region of size 1MB (256 * 4096)
@@ -50,7 +54,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 }
 ```
 
-W tym przykładzie `ReadByte` jest buforu, rozmiar buforu i Indeks został dostarczony do tego buforu. Parametr indeks określony przez `untrusted_index`, jest dostarczana przez mniej uprzywilejowane kontekstu, takie jak proces innych niż administracyjne. Jeśli `untrusted_index` jest mniejsza niż `buffer_size`, a następnie znak w pozycji tego indeksu są odczytywane z `buffer` i używany do indeksu w udostępniony region pamięci odwołuje się `shared_buffer`.
+W tym przykładzie `ReadByte` jest buforu, rozmiar buforu i Indeks został dostarczony do tego buforu. Parametr indeks określony przez `untrusted_index`, jest dostarczana przez mniej uprzywilejowane kontekstu, takie jak proces innych niż administracyjne. Jeśli `untrusted_index` jest mniejsza niż `buffer_size`, a następnie znak w pozycji tego indeksu są odczytywane z `buffer` i używany do indeksu w udostępniony region pamięci odwołuje się `shared_buffer`. 
 
 Względem architektury, ta sekwencja kodu jest idealnie bezpieczne, ponieważ będzie gwarancji, że `untrusted_index` zawsze będzie mniejsza niż `buffer_size`. Jednak obecności rozważana wykonywania jest możliwe, że Procesor będzie mispredict gałąź warunkowa i wykonać treści, jeśli instrukcja nawet wtedy, gdy `untrusted_index` jest większa niż lub równa `buffer_size`. W wyniku tego Procesora może speculatively Odczytaj bajt from beyond granice `buffer` (która może być klucz tajny), a następnie użyj tej wartości bajtu do obliczenia adresu kolejnych obciążenia za pośrednictwem `shared_buffer`. 
 
@@ -68,16 +72,16 @@ Powyższe kroki podać przykład przy użyciu techniki nazywanej OPRÓŻNIANIA +
 
 ## <a name="what-software-scenarios-can-be-impacted"></a>Może mieć wpływ na jakie scenariuszach oprogramowania?
 
-Tworzenie bezpiecznego oprogramowania przy użyciu procedury jak [cyklu programistycznym zabezpieczeń](https://www.microsoft.com/en-us/sdl/) (SDL) wymaga zwykle deweloperzy do identyfikowania granice zaufania, które istnieją w aplikacjach. Granice zaufania istnieje w miejscach, w których aplikacja może współpracować z danymi dostarczonymi przez kontekst niższym poziomie zaufania, takich jak inny proces na komputerze lub proces użytkownika niebędącego administratorem tryb w przypadku sterownik urządzenia trybu jądra. Nowa klasa luk w zabezpieczeniach dotyczące wykonywania rozważana kanały po stronie ma zastosowanie do wielu granic zaufania w istniejących modeli zabezpieczeń oprogramowania, które izolować kodu i danych na urządzeniu.
+Tworzenie bezpiecznego oprogramowania przy użyciu procedury jak [cyklu programistycznym zabezpieczeń](https://www.microsoft.com/en-us/sdl/) (SDL) wymaga zwykle deweloperzy do identyfikowania granice zaufania, które istnieją w aplikacjach. Granice zaufania istnieje w miejscach, w których aplikacja może współpracować z danymi dostarczonymi przez kontekst niższym poziomie zaufania, takich jak inny proces na komputerze lub proces użytkownika niebędącego administratorem tryb w przypadku sterownik urządzenia trybu jądra. Nowa klasa luk w zabezpieczeniach dotyczące wykonywania rozważana kanały po stronie ma zastosowanie do wielu granic zaufania w istniejących modeli zabezpieczeń oprogramowania, które izolować kodu i danych na urządzeniu. 
 
 Poniższa tabela zawiera podsumowanie modele zabezpieczeń oprogramowania, których deweloperzy musi zwracać uwagę na wystąpienia te luki w zabezpieczeniach:
 
 |Granic zaufania|Opis|
 |----------------|----------------|
-|Granic maszyny wirtualnej|Aplikacje, które izolują obciążenia w oddzielnych maszyn wirtualnych, które odbieranie niezaufanych danych z innej maszyny wirtualnej może być zablokowana.|
-|Granic jądra|Sterownika urządzenia trybu jądra, który odbiera dane niezaufane z procesem trybu użytkownika niebędącego administratorem może być zablokowana.|
+|Granic maszyny wirtualnej|Aplikacje, które izolują obciążenia w oddzielnych maszyn wirtualnych, które odbieranie niezaufanych danych z innej maszyny wirtualnej może być zablokowana.| 
+|Granic jądra|Sterownika urządzenia trybu jądra, który odbiera dane niezaufane z procesem trybu użytkownika niebędącego administratorem może być zablokowana.| 
 |Granica procesu|Aplikacja odbiera niezaufanych danych z innego procesu uruchomionego na komputerze lokalnym za pomocą zdalnego wywoływania procedur (RPC), pamięci współużytkowanej lub innych komunikacji między procesem (IPC) mechanizmów może być zablokowana.|
-|Enklawę granic|Aplikacja wykonuje w ramach bezpiecznego enklawę (na przykład Intel SGX), który recieves niezaufanych danych poza enklawę może być zagrożone.|
+|Enklawę granic|Aplikacja, która jest wykonywana w ramach bezpiecznego enklawę (na przykład Intel SGX) służącą do odbierania niezaufanych danych poza enklawę może być zablokowana.|
 |Język granic|Aplikacja, która interpretuje lub just in Time (JIT) kompiluje i wykonuje niezaufany kod napisany w języku wyższego poziomu może być zablokowana.|
 
 Aplikacje, które mają ataku widoczne dla każdego z powyższych ufać granic należy przejrzeć kod na powierzchni ataku na identyfikowanie i usuwanie wystąpień możliwych luk w zabezpieczeniach kanału rozważana wykonywania po stronie. Należy zauważyć, że granice zaufania na powierzchni ataku zdalnego, takich jak zdalny protokołów sieciowych, nie została uruchomiona zagrożenie do wykonywania rozważana po stronie kanał luk w zabezpieczeniach.
@@ -90,11 +94,11 @@ Ogólnie rzecz biorąc misprediction związanych z warunkowych gałęzi kanały 
 
 W każdym przykładzie komentarz z frazy "SPEKULACJI bariery" zostanie wstawiony, gdzie deweloper może wprowadzić bariery jako środki zaradcze. Jest to omówiono bardziej szczegółowo w sekcji środki zaradcze.
 
-### <a name="speculative-out-of-bounds-load"></a>Zdalne rozważana obciążenia
+## <a name="speculative-out-of-bounds-load"></a>Zdalne rozważana obciążenia
 
 Ta kategoria kodowania wzorce obejmuje misprediction gałąź warunkowa, który prowadzi do rozważana liczbach dostęp do pamięci.
 
-#### <a name="array-out-of-bounds-load-feeding-a-load"></a>Tablica liczbach załadować zasilania obciążenia
+### <a name="array-out-of-bounds-load-feeding-a-load"></a>Tablica liczbach załadować zasilania obciążenia
 
 Ten wzorzec kodowania jest pierwotnie opisano narażone wzorzec kodowania CVE 2017 5753 (granice Sprawdź obejście). Tło części w tym artykule opisano tego wzorca szczegółowo.
 
@@ -126,7 +130,7 @@ unsigned char ReadBytes(unsigned char *buffer, unsigned int buffer_size) {
 }
 ```
 
-#### <a name="array-out-of-bounds-load-feeding-an-indirect-branch"></a>Tablica liczbach obciążenia zasilania pośrednie gałęzi
+### <a name="array-out-of-bounds-load-feeding-an-indirect-branch"></a>Tablica liczbach obciążenia zasilania pośrednie gałęzi
 
 Ten wzorzec kodowania obejmuje przypadek, w którym misprediction gałąź warunkowa może prowadzić do liczbach dostępu do tablicy wskaźników funkcji, które następnie prowadzi do pośredniego gałęzi do obiektu docelowego adresów, które zostały odczytane poza granicami. Poniższy fragment kodu zawiera przykład przedstawiający to. 
 
@@ -149,9 +153,13 @@ void DispatchMessage(unsigned int untrusted_message_id, unsigned char *buffer, u
 
 Zgodnie z przypadkiem tablicy liczbach załadować zasilania inny obciążenia, warunek ten również mogą powstać w połączeniu z pętli, która przekracza stanu zakończenia z powodu misprediction.
 
-### <a name="speculative-type-confusion"></a>Typ rozważana pomyłek
+## <a name="speculative-type-confusion"></a>Typ rozważana pomyłek
 
-Ta kategoria kodowania wzorce obejmuje misprediction gałąź warunkowa, który prowadzi do pomyłek rozważana typu. Wzorce programowania, w tej sekcji dotyczą zostanie przykładowy kod poniżej.
+Ta kategoria dotyczy wzorców, które mogą powodować pomylenia rozważana typ kodowania. Dzieje się tak, jeśli pamięć uzyskuje się dostęp przy użyciu nieprawidłowy typ na ścieżce architektury podczas wykonywania rozważana. Zarówno misprediction gałąź warunkowa i obejścia rozważana magazynu potencjalnie może prowadzić do pomyłek rozważana typu. 
+
+Dla magazynu rozważana obejścia to może wystąpić w scenariuszach, w którym kompilatora ponownie używa lokalizacji stosu zmiennych wielu typów. Jest to spowodowane architektury magazynu zmiennej typu `A` mogą ominąć, dzięki czemu obciążenia typu `A` speculatively wykonać przed przypisaniem zmiennej. Jeśli zapisanych wcześniej zmiennej jest innego typu, to można utworzyć warunki pomyłek rozważana typu.
+
+Dla misprediction gałąź warunkowa poniższy fragment kodu będzie można używać do opisywania różnych warunkach, dające pomyłek rozważana typu, powoduje.
 
 ```cpp
 enum TypeName {
@@ -203,13 +211,71 @@ unsigned char ProcessType(CBaseType *obj)
 }
 ```
 
-#### <a name="speculative-type-confusion-leading-to-an-out-of-bounds-load"></a>Rozważana typu pomyłek, co może prowadzić do liczbach obciążenia
+### <a name="speculative-type-confusion-leading-to-an-out-of-bounds-load"></a>Rozważana typu pomyłek, co może prowadzić do liczbach obciążenia
 
-Ten wzorzec kodowania obejmuje przypadek, w którym pomyłek rozważana typu może spowodować zdalne lub dostępu do pola pomylić typu, gdzie wartość załadować źródła adres kolejnych obciążenia. Jest to podobne do wzorca liczbach kodowania tablicy, ale jest on dyskowe widoczne za pośrednictwem zamiast kodowania sekwencji, jak pokazano powyżej. W tym przykładzie zaatakowanego kontekstu może spowodować ofiara Kontekst wykonywania `ProcessType` wiele razy przy użyciu typu obiektu `CType1` (`type` pole jest równa `Type1`). Ma to wpływu szkolenia gałąź warunkowa w pierwszym `if` instrukcji do prognozowania nie podjęte. Kontekst zaatakowanego następnie może spowodować ofiara Kontekst wykonywania `ProcessType` z obiektem typu `CType2`. Może to spowodować pomyłek rozważana typu Jeśli warunkowe gałęzi w pierwszym `if` instrukcji źle przewidzianych i wykonuje treści `if` instrukcji, w związku z tym rzutowanie obiektu typu `CType2` do `CType1`. Ponieważ `CType2` jest mniejszy niż `CType1`, dostęp do pamięci, aby `CType1::field2` spowodować rozważana liczbach załaduje danych, które mogą być tajny. Ta wartość jest następnie używana w przypadku obciążenia z `shard_buffer` której można utworzyć zauważalne efekty uboczne, podobnie jak w przypadku tablicy liczbach przykład opisanych powyżej.
+Ten wzorzec kodowania obejmuje przypadek, w którym pomyłek rozważana typu może spowodować zdalne lub dostępu do pola pomylić typu, gdzie wartość załadować źródła adres kolejnych obciążenia. Jest to podobne do wzorca liczbach kodowania tablicy, ale jest on dyskowe widoczne za pośrednictwem zamiast kodowania sekwencji, jak pokazano powyżej. W tym przykładzie zaatakowanego kontekstu może spowodować ofiara Kontekst wykonywania `ProcessType` wiele razy przy użyciu typu obiektu `CType1` (`type` pole jest równa `Type1`). Ma to wpływu szkolenia gałąź warunkowa w pierwszym `if` instrukcji do prognozowania nie podjęte. Kontekst zaatakowanego następnie może spowodować ofiara Kontekst wykonywania `ProcessType` z obiektem typu `CType2`. Może to spowodować pomyłek rozważana typu Jeśli warunkowe gałęzi w pierwszym `if` instrukcji źle przewidzianych i wykonuje treści `if` instrukcji, w związku z tym rzutowanie obiektu typu `CType2` do `CType1`. Ponieważ `CType2` jest mniejszy niż `CType1`, dostęp do pamięci, aby `CType1::field2` spowodować rozważana liczbach załaduje danych, które mogą być tajny. Ta wartość jest następnie używana w przypadku obciążenia z `shared_buffer` której można utworzyć zauważalne efekty uboczne, podobnie jak w przypadku tablicy liczbach przykład opisanych powyżej.
 
-#### <a name="speculative-type-confusion-leading-to-an-indirect-branch"></a>Typ rozważana pomyłek prowadzące do pośredniego gałęzi
+### <a name="speculative-type-confusion-leading-to-an-indirect-branch"></a>Typ rozważana pomyłek prowadzące do pośredniego gałęzi
 
-Ta wzorce programowania obejmuje przypadek, w którym pomyłek rozważana typu może spowodować niebezpieczne gałęzi pośrednie podczas wykonywania rozważana. W tym przykładzie zaatakowanego kontekstu może spowodować ofiara Kontekst wykonywania `ProcessType` wiele razy przy użyciu typu obiektu `CType2` (`type` pole jest równa `Type2`). Ma to wpływu szkolenia gałąź warunkowa w pierwszym `if` instrukcji podejmowanych i `else if` instrukcji nie można zwrócić. Kontekst zaatakowanego następnie może spowodować ofiara Kontekst wykonywania `ProcessType` z obiektem typu `CType1`. Może to spowodować pomyłek rozważana typu Jeśli warunkowe gałęzi w pierwszym `if` prognozuje instrukcji podjęte i `else if` instrukcji prognozuje nie podejmowanych w związku z tym wykonywania treści `else if` i rzutowanie obiektu typu `CType1` do `CType2`. Ponieważ `CType2::dispatch_routine` nakłada się na pola `char` tablicy `CType1::field1`, może to spowodować rozważana gałęzi pośrednich do obiektu docelowego niezamierzone gałęzi. Kontekst zaatakowanego można sterować wartości bajtu `CType1::field1` tablicy, mogą one do sterowania adres docelowy oddziału.
+Ten wzorzec kodowania obejmuje przypadek, w którym pomyłek rozważana typu może spowodować niebezpieczne gałęzi pośrednie podczas wykonywania rozważana. W tym przykładzie zaatakowanego kontekstu może spowodować ofiara Kontekst wykonywania `ProcessType` wiele razy przy użyciu typu obiektu `CType2` (`type` pole jest równa `Type2`). Ma to wpływu szkolenia gałąź warunkowa w pierwszym `if` instrukcji podejmowanych i `else if` instrukcji nie można zwrócić. Kontekst zaatakowanego następnie może spowodować ofiara Kontekst wykonywania `ProcessType` z obiektem typu `CType1`. Może to spowodować pomyłek rozważana typu Jeśli warunkowe gałęzi w pierwszym `if` prognozuje instrukcji podjęte i `else if` instrukcji prognozuje nie podejmowanych w związku z tym wykonywania treści `else if` i rzutowanie obiektu typu `CType1` do `CType2`. Ponieważ `CType2::dispatch_routine` nakłada się na pola `char` tablicy `CType1::field1`, może to spowodować rozważana gałęzi pośrednich do obiektu docelowego niezamierzone gałęzi. Kontekst zaatakowanego można sterować wartości bajtu `CType1::field1` tablicy, mogą one do sterowania adres docelowy oddziału.
+
+## <a name="speculative-uninitialized-use"></a>Użyj niezainicjowanego rozważana
+
+Ta kategoria kodowania wzorce obejmuje scenariusze, gdzie rozważana wykonanie może niezainicjowanej pamięci i użyć go do źródła danych obciążenia kolejnych lub pośredniego gałęzi. Dla tych wzorców kodowania jako niebezpieczny osoba atakująca musi mieć możliwość kontrolowania lub uzyskać wiarygodny wpływ zawartości pamięci, która jest używana bez inicjowany przez kontekst jest używany w.
+
+### <a name="speculative-uninitialized-use-leading-to-an-out-of-bounds-load"></a>Rozważana Użyj niezainicjowanego prowadzące do liczbach obciążenia
+
+Rozważana Użyj niezainicjowanego może prowadzić do liczbach obciążenia przy użyciu wartości kontrolowane przez osobę atakującą. W przykładzie poniżej wartości `index` przypisano `trusted_index` we wszystkich ścieżkach architektury i `trusted_index` muszą być mniejsze niż lub równe `buffer_size`. Jednak w zależności od kodu utworzonego przez kompilator, jest obejście rozważana magazynu może wystąpić umożliwiający obciążenia z `buffer[index]` i zależne wyrażenia do wykonania przed przypisanie do `index`. W takim przypadku niezainicjowaną wartość `index` będzie służyć jako przesunięcie do `buffer` który może umożliwić atakującemu odczytać poufnych informacji o liczbach i przekazuje to za pośrednictwem kanału po stronie za pośrednictwem ładowania zależnego `shared_buffer` .
+
+```cpp
+// A pointer to a shared memory region of size 1MB (256 * 4096)
+unsigned char *shared_buffer;
+
+void InitializeIndex(unsigned int trusted_index, unsigned int *index) {
+    *index = trusted_index;
+}
+
+unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned int trusted_index) {
+    unsigned int index;
+
+    InitializeIndex(trusted_index, &index); // not inlined
+
+    // SPECULATION BARRIER
+    unsigned char value = buffer[index];
+    return shared_buffer[value * 4096];
+}
+```
+
+### <a name="speculative-uninitialized-use-leading-to-an-indirect-branch"></a>Rozważana Użyj niezainicjowanego prowadzące do pośredniego gałęzi
+
+Rozważana Użyj niezainicjowanego potencjalnie może doprowadzić do pośredniego gałęzi, której cel rozgałęzienia jest kontrolowany przez osobę atakującą. W poniższym przykładzie `routine` jest przypisany do każdego `DefaultMessageRoutine1` lub `DefaultMessageRoutine` w zależności od wartości `mode`. W ścieżce architektury spowoduje `routine` zawsze zainicjowany przed pośrednie gałęzi. Jednak w zależności od kodu utworzonego przez kompilator, obejścia rozważana magazynu może wystąpić umożliwiający pośrednie gałęzi za pośrednictwem `routine` speculatively wykonywanej wcześniejsze przypisanie do `routine`. W takim przypadku osoba atakująca może istnieć możliwość speculatively wykonać z dowolnego adresu, zakładając, że osoba atakująca może mieć wpływ lub kontrolowanych niezainicjowaną wartość `routine`.
+
+```cpp
+#define MAX_MESSAGE_ID 16
+
+typedef void (*MESSAGE_ROUTINE)(unsigned char *buffer, unsigned int buffer_size);
+
+const MESSAGE_ROUTINE DispatchTable[MAX_MESSAGE_ID];
+extern unsigned int mode;
+
+void InitializeRoutine(MESSAGE_ROUTINE *routine) {
+    if (mode == 1) {
+        *routine = &DefaultMessageRoutine1;
+    }
+    else {
+        *routine = &DefaultMessageRoutine;
+    }
+}
+
+void DispatchMessage(unsigned int untrusted_message_id, unsigned char *buffer, unsigned int buffer_size) {
+    MESSAGE_ROUTINE routine;
+
+    InitializeRoutine(&routine); // not inlined
+
+    // SPECULATION BARRIER
+    routine(buffer, buffer_size);
+}
+```
 
 ## <a name="mitigation-options"></a>Środki zaradcze opcje
 
@@ -219,12 +285,11 @@ Luki kanału po stronie rozważana wykonywania można zminimalizować przez wpro
 
 A *bariery spekulacji* mogą być ręcznie wstawiane przez dewelopera, aby zapobiec wykonaniu rozważana z przejściem na ścieżce architektury. Na przykład deweloper można wstawić barierę spekulacji przed niebezpiecznych wzorzec kodowania w treści bloku warunkowego, albo na początku bloku (po gałąź warunkowa) lub przed pierwszym obciążenia, które potencjalnie. Uniemożliwi to misprediction gałąź warunkowa, wykonywanie niebezpieczny kod na ścieżce architektury przez wykonywania serializacji. Sekwencja bariery spekulacji różni się architektury zgodnie z opisem w poniższej tabeli:
 
-|Architektura|Bariera spekulacji|
-|----------------|----------------|
-|x86/x64|_mm_lfence()|
-|ARM|Nie jest obecnie dostępna|
-|ARM64|Nie jest obecnie dostępna|
-
+|Architektura|Bariera spekulacji wewnętrzne dla CVE-2017-5753|Bariera spekulacji wewnętrzne dla CVE-2018-3639|
+|----------------|----------------|----------------|
+|x86/x64|_mm_lfence()|_mm_lfence()|
+|ARM|Nie jest obecnie dostępna|__dsb(0)|
+|ARM64|Nie jest obecnie dostępna|__dsb(0)|
 
 Na przykład, można zminimalizować następującego wzorca kodu za pomocą `_mm_lfence` wewnętrznych, jak pokazano poniżej.
 
@@ -245,12 +310,30 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 Kompilator Visual C++ w programie Visual Studio 2017 r (począwszy od wersji 15.5.5) obejmuje obsługę `/Qspectre` przełącznika, który automatycznie wstawia barierę spekulacji dla ograniczony zestaw wzorców kodowania potencjalnie narażone związane z 5753-CVE-2017 r. W dokumentacji [/Qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) flagi zawiera więcej informacji na jego skutków i użycia. Należy zauważyć, że ta flaga nie obejmuje wszystkich wzorców potencjalnie narażone kodowania i sposób deweloperzy nie polegać na niej jako kompleksowe ograniczenie dla tej klasy luk w zabezpieczeniach.
 
-### <a name="removing-sensitive-information-from-memory"></a>Usuwanie poufnych danych z pamięci
+## <a name="masking-array-indices"></a>Indeksy tablicy maskowania
+
+W przypadkach, gdy rozważana liczbach obciążenia może wystąpić, indeks tablicy można zdecydowanie ograniczone w ścieżce architektury i architektury przez dodanie logiki można jawnie powiązać indeksu tablicy. Na przykład jeśli rozmiar, który jest wyrównywany do potęgą liczby dwa można przydzielić tablicy, następnie maska proste mogą zostać wprowadzone. Jest to zilustrowane w poniższym przykładzie których zakłada się, że `buffer_size` jest wyrównany do potęgą liczby dwa. Gwarantuje to, że `untrusted_index` jest zawsze mniej niż `buffer_size`nawet wtedy, gdy występuje misprediction gałąź warunkowa i `untrusted_index` został przekazany za pomocą wartość większa niż lub równa `buffer_size`.
+
+Należy zauważyć, że maskowania indeksu wykonane w tym miejscu może być obejścia rozważana magazynu stosownie do kodu, który jest generowany przez kompilator.
+
+```cpp
+// A pointer to a shared memory region of size 1MB (256 * 4096)
+unsigned char *shared_buffer;
+
+unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned int untrusted_index) {
+    if (untrusted_index < buffer_size) {
+        untrusted_index &= (buffer_size - 1);
+        unsigned char value = buffer[untrusted_index];
+        return shared_buffer[value * 4096];
+    }
+}
+```
+
+## <a name="removing-sensitive-information-from-memory"></a>Usuwanie poufnych danych z pamięci
 
 Innej metody, która może służyć do ograniczenia luk kanału po stronie rozważana wykonywania jest usunięcie poufnych informacji z pamięci. Deweloperzy oprogramowania można wyszukać możliwości Refaktoryzuj ich aplikacji w taki sposób, że podczas wykonywania rozważana informacje poufne jest niedostępny. Można to zrobić przez refaktoryzacji projekt aplikacji do izolowania poufne informacje w osobnych procesach. Na przykład aplikacja przeglądarki sieci web mogą próbować izolować dane skojarzone z każdego miejsca pochodzenia sieci web w osobnych procesach, co uniemożliwia jeden proces mogli uzyskiwać dostęp do wykonywania rozważana między źródłami danych.
 
 ## <a name="see-also"></a>Zobacz też
 
 [Wskazówki w celu ograniczenia wykonywania rozważana kanału po stronie luk w zabezpieczeniach](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002)
-
-[Zmniejszenia rozważana wykonywania po stronie kanał sprzętu luk w zabezpieczeniach](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)
+[zmniejszenia rozważana wykonywania po stronie kanał sprzętu luk w zabezpieczeniach](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)

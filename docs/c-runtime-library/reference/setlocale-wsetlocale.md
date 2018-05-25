@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46f523ba11902f3eaa74fc649791313ee9388824
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 666cb9954569d4c5bd232f387d63e320af52818a
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="setlocale-wsetlocale"></a>setlocale, _wsetlocale
 
@@ -120,7 +120,7 @@ W momencie uruchamiania programu wykonywany jest odpowiednik następującej inst
 
 `setlocale( LC_ALL, "C" );`
 
-*Ustawień regionalnych* argument może zająć Nazwa ustawień regionalnych, ciąg języka ciąg języka i kod kraju/regionu, stronę kodową lub ciąg języka, kod kraju/regionu i strony kodowej. Zestaw dostępnych nazw ustawień regionalnych, języków, kodów krajów/regionów i stron kodowych zawiera wszystkie te opcje, które są obsługiwane przez API Windows NLS, z wyjątkiem stron kodowych, które wymagają więcej niż dwóch bajtów na znak, takich jak UTF-7 lub UTF-8. Jeśli podasz strony kodowej, UTF-7 lub UTF-8, **setlocale** zakończy się niepowodzeniem, zwracając wartość NULL. Zestaw nazw ustawień regionalnych obsługiwane przez **setlocale** opisanym w [nazwy lokalne, języki i ciągi Kraj/Region](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Ciągi kraj/region i język obsługiwany przez zestaw **setlocale** są wymienione w [ciągi języka](../../c-runtime-library/language-strings.md) i [ciągi Kraj/Region](../../c-runtime-library/country-region-strings.md). Firma Microsoft zaleca formę nazwy ustawień regionalnych ze względu na wydajność i łatwość konserwacji ciągów ustawień regionalnych, osadzonych w kodzie lub szeregowanych do pamięci. Zmiana ciągów nazw ustawień regionalnych przez aktualizację systemu operacyjnego jest mniej prawdopodobna niż zmiana formy nazwy języka i kraju/regionu.
+*Ustawień regionalnych* argument może zająć Nazwa ustawień regionalnych, ciąg języka ciąg języka i kod kraju/regionu, stronę kodową lub ciąg języka, kod kraju/regionu i strony kodowej. Zestaw dostępnych nazw ustawień regionalnych, języków, kodów krajów/regionów i stron kodowych zawiera wszystkie te opcje, które są obsługiwane przez API Windows NLS, z wyjątkiem stron kodowych, które wymagają więcej niż dwóch bajtów na znak, takich jak UTF-7 lub UTF-8. Jeśli podasz strony kodowej, UTF-7 lub UTF-8, **setlocale** zakończy się niepowodzeniem, zwracając **NULL**. Zestaw nazw ustawień regionalnych obsługiwane przez **setlocale** opisanym w [nazwy lokalne, języki i ciągi Kraj/Region](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). Ciągi kraj/region i język obsługiwany przez zestaw **setlocale** są wymienione w [ciągi języka](../../c-runtime-library/language-strings.md) i [ciągi Kraj/Region](../../c-runtime-library/country-region-strings.md). Firma Microsoft zaleca formę nazwy ustawień regionalnych ze względu na wydajność i łatwość konserwacji ciągów ustawień regionalnych, osadzonych w kodzie lub szeregowanych do pamięci. Zmiana ciągów nazw ustawień regionalnych przez aktualizację systemu operacyjnego jest mniej prawdopodobna niż zmiana formy nazwy języka i kraju/regionu.
 
 Pustego wskaźnika, który jest przekazywany jako *ustawień regionalnych* argument nakazuje **setlocale** do badania zamiast można ustawić międzynarodowe środowiska. Jeśli *ustawień regionalnych* argument jest pusty wskaźnik, bieżących ustawień regionalnych programu nie zostanie zmieniona. Zamiast tego **setlocale** zwraca wskaźnik na ciąg, z którym skojarzony jest *kategorii* o bieżące ustawienia regionalne wątku. Jeśli *kategorii* argument jest **lc_all —**, funkcja zwraca ciąg, który wskazuje bieżące ustawienie każdej kategorii, oddzielając je średnikami. Na przykład, sekwencja wywołań
 

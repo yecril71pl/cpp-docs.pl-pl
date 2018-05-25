@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e756ea23e32ffc9b164ccbe1a68b9fc987fe7b59
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 972d8e3f1798a7498173c3d8b0677bb57231b990
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wctomb-wctombl"></a>wctomb, _wctomb_l
 
@@ -72,7 +72,7 @@ Znaków dwubajtowych.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli **wctomb —** konwertuje znaków dwubajtowych do znaków wielobajtowych, zwraca liczbę bajtów (który nigdy nie jest większa niż **mb_cur_max —**) w znaków dwubajtowych. Jeśli *wchar* jest znakiem pustym znaków dwubajtowych (L '\0'), **wctomb —** zwraca wartość 1. Jeśli wskaźnika docelowej *mbchar* ma wartość NULL, **wctomb —** zwraca wartość 0. Jeśli konwersja nie jest możliwe w bieżących ustawień regionalnych, **wctomb —** zwraca wartość -1 i **errno** ustawiono **eilseq —**.
+Jeśli **wctomb —** konwertuje znaków dwubajtowych do znaków wielobajtowych, zwraca liczbę bajtów (który nigdy nie jest większa niż **mb_cur_max —**) w znaków dwubajtowych. Jeśli *wchar* jest znakiem pustym znaków dwubajtowych (L '\0'), **wctomb —** zwraca wartość 1. Jeśli wskaźnika docelowej *mbchar* jest **NULL**, **wctomb —** zwraca wartość 0. Jeśli konwersja nie jest możliwe w bieżących ustawień regionalnych, **wctomb —** zwraca wartość -1 i **errno** ustawiono **eilseq —**.
 
 ## <a name="remarks"></a>Uwagi
 

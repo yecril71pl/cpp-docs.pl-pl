@@ -48,11 +48,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 098e5760718e4e2d2a9063700b09d0381e76df1f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 48d0c3107bf2edc09017ea138e4c8024ce328dd8
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="control87-controlfp-control872"></a>_control87, _controlfp, __control87_2
 
@@ -128,7 +128,7 @@ _controlfp(_DN_FLUSH, _MCW_DN);
 // and x64 processors with SSE2 support. Ignored on other x86 platforms.
 ```
 
-Na platformach ARM **_control87 —** i **_controlfp —** funkcje odnoszą się do rejestru FPSCR. Na x64 architektury, tylko SSE2 kontroli słowo, które są przechowywane w MXCSR dotyczy rejestru. Na x86 platform, **_control87 —** i **_controlfp —** wpływają na słowa formantu x87 i SSE2, jeśli jest obecny. Funkcja **__control87_2 —** umożliwia zarówno x87 i SSE2 liczb zmiennoprzecinkowych jednostki, aby można było nim sterować razem lub oddzielnie. Jeśli chcesz mieć wpływ na obu jednostki przekazywanie adresów dwie liczb całkowitych na **x86_cw** i **sse2_cw**. Jeśli chcesz mieć wpływ na jedną jednostkę, podaj adres dla tego parametru, ale Podaj 0 (NULL) dla innych. Jeśli 0 jest przekazywane do jednego z tych parametrów, funkcja nie ma wpływu na tej jednostce zmiennoprzecinkowych. Ta funkcja może być przydatne w sytuacjach, w których jednostki zmiennoprzecinkowe używa x87 kodu i część innego kodu używa jednostki zmiennoprzecinkowe SSE2. Jeśli używasz **__control87_2 —** w jednej części programu i ustawić różne wartości dla słowa formantu liczb zmiennoprzecinkowych, a następnie użyj **_control87 —** lub **_controlfp —** do dalszego następnie manipulowania słowa formantu **_control87 —** i **_controlfp —** może być niemożliwe do zwrócenia wyraz jeden formant do reprezentowania stan zarówno zmiennoprzecinkowe jednostki. W takim przypadku ustawić te funkcje **EM_AMBIGUOUS** flagi wartości zwrócona liczba całkowita wskazująca, czy występuje niespójność między wyrazami dwóch formantu. To ostrzeżenie, że słowa formantu zwrócony może nie mieć stan oba słowa formantu liczb zmiennoprzecinkowych dokładnie.
+Na platformach ARM **_control87 —** i **_controlfp —** funkcje odnoszą się do rejestru FPSCR. Na x64 architektury, tylko SSE2 kontroli słowo, które są przechowywane w MXCSR dotyczy rejestru. Na x86 platform, **_control87 —** i **_controlfp —** wpływają na słowa formantu x87 i SSE2, jeśli jest obecny. Funkcja **__control87_2 —** umożliwia zarówno x87 i SSE2 liczb zmiennoprzecinkowych jednostki, aby można było nim sterować razem lub oddzielnie. Jeśli chcesz mieć wpływ na obu jednostki przekazywanie adresów dwie liczb całkowitych na **x86_cw** i **sse2_cw**. Jeśli chcesz mieć wpływ na jedną jednostkę, podaj adres dla tego parametru, ale należy przekazać w 0 (**NULL**) dla siebie. Jeśli 0 jest przekazywane do jednego z tych parametrów, funkcja nie ma wpływu na tej jednostce zmiennoprzecinkowych. Ta funkcja może być przydatne w sytuacjach, w których jednostki zmiennoprzecinkowe używa x87 kodu i część innego kodu używa jednostki zmiennoprzecinkowe SSE2. Jeśli używasz **__control87_2 —** w jednej części programu i ustawić różne wartości dla słowa formantu liczb zmiennoprzecinkowych, a następnie użyj **_control87 —** lub **_controlfp —** do dalszego następnie manipulowania słowa formantu **_control87 —** i **_controlfp —** może być niemożliwe do zwrócenia wyraz jeden formant do reprezentowania stan zarówno zmiennoprzecinkowe jednostki. W takim przypadku ustawić te funkcje **EM_AMBIGUOUS** flagi wartości zwrócona liczba całkowita wskazująca, czy występuje niespójność między wyrazami dwóch formantu. To ostrzeżenie, że słowa formantu zwrócony może nie mieć stan oba słowa formantu liczb zmiennoprzecinkowych dokładnie.
 
 Na ARM i x64 architektury, zmiana trybu infinity lub zmiennoprzecinkowe dokładność nie jest obsługiwane. Jeśli maska kontroli dokładności jest używany na x64 platformy, funkcja podnosi potwierdzenia i program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md).
 

@@ -16,11 +16,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f184f0459e7ec2251d6ff34e2ee76559fe0dea42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: faaf53d08512559b86c95148bc93e7b3367d2b01
+ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="compiler-error-c3533"></a>C3533 błąd kompilatora
 'type': parametr nie może mieć typu zawierającego "auto"  
@@ -32,21 +32,21 @@ ms.lasthandoff: 05/04/2018
 1.  Usuń `auto` — słowo kluczowe z deklaracji parametru.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład zwraca C3535, ponieważ deklaruje on parametr funkcji z `auto` — słowo kluczowe i jest skompilowana przy użyciu **/Zc: Auto**.  
+ Poniższy przykład zwraca C3533, ponieważ deklaruje on parametr funkcji z `auto` — słowo kluczowe i jest skompilowana przy użyciu **/Zc: Auto**.  
   
 ```  
 // C3533a.cpp  
 // Compile with /Zc:auto  
-void f(auto j){} // C3533  
+void f(auto j) {} // C3533  
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład zwraca C3535, ponieważ deklaruje on parametr szablonu z `auto` — słowo kluczowe i jest skompilowana przy użyciu **/Zc: Auto**.  
+ Poniższy przykład zwraca C3533 w tryb C ++ 14, ponieważ deklaruje on parametr szablonu z `auto` — słowo kluczowe i jest skompilowana przy użyciu **/Zc: Auto**. (W języku C ++ 17, jest to prawidłowej definicji szablonu klasy z parametrem jednego szablonu bez typu, którego typ jest ustalane).
   
 ```  
 // C3533b.cpp  
 // Compile with /Zc:auto  
-template<auto T> class C{}; // C3533  
+template<auto T> class C {}; // C3533  
 ```  
   
 ## <a name="see-also"></a>Zobacz też  

@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54b82eae4826bd6a359f2cf0d4e74bccd32f81b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: be098cb1fe53e1345f0c4f40212657f4bfd97f4f
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="mbsbtype-mbsbtypel"></a>_mbsbtype, _mbsbtype_l
 
@@ -85,7 +85,7 @@ Ustawienia regionalne do użycia.
 |**_MBC_SINGLE** (0)|Znaki jednobajtowe. Na przykład w strona kodowa 932 **_mbsbtype —** zwraca wartość 0, jeśli w określonym bajcie znajduje się w zakresie wartości 0x20-0x7E lub 0xA1 - 0xDF.|
 |**_MBC_LEAD** (1)|Prowadzić bajtów znaków wielobajtowych. Na przykład w strona kodowa 932 **_mbsbtype —** zwraca wartość 1, jeśli w określonym bajcie znajduje się w zakresie 0x81-0x9F lub wartość 0xE0 - 0xFC.|
 |**_MBC_TRAIL** (2)|Końcowy bajtów znaków wielobajtowych. Na przykład w strona kodowa 932 **_mbsbtype —** zwraca 2, jeśli w określonym bajcie znajduje się w zakresie 0x40-0x7E lub 0x80 - 0xFC.|
-|**_MBC_ILLEGAL** (-1)|**Wartość NULL** ciąg, nieprawidłowy znak lub **NULL** bajtów znaleziono przed bajtów przy przesunięciu *liczba* w *mbstr*.|
+|**_MBC_ILLEGAL** (-1)|**Wartość NULL** ciągu, nieprawidłowy znak lub null bajtów znaleziono przed bajtów przy przesunięciu *liczba* w *mbstr*.|
 
 ## <a name="remarks"></a>Uwagi
 

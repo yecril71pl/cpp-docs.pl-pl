@@ -71,7 +71,7 @@ Ten kreator umożliwia dodawanie metody do interfejsu. W zależności od typu pr
   
 |Atrybut parametru|Opis|Dozwolone kombinacje|  
 |-------------------------|-----------------|--------------------------|  
-|**In**|Wskazuje, że parametr jest przekazywany z procedury wywołującej do procedury wywoływanej.|**w** tylko<br /><br /> **w** i **out**|  
+|**W**|Wskazuje, że parametr jest przekazywany z procedury wywołującej do procedury wywoływanej.|**w** tylko<br /><br /> **w** i **out**|  
 |**limit**|Wskazuje, że parametr wskaźnika jest zwracana z procedury wywoływanej do procedury wywołującej (z serwera do klienta).|**limit** tylko<br /><br /> **w** i **out**<br /><br /> **limit** i **retval**|  
 |**retval**|Wskazuje, że parametr otrzymuje wartość zwrotną z elementu członkowskiego.|**retval** i out|  
   

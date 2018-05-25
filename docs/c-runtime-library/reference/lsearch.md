@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cfcb5b3182b4d8a30c6bee65bc6efd3199fd3c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2aaf6626b2f7005181640f77026b6924c39cd325
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="lsearch"></a>_lsearch
 
@@ -87,7 +87,7 @@ Jeśli klucz zostanie znaleziony, **_lsearch —** zwraca wskaźnik do elementu 
 
 *Porównania* argument jest wskaźnik do procedury dostarczone przez użytkownika, który porównuje dwa elementy tablicy i zwraca wartość określającą ich relacji. **_lsearch —** wywołania *porównania* rutynowych jeden lub więcej razy podczas wyszukiwania przekazywanie wskaźników do dwóch elementów tablicy przy każdym wywołaniu. *Porównaj* należy porównać elementy i zwracać różną od zera (to znaczy elementy są inne) lub wartość 0 (tzn. elementy są identyczne).
 
-Ta funkcja weryfikuje jego parametrów. Jeśli *porównania*, *klucza* lub *numer* jest **NULL**, lub jeśli *podstawowej* ma wartość NULL i **numer*  jest różna od zera, lub jeśli *szerokość* jest mniejsza od zera, zostanie wywołany program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i funkcja zwraca **NULL**.
+Ta funkcja weryfikuje jego parametrów. Jeśli *porównania*, *klucza* lub *numer* jest **NULL**, lub jeśli *podstawowej* jest **NULL**i *numer* jest różna od zera, lub jeśli *szerokość* jest mniejsza od zera, zostanie wywołany program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i funkcja zwraca **NULL**.
 
 ## <a name="requirements"></a>Wymagania
 

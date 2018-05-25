@@ -53,11 +53,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36e7a2c6025ebf5576bc38117575ebe453adb419
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d7ea6a480ad5600a69cae31033c4abc28ed78e5e
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strcoll-wcscoll-mbscoll-strcolll-wcscolll-mbscolll"></a>strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 
@@ -116,7 +116,7 @@ Każda z tych funkcji zwraca wartość wskazującą relacji z *ciąg1* do *ciąg
 |0|*ciąg1* taki sam jak *ciąg2*|
 |> 0|*ciąg1* większe *ciąg2*|
 
-Każdy z tych funkcji zwraca **_NLSCMPERROR** w przypadku wystąpienia błędu. Aby użyć **_NLSCMPERROR**, obejmują typu STRING. H lub MBSTRING. H. **wcscoll —** może zakończyć się niepowodzeniem, jeśli dowolny *ciąg1* lub *ciąg2* ma wartość NULL lub zawiera kody znaków dwubajtowych spoza domeny sekwencję sortowania. Po wystąpieniu błędu **wcscoll —** mogą ustawiać **errno** do **einval —**. Aby sprawdzić, czy błąd w wywołaniu **wcscoll —**ustaw **errno** 0, a następnie sprawdź **errno** po wywołaniu **wcscoll —**.
+Każdy z tych funkcji zwraca **_NLSCMPERROR** w przypadku wystąpienia błędu. Aby użyć **_NLSCMPERROR**, obejmują typu STRING. H lub MBSTRING. H. **wcscoll —** może zakończyć się niepowodzeniem, jeśli dowolny *ciąg1* lub *ciąg2* jest **NULL** lub zawiera kody znaków dwubajtowych spoza domeny sekwencję sortowania. Po wystąpieniu błędu **wcscoll —** mogą ustawiać **errno** do **einval —**. Aby sprawdzić, czy błąd w wywołaniu **wcscoll —** ustaw **errno** 0, a następnie sprawdź **errno** po wywołaniu **wcscoll —**.
 
 ## <a name="remarks"></a>Uwagi
 

@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a18b9ffe4fac351d73e0a78a6e25a71625a47b9e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7f9814bb783c763eef6d94e9d1372316a2393a6
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtimes-wstrtimes"></a>_strtime_s, _wstrtime_s
 
@@ -96,7 +96,7 @@ Jeśli wystąpi błąd, program obsługi nieprawidłowych parametrów zostanie w
 
 ## <a name="security-issues"></a>Problemy z zabezpieczeniami
 
-Przekazując wartość inną niż NULL jest nieprawidłowa dla buforu będzie spowodować naruszenie zasad dostępu, jeśli *numberOfElements* parametru jest większa niż 9.
+Przekazywanie nieprawidłowe z systemem innym niż**NULL** wartość dla buforu spowoduje naruszenie zasad dostępu Jeśli *numberOfElements* parametru jest większa niż 9.
 
 Przekazywanie wartości dla *numberOfElements* jest większy niż rzeczywisty rozmiar buforu spowoduje przepełnienie buforu.
 

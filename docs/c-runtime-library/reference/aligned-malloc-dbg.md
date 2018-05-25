@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894d227d329a426a2008044d47d126d063db4a15
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 622f48138404425723c226dde52c8621580d0131
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 
@@ -62,10 +62,10 @@ Rozmiar żądanej alokacji pamięci.
 Wartość wyrównania, która musi być całkowitą potęgą liczby 2.
 
 *Nazwa pliku*<br/>
-Wskaźnik na nazwę pliku źródłowego, który zażądał operacji alokacji lub NULL.
+Wskaźnik do nazwy pliku źródłowego, który żądanej operacji alokacji lub **NULL**.
 
 *numer wiersza*<br/>
-Numer wiersza w pliku źródłowym, gdzie zażądano operacji alokacji lub NULL.
+Numer w pliku źródłowym, której zażądano operacji alokacji wiersza lub **NULL**.
 
 ## <a name="return-value"></a>Wartość zwracana
 

@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee3e30e5bde5a3bed67d975c96b00568306f926
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 45331186cca5aab3c7971ba404d7b6da98139130
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
 
@@ -77,7 +77,7 @@ Wskaźnik do numeru wiersza w pliku źródłowym lub **NULL**.
 
 ## <a name="remarks"></a>Uwagi
 
-**_Crtismemoryblock —** funkcja weryfikuje, czy blok pamięci określony znajduje się w lokalnej pamięci oraz ma identyfikator typu bloku prawidłowe. Tej funkcji można również uzyskać numer zamówienia obiekt alokacji i numer Nazwa/wiersza pliku źródłowego których alokacji blok pamięci był pierwotnie żądany. Przekazywanie wartości innej niż NULL dla *requestNumber*, *filename*, lub *numer wiersza* powoduje, że parametry **_crtismemoryblock —** można ustawić Parametry te wartości w bloku pamięci debugowania nagłówka, w przypadku odnalezienia bloku w lokalnej sterty. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołań **_crtismemoryblock —** są usuwane podczas przetwarzania wstępnego.
+**_Crtismemoryblock —** funkcja weryfikuje, czy blok pamięci określony znajduje się w lokalnej pamięci oraz ma identyfikator typu bloku prawidłowe. Tej funkcji można również uzyskać numer zamówienia obiekt alokacji i numer Nazwa/wiersza pliku źródłowego których alokacji blok pamięci był pierwotnie żądany. Przekazywanie z systemem innym niż**NULL** wartości *requestNumber*, *filename*, lub *numer wiersza* powoduje, że parametry **_ Crtismemoryblock —** można ustawić parametry te wartości w nagłówku debugowania blok pamięci, w przypadku odnalezienia bloku w lokalnej sterty. Gdy [_DEBUG](../../c-runtime-library/debug.md) nie jest zdefiniowany, wywołań **_crtismemoryblock —** są usuwane podczas przetwarzania wstępnego.
 
 Jeśli **_crtismemoryblock —** nie powiedzie się, zwraca **FALSE** i parametry wyjściowe są inicjowane wartości domyślne: *requestNumber* i **numer wiersza**  są ustawione na 0 i *filename* ustawiono **NULL**.
 

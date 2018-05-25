@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb0a44414b01d0105f911732bc3dd2662a278158
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bdb9a1f13fcb387aeddf18cc0f734101463bd3eb
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s, _wctomb_s_l
 
@@ -102,7 +102,7 @@ Jeśli dowolne z powyższych warunków błąd wystąpi, program obsługi niepraw
 
 **Wctomb_s —** funkcji konwertuje jego *wchar* argument odpowiednich znaków wielobajtowych i zapisuje wynik w *mbchar*. Funkcję można wywołać z dowolnego punktu w programach.
 
-Jeśli **wctomb_s —** konwertuje znaków dwubajtowych do znaków wielobajtowych, umieszcza liczba bajtów (który nigdy nie jest większa niż **mb_cur_max —**) w znaków dwubajtowych w całkowitą wskazywana przez *pRetValue*. Jeśli *wchar* jest znakiem pustym znaków dwubajtowych (L '\0'), **wctomb_s —** wypełnia *pRetValue* z 1. Jeśli wskaźnika docelowej *mbchar* ma wartość NULL, **wctomb_s —** umieszcza 0 *pRetValue*. Jeśli konwersja nie jest możliwe w bieżących ustawień regionalnych, **wctomb_s —** umieszcza -1 *pRetValue*.
+Jeśli **wctomb_s —** konwertuje znaków dwubajtowych do znaków wielobajtowych, umieszcza liczba bajtów (który nigdy nie jest większa niż **mb_cur_max —**) w znaków dwubajtowych w całkowitą wskazywana przez *pRetValue*. Jeśli *wchar* jest znakiem pustym znaków dwubajtowych (L '\0'), **wctomb_s —** wypełnia *pRetValue* z 1. Jeśli wskaźnika docelowej *mbchar* jest **NULL**, **wctomb_s —** umieszcza 0 *pRetValue*. Jeśli konwersja nie jest możliwe w bieżących ustawień regionalnych, **wctomb_s —** umieszcza -1 *pRetValue*.
 
 **wctomb_s —** używa bieżące ustawienia regionalne dla informacji zależnych od ustawień regionalnych. **_wctomb_s_l —** jest identyczny z tą różnicą, że używa ustawień regionalnych przekazano zamiast tego. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 

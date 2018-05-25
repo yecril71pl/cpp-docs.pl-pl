@@ -14,14 +14,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a89ec2cd0b360f498e52af7e49bd5c6571521e2c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d39011149de0b2fb81b70d58d768a06dc8a95355
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="parameter-validation"></a>Walidacja parametru
-Większość funkcji CRT z rozszerzonymi zabezpieczeniami i wielu istniejących funkcji sprawdza poprawność ich parametrów. Może to obejmować sprawdzania wskaźników NULL, sprawdzanie, czy można podzielić na prawidłowy zakres liczb całkowitych lub Sprawdzanie, czy wartości wyliczenia są prawidłowe. Program obsługi nieprawidłowych parametrów jest wykonywany, gdy znaleziono nieprawidłowy parametr.  
+Większość funkcji CRT z rozszerzonymi zabezpieczeniami i wielu istniejących funkcji sprawdza poprawność ich parametrów. Mogą one obejmować sprawdzanie wskaźniki **NULL**, sprawdzanie, czy można podzielić na prawidłowy zakres liczb całkowitych lub Sprawdzanie, czy wartości wyliczenia są prawidłowe. Program obsługi nieprawidłowych parametrów jest wykonywany, gdy znaleziono nieprawidłowy parametr.  
   
 ## <a name="invalid-parameter-handler-routine"></a>Nieprawidłowy parametr procedury obsługi  
  Funkcja biblioteki wykonawczej C wykrycie nieprawidłowy parametr go przechwytuje niektóre informacje o błędzie, a następnie wywołuje makra, który opakowuje funkcję wysyłania obsługi nieprawidłowy parametr, jeden z [_invalid_parameter](../c-runtime-library/reference/invalid-parameter-functions.md), [_invalid_parameter_noinfo](../c-runtime-library/reference/invalid-parameter-functions.md), lub [_invalid_parameter_noinfo_noreturn](../c-runtime-library/reference/invalid-parameter-functions.md). Wywołana funkcja wysyłania zależy od tego, czy kod jest odpowiednio kompilację debugowania, kompilację detalicznych lub błąd nie jest uważana za możliwe do odzyskania. 

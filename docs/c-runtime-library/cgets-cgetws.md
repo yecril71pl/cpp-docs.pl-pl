@@ -35,11 +35,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c915001716745422299241d3dad469707bf03dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 144e08278fb37e08d741ac8cb5a441c8df788b5b
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="cgets-cgetws"></a>_cgets, _cgetws
 Pobiera ciąg znaków z konsoli. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_cgets_s —, _cgetws_s —](../c-runtime-library/reference/cgets-s-cgetws-s.md).  
@@ -74,7 +74,7 @@ wchar_t *_cgetws(
  Lokalizacja magazynu danych.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `_cgets` i `_cgetws` zwraca wskaźnik do początku ciągu znaków na `buffer[2]`. Jeśli `buffer` jest `NULL`, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, zwracają `NULL` i ustaw `errno` do `EINVAL`.  
+ `_cgets` i `_cgetws` zwraca wskaźnik do początku ciągu znaków na `buffer[2]`. Jeśli `buffer` jest **NULL**, te funkcje Wywołaj program obsługi nieprawidłowych parametrów, zgodnie z opisem w [sprawdzanie poprawności parametru](../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, zwracają **NULL** i ustaw `errno` do `EINVAL`.  
   
 ## <a name="remarks"></a>Uwagi  
  Tych funkcji odczytu ciąg znaków z konsoli i przechowywane w lokalizacji wskazywanej przez ciąg, a jej długość `buffer`. `buffer` Parametr musi być wskaźnik do tablicy znaków. Pierwszy element tablicy, `buffer[0]`, musi zawierać maksymalną długość (w znakach) ciągu do odczytu. Tablica musi zawierać za mało elementów, aby pomieścić ciąg, znak końcowy null ('\0') i 2 bajty dodatkowe. Funkcja odczytuje znaków, aż do powrotu karetki-wiersza źródła kombinacja (CR LF) lub określoną liczbę znaków jest do odczytu. Ciąg jest przechowywana, zaczynając od `buffer[2]`. Jeśli funkcja CR LF, są przechowywane znak null ('\0'). Funkcja następnie przechowuje rzeczywista długość ciągu drugiego elementu tablicy `buffer[1]`.  
