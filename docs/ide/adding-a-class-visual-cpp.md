@@ -19,10 +19,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 14e16d8b5c15939adb792a96a828bafd07ba4041
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33333287"
 ---
 # <a name="adding-a-class-visual-c"></a>Dodawanie klasy (Visual C++)
 Aby dodać klasę w projekcie Visual C++ w **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt, kliknij przycisk **Dodaj**, a następnie kliknij przycisk **klasy**. Spowoduje to otwarcie [Dodaj klasę — okno dialogowe](../ide/add-class-dialog-box.md) okno dialogowe.  

@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02215cd585bf1644b5b01f779dd8ff46322c9181
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3668fb438c2a0aa7fa14cff97f498a9becc67b36
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705403"
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>IDE i narzędzia do programowania w języku Visual C++
 
@@ -28,7 +29,7 @@ Oprócz narzędzi udostępnionych w programie Visual Studio IDE MSVC ma kilka na
 
 ## <a name="creating-a-solution-and-projects"></a>Tworzenie rozwiązania i projekty
 
-A *projektu* jest zasadniczo zestaw plików kodu źródłowego i zasobów, takich jak obrazy lub pliki danych, które są wbudowane w pliku wykonywalnego. Visual Studio 2017 może obsługiwać żadnych system kompilacji lub narzędzia niestandardowej kompilacji, które mają być używane z pełną obsługę funkcji Intellisense, przeglądanie i debugowania:
+A *projektu* jest zasadniczo zestaw plików kodu źródłowego i zasobów, takich jak obrazy lub pliki danych, które są wbudowane w pliku wykonywalnego. Visual Studio 2017 może obsługiwać żadnych system kompilacji lub narzędzia niestandardowej kompilacji, które mają być używane z pełną obsługę funkcji IntelliSense, przeglądanie i debugowania:
 
 - MSBuild system natywnej kompilacji dla programu Visual Studio oraz jest często najlepszym rozwiązaniem dla aplikacji uniwersalnych platformy systemu Windows (UWP) lub starszej wersji aplikacji klasycznych systemu Windows, które za pomocą MFC lub ATL. Aby uzyskać więcej informacji na temat projektów C++ na podstawie MSBuild zobacz [tworzenie projektów i zarządzanie nimi na podstawie MSBuild](creating-and-managing-visual-cpp-projects.md).
 - CMake to system, który jest zintegrowany środowiska IDE programu Visual Studio, po zainstalowaniu tworzenia klasycznych aplikacji z C++ obciążenia kompilacji i platform. Aby uzyskać więcej informacji, zobacz [CMake projekty w programie Visual C++](cmake-tools-for-visual-cpp.md).
@@ -58,11 +59,11 @@ Po utworzeniu projektu, wszystkie pliki projektu są wyświetlane w **Eksplorato
 
 ### <a name="intellisense"></a>IntelliSense
 
-Edytor kodu obsługuje również kilka funkcji, które są ze sobą znane jako Intellisense. Możesz umieść kursor nad metody i niektóre podstawowe dokumentacji dla niego. Po wpisaniu nazwy zmiennej klasy i a. lub ->, zostanie wyświetlona lista elementów członkowskich wystąpienia tej klasy. Jeśli wpiszesz nazwę klasy, a następnie::, zostanie wyświetlona lista statycznych elementów członkowskich. Po ponownym uruchomieniu, wpisując nazwę klasy lub metody, edytora kodu oferuje sugestie do wykonania instrukcji. Aby uzyskać więcej informacji, zobacz [za pomocą funkcji IntelliSense](/visualstudio/ide/using-intellisense).
+Edytor kodu obsługuje również kilka funkcji, które są ze sobą znane jako IntelliSense. Możesz umieść kursor nad metody i niektóre podstawowe dokumentacji dla niego. Po wpisaniu nazwy zmiennej klasy i a. lub ->, zostanie wyświetlona lista elementów członkowskich wystąpienia tej klasy. Jeśli wpiszesz nazwę klasy, a następnie::, zostanie wyświetlona lista statycznych elementów członkowskich. Po ponownym uruchomieniu, wpisując nazwę klasy lub metody, edytora kodu oferuje sugestie do wykonania instrukcji. Aby uzyskać więcej informacji, zobacz [za pomocą funkcji IntelliSense](/visualstudio/ide/using-intellisense).
 
 ### <a name="code-snippets"></a>Fragmenty kodu
 
-Wstawki kodu Intellisense służy do generowania najczęściej używanych lub konstrukcje kodu złożonej z klawiszy skrótów. Aby uzyskać więcej informacji, zobacz [wstawki kodu](/visualstudio/ide/code-snippets).
+Wstawki kodu IntelliSense służy do generowania najczęściej używanych lub konstrukcje kodu złożonej z klawiszy skrótów. Aby uzyskać więcej informacji, zobacz [wstawki kodu](/visualstudio/ide/code-snippets).
 
 ## <a name="navigating-code"></a>Nawigowanie po kodzie
 

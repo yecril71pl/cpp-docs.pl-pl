@@ -16,10 +16,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 2b770bbacca06c6edfb3b9b4eda53fc7be8a7ae0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33331022"
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>Redystrybuowanie kontrolek ActiveX programu Visual C++
 Visual C++ 6.0 dostarcza formantów ActiveX, używanych w aplikacjach, które następnie ponownie rozesłać. Formanty znajdują się już w programie Visual C++. Na umów licencjonowania Visual C++ 6.0 można ponownie rozesłać tych kontrolek z aplikacji utworzonych w programie Visual C++.  

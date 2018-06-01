@@ -104,7 +104,6 @@
 #### [Listy inicjatorów](initializer-lists.md)
 #### [Notacja rzutowania i przedstawienie operacji safe_cast<>](cast-notation-and-introduction-of-safe-cast-angles.md)
 ## [Kod czysty i weryfikowalny (C++/CLI)](pure-and-verifiable-code-cpp-cli.md)
-### [Porównanie funkcji mieszanych, czystych i weryfikowalnych (C++/CLI)](mixed-pure-and-verifiable-feature-comparison-cpp-cli.md)
 ### [Instrukcje: tworzenie weryfikowalnych projektów C++ (C++/CLI)](how-to-create-verifiable-cpp-projects-cpp-cli.md)
 ### [Instrukcje: migracja do /clr:safe (C++/CLI)](how-to-migrate-to-clr-safe-cpp-cli.md)
 ### [Używanie zestawów weryfikowalnych z programem SQL Server (C++/CLI)](using-verifiable-assemblies-with-sql-server-cpp-cli.md)

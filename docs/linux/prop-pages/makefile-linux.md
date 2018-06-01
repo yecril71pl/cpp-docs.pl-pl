@@ -12,11 +12,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: c0e0422859bc4053ea1e8fff424ff79c3b22f8b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6fb23d2c7275788b05fe4450613770c268ca6c64
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705702"
 ---
 # <a name="makefile-project-properties-linux-c"></a>Właściwości projektu pliku reguł programu make (Linux C++)
 
@@ -92,7 +93,7 @@ Właściwość | Opis
 Wymuszone obejmuje | Określa pliki, które będą uwzględnione.
 Definicje preprocesora | Określa definicje preprocesora używane przez pliki źródłowe.
 Usuń definicje preprocesora | Określa, że co najmniej jeden anulowanie definicji preprocesora.     (/U[macro])
-Dodatkowe opcje | Określa dodatkowe przełączniki kompilatora używane przez funkcję Intellisense, podczas analizowania plików C++.
+Dodatkowe opcje | Określa dodatkowe przełączniki kompilatora używane przez funkcję IntelliSense, podczas analizowania plików C++.
 
 ### <a name="build"></a>Kompilacja
 

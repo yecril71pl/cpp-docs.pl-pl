@@ -16,33 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d645760a15a82f502c82f4c0d0310f7826e70e45
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 40668b8b2cc1a1f85b0ad4a7ef63d89956e922b3
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705208"
 ---
 # <a name="compiler-error-c3808"></a>C3808 błąd kompilatora
-'type': klasa z atrybutem ComImport nie może definiować elementu członkowskiego "członek", tylko abstrakcyjne lub dllimport funkcje są dozwolone  
-  
- Typ, który pochodzi od <xref:System.Runtime.InteropServices.ComImportAttribute> nie można zdefiniować `member`.  
-  
- **/CLR: pure** i **/CLR: Safe** — opcje kompilatora zostały uznane za przestarzałe w programie Visual Studio 2015.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C3808.  
-  
-```  
-// C3808.cpp  
-// compile with: /c /clr:pure user32.lib  
-using namespace System::Runtime::InteropServices;  
-  
-[System::Runtime::InteropServices::ComImportAttribute()]  
-ref struct S1 {  
-   int f() {}   // C3808  
-   virtual int g() abstract;   // OK  
-  
-   [DllImport("msvcrt.dll")]  
-   int printf(System::String ^, int i);   // OK  
-};  
+
+> "*typu*": klasa z atrybutem ComImport nie może definiować elementu członkowskiego "*elementu członkowskiego*" tylko jako abstract i funkcje dllimport są dozwolone
+
+## <a name="remarks"></a>Uwagi
+
+Typ, który pochodzi od <xref:System.Runtime.InteropServices.ComImportAttribute> nie można zdefiniować *elementu członkowskiego*.
+
+**/CLR: pure** i **/CLR: Safe** — opcje kompilatora są używane w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład generuje C3808.
+
+```cpp
+// C3808.cpp
+// compile with: /c /clr:pure user32.lib
+using namespace System::Runtime::InteropServices;
+
+[System::Runtime::InteropServices::ComImportAttribute()]
+ref struct S1 {
+   int f() {}   // C3808
+   virtual int g() abstract;   // OK
+
+   [DllImport("msvcrt.dll")]
+   int printf(System::String ^, int i);   // OK
+};
 ```

@@ -22,10 +22,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 687e5cba94693a752f934d7816e6a7c36e318354
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33336700"
 ---
 # <a name="hint-files"></a>Pliki wskazówki
 A *plik wskazówki* pomaga w Visual Studio identyfikatory Visual C++, takie jak nazwy funkcjami i makrami zinterpretować zintegrowane środowisko programistyczne (IDE). Po otwarciu projektu Visual C++, IDE w *analizy systemu* analizę kodu w każdym pliku źródłowego w projekcie i zbiera informacje na temat każdy identyfikator. Następnie IDE używa tych informacji do obsługi funkcji, takich jak **widoku klasy** przeglądarki i **pasek nawigacyjny**.  

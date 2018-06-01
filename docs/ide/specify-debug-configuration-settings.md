@@ -15,10 +15,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: b40bafe817ebf1dd25cc40115635b895502e0df8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33335045"
 ---
 # <a name="specify-debug-configuration-settings-create-new-project-from-existing-code-files-wizard"></a>Określ ustawienia konfiguracji debugowania, Kreator Utwórz nowy projekt z istniejących plików z kodem
 Ta strona kreatora Utwórz nowy projekt z istniejących plików kodu do określania ustawień projektu konfiguracji debugowania.  

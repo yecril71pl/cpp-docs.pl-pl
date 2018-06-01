@@ -16,38 +16,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d89a6d6b10fa76c7fbf1bf11c4ebe2ecff5f98ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43279190847322fa2154c6faababdcd41b490eef
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704863"
 ---
 # <a name="compiler-error-c2472"></a>C2472 błąd kompilatora
-"Funkcja" nie można wygenerować w zarządzanym kodzie: "komunikatu"; Kompiluj z/CLR aby wygenerować mieszany obraz  
-  
- Ten błąd wystąpi, gdy typy nie są obsługiwane przez kod zarządzany są używane w środowisku czystego środowiska uruchomieniowego (języka wspólnego CLR) języka wspólnego. Kompiluj z użyciem **/CLR** Aby rozwiązać problem.  
-  
- **/CLR: pure** i **/CLR: Safe** — opcje kompilatora zostały uznane za przestarzałe w programie Visual Studio 2015.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C2472.  
-  
-```  
-// C2472.cpp  
-// compile with: /clr:pure  
-// C2472 expected  
-  
-#include <cstdlib>  
-  
-int main()  
-{  
-   int * __ptr32 p32;  
-   int * __ptr64 p64;  
-  
-   p32 = (int * __ptr32)malloc(4);  
-   p64 = p32;  
-}  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
- [/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md)
+
+> "*funkcja*" nie można wygenerować w zarządzanym kodzie: "*komunikat*"; skompiluj z/CLR aby wygenerować mieszany obraz
+
+## <a name="remarks"></a>Uwagi
+
+Ten błąd wystąpi, gdy typy nie są obsługiwane przez kod zarządzany są używane w środowisku czystego środowiska uruchomieniowego (języka wspólnego CLR) języka wspólnego. Kompiluj z użyciem **/CLR** Aby rozwiązać problem.
+
+**/CLR: pure** i **/CLR: Safe** — opcje kompilatora są używane w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład generuje C2472.
+
+```cpp
+// C2472.cpp
+// compile with: /clr:pure
+// C2472 expected
+
+#include <cstdlib>
+
+int main()
+{
+   int * __ptr32 p32;
+   int * __ptr64 p64;
+
+   p32 = (int * __ptr32)malloc(4);
+   p64 = p32;
+}
+```
+
+## <a name="see-also"></a>Zobacz także
+
+- [/clr (Kompilacja środowiska uruchomieniowego języka wspólnego)](../../build/reference/clr-common-language-runtime-compilation.md)

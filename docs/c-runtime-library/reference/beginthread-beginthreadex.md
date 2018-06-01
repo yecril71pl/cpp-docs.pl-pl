@@ -39,11 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8e12e25f64972335cb1a1199ae519de71d43067
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: d56bcc5ec779b077305d9d80e4a4e6b5e511df5e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704662"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -141,7 +142,7 @@ Alokacja stosu obsługi systemu operacyjnego podczas albo **_beginthread —** l
 
 Ustawienia regionalne nowego wątku został zainicjowany przy użyciu na proces globalne bieżących ustawień regionalnych informacji. Jeśli ustawienia regionalne dla każdego wątku jest włączona przez wywołanie do [_configthreadlocale —](configthreadlocale.md) (globalnie lub dla nowych wątków), Wątek można zmieniać tylko jego ustawienia regionalne niezależnie od innych wątków wywołując **setlocale** lub **_wsetlocale —**. Wątków, które nie mają Ustaw flagę ustawienia regionalne dla każdego wątku mogą wpływać na informacje o ustawień regionalnych w innych wątków, które nie mają także ustawić flagę ustawienia regionalne dla każdego wątku, a także wszystkie wątki nowo utworzona. Aby uzyskać więcej informacji, zobacz [ustawień regionalnych](../../c-runtime-library/locale.md).
 
-Kod mieszany i czystego **_beginthread —** i **_beginthreadex —** mieć dwa przeciążenia. Wyższy wskaźnik funkcji macierzystej Konwencja wywoływania i innych przyjmuje **__clrcall** wskaźnik funkcji. Pierwszy przeciążenia nie jest bezpieczne dla domeny aplikacji i nigdy nie będzie można. Podczas pisania kodu mieszanych lub czystej należy się upewnić, że nowego wątku wprowadza domeny właściwej aplikacji przed uzyskuje dostęp do zasobów zarządzanych. Można to zrobić, na przykład za pomocą [call_in_appdomain — funkcja](../../dotnet/call-in-appdomain-function.md). Drugi przeciążenie to aplikacja bezpieczne domeny; nowo utworzony wątku zawsze kończy się do domeny aplikacji obiektu wywołującego z **_beginthread —** lub **_beginthreadex —**.
+Aby uzyskać **/CLR** kodu, **_beginthread —** i **_beginthreadex —** mieć dwa przeciążenia. Wyższy wskaźnik funkcji macierzystej Konwencja wywoływania i innych przyjmuje **__clrcall** wskaźnik funkcji. Pierwszy przeciążenia nie jest bezpieczne dla domeny aplikacji i nigdy nie będzie można. Jeśli piszesz **/CLR** kodu, należy upewnić się, że nowego wątku wprowadza domeny właściwej aplikacji przed uzyskuje dostęp do zarządzanych zasobów. Można to zrobić, na przykład za pomocą [call_in_appdomain — funkcja](../../dotnet/call-in-appdomain-function.md). Drugi przeciążenie to aplikacja bezpieczne domeny; nowo utworzony wątku zawsze kończy się do domeny aplikacji obiektu wywołującego z **_beginthread —** lub **_beginthreadex —**.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -330,8 +331,8 @@ Counter should be 1000000; it is-> 1000000
 
 ## <a name="see-also"></a>Zobacz także
 
-[Procedury kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_endthread, _endthreadex](endthread-endthreadex.md)<br/>
-[abort](abort.md)<br/>
-[exit, _Exit, _exit](exit-exit-exit.md)<br/>
-[GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)<br/>
+- [Procedury kontroli środowiska](../../c-runtime-library/process-and-environment-control.md)
+- [_endthread, _endthreadex](endthread-endthreadex.md)
+- [abort](abort.md)
+- [exit, _Exit, _exit](exit-exit-exit.md)
+- [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)

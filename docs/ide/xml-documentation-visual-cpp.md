@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ee19c51c04fa32ab3c2f1810bb963b22ec7e890
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9d763a62edc2f21d8a7669e409c164906c440f1d
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705637"
 ---
 # <a name="xml-documentation-visual-c"></a>Dokumentacja XML (Visual C++)
 W programie Visual C++ komentarze można dodawać do kodu źródłowego, które będą przetwarzane do pliku XML. Ten plik można następnie dane wejściowe do procesu, który tworzy dokumentację dla klas w kodzie.  
   
- W pliku kodu Visual C++ komentarze dokumentacji XML muszą być znajduje się bezpośrednio przed definicją metody lub typu. Komentarze mogą służyć do wypełnienia Porada danych skrócone informacje funkcji Intellisense w następujących scenariuszach:  
+ W pliku kodu Visual C++ komentarze dokumentacji XML muszą być znajduje się bezpośrednio przed definicją metody lub typu. Komentarze mogą służyć do wypełnienia Porada danych skrócone informacje funkcji IntelliSense w następujących scenariuszach:  
   
 1.  Jeśli kod jest skompilowana jako składnik środowiska wykonawczego systemu Windows przy użyciu towarzyszący plik winmd  
   
