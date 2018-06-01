@@ -23,11 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d45f5b56dfb84d56bcba8ad0652ed86a8fb5223
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dc4266e8b01201226c53584bed9f90ed9dcabef7
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34703736"
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (Generowanie łączonych kodów czasowych)
 
@@ -141,7 +142,7 @@ Czy funkcja jest wywoływana przez wskaźnik funkcji, czy funkcja jest wywoływa
 
 Moduły, które są kompilowane przy użyciu [/GL](../../build/reference/gl-whole-program-optimization.md) i [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) mogą być używane jako dane wejściowe konsolidatora podczas **opcję/LTCG** jest określona.
 
-- **/ LTCG** je zaakceptować, obiekt natywny, a mieszane natywną/zarządzaną obiekt plików (skompilowana przy użyciu **/CLR**). **/CLR: pure** i **/CLR: Safe** — opcje kompilatora zostały uznane za przestarzałe w programie Visual Studio 2015.
+- **/ LTCG** je zaakceptować, obiekt natywny, a mieszane natywną/zarządzaną obiekt plików (skompilowana przy użyciu **/CLR**). **/CLR: pure** i **/CLR: Safe** — opcje kompilatora są używane w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r.
 
 - **/LTCG:PGI** nie akceptuje skompilowana przy użyciu modułów macierzystych **/GL** i   **/CLR**
 
@@ -161,5 +162,5 @@ Można także zastosować **opcję/LTCG** do określonej kompilacji, wybierając
 
 ## <a name="see-also"></a>Zobacz także
 
-[Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)<br/>
-[Opcje konsolidatora](../../build/reference/linker-options.md)<br/>
+- [Ustawianie opcji konsolidatora](../../build/reference/setting-linker-options.md)
+- [Opcje konsolidatora](../../build/reference/linker-options.md)

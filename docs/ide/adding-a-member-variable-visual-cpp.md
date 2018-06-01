@@ -18,10 +18,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: fa2a8ef8f7bcdc2d90893acdad98705c9588a5d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33325734"
 ---
 # <a name="adding-a-member-variable--visual-c"></a>Dodawanie zmiennej członkowskiej (Visual C++)
 Można dodać zmienną członkowską do klasy przy użyciu widoku klasy. Zmienne Członkowskie mogą być dla [danych wymiana i Walidacja danych](../mfc/dialog-data-exchange-and-validation.md), lub mogą być ogólne. Kreator zmiennej elementu członkowskiego danych jest specjalnie zaprojektowane do podjąć odpowiednie informacje i użyj go, aby wstawić elementów w plikach źródłowych w odpowiednich lokalizacjach. Można dodać zmienną członkowską z [Edytor okien dialogowych](../windows/dialog-editor.md) w [widok zasobów](../windows/resource-view-window.md), lub z [widoku klasy](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  

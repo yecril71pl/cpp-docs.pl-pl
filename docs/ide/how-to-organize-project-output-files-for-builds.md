@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0d1e7f8ea67db0e87199e0c12128555fa039112
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5058493e93a89e64c87ef52b73ff8fe3272f8f99
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705348"
 ---
 # <a name="how-to-organize-project-output-files-for-builds"></a>Porady: porządkowanie plików wyjściowych projektu dla kompilacji
 W tym temacie opisano najlepsze rozwiązania dotyczące porządkowanie plików wyjściowych projektu. Tworzenie mogą wystąpić błędy podczas konfigurowania plików wyjściowych projektu niepoprawnie. W tym temacie opisano także zalety i wady każdej alternatywę do organizowania plików wyjściowych projektu.  
@@ -30,7 +31,7 @@ W tym temacie opisano najlepsze rozwiązania dotyczące porządkowanie plików w
   
 1.  Możesz odwoływać się do zestawu bezpośrednio w kodzie za pomocą #using — dyrektywa, takich jak `#using <System.Data.dll>`. Aby uzyskać więcej informacji, zobacz [# dyrektywa using](../preprocessor/hash-using-directive-cpp.md).  
   
-     Określony plik może być .dll, .exe, modułu .netmodule lub .obj, tak długo, jak jest MSIL. Składnika mogą być tworzone w dowolnym języku. Przy użyciu tej opcji, konieczne będzie dostęp do funkcji Intellisense, ponieważ metadane zostaną wyodrębnione ze MSIL. W pliku musi być w ścieżce projektu. w przeciwnym razie projekt nie zostanie skompilowany i Intellisense będzie niedostępna. Kliknij prawym przyciskiem myszy jest prosty sposób określić, czy plik jest w ścieżce #using wiersza i wybierz polecenie **Otwórz dokument** polecenia. Jeśli nie można odnaleźć pliku, otrzymasz powiadomienie.  
+     Określony plik może być .dll, .exe, modułu .netmodule lub .obj, tak długo, jak jest MSIL. Składnika mogą być tworzone w dowolnym języku. Przy użyciu tej opcji, konieczne będzie dostęp do funkcji IntelliSense, ponieważ metadane zostaną wyodrębnione ze MSIL. W pliku musi być w ścieżce projektu. w przeciwnym razie projekt nie zostanie skompilowany i IntelliSense będzie niedostępna. Kliknij prawym przyciskiem myszy jest prosty sposób określić, czy plik jest w ścieżce #using wiersza i wybierz polecenie **Otwórz dokument** polecenia. Jeśli nie można odnaleźć pliku, otrzymasz powiadomienie.  
   
      Jeśli nie chcesz umieścić pełną ścieżkę do pliku, możesz użyć **/AI** — opcja kompilatora można edytować ścieżkę wyszukiwania dla #using. Aby uzyskać więcej informacji, zobacz [/AI (Określ katalogi metadanych)](../build/reference/ai-specify-metadata-directories.md).  
   

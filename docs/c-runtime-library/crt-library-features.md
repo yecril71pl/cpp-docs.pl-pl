@@ -28,11 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b20fa6862a835ca913a2865a651112584966af3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2b0ccedc3a1794b34fce3ad773e44155f7602d3b
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704727"
 ---
 # <a name="crt-library-features"></a>Biblioteka CRT — Funkcje
 
@@ -85,7 +86,7 @@ Przy użyciu statycznie połączone CRT oznacza, że żadnych informacji o stani
 
 Ponieważ utworzony przez łączenie z statycznych CRT biblioteki DLL nie będzie mieć stanu CRT, nie zaleca się statycznie Połącz z CRT w bibliotece DLL, chyba że skutków to specjalnie są potrzebne i zrozumienie. Na przykład, jeśli wywołujesz [_set_se_translator —](../c-runtime-library/reference/set-se-translator.md) w pliku wykonywalnego, który ładuje bibliotekę DLL, połączony z własną CRT statycznych, wszelkie wyjątki sprzętowe wygenerowane przez kod w bibliotece DLL nie zostanie przechwycony przez translator, ale wyjątki sprzętowe wygenerowane przez kod w głównym pliku wykonywalnego, który zostanie przechwycony.
 
-Jeśli używasz **/CLR** przełącznika kompilatora, kod zostanie połączony z biblioteką statyczną, msvcmrt.lib. Biblioteka statyczna zawiera serwer proxy między kodu zarządzanego i natywnego CRT. Nie można użyć statycznie połączone CRT ( **/MT** lub **/MTd** opcje) z **/CLR**. Użyj połączone dynamicznie biblioteki (**/ / MD** lub **/mdd**) zamiast tego.
+Jeśli używasz **/CLR** przełącznika kompilatora, kod zostanie połączony z biblioteką statyczną, msvcmrt.lib. Biblioteka statyczna zawiera serwer proxy między kodu zarządzanego i natywnego CRT. Nie można użyć statycznie połączone CRT ( **/MT** lub **/MTd** opcje) z **/CLR**. Użyj połączone dynamicznie biblioteki (**/ / MD** lub **/mdd**) zamiast tego. Czysty bibliotek CRT zarządzanym są przestarzałe w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r.
 
 Aby uzyskać więcej informacji na temat używania CRT z **/CLR**, zobacz [zestawy mieszane (natywne i zarządzane)](../dotnet/mixed-native-and-managed-assemblies.md).
 
@@ -118,4 +119,4 @@ Jeśli program używa więcej niż jedną wersję CRT, niektóre uwagę podczas 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Dokumentacja biblioteki środowiska uruchomieniowego języka C](../c-runtime-library/c-run-time-library-reference.md)
+- [Dokumentacja biblioteki środowiska uruchomieniowego języka C](../c-runtime-library/c-run-time-library-reference.md)

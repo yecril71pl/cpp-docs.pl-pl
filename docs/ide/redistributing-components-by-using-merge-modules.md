@@ -16,10 +16,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 6d95b6d2a69b4b40c4464136dd33a8c5231185f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33329117"
 ---
 # <a name="redistributing-components-by-using-merge-modules"></a>Redystrybucja składników za pomocą modułów scalania
 Visual Studio zawiera [scalania modułów](http://msdn.microsoft.com/library/aa367434) dla każdego składnika Visual C++, która jest licencjonowana do można rozpowszechniać za pomocą aplikacji. Gdy moduł scalania jest wkompilowany w plik instalacyjny Instalatora Windows, umożliwia on wdrażanie określonych bibliotek DLL na komputerach, które mają określoną platformę. W pliku konfiguracji należy określić, że moduły scalania stanowią wymagania wstępne dotyczące aplikacji. Po zainstalowaniu programu Visual Studio modułów scalania są zainstalowane w \Program Files\Common modułów Files\Merge\\. (Można rozpowszechniać tylko bez debugowania wersje programu Visual C++ bibliotek DLL). Więcej informacji oraz link do listy modułów scalania, które są licencjonowane dla redystrybucji, zobacz [redystrybuowanie pliki Visual C++](../ide/redistributing-visual-cpp-files.md).  

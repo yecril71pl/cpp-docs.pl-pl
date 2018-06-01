@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee55abe1107e578729fe8d5a301a067afdb6c551
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f39fe3743c023bb0c4cb3130400e9bcb7b97db1b
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704850"
 ---
 # <a name="error-handling-crt"></a>Obsługa błędów (CRT)
 
@@ -43,6 +44,6 @@ Użyj tych procedur obsługi błędów programu.
 |[_set_error_mode](../c-runtime-library/reference/set-error-mode.md)|Modyfikuje **__error_mode** do określenia lokalizacji innych niż domyślne, gdzie C, czas wykonywania zapisuje komunikat o błędzie dla błędu, który prawdopodobnie będzie zakończyć program.|
 |[_set_purecall_handler](../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md)|Ustawia wywołanie czystej funkcji wirtualnej programu obsługi.|
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-[Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)<br/>
+- [Procedury czasu wykonywania języka Universal C według kategorii](../c-runtime-library/run-time-routines-by-category.md)

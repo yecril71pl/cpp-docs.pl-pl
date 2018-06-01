@@ -17,10 +17,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 488c7ca455b267a79b0d2906849596346a191792
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33332400"
 ---
 # <a name="add-member-function-wizard"></a>Kreator dodawania funkcji członkowskiej
 Ten kreator dodaje deklaracji funkcji elementu członkowskiego do pliku nagłówka i implementacji funkcji elementu członkowskiego klasy zastępczej, do pliku implementacji dla wybranej klasy.  

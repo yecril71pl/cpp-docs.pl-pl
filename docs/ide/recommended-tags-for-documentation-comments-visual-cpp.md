@@ -13,10 +13,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1b25ad029a59c4b23bcab093b3742f16f7ca9175
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33328623"
 ---
 # <a name="recommended-tags-for-documentation-comments-visual-c"></a>Tagi zalecane dla komentarzy do dokumentacji (Visual C++)
 Kompilator Visual C++ przetworzy komentarze do dokumentacji w kodzie i tworzy plik .xdc dla każdego compiland i xdcmake.exe rozpoczyna przetwarzanie plików xdc do pliku XML. Przetwarzanie pliku XML dokumentacji jest szczegółów, który musi zostać wdrożone w lokacji.  

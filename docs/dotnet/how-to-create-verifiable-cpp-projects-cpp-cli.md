@@ -17,49 +17,60 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a012e52a8eb825c3ffc6b694c888cef8a174f37e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36e7ee85d97639df6298a346ae83bb090e81bf87
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704766"
 ---
-# <a name="how-to-create-verifiable-c-projects-ccli"></a>Porady: tworzenie weryfikowalnych projektów C++ (C++/CLI)
-Kreatorzy aplikacji w usłudze Visual C++ nie twórz weryfikowalnych projektów, ale projekty mogą być konwertowane jako możliwe do zweryfikowania. W tym temacie opisano sposób ustawiania właściwości projektu i zmodyfikować pliki źródłowe projektu do przekształcania projektów Visual C++ do tworzenia aplikacji możliwe do zweryfikowania.  
-  
-## <a name="compiler-and-linker-settings"></a>Kompilator i ustawienia konsolidatora  
- Domyślnie projektów .NET Użyj flagi kompilator/CLR i skonfigurować konsolidator, aby docelowy x86 sprzętu. W przypadku weryfikowalny kod należy użyć flagi/CLR: Safe i należy poinstruować konsolidator, aby wygenerować MSIL zamiast instrukcji natywny maszyny.  
-  
-#### <a name="to-change-the-compiler-and-linker-settings"></a>Aby zmienić ustawienia kompilatorze i konsolidatorze  
-  
-1.  Wyświetl stronę właściwości projektu. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).  
-  
-2.  Na **ogólne** w obszarze **właściwości konfiguracji** zestaw węzłów, **Obsługa środowiska uruchomieniowego CLR** właściwości **bezpieczne wspólnego języka MSIL Obsługa środowiska uruchomieniowego (/ CLR: Safe)**.  
-  
-3.  Na **zaawansowane** w obszarze **konsolidatora** zestaw węzłów, **typu obrazu CLR** właściwości **Wymuś bezpieczny obraz IL (/ clrimagetype: Safe)**.  
-  
-## <a name="removing-native-data-types"></a>Usuwanie danych natywnych typów  
- Ponieważ macierzyste typy danych z systemem innym niż — możliwe do zweryfikowania, nawet jeśli nie są rzeczywiście używane, należy usunąć wszystkie pliki nagłówka zawierające natywnych typów.  
-  
+# <a name="how-to-create-verifiable-c-projects-ccli"></a>Porady: tworzenie weryfikowalnych projektów C++ (C + +/ CLI)
+
+Kreatorzy aplikacji w usłudze Visual C++ nie należy tworzyć projekty możliwe do zweryfikowania.
+
+> [!IMPORTANT]
+> Przestarzałe w programie Visual Studio 2015 i Visual Studio 2017 nie obsługuje **/CLR: pure** i **/CLR: Safe** tworzenie weryfikowalnych projektów. Jeśli potrzebujesz weryfikowalny kod, zaleca się tłumaczenia kodu dla C#.
+
+Jednak jeśli używasz starszej wersji zestawu narzędzi kompilatora Visual C++, która obsługuje **/CLR: pure** i **/CLR: Safe**, projekty można przekonwertować jako możliwe do zweryfikowania. W tym temacie opisano sposób ustawiania właściwości projektu i zmodyfikować pliki źródłowe projektu do przekształcania projektów Visual C++ do tworzenia aplikacji możliwe do zweryfikowania.
+
+## <a name="compiler-and-linker-settings"></a>Ustawienia kompilatora i konsolidatora
+
+ Domyślnie projektów .NET Użyj flagi kompilator/CLR i skonfigurować konsolidator, aby docelowy x86 sprzętu. W przypadku weryfikowalny kod należy użyć flagi/CLR: Safe i należy poinstruować konsolidator, aby wygenerować MSIL zamiast instrukcji natywny maszyny.
+
+### <a name="to-change-the-compiler-and-linker-settings"></a>Aby zmienić ustawienia kompilatorze i konsolidatorze
+
+1. Wyświetl stronę właściwości projektu. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).
+
+1. Na **ogólne** w obszarze **właściwości konfiguracji** zestaw węzłów, **Obsługa środowiska uruchomieniowego CLR** właściwości **bezpieczne wspólnego języka MSIL Obsługa środowiska uruchomieniowego (/ CLR: Safe)**.
+
+1. Na **zaawansowane** w obszarze **konsolidatora** zestaw węzłów, **typu obrazu CLR** właściwości **Wymuś bezpieczny obraz IL (/ clrimagetype: Safe)**.
+
+## <a name="removing-native-data-types"></a>Usuwanie danych natywnych typów
+
+Ponieważ macierzyste typy danych z systemem innym niż — możliwe do zweryfikowania, nawet jeśli nie są rzeczywiście używane, należy usunąć wszystkie pliki nagłówka zawierające natywnych typów.
+
 > [!NOTE]
->  Poniższa procedura ma zastosowanie do projektów aplikacji formularzy systemu Windows (.NET) i konsoli aplikacji (.NET).  
-  
-#### <a name="to-remove-references-to-native-data-types"></a>Aby usunąć odwołania do typów danych w trybie macierzystym  
-  
-1.  Komentarz wszystko w pliku Stdafx.h.  
-  
-## <a name="configuring-an-entry-point"></a>Konfigurowanie punktu wejścia  
- Ponieważ weryfikowalny aplikacje nie mogą używać biblioteki wykonawcze języka C (CRT), nie mogą być zależne na CRT w wywołaniu funkcji main jako punkt wejścia standardowego. Oznacza to, że jawnie Podaj nazwę funkcji do wywołania początkowo konsolidator. (W tym przypadku Main() jest używany zamiast main() lub _tmain(), aby wskazać punkt wejścia nie CRT, ale ponieważ punkt wejścia musi zostać określone jawnie, ta nazwa jest dowolne).  
-  
+> Poniższa procedura ma zastosowanie do projektów aplikacji formularzy systemu Windows (.NET) i konsoli aplikacji (.NET).
+
+### <a name="to-remove-references-to-native-data-types"></a>Aby usunąć odwołania do typów danych w trybie macierzystym
+
+1. Komentarz wszystko w pliku Stdafx.h.
+
+## <a name="configuring-an-entry-point"></a>Konfigurowanie punktu wejścia
+
+Ponieważ weryfikowalny aplikacje nie mogą używać biblioteki wykonawcze języka C (CRT), nie mogą być zależne na CRT w wywołaniu funkcji main jako punkt wejścia standardowego. Oznacza to, że jawnie Podaj nazwę funkcji do wywołania początkowo konsolidator. (W tym przypadku Main() jest używany zamiast main() lub _tmain(), aby wskazać punkt wejścia nie CRT, ale ponieważ punkt wejścia musi zostać określone jawnie, ta nazwa jest dowolne).
+
 > [!NOTE]
->  Poniższe procedury dotyczą projekty konsoli aplikacji (.NET).  
-  
-#### <a name="to-configure-an-entry-point"></a>Aby skonfigurować punkt wejścia  
-  
-1.  Zmień _tmain() Main() w pliku .cpp głównym projektu.  
-  
-2.  Wyświetl stronę właściwości projektu. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).  
-  
-3.  Na **zaawansowane** w obszarze **konsolidatora** węzła, wprowadź `Main` jako **punktu wejścia** wartości właściwości.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Kod czysty i weryfikowalny (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)
+> Poniższe procedury dotyczą projekty konsoli aplikacji (.NET).
+
+#### <a name="to-configure-an-entry-point"></a>Aby skonfigurować punkt wejścia
+
+1. Zmień _tmain() Main() w pliku .cpp głównym projektu.
+
+1. Wyświetl stronę właściwości projektu. Aby uzyskać więcej informacji, zobacz [Praca z właściwościami projektu](../ide/working-with-project-properties.md).
+
+1. Na **zaawansowane** w obszarze **konsolidatora** węzła, wprowadź `Main` jako **punktu wejścia** wartości właściwości.
+
+## <a name="see-also"></a>Zobacz także
+
+- [Kod czysty i weryfikowalny (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)

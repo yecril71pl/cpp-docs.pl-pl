@@ -1,6 +1,6 @@
 ---
 title: C4400 ostrzeżenia kompilatora za pośrednictwem C4599 | Dokumentacja firmy Microsoft
-ms.date: 11/17/2017
+ms.date: 05/30/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -149,11 +149,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa15d1e23178350dc8b19859db77f272492c2758
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71dbf1817c43c5511f8ee711abf3ff3566f314c9
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704688"
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>C4400 ostrzeżenia kompilatora za pośrednictwem C4599
 
@@ -319,7 +320,8 @@ Artykuły w tej sekcji dokumentacji opisano podzbiór komunikaty ostrzegawcze, k
 |Ostrzeżenie kompilatora (poziom 4) C4574|"*Identyfikator*'jest zdefiniowany jako ' 0': czy zamierzałeś użyć '#if identyfikator'?|
 |Ostrzeżenie kompilatora (poziom 1) C4575|"__vectorcall" jest niezgodny z "/ clr" opcja: konwertowanie na "__stdcall"|
 |Ostrzeżenie kompilatora (poziom 1, błąd) C4576|Wpisz ujętego w nawiasy, a następnie lista inicjalizatora jest składnia konwersji typu jawnego niestandardowych|
-|Ostrzeżenie kompilatora (poziom 1, błąd) C4578|"abs": konwersja z "*type1*"do"*type2*", możliwa utrata danych (Czy chodziło Ci o wywołania "*funkcja*" lub do #include <cmath>?)|
+|Ostrzeżenie kompilatora (poziom 1, Off) C4577|słowo kluczowe "noexcept" używane z nie określając; trybu obsługi wyjątków Zakończenie na wyjątku nie jest gwarantowana. Określ/ehsc|
+|Ostrzeżenie kompilatora (poziom 1, błąd) C4578|"abs": konwersja z "*type1*"do"*type2*", możliwa utrata danych (Czy chodziło Ci o wywołania "*funkcja*" lub do #include \<cmath >?)|
 |[Ostrzeżenie kompilatora (poziom 3) C4580](../../error-messages/compiler-warnings/compiler-warning-level-3-c4580.md)|[attribute] jest przestarzały; Zamiast tego określ System::Attribute lub Platform::Metadata jako klasa podstawowa|
 |[Ostrzeżenie kompilatora (poziom 1) C4581](../../error-messages/compiler-warnings/compiler-warning-level-1-c4581.md)|zachowanie przestarzałe: ' "*ciąg*" "zastąpione"*ciąg*"Aby przetwarzać atrybut|
 |Ostrzeżenie kompilatora (poziom 4) C4582|"*typu*": Konstruktor nie jest wywoływany niejawnie|

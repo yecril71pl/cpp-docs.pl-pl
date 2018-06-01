@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8b87774b9c011d6ea5ab92d3c1b44e4af2b6091
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b89744235a5a2302a6550b2ffa7100511ad2e59c
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704896"
 ---
 # <a name="zc-conformance"></a>/Zc (Zgodność)
 
@@ -43,6 +44,7 @@ Są to `/Zc` — opcje kompilatora:
 |---|---|
 |[alignedNew\[-\]](zc-alignednew.md)|Włączanie języka C ++ 17 nadmiernie wyrównany dynamicznej alokacji (domyślnie włączone w języku C ++ 17).|
 |[auto\[-\]](zc-auto-deduce-variable-type.md)|Wymuszaj nowe znaczenie standardu C++ dla `auto` (na domyślnie).|
+|[__cplusplus —\[-\]](zc-cplusplus.md)|Włącz **__cplusplus —** makro do raportu standardowego obsługiwane (domyślnie wyłączone).|
 |[externConstexpr\[-\]](zc-externconstexpr.md)|Włącz połączenie zewnętrzne dla `constexpr` zmienne (domyślnie wyłączone).|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|Wymuszaj Standard C++ `for` reguł ustawiania zakresu (na domyślnie).|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|Włącz niejawny `noexcept` dla funkcji wymaganych (na domyślnie).|

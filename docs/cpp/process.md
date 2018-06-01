@@ -17,24 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa1ba2676ebbd04d1fc1a59d210d69efeab6658
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b36ec42447aa076d0623707951f82b7b9c95d563
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704909"
 ---
 # <a name="process"></a>proces
-Określa, czy procesu zarządzanej aplikacji powinien mieć pojedynczą kopię określonej zmiennej globalnej, statycznym elementem członkowskim zmiennej lub statyczna zmienna lokalna współużytkowana przez wszystkie domeny aplikacji w procesie. To przede wszystkim był przeznaczony do użycia podczas kompilowania za pomocą **/CLR: pure**, która jest teraz przestarzałe i zostanie usunięta w przyszłej wersji kompilatora. Podczas kompilowania za pomocą **/CLR**, zmienne globalne i statyczne są na proces domyślnie (nie trzeba używać `__declspec(process)`.  
-  
- Tylko zmiennej globalnej, statycznym elementem członkowskim zmiennej lub statyczna zmienna lokalna typu natywnego może być oznaczony przez `__declspec(process)`.  
-  
-  
- `process` jest prawidłowy tylko podczas kompilowania za pomocą [/CLR](../build/reference/clr-common-language-runtime-compilation.md).  
-  
- Każda domena aplikacji ma własną kopię zmiennej globalnej, należy użyć [elementu appdomain](../cpp/appdomain.md).  
-  
- Zobacz [i domen aplikacji Visual C++](../dotnet/application-domains-and-visual-cpp.md) Aby uzyskać więcej informacji.  
-  
-## <a name="see-also"></a>Zobacz też  
- [__declspec](../cpp/declspec.md)   
- [Słowa kluczowe](../cpp/keywords-cpp.md)
+
+Określa, czy procesu zarządzanej aplikacji powinien mieć pojedynczą kopię określonej zmiennej globalnej, statycznym elementem członkowskim zmiennej lub statyczna zmienna lokalna współużytkowana przez wszystkie domeny aplikacji w procesie. To przede wszystkim był przeznaczony do użycia podczas kompilowania za pomocą **/CLR: pure**, który jest przestarzała w programie Visual Studio 2017 i nieobsługiwane w programie Visual Studio 2017 r. Podczas kompilowania za pomocą **/CLR**, zmienne globalne i statyczne są na proces domyślnie i nie trzeba używać `__declspec(process)`.
+
+Tylko zmiennej globalnej, statycznym elementem członkowskim zmiennej lub statyczna zmienna lokalna typu natywnego może być oznaczony przez `__declspec(process)`.
+
+`process` jest prawidłowy tylko podczas kompilowania za pomocą [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
+
+Każda domena aplikacji ma własną kopię zmiennej globalnej, należy użyć [elementu appdomain](../cpp/appdomain.md).
+
+Zobacz [i domen aplikacji Visual C++](../dotnet/application-domains-and-visual-cpp.md) Aby uzyskać więcej informacji.
+
+## <a name="see-also"></a>Zobacz także
+
+- [__declspec](../cpp/declspec.md)
+- [Słowa kluczowe](../cpp/keywords-cpp.md)

@@ -17,10 +17,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0c295b9a3aa4996cdcd2afb17b5a4ff4c90c1159
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33335000"
 ---
 # <a name="resource-files-c"></a>Pliki zasobów (C++)
 Zasoby są elementów interfejsu, które zawierają informacje dla użytkownika. Mapy bitowe, ikony paski narzędzi i kursory są wszystkie zasoby. Do wykonania akcji, takich jak wybierając z menu lub wprowadzania danych w oknie dialogowym można manipulować niektórych zasobów.  

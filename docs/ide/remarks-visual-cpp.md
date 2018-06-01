@@ -19,10 +19,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 380a2c27a761154e59826259d3e1e682ae7fbd87
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33334470"
 ---
 # <a name="ltremarksgt-visual-c"></a>&lt;Uwagi&gt; (Visual C++)
 \<Uwagi > tagu umożliwia dodawanie informacji o typie, informacje uzupełniające określono [ \<podsumowania >](../ide/summary-visual-cpp.md). Te informacje są wyświetlane w [przeglądarki obiektów](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) w komentarz kodu — raport w sieci Web.  

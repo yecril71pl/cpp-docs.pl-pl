@@ -19,10 +19,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 75aafd7177c3799c17b75419fd5ab9f54af91d35
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33332445"
 ---
 # <a name="wizard-support-for-other-languages"></a>Obsługa kreatora dla innych języków
 Po zainstalowaniu programu Visual Studio aplikacji Instalator wykrywa ustawień regionalnych systemu na liście i instaluje odpowiedni język szablonu lub szablonów dla ustawień regionalnych. Na przykład Western Europejskiego ustawień regionalnych, Instalator instaluje angielskim, francuskim, włoskim, hiszpańskim i niemieckim. Te języki są wyświetlane w **języka zasobu** listy na [typu aplikacji](../mfc/reference/application-type-mfc-application-wizard.md) Kreatora aplikacji MFC.  

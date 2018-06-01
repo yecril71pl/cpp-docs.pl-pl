@@ -15,10 +15,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 33683ebe349fbfdcb3fd51179ed6bc3140510c00
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33330300"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Przygotowanie maszyny testowej do uruchomienia debugowania pliku wykonywalnego
 Aby przygotować komputer do testowania wersji do debugowania aplikacji, która jest wbudowana w języku Visual C++, należy wdrożyć debugowania wersje biblioteki Visual C++ bibliotek DLL, która zależy od aplikacji. Aby zidentyfikować, która biblioteki DLL ma zostać wdrożony, postępuj zgodnie z instrukcjami [poznanie zależności aplikacji Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). Zazwyczaj wersje debugowania Visual C++ biblioteki DLL mają nazwy, które kończą się "d"; na przykład pliku msvcr100.dll wersja debugowania nosi nazwę msvcr100d.dll.  

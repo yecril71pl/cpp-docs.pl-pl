@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9de79d56c6e8b6e496c0e7988ada07ed7595ea70
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b9b11f04f1fe8d201d6d07ca5ed83f9ca7d991b
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705465"
 ---
 # <a name="how-to-enable-intellisense-for-makefile-projects"></a>Porady: włączenie funkcji IntelliSense dla projektów plików reguł programu make
 IntelliSense nie działają w IDE dla projektów Visual C++ makefile, gdy projekt niektórych ustawień lub opcji kompilatora jest nieprawidłowo skonfigurowana. Ta procedura umożliwia konfigurowanie projektów makefile Visual C++, dzięki czemu IntelliSense działa, gdy projekty pliku reguł programu make są otwarte w środowisku projektowym Visual Studio.  
@@ -46,7 +47,7 @@ IntelliSense nie działają w IDE dla projektów Visual C++ makefile, gdy projek
   
     -   Ustaw **wymuszone za pomocą zestawów** właściwości w celu określenia, które zestawów platformy .NET do przetworzenia podczas kompilowania projektu pliku reguł programu make. Zobacz [/FU (nazwij wymuszone #using)](../build/reference/fu-name-forced-hash-using-file.md), aby uzyskać więcej informacji.  
   
-    -   Ustaw **dodatkowe opcje** właściwość, aby określić dodatkowe przełączniki kompilatora używane przez funkcję Intellisense, podczas analizowania plików C++.  
+    -   Ustaw **dodatkowe opcje** właściwość, aby określić dodatkowe przełączniki kompilatora używane przez funkcję IntelliSense, podczas analizowania plików C++.  
   
 4.  Kliknij przycisk **OK** zamknąć strony właściwości.  
   

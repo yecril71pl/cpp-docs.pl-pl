@@ -17,10 +17,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 544ce4cd0f4ed9a7f3592e5ec1691fb3734b8772
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33340011"
 ---
 # <a name="event-handler-wizard"></a>Kreator obsługi zdarzeń
 Ten kreator dodaje program obsługi zdarzeń dla kontrolka okna dialogowego do wybranej klasy. Po dodaniu obsługi zdarzeń z [okna właściwości](/visualstudio/ide/reference/properties-window), można dodać go tylko do klasy, która implementuje okno dialogowe. Zobacz [Dodawanie obsługi zdarzeń dla formantów okna dialogowego](../windows/adding-event-handlers-for-dialog-box-controls.md) Aby uzyskać więcej informacji.  

@@ -21,10 +21,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 55a2bb282d19a48cfd510056e327e7abca4de4ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33337044"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Dodawanie funkcji z użyciem kreatorów kodu (C++)
 Po utworzeniu projektu, można zmienić lub dodać do funkcji tego projektu. Takie zadania obejmują tworzenie nowych klas, dodawanie nowych funkcji Członkowskich i zmiennych i dodanie automatyzacji metody i właściwości. Kreatorzy kodów mają pozwalają na wykonywanie tych czynności.  

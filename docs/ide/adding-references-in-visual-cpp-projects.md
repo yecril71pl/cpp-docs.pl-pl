@@ -18,10 +18,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: bda420768b1ff0819ba666f71d62bfffa86e2105
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33336111"
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Dodawanie odwołań do projektów Visual C++
 Bardzo często programy do wywołania do interfejsów API w innych plików binarnych, takich jak biblioteki dll, składników środowiska wykonawczego systemu Windows, rozszerzenia SDK składników COM i zestawów platformy .NET. Sposób, w jaki te pliki binarne wyszukiwany zależy od zarówno na typ projektu, a typ danych binarnych.  

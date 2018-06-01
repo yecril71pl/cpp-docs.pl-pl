@@ -21,10 +21,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4595ea9ce27c40fb798ac050ce456c4d43b2cacb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33328090"
 ---
 # <a name="precompiled-header-files"></a>Prekompilowane pliki nagłówka
 Te pliki są używane do tworzenia prekompilowanego pliku nagłówkowego *nazwa_projektu.nazwa_modułu.nazwa_procedury*.pch i wstępnie skompilowane typy plików Stdafx.obj.  

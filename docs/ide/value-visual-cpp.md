@@ -19,10 +19,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 8e78c8ace8b482baa29fbabaf102a8a1bccadd06
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33325399"
 ---
 # <a name="ltvaluegt-visual-c"></a>&lt;wartość&gt; (Visual C++)
 \<Wartość > znacznik umożliwia opis właściwości i metod dostępu właściwości. Należy pamiętać, że podczas dodawania właściwości za pomocą Kreatora kodu w programie Visual Studio zintegrowane środowisko programistyczne, spowoduje to dodanie [ \<podsumowania >](../ide/summary-visual-cpp.md) tag nowej właściwości. Następnie należy ręcznie dodać \<wartość > tag do opisywania wartość, która reprezentuje właściwość.  

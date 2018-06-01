@@ -17,10 +17,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a7008e7fe670471301968482fbd4c6c758f0ff5e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33340505"
 ---
 # <a name="building-c-projects-in-visual-studio"></a>Kompilowanie projektów C++ w Visual Studio
 W programie Visual Studio zintegrowane środowisko programistyczne (IDE) istnieje kilka sposobów skompiluj całe rozwiązanie lub tylko jednego projektu w nim. Można również zmodyfikować ustawienia kompilacji i określić niestandardowe kroki procesu kompilacji dokonanie efektywniejsze procesie tworzenia aplikacji.  

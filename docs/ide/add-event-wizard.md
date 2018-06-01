@@ -17,10 +17,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f92f871f22fb01f3f0f37677c393fcd481c08120
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33325198"
 ---
 # <a name="add-event-wizard"></a>Kreator dodawania zdarzenia
 Ten kreator dodaje zdarzenia do projektu kontrolki MFC ActiveX. Możesz określić własne zdarzenia, można dostosować zwykle standardowych zdarzeń, lub możesz wybrać z listy zdarzeń standardowych.  

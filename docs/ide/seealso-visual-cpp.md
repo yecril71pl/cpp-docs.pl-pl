@@ -19,10 +19,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 6a726a2fa1694fd346a6632fdc5e40bd53547fc8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33334311"
 ---
 # <a name="ltseealsogt-visual-c"></a>&lt;SeeAlso&gt; (Visual C++)
 \<Seealso > należy określić tekst, który ma być wyświetlane w sekcji Zobacz też. Użyj [ \<zobacz >](../ide/see-visual-cpp.md) można określić łącze od w tekście.  

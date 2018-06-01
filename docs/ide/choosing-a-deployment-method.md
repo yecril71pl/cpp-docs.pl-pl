@@ -23,10 +23,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: bdf024f75f03b55465ccd15670c47d3c761e56e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33338669"
 ---
 # <a name="choosing-a-deployment-method"></a>Wybieranie metody wdrażania
 Jeśli aplikacji Visual C++ nie jest niezależna i można wdrożyć przy użyciu polecenia kopiowania, zalecane jest użycie Instalatora systemu Windows dla wdrożenia. Instalator Windows obsługuje instalację, naprawę oraz dezinstalację, a także obsługuje atomowe aktualizowanie plików aplikacji, zależności i wpisów rejestru.  

@@ -18,10 +18,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5c824dd4ae174a4418c6744e592dd62dc54b9595
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33326387"
 ---
 # <a name="redistributing-an-atl-application"></a>Ponowna dystrybucja aplikacji ATL
 Począwszy od programu Visual Studio 2012 Active Template Library (ATL) jest tylko nagłówek biblioteki. Projekty ATL nie mają dynamiczne łącze do ATL opcji. Brak pakietu redystrybucyjnego biblioteki ATL jest wymagany.  

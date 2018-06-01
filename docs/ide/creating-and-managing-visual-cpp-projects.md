@@ -22,10 +22,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: b3afbd2019965d859895462cfdad57292bc2e0b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33332426"
 ---
 # <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>Tworzenie projektów i zarządzanie nimi na podstawie MSBuild Visual C++
 MSBuild system natywnej kompilacji dla programu Visual C++ oraz jest zazwyczaj najlepiej systemu na potrzeby aplikacji platformy uniwersalnej systemu Windows, a także aplikacji klasycznych, które używają biblioteki MFC lub ATL kompilacji. MSBuild jest ściśle zintegrowany z programu Visual Studio IDE i system projektu, ale można również użyć go w wierszu polecenia. Począwszy od programu Visual Studio 2017 Visual C++ obsługuje [CMake i innych systemów innych niż MSBuild za pomocą funkcji Otwórz Folder](non-msbuild-projects.md).

@@ -19,10 +19,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 772e9dc6a296873ef27171676ebca0c185c1771c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33339079"
 ---
 # <a name="xml-document-generator-tool-property-pages"></a>Strony właściwości narzędzia generowania dokumentów XML
 Strona właściwości narzędzie generowania dokumentu XML ujawniającą funkcjonalność xdcmake.exe. xdcmake.exe scala plikach xdc w pliku XML, gdy kod źródłowy zawiera komentarzy do dokumentacji i [/doc (przetwarzanie komentarzy dokumentacji) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md) jest określona. Zobacz [tagi zalecane dla komentarzy do dokumentacji](../ide/recommended-tags-for-documentation-comments-visual-cpp.md) informacji na temat dodawania komentarzy do dokumentacji do kodu źródłowego.  

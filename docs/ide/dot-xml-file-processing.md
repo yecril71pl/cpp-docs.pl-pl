@@ -15,10 +15,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1cf6f5660e1aaeaeff4050bb80009eda7d14c3ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33340518"
 ---
 # <a name="xml-file-processing"></a>Przetwarzanie pliku .Xml
 Kompilator generuje ciąg Identyfikatora dla każdego konstrukcji w kodzie zostanie oznaczony do generowania dokumentacji. Aby uzyskać więcej informacji, zobacz [zalecane znaczniki komentarzy dokumentacji](../ide/recommended-tags-for-documentation-comments-visual-cpp.md). Ciąg Identyfikatora unikatowo identyfikuje konstrukcja. Programów, które przetwarzają pliku XML, który umożliwia Zidentyfikuj odpowiednie środowiska .NET Framework metadane lub odbicia element dotyczy dokumentacji ciąg Identyfikatora.  

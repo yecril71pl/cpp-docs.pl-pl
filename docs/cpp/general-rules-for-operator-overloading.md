@@ -14,22 +14,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0abd32f2c46f7d7b26ea617e2cf43f1dc3c124bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7e9cd1a0ba57b5a2f0d5afb2d02ff9c21b7e0b2c
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705429"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Zasady ogólne dotyczące przeciążania operatorów
 Następujące reguły ograniczają sposób implementacji przeciążonych operatorów. Jednak nie dotyczą one [nowe](../cpp/new-operator-cpp.md) i [usunąć](../cpp/delete-operator-cpp.md) operatory, które są przedstawione oddzielnie.  
   
--   Nie można definiować nowych operatorów, takich jak **.  
+-   Nie można definiować nowych operatorów, takich jak **.**.  
   
 -   Nie można ponownie zdefiniować znaczenia operatorów po zastosowaniu wbudowanych typów danych.  
   
 -   Przeciążone operatory muszą być niestatyczną funkcją składową klasy lub funkcją globalną. Funkcja globalna, która wymaga dostępu do prywatnych lub chronionych składowych, klasy musi być zadeklarowana jako zaprzyjaźniona z tą klasą. Funkcja globalna musi mieć przynajmniej jeden argument klasy lub typu wyliczeniowego lub odwołanie do klasy lub typu wyliczeniowego. Na przykład:  
   
-    ```  
+    ```cpp  
     // rules_for_operator_overloading.cpp  
     class Point  
     {  
@@ -74,7 +75,7 @@ var++;
  Ta tożsamość nie może polegać na typach klasy, które przeciążają operatory. Ponadto, niektóre wymagania niejawne w korzystaniu z tych operatorów dla typów podstawowych są złagodzone dla operatorów przeciążonych. Na przykład, operator dodawania/przypisania `+=`, wymaga, aby lewy operand miał l-wartość po zastosowaniu do podstawowych typów; taki wymóg nie istnieje, gdy operator jest przeciążony.  
   
 > [!NOTE]
->  Aby zapewnić spójność, najlepiej posługiwać się modelem typów wbudowanych podczas definiowania operatorów przeciążonych. Jeżeli semantyka operatorów przeciążonych różni się znacznie od ich znaczenia w innych kontekstach, może być to bardziej skomplikowane niż użyteczne.  
+> Aby zapewnić spójność, najlepiej posługiwać się modelem typów wbudowanych podczas definiowania operatorów przeciążonych. Jeżeli semantyka operatorów przeciążonych różni się znacznie od ich znaczenia w innych kontekstach, może być to bardziej skomplikowane niż użyteczne.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przeładowanie operatora](../cpp/operator-overloading.md)

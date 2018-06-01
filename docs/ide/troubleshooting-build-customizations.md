@@ -21,10 +21,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d48e9f7bdcbf422a25fb0bdb40411e6c662fadc2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33330278"
 ---
 # <a name="troubleshooting-build-customizations"></a>Rozwiązywanie problemów z dostosowaniami kompilacji
 Niestandardowe kroki procesu kompilacji lub zdarzenia nie zachowują się zgodnie z oczekiwaniami, istnieje kilka kwestii, które może wykonywać próby zrozumieć, co się dzieje niewłaściwy.  

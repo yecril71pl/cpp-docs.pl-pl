@@ -16,29 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6557e913f2bd34fda9d435d44020697a925af4e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6d4224d9090f3ace43f61a10c599fafa78d21600
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705283"
 ---
 # <a name="compiler-error-c2441"></a>C2441 błąd kompilatora
-"Zmienna": symbol zadeklarowany z __declspec(proces) musi być stały w/CLR: pure tryb czysty  
-  
- **/CLR: pure** i **/CLR: Safe** — opcje kompilatora zostały uznane za przestarzałe w programie Visual Studio 2015.  
-  
- Domyślnie zmienne są właściwe dla domeny aplikacji w obszarze **/CLR: pure**. Oznaczone jako zmienną `__declspec(process)` w obszarze **/CLR: pure** jest podatne na błędy, jeśli zmodyfikowany w domenie jedną aplikację, a następnie odczytywane w innym.  
-  
- W związku z tym kompilator wymusza na proces zmienne są `const` w obszarze **/CLR: pure**, wprowadzania je odczytać tylko we wszystkich domenach aplikacji.  
-  
- Aby uzyskać więcej informacji, zobacz [procesu](../../cpp/process.md) i [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C2441.  
-  
-```  
-// C2441.cpp  
-// compile with: /clr:pure /c  
-__declspec(process) int i;   // C2441  
-__declspec(process) const int j = 0;   // OK  
+
+> "*zmiennej*": symbol zadeklarowany z __declspec(proces) musi być stały w/CLR: pure tryb czysty
+
+## <a name="remarks"></a>Uwagi
+
+**/CLR: pure** i **/CLR: Safe** — opcje kompilatora są używane w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r.
+
+Domyślnie zmienne są właściwe dla domeny aplikacji w obszarze **/CLR: pure**. Oznaczone jako zmienną `__declspec(process)` w obszarze **/CLR: pure** jest podatne na błędy, jeśli zmodyfikowany w domenie jedną aplikację, a następnie odczytywane w innym.
+
+W związku z tym kompilator wymusza na proces zmienne są `const` w obszarze **/CLR: pure**, wprowadzania je odczytać tylko we wszystkich domenach aplikacji.
+
+Aby uzyskać więcej informacji, zobacz [procesu](../../cpp/process.md) i [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md).
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład generuje C2441.
+
+```cpp
+// C2441.cpp
+// compile with: /clr:pure /c
+__declspec(process) int i;   // C2441
+__declspec(process) const int j = 0;   // OK
 ```

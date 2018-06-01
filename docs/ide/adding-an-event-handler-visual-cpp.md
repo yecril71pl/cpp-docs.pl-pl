@@ -19,10 +19,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 184161b22358f77845b5f7c4b6da0bb42f3ea15f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33324918"
 ---
 # <a name="adding-an-event-handler-visual-c"></a>Dodawanie obsługi zdarzeń (Visual C++)
 W edytorze zasobów, można dodać nowy program obsługi zdarzeń, lub edytować istniejące obsługi zdarzeń dotyczące używania kontroli okno dialogowe [Kreator obsługi zdarzeń](../ide/event-handler-wizard.md).  

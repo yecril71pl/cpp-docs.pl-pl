@@ -1,6 +1,6 @@
 ---
 title: C4800 ostrzeżenia kompilatora za pośrednictwem C5999 | Dokumentacja firmy Microsoft
-ms.date: 11/17/2017
+ms.date: 05/30/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -106,11 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d13f939fcedc0d7b0c6ee132fda14a628a550dda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06c4d65fe7b6ab2b0238c3a4e4cd081e2dc011b5
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704753"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>C4800 ostrzeżenia kompilatora za pośrednictwem C5999
 
@@ -242,10 +243,10 @@ Artykuły w tej sekcji dokumentacji opisano podzbiór komunikaty ostrzegawcze, k
 |Ostrzeżenie C5035 kompilatora|Użyj funkcji "*funkcji*" powoduje, że funkcja *funkcja* ma zostać skompilowana jako gość kodu|
 |Ostrzeżenie kompilatora (poziom 1) C5036|varargs funkcji konwersja wskaźnika podczas kompilowania przy użyciu /hybrid:x86arm64 "*type1*"do"*type2*"|
 |Ostrzeżenie kompilatora (błąd) C5037|"*funkcji członkowskiej*": definicja wiersza elementu członkowskiego szablonu klasy nie może mieć argumentów domyślnych|
-|[Ostrzeżenie C5038 kompilatora](c5038.md)|element członkowski danych "*Członek1*"zostanie zainicjowana po elemencie członkowskim danych"*member2*"|
-|Ostrzeżenie C5039 kompilatora|"*funkcja*": wskaźnik lub odwołanie do potencjalnie zgłaszanie funkcji została przekazana do funkcji extern C w obszarze - EHc. Niezdefiniowane zachowanie może wystąpić, jeśli ta funkcja zwraca wyjątek.|
-|Ostrzeżenie C5040 kompilatora|specyfikacje wyjątków dynamicznych są prawidłowe tylko w języku C ++ 14 i starszych wersji; traktowanie jako noexcept(false)|
-|Ostrzeżenie C5041 kompilatora|"*definicji*": definicja wiersza dla elementu członkowskiego danych statycznych constexpr nie jest wymagana i jest przestarzała w języku C ++ 17|
-|Ostrzeżenie C5042 kompilatora|"*deklaracji*": deklaracje funkcji w zakresie bloku nie może być określony wbudowany w standardu C++; Usuń specyfikatora "inline"|
-|Ostrzeżenie C5043 kompilatora|"*specyfikacji*": specyfikacja wyjątku jest niezgodna z poprzednią deklaracją|
-|Ostrzeżenie C5044 kompilatora|Argument opcji wiersza polecenia *opcji* wskazuje na ścieżkę "*ścieżka*" nie istnieje|
+|[Ostrzeżenie kompilatora (poziom 4) C5038](c5038.md)|element członkowski danych "*Członek1*"zostanie zainicjowana po elemencie członkowskim danych"*member2*"|
+|Ostrzeżenie kompilatora (poziom 4) C5039|"*funkcja*": wskaźnik lub odwołanie do potencjalnie zgłaszanie funkcji została przekazana do funkcji extern C w obszarze - EHc. Niezdefiniowane zachowanie może wystąpić, jeśli ta funkcja zwraca wyjątek.|
+|Ostrzeżenie kompilatora (poziom 3) C5040|specyfikacje wyjątków dynamicznych są prawidłowe tylko w języku C ++ 14 i starszych wersji; traktowanie jako noexcept(false)|
+|Ostrzeżenie kompilatora (poziom 1) C5041|"*definicji*": definicja wiersza dla elementu członkowskiego danych statycznych constexpr nie jest wymagana i jest przestarzała w języku C ++ 17|
+|Ostrzeżenie kompilatora (poziom 3) C5042|"*deklaracji*": deklaracje funkcji w zakresie bloku nie może być określony wbudowany w standardu C++; Usuń specyfikatora "inline"|
+|Ostrzeżenie kompilatora (poziom 2) C5043|"*specyfikacji*": specyfikacja wyjątku jest niezgodna z poprzednią deklaracją|
+|Ostrzeżenie kompilatora (poziom 4) C5044|Argument opcji wiersza polecenia *opcji* wskazuje na ścieżkę "*ścieżka*" nie istnieje|
