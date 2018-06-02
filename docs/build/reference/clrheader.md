@@ -18,35 +18,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5896e12d5e3b3b3984884388d11c6380e900d73d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f6cda2f03e8a0473d2c45f54c96ca97b043d80d5
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704444"
 ---
 # <a name="clrheader"></a>/CLRHEADER
-```  
-/CLRHEADER file  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- gdzie:  
-  
- `file`  
- Skompilowany plik obrazu [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
-## <a name="remarks"></a>Uwagi  
- CLRHEADER wyświetla informacji o nagłówkach .NET używane w programach zarządzanych. Dane wyjściowe zawierają lokalizację i rozmiar w bajtach nagłówka .NET i sekcji w nagłówku.  
-  
- Tylko [/HEADERS](../../build/reference/headers.md) — opcja polecenia DUMPBIN jest dostępny do użytku na pliki tworzone z [/GL](../../build/reference/gl-whole-program-optimization.md) — opcja kompilatora.  
-  
- Gdy /CLRHEADER jest używany w pliku, który został skompilowany z/CLR, można **clr nagłówka:** sekcji w danych wyjściowych polecenia dumpbin.  Wartość **flagi** wskazuje użyto opcji/CLR:  
-  
--   0 — / CLR (obraz może zawierać kod natywny).  
-  
- Można również programowane sprawdzanie, jeśli obraz został utworzony dla środowiska CLR.  Aby uzyskać więcej informacji, zobacz [porady: ustalić, czy obraz jest natywnym, czy CLR](../../dotnet/how-to-determine-if-an-image-is-native-or-clr.md).  
-  
- **/CLR: pure** i **/CLR: Safe** — opcje kompilatora zostały uznane za przestarzałe w programie Visual Studio 2015 i zostanie usunięta w przyszłej wersji kompilatora. Kod, który musi być "czysty" lub "bezpiecznej" powinny być przenoszone do języka C#. 
-  
-## <a name="see-also"></a>Zobacz też  
- [Opcje DUMPBIN](../../build/reference/dumpbin-options.md)
+
+Wyświetl informacje specyficzne dla środowiska CLR.
+
+## <a name="syntax"></a>Składnia
+
+> / CLRHEADER *pliku*
+
+### <a name="arguments"></a>Argumenty
+
+|||
+|-|-|
+*Plik*| Skompilowany plik obrazu [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).
+
+## <a name="remarks"></a>Uwagi
+
+**/ CLRHEADER** wyświetla informacji o nagłówkach .NET używane w programach zarządzanych. Dane wyjściowe zawierają lokalizację i rozmiar w bajtach nagłówka .NET i sekcji w nagłówku.
+
+Tylko [/HEADERS](../../build/reference/headers.md) — opcja polecenia DUMPBIN jest dostępny do użytku na pliki tworzone z [/GL](../../build/reference/gl-whole-program-optimization.md) — opcja kompilatora.
+
+Gdy **/CLRHEADER** jest używany w pliku, który został skompilowany z/CLR, będzie **clr nagłówka:** sekcji w danych wyjściowych polecenia dumpbin. Wartość **flagi** wskazuje użyto opcji/CLR:
+
+- 0 — / CLR (obraz może zawierać kod natywny).
+
+Można również programowane sprawdzanie, jeśli obraz został utworzony dla środowiska CLR.  Aby uzyskać więcej informacji, zobacz [porady: ustalić, czy obraz jest natywnym, czy CLR](../../dotnet/how-to-determine-if-an-image-is-native-or-clr.md).
+
+**/CLR: pure** i **/CLR: Safe** — opcje kompilatora są używane w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r. Kod, który musi być "czysty" lub "bezpiecznej" powinny być przenoszone do języka C#.
+
+## <a name="see-also"></a>Zobacz także
+
+- [Opcje DUMPBIN](../../build/reference/dumpbin-options.md)

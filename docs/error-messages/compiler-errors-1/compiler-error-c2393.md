@@ -16,27 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efa8da496c6067381937820db365a5b37a19e843
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 057537c8efcf6e827d9ac9aaf36c0eace6d24156
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704033"
 ---
 # <a name="compiler-error-c2393"></a>C2393 błąd kompilatora
-"symbol": symbol per-appdomain nie może zostać alokowany w segmencie "segmentu"  
-  
- **/CLR: pure** i **/CLR: Safe** — opcje kompilatora zostały uznane za przestarzałe w programie Visual Studio 2015.  
-  
- Korzystanie z [elementu appdomain](../../cpp/appdomain.md) zmienne oznacza, że kompilacja z **/CLR: pure** lub **/CLR: Safe**, i bezpieczne lub czysty obraz nie może zawierać segmentów danych.  
-  
- Zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md) Aby uzyskać więcej informacji.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C2393.  
-  
-```  
-// C2393.cpp  
-// compile with: /clr:pure /c  
-#pragma data_seg("myseg")  
-int n = 0;   // C2393  
+
+> "*symbol*": symbol per-appdomain nie może zostać alokowany w segmencie "*segmentu*"
+
+## <a name="remarks"></a>Uwagi
+
+**/CLR: pure** i **/CLR: Safe** — opcje kompilatora są używane w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r.
+
+Korzystanie z [elementu appdomain](../../cpp/appdomain.md) zmienne oznacza, że kompilacja z **/CLR: pure** lub **/CLR: Safe**, i bezpieczne lub czysty obraz nie może zawierać segmentów danych.
+
+Zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../../build/reference/clr-common-language-runtime-compilation.md) Aby uzyskać więcej informacji.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład generuje C2393. Aby rozwiązać ten problem, nie należy tworzyć segmentu danych.
+
+```cpp
+// C2393.cpp
+// compile with: /clr:pure /c
+#pragma data_seg("myseg")
+int n = 0;   // C2393
 ```
