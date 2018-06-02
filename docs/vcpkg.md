@@ -14,11 +14,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca4c672000278fcfc00ba8c08a7a160faff151aa
-ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
+ms.openlocfilehash: af51ee7c6fa4e1243b400be58ac22ba833cfae80
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/21/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705626"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Menedżer pakietów C++ dla systemu Windows, Linux i MacOS
 
@@ -120,7 +121,7 @@ Uruchom **vcpkg integracji instalacji** skonfigurować Visual Studio, aby zlokal
 
 Teraz możesz #include nagłówki po prostu, wpisując folderu/nagłówka i funkcja automatycznego uzupełniania pomaga. Żadne dodatkowe kroki są wymagane do łączenia z biblioteki lub dodanie odwołania do projektu. Na poniższej ilustracji przedstawiono sposób odnajdowania nagłówki azure magazynu cpp w Visual Studio. vcpkg umieszcza jego nagłówków w **/ zainstalowano** podfolder partycjonowanego platformy docelowej. Na poniższym diagramie przedstawiono listę plików dołączanych w **/ was** podfolderze biblioteki:
 
-![vcpkg integracji Intellisense](media/vcpkg-intellisense.png "vcpkg i Intellisense")
+![vcpkg integracji IntelliSense](media/vcpkg-intellisense.png "vcpkg i IntelliSense")
 
 ### <a name="per-project"></a>W projekcie
 

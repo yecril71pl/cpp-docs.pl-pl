@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1447bcd0cb0a9bfff1d527f6a53eccf25e008f90
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0d4c4aeeaf79172950aae6d06c5e8a1246064246
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705689"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historia 2003 2015 zmian Visual C++
 
@@ -92,7 +93,7 @@ Po uaktualnieniu do nowej wersji programu Visual Studio, mogą wystąpić kompil
   
 -   **nowe i usunąć** w poprzednich wersjach biblioteki nowy operator zdefiniowane w implementacji i usuwania funkcji zostały wyeksportowane z biblioteki środowiska uruchomieniowego DLL (na przykład msvcr120.dll). Te funkcje operatorów są teraz zawsze połączone statycznie do Twojej plików binarnych, nawet w przypadku używania biblioteki środowiska uruchomieniowego bibliotek DLL.  
   
-     Nie jest to istotne zmiany kodu natywnego lub mieszane (/ clr), jednak kod skompilowany jako [/CLR: pure](../build/reference/clr-common-language-runtime-compilation.md), może to spowodować niepowodzenie skompilować kod. Jeśli Skompiluj kod jako/CLR: pure, należy dodać #include \<nowych > lub #include \<new.h > Aby uniknąć błędów kompilacji z powodu tej zmiany. Należy pamiętać, że/CLR: pure jest przestarzała w programie Visual Studio 2015 i może zostać usunięta w przyszłych wersjach. Kod, który musi być "czysty" powinny być przenoszone do języka C#.  
+     Nie jest to istotne zmiany kodu natywnego lub mieszane (/ clr), jednak kod skompilowany jako [/CLR: pure](../build/reference/clr-common-language-runtime-compilation.md), może to spowodować niepowodzenie skompilować kod. Jeśli Skompiluj kod jako/CLR: pure, należy dodać #include \<nowych > lub #include \<new.h > Aby uniknąć błędów kompilacji z powodu tej zmiany. Należy pamiętać, że/CLR: pure jest przestarzała w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r. Kod, który musi być "czysty" powinny być przenoszone do języka C#.  
   
 #### <a name="processh"></a>\<process.h >  
   

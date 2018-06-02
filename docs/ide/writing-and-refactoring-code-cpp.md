@@ -14,17 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 000428ce3975dab108387ddb598bddf4a89fcfdd
-ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
+ms.openlocfilehash: 977fc221a5a940e2446dbf0ede8445680218dc73
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705621"
 ---
 # <a name="writing-and-refactoring-code-c"></a>Zapisywanie i refaktoryzacji kodu (C++)
 
 Edytor kodu Visual C++ i IDE zapewniają wiele pomocy kodowania. Niektóre są unikatowe dla języka C++, a niektóre są zasadniczo takie same dla wszystkich języków Visual Studio. Aby uzyskać więcej informacji o funkcjach udostępnionego, zobacz [pisanie kodu w edytorze kodu i tekstu](/visualstudio/ide/writing-code-in-the-code-and-text-editor). Opcje dotyczące włączania i konfigurowania funkcji specyficznych dla języka C++ znajdują się w obszarze **narzędzia &#124; opcje &#124; Edytor tekstu &#124; C/C++**. Po wybraniu opcji, które chcesz ustawić, można uzyskać więcej pomocy, naciskając **F1** gdy okno jest aktywny. Dla opcji formatowania kodu ogólne, wpisz `Editor C++` do **szybkiego uruchamiania**.
 
-Eksperymentalne funkcje, które mogą lub nie może być zawarta w przyszłych wersjach programu Visual Studio, znajdują się w [eksperymentalne C++ Edytor tekstu](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental) okna dialogowego. W programie Visual Studio 2017 można włączyć **predykcyjnej Intellisense** w tym oknie dialogowym.
+Eksperymentalne funkcje, które mogą lub nie może być zawarta w przyszłych wersjach programu Visual Studio, znajdują się w [eksperymentalne C++ Edytor tekstu](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental) okna dialogowego. W programie Visual Studio 2017 można włączyć **predykcyjnej IntelliSense** w tym oknie dialogowym.
 
 ## <a name="adding-new-files"></a>Dodawanie nowych plików
 
@@ -42,7 +43,7 @@ IntelliSense jest nazwą zestawu funkcji, które zawierają wbudowane informacje
 
 ![C&#43; &#43; element członkowski listy rozwijanej](../ide/media/vs2015_cpp_statement_completion.png "vs2015_cpp_statement_completion")
 
-Aby uzyskać pełne informacje, zobacz [Intellisense dla programu Visual C++](/visualstudio/ide/visual-cpp-intellisense).
+Aby uzyskać pełne informacje, zobacz [IntelliSense dla programu Visual C++](/visualstudio/ide/visual-cpp-intellisense).
 
 ## <a name="insert-snippets"></a>Wstawienia fragmentów kodu
 

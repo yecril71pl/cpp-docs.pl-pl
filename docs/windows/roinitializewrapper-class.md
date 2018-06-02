@@ -1,7 +1,7 @@
 ---
 title: Roinitializewrapper — klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/20/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,11 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4a4479686d3ca591a9fdd1c0659549a2e0db6e1c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cac71857e6b472f11d1c9eaba48d181ea78fb456
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705595"
 ---
 # <a name="roinitializewrapper-class"></a>RoInitializeWrapper — Klasa
 Inicjuje środowiska uruchomieniowego systemu Windows.  
@@ -31,7 +32,7 @@ class RoInitializeWrapper
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- RoInitializeWrapper jest wygodne, która inicjuje środowiska uruchomieniowego systemu Windows i zwraca HRESULT, która wskazuje, czy operacja powiodła się.  
+ RoInitializeWrapper jest wygodne, która inicjuje środowiska uruchomieniowego systemu Windows i zwraca HRESULT, która wskazuje, czy operacja powiodła się. Ponieważ klasa destruktor wywoła `::Windows::Foundation::Uninitialize`, wystąpień `RoInitializeWrapper` musi być zadeklarowana w zakresie globalnym, ani najwyższego poziomu.  
   
 ## <a name="members"></a>Elementy członkowskie  
   

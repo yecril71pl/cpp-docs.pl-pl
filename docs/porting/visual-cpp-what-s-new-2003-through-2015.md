@@ -13,11 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ae41c373257202cb08b7f8760acac4ad14dff19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9778a9d456ebd0fed6bc36c2c631849bcbfe11d
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705608"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ co&#39;s nowe 2003 za pośrednictwem 2015
 
@@ -1936,7 +1937,7 @@ Kompilator ma fundamentalne zmiany w tej wersji.
 - natywne "64-bitowe i między kompilatory.
 - / analyze (analiza kodu Enterprise) dodano opcję kompilatora.
 - / bigobj — opcja kompilatora został dodany.
-- / CLR: pure, / CLR: Safe i: oldsyntax zostały dodane. (Później używane w programie Visual Studio 2015.)
+- / CLR: pure, / CLR: Safe i: oldsyntax zostały dodane. (Później przestarzałe w programie Visual Studio 2015 i usunięto w programie Visual Studio 2017 r.)
 - Przestarzałe — opcje kompilatora: wiele opcji kompilatora są przestarzałe w tej wersji; Aby uzyskać więcej informacji, zobacz przestarzałe — opcje kompilatora.
 - Podwójna konwersja bitowa adresów w kodzie/CLR, zostanie zmniejszona; Aby uzyskać więcej informacji, zobacz podwójna konwersja bitowa adresów (C++).
 - /EH (Model obsługi wyjątku) lub/EHS nie będzie można przechwytywać wyjątku, który jest uruchamiany z inną niż throw; Użyj/eha.

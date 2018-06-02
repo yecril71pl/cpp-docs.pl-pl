@@ -16,10 +16,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 19a49bf18721f605abe0c6e496d3532012c9c92c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33340401"
 ---
 # <a name="redistributing-the-mfc-library"></a>Redystrybuowanie biblioteki MFC
 Dynamiczne łącze aplikacji do biblioteki MFC, należy wykonać ponowną dystrybucję zgodne biblioteki MFC DLL. Na przykład jeśli aplikacja MFC jest zbudowany przy użyciu wersji biblioteki MFC, który jest dostarczany z programem Visual Studio 2015, należy ponownie rozesłać mfc140.dll lub mfc140u.dll, w zależności od tego, czy aplikacja jest kompilowany dla wąskie znaków lub obsługi formatu Unicode.  
