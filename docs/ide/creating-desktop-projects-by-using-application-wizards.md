@@ -21,10 +21,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5f4328747a594d18dd61631ddb930d8c59964452
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33334018"
 ---
 # <a name="creating-desktop-projects-by-using-application-wizards"></a>Tworzenie projektów wykorzystujących interfejs Pulpitu za pomocą kreatorów aplikacji
 Każdy typ projektu Visual C++ zawiera Kreatora aplikacji, który pomaga szybko i łatwo generować nowe projekty, stworzone na podstawie szablonu projektu.  Aby otworzyć Kreatora aplikacji, użyj **nowy projekt** okno dialogowe, aby określić właściwości projektu, takie jak nazwa projektu lub katalogu i rozwiązania której będą znajdować się projektu.  

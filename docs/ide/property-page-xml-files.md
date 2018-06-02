@@ -15,10 +15,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: fcee2c416fba6a959785826781aefd96b0d06d75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33339647"
 ---
 # <a name="property-page-xml-rule-files"></a>Pliki reguł XML strony właściwości
 Strony właściwości projektu w środowisku IDE są konfigurowane przez pliki XML w folderze VCTargets. Dokładnej ścieżki zależy od tego, które edition(s) programu Visual Studio są zainstalowane, a język produktu. Dla programu Visual Studio 2017 Enterprise Edition w języku angielskim, ścieżka jest `%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033`. Pliki XML opisują nazwy reguły, kategorii i poszczególnych właściwości, typ danych, wartości domyślne i jak mają być wyświetlane. Po ustawieniu właściwości w IDE nowa wartość jest przechowywane w pliku projektu.

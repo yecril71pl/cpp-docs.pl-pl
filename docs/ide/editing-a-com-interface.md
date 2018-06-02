@@ -19,10 +19,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: dd7a61593a1024c00c0fd0de6bd62ff3ee9323b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33338685"
 ---
 # <a name="editing-a-com-interface"></a>Edytowanie interfejsu COM
 Za pomocą poleceń menu skrótów widoku klasy, można zdefiniować nowej metody i właściwości dla interfejsów COM w projektach Visual C++. Ponadto w przyborniku można zdefiniować zdarzeń dla formantów ActiveX.  

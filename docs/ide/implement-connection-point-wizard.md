@@ -17,10 +17,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ef2f7efa92de3714170e403ea50b5f486c8367d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33323761"
 ---
 # <a name="implement-connection-point-wizard"></a>Kreator implementacji punktu połączenia
 Ten kreator implementuje punkt połączenia dla obiekt COM. Obiekt składnika (źródło) mogą uwidaczniać punktu połączenia dla własnej interfejsów lub dla dowolnego interfejsu wychodzących. Visual C++ i system Windows zarówno zapewniają biblioteki typu, w których interfejsy wychodzących. Każdy interfejs wychodzącej może być zaimplementowany przez klienta do obiektu (zbiornika).  

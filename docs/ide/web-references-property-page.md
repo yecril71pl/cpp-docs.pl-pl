@@ -20,10 +20,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 94f9dfa441fd98a91b15478eadc10eaa39a08687
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33328854"
 ---
 # <a name="web-references-property-page"></a>Strona właściwości Odwołania sieci Web
 **Odwołania sieci Web** strony właściwości określa sposób generowania klasy serwera proxy usługi XML sieci Web. Klasy serwera proxy usługi XML sieci Web zostanie wygenerowany, jeśli możesz dodać odwołania sieci web do projektu. Zobacz [Dodaj odwołanie sieci Web](http://msdn.microsoft.com/en-us/bdf05776-c591-40af-bfd7-e1e2aa1e87b5) Aby uzyskać więcej informacji.  
