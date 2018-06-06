@@ -17,11 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7bcc003811a747569f22f6b2603faf72096dd049
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 38f30c497fc8640b1f88f4ffb3fc6f14bed55a3e
+ms.sourcegitcommit: e3b4ef19b534a2ed48bb9091e5197a6e536f16c1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34814355"
 ---
 # <a name="ftmbase-class"></a>FtmBase — Klasa
 Reprezentuje obiekt opcja.  
@@ -36,7 +37,7 @@ class FtmBase : public Microsoft::WRL::Implements<
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji zobacz temat "IMarshal" w podrzędny "Interfejsy COM" w temacie "Odwołania COM" w bibliotece MSDN.  
+ Aby uzyskać więcej informacji, zobacz [runtimeclass — klasa](runtimeclass-class.md).  
   
 ## <a name="members"></a>Elementy członkowskie  
   

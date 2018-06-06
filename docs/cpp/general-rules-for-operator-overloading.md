@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e9cd1a0ba57b5a2f0d5afb2d02ff9c21b7e0b2c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d6912d410018966432ef66331354213bd70dfa8b
+ms.sourcegitcommit: e3b4ef19b534a2ed48bb9091e5197a6e536f16c1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705429"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34814342"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Zasady ogólne dotyczące przeciążania operatorów
 Następujące reguły ograniczają sposób implementacji przeciążonych operatorów. Jednak nie dotyczą one [nowe](../cpp/new-operator-cpp.md) i [usunąć](../cpp/delete-operator-cpp.md) operatory, które są przedstawione oddzielnie.  
@@ -55,7 +55,7 @@ Następujące reguły ograniczają sposób implementacji przeciążonych operato
   
 -   Operatory binarne deklarowane jako funkcje członkowskie przyjmują jeden argument; jeśli są zadeklarowane jako funkcje globalne, przyjmują dwa argumenty.  
   
--   Jeśli operator może służyć jako jednoargumentowy lub operator binarny (**&**, **\***, **+**, i **-**), można przeciążać każdego zastosowania osobno.  
+-   Jeśli operator może służyć jako jednoargumentowy lub operator binarny (__&__, __*__, __+__, i __-__), można przeciążać każdego zastosowania osobno.  
   
 -   Przeciążone operatory nie mogą mieć argumentów domyślnych.  
   

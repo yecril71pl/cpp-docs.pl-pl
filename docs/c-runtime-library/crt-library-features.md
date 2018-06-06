@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b0ccedc3a1794b34fce3ad773e44155f7602d3b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: f8ba56f0b4fa6d7d6ac56f3f118edeaad03643b5
+ms.sourcegitcommit: 0ce270566769cba76d763dd69b304a55eb375d01
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34704727"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799197"
 ---
 # <a name="crt-library-features"></a>Biblioteka CRT — Funkcje
 
@@ -113,9 +113,14 @@ W celu zapewnienia zgodności z binarnej więcej niż jeden plik DLL może zosta
 
 ## <a name="what-problems-exist-if-an-application-uses-more-than-one-crt-version"></a>Jakie problemy istnieje, jeśli aplikacja korzysta z więcej niż jedną wersję CRT?
 
-Jeśli masz więcej niż jeden plik DLL lub EXE, następnie może być więcej niż jeden CRT, czy korzystają z różnych wersji programu Visual C++. Na przykład statycznie łączenie CRT w wielu bibliotek DLL może stanowić ten sam problem. Ten problem z statycznych im monitory CRT deweloperzy zalecił kompilacji z **/ / MD** CRT biblioteki dll. Niepowodzenie z biblioteki DLL zasobów CRT granicy biblioteki DLL, mogą wystąpić problemy z niezgodnymi im monitory CRT i konieczne ponowne skompilowanie projektu za pomocą programu Visual C++.
+Każdy obrazu wykonywalnego (EXE lub DLL) może mieć własną statycznie połączone CRT lub dynamicznie połączyć CRT. Wersja CRT statycznie objęte lub ładowane dynamicznie przez określonego obrazu zależy od wersji narzędzi i biblioteki, który został skompilowany. Jeden proces może załadować wiele EXE i DLL obrazów z własną CRT. Każdy z tych im monitory CRT mogą użyć różnych przydzielania, może mieć inną strukturę wewnętrzną układów i może używać uzgodnienia innego magazynu. Oznacza to, że przydzielone pamięci, CRT zasobów lub klasy przekazany granicy DLL może spowodować problemy w zarządzania pamięcią, wewnętrzny obciążenie statyczne lub interpretacji układu. Na przykład: Jeśli klasa jest przydzielona w jednym pliku DLL, ale przekazany do i usunięty przez innego, używany jest których program wycofujący przydzielenia CRT? Błędy spowodowane może należeć do zakresu od niewielkie do natychmiast krytyczny, a w związku z tym bezpośrednie, transfer takich zasobów jest zalecane.
 
-Jeśli program używa więcej niż jedną wersję CRT, niektóre uwagę podczas przekazywania niektórych obiektów CRT (na przykład dojść do plików, ustawień regionalnych i zmiennych środowiskowych) poprzek granic DLL. Aby uzyskać więcej informacji na temat zagadnień związanych oraz sposobu ich rozwiązania zobacz [potencjalne błędy przekazywanie CRT obiektów między granic DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
+Wiele z tych problemów można uniknąć przy użyciu technologii aplikacji binarny interfejsu (ABI) zamiast tego, jak mają być stabilny i znalezienie. Projektowanie interfejsów eksportu biblioteki DLL do przekazywania informacji przez wartość lub do pracy w pamięci, która jest przekazany przez wywołującego, zamiast przydzielone lokalnie i zwracany do obiektu wywołującego. Kierowanie techniki umożliwia kopiowanie danych strukturalnych między obrazy wykonywalne. Hermetyzować zasoby lokalnie i Zezwalaj tylko na manipulowanie za pomocą dojścia lub funkcje, które można udostępniać klientom.
+
+Istnieje również możliwość uniknąć niektórych z tych problemów, jeśli obrazów w procesie używają tej samej wersji dynamicznie załadowanego CRT. W celu zapewnienia, że wszystkie składniki używana ta sama wersja biblioteki DLL z CRT, należy utworzyć je przy użyciu **/ / MD** opcji, a następnie użyć tych samych ustawień, a właściwość zestawu narzędzi kompilatora.
+
+Niektóre opieki jest niezbędny w przypadku programu przekazuje niektórych zasobów CRT (na przykład dojść do plików, ustawień regionalnych i zmiennych środowiskowych) poprzek granic DLL, nawet w przypadku korzystania z tej samej wersji CRT. Aby uzyskać więcej informacji na temat zagadnień związanych oraz sposobu ich rozwiązania zobacz [potencjalne błędy przekazywanie CRT obiektów między granic DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
+
 
 ## <a name="see-also"></a>Zobacz także
 

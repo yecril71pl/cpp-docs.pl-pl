@@ -19,11 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f563e318f2defcbf36139f1f6d49e3986db5f946
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ac1fac3c7f96c9f8d718efa54810f4155b1ddac5
+ms.sourcegitcommit: c0ffdff538eb961f786809eb547b35846190ee48
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34800089"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Wskazówki: Tworzenie standardowego programu C++ (C++)
 Visual C++ w programie Visual Studio zintegrowane środowisko programistyczne (IDE) służy do tworzenia programy Standard C++. Wykonując kroki opisane w tym przewodniku, można utworzyć projekt, Dodaj nowy plik do projektu, zmodyfikuj plik, aby dodać kod w języku C++, a następnie skompilować i uruchomić program przy użyciu [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
@@ -42,7 +43,7 @@ Visual C++ w programie Visual Studio zintegrowane środowisko programistyczne (I
   
 1.  Utwórz projekt poprzez wskazanie **nowy** na **pliku** menu, a następnie klikając pozycję **projektu**.  
   
-2.  W **Visual C++** okienko typy projektu, kliknij przycisk **Win32**, a następnie kliknij przycisk **aplikacji konsoli Win32**.  
+2.  W **Visual C++** okienko typy projektu, kliknij przycisk **Windows Desktop**, a następnie kliknij przycisk **aplikacji konsoli systemu Windows**.  
   
 3.  Wpisz nazwę dla projektu.  
   
@@ -50,11 +51,9 @@ Visual C++ w programie Visual Studio zintegrowane środowisko programistyczne (I
   
      Kliknij przycisk **OK** Aby utworzyć projekt.  
   
-4.  W **Kreator aplikacji Win32**, kliknij przycisk **dalej**, wybierz pozycję **pusty projekt**, a następnie kliknij przycisk **Zakończ**.  
+4.  Jeśli **Eksploratora rozwiązań** nie jest wyświetlany na **widoku** menu, kliknij przycisk **Eksploratora rozwiązań**.  
   
-5.  Jeśli **Eksploratora rozwiązań** nie jest wyświetlany na **widoku** menu, kliknij przycisk **Eksploratora rozwiązań**.  
-  
-6.  Dodaj nowy plik źródłowy do projektu, w następujący sposób.  
+5.  Dodaj nowy plik źródłowy do projektu, w następujący sposób.  
   
     1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **pliki źródłowe** folderu, wskaż **Dodaj**, a następnie kliknij przycisk **nowy element**.  
   
@@ -62,15 +61,15 @@ Visual C++ w programie Visual Studio zintegrowane środowisko programistyczne (I
   
      Plik .cpp pojawia się w folderze plików źródłowych w **Eksploratora rozwiązań**, a plik jest otwarty w edytorze programu Visual Studio.  
   
-7.  W pliku w edytorze wpisz prawidłowy program w języku C++, który używa standardowa biblioteka C++ lub skopiować jeden przykładowe programy i wklej go w pliku.  
+6.  W pliku w edytorze wpisz prawidłowy program w języku C++, który używa standardowa biblioteka C++ lub skopiować jeden przykładowe programy i wklej go w pliku.  
   
-8.  Zapisz plik.  
+7.  Zapisz plik.  
   
-9. Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**.  
+8. Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**.  
   
      **Dane wyjściowe** okno wyświetla informacje o postępie kompilacji, na przykład lokalizację dziennika kompilacji i komunikat, który wskazuje stan kompilacji.  
   
-10. Na **debugowania** menu, kliknij przycisk **uruchomić bez debugowania**.  
+9. Na **debugowania** menu, kliknij przycisk **uruchomić bez debugowania**.  
   
      Jeśli użyto przykładowy program okno polecenia zostanie wyświetlony i pokazuje, czy niektóre liczb całkowitych znajdują się w zestawie.  
   
