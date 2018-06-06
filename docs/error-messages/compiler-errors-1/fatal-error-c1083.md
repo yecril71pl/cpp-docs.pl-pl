@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d25914a6b391f54be5b4b60dbbf716436dc4d2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b014ccc46434fd0c3f13689e579ed4798ebcdb2
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569813"
 ---
 # <a name="fatal-error-c1083"></a>Błąd krytyczny C1083
 
@@ -106,6 +107,8 @@ Gdy konfigurujesz projekt tak, aby używał wstępnie skompilowanych nagłówkó
 
 - Plik został skompilowany przy użyciu innej **/ analyze** opcji kompilatora od wstępnej kompilacji nagłówków. Gdy są prekompilowanych nagłówków dla projektu, wszystkie powinny używać tego samego **/ analyze** ustawienia. Aby uzyskać więcej informacji, zobacz [/ analyze (analiza kodu)](../../build/reference/analyze-code-analysis.md).
 
+- Plik lub katalog został utworzony przez podsystem systemu Windows dla systemu Linux, na katalog uwzględniana wielkość liter jest włączona i przypadku określonego pliku lub ścieżka niezgodna z wielkością liter pliku na dysku lub ścieżki.
+
 - Plik, katalog lub dysk jest tylko do odczytu.
 
 - Visual Studio lub narzędzia wiersza polecenia nie masz wystarczających uprawnień do odczytu pliku lub katalogu. Może to nastąpić, na przykład, jeśli pliki projektu własność innego niż procesu uruchamiania programu Visual Studio lub narzędzia wiersza polecenia. Czasami ten problem można naprawić, uruchamiając program Visual Studio lub z wiersza polecenia dewelopera jako Administrator.
@@ -127,4 +130,4 @@ Aby uzyskać informacje dotyczące sposobu tworzenia projektów C/C++ w środowi
 
 ## <a name="see-also"></a>Zobacz także
 
-[Właściwości programu MSBuild](/visualstudio/msbuild/msbuild-properties)
+- [Właściwości programu MSBuild](/visualstudio/msbuild/msbuild-properties)

@@ -13,14 +13,22 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9c8180288374711db4e6d866c73a0bc8919caf2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8e7d3612cd306dc2235b9fb4e6051415cba699c5
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569797"
 ---
 # <a name="desktop-applications-visual-c"></a>Aplikacje klasyczne (Visual C++)
-A *aplikacją* w języku C++ jest aplikacji natywnej dostępnej pełny zestaw interfejsów API systemu Windows i albo działa w oknie lub w konsoli systemowej. Aplikacje w języku C++ można uruchomić w systemie Windows XP do systemu Windows 10 (chociaż systemu Windows XP jest już oficjalnie obsługiwana i istnieje wiele interfejsów API systemu Windows, które zostały wprowadzone od tego czasu).   Aplikacja różni się od aplikacji systemu Windows platformy Uniwersalnej, które można uruchomić na komputerach z systemem Windows 10, a także na konsoli XBox, Windows Phone, Surface Hub i innych urządzeniach. Aby uzyskać więcej informacji na temat pulpitu vs. Aplikacji platformy uniwersalnej systemu Windows, zobacz [Wybierz technologię](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
+A *aplikacją* w języku C++ jest aplikacji natywnej dostępnej pełny zestaw interfejsów API systemu Windows i albo działa w oknie lub w konsoli systemowej. Aplikacje w języku C++ można uruchomić w systemie Windows XP do systemu Windows 10 (chociaż systemu Windows XP jest już oficjalnie obsługiwana i istnieje wiele interfejsów API systemu Windows, które zostały wprowadzone od tego czasu).
+
+Aplikacja różni się od aplikacji systemu Windows platformy Uniwersalnej, które można uruchomić na komputerach z systemem Windows 10, a także na konsoli XBox, Windows Phone, Surface Hub i innych urządzeniach. Aby uzyskać więcej informacji na temat pulpitu vs. Aplikacji platformy uniwersalnej systemu Windows, zobacz [Wybierz technologię](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
+
+
+**Mostek pulpitu** systemu Windows 10 można spakować istniejących aplikacji pulpitu lub obiektu modelu COM jako aplikację platformy uniwersalnej systemu Windows, a także dodać funkcje platformy uniwersalnej systemu Windows, takich jak touch lub wywoływać interfejsy API z nowoczesny interfejs API systemu Windows ustaw. Można również dodać aplikacji platformy uniwersalnej systemu Windows do rozwiązania pulpitu w Visual Studio i pakiet je razem w jednym pakietu i komunikować się między nimi przy użyciu interfejsów API systemu Windows.  
+   
+W Visual Studio 2017 wersji 15,4 i nowszych można utworzyć projekt pakietu aplikacji systemu Windows do znacznego uproszczenia pracy pakowania istniejącej aplikacji klasycznych. Kilka ograniczenia są stosowane względem wywołuje jakie rejestru lub korzysta z interfejsów API aplikacji pulpitu, ale w wielu przypadkach można utworzyć ścieżki alternatywnego kodu do osiągnięcia podobne funkcje podczas uruchamiania w pakiecie aplikacji. Aby uzyskać więcej informacji, zobacz [Mostek pulpitu](/windows-uwp/porting/desktop-to-uwp-root).  
   
  **Terminologia**  
   

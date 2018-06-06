@@ -9,11 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f280ed28a65db4aa71ee6dea36521b1b8606b190
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 9fc79d438b61fce90faf1f8548671ec882c5099a
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569948"
 ---
 # <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>Nowości w języku Visual C++ w [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]
 
@@ -394,12 +395,10 @@ Program Visual Studio umożliwia obecnie programowanie i debugowanie aplikacji m
 Język C++ stanowi składnik opcjonalny obciążenia Aplikacja uniwersalna systemu Windows.  Obecnie uaktualnianie projektów C++ należy wykonywać ręcznie. Po otwarciu projektu przeznaczonego dla wersji 140 platformy uniwersalnej systemu Windows (UWP) w programie Visual Studio 2017 musisz wybrać zestaw narzędzi platformy w wersji 141 na stronach właściwości projektu, jeśli nie masz zainstalowanego programu Visual Studio 2015.
 
 ## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>Nowe opcje dla języka C++ na uniwersalnych platformy systemu Windows (UWP)
+Masz teraz nowe opcje zapisu i tworzenia pakietu aplikacji C++ dla platformy uniwersalnej systemu Windows i Sklepu Windows: infrastruktury pulpitu Mostek służy do pakietu z istniejącej aplikacji pulpitu lub obiektu COM dla wdrożenia przy użyciu systemu Windows Magazyn lub za pomocą istniejących kanałów za pośrednictwem ładowania bezpośredniego. Nowe funkcje w systemie Windows 10 umożliwiają dodawanie funkcji platformy uniwersalnej systemu Windows do aplikacji pulpitu na różne sposoby. Aby uzyskać więcej informacji, zobacz [Mostek pulpitu](/windows/uwp/porting/desktop-to-uwp-root).
 
-Masz teraz nowe opcje zapisu i tworzenia pakietu aplikacji C++ dla platformy uniwersalnej systemu Windows i Microsoft Store. Konwerter aplikacji pulpitu umożliwia pakietu istniejącej aplikacji klasycznych dla wdrożenia za pomocą Microsoft Store. Aby uzyskać więcej informacji, zobacz [przy użyciu środowiska uruchomieniowego Visual C++ w projekcie Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/) i [przełączyć aplikację pulpitu do systemu Windows platformy Uniwersalnej z Mostek pulpitu](/windows/uwp/porting/desktop-to-uwp-root).
-
-**Visual Studio 2017 wersji 15,5 cala**:
-
-A **projekt do tworzenia pakietów aplikacji systemu Windows** zostanie dodany szablon projektu, który obsługuje pakowania aplikacje przy użyciu mostka pulpitu. Jest dostępny w obszarze **Plik > Nowy > Projekt** w obszarze **zainstalowana > Visual C++ > platformy uniwersalnej systemu Windows** po zainstalowaniu obciążenia uniwersalnej aplikacji systemu Windows.
+**Visual Studio 2017, wersja 15.5**  
+A **projekt do tworzenia pakietów aplikacji systemu Windows** zostanie dodany szablon projektu, który jest znacznie ułatwione pracy pakietu aplikacji klasycznych przy użyciu mostka pulpitu. Jest on dostępny w obszarze **pliku | Nowy | Projekt | Zainstalowane | Visual C++ | Platforma uniwersalna systemu Windows**. Aby uzyskać więcej informacji, zobacz [pakietu dla aplikacji za pomocą programu Visual Studio (mostek pulpitu)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
 Podczas zapisywania nowego kodu, można teraz używać C + +/ WinRT, standardowe projekcji języka C++ realizowane wyłącznie w pliki nagłówków środowiska uruchomieniowego systemu Windows. Pozwala na obu autora, a korzystanie z interfejsów API środowiska wykonawczego systemu Windows przy użyciu dowolnego ze standardami kompilator języka C++. C + +/ WinRT umożliwia deweloperom C++ z dostępem do najwyższej jakości nowoczesnych interfejsu API systemu Windows. Aby uzyskać więcej informacji, zobacz [C + +/ WinRT dostępne w witrynie GitHub](https://moderncpp.com/).
 

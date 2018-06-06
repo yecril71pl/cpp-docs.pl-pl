@@ -1,7 +1,7 @@
 ---
 title: _get_osfhandle — | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 12/12/2017
+ms.date: 05/29/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -35,11 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b58bbeb7c0b52950509dc8005551ad706577fcf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 15bddcf3d94935f56fa2e23b6ebd0398ed379c54
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569852"
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
 
@@ -60,7 +61,7 @@ Istniejące deskryptorów plików.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Zwraca dojście do pliku systemu operacyjnego, jeśli *fd* jest nieprawidłowy. W przeciwnym razie program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, ta funkcja zwraca **INVALID_HANDLE_VALUE** (-1) i ustawia **errno** do **ebadf —**, wskazując nieprawidłowe dojście do pliku.
+Zwraca dojście do pliku systemu operacyjnego, jeśli *fd* jest nieprawidłowy. W przeciwnym razie program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, ta funkcja zwraca **INVALID_HANDLE_VALUE** (-1) i ustawia **errno** do **ebadf —**, wskazując nieprawidłowe dojście do pliku. Aby uniknąć ostrzeżenia kompilatora, gdy zostanie użyty wynik w procedur, które oczekują dojście do pliku Win32, należy rzutować go na **obsługi** typu.
 
 ## <a name="remarks"></a>Uwagi
 

@@ -1,7 +1,7 @@
 ---
 title: _open_osfhandle — | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 12/12/2017
+ms.date: 05/29/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -34,11 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: beb8c074beeb47274fbae21ea293d0ea55f28d36
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: af3783420389dc008e39c818c39406f0b2af8af5
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569839"
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
 
@@ -67,19 +68,18 @@ W przypadku powodzenia **_open_osfhandle —** zwraca deskryptor pliku wykonawcz
 
 ## <a name="remarks"></a>Uwagi
 
-**_Open_osfhandle —** funkcja przydziela deskryptora pliku wykonawcze języka C i kojarzy ją z określonego przez dojście do pliku systemu operacyjnego *osfhandle*. *Flagi* argument jest wyrażeniem liczby całkowitej z co najmniej jednego z manifestu stałe zdefiniowane w Fcntl.h. Gdy dwa lub więcej manifestu stałe są używane do formularza *flagi* argumentu, stałe są łączone z operator Alternatywy ( **&#124;** ).
+**_Open_osfhandle —** funkcja przydziela deskryptora pliku wykonawcze języka C i kojarzy ją z określonego przez dojście do pliku systemu operacyjnego *osfhandle*. Aby uniknąć ostrzeżenia kompilatora, *osfhandle* argumentów **obsługi** do **intptr_t —**. *Flagi* argumentu wyrażeniem liczby całkowitej z jedną lub więcej z manifestu stałe zdefiniowane w \<fcntl.h >. Gdy dwa lub więcej manifestu stałe są używane do formularza *flagi* argumentu, stałe są łączone z operator Alternatywy ( **&#124;** ).
 
-Fcntl.h definiuje następujące stałe manifestu:
+Te manifestu stałe są zdefiniowane w \<fcntl.h >:
 
-**\_O\_APPEND** umieszcza wskaźnik pliku na koniec pliku przed każdej operacji zapisu.
+|||
+|-|-|
+**\_O\_DOŁĄCZANIA**|Określa położenie pliku wskaźnik na koniec pliku przed każdej operacji zapisu.
+**\_O\_RDONLY**|Otwiera plik tylko odczytywanie.
+**\_O\_TEXT**|Otwiera plik w trybie tekstowym (translacji).
+**\_O\_WTEXT**|Otwiera plik w trybie Unicode (przetłumaczonego UTF-16).
 
-**\_O\_RDONLY** otwiera plik do odczytu tylko.
-
-**\_O\_tekst** otwiera plik w trybie tekstowym (translacji).
-
-**\_O\_WTEXT** otwiera plik w trybie Unicode (przetłumaczonego UTF-16).
-
-Można zamknąć pliku, która została otwarta z **_open_osfhandle —**, wywołaj [ \_zamknąć](close.md). Dojście do pliku podstawowego systemu operacyjnego jest również zamknięte przez wywołanie do **_zamknij**, więc nie jest konieczne do wywołania funkcji Win32 **CloseHandle** w dojściu do oryginalnego. Jeśli właścicielem jest deskryptorów plików **pliku &#42;**  strumienia, wywołując [fclose —](fclose-fcloseall.md) na tej **pliku &#42;**  strumienia powoduje zamknięcie deskryptorów plików i dojście do podstawowej. W takim przypadku nie wywołuj **_zamknij** na deskryptorów plików.
+**_Open_osfhandle —** wywołania przesyła własność dojście do pliku Win32 do deskryptorów plików. Można zamknąć pliku, która została otwarta z **_open_osfhandle —**, wywołaj [ \_zamknąć](close.md). Dojście do pliku podstawowego systemu operacyjnego jest również zamknięte przez wywołanie do **_zamknij**, więc nie jest konieczne do wywołania funkcji Win32 **CloseHandle** w dojściu do oryginalnego. Jeśli właścicielem jest deskryptorów plików **pliku &#42;**  strumienia, wywołując [fclose —](fclose-fcloseall.md) na tej **pliku &#42;**  strumienia powoduje zamknięcie deskryptorów plików i dojście do podstawowej. W takim przypadku nie wywołuj **_zamknij** na deskryptorów plików.
 
 ## <a name="requirements"></a>Wymagania
 
