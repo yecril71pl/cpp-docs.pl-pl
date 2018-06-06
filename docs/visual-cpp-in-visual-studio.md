@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d4f09ebe0cfaca9bb742baa902a256ac0f92996
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b43f9ac9edb0d19af4002bb839f857ae71ad4a11
+ms.sourcegitcommit: 0bc67d40aa283be42f3e1c7190d6a5d9250ecb9b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34762080"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ w programie Visual Studio
 
@@ -143,7 +144,7 @@ Narzędzie wiersza polecenia vcpkg można użyć do znacznego uproszczenia odnaj
 [Standard C++](http://isocpp.org/)<br/>
 Dowiedz się o języku C++, uzyskaj omówienie nowoczesnego języka C++, znajdź łącza do książek, artykułów, rozmów i imprez
 
-[Dowiedz się, Visual C++](http://msdn.microsoft.com/vstudio/hh386302.aspx)<br/>
+[Dowiedz się, Visual C++](build/vscpp-step-1-create.md)<br/>
 Rozpocznij naukę języka C++.
 
 ## <a name="see-also"></a>Zobacz także

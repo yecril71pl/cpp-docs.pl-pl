@@ -1,7 +1,7 @@
 ---
 title: x64 (amd64) lista funkcji wewnętrznych | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 1/02/2018
+ms.date: 06/01/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -15,11 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9412d7f0d464c6d8b795214cba900f1ae24ab27
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76fc614bae4e94ddfd0c2245971315be5f7e5ddf
+ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753698"
 ---
 # <a name="x64-amd64-intrinsics-list"></a>Lista funkcji wewnętrznych x64 (amd64)
 
@@ -31,13 +32,13 @@ Aby uzyskać informacje o poszczególnych funkcjach wewnętrznych, zapoznaj się
 
 - [Przewodnik funkcje wewnętrzne Intel](https://software.intel.com/sites/landingpage/IntrinsicsGuide). Użyj pola wyszukiwania, aby znaleźć określone funkcje wewnętrzne.
 
-- [Podręczniki deweloperów oprogramowania architektur 64 i IA-32 Intel](https://software.intel.com/articles/intel-sdm)
+- [Podręczniki deweloperów oprogramowania architektur 64 i IA-32 Intel](https://go.microsoft.com/fwlink/p/?LinkID=510021)
 
-- [Dokumentacja programowania Intel architektura instrukcji zestawu rozszerzenia](https://software.intel.com/en-us/isa-extensions)
+- [Dokumentacja programowania Intel architektura instrukcji zestawu rozszerzenia](https://go.microsoft.com/fwlink/p/?linkid=874960)
 
-- [Intel AVX](https://www.intel.com/content/www/us/en/architecture-and-technology/avx-512-overview.html)
+- [Wprowadzenie do Intel Advanced Vector Extensions](https://go.microsoft.com/fwlink/p/?linkid=874961)
 
-- [Przewodniki Developer AMD, instrukcje i dokumenty ISA](https://developer.amd.com/resources/developer-guides-manuals/)
+- [Przewodniki Developer AMD, instrukcje i dokumenty ISA](https://go.microsoft.com/fwlink/p/?linkid=874958)
 
 W poniższej tabeli wymieniono funkcje wewnętrzne dostępne na x64 procesorów. Kolumna technologii zawiera zestaw instrukcji obsługi technicznej. Użyj [__cpuid](../intrinsics/cpuid-cpuidex.md) wewnętrznego, aby określić zestaw instrukcji obsługi w czasie wykonywania. W przypadku dwóch wpisów w jednym wierszu, reprezentują one różne punkty wejścia dla tego samego wewnętrznej. [1] wskazuje, że wewnętrznej jest dostępna tylko na procesory AMD. [2] wskazuje, że wewnętrznej jest dostępna tylko na procesory Intel. [3] wskazuje, że makro jest prototypu. Nagłówek wymaganych przez prototypu funkcji znajduje się w nagłówku kolumny. Nagłówek intrin.h zawiera immintrin.h i ammintrin.h dla uproszczenia.
 

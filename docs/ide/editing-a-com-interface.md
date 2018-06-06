@@ -22,7 +22,7 @@ ms.openlocfilehash: dd7a61593a1024c00c0fd0de6bd62ff3ee9323b3
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33338685"
 ---
 # <a name="editing-a-com-interface"></a>Edytowanie interfejsu COM

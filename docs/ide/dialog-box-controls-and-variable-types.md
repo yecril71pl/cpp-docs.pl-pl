@@ -20,7 +20,7 @@ ms.openlocfilehash: f2fbae37072f50898181334a9059a7dc9c6a83a9
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33335068"
 ---
 # <a name="dialog-box-controls-and-variable-types"></a>Formanty okna dialogowego i typy zmiennych

@@ -22,7 +22,7 @@ ms.openlocfilehash: 2773c38561a36ab72dfe33dccc5d98ea9d09ebce
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33326475"
 ---
 # <a name="adding-a-generic-c-class"></a>Dodawanie klasy ogólnej C++

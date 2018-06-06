@@ -14,7 +14,7 @@ ms.openlocfilehash: 7a064527f6afcbf91be3fb4e51180be647c1f506
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33339816"
 ---
 # <a name="rename"></a>Zmień nazwę

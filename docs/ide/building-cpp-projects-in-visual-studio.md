@@ -20,7 +20,7 @@ ms.openlocfilehash: a7008e7fe670471301968482fbd4c6c758f0ff5e
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33340505"
 ---
 # <a name="building-c-projects-in-visual-studio"></a>Kompilowanie projektów C++ w Visual Studio

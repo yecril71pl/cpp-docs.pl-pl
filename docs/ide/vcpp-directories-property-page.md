@@ -27,7 +27,7 @@ ms.openlocfilehash: 3acaccff2e2764f4fd7f6f4815f5721f0ba845a3
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33336085"
 ---
 # <a name="vc-directories-property-page-windows"></a>VC ++ strona właściwości katalogów (system Windows)

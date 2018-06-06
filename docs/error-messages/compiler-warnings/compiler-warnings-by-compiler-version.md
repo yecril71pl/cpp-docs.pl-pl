@@ -1,7 +1,7 @@
 ---
 title: Ostrzeżenia kompilatora w wersji kompilatora | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 01/31/2018
+ms.date: 05/30/2018
 ms.technology:
 - devlang-cpp
 ms.topic: error-reference
@@ -14,15 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 789121e3adb42cb74087339bb33bb82cb7604a10
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e40de8aa08ae12bb0389a113be4d6cbd51196f12
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34704740"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Ostrzeżenia kompilatora w wersji kompilatora
 
-Kompilator można pominąć, ostrzeżeń, które zostały wprowadzone po wersji przy użyciu [/Wv](../../build/reference/compiler-option-warning-level.md) — opcja kompilatora. Jest to przydatne do zarządzania procesu kompilacji podczas wprowadzenie nowej wersji zestawu narzędzi, a chcesz tymczasowo pominąć nowego ostrzeżenia. Ta opcja nie odrzuca nowe komunikaty o błędach. Nie zaleca się Pomiń wszystkie ostrzeżenia nowe trwale! Zaleca się zawsze kompilacji na najwyższym poziomie ostrzeżenie regularne, __/W4__i Usuń __/Wv__ opcja tak szybko, jak to możliwe w kompilacji. 
+Kompilator można pominąć, ostrzeżeń, które zostały wprowadzone po wersji przy użyciu [/Wv](../../build/reference/compiler-option-warning-level.md) — opcja kompilatora. Jest to przydatne do zarządzania procesu kompilacji podczas wprowadzenie nowej wersji zestawu narzędzi, a chcesz tymczasowo pominąć nowego ostrzeżenia. Ta opcja nie odrzuca nowe komunikaty o błędach. Nie zaleca się Pomiń wszystkie ostrzeżenia nowe trwale! Zaleca się zawsze kompilacji na najwyższym poziomie ostrzeżenie regularne, __/W4__i Usuń __/Wv__ opcja tak szybko, jak to możliwe w kompilacji.
 
 Te wersje kompilatora zostały wprowadzone nowe ostrzeżenia:
 
@@ -39,26 +40,36 @@ Te wersje kompilatora zostały wprowadzone nowe ostrzeżenia:
 | Visual C++ 2015 Update 1 | 19.00.23506.0 |
 | Visual C++ 2015 Update 2 | 19.00.23918.0 |
 | Visual C++ 2015 Update 3 | 19.00.24215.1 |
-| Visual C++ 2017 RTM | 19.10.24903.0 |
-| Visual C++ 2017 wersji 15.1 | 19.10.25017.0 |
+| Visual C++ 2017 RTM | 19.10.25017.0 |
 | Visual C++ 2017 wersji 15 ustęp 3 | 19.11.25506.0 |
-| Visual C++ 2017 wersji 15,5 cala | 19.12.25827.0 |
+| Visual C++ 2017 wersji 15,5 cala | 19.12.25830.0 |
+| Visual C++ 2017 wersji 15,6 | 19.13.26128.0 |
+| Visual C++ 2017 wersji 15.7 | 19.14.26428.0 |
 
 Można określić tylko główny numer, liczby główne i pomocnicze lub głównych i pomocniczych oraz numery do kompilacji __/Wv__ opcji. Kompilator raporty są wszystkie ostrzeżenia, które odpowiadają wersji, które zaczynają się od określonej liczby i pomija wszystkie ostrzeżenia dla w wersjach nowszych niż określona liczba. Na przykład __/Wv:17__ raporty wszystkie ostrzeżenia wprowadzone w tym miejscu lub przed dowolnej wersji programu Visual Studio 2012 i pomija wszystkie ostrzeżenia wprowadzone za pomocą dowolnego kompilatora z programu Visual Studio 2013 (wersja 18) lub nowszym. Aby pominąć ostrzeżenia wprowadzone w programie Visual Studio 2015 update 2 i później, można użyć __/Wv:19.00.23506__. Użyj __/Wv:19.11__ zgłoszenia wszystkie ostrzeżenia wprowadzone w dowolnej wersji programu Visual Studio przed Visual Studio 2017 wersji 15,5 cala, ale pomija ostrzeżenia wprowadzone w Visual Studio 2017 wersji 15.5 i nowszych.
 
 W poniższych sekcjach wymieniono ostrzeżenia wprowadzone przez każda wersja programu Visual C++, który można pominąć przy użyciu __/Wv__ — opcja kompilatora. __/Wv__ opcja pomija ostrzeżenia, które nie są wyświetlane, które przed powstaniem określona wersji kompilatora.
 
-## <a name="warnings-introduced-in-visual-c-2017-version-155-compiler-version-1912258270"></a>Ostrzeżenia wprowadzone w Visual C++ 2017 wersji 15,5 cala (wersja kompilatora 19.12.25827.0)
+## <a name="warnings-introduced-in-visual-c-2017-version-157-compiler-version-1914264280"></a>Ostrzeżenia wprowadzone w Visual C++ 2017 wersji 15.7 (wersja kompilatora 19.14.26428.0)
 
-Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:19.11__.
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:19.13__.
+
+|||
+|-|-|
+C4642|"*problem*": nie można zaimportować ograniczenia dla parametru ogólnego "*parametru*"
+C5045|Kompilator powoduje wstawienie Spectre środki zaradcze dla obciążenia pamięci, jeśli przełącznik /Qspectre określony
+
+## <a name="warnings-introduced-in-visual-c-2017-version-156-compiler-version-1913261280"></a>Ostrzeżenia wprowadzone w Visual C++ 2017 wersji 15,6 (wersja kompilatora 19.13.26128.0)
+
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:19.12__.
 
 |||
 |-|-|
 C5044|Argument opcji wiersza polecenia *opcji* wskazuje na ścieżkę "*ścieżka*" nie istnieje
 
-## <a name="warnings-introduced-in-visual-c-2017-version-153-compiler-version-1911255060"></a>Ostrzeżenia wprowadzone w Visual C++ 2017 wersji 15 ustęp 3 (wersja kompilatora 19.11.25506.0)
+## <a name="warnings-introduced-in-visual-c-2017-version-155-compiler-version-1912258300"></a>Ostrzeżenia wprowadzone w Visual C++ 2017 wersji 15,5 cala (wersja kompilatora 19.12.25830.0)
 
-Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:19.10__.
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:19.11__.
 
 |||
 |-|-|
@@ -70,9 +81,9 @@ C5041|"*definicji*": definicja wiersza dla elementu członkowskiego danych staty
 C5042|"*deklaracji*": deklaracje funkcji w zakresie bloku nie może być określony wbudowany w standardu C++; Usuń specyfikatora "inline"
 C5043|"*specyfikacji*": specyfikacja wyjątku jest niezgodna z poprzednią deklaracją
 
-## <a name="warnings-introduced-in-visual-c-2017-version-151-compiler-version-1910250170"></a>Ostrzeżenia wprowadzone w Visual C++ 2017 wersji 15.1 (wersja kompilatora 19.10.25017.0)
+## <a name="warnings-introduced-in-visual-c-2017-version-153-compiler-version-1911255060"></a>Ostrzeżenia wprowadzone w Visual C++ 2017 wersji 15 ustęp 3 (wersja kompilatora 19.11.25506.0)
 
-Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:19.10.24903__.
+Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:19.10__.
 
 |||
 |-|-|
@@ -91,7 +102,7 @@ C5036|varargs funkcji konwersja wskaźnika podczas kompilowania przy użyciu /hy
 C5037|"*funkcji członkowskiej*": definicja wiersza elementu członkowskiego szablonu klasy nie może mieć argumentów domyślnych
 C5038|element członkowski danych "*Członek1*"zostanie zainicjowana po elemencie członkowskim danych"*member2*"
 
-## <a name="warnings-introduced-in-visual-c-2017-rtm-compiler-version-191024903"></a>Ostrzeżenia wprowadzone w Visual C++ 2017 RTM (wersja kompilatora 19.10.24903)
+## <a name="warnings-introduced-in-visual-c-2017-rtm-compiler-version-1910250170"></a>Ostrzeżenia wprowadzone w Visual C++ 2017 RTM (wersja kompilatora 19.10.25017.0)
 
 Te ostrzeżenia i wszystkie ostrzeżenia w nowszych wersjach są pomijane przy użyciu opcji kompilatora __/Wv:19.00__.
 
@@ -164,15 +175,15 @@ C4498|użyto niestandardowego rozszerzenia: "*rozszerzenia*"
 C4499|"*specjalizacji*": jawna specjalizacja nie może mieć klasy magazynu (zignorowano)
 C4576|Wpisz ujętego w nawiasy, a następnie lista inicjalizatora jest składnia konwersji typu jawnego niestandardowych
 C4577|słowo kluczowe "noexcept" używane z nie określając; trybu obsługi wyjątków Zakończenie na wyjątku nie jest gwarantowana. Określ/ehsc
-C4578|"abs": konwersja z "*typu*"do"*typu*", możliwa utrata danych (Czy chodziło Ci o wywołania "*nazwa*" lub do #include <cmath>?)
+C4578|"abs": konwersja z "*typu*"do"*typu*", możliwa utrata danych (Czy chodziło Ci o wywołania "*nazwa*" lub do #include \<cmath >?)
 C4582|"*typu*": Konstruktor nie jest wywoływany niejawnie
 C4583|"*typu*": destruktor nie jest wywoływany niejawnie
 C4587|"*typu*": Zmiana zachowania: konstruktor jest nie już wywoływany niejawnie
 C4588|"*typu*": Zmiana zachowania: destruktor jest nie już wywoływany niejawnie
 C4589|Konstruktor klasy abstrakcyjnej*typu*"ignoruje inicjatora w przypadku wirtualnej klasy podstawowej"*typu*"
-C4591|limit głębokości wywołań "constexpr" *numer* Przekroczono (/ constexpr: DEPTH<NUMBER>)
+C4591|limit głębokości wywołań "constexpr" *numer* Przekroczono (/ constexpr: DEPTH\<liczba >)
 C4592|"*typu*": symbol zostanie dynamicznie zainicjowany (ograniczenie implementacji)
-C4593|"*typu*": "constexpr" wywołanie oceny krok limit *wartość* przekroczony; Użyj Steps<NUMBER> Aby zwiększyć limit
+C4593|"*typu*": "constexpr" wywołanie oceny krok limit *wartość* przekroczony; Użyj Steps\<numer > Aby zwiększyć limit
 C4647|Zmiana zachowania: __is_pod (*typu*) ma inną wartość w poprzednich wersjach
 C4648|Atrybut standardowy "carries_dependency" zostanie zignorowany.
 C4649|atrybuty są ignorowane w tym kontekście
@@ -377,10 +388,10 @@ C4633|Komentarz dokumentu XML*opis*: błąd: *opis*
 C4634|Komentarz dokumentu XML*opis*: nie można zastosować: *opis*
 C4635|Komentarz dokumentu XML*opis*: nieprawidłowo sformułowany kod XML: *opis*
 C4636|Komentarz dokumentu XML*opis*: tag wymaga niepustym "*opis*" atrybutu.
-C4637|Komentarz dokumentu XML*opis*: <include> tag odrzucone. *Opis elementu*
+C4637|Komentarz dokumentu XML*opis*: \<obejmują > tag odrzucone. *Opis elementu*
 C4638|Komentarz dokumentu XML*opis*: odwołanie do nieznanego symbolu "*opis*".
 C4639|Błąd oprogramowania MSXML, nie będą przetwarzane komentarze dokumentu XML. *Opis elementu*
-C4641|Komentarz dokumentu XML ma niejednoznaczne odwołanie: 
+C4641|Komentarz dokumentu XML ma niejednoznaczne odwołanie:
 C4678|Klasa podstawowa*deklaracji*"jest mniej dostępny niż"*nazwa*"
 C4679|"*opis*": nie można zaimportować elementu członkowskiego
 C4687|"*typu*": zapieczętowana klasa abstrakcyjna nie może implementować interfejsu "*typu*"
@@ -625,7 +636,8 @@ C4996|"*problem*": *opis*
 C4997|"*typu*": klasa coclass nie implementuje interfejsu COM lub pseudointerfejsu
 C4998|Nie można zrealizować oczekiwania: *opis*(*numer*)
 
-## <a name="see-also"></a>Zobacz też
-[Opcja kompilatora /WV](../../build/reference/compiler-option-warning-level.md)
-[kompilatora ostrzeżeń, które są domyślnie wyłączone](../../preprocessor/compiler-warnings-that-are-off-by-default.md)
-[ostrzeżenie](../../preprocessor/warning.md)
+## <a name="see-also"></a>Zobacz także
+
+- [/WV — opcja kompilatora](../../build/reference/compiler-option-warning-level.md)
+- [Są domyślnie wyłączone ostrzeżenia kompilatora](../../preprocessor/compiler-warnings-that-are-off-by-default.md)
+- [ostrzeżenie](../../preprocessor/warning.md)

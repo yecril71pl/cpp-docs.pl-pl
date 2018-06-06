@@ -1,7 +1,7 @@
 ---
 title: Określanie niestandardowych narzędzi kompilacji | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 12/28/2017
+ms.date: 06/05/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b8fc10d2a94ab4b26a47991d3dc8923afb28ca3
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: a880d8cac05ea662feafa4c309f70bb91179fb2c
+ms.sourcegitcommit: 6784c1d5081dbe4d8119379647a34666328e1fdf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "33335565"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34798934"
 ---
 # <a name="specify-custom-build-tools"></a>Określ niestandardowe narzędzia kompilacji
 
@@ -68,7 +68,7 @@ Aby uzyskać ogólne informacje o niestandardowych narzędzi kompilacji i niesta
 
    - W **dane wyjściowe**, określ nazwę pliku wyjściowego. Jest to wymagane wpis; Narzędzie niestandardowej kompilacji bez wartości dla tej właściwości, nie będzie działać. Jeśli narzędzie niestandardowej kompilacji ma więcej niż jedno wyjście, Rozdziel nazwy plików średnikami.
 
-      Nazwę pliku wyjściowego powinny być takie same, jak określono w **wiersza polecenia** właściwości. System kompilacji projektu Szukaj pliku, a następnie sprawdź daty. Jeśli plik wyjściowy jest nowszy niż plik wejściowy lub jeśli plik wyjściowy nie zostanie znaleziony, uruchomienie narzędzia kompilacji niestandardowej. Jeśli wszystkie z **dodatkowe zależności** pliki są starsze niż pliku wejściowego i pliku wejściowego jest starsza niż określona w pliku **dane wyjściowe** właściwości niestandardowego narzędzia kompilacji nie zostało uruchomione.
+      Nazwę pliku wyjściowego powinny być takie same, jak określono w **wiersza polecenia** właściwości. System kompilacji projektu Szukaj pliku, a następnie sprawdź daty. Jeśli plik wyjściowy jest starszy niż plik wejściowy lub jeśli plik wyjściowy nie zostanie znaleziony, uruchomienie narzędzia kompilacji niestandardowej. Jeśli wszystkie z **dodatkowe zależności** pliki są starsze niż pliku wejściowego i pliku wejściowego jest starsza niż określona w pliku **dane wyjściowe** właściwości niestandardowego narzędzia kompilacji nie zostało uruchomione.
 
 Jeśli chcesz, aby system kompilacji do działania na plik wyjściowy wygenerowany przez narzędzie niestandardowej kompilacji, użytkownik musi ręcznie dodać do projektu. Narzędzie niestandardowej kompilacji spowoduje zaktualizowanie pliku podczas kompilacji.
 

@@ -30,7 +30,7 @@ ms.openlocfilehash: 5f87518c23848cea91a3e3c48361aa0a63fa88a2
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33330807"
 ---
 # <a name="midl-property-pages-advanced"></a>Strony właściwości MIDL: zaawansowane

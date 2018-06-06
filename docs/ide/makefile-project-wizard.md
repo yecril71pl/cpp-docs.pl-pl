@@ -21,7 +21,7 @@ ms.openlocfilehash: b4ea6619804c4215ecb53fa0e92a2b12bbdc5e31
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33334402"
 ---
 # <a name="makefile-project-wizard"></a>Kreator projektu pliku reguł dla programu make
