@@ -16,7 +16,7 @@ ms.openlocfilehash: 6fb23d2c7275788b05fe4450613770c268ca6c64
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34705702"
 ---
 # <a name="makefile-project-properties-linux-c"></a>Właściwości projektu pliku reguł programu make (Linux C++)

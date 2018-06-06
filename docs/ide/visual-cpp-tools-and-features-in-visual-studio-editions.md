@@ -20,7 +20,7 @@ ms.openlocfilehash: a5eace3ef3cfd07847c995151554ba70ca23f820
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33337252"
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Narzędzia Visual C++ i funkcji w wersjach programu Visual Studio

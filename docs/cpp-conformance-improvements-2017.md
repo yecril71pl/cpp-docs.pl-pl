@@ -10,11 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fd640b838c10e010cf2ea028d5f693cd2e5ba14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7c4e58a651129e1f3855ad9e32c5b70fa2527ab5
+ms.sourcegitcommit: 0bc67d40aa283be42f3e1c7190d6a5d9250ecb9b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34762096"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-and-157improvements157"></a>Ulepszenia zgodność języka C++ w wersji Visual Studio 2017 15.0, [15 ustęp 3](#improvements_153), [15,5 cala](#improvements_155), [15,6](#improvements_156), i [15.7](#improvements_157)
 
@@ -1581,6 +1582,46 @@ D<int> d;
 ```
 
 Aby naprawić błąd, należy zmienić wyrażenie B() b\<T > ().
+
+### <a name="constexpr-aggregate-initialization"></a>Inicjalizacja agregacji constexpr
+
+Poprzednie wersje kompilatora C++ nieprawidłowo obsługiwane Inicjalizacja agregująca constexpr; Nieprawidłowy kod, w której ma za dużo elementów listy inicjowania agregacji, a utworzonej dla niego nieprawidłowego kodu zostanie zaakceptowane. Następujący kod jest przykładem takiego kodu: 
+
+```cpp
+#include <array>
+struct X {
+    unsigned short a;
+    unsigned char b;
+};
+
+int main() {
+    constexpr std::array<X, 2> xs = {
+        { 1, 2 },
+        { 3, 4 }
+    };
+    return 0;
+}
+
+```
+
+W wersji Visual Studio 2017 15.7 z aktualizacją 3 lub później, poprzedni przykład teraz zgłasza *C2078 zbyt wiele inicjatory*. Poniższy przykład pokazuje, jak naprawić kod. Podczas inicjowania `std::array` zagnieżdżonych nawiasu klamrowego init list, nadaj wewnętrzny tablicy nawiasach — lista własny:
+
+```cpp
+#include <array>
+struct X {
+    unsigned short a;
+    unsigned char b;
+};
+
+int main() {
+    constexpr std::array<X, 2> xs = {{ // note double braces
+        { 1, 2 },
+        { 3, 4 }
+    }}; // note double braces
+    return 0;
+}
+
+```
 
 ## <a name="see-also"></a>Zobacz także
 

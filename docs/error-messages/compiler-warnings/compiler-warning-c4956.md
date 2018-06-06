@@ -20,7 +20,7 @@ ms.openlocfilehash: be92eb948e31a0a5367f92f5c2ed59baac2bd39b
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34703707"
 ---
 # <a name="compiler-warning-c4956"></a>C4956 ostrzeżenia kompilatora

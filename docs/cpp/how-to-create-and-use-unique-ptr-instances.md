@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82cf4fb475f9c89a4a088cac9d5ee0e1231d436e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4562fcb738cc7f692c1bffe1b4b06e413392dd60
+ms.sourcegitcommit: ee9fb774e82dfbda1dfaeb197aed36b97e408978
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34755774"
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>Porady: tworzenie wystąpień unique_ptr i korzystanie z nich
 A [unique_ptr](../standard-library/unique-ptr-class.md) udostępniaj go. Nie można skopiować do innego `unique_ptr`, przekazany przez wartość do funkcji lub używane w dowolny algorytm standardowa biblioteka C++ wymagającego kopie ma zostać wykonane. A `unique_ptr` tylko mogą zostać przeniesione. Oznacza to, że własności zasobów pamięci jest przenoszona do innego `unique_ptr` i oryginalny `unique_ptr` nie jest właścicielem. Zalecamy, aby ograniczyć obiekt do jednego właściciela, ponieważ wiele własności zwiększa złożoność logiki programu. W związku z tym wskaźnika inteligentnego dla obiekt zwykły C++, użyj `unique_ptr`, i kiedy utworzyć `unique_ptr`, użyj [make_unique](../standard-library/memory-functions.md#make_unique) funkcji pomocnika.  
@@ -25,7 +26,7 @@ A [unique_ptr](../standard-library/unique-ptr-class.md) udostępniaj go. Nie mo�
   
  ![Przeniesienie własności unikatowego&#95;ptr](../cpp/media/unique_ptr.png "unique_ptr")  
   
- `unique_ptr` jest zdefiniowany w `<memory>` nagłówka w standardowej bibliotece C++. Jest dokładnie wydajnym jako wskaźnik pierwotnych i mogą być używane w kontenerach standardowa biblioteka C++. Dodanie `unique_ptr` wystąpień do kontenerów standardowa biblioteka C++ jest wydajne ponieważ Konstruktor przenoszenia obiektu `unique_ptr` eliminuje potrzebę stosowania operacji kopiowania.  
+ `unique_ptr` jest zdefiniowany w `<memory>` nagłówka w standardowej bibliotece C++. Jest dokładnie tak efektywne jako wskaźnik pierwotnych i mogą być używane w kontenerach standardowa biblioteka C++. Dodanie `unique_ptr` wystąpień do kontenerów standardowa biblioteka C++ jest wydajne ponieważ Konstruktor przenoszenia obiektu `unique_ptr` eliminuje potrzebę stosowania operacji kopiowania.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład przedstawia sposób tworzenia `unique_ptr` wystąpień i przekaż je pomiędzy funkcjami.  

@@ -204,7 +204,7 @@
 ### [/DELAY (Ustawienia opóźnienia importowania ładowania)](delay-delay-load-import-settings.md)
 ### [/DELAYLOAD (Opóźnij importowanie ładowania)](delayload-delay-load-import.md)
 ### [/DELAYSIGN (Częściowo podpisz zestaw)](delaysign-partially-sign-an-assembly.md)
-### [/ DEPENDENTLOADFLAGS (flagi zależnych obciążenia domyślny zestaw)](dependentloadflags.md)
+### [/ DEPENDENTLOADFLAG (flagi zależnych obciążenia domyślny zestaw)](dependentloadflag.md)
 ### [/DLL (Kompilowanie biblioteki DLL)](dll-build-a-dll.md)
 ### [/DRIVER (Sterownik trybu jądra Windows NT)](driver-windows-nt-kernel-mode-driver.md)
 ### [/DYNAMICBASE (Korzystaj z randomizacji układu przestrzeni adresowej)](dynamicbase-use-address-space-layout-randomization.md)
