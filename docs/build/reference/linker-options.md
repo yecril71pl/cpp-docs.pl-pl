@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 835d7b1b74c8d465b44ec6274926f0b06d4f1296
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7a7fe51c6f49af4fdd232b860b1f9243c1ea462
+ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753633"
 ---
 # <a name="linker-options"></a>Opcje konsolidatora
 
@@ -67,6 +68,7 @@ Można użyć [komentarz](../../preprocessor/comment-c-cpp.md) pragma, aby okre�
 |[/ DELAY](../../build/reference/delay-delay-load-import-settings.md)|Steruje opóźnione ładowanie bibliotek DLL.|
 |[/ DELAYLOAD](../../build/reference/delayload-delay-load-import.md)|Powoduje opóźnione ładowanie określonej biblioteki DLL.|
 |[/ DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)|Częściowo podpisuje zestawu.|
+|[/ DEPENDENTLOADFLAG](dependentloadflag.md)|Ustawia domyślną flagi zależnej biblioteki DLL obciążeń.|
 |[/ DLL](../../build/reference/dll-build-a-dll.md)|Tworzy bibliotekę DLL.|
 |[/ DRIVER](../../build/reference/driver-windows-nt-kernel-mode-driver.md)|Tworzy sterownik trybu jądra.|
 |[/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md)|Określa, czy Generuj obraz wykonywalny, który może być losowo przebazowanych w czasie obciążenia za pomocą funkcji losowe (ASLR) układu przestrzeni adresów.|
