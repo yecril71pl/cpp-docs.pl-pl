@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a2306c69c219320e11259ba6303b76588db8f7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 463bf72c07c775ef0d4965a2023e5699cf7ec715
+ms.sourcegitcommit: b04de4e90def1d0f4aa265e96d6b73779d010e1f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843078"
 ---
 # <a name="building-browse-information-files-overview"></a>Kompilowanie plików przeglądania informacji: Przegląd
 Aby utworzyć informacje o przeglądaniu do przeglądania symbolu, kompilator tworzy plik SBR dla każdego pliku źródłowego w projekcie, a następnie BSCMAKE. EXE łączy pliki SBR w jednym pliku .bsc.  
@@ -49,7 +50,7 @@ Aby utworzyć informacje o przeglądaniu do przeglądania symbolu, kompilator tw
   
 1.  Nie kompilacji pliku .bsc na poziomie projektu albo użyj przełącznika /n, aby zapobiec obcinania plików SBR.  
   
-2.  Po wszystkie projekty zostały skompilowane, uruchom BSCMAKE ze wszystkich plików SBR, jako dane wejściowe. Symbole wieloznaczne są akceptowane. Na przykład jeśli były katalogów projektu C:\X, C:\Y i C:\Z z plików SBR w ich i chcesz, aby połączyć je wszystkie w jednym pliku .bsc, użyj BSCMAKE C:\X\\*.sbr C:\Y\\\*.sbr C:\Z\\\*. SBR /o c:\whatever_directory\combined.bsc do tworzenia pliku BSC połączone.  
+2.  Po wszystkie projekty zostały skompilowane, uruchom BSCMAKE ze wszystkich plików SBR, jako dane wejściowe. Symbole wieloznaczne są akceptowane. Na przykład jeśli były katalogów projektu C:\X, C:\Y i C:\Z z plików SBR w ich i chcesz, aby połączyć je wszystkie w jednym pliku .bsc, użyj BSCMAKE C:\X\\\*.sbr C:\Y\\\*.sbr C:\Z\\ \*c:\whatever_directory\combined.bsc /o .sbr do tworzenia pliku BSC połączone.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Narzędzia kompilacji C/C++](../../build/reference/c-cpp-build-tools.md)   
