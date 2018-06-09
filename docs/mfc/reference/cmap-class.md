@@ -48,11 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19b9c25659938e049807eb4e4b41dafd51ebe8e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 89e508242e7318e5419656720b6dee20bed55716
+ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239427"
 ---
 # <a name="cmap-class"></a>Klasa CMap
 Klasa kolekcji słownik mapujący klucze unikatowe wartości.  
@@ -67,13 +68,13 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
  `KEY`  
  Klasa Obiekt używany jako klucz do mapy.  
   
- `ARG` *_* `KEY`  
+ `ARG_KEY`  
  Typ danych używany dla `KEY` argumentów; zwykle odwołanie do `KEY`.  
   
  `VALUE`  
  Klasa obiektu przechowywane na mapie.  
   
- `ARG` *_* `VALUE`  
+ `ARG_VALUE`  
  Typ danych używany dla `VALUE` argumentów; zwykle odwołanie do `VALUE`.  
   
 ## <a name="members"></a>Elementy członkowskie  

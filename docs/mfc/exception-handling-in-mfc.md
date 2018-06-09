@@ -43,11 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0792ddf067f6289d612a9adb0c8ffeaf8e554ed6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b246e9ed09cce2fdecf8a8d6327a912061247cad
+ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239440"
 ---
 # <a name="exception-handling-in-mfc"></a>Obsługa wyjątków w MFC
 W tym artykule opisano dostępne w MFC mechanizmy obsługi wyjątków. Dostępne są dwa mechanizmy:  
@@ -63,7 +64,7 @@ W tym artykule opisano dostępne w MFC mechanizmy obsługi wyjątków. Dostępne
  Jeśli już korzystasz z aplikacji przy użyciu makra wyjątków MFC, możesz kontynuować przy użyciu tych makr w istniejącym kodzie podczas używania wyjątków języka C++ w nowy kod. Artykuł [wyjątki: zmiany w makrach wyjątków w wersji 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) poda wskazówki dla w ten sposób.  
   
 > [!NOTE]
->  Aby włączyć C++ obsługi wyjątków w kodzie, wybierz opcję Włącz wyjątki C++ na stronie generowanie kodu w folderze projektu C/C++ [strony właściwości](../ide/property-pages-visual-cpp.md) okno dialogowe, lub użyj /GX — opcja kompilatora. Wartość domyślna to /GX-, co spowoduje wyłączenie obsługi wyjątków.  
+>  Aby włączyć C++ obsługi wyjątków w kodzie, wybierz opcję Włącz wyjątki C++ na stronie generowanie kodu w folderze projektu C/C++ [strony właściwości](../ide/property-pages-visual-cpp.md) okno dialogowe, lub użyj [/ehsc](../build/reference/eh-exception-handling-model.md) — opcja kompilatora.  
   
  W tym artykule omówiono następujące tematy:  
   
