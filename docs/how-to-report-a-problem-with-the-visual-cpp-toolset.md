@@ -1,6 +1,6 @@
 ---
 title: Jak zgłosić problem z zestawu narzędzi Visual C++ | Dokumentacja firmy Microsoft
-ms.date: 5/11/2018
+ms.date: 06/08/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0044a0da7b1ac4ad052eb120ccfb1f7425d2c0e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: dec9cfac5273469eb37418929d83e273f6ab8612
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34336336"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253883"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Jak zgłosić problem z zestawu narzędzi Visual C++ lub dokumentacji
 
@@ -358,7 +358,7 @@ Utwórz użytkownika reprodukcja jako minimalny projekt IDE, a następnie ją sp
 Istnieje kilka sposobów korzystać raportu. Można użyć wbudowanych programu Visual Studio [Zgłoś Problem narzędzie](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017), lub [Visual Studio Developer Community](https://developercommunity.visualstudio.com/) stron. Można także uzyskać bezpośrednio do naszej społeczności deweloperów stron, wybierając **opinię o produkcie** u dołu tej strony. Wybór zależy, czy chcesz użyć narzędzi dostępnych w IDE przechwytywania zrzuty ekranu i organizowanie raportu dla publikowanie na stronach społeczności deweloperów Jeśli wolisz korzystać bezpośrednio witryny sieci Web.
 
 > [!NOTE]
-> Niezależnie od tego, jak możesz przesłać raport firma Microsoft szanuje Twoją prywatność. Firma Microsoft dba o zgodności ze wszystkimi przepisów dotyczących prywatności danych i przepisami. Aby dowiedzieć się, jak będzie traktowany jak dane, które możesz wysłać do nas, zobacz [Microsoft Visual Studio produktów z rodziny Privacy Statement](https://www.visualstudio.com/dn948229).
+> Niezależnie od tego, jak możesz przesłać raport firma Microsoft szanuje Twoją prywatność. Firma Microsoft dba o zgodności ze wszystkimi przepisów dotyczących prywatności danych i przepisami. Aby dowiedzieć się, jak będzie traktowany jak dane, które możesz wysłać do nas, zobacz [zasady zachowania poufności informacji firmy Microsoft](https://www.visualstudio.com/dn948229).
 
 ### <a name="use-the-report-a-problem-tool"></a>Użyj narzędzia Problem raportu
 

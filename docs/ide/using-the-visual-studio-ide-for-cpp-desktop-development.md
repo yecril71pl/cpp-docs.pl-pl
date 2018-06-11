@@ -1,6 +1,6 @@
 ---
 title: Za pomocą programu Visual Studio IDE dla projektowania aplikacji C++ | Dokumentacja firmy Microsoft
-ms.date: 11/27/2017
+ms.date: 06/08/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29810e928ee910efe0eb9a4bdbcda8576bcb7a9e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 4b71f09914d509aa4202bfc856d52f6cea26cea3
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33328883"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253818"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>Projektowania aplikacji w języku C++ w środowisku Visual Studio IDE
 
@@ -27,7 +27,7 @@ Visual Studio programowanie środowiska IDE (Integrated) oferuje zestaw funkcji,
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Jeśli jeszcze nie został zainstalowany program Visual Studio, należy teraz. Można pobrać programu Visual Studio, możesz pobrać go z [programu Visual Studio pobiera](http://www.visualstudio.com/downloads/download-visual-studio-vs.aspx). Należy uwzględnić narzędzia programistyczne Visual C++, po zainstalowaniu programu Visual Studio, ponieważ nie są zainstalowane domyślnie. Aby uzyskać więcej informacji o sposobie instalowania programu Visual Studio, zobacz [program Visual Studio](/visualstudio/install/install-visual-studio).
+Jeśli jeszcze nie został zainstalowany program Visual Studio, należy teraz. Łącza pobierania oraz Szybkie wskazówki, zobacz [zainstalować obsługi języka C++ w programie Visual Studio](../build/vscpp-step-0-installation.md). Aby uzyskać więcej informacji na temat sposobu instalowania programu Visual Studio ogólnie rzecz biorąc i porady dotyczące rozwiązywania problemów, jeśli jakaś nieprawidłowość, zobacz [program Visual Studio](/visualstudio/install/install-visual-studio). Należy wybrać **tworzenia klasycznych aplikacji w języku C++** obciążenia, aby uwzględnić Kompilatory języka C++, narzędzia i biblioteki po zainstalowaniu programu Visual Studio, ponieważ nie są zainstalowane domyślnie.
 
 Te wskazówki założono zainstalowanego programu Visual Studio i języka Visual C++ i składniki wymagane do tworzenia pulpitu systemu Windows. Możemy również założenie, że rozumiesz podstawowe informacje na temat języka C++. Jeśli trzeba poznać C++, Brak dostępnych wiele książek i zasobów sieci web. Jeden dobry zacząć [wprowadzenie](https://isocpp.org/get-started) strony Standard C++ Foundation witryny sieci Web.
 

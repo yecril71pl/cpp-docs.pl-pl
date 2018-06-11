@@ -1,7 +1,7 @@
 ---
 title: MASM dla x64 (ml64.exe) | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/08/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,15 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b17771239ff9c89b765576ba49515463db42386f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 42edd255b3f8730263bba9ff683ce16da6fc59b5
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253805"
 ---
 # <a name="masm-for-x64-ml64exe"></a>MASM dla wersji x64 (ml64.exe)
 
-Visual Studio obejmuje zarówno 32-bitowe i 64-bitowe hostowanej wersje MASM do docelowej x64 kodu. Asembler, który akceptuje x64 o nazwie ml64.exe, jest język asemblera. Narzędzia wiersza polecenia MASM są instalowane, po wybraniu obciążenia C++ podczas instalacji programu Visual Studio. Te narzędzia nie są dostępne jako osobny plik do pobrania. Aby pobrać i zainstalować kopię programu Visual Studio, zobacz [ https://www.visualstudio.com/ ](https://www.visualstudio.com/). Jeśli nie chcesz instalować programu Visual Studio IDE, ale mają tylko narzędzia wiersza polecenia, zobacz **Build Tools dla programu Visual Studio 2017** opcja [programu Visual Studio pobiera](https://www.visualstudio.com/downloads/) strony.
+Visual Studio obejmuje zarówno 32-bitowe i 64-bitowe wersje hostowanej asemblera firmy Microsoft (MASM) do docelowej x64 kodu. Asembler, który akceptuje x64 o nazwie ml64.exe, jest język asemblera. Narzędzia wiersza polecenia MASM są instalowane, po wybraniu obciążenia C++ podczas instalacji programu Visual Studio. Narzędzia MASM nie są dostępne jako osobny plik do pobrania. Aby uzyskać instrukcje, jak pobrać i zainstalować kopię programu Visual Studio, zobacz [program Visual Studio](/visualstudio/install/install-visual-studio). Jeśli chcesz instalować pełną środowiska IDE programu Visual Studio, ale mają tylko narzędzia wiersza polecenia, Pobierz [Build Tools dla programu Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=840931).
 
 Aby skonstruować MASM kod x64 elementów docelowych w wierszu polecenia, należy użyć wiersza polecenia dewelopera dla x64 elementów docelowych, które ustawia wymaganej ścieżki i zmiennych środowiskowych. Aby uzyskać informacje na temat sposobu uruchamiania wiersza polecenia dewelopera, zobacz [kodu kompilacji C/C++ w wierszu polecenia](../../build/building-on-the-command-line.md).
 
