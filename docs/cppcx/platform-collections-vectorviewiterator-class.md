@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093065"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Klasa platform::Collections::VectorViewIterator
 Udostępnia iteratora standardowa biblioteka szablonów dla obiektów pochodzących od środowiska wykonawczego systemu Windows`IVectorView` interfejsu.  

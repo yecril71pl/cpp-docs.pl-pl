@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350852"
 ---
 # <a name="dynamic-layout"></a>Układ dynamiczny
 Z MFC w programie Visual Studio 2015 można utworzyć okna dialogowe, które użytkownik może zmienić rozmiar i kontrolować sposób, który dostosowuje układ na zmianę rozmiaru. Na przykład można dołączyć przycisków w dolnej części okna dialogowego do dolnej krawędzi, więc zawsze pozostają na dole. Można również skonfigurować niektóre formanty, takie jak pól list, editboxes i pola tekstowego rozszerzenia, ponieważ użytkownik rozwija okna dialogowego.  

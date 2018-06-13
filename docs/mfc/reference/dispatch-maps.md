@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377099"
 ---
 # <a name="dispatch-maps"></a>Mapy wysyłania
 Automatyzacja OLE udostępnia metody do wywołania metody i mieć dostęp do właściwości w aplikacjach. Mechanizm dostarczonych przez Microsoft Foundation Class Library na potrzeby rozsyłania te żądania jest "mapy wysyłania," który wyznacza wewnętrznych i zewnętrznych nazwy obiektu funkcje i właściwości, a także same właściwości i elementu typy danych argumenty funkcji.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089094"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Klasa platform::Collections::InputIterator
 Zawiera standardowe InputIterator biblioteki szablonu kolekcje pochodzące z środowiska uruchomieniowego systemu Windows.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891726"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Porady: Użyj winmdidl.exe i midlrt.exe, aby utworzyć pliki .h z metadanych systemu Windows
 Winmdidl.exe i midlrt.exe włączyć współdziałanie COM poziom natywnego kodu C++ i składników środowiska wykonawczego systemu Windows. Winmdidl.exe przyjmuje jako dane wejściowe plik winmd, który zawiera metadanych dla składnika środowiska wykonawczego systemu Windows i plik IDL. Midlrt.exe konwertuje tego pliku IDL pliki nagłówkowe, używające kod w języku C++. Zarówno narzędzia, uruchom w wierszu polecenia.  

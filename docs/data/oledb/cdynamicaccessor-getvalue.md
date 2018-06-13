@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096421"
 ---
 # <a name="cdynamicaccessorgetvalue"></a>CDynamicAccessor::GetValue
 Pobiera dane dla określonej kolumny.  

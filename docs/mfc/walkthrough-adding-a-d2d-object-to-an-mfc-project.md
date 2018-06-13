@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384023"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>Wskazówki: dodawanie obiektu D2D do projektu MFC
 Ten przewodnik zawiera wskazówki jak dodać podstawowe Direct2D (D2D) obiekt do języka Visual C++, projektu Microsoft Foundation Class biblioteki (MFC), a następnie Skompiluj projekt do aplikacji, która wyświetla "tekst Hello, world" gradientu tła.  
