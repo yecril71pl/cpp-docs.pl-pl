@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375665"
 ---
 # <a name="specifying-the-pathname"></a>Określanie nazwy ścieżki
 Każda opcja pliku wyjściowego akceptuje *pathname* argumentu, który można określić lokalizację i nazwę pliku wyjściowego. Argument może zawierać nazwy dysku, katalogu i nazwa pliku. Nie może być spacji między opcją i argument.  

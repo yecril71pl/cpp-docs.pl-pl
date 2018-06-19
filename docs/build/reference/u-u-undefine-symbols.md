@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378330"
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (Usuń definicje symboli)
 **/U** — opcja kompilatora definicji określony symbol preprocesora do usunięcia. **/U** — opcja kompilatora anulowanie definicji symboli specyficzne dla firmy Microsoft, które definiuje kompilatora.  

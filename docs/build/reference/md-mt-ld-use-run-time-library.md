@@ -50,6 +50,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378262"
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD, /MT, /LD (Korzystaj z bibliotek wykonawczych)
 Wskazuje, czy moduł wielowątkowy jest biblioteką DLL i określa wersje biblioteki wykonawczej handlowe lub przeznaczone do debugowania.  

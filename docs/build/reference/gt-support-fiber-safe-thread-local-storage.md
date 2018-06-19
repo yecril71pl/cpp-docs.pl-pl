@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373832"
 ---
 # <a name="gt-support-fiber-safe-thread-local-storage"></a>/GT (Obsługa bezpieczeństwa włókien magazynu wątków lokalnych)
 Obsługuje bezpieczeństwa włókien danych przydzielony przy użyciu statycznego magazynu wątków lokalnych, czyli danych przydzielone z `__declspec(thread)`.  

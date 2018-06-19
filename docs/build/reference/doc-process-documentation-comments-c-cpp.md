@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371284"
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc (Przetwarzaj komentarze dokumentacji) (C/C++)
 Powoduje, że kompilator przetwarzanie komentarzy dokumentacji w plików kodu źródłowego oraz do tworzenia pliku .xdc dla każdego pliku źródła kodu, który ma komentarzy do dokumentacji.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368931"
 ---
 # <a name="binding-imports"></a>Powiązywanie importów
 Domyślnym zachowaniem konsolidatora jest utworzyć tabelę adresów importu można powiązać dla biblioteki DLL załadowanych z opóźnieniem. Jeśli plik DLL, który jest powiązany, funkcja pomocnika zostanie podjęta próba wykorzystania powiązane informacje zamiast wywoływać metodę **GetProcAddress** na wszystkich importów do którego istnieje odwołanie. Jeśli znacznik czasu lub preferowany adres nie pasują załadowanej biblioteki dll, funkcja pomocnika przyjmie tabelę adresów importu powiązane jest nieaktualna i będzie kontynuowane tak, jakby nie istnieje.  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378665"
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc (Utwórz prekompilowany plik nagłówka)
 Instruuje kompilator, aby utworzyć plik prekompilowanego nagłówka (.pch), który reprezentuje stan kompilacji w określonym punkcie.  

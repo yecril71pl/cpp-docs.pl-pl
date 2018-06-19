@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369893"
 ---
 # <a name="cc-build-tools"></a>Narzędzia kompilacji C/C++
 Visual C++ są dostępne następujące narzędzia wiersza polecenia do wyświetlania lub modyfikowania danych wyjściowych kompilacji:  

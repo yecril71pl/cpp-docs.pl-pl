@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373725"
 ---
 # <a name="specifying-dlls-to-delay-load"></a>Określanie bibliotek DLL w celu opóźnienia ładowania
 Można określić, które biblioteki dll w celu opóźnienia ładowania z [/delayload](../../build/reference/delayload-delay-load-import.md):`dllname` — opcja konsolidatora. Jeśli nie planujesz używać wersji funkcji pomocnika, możesz również połączyć program delayimp.lib (w przypadku aplikacji klasycznych) lub dloadhelper.lib (dla aplikacji ze sklepu).  

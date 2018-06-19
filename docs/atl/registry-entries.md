@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359732"
 ---
 # <a name="registry-entries"></a>Wpisy rejestru
 DCOM wprowadzono pojęcie identyfikatorów aplikacji (AppIDs), które grupy opcji konfiguracji dla co najmniej jeden obiekt modelu DCOM w centralnej lokalizacji w rejestrze. Identyfikator AppID można określić, wprowadzając wartości AppID o nazwie wartości na podstawie identyfikatora CLSID obiektu.  

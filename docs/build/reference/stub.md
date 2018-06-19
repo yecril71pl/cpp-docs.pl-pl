@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375204"
 ---
 # <a name="stub"></a>STUB
 Gdy jest używany w pliku definicji modułu, która tworzy sterownik urządzenia wirtualnego (VxD), można określić nazwę pliku, która zawiera strukturę IMAGE_DOS_HEADER (zdefiniowany w Windows NT. H) do użycia w sterownik urządzenia wirtualnego (VxD), zamiast domyślnego nagłówka.  

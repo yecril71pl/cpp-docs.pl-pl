@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383085"
 ---
 # <a name="elements-of-c"></a>Elementy języka C
 W tej sekcji opisano elementy język programowania C, w tym nazwy, cyfry i znaki używane do utworzenia programu C. Składnia ANSI C etykiet tokeny te składniki.  

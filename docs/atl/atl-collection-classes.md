@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359833"
 ---
 # <a name="atl-collection-classes"></a>Klasy kolekcji ATL
 ATL zawiera wiele klas do przechowywania i uzyskiwania dostępu do danych. Klasy, które będą używane zależy od wielu czynników, takich jak:  

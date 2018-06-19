@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374469"
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J (Domyślny typ char nie jest podpisany)
 Zmienia domyślny `char` typu z `signed char` do `unsigned char`i `char` typu jest rozszerzony zero, gdy zostanie rozszerzone do `int` typu.  

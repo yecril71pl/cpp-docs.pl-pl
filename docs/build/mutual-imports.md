@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377760"
 ---
 # <a name="mutual-imports"></a>Importy wzajemne
 Eksportowanie lub importowanie do innego pliku wykonywalnego przedstawia komplikacji, gdy Importy wzajemne (lub cykliczne). Na przykład dwa pliki dll importować symbole od siebie, podobnie jak funkcje wzajemnie rekursywne.  

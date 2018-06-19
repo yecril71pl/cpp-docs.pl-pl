@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387853"
 ---
 # <a name="direction-flag"></a>Flaga kierunku
 Flaga kierunku jest specyficzne dla procesorów Intel 80 x 86 flagę procesora CPU. Ma to zastosowanie do wszystkich instrukcji zestawu używających REP prefiksu (powtarzania), takich jak MOVS, MOVSD MOVSW i inne. Adresy podane odpowiednie instrukcje zwiększa się, jeśli flaga kierunku jest wyczyszczone.  

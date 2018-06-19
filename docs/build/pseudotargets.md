@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368411"
 ---
 # <a name="pseudotargets"></a>Pseudo cele
 Pseudotarget jest używany zamiast nazwy pliku w wierszu zależności etykiety. Jest interpretowany jako plik, który nie istnieje i dlatego jest nieaktualne. NMAKE przyjęto założenie, że sygnatura czasowa pseudotarget jest najnowsza wszystkich jego zależności. Jeśli ma ona nie zależności, przyjęto, że bieżący czas. Jeśli pseudotarget jest używana jako miejsce docelowe, jego polecenia są zawsze wykonywane. Pseudotarget, używany jako zależną musi być określone jako cel w innym zależności. Jednak Zależność ta nie musi być blokiem poleceń.  

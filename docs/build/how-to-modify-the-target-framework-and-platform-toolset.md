@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371905"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Porady: modyfikowanie platformy docelowej i zestawu narzędzi platformy
 Możesz zmienić ustawienia projektu Visual C++ pod kątem różnych wersji programu .NET Framework i używać innej platformie procesami. Domyślnie system projektu używa wersji programu .NET Framework i wersję zestawu narzędzi odnoszą się do wersji programu Visual Studio, która służy do tworzenia projektu. Zestaw narzędzi platformy docelowej można zmienić, modyfikując właściwości projektu. Element docelowy Framework można zmienić, modyfikując plik projektu (.vcxproj). Nie masz Obsługa oddzielny kod podstawowy dla każdego obiektu docelowego kompilacji.  

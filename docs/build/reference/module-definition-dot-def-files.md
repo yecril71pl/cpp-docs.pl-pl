@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374729"
 ---
 # <a name="module-definition-def-files"></a>Pliki definicji modułu (.Def)
 Pliki definicji modułu (.def) podaj konsolidatora z informacjami o eksportu, atrybutów i innych informacji o programie być połączony. Plik .def jest najbardziej przydatna podczas tworzenia biblioteki DLL. Ponieważ istnieją [opcje konsolidatora](../../build/reference/linker-options.md) którego można użyć zamiast instrukcji definicji modułu .def — pliki nie są zazwyczaj konieczne. Można również użyć [__declspec(dllexport)](../../build/exporting-from-a-dll-using-declspec-dllexport.md) jako sposobu na określenie wyeksportowanych funkcji.  

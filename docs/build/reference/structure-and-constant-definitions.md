@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376036"
 ---
 # <a name="structure-and-constant-definitions"></a>Struktura i stała — Definicje
 Procedury pomocnika domyślne używa kilku struktur do komunikowania się z funkcji punktów zaczepienia oraz wszystkie wyjątki. Poniżej przedstawiono wartości powiadomień i awarii, struktur informacji i przekazany do punkty zaczepienia typ wskaźnika do punktu zaczepienia funkcji:  

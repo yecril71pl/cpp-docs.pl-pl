@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375587"
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>Obsługa konsolidatora dla bibliotek DLL załadowanych z opóźnieniem
 Konsolidatora Visual C++ obsługuje teraz opóźnione ładowanie bibliotek DLL. To zwalnia od konieczność użycia funkcji zestawu SDK systemu Windows **LoadLibrary** i **GetProcAddress** do zaimplementowania opóźnienie załadowanie DLL.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376169"
 ---
 # <a name="linker-command-line-syntax"></a>Składnia wiersza polecenia konsolidatora
 Aby uruchomić łącza. EXE, należy użyć następującej składni polecenia:  

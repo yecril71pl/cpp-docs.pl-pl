@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369373"
 ---
 # <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>Stany modułu zwykłej biblioteki MFC DLL połączone dynamicznie z MFC
 Dynamicznie połączyć zwykły biblioteki MFC DLL biblioteki MFC DLL możliwości niektóre konfiguracje, które są bardzo skomplikowane. Na przykład regularną bibliotekę DLL MFC i plik wykonywalny, który używa zarówno dynamicznie połączyć do biblioteki MFC DLL i wszystkie biblioteki DLL rozszerzeń MFC.  

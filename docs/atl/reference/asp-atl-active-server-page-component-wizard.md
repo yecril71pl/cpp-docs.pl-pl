@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356142"
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP, Kreator składników stron ASP ATL
 Ta strona ATL Active Server strona kreatora składników umożliwia określenie ustawienia opcjonalne obsługi informacji i stanu dotyczące składnika ASP.  

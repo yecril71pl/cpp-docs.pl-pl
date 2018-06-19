@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373845"
 ---
 # <a name="nologo-suppress-startup-banner-cc"></a>/nologo (Pomijaj transparent startowy) (C/C++)
 Pomija wyświetlanie praw autorskich transparentu podczas uruchamiania kompilatora i wyświetlanie wiadomości informacyjnych podczas kompilacji.  

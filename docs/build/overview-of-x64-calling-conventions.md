@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374911"
 ---
 # <a name="overview-of-x64-calling-conventions"></a>Przegląd konwencji wywoływania x64
 Dwie ważne różnice między x86 i [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] są możliwości adresowania 64-bitowe i rejestruje płaski zestaw 16 64-bitowej do użytku ogólnego. Podany rozwinięte zarejestrować zestawu, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] używa [__fastcall](../cpp/fastcall.md) wywoływanie Konwencji i opartych na standardzie RISC model obsługi wyjątków. `__fastcall` Konwencji używa rejestruje pierwsze cztery argumenty i ramki stosu, aby przekazać dodatkowe argumenty.  

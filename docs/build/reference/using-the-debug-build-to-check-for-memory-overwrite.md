@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376696"
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>Korzystanie z kompilacji debugowania do sprawdzania nadpisywania pamięci
 Aby korzystać z kompilacji debugowania do sprawdzania nadpisywania pamięci, należy najpierw ponownie skompiluj projekt do debugowania. Następnie przejdź do początku części aplikacji `InitInstance` funkcji i Dodaj następujący wiersz:  

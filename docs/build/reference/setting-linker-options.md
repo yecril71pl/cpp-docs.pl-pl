@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374924"
 ---
 # <a name="setting-linker-options"></a>Ustawianie opcji konsolidatora
 Opcje konsolidatora można ustawić wewnątrz lub na zewnątrz środowiska programowania. Temat dla każdej opcji konsolidatora opisano, jak można ją ustawić w środowisku programistycznym. Zobacz [opcje konsolidatora](../../build/reference/linker-options.md) pełną listę.  

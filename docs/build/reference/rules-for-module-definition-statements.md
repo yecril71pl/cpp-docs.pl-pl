@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376393"
 ---
 # <a name="rules-for-module-definition-statements"></a>Zasady dla instrukcji definicji modułu
 Wszystkie instrukcje w pliku .def mają zastosowanie następujące reguły składni. Inne zasady, które są stosowane do instrukcji określonych opisano z każdej instrukcji.  

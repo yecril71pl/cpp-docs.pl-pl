@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379110"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (Model obsługi wyjątku)
 Określa rodzaj obsługi wyjątku przez kompilator, gdy w celu zoptymalizowania wyjątek zadań sprawdza i czy zniszczyć obiektów C++, które wykraczają poza zakres z powodu wyjątku. Jeśli **/EH** nie zostanie określony, kompilator połowy zarówno asynchroniczne wyjątki strukturalne i wyjątków języka C++, ale nie niszczy obiektami C++, które wykraczają poza zakres ze względu na wyjątek asynchroniczny.  

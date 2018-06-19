@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376653"
 ---
 # <a name="release-builds"></a>Kompilacje wydania
 Kompilacji wydania używa optymalizacji. Podczas optymalizacji umożliwia tworzenie kompilacji wydania, kompilator nie przyniesie symboliczna informacja o debugowaniu. Brak symboliczne informacje debugowania, a także fakt nie wygenerować kodu dla śledzenia i ASSERT wywołuje oznacza, że rozmiar pliku wykonywalnego, zostanie zmniejszona i w związku z tym będzie można szybciej.  

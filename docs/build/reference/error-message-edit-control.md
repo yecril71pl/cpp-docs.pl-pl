@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369617"
 ---
 # <a name="error-message-edit-control"></a>Kontrolowanie edycji komunikatu o błędzie
 **Komunikat o błędzie** pole zawiera tekst komunikatu o błędzie systemu lub na podstawie wartości podać komunikat o błędzie modułu.  

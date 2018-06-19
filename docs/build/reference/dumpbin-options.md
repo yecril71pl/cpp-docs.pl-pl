@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374898"
 ---
 # <a name="dumpbin-options"></a>Opcje DUMPBIN
 Opcja składa się z specyfikator opcji kreski (-) lub ukośnikiem (/), a po niej nazwę opcji. Nie można stosować skrót nazw opcji. Niektóre opcje przyjmują argumentów, podać po dwukropkiem (:). Bez spacji i karty są dozwolone w obrębie Specyfikacja opcji. Użyj spacji lub karty do oddzielania specyfikacje opcji w wierszu polecenia. Nazwy opcji i ich argumentów nazwy — słowo kluczowe lub plik nie jest uwzględniana. Większość opcji dotyczą wszystkich plików binarnych; kilka mają zastosowanie tylko do niektórych typów plików. Domyślnie DUMPBIN wysyła informacje do wyjścia standardowego. Użyj [/OUT](../../build/reference/out-dumpbin.md) opcję, aby wysłać dane wyjściowe do pliku.  

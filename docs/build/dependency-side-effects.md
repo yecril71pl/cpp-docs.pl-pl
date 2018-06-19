@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367527"
 ---
 # <a name="dependency-side-effects"></a>Skutki uboczne zależności
 Jeśli określono element docelowy z dwukropkiem (:) w dwóch wierszach zależności w różnych lokalizacjach, a polecenia są wyświetlane po tylko jednego z wierszy, NMAKE interpretuje zależności tak, jakby sąsiadujących lub połączone. Nie jest wywoływany reguła wnioskowania dla zależności, która ma żadnych poleceń, ale zamiast tego założono, że zależności należą do bloku jeden opis i wykonuje polecenia określony za pomocą innych zależności. Na przykład to zbiór reguł:  

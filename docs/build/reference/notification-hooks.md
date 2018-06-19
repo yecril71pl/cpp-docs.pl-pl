@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377822"
 ---
 # <a name="notification-hooks"></a>Punkty zaczepienia powiadomień
 Punkty zaczepienia powiadomień są nazywane tuż przed w procedurze pomocnika podejmowane są następujące akcje:  

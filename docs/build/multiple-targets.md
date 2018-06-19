@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368190"
 ---
 # <a name="multiple-targets"></a>Wiele obiektów docelowych
 NMAKE oblicza wiele obiektów docelowych w jednej zależności tak, jakby każdego zostały określone w oddzielnych opis bloku.  

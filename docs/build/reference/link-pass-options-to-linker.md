@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373296"
 ---
 # <a name="link-pass-options-to-linker"></a>/link (Przepuść opcje do konsolidatora)
 Przekazuje jedną lub więcej opcji konsolidatora do konsolidatora.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375600"
 ---
 # <a name="winmdfile-specify-winmd-file"></a>/WINMDFILE (określ plik winmd)
 Określa nazwę pliku dla pliku wyjściowego metadane środowiska wykonawczego systemu Windows (.winmd), który jest generowany przez [/WINMD](../../build/reference/winmd-generate-windows-metadata.md) — opcja konsolidatora.  

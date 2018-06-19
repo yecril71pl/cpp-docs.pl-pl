@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376335"
 ---
 # <a name="fp-name-pch-file"></a>/Fp (Nazwa pliku .Pch)
 Zawiera nazwę ścieżki dla prekompilowanego nagłówka, zamiast domyślna nazwa ścieżki.  

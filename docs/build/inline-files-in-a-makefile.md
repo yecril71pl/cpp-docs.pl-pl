@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368125"
 ---
 # <a name="inline-files-in-a-makefile"></a>Pliki wbudowane w pliku reguł programu Make
 Wbudowany plik zawiera tekst w pliku reguł programu make. Jego nazwa może być używana w poleceniach jako dane wejściowe (na przykład pliku poleceń LINK) lub jej przekazywania poleceń do systemu operacyjnego. Po uruchomieniu polecenia, który powoduje utworzenie pliku, plik jest tworzony na dysku.  

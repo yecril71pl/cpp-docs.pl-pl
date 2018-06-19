@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34450254"
 ---
 # <a name="parameter-validation"></a>Walidacja parametru
 Większość funkcji CRT z rozszerzonymi zabezpieczeniami i wielu istniejących funkcji sprawdza poprawność ich parametrów. Mogą one obejmować sprawdzanie wskaźniki **NULL**, sprawdzanie, czy można podzielić na prawidłowy zakres liczb całkowitych lub Sprawdzanie, czy wartości wyliczenia są prawidłowe. Program obsługi nieprawidłowych parametrów jest wykonywany, gdy znaleziono nieprawidłowy parametr.  

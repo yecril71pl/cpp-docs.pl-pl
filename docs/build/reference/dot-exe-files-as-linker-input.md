@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372406"
 ---
 # <a name="exe-files-as-linker-input"></a>Pliki .Exe — Wejście konsolidatora
 [Nazwa pliku klasy zastępczej MS-DOS](../../build/reference/stub-ms-dos-stub-file-name.md) (/ STUB) opcja określa nazwę pliku .exe uruchamiane przy użyciu systemu MS-DOS. ŁĄCZE sprawdza, czy określony plik, należy upewnić się, że jest prawidłowy program systemu MS-DOS.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373491"
 ---
 # <a name="how-bscmake-builds-a-bsc-file"></a>W jaki sposób BSCMAKE kompiluje plik .Bsc
 BSCMAKE kompiluje lub odtwarza pliku .bsc w najbardziej wydajny sposób, może on. Aby uniknąć potencjalnych problemów, ważne jest zrozumienie procesu kompilacji.  

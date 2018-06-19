@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366591"
 ---
 # <a name="cominterfaceentry-macros"></a>Com_interface_entry — makra  
  Te makra wprowadź interfejsy obiektu do jego mapie modelu COM, dzięki czemu są one dostępne przez `QueryInterface`. Kolejność wpisów w mapie modelu COM jest interfejsy kolejności będzie sprawdzana pasujący **IID** podczas `QueryInterface`.  

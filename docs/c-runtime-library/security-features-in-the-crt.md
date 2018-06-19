@@ -39,6 +39,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451813"
 ---
 # <a name="security-features-in-the-crt"></a>Funkcje zabezpieczeń w CRT
 Wiele funkcji CRT starego ma bezpieczniejsze nowszej wersji. Jeśli istnieje funkcja bezpieczny, starszej wersji mniej bezpieczne jest oznaczony jako przestarzały i nowa wersja ma `_s` sufiks ("zabezpieczenia").  

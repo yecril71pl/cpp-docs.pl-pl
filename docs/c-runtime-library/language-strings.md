@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391366"
 ---
 # <a name="language-strings"></a>Ciągi języka
 `setlocale` i `_create_locale` funkcji można użyć interfejsu API NLS systemu Windows obsługiwane języki w systemach operacyjnych, które nie korzystają z strony kodowej Unicode. Aby uzyskać listę języków obsługiwanych przez wersję systemu operacyjnego, zobacz [dokumentacja interfejsu API National obsługi Language (NLS)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). Ciąg języka może być dowolna z wartości w **języka** i **skrót nazwy języka** kolumn listę obsługiwanych języków. Aby uzyskać dodatkowe informacje na temat obsługi języków przez wersję systemu operacyjnego, zobacz [dodatek A: produktu zachowanie](http://msdn.microsoft.com/goglobal/bb896001.aspx) w [MS-LCID]: odwołanie do identyfikatora kodu języka systemu Windows (LCID).   

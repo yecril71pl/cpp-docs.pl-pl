@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391668"
 ---
 # <a name="interpreting-more-complex-declarators"></a>Interpretowanie deklaratorów bardziej złożonych
 Wszelkie deklarator można ująć w nawiasy, aby określić konkretnego interpretacja "deklaratorów złożonych". Deklarator złożonych jest identyfikatorem kwalifikowana przez więcej niż jeden tablicy, wskaźnika lub modyfikator funkcji. Różne kombinacje tablicy, wskaźnik i Modyfikatory funkcji można zastosować do jednego identyfikatora. Ogólnie rzecz biorąc `typedef` może służyć do uproszczenia deklaracji. Zobacz [deklaracje Typedef](../c-language/typedef-declarations.md).  

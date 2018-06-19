@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374547"
 ---
 # <a name="lib-files-as-linker-input"></a>Pliki .Lib — Wejście konsolidatora
 ŁĄCZE akceptuje COFF standardowych bibliotek i COFF Importuj biblioteki, które zwykle mają rozszerzenie. lib. Biblioteki standardowe zawierają obiekty i są tworzone przez narzędzie LIB. Import biblioteki zawierają informacje o eksportu w inne programy i są tworzone przez łącze podczas tworzenia programu, który zawiera eksportu lub przez narzędzie LIB. Uzyskać informacji na temat używania LIB można utworzyć standardowy lub Importuj biblioteki, zobacz [odwołanie do biblioteki LIB](../../build/reference/lib-reference.md). Aby uzyskać więcej informacji dotyczących używania łącze do tworzenia biblioteki importowanej, zobacz [/dll](../../build/reference/dll-build-a-dll.md) opcji.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374261"
 ---
 # <a name="ga-optimize-for-windows-application"></a>/GA (Optymalizuj dla aplikacji systemu Windows)
 Wyniki w bardziej wydajny kodu dla pliku .exe do uzyskiwania dostępu do zmiennych lokalny magazyn wątków (TLS).  

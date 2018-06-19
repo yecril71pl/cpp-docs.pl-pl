@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373390"
 ---
 # <a name="exceptions-cc"></a>Wyjątki (C/C++)
 Dwa kody wyjątków mogą być wywoływane, gdy zostaną napotkane błędy:  

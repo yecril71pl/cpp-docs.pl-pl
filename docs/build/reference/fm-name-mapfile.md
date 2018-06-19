@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374287"
 ---
 # <a name="fm-name-mapfile"></a>/Fm (Nazwa Mapfile)
 Informuje konsolidator, aby utworzyć plik mapowania zawierającego listę segmentów w kolejności, w jakiej występują w odpowiedniego pliku .exe lub DLL.  

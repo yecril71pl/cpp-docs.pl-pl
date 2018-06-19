@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370179"
 ---
 # <a name="pdb-files-as-linker-input"></a>Pliki .Pdb — Wejście konsolidatora
 Obiekt skompilowana przy użyciu opcji/zi plików (.obj) zawiera nazwę bazy danych programu (PDB). Nie określono nazwy pliku PDB obiektu do konsolidatora; ŁĄCZE o nazwie osadzonych można znaleźć pliku PDB, jeśli jest to potrzebne. Dotyczy to również możliwością debugowania obiektów zawartych w bibliotece; plik PDB dla biblioteki możliwością debugowania musi być dostępny do konsolidatora wraz z biblioteki.  

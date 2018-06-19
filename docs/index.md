@@ -1,13 +1,14 @@
 ---
 layout: HubPage
 ms.topic: hub-page
-title: "Dokumentacja języka Visual C++ | Dokumentacja firmy Microsoft"
-description: "Dowiedz się, jak używać C++ do opracowywania aplikacji, usług i narzędzi, platform i urządzeń."
+title: Dokumentacja języka Visual C++ | Dokumentacja firmy Microsoft
+description: Dowiedz się, jak używać C++ do opracowywania aplikacji, usług i narzędzi, platform i urządzeń.
 ms.openlocfilehash: 7a0b3bb00f43157b6f1d3a7a64999beb59f9a06f
 ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 03/08/2018
+ms.locfileid: "29794199"
 ---
 <div id="main" class="v2">
     <div class="container">

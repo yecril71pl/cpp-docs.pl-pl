@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375217"
 ---
 # <a name="unloading-a-delay-loaded-dll"></a>Zwalnianie bibliotek DLL załadowanych z opóźnieniem
 Pomocnika dostarczony domyślne załadować z opóźnieniem sprawdza, czy deskryptory załadować z opóźnieniem są wskaźnik i kopię oryginalnej tabelę adresów importu (IAT) w polu pUnloadIAT. Jeśli tak, zapisze wskaźnik na liście do deskryptora opóźnienia importowania. Dzięki temu funkcja pomocnika można znaleźć biblioteki DLL według nazwy do obsługi jawne zwalnianie tej biblioteki DLL.  

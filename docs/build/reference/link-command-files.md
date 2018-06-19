@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375288"
 ---
 # <a name="link-command-files"></a>Wiersze poleceń LINK
 Argumenty wiersza polecenia można przekazać do łącza w formie pliku polecenia. Aby określić plik polecenia do konsolidatora, należy użyć następującej składni:  

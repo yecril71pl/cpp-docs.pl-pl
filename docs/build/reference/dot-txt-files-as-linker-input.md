@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369906"
 ---
 # <a name="txt-files-as-linker-input"></a>Pliki .Txt — Wejście konsolidatora
 ŁĄCZE wejściową różne pliki tekstowe dodatkowe. [Pliku polecenia](../../build/reference/link-command-files.md) specyfikator (@) i [adresu podstawowego](../../build/reference/base-base-address.md) (/ BASE) [/DEF](../../build/reference/def-specify-module-definition-file.md), i [/kolejność](../../build/reference/order-put-functions-in-order.md) wszystkie opcje Określ plików tekstowych. Te pliki mogą mieć żadnych rozszerzenia, nie tylko .txt.  

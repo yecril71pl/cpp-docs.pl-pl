@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378057"
 ---
 # <a name="qimprecisefwaits-remove-fwaits-inside-try-blocks"></a>/Qimprecise_fwaits (Usuwanie fwaits wewnątrz bloków Try)
 Usuwa `fwait` polecenia wewnętrzne `try` blokuje, korzystając z [/FP: except](../../build/reference/fp-specify-floating-point-behavior.md) — opcja kompilatora.  

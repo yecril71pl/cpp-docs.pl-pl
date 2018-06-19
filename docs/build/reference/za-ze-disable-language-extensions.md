@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378148"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za, /Ze (Wyłącz rozszerzenia językowe)
 **/Za** — opcja kompilatora emituje błąd dotyczące konstrukcji języka, które nie są zgodne z ANSI C89 lub ISO C ++ 11. **/Ze** opcję kompilatora, która jest domyślnie włączona, umożliwia korzystanie z rozszerzeń firmy Microsoft.  

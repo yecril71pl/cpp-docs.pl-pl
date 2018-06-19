@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375844"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (Generuj funkcje wewnętrzne)
 Szybsze zastępuje niektórych funkcji wywołania z wewnętrznych lub w przeciwnym razie specjalnych formy funkcji pomagających w aplikacji.  

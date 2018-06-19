@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371401"
 ---
 # <a name="developing-your-own-helper-function"></a>Tworzenie własnej funkcji Pomocnik
 Możesz podać wersji procedury w celu przetwarzania specyficznego dla opartych na nazwach biblioteki DLL lub importowania. Istnieją dwie metody w ten sposób: kodowania własnych, najlepiej jest oparta na podany kod lub tylko Przechwytywanie przekazana wersja przy użyciu punkty zaczepienia powiadomień szczegółowe wcześniej.  

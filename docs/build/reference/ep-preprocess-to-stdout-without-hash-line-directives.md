@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375386"
 ---
 # <a name="ep-preprocess-to-stdout-without-line-directives"></a>/EP (Wstępnie przetwórz do stdout bez dyrektyw #line)
 Przetwarza wstępnie pliki źródłowe C i C++ i kopiuje wstępnie przetworzonych plików na urządzeniu standardowe dane wyjściowe.  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375896"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (Eliminowanie ciągów zduplikowanych)
 Umożliwia kompilatorowi tworzenia pojedynczej kopii identycznych ciągów w obrazie programu i pamięci podczas wykonywania. Jest to optymalizacją nazywaną *buforowania ciągu* aby tworzenia mniejszymi programami.  

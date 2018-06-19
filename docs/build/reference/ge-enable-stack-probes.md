@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375301"
 ---
 # <a name="ge-enable-stack-probes"></a>/Ge (Włącz sondy stosu)
 Aktywuje sondy stosu dla każdego wywołania funkcji, który wymaga magazynu dla zmiennych lokalnych.  

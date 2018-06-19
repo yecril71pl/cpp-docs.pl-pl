@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373403"
 ---
 # <a name="fd-ide-minimal-rebuild"></a>/FD (Minimalna ponowna kompilacja IDE)
 **/FD** nie jest widoczne dla użytkowników z wyjątkiem w [wiersza polecenia](../../ide/command-line-property-pages.md) strony właściwości projektu C++ **strony właściwości** okna dialogowego, w przypadku i tylko wtedy, gdy [/GM ponowną (Włącz minimalnego odbudować)](../../build/reference/gm-enable-minimal-rebuild.md) nie wybrano również. **/FD** nie obowiązuje, innego niż ze środowiska projektowego. **/FD** nie jest widoczna w danych wyjściowych **cl /?**.  

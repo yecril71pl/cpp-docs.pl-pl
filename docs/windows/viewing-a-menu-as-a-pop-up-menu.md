@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891034"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>Wyświetlanie jako menu podręcznego
 Zwykle podczas pracy w edytorze Menu zasobów menu jest wyświetlana jako pasek menu. Jednak może być zasoby menu, które są dodawane do paska menu aplikacji, podczas gdy program jest uruchomiony.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410518"
 ---
 # <a name="required-and-optional-header-files"></a>Wymagane i opcjonalne nagłówki plików
 Opis każdej procedury czasu wykonywania zawiera listę wymaganych i opcjonalnych obejmują, lub nagłówek (. H), pliki dla tej procedury. Pliki nagłówkowe wymagane należy dołączone w celu uzyskania deklaracji funkcji dla procedury lub definicji używany przez inny procedury wywoływana wewnętrznie. Opcjonalne nagłówki plików znajdują się zwykle mógł korzystać z wstępnie zdefiniowanych stałe, definicje typów lub makra w tekście. W poniższej tabeli wymieniono niektóre przykłady opcjonalne nagłówki plików zawartości:  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372724"
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>Wybieranie formatu plików wejściowych .netmodule
 Plik .obj MSIL (skompilowane z [/CLR](../../build/reference/clr-common-language-runtime-compilation.md)) może również służyć jako plik modułu .netmodule.  pliki .obj zawierają metadanych i symboli natywnych.  modułów .netmodule zawierają tylko metadane.  

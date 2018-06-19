@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372659"
 ---
 # <a name="dumpbin-reference"></a>Odwołanie DUMPBIN
 Microsoft COFF plik binarny zrzutu (DUMPBIN. (EXE) Wyświetla informacje o typowych obiektu pliku formatu (COFF) plików binarnych. DUMPBIN służy do sprawdzenia obiektu COFF, pliki, standardowych bibliotek obiektów COFF, plików wykonywalnych i bibliotek dołączanych dynamicznie (dll).  

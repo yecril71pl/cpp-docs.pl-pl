@@ -17,6 +17,7 @@ ms.sourcegitcommit: 9b442b44ee912822d06cabec826aac4a8d82ec75
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472089"
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>Dodawanie właściwości do kontrolki (ALT — Samouczek, część 3)
 `IPolyCtl` to interfejs, który zawiera kontrolki niestandardowe metody i właściwości, a właściwość spowoduje dodanie do niej.  

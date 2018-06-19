@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378236"
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (Umieść informacje o debugowaniu w pliku obiektu)
 Pełne informacje we wszystkich plikach obiektu debugowania nadać tempo utworzone na podstawie pliku prekompilowanego nagłówka (.pch), gdy jest używany z [/Yc](../../build/reference/yc-create-precompiled-header-file.md) i [/z7](../../build/reference/z7-zi-zi-debug-information-format.md) opcje. Przestarzałe.  

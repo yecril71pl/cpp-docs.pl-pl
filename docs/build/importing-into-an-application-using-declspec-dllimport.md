@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368838"
 ---
 # <a name="importing-into-an-application-using-declspecdllimport"></a>Importowanie do aplikacji przy użyciu atrybutu __declspec(dllimport)
 Program, który używa publicznego symboli zdefiniowanych przez bibliotekę DLL jest nazywany ich importowania. Po utworzeniu pliki nagłówkowe dla aplikacji, które korzystają z bibliotek DLL do skompilowania z użyciem, użyj **__declspec(dllimport)** w deklaracjach symbole publiczne. Słowo kluczowe **__declspec(dllimport)** działa, czy możesz wyeksportować z .def — pliki lub **__declspec(dllexport)** — słowo kluczowe.  

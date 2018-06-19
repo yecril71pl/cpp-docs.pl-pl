@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378600"
 ---
 # <a name="using-an-import-library-and-export-file"></a>Korzystanie z biblioteki importowanej oraz pliku eksportowanego
 Kiedy program (plik wykonywalny lub biblioteka DLL) eksportuje do innego programu, który importuje go także z lub jeśli więcej niż dwa programy wyeksportować do i zaimportować od siebie, poleceń połączyć tych programów należy uwzględnić eksporty cykliczne.  

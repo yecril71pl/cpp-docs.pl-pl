@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374794"
 ---
 # <a name="fs-force-synchronous-pdb-writes"></a>/FS (Wymuś synchroniczne zapisy do bazy PDB)
 Wymusza zapisuje plik programu (PDB) bazy danych — utworzone przez [/zi](../../build/reference/z7-zi-zi-debug-information-format.md) lub [/zi](../../build/reference/z7-zi-zi-debug-information-format.md)— za pośrednictwem MSPDBSRV szeregowanie. WYWOŁANIE PLIKU EXE.  

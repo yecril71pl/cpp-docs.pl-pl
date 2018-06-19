@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379123"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (Kompilacja z wieloma procesami)
 

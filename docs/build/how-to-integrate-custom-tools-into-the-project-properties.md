@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368905"
 ---
 # <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Porady: integrowanie narzędzi niestandardowych we właściwościach projektu
 Opcje narzędzia niestandardowego można dodać do programu Visual Studio **strony właściwości** okna, tworząc bazowe pliki schematu XML.  

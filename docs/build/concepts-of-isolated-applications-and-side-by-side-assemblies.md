@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368177"
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>Pojęcia związane z aplikacjami izolowanymi oraz aplikacjami wykonywanymi równocześnie
 Aplikacja jest uznawany za [izolowany aplikacji](http://msdn.microsoft.com/library/aa375190) , gdy wszystkie jego składniki są [zestawy side-by-side](http://msdn.microsoft.com/library/ff951640). Zestaw równoległy to zbiór zasobów — grupa bibliotek DLL, klas okien, serwerów COM, bibliotek typów lub interfejsów — które są wdrożone razem i udostępniane aplikacji do użytku w czasie wykonywania. Zwykle zestaw równoległy ma postać jednej lub kilku bibliotek DLL.  

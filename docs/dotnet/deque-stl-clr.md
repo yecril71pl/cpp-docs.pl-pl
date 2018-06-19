@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111149"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp losowy. Użyj kontenera `deque` do zarządzania sekwencję elementów wygląda jak ciągłego bloku magazynu, ale który można zwiększać i zmniejszać na końcu bez konieczności kopiowania wszelkie pozostałe elementy. W związku z tym można efektywnie zaimplementować `double-ended queue`. (Stąd nazwa.)  

@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373169"
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>Typowe problemy podczas tworzenia kompilacji wydania
 Podczas tworzenia będzie zazwyczaj kompilacji i testowania z kompilacji debugowania projektu. Jeśli późniejszego kompilowania aplikacji dla kompilacji wydania, mogą wystąpić naruszenie zasad dostępu.  

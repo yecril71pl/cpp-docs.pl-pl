@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374177"
 ---
 # <a name="explicitly-unloading-a-delay-loaded-dll"></a>Jawne zwalnianie bibliotek DLL załadowanych z opóźnieniem
 [/Delay](../../build/reference/delay-delay-load-import-settings.md): unload — opcja konsolidatora można zwolnić bibliotekę DLL, która załadowane z opóźnieniem. Domyślnie po kodzie zwalnia biblioteki DLL (przy użyciu/DELAY: Unload i **__FUnloadDelayLoadedDLL2**), pozostają Importy załadowane z opóźnieniem w tabelę adresów importu (IAT). Jednak jeśli używasz/DELAY: Unload w wierszu polecenia konsolidatora funkcji Pomocnik będzie obsługiwać ładowanej biblioteki DLL zresetowanie IAT do postaci oryginalnej; wskaźniki obecnie nieprawidłowym zostaną zastąpione. IAT jest polem w [ImgDelayDescr](../../build/reference/calling-conventions-parameters-and-return-type.md) zawierający adres kopię oryginalnej IAT (jeśli istnieje).  

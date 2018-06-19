@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375487"
 ---
 # <a name="cc-building-reference"></a>Odwołanie kompilacji C/C++
 Visual C++ udostępnia dwa sposoby tworzenia programu C/C++. Sposób najprostszym (i najbardziej typowych) polega na [kompilacji w środowisku programowania Visual C++](../../ide/building-cpp-projects-in-visual-studio.md). Innym sposobem jest [kompilacji z wiersza polecenia przy użyciu narzędzia wiersza polecenia](../../build/building-on-the-command-line.md). W obu przypadkach można utworzyć plików źródłowych, za pomocą edytora źródła Visual C++ lub dowolnego edytora innych firm.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384427"
 ---
 # <a name="lifetime-scope-visibility-and-linkage"></a>Okres istnienia, zakres, widoczność i połączenie
 Aby zrozumieć, jak działa C program, trzeba zrozumieć zasady, które określają, jak zmiennych i funkcji mogą być używane w programie. Kilka pojęć są istotne dla zrozumienia tych reguł:  

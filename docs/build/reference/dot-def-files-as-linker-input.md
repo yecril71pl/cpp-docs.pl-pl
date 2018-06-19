@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370530"
 ---
 # <a name="def-files-as-linker-input"></a>Pliki .Def — Wejście konsolidatora
 Zobacz [pliki definicji modułu (.def)](../../build/reference/module-definition-dot-def-files.md) Aby uzyskać więcej informacji. Użyj [/DEF](../../build/reference/def-specify-module-definition-file.md) opcję, aby określić nazwę pliku .def.  

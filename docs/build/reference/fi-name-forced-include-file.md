@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373377"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI (Nazwa pliku wymuszonego dołączenia)
 Powoduje, że preprocesora do przetworzenia określonego pliku nagłówka.  

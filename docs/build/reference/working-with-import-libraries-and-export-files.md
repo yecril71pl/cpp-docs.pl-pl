@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377935"
 ---
 # <a name="working-with-import-libraries-and-export-files"></a>Praca z bibliotekami importowanymi oraz plikami eksportowanymi
 LIB z opcją/DEF służy do tworzenia biblioteki importowanej oraz pliku eksportu. ŁĄCZE używa pliku eksportu do tworzenia programu, który zawiera eksportuje (zazwyczaj biblioteki dołączanej (dynamicznie DLL)) i używa biblioteki importu można rozpoznać odwołania do tych eksportu w innych programów.  

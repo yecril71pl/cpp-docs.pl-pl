@@ -15,6 +15,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376872"
 ---
 # <a name="wholearchive-include-all-library-object-files"></a>/ WHOLEARCHIVE (Dołącz wszystkie pliki obiekt bibliotece)
 Wymuś na konsolidatorze załączenie wszystkich plików obiektów w bibliotece statycznej w połączonego pliku wykonywalnego.  

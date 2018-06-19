@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371674"
 ---
 # <a name="arch-x64"></a>/arch (x64)
 Określa generowanie kodu na x64 architektury. Zobacz też [/arch (x86)](../../build/reference/arch-x86.md) i [/arch (ARM)](../../build/reference/arch-arm.md).  

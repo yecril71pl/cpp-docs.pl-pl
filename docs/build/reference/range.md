@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374427"
 ---
 # <a name="range"></a>/RANGE
 Modyfikuje dane wyjściowe polecenia dumpbin w przypadku użycia z innych opcji dumpbin, takie jak /RAWDATA lub /DISASM.  
