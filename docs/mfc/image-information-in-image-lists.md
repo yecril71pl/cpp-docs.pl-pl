@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343716"
 ---
 # <a name="image-information-in-image-lists"></a>Informacje o obrazach na listach obrazów
 [Cimagelist —](../mfc/reference/cimagelist-class.md) zawiera szereg funkcji, które służą do pobierania informacji z listy obrazów. [GetImageInfo](../mfc/reference/cimagelist-class.md#getimageinfo) wypełnia funkcji członkowskiej `IMAGEINFO` struktury z informacjami o pojedynczego obrazu, w tym uchwytów obrazu i maska mapy bitowe, liczba płaszczyzn kolorów i bitów na piksel i prostokąt ograniczający obraz mapy bitowej obrazu. Te informacje można użyć bezpośrednio manipulować mapy bitowe dla obrazu.  

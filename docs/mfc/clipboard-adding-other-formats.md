@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342150"
 ---
 # <a name="clipboard-adding-other-formats"></a>Schowek: dodawanie innych formatów
 W tym temacie wyjaśniono, jak i rozwiń listę obsługiwanych formatów, szczególnie w przypadku obsługi. Temat [Schowek: kopiowanie i wkleić danych](../mfc/clipboard-copying-and-pasting-data.md) opisuje minimalne wykonania niezbędnych do obsługi kopiowanie i wklejanie ze Schowka. Jeśli to wszystkie zaimplementowaniem tylko formaty w Schowku znajduje są `CF_METAFILEPICT`, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**i prawdopodobnie `CF_LINKSOURCE`. Większości aplikacji potrzebna jest więcej formatów w Schowku niż tych trzech.  

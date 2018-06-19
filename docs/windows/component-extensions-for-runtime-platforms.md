@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862643"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>Component Extensions dla platform środowiska uruchomieniowego
 Visual C++ udostępnia rozszerzenia języka aby program dla platform środowiska uruchomieniowego. Przy użyciu języka C + +/ CX, można program aplikacji platformy uniwersalnej systemu Windows i składników, które skompiluj do kodu natywnego. Mimo że można utworzyć aplikacji platformy uniwersalnej systemu Windows przez programowanie bezpośrednio przed interfejsy COM środowiska wykonawczego systemu Windows przy użyciu języka C + +/ CX, możesz pracować z konstruktorów wyjątków i innych modern C++ programowania idioms. Aby włączyć programowania w języku C++ w środowisku wykonania kodu zarządzanego na platformie .NET, można użyć C + +/ CLI.  

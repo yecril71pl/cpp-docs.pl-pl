@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857717"
 ---
 # <a name="changing-a-symbol-or-symbol-name-id"></a>Zmiana symbolu lub nazwy symbolu (ID)
 Podczas tworzenia nowego zasobu lub obiektu zasobów, środowisko projektowe przypisuje go domyślną nazwę symbolu, na przykład IDD_DIALOG1. Można użyć [okna właściwości](/visualstudio/ide/reference/properties-window) zmienić domyślną nazwę symbolu lub zmienić nazwę symbolu, wszystkie już skojarzony z zasobem.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345296"
 ---
 # <a name="array-list-and-map-classes"></a>Klasy tablic, list i map
 Obsługa wartości zagregowanych danych, biblioteki klas zawiera grupę klasy kolekcji — stałych, list i map — które mogą zawierać wiele obiektów i wstępnie zdefiniowanych typów. Kolekcje są dynamicznie o rozmiarze. Te klasy mogą być używane w programach, czy napisane dla systemu Windows, czy nie. Są one jednak najbardziej przydatny w przypadku implementowania struktury danych, które zdefiniowanie klas dokumentów w ramach aplikacji. Klasy specjalne kolekcji można łatwo pochodzi z tych lub można utworzyć je w oparciu klasy szablonu. Aby uzyskać więcej informacji o tych metod, zobacz artykuł [kolekcji](../mfc/collections.md). Lista szablonu klasy kolekcji, zobacz artykuł [klasy szablonów dla tablic, list i map](../mfc/template-classes-for-arrays-lists-and-maps.md).  

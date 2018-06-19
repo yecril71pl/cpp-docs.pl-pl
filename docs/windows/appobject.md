@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856976"
 ---
 # <a name="appobject"></a>appobject
 Identyfikuje coclass jako obiekt aplikacji, który jest skojarzony z aplikacją pełne .exe i wskazuje, że właściwości klasy coclass i funkcje są ogólnie dostępna w tym [biblioteki typów](../mfc/automation-clients-using-type-libraries.md).  

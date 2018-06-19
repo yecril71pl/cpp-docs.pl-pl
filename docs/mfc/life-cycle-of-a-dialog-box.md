@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346184"
 ---
 # <a name="life-cycle-of-a-dialog-box"></a>Cykl życiowy okna dialogowego
 Podczas cyklu okno dialogowe użytkownik wywołuje okno dialogowe, zwykle wewnątrz obsługi polecenia, które tworzy i inicjuje obiektu okna dialogowego, użytkownik wchodzi w interakcję z okna dialogowego i zamyka okno dialogowe.  

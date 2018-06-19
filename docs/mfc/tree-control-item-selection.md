@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385901"
 ---
 # <a name="tree-control-item-selection"></a>Wybór elementu kontrolki drzewa
 Gdy zmieni się zaznaczenie z jednego elementu na inny formant drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) wysyła [TVN_SELCHANGING](http://msdn.microsoft.com/library/windows/desktop/bb773547) i [TVN_SELCHANGED](http://msdn.microsoft.com/library/windows/desktop/bb773544) komunikaty powiadomień. Zarówno powiadomienia obejmują wartość, która określa, czy zmiana jest wynikiem kliknięcie myszą lub naciśnięcie klawisza. Powiadomienia obejmują również informacji na temat elementu, który jest uzyskanie zaznaczenie i elementu, który jest utraty zaznaczenia. Można ustawić atrybutów elementów, które są zależne od stan zaznaczenia elementu, można użyć tych informacji. Zwracanie **TRUE** w odpowiedzi na **TVN_SELCHANGING** uniemożliwia wybór z zmiana; zwracanie **FALSE** umożliwia zmianę.  

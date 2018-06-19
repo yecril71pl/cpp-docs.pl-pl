@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385147"
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028: obsługa pomocy kontekstowej
 Ta uwaga przedstawiono zasady przypisywania identyfikatorów kontekstów pomocy i inne problemy pomocy w MFC. Obsługa pomocy kontekstowej wymaga pomocy kompilatora, która jest dostępna w programie Visual C++.  

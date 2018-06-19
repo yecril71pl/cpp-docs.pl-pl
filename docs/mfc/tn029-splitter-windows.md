@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384726"
 ---
 # <a name="tn029-splitter-windows"></a>TN029: okna podziału
 Ta uwaga opisuje MFC [CSplitterWnd klasy](../mfc/reference/csplitterwnd-class.md), zapewniające okno dzieli i zarządza rozmiaru innych okien okienka.  

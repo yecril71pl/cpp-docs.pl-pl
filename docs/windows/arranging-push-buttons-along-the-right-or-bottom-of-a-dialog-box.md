@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860245"
 ---
 # <a name="arranging-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Rozmieszczanie przycisków poleceń po prawej stronie lub u dołu okna dialogowego
 ### <a name="to-arrange-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Aby rozmieszczanie przycisków poleceń po prawej lub dolnej części okna dialogowego  

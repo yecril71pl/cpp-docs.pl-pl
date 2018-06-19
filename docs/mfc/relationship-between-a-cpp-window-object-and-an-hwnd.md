@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385781"
 ---
 # <a name="relationship-between-a-c-window-object-and-an-hwnd"></a>Relacja między obiektem okna języka C++ a właściwością HWND
 Okno *obiektu* jest obiektem C++ `CWnd` klasy (lub klasy pochodnej) tworzącą bezpośrednio w programie. Zawiera, a odpowiedź na wywołania programu Konstruktor i destruktor jest częścią. Windows *okna*, z drugiej strony, jest nieprzezroczystego uchwyt do wewnętrzna struktura danych systemu Windows, która odpowiada okna i wykorzystuje zasoby systemowe, jeśli jest obecny. Okno systemu Windows jest identyfikowany przez "uchwytu okna" (`HWND`) i zostanie utworzony po `CWnd` obiekt jest tworzony przez wywołanie do **Utwórz** funkcji członkowskiej klasy `CWnd`. Okno może zostać zniszczone przez wywołanie program lub akcji użytkownika. Uchwyt okna jest przechowywana w obiekcie okna `m_hWnd` zmiennej członkowskiej. Na poniższej ilustracji przedstawiono relacje między obiektem okna języka C++ i okna systemu Windows. Tworzenie okien omówione w [tworzenie Windows](../mfc/creating-windows.md). Niszczenie okien omówione w [niszczenie obiektów okien](../mfc/destroying-window-objects.md).  

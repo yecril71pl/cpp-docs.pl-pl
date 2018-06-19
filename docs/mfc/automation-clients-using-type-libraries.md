@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342592"
 ---
 # <a name="automation-clients-using-type-libraries"></a>Klienci automatyzacji: korzystanie z bibliotek typów
 Klienci automatyzacji musi mieć informacje dotyczące właściwości i metod obiektów serwera, jeżeli klienci są do manipulowania obiektami serwerach programu. Właściwości mają typy danych; metody często zwracać wartości i akceptują parametrów. Klient wymaga informacji o typach danych wszystkich tych statycznie powiązania z typem obiektu serwera.  

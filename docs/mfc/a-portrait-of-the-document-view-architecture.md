@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329819"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>Portret architektury dokument/widok
 Dokumenty i widoki są skojarzone w typowej aplikacji MFC. Dane są przechowywane w dokumencie, ale widok ma uprzywilejowany dostęp do danych. Rozdzielenie widoku dokumentu oddziela przechowywania i obsługi danych od jego wyświetlania.  

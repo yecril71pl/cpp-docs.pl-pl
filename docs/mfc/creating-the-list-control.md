@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342049"
 ---
 # <a name="creating-the-list-control"></a>Tworzenie kontrolki listy
 Metody kontrolowania listy ([CListCtrl](../mfc/reference/clistctrl-class.md)) jest tworzony zależy od tego, czy jest bezpośrednio za pomocą formantu lub za pomocą klasy [clistview —](../mfc/reference/clistview-class.md) zamiast tego. Jeśli używasz `CListView`, platformę tworzy widok jako część jej Sekwencja tworzenia dokumentu/widoku. Tworzenie widoku listy tworzy kontrolki listy również (są to samo). Formant nie zostanie utworzony w widoku [OnCreate](../mfc/reference/cwnd-class.md#oncreate) funkcji obsługi. W takim przypadku formant jest gotowy do dodawania elementów za pomocą wywołania [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl).  

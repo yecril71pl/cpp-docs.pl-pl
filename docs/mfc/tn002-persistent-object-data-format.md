@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385420"
 ---
 # <a name="tn002-persistent-object-data-format"></a>TN002: format trwałych danych obiektu
 Ta uwaga opisano procedury MFC, które obsługuje obiekty trwałe C++ i format danych obiektu, gdy jest on przechowywany w pliku. Dotyczy to tylko klas z [declare_serial —](../mfc/reference/run-time-object-model-services.md#declare_serial) i [implement_serial —](../mfc/reference/run-time-object-model-services.md#implement_serial) makra.  

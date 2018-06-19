@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344399"
 ---
 # <a name="framework-mfc"></a>Struktura (MFC)
 Swoją pracę dzięki framework biblioteki Microsoft Foundation Class (MFC) jest przede wszystkim na podstawie kilku główne kategorie i kilka narzędzi Visual C++. Niektóre klasy hermetyzować duża część interfejsu programowania aplikacji (API) Win32. Inne klasy hermetyzować pojęcia dotyczące aplikacji, takich jak dokumenty, widoki i aplikacji. Nadal innym hermetyzować OLE funkcje i możliwości dostępu do danych ODBC i DAO.  

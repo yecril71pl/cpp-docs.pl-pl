@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385583"
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows Sockets: powiadomienia dotyczące gniazd
 W tym artykule opisano funkcje powiadomień z klas gniazd. Funkcje Członkowskie są funkcje wywołania zwrotnego, które struktura wywołuje powiadomiono obiektu gniazda ważnych zdarzeń. Dostępne są następujące funkcje powiadomień:  
