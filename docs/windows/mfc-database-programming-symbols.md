@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877608"
 ---
 # <a name="mfc-database-programming-symbols"></a>Symbole programowania bazy danych MFC
 Symbole w tej tabeli są wyświetlane tylko w projekcie MFC po dodaniu obsługi bazy danych. Obsługują one połączenie MFC serwerów SQL i programowanie bazy danych.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878489"
 ---
 # <a name="opening-a-resource-for-binary-editing"></a>Otwieranie zasobów do edycji plików binarnych
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>Aby otworzyć do edycji plików binarnych zasobu pulpitu systemu Windows  

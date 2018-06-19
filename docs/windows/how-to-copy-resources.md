@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879851"
 ---
 # <a name="how-to-copy-resources"></a>Porady: zasoby dotyczące kopiowania
 Można skopiować zasobów z jednego pliku do innego bez konieczności ich zmieniania lub możesz [zmiana języka lub warunku zasobu podczas kopiowania go](../windows/how-to-change-the-language-or-condition-of-a-resource-while-copying.md).  

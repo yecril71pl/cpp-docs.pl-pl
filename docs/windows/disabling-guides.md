@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882092"
 ---
 # <a name="disabling-guides"></a>Wyłączanie prowadnic
 Klawisze specjalne w połączeniu z myszą umożliwia wyłączanie przyciągania efekt prowadnice. Za pomocą klawisza ALT wyłącza przyciągania skutków przewodnik wybrane. Przenoszenie przewodnik klawisz SHIFT uniemożliwia przyciągniętą przenoszenie z przewodnika.  

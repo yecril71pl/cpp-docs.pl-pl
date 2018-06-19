@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876839"
 ---
 # <a name="moduletype-enumeration"></a>ModuleType — Wyliczenie
 Określa, czy moduł powinien obsługiwać server wewnątrzprocesowe lub serwer poza procesem.  

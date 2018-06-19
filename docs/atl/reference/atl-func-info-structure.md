@@ -24,6 +24,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255625"
 ---
 # <a name="atlfuncinfo-structure"></a>Struktura _ATL_FUNC_INFO
 Zawiera informacje o typie opisuje metody lub właściwości w elemencie dispinterface.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876426"
 ---
 # <a name="predefined-symbol-ids"></a>Wstępnie zdefiniowane symbole identyfikatorów
 Gdy zaczniesz nowy projekt, w zależności od typu projektu niektóre symbole identyfikatorów są wstępnie zdefiniowane do użycia. Te identyfikatory symboli obsługuje różne bibliotek i typy projektu, takie jak MFC. Reprezentują typowych zadań, które zwykle znajdują się w dowolnej aplikacji lub akcje elementy sprzętu, takie jak drukarka lub myszy.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368580"
 ---
 # <a name="importing-and-exporting-inline-functions"></a>Importowanie i eksportowanie funkcji śródwierszowych
 Funkcje importowanych można zdefiniować jako śródwierszowej. Efekt około jest taka sama jak definiowanie w tekście standardowa funkcja; wywołania funkcji są rozwijane do kodu wbudowanego, podobnie jak w makrze. Jest to przydatne głównie sposób obsługi języka C++ klasy w bibliotece DLL tym miejscu może niektóre z ich funkcji w celu zwiększenia wydajności.  

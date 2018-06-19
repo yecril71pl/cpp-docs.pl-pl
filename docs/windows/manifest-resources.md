@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882917"
 ---
 # <a name="manifest-resources"></a>Zasoby manifestu
 Zasoby manifestu są pliki XML, które opisują zależności, których używa aplikacja. Na przykład w programie Visual Studio pliku manifestu generowane przez kreatora biblioteki MFC definiuje, które z systemu Windows formantu wspólnego bibliotek DLL należy użyć aplikacji, w wersji 5.0 lub 6.0:  

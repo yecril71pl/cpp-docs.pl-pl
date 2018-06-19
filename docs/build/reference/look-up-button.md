@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371450"
 ---
 # <a name="look-up-button"></a>Przycisk wyszukiwania
 Kliknij przycisk **przeglądowych** można pobrać komunikatu o błędzie, umożliwiająca wprowadzona wartość system lub module. Można wprowadzić wartości w postaci szesnastkowej lub dziesiętnej (w tym ujemne wartości dziesiętnych). Na liście modułów **dodatkowych modułów do wyszukiwania błąd** okna dialogowego również będą wyszukiwane.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872147"
 ---
 # <a name="creating-a-new-dialog-box"></a>Tworzenie nowego okna dialogowego
 ### <a name="to-create-a-new-dialog-box"></a>Aby utworzyć nowe okno dialogowe  

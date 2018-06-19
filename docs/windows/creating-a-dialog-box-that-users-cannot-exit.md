@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33884466"
 ---
 # <a name="creating-a-dialog-box-that-users-cannot-exit"></a>Tworzenie okna dialogowego, którego użytkownik nie może zamknąć
 Można utworzyć środowiska uruchomieniowego okno dialogowe, którego użytkownik nie może zamknąć. Tego rodzaju okno dialogowe jest przydatne do logowania i aplikacji lub blokad dokumentu.  

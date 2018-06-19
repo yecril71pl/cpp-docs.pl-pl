@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890119"
 ---
 # <a name="selecting-an-area-of-an-image-image-editor-for-icons"></a>Zaznaczanie obszaru obrazu (Edytor obrazów dla ikon)
 Narzędzia wyboru umożliwia definiowanie obszar obrazu, który ma wycinanie, kopiowanie, wyczyść, rozmiar, Odwróć lub przenieść. Z **prostokąta zaznaczenia** narzędzia można zdefiniować i wybierz prostokątny obszar obrazu. Z **nieregularne wybór** narzędzia można narysować odręcznej konspektu obszaru chcesz wybrać wycinania, kopiowania lub innej operacji.  

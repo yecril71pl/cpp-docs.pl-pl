@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879168"
 ---
 # <a name="how-to-open-a-resource-script-file-outside-of-a-project-standalone"></a>Porady: otwieranie pliku skryptu zasobu spoza projektu (autonomicznego)
 Można wyświetlić zasobów w plik .rc, bez konieczności otwierania projektu. Plik .rc zostanie otwarty w oknie dokumentu w przeciwieństwie do otwierania w [widok zasobów](../windows/resource-view-window.md) okna (jak w przypadku plik jest otwarty w projekcie).  

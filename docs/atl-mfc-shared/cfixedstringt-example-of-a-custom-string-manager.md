@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359552"
 ---
 # <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT: Przykład z menedżerem ciąg niestandardowy
 Przykładem menedżera niestandardowy ciąg używane przez klasę implementuje biblioteki ATL [CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md)o nazwie **CFixedStringMgr**. `CFixedStringT` jest pochodną [CStringT](../atl-mfc-shared/reference/cstringt-class.md) i implementuje ciąg, który przydziela jego danych znakowych jako część `CFixedStringT` sam obiekt tak długo, jak ciąg znaków jest mniejsza od długości określonej przez **t_nChars** Parametr szablonu `CFixedStringT`. Takie podejście ciąg nie wymaga sterty, chyba, że długość ciągu przekroczy rozmiar stałego buforu. Ponieważ `CFixedStringT` jest zawsze używana sterty można przydzielić jego dane ciągu nie może używać **CAtlStringMgr** jako jego menedżera ciągu. Używa Menedżera niestandardowy ciąg (**CFixedStringMgr**), wdrożenia [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) interfejsu. Ten interfejs jest omówiona w [implementacji programu Menedżer ciąg niestandardowy (zaawansowane metody)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md).  

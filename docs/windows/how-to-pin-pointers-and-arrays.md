@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873592"
 ---
 # <a name="how-to-pin-pointers-and-arrays"></a>Porady: unieruchamianie wskaźników oraz tablic
 Przypinanie obiektu podrzędnego zdefiniowaną w obiekcie zarządzanych skutkuje przypinanie całego obiektu.  Na przykład jeśli dowolny element tablicy jest przypięty, następnie całą tablicę również jest przypięty. Nie ma żadnych rozszerzeń języka deklarowania przypiętych tablicy. Aby przypiąć tablicy, należy zadeklarować przypiętego wskaźnika do typu elementu i kod pin jednego z jego elementów.  

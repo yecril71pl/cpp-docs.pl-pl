@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33885155"
 ---
 # <a name="editing-properties-for-an-activex-control"></a>Edytowanie właściwości kontrolki ActiveX
 Kontrolki ActiveX dostarczonych przez niezależnych dostawców mogą są wyposażone w ich właściwości i właściwości. W oknie właściwości są wyświetlane właściwości dla formantów ActiveX. Ponadto wszystkie strony właściwości utworzone przez autorów formantu ActiveX są wyświetlane w **stron właściwości** okno dialogowe (Aby wyświetlić stronę właściwości dla określonego formantu ActiveX, kliknij przycisk Właściwości strony w [Okno właściwości](/visualstudio/ide/reference/properties-window)).  

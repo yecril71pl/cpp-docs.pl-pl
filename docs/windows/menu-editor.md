@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879441"
 ---
 # <a name="menu-editor"></a>Edytor menu
 Menu umożliwiają Rozmieść polecenia w sposób logicznych i łatwy do znalezienia. W edytorze Menu można tworzyć i edytować menu Praca bezpośrednio z paska menu, przypominający w Zakończono aplikacji.  

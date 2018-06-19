@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873150"
 ---
 # <a name="creating-a-custom-brush-image-editor-for-icons"></a>Tworzenie pędzla niestandardowego (Edytor obrazów dla ikon)
 Pędzla niestandardowego jest prostokątny część obrazu, który Podnieś i użyj podobny do pędzli gotowe edytor obrazów. Wszystkie operacje, które można wykonywać na wybranych, można wykonywać na również pędzla niestandardowego.  

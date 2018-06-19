@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878866"
 ---
 # <a name="menu-command-properties"></a>Właściwości poleceń menu
 Poniższe informacje są zorganizowane według właściwości Menu, które są widoczne w [okna właściwości](/visualstudio/ide/reference/properties-window) po wybraniu polecenia menu. Wyliczono alfabetycznie okna właściwości umożliwia również wyświetlić te właściwości według kategorii.  

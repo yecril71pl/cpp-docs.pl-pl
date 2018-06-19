@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872364"
 ---
 # <a name="creating-a-256-color-icon-or-cursor-image-editor-for-icons"></a>Tworzenie ikony 256 kolorów (Edytor obrazów dla ikon)
 Za pomocą edytora obrazów, ikony i kursory może być rozmiarze duże (64 x 64) z palety 256 kolorów do wyboru. Po utworzeniu zasobu, styl obrazu urządzenia jest zaznaczone.  

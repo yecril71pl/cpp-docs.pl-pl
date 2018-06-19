@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880053"
 ---
 # <a name="how-to-open-a-resource-script-file-in-text-format"></a>Porady: otwieranie pliku skryptu zasobu w formacie tekstowym
 Może to być razy, jeśli chcesz wyświetlić zawartość pliku skryptu (.rc) zasobu projektu bez konieczności otwierania zasobu, na przykład okno dialogowe, w edytorze jego określonego zasobu. Można na przykład wyszukiwanie ciągu we wszystkich oknach dialogowych w pliku zasobów bez konieczności otwierania każdego z nich osobno.  

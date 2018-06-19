@@ -31,6 +31,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871240"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>Dostosowywanie lub zmiana kolorów (Edytor obrazów dla ikon)
 Edytor obrazów [palety kolorów](../windows/colors-window-image-editor-for-icons.md) początkowo wyświetlane 16 kolorów standardowych. Oprócz wyświetlanych kolory można tworzyć kolory niestandardowe. Następnie możesz [zapisać i załadować paletę kolorów niestandardowych](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  

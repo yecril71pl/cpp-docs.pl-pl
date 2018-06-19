@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879838"
 ---
 # <a name="inserting-a-space-between-buttons-on-a-toolbar"></a>Wstawianie odstępów między przyciskami na pasku narzędzi
 Ogólnie rzecz biorąc Wstaw odstęp między przyciskami, wystarczy przeciągnąć ich od siebie na pasku narzędzi. Aby usunąć miejsca, przeciągnij je do siebie.  

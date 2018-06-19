@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873579"
 ---
 # <a name="grid-settings-dialog-box-image-editor-for-icons"></a>Okno dialogowe Ustawienia siatki (Edytor obrazów dla ikon)
 Można określić ustawienia siatki dla obrazu i wyświetla linie siatki za pośrednictwem graficznego. Wiersze są przydatne w przypadku edycji obrazu, ale nie są zapisywane jako część samego obrazu.  

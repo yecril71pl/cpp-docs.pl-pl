@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873839"
 ---
 # <a name="defining-member-variables-for-dialog-controls"></a>Definiowanie zmiennych członkowskich dla formantów okna dialogowego
 Do zdefiniowania zmiennej elementu członkowskiego dla każdego formantu okno dialogowe z wyjątkiem przycisków, używając następującej metody.  

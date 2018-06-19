@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372246"
 ---
 # <a name="modules-button"></a>Przycisk modułów
 Kliknij przycisk **modułów** przycisk, aby wyświetlić **dodatkowych modułów do wyszukiwania błąd** okna dialogowego. Wprowadź nazwę żądany plik EXE lub DLL w polu edycji, a następnie kliknij przycisk **Dodaj** do dołączenia modułów błąd wyszukiwania wiadomości. Usuń moduł z listy wyróżnianie ją i klikając przycisk **Usuń** przycisku.  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881913"
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>Ikony i kursory: zasoby obrazów do wyświetlania na urządzeniach (Edytor obrazów dla ikon)
 Ikony i kursory są zasobów graficznych, które mogą zawierać wiele obrazów w różnych rozmiarach i schematów kolorów dla różnych typów urządzeń wyświetlających. Ponadto kursor ma "punkt aktywny," Lokalizacja, którą system Windows używa do śledzenia położenia. Zarówno ikony i kursory są tworzone i edytować za pomocą edytora obrazów jako mapy bitowe i inne obrazy.  

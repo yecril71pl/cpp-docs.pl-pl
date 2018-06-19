@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880182"
 ---
 # <a name="partial--c-component-extensions"></a>częściowy (C++ Component Extensions)
 `partial` — Słowo kluczowe umożliwia różnych części klasy ref do utworzenia niezależnie i w różnych plikach.  

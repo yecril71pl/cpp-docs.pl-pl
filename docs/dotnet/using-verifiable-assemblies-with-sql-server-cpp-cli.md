@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168649"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Używanie zestawów weryfikowalnych z programem SQL Server (C++/CLI)
 Rozszerzone procedury składowane dostarczana w bibliotek dołączanych dynamicznie (dll), zapewnia możliwości rozszerzania funkcji programu SQL Server za pośrednictwem funkcji utworzonych w języku Visual C++. Rozszerzone procedury składowane są zaimplementowane jako funkcjami wewnątrz biblioteki dll. Oprócz funkcji, można również zdefiniować rozszerzonych procedur składowanych [typy danych zdefiniowane przez użytkownika](../cpp/classes-and-structs-cpp.md) i [funkcje agregujące](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da) (np. Suma lub AVG).  

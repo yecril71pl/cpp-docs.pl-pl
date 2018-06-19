@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874528"
 ---
 # <a name="dbaccessor"></a>db_accessor
 Grupy **db_column —** atrybuty, które uczestniczą w `IAccessor`— na podstawie powiązania.  
@@ -46,7 +47,7 @@ Grupy **db_column —** atrybuty, które uczestniczą w `IAccessor`— na podsta
 ## <a name="remarks"></a>Uwagi  
  **db_accessor —** definiuje podstawowej akcesora OLE DB dla kolejnych **db_column —** i **db_param —** atrybutów w tej samej klasy lub funkcji. **db_accessor —** jest użyteczne na poziomie elementu członkowskiego do grupy **db_column —** atrybuty, które uczestniczą w bazie danych OLE DB `IAccessor`— na podstawie powiązania. Jest on używany w połączeniu z albo **db_table —** lub **db_command —** atrybutów. Wywołanie tego atrybutu jest podobny do wywoływania [begin_accessor —](../data/oledb/begin-accessor.md) i [END_ACCESSOR](../data/oledb/end-accessor.md) makra.  
   
- **db_accessor —** generuje zestawu wierszy i wiąże go do odpowiedniego mapowania dostępu. Jeśli nie zostanie wywołana **db_accessor —**akcesor 0 będą automatycznie generowane i wszystkie powiązania kolumny zostanie zamapowane do tego bloku metody dostępu.  
+ **db_accessor —** generuje zestawu wierszy i wiąże go do odpowiedniego mapowania dostępu. Jeśli nie zostanie wywołana **db_accessor —** akcesor 0 będą automatycznie generowane i wszystkie powiązania kolumny zostanie zamapowane do tego bloku metody dostępu.  
   
  **db_accessor —** powiązania kolumny do jednego lub więcej metod dostępu do bazy danych grupy. Omówienie scenariuszy, w których należy użyć wielu metod dostępu, zobacz [przy użyciu wielu metod dostępu w zestawie wierszy](../data/oledb/using-multiple-accessors-on-a-rowset.md). Zobacz też "Użytkownika rekordu pomocy technicznej dla wielu metod dostępu" w [rekordów użytkowników](../data/oledb/user-records.md).  
   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255541"
 ---
 # <a name="platformtype-class"></a>Klasa platform::type
 Zawiera informacje czasu wykonywania o typie — w szczególności ciąg nazwy i elementu typecode. Można uzyskać przez wywołanie [Object::GetType](../cppcx/platform-object-class.md#gettype) dowolnego obiektu lub lub przy użyciu [typeid](../windows/typeid-cpp-component-extensions.md) operator na nazwę klasy lub struktury.  

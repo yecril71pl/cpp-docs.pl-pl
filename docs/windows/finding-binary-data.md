@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873566"
 ---
 # <a name="finding-binary-data"></a>Znajdowanie danych binarnych
 Można wyszukiwać ciągi ASCII lub bajty szesnastkowe. Na przykład aby znaleźć "tekst Hello", możesz można wyszukać dla dowolnego ciągu "Hello" lub "48 65 6C 6 C 6 f" (szesnastkowy).  

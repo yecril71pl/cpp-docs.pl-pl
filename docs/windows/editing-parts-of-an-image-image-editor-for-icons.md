@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876855"
 ---
 # <a name="editing-parts-of-an-image-image-editor-for-icons"></a>Edytowanie części obrazu (Edytor obrazów dla ikon)
 Można wykonywać operacje edycji standard — wycinanie, kopiowanie, czyszczenia i przenoszenie — na [wybór](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), czy zaznaczenie jest całego obrazu lub tylko jego części. Ponieważ edytor obrazów używa Schowka systemu Windows, można przenieść obrazów między edytor obrazów i inne aplikacje dla systemu Windows.  

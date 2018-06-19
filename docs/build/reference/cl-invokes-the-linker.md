@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371918"
 ---
 # <a name="cl-invokes-the-linker"></a>CL wywołuje konsolidator
 CL wywołuje konsolidator automatycznie, po kompilacji, chyba że używana jest opcja /c. CL przekazuje do konsolidator nazwy plików .obj utworzone podczas kompilowania kodu i nazwy inne pliki określone w wierszu polecenia. Konsolidator używa opcji wymienionych w zmiennej środowiskowej łącza. Opcja/Link umożliwia określenie opcji konsolidatora w wierszu polecenia CL. Opcje, które należy wykonać opcji/Link zastępują w zmiennej środowiskowej łącza. W poniższej tabeli przedstawiono opcje Pomiń łączenie.  

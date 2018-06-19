@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360890"
 ---
 # <a name="urect-class"></a>Klasa _U_RECT
 Ta klasa karta argument umożliwia albo `RECT` wskaźniki lub odwołania do przekazania do funkcji, która jest zaimplementowana w postaci wskaźników.  

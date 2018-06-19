@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879675"
 ---
 # <a name="resource-includes-dialog-box"></a>Zasób zawiera okno dialogowe
 Można użyć **zasobów zawiera** okno dialogowe, aby zmodyfikować rozmieszczenie normalnej pracy w środowisku przechowywania wszystkich zasobów w plik .rc projektu i wszystkie [symbole](../windows/symbols-resource-identifiers.md) w Resource.h.  

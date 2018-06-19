@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357805"
 ---
 # <a name="ca2caex-class"></a>Klasa CA2CAEX
 Ta klasa jest używana przez makra konwersji ciągu `CA2CTEX` i `CT2CAEX`i typedef **CA2CA**.  

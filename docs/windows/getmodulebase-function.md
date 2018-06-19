@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874210"
 ---
 # <a name="getmodulebase-function"></a>GetModuleBase — Funkcja
 Pobiera [ModuleBase](../windows/modulebase-class.md) wskaźnika, który umożliwia zwiększanie oraz zmniejszanie liczebności referencyjnej równej [runtimeclass —](../windows/runtimeclass-class.md) obiektu.  

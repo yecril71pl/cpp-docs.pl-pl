@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878700"
 ---
 # <a name="generic-interfaces-visual-c"></a>Interfejsy ogólne (Visual C++)
 Ograniczenia, które dotyczą parametry typu w klasach są takie same jak te, które dotyczą parametry typu w interfejsach (zobacz [klasy ogólne (C + +/ CLI)](../windows/generic-classes-cpp-cli.md)).  

@@ -40,6 +40,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451201"
 ---
 # <a name="cgets-cgetws"></a>_cgets, _cgetws
 Pobiera ciąg znaków z konsoli. Bezpieczniejsza wersje te funkcje są dostępne; zobacz [_cgets_s —, _cgetws_s —](../c-runtime-library/reference/cgets-s-cgetws-s.md).  

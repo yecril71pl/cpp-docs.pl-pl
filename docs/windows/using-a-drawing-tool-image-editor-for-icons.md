@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891675"
 ---
 # <a name="using-a-drawing-tool-image-editor-for-icons"></a>Używanie narzędzia do rysowania (Edytor obrazów dla ikon)
 Edytor obrazów na odręcznej rysowania i wymazywanie wszystkich działa tak samo jak narzędzia: Wybierz narzędzie i w razie potrzeby [wybierz kolory pierwszego planu i tła](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) i opcje wielkość i kształt. Następnie przesuń wskaźnik do obrazu i kliknij lub przeciągnij do rysowania i wymazać.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878177"
 ---
 # <a name="load-palette-colors-dialog-box-image-editor-for-icons"></a>Ładowanie okna dialogowego kolorów palety (Edytor obrazów dla ikon)
 To okno dialogowe służy do załadowania palety kolorów specjalne do użycia w projekcie. Aby uzyskać więcej informacji, zobacz [zapisywanie i ładowanie różnych palet kolorów](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  

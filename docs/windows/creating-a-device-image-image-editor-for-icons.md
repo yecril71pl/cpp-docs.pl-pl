@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873228"
 ---
 # <a name="creating-a-device-image-image-editor-for-icons"></a>Tworzenie obrazu urządzenia (Edytor obrazów dla ikon)
 Podczas tworzenia nowego zasobu ikony, obraz edytora najpierw tworzy obraz w określonym stylu (32 x 32, 16 kolorów dla ikony oraz 32 × 32 dla kursory w skali odcieni szarości). Można dodać obrazy w różnych rozmiarach i style do początkowej ikony lub kursor i edytować każdy dodatkowego obrazu w razie potrzeby dla różnych ekranów. Można również edytować obrazu za pomocą operacji kopiowania i wklejania z istniejącym typem obrazu lub mapy bitowej utworzonej w programie grafiki.  

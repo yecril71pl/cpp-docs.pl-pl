@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880260"
 ---
 # <a name="custom-color-selector-dialog-box-image-editor-for-icons"></a>Okno dialogowe wybierania niestandardowego koloru (Edytor obrazów dla ikon)
 To okno dialogowe pozwala dostosować kolory używane w przypadku obrazu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie lub zmiana kolorów](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  

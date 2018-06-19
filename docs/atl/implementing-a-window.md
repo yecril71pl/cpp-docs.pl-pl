@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357016"
 ---
 # <a name="implementing-a-window"></a>Implementowanie okna
 Klasa [CWindowImpl](../atl/reference/cwindowimpl-class.md) umożliwia wdrożenie okna i obsługiwać jego wiadomości. Komunikat przekazywanie w ATL jest oparta na mapy komunikatów. W tej sekcji opisano:  

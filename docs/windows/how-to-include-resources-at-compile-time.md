@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880155"
 ---
 # <a name="how-to-include-resources-at-compile-time"></a>Porady: dołączanie zasobów w czasie kompilacji
 Zazwyczaj jest łatwy i wygodny do pracy z domyślnego rozmieszczenia wszystkie zasoby w jednym pliku skryptu (.rc) zasobu. Jednak można dodać zasobów w innych plików do bieżącego projektu w czasie kompilacji poprzez wyszczególnienie je w **dyrektywy kompilacji** polu [zasób zawiera okno dialogowe](../windows/resource-includes-dialog-box.md).  

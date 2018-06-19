@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877543"
 ---
 # <a name="new-toolbar-resource-dialog-box"></a>Okno dialogowe Nowy zasób paska narzędzi
 Okno dialogowe Nowy zasób paska narzędzi umożliwia określenie szerokości i wysokości przycisków dodawanego do zasobu paska narzędzi. Wartość domyślna to 16 x 15 pikseli.  

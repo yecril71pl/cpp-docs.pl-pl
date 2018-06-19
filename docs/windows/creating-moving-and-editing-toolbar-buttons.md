@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871344"
 ---
 # <a name="creating-moving-and-editing-toolbar-buttons"></a>Tworzenie, przenoszenie i edytowanie przycisków paska narzędzi
 Można łatwo utworzyć, przenieść, kopiowanie i edytowanie przycisków paska narzędzi.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876023"
 ---
 # <a name="ole-db-consumer-attributes"></a>Atrybuty konsumentów OLE DB
 Atrybuty konsumentów OLE DB wstrzyknięcie kodu, na podstawie [szablony OLE DB konsumenta](../data/oledb/ole-db-consumer-templates-reference.md), aby utworzyć pracy OLE DB konsumenta wykonujące zadania, takie jak tabele otwierania wykonywania poleceń i uzyskiwanie dostępu do danych.  

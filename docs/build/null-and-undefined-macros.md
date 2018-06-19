@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368473"
 ---
 # <a name="null-and-undefined-macros"></a>Makra niezdefiniowane oraz makra o wartości zerowej
 Zarówno zerowe i niezdefiniowane makra Rozwiń do ciągów o wartości null, ale makra zdefiniowane jako ciąg pusty jest uznawany za zdefiniowane w przetwarzaniu wstępnym wyrażenia. Aby zdefiniować makro jako ciąg pusty, określ żadne znaki z wyjątkiem spacji ani karty po znaku równości (=) w wierszu polecenia lub pliku polecenia, a ciąg null lub definicji ująć w podwójny cudzysłów (""). Aby nie zdefiniowany makra, należy użyć **! UNDEF.** Aby uzyskać więcej informacji, zobacz [dyrektywy przetwarzania wstępnego pliku reguł programu make](../build/makefile-preprocessing-directives.md).  

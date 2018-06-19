@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881006"
 ---
 # <a name="overview-of-generics-in-visual-c"></a>Przegląd typów ogólnych w Visual C++
 Typy ogólne są obsługiwane przez środowisko uruchomieniowe języka wspólnego typy z parametrami. Sparametryzowany typ jest typem, który jest zdefiniowana z parametrem nieznany typ określona po ogólnego jest używany.  

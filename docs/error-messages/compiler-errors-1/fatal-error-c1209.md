@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227896"
 ---
 # <a name="fatal-error-c1209"></a>Błąd krytyczny C1209
 Przyjazne zestawy nie jest obsługiwana przez wersję środowiska uruchomieniowego zainstalowany  

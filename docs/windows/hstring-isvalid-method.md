@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874320"
 ---
 # <a name="hstringisvalid-method"></a>HString::IsValid — Metoda
 Wskazuje, czy bieżący obiekt HString jest pusta.  

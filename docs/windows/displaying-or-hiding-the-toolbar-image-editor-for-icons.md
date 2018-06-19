@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872991"
 ---
 # <a name="displaying-or-hiding-the-toolbar-image-editor-for-icons"></a>Wyświetlanie i ukrywanie paska narzędzi (Edytor obrazów dla ikon)
 Ponieważ wiele narzędzi do rysowania są dostępne z [klawiatury](../windows/accelerator-keys-image-editor-for-icons.md), warto czasami ukrywanie paska narzędzi edytora obrazów.  

@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418188"
 ---
 # <a name="strcoll-functions"></a>strcoll — Funkcje
 Każdy z `strcoll` i `wcscoll` funkcje porównuje dwa ciągi zgodnie z `LC_COLLATE` ustawienie kategorii Strona kodowa ustawień lokalnych obecnie w użyciu. Każdy z `_mbscoll` funkcji porównuje dwa ciągi zgodnie ze strony kodowe wielobajtowe obecnie w użyciu. Użyj `coll` funkcje do porównywnania ciągów, gdy ma różnicy między kolejność zestaw znaków i kolejność lexicographic znaków w bieżącej stronie kodowej i różnica jest przydatne do porównania. Użyj odpowiedniej `cmp` funkcji, aby przetestować tylko w przypadku ciągu równości.  

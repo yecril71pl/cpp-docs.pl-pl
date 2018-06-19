@@ -58,6 +58,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417331"
 ---
 # <a name="fundamental-types--c"></a>Typy podstawowe (C++)
 Typy podstawowe w języku C++ są podzielone na trzy kategorie: całkowitych, zmiennoprzecinkowych, a typ void. Typy całkowite są w stanie obsługiwać liczb całkowitych. Zmiennoprzecinkowych typów są w stanie określania wartości, które mogą mieć ułamkowych części.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873111"
 ---
 # <a name="eventsourcetargetspointerlock-data-member"></a>EventSource::targetsPointerLock_ — Członek danych
 Synchronizuje dostępu do elementów członkowskich danych wewnętrznych, nawet wtedy, gdy programy obsługi zdarzeń dla tego elementu EventSource są dodawane, usunięte lub wywołany.  

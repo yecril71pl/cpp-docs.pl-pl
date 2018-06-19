@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873514"
 ---
 # <a name="creating-and-setting-guides-and-margins"></a>Tworzenie i ustawianie prowadnic i marginesów
 Czy przenosisz formantów, dodawanie formantów lub zmienianie rozmieszczenia bieżący układ, przewodniki może pomóc wyrównywania formantów dokładnie w oknie dialogowym. Przewodniki są wyświetlane jako niebieskie linie przerywana przez okno dialogowe wyświetlane w edytorze i odpowiednie strzałki w linijki (w górnej i lewej strony Edytor okien dialogowych).  

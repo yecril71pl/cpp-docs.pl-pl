@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873488"
 ---
 # <a name="editing-control-properties"></a>Edytowanie właściwości formantu
 ### <a name="to-edit-the-properties-of-a-control-or-controls"></a>Aby edytować właściwości formantu lub formantów  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33174153"
 ---
 # <a name="user-defined-operators-ccli"></a>Operatory zdefiniowane przez użytkownika (C++/CLI)
 Operatory zdefiniowane przez użytkownika w typach zarządzanych są dozwolone jako statyczne elementy Członkowskie lub elementy członkowskie wystąpień lub w zakresie globalnym. Jednak tylko statyczne operatory są dostępne za pośrednictwem metadanych do klientów, którzy są napisane w języku innym niż Visual C++.  

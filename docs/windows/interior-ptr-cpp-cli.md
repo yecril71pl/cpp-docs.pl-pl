@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879110"
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
 *Wskaźnik wewnętrzny* deklaruje wskaźnik do wewnątrz typu odwołania, ale nie samego obiektu. Wskaźnik wewnętrzny może wskazywać dojścia odwołania, typu wartości, dojście do typu opakowanego, elementu członkowskiego typu zarządzanego lub element tablicy zarządzanej.  

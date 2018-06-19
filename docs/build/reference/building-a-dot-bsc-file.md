@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369009"
 ---
 # <a name="building-a-bsc-file"></a>Kompilowanie pliku .Bsc
 BSCMAKE można utworzyć nowego pliku informacyjnego przeglądarki z plików SBR nowo utworzony. Można także utrzymać istniejący plik .bsc przy użyciu plików SBR dla obiekt plików, które uległy zmianie od czasu ostatniej kompilacji.  

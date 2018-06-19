@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873017"
 ---
 # <a name="editing-an-image-outside-of-a-project-image-editor-for-icons"></a>Edytowanie obrazu spoza projektu (Edytor obrazów dla ikon)
 Można otwierać i edytować obrazów w środowisku programistycznym, tak samo jak w dowolnej aplikacji grafiki. Obrazów, z którymi współpracujesz nie musi być częścią projektu programu Visual Studio do edycji autonomicznych.  

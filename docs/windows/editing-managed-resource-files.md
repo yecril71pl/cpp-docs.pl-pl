@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880699"
 ---
 # <a name="editing-managed-resource-files"></a>Edytowanie zarządzanych plików zasobów
 Pliki zasobów zarządzanych (resx) są plikami XML. Po dodaniu plik zasobu zarządzanego do projektu z **Dodaj nowy element** okno dialogowe **Edytor zarządzanych zasobów** domyślnego.  

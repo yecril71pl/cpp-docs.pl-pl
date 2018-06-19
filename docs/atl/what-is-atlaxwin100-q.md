@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359998"
 ---
 # <a name="what-is-atlaxwin100"></a>Co to jest AtlAxWin100?
 `AtlAxWin100` to nazwa klasy okna, który zapewnia funkcje hosting kontrolki w ATL. Podczas tworzenia wystąpienia tej klasy procedurę okna automatycznie używać interfejsu API hosting kontrolki do utworzenia obiektu hosta skojarzony z oknem, a następnie załaduj z formantu, który można określić jako tytuł okna.  

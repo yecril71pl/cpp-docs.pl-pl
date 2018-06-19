@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881172"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>Operator uchwytu do obiektu (^) (C++ Component Extensions)
 *Obsługi deklarator* (`^`, Wymowa "hat"), modyfikuje typ [specyfikator](../cpp/overview-of-declarators.md) oznacza, że zadeklarowane obiektu powinien automatycznie usunięta, gdy system sprawdza, czy obiekt jest nie jest już dostępny.  

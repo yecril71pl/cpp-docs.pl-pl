@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877569"
 ---
 # <a name="how-to-improve-performance-with-generics-visual-c"></a>Porady: poprawianie wydajności za pomocą typów ogólnych (Visual C++)
 Z ogólnymi można utworzyć do ponownego użycia kodu na podstawie parametru typu. Rzeczywisty typ parametru typu została odroczona, dopóki wywoływany przez kod klienta. Aby uzyskać więcej informacji dotyczących typów ogólnych, zobacz [ogólne](../windows/generics-cpp-component-extensions.md).  

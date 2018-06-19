@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230407"
 ---
 # <a name="compiler-error-c2548"></a>C2548 błąd kompilatora
 "class::member": Brak domyślnego parametru dla parametru parametru  

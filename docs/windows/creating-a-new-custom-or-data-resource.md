@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871835"
 ---
 # <a name="creating-a-new-custom-or-data-resource"></a>Tworzenie nowej niestandardowej lub zasobów danych
 Można utworzyć nowy zasób niestandardowy lub dane przez umieszczenie w osobnym pliku przy użyciu składni pliku skryptu (.rc) zasób normalny, a następnie łącznie z tym plikiem zasób prawym przyciskiem myszy projekt w Eksploratorze rozwiązań i klikając przycisk **zawiera zasobów**  menu skrótów.  

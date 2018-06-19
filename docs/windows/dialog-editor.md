@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875861"
 ---
 # <a name="dialog-editor"></a>Edytor okien dialogowych
 Edytor okien dialogowych pozwala na tworzenie lub edytowanie zasobów okien dialogowych. Otwórz Edytor okien dialogowych klikając dwukrotnie plik .rc okno dialogowe okno Widok zasobów (**widoku &#124; widok zasobów**). Należy zauważyć, że widok zasobów nie jest dostępny w wersji Express.  

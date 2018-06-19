@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392630"
 ---
 # <a name="overview-of-declarations"></a>Przegląd deklaracji
 "Deklaracji" Określa interpretacji i atrybuty zestaw identyfikatorów. Deklaracja powodujący magazynu, które mają zostać zarezerwowane dla obiekt lub funkcji o nazwie przez identyfikator jest nazywany "definition". Deklaracje C zmienne, funkcje i typy mają następującej składni:  

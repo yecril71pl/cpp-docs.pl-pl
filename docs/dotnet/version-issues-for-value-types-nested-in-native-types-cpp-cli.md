@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168844"
 ---
 # <a name="version-issues-for-value-types-nested-in-native-types-ccli"></a>Problemy z wersją w przypadku typów wartości zagnieżdżonych w typach natywnych (C++/CLI)
 Należy wziąć pod uwagę składnika zestawu podpisem (silnej nazwy), używany do tworzenia zestawu klienta. Składnik zawiera typ wartości, który jest używany w kliencie jako typ elementu Członkowskiego Unii macierzystego, klasy lub tablicy. W przypadku przyszłych wersji składnika zmiany rozmiaru lub układ typu wartości, klient musi ponownie kompilowana.  

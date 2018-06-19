@@ -24,6 +24,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34256083"
 ---
 # <a name="atlwinmodule70-structure"></a>Struktura _ATL_WIN_MODULE70
 Używany przez kod okien w ATL.  

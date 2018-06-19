@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170918"
 ---
 # <a name="compiler-error-c2289"></a>C2289 błąd kompilatora
 Kwalifikator użyty więcej niż raz tego samego typu  

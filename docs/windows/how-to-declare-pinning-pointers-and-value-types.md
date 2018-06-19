@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880387"
 ---
 # <a name="how-to-declare-pinning-pointers-and-value-types"></a>Porady: deklarowanie unieruchamiania wskaźników i typów wartości
 Można go niejawnie opakować typ wartości. Następnie można zadeklarować przypiętego wskaźnika do obiektu typu wartości się i użyj **pin_ptr** do typu wartości spakowanej.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874083"
 ---
 # <a name="inverting-the-colors-in-a-selection-image-editor-for-icons"></a>Odwracanie kolorów w wyborze (Edytor obrazów dla ikon)
 Edytor obrazów oferuje wygodny sposób Odwróć kolory w wybranej części obrazu, dzięki czemu można sprawdzić, jak obraz wydaje się z odwróconą kolorów.  

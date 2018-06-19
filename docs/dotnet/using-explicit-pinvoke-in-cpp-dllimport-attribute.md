@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169507"
 ---
 # <a name="using-explicit-pinvoke-in-c-dllimport-attribute"></a>Używanie jawnej funkcji PInvoke w języku C++ (atrybut DllImport)
 Platforma .NET Framework zapewnia jawnego wywołania platformy (lub funkcji PInvoke) funkcji z `Dllimport` atrybutu aby umożliwić aplikacjom zarządzanym wywołaniem funkcji niezarządzanej umieszczone wewnątrz biblioteki dll. Jawnej funkcji PInvoke jest wymagany w sytuacjach, w którym pakiecie niezarządzane interfejsy API w postaci bibliotek DLL i kod źródłowy jest niedostępny. Na przykład podczas wywoływania funkcji Win32 wymaga funkcji PInvoke. W przeciwnym razie użyj P niejawne {Invoke; zobacz [za pomocą międzyoperacyjności języka C++ (niejawna funkcja PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md) Aby uzyskać więcej informacji.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33229069"
 ---
 # <a name="compiler-error-c2541"></a>C2541 błąd kompilatora
 słowo kluczowe "delete": Usuń: nie można usunąć obiektów, które nie są wskaźnikami  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879285"
 ---
 # <a name="image-editor-for-icons"></a>Edytor obrazów dla ikon
 Edytor obrazów zawiera obszerny zestaw narzędzi do tworzenia i edycji obrazów, a także funkcje pomagające w tworzeniu map bitowych paska narzędzi. Oprócz mapy bitowe, ikony i kursory można edytować obrazów w formacie GIF lub JPEG za pomocą poleceń **obrazu** menu i narzędzi na **edytor obrazów** paska narzędzi.  

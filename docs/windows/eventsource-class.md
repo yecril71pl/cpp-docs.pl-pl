@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876517"
 ---
 # <a name="eventsource-class"></a>EventSource — Klasa
 Reprezentuje-agile zdarzeń. Funkcje Członkowskie EventSource dodawania, usuwania i wywołanie procedury obsługi zdarzeń. Elastyczne zdarzenia, użyj [AgileEventSource](agileeventsource-class.md). 

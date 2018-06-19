@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891428"
 ---
 # <a name="win32-application-wizard"></a>Kreator aplikacji Win32
 Kreator aplikacji Win32 Visual C++ pozwala utworzyć cztery typy projektów (wymienione w pozycji w tabeli poniżej). W każdym przypadku można określić dodatkowe opcje, które są odpowiednie dla typu projektu, które będą otwierane. W poniższej tabeli przedstawiono opcje są dostępne dla każdego typu aplikacji.  

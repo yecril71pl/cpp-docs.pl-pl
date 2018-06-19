@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881120"
 ---
 # <a name="id-property"></a>Właściwość ID
 Właściwość Identyfikatora odwołuje się do każdego wpisu tabeli akceleratora w kodzie programu. Jest to wartość polecenia, który otrzyma program, gdy użytkownik naciśnie klawisz skrótu lub kombinację klawiszy. Aby akceleratora taki sam jak element menu, należy ich identyfikatory takie same (tak długo, jak identyfikator tabeli akceleratora jest taki sam jak identyfikator zasobu menu).  

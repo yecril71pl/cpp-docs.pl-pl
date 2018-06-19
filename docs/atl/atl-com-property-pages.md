@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357535"
 ---
 # <a name="atl-com-property-pages"></a>Strony właściwości ALT COM
 Strony właściwości COM udostępniają interfejs użytkownika do ustawiania właściwości (lub wywołanie metody) jeden lub więcej obiektów COM. Strony właściwości są często używane przez kontrolki ActiveX udostępnia interfejsy użytkownika sformatowanego, które umożliwiają właściwości formantu w czasie projektowania.  

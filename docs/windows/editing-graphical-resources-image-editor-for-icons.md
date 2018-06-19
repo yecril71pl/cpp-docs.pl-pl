@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882501"
 ---
 # <a name="editing-graphical-resources-image-editor-for-icons"></a>Edytowanie zasobów graficznych (Edytor obrazów dla ikon)
 Zasoby graficzne są obrazy, które można definiować dla aplikacji. Można narysować freehand lub rysowanie przy użyciu kształtów. Możesz wybrać części obrazu dla edycji lub zmiana rozmiaru i odbijanie lub Tworzenie pędzla niestandardowego z wybranej części obrazu i rysowanie za pomocą tego pędzla. Można zdefiniować właściwości obrazu, zapisywanie obrazów w różnych formatach i konwertowania obrazów z jednego formatu na inny.  

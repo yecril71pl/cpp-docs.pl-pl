@@ -32,6 +32,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879181"
 ---
 # <a name="how-to-import-and-export-resources"></a>Porady: importowanie i eksportowanie zasobów
 Możesz zaimportować zasobów graficznych (mapy bitowe, ikony kursory i paski narzędzi), plików HTML i zasobów niestandardowych do użytku w programie Visual C++. Możesz wyeksportować takich samych typach plików z projektu programu Visual C++ w oddzielnych plikach, które mogą być używane poza Środowisko deweloperskie.  

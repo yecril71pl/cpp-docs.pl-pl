@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198563"
 ---
 # <a name="compiler-error-c2462"></a>C2462 błąd kompilatora
 'Identyfikator': nie można zdefiniować typu w "nowe wyrażenie"  

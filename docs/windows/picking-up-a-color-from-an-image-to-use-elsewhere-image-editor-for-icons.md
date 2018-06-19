@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877413"
 ---
 # <a name="picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons"></a>Pobieranie koloru z obrazu do użycia w innym miejscu (Edytor obrazów dla ikon)
 **Wybierz kolor**, lub pobrania kolorów, narzędzie sprawia, że wszelkie kolor na obrazie bieżący kolor pierwszego planu lub kolorów tła, w zależności od tego, czy klawisz lewego lub prawego przycisku myszy. Aby anulować **wybierz kolor** narzędzia, wybranie innego narzędzia.  

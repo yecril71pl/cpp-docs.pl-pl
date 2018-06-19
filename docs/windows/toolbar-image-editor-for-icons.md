@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890557"
 ---
 # <a name="toolbar-image-editor-for-icons"></a>Pasek narzędzi (Edytor obrazów dla ikon)
 **Edytor obrazów** narzędzi zawiera narzędzia do rysowania, malowania wprowadzania tekstu, wymazywanie i manipulowanie widoków. Zawiera ona także Selektor opcji, z którym można wybrać opcje dotyczące korzystania z narzędzia. Na przykład można wybrać różne szerokości pędzla, czynniki powiększenia i style linii.  

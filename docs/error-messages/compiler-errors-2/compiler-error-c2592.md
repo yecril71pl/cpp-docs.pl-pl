@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33229816"
 ---
 # <a name="compiler-error-c2592"></a>C2592 błąd kompilatora
 "class": "base_class_2" jest odziedziczone "base_class_1" i nie może być ponownie określone  

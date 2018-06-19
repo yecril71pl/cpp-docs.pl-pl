@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877920"
 ---
 # <a name="local-c"></a>local (C++)
 Gdy jest używany w nagłówku interfejsu, umożliwia przy użyciu kompilatora MIDL jako generator nagłówka. W przypadku poszczególnych funkcji wyznacza procedury lokalnym, dla których są generowane nie klas zastępczych.  

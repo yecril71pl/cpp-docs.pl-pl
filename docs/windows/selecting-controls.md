@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892777"
 ---
 # <a name="selecting-controls"></a>Zaznaczanie kontrolek
 Wybierz formanty do rozmiaru, Dopasuj, przenieść, skopiować, lub usuń je, a następnie wykonaj operację, którą chcesz. W większości przypadków musisz wybrać więcej niż jeden formant za pomocą narzędzi rozmiaru i wyrównanie na [paska narzędzi edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  

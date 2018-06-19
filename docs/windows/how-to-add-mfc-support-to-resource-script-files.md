@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879799"
 ---
 # <a name="how-to-add-mfc-support-to-resource-script-files"></a>Porady: dodawanie obsługi MFC do plików skryptu zasobu
 Zwykle podczas budowania aplikacji MFC dla systemu Windows przy użyciu [Kreator aplikacji MFC](../mfc/reference/mfc-application-wizard.md), Kreator generuje podstawowego zestawu plików (w tym pliku skryptu (.rc) zasobu), który zawiera podstawowe funkcje programu Microsoft Foundation klasy (MFC). Jednak w przypadku edycji plik .rc dla aplikacji systemu Windows, który nie jest oparty na MFC, następujące funkcje specyficzne dla programu MFC framework nie są dostępne:  

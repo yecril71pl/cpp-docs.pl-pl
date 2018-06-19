@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236199"
 ---
 # <a name="compiler-error-c2605"></a>C2605 błąd kompilatora
 "Nazwa": Ta metoda jest zastrzeżony w obrębie zarządzanego lub WinRT — klasa  

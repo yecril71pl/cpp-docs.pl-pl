@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872630"
 ---
 # <a name="converting-bitmaps-to-toolbars"></a>Konwertowanie map bitowych na paski narzędzi
 Konwertowanie map bitowych można utworzyć nowego paska narzędzi. Grafika z mapy bitowej konwertuje obrazy dla przycisków paska narzędzi. Zazwyczaj mapy bitowej zawiera kilka obrazów przycisk na jednym mapy bitowej, za pomocą jednego obrazu dla każdego przycisku. Obrazy może być dowolnym rozmiarze; Wartość domyślna to 16 pikseli szerokości i wysokości obrazu. Można określić rozmiaru obrazy dla przycisków w [okno dialogowe Nowy zasób paska narzędzi](../windows/new-toolbar-resource-dialog-box.md) po wybraniu Edytor paska narzędzi z **obrazu** menu znajduje się w edytorze obrazów.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358117"
 ---
 # <a name="active-template-library-atl-concepts"></a>Pojęcia biblioteki Active Template Library (ALT)
 Active Template Library (ATL) to zestaw na podstawie szablonu klasy C++, które pozwalają tworzyć małe, szybkie obiekty składnika modelu COM (Object). Ma specjalną obsługę dla klucza funkcji COM, w tym implementacje standardowych, podwójne interfejsy standardowe interfejsy modułu wyliczającego COM, punkty połączenia, oderwania interfejsów i formantów ActiveX.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172447"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp w ostatniej FIFO. Użyj karty kontenera `stack` Zarządzanie kontenerem podstawowej jako stosu rozwijana wypychania.  
