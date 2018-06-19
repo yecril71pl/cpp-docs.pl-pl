@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342062"
 ---
 # <a name="deprecated-ansi-apis"></a>Przestarzałe interfejsy API ANSI
 Biblioteka Microsoft Foundation Class (MFC) jest migrowana do klasy i metody, które są oparte na zestawie znaków Unicode. W rezultacie wersje ANSI kilka metod MFC są przestarzałe. Użyj wersji Unicode tych metod w przyszłych aplikacji.  

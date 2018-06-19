@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236562"
 ---
 # <a name="compiler-error-c2821"></a>C2821 błąd kompilatora
 pierwszy formalny parametr dla "operator new" musi być "unsigned int"  

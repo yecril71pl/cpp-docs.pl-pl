@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33887029"
 ---
 # <a name="custom-attributes-c"></a>Atrybuty niestandardowe (C++)
 Atrybut niestandardowy jest jednoznacznie technika, który umożliwia użytkownikowi rozszerzenie metadanych. Ten temat dotyczy przy użyciu atrybutów: Określanie parametrów i elementów docelowych.  

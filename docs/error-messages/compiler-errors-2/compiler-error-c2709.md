@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230140"
 ---
 # <a name="compiler-error-c2709"></a>C2709 błąd kompilatora
 'Identyfikator': długość parametrów formalnych w bajtach różni się od poprzedniej deklaracji  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891519"
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast (C++ Component Extensions)
 `safe_cast` Operacji zwraca określone wyrażenie jako określony typ, w przypadku powodzenia; w przeciwnym razie zwraca `InvalidCastException`.  

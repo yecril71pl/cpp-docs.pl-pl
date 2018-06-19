@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341965"
 ---
 # <a name="command-routing-classes"></a>Klasy routingu poleceń
 Jako użytkownik wchodzi w interakcję z aplikacją, wybierając z menu lub przycisków pasek sterowania myszą, aplikacja wysyła komunikaty z obiektu dotyczy interfejsu użytkownika do odpowiedniego obiektu docelowym polecenia. Pochodne klasy docelowej polecenia `CCmdTarget` obejmują [CWinApp](../mfc/reference/cwinapp-class.md), [CWnd](../mfc/reference/cwnd-class.md), [cdoctemplate —](../mfc/reference/cdoctemplate-class.md), [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), i pochodne klasy. Platforma obsługuje polecenie automatycznego routingu, aby polecenia mogą być obsługiwane przez obiekt najbardziej odpowiednia aktualnie aktywne w aplikacji.  

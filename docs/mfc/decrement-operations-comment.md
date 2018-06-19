@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342274"
 ---
 # <a name="-operations-comment"></a>Komentarz // Operations
 `// Operations` Sekcji deklaracji klasy MFC zawiera funkcje elementu członkowskiego, które można wywołać obiektu umożliwia wykonywanie czynności lub wykonania akcji (wykonywanie operacji). Funkcje te są zwykle nie -**const** ponieważ mają one zwykle efekty uboczne. Mogą być wirtualne lub niewirtualne zależnie od potrzeb klasy. Zazwyczaj te elementy członkowskie są publiczne.  

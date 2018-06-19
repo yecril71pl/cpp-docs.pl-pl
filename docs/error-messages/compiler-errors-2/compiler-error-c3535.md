@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33258776"
 ---
 # <a name="compiler-error-c3535"></a>C3535 błąd kompilatora
 Nie można ustalić typu "type1" z "type2".  

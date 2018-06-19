@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882735"
 ---
 # <a name="how-to-use-resource-templates"></a>Porady: użycie szablonów zasobów
 Szablon zasobu jest zapisany jako plik .rct — zasób dostosowany. Szablon zasobu może następnie służyć jako punkt początkowy do tworzenia innych zasobów. Szablony zasobów zaoszczędzić czas podczas opracowywania dodatkowych zasobów lub grup zasobów, które mają funkcje, takie jak standardowych kontrolek i inne elementy powtórzony. Na przykład można objąć kilka okien dialogowych przycisk Pomoc i ikony logo firmy. Aby wykonać tak szybko, Utwórz nowy szablon — okno dialogowe i dostosować go za pomocą logo i przycisk Pomoc.  

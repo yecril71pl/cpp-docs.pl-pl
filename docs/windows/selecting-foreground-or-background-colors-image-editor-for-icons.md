@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888649"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>Ustawianie pierwszego planu lub kolorów tła (Edytor obrazów dla ikon)
 Z wyjątkiem **Gumka**, narzędzi na **edytor obrazów** rysowania narzędzi z bieżący kolor pierwszego planu i tła po naciśnięciu przycisku myszy do lewego lub prawego odpowiednio.  

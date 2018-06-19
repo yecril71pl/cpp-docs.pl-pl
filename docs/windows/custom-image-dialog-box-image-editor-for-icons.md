@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883137"
 ---
 # <a name="custom-image-dialog-box-image-editor-for-icons"></a>Niestandardowe okno dialogowe obrazu (Edytor obrazów dla ikon)
 Umożliwia utworzenie nowego obrazu z niestandardowego rozmiaru i liczby kolorów.

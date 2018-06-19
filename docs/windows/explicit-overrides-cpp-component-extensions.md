@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879506"
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>Jawne zastąpienia (C++ Component Extensions)
 W tym temacie omówiono sposób jawnie przesłonić element członkowski klasy podstawowej lub interfejsu. Nazwanego przesłaniania (jawne) należy używać tylko do zastąpienia metody Metoda pochodna, która ma inną nazwę.  

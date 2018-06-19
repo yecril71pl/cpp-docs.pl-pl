@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342137"
 ---
 # <a name="creating-the-date-and-time-picker-control"></a>Tworzenie formantu selektora dat i godzin
 Sposób tworzenia formant wyboru daty i godziny zależy od tego, czy za pomocą formantu w oknie dialogowym lub tworzenia go w oknie nondialog.  

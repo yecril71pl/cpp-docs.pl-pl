@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230345"
 ---
 # <a name="compiler-error-c2569"></a>C2569 błąd kompilatora
 "EnumOrUnion": enum/union nie można użyć jako klasa podstawowa  

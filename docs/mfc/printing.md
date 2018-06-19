@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348239"
 ---
 # <a name="printing"></a>Drukowanie
 Microsoft Windows implementuje wyświetlania niezależnych od urządzenia. W MFC, oznacza to, że tego samego wywołań rysowania, w `OnDraw` funkcji członkowskiej klasy widoku, są zobowiązani do rysowania na ekranie i na innych urządzeniach, takich jak drukarki. Podglądu wydruku urządzenie docelowe jest symulowane wydruk do wyświetlenia.  

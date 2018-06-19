@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345920"
 ---
 # <a name="handling-ttnneedtext-notification-for-tool-tips"></a>Obsługa powiadomienia TTN_NEEDTEXT w przypadku etykietek narzędzi
 W ramach [Włączanie etykietek narzędzi](../mfc/enabling-tool-tips.md), obsługi **TTN_NEEDTEXT** wiadomości, dodając następujący wpis do mapy komunikatów z oknem właściciela:  

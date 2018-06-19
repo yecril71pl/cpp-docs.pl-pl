@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257418"
 ---
 # <a name="compiler-error-c3509"></a>C3509 błąd kompilatora
 'type': nieprawidłowy zwracany typ automatyzacji; Jeśli parametr jest oznaczony jako "retval", zwracany typ musi być "void", "HRESULT" lub "SCODE"  

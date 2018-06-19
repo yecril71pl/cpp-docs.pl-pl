@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888849"
 ---
 # <a name="setting-accelerator-properties"></a>Ustawianie właściwości klawiszy skrótów
 Można ustawić właściwości klawiszy skrótów w [okna właściwości](/visualstudio/ide/reference/properties-window) w dowolnym momencie. Edytor klawiszy skrótów umożliwia także modyfikowanie właściwości klawiszy skrótów w tabeli akceleratora. Zmiany wprowadzone przy użyciu okna właściwości lub Edytor klawiszy skrótów mają ten sam rezultat: zmiany są natychmiast odzwierciedlone w tabeli akceleratora.  

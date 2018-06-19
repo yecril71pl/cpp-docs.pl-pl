@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340167"
 ---
 # <a name="active-document-servers"></a>Serwery dokumentów aktywnych
 Serwery dokumentów aktywnych, takich jak Word, Excel lub PowerPoint dokumenty hosta z aplikacjami innych typów o nazwie aktywne dokumenty. W odróżnieniu od OLE osadzonych obiektów (które są po prostu wyświetlane na stronie innego dokumentu), dokumenty aktywne Podaj pełną interfejsu i pełną funkcjonalność natywnych aplikacji serwera, z której zostały utworzone. Użytkownicy mogą tworzyć dokumenty przy użyciu pełnych możliwości ich ulubionych aplikacji (jeśli są włączone dokumentów aktywnych), jeszcze można traktować Projekt wynikowy jako pojedynczej jednostki.  

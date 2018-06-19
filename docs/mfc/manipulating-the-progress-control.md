@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347406"
 ---
 # <a name="manipulating-the-progress-control"></a>Operowanie formantem postępu
 Istnieją trzy sposoby zmiany bieżącej pozycji formantu postępu ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)).  

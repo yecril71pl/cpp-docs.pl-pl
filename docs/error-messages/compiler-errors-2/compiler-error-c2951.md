@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33241539"
 ---
 # <a name="compiler-error-c2951"></a>C2951 błąd kompilatora
 Typ deklaracji są dozwolone tylko w globalnej, przestrzeni nazw lub zakresie klasy  

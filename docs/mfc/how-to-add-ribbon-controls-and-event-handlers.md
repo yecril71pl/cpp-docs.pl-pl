@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344422"
 ---
 # <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Porady: dodawanie formantów wstążki do programów obsługi zdarzeń
 Formanty wstążki są elementów, takich jak przycisków i pola kombi, które dodajesz do paneli. Panele są obszarów pasek wstążki wyświetlających grupy pokrewnych formantów.  

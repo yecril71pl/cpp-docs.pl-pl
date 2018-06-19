@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33234629"
 ---
 # <a name="compiler-error-c2787"></a>C2787 błąd kompilatora
 "identyfikator": żaden identyfikator GUID nie został skojarzony z tym obiektem  

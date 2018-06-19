@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270283"
 ---
 # <a name="compiler-error-c3920"></a>C3920 błąd kompilatora
 "operator": nie można definiować operatory przyrostka inkrementacji/dekrementacja WinRT lub wywołanie przyrostkowego operatora CLR WinRT lub CLR operator wywoła odpowiedni prefiks WinRT lub CLR — operator (op_Increment/op_Decrement), ale z przyrostkową semantyką  

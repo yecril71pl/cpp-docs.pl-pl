@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275165"
 ---
 # <a name="compiler-warning-c4986"></a>C4986 ostrzeżenia kompilatora
 "Funkcja": specyfikacja wyjątku jest niezgodna z poprzednią deklaracją  

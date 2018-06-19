@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341901"
 ---
 # <a name="creating-windows"></a>Tworzenie okien
 Platformę automatycznie tworzy większość systemu windows, które są potrzebne w ramach programu. [Tworzenie dokumentu/widoku](../mfc/document-view-creation.md) przedstawia sposób tworzenia okna ramowe skojarzone z dokumentami i widokami w ramach. Ale w celach specjalne można również tworzyć własne okna — łącznie z własnych okien podrzędnych okien ramowych lub widoków — oprócz dostarczanych przez platformę systemu windows.  

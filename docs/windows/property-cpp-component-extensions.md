@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882709"
 ---
 # <a name="property--c-component-extensions"></a>property (C++ Component Extensions)
 Deklaruje *właściwość*, która jest funkcją członkowską, który zachowuje się oraz uzyskiwania dostępu do elementu członkowskiego danych lub element tablicy.  

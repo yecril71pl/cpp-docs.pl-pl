@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283764"
 ---
 # <a name="compiler-warning-level-1-c4364"></a>Kompilator C4364 ostrzegawcze (poziom 1)
 \#przy użyciu zestawu "file" poprzednio widziano w location(line_number) bez atrybutu as_friend; nie zastosowano as_friend  

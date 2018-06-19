@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266314"
 ---
 # <a name="compiler-error-c3669"></a>C3669 błąd kompilatora
 "członek": specyfikator override "override" nie dozwolony na statycznych funkcjach Członkowskich lub konstruktorach  

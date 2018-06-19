@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343353"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Schowek: kopiowanie i wklejanie danych
 W tym temacie opisano minimalną pracy, należy wykonać, kopiowanie i wklejanie ze Schowka w aplikacji OLE. Zaleca się przeczytanie [obiekty danych i źródła danych (OLE)](../mfc/data-objects-and-data-sources-ole.md) tematy przed kontynuowaniem.  

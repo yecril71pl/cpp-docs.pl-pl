@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265899"
 ---
 # <a name="compiler-error-c3715"></a>C3715 błąd kompilatora
 "wskaźnik": musi być wskaźnikiem do "class"  

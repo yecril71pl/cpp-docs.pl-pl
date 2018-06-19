@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881461"
 ---
 # <a name="key-wrl-apis-by-category"></a>Kluczowe interfejsy API biblioteki WRL według kategorii
 W poniższych tabelach przedstawiono podstawowe klasy, struktury, funkcjami i makrami Biblioteka szablonów C++ środowiska wykonawczego systemu Windows. Konstrukcje w pomocnika obszary nazw i klas są pomijane. Te listy rozszerzyć w dokumentacji interfejsu API, które są zorganizowane według przestrzeni nazw.  

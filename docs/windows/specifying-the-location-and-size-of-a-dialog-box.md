@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890580"
 ---
 # <a name="specifying-the-location-and-size-of-a-dialog-box"></a>Określanie lokalizacji i rozmiaru okna dialogowego
 Lokalizacja i rozmiar okno dialogowe, jak również lokalizacja i rozmiar kontrolki, to są mierzone w jednostkach okna dialogowego. Wartości dla poszczególnych formantów i w oknie dialogowym są wyświetlane w prawej dolnej części paska po wybraniu ich stanu programu Visual Studio.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345667"
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>Pochodne klasy widoków dostępne w MFC
 W poniższej tabeli przedstawiono MFC widoku klasy i ich relacji między nimi. Funkcje klasy widoku są zależne od klasy widoku MFC, z którego pochodzi.  

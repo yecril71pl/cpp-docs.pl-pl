@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344883"
 ---
 # <a name="dialog-data-validation"></a>Walidacja danych okna dialogowego
 Można określić weryfikacji oprócz wymiany danych przez wywołanie funkcji DDV, jak pokazano w przykładzie w [wymiana danych okna dialogowego](../mfc/dialog-data-exchange.md). `DDV_MaxChars` Wywołania w tym przykładzie weryfikuje ciąg wprowadzony w formancie pole tekstowe nie jest dłuższa niż 20 znaków. Funkcja DDV zwykle alerty użytkownikowi okno komunikatu, jeśli sprawdzanie poprawności nie powiedzie się i umieszcza fokus na ataku kontroli, użytkownik może ponownie wprowadzić dane. Funkcja DDV określonej kontrolki musi zostać wywołany natychmiast po funkcji DDX dla tej samej kontrolki.  

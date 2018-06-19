@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891379"
 ---
 # <a name="string-editor"></a>Edytor ciągów znaków
 Tabela ciągów jest zasób systemu Windows, który zawiera listę identyfikatorów, wartości oraz podpisów dla wszystkich ciągów aplikacji. Na przykład monity pasek stanu znajdują się w tabeli ciągów.  

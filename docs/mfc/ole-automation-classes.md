@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342881"
 ---
 # <a name="ole-automation-classes"></a>Klasy automatyzacji OLE
 Te klasy obsługuje klientów automatyzacji (aplikacje, które kontrolują inne aplikacje). Serwery automatyzacji (aplikacje, które mogą być kontrolowane przez inne aplikacje) są obsługiwane za pośrednictwem [mapy wysyłania](../mfc/reference/dispatch-maps.md).  

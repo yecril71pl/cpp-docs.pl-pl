@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347010"
 ---
 # <a name="making-and-using-controls"></a>Tworzenie i używanie formantów
 Upewnij się większość formantów w oknach dialogowych w programie Visual C++ [Edytor okien dialogowych](../windows/dialog-editor.md). Ale można też utworzyć formantów w dowolnym lub oknie dialogowym.  

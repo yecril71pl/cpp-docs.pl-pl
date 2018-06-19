@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33285645"
 ---
 # <a name="compiler-warning-level-1-c4652"></a>Kompilator C4652 ostrzegawcze (poziom 1)
 — Opcja kompilatora "option" niespójna z prekompilowanym nagłówkiem; Bieżąca opcja wiersza poleceń przesłoni zdefiniowaną WE prekompilowanym nagłówku  

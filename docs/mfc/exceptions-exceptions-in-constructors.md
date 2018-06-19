@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342634"
 ---
 # <a name="exceptions-exceptions-in-constructors"></a>Wyjątki: wyjątki w konstruktorach
 Po zgłoszeniu wyjątku w konstruktorze, wyczyść niezależnie od obiektów i alokacji pamięci zostały wprowadzone przed zgłoszeniem wyjątku, zgodnie z objaśnieniem w [wyjątki: zgłaszanie wyjątków z swój własny funkcji](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md).  

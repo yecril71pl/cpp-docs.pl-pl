@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342036"
 ---
 # <a name="ctreectrl-vs-ctreeview"></a>Ctreectrl — vs. CTreeView —
 MFC oferuje dwie klasy, które hermetyzują drzewa formantów: [CTreeCtrl](../mfc/reference/ctreectrl-class.md) i [CTreeView —](../mfc/reference/ctreeview-class.md). Każda klasa przydaje się w różnych sytuacjach.  

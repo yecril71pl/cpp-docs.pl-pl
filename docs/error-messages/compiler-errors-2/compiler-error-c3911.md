@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274015"
 ---
 # <a name="compiler-error-c3911"></a>C3911 błąd kompilatora
 "event_accessor_method": funkcja musi być typu "podpisu"  

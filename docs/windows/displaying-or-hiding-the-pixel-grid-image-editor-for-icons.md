@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882930"
 ---
 # <a name="displaying-or-hiding-the-pixel-grid-image-editor-for-icons"></a>Wyświetlanie i ukrywanie siatki pikseli (Edytor obrazów dla ikon)
 Dla wszystkich okienek edytor obrazów z współczynnika powiększenia 4 lub nowszym można wyświetlić siatkę ograniczającego piksele obrazu.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890593"
 ---
 # <a name="version-information-editor"></a>Edytor informacji o wersji
 Informacje o wersji składa się z firmy i identyfikator produktu, numer wersji produktu i praw autorskich i znak towarowy powiadomień. W edytorze informacje o wersji można tworzyć i obsługiwać te dane, które są przechowywane w zasobach informacji o wersji. Zasób informacje o wersji nie jest wymagane przez aplikację, ale jest to przydatne miejsce do zbierania informacji, która identyfikuje aplikację. Informacje o wersji jest również używane przez Instalatora interfejsów API.  

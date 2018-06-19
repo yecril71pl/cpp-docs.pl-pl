@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345505"
 ---
 # <a name="internet-information-by-task"></a>Informacje internetowe według zadań
 Zadania wymienione w tym temacie są sortowane według zadań, które chcesz wykonać.  

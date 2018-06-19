@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344938"
 ---
 # <a name="managing-mdi-child-windows"></a>Zarządzanie oknami podrzędnymi MDI
 MDI ramki głównej z systemem windows (po jednym dla każdego aplikacji) zawiera okno podrzędne specjalne **MDICLIENT** okna. **MDICLIENT** okna zarządza obszaru klienckiego głównego okna ramowego i okien podrzędnych z kolei ma: okna dokumentów, pochodną `CMDIChildWnd`. Ponieważ okna dokumentów okien ramowych, same (okien podrzędnych MDI), mogą również mieć własne elementy podrzędne. We wszystkich tych przypadkach okno nadrzędne zarządza jego okien podrzędnych i przekazuje niektóre polecenia do nich.  

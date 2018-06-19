@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879331"
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box"></a>Grupowanie przycisków radiowych w oknie dialogowym
 Po dodaniu przycisków radiowych do okna dialogowego potraktować je jako grupę, przez ustawienie właściwości grupy w oknie dialogowym Właściwości przycisku pierwszej w grupie. Identyfikator formantu dla tego przycisku radiowego pojawia się w [Kreator dodawania zmiennej elementu członkowskiego](../ide/add-member-variable-wizard.md), co umożliwia dodawanie zmiennej członkowskiej w grupie przycisków radiowych.  

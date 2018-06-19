@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345823"
 ---
 # <a name="exchanging-data"></a>Wymiana danych
 Podobnie jak w przypadku większości okien dialogowych wymiany danych między arkusz właściwości i aplikacji jest jednym z najważniejszych funkcji arkusza właściwości. W tym artykule opisano sposób wykonania tego zadania.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246238"
 ---
 # <a name="compiler-error-c3040"></a>C3040 błąd kompilatora
 "var": typ zmiennej w klauzuli "reduction" jest niezgodny z operatorem redukcji "operator"  

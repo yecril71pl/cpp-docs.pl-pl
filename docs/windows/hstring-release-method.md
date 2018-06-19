@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875295"
 ---
 # <a name="hstringrelease-method"></a>HString::Release — Metoda
 Usuwa wartość ciągu podstawowej i intializes bieżącego obiektu HString wartość pustą.  

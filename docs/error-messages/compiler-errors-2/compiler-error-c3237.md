@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251667"
 ---
 # <a name="compiler-error-c3237"></a>C3237 błąd kompilatora
 "generic_class": klasa generyczna nie może być atrybutem niestandardowym  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274694"
 ---
 # <a name="compiler-error-c3736"></a>C3736 błąd kompilatora
 "event": musi być metodą lub, w przypadku zarządzanych zdarzeń, opcjonalnie elementem członkowskim danych  

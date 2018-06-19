@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282668"
 ---
 # <a name="compiler-warning-level-1-c4743"></a>Kompilator C4743 ostrzegawcze (poziom 1)
 "*typu*"ma inny rozmiar "*file1*"i"*plik2*": *numer* i *numer* bajtów  

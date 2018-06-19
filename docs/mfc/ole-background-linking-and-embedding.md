@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347282"
 ---
 # <a name="ole-background-linking-and-embedding"></a>Podstawy OLE: łączenie i osadzanie
 Za pomocą polecenia wklejania w aplikacji kontenera można utworzyć składnika osadzonego lub element osadzony. Źródło danych pod kątem element osadzony jest przechowywana jako część dokumentu OLE, który go zawiera. W ten sposób plik dokumentu do dokumentu edytora tekstów mogą zawierać tekst i również może zawierać mapy bitowe, wykresy, formuły lub typu danych.  

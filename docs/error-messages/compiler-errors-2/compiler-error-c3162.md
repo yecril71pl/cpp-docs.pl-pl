@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253803"
 ---
 # <a name="compiler-error-c3162"></a>C3162 błąd kompilatora
 'type': Typ referencyjny, który posiada destruktor nie może służyć jako typ elementu członkowskiego danych statycznych "członek"  

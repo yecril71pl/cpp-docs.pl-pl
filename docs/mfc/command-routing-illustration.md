@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341139"
 ---
 # <a name="command-routing-illustration"></a>Ilustracja routingu poleceń
 Aby zilustrować, należy wziąć pod uwagę komunikatem polecenia z elementu menu Wyczyść wszystko w menu Edycja aplikacji MDI. Załóżmy, że funkcja obsługi dla tego polecenia stanie się być funkcją członkowską klasy dokumentów aplikacji. Oto, jak polecenie osiągnie jej procedura obsługi po wybraniu elementu menu:  

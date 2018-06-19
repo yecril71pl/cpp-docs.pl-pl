@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346678"
 ---
 # <a name="dialog-boxes"></a>Okna dialogowe
 Dla systemu Windows często komunikują się z aplikacjami użytkownika za pomocą okien dialogowych. Klasa [cdialog —](../mfc/reference/cdialog-class.md) udostępnia interfejs dla zarządzania okien dialogowych, Edytor okien dialogowych programu Visual C++ ułatwia projektowanie okien dialogowych i utworzyć ich zasobów szablonu okna dialogowego i kreatorów kodu uprościć proces inicjowania i Sprawdzanie poprawności formantów w oknie dialogowym i zbierania wartości wprowadzonej przez użytkownika.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878115"
 ---
 # <a name="generics--c-component-extensions"></a>Typy ogólne (C++ Component Extensions)
 Typy ogólne są typy z parametrami i metody. W tej sekcji należy sprawdzić ogólne funkcje obsługiwane przez środowisko wykonawcze systemu Windows i środowisko uruchomieniowe języka wspólnego, a które są obsługiwane przez tylko środowiska CLR. Ponadto Dowiedz się, jak tworzyć własne metody ogólne i typy w programie Visual C++ i sposobu użycia typów ogólnych utworzone w języku .NET Framework w programie Visual C++. Ponadto ta sekcja zawiera porównanie typy ogólne i szablonów języka C++.  

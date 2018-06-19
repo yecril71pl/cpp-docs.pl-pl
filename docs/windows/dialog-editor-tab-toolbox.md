@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882579"
 ---
 # <a name="dialog-editor-tab-toolbox"></a>Karta Edytor okien dialogowych, Przybornik
 Karta Edytor okien dialogowych zostanie wyświetlony w [okno przybornika](/visualstudio/ide/reference/toolbox) podczas pracy w edytorze okien dialogowych. Aby dodać kontrolki do Twoje nowe okno dialogowe, przeciągnij formanty z przybornika do okna dialogowego, które tworzysz (Aby uzyskać więcej informacji, zobacz [Dodawanie formantu do okna dialogowego](adding-a-control-to-a-dialog-box.md)). Można przenosić formantów lub zmienić ich rozmiar i kształt.  

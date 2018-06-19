@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270499"
 ---
 # <a name="compiler-warning-c4368"></a>C4368 ostrzeżenia kompilatora
 Nie można zdefiniować "członek" jako członka zarządzanego 'type': mieszane typy nie są obsługiwane.  

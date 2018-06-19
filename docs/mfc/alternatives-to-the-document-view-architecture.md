@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344207"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Alternatywy dla architektury dokument/widok
 Aplikacje MFC używać architektury dokument/widok do zarządzania informacjami, formaty plików i wizualną reprezentację danych dla użytkowników. Dla większości aplikacji klasycznych architektury dokument/widok jest Architektura aplikacji odpowiednie i skuteczne. Taka architektura oddziela danych z przeglądania i w większości przypadków, upraszcza aplikacji i zmniejsza nadmiarowy kod.  

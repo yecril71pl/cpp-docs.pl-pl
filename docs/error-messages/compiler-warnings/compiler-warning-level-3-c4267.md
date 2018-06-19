@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290166"
 ---
 # <a name="compiler-warning-level-3-c4267"></a>Kompilator C4267 ostrzegawcze (poziom 3)
 "var": konwersja z "size_t" do "type", możliwa utrata danych  

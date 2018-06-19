@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870848"
 ---
 # <a name="c-attributes-reference"></a>Atrybuty (C++)
 Microsoft definiuje zestaw atrybutów, które upraszczają programowanie COM i rozwoju środowiska uruchomieniowego języka wspólnego .NET Framework. Po dołączeniu atrybutów w plikach źródłowych kompilator współpracuje z dostawcą biblioteki dll, aby wstawić kod lub zmodyfikować kod w plikach wygenerowanego obiektu.  

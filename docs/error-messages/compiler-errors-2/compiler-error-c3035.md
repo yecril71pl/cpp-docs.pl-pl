@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33244989"
 ---
 # <a name="compiler-error-c3035"></a>C3035 błąd kompilatora
 OpenMP "ordered" "For" lub "parallel for" OpenMP musi powiązać bezpośrednio do dyrektywy z klauzulą "ordered"  
