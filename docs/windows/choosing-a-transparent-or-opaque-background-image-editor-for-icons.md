@@ -29,6 +29,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857915"
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>Wybieranie tła przezroczystego lub nieprzezroczystego (Edytor obrazów dla ikon)
 Podczas przenoszenia lub skopiowane z obrazu pikseli w zaznaczeniu, które odpowiadają bieżący kolor tła są domyślnie przezroczyste; nie ograniczają pikseli w lokalizacji docelowej.  

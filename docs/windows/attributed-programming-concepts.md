@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860193"
 ---
 # <a name="attributed-programming-concepts"></a>Pojęcia związane z programowaniem opartym na atrybutach
 Visual C++ zawiera różne informacje pomocne użyć atrybutów w programach. Atrybuty, nowa funkcja w programie Visual C++ są przeznaczone do uproszczenia programowania COM i rozwoju środowiska uruchomieniowego języka wspólnego .NET Framework. Po dołączeniu atrybutów plików źródłowych, kompilator współpracuje z dostawcy biblioteki dołączanej dynamicznie (DLL), aby wstawić kod lub zmodyfikować kod w plikach wygenerowanego obiektu. Brak atrybutów, które pomocy w przypadku tworzenia plików .idl, interfejsów, biblioteki typów i inne elementy modelu COM. W zintegrowane środowisko programistyczne (IDE) atrybutów są obsługiwane za pomocą kreatorów i okna właściwości.  

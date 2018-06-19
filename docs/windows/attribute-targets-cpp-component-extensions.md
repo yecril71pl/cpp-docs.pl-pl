@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862026"
 ---
 # <a name="attribute-targets-c-component-extensions"></a>Docelowe atrybuty (C++ Component Extensions)
 Specyfikatory użycia atrybutu pozwalają określić docelowe atrybuty.  Każdy atrybut jest zdefiniowany do zastosowania do niektórych elementów języka. Na przykład można zdefiniować atrybut do stosowania tylko dla klas i struktur.  Na poniższej liście przedstawiono możliwe elementy składni, na których można użyć atrybutu niestandardowego. Kombinacji tych wartości (przy użyciu logicznych lub) mogą być używane.  

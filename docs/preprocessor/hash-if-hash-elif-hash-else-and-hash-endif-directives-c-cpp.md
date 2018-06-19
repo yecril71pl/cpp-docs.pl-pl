@@ -36,6 +36,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846652"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if, #elif, #else i #endif — dyrektywy (C/C++)
 `#if` Dyrektywy z `#elif`, `#else`, i `#endif` dyrektywy, kompilacja formanty części pliku źródłowego. Jeśli wyrażenie (po `#if`) ma wartość różną od zera, grupa wiersza od razu po `#if` dyrektywy są przechowywane w jednostce tłumaczenia.  

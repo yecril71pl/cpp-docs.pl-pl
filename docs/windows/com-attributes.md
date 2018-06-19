@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861389"
 ---
 # <a name="com-attributes"></a>Atrybuty COM
 Atrybuty COM iniekcję kodu do obsługi wiele obszarów rozwoju COM i rozwoju środowiska uruchomieniowego języka wspólnego .NET Framework. Te obszary zakresu od implementacji niestandardowego interfejsu i pomocy technicznej istniejących interfejsów do obsługi właściwości podstawowych, metod i zdarzeń. Ponadto obsługa można znaleźć złożone i wykonywania formantu ActiveX.  

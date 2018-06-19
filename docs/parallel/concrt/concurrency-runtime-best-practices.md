@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695645"
 ---
 # <a name="concurrency-runtime-best-practices"></a>Współbieżność środowiska wykonawczego — Najlepsze praktyki
 W tej sekcji opisano najważniejsze wskazówki, które ułatwiają efektywne wykorzystanie współbieżności środowiska wykonawczego. Następujące najlepsze rozwiązania dotyczą [Biblioteka równoległych wzorców](../../parallel/concrt/parallel-patterns-library-ppl.md) (PLL), [biblioteki agentów asynchronicznych](../../parallel/concrt/asynchronous-agents-library.md)i [harmonogram zadań](../../parallel/concrt/task-scheduler-concurrency-runtime.md).  

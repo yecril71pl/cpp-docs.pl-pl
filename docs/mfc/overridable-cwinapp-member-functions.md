@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347714"
 ---
 # <a name="overridable-cwinapp-member-functions"></a>Funkcje członkowskie CWinApp z możliwością zastąpienia
 [Cwinapp —](../mfc/reference/cwinapp-class.md) udostępnia kilka kluczowe funkcje Członkowskie możliwym do zastąpienia (`CWinApp` zastępuje te elementy członkowskie z klasy [cwinthread —](../mfc/reference/cwinthread-class.md), z którego `CWinApp` pochodzi):  

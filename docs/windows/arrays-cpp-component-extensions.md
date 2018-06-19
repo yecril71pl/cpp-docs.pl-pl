@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862725"
 ---
 # <a name="arrays-c-component-extensions"></a>Tablice (C++ Component Extensions)
 `Platform::Array<T>` Typu w języku C + +/ CX, lub `array` słów kluczowych w języku C + +/ CLI, deklaruje tablicę określonego typu i wartości początkowej.  

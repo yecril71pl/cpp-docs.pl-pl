@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863741"
 ---
 # <a name="atl-predefined-symbols"></a>Wstępnie zdefiniowane symbole ATL
 Te symbole są definiowane w ATL pliki nagłówkowe, ale obsługuje standardowe funkcje aplikacji systemu Windows i działań. Symbole są używane głównie z okien dialogowych. Podczas pracy z okien dialogowych i formantów w [Edytor okien dialogowych](../windows/dialog-editor.md), te symbole będą wyświetlane w oknie właściwości skojarzone z formantów standardowych. Na przykład, jeśli Twoje okno dialogowe ma przycisk Anuluj, tego polecenia zostanie skojarzona z symbol IDCANCEL w [okna właściwości](/visualstudio/ide/reference/properties-window).  

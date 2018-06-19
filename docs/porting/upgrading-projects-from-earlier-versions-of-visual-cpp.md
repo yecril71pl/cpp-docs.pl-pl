@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849733"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Uaktualnianie projektów ze starszych wersji programu Visual C++
 W większości przypadków można otworzyć projektu, który został utworzony we wcześniejszej wersji programu Visual Studio. Jednak w takim przypadku Visual Studio uaktualnia projekt. Jeśli zapiszesz uaktualniony projekt, nie będzie go można otworzyć w starszej wersji.  

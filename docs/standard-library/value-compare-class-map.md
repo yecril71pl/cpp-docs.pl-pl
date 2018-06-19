@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856049"
 ---
 # <a name="valuecompare-class-ltmapgt"></a>value_compare — klasa (&lt;mapy&gt;)
 

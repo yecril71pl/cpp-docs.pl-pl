@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858149"
 ---
 # <a name="locales-and-code-pages"></a>Ustawienia regionalne i strony kodowe
 Identyfikator ustawień regionalnych odzwierciedla konwencje lokalnych i język dla określonego regionu geograficznego. Danego języka może być używany w więcej niż jeden kraj/region; na przykład portugalski jest używany w Brazylia także jak Portugalii. Z drugiej strony kraj/region może mieć więcej niż jednym języku. Na przykład Kanada ma dwa języki: angielski i francuski. W związku z tym Kanada ma dwa różne ustawienia regionalne: kanadyjskich w języku angielskim i francuskim kanadyjskich. Niektóre kategorie zależne od ustawień regionalnych obejmują formatowanie dat i format wyświetlania wartości pieniężnych.  

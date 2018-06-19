@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856491"
 ---
 # <a name="support-for-using-wmain"></a>Obsługa używania funkcji wmain
 Visual C++ obsługuje definiowanie **wmain** funkcji i przekazywanie argumentów znaków dwubajtowych w aplikacji Unicode. Deklarowanie parametrów formalnych do **wmain**, używając formatu podobnego do **głównego**. Następnie można przekazać argumenty znaków dwubajtowych i, opcjonalnie, wskaźnik znaków dwubajtowych środowiska do programu. `argv` i `envp` parametry **wmain** typu `wchar_t*`. Na przykład:  

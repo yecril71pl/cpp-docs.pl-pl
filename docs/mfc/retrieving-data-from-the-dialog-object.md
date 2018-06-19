@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380211"
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>Pobieranie danych z obiektu okna dialogowego
 Platformę zapewnia prosty sposób zainicjować wartości formantów w oknie dialogowym oraz do pobierania wartości z kontroli. Więcej pracochłonne ręczne podejściem jest wywołaniem funkcji, takich jak `SetDlgItemText` i `GetDlgItemText` funkcji elementów członkowskich klasy `CWnd`, które mają zastosowanie do sterowania systemu windows. Z tych funkcji, należy każdy kontrola dostępu indywidualnie do ustawić lub pobrać jej wartość wywoływanie funkcji, takich jak `SetWindowText` i `GetWindowText`. Podejście framework automatyzuje zarówno inicjowania i pobierania.  

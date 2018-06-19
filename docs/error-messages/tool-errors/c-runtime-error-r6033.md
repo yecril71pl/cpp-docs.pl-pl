@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299997"
 ---
 # <a name="c-runtime-error-r6033"></a>C R6033 błąd w czasie wykonywania
 Próba użycia MSIL kod z tego zestawu podczas inicjowania kodu natywnego. To wskazuje na usterkę w aplikacji. Jest to najprawdopodobniej wynikiem wywołania skompilowany MSIL (/ clr) funkcja z natywnego konstruktora lub z funkcji DllMain.  

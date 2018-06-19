@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347902"
 ---
 # <a name="control-bars"></a>Paski sterowania
 "Pasek sterowania" jest nazwą ogólne paski narzędzi, paski stanu i paski dialogowe. Klasy MFC `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, i **crebar —** pochodzi z klasy [ccontrolbar —](../mfc/reference/ccontrolbar-class.md), który implementuje ich typowe funkcje.  

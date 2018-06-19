@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300608"
 ---
 # <a name="linker-tools-warning-lnk4096"></a>Ostrzeżenie LNK4096 narzędzi konsolidatora
 / BASE "numer" jest nieprawidłowa dla systemu Windows 95 i Windows 98; Obraz może nie działać.  

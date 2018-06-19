@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862280"
 ---
 # <a name="building-an-attributed-program"></a>Kompilowanie programu opartego na atrybutach
 Po wprowadzeniu atrybutów języka Visual C++ w kodzie źródłowym może być kompilatora Visual C++, aby wygenerować plik biblioteki i .idl typu dla Ciebie. Konsolidator następujące opcje tworzenia plików .tlb i .idl pomocy:  

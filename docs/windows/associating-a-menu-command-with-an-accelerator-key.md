@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858091"
 ---
 # <a name="associating-a-menu-command-with-an-accelerator-key"></a>Kojarzenie polecenia menu z klawiszem skrótu
 Są często razy ma polecenia menu oraz kombinację klawiszy, aby wystawiać tego samego polecenia programu. Aby to zrobić, aby przypisać ten sam identyfikator zasobu do polecenia menu i wpis w tabeli akceleratora aplikacji za pomocą edytora Menu. Następnie Edytuj [podpis](../windows/menu-command-properties.md) polecenia menu, aby wyświetlić nazwę klawisz skrótu.  

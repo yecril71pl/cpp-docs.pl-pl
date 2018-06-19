@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857841"
 ---
 # <a name="aligning-controls-on-a-guide"></a>Dopasowanie kontrolek do prowadnicy
 Uchwyty zmiany rozmiaru formantów przyciąganie do prowadnic po przeniesieniu formantów i przewodniki przyciąganie do kontrolek (Jeśli nie istnieją żadne formanty przypięty wcześniej do przewodnika). Po przeniesieniu przewodnik także przenieść formantów, które mają być przyciągane do niego. Formanty przyciągnięte do więcej niż jeden podręcznik zmieniany jest rozmiar po jednym przewodniki jest przenoszony.  

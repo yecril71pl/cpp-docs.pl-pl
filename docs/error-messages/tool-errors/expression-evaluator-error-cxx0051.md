@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301798"
 ---
 # <a name="expression-evaluator-error-cxx0051"></a>Błąd CXX0051 programu Expression Evaluator
 więcej niż jeden przeciążony symbol w punkcie przerwania określono  

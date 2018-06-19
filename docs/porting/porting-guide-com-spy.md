@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33845612"
 ---
 # <a name="porting-guide-com-spy"></a>Przewodnik przenoszenia: narzędzie Spy modelu COM
 Ten temat jest drugi w serii artykułów, która ilustruje proces uaktualniania starsze projektów Visual C++ do najnowszej wersji programu Visual Studio. Przykładowy kod w tym temacie ostatnio został skompilowany z programu Visual Studio 2005.  

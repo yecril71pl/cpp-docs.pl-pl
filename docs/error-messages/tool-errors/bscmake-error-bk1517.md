@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298554"
 ---
 # <a name="bscmake-error-bk1517"></a>Błąd BSCMAKE BK1517
 plik źródłowy sbrfile skompilowana przy użyciu opcji /Yc i /Yu  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856322"
 ---
 # <a name="adding-commands-to-a-menu"></a>Dodawanie poleceń do menu
 ### <a name="to-add-commands-to-a-menu"></a>Aby dodać polecenia do menu  

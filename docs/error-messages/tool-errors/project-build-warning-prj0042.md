@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316832"
 ---
 # <a name="project-build-warning-prj0042"></a>Ostrzeżenie PRJ0042 dotyczące kompilacji projektu
 **"Właściwość wyniki dla niestandardowego kroku kompilacji dla pliku"**   
