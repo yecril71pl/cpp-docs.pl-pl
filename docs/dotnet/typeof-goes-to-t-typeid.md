@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164521"
 ---
 # <a name="typeof-goes-to-ttypeid"></a>Operator typeof został zastąpiony operatorem T::typeid
 `typeof` Operator używany w rozszerzeń zarządzanych dla języka C++ ma zostać supplanted przez `typeid` — słowo kluczowe w programie Visual C++.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128800"
 ---
 # <a name="how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing"></a>Porady: używanie funkcji gcnew do tworzenia typów wartości i korzystanie z niejawnej konwersji boxing
 Przy użyciu [gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) na wartość typu utworzy opakowanym typem wartościowym, który można umieścić na stercie zarządzanej, zbierane w pamięci.  

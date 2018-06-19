@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110344"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Obsługa transakcji w OLE DB
 A [transakcji](../../data/transactions-mfc-data-access.md) sposób grupowania lub partii szereg aktualizacji ze źródłem danych, aby albo wszystkie powiedzie się i są zatwierdzone jednocześnie (jeśli jeden z nich kończy się niepowodzeniem) żaden nie jest zatwierdzona i cała transakcja zostanie wycofana. Ten proces zapewnia integralność wyniku w źródle danych.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111393"
 ---
 # <a name="ole-db-consumers-and-providers"></a>Konsumenci i dostawcy OLE DB
 Architektura OLE DB używa modelu konsumenci i dostawcy. Konsument zgłasza żądania dotyczące danych. Dostawca reaguje na te żądania wprowadzania danych w formacie tabelarycznym i przywróceniem go do użytkownika. Żadnym wywołaniu, które może sprawić, że użytkownik musi być implementowana w dostawcy.  

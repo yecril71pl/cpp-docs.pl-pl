@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127825"
 ---
 # <a name="how-to-retrieve-the-current-username-ccli"></a>Porady: pobieranie bieżącej nazwy użytkownika (C++/CLI)
 Poniższy przykład kodu pokazuje pobieranie bieżącej nazwy użytkownika (nazwy użytkownika zalogowanego w systemie Windows). Nazwa jest przechowywana w <xref:System.Environment.UserName%2A> ciąg, który jest zdefiniowany w <xref:System.Environment> przestrzeni nazw.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135216"
 ---
 # <a name="how-to-implement-a-plug-in-component-architecture-using-reflection-ccli"></a>Porady: implementacja architektury składnika plug-in przy użyciu odbicia (C++/CLI)
 W poniższych przykładach kodu przedstawiają sposób używania odbicia do zaimplementowania proste architektury "wtyczki". Pierwsze notowanie jest aplikacją, a drugą jest wartość wtyczki. Aplikacja jest wiele formularz dokumentu, który wypełnia się przy użyciu klasy bazującej na formularzu znaleziono w bibliotece DLL dodatku plug-in podany jako argument wiersza polecenia.  

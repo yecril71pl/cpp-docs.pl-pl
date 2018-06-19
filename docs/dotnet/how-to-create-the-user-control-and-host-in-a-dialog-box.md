@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136356"
 ---
 # <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>Porady: tworzenie kontrolki użytkownika i hosta w oknie dialogowym
 Kroki opisane w tym artykule założono, że są tworzone na podstawie okna dialogowego ([cdialog — klasa](../mfc/reference/cdialog-class.md)) projektu Microsoft Foundation Classes (MFC), ale można również dodać obsługę formantu formularzy systemu Windows do istniejącego okna dialogowego MFC.  

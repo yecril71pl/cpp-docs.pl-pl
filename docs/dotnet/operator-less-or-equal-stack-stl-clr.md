@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135511"
 ---
 # <a name="operatorlt-stack-stlclr"></a>operator&lt;= (stosu) (STL/CLR)
 Mniejsze niż lub równe stosu porównania.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136616"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Porady: przeprowadzanie marshalingu struktur za pomocą funkcji PInvoke
 W tym dokumencie opisano sposób natywny funkcje, których struktury w stylu języka C może zostać wywołana z funkcji zarządzanych przez przy użyciu metody P/Invoke. Mimo że zalecane jest użycie funkcji międzyoperacyjności języka C++, zamiast P/Invoke ponieważ P/Invoke zapewnia małego błąd kompilacji raportowania, nie jest bezpieczne i może być niewygodne wdrożenia, jeśli niezarządzanego API jest dostarczana jako biblioteki DLL i kod źródłowy jest dostępne, P/Invoke jest jedyną opcją. W przeciwnym razie można znaleźć w następujących dokumentach:  
