@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695905"
 ---
 # <a name="a16---using-locks"></a>A.16   Użycie blokad
 W poniższym przykładzie (dla [sekcji 3.2](../../parallel/openmp/3-2-lock-functions.md) na stronie 41) należy pamiętać, że argument do funkcji blokady musi mieć właściwość type `omp_lock_t`, i że nie istnieje potrzeba aby opróżnić go.  Funkcje blokady spowodować wątków ze stanu bezczynności podczas oczekiwania na zapis w pierwszej sekcji krytyczne, ale wykonywać inne zadania podczas oczekiwania na zapis do drugiego.  `omp_set_lock` Funkcja bloków, ale `omp_test_lock` — funkcja nie jest, umożliwiając pracę w skip() do wykonania.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693211"
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy — Struktura
 Abstrakcja dla wątku wykonywania. W zależności od `SchedulerType` klucza zasad harmonogramu tworzenia, Menedżer zasobów zostanie przyznać użytkownikowi proxy wątku, który nie jest obsługiwana przez regularne wątku Win32 lub schedulable wątku trybu użytkownika (UMS). UMS wątki są obsługiwane w 64-bitowych systemach operacyjnych z wersji Windows 7 lub nowszy.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692340"
 ---
 # <a name="265-flush-directive"></a>2.6.5 Dyrektywa opróżniania
 **Opróżnić** dyrektywy, czy jawne lub domniemanych, określa jaką implementacja jest wymagana, aby zapewnić spójne wyświetlanie niektórych obiektów (wymienionymi poniżej), w wszystkie wątki w zespole punktu sekwencji "między wątkami" pamięci. To oznacza, że poprzednie ocen wyrażeń, które odwołują się do tych obiektów są spełnione, a kolejne oceny nie zostały jeszcze uruchomione. Na przykład kompilatory należy przywrócić wartości obiektów z rejestrów pamięci i sprzętu może być konieczne opróżnienia buforów zapisu w pamięci i załaduj ponownie wartości obiektów w pamięci.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33276519"
 ---
 # <a name="compiler-warning-level-1-c4091"></a>Kompilator C4091 ostrzegawcze (poziom 1)
 "— słowo kluczowe": zignorowano na lewo od "type", gdy brak deklaracji zmiennej  

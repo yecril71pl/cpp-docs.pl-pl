@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299282"
 ---
 # <a name="compiler-warning-levels-1-and-4-c4112"></a>Kompilator C4112 ostrzeżenie (poziomy 1 i 4)
 \#wiersz wymaga całkowitą z przedziału od 1 i numer  

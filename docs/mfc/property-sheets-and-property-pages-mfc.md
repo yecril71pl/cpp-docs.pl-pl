@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348992"
 ---
 # <a name="property-sheets-and-property-pages-mfc"></a>Arkusze właściwości i strony właściwości (MFC)
 MFC [okno dialogowe](../mfc/dialog-boxes.md) może przybrać "karcie okna dialogowego" wyszukiwania przez włączenie arkusze właściwości i strony właściwości. Tego rodzaju okno dialogowe podobne do wielu okien dialogowych w programie Microsoft Word, Excel i Visual C++ o nazwie "arkusz właściwości" w MFC, prawdopodobnie zawiera stosu arkuszy z kartami, podobnie jak w stosie widoczna od początku do końca lub grupy systemu windows w kaskadowego folderów plików. Formanty na karcie front są widoczne; tylko karcie etykietą jest widoczny na kartach tylnej. Arkusze właściwości są szczególnie użyteczne w przypadku zarządzania dużą liczbą ustawienia dość starannie dzielą się na kilka grup lub właściwości. Zazwyczaj jeden arkusz właściwości można uprościć interfejsu użytkownika, zastępując wiele oddzielnych okien dialogowych.  

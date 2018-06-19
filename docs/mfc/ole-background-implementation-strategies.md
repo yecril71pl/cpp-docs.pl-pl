@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350500"
 ---
 # <a name="ole-background-implementation-strategies"></a>Podstawy OLE: strategie implementacji
 W zależności od aplikacji dostępne są cztery strategie implementacji możliwe dodanie obsługi:  

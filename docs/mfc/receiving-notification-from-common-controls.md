@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349716"
 ---
 # <a name="receiving-notification-from-common-controls"></a>Odbieranie powiadomienia od formantów wspólnych
 Formanty standardowe są okno podrzędne, które wysyłać powiadomienia do nadrzędnego okna w przypadku wystąpienia zdarzenia, takie jak dane wejściowe użytkownika w formancie.  

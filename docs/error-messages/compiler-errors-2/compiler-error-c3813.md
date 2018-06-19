@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273110"
 ---
 # <a name="compiler-error-c3813"></a>C3813 błąd kompilatora
 Deklaracja właściwości może wystąpić tylko wewnątrz definicji zarządzanego lub typu WinRT  

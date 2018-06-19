@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355538"
 ---
 # <a name="help-menu-merging"></a>Scalanie menu Pomoc
 Gdy obiekt jest aktywny w kontenerze, menu scalanie protokołu dokumentów OLE daje obiektu pełną kontrolę nad **pomocy** menu. W związku z tym kontenera tematy pomocy nie są dostępne, chyba że użytkownik dezaktywuje obiektu. Architektura zawierania dokumentów aktywnych rozszerza reguły menu w miejscu scalanie umożliwia aktywny dokument, który jest aktywny, aby udostępnić menu i kontenera. Nowe zasady są po prostu dodatkowe konwencje o jakie składnik jest właścicielem części menu i sposób jest tworzony udostępnionego menu.  

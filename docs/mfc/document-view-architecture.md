@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350058"
 ---
 # <a name="documentview-architecture"></a>Architektura dokument/widok
 Domyślnie Kreator aplikacji MFC tworzy szkielet aplikacji z klasy dokumentów i klasę widoku. MFC oddziela zarządzania danymi w tych dwóch klas. Dokument przechowuje dane i zarządza drukowanie danych i koordynuje aktualizowania wielu widoków danych. Widok przedstawia dane i zarządza interakcji z użytkownikiem z nim, w tym wybór i edytowania.  

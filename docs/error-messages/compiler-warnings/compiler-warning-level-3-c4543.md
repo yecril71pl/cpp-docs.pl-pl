@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301895"
 ---
 # <a name="compiler-warning-level-3-c4543"></a>Kompilator C4543 ostrzegawcze (poziom 3)
 Tekst wstrzyknięty pominięty przez atrybut "no_injected_text"  

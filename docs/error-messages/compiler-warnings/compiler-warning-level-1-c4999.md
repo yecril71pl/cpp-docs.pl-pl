@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296523"
 ---
 # <a name="compiler-warning-level-1-c4999"></a>Kompilator C4999 ostrzegawcze (poziom 1)
 Nieznane ostrzeżenie z menu Pomoc wybierz polecenie Pomoc techniczna lub Otwórz plik pomocy technicznej, aby uzyskać więcej informacji  

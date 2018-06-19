@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319081"
 ---
 # <a name="project-build-error-prj0034"></a>Błąd PRJ0034 kompilacji projektu
 Właściwość 'Dodatkowe zależności' niestandardowego poziom projektu kompilacji zawarte kroku "makra" ewaluowane jest jako "macro_expansion".  

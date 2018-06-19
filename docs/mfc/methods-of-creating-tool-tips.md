@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349535"
 ---
 # <a name="methods-of-creating-tool-tips"></a>Metody tworzenia etykietek narzędzi
 MFC udostępnia trzy klasy Tworzenie i zarządzanie nimi narzędzie formantu etykietki: [CWnd](../mfc/reference/cwnd-class.md), [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md), [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) i [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md). Funkcje Członkowskie Porada narzędzia w tych klas zawijanie formantu wspólnego interfejsu API systemu Windows. Klasa `CToolBarCtrl` i klasa `CToolTipCtrl` są pochodnymi klasy `CWnd`.  

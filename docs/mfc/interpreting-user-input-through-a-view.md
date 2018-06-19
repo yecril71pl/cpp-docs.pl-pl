@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349432"
 ---
 # <a name="interpreting-user-input-through-a-view"></a>Interpretowanie danych wprowadzonych przez użytkownika za pośrednictwem widoku
 Inne funkcje Członkowskie widoku obsługi i interpretować wszystkie dane wejściowe użytkownika. Zazwyczaj określi funkcje Członkowskie obsługi wiadomości w klasie widoku do przetworzenia:  

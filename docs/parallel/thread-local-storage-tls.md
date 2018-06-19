@@ -24,6 +24,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694553"
 ---
 # <a name="thread-local-storage-tls"></a>Lokalny magazyn wątków (TLS)
 Lokalnego magazynu wątków (TLS) to metoda, za pomocą której każdy wątek w danym procesie wielowątkowe można przydzielić lokalizacje, w którym będą przechowywane dane specyficzne dla danego wątku. Dynamicznie dane właściwe dla wątków granica (run-time) są obsługiwane i interfejsu API protokołu TLS ([TlsAlloc](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686801), [TlsGetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686812), [TlsSetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686818), i [TlsFree](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686804)). Aby uzyskać więcej informacji na temat implementowania lokalny magazyn wątków w systemie Windows, zobacz [lokalny magazyn wątków (system Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686749\(v=vs.85\).aspx).  Win32 i kompilatora języka Visual C++ obsługuje teraz statycznie powiązanej (czas ładowania) dla każdego wątku danych oprócz istniejącej implementacji interfejsu API.  
