@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32403924"
 ---
 # <a name="mbstowcss-mbstowcssl"></a>mbstowcs_s, _mbstowcs_s_l
 
@@ -129,7 +130,7 @@ Jeśli *liczba* jest specjalna wartość [_truncate —](../../c-runtime-library
 
 Jeśli **mbstowcs_s —** pomyślnie konwertuje ciąg źródłowy umieszcza w znaki dwubajtowe przekonwertowanego ciągu, włącznie z terminatorem null do rozmiaru  *&#42;pReturnValue* (pod warunkiem *pReturnValue* nie jest **NULL**). Dzieje się tak nawet wtedy, gdy *wcstr* argument jest **NULL** i zapewnia możliwość określenia wymagany rozmiar buforu. Należy pamiętać, że jeśli *wcstr* jest **NULL**, *liczba* jest ignorowany i *sizeInWords* musi być równa 0.
 
-Jeśli **mbstowcs_s —** napotkał nieprawidłowy znaków wielobajtowych umieszcza 0 w  *&#42;pReturnValue*, ustawia bufor docelowy na pusty ciąg, ustawia **errno** do  **Eilseq —**i zwraca **eilseq —**.
+Jeśli **mbstowcs_s —** napotkał nieprawidłowy znaków wielobajtowych umieszcza 0 w  *&#42;pReturnValue*, ustawia bufor docelowy na pusty ciąg, ustawia **errno** do  **Eilseq —** i zwraca **eilseq —**.
 
 Jeśli sekwencje wskazywana przez *mbstr* i *wcstr* nakładają się zachowanie **mbstowcs_s —** jest niezdefiniowana.
 

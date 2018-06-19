@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421276"
 ---
 # <a name="selection-statements-c"></a>Instrukcje wyboru (C++)
 Instrukcje wyboru języka C++, [Jeśli](../cpp/if-else-statement-cpp.md) i [przełącznika](../cpp/switch-statement-cpp.md), umożliwiają wykonanie warunkowo fragmentów kodu.  

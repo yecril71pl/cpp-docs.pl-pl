@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353953"
 ---
 # <a name="file-handling-classes"></a>Obsługa klasy plików
 Te klasy zawierają metody obsługi plików, pliki tymczasowe i pliki mapowane w pamięci.  
