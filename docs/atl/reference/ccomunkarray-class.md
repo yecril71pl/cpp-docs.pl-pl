@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364421"
 ---
 # <a name="ccomunkarray-class"></a>Klasa CComUnkArray
 Ta klasa przechowuje **IUnknown** wskaźniki i jest przeznaczony do użycia jako parametr [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) klasy szablonu.  

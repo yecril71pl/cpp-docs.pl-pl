@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092037"
 ---
 # <a name="record-field-exchange-using-the-rfx-functions"></a>Wymiana pól rekordów: używanie funkcji RFX
 W tym temacie opisano sposób korzystania z wywołania funkcji RFX wchodzące w skład treści Twojej `DoFieldExchange` zastąpienia.  

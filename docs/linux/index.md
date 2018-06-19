@@ -10,6 +10,7 @@ ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 03/08/2018
+ms.locfileid: "29794183"
 ---
 # <a name="linux-development-with-c-documentation"></a>Programowanie Linux z dokumentacji C++
 

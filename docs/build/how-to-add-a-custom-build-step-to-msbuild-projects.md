@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367995"
 ---
 # <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Porady: dodawanie niestandardowego kroku kompilacji do projektów MSBuild
 Niestandardowego kroku kompilacji jest zdefiniowane przez użytkownika kroku kompilacji. Niestandardowego kroku kompilacji zachowuje się jak każdy inny *narzędzia polecenia* kroku, takie jak standardowe kroku narzędzie kompilacji lub łącza.  

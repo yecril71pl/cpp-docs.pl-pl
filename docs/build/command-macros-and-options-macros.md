@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367362"
 ---
 # <a name="command-macros-and-options-macros"></a>Makra poleceń i makra opcji
 Makra poleceń są wstępnie zdefiniowane dla produktów firmy Microsoft. Makra opcji reprezentują opcje do tych produktów i nie zdefiniowano domyślnie. Zarówno są używane w regułach wnioskowania wstępnie zdefiniowane i mogą być używane w bloki opisów lub w regułach wnioskowania zdefiniowane przez użytkownika. Makra poleceń można ponownie zdefiniować do reprezentowania części lub całości wiersza polecenia, włącznie z opcjami. Makra opcji generowania pusty ciąg, jeśli zdefiniowano po lewej.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369776"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Porady: korzystanie ze zdarzeń kompilacji w projektach MSBuild
 To zdarzenie kompilacji jest polecenie który [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] wykonuje określonego etapu w procesie kompilacji. *Prekompilacyjnego* zdarzenie przed rozpoczęciem kompilacji; *prekonsolidacyjnego* zdarzenie przed uruchomieniem kroku łącze; i *postkompilacyjnego* zdarzenie po kompilacji kończy się pomyślnie. Zdarzenia kompilacji występuje tylko wtedy, gdy występuje kroku kompilacji. Zdarzenia prekonsolidacyjnego nie występuje na przykład, jeśli krok łącze nie działa.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107106"
 ---
 # <a name="record-view-code-created-by-application-wizard--mfc-data-access"></a>Kod widoku rekordu tworzony przez Kreatora aplikacji (dostęp do danych MFC)
 [Kreator aplikacji MFC](../mfc/reference/database-support-mfc-application-wizard.md) Widok pominięć `OnInitialUpdate` i `OnGetRecordset` funkcji elementów członkowskich. Po platformę tworzy ramkę okna dokumentu, a widok, wywołuje `OnInitialUpdate` zainicjować widoku. `OnInitialUpdate` uzyskuje wskaźnik do zestawu rekordów z dokumentu. Wywołania do klasy podstawowej [CView::OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) funkcja otwiera zestawu rekordów. Poniższy kod przedstawia ten proces dla `CRecordView`:  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089055"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>Klasy baz danych ATL (Szablony OLE DB)
 Firma Microsoft udostępnia kilka implementacje OLE DB, zestaw interfejsów modelu COM, które umożliwiają uniform dostęp do danych w formatach i informacje o różnych źródeł.  OLE DB oficjalnie jest przestarzały; Niniejsza dokumentacja jest dla deweloperów, którzy są utrzymywanie starszej wersji kodu. Nowe aplikacje powinny używać ODBC do łączenia się ze źródłami danych SQL.

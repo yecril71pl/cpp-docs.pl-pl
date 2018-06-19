@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095297"
 ---
 # <a name="cbulkrowsetaddrefrows"></a>CBulkRowset::AddRefRows
 Wywołania [IRowset::AddRefRows](https://msdn.microsoft.com/en-us/library/ms719619.aspx) należy zwiększyć wartość odwołania do wszystkich wierszy, które obecnie są pobierane z zestawu wierszy bulk.  

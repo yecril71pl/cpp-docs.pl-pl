@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089314"
 ---
 # <a name="cdynamicaccessorclose"></a>CDynamicAccessor::Close
 Usuwa powiązanie wszystkie kolumny, zwalnia pamięć przydzielone i zwalnia [IAccessor](https://msdn.microsoft.com/en-us/library/ms719672.aspx) wskaźnika interfejsu w klasie.  

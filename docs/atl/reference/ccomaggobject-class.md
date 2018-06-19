@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364222"
 ---
 # <a name="ccomaggobject-class"></a>Klasa CComAggObject
 Ta klasa implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interfejs dla obiekt zagregowanych. Zgodnie z definicją zagregowane obiekt znajduje się w obiekcie zewnętrznym. `CComAggObject` Klasy jest podobna do [element CComObject klasy](../../atl/reference/ccomobject-class.md), ale jego udostępnia interfejs, który jest bezpośrednio dostępny dla klientów zewnętrznych.  

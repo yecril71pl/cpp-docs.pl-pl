@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094829"
 ---
 # <a name="platformstring-class"></a>Klasa platform::String
 Reprezentuje kolekcję sekwencyjnych znaków Unicode, który jest używany do reprezentowania tekstu. Aby uzyskać dodatkowe informacje i przykłady, zobacz [ciągów](../cppcx/strings-c-cx.md).  

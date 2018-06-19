@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364040"
 ---
 # <a name="iobjectsafetyimpl-class"></a>Klasa IObjectSafetyImpl
 Ta klasa udostępnia domyślną implementację `IObjectSafety` interfejs umożliwia klienta pobrać i ustawić poziom bezpieczeństwa obiektu.  

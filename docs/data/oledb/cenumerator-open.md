@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096928"
 ---
 # <a name="cenumeratoropen"></a>CEnumerator::Open
 Wiąże krótka nazwa dla typu wyliczeniowego, jeśli jeden jest określona, a następnie pobiera zestawu wierszy dla modułu wyliczającego, wywołując [ISourcesRowset::GetSourcesRowset](https://msdn.microsoft.com/en-us/library/ms711200.aspx).  

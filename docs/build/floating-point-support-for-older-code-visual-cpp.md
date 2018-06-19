@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367163"
 ---
 # <a name="floating-point-support-for-older-code-visual-c"></a>Obsługa modelu zmiennoprzecinkowego w przypadku starszego kodu (Visual C++)
 MMX i rejestrów zmiennoprzecinkowych stosu (MM0-MM7/ST0-ST7) są zachowywane między przełączeń kontekstu.  Nie ma żadnych jawnej konwencji wywoływania dla tych rejestrów.  Użyj tych rejestrów jest zabronione w kod trybu jądra.  

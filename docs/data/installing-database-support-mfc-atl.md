@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092574"
 ---
 # <a name="installing-database-support-mfcatl"></a>Instalowanie obsługi bazy danych (MFC/ALT)
 Visual C++ nie obejmuje wszystkie produkty bazy danych. Do  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092434"
 ---
 # <a name="platformagile-class"></a>Klasa platform::Agile
 Reprezentuje obiekt, który ma MashalingBehavior = Standard jako obiekt agile, znacznie ogranicza prawdopodobieństwo wątkowość wyjątków w czasie wykonywania. `Agile<T>` Umożliwia-agile obiektu połączeń telefonicznych, lub można wywołać z tym samym lub innym wątku. Aby uzyskać więcej informacji, zobacz [wątków i przekazywanie](../cppcx/threading-and-marshaling-c-cx.md).  

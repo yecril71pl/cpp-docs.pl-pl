@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089117"
 ---
 # <a name="platformarrayreference-class"></a>Klasa platform::ArrayReference
 `ArrayReference` jest typem optymalizacji, który można podstawić [Platform::Array ^](../cppcx/platform-array-class.md) w parametrów wejściowych, gdy chcesz wypełnić tablicy stylu języka C z danych wejściowych.  

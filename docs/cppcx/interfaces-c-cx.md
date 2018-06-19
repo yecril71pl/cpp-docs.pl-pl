@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090655"
 ---
 # <a name="interfaces-ccx"></a>Interfejsy (C + +/ CX)
 Chociaż klasa ref może dziedziczyć co najwyżej jedną konkretną klasę podstawową, on implementować dowolną liczbę interfejsu klasy. Klasa interfejsu (lub struktury interfejsu) siebie może dziedziczyć (lub wymagają) wielu interfejsu klasy, można przeciążyć funkcji jego elementów członkowskich i może mieć parametrów typu.  

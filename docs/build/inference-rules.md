@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368424"
 ---
 # <a name="inference-rules"></a>Zasady wnioskowania
 Zasady wnioskowania Podaj poleceń, aby zaktualizować elementów docelowych i rozpoznać zależności dla celów. Rozszerzenia w regule wnioskowania są zgodne z pojedynczym elementem docelowym i zależne, które mają taką samą nazwę podstawową. Zasady wnioskowania są zdefiniowane przez użytkownika lub wstępnie zdefiniowanej; można ponownie zdefiniować wstępnie zdefiniowanych reguł.  

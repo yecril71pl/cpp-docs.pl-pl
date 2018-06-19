@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368697"
 ---
 # <a name="masm-macros"></a>Makra MASM
 W celu uproszczenia stosowania [pierwotne operacje Pseudo](../build/raw-pseudo-operations.md), istnieją zestaw makra zdefiniowane w ksamd64.inc, która może służyć do tworzenia typowych procedury prologues i epilogues.  

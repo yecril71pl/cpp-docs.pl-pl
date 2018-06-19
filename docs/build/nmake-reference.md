@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372682"
 ---
 # <a name="nmake-reference"></a>Odwołanie NMAKE
 Narzędzie do konserwacji programów firmy Microsoft (NMAKE. EXE) jest narzędziem wiersza polecenia dołączone [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] który kompilacji projektów opartych na poleceń, które są zawarte w pliku opisu.  

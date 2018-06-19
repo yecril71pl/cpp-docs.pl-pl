@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090591"
 ---
 # <a name="odbc-classes-and-threads"></a>Klasy i wątki ODBC
 Począwszy od MFC 4.2, jest obsługa wielowątkowości w przypadku klas MFC ODBC. Należy jednak pamiętać, że MFC nie zapewnia obsługi wielowątkowości dla klasy DAO.  
