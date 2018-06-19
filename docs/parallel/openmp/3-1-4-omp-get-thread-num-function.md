@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686074"
 ---
 # <a name="314-ompgetthreadnum-function"></a>3.1.4 Funkcja omp_get_thread_num
 `omp_get_thread_num` Funkcja zwraca wątku liczbę, w ramach jego zespołu wątku wykonywania funkcji. Polega liczba wątków między 0 a **omp_get_num_threads()**-1, wraz z wartościami granicznymi. Główny wątek zespołu jest wątek 0.  

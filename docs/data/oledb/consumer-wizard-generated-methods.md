@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098605"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Metody konsumenta generowane przez kreatora
 Generowanie niektórych funkcji, które należy zwrócić uwagę, OLE DB Kreator konsumenta ATL i Kreator aplikacji MFC. Należy pamiętać, że niektóre metody są implementowane inaczej w przypisanych projektów, więc istnieje kilka ostrzeżenia; każdej sprawy zostało opisane poniżej. Aby uzyskać informacje o wyświetlaniu wprowadzony kod, zobacz [debugowania wstrzyknięcie kodu](/visualstudio/debugger/how-to-debug-injected-code).  

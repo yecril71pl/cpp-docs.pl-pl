@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381213"
 ---
 # <a name="sequence-of-operations-for-creating-ole-applications"></a>Sekwencja operacji przy tworzeniu aplikacji OLE
 W poniższej tabeli przedstawiono roli i roli w ramach tworzenia OLE łączenie i osadzanie aplikacji. Reprezentuje on opcje dostępne zamiast sekwencji kroki do wykonania.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382853"
 ---
 # <a name="using-image-lists-in-a-toolbar-control"></a>Używanie list obrazów w formancie paska narzędzi
 Domyślnie obrazy używane przez przycisków w formancie paska narzędzi są przechowywane jako pojedynczy mapy bitowej. Można jednak przechowywać obrazy dla przycisków w zestawie listy obrazów. Obiekt formantu paska narzędzi można używać do trzech list osobny obraz:  

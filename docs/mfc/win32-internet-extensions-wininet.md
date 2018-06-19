@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383964"
 ---
 # <a name="win32-internet-extensions-wininet"></a>Rozszerzenia internetowe Win32 (WinInet)
 Klienckich aplikacji internetowych to program, który uzyskuje dostęp do informacji ze źródła danych sieci (serwer) przy użyciu protokołów internetowych, takich jak gopher, FTP lub HTTP. Klienckich aplikacji internetowych mogą uzyskiwać dostęp do serwera, aby pobrać dane, takie jak map pogodzie, giełdowych lub gazecie nagłówki, na przykład. Klienta internetowego dostęp do serwera za pośrednictwem sieci zewnętrznej (Internet) lub sieci wewnętrznej (nazywane w intranecie).  

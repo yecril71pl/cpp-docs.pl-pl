@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379258"
 ---
 # <a name="role-of-the-view-in-printing"></a>Rola widoku w drukowaniu
 Widok pełni również dwie role ważne w drukowaniu jego skojarzonego dokumentu.  

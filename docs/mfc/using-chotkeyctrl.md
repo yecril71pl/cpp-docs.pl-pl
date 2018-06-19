@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381807"
 ---
 # <a name="using-chotkeyctrl"></a>Korzystanie z CHotKeyCtrl
 Formantu klawisza dostępu, reprezentowany przez klasę [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md), jest wyświetlany tekst reprezentację kombinacji klawiszy użytkownik wpisze, np. CTRL + SHIFT + Q okno. Ta funkcja obsługuje również reprezentacji wewnętrznej tego klucza w postaci wirtualnego kodu klucza i zestaw flag, które reprezentują stan shift. Formantu klawisza dostępu nie ustawia faktycznie klawisza dostępu, które zależy od programu. (Listę standardowych wirtualnego kodów klucza, zobacz Winuser.h).  

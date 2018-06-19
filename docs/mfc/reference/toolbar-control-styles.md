@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373198"
 ---
 # <a name="toolbar-control-styles"></a>Style formantu ToolBar
 [Klasa CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) ma zestaw styl flagi, które określają wygląd i zachowanie przycisku. Kombinacja flag można ustawić przez wywołanie metody [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle). W tym temacie wymieniono wartości flag styl i ich znaczenie.  

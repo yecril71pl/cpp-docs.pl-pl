@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107847"
 ---
 # <a name="binder2nd-stlclr"></a>binder2nd (STL/CLR)
 Klasa szablonu opisuje obiekt jeden argument, który po wywołaniu zwraca jego przechowywanych obiekt dwuargumentowej wywołana z dostarczony pierwszego argumentu i jego przechowywanych drugi argument. Można go użyć Określ obiekt funkcja pod względem jego przechowywanych obiekt.  

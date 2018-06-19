@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168935"
 ---
 # <a name="compiler-error-c2154"></a>C2154 błąd kompilatora
 'type': tylko typ wyliczeniowy jest dozwolony jako argument typu wewnętrznej cechy kompilatora "słowo kluczowe __underlying_type ma"  

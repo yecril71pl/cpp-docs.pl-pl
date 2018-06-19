@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275226"
 ---
 # <a name="compiler-error-c3708"></a>C3708 błąd kompilatora
 "interface": nieprawidłowe użycie '— słowo kluczowe'; musi być elementem członkowskim zgodnego źródła zdarzeń  

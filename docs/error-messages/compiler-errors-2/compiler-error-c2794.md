@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33237395"
 ---
 # <a name="compiler-error-c2794"></a>C2794 błąd kompilatora
 "Funkcja": nie jest elementem członkowskim żadnych bezpośrednich lub pośrednich klasa podstawowa "class"  

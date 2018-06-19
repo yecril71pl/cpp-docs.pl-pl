@@ -53,6 +53,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371744"
 ---
 # <a name="cmfcvisualmanagervs2005-class"></a>Program CMFCVisualManagerVS2005 — klasa
 `CMFCVisualManagerVS2005` Daje aplikacji wygląd Microsoft Visual Studio 2005.  

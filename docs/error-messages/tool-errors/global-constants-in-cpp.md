@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297339"
 ---
 # <a name="global-constants-in-c"></a>Stałe globalne w C++
 Stałe globalne w C++ mieć statycznego powiązania. Ta lokalizacja jest inna niż C. Jeśli spróbujesz użyć globalnym stałej w języku C++ w wielu plikach błąd nierozwiązane zewnętrznych. Kompilator optymalizuje stałe globalne, brakuje miejsca zarezerwowane dla zmiennej.  

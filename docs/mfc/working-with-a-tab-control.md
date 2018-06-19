@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383165"
 ---
 # <a name="working-with-a-tab-control"></a>Praca z formantem karty
 Najprostszym sposobem użycia formantu karty ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) to przez dodanie go do zasobu szablonu okna dialogowego z edytora okien dialogowych. Umożliwia także formantu karty samodzielnie. Wywołania MFC **InitCommonControls** dla Ciebie. Kluczowe zadania są następujące:  

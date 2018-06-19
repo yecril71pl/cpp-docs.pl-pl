@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371653"
 ---
 # <a name="standard-command-and-window-ids"></a>Identyfikatory poleceń standardowych i okien
 Microsoft Foundation Class Library definiuje liczbę poleceń standardowych i okien identyfikatorów w Afxres.h. Te identyfikatory są najczęściej używane w ramach edytory zasobów i w oknie właściwości do mapowania funkcji obsługi wiadomości. Wszystkie standardowe polecenia mają **ID_** prefiks. Na przykład, korzystając z Edytora menu, zwykle powiąże Otwieranie pliku element menu dla standardowego `ID_FILE_OPEN` polecenia identyfikatora.  

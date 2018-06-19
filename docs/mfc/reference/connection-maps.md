@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372841"
 ---
 # <a name="connection-maps"></a>Mapy połączeń
 Formanty OLE są możliwe do udostępnienia interfejsy do innych aplikacji. Te interfejsy umożliwiają dostęp z kontenera tylko do tego formantu. Jeśli formant OLE chce uzyskać dostępu do zewnętrznych interfejsów innych obiektów OLE, należy ustanowić punktu połączenia. Punkt połączenia z tym zapewnia kontrolę wychodzący dostęp do mapy wysyłania zewnętrznych, takich jak mapy zdarzeń lub funkcji powiadomień.  

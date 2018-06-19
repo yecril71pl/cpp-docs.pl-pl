@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335515"
 ---
 # <a name="active-documents"></a>Dokumenty aktywne
 Dokumenty aktywne rozszerzyć technologii złożonego dokumentu OLE. Rozszerzenia te są udostępniane w formie dodatkowe interfejsy, które zarządzają widoków, dzięki czemu obiekty mogą działać w kontenerach i jeszcze zachować kontrolę nad ich wyświetlania i funkcji drukowania. Ten proces pozwala na wyświetlanie dokumentów obcego ramki (na przykład Microsoft Office Binder lub programu Microsoft Internet Explorer) oraz ramek natywnych (na przykład portów widok tego produktu).  

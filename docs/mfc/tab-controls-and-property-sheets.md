@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385875"
 ---
 # <a name="tab-controls-and-property-sheets"></a>Formanty karty i arkusze właściwości
 Arkusze właściwości są wielu stron okien dialogowych lub "karta oknach dialogowych", aby wyświetlać maksymalnie 24 zasoby szablonu okna dialogowego do użytkownika. Przykłady arkuszy właściwości można znaleźć w oknie dialogowym właściwości wyświetlania systemu Windows lub poniższej przykładowej aplikacji MFC:  

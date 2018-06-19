@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372700"
 ---
 # <a name="cmfcribbonslider-class"></a>Klasa CMFCRibbonSlider
 `CMFCRibbonSlider` Klasa implementuje formant suwaka, który można dodać do pasek Wstążki lub pasek stanu wstążki. Kontrolka suwaka wstążki podobny suwaki powiększenia, które są widoczne w aplikacjach pakietu Office 2007.  

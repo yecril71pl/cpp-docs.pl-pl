@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381585"
 ---
 # <a name="using-cdatetimectrl"></a>Korzystanie z CDateTimeCtrl
 Formant selektora daty i godziny ([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) implementuje metodę intuicyjne i rozpoznawalnych wprowadzania lub wybranie określonej daty. Główne interfejsu formantu jest podobne do pola kombi. Użytkownik rozwija formantu (domyślnie), jest wyświetlany formant kalendarza miesięcznego zezwolenie użytkownikowi określenie określonej daty. Po wybraniu typu date, formant kalendarza miesięcznego automatycznie zniknie.  

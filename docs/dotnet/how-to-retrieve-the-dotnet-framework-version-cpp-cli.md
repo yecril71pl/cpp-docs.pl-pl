@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128774"
 ---
 # <a name="how-to-retrieve-the-net-framework-version-ccli"></a>Porady: pobieranie wersji programu .NET Framework (C++/CLI)
 Poniższy przykład kodu pokazuje, jak można ustalić wersji aktualnie zainstalowany .NET Framework za pomocą <xref:System.Environment.Version%2A> właściwość, która jest wskaźnik do <xref:System.Version> obiekt, który zawiera informacje o wersji.  

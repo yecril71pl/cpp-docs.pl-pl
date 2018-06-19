@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109602"
 ---
 # <a name="greater-stlclr"></a>greater (STL/CLR)
 Obiekt opisano klasy szablonu, że po wywołaniu zwraca wartość true tylko wtedy, gdy pierwszy argument jest większa od drugiej. Można go użyć Określ obiekt funkcja pod względem jego typ argumentu.  

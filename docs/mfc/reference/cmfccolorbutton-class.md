@@ -59,6 +59,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371116"
 ---
 # <a name="cmfccolorbutton-class"></a>Klasa CMFCColorButton
 `CMFCColorButton` i [klasy CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) klasy są używane razem aby wdrażanie kontroli próbnika kolorów.  

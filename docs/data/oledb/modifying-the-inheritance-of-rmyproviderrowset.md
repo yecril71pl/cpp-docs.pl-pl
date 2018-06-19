@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106235"
 ---
 # <a name="modifying-the-inheritance-of-rmyproviderrowset"></a>Modyfikowanie dziedziczenia obiektu RMyProviderRowset
 Aby dodać `IRowsetLocate` interfejsu, na przykład prostego dostawcy tylko do odczytu, modyfikowanie dziedziczenia obiektu **RMyProviderRowset**. Początkowo **RMyProviderRowset** dziedziczy `CRowsetImpl`. Należy zmodyfikować, aby dziedziczyć z **CRowsetBaseImpl**.  

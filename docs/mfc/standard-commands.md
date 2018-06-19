@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380149"
 ---
 # <a name="standard-commands"></a>Polecenia standardowe
 Platformę definiuje wiele poleceń standardowych komunikatów. Identyfikatory dla tych poleceń zwykle mieć postać:  

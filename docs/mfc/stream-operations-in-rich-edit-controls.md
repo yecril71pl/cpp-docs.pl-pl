@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379928"
 ---
 # <a name="stream-operations-in-rich-edit-controls"></a>Operacje strumieniowe w formantach edycji wzbogaconej
 Strumienie służy do przesyłania danych do lub wychodzący kontrolki edycji wzbogaconej ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Strumień jest definiowana za pomocą [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) struktury, która określa buforu i zdefiniowanym przez aplikację funkcja wywołania zwrotnego.  

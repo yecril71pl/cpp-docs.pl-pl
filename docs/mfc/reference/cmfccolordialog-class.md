@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367919"
 ---
 # <a name="cmfccolordialog-class"></a>Klasa CMFCColorDialog
 `CMFCColorDialog` Klasa reprezentuje okno dialogowe wybór kolorów.  

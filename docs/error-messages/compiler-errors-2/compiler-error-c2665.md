@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33235783"
 ---
 # <a name="compiler-error-c2665"></a>C2665 błąd kompilatora
 "Funkcja": żadne z przeciążeń Liczba1 przekonwertować liczba2 parametru z typu "type"  

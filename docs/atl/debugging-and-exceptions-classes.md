@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355255"
 ---
 # <a name="debugging-and-exceptions-classes"></a>Debugowanie i klasy wyjątków
 Te klasy zapewniają obsługę wyjątków, obsługa i debugowania.  

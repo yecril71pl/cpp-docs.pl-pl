@@ -109,6 +109,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377574"
 ---
 # <a name="coleipframewndex-class"></a>Klasa COleIPFrameWndEx
 `COleIPFrameWndEx` Klasa implementuje kontener OLE, który obsługuje MFC. Klasy okna ramowe w miejscu musi pochodzić z aplikacji `COleIPFrameWndEx` klasy zamiast wynikających z [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)klasy. 

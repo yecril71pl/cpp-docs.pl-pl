@@ -65,6 +65,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375115"
 ---
 # <a name="cdatabase-class"></a>Cdatabase — klasa
 Reprezentuje połączenie ze źródłem danych, za pomocą których można korzystać w źródle danych.  

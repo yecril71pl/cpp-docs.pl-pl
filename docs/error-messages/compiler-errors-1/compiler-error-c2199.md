@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169013"
 ---
 # <a name="compiler-error-c2199"></a>Do C2199 błąd kompilatora
 Błąd składniowy: znaleziono "identyfikator (" w zakresie globalnym (czy deklaracja jest zamierzona?)  

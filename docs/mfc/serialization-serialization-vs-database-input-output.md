@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379580"
 ---
 # <a name="serialization-serialization-vs-database-inputoutput"></a>Serializacja: Serializacja vs. Bazy danych we/wy
 W tym artykule opisano użycie obiekty dokumentów i serializacji dla opartych na plikach wejścia/wyjścia (We/Wy) i innych technik We/Wy są odpowiednie, ponieważ aplikacja odczytuje i zapisuje dane na podstawie każdej transakcji, tak jak aplikacje baz danych. Jeśli nie używasz serializacji, można również nie będzie konieczne Otwórz plik, Zapisz i Zapisz jako polecenia. Tematy obejmują:  

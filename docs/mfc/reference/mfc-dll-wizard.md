@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372160"
 ---
 # <a name="mfc-dll-wizard"></a>Kreator biblioteki MFC DLL
 Kreator biblioteki MFC DLL umożliwia tworzenie projektu MFC DLL, daje starter działającą aplikację z wbudowanej funkcji, gdy kompilowane, zostaną zaimplementowane podstawowych funkcji [DLL](../../build/dlls-in-visual-cpp.md). MFC starter program zawiera pliki źródłowe (.cpp) C++, pliki zasobów (.rc) i pliku projektu (.vcxproj). Kod wygenerowany w tych plikach starter jest oparta na MFC. Aby uzyskać szczegółowe informacje, zobacz szczegóły plik Readme.txt, generowany dla projektu programu Visual Studio i [klasy i funkcje generowane przez kreatora biblioteki DLL MFC](../../mfc/reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md)  

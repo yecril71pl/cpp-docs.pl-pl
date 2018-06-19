@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198667"
 ---
 # <a name="compiler-error-c2388"></a>C2388 błąd kompilatora
 "symbol": symbol nie może być zadeklarowane z obu __declspec(appdomain) i \__declspec(process)  

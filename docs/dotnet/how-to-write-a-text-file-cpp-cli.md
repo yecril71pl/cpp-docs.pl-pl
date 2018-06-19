@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131244"
 ---
 # <a name="how-to-write-a-text-file-ccli"></a>Porady: wpisywanie tekstu do pliku tekstowego (C++/CLI)
 Poniższy przykład kodu pokazuje, jak utworzyć plik tekstowy i zapisywanie tekstu do niej przy użyciu <xref:System.IO.StreamWriter> klasy, która jest zdefiniowana w <xref:System.IO> przestrzeni nazw. <xref:System.IO.StreamWriter> Konstruktora pobiera nazwę pliku, który ma zostać utworzony. Jeśli plik istnieje, zostanie zastąpiony (chyba że przekazujesz True jako drugi <xref:System.IO.StringWriter> argumentów konstruktora).  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385196"
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>Bezpieczny dostęp do kontrolek z użyciem kreatorów kodu
 Jeśli znasz funkcje DDX, można użyć właściwości formantu w [Dodaj kreatora zmiennej elementu członkowskiego](../ide/add-member-variable-wizard.md) utworzyć bezpieczny dostęp. Ta metoda jest łatwiejsze niż Tworzenie formantów bez użycia kreatorów kodu.  

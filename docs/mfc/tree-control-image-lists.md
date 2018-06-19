@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382196"
 ---
 # <a name="tree-control-image-lists"></a>Listy obrazów kontrolki drzewa
 Każdy element formantu drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) może mieć dwa obrazy mapy bitowej skojarzonych z nim. Obrazy są wyświetlane po lewej stronie etykiety elementu. Jeden obraz jest wyświetlane, gdy element jest zaznaczony, a drugi jest wyświetlany, gdy nie wybrano elementu. Na przykład element może być wyświetlany Otwórz folder, jeśli jest zaznaczone i folder zamknięty, gdy nie jest zaznaczona.  

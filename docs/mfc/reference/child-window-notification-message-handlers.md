@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367175"
 ---
 # <a name="child-window-notification-message-handlers"></a>Programy obsługi komunikatów powiadomień dotyczących okna podrzędnego
 Istnieje pięć kategorii komunikaty powiadomień dotyczących okna podrzędnego:  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370776"
 ---
 # <a name="database-macros-and-globals"></a>Makra i funkcje globalne bazy danych
 Makra i funkcje globalne wymienione poniżej dotyczą aplikacji bazy danych opartej na ODBC. Nie są używane z aplikacji opartych na DAO.  

@@ -1946,6 +1946,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338185"
 ---
 # <a name="arm-intrinsics"></a>Funkcje wewnętrzne ARM
 Kompilator Visual C++ udostępnia następujące funkcje wewnętrzne na architekturze ARM. Aby uzyskać więcej informacji na temat ARM, zobacz [instrukcji obsługi architektury ARM](http://go.microsoft.com/fwlink/p/?LinkId=522049) i [przewodnik narzędzia asemblera ARM](http://go.microsoft.com/fwlink/p/?LinkId=246102) w witrynie Centrum informacyjne ARM.  

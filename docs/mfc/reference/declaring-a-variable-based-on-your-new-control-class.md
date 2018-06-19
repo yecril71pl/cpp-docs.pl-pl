@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370617"
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>Deklarowanie zmiennej opartej na nowej klasie formantów
 Po utworzeniu klasę formantu MFC można zadeklarować zmiennej na ich podstawie. Zapewnienie kontekst nową zmienną, musi otworzyć edytora okien dialogowych i edytować okno dialogowe, w której chcesz użyć do ponownego użycia formantu. Ponadto okno dialogowe musi mieć już skojarzone z nią klasy. Aby uzyskać informacje na temat używania edytora okien dialogowych, zobacz [Edytor okien dialogowych](../../windows/dialog-editor.md).  

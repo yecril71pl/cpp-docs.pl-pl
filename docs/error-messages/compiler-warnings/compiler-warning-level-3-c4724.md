@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295272"
 ---
 # <a name="compiler-warning-level-3-c4724"></a>Kompilator C4724 ostrzegawcze (poziom 3)
 potencjalne dzielenie modulo przez 0  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370099"
 ---
 # <a name="how-to-use-the-message-map-cross-reference"></a>Porady: używanie odsyłacza mapy komunikatów
 W pozycji z etykietą \<memberFxn >, napisz własną funkcję elementu członkowskiego dla pochodnego [CWnd](../../mfc/reference/cwnd-class.md) klasy. Nadaj funkcji dowolną nazwę, którą chcesz. Inne funkcje, takie jak `OnActivate`, są funkcje elementów członkowskich klasy `CWnd`. Jeśli wywołany, przekazaniem ich do `DefWindowProc` funkcji systemu Windows. Aby przetwarzać komunikatów powiadomień systemu Windows, Zastąp odpowiadającą jej `CWnd` funkcji w klasie pochodnej. Funkcja powinna wywołać funkcję zastąpiony w klasie podstawowej, aby umożliwić klasy podstawowej i udzielenia odpowiedzi systemu Windows.  

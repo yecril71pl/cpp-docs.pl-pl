@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112072"
 ---
 # <a name="working-with-ole-db-provider-templates"></a>Praca z szablonami dostawców OLE DB
 Aby dowiedzieć się, jak pracować z szablonami dostawców OLE DB, zobacz następujące tematy:  

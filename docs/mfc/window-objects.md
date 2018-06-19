@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385274"
 ---
 # <a name="window-objects"></a>Obiekty okien
 Klasa dostarcza MFC [CWnd](../mfc/reference/cwnd-class.md) celu hermetyzacji `HWND` uchwytu okna. `CWnd` Obiekt jest obiektem okna języka C++ różne od `HWND` reprezentujący systemu Windows, ale okna zawierającego go. Użyj `CWnd` pochodzić okna podrzędnego klas, lub użyj jednego z wielu klas MFC z `CWnd`. Klasa `CWnd` jest klasą bazową dla wszystkich windows, w tym okien ramowych, okna dialogowe okno podrzędne, formanty i paski sterowania, takie jak pasków narzędzi. Dobrą znajomość [relacja między obiektem okna języka C++ a właściwością HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md) ma kluczowe znaczenie dla skuteczne programowanie z MFC.  

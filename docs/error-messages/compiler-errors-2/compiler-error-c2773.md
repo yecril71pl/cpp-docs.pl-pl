@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33234531"
 ---
 # <a name="compiler-error-c2773"></a>C2773 błąd kompilatora
 \#Importowanie i #using dostępne tylko w kompilatorze języka C++  

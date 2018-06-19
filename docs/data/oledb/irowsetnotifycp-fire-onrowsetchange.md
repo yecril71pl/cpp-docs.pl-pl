@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101997"
 ---
 # <a name="irowsetnotifycpfireonrowsetchange"></a>IRowsetNotifyCP::Fire_OnRowsetChange
 Emituje [OnRowsetChange](https://msdn.microsoft.com/en-us/library/ms722669.aspx) zdarzenia do wszystkich obiektów nasłuchujących w punkcie połączenia **IID_IRowsetNotify** powiadomił użytkowników zmian wpływających na cały zestaw wierszy.  

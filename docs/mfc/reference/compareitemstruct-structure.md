@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368634"
 ---
 # <a name="compareitemstruct-structure"></a>Struktura COMPAREITEMSTRUCT
 `COMPAREITEMSTRUCT` Struktury dostarcza identyfikatorów i aplikacja dostarczona danych dla dwóch elementów w polu posortowana lista rysowanych przez właściciela lub pola kombi.  

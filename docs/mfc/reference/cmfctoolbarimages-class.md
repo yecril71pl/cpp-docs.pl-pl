@@ -155,6 +155,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377940"
 ---
 # <a name="cmfctoolbarimages-class"></a>Klasa CMFCToolBarImages
 Obrazy na pasku narzędzi. `CMFCToolBarImages` Klasa zarządza załadowane z zasobów aplikacji lub z plików obrazów paska narzędzi.  

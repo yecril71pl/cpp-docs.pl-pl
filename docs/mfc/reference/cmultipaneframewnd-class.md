@@ -95,6 +95,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375927"
 ---
 # <a name="cmultipaneframewnd-class"></a>Klasa CMultiPaneFrameWnd
 `CMultiPaneFrameWnd` Rozszerza klasy [CPaneFrameWnd klasy](../../mfc/reference/cpaneframewnd-class.md). Może obsługiwać wiele okienek. Zamiast pojedynczego osadzonych dojścia do pasek sterowania `CMultiPaneFrameWnd` zawiera [klasy CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) obiekt, który umożliwia użytkownikowi dock jedną `CMultiPaneFrameWnd` na inny i dynamicznie utworzyć wiele przestawne, z kartami systemu Windows.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382453"
 ---
 # <a name="using-cheaderctrl"></a>Korzystanie z CHeaderCtrl
 Użyj formantu nagłówka reprezentowany przez klasę [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), aby wyświetlić nagłówki kolumn do listy kolumnowym. Na przykład formantu nagłówka będą przydatne podczas implementowania kontroli kolumny w arkuszu kalkulacyjnym.  

@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377324"
 ---
 # <a name="diagnostic-services"></a>Usługi diagnostyczne
 Microsoft Foundation Class Library udostępnia wiele usług diagnostycznych, które debugowanie programów łatwiejsze. Usługi diagnostyczne te obejmują makra i funkcje globalne, które umożliwiają śledzenie pamięci programu alokacji, zrzutu zawartość obiektów w czasie wykonywania i Drukuj komunikaty debugowania w czasie wykonywania. Makra i funkcje globalne dla usługi diagnostyczne są podzielone na następujące kategorie:  

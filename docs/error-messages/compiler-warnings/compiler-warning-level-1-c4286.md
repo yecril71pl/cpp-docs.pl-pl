@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33277117"
 ---
 # <a name="compiler-warning-level-1-c4286"></a>Kompilator C4286 ostrzegawcze (poziom 1)
 "type1": zostanie przechwycony przez klasę podstawową ("type2") w wierszu o numerze  

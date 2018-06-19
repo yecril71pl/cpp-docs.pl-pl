@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370835"
 ---
 # <a name="generated-classes-mfc-application-wizard"></a>Klasy generowane, kreator aplikacji MFC
 Ten temat zawiera listę nazw klas podstawowych oraz pliki, które generuje projektu. Domyślnie nazw są oparte na nazwę projektu, do którego określony w **okno dialogowe Nowy projekt**. Większość tych nazw można zmienić, zgodnie z opisem w tym miejscu:  

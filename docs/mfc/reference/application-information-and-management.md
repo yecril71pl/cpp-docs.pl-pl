@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358485"
 ---
 # <a name="application-information-and-management"></a>Informacje o aplikacji i zarządzanie nią
 Podczas pisania aplikacji, Utwórz jeden [CWinApp](../../mfc/reference/cwinapp-class.md)-pochodzi z obiektu. W czasie, może zajść potrzeba uzyskania informacji na temat tego obiektu wynikające ze poza `CWinApp`-pochodzi z obiektu. Lub może być wymagany dostęp do innych obiektów globalnych "mananger".

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370145"
 ---
 # <a name="mfc-class-wizard"></a>Kreator klas MFC
 Umożliwia dodanie wiadomości i programy obsługi wiadomości do klasy w projekcie. Można również uruchomić inne kreatorów lub dodać klasę do projektu.  

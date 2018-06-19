@@ -55,6 +55,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371546"
 ---
 # <a name="ceditview-class"></a>Klasa CEditView
 Typ widoku klasy, która udostępnia funkcje systemu Windows formantu edycyjnego i może służyć do implementowania prostego edytora tekstu.  

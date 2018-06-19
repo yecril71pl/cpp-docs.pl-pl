@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381793"
 ---
 # <a name="tn066-common-mfc-3x-to-40-porting-issues"></a>TN066: typowe problemy z przenoszeniem aplikacji MFC 3.x do wersji 4.0
 Ta uwaga techniczna opisano najbardziej typowe problemy, które mogą wystąpić podczas próby portu aplikacji napisany za pomocą MFC 3.x (uwzględnionych w programie Visual C++ MFC 2.x) 4.0 MFC.  

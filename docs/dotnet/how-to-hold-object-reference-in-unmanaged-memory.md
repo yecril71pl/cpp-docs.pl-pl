@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128735"
 ---
 # <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>Porady: utrzymywanie odwołania do obiektu w pamięci niezarządzanej
 Można użyć gcroot.h, który opakowuje <xref:System.Runtime.InteropServices.GCHandle>, aby pomieścić odwołanie do obiektu CLR w pamięci niezarządzanej. Alternatywnie można użyć `GCHandle` bezpośrednio.  

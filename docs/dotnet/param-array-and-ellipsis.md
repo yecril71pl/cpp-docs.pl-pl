@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33158524"
 ---
 # <a name="param-array-and-ellipsis"></a>Tablica parametrów i wielokropek
 Pierwszeństwo w tablicy parametrów wywołania przeciążonej funkcji rozpoznawania został zmieniony z rozszerzeń zarządzanych dla języka C++ dla Visual C++.  

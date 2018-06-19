@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368312"
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>Obsługa dokumentów złożonych, kreator aplikacji MFC
 Na tej stronie Kreatora aplikacji MFC wskazują, do jakiego poziomu aplikacji obsługuje złożone i aktywny dokument. Aplikacja musi obsługiwać architektury dokument/widok do obsługi dokumentów złożonych i szablonów dokumentów.  

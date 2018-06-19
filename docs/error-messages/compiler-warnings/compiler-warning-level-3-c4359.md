@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33292987"
 ---
 # <a name="compiler-warning-level-3-c4359"></a>Kompilator C4359 ostrzegawcze (poziom 3)
 'type': rzeczywiste wyrównanie (8) jest większa niż wartość określona w __declspec(align())  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383152"
 ---
 # <a name="tree-control-item-states-overview"></a>Przegląd stanów elementu kontrolki drzewa
 Każdy element formantu drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) ma określony stan bieżący. Na przykład można wybrać element, wyłączone, rozwinięty i tak dalej. W większości przypadków drzewie automatycznie ustawia stan elementu, aby odzwierciedlić akcje użytkownika, takie jak zaznaczenie elementu. Jednak można również ustawić stan elementu za pomocą [SetItemState](../mfc/reference/ctreectrl-class.md#setitemstate) funkcji Członkowskich i pobrać bieżący stan elementu za pomocą [GetItemState](../mfc/reference/ctreectrl-class.md#getitemstate) funkcję elementu członkowskiego. Aby uzyskać pełną listę stanów elementu, zobacz [stałe kontrolki widok drzewa](http://msdn.microsoft.com/library/windows/desktop/bb759985) w zestawie Windows SDK.  

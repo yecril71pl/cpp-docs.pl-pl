@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381481"
 ---
 # <a name="tn060-the-new-windows-common-controls"></a>TN060: nowe formanty wspólne systemu Windows
 Techniczne 60 Uwaga, zawierająca opis korzystania z nich oraz nowe formanty wspólne systemu Windows została włączona [formanty](../mfc/controls-mfc.md).  

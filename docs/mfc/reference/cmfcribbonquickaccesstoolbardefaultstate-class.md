@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370923"
 ---
 # <a name="cmfcribbonquickaccesstoolbardefaultstate-class"></a>Klasa CMFCRibbonQuickAccessToolBarDefaultState
 Klasa pomocy, która zarządza stan domyślny dla paska narzędzi Szybki dostęp, który znajduje się w pasku wstążki ( [CMFCRibbonBar klasy](../../mfc/reference/cmfcribbonbar-class.md)).  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103167"
 ---
 # <a name="accumulate-stlclr"></a>accumulate (STL/CLR)
 Oblicza sumę wszystkich elementów w określonym zakresie m.in. niektóre wartości początkowej przez obliczanie sum częściowych kolejnych lub oblicza wynik kolejne wyniki częściowe podobnie uzyskany przy użyciu określonej operacji binarnych sumą.  

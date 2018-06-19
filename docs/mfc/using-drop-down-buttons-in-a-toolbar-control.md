@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383256"
 ---
 # <a name="using-drop-down-buttons-in-a-toolbar-control"></a>Używanie przycisków listy rozwijanej w formancie paska narzędzi
 Oprócz standardowych przycisków pasek narzędzi może zawierać również przycisków listy rozwijanej. Obecność dołączone klawisz Strzałka zwykle wskazuje przycisku rozwijanego.  

@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374991"
 ---
 # <a name="cstdiofile-class"></a>Klasa CStdioFile
 Reprezentuje plik strumienia środowiska wykonawczego C, jak otworzyć za pomocą funkcji środowiska wykonawczego [fopen —](../../c-runtime-library/reference/fopen-wfopen.md).  

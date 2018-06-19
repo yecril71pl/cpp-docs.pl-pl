@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382782"
 ---
 # <a name="using-image-lists-with-header-controls"></a>Używanie list obrazów z formantami nagłówka
 Elementy nagłówka mieć możliwość wyświetlania obrazu w elemencie nagłówka. Ten obraz przechowywany na liście skojarzony obraz jest 16 x 16 pikseli i ma takie same charakterystyki jako obrazów ikony używane w kontrolce widoku listy. Aby pomyślnie wdrożyć to zachowanie, należy najpierw utworzyć i zainicjować listy obrazów, skojarzony z formantem nagłówka listy, a następnie zmodyfikuj atrybuty elementu nagłówka, który wyświetla obraz.  

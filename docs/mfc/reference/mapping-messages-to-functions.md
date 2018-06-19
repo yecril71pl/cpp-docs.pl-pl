@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371637"
 ---
 # <a name="mapping-messages-to-functions"></a>Mapowanie komunikatów na funkcje
 Okno właściwości umożliwia powiązanie obsługi komunikatów (funkcje Członkowskie klas MFC interfejsu użytkownika) na komunikaty generowane przez zasobów aplikacji. Używają [mapy wiadomości MFC](../../mfc/messages-and-commands-in-the-framework.md) można utworzyć powiązania.  

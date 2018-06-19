@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382934"
 ---
 # <a name="special-cwinapp-services"></a>Specjalne usługi CWinApp
 Poza systemem pętli komunikatów i zapewniając możliwość inicjowania aplikacji i wyczyścić, po którym [CWinApp](../mfc/reference/cwinapp-class.md) zawiera kilka innych usług.  

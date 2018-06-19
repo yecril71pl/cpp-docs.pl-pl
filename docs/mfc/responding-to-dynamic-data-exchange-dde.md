@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379206"
 ---
 # <a name="responding-to-dynamic-data-exchange-dde"></a>Odpowiadanie na dynamiczną wymianę danych (DDE)
 Okno ramowe może odpowiadać na żądania programu exchange (DDE) danych dynamicznych do otwierania plików z Menedżera plików (Jeśli rozszerzenie jest zarejestrowane lub skojarzone z aplikacją). Zobacz [powłoki rejestracji](../mfc/special-cwinapp-services.md).  

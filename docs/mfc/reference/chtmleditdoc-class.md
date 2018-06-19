@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366974"
 ---
 # <a name="chtmleditdoc-class"></a>Klasa CHtmlEditDoc
 Z [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), funkcje platformy edycji WebBrowser w kontekście architektury dokument widok MFC.  

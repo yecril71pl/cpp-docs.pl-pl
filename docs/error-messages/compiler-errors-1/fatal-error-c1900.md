@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33228990"
 ---
 # <a name="fatal-error-c1900"></a>Błąd krytyczny C1900
 Niezgodność IL "tool1" "Liczba1" i "tool2" wersja "liczba2"  

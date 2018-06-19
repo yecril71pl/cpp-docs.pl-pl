@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383419"
 ---
 # <a name="serialization-making-a-serializable-class"></a>Serializacja: ustawianie klasy jako możliwej do serializacji
 Pięć głównych kroków są wymagane dokonanie klasę serializacji. Są one wymienione poniżej i wyjaśnione w poniższych sekcjach:  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33139764"
 ---
 # <a name="how-to-convert-systemstring-to-wchart-or-char"></a>Porady: konwertowanie obiektu System::String na ciąg wchar_t* lub char*
 Można użyć `PtrToStringChars` w Vcclr.h przekonwertować <xref:System.String> do kodu natywnego `wchar_t *` lub `char *`.  Ponieważ wewnętrznie jest CLR ciągów Unicode zawsze zwraca wskaźnik szeroki ciąg Unicode. Następnie można przekonwertować z całej jak pokazano w poniższym przykładzie.  

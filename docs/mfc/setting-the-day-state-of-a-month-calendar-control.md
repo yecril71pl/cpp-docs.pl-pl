@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380802"
 ---
 # <a name="setting-the-day-state-of-a-month-calendar-control"></a>Ustawianie stanu dnia formantu kalendarza miesięcznego
 Jeden z atrybutów formant kalendarza miesięcznego jest możliwość przechowywania informacji o określonych jako stanu dnia formantu, dla każdego dnia miesiąca. Te informacje jest używany do wyróżnienia niektórych dat w miesiącu aktualnie wyświetlany.  

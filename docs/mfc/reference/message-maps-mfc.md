@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371715"
 ---
 # <a name="message-maps-mfc"></a>Mapy komunikatów (MFC)
 Ta sekcja dokumentacji Wyświetla listę wszystkich [makra mapowania wiadomości](../../mfc/reference/message-map-macros-mfc.md) i wszystkie [CWnd](../../mfc/reference/cwnd-class.md) prototypy funkcji wpisy mapy wiadomości wraz z odpowiadającego mu członka:  
