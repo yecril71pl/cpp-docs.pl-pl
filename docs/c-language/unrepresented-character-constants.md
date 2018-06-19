@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385715"
 ---
 # <a name="unrepresented-character-constants"></a>Niemożliwe do przedstawienia stałe znakowe
 **ANSI 3.1.3.4** wartość całkowitą wartością stałą znak zawierających sekwencję znaków lub anulowania nie jest reprezentowany w zestaw znaków wykonania podstawowej lub rozszerzonej znak stałej znaków dwubajtowych  

@@ -44,6 +44,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389852"
 ---
 # <a name="inp-inpw-inpd"></a>_inp, _inpw, _inpd
 Dane wejściowe z portu, byte (`_inp`), wyraz (`_inpw`), lub word o podwójnej precyzji (`_inpd`).  

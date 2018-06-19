@@ -31,6 +31,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255612"
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC — podstawy programowania Internetu
 Firma Microsoft udostępnia wiele interfejsów API do programowania aplikacji klienta i serwera. Wiele nowych aplikacji są zapisywane w Internecie, a jako technologie, przeglądarki możliwości i zmiany opcji zabezpieczeń, nowych typów aplikacji zostanie zapisany. Uruchamianie przeglądarki na komputerach klienckich, zapewnianie dostępu do sieci Web i wyświetlanie strony HTML, które zawierają tekst, grafiki, formantów ActiveX i dokumenty. Serwery FTP, HTTP i gopher usług i uruchamiania aplikacji rozszerzenia serwera przy użyciu CGI. Niestandardową aplikację można pobrać informacji o i udostępniać dane w Internecie.  

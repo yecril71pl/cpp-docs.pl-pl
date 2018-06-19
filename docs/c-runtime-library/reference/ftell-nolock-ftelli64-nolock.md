@@ -44,6 +44,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32398460"
 ---
 # <a name="ftellnolock-ftelli64nolock"></a>_ftell_nolock, _ftelli64_nolock
 
@@ -71,7 +72,7 @@ Taki sam jak **ftell —** i **_ftelli64 —**. Aby uzyskać więcej informacji,
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje są bez blokowania wersje **ftell —** i **_ftelli64 —**odpowiednio. Są one takie same jak **ftell —** i **_ftelli64 —** z tą różnicą, że nie są chronione przez inne wątki od zakłóceń. Funkcje te mogą być szybciej, ponieważ one nie nakładu zablokowania inne wątki. Ich używać tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.
+Te funkcje są bez blokowania wersje **ftell —** i **_ftelli64 —** odpowiednio. Są one takie same jak **ftell —** i **_ftelli64 —** z tą różnicą, że nie są chronione przez inne wątki od zakłóceń. Funkcje te mogą być szybciej, ponieważ one nie nakładu zablokowania inne wątki. Ich używać tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.
 
 ## <a name="requirements"></a>Wymagania
 

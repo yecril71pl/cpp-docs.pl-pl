@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384996"
 ---
 # <a name="function-declarations-and-definitions"></a>Deklaracje i definicje funkcji
 Prototypy funkcji ustanowić nazwę funkcji, jego typ zwracany i typ i numer jego parametrów formalnych. Definicja funkcji zawiera treść funkcji.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384349"
 ---
 # <a name="c-comments"></a>Komentarze języka C
 "comment" jest sekwencji znaków, zaczynając od kombinacji kreską ułamkową/gwiazdki (<b>/\*</b>) który jest traktowany jako pojedynczy znak odstępu przez kompilator, a w przeciwnym razie jest ignorowana. Komentarz może zawierać dowolną kombinację znaków z zestawu można przedstawić znaku, łącznie ze znakami nowego wiersza, z wyłączeniem ogranicznika "końca komentarza" (<b>\*/</b>). Komentarze mogą zajmować więcej niż jeden wiersz, ale nie mogą być zagnieżdżone.  

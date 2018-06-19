@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135892"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>Porady: rozszerzanie biblioteki marshalingu
 W tym temacie wyjaśniono, jak rozszerzanie biblioteki marshalingu, aby zapewnić więcej konwersje typów danych. Użytkownicy mogą rozszerzanie biblioteki marshalingu dla jakiejkolwiek konwersji danych nie jest obecnie obsługiwany przez bibliotekę.  

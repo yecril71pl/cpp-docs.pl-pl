@@ -45,6 +45,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32396199"
 ---
 # <a name="asctime-wasctime"></a>asctime, _wasctime
 
@@ -111,7 +112,7 @@ Te funkcje walidację ich parametrów. Jeśli *timeptr* jest wskaźnika o warto�
 
 ## <a name="example"></a>Przykład
 
-Ten program umieszcza czasu systemowego w długich liczb całkowitych **aclock**, tłumaczy go do struktury **newtime** i konwertuje ją do postaci ciągu dla danych wyjściowych, używając **asctime —**funkcji.
+Ten program umieszcza czasu systemowego w długich liczb całkowitych **aclock**, tłumaczy go do struktury **newtime** i konwertuje ją do postaci ciągu dla danych wyjściowych, używając **asctime —** funkcji.
 
 ```C
 // crt_asctime.c

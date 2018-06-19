@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390102"
 ---
 # <a name="struct-unwindcode"></a>struktura UNWIND_CODE
 Tablica kodu unwind jest używana do rejestrowania sekwencja operacji w prologu, które mają wpływ na nieulotnej rejestrów i źródło. Każdy element kodu ma następujący format:  

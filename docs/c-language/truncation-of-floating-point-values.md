@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385793"
 ---
 # <a name="truncation-of-floating-point-values"></a>Obcięcie wartości zmiennoprzecinkowych
 **ANSI 3.2.1.4** kierunek obcięcie lub zaokrąglania, gdy liczba zmiennoprzecinkowa jest konwertowana na mniejszą niż liczba zmiennoprzecinkowa  

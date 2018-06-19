@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32396595"
 ---
 # <a name="div-ldiv-lldiv"></a>DIV ldiv —, lldiv —
 
@@ -83,7 +84,7 @@ Denominator.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**DIV** wywoływane przy użyciu argumentów typu **int** zwraca struktura typu **div_t —**, która obejmuje iloraz, a reszta. Wartość zwracana z argumentami typu **długi** jest **ldiv_t —**i wartość zwracaną z argumentami typu **długi** **długi** jest **lldiv_t**. **div_t —**, **ldiv_t —**, i **lldiv_t** są zdefiniowane w \<stdlib.h >.
+**DIV** wywoływane przy użyciu argumentów typu **int** zwraca struktura typu **div_t —**, która obejmuje iloraz, a reszta. Wartość zwracana z argumentami typu **długi** jest **ldiv_t —** i wartość zwracaną z argumentami typu **długi** **długi** jest **lldiv_t**. **div_t —**, **ldiv_t —**, i **lldiv_t** są zdefiniowane w \<stdlib.h >.
 
 ## <a name="remarks"></a>Uwagi
 

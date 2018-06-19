@@ -50,6 +50,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32398292"
 ---
 # <a name="fgetcnolock-fgetwcnolock"></a>_fgetc_nolock, _fgetwc_nolock
 
@@ -77,7 +78,7 @@ Zobacz[fgetc —, fgetwc —](fgetc-fgetwc.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_fgetc_nolock —** i **_fgetwc_nolock —** są takie same jak **fgetc —** i **fgetwc —**odpowiednio z tą różnicą, że nie są chronione przed zakłóceniami przez inne wątki. Może być szybsze, ponieważ nie wiążą się z obciążenie zablokowania inne wątki. Ich używać tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.
+**_fgetc_nolock —** i **_fgetwc_nolock —** są takie same jak **fgetc —** i **fgetwc —** odpowiednio z tą różnicą, że nie są chronione przed zakłóceniami przez inne wątki. Może być szybsze, ponieważ nie wiążą się z obciążenie zablokowania inne wątki. Ich używać tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 

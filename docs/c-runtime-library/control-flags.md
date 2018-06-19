@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388290"
 ---
 # <a name="control-flags"></a>Flagi kontrolne
 Wersja do debugowania biblioteki wykonawcze języka Microsoft C używa następujących flag kontroli alokacji sterty i proces raportowania. Aby uzyskać więcej informacji, zobacz [techniki testowania CRT](/visualstudio/debugger/crt-debugging-techniques).  

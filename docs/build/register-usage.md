@@ -17,6 +17,7 @@ ms.sourcegitcommit: 4fc6869067d533b175207befd2dc60346afee285
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34225222"
 ---
 # <a name="register-usage"></a>Użycie metody Register
 

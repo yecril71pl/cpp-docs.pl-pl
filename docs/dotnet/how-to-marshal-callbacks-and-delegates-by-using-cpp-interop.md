@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132781"
 ---
 # <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Porady: przeprowadzanie marshalingu wywołań zwrotnych i delegatów za pomocą międzyoperacyjności języka C++
 W tym temacie przedstawiono kierowanie wywołań zwrotnych i deleguje (zarządzanej wersji wywołanie zwrotne) między zarządzanymi i niezarządzanymi kodu za pomocą języka Visual C++.  

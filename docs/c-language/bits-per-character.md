@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381060"
 ---
 # <a name="bits-per-character"></a>Bity na znak
 **ANSI 2.2.4.2.1** liczba bitów w znaku  

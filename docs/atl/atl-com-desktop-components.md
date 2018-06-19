@@ -20,6 +20,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255996"
 ---
 # <a name="atl-com-desktop-components"></a>Składniki COM pulpitu ATL
 Odwołanie do biblioteki ATL dokumentów aktywnych szablonu Library (ATL), zestaw na podstawie szablonu klasy C++, które upraszczają programowanie obiektów składnika modelu COM (Object). Aby w pełni korzystać z ATL, zaleca się pracy znajomość COM.  
