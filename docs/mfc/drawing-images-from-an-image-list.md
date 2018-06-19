@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345212"
 ---
 # <a name="drawing-images-from-an-image-list"></a>Rysowanie obrazów z poziomu listy obrazów
 Aby narysować obrazu, należy użyć [CImageList::Draw](../mfc/reference/cimagelist-class.md#draw) funkcję elementu członkowskiego. Określa wskaźnik do obiektu kontekstu urządzenia, indeks obrazu do rysowania lokalizacji kontekstu urządzenia, w którym do rysowania obrazu i zestaw flag, aby wskazać styl rysowania.  

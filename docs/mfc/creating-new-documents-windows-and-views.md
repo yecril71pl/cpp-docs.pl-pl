@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343418"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>Tworzenie nowych dokumentów, okien i widoków
 Poniższe rysunki nadaj Omówienie procesu tworzenia dokumentów, widoków i okien ramowych. Inne artykuły, które skupić się na obiekty uczestniczących udostępniania dodatkowych szczegółów.  

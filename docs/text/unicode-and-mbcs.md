@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857353"
 ---
 # <a name="unicode-and-mbcs"></a>Unicode i MBCS
 Biblioteka Microsoft Foundation Classes (MFC), biblioteki wykonawczej języka C w języku Visual C++ i środowisko projektowe Visual C++ są włączone do pomocy programu programowanie międzynarodowe. Udostępniają one:  

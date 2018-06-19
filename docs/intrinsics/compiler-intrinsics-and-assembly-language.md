@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323553"
 ---
 # <a name="compiler-intrinsics-and-assembly-language"></a>Funkcje wewnętrzne i język asemblera
 Ta sekcja dokumentacji zawiera informacje o funkcjach wewnętrznych kompilatora i o języku asembler.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346379"
 ---
 # <a name="handling-tool-tip-notifications"></a>Obsługa powiadomień dotyczących etykietek narzędzi
 Po określeniu `TBSTYLE_TOOLTIPS` styl, na pasku narzędzi tworzy i którymi zarządza formantem etykietki narzędzia. Etykietka narzędzia, która jest mała okno podręczne zawiera wiersz tekst opisujący przycisku paska narzędzi. Etykietka narzędzia, która jest ukryty, znajdujących się tylko użytkownik umieszcza kursor na przycisku paska narzędzi po pozostawia jej istnieje dla około połowy drugi. Etykietka narzędzia, która jest wyświetlana obok kursora.  

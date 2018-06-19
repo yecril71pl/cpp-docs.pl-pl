@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344246"
 ---
 # <a name="drag-and-drop-customizing"></a>Przeciąganie i upuszczanie: dostosowywanie
 Domyślna implementacja funkcji przeciągania i upuszczania jest odpowiednia dla większości aplikacji. Jednak niektóre aplikacje mogą wymagać, że można zmienić to zachowanie standardowego. W tym artykule opisano kroki niezbędne zmienić te ustawienia domyślne. Ponadto można użyć tej metody ustanowienie aplikacje, które nie obsługują dokumenty złożone jako źródła listy.  

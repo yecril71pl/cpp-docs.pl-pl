@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341764"
 ---
 # <a name="debugging-and-exception-classes"></a>Klasy debugowania i wyjątków
 Te klasy obsługi debugowania dynamicznej alokacji pamięci oraz do przekazywania informacji wyjątek z funkcji, w którym wyjątku funkcji gdzie zostanie przechwycony.  

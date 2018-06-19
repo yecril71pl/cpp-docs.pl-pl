@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857002"
 ---
 # <a name="changing-the-magnification-factor-image-editor-for-icons"></a>Zmiana współczynnika powiększenia (Edytor obrazów dla ikon)
 Domyślnie edytor obrazów Wyświetla widok w lewym okienku na rzeczywisty rozmiar i widoku w okienku po prawej stronie w rzeczywistym rozmiarze 6 razy. Współczynnika powiększenia (widoczna na pasku stanu w dolnej części obszaru roboczego) jest stosunek rzeczywisty rozmiar obrazu wyświetlanego rozmiar. Współczynnik domyślna to 6 i zakres to od 1 do 10.  

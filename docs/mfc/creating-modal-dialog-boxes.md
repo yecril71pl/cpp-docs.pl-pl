@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342432"
 ---
 # <a name="creating-modal-dialog-boxes"></a>Tworzenie modalnych okien dialogowych
 Aby utworzyć modalne okno dialogowe, wywołaj jednej z dwóch konstruktorów publicznych zadeklarowany w [cdialog —](../mfc/reference/cdialog-class.md). Następnie wywołaj obiektu okna dialogowego [DoModal](../mfc/reference/cdialog-class.md#domodal) funkcji członkowskiej, aby wyświetlić okno dialogowe i zarządzanie interakcji z nim, dopóki użytkownik wybierze OK lub przycisk Anuluj. To zarządzanie przez `DoModal` jest, co sprawia, że okno dialogowe modalne. Modalne okna dialogowe, aby uzyskać `DoModal` ładuje zasobu okna dialogowego.  

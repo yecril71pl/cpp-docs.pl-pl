@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313075"
 ---
 # <a name="linker-tools-error-lnk2017"></a>Błąd narzędzi konsolidatora LNK2017
 Przeniesienie "symbol" do "segmentu" Nieprawidłowa bez: no  

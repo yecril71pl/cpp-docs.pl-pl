@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339232"
 ---
 # <a name="create-a-new-linux-project"></a>Utwórz nowy projekt systemu Linux
 Podczas pisania kodu dla systemu Linux, jest możliwe utworzenia projektu programu Visual Studio lub CMake projektu. W tym temacie opisano sposób tworzenia projektu programu Visual Studio. Informacje dla projektów CMake, zobacz [Konfigurowanie projektu CMake Linux ](cmake-linux-project.md).

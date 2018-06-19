@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343885"
 ---
 # <a name="how-noncommand-messages-reach-their-handlers"></a>Jak komunikaty niebędące poleceniami docierają do swoich programów obsługi
 W odróżnieniu od polecenia standardowe komunikaty systemu Windows nie pobrać kierowane do celów podporządkowania, ale są zazwyczaj obsługiwane przez okno, do której system Windows wysyła wiadomość. Okno może być główne okno ramowe, podrzędnego okna MDI, formantu standardowego, okno dialogowe, widoku lub innego rodzaju okna podrzędnego.  

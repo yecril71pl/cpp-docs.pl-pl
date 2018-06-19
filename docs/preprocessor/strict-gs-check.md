@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33842979"
 ---
 # <a name="strictgscheck"></a>strict_gs_check
 Tej pragmy udostępnia zwiększone zabezpieczenia sprawdzania.  

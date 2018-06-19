@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342478"
 ---
 # <a name="adding-controls-by-hand"></a>Ręczne dodawanie formantów
 Możesz albo [dodawanie formantów do okna dialogowego z edytora okien dialogowych](../mfc/using-the-dialog-editor-to-add-controls.md) lub dodawać je samodzielnie, z kodem.  

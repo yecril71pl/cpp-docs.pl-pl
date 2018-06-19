@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33847975"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Porady: używanie istniejącego kodu C++ w aplikacji platformy uniwersalnej systemu Windows
 Najprostszym sposobem pobrania programu pulpitu w środowisku platformy uniwersalnej systemu Windows jest prawdopodobnie użycie technologii Mostek pulpitu. Obejmują one konwertera aplikacji pulpitu będzie pakietu istniejącej aplikacji jako aplikację platformy uniwersalnej systemu Windows bez kodu wymagane zmiany. Aby uzyskać więcej informacji, zobacz [przełączyć aplikację pulpitu do systemu Windows platformy Uniwersalnej z Mostek pulpitu](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root).

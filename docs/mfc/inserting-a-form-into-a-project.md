@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344136"
 ---
 # <a name="inserting-a-form-into-a-project"></a>Wstawianie formularza do projektu
 Formularze zapewniają wygodne kontenera formantów. Można łatwo wstawiać formularzy MFC do aplikacji, tak długo, jak aplikacja obsługuje biblioteki MFC.  

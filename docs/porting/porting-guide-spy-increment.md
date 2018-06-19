@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33848781"
 ---
 # <a name="porting-guide-spy"></a>Przewodnik przenoszenia: Narzędzie Spy++
 Przenoszenia w tej analizie przypadku zaprojektowano w celu daje wyobrażenie o jakie typowe projektu przenoszenia przypomina, jakiego rodzaju problemy mogą wystąpić i pewne ogólne porady i wskazówki dotyczące przenoszenia problemów. Nie ma mają być wyczerpujący do przenoszenia, ponieważ środowisko eksportowanie projekt zależy od znacznie szczegółowe informacje na temat kodu.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347940"
 ---
 # <a name="reading-and-writing-files"></a>Odczytywanie i zapisywanie danych pliku
 Jeśli używano funkcje obsługi plików biblioteki wykonawczej języka C, będą wyświetlane znanych MFC operacji odczytu i zapisu. W tym artykule opisano odczytywanie bezpośrednio z oraz zapisywanie bezpośrednio do `CFile` obiektu. Użytkownik może również buforowane We/Wy plików z [CArchive](../mfc/reference/carchive-class.md) klasy.  

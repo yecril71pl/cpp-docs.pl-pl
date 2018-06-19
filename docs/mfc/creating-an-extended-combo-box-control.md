@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341215"
 ---
 # <a name="creating-an-extended-combo-box-control"></a>Tworzenie formantu rozszerzonego pola kombi
 Sposób tworzenia formancie rozszerzonego pola kombi zależy od tego, czy za pomocą formantu w oknie dialogowym lub tworzenia go w oknie nondialog.  

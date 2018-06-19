@@ -39,6 +39,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856036"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Tekst i ciągi w programie Visual C++
 Ważnym aspektem opracowywanie aplikacji dla międzynarodową jest odpowiednią reprezentację zestawy znaków lokalnych. Zestaw znaków ASCII definiuje znaków z zakresu 0x00 do 0x7F. Brak innych zestawów znaków, przede wszystkim Europejskiej, zdefiniuj znaków z zakresu 0x00 do 0x7F identycznie do zestawu znaków ASCII, który również definiować rozszerzonego zestawu z 0x80 do 0xFF znaków. W związku z tym 8-bitową i pojedynczych bajtów znaków zestaw (SBCS) jest wystarczająca do reprezentowania zestawu znaków ASCII, a także zestawy znaków dla wielu języków europejskich. Jednak niektóre zestawy Nieeuropejskie znaków, takich jak japoński Kanji obejmują wiele więcej znaków niż schemat kodowania jednobajtowe reprezentują i dlatego wymaga zestawu znaków wielobajtowych (MBCS) kodowania.  

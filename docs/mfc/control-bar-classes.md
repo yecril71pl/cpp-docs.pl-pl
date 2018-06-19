@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342023"
 ---
 # <a name="control-bar-classes"></a>Klasy pasków sterowania
 Paski sterowania są dołączone do ramki okna. Zawierają one przycisków, stan okienka lub szablonu okna dialogowego. Paski sterowania swobodnego, nazywane również palety narzędzia są implementowane przez dołączenie do [CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md) obiektu.  

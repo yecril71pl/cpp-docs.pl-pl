@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344340"
 ---
 # <a name="drag-and-drop-ole"></a>Przeciąganie i upuszczanie (OLE)
 Funkcja przeciągania i upuszczania OLE jest głównie skrót do kopiowania i wklejania danych. Gdy używasz Schowka do kopiowania lub wklej dane liczbę czynności są wymagane. Wybierz dane, kliknij przycisk **Wytnij** lub **kopiowania** z **Edytuj** menu, aby przejść do pliku docelowego, okna lub aplikacji, umieść kursor w odpowiedniej lokalizacji, a następnie kliknij przycisk **Wklej** z **Edytuj** menu.  

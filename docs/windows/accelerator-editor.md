@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856420"
 ---
 # <a name="accelerator-editor"></a>Edytor klawiszy skrótów
 Tabela akceleratora jest zasób systemu Windows, który zawiera listę klawisze skrótów (znanej także jako klawisze skrótu) i identyfikatory poleceń, które są skojarzone z nimi. Program może mieć więcej niż jednej tabeli akceleratora.  

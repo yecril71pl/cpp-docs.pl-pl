@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341192"
 ---
 # <a name="containers-user-interface-issues"></a>Kontenery: kwestie dotyczące interfejsu użytkownika
 Należy dodać do aplikacji kontenera interfejsu użytkownika do odpowiedniego zarządzania elementami łączenie i osadzanie szereg funkcji. Te funkcje obejmują zmiany w strukturze menu i zdarzenia, które obsługuje aplikację. Aby uzyskać szczegółowe informacje na ich temat zobacz następujące artykuły:  

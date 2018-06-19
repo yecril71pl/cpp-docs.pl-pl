@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298330"
 ---
 # <a name="compiler-warning-level-4-c4437"></a>Kompilator C4437 ostrzegawcze (poziom 4)
 dynamic_cast z wirtualnej podstawowej "class1" do "class2" może zakończyć się niepowodzeniem w niektórych kontekstach kompilacji z opcją/vd2 lub zdefiniować "class2" z #pragma vtordisp(2) w celu  

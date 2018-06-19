@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33276974"
 ---
 # <a name="compiler-warning-level-1-c4440"></a>Kompilator C4440 ostrzegawcze (poziom 1)
 wywoływanie definicję Konwencji wywołań z "calling_convention1" do "calling_convention2" ignorowane  

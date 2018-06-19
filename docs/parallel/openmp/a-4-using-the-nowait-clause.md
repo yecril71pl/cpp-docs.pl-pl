@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689808"
 ---
 # <a name="a4---using-the-nowait-clause"></a>A.4   Użycie klauzuli nowait
 Jeśli istnieje wiele niezależnych pętli w ramach równoległego regionu, możesz użyć `nowait` klauzuli ([sekcji 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) na stronie 11) w celu uniknięcia domniemanych bariery na końcu `for` dyrektywy w następujący sposób:  

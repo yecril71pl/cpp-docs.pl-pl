@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343931"
 ---
 # <a name="destroying-the-dialog-box"></a>Niszczenie okna dialogowego
 Modalne okna dialogowe są zwykle tworzone w ramce stosu i zniszczone podczas kończenia funkcja, której zostały utworzone. Destruktor obiektu okna dialogowego jest wywoływane, gdy obiekt wykracza poza zakres.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341352"
 ---
 # <a name="creating-an-active-document-container-application"></a>Tworzenie aplikacji kontenera dokumentów aktywnych
 Najprostszym i zalecany sposób tworzenia aplikacji kontenera dokumentów aktywnych jest tworzenie aplikacji kontenera MFC EXE za pomocą Kreatora aplikacji MFC, a następnie zmodyfikować aplikację do obsługi zawieranie dokumentów aktywnych.  

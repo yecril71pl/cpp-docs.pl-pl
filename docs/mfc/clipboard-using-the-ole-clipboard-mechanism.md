@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342540"
 ---
 # <a name="clipboard-using-the-ole-clipboard-mechanism"></a>Schowek: korzystanie z mechanizmu schowka OLE
 OLE używa standardowych formatów i niektóre formaty OLE specyficzne dla transferu danych do Schowka.  

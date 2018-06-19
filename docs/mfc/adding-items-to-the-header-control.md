@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342738"
 ---
 # <a name="adding-items-to-the-header-control"></a>Dodawanie elementów do formantu nagłówka
 Po utworzeniu formantu nagłówka ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) w jej okna nadrzędnego, Dodaj tyle "elementów nagłówka" zgodnie z potrzebami: zazwyczaj jest to jeden dla kolumny.  

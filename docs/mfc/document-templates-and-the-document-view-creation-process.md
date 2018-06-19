@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348094"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>Szablony dokumentów i proces tworzenia dokumentu/widoku
 Do zarządzania złożony proces tworzenia dokumentów z ich skojarzonych widoków i okien ramowych, używane są dwie klasy szablonów dokumentów platformę: [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) dla SDI — aplikacje i [CMultiDocTemplate ](../mfc/reference/cmultidoctemplate-class.md) dla aplikacji MDI. A `CSingleDocTemplate` można utworzyć i zapisać jeden dokument jednego typu naraz. A `CMultiDocTemplate` przechowuje listę wiele otwarte dokumenty jednego typu.  

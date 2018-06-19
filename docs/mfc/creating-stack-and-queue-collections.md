@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345716"
 ---
 # <a name="creating-stack-and-queue-collections"></a>Tworzenie kolekcji stosów i kolejek
 W tym artykule opisano sposób tworzenia inne struktury danych, takich jak [stosy](#_core_stacks) i [kolejek](#_core_queues), z MFC lista klas. W przykładach użyto klasy pochodzące od `CList`, ale można użyć `CList` bezpośrednio, chyba że konieczne jest dodanie funkcji.  

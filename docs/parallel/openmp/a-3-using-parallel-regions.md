@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689899"
 ---
 # <a name="a3---using-parallel-regions"></a>A.3   Użycie regionów równoległych
 `parallel` — Dyrektywa ([2.3 sekcji](../../parallel/openmp/2-3-parallel-construct.md) na stronie 8) można użyć w programach równoległych grubą ziarna. W poniższym przykładzie każdy wątek w równoległego regionu decyduje o tym, jaka część globalnego tablicy `x` do pracy, na podstawie liczby wątków:  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690546"
 ---
 # <a name="a6---using-the-lastprivate-clause"></a>A.6   Użycie klauzuli ostatniej prywatnej
 Czasami prawidłowe wykonanie zależy od wartości przypisującej ostatnich iteracji pętli do zmiennej. Programów, które musi zawierać takie zmienne jako argumenty do `lastprivate` klauzuli ([sekcji 2.7.2.3 ostatnia](../../parallel/openmp/2-7-2-3-lastprivate.md) na stronie 27) tak, aby wartości zmiennych są takie same jak podczas pętli jest wykonywane sekwencyjnie.  

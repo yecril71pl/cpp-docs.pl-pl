@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33287218"
 ---
 # <a name="compiler-warning-level-1-c4656"></a>Kompilatora (poziom 1) ostrzeżenia C4656
 "symbol": typ danych jest nowa lub została zmieniona od czasu ostatniej kompilacji lub jest zdefiniowany w różny sposób w innym miejscu  

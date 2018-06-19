@@ -24,6 +24,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685765"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>Funkcje biblioteki czasu wykonywania języka C do sterowania wątkami
 Wszystkie programy Win32 ma co najmniej jeden wątek. Którymkolwiek wątku można utworzyć dodatkowe wątki. Wątek można szybko wykonać pracę i następnie zakończyć lub mogą pozostać aktywne przez cały okres istnienia program.  

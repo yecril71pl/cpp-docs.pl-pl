@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343557"
 ---
 # <a name="handling-commands-in-the-document"></a>Obsługa poleceń w dokumencie
 Klasy dokumentu może również obsługiwać niektórych poleceń generowane przez elementy menu, przycisków paska narzędzi lub klawiszy skrótów. Domyślnie **CDocument** obsługuje zapisywania i Zapisz jako polecenia w menu plik za pomocą serializacji. Inne polecenia, które mają wpływ na dane również mogą być obsługiwane przez funkcje Członkowskie dokumentu. Na przykład w programie bazgrołów klasy `CScribDoc` zapewnia obsługi polecenia Edytuj Wyczyść wszystko, co powoduje usunięcie wszystkich danych przechowywanych w dokumencie. Dokumenty mogą mieć mapy komunikatów, ale w przeciwieństwie do widoków, dokumentów nie może obsłużyć standardowe komunikaty systemu Windows — tylko **WM_COMMAND** wiadomości lub "polecenia".  

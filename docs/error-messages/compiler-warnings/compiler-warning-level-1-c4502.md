@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33278581"
 ---
 # <a name="compiler-warning-level-1-c4502"></a>Kompilator C4502 ostrzegawcze (poziom 1)
 "Specyfikacja powiązania" wymaga użycia słowa kluczowego "extern" i musi poprzedzać wszystkie inne specyfikatory  

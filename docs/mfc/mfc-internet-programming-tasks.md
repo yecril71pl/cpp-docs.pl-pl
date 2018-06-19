@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347249"
 ---
 # <a name="mfc-internet-programming-tasks"></a>MFC — zadania związane z programowaniem Internetu
 Ta sekcja zawiera szczegółowe informacje na temat dodawania obsługę Internetu dla poszczególnych aplikacji. Tematy zawierają dotyczące używania klas MFC do Internet Włącz istniejących aplikacji i jak dodać obsługę dokumentów aktywnych do istniejących składnika COM. Czy chcesz utworzyć dokument z aktualny giełdowych, wyniki football Pittsburgh firmy, i najnowszych temperatury w programie Microsoft Antarktyka zapewnia różne technologie, aby to zrobić za pośrednictwem Internetu.  

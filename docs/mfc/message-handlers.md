@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347633"
 ---
 # <a name="message-handlers"></a>Programy obsługi komunikatów
 W MFC dedykowana *obsługi* funkcja przetwarza każdy komunikat osobne. Funkcje elementów członkowskich klasy są funkcje obsługi wiadomości. Ta dokumentacja używa warunki *funkcji członkowskiej obsługi wiadomości*, *funkcji obsługi wiadomości*, *obsługi wiadomości*, i *obsługi*zamiennie. Niektóre rodzaje programów obsługi wiadomości są również nazywane "programy obsługi poleceń."  

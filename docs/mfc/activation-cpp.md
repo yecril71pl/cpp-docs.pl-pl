@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334486"
 ---
 # <a name="activation-c"></a>Aktywacja (C++)
 W tym artykule opisano rolę aktywacji w edycja wizualna elementy OLE. Po użytkownika osadzone elementu OLE w dokumencie kontenera, może być konieczne można użyć. Aby to zrobić, użytkownik kliknie dwukrotnie element, który uaktywnia elementu. Najczęstsze działania dotyczące aktywacji jest edytowany. Wiele bieżącego elementów OLE, gdy aktywowany do edycji, spowodować okno ramowe bieżący można zmieniać, aby odzwierciedlić te należące do aplikacji serwera, który utworzył element menu i pasków narzędzi. To zachowanie, znany jako aktywacja w miejscu, umożliwia użytkownikowi Edytuj dowolny element osadzonego wewnątrz złożonego dokumentu bez opuszczania okno dokumentu kontenera.  

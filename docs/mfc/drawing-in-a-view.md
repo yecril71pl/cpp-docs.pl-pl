@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346168"
 ---
 # <a name="drawing-in-a-view"></a>Rysowanie w widoku
 Prawie wszystkie rysowania w aplikacji występuje w widoku `OnDraw` funkcji członkowskiej, który należy zastąpić w klasie widoku. (Wyjątkiem jest myszy rysowania, omówione w [interpretowanie danych wejściowych za pośrednictwem widoku użytkownika](../mfc/interpreting-user-input-through-a-view.md).) Twoje `OnDraw` zastąpienia:  

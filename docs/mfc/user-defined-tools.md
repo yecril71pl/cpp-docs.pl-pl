@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384351"
 ---
 # <a name="user-defined-tools"></a>Narzędzia zdefiniowane przez użytkownika
 MFC obsługuje narzędzia zdefiniowane przez użytkownika. Narzędzia zdefiniowane przez użytkownika jest polecenie specjalne, które wykonuje program zewnętrznych, określone przez użytkownika. Procesu dostosowywania służy do zarządzania narzędzia zdefiniowane przez użytkownika. Jednak nie można użyć tego procesu, jeśli obiekt aplikacji nie jest pochodną [CWinAppEx klasy](../mfc/reference/cwinappex-class.md). Aby uzyskać więcej informacji dotyczących dostosowywania, zobacz [Dostosowywanie MFC](../mfc/customization-for-mfc.md).  

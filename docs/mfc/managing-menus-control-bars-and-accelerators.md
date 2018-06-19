@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345745"
 ---
 # <a name="managing-menus-control-bars-and-accelerators"></a>Zarządzanie menu, paskami sterowania i akceleratorami
 Okno ramowe zarządza aktualizowanie obiektów interfejsu użytkownika, w tym menu, przycisków paska narzędzi, pasek stanu i akceleratorami. Umożliwia także zarządzanie na pasku menu MDI aplikacji do udostępniania.  

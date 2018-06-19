@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695421"
 ---
 # <a name="a-examples"></a>A. Przykłady
 Poniżej przedstawiono przykłady konstrukcje zdefiniowane w tym dokumencie. Zauważ, że instrukcja następujące dyrektywy jest złożony tylko wtedy, gdy jest to konieczne, i instrukcji złożonej z systemem innym niż tworzone jest wcięcie względem dyrektywy przed nim.

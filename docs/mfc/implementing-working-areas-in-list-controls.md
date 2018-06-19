@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347363"
 ---
 # <a name="implementing-working-areas-in-list-controls"></a>Implementowanie obszarów roboczych w kontrolkach listy
 Domyślnie przez kontrolki listy Rozmieszcza wszystkie elementy w sposób standardowy siatki. Jednak inna metoda jest obsługiwana, praca obszary Rozmieszcza elementy listy grup prostokątny. W przypadku obrazu formantu listy, który zawiera obszary robocze, zobacz za pomocą kontrolki widok listy w zestawie Windows SDK.  

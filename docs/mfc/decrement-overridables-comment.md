@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345391"
 ---
 # <a name="-overridables-comment"></a>Komentarz // Overridables
 `// Overridables` Sekcja deklaracji klasy MFC zawiera funkcje wirtualne, które można zmienić w klasie pochodnej, jeśli trzeba zmodyfikować zachowanie klasy podstawowej. Są zwykle nazywane począwszy od "Włączone", mimo że nie jest to niezbędne. Funkcje w tym miejscu są przeznaczone do przesłonięcia i często zaimplementować lub podaj jakieś "wywołania zwrotnego" lub "Połącz". Zazwyczaj te elementy członkowskie są chronione.  

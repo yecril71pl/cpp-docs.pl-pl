@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290442"
 ---
 # <a name="compiler-warning-level-3-c4640"></a>Kompilator C4640 ostrzegawcze (poziom 3)
 "instance": budowa lokalnego obiektu statycznego nie jest bezpieczne wątkowo  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344152"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Dodawanie wielu widoków do pojedynczego dokumentu
 W aplikacji interfejsu pojedynczego dokumentu (SDI) utworzone za pomocą biblioteki Microsoft Foundation Class (MFC) każdego typu dokumentu jest skojarzona z typem jednego widoku. W niektórych przypadkach jest pożądane, aby mieć możliwość zmiany w bieżącym widoku dokumentu nowy widok.  

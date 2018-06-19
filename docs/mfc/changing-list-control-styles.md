@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344845"
 ---
 # <a name="changing-list-control-styles"></a>Zmienianie stylów kontrolki listy
 Można zmienić styl okna kontrolki listy ([CListCtrl](../mfc/reference/clistctrl-class.md)) w dowolnym momencie po jego utworzeniu. Zmieniając styl okna, możesz zmienić typ widoku, który korzysta z kontrolki. Na przykład, aby emulować Eksploratora, użytkownik może dostarczyć elementów menu lub przycisków paska narzędzi do przełączenia kontrola między różne widoki: widoku ikony, widok listy i tak dalej.  

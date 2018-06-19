@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689262"
 ---
 # <a name="how-to-use-oversubscription-to-offset-latency"></a>Porady: używanie nadsubskrypcji do przesuwania opóźnienia
 Nadsubskrypcji może zwiększyć ogólną wydajność niektórych aplikacji, które zawiera zadania, które mają wysokie zużycie opóźnienia. W tym temacie przedstawiono sposób używanie nadsubskrypcji do przesuwania opóźnienia, które jest spowodowany przez odczyt danych z połączenia sieciowego.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858490"
 ---
 # <a name="arrangement-of-controls-on-dialog-boxes"></a>Rozmieszczenie formantów w oknach dialogowych
 Edytor okien dialogowych udostępnia narzędzia układu, które wyrównywanie i rozmiaru formantów automatycznie. W przypadku większości zadań można użyć [paska narzędzi edytora okien dialogowych](../windows/showing-or-hiding-the-dialog-editor-toolbar.md). Wszystkie polecenia paska narzędzi edytora okien dialogowych są również dostępne w Format menu, a większość [klawiszy skrótów](../windows/accelerator-keys-for-the-dialog-editor.md).  

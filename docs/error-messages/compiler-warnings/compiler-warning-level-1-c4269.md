@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281794"
 ---
 # <a name="compiler-warning-level-1-c4269"></a>Kompilator C4269 ostrzegawcze (poziom 1)
 "identyfikator": "const" zainicjowano przy użyciu wygenerowanego przez kompilator domyślnego konstruktora danych zwrócił niepewne wyniki  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342683"
 ---
 # <a name="detaching-a-cwnd-from-its-hwnd"></a>Odłączanie obiektu CWnd od jego właściwości HWND
 Jeśli zachodzi konieczność obejścia obiektu -`HWND` relacji MFC zawiera inny `CWnd` funkcji członkowskiej [Detach](../mfc/reference/cwnd-class.md#detach), który rozłącza obiektem okna języka C++ z okna systemu Windows. Zapobiega to niszczenie okna systemu Windows, gdy obiekt zostanie zniszczony destruktor.  

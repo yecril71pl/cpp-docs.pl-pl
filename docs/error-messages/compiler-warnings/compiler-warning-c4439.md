@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286958"
 ---
 # <a name="compiler-warning-c4439"></a>C4439 ostrzeżenia kompilatora
 "Funkcja": definicja funkcji z zarządzanym typem w sygnaturze musi mieć konwencję wywołania __clrcall  

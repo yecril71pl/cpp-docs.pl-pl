@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858760"
 ---
 # <a name="adding-or-deleting-a-string"></a>Dodawanie lub usuwanie ciągu
 Można szybko wstawić nowe wpisy w tabeli ciągów za pomocą edytora ciągów. Nowe parametry są umieszczane na koniec tabeli i podano następny dostępny identyfikator. Następnie można edytować właściwości Identyfikatora, wartość lub podpisu w [okna właściwości](/visualstudio/ide/reference/properties-window) zgodnie z potrzebami.  

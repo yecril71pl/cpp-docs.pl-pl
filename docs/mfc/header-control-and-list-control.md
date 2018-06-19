@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346103"
 ---
 # <a name="header-control-and-list-control"></a>Kontrolka nagłówka i kontrolka listy
 W większości przypadków użyje osadzony w formancie nagłówka [CListCtrl](../mfc/reference/clistctrl-class.md) lub [clistview —](../mfc/reference/clistview-class.md) obiektu. Istnieją jednak przypadkach, gdy obiekt formantu nagłówka oddzielne jest pożądane, takich jak manipulowania danymi uporządkowane wierszy lub kolumn, w [CView](../mfc/reference/cview-class.md)-pochodzi z obiektu. W takich sytuacjach należy większą kontrolę nad wyglądem i domyślne zachowanie formantu osadzonego nagłówka.  

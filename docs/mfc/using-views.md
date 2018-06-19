@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384065"
 ---
 # <a name="using-views"></a>Używanie widoków
 Obowiązki widoku są do wyświetlenia danych dokumentu graficznie dla użytkownika i aby zaakceptować i interpretowanie danych wprowadzonych przez użytkownika jako operacje w dokumencie. Zadania w klasie widoku pisaniu są:  

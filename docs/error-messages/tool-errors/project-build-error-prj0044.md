@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324541"
 ---
 # <a name="project-build-error-prj0044"></a>Błąd PRJ0044 kompilacji projektu
 Właściwość 'Dodatkowe zależności' dla reguły niestandardowej kompilacji 'reguły', przypisanej do pliku 'Plik' jest nieprawidłowa. Właściwość zawiera 'string', co jest ewaluowane jako 'value'.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385888"
 ---
 # <a name="types-of-image-lists"></a>Typy list obrazów
 Istnieją dwa typy list obrazów ([CImageList](../mfc/reference/cimagelist-class.md)): nonmasked i maskowanego. "Listy obrazów nonmasked" składa się z mapy bitowej kolor, który zawiera jeden lub więcej obrazów. "Listy obrazów maskowanego" składa się z dwóch map bitowych taki sam rozmiar. Pierwsza to kolorów mapy bitowej, zawierający obrazy, a drugą jest monochromatyczny mapy bitowej, który zawiera szereg maski — po jednej dla każdego obrazu w pierwszym mapy bitowej.  

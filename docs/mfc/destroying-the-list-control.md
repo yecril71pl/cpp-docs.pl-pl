@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343285"
 ---
 # <a name="destroying-the-list-control"></a>Likwidowanie kontrolki listy
 Po osadzeniu Twojej [CListCtrl](../mfc/reference/clistctrl-class.md) obiekt jako element członkowski danych klasy widoku lub w oknie dialogowym zostanie zniszczony, gdy zostanie zniszczony jego właściciela. Jeśli używasz [clistview —](../mfc/reference/clistview-class.md), platformę zniszczy formantu po jego niszczy widoku.  

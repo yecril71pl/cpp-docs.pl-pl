@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343811"
 ---
 # <a name="handling-windows-messages-in-your-dialog-box"></a>Obsługa komunikatów systemu Windows w oknie dialogowym
 Okna dialogowe są systemu windows, więc może obsługiwać komunikaty systemu Windows, jeśli podasz funkcje obsługi odpowiednie. Po utworzeniu klasy okien dialogowych za pomocą Kreatora dodawania klasy z mapy pusty komunikat, Kreator dodaje do klasy. Okno właściwości, aby zamapować wszelkie komunikaty systemu Windows lub polecenia, które klasy do obsługi.  

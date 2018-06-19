@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324460"
 ---
 # <a name="project-build-error-prj0021"></a>Błąd PRJ0021 kompilacji projektu
 Narzędzie "narzędzia" właściwości "property" zawiera nieprawidłową nazwę pliku.  

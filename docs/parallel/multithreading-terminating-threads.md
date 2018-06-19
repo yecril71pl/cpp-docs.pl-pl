@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689587"
 ---
 # <a name="multithreading-terminating-threads"></a>Wielowątkowość: przerywanie wątków
 Dwie sytuacje normalne spowodować zakończenie wątku: zamyka kontrolowanie funkcji lub wątek nie może zostać wykonane. Jeśli Edytor tekstów używana przez wątek na potrzeby drukowania w tle, kontrolowanie funkcji spowoduje przerwanie normalnie, jeśli drukowanie ukończone pomyślnie. Jeśli użytkownik chce anulować drukowanie, jednak wątku drukowania w tle musi zostać zakończone przedwcześnie. W tym temacie opisano zarówno do zaimplementowania w każdej sytuacji oraz sposobu pobrać kodu zakończenia wątku po zostaje zakończone.  

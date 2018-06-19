@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343379"
 ---
 # <a name="destroying-window-objects"></a>Niszczenie obiektów okien
 Należy uważać z okien podrzędnych do zniszczenia obiektem okna języka C++, gdy zostanie zakończone w oknie. Jeśli te obiekty nie zostały zniszczone, aplikacja nie odzyska ich pamięci. Na szczęście w ramach zarządza zniszczenie okna, a także tworzenie okien ramowych, widoków i okien dialogowych. Jeśli utworzysz dodatkowe okna jest odpowiedzialny za zniszczenia.  

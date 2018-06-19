@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347925"
 ---
 # <a name="containers-advanced-features"></a>Kontenery: funkcje zaawansowane
 W tym artykule opisano kroki niezbędne do włączają opcjonalne funkcje zaawansowane do istniejących aplikacji kontenera. Te funkcje są:  

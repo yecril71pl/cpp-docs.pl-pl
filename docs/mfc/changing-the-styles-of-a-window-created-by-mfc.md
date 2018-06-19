@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345732"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>Zmienianie stylów okna utworzonego przez MFC
 W wersji z `WinMain` funkcji MFC rejestruje kilka klas standardowego okna. Ponieważ nie normalnie edytować MFC `WinMain`, że funkcja daje możliwość zmienić domyślne style okien MFC. W tym artykule opisano, jak zmienić style taka klasa preregistered okna w istniejącej aplikacji.  

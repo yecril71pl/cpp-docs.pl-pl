@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299880"
 ---
 # <a name="c-runtime-error-r6008"></a>C R6008 błąd w czasie wykonywania
 Brak wystarczającej ilości miejsca dla argumentów  

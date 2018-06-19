@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343763"
 ---
 # <a name="frame-window-styles-c"></a>Style okna ramowego (C++)
 Okien ramowych uzyskać Framework są odpowiednie dla większości programów, ale mogą uzyskać większą elastyczność przy użyciu zaawansowanych funkcji [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) i funkcje globalne MFC [AfxRegisterWndClass ](../mfc/reference/application-information-and-management.md#afxregisterwndclass). `PreCreateWindow` Funkcja członkowska jest `CWnd`.  

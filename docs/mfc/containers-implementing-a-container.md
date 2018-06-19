@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342833"
 ---
 # <a name="containers-implementing-a-container"></a>Kontenery: implementowanie kontenera
 W tym artykule przedstawiono sposób stosowania kontener i wskazaniu inne artykuły, które zapewniają bardziej szczegółowych wyjaśnień dotyczących implementowania kontenerów. Wyświetla również niektórych funkcji opcjonalnych OLE, który chcesz wdrożyć, a artykuł opisujący te funkcje.  

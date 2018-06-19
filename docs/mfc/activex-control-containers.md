@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338978"
 ---
 # <a name="activex-control-containers"></a>Kontenery kontrolek ActiveX
 Kontenera formantu ActiveX jest kontenerem, który w pełni obsługuje formantów ActiveX i włączyć je do swoich własnych systemu windows lub w oknach dialogowych. Formant ActiveX jest element oprogramowania wielokrotnego użytku, który można używać w wielu rozwoju projektów. Formanty umożliwiają użytkownika aplikacji do bazy danych programu access, monitorować dane, a różne opcje w aplikacjach. Aby uzyskać więcej informacji na formantów ActiveX, zobacz artykuł [kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md).  

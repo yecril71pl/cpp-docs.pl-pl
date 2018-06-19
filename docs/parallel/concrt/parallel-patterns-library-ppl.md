@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691544"
 ---
 # <a name="parallel-patterns-library-ppl"></a>Biblioteka równoległych wzorców (PLL)
 Biblioteka równoległych wzorców (PLL) zapewnia imperatywnych model programowania wspiera skalowalność i łatwość użycia dla tworzenie współbieżnych aplikacji. PPL opiera się na planowanie i składniki zarządzania współbieżności środowiska wykonawczego. Uruchamia poziom abstrakcji między kod aplikacji i wątków podstawowy mechanizm przez podanie ogólnych, bezpieczne algorytmy i kontenerów, które działają na danych równolegle. PPL umożliwia również tworzenie aplikacji, które zapewniając alternatyw do stanu udostępnionego.  

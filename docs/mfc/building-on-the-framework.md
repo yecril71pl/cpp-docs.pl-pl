@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341557"
 ---
 # <a name="building-on-the-framework"></a>Opieranie się na strukturze
 Twoja rola w Konfigurowanie aplikacji przy użyciu programu MFC framework jest podanie kodu źródłowego aplikacji, a także łączenie składników przez określenie, jakie komunikaty i polecenia, do których one odpowiadać. Umożliwia języka C++ i standardowej technik C++ pochodzić od tych dostarczonych przez biblioteki klas własnych klas specyficzne dla aplikacji i zastępowania i rozszerzyć zachowanie klasy podstawowej.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345684"
 ---
 # <a name="memory-management-resizable-memory-blocks"></a>Zarządzanie pamięcią: bloki pamięci o zmiennych rozmiarach
 **Nowe** i **usunąć** operatorów, opisaną w artykule [zarządzanie pamięcią: przykłady](../mfc/memory-management-examples.md), są odpowiednie w alokowanie i dealokowanie bloki pamięci o stałym rozmiarze i obiekty. Czasami może być konieczne aplikacji bloki pamięci o zmiennych rozmiarach. Należy użyć standardowe funkcje biblioteki wykonawczej języka C [— funkcja malloc](../c-runtime-library/reference/malloc.md), [realloc](../c-runtime-library/reference/realloc.md), i [wolnego](../c-runtime-library/reference/free.md) do zarządzania bloki pamięci o zmiennych rozmiarach na stosie.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343528"
 ---
 # <a name="documentview-creation"></a>Tworzenie dokumentu/widoku
 Platformę dostarcza implementacji `New` i **Otwórz** poleceń (między innymi) na **pliku** menu. Tworzenie nowego dokumentu skojarzonego widoku i ramki okna jest współpracy nakładu pracy między obiektu aplikacji, szablon dokumentu, nowo utworzonego dokumentu i okno ramowe nowo utworzony. W poniższej tabeli przedstawiono obiekty, które tworzenie co.  

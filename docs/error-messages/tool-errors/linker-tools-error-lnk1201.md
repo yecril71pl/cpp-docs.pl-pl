@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298772"
 ---
 # <a name="linker-tools-error-lnk1201"></a>Błąd narzędzi konsolidatora LNK1201
 Błąd podczas zapisywania do bazy danych programu "filename"; Sprawdź, czy brakuje miejsca na dysku, nieprawidłowa ścieżka lub niewystarczające uprawnienia  

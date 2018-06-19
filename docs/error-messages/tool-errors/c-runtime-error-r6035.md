@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299750"
 ---
 # <a name="c-runtime-error-r6035"></a>Po R6035 błąd w czasie wykonywania C
 Biblioteka programu Microsoft Visual C++ środowiska wykonawczego, po R6035 błąd - module w tej aplikacji jest podczas inicjowania pliku cookie zabezpieczeń globalnych modułu, gdy funkcja polegania na ten plik cookie zabezpieczeń jest aktywny.  Wywołanie __security_init_cookie — wcześniej.  

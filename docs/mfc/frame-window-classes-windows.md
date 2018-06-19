@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345068"
 ---
 # <a name="frame-window-classes-windows"></a>Klasy okien ramowych (Windows)
 Okna ramowe są systemu windows, które ramki aplikacji lub jej część aplikacji. Okna ramowe zwykle zawierają inne systemu windows, takich jak widoki, pasków narzędzi i paski stanu. W przypadku liczby `CMDIFrameWnd`, mogą zawierać `CMDIChildWnd` pośrednio obiektów.  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343479"
 ---
 # <a name="destroying-frame-windows"></a>Niszczenie okien ramowych
 Struktura MFC zarządza zniszczenie okna, a także tworzenie tych Windows skojarzone z framework dokumentów i widoków. Jeśli utworzysz dodatkowe okna jest odpowiedzialny za zniszczenia.  

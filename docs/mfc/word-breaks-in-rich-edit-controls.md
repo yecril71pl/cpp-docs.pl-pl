@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382963"
 ---
 # <a name="word-breaks-in-rich-edit-controls"></a>Podziały wyrazów w formantach edycji wzbogaconej
 Kontrolki edycji wzbogaconej ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) wywołuje funkcję o nazwie "word podziału procedury" Aby znaleźć przerw między wyrazami i określić, gdzie może spowodować nieprawidłowe wierszy. Formant używa tych informacji podczas wykonywania operacji zawijania słów oraz podczas przetwarzania kombinacji klawiszy CTRL + Strzałka w lewo i CTRL + Strzałka w prawo. Aplikacja może wysyłać wiadomości do kontrolki edycji wzbogaconej zastąpić procedury dzielenia wyrazów domyślne, można pobrać informacji o dzielenie wyrazów i określić, co wiersz danego znaku znajduje się.  

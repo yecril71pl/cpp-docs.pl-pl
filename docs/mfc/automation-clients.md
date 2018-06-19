@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342494"
 ---
 # <a name="automation-clients"></a>Klienci automatyzacji
 Automatyzacja umożliwia aplikacji do modyfikowania obiektów w innej aplikacji lub na uwidocznienie obiektów, więc można manipulować. Klient automatyzacji to aplikacja, który będzie obsługiwał widocznych obiektów należących do innej aplikacji. Aplikacja, która udostępnia obiekty nosi nazwę serwera automatyzacji. Klienta manipuluje obiektów aplikacji serwera, uzyskując dostęp do właściwości tych obiektów i funkcji.  

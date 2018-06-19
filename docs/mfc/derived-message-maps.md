@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342969"
 ---
 # <a name="derived-message-maps"></a>Pochodne mapy komunikatów
 Podczas komunikat obsługi, sprawdzanie komunikatów dla klasy mapy nie jest końca artykułu mapy komunikatów. Co się stanie, jeśli klasa `CMyView` (pochodną `CView`) nie ma pasującego wpisu wiadomości  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846600"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++, przenoszenie i uaktualnianie przewodnik
 Ten temat zawiera przewodnik uaktualniania kodu Visual C++. Dotyczy to również pobierania kod, aby skompilować i poprawnie uruchomić na nowszą wersją narzędzia, a także korzystanie z nowego języka i funkcje programu Visual Studio. Ten temat zawiera także informacje o Migrowanie starszych aplikacji na platformach nowoczesnych więcej.  

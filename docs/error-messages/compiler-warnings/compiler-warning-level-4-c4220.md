@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294170"
 ---
 # <a name="compiler-warning-level-4-c4220"></a>Kompilator C4220 ostrzegawcze (poziom 4)
 pozostałe parametry dopasowań VarArgs  

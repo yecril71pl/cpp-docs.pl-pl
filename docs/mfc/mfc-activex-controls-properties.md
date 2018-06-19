@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347110"
 ---
 # <a name="mfc-activex-controls-properties"></a>Kontrolki ActiveX MFC: właściwości
 Kontrolki ActiveX generowane zdarzeń do komunikowania się z jego formantu kontenera. Kontener, w zamian używa metody i właściwości do komunikowania się z formantem. Metody i właściwości są podobne w użycie i cel, odpowiednio do funkcji Członkowskich i zmiennych Członkowskich klasy C++. Właściwości są członkami danych formantu ActiveX, które są widoczne dla żadnych kontenera. Właściwości zapewniają interfejs do aplikacji, które zawierają kontrolki ActiveX, takich jak klienci automatyzacji i kontenery formantów ActiveX.  

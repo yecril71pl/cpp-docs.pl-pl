@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339030"
 ---
 # <a name="active-document-containers"></a>Kontenery dokumentów aktywnych
 Kontener dokumentów aktywnych, takich jak Microsoft Office Binder lub program Internet Explorer umożliwia pracę z dokumentami kilka typów innej aplikacji w ramach jednej ramki (zamiast wymuszania wielokrotnego do utworzenia i użycia wielu klatek aplikacji dla każdego Typ dokumentu).  

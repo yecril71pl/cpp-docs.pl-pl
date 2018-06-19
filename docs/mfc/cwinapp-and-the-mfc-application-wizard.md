@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341264"
 ---
 # <a name="cwinapp-and-the-mfc-application-wizard"></a>Klasa CWinApp i kreator aplikacji MFC
 Podczas tworzenia szkielet aplikacji, Kreator aplikacji MFC deklaruje pochodną klasy aplikacji [CWinApp](../mfc/reference/cwinapp-class.md). Kreator aplikacji MFC także generuje plik implementacji, który zawiera następujące elementy:  

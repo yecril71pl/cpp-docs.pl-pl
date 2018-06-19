@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346285"
 ---
 # <a name="command-routing"></a>Routing poleceń
 Twoje odpowiedzialność w pracy z poleceń jest ograniczona do tworzenia mapy komunikatów połączeń między polecenia i ich funkcje programu obsługi, zadań, które okno właściwości. Należy również napisać większości programy obsługi poleceń.  

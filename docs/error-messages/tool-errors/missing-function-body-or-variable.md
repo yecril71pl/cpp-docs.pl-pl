@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316728"
 ---
 # <a name="missing-function-body-or-variable"></a>Brakująca treść funkcji lub zmienna
 Z właśnie prototypu funkcji kompilator może kontynuować bez błędów, ale konsolidator nie można rozpoznać wywołania adres, ponieważ nie jest dostępna funkcja kodu ani zastrzeżonej zmiennej. Nie będą widzieć tego błędu, dopóki nie zostaną utworzone wywołanie funkcji, że konsolidator musi zostać rozpoznany.  

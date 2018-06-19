@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346916"
 ---
 # <a name="processing-notification-messages-in-month-calendar-controls"></a>Przetwarzanie komunikatów powiadomień w formantach kalendarza miesięcznego
 Jak użytkownicy korzystają z formant kalendarza miesięcznego (wybranie daty i/lub wyświetlanie inny miesiąc), formantu (`CMonthCalCtrl`) wysyła komunikaty powiadomień do nadrzędnego okna, zazwyczaj obiekt widoku lub okna dialogowego. Obsługi tych wiadomości, jeśli chcesz zrobić coś w odpowiedzi. Na przykład gdy użytkownik wybierze nowy miesiąc, aby wyświetlić, musisz podać zestaw dat, które powinny być wyróżniony.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382005"
 ---
 # <a name="using-custom-format-strings-in-a-date-and-time-picker-control"></a>Używanie niestandardowych ciągów formatu w formancie selektora dat i godzin
 Domyślnie formant selektora daty i godziny dostarcza trzy formacie typy (format każdego odpowiadającego stylu unikatowy) do wyświetlania bieżącej daty lub godziny:  

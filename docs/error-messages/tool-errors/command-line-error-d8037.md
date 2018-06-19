@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298814"
 ---
 # <a name="command-line-error-d8037"></a>Błąd D8037 wiersza polecenia
 Nie można utworzyć pliku tymczasowego il; wyczyścić katalog temp starych plików il  

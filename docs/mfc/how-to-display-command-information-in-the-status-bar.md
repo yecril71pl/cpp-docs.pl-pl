@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346048"
 ---
 # <a name="how-to-display-command-information-in-the-status-bar"></a>Porady: wyświetlanie informacji o poleceniu na pasku stanu
 Po uruchomieniu Kreatora aplikacji, aby utworzyć szkielet aplikacji może obsługiwać paska narzędzi i paska stanu. Tylko jedną opcję w Kreatorze aplikacji obsługuje zarówno. Pasek stanu jest obecny, aplikacja automatycznie zapewnia przydatne opinii jako użytkownik przesunie wskaźnik nad elementami menu. Aplikacja automatycznie wyświetla ciąg monitu w pasku stanu, gdy element menu zostanie wyróżniona. Na przykład, gdy użytkownik przesunie wskaźnik nad **Wytnij** na **Edytuj** menu na pasku stanu może być wyświetlany w obszarze wiadomości w pasku stanu "Wycina zaznaczenie i umieszcza je w Schowku". Monit ułatwia użytkownikom zrozumienie przeznaczenia elementu menu. Ta metoda działa również po kliknięciu przycisku paska narzędzi.  

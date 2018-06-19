@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344627"
 ---
 # <a name="containers-client-item-notifications"></a>Kontenery: powiadomienia dotyczące elementów klienckich
 W tym artykule omówiono funkcje możliwym do zastąpienia, które programu MFC framework wymaga aplikacji serwerowych modyfikowania elementów w dokumencie aplikacji klienta.  

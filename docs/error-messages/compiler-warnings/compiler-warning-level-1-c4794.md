@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33284631"
 ---
 # <a name="compiler-warning-level-1-c4794"></a>Kompilator C4794 ostrzegawcze (poziom 1)
 segment zmiennej magazynu lokalnego wątku "Zmienna" zmiany z "Nazwa sekcji" na ".tls$"  

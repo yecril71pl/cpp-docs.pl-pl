@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344366"
 ---
 # <a name="general-class-design-philosophy"></a>Ogólne zasady projektowania klas
 Microsoft Windows zostało zaprojektowane na długo przed popularnych aktywowano języka C++. Ponieważ tysiące aplikacje korzystają z interfejsu programowania aplikacji (API) języka C z systemem Windows, ten interfejs będzie przechowywany w najbliższej przyszłości. Każdy interfejs Windows w języku C++ w związku z tym muszą być zbudowane w oparciu procedur API języka C. Gwarantuje to, że aplikacji C++ będą mogli współistnieć z aplikacji C.  

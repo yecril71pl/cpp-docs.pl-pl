@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382518"
 ---
 # <a name="tree-control-parent-and-child-items"></a>Elementy nadrzędne i podrzędne kontrolki drzewa
 Dowolny element formantu drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) może mieć listy elementów podrzędnych, które są nazywane związane z nim elementy podrzędne. Element, który ma co najmniej jeden element podrzędny nosi nazwę elementu nadrzędnego. Element podrzędny jest wyświetlony poniżej jego element nadrzędny i tworzone jest wcięcie wskazująca, że jest podrzędny w stosunku do obiektu nadrzędnego. Element, który nie ma nadrzędnego znajduje się na szczycie hierarchii i nosi nazwę elementu głównego.  

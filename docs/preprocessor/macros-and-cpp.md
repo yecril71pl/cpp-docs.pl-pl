@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849616"
 ---
 # <a name="macros-and-c"></a>Makra i język C++
 C++ oferuje nowe możliwości, niektóre z nich ograniczyć te udostępniane przez preprocesora C ANSI. Te nowe funkcje zwiększyć bezpieczeństwo typów i przewidywalności języka:  

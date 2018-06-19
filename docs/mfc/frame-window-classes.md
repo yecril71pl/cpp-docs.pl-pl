@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347889"
 ---
 # <a name="frame-window-classes"></a>Klasy okien ramowych
 Każda aplikacja ma jeden "główne okno ramowe," okien pulpitu, zazwyczaj mający nazwę aplikacji w jego podpis. Każdy dokument ma zazwyczaj jedną "okno ramowe dokumentu." Okna ramowe dokumentów zawiera co najmniej jeden widok, który przedstawia dane dokumentu.  

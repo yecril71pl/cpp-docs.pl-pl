@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343314"
 ---
 # <a name="bottomless-rich-edit-controls"></a>Formanty edycji wzbogaconej nieograniczone od dołu
 Aplikację można zmienić rozmiar kontrolki edycji wzbogaconej ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)), który jest zawsze taki sam rozmiar jak jego zawartość. Kontrolki zaawansowanej edycji obsługuje to tak zwane "nieograniczone od dołu" funkcje wysyłając jej okna nadrzędnego [EN_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787983) komunikatu powiadomienia przy każdej zmianie rozmiaru jego zawartość.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346932"
 ---
 # <a name="methods-of-creating-a-status-bar"></a>Metody tworzenia paska stanu
 MFC oferuje dwie klasy, aby utworzyć paski stanu: [cstatusbar —](../mfc/reference/cstatusbar-class.md) i [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) (który opakowuje interfejs API sterowania wspólne systemu Windows). `CStatusBar` zawiera wszystkie funkcje stanu paska formantu wspólnego automatycznie interakcji z menu i pasków narzędzi i obsługuje wiele wymagane typowe ustawienia kontroli i struktur dla Ciebie; jednak wynikowego pliku wykonywalnego zazwyczaj będzie większy niż utworzony przy użyciu `CStatusBarCtrl`.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346903"
 ---
 # <a name="class-library-overview"></a>Przegląd biblioteki klas
 To omówienie kategoryzuje oraz opis klas w wersji 9.0 biblioteki klasy Foundation (MFC) firmy Microsoft. Struktura aplikacji stanowi klas MFC razem, — struktura aplikacji napisanych dla interfejsu API systemu Windows. Zadania programowania jest kod, który jest specyficzne dla aplikacji.  

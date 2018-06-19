@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341251"
 ---
 # <a name="commonly-added-member-functions"></a>Powszechnie dodawane funkcje członkowskie
 Jeśli Twoje okno dialogowe zawiera przyciski niż OK lub przycisk Anuluj, należy napisać funkcji Członkowskich obsługi wiadomości w odpowiada na komunikaty powiadomień dotyczących formantu, które generują klasy okien dialogowych. Na przykład zobacz [Bazgroły](../visual-cpp-samples.md) przykładowy program. Można również obsługiwać komunikaty powiadomień dotyczących formantu z innych formantów w oknie dialogowym.  

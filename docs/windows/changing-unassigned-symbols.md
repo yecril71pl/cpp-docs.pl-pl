@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33855386"
 ---
 # <a name="changing-unassigned-symbols"></a>Zmiana nieprzypisanych symboli
 W [okno dialogowe symboli zasobów](../windows/resource-symbols-dialog-box.md), edytować lub usunąć istniejące symbole, które nie są już przypisane do zasobów lub obiektu.  

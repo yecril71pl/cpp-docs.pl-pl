@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345784"
 ---
 # <a name="how-the-framework-searches-message-maps"></a>Jak struktura wyszukuje mapy komunikatów
 Struktura wyszukuje tabeli mapy komunikatów dla zgodny z wiadomości przychodzących. Po zapisywania wpisu mapy komunikatów dla każdej wiadomości, które chcesz klasy do obsługi i pisania obsług odpowiedniego struktura automatycznie wywołuje programu obsługi. W poniższych tematach opisano, wyszukiwanie mapy komunikatów:  

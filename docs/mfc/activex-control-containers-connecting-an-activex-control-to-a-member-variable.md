@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333134"
 ---
 # <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>Kontenery kontrolek ActiveX: łączenie kontrolki ActiveX ze zmienną członkowską
 Najłatwiejszym sposobem na dostęp do formantu ActiveX w swojej aplikacji kontenera formantów jest do skojarzenia z formantu ActiveX ze zmienną członkowską klasy okna dialogowego, który będzie zawierać formant.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341713"
 ---
 # <a name="declaring-message-handler-functions"></a>Deklarowanie funkcji obsługi komunikatów
 Niektóre zasady i konwencje określają nazwy funkcji obsługi wiadomości. Te są zależne od kategorii komunikatu zgodnie z opisem w następujących tematach:  

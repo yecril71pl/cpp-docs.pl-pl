@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345029"
 ---
 # <a name="initinstance-member-function"></a>InitInstance — Funkcja członkowska
 System operacyjny Windows umożliwia uruchamianie więcej niż jedną kopię lub "instance" tej samej aplikacji. `WinMain` wywołania [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) za każdym razem uruchamia nowe wystąpienie aplikacji.  

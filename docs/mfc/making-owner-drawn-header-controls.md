@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345258"
 ---
 # <a name="making-owner-drawn-header-controls"></a>Tworzenie formantów nagłówka rysowanych przez właściciela
 Można zdefiniować poszczególnych elementów formantu nagłówka ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) jako elementy rysowanych przez właściciela. Aby uzyskać więcej informacji, zobacz [kontrolki nagłówka Owner-Drawn](http://msdn.microsoft.com/library/windows/desktop/bb775238) w zestawie Windows SDK.  

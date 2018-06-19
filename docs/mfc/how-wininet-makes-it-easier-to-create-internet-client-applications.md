@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344259"
 ---
 # <a name="how-wininet-makes-it-easier-to-create-internet-client-applications"></a>Jak WinInet ułatwia tworzenie klienckich aplikacji internetowych
 Rozszerzenia internetowe Win32 lub WinInet, zapewniają dostęp do wspólnych protokołów internetowych, w tym gopher, FTP i HTTP. Przy użyciu interfejsu WinInet, można napisać klienckie aplikacje internetowe na wyższym poziomie programowania, bez konieczności WinSock, TCP/IP lub szczegóły określonych protokołów internetowych. WinInet zapewnia spójny zestaw funkcji dla wszystkich trzech protokołów, ze znanego interfejsu API systemu Win32. Ta spójności minimalizuje zmiany kodu, który należy upewnić się, jeśli podstawowy protokół ulegnie zmianie (na przykład z FTP HTTP).  

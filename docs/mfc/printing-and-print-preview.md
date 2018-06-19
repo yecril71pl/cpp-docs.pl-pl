@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346259"
 ---
 # <a name="printing-and-print-preview"></a>Drukowanie i podgląd wydruku
 MFC obsługuje drukowania i podglądu wydruku dla dokumentów programu za pomocą klasy [CView](../mfc/reference/cview-class.md). Podstawowe drukowania i podglądu wydruku, po prostu zastępują klasie widoku [OnDraw](../mfc/reference/cview-class.md#ondraw) funkcji członkowskiej, co należy zrobić, mimo to. Tej funkcji można narysować do widoku na ekranie do kontekstu urządzenia drukarki rzeczywiste drukarki, lub do kontekstu urządzenia, która symuluje drukarki na ekranie.  

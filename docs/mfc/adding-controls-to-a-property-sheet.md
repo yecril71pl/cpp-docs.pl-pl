@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341094"
 ---
 # <a name="adding-controls-to-a-property-sheet"></a>Dodawanie formantów do arkusza właściwości
 Domyślnie arkusz właściwości przydziela obszar okien na stronach właściwości, indeks i przyciski OK, Anuluj i Zastosuj. (Niemodalnego arkusza właściwości nie ma OK, Anuluj i zastosować przycisków). Można dodać inne formanty do arkusza właściwości. Na przykład można dodać okno podglądu po prawej stronie obszaru strony właściwości do wyświetlenia użytkownika, jak bieżące ustawienia będzie wyglądać czy zastosowana do obiektu zewnętrznego.  

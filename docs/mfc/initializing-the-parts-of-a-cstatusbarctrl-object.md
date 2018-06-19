@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344347"
 ---
 # <a name="initializing-the-parts-of-a-cstatusbarctrl-object"></a>Inicjowanie części obiektu CStatusBarCtrl
 Domyślnie pasek stanu wyświetla informacje o stanie przy użyciu osobnych okienka. Te okienka (określane również jako części) może zawierać ciąg tekstowy, ikony lub obu.  

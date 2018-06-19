@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347168"
 ---
 # <a name="dragging-images-from-an-image-list"></a>Przeciąganie obrazów z listy obrazów
 [Cimagelist —](../mfc/reference/cimagelist-class.md) obejmuje funkcje dla przeciąganie obrazu na ekranie. Funkcje przeciągania sprawnie, przenoszenie obrazu w kolorze i bez żadnych migania kursora. Obrazy zarówno maskowanego i zamaskowana można przeciągnąć.  

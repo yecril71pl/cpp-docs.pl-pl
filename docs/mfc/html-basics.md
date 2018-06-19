@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347220"
 ---
 # <a name="html-basics"></a>Podstawy HTML
 W większości przeglądarek mają możliwość badania źródło HTML strony, które możesz przeglądać. Po wyświetleniu źródła zobaczysz liczba tagów HTML (Hypertext markup language) ujęta w nawiasy (<>) oraz tekst.  

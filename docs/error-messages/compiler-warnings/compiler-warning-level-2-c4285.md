@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291703"
 ---
 # <a name="compiler-warning-level-2-c4285"></a>Kompilator C4285 ostrzegawcze (poziom 2)
 typem zwracanym dla "identifier::operator ->" jest rekursywny, jeśli zastosowano przy użyciu notacji infiks  

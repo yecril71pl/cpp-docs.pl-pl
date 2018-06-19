@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341401"
 ---
 # <a name="classes-related-to-rich-edit-controls"></a>Klasy związane z formantami edycji wzbogaconej
 [Cricheditview —](../mfc/reference/cricheditview-class.md), [cricheditdoc —](../mfc/reference/cricheditdoc-class.md), i [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md) klasy udostępniania funkcji elementu kontrolki zaawansowanej edycji ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) w ramach architektury dokument/widok MFC. `CRichEditView` przechowuje tekst i właściwości formatowania tekstu. `CRichEditDoc` przechowuje listę elementów klienta OLE, które znajdują się w widoku. `CRichEditCntrItem` udostępnia kontener po stronie klienta elementu OLE. Aby zmodyfikować zawartość `CRichEditView`, użyj [CRichEditView::GetRichEditCtrl](../mfc/reference/cricheditview-class.md#getricheditctrl) do dostępu do podstawowych kontrolka zaawansowanej edycji.  

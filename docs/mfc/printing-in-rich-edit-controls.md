@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347666"
 ---
 # <a name="printing-in-rich-edit-controls"></a>Drukowanie w formantach edycji wzbogaconej
 Można ustalić formantów edycji wzbogaconej ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) do renderowania dane wyjściowe dla określonego urządzenia, takie jak drukarka. Można również określić, że urządzenia wyjściowego, dla którego formantu edycji wzbogaconej formatowania tekstu.  

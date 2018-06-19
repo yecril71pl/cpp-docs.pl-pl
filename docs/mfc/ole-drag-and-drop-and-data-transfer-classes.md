@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347045"
 ---
 # <a name="ole-drag-and-drop-and-data-transfer-classes"></a>Klasy przeciągania i upuszczania oraz transferów danych OLE
 Te klasy są używane w transferów danych OLE. Umożliwiają one danych transferowanych między aplikacjami za pomocą Schowka lub przeciągania i upuszczania.  

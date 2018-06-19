@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341462"
 ---
 # <a name="allocating-and-deallocating-window-memory"></a>Alokowanie i dealokowanie pamięci okna
 Nie należy używać języka C++ **usunąć** operatora, aby zniszczyć okno ramowe lub widoku. Zamiast tego wywołać `CWnd` funkcji członkowskiej `DestroyWindow`. Okna ramowe w związku z tym powinien być przydzielony na stosie z operatorem **nowe**. Należy zachować ostrożność podczas przydzielania okien ramowych w ramce stosu lub globalnie. Powinna zostać przydzielona inne okna w ramce stosu, jeśli to możliwe.  

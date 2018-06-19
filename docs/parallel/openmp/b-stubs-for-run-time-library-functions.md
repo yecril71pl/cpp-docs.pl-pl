@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687585"
 ---
 # <a name="b-stubs-for-run-time-library-functions"></a>B. Zastępcze funkcje biblioteki wykonawczej
 Ta sekcja zawiera klas zastępczych dla funkcji biblioteki wykonawczej zdefiniowanych w Openmpc i C++ interfejsu API. Wykonywane wycinki kodu umożliwiające przenośność platform, które nie obsługują Openmpc i C++ interfejsu API. Na tych platformach programy OpenMP musi być połączony z biblioteką tych funkcji stub. Funkcje klasy zastępczej założono, że w programie OpenMP — dyrektywy są ignorowane. Tak ich emulować serial semantyki.  

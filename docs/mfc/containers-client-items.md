@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344220"
 ---
 # <a name="containers-client-items"></a>Kontenery: elementy klienckie
 W tym artykule opisano, co to są elementy klienckie i z klasy co aplikacji powinien pochodzić jego elementy klienckie.  

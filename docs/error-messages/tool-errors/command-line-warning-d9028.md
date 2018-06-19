@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301544"
 ---
 # <a name="command-line-warning-d9028"></a>Ostrzeżenie D9028 dla wiersza polecenia
 Minimalna ponowna kompilacja awaria, powrót do normalnej kompilacji  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33850186"
 ---
 # <a name="macros-cc"></a>Makra (C/C++)
 Przetwarzanie wstępne rozszerza makra w wszystkie wiersze, które nie są dyrektywy preprocesora (wiersze, które nie mają **#** jako pierwszy znak z systemem innym niż biały) i w częściach niektóre dyrektywy, które nie są pomijane w ramach kompilacja warunkowa. Dyrektywy „kompilacji warunkowej” pozwalają na pomijanie kompilacji części pliku źródłowego przez testowanie wyrażenia stałego lub identyfikatora służącego do określania bloków tekstu, które są przekazywane do kompilatora i bloków tekstu, które są usuwane z pliku źródłowego podczas przetwarzania wstępnego.  

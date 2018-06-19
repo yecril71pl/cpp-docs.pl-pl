@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343778"
 ---
 # <a name="dialog-data-exchange-and-validation"></a>Wymiana i walidacja danych w oknie dialogowym
 Wymiana danych okna dialogowego (DDX) jest to prosty sposób, aby zainicjować kontrolki w oknie dialogowym i zbieranie danych wejściowych przez użytkownika. Walidacja danych okna dialogowego (DDV) to prosty sposób można sprawdzić poprawności wprowadzania danych w oknie dialogowym. Aby skorzystać z DDX i DDV w polach okna dialogowego, należy użyć [Dodaj kreatora zmiennej elementu członkowskiego](../ide/add-member-variable-wizard.md) do tworzenia elementów członkowskich danych i ustawić ich typy danych i określić reguły sprawdzania poprawności.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341978"
 ---
 # <a name="date-and-time-picker-control-examples"></a>Przykłady formantu selektora dat i godzin
 [CMNCTRL1](../visual-cpp-samples.md) przykładzie pokazano różnych atrybutów `CDateTimeCtrl` klasy. Osobnej stronie zawiera formant selektora daty i godziny, który użytkownik można manipulować zmieniając różnych atrybutów i testowania podstawowych funkcji formantu.  

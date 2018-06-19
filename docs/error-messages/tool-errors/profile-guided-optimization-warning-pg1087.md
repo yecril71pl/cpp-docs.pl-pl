@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323150"
 ---
 # <a name="profile-guided-optimization-warning-pg1087"></a>Ostrzeżenie PG1087 dotyczące optymalizacji sterowania profilem
 Pliku PGC 'Plik' nie jest prawidłowy.  

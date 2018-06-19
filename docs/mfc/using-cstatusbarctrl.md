@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383553"
 ---
 # <a name="using-cstatusbarctrl"></a>Korzystanie z CStatusBarCtrl
 Można użyć formantu paska stanu ([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)) można utworzyć okna kontroli, które odzwierciedla różne rodzaje stanu informacji o aplikacji. Okno stanu można podzielić na części zawierające więcej niż jeden typ danych.  

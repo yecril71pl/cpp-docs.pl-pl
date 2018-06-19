@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341697"
 ---
 # <a name="creating-a-ctoolbarctrl-object"></a>Tworzenie obiektu CToolBarCtrl
 [Ctoolbarctrl —](../mfc/reference/ctoolbarctrl-class.md) obiekty zawierają szeregu struktur danych wewnętrznych — lista mapy bitowe przycisków obrazu, lista ciągów Etykieta przycisku i listę `TBBUTTON` struktury — która skojarzyć obrazu i/lub ciągu pozycji, style, stan, i Identyfikator polecenia przycisku. Każdy z elementów tych struktur danych odwołuje się liczony od zera indeks. Przed użyciem `CToolBarCtrl` obiektu, należy skonfigurować te struktury danych. Aby uzyskać listę struktury danych, zobacz [formanty paska narzędzi](controls-mfc.md) w zestawie Windows SDK. Lista ciągów można używać tylko etykiet przycisk; Nie można pobrać ciągów z paska narzędzi.  

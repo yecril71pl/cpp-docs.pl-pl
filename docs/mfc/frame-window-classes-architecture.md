@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344181"
 ---
 # <a name="frame-window-classes-architecture"></a>Klasy okien ramowych (architektura)
 Architektura dokument/Widok okien ramowych są systemu windows, które zawierają okno widoku. One również obsługiwać konieczności kontrolowania paski dołączyć do nich.  

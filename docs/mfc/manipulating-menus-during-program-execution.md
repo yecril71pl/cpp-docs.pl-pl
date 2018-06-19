@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344285"
 ---
 # <a name="manipulating-menus-during-program-execution"></a>Operowanie menu podczas wykonywania programu
 Klasa `CMenu` do manipulowania menu i elementów menu na bieżąco. `CMenu` hermetyzuje Windows `HMENU` obsługi i dostarcza funkcje elementów członkowskich do pracy z menu.  

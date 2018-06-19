@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347844"
 ---
 # <a name="dialog-boxes-in-ole"></a>Okna dialogowe w OLE
 Gdy użytkownik uruchomi aplikację z obsługą OLE, istnieją razy, gdy aplikacja potrzebuje informacje od użytkownika w celu przeprowadzenia operacji. Klasy MFC OLE zapewniają wiele okien dialogowych w celu zebrania wymaganych informacji. W tym temacie wymieniono zadania obsługiwane przez okien dialogowych OLE i klasy niezbędne do wyświetlania tych okien dialogowych. Szczegółowe informacje o okien dialogowych OLE i struktury używane w celu dostosowania ich zachowania, zobacz [odwołania MFC](../mfc/mfc-desktop-applications.md).  
