@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316338"
 ---
 # <a name="nmake-fatal-error-u1036"></a>Błąd krytyczny NMAKE U1036
 Błąd składni: zbyt wiele nazw na lewo od "="  

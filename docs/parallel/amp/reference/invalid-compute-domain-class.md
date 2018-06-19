@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33705214"
 ---
 # <a name="invalidcomputedomain-class"></a>invalid_compute_domain — Klasa
 Wyjątek zgłaszany, gdy środowisko uruchomieniowe nie może uruchomić jądra przy użyciu określonych w domenie obliczeniowej [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each) wywołania.  

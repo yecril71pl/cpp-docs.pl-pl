@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332676"
 ---
 # <a name="active-document-containment"></a>Zawieranie dokumentów aktywnych
 Zawieranie dokumentów aktywnych jest technologia, która udostępnia jeden ramki, w której do pracy z dokumentami, zamiast wymuszania wielokrotnego do utworzenia i użycia wielu klatek aplikacji dla każdego typu dokumentu. Różni się z podstawową technologię OLE w tym OLE współpracuje z obiektami osadzonego wewnątrz złożonego dokumentu, w którym mogą być aktywne tylko jednego fragmentu zawartości. W kontekście jedną ramkę z zawieranie dokumentów aktywnych aktywowania całego dokumentu (to znaczy całej aplikacji, w tym skojarzone menu, paski narzędzi i tak dalej).  

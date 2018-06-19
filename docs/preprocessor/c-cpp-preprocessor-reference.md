@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849577"
 ---
 # <a name="cc-preprocessor-reference"></a>Odwołania preprocesora języka C/C++
 *Odwołania preprocesora języka C/C++* wyjaśniono preprocesora zaimplementowanego w Microsoft C/C++. Preprocesora przeprowadza wstępne operacje na plikach C i C++, zanim zostaną one przekazane do kompilatora. Preprocesora umożliwia warunkowo skompilować kod, Wstaw pliki, określ komunikaty o błędzie kompilacji i stosowania reguł dotyczących komputera do fragmentów kodu.  

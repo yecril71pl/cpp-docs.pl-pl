@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849148"
 ---
 # <a name="grammar-summary-cc"></a>Podsumowanie gramatyki (C/C++)
 W tej sekcji opisano formalne gramatyki preprocesora. Obejmuje on składnia dyrektyw preprocesora i operatory omówione w [preprocesora](../preprocessor/preprocessor.md) i [dyrektywy Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md).  

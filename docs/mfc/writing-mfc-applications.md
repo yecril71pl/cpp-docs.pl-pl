@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385992"
 ---
 # <a name="writing-mfc-applications"></a>Pisanie aplikacji MFC
 W tym artykule opisano początkowe kroki, które należy wykonać w celu opracowywania aplikacji. Najpierw należy zdecydować, jakiego rodzaju aplikacji pisania. Niektóre opcje zostały omówione w [decyzji projektowych aplikacji](../mfc/application-design-choices.md). Czy będzie aplikacji:  

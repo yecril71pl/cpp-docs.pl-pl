@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325919"
 ---
 # <a name="active-document-classes"></a>Klasy dokumentów aktywnych
 Dokumenty aktywne mogą być wyświetlane w oknie przeglądarki sieci Web, takich jak program Internet Explorer 5.5 całego klienta lub w kontenerze aktywnego, takich jak Microsoft Office Binder, która obsługuje dokumenty aktywne.  

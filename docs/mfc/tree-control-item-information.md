@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385368"
 ---
 # <a name="tree-control-item-information"></a>Informacje o elementach kontrolki drzewa
 Kontrolki drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) oferują szereg funkcji elementów członkowskich, które pobrać informacji na temat elementów w formancie. [GetItem](../mfc/reference/ctreectrl-class.md#getitem) funkcji członkowskiej pobiera niektóre lub wszystkie dane skojarzone z elementem. Dane te mogą obejmować tekstu elementu, stan, obrazów, liczbę elementów podrzędnych i wartość zdefiniowane przez aplikację 32-bitowych danych. Istnieje również [SetItem](../mfc/reference/ctreectrl-class.md#setitem) funkcji, które mogą zostać umieszczone niektóre lub wszystkie dane skojarzone z elementem.  

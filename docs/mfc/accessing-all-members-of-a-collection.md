@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334850"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Uzyskiwanie dostępu do wszystkich elementów członkowskich kolekcji
 Klasy kolekcji tablic MFC — zarówno na podstawie szablonu, a nie — umożliwia dostęp do swoich elementów indeksów. Klasy kolekcji listy, a następnie mapować MFC — zarówno na podstawie szablonu i nie — użyj wskaźnika typu **pozycji** do opisywania określonej pozycji w kolekcji. Aby uzyskać dostęp do co najmniej jeden członkowie tych kolekcji, należy najpierw zainicjować wskaźnik położenia wielokrotnie przekazania tej pozycji do kolekcji i poproś go do zwrócenia następnego elementu. Kolekcja nie jest odpowiedzialny za konserwację stanu informacje postępie iteracji. Czy informacje są przechowywane w wskaźnik położenia. Jednak podane określonej pozycji, Kolekcja jest odpowiedzialny za zwrócenie następnego elementu.  

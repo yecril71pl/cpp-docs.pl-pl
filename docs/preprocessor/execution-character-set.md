@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33850297"
 ---
 # <a name="executioncharacterset"></a>execution_character_set
 Określa zestaw znaków wykonania używane dla literałów ciągów i znakowe. Ta dyrektywa nie jest wymagany dla literałów oznaczone prefiksem u8.  

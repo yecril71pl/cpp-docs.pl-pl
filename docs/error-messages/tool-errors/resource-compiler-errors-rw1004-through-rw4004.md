@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320108"
 ---
 # <a name="resource-compiler-errors-rw1004-through-rw4004"></a>Błędy kompilatora zasobów od RW1004 do RW4004
 Ta sekcja jest odniesieniem do błędów generowanych przez narzędzia kompilacji. Aby uzyskać pomoc dotyczącą danego komunikatu o błędzie, kliknij przycisk myszy na numer błędu w oknie danych wyjściowych i naciśnij klawisz F1 albo wpisz numer błędu w **Wyszukaj** pola w indeksie.
