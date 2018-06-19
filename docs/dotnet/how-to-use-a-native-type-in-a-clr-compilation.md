@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128410"
 ---
 # <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>Porady: używanie typu natywnego w kompilacji /clr
 Można zdefiniować typu macierzystego w **/CLR** kompilacji i użycia tego typu z macierzystego w zestawie jest nieprawidłowy. Jednak natywnych typów nie będą dostępne do użycia, z którym związane są odwołania metadanych.  

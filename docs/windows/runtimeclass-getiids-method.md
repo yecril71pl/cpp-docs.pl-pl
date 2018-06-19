@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888428"
 ---
 # <a name="runtimeclassgetiids-method"></a>RuntimeClass::GetIids — Metoda
 Pobiera tablicę, która może zawierać identyfikatory implementowane przez bieżący obiekt runtimeclass — interfejs.  

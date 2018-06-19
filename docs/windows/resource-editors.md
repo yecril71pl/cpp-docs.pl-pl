@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879597"
 ---
 # <a name="resource-editors"></a>Edytory zasobów
 Edytor zasobów to specjalne środowisko do tworzenia i modyfikowania zasobów, które znajdują się w projekcie programu Visual Studio. Techniki i interfejsów, które ułatwiają tworzenie i modyfikowanie zasobów aplikacji szybko i łatwo udostępniać edytory zasobów programu Visual Studio. Edytory zasobów umożliwiają [umożliwia wyświetlanie i edytowanie zasobów w edytorze odpowiednie](../windows/viewing-and-editing-resources-in-a-resource-editor.md) i [podglądu zasobów](../windows/previewing-resources.md).  

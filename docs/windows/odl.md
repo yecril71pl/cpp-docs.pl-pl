@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877699"
 ---
 # <a name="odl"></a>odl
 Identyfikuje interfejsu jako interfejsu język opisu obiektów (ODL). Nie wymaga kompilatora MIDL **odl** atrybutu; uznaje się tylko w celu zapewnienia zgodności z starsze .odl — pliki.  

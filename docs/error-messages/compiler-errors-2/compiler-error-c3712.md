@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33277166"
 ---
 # <a name="compiler-error-c3712"></a>C3712 błąd kompilatora
 "metoda": metoda obsługi zdarzeń musi zwracać taki sam typ jak źródło "method"  

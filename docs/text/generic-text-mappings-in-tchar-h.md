@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33867106"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Mapowania typ ogólny-tekst w pliku Tchar.h
 Aby uprościć transportowania kodu do użytku międzynarodowego [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] zapewnia biblioteki czasu wykonywania [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-określonego mapowania zwykłego tekstu dla wielu typów danych, procedury i innych obiektów. Można użyć tych mapowania, które są zdefiniowane w pliku Tchar.h do pisania kodu ogólnego, który może zostać skompilowany dla jednobajtowe, wielobajtowe, lub [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] znak zestawów, w zależności od manifestu stałą, której można zdefiniować przy użyciu `#define` instrukcji. Mapowania zwykłego tekstu są [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] rozszerzeń, które nie są [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] zgodne.  

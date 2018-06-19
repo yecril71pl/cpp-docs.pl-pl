@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880572"
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>Wypełnianie kolorem ograniczonego obszaru obrazu (Edytor obrazów dla ikon)
 Edytor obrazów zapewnia **wypełnienia** narzędzia do wypełniania żadnego ujęta obszar obrazu z bieżący kolor rysunku lub bieżący kolor tła.  

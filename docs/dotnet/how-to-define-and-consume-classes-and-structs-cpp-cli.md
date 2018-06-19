@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138998"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Porady: definiowanie oraz stosowanie klas i struktur (C++/CLI)
 W tym artykule przedstawiono sposób Definiowanie oraz stosowanie typy odwołań zdefiniowanych przez użytkownika i typów wartości w języku C + +/ CLI.  

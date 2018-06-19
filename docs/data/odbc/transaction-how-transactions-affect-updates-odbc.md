@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098007"
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>Transakcja: jak transakcje wpływają na aktualizacje (ODBC)
 Aktualizacje [źródła danych](../../data/odbc/data-source-odbc.md) są zarządzane podczas transakcji przy użyciu buforu edycji (tej samej metody poza transakcji). Elementy członkowskie danych pola rekordów zbiorczo służyć jako edycji buforu, który zawiera rekord bieżący zestaw rekordów kopię zapasową tymczasowego podczas `AddNew` lub **Edytuj**. Podczas **usunąć** operacji, bieżący rekord nie kopii zapasowej w obrębie transakcji. Aby uzyskać więcej informacji na temat buforu edycji i jak przechowywać bieżącego rekordu w aktualizacji, zobacz [zestaw rekordów: jak zestawy rekordów aktualizacji rekordów (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  

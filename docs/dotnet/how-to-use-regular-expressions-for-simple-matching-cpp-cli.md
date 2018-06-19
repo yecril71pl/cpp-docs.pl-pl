@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128283"
 ---
 # <a name="how-to-use-regular-expressions-for-simple-matching-ccli"></a>Porady: używanie wyrażeń regularnych w przypadku prostego dopasowywania (C++/CLI)
 Poniższy przykład kodu wykorzystuje wyrażeń regularnych do wyszukiwania podciągu dokładnego dopasowania. Wyszukiwanie jest wykonywane przez statycznych <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> metodę, która przyjmuje dwa ciągi jako dane wejściowe. Pierwsza to ciąg do wyszukania, a drugą jest wartość wzorca wyszukiwania.  

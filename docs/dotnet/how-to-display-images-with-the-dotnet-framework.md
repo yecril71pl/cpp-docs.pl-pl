@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128582"
 ---
 # <a name="how-to-display-images-with-the-net-framework"></a>Porady: wyświetlanie obrazów za pomocą programu .NET Framework
 Poniższy przykład kodu modyfikuje pobrać wskaźnika do obsługi zdarzeń OnPaint <xref:System.Drawing.Graphics> obiekt dla tego formularza. <xref:System.Windows.Forms.Form.OnPaint%2A> Funkcji jest przeznaczony dla aplikacji formularzy systemu Windows, najprawdopodobniej utworzone za pomocą Kreatora aplikacji Visual Studio.  

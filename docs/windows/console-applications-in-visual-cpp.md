@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870305"
 ---
 # <a name="console-applications-in-visual-c"></a>Aplikacje konsoli w programie Visual C++
 Aplikacja konsolowa akceptuje dane wejściowe i wysyła dane wyjściowe do konsoli, co jest nazywane również wiersza polecenia. Można tworzyć aplikacje konsoli wykonywać podstawowe zadania, lub do wykonywania zadań bardzo zaawansowane. Można także używać aplikacji konsoli jako Weryfikacja koncepcji pokaz funkcji, które chcesz dołączyć do aplikacji pulpitu systemu Windows lub aplikacji platformy uniwersalnej systemu Windows później. Aplikacje konsoli może komunikować się z innych aplikacji klasycznych potoków lub innych mechanizmów RPC.  

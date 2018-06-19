@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879360"
 ---
 # <a name="literal-c-component-extensions"></a>literal (C++ Component Extensions)
 Zmienna (elementu członkowskiego danych) jest oznaczony jako `literal` w **/CLR** kompilacji jest odpowiednikiem natywnego `static const` zmiennej.  

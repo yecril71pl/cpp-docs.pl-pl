@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095118"
 ---
 # <a name="work-with-odbc-and-drivers"></a>Praca z ODBC i sterownikami
 ODBC pozwala pisać aplikacje, które nie są zależne od tylko jeden system zarządzania bazami (danych DBMS). Można zapisać jedną aplikację, która może działać w wielu systemach DBMS, dla których użytkownicy mają odpowiedni sterownik ODBC specyficznych dla systemu DBMS.  

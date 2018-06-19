@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882827"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Porady: używanie systemu Windows 10 SDK w aplikacji pulpitu systemu Windows
 Po utworzeniu klasycznego projekt pulpitu systemu Windows w programie Visual Studio 2017 ją skonfigurowano domyślnie do kompilacji z wersją systemu Windows 10 SDK został zainstalowany, gdy obciążenie pulpitu C++ został zainstalowany lub ostatniej aktualizacji. Ta wersja zestawu Windows SDK jest zgodna z wszystkich najnowszych wersji systemu Windows. Jeśli chcesz przeanalizować starszej wersji zestawu SDK, można otworzyć projektu | Właściwości i wybierz jedną z dostępnych na liście rozwijanej zestawu SDK systemu Windows w wersji wersji zestawu SDK.  

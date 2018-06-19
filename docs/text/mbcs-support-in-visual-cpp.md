@@ -37,6 +37,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33865839"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Obsługa MBCS w programie Visual C++
 Uruchamianych w wersji systemu Windows z obsługą MBCS systemu programowania Visual C++ (w tym kod zintegrowanej źródła narzędzi edytora, debugera i wiersza polecenia) jest MBCS włączone, z wyjątkiem okna pamięci.  

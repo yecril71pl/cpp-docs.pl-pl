@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111448"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Klasy zestawów wierszy schematu i klasy Typedef
 Schemat jest kolekcją obiektów bazy danych, które należą do firmy lub zostały utworzone przez określonego użytkownika. Katalog może zawierać co najmniej jeden schemat, ale musi zawsze zawierać schemat o nazwie INFORMATION_SCHEMA, zawierający widoki i domen schematu informacji. Informacje o schemacie w bazie danych OLE DB są pobierane za pomocą zestawów wierszy schematu wstępnie zdefiniowane i zawiera typy, tabel, kolumn, indeksów, widoki, potwierdzeń i ograniczenia, statystyki, zestawów znaków, sortowania i domen.  

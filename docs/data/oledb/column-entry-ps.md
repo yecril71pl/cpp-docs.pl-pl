@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098055"
 ---
 # <a name="columnentryps"></a>COLUMN_ENTRY_PS
 Reprezentuje powiązanie w zestawie wierszy w kolumnie określonej w zestawie wierszy.  

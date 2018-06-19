@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878440"
 ---
 # <a name="moving-and-copying-menus-and-menu-commands"></a>Przenoszenie oraz kopiowanie menu i poleceń menu
 Można przenosić i kopiować menu i poleceń menu metodą przeciągnij i upuść lub za pomocą poleceń menu skrótów (prawym przyciskiem myszy).  

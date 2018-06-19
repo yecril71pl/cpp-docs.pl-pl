@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094767"
 ---
 # <a name="snapshot"></a>Migawka
 Migawka jest zestaw rekordów, które odzwierciedla widok statyczny danych, który istniał w momencie utworzenia migawki. Po otwarciu migawki i Przenieś do wszystkich rekordów, zestaw rekordów zawiera i ich wartości nie należy zmieniać dopóki odbudować migawki przez wywołanie metody **Requery**.  

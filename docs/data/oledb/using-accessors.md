@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105000"
 ---
 # <a name="using-accessors"></a>Korzystanie z metod dostępu
 W poniższych tematach opisano, jak ustalić, jakiego typu metody dostępu jest najlepsze dla danych aplikacji, a następnie sposób użycia różne typy dostępnych metod dostępu:  

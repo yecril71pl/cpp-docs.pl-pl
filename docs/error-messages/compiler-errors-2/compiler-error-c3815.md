@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268334"
 ---
 # <a name="compiler-error-c3815"></a>C3815 błąd kompilatora
 zwracany typ metody "get_accessor" musi odpowiadać typowi ostatniego parametru metody ustawiającej  
