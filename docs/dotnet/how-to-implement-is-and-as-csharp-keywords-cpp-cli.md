@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128621"
 ---
 # <a name="how-to-implement-is-and-as-c-keywords-ccli"></a>Porady: implementacja słów kluczowych is oraz as języka C# (C++/CLI)
 W tym temacie przedstawiono sposób wykonania funkcji `is` i `as` słowa kluczowe języka C# w programie Visual C++.  

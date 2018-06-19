@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109810"
 ---
 # <a name="user-records"></a>Rekordy użytkownika
 Aby użyć statycznej metody dostępu (czyli metody dostępu pochodzi od **CAccessor)**, Twoje konsumenta muszą mieć rekord użytkownika. Rekord użytkownika jest klasę C++, która zawiera elementy danych do obsługi danych wejściowych lub wyjściowych. OLE DB Kreator konsumenta ATL generuje rekord użytkownika dla użytkownika konsumenta. Metody można dodać do rekordu użytkownika, która ma być opcjonalne zadania, takie jak obsługa poleceń.  

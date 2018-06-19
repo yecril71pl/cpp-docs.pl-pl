@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112137"
 ---
 # <a name="declaration-of-a-clr-array"></a>Deklaracja tablicy CLR
 Składnia deklaracji, tworzenie wystąpień i Inicjowanie tablicy zarządzanej zmienił się z rozszerzeń zarządzanych dla języka C++ dla Visual C++.  

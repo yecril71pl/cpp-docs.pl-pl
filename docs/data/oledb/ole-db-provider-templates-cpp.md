@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112748"
 ---
 # <a name="ole-db-provider-templates-c"></a>Szablony dostawców OLE DB (C++)
 OLE DB jest ważną częścią strategii uniwersalnej Microsoft Data Access. Projekt OLE DB umożliwia dostęp do danych wysokiej wydajności z dowolnego źródła danych. Wszystkie dane tabelaryczne są widoczne za pośrednictwem OLE DB niezależnie od tego, czy pochodzi z bazy danych. Elastyczność zapewnia szeroką zasilania.  

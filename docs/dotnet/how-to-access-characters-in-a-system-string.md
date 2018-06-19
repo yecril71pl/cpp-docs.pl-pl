@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129752"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>Porady: dostęp do znaków w obiekcie System::String
 Dostęp można uzyskać znaki <xref:System.String> obiektu dla wywołań wysokiej wydajności w niezarządzanych funkcji, które trwają `wchar_t*` ciągów. Metoda zwraca wskaźnik wewnętrzny do pierwszego znaku <xref:System.String> obiektu. This, wskaźnik można manipulować bezpośrednio lub przypięty i przekazany do funkcji, oczekiwano zwykłego `wchar_t` ciągu.  

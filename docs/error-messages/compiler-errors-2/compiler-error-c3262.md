@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247351"
 ---
 # <a name="compiler-error-c3262"></a>C3262 błąd kompilatora
 Nieprawidłowe indeksowanie tablicy: '#' wymiar(y) określony(e) dla '#'-wymiarowej "typu tablicy"  

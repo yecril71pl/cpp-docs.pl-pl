@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33255552"
 ---
 # <a name="compiler-error-c3075"></a>C3075 błąd kompilatora
 "instance": nie można osadzić wystąpienia typu referencyjnego "type" w typie wartości  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107441"
 ---
 # <a name="fill-stlclr"></a>fill (STL/CLR)
 Przypisuje tę samą nową wartość każdemu elementowi w określonym zakresie.  

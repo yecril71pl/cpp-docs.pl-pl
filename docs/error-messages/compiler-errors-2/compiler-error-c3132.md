@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252390"
 ---
 # <a name="compiler-error-c3132"></a>C3132 błąd kompilatora
 "parametr funkcji": tablice parametrów można stosować tylko do formalnego argumentu typu "jednowymiarowej tablicy zarządzanej"  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33258101"
 ---
 # <a name="compiler-error-c2911"></a>C2911 błąd kompilatora
 "członek": nie może być zadeklarowane lub zdefiniowane w bieżącym zakresie  

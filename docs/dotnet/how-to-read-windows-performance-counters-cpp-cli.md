@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130117"
 ---
 # <a name="how-to-read-windows-performance-counters-ccli"></a>Porady: odczytywanie liczników wydajności systemu Windows (C++/CLI)
 Niektóre aplikacje i podsystemy Windows ujawniać dane wydajności za pośrednictwem wydajności systemu Windows. Te liczniki mogą uzyskać dostęp za pomocą <xref:System.Diagnostics.PerformanceCounterCategory> i <xref:System.Diagnostics.PerformanceCounter> klasy, które znajdują się w <xref:System.Diagnostics?displayProperty=fullName> przestrzeni nazw.  

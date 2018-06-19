@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138780"
 ---
 # <a name="how-to-use-arrays-in-ccli"></a>Porady: korzystanie z tablic w języku C++/interfejsie wiersza polecenia
 W tym artykule opisano sposób użycia tablic w języku C + +/ CLI.  

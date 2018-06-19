@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137266"
 ---
 # <a name="logicalor-stlclr"></a>logical_or (STL/CLR)
 Obiekt opisano klasy szablonu, że po wywołaniu zwraca wartość true tylko wtedy, gdy pierwszy argument lub drugiego testów jako true. Można go użyć Określ obiekt funkcja pod względem jego typ argumentu.  

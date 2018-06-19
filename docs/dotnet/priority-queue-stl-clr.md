@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172543"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 Klasa szablonu opisuje obiekt, który kontroluje zróżnicowanie długości uporządkowane sekwencji elementów, który ma ograniczony dostęp. Użyj karty kontenera `priority_queue` Zarządzanie kontenerem podstawowej jako priorytet kolejki.  

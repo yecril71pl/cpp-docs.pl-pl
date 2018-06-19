@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251127"
 ---
 # <a name="compiler-error-c3203"></a>C3203 błąd kompilatora
 'type': szablon klasy niespecjalizowanej klasy lub ogólny nie może służyć jako szablon lub argumentów ogólnych dla szablonu lub parametru ogólnego "param", oczekiwano typu rzeczywistego  

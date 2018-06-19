@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33285827"
 ---
 # <a name="compiler-warning-level-1-c4747"></a>Kompilator C4747 ostrzegawcze (poziom 1)
 Wywołanie zarządzanego entrypoint: kodu zarządzanego nie mogą być uruchamiane w obszarze blokady modułu ładującego, włączając punktu wejścia biblioteki DLL i wywołania osiągnięte z punktu wejścia biblioteki DLL  

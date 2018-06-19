@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111211"
 ---
 # <a name="double-thunking-c"></a>Podwójna konwersja bitowa adresów (C++)
 Podwójna konwersja bitowa adresów oznacza spadek wydajności, który może wystąpić, gdy wywołanie funkcji w wywołaniach kontekstu zarządzanych, Visual C++ zarządzane funkcji i gdzie program wykonywania wywołuje punkt wejścia natywnej funkcji w celu wywołania funkcji zarządzanych. W tym temacie omówiono, gdzie występuje podwójna konwersja bitowa adresów i jak można uniknąć, aby zwiększyć wydajność.  

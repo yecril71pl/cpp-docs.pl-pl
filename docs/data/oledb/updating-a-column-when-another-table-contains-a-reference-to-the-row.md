@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102888"
 ---
 # <a name="updating-a-column-when-another-table-contains-a-reference-to-the-row"></a>Aktualizowanie kolumny, gdy inna tabela zawiera odwołanie do wiersza
 Niektórzy dostawcy może wykryć kolumny, które w przypadku zmiany wiersza, ale nie wielu dostawców. W związku z tym aktualizowanie kolumny może spowodować błąd, gdy występuje odwołanie do wiersza, który próbujesz zaktualizować. Aby rozwiązać ten problem, Utwórz oddzielne dostępu, zawierający tylko kolumny, które chcesz zmienić. Przekazać liczbę tej metody dostępu `SetData`.  

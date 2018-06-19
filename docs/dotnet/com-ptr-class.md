@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108293"
 ---
 # <a name="comptr-class"></a>com::ptr — Klasa
 Otoka dla obiekt COM, który może być używany jako element członkowski klasy CLR.  Otoka automatyzuje również zarządzanie okresem istnienia obiektu modelu COM, zwolnienie wszystkich należących do odwołania do obiektu, gdy jego destruktora jest wywoływana. Odpowiednikiem [CComPtr klasy](../atl/reference/ccomptr-class.md).  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138522"
 ---
 # <a name="how-to-store-text-in-the-clipboard-ccli"></a>Porady: przechowywanie tekstu w schowku (C++/CLI)
 Poniższy przykład kodu wykorzystuje <xref:System.Windows.Forms.Clipboard> obiekt zdefiniowany w <xref:System.Windows.Forms> przestrzeni nazw do przechowywania ciągu. Ten obiekt zawiera dwie funkcje Członkowskie: <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> i <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>. Dane są przechowywane w Schowku, wysyłając każdy obiekt pochodzi od <xref:System.Object> do <xref:System.Windows.Forms.Clipboard.SetDataObject%2A>.  

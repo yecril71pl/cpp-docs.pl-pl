@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138681"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Hostowanie kontrolki użytkownika formularza systemu Windows jako okna dialogowego MFC
 MFC zawiera klasy szablonu [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) , dzięki czemu mogą być hostowane kontrolki użytkownika formularza systemu Windows (<xref:System.Windows.Forms.UserControl>) w oknie dialogowym MFC modalne i niemodalne. `CWinFormsDialog` pochodzi od klasy MFC [cdialog —](../mfc/reference/cdialog-class.md), więc jako modalne lub niemodalny można uruchomić okna dialogowego.  

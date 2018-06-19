@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33167840"
 ---
 # <a name="unarydelegatenoreturn-stlclr"></a>unary_delegate_noreturn (STL/CLR)
 Klasa genereic opisuje delegata jeden argument, który zwraca `void`. Możesz używać go określić delegata pod względem jego typ argumentu.  

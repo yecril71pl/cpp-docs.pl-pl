@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33167681"
 ---
 # <a name="compiler-error-c2315"></a>C2315 błąd kompilatora
 "type1": odwołanie zostało przechwycone przez "type2" w wierszu o numerze  

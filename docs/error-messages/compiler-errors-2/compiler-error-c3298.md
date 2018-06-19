@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250879"
 ---
 # <a name="compiler-error-c3298"></a>C3298 błąd kompilatora
 "constraint_1": nie można użyć "constraint_2" jako ograniczenia ponieważ "constraint_2" ma ograniczenie ref oraz "constraint_1" ma wartość ograniczenia  

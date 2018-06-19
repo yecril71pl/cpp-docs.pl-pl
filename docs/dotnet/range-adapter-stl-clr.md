@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33162328"
 ---
 # <a name="rangeadapter-stlclr"></a>range_adapter (STL/CLR)
 Klasa szablonu, która opakowuje parę Iteratory, które są używane do implementowania kilka interfejsów biblioteki klasy podstawowej (BCL). Range_adapter — służy do manipulowania zakres STL/CLR, tak jakby był on kolekcji BCL.  

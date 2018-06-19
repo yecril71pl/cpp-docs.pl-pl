@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138042"
 ---
 # <a name="how-to-use-events-in-ccli"></a>Porady: korzystanie ze zdarzeń w języku C++/interfejsie wiersza polecenia
 W tym artykule przedstawiono sposób korzystania z interfejsu, który deklaruje zdarzenia i funkcji do wywołania zdarzenia i obsługi klasy i zdarzenia, który implementuje interfejs.  

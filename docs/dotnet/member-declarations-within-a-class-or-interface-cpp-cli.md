@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135121"
 ---
 # <a name="member-declarations-within-a-class-or-interface-ccli"></a>Deklaracje członków w obrębie klasy lub interfejsu (C++/CLI)
 Deklaracja właściwości i operatory została często przerobiona z rozszerzeń zarządzanych dla języka C++ dla Visual C++, ukrywanie podstawowe szczegóły implementacji, które były dostępne w projekcie rozszerzeń zarządzanych. Zmodyfikowano również deklaracje zdarzeń.  

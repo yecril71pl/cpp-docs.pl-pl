@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137705"
 ---
 # <a name="how-to-determine-if-shutdown-has-started-ccli"></a>Porady: ustalanie, czy rozpoczęło się zamykanie systemu (C++/CLI)
 Poniższy przykład kodu pokazuje sposób określania, czy jest obecnie przerywanie aplikacji lub programu .NET Framework. Jest to przydatne w przypadku uzyskiwania dostępu do elementów statycznych w programie .NET Framework, ponieważ podczas zamykania, tych konstrukcji sfinalizowaniu przez system i nie może być niezawodnie używany. Sprawdzając <xref:System.Environment.HasShutdownStarted%2A> właściwości, można uniknąć potencjalnych błędów przez nie dostępu do tych elementów.  

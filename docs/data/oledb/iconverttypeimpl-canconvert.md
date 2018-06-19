@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099891"
 ---
 # <a name="iconverttypeimplcanconvert"></a>IConvertTypeImpl::CanConvert
 Zapewnia informacje o dostępności konwersje typów polecenia lub w zestawie wierszy.  

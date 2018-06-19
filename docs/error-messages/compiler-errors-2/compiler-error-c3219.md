@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248648"
 ---
 # <a name="compiler-error-c3219"></a>C3219 błąd kompilatora
 "param": parametr ogólny nie może zostać ograniczony przez wiele elementów niebędących interfejsami: "class"  

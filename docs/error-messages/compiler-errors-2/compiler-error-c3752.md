@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265288"
 ---
 # <a name="compiler-error-c3752"></a>C3752 błąd kompilatora
 "klasy atrybutu": nie można sklasyfikować atrybutu; "— słowo kluczowe" nie należy używać w tym kontekście  

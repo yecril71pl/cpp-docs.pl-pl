@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33241726"
 ---
 # <a name="compiler-error-c2927"></a>C2927 błąd kompilatora
 "Funkcja": szablon funkcji musi zostać wywołany z co najmniej jeden argument  

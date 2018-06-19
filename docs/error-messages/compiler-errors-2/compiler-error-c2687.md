@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233021"
 ---
 # <a name="compiler-error-c2687"></a>C2687 błąd kompilatora
 'type': deklaracji wyjątku nie może być "void" lub oznaczeniem niekompletnego typu lub wskaźnikiem lub odwołaniem do niekompletnego typu  

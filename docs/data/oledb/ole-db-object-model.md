@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111084"
 ---
 # <a name="ole-db-object-model"></a>Model obiektów OLE DB
 Model obiektów OLE DB obejmuje następujące składniki lub obiektów. Pierwsze cztery obiektów lub wymienione składniki (źródeł danych, sesji, poleceń i zestawy wierszy) umożliwiają połączenie ze źródłem danych i go wyświetlać. Rest, począwszy od metody dostępu, odnoszą się do pracy z danymi, gdy jest on wyświetlany.  

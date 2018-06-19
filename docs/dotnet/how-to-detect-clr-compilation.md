@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130775"
 ---
 # <a name="how-to-detect-clr-compilation"></a>Porady: wykrywanie kompilacji /clr
 Użyj `_MANAGED` lub `_M_CEE` makra, aby zobaczyć, jeśli moduł został skompilowany przy **/CLR**. Aby uzyskać więcej informacji, zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md).  

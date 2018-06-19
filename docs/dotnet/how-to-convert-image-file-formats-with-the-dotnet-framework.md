@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130061"
 ---
 # <a name="how-to-convert-image-file-formats-with-the-net-framework"></a>Porady: konwertowanie formatów plików obrazów za pomocą programu .NET Framework
 Poniższy przykład kodu pokazuje <xref:System.Drawing.Image?displayProperty=fullName> klasy i <xref:System.Drawing.Imaging.ImageFormat?displayProperty=fullName> wyliczenie używany do konwersji i zapisywania plików obrazów. Poniższy kod ładuje obraz z pliku jpg i zapisuje go w formatach plików GIF jak również bmp.  

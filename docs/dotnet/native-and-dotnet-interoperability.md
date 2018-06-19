@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134094"
 ---
 # <a name="native-and-net-interoperability"></a>Współdziałanie natywne i .NET
 Visual C++ obsługuje funkcje współdziałanie, które umożliwiają zarządzane i niezarządzane konstrukcje współistnieć i współpracować w ramach tego samego zestawu, a nawet w tym samym pliku. Mały podzbiór tej funkcji, takich jak P/Invoke, jest obsługiwana przez innych języków .NET, ale większość obsługi współdziałania udostępnione przez Visual C++ nie jest dostępna w innych językach.  

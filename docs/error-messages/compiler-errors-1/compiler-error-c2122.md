@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33166182"
 ---
 # <a name="compiler-error-c2122"></a>C2122 błąd kompilatora
 "identyfikator": parametr prototypu w liście nazw jest niedozwolony  

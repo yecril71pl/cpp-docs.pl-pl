@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249506"
 ---
 # <a name="compiler-error-c3387"></a>C3387 błąd kompilatora
 "członek": __declspec(dllexport) /\__declspec(dllimport) nie można zastosować do elementu członkowskiego z zarządzanego lub typu WinRT  

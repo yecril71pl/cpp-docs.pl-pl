@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33240887"
 ---
 # <a name="compiler-error-c2412"></a>C2412 błąd kompilatora
 "etykieta": bez uwzględniania wielkości liter Etykieta zdefiniowana ponownie  

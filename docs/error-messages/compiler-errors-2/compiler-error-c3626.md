@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266171"
 ---
 # <a name="compiler-error-c3626"></a>C3626 błąd kompilatora
 "— słowo kluczowe": słowo kluczowe "__event" można używać tylko interfejsów modelu COM, funkcji Członkowskich i elementy członkowskie danych, które są wskaźnikami do delegatów  

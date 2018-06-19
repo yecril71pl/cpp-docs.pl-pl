@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248854"
 ---
 # <a name="compiler-error-c3136"></a>C3136 błąd kompilatora
 "interface": interfejs COM może tylko dziedziczyć z innego interfejsu COM, "interface" nie jest interfejsem COM  

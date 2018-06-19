@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129619"
 ---
 # <a name="how-to-use-regular-expressions-to-validate-data-formatting-ccli"></a>Porady: używanie wyrażeń regularnych do walidacji formatowania danych (C++/CLI)
 Poniższy przykład kodu pokazuje użycie wyrażenia regularnego, aby upewnić się, formatowania ciągu. W poniższym przykładzie kodu powinien on zawierać prawidłowy numer telefonu. Poniższy przykład kodu wykorzystuje ciąg "\d{3}-\d{3}-\d{4}" Aby wskazać, że każde pole reprezentuje prawidłowy numer telefonu. W ciągu "d" oznacza cyfrę, a argument po każdym "d" wskazuje liczbę miejsc po przecinku, które muszą być obecne. W takim przypadku numer będzie musiał być oddzielone kreskami.  

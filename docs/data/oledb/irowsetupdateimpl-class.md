@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110448"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl — Klasa
 Szablony OLE DB stosowania [IRowsetUpdate](https://msdn.microsoft.com/en-us/library/ms714401.aspx) interfejsu.  

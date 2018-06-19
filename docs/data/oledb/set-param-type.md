@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107418"
 ---
 # <a name="setparamtype"></a>SET_PARAM_TYPE
 Określa `COLUMN_ENTRY` makra, które należy wykonać `SET_PARAM_TYPE` makro danych wejściowych, wyjściowych lub wejścia/wyjścia.  

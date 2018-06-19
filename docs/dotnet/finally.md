@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111474"
 ---
 # <a name="finally"></a>finally
 Oprócz `try` i `catch` klauzule, obsługa obsługuje wyjątków CLR `finally` klauzuli. Semantyka są takie same jak `__finally` block (SEH) do obsługi wyjątków strukturalnych. A `__finally` bloku można wykonać `try` lub `catch` bloku.  

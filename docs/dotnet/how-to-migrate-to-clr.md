@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138443"
 ---
 # <a name="how-to-migrate-to-clr"></a>Porady: migracja do /clr
 W tym temacie opisano problemy, które wystąpić podczas kompilowania kodu natywnego z **/CLR** (zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md) Aby uzyskać więcej informacji). **/ CLR** umożliwia moduł Visual C++ do wywołania i można wywołać z zestawów platformy .NET, zachowując zgodność z modułami niezarządzane. Zobacz [zestawy mieszane (natywne i zarządzane)](../dotnet/mixed-native-and-managed-assemblies.md) i [natywne i .NET współdziałanie](../dotnet/native-and-dotnet-interoperability.md) uzyskać więcej informacji o zaletach kompilowania przy użyciu **/CLR**.  

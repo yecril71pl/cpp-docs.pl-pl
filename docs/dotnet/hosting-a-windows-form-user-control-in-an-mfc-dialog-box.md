@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129440"
 ---
 # <a name="hosting-a-windows-form-user-control-in-an-mfc-dialog-box"></a>Hostowanie kontrolki użytkownika formularza systemu Windows w oknie dialogowym MFC
 MFC obsługuje formantu formularzy systemu Windows jako specjalny rodzaj formantu ActiveX i komunikuje się za pomocą formantu przy użyciu interfejsów ActiveX i właściwości i metody <xref:System.Windows.Forms.Control> klasy. Zalecane jest użycie .NET Framework właściwości i metod do działania w formancie.  

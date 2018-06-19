@@ -260,6 +260,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283536"
 ---
 # <a name="compiler-errors-c3500-through-c3999"></a>C3500 błędy kompilatora za pośrednictwem C3999
 

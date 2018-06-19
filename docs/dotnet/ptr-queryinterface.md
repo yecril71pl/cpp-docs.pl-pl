@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33160969"
 ---
 # <a name="ptrqueryinterface"></a>ptr::QueryInterface
 Wysyła kwerendy należących do obiektu COM dla interfejsu i dołącza wynik do innego `com::ptr`.  

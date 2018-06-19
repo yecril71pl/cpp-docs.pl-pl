@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129814"
 ---
 # <a name="lowerbound-stlclr"></a>lower_bound (STL/CLR)
 Znajduje położenie pierwszego elementu w uporządkowanego, który ma wartość mniejszą lub równoważnego określoną wartość, której można określić kryterium porządkowania binarne predykat.  

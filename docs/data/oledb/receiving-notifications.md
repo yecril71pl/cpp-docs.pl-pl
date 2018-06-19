@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112319"
 ---
 # <a name="receiving-notifications"></a>Odbieranie powiadomień
 OLE DB zawiera interfejsy odbieranie powiadomień w przypadku wystąpienia zdarzeń. Te ustawienia zostały opisane w [OLE DB obiektu powiadomienia](https://msdn.microsoft.com/en-us/library/ms725406.aspx) w *OLE DB Podręcznik programisty*. Ustawienia te zdarzenia używa standardowe mechanizmu COM w punktu połączenia. Na przykład obiekt ATL, który chce pobierać za pośrednictwem zdarzenia `IRowsetNotify` implementuje `IRowsetNotify` interfejsu przez dodanie `IRowsetNotify` do listy Klasa pochodna i ujawnienie go za pośrednictwem **com_interface_entry —** makra.  

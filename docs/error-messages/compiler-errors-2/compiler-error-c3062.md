@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250569"
 ---
 # <a name="compiler-error-c3062"></a>C3062 błąd kompilatora
 Instrukcja "enum": moduł wyliczający wymaga wartości, ponieważ podstawowy typ to 'type'  

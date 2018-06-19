@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33196938"
 ---
 # <a name="compiler-error-c2432"></a>C2432 błąd kompilatora
 niedozwolone odwołanie do 16-bitowych danych w polu "identyfikator"  

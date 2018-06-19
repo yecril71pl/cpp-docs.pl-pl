@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172641"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp losowy. Użyj kontenera `vector` do zarządzania sekwencję elementów jako ciągłego bloku pamięci masowej. Blok jest implementowany jako tablicę, która rozwoju na żądanie.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164053"
 ---
 # <a name="performance-considerations-for-interop-c"></a>Zagadnienia dotyczące wydajności związane z międzyoperacyjnością (C++)
 Ten temat zawiera wskazówki dotyczące zmniejszenia wpływu zarządzanych/niezarządzanych międzyoperacyjnego przejścia na wydajności w czasie wykonywania.  

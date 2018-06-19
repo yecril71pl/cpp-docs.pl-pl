@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33113190"
 ---
 # <a name="exceptions-in-ccli"></a>Wyjątki w języku C++/CLI
 Artykuły w tej sekcji dokumentacji opisano obsługi wyjątków w języku C + +/ CLI i jak różni się od standardowego wyjątków.  

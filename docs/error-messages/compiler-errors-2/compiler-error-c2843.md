@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247544"
 ---
 # <a name="compiler-error-c2843"></a>C2843 błąd kompilatora
 "członek": nie można przyjąć adresu elementu członkowskiego danych niestatycznych lub metoda zarządzanego lub typu WinRT  

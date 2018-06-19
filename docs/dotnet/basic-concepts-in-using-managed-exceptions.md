@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33114487"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>Podstawowe pojęcia związane z używaniem wyjątków zarządzanych
 W tym temacie omówiono obsługi wyjątków w zarządzanych aplikacji. Oznacza to, że aplikacja, która została skompilowana z **/CLR** — opcja kompilatora.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137137"
 ---
 # <a name="overview-of-marshaling-in-c"></a>Omówienie marshalingu w języku C++
 W trybie mieszanym możesz czasami należy kierować danych między typami natywnych i zarządzanych. [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] wprowadzono biblioteki marshalingu w celu organizowania i przekonwertować danych w prosty sposób.  

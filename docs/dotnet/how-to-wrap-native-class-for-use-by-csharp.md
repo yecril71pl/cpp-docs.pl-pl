@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128696"
 ---
 # <a name="how-to-wrap-native-class-for-use-by-c"></a>Porady: opakowywanie klasy natywnej do użycia w języku C#
 Ten przykład przedstawia sposób zawijania klasę natywnych języka C++, więc może być zużyte przez kod w języku C# lub innego języka .NET.  

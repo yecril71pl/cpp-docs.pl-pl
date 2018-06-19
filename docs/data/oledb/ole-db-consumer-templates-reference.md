@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112059"
 ---
 # <a name="ole-db-consumer-templates-reference"></a>Szablony konsumentów OLE DB — kompendium
 Szablony OLE DB konsumenta zawiera następujące klasy. Materiałów referencyjnych zawiera także tematy na [makra dla OLE DB szablonów konsumentów](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257850"
 ---
 # <a name="compiler-error-c3364"></a>C3364 błąd kompilatora
 "delegowanie": Konstruktor delegata: argument musi być wskaźnikiem do funkcji członkowskiej klasy zarządzanej klasy lub funkcji globalnych  

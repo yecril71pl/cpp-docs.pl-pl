@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127984"
 ---
 # <a name="how-to-test-for-equality-ccli"></a>Porady: testowanie równości (C++/CLI)
 W poniższym przykładzie testu równości, która używa rozszerzeń zarządzanych dla języka C++ jest oparta na uchwytów zapoznaj się.  

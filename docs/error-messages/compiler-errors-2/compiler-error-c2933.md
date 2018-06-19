@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247937"
 ---
 # <a name="compiler-error-c2933"></a>C2933 błąd kompilatora
 "class": typ klasy identyfikator ponownie zdefiniować jako element członkowski typedef "identyfikatora"  

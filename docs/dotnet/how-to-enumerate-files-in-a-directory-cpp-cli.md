@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127893"
 ---
 # <a name="how-to-enumerate-files-in-a-directory-ccli"></a>Porady: wyliczanie plików w katalogu (C++/CLI)
 Poniższy przykład kodu pokazuje, jak można pobrać listy plików w katalogu. Ponadto są wyliczane podkatalogów. Poniższy przykład kodu wykorzystuje <xref:System.IO.Directory.GetFiles%2A> <xref:System.IO.Directory.GetFiles%2A> i <xref:System.IO.Directory.GetDirectories%2A> metody, aby wyświetlić zawartość katalogu C:\Windows.  

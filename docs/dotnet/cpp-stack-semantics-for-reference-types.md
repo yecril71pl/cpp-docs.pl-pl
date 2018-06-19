@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111357"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>Semantyka stosu języka C++ dla typów odwołań
 Przed Visual C++ 2005, typu odwołania tylko można utworzyć wystąpienia przy użyciu `new` sterty zbierane operatora, który utworzył obiekt na odzyskiwanie. Teraz można jednak utworzyć wystąpienia typu referencyjnego przy użyciu takiej samej składni, który ma zostać użyty do utworzenia wystąpienia typu natywnego na stosie. Tak, nie trzeba używać [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) do utworzenia obiektu typu referencyjnego. Gdy obiekt poza zakresem, kompilator wywołań destruktor obiektu i.  

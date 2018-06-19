@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112423"
 ---
 # <a name="ole-db-provider-templates-reference"></a>Szablony dostawców OLE DB — kompendium
 Klasy i interfejsy dla OLE DB szablonów dostawców można podzielić na następujące kategorie. Materiałów referencyjnych zawiera także informacje o [makra dla szablony OLE DB Provider](../../data/oledb/macros-for-ole-db-provider-templates.md).  

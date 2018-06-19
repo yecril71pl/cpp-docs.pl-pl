@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268895"
 ---
 # <a name="compiler-error-c3824"></a>C3824 błąd kompilatora
 "członek": ten typ nie może występować w tym kontekście (parametr funkcji, zwracany typ lub statyczny element członkowski)  

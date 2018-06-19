@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168090"
 ---
 # <a name="compiler-error-c2163"></a>C2163 błąd kompilatora
 "Funkcja": nie jest dostępna jako funkcja wewnętrzna  

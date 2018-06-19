@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103515"
 ---
 # <a name="avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr"></a>Unikanie wyjątków przy zamykaniu środowiska CLR w przypadku konsumowania obiektów COM skompilowanych przy użyciu opcji /clr
 Gdy środowisko uruchomieniowe języka wspólnego (CLR) wprowadza Tryb zamykania, funkcje natywne mają ograniczony dostęp do usług CLR. Podczas próby wywołać wersji dla obiekt COM skompilowane z **/CLR**, CLR przejścia do kodu natywnego, a następnie przejść z powrotem do kodu zarządzanego do obsługi wywołania IUnknown::Release (który jest zdefiniowany w zarządzanym kodzie). Środowisko CLR zapobiega wywołania do kodu zarządzanego, ponieważ jest w trybie zamykania.  
