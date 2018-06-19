@@ -47,6 +47,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32404031"
 ---
 # <a name="mbccpys-mbccpysl"></a>_mbccpy_s, _mbccpy_s_l
 
@@ -109,7 +110,7 @@ Zero w przypadku powodzenia; błąd o kodzie błędu. Jeśli *src* lub *dest* je
 
 ## <a name="remarks"></a>Uwagi
 
-**_Mbccpy_s —** funkcja kopiuje znaków wielobajtowych jednego z *src* do *dest*. Jeśli *src* nie wskazuje bajtu znaków wielobajtowych określone przez wywołanie niejawne [_ismbblead —](ismbblead-ismbblead-l.md), następnie jednobajtowych który *src* jest kopiowany punkty. Jeśli *src* punktów bajtu, ale następny bajt jest 0 i w związku z tym nieprawidłowe, a następnie 0 jest kopiowany do *dest*, **errno** ustawiono **eilseq —**i funkcja zwraca **eilseq —**.
+**_Mbccpy_s —** funkcja kopiuje znaków wielobajtowych jednego z *src* do *dest*. Jeśli *src* nie wskazuje bajtu znaków wielobajtowych określone przez wywołanie niejawne [_ismbblead —](ismbblead-ismbblead-l.md), następnie jednobajtowych który *src* jest kopiowany punkty. Jeśli *src* punktów bajtu, ale następny bajt jest 0 i w związku z tym nieprawidłowe, a następnie 0 jest kopiowany do *dest*, **errno** ustawiono **eilseq —** i funkcja zwraca **eilseq —**.
 
 **_mbccpy_s —** nie dołączał terminatorem null, ale jeśli *src* wskazuje znak null, a następnie tej wartości null jest kopiowany do *dest* (jest to po prostu regularnych kopii jednobajtowe).
 

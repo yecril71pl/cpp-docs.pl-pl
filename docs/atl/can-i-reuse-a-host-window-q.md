@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353708"
 ---
 # <a name="can-i-reuse-a-host-window"></a>Czy można ponownie użyć okno hosta?
 Nie zaleca się ponowne użycie hosta z systemem windows. Aby zapewnić niezawodność kodu, powinien powiązanie okres istnienia okna hosta przez cały czas trwania jeden formant.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054344"
 ---
 # <a name="ml-nonfatal-error-a2054"></a>Błąd niekrytyczny ML A2054
 **wymuszone błąd: wartość nie jest równa 0**  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356344"
 ---
 # <a name="implementing-ccomobject-ccomaggobject-and-ccompolyobject"></a>Implementowanie element CComObject, CComAggObject i CComPolyObject
 Klasy szablonów [element CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), i [CComPolyObject](../atl/reference/ccompolyobject-class.md) są zawsze najdalszych pochodnych klas w łańcuch dziedziczenia. Ich odpowiedzialność za obsługę wszystkich metod **IUnknown**: `QueryInterface`, `AddRef`, i **wersji**. Ponadto `CComAggObject` i `CComPolyObject` (jeśli jest używane dla obiektów zagregowane) podaj liczenie odwołań w specjalne i `QueryInterface` semantyki wymagane wewnętrzny nieznany.  

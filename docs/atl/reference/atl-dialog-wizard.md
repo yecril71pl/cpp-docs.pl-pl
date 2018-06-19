@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358009"
 ---
 # <a name="atl-dialog-wizard"></a>Kreator okna dialogowego ATL
 Ten kreator wstawia do projektu obiekt okno dialogowe ATL, pochodzący od [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md). Okno dialogowe pochodną `CAxDialogImpl` może obsługiwać formantów ActiveX.  

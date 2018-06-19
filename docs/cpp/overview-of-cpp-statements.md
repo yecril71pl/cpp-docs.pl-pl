@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421750"
 ---
 # <a name="overview-of-c-statements"></a>Przegląd instrukcji C++
 Instrukcje C++ są wykonywane sekwencyjnie, z wyjątkiem przypadków, gdy instrukcja wyrażenia, instrukcja zaznaczenia, instrukcji iteracji lub instrukcji skok specjalnie modyfikuje tej sekwencji.  

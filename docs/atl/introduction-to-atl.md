@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355807"
 ---
 # <a name="introduction-to-atl"></a>Wprowadzenie do ATL
 ATL jest biblioteki Active Template Library, zbiór C++ na podstawie szablonu klasy, z którego można łatwo utworzyć małe, szybko obiektów składnika modelu COM (Object). Ma specjalną obsługę dla klucza funkcje COM w tym: podstawowa implementacje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509), [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364), [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720), i `IDispatch`; podwójne interfejsy; interfejsy modułu wyliczającego standardowe COM; punkty połączenia; interfejsy oderwania; i formantów ActiveX.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355036"
 ---
 # <a name="modifying-the-atl-project"></a>Modyfikowanie Projekt ATL
 W tym momencie projektu formantu złożonego implementuje niezbędnych obiektów dla formantu złożonego. Następnym krokiem jest dodać wszystkie formanty, że złożonych kontrolek będzie zawierać i obsługiwać wszelkie niezbędne zdarzenia.  

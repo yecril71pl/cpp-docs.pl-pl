@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32053304"
 ---
 # <a name="arm-assembler-directives"></a>Dyrektywy ARM dotycząca asemblera
 W większości przypadków asemblera Microsoft ARM wykorzystuje język asemblera ARM, które opisano w rozdziale 7 [przewodnik narzędzia asemblera ARM](http://go.microsoft.com/fwlink/p/?linkid=246102). Jednak niektóre dyrektywy zestawu implementacje firmy Microsoft różnią się od dyrektywy zestawów ARM. W tym artykule opisano różnice.  

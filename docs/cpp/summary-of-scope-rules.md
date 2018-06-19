@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423873"
 ---
 # <a name="summary-of-scope-rules"></a>Podsumowanie reguł zakresu
 Użycie nazwy musi być jednoznaczne w jego zakresie (do punktu, w której jest określana przeładowanie). Jeśli nazwa oznacza funkcję, funkcja musi być jednoznaczne względem liczba i typ parametrów. Jeśli nazwa pozostanie jednoznaczne, [dostęp do elementu członkowskiego](../cpp/member-access-control-cpp.md) reguły są stosowane.  

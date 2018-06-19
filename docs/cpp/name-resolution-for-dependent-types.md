@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419914"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Rozpoznawanie nazwy dla typów zależnych
 Użyj **typename** dla nazwy kwalifikowane w definicji szablonu kompilator stwierdzić, że podana nazwa kwalifikowana identyfikuje typ. Aby uzyskać więcej informacji, zobacz [typename](../cpp/typename.md).  

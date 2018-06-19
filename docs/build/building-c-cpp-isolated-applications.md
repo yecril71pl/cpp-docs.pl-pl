@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360152"
 ---
 # <a name="building-cc-isolated-applications"></a>Kompilowanie izolowanych kompilacji C/C++
 Izolowanych aplikacji zależy tylko zestawy side-by-side i wiąże z jego zależności za pomocą manifestu. Nie jest wymagane dla aplikacji pełni izolowanym, aby działać poprawnie w systemie Windows. jednak przez inwestowanie w tworzenie aplikacji pełni samodzielnie, możesz zapisać czasu Jeśli potrzebne do obsługi aplikacji w przyszłości. Aby uzyskać więcej informacji o zaletach tworzenie aplikacji pełni samodzielnie, zobacz [aplikacje izolowane](http://msdn.microsoft.com/library/aa375190).  

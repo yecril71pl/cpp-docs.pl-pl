@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414786"
 ---
 # <a name="character-sets"></a>Zestawy znaków
 Tekst program w języku C++ są przechowywane w plikach źródłowych, korzystających z kodowania znaków określonego. C++ standard określa zestaw znaków źródła podstawowe dla plików źródłowych i zestaw znaków wykonania podstawowych dla skompilowanych plików. Visual C++ pozwala dodatkowy zestaw znaków specyficzne dla ustawień regionalnych do użycia w plikach źródłowych i skompilowane pliki.  

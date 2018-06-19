@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410804"
 ---
 # <a name="floating-point-coprocessor-and-calling-conventions"></a>Koprocesor zmiennoprzecinkowy i konwencje wywoływania
 Podczas pisania zestawu procedury dla wartość zmiennoprzecinkowa punktu Koprocesor, należy zachować wartość zmiennoprzecinkowa punktu słowa formantu i wyczyścić Koprocesor stosu, chyba że zwróconego **float** lub **podwójne** wartość (która funkcja powinna zwrócić w ST(0)).  

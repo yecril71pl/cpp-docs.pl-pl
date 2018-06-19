@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421951"
 ---
 # <a name="using-structured-exception-handling-with-c"></a>Korzystanie z obsługi wyjątków strukturalnych za pomocą języka C++
 Obsługa wyjątków strukturalnych opisane w następujących artykułach działa zarówno C i C++ plików źródłowych. Jednak nie są specjalnie zaprojektowane dla języka C++ i nie jest zalecane. Można zapewnić, że kod będzie bardziej przenośny przy użyciu obsługi wyjątków C++. Ponadto obsługa mechanizmu wyjątków C++ jest bardziej elastyczne i, w którym może obsłużyć wyjątki dowolnego typu.  

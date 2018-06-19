@@ -54,6 +54,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415585"
 ---
 # <a name="strerrors-strerrors-wcserrors-wcserrors"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 
@@ -147,7 +148,7 @@ Te funkcje obcięcia komunikat o błędzie, jeśli jego długość przekracza *n
 
 Numer błędu **_strerror_s —** jest przechowywana w zmiennej [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Komunikaty o błędach systemu są dostępne za pośrednictwem zmiennej [_sys_errlist —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), która jest tablicę komunikatów uporządkowanych według numer błędu. **_strerror_s —** uzyskuje dostęp do odpowiedniej komunikat przy użyciu **errno** wartość jako indeks do zmiennej **_sys_errlist —**. Wartość zmiennej [_sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) jest zdefiniowany jako maksymalną liczbę elementów w **_sys_errlist —** tablicy. Aby uzyskać dokładne wyniki, należy wywołać **_strerror_s —** natychmiast po procedury biblioteki zwraca błąd. W przeciwnym razie kolejne wywołania **strerror_s —** lub **_strerror_s —** mogą zastąpić **errno** wartości.
 
-**_wcserror_s —** i **__wcserror_s —** wersji znaków dwubajtowych **strerror_s —** i **_strerror_s —**odpowiednio.
+**_wcserror_s —** i **__wcserror_s —** wersji znaków dwubajtowych **strerror_s —** i **_strerror_s —** odpowiednio.
 
 Te funkcje walidację ich parametrów. Jeśli bufor jest **NULL** lub jeśli parametr rozmiaru jest równa 0, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli jest dozwolone wykonywanie, aby kontynuować, funkcje zwracają **einval —** i ustaw **errno** do **einval —**.
 

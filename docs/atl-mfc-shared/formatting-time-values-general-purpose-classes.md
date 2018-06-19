@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354658"
 ---
 # <a name="formatting-time-values-general-purpose-classes"></a>Formatowania wartości czasu: Klasy ogólnego przeznaczenia
 Poniższa procedura przedstawia sposób formatowania wartości czasu.  

@@ -48,6 +48,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32404259"
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd, _wgetdcwd
 
@@ -78,7 +79,7 @@ Jeśli określony dysk nie jest dostępny, lub typ dysku (na przykład wymienneg
 *buffer*<br/>
 Lokalizacja magazynu dla ścieżki lub **NULL**.
 
-Jeśli **NULL** jest określony, ta funkcja przydziela buforu z co najmniej *maxlen* rozmiarze przy użyciu **— funkcja malloc**i wartość zwracaną **_getdcwd —**wskaźnik do przydzielonego buforu. Bufor zwolniona, wywołując **wolnego** i przekazanie jej przez wskaźnik.
+Jeśli **NULL** jest określony, ta funkcja przydziela buforu z co najmniej *maxlen* rozmiarze przy użyciu **— funkcja malloc**i wartość zwracaną **_getdcwd —** wskaźnik do przydzielonego buforu. Bufor zwolniona, wywołując **wolnego** i przekazanie jej przez wskaźnik.
 
 *maxlen*<br/>
 Niezerowe dodatnią liczbą całkowitą, która określa maksymalną długość ścieżki w znakach: **char** dla **_getdcwd —** i **wchar_t** dla **_wgetdcwd —**.

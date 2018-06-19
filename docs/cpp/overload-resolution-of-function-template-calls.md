@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420031"
 ---
 # <a name="overload-resolution-of-function-template-calls"></a>Rozpoznawanie przeciążenia wywołań szablonów funkcji
 Szablon funkcji można przeciążyć funkcji nieszablonu o takiej samej nazwie. W tym scenariuszu wywołania funkcji są rozpoznawane przy pierwszym przy użyciu Wnioskowanie argumentu szablonu do utworzenia wystąpienia szablonu funkcji z specjalizacji unikatowy. W przypadku niepowodzenia Wnioskowanie argumentu szablonu inne przeciążenia funkcji są traktowane jako wywołanie rozpoznawania. Te inne przeciążenia, tzw. zestaw candidate obejmują funkcje nieszablonu i innych szablonów funkcji wystąpień. Jeśli Wnioskowanie argumentu szablonu zakończy się powodzeniem, generowanej funkcji jest porównywany z innymi funkcjami, aby określić najlepsze dopasowanie, zgodnie z regułami Rozpoznanie przeciążenia. Aby uzyskać więcej informacji, zobacz [przeciążanie funkcji](function-overloading.md).  

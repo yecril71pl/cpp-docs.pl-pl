@@ -22,6 +22,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052830"
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler — odwołanie
 Asemblera makr firmy Microsoft (MASM) zawiera kilka zalet w porównaniu z zestawu wbudowanego. MASM zawiera języka makra, którego funkcje, takie jak przetwarzania ciągu zapętlenie, arytmetyczne i tekstu. MASM również zapewnia większą kontrolę nad sprzętu, ponieważ obsługuje on zbiór instrukcji 386, 486 i procesory Pentium. Za pomocą MASM, możesz również zmniejszyć obciążenie pamięci i czasu.  

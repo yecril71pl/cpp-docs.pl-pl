@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410895"
 ---
 # <a name="calling-conventions"></a>Konwencje wywoływania
 Kompilator Visual C/C++ udostępnia kilka różnych konwencji wywoływania funkcji wewnętrznych i zewnętrznych. Opis tych różne podejścia może ułatwić debugowania programu, a następnie połącz kodu za pomocą procedury języka zestawu.  

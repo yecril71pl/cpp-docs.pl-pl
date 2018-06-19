@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049284"
 ---
 # <a name="instr"></a>@InStr
 Makra funkcji, która znajduje pierwsze wystąpienie *ciąg2* w *ciąg1*, początkowe na *pozycji* w *ciąg1*. Jeśli *pozycji* nie ma, wyszukiwanie rozpoczyna się od początku *ciąg1*. Zwraca całkowitą pozycji lub 0, jeśli *ciąg2* nie znaleziono.  

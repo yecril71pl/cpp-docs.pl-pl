@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412468"
 ---
 # <a name="secure-template-overloads"></a>Przeciążenia bezpiecznych szablonów
 Microsoft ma przestarzały wiele C Runtime (CRT) funkcje na rzecz wersje rozszerzonymi zabezpieczeniami. Na przykład `strcpy_s` bezpieczniejsze zastępuje `strcpy`. Przestarzałe funkcje są wspólnych źródeł błędów zabezpieczeń, ponieważ nie uniemożliwiają operacje, które mogą zastąpić pamięci. Domyślnie kompilator generuje ostrzeżenie podczas korzystania z jednego z tych funkcji. CRT zapewnia przeciążenia szablonów języka C++ dla tych funkcji w celu ułatwienia przejście do bardziej bezpieczne wariantów.  

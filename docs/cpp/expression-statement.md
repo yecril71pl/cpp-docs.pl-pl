@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32411589"
 ---
 # <a name="expression-statement"></a>Instrukcja wyrażeń
 Instrukcje wyrażeń spowodować wyrażenia do obliczenia. Transfer nie formant lub iteracji odbywa się w wyniku wyrażenia instrukcji.  

@@ -49,6 +49,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408918"
 ---
 # <a name="searchenv-wsearchenv"></a>_searchenv, _wsearchenv
 
@@ -100,7 +101,7 @@ Procedura najpierw szuka pliku w bieżącym katalogu roboczym. Jeśli plik nie z
 
 *Pathname* buforu powinien być co najmniej **_max_path —** znaków, aby pomieścić długie nazwy ścieżki skonstruowane. W przeciwnym razie **_searchenv —** może przepełnienie *pathname* buforu i spowodować nieoczekiwane zachowanie.
 
-**_wsearchenv —** jest wersja znaków dwubajtowych **_searchenv —**i argumenty **_wsearchenv —** są ciągami znaków dwubajtowych. **_wsearchenv —** i **_searchenv —** zachowują się tak samo w przeciwnym razie wartość.
+**_wsearchenv —** jest wersja znaków dwubajtowych **_searchenv —** i argumenty **_wsearchenv —** są ciągami znaków dwubajtowych. **_wsearchenv —** i **_searchenv —** zachowują się tak samo w przeciwnym razie wartość.
 
 Jeśli *filename* jest pustym ciągiem, te funkcje zwracają **enoent —**.
 

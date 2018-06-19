@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410184"
 ---
 # <a name="setapptype"></a>_set_app_type
 Funkcji wewnętrznej używane przy uruchamianiu CRT stwierdzić, czy aplikacja jest aplikacji konsoli lub graficznego interfejsu użytkownika aplikacji.  

@@ -45,6 +45,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32402715"
 ---
 # <a name="exit-exit-exit"></a>exit, _exit — _exit —
 
@@ -73,7 +74,7 @@ void _exit(
 
 ## <a name="remarks"></a>Uwagi
 
-**Zakończyć**, **_exit —** i **_exit —** funkcje przerwanie procesu wywołującego. **Zakończyć** funkcja wywołuj destruktory dla obiektów wątków lokalnych, następnie wywołuje — w kolejności (LIFO) ostatnich w pierwszym poza — funkcje, które są zarejestrowane przez **atexit —** i **_onexit —**, a następnie czyści wszystkie bufory pliku przed jego kończy proces. **_Exit —** i **_exit —** funkcje zakończenie procesu bez niszczenie obiektów wątków lokalnych lub przetwarzania **atexit —** lub **_onexit —**funkcje i bez opróżniania buforów strumienia.
+**Zakończyć**, **_exit —** i **_exit —** funkcje przerwanie procesu wywołującego. **Zakończyć** funkcja wywołuj destruktory dla obiektów wątków lokalnych, następnie wywołuje — w kolejności (LIFO) ostatnich w pierwszym poza — funkcje, które są zarejestrowane przez **atexit —** i **_onexit —**, a następnie czyści wszystkie bufory pliku przed jego kończy proces. **_Exit —** i **_exit —** funkcje zakończenie procesu bez niszczenie obiektów wątków lokalnych lub przetwarzania **atexit —** lub **_onexit —** funkcje i bez opróżniania buforów strumienia.
 
 Mimo że **zakończyć**, **_exit —** i **_exit —** wywołania nie zwraca wartości, wartość w *stan* były dostępne dla środowiska hosta lub oczekiwania procesu wywołującego, jeśli istnieje, po zamknięciu procesu. Zazwyczaj zestawy wywołującego *stan* wartość na 0, aby wskazać normalne zakończenia lub wartość wystąpił błąd. *Stan* wartość jest dostępna dla polecenia batch systemu operacyjnego **ERRORLEVEL** i jest reprezentowana przez jedną z dwóch: **exit_success —**, który reprezentuje wartość 0 lub **exit_failure —**, który reprezentuje wartość 1.
 

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412533"
 ---
 # <a name="exit-function"></a>Funkcja exit
 **Zakończyć** funkcja zadeklarowany w pliku dołączanego standardowe \<stdlib.h >, program w języku C++ kończy.  

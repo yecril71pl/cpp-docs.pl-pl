@@ -53,6 +53,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412559"
 ---
 # <a name="status87-statusfp-statusfp2"></a>_status87, _statusfp, _statusfp2
 
@@ -76,7 +77,7 @@ Ten adres jest wypełniony słowa stanu jednostki zmiennoprzecinkowe SSE2.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Aby uzyskać **_status87 —** i **_statusfp —**, bity wartość, która jest zwracana wskazują stan zmiennoprzecinkowy. Zobacz FLOAT. H Uwzględnij plik dla definicji usługi bits, które są zwracane przez **_statusfp —**. Wiele funkcji biblioteki matematyczne zmodyfikować programu word zmiennoprzecinkowy stan może mieć nieprzewidywalne skutki. Optymalizacja można zmienić kolejność, łączenie i wyeliminować operacji zmiennoprzecinkowych wokół wywołań **_status87 —**, **_statusfp —**i powiązane funkcje. Użyj [/Od (Wyłącz (Debuguj))](../../build/reference/od-disable-debug.md) — opcja kompilatora lub [fenv_access](../../preprocessor/fenv-access.md) dyrektywa pragma, aby zapobiec funkcje optymalizacji, które zmienić kolejność operacji zmiennoprzecinkowych. Wartości zwracanych z **_clearfp —** i **_statusfp —**, a także parametrów zwracanych z **_statusfp2 —**, są bardziej niezawodne, jeśli wykonywane są operacje mniejszej liczby zmiennoprzecinkowe między znane stanami słowa stanu zmiennoprzecinkowych.
+Aby uzyskać **_status87 —** i **_statusfp —**, bity wartość, która jest zwracana wskazują stan zmiennoprzecinkowy. Zobacz FLOAT. H Uwzględnij plik dla definicji usługi bits, które są zwracane przez **_statusfp —**. Wiele funkcji biblioteki matematyczne zmodyfikować programu word zmiennoprzecinkowy stan może mieć nieprzewidywalne skutki. Optymalizacja można zmienić kolejność, łączenie i wyeliminować operacji zmiennoprzecinkowych wokół wywołań **_status87 —**, **_statusfp —** i powiązane funkcje. Użyj [/Od (Wyłącz (Debuguj))](../../build/reference/od-disable-debug.md) — opcja kompilatora lub [fenv_access](../../preprocessor/fenv-access.md) dyrektywa pragma, aby zapobiec funkcje optymalizacji, które zmienić kolejność operacji zmiennoprzecinkowych. Wartości zwracanych z **_clearfp —** i **_statusfp —**, a także parametrów zwracanych z **_statusfp2 —**, są bardziej niezawodne, jeśli wykonywane są operacje mniejszej liczby zmiennoprzecinkowe między znane stanami słowa stanu zmiennoprzecinkowych.
 
 ## <a name="remarks"></a>Uwagi
 

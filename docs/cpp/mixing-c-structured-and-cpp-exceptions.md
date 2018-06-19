@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420109"
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>Połączenie wyjątków języka C (strukturalnych) i C++
 Aby napisać bardziej przenośny kod, nie jest zalecane wykorzystanie strukturalnej obsługi wyjątków w programie w języku C++. Jednak czasami można skompilować z **/eha** mieszać wyjątki strukturalne i kod źródłowy C++ i wymagają niektóre funkcje obsługi obu rodzajów wyjątków. Ponieważ program obsługi wyjątków strukturalnych nie ma żadnych koncepcji obiektów lub typu wyjątki, nie może obsługiwać wyjątków zgłaszanych przez kod C++; jednak C++ **catch** programy obsługi można Obsługa wyjątków strukturalnych. Jako takie, Obsługa składni wyjątków języka C++ (**spróbuj**, `throw`, **catch**) nie jest akceptowane przez kompilator języka C, ale składni obsługi wyjątków strukturalnych (`__try`, `__except`, `__finally`) jest obsługiwana przez kompilator języka C++.  

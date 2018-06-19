@@ -22,6 +22,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054627"
 ---
 # <a name="operator-gt-masm-run-time"></a>operator &gt;= (środowisko wykonawcze MASM)
 Jest większe lub równe. Używana tylko wewnątrz [. Jeśli](../../assembler/masm/dot-if.md), [. GDY](../../assembler/masm/dot-while.md), lub [. Powtórz](../../assembler/masm/dot-repeat.md) blokuje i oceniane w czasie wykonywania, nie w czasie zestawu.  

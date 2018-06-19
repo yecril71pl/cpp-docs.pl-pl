@@ -61,6 +61,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32416442"
 ---
 # <a name="snprintfs-snprintfsl-snwprintfs-snwprintfsl"></a>_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l
 
@@ -139,7 +140,7 @@ Ustawienia regionalne do użycia.
 
 **_snprintf_s —** zwraca liczbę znaków przechowywanych w *buforu*, bez uwzględnienia znak końcowy null. **_snwprintf_s —** zwraca liczbę przechowywanych w znaki dwubajtowe *buforu*, bez uwzględnienia zakończenia null znaków dwubajtowych.
 
-Jeśli przekracza magazynu wymaganego do przechowywania danych i zakończenia null *sizeOfBuffer*, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli program obsługi nieprawidłowych parametrów wykonywania odtwarzanie jest kontynuowane, te funkcje ustawić *buforu* na pusty ciąg, ustaw **errno** do **erange —**i zwróć -1.
+Jeśli przekracza magazynu wymaganego do przechowywania danych i zakończenia null *sizeOfBuffer*, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli program obsługi nieprawidłowych parametrów wykonywania odtwarzanie jest kontynuowane, te funkcje ustawić *buforu* na pusty ciąg, ustaw **errno** do **erange —** i zwróć -1.
 
 Jeśli *buforu* lub *format* jest **NULL** wskaźnika, lub, jeśli *liczba* jest mniejsza lub równa zero, program obsługi nieprawidłowych parametrów jest wywoływany. Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji **errno** do **einval —** i zwróć -1.
 

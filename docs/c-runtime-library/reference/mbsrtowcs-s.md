@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32405448"
 ---
 # <a name="mbsrtowcss"></a>mbsrtowcs_s
 
@@ -115,7 +116,7 @@ Jeśli *wcstr* wskaźnika o wartości null, nie jest obiekt wskaźnika wskazywan
 
 Jeśli *mbstate* jest pustego wskaźnika wewnętrznego biblioteki **mbstate_t** obiektu statycznego stan konwersji jest używany. Ten wewnętrzny obiekt statycznych nie jest bezpieczne wątkowo, dlatego zaleca się że przekazujesz własne *mbstate* wartości.
 
-Jeśli **mbsrtowcs_s —** napotka znaków wielobajtowych, który nie jest prawidłowa w bieżących ustawień regionalnych, umieszcza -1 w  *&#42;pReturnValue*, ustawia bufor docelowy *wcstr* ciąg pusty, ustawia **errno** do **eilseq —**i zwraca **eilseq —**.
+Jeśli **mbsrtowcs_s —** napotka znaków wielobajtowych, który nie jest prawidłowa w bieżących ustawień regionalnych, umieszcza -1 w  *&#42;pReturnValue*, ustawia bufor docelowy *wcstr* ciąg pusty, ustawia **errno** do **eilseq —** i zwraca **eilseq —**.
 
 Jeśli sekwencje wskazywana przez *mbstr* i *wcstr* nakładają się zachowanie **mbsrtowcs_s —** jest niezdefiniowana. **mbsrtowcs_s —** dotyczy kategorii LC_TYPE bieżące ustawienia regionalne.
 

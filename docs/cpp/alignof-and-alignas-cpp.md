@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32407989"
 ---
 # <a name="alignof-and-alignas-c"></a>alignof i alignas (C++)
 `alignas` Specyfikatora typu jest przenośny, C++ standardowy sposób Określanie wyrównania niestandardowych zmiennych i typów zdefiniowanych przez użytkownika. `alignof` Operator jest również standardowe, przenośne sposobem uzyskania wyrównania określonego typu lub zmiennej.  

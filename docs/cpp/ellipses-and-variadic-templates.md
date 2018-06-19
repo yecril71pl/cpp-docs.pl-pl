@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32416661"
 ---
 # <a name="ellipses-and-variadic-templates"></a>Wielokropki i szablony wariadyczne
 W tym artykule przedstawiono sposób użycia wielokropka (`...`) z szablonów języka C++ ze zmienną liczbą argumentów. Wielokropek miał wiele zastosowań C i C++. Obejmują one listy zmiennych argumentów dla funkcji. `printf()` Funkcji z biblioteki środowiska uruchomieniowego C jest jednym z przykładów dobrze znany.  

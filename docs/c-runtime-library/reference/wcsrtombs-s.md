@@ -38,6 +38,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417304"
 ---
 # <a name="wcsrtombss"></a>wcsrtombs_s
 
@@ -112,7 +113,7 @@ Jeśli *liczba* jest specjalna wartość [_truncate —](../../c-runtime-library
 
 Jeśli **wcsrtombs_s —** pomyślnie konwertuje ciąg źródłowy umieszcza rozmiar w bajtach skonwertowany ciąg, włącznie z terminatorem null do  *&#42;pReturnValue* (pod warunkiem  *pReturnValue* nie jest **NULL**). Dzieje się tak nawet wtedy, gdy *mbstr* argument jest **NULL** i zapewnia możliwość określenia wymagany rozmiar buforu. Należy pamiętać, że jeśli *mbstr* jest **NULL**, *liczba* jest ignorowana.
 
-Jeśli **wcsrtombs_s —** napotka znaków dwubajtowych nie można przekonwertować znaków wielobajtowych, umieszcza -1 w  *\*pReturnValue*, ustawia bufor docelowy na pusty ciąg, ustawia **errno** do **eilseq —**i zwraca **eilseq —**.
+Jeśli **wcsrtombs_s —** napotka znaków dwubajtowych nie można przekonwertować znaków wielobajtowych, umieszcza -1 w  *\*pReturnValue*, ustawia bufor docelowy na pusty ciąg, ustawia **errno** do **eilseq —** i zwraca **eilseq —**.
 
 Jeśli sekwencje wskazywana przez *wcstr* i *mbstr* nakładają się zachowanie **wcsrtombs_s —** jest niezdefiniowana. **wcsrtombs_s —** dotyczy kategorii LC_TYPE bieżące ustawienia regionalne.
 

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420158"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>Mechanizm pimpl hermetyzacji w czasie kompilacji (Modern C++)
 *Idiom mechanizm pimpl w czasie* to technika C++ nowoczesnych, aby ukryć implementacji, aby zminimalizować sprzężenia, a do oddzielania interfejsów. Mechanizm pimpl w czasie jest skrót od "wskaźnik do implementacji." Może już należy zapoznać się z pojęciem, ale o tym przez inne nazwy, takie jak idiom Cheshire Cat lub Zapora kompilatora.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354185"
 ---
 # <a name="adding-functionality-to-the-composite-control"></a>Dodawanie funkcji do złożonych kontrolek
 Po wstawieniu niezbędnej kontroli do formantu złożonego następny krok polega na dodawanie nowych funkcji. Ta nowa funkcja zazwyczaj znajduje się na dwie kategorie:  

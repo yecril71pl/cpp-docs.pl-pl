@@ -45,6 +45,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32403251"
 ---
 # <a name="asctimes-wasctimes"></a>asctime_s, _wasctime_s
 
@@ -148,7 +149,7 @@ A [przepełnienie buforu](http://msdn.microsoft.com/library/windows/desktop/ms71
 
 ## <a name="example"></a>Przykład
 
-Ten program umieszcza czasu systemowego w długich liczb całkowitych **aclock**, tłumaczy go do struktury **newtime** i konwertuje ją do postaci ciągu dla danych wyjściowych, używając **asctime_s —**funkcji.
+Ten program umieszcza czasu systemowego w długich liczb całkowitych **aclock**, tłumaczy go do struktury **newtime** i konwertuje ją do postaci ciągu dla danych wyjściowych, używając **asctime_s —** funkcji.
 
 ```C
 // crt_asctime_s.c

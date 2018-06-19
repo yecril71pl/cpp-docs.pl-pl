@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050665"
 ---
 # <a name="model"></a>@Model
 1 dla **bardzo MAŁA** modelu 2 dla **małych** modelu, 3 dla **COMPACT** modelu 4 dla **średni** modelu 5 dla **DUŻY**model 6 dla **HUGE** modelu i 7 dla **PŁASKIEJ** modelu (liczbowe są równoważne).  

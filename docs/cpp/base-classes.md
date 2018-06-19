@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408445"
 ---
 # <a name="base-classes"></a>Klasy podstawowe
 Proces dziedziczenia tworzy nowe klasy pochodnej, która składa się z elementów członkowskich klasy podstawowej oraz wszelkie nowe elementy członkowskie dodane przez klasy pochodnej. W dziedziczenia wielokrotnego jest możliwość utworzenia Wykres dziedziczenia gdzie tej samej klasy podstawowej wchodzi w skład więcej niż jednej z klas pochodnych. Na poniższej ilustracji przedstawiono takie wykresu.  

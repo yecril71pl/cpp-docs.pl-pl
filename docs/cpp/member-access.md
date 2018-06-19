@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420092"
 ---
 # <a name="member-access"></a>Dostęp do elementu członkowskiego
 Dostęp do elementu członkowskiego klasy mogą być kontrolowane przez przeciążanie operatora dostępu do elementu członkowskiego (**->**). Ten operator jest uznawany za operatora jednoargumentowego w ten sposób użycia i funkcji przeciążenia operatora musi być funkcją członkowską klasy. W związku z tym jest deklaracja dla tych funkcji:  

@@ -54,6 +54,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417945"
 ---
 # <a name="vsnprintfs-vsnprintfs-vsnprintfsl-vsnwprintfs-vsnwprintfsl"></a>vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l
 
@@ -141,7 +142,7 @@ Aby uzyskać więcej informacji, zobacz [specyfikacje formatu](../../c-runtime-l
 
 **vsnprintf_s —**, **_vsnprintf_s —** i **_vsnwprintf_s —** zwraca liczbę znaków zapisane, nie tym zakończenia wartość null lub wartość ujemną, jeśli wystąpi błąd wyjścia. **vsnprintf_s —** jest taka sama jak **_vsnprintf_s —**. **vsnprintf_s —** jest uwzględniony w zgodności ze standardem ANSI. **_vnsprintf** został zachowany na potrzeby zgodności z poprzednimi wersjami.
 
-Jeśli przekracza magazynu wymaganego do przechowywania danych i zakończenia null *sizeOfBuffer*, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md), chyba że *liczby*  jest [_truncate —](../../c-runtime-library/truncate.md), w którym to przypadku tyle ciągu jako zmieści się *buforu* są zapisywane i zwrócił wartość -1. Jeśli program obsługi nieprawidłowych parametrów wykonywania odtwarzanie jest kontynuowane, te funkcje ustawić *buforu* na pusty ciąg, ustaw **errno** do **erange —**i zwróć -1.
+Jeśli przekracza magazynu wymaganego do przechowywania danych i zakończenia null *sizeOfBuffer*, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md), chyba że *liczby*  jest [_truncate —](../../c-runtime-library/truncate.md), w którym to przypadku tyle ciągu jako zmieści się *buforu* są zapisywane i zwrócił wartość -1. Jeśli program obsługi nieprawidłowych parametrów wykonywania odtwarzanie jest kontynuowane, te funkcje ustawić *buforu* na pusty ciąg, ustaw **errno** do **erange —** i zwróć -1.
 
 Jeśli *buforu* lub *format* jest **NULL** wskaźnika, lub, jeśli *liczba* jest mniejsza lub równa zero, program obsługi nieprawidłowych parametrów jest wywoływany. Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji **errno** do **einval —** i zwróć -1.
 

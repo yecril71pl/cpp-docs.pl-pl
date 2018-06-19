@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052589"
 ---
 # <a name="setframe"></a>.SETFRAME
 Wypełnienia ramki zarejestrować pola i przesunięcie w informacjach dotyczących unwind przy użyciu określonego rejestru (`reg`) i przesunięcia (`offset`). Przesunięcie musi być wielokrotnością 16 i mniejsza niż 240. Ta dyrektywa generuje również `UWOP_SET_FPREG` unwind kod dla określonego zarejestrować, używając bieżącej przesunięcie prologu.  

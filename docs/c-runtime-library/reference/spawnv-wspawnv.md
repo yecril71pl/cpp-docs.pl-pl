@@ -45,6 +45,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412455"
 ---
 # <a name="spawnv-wspawnv"></a>_spawnv, _wspawnv
 
@@ -97,7 +98,7 @@ Aby uzyskać więcej informacji na temat tych i innych kody powrotu, zobacz [_do
 
 Każda z tych funkcji tworzy i wykonuje nowy proces, przekazanie tablicy wskaźników do argumentów wiersza polecenia.
 
-Te funkcje walidację ich parametrów. Jeśli dowolny *cmdname* lub *ARGV —* jest wskaźnika o wartości null, lub jeśli *ARGV —* wskazuje wskaźnika o wartości null, lub *ARGV —*[0] to ciąg pusty, nieprawidłowy Parametr program obsługi zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji **errno** do **einval —**i zwróć -1. Nie nowego procesu jest zduplikowany.
+Te funkcje walidację ich parametrów. Jeśli dowolny *cmdname* lub *ARGV —* jest wskaźnika o wartości null, lub jeśli *ARGV —* wskazuje wskaźnika o wartości null, lub *ARGV —*[0] to ciąg pusty, nieprawidłowy Parametr program obsługi zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji **errno** do **einval —** i zwróć -1. Nie nowego procesu jest zduplikowany.
 
 ## <a name="requirements"></a>Wymagania
 

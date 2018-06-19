@@ -113,6 +113,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32405539"
 ---
 # <a name="itoa-itoa-ltoa-ltoa-ultoa-ultoa-i64toa-ui64toa-itow-ltow-ultow-i64tow-ui64tow"></a>itoa — _itoa —, ltoa —, _ltoa —, ultoa —, _ultoa —, _i64toa —, _ui64toa —, _itow —, _ltow —, _ultow —, _i64tow —, _ui64tow —
 
@@ -191,7 +192,7 @@ Każda z tych funkcji, zwraca wskaźnik do *buforu*. Nie ma żadnych zwracany b�
 
 ## <a name="remarks"></a>Uwagi
 
-**_Itoa —**, **_ltoa —**, **_ultoa —**, **_i64toa —**, i **_ui64toa —** funkcji konwertuje cyfry podany *wartość* argumentu na ciąg znaków zakończony znakiem null i zapisać wynik (maksymalnie 33 znaków **_itoa —**, **_ltoa —**, i  **_ultoa —**i 65 dla **_i64toa —** i **_ui64toa —**) w *buforu*. Jeśli *radix* równa 10 i *wartość* jest ujemna, pierwszego znaku ciągu przechowywanych jest znak minus (**-**). **_Itow —**, **_ltow —**, **_ultow —**, **_i64tow —**, i **_ui64tow —** funkcje są znaków dwubajtowych wersje **_itoa —**, **_ltoa —**, **_ultoa —**, **_i64toa —**, i **_ui64toa —**, odpowiednio.
+**_Itoa —**, **_ltoa —**, **_ultoa —**, **_i64toa —**, i **_ui64toa —** funkcji konwertuje cyfry podany *wartość* argumentu na ciąg znaków zakończony znakiem null i zapisać wynik (maksymalnie 33 znaków **_itoa —**, **_ltoa —**, i  **_ultoa —** i 65 dla **_i64toa —** i **_ui64toa —**) w *buforu*. Jeśli *radix* równa 10 i *wartość* jest ujemna, pierwszego znaku ciągu przechowywanych jest znak minus (**-**). **_Itow —**, **_ltow —**, **_ultow —**, **_i64tow —**, i **_ui64tow —** funkcje są znaków dwubajtowych wersje **_itoa —**, **_ltoa —**, **_ultoa —**, **_i64toa —**, i **_ui64toa —**, odpowiednio.
 
 > [!IMPORTANT]
 > Funkcje te można napisać poza koniec buforu, który jest za mały. Aby uniknąć przepełnienia buforu, upewnij się, że *buforu* jest wystarczająco duży, aby pomieścić przekonwertowanego cyfr oraz końcowego znaku null i znak. Nieprawidłowe użycie tych funkcji mogą powodować problemy zabezpieczenia w kodzie.

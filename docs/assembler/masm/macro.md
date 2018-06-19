@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054448"
 ---
 # <a name="macro"></a>MACRO
 Oznacza blok makro o nazwie *nazwa* i ustanawia *parametru* symbole zastępcze Argumenty przekazane po wywołaniu makra.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414623"
 ---
 # <a name="event-handling"></a>Obsługa zdarzeń
 Obsługa zdarzeń przede wszystkim jest obsługiwana dla klasy COM (C++ klasy, które implementują obiektów COM, zwykle za pomocą klasy ATL lub [coclass](../windows/coclass.md) atrybutu).  Aby uzyskać więcej informacji, zobacz [obsługi zdarzeń w modelu COM](../cpp/event-handling-in-com.md).  

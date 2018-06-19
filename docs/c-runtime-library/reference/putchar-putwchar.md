@@ -43,6 +43,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32404626"
 ---
 # <a name="putchar-putwchar"></a>putchar, putwchar
 
@@ -72,7 +73,7 @@ Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-
 
 ## <a name="remarks"></a>Uwagi
 
-**Putc —** procedury zapisuje pojedynczy znak *c* z danymi wyjściowymi *strumienia* w bieżącym położeniu. Dowolna liczba całkowita mogą zostać przekazane do **putc —**, ale są zapisywane tylko pierwszych 8 bitów. **Putchar —** procedura jest identyczna jak **putc — (** * c ***, stdout)**. Dla każdej procedury Jeśli wystąpi błąd, ustaw wskaźnik błędów dla tego strumienia. **putc —** i **putchar —** są podobne do **fputc —** i **_fputchar —**, ale są implementowane zarówno jako funkcje, jak i jako makra (zobacz [ Wybieranie pomiędzy funkcjami i makrami](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **putwc —** i **putwchar —** wersji znaków dwubajtowych **putc —** i **putchar —**odpowiednio.
+**Putc —** procedury zapisuje pojedynczy znak *c* z danymi wyjściowymi *strumienia* w bieżącym położeniu. Dowolna liczba całkowita mogą zostać przekazane do **putc —**, ale są zapisywane tylko pierwszych 8 bitów. **Putchar —** procedura jest identyczna jak **putc — (** * c ***, stdout)**. Dla każdej procedury Jeśli wystąpi błąd, ustaw wskaźnik błędów dla tego strumienia. **putc —** i **putchar —** są podobne do **fputc —** i **_fputchar —**, ale są implementowane zarówno jako funkcje, jak i jako makra (zobacz [ Wybieranie pomiędzy funkcjami i makrami](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **putwc —** i **putwchar —** wersji znaków dwubajtowych **putc —** i **putchar —** odpowiednio.
 
 Wersje z **_nolock —** sufiks są identyczne z tą różnicą, że nie są chronione przez inne wątki od zakłóceń. Może być szybsze, ponieważ nie wiążą się z obciążenie zablokowania inne wątki. Ich używać tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.
 

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357860"
 ---
 # <a name="programming-with-ccombstr-atl"></a>Programowanie przy użyciu CComBSTR (ALT)
 Klasy ATL [CComBSTR](../atl/reference/ccombstr-class.md) udostępnia otokę `BSTR` — typ danych. Gdy `CComBSTR` stanowi przydatne narzędzie jest wiele sytuacji, które wymagają ostrożność.  

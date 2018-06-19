@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358264"
 ---
 # <a name="making-an-atl-object-noncreatable"></a>Tworzenie noncreatable — obiekt ATL
 Atrybuty obiektu oparty na ATL COM można zmienić tak, aby klient nie można bezpośrednio utworzyć obiekt. W takim przypadku obiekt będzie można zwrócony przez wywołanie metody na innym obiekcie zamiast bezpośrednio tworzone.  

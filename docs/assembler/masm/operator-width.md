@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056691"
 ---
 # <a name="operator-width"></a>operator WIDTH
 Zwraca szerokość w bitach bieżącego *recordfieldname* lub *rekordu*.  

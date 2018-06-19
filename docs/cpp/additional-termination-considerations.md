@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408149"
 ---
 # <a name="additional-termination-considerations"></a>Dodatkowe zagadnienia dotyczące kończenia
 Program w języku C++ może obsłużyć za pomocą **zakończyć**, `return`, lub **przerwania**. Można dodać przy użyciu przetwarzania zakończenia `atexit` funkcji. W poniższych sekcjach omówiono te.  

@@ -58,6 +58,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412390"
 ---
 # <a name="strerror-strerror-wcserror-wcserror"></a>strerror, _strerror, _wcserror, __wcserror
 
@@ -105,7 +106,7 @@ Jeśli *strErrMsg* jest przekazywany jako **NULL**, **_strerror —** zwraca wsk
 
 Numer błędu **_strerror —** jest przechowywana w zmiennej [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Aby uzyskać dokładne wyniki, należy wywołać **_strerror —** natychmiast po procedury biblioteki zwraca błąd. W przeciwnym razie kolejne wywołania **strerror —** lub **_strerror —** mogą zastąpić **errno** wartości.
 
-**_wcserror —** i **__wcserror —** wersji znaków dwubajtowych **strerror —** i **_strerror —**odpowiednio.
+**_wcserror —** i **__wcserror —** wersji znaków dwubajtowych **strerror —** i **_strerror —** odpowiednio.
 
 **_strerror —**, **_wcserror —**, i **__wcserror —** nie są częścią definicji ANSI; są one rozszerzenia Microsoft i firma Microsoft zaleca, aby używać ich miejscu kod przenośny. Zgodność ANSI, użyj **strerror —** zamiast tego.
 

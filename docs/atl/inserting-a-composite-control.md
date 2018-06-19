@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358693"
 ---
 # <a name="inserting-a-composite-control"></a>Wstawianie formantu złożonego
 **Dodaj klasę** okno dialogowe umożliwia wstawienie obiekt ATL do projektu. Dostęp do tego okna dialogowego, klikając prawym przyciskiem myszy nazwę projektu w Eksploratorze rozwiązań i wskazujący **Dodaj**, a następnie klikając pozycję **Dodaj klasę**.  

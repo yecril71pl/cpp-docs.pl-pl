@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32411757"
 ---
 # <a name="comments-c"></a>Komentarze (C++)
 Komentarz jest tekst, który ignoruje kompilator, ale jest to przydatny dla programistów. Komentarze są zwykle używane do adnotacji kodu do użytku w przyszłości. Kompilator traktowane jako biały znak. Komentarze podczas testowania można użyć do dezaktywowania niektórych wierszy kodu; jednak `#if` / `#endif` dyrektywy preprocesora dostosowując to ponieważ można ująć kod, który zawiera komentarze, ale nie można zagnieżdżać komentarze.  

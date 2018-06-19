@@ -46,6 +46,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32401558"
 ---
 # <a name="getcwddbg-wgetcwddbg"></a>_getcwd_dbg, _wgetcwd_dbg
 
@@ -97,7 +98,7 @@ Aby uzyskać więcej informacji, zobacz [errno _doserrno —, _sys_errlist — i
 
 **_Getcwd_dbg —** i **_wgetcwd_dbg —** funkcje są takie same jak **_getcwd —** i **_wgetcwd —** z wyjątkiem tego, kiedy **_ DEBUGOWANIE** jest zdefiniowany, te funkcje przy użyciu wersji debugowania **— funkcja malloc** i **_malloc_dbg —** można przydzielić pamięci, jeśli **NULL** jest przekazywany jako pierwszy parametr. Aby uzyskać więcej informacji, zobacz [_malloc_dbg —](malloc-dbg.md).
 
-Nie trzeba jawnie wywołana w większości przypadków te funkcje. Zamiast tego można zdefiniować **_crtdbg_map_alloc —** flagi. Gdy **_crtdbg_map_alloc —** jest zdefiniowany, wywołań **_getcwd —** i **_wgetcwd —** są mapowane ponownie do **_getcwd_dbg —** i **_ wgetcwd_dbg —**odpowiednio z *blockType* ustawioną **_normal_block —**. W związku z tym nie trzeba jawnie wywoływać te funkcje, chyba że chcesz oznaczyć bloki sterty jako **_client_block —**. Aby uzyskać więcej informacji, zobacz [typów bloków w stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
+Nie trzeba jawnie wywołana w większości przypadków te funkcje. Zamiast tego można zdefiniować **_crtdbg_map_alloc —** flagi. Gdy **_crtdbg_map_alloc —** jest zdefiniowany, wywołań **_getcwd —** i **_wgetcwd —** są mapowane ponownie do **_getcwd_dbg —** i **_ wgetcwd_dbg —** odpowiednio z *blockType* ustawioną **_normal_block —**. W związku z tym nie trzeba jawnie wywoływać te funkcje, chyba że chcesz oznaczyć bloki sterty jako **_client_block —**. Aby uzyskać więcej informacji, zobacz [typów bloków w stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 

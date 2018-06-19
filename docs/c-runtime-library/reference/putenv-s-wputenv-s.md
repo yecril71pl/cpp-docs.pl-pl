@@ -45,6 +45,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32405578"
 ---
 # <a name="putenvs-wputenvs"></a>_putenv_s, _wputenv_s
 
@@ -103,7 +104,7 @@ Jeśli jeden z warunków błąd wystąpi, te funkcje Wywołaj program obsługi n
 
 Nie należy zmieniać wpis środowiska bezpośrednio; Zamiast tego należy użyć **_putenv_s —** lub **_wputenv_s —** je zmienić. W szczególności bezpośrednio zwalnianie elementów **_environ — []** globalne tablicy może spowodować nieprawidłowe pamięci, należy się zająć.
 
-**getenv —** i **_putenv_s —** użyj zmiennej globalnej **_environ —** dostępu do tabeli środowiska; **_wgetenv —** i **_wputenv_s —** użyj **_wenviron —**. **_putenv_s —** i **_wputenv_s —** może zmienić wartość **_environ —** i **_wenviron —**, a tym samym unieważnienie *envp —*argument **głównego** i **_wenvp** argument **wmain**. W związku z tym jest bezpieczniejsze w użyciu **_environ —** lub **_wenviron —** można uzyskać dostępu do informacji o środowisku. Aby uzyskać więcej informacji na temat relacji między **_putenv_s —** i **_wputenv_s —** do zmiennych globalnych, zobacz [_environ —, _wenviron —](../../c-runtime-library/environ-wenviron.md).
+**getenv —** i **_putenv_s —** użyj zmiennej globalnej **_environ —** dostępu do tabeli środowiska; **_wgetenv —** i **_wputenv_s —** użyj **_wenviron —**. **_putenv_s —** i **_wputenv_s —** może zmienić wartość **_environ —** i **_wenviron —**, a tym samym unieważnienie *envp —* argument **głównego** i **_wenvp** argument **wmain**. W związku z tym jest bezpieczniejsze w użyciu **_environ —** lub **_wenviron —** można uzyskać dostępu do informacji o środowisku. Aby uzyskać więcej informacji na temat relacji między **_putenv_s —** i **_wputenv_s —** do zmiennych globalnych, zobacz [_environ —, _wenviron —](../../c-runtime-library/environ-wenviron.md).
 
 > [!NOTE]
 > **_Putenv_s —** i **_getenv_s** rodzin funkcje nie są wątkowo. **_getenv_s** może zwracać wskaźnik ciągu podczas **_putenv_s —** modyfikowanie ciągu i spowodować losowe awarie. Upewnij się, że wywołania te funkcje są zsynchronizowane.

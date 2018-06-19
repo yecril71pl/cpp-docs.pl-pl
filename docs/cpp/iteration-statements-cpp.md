@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418916"
 ---
 # <a name="iteration-statements-c"></a>Instrukcje iteracji (C++)
 Iteracja — instrukcje spowodować instrukcji (lub instrukcje złożone) można wykonać zero lub więcej razy może ulec pewne kryteria zakończenia pętli. Jeśli te instrukcje są instrukcje złożone, są wykonywane w kolejności, chyba że albo [podziału](../cpp/break-statement-cpp.md) instrukcji lub [kontynuować](../cpp/continue-statement-cpp.md) napotkano instrukcji.  

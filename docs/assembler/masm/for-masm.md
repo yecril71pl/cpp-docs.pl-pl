@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32051946"
 ---
 # <a name="for-masm"></a>FOR (MASM)
 Znaki bloku, który powtarza się jeden raz dla każdego `argument`, z bieżącym `argument` zastępowanie `parameter` na powtórzeniami.  

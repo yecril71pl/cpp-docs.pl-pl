@@ -49,6 +49,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32401581"
 ---
 # <a name="getdcwdnolock-wgetdcwdnolock"></a>_getdcwd_nolock, _wgetdcwd_nolock
 
@@ -89,7 +90,7 @@ Zobacz [_getdcwd —, _wgetdcwd —](getdcwd-wgetdcwd.md).
 
 ## <a name="remarks"></a>Uwagi
 
-**_getdcwd_nolock —** i **_wgetdcwd_nolock —** są takie same jak **_getdcwd —** i **_wgetdcwd —**odpowiednio z tą różnicą, że nie są chronione z zakłócenia przez inne wątki. Może być szybsze, ponieważ nie wiążą się z obciążenie zablokowania inne wątki. Ich używać tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.
+**_getdcwd_nolock —** i **_wgetdcwd_nolock —** są takie same jak **_getdcwd —** i **_wgetdcwd —** odpowiednio z tą różnicą, że nie są chronione z zakłócenia przez inne wątki. Może być szybsze, ponieważ nie wiążą się z obciążenie zablokowania inne wątki. Ich używać tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 

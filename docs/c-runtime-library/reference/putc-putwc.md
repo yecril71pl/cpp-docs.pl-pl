@@ -44,6 +44,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32404379"
 ---
 # <a name="putc-putwc"></a>putc, putwc
 
@@ -78,7 +79,7 @@ Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-
 
 ## <a name="remarks"></a>Uwagi
 
-**Putc —** procedury zapisuje pojedynczy znak *c* z danymi wyjściowymi *strumienia* w bieżącym położeniu. Dowolna liczba całkowita mogą zostać przekazane do **putc —**, ale są zapisywane tylko pierwszych 8 bitów. **Putchar —** procedura jest identyczna jak **putc — (** * c ***, stdout)**. Dla każdej procedury Jeśli wystąpi błąd, ustaw wskaźnik błędów dla tego strumienia. **putc —** i **putchar —** są podobne do **fputc —** i **_fputchar —**, ale są implementowane zarówno jako funkcje, jak i jako makra (zobacz [ Wybieranie pomiędzy funkcjami i makrami](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **putwc —** i **putwchar —** wersji znaków dwubajtowych **putc —** i **putchar —**odpowiednio. **putwc —** i **putc —** zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. **putc —** aktualnie nie obsługuje dane wyjściowe do strumienia UNICODE.
+**Putc —** procedury zapisuje pojedynczy znak *c* z danymi wyjściowymi *strumienia* w bieżącym położeniu. Dowolna liczba całkowita mogą zostać przekazane do **putc —**, ale są zapisywane tylko pierwszych 8 bitów. **Putchar —** procedura jest identyczna jak **putc — (** * c ***, stdout)**. Dla każdej procedury Jeśli wystąpi błąd, ustaw wskaźnik błędów dla tego strumienia. **putc —** i **putchar —** są podobne do **fputc —** i **_fputchar —**, ale są implementowane zarówno jako funkcje, jak i jako makra (zobacz [ Wybieranie pomiędzy funkcjami i makrami](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **putwc —** i **putwchar —** wersji znaków dwubajtowych **putc —** i **putchar —** odpowiednio. **putwc —** i **putc —** zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. **putc —** aktualnie nie obsługuje dane wyjściowe do strumienia UNICODE.
 
 Wersje z **_nolock —** sufiks są identyczne z tą różnicą, że nie są chronione przez inne wątki od zakłóceń. Aby uzyskać więcej informacji, zobacz **_putc_nolock —, _putwc_nolock —**.
 

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32416174"
 ---
 # <a name="expressions-with-unary-operators"></a>Wyrażenia z operatorami jednoargumentowymi
 Operatory jednoargumentowe działa tylko jedno operandu w wyrażeniu. Operatory jednoargumentowe są następujące:  

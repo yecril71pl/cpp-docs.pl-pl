@@ -37,6 +37,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32399312"
 ---
 # <a name="fsetpos"></a>fsetpos
 
@@ -67,7 +68,7 @@ Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-
 
 ## <a name="remarks"></a>Uwagi
 
-**Fsetpos —** funkcja ustawia wskaźnik położenia pliku *strumienia* wartość *pos*, jest uzyskiwany wcześniejszym wywołaniu **fgetpos —**przed *strumienia*. Funkcja usuwa plik końcowy wskaźnika i cofa efekty [ungetc —](ungetc-ungetwc.md) na *strumienia*. Po wywołaniu **fsetpos —**, następnej operacji na *strumienia* mogą być danych wejściowych lub wyjściowych.
+**Fsetpos —** funkcja ustawia wskaźnik położenia pliku *strumienia* wartość *pos*, jest uzyskiwany wcześniejszym wywołaniu **fgetpos —** przed *strumienia*. Funkcja usuwa plik końcowy wskaźnika i cofa efekty [ungetc —](ungetc-ungetwc.md) na *strumienia*. Po wywołaniu **fsetpos —**, następnej operacji na *strumienia* mogą być danych wejściowych lub wyjściowych.
 
 ## <a name="requirements"></a>Wymagania
 

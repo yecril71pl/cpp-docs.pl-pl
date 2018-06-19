@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423525"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Jednolite inicjowanie i delegowanie konstruktorów
 W nowoczesnych wersji języka C++, można użyć *nawiasy inicjowania* dla dowolnego typu bez znaku równości. Ponadto umożliwia konstruktory delegujące uprościć kod, jeśli masz wiele konstruktorów, które wykonały podobne.  

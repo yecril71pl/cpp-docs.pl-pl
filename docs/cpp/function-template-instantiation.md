@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412127"
 ---
 # <a name="function-template-instantiation"></a>Tworzenie wystąpienia szablonu funkcji
 Gdy szablonu funkcji najpierw zostanie wywołana dla każdego typu, kompilator tworzy wystąpienia. Każdego wystąpienia jest wersja szablonem funkcji przeznaczone dla typu. Tego wystąpienia zostanie wywołana za każdym razem, gdy funkcja jest używana dla typu. Jeśli masz kilka wystąpień identyczne, nawet w różnych modułach tylko jedna kopia wystąpienia zakończą się w pliku wykonywalnego.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409348"
 ---
 # <a name="type-checking-crt"></a>Sprawdzać typ (CRT)
 Kompilator wykonuje ograniczone typu sprawdzanie na funkcje, które można wykonać zmienną liczbę argumentów w następujący sposób:  

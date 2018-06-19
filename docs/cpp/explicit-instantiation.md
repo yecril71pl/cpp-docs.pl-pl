@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415190"
 ---
 # <a name="explicit-instantiation"></a>Jawne tworzenie wystąpienia
 Jawne tworzenie wystąpienia można użyć do utworzenia wystąpienia szablonu klasy lub funkcja nie jest używana w kodzie. Ponieważ jest to przydatne podczas tworzenia biblioteki plików (lib), które używają szablonów do dystrybucji, definicje szablonów bez wystąpień nie są umieszczane w plikach obiektu (.obj).  

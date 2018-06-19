@@ -46,6 +46,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413560"
 ---
 # <a name="spawnvpe-wspawnvpe"></a>_spawnvpe, _wspawnvpe
 
@@ -103,7 +104,7 @@ Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-
 
 Każda z tych funkcji tworzy i wykonuje nowy proces, przekazanie tablicy wskaźników do argumentów wiersza polecenia i tablicy wskaźników do ustawienia środowiska. Użyj tych funkcji **ścieżki** zmiennej środowiskowej można znaleźć pliku do wykonania.
 
-Te funkcje walidację ich parametrów. Jeśli dowolny *cmdname* lub *ARGV —* jest wskaźnika o wartości null, lub jeśli *ARGV —* wskazuje wskaźnika o wartości null, lub *ARGV —*[0] to ciąg pusty, nieprawidłowy Parametr program obsługi zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji **errno** do **einval —**i zwróć -1. Nie nowego procesu jest zduplikowany.
+Te funkcje walidację ich parametrów. Jeśli dowolny *cmdname* lub *ARGV —* jest wskaźnika o wartości null, lub jeśli *ARGV —* wskazuje wskaźnika o wartości null, lub *ARGV —*[0] to ciąg pusty, nieprawidłowy Parametr program obsługi zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md) . Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji **errno** do **einval —** i zwróć -1. Nie nowego procesu jest zduplikowany.
 
 ## <a name="requirements"></a>Wymagania
 

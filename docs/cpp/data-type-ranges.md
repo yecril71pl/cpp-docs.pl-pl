@@ -50,6 +50,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418396"
 ---
 # <a name="data-type-ranges"></a>Zakresy typu danych
 Visual C++ 32-bitowe i 64-bitowe kompilatory rozpoznaje typy w tabeli w dalszej części tego artykułu.  

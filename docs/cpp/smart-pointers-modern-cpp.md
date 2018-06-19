@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424355"
 ---
 # <a name="smart-pointers-modern-c"></a>Wskaźniki inteligentne (Modern C++)
 W nowoczesnych programowania w języku C++, biblioteki standardowej zawiera *wskaźniki inteligentne*, które są używane do zapewnienia, że programy są wolnej pamięci i przecieków zasobów i są bezpieczne dla wyjątku.  

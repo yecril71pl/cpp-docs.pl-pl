@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057126"
 ---
 # <a name="operator-this"></a>operator THIS
 Zwraca wartość określonego argumentu operacji `type` których wartości przesunięcia i segmentów są równe bieżącą wartość licznika lokalizacji.  

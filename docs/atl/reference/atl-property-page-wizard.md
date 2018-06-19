@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359785"
 ---
 # <a name="atl-property-page-wizard"></a>Kreator strony właściwości ATL
 Ten kreator [dodaje do projektu ATL strony właściwości](../../atl/reference/adding-an-atl-property-page.md) lub do projektu MFC z obsługą ATL. Strony właściwości ATL udostępnia interfejs użytkownika do ustawiania właściwości (lub wywołanie metody) jeden lub więcej obiektów COM.  

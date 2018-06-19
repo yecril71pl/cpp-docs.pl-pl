@@ -73,6 +73,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417714"
 ---
 # <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 
@@ -132,7 +133,7 @@ Jeśli zmiana daty jest po północy 1 stycznia 1970 i przed datą zakończenia 
 
 ## <a name="remarks"></a>Uwagi
 
-**_Utime —** funkcja ustawia czas modyfikacji pliku określonego przez *filename **.* Proces musi mieć dostęp do zapisu do pliku, aby zmienić czas. W systemie operacyjnym Windows, można zmienić czas dostępu i czas modyfikacji w **_utimbuf —** struktury. Jeśli *razy* jest **NULL** wskaźnika, czas modyfikacji jest ustawiony na bieżącym czasem lokalnym. W przeciwnym razie *razy* musi wskazywać struktura typu **_utimbuf —**zdefiniowanej w SYS\UTIME. H.
+**_Utime —** funkcja ustawia czas modyfikacji pliku określonego przez *filename **.* Proces musi mieć dostęp do zapisu do pliku, aby zmienić czas. W systemie operacyjnym Windows, można zmienić czas dostępu i czas modyfikacji w **_utimbuf —** struktury. Jeśli *razy* jest **NULL** wskaźnika, czas modyfikacji jest ustawiony na bieżącym czasem lokalnym. W przeciwnym razie *razy* musi wskazywać struktura typu **_utimbuf —** zdefiniowanej w SYS\UTIME. H.
 
 **_Utimbuf —** struktury zapisuje godziny dostępu i modyfikacji pliku używany przez **_utime —** zmiany daty modyfikacji pliku. Struktura ma następujące pola, które są typu **time_t —**:
 

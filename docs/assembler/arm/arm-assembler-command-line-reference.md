@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054614"
 ---
 # <a name="arm-assembler-command-line-reference"></a>Informacje w wierszu polecenia asemblera ARM
 W tym artykule omówiono wiersza polecenia asemblera Microsoft ARM *armasm*, który kompiluje języka zestawu ARMv7 Thumb do przez firmę Microsoft implementacją z typowych Format pliku obiektu (COFF). Konsolidator połączyć COFF kodu za pomocą kodu obiektu, który jest generowany przez asemblera ARM lub za pomocą kompilatora C, wraz z biblioteki obiektów, które są tworzone przez bibliotekarza.  

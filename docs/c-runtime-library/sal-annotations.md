@@ -62,6 +62,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409387"
 ---
 # <a name="sal-annotations"></a>Adnotacje SAL
 Jeśli pliki nagłówków biblioteki należy zbadać, mogą pojawić się niektóre nietypowe adnotacje, na przykład `_In_z` i `_Out_z_cap_(_Size)`. Oto przykłady języka adnotacji kodu źródłowego firmy Microsoft (SAL), która zapewnia zbiór adnotacje do opisywania, jak funkcja wykorzystuje jego parametrów, na przykład założenia, które ułatwia o ich i gwarancji, który pozwala na zakończenie. Plik nagłówka \<sal.h > definiuje adnotacje.  

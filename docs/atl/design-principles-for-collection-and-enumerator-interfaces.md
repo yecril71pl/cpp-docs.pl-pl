@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354922"
 ---
 # <a name="design-principles-for-collection-and-enumerator-interfaces"></a>Zasady projektowania dla kolekcji i interfejsy modułu wyliczającego
 Istnieją zasady projektowania za każdego typu interfejsu:  

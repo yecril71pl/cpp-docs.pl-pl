@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423679"
 ---
 # <a name="namespaces-c"></a>Przestrzenie nazw (C++)
 Przestrzeń nazw jest deklaratywne region, który zawiera zakres identyfikatorów (nazwy typów, funkcji, zmienne, itp.) w nim. Przestrzenie nazw są używane do organizowania kodu w logiczne grupy i aby uniknąć konfliktów nazw, które mogą wystąpić, szczególnie w przypadku, gdy kodzie zawiera wiele bibliotek. Wszystkie identyfikatory w zakresie przestrzeni nazw są widoczne dla siebie bez kwalifikacji. Identyfikatory poza obszar nazw mogą uzyskiwać dostęp do elementów członkowskich przy użyciu w pełni kwalifikowanej nazwy dla każdego identyfikatora, na przykład `std::vector<std::string> vec;`, w przeciwnym razie przez [za pomocą deklaracji](../cpp/using-declaration.md) dla jednego identyfikatora (`using std::string`), lub [dyrektywa using](../cpp/namespaces-cpp.md#using_directives) dla wszystkich identyfikatorów w przestrzeni nazw (`using namespace std;`). Kod w nagłówku plików zawsze należy używać przestrzeni nazw w pełni kwalifikowanej nazwy.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412299"
 ---
 # <a name="algorithms-modern-c"></a>Algorytmy (Modern C++)
 Dla nowoczesnych programowania w języku C++, zalecane jest użycie algorytmów w [standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md). Oto kilka przykładów ważne:  

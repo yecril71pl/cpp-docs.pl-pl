@@ -50,6 +50,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32401441"
 ---
 # <a name="ftime-ftime32-ftime64"></a>_ftime, _ftime32, _ftime64
 
@@ -78,7 +79,7 @@ void _ftime64( struct __timeb64 *timeptr );
 |**Czas**|Czas w sekundach od północy (00: 00:00), 1 stycznia 1970, uniwersalny czas koordynowany (UTC).|
 |**Strefa czasowa**|Różnica (w minutach), przenoszenie westward, między czasem UTC i czasem lokalnym. Wartość **strefy czasowej** jest ustawiany na wartość zmiennej globalnej **_timezone** (zobacz **_tzset —**).|
 
-**_Ftime64 —** funkcji, która używa **__timeb64 —** struktury, umożliwia tworzenie plików daty wyrażane się za pośrednictwem 23:59:59 31 grudnia 3000 UTC; natomiast **_ftime32 —**tylko reprezentuje dat za pośrednictwem 23:59:59 18 stycznia 2038 r., UTC. Północy, 1 stycznia 1970 jest dolna granica zakresu dat dla tych funkcji.
+**_Ftime64 —** funkcji, która używa **__timeb64 —** struktury, umożliwia tworzenie plików daty wyrażane się za pośrednictwem 23:59:59 31 grudnia 3000 UTC; natomiast **_ftime32 —** tylko reprezentuje dat za pośrednictwem 23:59:59 18 stycznia 2038 r., UTC. Północy, 1 stycznia 1970 jest dolna granica zakresu dat dla tych funkcji.
 
 **_Ftime —** funkcji jest odpowiednikiem **_ftime64 —**, i **_timeb —** zawiera czas 64-bitowych, chyba że **_USE_32BIT_TIME_T** jest zdefiniowany w którym to przypadku stare zachowanie jest włączona; **_ftime —** używany czas 32-bitowe i **_timeb —** zawiera czas 32-bitowych.
 
