@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33278421"
 ---
 # <a name="compiler-warning-level-1-c4489"></a>Kompilator C4489 ostrzegawcze (poziom 1)
 "specyfikatora": niedozwolony dla metody interfejsu "method"; zastąpienie specyfikatory są dozwolone tylko dla metod klasy ref i klas wartości  
