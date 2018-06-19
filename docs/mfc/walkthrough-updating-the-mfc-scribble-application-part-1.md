@@ -70,7 +70,7 @@ W tym przewodniku przedstawiono sposób modyfikowania istniejącej aplikacji MFC
     class CScribbleApp: public CWinAppEx  
  ```  
   
-4.  Bazgrołów 1.0 zostały zapisane, gdy aplikacje systemu Windows używane plik inicjujący (*.ini) w celu zapisywania danych preferencji użytkownika. Zamiast pliku inicjującego zmodyfikować bazgrołów do przechowywania preferencji użytkownika w rejestrze. Aby ustawić klucz rejestru i podstawowej, wpisz następujący kod w `CScribbleApp::InitInstance` po `LoadStdProfileSettings()` instrukcji.  
+4.  Bazgrołów 1.0 zostały zapisane, gdy aplikacje systemu Windows używane plik inicjujący (.ini) w celu zapisywania danych preferencji użytkownika. Zamiast pliku inicjującego zmodyfikować bazgrołów do przechowywania preferencji użytkownika w rejestrze. Aby ustawić klucz rejestru i podstawowej, wpisz następujący kod w `CScribbleApp::InitInstance` po `LoadStdProfileSettings()` instrukcji.  
   
  ```  
     SetRegistryKey(_T("MFCNext\\Samples\\Scribble2"));
