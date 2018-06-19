@@ -326,6 +326,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378892"
 ---
 # <a name="cmfctoolbar-class"></a>Klasa CMFCToolBar
 `CMFCToolBar` Podobny klasy [ctoolbar — klasa](../../mfc/reference/ctoolbar-class.md), ale obsługuje dodatkowe funkcje interfejsu użytkownika. Te obejmują płaskie paski narzędzi paski narzędzi z gorących obrazów, duże ikony, przycisków modułu stronicowania, zablokowanym paski narzędzi, formanty paska pomocniczego, tekst, obrazy tła oraz z kartami pasków narzędzi. `CMFCToolBar` Klasa zawiera także wbudowaną obsługę użytkownika dostosowywanie pasków narzędzi i menu, przeciągnij i upuść między paski narzędzi i menu, przyciski pole kombi, edytowanie przycisków pola, próbników kolorów i zbiorcze przycisków.

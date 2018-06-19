@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846106"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Przenoszenie na platformę uniwersalną systemu Windows (C++)
 Informacje na temat portu istniejącego kodu C++ do platformy aplikacji systemu Windows 10, platformy uniwersalnej systemu Windows można znaleźć w tym temacie. Co oznacza termin *uniwersalnych* kodu mogą działać na dowolnym z urządzeń z systemem Windows 10, łącznie z pulpitu, telefonów, tabletów i przyszłości urządzenia z systemem Windows 10. Możesz utworzyć pojedynczego projektu i jeden interfejs użytkownika XAML base, który działa poprawnie na dowolnym urządzeniu z systemem Windows 10. Układ dynamiczny funkcji w języku XAML służy do zezwalania Interfejsie użytkownika aplikacji do dostosowania do rozmiarów ekranów.  

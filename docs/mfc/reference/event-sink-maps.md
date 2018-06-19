@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373931"
 ---
 # <a name="event-sink-maps"></a>Mapy wychwytywania zdarzeń
 Gdy osadzonego formantu OLE wyzwala zdarzenie, formantu kontenera odbiera zdarzenia przy użyciu mechanizmu, nazywany "sink mapę zdarzeń," dostarczonych przez MFC. Ta mapa obiekt sink zdarzenia Określa funkcje programu obsługi dla każdego konkretnego zdarzenia, a także parametry tych zdarzeń. Aby uzyskać więcej informacji dotyczących mapy wychwytywania zdarzeń, zobacz artykuł [kontenery formantów ActiveX](../../mfc/activex-control-containers.md).  

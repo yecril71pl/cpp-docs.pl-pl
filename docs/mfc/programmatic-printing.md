@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352838"
 ---
 # <a name="programmatic-printing"></a>Drukowanie programowe
 OLE podane środki do unikatowego identyfikowania trwałe dokumentów (**GetClassFile**) i załadować je do ich skojarzonego kodu (`CoCreateInstance`, **QueryInterface(IID_IPersistFile)**, **QueryInterface(IID_IPersistStorage)**, **IPersistFile::Load**, i **IPersistStorage::Load**). Aby umożliwić drukowanie dokumentów, zawieranie dokumentów aktywnych (przy użyciu istniejącego projektu OLE nie zostały wydane z OLE 2.0 pierwotnie) wprowadzono base standard interfejsu drukowania, `IPrint`, ogólnie dostępna za pośrednictwem wszystkich obiektów, które można załadować Stan trwały typu dokumentu. Każdy widok aktywnego dokumentu może opcjonalnie obsługiwać **iprint —** interfejsu zapewniają następujące możliwości.  

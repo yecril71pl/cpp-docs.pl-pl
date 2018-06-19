@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293757"
 ---
 # <a name="compiler-warning-level-4-c4460"></a>Kompilator C4460 ostrzegawcze (poziom 4)
 WinRT lub CLR operatora "operator", ma parametr przekazywany przez odwołanie. WinRT lub CLR operatora "operator" ma semantykę różną od operatora C++ "operator", czy zamierzasz przekazanie przez wartość?  

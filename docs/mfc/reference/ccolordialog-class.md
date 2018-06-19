@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357985"
 ---
 # <a name="ccolordialog-class"></a>Klasa CColorDialog
 Umożliwia włączenie okno dialogowe wybór kolorów do aplikacji.  

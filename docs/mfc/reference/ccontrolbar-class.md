@@ -59,6 +59,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356035"
 ---
 # <a name="ccontrolbar-class"></a>Ccontrolbar — klasa
 Klasa podstawowa dla klasy pasków sterowania [cstatusbar —](../../mfc/reference/cstatusbar-class.md), [ctoolbar —](../../mfc/reference/ctoolbar-class.md), [cdialogbar —](../../mfc/reference/cdialogbar-class.md), [crebar —](../../mfc/reference/crebar-class.md), i [ COleResizeBar](../../mfc/reference/coleresizebar-class.md).  

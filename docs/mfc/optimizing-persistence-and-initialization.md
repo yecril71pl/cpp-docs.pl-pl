@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355665"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>Optymalizacja stanu trwałego i inicjalizacji
 Domyślnie stanu trwałego i inicjalizacji w formancie są obsługiwane przez `DoPropExchange` funkcję elementu członkowskiego. W formancie typowe tej funkcji zawiera kilka wywołania **PX_** funkcje (`PX_Color`, `PX_Font`i tak dalej), po jednej dla każdej właściwości.  

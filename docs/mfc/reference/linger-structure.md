@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374347"
 ---
 # <a name="linger-structure"></a>Struktura LINGER
 `LINGER` Struktura jest używana do manipulowania **SO_LINGER** i **SO_DONTLINGER** opcji `CAsyncSocket::GetSockOpt`.  

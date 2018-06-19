@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349854"
 ---
 # <a name="rebar-controls-and-bands"></a>Formanty paska pomocniczego i paski
 Głównym celem formantu paska pomocniczego ma działać jako kontener dla okien podrzędnych, formanty standardowe okno dialogowe, menu, paski narzędzi i tak dalej. Zawieranie ten jest obsługiwany przez pojęcie "poza pasmem". Każdej grupy paska pomocniczego może zawierać dowolną kombinację pasek uchwytu, mapy bitowej etykietę tekstową i okna podrzędnego.  

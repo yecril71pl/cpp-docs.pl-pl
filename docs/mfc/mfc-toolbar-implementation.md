@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360969"
 ---
 # <a name="mfc-toolbar-implementation"></a>MFC — implementacja paska narzędzi
 Pasek narzędzi jest [pasek sterowania](../mfc/control-bars.md) zawierający obrazy mapy bitowej kontrolek. Tych obrazów, może zachowywać się jak przyciski, pola wyboru lub przycisków radiowych. Klasa dostarcza MFC [ctoolbar —](../mfc/reference/ctoolbar-class.md) do zarządzania pasków narzędzi.  

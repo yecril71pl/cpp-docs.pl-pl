@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379986"
 ---
 # <a name="setting-the-dialog-boxs-background-color"></a>Ustawianie koloru tła okna dialogowego
 Można ustawić kolor tła z okien dialogowych Obsługa `WM_CTLCOLOR` wiadomości dla okna okno dialogowe. Kolor, który ustawiono jest używany tylko określonego okna dialogowego.  

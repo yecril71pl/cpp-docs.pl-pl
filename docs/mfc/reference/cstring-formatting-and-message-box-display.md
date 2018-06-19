@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375043"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>Formatowanie obiektu CString i wyświetlanie okna komunikatu
 Wiele funkcji służą do formatowania i przeanalizować `CString` obiektów. Zawsze do manipulowania można używać tych funkcji `CString` obiektów, ale są szczególnie użyteczne w przypadku formatowanie ciągów, które będą wyświetlane w oknie komunikatu tekstu.  

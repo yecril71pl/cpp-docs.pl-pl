@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357562"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>Kontrolki ActiveX MFC: dodawanie właściwości standardowych
 Właściwości podstawowe różnią się od właściwości niestandardowe, są one już zaimplementowany przez klasę `COleControl`. `COleControl` zawiera funkcje wstępnie zdefiniowanego elementu członkowskiego, które obsługuje wspólne właściwości formantu. Niektóre typowe właściwości obejmują Podpis formantu i kolory pierwszego planu i tła. Uzyskać informacji o innych właściwości podstawowych, zobacz [giełdowych właściwości obsługiwane przez Kreatora dodawania właściwości](#_core_stock_properties_supported_by_classwizard) dalszej części tego artykułu. Wpisy mapy wysyłania dla właściwości podstawowe są zawsze poprzedzone **DISP_STOCKPROP**.  

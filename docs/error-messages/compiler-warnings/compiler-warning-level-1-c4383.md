@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286087"
 ---
 # <a name="compiler-warning-level-1-c4383"></a>Kompilator C4383 ostrzegawcze (poziom 1)
 "instance_dereference_operator": znaczenie usunięcia odwołania do dojścia można zmienić, gdy istnieje operatora zdefiniowanej przez użytkownika "operator'; Zapisz operator jako funkcję statyczną aby była niejawna przy korzystaniu z operandu  

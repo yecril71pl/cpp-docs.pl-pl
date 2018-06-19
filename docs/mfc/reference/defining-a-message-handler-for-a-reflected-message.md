@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373172"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>Definiowanie obsługi komunikatów dla komunikatów odbitych
 Po utworzeniu nowej klasie formantów MFC można zdefiniować dla niego obsługi komunikatów. Programy obsługi komunikatów odbitych Zezwalaj Twojej klasy kontrolki do obsługi własnych wiadomości, zanim komunikat jest odbierany przez element nadrzędny. Można używać MFC [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) funkcja do wysyłania wiadomości z formantu do okna nadrzędnego.  

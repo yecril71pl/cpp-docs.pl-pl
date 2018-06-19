@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689379"
 ---
 # <a name="2727-copyin"></a>2.7.2.7 kopiowanie
 **Copyin** klauzuli zapewnia mechanizm można przypisać tę samą wartość na **threadprivate** zmienne dla każdego wątku w zespole wykonywania równoległego regionu. Dla każdej zmiennej określonej w **copyin** klauzuli, wartość zmiennej w głównym wątku zespołu jest kopiowany tak, jakby przez przypisanie do kopii prywatnego wątku na początku równoległego regionu. Składnia **copyin** klauzuli wygląda następująco:  

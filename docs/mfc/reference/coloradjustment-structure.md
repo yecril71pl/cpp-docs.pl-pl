@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369967"
 ---
 # <a name="coloradjustment-structure"></a>Struktura COLORADJUSTMENT
 `COLORADJUSTMENT` Struktury definiuje wartości dostosowania kolorów, które są używane przez system Windows `StretchBlt` i **StretchDIBits** funkcji podczas `StretchBlt` jest tryb **PÓŁTONÓW**.  

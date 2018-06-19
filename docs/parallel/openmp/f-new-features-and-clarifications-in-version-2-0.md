@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693146"
 ---
 # <a name="f-new-features-and-clarifications-in-version-20"></a>F. Nowe funkcje i wyjaśnienia w wersji 2.0
 Ten dodatek zawiera podsumowanie klucza zmiany wprowadzone w specyfikacji OpenMP C/C++ podczas przenoszenia z wersji 1.0 w wersji 2.0. Nowe funkcje dodane w specyfikacji są następujące elementy:  

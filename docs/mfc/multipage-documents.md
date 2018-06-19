@@ -40,6 +40,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355275"
 ---
 # <a name="multipage-documents"></a>Dokumenty wielostronicowe
 W tym artykule opisano protokół drukowania systemu Windows oraz wyjaśniono, jak dokumentów zawierających więcej niż jedną stronę. Artykuł obejmuje następujące tematy:  

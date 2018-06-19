@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345797"
 ---
 # <a name="document-template-creation"></a>Tworzenie szablonu dokumentu
 Podczas tworzenia nowego dokumentu w odpowiedzi na `New` lub **Otwórz** polecenie **pliku** menu szablonu dokumentu również tworzy nowe okno ramowe za pośrednictwem której można wyświetlić dokument.  

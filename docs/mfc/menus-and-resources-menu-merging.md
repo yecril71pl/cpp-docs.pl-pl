@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351969"
 ---
 # <a name="menus-and-resources-menu-merging"></a>Menu i zasoby: scalanie menu
 W tym artykule szczegółowo kroki niezbędne do dokumenty i aplikacje OLE do obsługi edycji i aktywacja w miejscu poprawnie. Aktywacja w miejscu stanowi wyzwanie dla kontenera i serwera aplikacji (składnik). Użytkownik pozostaje w tym samym oknie ramki (w kontekście kontenerem), ale jest uruchomiona inna aplikacja (serwer). Wymaga to koordynację między zasobami kontenera i serwera aplikacji.  

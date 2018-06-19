@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375213"
 ---
 # <a name="logbrush-structure"></a>Struktura LOGBRUSH
 `LOGBRUSH` Struktury definiuje styl, kolor i wzorzec fizycznych pędzla. Jest on używany przez system Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487) i [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705) funkcji.  

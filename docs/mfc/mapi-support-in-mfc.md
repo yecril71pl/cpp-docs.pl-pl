@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349665"
 ---
 # <a name="mapi-support-in-mfc"></a>Obsługa MAPI w MFC
 Obsługa podzbioru firmy Microsoft do obsługi komunikatów aplikacji Program interfejsu (MAPI) w klasie dostarcza MFC **CDocument**. W szczególności **CDocument** ma funkcje Członkowskie, które określają, czy obsługa poczty jest obecny na komputerze użytkownika końcowego, a jeśli tak, włącz polecenie Wyślij pocztę o identyfikatorze standardowego polecenia **ID_FILE_SEND_MAIL**. Funkcja Obsługa MFC dla tego polecenia umożliwia użytkownikowi wysłać dokument pocztą e-mail.  

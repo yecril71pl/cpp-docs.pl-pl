@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376561"
 ---
 # <a name="property-pages-mfc"></a>Strony właściwości (MFC)
 Strony właściwości Wyświetl bieżące wartości właściwości specyficzne dla formantu OLE w można dostosowywać, interfejs graficzny służący do wyświetlania i edytowania dzięki obsłudze mechanizm mapowanie danych oparte na wymiana danych okna dialogowego (DDX).  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344516"
 ---
 # <a name="creating-the-header-control"></a>Tworzenie formantu nagłówka
 Formantu nagłówka nie jest bezpośrednio dostępny w edytorze okien dialogowych (mimo że można dodać kontrolkę listy, w tym formancie nagłówka).  

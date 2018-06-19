@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373801"
 ---
 # <a name="user-interface-features-mfc-application-wizard"></a>Funkcje interfejsu użytkownika, kreator aplikacji MFC
 W tym temacie opisano opcje używane do określania wyglądu aplikacji. Funkcje interfejsu użytkownika dostępne dla projektu są zależne od typu aplikacji określonej w [typ aplikacji, Kreator aplikacji MFC](../../mfc/reference/application-type-mfc-application-wizard.md) Kreatora aplikacji MFC. Na przykład można utworzyć aplikację interfejsu pojedynczego dokumentu, nie można dodać style ramki podrzędnych.  

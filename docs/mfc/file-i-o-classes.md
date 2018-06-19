@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356189"
 ---
 # <a name="file-io-classes"></a>Klasy we/wy plików
 Te klasy zapewnia interfejs do plików dysku tradycyjnych, pliki w pamięci Active strumieni i Windows sockets. Wszystkie klasy pochodne `CFile` mogą być używane z `CArchive` obiektu w celu wykonania serializacji.  

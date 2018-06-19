@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354904"
 ---
 # <a name="idle-loop-processing"></a>Przetwarzanie pętli bezczynności
 Wiele aplikacji przetwarzania długich "w"tle. Zagadnienia dotyczące wydajności dyktowania czasami przy użyciu wielowątkowość dla tych działań. Wątków obejmują programowanie dodatkowe obciążenie, więc nie są zalecane do prostych zadań, takich jak pracy czas bezczynności, który wykonuje MFC w [OnIdle](../mfc/reference/cwinthread-class.md#onidle) funkcji. Ten artykuł skupia się na przetwarzanie w stanie bezczynności. Aby uzyskać więcej informacji o wielowątkowości, zobacz [wielowątkowość tematy](../parallel/multithreading-support-for-older-code-visual-cpp.md).  

@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355142"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>Kontrolki ActiveX MFC: używanie czcionek
 Jeśli formant ActiveX jest wyświetlany tekst, można zezwolić użytkownikowi kontroli Zmienianie wyglądu tekstu, zmieniając właściwość czcionki. Właściwości czcionki są zaimplementowane jako obiekty czcionki i może być jedna z dwóch typów: standardowych lub niestandardowych. Właściwości podstawowe czcionki są właściwości preimplemented czcionki, które można dodać za pomocą Kreatora dodawania właściwości. Właściwości niestandardowe czcionki nie są preimplemented i dewelopera kontrolek określa zachowanie i użycia właściwości.  

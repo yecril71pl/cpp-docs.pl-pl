@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379193"
 ---
 # <a name="scrolling-arranging-sorting-and-finding-in-list-controls"></a>Przewijanie, porządkowanie, sortowanie i znajdowanie w kontrolkach listy
 Formanty listy ([CListCtrl](../mfc/reference/clistctrl-class.md)) są przewijanego domyślnie. Aby uzyskać więcej informacji, zobacz [pozycji przewijania](http://msdn.microsoft.com/library/windows/desktop/bb774736) w zestawie Windows SDK i [przewijania](../mfc/reference/clistctrl-class.md#scroll) funkcję elementu członkowskiego.  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367454"
 ---
 # <a name="cmfcdesktopalertwndinfo-class"></a>Klasa CMFCDesktopAlertWndInfo
 `CMFCDesktopAlertWndInfo` Klasa jest używana z [CMFCDesktopAlertWnd klasy](../../mfc/reference/cmfcdesktopalertwnd-class.md). Określa formantów, które są wyświetlane, gdy pulpitu alertu wyświetlone okno podręczne.  

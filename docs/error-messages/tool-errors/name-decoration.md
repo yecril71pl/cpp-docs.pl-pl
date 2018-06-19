@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323303"
 ---
 # <a name="name-decoration"></a>Nazwij dekorację
 Nazwij dekorację zazwyczaj odwołuje się do konwencji nazewnictwa C++, ale można stosować do liczby przypadków C również. Domyślnie C++ używa nazwy funkcji, parametry oraz zwracany typ utworzyć konsolidatora nazwy funkcji. Należy wziąć pod uwagę następujących funkcji:  

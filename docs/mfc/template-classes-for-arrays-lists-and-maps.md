@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380256"
 ---
 # <a name="template-classes-for-arrays-lists-and-maps"></a>Klasy szablonów dla tablic, list i map
 Te klasy kolekcji są szablony, w której parametry określić typy obiektów przechowywanych w agregacji. `CArray`, `CMap`, I `CList` klasy za pomocą funkcji pomocnika globalne, które zwykle można dostosować. Aby uzyskać więcej informacji o tych funkcjach pomocnika, zobacz [pomocnicy klasy kolekcji](../mfc/reference/collection-class-helpers.md). Klasy typizowaną wskaźnika są otoki dla innych klas w bibliotece klas. Za pomocą tych otoki, możesz zarejestrować się przez kompilator typu sprawdzania pozwala uniknąć błędów. Aby uzyskać więcej informacji na temat używania tych klas, zobacz [kolekcji](../mfc/collections.md).  

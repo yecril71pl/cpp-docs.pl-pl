@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345048"
 ---
 # <a name="handling-the-apply-button"></a>Obsługa przycisku Zastosuj
 Arkusze właściwości mają możliwość, która nie w standardowych oknach dialogowych: umożliwiają one użytkownika zastosować zmiany wprowadzone przed zamknięciem arkusza właściwości. Jest to realizowane za pomocą przycisku Zastosuj. W tym artykule omówiono metody, których można użyć, aby prawidłowo zaimplementować tę funkcję.  

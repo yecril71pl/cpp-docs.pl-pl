@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355440"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Kontrolki ActiveX MFC: tworzenie podklasy kontrolki okna
 W tym artykule opisano proces Tworzenie podklasy formantu wspólnego systemu Windows można utworzyć formantu ActiveX. Tworzenie podklas istniejącymi systemu Windows formant jest szybkie opracowywanie formantu ActiveX. Nowe kontrolka będzie miała możliwości podklasą kontrolki systemu Windows, takich jak malowanie i odpowiadanie na kliknięcia myszą. Przykładowe kontrolki MFC ActiveX [przycisk](../visual-cpp-samples.md) przykładem Tworzenie podklasy kontrolki systemu Windows.  

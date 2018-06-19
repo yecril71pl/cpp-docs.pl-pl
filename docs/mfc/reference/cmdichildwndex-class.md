@@ -127,6 +127,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377626"
 ---
 # <a name="cmdichildwndex-class"></a>Klasa CMDIChildWndEx
 `CMDIChildWndEx` Klasa udostępnia funkcje systemu Windows wiele okien podrzędnych interfejsu (MDI) dokumentu. Rozszerza funkcjonalność [cmdichildwnd — klasa](../../mfc/reference/cmdichildwnd-class.md). Framework wymaga tej klasy, gdy aplikacja MDI używa niektórych klas MFC.  

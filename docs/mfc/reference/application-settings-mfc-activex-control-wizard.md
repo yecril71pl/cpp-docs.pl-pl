@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351605"
 ---
 # <a name="application-settings-mfc-activex-control-wizard"></a>Ustawienia aplikacji, kreator kontrolek ActiveX MFC
 Użyj tej strony Kreator kontrolek ActiveX MFC do projektowania i dodać podstawowe funkcje do nowego projektu MFC ActiveX. Te ustawienia mają zastosowanie do aplikacji, a nie do określonych funkcji ani elementu formantu.  

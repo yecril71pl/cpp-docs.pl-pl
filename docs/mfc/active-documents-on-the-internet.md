@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334889"
 ---
 # <a name="active-documents-on-the-internet"></a>Dokumenty aktywne w Internecie
 Dokumenty aktywne zapewniają rozszerzenie do tradycyjnych osadzonych obiektów. Dokumenty aktywne może być wielostronicowe i są wyświetlane w obszarze klienckim. Czy negocjacji tradycyjnych menu i może być edytowany w miejscu, a także w otwartym oknie w aplikacji serwera. Zamiast jako mały prostokąt otoczone obramowaniem kreskowanym dokumenty aktywne są ramki pełnego i zawsze aktywny w miejscu.  

@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373080"
 ---
 # <a name="cnetaddressctrl-class"></a>Klasa CNetAddressCtrl
 `CNetAddressCtrl` Klasa reprezentuje kontroli adres sieci, które służy do danych wejściowych i sprawdzania poprawności w formacie IPv4, IPv6 i adresów o nazwie DNS.  

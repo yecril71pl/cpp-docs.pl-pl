@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374438"
 ---
 # <a name="crecentdocksiteinfo-class"></a>Klasa CRecentDockSiteInfo
 `CRecentDockSiteInfo` Klasy to klasa pomocy, która przechowuje najnowsze informacje o stanie [CPane klasy](../../mfc/reference/cpane-class.md).  

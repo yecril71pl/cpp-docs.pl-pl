@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688118"
 ---
 # <a name="3-run-time-library-functions"></a>3. Funkcje biblioteki wykonawczej
 W tej sekcji opisano funkcje biblioteki czasu wykonywania Openmpc i C++. Nagłówek  **\<omp.h >** deklaruje dwa typy, niektóre funkcje, które mogą służyć do kontrolowania i środowiska równoległego wykonywania zapytań i zablokować funkcje, które mogą służyć do synchronizowania dostęp do danych.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341674"
 ---
 # <a name="application-framework"></a>Struktura aplikacji
 Podstawowe biblioteki Microsoft Foundation Class (MFC) jest hermetyzacji duża część interfejsu API systemu Windows w postaci C++. Biblioteka klas reprezentują systemu windows, okna dialogowe, konteksty urządzenia wspólnego interfejsu GDI obiekty, takie jak pędzle i pióra, formanty i inne elementy standardowe systemu Windows. Zapewnić wygodny sposób tych klas C++ element członkowski funkcji interfejsu do struktur w systemie Windows, który one Hermetyzowanie. Aby uzyskać więcej informacji o korzystaniu z tych klas, zobacz [tematy obiektu okna](../mfc/window-objects.md).  

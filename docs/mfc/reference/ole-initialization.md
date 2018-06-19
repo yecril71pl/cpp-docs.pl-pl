@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374727"
 ---
 # <a name="ole-initialization"></a>Inicjalizacja OLE
 Zanim aplikacji można użyć usług systemowych OLE, musi zainicjować OLE systemowej biblioteki dll i sprawdź, czy są zainstalowane poprawne wersje bibliotek DLL. **Afxoleinit —** funkcja inicjuje OLE systemowej biblioteki dll.  

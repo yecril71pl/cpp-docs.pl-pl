@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281645"
 ---
 # <a name="compiler-warning-level-1-c4436"></a>Kompilator C4436 ostrzegawcze (poziom 1)
 dynamic_cast z wirtualnej podstawowej "class1" do "class2" w konstruktorze lub destruktorze może zakończyć się niepowodzeniem z częściowo skonstruowanym obiektem kompilacji z opcją/vd2 lub zdefiniować "class2" z #pragma vtordisp(2) w celu  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33696126"
 ---
 # <a name="improperschedulerdetach-class"></a>improper_scheduler_detach — Klasa
 Ta klasa opisuje wyjątek wywoływany, gdy `CurrentScheduler::Detach` metoda jest wywoływana w kontekście, który nie został dołączony do dowolnego harmonogramu przy użyciu `Attach` metody `Scheduler` obiektu.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692655"
 ---
 # <a name="271-threadprivate-directive"></a>2.7.1 Dyrektywa dotycząca prywatnego wątku
 `threadprivate` Dyrektywy sprawia, że nazwany zakres pliku, zakresie przestrzeni nazw lub zmienne statyczne zakresie bloku określone w *zmiennej listy* prywatnych do wątku. *Zmienna listy* rozdzielaną przecinkami listę zmiennych, które nie mają niekompletnego typu. Składnia `threadprivate` dyrektywy wygląda następująco:  

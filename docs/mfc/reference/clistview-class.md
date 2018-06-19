@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366346"
 ---
 # <a name="clistview-class"></a>Clistview — klasa
 Użycie formantu listy, upraszcza [CListCtrl](../../mfc/reference/clistctrl-class.md), klasy, która hermetyzuje funkcjonalność formant listy, o architekturze dokument widok MFC.  

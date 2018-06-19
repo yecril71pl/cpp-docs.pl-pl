@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33843551"
 ---
 # <a name="include-directive-cc"></a>#include — dyrektywa (C/C++)
 Określa, że na traktowanie zawartość określonego pliku, tak jakby pojawią się one w programie źródłowym w momencie, w którym pojawi się dyrektywy preprocesora.  

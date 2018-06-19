@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341449"
 ---
 # <a name="containers-for-activex-controls"></a>Kontenery dla kontrolek ActiveX
 Kontrolki ActiveX opracowane w programie Visual C++ w innych aplikacjach, można użyć tak długo, jak obsługuje zawierania formantów ActiveX. Liczba aplikacji firmy Microsoft, począwszy od wersji na liście, obsługuje zawierania formantów ActiveX.  

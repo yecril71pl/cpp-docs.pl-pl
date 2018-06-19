@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374526"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Tworzenie aplikacji MFC w stylu przeglądarki sieci Web
 Do aplikacji w stylu przeglądarki sieci Web ma dostęp do informacji z Internetu (na przykład HTML lub aktywne dokumenty) lub intranet, jak również folderów w lokalnym systemie plików, a w sieci. Przez wyprowadzanie klasy widoku aplikacji z [CHtmlView](../../mfc/reference/chtmlview-class.md), efektywnie ułatwić przeglądarki sieci Web aplikacji, zapewniając widoku za pomocą formantu WebBrowser.  

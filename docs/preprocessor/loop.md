@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846535"
 ---
 # <a name="loop"></a>pętla
 Określa, jak kod pętli jest uważany za zrównoleglenia automatycznego i/lub wyklucza pętlę pod uwagę przez wektoryzowania automatycznego.  

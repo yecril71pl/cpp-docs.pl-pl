@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687455"
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>Używanie wyrażeń lambda, obiektów Function i funkcji z ograniczeniami
 Kod C++ AMP, który ma zostać uruchomione na akceleratora jest określony jako argument w wywołaniu [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) metody. Wyrażenia lambda lub obiektem funkcji (obiekt) można podać jako tego argumentu. Ponadto obiektu lambda wyrażenia lub funkcję można wywołać funkcji ograniczonej przez AMP C++. W tym temacie używa nieobsługiwanego algorytmu dodanie macierzy do zaprezentowania wyrażeń lambda, obiektów function i funkcji z ograniczeniami. W poniższym przykładzie przedstawiono algorytm bez kodu C++ AMP. Są tworzone dwa tablic wielowymiarowych 1 o równej długości. Odpowiednie elementy całkowitą są dodawane i przechowywane w trzecim 1-wymiarową tablicą. C++ AMP nie jest używany.  

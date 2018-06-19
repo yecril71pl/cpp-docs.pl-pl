@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275379"
 ---
 # <a name="compiler-warning-level-1-c4005"></a>Kompilator C4005 ostrzegawcze (poziom 1)
 "identyfikator": zmiana definicji makra  

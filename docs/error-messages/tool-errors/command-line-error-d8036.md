@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299965"
 ---
 # <a name="command-line-error-d8036"></a>Błąd D8036 wiersza polecenia
 "/ opcja" nie jest dozwolony z wieloma plikami źródłowymi  

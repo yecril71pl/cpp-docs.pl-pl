@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353631"
 ---
 # <a name="ole-in-mfc"></a>OLE w MFC
 Artykuły te wyjaśniają zasady podstawy programowania OLE za pomocą MFC. MFC zapewnia Najprostszym sposobem pisania programów, które używają OLE:  

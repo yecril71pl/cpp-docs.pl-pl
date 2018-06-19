@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686542"
 ---
 # <a name="a11---specifying-a-fixed-number-of-threads"></a>A.11   Określanie stałej liczby wątków
 Niektóre programy polegają na stałe, prespecified liczbę wątków wykonane nieprawidłowo.  Ustawieniem domyślnym dynamiczne Dostosowywanie to liczba wątków jest zdefiniowane w implementacji, programów, które można wyłączyć możliwość dynamicznego wątków i ustaw liczbę wątków jawnie zapewniające przenośność. Poniższy przykład pokazuje, jak to zrobić przy użyciu `omp_set_dynamic` ([sekcji 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) na stronie 39), i `omp_set_num_threads` ([sekcji 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) na stronie 36):  

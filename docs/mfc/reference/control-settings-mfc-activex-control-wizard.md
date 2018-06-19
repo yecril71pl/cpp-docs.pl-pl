@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371865"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>Ustawienia kontrolki, kreator kontrolek ActiveX MFC
 Ta strona kreatora można określić sposób formantu ma zachowywać się. Można na przykład podstawowa formantu na standardowe typy formantów systemu Windows, zoptymalizować jego działanie i wygląd lub wskazują, że formant może działać jako kontener dla innych formantów.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336602"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Komunikaty wektoryzatora i paralelizatora
 Można użyć opcji kompilatora Visual C++ [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) i [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) można ustawić [automatyczna Paralelizacja i Wektoryzacja](../../parallel/auto-parallelization-and-auto-vectorization.md) do kody przyczyn danych wyjściowych i komunikaty informacyjne o jego działaniu. Ten artykuł wyjaśnia kody przyczyn i komunikaty.  

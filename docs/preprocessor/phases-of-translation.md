@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33842771"
 ---
 # <a name="phases-of-translation"></a>Fazy tłumaczenia
 Programy C i C++ składają się z jednego lub więcej plików źródłowych, z których każdy zawiera część tekstu programu. Plik źródłowy, wraz z dołączonymi plikami (plikami dołączonymi za pomocą dyrektywy preprocesora `#include`), ale bez sekcji kodu usuniętych przez dyrektywy kompilacji warunkowej takie jak `#if`, nosi nazwę „jednostki translacji”.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366128"
 ---
 # <a name="classes-and-functions-generated-by-the-mfc-dll-wizard"></a>Klasy i funkcje generowane przez kreatora biblioteki MFC DLL
 Kod, który generuje Kreator biblioteki DLL MFC zależy od typu biblioteki DLL są tworzone i wybranych opcji. Kreator biblioteki DLL MFC generuje ten sam kod dla obu rodzajów regularne biblioteki DLL MFC.  

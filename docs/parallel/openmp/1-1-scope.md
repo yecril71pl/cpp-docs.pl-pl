@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686805"
 ---
 # <a name="11-scope"></a>1.1 Zakres
 Określenie tej wartości obejmuje tylko przekierowywany użytkownik paralelizacja, w którym użytkownik jawnie określa akcje podejmowane przez kompilator i środowiska wykonawczego systemu w celu wykonania programu równolegle. Implementacje Openmpc i C++ nie są wymagane do sprawdzenia zależności konflikty, zakleszczenie, wyścigu lub innych problemów, które powoduje wykonanie programu niepoprawne. Użytkownik jest odpowiedzialny za egzekwowanie poprawnie wykonuje aplikacji przy użyciu konstrukcji Openmpc i C++ interfejsu API. W tym dokumencie nie są objęte generowane przez kompilator automatyczna paralelizacja i dyrektywy kompilatora ułatwiających takich paralelizacja.

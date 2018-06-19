@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694943"
 ---
 # <a name="d-using-the-schedule-clause"></a>D. Zgodnie z harmonogramem — klauzula
 Równoległego regionu ma co najmniej jeden bariery na jej końcu i mogą mieć dodatkowe bariery w niej. W każdej bariery ostatni wątek odebranie należy poczekać innych członków zespołu. Aby zminimalizować czas oczekiwania, pracy udostępniony powinien zostać przekazany tak, aby wszystkie wątki przyjeździe zapory w o tym samym czasie. Jeśli niektóre z udostępnionego pracy jest zawarta w **dla** konstrukcje, `schedule` klauzuli może służyć do tego celu.  

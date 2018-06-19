@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379245"
 ---
 # <a name="rubber-banding-and-trackers"></a>Gumka i trackery
 Inna funkcja dostarczony wraz z trackerów jest wybór "gumki", który umożliwia użytkownikowi wybranie wielu elementów OLE przez przeciągnięcie prostokąta zmiany rozmiaru wokół elementów, które można wybrać. Gdy użytkownik zwalnia lewego przycisku myszy, elementy w obrębie regionu wybrane przez użytkownika są zaznaczone i może manipulować przez użytkownika. Użytkownik może na przykład, przeciągnij zaznaczenie do innej aplikacji kontenera.  

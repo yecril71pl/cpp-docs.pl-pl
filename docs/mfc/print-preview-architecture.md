@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353989"
 ---
 # <a name="print-preview-architecture"></a>Architektura podglądu wydruku
 W tym artykule opisano, jak MFC framework implementuje funkcje podglądu wydruku. Tematy obejmują:  

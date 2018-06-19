@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344783"
 ---
 # <a name="drawing-and-printing-classes"></a>Klasy związane z rysowaniem i drukowaniem
 W systemie Windows wszystkie graficzne dane wyjściowe jest rysowana na obszar rysowania wirtualny o nazwie kontekstu urządzenia (DC). MFC udostępnia klasy do Hermetyzowanie różnych typów kontrolerów domeny, a także encapsulations rysowania narzędzi systemu Windows, takich jak mapy bitowe, pędzle palety i pióra.  

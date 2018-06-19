@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354092"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>Kontrolki ActiveX MFC: malowanie kontrolki ActiveX
 W tym artykule opisano proces malowanie formantu ActiveX i jak można zmienić kod farby, aby zoptymalizować proces. (Zobacz [Optymalizacja rysowania kontroli](../mfc/optimizing-control-drawing.md) dla techniki dotyczące optymalizacji rysunku, ponieważ nie ma pojedynczych formantów Przywróć wcześniej wybrane obiekty GDI. Po zostały wystawione wszystkie formanty, kontener może automatycznie Przywracanie oryginalnych obiektów.)  

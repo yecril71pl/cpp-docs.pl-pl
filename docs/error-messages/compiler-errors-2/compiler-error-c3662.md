@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265912"
 ---
 # <a name="compiler-error-c3662"></a>C3662 błąd kompilatora
 "członek": specyfikator przesłonięcia "specyfikatora" dozwolone tylko dla funkcji Członkowskich zarządzane lub klasach WinRT  

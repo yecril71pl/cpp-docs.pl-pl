@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687982"
 ---
 # <a name="asynchronous-agents"></a>Agenci asynchroniczni
 *Asynchroniczne agenta* (lub po prostu *agenta*) to składnik aplikacji asynchronicznie współpracuje z innymi czynnikami rozwiązać większych zadań. Agenta można traktować jako zadanie, które ma ustawione cyklu życia. Na przykład jeden agent może odczytać danych z urządzenia wejścia/wyjścia (na przykład klawiatura, plik na dysku lub połączenie sieciowe) i innego agenta może wykonać akcję na tych danych po jej udostępnieniu. Pierwszy agent używa przekazywanie komunikatów do agenta drugiego informuje, że dostępnych jest więcej danych. Współbieżność środowiska wykonawczego harmonogram zadań zapewnia mechanizm wydajne umożliwiające agentów zablokować, a także uzyskanie wspólnie bez konieczności wywłaszczanie mniej wydajne.  

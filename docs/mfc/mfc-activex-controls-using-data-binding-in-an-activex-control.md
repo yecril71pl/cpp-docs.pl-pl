@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353276"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Kontrolki ActiveX MFC: używanie powiązania danych w kontrolce ActiveX
 Jest jednym z bardziej zaawansowanych zastosowań kontrolki ActiveX powiązania danych, dzięki czemu właściwości formantu można powiązać z określonego pola w bazie danych. Gdy użytkownik modyfikuje danych w tej właściwości powiązanej, formantu powiadamia bazy danych i żądań, że można zaktualizować pola rekordu. Bazy danych jest następnie powiadamia formantu powodzenie lub Niepowodzenie żądania.  

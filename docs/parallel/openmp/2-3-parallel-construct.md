@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692752"
 ---
 # <a name="23-parallel-construct"></a>2.3 Konstrukcja równoległa
 Następujące dyrektywa definiuje równoległego regionu to region program, który ma być wykonane przez wiele wątków jednocześnie. Jest to konstrukcja podstawowych, która rozpoczyna się wykonywanie równoległe.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355044"
 ---
 # <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>Kontenery kontrolek ActiveX: programowanie kontrolek ActiveX w kontenerze kontrolek ActiveX
 W tym artykule opisano proces do uzyskiwania dostępu do narażonych [metody](../mfc/mfc-activex-controls-methods.md) i [właściwości](../mfc/mfc-activex-controls-properties.md) osadzonych formantów ActiveX. Zasadniczo spowoduje wykonaj następujące kroki:  

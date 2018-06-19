@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342910"
 ---
 # <a name="month-calendar-control-examples"></a>Przykłady formantów kalendarza miesięcznego
 [CMNCTRL1](../visual-cpp-samples.md) aplikację przykładową przedstawiono różne atrybuty `CMonthCalCtrl` klasy. Formant na osobnej karcie w przykładzie przedstawiono podstawowe funkcje i umożliwia użytkownikowi dynamicznie zmodyfikować niektóre atrybuty.  

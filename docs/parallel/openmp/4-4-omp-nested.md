@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690273"
 ---
 # <a name="44-ompnested"></a>4.4 OMP_NESTED
 `OMP_NESTED` Zmiennej środowiskowej Włącza lub wyłącza zagnieżdżonych równoległości, chyba że zagnieżdżonych równoległości jest włączone lub wyłączone przez wywołanie metody `o` **mp_set_nested** procedury biblioteki. Jeśli ustawioną **TRUE**, zagnieżdżonych równoległości jest włączone; jeśli wartość jest ustawiona na **FALSE**, zagnieżdżonych równoległości jest wyłączona. Wartość domyślna to **FALSE**.  

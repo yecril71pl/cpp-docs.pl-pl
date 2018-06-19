@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317323"
 ---
 # <a name="profile-guided-optimization-errors-and-warnings"></a>Optymalizacja sterowana profilem — Błędy i ostrzeżenia
 Ta sekcja jest odniesieniem do błędów generowanych przez narzędzia kompilacji. Aby uzyskać pomoc dotyczącą danego komunikatu o błędzie, albo kliknij przycisk numer błędu w oknie danych wyjściowych i naciśnij klawisz F1, wpisz numer błędu w **Wyszukaj** pola w indeksie, lub kliknij odpowiednie łącze:  

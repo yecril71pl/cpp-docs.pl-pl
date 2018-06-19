@@ -60,6 +60,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378972"
 ---
 # <a name="record-field-exchange-functions"></a>Funkcje wymiany pól rekordów
 W tym temacie wymieniono wymiana pól rekordów (RFX RFX zbiorcze i DFX) funkcje używane do automatyzowania transferu danych między obiektem zestawu rekordów a źródłem danych i wykonywać inne operacje na danych.  

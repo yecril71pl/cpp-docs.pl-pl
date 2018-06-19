@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342982"
 ---
 # <a name="data-objects-and-data-sources-ole"></a>Obiekty danych i źródła danych (OLE)
 Podczas przeprowadzania transferu danych za pomocą Schowka lub przeciągania i upuszczania, dane mają źródłowym i docelowym. Co aplikacja udostępnia dane do kopiowania i inna aplikacja akceptuje on wklejania. Każdej strony przeniesienia musi wykonywać różne operacje na tych samych danych do przeniesienia powiodło się. Biblioteka Microsoft Foundation Class (MFC) zapewnia dwie klasy reprezentujące każdej strony to przeniesienie:  

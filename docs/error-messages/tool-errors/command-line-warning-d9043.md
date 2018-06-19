@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294752"
 ---
 # <a name="command-line-warning-d9043"></a>Ostrzeżenie D9043 dla wiersza polecenia
 Nieprawidłowa wartość 'warning_level' dla 'compiler_option'; przy założeniu '4999'; Ostrzeżenia analizy kodu nie są skojarzone z poziomami ostrzeżeń  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320223"
 ---
 # <a name="project-build-warning-prj0029"></a>Ostrzeżenie PRJ0029 dotyczące kompilacji projektu
 Nie ustawiono właściwość 'Wyniki' dla projektów na poziomie niestandardowego kroku kompilacji. Niestandardowy krok kompilacji będzie pominięty.  
