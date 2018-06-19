@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382786"
 ---
 # <a name="c-string-literals"></a>Literały ciągu języka C
 "Literału ciągu" jest sekwencji znaków z zestawu ujęty w podwójnym cudzysłowie znaków źródła (**""**). Literały ciągu są używane do reprezentowania sekwencji znaków, które, razem tworzą ciąg znaków zakończony znakiem null. Należy zawsze prefiksu całej literały z literą **L**.  

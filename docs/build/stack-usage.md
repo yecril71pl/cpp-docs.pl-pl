@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379861"
 ---
 # <a name="stack-usage"></a>Wykorzystanie stosu
 Cała pamięć poza bieżący adres źródło jest uznawany za volatile: system operacyjny lub debugera, mogą zastąpić tę pamięć podczas sesji debugowania użytkownika lub obsługi przerwań. W związku z tym źródło musi być zawsze ustawiony przed podjęciem próby odczytu lub zapisu wartości do ramki stosu.  

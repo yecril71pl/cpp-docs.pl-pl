@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383231"
 ---
 # <a name="including-quoted-filenames"></a>Łącznie z nazwami plików w cudzysłowie
 **ANSI 3.8.2** do obsługi nazw plików źródłowych includable w cudzysłowie  

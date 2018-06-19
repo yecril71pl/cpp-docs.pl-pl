@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391473"
 ---
 # <a name="global-constants"></a>Stałe globalne
 Biblioteka wykonawcza Microsoft zawiera definicje stałe globalne używane przez procedury biblioteki. Aby korzystać z tych stałe, obejmują odpowiednie pliki nagłówkowe wskazane opis każdego stała. Stałe globalne są wymienione w poniższej tabeli.  

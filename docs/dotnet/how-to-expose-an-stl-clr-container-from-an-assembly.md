@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33140176"
 ---
 # <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>Porady: uwidacznianie kontenera STL/CLR z zestawu
 Kontenery STL/CLR, takich jak `list` i `map` są zaimplementowane jako klasy ref szablonów. Ponieważ szablonów języka C++ są tworzone w czasie kompilacji, dwie klasy szablonu, które mają tę samą sygnaturę, ale w różnych zestawów są faktycznie różnych typów. Oznacza to, że nie można użyć szablonu klasy poza granicami zestawu.  

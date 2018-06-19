@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391695"
 ---
 # <a name="parameters"></a>Parametry
 Argumenty są nazwy wartości przekazanych do funkcji według wywołania funkcji. Parametry są wartościami, które Funkcja spodziewa się otrzymywać. W prototypu funkcji nawiasów po nazwie funkcji zawiera pełną listę parametrów funkcji i ich typów. Deklaracji parametru określić typy, rozmiarów i identyfikatory wartości przechowywanych w parametrach.  

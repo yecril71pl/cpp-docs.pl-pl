@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388909"
 ---
 # <a name="one-dimensional-arrays"></a>Tablice jednowymiarowe
 Wyrażenie przyrostek następuje wyrażenia w nawiasach kwadratowych (**[**) jako reprezentacja elementu tablicy obiektów. Wyrażenia indeksu dolnego reprezentuje wartość na adres, który jest *wyrażenie* umieszcza poza *wyrażenie przyrostek* wyrażone jako  

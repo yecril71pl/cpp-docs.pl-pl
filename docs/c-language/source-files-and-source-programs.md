@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391197"
 ---
 # <a name="source-files-and-source-programs"></a>Pliki źródłowe i programy źródłowe
 Program źródłowy można podzielić na jeden lub więcej „plików źródłowych” lub „jednostek translacji”. Dane wejściowe kompilatora nazywane są „jednostką translacji”.  

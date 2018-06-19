@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385767"
 ---
 # <a name="storage-class-specifiers-for-internal-level-declarations"></a>Specyfikatory klasy magazynowania dla deklaracji na poziomie wewnętrznym
 Można użyć dowolnego z czterech *Specyfikator klasy magazynu* przez deklaracje zmiennej na poziomie wewnętrznym. Jeśli zostanie pominięty *Specyfikator klasy magazynu* z deklaracji, jest domyślną klasę magazynu **automatycznie**. W związku z tym — słowo kluczowe **automatycznie** rzadko występuje w programie C.  

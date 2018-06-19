@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383959"
 ---
 # <a name="integers"></a>Liczby całkowite
 -   [Zakres wartości całkowitych](../c-language/range-of-integer-values.md)  

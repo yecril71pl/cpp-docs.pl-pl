@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386417"
 ---
 # <a name="goto-and-labeled-statements-c"></a>goto i Labeled — instrukcje (C)
 `goto` Instrukcji przenosi formantu etykiety. Etykieta danego musi znajdować się w tej samej funkcji i mogą występować przed tylko jednej instrukcji w tej samej funkcji.  

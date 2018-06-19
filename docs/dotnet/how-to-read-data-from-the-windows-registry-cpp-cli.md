@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132557"
 ---
 # <a name="how-to-read-data-from-the-windows-registry-ccli"></a>Porady: odczytywanie danych z rejestru systemu Windows (C++/CLI)
 Poniższy przykład kodu wykorzystuje <xref:Microsoft.Win32.Registry.CurrentUser> klucza można odczytać danych z rejestru systemu Windows. Najpierw podkluczy są wyliczane przy użyciu <xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A> metody, a następnie podklucz tożsamości jest otwarty przy użyciu <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> metody. Podobnie jak kluczy głównych każdy jest reprezentowany przez <xref:Microsoft.Win32.RegistryKey> klasy. Ponadto nowe <xref:Microsoft.Win32.RegistryKey> obiekt jest używany do wyliczenia pary klucz wartość.  

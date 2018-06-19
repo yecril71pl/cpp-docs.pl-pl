@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381723"
 ---
 # <a name="demotion-of-integers"></a>Zwężanie liczb całkowitych
 **ANSI 3.2.1.2** wynik konwersji typu integer na krótszą całkowita lub wynik konwersji całkowitą bez znaku na liczbę całkowitą ze znakiem o równej długości, jeśli wartość nie może być reprezentowany  

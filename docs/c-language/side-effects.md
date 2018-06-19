@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387014"
 ---
 # <a name="side-effects"></a>Efekty uboczne
 Kolejność ocen wyrażeń jest definiowana za pomocą konkretnej implementacji, z wyjątkiem, gdy język gwarantuje kolejność ocen (zgodnie z opisem w [hierarchia i kolejność obliczania](../c-language/precedence-and-order-of-evaluation.md)). Na przykład efekty uboczne wystąpić w następujących wywołania funkcji:  

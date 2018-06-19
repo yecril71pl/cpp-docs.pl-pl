@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386153"
 ---
 # <a name="data-type-specifiers-and-equivalents"></a>Specyfikatory typu danych i odpowiedniki
 Ten podręcznik zazwyczaj używa formularze specyfikatorów typu wymienione w poniższej tabeli, a nie długich formularzy i przy założeniu, że `char` typ ma znak domyślnie. W związku z tym w niniejszym podręczniku `char` jest odpowiednikiem **podpisany char**.  

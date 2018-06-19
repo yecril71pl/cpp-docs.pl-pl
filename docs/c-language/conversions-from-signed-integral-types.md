@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391629"
 ---
 # <a name="conversions-from-signed-integral-types"></a>Konwersje z podpisanych typów całkowitych
 Gdy całkowita jest konwertowany na liczbę całkowitą bez znaku z równym lub większym rozmiarze, a wartość całkowita nie jest ujemna, wartość jest bez zmian. Konwersja zostało utworzone przez znak rozszerzanie liczbę całkowitą ze znakiem. Całkowita jest konwertowana na krótszą całkowita tworzy bardziej znaczących bitów. Wynik jest interpretowana jako wartość bez znaku, jak pokazano w poniższym przykładzie.  

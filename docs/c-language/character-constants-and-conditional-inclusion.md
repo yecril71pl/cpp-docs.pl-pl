@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381811"
 ---
 # <a name="character-constants-and-conditional-inclusion"></a>Znaki stałej i dołączenie warunkowe
 **ANSI 3.8.1** Określa, czy na wartość stałą znak pojedynczego znaku w wyrażeniu stałym, który określa dołączenie warunkowe jest zgodna z wartością tego samego stała znakowa w zestaw znaków wykonania. Określa, czy stała znakowa może mieć wartości ujemnej  

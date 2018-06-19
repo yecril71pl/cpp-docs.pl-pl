@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381671"
 ---
 # <a name="file-position-in-append-mode"></a>Położenie pliku w trybie append
 **ANSI 4.9.3** Określa, czy wskaźnik położenia pliku strumienia trybu append początkowo znajduje się na początku lub na końcu pliku  

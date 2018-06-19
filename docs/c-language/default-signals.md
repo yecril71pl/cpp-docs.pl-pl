@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382893"
 ---
 # <a name="default-signals"></a>Sygnały domyślne
 **ANSI 4.7.1.1** Jeśli odpowiednikiem **sygnał (***sig***, sig_dfl —)** nie jest wykonywany przed wywołaniem obsługi sygnału, blokuje sygnał, który jest wykonywane  

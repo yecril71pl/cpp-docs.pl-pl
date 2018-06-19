@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389874"
 ---
 # <a name="operator-newcrt"></a>new(CRT) — operator
 Począwszy od programu Visual Studio 2013, Universal C Runtime (Biblioteka UCRT) nie obsługuje już nowy operator specyficzne dla języka C++ i operatora Usuń funkcje. Teraz są częścią standardowej biblioteki C++. Aby uzyskać więcej informacji, zobacz [nowy i delete — operatory](../cpp/new-and-delete-operators.md) i [operatora new](../cpp/new-operator-cpp.md) w dokumentacja języka C++. 

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391262"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Potencjalne przekazywanie błędów obiektów CRT w poprzek granic DLL
 Podczas przekazywania C Run-time (CRT) obiekty takie jak dojścia do plików, ustawień regionalnych i zmiennych środowiskowych do lub z biblioteki DLL (wywołania funkcji granicy biblioteki DLL), nieoczekiwane zachowanie może wystąpić, jeśli plik DLL, a także pliki wywołanie do biblioteki DLL, użyj innej kopii Bibliotek CRT.  

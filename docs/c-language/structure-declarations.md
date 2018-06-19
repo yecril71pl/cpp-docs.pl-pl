@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391903"
 ---
 # <a name="structure-declarations"></a>Deklaracje struktur
 "Deklaracja struktury" nazwy typu i określa sekwencję wartości zmiennych (nazywany "Członkowie" lub "pola" konstrukcji), które mogą mieć różnych typów. Opcjonalny identyfikator o nazwie "tag", nadaje nazwę typu struktury i mogą być używane w kolejnych odwołań do typ struktury. Zmienna typu Struktura zawiera całą sekwencję wynika z tego typu. Struktury w języku C są podobne do typów znana jako "rekordy" w innych językach.  

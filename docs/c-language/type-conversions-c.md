@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387242"
 ---
 # <a name="type-conversions-c"></a>Konwersje typu (C)
 Konwersje typów są zależne od określonego operatora i typu argumentu lub operatorów. Konwersje typów są wykonywane w następujących przypadkach:  

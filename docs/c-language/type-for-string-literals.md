@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386774"
 ---
 # <a name="type-for-string-literals"></a>Typy literałów ciągów
 Literały ciągu mieć typu tablicy `char` (to znaczy **char []**). (Ciągi znaków dwubajtowych są typu tablicy `wchar_t` (to znaczy **wchar_t [**).) Oznacza to, że ciąg tablicy elementami typu `char`. Liczba elementów w tablicy jest równa liczbie znaków w ciągu plus jeden dla znak końcowy null.  

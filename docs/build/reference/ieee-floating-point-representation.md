@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379435"
 ---
 # <a name="ieee-floating-point-representation"></a>Odwzorowanie liczby zmiennoprzecinkowej IEEE
 Microsoft Visual C++ jest zgodne ze standardami liczbowych IEEE. Istnieją trzy wewnętrznego odmian liczb rzeczywistych. Rzeczywiste\*4 i rzeczywistych\*8 są używane w programie Visual C++. Rzeczywiste\*4 jest zadeklarowane za pomocą słowa **float**. Rzeczywiste\*8 jest zadeklarowane za pomocą słowa **podwójne**. W programowaniu Windows 32-bitowych `long double` mapowana na typ danych **podwójne**. Jest jednak obsługa języka zestawu obliczenia przy użyciu rzeczywistego * typ danych 10.  

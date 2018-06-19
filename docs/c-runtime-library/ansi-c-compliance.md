@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387902"
 ---
 # <a name="ansi-c-compliance"></a>Zgodność ANSI-C
 Konwencja nazewnictwa dla wszystkich identyfikatorów specyficzne dla firmy Microsoft w systemie czasu wykonywania (na przykład funkcji, makra, stałe, zmienne i definicje typów) jest standardem ANSI. W tej dokumentacji dowolnej funkcji środowiska wykonawczego, który jest zgodny ze standardami ANSI/ISO C jest odnotowany jako zgodne ANSI. Aplikacje zgodne z ANSI należy używać tylko tych funkcji zgodne ANSI.  

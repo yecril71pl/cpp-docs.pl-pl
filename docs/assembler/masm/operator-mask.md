@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057929"
 ---
 # <a name="operator-mask"></a>operator MASK
 Zwraca bit maski, w którym usługi bits w *recordfieldname* lub *rekordu* są ustawiane i inne usługi bits zostaną wyczyszczone.  

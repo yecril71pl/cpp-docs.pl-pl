@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383595"
 ---
 # <a name="improper-access-to-a-union"></a>Niewłaściwy dostęp do złożenia
 **ANSI 3.3.2.3** elementu Członkowskiego Unii obiektu jest dostępny przy użyciu elementu Członkowskiego innego typu  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389770"
 ---
 # <a name="simple-variable-declarations"></a>Proste deklaracje zmiennej
 Deklaracja prostej zmiennej najprostsza forma deklaratorze bezpośredniego Określa nazwę i typ zmiennej. Określa również klasy magazynu w zmiennej i typu danych.  

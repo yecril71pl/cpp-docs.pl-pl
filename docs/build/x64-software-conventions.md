@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380891"
 ---
 # <a name="x64-software-conventions"></a>Konwencje kodowania x64
 W tej sekcji opisano Visual C++ metodologia konwencji wywoływania [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)], 64-bitowe rozszerzenia x86 architektury.  

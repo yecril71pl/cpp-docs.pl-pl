@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389284"
 ---
 # <a name="for-statement-c"></a>for — instrukcja (C)
 **Dla** instrukcji umożliwia Powtórz instrukcję lub instrukcja złożona określoną liczbę razy. Treść **dla** instrukcja jest wykonywana na zero lub więcej razy, aż opcjonalny warunek stanie się wartość false. Można użyć wyrażenia opcjonalne w **dla** instrukcji do inicjowania i zmień wartości podczas **dla** wykonywania w instrukcji.  

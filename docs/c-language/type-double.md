@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387346"
 ---
 # <a name="type-double"></a>Typ double
 Wartości podwójnej precyzji z typu double muszą 8 bajtów. Format jest podobny do formatu float, z wyjątkiem, że ma ona wykładnik 1023 nadmiarowe 11-bitowy mantysy 52-bitowy, a także domniemanych 1 bit znaczących. Format ten zapewnia szereg około 1.7E-308 do 1.7E + 308 dla typu double.  

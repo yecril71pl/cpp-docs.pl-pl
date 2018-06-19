@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379721"
 ---
 # <a name="zl-omit-default-library-name"></a>/Zl (Pomiń domyślną nazwę biblioteki)
 Pomija domyślną nazwę biblioteki środowiska uruchomieniowego C z pliku .obj. Domyślnie kompilator umieszcza nazwę biblioteki w pliku obj. przekierować konsolidator odpowiedniej biblioteki.  

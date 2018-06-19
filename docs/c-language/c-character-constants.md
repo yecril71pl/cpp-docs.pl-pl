@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382289"
 ---
 # <a name="c-character-constants"></a>Stałe znakowe języka C
 "Stała znakowa" jest tworzony przez otaczającej pojedynczy znak ze znakiem można przedstawić w pojedynczym cudzysłowie (**""**). Stałe znakowe są używane do reprezentowania znaków [zestaw znaków wykonania](../c-language/execution-character-set.md).  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383488"
 ---
 # <a name="definitions-and-declarations-c"></a>Definicje i deklaracje (C)
 **Microsoft Specific**  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383829"
 ---
 # <a name="including-bracketed-filenames"></a>Łącznie z nazwami plików w nawiasach
 **ANSI 3.8.2** metody do lokalizacji plików źródłowych includable  

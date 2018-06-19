@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389946"
 ---
 # <a name="c-function-definitions"></a>Definicje funkcji języka C
 Definicja funkcji Określa nazwę funkcji, typy i liczby parametrów, które oczekuje na odbieranie i jej typu zwracanego. Definicja funkcji obejmuje również treść funkcji z deklaracji jego zmiennych lokalnych i instrukcje, które określają, jak działa funkcja.  

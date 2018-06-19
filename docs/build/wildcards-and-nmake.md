@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380455"
 ---
 # <a name="wildcards-and-nmake"></a>Symbole wieloznaczne oraz NMAKE
 NMAKE rozszerza filename symbole wieloznaczne (* i?) w wierszach zależności. Symbol wieloznaczny określony w poleceniu jest przekazywany do polecenia; NMAKE nie go rozwinąć.  

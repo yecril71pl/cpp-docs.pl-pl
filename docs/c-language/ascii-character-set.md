@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381125"
 ---
 # <a name="ascii-character-set"></a>Zestaw znaków ASCII
 **ANSI 2.2.1** zestawów znaków członkami źródła i wykonania  

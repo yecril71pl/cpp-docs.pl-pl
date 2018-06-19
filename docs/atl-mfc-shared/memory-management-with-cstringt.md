@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354710"
 ---
 # <a name="memory-management-with-cstringt"></a>Zarządzanie pamięcią z CStringT
 Klasa [CStringT](../atl-mfc-shared/reference/cstringt-class.md) to klasa szablonu używany do manipulowania ciągów znakowych o zmiennej długości. Pamięć do przechowywania tych ciągów jest przydzielane i wydane przez obiekt menedżera ciągu skojarzone z każdym wystąpieniem klasy `CStringT`. MFC i ATL Podaj wystąpień domyślnego elementu `CStringT`o nazwie `CString`, `CStringA`, i `CStringW`, które manipulowania ciągów znaków różnych typów. Te typy znaków typu **tchar —**, `char`, i `wchar_t`odpowiednio. Te parametry domyślne typy przy użyciu Menedżera ciąg, który przydziela pamięć z stercie procesu (w ATL) lub sterty CRT (w MFC). W przypadku typowych aplikacji ten schemat alokacji pamięci jest wystarczająca. Jednak dla kodu wprowadzania znacznym użyć ciągów (lub wielowątkowe kodu), który menedżerów pamięci domyślne mogą nie działać optymalnie. W tym temacie opisano sposób zastępują domyślne zachowanie zarządzania pamięci z `CStringT`, tworzenie allocators — specjalnie zoptymalizowana pod kątem wykonywanego zadania.  

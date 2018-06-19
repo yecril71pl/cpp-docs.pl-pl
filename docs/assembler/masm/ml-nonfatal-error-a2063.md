@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057659"
 ---
 # <a name="ml-nonfatal-error-a2063"></a>Błąd niekrytyczny ML A2063
 **można WYRÓWNAJ tylko do potęgą liczby 2: wyrażenie**  

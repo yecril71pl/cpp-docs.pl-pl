@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379903"
 ---
 # <a name="reusing-inline-files"></a>Ponowne użycie plików wbudowanych
 Aby ponownie użyć pliku wbudowanego, określ <<*filename* w przypadku, gdy plik jest zdefiniowana i pierwszego, ponowne *filename* bez << dalej w tym samym lub innym polecenia. Polecenie w celu utworzenia pliku wbudowanego musi zostać uruchomiony przed wszystkie polecenia używające tego pliku.  

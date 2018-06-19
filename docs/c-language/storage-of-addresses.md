@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386514"
 ---
 # <a name="storage-of-addresses"></a>Magazynowanie adresów
 Ilości miejsca wymaganego dla adresu i znaczenie adresu są zależne od implementacji kompilatora. Wskaźniki do różnych typów nie ma gwarancji ma taką samą długość. W związku z tym **sizeof (char \*)** nie jest zawsze równa **sizeof (int \*)**.  

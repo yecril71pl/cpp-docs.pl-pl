@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392364"
 ---
 # <a name="initializing-scalar-types"></a>Inicjowanie typów skalarnych
 Podczas inicjowania skalarną typy, wartość *wyrażenia przypisania* jest przypisany do zmiennej. Zastosuj reguły konwersji dla przypisania. (Zobacz [konwersje typów](../c-language/type-conversions-c.md) Aby uzyskać informacje dotyczące reguły konwersji.)  

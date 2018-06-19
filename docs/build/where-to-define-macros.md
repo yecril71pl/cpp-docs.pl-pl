@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380917"
 ---
 # <a name="where-to-define-macros"></a>Miejsce definiowania makr
 Definiowanie makr w wierszu polecenia, pliku polecenia, pliku reguł programu make lub w pliku Tools.ini.  

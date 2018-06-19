@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386241"
 ---
 # <a name="backward-compatibility"></a>Zgodność ze starszymi wersjami
 Zgodność między wersjami, biblioteki OLDNAMES. LIB mapuje nazwy stare na nowe nazwy. Na przykład `open` mapuje `_open`. Należy jawnie połączyć z OLDNAMES. LIB tylko w przypadku kompilacji z następujących kombinacji opcji wiersza polecenia:  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381568"
 ---
 # <a name="c-declarations-and-definitions"></a>Deklaracje i definicje języka C
 "Deklaracji" ustanawia skojarzenie między konkretnej zmiennej, funkcji, lub typ i jego atrybuty. [Przegląd deklaracji](../c-language/overview-of-declarations.md) daje składnia ANSI `declaration` nonterminal. Deklaracja również określa, gdzie i kiedy identyfikator może być używane ("powiązanie" identyfikatora). Zobacz [okres istnienia, zakres, widoczność i połączenie](../c-language/lifetime-scope-visibility-and-linkage.md) informacji o połączenie.  

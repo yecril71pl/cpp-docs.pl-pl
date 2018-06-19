@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385543"
 ---
 # <a name="time-zone"></a>Strefa czasowa
 **ANSI 4.12.1** lokalnej strefie czasowej i czasu letniego  

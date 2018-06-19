@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384545"
 ---
 # <a name="declarations-and-types"></a>Deklaracje i typy
 W tej sekcji opisano deklaracji i inicjowania zmiennych, funkcji i typów. Język C zawiera standardowy zestaw danych podstawowych. Można również dodać własne typy danych o nazwie "typów, pochodnych" przez zadeklarowanie nowe na podstawie typów już zdefiniowany. Omówiono następujące zagadnienia:  

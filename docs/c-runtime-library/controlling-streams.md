@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388818"
 ---
 # <a name="controlling-streams"></a>Sterowanie strumieniami
 [fopen —](../c-runtime-library/reference/fopen-wfopen.md) zwraca adres typu obiektu `FILE`. Możesz użyć tego adresu jako `stream` argument kilka funkcji biblioteki można wykonywać różne operacje, w której plik otwarty. Dla strumienia bajtów wszystkich wejściowych odbywa się tak, jakby każdy znak jest do odczytu przez wywołanie metody [fgetc —](../c-runtime-library/reference/fgetc-fgetwc.md), oraz wszystkie dane wyjściowe odbywa się tak, jakby każdy znak jest zapisywane przez wywołanie metody [fputc —](../c-runtime-library/reference/fputc-fputwc.md). Dla strumienia szerokości, wszystkie wejściowych odbywa się tak, jakby każdy znak jest do odczytu przez wywołanie metody [fgetwc —](../c-runtime-library/reference/fgetc-fgetwc.md), oraz wszystkie dane wyjściowe odbywa się tak, jakby każdy znak jest zapisywane przez wywołanie metody [fputwc —](../c-runtime-library/reference/fputc-fputwc.md).  

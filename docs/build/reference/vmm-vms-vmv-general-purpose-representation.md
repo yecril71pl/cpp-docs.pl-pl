@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379565"
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms, /vmv (Ogólna reprezentacja celu)
 Używane podczas [/vmb, / vmg (metoda reprezentacji)](../../build/reference/vmb-vmg-representation-method.md) został wybrany jako [metoda reprezentacji](../../build/reference/vmb-vmg-representation-method.md). Te opcje wskazują modelu dziedziczenia definicji klasy nie zostały jeszcze napotkano.  

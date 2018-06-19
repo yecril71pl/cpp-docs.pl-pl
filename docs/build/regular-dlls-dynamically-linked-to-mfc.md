@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383734"
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>Biblioteki DLL MFC regularne połączone dynamicznie z MFC
 Regularne, które biblioteki MFC DLL połączone dynamicznie z MFC jest bibliotekę DLL, która MFC jest używane wewnętrznie i eksportowanych funkcji w bibliotece DLL może być wywoływany przez pliki wykonywalne MFC lub innego typu niż MFC. Zgodnie z opisem w nazwę, tego rodzaju biblioteki DLL jest utworzony przy użyciu wersja biblioteki DLL MFC (znanej także jako udostępniony wersja MFC). Funkcje eksportowane są zazwyczaj ze standardowych biblioteki MFC DLL przy użyciu standardowych interfejsów C.  

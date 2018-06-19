@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382812"
 ---
 # <a name="messages-generated-by-the-perror-function"></a>Komunikaty generowane przez funkcję perror
 **ANSI 4.9.10.4** komunikaty generowane przez `perror` — funkcja  

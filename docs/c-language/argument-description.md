@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385087"
 ---
 # <a name="argument-description"></a>Opis argumentu
 `argc` Parametru w **głównego** i **wmain** funkcji jest na liczbę całkowitą określającą liczbę argumentów są przekazywane do programu z wiersza polecenia. Ponieważ nazwa programu jest traktowane jako argument, a wartość `argc` co najmniej jeden.  

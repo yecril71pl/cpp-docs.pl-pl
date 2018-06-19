@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056464"
 ---
 # <a name=""></a>@@:
 Określa etykietę kodu rozpoznawalnych tylko między *label1* i *label2*, gdzie *label1* polega na początku kodu albo poprzedniej `@@:` etykiety i *label2* jest koniec kodu lub następne `@@:` etykiety. Zobacz [ @B ](../../assembler/masm/at-b.md) i [ @F ](../../assembler/masm/at-f.md).  

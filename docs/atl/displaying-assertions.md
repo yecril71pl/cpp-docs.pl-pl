@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354282"
 ---
 # <a name="displaying-assertions"></a>Wyświetlanie potwierdzeń
 Jeżeli klient połączony z usługą przestaje odpowiadać, usługa zostały potwierdzone i wyświetlane okno komunikatu, które nie są widoczne. Można to potwierdzić, za pomocą programu Visual C++ — debuger do debugowania kodu (zobacz [za pomocą Menedżera zadań](../atl/using-task-manager.md) wcześniej w tej sekcji).  

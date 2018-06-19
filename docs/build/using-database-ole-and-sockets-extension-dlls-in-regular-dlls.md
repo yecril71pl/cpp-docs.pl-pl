@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391408"
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>Przy użyciu bazy danych, OLE i MFC gniazda biblioteki DLL rozszerzeń w zwykłych bibliotekach DLL MFC
 Jeśli z rozszerzeniem MFC DLL z regularne biblioteki DLL MFC rozszerzenia MFC DLL nie jest dostępna w **CDynLinkLibrary** obiekt łańcucha regularne biblioteki DLL MFC może działać w co najmniej jeden zbiór problemów pokrewnych. Ponieważ obsługuje wersje debugowania MFC bazy danych, OLE i gniazda biblioteki DLL są zaimplementowane jako biblioteki DLL rozszerzeń MFC, można napotkać funkcje podobne problemy, jeśli używasz tych MFC, nawet jeśli nie jest jawnie używana żadnego własne biblioteki DLL rozszerzeń MFC. Niektóre symptomy są:  

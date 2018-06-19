@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385419"
 ---
 # <a name="functions-c"></a>Funkcje (C)
 Funkcja jest podstawową jednostkę moduły w C. Funkcja zwykle zaprojektowano w celu wykonania określonego zadania, a jego nazwa odzwierciedla często zadania. Funkcja zawiera deklaracje i instrukcje. W tej sekcji opisano, jak zadeklarować, zdefiniuj i wywoływać funkcje C. Inne tematy omówione są:  

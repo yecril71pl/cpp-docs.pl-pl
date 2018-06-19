@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383244"
 ---
 # <a name="struct-unwindinfo"></a>struktura UNWIND_INFO
 Struktury informacji o danych unwind służy do rejestrowania wpływ, jaki ma funkcji na wskaźnik stosu i którym nieulotnej rejestrów są zapisywane na stosie:  

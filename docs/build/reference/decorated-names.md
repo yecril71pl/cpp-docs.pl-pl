@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379383"
 ---
 # <a name="decorated-names"></a>Nazwy ozdobione
 Funkcje, danych i obiektów w programach C i C++ są reprezentowane wewnętrznie przez ich nazwy ozdobione. A *dekorowane nazwy* jest zakodowany ciąg utworzony przez kompilator podczas kompilowania obiektu, danych lub definicji funkcji. Rejestruje konwencji wywoływania, typy parametrów funkcji i inne informacje, łącznie z nazwą. Ta nazwij dekorację, nazywany również *przekręcona nazwa*, pomaga konsolidator Znajdź poprawne funkcje i obiekty podczas łączenia pliku wykonywalnego.  

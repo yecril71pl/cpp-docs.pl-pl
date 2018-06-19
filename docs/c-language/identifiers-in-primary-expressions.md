@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384762"
 ---
 # <a name="identifiers-in-primary-expressions"></a>Identyfikatory w wyrażeniach podstawowych
 Identyfikatory mogą mieć typu całkowitego, **float**, `enum`, `struct`, **Unii**, tablica wskaźnika lub typ funkcji. Identyfikator jest podstawowym wyrażenie pod warunkiem, że jej został zadeklarowany jako wyznaczenie obiektu (w takim przypadku jest wartością l-value) lub funkcji (w takim przypadku jest oznaczeniem funkcji). Zobacz [wartości L i r wyrażenia](../c-language/l-value-and-r-value-expressions.md) definicję l wartość.  

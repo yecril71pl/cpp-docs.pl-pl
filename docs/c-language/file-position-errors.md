@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383224"
 ---
 # <a name="file-position-errors"></a>Błędy pozycji w pliku
 **ANSI 4.9.9.1, 4.9.9.4** wartość, do której makra `errno` jest ustawiana przez `fgetpos` lub `ftell` funkcji w przypadku awarii  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380475"
 ---
 # <a name="unprototyped-functions"></a>Funkcje bez pierwowzoru
 Nie w pełni prototypowanych funkcji wywołujący przechodzą wartości całkowitych jako liczb całkowitych i zmiennoprzecinkowych wartości jako podwójnej precyzji. Tylko wartości zmiennoprzecinkowych, zarówno rejestru całkowitą i zmiennoprzecinkowa rejestr będzie zawierał wartości typu float w przypadku, gdy wywoływany oczekuje, że wartość w rejestrach liczby całkowitej.  

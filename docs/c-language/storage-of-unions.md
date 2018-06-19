@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386570"
 ---
 # <a name="storage-of-unions"></a>Magazyn złożeń
 Magazyn skojarzone ze zmienną Unii jest magazynu wymaganego przez największy element członkowski Unii. Gdy mniejszych elementu członkowskiego jest przechowywana, union zmienna może zawierać miejsca nieużywanej pamięci. Wszystkie elementy członkowskie są przechowywane w tym samym obszarze pamięci i Rozpocznij od tego samego adresu. Wartość przechowywana jest zastępowany zawsze, gdy wartość jest przypisany do innego członka. Na przykład:  

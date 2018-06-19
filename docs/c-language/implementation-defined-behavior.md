@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383441"
 ---
 # <a name="implementation-defined-behavior"></a>Zachowanie zdefiniowane w implementacji
 ANSI X3.159-1989, *American National standardowe systemów informatycznych* - *języka programowania* - *C*, zawiera sekcję o nazwie "Problemy związane z przenośnością." W sekcji ANSI przedstawiono obszary języka C ANSI pozostawia otwarte dla każdej określonej implementacji. W tej sekcji opisano, jak Microsoft C obsługuje tych obszarów zdefiniowane w implementacji języka C.  

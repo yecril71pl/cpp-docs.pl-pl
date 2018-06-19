@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387612"
 ---
 # <a name="null-crt"></a>NULL (CRT)
 **Wartość NULL** jest wartością wskaźnika null używane z wieloma operacji wskaźnika i funkcje. Odpowiada to 0. **Wartość NULL** jest zdefiniowany w następujących plikach nagłówka: CRTDBG. H, USTAWIENIA REGIONALNE. H, STDDEF. H, STDIO —. H, STDLIB. H, CIĄG. H, TCHAR —. H, CZAS. H i WCHAR. H.  

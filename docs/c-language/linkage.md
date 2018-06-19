@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383527"
 ---
 # <a name="linkage"></a>Połączenie
 Nazwy identyfikatorów mogą odwoływać się do różnych identyfikatory w innych zakresach. Identyfikator zadeklarowany więcej niż raz w innych zakresach lub w tym samym zakresie możliwe do odwoływania się do tego samego identyfikatora lub funkcji przez proces o nazwie "połączenie." Połączenie Określa części programu, w którym identyfikator może być przywoływany ("widocznością"). Istnieją trzy typy połączeń: [wewnętrzny](../c-language/internal-linkage.md), [zewnętrznych](../c-language/external-linkage.md), i [bez powiązania](../c-language/no-linkage.md).  

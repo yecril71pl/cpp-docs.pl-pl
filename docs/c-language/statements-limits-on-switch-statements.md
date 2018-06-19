@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385744"
 ---
 # <a name="statements-limits-on-switch-statements"></a>Instrukcje: limity w instrukcjach przełącznika
 **ANSI 3.6.4.2** maksymalną liczbę **przypadku** wartości w `switch` — instrukcja  

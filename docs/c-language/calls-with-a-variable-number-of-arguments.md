@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383192"
 ---
 # <a name="calls-with-a-variable-number-of-arguments"></a>Wywołania z różną liczbą argumentów
 Listy parametrów z częściowa może zostać rozwiązana przez notacji wielokropka, to przecinek trzy kropki (**,...** ), aby wskazać, że może być więcej argumentów została przekazana do funkcji, ale nie więcej informacji znajduje się o nich. Kontrola typów nie jest wykonywana na takich argumentach. Co najmniej jeden parametr musi poprzedzać notację wielokropka, a notacja wielokropka musi stanowić ostatni token na liście parametrów. Bez notacji wielokropka zachowanie funkcji jest niezdefiniowane, jeżeli otrzyma parametry oprócz tych zadeklarowanych na liście parametrów.  

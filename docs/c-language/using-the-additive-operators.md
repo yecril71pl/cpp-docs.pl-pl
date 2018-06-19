@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385923"
 ---
 # <a name="using-the-additive-operators"></a>Używanie dodatkowych operatorów
 Poniższe przykłady, które przedstawiają operatorów dodawania i odejmowania, użyj deklaracji:  

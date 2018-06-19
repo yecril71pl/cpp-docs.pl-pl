@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380252"
 ---
 # <a name="unwind-helpers-for-masm"></a>Pomocnicy operacji unwind dla MASM
 Aby można było zapisać procedury prawidłowego zestawu istnieje zestaw pseudo-operacji, które mogą służyć równolegle z instrukcjami rzeczywiste zestawu do utworzenia odpowiednich .pdata i .xdata. Istnieją także zestaw makra, które zapewniają uproszczone pseudo-operacji do ich najbardziej typowych zastosowań.  

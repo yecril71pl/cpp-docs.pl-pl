@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382276"
 ---
 # <a name="constants-in-primary-expressions"></a>Stałe w wyrażeniach podstawowych
 Argument stałej ma wartość i typ stałej wartości, który reprezentuje. Stała znakowa ma `int` typu. Stała całkowita ma `int`, **długi**, `unsigned int`, lub `unsigned long` typu, w zależności od rozmiar całkowitą i w ten sposób określona wartość. Zobacz [stałe](../c-language/c-constants.md) Aby uzyskać więcej informacji.  

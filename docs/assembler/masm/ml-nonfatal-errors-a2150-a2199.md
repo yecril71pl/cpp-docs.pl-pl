@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054224"
 ---
 # <a name="ml-nonfatal-errors-a2150-a2199"></a>Błędy niekrytyczne ML A2150–A2199
 Aby uzyskać więcej informacji na temat błędy niekrytyczne ML, zobacz [komunikaty o błędach ML](../../assembler/masm/ml-error-messages.md).  

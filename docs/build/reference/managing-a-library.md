@@ -55,6 +55,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379643"
 ---
 # <a name="managing-a-library"></a>Zarządzanie biblioteką
 Jest to domyślny tryb dla LIB do tworzenia lub modyfikowania biblioteki obiektów COFF. LIB działa w tym trybie, jeśli nie określisz/extract (Aby skopiować obiekt do pliku) lub/DEF (do tworzenia biblioteki importowanej).  

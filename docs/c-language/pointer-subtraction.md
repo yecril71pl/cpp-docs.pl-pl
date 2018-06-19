@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383735"
 ---
 # <a name="pointer-subtraction"></a>Odejmowanie wskaźnika
 **ANSI 3.3.6, 4.1.1** typu Liczba całkowita wymagane do przechowywania różnica dwóch wskaźników do elementów tej samej tablicy **ptrdiff_t —**  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384203"
 ---
 # <a name="multibyte-and-wide-characters"></a>Znaki wielobajtowe i dwubajtowe
 Znaków wielobajtowych jest składane sekwencji bajtów co najmniej jeden znak. Każdej sekwencji bajtów reprezentuje jeden znak w zestawie znaków rozszerzonych. Znaki wielobajtowe są używane w zestawów znaków, takich jak Kanji.  

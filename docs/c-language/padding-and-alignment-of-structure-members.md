@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385380"
 ---
 # <a name="padding-and-alignment-of-structure-members"></a>Wypełnienie i wyrównanie struktur członkowskich
 **ANSI 3.5.2.1** wypełnienie i wyrównanie członków struktur i czy pole bitowe można wokół granic jednostkę magazynową  

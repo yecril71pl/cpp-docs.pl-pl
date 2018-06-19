@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382484"
 ---
 # <a name="remainders"></a>Pozostałe części
 **ANSI 3.3.5** znak pozostałej na dzielenie liczby całkowitej  

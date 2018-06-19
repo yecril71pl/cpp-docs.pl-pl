@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382718"
 ---
 # <a name="expressions-and-assignments"></a>Wyrażenia i przydziały
 W tej sekcji opisano, jak tworzą wyrażeń i przypisywanie wartości w języku C. Stałe, identyfikatory, ciągi i wywołania funkcji są wszystkie argumenty, które są przetwarzane w wyrażeniach. Język C ma wszystkich operatorów zwykle języka. W tej sekcji omówiono te operatory, a także operatory, które są unikatowe dla języka C lub Microsoft C. Tematy omówione obejmują:  

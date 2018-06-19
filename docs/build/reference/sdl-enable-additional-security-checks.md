@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379539"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (Włącz dodatkowe kontrole zabezpieczeń)
 Dodaje zalecane kontroli Security Development Lifecycle (SDL). Kontrole te obejmują bardzo związanych z zabezpieczeniami ostrzeżenia jako błędy i funkcje dodatkowe bezpiecznego generowania kodu.  

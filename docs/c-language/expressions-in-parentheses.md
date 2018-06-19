@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382978"
 ---
 # <a name="expressions-in-parentheses"></a>Wyrażenia w nawiasach
 Wszelkie operand można ująć w nawiasach bez zmiany typu lub wartości wyrażenie w nawiasach. Na przykład w wyrażeniu:  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383553"
 ---
 # <a name="continue-statement-c"></a>continue — instrukcja (C)
 `continue` Instrukcja przekazuje formantu do następnej iteracji najbliższej otaczającej `do`, `for`, lub `while` instrukcji, w którym zostanie wyświetlona, pomijanie wszelkie pozostałe instrukcje w `do`, `for`, lub `while` treść instrukcji.  

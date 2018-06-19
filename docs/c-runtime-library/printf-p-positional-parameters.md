@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391317"
 ---
 # <a name="printfp-positional-parameters"></a>printf_p Parametry pozycyjne
 Parametry pozycyjne zapewniają możliwość określenia numerem, czyli argumentów do zastąpienia w polu w ciągu formatu. Następujący parametr pozycyjny `printf` funkcje są dostępne:  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385679"
 ---
 # <a name="c-bit-fields"></a>Pola bitowe języka C
 Oprócz deklaratorów dla elementów członkowskich struktury lub Unii deklaratorze struktury można też określoną liczbę bitów, nazywany "pole bitowe". Jego długość jest ustawiona z deklarator nazw pól dwukropkiem. Pola bitowego jest interpretowany jako typ całkowity.  

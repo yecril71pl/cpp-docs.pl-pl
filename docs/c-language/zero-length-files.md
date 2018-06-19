@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384970"
 ---
 # <a name="zero-length-files"></a>Pliki o zerowej długości
 **ANSI 4.9.3** Określa, czy istnieje plik o zerowej długości  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386319"
 ---
 # <a name="static-storage-class-specifier"></a>Specyfikator statycznej klasy magazynowania
 Zmienna zadeklarowana na poziomie wewnętrznym z **statycznych** Specyfikator klasy składującej ma globalny okres istnienia, ale nie jest widoczna tylko w bloku, w którym jest zadeklarowany. Stałe ciągi, przy użyciu **statycznych** jest przydatne, ponieważ jego eliminuje koszty częste inicjowania w funkcjach często nazywane.  

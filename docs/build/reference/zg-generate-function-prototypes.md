@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380537"
 ---
 # <a name="zg-generate-function-prototypes"></a>/Zg (Generuj prototypy funkcji)
 Usuwane. Tworzy prototyp funkcji dla każdej funkcji zdefiniowanej w pliku źródłowym, ale nie kompiluje plik źródłowy.  

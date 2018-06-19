@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382237"
 ---
 # <a name="null-macro"></a>NULL — makro
 **ANSI 4.1.5** stała wskaźnika pustego, do którego rozszerza makro wartości NULL  

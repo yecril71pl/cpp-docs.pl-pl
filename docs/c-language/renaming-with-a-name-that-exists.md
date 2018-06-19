@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386527"
 ---
 # <a name="renaming-with-a-name-that-exists"></a>Zmiana nazwy dla tej nazwy już istnieje
 **ANSI 4.9.4.2** efektu, jeśli istnieje plik z nową nazwą przed wywołaniem **zmienić** — funkcja  

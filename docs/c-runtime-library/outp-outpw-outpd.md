@@ -48,6 +48,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391512"
 ---
 # <a name="outp-outpw-outpd"></a>_outp, _outpw, _outpd
 Dane wyjściowe w porcie bajt (`_outp`), wyraz (`_outpw`), lub word o podwójnej precyzji (`_outpd`).  

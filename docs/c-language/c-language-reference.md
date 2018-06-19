@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381190"
 ---
 # <a name="c-language-reference"></a>Materiały referencyjne dotyczące języka C
 *Dokumentacja języka C* opisuje język programowania C, zgodnie z implementacją w Microsoft C. Książki organizacji jest oparta na ANSI C standard (nazywane czasami C89) z dodatkowe materiały na rozszerzenia Microsoft do ANSI C standard.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383205"
 ---
 # <a name="external-linkage"></a>Połączenie zewnętrzne
 Jeśli nie wykorzystuje pierwszej deklaracji na poziomie zakresu pliku dla identyfikatora **statycznych** Specyfikator klasy magazynowania, obiekt ma połączenie zewnętrzne.  

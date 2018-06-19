@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383907"
 ---
 # <a name="punctuation-and-special-characters"></a>Interpunkcja i znaki specjalne
 Interpunkcja i znaki specjalne w zestawie znaków C ma różnych zastosowań z organizowanie tekst programu do określenia zadań, które kompilator lub skompilowany program przeprowadza. Nie należy określać operacji do wykonania. Niektóre znaki interpunkcyjne są również operatory (zobacz [operatory](../c-language/c-operators.md)). Kompilator określa korzystaniu z kontekstu.  

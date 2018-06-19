@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383056"
 ---
 # <a name="evaluation-of-tokens"></a>Ocena tokenów
 Gdy kompilator interpretowane tokeny, zawiera maksymalną liczbę znaków jak to możliwe w ramach jednego tokenu przed przejściem do następnego tokenu. Ze względu na to zachowanie kompilator nie może zinterpretować tokeny poprawnie, jeśli ich nie są poprawnie rozdzielone biały znak. Należy wziąć pod uwagę następujące wyrażenie:  

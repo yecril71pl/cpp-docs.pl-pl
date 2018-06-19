@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385289"
 ---
 # <a name="pointer-arithmetic"></a>Arytmetyczny wskaźnik
 Operacje dodawania obejmująca wskaźnik i całkowitą nadaj znaczące wyniki tylko wtedy, gdy argumentem wskaźnika dotyczy elementu członkowskiego tablicy i wartość całkowita tworzy przesunięcie w granicach tej samej tablicy. Wartość całkowita przekonwertowany do przesunięcia adres kompilator zakłada, czy tylko pamięci stanowisk ten sam rozmiar mieszczą się pomiędzy oryginalnego adresu i adres oraz przesunięcie.  

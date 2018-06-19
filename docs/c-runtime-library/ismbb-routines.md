@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392500"
 ---
 # <a name="ismbb-routines"></a>_ismbb — Procedury
 Testy danego całkowitą `c` dla konkretnego warunku, używając bieżących ustawień regionalnych lub określona kategoria Stan konwersji lc_ctype —.  

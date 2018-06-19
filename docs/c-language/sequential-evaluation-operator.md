@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388490"
 ---
 # <a name="sequential-evaluation-operator"></a>Operator obliczania sekwencyjnego
 Operator obliczania sekwencyjnego, nazywane również "operatora przecinka" oblicza dwóch argumentów sekwencyjnie od lewej do prawej.  

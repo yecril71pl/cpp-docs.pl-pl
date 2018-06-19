@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388068"
 ---
 # <a name="pcommode"></a>__p__commode
 Wskazuje `_commode` zmiennej globalnej, która określa domyślny *tryb zatwierdzania pliku* dla operacji We/Wy pliku.  

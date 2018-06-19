@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384284"
 ---
 # <a name="obsolete-forms-of-function-declarations-and-definitions"></a>Przestarzałe formy deklaracji i definicji funkcji
 Deklaracje funkcji w starym stylu i definicje deklarowanie parametrów niż składni zalecane standardu ANSI C przy użyciu nieco inne reguły. Po pierwsze deklaracje w starym stylu nie ma listy parametrów. Po drugie w definicji funkcji parametry są wyświetlane, ale ich typy nie są zadeklarowane w liście parametrów. Deklaracje typu poprzedzać złożonej instrukcji stanowiące treści funkcji. Składnia stary styl jest przestarzały i nie powinna być używana w nowy kod. Kod przy użyciu składni w starym stylu jest nadal obsługiwany, jednak. W tym przykładzie przedstawiono przestarzałe formy deklaracji i definicji:  

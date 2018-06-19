@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390564"
 ---
 # <a name="function-prototypes"></a>Prototypy funkcji
 Deklaracja funkcji poprzedza definicji funkcji i określa nazwę, typ zwracany Klasa magazynu i inne atrybuty funkcji. Jako prototyp deklaracji funkcji należy również określić typy i identyfikatory dla argumentów funkcji.  

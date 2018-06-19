@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387528"
 ---
 # <a name="constant-and-global-variable-mappings"></a>Mapowania zmiennych globalnych i stałych
 Te stała zwykłego tekstu, zmiennej globalnej i mapowania standardowy typ są zdefiniowane w tchar —. H i zależą od tego, czy stała `_UNICODE` lub `_MBCS` został zdefiniowany w programie.  

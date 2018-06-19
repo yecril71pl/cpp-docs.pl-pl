@@ -45,6 +45,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388831"
 ---
 # <a name="escape-sequences"></a>Sekwencje unikowe
 Znak kombinacji składające się z od ukośnika odwrotnego (**\\**) następują litery lub przy użyciu kombinacji cyfr są nazywane "sekwencje specjalne". Aby przedstawić znaku nowego wiersza, pojedynczego cudzysłowu lub niektórych innych znaków w stałej znakowej, należy użyć sekwencji unikowych. Sekwencja specjalna jest traktowany jako pojedynczy znak i dlatego jest nieprawidłowe w stałej znakowej.  

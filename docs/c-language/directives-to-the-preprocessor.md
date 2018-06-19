@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382906"
 ---
 # <a name="directives-to-the-preprocessor"></a>Dyrektywy preprocesora
 "Dyrektywy" powoduje, że preprocesora C, aby wykonywać konkretną akcję na tekst program przed kompilacji. [Dyrektywy preprocesora](../preprocessor/preprocessor-directives.md) w pełni opisano *odwołania preprocesora*. W tym przykładzie użyto dyrektywy preprocesora `#define`:  

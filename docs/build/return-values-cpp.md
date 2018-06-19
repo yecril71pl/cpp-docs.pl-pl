@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380324"
 ---
 # <a name="return-values-c"></a>Wartości zwracane (C++)
 Wartość skalarną zwracany, który można umieścić w 64-bitowy jest zwracany za pomocą RAX — dotyczy to również __m64 typów. Typy non skalarna takich elementów przestawnych, symulacyjnych i typy wektorów, takich jak [__m128](../cpp/m128.md), [__m128i](../cpp/m128i.md), [__m128d](../cpp/m128d.md) są zwracane w XMM0. Stan nieużywanej bits w wartości zwracanej w RAX lub XMM0 jest niezdefiniowany.  

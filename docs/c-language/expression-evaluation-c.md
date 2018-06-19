@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382731"
 ---
 # <a name="expression-evaluation-c"></a>Szacowanie wyrażeń (C)
 Wyrażeń zawierających przypisania, przyrost jednoargumentowe, dekrementacja jednoargumentowy lub wywołanie funkcji może mieć skutki uboczne ich oceny (efekty uboczne). Po osiągnięciu "punktu sekwencji" wszystko poprzedzających punktu sekwencji, w tym żadnych efektów ubocznych, jest gwarantowane zostało obliczone przed rozpoczęciem oceny na niczego następującego punktu sekwencji.  

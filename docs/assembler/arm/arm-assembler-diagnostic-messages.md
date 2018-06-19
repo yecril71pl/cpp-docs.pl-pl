@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052776"
 ---
 # <a name="arm-assembler-diagnostic-messages"></a>Komunikaty diagnostyczne asemblera ARM
 Asemblera ARM firmy Microsoft (*armasm*) emituje diagnostycznych ostrzeżenia i błędy po napotkaniu je. W tym artykule opisano najbardziej powszechnie napotkano wiadomości.  

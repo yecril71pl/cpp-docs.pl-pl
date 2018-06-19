@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33166903"
 ---
 # <a name="compiler-error-c2151"></a>C2151 błąd kompilatora
 więcej niż jeden atrybut językowy  

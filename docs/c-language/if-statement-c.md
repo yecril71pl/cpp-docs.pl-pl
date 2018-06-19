@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387053"
 ---
 # <a name="if-statement-c"></a>if — instrukcja (C)
 **Jeśli** instrukcji steruje rozgałęzień warunkowych. Treść **Jeśli** instrukcja jest wykonywana, jeśli wartość wyrażenia jest różna od zera. Składnia **Jeśli** instrukcji ma dwie formy.  

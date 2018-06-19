@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388578"
 ---
 # <a name="generic-text-mappings"></a>Mapowania zwykłego tekstu
 Aby uprościć pisanie kodu dla międzynarodową, mapowania zwykłego tekstu są definiowane w tchar —. H dla:  

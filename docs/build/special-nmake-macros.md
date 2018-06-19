@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380018"
 ---
 # <a name="special-nmake-macros"></a>Specjalne makra NMAKE
 NMAKE zawiera kilka specjalne makra do reprezentowania różnych nazw plików i poleceń. Użycie jednego niektóre z tych makr jest w regułach wnioskowania wstępnie zdefiniowane. Podobnie jak wszystkie makra makra udostępniane przez NMAKE jest uwzględniana wielkość liter.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388731"
 ---
 # <a name="extern-storage-class-specifier"></a>extern — specyfikator klasy magazynowania
 Zmienna zadeklarowana ze specyfikatorem klasy magazynu `extern` jest odwołaniem do zmiennej o tej samej nazwie, zdefiniowanej na poziomie zewnętrznym w dowolnym z plików źródłowych programu. Wewnętrzna deklaracja `extern` jest używana, aby uwidocznić definicję zmiennej poziomu zewnętrznego w bloku. O ile nie została zgłoszona na poziomie zewnętrznym, zmienna zadeklarowana ze słowem kluczowym `extern` jest widoczna tylko w bloku, w którym jest zadeklarowana.  

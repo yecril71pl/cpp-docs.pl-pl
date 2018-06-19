@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380579"
 ---
 # <a name="using-an-nmake-macro"></a>Korzystanie z makro NMAKE
 Aby użyć makra, ujmij jej nazwę w nawiasach poprzedzone znak dolara ($) w następujący sposób.  

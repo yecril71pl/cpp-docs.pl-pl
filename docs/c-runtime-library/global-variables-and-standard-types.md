@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388997"
 ---
 # <a name="global-variables-and-standard-types"></a>Zmienne globalne i typy standardowe
 Biblioteka wykonawcza Microsoft zawiera definicje dla [zmienne globalne](../c-runtime-library/global-variables.md), [flagi kontrolne](../c-runtime-library/control-flags.md), i [standardowych typów](../c-runtime-library/standard-types.md) używane przez procedury biblioteki. Dostęp tych zmiennych, flag i typów przez zadeklarowanie je w programie lub umieszczając w niej odpowiednie pliki nagłówkowe.  

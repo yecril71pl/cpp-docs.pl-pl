@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389637"
 ---
 # <a name="recommendations-for-choosing-between-functions-and-macros"></a>Zalecenia dotyczące wybierania pomiędzy funkcjami i makrami
 Większość procedury biblioteki wykonawczej firmy Microsoft są kompilowane lub złożonego funkcji, ale niektóre procedury są zaimplementowane jako makra. Gdy plik nagłówka deklaruje zarówno funkcję, jak i wersji makro procedury, definicji makra ma pierwszeństwo, ponieważ zawsze jest wyświetlany po deklaracji funkcji. Po wywołaniu procedury, który jest implementowany jako funkcję i makra, możesz wymusić kompilatora, aby korzystać z funkcji wersji na dwa sposoby:  

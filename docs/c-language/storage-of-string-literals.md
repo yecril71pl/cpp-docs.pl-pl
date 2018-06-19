@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387037"
 ---
 # <a name="storage-of-string-literals"></a>Magazynowanie literałów ciągu
 Znaki literału ciągu są przechowywane w kolejności, w lokalizacji pamięci ciągłej. Sekwencja specjalna (takich jak **\\ \\** lub  **\\"**) wewnątrz literału ciągu traktowana jako pojedynczy znak. Znak null (reprezentowane przez **\0** sekwencja unikowa) jest automatycznie dołączane do i oznacza koniec, każdy ciąg literału. (Dzieje się tak podczas [fazy tłumaczenia](../preprocessor/phases-of-translation.md) 7.) Należy pamiętać, że kompilator nie mogą być przechowywane w dwóch identycznych ciągów w dwóch różnych adresów. [/GF](../build/reference/gf-eliminate-duplicate-strings.md) wymusza na umieszczenie pojedynczej kopii identycznych ciągów w pliku wykonywalnego.  

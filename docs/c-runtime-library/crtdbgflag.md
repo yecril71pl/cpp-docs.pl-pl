@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387265"
 ---
 # <a name="crtdbgflag"></a>_crtDbgFlag
 **_Crtdbgflag —** flagi składa się z pól bitowych pięć, które kontrolują sposób przydzielania pamięci w wersji do debugowania sterty są śledzone, zweryfikować zgłoszone i utworzyć zrzutu. Pola bitowe flagi są ustawiane przy użyciu [_crtsetdbgflag —](../c-runtime-library/reference/crtsetdbgflag.md) funkcji. Ta flaga i jego pól bitowych są zadeklarowane w Crtdbg.h. Ta flaga jest dostępna tylko podczas [_DEBUG](../c-runtime-library/debug.md) flagi został zdefiniowany w aplikacji.  

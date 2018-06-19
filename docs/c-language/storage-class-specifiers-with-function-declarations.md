@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389666"
 ---
 # <a name="storage-class-specifiers-with-function-declarations"></a>Specyfikatory klasy magazynowania z deklaracjami funkcji
 Możesz użyć dowolnej **statycznych** lub `extern` Specyfikator klasy magazynu w deklaracji funkcji. Funkcje zawsze mieć globalne okresy istnienia.  

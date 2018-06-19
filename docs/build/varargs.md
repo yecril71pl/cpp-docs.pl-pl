@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380511"
 ---
 # <a name="varargs"></a>Elementy vararg
 Jeśli parametry są przekazywane za pośrednictwem VARARG (na przykład wielokropka argumentów), zasadniczo przekazywanie normalne parametru dotyczy tym przechodzeniu piątego i kolejne argumenty. Odpowiada ponownie wywołującej zrzutu argumenty, które mają ich pobrać adresu. Tylko wartości zmiennoprzecinkowych zarówno liczb całkowitych i zmiennoprzecinkowych rejestru będzie zawierać wartości typu float w przypadku, gdy wywoływany oczekuje, że wartość w rejestrach liczby całkowitej.  

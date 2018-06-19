@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354338"
 ---
 # <a name="atl-connection-point-classes"></a>Klasy punktu połączenia ATL
 ATL używa następujących klas do obsługi punkty połączeń:  

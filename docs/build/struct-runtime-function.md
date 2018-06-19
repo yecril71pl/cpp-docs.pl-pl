@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379929"
 ---
 # <a name="struct-runtimefunction"></a>struktura RUNTIME_FUNCTION
 Obsługa wyjątków na podstawie tabeli wymaga wpisu tabeli dla wszystkich funkcji, które przydzielenie miejsca na stosie lub wywołać funkcję innego (na przykład funkcje niebędącym elementem typu liść). Funkcja wpisów tabeli mają format:  

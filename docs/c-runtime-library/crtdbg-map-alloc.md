@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386482"
 ---
 # <a name="crtdbgmapalloc"></a>_CRTDBG_MAP_ALLOC
 Gdy **_crtdbg_map_alloc —** flaga jest zdefiniowany w wersji do debugowania aplikacji, wersja podstawowa funkcji sterty bezpośrednio są mapowane na ich wersje debugowania. Flaga jest wykorzystywana w Crtdbg.h do mapowania. Ta flaga jest dostępna tylko podczas [_DEBUG](../c-runtime-library/debug.md) flagi został zdefiniowany w aplikacji.  

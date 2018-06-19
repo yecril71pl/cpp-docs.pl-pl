@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391818"
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>Nazwy lokalne, języki i ciągi kraj/region
 *Ustawień regionalnych* argument `setlocale` i `_create_locale` funkcji można ustawić za pomocą nazwy lokalne, języki, kodów kraju/regionu i strony kodowe, które są obsługiwane przez interfejs API NLS systemu Windows. *Ustawień regionalnych* argument ma następującą postać:  

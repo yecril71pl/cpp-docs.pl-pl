@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391951"
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>Pola specyfikacji formatu dla funkcji wscanf
 Informacje w tym miejscu ma zastosowanie do całej `scanf` rodziny funkcji, łącznie z wersjami bezpiecznego i opisano symbole używane mówić `scanf` działa jak przeanalizować strumienia wejściowego, takich jak strumień wejściowy `stdin` dla `scanf`, na wartości, które są wstawiane do zmiennych programu.  

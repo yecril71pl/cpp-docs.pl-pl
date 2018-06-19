@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390125"
 ---
 # <a name="fmode"></a>_fmode
 `_fmode` Zmiennej ustawia domyślny tryb tłumaczenia pliku translacji tekst lub binarny. Tę zmienną globalną jest przestarzała bezpieczniejsze funkcjonalne wersje [_get_fmode —](../c-runtime-library/reference/get-fmode.md) i [_set_fmode —](../c-runtime-library/reference/set-fmode.md), którego należy użyć zamiast zmiennej globalnej. Jest zadeklarowana w następujący sposób w Stdlib.h.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354449"
 ---
 # <a name="atl-collection-and-enumerator-classes"></a>Moduł wyliczający klasy i kolekcji ATL
 ATL zawiera następujące klasy w celu ułatwienia implementacji kolekcje i wyliczenia.  

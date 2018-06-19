@@ -41,6 +41,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391538"
 ---
 # <a name="obsolete-functions"></a>Przestarzałe funkcje
 Niektóre funkcje są przestarzałe i mieć nowszą odpowiedniki. Firma Microsoft zaleca się, że możesz zmienić zaktualizowanych wersji. Inne przestarzałe funkcje zostały usunięte z CRT. W tym temacie wymieniono funkcje przestarzałe jako przestarzałe i funkcje usunięte w przypadku konkretnej wersji programu Visual Studio.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385172"
 ---
 # <a name="simple-assignment-c"></a>Przypisanie proste (C)
 Operator przypisania prostego przypisuje jej prawy operand operand po lewej stronie. Wartość prawy operand jest konwertowana na typ wyrażenia przypisania i zastępuje do wartości przechowywanej w obiekcie wskazywany przez argument po lewej stronie. Zastosuj reguły konwersji dla przypisania (zobacz [konwersje przypisań](../c-language/assignment-conversions.md)).  

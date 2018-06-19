@@ -45,6 +45,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379513"
 ---
 # <a name="tips-for-improving-time-critical-code"></a>Wskazówki dotyczące poprawiania kodu wrażliwego na czas
 Pisanie kodu szybkiego wymaga opis wszystkich aspektów aplikacji i sposób interakcji z systemu. W tym temacie sugeruje alternatywy dla niektórych bardziej oczywistymi technik kodowania w celu zapewnienia pomyślnie wykonać wrażliwego na czas fragmentów kodu.  

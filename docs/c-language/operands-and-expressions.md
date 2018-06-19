@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383452"
 ---
 # <a name="operands-and-expressions"></a>Operandy i wyrażenia
 "Argument" jest jednostką, na którym działa operatora. "Wyrażenie" jest sekwencją operatory i argumenty wykonująca dowolne z następujących działań:  

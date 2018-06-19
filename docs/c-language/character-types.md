@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383696"
 ---
 # <a name="character-types"></a>Typy znaku
 Stała znakowa całkowitą nie poprzedzony literą **L** ma typ `int`. Wartość stała znakowa liczba całkowita zawierająca pojedynczy znak jest wartością liczbową znaku interpretowane jako liczba całkowita. Na przykład wartość liczbową znaku `a` 97 dziesiętnie i 61 w formacie szesnastkowym.  

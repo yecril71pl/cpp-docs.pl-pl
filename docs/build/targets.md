@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380265"
 ---
 # <a name="targets"></a>Obiekty docelowe
 W wierszu zależności, należy określić co najmniej jednego celu, przy użyciu dowolnego prawidłową nazwę pliku, nazwy katalogu, lub [pseudotarget](../build/pseudotargets.md). Oddziel wiele elementów docelowych spacji lub kart. Obiekty docelowe nie jest uwzględniana. Ścieżki są dozwolone z nazwami plików. Element docelowy nie może przekroczyć 256 znaków. Jeśli element docelowy przed dwukropkiem pojedynczym znakiem, użyj oddzielający miejsca; w przeciwnym razie NMAKE dwukropek litery kombinacja interpretowana jako specyfikator dysku.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387463"
 ---
 # <a name="32-bit-windows-timedate-formats"></a>32-bitowe formaty daty/godziny systemu Windows
 Data i godzina pliku są przechowywane oddzielnie, używając jako pól bitowych liczb całkowitych bez znaku. Data i godzina pliku są pakowane w następujący sposób:  

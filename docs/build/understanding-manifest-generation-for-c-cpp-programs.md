@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381636"
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>Ogólne informacje o tworzeniu manifestu dla programów C/C++
 A [manifestu](http://msdn.microsoft.com/library/aa375365) dokument XML, który może być plik XML lub zasobu osadzonego w aplikacji lub zestawu. Manifest [izolowany aplikacji](http://msdn.microsoft.com/library/aa375190) służy do zarządzania nazwy i wersje udostępnionych zestawów side-by-side, do których aplikacji muszą być powiązane w czasie wykonywania. Manifest zestawu side-by-side określa zależnościami na nazwy, wersji, zasobów i innych zestawów.  

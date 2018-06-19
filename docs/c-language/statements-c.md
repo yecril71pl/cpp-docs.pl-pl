@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387781"
 ---
 # <a name="statements-c"></a>Instrukcje (C)
 Instrukcje programu C sterowanie przepływem wykonania programu. W języku C jak w innych językach programowania kilka rodzajów instrukcje są dostępne do wykonywania pętli, aby wybrać inne instrukcje do wykonania i przesłać formantu. Następujące krótkie [omówienie składni instrukcji](../c-language/overview-of-c-statements.md), w tej sekcji opisano instrukcjach języka C w porządku alfabetycznym:  

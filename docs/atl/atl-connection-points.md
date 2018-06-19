@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354671"
 ---
 # <a name="atl-connection-points"></a>Punkty połączenia ATL
 Obiekt składnika jest taki, który obsługuje interfejsy wychodzących. Wychodzące interfejs sprawia, że obiekt do komunikacji z klientem. Dla każdego interfejsu wychodzącego składnika obiekt ujawnia punktu połączenia. Każdy wychodzących interfejs jest implementowany przez klienta do obiektu o nazwie zbiorniku.  

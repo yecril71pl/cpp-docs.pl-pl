@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387148"
 ---
 # <a name="ciatan2"></a>_CIatan2
 Oblicza tangens *x* / *y* gdzie *x* i *y* wartości wierzchołku stosu.  

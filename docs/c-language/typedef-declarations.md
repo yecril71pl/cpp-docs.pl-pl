@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391655"
 ---
 # <a name="typedef-declarations"></a>Deklaracje typedef
 Deklaracji typedef jest deklaracją z typedef jako klasa magazynu. Deklarator staje się nowego typu. Deklaracje typedef można użyć do utworzenia krótszy lub bardziej zrozumiałej nazwy dla typów zdefiniowanych przez C lub dla typów, które zostały zadeklarowane. Nazwy zdefiniowane przez typedef pozwalają na hermetyzację szczegółów implementacji, które mogą się zmieniać.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383790"
 ---
 # <a name="no-linkage"></a>Brak połączenia
 Jeśli nie ma deklaracji dla identyfikatora w bloku `extern` Specyfikator klasy magazynowania, identyfikator ma bez powiązania i jest unikatowa dla funkcji.  

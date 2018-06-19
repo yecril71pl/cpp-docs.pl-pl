@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389920"
 ---
 # <a name="while-statement-c"></a>while — instrukcja (C)
 `while` Instrukcji umożliwia Powtórz instrukcję określone wyrażenie staje się wartość false.  

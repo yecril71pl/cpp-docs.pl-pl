@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382149"
 ---
 # <a name="declarators-maximum-number"></a>Deklaratory: maksymalna liczba
 **ANSI 3.5.4** maksymalną liczbę deklaratorów, które można modyfikować arytmetyczne, struktury lub Unii  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392042"
 ---
 # <a name="global-variables"></a>Zmienne globalne
 Biblioteki wykonawcze języka Microsoft C zawiera następujące zmienne globalne lub makr. Niektóre z tych zmiennych globalnych lub makra ma została zastąpiona bardziej bezpiecznych funkcjonalne wersje, które firma Microsoft zaleca się, że można użyć zamiast zmiennych globalnych.  

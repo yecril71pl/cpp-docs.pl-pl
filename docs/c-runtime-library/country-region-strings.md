@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391447"
 ---
 # <a name="countryregion-strings"></a>Ciągi kraj/region
 Ciągi kraj lub region można łączyć z ciągiem języka Aby utworzyć specyfikację ustawień regionalnych dla `setlocale`, `_wsetlocale`, `_create_locale`, i `_wcreate_locale` funkcji. Dla listy nazw kraju/regionu, które są obsługiwane przez różne wersje systemu operacyjnego Windows, temacie [dokumentacja interfejsu API National obsługi Language (NLS)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). Na listach ciąg kraj/region może być dowolna z wartości kraju w **ustawień regionalnych - języka Kraj/Region** kolumny lub dowolnym skróty w **skrót nazwę kraju lub regionu** kolumny. Język dodatkowe informacje pomocy w systemach operacyjnych Windows w wersji, zobacz [dodatek A: produktu zachowanie](http://msdn.microsoft.com/goglobal/bb896001.aspx) w [MS-LCID]: odwołanie do identyfikatora kodu języka systemu Windows (LCID).  

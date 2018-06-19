@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392188"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Hierarchia i kolejność ocen
 Priorytet i łączność operatorów C wpłynąć na grupowanie i oceny operandów w wyrażeniach. Kolejność jest znaczący tylko wtedy, gdy istnieją inne operatory o priorytecie większej lub mniejszej. Wyrażenia z operatorami o wyższym priorytecie są sprawdzane jako pierwsze. Pierwszeństwo można również opisać za pomocą słowa "powiązania." Operatory o wyższym priorytecie są określane jako ma większego powiązania.  

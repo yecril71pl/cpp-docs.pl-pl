@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387635"
 ---
 # <a name="example-program"></a>Program przykładowy
 Następujący program źródłowy C składa się z dwóch plików źródłowych. To daje przegląd różnych deklaracji i możliwych definicji w programie C. Nowsze w tej sekcji opisano sposób zapisania tych deklaracji, definicje i inicjalizacji i sposobu używania słowa kluczowe języka C, takich jak **statycznych** i `extern`. Funkcja `printf` jest zadeklarowana w pliku nagłówkowym STDIO.H języka C.  

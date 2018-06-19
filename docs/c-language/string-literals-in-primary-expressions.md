@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384944"
 ---
 # <a name="string-literals-in-primary-expressions"></a>Literał ciągu w wyrażeniach podstawowych
 "Literału ciągu" jest znaków, znaków typu wide lub sekwencja znaków sąsiadujących ze sobą ujęta w znaki podwójnego cudzysłowu. Ponieważ nie są one zmienne literałów ciągów ani ich elementów można lewego operandu w operacji przypisania. Typ literału ciągu jest tablicą `char` (lub tablicę `wchar_t` literałów ciągów WWW). Tablice w wyrażeniach są konwertowane na wskaźników. Zobacz [literałów ciągów](../c-language/c-string-literals.md) Aby uzyskać więcej informacji na temat ciągów.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389783"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>Podsumowanie okresu istnienia i widoczności
 Poniższa tabela znajduje się podsumowanie okresu istnienia i widoczności właściwości dla większości identyfikatorów. Pierwsze trzy kolumny nadaj atrybuty, które definiują okres istnienia i widoczności. Identyfikator z atrybutami przez pierwsze trzy kolumny ma okres istnienia i widoczności wyświetlane w kolumnach czwartym i piątym. Jednak tabeli nie obejmuje wszystkich możliwych przypadków. Zapoznaj się [klasy magazynu](../c-language/c-storage-classes.md) Aby uzyskać więcej informacji.  

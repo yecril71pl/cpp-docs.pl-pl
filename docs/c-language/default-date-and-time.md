@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382744"
 ---
 # <a name="default-date-and-time"></a>Domyślne data i godzina
 **ANSI 3.8.8** definicje wartość\_ i _TIME\_ , odpowiednio, datę i godzinę tłumaczenia nie są dostępne  

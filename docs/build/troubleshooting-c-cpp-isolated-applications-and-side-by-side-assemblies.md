@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390694"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Rozwiązywanie problemów związanych z aplikacjami izolowanymi C/C++ oraz aplikacjami wykonywanymi równocześnie
 Podczas ładowania aplikacji C/C++ może zakończyć się niepowodzeniem, jeśli nie można odnaleźć zależnych bibliotek. W tym artykule opisano niektóre typowe przyczyny niepowodzenia aplikacji C/C++ załadować, a także sugeruje czynności umożliwiające rozwiązywanie problemów.  

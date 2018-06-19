@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390221"
 ---
 # <a name="argc-argv-wargv"></a>__argc __argv, __wargv
 `__argc` — Zmienna globalna jest liczba liczba argumentów wiersza polecenia przekazywane do programu. `__argv` wskaźnik do tablicy bajtów jednoznakowym lub kilku byte znak ciągi, które zawierają argumenty programu i `__wargv` wskaźnika do tablicy znaków dwubajtowych ciągi, które zawierają argumenty programu. Te zmienne globalne podać argumenty `main` lub `wmain`.  

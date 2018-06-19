@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391210"
 ---
 # <a name="return-statement-c"></a>return — instrukcja (C)
 `return` Instrukcji kończy wykonywanie funkcji i zwraca sterowania do funkcji wywołującej. Wznawia wykonywanie w funkcji wywołującej w momencie bezpośrednio po wywołaniu. A `return` instrukcji można również zwrócić wartość do funkcji wywołującej. Zobacz [typu zwracanego](../c-language/return-type.md) Aby uzyskać więcej informacji.  

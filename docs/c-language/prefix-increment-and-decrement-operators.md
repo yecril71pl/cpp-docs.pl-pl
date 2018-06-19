@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384532"
 ---
 # <a name="prefix-increment-and-decrement-operators"></a>Operatory prefiksów inkrementacji i dekrementacji
 Operatory jednoargumentowe (`++` i **--**) są nazywane "prefiksu" przyrostu lub operatory dekrementacji, gdy operatory inkrementacji lub dekrementacji pojawią się przed argument. Operatory przyrostka inkrementacji i dekrementacji ma wyższy priorytet niż prefiksów inkrementacji i dekrementacji. Argument musi być typu całkowitego, zmiennoprzecinkową lub wskaźnika typu i musi być wyrażeniem modyfikowalną l wartość (wyrażenia bez **const** atrybutu). Wynik jest wartością l-value.  

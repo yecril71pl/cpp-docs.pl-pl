@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380605"
 ---
 # <a name="stack-allocation"></a>Alokacja stosu
 Funkcja prologu jest odpowiedzialny za przydzielania miejsca na stosie dla zmiennych lokalnych, zapisane rejestrowania, stosu parametry i parametry rejestru.  

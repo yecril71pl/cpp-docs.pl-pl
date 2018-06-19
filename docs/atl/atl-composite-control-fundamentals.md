@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354620"
 ---
 # <a name="atl-composite-control-fundamentals"></a>Podstawy złożonych kontrolek ALT
 Formantu złożonego jest typem formantu ActiveX, który może zawierać (podobnie do okna dialogowego) innych formantów ActiveX lub formantów systemu Windows. Po utworzeniu złożonych kontrolek, aby można było wstawić wszędzie tam, gdzie mogą być hostowane kontrolki ActiveX.  

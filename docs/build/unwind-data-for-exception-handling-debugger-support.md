@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380436"
 ---
 # <a name="unwind-data-for-exception-handling-debugger-support"></a>Dane operacji Unwind dla obsługi wyjątków, obsługa debugera
 W tej sekcji omówiono struktur danych wymagane dla wyjątków, obsługa i obsługa debugowania.  

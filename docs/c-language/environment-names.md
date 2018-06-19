@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384883"
 ---
 # <a name="environment-names"></a>Nazwy środowiska
 **ANSI 4.10.4.4** zbiór nazwy środowiska, a także metoda zmieniania listy środowiska używane przez [getenv —](../c-runtime-library/reference/getenv-wgetenv.md) — funkcja  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383868"
 ---
 # <a name="range-of-char-values"></a>Zakres wartości char
 **ANSI 3.2.1.1** czy "zwykły" **char** ma tego samego zakresu wartości jako **podpisany char** lub `unsigned char`  

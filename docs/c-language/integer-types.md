@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386806"
 ---
 # <a name="integer-types"></a>Typy całkowite
 Każda stała całkowita posiada typ zależny od jej wartości i sposobu wyrażenia. Możesz wymusić żadnych stała całkowita na typ **długi** przez dołączenie literę **l** lub **L** na końcu stała; Aby wymusić na typ `unsigned` przez dodanie **u** lub **U** wartości. Małe litery **l** można pomylić z cyfrą 1 i należy unikać. Niektóre rodzaje **długi** wykonaj stałe całkowite:  

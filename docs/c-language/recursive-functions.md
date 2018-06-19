@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386933"
 ---
 # <a name="recursive-functions"></a>Funkcje rekursywne
 Dowolnej funkcji programu C można wywołać rekursywnie; oznacza to, że może wywołać się. Liczba wywołań cyklicznych jest ograniczona do rozmiaru stosu. Zobacz [/STACK (twórz stos z alokacji)](../build/reference/stack-stack-allocations.md) (/ STACK) — opcja konsolidatora informacji o konsolidatora opcje tego Ustaw rozmiar stosu. Każdorazowo po wywołaniu funkcji nowego magazynu jest przydzielona dla parametrów i **automatycznie** i **zarejestrować** zmienne, tak aby ich wartości w poprzedniej, niedokończone wywołania nie zostaną zastąpione. Parametry są tylko bezpośrednio dostępny dla wystąpienia funkcji, w którym są tworzone. Poprzednie parametry nie są bezpośrednio dostępne dla następujących wystąpień funkcji.  

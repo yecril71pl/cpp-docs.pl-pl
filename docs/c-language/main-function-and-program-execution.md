@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387502"
 ---
 # <a name="main-function-and-program-execution"></a>Funkcja main i wykonywanie programu
 Każdy program C ma podstawowej funkcji (głównego), która musi mieć nazwę **głównego**. Jeśli kod jest zgodna z modelem programowania Unicode, można użyć znaków dwubajtowych wersja **głównego**, **wmain**. **Głównego** funkcji służy jako punkt początkowy dla wykonania programu. Zwykle kontroluje wykonywanie programu przez kierowanie wywołań do innych funkcji programu. Program przestanie zazwyczaj wykonywane na końcu **głównego**, chociaż może obsłużyć w innych punktach programu z różnych przyczyn. Niekiedy po wykryciu określonego błędu, możesz chcieć wymusić przerwanie programu. Aby to zrobić, użyj **zakończyć** funkcji. Zobacz *odwołanie do biblioteki wykonawczej* informacji na temat i przykład za pomocą [zakończyć](../c-runtime-library/reference/exit-exit-exit.md) funkcji.  

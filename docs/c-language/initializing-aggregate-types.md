@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391681"
 ---
 # <a name="initializing-aggregate-types"></a>Inicjowanie typów agregacji
 Typ "agregacji" jest struktura, Unią lub typ tablicy. Jeśli typ agregacji zawiera elementy członkowskie typów agregacji, rekursywnie zastosowanie zasady inicjowania.  

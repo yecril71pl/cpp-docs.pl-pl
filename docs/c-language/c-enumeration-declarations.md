@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389744"
 ---
 # <a name="c-enumeration-declarations"></a>Deklaracje modułów wyliczających języka C
 Wyliczenie składa się z zestawem stałe całkowite nazwanego. Deklaracja typu wyliczenia nadaje nazwę tagu — wyliczenie (opcjonalnie) i definiuje zestaw identyfikatorów całkowitą o nazwie (o nazwie "wyliczenie zestawu," "stałe modułu wyliczającego", "wyliczenia" lub "Członkowie"). Zmienna typu wyliczenia przechowuje jedną z wartości wyliczenia zestawu wynika z tego typu.  

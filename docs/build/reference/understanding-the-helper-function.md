@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379240"
 ---
 # <a name="understanding-the-helper-function"></a>Ogólne informacje funkcji Pomocnik
 Funkcja pomocnika służąca do ładowania opóźnionego obsługiwane konsolidatora to, co faktycznie ładuje bibliotekę DLL w czasie wykonywania. Funkcja pomocnika, aby dostosować zachowanie przy jego własnej funkcji zapisywania i łącząc go do programu zamiast przy użyciu funkcji pomocnika podany w Delayimp.lib można modyfikować. Jedna funkcja pomocnika służy wszystkie opóźnienie załadować biblioteki dll.  

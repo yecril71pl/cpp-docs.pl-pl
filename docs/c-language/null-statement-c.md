@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384271"
 ---
 # <a name="null-statement-c"></a>Instrukcja o wartości Null (C)
 "Instrukcja o wartości null" jest instrukcji zawierającej tylko średnika; może być wyświetlany wszędzie tam, gdzie jest oczekiwany instrukcję. Nic się nie dzieje podczas wykonywania instrukcja o wartości null. Prawidłowy sposób kodowania instrukcja o wartości null jest:  

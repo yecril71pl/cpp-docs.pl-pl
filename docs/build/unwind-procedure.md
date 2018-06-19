@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382026"
 ---
 # <a name="unwind-procedure"></a>Procedura Unwind
 Tablica kodu unwind jest sortowany w kolejności malejącej. Po wystąpieniu wyjątku, pełną kontekst jest przechowywany przez system operacyjny w rekordu kontekstu. Następnie wywoływana jest logiki wysyłania wyjątek, który wielokrotnie wykonuje następujące czynności, aby znaleźć obsługi wyjątków.  

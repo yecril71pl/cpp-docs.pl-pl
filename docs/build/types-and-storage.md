@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380618"
 ---
 # <a name="types-and-storage"></a>Typy i magazyn
 W tej sekcji opisano wyliczenie i magazynu danych typów [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] architektury.  

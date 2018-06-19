@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390977"
 ---
 # <a name="byte-classification"></a>Klasyfikacja bajtów
 
@@ -55,7 +56,7 @@ Stałe wstępnie zdefiniowane w poniższej tabeli są definiowane w \<ctype.h >.
 |[_mbsbtype, _mbsbtype_l](../c-runtime-library/reference/mbsbtype-mbsbtype-l.md)|Zwracany typ bajtów ciągu|
 |[mbsinit](../c-runtime-library/reference/mbsinit.md)|Śledzi stan konwersji znaków wielobajtowych.|
 
-**Mb_len_max —** makra zdefiniowane w \<Limits.h — >, rozwijany do maksymalna długość w bajtach, które może zawierać żadnych znaków wielobajtowych. **Mb_cur_max —**zdefiniowanej w \<stdlib.h >, rozwijany do maksymalna długość w bajtach znaków wielobajtowych w bieżących ustawień regionalnych.
+**Mb_len_max —** makra zdefiniowane w \<Limits.h — >, rozwijany do maksymalna długość w bajtach, które może zawierać żadnych znaków wielobajtowych. **Mb_cur_max —** zdefiniowanej w \<stdlib.h >, rozwijany do maksymalna długość w bajtach znaków wielobajtowych w bieżących ustawień regionalnych.
 
 ## <a name="see-also"></a>Zobacz także
 

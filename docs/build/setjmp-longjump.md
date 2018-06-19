@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379838"
 ---
 # <a name="setjmplongjump"></a>setjmp/longjump
 Po dołączeniu setjmpex.h lub setjmp.h wszystkich wywołań [setjmp](../c-runtime-library/reference/setjmp.md) lub [longjmp](../c-runtime-library/reference/longjmp.md) spowoduje unwind wywołuje destruktory, który wywołuje finally.  To różni się od x86, gdzie tym setjmp.h wyniki w klauzulach finally i destruktory nie wywołana.  

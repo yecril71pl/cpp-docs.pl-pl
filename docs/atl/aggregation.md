@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353966"
 ---
 # <a name="aggregation"></a>Agregacji
 Brak razy, gdy osoby wdrażającej obiektu chcesz korzystać z usług oferowanych przez inny, wbudowane obiektu. Ponadto chcesz ten drugi obiekt do są wyświetlane jako fizyczne część pierwszy. COM osiąga obu tych celów poprzez zawierania i agregacji.  

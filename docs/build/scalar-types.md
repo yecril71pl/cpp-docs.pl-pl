@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381174"
 ---
 # <a name="scalar-types"></a>Typy skalarne
 Mimo że dostępu do danych mogą wynikać z wyrównanie, zaleca się, że dane być dostosowane do jego granic fizycznych, aby uniknąć utraty wydajności (lub jej wielokrotność). Typy wyliczeniowe są stałe całkowite i są traktowane jako 32-bitowych liczb całkowitych. W poniższej tabeli opisano definicji typu i zalecane magazynu dla niego w odniesieniu do dostosowania przy użyciu następujących wartości wyrównania:  

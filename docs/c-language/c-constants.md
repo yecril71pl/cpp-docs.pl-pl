@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381658"
 ---
 # <a name="c-constants"></a>Stałe języka C
 "Stała" to liczby, znak lub ciąg znaków, które mogą być używane jako wartości w programie. Użyj stałych do reprezentowania liczb zmiennoprzecinkowych, integer, wyliczenie lub wartości znaków, których nie można zmodyfikować.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384499"
 ---
 # <a name="function-call-conversions"></a>Konwersje wywołania funkcji
 Typ konwersji w argumentów w wywołaniu funkcji zależy od obecności prototypu funkcji (deklaracja przekazująca dalej) z typami argumentów zadeklarowany dla funkcji o nazwie.  

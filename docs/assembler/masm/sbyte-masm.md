@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057971"
 ---
 # <a name="sbyte-masm"></a>SBYTE (MASM)
 Przydziela i opcjonalnie inicjuje bajtu ze znakiem magazynu dla każdej `initializer`. Może także służyć jako Specyfikator typu dowolnym typem jest dozwolony.  

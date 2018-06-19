@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381788"
 ---
 # <a name="converting-multibyte-characters"></a>Konwersja znaków wielobajtowych
 **ANSI 3.1.3.4** bieżące ustawienia regionalne służący do konwertowania znaków wielobajtowych na odpowiednie znaki dwubajtowe (kody) stałej znaków dwubajtowych  

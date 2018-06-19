@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381932"
 ---
 # <a name="c-language-syntax-summary"></a>Podsumowanie dotyczące składni języka C
 W tej sekcji przedstawiono pełen opis języka C i funkcje języka C specyficzne dla firmy Microsoft. Notacja składni w tej sekcji służy do określenia dokładna składnia dla każdego składnika języka. Wyjaśnienie składni pojawia się w sekcji tego podręcznika w którym omówiono tematu.  

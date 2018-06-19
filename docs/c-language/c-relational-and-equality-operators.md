@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387586"
 ---
 # <a name="c-relational-and-equality-operators"></a>Operatory relacyjne i porównania języka C
 Binarny relacyjnych i operatory równości porównać ich pierwszego operandu na ich drugi argument, aby sprawdzić poprawność określonej relacji. Wynik wyrażenia relacyjne to 1, jeśli testowany relacji jest true i 0, jeśli ma wartość false. Typ wyniku jest `int`.  

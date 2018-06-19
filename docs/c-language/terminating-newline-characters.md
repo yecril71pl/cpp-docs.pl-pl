@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385113"
 ---
 # <a name="terminating-newline-characters"></a>Kończenie znakami nowego wiersza
 **ANSI 4.9.2** czy ostatni wiersz strumienia tekstu wymaga kończącego znaku nowego wiersza  

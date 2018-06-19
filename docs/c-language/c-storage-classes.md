@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386073"
 ---
 # <a name="c-storage-classes"></a>Klasy magazynu w języku C
 "Klasy magazynu" zmiennej, która określa, czy element ma "globalny" lub "local" okresu istnienia. C wymaga tych dwóch okresy "statyczna" i "Automatyczny". Element globalny okres istnienia istnieje i ma wartość podczas wykonywania programu. Wszystkie funkcje istnienia globalnego.  

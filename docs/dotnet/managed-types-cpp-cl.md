@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135862"
 ---
 # <a name="managed-types-ccl"></a>Typy zarządzane (C++/CL)
 Składnia deklaracji typy zarządzane i tworzenia i stosowania obiekty z następujących typów znacznie zmieniono z rozszerzeń zarządzanych dla języka C++ dla Visual C++. To zostało zrobione wspierania integracji ich w systemie typów ISO C++. Te zmiany są przedstawione szczegółowo w poniższych podsekcjach.  

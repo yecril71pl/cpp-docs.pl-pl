@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381824"
 ---
 # <a name="c-abstract-declarators"></a>Deklaratory abstrakcyjne języka C
 Deklarator abstrakcyjnej jest deklaratorze bez identyfikatora składające się z co najmniej jednego wskaźnika, tablic lub funkcja modyfikatorów. Modyfikator wskaźnika (**\***) zawsze poprzedza identyfikator w deklaratorze; tablicy (**[**) i funkcji ( **()** ) Modyfikatory postępuj zgodnie z identyfikatorem. Wiedzy o to, można określić, gdzie identyfikator będzie wyświetlane w abstrakcyjnej deklarator i odpowiednio interpretowanie deklaratorów. Zobacz [interpretowanie więcej Deklaratorów złożonych](../c-language/interpreting-more-complex-declarators.md) dodatkowe informacje i przykłady deklaratorów złożonych. Ogólnie rzecz biorąc `typedef` może służyć do uproszczenia deklaratorów. Zobacz [deklaracje Typedef](../c-language/typedef-declarations.md).  

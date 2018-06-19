@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353861"
 ---
 # <a name="data-types-classes"></a>Klasy typów danych
 Następujące klasy zawijać typy danych języka C++:  

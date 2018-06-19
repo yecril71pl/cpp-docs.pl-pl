@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386641"
 ---
 # <a name="wide-characters"></a>Znaki dwubajtowe
 **ANSI 3.1.3.4** wartość stała znakowa liczba całkowita, która zawiera więcej niż jeden znak lub stała znaków dwubajtowych, który zawiera więcej niż jeden znaków wielobajtowych  

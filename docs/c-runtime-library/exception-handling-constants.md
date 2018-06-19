@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388230"
 ---
 # <a name="exception-handling-constants"></a>Instrukcje obsługi wyjątków — Stałe
 Stała `EXCEPTION_CONTINUE_SEARCH`, `EXCEPTION_CONTINUE_EXECUTION`, lub `EXCEPTION_EXECUTE_HANDLER` jest zwracany, gdy wystąpi wyjątek podczas wykonywania sekcji ochroną **spróbuj — z wyjątkiem** instrukcji. Wartość zwracana określa sposób obsługi wyjątków. Aby uzyskać więcej informacji, zobacz [spróbuj-except — instrukcja](../cpp/try-except-statement.md) w *dokumentacja języka C++*.  

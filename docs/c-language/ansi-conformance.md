@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380592"
 ---
 # <a name="ansi-conformance"></a>Zgodność ANSI
 Microsoft C odpowiada standard języka C zgodnie z ustaleniami określonymi w wersji 9899:1990 standardu ANSI C.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383751"
 ---
 # <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>Biblioteki DLL MFC regularne połączone statycznie z MFC
 Regularne, które biblioteki MFC DLL połączone statycznie z MFC jest bibliotekę DLL, która MFC jest używane wewnętrznie i eksportowanych funkcji w bibliotece DLL może być wywoływany przez pliki wykonywalne MFC lub innego typu niż MFC. Zgodnie z opisem w nazwę, tego rodzaju biblioteki DLL jest utworzony przy użyciu wersji biblioteki dołączanej statycznie z MFC. Funkcje eksportowane są zazwyczaj ze standardowych biblioteki MFC DLL przy użyciu standardowych interfejsów C. Na przykład sposobu zapisu, tworzenia i używania regularną bibliotekę DLL MFC Zobacz przykład [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap).  

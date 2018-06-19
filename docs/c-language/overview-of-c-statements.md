@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387180"
 ---
 # <a name="overview-of-c-statements"></a>Przegląd instrukcji C
 Instrukcje C składają się z tokenów, wyrażenia i inne instrukcje. Instrukcja, która stanowi część innej instrukcji jest nazywany "treść" otaczającej instrukcji. Każdy typ instrukcji podanych w następującej składni została szczegółowo opisana w tej sekcji.  

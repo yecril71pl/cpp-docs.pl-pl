@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381635"
 ---
 # <a name="casting-integers-to-floating-point-values"></a>Rzutowanie liczb całkowitych na wartości zmiennoprzecinkowe
 **ANSI 3.2.1.3** kierunek obcięcie po przekonwertowaniu do liczby zmiennoprzecinkowej, która nie może reprezentować dokładnie oryginalnej wartości liczbą całkowitą  

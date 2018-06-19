@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354436"
 ---
 # <a name="creating-registrar-scripts"></a>Tworzenie skryptów rejestratora
 Skryptu rejestratora zapewnia oparte na danych, a nie obsługiwanego interfejsu API, dostępu do rejestru systemowego. Danymi dostępu jest zazwyczaj bardziej wydajne, ponieważ trwa tylko jeden lub dwa wiersze w skrypcie, aby dodać klucz w rejestrze.  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451402"
 ---
 # <a name="environ-wenviron"></a>_environ, _wenviron
 `_environ` Zmienna jest wskaźnik do tablicy wskaźników do ciągów znaków wielobajtowych, które stanowi środowisko procesu. Tę zmienną globalną jest przestarzała bezpieczniejsze funkcjonalne wersje [getenv_s —, _wgetenv_s —](../c-runtime-library/reference/getenv-s-wgetenv-s.md) i [_putenv_s —, _wputenv_s —](../c-runtime-library/reference/putenv-s-wputenv-s.md), którego należy użyć zamiast zmiennej globalnej. `_environ` jest zadeklarowana w Stdlib.h.  

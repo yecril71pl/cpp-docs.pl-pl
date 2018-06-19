@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354598"
 ---
 # <a name="current-time-general-purpose-classes"></a>Bieżący czas: Klasy ogólnego przeznaczenia
 Poniższa procedura przedstawia sposób tworzenia `CTime` i zainicjować go przy użyciu bieżącego czasu.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380943"
 ---
 # <a name="blocks"></a>Bloki
 Sekwencja deklaracji, definicje i instrukcje ujętą w nawiasy klamrowe nawiasy klamrowe (**{}**) jest nazywany "block". Istnieją dwa typy bloków w C. "Instrukcja złożona," instrukcję składa się z jednego lub więcej instrukcji (zobacz [złożonej instrukcji](../c-language/compound-statement-c.md)), jest jeden typ bloku. Pozostałych "definicji funkcji", składa się z złożonej instrukcji (treści funkcji) oraz powiązanych funkcji "header" (nazwa funkcji, zwracany typ i parametrów formalnych). Blok w ramach innych bloków jest uznawany za "zagnieżdżony."  
