@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107490"
 ---
 # <a name="resource-pooling-in-your-ole-db-application"></a>Buforowanie zasobów w aplikacji OLE DB
 Aby skorzystać z puli aplikacji, należy upewnić się, OLE DB usług są wywoływane przez uzyskanie źródła danych za pośrednictwem **procedury IDataInitialize** lub **IDBPromptInitialize**. Jeśli używasz bezpośrednio `CoCreateInstance` do wywoływania dostawcy oparte na CLSID dostawcy, są wywoływane żadnych usług OLE DB.  

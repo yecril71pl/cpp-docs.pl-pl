@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087978"
 ---
 # <a name="tovector-function"></a>to_vector — funkcja
 Zwraca `std::vector` którego wartość jest taka sama jak podstawowy określony parametr IVector lub IVectorView kolekcji.  

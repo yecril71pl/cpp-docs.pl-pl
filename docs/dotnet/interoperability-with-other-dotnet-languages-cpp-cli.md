@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129102"
 ---
 # <a name="interoperability-with-other-net-languages-ccli"></a>Współdziałanie z innymi językami .NET (C++/CLI)
 Tematy w tej sekcji pokazano, jak utworzyć zestawy w programie Visual C++, które używają z lub zapewniać funkcje zestawy napisany w języku C# lub Visual Basic.  

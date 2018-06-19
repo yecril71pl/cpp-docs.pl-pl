@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134245"
 ---
 # <a name="logicalnot-stlclr"></a>logical_not (STL/CLR)
 Obiekt opisano klasy szablonu, że po wywołaniu zwraca wartość true tylko wtedy, gdy albo jej argument testów jako FAŁSZ. Można go użyć Określ obiekt funkcja pod względem jego typ argumentu.  

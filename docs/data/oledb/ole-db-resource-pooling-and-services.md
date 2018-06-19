@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111188"
 ---
 # <a name="ole-db-resource-pooling-and-services"></a>Buforowanie zasobów i usługi OLE DB
 Aby pracować z puli OLE DB lub z dowolnej usługi OLE DB, Twój dostawca musi obsługiwać agregacji wszystkich obiektów. Jest to wymagane, OLE DB w wersji 1.5 lub nowszego dostawcy. Jest to niezbędne do korzystania z usługi. Dostawców, które nie obsługują agregacji nie może być w puli i żadnych dodatkowych usług są dostępne.  

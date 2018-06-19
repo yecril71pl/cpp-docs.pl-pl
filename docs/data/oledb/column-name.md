@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097526"
 ---
 # <a name="columnname"></a>COLUMN_NAME
 Reprezentuje powiązanie w zestawie wierszy w kolumnie określonej w zestawie wierszy. Podobnie jak [column_entry —](../../data/oledb/column-entry.md), ale to makro przyjmuje nazwę kolumny, zamiast numeru kolumny.  

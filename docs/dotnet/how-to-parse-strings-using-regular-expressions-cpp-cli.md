@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131101"
 ---
 # <a name="how-to-parse-strings-using-regular-expressions-ccli"></a>Porady: analizowanie ciągów za pomocą wyrażeń regularnych (C++/CLI)
 Poniższy przykład kodu pokazuje prostego ciągu analizy przy użyciu <xref:System.Text.RegularExpressions.Regex> klasy w <xref:System.Text.RegularExpressions?displayProperty=fullName> przestrzeni nazw. Ciąg zawierający wiele typów ukośników word jest tworzony. Ten ciąg jest następnie analizować przy użyciu <xref:System.Text.RegularExpressions.Regex> klasy w połączeniu z <xref:System.Text.RegularExpressions.Match> klasy. Następnie każdego wyrazu w zdaniu jest wyświetlany osobno.  

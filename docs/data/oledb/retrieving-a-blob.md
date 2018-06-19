@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105208"
 ---
 # <a name="retrieving-a-blob"></a>Pobieranie obiektu BLOB
 Można pobrać dużego obiektu binarnego (BLOB) na różne sposoby. Można użyć **DBTYPE_BYTES** można pobrać obiektu BLOB jako sekwencję bajtów lub korzystają z interfejsu, takich jak `ISequentialStream`. Aby uzyskać więcej informacji, zobacz [obiekty BLOB i obiektów OLE](https://msdn.microsoft.com/en-us/library/ms711511.aspx) w *OLE DB Podręcznik programisty*.  

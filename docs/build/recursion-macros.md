@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368964"
 ---
 # <a name="recursion-macros"></a>Makra rekursji
 Makra rekursji umożliwia wywołanie rekursywnie NMAKE. Sesje cykliczne dziedziczą makra zmiennych środowiskowych i z wierszem polecenia i Tools.ini informacji. Nie dziedziczą zasady zdefiniowane w pliku reguł programu make wnioskowania lub **. SUFIKSY** i **. CENNY** specyfikacji. Aby przekazać makr NMAKE cykliczne sesji, ustaw zmienną środowiskową z ZESTAWEM przed wywołanie cykliczne, zdefiniuj makra w poleceniu wywołanie cykliczne lub Definiowanie makr w Tools.ini.  

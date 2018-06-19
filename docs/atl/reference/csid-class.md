@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366409"
 ---
 # <a name="csid-class"></a>Klasa CSid
 Ta klasa jest otoki dla `SID` struktury (identyfikator zabezpieczeń).  

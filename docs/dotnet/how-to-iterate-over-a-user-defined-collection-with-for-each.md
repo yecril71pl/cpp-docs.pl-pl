@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128657"
 ---
 # <a name="how-to-iterate-over-a-user-defined-collection-with-for-each"></a>Porady: iterowanie przez kolekcję zdefiniowaną przez użytkownika za pomocą instrukcji for each
 Klasa była zarządzana Kolekcja musi on funkcję GetEnumerator nieprywatny, która zwraca dojście do klasy modułu wyliczającego lub interfejs.  Klasa modułu wyliczającego musi zawierać deklaracji niestatyczna funkcja MoveNext i właściwość Current.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097110"
 ---
 # <a name="creating-an-ole-db-provider"></a>Tworzenie dostawcy OLE DB
 Zalecanym sposobem tworzenia dostawcy OLE DB ma utworzyć Projekt ATL COM i dostawcy, a następnie zmodyfikować plików za pomocą szablonów OLE DB za pomocą kreatorów. Podczas dostosowywania dostawcy można przekształcić w komentarz zbędne właściwości i dodać opcjonalne interfejsów.  

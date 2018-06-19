@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090717"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Wartość klas i struktur (C + +/ CX)
 A *struktury wartość* lub *klasę wartości* jest systemu Windows POD zgodnego środowiska uruchomieniowego ("zwykły starych danych struktury"). Ma stały rozmiar i składa się z pól. w odróżnieniu od klasy ref go nie ma właściwości.  

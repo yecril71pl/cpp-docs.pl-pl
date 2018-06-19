@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107821"
 ---
 # <a name="transactions--mfc-data-access"></a>Transakcje (dostęp do danych MFC)
 Pojęcie transakcji został opracowany do obsługi przypadków, w których Wynikowy stan bazy danych zależy od całkowitej Powodzenie czynności. Może to występować ponieważ kolejne czynności może zmodyfikować wyniki poprzednich operacji. W takich przypadkach Jeśli wszystkie jedna operacja nie powiedzie się, Wynikowy stan może być nieokreślony.  

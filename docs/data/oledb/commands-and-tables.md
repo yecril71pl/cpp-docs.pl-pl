@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098683"
 ---
 # <a name="commands-and-tables"></a>Polecenia i tabele
 Polecenia i tabele zezwalają na dostęp do zestawów wierszy; oznacza to otwórz zestawów wierszy, wykonywania poleceń i powiązać kolumny. [CCommand](../../data/oledb/ccommand-class.md) i [CTable](../../data/oledb/ctable-class.md) odpowiednio wystąpienia klasy obiekt polecenia i tabeli. Te klasy pochodzić od [caccessorrowset —](../../data/oledb/caccessorrowset-class.md) jak pokazano na poniższej ilustracji.  

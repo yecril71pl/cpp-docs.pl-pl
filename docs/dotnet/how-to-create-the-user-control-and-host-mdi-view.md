@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136486"
 ---
 # <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Porady: tworzenie kontrolki użytkownika i hostowanie widoku MDI
 Poniższe kroki pokazują, jak utworzyć kontrolkę użytkownika platformy .NET Framework, tworzenie kontrolki użytkownika w bibliotece klas formantu (w szczególności Projekt Biblioteka formantów systemu Windows) i następnie skompilować projektu do zestawu. Formant mogą być następnie używane z aplikacji MFC, która używa klas pochodnych [cview — klasa](../mfc/reference/cview-class.md) i [CWinFormsView klasy](../mfc/reference/cwinformsview-class.md).  

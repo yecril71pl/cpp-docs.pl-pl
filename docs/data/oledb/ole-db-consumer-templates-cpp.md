@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112111"
 ---
 # <a name="ole-db-consumer-templates-c"></a>Szablony konsumentów OLE DB (C++)
 Szablony OLE DB konsumenta obsłużyć specyfikacji wersji 2.6 OLE DB. (Szablony OLE DB konsumentów są sprawdzane pod względem OLE DB 2.6, ale nie obsługują każdego interfejsu w specyfikacji.) Szablony konsumentów zminimalizować ilość kodu, który musi być zapisana do zaimplementowania konsumenta OLE DB. Szablony zawierają:  

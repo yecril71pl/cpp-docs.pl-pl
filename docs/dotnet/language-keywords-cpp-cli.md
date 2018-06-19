@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134416"
 ---
 # <a name="language-keywords-ccli"></a>Słowa kluczowe języka (C++/CLI)
 Kilka słów kluczowych języka zmieniła się z rozszerzeń zarządzanych dla języka C++ dla Visual C++.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086678"
 ---
 # <a name="platforminvalidargumentexception-class"></a>Klasa platform::InvalidArgumentException
 Element zgłaszany, gdy jedna z podanych argumentów metody jest nieprawidłowa.  

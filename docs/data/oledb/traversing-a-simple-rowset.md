@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102954"
 ---
 # <a name="traversing-a-simple-rowset"></a>Przechodzenie przez prosty zestaw wierszy
 W poniższym przykładzie przedstawiono dostępu szybkie i łatwe bazy danych, które nie używa polecenia. Poniższy kod konsumenta, Projekt ATL, pobiera rekordy z tabeli o nazwie *artystów* programu Microsoft Access bazy danych przy użyciu dostawcy Microsoft OLE DB dla ODBC. Kod tworzy [CTable](../../data/oledb/ctable-class.md) obiektu tabeli z metody dostępu oparte na klasie rekordu użytkownika `CArtists`. Otwiera połączenie, otwiera sesji na połączenie i otwiera tabelę w tej sesji.  

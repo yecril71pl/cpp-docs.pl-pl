@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111253"
 ---
 # <a name="record-views--mfc-data-access"></a>Widoki rekordów (dostęp do danych MFC)
 Ta sekcja dotyczy tylko dla klas MFC ODBC. Aby uzyskać informacje na temat widoków rekordów OLE DB, zobacz [coledbrecordview —](../mfc/reference/coledbrecordview-class.md) i [przy użyciu OLE DB widoków rekordów](../data/oledb/using-ole-db-record-views.md).  

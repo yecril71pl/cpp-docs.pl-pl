@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088602"
 ---
 # <a name="design-and-create-an-odbc-database-application"></a>Projektowanie i tworzenie aplikacji bazy danych ODBC
 Te tematy ułatwić projektowanie i konfigurowanie aplikacji bazy danych ODBC.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370465"
 ---
 # <a name="cl-filename-syntax"></a>Składnia nazwy pliku CL
 CL akceptuje pliki, których nazwy zgodne z konwencjami systemu plików NTFS, FAT i HPFS nazewnictwa. Nazwy pliku może zawierać ścieżki pełnej lub częściowej. Pełna ścieżka zawiera nazwę dysku i co najmniej jedną nazwę katalogu. CL akceptuje nazw plików rozdzielonych przez ukośników odwrotnych (\\) lub przesyłane ukośnikami (/). Nazwy zawierające spacje muszą być ujęte w znaki podwójnego cudzysłowu. Ścieżka częściowa pomija nazwa dysku CL zakłada się na bieżącym dysku. Jeśli nie określisz ścieżkę CL przyjęto założenie, że plik znajduje się w bieżącym katalogu.  

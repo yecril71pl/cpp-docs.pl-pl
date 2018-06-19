@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112683"
 ---
 # <a name="testing-the-read-only-provider"></a>Testowanie dostawcy tylko do odczytu
 Aby przetestować dostawcę, należy konsumenta. Pomaga, jeśli użytkownika można dopasować do dostawcy. Szablony konsumentów OLE DB są cienką otoką wokół OLE DB i zgodne z obiektami COM dostawcy. Ponieważ źródłem jest dostarczany z szablonami konsumentów, jest łatwe debugowanie dostawcy z nimi. Szablony konsumentów są również bardzo mała i szybkie sposób tworzenia aplikacji klienta.  

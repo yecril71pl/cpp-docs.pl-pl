@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108491"
 ---
 # <a name="binarynegate-stlclr"></a>binary_negate (STL/CLR)
 Klasa szablonu opisuje obiekt, który po wywołaniu zwraca logicznym nie pochodzi z jego przechowywanych argumentu dwa obiekt. Można go użyć Określ obiekt funkcja pod względem jego przechowywanych obiekt.  

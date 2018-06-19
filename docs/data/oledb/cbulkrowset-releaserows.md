@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094930"
 ---
 # <a name="cbulkrowsetreleaserows"></a>CBulkRowset::ReleaseRows
 Wywołania [IRowset::ReleaseRows](https://msdn.microsoft.com/en-us/library/ms719771.aspx) Aby zmniejszyć liczbę odwołania dla wszystkich wierszy, które obecnie są pobierane z zestawu wierszy bulk.  

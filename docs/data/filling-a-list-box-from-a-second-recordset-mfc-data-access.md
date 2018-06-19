@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090665"
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>Wypełnianie pola listy z drugiego zestawu wierszy (dostęp do danych MFC)
 Domyślnie widoku rekordu jest skojarzony z obiektem pojedynczy zestaw rekordów, których pola są mapowane na formanty widoku rekordu. Czasami może chcesz umieścić pole listy lub pola kombi kontroli w widoku rekordów i uzupełnij go o wartości od drugiego obiektu zestawu rekordów. Użytkownik może użyć pola listy, aby wybrać nową kategorię informacje mają być wyświetlane w widoku rekordu. W tym temacie wyjaśniono, jak i kiedy w tym celu.  

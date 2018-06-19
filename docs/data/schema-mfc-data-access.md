@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104701"
 ---
 # <a name="schema--mfc-data-access"></a>Schemat (dostęp do danych MFC)
 Schemat bazy danych w tym artykule opisano bieżącej struktury tabel i widoków bazy danych w bazie danych. Ogólnie rzecz biorąc kod generowane przez kreatora przyjęto założenie, że nie spowoduje zmiany schematu tabeli lub tabel, dostęp do zestawu rekordów, ale klasy baz danych może rozwiązać niektóre zmiany schematu, takie jak dodawanie, zmienianie kolejności lub usuwanie niepowiązanych kolumn. W przypadku zmiany tabeli, należy ręcznie zaktualizować rekordów dla tabeli, a następnie ponownie skompilować aplikację.  

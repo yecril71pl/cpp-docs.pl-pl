@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089155"
 ---
 # <a name="odbc-configuring-an-odbc-data-source"></a>ODBC: konfigurowanie źródła danych ODBC
 Aby użyć [źródła danych](../../data/odbc/data-source-odbc.md) z aplikacją korzystasz, należy użyć konta administratora ODBC ją skonfigurować. ODBC Administrator przechowuje informacje o dostępnych źródeł danych i parametry połączenia w rejestrze systemu Windows. Administrator ODBC używana do dodawania, modyfikowania i usuwania źródeł danych w **źródeł danych** okno dialogowe i do dodawania i usuwania sterowników ODBC.  

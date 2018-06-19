@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368762"
 ---
 # <a name="determining-which-exporting-method-to-use"></a>Ustalanie, jakiej metody eksportu użyć
 Możesz wyeksportować funkcje na dwa sposoby — plik .def lub `__declspec(dllexport)` — słowo kluczowe. Aby określić, w jaki sposób jest lepszym rozwiązaniem dla biblioteki DLL, należy rozważyć następujące kwestie:  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129398"
 ---
 # <a name="how-to-marshal-ansi-strings-using-c-interop"></a>Porady: przeprowadzanie marshalingu ciągów ANSI za pomocą międzyoperacyjności języka C++
 W tym temacie przedstawiono, jak można ciągów ANSI przekazany za pomocą międzyoperacyjności języka C++, ale programu .NET Framework <xref:System.String> reprezentuje ciągi w formacie Unicode, więc konwersja na ANSI jest dodatkowy krok. Do współpracy z innego typu ciąg, zobacz następujące tematy:  

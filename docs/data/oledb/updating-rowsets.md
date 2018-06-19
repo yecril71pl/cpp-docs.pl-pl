@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112385"
 ---
 # <a name="updating-rowsets"></a>Aktualizowanie zestawów wierszy
 Operacja bardzo podstawowe bazy danych jest aktualizacji lub zapisać danych w magazynie danych. W OLE DB, mechanizmu aktualizacji jest prosty: aplikacja klienta ustawia wartości składników powiązana z danymi, a następnie zapisuje te wartości na wierszy; następnie konsumenta żądania, czy dostawca aktualizacji do magazynu danych.  

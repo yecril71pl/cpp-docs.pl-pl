@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112046"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Wywoływanie funkcji natywnych z kodu zarządzanego
 Środowisko uruchomieniowe języka wspólnego zapewnia usług wywołania platformy lub funkcji PInvoke, że umożliwia zarządzanego kodu do wywołania funkcji w stylu języka C w natywnej biblioteki łączone dynamicznie (dll). Organizowanie danych sam jest używany jak w przypadku współdziałania COM ze środowiskiem uruchomieniowym i mechanizmu "Ją po prostu działa" lub IJW.  

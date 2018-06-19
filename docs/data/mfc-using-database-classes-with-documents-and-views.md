@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091871"
 ---
 # <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC: używanie klas baz danych z dokumentami i widokami
 Klasy baz danych MFC można użyć z lub bez architektury dokument/widok. Ten temat jest kładzie nacisk Praca z dokumentami i widokami. Objaśniono:  

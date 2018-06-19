@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107860"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Zastępowanie dynamicznej metody dostępu
 Kiedy używać dynamicznej metody dostępu takich jak `CDynamicAccessor`, polecenie **Otwórz** metoda tworzy akcesora dla automatycznie, zgodnie z informacjami kolumny zestawu wierszy otwarty. Można zastąpić dynamicznej metody dostępu do kontrolowania dokładnie, jak są powiązane kolumny.  

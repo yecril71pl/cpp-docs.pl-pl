@@ -23,6 +23,7 @@ ms.sourcegitcommit: 4b2c3b0c720aef42bce7e1e5566723b0fec5ec7f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34428713"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Wskazówki dla deweloperów języka C++ rozważana kanałów po stronie wykonywania
 

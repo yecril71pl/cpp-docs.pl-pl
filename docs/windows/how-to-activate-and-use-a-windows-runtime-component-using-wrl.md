@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880778"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Porady: uaktywnianie składnika środowiska wykonawczego systemu Windows za pomocą biblioteki WRL i korzystanie z niego
 Ten dokument zawiera zainicjować środowiska uruchomieniowego systemu Windows przy użyciu systemu Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL) oraz sposobu uaktywnianie składnika środowiska wykonawczego systemu Windows i korzystanie.  

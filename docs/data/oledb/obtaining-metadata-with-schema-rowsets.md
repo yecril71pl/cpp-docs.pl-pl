@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33114737"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Uzyskiwanie metadanych za pomocą zestawów wierszy schematu
 Czasami trzeba uzyskać informacje o dostawcy, zestaw wierszy, tabeli, kolumny lub inne informacje z bazy danych bez konieczności otwierania w zestawie wierszy. Dane dotyczące struktury bazy danych jest nazywana metadanych i mogą być pobierane przez wiele różnych sposobów. Co metoda polega na użyciu zestawów wierszy schematu.  

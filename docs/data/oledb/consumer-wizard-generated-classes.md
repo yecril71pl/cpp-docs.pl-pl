@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091988"
 ---
 # <a name="consumer-wizard-generated-classes"></a>Klasy konsumentów generowane przez kreatora
 Gdy używasz OLE DB Kreator konsumenta ATL do wygenerowania z klientem, użytkownik może przy użyciu atrybutów szablony OLE DB lub OLE DB. W obu przypadkach kreator generuje klasę polecenie i klasy rekordu użytkownika. Klasa polecenia zawiera kod, aby otworzyć źródła danych i zestawu wierszy określone w kreatorze. Klasa rekordu użytkownika zawiera mapy kolumny dla wybranej tabeli bazy danych. Jednak wygenerowany kod różni się w każdym przypadku:  

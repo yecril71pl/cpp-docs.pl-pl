@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094498"
 ---
 # <a name="accessors-and-rowsets"></a>Metody dostępu i zestawy wierszy
 Do ustawiania i pobierania danych, szablony OLE DB użyj metody dostępu i zestawu wierszy za pomocą [caccessorrowset —](../../data/oledb/caccessorrowset-class.md) klasy. Ta klasa może obsługiwać wiele metod dostępu do różnych typów.  

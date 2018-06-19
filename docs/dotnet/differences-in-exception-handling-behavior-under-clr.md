@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111835"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>Różnice w zachowaniu obsługi wyjątków w przypadku użycia opcji /CLR
 [Podstawowe pojęcia związane z wyjątków zarządzanych przy użyciu](../dotnet/basic-concepts-in-using-managed-exceptions.md) omówiono obsługi wyjątków w zarządzanych aplikacji. W tym temacie opisano szczegółowo różnic od standardowego zachowania wyjątków i pewne ograniczenia. Aby uzyskać więcej informacji, zobacz [_set_se_translator — funkcja](../c-runtime-library/reference/set-se-translator.md).  

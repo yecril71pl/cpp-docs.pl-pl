@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087617"
 ---
 # <a name="platformaccessdeniedexception-class"></a>Klasa platform::AccessDeniedException
 Wyjątek podczas dostępu do zasobów lub funkcji jest zabroniony.  

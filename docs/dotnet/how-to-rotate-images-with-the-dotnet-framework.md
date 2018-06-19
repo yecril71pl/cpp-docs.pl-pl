@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129037"
 ---
 # <a name="how-to-rotate-images-with-the-net-framework"></a>Porady: obracanie obrazów za pomocą programu .NET Framework
 Poniższy przykład kodu pokazuje użycie <xref:System.Drawing.Image?displayProperty=fullName> klasę, aby załadować obrazu z dysku, jego obrót o 90 stopni i zapisać go jako nowy plik jpg.  

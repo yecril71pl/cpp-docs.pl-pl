@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106313"
 ---
 # <a name="using-multiple-result-sets-from-one-stored-procedure"></a>Używanie wielu zestawów wyników z jednej procedury składowanej
 Większość procedur składowanych zwrócić wielu zestawów wyników. Procedury składowanej zwykle zawiera jeden lub więcej wybierz instrukcje. Konsument musi należy wziąć pod uwagę tak, aby obsłużyć wszystkich zestawów wyników.  

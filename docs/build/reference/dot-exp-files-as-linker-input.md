@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371102"
 ---
 # <a name="exp-files-as-linker-input"></a>Pliki .Exp — Wejście konsolidatora
 Pliki eksportu (.exp) zawierają informacje o wyeksportowanej funkcji i danych elementów. Gdy LIB tworzy bibliotekę importowaną, również tworzy plik EXP. Plik EXP można użyć podczas połączyć program, który eksportuje do, a także importuje z innego programu, bezpośrednio lub pośrednio. Jeśli łączysz się przy użyciu pliku .exp łącze nie tworzy biblioteki importowanej, ponieważ przyjęto założenie, że biblioteka już utworzone. Aby uzyskać więcej informacji o .exp — pliki i biblioteki importu, zobacz [Praca z bibliotekami importowania i eksportowania plików](../../build/reference/working-with-import-libraries-and-export-files.md).  

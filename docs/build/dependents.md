@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366939"
 ---
 # <a name="dependents"></a>Zależności
 W wierszu zależności, określ zero lub więcej elementów zależnych po dwukropka (:) lub podwójny dwukropek (:), przy użyciu dowolnego prawidłową nazwę pliku lub [pseudotarget](../build/pseudotargets.md). Oddziel wiele zależności spacji lub kart. Zależności nie jest uwzględniana wielkość liter. Ścieżki są dozwolone z nazwami plików.  

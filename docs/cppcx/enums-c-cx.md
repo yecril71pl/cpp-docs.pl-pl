@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087384"
 ---
 # <a name="enums-ccx"></a>Typy wyliczeniowe (C + +/ CX)
 C + +/ CX obsługuje `public enum class` — słowo kluczowe, czyli analagous do standardu C++ `scoped  enum`. Jeśli używasz moduł wyliczający, który jest zadeklarowana przy użyciu `public enum class` — słowo kluczowe, musisz użyć identyfikator wyliczenia, aby zakres wartości modułu wyliczającego.  

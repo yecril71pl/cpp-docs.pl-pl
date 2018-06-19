@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102387"
 ---
 # <a name="supporting-navigation-in-a-record-view--mfc-data-access"></a>Obsługa nawigacji w widoku rekordu (dostęp do danych MFC)
 W tym temacie opisano sposób obsługi ruchu między rekordami w Twojej [CRecordView](../mfc/reference/crecordview-class.md) klasy, w tym informacje o:  

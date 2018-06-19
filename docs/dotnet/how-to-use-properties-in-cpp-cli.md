@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134343"
 ---
 # <a name="how-to-use-properties-in-ccli"></a>Porady: korzystanie z właściwości w języku C++/interfejsie wiersza polecenia
 W tym artykule przedstawiono sposób użycia właściwości w języku C + +/ CLI.  

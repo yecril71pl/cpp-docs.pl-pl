@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087952"
 ---
 # <a name="platformchangedstateexception-class"></a>Klasa platform::ChangedStateException
 Element zgłaszany, gdy stan wewnętrzny obiektu uległ zmianie, a tym samym unieważnienie wyniki metody.  

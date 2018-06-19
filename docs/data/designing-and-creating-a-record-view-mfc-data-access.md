@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089915"
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>Projektowanie i tworzenie widoku rekordu (dostęp do danych MFC)
 Można utworzyć klasy widoków rekordów z [Kreator aplikacji MFC](../mfc/reference/database-support-mfc-application-wizard.md). Jeśli używasz Kreatora aplikacji tworzy klas widoków rekordów i zasobu szablonu okna dialogowego dla niego (bez kontroli). Edytor programu Visual C++ okna dialogowego musi umożliwia dodawanie formantów do zasobu szablonu okna dialogowego. Z drugiej strony, jeśli używasz **Dodaj klasę**, należy najpierw utworzyć zasobu szablonu okna dialogowego w oknie dialogowym edytora, a następnie utwórz klasy widoków rekordów.  

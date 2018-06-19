@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089236"
 ---
 # <a name="odbc-driver-requirements-for-dynasets"></a>Wymagania dotyczące sterownika ODBC dla zestawów dynamicznych
 Klasy baz danych MFC ODBC zestawy dynamiczne są zestawów rekordów za pomocą właściwości dynamicznych; pozostają one zsynchronizowane ze źródłem danych w określony sposób. Zestawy dynamiczne MFC (ale nie Progresywne zestawy rekordów) wymaga sterownika ODBC z interfejsu API 2 poziom zgodności. Jeśli sterownik sieci [źródła danych](../../data/odbc/data-source-odbc.md) jest zgodny z interfejsem API 1 poziom ustawiona, można nadal używać migawek zarówno można aktualizować i tylko do odczytu i zestawy rekordów tylko do przodu, ale nie zestawów dynamicznych. Jednak sterownik poziomu 1 można obsługuje zestawów dynamicznych, jeśli obsługuje rozszerzonych pobierania i kursory oparte na zestawie kluczy.  

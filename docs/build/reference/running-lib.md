@@ -41,6 +41,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377577"
 ---
 # <a name="running-lib"></a>Uruchamianie LIB
 Różne opcje wiersza polecenia mogą służyć do sterowania LIB.  

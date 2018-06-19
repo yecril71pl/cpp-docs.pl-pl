@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103869"
 ---
 # <a name="autogcroot-class"></a>auto_gcroot — Klasa
 Zarządzanie zasobami automatyczne (takich jak [auto_ptr — klasa](../standard-library/auto-ptr-class.md)) które mogą służyć do osadzenia wirtualnego dojścia do typu macierzystego.  

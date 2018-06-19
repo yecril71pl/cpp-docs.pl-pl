@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100619"
 ---
 # <a name="implementing-the-simple-read-only-provider"></a>Implementowanie prostego dostawcy tylko do odczytu
 Rozszerzone przykładzie w tym temacie pokazano, jak edytować pliki tworzone przez kreatora, aby utworzyć prostego dostawcy tylko do odczytu, odczytujący zestaw dwa ciągi z pliku tekstowego. Aby utworzyć ten dostawca plików kreatora, Dodaj kod, aby wykonać następujące zadania:  

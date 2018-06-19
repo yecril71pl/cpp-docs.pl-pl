@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089418"
 ---
 # <a name="data-exchange-for-record-views---mfc-data-access"></a>Wymiana danych dla widoków rekordów (dostęp do danych MFC)
 Jeśli używasz [Dodaj klasę](../mfc/reference/adding-an-mfc-odbc-consumer.md) do mapy formantów w widoku rekordu okna dialogowego szablonu zasobów do pola zestawu rekordów, platformę zarządza wymiany danych w obu kierunkach — z zestawu rekordów do kontrolek i formanty do zestawu rekordów. Przy użyciu mechanizmu DDX oznacza, że nie trzeba napisać kod na przesyłanie danych do i z powrotem samodzielnie.  

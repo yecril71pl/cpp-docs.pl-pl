@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369854"
 ---
 # <a name="checking-for-memory-overwrites"></a>Sprawdzanie nadpisywania pamięci
 Jeśli na wywołanie funkcji manipulowania sterty naruszenia zasad dostępu, jest to możliwe, że program zawiera uszkodzone sterty. Typowym symptomem tej sytuacji mogą być następujące:  

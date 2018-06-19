@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091858"
 ---
 # <a name="partial-classes-ccx"></a>Klasy częściowe (C + +/ CX)
 Klasy częściowej jest konstrukcję obsługuje scenariusze, w których modyfikujesz jednej części definicji klasy i automatyczne generowanie kodu oprogramowania — na przykład projektanta XAML — jest również modyfikowanie kodu w tej samej klasy. Za pomocą klasy częściowej, można zapobiec zastępowaniu kodu projektanta. W projekcie programu Visual Studio `partial` modyfikator jest automatycznie stosowane do wygenerowanego pliku.  

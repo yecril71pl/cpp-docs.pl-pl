@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098150"
 ---
 # <a name="cmyprovidercommand-myproviderrsh"></a>CMyProviderCommand (MyProviderRS.H)
 `CMyProviderCommand` Klasa jest implementacją dla obiekt polecenia dostawcy. Zapewnia implementację `IAccessor`, `ICommandText`, i **ICommandProperties** interfejsów. `IAccessor` Interfejsu jest taka sama jak w zestawie wierszy. Obiekt polecenia użyto metody dostępu do określenia powiązania parametrów. Obiektu zestawu wierszy używa ich, aby określić powiązania dla kolumny wyjściowe. `ICommandText` Interfejsu jest to wygodny sposób, aby określić polecenie w postaci tekstu. W tym przykładzie użyto `ICommandText` interfejs później, gdy dodaje kod niestandardowy; zastępuje ona również `ICommand::Execute` metody. **ICommandProperties** interfejs obsługuje wszystkie właściwości dla obiektów poleceń i zestawu wierszy.  

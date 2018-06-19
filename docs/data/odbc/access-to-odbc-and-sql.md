@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087819"
 ---
 # <a name="access-to-odbc-and-sql"></a>Dostęp do ODBC i SQL
 Microsoft Foundation Class Library hermetyzuje wiele wywołań interfejsu API systemu Windows i nadal umożliwia bezpośrednie wywołania dowolnej funkcji interfejsu API systemu Windows. Klasy baz danych zapewniają elastyczność sam w odniesieniu do interfejsu API ODBC. Gdy klasy baz danych zabezpieczyć z znacznie złożoność ODBC, należy wywołać funkcji ODBC API bezpośrednio z dowolnego miejsca w programie.  

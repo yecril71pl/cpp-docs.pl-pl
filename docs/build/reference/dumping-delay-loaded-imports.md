@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372870"
 ---
 # <a name="dumping-delay-loaded-imports"></a>Zrzucanie importów załadowanych z opóźnieniem
 Importy załadowane z opóźnieniem można można utworzyć zrzutu przy użyciu [dumpbin/Imports](../../build/reference/imports-dumpbin.md) i wyświetlane informacje nieco inne niż importuje standard. Te są rozdzielone w osobnej sekcji / Imports zrzucanie i są jawnie oznaczone jako Importy załadowane z opóźnieniem. W przypadku zwolnienia informacji zawartych w obrazie, który jest odnotowany. W przypadku powiązania informacji zawartych sygnaturę daty/godziny docelowej biblioteki DLL jest odnotowany oraz powiązane adresy operacji importu.  

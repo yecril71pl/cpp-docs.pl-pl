@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091657"
 ---
 # <a name="record-field-exchange-rfx"></a>Wymiana pól rekordów (RFX)
 Klasy baz danych MFC ODBC zautomatyzować przenoszenie danych między źródłem danych a [rekordów](../../data/odbc/recordset-odbc.md) obiektu. Gdy klasa wyprowadzona z z [crecordset —](../../mfc/reference/crecordset-class.md) i nie należy używać zbiorcze pobieranie z wiersza, dane są przesyłane przez mechanizm pól rekordów (RFX) programu exchange.  

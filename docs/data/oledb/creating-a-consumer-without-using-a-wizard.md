@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097695"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Tworzenie konsumenta bez użycia kreatora
 W poniższym przykładzie założono do istniejącego projektu ATL dodajesz Obsługa konsumenta OLE DB. Jeśli chcesz dodać obsługę konsumenta OLE DB do aplikacji MFC, należy uruchomić Kreator aplikacji MFC, która tworzy niezbędne pomocy technicznej i wywołuje MFC procedury niezbędne do wykonywania aplikacji.  

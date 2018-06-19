@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362222"
 ---
 # <a name="supporting-idispeventimpl"></a>Obsługa IDispEventImpl
 Klasy szablonów [IDispEventImpl](../atl/reference/idispeventimpl-class.md) może służyć do zapewnienia obsługi wychwytywanie punktu połączenia w klasie ATL. W zbiorniku punktu połączenia umożliwia klasy do obsługi zdarzenia wywoływane z zewnętrznych obiektów COM. Te wychwytywanie punktu połączenia są mapowane z mapą obiekt sink zdarzenia, pochodzącymi od swojej klasy.  

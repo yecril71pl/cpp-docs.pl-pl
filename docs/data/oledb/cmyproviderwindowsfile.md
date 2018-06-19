@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097929"
 ---
 # <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
 Kreator utworzy klasę, aby zawierać jeden wiersz danych. w tym przypadku jest to `CMyProviderWindowsFile`. Poniższy kod dla `CMyProviderWindowsFile` jest generowany kreatora i listę wszystkich plików w katalogu za pomocą **WIN32_FIND_DATA** struktury. `CMyProviderWindowsFile` dziedziczy **WIN32_FIND_DATA** struktury:  

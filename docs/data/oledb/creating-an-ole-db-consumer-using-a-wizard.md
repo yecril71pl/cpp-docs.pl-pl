@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097003"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>Tworzenie konsumenta OLE DB przy użyciu kreatora
 W tej procedurze pokazano, jak służy Kreator projektu ATL i OLE DB Kreator konsumenta ATL do wygenerowania konsumenta szablony OLE DB, a następnie zmodyfikować głównego kodu aplikacji konsoli do pobierania i wyświetlania danych z tabeli bazy danych.  

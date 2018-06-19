@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368502"
 ---
 # <a name="manifest-generation-at-the-command-line"></a>Generowanie manifestu w wierszu polecenia
 Podczas kompilowania aplikacji C/C++ za pomocą nmake lub podobne narzędzia wiersza polecenia, po konsolidator ma przetwarzane wszystkie pliki obiektu i utworzony plik binarny końcowego jest tworzony plik manifestu. Konsolidator zbiera informacje o zestawie zapisanych w plikach obiektu i scala te informacje w końcowym pliku manifestu. Domyślnie konsolidator wygeneruje plik o nazwie < binary_name >. \<rozszerzenia > manifest do opisywania końcowego pliku binarnego. Konsolidator nie można osadzić pliku manifestu w danych binarnych i można generować tylko jako zewnętrzny plik manifestu. Istnieje kilka sposobów osadzanie manifestu w końcowym binarnego, takich jak przy użyciu [narzędziu manifestu (mt.exe)](http://msdn.microsoft.com/library/aa375649) lub kompilowanie manifestu do pliku zasobów. Należy pamiętać, że określone zasady muszą być przestrzegane podczas osadzania manifestu w końcowym pliku binarnego do Włącz takie funkcje jak konsolidowania przyrostowego podpisywanie i Edytuj i Kontynuuj. Te i inne opcje, które zostały omówione w [porady: osadzanie manifestu w aplikacji C/C++](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md) podczas kompilowania w wierszu polecenia.  

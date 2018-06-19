@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090056"
 ---
 # <a name="catalog-information--mfc-data-access"></a>Informacje o katalogu (dostęp do danych MFC)
 Informacje o tabel w źródle danych może zawierać nazwy tabel i kolumn w ich uprawnienia tabeli, nazwy, klucze podstawowe i obce, informacje o wstępnie zdefiniowane zapytania lub procedur składowanych informacji na temat indeksów w tabelach, i Statystyka tabel.  

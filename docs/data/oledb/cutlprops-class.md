@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101347"
 ---
 # <a name="cutlprops-class"></a>CUtlProps — Klasa
 Implementuje właściwości dla różnych interfejsy właściwości OLE DB (na przykład `IDBProperties`, `IDBProperties`, i `IRowsetInfo`).  

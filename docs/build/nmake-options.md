@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373039"
 ---
 # <a name="nmake-options"></a>Opcje NMAKE
 Opcje NMAKE zostały opisane w poniższej tabeli. Opcje są poprzedzone ukośnika (/) i myślnik (-) i nie jest uwzględniana wielkość liter. Użyj [! CMDSWITCHES](../build/makefile-preprocessing-directives.md) Aby zmienić ustawienia opcji w pliku reguł programu make lub Tools.ini.  

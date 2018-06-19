@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096538"
 ---
 # <a name="cmyprovidersession-myprovidersessh"></a>CMyProviderSession (MyProviderSess.H)
 MyProviderSess.H zawiera deklarację i implementację dla obiekt sesji OLE DB. Obiekt źródła danych tworzy obiekt sesji i przedstawia konwersację między klienta oraz dostawcy. Kilka jednoczesnych sesji może być otwarty dla jednego źródła danych. Na liście dziedziczenia `CMyProviderSession` następuje:  

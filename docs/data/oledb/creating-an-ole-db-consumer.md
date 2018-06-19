@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096694"
 ---
 # <a name="creating-an-ole-db-consumer"></a>Tworzenie konsumenta OLE DB
 Konsumenta OLE DB szablonów można tworzyć z lub bez OLE DB Kreator konsumenta ATL, chociaż zaleca się za pomocą kreatora. Klient może działać w dowolnej aplikacji, która obsługuje ATL.  

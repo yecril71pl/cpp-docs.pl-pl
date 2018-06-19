@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090106"
 ---
 # <a name="static-libraries-ccx"></a>Biblioteki statyczne (C + +/ CX)
 Biblioteka statyczna, który jest używany w aplikacji Windows platformy Uniwersalnej mogą zawierać kod normy ISO C++, w tym typy STL i wywołania funkcji Win32 API, które nie są wykluczone z platformy aplikacji środowiska wykonawczego systemu Windows. Biblioteka statyczna zużywa składników środowiska wykonawczego systemu Windows i może utworzyć składników środowiska wykonawczego systemu Windows z pewnymi ograniczeniami.  

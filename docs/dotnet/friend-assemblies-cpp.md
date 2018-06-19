@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33113762"
 ---
 # <a name="friend-assemblies-c"></a>Przyjazne zestawy (C++)
 Dla odpowiednich runtimes *przyjazne zestawy* typy, które są w zakresie przestrzeni nazw lub zakresie globalnym w składniku zestawu dostępne zestawy klienta lub modułów .netmodule dzięki funkcji języka.  

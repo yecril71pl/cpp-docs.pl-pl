@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107942"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Dynamicznie określanie kolumn zwracanych do konsumenta
 Makra PROVIDER_COLUMN_ENTRY zwykle obsługi **IColumnsInfo::GetColumnsInfo** wywołania. Jednak ponieważ konsumenta, można użyć zakładki, dostawca musi być można zmienić kolumny zwracane w zależności od tego, czy klient pyta o zakładki.  

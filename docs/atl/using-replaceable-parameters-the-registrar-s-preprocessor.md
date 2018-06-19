@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362287"
 ---
 # <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Przy użyciu parametry wymienne (rejestratora&#39;preprocesora s)
 Parametry wymienne Zezwalaj klientowi rejestratora Określ dane czasu wykonywania. Aby to zrobić, rejestratora obsługuje mapy zastąpienia, w której wchodzi wartości skojarzone z parametry zmienne w skrypcie. Rejestratora sprawia, że te wpisy w czasie wykonywania.  

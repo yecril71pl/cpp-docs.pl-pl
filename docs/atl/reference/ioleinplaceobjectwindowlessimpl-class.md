@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365005"
 ---
 # <a name="ioleinplaceobjectwindowlessimpl-class"></a>Klasa IOleInPlaceObjectWindowlessImpl
 Ta klasa implementuje **IUnknown** i dostarcza metod umożliwiających formantem bez okien do odbierania komunikatów okien i uczestniczyć w operacji przeciągania i upuszczania.  

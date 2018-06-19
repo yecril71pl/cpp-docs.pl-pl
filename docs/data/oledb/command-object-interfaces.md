@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096122"
 ---
 # <a name="command-object-interfaces"></a>Interfejsy obiektu polecenia
 Obiekt polecenia używa `IAccessor` interfejs, aby określić powiązania parametrów. Wywołania konsumenta `IAccessor::CreateAccessor`, przekazanie jej przez tablicę `DBBINDING` struktury. `DBBINDING` zawiera informacje dotyczące powiązania kolumny (na przykład typ i długości). Dostawca otrzymuje struktur i określa, jak powinny być przesyłane dane i czy konwersje są niezbędne.  

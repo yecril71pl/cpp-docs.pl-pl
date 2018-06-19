@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086798"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>Wycofano typy i składniki (C + +/ CX)
 W języku C + +/ CX, amortyzacja typów środowiska wykonawczego systemu Windows i elementów członkowskich, producenci i konsumenci przy użyciu [przestarzały](http://msdn.microsoft.com/en-us/8b02ad36-3b5f-4361-888b-e6a99040e57c) atrybut jest obsługiwany. Możesz korzystać z interfejsu API, do których zastosowano ten atrybut, otrzymasz komunikat ostrzegawczy kompilacji, który wskazuje, że interfejs API jest przestarzały i zaleca także alternatywne API do użycia. Własne typy publiczne i metody można zastosować ten atrybut i podaj własnego niestandardowego komunikatu.  

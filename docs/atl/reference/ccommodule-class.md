@@ -46,6 +46,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366474"
 ---
 # <a name="ccommodule-class"></a>Ccommodule — klasa
 Począwszy od ATL 7.0 `CComModule` jest przestarzała: zobacz [klasy modułów ALT](../../atl/atl-module-classes.md) więcej szczegółów.  

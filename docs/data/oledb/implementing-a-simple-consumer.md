@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112566"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementowanie prostego konsumenta
 W następujących tematach opisano, jak edytować pliki tworzone przez Kreatora aplikacji MFC i ATL OLE DB Kreator konsumenta Tworzenie prostego konsumenta. Ten przykład zawiera następujące części:  

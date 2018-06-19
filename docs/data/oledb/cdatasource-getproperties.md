@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095134"
 ---
 # <a name="cdatasourcegetproperties"></a>CDataSource::GetProperties
 Zwraca właściwości informacji wymaganych dla obiekt źródła danych połączenia.  

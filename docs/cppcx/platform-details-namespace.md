@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087654"
 ---
 # <a name="platformdetails-namespace"></a>Namespace platform::details
 Ta przestrzeń nazw jest przeznaczony tylko do użytku wewnętrznego i nie mają być używane do tworzenia aplikacji.  

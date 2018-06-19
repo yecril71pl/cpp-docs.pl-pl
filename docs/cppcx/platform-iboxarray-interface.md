@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088345"
 ---
 # <a name="platformiboxarray-interface"></a>Interfejs platform::IBoxArray
 `IBoxArray` Otoka dla tablic typów wartości, które są przekazywane przez interfejs binarne aplikacji (ABI) lub przechowywane w kolekcji jest `Platform::Object^` elementów, takich jak te w formantach XAML.  

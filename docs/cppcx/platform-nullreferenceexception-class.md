@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088079"
 ---
 # <a name="platformnullreferenceexception-class"></a>Klasa platform::NullReferenceException
 Element zgłaszany, gdy jest próba wyłuskania odwołanie do obiektu o wartości null.  

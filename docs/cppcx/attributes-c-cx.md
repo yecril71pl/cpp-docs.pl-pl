@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086847"
 ---
 # <a name="attributes-ccx"></a>Atrybuty (C + +/ CX)
 Atrybut jest specjalnym rodzajem klasy ref, która może dołączony w nawiasach kwadratowych do typów środowiska wykonawczego systemu Windows i metody, aby określić niektórych zachowania podczas tworzenia metadanych. Kilka wstępnie zdefiniowanych atrybutów — na przykład [Windows::Foundation::Metadata::WebHostHidden](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx)— są często używane w języku C + +/ CX kodu. Ten przykład przedstawia, jak atrybut jest stosowany do klasy:  

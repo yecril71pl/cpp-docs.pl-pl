@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103453"
 ---
 # <a name="record-mfc-data-access"></a>Rekord (dostęp do danych MFC)
 Rekord jest zbierania danych o pojedynczej jednostki, takich jak konta lub klienta, przechowywane w tabeli (wiersz z tabeli). Rekord składa się z grupy kolumn ciągłych (nazywane również pól), zawierających dane różnych typów. Zestaw rekordów wybrane źródła danych — często nazywane zestaw wyników w warunkach bazy danych — jest nazywany zestawu rekordów w MFC. Aby uzyskać więcej informacji, zobacz [zestawu rekordów (ODBC)](../data/odbc/recordset-odbc.md).  

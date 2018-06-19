@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093523"
 ---
 # <a name="use-odbc-to-work-with-other-users"></a>Używanie ODBC do pracy z innymi użytkownikami
 Używanie ODBC w środowiskach, w którym wielu użytkowników pracuje z tej samej bazy danych ODBC.  

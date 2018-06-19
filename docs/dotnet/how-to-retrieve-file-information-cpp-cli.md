@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127854"
 ---
 # <a name="how-to-retrieve-file-information-ccli"></a>Porady: pobieranie informacji o pliku (C++/CLI)
 Poniższy przykład kodu pokazuje <xref:System.IO.FileInfo> klasy. Jeśli nazwa pliku, można użyć tej klasy można pobrać informacji o pliku, takich jak rozmiar pliku, katalogu, imię i nazwisko oraz datę i godzinę utworzenia i ostatniej modyfikacji.  

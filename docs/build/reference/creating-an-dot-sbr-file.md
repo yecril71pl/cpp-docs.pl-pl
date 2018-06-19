@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371086"
 ---
 # <a name="creating-an-sbr-file"></a>Tworzenie pliku .Sbr
 Pliki wejściowe dla BSCMAKE są pliki .sbr. Kompilator tworzy plik SBR dla każdego pliku obiektu (.obj) skompilowany. Podczas tworzenia lub zaktualizuj plik informacji o przeglądaniu wszystkich plików SBR dla projektu musi być dostępny na dysku.  

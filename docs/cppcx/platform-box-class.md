@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091683"
 ---
 # <a name="platformbox-class"></a>Klasa platform::Box
 Włącza typu wartości, takich jak `Windows::Foundation::DateTime` lub typem skalarnym, takich jak `int` mają być przechowywane w `Platform::Object` typu. Zazwyczaj nie jest konieczne użycie `Box` jawnie, ponieważ pakującej sytuacji niejawnie podczas rzutowania typu wartości do `Object^`.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372012"
 ---
 # <a name="prolog-and-epilog"></a>Prolog i epilog
 Każda funkcja przydziela miejsce na stosie, wywołania innych funkcji, zapisuje nieulotnej rejestrów lub korzysta z obsługi wyjątków muszą mieć prologu, w których limity adresu są opisane w skojarzonych z wpisu tabeli funkcji odpowiednich danych unwind (zobacz [(X64) obsługi wyjątków](../build/exception-handling-x64.md)). Prologu zapisuje argument rejestrów w ich adresy domowe w razie potrzeby wypchnięcia nieulotnej rejestrów na stosie, przydziela stała część stosu dla zmiennych lokalnych i obiekty tymczasowe i opcjonalnie ustanawia wskaźnika ramki. Skojarzone dane operacji unwind musi opisywać akcji prologu i podać informacje niezbędne do cofania efekt kod prologu.  

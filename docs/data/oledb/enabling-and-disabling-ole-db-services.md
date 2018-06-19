@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099475"
 ---
 # <a name="enabling-and-disabling-ole-db-services"></a>Włączanie i wyłączanie usług OLE DB
 Menedżer składników usługi OLE DB porównuje właściwości określony przez klienta do obsługiwanych przez dostawcę do określenia, czy usługi poszczególne składniki można wywoływane w celu zaspokojenia rozszerzonej funkcjonalności żądanej przez klienta. Na przykład jeśli aplikacja żąda przewijanego kursora, dostawca obsługuje tylko kursora tylko do przodu usługi Menedżer składników wywołuje składnik usługi Aparat kursora klienta umożliwiają korzystanie z funkcji przewijanego. Jeśli aplikacja jest zależne rozszerzone funkcje obsługiwane domyślnie na wierszy dostawcy i aplikacja nie jawnie ustawiona właściwości na żądanie, że funkcje, funkcje mogą nie być wyświetlane na zestaw wierszy zwrócony przez klienta Aparat kursora. Być interoperacyjne, aplikacje zawsze właściwości należy ustawić na jawne żądanie rozszerzonej funkcjonalności w razie potrzeby.  

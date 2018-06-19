@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370670"
 ---
 # <a name="res-files-as-linker-input"></a>Pliki .Res — Wejście konsolidatora
 Można określić plik .res, podczas łączenia programu. Plik .res jest tworzony przez kompilator zasobów (RC). ŁĄCZE automatycznie konwertuje pliki .res COFF. Narzędzie CVTRES.exe musi być w tym samym katalogu co LINK.exe lub w katalogu określonym w zmiennej środowiskowej PATH.  
