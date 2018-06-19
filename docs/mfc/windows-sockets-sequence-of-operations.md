@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385261"
 ---
 # <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets: sekwencja operacji
 W tym artykule przedstawiono obok siebie, sekwencja operacji przy gniazda serwera i klienta gniazda. Ponieważ jest używany przez gniazdami `CArchive` obiekty, są zawsze [strumienia sockets](../mfc/windows-sockets-stream-sockets.md).  

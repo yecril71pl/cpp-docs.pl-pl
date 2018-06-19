@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33195961"
 ---
 # <a name="compiler-error-c2424"></a>C2424 błąd kompilatora
 "token": nieprawidłowe wyrażenie w "context"  

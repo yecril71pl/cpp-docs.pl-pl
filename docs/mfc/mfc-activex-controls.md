@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361338"
 ---
 # <a name="mfc-activex-controls"></a>Kontrolki ActiveX MFC
 Formant ActiveX jest składnik oprogramowania wielokrotnego użytku, oparte na modelu obiektu składników (COM), obsługuje wiele funkcji OLE, który można dostosować do potrzeb wiele oprogramowania. Formanty ActiveX są przeznaczone do użycia zarówno w zwykłym kontenery formantów ActiveX w Internecie, w strony sieci Web. Formanty ActiveX można utworzyć za pomocą MFC, opisane w tym miejscu lub z [Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md).  

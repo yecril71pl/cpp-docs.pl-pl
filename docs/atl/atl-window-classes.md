@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355435"
 ---
 # <a name="atl-window-classes"></a>Klasy okien ALT
 ATL zawiera kilka klas, dzięki którym można użyć, wdrożyć system windows. Tych klas, podobnie jak inne klasy ATL zapewniać implementację wydajne, który nie nakłada obciążenie kodu.  

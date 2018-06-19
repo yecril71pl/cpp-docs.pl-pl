@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380922"
 ---
 # <a name="setting-the-mode-of-a-cstatusbarctrl-object"></a>Ustawianie trybu obiektu CStatusBarCtrl
 Istnieją dwa tryby `CStatusBarCtrl` obiektu: proste i prostymi. W większości przypadków formantu paska stanu będzie mieć jeden lub więcej części, wraz z tekstu i prawdopodobnie ikony lub ikony. Jest to tryb prostymi. Aby uzyskać więcej informacji na ten tryb, zobacz [inicjowanie części obiektu CStatusBarCtrl](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md).  

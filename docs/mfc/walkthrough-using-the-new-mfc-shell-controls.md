@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385099"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Wskazówki: używanie nowych formantów powłoki MFC
 W tym przewodniku utworzysz aplikację, która jest podobny Eksploratora plików. Utworzysz okna, który zawiera dwa okienka. W okienku po lewej stronie będzie zawierać [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) obiekt, który wyświetla pulpitu w hierarchiczny widok. Okienku po prawej stronie będzie zawierać [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) który zawiera pliki w folderze, który wybrano w okienku po lewej stronie.  

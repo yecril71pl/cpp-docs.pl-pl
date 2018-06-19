@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358459"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>Funkcje zaawansowane, kreator aplikacji MFC
 Ten temat zawiera listę opcji dodatkowych funkcji aplikacji, takich jak pomoc, obsługa drukowania i tak dalej. W każdej sekcji określ dodatkową pomoc techniczną dla tych zaawansowanych funkcji.  

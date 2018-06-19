@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366717"
 ---
 # <a name="cdialogbar-class"></a>Cdialogbar — klasa
 Udostępnia funkcje niemodalnego okna dialogowego systemu Windows w pasek sterowania.  

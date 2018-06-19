@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356557"
 ---
 # <a name="providing-flicker-free-activation"></a>Zapewnianie aktywacji pozbawionej migotania
 Jeśli formantu rysuje się tak samo w Stanach stanem nieaktywnym i aktywnym (i nie używa aktywacji niepowiązanej z oknami), można wyeliminować operacje rysowania i towarzyszące im migotanie, które normalnie występuje podczas wykonywania przejścia między nieaktywnych i aktywne stany. Aby to zrobić, należy uwzględnić **noFlickerActivate** flagi w zestawie flagi zwrócony przez [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Na przykład:  

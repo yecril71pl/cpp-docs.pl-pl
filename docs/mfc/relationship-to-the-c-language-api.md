@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379232"
 ---
 # <a name="relationship-to-the-c-language-api"></a>Relacja z interfejsem API języka C
 Jedna właściwość, która ustawia biblioteki Microsoft Foundation Class (MFC) oprócz innych bibliotek klas dla systemu Windows jest bardzo Zamknij mapowania do interfejsu API systemu Windows w języku C. Ponadto można zwykle łączyć wywołania do biblioteki klas za darmo bezpośrednie wywołania interfejsu API systemu Windows. Dostęp bezpośredni, jednak oznacza, że klasy są całkowite zastąpienie dla tego interfejsu API. Deweloperzy muszą nadal sporadycznie bezpośrednich wywołań do niektórych funkcji systemu Windows, takich jak [SetCursor](http://msdn.microsoft.com/library/windows/desktop/ms648393) i [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385), np. Funkcja systemu Windows jest opakowane przez funkcji członkowskiej klasy tylko wtedy, gdy ma wyczyść dodatkowych zalet w ten sposób.  

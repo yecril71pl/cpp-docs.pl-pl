@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355483"
 ---
 # <a name="strings-atlmfc"></a>Ciągi (ATL/MFC)
 Prawie wszystkie programy pracować z danymi ciągu. Visual C++ udostępnia kilka sposobów zarządzania danych tego ciągu.  

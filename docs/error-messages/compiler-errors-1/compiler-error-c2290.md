@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169923"
 ---
 # <a name="compiler-error-c2290"></a>C2290 błąd kompilatora
 Składnia funkcji asm C++ ignorowane. Użyj __asm.  

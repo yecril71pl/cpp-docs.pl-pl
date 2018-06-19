@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376991"
 ---
 # <a name="exception-processing"></a>Przetwarzanie wyjątków
 Podczas program, może wystąpić wiele anomalii i błędy o nazwie "wyjątki". Mogą one obejmować brakiem pamięci, błędy alokacji zasobów i nie można odnaleźć plików.  

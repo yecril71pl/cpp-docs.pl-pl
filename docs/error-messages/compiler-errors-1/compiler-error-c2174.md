@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171952"
 ---
 # <a name="compiler-error-c2174"></a>C2174 błąd kompilatora
 "Funkcja": rzeczywisty parametr jest typu "void": parametr liczba1, liczba2 listy parametrów  

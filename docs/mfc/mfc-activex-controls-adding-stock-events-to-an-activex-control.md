@@ -57,6 +57,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359341"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>Kontrolki ActiveX MFC: dodawanie zdarzeń standardowych do kontrolki ActiveX
 Zdarzeń standardowych różnią się od zdarzeń niestandardowych, są one uruchamiane automatycznie przez klasę [colecontrol —](../mfc/reference/colecontrol-class.md). `COleControl` zawiera funkcji wstępnie zdefiniowanych elementów członkowskich, które wyzwalać zdarzenia wynikające z typowych akcji. Niektóre typowe akcje implementowane przez `COleControl` obejmują jednym - i double - clicks na kontroli, zdarzenia klawiatury i zmiany w stanie przycisku myszy. Wpisy mapy zdarzeń dla standardowych zdarzeń są zawsze poprzedzone **event_stock —** prefiks.  

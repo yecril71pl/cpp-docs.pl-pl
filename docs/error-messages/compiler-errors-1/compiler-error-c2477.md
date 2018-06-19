@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198030"
 ---
 # <a name="compiler-error-c2477"></a>C2477 błąd kompilatora
 "członek": nie można zainicjować statycznego elementu członkowskiego danych za pośrednictwem pochodnej klasy  

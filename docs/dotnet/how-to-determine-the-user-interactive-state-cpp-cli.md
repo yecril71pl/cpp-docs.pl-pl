@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127308"
 ---
 # <a name="how-to-determine-the-user-interactive-state-ccli"></a>Porady: określanie stanu interaktywności użytkownika (C++/CLI)
 Poniższy przykład kodu pokazuje sposób określania, czy kod jest uruchamiany w kontekście interakcji z użytkownikiem. Jeśli <xref:System.Environment.UserInteractive%2A> to false, a następnie kod jest uruchomiona jako proces usługi lub z wewnątrz aplikacji sieci Web, w którym to przypadku należy zrezygnować do interakcji z użytkownikiem.  

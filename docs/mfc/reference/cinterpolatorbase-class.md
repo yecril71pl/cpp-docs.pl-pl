@@ -41,6 +41,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367763"
 ---
 # <a name="cinterpolatorbase-class"></a>Klasa CInterpolatorBase
 Implementuje wywołanie zwrotne, które jest wywoływane przez interfejs API animacji, gdy należy obliczyć nową wartość zmiennej animacji.  

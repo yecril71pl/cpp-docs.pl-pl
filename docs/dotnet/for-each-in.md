@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111946"
 ---
 # <a name="for-each-in"></a>for each, in
 Wykonuje iterację przez tablicę lub kolekcję. To niestandardowe słowo kluczowe jest dostępne zarówno w projektach C++/CLI, jak i macierzystych projektach C++. Jego stosowanie nie jest jednak zalecane. Należy rozważyć użycie standardowego [opartej na zakresie — instrukcja (C++)](../cpp/range-based-for-statement-cpp.md) zamiast tego.  

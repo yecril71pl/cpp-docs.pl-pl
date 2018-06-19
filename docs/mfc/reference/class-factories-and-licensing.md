@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367077"
 ---
 # <a name="class-factories-and-licensing"></a>Fabryki klas i licencjonowanie
 Aby utworzyć wystąpienia formantu OLE, aplikacji kontenera wywołania funkcji członkowskiej klasy fabryki klasy formantu. Ponieważ formantu rzeczywistego obiektu OLE, fabryki klasy jest odpowiedzialny za tworzenie wystąpienia formantu. Każda klasa formantu OLE musi mieć fabrykę klas.  

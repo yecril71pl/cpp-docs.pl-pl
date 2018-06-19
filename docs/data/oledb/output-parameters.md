@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104389"
 ---
 # <a name="output-parameters"></a>Parametry wyjściowe
 Wywołanie procedury składowanej jest podobny do wywoływania polecenia SQL. Główna różnica polega na czy procedury składowane za pomocą parametrów wyjściowych (lub "outparameters") i wartości zwracane.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101474"
 ---
 # <a name="definecommand"></a>DEFINE_COMMAND
 Określa polecenie, które będzie służyć do tworzenia zestawu wierszy, używając [CCommand](../../data/oledb/ccommand-class.md) klasy. Akceptuje tylko typy string odpowiadał typowi określonej aplikacji (ANSI lub Unicode).  

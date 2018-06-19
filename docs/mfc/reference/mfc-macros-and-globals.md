@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375689"
 ---
 # <a name="mfc-macros-and-globals"></a>Makra i funkcje globalne MFC
 Microsoft Foundation Class Library można podzielić na dwie główne części: (1 klasy MFC i (2) makra i funkcje globalne. Jeśli funkcja lub zmienna nie jest elementem członkowskim klasy, to globalnej funkcji lub zmienna.  

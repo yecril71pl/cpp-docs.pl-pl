@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170307"
 ---
 # <a name="compiler-error-c2175"></a>C2175 błąd kompilatora
 "locale": nieprawidłowe ustawienia regionalne  

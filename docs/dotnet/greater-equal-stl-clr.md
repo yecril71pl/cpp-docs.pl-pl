@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109346"
 ---
 # <a name="greaterequal-stlclr"></a>greater_equal (STL/CLR)
 Klasa szablonu opisuje obiekt, który po wywołaniu zwraca wartość true, tylko jeśli pierwszy argument jest większe lub równe drugiemu. Można go użyć Określ obiekt funkcja pod względem jego typ argumentu.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110357"
 ---
 # <a name="changes-in-constructor-initialization-order"></a>Zmiany w kolejności inicjowania konstruktorów
 Kolejność inicjowania dla konstruktorów klasy zmienił się z rozszerzeń zarządzanych dla języka C++ dla Visual C++.  

@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383977"
 ---
 # <a name="toolbar-fundamentals"></a>Paski narzędzi — podstawowe założenia
 W tym artykule opisano podstawowe implementacji MFC, które umożliwia dodanie narzędzi domyślne do aplikacji przez wybranie opcji w Kreatorze aplikacji. Tematy obejmują:  

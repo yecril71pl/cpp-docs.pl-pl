@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169546"
 ---
 # <a name="value-types-and-their-behaviors-ccli"></a>Typy wartości i ich zachowania (C++/CLI)
 Typy wartości zostały zmienione na różne sposoby z rozszerzeń zarządzanych dla języka C++ dla Visual C++. W tej sekcji przyjrzymy się typ wyliczenia CLR i wartość typu klasy, wraz z przyjrzeć się opakowywanie i uzyskiwania dostępu do spakowanym wystąpieniem na stercie CLR, a także przyjrzeć się wskaźniki wewnętrznymi i przypinania. Wprowadzono zmiany języka szeroką gamę w tym obszarze.  

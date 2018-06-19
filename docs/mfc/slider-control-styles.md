@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380549"
 ---
 # <a name="slider-control-styles"></a>Style formantu suwaka
 Formanty suwaka ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) może mieć orientacji pionowej lub poziomej. Mogą oni mieć znaczniki osi po obu stronach obu stronach lub nie. One mogą służyć do określania zakresu kolejnych wartości. Te właściwości są określane za pomocą style formantu suwaka, które można określić podczas tworzenia suwaka.  

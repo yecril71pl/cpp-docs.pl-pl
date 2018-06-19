@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104233"
 ---
 # <a name="autogcrootoperator-bool"></a>auto_gcroot::operator — wartość logiczna
 Operator przy użyciu `auto_gcroot` w wyrażeniu warunkowym.  

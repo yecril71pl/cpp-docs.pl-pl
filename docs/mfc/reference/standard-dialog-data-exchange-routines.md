@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377658"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Standardowe procedury wymiany danych w oknie dialogowym
 W tym temacie wymieniono standardowe procedury okna dialogowego danych programu exchange (DDX) używany dla typowych formantów okna dialogowego MFC.  

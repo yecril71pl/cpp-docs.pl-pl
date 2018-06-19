@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381241"
 ---
 # <a name="using-a-dialog-template-in-memory"></a>Używanie szablonu okna dialogowego w pamięci
 Zamiast metody podane w [okno dialogowe Tworzenie tabeli](../mfc/creating-a-dialog-class-with-code-wizards.md), można utworzyć dowolnego typu, w oknie dialogowym pośrednio z szablonu okna dialogowego w pamięci. Aby uzyskać więcej informacji, zobacz klasy [cdialog —](../mfc/reference/cdialog-class.md) w *odwołania MFC*.  

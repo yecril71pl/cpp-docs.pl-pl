@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358918"
 ---
 # <a name="how-default-printing-is-done"></a>Jak jest wykonywane drukowanie domyślne
 W tym artykule opisano domyślny proces drukowania w systemie Windows w ramach MFC.  

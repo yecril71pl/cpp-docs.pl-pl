@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367672"
 ---
 # <a name="cmenutearoffmanager-class"></a>Klasa CMenuTearOffManager
 Zarządza oderwania menu. Menu oderwania jest menu na pasku menu. Użytkownik może usunąć menu oderwania z menu paska menu oderwania float powoduje.  

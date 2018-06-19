@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103567"
 ---
 # <a name="using-an-existing-ado-recordset"></a>Korzystanie z istniejącego zestawu rekordów ADO
 Aby utworzyć szablony konsumentów OLE DB i aktywne obiektów ADO (Data), umożliwia otwieranie zestawu rekordów (odpowiadający zestawu wierszy w OLE DB szablony konsumentów) ADO. Jeśli masz zestawu rekordów, wykonaj następujące czynności do nawiązania połączenia zestawu wierszy OLE DB:  

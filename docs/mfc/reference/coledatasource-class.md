@@ -51,6 +51,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376710"
 ---
 # <a name="coledatasource-class"></a>COleDataSource — klasa
 Działa jako pamięci podręcznej, w którym aplikacja umieszcza dane, które będzie oferować podczas danych transfer operacji, takich jak Schowek lub operacji przeciągania i upuszczania.  

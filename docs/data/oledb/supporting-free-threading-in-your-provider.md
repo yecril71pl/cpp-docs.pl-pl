@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108517"
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>Obsługa wolnych wątków w dostawcy
 Wszystkie klasy dostawcy OLE DB są wątkowo i wpisy rejestru są ustawione w związku z tym. Jest dobrym pomysłem jest obsługa wolnych wątków, aby zapewnić wysoką wydajność w sytuacji, w wielu użytkowników. Aby zapewnić dostawcy wątkowo, należy sprawdzić, czy kod jest prawidłowo zablokowany. Zawsze, gdy zapisu lub przechowywania danych, należy zablokować dostęp z sekcji krytycznych.  

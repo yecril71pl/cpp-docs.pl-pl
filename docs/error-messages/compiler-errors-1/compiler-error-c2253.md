@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33176395"
 ---
 # <a name="compiler-error-c2253"></a>C2253 błąd kompilatora
 "Funkcja": czysty specyfikator lub abstrakcyjny specyfikator override dozwolony tylko w funkcji wirtualnej  

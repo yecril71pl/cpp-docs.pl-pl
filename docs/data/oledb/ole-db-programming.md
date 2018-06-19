@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107181"
 ---
 # <a name="ole-db-programming"></a>Programowanie OLE DB
 Microsoft OLE DB jest technologią starszej wersji; w przypadku nowych aplikacji jest wymagany dostęp do danych interfejsu API dla połączonych serwerów SQL. Wszystkie inne nowe aplikacje powinny używać ODBC. Bieżący dostawca OLE DB dla programu SQL Server jest SQLNCLI11. BIBLIOTEKI DLL. Dostawca jest nadal wysyłania w programie SQL Server 2016. Ta dokumentacja jest przeznaczony dla deweloperów, którzy są zachowaniu istniejących aplikacji, które już używają OLE DB.
