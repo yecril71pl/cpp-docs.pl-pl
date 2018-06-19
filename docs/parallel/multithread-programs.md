@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686935"
 ---
 # <a name="multithread-programs"></a>Programy wielowątkowe
 Wątek jest zasadniczo ścieżka wykonywania za pośrednictwem programu. Istnieje również najmniejsza wykonanie, które planuje Win32. Wątek składa się z stosu, stan rejestrów Procesora i wpis na liście wykonywania Harmonogram systemu. Każdy wątek udostępnia zasoby wszystkich procesów.  

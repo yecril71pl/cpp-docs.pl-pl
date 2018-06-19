@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882063"
 ---
 # <a name="mfc-predefined-symbols"></a>Wstępnie zdefiniowane symbole MFC
 Projekty MFC, zawsze należy uwzględniać kilka pliki nagłówkowe, które obsługują system windows. Są one dodawane za pośrednictwem # instrukcji include w pliku StdAfx.h:  

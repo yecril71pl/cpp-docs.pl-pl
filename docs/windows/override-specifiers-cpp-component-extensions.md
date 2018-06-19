@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882765"
 ---
 # <a name="override-specifiers--c-component-extensions"></a>Specyfikatory zastąpienia (C++ Component Extensions)
 *Specyfikatory zastąpienia* zmodyfikować sposób dziedziczonych typów i członków dziedziczonych typów zachowują się w typach pochodnych.  

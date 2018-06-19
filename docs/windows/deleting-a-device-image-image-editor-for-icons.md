@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881747"
 ---
 # <a name="deleting-a-device-image-image-editor-for-icons"></a>Usuwanie obrazu urządzenia (Edytor obrazów dla ikon)
 ### <a name="to-delete-a-device-image"></a>Aby usunąć obrazu urządzenia  

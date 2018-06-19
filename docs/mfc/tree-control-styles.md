@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382040"
 ---
 # <a name="tree-control-styles"></a>Style kontrolki drzewa
 Kontrolki drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) style regulują aspektów wygląd formantu drzewa. Można ustawić style początkowej podczas tworzenia formantu drzewa. Możesz pobrać i zmieniać style po utworzeniu drzewie przy użyciu [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) i [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) funkcje systemu Windows, określając **GWL_STYLE** dla `nIndex` parametru. Aby uzyskać pełną listę style, zobacz [Style okna kontrolki widoku drzewa](http://msdn.microsoft.com/library/windows/desktop/bb760013) w zestawie Windows SDK.  

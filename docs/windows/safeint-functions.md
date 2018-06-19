@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889310"
 ---
 # <a name="safeint-functions"></a>SafeInt — Funkcje
 Safeint — biblioteka zawiera kilka funkcji, których można użyć bez tworzenia wystąpienia [safeint — klasa](../windows/safeint-class.md). Jeśli chcesz chronić jednej operacji matematycznych z liczbą całkowitą przepełnienia, możesz użyć tych funkcji. Jeśli chcesz chronić wiele operacji matematycznych, należy utworzyć `SafeInt` obiektów. Jest bardziej wydajne, można utworzyć `SafeInt` obiektów niż można używać tych funkcji wiele razy.  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873696"
 ---
 # <a name="defining-mnemonics-access-keys"></a>Definiowanie mnemonik (klucze dostępu)
 Zwykle użytkownicy klawiatury przenoszeniu fokus wprowadzania z jednego formantu w oknie dialogowym z kluczami kartę i strzałki. Można jednak zdefiniować klawisza dostępu (nazwę skrótu lub łatwych do zapamiętania), który umożliwia użytkownikom wybór formantu naciskając jednego klucza.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880533"
 ---
 # <a name="image-menu-image-editor-for-icons"></a>Menu obrazu (Edytor obrazów dla ikon)
 Menu obrazu jest wyświetlana tylko wtedy, gdy edytor obrazów jest aktywna, ma poleceń edycji obrazów, zarządzanie palety kolorów i ustawienie Opcje okna edytora obrazów. Ponadto polecenia narzędzia obrazy urządzeń są dostępne podczas pracy z ikony i kursory.  

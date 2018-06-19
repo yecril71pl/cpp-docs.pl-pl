@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875282"
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>Porady: określanie katalogów dołączenia dla zasobów
 ### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>W celu określenia katalogów dołączanych dla określonego pliku .rc  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230589"
 ---
 # <a name="compiler-error-c2555"></a>C2555 błąd kompilatora
 "class1::function1": przesłanianie wirtualnej funkcji zwracany typ różni się i nie jest kowariantne z "class2::function2"  

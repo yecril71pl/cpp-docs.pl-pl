@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382382"
 ---
 # <a name="using-cmonthcalctrl"></a>Korzystanie z CMonthCalCtrl
 Formant kalendarza miesięcznego ([CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)) implementuje interfejs użytkownika przypominającej kalendarza. To zapewnia użytkownikowi dostęp do bardzo intuicyjne i rozpoznawalnych metodę wprowadzania lub wybieranie daty. Formant zawiera również aplikacji, sposób uzyskiwania i ustawiania informacje o dacie w formancie przy użyciu istniejących typów danych. Domyślnie formant kalendarza miesięcznego Wyświetla bieżącego dnia i miesiąca. Jednak użytkownik będzie mógł przejdź do poprzedniego i następnego miesiąca i wybierz w określonym miesiącu i/lub roku.  

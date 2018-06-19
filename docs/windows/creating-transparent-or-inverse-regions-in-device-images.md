@@ -35,6 +35,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882553"
 ---
 # <a name="creating-transparent-or-inverse-regions-in-device-images-image-editor-for-icons"></a>Tworzenie obszarów przezroczystych lub odwróconych w obrazach urządzeń (Edytor obrazów dla ikon)
 W [edytor obrazów](../windows/image-editor-for-icons.md), początkowej obrazu ikony ma atrybut przezroczysty. Mimo że obrazów ikony, jak i kursor jest prostokątny, wiele nie są wyświetlane, ponieważ części obrazu są niewidoczne; przedstawia podstawowy obraz na ekranie za pomocą ikony lub kursora. Przeciągnięcie ikony części obrazu może występować w kolorze odwrócony. Utwórz w tym celu przez ustawienie koloru ekranu i kolorów odwrotnych w [kolory — okno](../windows/colors-window-image-editor-for-icons.md).  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877738"
 ---
 # <a name="exception-handling--c-component-extensions"></a>Obsługa wyjątków (C++ Component Extensions)
 Aplikacje skompilowane z **/ZW** — opcja kompilatora lub **/CLR** — opcja kompilatora oba rozwiązania używają *wyjątki* obsługi nieoczekiwane błędy podczas wykonywania programu. W poniższych tematach opisano obsługi wyjątków w obu C + +/ CX lub C + +/ CLI aplikacji.  

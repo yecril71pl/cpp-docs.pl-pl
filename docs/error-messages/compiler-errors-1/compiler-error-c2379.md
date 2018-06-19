@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198079"
 ---
 # <a name="compiler-error-c2379"></a>C2379 błąd kompilatora
 Liczba parametrów formalnych jest innego typu kiedy jest zwiększany  

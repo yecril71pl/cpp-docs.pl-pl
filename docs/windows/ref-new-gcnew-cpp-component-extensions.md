@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879064"
 ---
 # <a name="ref-new-gcnew--c-component-extensions"></a>ref new, gcnew (C++ Component Extensions)
 `ref new` Agregacji — słowo kluczowe przydziela wystąpienia typu, który jest bezużytecznych, gdy obiekt staje się niedostępny, i który zwraca uchwyt ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) do przydzielonego obiektu.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873124"
 ---
 # <a name="controls-in-dialog-boxes"></a>Formanty w oknach dialogowych
 Okno dialogowe przy użyciu można dodawać formanty [Karta Edytor okien dialogowych](../windows/dialog-editor-tab-toolbox.md) w [okno przybornika](/visualstudio/ide/reference/toolbox), który umożliwia wybranie formantu ma i przeciągnij go do okna dialogowego. Domyślnie Ukryj automatycznie wynosi okno przybornika. Wygląda na to, jako karty na lewym marginesie rozwiązanie po otwarciu edytora okien dialogowych. Jednak można przypiąć okno przybornika do pozycji, klikając **automatyczne ukrywanie** przycisk w prawym górnym rogu okna. Aby uzyskać więcej informacji na temat sposobu kontrolowania zachowania tego okna, zobacz [Zarządzanie oknem](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  

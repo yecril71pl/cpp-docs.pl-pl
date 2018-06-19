@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871043"
 ---
 # <a name="converting-an-image-from-one-format-to-another-image-editor-for-icons"></a>Konwertowanie obrazu z jednego formatu do innego (Edytor obrazów dla ikon)
 Można otworzyć GIF lub JPEG obrazy w edytorze obrazów i zapisać je jako map bitowych. Można również otworzyć plik mapy bitowej i zapisać go jako plik GIF lub JPEG. Praca z obrazami nie muszą być częścią projektu do edycji w środowisku programistycznym (zobacz [edycji obrazów autonomicznej](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)).  

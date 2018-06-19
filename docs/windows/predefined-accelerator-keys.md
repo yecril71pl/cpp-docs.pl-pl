@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880803"
 ---
 # <a name="predefined-accelerator-keys"></a>Wstępnie zdefiniowane klawisze skrótów
 Istnieje szereg wstępnie zdefiniowane klawisze skrótów, które mogą być częścią projekt aplikacji systemu Windows. Niektóre z tych klawiszy wirtualnych są środowiska systemu Windows. Inne przeglądarki pomocy technicznej lub aplikacje Unicode. Można użyć dowolnej z tych kluczy w dowolnym akceleratora.  

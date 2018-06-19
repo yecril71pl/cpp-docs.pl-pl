@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880195"
 ---
 # <a name="resource-symbols-dialog-box"></a>Okno dialogowe symboli zasobów
 **Symbole zasobu** okno dialogowe służy do dodawania nowych symboli zasobów, Zmień symbole, które są wyświetlane lub przejść do lokalizacji w kodzie źródłowym, w którym symbol jest używany.  
