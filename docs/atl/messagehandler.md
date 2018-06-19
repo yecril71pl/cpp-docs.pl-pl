@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356370"
 ---
 # <a name="messagehandler"></a>MessageHandler
 **MessageHandler** jest nazwą funkcji identyfikowane przez drugi parametr funkcji `MESSAGE_HANDLER` makra mapy wiadomości.  

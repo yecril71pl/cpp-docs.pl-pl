@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361463"
 ---
 # <a name="cwintraitsor-class"></a>Klasa CWinTraitsOR
 Ta klasa udostępnia metodę standaryzacji style używane podczas tworzenia obiektu okna.  

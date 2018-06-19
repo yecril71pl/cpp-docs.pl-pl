@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418042"
 ---
 # <a name="decltype--c"></a>decltype (C++)
 `decltype` Specyfikatora typu daje typ określonego wyrażenia. `decltype` Wpisz specyfikator, wraz z [auto — słowo kluczowe](../cpp/auto-cpp.md), przydaje się głównie do deweloperów, którzy zapisu biblioteki szablonów. Użyj `auto` i `decltype` do zadeklarowania funkcji szablonu, którego zwracany typ zależy od typów argumentów szablonu. Lub użyj `auto` i `decltype` do zadeklarowania funkcji szablonu, który opakowuje wywołania do innej funkcji, a następnie zwraca typ zwracany funkcji opakowana.  

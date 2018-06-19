@@ -50,6 +50,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410138"
 ---
 # <a name="stat-structure-stmode-field-constants"></a>Stałe pola_stat Struktura st_mode
 ## <a name="syntax"></a>Składnia  

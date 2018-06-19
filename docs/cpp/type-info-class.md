@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422439"
 ---
 # <a name="typeinfo-class"></a>type_info — Klasa
 **Type_info —** klasa opisuje informacje o typie w program generowane przez kompilator. Obiekty tej klasy skutecznie przechowują wskaźnik do nazwy typu. **Type_info —** klasy przechowuje także zakodowaną wartość odpowiednie do porównywania dwóch typów równości lub kolejności sortowania. Reguły kodowania i sekwencja typów sortowania są nieokreślone i mogą się różnić między programami.  

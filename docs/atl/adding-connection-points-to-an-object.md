@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356595"
 ---
 # <a name="adding-connection-points-to-an-object"></a>Dodawanie punktów połączenia do obiektu
 [ALT — samouczek](../atl/active-template-library-atl-tutorial.md) pokazano tworzenie formantu z obsługą punkty połączenia, jak dodać zdarzenia i sposób zaimplementowania punktu połączenia. ATL implementuje punkty połączenia z [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) klasy.  

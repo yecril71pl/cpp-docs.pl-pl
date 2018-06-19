@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360348"
 ---
 # <a name="testing-the-modified-atl-dhtml-control"></a>Testowanie kontroli zmodyfikowane DHTML ATL
 Wypróbuj nowe formantu można zobaczyć, jak działa teraz.  

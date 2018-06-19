@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360165"
 ---
 # <a name="when-do-i-need-to-call-atlaxwinterm"></a>Jeśli trzeba wywołać AtlAxWinTerm?
 [AtlAxWinTerm](reference/composite-control-global-functions.md#atlaxwinterm) wyrejestrowuje **"AtlAxWin80"** klasy okna. Powinny wywoływać tej funkcji (Jeśli nie trzeba tworzyć hosta z systemem windows), po wszystkich istniejących windows hosta zostały zniszczone. Nie można wywołać tej funkcji, klasę okna zostanie wyrejestrowane automatycznie gdy zakończenie procesu.  

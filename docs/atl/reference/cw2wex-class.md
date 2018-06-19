@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362423"
 ---
 # <a name="cw2wex-class"></a>Klasa CW2WEX
 Ta klasa jest używana przez makra konwersji ciągu `CW2TEX` i `CT2WEX`i typedef `CW2W`.  

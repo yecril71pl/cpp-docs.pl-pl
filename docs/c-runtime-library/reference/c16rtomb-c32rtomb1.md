@@ -42,6 +42,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32394547"
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb, c32rtomb
 
@@ -75,7 +76,7 @@ Wskaźnik do **mbstate_t** obiektu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Liczba bajtów przechowywane w tablicy obiektów *mbchar*, w tym wszystkie sekwencje shift. Jeśli *wchar* nie jest prawidłowym znakiem dwubajtowe, wartość (**size_t**)(-1) jest zwracany, **errno** ustawiono **eilseq —**i wartość *stanu* jest nieokreślony.
+Liczba bajtów przechowywane w tablicy obiektów *mbchar*, w tym wszystkie sekwencje shift. Jeśli *wchar* nie jest prawidłowym znakiem dwubajtowe, wartość (**size_t**)(-1) jest zwracany, **errno** ustawiono **eilseq —** i wartość *stanu* jest nieokreślony.
 
 ## <a name="remarks"></a>Uwagi
 

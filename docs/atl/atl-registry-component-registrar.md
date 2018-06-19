@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354903"
 ---
 # <a name="atl-registry-component-registrar"></a>Składnik rejestru ALT (Rejestrator)
 Rejestrator ALT zapewnia zoptymalizowane dostępu do rejestru systemowego za pomocą niestandardowego interfejsu. Rejestratora jest bezwątkowy i umożliwia statycznego łączenia kodu dla języka C++ klientów.  

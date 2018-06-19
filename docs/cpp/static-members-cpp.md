@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421074"
 ---
 # <a name="static-members-c"></a>Statyczne elementy członkowskie (C++)
 Klasy może zawierać danych statycznych elementów członkowskich i funkcji elementów członkowskich. Gdy element danych jest zadeklarowany jako **statycznych**, tylko jedną kopię danych jest obsługiwane dla wszystkich obiektów klasy.

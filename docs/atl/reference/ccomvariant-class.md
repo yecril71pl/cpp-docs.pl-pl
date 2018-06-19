@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366019"
 ---
 # <a name="ccomvariant-class"></a>Klasa CComVariant
 Ta klasa jest zawijana `VARIANT` typu, zapewniając członka wskazujący typ danych przechowywanych.  

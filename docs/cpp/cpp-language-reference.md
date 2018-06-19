@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417206"
 ---
 # <a name="c-language-reference"></a>Materiał referencyjny na temat języka C++
 To źródło odniesienia wyjaśnia sposób implementacji C++ w Microsoft Visual C++. Organizacja jest oparta na *opatrzone adnotacjami C++ podręcznika* Margaret Ellis i Bjarne Stroustrup oraz na ANSI/ISO C++ międzynarodowej standardowy (ISO/IEC FDIS 14882). Implementacje funkcji języka C++ specyficzne dla Microsoft są uwzględnione.  

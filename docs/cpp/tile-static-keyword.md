@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422166"
 ---
 # <a name="tilestatic-keyword"></a>tile_static — słowo kluczowe
 `tile_static` Słowo kluczowe jest używane w celu zadeklarowania zmiennej dostępnej przez wszystkie wątki na kafelku wątków. Okres istnienia zmiennej uruchamiana, gdy wykonanie osiągnie punkt deklaracji i kończy się po powrocie z funkcji jądra. Aby uzyskać więcej informacji na temat używania Kafelki, zobacz [przy użyciu Kafelki](../parallel/amp/using-tiles.md).  

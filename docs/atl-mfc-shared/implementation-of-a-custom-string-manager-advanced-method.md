@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357818"
 ---
 # <a name="implementation-of-a-custom-string-manager-advanced-method"></a>Wdrożenia z menedżerem ciąg niestandardowy (zaawansowana metoda)
 W sytuacjach, specjalne można zaimplementować Menedżera niestandardowy ciąg, który więcej niż tylko ulega zmianie stosu, który służy do przydzielenia pamięci. W takiej sytuacji należy ręcznie zaimplementować [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) interfejsu Menedżera niestandardowy ciąg.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413139"
 ---
 # <a name="stream-states"></a>Stany strumieni
 Na poniższej ilustracji przedstawiono prawidłowe stany i przejść stanu dla strumienia.  

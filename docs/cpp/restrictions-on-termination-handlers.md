@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420585"
 ---
 # <a name="restrictions-on-termination-handlers"></a>Ograniczenia dotyczące programu obsługi zakończenia
 Nie można użyć `goto` instrukcji, aby przejść do `__try` blok instrukcji lub `__finally` blok instrukcji. Zamiast tego należy wprowadzić bloku instrukcji za pomocą przepływu sterowania. (Można jednak przechodzić z `__try` blok instrukcji.) Ponadto nie można zagnieżdżać obsługi wyjątków lub programu obsługi zakończenia wewnątrz `__finally` bloku.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409579"
 ---
 # <a name="basic-concepts--c"></a>Koncepcje podstawowe (C++)
 W tej sekcji opisano pojęcia, które są niezbędne do zrozumienia C++. Programiści C będzie należy zapoznać się z wielu z tych pojęć, ale istnieją pewne różnice niewielkie, które mogą spowodować program nieoczekiwane wyniki. Omówiono następujące zagadnienia:  

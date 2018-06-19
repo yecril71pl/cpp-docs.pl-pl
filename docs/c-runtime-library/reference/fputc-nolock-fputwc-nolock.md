@@ -48,6 +48,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32398558"
 ---
 # <a name="fputcnolock-fputwcnolock"></a>_fputc_nolock, _fputwc_nolock
 
@@ -80,7 +81,7 @@ Każda z tych funkcji zwraca znak zapisywane. Aby uzyskać informacje o błędzi
 
 ## <a name="remarks"></a>Uwagi
 
-**_fputc_nolock —** i **_fputwc_nolock —** są takie same jak **fputc —** i **fputwc —**odpowiednio z tą różnicą, że nie są chronione przed zakłóceniami przez inne wątki. Może być szybsze, ponieważ nie wiążą się z obciążenie zablokowania inne wątki. Ich używać tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.
+**_fputc_nolock —** i **_fputwc_nolock —** są takie same jak **fputc —** i **fputwc —** odpowiednio z tą różnicą, że nie są chronione przed zakłóceniami przez inne wątki. Może być szybsze, ponieważ nie wiążą się z obciążenie zablokowania inne wątki. Ich używać tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.
 
 Dwie funkcje zachowują się tak samo, jakby strumień jest otwarty w trybie ANSI. **_fputc_nolock —** nie obsługuje obecnie dane wyjściowe do strumienia UNICODE.
 

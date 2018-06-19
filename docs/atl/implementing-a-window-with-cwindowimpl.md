@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356550"
 ---
 # <a name="implementing-a-window-with-cwindowimpl"></a>Implementowanie okno z CWindowImpl
 Aby zaimplementować okno, klasa wyprowadzona z `CWindowImpl`. W klasie pochodnej zadeklarować mapy komunikatów i funkcji programu obsługi wiadomości. Można teraz używać własnej klasy na trzy różne sposoby:  

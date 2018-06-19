@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356399"
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>Eksportowanie klas ciągu przy użyciu CStringT
 W przeszłości deweloperzy MFC ma pochodzi od `CString` do specialize własnych klas ciągu. W programie Microsoft Visual C++ .NET (MFC 8.0) [cstring —](../atl-mfc-shared/using-cstring.md) klasy został zastąpiony przez szablon klasy o nazwie [CStringT](../atl-mfc-shared/reference/cstringt-class.md). Ta udostępniona kilka korzyści:  

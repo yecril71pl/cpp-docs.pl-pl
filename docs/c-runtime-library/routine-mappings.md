@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415497"
 ---
 # <a name="routine-mappings"></a>Mapowanie procedur
 Mapowanie procedur zwykłego tekstu są definiowane w tchar —. H. `_tccpy` i `_tclen` Mapuj na funkcje w modelu MBCS; są mapowane do makra i funkcje wbudowane w modelach SBCS i Unicode, aby informacje były kompletne. Uzyskać informacji o procedury zwykłego tekstu, zobacz temat Pomocy dotyczący odpowiadającego `SBCS`-, `_MBCS`-, lub `_UNICODE`-związane z procedury.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356456"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 Nazwa funkcji identyfikowane przez trzeci parametr funkcji `NOTIFY_HANDLER` makra mapy wiadomości.  

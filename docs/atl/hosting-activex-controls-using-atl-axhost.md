@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356256"
 ---
 # <a name="hosting-activex-controls-using-atl-axhost"></a>Hosting formantów za pomocą ATL AXHost
 Próbki w tym temacie przedstawiono sposób tworzenia AXHost oraz sposobu hostowania formantu ActiveX, przy użyciu różnych funkcji ATL. Przedstawiono również sposób zdarzeń odbioru i kontroli dostępu (przy użyciu [IDispEventImpl](../atl/reference/idispeventimpl-class.md)) z formantu, który jest obsługiwany. Przykład obsługuje formant kalendarza w głównym oknie lub okna podrzędnego.  

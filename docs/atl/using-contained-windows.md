@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357924"
 ---
 # <a name="using-contained-windows"></a>Używanie okien zawartych w niej
 ATL implementuje zawartych w niej systemu windows za pomocą [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md). Zawartego okna reprezentuje okna, który deleguje jego komunikatów do obiektu kontenera, zamiast ich obsługę w jej własnej klasy.  

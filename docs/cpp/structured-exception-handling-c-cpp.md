@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424273"
 ---
 # <a name="structured-exception-handling-cc"></a>Obsługa wyjątków strukturalnych (C/C++)
 Chociaż system Windows i program Visual C++ obsługuje (SEH) do obsługi wyjątków strukturalnych, zalecane jest użycie normy ISO Obsługa wyjątków języka C++ ponieważ sprawia, że kod bardziej przenośne i elastyczne. Niemniej jednak w istniejącym kodzie lub konkretnej rodzaje programów, użytkownik nadal może być konieczne użycie SEH.  

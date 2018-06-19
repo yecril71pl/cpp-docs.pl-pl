@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418201"
 ---
 # <a name="scanf-width-specification"></a>scanf — Specyfikacje szerokości
 Te informacje dotyczą interpretacji ciągów formatu w `scanf` rodziny funkcji, takich jak także bezpiecznego wersji `scanf_s`. Funkcje te zwykle założenie, że strumień wejściowy jest podzielony na sekwencja tokenów. Tokeny są rozdzielone odstępem (miejsce, karty lub nowego wiersza) lub w przypadku typów wartości liczbowych, do końca fizycznych typu danych numerycznych wskazywany przez pierwszego znaku, której nie można przekonwertować na tekst wartości liczbowych. Specyfikacja szerokości można jednak powoduje analizowanie danych wejściowych zatrzymać przed zakończeniem fizycznych tokenu.  

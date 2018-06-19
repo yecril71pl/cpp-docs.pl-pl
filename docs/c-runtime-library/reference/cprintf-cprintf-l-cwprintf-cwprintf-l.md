@@ -60,6 +60,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32400876"
 ---
 # <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 
@@ -104,7 +105,7 @@ Liczba znaków, wydrukować.
 
 ## <a name="remarks"></a>Uwagi
 
-Te funkcje formatowania i drukowania serii znaków i wartości bezpośrednio z konsoli programu przy użyciu **_putch —** — funkcja (**_putwch —** dla **_cwprintf —**) znaków danych wyjściowych . Każdy argument w *argument_list* (jeśli istnieje) jest konwertowana i dane wyjściowe według specyfikacji formatu w *format*. *Format* używa argumentu [sformatować składnia specyfikacji dla funkcji printf i wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). W odróżnieniu od **fprintf —**, **printf**, i **sprintf** funkcji ani **_cprintf —** ani **_cwprintf —**tłumaczy znaki wysuwu wiersza na kombinacji powrotu wiersza kanału informacyjnego (CR LF) karetki podczas drukowania.
+Te funkcje formatowania i drukowania serii znaków i wartości bezpośrednio z konsoli programu przy użyciu **_putch —** — funkcja (**_putwch —** dla **_cwprintf —**) znaków danych wyjściowych . Każdy argument w *argument_list* (jeśli istnieje) jest konwertowana i dane wyjściowe według specyfikacji formatu w *format*. *Format* używa argumentu [sformatować składnia specyfikacji dla funkcji printf i wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). W odróżnieniu od **fprintf —**, **printf**, i **sprintf** funkcji ani **_cprintf —** ani **_cwprintf —** tłumaczy znaki wysuwu wiersza na kombinacji powrotu wiersza kanału informacyjnego (CR LF) karetki podczas drukowania.
 
 Jest to ważna różnica **_cwprintf —** Wyświetla znaków Unicode, gdy jest używany w systemie Windows. W odróżnieniu od **_cprintf —**, **_cwprintf —** używa bieżących ustawień regionalnych konsoli.
 

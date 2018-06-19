@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361482"
 ---
 # <a name="ccomobjectnolock-class"></a>Klasa CComObjectNoLock
 Ta klasa implementuje **IUnknown** dla obiekt nieagregowane, ale nie nie przyrostu liczbę blokad modułu w konstruktorze.  

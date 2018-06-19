@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356427"
 ---
 # <a name="can-i-host-more-than-one-control-in-a-single-window"></a>Czy może zawierać więcej niż jeden formant w jednym oknie?
 Nie jest możliwe więcej niż jeden kontrolki w jednym oknie hosta ATL hosta. Każde okno hosta jest przeznaczony do przechowywania dokładnie jeden formant jednocześnie (umożliwia to prosty mechanizm obsługi wiadomości odbicie i -control właściwości otaczających). Jednak należy użytkownikowi na zobaczenie wielu formantów w jednym oknie jest proste sprawa można utworzyć wiele okien hosta jako elementy podrzędne tego okna.  

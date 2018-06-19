@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420093"
 ---
 # <a name="punctuators-c"></a>Znaki interpunkcyjne (C++)
 Znaki interpunkcyjne w języku C++ mają znaczenie składni i semantyczne w kompilatorze, ale nie, z sobą, określono operacja, której wynikiem jest wartość. Niektóre znaki interpunkcyjne, samodzielnie lub w połączeniu, można być operatory języka C++ lub być istotne dla preprocesora.  

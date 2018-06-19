@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355242"
 ---
 # <a name="changing-the-default-class-factory-and-aggregation-model"></a>Zmiana domyślnego fabryki klasy i modelu agregacji
 ATL używa [klasy CComCoClass](../atl/reference/ccomcoclass-class.md) do definiowania domyślnej klasy fabryki i agregację modelu dla obiektu. `CComCoClass` Określa dwa następujące makra:  

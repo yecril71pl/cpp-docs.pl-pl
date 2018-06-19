@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420944"
 ---
 # <a name="scope-resolution-operator-"></a>Operator rozpoznawania zakresów: ::
 Operator rozpoznawania zakresów `::` służy do identyfikowania i odróżnienia identyfikatory używane w innych zakresach. Aby uzyskać więcej informacji na temat zakresu, zobacz [zakres](../cpp/scope-visual-cpp.md).  

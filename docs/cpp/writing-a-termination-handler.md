@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423239"
 ---
 # <a name="writing-a-termination-handler"></a>Pisanie programu obsługi zakończenia
 W przeciwieństwie do obsługi wyjątków programu obsługi zakończenia jest zawsze wykonywane, niezależnie od tego, czy chroniony bloku kodu zakończone normalnie. Wyłącznie w celu obsługi rozwiązanie powinno być upewnij się, że zasoby, takie jak pamięć, dojść i plików, są prawidłowo zamknięty niezależnie od tego, jak sekcji kodu ukończeniem wykonywania.  

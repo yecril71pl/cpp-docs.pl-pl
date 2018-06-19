@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32398435"
 ---
 # <a name="fpclassify"></a>fpclassify —
 
@@ -66,7 +67,7 @@ Wartość zmiennoprzecinkowa do testowania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-**fpclassify —** zwraca wartość wskazującą zmiennoprzecinkowe klasy argumentu *x*. W tej tabeli przedstawiono możliwe wartości zwracane przez **fpclassify —**zdefiniowanej w \<math.h >.
+**fpclassify —** zwraca wartość wskazującą zmiennoprzecinkowe klasy argumentu *x*. W tej tabeli przedstawiono możliwe wartości zwracane przez **fpclassify —** zdefiniowanej w \<math.h >.
 
 |Wartość|Opis|
 |-----------|-----------------|

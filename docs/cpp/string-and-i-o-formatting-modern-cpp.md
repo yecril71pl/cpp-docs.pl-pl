@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422387"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Formatowanie ciągów i we/wy (Modern C++)
 C++ [iostream](../standard-library/iostream.md) są w stanie ciąg sformatowany we/wy. Na przykład poniższy kod przedstawia sposób ustawiania cout będą formatowane liczby całkowitej w celu danych wyjściowych w formacie szesnastkowym, najpierw zapisywanie poza bieżący stan i ponownie ustawienia później, gdy stan formatowania jest przekazywana do cout, pozostaje on objęty w ten sposób do momentu zmiany, nie tylko dla jednego wiersza kodu.  

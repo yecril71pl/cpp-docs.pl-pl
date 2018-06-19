@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357261"
 ---
 # <a name="message-maps-atl"></a>Mapy komunikatów (ALT)
 Mapy komunikatów kojarzy funkcji obsługi z danego komunikatu, polecenia lub powiadomień. Za pomocą biblioteki ATL dla [makra mapy komunikatów](../atl/reference/message-map-macros-atl.md), można określić mapy komunikatów dla okna. Procedury okna w `CWindowImpl`, `CDialogImpl`, i `CContainedWindowT` bezpośrednie komunikatów okien jego mapę komunikatów.  

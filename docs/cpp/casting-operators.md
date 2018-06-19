@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32411650"
 ---
 # <a name="casting-operators"></a>Operatory rzutowania
 Operatory rzutowania kilka są specyficzne dla języka C++. Te operatory są przeznaczone do usunięcia części niejednoznaczności i ryzyka związanego z używaniem w starym stylu C języka rzutowania. Są to:  

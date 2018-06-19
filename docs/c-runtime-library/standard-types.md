@@ -175,6 +175,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418526"
 ---
 # <a name="standard-types"></a>Standardowe typy
 Biblioteka wykonawcza Microsoft definiuje następujące typy standardowe i definicje typów.  

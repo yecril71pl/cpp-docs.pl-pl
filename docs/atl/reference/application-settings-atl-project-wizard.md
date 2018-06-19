@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357408"
 ---
 # <a name="application-settings-atl-project-wizard"></a>Ustawienia aplikacji, Kreator projektu ATL
 Użyj **ustawienia aplikacji** strony Kreator projektu ATL do projektu i dodawanie podstawowych funkcji do nowy projekt ATL.  

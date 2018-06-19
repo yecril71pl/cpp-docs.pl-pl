@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355128"
 ---
 # <a name="catlservicemoduletrun-function"></a>Funkcja CAtlServiceModuleT::Run
 **Uruchom** zawiera wywołania `PreMessageLoop`, `RunMessageLoop`, i `PostMessageLoop`. Po wywołaniu, `PreMessageLoop` najpierw przechowuje identyfikator wątku usługi. Usługa użyje tego Identyfikatora zamknąć samego, wysyłając **WM_QUIT** wiadomości przy użyciu funkcji Win32 API [PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946).  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355197"
 ---
 # <a name="debugging-tips"></a>Debugowanie porady
 W poniższych tematach przedstawiono niektóre kroki przydatne do debugowania z usługą:  

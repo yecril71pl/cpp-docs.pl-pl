@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357561"
 ---
 # <a name="adding-an-atl-ole-db-provider"></a>Dodawanie dostawcy OLE DB ATL
 Ten kreator umożliwia dodawanie ATL interfejsu OLE DB do projektu. ATL interfejsu OLE DB składa się z źródła danych, sesji, polecenie i klasy zestawów wierszy. Projekt musi być utworzony jako aplikacja ATL COM.  
