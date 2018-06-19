@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367137"
 ---
 # <a name="defining-an-nmake-macro"></a>Definiowanie makro NMAKE
 ## <a name="syntax"></a>Składnia  

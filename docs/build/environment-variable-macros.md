@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367436"
 ---
 # <a name="environment-variable-macros"></a>Makra zmiennych środowiskowych
 NMAKE dziedziczy definicji makra zmiennych środowiskowych, które istnieją przed rozpoczęciem sesji. Jeśli zmienna została ustawiona w środowisku systemu operacyjnego, jest dostępna jako makro NMAKE. Dziedziczony nazwy są konwertowane na wielkie litery. Dziedziczenie występuje przed przetwarzania wstępnego. Opcja /E spowodować makra odziedziczone zmiennych środowiskowych, aby zastąpić makr o takiej samej nazwie w pliku reguł programu make.  

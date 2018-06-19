@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133337"
 ---
 # <a name="how-to-marshal-com-strings-using-c-interop"></a>Porady: przeprowadzanie marshalingu ciągów COM za pomocą międzyoperacyjności języka C++
 W tym temacie przedstawiono sposób BSTR (format ciągu podstawowe ich drużyna jest faworytem w programowaniu modelu COM) mogą być przekazywane z zarządzanego, do funkcji niezarządzanej i na odwrót. Do współpracy z innych typów parametrów, zobacz następujące tematy:  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33912774"
 ---
 # <a name="alloctext"></a>alloc_text
 Nazwy sekcji kodu, gdzie się znajdują się definicje określona funkcja. Pragma musi występować między deklarator funkcji i definicji funkcji dla funkcji o nazwie.  

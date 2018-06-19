@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890130"
 ---
 # <a name="sizing-individual-controls"></a>Ustalanie rozmiaru pojedynczych formantów
 Zmień rozmiar formantu za pomocą uchwytów zmiany rozmiaru. Gdy wskaźnik myszy znajduje się na uchwyt zmiany rozmiaru, zmiany kształtu, aby wskazać z instrukcjami, w których może być zmieniony rozmiar formantu. Uchwyty rozmiaru Active są wypełnione; w przypadku pustego uchwyt zmiany rozmiaru formantu nie można zmienić rozmiaru tej osi.  

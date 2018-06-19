@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358130"
 ---
 # <a name="date-type"></a>DATE — typ
 **Data** typu jest implementowane za pomocą 8-bajtowa liczba zmiennoprzecinkowa. Liczba dni są reprezentowane przez zwiększa liczbę całkowitą, począwszy od 30 grudnia 1899, północy czasu zero. Wartości godziny są wyrażone jako wartość bezwzględną liczby ułamkową część liczby. W poniższej tabeli przedstawiono kilka dat wraz z ich **data** odpowiednik liczbowy typu:  

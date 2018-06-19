@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891662"
 ---
 # <a name="working-with-color-image-editor-for-icons"></a>Praca z kolorem (Edytor obrazów dla ikon)
 Edytor obrazów zawiera wiele funkcji, które w szczególności obsługiwać i dostosowywanie kolorów. Można ustawić kolor pierwszego planu i tła, wypełnianie kolorem ograniczonego obszarów lub wybrać kolor na obraz do użycia jako bieżący kolor pierwszego planu i tła. Możesz użyć narzędzia na [paska narzędzi edytora obrazów](../windows/toolbar-image-editor-for-icons.md) wraz z palety kolorów w [kolory — okno](../windows/colors-window-image-editor-for-icons.md) do tworzenia obrazów.  

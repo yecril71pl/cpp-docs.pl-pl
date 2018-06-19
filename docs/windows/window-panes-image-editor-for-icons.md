@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892842"
 ---
 # <a name="window-panes-image-editor-for-icons"></a>Okienka (Edytor obrazów dla ikon)
 Okno Edytor obrazów zwykle wyświetla obraz w dwie części oddzielone pasek podziału. Jeden widok jest aktualny rozmiar i innych powiększenia (współczynnik rozszerzenia domyślna to 6). Widoki te dwa okienka są automatycznie aktualizowane: zmiany wprowadzone w jednym oknie natychmiast są wyświetlane w innym. Dwa okienka ułatwiać pracę nad powiększania widoku obrazu, w którym można rozróżnić piksele i, w tym samym czasie obserwować wpływ pracę na widoku rozmiaru rzeczywistego obrazu.  

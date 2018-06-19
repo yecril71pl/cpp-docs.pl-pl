@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376917"
 ---
 # <a name="e-preprocess-to-stdout"></a>/E (Przetwarzaj wstępnie do stdout)
 Przetwarza wstępnie pliki źródłowe C i C++ i kopiuje wstępnie przetworzonych plików na urządzeniu standardowe dane wyjściowe.  

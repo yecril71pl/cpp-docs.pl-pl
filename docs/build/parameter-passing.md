@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369360"
 ---
 # <a name="parameter-passing"></a>Przekazywanie parametru
 Pierwszy argumenty cztery liczby całkowitej są przekazywane w rejestrach. Liczby całkowite są przekazywane (w kolejności od lewej do prawej) w RCX, RDX, R8 i R9. Argumenty 5 i nowszym są przekazywane na stosie. Wszystkie argumenty mają wyrównany do prawej w rejestrach. Jest to zrobić, jeśli wywoływany można zignorować górny bitów rejestru musi być i może uzyskać dostęp tylko część konieczne rejestru.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359748"
 ---
 # <a name="celementtraits-class"></a>Klasa CElementTraits
 Ta klasa jest używana przez klasy kolekcji do zapewnienia metod i funkcje przenoszenie, kopiowanie porównania i operacji wyznaczania wartości skrótu.  

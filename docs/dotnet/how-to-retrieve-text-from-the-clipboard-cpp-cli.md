@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127906"
 ---
 # <a name="how-to-retrieve-text-from-the-clipboard-ccli"></a>Porady: pobieranie tekstu ze schowka (C++/CLI)
 Poniższy przykład kodu wykorzystuje <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> funkcja zwraca wskaźnik do elementu członkowskiego <xref:System.Windows.Forms.IDataObject> interfejsu. Ten interfejs może następnie zapytanie dotyczące formatu danych i używane do pobierania danych rzeczywistych.  

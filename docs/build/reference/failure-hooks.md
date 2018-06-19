@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371788"
 ---
 # <a name="failure-hooks"></a>Punkty zaczepienia błędów
 Haku błędu jest włączone w taki sam sposób jak [punktu zaczepienia powiadomień](../../build/reference/notification-hooks.md). Kontynuować musi rutynowych haku zwraca odpowiednie wartości tak, aby przetwarzania (wystąpienie HINSTANCE lub FARPROC) lub wpisz 0, aby wskazać, że zgłaszany wyjątek.  

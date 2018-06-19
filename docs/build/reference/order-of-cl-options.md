@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372812"
 ---
 # <a name="order-of-cl-options"></a>Kolejność opcji CL
 Opcje mogą występować w dowolnym miejscu w wierszu polecenia CL, z wyjątkiem opcji/Link musi występować jako ostatnia. Kompilator rozpoczyna się od określonego w opcji [zmiennej środowiskowej CL](../../build/reference/cl-environment-variables.md) i odczytuje wiersza polecenia od lewej do prawej — przetwarzania plików poleceń w kolejności ich wystąpienia. Każda opcja ma zastosowanie do wszystkich plików w wierszu polecenia. Jeśli CL napotka opcje powodujące konflikt, używa opcji po prawej stronie.  

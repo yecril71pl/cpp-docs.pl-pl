@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391916"
 ---
 # <a name="pointer-declarations"></a>Deklaracje wskaźników
 Deklaracji"wskaźnik" nazwy zmiennej wskaźnikowej i określa typ obiektu, na które wskazuje zmiennej. Zmienna zadeklarowana jako wskaźnik przechowuje adres pamięci.  

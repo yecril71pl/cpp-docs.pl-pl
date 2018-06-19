@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357737"
 ---
 # <a name="what-is-a-host-object"></a>Co to jest obiekt hosta?
 Obiekt hosta jest obiekt COM, który reprezentuje kontenera formantu ActiveX, które są dostarczane przez ATL dla poszczególnego okna. Obiekt hosta podklasy okna kontenera, aby go odzwierciedlają wiadomości do kontrolki, zapewnia interfejsy kontenera niezbędne do użycia przez formant i udostępnia ona [IAxWinHostWindow](../atl/reference/iaxwinhostwindow-interface.md) i [ IAxWinAmbientDispatch](../atl/reference/iaxwinambientdispatch-interface.md) interfejsów, co pozwala na skonfigurowanie środowiska formantu.  

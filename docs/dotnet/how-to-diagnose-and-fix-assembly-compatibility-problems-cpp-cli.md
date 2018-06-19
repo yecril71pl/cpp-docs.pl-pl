@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133431"
 ---
 # <a name="how-to-diagnose-and-fix-assembly-compatibility-problems-ccli"></a>Porady: diagnozowanie i usuwanie problemów ze zgodnością zestawu (C++/CLI)
 W tym temacie opisano, co może się zdarzyć, gdy wersja zestawu odwołania w czasie kompilacji nie pasuje do wersji zestawu odwołania w czasie wykonywania oraz sposób uniknąć tego problemu.  

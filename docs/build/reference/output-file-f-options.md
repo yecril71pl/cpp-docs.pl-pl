@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373026"
 ---
 # <a name="output-file-f-options"></a>Plik wyjściowy (/F) — Opcje
 Opcje pliku wyjściowego tworzenia lub zmiany nazwy plików wyjściowych. Wpływają na wszystkie C lub C++ określono plików źródłowych w zmiennej środowiskowej CL, w wierszu polecenia lub pliku polecenia.  

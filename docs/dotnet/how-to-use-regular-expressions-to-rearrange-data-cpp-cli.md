@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130867"
 ---
 # <a name="how-to-use-regular-expressions-to-rearrange-data-ccli"></a>Porady: używanie wyrażeń regularnych do zmiany rozmieszczenia danych (C++/CLI)
 W poniższym przykładzie kodu pokazano, jak obsługa wyrażeń regularnych programu .NET Framework może służyć do zmiany rozmieszczenia ani formatowania danych. Poniższy przykład kodu wykorzystuje <xref:System.Text.RegularExpressions.Regex> i <xref:System.Text.RegularExpressions.Match> klasy, aby wyodrębnić imiona i nazwiska z ciągu, a następnie wyświetlenia tych elementów nazwy w odwrotnej kolejności.  

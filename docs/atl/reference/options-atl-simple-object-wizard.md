@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364144"
 ---
 # <a name="options-atl-simple-object-wizard"></a>Opcje, Kreator prostych obiektów ATL
 Ta strona kreatora prosty obiekt ATL do projektowania dla zwiększenia wydajności i obsługa błędów dla obiekt.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369435"
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI (Określ katalogi metadanych)
 Określa, że kompilator będzie wyszukiwania można rozpoznać odwołania do pliku przekazany do katalogu `#using` dyrektywy.  

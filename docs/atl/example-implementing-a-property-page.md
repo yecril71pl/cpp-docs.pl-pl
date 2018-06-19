@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363716"
 ---
 # <a name="example-implementing-a-property-page"></a>Przykład: Implementacja strony właściwości
 W tym przykładzie pokazano, jak zbudować stronę właściwości, która wyświetla (i umożliwia zmianę) właściwości [klasy dokumentów](../mfc/document-classes.md) interfejsu.  

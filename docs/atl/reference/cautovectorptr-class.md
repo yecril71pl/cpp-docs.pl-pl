@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362248"
 ---
 # <a name="cautovectorptr-class"></a>Klasa CAutoVectorPtr
 Ta klasa reprezentuje obiekt wskaźnika inteligentnego wektora, używając nowego i delete — operatory.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132898"
 ---
 # <a name="nthelement-stlclr"></a>nth_element (STL/CLR)
 Partycje zakresu elementów poprawnie lokalizowanie `n`element th sekwencji w zakresie tak, aby wszystkie elementy przed nim są mniejsze niż lub równe go i wszystkie elementy, które po nim w sekwencji są większe niż lub równą jej.  

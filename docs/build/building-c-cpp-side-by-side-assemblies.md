@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364024"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>Kompilowanie wykonywanych jednocześnie aplikacji C/C++
 A [zestawu side-by-side](http://msdn.microsoft.com/library/windows/desktop/ff951640) jest kolekcją zasobów — Grupa bibliotek DLL, klasy okien, serwery COM, biblioteki typów lub interfejsy — dostępne dla aplikacji do użycia w czasie wykonywania. Główną zaletą ponowne utworzenie pakietu bibliotek DLL w zestawach jest wiele wersji zestawy mogą być używane przez aplikacje w tym samym czasie, a istnieje możliwość zestawy aktualnie zainstalowanej usługi w przypadku wersji aktualizacji.  

@@ -37,6 +37,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391590"
 ---
 # <a name="heapset"></a>_heapset
 Sprawdza stosów minimalnego spójności i ustawia wolnego wpisy na określoną wartość.  

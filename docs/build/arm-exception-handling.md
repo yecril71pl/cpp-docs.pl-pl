@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366266"
 ---
 # <a name="arm-exception-handling"></a>Obsługa wyjątków ARM
 System Windows na ARM używa tego samego wyjątków strukturalnych obsługę mechanizmem asynchroniczne wyjątki generowane przez sprzęt i synchroniczne wyjątki generowane przez oprogramowanie. Programy obsługi wyjątków specyficzne dla języka są wbudowane obsługi przy użyciu funkcji języka pomocnika wyjątków strukturalnych systemu Windows. W tym dokumencie opisano obsługi wyjątków w systemu Windows na ARM i pomocników języka używany przez kod, który jest generowany przez MASM i kompilatora języka Visual C++.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368629"
 ---
 # <a name="mxcsr"></a>MxCsr
 Stan rejestru obejmuje również MxCsr. Konwencja wywoływania dzieli rejestr volatile części i nieulotnej części. Volatile części składa się z flagi stanu 6 MXCSR [0:5], a w pozostałej części rejestru MXCSR [6:15] jest uznawany za nieulotnej.  

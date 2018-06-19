@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367085"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Wywoływanie funkcji DLL z aplikacji języka Visual Basic
 Dla aplikacji Visual Basic (lub aplikacji w innych językach, takich jak Pascal lub Fortran) wywołanie funkcji w bibliotece DLL C/C++ można wyeksportować funkcji przy użyciu konwencji wywoływania poprawne bez żadnych nazwij dekorację wykonywane przez kompilator.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129687"
 ---
 # <a name="how-to-define-and-install-a-global-exception-handler"></a>Porady: definiowanie i instalowanie globalnego programu obsługi wyjątków
 Poniższy przykład kodu pokazuje sposób nieobsługiwanych wyjątków, można przechwycić. Przykład formularz zawiera przycisk, który po naciśnięciu wykonuje odwołanie o wartości null, powodując wyjątek zostanie wygenerowany. Ta funkcja reprezentuje błąd typowy kod. Wynikowa wyjątek zostanie przechwycony przez program obsługi wyjątku całej aplikacji zainstalowanych przez funkcję głównego.  

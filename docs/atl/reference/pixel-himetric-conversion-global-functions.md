@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359429"
 ---
 # <a name="pixelhimetric-conversion-global-functions"></a>Funkcje globalne pikseli/HIMETRIC konwersji
 Funkcje te zapewniają obsługę konwertowanie do i z pikseli i HIMETRIC jednostki.  

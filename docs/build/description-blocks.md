@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367111"
 ---
 # <a name="description-blocks"></a>Bloki opisów
 Blok opis znajduje się w wierszu zależności opcjonalnie umieszczając za blok poleceń:  

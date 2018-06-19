@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32425702"
 ---
 # <a name="unions"></a>Unie
 A `union` jest typem zdefiniowane przez użytkownika, w której wszyscy członkowie mają tę samą lokalizację pamięci. Oznacza to, w danym momencie Unii może zawierać nie więcej niż jeden obiekt z listy elementów członkowskich. Oznacza to również, że niezależnie od tego, jak wiele elementów członkowskich Unii ma, zawsze używa tylko wystarczającej ilości pamięci do przechowywania największy element członkowski.  

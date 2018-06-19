@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371359"
 ---
 # <a name="errlook-reference"></a>Odwołanie ERRLOOK
 Narzędzia ERRLOOK, które jest dostępne w menu Narzędzia jako **błąd podczas wyszukiwania**, pobiera komunikat o błędzie systemu lub komunikat o błędzie modułu na podstawie wartości wprowadzona. ERRLOOK pobiera automatycznie tekst komunikatu o błędzie, jeśli przeciągania i upuszczania wartość szesnastkową lub dziesiętną z debugera programu Visual Studio do **wartość** formantów edycji. Możesz też wprowadzić wartość albo wpisując ją **wartość** formantów edycji lub przez wklejenie go ze Schowka i klikając **przeglądowych**.  

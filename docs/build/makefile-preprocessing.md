@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368229"
 ---
 # <a name="makefile-preprocessing"></a>Przetwarzanie wstępne pliku reguł programu Make
 Sesja NMAKE można kontrolować przy użyciu wyrażeń i dyrektywy przetwarzania wstępnego. Przetwarzanie wstępne instrukcji można umieścić w pliku reguł programu make lub Tools.ini. Przy użyciu dyrektyw, użytkownik może warunkowo przetworzyć Twojego pliku reguł programu make, wyświetlane komunikaty o błędach zawierają inne pliki reguł programu make, Usuń makro i włączanie lub wyłączanie niektórych opcji.  

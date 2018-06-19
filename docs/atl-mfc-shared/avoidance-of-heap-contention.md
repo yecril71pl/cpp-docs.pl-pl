@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358088"
 ---
 # <a name="avoidance-of-heap-contention"></a>Unikanie stos rywalizacji
 Menedżerowie ciąg domyślnej zapewniane przez MFC i ATL są proste otoki na szczycie stosu globalne. Tym globalnych sterty jest całkowicie bezpieczne wątkowo, co oznacza, że wiele wątków można przydzielić i zwolnić pamięć z niego bez jednocześnie uszkodzenie sterty. Aby zapewnić bezpieczeństwo wątków sterty musi serializować dostępu do samej siebie. Zazwyczaj jest to realizowane za pomocą sekcja krytyczna lub podobny mechanizm blokowania. Zawsze, gdy dwa wątków próbuje uzyskać jednocześnie dostęp do sterty, jeden wątek jest zablokowany do momentu zakończenia żądania innego wątku. Dla wielu aplikacji ta sytuacja rzadko występuje i wpływu na wydajność mechanizmu blokującego sterty jest niewielka. Dla aplikacji, które często dostęp wiele wątków stos rywalizacji o blokadę sterty może jednak spowodować aplikacji działać wolniej niż jeśli zostały jednowątkowe (nawet na komputerach wieloprocesorowych).  

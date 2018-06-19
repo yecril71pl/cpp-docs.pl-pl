@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365484"
 ---
 # <a name="idataobjectimpl-class"></a>Klasa IDataObjectImpl
 Ta klasa zawiera metody pomocnicze Uniform transferu danych i zarządzanie połączeniami.  

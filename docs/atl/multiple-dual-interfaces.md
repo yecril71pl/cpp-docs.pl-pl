@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356722"
 ---
 # <a name="multiple-dual-interfaces"></a>Wiele podwójne interfejsy
 Możesz połączyć korzyści wynikające z dwoma interfejsami (to znaczy elastyczność vtable i późne powiązania, w związku z tym udostępnienie klasy języków skryptów, a także C++) techniki dziedziczenie wielokrotne.  

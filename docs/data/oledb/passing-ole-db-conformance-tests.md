@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110467"
 ---
 # <a name="passing-ole-db-conformance-tests"></a>Przechodzenie testów zgodności z OLE DB
 Aby dostawców był bardziej spójny, zestaw SDK dostępu do danych zawiera zestaw testów zgodności z OLE DB. Testy Sprawdź wszystkie aspekty dostawcy i zapewniają wystarczającą pewność, że dostawca funkcji jako oczekiwano. Na temat zestawu SDK dostępu do danych firmy Microsoft można znaleźć testów zgodności z OLE DB. Tej części przedstawiono czynności, które należy wykonać przejść testy zgodności. Aby uzyskać informacje na temat uruchamiania testów zgodności z OLE DB zobacz zestaw SDK.  

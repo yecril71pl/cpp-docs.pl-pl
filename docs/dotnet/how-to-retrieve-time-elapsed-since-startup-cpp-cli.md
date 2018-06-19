@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132833"
 ---
 # <a name="how-to-retrieve-time-elapsed-since-startup-ccli"></a>Porady: pobieranie czasu, jaki upłynął od uruchomienia systemu (C++/CLI)
 W poniższym przykładzie pokazano, jak określić liczbę cykli lub wyrażony w milisekundach czas, które upłynęły od systemu Windows została uruchomiona. Ta wartość jest przechowywana w <xref:System.Environment.TickCount%2A?displayProperty=fullName> elementu członkowskiego i, ponieważ jest 32-bitową wartość przywraca zero co 24,9 dni.  

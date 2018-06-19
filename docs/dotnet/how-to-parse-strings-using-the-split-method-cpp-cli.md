@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132024"
 ---
 # <a name="how-to-parse-strings-using-the-split-method-ccli"></a>Porady: analizowanie ciągów za pomocą metody Split (C++/CLI)
 Poniższy przykład kodu pokazuje, przy użyciu <xref:System.String.Split%2A?displayProperty=fullName> metodę, aby wyodrębnić każdego wyrazu z ciągu. Ciąg zawierający wiele typów ukośników word jest konstruowane i następnie przeanalizować przez wywołanie metody <xref:System.String.Split%2A> z listą ukośników. Następnie każdego wyrazu w zdaniu jest wyświetlany osobno.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891688"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Wskazówki: Tworzenie aplikacji platformy uniwersalnej systemu Windows za pomocą biblioteki WRL i platformy Media Foundation
 Dowiedz się, jak używać systemu Windows środowiska uruchomieniowego C++ szablonu biblioteki (WRL) do tworzenia aplikacji uniwersalnych platformy systemu Windows (UWP), który używa [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  

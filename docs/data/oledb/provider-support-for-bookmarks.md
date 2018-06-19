@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112511"
 ---
 # <a name="provider-support-for-bookmarks"></a>Obsługa dostawców dla zakładek
 Dodaje na przykład w tym temacie `IRowsetLocate` interfejsu do `CMyProviderRowset` klasy. W większości przypadków możesz uruchomić Dodawanie interfejsu do istniejącego obiektu COM. Można następnie testować przez dodanie kolejnych wywołań z szablonami konsumentów. W przykładzie pokazano, jak:  

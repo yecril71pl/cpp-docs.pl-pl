@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112241"
 ---
 # <a name="using-stored-procedures"></a>korzystanie z procedur składowanych
 Procedura składowana jest obiektem pliku wykonywalnego, przechowywane w bazie danych. Wywołanie procedury składowanej jest podobny do wywoływania polecenia SQL. Korzystanie z procedur składowanych w źródle danych (zamiast wykonywania lub przygotowywanie do instrukcji w aplikacji klienckiej) zapewniają wiele korzyści, w tym większą wydajność, obciążenie sieci obniżona, ulepszona spójność i dokładność.  

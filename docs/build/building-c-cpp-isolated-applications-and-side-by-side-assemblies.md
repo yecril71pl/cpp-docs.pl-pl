@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361287"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>Kompilowanie aplikacji izolowanych C/C++ oraz aplikacji wykonywanych równocześnie
 Visual C++ obsługuje model wdrożenia dla aplikacji klienckich systemu Windows oparte na koncepcja [izolowanych](http://msdn.microsoft.com/library/aa375190) i [zestawy side-by-side](http://msdn.microsoft.com/library/ff951640). Domyślnie program Visual C++ kompilacje wszystkich natywnych aplikacji C/C++ jako izolowanych aplikacji, które używają [manifesty](http://msdn.microsoft.com/library/aa375365) do opisywania ich zależności na bibliotek języka Visual C++.  

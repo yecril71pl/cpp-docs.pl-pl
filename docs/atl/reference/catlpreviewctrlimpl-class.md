@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362190"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>Klasa CAtlPreviewCtrlImpl
 Ta klasa jest implementacją ATL okna, który znajduje się w oknie hostów udostępnianych przez powłokę dla podglądu rozbudowanego.  

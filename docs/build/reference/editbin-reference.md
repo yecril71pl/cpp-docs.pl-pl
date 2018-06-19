@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372311"
 ---
 # <a name="editbin-reference"></a>Odwołanie EDITBIN
 Edytor plików binarnych Microsoft COFF (polecenia EDITBIN. Wywołanie pliku EXE) modyfikuje pliki binarne wspólnej obiektu pliku formatu (COFF). Aby zmodyfikować plików obiektów, plików wykonywalnych i bibliotek dołączanych (dynamicznie DLL), można użyć polecenia EDITBIN.  

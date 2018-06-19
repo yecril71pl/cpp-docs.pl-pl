@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371856"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Zmiany w funkcjach pomocnika opóźnionego załadunku bibliotek DLL po Visual C++ 6.0
 Jeśli masz wiele wersji programu Visual C++ na komputerze lub jeśli zdefiniowano własnej funkcji Pomocnik użytkownik może dotyczyć zmian wprowadzonych do biblioteki DLL funkcjach pomocnika opóźnionego załadunku. Na przykład:  

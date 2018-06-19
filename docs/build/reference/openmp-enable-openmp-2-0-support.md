@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378733"
 ---
 # <a name="openmp-enable-openmp-20-support"></a>/openmp (Włącz obsługę OpenMP 2.0)
 Powoduje, że kompilator przetworzyć `#pragma` [omp](../../preprocessor/omp.md).  

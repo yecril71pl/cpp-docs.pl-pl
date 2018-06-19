@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365080"
 ---
 # <a name="caxdialogimpl-class"></a>Klasa CAxDialogImpl
 Ta klasa implementuje okno dialogowe (modalne i niemodalne) obsługującego formantów ActiveX.  

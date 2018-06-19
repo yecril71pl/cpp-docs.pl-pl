@@ -29,6 +29,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891821"
 ---
 # <a name="viewing-and-editing-resources-in-a-resource-editor"></a>Wyświetlanie i edytowanie zasobów w edytorze zasobów
 Każdy typ zasobu ma edytorze zasobów specyficznych dla tego typu zasobu. Można rozmieszczanie, zmienianie rozmiaru, Dodaj formanty i funkcje lub modyfikację aspektów zasobu za pomocą edytora skojarzone. Można również edytować zasobu w [formacie tekstowym](../windows/how-to-open-a-resource-script-file-in-text-format.md) i [format binarny](../windows/opening-a-resource-for-binary-editing.md).  

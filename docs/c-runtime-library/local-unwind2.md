@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391382"
 ---
 # <a name="localunwind2"></a>_local_unwind2
 Funkcji CRT wewnętrznej. Uruchamia wszystkie programy obsługi zakończenia, które są wymienione w tabeli wskazany zakres.  

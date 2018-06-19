@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370879"
 ---
 # <a name="how-to-create-a-release-build"></a>Porady: tworzenie kompilacji wydania
 ### <a name="to-generate-a-release-build-of-your-program"></a>Aby wygenerować kompilacji wydania programu  

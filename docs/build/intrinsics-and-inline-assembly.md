@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367982"
 ---
 # <a name="intrinsics-and-inline-assembly"></a>Funkcje wewnętrzne i zestaw wbudowany
 Jeden z warunków ograniczających dla [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] kompilatora ma nie obsługują asemblera wbudowanego. Oznacza to, że funkcje, które nie można zapisać w języka C lub C++ albo musi być zapisywane jako podprocedury lub funkcje wewnętrzne obsługiwane przez kompilator. Niektóre funkcje są wydajności poufnych, a inni nie. Funkcje zależne od wydajności powinny zostać wdrożone jako funkcje wewnętrzne.  

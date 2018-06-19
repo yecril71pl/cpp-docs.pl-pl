@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128644"
 ---
 # <a name="how-to-retrieve-the-local-machine-name-ccli"></a>Porady: pobieranie nazwy komputera lokalnego (C++/CLI)
 Poniższy przykład kodu pokazuje pobieranie nazwy komputera lokalnego (nazwa komputera w postaci, w jakiej jest wyświetlana w sieci). Można to osiągnąć przez wprowadzenie <xref:System.Environment.MachineName%2A> ciąg, który jest zdefiniowany w <xref:System.Environment> przestrzeni nazw.  

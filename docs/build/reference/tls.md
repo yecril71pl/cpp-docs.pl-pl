@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373527"
 ---
 # <a name="tls"></a>/TLS
 Wyświetla strukturę IMAGE_TLS_DIRECTORY z pliku wykonywalnego.  

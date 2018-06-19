@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357886"
 ---
 # <a name="cautovectorptrelementtraits-class"></a>Klasa CAutoVectorPtrElementTraits
 Ta klasa udostępnia metody statyczne funkcje i przydatne podczas tworzenia kolekcji wskaźniki inteligentne za pomocą wektora nowy i delete — operatory definicje typów.  

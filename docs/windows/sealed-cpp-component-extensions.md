@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890866"
 ---
 # <a name="sealed--c-component-extensions"></a>sealed (C++ Component Extensions)
 `sealed` jest słowem kluczowym kontekstowej dla klasy ref, który wskazuje, że nie można zastąpić członka wirtualnego lub że typu nie można użyć jako typu podstawowego.  

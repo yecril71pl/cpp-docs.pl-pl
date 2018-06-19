@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368008"
 ---
 # <a name="macros-and-nmake"></a>Makra i NMAKE
 Makra Zamień określonego ciągu w pliku reguł programu make innego ciągu. Używanie makr, można:  

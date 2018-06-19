@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129671"
 ---
 # <a name="how-to-use-regular-expressions-to-extract-data-fields-ccli"></a>Porady: używanie wyrażeń regularnych do wyodrębniania pól danych (C++/CLI)
 Poniższy przykład kodu pokazuje używanie wyrażeń regularnych do wyodrębniania danych z ciąg formatowania. Poniższy przykład kodu wykorzystuje <xref:System.Text.RegularExpressions.Regex> klasę, aby określić wzorzec, który odpowiada adresowi e-mail. Ten wzorzec zawiera identyfikatory pola, które mogą służyć do pobierania użytkownika i nazwę hosta części każdy adres e-mail. <xref:System.Text.RegularExpressions.Match> Klasa jest używana do realizacji dopasowania do wzorca rzeczywistych. Jeśli adres e-mail podany jest prawidłowy, nazwy hosta i nazwa użytkownika są wyodrębniane i wyświetlane.  

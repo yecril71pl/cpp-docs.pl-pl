@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367189"
 ---
 # <a name="exception-handling-x64"></a>Obsługa wyjątków (x64)
 W tej sekcji omówiono, obsługa wyjątków strukturalnych i wyjątków C++, obsługa zachowanie podczas [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  

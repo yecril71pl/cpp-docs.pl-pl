@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890437"
 ---
 # <a name="stand-alone-attributes"></a>Oddzielne atrybuty
 Atrybut autonomiczny nie będzie działać na słowo kluczowe języka C++, ale jest bardziej przypominają wiersz kodu. Instrukcje atrybutu autonomicznego wymagają średnik na końcu linii.  

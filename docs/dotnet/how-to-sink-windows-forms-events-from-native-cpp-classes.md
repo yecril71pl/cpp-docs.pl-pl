@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130428"
 ---
 # <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>Porady: wychwytywanie zdarzeń interfejsu Windows Forms z klas natywnych języka C++
 Można włączyć macierzystych klas C++ odbierać wywołań zwrotnych z zarządzanego zdarzenia wywoływane z formanty formularzy systemu Windows lub innej formy w formacie mapy makr MFC. Wychwytywanie zdarzeń w widoków i okien dialogowych jest podobny do tego samego zadania dla formantów czynności.  

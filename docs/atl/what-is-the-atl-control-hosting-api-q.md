@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363249"
 ---
 # <a name="what-is-the-atl-control-hosting-api"></a>Co to jest ATL Hosting kontrolki interfejsu API?
 ATL obiektu hosting kontrolki interfejsu API jest zestaw funkcji, które pozwalają dowolnego okna do działania jako kontenera formantu ActiveX. Funkcje te mogą być statycznie lub dynamicznie połączony do projektu, ponieważ są one dostępne jako kodu źródłowego i udostępniane przez ATL90.dll. Hosting kontrolki funkcje są wymienione w poniższej tabeli.  

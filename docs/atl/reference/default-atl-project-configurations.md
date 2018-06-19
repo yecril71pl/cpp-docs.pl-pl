@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359048"
 ---
 # <a name="default-atl-project-configurations"></a>Domyślne konfiguracje projektu ATL
 Domyślnie Kreator projektu ATL tworzy dwie konfiguracje projektu:  

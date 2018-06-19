@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371970"
 ---
 # <a name="lib-input-files"></a>Pliki wyjściowe LIB
 Pliki wejściowe oczekiwany przez LIB zależą od tryb, w którym jest on używany, jak pokazano w poniższej tabeli.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891097"
 ---
 # <a name="type-forwarding-ccli"></a>Przekazywanie dalej typu (C++/CLI)
 *Przekazywanie dalej typu* umożliwia przeniesienie typu z jednego zestawu (zestawów A) do innego zestawu (zestawów B) tak, aby nie jest konieczne ponowne skompilowanie klienci używający zestawu A.  

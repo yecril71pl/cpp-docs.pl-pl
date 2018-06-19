@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890873"
 ---
 # <a name="tracking-reference-operator-c-component-extensions"></a>Operator odwołania śledzenia (C++ Component Extensions)
 A *odwołanie śledzące* (`%`) zachowuje się jak zwykłe odwołanie C++ (`&`) z tą różnicą, że gdy obiekt jest przypisany do odwołaniem śledzącym, liczba odwołań obiektu jest zwiększany.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357908"
 ---
 # <a name="atl-project-wizard"></a>Kreator projektu ATL
 Active Template Library (ATL) to zestaw na podstawie szablonu klasy C++ upraszczające zapisywania obiektów COM małe i szybki. Kreator projektu ATL tworzy projekt z struktury zawierają obiekty COM.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131663"
 ---
 # <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>Porady: powiązanie danych DDX/DDV za pomocą interfejsu Windows Forms
 [Ddx_managedcontrol —](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol) wywołania [CWinFormsControl::CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol) można utworzyć formantu, pasujące z identyfikatorem zasobu formantu. Jeśli używasz `DDX_ManagedControl` dla `CWinFormsControl` formantu (w generowanych przez kreatora kodu), nie powinny wywoływać `CreateManagedControl` jawnie dla tej samej kontrolki.  

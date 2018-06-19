@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127838"
 ---
 # <a name="how-to-convert-standard-string-to-systemstring"></a>Porady: konwertowanie ciągu standardowego na obiekt System::String
 W tym temacie przedstawiono sposób konwertowanie ciągu standardowa biblioteka C++ ([\<ciąg >](../standard-library/string.md)) do <xref:System.String>.  

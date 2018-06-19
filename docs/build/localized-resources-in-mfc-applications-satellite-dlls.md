@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369120"
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>Zasoby zlokalizowane w aplikacjach MFC: biblioteki DLL Satellite
 MFC w wersji 7.0 lub nowszym obsługuje satelitarne bibliotek DLL, funkcją, która pomaga w tworzeniu aplikacji zlokalizowane dla wielu języków. Biblioteka DLL jest Satelita [DLL tylko z zasobami](../build/creating-a-resource-only-dll.md) zawierający zasoby aplikacji są zlokalizowane dla określonego języka. Po rozpoczęciu wykonywania aplikacji MFC automatycznie ładuje zlokalizowany zasób najbardziej odpowiednie dla środowiska. Na przykład można mieć aplikację z języka angielskiego zasobów przy użyciu dwóch satelitarne bibliotek DLL, zawierający francuskim tłumaczenie zasobów, a drugi zawierający translację niemieckiego. Gdy aplikacja jest uruchamiana w systemie język angielski, używa zasobów angielskiej wersji językowej. Jeśli działa w systemie francuskim, używa zasobów francuskim; Jeśli działa w systemie niemieckim, używa zasobów niemieckim.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891227"
 ---
 # <a name="windowsfoundation-namespace"></a>Windows::Foundation — Przestrzeń nazw
 Zapewnia podstawowe funkcje środowiska wykonawczego systemu Windows, takie jak tworzenie obiektu i fabryki.  

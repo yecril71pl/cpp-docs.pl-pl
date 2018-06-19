@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378343"
 ---
 # <a name="showincludes-list-include-files"></a>/showIncludes (Wymień pliki dołączane)
 Powoduje, że kompilator output listy plików dołączanych. Zagnieżdżone obejmują pliki są także wyświetlone (pliki uwzględnione z plików, które należy uwzględnić).  

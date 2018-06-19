@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388672"
 ---
 # <a name="c-identifiers"></a>Identyfikatory języka C
 "Identyfikatory" lub "symbole" są podane nazwy zmiennych, typów, funkcji i etykiet w programie. Nazwy identyfikatorów muszą różnić się w pisowni i liter od dowolnego słowa kluczowe. Słowa kluczowe (C lub Microsoft) nie można używać jako identyfikatorów; są one zarezerwowane do użytku specjalnych. Utworzysz identyfikatora, określając w deklaracji zmiennej, typu lub funkcji. W tym przykładzie `result` jest identyfikatorem zmienna typu Liczba całkowita i `main` i `printf` to identyfikator nazwy funkcji.  

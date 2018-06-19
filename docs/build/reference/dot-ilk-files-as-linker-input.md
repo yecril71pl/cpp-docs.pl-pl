@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371687"
 ---
 # <a name="ilk-files-as-linker-input"></a>Pliki .Ilk — Wejście konsolidatora
 Podczas łączenia przyrostowo, LINK aktualizuje plik stanu .ilk utworzony podczas pierwszego konsolidowania przyrostowego. Ten plik ma taką samą nazwę podstawową jak pliku .exe lub .dll i ma .ilk rozszerzenia. Podczas kolejnych konsolidacji przyrostowej LINK aktualizuje plik .ilk. Jeśli brakuje pliku .ilk LINK wykonuje pełne łącza i tworzy nowy plik .ilk. Jeśli plik .ilk jest korzystanie z niej, LINK wykonuje nieprzyrostowa łącza. Aby uzyskać więcej informacji o konsolidowania przyrostowego, zobacz [przyrostowo łącza (/ INCREMENTAL)](../../build/reference/incremental-link-incrementally.md) opcji.  

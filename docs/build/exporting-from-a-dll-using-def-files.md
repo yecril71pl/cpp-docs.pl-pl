@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369750"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>Eksportowanie z biblioteki DLL przy użyciu plików DEF
 Plik definicji modułu (.def) to plik tekstowy zawierający co najmniej jeden moduł instrukcje opisujących różne atrybuty biblioteki dll. Jeśli nie używasz **__declspec(dllexport)** — słowo kluczowe, aby wyeksportować funkcji DLL plik .def wymaga biblioteki DLL.  

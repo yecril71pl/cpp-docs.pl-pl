@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390001"
 ---
 # <a name="pgmptr-wpgmptr"></a>_pgmptr, _wpgmptr
 Ścieżka pliku wykonywalnego. Przestarzałe; Użyj [_get_pgmptr —](../c-runtime-library/reference/get-pgmptr.md) i [_get_wpgmptr —](../c-runtime-library/reference/get-wpgmptr.md).  

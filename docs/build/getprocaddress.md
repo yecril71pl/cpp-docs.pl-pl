@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367969"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 Procesy jawnie łączenia wywołanie biblioteki DLL [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) do uzyskiwania adresów wyeksportowanej funkcji w bibliotece DLL. Wywoływanie funkcji DLL za pomocą wskaźnika funkcji zwrócony. **GetProcAddress** przyjmuje jako parametry uchwytu modułu DLL (zwrócony przez **LoadLibrary**, `AfxLoadLibrary`, lub **GetModuleHandle**) i pobiera nazwę funkcji ma do wywołania lub funkcji eksportu numer.  

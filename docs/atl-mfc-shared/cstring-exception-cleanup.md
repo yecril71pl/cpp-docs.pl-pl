@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355509"
 ---
 # <a name="cstring-exception-cleanup"></a>Cstring — wyjątek oczyszczania
 W poprzednich wersjach MFC, konieczne jest czyszczenie [cstring —](../atl-mfc-shared/reference/cstringt-class.md) obiektów po użyciu. Z MFC w wersji 3.0 lub nowszej czyszczenia jawne nie jest już konieczne.  

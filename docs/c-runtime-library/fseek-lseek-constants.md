@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388451"
 ---
 # <a name="fseek-lseek-constants"></a>fseek, _lseek — Stałe
 ## <a name="syntax"></a>Składnia  

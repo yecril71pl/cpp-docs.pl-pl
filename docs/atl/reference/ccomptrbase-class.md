@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366370"
 ---
 # <a name="ccomptrbase-class"></a>Klasa CComPtrBase
 Ta klasa stanowi podstawę dla klas wskaźnika inteligentnego przy użyciu procedury oparte na modelu COM pamięci.  
