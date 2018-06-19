@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375748"
 ---
 # <a name="cmfcfontcombobox-class"></a>Klasa CMFCFontComboBox
 `CMFCFontComboBox` Klasy tworzy kontrolki pola kombi, który zawiera listę czcionek.  

@@ -47,6 +47,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348573"
 ---
 # <a name="device-contexts"></a>Konteksty urządzenia
 Kontekst urządzenia jest strukturą danych systemu Windows zawierający informacje o atrybuty rysowania urządzeniami, takimi jak ekranu lub drukarki. Wszystkie wywołania rysowania są wykonywane za pośrednictwem obiektu kontekstu urządzenia, który hermetyzuje interfejsy API systemu Windows do rysowania linii, kształty i tekst. Konteksty urządzenia zezwala na rysowanie niezależne od urządzenia w systemie Windows. Konteksty urządzenia może służyć do rysowania ekranu, drukarki lub metaplik.  

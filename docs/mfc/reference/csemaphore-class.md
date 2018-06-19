@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369180"
 ---
 # <a name="csemaphore-class"></a>Klasa CSemaphore
 Obiekt klasy `CSemaphore` reprezentuje "semafora" — obiekt synchronizacji, który zapewnia ograniczoną liczbę wątków w jeden lub więcej procesów dostępu Maintains do liczba to liczba wątków obecnie uzyskują dostęp do określonego zasobu.  

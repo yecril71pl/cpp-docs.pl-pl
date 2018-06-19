@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350357"
 ---
 # <a name="mdi-tabbed-groups"></a>Grupy z kartami MDI
 Wiele funkcji grupy z kartami interfejsu (MDI) dokumentu umożliwia wielu dokumenty i aplikacje interfejsu (MDI) do wyświetlenia co najmniej jeden z kartami systemu windows (lub grup z kartami systemu Windows, znany jako *grupy z kartami*) w obszarze klienta MDI. Okno systemu windows można wyrównać pionie lub poziomie. Jeśli aplikacja obsługuje więcej niż jednej grupy z kartami MDI, grup oddzielonych rozdzielaczy.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355685"
 ---
 # <a name="recommendations-for-handling-inputoutput"></a>Zalecenia dotyczące obsługi we/wy
 Przy użyciu operacji We/Wy na podstawie pliku lub nie zależy od tego, jak odpowiedzieć na pytania w następującym algorytmem:  

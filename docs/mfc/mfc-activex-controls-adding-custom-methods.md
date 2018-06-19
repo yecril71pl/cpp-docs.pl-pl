@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350036"
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>Kontrolki ActiveX MFC: dodawanie metod niestandardowych
 Niestandardowe metody różnią się od metod standardowych, nie są już zaimplementowane przez `COleControl`. Należy podać implementacji dla każdej niestandardowej metody dodawany do formantu.  

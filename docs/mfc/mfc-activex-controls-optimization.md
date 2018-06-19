@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355314"
 ---
 # <a name="mfc-activex-controls-optimization"></a>Kontrolki ActiveX MFC: optymalizacja
 W tym artykule opisano metod, które służy do optymalizacji formantów ActiveX w celu poprawy wydajności.  

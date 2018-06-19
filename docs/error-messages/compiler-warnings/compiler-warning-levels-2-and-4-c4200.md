@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294953"
 ---
 # <a name="compiler-warning-levels-2-and-4-c4200"></a>Ostrzeżenie (poziom 2 i 4) kompilatora — od C4200
 użyto niestandardowego rozszerzenia: tablica o rozmiarze zero w struktury/Unii  

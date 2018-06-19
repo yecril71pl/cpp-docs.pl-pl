@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348981"
 ---
 # <a name="handling-reflected-messages"></a>Obsługa komunikatów odbitych
 Odbicie umożliwia obsługi komunikatów dla formantu, takie jak wiadomości `WM_CTLCOLOR`, **WM_COMMAND**, i **WM_NOTIFY**, bezpośrednio w formancie. Dzięki temu formantu więcej niezależną i przenośną. Mechanizm współpracuje z formanty standardowe systemu Windows, a także z formantami ActiveX (wcześniej nazywanych formantów OLE).  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861548"
 ---
 # <a name="changing-the-tab-order-of-controls"></a>Zmiana kolejności kart formantów
 Kolejność tabulacji to kolejność, w którym klawisz TAB przenosi fokus wprowadzania z jednego formantu do następnego okna dialogowego. Zazwyczaj kolejności tabulacji przebieg od lewej do prawej i od góry do dołu w oknie dialogowym. Każdy formant ma **Tabstop** właściwość, która określa, czy formant uzyskuje fokus wprowadzania.  

@@ -76,6 +76,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862419"
 ---
 # <a name="compiler-support-for-type-traits-c-component-extensions"></a>Obsługa cech typu w kompilatorze (C++ Component Extensions)
 Obsługa kompilatora *wpisz cech*, które wskazują różnych cech typu w czasie kompilacji.  

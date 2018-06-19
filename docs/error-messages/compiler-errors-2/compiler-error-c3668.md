@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266532"
 ---
 # <a name="compiler-error-c3668"></a>C3668 błąd kompilatora
 "metoda": metoda ze specyfikatorem przesłonięcia "override" nie przesłania żadnej metody klasy podstawowej  

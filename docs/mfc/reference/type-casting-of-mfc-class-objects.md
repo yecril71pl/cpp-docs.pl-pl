@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371164"
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>Rzutowanie typów obiektów klas MFC
 Typ rzutowania makra umożliwiają można rzutować danego wskaźnika do wskaźnika, który wskazuje na obiekt określonej klasy, z lub bez sprawdzenia, czy rzutowanie jest dozwolony.  

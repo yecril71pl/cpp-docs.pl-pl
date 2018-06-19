@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352316"
 ---
 # <a name="activex-controls-on-the-internet"></a>Kontrolki ActiveX w Internecie
 Formanty ActiveX są zaktualizowaną wersję specyfikacji formantu OLE. Formanty są podstawowej architektury do tworzenia składników programowalny oprogramowania, których można użyć w wielu różnych kontenerów, w tym przeglądarek sieci Web obsługującej COM w Internecie. Formantu ActiveX mogą być formantu Internet i można dodać jego działanie do aktywnego dokumentu lub być częścią strony sieci Web. Formanty na stronie sieci Web może komunikować się ze sobą za pomocą skryptów.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348419"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>Przetwarzanie komunikatów powiadomień w formancie paska pomocniczego
 W klasie nadrzędnej formantu paska pomocniczego, Utwórz `OnChildNotify` funkcji obsługi z instrukcji switch dla każdego formantu paska pomocniczego (`CReBarCtrl`) komunikatów powiadomień, które mają być obsługiwane. Powiadomienia są wysyłane do okna nadrzędnego, gdy użytkownik przeciąga obiektów nad formantem paska pomocniczego, zmiany układu paskami pomocniczymi, usuwa paskami w formancie paska pomocniczego i tak dalej.  

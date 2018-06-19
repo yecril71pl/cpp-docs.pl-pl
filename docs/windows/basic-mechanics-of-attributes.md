@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33864944"
 ---
 # <a name="basic-mechanics-of-attributes"></a>Podstawowa mechanika atrybutów
 Istnieją trzy sposoby Wstawianie atrybutów do projektu. Po pierwsze można wstawić je ręcznie do kodu źródłowego. Po drugie można wstawić je do projektu przy użyciu siatki właściwości obiektu. Na koniec można wstawić je przy użyciu różnych kreatorów. Aby uzyskać więcej informacji o korzystaniu z okna właściwości i różnych kreatorów, zobacz [tworzenie i zarządzanie projekty Visual C++](../ide/creating-and-managing-visual-cpp-projects.md).  

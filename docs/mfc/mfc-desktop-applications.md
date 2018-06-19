@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350238"
 ---
 # <a name="mfc-desktop-applications"></a>Aplikacje dla Pulpitu MFC
 Biblioteka Microsoft Foundation Class (MFC) zapewnia otoki zorientowane obiektowo przez większość Win32 i interfejsów API modelu COM. Mimo że może służyć do tworzenia aplikacji klasycznych bardzo proste, jest najbardziej przydatne w przypadku należy utworzyć bardziej złożoną interfejsów użytkownika za pomocą wielu formantów. MFC służy do tworzenia aplikacji z interfejsem użytkownika w stylu pakietu Office.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372485"
 ---
 # <a name="creating-an-mfc-activex-control-container"></a>Tworzenie kontenera kontrolek ActiveX MFC
 Kontenera formantu ActiveX to dostarczającego środowiska dla formantu ActiveX (dawniej OLE) uruchomić program nadrzędnej. Można utworzyć aplikacji może zawierać kontrolki ActiveX z lub bez MFC, ale jest łatwiej wykonać za pomocą MFC.  

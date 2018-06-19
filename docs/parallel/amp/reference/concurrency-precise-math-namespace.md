@@ -148,6 +148,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695382"
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Concurrency::precise_math — Przestrzeń nazw
 Funkcje w `precise_math` zgodnych C99 są przestrzeni nazw. Zarówno pojedynczy dokładność i Podwójna precyzja wersje każdej funkcji są uwzględniane. Na przykład `acos` jest wersja podwójnej precyzji i `acosf` jest wersja pojedynczej precyzji. Te funkcje, w tym funkcji pojedynczej precyzji wymagają rozszerzoną obsługę podwójnej precyzji na akceleratora. Można użyć [Accelerator::supports_double_precision —](accelerator-class.md#supports_double_precision) ustalenie, jeśli te funkcje można uruchamiać na określonych akceleratora. 

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348348"
 ---
 # <a name="containers-compound-files"></a>Kontenery: pliki złożone
 W tym artykule opisano składniki i implementacja pliki złożone i zalety i wady używania pliki złożone w aplikacji OLE.  

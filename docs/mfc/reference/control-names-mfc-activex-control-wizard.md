@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369313"
 ---
 # <a name="control-names-mfc-activex-control-wizard"></a>Nazwy kontrolek, kreator kontrolek ActiveX MFC
 Określenie nazw klasy formantu i klasy strony właściwości, nazwy typów, a następnie wpisz identyfikatory dla formantu. Z wyjątkiem produktów **krótką nazwę**, wszystkich innych pól, które mogą być edytowane niezależnie. Jeśli zmienisz tekst **krótką nazwę**, znajduje odzwierciedlenie w nazwach wszystkich innych pól na tej stronie. To zachowanie nazewnictwa zaprojektowano w celu ułatwić wszystkich nazw identyfikację automatycznie podczas opracowywania formantu.  

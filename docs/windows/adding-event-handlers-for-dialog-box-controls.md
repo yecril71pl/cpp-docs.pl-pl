@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863702"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls"></a>Dodawanie obsługi zdarzeń dla formantów okna dialogowego
 Dla projektu okien dialogowych, które są już skojarzone z klasą możesz można korzystać z niektórych skróty podczas tworzenia procedury obsługi zdarzeń. Może szybko utworzyć programu obsługi dla zdarzenia powiadomień kontroli domyślne lub dla dowolnego odpowiednich komunikatów systemu Windows.  

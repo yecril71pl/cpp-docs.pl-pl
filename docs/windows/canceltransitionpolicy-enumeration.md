@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860349"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy — Wyliczenie
 Wskazuje, jak operację asynchroniczną na próbę przejście do stanu terminali zakończone lub błąd zachowania w przypadku względem klient zażądał stan anulowane.  

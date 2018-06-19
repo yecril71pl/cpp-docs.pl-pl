@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267257"
 ---
 # <a name="compiler-error-c3830"></a>C3830 błąd kompilatora
 "type1": nie może dziedziczyć po "type2", wartość typów może dziedziczyć tylko z klas interfejsów  

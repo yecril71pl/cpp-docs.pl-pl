@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33255295"
 ---
 # <a name="compiler-error-c3421"></a>C3421 błąd kompilatora
 'type': nie można wywołać finalizatora dla tej klasy, ponieważ jest on niedostępny lub nie istnieje  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33255834"
 ---
 # <a name="compiler-error-c3398"></a>C3398 błąd kompilatora
 "operator": nie można przekonwertować z "function_signature" na "function_pointer". Wyrażenie źródłowe musi być symbolem funkcji  

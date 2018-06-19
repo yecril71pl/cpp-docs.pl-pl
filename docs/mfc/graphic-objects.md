@@ -56,6 +56,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349785"
 ---
 # <a name="graphic-objects"></a>Obiekty graficzne
 System Windows udostępnia wiele narzędzi do użycia w kontekstach urządzenia do rysowania. Zapewnia on pióra do rysowania linii, pędzle wnętrza wypełnienia i czcionek do rysowania tekstu. MFC udostępnia klasy obiektów grafiki odpowiednikiem narzędzi do rysowania w systemie Windows. Poniższej tabeli przedstawiono dostępne klasy i równoważne grafiki Windows typ dojścia urządzenia interfejsu (GDI).  

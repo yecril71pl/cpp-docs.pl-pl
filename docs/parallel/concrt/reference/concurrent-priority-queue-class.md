@@ -30,6 +30,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693669"
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue — Klasa
 `concurrent_priority_queue` Klasy to kontener udostępniający wiele wątków jednocześnie elementów wypychania i pop. Elementy są zdjęte ze stosu w kolejności priorytetu, której priorytet jest określana przez obiekt podana jako argument szablonu.  

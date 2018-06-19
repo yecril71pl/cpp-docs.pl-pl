@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348393"
 ---
 # <a name="mfc-activex-controls-events"></a>Kontrolki ActiveX MFC: zdarzenia
 Kontrolki ActiveX użyć zdarzeń, aby powiadomić kontener, który ma coś się stało z formantem. Typowe zdarzenia przykładami kliknięć w formancie dane wprowadzane przy użyciu klawiatury i zmiany w stanie formantu. Gdy są wykonywane następujące akcje, formantu wyzwala zdarzenie powiadamiania w kontenerze.  

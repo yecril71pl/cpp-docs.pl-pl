@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294261"
 ---
 # <a name="compiler-warning-levels-2-and-3-c4008"></a>Kompilator C4008 ostrzegawcze (poziom 2 i 3)
 'Identyfikator': atrybutu ' atrybut ' ignorowane  

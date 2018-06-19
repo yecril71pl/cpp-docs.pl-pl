@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354783"
 ---
 # <a name="how-to-create-a-message-map-for-a-template-class"></a>Porady: tworzenie mapy komunikatów dla klasy szablonów
 Mapowanie komunikatów w MFC zapewnia efektywną bezpośrednie komunikaty systemu Windows do odpowiedniego wystąpienia obiektu języka C++. Przykładami cele mapy komunikatów MFC klasy aplikacji, dokumentów i widoku klasy, klasy formantów i tak dalej.  

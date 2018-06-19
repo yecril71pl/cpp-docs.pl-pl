@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370158"
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>Tworzenie aplikacji MFC w stylu eksploratora plików
 Wiele aplikacji systemu Windows używa interfejsu użytkownika (UI) w Eksploratorze plików. Po ponownym uruchomieniu Eksploratora plików, na przykład pojawić aplikacji przy użyciu rozdzielacza pionowy pasek dzielenia obszaru klienckiego. Lewej obszaru klienckiego zapewnia nawigacji i funkcji przeglądania, i prawego obszaru klienckiego przedstawia szczegółowe informacje dotyczące zaznaczenie w okienku po lewej stronie. Po kliknięciu elementu w okienku po lewej stronie aplikacji repopulates okienku po prawej stronie. W aplikacji MDI, możesz użyć polecenia w **widoku** menu, aby zmienić poziom szczegółów wyświetlany w okienku po prawej stronie. (W SDI lub wiele dokumentów najwyższego poziomu aplikacji, można zmienić szczegóły, korzystając z przycisków paska narzędzi.)  

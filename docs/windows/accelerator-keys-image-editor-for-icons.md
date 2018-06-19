@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861535"
 ---
 # <a name="accelerator-keys-image-editor-for-icons"></a>Klawisze skrótów (Edytor obrazów dla ikon)
 Poniżej przedstawiono klawisze skrótów dla poleceń edytora obrazu, które są powiązane z kluczy domyślnie. Aby zmienić klawisze skrótów, kliknij przycisk **opcje** na **narzędzia** menu, a następnie wybierz pozycję **klawiatury** w obszarze **środowiska** folderu. Aby uzyskać więcej informacji, zobacz [zidentyfikowanie i dostosowywanie skrótów klawiaturowych](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685739"
 ---
 # <a name="how-to-create-agents-that-use-specific-scheduler-policies"></a>Porady: tworzenie agentów korzystających ze specjalnych zasad harmonogramu
 Agent jest składnik aplikacji, które asynchronicznie współdziała z innymi składnikami rozwiązać większych zadań. Agent zwykle ma ustawione cyklu życia i zachowuje swój stan.  

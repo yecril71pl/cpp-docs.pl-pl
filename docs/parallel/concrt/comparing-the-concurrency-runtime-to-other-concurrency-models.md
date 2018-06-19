@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694072"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Porównywanie współbieżności środowiska wykonawczego z innymi modelami współbieżności
 W tym dokumencie opisano różnice w funkcjach i modele programowania współbieżności środowiska wykonawczego i innych technologii. Zrozumienie, jak korzyści ze współbieżności środowiska wykonawczego Porównaj z zalet inne modele programowania, możesz wybrać technologia, która najlepiej spełnia wymagania aplikacji.  

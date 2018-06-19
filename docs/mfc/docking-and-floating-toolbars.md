@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352792"
 ---
 # <a name="docking-and-floating-toolbars"></a>Zadokowane i przestawne paski narzędzi
 Microsoft Foundation Class Library obsługuje dokującego pasków narzędzi. Dokującego paska narzędzi można dołączyć, i zadokowane do dowolnej krawędzi okna nadrzędnego, lub można odłączyć, lub przestawione w osobnym oknie mini ramki. W tym artykule opisano sposób używania dokującego paski narzędzi w aplikacji.  

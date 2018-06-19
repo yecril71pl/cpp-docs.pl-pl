@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861230"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Porady: konwertowanie między rozmaitymi typami ciągów
 W tym temacie przedstawiono sposób konwertowania rozmaitymi typami ciągów Visual C++ do innych ciągów. Typy parametrów, które są objęte obejmują `char *`, `wchar_t*`, [_bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [cstring —](../atl-mfc-shared/using-cstring.md), [basic_string —](../standard-library/basic-string-class.md), i <xref:System.String?displayProperty=fullName>. We wszystkich przypadkach kopię ciąg ma zostać przekonwertowany do nowego typu. Wszelkie zmiany wprowadzone do nowego ciągu nie wpłynie na oryginalny ciąg znaków i na odwrót.  

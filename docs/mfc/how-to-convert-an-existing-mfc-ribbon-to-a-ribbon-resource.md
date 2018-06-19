@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351653"
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>Porady: konwertowanie istniejącej wstążki MFC na zasób wstążki
 Wstążka zasoby są łatwiejsze do wizualizacji, modyfikowania i obsłudze niż wstążek kodowane ręcznie. W tym temacie opisano, jak przekonwertować kodowane ręcznie wstążki w projektach MFC na zasób wstążki.  

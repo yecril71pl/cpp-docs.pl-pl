@@ -41,6 +41,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367519"
 ---
 # <a name="cfontholder-class"></a>Klasa CFontHolder
 Implementuje standardowych właściwość czcionki i hermetyzuje funkcjonalność obiektu czcionki systemu Windows i `IFont` interfejsu.  

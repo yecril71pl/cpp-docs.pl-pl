@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251176"
 ---
 # <a name="compiler-error-c3368"></a>C3368 błąd kompilatora
 "deklaracji funkcji": Nieprawidłowa konwencja wywoływania dla języka IDL  

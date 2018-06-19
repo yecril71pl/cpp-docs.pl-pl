@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370848"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>Klasa CMFCTasksPaneTaskGroup
 `CMFCTasksPaneTaskGroup` Klasa jest używana przez klasę Pomocnika [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) formantu. Obiekty typu `CMFCTasksPaneTaskGroup` reprezentują *grupy zadań*. Grupy zadań znajduje się lista elementów, które w ramach będzie wyświetlany w osobnym oknie posiadające przycisk Zwiń. Pole może mieć opcjonalnym podpisem (nazwa grupy). Jeśli grupa jest zwinięte, na liście zadań nie jest widoczne.  

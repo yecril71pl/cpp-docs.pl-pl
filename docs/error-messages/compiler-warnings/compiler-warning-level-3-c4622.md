@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291544"
 ---
 # <a name="compiler-warning-level-3-c4622"></a>Kompilator C4622 ostrzegawcze (poziom 3)
 Zastępowanie informacji o debugowaniu utworzonej podczas tworzenia prekompilowanego nagłówka w pliku obiektu: 'Plik'.  

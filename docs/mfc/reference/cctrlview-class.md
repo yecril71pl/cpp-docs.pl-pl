@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353169"
 ---
 # <a name="cctrlview-class"></a>Klasa CCtrlView
 Dostosowuje widok dokumentu architektury formanty standardowe obsługiwane przez wersje systemu Windows 98 i Windows NT 3.51 lub nowszy.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353442"
 ---
 # <a name="application-type-mfc-application-wizard"></a>Typ aplikacji, kreator aplikacji MFC
 Ta strona [Kreator aplikacji MFC](../../mfc/reference/mfc-application-wizard.md) do projektowania i dodać podstawowe funkcje do nowej aplikacji MFC.  

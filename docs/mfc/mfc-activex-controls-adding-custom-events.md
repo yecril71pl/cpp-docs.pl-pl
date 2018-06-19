@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352534"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>Kontrolki ActiveX MFC: dodawanie zdarzeń niestandardowych
 Niestandardowe zdarzenia różnią się ze standardowych zdarzeń, nie są one automatycznie uruchamiane przez klasę `COleControl`. Zdarzenie niestandardowe rozpoznaje niektórych działań, określany przez dewelopera kontrolek jako zdarzenie. Wpisy mapy zdarzeń dla zdarzenia niestandardowe są reprezentowane przez `EVENT_CUSTOM` makra. Poniższa sekcja implementuje zdarzenie niestandardowe dla projektu formantu ActiveX, który został utworzony przy użyciu Kreatora formantów ActiveX.  

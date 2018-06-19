@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371335"
 ---
 # <a name="cmfctaskspanetask-class"></a>Klasa CMFCTasksPaneTask
 `CMFCTasksPaneTask` Klasy to klasa pomocy, która reprezentuje zadania dla formantu w okienku zadań ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). Obiekt zadania reprezentuje element w grupie zadań ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Każde zadanie może mieć polecenie, które wykonuje platformę, gdy użytkownik kliknie zadania, a ikona wyświetlana na lewo od nazwy zadania.  

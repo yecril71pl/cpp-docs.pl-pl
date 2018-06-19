@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349054"
 ---
 # <a name="ole-container-classes"></a>Klasy kontenerów OLE
 Te klasy są używane przez aplikacje kontenera. Zarówno `COleLinkingDoc` i `COleDocument` Zarządzanie kolekcjami `COleClientItem` obiektów. Zamiast wyprowadzanie klasy dokumentów z **CDocument**, będzie pochodzić z klasy `COleLinkingDoc` lub `COleDocument`, w zależności od tego, czy chcesz pomocy technicznej dla łącza do obiektów osadzonych w dokumencie.  

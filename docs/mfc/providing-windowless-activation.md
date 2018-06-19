@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351813"
 ---
 # <a name="providing-windowless-activation"></a>Zapewnianie aktywacji niepowiązanej z oknami
 Kod tworzenia okna (czyli wszystko, co się stanie w przypadku wywołania **właściwości CreateWindow**) jest kosztowne do wykonania. Formant, który obsługuje ekranowa okno ma zarządzać wiadomości dla okna. Formanty bez okien w związku z tym są szybsze niż formantów z systemem windows.  

@@ -62,6 +62,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353705"
 ---
 # <a name="handling-customization-notifications"></a>Obsługa powiadomień dotyczących dostosowania
 Typowe kontrolki paska narzędzi systemu Windows ma dostosowania wbudowane funkcje, w tym okno dialogowe dostosowanie zdefiniowane przez system, które umożliwiają użytkownikom wstawianie, usuwanie lub rozmieszczanie przycisków paska narzędzi. Aplikacja określa, czy funkcje dostosowywania są dostępne i określa zakres, do którego użytkownik może dostosować na pasku narzędzi.  

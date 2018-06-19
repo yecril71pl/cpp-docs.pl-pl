@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252114"
 ---
 # <a name="compiler-error-c3044"></a>C3044 błąd kompilatora
 "section": dozwolona tylko bezpośrednio zagnieżdżona pod dyrektywą "sections" OpenMP  

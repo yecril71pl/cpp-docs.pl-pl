@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686259"
 ---
 # <a name="a5---using-the-critical-directive"></a>A.5   Użycie dyrektywy krytycznej
 Poniższy przykład zawiera kilka `critical` dyrektywy ([sekcji 2.6.2](../../parallel/openmp/2-6-2-critical-construct.md) na stronie 18). Kolejkowanie modelu usuniętej i Praca nad zadania pokazano w przykładzie. Aby zabezpieczyć się przed wiele wątków usuwania tego samego zadania, dequeuing operacji musi być w `critical` sekcji. Ponieważ dwie kolejki w tym przykładzie są niezależne, są chronione przez `critical` dyrektywy o różnych nazwach *xaxis* i *yaxis*.  

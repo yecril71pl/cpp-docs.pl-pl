@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372785"
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>Klasa CMFCToolBarFontSizeComboBox
 Przycisk paska narzędzi, który zawiera kontrolki pola kombi, które umożliwia użytkownikowi wybranie rozmiaru czcionki.  

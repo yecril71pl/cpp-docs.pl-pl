@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349678"
 ---
 # <a name="providing-mouse-interaction-while-inactive"></a>Zapewnianie interakcji z myszą przy braku aktywności
 Jeśli nie włączono natychmiast formantu, nadal można go przetworzyć `WM_SETCURSOR` i `WM_MOUSEMOVE` komunikaty, nawet jeśli formant nie ma żadnego okna własnych. Można to zrobić przez włączenie `COleControl`w implementacji `IPointerInactive` interfejs, który jest domyślnie wyłączona. (Zobacz *ActiveX SDK* opis tego interfejsu.) Aby go włączyć, obejmują `pointerInactive` flagi w zestawie flagi zwrócony przez [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags):  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382018"
 ---
 # <a name="tn037-multithreaded-mfc-21-applications"></a>TN037: wielowątkowe aplikacje MFC 2.1
 Ta uwaga techniczna opisane pierwotnie ograniczeń dotyczących programów wielowątkowych z MFC 2.1, pierwotnie wyposażone w Visual C++ 1.0 dla systemu Windows NT. MFC 3.0 obsługuje wielowątkowość bezpośrednio i jest udokumentowany. Zobacz tego odwołania, aby uzyskać więcej informacji.  

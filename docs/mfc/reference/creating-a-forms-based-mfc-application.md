@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372450"
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>Tworzenie aplikacji MFC opartej na formularzach
 Formularz to okno dialogowe z kontrolkami, które umożliwiają użytkownikowi dostęp i ewentualnie modyfikowanie danych. Można utworzyć aplikację, w której użytkownik wybiera jeden z wielu formularzy. Zazwyczaj oparte na formularzach aplikacji umożliwia formularzy dostępu użytkownika przez kliknięcie **nowy** z **pliku** menu. Aplikacji opartych na oknach dialogowych, który nie zapewnia użytkownikom dostęp do **nowy** opcji **pliku** menu jest traktowana jako aplikację na podstawie formularzy.  

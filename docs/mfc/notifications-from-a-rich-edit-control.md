@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353856"
 ---
 # <a name="notifications-from-a-rich-edit-control"></a>Powiadomienia z formantów edycji wzbogaconej
 Powiadomień wiadomości zdarzenia mające wpływ na wzbogaconej formantów edycji raportu ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). One mogą być przetwarzane przez okno nadrzędne lub za pomocą odbicia wiadomości przez zaawansowanej edycji kontrolki. Formanty edycji wzbogaconej obsługuje wszystkie komunikaty powiadomień używane z formantami edycji, a także kilka te dodatkowe. Można określić, które komunikaty powiadomień kontrolki zaawansowanej edycji wysyła jej okna nadrzędnego przez ustawienie jej "maski zdarzeń."  

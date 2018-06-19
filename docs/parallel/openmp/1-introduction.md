@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685843"
 ---
 # <a name="1-introduction"></a>1. Wprowadzenie
 Ten dokument określa zbiór dyrektywy kompilatora, funkcje i zmienne środowiskowe, które mogą służyć do określenia pamięci współużytkowanej równoległości w programach C i C++. Funkcje opisane w tym dokumencie jest nazywane zbiorczo *interfejsu programu aplikacji (API) OpenMP C/C++*. Celem tej specyfikacji jest zapewnienie modelu programowania równoległego umożliwia programowi jako przenośny między architekturami pamięci współużytkowanej pochodzących od różnych dostawców. Interfejs API C/C++ OpenMP będą obsługiwane przez kompilatory od wielu dostawców. Więcej informacji na temat OpenMP, łącznie z *interfejs aplikacji Fortran OpenMP*, można znaleźć w następującej witrynie sieci web:  

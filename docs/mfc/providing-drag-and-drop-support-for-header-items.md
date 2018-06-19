@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349347"
 ---
 # <a name="providing-drag-and-drop-support-for-header-items"></a>Zapewnianie obsługi przeciągania i upuszczania w przypadku elementów nagłówka
 Aby zapewnić obsługę przeciągania i upuszczania w przypadku elementów nagłówka, określ `HDS_DRAGDROP` stylu. Obsługi przeciągania i upuszczania w przypadku elementów nagłówka umożliwia użytkownika można zmienić kolejność elementów nagłówka formantu nagłówka. Domyślne zachowanie zawiera obraz półprzezroczystych przeciągania przeciąganie elementu nagłówka i wizualnej nowego położenia po przerwaniu elementu nagłówka.  

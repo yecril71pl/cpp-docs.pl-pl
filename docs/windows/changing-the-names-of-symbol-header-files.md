@@ -29,6 +29,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33864232"
 ---
 # <a name="changing-the-names-of-symbol-header-files"></a>Zmiana nazw symboli plików nagłówkowych
 Zwykle wszystkie definicje są zapisywane w Resource.h symbolu. Może jednak może być konieczna zmiana to obejmują nazwę pliku, dzięki czemu możesz na przykład pracować z więcej niż jeden plik zasobu w tym samym katalogu.  

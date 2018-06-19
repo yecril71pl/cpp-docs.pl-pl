@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352580"
 ---
 # <a name="interface-elements"></a>Elementy interfejsu
 W tym dokumencie opisano elementy interfejsu, które zostały wprowadzone w [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] z dodatkiem SP1, a także opisano różnice ze starszą wersją biblioteki.  

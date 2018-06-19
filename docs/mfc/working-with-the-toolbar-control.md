@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385940"
 ---
 # <a name="working-with-the-toolbar-control"></a>Praca z formantem paska narzędzi
 W tym artykule opisano, jak można pobrać [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) obiekt podstawowy [ctoolbar —](../mfc/reference/ctoolbar-class.md) uzyskać większą kontrolę nad pasków narzędzi. Jest to zaawansowane tematu.  

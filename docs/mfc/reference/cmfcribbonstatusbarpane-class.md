@@ -47,6 +47,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369193"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>Klasa CMFCRibbonStatusBarPane
 `CMFCRibbonStatusBarPane` Klasa implementuje element wstążki, które można dodać do wstążki paska stanu.  

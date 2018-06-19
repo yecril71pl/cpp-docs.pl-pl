@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33264210"
 ---
 # <a name="compiler-error-c3718"></a>C3718 błąd kompilatora
 można wywołać tylko "event" w kontekście funkcji członkowskiej klasy odbiorczej  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348854"
 ---
 # <a name="internet-security-c"></a>Zabezpieczenia internetowe (C++)
 Kod bezpieczeństwa jest głównych problem dla deweloperów i użytkowników aplikacji internetowych. Istnieje ryzyko: złośliwego kodu, kod, który został zmodyfikowany i kod z nieznanej witryny lub autorów.  

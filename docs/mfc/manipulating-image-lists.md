@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349161"
 ---
 # <a name="manipulating-image-lists"></a>Operowanie listami obrazów
 [Zastąp](../mfc/reference/cimagelist-class.md#replace) funkcji członkowskiej zastępuje obraz w listy obrazów ([CImageList](../mfc/reference/cimagelist-class.md)) z nowego obrazu. Ta funkcja jest również przydatne w przypadku dynamicznie zwiększyć liczbę obrazów w obiekcie listy obrazów. [SetImageCount](../mfc/reference/cimagelist-class.md#setimagecount) funkcja dynamicznie zmienia liczbę obrazy przechowywane na liście obrazów. Jeśli możesz zwiększyć rozmiar listy obrazów, wywołanie **Zastąp** dodać obrazy do nowych miejsc obrazu. Jeśli musisz zmniejszyć rozmiar listy obrazów, obrazy, poza nowy rozmiar są zwalniane.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243032"
 ---
 # <a name="compiler-error-c2990"></a>C2990 błąd kompilatora
 "class": typ innych niż klasa jak już został zadeklarowany jako typ klasy  

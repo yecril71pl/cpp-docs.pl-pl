@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352415"
 ---
 # <a name="memory-management-heap-allocation"></a>Zarządzanie pamięcią: alokacja sterty
 Stos jest zarezerwowana na potrzeby alokacji pamięci programu. Istnieje obszar oprócz kodu programu i stosu. C — programy typowych funkcji `malloc` i **wolnego** można przydzielić i cofnięcia przydzielenia pamięci sterty. Wersja debugowania MFC zapewnia zmodyfikowanej wersji wbudowanych operatorów C++ **nowe** i **usunąć** można przydzielić i cofnięcie przydziału obiektów w pamięci sterty.  

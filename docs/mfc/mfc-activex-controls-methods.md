@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348312"
 ---
 # <a name="mfc-activex-controls-methods"></a>Kontrolki ActiveX MFC: metody
 Kontrolki ActiveX wyzwala zdarzenia do komunikacji między sobą i jego formantu kontenera. Kontener mogą również komunikować się za pomocą formantu za pomocą metody i właściwości. Metody są również nazywane funkcji.  

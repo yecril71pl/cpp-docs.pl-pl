@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373214"
 ---
 # <a name="type-library-access"></a>Dostęp do biblioteki typów
 Biblioteki typów uwidacznia interfejsów kontrolkę OLE do innych aplikacji obsługujących OLE. Każda kontrolka OLE musi mieć biblioteki typów, jeśli jeden lub więcej interfejsów mają być widoczne.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374805"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Internet adresu URL funkcje globalne do analizowania i pomocnikami
 Gdy klient wysyła zapytanie do serwera internetowego, można użyć jednego adresu URL, funkcje globalne do analizowania do wyodrębnienia informacji o kliencie. Funkcje pomocy zawierają inne funkcje internetowe.

@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860856"
 ---
 # <a name="callback-function-windows-runtime-c-template-library"></a>Callback — Funkcja (Biblioteka szablonów języka C++ środowiska wykonawczego systemu Windows)
 Tworzy obiekt, którego funkcja członkowska jest metoda wywołania zwrotnego.  

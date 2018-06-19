@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33235524"
 ---
 # <a name="compiler-error-c2781"></a>C2781 błąd kompilatora
 "deklaracją": oczekuje co najmniej wartość1 argumentu - wartość2 podana  

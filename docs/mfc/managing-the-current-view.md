@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349594"
 ---
 # <a name="managing-the-current-view"></a>Zarządzanie bieżącym widokiem
 W ramach Domyślna implementacja ramka okna okno ramowe przechowuje informacje o aktualnie aktywny widok. Jeśli okno ramowe zawiera więcej niż jeden widok, na przykład w oknie podziału, bieżący widok jest najnowszych widoku w użyciu. Widok aktywny jest niezależna od aktywnego okna w systemie Windows lub bieżący fokus wprowadzania.  

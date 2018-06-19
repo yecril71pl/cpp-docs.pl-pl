@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249849"
 ---
 # <a name="compiler-error-c3055"></a>C3055 błąd kompilatora
 "symbol": symbol nie może być przywoływany przed jego użyciem w dyrektywie "threadprivate"  

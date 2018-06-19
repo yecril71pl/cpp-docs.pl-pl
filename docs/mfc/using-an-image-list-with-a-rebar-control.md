@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381748"
 ---
 # <a name="using-an-image-list-with-a-rebar-control"></a>Używanie listy obrazów z formantem paska pomocniczego
 Każdej grupy paska pomocniczego może zawierać między innymi obraz z listy skojarzony obraz. Poniższa procedura zawiera szczegóły dotyczące czynności niezbędnych do wyświetlania obrazu w paśmie paska pomocniczego.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348638"
 ---
 # <a name="methods-of-creating-a-toolbar"></a>Metody tworzenia paska narzędzi
 MFC oferuje dwie klasy, aby utworzyć paski narzędzi: [ctoolbar —](../mfc/reference/ctoolbar-class.md) i [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) (który opakowuje interfejs API sterowania wspólne systemu Windows). `CToolBar` zawiera wszystkie funkcje formantu wspólnego narzędzi i obsługuje wiele wymagane typowe ustawienia kontroli i struktur dla Ciebie; jednak wynikowego pliku wykonywalnego zazwyczaj będzie większy niż utworzony przy użyciu `CToolBarCtrl`.  

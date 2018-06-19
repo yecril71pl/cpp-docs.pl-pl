@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860336"
 ---
 # <a name="attribute-contexts"></a>Konteksty atrybutu
 Atrybuty C++ można opisać za pomocą czterech pola podstawowe: element docelowy, mogą być stosowane do (**dotyczy**), jeśli są one powtarzalne, czy nie (**Repeatable**), wymagane obecności innych atrybutów ( **Wymagane atrybuty**), a niezgodności z innymi atrybutami (**nieprawidłowe atrybuty**). Te pola są wyświetlane w towarzyszący tabeli w temacie Odwołanie do każdego atrybutu. Poniżej opisano każdy z tych pól.  

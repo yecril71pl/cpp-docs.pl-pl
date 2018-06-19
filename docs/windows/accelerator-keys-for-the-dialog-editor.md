@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863409"
 ---
 # <a name="accelerator-keys-for-the-dialog-editor"></a>Klucze akceleratora dla Edytora okien dialogowych
 Poniżej przedstawiono domyślne klawiszy skrótów do poleceń edytora okna dialogowego. Aby zmienić klawisze skrótu, kliknij przycisk **opcje** na **narzędzia** menu, a następnie wybierz **klawiatury** w obszarze **środowiska** folderu. Aby uzyskać więcej informacji, zobacz [zidentyfikowanie i dostosowywanie skrótów klawiaturowych](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).  

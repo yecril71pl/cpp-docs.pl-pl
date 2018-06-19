@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348550"
 ---
 # <a name="ole-background-containers-and-servers"></a>Podstawy OLE: kontenery i serwery
 Aplikacji kontenera jest aplikacja, który można zastosować elementy osadzone lub połączone w swoich własnych dokumentów. Zarządza aplikacji kontenera dokumentów musi mieć możliwość przechowywania i wyświetlania elementów dokumentu OLE, a także dane utworzone przez samą aplikację. Aplikacji kontenera należy także zezwolić użytkownikom na wstawianie nowych elementów lub edytować istniejące elementy aktywowania aplikacji serwerowych, gdy jest to konieczne. Wymagania interfejsu użytkownika aplikacji kontenera są wymienione w artykule [kontenery: kwestie dotyczące interfejsu użytkownika](../mfc/containers-user-interface-issues.md).  

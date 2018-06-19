@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271808"
 ---
 # <a name="compiler-warning-level-1-c4015"></a>Kompilator C4015 ostrzegawcze (poziom 1)
 'Identyfikator': typ pola bitowego musi być całkowity  

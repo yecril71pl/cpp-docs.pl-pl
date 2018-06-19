@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351498"
 ---
 # <a name="derived-window-classes"></a>Pochodne klasy okien
 Można utworzyć systemu windows bezpośrednio z [CWnd](../mfc/reference/cwnd-class.md), lub wyprowadzać nowe klasy okna z `CWnd`. Jest to, jak zwykle tworzenie własnych niestandardowych systemu windows. Jednak większość systemu windows używane w ramach programu zamiast tego są tworzone na podstawie jednej z `CWnd`-pochodnej klasy okien ramowych dostarczonych przez MFC.  

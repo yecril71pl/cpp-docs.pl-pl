@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293390"
 ---
 # <a name="compiler-warning-level-4-c4365"></a>Kompilator C4365 ostrzegawcze (poziom 4)
 "Akcja": konwersja z "type_1" na "type_2", niezgodność signed/unsigned  

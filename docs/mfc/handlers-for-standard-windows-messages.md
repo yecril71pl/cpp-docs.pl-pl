@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348219"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>Programy obsługi dla standardowych komunikatów systemu Windows
 Domyślne programy obsługi dla standardowych komunikatów systemu Windows (**WM_**) są wstępnie zdefiniowane w klasie `CWnd`. Biblioteka klas podstawowych nazwy dla tych programów obsługi na nazwę komunikatu. Na przykład program obsługi dla `WM_PAINT` komunikat jest zadeklarowana w `CWnd` jako:  

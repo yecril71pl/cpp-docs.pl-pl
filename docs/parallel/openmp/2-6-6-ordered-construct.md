@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690348"
 ---
 # <a name="266-ordered-construct"></a>2.6.6 Konstrukcja uporządkowana
 Następujące strukturalnego bloku **uporządkowane** dyrektywa jest wykonywany w kolejności, w którym będzie można wykonywać iteracji w pętli sekwencyjnych. Składnia **uporządkowane** dyrektywy wygląda następująco:  

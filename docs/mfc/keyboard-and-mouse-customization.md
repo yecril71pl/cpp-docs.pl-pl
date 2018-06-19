@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351666"
 ---
 # <a name="keyboard-and-mouse-customization"></a>Dostosowywanie klawiatury i myszy
 MFC umożliwia użytkownikom aplikacji w celu dostosowania sposobu obsługi klawiatury i myszy. Użytkownik może dostosować klawiatury, przypisując skróty klawiaturowe do poleceń. Użytkownika można również dostosować wejście myszy przez wybranie polecenia, który ma być wykonany, gdy użytkownik kliknie dwukrotnie wewnątrz windows określonych aplikacji. W tym temacie wyjaśniono, jak dostosować dane wejściowe dla aplikacji.  

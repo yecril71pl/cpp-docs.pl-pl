@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246130"
 ---
 # <a name="compiler-error-c3047"></a>C3047 błąd kompilatora
 Blok strukturalny w regionie "sections" musi być poprzedzony przez "#pragma omp section" OpenMP  

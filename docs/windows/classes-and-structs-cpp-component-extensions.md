@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33864918"
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>Klasy i struktury (C++ Component Extensions)
 Deklaruje klasie lub strukturze których *okres istnienia obiektu* podawana jest automatycznie. Gdy obiekt nie jest już dostępny lub poza zakresem, Visual C++ spowoduje odrzucenie na pamięci, która jest przydzielona do obiektu.  

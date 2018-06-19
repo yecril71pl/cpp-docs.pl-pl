@@ -26,6 +26,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688872"
 ---
 # <a name="multithreading-creating-user-interface-threads"></a>Wielowątkowość: tworzenie wątków interfejsu użytkownika
 Wątek interfejsu użytkownika jest najczęściej używany do obsługi danych wejściowych użytkownika zdarzeń i reagowanie na użytkownika niezależnie od wątków wykonywania innych części aplikacji. Wątku głównego aplikacji (w Twojej `CWinApp`-klasy) jest już utworzony i uruchomiona. W tym temacie opisano kroki niezbędne do tworzenia wątków interfejsu użytkownika.  

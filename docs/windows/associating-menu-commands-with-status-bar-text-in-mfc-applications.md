@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33864245"
 ---
 # <a name="associating-menu-commands-with-status-bar-text-in-mfc-applications"></a>Kojarzenie poleceń menu z tekstem paska stanu w aplikacjach MFC
 Aplikacja może wyświetlać tekst opisowy dla poszczególnych poleceń menu, które użytkownik może wybrać. Można to zrobić, przypisując ciąg tekstowy do każdego menu polecenie za pomocą **monitu** właściwości w oknie właściwości. Jeśli w ciągu [tabeli ciągów](../windows/string-editor.md) których identyfikator jest taki sam jak polecenia, aplikacji MFC zostanie automatycznie wyświetlona tego zasobu ciągu na pasku stanu w uruchomionej aplikacji, gdy użytkownik znajduje się nad elementem menu.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386109"
 ---
 # <a name="windows-sockets-stream-sockets"></a>Windows Sockets: gniazda strumieni
 W tym artykule opisano gniazda strumieni, jeden z dwóch typów gniazda Windows dostępne. (Jest innego typu [gniazdo datagramu](../mfc/windows-sockets-datagram-sockets.md).)  

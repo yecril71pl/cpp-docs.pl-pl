@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860895"
 ---
 # <a name="changing-the-font-of-text-on-an-image-image-editor-for-icons"></a>Zmiana czcionki tekstu obrazu (Edytor obrazów dla ikon)
 Poniższa procedura jest przykładem:  

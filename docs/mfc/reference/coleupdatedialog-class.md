@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373054"
 ---
 # <a name="coleupdatedialog-class"></a>Klasa COleUpdateDialog
 Używane dla przypadków specjalnych okna dialogowego OLE Edytuj łącza, który powinien być używany podczas należy zaktualizować tylko istniejące połączone lub obiekty osadzone w dokumencie.  

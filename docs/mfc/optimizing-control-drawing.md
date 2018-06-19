@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351297"
 ---
 # <a name="optimizing-control-drawing"></a>Optymalizacja rysowania formantów
 Gdy formant jest instrukcją do rysowania się do kontekstu urządzenia dostarczonych przez kontener, zazwyczaj wybiera obiekty GDI (na przykład pióra, pędzle i czcionki) do kontekstu urządzenia, wykonuje jego operacje rysowania i przywraca poprzednie obiekty GDI. Jeśli kontener ma wiele formantów, które mają być tworzone w tym samym kontekście urządzenia i każdej kontrolki wybiera obiekty GDI, które wymaga, czas może zostać zapisany, jeśli formanty nie przywracaj indywidualnie wcześniej wybrane obiekty. Po zostały wystawione wszystkie formanty, kontener może automatycznie Przywracanie oryginalnych obiektów.  

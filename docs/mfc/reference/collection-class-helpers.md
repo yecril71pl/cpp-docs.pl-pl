@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374841"
 ---
 # <a name="collection-class-helpers"></a>Pomocnicy klasy kolekcji
 Klasy kolekcji `CMap`, `CList`, i `CArray` za pomocą funkcji opartego na szablonie globalne pomocnika do celów takich jak porównywanie, kopiowanie i elementy serializacji. Jako część implementacji klasy na podstawie `CMap`, `CList`, i `CArray`, konieczne jest przesłonięcie tych funkcji w razie potrzeby z wersjami dostosowane do typu danych przechowywanych w mapie, listy lub tablicy. Aby uzyskać informacje dotyczące zastępowania takich jak funkcje pomocnicze `SerializeElements`, zapoznaj się z artykułem [kolekcje: porady: tworzenie bezpiecznej kolekcji](../../mfc/how-to-make-a-type-safe-collection.md). Należy pamiętać, że **constructelements —** i **destructelements —** są przestarzałe.  

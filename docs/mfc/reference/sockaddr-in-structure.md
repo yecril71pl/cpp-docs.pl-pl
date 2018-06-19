@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373641"
 ---
 # <a name="sockaddrin-structure"></a>SOCKADDR_IN — Struktura
 W rodzinie adresu internetowego `SOCKADDR_IN` struktury jest używany przez usługi Windows Sockets, aby określić adres lokalny lub zdalny punkt końcowy do połączenia gniazda.  

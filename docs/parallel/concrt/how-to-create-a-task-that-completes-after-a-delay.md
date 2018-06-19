@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688414"
 ---
 # <a name="how-to-create-a-task-that-completes-after-a-delay"></a>Porady: tworzenie zadania kończonego po opóźnieniu
 Ten przykład przedstawia sposób użycia [concurrency::task](../../parallel/concrt/reference/task-class.md), [concurrency::cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md), [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md), [ CONCURRENCY::task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), [concurrency::timer](../../parallel/concrt/reference/timer-class.md), i [concurrency::call](../../parallel/concrt/reference/call-class.md) klasy Tworzenie zadania kończonego po opóźnieniu. Ta metoda służy do tworzenia pętli od czasu do czasu sondować danych, wprowadzenie limitów czasu, opóźnienie wyznaczonym czasie obsługę danych wejściowych użytkownika, które itd.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355362"
 ---
 # <a name="ole-control-classes"></a>Klasy formantów OLE
 Są to klasy podstawowej, używanego podczas pisania formantów OLE. `COleControlModule` Przypomina klasy w module formantu OLE [CWinApp](../mfc/reference/cwinapp-class.md) klasy w aplikacji. Każdy moduł implementuje jeden lub kilka formantów OLE; Formanty te są reprezentowane przez `COleControl` obiektów. Formanty komunikować się z ich kontenerów przy użyciu `CConnectionPoint` obiektów.  

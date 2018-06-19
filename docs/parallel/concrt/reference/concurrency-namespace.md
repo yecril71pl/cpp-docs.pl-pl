@@ -35,6 +35,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695190"
 ---
 # <a name="concurrency-namespace"></a>concurrency — Przestrzeń nazwy
 `Concurrency` Przestrzeń nazw zawiera klasy i funkcje, które zapewniają dostęp do współbieżności środowiska wykonawczego, równoczesnych Architektura programowania dla języka C++. Aby uzyskać więcej informacji, zobacz [współbieżność środowiska wykonawczego](../../../parallel/concrt/concurrency-runtime.md).  

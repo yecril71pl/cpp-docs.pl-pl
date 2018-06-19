@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348182"
 ---
 # <a name="how-the-framework-calls-your-code"></a>Jak struktura wywołuje kod
 Odgrywa zrozumienie relacji między kodu źródłowego i kodu w ramach MFC. Po uruchomieniu aplikacji, większość przepływu sterowania znajduje się w kodzie struktury. Platformę zarządza pętli komunikatów, która umożliwia pobieranie wiadomości z systemu Windows jako użytkownik wybiera poleceń i umożliwia edycję danych widoku. Zdarzenia, które w ramach może obsłużyć samodzielnie nie należy polegać na kodzie w ogóle. Na przykład platformę zna sposób zamknięcia systemu windows i zamknij aplikację w odpowiedzi na polecenia użytkownika. Jak te zadania, platformę używa programy obsługi wiadomości i funkcji wirtualnych C++ do udzielenia odpowiedzi na te zdarzenia, a także możliwości. Kod nie ma kontroli, jednak; jest platformę.  

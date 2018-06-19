@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33263830"
 ---
 # <a name="compiler-error-c3645"></a>C3645 błąd kompilatora
 "Funkcja": __clrcall nie można używać w funkcjach skompilowanych do natywnego kodu  

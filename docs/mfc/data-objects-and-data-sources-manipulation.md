@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349912"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Obiekty danych i źródła danych: operowanie
 Po utworzeniu obiektu danych lub źródła danych, można wykonywać wiele typowych operacji na danych, takich jak wstawianie i usuwanie danych wyliczania formatów, z których dane są, i inne. W tym artykule opisano niezbędne do zakończenia operacji najbardziej typowe techniki. Tematy obejmują:  

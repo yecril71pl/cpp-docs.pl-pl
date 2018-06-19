@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371800"
 ---
 # <a name="cmfcmaskededit-class"></a>Klasa CMFCMaskedEdit
 `CMFCMaskedEdit` Klasa obsługuje formant zamaskowanej edycji, który sprawdza poprawność danych wejściowych użytkownika przed maski i wyświetla zweryfikowanych wyników na podstawie szablonu.  

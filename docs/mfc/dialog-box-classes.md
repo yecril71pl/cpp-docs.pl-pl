@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351693"
 ---
 # <a name="dialog-box-classes"></a>Klasy okien dialogowych
 Klasa `CDialog` i pochodne Hermetyzowanie funkcji okno dialogowe. Ponieważ jest specjalnym rodzajem okna, okno dialogowe `CDialog` jest pochodną `CWnd`. Pochodzi z klasy okien dialogowych z `CDialog` lub użyj jednego z klasy wspólnych okien dialogowych dla standardowych oknach dialogowych, takich jak otwieranie lub zapisywanie pliku, drukowania, wybierając czcionek i kolorów, Inicjowanie operacji wyszukiwania i zamieniania lub przy użyciu różnych związane z mechanizmem OLE operacje.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349216"
 ---
 # <a name="drawing-tool-classes"></a>Klasy narzędzi do rysowania
 Te klasy hermetyzować narzędzi do rysowania, które są używane do rysowania w kontekście urządzenia.  

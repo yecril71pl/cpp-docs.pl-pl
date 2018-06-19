@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375976"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Funkcje wymiany danych w oknie dialogowym dla formantów OLE
 W tym temacie wymieniono funkcje DDX_OC używanego do wymiany danych między właściwości formantu OLE w okno dialogowe, widoku formularza lub kontrolki widoku obiektu i element członkowski danych klasy okno dialogowe, widoku Formularz lub formant widoku obiektu.  

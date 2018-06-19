@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860697"
 ---
 # <a name="chaininterfacesverify-method"></a>ChainInterfaces::Verify — Metoda
 Sprawdza, czy każdy interfejs zdefiniowane przez parametry szablonu `I0` za pośrednictwem `I9` dziedziczy IUnknown i/lub IInspectable oraz że `I0` dziedziczy `I1` za pośrednictwem `I9`.  

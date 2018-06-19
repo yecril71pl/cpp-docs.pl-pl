@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374058"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Tworzenie projektu MFC DLL
 Biblioteki MFC DLL jest plikiem binarnym, który działa jako biblioteki udostępnionej funkcji, które mogą być używane równocześnie przez wiele aplikacji. Najprostszym sposobem tworzenia projektu MFC DLL jest za pomocą Kreatora biblioteki DLL MFC.  

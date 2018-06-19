@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349925"
 ---
 # <a name="document-and-view-classes-created-by-the-mfc-application-wizard"></a>Klasy dokumentów i widoków tworzone przez kreatora aplikacji MFC
 Kreator aplikacji MFC zapewnia ułatwiają rozpoczęcie na komputerze program za tworzenie klasy szkieletowych dokumentów i widoków. Następnie możesz [mapy poleceń i komunikatów do tych klas](../mfc/reference/mapping-messages-to-functions.md) i umożliwia ich funkcje Członkowskie zapisu Edytor kodu źródłowego języka Visual C++.  

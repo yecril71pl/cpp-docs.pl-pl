@@ -27,6 +27,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689184"
 ---
 # <a name="taskcontinuationcontext-class"></a>task_continuation_context — Klasa
 `task_continuation_context` Klasa służy do określenia, gdzie chcesz kontynuacji do wykonania. Jest tylko warto użyć tej klasy z aplikacji środowiska wykonawczego systemu Windows. W przypadku aplikacji z systemem innym niż Windows Runtime kontekstu wykonywania kontynuacji zadań jest określone przez środowisko uruchomieniowe i nie można skonfigurować.  

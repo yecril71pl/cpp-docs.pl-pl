@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351748"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>Kontrolki ActiveX MFC: strony właściwości
 Strony właściwości umożliwiają użytkownikowi formantu ActiveX wyświetlanie i zmiana właściwości formantu ActiveX. Te właściwości są dostępne przez okno dialogowe właściwości formantu, który zawiera jeden lub więcej stron właściwości, które zapewniają dostosowany interfejs graficzny służący do wyświetlania i edytowania właściwości formantu.  

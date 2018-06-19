@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353938"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>Kontrolki ActiveX MFC: licencjonowanie kontrolki ActiveX
 Licencjonowania pomocy technicznej, opcjonalna funkcja formantów ActiveX służy do kontrolowania, kto może używać lub rozkładanie formantu. (Aby uzyskać dodatkowe informacje dotyczące licencjonowania, zobacz licencjonowania problemy w [Uaktualnianie istniejącego formantu ActiveX](../mfc/upgrading-an-existing-activex-control.md).)  

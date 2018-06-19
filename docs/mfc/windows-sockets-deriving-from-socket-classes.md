@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384078"
 ---
 # <a name="windows-sockets-deriving-from-socket-classes"></a>Windows Sockets: wyprowadzanie z klas gniazd
 W tym artykule opisano niektóre funkcje, które można uzyskać przez wyprowadzanie własne klasy z jednej z klas gniazd.  

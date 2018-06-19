@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860606"
 ---
 # <a name="changing-the-properties-of-a-string"></a>Zmiana właściwości ciągu
 ### <a name="to-change-a-string-or-its-identifier"></a>Aby zmienić ciąg lub identyfikatora  

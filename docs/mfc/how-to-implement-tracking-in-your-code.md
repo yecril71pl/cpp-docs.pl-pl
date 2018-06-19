@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349739"
 ---
 # <a name="how-to-implement-tracking-in-your-code"></a>Porady: implementowanie śledzenia w kodzie
 Aby śledzić element OLE, musi obsługiwać określone zdarzenia związanego z elementem, na przykład klikając je lub aktualizowanie widoku dokumentu. We wszystkich przypadkach jest wystarczające, aby zadeklarować tymczasowej [crecttracker —](../mfc/reference/crecttracker-class.md) obiektu i manipulowania elementem za pomocą tego obiektu.  

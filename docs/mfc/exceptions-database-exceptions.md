@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354305"
 ---
 # <a name="exceptions-database-exceptions"></a>Wyjątki: wyjątki bazy danych
 W tym artykule opisano sposób obsługi wyjątków bazy danych. Większość materiału w tym artykule ma zastosowanie, czy użytkownik pracuje z klas MFC otwarte połączenie bazy danych (ODBC) lub klas MFC dla obiektów DAO (Data Access). Jawnie jest oznaczony jako materiałów specyficzne dla jednej lub innego modelu. Tematy obejmują:  

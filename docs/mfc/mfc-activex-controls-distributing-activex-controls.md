@@ -40,6 +40,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358810"
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>Kontrolki ActiveX MFC: dystrybucja kontrolek ActiveX
 W tym artykule opisano kilka problemów związanych z redystrybuowanie formantów ActiveX:  

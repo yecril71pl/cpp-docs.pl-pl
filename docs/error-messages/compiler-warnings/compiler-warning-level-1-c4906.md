@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291385"
 ---
 # <a name="compiler-warning-level-1-c4906"></a>Kompilator C4906 ostrzegawcze (poziom 1)
 literał ciągu rzutowany na 'LPWSTR'  
