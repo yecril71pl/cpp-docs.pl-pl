@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382301"
 ---
 # <a name="using-cobject"></a>Używanie obiektu CObject
 [CObject](../mfc/reference/cobject-class.md) jest klasa podstawowa dla większości Microsoft Foundation Class biblioteki (MFC). `CObject` Klasa zawiera wiele przydatnych funkcji, które chcesz dołączyć do własnych obiektów programu, łącznie z obsługą serializacji, informacje o klasie czasu wykonywania i diagnostycznych dane wyjściowe obiektu. Jeśli pochodzi z klasy `CObject`, klasy można wykorzystać te `CObject` funkcji.  

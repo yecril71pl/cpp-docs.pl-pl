@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382570"
 ---
 # <a name="what-frame-windows-do"></a>Co robią okna ramowe
 Oprócz po prostu framing widoku, okien ramowych są odpowiedzialne za wiele zadań związanych z koordynowanie ramki z jego widoku i aplikacji. [Cmdiframewnd —](../mfc/reference/cmdiframewnd-class.md) i [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) dziedziczyć [cframewnd —](../mfc/reference/cframewnd-class.md), więc mają `CFrameWnd` możliwości, a także nowe funkcje, które dodają. Okno podrzędne przykładem widoków, formanty, takie jak przycisków i pola listy i paski sterowania, w tym pasków narzędzi, pasków stanu i paski dialogowe.  

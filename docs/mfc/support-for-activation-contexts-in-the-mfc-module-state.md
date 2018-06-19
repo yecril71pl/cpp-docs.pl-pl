@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380712"
 ---
 # <a name="support-for-activation-contexts-in-the-mfc-module-state"></a>Obsługa kontekstów aktywacji w stanie modułu MFC
 MFC tworzy kontekst aktywacji przy użyciu zasobu manifestu podana przez moduł użytkownika. Aby uzyskać więcej informacji dotyczących sposobu tworzenia kontekstów aktywacji zobacz następujące tematy:  

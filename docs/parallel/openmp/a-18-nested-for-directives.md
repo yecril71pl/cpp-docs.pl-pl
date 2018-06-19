@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690871"
 ---
 # <a name="a18---nested-for-directives"></a>A.18   Zagnieżdżenia dla dyrektyw
 Poniższy przykład przedstawia `for` zagnieżdżanie dyrektywy ([2.9 sekcji](../../parallel/openmp/2-9-directive-nesting.md) na stronie 33) jest zgodny, ponieważ wewnętrznych i zewnętrznych `for` dyrektywy powiązać z różnych regionów równoległych:  

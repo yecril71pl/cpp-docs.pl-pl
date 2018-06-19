@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880608"
 ---
 # <a name="enum-class--c-component-extensions"></a>enum class (C++ Component Extensions)
 Deklaruje wyliczenie w zakresie przestrzeni nazw, który jest zdefiniowany przez użytkownika typ zawierający zestaw o nazwie moduły wyliczające stałe nazwane.  

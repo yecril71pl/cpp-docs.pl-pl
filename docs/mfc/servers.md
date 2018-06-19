@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381783"
 ---
 # <a name="servers"></a>Serwery
 Aplikacja serwera (lub składników aplikacji) tworzy elementy OLE (lub składników) do użycia przez aplikacje kontenera. Visual edytowania aplikacji serwera obsługuje również edycja wizualna lub Aktywacja w miejscu. Formularz innego serwera OLE [serwer automatyzacji](../mfc/automation-servers.md). Niektóre aplikacje serwera obsługuje tylko tworzenie elementy osadzone; obsługuje inne tworzenia elementów zarówno osadzone i połączone. Niektóre obsługiwana jest konsolidacja tylko, ale jest to rzadko. Wszystkie aplikacje serwera musi obsługiwać aktywacji przez kontener aplikacji, gdy użytkownik chce edytować element. Aplikacja może być zarówno kontener, jak i serwera. Innymi słowy go można jednocześnie dołączyć dane do swoich dokumentów i tworzyć dane, które można włączyć jako elementy w dokumentach inne aplikacje.  

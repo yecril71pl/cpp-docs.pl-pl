@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380435"
 ---
 # <a name="serializing-data-to-and-from-files"></a>Serializacja danych do plików i z plików
 Zgodnie z podstawową koncepcją trwałości jest, że obiekt powinien mieć możliwość zapisywania swojego bieżącego stanu wskazanych przez wartości jego zmienne Członkowskie do magazynu trwałego. Później obiekt można ponownie utworzyć za odczytywanie lub "deserializacji", stan obiektu z magazynu trwałego. W tym miejscu klucza punktu jest odpowiedzialny za odczytywanie i zapisywanie własny stan samego obiektu. W związku z tym dla klasy były trwałe, musi on implementować operacji podstawowe serializacji.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382989"
 ---
 # <a name="using-clistctrl"></a>Korzystanie z CListCtrl
 Formant listy umożliwia wyświetlenie każdy układ ikon z etykiet, jak Eksploratora plików lub list kolumnowy tekstu, z lub bez ikon. Opis cztery możliwe "opinie" (nie należy mylić z MFC widoków) może mieć w formancie listy — Widok ikony, widoku małych ikon widok listy i widok raportu — Zobacz widoków w [CListCtrl](../mfc/reference/clistctrl-class.md) Przegląd klasy.  

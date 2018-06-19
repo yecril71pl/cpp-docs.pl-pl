@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882778"
 ---
 # <a name="drawing-lines-or-closed-figures-image-editor-for-icons"></a>Linie rysunku lub zamkniętych figur (Edytor obrazów dla ikon)
 Edytor obrazów narzędzi do rysowania linii i zamkniętych figur wszystkich działać w taki sam sposób jak: Umieść punkt wstawiania w jednym punkcie i przeciągnij na inny. Dla wierszy punkty te są punkty końcowe. Zamkniętych figur punkty te są przeciwną narożników prostokąta ograniczenia na rysunku.  

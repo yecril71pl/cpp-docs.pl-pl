@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379811"
 ---
 # <a name="the-ccmdui-class"></a>Klasa CCmdUI
 Gdy polecenie aktualizacji kieruje do jego obsługi, platformę przekazuje program obsługi wskaźnik do `CCmdUI` obiektu (lub do obiektu `CCmdUI`-klasy). Ten obiekt reprezentuje przycisk menu element lub paska narzędzi lub innego obiektu interfejsu użytkownika, który wygenerował polecenia. Procedura obsługi aktualizacji wywołuje element członkowski funkcji `CCmdUI` struktury przez wskaźnik, aby zaktualizować obiekt interfejsu użytkownika. Na przykład w tym miejscu jest programu obsługi aktualizacji dla elementu menu Wyczyść wszystko:  

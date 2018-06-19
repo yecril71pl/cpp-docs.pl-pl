@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382827"
 ---
 # <a name="using-a-common-control-as-a-child-window"></a>Używanie formantu wspólnego jako okna podrzędnego
 Wszelkie formanty standardowe systemu Windows może służyć jako okna podrzędnego inne okna. W poniższej procedurze opisano sposób tworzenia formantu wspólnego dynamicznie i następnie pracy z nimi.  

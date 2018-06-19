@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891925"
 ---
 # <a name="switching-between-dialog-box-controls-and-code"></a>Przełączanie między kontrolkami okna dialogowego i kodem
 W aplikacjach MFC możesz kliknąć dwukrotnie na formanty okna dialogowego, aby przejść do ich obsługi kodu lub do szybkiego tworzenia szkieletu funkcje programu obsługi.  

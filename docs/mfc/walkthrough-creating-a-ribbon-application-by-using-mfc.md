@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385232"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Wskazówki: tworzenie aplikacji wstążki za pomocą MFC
 Ten przewodnik przedstawia sposób użycia **Kreator aplikacji MFC** do tworzenia aplikacji, która domyślnie ma wstążki. Można następnie rozwiń węzeł wstążki, dodając **niestandardowy** wstążki kategorię, która ma **ulubione** wstążki panelu, a następnie dodać niektóre często używane polecenia do panelu.  

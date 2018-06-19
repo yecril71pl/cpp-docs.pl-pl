@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880208"
 ---
 # <a name="interface-attributes"></a>Atrybuty interfejsu
 Następujące atrybuty dotyczą [interfejsu (lub __interface)](../cpp/interface.md) słowa kluczowego języka C++.  

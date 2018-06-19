@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384585"
 ---
 # <a name="tn014-custom-controls"></a>TN014: formanty niestandardowe
 Ta uwaga opisuje Obsługa MFC dla formantów niestandardowych i własnym rysowania. On również opisuje podklasy dynamicznej oraz relacji między [CWnd](../mfc/reference/cwnd-class.md) obiektów i `HWND`s.  

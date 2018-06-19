@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889410"
 ---
 # <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>Ustawienie kursora&#39;s punktu aktywnego (edytor obrazów dla ikon)
 Punkt aktywny o [kursora](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md) jest punktem na które Windows odwołuje się w bieżącej pozycji kursora śledzenia. Domyślnie punkt aktywny jest ustawiona w lewym górnym rogu kursora (współrzędne 0,0). Właściwości punktu aktywnego w [okna właściwości](/visualstudio/ide/reference/properties-window) zawiera współrzędne punktu aktywnego.  

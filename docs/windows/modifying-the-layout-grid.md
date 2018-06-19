@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880322"
 ---
 # <a name="modifying-the-layout-grid"></a>Modyfikowanie siatki układu
 Podczas wprowadzania lub rozmieszczanie formantów w oknie dialogowym, można użyć siatki układu dla bardziej dokładne rozmieszczania. Po włączeniu siatki formantów są "przyciąganie do" przerywana linii siatki tak, jakby namagnesować. Można włączyć tę funkcję "przyciąganie do siatki" i wyłączyć oraz zmienić rozmiar komórki siatki układu.  

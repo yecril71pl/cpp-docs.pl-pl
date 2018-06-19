@@ -119,6 +119,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377774"
 ---
 # <a name="cmfctabctrl-class"></a>Klasa CMFCTabCtrl
 `CMFCTabCtrl` Klasa udostępnia funkcję dla formantu karty. Formantu karty wyświetla okna dokującego z kartami flat lub trójwymiarowy na jego początku lub na końcu. Karty mogą wyświetlać tekstowych i obrazów i można zmienić kolor, gdy jest aktywny.  

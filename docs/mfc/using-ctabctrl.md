@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383685"
 ---
 # <a name="using-ctabctrl"></a>Korzystanie z CTabCtrl
 Formant"karty" jest odpowiednikiem separatorów w notesie lub folderów oznaczonych w pliku cabinet. Użyj formantu karty reprezentowany przez klasę [CTabCtrl](../mfc/reference/ctabctrl-class.md), aby wyświetlić kilka stron informacje lub kontrolki użytkownika, pojedynczo, w formacie, który sugeruje elementu równorzędnego lub logiczne relacji między stronami.  

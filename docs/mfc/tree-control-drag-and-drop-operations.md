@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382769"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>Operacje przeciągania i upuszczania kontrolki drzewa
 Formant drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) wysyła powiadomienie, gdy użytkownik uruchomi przeciągnij element. Formant wysyła [TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504) powiadomienie, gdy użytkownik rozpocznie przeciąganie elementu z lewego przycisku myszy i [TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509) powiadomienie, gdy użytkownik rozpocznie przeciąganie z Prawy przycisk. Formant drzewa uniemożliwi wysyłanie powiadomień, zapewniając formantu drzewa **TVS_DISABLEDRAGDROP** stylu.  

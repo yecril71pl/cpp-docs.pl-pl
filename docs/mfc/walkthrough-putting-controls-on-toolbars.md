@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385086"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Wskazówki: umieszczanie formantów na paskach narzędzi
 W tym temacie opisano sposób dodawania przycisku paska narzędzi, który zawiera kontrolki systemu Windows do paska narzędzi. W MFC, musi być przycisku paska narzędzi [klasy CMFCToolBarButton](../mfc/reference/cmfctoolbarbutton-class.md)-pochodnej klasy, na przykład [klasy CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [klasy CMFCToolBarEditBoxButton](../mfc/reference/cmfctoolbareditboxbutton-class.md), [Klasy CMFCDropDownToolbarButton](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), lub [CMFCToolBarMenuButton klasy](../mfc/reference/cmfctoolbarmenubutton-class.md).  

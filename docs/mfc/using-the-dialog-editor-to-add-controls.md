@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381954"
 ---
 # <a name="using-the-dialog-editor-to-add-controls"></a>Używanie edytora okien dialogowych do dodawania formantów
 Podczas tworzenia zasobu szablonu okna dialogowego z [Edytor okien dialogowych](../windows/dialog-editor.md), przeciągnij formanty z palety kontrolek i upuść je w oknie dialogowym. Spowoduje to dodanie specyfikacje dla tego typu zasobu szablonu okna dialogowego. Podczas konstruowania obiektu okna dialogowego i wywołanie jego **Utwórz** lub `DoModal` funkcji członkowskiej platformę tworzy kontrolki systemu Windows i umieszcza je w oknie dialogowym na ekranie.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385602"
 ---
 # <a name="user-interface-objects-and-command-ids"></a>Obiekty interfejsu użytkownika i identyfikatory poleceń
 Elementy menu, przycisków paska narzędzi i klawisze skrótów są "obiekty interfejsu użytkownika" może generować poleceń. Każdy obiekt interfejsu użytkownika ma identyfikator. Obiekt interfejsu użytkownika należy skojarzyć z polecenia, przypisując ten sam identyfikator obiektu i polecenia. Zgodnie z objaśnieniem w [wiadomości](../mfc/messages.md), polecenia są zaimplementowane jako specjalnych wiadomości. Na rysunku "Poleceń w ramach" poniżej pokazano, jak zarządza poleceń w ramach. Gdy obiekt interfejsu użytkownika generuje polecenia, takich jak `ID_EDIT_CLEAR_ALL`, jeden z obiektów w aplikacji obsługuje polecenie — na ilustracji poniżej obiektu dokumentu `OnEditClearAll` funkcja jest wywoływana za pośrednictwem mapy komunikatów dokumentu.  

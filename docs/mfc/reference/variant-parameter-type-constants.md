@@ -50,6 +50,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379863"
 ---
 # <a name="variant-parameter-type-constants"></a>Stałe typów parametru Variant
 W tym temacie wymieniono nowe stałe, które wskazują typów parametru variant przeznaczony do użytku z klasy formantów OLE programu Microsoft Foundation Class Library.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380581"
 ---
 # <a name="tool-tips"></a>Etykietki narzędzi
 Procedury są unikatowe dla Dodawanie etykietek narzędzi do formanty zawarte w systemie windows pochodzi od klasy MFC [cframewnd —](../mfc/reference/cframewnd-class.md) i systemu windows nie pochodzi od `CFrameWnd`.  

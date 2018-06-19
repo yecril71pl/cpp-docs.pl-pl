@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381091"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>Implementacja paska stanu w MFC
 A [cstatusbar —](../mfc/reference/cstatusbar-class.md) obiekt jest pasek sterowania z wiersza okienek tekstu wyjściowego. Okienka dane wyjściowe są często używane jako wiersze komunikat, a wskaźniki stanu. Przykładami krótko opisano wybrane polecenie Wiersze komunikat pomocy menu i wskaźników określenia stanu blokady PRZEWIJANIA, NUM LOCK i kluczy.  

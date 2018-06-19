@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380867"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Serwery: implementowanie okien ramowych w miejscu
 W tym artykule opisano, co należy zrobić, aby zaimplementować okna ramowe w miejscu w visual edytowania aplikacji serwera, jeśli nie używasz Kreatora aplikacji do tworzenia aplikacji serwera. Zamiast zgodnie z procedurą przedstawioną w tym artykule, można użyć istniejącej klasy okien ramowych w miejscu z aplikacją generowane przez Kreatora aplikacji lub próbkę dostarczone z programem Visual C++.  

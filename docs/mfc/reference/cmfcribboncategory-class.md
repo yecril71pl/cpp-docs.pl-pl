@@ -145,6 +145,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377973"
 ---
 # <a name="cmfcribboncategory-class"></a>Klasa CMFCRibbonCategory
 `CMFCRibbonCategory` Klasa implementuje karty wstążki, który zawiera grupę dodatkowych elementów [wstążki panele](../../mfc/reference/cmfcribbonpanel-class.md).  

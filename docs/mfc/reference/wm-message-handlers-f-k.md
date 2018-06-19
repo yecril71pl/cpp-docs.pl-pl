@@ -44,6 +44,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381228"
 ---
 # <a name="wm-message-handlers-f---k"></a>Programy obsługi komunikatów WM_: F - K
 Następujące wpisy mapy po lewej stronie odpowiadają prototypy funkcji po prawej stronie:  

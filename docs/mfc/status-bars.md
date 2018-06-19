@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379635"
 ---
 # <a name="status-bars"></a>Paski stanu
 Paski stanu nadaj aplikacji miejsca do wyświetlania wiadomości i przydatne informacje do użytkownika bez przerywania pracy użytkownika. Zazwyczaj są wyświetlane w dolnej części okna, mieć paski stanu "okienka", które obejmują "wskaźniki" i "wiersz wiadomości". Wskaźniki zawierają stan czynności, takich jak blokady PRZEWIJANIA, czy rejestrowanie makra jest włączona, i tak dalej. Wiersz wiadomości na pasku stanu można wyświetlić informacje o stanie programu lub elementem paska narzędzi menu lub przycisku, który wskazuje użytkownika przy użyciu myszy.  

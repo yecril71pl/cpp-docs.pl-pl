@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381982"
 ---
 # <a name="slider-notification-messages"></a>Komunikaty powiadomień suwaka
 Formantu suwaka powiadamia jej okna nadrzędnego akcje użytkownika, wysyłając nadrzędnego `WM_HSCROLL` lub `WM_VSCROLL` komunikaty, w zależności od Orientacja formantu suwaka. Aby obsługiwać te komunikaty, Dodaj obsługę `WM_HSCROLL` i `WM_VSCROLL` wiadomości do okna nadrzędnego. [OnHScroll](../mfc/reference/cwnd-class.md#onhscroll) i [OnVScroll](../mfc/reference/cwnd-class.md#onvscroll) funkcje Członkowskie zostanie przekazany kod powiadomienia, położenie suwaka i wskaźnika do [CSliderCtrl](../mfc/reference/csliderctrl-class.md) obiektu. Należy pamiętać, że wskaźnik jest typu **CScrollBar \***  mimo że wskazuje `CSliderCtrl` obiektu. Konieczne może być rzutowanie typu ten wskaźnik, jeśli potrzebujesz do manipulowania suwaka.  

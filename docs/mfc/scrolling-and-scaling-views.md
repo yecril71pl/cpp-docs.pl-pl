@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379271"
 ---
 # <a name="scrolling-and-scaling-views"></a>Przewijanie i skalowanie widoków
 MFC obsługuje widoki, które przewiń i widoki, które są automatycznie przeskalowany do rozmiaru okna ramki, która wyświetla je. Klasa `CScrollView` obsługuje oba rodzaje widoków.  

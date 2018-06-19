@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890438"
 ---
 # <a name="text-tool-font-dialog-box-image-editor-for-icons"></a>Okno dialogowe czcionki narzędzi tekstowych (Edytor obrazów dla ikon)
 Określa ustawienia czcionki, korzystając z [okno dialogowe narzędzi tekstowych](../windows/text-tool-dialog-box-image-editor-for-icons.md) z [edytor obrazów](../windows/image-editor-for-icons.md).  

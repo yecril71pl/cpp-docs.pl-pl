@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379674"
 ---
 # <a name="servers-user-interface-issues"></a>Serwery: kwestie dotyczące interfejsu użytkownika
 Aplikacja serwera ma wiele funkcji, które muszą zostać dodane do interfejsu użytkownika do dostarczania elementów OLE do aplikacji kontenera. Aby uzyskać więcej informacji na menu i dodatkowe zasoby, które mają zostać dodane do aplikacji serwera, zobacz [menu i zasoby: dodatki do serwera](../mfc/menus-and-resources-server-additions.md).  

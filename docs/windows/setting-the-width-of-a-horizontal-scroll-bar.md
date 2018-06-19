@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892799"
 ---
 # <a name="setting-the-width-of-a-horizontal-scroll-bar"></a>Ustawianie szerokości poziomego paska przewijania
 Po dodaniu pola listy z poziomy pasek przewijania do okna dialogowego za pomocą klasy MFC na pasku przewijania nie będzie automatycznie wyświetlany w aplikacji.  

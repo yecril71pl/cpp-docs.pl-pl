@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381173"
 ---
 # <a name="registration"></a>Rejestracja
 Gdy użytkownik chce, aby wstawić element OLE do aplikacji, OLE wyświetla listę typów obiektów do wyboru. OLE pobiera tej listy z systemu bazie danych rejestracji, który zawiera informacje o wszystkich aplikacji serwera. Gdy serwer rejestruje się, wpisów, które następnie są umieszczane w bazie danych rejestracji systemu (rejestr) opis każdego typu obiektu, który dostarcza mu, rozszerzenia i ścieżki do samej siebie, między innymi informacje o pliku.  
