@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367943"
 ---
 # <a name="image-format"></a>Format obrazu
 Format obrazu wykonywalnego jest plikiem PE32 +. Obrazy wykonywalne (dll i exe) są ograniczone do maksymalnie rozmiar równy 2 gigabajty, więc względną adresowania o pojemności 32-bitowych może służyć do adresów statycznych danych. Te dane obejmują tabelę adresów importu, stałe typu string, statycznych danych globalnych i tak dalej.  

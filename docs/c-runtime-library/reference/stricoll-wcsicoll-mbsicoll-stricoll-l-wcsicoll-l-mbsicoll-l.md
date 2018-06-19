@@ -66,6 +66,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32416375"
 ---
 # <a name="stricoll-wcsicoll-mbsicoll-stricolll-wcsicolll-mbsicolll"></a>_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 
@@ -125,7 +126,7 @@ Każda z tych funkcji zwraca wartość wskazującą relacji z *ciąg1* do *ciąg
 |> 0|*ciąg1* większe *ciąg2*|
 |**_NLSCMPERROR**|Wystąpił błąd.|
 
-Każdy z tych funkcji zwraca **_NLSCMPERROR**. Aby użyć **_NLSCMPERROR**, zawiera \<string.h > lub \<mbstring.h >. **_wcsicoll —** może zakończyć się niepowodzeniem, jeśli dowolny *ciąg1* lub *ciąg2* zawiera kody znaków dwubajtowych spoza domeny sekwencję sortowania. Po wystąpieniu błędu **_wcsicoll —** mogą ustawiać **errno** do **einval —**. Aby sprawdzić, czy błąd w wywołaniu **_wcsicoll —**ustaw **errno** 0, a następnie sprawdź **errno** po wywołaniu **_wcsicoll —**.
+Każdy z tych funkcji zwraca **_NLSCMPERROR**. Aby użyć **_NLSCMPERROR**, zawiera \<string.h > lub \<mbstring.h >. **_wcsicoll —** może zakończyć się niepowodzeniem, jeśli dowolny *ciąg1* lub *ciąg2* zawiera kody znaków dwubajtowych spoza domeny sekwencję sortowania. Po wystąpieniu błędu **_wcsicoll —** mogą ustawiać **errno** do **einval —**. Aby sprawdzić, czy błąd w wywołaniu **_wcsicoll —** ustaw **errno** 0, a następnie sprawdź **errno** po wywołaniu **_wcsicoll —**.
 
 ## <a name="remarks"></a>Uwagi
 

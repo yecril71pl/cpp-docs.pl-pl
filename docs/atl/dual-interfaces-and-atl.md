@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355049"
 ---
 # <a name="dual-interfaces-and-atl"></a>Podwójne interfejsy i ATL
 Podwójna interfejs umożliwiający jego metody można uzyskać dostępu do metody dispinterface lub metody vtable. W tej sekcji opisano niektóre funkcje podwójne interfejsy z perspektywy ATL.  

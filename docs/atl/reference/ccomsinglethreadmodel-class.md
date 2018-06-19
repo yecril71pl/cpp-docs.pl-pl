@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365103"
 ---
 # <a name="ccomsinglethreadmodel-class"></a>Klasa CComSingleThreadModel
 Ta klasa dostarcza metody zwiększanie oraz zmniejszanie wartości zmiennej.  

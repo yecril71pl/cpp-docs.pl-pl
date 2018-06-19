@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356498"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>Modyfikowanie formant ATL DHTML
 Kreator formantu ATL zawiera kod startowy, możesz skompilować i uruchomić formantu i pozwala zobaczyć, jak te metody są zapisywane w plikach projektu i jak DHTML wywołuje kodu C++ formantu przy użyciu metod wysyłania. Możesz dodać dowolną metodę wysyłania do interfejsu. Następnie można wywołać metody w zasobie HTML.  

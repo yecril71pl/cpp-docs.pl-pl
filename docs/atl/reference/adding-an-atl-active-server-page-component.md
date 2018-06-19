@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356469"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>Dodawanie składnika strony Active Server ATL
 Aby dodać obiekt Active Template Library (ATL) do projektu, projektu musi być utworzony jako aplikacji ATL COM lub aplikacji z obsługą ATL MFC. Można użyć [Kreator projektu ATL](../../atl/reference/atl-project-wizard.md) do tworzenia aplikacji ATL, można wybrać **Dodaj obsługę ATL do MFC** z [Dodaj klasę — okno dialogowe](../../ide/add-class-dialog-box.md) okno dialogowe, lub można [Dodaj obiekt ATL do aplikacji MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) ATL Obsługa aplikacji MFC.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359360"
 ---
 # <a name="com-10-support-in-atl-projects"></a>Model COM + 1.0 obsługuje w projekty ATL
 Można użyć [Kreator projektu ATL](../../atl/reference/creating-an-atl-project.md) do utworzenia projektu z obsługą podstawowe składniki modelu COM + 1.0.  

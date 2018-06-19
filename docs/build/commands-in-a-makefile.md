@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366877"
 ---
 # <a name="commands-in-a-makefile"></a>Polecenia w pliku reguł programu Make
 Opis reguły blokowanie lub wnioskowania określa blok polecenia do uruchomienia, jeśli zależność jest nieaktualne. NMAKE Wyświetla każde polecenie przed uruchomieniem go, chyba że/s, **. DYSKRETNEJ**, **! CMDSWITCHES**, lub @ jest używany. NMAKE szuka reguły wnioskowania dopasowania, jeśli blok opis nie następuje blok poleceń.  

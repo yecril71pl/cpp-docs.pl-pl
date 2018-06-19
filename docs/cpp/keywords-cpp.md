@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424766"
 ---
 # <a name="keywords-c"></a>Słowa kluczowe (C++)
 Słowa kluczowe są wstępnie zdefiniowane identyfikatory zastrzeżonych, które mają specjalne znaczenie. Nie można można używać jako identyfikatorów w programie. Poniższe słowa kluczowe są zastrzeżone dla Microsoft C++. Nazwy na początku podkreślenia są rozszerzenia Microsoft.  

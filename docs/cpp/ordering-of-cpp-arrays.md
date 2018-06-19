@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419969"
 ---
 # <a name="ordering-of-c-arrays"></a>Porządkowanie tablic C++
 C++ — tablice są przechowywane w kolejności wierszy. Kolejność wierszy oznacza, że ostatni indeks dolny zmienia się najszybciej.  

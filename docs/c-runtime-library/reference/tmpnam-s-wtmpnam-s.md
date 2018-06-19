@@ -45,6 +45,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415531"
 ---
 # <a name="tmpnams-wtmpnams"></a>tmpnam_s, _wtmpnam_s
 
@@ -97,7 +98,7 @@ Jeśli *str* jest **NULL**, program obsługi nieprawidłowych parametrów zostan
 
 Każda z tych funkcji zwraca nazwę pliku, który obecnie nie istnieje. **tmpnam_s —** zwraca nazwę unikatową w bieżącym katalogu roboczym. Należy zauważyć, że jeśli nazwa pliku jest pre oczekującego ukośnika odwrotnego i nie informacji ścieżki, takich jak \fname21, oznacza to, że nazwa jest nieprawidłowa dla bieżącego katalogu roboczego.
 
-Aby uzyskać **tmpnam_s —**, można przechowywać tej nazwy pliku wygenerowanego w *str*. Maksymalna długość ciągu zwróconego przez **tmpnam_s —** jest **l_tmpnam_s —**zdefiniowanej w stdio —. H. Jeśli *str* jest **NULL**, następnie **tmpnam_s —** pozostawia wynik w statycznej buforu wewnętrznego. W związku z tym kolejnych wywołań zniszczyć tej wartości. Nazwa wygenerowana przez **tmpnam_s —** składa się nazwy pliku generowanych przez program i po pierwszym wywołaniu **tmpnam_s —**, rozszerzenie pliku numerów sekwencyjnych w podstawowej 32 (.1 .1vvvvvu, gdy **TMP _MAX_S** w stdio —. H jest **int_max —**).
+Aby uzyskać **tmpnam_s —**, można przechowywać tej nazwy pliku wygenerowanego w *str*. Maksymalna długość ciągu zwróconego przez **tmpnam_s —** jest **l_tmpnam_s —** zdefiniowanej w stdio —. H. Jeśli *str* jest **NULL**, następnie **tmpnam_s —** pozostawia wynik w statycznej buforu wewnętrznego. W związku z tym kolejnych wywołań zniszczyć tej wartości. Nazwa wygenerowana przez **tmpnam_s —** składa się nazwy pliku generowanych przez program i po pierwszym wywołaniu **tmpnam_s —**, rozszerzenie pliku numerów sekwencyjnych w podstawowej 32 (.1 .1vvvvvu, gdy **TMP _MAX_S** w stdio —. H jest **int_max —**).
 
 **tmpnam_s —** dojść do ciągu znaków wielobajtowych argumenty zgodnie z potrzebami, rozpoznawanie wielobajtowych sekwencji znaków zgodnie ze strony kodowej OEM uzyskane automatycznie z systemu operacyjnego. **_wtmpnam_s —** jest wersja znaków dwubajtowych **tmpnam_s —**; argumentów i wartości **_wtmpnam_s —** są ciągami znaków dwubajtowych. **_wtmpnam_s —** i **tmpnam_s —** zachowują się tak samo, z wyjątkiem **_wtmpnam_s —** nie obsługuje ciągów znaków wielobajtowych.
 

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356525"
 ---
 # <a name="atl-event-handling-summary"></a>Podsumowanie obsługi zdarzenia ATL
 Ogólnie rzecz biorąc Obsługa zdarzeń COM jest procesem stosunkowo proste. Istnieją trzy główne kroki:  

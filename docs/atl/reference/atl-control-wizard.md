@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363532"
 ---
 # <a name="atl-control-wizard"></a>Kreator formantu ATL
 Wstawia do Projekt ATL (lub projektu MFC z obsługą ATL) formantu ATL. Ten kreator służy do wstawienia jedną z trzech rodzajów kontrolek:  

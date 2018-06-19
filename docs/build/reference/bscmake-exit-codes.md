@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369231"
 ---
 # <a name="bscmake-exit-codes"></a>Kody zakończenia BSCMAKE
 BSCMAKE zwraca kod zakończenia (nazywane również kodu powrotnego lub kod błędu) do systemu operacyjnego lub program wywołujący.  

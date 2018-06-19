@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360783"
 ---
 # <a name="bitfields"></a>Pola bitów
 Pola bitowe struktury są ograniczone do 64-bitowy i może być typu podpisany int, int bez znaku, int64 lub int64 bez znaku. Pola bitowe, które przekraczają granicę typu pominie usługi bits, aby były wyrównane bitfield do następnego wyrównania typu. Pola bitów liczba całkowita może na przykład przecina graniczny 32-bitowych.  

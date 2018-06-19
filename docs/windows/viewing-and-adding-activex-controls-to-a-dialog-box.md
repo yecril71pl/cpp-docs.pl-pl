@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891169"
 ---
 # <a name="viewing-and-adding-activex-controls-to-a-dialog-box"></a>Wyświetlanie i dodawanie kontrolek ActiveX do okna dialogowego
 Program Visual Studio umożliwia wstawianie formantów ActiveX do użytkownika — okno dialogowe.  

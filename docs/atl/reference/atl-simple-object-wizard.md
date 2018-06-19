@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363972"
 ---
 # <a name="atl-simple-object-wizard"></a>Kreator prostych obiektów ATL
 Ten kreator wstawia do projektu minimalnego obiektu COM. Ta strona kreatora umożliwia określenie nazwy, które zidentyfikować klasę C++ i pliki dla obiekt i jego funkcje COM.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089820"
 ---
 # <a name="use-database-forms-record-views-with-odbc"></a>Używanie formularzy bazy danych (widoków rekordów) z ODBC
 Niektóre aplikacje, takie jak wprowadzania danych lub wyświetlanie danych wymagają widok z okna dialogowego styl formantu w formularzu.  

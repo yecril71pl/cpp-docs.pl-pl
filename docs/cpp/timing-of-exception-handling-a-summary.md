@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422179"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>Chronometraż dla obsługi wyjątków: podsumowanie
 Program obsługi przerwania jest wykonywany niezależnie od tego, w jaki sposób został przerwany blok instrukcji `__try`. Przyczyny obejmują skok na zewnątrz bloku `__try`, instrukcję `longjmp`, która przenosi sterowanie na zewnątrz bloku i odwinięcie stosu wskutek obsługi wyjątku.  

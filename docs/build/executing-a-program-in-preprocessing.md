@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367202"
 ---
 # <a name="executing-a-program-in-preprocessing"></a>Wykonywanie programu w przetwarzaniu wstępnym
 Aby użyć kod zakończenia polecenia podczas przetwarzania wstępnego, należy określić polecenia, z żadnych argumentów w nawiasy kwadratowe ([]). Makra są rozwinięte przed wykonaniem polecenia. NMAKE zastępuje Specyfikacja polecenia kod zakończenia polecenia, którego można użyć do kontrolowania przetwarzania wstępnego w wyrażeniu.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359022"
 ---
 # <a name="cmessagemap-class"></a>Klasa CMessageMap
 Ta klasa umożliwia mapy wiadomości obiektu jako dostępu przez inny obiekt.  

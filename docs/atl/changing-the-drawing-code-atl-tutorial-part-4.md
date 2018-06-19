@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358915"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>Zmiana kodu rysującego (ATL — Samouczek, część 4)
 Domyślnie kod rysowania formantu Wyświetla kwadrat i tekst **PolyCtl**. W tym kroku zostanie zmieniony kod, aby wyświetlić ciekawsze. Obejmuje następujące zadania:  

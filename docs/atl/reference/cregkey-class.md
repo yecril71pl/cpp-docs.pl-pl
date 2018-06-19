@@ -57,6 +57,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366643"
 ---
 # <a name="cregkey-class"></a>Klasa CRegKey
 Ta klasa dostarcza metody do manipulowania wpisy w rejestrze systemu.  

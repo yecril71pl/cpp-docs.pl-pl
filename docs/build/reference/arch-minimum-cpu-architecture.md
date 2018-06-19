@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368993"
 ---
 # <a name="arch-minimum-cpu-architecture"></a>/arch (minimalna architektura procesora)
 Opcje architektura Określ architekturę dla generowania kodu. Wybierz podstawowej architektury, które użytkownik pracuje z Zobacz / arch opcje dla tej platformy docelowej.  

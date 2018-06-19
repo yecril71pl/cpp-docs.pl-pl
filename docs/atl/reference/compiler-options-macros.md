@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365856"
 ---
 # <a name="compiler-options-macros"></a>Makra opcji kompilatora
 Te makra kontrolowania kompilatora określonych funkcji.  

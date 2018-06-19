@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105754"
 ---
 # <a name="binarydelegatenoreturn-stlclr"></a>binary_delegate_noreturn (STL/CLR)
 Klasa genereic opisuje delegata dwuargumentowej, który zwraca `void`. Możesz używać go określić delegowanego w jej argument.  

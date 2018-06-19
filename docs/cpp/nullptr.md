@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419646"
 ---
 # <a name="nullptr"></a>nullptr
 Określa stałą pustego wskaźnika typu `std::nullptr_t`, która jest możliwe do przekonwertowania na dowolny typ wskaźnika raw.  Mimo że można użyć słowa kluczowego `nullptr` bez uwzględniania wszelkie nagłówki, jeśli kod używa typu `std::nullptr_t`, a następnie zdefiniuj przez dołączenie nagłówka `<cstddef>`.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356938"
 ---
 # <a name="adding-an-atl-control"></a>Dodawanie formantu ATL
 Użyj tego kreatora, aby dodać obiekt interfejsu użytkownika do projektu, który obsługuje interfejsy dla wszystkich potencjalnych kontenerów. Aby obsługiwać te interfejsy, projekt musi być utworzony jako aplikacji ATL lub zawierający obsługi ATL aplikacji MFC. Można użyć [Kreator projektu ATL](../../atl/reference/atl-project-wizard.md) Aby utworzyć aplikację ATL lub [Dodaj obiekt ATL do aplikacji MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) ATL Obsługa aplikacji MFC.  

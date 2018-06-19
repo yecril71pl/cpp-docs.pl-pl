@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365259"
 ---
 # <a name="ienumonstlimpl-class"></a>Klasa IEnumOnSTLImpl
 Ta klasa definiuje interfejs modułu wyliczającego oparte na kolekcji standardowa biblioteka C++.  

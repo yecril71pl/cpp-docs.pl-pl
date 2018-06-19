@@ -48,6 +48,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32403335"
 ---
 # <a name="putchnolock-putwchnolock"></a>_putch_nolock, _putwch_nolock
 
@@ -78,7 +79,7 @@ Zwraca *c* w przypadku powodzenia. Jeśli **_putch_nolock —** nie powiedzie si
 
 ## <a name="remarks"></a>Uwagi
 
-**_putch_nolock —** i **_putwch_nolock —** są takie same jak **_putch —** i **_putwch —**odpowiednio z tą różnicą, że nie są chronione przed zakłóceniami przez inne wątki. Może być szybsze, ponieważ nie wiążą się z obciążenie zablokowania inne wątki. Ich używać tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.
+**_putch_nolock —** i **_putwch_nolock —** są takie same jak **_putch —** i **_putwch —** odpowiednio z tą różnicą, że nie są chronione przed zakłóceniami przez inne wątki. Może być szybsze, ponieważ nie wiążą się z obciążenie zablokowania inne wątki. Ich używać tylko w kontekstach wątkowo, np. aplikacje jednowątkowe lub gdzie wywoływania zakres już obsługuje izolacji wątku.
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 

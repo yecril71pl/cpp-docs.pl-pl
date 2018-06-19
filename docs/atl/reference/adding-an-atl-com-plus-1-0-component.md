@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355794"
 ---
 # <a name="adding-an-atl-com-10-component"></a>Dodawanie składnika ATL COM + 1.0
 Ten kreator dodaje obiekt do projektu obsługującego usług COM + 1.0, w tym transakcji.  

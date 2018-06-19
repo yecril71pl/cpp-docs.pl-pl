@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358251"
 ---
 # <a name="reference-counting"></a>Liczenie odwołań
 COM sam nie automatycznie próbuje usunąć obiekt z pamięci po sądzi, że obiekt jest już używany. Zamiast tego obiektu programisty należy usunąć nieużywane obiektu. Programistę Określa, czy obiekt można usunąć zależności od liczby odwołania.  

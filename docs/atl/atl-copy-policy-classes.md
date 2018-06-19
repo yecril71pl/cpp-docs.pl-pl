@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358530"
 ---
 # <a name="atl-copy-policy-classes"></a>Klasy zasad kopii ATL
 Kopiowanie zasady klasy są [klasy narzędzi](../atl/utility-classes.md) używany do inicjowania, kopiowanie i usuwanie danych. Klasy zasad kopii pozwalają Aby zdefiniować semantykę kopiowania dla dowolnego typu danych oraz do definiowania konwersje między różnych typów danych.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093549"
 ---
 # <a name="adding-an-interface-to-your-provider"></a>Dodawanie interfejsu do dostawcy
 Określenia, które obiekty chcesz dodać interfejsu (zazwyczaj danych źródła wierszy, polecenie albo sesji obiektów utworzonych przez kreatora dostawcy bazy danych OLE). Istnieje możliwość, że obiekt, należy dodać interfejs do to taki, który dostawca nie obsługuje obecnie. W takim przypadku Kreator ATL OLE DB dostawcy do utworzenia obiektu. Kliknij prawym przyciskiem myszy projekt w widoku klas, kliknij przycisk **Dodaj klasę** z **Dodaj** menu, a następnie kliknij przycisk **ATL dostawcy OLE DB**. Możesz chcieć umieść kod interfejsu w oddzielnym katalogu, a następnie skopiuj pliki do projektu dostawcy.  

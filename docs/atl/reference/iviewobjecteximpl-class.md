@@ -37,6 +37,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365914"
 ---
 # <a name="iviewobjecteximpl-class"></a>Klasa IViewObjectExImpl
 Ta klasa implementuje **IUnknown** i zawiera domyślne implementacje [IViewObject](http://msdn.microsoft.com/library/windows/desktop/ms680763), [IViewObject2](http://msdn.microsoft.com/library/windows/desktop/ms691318), i [IViewObjectEx](http://msdn.microsoft.com/library/windows/desktop/ms682375)interfejsów.  

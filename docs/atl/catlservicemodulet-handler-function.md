@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354997"
 ---
 # <a name="catlservicemodulethandler-function"></a>Funkcja CAtlServiceModuleT::Handler
 `CAtlServiceModuleT::Handler` jest procedura, która wywołuje Menedżera sterowania usługami (SCM) można pobrać stanu usługi i nadaj mu różnych instrukcje (na przykład zatrzymanie lub wstrzymanie). Menedżer sterowania usługami przekazuje kod operacji `Handler` wskaż, jakie działanie ma wykonać usługi. Domyślna usługa wygenerowany ATL obsługuje tylko instrukcje stop. Jeśli Menedżer sterowania usługami przekazuje instrukcje stop, usługa informuje SCM program o zbliżającym się zatrzymać. Wywołuje usługę `PostThreadMessage` można wysłać komunikat o rezygnacji do samej siebie. To kończy pętlę komunikatów i usługa ostatecznie zostanie zamknięte.  

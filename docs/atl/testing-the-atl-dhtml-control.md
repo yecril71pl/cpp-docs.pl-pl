@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361869"
 ---
 # <a name="testing-the-atl-dhtml-control"></a>Testowanie formant ATL DHTML
 Po utworzeniu projektu możesz skompilować i sprawdzić formant przykładowe. Zanim to zrobisz, użyj widoku klasy i Eksploratora rozwiązań Sprawdź projektu. Elementy projektu są opisane bardziej szczegółowo w [określający elementy projektu kontroli DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md).  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367488"
 ---
 # <a name="filename-parts-syntax"></a>Składnia nazwy pliku-części
 Składnia nazwy pliku części w poleceniach reprezentuje składniki pierwszy filename zależne (które mogą być domniemanych zależnych). Składniki filename są dysku pliku, ścieżka, nazwie podstawowej i rozszerzenia określone, nie, które znajdują się na dysku. Użyj **%s** do reprezentowania pełną nazwę pliku. Użyj **%&#124;**[*części*]**F** (pionowy pasek symbol procentu następuje znak) do reprezentowania części nazwy pliku, gdzie *części*może być zero lub więcej z następujących liter, w dowolnej kolejności.  

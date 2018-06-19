@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359035"
 ---
 # <a name="ccomobjectroot-class"></a>Klasa CComObjectRoot
 Ten element typedef z [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) którego jest ma zastosowany szablon domyślny model serwera wątków.  

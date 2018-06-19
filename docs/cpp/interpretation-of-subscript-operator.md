@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420476"
 ---
 # <a name="interpretation-of-subscript-operator"></a>Interpretacja operatora indeksu dolnego
 Jak innymi operatorami operator indeksu dolnego (**[**) można ponownie zdefiniować przez użytkownika. Domyślnym zachowaniem operatora indeksu dolnego, jeśli nie jest przeciążona, jest łączenie nazwa tablicy i indeks przy użyciu następujących metod:  

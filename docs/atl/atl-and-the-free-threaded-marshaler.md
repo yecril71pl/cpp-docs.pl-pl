@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355829"
 ---
 # <a name="atl-and-the-free-threaded-marshaler"></a>ATL i marshaler trybu wolnych wątków
 Strona atrybutów ATL prosty obiekt kreatora zawiera opcję umożliwiającą klasy agregacji Organizator trybu wolnych wątków (FTM).  

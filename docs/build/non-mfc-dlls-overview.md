@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368645"
 ---
 # <a name="non-mfc-dlls-overview"></a>Biblioteki DLL inne niż MFC: omówienie
 Z systemem innym niż DLL MFC — jest bibliotekę DLL, która nie używa wewnętrznie MFC i funkcje wyeksportowane w bibliotece DLL może być wywoływany przez MFC lub innego typu niż MFC plików wykonywalnych. Funkcje zazwyczaj są eksportowane z innych niż - biblioteki MFC DLL przy użyciu standardowych interfejsów C.  

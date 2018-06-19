@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357203"
 ---
 # <a name="atlmfc-shared-classes"></a>Klasy współdzielone ATL/MFC
 Te klasy narzędzia mogą być używane w dowolnej natywnego projektu C++ bez konieczności każdej biblioteki DLL MFC.  

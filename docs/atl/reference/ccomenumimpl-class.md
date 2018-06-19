@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365031"
 ---
 # <a name="ccomenumimpl-class"></a>Klasa CComEnumImpl
 Ta klasa zawiera implementację interfejsu COM modułu wyliczającego przechowywania wyliczany elementów w tablicy.  

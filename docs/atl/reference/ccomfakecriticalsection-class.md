@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358618"
 ---
 # <a name="ccomfakecriticalsection-class"></a>Klasa CComFakeCriticalSection
 Ta klasa zawiera te same metody jako [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) , ale nie zawiera sekcja krytyczna.  

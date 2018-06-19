@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415148"
 ---
 # <a name="how-to-create-and-use-weakptr-instances"></a>Porady: tworzenie wystąpień weak_ptr i korzystanie z nich
 Czasami muszą być przechowywane sposobem uzyskania dostępu do obiektu źródłowego obiektu `shared_ptr` bez spowodowania, że liczba odwołań do jest zwiększany. Zwykle ta sytuacja występuje, gdy masz cykliczne odwołanie pomiędzy `shared_ptr` wystąpień.  

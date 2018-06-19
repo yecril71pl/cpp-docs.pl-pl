@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092561"
 ---
 # <a name="quick-reference-ccx"></a>Krótki przewodnik (C + +/ CX)
 Środowisko wykonawcze systemu Windows obsługuje aplikacje systemu Windows platformy Uniwersalnej, wykonać tylko w środowisku godne zaufania systemu operacyjnego, korzystając z funkcji autoryzowanych, typy danych i urządzeń, które są dystrybuowane za pośrednictwem Microsoft Store. C + +/ CX uprościć podczas opracowywania aplikacji dla środowiska uruchomieniowego systemu Windows. W tym artykule jest szybkie odwołanie; bardziej szczegółowy dokumentację można znaleźć [System typów](../cppcx/type-system-c-cx.md) i [Component Extensions dla platform środowiska uruchomieniowego](http://go.microsoft.com/fwlink/p/?linkid=228720).  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368515"
 ---
 # <a name="importing-data-using-declspecdllimport"></a>Importowanie danych przy użyciu atrybutu __declspec(dllimport)
 W przypadku danych przy użyciu **__declspec(dllimport)** jest elementem wygody, która usuwa warstwa pośrednia. Podczas importowania danych z biblioteki DLL, musisz przejść przez tabelę adresów importu. Przed **__declspec(dllimport)**, oznacza to pamiętaj, aby wykonać dodatkowy poziom pośredni podczas uzyskiwania dostępu do danych eksportu z biblioteki DLL:  

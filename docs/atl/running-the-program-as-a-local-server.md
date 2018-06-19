@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360446"
 ---
 # <a name="running-the-program-as-a-local-server"></a>Program działa jako serwer lokalny
 Jeśli program działa jako usługa jest niewygodne, można tymczasowo zmienić rejestru, aby program jest uruchamiany jako normalne serwera lokalnego. Po prostu zmienić `LocalService` wartości w ramach identyfikator aplikacji, który `_LocalService` i upewnij się, `LocalServer32` klucza w Twojej CLSID została poprawnie ustawiona. (Należy pamiętać, że za pomocą DCOMCNFG, aby określić, że aplikacja powinien być wykonywany na innym komputerze zmienia nazwę Twojej `LocalServer32` klucza `_LocalServer32`.) Uruchomić program zgodnie z lokalnego serwera zajmuje kilka sekund podczas uruchamiania, ponieważ wywołanie **StartServiceCtrlDispatcher** w `CAtlServiceModuleT::Start` zajmuje kilka sekund przed jej nie powiedzie się.  

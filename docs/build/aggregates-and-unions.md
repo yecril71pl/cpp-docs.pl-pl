@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363262"
 ---
 # <a name="aggregates-and-unions"></a>Agregacje i unie
 Innych typów, takich jak tablice, struktur i Unii, mieć bardziej rygorystyczne wymagania dotyczące wyrównywania, zapewniając spójne Unii i agregacji magazynu i danych pobierania. Poniżej przedstawiono definicje dla tablic, struktury i Unii:  

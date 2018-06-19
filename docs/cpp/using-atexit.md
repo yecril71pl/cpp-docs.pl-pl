@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420970"
 ---
 # <a name="using-atexit"></a>Używanie funkcji atexit
 Z [atexit —](../c-runtime-library/reference/atexit.md) funkcji, można określić funkcji przetwarzania zakończenia, która wykonuje przed Kończenie działania programu. Nie statycznych obiektów globalnych zainicjowany przed wywołaniem do `atexit` zostaną zniszczone przed wykonywanie funkcji przetwarzania zakończenia.  

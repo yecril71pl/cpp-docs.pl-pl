@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356676"
 ---
 # <a name="atl-wizards-and-dialog-boxes"></a>ATL kreatorach i oknach dialogowych
 Kreatorzy Active Template Library (ATL) Generowanie schematyczny kod dla różnych typów obiektów COM. Można uruchomić kreatorów przez otwarcie menu skrótów projektu w **Eksploratora rozwiązań** i wybierając polecenie **Dodaj**, **klasy**.  

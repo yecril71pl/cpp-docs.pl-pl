@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360103"
 ---
 # <a name="marshaling"></a>Organizowanie
 Organizowanie techniki COM umożliwia interfejsach udostępnionych za pomocą obiektu w jednym procesie do użycia w innym procesie. W przekazywanie, COM udostępnia kod (lub korzysta z kodu udostępniane przez osoby wdrażającej interfejs) do pakietu parametrów metod do formatu, który można przenosić między procesami (i wielu sieci dla procesów uruchomionych na innych komputerach) i Rozpakuj tych parametrów na drugim końcu. Podobnie COM, należy wykonać te same czynności na powrót z wywołania.  

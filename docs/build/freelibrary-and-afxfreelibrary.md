@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367514"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary i AfxFreeLibrary
 Procesy, które jawnie link do wywołania DLL [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188) działać, jeśli moduł biblioteki DLL nie jest już potrzebne. To funkcja zmniejsza liczbę odwołanie do modułu i jeśli liczba odwołań wynosi zero, usuwa ją z przestrzeni adresowej procesu mapowanie.  

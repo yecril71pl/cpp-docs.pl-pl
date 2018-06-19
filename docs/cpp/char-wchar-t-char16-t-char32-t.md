@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413898"
 ---
 # <a name="char-wchart-char16t-char32t"></a>char, wchar_t, char16_t, char32_t
 Typy **char**, **wchar_t**, **char16_t** i **char32_t** są wbudowane typy, które reprezentują znaki alfanumeryczne oraz Symbole inne niż alfanumeryczne oraz znaki niedrukowalne.

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367150"
 ---
 # <a name="function-pointers"></a>Wskaźniki funkcji
 Wskaźniki funkcji są po prostu wskaźników do etykiety odpowiednich funkcji. Nie ma żadnej tabeli spis treści wymagania dotyczące wskaźników funkcji.  

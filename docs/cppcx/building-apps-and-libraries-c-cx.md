@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086346"
 ---
 # <a name="building-apps-and-libraries-ccx"></a>Tworzenie aplikacji i bibliotek (C + +/ CX)
 Tematy w tej sekcji zawierają kilka szczegółowe informacje o systemie kompilacji do tworzenia aplikacji platformy uniwersalnej systemu Windows lub składnik środowiska wykonawczego systemu Windows.  

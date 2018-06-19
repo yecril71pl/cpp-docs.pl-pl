@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357721"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Tworzenie projektu (ALT — Samouczek, część 1)
 Ten samouczek przedstawia instrukcje dotyczące nonattributed Projekt ATL, który tworzy obiekt ActiveX, który wyświetla wielokąta. Obiekt zawiera opcje dzięki czemu użytkownik Aby zmienić liczbę stron tworzących wielokąt i kod odświeżyć ekran.  

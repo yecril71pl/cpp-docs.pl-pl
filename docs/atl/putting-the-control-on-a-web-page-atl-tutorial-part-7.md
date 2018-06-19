@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362587"
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>Umieszczanie kontrolki na stronie sieci Web (ALT — Samouczek, część 7)
 Formant jest zakończone. Aby wyświetlić formantu pracy w rzeczywistych sytuacji, umieszcza je na stronie sieci Web. Plik HTML, który zawiera formant został utworzony podczas definiowania formantu. Otwórz plik PolyCtl.htm z **Eksploratora rozwiązań**, i zobaczysz formantu na stronie sieci Web.  

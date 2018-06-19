@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357248"
 ---
 # <a name="dcomcnfg"></a>DCOMCNFG
 **DCOMCNFG** to narzędzie systemu Windows NT 4.0, które można skonfigurować różne ustawienia specyficzne dla modelu DCOM w rejestrze. **DCOMCNFG** okno ma trzy strony: domyślne zabezpieczeń, właściwości domyślne i aplikacji. W systemie Windows 2000 czwartej stronie domyślne protokołów jest obecny.  

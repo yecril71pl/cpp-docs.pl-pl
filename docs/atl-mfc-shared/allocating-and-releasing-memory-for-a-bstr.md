@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358328"
 ---
 # <a name="allocating-and-releasing-memory-for-a-bstr"></a>Alokowanie i zwalnia pamięć dla typu BSTR
 Po utworzeniu `BSTR`s i przekazać je między obiektami COM, użytkownik musi należy ostrożnie traktowanie pamięci ich użyć w celu uniknięcia przecieki pamięci. Gdy `BSTR` pozostaje w interfejsie, należy zwolnić pamięci po zakończeniu z nim. Jednakże, gdy `BSTR` przekazuje z interfejsu, odbierająca obiekt bierze odpowiedzialność za jego zarządzania pamięcią.  

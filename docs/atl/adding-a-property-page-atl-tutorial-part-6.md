@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361593"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>Dodawanie strony właściwości (ALT — Samouczek, część 6)
 Strony właściwości są zaimplementowane jako osobne obiekty COM, które pozwalają na udostępnionym, jeśli jest to wymagane. W tym kroku spowoduje wykonanie następujących zadań, które można dodać strony właściwości do kontrolki:  

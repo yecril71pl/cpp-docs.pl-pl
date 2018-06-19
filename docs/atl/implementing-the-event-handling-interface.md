@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356311"
 ---
 # <a name="implementing-the-event-handling-interface"></a>Implementowanie obsługi interfejsu zdarzeń
 ATL pomaga wszystkie trzy elementy wymagane do obsługi zdarzeń: implementacja interfejsu zdarzenia, udzielanie porad źródło zdarzenia i unadvising źródło zdarzenia. Dokładne kroki, które należy podjąć, zależą od typu interfejsu zdarzenia i wymagania dotyczące wydajności aplikacji.  

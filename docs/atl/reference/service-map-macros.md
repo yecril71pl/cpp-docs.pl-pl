@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364157"
 ---
 # <a name="service-map-macros"></a>Makra mapy usługi
 Te makra zdefiniuj mapy usług i zapisów.  

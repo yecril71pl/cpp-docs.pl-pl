@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355464"
 ---
 # <a name="calling-c-code-from-dhtml"></a>Wywoływanie kodu w języku C++ z DHTML
 Formant DHTML może być hostowana w kontenerze, takich jak kontener testu lub program Internet Explorer. Zobacz [testowanie właściwości i zdarzeń za pomocą kontenera testu](../mfc/testing-properties-and-events-with-test-container.md) informacji na temat sposobu dostępu kontener testu.  

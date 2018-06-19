@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358889"
 ---
 # <a name="ccomcritseclock-class"></a>Klasa CComCritSecLock
 Ta klasa dostarcza metody do blokowanie i odblokowywanie obiektu sekcja krytyczna.  

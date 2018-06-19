@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421825"
 ---
 # <a name="writing-an-exception-handler"></a>Pisanie programu do obsługi wyjątku
 Programy obsługi wyjątków są zwykle używane do odpowiadają na określone błędy. Za pomocą składni obsługi wyjątków, aby filtrować wszystkie wyjątki inne niż te, należy znać sposób obsługi. Pozostałe wyjątki powinny zostać przekazane do innych programów obsługi (prawdopodobnie w biblioteki wykonawczej lub system operacyjny) zapisywane do wyszukania tych określonych wyjątków.  

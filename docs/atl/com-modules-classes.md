@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354984"
 ---
 # <a name="com-modules-classes"></a>Klasy modułów COM
 Następujące klasy zapewniają obsługę modułem COM:  

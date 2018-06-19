@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420840"
 ---
 # <a name="startup-and-termination-c"></a>Uruchomienie i zakończenie (C++)
 Program Uruchamianie i kończenie działania są ułatwione przy użyciu dwóch funkcji: [głównego](../cpp/main-program-startup.md) i [zakończyć](../cpp/program-termination.md). Mogą być wykonywane inne uruchamianie i kończenie działania kodu.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354871"
 ---
 # <a name="active-template-library-atl-tutorial"></a>Biblioteka Active Template Library (ATL) — Samouczek
 ATL zaprojektowano w celu uproszczenia procesu tworzenia wydajne, elastyczne, lekkie formantów. W tym samouczku poprowadzi Cię przez tworzenie formantu ActiveX, prezentacja wiele podstawy ATL i COM.  

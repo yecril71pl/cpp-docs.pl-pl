@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355878"
 ---
 # <a name="programming-with-atl-and-c-run-time-code"></a>Programowanie za pomocą kodu ATL i C Run-Time
 W tej sekcji omówiono korzystanie z połączeń statyczne lub dynamiczne biblioteki wykonawcze języka C (CRT).  

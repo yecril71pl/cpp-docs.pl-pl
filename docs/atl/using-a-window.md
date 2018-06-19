@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358397"
 ---
 # <a name="using-a-window"></a>Przy użyciu okna
 Klasa [CWindow](../atl/reference/cwindow-class.md) umożliwia przy użyciu okna. Po podłączeniu okno, aby `CWindow` obiektu, można wywołać `CWindow` metoda manipulowania okna. `CWindow` zawiera także `HWND` operatora, aby przekonwertować `CWindow` do obiektu `HWND`. W związku z tym można przekazać `CWindow` obiektu dowolnej funkcji, które wymaga dojścia do okna. Można łatwo łączyć `CWindow` wywołania metody i wywołania funkcji Win32, bez tworzenia wszystkie obiekty tymczasowe.  

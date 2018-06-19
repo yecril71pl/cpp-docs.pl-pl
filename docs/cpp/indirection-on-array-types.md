@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418842"
 ---
 # <a name="indirection-on-array-types"></a>Pośrednie w typach tablic
 Użycie operatora pośredni (**\***) na *n*-wymiarową tablicą typu daje *n*tablicą wielowymiarową-1. Jeśli *n* 1, jest zwróciło skalarnych (lub element tablicy).  

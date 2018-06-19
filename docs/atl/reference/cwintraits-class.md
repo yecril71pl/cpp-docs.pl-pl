@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362511"
 ---
 # <a name="cwintraits-class"></a>Klasa CWinTraits
 Ta klasa udostępnia metodę standaryzacji style używane podczas tworzenia obiektu okna.  
@@ -71,7 +72,7 @@ template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
  Przeznaczona dla standardowych ramki okna. Standardowe style używane obejmują: **ws_overlappedwindow —**, **ws_clipchildren —**, i **ws_clipsiblings —**. Rozszerzone style używane obejmują: **ws_ex_appwindow —** i **ws_ex_windowedge —**.  
   
  `CMDIChildWinTraits`  
- Przeznaczona dla standardowych okna podrzędnego MDI. Standardowe style używane obejmują: **ws_overlappedwindow —**, **ws_child —**, **ws_visible —**, **ws_clipchildren —**i **Ws_clipsiblings —**. Rozszerzone style używane obejmują: **ws_ex_mdichild —**.  
+ Przeznaczona dla standardowych okna podrzędnego MDI. Standardowe style używane obejmują: **ws_overlappedwindow —**, **ws_child —**, **ws_visible —**, **ws_clipchildren —** i **Ws_clipsiblings —**. Rozszerzone style używane obejmują: **ws_ex_mdichild —**.  
   
  Jeśli chcesz upewnić się, że niektóre style są ustawione dla wszystkich wystąpień klasy okna, umożliwiając inne style określone na podstawie poszczególnych wystąpień [CWinTraitsOR](../../atl/reference/cwintraitsor-class.md) zamiast tego.  
   

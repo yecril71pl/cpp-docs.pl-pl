@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089382"
 ---
 # <a name="command-handlers-for-record-scrolling--mfc-data-access"></a>Programy obsługi poleceń dla rekordu przewijanie (dostęp do danych MFC)
 [CRecordView](../mfc/reference/crecordview-class.md) klasa udostępnia domyślne polecenie obsługi dla standardowych następujących poleceń:  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355403"
 ---
 # <a name="date-and-time-systemtime-support"></a>Data i godzina: Obsługa SYSTEMTIME
 [Ctime —](../atl-mfc-shared/reference/ctime-class.md) klasa ma konstruktorów akceptujących czas systemu i plik z Win32. Jeśli używasz `CTime` obiektów w tym celu należy zmodyfikować inicjalizacji odpowiednio, zgodnie z opisem w tym artykule.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363826"
 ---
 # <a name="atl-utilities-reference"></a>Odwołanie do narzędzi ALT
 ATL udostępnia kod do manipulowania adresy URL i ścieżki w formie [CPathT](../atl/reference/cpatht-class.md) i [CUrl](../atl/reference/curl-class.md). Puli wątków [CThreadPool](../atl/reference/cthreadpool-class.md), mogą być używane w aplikacji. Ten kod znajduje się w atlpath.h i atlutil.h.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366916"
 ---
 # <a name="conflicts-with-the-x86-compiler"></a>Konflikty z kompilatorem x86
 Typy danych, które są większe niż 4 bajty nie są automatycznie wyrównane na stosie w używania x86 kompilator, aby skompilować aplikację. Ponieważ architekturę x86 kompilatora jest 4-bajtowych stosu wyrównane, żadnych większych niż 4 bajty, na przykład 64-bitową liczbę całkowitą, nie można automatycznie wyrównać je do adresu 8-bajtowych.  

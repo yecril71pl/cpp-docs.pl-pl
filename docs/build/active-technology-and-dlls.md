@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360116"
 ---
 # <a name="active-technology-and-dlls"></a>Technologia Active i biblioteki DLL
 Technologia Active umożliwia serwerom obiektu do zaimplementowania całości wewnątrz biblioteki DLL. Ten typ serwera nosi nazwę serwera w procesie. MFC nie całkowicie obsługuje serwery wewnątrzprocesowe dla wszystkich funkcji edycja wizualna głównie, ponieważ jest to technologia Active nie umożliwiają serwerowi przyłączanie się do pętli komunikatów głównego kontenera. MFC wymaga dostępu do aplikacji kontenera pętli komunikatów do obsługi klawisze skrótów i przetwarzania w czasie bezczynności.  

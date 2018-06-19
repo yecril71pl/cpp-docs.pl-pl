@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363761"
 ---
 # <a name="ccomautothreadmodule-class"></a>Klasa CComAutoThreadModule
 Począwszy od ATL 7.0 `CComAutoThreadModule` jest przestarzała: zobacz [klasy modułów ALT](../../atl/atl-module-classes.md) więcej szczegółów.  

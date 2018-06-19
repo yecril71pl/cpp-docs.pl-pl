@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423421"
 ---
 # <a name="value-types-modern-c"></a>Typy wartości (Modern C++)
 Klasy C++ są przez typy wartości domyślnej. Ten temat zawiera wstępne omówienie typów wartości i problemy dotyczące ich stosowania.  

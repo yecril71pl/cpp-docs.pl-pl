@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362371"
 ---
 # <a name="understanding-window-traits"></a>Opis cech okna
 Klasy okien cech Podaj prostą metodę standaryzacji stylów używany do tworzenia obiektu ATL okna. Okno cechy są akceptowane jako parametry szablonu przez [CWindowImpl](../atl/reference/cwindowimpl-class.md) i innych klas okien ALT sposób zapewnienia domyślne style okna na poziomie klasy.  

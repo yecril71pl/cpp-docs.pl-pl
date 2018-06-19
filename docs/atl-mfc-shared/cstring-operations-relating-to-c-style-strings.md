@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361817"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>Cstring — operacji odnoszących się do ciągów w stylu języka C
 A [cstring —](../atl-mfc-shared/using-cstring.md) obiekt zawiera dane ciągu znaków. `CString` dziedziczy zbiór [metody i operatory](../atl-mfc-shared/reference/cstringt-class.md) które zostały zdefiniowane w szablonie klasy [CStringT](../atl-mfc-shared/reference/cstringt-class.md) do pracy z danych ciągu. (`CString` jest `typedef` który specjalizuje się `CStringT` do pracy z typu danych znakowych który `CString` obsługuje.)  

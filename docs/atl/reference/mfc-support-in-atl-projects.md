@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360644"
 ---
 # <a name="mfc-support-in-atl-projects"></a>Obsługa MFC w projekty ATL
 W przypadku wybrania **Obsługa MFC** w Kreatorze projektu ATL projektu deklaruje aplikacji jako obiekt aplikacji MFC (klasa). Inicjuje biblioteki MFC i tworzy wystąpienie klasy projektu (klasa *nazwa_projektu.nazwa_modułu.nazwa_procedury*) która jest pochodną [CWinApp](../../mfc/reference/cwinapp-class.md).  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094260"
 ---
 # <a name="collections-ccx"></a>Kolekcje (C + +/ CX)
 W języku C + +/ CX programu, możesz wprowadzić wolnego korzystanie z kontenerów standardowa biblioteka szablonów (STL) lub dowolnego typu kolekcja zdefiniowanych przez użytkownika. Jednak gdy przekazujesz kolekcji i z powrotem przez interfejs binarne (ABI) środowiska wykonawczego systemu Windows — na przykład do formantu XAML lub klientowi JavaScript — należy użyć typów kolekcji środowiska wykonawczego systemu Windows.  

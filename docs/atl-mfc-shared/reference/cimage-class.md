@@ -69,6 +69,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366318"
 ---
 # <a name="cimage-class"></a>CImage — klasa
 `CImage` Zapewnia obsługę rozszerzonych mapy bitowej, łącznie z możliwością przy ładowaniu i zapisywaniu obrazów w formacie JPEG, GIF, BMP i Portable Network Graphics (PNG).  

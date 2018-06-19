@@ -75,6 +75,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32416530"
 ---
 # <a name="strnicoll-wcsnicoll-mbsnicoll-strnicolll-wcsnicolll-mbsnicolll"></a>_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
 
@@ -142,7 +143,7 @@ Każda z tych funkcji zwraca wartość wskazującą relacji podciągów *ciąg1*
 |0|*ciąg1* taki sam jak *ciąg2*|
 |> 0|*ciąg1* większe *ciąg2*|
 
-Każdy z tych funkcji zwraca **_NLSCMPERROR**. Aby użyć **_NLSCMPERROR**, obejmują typu STRING. H lub MBSTRING. H. **_wcsnicoll —** może zakończyć się niepowodzeniem, jeśli dowolny *ciąg1* lub *ciąg2* zawiera kody znaków dwubajtowych spoza domeny sekwencję sortowania. Po wystąpieniu błędu **_wcsnicoll —** mogą ustawiać **errno** do **einval —**. Aby sprawdzić, czy błąd w wywołaniu **_wcsnicoll —**ustaw **errno** 0, a następnie sprawdź **errno** po wywołaniu **_wcsnicoll —**.
+Każdy z tych funkcji zwraca **_NLSCMPERROR**. Aby użyć **_NLSCMPERROR**, obejmują typu STRING. H lub MBSTRING. H. **_wcsnicoll —** może zakończyć się niepowodzeniem, jeśli dowolny *ciąg1* lub *ciąg2* zawiera kody znaków dwubajtowych spoza domeny sekwencję sortowania. Po wystąpieniu błędu **_wcsnicoll —** mogą ustawiać **errno** do **einval —**. Aby sprawdzić, czy błąd w wywołaniu **_wcsnicoll —** ustaw **errno** 0, a następnie sprawdź **errno** po wywołaniu **_wcsnicoll —**.
 
 ## <a name="remarks"></a>Uwagi
 

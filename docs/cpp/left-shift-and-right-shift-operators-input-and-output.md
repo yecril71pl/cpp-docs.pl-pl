@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422400"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operatory przesunięcia w lewo i w prawo (&gt; &gt; i &lt; &lt;)
 Operatory przesunięcia bitowego to operator przesunięcia w prawo (>>), który przenosi bity *wyrażenia przesunięcia* w prawo i operator przesunięcia w lewo (<<), który przenosi bity *shiftwyrażenie* po lewej stronie. <sup>1</sup>  

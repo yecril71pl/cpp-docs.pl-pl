@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356833"
 ---
 # <a name="cstring-argument-passing"></a>Przekazywanie argumentów cstring —
 W tym artykule opisano sposób przekazywania [cstring —](../atl-mfc-shared/reference/cstringt-class.md) obiekty funkcji i sposób zwracania `CString` obiektów z funkcji.  

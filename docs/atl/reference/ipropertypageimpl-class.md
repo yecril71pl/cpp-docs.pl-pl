@@ -46,6 +46,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365357"
 ---
 # <a name="ipropertypageimpl-class"></a>Klasa IPropertyPageImpl
 Ta klasa implementuje **IUnknown** i udostępnia domyślną implementację elementu [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) interfejsu.  

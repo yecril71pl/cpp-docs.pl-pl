@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424133"
 ---
 # <a name="semantics-of-expressions"></a>Semantyka wyrażeń
 Wyrażenia są oceniane według priorytetu i grupowanie ich operatorów. ([Priorytet i łączność](../cpp/cpp-built-in-operators-precedence-and-associativity.md) w [konwencje leksykalne](../cpp/lexical-conventions.md), przedstawiono relacje C++ operatory nakładają się na wyrażenia.)  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417412"
 ---
 # <a name="scanf-type-field-characters"></a>scanf — Znaki pola typu
 Poniższe informacje dotyczą poszczególnych `scanf` rodzinę funkcji, w tym bezpiecznego wersje, takie jak `scanf_s`.  

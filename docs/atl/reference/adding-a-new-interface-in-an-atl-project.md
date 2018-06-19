@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356748"
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>Dodawanie nowego interfejsu w Projekt ATL
 Po dodaniu interfejsu do obiektu lub formant tworzenia funkcji poza zastąpić jej metodą zastępczą dla każdej metody w tym interfejsie. W obiekcie lub kontrolki można dodać tylko interfejsy aktualnie znalezionych w istniejącej biblioteki typów. Ponadto musi implementować klasę, w którym można dodać interfejs [BEGIN_COM_MAP](com-map-macros.md#begin_com_map) makro lub, jeśli projekt jest przypisane, musi on mieć `coclass` atrybutu.  

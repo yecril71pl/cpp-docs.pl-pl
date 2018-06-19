@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361361"
 ---
 # <a name="cstrbuft-class"></a>Klasa CStrBufT
 Ta klasa udostępnia Oczyszczanie automatyczne zasobów dla `GetBuffer` i `ReleaseBuffer` wywołuje na istniejącym `CStringT` obiektu.  

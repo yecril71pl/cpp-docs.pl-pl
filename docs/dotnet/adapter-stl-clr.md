@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104524"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 Nagłówek STL/CLR `<cliext/adapter>` określa dwóch szablonów klas (`collection_adapter` i `range_adapter`), a funkcja szablonu `make_collection`.  

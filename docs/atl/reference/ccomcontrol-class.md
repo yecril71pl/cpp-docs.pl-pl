@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365558"
 ---
 # <a name="ccomcontrol-class"></a>Klasa CComControl
 Ta klasa dostarcza metody do tworzenia i zarządzania kontrolek ALT.  

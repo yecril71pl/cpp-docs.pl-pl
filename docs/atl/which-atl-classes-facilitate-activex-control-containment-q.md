@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361958"
 ---
 # <a name="which-atl-classes-facilitate-activex-control-containment"></a>Które klasy ATL ułatwienia zawierania formantów ActiveX?
 Kod hosting kontrolki w ATL nie wymagają użycia dowolnej klasy ATL; Możesz po prostu utworzyć **"AtlAxWin80"** okno i użyj interfejsu API hosting kontrolki w razie potrzeby (Aby uzyskać więcej informacji, zobacz **co to jest interfejs API Hosting formantu ATL**. Jednak następujące klasy ułatwić funkcje zawierania do użycia.  

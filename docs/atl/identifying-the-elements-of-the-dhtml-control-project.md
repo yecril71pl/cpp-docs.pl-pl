@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357685"
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>Określający elementy projektu kontroli DHTML
 Większość kodu kontroli DHTML dokładnie tak samo, jak to jest tworzony dla każdego formantu ATL. Dla podstawy Kod rodzajowy pracy za pośrednictwem [ALT — samouczek](../atl/active-template-library-atl-tutorial.md), i odczytywane sekcji [tworzenie Projekt ATL](../atl/reference/creating-an-atl-project.md) i [podstawy ATL obiektów COM](../atl/fundamentals-of-atl-com-objects.md).  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419784"
 ---
 # <a name="linkage-in-names-with-file-scope"></a>Połączenia nazw z zakresem pliku
 Mają zastosowanie następujące reguły połączenie nazwy (inne niż `typedef` i nazwy modułu wyliczającego) z zakresem pliku:  

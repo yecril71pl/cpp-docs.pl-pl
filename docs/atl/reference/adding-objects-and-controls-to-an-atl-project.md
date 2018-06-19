@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357776"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Dodawanie obiektów i kontroli do projektu ATL
 Można użyć jednego z kreatorów kodu ATL można dodać obiektu lub formantu do projektów ATL i MFC — na podstawie. Dla każdego obiektu modelu COM lub formantu można dodać, Kreator generuje .cpp i pliki .h, a także pliku .rgs obsługi opartych na skryptach rejestru. Następujących kreatorów kodu ATL są dostępne w programie Visual Studio:  

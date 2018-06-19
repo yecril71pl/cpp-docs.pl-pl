@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361973"
 ---
 # <a name="specifying-compiler-optimization-for-an-atl-project"></a>Określanie Optymalizacja kompilatora Projekt ATL
 Domyślnie [Kreator formantu ATL](../../atl/reference/atl-control-wizard.md) generuje nowe klasy z makra ATL_NO_VTABLE w następujący sposób:  

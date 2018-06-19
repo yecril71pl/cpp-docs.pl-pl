@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355636"
 ---
 # <a name="nonextensible-attribute"></a>nonextensible — atrybut
 Jeśli w czasie wykonywania nie zostanie rozszerzony podwójną interfejsu (oznacza to, że nie będzie zapewniać metody lub właściwości za pośrednictwem **IDispatch::Invoke** które nie są dostępne za pośrednictwem vtable), należy zastosować **nonextensible —** atrybut do definicji interfejsu. Ten atrybut informuje języków klienta (na przykład w języku Visual Basic), których można użyć, aby włączyć weryfikację pełnego kodu w czasie kompilacji. Jeśli ten atrybut nie zostanie podany, usterki mogą pozostać ukryte w kodzie klienta do czasu wykonywania.  

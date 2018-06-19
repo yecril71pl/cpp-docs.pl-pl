@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419132"
 ---
 # <a name="lexical-conventions"></a>Konwencje leksykalne
 Ten rozdział przedstawia główne elementy programu C++. Te elementy, zwane „elementami leksykalnymi” lub „tokenami”, są używane do konstruowania instrukcji, definicji, deklaracji i tak dalej, które z kolei są wykorzystywane do konstruowania całych programów. W tej sekcji omówiono następujące elementy leksykalne:

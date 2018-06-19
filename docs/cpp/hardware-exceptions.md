@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413963"
 ---
 # <a name="hardware-exceptions"></a>Wyjątki sprzętowe
 Do większości standardowych wyjątków rozpoznawanych przez system operacyjny należą wyjątki zdefiniowane przez sprzęt. System Windows rozpoznaje kilka wyjątków oprogramowania niskiego poziomu, ale są one zazwyczaj najlepiej obsługiwane przez system operacyjny.  

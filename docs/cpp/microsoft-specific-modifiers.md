@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420226"
 ---
 # <a name="microsoft-specific-modifiers"></a>Modyfikatory specyficzne dla firmy Microsoft
 W tej sekcji opisano specyficzne dla firmy Microsoft rozszerzeń języka C++ w następujących obszarach:  

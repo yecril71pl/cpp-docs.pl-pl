@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086899"
 ---
 # <a name="clr-integration-ccx"></a>Integrację środowiska CLR (C + +/ CX)
 Niektóre typy środowiska wykonawczego systemu Windows odbierania specjalnej obsługi w języku C + +/ CX oraz języki, które są oparte na środowisko uruchomieniowe języka wspólnego (CLR). W tym artykule opisano, jak kilka typów w jednym języku mapować do innego języka. Na przykład CLR mapuje Windows.Foundation.IVector interfejs System.Collections.IList, Windows.Foundation.IMap System.Collections.IDictionary i tak dalej. Podobnie, C + +/ CX specjalnie mapowania typów, takie jak Platform::Delegate i Platform::String.  

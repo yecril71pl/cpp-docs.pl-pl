@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410934"
 ---
 # <a name="text-and-binary-streams"></a>Strumienie binarne i tekstowe
 Strumień tekstu składa się z jednego lub więcej wierszy tekstu, które mogą być zapisywane na wyświetlenie tekstowych, dzięki czemu mogą być odczytywane. Podczas odczytywania ze strumienia tekstu, program odczytuje `NL` (nowego wiersza) pod koniec każdego wiersza. Podczas zapisywania do strumienia tekstu, program zapisuje `NL` która sygnalizuje koniec wiersza. Odpowiadające różne konwencje między środowiska docelowego reprezentujący tekstu w plikach funkcji biblioteki można zmienić numer reprezentacje znaków przesyłane między programem a strumienia tekstu.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356990"
 ---
 # <a name="cfixedstringt-class"></a>Klasa CFixedStringT
 Ta klasa reprezentuje obiekt ciągu z buforu, stały znaków.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357496"
 ---
 # <a name="implementing-property-pages"></a>Implementacja strony właściwości
 Strony właściwości są obiektów COM, które implementują `IPropertyPage` lub **IPropertyPage2** interfejsu. ATL zapewnia obsługę implementacja strony właściwości za pośrednictwem [Kreator strony właściwości ATL](../atl/reference/atl-property-page-wizard.md) w [okno dialogowe Dodaj klasę](../ide/add-class-dialog-box.md).  

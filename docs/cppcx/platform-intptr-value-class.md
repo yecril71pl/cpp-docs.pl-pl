@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088157"
 ---
 # <a name="platformintptr-value-class"></a>Klasa wartości Platform::IntPtr
 Reprezentuje podpisem wskaźnika lub dojścia i którego rozmiar jest specyficzne dla platformy (32-bitowy lub 64-bitowe).  

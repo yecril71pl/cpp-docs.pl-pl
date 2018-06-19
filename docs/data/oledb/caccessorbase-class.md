@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090799"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase — Klasa
 Wszystkie metody dostępu w szablonach OLE DB dziedziczyć po tej klasie. `CAccessorBase` Umożliwia jednego zestawu wierszy do zarządzania wielu metod dostępu. Umożliwia także powiązanie dla parametrów i kolumn wyjściowych.  

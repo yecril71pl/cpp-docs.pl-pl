@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367667"
 ---
 # <a name="dot-directives"></a>Dyrektywy Dot
 Określ dyrektywy dot poza blokiem opis na początku wiersza. Dyrektywy dot rozpoczynać się kropką (. ) i są z dwukropkiem (:). Karty i spacje są dozwolone. Nazwy dyrektywy dot jest uwzględniana wielkość liter i wielkimi literami.  

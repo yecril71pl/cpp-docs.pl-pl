@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359678"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>Implementowanie kolekcję C++ Standard biblioteki
 Udostępnia ATL `ICollectionOnSTLImpl` interfejs umożliwia szybkie rozpoczęcie interfejsy kolekcji na podstawie standardowa biblioteka C++ na obiektów. Aby zrozumieć, jak działa ta klasa, będzie działać przez prosty przykład (poniżej), który korzysta z tej klasy do zaimplementowania kolekcji tylko do odczytu, przeznaczony dla klientów automatyzacji.  

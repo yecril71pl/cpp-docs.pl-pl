@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368538"
 ---
 # <a name="importing-function-calls-using-declspecdllimport"></a>Importowanie wywołań funkcji przy użyciu atrybutu __declspec(dllimport)
 Poniższy przykładowy kod przedstawia sposób użycia **_declspec(dllimport)** do importowania wywołania funkcji z biblioteki DLL do aplikacji. Przyjęto założenie, że `func1` jest funkcją, która znajduje się w bibliotece DLL niezależnie od pliku .exe, który zawiera **głównego** funkcji.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367271"
 ---
 # <a name="expressions-in-makefile-preprocessing"></a>Wyrażenia w przetwarzaniu wstępnym pliku reguł programu Make
 **! Jeśli** lub **! ELSE IF** `constantexpression` składa się z stałe całkowite (w notacji dziesiętnej lub języka C), stałe typu string lub polecenia. Użyj nawiasów do wyrażeń grupy. Wyrażenia użyć stylu języka C podpisem długich liczb całkowitych arytmetyczne; numery są w formie uzupełnienia do dwóch 32-bitowe w zakresie od-2147483648 do 2147483647.  

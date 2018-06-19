@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421263"
 ---
 # <a name="virtual-specifier"></a>virtual — specyfikator
 [Wirtualnego](../cpp/virtual-cpp.md) — słowo kluczowe może odnosić się tylko do klasy Niestatyczne funkcje Członkowskie. Go oznacza, że powiązanie wywołań funkcji została odroczona do czasu wykonywania. Aby uzyskać więcej informacji, zobacz [funkcji wirtualnych](../cpp/virtual-functions.md).  

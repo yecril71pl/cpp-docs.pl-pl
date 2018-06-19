@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090227"
 ---
 # <a name="redistributing-odbc-components-to-your-customers"></a>Redystrybucja składników ODBC wśród klientów
 Jeśli funkcje programów ODBC Administrator należy dołączyć do aplikacji, należy rozproszyć użytkownikom również pliki, które uruchamiać te programy. Te pliki ODBC znajdują się w katalogu \OS\System dysku CD programu Visual C++. Plik Redistrb.wri i umowy licencyjnej, w tym samym katalogu zawierają listę plików ODBC, które można było ponownie dystrybuować.  

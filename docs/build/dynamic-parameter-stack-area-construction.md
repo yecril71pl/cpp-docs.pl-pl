@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367475"
 ---
 # <a name="dynamic-parameter-stack-area-construction"></a>Konstrukcja obszaru stosu parametru dynamicznego
 Jeśli używana jest wskaźnika ramki, istnieje możliwość dynamicznie utworzyć obszaru stosu parametru. To nie jest obecnie zrobione [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] kompilatora.  

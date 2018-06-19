@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367901"
 ---
 # <a name="inferred-dependents"></a>Zależności wywnioskowane
 Wywnioskowane zależnych pochodzi z reguły wnioskowania i jest oceniane przed jawne zależności. W przypadku nieaktualne względem jego docelowy wnioskowany zależne od NMAKE wywołuje blok poleceń dla zależności. Wywnioskowane zależne od nie istnieje lub jest nieaktualny w stosunku do jego własnej zależności, NMAKE najpierw aktualizuje wnioskowany zależnego. Aby uzyskać więcej informacji na temat zależności wywnioskowane, zobacz [zasady wnioskowania](../build/inference-rules.md).  

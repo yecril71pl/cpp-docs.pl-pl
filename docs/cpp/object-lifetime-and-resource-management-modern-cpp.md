@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423499"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>Okres istnienia obiektów i zarządzanie zasobami (Modern C++)
 W przeciwieństwie do zarządzanego języków C++ nie ma wyrzucanie elementów bezużytecznych (GC), który automatycznie zwalnia zasoby nie dłużej użycia pamięci podczas działania programu. W języku C++ zarządzanie zasobami jest bezpośrednio powiązana z okres istnienia obiektu. W tym dokumencie opisano czynników, które mają wpływ na okres istnienia obiektu w języku C++ oraz sposób zarządzania nim.  

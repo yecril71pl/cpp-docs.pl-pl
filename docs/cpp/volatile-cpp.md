@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423964"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 Kwalifikator typu można użyć, aby zadeklarować, że obiekt może być modyfikowany w programie przez sprzęt.  

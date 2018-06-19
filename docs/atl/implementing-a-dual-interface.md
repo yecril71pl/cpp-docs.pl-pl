@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356735"
 ---
 # <a name="implementing-a-dual-interface"></a>Implementacja interfejsu podwójne
 Można zaimplementować interfejs podwójny przy użyciu [elementem IDispatchImpl](../atl/reference/idispatchimpl-class.md) klasy, która udostępnia domyślną implementację elementu `IDispatch` metody w interfejsie podwójny. Aby uzyskać więcej informacji, zobacz [implementowania interfejsu IDispatch](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945).  

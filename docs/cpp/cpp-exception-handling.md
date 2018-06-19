@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413911"
 ---
 # <a name="c-exception-handling"></a>Obsługa wyjątków języka C++
 Język C++ zawiera wbudowaną obsługę zgłaszania i przechwytywania wyjątków. Podczas programowania w języku C++, prawie zawsze należy używać wbudowanej w C++ obsługi wyjątków opisanej w tej sekcji.  

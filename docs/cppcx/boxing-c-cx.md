@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086502"
 ---
 # <a name="boxing-ccx"></a>Konwersja boxing (C + +/ CX)
 *Konwersja boxing* jest zawijany takie jak zmienna typu wartości [Windows::Foundation::DateTime](http://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)— lub typem skalarnym podstawowych, takich jak `int`— w klasie ref, gdy zmienna została przekazana do metody pobierającej [ Platform::Object ^](../cppcx/platform-object-class.md) jako jego typ danych wejściowych.  

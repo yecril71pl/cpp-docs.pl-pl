@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359133"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>Kreator składników stron ASP ATL
 Ten kreator wstawia w projekcie składnik Active Server Pages (ASP). Microsoft Internet Information Services (IIS) używa składników stron ASP w ramach jego architektury programowanie udoskonalone strony sieci Web.  

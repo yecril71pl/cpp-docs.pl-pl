@@ -44,6 +44,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32404308"
 ---
 # <a name="dupenvsdbg-wdupenvsdbg"></a>_dupenv_s_dbg, _wdupenv_s_dbg
 
@@ -102,7 +103,7 @@ Jeśli te funkcje nie może przydzielić wystarczającej ilości pamięci, sami 
 
 **_Dupenv_s_dbg —** i **_wdupenv_s_dbg —** funkcje są takie same jak **_dupenv_s —** i **_wdupenv_s —** z wyjątkiem tego, kiedy **_DEBUG** jest zdefiniowany, te funkcje przy użyciu wersji debugowania [— funkcja malloc](malloc.md), [_malloc_dbg —](malloc-dbg.md), można przydzielić pamięci dla wartości zmiennej środowiskowej. Aby uzyskać informacje dotyczące debugowania funkcji **_malloc_dbg —**, zobacz [_malloc_dbg —](malloc-dbg.md).
 
-Nie trzeba jawnie wywołana w większości przypadków te funkcje. Zamiast tego można określić flagę **_crtdbg_map_alloc —**. Gdy **_crtdbg_map_alloc —** jest zdefiniowany, wywołań **_dupenv_s —** i **_wdupenv_s —** są mapowane ponownie do **_dupenv_s_dbg —** i **_wdupenv_s_dbg —**odpowiednio z *blockType* ustawioną **_normal_block —**. W związku z tym nie trzeba jawnie wywoływać te funkcje, chyba że chcesz oznaczyć bloki sterty jako **_client_block —**. Aby uzyskać więcej informacji o typach bloku, zobacz [typów bloków w stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
+Nie trzeba jawnie wywołana w większości przypadków te funkcje. Zamiast tego można określić flagę **_crtdbg_map_alloc —**. Gdy **_crtdbg_map_alloc —** jest zdefiniowany, wywołań **_dupenv_s —** i **_wdupenv_s —** są mapowane ponownie do **_dupenv_s_dbg —** i **_wdupenv_s_dbg —** odpowiednio z *blockType* ustawioną **_normal_block —**. W związku z tym nie trzeba jawnie wywoływać te funkcje, chyba że chcesz oznaczyć bloki sterty jako **_client_block —**. Aby uzyskać więcej informacji o typach bloku, zobacz [typów bloków w stercie debugowania](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 

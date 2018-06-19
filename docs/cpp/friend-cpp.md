@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418266"
 ---
 # <a name="friend-c"></a>friend (C++)
 W niektórych sytuacjach jest wygodniejsze udzielenia dostępu na poziomie elementu członkowskiego do funkcji, które nie należą do klasy, lub do wszystkich elementów członkowskich w osobnej klasy. Tylko implementujący klasy mogą zadeklarować kim są swoich znajomych. Funkcja lub klasy nie można zadeklarować się jako element zaprzyjaźniony dowolnej klasy. W definicji klasy, należy użyć `friend` — słowo kluczowe i nazwę funkcji niebędący elementem członkowskim lub inną klasę, aby przyznać jej dostęp do prywatnych i chronionych elementów członkowskich klasy.         W definicji szablonu parametru typu mogą być deklarowane jako element zaprzyjaźniony.  

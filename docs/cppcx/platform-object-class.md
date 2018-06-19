@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091884"
 ---
 # <a name="platformobject-class"></a>Klasa platform::Object
 Zapewnia zachowanie typowych ref klas i struktur ref w aplikacjach środowiska wykonawczego systemu Windows. Wszystkie klasy referencyjnej i ref struct wystąpienia są umożliwiają niejawnej konwersji na Platform::Object ^, można zmienić jego metody ToString wirtualnej.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361629"
 ---
 # <a name="ipropertynotifysinkcp-class"></a>Klasa IPropertyNotifySinkCP
 Ta klasa przedstawia [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfejs jako wychodzących interfejs dla obiektu składnika.  

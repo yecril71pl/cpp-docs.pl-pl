@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368333"
 ---
 # <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>Porady: dodawanie niestandardowych narzędzi kompilacji do projektów MSBuild
 Narzędzie niestandardowej kompilacji to narzędzie wiersza polecenia, zdefiniowane przez użytkownika skojarzonego z określonego pliku.  

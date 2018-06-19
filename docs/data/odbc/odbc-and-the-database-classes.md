@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088470"
 ---
 # <a name="odbc-and-the-database-classes"></a>ODBC i klasy baz danych
 Klasy baz danych MFC ODBC Hermetyzowanie wywołania funkcji ODBC API będzie zwykle należy samodzielnie w element członkowski funkcji [cdatabase —](../../mfc/reference/cdatabase-class.md) i [crecordset —](../../mfc/reference/crecordset-class.md) klasy. Na przykład złożonych sekwencji wywołania ODBC, powiązanie zwróconych rekordów do lokalizacji przechowywania, obsługa błędów i inne operacje są zarządzane dla Ciebie przez klasy baz danych. W związku z tym użyj znacznie prostsze interfejsu klasy do modyfikowania rekordów przez obiekt zestawu rekordów.  

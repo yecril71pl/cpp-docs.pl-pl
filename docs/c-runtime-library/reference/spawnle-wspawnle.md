@@ -46,6 +46,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413476"
 ---
 # <a name="spawnle-wspawnle"></a>_spawnle, _wspawnle
 
@@ -109,7 +110,7 @@ Aby uzyskać więcej informacji na temat tych i innych kody powrotu, zobacz [_do
 
 Każda z tych funkcji tworzy i wykonuje nowy proces przekazywaniem każdy argument wiersza polecenia jako osobny parametr, a także przekazanie tablicy wskaźników do ustawienia środowiska.
 
-Te funkcje walidację ich parametrów. Jeśli dowolny *cmdname* lub *arg0* jest ciągiem pustym lub wskaźnika o wartości null, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji **errno** do **einval —**i zwróć -1. Nie nowego procesu jest zduplikowany.
+Te funkcje walidację ich parametrów. Jeśli dowolny *cmdname* lub *arg0* jest ciągiem pustym lub wskaźnika o wartości null, program obsługi nieprawidłowych parametrów zostanie wywołany, zgodnie z opisem w [sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli dozwolone jest wykonywanie aby kontynuować, ustawianie tych funkcji **errno** do **einval —** i zwróć -1. Nie nowego procesu jest zduplikowany.
 
 ## <a name="requirements"></a>Wymagania
 

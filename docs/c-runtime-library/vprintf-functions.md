@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418383"
 ---
 # <a name="vprintf-functions"></a>vprintf — Funkcje
 Każdy z `vprintf` funkcje przyjmuje wskaźnik do listy argumentów, a następnie formatuje i zapisuje podane dane do określonego miejsca docelowego. Funkcje różnią się sprawdzanie poprawności parametru wykonywane, czy funkcje wykonaj szerokości lub ciągi znaków, miejsce docelowe danych wyjściowych i obsługę określania kolejności, w którym są używane parametry w ciągu formatu.  

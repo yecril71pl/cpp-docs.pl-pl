@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355728"
 ---
 # <a name="implementation-of-a-custom-string-manager-basic-method"></a>Wdrożenia z menedżerem ciąg niestandardowy (Metoda podstawowa)
 Najprostszym sposobem dostosowania schematu alokacji pamięci dla danych dotyczących ciągu jest korzystanie z warunkiem ATL **CAtlStringMgr** klasy, ale podać własne pamięci procedury alokacji. Konstruktor **CAtlStringMgr** przyjmuje jeden parametr: wskaźnik do `IAtlMemMgr` obiektu. `IAtlMemMgr` jest to abstrakcyjna klasa podstawowa, który udostępnia interfejs rodzajowy na stos. Przy użyciu `IAtlMemMgr` interfejsu **CAtlStringMgr** przydziela ponownie i zwalnia pamięć używana do przechowywania danych ciągu. Można albo zaimplementuj `IAtlMemMgr` interfejsu użytkownika, lub użyj jednej z pięciu klasy Menedżer pamięci ATL — pod warunkiem. Menedżerowie pamięci ATL — pod warunkiem zawijać po prostu istniejących urządzeń alokacji pamięci:  

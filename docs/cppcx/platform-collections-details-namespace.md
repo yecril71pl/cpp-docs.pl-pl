@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088131"
 ---
 # <a name="platformcollectionsdetails-namespace"></a>Namespace platform::Collections::details
 Ta przestrzeń nazw obsługuje `Platform` infrastrukturę i nie jest przeznaczona do użycia bezpośrednio w kodzie.  

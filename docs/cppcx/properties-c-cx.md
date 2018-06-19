@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089562"
 ---
 # <a name="properties-ccx"></a>Właściwości (C + +/ CX)
 Typy środowiska wykonawczego systemu Windows ujawniać publicznego danych jako właściwości. Kod klienta uzyskuje dostęp do właściwości, takie jak publiczny datamember. Wewnętrznie właściwość jest implementowany jako bloku, który zawiera metodę dostępu get i/lub metody dostępu set. Za pomocą metody dostępu, można wykonać dodatkowe czynności przed lub po pobraniu wartość, na przykład można zdarzenia lub sprawdzana jest poprawność.  

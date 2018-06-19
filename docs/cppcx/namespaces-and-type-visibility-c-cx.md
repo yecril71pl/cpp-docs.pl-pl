@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089835"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Obszary nazw i typ widoczności (C + +/ CX)
 Przestrzeń nazw jest standardowa konstrukcja C++ do grupowania typów, które ma funkcje związane z a zapobiegania konflikty nazw w bibliotekach. System typów środowiska wykonawczego systemu Windows wymaga, aby wszystkich publicznych typów środowiska wykonawczego systemu Windows, włącznie z zawartymi w swoim własnym kodem musi być zadeklarowana w przestrzeni nazw w zakresie przestrzeni nazw. Typy publiczne, które są zadeklarowane w zakresie globalnym lub zagnieżdżona w innej klasy spowoduje błąd w czasie kompilacji.  

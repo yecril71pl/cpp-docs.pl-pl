@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366955"
 ---
 # <a name="chained-unwind-info-structures"></a>Struktury informacji o operacji łańcuchowej unwind
 Jeśli ustawiono flagi UNW_FLAG_CHAININFO, struktura informacji unwind ubocznym i pole udostępnionego adresu — program obsługi/łańcuchowej — informacje o wyjątku zawiera informacje unwind podstawowego. Następujące pobiera kod podstawowy unwind informacji, przy założeniu, że `unwindInfo` jest struktura, która ma UNW_FLAG_CHAININFO Flaga.  

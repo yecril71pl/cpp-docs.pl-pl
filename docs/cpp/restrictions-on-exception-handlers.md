@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420207"
 ---
 # <a name="restrictions-on-exception-handlers"></a>Ograniczenia dotyczące obsługi wyjątków
 Główna ograniczenie używania programów obsługi wyjątków w kodzie jest, że nie można użyć `goto` instrukcji, aby przejść do `__try` blok instrukcji. Zamiast tego należy wprowadzić bloku instrukcji za pomocą przepływu sterowania. Można przejść z `__try` instrukcji blokować i zagnieździć programy obsługi wyjątków, wybierz polecenie.  

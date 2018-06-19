@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364953"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Kreator konsumenta OLE DB ATL
 Ten kreator konfiguruje klasę konsumenta OLE DB z powiązaniami danych niezbędnych do uzyskania dostępu z określonego źródła danych za pomocą określonego dostawcy OLE DB.  
