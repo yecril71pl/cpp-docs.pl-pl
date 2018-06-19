@@ -32,6 +32,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692785"
 ---
 # <a name="texture-class"></a>texture — Klasa
 Tekstura jest agregacji na danych `accelerator_view` w domenie zakresu. Jest kolekcja zmiennych, po jednej dla każdego elementu w zakresie domeny. Każda zmienna przechowuje wartość odpowiadającą typów pierwotnych języka C++ ( `unsigned int`, `int`, `float`, `double`), typem skalarnym ( `norm`, lub `unorm`), lub typu krótkich wektora.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686389"
 ---
 # <a name="a15---determining-the-number-of-threads-used"></a>A.15   Określanie liczby wykorzystywanych wątków
 Rozważmy następujący przykład niepoprawne (dla [sekcji 3.1.2](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md) na stronie 37):  

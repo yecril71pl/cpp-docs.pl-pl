@@ -175,6 +175,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377723"
 ---
 # <a name="cmfcpopupmenu-class"></a>Klasa CMFCPopupMenu
 Implementuje funkcje menu podręcznego systemu Windows i rozszerza ją, dodając funkcje, takie jak oderwania menu i etykietki narzędzi.

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691911"
 ---
 # <a name="272-data-sharing-attribute-clauses"></a>2.7.2 Klauzule atrybutu udostępniania danych
 Kilka dyrektyw zaakceptować klauzule, które umożliwiają użytkownikom kontrolowanie udostępniania atrybutów zmienne w czasie trwania regionu. Klauzule atrybutu udostępniania mają zastosowanie tylko do zmiennych w zakresie leksykalne dyrektywy, na której znajduje się klauzuli. Nie wszystkie z poniższych klauzul są dozwolone w wszystkie dyrektywy. Lista klauzule, które są prawidłowe w szczególności dyrektywy opisano z dyrektywą.  

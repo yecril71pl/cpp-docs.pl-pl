@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384091"
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016: używanie dziedziczenia wielokrotnego języka C++ z MFC
 Ta uwaga informacje dotyczące używania dziedziczenie wielokrotne (MI) z Microsoft Foundation Classes. Użycie MI nie jest wymagane w przypadku MFC. MI nie jest używany w żadnych klas MFC i nie jest wymagana do zapisania biblioteki klas.  

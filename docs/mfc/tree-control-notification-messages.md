@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385739"
 ---
 # <a name="tree-control-notification-messages"></a>Komunikaty powiadomień dotyczących kontrolki drzewa
 Formant drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) wysyła następujące komunikaty powiadomień jako **WM_NOTIFY** wiadomości:  

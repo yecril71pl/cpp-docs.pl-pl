@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690445"
 ---
 # <a name="a31---thread-safe-lock-functions"></a>A.31   Funkcje blokady wielowątkowości
 W poniższym przykładzie C++ demonstruje sposób inicjowania tablicy blokad w równoległego regionu za pomocą `omp_init_lock` ([sekcji 3.2.1](../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md) na stronie 42).  

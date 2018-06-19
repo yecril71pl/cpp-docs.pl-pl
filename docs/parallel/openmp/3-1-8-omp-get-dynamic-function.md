@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686194"
 ---
 # <a name="318-ompgetdynamic-function"></a>3.1.8 Funkcja omp_get_dynamic
 **Omp_get_dynamic** funkcja zwraca wartość niezerową, jeśli dynamiczne Dostosowywanie wątków jest włączona, a w przeciwnym razie zwraca wartość 0. Format jest następujący:  

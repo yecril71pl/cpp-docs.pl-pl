@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382976"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: mapowanie uchwytów okien na obiekty
 Ta uwaga opisuje MFC dojścia do obiektów C++ obiekt procedur, które obsługuje mapowania systemu Windows.  

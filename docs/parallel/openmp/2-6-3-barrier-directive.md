@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689795"
 ---
 # <a name="263-barrier-directive"></a>2.6.3 Dyrektywa określająca bariery
 **Bariery** dyrektywy synchronizuje wszystkie wątki w zespole. W przypadku każdego wątku w zespole oczekuje, aż wszystkie pozostałe on osiągnąć tego punktu. Składnia **bariery** dyrektywy wygląda następująco:  

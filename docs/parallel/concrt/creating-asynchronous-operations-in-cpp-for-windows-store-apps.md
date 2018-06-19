@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695762"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Tworzenie operacji asynchronicznych w języku C++ dla aplikacji platformy uniwersalnej systemu Windows
 Tym dokumencie opisano niektóre z najważniejszych należy wziąć pod uwagę w przypadku utworzenia puli wątków systemu Windows na podstawie operacji asynchronicznych w aplikacji Windows Runtime Uniwersalnej za pomocą klasy zadania.  

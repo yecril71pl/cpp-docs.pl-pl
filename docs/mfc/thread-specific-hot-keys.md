@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380422"
 ---
 # <a name="thread-specific-hot-keys"></a>Klawisze dostępu właściwe dla wątków
 Aplikacja ustawia klawisza dostępu właściwe dla wątków ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) przy użyciu systemu Windows **RegisterHotKey** funkcji. Gdy użytkownik naciśnie klawisz dostępu właściwe dla wątków, system Windows zapisuje [WM_HOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646279) wiadomości na początek kolejki komunikatów dla wątku. **WM_HOTKEY** komunikat zawiera wirtualnego kod klucza, shift stanu i Identyfikatora użytkownika określonego klawisza dostępu, który został naciśnięty. Listę standardowych wirtualnego kodów klucza Zobacz Winuser.h. Aby uzyskać więcej informacji dotyczących tej metody, zobacz [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309).  

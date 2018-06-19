@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689717"
 ---
 # <a name="323-ompsetlock-and-ompsetnestlock-functions"></a>3.2.3 Funkcje omp_set_lock i omp_set_nest_lock
 Każda z tych funkcji blokuje wątku wykonywania funkcji, dopóki określona blokada jest dostępne, a następnie ustawia blokady. Proste blokady jest dostępna, gdy jest odblokowana. Blokadą jest dostępna, jeśli odblokować lub jeśli już jest własnością wątku wykonywania funkcji. Format jest następujący:  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688794"
 ---
 # <a name="schedule-groups"></a>Grupy harmonogramu
 Ten dokument zawiera opis roli grup harmonogramu współbieżność środowiska wykonawczego. A *grupy harmonogram* sposób tworzą koligacje lub grup, zadań powiązanych ze sobą. Każdy harmonogram ma jedną lub więcej grup harmonogramu. Grupy harmonogramu Użyj, jeśli wymagane jest wysoki stopień miejscowości spośród zadań, na przykład, gdy grupa powiązanych zadań korzystać z wykonania na tym samym węźle procesora. Z drugiej strony należy użyć wystąpienia harmonogramu, po aplikacji jakości określone wymagania, na przykład, jeśli chcesz ograniczyć ilość zasobów przetwarzania, które są przydzielone do zestawu zadań. Aby uzyskać więcej informacji na temat wystąpień harmonogramu, zobacz [wystąpienia harmonogramu](../../parallel/concrt/scheduler-instances.md).  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690081"
 ---
 # <a name="a10---specifying-sequential-ordering"></a>A.10   Określenie porządku sekwencyjnego
 Uporządkowane sekcje ([sekcji 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) na stronie 22) są przydatne w przypadku sekwencyjne porządkowanie danych wyjściowych z pracy, który jest wykonywane równolegle. Indeksy w kolejności sekwencyjnej do drukowania następujący program:  

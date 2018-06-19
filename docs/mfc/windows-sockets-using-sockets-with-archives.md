@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385541"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets: używanie gniazd z archiwami
 W tym artykule opisano [CSocket — model programowania](#_core_the_csocket_programming_model). Klasa [CSocket —](../mfc/reference/csocket-class.md) dostarcza obsługi gniazda na wyższym poziomie abstrakcji niż klasa [CAsyncSocket](../mfc/reference/casyncsocket-class.md). `CSocket` używana wersja protokołu serializacji MFC do przekazywania danych do i z obiektu gniazda za pomocą MFC [CArchive](../mfc/reference/carchive-class.md) obiektu. `CSocket` Umożliwia blokowanie (podczas zarządzania przetwarzania komunikatów systemu Windows w tle) i umożliwia dostęp do `CArchive`, która zarządza wielu aspektów komunikacji, który będzie musiał wykonać samodzielnie przy użyciu raw interfejsu API albo klasy `CAsyncSocket`.  

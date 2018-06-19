@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383873"
 ---
 # <a name="technical-notes-by-category"></a>Uwagi techniczne według kategorii
 Uwagi techniczne są podzielone na następujące kategorie. Listę wartości liczbowych Uwagi techniczne, zobacz [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md).  

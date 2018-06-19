@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382694"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>Używanie formantów wspólnych w oknie dialogowym
 Formanty standardowe systemu Windows mogą być używane w [okien dialogowych](../mfc/dialog-boxes.md), tworzyć widoki, widoki rekordów i inne okna na podstawie szablonu okna dialogowego. Poniższa procedura z drobnymi zmianami będzie działać również formularzy.  

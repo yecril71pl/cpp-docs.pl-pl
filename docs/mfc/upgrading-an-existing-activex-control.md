@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385310"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Uaktualnianie istniejącego kontrolki ActiveX
 Formanty ActiveX istniejących (dawniej formanty OLE) można używać w Internecie bez żadnych modyfikacji. Można zmodyfikować formantów, aby zwiększyć ich wydajność. Korzystając z formantu na stronie sieci Web, istnieją dodatkowe zagadnienia. Plik ocx i wszystkie pliki pomocnicze musi znajdować się na komputerze docelowym lub można pobrać przez Internet. Dzięki temu rozmiar kodu i pobierania czasu ważną kwestią. W pliku cab podpisem można spakować pliki do pobrania. Można oznaczyć jako bezpieczne do wykonywania skryptów i jako bezpieczne inicjowanie formantu.  

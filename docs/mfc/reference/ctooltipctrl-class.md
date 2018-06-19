@@ -87,6 +87,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377613"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl — klasa
 Hermetyzuje funkcjonalność "formantem etykietki narzędzia," małe okno podręczne wyświetlające pojedynczy wiersz tekst opisujący cel narzędzia w aplikacji.  

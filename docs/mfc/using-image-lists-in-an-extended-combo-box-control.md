@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383348"
 ---
 # <a name="using-image-lists-in-an-extended-combo-box-control"></a>Używanie list obrazów w formancie rozszerzonego pola kombi
 Funkcja main formantach rozszerzonego pola kombi jest możliwość kojarzenia obrazów z listy obrazów z poszczególnych elementów w formancie pola kombi. Każdy element nie może zostać wyświetlony trzy różne obrazy: jeden dla stan zaznaczenia, jedną dla nonselected stanu i innych obrazu nakładki.  

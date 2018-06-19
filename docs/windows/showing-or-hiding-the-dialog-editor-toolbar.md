@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891597"
 ---
 # <a name="showing-or-hiding-the-dialog-editor-toolbar"></a>Pokazywanie i ukrywanie paska narzędzi Edytora okien dialogowych
 Po otwarciu edytora okien dialogowych paska narzędzi edytora okien dialogowych automatycznie pojawia się w górnej części rozwiązania.  

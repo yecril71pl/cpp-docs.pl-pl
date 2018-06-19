@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231927"
 ---
 # <a name="compiler-error-c2721"></a>C2721 błąd kompilatora
 "specyfikatora": Specyfikator klasy składującej niedozwolony między słowem kluczowym operatora i typu  

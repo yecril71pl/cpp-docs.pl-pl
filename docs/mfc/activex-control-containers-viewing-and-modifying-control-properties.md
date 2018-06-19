@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340297"
 ---
 # <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>Kontenery kontrolek ActiveX: wyświetlanie i modyfikowanie właściwości kontrolki
 Po wstawieniu formantu ActiveX w projekcie jest przydatne do wyświetlania i zmieniania właściwości jest obsługiwana przez kontrolkę ActiveX. W tym artykule omówiono sposób to zrobić za pomocą edytora zasobów języka Visual C++.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380012"
 ---
 # <a name="settings-for-the-progress-control"></a>Ustawienia formantu postępu
 Podstawowe ustawienia formantu postępu ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)) są zakresu i bieżącego położenia. Zakres reprezentuje cały czas trwania operacji. Bieżąca pozycja reprezentuje postępu, który wprowadził aplikacji ukończenia operacji. Zmiany wprowadzone w zakresie lub pozycji spowodować formantu postępu ponownego narysowania.  

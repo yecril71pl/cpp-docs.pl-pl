@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382544"
 ---
 # <a name="windows-sockets"></a>Windows Sockets
 Tej rodziny artykuły omówiono implementacja MFC Windows Sockets. MFC udostępnia dwie klasy, aby umożliwić obsługę programowania aplikacji sieci z interfejsem API Windows Sockets. Klasa [CAsyncSocket](../mfc/reference/casyncsocket-class.md) hermetyzuje jednego interfejsu API Sockets systemu Windows dla jednej, podając sieci zaawansowanych programistów zasilania najbardziej i elastyczność. Klasa [CSocket —](../mfc/reference/csocket-class.md) oferuje uproszczony interfejs dla serializacji danych do i z [CArchive](../mfc/reference/carchive-class.md) obiektu.  

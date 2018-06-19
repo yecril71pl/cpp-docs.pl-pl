@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687741"
 ---
 # <a name="how-to-implement-various-producer-consumer-patterns"></a>Porady: implementowanie różnych wzorców producent — konsument
 W tym temacie opisano Implementowanie wzorca producent — konsument w aplikacji. W tym wzorcu *producent* wysyła komunikaty do bloku komunikatów i *konsumenta* odczytuje wiadomości z tego bloku.  

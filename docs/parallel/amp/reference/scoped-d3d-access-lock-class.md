@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688144"
 ---
 # <a name="scopedd3daccesslock-class"></a>scoped_d3d_access_lock — Klasa
 RAII otoki dla D3D blokady dostępu do obiektu accelerator_view.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689119"
 ---
 # <a name="a28---use-of-numthreads-clause"></a>A.28   Użycie klauzuli num_threads
 W poniższym przykładzie pokazano `num_threads` klauzuli ([2.3 sekcji](../../parallel/openmp/2-3-parallel-construct.md) na stronie 8). Równoległego regionu została wykonana z maksymalnie 10 wątków.  

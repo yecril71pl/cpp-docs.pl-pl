@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690410"
 ---
 # <a name="scheduler-policies"></a>Zasady harmonogramu
 Ten dokument zawiera opis roli zasad harmonogramu współbieżność środowiska wykonawczego. A *zasad harmonogramu* steruje strategii, używany w harmonogramie podczas zarządzania zadaniami. Rozważmy na przykład aplikację, która wymaga niektórych zadań do wykonania w `THREAD_PRIORITY_NORMAL` i innych zadań do wykonania w `THREAD_PRIORITY_HIGHEST`.  Można tworzyć dwa wystąpienia harmonogramu: jedną, która określa `ContextPriority` zasadach `THREAD_PRIORITY_NORMAL` oraz inne, które określa jednych zasad można `THREAD_PRIORITY_HIGHEST`.  

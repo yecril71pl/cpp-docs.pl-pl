@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379522"
 ---
 # <a name="relationships-among-mfc-objects"></a>Relacje między obiektami MFC
 Aby pomóc proces tworzenia dokumentu/widoku w perspektywie, należy wziąć pod uwagę uruchomiony program: dokument, okno ramowe zawiera widok i widok powiązany z dokumentem.  

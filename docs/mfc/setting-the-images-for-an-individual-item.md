@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380604"
 ---
 # <a name="setting-the-images-for-an-individual-item"></a>Ustawianie obrazów dla pojedynczego elementu
 Różne typy obrazów używany przez element pola kombi rozszerzone są określane przez wartości `iImage`, **iSelectedImage**, i **iOverlay** członkami [COMBOBOXEXITEM ](http://msdn.microsoft.com/library/windows/desktop/bb775746) struktury. Każda wartość jest indeks obrazu na liście skojarzony obraz formantu. Domyślnie te elementy członkowskie są ustawione na 0, powodując kontrolka do wyświetlenia nie obraz dla elementu. Jeśli chcesz używać obrazów dla określonego elementu, można zmodyfikować struktury w związku z tym podczas wstawiania elementu pola kombi lub przez zmodyfikowanie istniejącego elementu pola kombi.  

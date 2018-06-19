@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382275"
 ---
 # <a name="tn051-using-ctl3d-now-and-in-the-future"></a>TN051: używanie CTL3D obecnie i w przyszłości
 Uwaga techniczna, który już wcześniej CTL3D i MFC, jest już nieaktualny. Efekt 3W formantów jest automatycznie implementowana przez MFC.  

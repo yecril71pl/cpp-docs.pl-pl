@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382131"
 ---
 # <a name="windows-sockets-classes"></a>Klasy Windows Sockets
 Windows Sockets umożliwiają sieci niezależne od protokołu komunikacji między dwoma komputerami. Gniazda te mogą być synchroniczne (program oczekuje, aż odbywa się komunikacji) lub asynchroniczna (program nadal uruchomiona, gdy trwa komunikacja).  

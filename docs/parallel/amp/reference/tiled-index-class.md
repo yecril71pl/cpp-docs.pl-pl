@@ -34,6 +34,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692148"
 ---
 # <a name="tiledindex-class"></a>tiled_index — Klasa
 Zapewnia to indeks w [tiled_extent —](tiled-extent-class.md) obiektu. Ta klasa ma właściwości, które mają dostęp do elementów pokrewny ze źródłem Kafelek lokalnego i pokrewne ze źródłem globalnego. Aby uzyskać więcej informacji o układzie sąsiadującym spacje, zobacz [przy użyciu Kafelki](../../../parallel/amp/using-tiles.md).  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384137"
 ---
 # <a name="when-update-handlers-are-called"></a>Kiedy są wywoływane programy obsługi aktualizacji
 Załóżmy, że użytkownik kliknie przycisk myszy w menu Plik, który generuje `WM_INITMENUPOPUP` wiadomości. W ramach mechanizmu aktualizacji zbiorczo aktualizuje wszystkie elementy w menu plik przed menu górnego poziomu, więc użytkownik może go wyświetlić.  

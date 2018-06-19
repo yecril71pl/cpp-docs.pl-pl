@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382102"
 ---
 # <a name="ribbon-designer-mfc"></a>Projektant wstążki (MFC)
 Projektant wstążki umożliwia tworzenie i Dostosowywanie Wstążki w aplikacjach MFC. Wstążki jest elementem interfejsu użytkownika, który organizuje poleceń w grupy logiczne. Grupy te są wyświetlane na osobnych kartach pasek w górnej części okna. Wstążka zastępuje paska menu i pasków narzędzi. Wstążki może znacznie poprawić użyteczność aplikacji. Aby uzyskać więcej informacji, zobacz [wstążek](http://go.microsoft.com/fwlink/p/?linkid=129233). Na poniższej ilustracji przedstawiono wstążki.  

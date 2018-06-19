@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689496"
 ---
 # <a name="331-ompgetwtime-function"></a>3.3.1 Funkcja omp_get_wtime
 `omp_get_wtime` Gettotalsize() zwróciło wartość punktu zmiennoprzecinkowe podwójnej precyzji czas zegarowy czas w sekundach, ponieważ niektóre "czas w przeszłości".  Rzeczywisty "czas w przeszłości" jest dowolnego, ale będzie gwarancji, nie należy zmieniać podczas wykonywania programu aplikacji. Format jest następujący:  

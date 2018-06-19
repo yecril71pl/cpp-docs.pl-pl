@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384218"
 ---
 # <a name="visualization-manager"></a>Menedżer wizualizacji
 Menedżer visual jest obiekt, który określa wygląd całej aplikacji. Działa ona jako pojedyncza klasa gdzie możesz umieścić cały kod rysowania aplikacji. Biblioteki MFC obejmuje kilka menedżerów visual. Można również utworzyć Menedżera visual, aby utworzyć widok niestandardowy dla aplikacji. Na poniższych ilustracjach przedstawiono tej samej aplikacji, gdy włączone są różnych menedżerów visual:  

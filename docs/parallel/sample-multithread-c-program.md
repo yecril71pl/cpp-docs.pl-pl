@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687995"
 ---
 # <a name="sample-multithread-c-program"></a>Przykładowy program więlowątkowy w języku C
 Bounce.c jest przykładowy program wielowątkowe, która tworzy nowy wątków zawsze literę **a** lub **A** został wpisany. Każdy wątek odrzuceń wszystkiego krój innego koloru po ekranie. Można utworzyć maksymalnie 32 wątków. Zakończenie normalne programu występuje podczas `q` lub **Q** został wpisany. Aby uzyskać informacje o kompilowanie i łączenie Bounce.c, zobacz [kompilowanie i łączenie programów wielowątkowej](../parallel/compiling-and-linking-multithread-programs.md).  

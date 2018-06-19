@@ -135,6 +135,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378171"
 ---
 # <a name="cpanecontainer-class"></a>Klasa CPaneContainer
 `CPaneContainer` Klasa jest podstawowym składnikiem modelu dokowania zaimplementowana przez MFC. Wskaźniki do dwóch okienek dokowania lub dwa wystąpienia przechowuje obiekt tej klasy `CPaneContainer.` przechowuje także wskaźnik do podziału, która oddziela okienka (lub kontenery). Przez zagnieżdżenia kontenery wewnątrz kontenerów platformę można utworzyć drzewa binarnego reprezentujący złożonych układów dokowania. Korzeń drzewa binarnego są przechowywane w [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) obiektu.  

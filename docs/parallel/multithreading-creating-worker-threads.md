@@ -25,6 +25,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689275"
 ---
 # <a name="multithreading-creating-worker-threads"></a>Wielowątkowość: tworzenie wątków roboczych
 Wątek roboczy jest najczęściej używany do obsługi zadań w tle, które użytkownik nie powinny mieć zaczekać, aby kontynuować korzystanie z aplikacji. Zadania, takie jak ponowne obliczenie i drukowanie w tle są dobrym przykładem wątków roboczych. W tym temacie opisano kroki niezbędne do utworzenia wątku roboczego. Tematy obejmują:  

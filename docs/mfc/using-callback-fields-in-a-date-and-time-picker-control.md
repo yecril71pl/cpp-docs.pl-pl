@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383789"
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>Używanie pól wywołania zwrotnego w formancie selektora dat i godzin
 Oprócz standardowych format znaków, które definiują pola selektora daty i godziny dane wyjściowe można dostosować, określając niektórych części ciągu formatu niestandardowego pola wywołania zwrotnego. Aby zadeklarować pole wywołania zwrotnego, zawierają co najmniej jeden znak "X" (88 kodu ASCII) dowolne miejsce w treści ciąg formatu. Na przykład, następujący ciąg "" obecnie jest: "yy" / "MM" / "dd" (dzień "X") ""powoduje, że formant wyboru daty i godziny wyświetlić bieżącą wartość jako rok, miesiąc, datę oraz finally dzień roku.  

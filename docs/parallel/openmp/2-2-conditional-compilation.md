@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685908"
 ---
 # <a name="22-conditional-compilation"></a>2.2 Kompilacja warunkowa
 _**OPENMP** nazwy makra jest zdefiniowany przez implementacje zgodne OpenMP jako stałej dziesiętnej *yyyymm*, który będzie wybrany rok i miesiąc specyfikacji zatwierdzone. To makro nie może być przedmiotem **#define** lub **#undef** dyrektywy przetwarzania wstępnego.  

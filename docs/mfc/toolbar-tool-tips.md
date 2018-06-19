@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383500"
 ---
 # <a name="toolbar-tool-tips"></a>Etykietki narzędzi paska narzędzi
 Etykietki narzędzi są okna podręczne niewielki rozmiar, udostępniające krótkie opisy celu przycisku paska narzędzi, gdy umieszczenie wskaźnika myszy nad przyciskiem w danym okresie czasu. Po utworzeniu aplikacji przy użyciu Kreatora aplikacji, który ma paska narzędzi Narzędzia Porada jest obsługiwane dla Ciebie. W tym artykule opisano zarówno narzędzia Porada obsługi utworzone przez Kreatora aplikacji oraz sposób dodawania obsługi Porada narzędzia do aplikacji.  
@@ -41,7 +42,7 @@ Etykietki narzędzi są okna podręczne niewielki rozmiar, udostępniające kró
 ##  <a name="_core_activating_tool_tips"></a> Aktywowanie etykietki narzędzi  
  Aby aktywować etykietki narzędzi w aplikacji, należy wykonać dwie czynności:  
   
--   Dodaj `CBRS_TOOLTIPS` styl inne style (takich jak **ws_child —**, **ws_visible —**i innych **CBRS_** style) przekazany jako `dwStyle` parametr [ CToolBar::Create](../mfc/reference/ctoolbar-class.md#create) funkcji lub [SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle).  
+-   Dodaj `CBRS_TOOLTIPS` styl inne style (takich jak **ws_child —**, **ws_visible —** i innych **CBRS_** style) przekazany jako `dwStyle` parametr [ CToolBar::Create](../mfc/reference/ctoolbar-class.md#create) funkcji lub [SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle).  
   
 -   Zgodnie z opisem w poniższej procedurze, Dołącz tekst porady narzędzi, oddzielone znakiem nowego wiersza ("\n"), do zasobu ciągu zawierającego wiersza polecenia wiersza polecenia narzędzi. Zasób ciągu udostępnia identyfikator przycisku paska narzędzi.  
   

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384195"
 ---
 # <a name="virtual-list-controls"></a>Wirtualne kontrolki listy
 Formant listy wirtualnej znajduje się kontrolka widoku listy, który ma **LVS_OWNERDATA** stylu. Ten styl umożliwia kontrolę do obsługi liczba elementów do `DWORD` (domyślna liczba elementów rozciąga się tylko do `int`). Jednak Największą zaletą udostępniane przez ten styl jest możliwość tylko podzbiór elementów danych w pamięci w dowolnym momencie. Dzięki temu formantu widoku listy wirtualnej do nadają się do użytku z dużych baz danych informacji, których konkretnych metod uzyskiwania dostępu do danych znajdują się już w miejscu.  

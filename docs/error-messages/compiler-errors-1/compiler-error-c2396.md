@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197458"
 ---
 # <a name="compiler-error-c2396"></a>C2396 błąd kompilatora
 "your_type::operator'type": CLR lub WinRT functionnot zdefiniowane przez użytkownika konwersja prawidłowe. Należy konwertować z albo konwertować na: t ^ ", t ^ %", t ^ & ", gdzie T ="your_type"  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381920"
 ---
 # <a name="using-frame-windows"></a>Używanie okien ramowych
 Struktura MFC tworzy dokument okien ramowych — oraz widoki i dokumenty — jako część jej implementacja nowy i polecenia Otwórz w menu Plik. Ponieważ w ramach czy większość pracy okno ramowe, odtwarzania małych roli z tworzeniem, przy użyciu i niszczenie tych okien. Można jednak jawnie utworzyć własne okna ramowe i okien podrzędnych do celów specjalnych.  

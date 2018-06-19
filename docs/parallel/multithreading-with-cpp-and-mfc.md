@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688573"
 ---
 # <a name="multithreading-with-c-and-mfc"></a>Wielowątkowość z C++ i MFC
 Biblioteka Microsoft Foundation Class (MFC) zapewnia obsługę dla aplikacji wielowątkowych. W tym temacie opisano procesów i wątków oraz podejście MFC dla wielowątkowości.  

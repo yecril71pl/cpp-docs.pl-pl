@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385914"
 ---
 # <a name="using-ctoolbarctrl"></a>Korzystanie z CToolBarCtrl
 Można użyć formantu toolbar ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) można utworzyć okna formantu zawierającego przycisków i opcjonalne spacje. Każdy przycisk w oknie Kontrola narzędzi wysyła komunikat polecenia do okna nadrzędnego jako użytkownik zdecyduje się on. Zazwyczaj przycisków na pasku narzędzi odpowiadają elementy w menu aplikacji, zapewniając dodatkowe i bardziej bezpośrednie sposób użytkownikowi dostęp do poleceń aplikacji.  

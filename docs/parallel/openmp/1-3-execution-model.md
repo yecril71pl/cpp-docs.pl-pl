@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687897"
 ---
 # <a name="13-execution-model"></a>1.3 Model wykonania
 OpenMP wykorzystuje model sprzężenia rozwidlenia wykonywanie równoległe. Chociaż ten model rozwidlenia sprzężenia mogą być przydatne podczas rozwiązywania szerokiej gamy problemów, nieco jest dostosowane dla dużych aplikacji opartych na tablicy. OpenMP jest przeznaczony do programów obsługi, które będą wykonywane prawidłowo zarówno jako programy równoległe (wiele wątków wykonywania i pełne Biblioteka obsługi OpenMP) i jako programy sekwencyjnych (dyrektywy ignorowane i proste biblioteki klas zastępczych OpenMP). Jednak jest możliwe i zezwolić na opracowanie program, który nie zadziała poprawnie, gdy wykonywane sekwencyjnie. Ponadto różne stopień równoległości może spowodować różnych wyników liczbowych ze względu na zmiany w skojarzeniu operacji liczbowych. Na przykład zmniejszenie dodanie serial mogą mieć różnych wzorzec skojarzenia dodanie niż zmniejszenie równoległych. Różne skojarzenia może zmienić wyniki dodawanie liczb zmiennoprzecinkowych.  

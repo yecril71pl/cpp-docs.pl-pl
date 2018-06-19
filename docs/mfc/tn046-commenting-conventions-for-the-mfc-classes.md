@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380828"
 ---
 # <a name="tn046-commenting-conventions-for-the-mfc-classes"></a>TN046: konwencje komentowania dla klas MFC
 Ta uwaga techniczna pierwotnie opisano konwencje używane do komentowania klas MFC. Te informacje są objęte [MFC: Korzystanie z plików źródłowych MFC](../mfc/using-the-mfc-source-files.md).  

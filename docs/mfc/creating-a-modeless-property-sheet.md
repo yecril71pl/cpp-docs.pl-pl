@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342725"
 ---
 # <a name="creating-a-modeless-property-sheet"></a>Tworzenie niemodalnego arkusza właściwości
 Zwykle będzie modalne arkuszy właściwości, które można utworzyć. Używając modalny arkusz właściwości, użytkownik musi zamknąć arkusz właściwości przed rozpoczęciem korzystania z innych części aplikacji. W tym artykule opisano metody, które umożliwia tworzenie niemodalnego arkusza właściwości przez użytkownika pozostawić arkusz właściwości otwarte podczas korzystania z innych części aplikacji.  

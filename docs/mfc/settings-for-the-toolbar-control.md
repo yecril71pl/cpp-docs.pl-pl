@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379710"
 ---
 # <a name="settings-for-the-toolbar-control"></a>Ustawienia formantu paska narzędzi
 Przyciski paska narzędzi można wyświetlić mapę bitową i/lub ciąg. Rozmiar obrazu jest domyślnie wymiary 16 przez 15 pikseli. Wszystkie przyciski są tej samej szerokości, domyślny 24 na 22 pikseli. Wysokość paska narzędzi jest określany przez wysokość przycisków i szerokość paska narzędzi jest taka sama jak szerokość obszaru klienckiego okna nadrzędnego, również domyślnie.  

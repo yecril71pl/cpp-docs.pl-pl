@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383844"
 ---
 # <a name="wizards-and-the-resource-editors"></a>Kreatorzy i edytory zasobów
 Visual C++ obejmuje kilka kreatorów do użycia w programowaniu MFC, oraz wiele edytorów zintegrowanym. Dla formantów ActiveX programowania, [Kreator kontrolek ActiveX](../mfc/reference/mfc-activex-control-wizard.md) pełni funkcję, podobne jak w przypadku Kreator aplikacji MFC. Podczas pisania aplikacji MFC bez większość tych narzędzi, narzędzia znacznie uprościć i przyspieszyć pracę.  

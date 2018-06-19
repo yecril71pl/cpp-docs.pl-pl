@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383837"
 ---
 # <a name="what-is-a-carchive-object"></a>Co to jest obiekt CArchive
 A `CArchive` obiektu zapewnia bezpieczny mechanizm buforowania do zapisywania lub odczytywania obiekty możliwe do serializacji do lub z `CFile` obiektu. Zazwyczaj `CFile` obiekt reprezentuje pliku na dysku; jednak również może być pliku pamięci (`CSharedFile` obiektu), być może reprezentujący Schowka.  

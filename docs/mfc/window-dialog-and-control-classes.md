@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381849"
 ---
 # <a name="window-dialog-and-control-classes"></a>Klasy okien, okien dialogowych i formantów
 Klasa `CWnd` i pochodne Hermetyzowanie `HWND`, dojścia do okna systemu Windows. `CWnd` można samodzielnie lub jako podstawy do tworzenia klasy pochodnej nowe klasy. Klasy pochodne dostarczonych przez biblioteki klas reprezentuje różne rodzaje systemu windows.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383945"
 ---
 # <a name="windows-sockets-datagram-sockets"></a>Windows Sockets: gniazda do przesyłania datagramów
 W tym artykule opisano gniazda do przesyłania datagramów, jeden z dwóch typów gniazda Windows dostępne. (Jest innego typu [gniazda strumienia](../mfc/windows-sockets-stream-sockets.md).)  

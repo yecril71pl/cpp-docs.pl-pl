@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379661"
 ---
 # <a name="serialization-serializing-an-object"></a>Serializacja: serializacja obiektu
 Artykuł [serializacja: ustawianie klasy jako możliwy do serializacji](../mfc/serialization-making-a-serializable-class.md) pokazano, jak utworzyć klasę serializacji. Po utworzeniu klasy możliwej do serializacji, może serializować obiektów klas do i z pliku za pośrednictwem [CArchive](../mfc/reference/carchive-class.md) obiektu. W tym artykule opisano:  

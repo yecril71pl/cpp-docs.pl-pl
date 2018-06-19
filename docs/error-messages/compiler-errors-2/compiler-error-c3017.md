@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33242473"
 ---
 # <a name="compiler-error-c3017"></a>C3017 błąd kompilatora
 test końcowy w OpenMP instrukcji "for" posiada niewłaściwy formularz  

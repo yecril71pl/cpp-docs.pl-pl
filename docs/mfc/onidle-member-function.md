@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350370"
 ---
 # <a name="onidle-member-function"></a>OnIdle — Funkcja członkowska
 Gdy nie komunikaty systemu Windows są przetwarzane, struktura wywołuje [CWinApp](../mfc/reference/cwinapp-class.md) funkcji członkowskiej [OnIdle](../mfc/reference/cwinapp-class.md#onidle) (opisanej w odwołanie do biblioteki MFC).  

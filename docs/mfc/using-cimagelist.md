@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385794"
 ---
 # <a name="using-cimagelist"></a>Korzystanie z CImageList
 Listy obrazów, reprezentowany przez klasę [CImageList](../mfc/reference/cimagelist-class.md), to zbiór tego samego rozmiaru obrazów, z których każdy może być przywoływane przez jej indeks. Listy obrazów umożliwiają wydajne zarządzanie dużymi zbiorami ikony lub mapy bitowe. Listy obrazów są same nie formantów, ponieważ nie są one windows; jednak są używane z kilkoma różnymi typami formantów, w tym kontrolki listy ([CListCtrl](../mfc/reference/clistctrl-class.md)), kontrolki drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) i na karcie formantów ([CTabCtrl](../mfc/reference/ctabctrl-class.md)).  

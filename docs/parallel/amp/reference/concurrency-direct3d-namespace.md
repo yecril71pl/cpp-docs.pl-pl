@@ -25,6 +25,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687390"
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d — Przestrzeń nazw
 `direct3d` Przestrzeń nazw zawiera funkcje, które obsługują współdziałanie D3D. Go umożliwia bezproblemowe na użytek D3D zasobów obliczeniowych w kodzie AMP także Zezwalaj na korzystanie z zasobów utworzone w AMP w kodzie D3D bez tworzenia nadmiarowe kopie pośrednich. Można przyrostowo przyspieszanie znacznym obliczeń części aplikacji DirectX przy użyciu C++ AMP i na podstawie obliczenia AMP danych za pomocą interfejsu API D3D.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694839"
 ---
 # <a name="cancellation-in-the-ppl"></a>Anulowanie w PPL
 W tym dokumencie opisano roli anulowania w Biblioteka równoległych wzorców (PLL), jak anulować równoległych pracy i sposób określania, kiedy pracy równoległej została anulowana.  

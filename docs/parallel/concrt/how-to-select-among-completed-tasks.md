@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687117"
 ---
 # <a name="how-to-select-among-completed-tasks"></a>Porady: wybieranie spośród zadań wykonanych
 Ten przykład przedstawia sposób użycia [concurrency::choice](../../parallel/concrt/reference/choice-class.md) i [concurrency::join](../../parallel/concrt/reference/join-class.md) klasy do wybrania pierwszego zadania do wykonania algorytmu wyszukiwania.  

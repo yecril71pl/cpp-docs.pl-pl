@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384182"
 ---
 # <a name="view-classes-windows"></a>Klasy widoków (Windows)
 `CView` i jej klas pochodnych są okno podrzędne, które reprezentują obszar kliencki okno ramowe. Widoki Pokaż dane i akceptuje dane wejściowe dla dokumentu.  

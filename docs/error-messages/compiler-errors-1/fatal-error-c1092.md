@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33199252"
 ---
 # <a name="fatal-error-c1092"></a>Błąd krytyczny C1092
 Edytuj i Kontynuuj nie obsługuje zmiany typów danych. Tworzenie wymagane  

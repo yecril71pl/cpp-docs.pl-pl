@@ -247,6 +247,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378684"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Klasa CMFCRibbonBaseElement
 `CMFCRibbonBaseElement` Klasa jest klasą bazową dla wszystkich elementów, które można dodać do [pasek wstążki](../../mfc/reference/cmfcribbonbar-class.md). Przykłady elementów wstążki to wstążki przyciski wstążki pola wyboru i wstążki pola kombi.  

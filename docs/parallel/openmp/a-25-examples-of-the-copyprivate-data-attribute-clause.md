@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691693"
 ---
 # <a name="a25---examples-of-the-copyprivate-data-attribute-clause"></a>A.25   Przykłady klauzuli atrybutu danych prywatnej kopii
 **Przykład 1:** `copyprivate` klauzuli ([sekcji 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md) na stronie 32) może służyć do emisji wartości uzyskaną przez pojedynczy wątek bezpośrednio do wszystkich wystąpień zmiennych prywatnych w innych wątków.  

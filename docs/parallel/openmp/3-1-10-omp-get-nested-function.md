@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686724"
 ---
 # <a name="3110-ompgetnested-function"></a>3.1.10 Funkcja omp_get_nested
 `omp_get_nested` Funkcja zwraca wartość niezerową, jeśli włączono zagnieżdżonych równoległości i 0, jeśli jest ona wyłączona. Aby uzyskać więcej informacji na zagnieżdżonych równoległości zobacz sekcję 3.1.9 na stronie 40. Format jest następujący:  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690029"
 ---
 # <a name="singlelinkregistry-class"></a>single_link_registry — Klasa
 `single_link_registry` Obiekt jest `network_link_registry` który zarządza tylko jeden blok źródłowa lub docelowa.  

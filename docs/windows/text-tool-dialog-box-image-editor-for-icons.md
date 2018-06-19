@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890291"
 ---
 # <a name="text-tool-dialog-box-image-editor-for-icons"></a>Okno dialogowe narzędzi tekstowych (Edytor obrazów dla ikon)
 Użyj **narzędzia tekst** okno dialogowe Dodawanie tekstu do zasobu kursora, mapa bitowa lub ikona.  

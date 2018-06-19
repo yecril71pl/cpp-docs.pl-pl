@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693809"
 ---
 # <a name="synchronization-data-structures"></a>Struktury danych synchronizacji
 Współbieżność środowiska wykonawczego zawiera kilka struktury danych, które pozwalają synchronizujący dostęp do danych udostępnionych przez wiele wątków. Te struktury danych są przydatne, gdy udostępniasz dane, które rzadko modyfikacji. Obiekt synchronizacji, na przykład sekcja krytyczna, powoduje, że inne wątki poczekać, aż udostępniony zasób jest dostępny. W związku z tym Jeśli używasz takiego obiektu synchronizujący dostęp do danych, która jest często używane, zostaną utracone skalowalności w aplikacji. [Równoległych biblioteki wzorców (PLL)](../../parallel/concrt/parallel-patterns-library-ppl.md) zapewnia [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) klasy, która umożliwia udostępnianie zasobów między kilka wątków lub zadań bez konieczności synchronizacji. Aby uzyskać więcej informacji na temat `combinable` , zobacz [równoległe kontenery oraz obiekty](../../parallel/concrt/parallel-containers-and-objects.md).  

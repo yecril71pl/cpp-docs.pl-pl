@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379687"
 ---
 # <a name="selecting-a-graphic-object-into-a-device-context"></a>Wybieranie obiektu graficznego do kontekstu urządzenia
 Ten temat dotyczy przy użyciu obiektów graficznych kontekstu urządzenia okna. Po [utworzyć rysowania obiektu](../mfc/one-stage-and-two-stage-construction-of-objects.md), zaznacz go do kontekstu urządzenia zamiast domyślnego obiektu przechowywane:  

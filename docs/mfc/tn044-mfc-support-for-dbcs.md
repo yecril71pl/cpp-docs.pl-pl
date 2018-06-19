@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380308"
 ---
 # <a name="tn044-mfc-support-for-dbcs"></a>TN044: obsługa MFC dla DBCS
 Ta uwaga techniczna opisane Obsługa w MFC "zestawy znaków dwubajtowych" lub zestawów znaków Dwubajtowych. Ta informacje, a także informacji na temat MFC obsługę standardu UNICODE jest teraz dostępna w *informacje dotyczące biblioteki klas*.  

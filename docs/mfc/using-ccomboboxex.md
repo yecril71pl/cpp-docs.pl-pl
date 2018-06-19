@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381764"
 ---
 # <a name="using-ccomboboxex"></a>Korzystanie z CComboBoxEx
 Formancie rozszerzonego pola kombi jest rozszerzeniem kontrolki pola kombi standardowe, który zapewnia macierzystą obsługę obrazów elementów. Obrazy te można wskazać stan poszczególnych elementów w polu kombi, takich jak aktualnie zaznaczone i niezaznaczone elementy. Aby udostępnić obrazy elementu łatwe, formantu zapewnia obsługę listy obrazu.  

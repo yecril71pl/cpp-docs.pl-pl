@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693864"
 ---
 # <a name="scheduler-instances"></a>Wystąpienia harmonogramu
 W tym dokumencie opisano rolę wystąpienia harmonogramu w współbieżności środowiska wykonawczego i sposobu użycia [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) i [concurrency::CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) klasy Tworzenie i zarządzanie nimi wystąpienia harmonogramu. Wystąpienia harmonogramu są przydatne, jeśli chcesz skojarzyć z określonych rodzajów obciążeń jawne zasadami planowania. Na przykład można utworzyć jedno wystąpienie harmonogramu niektórych zadań godzinie priorytetu wątku z podwyższonym poziomem uprawnień i użyć domyślnego harmonogramu do wykonywania innych zadań podczas priorytetu wątku normalnego.  

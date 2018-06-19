@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382089"
 ---
 # <a name="tool-tips-in-windows-not-derived-from-cframewnd"></a>Etykietki narzędzi w systemie Windows niepochodzące od obiektu CFrameWnd
 Rodzina ten artykuł obejmuje włączenie etykietki narzędzi dla formantów zawarte w oknie, który nie pochodzi od [cframewnd —](../mfc/reference/cframewnd-class.md). Artykuł [etykietki narzędzi pasków narzędzi](../mfc/toolbar-tool-tips.md) informacje na temat etykietki narzędzi dla formantów w `CFrameWnd`.  

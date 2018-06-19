@@ -148,6 +148,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378444"
 ---
 # <a name="cpane-class"></a>Klasa CPane
 `CPane` Klasa jest rozszerzeniem [ccontrolbar — klasa](../../mfc/reference/ccontrolbar-class.md). Jeśli przeprowadzasz uaktualnienie istniejącego projektu MFC, należy zastąpić wszystkie wystąpienia `CControlBar` z `CPane`.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695736"
 ---
 # <a name="compiling-and-linking-multithread-programs"></a>Kompilowanie i łączenie programów wielowątkowych
 Bounce.c program została wprowadzona w systemie [przykładowy Program C wielowątkowej](../parallel/sample-multithread-c-program.md).  

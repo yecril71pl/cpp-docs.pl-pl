@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692857"
 ---
 # <a name="multithreading-and-locales"></a>Wielowątkowość i ustawienia regionalne
 Zarówno biblioteki wykonawczej C i standardowa biblioteka C++ zapewniają obsługę zmiany ustawień regionalnych programu. W tym temacie opisano problemy, które wystąpić podczas korzystania z funkcji ustawień regionalnych zarówno bibliotek w aplikacji wielowątkowych.  

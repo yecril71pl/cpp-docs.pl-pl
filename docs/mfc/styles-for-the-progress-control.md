@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380113"
 ---
 # <a name="styles-for-the-progress-control"></a>Style formantu postępu
 Utworzenie początkowo formantu postępu ([CProgressCtrl::Create](../mfc/reference/cprogressctrl-class.md#create)), użyj `dwStyle` parametr, aby określić żądaną okna Style formantu postępu. Poniższa lista zawiera szczegóły style odpowiednie okna. Formant ignoruje wszystkie styl okna innych niż wymienione w tym miejscu. Należy zawsze twórz formant jako okna podrzędnego, zazwyczaj z nadrzędnego — okno dialogowe.  

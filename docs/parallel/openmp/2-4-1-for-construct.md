@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693552"
 ---
 # <a name="241-for-construct"></a>2.4.1 — dla konstrukcji
 **Dla** dyrektywy identyfikuje iteracyjne konstrukcji podziału pracy określający, że iteracji pętli skojarzone będą wykonywane równolegle. Iteracje **dla** pętli są rozproszone na wątków, które już istnieją w zespole wykonywanie równoległe konstrukcji, do którego jest on powiązany. Składnia **dla** konstrukcja wygląda następująco:  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688905"
 ---
 # <a name="shortvectortraits-structure"></a>short_vector_traits — Struktura
 short_vector_traits — umożliwia pobierania podstawowej długość wektora i typ skalarną typu wektora krótka lub typem skalarnym  

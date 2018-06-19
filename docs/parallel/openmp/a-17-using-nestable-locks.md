@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689912"
 ---
 # <a name="a17---using-nestable-locks"></a>A.17   Użycie zagnieżdżalnych blokad
 Poniższy przykład (dla [sekcji 3.2](../../parallel/openmp/3-2-lock-functions.md) na stronie 41) pokazuje, jak blokadą może służyć do synchronizowania aktualizacji do całej struktury i jeden z jego elementów członkowskich.  

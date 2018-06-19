@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341313"
 ---
 # <a name="application-and-thread-support-classes"></a>Klasy obsługi aplikacji i wątków
 Każda aplikacja ma jeden i tylko jeden obiekt aplikacji; Ten obiekt koordynuje innych obiektów w programie uruchomiony program i pochodzi z `CWinApp`.  

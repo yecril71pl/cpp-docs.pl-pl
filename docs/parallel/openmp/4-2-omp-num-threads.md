@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687650"
 ---
 # <a name="42-ompnumthreads"></a>4.2 OMP_NUM_THREADS
 **OMP_NUM_THREADS** zmiennej środowiskowej ustawia domyślną liczbę wątków używanych podczas wykonywania, chyba że ten numer zostanie jawnie zmieniona przez wywołanie metody **omp_set_num_threads** procedury biblioteki lub przez jawne **num_threads** klauzula w **równoległych** dyrektywy.  

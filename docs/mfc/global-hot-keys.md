@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344233"
 ---
 # <a name="global-hot-keys"></a>Globalne klawisze dostępu
 Globalne klawisza dostępu jest skojarzony z oknem nonchild konkretnego. Umożliwia użytkownikowi aktywować okna z dowolnym części systemu. Aplikacja ustawia globalne klawisza dostępu dla określonego okna, wysyłając [WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284) komunikat do tego okna. Na przykład jeśli `m_HotKeyCtrl` jest [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) obiektu i `pMainWnd` wskaźnik do okna do aktywacji, gdy zostanie naciśnięty klawisz dostępu, można użyć poniższego kodu, aby skojarzyć klawisz dostępu określonego w kontrolki z Okno wskazywana przez `pMainWnd`.  

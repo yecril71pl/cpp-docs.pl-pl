@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385073"
 ---
 # <a name="root-class-cobject"></a>Klasa główna: CObject
 Większość klas w bibliotece Microsoft Foundation Class (MFC) są uzyskiwane z jednej klasy podstawowej w katalogu głównym hierarchii klas. `CObject` udostępnia szereg możliwości przydatne do wszystkich klas pochodnych, z bardzo niskie obciążenie. Aby uzyskać więcej informacji na temat `CObject` i jego możliwości, zobacz [CObject za pomocą](../mfc/using-cobject.md).  

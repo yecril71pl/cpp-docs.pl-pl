@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695572"
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>Obsługa wyjątków we współbieżności środowiska wykonawczego
 Współbieżność środowiska wykonawczego używa do komunikacji wiele rodzajów błędy w obsłudze wyjątków C++. Te błędy zawierają nieprawidłowe użycie środowisko uruchomieniowe, błędy wykonania, takie jak niepowodzenia uzyskania zasobu i błędów występujących w funkcjach pracy, które świadczą zadania i grupy zadań. Jeśli zadania lub grupy zadań zgłasza wyjątek, środowiska uruchomieniowego zawiera ten wyjątek i marshals go do kontekstu, która oczekuje na zadanie lub grupy zadań, aby zakończyć. Składniki, takie jak zadania lekkie i agentów środowisko uruchomieniowe nie zarządza wyjątki dla Ciebie. W takich sytuacjach należy zaimplementować własny mechanizm obsługi wyjątków. W tym temacie opisano sposób obsługi wyjątków, które są generowane przez zadania, grupy zadań, zadań lekkich i agentów asynchronicznych przez środowisko uruchomieniowe i odpowiadanie na wyjątków w aplikacji.  

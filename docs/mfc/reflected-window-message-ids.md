@@ -61,6 +61,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379999"
 ---
 # <a name="reflected-window-message-ids"></a>Identyfikatory odbitych komunikatów okien
 Szybko utworzyć formantu ActiveX lub inny formant specjalne, jest do podklasy okna. Aby uzyskać więcej informacji, zobacz [kontrolki ActiveX MFC: Tworzenie podklasy kontrolki okna](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).  

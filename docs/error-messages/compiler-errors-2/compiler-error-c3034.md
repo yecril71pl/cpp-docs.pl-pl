@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247018"
 ---
 # <a name="compiler-error-c3034"></a>C3034 błąd kompilatora
 Dyrektywie OpenMP "directive1" nie może być bezpośrednio zagnieżdżona w dyrektywie "directive2"  

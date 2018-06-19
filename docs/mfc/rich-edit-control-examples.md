@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379284"
 ---
 # <a name="rich-edit-control-examples"></a>Przykłady formantów edycji wzbogaconej
 Przykładowe MFC OLE [WORDPAD](../visual-cpp-samples.md) używa `CRichEditView`, `CRichEditDoc`, i `CRichEditCntrItem` klasy. Przez rozszerzenie, używa [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md). Szybkie opis tych trzech klas, zobacz [klasy powiązane z formantów edycji wzbogaconej](../mfc/classes-related-to-rich-edit-controls.md).  

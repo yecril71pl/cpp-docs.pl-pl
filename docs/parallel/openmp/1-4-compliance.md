@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687234"
 ---
 # <a name="14-compliance"></a>1.4 Zgodność
 Implementacja interfejsu API C/C++ OpenMP jest *OpenMP zgodne* Jeśli go rozpoznaje i zachowuje semantykę wszystkie elementy tej specyfikacji, tak jak w rozdziałach 1, 2, 3, 4, i dotyczą dodatek C. dodatki A, B, D, E i F informacje o tylko celów i nie są częścią specyfikacji. Implementacje, które obejmują tylko podzestaw interfejsu API nie są zgodne z OpenMP.  

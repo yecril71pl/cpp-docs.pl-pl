@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690491"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migrowanie z OpenMP do współbieżności środowiska wykonawczego
 Współbieżność środowiska wykonawczego umożliwia różne modele programowania. Te modele mogą nakładać się lub uzupełniają modeli z innych bibliotek. Dokumenty w tej sekcji porównaj [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp) do współbieżności środowiska wykonawczego i zawierają przykłady dotyczące migracji istniejącego kodu OpenMP do współbieżności środowiska wykonawczego.  

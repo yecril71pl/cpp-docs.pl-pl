@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33232428"
 ---
 # <a name="compiler-error-c2626"></a>C2626 błąd kompilatora
 "identyfikator": elementu członkowskiego prywatnych lub chronionych danych nie jest dozwolona w anonimowym struktury lub związku  

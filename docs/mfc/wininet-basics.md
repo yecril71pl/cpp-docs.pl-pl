@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385927"
 ---
 # <a name="wininet-basics"></a>Podstawy WinInet
 Aby dodać obsługę FTP, aby pobrać i przekazywania plików z poziomu aplikacji, można użyć WinInet. Można zastąpić [OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback) i użyj `dwContext` parametru zapewnia informacje o postępie do użytkowników, jak wyszukiwanie i pobieranie plików.  

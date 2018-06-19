@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689483"
 ---
 # <a name="252-parallel-sections-construct"></a>2.5.2 Konstrukcja sekcji równoległych
 **Sekcji równoległych** dyrektywa zawiera formularza skrótów w celu określenia **równoległych** zawierających tylko jeden region **sekcje** dyrektywy. Semantyka są takie same jak jawne określenie **równoległych** dyrektywy poprzedzającą **sekcje** dyrektywy. Składnia **sekcji równoległych** dyrektywy wygląda następująco:  

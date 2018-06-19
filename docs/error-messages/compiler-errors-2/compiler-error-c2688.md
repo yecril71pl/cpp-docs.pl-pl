@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236017"
 ---
 # <a name="compiler-error-c2688"></a>C2688 błąd kompilatora
 "C2::fgrv": kowariantne wyniki zwracane z wielokrontym lub wirtualnym dziedziczeniem nie są obsługiwane przez funkcję varargs  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382170"
 ---
 # <a name="using-cricheditctrl"></a>Korzystanie z CRichEditCtrl
 Kontrolki zaawansowanej edycji jest oknem, w którym użytkownik może wprowadzić i edytować tekst. Tekst można przypisać formatowanie znaków i akapitów i mogą zawierać osadzonych obiektów OLE. Kontrolki zaawansowanej edycji jest reprezentowana w MFC przez [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) klasy.  

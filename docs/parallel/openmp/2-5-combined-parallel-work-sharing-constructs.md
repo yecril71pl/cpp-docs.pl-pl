@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689301"
 ---
 # <a name="25-combined-parallel-work-sharing-constructs"></a>2.5 Połączone równoległe konstrukcje podziału pracy
 Połączone równoległe konstrukcje podziału pracy są skróty do określenia równoległego regionu, który zawiera tylko jeden konstrukcji podziału pracy. Semantyka dyrektywy te są identyczne z jawne określenie **równoległych** dyrektywy następuje pojedynczego konstrukcji podziału pracy.  

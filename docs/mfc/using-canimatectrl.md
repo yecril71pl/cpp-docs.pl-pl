@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381621"
 ---
 # <a name="using-canimatectrl"></a>Korzystanie z CAnimateCtrl
 Formantu animacji reprezentowany przez klasę [CAnimateCtrl](../mfc/reference/canimatectrl-class.md), jest oknem, które wyświetla klip wideo z przeplotem AVI (Audio) format — standardowy format audio/wideo systemu Windows. Klip AVI jest szereg ramki mapy bitowej, takich jak filmu.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687416"
 ---
 # <a name="lightweight-tasks"></a>Zadania lekkie
 Ten dokument zawiera opis roli zadań lekkich współbieżność środowiska wykonawczego. A *zadań lekkich* to zadanie, które można planować bezpośrednio z `concurrency::Scheduler` lub `concurrency::ScheduleGroup` obiektu. Zadania lekkie podobny funkcji, które świadczą interfejsu API systemu Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) funkcji. W związku z tym potrzeb zadań lekkich są przydatne, gdy dostosowania istniejącego kodu do korzystania z funkcji planowania programu współbieżności środowiska wykonawczego. Współbieżność środowiska wykonawczego sam używa zadań lekkich zaplanować agentów asynchronicznych i wysyłanie komunikatów między bloki komunikatów asynchronicznych.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382154"
 ---
 # <a name="tree-control-item-position"></a>Położenie elementu kontrolki drzewa
 Położenie początkowe elementu jest ustawiona, gdy element zostanie dodany do formantu drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) przy użyciu `InsertItem` funkcję elementu członkowskiego. Wywołanie funkcji Członkowskich określa uchwytu elementu nadrzędnego i obsługi po upływie którego nowy element ma zostać wstawiony element. Drugi dojścia musi zidentyfikować elementów podrzędnych danego elementu nadrzędnego lub jedną z tych wartości: `TVI_FIRST`, `TVI_LAST`, lub `TVI_SORT`.  

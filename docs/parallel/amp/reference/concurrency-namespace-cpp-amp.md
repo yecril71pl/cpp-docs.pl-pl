@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693380"
 ---
 # <a name="concurrency-namespace-c-amp"></a>Przestrzeń nazw współbieżności (C++ AMP)
 Zawiera klasy i funkcje, które przyspieszenie wykonywania kodu C++ na sprzęcie równoległe danych. Aby uzyskać więcej informacji, zobacz [Przegląd C++ AMP](../cpp-amp-overview.md)  

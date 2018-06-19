@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381680"
 ---
 # <a name="what-does-it-cost-me-to-derive-a-class-from-cobject"></a>Jaki jest koszt wyprowadzenia klasy z obiektu CObject?
 Obciążenie w tworzenia klasy pochodnej z klasy [CObject](../mfc/reference/cobject-class.md) jest minimalny. Pochodne klasy dziedziczy tylko cztery funkcji wirtualnych i jeden [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) obiektu.  

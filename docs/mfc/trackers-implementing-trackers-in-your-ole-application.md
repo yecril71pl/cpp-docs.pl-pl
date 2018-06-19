@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381553"
 ---
 # <a name="trackers-implementing-trackers-in-your-ole-application"></a>Trackery: implementowanie trackerów w aplikacji OLE
 Trackery Podaj interfejsu graficznego, aby umożliwić użytkownikom na interakcję z elementami klienta OLE. Przy użyciu różnych tracker style, OLE klienta, które elementy mogą być wyświetlane z kreskowanym granicach, Zmień rozmiar dojść lub różne inne efekty wizualne. W tym artykule opisano:  

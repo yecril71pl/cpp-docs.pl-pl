@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33228113"
 ---
 # <a name="compiler-error-c2502"></a>C2502 błąd kompilatora
 "identyfikator": zbyt wiele modyfikatorów dostępu dla klasy podstawowej  
