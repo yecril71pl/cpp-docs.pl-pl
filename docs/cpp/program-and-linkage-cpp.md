@@ -1,5 +1,5 @@
 ---
-title: Program i połączenie (C++) | Dokumentacja firmy Microsoft
+title: Programy i połączenie (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 04/09/2018
 ms.technology:
@@ -12,38 +12,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4154f0951b46b1c8badc0224845d2881cc8ad573
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2dba8698461636e292771fc1e5a4f5ac0a633e73
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421370"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238672"
 ---
-# <a name="program-and-linkage--c"></a>Program i połączenie (C++)
+# <a name="program-and-linkage-c"></a>Program i połączenie (C++)
 
-W programu C++ każdy globalne symbol można zdefiniować tylko raz, nawet jeśli program zawiera wiele jednostek tłumaczenia. Jednostka tłumaczenia składa się z plikiem implementacji (.cpp, .hpp, .cxx itp.) oraz wszystkie nagłówki, które zawiera bezpośrednio lub pośrednio. Program składa się z co najmniej jednej jednostki tłumaczenia ze sobą powiązane. 
+W programie C++ *symbol*, na przykład nazwę zmiennej lub funkcji mogą być deklarowane dowolną liczbę razy w jego zakresie, ale jego można zdefiniować tylko raz. Jest to reguły jednej definicji (ODR). A *deklaracji* wprowadza (lub ponownego) nazwy do programu. A *definicji* wprowadza nazwę, a w przypadku zmiennej, która jawnie inicjuje go. A *funkcji definicji* składa się z podpisu i treści funkcji.
+
+Są to deklaracje:
+
+```cpp
+int i;
+int f(int x);
+```
+
+Definicje są to:
+
+```cpp
+int i{42};
+int f(int x){ return x * i; }
+```
+
+Program składa się z co najmniej jeden *jednostki tłumaczenia*. Jednostka tłumaczenia składa się z plikiem implementacji (.cpp, .cxx itp.) oraz wszystkich nagłówków (.h, .hpp itp.), które zawiera bezpośrednio lub pośrednio. Każda jednostka tłumaczenia jest kompilowana niezależnie przez kompilator, po upływie którego konsolidator scala w ramach jednej jednostki tłumaczenia skompilowanych *program*. Naruszenia reguły ODR zwykle wyświetlane jako błędy konsolidatora podczas tej samej nazwie ma dwa różne definicje w różnych tłumaczenia jednostki.
+
+Ogólnie rzecz biorąc, jest najlepszy sposób, aby uwidocznić zmiennej w wielu plikach umieść ją w pliku nagłówka, a następnie dodaj # dyrektywy include w każdym pliku .cpp, który wymaga deklaracji. Dodając *obejmują osłony* zawartości nagłówka upewnieniu się, że nazwy deklaruje są zdefiniować tylko raz.
+
+Jednak w niektórych przypadkach może być konieczne zadeklarować zmiennej globalnej lub klasy w pliku .cpp. W takich przypadkach należy sprawdzić kompilatorze i konsolidatorze, czy nazwa obiektu ma być stosowany tylko do jednego pliku lub wszystkich plików.
 
 ## <a name="linkage-vs-scope"></a>Połączenie, a zakres
 
-Pojęcie *połączenie* odwołuje się do widoczność globalne symbole (np. zmienne nazwy typu i nazwy funkcji) w programie jako całość przez jednostki tłumaczenia. Pojęcie *zakres* odwołuje się do symboli, które są zadeklarowane w bloku, takich jak przestrzeni nazw, klasy lub treści funkcji. Takie symbole są widoczne tylko w zakresie, w którym są zdefiniowane; pojęcie powiązanie nie ma zastosowania do nich.
+Pojęcie *połączenie* odwołuje się do widoczność globalne symbole (np. zmienne nazwy typu i nazwy funkcji) w programie jako całość przez jednostki tłumaczenia. Pojęcie *zakres* odwołuje się do symboli, które są zadeklarowane w bloku, takich jak przestrzeni nazw, klasy lub treści funkcji. Takie symbole są widoczne tylko w zakresie, w którym są zdefiniowane; pojęcie powiązanie nie ma zastosowania do nich. 
 
 ## <a name="external-vs-internal-linkage"></a>Zewnętrzny, a połączenie wewnętrzne
 
-Zmienne globalne non-const i wolnego funkcje domyślnie mają połączenie zewnętrzne; są one widoczne z dowolnej jednostki tłumaczenia w programie. To zachowanie można przesłonić, jawnie je jako deklarowanie **statycznych** co ogranicza ich widoczność do tej samej jednostce tłumaczenia, w którym jest zadeklarowany. Ta znaczenie **statycznych** różni się od jego znaczenia w przypadku zastosowania do zmiennych lokalnych. Zmienne zadeklarowane jako **const** mieć powiązania wewnętrznego domyślnie.
+A *wolne funkcja* to funkcja, która jest zdefiniowana globalnie lub zakresie przestrzeni nazw. Zmienne globalne non-const i funkcje wolnego domyślnie mają *połączenie zewnętrzne*; są one widoczne z dowolnej jednostki tłumaczenia w programie. Ta nazwa może więc żadnego innego obiektu globalnego (zmiennej, definicji klasy itp.). Symbol z *zewnętrzne* lub *bez powiązania* jest widoczna tylko w jednostce tłumaczenia, w którym jest zadeklarowany. Jeśli nazwa ma połączenie zewnętrzne, tej samej nazwie może istnieć w innej jednostce tłumaczenia. Zmienne zadeklarowane w definicji klasy lub ciało funkcji ma bez połączenia. 
 
-## <a name="extern-constexpr-linkage"></a>Zewnętrzne połączenie constexpr
+Możesz wymusić globalną nazwę służącą do Jawne zadeklarowanie go jako zewnętrzne **statycznych**. To ogranicza ich widoczność do tej samej jednostce tłumaczenia, w którym jest zadeklarowany. Należy pamiętać, że w tym kontekście **statycznych** oznacza, że coś innego niż po stosowane do zmiennych lokalnych.
 
-We wcześniejszych wersjach programu Visual Studio kompilator zawsze udzielił constexpr zmiennej połączenie wewnętrzne nawet wtedy, gdy zmienna została oznaczona jako zewnętrzny. W Visual Studio 2017 wersji 15,5 cala, nowy przełącznik (/ Zc:externConstexpr) umożliwia poprawne zachowanie zgodnych standardów. Po pewnym czasie będzie to wartość domyślna.
+Następujące obiekty są zewnętrzne domyślnie:
+- obiekty const
+- obiekty constexpr
+- definicje typów
+- obiekty statyczne w zakresie przestrzeni nazw
+
+Aby zapewnić stałe połączenie zewnętrzne obiektu, Zadeklaruj ją jako **extern** i przypisz jej wartość:
 
 ```cpp
-extern constexpr int x = 10; //error LNK2005: "int const x" already defined
+extern const int value = 42;
 ```
 
-Jeśli plik nagłówka zawiera constexpr zmiennych extern zadeklarowane, musi być oznaczony **__declspec(selectany)** Aby poprawnie zawierać jego deklaracji zduplikowanych połączone:
-
-```cpp
-extern constexpr __declspec(selectany) int x = 10;
-```
+Zobacz [extern](extern-cpp.md) Aby uzyskać więcej informacji.
 
 ## <a name="see-also"></a>Zobacz też
 

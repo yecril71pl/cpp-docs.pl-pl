@@ -1,7 +1,7 @@
 ---
 title: Przy użyciu obiektu CString | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 591a319671ea42236af5ae7e80ea1cb94c3c446c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5759c8a0aaa628d612010cb7d04690a3d3bfa54f
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361704"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238724"
 ---
 # <a name="using-cstring"></a>Przy użyciu obiektu CString
 Tematy w tej sekcji opisano sposób programu z `CString`. Dokumentacja odwołanie `CString` , zobacz dokumentację [CStringT](../atl-mfc-shared/reference/cstringt-class.md).  
@@ -32,7 +32,7 @@ Tematy w tej sekcji opisano sposób programu z `CString`. Dokumentacja odwołani
   
  A `CStringW` zawiera obiekt `wchar_t` wpisz i obsługuje ciągów Unicode. A `CStringA` zawiera obiekt `char` typu i obsługuje jednobajtowe i wielobajtowe ciągów (MBCS). A `CString` obiekt obsługuje albo `char` typu lub `wchar_t` typu, w zależności od tego, czy `MBCS` symbolu lub `UNICODE` symbol jest zdefiniowany w czasie kompilacji.  
   
- A `CString` obiekt przechowuje dane znakowe w `CStringData` obiektu. `CString` akceptuje `null`-zakończone stylu języka C ciągów, ale nie zachowuje `null` znak w znaku przechowywanych danych. Zamiast tego `CString` długość ciągu ścieżki. `CString` Podaj terminatorem null, gdy jej eksportuje ciąg stylu języka C. Możesz wstawić `null` w `CString`, ale może dać nieoczekiwane wyniki.  
+ A `CString` obiekt przechowuje dane znakowe w `CStringData` obiektu. `CString` akceptuje `null`-zakończone ciągów w stylu języka C. `CString` długość ciągu, aby uzyskać większą wydajność, ale zachowuje śledzi `null` w danych znakowych przechowywanych obsługuje konwersji na LPCWSTR. `CString` zawiera terminatorem null, gdy jego eksportuje ciąg stylu języka C. Możesz wstawić `null` w innych lokalizacjach w `CString`, ale może dać nieoczekiwane wyniki.  
   
  Następujący zestaw klas ciąg może być używany bez konsolidacji biblioteki MFC z lub bez obsługi CRT: `CAtlString`, `CAtlStringA`, i `CAtlStringW`.  
   

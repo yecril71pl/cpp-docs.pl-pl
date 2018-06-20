@@ -1,7 +1,7 @@
 ---
 title: Dodawanie kontrolki (ALT — samouczek, część 2) | Dokumentacja firmy Microsoft
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 06/18/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3b8c7eb59579363ce3580c7319b80be2557a30d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1547d48b5b5914d9b32ff8b476b0c007f972067
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358579"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238711"
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Dodawanie kontrolki (ALT — Samouczek, część 2)
 W tym kroku zostanie Dodawanie formantu do projektu, skompiluj go i przetestować go na stronie sieci Web.  
@@ -26,7 +26,7 @@ W tym kroku zostanie Dodawanie formantu do projektu, skompiluj go i przetestowa�
   
 #### <a name="to-add-an-object-to-an-atl-project"></a>Można dodać obiektu do Projekt ATL  
   
-1.  W widoku klas kliknij prawym przyciskiem myszy projekt wielokąta.  
+1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt wielokąta.  
   
 2.  Wskaż **Dodaj** na pasku menu skrótów, a następnie kliknij **nowy element** w podmenu.  
   
