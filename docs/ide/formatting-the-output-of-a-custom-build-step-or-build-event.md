@@ -47,7 +47,7 @@ Jeśli w danych wyjściowych niestandardowego kroku budowania lub zdarzenia komp
   
  Gdzie:  
   
--   {*a* & #124; *b*} jest wybór albo *a* lub *b*.  
+-   {*a* &#124; *b*} jest wybór albo *a* lub *b*.  
   
 -   [`ccc`] jest opcjonalny ciąg lub parametr.  
   

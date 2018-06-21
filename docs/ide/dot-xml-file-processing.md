@@ -53,7 +53,7 @@ Kompilator generuje ciąg Identyfikatora dla każdego konstrukcji w kodzie zosta
   
     -   Poprawności elementu ELEMENT_TYPE_PTR jest reprezentowany jako ' *' następujące zmodyfikowanej typu.  
   
-    -   ELEMENT_TYPE_BYREF jest reprezentowany jako "@" następujące zmodyfikowanej typu.  
+    -   ELEMENT_TYPE_BYREF jest reprezentowany jako "\@" następujące zmodyfikowanej typu.  
   
     -   ELEMENT_TYPE_PINNED jest reprezentowany jako "^" następujące zmodyfikowanej typu. Kompilator Visual C++ nigdy nie generuje to.  
   
