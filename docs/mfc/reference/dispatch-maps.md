@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 313e465698da5799a107bc3bdbeb6d2cbbe47303
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5af6a8644514b18af3397fb22d54d42f649eed09
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377099"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271321"
 ---
 # <a name="dispatch-maps"></a>Mapy wysyłania
 Automatyzacja OLE udostępnia metody do wywołania metody i mieć dostęp do właściwości w aplikacjach. Mechanizm dostarczonych przez Microsoft Foundation Class Library na potrzeby rozsyłania te żądania jest "mapy wysyłania," który wyznacza wewnętrznych i zewnętrznych nazwy obiektu funkcje i właściwości, a także same właściwości i elementu typy danych argumenty funkcji.  
@@ -163,20 +163,20 @@ DISP_FUNCTION(
 |**VTS_DISPATCH**|`LPDISPATCH`|  
 |**VTS_SCODE**|`SCODE`|  
 |**VTS_BOOL**|**BOOL**|  
-|**VTS_VARIANT**|**Wariant Const\***  lub **VARIANT &**|  
+|**VTS_VARIANT**|**Wariant Const\\ \***  lub **VARIANT &**|  
 |**VTS_UNKNOWN**|`LPUNKNOWN`|  
-|**VTS_PI2**|**krótki\***|  
-|**VTS_PI4**|**długa\***|  
-|**VTS_PR4**|**Float\***|  
-|**VTS_PR8**|**O podwójnej precyzji\***|  
-|**VTS_PCY**|**CY\***|  
-|**VTS_PDATE**|**DATA\***|  
-|**VTS_PBSTR**|**BSTR\***|  
-|**VTS_PDISPATCH**|**LPDISPATCH\***|  
-|**VTS_PSCODE**|**SCODE\***|  
-|**VTS_PBOOL**|**WARTOŚĆ LOGICZNA\***|  
-|**VTS_PVARIANT**|**VARIANT\***|  
-|**VTS_PUNKNOWN**|**LPUNKNOWN\***|  
+|**VTS_PI2**|**krótki\\\***|  
+|**VTS_PI4**|**długa\\\***|  
+|**VTS_PR4**|**Float\\\***|  
+|**VTS_PR8**|**O podwójnej precyzji\\\***|  
+|**VTS_PCY**|**CY\\\***|  
+|**VTS_PDATE**|**DATA\\\***|  
+|**VTS_PBSTR**|**BSTR\\\***|  
+|**VTS_PDISPATCH**|**LPDISPATCH\\\***|  
+|**VTS_PSCODE**|**SCODE\\\***|  
+|**VTS_PBOOL**|**WARTOŚĆ LOGICZNA\\\***|  
+|**VTS_PVARIANT**|**VARIANT\\\***|  
+|**VTS_PUNKNOWN**|**LPUNKNOWN\\\***|  
 |**VTS_NONE**|Brak parametrów|  
 
 ### <a name="requirements"></a>Wymagania  

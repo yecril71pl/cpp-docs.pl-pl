@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a7fbdb3baff7531aa4e391e5d7e936c39e38fc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d920ca54c9e97273e4bda563921a144339eafd0f
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372622"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271350"
 ---
 # <a name="chttpfile-class"></a>Klasa CHttpFile
 Udostępnia funkcje do żądania i odczytywać pliki na serwerze HTTP.  
@@ -115,7 +115,7 @@ BOOL AddRequestHeaders(
  `dwFlags`  
  Zmienia semantykę nowe nagłówki. Może to być jeden z następujących elementów:  
   
-- `HTTP_ADDREQ_FLAG_COALESCE` Scala nagłówków o takiej samej nazwie, za pomocą flagi, aby dodać pierwszy nagłówek znaleziono do kolejnych nagłówka. Na przykład "Zaakceptuj: tekst / *" następuje "Zaakceptuj: audio /\*" powoduje utworzenie pojedynczego nagłówka "Zaakceptuj: tekst /\*audio /\*". Jest wywoływania aplikacji w celu zapewnienia spójnego schematu względem danych otrzymywanych przez żądania wysyłane z nagłówkami scalone lub osobnych.  
+- `HTTP_ADDREQ_FLAG_COALESCE` Scala nagłówków o takiej samej nazwie, za pomocą flagi, aby dodać pierwszy nagłówek znaleziono do kolejnych nagłówka. Na przykład "Zaakceptuj: tekst /\*" następuje "Zaakceptuj: audio /\*" powoduje utworzenie pojedynczego nagłówka "Zaakceptuj: tekst /\*audio /\*". Jest wywoływania aplikacji w celu zapewnienia spójnego schematu względem danych otrzymywanych przez żądania wysyłane z nagłówkami scalone lub osobnych.  
   
 - `HTTP_ADDREQ_FLAG_REPLACE` Wykonuje Usuń i Dodaj zastąpienie bieżącego nagłówka. Nazwa nagłówka będzie służyć do usunięcia bieżącego nagłówka i zostanie użyta wartość pełne Aby dodać nowy nagłówek. Jeśli wartość nagłówka jest pusta i nagłówek zostanie znaleziony, zostanie ono usunięte. Jeśli nie jest pusta, zostanie zastąpiony wartość nagłówka.  
   

@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9778a9d456ebd0fed6bc36c2c631849bcbfe11d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ef91c42d0787dac371d324eece1527e5366c89c3
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705608"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271399"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ co&#39;s nowe 2003 za pośrednictwem 2015
 
@@ -1585,7 +1585,7 @@ To lepszą obsługę normy ISO C/C++ może wymagać zmiany istniejącego kodu, k
 
 - Dodaje średnik dla typów klasy.
 - Kończy nawiasów literałów ciągów raw.
-- Kończy Komentarze wielowierszowe (/ * * /)
+- Kończy Komentarze wielowierszowe (/\* \*/)
 
 **Znajdź wszystkie odwołania** teraz automatycznie rozpoznaje i filtry odwołań w tle po wyświetli listę tekstową dopasowań.
 
