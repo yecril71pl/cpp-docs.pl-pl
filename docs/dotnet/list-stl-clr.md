@@ -7,24 +7,124 @@ ms.technology:
 ms.topic: reference
 f1_keywords:
 - cliext::list
+- cliext::list::assign
+- cliext::list::assign
+- cliext::list::back
+- cliext::list::back_item
+- cliext::list::begin
+- cliext::list::clear
+- cliext::list::const_iterator
+- cliext::list::const_reference
+- cliext::list::const_reverse_iterator
+- cliext::list::difference_type
+- cliext::list::empty
+- cliext::list::end
+- cliext::list::erase
+- cliext::list::front
+- cliext::list::front_item
+- cliext::list::generic_container
+- cliext::list::generic_iterator
+- cliext::list::generic_reverse_iterator
+- cliext::list::generic_value
+- cliext::list::insert
+- cliext::list::iterator
+- cliext::list::list
+- cliext::list::merge
+- cliext::list::operator=
+- cliext::list::pop_back
+- cliext::list::pop_front
+- cliext::list::push_back
+- cliext::list::push_front
+- cliext::list::rbegin
+- cliext::list::reference
+- cliext::list::remove
+- cliext::list::remove_if
+- cliext::list::rend
+- cliext::list::resize
+- cliext::list::reverse
+- cliext::list::reverse_iterator
+- cliext::list::size
+- cliext::list::size_type
+- cliext::list::sort
+- cliext::list::splice
+- cliext::list::swap
+- cliext::list::to_array
+- cliext::list::unique
+- cliext::list::value_type
+- cliext::operator!=(list)
+- cliext::operator<(list)
+- cliext::operator<=(list)
+- cliext::operator==(list)
+- cliext::operator>(list)
+- cliext::operator>=(list)
 dev_langs:
 - C++
 helpviewer_keywords:
 - <cliext/list> header [STL/CLR]
 - list class [STL/CLR]
 - <list> header [STL/CLR]
+- assign member [STL/CLR]
+- assign member [STL/CLR]
+- back member [STL/CLR]
+- back_item member [STL/CLR]
+- begin member [STL/CLR]
+- clear member [STL/CLR]
+- const_iterator member [STL/CLR]
+- const_reference member [STL/CLR]
+- const_reverse_iterator member [STL/CLR]
+- difference_type member [STL/CLR]
+- empty member [STL/CLR]
+- end member [STL/CLR]
+- erase member [STL/CLR]
+- front member [STL/CLR]
+- front_item member [STL/CLR]
+- generic_container member [STL/CLR]
+- generic_iterator member [STL/CLR]
+- generic_reverse_iterator member [STL/CLR]
+- generic_value member [STL/CLR]
+- insert member [STL/CLR]
+- iterator member [STL/CLR]
+- list member [STL/CLR]
+- merge member [STL/CLR]
+- operator= member [STL/CLR]
+- pop_back member [STL/CLR]
+- pop_front member [STL/CLR]
+- push_back member [STL/CLR]
+- push_front member [STL/CLR]
+- rbegin member [STL/CLR]
+- reference member [STL/CLR]
+- remove member [STL/CLR]
+- remove_if member [STL/CLR]
+- rend member [STL/CLR]
+- resize member [STL/CLR]
+- reverse member [STL/CLR]
+- reverse_iterator member [STL/CLR]
+- size member [STL/CLR]
+- size_type member [STL/CLR]
+- sort member [STL/CLR]
+- splice member [STL/CLR]
+- swap member [STL/CLR]
+- to_array member [STL/CLR]
+- unique member [STL/CLR]
+- value_type member [STL/CLR]
+- operator!=(list) member [STL/CLR]
+- operator<(list) member [STL/CLR]
+- operator<=(list) member [STL/CLR]
+- operator==(list) member [STL/CLR]
+- operator>(list) member [STL/CLR]
+- operator>=(list) member [STL/CLR]
 ms.assetid: a70c45c8-a257-4f6b-8434-b27ff6685bac
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4ff009da3ca29697e9b3affceb424bcd84b9b896
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e6ae13efabd34c6c685b07691789634ca0aed9c
+ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33141753"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36305920"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp dwukierunkowego. Użyj kontenera `list` Zarządzanie sekwencję elementów jako dwukierunkowy połączonej listy węzłów, w każdym przechowywania jeden element.  
@@ -50,68 +150,73 @@ template<typename Value>
  Wartość  
  Typ elementu w kontrolowanej sekwencji.  
   
+## <a name="requirements"></a>Wymagania  
+ **Nagłówek:** \<cliext/listy >  
+  
+ **Namespace:** cliext 
+
 ## <a name="members"></a>Elementy członkowskie  
   
 |Definicja typu|Opis|  
 |---------------------|-----------------|  
-|[list::const_iterator (STL/CLR)](../dotnet/list-const-iterator-stl-clr.md)|Typ iteratora stałego dla kontrolowanej sekwencji.|  
-|[list::const_reference (STL/CLR)](../dotnet/list-const-reference-stl-clr.md)|Typ stałego odwołania do elementu.|  
-|[list::const_reverse_iterator (STL/CLR)](../dotnet/list-const-reverse-iterator-stl-clr.md)|Typ stałej iteratora wstecznego w kontrolowanej sekwencji.|  
-|[list::difference_type (STL/CLR)](../dotnet/list-difference-type-stl-clr.md)|Typ odległości ze znakiem między dwoma elementami.|  
-|[list::generic_container (STL/CLR)](../dotnet/list-generic-container-stl-clr.md)|Typ ogólny interfejs umożliwiający kontenera.|  
-|[list::generic_iterator (STL/CLR)](../dotnet/list-generic-iterator-stl-clr.md)|Typ iteratora dla ogólnego interfejsu do kontenera.|  
-|[list::generic_reverse_iterator (STL/CLR)](../dotnet/list-generic-reverse-iterator-stl-clr.md)|Typ odwrotnej iteratora dla ogólnego interfejsu do kontenera.|  
-|[list::generic_value (STL/CLR)](../dotnet/list-generic-value-stl-clr.md)|Typ elementu dla ogólnego interfejsu do kontenera.|  
-|[list::iterator (STL/CLR)](../dotnet/list-iterator-stl-clr.md)|Typ iteratora dla kontrolowanej sekwencji.|  
-|[list::reference (STL/CLR)](../dotnet/list-reference-stl-clr.md)|Typ odwołania do elementu.|  
-|[list::reverse_iterator (STL/CLR)](../dotnet/list-reverse-iterator-stl-clr.md)|Typ odwrotnej iteratora w kontrolowanej sekwencji.|  
-|[list::size_type (STL/CLR)](../dotnet/list-size-type-stl-clr.md)|Typ odległości ze znakiem między dwoma elementami.|  
-|[list::value_type (STL/CLR)](../dotnet/list-value-type-stl-clr.md)|Typ elementu.|  
+|[list::const_iterator (STL/CLR)](#const_iterator)|Typ iteratora stałego dla kontrolowanej sekwencji.|  
+|[list::const_reference (STL/CLR)](#const_reference)|Typ stałego odwołania do elementu.|  
+|[list::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|Typ stałej iteratora wstecznego w kontrolowanej sekwencji.|  
+|[list::difference_type (STL/CLR)](#difference_type)|Typ odległości ze znakiem między dwoma elementami.|  
+|[list::generic_container (STL/CLR)](#generic_container)|Typ ogólny interfejs umożliwiający kontenera.|  
+|[list::generic_iterator (STL/CLR)](#generic_iterator)|Typ iteratora dla ogólnego interfejsu do kontenera.|  
+|[list::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|Typ odwrotnej iteratora dla ogólnego interfejsu do kontenera.|  
+|[list::generic_value (STL/CLR)](#generic_value)|Typ elementu dla ogólnego interfejsu do kontenera.|  
+|[list::iterator (STL/CLR)](#iterator)|Typ iteratora dla kontrolowanej sekwencji.|  
+|[list::reference (STL/CLR)](#reference)|Typ odwołania do elementu.|  
+|[list::reverse_iterator (STL/CLR)](#reverse_iterator)|Typ odwrotnej iteratora w kontrolowanej sekwencji.|  
+|[list::size_type (STL/CLR)](#size_type)|Typ odległości ze znakiem między dwoma elementami.|  
+|[list::value_type (STL/CLR)](#value_type)|Typ elementu.|  
   
 |Funkcja elementów członkowskich|Opis|  
 |---------------------|-----------------|  
-|[list::assign (STL/CLR)](../dotnet/list-assign-stl-clr.md)|Zamienia wszystkie elementy.|  
-|[list::back (STL/CLR)](../dotnet/list-back-stl-clr.md)|Uzyskuje dostęp do ostatniego elementu.|  
-|[list::begin (STL/CLR)](../dotnet/list-begin-stl-clr.md)|Określa początek kontrolowanej sekwencji.|  
-|[list::clear (STL/CLR)](../dotnet/list-clear-stl-clr.md)|Usuwa wszystkie elementy.|  
-|[list::empty (STL/CLR)](../dotnet/list-empty-stl-clr.md)|Sprawdza, czy nie ma żadnych elementów.|  
-|[list::end (STL/CLR)](../dotnet/list-end-stl-clr.md)|Określa koniec kontrolowanej sekwencji.|  
-|[list::erase (STL/CLR)](../dotnet/list-erase-stl-clr.md)|Usuwa elementy z określonych pozycji.|  
-|[list::front (STL/CLR)](../dotnet/list-front-stl-clr.md)|Uzyskuje dostęp do pierwszego elementu.|  
-|[list::insert (STL/CLR)](../dotnet/list-insert-stl-clr.md)|Dodaje elementy na określonej pozycji.|  
-|[list::list (STL/CLR)](../dotnet/list-list-stl-clr.md)|Konstruuje obiekt kontenera.|  
-|[list::merge (STL/CLR)](../dotnet/list-merge-stl-clr.md)|Scala dwie uporządkowane kontrolowanej sekwencji.|  
-|[list::pop_back (STL/CLR)](../dotnet/list-pop-back-stl-clr.md)|Usuwa ostatnim elemencie.|  
-|[list::pop_front (STL/CLR)](../dotnet/list-pop-front-stl-clr.md)|Usuwa pierwszego elementu.|  
-|[list::push_back (STL/CLR)](../dotnet/list-push-back-stl-clr.md)|Dodaje nowy element ostatni.|  
-|[list::push_front (STL/CLR)](../dotnet/list-push-front-stl-clr.md)|Dodaje nowy element pierwszy.|  
-|[list::rbegin (STL/CLR)](../dotnet/list-rbegin-stl-clr.md)|Określa początek odwróconej kontrolowanej sekwencji.|  
-|[list::remove (STL/CLR)](../dotnet/list-remove-stl-clr.md)|Usuwa element z określoną wartością.|  
-|[list::remove_if (STL/CLR)](../dotnet/list-remove-if-stl-clr.md)|Usuwa elementy przekazujące określonego testu.|  
-|[list::rend (STL/CLR)](../dotnet/list-rend-stl-clr.md)|Określa koniec odwróconej kontrolowanej sekwencji.|  
-|[list::resize (STL/CLR)](../dotnet/list-resize-stl-clr.md)|Zmiany liczby elementów.|  
-|[list::reverse (STL/CLR)](../dotnet/list-reverse-stl-clr.md)|Odwraca kontrolowanej sekwencji.|  
-|[list::size (STL/CLR)](../dotnet/list-size-stl-clr.md)|Liczy liczbę elementów.|  
-|[list::sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)|Ustala kolejność kontrolowanej sekwencji.|  
-|[list::splice (STL/CLR)](../dotnet/list-splice-stl-clr.md)|Restitches łącza między węzłami.|  
-|[list::swap (STL/CLR)](../dotnet/list-swap-stl-clr.md)|Zamienia zawartości dwóch kontenerów.|  
-|[list::to_array (STL/CLR)](../dotnet/list-to-array-stl-clr.md)|Kopiuje kontrolowanej sekwencji do nowej tablicy.|  
-|[list::unique (STL/CLR)](../dotnet/list-unique-stl-clr.md)|Usuwa elementy sąsiednie przekazujące określonego testu.|  
+|[list::assign (STL/CLR)](#assign)|Zamienia wszystkie elementy.|  
+|[list::back (STL/CLR)](#back)|Uzyskuje dostęp do ostatniego elementu.|  
+|[list::begin (STL/CLR)](#begin)|Określa początek kontrolowanej sekwencji.|  
+|[list::clear (STL/CLR)](#clear)|Usuwa wszystkie elementy.|  
+|[list::empty (STL/CLR)](#empty)|Sprawdza, czy nie ma żadnych elementów.|  
+|[list::end (STL/CLR)](#end)|Określa koniec kontrolowanej sekwencji.|  
+|[list::erase (STL/CLR)](#erase)|Usuwa elementy z określonych pozycji.|  
+|[list::front (STL/CLR)](#front)|Uzyskuje dostęp do pierwszego elementu.|  
+|[list::insert (STL/CLR)](#insert)|Dodaje elementy na określonej pozycji.|  
+|[list::list (STL/CLR)](#list)|Konstruuje obiekt kontenera.|  
+|[list::merge (STL/CLR)](#merge)|Scala dwie uporządkowane kontrolowanej sekwencji.|  
+|[list::pop_back (STL/CLR)](#pop_back)|Usuwa ostatnim elemencie.|  
+|[list::pop_front (STL/CLR)](#pop_front)|Usuwa pierwszego elementu.|  
+|[list::push_back (STL/CLR)](#push_back)|Dodaje nowy element ostatni.|  
+|[list::push_front (STL/CLR)](#push_front)|Dodaje nowy element pierwszy.|  
+|[list::rbegin (STL/CLR)](#rbegin)|Określa początek odwróconej kontrolowanej sekwencji.|  
+|[list::remove (STL/CLR)](#remove)|Usuwa element z określoną wartością.|  
+|[list::remove_if (STL/CLR)](#remove_if)|Usuwa elementy przekazujące określonego testu.|  
+|[list::rend (STL/CLR)](#rend)|Określa koniec odwróconej kontrolowanej sekwencji.|  
+|[list::resize (STL/CLR)](#resize)|Zmiany liczby elementów.|  
+|[list::reverse (STL/CLR)](#reverse)|Odwraca kontrolowanej sekwencji.|  
+|[list::size (STL/CLR)](#size)|Liczy liczbę elementów.|  
+|[list::sort (STL/CLR)](#sort)|Ustala kolejność kontrolowanej sekwencji.|  
+|[list::splice (STL/CLR)](#splice)|Restitches łącza między węzłami.|  
+|[list::swap (STL/CLR)](#swap)|Zamienia zawartości dwóch kontenerów.|  
+|[list::to_array (STL/CLR)](#to_array)|Kopiuje kontrolowanej sekwencji do nowej tablicy.|  
+|[list::unique (STL/CLR)](#unique)|Usuwa elementy sąsiednie przekazujące określonego testu.|  
   
 |Właściwość|Opis|  
 |--------------|-----------------|  
-|[list::back_item (STL/CLR)](../dotnet/list-back-item-stl-clr.md)|Uzyskuje dostęp do ostatniego elementu.|  
-|[list::front_item (STL/CLR)](../dotnet/list-front-item-stl-clr.md)|Uzyskuje dostęp do pierwszego elementu.|  
+|[list::back_item (STL/CLR)](#back_item)|Uzyskuje dostęp do ostatniego elementu.|  
+|[list::front_item (STL/CLR)](#front_item)|Uzyskuje dostęp do pierwszego elementu.|  
   
 |Operator|Opis|  
 |--------------|-----------------|  
-|[list::operator= (STL/CLR)](../dotnet/list-operator-assign-stl-clr.md)|Zastępuje kontrolowanej sekwencji.|  
-|[operator!= (list) (STL/CLR)](../dotnet/operator-inequality-list-stl-clr.md)|Określa, czy `list` obiekt nie jest równa innej `list` obiektu.|  
-|[operator< (list) (STL/CLR)](../dotnet/operator-less-than-list-stl-clr.md)|Określa, czy `list` obiekt jest mniejszy niż innego `list` obiektu.|  
-|[operator<= (list) (STL/CLR)](../dotnet/operator-less-or-equal-list-stl-clr.md)|Określa, czy `list` obiekt jest mniejszy niż lub równy do innego `list` obiektu.|  
-|[operator== (list) (STL/CLR)](../dotnet/operator-equality-list-stl-clr.md)|Określa, czy `list` obiekt jest taki sam do innego `list` obiektu.|  
-|[operator> (list) (STL/CLR)](../dotnet/operator-greater-than-list-stl-clr.md)|Określa, czy `list` obiekt jest większy niż innego `list` obiektu.|  
-|[operator>= (list) (STL/CLR)](../dotnet/operator-greater-or-equal-list-stl-clr.md)|Określa, czy `list` obiektu jest większa lub równa innej `list` obiektu.|  
+|[list::operator= (STL/CLR)](#op_as)|Zastępuje kontrolowanej sekwencji.|  
+|[operator!= (list) (STL/CLR)](#op_neq)|Określa, czy `list` obiekt nie jest równa innej `list` obiektu.|  
+|[operator< (list) (STL/CLR)](#op_lt)|Określa, czy `list` obiekt jest mniejszy niż innego `list` obiektu.|  
+|[operator<= (list) (STL/CLR)](#op_lteq)|Określa, czy `list` obiekt jest mniejszy niż lub równy do innego `list` obiektu.|  
+|[operator== (list) (STL/CLR)](#op_eq)|Określa, czy `list` obiekt jest taki sam do innego `list` obiektu.|  
+|[operator> (list) (STL/CLR)](#op_gt)|Określa, czy `list` obiekt jest większy niż innego `list` obiektu.|  
+|[operator>= (list) (STL/CLR)](#op_gteq)|Określa, czy `list` obiektu jest większa lub równa innej `list` obiektu.|  
   
 ## <a name="interfaces"></a>Interfejsy  
   
@@ -135,15 +240,2915 @@ template<typename Value>
   
  Wymazywanie lub usunięcie elementu wywołuje destruktor dla jej wartości przechowywanej. Niszczenie kontenera powoduje wymazanie wszystkich elementów. W związku z tym kontenera, której typ elementów jest klasa ref gwarantuje, że żadnych elementów outlive kontenera. Należy jednak pamiętać, że jest kontenerem dojść `not` zniszczyć elementów.  
   
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** \<cliext/listy >  
+## <a name="assign"></a> list::ASSIGN (STL/CLR)
+Zamienia wszystkie elementy.  
   
- **Namespace:** cliext  
+### <a name="syntax"></a>Składnia  
   
-## <a name="see-also"></a>Zobacz też  
- [deque — (STL/CLR)](../dotnet/deque-stl-clr.md)   
- [priority_queue — (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
- [kolejki (STL/CLR)](../dotnet/queue-stl-clr.md)   
- [stos (STL/CLR)](../dotnet/stack-stl-clr.md)   
- [Wektor (STL/CLR)](../dotnet/vector-stl-clr.md)   
- [Dokumentacja biblioteki STL/CLR](../dotnet/stl-clr-library-reference.md)
+```  
+void assign(size_type count, value_type val);  
+template<typename InIt>  
+    void assign(InIt first, InIt last);  
+void assign(System::Collections::Generic::IEnumerable<Value>^ right);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ count  
+ Liczba elementów do wstawienia.  
+  
+ pierwszy  
+ Początek zakresu do wstawienia.  
+  
+ ostatni  
+ Koniec zakresu do wstawienia.  
+  
+ w prawo  
+ Wyliczenie do wstawienia.  
+  
+ Val  
+ Wartość elementu do wstawienia.  
+  
+### <a name="remarks"></a>Uwagi  
+ Zamienia pierwszy funkcji członkowskiej kontrolowanej sekwencji powtórzenia `count` elementy wartości `val`. Umożliwia ona wypełnienie elementów kontenera wszystkich mających taką samą wartość.  
+  
+ Jeśli `InIt` jest typu integer, drugi funkcji członkowskiej działa tak samo jak `assign((size_type)first, (value_type)last)`. W przeciwnym razie zastępuje kontrolowanej sekwencji z sekwencją [`first`, `last`). Umożliwia ona upewnij kontrolowanej sekwencji kopii w innej sekwencji.  
+  
+ Trzeci funkcji członkowskiej zastępuje kontrolowanej sekwencji sekwencji wskazywany przez moduł wyliczający `right`. Umożliwia ona utworzyć kopię sekwencji opisanego przez moduł wyliczający kontrolowanej sekwencji.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_assign.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// assign a repetition of values   
+    cliext::list<wchar_t> c2;   
+    c2.assign(6, L'x');   
+    for each (wchar_t elem in c2)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// assign an iterator range   
+    cliext::list<wchar_t>::iterator it = c1.end();   
+    c2.assign(c1.begin(), --it);   
+    for each (wchar_t elem in c2)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// assign an enumeration   
+    c2.assign(   // NOTE: cast is not needed   
+        (System::Collections::Generic::IEnumerable<wchar_t>^)%c1);   
+    for each (wchar_t elem in c2)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+x x x x x x  
+a b  
+a b c  
+```  
+ 
+## <a name="back"></a> list::back (STL/CLR)
+Uzyskuje dostęp do ostatniego elementu.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+reference back();  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcja członkowska zwraca odwołanie do ostatniego elementu w kontrolowanej sekwencji musi być niepusta. Umożliwia ona dostęp do ostatniego elementu, gdy wiesz, że istnieje.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_back.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// inspect last item   
+    System::Console::WriteLine("back() = {0}", c1.back());   
+  
+// alter last item and reinspect   
+    c1.back() = L'x';   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+back() = c  
+ a b x  
+```  
+
+## <a name="back_item"></a> list::back_item (STL/CLR)
+Uzyskuje dostęp do ostatniego elementu.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+property value_type back_item;  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Właściwość uzyskuje dostęp do ostatniego elementu w kontrolowanej sekwencji musi być niepusta. Możesz użyć do odczytu lub zapisu ostatniego elementu, gdy wiesz, że istnieje.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_back_item.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// inspect last item   
+    System::Console::WriteLine("back_item = {0}", c1.back_item);   
+  
+// alter last item and reinspect   
+    c1.back_item = L'x';   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+back_item = c  
+ a b x  
+```  
+
+## <a name="begin"></a> list::BEGIN (STL/CLR)
+Określa początek kontrolowanej sekwencji.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+iterator begin();  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcja członkowska zwraca iteratora dostępie swobodnym, który wyznacza pierwszego elementu w kontrolowanej sekwencji lub bezpośrednio po zakończeniu pustej sekwencji. Służy do uzyskania iterację wyznacza `current` początku kontrolowanej sekwencji, ale jej stan można zmieniać w przypadku zmiany długości kontrolowanej sekwencji.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_begin.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// inspect first two items   
+    cliext::list<wchar_t>::iterator it = c1.begin();   
+    System::Console::WriteLine("*begin() = {0}", *it);   
+    System::Console::WriteLine("*++begin() = {0}", *++it);   
+  
+// alter first two items and reinspect   
+    *--it = L'x';   
+    *++it = L'y';   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+*begin() = a  
+*++begin() = b  
+ x y c  
+```  
+
+## <a name="clear"></a> list::Clear (STL/CLR)
+Usuwa wszystkie elementy.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+void clear();  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Wywołuje funkcję elementu członkowskiego [list::erase (STL/CLR)](../dotnet/list-erase-stl-clr.md) `(` [list::begin (STL/CLR)](../dotnet/list-begin-stl-clr.md) `(),` [list::end (STL/CLR)](../dotnet/list-end-stl-clr.md) `())`. Umożliwia ona upewnij się, że kontrolowanej sekwencji jest pusty.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_clear.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// clear the container and reinspect   
+    c1.clear();   
+    System::Console::WriteLine("size() = {0}", c1.size());   
+  
+// add elements and clear again   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+  
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    c1.clear();   
+    System::Console::WriteLine("size() = {0}", c1.size());   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+size() = 0  
+ a b  
+size() = 0  
+```  
+
+## <a name="const_iterator"></a> list::const_iterator (STL/CLR)
+Typ iteratora stałego dla kontrolowanej sekwencji.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+typedef T2 const_iterator;  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Typ zawiera opis obiektu nieokreślonego typu `T2` który może służyć jako stałej iteratora dostępie swobodnym w kontrolowanej sekwencji.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_const_iterator.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display contents " a b c"   
+    cliext::list<wchar_t>::const_iterator cit = c1.begin();   
+    for (; cit != c1.end(); ++cit)   
+        System::Console::Write(" {0}", *cit);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+```  
+
+## <a name="const_reference"></a> list::const_reference (STL/CLR)
+Typ stałego odwołania do elementu.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+typedef value_type% const_reference;  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Typ w tym artykule opisano stałej odwołanie do elementu.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_const_reference.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display initial contents " a b c"   
+    cliext::list<wchar_t>::const_iterator cit = c1.begin();   
+    for (; cit != c1.end(); ++cit)   
+        {   // get a const reference to an element   
+        cliext::list<wchar_t>::const_reference cref = *cit;   
+        System::Console::Write(" {0}", cref);   
+        }   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+```  
+
+## <a name="const_reverse_iterator"></a> list::const_reverse_iterator (STL/CLR)
+Typ stałej iteratora wstecznego w kontrolowanej sekwencji.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+typedef T4 const_reverse_iterator;  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Typ zawiera opis obiektu nieokreślonego typu `T4` który może służyć jako stałej iteratora wstecznego w kontrolowanej sekwencji.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_const_reverse_iterator.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display contents " a b c" reversed   
+    cliext::list<wchar_t>::const_reverse_iterator crit = c1.rbegin();   
+    cliext::list<wchar_t>::const_reverse_iterator crend = c1.rend();   
+    for (; crit != crend; ++crit)   
+        System::Console::Write(" {0}", *crit);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+c b a  
+```  
+
+## <a name="difference_type"></a> list::difference_type (STL/CLR)
+Typy podpisane odległość między dwoma elementami.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+typedef int difference_type;  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Typ w tym artykule opisano liczba podpisanego elementu.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp 
+// cliext_list_difference_type.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// compute positive difference   
+    cliext::list<wchar_t>::difference_type diff = 0;   
+    for (cliext::list<wchar_t>::iterator it = c1.begin();   
+        it != c1.end(); ++it) ++diff;   
+    System::Console::WriteLine("end()-begin() = {0}", diff);   
+  
+// compute negative difference   
+    diff = 0;   
+    for (cliext::list<wchar_t>::iterator it = c1.end();   
+        it != c1.begin(); --it) --diff;   
+    System::Console::WriteLine("begin()-end() = {0}", diff);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+end()-begin() = 3  
+begin()-end() = -3  
+```  
+
+## <a name="empty"></a> list::EMPTY (STL/CLR)
+Sprawdza, czy nie ma żadnych elementów.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+bool empty();  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcja członkowska zwraca wartość true dla pustego kontrolowanej sekwencji. Jest to równoważne [list::size (STL/CLR)](../dotnet/list-size-stl-clr.md)`() == 0`. Można użyć do sprawdzenia, czy lista jest pusta.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_empty.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    System::Console::WriteLine("size() = {0}", c1.size());   
+    System::Console::WriteLine("empty() = {0}", c1.empty());   
+  
+// clear the container and reinspect   
+    c1.clear();   
+    System::Console::WriteLine("size() = {0}", c1.size());   
+    System::Console::WriteLine("empty() = {0}", c1.empty());   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
+
+## <a name="end"></a> list::end (STL/CLR)
+Określa koniec kontrolowanej sekwencji.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+iterator end();  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcja członkowska zwraca iteratora dostępie swobodnym tego punkty bezpośrednio po zakończeniu kontrolowanej sekwencji. Służy do uzyskania iterację Określa koniec kontrolowanej sekwencji; jego stan zmieniać w przypadku zmiany długości kontrolowanej sekwencji.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_end.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// inspect last two items   
+    cliext::list<wchar_t>::iterator it = c1.end();   
+    --it;   
+    System::Console::WriteLine("*-- --end() = {0}", *--it);   
+    System::Console::WriteLine("*--end() = {0}", *++it);   
+  
+// alter first two items and reinspect   
+    *--it = L'x';   
+    *++it = L'y';   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+*-- --end() = b  
+*--end() = c  
+ a x y  
+```  
+
+## <a name="erase"></a> list::ERASE (STL/CLR)
+Usuwa elementy z określonych pozycji.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+iterator erase(iterator where);  
+iterator erase(iterator first, iterator last);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ pierwszy  
+ Początek zakresu, aby wymazać.  
+  
+ ostatni  
+ Koniec zakresu, aby wymazać.  
+  
+ gdzie  
+ Element, aby wymazać.  
+  
+### <a name="remarks"></a>Uwagi  
+ Pierwszy funkcji członkowskiej spowoduje usunięcie elementu w kontrolowanej sekwencji wskazywana przez `where`. Umożliwia ona Usuń pojedynczy element.  
+  
+ Drugi funkcji członkowskiej usuwa elementy kontrolowanej sekwencji z zakresu [`first`, `last`). Można użyć do usunięcia zero lub więcej elementów ciągłe.  
+  
+ Zarówno członek zwracają wartość iterację wyznacza pierwszy element pozostałych poza wszelkie elementy usunięte, lub [list::end (STL/CLR)](../dotnet/list-end-stl-clr.md) `()` , jeśli nie zawiera żadnego takiego elementu.  
+  
+ Podczas usuwania elementów, liczbę kopii elementu jest liniowa liczby elementów między koniec wymazywania i bliżej położonego zakończeniem sekwencji. (Podczas usuwania co najmniej jeden element na końcu sekwencji, brak kopii elementu wykonywane.)  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_erase.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// erase an element and reinspect   
+    System::Console::WriteLine("erase(begin()) = {0}",   
+        *c1.erase(c1.begin()));   
+  
+// add elements and display " b c d e"   
+    c1.push_back(L'd');   
+    c1.push_back(L'e');   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// erase all but end   
+    cliext::list<wchar_t>::iterator it = c1.end();   
+    System::Console::WriteLine("erase(begin(), end()-1) = {0}",   
+        *c1.erase(c1.begin(), --it));   
+    System::Console::WriteLine("size() = {0}", c1.size());   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+erase(begin()) = b  
+ b c d e  
+erase(begin(), end()-1) = e  
+size() = 1  
+```  
+
+## <a name="front"></a> list::Front (STL/CLR)
+Uzyskuje dostęp do pierwszego elementu.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+reference front();  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcja członkowska zwraca odwołanie do pierwszego elementu w kontrolowanej sekwencji musi być niepusta. Możesz używać do odczytywania lub zapisywania pierwszego elementu, gdy wiesz, że istnieje.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_front.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// inspect first item   
+    System::Console::WriteLine("front() = {0}", c1.front());   
+  
+// alter first item and reinspect   
+    c1.front() = L'x';   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+front() = a  
+ x b c  
+```  
+
+## <a name="front_item"></a> list::front_item (STL/CLR)
+Uzyskuje dostęp do pierwszego elementu.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+property value_type front_item;  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Właściwość uzyskuje dostęp do pierwszego elementu obiektu kontrolowanej sekwencji musi być niepusta. Możesz używać do odczytywania lub zapisywania pierwszego elementu, gdy wiesz, że istnieje.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_front_item.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// inspect first item   
+    System::Console::WriteLine("front_item = {0}", c1.front_item);   
+  
+// alter first item and reinspect   
+    c1.front_item = L'x';   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+front_item = a  
+ x b c  
+```  
+
+## <a name="generic_container"></a> list::generic_container (STL/CLR)
+Typ ogólny interfejs umożliwiający kontenera.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+typedef Microsoft::VisualC::StlClr::  
+    IList<generic_value>  
+    generic_container;  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Typ w tym artykule opisano ogólny interfejs dla tej klasy kontenera szablonu.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_generic_container.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// construct a generic container   
+    cliext::list<wchar_t>::generic_container^ gc1 = %c1;   
+    for each (wchar_t elem in gc1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// modify generic and display original   
+    gc1->insert(gc1->end(), L'd');   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// modify original and display generic   
+    c1.push_back(L'e');   
+  
+    System::Collections::IEnumerator^ enum1 =   
+        gc1->GetEnumerator();   
+    while (enum1->MoveNext())   
+        System::Console::Write(" {0}", enum1->Current);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+a b c  
+a b c d  
+a b c d e  
+```  
+
+## <a name="generic_iterator"></a> list::generic_iterator (STL/CLR)
+Typ iteratora do użytku ogólnego interfejs dla kontenera.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+typedef Microsoft::VisualC::StlClr::Generic::  
+    ContainerBidirectionalIterator<generic_value>  
+    generic_iterator;  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Typ w tym artykule opisano iteratora rodzajowy, używaną z ogólnym interfejsem dla tej klasy kontenera szablonu.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_generic_iterator.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// construct a generic container   
+    cliext::list<wchar_t>::generic_container^ gc1 = %c1;   
+    for each (wchar_t elem in gc1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// modify generic and display original   
+    cliext::list<wchar_t>::generic_iterator gcit = gc1->begin();   
+    cliext::list<wchar_t>::generic_value gcval = *gcit;   
+    *++gcit = gcval;   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+a b c  
+a a c  
+```  
+
+## <a name="generic_reverse_iterator"></a> list::generic_reverse_iterator (STL/CLR)
+Typ odwrotnej iteratora do użytku ogólnego interfejs dla kontenera.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+typedef Microsoft::VisualC::StlClr::Generic::  
+    ReverseBidirectionalIterator<generic_value> generic_reverse_iterator;  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Typ w tym artykule opisano ogólny iteratora odwrotnej służący z ogólnym interfejsem dla tej klasy kontenera szablonu.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_generic_reverse_iterator.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// construct a generic container   
+    cliext::list<wchar_t>::generic_container^ gc1 = %c1;   
+    for each (wchar_t elem in gc1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// modify generic and display original   
+    cliext::list<wchar_t>::generic_reverse_iterator gcit = gc1->rbegin();   
+    cliext::list<wchar_t>::generic_value gcval = *gcit;   
+    *++gcit = gcval;   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+a b c  
+a c c  
+```  
+
+## <a name="generic_value"></a> list::generic_value (STL/CLR)
+Typ elementu do użytku ogólnego interfejs dla kontenera.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+typedef GValue generic_value;  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Typ w tym artykule opisano typu obiektu `GValue` opisujący wartość elementu przechowywane do użytku ogólnego interfejs dla tej klasy kontenera szablonu.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_generic_value.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// construct a generic container   
+    cliext::list<wchar_t>::generic_container^ gc1 = %c1;   
+    for each (wchar_t elem in gc1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// modify generic and display original   
+    cliext::list<wchar_t>::generic_iterator gcit = gc1->begin();   
+    cliext::list<wchar_t>::generic_value gcval = *gcit;   
+    *++gcit = gcval;   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+a b c  
+a a c  
+```  
+
+## <a name="insert"></a> list::INSERT (STL/CLR)
+Dodaje elementy na określonej pozycji.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+iterator insert(iterator where, value_type val);  
+void insert(iterator where, size_type count, value_type val);  
+template<typename InIt>  
+    void insert(iterator where, InIt first, InIt last);  
+void insert(iterator where,  
+    System::Collections::Generic::IEnumerable<Value>^ right);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ count  
+ Liczba elementów do wstawienia.  
+  
+ pierwszy  
+ Początek zakresu do wstawienia.  
+  
+ ostatni  
+ Koniec zakresu do wstawienia.  
+  
+ w prawo  
+ Wyliczenie do wstawienia.  
+  
+ Val  
+ Wartość elementu do wstawienia.  
+  
+ gdzie  
+ Gdzie w kontenerze, aby wstawić przed.  
+  
+### <a name="remarks"></a>Uwagi  
+ Każdy element członkowski funkcji wstawiania przed elementem wskazywana przez `where` w kontrolowanej sekwencji sekwencję określonej przez pozostałych argumentów.  
+  
+ Pierwszy funkcji członkowskiej wstawia element z wartością `val` i zwracającą iterator określający nowo wstawiony element. Umożliwia ona Wstaw pojedynczy element przed miejsce wskazywany przez iteratora.  
+  
+ Drugi funkcji członkowskiej wstawia powtórzenia `count` elementy wartości `val`. Umożliwia ona Wstawianie zero lub więcej sąsiadujących elementów, które są wszystkie kopie tej samej wartości.  
+  
+ Jeśli `InIt` jest typu integer trzeci funkcji członkowskiej działa tak samo jak `insert(where, (size_type)first, (value_type)last)`. W przeciwnym razie wstawia sekwencji [`first`, `last`). Umożliwia ona Wstawianie zero lub więcej sąsiadujących elementów skopiowanych z innej sekwencji.  
+  
+ Czwarty funkcji członkowskiej wstawia sekwencji wskazywany przez `right`. Umożliwia ona Wstaw sekwencję opisanego przez moduł wyliczający.  
+  
+ Podczas wstawiania pojedynczy element, liczbę kopii elementu jest liniowa liczby elementów między punkt wstawiania i bliżej położonego zakończeniem sekwencji. (Podczas wstawiania co najmniej jeden element na końcu sekwencji, brak kopii elementu wykonywane.) Jeśli `InIt` jest iterację wejściowych trzeci funkcji członkowskiej skutecznie wykonuje wstawiania jednej dla każdego elementu w sekwencji. W przeciwnym razie podczas wstawiania `N` elementów, liczbę kopii elementu jest liniowa w `N` wraz z liczbą elementów między punkt wstawiania i bliżej położonego zakończeniem sekwencji.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_insert.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// insert a single value using iterator   
+    cliext::list<wchar_t>::iterator it = c1.begin();   
+    System::Console::WriteLine("insert(begin()+1, L'x') = {0}",   
+        *c1.insert(++it, L'x'));   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// insert a repetition of values   
+    cliext::list<wchar_t> c2;   
+    c2.insert(c2.begin(), 2, L'y');   
+    for each (wchar_t elem in c2)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// insert an iterator range   
+    it = c1.end();   
+    c2.insert(c2.end(), c1.begin(), --it);   
+    for each (wchar_t elem in c2)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// insert an enumeration   
+    c2.insert(c2.begin(),   // NOTE: cast is not needed   
+        (System::Collections::Generic::IEnumerable<wchar_t>^)%c1);   
+    for each (wchar_t elem in c2)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// insert a single value using index   
+    it = c2.begin();   
+    ++it, ++it, ++it;   
+    c2.insert(it, L'z');   
+    for each (wchar_t elem in c2)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+insert(begin()+1, L'x') = x  
+ a x b c  
+ y y  
+ y y a x b  
+ a x b c y y a x b  
+```  
+
+## <a name="iterator"></a> list::iterator (STL/CLR)
+Typ iteratora dla kontrolowanej sekwencji.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+typedef T1 iterator;  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Typ zawiera opis obiektu nieokreślonego typu `T1` który może służyć jako iterator dostępie swobodnym w kontrolowanej sekwencji.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_iterator.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display contents " a b c"   
+    cliext::list<wchar_t>::iterator it = c1.begin();   
+    for (; it != c1.end(); ++it)   
+        System::Console::Write(" {0}", *it);   
+    System::Console::WriteLine();   
+  
+// alter first element and redisplay   
+    it = c1.begin();   
+    *it = L'x';   
+    for (; it != c1.end(); ++it)   
+        System::Console::Write(" {0}", *it);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+x b c  
+```  
+
+## <a name="list"></a> list::list (STL/CLR)
+Konstruuje obiekt kontenera.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+list();  
+list(list<Value>% right);  
+list(list<Value>^ right);  
+explicit list(size_type count);  
+list(size_type count, value_type val);  
+template<typename InIt>  
+    list(InIt first, InIt last);  
+list(System::Collections::Generic::IEnumerable<Value>^ right);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ `count`  
+ Liczba elementów do wstawienia.  
+  
+ `first`  
+ Początek zakresu do wstawienia.  
+  
+ `last`  
+ Koniec zakresu do wstawienia.  
+  
+ `right`  
+ Obiekt lub zakresu do wstawienia.  
+  
+ `val`  
+ Wartość elementu do wstawienia.  
+  
+### <a name="remarks"></a>Uwagi  
+  
+ Konstruktor:  
+  
+ `list();`  
+  
+ Inicjuje kontrolowanej sekwencji z żadnych elementów. Umożliwia ona Określ pusty początkowej kontrolowanej sekwencji.  
+  
+ Konstruktor:  
+  
+ `list(list<Value>% right);`  
+  
+ Inicjuje kontrolowanej sekwencji z sekwencją [`right.begin()`, `right.end()`). Należy użyć do określenia początkowej kontrolowanej sekwencji, który jest kopią sekwencji kontrolowane przez obiekt listy `right`.  
+  
+ Konstruktor:  
+  
+ `list(list<Value>^ right);`  
+  
+ Inicjuje kontrolowanej sekwencji z sekwencją [`right->begin()`, `right->end()`). Należy użyć do określenia początkowej kontrolowanej sekwencji, który jest kopią sekwencji kontrolowane przez obiekt listy, których obsługa jest `right`.  
+  
+ Konstruktor:  
+  
+ `explicit list(size_type count);`  
+  
+ Inicjuje kontrolowanej sekwencji z `count` elementy o wartości `value_type()`. Umożliwia ona wypełnienie elementów kontenera wszystkich mających wartość domyślną.  
+  
+ Konstruktor:  
+  
+ `list(size_type count, value_type val);`  
+  
+ Inicjuje kontrolowanej sekwencji z `count` elementy o wartości `val`. Umożliwia ona wypełnienie elementów kontenera wszystkich mających taką samą wartość.  
+  
+ Konstruktor:  
+  
+ `template<typename InIt>`  
+  
+ `list(InIt first, InIt last);`  
+  
+ Inicjuje kontrolowanej sekwencji z sekwencją [`first`, `last`). Umożliwia ona kopię kontrolowanej sekwencji innej sekwencji.  
+  
+ Konstruktor:  
+  
+ `list(System::Collections::Generic::IEnumerable<Value>^ right);`  
+  
+ Inicjuje kontrolowanej sekwencji z sekwencją wskazywany przez moduł wyliczający `right`. Umożliwia ona kopię kontrolowanej sekwencji innej sekwencji opisanego przez moduł wyliczający.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_construct.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+// construct an empty container   
+    cliext::list<wchar_t> c1;   
+    System::Console::WriteLine("size() = {0}", c1.size());   
+  
+// construct with a repetition of default values   
+    cliext::list<wchar_t> c2(3);   
+    for each (wchar_t elem in c2)   
+        System::Console::Write(" {0}", (int)elem);   
+    System::Console::WriteLine();   
+  
+// construct with a repetition of values   
+    cliext::list<wchar_t> c3(6, L'x');   
+    for each (wchar_t elem in c3)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// construct with an iterator range   
+    cliext::list<wchar_t>::iterator it = c3.end();   
+    cliext::list<wchar_t> c4(c3.begin(), --it);   
+    for each (wchar_t elem in c4)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// construct with an enumeration   
+    cliext::list<wchar_t> c5(   // NOTE: cast is not needed   
+        (System::Collections::Generic::IEnumerable<wchar_t>^)%c3);   
+    for each (wchar_t elem in c5)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// construct by copying another container   
+    cliext::list<wchar_t> c7(c3);   
+    for each (wchar_t elem in c7)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// construct by copying a container handle   
+    cliext::list<wchar_t> c8(%c3);   
+    for each (wchar_t elem in c8)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+size() = 0  
+ 0 0 0  
+ x x x x x x  
+ x x x x x  
+ x x x x x x  
+ x x x x x x  
+ x x x x x x  
+```  
+
+## <a name="merge"></a> list::merge (STL/CLR)
+Scala dwie uporządkowane kontrolowanej sekwencji.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+void merge(list<Value>% right);  
+template<typename Pred2>  
+    void merge(list<Value>% right, Pred2 pred);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ pred  
+ Moduł porównujący dla elementu pary.  
+  
+ w prawo  
+ Kontener do scalenia w.  
+  
+### <a name="remarks"></a>Uwagi  
+ Pierwszy funkcji członkowskiej usuwa wszystkie elementy z sekwencji kontrolowane przez `right` i umieść je w kontrolowanej sekwencji. Zarówno sekwencji musi zostać wcześniej określona przez `operator<` — elementy nie mogą maleć wartości w czasie za pośrednictwem albo sekwencji. Wynikowa sekwencja jest również uporządkowanych według `operator<`. Ta funkcja członkowska umożliwia scalić dwóch sekwencji, które zwiększają wartość w kolejności, która zwiększa się również w wartości.  
+  
+ Drugi funkcji członkowskiej działa tak samo jako pierwszy, z wyjątkiem tego, że sekwencje są uporządkowane według `pred`  --  `pred(X, Y)` musi mieć wartość false dla każdego elementu `X` następujący element `Y` w sekwencji. Umożliwia ona scalić dwóch sekwencji uporządkowanych według funkcji predykatu lub delegata, który określisz.  
+  
+ Zarówno funkcje wykonywać stabilna scalania — nie pary elementów w jednym z oryginalnej sekwencji kontrolowane została odwrócona w wynikowej kontrolowanej sekwencji. Ponadto jeśli dwa elementy `X` i `Y` w kontrolowanej sekwencji wynikowy ma równoważne porządkowanie — `!(X < Y) && !(X < Y)` — z oryginalnego kontrolowanej sekwencji jest wyświetlany element przed elementem z sekwencji kontrolowane przez `right`.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_merge.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+typedef cliext::list<wchar_t> Mylist;   
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'c');   
+    c1.push_back(L'e');   
+  
+// display initial contents " a c e"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+    cliext::list<wchar_t> c2;   
+    c2.push_back(L'b');   
+    c2.push_back(L'd');   
+    c2.push_back(L'f');   
+  
+// display initial contents " b d f"   
+    for each (wchar_t elem in c2)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// merge and display   
+    cliext::list<wchar_t> c3(c1);   
+    c3.merge(c2);   
+    for each (wchar_t elem in c3)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    System::Console::WriteLine("c2.size() = {0}", c2.size());   
+  
+// sort descending, merge descending, and redisplay   
+    c1.sort(cliext::greater<wchar_t>());   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+    c3.sort(cliext::greater<wchar_t>());   
+    for each (wchar_t elem in c3)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+    c3.merge(c1, cliext::greater<wchar_t>());   
+    for each (wchar_t elem in c3)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    System::Console::WriteLine("c1.size() = {0}", c1.size());   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a c e  
+ b d f  
+ a b c d e f  
+c2.size() = 0  
+ e c a  
+ f e d c b a  
+ f e e d c c b a a  
+c1.size() = 0  
+```  
+
+## <a name="op_as"></a> list::operator = (STL/CLR)
+Zastępuje kontrolowanej sekwencji.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+list<Value>% operator=(list<Value>% right);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ w prawo  
+ Kontener do skopiowania.  
+  
+### <a name="remarks"></a>Uwagi  
+ Element członkowski operatora kopie `right` do obiektu, zwraca `*this`. Umożliwia ona Zamień kontrolowanej sekwencji kopię w kontrolowanej sekwencji `right`.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_operator_as.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// assign to a new container   
+    cliext::list<wchar_t> c2;   
+    c2 = c1;   
+    for each (wchar_t elem in c2)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+a b c  
+```  
+
+## <a name="pop_back"></a> list::pop_back (STL/CLR)
+Usuwa ostatnim elemencie.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+void pop_back();  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcja członkowska usuwa ostatniego elementu w kontrolowanej sekwencji musi być niepusta. Umożliwia ona skrócić czas na liście przez jeden element z tyłu.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_pop_back.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// pop an element and redisplay   
+    c1.pop_back();   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+a b  
+```  
+
+## <a name="pop_front"></a> list::pop_front (STL/CLR)
+Usuwa pierwszego elementu.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+void pop_front();  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcja członkowska usuwa pierwszego elementu obiektu kontrolowanej sekwencji musi być niepusta. Umożliwia ona Skróć przez jeden element na początku listy.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_pop_front.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// pop an element and redisplay   
+    c1.pop_front();   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+b c  
+```  
+
+## <a name="push_back"></a> list::push_back (STL/CLR)
+Dodaje nowy element ostatni.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+void push_back(value_type val);  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcja członkowska wstawia element z wartością `val` na końcu kontrolowanej sekwencji. Umożliwia ona dołączyć inny element do listy.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_push_back.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+```  
+  
+## <a name="push_front"></a> list::push_front (STL/CLR)
+Dodaje nowy element pierwszy.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+void push_front(value_type val);  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcja członkowska wstawia element z wartością `val` na początku kontrolowanej sekwencji. Umożliwia ona dołączy inny element do listy.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_push_front.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_front(L'a');   
+    c1.push_front(L'b');   
+    c1.push_front(L'c');   
+  
+// display contents " c b a"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+c b a  
+```  
+
+## <a name="rbegin"></a> list::rbegin (STL/CLR)
+Określa początek odwróconej kontrolowanej sekwencji.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+reverse_iterator rbegin();  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcja członkowska zwraca odwrotnej iteratora, który wyznacza ostatniego elementu w kontrolowanej sekwencji lub poza początku pustej sekwencji. W związku z tym wyznacza `beginning` odwrotnej kolejności. Służy do uzyskania iterację wyznacza `current` początku kontrolowanej sekwencji występuje w odwrotnej kolejności, ale jej stan można zmieniać w przypadku zmiany długości kontrolowanej sekwencji.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_rbegin.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// inspect first two items in reversed sequence   
+    cliext::list<wchar_t>::reverse_iterator rit = c1.rbegin();   
+    System::Console::WriteLine("*rbegin() = {0}", *rit);   
+    System::Console::WriteLine("*++rbegin() = {0}", *++rit);   
+  
+// alter first two items and reinspect   
+    *--rit = L'x';   
+    *++rit = L'y';   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+*rbegin() = c  
+*++rbegin() = b  
+ a y x  
+```  
+
+## <a name="reference"></a> list::Reference (STL/CLR)
+Typ odwołania do elementu.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+typedef value_type% reference;  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Typ w tym artykule opisano odwołanie do elementu.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_reference.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display initial contents " a b c"   
+    cliext::list<wchar_t>::iterator it = c1.begin();   
+    for (; it != c1.end(); ++it)   
+        {   // get a reference to an element   
+        cliext::list<wchar_t>::reference ref = *it;   
+        System::Console::Write(" {0}", ref);   
+        }   
+    System::Console::WriteLine();   
+  
+// modify contents " a b c"   
+    for (it = c1.begin(); it != c1.end(); ++it)   
+        {   // get a reference to an element   
+        cliext::list<wchar_t>::reference ref = *it;   
+  
+        ref += (wchar_t)(L'A' - L'a');   
+        System::Console::Write(" {0}", ref);   
+        }   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+A B C  
+```  
+
+## <a name="remove"></a> list::Remove (STL/CLR)
+Usuwa element z określoną wartością.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+void remove(value_type val);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ Val  
+ Wartość elementu do usunięcia.  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcja członkowska usunięcie elementu w kontrolowanej sekwencji dla którego `((System::Object^)val)->Equals((System::Object^)x)` ma wartość true (jeśli istnieje). Umożliwia ona Wymazywanie elementu umownego z określoną wartością.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_remove.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// fail to remove and redisplay   
+    c1.remove(L'A');   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();  
+  
+// remove and redisplay   
+    c1.remove(L'b');   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+a b c  
+a c  
+```  
+
+## <a name="remove_if"></a> list::remove_if (STL/CLR)
+Usuwa elementy przekazujące określonego testu.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+template<typename Pred1>  
+    void remove_if(Pred1 pred);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ pred  
+ Badanie elementów do usunięcia.  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcja członkowska usuwa kontrolowanej sekwencji (wymazywanie) każdy element `X` dla którego `pred(X)` ma wartość true. Umożliwia ona Usuń wszystkie elementy, które spełniają warunek można określić jako funkcja ani obiektem delegowanym.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_remove_if.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'b');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display initial contents " a b b b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// fail to remove and redisplay   
+    c1.remove_if(cliext::binder2nd<cliext::equal_to<wchar_t> >(   
+        cliext::equal_to<wchar_t>(), L'd'));   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// remove and redisplay   
+    c1.remove_if(cliext::binder2nd<cliext::not_equal_to<wchar_t> >(   
+        cliext::not_equal_to<wchar_t>(), L'b'));   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b b b c  
+a b b b c  
+b b b  
+``` 
+
+## <a name="rend"></a> list::rend (STL/CLR)
+Określa koniec odwróconej kontrolowanej sekwencji.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+reverse_iterator rend();  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcja członkowska zwraca odwrotnej iteratora tego punktów poza początku kontrolowanej sekwencji. W związku z tym wyznacza `end` odwrotnej kolejności. Służy do uzyskania iterację wyznacza `current` koniec kontrolowanej sekwencji występuje w odwrotnej kolejności, ale jej stan można zmieniać w przypadku zmiany długości kontrolowanej sekwencji.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_rend.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// inspect first two items   
+    cliext::list<wchar_t>::reverse_iterator rit = c1.rend();   
+    --rit;   
+    System::Console::WriteLine("*-- --rend() = {0}", *--rit);   
+    System::Console::WriteLine("*--rend() = {0}", *++rit);   
+  
+// alter first two items and reinspect   
+    *--rit = L'x';   
+    *++rit = L'y';   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+*-- --rend() = b  
+*--rend() = a  
+ y x c  
+```  
+
+## <a name="resize"></a> list::Resize (STL/CLR)
+Zmiany liczby elementów.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+void resize(size_type new_size);  
+void resize(size_type new_size, value_type val);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ new_size  
+ Nowy rozmiar kontrolowanej sekwencji.  
+  
+ Val  
+ Wartość elementu dopełnienia.  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcje Członkowskie zarówno upewnij się, że [list::size (STL/CLR)](../dotnet/list-size-stl-clr.md) `()` odtąd zwraca `new_size`. Należy go dłużej kontrolowanej sekwencji, pierwszej funkcji Członkowskich dołącza elementy o wartości `value_type()`, podczas gdy druga funkcji członkowskiej dołącza elementy o wartości `val`. Aby kontrolowanej sekwencji krótszy, zarówno funkcje Członkowskie skutecznie wymazać ostatni element [list::size (STL/CLR)](../dotnet/list-size-stl-clr.md) `() -` `new_size` razy. Umożliwia ona upewnij się, że kontrolowanej sekwencji ma rozmiar `new_size`, przycinanie lub dopełnienie bieżącego kontrolowanej sekwencji.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_resize.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+// construct an empty container and pad with default values   
+    cliext::list<wchar_t> c1;   
+    System::Console::WriteLine("size() = {0}", c1.size());   
+    c1.resize(4);   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", (int)elem);   
+    System::Console::WriteLine();   
+  
+// resize to empty   
+    c1.resize(0);   
+    System::Console::WriteLine("size() = {0}", c1.size());   
+  
+// resize and pad   
+    c1.resize(5, L'x');   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+size() = 0  
+ 0 0 0 0  
+size() = 0  
+ x x x x x  
+```  
+
+## <a name="reverse"></a> list::reverse (STL/CLR)
+Odwraca kontrolowanej sekwencji.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+void reverse();  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcja członkowska Odwraca kolejność wszystkich elementów w kontrolowanej sekwencji. Służy do uwzględnienia listy elementów.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_reverse.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// reverse and redisplay   
+    c1.reverse();   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+c b a  
+```  
+
+## <a name="reverse_iterator"></a> list::reverse_iterator (STL/CLR)
+Typ odwrotnej iteratora w kontrolowanej sekwencji.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+typedef T3 reverse_iterator;  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Typ zawiera opis obiektu nieokreślonego typu `T3` który może służyć jako odwrotnej iteratora w kontrolowanej sekwencji.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_reverse_iterator.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display contents " a b c" reversed   
+    cliext::list<wchar_t>::reverse_iterator rit = c1.rbegin();   
+    for (; rit != c1.rend(); ++rit)   
+        System::Console::Write(" {0}", *rit);   
+    System::Console::WriteLine();   
+  
+// alter first element and redisplay   
+    rit = c1.rbegin();   
+    *rit = L'x';   
+    for (; rit != c1.rend(); ++rit)   
+        System::Console::Write(" {0}", *rit);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+c b a  
+x b a  
+```  
+  
+## <a name="size"></a> list::size (STL/CLR)
+Liczy liczbę elementów.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+size_type size();  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcja członkowska zwraca długość kontrolowanej sekwencji. Można użyć do określenia liczby elementów aktualnie w kontrolowanej sekwencji. Jeśli wszystkie najważniejsze informacje dotyczące tego, czy sekwencja ma rozmiar różną od zera, zobacz [list::empty (STL/CLR)](../dotnet/list-empty-stl-clr.md)`()`.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_size.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    System::Console::WriteLine("size() = {0} starting with 3", c1.size());   
+  
+// clear the container and reinspect   
+    c1.clear();   
+    System::Console::WriteLine("size() = {0} after clearing", c1.size());   
+  
+// add elements and clear again   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+size() = 3 starting with 3  
+size() = 0 after clearing  
+size() = 2 after adding 2  
+```  
+
+## <a name="size_type"></a> list::size_type (STL/CLR)
+Typ podpisem odległość między dwoma elementu.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+typedef int size_type;  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Typ w tym artykule opisano liczbą nieujemną elementu.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_size_type.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// compute positive difference   
+    cliext::list<wchar_t>::size_type diff = 0;   
+    for (cliext::list<wchar_t>::iterator it = c1.begin();   
+        it != c1.end(); ++it)   
+        ++diff;   
+    System::Console::WriteLine("end()-begin() = {0}", diff);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+end()-begin() = 3  
+```
+
+## <a name="sort"></a> list::sort (STL/CLR)
+Ustala kolejność kontrolowanej sekwencji.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+void sort();  
+template<typename Pred2>  
+    void sort(Pred2 pred);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ pred  
+ Moduł porównujący dla elementu pary.  
+  
+### <a name="remarks"></a>Uwagi  
+ Pierwszy funkcji członkowskiej zmienia kolejność elementów w kontrolowanej sekwencji, dzięki czemu są one uporządkowane według `operator<` --elementów nie można jej zmniejszyć wartości w czasie z sekwencją. Ta funkcja członkowska umożliwia sortowanie w kolejności rosnącej w sekwencji.  
+  
+ Drugi funkcji członkowskiej działa tak samo jako pierwszy, z wyjątkiem tego, że sekwencja jest określona przez `pred`  --  `pred(X, Y)` ma wartość false dla każdego elementu `X` następujący element `Y` wynikowe sekwencji. Umożliwia ona sortowanie sekwencji w kolejności określonej przez funkcję predykatu ani obiektem delegowanym.  
+  
+ Zarówno funkcje wykonywać stabilna sortowania — nie pary elementów w oryginalnym kontrolowanej sekwencji została odwrócona w wynikowej kontrolowanej sekwencji.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_sort.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// sort descending and redisplay   
+    c1.sort(cliext::greater<wchar_t>());   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// sort ascending and redisplay   
+    c1.sort();   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+c b a  
+a b c  
+``` 
+
+## <a name="splice"></a> list::splice (STL/CLR)
+Restitch łącza między węzłami.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+void splice(iterator where, list<Value>% right);  
+void splice(iterator where, list<Value>% right,  
+    iterator first);  
+void splice(iterator where, list<Value>% right,  
+    iterator first, iterator last);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ pierwszy  
+ Początek zakresu splice.  
+  
+ ostatni  
+ Koniec zakresu do splice.  
+  
+ w prawo  
+ Kontener, aby splice z.  
+  
+ gdzie  
+ Gdzie w celu splice przed kontenera.  
+  
+### <a name="remarks"></a>Uwagi  
+ Pierwszy funkcji członkowskiej wstawia sekwencji kontrolowane przez `right` przed elementu w kontrolowanej sekwencji wskazywana przez `where`. Usuwa również wszystkie elementy z `right`. (`%right` nie może być równa `this`.) Umożliwia ona splice wszystkie jedną listę do innego.  
+  
+ Drugi funkcji członkowskiej usuwa element wskazywana przez `first` w sekwencji kontrolowane przez `right` i wstawia go przed elementu w kontrolowanej sekwencji wskazywana przez `where`. (Jeśli `where` `==` `first` `||` `where` `== ++first`, Brak zmian.) Umożliwia ona splice pojedynczy element listy jednego do drugiego.  
+  
+ Trzeci funkcji członkowskiej wstawia Podzakres wskazywany przez [`first`, `last`) z sekwencji kontrolowane przez `right` przed elementu w kontrolowanej sekwencji wskazywana przez `where`. Powoduje usunięcie oryginalnego Podzakres z sekwencji kontrolowane przez `right`. (Jeśli `right` `==` `this`, zakres [`first`, `last`) nie może zawierać elementu wskazywanego przez `where`.) Umożliwia ona splice podsekwencji zero lub więcej elementów z listy jeden do innego.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp
+// cliext_list_splice.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// splice to a new list   
+    cliext::list<wchar_t> c2;   
+    c2.splice(c2.begin(), c1);   
+    System::Console::WriteLine("c1.size() = {0}", c1.size());   
+    for each (wchar_t elem in c2)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// return one element   
+    c1.splice(c1.end(), c2, c2.begin());   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+    for each (wchar_t elem in c2)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// return remaining elements   
+    c1.splice(c1.begin(), c2, c2.begin(), c2.end());   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    System::Console::WriteLine("c2.size() = {0}", c2.size());   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+c1.size() = 0  
+ a b c  
+ a  
+ b c  
+ b c a  
+c2.size() = 0  
+```    
+
+## <a name="swap"></a> list::swap (STL/CLR)
+Zamienia zawartości dwóch kontenerów.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+void swap(list<Value>% right);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ w prawo  
+ Kontener do wymiany zawartości z.  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcja członkowska zamienia kontrolowanej sekwencji między `*this` i `right`. Robi to w czasie stałej i zgłasza żadnych wyjątków. Możesz używać go jako szybko do wymiany zawartości dwóch kontenerów.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp 
+// cliext_list_swap.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// construct another container with repetition of values   
+    cliext::list<wchar_t> c2(5, L'x');   
+    for each (wchar_t elem in c2)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// swap and redisplay   
+    c1.swap(c2);   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+    for each (wchar_t elem in c2)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+x x x x x  
+x x x x x  
+a b c  
+```   
+
+## <a name="to_array"></a> list::to_array (STL/CLR)
+Kopiuje kontrolowanej sekwencji do nowej tablicy.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+cli::array<Value>^ to_array();  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcja członkowska zwraca tablicę zawierającą kontrolowanej sekwencji. Umożliwia ona uzyskać kopię kontrolowanej sekwencji w postaci tablicy.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_to_array.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// copy the container and modify it   
+    cli::array<wchar_t>^ a1 = c1.to_array();   
+  
+    c1.push_back(L'd');   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// display the earlier array copy   
+    for each (wchar_t elem in a1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c d  
+a b c  
+```  
+
+## <a name="unique"></a> list::Unique (STL/CLR)
+Usuwa elementy sąsiednie przekazujące określonego testu.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+void unique();  
+template<typename Pred2>  
+    void unique(Pred2 pred);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ pred  
+ Moduł porównujący dla elementu pary.  
+  
+### <a name="remarks"></a>Uwagi  
+ Usuwa pierwsze funkcji członkowskiej z kontrolowanej sekwencji (wymazywanie) każdy element, który porównuje równa do jego poprzedniego elementu — Jeśli element `X` poprzedza element `Y` i `X == Y`, usuwa funkcji członkowskiej `Y`. Umożliwia ona Usuń wszystkie oprócz jednego kopię co podsekwencji elementy sąsiednie tego porównania równości. Należy pamiętać, że jeśli kontrolowanej sekwencji porządkowania, takie jak przez wywołanie metody [list::sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)`()`, funkcja członkowska pozostawia tylko elementy unikatowe wartości. (Stąd nazwa).  
+  
+ Drugi funkcji członkowskiej działa tak samo jako pierwszy, z wyjątkiem, że każdy element spowoduje usunięcie `Y` następującego elementu `X` dla którego `pred(X, Y)`. Umożliwia ona Usuń wszystkie oprócz jednego kopię co podsekwencji sąsiadujących elementów, które spełniają funkcji predykatu lub delegata, który określisz. Należy pamiętać, że jeśli kontrolowanej sekwencji porządkowania, takie jak przez wywołanie metody `sort(pred)`, funkcja członkowska pozostawia tylko elementy, które nie mają równoważne kolejności z innymi elementami.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_unique.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display initial contents " a a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// display contents after unique   
+    cliext::list<wchar_t> c2(c1);   
+    c2.unique();   
+    for each (wchar_t elem in c2)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// display contents after unique(not_equal_to)   
+    c2 = c1;   
+    c2.unique(cliext::not_equal_to<wchar_t>());   
+    for each (wchar_t elem in c2)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a a b c  
+a b c  
+a a  
+```  
+
+## <a name="value_type"></a> list::value_type (STL/CLR)
+Typ elementu.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+typedef Value value_type;  
+```  
+  
+### <a name="remarks"></a>Uwagi  
+ Typ jest synonimem parametru szablonu `Value`.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_value_type.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display contents " a b c" using value_type   
+    for (cliext::list<wchar_t>::iterator it = c1.begin();   
+        it != c1.end(); ++it)   
+        {   // store element in value_type object   
+        cliext::list<wchar_t>::value_type val = *it;   
+  
+        System::Console::Write(" {0}", val);   
+        }   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+``` 
+
+## <a name="op_neq"></a> Operator! = (lista) (STL/CLR)
+Lista równa porównania.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+template<typename Value>  
+    bool operator!=(list<Value>% left,  
+        list<Value>% right);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ left  
+ Po lewej stronie kontenera do porównania.  
+  
+ w prawo  
+ Kontener prawo do porównania.  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcja operatora `!(left == right)`. Można go użyć do przetestowania czy `left` nie jest taka sama jak określona `right` kiedy dwie listy są porównaniu elementu przez element.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_operator_ne.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// assign to a new container   
+    cliext::list<wchar_t> c2;   
+    c2.push_back(L'a');   
+    c2.push_back(L'b');   
+    c2.push_back(L'd');   
+  
+// display contents " a b d"   
+    for each (wchar_t elem in c2)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+    System::Console::WriteLine("[a b c] != [a b c] is {0}",   
+        c1 != c1);   
+    System::Console::WriteLine("[a b c] != [a b d] is {0}",   
+        c1 != c2);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+ a b d  
+[a b c] != [a b c] is False  
+[a b c] != [a b d] is True  
+```  
+
+## <a name="op_lt"></a> operator&lt; (lista) (STL/CLR)
+Lista poniżej porównania.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+template<typename Value>  
+    bool operator<(list<Value>% left,  
+        list<Value>% right);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ left  
+ Po lewej stronie kontenera do porównania.  
+  
+ w prawo  
+ Kontener prawo do porównania.  
+  
+### <a name="remarks"></a>Uwagi  
+ Operator funkcja zwraca wartość true, jeśli, dla najniżej `i` dla którego `!(right[i] < left[i])` jest również wartość true, który `left[i] < right[i]`. W przeciwnym razie zwraca `left->size() < right->size()` używanej do testowania czy `left` jest umieszczane przed `right` kiedy dwie listy są porównaniu elementu przez element.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_operator_lt.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// assign to a new container   
+    cliext::list<wchar_t> c2;   
+    c2.push_back(L'a');   
+    c2.push_back(L'b');   
+    c2.push_back(L'd');   
+  
+// display contents " a b d"   
+    for each (wchar_t elem in c2)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+    System::Console::WriteLine("[a b c] < [a b c] is {0}",   
+        c1 < c1);   
+    System::Console::WriteLine("[a b c] < [a b d] is {0}",   
+        c1 < c2);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+ a b d  
+[a b c] < [a b c] is False  
+[a b c] < [a b d] is True  
+```  
+
+## <a name="op_lteq"></a> operator&lt;= (lista) (STL/CLR)
+Lista mniejsza lub równa porównania.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+template<typename Value>  
+    bool operator<=(list<Value>% left,  
+        list<Value>% right);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ left  
+ Po lewej stronie kontenera do porównania.  
+  
+ w prawo  
+ Kontener prawo do porównania.  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcja operatora `!(right < left)`. Można go użyć do przetestowania czy `left` porządkowania nie po `right` kiedy dwie listy są porównaniu elementu przez element.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_operator_le.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// assign to a new container   
+    cliext::list<wchar_t> c2;   
+    c2.push_back(L'a');   
+    c2.push_back(L'b');   
+    c2.push_back(L'd');   
+  
+// display contents " a b d"   
+    for each (wchar_t elem in c2)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+    System::Console::WriteLine("[a b c] <= [a b c] is {0}",   
+        c1 <= c1);   
+    System::Console::WriteLine("[a b d] <= [a b c] is {0}",   
+        c2 <= c1);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+ a b d  
+[a b c] <= [a b c] is True  
+[a b d] <= [a b c] is False  
+```  
+
+## <a name="op_eq"></a> Operator == (lista) (STL/CLR)
+Porównanie równy listy.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+template<typename Value>  
+    bool operator==(list<Value>% left,  
+        list<Value>% right);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ left  
+ Po lewej stronie kontenera do porównania.  
+  
+ w prawo  
+ Kontener prawo do porównania.  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcja operatora zwraca wartość true, tylko wtedy, gdy w sekwencji, które są kontrolowane przez `left` i `right` ma taką samą długość i dla każdej pozycji `i`, `left[i] ==` `right[i]`. Można go użyć do przetestowania czy `left` jest taka sama jak określona `right` kiedy dwie listy są porównaniu elementu przez element.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_operator_eq.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// assign to a new container   
+    cliext::list<wchar_t> c2;   
+    c2.push_back(L'a');   
+    c2.push_back(L'b');   
+    c2.push_back(L'd');   
+  
+// display contents " a b d"   
+    for each (wchar_t elem in c2)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+    System::Console::WriteLine("[a b c] == [a b c] is {0}",   
+        c1 == c1);   
+    System::Console::WriteLine("[a b c] == [a b d] is {0}",   
+        c1 == c2);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+ a b d  
+[a b c] == [a b c] is True  
+[a b c] == [a b d] is False  
+```  
+
+## <a name="op_gt"></a> operator&gt; (lista) (STL/CLR)
+Lista jest większa niż porównania.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+template<typename Value>  
+    bool operator>(list<Value>% left,  
+        list<Value>% right);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ left  
+ Po lewej stronie kontenera do porównania.  
+  
+ w prawo  
+ Kontener prawo do porównania.  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcja operatora `right` `<` `left`. Można go użyć do przetestowania czy `left` porządkowania po `right` kiedy dwie listy są porównaniu elementu przez element.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_operator_gt.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// assign to a new container   
+    cliext::list<wchar_t> c2;   
+    c2.push_back(L'a');   
+    c2.push_back(L'b');   
+    c2.push_back(L'd');   
+  
+// display contents " a b d"   
+    for each (wchar_t elem in c2)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+    System::Console::WriteLine("[a b c] > [a b c] is {0}",   
+        c1 > c1);   
+    System::Console::WriteLine("[a b d] > [a b c] is {0}",   
+        c2 > c1);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+ a b d  
+[a b c] > [a b c] is False  
+[a b d] > [a b c] is True  
+```  
+
+## <a name="op_gteq"></a> operator&gt;= (lista) (STL/CLR)
+Lista większe lub równe porównania.  
+  
+### <a name="syntax"></a>Składnia  
+  
+```  
+template<typename Value>  
+    bool operator>=(list<Value>% left,  
+        list<Value>% right);  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ left  
+ Po lewej stronie kontenera do porównania.  
+  
+ w prawo  
+ Kontener prawo do porównania.  
+  
+### <a name="remarks"></a>Uwagi  
+ Funkcja operatora `!(left` `<` `right)`. Można go użyć do przetestowania czy `left` nie jest umieszczane przed `right` kiedy dwie listy są porównaniu elementu przez element.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// cliext_list_operator_ge.cpp   
+// compile with: /clr   
+#include <cliext/list>   
+  
+int main()   
+    {   
+    cliext::list<wchar_t> c1;   
+    c1.push_back(L'a');   
+    c1.push_back(L'b');   
+    c1.push_back(L'c');   
+  
+// display contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// assign to a new container   
+    cliext::list<wchar_t> c2;   
+    c2.push_back(L'a');   
+    c2.push_back(L'b');   
+    c2.push_back(L'd');   
+  
+// display contents " a b d"   
+    for each (wchar_t elem in c2)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+    System::Console::WriteLine("[a b c] >= [a b c] is {0}",   
+        c1 >= c1);   
+    System::Console::WriteLine("[a b c] >= [a b d] is {0}",   
+        c1 >= c2);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+ a b d  
+[a b c] >= [a b c] is True  
+[a b c] >= [a b d] is False  
+```  
