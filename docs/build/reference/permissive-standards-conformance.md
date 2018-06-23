@@ -1,6 +1,6 @@
 ---
 title: -ograniczająca - (standardów zgodność) | Dokumentacja firmy Microsoft
-ms.date: 11/11/2016
+ms.date: 06/21/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90cfdcf20cf74244afe026a392759ac59616bbdf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3e1a9c407779b6bf441ea1375026af6ac04bb8c8
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379318"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322267"
 ---
 # <a name="permissive--standards-conformance"></a>/ ograniczająca-(standardów zgodność)
 
@@ -50,7 +50,7 @@ Rozszerzenia określonego środowiska i obszary języka standardowego pozostawia
 
 **/ Ograniczająca-** opcja używa Obsługa zgodności ze standardem w bieżącej wersji kompilatora w celu określenia, które konstrukcji języka są niezgodne. Opcja nie określa, jeśli kod jest zgodny z określoną wersją C++ standard. Aby włączyć wszystkie zaimplementowane kompilatora obsługę standardu najnowszą wersję roboczą, należy użyć [/std:latest](../../build/reference/std-specify-language-standard-version.md) opcji. Aby ograniczyć obsługa kompilatora do aktualnie zaimplementowana standardzie C ++ 17, użyj [/std:c ++ 17](../../build/reference/std-specify-language-standard-version.md) opcji. Aby ograniczyć obsługa kompilatora, aby lepiej dopasować 14 standardu C ++, użyj [/std:c ++ 14](../../build/reference/std-specify-language-standard-version.md) opcja, która jest ustawiona domyślnie.
 
-Nie wszystkie C ++ 11, języka C ++ 14 lub C ++ 17 zgodnych standardów kodu jest obsługiwana przez kompilator języka Visual C++ w programie Visual Studio 2017 r. **/ Ograniczająca-** opcji mogą nie zostać wykryte problemy dotyczące niektórych aspektów wyszukiwanie nazw dwufazowego, powiązanie z systemem innym niż stała odwołanie do tymczasowej, traktowanie init kopiowania jako bezpośrednie init, umożliwiającą wielu konwersje zdefiniowane przez użytkownika w Inicjowanie lub alternatywne tokeny dla operatorów logicznych i innych obszarach zgodność z systemem innym niż obsługiwany. Aby uzyskać więcej informacji na temat problemów zgodności w programie Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md).
+Nie wszystkie C ++ 11, języka C ++ 14 lub C ++ 17 zgodnych standardów kodu jest obsługiwana przez kompilator języka Visual C++ w programie Visual Studio 2017 r. W zależności od wersji programu Visual Studio **/ ograniczająca-** opcji mogą nie zostać wykryte problemy dotyczące niektórych aspektów wyszukiwanie nazw dwufazowego, powiązanie z systemem innym niż stała odwołanie do tymczasowej, traktowanie init kopiowania jako bezpośrednie init w celu umożliwienia wiele zdefiniowanych przez użytkownika konwersje inicjowania lub alternatywne tokeny dla operatorów logicznych, a w innych obszarach zgodność z systemem innym niż obsługiwany. Aby uzyskać więcej informacji na temat problemów zgodności w programie Visual C++, zobacz [niestandardowe zachowanie](../../cpp/nonstandard-behavior.md). Aby uzyskać najbardziej z **/ ograniczająca-**, zaktualizuj do najnowszej wersji programu Visual Studio.
 
 ### <a name="how-to-fix-your-code"></a>Jak rozwiązać kodu
 
@@ -202,11 +202,11 @@ class CFoo : public ICustom
 
 ```cpp
 // Fix for example 2
-// First, create the *.idl file. The vc140.idl generated file can be 
-// used to automatically obtain a *.idl file for the interfaces with 
-// annotation. Second, add a midl step to your build system to make 
-// sure that the C++ interface definitions are outputted. 
-// Last, adjust your existing code to use ATL directly as shown in 
+// First, create the *.idl file. The vc140.idl generated file can be
+// used to automatically obtain a *.idl file for the interfaces with
+// annotation. Second, add a midl step to your build system to make
+// sure that the C++ interface definitions are outputted.
+// Last, adjust your existing code to use ATL directly as shown in
 // the atl implementation section.
 
 -- IDL  FILE--
@@ -286,7 +286,7 @@ struct MyString
 
 extern bool cond;
 
-MyString s; 
+MyString s;
 // Using /std:c++14, /permissive- or /Zc:ternary behavior
 // is to prefer MyString("A") over (const char*)s
 // but under /std:c++17 this line causes error C2445:
@@ -309,23 +309,23 @@ void myassert(const char* text, const char* file, int line);
 Mogą również zostać wyświetlone błędy w szablonie metaprogramowania, których typy wyników operator warunkowy mogą ulec zmianie w obszarze **/Zc:ternary** i **/ ograniczająca-**. Jednym ze sposobów rozwiązania tego problemu jest użycie [std::remove_reference](../../standard-library/remove-reference-class.md) na wynikowy typ.
 
 ```cpp
-// Example 4: different result types 
+// Example 4: different result types
 extern bool cond;
 extern int count;
-char  a = 'A'; 
-const char  b = 'B'; 
-decltype(auto) x = cond ? a : b; // char without, const char& with /Zc:ternary 
-const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary 
+char  a = 'A';
+const char  b = 'B';
+decltype(auto) x = cond ? a : b; // char without, const char& with /Zc:ternary
+const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary
 ```
 
-#### <a name="two-phase-name-look-up-partial"></a>Sprawdź nazwę dwufazowego (częściowe)
+#### <a name="two-phase-name-look-up"></a>Sprawdź nazwę dwufazowego
 
-Gdy **/ ograniczająca-** opcja jest ustawiona w Visual Studio 2017 wersji 15 ustęp 3, kompilator analizuje funkcji i klasa definicje szablonów identyfikacji nazwy zależne i zależne od innych niż używane w szablonach zgodnie z wymaganiami dla nazwy dwufazowego wyszukiwania. W tej wersji odbywa się tylko nazwa analizy zależności. W szczególności z systemem innym niż zależne od nazw, które nie są zadeklarowane w kontekście definicji szablonu spowodować diagnostycznych komunikatu jako wymaganego normy ISO C++. Jednak powiązania z systemem innym niż zależne od nazw, które wymaga argumentu zależnych wyszukiwanie w kontekście definicji nie została wykonana.
+Gdy **/ ograniczająca-** jest ustawiona opcja, kompilator analizuje funkcji i klasa definicje szablonów identyfikacji nazwy zależne i zależne od innych niż używane w szablonach zgodnie z wymaganiami dla nazwy dwufazowego wyszukiwania. W programie Visual Studio 2017 wersji 15 ustęp 3 Nazwa analizy zależności jest wykonywane. W szczególności z systemem innym niż zależne od nazw, które nie są zadeklarowane w kontekście definicji szablonu spowodować diagnostycznych komunikatu jako wymaganego normy ISO C++. W programie Visual Studio 2017 wersji 15.7 również odbywa się powiązania z systemem innym niż zależne od nazw, które wymagają argument zależnych wyszukiwanie w kontekście definicji.
 
 ```cpp
 // dependent base
 struct B {
-    void g();
+    void g() {}
 };
 
 template<typename T>
@@ -346,60 +346,106 @@ int main()
 }
 ```
 
+Jeśli mają starsze zachowanie dla dwufazowego wyszukiwania, ale w przeciwnym razie ma **/ ograniczająca-** zachowanie, Dodaj **/Zc:twoPhase-** opcji.
+
 ### <a name="windows-header-issues"></a>Problemy z nagłówka systemu Windows
 
 **/ Ograniczająca-** opcji jest zbyt restrykcyjny wersji zestawów Windows przed Windows spadek twórców aktualizacji SDK (10.0.16299.0) lub wersji systemu Windows Driver Kit (WDK) 1709. Firma Microsoft zaleca, zaktualizuj do najnowszej wersji zestawów Windows, aby można było używać **/ ograniczająca-** w kodzie sterowników systemu Windows lub urządzenia.
 
-Niektóre pliki nagłówkowe Windows spadek twórców aktualizacji SDK (10.0.16299.0) lub Windows Driver Kit (WDK) 1709, nadal mieć problemy, które były niezgodne z użyciem **/ ograniczająca-**. Aby obejść ten problem, zaleca się ograniczyć stosowanie tych nagłówków można tylko te pliki kodu źródłowego, które wymagają i Usuń **/ ograniczająca-** podczas kompilowania dla tych plików źródłowych określonego kodu. Następujące problemy są specyficzne dla systemu Windows spadek twórców aktualizacji SDK (10.0.16299.0):
+Niektóre pliki nagłówkowe kwietnia Windows SDK aktualizacji 2018 (10.0.17134.0), Windows spadek twórców aktualizacji SDK (10.0.16299.0) lub Windows Driver Kit (WDK) 1709, nadal mieć problemy, które były niezgodne z użyciem **/permissive-**. Aby obejść ten problem, zaleca się ograniczyć stosowanie tych nagłówków można tylko te pliki kodu źródłowego, które wymagają i Usuń **/ ograniczająca-** podczas kompilowania dla tych plików źródłowych określonego kodu.
 
-#### <a name="issue-in-umqueryh"></a>Problem z programu um\Query.h
+Te nagłówki biblioteki WRL WinRT wydane w oknach 2018 kwietnia SDK aktualizacji (10.0.17134.0) nie są z czystą **/ ograniczająca-**. Aby obejść ten problem, nie należy używać **/ ograniczająca-**, lub użyj **/ ograniczająca-** z **/Zc:twoPhase-** podczas pracy z tych nagłówków:
 
-Korzystając z **/ ograniczająca-** przełącznika kompilatora `tagRESTRICTION` struktury nie kompiluje się ze względu na element członkowski case(RTOr) "lub".
+- Problemy z winrt/wrl/async.h
 
-```cpp
-struct tagRESTRICTION
-    {
-    ULONG rt;
-    ULONG weight;
-    /* [switch_is][switch_type] */ union _URes
-        {
-        /* [case()] */ NODERESTRICTION ar;
-        /* [case()] */ NODERESTRICTION or;  // error C2059: syntax error: '||'
-        /* [case()] */ NODERESTRICTION pxr;
-        /* [case()] */ VECTORRESTRICTION vr;
-        /* [case()] */ NOTRESTRICTION nr;
-        /* [case()] */ CONTENTRESTRICTION cr;
-        /* [case()] */ NATLANGUAGERESTRICTION nlr;
-        /* [case()] */ PROPERTYRESTRICTION pr;
-        /* [default] */  /* Empty union arm */
-        } res;
-    };
-```
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(483): error C3861: 'TraceDelegateAssigned': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(491): error C3861: 'CheckValidStateForDelegateCall': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(509): error C3861: 'TraceProgressNotificationStart': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(513): error C3861: 'TraceProgressNotificationComplete': identifier not found
+   ```
 
-Aby rozwiązać ten problem, skompiluj plików zawierających Query.h bez **/ ograniczająca-** opcji.
+- Problem z programu winrt/wrl/implements.h
 
-#### <a name="issue-in-umcellularapioemh"></a>Problem z programu um\cellularapi_oem.h
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt\wrl\implements.h(2086): error C2039: 'SetStrongReference': is not a member of 'Microsoft::WRL::Details::WeakReferenceImpl'
+   ```
 
-Korzystając z **/ ograniczająca-** przełącznika kompilatora, deklaracja przekazująca dalej `enum UICCDATASTOREACCESSMODE` powoduje, że ostrzeżenia:
+Te nagłówki tryb użytkownika wydane w oknach 2018 kwietnia SDK aktualizacji (10.0.17134.0) nie są z czystą **/ ograniczająca-**. Aby obejść ten problem, nie należy używać **/ ograniczająca-** podczas pracy z tych nagłówków:
 
-```cpp
-typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
-```
+- Problemy z um/Tune.h
 
-Deklaracja przekazana wyliczenia niewystępującego w zakresie to rozszerzenie firmy Microsoft. Aby rozwiązać ten problem, skompiluj plików zawierających cellularapi_oem.h bez **/ ograniczająca-** opcji lub użyj [/wd](../../build/reference/compiler-option-warning-level.md) opcja o wyłączeniu ostrzeżenie C4471.
+   ```Output
+   C:\ProgramFiles(x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(139): error C3861: 'Release': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(559): error C3861: 'Release': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(1240): error C3861: 'Release': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(1240): note: 'Release': function declaration must be available as none of the arguments depend on a template parameter
+   ```
 
-#### <a name="issue-in-umomscripth"></a>Problem z programu um\omscript.h
+- Problem z programu um/spddkhlp.h
 
-W języku C ++ 03, konwersja z literału ciągu znaków na BSTR (który jest typem typedef do "wchar_t *") jest przestarzały, ale dozwolone. W języku C ++ 11 konwersja nie jest dozwolony.
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\spddkhlp.h(759): error C3861: 'pNode': identifier not found
+   ```
 
-```cpp
-virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
-    /* [in] */ __RPC__in BSTR propname,
-    /* [in] */ __RPC__in BSTR expression,
-    /* [in][defaultvalue] */ __RPC__in BSTR language = L"") = 0; // C2440
-```
+- Problemy z um/refptrco.h
 
-Aby rozwiązać ten problem, skompiluj plików zawierających omscript.h bez **/ ograniczająca-** opcji lub użyj **/Zc:strictStrings-** zamiast tego.
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(179): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(342): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(395): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
+   ```
+
+Te problemy są specyficzne dla nagłówków tryb użytkownika w systemie Windows spadek twórców aktualizacji SDK (10.0.16299.0):
+
+- Problem z programu um/Query.h
+
+   Korzystając z **/ ograniczająca-** przełącznika kompilatora `tagRESTRICTION` struktury nie kompiluje się ze względu na element członkowski case(RTOr) "lub".
+
+   ```cpp
+   struct tagRESTRICTION
+   {
+       ULONG rt;
+       ULONG weight;
+       /* [switch_is][switch_type] */ union _URes
+       {
+           /* [case()] */ NODERESTRICTION ar;
+           /* [case()] */ NODERESTRICTION or;  // error C2059: syntax error: '||'
+           /* [case()] */ NODERESTRICTION pxr;
+           /* [case()] */ VECTORRESTRICTION vr;
+           /* [case()] */ NOTRESTRICTION nr;
+           /* [case()] */ CONTENTRESTRICTION cr;
+           /* [case()] */ NATLANGUAGERESTRICTION nlr;
+           /* [case()] */ PROPERTYRESTRICTION pr;
+           /* [default] */  /* Empty union arm */
+       } res;
+   };
+   ```
+
+   Aby rozwiązać ten problem, skompiluj plików zawierających Query.h bez **/ ograniczająca-** opcji.
+
+- Problem z programu um/cellularapi_oem.h
+
+   Korzystając z **/ ograniczająca-** przełącznika kompilatora, deklaracja przekazująca dalej `enum UICCDATASTOREACCESSMODE` powoduje, że ostrzeżenia:
+
+   ```cpp
+   typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
+   ```
+
+   Deklaracja przekazana wyliczenia niewystępującego w zakresie to rozszerzenie firmy Microsoft. Aby rozwiązać ten problem, skompiluj plików zawierających cellularapi_oem.h bez **/ ograniczająca-** opcji lub użyj [/wd](../../build/reference/compiler-option-warning-level.md) opcja o wyłączeniu ostrzeżenie C4471.
+
+- Problem z programu um/omscript.h
+
+   W języku C ++ 03, konwersja z literału ciągu znaków na BSTR (który jest typem typedef do "wchar_t *") jest przestarzały, ale dozwolone. W języku C ++ 11 konwersja nie jest dozwolony.
+
+   ```cpp
+   virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
+       /* [in] */ __RPC__in BSTR propname,
+       /* [in] */ __RPC__in BSTR expression,
+       /* [in][defaultvalue] */ __RPC__in BSTR language = L"") = 0; // C2440
+   ```
+
+   Aby rozwiązać ten problem, skompiluj plików zawierających omscript.h bez **/ ograniczająca-** opcji lub użyj **/Zc:strictStrings-** zamiast tego.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio
 
@@ -407,7 +453,7 @@ W wersji Visual Studio 2017 15,5 cala i nowszych wersji wykonaj następującą p
 
 1. Otwórz projekt w **strony właściwości** okno dialogowe.
 
-1. W obszarze **właściwości konfiguracji**, rozwiń węzeł **C/C++** folder i wybierz polecenie **języka** strony właściwości.
+1. Wybierz **właściwości konfiguracji** > **C/C++** > **języka** strony właściwości.
 
 1. Zmień **tryb zgodności** wartości właściwości do **tak (/ ograniczająca —)**. Wybierz **OK** lub **Zastosuj** Aby zapisać zmiany.
 
@@ -425,5 +471,5 @@ W wersjach przed Visual Studio 2017 wersji 15,5 cala wykonaj następującą proc
 
 ## <a name="see-also"></a>Zobacz także
 
-[Opcje kompilatora](../../build/reference/compiler-options.md)   
-[Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)
+- [Opcje kompilatora](../../build/reference/compiler-options.md)
+- [Ustawianie opcji kompilatora](../../build/reference/setting-compiler-options.md)

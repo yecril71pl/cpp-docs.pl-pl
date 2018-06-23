@@ -1,7 +1,7 @@
 ---
 title: Kompilowania kodu C/C++ w wierszu polecenia | Dokumentacja firmy Microsoft
 ms.custom: conceptual
-ms.date: 03/29/2018
+ms.date: 06/21/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1e02ea59ffc5a4ece71d2790b2ebb6a953ed682
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 241a7ae0d7f6c1adf269370301b39a3267440995
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379279"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322319"
 ---
 # <a name="build-cc-code-on-the-command-line"></a>Kompilowania kodu C/C++ w wierszu polecenia
 
@@ -51,7 +51,7 @@ Skróty wiersza polecenia są instalowane w folderze określonej wersji programu
 
 Rzeczywiste Start menu folderu skrótów nazwy i zależy od wersji programu Visual Studio został zainstalowany i instalacja pseudonimu, jeśli zostanie ustawiona. Na przykład, jeśli masz program Visual Studio 2017 r zainstalowany, a został podany jej instalacji pseudonim *Podgląd*, nosi nazwę skrót do wiersza polecenia dewelopera **wiersz polecenia dla programu VS 2017 (wersja zapoznawcza)deweloperów**, w folderze o nazwie **programu Visual Studio 2017**.
 
-Jeśli po zainstalowaniu [Build Tools dla programu Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=840931) (która także obejmuje zestaw narzędzi kompilatora Visual Studio 2015 Update 3), tylko architektury native lub różnych narzędzi wiersza polecenia dewelopera opcje są zainstalowane , a nie ogólne **wiersza polecenia dewelopera** skrótów.
+Jeśli po zainstalowaniu [Build Tools dla programu Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721) (która także obejmuje zestaw narzędzi kompilatora Visual Studio 2015 Update 3), tylko architektury native lub różnych narzędzi wiersza polecenia dewelopera opcje są zainstalowane , a nie ogólne **wiersza polecenia dewelopera** skrótów.
 
 <a name="developer_command_prompt"></a>
 ### <a name="to-open-a-developer-command-prompt-window"></a>Aby otworzyć okno wiersza polecenia dewelopera

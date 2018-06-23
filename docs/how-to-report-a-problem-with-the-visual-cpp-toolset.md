@@ -1,6 +1,6 @@
 ---
 title: Jak zgłosić problem z zestawu narzędzi Visual C++ | Dokumentacja firmy Microsoft
-ms.date: 06/08/2018
+ms.date: 06/21/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fec9e92e05bdf3c1e12a8c7cb2ee060175fa6bf7
-ms.sourcegitcommit: 99a61ad26868f814589bf122dc4ab99c83ea2d0a
+ms.openlocfilehash: f1735f890c0f106d82884a5ad7d63a5a3f0f8920
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36297524"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322371"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Jak zgłosić problem z zestawu narzędzi Visual C++ lub dokumentacji
 
@@ -82,7 +82,7 @@ Dziennik kompilacji jest najlepszym miejscem, aby znaleźć te informacje bezpo�
 
 #### <a name="to-report-the-contents-of-the-command-line"></a>Aby zgłosić zawartość wiersza polecenia
 
-1. Zlokalizuj **CL.command.1.tlog** pliku i otwórz go. Domyślnie ten plik znajduje się w folderze dokumenty w \\programu Visual Studio *wersji*\\projekty\\*Nazwa rozwiązania* \\ *ProjectName*\\*konfiguracji*\\*ProjectName*.tlog\\CL.command.1.tlog, lub w folderze użytkownika w obszarze \\Źródła\\repozytoriów\\*Nazwa rozwiązania*\\*ProjectName*\\*konfiguracji* \\ *ProjectName*.tlog\\CL.command.1.tlog. Jeśli używasz innej system kompilacji lub zmiana domyślnej lokalizacji dla projektu może być w innej lokalizacji.
+1. Zlokalizuj **CL.command.1.tlog** pliku i otwórz go. By default, this file is located in your Documents folder in \\Visual Studio *version*\\Projects\\*SolutionName*\\*ProjectName*\\*Configuration*\\*ProjectName*.tlog\\CL.command.1.tlog, or in your User folder under \\Source\\Repos\\*SolutionName*\\*ProjectName*\\*Configuration*\\*ProjectName*.tlog\\CL.command.1.tlog. Jeśli używasz innej system kompilacji lub zmiana domyślnej lokalizacji dla projektu może być w innej lokalizacji.
 
    Wewnątrz tego pliku znajdują się nazwy plików kodu źródłowego, a następnie używana do kompilowania nimi w osobnych wierszach argumenty wiersza polecenia.
 
@@ -358,7 +358,7 @@ Utwórz użytkownika reprodukcja jako minimalny projekt IDE, a następnie ją sp
 Istnieje kilka sposobów korzystać raportu. Można użyć wbudowanych programu Visual Studio [Zgłoś Problem narzędzie](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017), lub [Visual Studio Developer Community](https://developercommunity.visualstudio.com/) stron. Można także uzyskać bezpośrednio do naszej społeczności deweloperów stron, wybierając **opinię o produkcie** u dołu tej strony. Wybór zależy, czy chcesz użyć narzędzi dostępnych w IDE przechwytywania zrzuty ekranu i organizowanie raportu dla publikowanie na stronach społeczności deweloperów Jeśli wolisz korzystać bezpośrednio witryny sieci Web.
 
 > [!NOTE]
-> Niezależnie od tego, jak możesz przesłać raport firma Microsoft szanuje Twoją prywatność. Firma Microsoft dba o zgodności ze wszystkimi przepisów dotyczących prywatności danych i przepisami. Aby dowiedzieć się, jak będzie traktowany jak dane, które możesz wysłać do nas, zobacz [zasady zachowania poufności informacji firmy Microsoft](https://www.visualstudio.com/dn948229).
+> Niezależnie od tego, jak możesz przesłać raport firma Microsoft szanuje Twoją prywatność. Firma Microsoft dba o zgodności ze wszystkimi przepisów dotyczących prywatności danych i przepisami. Aby dowiedzieć się, jak będzie traktowany jak dane, które możesz wysłać do nas, zobacz [zasady zachowania poufności informacji firmy Microsoft](https://privacy.microsoft.com/privacystatement).
 
 ### <a name="use-the-report-a-problem-tool"></a>Użyj narzędzia Problem raportu
 
@@ -391,7 +391,7 @@ Jeśli masz obawy ujawniania swoją tożsamość, [Utwórz nowe konto Microsoft]
 
 1. Raport został utworzony, wybierz **Dodaj komentarz** do utworzenia prywatnej opis problemu.
 
-1. w edytorze odpowiedzi formant listy rozwijanej poniżej **przesyłania** i **anulować** przyciski, aby określić odbiorców dla odpowiedzi. Tylko osoby, które określisz widoczny tych prywatnych odpowiedzi i wszystkie obrazy, łącza lub kodu, który je zawiera. Wybierz **Viewable moderatorów i oryginalnego plakat** Aby ograniczyć widoczność pracownikom firmy Microsoft i samodzielnie.
+1. W edytorze odpowiedzi formant listy rozwijanej poniżej **przesyłania** i **anulować** przyciski, aby określić odbiorców dla odpowiedzi. Tylko osoby, które określisz widoczny tych prywatnych odpowiedzi i wszystkie obrazy, łącza lub kodu, który je zawiera. Wybierz **Viewable moderatorów i oryginalnego plakat** Aby ograniczyć widoczność pracownikom firmy Microsoft i samodzielnie.
 
 1. Dodaj opis i wszelkie inne informacje, obrazy i załączniki do plików potrzebnych do Twojej reprodukcja. Wybierz **przesyłania** przycisk, aby wysyłać tych informacji przez użytkowników.
 

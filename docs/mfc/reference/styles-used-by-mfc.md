@@ -1,7 +1,7 @@
 ---
 title: Style używane przez MFC | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 05/03/2018
+ms.date: 06/20/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebde910e5573545c6b9b904f6db55e27f10492a3
-ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
+ms.openlocfilehash: 9af450071546691778dc607746870084a7b1f346
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36271373"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322423"
 ---
 # <a name="styles-used-by-mfc"></a>Style używane przez MFC  
   
@@ -321,7 +321,7 @@ Edytuj style dotyczą [klasy CEdit](../../mfc/reference/cedit-class.md) obiektó
 |`ES_NOHIDESEL`|Zwykle formantu edycyjnego ukrywa zaznaczenie, gdy formant utraci fokus wprowadzania i Odwraca wybór, gdy formant uzyskuje fokus wprowadzania. Określanie `ES_NOHIDESEL` usuwa to akcja domyślna.|  
 |`ES_NUMBER`|Umożliwia tylko cyfry, które zostaną wprowadzone do kontrolki edycji.|  
 |`ES_OEMCONVERT`|W tekście wprowadzanym w formancie edycyjnym jest konwertowana z zestawu znaków ANSI na zbiór znaków OEM i potem z powrotem do strony kodowej ANSI. Dzięki temu konwersji znaków właściwe przy `AnsiToOem` funkcji systemu Windows można przekonwertować ciągu ANSI w formancie edycyjnym znaków OEM. Ten styl jest najbardziej przydatny w przypadku kontrolek edycji, które zawierają nazwy plików.|  
-|`ES_PASSWORD`|Wyświetla wszystkie znaki w jako znak gwiazdki (**\\\***) trakcie wpisywania ich do kontrolki edycji. Aplikacja może użyć `SetPasswordChar` funkcji członkowskiej, aby zmienić znak, który jest wyświetlany.|  
+|`ES_PASSWORD`|Wyświetla wszystkie znaki w jako znak gwiazdki (__\*__) trakcie wpisywania ich do kontrolki edycji. Aplikacja może użyć `SetPasswordChar` funkcji członkowskiej, aby zmienić znak, który jest wyświetlany.|  
 |`ES_READONLY`|Uniemożliwia użytkownikom wprowadzanie i edytowanie tekstu w formancie edycyjnym.|  
 |`ES_RIGHT`|Wyrównuje prawej tekst w formancie edycji jednej lub wielowierszowy.|  
 |`ES_UPPERCASE`|Konwertuje wszystkie znaki na wielkie litery w trakcie wpisywania ich do kontrolki edycji.|  

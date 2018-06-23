@@ -106,12 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06c4d65fe7b6ab2b0238c3a4e4cd081e2dc011b5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d5fb04d31451ac4c49a0a2c11a3699b8a670a6c4
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704753"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322335"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>C4800 ostrzeżenia kompilatora za pośrednictwem C5999
 
@@ -250,3 +250,4 @@ Artykuły w tej sekcji dokumentacji opisano podzbiór komunikaty ostrzegawcze, k
 |Ostrzeżenie kompilatora (poziom 3) C5042|"*deklaracji*": deklaracje funkcji w zakresie bloku nie może być określony wbudowany w standardu C++; Usuń specyfikatora "inline"|
 |Ostrzeżenie kompilatora (poziom 2) C5043|"*specyfikacji*": specyfikacja wyjątku jest niezgodna z poprzednią deklaracją|
 |Ostrzeżenie kompilatora (poziom 4) C5044|Argument opcji wiersza polecenia *opcji* wskazuje na ścieżkę "*ścieżka*" nie istnieje|
+|[Ostrzeżenie C5045 kompilatora](c5045.md)|Kompilator powoduje wstawienie Spectre środki zaradcze dla obciążenia pamięci, jeśli przełącznik /Qspectre określony|

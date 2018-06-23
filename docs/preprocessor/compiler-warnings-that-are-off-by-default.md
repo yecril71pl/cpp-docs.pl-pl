@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d311c730781aee70d4b77723ddec98a79407e42a
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c1187d0fcfec45a21a358c8d20c4f3684f17feb3
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705569"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322397"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Są domyślnie wyłączone ostrzeżenia kompilatora
 
@@ -89,7 +89,7 @@ Domyślnie w programie Visual Studio 2015 i nowszych wersjach są wyłączone na
 |[C4549](../error-messages/compiler-warnings/compiler-warning-level-1-c4549.md) (poziom 1)|"*operator1*": operator przed przecinkiem nie ma żadnego wpływu; czy miało być "*operator2*"?|
 |[C4555](../error-messages/compiler-warnings/compiler-warning-level-1-c4555.md) (poziom 1)|wyrażenie nie przynosi efektu; oczekiwane wyrażenie, który przynosi efekt|
 |[C4557](../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md) (poziom 3)|"__assume" zawiera efekt "*efekt*"|
-|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) (poziom 4)|Informacja: semantyka instrukcji catch(...) została zmieniona od czasu Visual C++ 7.1; Wyjątki strukturalne (SEH) nie są już przechwytywane|
+|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) (poziom 4)|informacyjny: semantyka instrukcji catch(...) została zmieniona od czasu Visual C++ 7.1; Wyjątki strukturalne (SEH) nie są już przechwytywane|
 |C4574 (poziom 4)|"*identyfikator*'jest zdefiniowany jako ' 0': czy zamierzałeś użyć ' #if *identyfikator*"?|
 |C4577 (poziom 1)|słowo kluczowe "noexcept" używane z nie określając; trybu obsługi wyjątków Zakończenie na wyjątku nie jest gwarantowana. Określ/ehsc|
 |C4582 (poziom 4)|"*typu*": Konstruktor nie jest wywoływany niejawnie|
@@ -153,12 +153,14 @@ Domyślnie w programie Visual Studio 2015 i nowszych wersjach są wyłączone na
 |[C5038](../error-messages/compiler-warnings/c5038.md) (poziom 4)|element członkowski danych "*Członek1*"zostanie zainicjowana po elemencie członkowskim danych"*member2*" <sup>15 ustęp 3</sup>|
 |C5039 (poziom 4)|"*funkcja*": wskaźnik lub odwołanie do potencjalnie zgłaszanie funkcji została przekazana do funkcji extern C w obszarze - EHc. Niezdefiniowane zachowanie może wystąpić, jeśli ta funkcja zwraca wyjątek. <sup>15,5 cala</sup>|
 |C5042 (poziom 3)|"*funkcja*": deklaracje funkcji w zakresie bloku nie może być określony wbudowany w standardu C++; Usuń specyfikatora "inline" <sup>15,5 cala</sup>|
+|[C5045](../error-messages/compiler-warnings/c5045.md)|Kompilator powoduje wstawienie ograniczenie Spectre obciążenia pamięci, gdy określony przełącznik /Qspectre <sup>15.7</sup>|
 
-<sup>14.1</sup> to ostrzeżenie jest dostępne w programie Visual Studio 2015 Update 1.<br>
-<sup>14,3</sup> to ostrzeżenie jest dostępne w programie Visual Studio 2015 Update 3.<br>
-<sup>15 ustęp 3</sup> to ostrzeżenie jest dostępne w programie Visual Studio 2017 wersji 15 ustęp 3.<br>
-<sup>15,5 cala</sup> to ostrzeżenie jest dostępne w programie Visual Studio 2017 wersji 15,5 cala.<br>
-<sup>Uprawnienie</sup> to ostrzeżenie jest wyłączone, chyba że [/ ograniczająca-](../build/reference/permissive-standards-conformance.md) ustawiono opcję kompilatora.
+<sup>14.1</sup> to ostrzeżenie jest dostępne w programie Visual Studio 2015 Update 1.  
+<sup>14,3</sup> to ostrzeżenie jest dostępne w programie Visual Studio 2015 Update 3.  
+<sup>15 ustęp 3</sup> to ostrzeżenie jest dostępne w programie Visual Studio 2017 wersji 15 ustęp 3.  
+<sup>15,5 cala</sup> to ostrzeżenie jest dostępne w programie Visual Studio 2017 wersji 15,5 cala.  
+<sup>15.7</sup> to ostrzeżenie jest dostępne w programie Visual Studio 2017 wersji 15.7.  
+<sup>Uprawnienie</sup> to ostrzeżenie jest wyłączone, chyba że [/ ograniczająca-](../build/reference/permissive-standards-conformance.md) ustawiono opcję kompilatora.  
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Ostrzeżenia poza domyślnie we wcześniejszych wersjach
 
