@@ -558,3 +558,4 @@
 ## [Ostrzeżenie kompilatora (poziom 1) C4997](compiler-warning-level-1-c4997.md)
 ## [Ostrzeżenie kompilatora (poziom 1) C4999](compiler-warning-level-1-c4999.md)
 ## [Ostrzeżenie kompilatora C5038](c5038.md)
+## [Ostrzeżenie kompilatora C5045](c5045.md)
