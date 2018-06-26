@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4ed4e022326d650b1012ad5244d8b18e9c789cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1eb904d67463cefd9fecdb33c7367bfde79e27f8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348219"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928518"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>Programy obsługi dla standardowych komunikatów systemu Windows
-Domyślne programy obsługi dla standardowych komunikatów systemu Windows (**WM_**) są wstępnie zdefiniowane w klasie `CWnd`. Biblioteka klas podstawowych nazwy dla tych programów obsługi na nazwę komunikatu. Na przykład program obsługi dla `WM_PAINT` komunikat jest zadeklarowana w `CWnd` jako:  
+Domyślne programy obsługi dla standardowych komunikatów systemu Windows (**WM_**) są wstępnie zdefiniowane w klasie `CWnd`. Biblioteka klas podstawowych nazwy dla tych programów obsługi na nazwę komunikatu. Na przykład program obsługi dla **WM_PAINT** komunikat jest zadeklarowana w `CWnd` jako:  
   
  `afx_msg void OnPaint();`  
   
@@ -39,13 +39,13 @@ Domyślne programy obsługi dla standardowych komunikatów systemu Windows (**WM
  W niektórych przypadkach programu obsługi powinny wywoływać przesłoniętych obsługi w klasie podstawowej, klasy podstawowej i systemu Windows może działać w komunikacie. Gdzie wywołania obsługi klasy podstawowej w zastąpienia zależy od okoliczności. Czasami należy najpierw wywołać obsługi klasy podstawowej i czasami ostatni. Czasami użytkownik wywołania klasy podstawowej obsługi warunkowo, jeśli nie chcesz samodzielnie obsługi wiadomości. Czasami powinny wywoływać program klasy podstawowej, należy wydać warunkowo swoim własnym kodem obsługi, w zależności od wartości lub stanu zwrócony przez program obsługi klasy podstawowej.  
   
 > [!CAUTION]
->  Nie jest bezpieczne Argumenty przekazane do programu obsługi, jeśli zamierzasz przekazać je do obsługi klasy podstawowej. Na przykład może się wydawać się zmodyfikować `nChar` argument `OnChar` obsługi (do przekonwertowania na wielkie litery, na przykład). To zachowanie jest dość zasłoniętej, ale jeśli niezbędne podczas wykonywania tego efektu `CWnd` funkcji członkowskiej **SendMessage** zamiast tego.  
+>  Nie jest bezpieczne Argumenty przekazane do programu obsługi, jeśli zamierzasz przekazać je do obsługi klasy podstawowej. Na przykład może się wydawać się zmodyfikować *nChar* argument `OnChar` obsługi (do przekonwertowania na wielkie litery, na przykład). To zachowanie jest dość zasłoniętej, ale jeśli niezbędne podczas wykonywania tego efektu `CWnd` funkcji członkowskiej `SendMessage` zamiast tego.  
   
- Jak można ustalić prawidłowego sposobem zastąpić danej wiadomości, gdy okno właściwości zapisuje szkielet funkcji obsługi dla danego komunikatu — `OnCreate` obsługę `WM_CREATE`, na przykład — szkice go w formie zalecanej przesłonięcia funkcji członkowskiej. Poniższy przykład zaleca obsługi najpierw wywołania obsługi klasy podstawowej i kontynuować tylko pod warunkiem, że nie zwraca -1.  
+ Jak można ustalić prawidłowego sposobem zastąpić danej wiadomości, gdy okno właściwości zapisuje szkielet funkcji obsługi dla danego komunikatu — `OnCreate` obsługę **WM_CREATE**, na przykład — szkice go w formie Funkcja zalecane zastąpionym elementem członkowskim. Poniższy przykład zaleca obsługi najpierw wywołania obsługi klasy podstawowej i kontynuować tylko pod warunkiem, że nie zwraca -1.  
   
  [!code-cpp[NVC_MFCMessageHandling#3](../mfc/codesnippet/cpp/handlers-for-standard-windows-messages_1.cpp)]  
   
- Konwencja nazwy te programy obsługi rozpoczynać się od prefiksu "On". Niektóre z tych programów obsługi nie przyjmują argumentów, podczas gdy inne wykorzystują w kilku. Niektóre również mieć zwracanego typu innego niż `void`. Programy obsługi domyślnego dla wszystkich **WM_** komunikaty są udokumentowane w *dokumentacja MFC* jako funkcje elementu członkowskiego klasy `CWnd` których nazwy zaczynają się od "Na". Deklaracje funkcji Członkowskich w `CWnd` mają przedrostek **afx_msg**.  
+ Konwencja nazwy te programy obsługi rozpoczynać się od prefiksu "On". Niektóre z tych programów obsługi nie przyjmują argumentów, podczas gdy inne wykorzystują w kilku. Niektóre również mieć zwracanego typu innego niż **void**. Programy obsługi domyślnego dla wszystkich **WM_** komunikaty są udokumentowane w *dokumentacja MFC* jako funkcje elementu członkowskiego klasy `CWnd` których nazwy zaczynają się od "Na". Deklaracje funkcji Członkowskich w `CWnd` mają przedrostek **afx_msg**.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Deklarowanie funkcji obsługi komunikatów](../mfc/declaring-message-handler-functions.md)

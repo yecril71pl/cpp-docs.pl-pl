@@ -21,17 +21,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 323903d2e1285a4ee697bbd9d0c3a29c2e1248d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09d29f4bc0b62e5824209759d45e63c1d9e2daa6
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349594"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928743"
 ---
 # <a name="managing-the-current-view"></a>Zarządzanie bieżącym widokiem
 W ramach Domyślna implementacja ramka okna okno ramowe przechowuje informacje o aktualnie aktywny widok. Jeśli okno ramowe zawiera więcej niż jeden widok, na przykład w oknie podziału, bieżący widok jest najnowszych widoku w użyciu. Widok aktywny jest niezależna od aktywnego okna w systemie Windows lub bieżący fokus wprowadzania.  
   
- Podczas aktywnego widoku zmiany, platformę powiadamia bieżący widok przez wywołanie jego [OnActivateView](../mfc/reference/cview-class.md#onactivateview) funkcję elementu członkowskiego. Można określić, czy widok jest aktywowany lub dezaktywowany, sprawdzając `OnActivateView`w `bActivate` parametru. Domyślnie `OnActivateView` Ustawia fokus na bieżący widok aktywacji. Można zastąpić `OnActivateView` do wykonania dowolnego specjalnego przetwarzania, gdy widok jest dezaktywowany lub ponownej aktywacji. Na przykład można podać specjalne wizualnych, aby odróżnić widoku aktywnego od innych, nieaktywne widoki.  
+ Podczas aktywnego widoku zmiany, platformę powiadamia bieżący widok przez wywołanie jego [OnActivateView](../mfc/reference/cview-class.md#onactivateview) funkcję elementu członkowskiego. Można określić, czy widok jest aktywowany lub dezaktywowany, sprawdzając `OnActivateView`w *bActivate* parametru. Domyślnie `OnActivateView` Ustawia fokus na bieżący widok aktywacji. Można zastąpić `OnActivateView` do wykonania dowolnego specjalnego przetwarzania, gdy widok jest dezaktywowany lub ponownej aktywacji. Na przykład można podać specjalne wizualnych, aby odróżnić widoku aktywnego od innych, nieaktywne widoki.  
   
  Okno ramowe przekazuje polecenia do bieżącego widoku (aktywny), zgodnie z opisem w [Routing poleceń](../mfc/command-routing.md), w ramach standardowego routingu poleceń.  
   

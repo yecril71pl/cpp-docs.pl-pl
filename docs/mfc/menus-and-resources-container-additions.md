@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c71e8a79652a86ba412ef829ac1151256d1bf65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 437b80a0766a07b181a60743e79bdbaf32347de4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350656"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930549"
 ---
 # <a name="menus-and-resources-container-additions"></a>Menu i zasoby: dodatki do kontenera
 W tym artykule opisano zmiany, które należy wprowadzić do menu i innych zasobów w programie visual edycji aplikacji kontenera.  
@@ -67,27 +67,27 @@ W tym artykule opisano zmiany, które należy wprowadzić do menu i innych zasob
   
 |ID|Key|Typ|  
 |--------|---------|----------|  
-|**ID_CANCEL_EDIT_CNTR**|VK_ESCAPE —|**VIRTKEY**|  
+|ID_CANCEL_EDIT_CNTR|VK_ESCAPE —|**VIRTKEY**|  
   
- Drugi zmiana ma na celu utworzenie nowej tabeli akceleratora umożliwiająca nowego zasobu menu utworzone dla aktywacji w miejscu. Ta tabela ma wpisy dla menu Plik i okno oprócz **vk_escape —** wejścia powyżej. Poniższy przykład jest tabeli akceleratora utworzone dla aktywacji w miejscu w przykładowym MFC [kontenera](../visual-cpp-samples.md):  
+ Drugi zmiana ma na celu utworzenie nowej tabeli akceleratora umożliwiająca nowego zasobu menu utworzone dla aktywacji w miejscu. Ta tabela ma wpisy dla menu Plik i okno oprócz wpisu vk_escape — powyżej. Poniższy przykład jest tabeli akceleratora utworzone dla aktywacji w miejscu w przykładowym MFC [kontenera](../visual-cpp-samples.md):  
   
 |ID|Key|Typ|  
 |--------|---------|----------|  
-|`ID_FILE_NEW`|CTRL + N|**VIRTKEY**|  
-|`ID_FILE_OPEN`|CTRL+O|**VIRTKEY**|  
-|**ID_FILE_SAVE —**|CTRL+S|**VIRTKEY**|  
-|**ID_FILE_PRINT —**|CTRL + P|**VIRTKEY**|  
-|**ID_NEXT_PANE —**|VK_F6|**VIRTKEY**|  
-|**ID_PREV_PANE —**|SHIFT + VK_F6|**VIRTKEY**|  
-|**ID_CANCEL_EDIT_CNTR**|VK_ESCAPE —|**VIRTKEY**|  
+|ID_FILE_NEW —|CTRL + N|**VIRTKEY**|  
+|ID_FILE_OPEN —|CTRL+O|**VIRTKEY**|  
+|ID_FILE_SAVE —|CTRL+S|**VIRTKEY**|  
+|ID_FILE_PRINT —|CTRL + P|**VIRTKEY**|  
+|ID_NEXT_PANE —|VK_F6|**VIRTKEY**|  
+|ID_PREV_PANE —|SHIFT + VK_F6|**VIRTKEY**|  
+|ID_CANCEL_EDIT_CNTR|VK_ESCAPE —|**VIRTKEY**|  
   
 ##  <a name="_core_string_table_additions_for_container_applications"></a> Ciąg tabeli dodatki do aplikacji kontenera  
  Większość zmian do tabel ciągów dla aplikacji kontenera odpowiadają elementów menu dodatkowe wspomnianego [dodatki do kontenera Menu](#_core_container_menu_additions). Dostarczają tekst wyświetlany w pasku stanu wyświetlania każdego elementu menu. Na przykład poniżej przedstawiono wpisów tabeli ciągów, generowanych przez Kreatora aplikacji:  
   
 |ID|String|  
 |--------|------------|  
-|**IDP_OLE_INIT_FAILED —**|Nie można zainicjować interfejsu OLE. Upewnij się, że biblioteki OLE są zainstalowane poprawne wersje.|  
-|**IDP_FAILED_TO_CREATE —**|Nie można utworzyć obiektu. Upewnij się, że obiekt jest wprowadzana w rejestrze systemu.|  
+|IDP_OLE_INIT_FAILED —|Nie można zainicjować interfejsu OLE. Upewnij się, że biblioteki OLE są zainstalowane poprawne wersje.|  
+|IDP_FAILED_TO_CREATE —|Nie można utworzyć obiektu. Upewnij się, że obiekt jest wprowadzana w rejestrze systemu.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Menu i zasoby (OLE)](../mfc/menus-and-resources-ole.md)   

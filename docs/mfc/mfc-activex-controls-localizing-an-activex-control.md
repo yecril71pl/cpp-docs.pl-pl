@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afe134b4acdcea3ec5f1a6ce381be0ca10c321d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b9a6495c23695f8cdedf45fbdd7cbc915b96873e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355698"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929611"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>Kontrolki ActiveX MFC: lokalizowanie kontrolki ActiveX
 W tym artykule omówiono procedury lokalizowanie interfejsy formantu ActiveX.  
@@ -41,7 +41,7 @@ W tym artykule omówiono procedury lokalizowanie interfejsy formantu ActiveX.
     > [!NOTE]
     >  To nie będzie działać prawidłowo w niektórych przypadkach, jeśli przyszłych wystąpienia mają różne ustawienia regionalne.  
   
--   Użyj **OnAmbientChanged** funkcji powiadomień, aby załadować dynamicznie do odpowiednich zasobów dla ustawień regionalnych kontenera.  
+-   Użyj `OnAmbientChanged` funkcji powiadomień, aby załadować dynamicznie do odpowiednich zasobów dla ustawień regionalnych kontenera.  
   
     > [!NOTE]
     >  To będzie działać dla formantu, ale biblioteki DLL środowiska wykonawczego nie dynamicznie zaktualizuje własnych zasobów po zmianie właściwości otoczenia identyfikator ustawień regionalnych. Ponadto biblioteki DLL środowiska wykonawczego dla formantów ActiveX umożliwia określenie, ustawienia regionalne dla swoich zasobów ustawienia regionalne wątku.  
@@ -98,7 +98,7 @@ W tym artykule omówiono procedury lokalizowanie interfejsy formantu ActiveX.
   
  [!code-cpp[NVC_MFC_AxLoc#4](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_4.cpp)]  
   
- Umieść powyższy kod przykładowy w funkcji członkowskiej klasy formantu, takie jak zastępująca [COleControl::OnSetClientSite](../mfc/reference/colecontrol-class.md#onsetclientsite). Ponadto `m_hResDLL` powinien być zmienną członkowską klasy formantu.  
+ Umieść powyższy kod przykładowy w funkcji członkowskiej klasy formantu, takie jak zastępująca [COleControl::OnSetClientSite](../mfc/reference/colecontrol-class.md#onsetclientsite). Ponadto *m_hResDLL* powinien być zmienną członkowską klasy formantu.  
   
  Podobne logiki służącego do lokalizowania strony właściwości formantu. Do zlokalizowania strony właściwości, należy dodać kod podobny do poniższego przykładu do pliku implementacji strony właściwości (w zastępująca [COlePropertyPage::OnSetPageSite](../mfc/reference/colepropertypage-class.md#onsetpagesite)):  
   

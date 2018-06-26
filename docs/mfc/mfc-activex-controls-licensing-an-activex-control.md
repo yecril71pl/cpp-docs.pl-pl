@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 725e6cf167ec01635a3072f09ecaa2f5055b1891
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0b1e8f0c54cf4d409aedb99fc3195b927d5f127
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353938"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929747"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>Kontrolki ActiveX MFC: licencjonowanie kontrolki ActiveX
 Licencjonowania pomocy technicznej, opcjonalna funkcja formantów ActiveX służy do kontrolowania, kto może używać lub rozkładanie formantu. (Aby uzyskać dodatkowe informacje dotyczące licencjonowania, zobacz licencjonowania problemy w [Uaktualnianie istniejącego formantu ActiveX](../mfc/upgrading-an-existing-activex-control.md).)  
@@ -44,7 +44,7 @@ Licencjonowania pomocy technicznej, opcjonalna funkcja formantów ActiveX służ
  Formanty ActiveX, które implementują licencjonowania pozwalają Deweloper kontroli, aby określić, jak inne osoby użyje formantu ActiveX. Podaj nabywca formantu za pomocą formantu i. Plik — Umowa licencyjna, za zgodą czy nabywca może dystrybuować formantu, ale nie. Plik — Umowa licencyjna z aplikacji, która używa kontrolki. Zapobiega to użytkowników tej aplikacji z zapisywania nowych aplikacji, które używają formantu, bez pierwszy Licencjonowanie kontrolki użytkownika.  
   
 ##  <a name="_core_overview_of_activex_control_licensing"></a> Omówienie formantu ActiveX licencjonowania  
- Aby zapewnić obsługę licencjonowania dla formantów ActiveX [coleobjectfactory —](../mfc/reference/coleobjectfactory-class.md) klasa zawiera implementację kilka funkcji w **IClassFactory2** interfejsu: **IClassFactory2 :: RequestLicKey**, **IClassFactory2::GetLicInfo**, i **IClassFactory2::CreateInstanceLic**. Gdy deweloper aplikacji kontenera wysyła żądanie można utworzyć wystąpienia formantu wywołania `GetLicInfo` nawiązać upewnij się, że formant. Plik — Umowa licencyjna jest obecny. Jeśli formant ma licencję, można tworzyć i umieszczane w kontenerze wystąpienia formantu. Po zakończeniu dewelopera konstruowanie aplikacji kontenera innej funkcji, ten czas połączenia do `RequestLicKey`, staje się. Ta funkcja zwraca klucz licencji (ciąg znaków proste) do aplikacji kontenera. Zwrócony klucza zostaje następnie osadzony w aplikacji.  
+ Aby zapewnić obsługę licencjonowania dla formantów ActiveX [coleobjectfactory —](../mfc/reference/coleobjectfactory-class.md) klasa zawiera implementację kilka funkcji w `IClassFactory2` interfejsu: `IClassFactory2::RequestLicKey`, `IClassFactory2::GetLicInfo`, i `IClassFactory2::CreateInstanceLic`. Gdy deweloper aplikacji kontenera wysyła żądanie można utworzyć wystąpienia formantu wywołania `GetLicInfo` nawiązać upewnij się, że formant. Plik — Umowa licencyjna jest obecny. Jeśli formant ma licencję, można tworzyć i umieszczane w kontenerze wystąpienia formantu. Po zakończeniu dewelopera konstruowanie aplikacji kontenera innej funkcji, ten czas połączenia do `RequestLicKey`, staje się. Ta funkcja zwraca klucz licencji (ciąg znaków proste) do aplikacji kontenera. Zwrócony klucza zostaje następnie osadzony w aplikacji.  
   
  Na poniższej ilustracji przedstawiono Weryfikacja licencji formantu ActiveX, który będzie używany podczas tworzenia aplikacji kontenera. Jak wspomniano wcześniej, Deweloper aplikacji kontenera musi być poprawne. Plik — Umowa licencyjna zainstalowane na komputerze deweloperskim, można utworzyć wystąpienia formantu.  
   
@@ -79,15 +79,15 @@ Weryfikacja licencjonowanego formantu ActiveX podczas wykonywania
   
 -   [VerifyUserLicense](../mfc/reference/coleobjectfactory-class.md#verifyuserlicense)  
   
-     Sprawdza, czy formant umożliwia wykorzystanie czasu projektowania przez system na obecność pliku licencji sterowania sprawdzania. Ta funkcja jest wywoływana przez platformę w ramach przetwarzania **IClassFactory2::GetLicInfo** i **IClassFactory::CreateInstanceLic**.  
+     Sprawdza, czy formant umożliwia wykorzystanie czasu projektowania przez system na obecność pliku licencji sterowania sprawdzania. Ta funkcja jest wywoływana przez platformę w ramach przetwarzania `IClassFactory2::GetLicInfo` i `IClassFactory::CreateInstanceLic`.  
   
 -   [GetLicenseKey](../mfc/reference/coleobjectfactory-class.md#getlicensekey)  
   
-     Żąda Unikatowy klucz z formantu biblioteki DLL. Ten klucz jest osadzony w aplikacji kontenera i później, używany w połączeniu z `VerifyLicenseKey`, można utworzyć wystąpienia formantu. Ta funkcja jest wywoływana przez platformę w ramach przetwarzania **IClassFactory2::RequestLicKey**.  
+     Żąda Unikatowy klucz z formantu biblioteki DLL. Ten klucz jest osadzony w aplikacji kontenera i później, używany w połączeniu z `VerifyLicenseKey`, można utworzyć wystąpienia formantu. Ta funkcja jest wywoływana przez platformę w ramach przetwarzania `IClassFactory2::RequestLicKey`.  
   
 -   [VerifyLicenseKey](../mfc/reference/coleobjectfactory-class.md#verifylicensekey)  
   
-     Sprawdza, czy klucz osadzonych i formantu Unikatowy klucz są takie same. Dzięki temu kontener można utworzyć wystąpienia formantu jej wykorzystanie. Ta funkcja jest wywoływana przez platformę w ramach przetwarzania **IClassFactory2::CreateInstanceLic** i może zostać zastąpiona zapewnienie dostosowane weryfikacji klucza licencji. Domyślna implementacja wykonuje porównania ciągów. Aby uzyskać więcej informacji, zobacz [Dostosowywanie Licencjonowanie formantu ActiveX](#_core_customizing_the_licensing_of_an_activex_control)w dalszej części tego artykułu.  
+     Sprawdza, czy klucz osadzonych i formantu Unikatowy klucz są takie same. Dzięki temu kontener można utworzyć wystąpienia formantu jej wykorzystanie. Ta funkcja jest wywoływana przez platformę w ramach przetwarzania `IClassFactory2::CreateInstanceLic` i może zostać zastąpiona zapewnienie dostosowane weryfikacji klucza licencji. Domyślna implementacja wykonuje porównania ciągów. Aby uzyskać więcej informacji, zobacz [Dostosowywanie Licencjonowanie formantu ActiveX](#_core_customizing_the_licensing_of_an_activex_control)w dalszej części tego artykułu.  
   
 ###  <a name="_core_header_file_modifications"></a> Modyfikacja pliku nagłówka  
  Kreator kontrolek ActiveX umieszcza następujący kod w pliku nagłówka. W tym przykładzie dwóch funkcji Członkowskich `CSampleCtrl`przez obiekt `factory` został zadeklarowany, jedną, która sprawdza obecność formantu. Plik — Umowa licencyjna i innego, która pobiera klucz licencji do użycia w aplikacji zawierająca formant:  
@@ -100,7 +100,7 @@ Weryfikacja licencjonowanego formantu ActiveX podczas wykonywania
  [!code-cpp[NVC_MFC_AxUI#40](../mfc/codesnippet/cpp/mfc-activex-controls-licensing-an-activex-control_2.cpp)]  
   
 > [!NOTE]
->  Jeśli zmodyfikujesz **szLicString** w dowolny sposób, musisz także zmodyfikować pierwszego wiersza w formancie. Plik — Umowa licencyjna lub licencjonowania nie będzie działać prawidłowo.  
+>  Jeśli zmodyfikujesz `szLicString` w dowolny sposób, musisz także zmodyfikować pierwszego wiersza w formancie. Plik — Umowa licencyjna lub licencjonowania nie będzie działać prawidłowo.  
   
  Kreator kontrolek ActiveX umieszcza następujący kod w pliku implementacji sterowania, aby określić klasy formantu `VerifyUserLicense` i `GetLicenseKey` funkcje:  
   

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cf5553904c859e38f42423408c0b7bddd9237fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1209353f10e52b13202a91ae120057ba85dfa805
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361338"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930100"
 ---
 # <a name="mfc-activex-controls"></a>Kontrolki ActiveX MFC
 Formant ActiveX jest składnik oprogramowania wielokrotnego użytku, oparte na modelu obiektu składników (COM), obsługuje wiele funkcji OLE, który można dostosować do potrzeb wiele oprogramowania. Formanty ActiveX są przeznaczone do użycia zarówno w zwykłym kontenery formantów ActiveX w Internecie, w strony sieci Web. Formanty ActiveX można utworzyć za pomocą MFC, opisane w tym miejscu lub z [Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md).  
@@ -77,7 +77,7 @@ Komunikacja między kontenerze formantów ActiveX i formantu ActiveX
   
  Również na poprzedniej ilustracji pokazano, jak inne interfejsy OLE (oprócz automatyzacji i zdarzenia) są obsługiwane przez formanty.  
   
- Wszystkie kontrolki komunikacji z kontenerem odbywa się za pośrednictwem `COleControl`. Do obsługi niektórych żądań kontenera **colecontrol —** wywołać elementu członkowskiego funkcje, które zostały wdrożone w klasy formantu. Wszystkie metody i niektóre właściwości są obsługiwane w ten sposób. Klasa formantu można także zainicjować komunikacji z kontenerem przez wywołanie funkcji Członkowskich `COleControl`. Zdarzenia są uruchamiane w ten sposób.  
+ Wszystkie kontrolki komunikacji z kontenerem odbywa się za pośrednictwem `COleControl`. Do obsługi niektórych żądań kontenera `COleControl` wywołać elementu członkowskiego funkcje, które zostały wdrożone w klasy formantu. Wszystkie metody i niektóre właściwości są obsługiwane w ten sposób. Klasa formantu można także zainicjować komunikacji z kontenerem przez wywołanie funkcji Członkowskich `COleControl`. Zdarzenia są uruchamiane w ten sposób.  
   
 ##  <a name="_core_active_and_inactive_states_of_an_activex_control"></a> Stany aktywną i nieaktywną formantu ActiveX  
  Formant ma dwa stany podstawowe: aktywnych i nieaktywnych. Zazwyczaj te stany zostały rozróżnianych na podstawie tego, czy formant miał okna. Aktywny formant miał okna; nie kontrolkę, która jest nieaktywne. Ta różnica nie jest już uniwersalnych wraz z wprowadzeniem aktywacji niepowiązanej z oknami, ale nadal mają zastosowanie wielu formantów.  

@@ -22,22 +22,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1055fd9b1ef75b2090478d85e8251d1800b8b039
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e19cda1869938a854ff03ea83cdda747e8120a0
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345745"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929533"
 ---
 # <a name="managing-menus-control-bars-and-accelerators"></a>Zarządzanie menu, paskami sterowania i akceleratorami
 Okno ramowe zarządza aktualizowanie obiektów interfejsu użytkownika, w tym menu, przycisków paska narzędzi, pasek stanu i akceleratorami. Umożliwia także zarządzanie na pasku menu MDI aplikacji do udostępniania.  
   
 ## <a name="managing-menus"></a>Zarządzanie menu  
- Okno ramowe uczestniczy w aktualizowanie elementów interfejsu użytkownika za pomocą `ON_UPDATE_COMMAND_UI` mechanizm opisane w [jak obiekty interfejsu użytkownika aktualizacji](../mfc/how-to-update-user-interface-objects.md). Przyciski na paski narzędzi i innych paski kontrolki są aktualizowane podczas wykonywania pętli bezczynności. Elementy menu w menu rozwijanych na pasku menu są aktualizowane tuż przed menu górnego poziomu.  
+ Okno ramowe uczestniczy w aktualizowanie elementów interfejsu użytkownika przy użyciu mechanizmu on_update_command_ui — opisanego w [jak obiekty interfejsu użytkownika aktualizacji](../mfc/how-to-update-user-interface-objects.md). Przyciski na paski narzędzi i innych paski kontrolki są aktualizowane podczas wykonywania pętli bezczynności. Elementy menu w menu rozwijanych na pasku menu są aktualizowane tuż przed menu górnego poziomu.  
   
  Dla aplikacji MDI ramkę okna MDI zarządza paska menu i podpis. Ramka okna MDI jest właścicielem co domyślne menu używany jako paska menu, gdy nie ma żadnych aktywnych okien podrzędnych MDI. Gdy istnieją aktywne elementy podrzędne, pasek menu Okno ramowe MDI zostanie przejęty menu dla aktywnego okna podrzędnego MDI. W przypadku aplikacji MDI obsługuje wiele typów dokumentów, takich jak dokumenty wykresu i arkusza, każdego typu umieszcza własną menu paska menu i zmieni podpis główną ramkę okna.  
   
- [Cmdiframewnd —](../mfc/reference/cmdiframewnd-class.md) zawiera domyślne implementacje dla standardowych poleceń w wyświetlonym menu okna dla aplikacji MDI. W szczególności, nowe okno polecenia (**id_window_new —**) jest zaimplementowana, aby utworzyć nowe okno ramowe i widoku w bieżącym dokumencie. Należy zastąpić tych implementacji tylko wtedy, gdy potrzebujesz Dostosowywanie zaawansowane.  
+ [Cmdiframewnd —](../mfc/reference/cmdiframewnd-class.md) zawiera domyślne implementacje dla standardowych poleceń w wyświetlonym menu okna dla aplikacji MDI. W szczególności nowe okno polecenia (id_window_new —) jest implementowany Aby utworzyć nowe okno ramowe i widoku w bieżącym dokumencie. Należy zastąpić tych implementacji tylko wtedy, gdy potrzebujesz Dostosowywanie zaawansowane.  
   
  Wiele okien podrzędnych MDI tego samego typu dokumentu udostępniać zasoby menu. Jeśli kilka okien podrzędnych MDI są tworzone przez tego samego szablonu dokumentu, wszystkie użyciem tego samego zasobu menu zapisywania zasobów systemowych w systemie Windows.  
   

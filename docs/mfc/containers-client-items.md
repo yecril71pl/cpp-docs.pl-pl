@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14979f1c5f11e9a229c408e33e7c17d8776a54a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a7b498ed1ddc3a3d040abde6ebcb7e27615b801
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344220"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929346"
 ---
 # <a name="containers-client-items"></a>Kontenery: elementy klienckie
 W tym artykule opisano, co to są elementy klienckie i z klasy co aplikacji powinien pochodzić jego elementy klienckie.  
   
  Elementy klienckie są elementy danych należących do innej aplikacji, które są zawarte w lub odwołuje się dokument aplikacji kontenera OLE. Elementy klienckie, których danych znajdujących się w dokumencie są osadzone; te, których dane są przechowywane w innej lokalizacji odwołuje się dokument kontenera są połączone.  
   
- Klasa dokumentu w aplikacji OLE pochodzi z klasy [COleDocument](../mfc/reference/coledocument-class.md) , a nie z **CDocument**. `COleDocument` Klasa dziedziczy **CDocument** wszystkie funkcje niezbędne do przy użyciu architektury dokument/widok, w którym MFC aplikacje są oparte. `COleDocument` definiuje również interfejs, który traktuje dokumentu jako kolekcja `CDocItem` obiektów. Kilka `COleDocument` funkcji elementów członkowskich są udostępniane dla Dodawanie, pobieranie i usuwanie elementów tej kolekcji.  
+ Klasa dokumentu w aplikacji OLE pochodzi z klasy [COleDocument](../mfc/reference/coledocument-class.md) , a nie z `CDocument`. `COleDocument` Klasa dziedziczy `CDocument` wszystkie funkcje niezbędne do przy użyciu architektury dokument/widok, w którym MFC aplikacje są oparte. `COleDocument` definiuje również interfejs, który traktuje dokumentu jako kolekcja `CDocItem` obiektów. Kilka `COleDocument` funkcji elementów członkowskich są udostępniane dla Dodawanie, pobieranie i usuwanie elementów tej kolekcji.  
   
  Każda aplikacja kontenera powinien pochodzić z co najmniej jedną klasę z `COleClientItem`. Obiekty ta klasa reprezentuje elementy, osadzony czy połączony w dokumencie OLE. Te obiekty istnieje przez cały okres istnienia dokumentu zawierającego je, chyba że zostaną one usunięte z dokumentu.  
   

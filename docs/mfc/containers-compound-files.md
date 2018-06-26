@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8983fd8cb51a9f305ef4b0fad4d546fc8091f5a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8bee847d1121a6d5da1679c29a9107c8a447ab1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348348"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930228"
 ---
 # <a name="containers-compound-files"></a>Kontenery: pliki złożone
 W tym artykule opisano składniki i implementacja pliki złożone i zalety i wady używania pliki złożone w aplikacji OLE.  
@@ -46,7 +46,7 @@ W tym artykule opisano składniki i implementacja pliki złożone i zalety i wad
   
 -   Magazyn obiekty, takie jak katalogi, może zawierać inne obiekty magazynu i strumienia.  
   
--   **LockBytes** reprezentować interfejs między obiektami pamięci masowej i sprzętem fizycznym. Określają one, jak rzeczywista liczba bajtów zapisywanych w niezależnie od urządzenia magazynującego **LockBytes** obiekt uzyskuje dostęp do takich jak dysk twardy lub obszar pamięci globalnej. Aby uzyskać więcej informacji na temat **LockBytes** obiektów i `ILockBytes` interfejsu, zobacz *OLE Podręcznik programisty*.  
+-   `LockBytes` obiekty reprezentują interfejs między obiektami pamięci masowej i sprzętem fizycznym. Określają one, jak rzeczywista liczba bajtów zapisywanych w niezależnie od urządzenia magazynującego `LockBytes` obiekt uzyskuje dostęp do takich jak dysk twardy lub obszar pamięci globalnej. Aby uzyskać więcej informacji na temat `LockBytes` obiektów i `ILockBytes` interfejsu, zobacz *OLE Podręcznik programisty*.  
   
 ##  <a name="_core_advantages_and_disadvantages_of_compound_files"></a> Zalety i wady pliki złożone  
  Pliki złożone zapewniają korzyści, które nie są dostępne z wcześniejszych metod magazynu plików. Obejmują one:  

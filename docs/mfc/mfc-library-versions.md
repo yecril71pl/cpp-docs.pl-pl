@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fb4f73d1a0360ddad3983179415d0f7fc2d3cda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 92568f61bb1ea219ab3ddc96f4c4687dec157c9a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358067"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931768"
 ---
 # <a name="mfc-library-versions"></a>Wersje biblioteki MFC
 
@@ -89,7 +89,7 @@ Wersje biblioteki MFC ANSI/MBCS obsługuje oba zestawy znaków, takich jak ASCII
 
 Aby ustawić konfigurację projektu do użycia w środowisku IDE jednobajtowe wielobajtowe i znaków dwubajtowych obsługi formatu Unicode ciągów i znakowe, użyj **właściwości projektu** okna dialogowego. W **właściwości konfiguracji** > **ogólne** ustaw **zestaw znaków** właściwości **Nieustawione** do użycia zestaw znaków jednobajtowych. Ustaw dla właściwości **Użyj wielobajtowy zestaw znaków,** korzystanie ze zestawu znaków wielobajtowych lub **użyć zestawu znaków Unicode** do użycia Unicode został zakodowany jako UTF-16.
 
-Projekty MFC Użyj symbol preprocesora  **\_UNICODE** wskazująca UTF-16 znaków dwubajtowych obsługi formatu Unicode, i  **\_MBCS** wskazująca MBCS pomocy technicznej. Te opcje są wzajemnie w projekcie.
+Projekty MFC Użyj symbol preprocesora \_UNICODE, aby wskazać, UTF-16 znaków dwubajtowych obsługi formatu Unicode, i \_Obsługa MBCS w celu wskazania MBCS. Te opcje są wzajemnie w projekcie.
 
 ## <a name="mfc-static-library-naming-conventions"></a>Konwencje nazewnictwa biblioteką statyczną MFC
 

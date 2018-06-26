@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2255f28c1250096bfbeb1a9365c57f78e17e20d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d76717e68e37769cf55dceb4492ed78031c49e10
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344627"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928227"
 ---
 # <a name="containers-client-item-notifications"></a>Kontenery: powiadomienia dotyczące elementów klienckich
 W tym artykule omówiono funkcje możliwym do zastąpienia, które programu MFC framework wymaga aplikacji serwerowych modyfikowania elementów w dokumencie aplikacji klienta.  
@@ -30,13 +30,13 @@ W tym artykule omówiono funkcje możliwym do zastąpienia, które programu MFC 
   
  Platformę powiadamia zmian za pomocą wywołania do aplikacji kontenera `COleClientItem::OnChange`, funkcja możliwym do zastąpienia, którego implementacja jest wymagana. Ta funkcja chronionych otrzymuje dwa argumenty. Pierwszy określa przyczynę serwera zmienione elementu:  
   
-|powiadomienia|Znaczenie|  
+|Powiadomienia|Znaczenie|  
 |------------------|-------------|  
-|`OLE_CHANGED`|Wygląd elementu OLE została zmieniona.|  
-|`OLE_SAVED`|Element OLE został zapisany.|  
-|`OLE_CLOSED`|Element OLE został zamknięty.|  
+|**OLE_CHANGED**|Wygląd elementu OLE została zmieniona.|  
+|**OLE_SAVED**|Element OLE został zapisany.|  
+|**OLE_CLOSED**|Element OLE został zamknięty.|  
 |**OLE_RENAMED**|Zmieniono nazwę dokumentu zawierającego element OLE na serwerze.|  
-|`OLE_CHANGED_STATE`|Element OLE zmienił się z jednego stanu do innego.|  
+|**OLE_CHANGED_STATE**|Element OLE zmienił się z jednego stanu do innego.|  
 |**OLE_CHANGED_ASPECT**|Aspekt rysowania elementu OLE został zmieniony przez platformę.|  
   
  Te wartości są z **OLE_NOTIFICATION** wyliczenia, która jest zdefiniowana w AFXOLE. H.  
@@ -45,9 +45,9 @@ W tym artykule omówiono funkcje możliwym do zastąpienia, które programu MFC 
   
 |Gdy jest pierwszym argumentem|Drugi argument|  
 |----------------------------|---------------------|  
-|`OLE_SAVED` lub `OLE_CLOSED`|Nie jest używany.|  
-|`OLE_CHANGED`|Określa aspekt elementu OLE, który został zmieniony.|  
-|`OLE_CHANGED_STATE`|Opis stanu wprowadzane (`emptyState`, **loadedState**, `openState`, `activeState`, lub `activeUIState`).|  
+|**OLE_SAVED** lub **OLE_CLOSED**|Nie jest używany.|  
+|**OLE_CHANGED**|Określa aspekt elementu OLE, który został zmieniony.|  
+|**OLE_CHANGED_STATE**|Opis stanu wprowadzane (*emptyState*, *loadedState*, *openState*, *activeState*, lub  *activeUIState*).|  
   
  Aby uzyskać więcej informacji na temat stanów elementu klienta można założyć, zobacz [kontenery: stany elementu klienckiego](../mfc/containers-client-item-states.md).  
   

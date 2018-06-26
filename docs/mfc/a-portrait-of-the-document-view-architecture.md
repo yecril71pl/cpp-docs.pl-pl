@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d366cf7c9aee6988d715edbe30e3938c30557e2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d903d183675ae4b79d4610fe4413cfd8bf0e704c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329819"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928947"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>Portret architektury dokument/widok
 Dokumenty i widoki są skojarzone w typowej aplikacji MFC. Dane są przechowywane w dokumencie, ale widok ma uprzywilejowany dostęp do danych. Rozdzielenie widoku dokumentu oddziela przechowywania i obsługi danych od jego wyświetlania.  
@@ -37,7 +37,7 @@ Dokumenty i widoki są skojarzone w typowej aplikacji MFC. Dane są przechowywan
 ## <a name="gaining-access-to-document-data-from-the-view"></a>Aby uzyskać dostęp do danych z widoku dokumentu  
  Widok uzyskuje dostęp do swoich dokumentów danych za pomocą [GetDocument](../mfc/reference/cview-class.md#getdocument) funkcji, która zwraca wskaźnik do dokumentu lub wprowadzając w widoku klas C++ `friend` klasy dokumentu. Widoku jest używana jego dostęp do danych, aby uzyskać dane, gdy będzie gotowy do rysowania lub wprowadzenia innych zmian.  
   
- Na przykład z widoku [OnDraw](../mfc/reference/cview-class.md#ondraw) używa widoku funkcji członkowskiej **GetDocument** uzyskać wskaźnik dokumentu. Następnie używa tego wskaźnika dostępu do `CString` elementu członkowskiego danych w dokumencie. Widok przekazuje ciąg do `TextOut` funkcji. Aby wyświetlić kod w tym przykładzie, zobacz [Rysowanie w widoku](../mfc/drawing-in-a-view.md).  
+ Na przykład z widoku [OnDraw](../mfc/reference/cview-class.md#ondraw) korzysta z funkcji członkowskiej widoku `GetDocument` uzyskać wskaźnik dokumentu. Następnie używa tego wskaźnika dostępu do `CString` elementu członkowskiego danych w dokumencie. Widok przekazuje ciąg do `TextOut` funkcji. Aby wyświetlić kod w tym przykładzie, zobacz [Rysowanie w widoku](../mfc/drawing-in-a-view.md).  
   
 ## <a name="user-input-to-the-view"></a>Dane wejściowe użytkownika do widoku  
  Widok może również zinterpretować kliknięcie myszki w siebie jako zaznaczenie lub edytowanie danych. Podobnie może go zinterpretować naciśnięcia klawiszy jako wprowadzania danych lub edycji. Załóżmy, że użytkownik wpisuje ciąg w widoku, który zarządza tekstu. Widok uzyskuje wskaźnik do dokumentu i używa wskaźnika do przekazania nowe dane do dokumentu, który zapisuje je w niektórych struktury danych.  

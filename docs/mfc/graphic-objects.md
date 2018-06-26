@@ -51,12 +51,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52b8c6c5b6d27bdf4ce4c9ad46a75c21b9f47333
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2cf7e2c56094727c6956d0e2e21708dd81be4f10
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349785"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930849"
 ---
 # <a name="graphic-objects"></a>Obiekty graficzne
 System Windows udostępnia wiele narzędzi do użycia w kontekstach urządzenia do rysowania. Zapewnia on pióra do rysowania linii, pędzle wnętrza wypełnienia i czcionek do rysowania tekstu. MFC udostępnia klasy obiektów grafiki odpowiednikiem narzędzi do rysowania w systemie Windows. Poniższej tabeli przedstawiono dostępne klasy i równoważne grafiki Windows typ dojścia urządzenia interfejsu (GDI).  
@@ -82,7 +82,7 @@ System Windows udostępnia wiele narzędzi do użycia w kontekstach urządzenia 
   
  Każdej klasy obiektów grafiki w bibliotece klas ma konstruktora, który pozwala na tworzenie obiektów graficznych dla tej klasy, które należy następnie zainicjować funkcją Utwórz odpowiednie, takich jak `CreatePen`.  
   
- Każdej klasy obiektów grafiki w bibliotece klas ma operator rzutowania, który będzie rzutować obiekt MFC skojarzone uchwytów okien. Wynikowa dojścia jest prawidłowa, dopóki skojarzonego obiektu odłącza go. Użyj obiektu **Detach** funkcji członkowskiej można odłączyć dojście.  
+ Każdej klasy obiektów grafiki w bibliotece klas ma operator rzutowania, który będzie rzutować obiekt MFC skojarzone uchwytów okien. Wynikowa dojścia jest prawidłowa, dopóki skojarzonego obiektu odłącza go. Użyj obiektu `Detach` funkcji członkowskiej można odłączyć dojście.  
   
  Poniższy kod rzutowania `CPen` obiekt do obsługi systemu Windows:  
   

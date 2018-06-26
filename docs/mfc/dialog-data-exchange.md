@@ -29,15 +29,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10d488ff21501eb83ef8f3115bdc2e4d899a68d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2385efcef9949eab60b1542b2039e3ff2ac80e38
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345143"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930862"
 ---
 # <a name="dialog-data-exchange"></a>Wymiana danych w oknie dialogowym
-Używany mechanizm DDX, należy ustawić wartości początkowe okna dialogowego zmienne Członkowskie obiektu, zwykle w Twojej `OnInitDialog` obsługi lub konstruktora okna dialogowego. Natychmiast przed wyświetleniem okna dialogowego, w ramach mechanizmu DDX przesyła wartości zmiennych Członkowskich do formantów w oknie dialogowym, gdzie są wyświetlane po sam wyświetli się okno dialogowe w odpowiedzi na `DoModal` lub **Utwórz** . Domyślna implementacja `OnInitDialog` w `CDialog` wywołania `UpdateData` funkcji członkowskiej klasy `CWnd` zainicjować formantów w oknie dialogowym.  
+Używany mechanizm DDX, należy ustawić wartości początkowe okna dialogowego zmienne Członkowskie obiektu, zwykle w Twojej `OnInitDialog` obsługi lub konstruktora okna dialogowego. Natychmiast przed wyświetleniem okna dialogowego, w ramach mechanizmu DDX przesyła wartości zmiennych Członkowskich do formantów w oknie dialogowym, gdzie są wyświetlane po sam wyświetli się okno dialogowe w odpowiedzi na `DoModal` lub `Create`. Domyślna implementacja `OnInitDialog` w `CDialog` wywołania `UpdateData` funkcji członkowskiej klasy `CWnd` zainicjować formantów w oknie dialogowym.  
   
  Ten sam mechanizm transferu wartości z kontrolki do zmiennych Członkowskich po kliknięciu przycisku OK (lub przy każdym wywołaniu `UpdateData` funkcji członkowskiej z argumentem **TRUE**). Mechanizm Walidacja danych okna dialogowego sprawdza poprawność elementów danych, dla których określono reguły sprawdzania poprawności.  
   

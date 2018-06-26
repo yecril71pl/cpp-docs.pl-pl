@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45b073ff2a9565c9106111299ba5b1b9d5a47351
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8fda670198dd9bd03a6d944ce4db70542926bf41
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351666"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931583"
 ---
 # <a name="keyboard-and-mouse-customization"></a>Dostosowywanie klawiatury i myszy
 MFC umożliwia użytkownikom aplikacji w celu dostosowania sposobu obsługi klawiatury i myszy. Użytkownik może dostosować klawiatury, przypisując skróty klawiaturowe do poleceń. Użytkownika można również dostosować wejście myszy przez wybranie polecenia, który ma być wykonany, gdy użytkownik kliknie dwukrotnie wewnątrz windows określonych aplikacji. W tym temacie wyjaśniono, jak dostosować dane wejściowe dla aplikacji.  
@@ -61,7 +61,7 @@ Karta dostosowywania myszy
   
  Po aplikacji inicjuje Menedżera mysz, dodaje platformę **myszy** karty, aby **Dostosuj** okno dialogowe. Jeśli nie zostaną dodane wszystkie widoki, uzyskiwanie dostępu do karty spowoduje, że wystąpił nieobsługiwany wyjątek. Po utworzeniu listy widoków, **myszy** karta jest dostępna dla użytkownika.  
   
- Po dodaniu nowego widoku do Menedżera myszy możesz nadać mu unikatowy identyfikator. Jeśli chcesz obsługuje myszy dostosowywania okna musi przetworzyć `WM_LBUTTONDBLCLICK` komunikat i wywołanie [CWinAppEx::OnViewDoubleClick](../mfc/reference/cwinappex-class.md#onviewdoubleclick) funkcji. Podczas wywoływania tej funkcji, jeden z parametrów jest identyfikator dla tego okna. Jest odpowiedzialny za programisty, aby śledzić numery identyfikatorów i obiekty skojarzone z nimi.  
+ Po dodaniu nowego widoku do Menedżera myszy możesz nadać mu unikatowy identyfikator. Jeśli chcesz obsługuje myszy dostosowywania okna musi przetworzyć komunikatu WM_LBUTTONDBLCLICK i wywołania [CWinAppEx::OnViewDoubleClick](../mfc/reference/cwinappex-class.md#onviewdoubleclick) funkcji. Podczas wywoływania tej funkcji, jeden z parametrów jest identyfikator dla tego okna. Jest odpowiedzialny za programisty, aby śledzić numery identyfikatorów i obiekty skojarzone z nimi.  
   
 ## <a name="security-concerns"></a>Zagadnienia dotyczące zabezpieczeń  
  Zgodnie z opisem w [narzędzia zdefiniowane przez użytkownika](../mfc/user-defined-tools.md), użytkownik może skojarzyć Identyfikatora użytkownika narzędzia ze zdarzeniem kliknij dwukrotnie. Gdy użytkownik kliknie dwukrotnie widoku, aplikacja szuka narzędzia użytkownika odpowiadającego skojarzony identyfikator. Jeśli aplikacja znajduje dopasowywania narzędzie, wykonuje narzędzie. Jeśli aplikacja nie może odnaleźć pasującego narzędzia, wysyła komunikat WM_COMMAND o identyfikatorze do widoku, który został dwukrotnie kliknięty.  

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06a2b6a5ab17db7b512f1f44d2eda68169d71645
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3aa243ab8c0fb49e20e5b7485acdcd8bb808831
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333134"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930471"
 ---
 # <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>Kontenery kontrolek ActiveX: łączenie kontrolki ActiveX ze zmienną członkowską
 Najłatwiejszym sposobem na dostęp do formantu ActiveX w swojej aplikacji kontenera formantów jest do skojarzenia z formantu ActiveX ze zmienną członkowską klasy okna dialogowego, który będzie zawierać formant.  
@@ -44,7 +44,7 @@ Najłatwiejszym sposobem na dostęp do formantu ActiveX w swojej aplikacji konte
   
 5.  W **nazwa zmiennej** wprowadź nazwę.  
   
-     Na przykład `m_circctl`.  
+     Na przykład *m_circctl*.  
   
 6.  Kliknij przycisk **Zakończ** aby zaakceptować wybrane opcje i zamknąć Dodaj kreatora zmiennej elementu członkowskiego.  
   

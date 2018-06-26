@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc3aa3f7aa8b6f4abf28c12a11f75540f59238e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7facc4c712d070cffe9be5f07a236b2b04b972e9
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352428"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931918"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>Kontrolki ActiveX MFC: dodawanie właściwości niestandardowych
 Właściwości niestandardowe różnią się od właściwości podstawowe właściwości niestandardowe nie są już implementowana przez `COleControl` klasy. Właściwość niestandardowa służy do ujawniać niektórych stanu lub wygląd formantu ActiveX do programisty, za pomocą formantu.  
@@ -47,7 +47,7 @@ Właściwości niestandardowe różnią się od właściwości podstawowe właś
   
 -   Implementacja sparametryzowane  
   
-     Implementacja sparametryzowane jest obsługiwana przez Kreatora dodawania właściwości. Sparametryzowane właściwości (nazywane również tablicy właściwości) może służyć do zestawu wartości za pośrednictwem pojedynczej właściwości formantu. Makro wpisu mapy wysyłania dla tej implementacji jest `DISP_PROPERTY_PARAM`. Aby uzyskać więcej informacji na ten typ implementacji, zobacz [implementacja właściwości sparametryzowana](../mfc/mfc-activex-controls-advanced-topics.md) w artykule formantów ActiveX: Tematy zaawansowane.  
+     Implementacja sparametryzowane jest obsługiwana przez Kreatora dodawania właściwości. Sparametryzowane właściwości (nazywane również tablicy właściwości) może służyć do zestawu wartości za pośrednictwem pojedynczej właściwości formantu. Makro wpisu mapy wysyłania dla tej implementacji jest disp_property_param —. Aby uzyskać więcej informacji na ten typ implementacji, zobacz [implementacja właściwości sparametryzowana](../mfc/mfc-activex-controls-advanced-topics.md) w artykule formantów ActiveX: Tematy zaawansowane.  
   
 ##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> Przy użyciu Dodaj Kreatora właściwości, aby dodać właściwości niestandardowe  
  W poniższej procedurze przedstawiono dodawanie właściwości niestandardowych CircleOffset, używanym w implementacji metody Get i Set. Właściwość niestandardowa CircleOffset umożliwia użytkownikowi formantu przesunięcie koło z Centrum prostokątem formantu. Dodawanie właściwości niestandardowych z implementacją innego niż metod Get/Set procedura jest bardzo podobne.  
@@ -66,7 +66,7 @@ Właściwości niestandardowe różnią się od właściwości podstawowe właś
   
      Spowoduje to otwarcie [Dodaj Kreatora właściwości](../ide/names-add-property-wizard.md).  
   
-5.  W **nazwa właściwości** wpisz `CircleOffset`.  
+5.  W **nazwa właściwości** wpisz *CircleOffset*.  
   
 6.  Aby uzyskać **typ implementacji**, kliknij przycisk **metod Get/Set**.  
   

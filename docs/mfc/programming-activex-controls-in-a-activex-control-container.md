@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bae926cfc7e83edeef9ee68c7ce7118c55009a08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1bd8a99faa4cf0444782f402e69da761a8c25e2
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355044"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929958"
 ---
 # <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>Kontenery kontrolek ActiveX: programowanie kontrolek ActiveX w kontenerze kontrolek ActiveX
 W tym artykule opisano proces do uzyskiwania dostępu do narażonych [metody](../mfc/mfc-activex-controls-methods.md) i [właściwości](../mfc/mfc-activex-controls-properties.md) osadzonych formantów ActiveX. Zasadniczo spowoduje wykonaj następujące kroki:  
@@ -76,7 +76,7 @@ W tym artykule opisano proces do uzyskiwania dostępu do narażonych [metody](..
 ##  <a name="_core_member_variable_modifications_to_the_project"></a> Modyfikacje zmiennej elementu członkowskiego do projektu  
  Gdy formant ActiveX został dodany do projektu i osadzone w kontenerze — okno dialogowe, jest dostępny przez inne części projektu. Najprostszym sposobem kontroli dostępu jest [Utwórz zmienną członkowską](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) klasy okna dialogowego `CContainerDlg` (krok 2), czyli z tego samego typu co klasy otoki dodane do projektu w programie Visual C++. Można następnie użyć zmiennej członkowskiej do formantu osadzonego w dowolnym momencie.  
   
- Gdy **Dodawanie zmiennej członkowskiej** dodaje okno dialogowe `m_circctl` elementu członkowskiego zmiennej do projektu, dodane również następujące wiersze do pliku nagłówka (. H) z `CContainerDlg` klasy:  
+ Gdy **Dodawanie zmiennej członkowskiej** dodaje okno dialogowe *m_circctl* elementu członkowskiego zmiennej do projektu, dodane również następujące wiersze do pliku nagłówka (. H) z `CContainerDlg` klasy:  
   
  [!code-cpp[NVC_MFC_AxCont#4](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_4.h)]  
 [!code-cpp[NVC_MFC_AxCont#5](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_5.h)]  
@@ -92,7 +92,7 @@ W tym artykule opisano proces do uzyskiwania dostępu do narażonych [metody](..
   
  Modyfikowanie właściwości formantu spójne znajduje się w `OnInitDialog` funkcji członkowskiej klasy głównym oknie dialogowym. Ta funkcja jest wywoływana bezpośrednio przed zamknięciem okna dialogowego zostanie wyświetlony i służy do inicjowania jego zawartość, łącznie z dowolnego z jego formantów.  
   
- Poniższy przykład kodu wykorzystuje `m_circctl` zmiennej członkowskiej, aby zmodyfikować właściwości podpisu i CircleShape osadzonego formantu OK:  
+ Poniższy przykład kodu wykorzystuje *m_circctl* zmiennej członkowskiej, aby zmodyfikować właściwości podpisu i CircleShape osadzonego formantu OK:  
   
  [!code-cpp[NVC_MFC_AxCont#7](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_7.cpp)]  
   

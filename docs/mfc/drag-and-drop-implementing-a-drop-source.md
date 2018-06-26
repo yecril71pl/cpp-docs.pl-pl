@@ -19,21 +19,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c057657605296b3ba65128f26b25aa526f45b211
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e77119ac5b662165fd965047ae60fc2d5818cc1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345615"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928983"
 ---
 # <a name="drag-and-drop-implementing-a-drop-source"></a>Przeciąganie i upuszczanie: implementowanie miejsca źródłowego
 W tym artykule wyjaśniono, jak pobrać aplikację do dostarczania danych do operacji przeciągania i upuszczania.  
   
- Podstawowa implementacja miejsca źródłowego jest stosunkowo proste. Pierwszym krokiem jest ustalenie, jakie zdarzenia rozpocząć operację przeciągania. Zalecane wskazówki dotyczące interfejsu użytkownika zdefiniować początku operacji przeciągania jako wybór danych i `WM_LBUTTONDOWN` zdarzeń występujących w punkcie wewnątrz wybranych danych. Przykłady MFC OLE [OCLIENT](../visual-cpp-samples.md) i [HIERSVR](../visual-cpp-samples.md) przestrzegać następujących wytycznych.  
+ Podstawowa implementacja miejsca źródłowego jest stosunkowo proste. Pierwszym krokiem jest ustalenie, jakie zdarzenia rozpocząć operację przeciągania. Zalecane wskazówki dotyczące interfejsu użytkownika zdefiniować początku operacji przeciągania jako wybór danych i **WM_LBUTTONDOWN** zdarzeń występujących w punkcie wewnątrz wybranych danych. Przykłady MFC OLE [OCLIENT](../visual-cpp-samples.md) i [HIERSVR](../visual-cpp-samples.md) przestrzegać następujących wytycznych.  
   
  Jeśli aplikacja jest kontenerem i wybrane dane są połączone lub typu osadzonego obiektu `COleClientItem`, wywołaj jego `DoDragDrop` funkcję elementu członkowskiego. W przeciwnym razie utworzenia `COleDataSource` obiekt, Zainicjuj go z opcją i wywołać obiekt źródła danych `DoDragDrop` funkcję elementu członkowskiego. Jeśli aplikacja jest serwerem, użyj `COleServerItem::DoDragDrop`. Aby dowiedzieć się, jak dostosowywanie standardowych zachowania przeciągania i upuszczania, zobacz artykuł [przeciąganie i upuszczanie: dostosowywanie](../mfc/drag-and-drop-customizing.md).  
   
- Jeśli `DoDragDrop` zwraca `DROPEFFECT_MOVE`, natychmiast usunąć źródło danych z dokumentu źródłowego. Brak innych wartości zwracanej z `DoDragDrop` ma wpływ na miejsca źródłowego.  
+ Jeśli `DoDragDrop` zwraca **DROPEFFECT_MOVE**, natychmiast usunąć źródło danych z dokumentu źródłowego. Brak innych wartości zwracanej z `DoDragDrop` ma wpływ na miejsca źródłowego.  
   
  Aby uzyskać więcej informacji, zobacz:  
   

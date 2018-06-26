@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b226c115ce148fa29b5d93cb60af8498b63fdee9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90143b919fde02a95df81d41845d8ecc671ced0d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347951"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931879"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>Obiekty danych i źródła danych: tworzenie i likwidacja
 Jak opisano w artykule [obiekty danych i źródła danych (OLE)](../mfc/data-objects-and-data-sources-ole.md), obiekty danych i źródeł danych reprezentują obie strony transferu danych. W tym artykule opisano, kiedy należy utworzyć i zniszcz te obiekty i źródła przeprowadzanie Twojej transferów danych, w tym:  
@@ -72,14 +72,14 @@ Jak opisano w artykule [obiekty danych i źródła danych (OLE)](../mfc/data-obj
   
 5.  Wywołania aplikacji `SetClipboard` funkcji członkowskiej (lub `DoDragDrop` funkcji członkowskiej, jeśli jest to operacja przeciągania i upuszczania) należące do obiektu utworzonego w kroku 3.  
   
-6.  Jeśli jest to **Wytnij** operacji lub `DoDragDrop` zwraca `DROPEFFECT_MOVE`, dane wybranej w kroku 1 zostaną usunięte z dokumentu.  
+6.  Jeśli jest to **Wytnij** operacji lub `DoDragDrop` zwraca **DROPEFFECT_MOVE**, dane wybranej w kroku 1 zostaną usunięte z dokumentu.  
   
  Ten scenariusz jest implementowany przez przykłady MFC OLE [OCLIENT](../visual-cpp-samples.md) i [HIERSVR](../visual-cpp-samples.md). Przyjrzyj się źródła dla każdej aplikacji `CView`-klasy dla wszystkie elementy oprócz `GetClipboardData` i `OnGetClipboardData` funkcji. Te dwie funkcje są albo `COleClientItem` lub `COleServerItem`-implementacji klasy pochodnej. Te przykładowe programy zawierają dobrym przykładem sposobu wdrażania tych pojęć.  
   
  Jeden innej sytuacji, w którym można utworzyć `COleDataSource` obiekt występuje w przypadku modyfikowania domyślne zachowanie operacji przeciągania i upuszczania. Aby uzyskać więcej informacji, zobacz [przeciąganie i upuszczanie: dostosowywanie](../mfc/drag-and-drop-customizing.md) artykułu.  
   
 ##  <a name="_core_destroying_data_sources"></a> Niszczenie źródeł danych  
- Przez aplikację obecnie odpowiedzialnych za musi zostać zniszczona źródeł danych. W sytuacjach, w którym ręcznie źródła danych do OLE, takich jak wywoływanie [COleDataSource::DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop), należy wywołać **pDataSrc -> InternalRelease**. Na przykład:  
+ Przez aplikację obecnie odpowiedzialnych za musi zostać zniszczona źródeł danych. W sytuacjach, w którym ręcznie źródła danych do OLE, takich jak wywoływanie [COleDataSource::DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop), należy wywołać `pDataSrc->InternalRelease`. Na przykład:  
   
  [!code-cpp[NVC_MFCListView#1](../atl/reference/codesnippet/cpp/data-objects-and-data-sources-creation-and-destruction_1.cpp)]  
   

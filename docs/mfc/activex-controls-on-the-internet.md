@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a42a7bc042301cfbd7d62f82b7c676686146850
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02a4c2e8d9da553ffe14c8d9d061d11d7357c19c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352316"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931980"
 ---
 # <a name="activex-controls-on-the-internet"></a>Kontrolki ActiveX w Internecie
 Formanty ActiveX są zaktualizowaną wersję specyfikacji formantu OLE. Formanty są podstawowej architektury do tworzenia składników programowalny oprogramowania, których można użyć w wielu różnych kontenerów, w tym przeglądarek sieci Web obsługującej COM w Internecie. Formantu ActiveX mogą być formantu Internet i można dodać jego działanie do aktywnego dokumentu lub być częścią strony sieci Web. Formanty na stronie sieci Web może komunikować się ze sobą za pomocą skryptów.  
@@ -39,7 +39,7 @@ Formanty ActiveX są zaktualizowaną wersję specyfikacji formantu OLE. Formanty
   
  **Aby mogła być formantu ActiveX, formantu musi:**  
   
--   Obsługa **IUnknown** interfejsu.  
+-   Obsługa `IUnknown` interfejsu.  
   
 -   Być obiektem COM.  
   
@@ -85,7 +85,7 @@ Formanty ActiveX są zaktualizowaną wersję specyfikacji formantu OLE. Formanty
   
 #### <a name="to-create-your-project-using-the-mfc-activex-control-wizard"></a>Aby utworzyć projekt za pomocą Kreatora kontrolki ActiveX MFC  
   
-1.  Kliknij przycisk `New` na **pliku** menu.  
+1.  Kliknij przycisk **nowy** na **pliku** menu.  
   
 2.  Wybierz **Kreator kontrolek ActiveX MFC** z języka Visual C++ projektów i nazwy projektu.  
   
@@ -129,7 +129,7 @@ Formanty ActiveX są zaktualizowaną wersję specyfikacji formantu OLE. Formanty
   
      [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]  
   
-5.  Implementowanie **Get i Set** metody. Aby uzyskać **uzyskać**, zwraca ciąg. Aby uzyskać `Set`, obciążenia właściwości i wywołanie `SetModifiedFlag`.  
+5.  Implementowanie `Get/Set` metody. Aby uzyskać `Get`, zwraca ciąg. Aby uzyskać `Set`, obciążenia właściwości i wywołanie `SetModifiedFlag`.  
   
      [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]  
   

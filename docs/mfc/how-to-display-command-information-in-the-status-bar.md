@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 440e550e6e1ba5a82cac3f35dcb3c76b346b5343
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84f1a12dd9ca25ec19415cde42dc8ce12e515833
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346048"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930956"
 ---
 # <a name="how-to-display-command-information-in-the-status-bar"></a>Porady: wyświetlanie informacji o poleceniu na pasku stanu
 Po uruchomieniu Kreatora aplikacji, aby utworzyć szkielet aplikacji może obsługiwać paska narzędzi i paska stanu. Tylko jedną opcję w Kreatorze aplikacji obsługuje zarówno. Pasek stanu jest obecny, aplikacja automatycznie zapewnia przydatne opinii jako użytkownik przesunie wskaźnik nad elementami menu. Aplikacja automatycznie wyświetla ciąg monitu w pasku stanu, gdy element menu zostanie wyróżniona. Na przykład, gdy użytkownik przesunie wskaźnik nad **Wytnij** na **Edytuj** menu na pasku stanu może być wyświetlany w obszarze wiadomości w pasku stanu "Wycina zaznaczenie i umieszcza je w Schowku". Monit ułatwia użytkownikom zrozumienie przeznaczenia elementu menu. Ta metoda działa również po kliknięciu przycisku paska narzędzi.  
   
  Definiując monitu ciągów dla elementów menu, które dodajesz do programu, można dodać do tej pomocy paska stanu. Aby to zrobić, podaj ciągi Monituj podczas edytowania właściwości elementu menu w edytorze menu. Ciągów, które należy zdefiniować są przechowywane w pliku zasobów aplikacji. mają one takich samych identyfikatorów jako poleceń, których one wyjaśnienia.  
   
- Domyślnie, Kreator aplikacji dodaje `AFX_IDS_IDLEMESSAGE`, identyfikator standardowe komunikat "Gotowe", która jest wyświetlana, gdy program oczekuje na nowe komunikaty. Jeśli określono opcję Context-Sensitive pomoc w Kreatorze aplikacji, wiadomości jest zmieniana na "Aby uzyskać pomoc, naciśnij klawisz F1".  
+ Domyślnie, Kreator aplikacji dodaje **AFX_IDS_IDLEMESSAGE**, identyfikator standardowe komunikat "Gotowe", która jest wyświetlana, gdy program oczekuje na nowe komunikaty. Jeśli określono opcję Context-Sensitive pomoc w Kreatorze aplikacji, wiadomości jest zmieniana na "Aby uzyskać pomoc, naciśnij klawisz F1".  
   
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa i mapowanie komunikatów](../mfc/message-handling-and-mapping.md)

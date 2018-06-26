@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d66983eb915c856ecf52e225b71151359a499b4b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 20be85f7089f2a53b067d7287780159de51a8c86
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354904"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929559"
 ---
 # <a name="idle-loop-processing"></a>Przetwarzanie pętli bezczynności
 Wiele aplikacji przetwarzania długich "w"tle. Zagadnienia dotyczące wydajności dyktowania czasami przy użyciu wielowątkowość dla tych działań. Wątków obejmują programowanie dodatkowe obciążenie, więc nie są zalecane do prostych zadań, takich jak pracy czas bezczynności, który wykonuje MFC w [OnIdle](../mfc/reference/cwinthread-class.md#onidle) funkcji. Ten artykuł skupia się na przetwarzanie w stanie bezczynności. Aby uzyskać więcej informacji o wielowątkowości, zobacz [wielowątkowość tematy](../parallel/multithreading-support-for-older-code-visual-cpp.md).  
@@ -48,7 +48,7 @@ Wiele aplikacji przetwarzania długich "w"tle. Zagadnienia dotyczące wydajnośc
  W aplikacji opracowanych za pomocą MFC, głównego komunikat pętli w `CWinThread` klasa zawiera pętli komunikatów, który wywołuje [PeekMessage](http://msdn.microsoft.com/library/windows/desktop/ms644943) interfejsu API systemu Win32. Pętla wywołania `OnIdle` funkcji członkowskiej klasy `CWinThread` między wiadomości. Aplikacja może przetwarzać komunikatów w tym okresie bezczynności przez zastąpienie `OnIdle` funkcji.  
   
 > [!NOTE]
->  **Uruchom**, `OnIdle`, i niektórych innych funkcji elementów członkowskich są członkami klasy `CWinThread` zamiast klasy `CWinApp`. `CWinApp` jest pochodną `CWinThread`.  
+>  `Run`, `OnIdle`, i niektórych innych funkcji elementów członkowskich są członkami klasy `CWinThread` zamiast klasy `CWinApp`. `CWinApp` jest pochodną `CWinThread`.  
   
  Aby uzyskać więcej informacji o wydajności przetwarzanie w stanie bezczynności, zobacz [OnIdle](../mfc/reference/cwinthread-class.md#onidle) w *odwołania MFC*.  
   
@@ -57,7 +57,7 @@ Wiele aplikacji przetwarzania długich "w"tle. Zagadnienia dotyczące wydajnośc
   
  [!code-cpp[NVC_MFCDocView#8](../mfc/codesnippet/cpp/idle-loop-processing_1.cpp)]  
   
- Ten kod osadzone w przypadku funkcji pętli tak długo, jak jest przetwarzanie w stanie bezczynności zrobić. W tym pętli wielokrotnie wywołuje zagnieżdżonych pętli **PeekMessage**. Tak długo, jak tego wywołania zwraca wartość niezerową, wywołuje pętli `CWinThread::PumpMessage` przeprowadzić translacji normalnego komunikatu i wysyłania. Mimo że `PumpMessage` jest nieudokumentowanej, można sprawdzić jego kod źródłowy w pliku ThrdCore.Cpp w katalogu \atlmfc\src\mfc instalację programu Visual C++.  
+ Ten kod osadzone w przypadku funkcji pętli tak długo, jak jest przetwarzanie w stanie bezczynności zrobić. W tym pętli wielokrotnie wywołuje zagnieżdżonych pętli `PeekMessage`. Tak długo, jak tego wywołania zwraca wartość niezerową, wywołuje pętli `CWinThread::PumpMessage` przeprowadzić translacji normalnego komunikatu i wysyłania. Mimo że `PumpMessage` jest nieudokumentowanej, można sprawdzić jego kod źródłowy w pliku ThrdCore.Cpp w katalogu \atlmfc\src\mfc instalację programu Visual C++.  
   
  Raz zakończenia pętli wewnętrznej zewnętrzne pętli wykonuje przetwarzanie w stanie bezczynności z co najmniej jednego wywołania `OnIdle`. Pierwsze wywołanie służy do celów MFC. Możesz wprowadzić dodatkowe wywołania `OnIdle` do pracy tła.  
   

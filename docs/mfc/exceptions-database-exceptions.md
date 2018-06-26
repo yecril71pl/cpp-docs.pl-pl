@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2168bc530accfdde6fad4d41cd68e94d3088f153
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83b3f4f54f467ca7f4fbd2a179fdbf01d54dfa89
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354305"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930241"
 ---
 # <a name="exceptions-database-exceptions"></a>Wyjątki: wyjątki bazy danych
 W tym artykule opisano sposób obsługi wyjątków bazy danych. Większość materiału w tym artykule ma zastosowanie, czy użytkownik pracuje z klas MFC otwarte połączenie bazy danych (ODBC) lub klas MFC dla obiektów DAO (Data Access). Jawnie jest oznaczony jako materiałów specyficzne dla jednej lub innego modelu. Tematy obejmują:  
@@ -54,7 +54,7 @@ W tym artykule opisano sposób obsługi wyjątków bazy danych. Większość mat
   
 -   [m_nAfxDaoError](../mfc/reference/cdaoexception-class.md#m_nafxdaoerror) zawiera kod błędu rozszerzonej z klas MFC DAO. Te kody błędów, które mają nazwy w postaci **AFX_DAO_ERROR_XXX**, opisano w element członkowski danych `CDaoException`.  
   
--   [m_scode](../mfc/reference/cdaoexception-class.md#m_scode) zawiera OLE `SCODE` obiektów DAO, jeśli ma to zastosowanie. Rzadko należy jednak pracować z tego kodu błędu. Zazwyczaj więcej informacji znajduje się w innych elementach członkowskich dwóch danych. Zobacz element członkowski danych, aby uzyskać więcej informacji `SCODE` wartości.  
+-   [m_scode](../mfc/reference/cdaoexception-class.md#m_scode) zawiera OLE **SCODE** obiektów DAO, jeśli ma to zastosowanie. Rzadko należy jednak pracować z tego kodu błędu. Zazwyczaj więcej informacji znajduje się w innych elementach członkowskich dwóch danych. Zobacz element członkowski danych, aby uzyskać więcej informacji **SCODE** wartości.  
   
  Dodatkowe informacje na temat błędów, typ obiektu DAO błąd i kolekcji błędów DAO DAO jest dostępnych w ramach klasy [CDaoException](../mfc/reference/cdaoexception-class.md).  
   
@@ -62,7 +62,7 @@ W tym artykule opisano sposób obsługi wyjątków bazy danych. Większość mat
  Poniższy przykład podejmie próbę utworzenia [crecordset —](../mfc/reference/crecordset-class.md)-pochodnych obiektów na stercie z **nowe** operatora, a następnie otwórz zestaw rekordów (dla źródła danych ODBC). Podobny przykład dla klasy DAO zobacz "DAO wyjątek przykład" poniżej.  
   
 ### <a name="odbc-exception-example"></a>Przykład wyjątek ODBC  
- [Otwórz](../mfc/reference/crecordset-class.md#open) funkcji członkowskiej może wywoływać wyjątek (typu [CDBException](../mfc/reference/cdbexception-class.md) dla klasy ODBC), dlatego ten kod nawiasy **Otwórz** wywołania z **spróbuj**  bloku. Kolejne **catch** bloku będzie przechwytywać `CDBException`. Można zbadać wyjątek samego obiektu, nazywany `e`, ale w takim przypadku wystarczy wiedzieć, że nie podjęto próbę utworzenia zestawu rekordów. **Catch** blok wyświetla komunikat i czyści przez usunięcie obiektu zestawu rekordów.  
+ [Otwórz](../mfc/reference/crecordset-class.md#open) funkcji członkowskiej może wywoływać wyjątek (typu [CDBException](../mfc/reference/cdbexception-class.md) dla klasy ODBC), dlatego ten kod nawiasy `Open` wywołania z **spróbuj** bloku. Kolejne **catch** bloku będzie przechwytywać `CDBException`. Można zbadać wyjątek samego obiektu, nazywany `e`, ale w takim przypadku wystarczy wiedzieć, że nie podjęto próbę utworzenia zestawu rekordów. **Catch** blok wyświetla komunikat i czyści przez usunięcie obiektu zestawu rekordów.  
   
  [!code-cpp[NVC_MFCDatabase#36](../mfc/codesnippet/cpp/exceptions-database-exceptions_1.cpp)]  
   

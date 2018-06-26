@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0fd3a41d7574d627ebd374af170ce47801cd351
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d21bfa1dcc39e00de852203d05a2eae743b8a2f6
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360969"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929235"
 ---
 # <a name="mfc-toolbar-implementation"></a>MFC — implementacja paska narzędzi
 Pasek narzędzi jest [pasek sterowania](../mfc/control-bars.md) zawierający obrazy mapy bitowej kontrolek. Tych obrazów, może zachowywać się jak przyciski, pola wyboru lub przycisków radiowych. Klasa dostarcza MFC [ctoolbar —](../mfc/reference/ctoolbar-class.md) do zarządzania pasków narzędzi.  
@@ -44,7 +44,7 @@ Pasek narzędzi jest [pasek sterowania](../mfc/control-bars.md) zawierający obr
 > [!NOTE]
 >  Począwszy od wersji 4.0 MFC pasków narzędzi i etykietki narzędzi są implementowane za pomocą systemu Windows 95 i nowsze funkcje zamiast poprzedniej implementacji MFC.  
   
- W celu zapewnienia zgodności z poprzednimi wersjami MFC zachowuje starsze implementacja paska narzędzi w klasie **coldtoolbar —**. Opisz dokumentacji dla wcześniejszych wersji MFC **coldtoolbar —** w obszarze `CToolBar`.  
+ W celu zapewnienia zgodności z poprzednimi wersjami MFC zachowuje starsze implementacja paska narzędzi w klasie `COldToolBar`. Opisz dokumentacji dla wcześniejszych wersji MFC `COldToolBar` w obszarze `CToolBar`.  
   
  Utworzenie pierwszego paska narzędzi w programie przez wybranie opcji narzędzi w Kreatorze aplikacji. Można również utworzyć dodatkowe paski narzędzi.  
   

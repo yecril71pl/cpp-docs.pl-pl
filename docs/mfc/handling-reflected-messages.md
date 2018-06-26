@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05b5f62169d2b65010ec75ab8c8b5c30959b77b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9b317f4c1b55e04f61aa0639bbd6953e5f36187a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348981"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931843"
 ---
 # <a name="handling-reflected-messages"></a>Obsługa komunikatów odbitych
-Odbicie umożliwia obsługi komunikatów dla formantu, takie jak wiadomości `WM_CTLCOLOR`, **WM_COMMAND**, i **WM_NOTIFY**, bezpośrednio w formancie. Dzięki temu formantu więcej niezależną i przenośną. Mechanizm współpracuje z formanty standardowe systemu Windows, a także z formantami ActiveX (wcześniej nazywanych formantów OLE).  
+Odbicie umożliwia obsługi komunikatów dla formantu, takie jak wiadomości **wm_ctlcolor —**, **WM_COMMAND**, i **WM_NOTIFY**, bezpośrednio w formancie. Dzięki temu formantu więcej niezależną i przenośną. Mechanizm współpracuje z formanty standardowe systemu Windows, a także z formantami ActiveX (wcześniej nazywanych formantów OLE).  
   
  Komunikat odbicia umożliwia ponowne użycie Twojej `CWnd`-klas pochodnych łatwiej. Odbicie działa za pośrednictwem wiadomości [CWnd::OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify), przy użyciu specjalnego **ON_XXX_REFLECT** wpisy mapy wiadomości: na przykład **ON_CTLCOLOR_REFLECT** i **On_control_reflect —**. [62 Uwaga techniczna](../mfc/tn062-message-reflection-for-windows-controls.md) odbicie wiadomości bardziej szczegółowo opisano.  
   

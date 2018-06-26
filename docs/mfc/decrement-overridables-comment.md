@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b71d61175e5446ac33dd0ff6a011d06f601b5a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a1b9b04647717fc5892421f2b45947ebd079a0c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345391"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928730"
 ---
 # <a name="-overridables-comment"></a>Komentarz // Overridables
 `// Overridables` Sekcja deklaracji klasy MFC zawiera funkcje wirtualne, które można zmienić w klasie pochodnej, jeśli trzeba zmodyfikować zachowanie klasy podstawowej. Są zwykle nazywane począwszy od "Włączone", mimo że nie jest to niezbędne. Funkcje w tym miejscu są przeznaczone do przesłonięcia i często zaimplementować lub podaj jakieś "wywołania zwrotnego" lub "Połącz". Zazwyczaj te elementy członkowskie są chronione.  
@@ -31,7 +31,7 @@ ms.locfileid: "33345391"
   
  `virtual void OnDraw( ) = 0;`  
   
- W przykładzie z klasy `CStdioFile`w [przykład komentarzy](../mfc/an-example-of-the-comments.md), lista nie zawiera żadnych części z możliwością zastąpienia. Klasa **CDocument**, z drugiej strony, zawiera listę około 10 funkcji Członkowskich możliwym do zastąpienia.  
+ W przykładzie z klasy `CStdioFile`w [przykład komentarzy](../mfc/an-example-of-the-comments.md), lista nie zawiera żadnych części z możliwością zastąpienia. Klasa `CDocument`, z drugiej strony, zawiera listę około 10 funkcji Członkowskich możliwym do zastąpienia.  
   
  W niektórych klas może również wystąpić komentarz `// Advanced Overridables`. Są funkcje, które tylko zaawansowanych programistów powinny podejmować próby zastąpienia. Prawdopodobnie nigdy nie należy zastąpić je.  
   

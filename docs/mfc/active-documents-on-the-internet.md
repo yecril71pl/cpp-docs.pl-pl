@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bb54f36f57702d43cf065604641124e38ed053
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a18b84b30445060631589e72f6c158ea9b3626f0
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334889"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930891"
 ---
 # <a name="active-documents-on-the-internet"></a>Dokumenty aktywne w Internecie
 Dokumenty aktywne zapewniają rozszerzenie do tradycyjnych osadzonych obiektów. Dokumenty aktywne może być wielostronicowe i są wyświetlane w obszarze klienckim. Czy negocjacji tradycyjnych menu i może być edytowany w miejscu, a także w otwartym oknie w aplikacji serwera. Zamiast jako mały prostokąt otoczone obramowaniem kreskowanym dokumenty aktywne są ramki pełnego i zawsze aktywny w miejscu.  
@@ -55,7 +55,7 @@ Dokumenty aktywne zapewniają rozszerzenie do tradycyjnych osadzonych obiektów.
 |-------------------------|---------------------------------|  
 |Używa złożone plików jako mechanizm jego magazynu.|`IPersistStorage`.|  
 |Obsługuje podstawowe funkcje osadzania Active dokumentów, w tym Utwórz z pliku.|`IPersistFile`, `IOleObject`, i `IDataObject`.|  
-|Obsługuje Aktywacja w miejscu.|`IOleInPlaceObject` i `IOleInPlaceActiveObject` (przy użyciu kontenera `IOleInPlaceSite` i **IOleInPlaceFrame** interfejsów).|  
+|Obsługuje Aktywacja w miejscu.|`IOleInPlaceObject` i `IOleInPlaceActiveObject` (przy użyciu kontenera `IOleInPlaceSite` i `IOleInPlaceFrame` interfejsów).|  
 |Obsługuje obejmujących te nowe interfejsy rozszerzenia aktywnego dokumentu. Niektóre interfejsy są opcjonalne.|`IOleDocument`, `IOleDocumentView`, `IOleCommandTarget`, i `IPrint`.|  
   
  MFC umożliwia rozszerzanie istniejących obsługi serwera osadzonych do dokumentów aktywnych.  
@@ -68,7 +68,7 @@ Dokumenty aktywne zapewniają rozszerzenie do tradycyjnych osadzonych obiektów.
   
 |Typ klasy|Wcześniej pochodną|Zmień, aby dziedziczyć|  
 |----------------|---------------------------|---------------------------|  
-|Ramowe w miejscu|`COleIPFrameWnd`|**COleDocIPFrameWnd**|  
+|Ramowe w miejscu|`COleIPFrameWnd`|`COleDocIPFrameWnd`|  
 |Element|`COleServerItem`|`CDocObjectServerItem`|  
   
  Zostanie również zmienić sposób wprowadzania informacji w rejestrze i wprowadzić inne zmiany. Jeśli dana aplikacja zawiera obecnie nie obsługuje składników modelu COM, możesz dodać obsługę serwera przez uruchomienie Kreatora aplikacji i integrowanie kod specyficzny dla składnika modelu COM z istniejącej aplikacji.  

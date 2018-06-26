@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 332f84346e6445fdf0550c3ddb142d9582722f0d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1b99d8fb82b014fc2221f1ec1c0e6ad08ee75b4c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344207"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930290"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Alternatywy dla architektury dokument/widok
 Aplikacje MFC używać architektury dokument/widok do zarządzania informacjami, formaty plików i wizualną reprezentację danych dla użytkowników. Dla większości aplikacji klasycznych architektury dokument/widok jest Architektura aplikacji odpowiednie i skuteczne. Taka architektura oddziela danych z przeglądania i w większości przypadków, upraszcza aplikacji i zmniejsza nadmiarowy kod.  
@@ -41,11 +41,11 @@ Aplikacje MFC używać architektury dokument/widok do zarządzania informacjami,
   
  Kreatorów Visual C++, a także edytora źródła i okna dialogowe, współpracować z wygenerowanym aplikacji tak samo, jak z dowolnej generowane przez Kreatora aplikacji. Aplikacja może obsługiwać pasków narzędzi, pasków przewijania i paska stanu i ma **o** pola. Aplikacji nie będą rejestrować wszystkie szablony dokumentów i nie będzie zawierać klasę dokumentu.  
   
- Należy zauważyć, że wygenerowany aplikacji ma klasę widoku **CChildView**, pochodną `CWnd`. MFC tworzy i umieszcza jedno wystąpienie klasy widoku w ramach okna ramowe utworzone przez aplikację. MFC nadal wymusza przy użyciu okno widoku, ponieważ takie rozwiązanie upraszcza pozycjonowanie i zarządzanie zawartością aplikacji. Można dodać kod rysowania `OnPaint` członkiem tej klasy. Kod należy dodać paski przewijania, do widoku, a nie do ramki.  
+ Należy zauważyć, że wygenerowany aplikacji ma klasę widoku `CChildView`, pochodną `CWnd`. MFC tworzy i umieszcza jedno wystąpienie klasy widoku w ramach okna ramowe utworzone przez aplikację. MFC nadal wymusza przy użyciu okno widoku, ponieważ takie rozwiązanie upraszcza pozycjonowanie i zarządzanie zawartością aplikacji. Można dodać kod rysowania `OnPaint` członkiem tej klasy. Kod należy dodać paski przewijania, do widoku, a nie do ramki.  
   
  Ponieważ architektury dokument/widok udostępniane przez MFC jest odpowiedzialny za wdrażanie wiele podstawowych funkcji aplikacji, brak w projekcie oznacza, że użytkownik odpowiedzialnych za wdrażanie aplikacji na wiele funkcji:  
   
--   Dostarczone przez Kreatora aplikacji MFC, menu dla aplikacji zawiera tylko `New` i `Exit` polecenia w **pliku** menu. ( `New` Polecenie jest obsługiwane tylko dla aplikacji MDI, obsługuje nie SDI — aplikacje bez dokument/widok.) Menu wygenerowanego zasobów nie będzie obsługiwał listy MRU (ostatnio używane).  
+-   Dostarczone przez Kreatora aplikacji MFC, menu dla aplikacji zawiera tylko **nowy** i **zakończenia** polecenia w **pliku** menu. ( **Nowy** polecenie jest obsługiwane tylko dla aplikacji MDI, obsługuje nie SDI — aplikacje bez dokument/widok.) Menu wygenerowanego zasobów nie będzie obsługiwał listy MRU (ostatnio używane).  
   
 -   Należy dodać funkcje obsługi oraz implementacji dla żadnych poleceń, które będą obsługiwać aplikacji, w tym **Otwórz** i **zapisać** na **pliku** menu. MFC zwykle zapewnia kodu do obsługi tych funkcji, ale obsługa jest ściśle powiązana z architektury dokument/widok.  
   
@@ -53,9 +53,9 @@ Aplikacje MFC używać architektury dokument/widok do zarządzania informacjami,
   
  Zdecydowanie zaleca się użyć Kreator aplikacji MFC do tworzenia aplikacji bez architektury dokument/widok, ponieważ Kreator gwarantuje MFC o prawidłowej architekturze. Jednak jeśli należy unikać, za pomocą kreatora, poniżej przedstawiono kilka rozwiązań dla pomijanie architektury dokument/widok w kodzie:  
   
--   Traktuj dokumentu jako polecenia nieużywane i wdrożenie kodzie danych zarządzania w klasie widoku zgodnie z sugestią podaną powyżej. Obciążenie dokumentu jest stosunkowo niska. Pojedynczy [CDocument](../mfc/reference/cdocument-class.md) obiektu wiąże się z małej ilości obciążenie przez samego siebie, a także małe obciążenie związane z **CDocument**w podstawowej klasy, [CCmdTarget](../mfc/reference/ccmdtarget-class.md) i [ CObject](../mfc/reference/cobject-class.md). Oba te ostatnie klas są niewielkie.  
+-   Traktuj dokumentu jako polecenia nieużywane i wdrożenie kodzie danych zarządzania w klasie widoku zgodnie z sugestią podaną powyżej. Obciążenie dokumentu jest stosunkowo niska. Pojedynczy [CDocument](../mfc/reference/cdocument-class.md) obiektu wiąże się z małej ilości obciążenie przez samego siebie, a także małe obciążenie związane z `CDocument`w podstawowej klasy, [CCmdTarget](../mfc/reference/ccmdtarget-class.md) i [CObject](../mfc/reference/cobject-class.md). Oba te ostatnie klas są niewielkie.  
   
-     Zadeklarowany w **CDocument**:  
+     Zadeklarowany w `CDocument`:  
   
     -   Dwa `CString` obiektów.  
   

@@ -19,19 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b7ded8dd0c818b95d6f45a722bd7b8516d48ff1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55f450085c446503ebf86960dbee1b0d930691c2
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347181"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932007"
 ---
 # <a name="message-sending-and-receiving"></a>Wysyłanie i odbieranie komunikatów
 Należy wziąć pod uwagę wysyłania część procesu i sposób odpowiadania przez platformę.  
   
  Większość komunikaty w wyniku interakcji z programem. Polecenia są generowane przez kliknięcie myszą w elementach menu lub przycisków paska narzędzi lub naciśnięcia klawiszy skrótów. Użytkownik generuje również komunikaty systemu Windows, na przykład przeniesienie lub zmiana rozmiaru okna. Inne komunikaty systemu Windows są wysyłane w przypadku wystąpienia zdarzenia, takie jak uruchamianie programu lub zakończenie, jak windows Pobierz lub utratę fokus i tak dalej. Komunikaty powiadomień dotyczących formantu są generowane przez kliknięcie myszą lub innych interakcji użytkowników z formantem, takich jak formantu przycisku lub pola listy w oknie dialogowym.  
   
- **Uruchom** funkcji członkowskiej klasy `CWinApp` pobiera wiadomości i wysyła je do odpowiednich okna. Większość komunikaty poleceń są wysyłane do okna ramki głównej aplikacji. `WindowProc` Wstępnie zdefiniowane przez pobiera biblioteki klasy wiadomości i kieruje je w różny sposób, w zależności od kategorii odebranego komunikatu.  
+ `Run` Funkcji członkowskiej klasy `CWinApp` pobiera wiadomości i wysyła je do odpowiednich okna. Większość komunikaty poleceń są wysyłane do okna ramki głównej aplikacji. `WindowProc` Wstępnie zdefiniowane przez pobiera biblioteki klasy wiadomości i kieruje je w różny sposób, w zależności od kategorii odebranego komunikatu.  
   
  Teraz Rozważmy odbierania część procesu.  
   

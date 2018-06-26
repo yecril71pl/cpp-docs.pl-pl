@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd25089594d31de21a3a315d997ee01111aff4fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 179e959ce4d6a516f51576712e50408ef41d5c7e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347902"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931794"
 ---
 # <a name="control-bars"></a>Paski sterowania
-"Pasek sterowania" jest nazwą ogólne paski narzędzi, paski stanu i paski dialogowe. Klasy MFC `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, i **crebar —** pochodzi z klasy [ccontrolbar —](../mfc/reference/ccontrolbar-class.md), który implementuje ich typowe funkcje.  
+"Pasek sterowania" jest nazwą ogólne paski narzędzi, paski stanu i paski dialogowe. Klasy MFC `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, i `CReBar` pochodzi z klasy [ccontrolbar —](../mfc/reference/ccontrolbar-class.md), który implementuje ich typowe funkcje.  
   
  Paski sterowania są windows wyświetlanych wierszy formantów, z których użytkownicy można wybrać opcje, wykonywać polecenia lub uzyskać informacje o programie. Paski sterowania należą paski narzędzi, paski dialogowe i paski stanu.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "33347902"
 -   Pręty zbrojeniowe w klasie [crebar —](../mfc/reference/crebar-class.md)  
   
 > [!IMPORTANT]
->  Począwszy od wersji 4.0 MFC pasków narzędzi, pasków stanu i etykietki narzędzi są implementowane za pomocą funkcji systemu zaimplementowana w comctl32.dll zamiast poprzedniej implementacji MFC. W MFC w wersji 6.0 **crebar —**, comctl32.dll funkcję, która opakowuje również został dodany.  
+>  MFC w wersji 4.0, pasków narzędzi, pasków stanu i narzędzia porady są implementowane za pomocą funkcji systemu zaimplementowane w *comctl32.dll* zamiast poprzedniej implementacji MFC. W MFC w wersji 6.0 `CReBar`, comctl32.dll funkcję, która opakowuje również został dodany.  
   
  Wykonaj krótkie instrukcje do typów pasek sterowania. Aby uzyskać więcej informacji zobacz poniższe łącza.  
   

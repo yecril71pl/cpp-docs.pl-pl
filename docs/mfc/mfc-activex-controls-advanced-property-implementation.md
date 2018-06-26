@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97b6bbcbcf226d343d8b3cb51f110442e133a379
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2eb3ba387d4b6fcca7b30cd360dff84b9da4302a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351842"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928367"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>Kontrolki ActiveX MFC: implementacja właściwości zaawansowanych
 W tym artykule opisano tematy związane z implementacją zaawansowane właściwości formantu ActiveX:  
@@ -66,9 +66,9 @@ W tym artykule opisano tematy związane z implementacją zaawansowane właściwo
  Ten przykładowy kod wywołuje `SetNotSupported` Jeśli `m_bReadOnlyMode` elementu członkowskiego danych jest **TRUE**. Jeśli **FALSE**, a następnie właściwość jest ustawiona na nową wartość.  
   
 ##  <a name="_core_returning_error_codes_from_a_property"></a> Zwracanie kodów błędów z właściwością  
- Aby wskazać, że wystąpił błąd podczas próby pobrania lub ustaw właściwość, użyj `COleControl::ThrowError` funkcja, która przyjmuje `SCODE` (kod stanu) jako parametr. Można użyć wstępnie zdefiniowanej `SCODE` lub zdefiniuj własny. Lista wstępnie zdefiniowanych `SCODE`s i instrukcje dotyczące definiowania niestandardowych `SCODE`s, zobacz [obsługi błędów w tym formancie ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) w artykule formantów ActiveX: Tematy zaawansowane.  
+ Aby wskazać, że wystąpił błąd podczas próby pobrania lub ustaw właściwość, użyj `COleControl::ThrowError` funkcji, która przyjmuje SCODE (kod stanu), jako parametr. Można użyć wstępnie zdefiniowanych SCODE lub zdefiniuj własny. Dla listy wstępnie zdefiniowanych SCODEs i instrukcje dotyczące definiowania niestandardowych SCODEs [obsługi błędów w tym formancie ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) w artykule formantów ActiveX: Tematy zaawansowane.  
   
- Funkcje pomocy istnieje dla najbardziej typowe wstępnie zdefiniowane `SCODE`s, takich jak [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), i [colecontrol —:: SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
+ Funkcje pomocy istnieje dla najbardziej typowe wstępnie SCODEs, takich jak [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), i [COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
   
 > [!NOTE]
 >  `ThrowError` ma być używane tylko jako środek zwróci błąd w wartości właściwości Get lub Set z metody automatyzacji lub funkcji. Są to jedyna razy, które będą program obsługi wyjątku odpowiednie znajduje się on na stosie.  

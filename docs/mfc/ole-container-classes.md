@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfdff6023beeedfa14d37e5b404fa3c223691b85
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f8214b2f40926cc4ab1471dce99ce5215362011
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349054"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930493"
 ---
 # <a name="ole-container-classes"></a>Klasy kontenerów OLE
-Te klasy są używane przez aplikacje kontenera. Zarówno `COleLinkingDoc` i `COleDocument` Zarządzanie kolekcjami `COleClientItem` obiektów. Zamiast wyprowadzanie klasy dokumentów z **CDocument**, będzie pochodzić z klasy `COleLinkingDoc` lub `COleDocument`, w zależności od tego, czy chcesz pomocy technicznej dla łącza do obiektów osadzonych w dokumencie.  
+Te klasy są używane przez aplikacje kontenera. Zarówno `COleLinkingDoc` i `COleDocument` Zarządzanie kolekcjami `COleClientItem` obiektów. Zamiast wyprowadzanie klasy dokumentów z `CDocument`, będzie pochodzić z klasy `COleLinkingDoc` lub `COleDocument`, w zależności od tego, czy chcesz pomocy technicznej dla łącza do obiektów osadzonych w dokumencie.  
   
  Użyj `COleClientItem` obiektu do reprezentowania każdego elementu OLE w dokumencie, który jest osadzony z innego dokumentu lub link do innego dokumentu.  
   

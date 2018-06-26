@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f67149e5835ee6f2b8922b29ee92872b24d0ec4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 264a3b5618b1c153219d5dee838af38bd7f49f49
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349314"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931063"
 ---
 # <a name="memory-management-frame-allocation"></a>Zarządzanie pamięcią: alokacja ramek
 Podział na ramce przyjmuje nazwy z "ramki stosu", która jest ustawiona zawsze, gdy jest wywoływana funkcja. Ramka stosu jest to obszar pamięci, która tymczasowo przechowuje argumentów do funkcji, a także wszystkie zmienne, które są zdefiniowane lokalne do funkcji. Zmienne ramek są często nazywane zmiennych "Automatyczny", ponieważ kompilator automatycznie przydziela miejsce dla nich.  
@@ -42,7 +42,7 @@ Podział na ramce przyjmuje nazwy z "ramki stosu", która jest ustawiona zawsze,
   
  [!code-cpp[NVC_MFC_Utilities#10](../mfc/codesnippet/cpp/memory-management-frame-allocation_1.cpp)]  
   
- Dla zmiennych lokalnych funkcja przypadku wyjścia funkcji, ale zakresu zmiennej ramki może być mniejszy niż funkcji, jeśli używane są zagnieżdżone nawiasy klamrowe odbywa się to przejście zakresu. Ta funkcja automatycznego usuwania zmienne ramek jest bardzo ważne. W przypadku pierwotnych typów prostych (takich jak `int` lub **bajtów**), tablic lub struktury danych automatycznego usuwania po prostu zwraca pamięć używana przez zmienną. Ponieważ zmiennej wykroczyła poza zakres, nie są dostępne w mimo to. W przypadku obiektów języka C++ jednak proces automatycznego usuwania jest nieco bardziej skomplikowane.  
+ Dla zmiennych lokalnych funkcja przypadku wyjścia funkcji, ale zakresu zmiennej ramki może być mniejszy niż funkcji, jeśli używane są zagnieżdżone nawiasy klamrowe odbywa się to przejście zakresu. Ta funkcja automatycznego usuwania zmienne ramek jest bardzo ważne. W przypadku pierwotnych typów prostych (takich jak **int** lub **bajtów**), tablic lub struktury danych automatycznego usuwania po prostu zwraca pamięć używana przez zmienną. Ponieważ zmiennej wykroczyła poza zakres, nie są dostępne w mimo to. W przypadku obiektów języka C++ jednak proces automatycznego usuwania jest nieco bardziej skomplikowane.  
   
  Jeśli obiekt jest zdefiniowana jako zmienną ramki, jego konstruktor jest wywoływana automatycznie w momencie, gdy napotkano definicji. Gdy obiekt poza zakresem, jego destruktora jest wywoływana automatycznie przed jest odzyskać pamięci dla obiektu. To automatyczne konstruowania i zniszczenie może być bardzo przydatne, ale należy uwzględnić automatyczne wywołań, szczególnie w celu destruktor.  
   

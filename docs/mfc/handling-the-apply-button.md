@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d80dc3d02a7530ee54c9ff26cd0a03465bd77cdd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: acbbd4ec8e075abbcbbeeaf199cae0d3a8d3c41a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345048"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930455"
 ---
 # <a name="handling-the-apply-button"></a>Obsługa przycisku Zastosuj
 Arkusze właściwości mają możliwość, która nie w standardowych oknach dialogowych: umożliwiają one użytkownika zastosować zmiany wprowadzone przed zamknięciem arkusza właściwości. Jest to realizowane za pomocą przycisku Zastosuj. W tym artykule omówiono metody, których można użyć, aby prawidłowo zaimplementować tę funkcję.  
@@ -33,11 +33,11 @@ Arkusze właściwości mają możliwość, która nie w standardowych oknach dia
   
  Jeśli nie chcesz, aby oferować funkcjonalność Zastosuj do użytkownika, nie jest konieczne do usunięcia przycisku Zastosuj. Możesz pozostawić ją wyłączoną, jak będą wspólne dla aplikacji używających standardowego właściwości arkusza pomocy technicznej w przyszłych wersjach systemu Windows.  
   
- Aby zgłosić strony jako zmodyfikowane i Włącz przycisk Zastosuj, należy wywołać **CPropertyPage::SetModified (PRAWDA)**. Jeśli jedna z raportu strony są modyfikowane, przycisk Zastosuj pozostanie włączony, niezależnie od tego, czy został zmodyfikowany aktualnie aktywnej strony.  
+ Aby zgłosić strony jako zmodyfikowane i Włącz przycisk Zastosuj, należy wywołać `CPropertyPage::SetModified( TRUE )`. Jeśli jedna z raportu strony są modyfikowane, przycisk Zastosuj pozostanie włączony, niezależnie od tego, czy został zmodyfikowany aktualnie aktywnej strony.  
   
  Należy wywołać [CPropertyPage::SetModified](../mfc/reference/cpropertypage-class.md#setmodified) zawsze, gdy użytkownik zmieni wszystkie ustawienia na stronie. Jednym ze sposobów Wykryj, kiedy użytkownik zmienia ustawienie na stronie jest do zaimplementowania programy obsługi powiadomień zmiany dla każdej kontrolki na stronie właściwości, takie jak **EN_CHANGE** lub **BN_CLICKED**.  
   
- Aby zaimplementować efekt przycisk Zastosuj, arkusz właściwości należy wskazać jego właściciela lub zewnętrznych obiektów w aplikacji, aby zastosować bieżące ustawienia na stronach właściwości. W tym samym czasie, arkusz właściwości należy wyłączyć przycisk Zastosuj, wywołując **CPropertyPage::SetModified (FALSE)** dla wszystkich stron, które stosowane ich modyfikacje w obiekcie zewnętrznym.  
+ Aby zaimplementować efekt przycisk Zastosuj, arkusz właściwości należy wskazać jego właściciela lub zewnętrznych obiektów w aplikacji, aby zastosować bieżące ustawienia na stronach właściwości. W tym samym czasie, arkusz właściwości należy wyłączyć przycisk Zastosuj, wywołując `CPropertyPage::SetModified( FALSE )` dla wszystkich stron, które stosowane ich modyfikacje w obiekcie zewnętrznym.  
   
  Na przykład tego procesu, zobacz przykład ogólne MFC [PROPDLG](../visual-cpp-samples.md).  
   

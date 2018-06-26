@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 313cbe53189a4a6e9b87b1723a166de83f56df05
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 356d7acd67747f4310ed0e4f564df7d1533e88ed
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354920"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930651"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>Kontrolki ActiveX MFC: używanie obrazów w kontrolce ActiveX
 W tym artykule opisano typowe typ obrazu oraz jak ją wdrożyć w formantu ActiveX. Tematy obejmują:  
@@ -71,11 +71,11 @@ W tym artykule opisano typowe typ obrazu oraz jak ją wdrożyć w formantu Activ
      Te modyfikacje zostaną wprowadzone do kilka funkcji, które są odpowiedzialne za rysunek formantu ActiveX.  
   
 ##  <a name="_core_additions_to_your_control_project"></a> Dodawanie do projektu kontroli  
- Aby dodać identyfikator strony właściwości dla standardowej strony właściwości obrazu, Wstaw następujący wiersz po `BEGIN_PROPPAGEIDS` makra w pliku implementacji (. CPP):  
+ Aby dodać identyfikator strony właściwości dla standardowej strony właściwości obrazu, wstaw poniższy wiersz po begin_proppageids — makro w pliku implementacji (. CPP):  
   
  [!code-cpp[NVC_MFC_AxPic#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_1.cpp)]  
   
- Należy również zwiększyć parametr liczba Twojej `BEGIN_PROPPAGEIDS` makro o jeden. Następujący wiersz przedstawiono to:  
+ Parametr liczba begin_proppageids — makro należy również zwiększyć o jeden. Następujący wiersz przedstawiono to:  
   
  [!code-cpp[NVC_MFC_AxPic#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_2.cpp)]  
   
@@ -83,7 +83,7 @@ W tym artykule opisano typowe typ obrazu oraz jak ją wdrożyć w formantu Activ
   
  [!code-cpp[NVC_MFC_AxPic#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_3.h)]  
   
- Nie jest konieczne nazwanie elementów członkowskich danych `m_pic`; wystarczy dowolną nazwę.  
+ Nie jest konieczne nazwanie elementów członkowskich danych *m_pic*; wystarczy dowolną nazwę.  
   
  Następnie Dodaj właściwości niestandardowej, która obsługuje typ obrazu:  
   
@@ -123,7 +123,7 @@ W tym artykule opisano typowe typ obrazu oraz jak ją wdrożyć w formantu Activ
 >  Nazwy klas i funkcji kontroli mogą różnić się od powyższego przykładu.  
   
 ###  <a name="_core_modifications_to_your_control_project"></a> Zmiany do projektu kontroli  
- Po dokonaniu niezbędnych dodatki do projektu kontroli, należy zmodyfikować kilka funkcji, które mają wpływ na renderowanie formantu ActiveX. Te funkcje `OnResetState`, `OnDraw`, oraz funkcje Get i Set właściwości niestandardowych obrazów, znajdują się w pliku implementacji. (Należy pamiętać, że w tym przykładzie klasa kontroli jest nazywana `CSampleCtrl`, `CPictureHolder` nosi nazwę elementu członkowskiego danych `m_pic`, i nazwa właściwości niestandardowego obrazu jest `ControlPicture`.)  
+ Po dokonaniu niezbędnych dodatki do projektu kontroli, należy zmodyfikować kilka funkcji, które mają wpływ na renderowanie formantu ActiveX. Te funkcje `OnResetState`, `OnDraw`, oraz funkcje Get i Set właściwości niestandardowych obrazów, znajdują się w pliku implementacji. (Należy pamiętać, że w tym przykładzie klasa kontroli jest nazywana `CSampleCtrl`, `CPictureHolder` nosi nazwę elementu członkowskiego danych *m_pic*, i nazwa właściwości niestandardowego obrazu jest `ControlPicture`.)  
   
  W formancie `OnResetState` działać, Dodaj następujący wiersz opcjonalne po wywołaniu `COleControl::OnResetState`:  
   

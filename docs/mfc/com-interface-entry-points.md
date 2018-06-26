@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02aa70706df65318f2fbfd8103dff04a47ae2155
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d7f52aee6a276410ba6a90fd662a2fad8d258e92
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341414"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929890"
 ---
 # <a name="com-interface-entry-points"></a>Punkty wejścia interfejsu COM
 Dla funkcji Członkowskich interfejsu COM, użyj [method_prologue —](com-interface-entry-points.md#method_prologue) makra w celu prawidłowego stanu globalnego podczas wywoływania metody z wyeksportowanego interfejsu.  
@@ -33,7 +33,7 @@ Dla funkcji Członkowskich interfejsu COM, użyj [method_prologue —](com-inter
   
  [!code-cpp[NVC_MFCConnectionPoints#5](../mfc/codesnippet/cpp/com-interface-entry-points_1.cpp)]  
   
- Aby uzyskać dodatkowe informacje, zobacz [38 Uwaga techniczna](../mfc/tn038-mfc-ole-iunknown-implementation.md) na MFC/OLE **IUnknown** implementacji.  
+ Aby uzyskać dodatkowe informacje, zobacz [38 Uwaga techniczna](../mfc/tn038-mfc-ole-iunknown-implementation.md) na MFC/OLE `IUnknown` implementacji.  
   
  `METHOD_PROLOGUE` Makro jest zdefiniowany jako:  
   

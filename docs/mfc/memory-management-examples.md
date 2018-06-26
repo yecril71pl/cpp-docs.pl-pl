@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84bc2ce7c084f2951d63eee546df3bf70a2ba1fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 21efd095a1d8e89c140ef39072a753c300a3043b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347194"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929310"
 ---
 # <a name="memory-management-examples"></a>Zarządzanie pamięcią: przykłady
 W tym artykule opisano, jak MFC wykonuje ramkę alokacji i Alokacje sterty dla każdego z trzech typów typowych alokacji pamięci:  
@@ -99,7 +99,7 @@ W tym artykule opisano, jak MFC wykonuje ramkę alokacji i Alokacje sterty dla k
   
      [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/cpp/memory-management-examples_7.cpp)]  
   
-     Jeśli argument `CPerson` Konstruktor jest wskaźnik do `char`, instrukcja dla Alokacja ramek jest:  
+     Jeśli argument `CPerson` Konstruktor jest wskaźnik do **char**, instrukcja dla Alokacja ramek jest:  
   
      [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/cpp/memory-management-examples_8.cpp)]  
   

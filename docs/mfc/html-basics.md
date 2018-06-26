@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c59004f27e0f3a1c629daae621df831fe82cd7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c4ebbc8e792e36461f7c52c17fa23815239e323
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347220"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929093"
 ---
 # <a name="html-basics"></a>Podstawy HTML
 W większości przeglądarek mają możliwość badania źródło HTML strony, które możesz przeglądać. Po wyświetleniu źródła zobaczysz liczba tagów HTML (Hypertext markup language) ujęta w nawiasy (<>) oraz tekst.  
@@ -30,7 +30,7 @@ W większości przeglądarek mają możliwość badania źródło HTML strony, k
   
 1.  Otwórz Notatnik lub dowolnego edytora tekstów.  
   
-2.  Z **pliku** menu, wybierz `New`.  
+2.  Z **pliku** menu, wybierz **nowy**.  
   
 3.  Wpisz następujące wiersze:  
   
@@ -44,7 +44,7 @@ W większości przeglądarek mają możliwość badania źródło HTML strony, k
   
 4.  Z **pliku** menu, wybierz **zapisać**i Zapisz plik jako c:\webpages\First.htm. Zostaw plik otwarty w edytorze.  
   
-5.  Przełącznik do przeglądarki, a także z **pliku** menu, wybierz **Otwórz**, lub typ `file://C:/webpages/first.htm` edytowania w przeglądarce adres URL. Powinna zostać wyświetlona pusta strona z tytuł okna "Top tagów HTML".  
+5.  Przełącznik do przeglądarki, a także z **pliku** menu, wybierz **Otwórz**, lub typ *file://C:/webpages/first.htm* edytowania w przeglądarce adres URL. Powinna zostać wyświetlona pusta strona z tytuł okna "Top tagów HTML".  
   
      Zwróć uwagę, znaczniki są skojarzone i znajdują się w nawiasy. Tagi nie są z uwzględnieniem wielkości liter, ale wielkość liter jest często umożliwia znaczniki wyróżnienia.  
   

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f142fc49d2759c4edd7cdb8701b300d435e67f54
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a3844788330cfe79366221ee215c437fc4aefc8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333833"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930664"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Kontenery kontrolek ActiveX: obsługa zdarzeń z kontrolki ActiveX
 W tym artykule omówiono korzystanie z okna właściwości instalacji obsługi zdarzeń dla formantów ActiveX w kontenerze formantów ActiveX. Programy obsługi zdarzeń są używane do otrzymywania powiadomień (od formantu) niektórych zdarzeń i wykonanie akcji w odpowiedzi. To powiadomienie jest nazywany "wyzwoleniem" zdarzenia.  
@@ -46,7 +46,7 @@ W tym artykule omówiono korzystanie z okna właściwości instalacji obsługi z
   
  Podczas dodawania zdarzenia przy użyciu okna właściwości, zdarzenia mapowania wpis (`ON_EVENT`) zostanie dodany do mapy obiekt sink zdarzenia i program obsługi zdarzeń funkcji jest dodawany do wdrożenia kontenera (. Pliku CPP).  
   
- Poniższy przykład deklaruje program obsługi zdarzeń o nazwie `OnClickInCircCtrl`, formantu OK **clickin —** zdarzeń:  
+ Poniższy przykład deklaruje program obsługi zdarzeń o nazwie `OnClickInCircCtrl`, formantu OK `ClickIn` zdarzeń:  
   
  [!code-cpp[NVC_MFC_AxCont#10](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_3.cpp)]  
   

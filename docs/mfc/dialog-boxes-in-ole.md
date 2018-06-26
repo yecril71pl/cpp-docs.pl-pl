@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fdff45963419b3676ea8ca6b1bf0239348387dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9fe7f9b4b97fd17e73c3dd9f113a87d8f087b93c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347844"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929666"
 ---
 # <a name="dialog-boxes-in-ole"></a>Okna dialogowe w OLE
 Gdy użytkownik uruchomi aplikację z obsługą OLE, istnieją razy, gdy aplikacja potrzebuje informacje od użytkownika w celu przeprowadzenia operacji. Klasy MFC OLE zapewniają wiele okien dialogowych w celu zebrania wymaganych informacji. W tym temacie wymieniono zadania obsługiwane przez okien dialogowych OLE i klasy niezbędne do wyświetlania tych okien dialogowych. Szczegółowe informacje o okien dialogowych OLE i struktury używane w celu dostosowania ich zachowania, zobacz [odwołania MFC](../mfc/mfc-desktop-applications.md).  
@@ -46,7 +46,7 @@ Gdy użytkownik uruchomi aplikację z obsługą OLE, istnieją razy, gdy aplikac
  Okno dialogowe Edytuj łącza umożliwia użytkownikom na zmianę informacji o źródle połączonego obiektu. Okno dialogowe łącza aktualizacji sprawdza źródeł połączone elementy w bieżącym oknie dialogowym i wyświetla okno dialogowe Edytuj łącza, jeśli to konieczne. Wyświetl okno dialogowe Edytuj łącza, gdy użytkownik wybierze łącza z menu Edycja. Zazwyczaj zostanie wyświetlone okno dialogowe Aktualizuj łącza, po pierwszym otwarciu złożonego dokumentu. Użyj jednej [COleLinksDialog](../mfc/reference/colelinksdialog-class.md) lub [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md) klasy, w zależności od okno dialogowe, które mają być wyświetlane.  
   
  *Serwer jest zajęty lub serwer nie odpowiada*  
- Serwer jest zajęty okno dialogowe jest wyświetlane, gdy użytkownik próbuje aktywować elementu i serwer nie może obecnie obsłużyć żądania, zwykle, ponieważ serwer jest używany przez innego użytkownika lub zadanie. Zostanie wyświetlone okno dialogowe serwer nie odpowiada, jeśli serwer nie odpowiada na żądanie aktywacji w ogóle. Okna te są wyświetlane za pośrednictwem `COleMessageFilter`, oparte na implementację interfejsu OLE **IMessageFilter**, i użytkownik może zdecydować, czy próby żądania aktywacji. Użyj [COleBusyDialog](../mfc/reference/colebusydialog-class.md) klasy do wyświetlenia tego okna dialogowego.  
+ Serwer jest zajęty okno dialogowe jest wyświetlane, gdy użytkownik próbuje aktywować elementu i serwer nie może obecnie obsłużyć żądania, zwykle, ponieważ serwer jest używany przez innego użytkownika lub zadanie. Zostanie wyświetlone okno dialogowe serwer nie odpowiada, jeśli serwer nie odpowiada na żądanie aktywacji w ogóle. Okna te są wyświetlane za pośrednictwem `COleMessageFilter`, oparte na implementację interfejsu OLE `IMessageFilter`, i użytkownik może zdecydować, czy próby żądania aktywacji. Użyj [COleBusyDialog](../mfc/reference/colebusydialog-class.md) klasy do wyświetlenia tego okna dialogowego.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Okna dialogowe](../mfc/dialog-boxes.md)   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e528ea7901518112c255eefbfb1e674fddee04e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d03966cb61e1ccab3f8f3886638efdf95a534a73
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355665"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930316"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>Optymalizacja stanu trwałego i inicjalizacji
 Domyślnie stanu trwałego i inicjalizacji w formancie są obsługiwane przez `DoPropExchange` funkcję elementu członkowskiego. W formancie typowe tej funkcji zawiera kilka wywołania **PX_** funkcje (`PX_Color`, `PX_Font`i tak dalej), po jednej dla każdej właściwości.  
@@ -45,7 +45,7 @@ Domyślnie stanu trwałego i inicjalizacji w formancie są obsługiwane przez `D
   
  [!code-cpp[NVC_MFC_AxOpt#3](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_3.cpp)]  
   
- Zauważ, że w przypadku obciążenia zmiennej tymczasowej jest używana i następnie jego wartość jest przypisywana, zamiast rzutowanie `m_boolProp` do **BAJTÓW** odwołania. Techniki rzutowanie spowoduje tylko jednego bajtu `m_boolProp` są modyfikowane, pozostawiając Pozostała liczba bajtów, odinicjowany.  
+ Zauważ, że w przypadku obciążenia zmiennej tymczasowej jest używana i następnie jego wartość jest przypisywana, zamiast rzutowanie *m_boolProp* do **BAJTÓW** odwołania. Techniki rzutowanie spowoduje tylko jednego bajtu *m_boolProp* są modyfikowane, pozostawiając Pozostała liczba bajtów, odinicjowany.  
   
  Dla tej samej kontrolki, aby zoptymalizować inicjowania formantu przez zastąpienie [COleControl::OnResetState](../mfc/reference/colecontrol-class.md#onresetstate) w następujący sposób:  
   

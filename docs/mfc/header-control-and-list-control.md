@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a84386781bf28edb9223f608fa7a64040eb68379
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: acee0508243f468f41c645a0cde825ca7c828657
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346103"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931597"
 ---
 # <a name="header-control-and-list-control"></a>Kontrolka nagłówka i kontrolka listy
 W większości przypadków użyje osadzony w formancie nagłówka [CListCtrl](../mfc/reference/clistctrl-class.md) lub [clistview —](../mfc/reference/clistview-class.md) obiektu. Istnieją jednak przypadkach, gdy obiekt formantu nagłówka oddzielne jest pożądane, takich jak manipulowania danymi uporządkowane wierszy lub kolumn, w [CView](../mfc/reference/cview-class.md)-pochodzi z obiektu. W takich sytuacjach należy większą kontrolę nad wyglądem i domyślne zachowanie formantu osadzonego nagłówka.  
@@ -32,11 +32,11 @@ W większości przypadków użyje osadzony w formancie nagłówka [CListCtrl](..
  W typowych przypadkach, które mają formantu nagłówka, aby zapewnić standardowe, domyślne zachowanie, może zajść potrzeba użycia [CListCtrl](../mfc/reference/clistctrl-class.md) lub [clistview —](../mfc/reference/clistview-class.md) zamiast tego. Użyj `CListCtrl` kiedy ma funkcje domyślne formantu nagłówka, osadzonego w typowych formantu widoku listy. Użyj [clistview —](../mfc/reference/clistview-class.md) kiedy ma funkcje domyślne formantu nagłówka, osadzony w obiekcie widoku.  
   
 > [!NOTE]
->  Kontrolka widoku listy zostanie utworzony przy użyciu tych kontrolek tylko obejmują formantu nagłówka wbudowanych `LVS_REPORT` stylu.  
+>  Kontrolka widoku listy zostanie utworzony przy użyciu tych kontrolek tylko obejmują formantu nagłówka wbudowanych **LVS_REPORT** stylu.  
   
  W większości przypadków wyglądu formantu osadzonego nagłówka może być modyfikowany przez zmienianie stylów formantu zawierającego widoku listy. Ponadto można uzyskać informacje o formancie nagłówka za pośrednictwem funkcji Członkowskich nadrzędnego formantu widoku listy. Jednak pełną kontrolę i dostępu do atrybutów i stylów formantu nagłówka osadzonych zalecane jest, czy można uzyskać wskaźnik do obiektu formantu nagłówka.  
   
- Obiekt formantu osadzonego nagłówka jest możliwy przy użyciu dowolnego **CListCtrl** lub `CListView` z wywołaniem do odpowiedniej klasy `GetHeaderCtrl` funkcję elementu członkowskiego. Poniższy kod ilustruje to:  
+ Obiekt formantu nagłówka osadzone są dostępne z albo `CListCtrl` lub `CListView` z wywołaniem do odpowiedniej klasy `GetHeaderCtrl` funkcję elementu członkowskiego. Poniższy kod ilustruje to:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#14](../mfc/codesnippet/cpp/header-control-and-list-control_1.cpp)]  
   

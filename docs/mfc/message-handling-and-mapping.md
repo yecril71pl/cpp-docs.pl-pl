@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66171c5df636597a2ff6be0438b558dc418b72af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 906d84d70b3bf2ae2a9da14ce9e5b06ed92d3730
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348531"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931037"
 ---
 # <a name="message-handling-and-mapping"></a>Obsługa i mapowanie komunikatów
 Rodziny tego artykułu opisano, jak komunikaty i polecenia są przetwarzane przez MFC framework i jak łączyć się ich funkcje programu obsługi.  
   
  W przypadku tradycyjnych programów dla systemu Windows komunikaty systemu Windows są obsługiwane w instrukcji switch dużych w procedurę okna. Zamiast tego używa MFC [mapy komunikatów](../mfc/message-categories.md) mapować wiadomości bezpośrednie do funkcji Członkowskich różne klasy. Mapy wiadomości są bardziej efektywne niż funkcji wirtualnych w tym celu, a także zezwalać komunikatów obsługiwanych przez najbardziej odpowiedniego obiektu C++ — aplikacji, dokumentu, widok i tak dalej. Można mapować pojedynczym komunikacie lub zakres komunikatów, identyfikatory poleceń lub kontrolować identyfikatorów.  
   
- **WM_COMMAND** wiadomości — zwykle generowane przez menu, przycisków paska narzędzi lub akceleratorów — również używać mechanizmu mapy komunikatów. MFC definiuje standard [routingu](../mfc/command-routing.md) polecenia komunikatów między aplikacji, ramka okna, widok i dokumenty aktywne w programie. Można zastąpić to routingu, jeśli potrzebujesz.  
+ WM_COMMAND — komunikaty — zwykle generowane przez menu, przycisków paska narzędzi lub akceleratorów — również używać mechanizmu mapy komunikatów. MFC definiuje standard [routingu](../mfc/command-routing.md) polecenia komunikatów między aplikacji, ramka okna, widok i dokumenty aktywne w programie. Można zastąpić to routingu, jeśli potrzebujesz.  
   
  Mapy komunikatów podać również sposób aktualizowanie obiektów interfejsu użytkownika (np. menu i przycisków paska narzędzi), włączając lub wyłączając je zgodnie z bieżącego kontekstu.  
   

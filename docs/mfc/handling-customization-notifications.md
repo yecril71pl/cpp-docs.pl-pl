@@ -57,17 +57,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3636d3db480563295213b76de06133e78e30cd0d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b95af9c0562c4b3210cbcdd7b9ce6216a5d49fb
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353705"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930020"
 ---
 # <a name="handling-customization-notifications"></a>Obsługa powiadomień dotyczących dostosowania
 Typowe kontrolki paska narzędzi systemu Windows ma dostosowania wbudowane funkcje, w tym okno dialogowe dostosowanie zdefiniowane przez system, które umożliwiają użytkownikom wstawianie, usuwanie lub rozmieszczanie przycisków paska narzędzi. Aplikacja określa, czy funkcje dostosowywania są dostępne i określa zakres, do którego użytkownik może dostosować na pasku narzędzi.  
   
- Można udostępnić te funkcje dostosowywania użytkownikowi, zapewniając na pasku narzędzi `CCS_ADJUSTABLE` stylu. Funkcje dostosowywania umożliwiają użytkownikowi przeciągnij przycisk do nowej pozycji lub usunąć przycisk przeciągając go poza pasek narzędzi. Ponadto użytkownik może kliknąć dwukrotnie narzędzi, aby wyświetlić **Dostosuj pasek narzędzi** okno dialogowe, które pozwala użytkownikowi na dodawanie, usuwanie i rozmieszczanie przycisków paska narzędzi. Aplikację można wyświetlić okna dialogowego za pomocą [Dostosuj](../mfc/reference/ctoolbarctrl-class.md#customize) funkcję elementu członkowskiego.  
+ Można udostępnić te funkcje dostosowywania użytkownikowi, zapewniając na pasku narzędzi **CCS_ADJUSTABLE** stylu. Funkcje dostosowywania umożliwiają użytkownikowi przeciągnij przycisk do nowej pozycji lub usunąć przycisk przeciągając go poza pasek narzędzi. Ponadto użytkownik może kliknąć dwukrotnie narzędzi, aby wyświetlić **Dostosuj pasek narzędzi** okno dialogowe, które pozwala użytkownikowi na dodawanie, usuwanie i rozmieszczanie przycisków paska narzędzi. Aplikację można wyświetlić okna dialogowego za pomocą [Dostosuj](../mfc/reference/ctoolbarctrl-class.md#customize) funkcję elementu członkowskiego.  
   
  Formantu toolbar wysyła komunikaty powiadomień do nadrzędnego okna w każdym kroku procesu dostosowywania. Jeśli użytkownik posiada klawisz SHIFT i rozpocznie przeciąganie przycisk, pasek narzędzi automatycznie obsługiwać operacji przeciągania. Pasek narzędzi wysyła **tbn_querydelete —** komunikatu powiadomienia do nadrzędnego okna, aby określić, czy przycisk mogą zostać usunięte. Operacja przeciągania kończy się, jeśli okno nadrzędne zwraca **FALSE**. W przeciwnym razie pasek narzędzi przechwytuje myszą i czeka na użytkownikowi zwolnij przycisk myszy.  
   
@@ -165,7 +165,7 @@ Typowe kontrolki paska narzędzi systemu Windows ma dostosowania wbudowane funkc
  Indeks przycisku skojarzonego z powiadomień.  
   
  **tbButton**  
- `TBBUTTON` Struktura, która zawiera informacje o przycisku paska narzędzi skojarzone z powiadomienia.  
+ **TBBUTTON** struktury, który zawiera informacje o przycisku paska narzędzi skojarzone z powiadomienia.  
   
  **cchText**  
  Liczba znaków w tekście przycisku.  

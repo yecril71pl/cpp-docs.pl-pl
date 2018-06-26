@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a0e8713bc228e65cb06e58d7ccb5389f7366e76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9c3d9f4744ae01a7e251387bd342b77292d1c0d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350784"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931612"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>Kontrolki ActiveX MFC: dodawanie dodatkowej niestandardowej strony właściwości
 Czasami formantu ActiveX ma więcej właściwości, niż można przypuszczać zmieścić na jednej stronie właściwości. W takim przypadku można dodać strony właściwości do formantu ActiveX, aby wyświetlić te właściwości.  
@@ -48,7 +48,7 @@ Czasami formantu ActiveX ma więcej właściwości, niż można przypuszczać zm
   
 3.  Rozwiń węzeł **okna dialogowego** , a następnie wybierz węzeł **IDD_OLE_PROPPAGE_SMALL**.  
   
-4.  Kliknij przycisk `New` można dodać zasobu do projektu.  
+4.  Kliknij przycisk **nowy** można dodać zasobu do projektu.  
   
 5.  Wybierz nowy szablon strony właściwości, aby odświeżyć okno właściwości.  
   
@@ -82,7 +82,7 @@ Czasami formantu ActiveX ma więcej właściwości, niż można przypuszczać zm
   
  [!code-cpp[NVC_MFC_AxUI#32](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_1.cpp)]  
   
- Należy pamiętać, że należy zwiększyć drugi parametr funkcji `BEGIN_PROPPAGEIDS` makra (liczba stron właściwości) z zakresu od 1 do 2.  
+ Należy pamiętać, że należy zwiększyć drugi parametr begin_proppageids — makro (liczba stron właściwości) z zakresu od 1 do 2.  
   
  Musisz także zmodyfikować plik implementacji formantu (. Dołącz nagłówek pliku CPP) (. H) pliku nowej klasy strony właściwości.  
   
@@ -110,7 +110,7 @@ Czasami formantu ActiveX ma więcej właściwości, niż można przypuszczać zm
   
      [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]  
   
-7.  Modyfikowanie konstruktora `CAddtlPropPage` , aby **IDS_SAMPLE_ADDPPG_CAPTION** jest przekazywana do `COlePropertyPage` konstruktora w następujący sposób:  
+7.  Modyfikowanie konstruktora `CAddtlPropPage` tak, aby IDS_SAMPLE_ADDPPG_CAPTION jest przekazywana do `COlePropertyPage` konstruktora w następujący sposób:  
   
      [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]  
   

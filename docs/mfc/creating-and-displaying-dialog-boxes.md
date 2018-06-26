@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fcac345a572f8b33d76692d6852e2dc28698367
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f464efcc76d688ec753395876ebc0841ec4b2cfa
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342465"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931076"
 ---
 # <a name="creating-and-displaying-dialog-boxes"></a>Tworzenie i wyświetlanie okien dialogowych
 Tworzenie obiektu okna dialogowego jest fazach. Po pierwsze konstruowania obiektu okna dialogowego, a następnie utworzyć okno dialogowe. Modalne i Niemodalne okna dialogowe różni się nieco w procesie używany do tworzenia i wyświetlania ich. W poniższej tabeli przedstawiono sposób modalne i niemodalne okno dialogowe pola są zazwyczaj zbudowane i wyświetlane.  
@@ -32,7 +32,7 @@ Tworzenie obiektu okna dialogowego jest fazach. Po pierwsze konstruowania obiekt
   
 |Typ okna dialogowego|Jak utworzyć go|  
 |-----------------|----------------------|  
-|[Niemodalny](../mfc/creating-modeless-dialog-boxes.md)|Utworzyć `CDialog`, następnie wywołaj **Utwórz** funkcję elementu członkowskiego.|  
+|[Niemodalny](../mfc/creating-modeless-dialog-boxes.md)|Utworzyć `CDialog`, następnie wywołaj `Create` funkcję elementu członkowskiego.|  
 |[Modalne](../mfc/creating-modal-dialog-boxes.md)|Utworzyć `CDialog`, następnie wywołaj `DoModal` funkcję elementu członkowskiego.|  
   
  Można należy utworzyć użytkownika — okno dialogowe z [szablonu okna dialogowego w pamięci](../mfc/using-a-dialog-template-in-memory.md) że zostały wykonane, a nie z zasobów szablonu okna dialogowego. Jednak to zaawansowane tematu.  

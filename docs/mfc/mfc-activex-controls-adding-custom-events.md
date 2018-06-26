@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b82232b8f2ad7a5e3bc1ff8fed0e8a38b1a7d66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a2e6e5eeab0be13eb64052eb9e90a570dcc5124d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352534"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929055"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>Kontrolki ActiveX MFC: dodawanie zdarzeń niestandardowych
-Niestandardowe zdarzenia różnią się ze standardowych zdarzeń, nie są one automatycznie uruchamiane przez klasę `COleControl`. Zdarzenie niestandardowe rozpoznaje niektórych działań, określany przez dewelopera kontrolek jako zdarzenie. Wpisy mapy zdarzeń dla zdarzenia niestandardowe są reprezentowane przez `EVENT_CUSTOM` makra. Poniższa sekcja implementuje zdarzenie niestandardowe dla projektu formantu ActiveX, który został utworzony przy użyciu Kreatora formantów ActiveX.  
+Niestandardowe zdarzenia różnią się ze standardowych zdarzeń, nie są one automatycznie uruchamiane przez klasę `COleControl`. Zdarzenie niestandardowe rozpoznaje niektórych działań, określany przez dewelopera kontrolek jako zdarzenie. Wpisy mapy zdarzeń dla zdarzenia niestandardowe są reprezentowane przez event_custom — makro. Poniższa sekcja implementuje zdarzenie niestandardowe dla projektu formantu ActiveX, który został utworzony przy użyciu Kreatora formantów ActiveX.  
   
 ##  <a name="_core_adding_a_custom_event_with_classwizard"></a> Dodawanie niestandardowych zdarzeń z Kreator dodawania zdarzenia  
  Poniższa procedura dodaje określonego zdarzenia niestandardowe clickin —. Ta procedura służy do dodawania innych zdarzeń niestandardowych. Zastąp nazwę zdarzenie niestandardowe, a jego parametrów clickin — zdarzenie nazwy i parametry.  
@@ -48,13 +48,13 @@ Niestandardowe zdarzenia różnią się ze standardowych zdarzeń, nie są one a
   
      Spowoduje to otwarcie Kreatora dodawania zdarzenia.  
   
-4.  W **Nazwa zdarzenia** polu, najpierw wybierz wszystkie istniejące zdarzenia, a następnie kliknij pozycję **niestandardowy** radiowych przycisk, a następnie wpisz `ClickIn`.  
+4.  W **Nazwa zdarzenia** polu, najpierw wybierz wszystkie istniejące zdarzenia, a następnie kliknij pozycję **niestandardowy** radiowych przycisk, a następnie wpisz *clickin —*.  
   
 5.  W **wewnętrzna nazwa** wpisz nazwę zdarzenia uruchamiania funkcji. Na przykład użyj wartości domyślnej, wyświetlane przez Kreatora dodawania zdarzenia (`FireClickIn`).  
   
-6.  Dodawanie parametru o nazwie `xCoord` (typ `OLE_XPOS_PIXELS`), za pomocą narzędzia **Nazwa parametru** i **typ parametru** kontrolki.  
+6.  Dodawanie parametru o nazwie *xCoord* (typ *OLE_XPOS_PIXELS*), za pomocą narzędzia **Nazwa parametru** i **typ parametru** kontrolki.  
   
-7.  Dodaj drugi parametr o nazwie `yCoord` (typ `OLE_YPOS_PIXELS`).  
+7.  Dodaj drugi parametr o nazwie *yCoord* (typ *OLE_YPOS_PIXELS*).  
   
 8.  Kliknij przycisk **Zakończ** utworzyć zdarzenia.  
   
@@ -80,7 +80,7 @@ Niestandardowe zdarzenia różnią się ze standardowych zdarzeń, nie są one a
  Ten wiersz przypisuje clickin — zdarzenie określonych numer identyfikacyjny pobranych z pozycji zdarzenia na liście zdarzeń Kreator dodawania zdarzenia. Wpis na liście zdarzeń umożliwia kontenera do przewidzenia zdarzenia. Na przykład może ona kod obsługi do wykonania, gdy zdarzenie jest wywoływane.  
   
 ##  <a name="_core_calling_fireclickin"></a> Fireclickin — wywołanie  
- Teraz, gdy zostaną dodane za pomocą Kreatora dodawania zdarzenia clickin — zdarzenie niestandardowe, należy zdecydować, gdy to zdarzenie ma być uruchamiane. Można to zrobić przez wywołanie metody `FireClickIn` po wystąpieniu odpowiednią akcję. Dla tej dyskusji używa kontrolki `InCircle` działać wewnątrz `WM_LBUTTONDOWN` obsługi wiadomości uruchomienie clickin — zdarzenie, gdy użytkownik kliknie wewnątrz okrągły lub eliptycznej regionu. Dodaje procedurę `WM_LBUTTONDOWN` obsługi.  
+ Teraz, gdy zostaną dodane za pomocą Kreatora dodawania zdarzenia clickin — zdarzenie niestandardowe, należy zdecydować, gdy to zdarzenie ma być uruchamiane. Można to zrobić przez wywołanie metody `FireClickIn` po wystąpieniu odpowiednią akcję. Dla tej dyskusji używa kontrolki `InCircle` funkcja wewnątrz program obsługi komunikatów WM_LBUTTONDOWN uruchomienie clickin — zdarzenie, gdy użytkownik kliknie wewnątrz okrągły lub eliptycznej regionu. Poniższa procedura dodaje WM_LBUTTONDOWN program obsługi.  
   
 #### <a name="to-add-a-message-handler-with-the-add-event-wizard"></a>Aby dodać program obsługi komunikatów przy użyciu Kreatora dodawania zdarzenia  
   
@@ -92,13 +92,13 @@ Niestandardowe zdarzenia różnią się ze standardowych zdarzeń, nie są one a
   
      Okno właściwości wyświetla listę komunikatów, które są obsługiwane przez formant ActiveX. Dowolny komunikat pogrubione już przypisano funkcję obsługi do niego.  
   
-4.  W oknie właściwości wybierz wiadomości, które mają być obsługiwane. Na przykład wybierz `WM_LBUTTONDOWN`.  
+4.  W oknie właściwości wybierz wiadomości, które mają być obsługiwane. Na przykład wybierz WM_LBUTTONDOWN.  
   
 5.  W polu listy rozwijanej po prawej stronie wybierz  **\<Dodaj > OnLButtonDown**.  
   
 6.  Kliknij dwukrotnie ikonę Nowa funkcja obsługi w widoku klas, aby przejść do kod obsługi komunikatów w implementacji (. Pliku CPP) formantu ActiveX.  
   
- Poniższy kod przykładowy wywołania **InCircle** funkcji każdym kliknięciu lewym przyciskiem myszy w oknie kontrolki. W tym przykładzie można znaleźć w `WM_LBUTTONDOWN` funkcji obsługi `OnLButtonDown`w [próbki OK](../visual-cpp-samples.md) abstrakcyjny.  
+ Poniższy kod przykładowy wywołania `InCircle` funkcji każdym kliknięciu lewym przyciskiem myszy w oknie kontrolki. W tym przykładzie można znaleźć w funkcji obsługi WM_LBUTTONDOWN `OnLButtonDown`w [próbki OK](../visual-cpp-samples.md) abstrakcyjny.  
   
  [!code-cpp[NVC_MFC_AxUI#10](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_4.cpp)]  
   

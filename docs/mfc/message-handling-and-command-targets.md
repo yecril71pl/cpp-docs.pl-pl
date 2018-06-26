@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7184a6e8df67dfd220173c42bfa3e0580bd2cd3f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc0f00e4f660036e73e96d4beb999d37453bdf26
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349470"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929359"
 ---
 # <a name="message-handling-and-command-targets"></a>Obsługa komunikatów i obiekty docelowe poleceń
 Interfejs wysyłania polecenia `IOleCommandTarget` definiuje proste i rozszerzalny mechanizm zapytań i wykonywania poleceń. Ten mechanizm jest łatwiejsze niż automatyzacja `IDispatch` ponieważ opiera się na standardowy zestaw poleceń; polecenia mają rzadko argumentów i uczestniczy nie informacji o typie (typ bezpieczeństwa będzie mniejsza dla argumentów polecenia również).  
@@ -33,7 +33,7 @@ Interfejs wysyłania polecenia `IOleCommandTarget` definiuje proste i rozszerzal
   
  `IOleCommandTarget` obsługuje następujące scenariusze:  
   
--   Gdy obiekt jest w miejscu aktywować, tylko zwykle są wyświetlane paski narzędzi obiektu i paski narzędzi obiektu może być przycisków dla niektórych poleceń kontenera, takich jak **drukowania**, **Podgląd wydruku**,  **Zapisz**, `New`, **powiększenie**i inne. (Aktywacja w miejscu, które zaleca standardy które obiekty Usuń tych przycisków z ich pasków narzędzi lub na najmniej je wyłączyć. Ten projekt umożliwia tych poleceń, należy włączyć i jeszcze kierowane do obsługi prawo). Obecnie nie istnieje mechanizm dla obiekt do wysyłania tych poleceń do kontenera.  
+-   Gdy obiekt jest w miejscu aktywować, tylko zwykle są wyświetlane paski narzędzi obiektu i paski narzędzi obiektu może być przycisków dla niektórych poleceń kontenera, takich jak **drukowania**, **Podgląd wydruku**,  **Zapisz**, **nowy**, **powiększenie**i inne. (Aktywacja w miejscu, które zaleca standardy które obiekty Usuń tych przycisków z ich pasków narzędzi lub na najmniej je wyłączyć. Ten projekt umożliwia tych poleceń, należy włączyć i jeszcze kierowane do obsługi prawo). Obecnie nie istnieje mechanizm dla obiekt do wysyłania tych poleceń do kontenera.  
   
 -   Podczas aktywnego dokumentu jest osadzony w kontenerze dokumentów aktywnych (np. Office Binder), kontener może być konieczne wysyłać polecenia takie **drukowania**, **ustawienia strony**, **właściwości**oraz innym osobom do zawartych w niej aktywnego dokumentu.  
   
@@ -56,7 +56,7 @@ interface IOleCommandTarget : IUnknown
     }  
 ```  
   
- `QueryStatus` Tutaj metoda sprawdza, czy zestaw poleceń, zestaw oznaczone symbolem **GUID**, jest obsługiwana. To wywołanie wypełnia tablicę **OLECMD** wartości (struktury) z listy obsługiwanych poleceń, a także zwracanie tekst opisujący nazwa informacji polecenia i/lub stanu. Gdy obiekt wywołujący zamierza wywołania polecenia, można przekazać polecenie (wraz z zestawem **GUID**) do **Exec** oraz opcje i argumenty odzyskać wartości zwracanej.  
+ `QueryStatus` Tutaj metoda sprawdza, czy zestaw poleceń, zestaw oznaczone symbolem **GUID**, jest obsługiwana. To wywołanie wypełnia tablicę **OLECMD** wartości (struktury) z listy obsługiwanych poleceń, a także zwracanie tekst opisujący nazwa informacji polecenia i/lub stanu. Gdy obiekt wywołujący zamierza wywołania polecenia, można przekazać polecenie (wraz z zestawem **GUID**) do `Exec` oraz opcje i argumenty odzyskać wartości zwracanej.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontenery dokumentów aktywnych](../mfc/active-document-containers.md)

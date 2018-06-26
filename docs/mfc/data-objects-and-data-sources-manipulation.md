@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4c3414734f40ee81689ffa2f160cbbab8306d2b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f276e85be33f3042b19ab7dc6158a4e9f856fb2e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349912"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929864"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Obiekty danych i źródła danych: operowanie
 Po utworzeniu obiektu danych lub źródła danych, można wykonywać wiele typowych operacji na danych, takich jak wstawianie i usuwanie danych wyliczania formatów, z których dane są, i inne. W tym artykule opisano niezbędne do zakończenia operacji najbardziej typowe techniki. Tematy obejmują:  
@@ -73,7 +73,7 @@ Po utworzeniu obiektu danych lub źródła danych, można wykonywać wiele typow
   
     -   Wywołanie obiektu danych `BeginEnumFormats` funkcji członkowskich rozpoczynają wyliczanie formatów dostępnych w Schowku. Następnie wywołaj `GetNextFormat` aż do Schowka zwraca obsługuje aplikację w formacie lub nie ma żadnych więcej formatów.  
   
- Jeśli używasz `ON_UPDATE_COMMAND_UI`, można teraz włączyć Wklej i prawdopodobnie Wklej specjalne elementy menu Edycja. W tym celu należy wywołać `CMenu::EnableMenuItem` lub `CCmdUI::Enable`. Aby uzyskać więcej informacji o jakie kontenera aplikacji powinien elementów menu i kiedy, zobacz [menu i zasoby: dodatki do kontenera](../mfc/menus-and-resources-container-additions.md).  
+ Jeśli używasz **on_update_command_ui —**, można teraz włączyć Wklej i prawdopodobnie Wklej specjalne elementy menu Edycja. W tym celu należy wywołać `CMenu::EnableMenuItem` lub `CCmdUI::Enable`. Aby uzyskać więcej informacji o jakie kontenera aplikacji powinien elementów menu i kiedy, zobacz [menu i zasoby: dodatki do kontenera](../mfc/menus-and-resources-container-additions.md).  
   
 ##  <a name="_core_retrieving_data_from_a_data_object"></a> Pobieranie danych z obiektu danych  
  Po podjęciu decyzji dotyczącej format danych, wszystkie te pozostaje jest pobrać dane z obiektu danych. Aby to zrobić, użytkownik decyduje o tym, gdzie umieścić dane, a aplikacja wymaga odpowiedniej funkcji. Dane będą dostępne w jednym z następujących nośników:  

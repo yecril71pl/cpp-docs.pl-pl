@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71a5f94964b9e28b851c34ac456f3cfe630c255c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 397b45d6304d80c90a05daf48067ca7fff03194a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347967"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932048"
 ---
 # <a name="ready-to-use-array-classes"></a>Gotowe do użycia klasy tablic
 Następujące klasy są gotowe do użycia klasy tablic.  
@@ -32,13 +32,13 @@ Następujące klasy są gotowe do użycia klasy tablic.
  Przechowuje elementy typu **BAJTÓW** w tablicy.  
   
  [CDWordArray](../mfc/reference/cdwordarray-class.md)  
- Przechowuje elementy typu `DWORD` w tablicy.  
+ Przechowuje elementy typu **DWORD** w tablicy.  
   
  [CObArray](../mfc/reference/cobarray-class.md)  
  Wskaźniki do obiektów klasy przechowuje `CObject` lub obiekty klas pochodnych `CObject` w tablicy.  
   
  [CPtrArray](../mfc/reference/cptrarray-class.md)  
- Wskaźniki do przechowuje `void` (wskaźniki ogólnego) w tablicy.  
+ Wskaźniki do przechowuje **void** (wskaźniki ogólnego) w tablicy.  
   
  [CUIntArray](../mfc/reference/cuintarray-class.md)  
  Przechowuje elementy typu **UINT** w tablicy.  

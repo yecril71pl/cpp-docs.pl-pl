@@ -19,19 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50db9d4c99e8ef538ffaa5352f9ec96e5b08217f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4ae7fb09e1f453b6d7bc82a7fb038567809f872
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344503"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932250"
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>Wyprowadzanie formantów z formantu standardowego
 Jako ze wszystkimi [CWnd](../mfc/reference/cwnd-class.md)-klasy, można zmodyfikować zachowanie formantu wyprowadzanie nowe klasy z istniejącej klasy formantu.  
   
 ### <a name="to-create-a-derived-control-class"></a>Można utworzyć klasy pochodnej formantu  
   
-1.  Pochodzi z klasy z istniejącej klasy formantu i opcjonalnie Przesłoń **Utwórz** funkcji członkowskiej, dzięki czemu zapewnia argumenty niezbędne do klasy podstawowej **Utwórz** funkcji.  
+1.  Pochodzi z klasy z istniejącej klasy formantu i opcjonalnie Przesłoń `Create` funkcji członkowskiej, dzięki czemu zapewnia argumenty niezbędne do klasy podstawowej `Create` funkcji.  
   
 2.  Podaj funkcji Członkowskich obsługi wiadomości i wpisy mapy wiadomości, aby zmodyfikować zachowanie formantu w odpowiedzi na określone komunikaty systemu Windows. Zobacz [mapowanie komunikatów na funkcje](../mfc/reference/mapping-messages-to-functions.md).  
   

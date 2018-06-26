@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52eaae8074b984da32e115e779724fa86602b8f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a29b11028df84a7e5e67adb7588386f77adcff06
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342494"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929042"
 ---
 # <a name="automation-clients"></a>Klienci automatyzacji
 Automatyzacja umożliwia aplikacji do modyfikowania obiektów w innej aplikacji lub na uwidocznienie obiektów, więc można manipulować. Klient automatyzacji to aplikacja, który będzie obsługiwał widocznych obiektów należących do innej aplikacji. Aplikacja, która udostępnia obiekty nosi nazwę serwera automatyzacji. Klienta manipuluje obiektów aplikacji serwera, uzyskując dostęp do właściwości tych obiektów i funkcji.  
@@ -38,7 +38,7 @@ Automatyzacja umożliwia aplikacji do modyfikowania obiektów w innej aplikacji 
   
  Statycznych powiązanych klientów za pomocą klasy serwera proxy, statycznie połączonej aplikacji klienckiej. Ta klasa udostępnia hermetyzacji C++ bezpieczny, właściwości i operacji aplikacji serwera.  
   
- Klasa `COleDispatchDriver` zawiera główną obsługę po stronie klienta automatyzacji. Przy użyciu `Add New Item` okno dialogowe, Utwórz klasę pochodzącą od `COleDispatchDriver`.  
+ Klasa `COleDispatchDriver` zawiera główną obsługę po stronie klienta automatyzacji. Przy użyciu **Dodaj nowy element** okno dialogowe, Utwórz klasę pochodzącą od `COleDispatchDriver`.  
   
  Następnie możesz określić plik biblioteki typów opisujące właściwości i funkcje obiektu aplikacji serwera. Okno dialogowe Dodawanie elementu odczytuje ten plik i tworzy `COleDispatchDriver`-klasy z funkcji elementów członkowskich, które aplikacji można wywołać w celu dostępu do obiektów aplikacji serwera w języku C++ w bezpieczny sposób. Dodatkowe funkcje odziedziczone `COleDispatchDriver` upraszcza proces wywoływania właściwego serwera automatyzacji.  
   

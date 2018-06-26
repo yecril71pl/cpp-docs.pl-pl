@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ab5bd34098ee1126e015e2a8368ef5b3c48fdbd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6d51589d9261d497c4c1f9185bd90b889e46eb34
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381173"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930693"
 ---
 # <a name="registration"></a>Rejestracja
 Gdy użytkownik chce, aby wstawić element OLE do aplikacji, OLE wyświetla listę typów obiektów do wyboru. OLE pobiera tej listy z systemu bazie danych rejestracji, który zawiera informacje o wszystkich aplikacji serwera. Gdy serwer rejestruje się, wpisów, które następnie są umieszczane w bazie danych rejestracji systemu (rejestr) opis każdego typu obiektu, który dostarcza mu, rozszerzenia i ścieżki do samej siebie, między innymi informacje o pliku.  
@@ -59,7 +59,7 @@ Gdy użytkownik chce, aby wstawić element OLE do aplikacji, OLE wyświetla list
   
  Przy uruchamianiu aplikacji serwera należy się upewnić, czy można wykonać rejestracja wystąpienia. Rejestracja wystąpienia informuje o OLE systemowej biblioteki dll, że serwer jest aktywne i gotowe do odbierania żądań z kontenerów. Nie dodaje wpis w bazie danych rejestracji. Dokonać rejestracji wystąpienia serwera, wywołując `ConnectTemplate` funkcji członkowskich zdefiniowanych przez `COleTemplateServer`. Utworzone połączenie `CDocTemplate` do obiektu `COleTemplateServer` obiektu.  
   
- `ConnectTemplate` Funkcja przyjmuje trzy parametry: serwera **CLSID**, wskaźnik do `CDocTemplate` obiekt i flagę wskazującą, czy serwer obsługuje wiele wystąpień. Miniserver musi mieć możliwość obsługi wielu wystąpień, oznacza to, musi być możliwe w dla wielu wystąpień serwera, aby działać jednocześnie, po jednej dla każdego kontenera. W rezultacie przekazać **TRUE** tej flagi przy uruchamianiu miniserver.  
+ `ConnectTemplate` Funkcja przyjmuje trzy parametry: serwera *CLSID*, wskaźnik do `CDocTemplate` obiekt i flagę wskazującą, czy serwer obsługuje wiele wystąpień. Miniserver musi mieć możliwość obsługi wielu wystąpień, oznacza to, musi być możliwe w dla wielu wystąpień serwera, aby działać jednocześnie, po jednej dla każdego kontenera. W rezultacie przekazać **TRUE** tej flagi przy uruchamianiu miniserver.  
   
  Jeśli piszesz miniserver zgodnie z definicją go będzie zawsze uruchamiana przez kontener. Nadal należy przeanalizować wiersza polecenia, aby sprawdzić, czy opcja "/ osadzania". Brak tej opcji w wierszu polecenia oznacza, że użytkownik próbował uruchomić miniserver jako aplikacja autonomiczna. W takim przypadku rejestracja serwera w usłudze baza danych rejestracji systemu, a następnie Wyświetl okno komunikatu informujące użytkownika, aby uruchomić miniserver z kontenera aplikacji.  
   

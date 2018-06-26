@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcd1fbce9e6dda649da8fe2e53fc7dc70db1da33
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1cbcdeec6e39e104625d1b5d47c494915a821d38
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354442"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930036"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Porady: tworzenie bezpiecznej kolekcji
 W tym artykule wyjaśniono, jak utworzyć kolekcje bezpieczne dla typów danych. Tematy obejmują:  
@@ -52,7 +52,7 @@ W tym artykule wyjaśniono, jak utworzyć kolekcje bezpieczne dla typów danych.
   
 3.  W razie potrzeby Implementowanie [funkcje pomocnicze](../mfc/reference/collection-class-helpers.md) i [serializeelements —](../mfc/reference/collection-class-helpers.md#serializeelements). Aby uzyskać informacje dotyczące implementacji tych funkcji, zobacz [implementowania funkcji pomocnika](#_core_implementing_helper_functions).  
   
- Ten przykład przedstawia deklaracji listy liczb całkowitych. Pierwszy parametr w kroku 1 jest typ danych przechowywanych jako elementy listy. Drugi parametr określa, jak dane ma być przekazane do i zwrócony z funkcji elementów członkowskich klasy kolekcji, takie jak **Dodaj** i `GetAt`.  
+ Ten przykład przedstawia deklaracji listy liczb całkowitych. Pierwszy parametr w kroku 1 jest typ danych przechowywanych jako elementy listy. Drugi parametr określa, jak dane ma być przekazane do i zwrócony z funkcji elementów członkowskich klasy kolekcji, takie jak `Add` i `GetAt`.  
   
 ##  <a name="_core_implementing_helper_functions"></a> Implementowanie funkcji pomocnika  
  Klasy kolekcji oparte na szablonach `CArray`, `CList`, i `CMap` za pomocą pięciu funkcji pomocnika globalne, które można dostosować zgodnie z potrzebami dla klasy pochodnej kolekcji. Aby uzyskać informacje na temat tych funkcji pomocnika, zobacz [pomocnicy klasy kolekcji](../mfc/reference/collection-class-helpers.md) w *odwołania MFC*. Implementacja funkcji serializacji jest niezbędne do zastosowań typu klas kolekcji na podstawie szablonu.  
@@ -66,10 +66,10 @@ W tym artykule wyjaśniono, jak utworzyć kolekcje bezpieczne dla typów danych.
   
  [!code-cpp[NVC_MFCCollections#9](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_3.cpp)]  
   
- Operatory przeciążone wstawiania `CArchive` wywołać `CObject::Serialize` (lub zastąpienie tych funkcji) dla każdego **CPerson** obiektu.  
+ Operatory przeciążone wstawiania `CArchive` wywołać `CObject::Serialize` (lub zastąpienie tych funkcji) dla każdego `CPerson` obiektu.  
   
 ##  <a name="_core_using_nontemplate_collection_classes"></a> Przy użyciu klasy kolekcji Nieszablonu  
- MFC obsługuje również klasy kolekcji, wprowadzone w systemie MFC w wersji 1.0. Te klasy nie są oparte na szablonach. Może służyć zawiera dane z obsługiwanych typów `CObject*`, **UINT**, `DWORD`, i `CString`. Korzystając z tych wstępnie zdefiniowanych kolekcji (takich jak `CObList`) do przechowywania kolekcji wszystkie obiekty pochodne `CObject`. MFC zawiera również inne wstępnie zdefiniowanych kolekcje, aby pomieścić typy pierwotne, takie jak **UINT** i void wskaźników (`void`*). Ogólnie rzecz biorąc jednak warto często definiować własne kolekcje bezpieczny do przechowywania obiektów klasy bardziej szczegółowe i jego pochodne. Należy pamiętać, że ten sposób nie z klasy kolekcji oparte na szablonach więcej pracy niż przy użyciu klasy oparte na szablonach.  
+ MFC obsługuje również klasy kolekcji, wprowadzone w systemie MFC w wersji 1.0. Te klasy nie są oparte na szablonach. Może służyć zawiera dane z obsługiwanych typów `CObject*`, `UINT`, `DWORD`, i `CString`. Korzystając z tych wstępnie zdefiniowanych kolekcji (takich jak `CObList`) do przechowywania kolekcji wszystkie obiekty pochodne `CObject`. MFC zawiera również inne wstępnie zdefiniowanych kolekcje, aby pomieścić typy pierwotne, takie jak `UINT` i void wskaźników (`void`*). Ogólnie rzecz biorąc jednak warto często definiować własne kolekcje bezpieczny do przechowywania obiektów klasy bardziej szczegółowe i jego pochodne. Należy pamiętać, że ten sposób nie z klasy kolekcji oparte na szablonach więcej pracy niż przy użyciu klasy oparte na szablonach.  
   
  Istnieją dwa sposoby tworzenia bezpieczne kolekcje z kolekcji nieszablonu:  
   

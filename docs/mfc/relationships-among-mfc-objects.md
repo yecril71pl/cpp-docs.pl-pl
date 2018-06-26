@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a0cdc4ebeab81a0eb69b96b161350f75ebc8b14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef6a9e605948fac4f31338f87b4d00bbaa8712f4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379522"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931655"
 ---
 # <a name="relationships-among-mfc-objects"></a>Relacje między obiektami MFC
 Aby pomóc proces tworzenia dokumentu/widoku w perspektywie, należy wziąć pod uwagę uruchomiony program: dokument, okno ramowe zawiera widok i widok powiązany z dokumentem.  
@@ -53,7 +53,7 @@ Aby pomóc proces tworzenia dokumentu/widoku w perspektywie, należy wziąć pod
  Zazwyczaj okno ramowe ma jeden widok, ale czasami, tak jak okna podziału w tym samym oknie ramki zawiera wiele widoków. Okno ramowe zachowuje wskaźnik do aktywnego widoku; wskaźnik jest aktualizowany za każdym razem inny widok jest aktywowane.  
   
 > [!NOTE]
->  Wskaźnik do głównego okna ramowego są przechowywane w [m_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd) zmiennej członkowskiej obiektu aplikacji. Wywołanie `OnFileNew` w zastąpienia z `InitInstance` funkcji członkowskiej klasy `CWinApp` ustawia `m_pMainWnd` dla Ciebie. Jeśli nie zostanie wywołana `OnFileNew`, należy ustawić wartość zmiennej w `InitInstance` samodzielnie. (Aplikacji składowych (serwer) SDI COM może nie ustawiono zmiennej Jeśli Embedding znajduje się w wierszu polecenia.) Należy pamiętać, że `m_pMainWnd` teraz jest elementem członkowskim klasy `CWinThread` zamiast `CWinApp`.  
+>  Wskaźnik do głównego okna ramowego są przechowywane w [m_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd) zmiennej członkowskiej obiektu aplikacji. Wywołanie `OnFileNew` w zastąpienia z `InitInstance` funkcji członkowskiej klasy `CWinApp` ustawia *m_pMainWnd* dla Ciebie. Jeśli nie zostanie wywołana `OnFileNew`, należy ustawić wartość zmiennej w `InitInstance` samodzielnie. (Aplikacji składowych (serwer) SDI COM może nie ustawiono zmiennej Jeśli Embedding znajduje się w wierszu polecenia.) Należy pamiętać, że *m_pMainWnd* teraz jest elementem członkowskim klasy `CWinThread` zamiast `CWinApp`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Szablony dokumentów i proces tworzenia dokumentu/widoku](../mfc/document-templates-and-the-document-view-creation-process.md)   

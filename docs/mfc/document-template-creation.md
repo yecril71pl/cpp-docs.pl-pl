@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36650e0ae1ce042a887c6a87d1bbe62d8b6d7fe4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3695d2795fa324051b76cf012aae7e1b1f275fa1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345797"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928025"
 ---
 # <a name="document-template-creation"></a>Tworzenie szablonu dokumentu
-Podczas tworzenia nowego dokumentu w odpowiedzi na `New` lub **Otwórz** polecenie **pliku** menu szablonu dokumentu również tworzy nowe okno ramowe za pośrednictwem której można wyświetlić dokument.  
+Podczas tworzenia nowego dokumentu w odpowiedzi na **nowy** lub **Otwórz** polecenie **pliku** menu szablonu dokumentu również tworzy nowe okno ramowe za pośrednictwem której można wyświetlić dokument.  
   
  Konstruktor szablonu dokumentu określa, jakie typy dokumentów, okien i widoków szablonu będą mogli tworzyć. Jest to określane przez argumenty, które można przekazać do konstruktora szablonu dokumentu. Poniższy kod przedstawia tworzenie [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) przykładową aplikację:  
   

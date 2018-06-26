@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e8d54f87e4e018a004bbab503664fa1788f36c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5eb8dc1bbdc496072df829531b0f10aaaca069a8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347133"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932198"
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>Kontrolki ActiveX MFC: używanie stron właściwości standardowych
 W tym artykule omówiono stron właściwości standardowych dostępnych dla formantów ActiveX i sposobu ich używania.  
@@ -41,13 +41,13 @@ W tym artykule omówiono stron właściwości standardowych dostępnych dla form
   
 -   [Kontrolki ActiveX MFC: dodawanie dodatkowej niestandardowej strony właściwości](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)  
   
- MFC udostępnia trzy stron właściwości standardowych do użycia z formantami ActiveX: **CLSID_CColorPropPage**, **CLSID_CFontPropPage**, i **CLSID_CPicturePropPage**. Te strony odpowiednio wyświetlenia interfejsu użytkownika dla standardowych kolorów, czcionki i właściwości obrazu.  
+ MFC udostępnia trzy stron właściwości standardowych do użycia z formantami ActiveX: `CLSID_CColorPropPage`, `CLSID_CFontPropPage`, i `CLSID_CPicturePropPage`. Te strony odpowiednio wyświetlenia interfejsu użytkownika dla standardowych kolorów, czcionki i właściwości obrazu.  
   
  Aby dołączyć te strony właściwości do kontrolki, dodaj ich identyfikatorów do kodu, który inicjuje formantu tablicę identyfikatorów stron właściwości. W poniższym przykładzie ten kod znajduje się w pliku implementacji (. Tablica ma zawierać wszystkie trzy stron właściwości standardowych i domyślne właściwości strony inicjuje CPP) (o nazwie `CMyPropPage` w tym przykładzie):  
   
  [!code-cpp[NVC_MFC_AxOpt#21](../mfc/codesnippet/cpp/mfc-activex-controls-using-stock-property-pages_1.cpp)]  
   
- Należy pamiętać, że liczba właściwości strony w `BEGIN_PROPPAGEIDS` makra, to 4. Jest to liczba stron właściwości jest obsługiwana przez kontrolkę ActiveX.  
+ Należy pamiętać, że liczba stron właściwości w begin_proppageids — makro, 4. Jest to liczba stron właściwości jest obsługiwana przez kontrolkę ActiveX.  
   
  Po dokonaniu tych zmian, ponownie skompiluj projekt. Formant ma teraz strony właściwości czcionki, obrazu i właściwości kolorów.  
   

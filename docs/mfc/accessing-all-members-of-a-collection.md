@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec9757a463bce7ef873720f229b70da695deae8d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cf25b84c4ee9808210d2dbf2f5115319a517c71b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334850"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931941"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Uzyskiwanie dostępu do wszystkich elementów członkowskich kolekcji
 Klasy kolekcji tablic MFC — zarówno na podstawie szablonu, a nie — umożliwia dostęp do swoich elementów indeksów. Klasy kolekcji listy, a następnie mapować MFC — zarówno na podstawie szablonu i nie — użyj wskaźnika typu **pozycji** do opisywania określonej pozycji w kolekcji. Aby uzyskać dostęp do co najmniej jeden członkowie tych kolekcji, należy najpierw zainicjować wskaźnik położenia wielokrotnie przekazania tej pozycji do kolekcji i poproś go do zwrócenia następnego elementu. Kolekcja nie jest odpowiedzialny za konserwację stanu informacje postępie iteracji. Czy informacje są przechowywane w wskaźnik położenia. Jednak podane określonej pozycji, Kolekcja jest odpowiedzialny za zwrócenie następnego elementu.  
@@ -51,7 +51,7 @@ Klasy kolekcji tablic MFC — zarówno na podstawie szablonu, a nie — umożliw
   
      W tym przykładzie użyto tablicy typizowaną wskaźnika, które zawierają wskaźniki do `CPerson` obiektów. Tablica jest pochodną klasy `CObArray`, jeden z nieszablonu wstępnie zdefiniowanych klas. `GetAt` Zwraca wskaźnik do `CPerson` obiektu. Do klasy kolekcji typizowaną wskaźnika — tablice lub list — pierwszy parametr określa klasę podstawową; drugi parametr określa typ do przechowywania.  
   
-     `CTypedPtrArray` Klasy także przeciążenia **[** operator tak, aby można było używać zwyczajowe składni indeks dolny tablicy do dostępu do elementów tablicy. Zamiast instrukcji w treści `for` pętla powyżej  
+     `CTypedPtrArray` Klasy także przeciążenia **[** operator tak, aby można było używać zwyczajowe składni indeks dolny tablicy do dostępu do elementów tablicy. Zamiast instrukcji w treści **dla** pętla powyżej  
   
      [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]  
   

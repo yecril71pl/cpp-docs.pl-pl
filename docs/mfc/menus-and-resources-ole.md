@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54cc874fd3c95123446ab81b920bfe0fce52df5e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cae180ca71b89732e073b9039483b8b46366a42a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347097"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929637"
 ---
 # <a name="menus-and-resources-ole"></a>Menu i zasoby (OLE)
 Ta grupa artykułów wyjaśnienia dotyczące korzystania z menu i zasoby w aplikacji MFC OLE dokumentu.  
@@ -54,10 +54,10 @@ Ta grupa artykułów wyjaśnienia dotyczące korzystania z menu i zasoby w aplik
   
 |Nazwa zasobu|Zastosowanie|  
 |-------------------|---------|  
-|**IDR_MAINFRAME**|Używane w aplikacji MDI, jeśli plik nie jest otwarty lub w aplikacji SDI niezależnie od otwartych plików. Jest to standardowe menu używany w aplikacjach innych niż OLE.|  
-|**IDR_\<projektu > typu**|Jeśli pliki są otwarte, należy użyć w aplikacji MDI. Używany, gdy aplikacja jest uruchomiona jako autonomiczna. Jest to standardowe menu używany w aplikacjach innych niż OLE.|  
-|**IDR_\<projektu > TYPE_SRVR_IP**|Używane przez serwer lub kontenera, gdy obiekt jest otwarty w miejscu.|  
-|**IDR_\<projektu > TYPE_SRVR_EMB**|Używany przez aplikację serwer, jeśli obiekt został otwarty bez użycia Aktywacja w miejscu.|  
+|IDR_MAINFRAME|Używane w aplikacji MDI, jeśli plik nie jest otwarty lub w aplikacji SDI niezależnie od otwartych plików. Jest to standardowe menu używany w aplikacjach innych niż OLE.|  
+|IDR_\<projektu > typu|Jeśli pliki są otwarte, należy użyć w aplikacji MDI. Używany, gdy aplikacja jest uruchomiona jako autonomiczna. Jest to standardowe menu używany w aplikacjach innych niż OLE.|  
+|IDR_\<projektu > TYPE_SRVR_IP|Używane przez serwer lub kontenera, gdy obiekt jest otwarty w miejscu.|  
+|IDR_\<projektu > TYPE_SRVR_EMB|Używany przez aplikację serwer, jeśli obiekt został otwarty bez użycia Aktywacja w miejscu.|  
   
  Każda z tych nazw zasobów reprezentuje menu i zazwyczaj tabeli akceleratora. Schemat podobne należy używać w aplikacjach MFC, które nie są tworzone przy użyciu Kreatora aplikacji.  
   

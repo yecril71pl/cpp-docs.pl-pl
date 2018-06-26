@@ -19,17 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7af858a7bd43bca2a04fac417c592f2dba979ffe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 82c7453b92ce14fbbcd20ea0f9a8bd8a7a2b5b6d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343259"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932237"
 ---
 # <a name="exceptions-examining-exception-contents"></a>Wyjątki: badanie zawartości wyjątku
 Mimo że **catch** bloku argument może być prawie każdego typu danych, funkcje MFC zgłaszają wyjątki typów pochodnych klasy `CException`. Aby przechwycić wyjątek zgłoszony przez funkcję MFC, następnie należy napisać **catch** blok, którego argument jest wskaźnik do `CException` obiektu (lub typ pochodzący od obiektu `CException`, takich jak `CMemoryException`). W zależności od dokładnej typ wyjątku można zbadać elementów członkowskich danych obiektu wyjątku Aby zebrać informacje dotyczące określonego powodu wyjątku.  
   
- Na przykład `CFileException` typ ma `m_cause` elementu danych, która zawiera typ wyliczany określający przyczyną wyjątku pliku. Przykłady możliwych zwracać wartości są **CFileException::fileNotFound** i **CFileException::readOnly**.  
+ Na przykład `CFileException` typ ma `m_cause` elementu danych, która zawiera typ wyliczany określający przyczyną wyjątku pliku. Przykłady możliwych zwracać wartości są `CFileException::fileNotFound` i `CFileException::readOnly`.  
   
  Poniższy przykład przedstawia sposób sprawdź zawartość `CFileException`. Innego typu wyjątku może sprawdzić w podobny sposób.  
   

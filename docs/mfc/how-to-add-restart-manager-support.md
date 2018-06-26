@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a2916bd96bf36333a81b2e8a88e62cc8f562e9e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f11cc3258d577969807dd63c24c00da39652fff
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351157"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931276"
 ---
 # <a name="how-to-add-restart-manager-support"></a>Porady: dodawanie obsługi menedżera ponownego uruchamiania
 
@@ -47,7 +47,7 @@ Menedżer ponownego uruchamiania to funkcja dodana do programu Visual Studio dla
     m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS;  
  ```  
   
-5.  Upewnij się, że `InitInstance` nadrzędnego wywołania metod aplikacji `InitInstance` metody: [CWinApp::InitInstance](../mfc/reference/cwinapp-class.md#initinstance) lub `CWinAppEx::InitInstance`. `InitInstance` Metoda jest odpowiedzialna za sprawdzanie `m_dwRestartManagerSupportFlags` parametru.  
+5.  Upewnij się, że `InitInstance` nadrzędnego wywołania metod aplikacji `InitInstance` metody: [CWinApp::InitInstance](../mfc/reference/cwinapp-class.md#initinstance) lub `CWinAppEx::InitInstance`. `InitInstance` Metoda jest odpowiedzialna za sprawdzanie *m_dwRestartManagerSupportFlags* parametru.  
   
 6.  Skompiluj i uruchom aplikację.  
   

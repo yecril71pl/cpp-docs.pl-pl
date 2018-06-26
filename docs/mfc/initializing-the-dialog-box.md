@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7918180a437687eded090b3d014e4affe38fe8f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c4bc280c57998b23082f11f4ebe42b660177d3c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344714"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929624"
 ---
 # <a name="initializing-the-dialog-box"></a>Inicjowanie okna dialogowego
-Po okna dialogowego pole i wszystkie jego formantów są tworzone, ale przed okno dialogowe zostanie wyświetlone okno (albo typu) na ekranie obiektu okna dialogowego przez [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) została wywołana funkcja elementu członkowskiego. Modalne okno dialogowe, to wystąpi podczas `DoModal` wywołania. Pola z niemodalnego okna dialogowego `OnInitDialog` jest wywoływane, gdy **Utwórz** jest wywoływana. Zwykle zastąpienie `OnInitDialog` zainicjować formantów okna dialogowego, takie jak ustawianie początkowy tekst pola edycji. Należy wywołać `OnInitDialog` funkcji członkowskiej klasy podstawowej, `CDialog`, z Twojego `OnInitDialog` zastąpienia.  
+Po okna dialogowego pole i wszystkie jego formantów są tworzone, ale przed okno dialogowe zostanie wyświetlone okno (albo typu) na ekranie obiektu okna dialogowego przez [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) została wywołana funkcja elementu członkowskiego. Modalne okno dialogowe, to wystąpi podczas `DoModal` wywołania. Pola z niemodalnego okna dialogowego `OnInitDialog` jest wywoływane, gdy `Create` jest wywoływana. Zwykle zastąpienie `OnInitDialog` zainicjować formantów okna dialogowego, takie jak ustawianie początkowy tekst pola edycji. Należy wywołać `OnInitDialog` funkcji członkowskiej klasy podstawowej, `CDialog`, z Twojego `OnInitDialog` zastąpienia.  
   
  Jeśli chcesz ustawić kolor tła okna dialogowego (oraz że wszystkie inne okna dialogowe w aplikacji), zobacz [Ustawianie koloru tła okna dialogowego](../mfc/setting-the-dialog-boxs-background-color.md).  
   

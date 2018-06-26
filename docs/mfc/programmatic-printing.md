@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a439080cec7f3ae96014e9df6ddc65782686bf0e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dbbc9792fcaec6713e13b4665568017bc5ce1bdc
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352838"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930930"
 ---
 # <a name="programmatic-printing"></a>Drukowanie programowe
-OLE podane środki do unikatowego identyfikowania trwałe dokumentów (**GetClassFile**) i załadować je do ich skojarzonego kodu (`CoCreateInstance`, **QueryInterface(IID_IPersistFile)**, **QueryInterface(IID_IPersistStorage)**, **IPersistFile::Load**, i **IPersistStorage::Load**). Aby umożliwić drukowanie dokumentów, zawieranie dokumentów aktywnych (przy użyciu istniejącego projektu OLE nie zostały wydane z OLE 2.0 pierwotnie) wprowadzono base standard interfejsu drukowania, `IPrint`, ogólnie dostępna za pośrednictwem wszystkich obiektów, które można załadować Stan trwały typu dokumentu. Każdy widok aktywnego dokumentu może opcjonalnie obsługiwać **iprint —** interfejsu zapewniają następujące możliwości.  
+OLE podane środki do unikatowego identyfikowania trwałe dokumentów (`GetClassFile`) i załadować je do ich skojarzonego kodu (`CoCreateInstance`, `QueryInterface(IID_IPersistFile)`, `QueryInterface(IID_IPersistStorage)`, `IPersistFile::Load`, i `IPersistStorage::Load`). Aby umożliwić drukowanie dokumentów, zawieranie dokumentów aktywnych (przy użyciu istniejącego projektu OLE nie zostały wydane z OLE 2.0 pierwotnie) wprowadzono base standard interfejsu drukowania, `IPrint`, ogólnie dostępna za pośrednictwem wszystkich obiektów, które można załadować Stan trwały typu dokumentu. Każdy widok aktywnego dokumentu może opcjonalnie obsługiwać `IPrint` interfejsu zapewniają następujące możliwości.  
   
  `IPrint` Interfejsu jest zdefiniowane w następujący sposób:  
   
@@ -49,15 +49,15 @@ interface IPrint : IUnknown
     };  
 ```  
   
- Klienci i kontenery po prostu użyć **IPrint::Print** nakazać dokument Drukuj, sama po załadowaniu tego dokumentu, określając drukowania flagi kontrolne, urządzenie docelowe, strony do drukowania oraz dodatkowe opcje. Klienta można także sterować kontynuacja drukowanie za pośrednictwem interfejsu `IContinueCallback` (patrz poniżej).  
+ Klienci i kontenery po prostu użyć `IPrint::Print` nakazać dokument Drukuj, sama po załadowaniu tego dokumentu, określając drukowania flagi kontrolne, urządzenie docelowe, strony do drukowania oraz dodatkowe opcje. Klienta można także sterować kontynuacja drukowanie za pośrednictwem interfejsu `IContinueCallback` (patrz poniżej).  
   
- Ponadto **IPrint::SetInitialPageNum** obsługuje możliwość drukowania serii dokumentów, zgodnie z jedną poprzez numerowania strony bezproblemowo, oczywiście korzyści dla kontenerów dokumentów aktywnych, takich jak Office Binder. **IPrint::GetPageInfo** umożliwia wyświetlanie informacji podział na strony prostego przez obiekt wywołujący, aby pobrać początkowej strony numer wcześniej przekazany do **SetInitialPageNum** (lub dokumentu wewnętrznego ustawienia domyślnego numer strony początkowej) i liczba stron w dokumencie.  
+ Ponadto `IPrint::SetInitialPageNum` obsługuje możliwość drukowania serii dokumentów, zgodnie z jedną poprzez numerowania strony bezproblemowo, oczywiście korzyści dla kontenerów dokumentów aktywnych, takich jak Office Binder. `IPrint::GetPageInfo` Umożliwia wyświetlanie informacji podział na strony prostego przez obiekt wywołujący, aby pobrać początkowej strony numer wcześniej przekazany do `SetInitialPageNum` (lub dokumentu default wewnętrzny numer strony początkowej) i liczba stron w dokumencie.  
   
  Obiekty obsługujące `IPrint` są oznaczone w rejestrze z kluczem "Printable" przechowywane na podstawie identyfikatora CLSID obiektu:  
   
  HKEY_CLASSES_ROOT\CLSID\\{...} \Printable  
   
- `IPrint` Zazwyczaj jest zaimplementowany dla tego samego obiektu, który obsługuje albo `IPersistFile` lub `IPersistStorage`. Obiekty wywołujące należy zwrócić uwagę możliwość programowane drukowanie trwały stan niektóre klasy przez wyszukiwanie w rejestrze dla klucza "Printable". Obecnie "Drukowalnych" wskazuje obsługę co najmniej `IPrint`; inne interfejsy może być zdefiniowana w przyszłości, który będzie wówczas dostępna za pośrednictwem `QueryInterface` gdzie **iprint —** po prostu reprezentuje podstawowym poziomie pomocy technicznej.  
+ `IPrint` Zazwyczaj jest zaimplementowany dla tego samego obiektu, który obsługuje albo `IPersistFile` lub `IPersistStorage`. Obiekty wywołujące należy zwrócić uwagę możliwość programowane drukowanie trwały stan niektóre klasy przez wyszukiwanie w rejestrze dla klucza "Printable". Obecnie "Drukowalnych" wskazuje obsługę co najmniej `IPrint`; inne interfejsy może być zdefiniowana w przyszłości, który będzie wówczas dostępna za pośrednictwem `QueryInterface` gdzie `IPrint` po prostu reprezentuje podstawowym poziomie pomocy technicznej.  
   
  Podczas drukowania procedury można, klienta lub kontenera, który zainicjował drukowanie do kontrolowania, czy powinno być kontynuowane drukowania. Na przykład kontener może obsługiwać "Zatrzymaj drukowanie" polecenie, które należy jak najszybciej zakończyć zadania drukowania. Obsługa tej możliwości, klient drukowalnych obiektu można zaimplementować obiekt sink małych powiadomień przy użyciu interfejsu `IContinueCallback`:  
   
@@ -72,11 +72,11 @@ interface IContinueCallback : IUnknown
     };  
 ```  
   
- Ten interfejs ma służyć jako funkcję wywołania zwrotnego kontynuacji ogólnego, który odbywa się z różnych procedur kontynuacji w interfejsie API Win32 (takich jak **AbortProc** do drukowania i  **EnumMetafileProc** wyliczenia metaplik). W związku z tym ten projekt interfejsu jest przydatne w wielu różnych procesów czasochłonna.  
+ Ten interfejs ma służyć jako funkcję wywołania zwrotnego kontynuacji ogólnego, który odbywa się z różnych procedur kontynuacji w interfejsie API Win32 (takich jak `AbortProc` do drukowania i `EnumMetafileProc` wyliczenia metaplik). W związku z tym ten projekt interfejsu jest przydatne w wielu różnych procesów czasochłonna.  
   
- W przypadku najbardziej ogólnym **IContinueCallback::FContinue** funkcja jest wywoływana przez żaden proces, długotrwałą, okresowo. Zwraca obiekt sink `S_OK` aby kontynuować operację, i **S_FALSE** aby jak najszybciej zatrzymać tę procedurę.  
+ W przypadku najbardziej ogólnym `IContinueCallback::FContinue` funkcja jest wywoływana przez żaden proces, długotrwałą, okresowo. Obiekt sink zwraca wartość S_OK, aby kontynuować operację i wartości S_FALSE, aby jak najszybciej zatrzymać tę procedurę.  
   
- **FContinue**, jednak nie jest używana w kontekście **IPrint::Print**; zamiast drukowanie używa **IContinueCallback::FContinuePrint**. Dowolny obiekt drukowania okresowo powinny wywoływać **FContinuePrinting** przekazywanie liczbę stron, które zostały drukowania, numer strony drukowanej i dodatkowy ciąg opisujący stan drukowania, którego klient może być wyświetlana użytkownikowi (na przykład "5 strony 19").  
+ `FContinue`, jednak nie jest używana w kontekście `IPrint::Print`; zamiast drukowanie używa `IContinueCallback::FContinuePrint`. Dowolny obiekt drukowania okresowo powinny wywoływać `FContinuePrinting` przekazywanie liczbę stron, które zostały drukowania, numer strony drukowanej i dodatkowy ciąg opisujący stan drukowania, klient może wybrać do wyświetlenia dla użytkownika (na przykład "strony 5 19").  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontenery dokumentów aktywnych](../mfc/active-document-containers.md)

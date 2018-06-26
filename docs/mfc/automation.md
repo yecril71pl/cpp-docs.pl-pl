@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce325073d8a1585ffa9e520cebdfc372280306d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdd62c73c099cbae8a21c82cca55cb8430d7fd04
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345888"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930605"
 ---
 # <a name="automation"></a>Automatyzacja
 Automatyzacja (wcześniej znane jako automatyzacji OLE) umożliwia jednej aplikacji do modyfikowania obiektów w innej aplikacji lub na uwidocznienie obiektów, więc można manipulować.  
@@ -57,7 +57,7 @@ Automatyzacja (wcześniej znane jako automatyzacji OLE) umożliwia jednej aplika
  Wiele aplikacji komercyjnych, takich jak program Microsoft Excel i Microsoft Visual C++ pozwalają automatycznie wykonuje sporą część ich funkcji. Na przykład w programie Visual C++, możesz zapisać, makra skrypt VBScript w celu zautomatyzowania kompilacje aspektów kodu, edytowanie i debugowanie zadań.  
   
 ##  <a name="_core_passing_parameters_in_automation"></a> Przekazywanie parametrów w automatyzacji  
- Kłopotliwe w tworzeniu metod automatyzacji pomaga mechanizm uniform "bezpiecznej" do przekazywania danych między serwerami automatyzacji i klientami. Używa automatyzacji **VARIANT** typu do przekazywania danych. **VARIANT** typ jest oznakowany union. Ma element członkowski danych dla wartości (jest to anonimowa Unia C++) i wskazujący typ informacji przechowywanych w Unii elementu członkowskiego danych. **VARIANT** typu obsługuje wiele typów danych standardowe: 2 i 4-bajtowych liczb całkowitych, 4 i 8-bajtowych liczb zmiennoprzecinkowych, ciągi i wartościami logicznymi. Ponadto obsługuje `HRESULT` (kody błędów OLE), **waluty** (stałoprzecinkowe typ liczbowy), i **data** typy (bezwzględne datę i godzinę), oraz wskaźniki do **IUnknown**  i `IDispatch` interfejsów.  
+ Kłopotliwe w tworzeniu metod automatyzacji pomaga mechanizm uniform "bezpiecznej" do przekazywania danych między serwerami automatyzacji i klientami. Używa automatyzacji **VARIANT** typu do przekazywania danych. **VARIANT** typ jest oznakowany union. Ma element członkowski danych dla wartości (jest to anonimowa Unia C++) i wskazujący typ informacji przechowywanych w Unii elementu członkowskiego danych. **VARIANT** typu obsługuje wiele typów danych standardowe: 2 i 4-bajtowych liczb całkowitych, 4 i 8-bajtowych liczb zmiennoprzecinkowych, ciągi i wartościami logicznymi. Ponadto obsługuje **HRESULT** (kody błędów OLE), **waluty** (stałoprzecinkowe typ liczbowy), i **data** typy (bezwzględne datę i godzinę), oraz wskaźniki do `IUnknown` i `IDispatch` interfejsów.  
   
  **VARIANT** typu jest hermetyzowany w [COleVariant](../mfc/reference/colevariant-class.md) klasy. Obsługa **waluty** i **data** klasy znajdują się w [COleCurrency](../mfc/reference/colecurrency-class.md) i [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) klasy.  
   

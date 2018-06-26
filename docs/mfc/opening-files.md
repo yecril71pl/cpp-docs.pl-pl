@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 379449469d37f01c7c0fd225688a019eaec9e977
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ba12cce799d0d1ed9a02f3a4d3a268ca86d4447
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352766"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931570"
 ---
 # <a name="opening-files"></a>Otwieranie plików
 W MFC najczęściej próbę otwarcia pliku jest procesem dwuetapowym.  
@@ -55,7 +55,7 @@ W MFC najczęściej próbę otwarcia pliku jest procesem dwuetapowym.
  [!code-cpp[NVC_MFCFiles#1](../atl-mfc-shared/reference/codesnippet/cpp/opening-files_1.cpp)]  
   
 > [!NOTE]
->  W tym przykładzie tworzy i otwiera plik. Jeśli występują problemy, `Open` może zwrócić wywołanie `CFileException` obiektu w jej ostatni parametr, jak pokazano poniżej. `TRACE` Makro wyświetla kod wskazujący przyczynę błędu i nazwę pliku. Możesz wywołać `AfxThrowFileException` funkcji, jeśli potrzebujesz bardziej szczegółowe raportowanie błędów.  
+>  W tym przykładzie tworzy i otwiera plik. Jeśli występują problemy, `Open` może zwrócić wywołanie `CFileException` obiektu w jej ostatni parametr, jak pokazano poniżej. TRACE — makro drukuje kod wskazujący przyczynę błędu i nazwę pliku. Możesz wywołać `AfxThrowFileException` funkcji, jeśli potrzebujesz bardziej szczegółowe raportowanie błędów.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Cfile — klasa](../mfc/reference/cfile-class.md)   

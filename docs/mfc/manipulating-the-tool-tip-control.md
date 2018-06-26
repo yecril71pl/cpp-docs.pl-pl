@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76976c0907d645ad945700c4d396217880712f11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 91e2e247acb85188c1280713e9e5ad8ef8f19448
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346441"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929831"
 ---
 # <a name="manipulating-the-tool-tip-control"></a>Operowanie formantem etykietki narzędzia
 Klasa `CToolTipCtrl` udostępnia funkcje kontrolować różne atrybuty elementu członkowskiego grupy `CToolTipCtrl` obiekt i Porada okna narzędzia.  
@@ -37,7 +37,7 @@ Klasa `CToolTipCtrl` udostępnia funkcje kontrolować różne atrybuty elementu 
   
 -   [GetTipTextColor](../mfc/reference/ctooltipctrl-class.md#gettiptextcolor) i [SetTipTextColor](../mfc/reference/ctooltipctrl-class.md#settiptextcolor) pobiera i ustawia kolor tekstu narzędzia Porada okna.  
   
- Aby formantem etykietki narzędzia ma być powiadamiany o ważne komunikaty, takie jak **WM_LBUTTONXXX** wiadomości, przekazywania wiadomości z formantem etykietki narzędzia. Jest najlepszą metodę dla tego przekazywania do wywoływania [CToolTipCtrl::RelayEvent](../mfc/reference/ctooltipctrl-class.md#relayevent)w `PreTranslateMessage` funkcja okno właściciela. Poniższy przykład przedstawia jedną z możliwych metod (przy założeniu formantem etykietki narzędzia jest nazywany `m_ToolTip`):  
+ Aby formantem etykietki narzędzia ma być powiadamiany o ważne komunikaty, takie jak wiadomości WM_LBUTTONXXX musi przekazywania wiadomości z formantem etykietki narzędzia. Jest najlepszą metodę dla tego przekazywania do wywoływania [CToolTipCtrl::RelayEvent](../mfc/reference/ctooltipctrl-class.md#relayevent)w `PreTranslateMessage` funkcja okno właściciela. Poniższy przykład przedstawia jedną z możliwych metod (przy założeniu formantem etykietki narzędzia jest nazywany `m_ToolTip`):  
   
  [!code-cpp[NVC_MFCControlLadenDialog#41](../mfc/codesnippet/cpp/manipulating-the-tool-tip-control_1.cpp)]  
   

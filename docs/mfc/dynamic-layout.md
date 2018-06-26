@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7518e2fdd07254b8b1991fae8a41f26058920858
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e0fcfff6bcca8cb073c337043490d32f8724aad
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350852"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930355"
 ---
 # <a name="dynamic-layout"></a>Układ dynamiczny
 Z MFC w programie Visual Studio 2015 można utworzyć okna dialogowe, które użytkownik może zmienić rozmiar i kontrolować sposób, który dostosowuje układ na zmianę rozmiaru. Na przykład można dołączyć przycisków w dolnej części okna dialogowego do dolnej krawędzi, więc zawsze pozostają na dole. Można również skonfigurować niektóre formanty, takie jak pól list, editboxes i pola tekstowego rozszerzenia, ponieważ użytkownik rozwija okna dialogowego.  
@@ -31,7 +31,7 @@ Z MFC w programie Visual Studio 2015 można utworzyć okna dialogowe, które uż
   
  ![Okno dialogowe po zmieniany. ] (../mfc/media/mfcdynamiclayout5.png "mfcdynamiclayout5")  
   
- Układ dynamiczny można kontrolować, określając szczegółów dla każdego formantu w edytorze zasobów w środowisku IDE lub należy więc programowane uzyskiwanie dostępu do obiektu CMFCDynamicLayout dla określonego formantu i ustawiając właściwości.  
+ Układ dynamiczny można kontrolować, określając szczegółów dla każdego formantu w edytorze zasobów w środowisku IDE lub należy więc programowo uzyskując dostęp do `CMFCDynamicLayout` obiekt do określonego formantu i ustawiając właściwości.  
   
 ### <a name="setting-dynamic-layout-properties-in-the-resource-editor"></a>Ustawianie właściwości dynamicznych układu w edytorze zasobów  
  Bez konieczności pisania kodu, za pomocą edytora zasobów można ustawić zachowanie układ dynamiczny dla okna dialogowego.  
@@ -61,7 +61,7 @@ Z MFC w programie Visual Studio 2015 można utworzyć okna dialogowe, które uż
   
 1.  Znaleźć lub utworzyć miejsce, w którym chcesz określić układ dynamiczny dla okna dialogowego kod implementacji klasy okien dialogowych. Na przykład możesz chcieć takich jak dodawanie metody `AdjustLayout` w oknie dialogowym i połączenie go z miejsc, gdzie układ musi zostać zmienione. Najpierw może to wywołać, z konstruktora lub po wprowadzeniu zmian do okna dialogowego.  
   
-2.  Okno dialogowe, wywołaj [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), metody klasy CWnd. GetDynamicLayout zwraca wskaźnik do obiektu CMFCDynamicLayout.  
+2.  Okno dialogowe, wywołaj [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), Metoda `CWnd` klasy. `GetDynamicLayout` Zwraca wskaźnik do `CMFCDynamicLayout` obiektu.  
   
  ```  
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
@@ -106,7 +106,7 @@ Z MFC w programie Visual Studio 2015 można utworzyć okna dialogowe, które uż
   
 9. Następnym razem, użytkownik zmienia rozmiar okna dialogowego [CMFCDynamicLayout::Adjust](../mfc/reference/cmfcdynamiclayout-class.md#adjust) wywoływana jest metoda, która faktycznie stosuje ustawienia.  
   
-10. Jeśli chcesz wyłączyć układ dynamiczny, wywołanie [CWnd::EnableDynamicLayout](../mfc/reference/cwnd-class.md#enabledynamiclayout) z `FALSE` jak w przypadku `bEnabled` parametru.  
+10. Jeśli chcesz wyłączyć układ dynamiczny, wywołanie [CWnd::EnableDynamicLayout](../mfc/reference/cwnd-class.md#enabledynamiclayout) z **FALSE** jak w przypadku *bWłączony* parametru.  
   
  ```  
     pDialog->EnableDynamicLayout(FALSE);
@@ -122,7 +122,7 @@ Z MFC w programie Visual Studio 2015 można utworzyć okna dialogowe, które uż
 
  ```  
   
-     Zasób o nazwie musi odwoływać się okno dialogowe, który zawiera informacje o układzie w formie AFX_DIALOG_LAYOUT wpis w pliku zasobów, jak w poniższym przykładzie:  
+     Zasób o nazwie musi odwoływać się okno dialogowe, który zawiera informacje o układzie w formie **AFX_DIALOG_LAYOUT** wpis w pliku zasobów, jak w poniższym przykładzie:  
   
  "" * / / / * / / * / / AFX_DIALOG_LAYOUT * / /  
  

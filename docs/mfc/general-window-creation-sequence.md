@@ -17,21 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75a9c6ecf6516adceda845dadd4f0313ae605f0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a3a4b67ccbba97405678985e6412cc56911bd184
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346519"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929695"
 ---
 # <a name="general-window-creation-sequence"></a>Ogólna sekwencja tworzenia okna
 Podczas tworzenia okna oknie użytkownika, takie jak element podrzędny platformę używa znacznie te same czynności, którą opisano w [tworzenia dokumentu/widoku](../mfc/document-view-creation.md).  
   
  Klasy okien podał zatrudnienia MFC [dwuetapowa konstrukcja](../mfc/one-stage-and-two-stage-construction-of-objects.md). Oznacza to, że podczas wywołania języka C++ **nowe** operatora, konstruktora przydziela i inicjuje obiekt C++, ale nie powoduje utworzenia odpowiedniego okna systemu Windows. Następnie wykonywane przez wywołanie metody [Utwórz](../mfc/reference/cwnd-class.md#create) funkcji członkowskiej klasy obiektu okna.  
   
- **Utwórz** funkcji członkowskiej sprawia, że okno systemu Windows i są przechowywane jego `HWND` w obiekcie C++ publicznego elementu członkowskiego danych [m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd). **Utwórz** przekazuje pełną elastyczność tworzenia parametrów. Przed wywołaniem **Utwórz**, można zarejestrować klasy okna za pomocą funkcji globalnej [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) było ustawić styl ikony, jak i klasy ramki.  
+ `Create` Funkcji członkowskiej sprawia, że okno systemu Windows i są przechowywane jego `HWND` w obiekcie C++ publicznego elementu członkowskiego danych [m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd). `Create` Pozwala ukończyć elastyczność za pośrednictwem parametry tworzenia. Przed wywołaniem `Create`, można zarejestrować klasy okna za pomocą funkcji globalnej [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) było ustawić styl ikony, jak i klasy ramki.  
   
- Okna ramowe, można użyć [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) funkcji członkowskiej zamiast **Utwórz**. `LoadFrame` powoduje, że okno systemu Windows przy użyciu mniejszej liczby parametrów. Pobiera wiele wartości domyślnych z zasobów, w tym ramki podpis, ikona tabeli akceleratora i menu.  
+ Okna ramowe, można użyć [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) funkcji członkowskiej zamiast `Create`. `LoadFrame` powoduje, że okno systemu Windows przy użyciu mniejszej liczby parametrów. Pobiera wiele wartości domyślnych z zasobów, w tym ramki podpis, ikona tabeli akceleratora i menu.  
   
 > [!NOTE]
 >  Ikona, w tabeli akceleratora i w zasoby menu musi mieć wspólny identyfikator zasobów, takich jak **IDR_MAINFRAME**, ich być załadowana przez LoadFrame.  

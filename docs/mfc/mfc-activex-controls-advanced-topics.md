@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb451abc3aabe52d9aeffbc92f80df38f02e0b99
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99480a8d77aef1822034be100a03f73cfa9d1be0
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354021"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930007"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>Kontrolki ActiveX MFC: tematy zaawansowane
 W tym artykule omówiono Tematy zaawansowane powiązany Programowanie formantów ActiveX. Należą do nich następujące elementy:  
@@ -79,9 +79,9 @@ W tym artykule omówiono Tematy zaawansowane powiązany Programowanie formantów
   
 8.  W **uzyskać funkcji** i **ustawić funkcja** pola, wpisz unikatowe nazwy Get i ustawić funkcji lub zaakceptuj domyślne nazwy.  
   
-9. Dodawanie parametru o nazwie `row` (typ `short`), za pomocą narzędzia **Nazwa parametru** i **typ parametru** kontrolki.  
+9. Dodawanie parametru o nazwie *wiersza* (typ *krótki*) za pomocą **Nazwa parametru** i **typ parametru** formantów.  
   
-10. Dodaj drugi parametr o nazwie `column` (typ `short`).  
+10. Dodaj drugi parametr o nazwie *kolumny* (typ *krótki*).  
   
 11. Kliknij przycisk **Zakończ**.  
   
@@ -111,48 +111,48 @@ W tym artykule omówiono Tematy zaawansowane powiązany Programowanie formantów
   
 |Błąd|Opis|  
 |-----------|-----------------|  
-|**CTL_E_ILLEGALFUNCTIONCALL**|Niedozwolone wywołanie funkcji|  
-|**CTL_E_OVERFLOW**|Przepełnienie|  
-|**CTL_E_OUTOFMEMORY**|Za mało pamięci|  
-|**CTL_E_DIVISIONBYZERO**|Dzielenie przez zero|  
-|**CTL_E_OUTOFSTRINGSPACE**|Za mało miejsca na ciąg|  
-|**CTL_E_OUTOFSTACKSPACE**|Za mało miejsca na stosie|  
-|**CTL_E_BADFILENAMEORNUMBER**|Zła nazwa lub numer pliku|  
-|**CTL_E_FILENOTFOUND**|Nie można odnaleźć pliku|  
-|**CTL_E_BADFILEMODE**|Zły tryb pliku|  
-|**CTL_E_FILEALREADYOPEN**|Plik jest już otwarty|  
-|**CTL_E_DEVICEIOERROR**|Błąd We/Wy urządzenia|  
-|**CTL_E_FILEALREADYEXISTS**|Plik już istnieje.|  
-|**CTL_E_BADRECORDLENGTH**|Zła długość rekordu|  
-|**CTL_E_DISKFULL**|Dysk jest zapełniony|  
-|**CTL_E_BADRECORDNUMBER**|Nieprawidłowy numer rekordu|  
-|**CTL_E_BADFILENAME**|Nieprawidłowa nazwa pliku|  
-|**CTL_E_TOOMANYFILES**|Za dużo plików|  
-|**CTL_E_DEVICEUNAVAILABLE**|Urządzenie jest niedostępne|  
-|**CTL_E_PERMISSIONDENIED**|Odmowa uprawnień|  
-|**CTL_E_DISKNOTREADY**|Dysk nie jest gotowy|  
-|**CTL_E_PATHFILEACCESSERROR**|Błąd dostępu do ścieżki/pliku|  
-|**CTL_E_PATHNOTFOUND**|Nie można odnaleźć ścieżki|  
-|**CTL_E_INVALIDPATTERNSTRING**|Nieprawidłowy ciąg znaków wzorca|  
-|**CTL_E_INVALIDUSEOFNULL**|Nieprawidłowe użycie wartości NULL|  
-|**CTL_E_INVALIDFILEFORMAT**|Nieprawidłowy format pliku|  
-|**CTL_E_INVALIDPROPERTYVALUE**|Nieprawidłowa wartość właściwości|  
-|**CTL_E_INVALIDPROPERTYARRAYINDEX**|Nieprawidłowy indeks tablicy właściwości|  
-|**CTL_E_SETNOTSUPPORTEDATRUNTIME**|Zestaw nie jest obsługiwana w czasie wykonywania|  
-|**CTL_E_SETNOTSUPPORTED**|Set nie jest możliwa (właściwość tylko do odczytu)|  
-|**CTL_E_NEEDPROPERTYARRAYINDEX**|Potrzebny indeks tablicy właściwości|  
-|**CTL_E_SETNOTPERMITTED**|Zestaw nie jest dozwolone|  
-|**CTL_E_GETNOTSUPPORTEDATRUNTIME**|Get nie jest możliwa w czasie wykonywania|  
-|**CTL_E_GETNOTSUPPORTED**|Pobierz nie jest obsługiwany (właściwość tylko do zapisu)|  
-|**CTL_E_PROPERTYNOTFOUND**|Nie odnaleziono właściwości|  
-|**CTL_E_INVALIDCLIPBOARDFORMAT**|Nieprawidłowy format Schowka|  
-|**CTL_E_INVALIDPICTURE**|Nieprawidłowy obraz|  
-|**CTL_E_PRINTERERROR**|Błąd drukarki|  
-|**CTL_E_CANTSAVEFILETOTEMP**|Nie można zapisać pliku do katalogu TEMP|  
-|**CTL_E_SEARCHTEXTNOTFOUND**|Nie można odnaleźć wyszukiwania tekstu|  
-|**CTL_E_REPLACEMENTSTOOLONG**|Zbyt długie elementy zastępujące|  
+|CTL_E_ILLEGALFUNCTIONCALL|Niedozwolone wywołanie funkcji|  
+|CTL_E_OVERFLOW|Przepełnienie|  
+|CTL_E_OUTOFMEMORY|Za mało pamięci|  
+|CTL_E_DIVISIONBYZERO|Dzielenie przez zero|  
+|CTL_E_OUTOFSTRINGSPACE|Za mało miejsca na ciąg|  
+|CTL_E_OUTOFSTACKSPACE|Za mało miejsca na stosie|  
+|CTL_E_BADFILENAMEORNUMBER|Zła nazwa lub numer pliku|  
+|CTL_E_FILENOTFOUND|Nie można odnaleźć pliku|  
+|CTL_E_BADFILEMODE|Zły tryb pliku|  
+|CTL_E_FILEALREADYOPEN|Plik jest już otwarty|  
+|CTL_E_DEVICEIOERROR|Błąd We/Wy urządzenia|  
+|CTL_E_FILEALREADYEXISTS|Plik już istnieje.|  
+|CTL_E_BADRECORDLENGTH|Zła długość rekordu|  
+|CTL_E_DISKFULL|Dysk jest zapełniony|  
+|CTL_E_BADRECORDNUMBER|Nieprawidłowy numer rekordu|  
+|CTL_E_BADFILENAME|Nieprawidłowa nazwa pliku|  
+|CTL_E_TOOMANYFILES|Za dużo plików|  
+|CTL_E_DEVICEUNAVAILABLE|Urządzenie jest niedostępne|  
+|CTL_E_PERMISSIONDENIED|Odmowa uprawnień|  
+|CTL_E_DISKNOTREADY|Dysk nie jest gotowy|  
+|CTL_E_PATHFILEACCESSERROR|Błąd dostępu do ścieżki/pliku|  
+|CTL_E_PATHNOTFOUND|Nie można odnaleźć ścieżki|  
+|CTL_E_INVALIDPATTERNSTRING|Nieprawidłowy ciąg znaków wzorca|  
+|CTL_E_INVALIDUSEOFNULL|Nieprawidłowe użycie wartości NULL|  
+|CTL_E_INVALIDFILEFORMAT|Nieprawidłowy format pliku|  
+|CTL_E_INVALIDPROPERTYVALUE|Nieprawidłowa wartość właściwości|  
+|CTL_E_INVALIDPROPERTYARRAYINDEX|Nieprawidłowy indeks tablicy właściwości|  
+|CTL_E_SETNOTSUPPORTEDATRUNTIME|Zestaw nie jest obsługiwana w czasie wykonywania|  
+|CTL_E_SETNOTSUPPORTED|Set nie jest możliwa (właściwość tylko do odczytu)|  
+|CTL_E_NEEDPROPERTYARRAYINDEX|Potrzebny indeks tablicy właściwości|  
+|CTL_E_SETNOTPERMITTED|Zestaw nie jest dozwolone|  
+|CTL_E_GETNOTSUPPORTEDATRUNTIME|Get nie jest możliwa w czasie wykonywania|  
+|CTL_E_GETNOTSUPPORTED|Pobierz nie jest obsługiwany (właściwość tylko do zapisu)|  
+|CTL_E_PROPERTYNOTFOUND|Nie odnaleziono właściwości|  
+|CTL_E_INVALIDCLIPBOARDFORMAT|Nieprawidłowy format Schowka|  
+|CTL_E_INVALIDPICTURE|Nieprawidłowy obraz|  
+|CTL_E_PRINTERERROR|Błąd drukarki|  
+|CTL_E_CANTSAVEFILETOTEMP|Nie można zapisać pliku do katalogu TEMP|  
+|CTL_E_SEARCHTEXTNOTFOUND|Nie można odnaleźć wyszukiwania tekstu|  
+|CTL_E_REPLACEMENTSTOOLONG|Zbyt długie elementy zastępujące|  
   
- Jeśli to konieczne, użyj **CUSTOM_CTL_SCODE** makra, aby zdefiniować kod błędów niestandardowych dla warunku, który nie pasuje do przez jeden z kodów standardowa. Parametr to makro powinna być liczbą całkowitą z zakresu od 1000 do 32767 włącznie. Na przykład:  
+ W razie potrzeby należy użyć makra CUSTOM_CTL_SCODE do definiowania kodu błędu niestandardowego dla warunku, który nie pasuje do przez jeden z kodów standardowa. Parametr to makro powinna być liczbą całkowitą z zakresu od 1000 do 32767 włącznie. Na przykład:  
   
  [!code-cpp[NVC_MFC_AxUI#37](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_4.cpp)]  
   
@@ -176,7 +176,7 @@ W tym artykule omówiono Tematy zaawansowane powiązany Programowanie formantów
   
      —lub—  
   
--   Deklarowanie zmiennej lokalnej i podklasy elementu okna dialogowego. Wstaw kod, który jest podobny do następującego (`CMyCtrl` to klasa otoki `IDC_MYCTRL1` jest identyfikator formantu):  
+-   Deklarowanie zmiennej lokalnej i podklasy elementu okna dialogowego. Wstaw kod, który jest podobny do następującego (`CMyCtrl` to klasa otoki IDC_MYCTRL1 jest identyfikator formantu):  
   
      [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]  
   

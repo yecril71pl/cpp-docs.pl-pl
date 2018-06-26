@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81d28a7c5fdb48201cc1f4f2998fd0904749445d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23f8aaf1e485d7ba38a561639f81b36d494a98f2
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351748"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930436"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>Kontrolki ActiveX MFC: strony właściwości
 Strony właściwości umożliwiają użytkownikowi formantu ActiveX wyświetlanie i zmiana właściwości formantu ActiveX. Te właściwości są dostępne przez okno dialogowe właściwości formantu, który zawiera jeden lub więcej stron właściwości, które zapewniają dostosowany interfejs graficzny służący do wyświetlania i edytowania właściwości formantu.  
@@ -80,13 +80,13 @@ Okno dialogowe właściwości
   
 2.  Kliknij dwukrotnie **okna dialogowego** ikona katalogu.  
   
-3.  Otwórz **IDD_PROPPAGE_SAMPLE** okno dialogowe.  
+3.  Otwórz okno dialogowe IDD_PROPPAGE_SAMPLE.  
   
      Kreator kontrolek ActiveX dołącza nazwę projektu w celu identyfikator okna dialogowego, w tym przypadku próbki.  
   
 4.  Przeciągnij i upuść wybrany formant z przybornika do obszaru okno dialogowe.  
   
-5.  Na przykład tekst etykiety formantu "podpis:" i okno edycji z **IDC_CAPTION** identyfikator są wystarczające.  
+5.  Na przykład tekst etykiety formantu "podpis:" i okno edycji z identyfikatorem IDC_CAPTION są wystarczające.  
   
 6.  Kliknij przycisk **zapisać** na pasku narzędzi, aby zapisać zmiany.  
   
@@ -99,9 +99,9 @@ Okno dialogowe właściwości
   
  [!code-cpp[NVC_MFC_AxUI#31](../mfc/codesnippet/cpp/mfc-activex-controls-property-pages_1.cpp)]  
   
- Ta funkcja umożliwia skojarzenie stronę właściwości `m_caption` zmiennej członkowskiej, z tekstem, przy użyciu `DDP_TEXT` funkcji.  
+ Ta funkcja umożliwia skojarzenie stronę właściwości *m_caption* zmiennej członkowskiej, z tekstem, przy użyciu `DDP_TEXT` funkcji.  
   
- Po dodaje formantu strony właściwości, należy ustanowić powiązanie właściwości kontrolki strony `IDC_CAPTION`, i przy użyciu właściwości rzeczywistą kontrolę podpis, **ddp_text —** działać zgodnie z powyższym opisem.  
+ Po utworzeniu strony właściwości kontrolki dodaje należy ustanowić powiązanie właściwości kontrolki strony, IDC_CAPTION i właściwości rzeczywistą kontrolę podpis, przy użyciu `DDP_Text` działać zgodnie z powyższym opisem.  
   
  [Strony właściwości](../mfc/reference/property-pages-mfc.md) są dostępne dla innych typów formantu okna dialogowego, takich jak pola wyboru, przyciski radiowe i pola listy. Poniższa tabela zawiera listę całego zestawu strony właściwości **ddp_ —** funkcji i ich celów:  
   
@@ -117,7 +117,7 @@ Okno dialogowe właściwości
 |`DDP_LBString`|Zaznaczony ciąg w polu listy z właściwością formantu. Zaznaczony ciąg może rozpoczynać się od tych samych liter jako wartość właściwości, ale nie musi być zgodne go całkowicie.|  
 |`DDP_LBStringExact`|Zaznaczony ciąg w polu listy z właściwością formantu. Zaznaczony ciąg i wartość ciągu właściwości muszą być całkowicie zgodne.|  
 |`DDP_Radio`|Przycisk radiowy z właściwością formantu.|  
-|**Ddp_text —**|Tekst z właściwością formantu.|  
+|`DDP_Text`|Tekst z właściwością formantu.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)   

@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c51a2efba3c89b4e216fec96459b14c3d0c637d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 791694bfa1bcd7472be4691d9aef133b80ccace4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357562"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930133"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>Kontrolki ActiveX MFC: dodawanie właściwości standardowych
-Właściwości podstawowe różnią się od właściwości niestandardowe, są one już zaimplementowany przez klasę `COleControl`. `COleControl` zawiera funkcje wstępnie zdefiniowanego elementu członkowskiego, które obsługuje wspólne właściwości formantu. Niektóre typowe właściwości obejmują Podpis formantu i kolory pierwszego planu i tła. Uzyskać informacji o innych właściwości podstawowych, zobacz [giełdowych właściwości obsługiwane przez Kreatora dodawania właściwości](#_core_stock_properties_supported_by_classwizard) dalszej części tego artykułu. Wpisy mapy wysyłania dla właściwości podstawowe są zawsze poprzedzone **DISP_STOCKPROP**.  
+Właściwości podstawowe różnią się od właściwości niestandardowe, są one już zaimplementowany przez klasę `COleControl`. `COleControl` zawiera funkcje wstępnie zdefiniowanego elementu członkowskiego, które obsługuje wspólne właściwości formantu. Niektóre typowe właściwości obejmują Podpis formantu i kolory pierwszego planu i tła. Uzyskać informacji o innych właściwości podstawowych, zobacz [giełdowych właściwości obsługiwane przez Kreatora dodawania właściwości](#_core_stock_properties_supported_by_classwizard) dalszej części tego artykułu. Wpisy mapy wysyłania dla zasobu, którego właściwości są zawsze poprzedzone DISP_STOCKPROP.  
   
  W tym artykule opisano Dodawanie właściwości standardowych (w tym przypadku podpis) do formantu ActiveX, za pomocą Kreatora dodawania właściwości i opisano wynikowy modyfikacji kodu. Tematy obejmują:  
   
@@ -81,16 +81,16 @@ Właściwości podstawowe różnią się od właściwości niestandardowe, są o
   
 |Właściwość|Wpisu mapy wysyłania|Jak wartość dostępu|  
 |--------------|------------------------|-------------------------|  
-|**Wygląd**|**(DISP_STOCKPROP_APPEARANCE)**|Wartość dostępna jako **m_sAppearance**.|  
-|`BackColor`|**(DISP_STOCKPROP_BACKCOLOR)**|Wartość dostępny przez wywołanie metody `GetBackColor`.|  
-|`BorderStyle`|**(DISP_STOCKPROP_BORDERSTYLE)**|Wartość dostępna jako **m_sBorderStyle**.|  
-|**Podpis**|**(DISP_STOCKPROP_CAPTION)**|Wartość dostępny przez wywołanie metody `InternalGetText`.|  
-|**włączone**|**(DISP_STOCKPROP_ENABLED)**|Wartość dostępna jako **m_bEnabled**.|  
-|**Czcionki**|**(DISP_STOCKPROP_FONT)**|Zapoznaj się z artykułem [kontrolki ActiveX MFC: przy użyciu czcionek](../mfc/mfc-activex-controls-using-fonts.md) do użycia.|  
-|`ForeColor`|**(DISP_STOCKPROP_FORECOLOR)**|Wartość dostępny przez wywołanie metody `GetForeColor`.|  
-|**Właściwość hWnd**|**(DISP_STOCKPROP_HWND)**|Wartość dostępna jako `m_hWnd`.|  
-|**Tekst**|**(DISP_STOCKPROP_TEXT)**|Wartość dostępny przez wywołanie metody `InternalGetText`. Ta właściwość jest taka sama jak **podpis**, z wyjątkiem nazwy właściwości.|  
-|**ReadyState**|**DISP_STOCKPROP_READYSTATE()**|Wartość dostępna jako m_lReadyState lub `GetReadyState`|  
+|`Appearance`|(DISP_STOCKPROP_APPEARANCE)|Wartość dostępna jako `m_sAppearance`.|  
+|`BackColor`|(DISP_STOCKPROP_BACKCOLOR)|Wartość dostępny przez wywołanie metody `GetBackColor`.|  
+|`BorderStyle`|(DISP_STOCKPROP_BORDERSTYLE)|Wartość dostępna jako `m_sBorderStyle`.|  
+|`Caption`|(DISP_STOCKPROP_CAPTION)|Wartość dostępny przez wywołanie metody `InternalGetText`.|  
+|`Enabled`|(DISP_STOCKPROP_ENABLED)|Wartość dostępna jako `m_bEnabled`.|  
+|`Font`|(DISP_STOCKPROP_FONT)|Zapoznaj się z artykułem [kontrolki ActiveX MFC: przy użyciu czcionek](../mfc/mfc-activex-controls-using-fonts.md) do użycia.|  
+|`ForeColor`|(DISP_STOCKPROP_FORECOLOR)|Wartość dostępny przez wywołanie metody `GetForeColor`.|  
+|`hWnd`|(DISP_STOCKPROP_HWND)|Wartość dostępna jako `m_hWnd`.|  
+|`Text`|(DISP_STOCKPROP_TEXT)|Wartość dostępny przez wywołanie metody `InternalGetText`. Ta właściwość jest taka sama jak `Caption`, z wyjątkiem nazwy właściwości.|  
+|`ReadyState`|DISP_STOCKPROP_READYSTATE()|Wartość dostępna jako `m_lReadyState` lub `GetReadyState`|  
   
 ##  <a name="_core_stock_properties_and_notification"></a> Właściwości podstawowe i powiadomienia  
  Większość podstawowych właściwości ma funkcje powiadomień, które mogą zostać zastąpione. Na przykład, gdy `BackColor` właściwości zostanie zmieniona, `OnBackColorChanged` wywołaniem funkcji (funkcja członkowska klasy formantu). Domyślna implementacja (w `COleControl`) wywołań `InvalidateControl`. Należy przesłonić tę funkcję, aby podejmować dodatkowe akcje w odpowiedzi na takiej sytuacji.  

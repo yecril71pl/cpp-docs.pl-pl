@@ -15,17 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cdf264bd0c2aa44bdeecc58b4bc8eb89c70fb91
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b20d649bc89d9d66103f258ebdfdac767f431b5
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350036"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930051"
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>Kontrolki ActiveX MFC: dodawanie metod niestandardowych
 Niestandardowe metody różnią się od metod standardowych, nie są już zaimplementowane przez `COleControl`. Należy podać implementacji dla każdej niestandardowej metody dodawany do formantu.  
   
- Użytkownik formantu ActiveX można wywołać metody niestandardowej w dowolnym momencie do wykonania akcji specyficzne dla formantu. Wpisu mapy wysyłania dla niestandardowej metody ma postać `DISP_FUNCTION`.  
+ Użytkownik formantu ActiveX można wywołać metody niestandardowej w dowolnym momencie do wykonania akcji specyficzne dla formantu. Wpis mapy wysyłania niestandardowych metod jest w formie disp_function —.  
   
 ##  <a name="_core_adding_a_custom_method_with_classwizard"></a> Dodawanie niestandardowej metody z Kreator dodawania metody  
  W poniższej procedurze przedstawiono Dodawanie niestandardowej metody PtInCircle do formantu ActiveX szkielet kodu. PtInCircle Określa, czy współrzędne przekazany do formantu są wewnątrz lub na zewnątrz okręgu. Tę samą procedurę można również dodać innych metod niestandardowych. Zastąp nazwę niestandardowej metody i jego parametrów dla nazwy metody PtInCircle i parametry.  
@@ -45,15 +45,15 @@ Niestandardowe metody różnią się od metod standardowych, nie są już zaimpl
   
      Spowoduje to otwarcie Kreatora dodawania metody.  
   
-5.  W **nazwę metody** wpisz `PtInCircle`.  
+5.  W **nazwę metody** wpisz *PtInCircle*.  
   
-6.  W **wewnętrzna nazwa** wpisz nazwę metody wewnętrznej funkcji lub użyj wartości domyślnej (w tym przypadku `PtInCircle`).  
+6.  W **wewnętrzna nazwa** wpisz nazwę metody wewnętrznej funkcji lub użyj wartości domyślnej (w tym przypadku *PtInCircle*).  
   
 7.  W **typu zwracanego** kliknij **VARIANT_BOOL** dla zwracanego typu metody.  
   
-8.  Przy użyciu **typ parametru** i **Nazwa parametru** formantów, Dodaj parametr o nazwie `xCoord` (typ **OLE_XPOS_PIXELS**).  
+8.  Przy użyciu **typ parametru** i **Nazwa parametru** formantów, Dodaj parametr o nazwie *xCoord* (typ *OLE_XPOS_PIXELS*).  
   
-9. Przy użyciu **typ parametru** i **Nazwa parametru** formantów, Dodaj parametr o nazwie `yCoord` (typ **OLE_YPOS_PIXELS**).  
+9. Przy użyciu **typ parametru** i **Nazwa parametru** formantów, Dodaj parametr o nazwie *yCoord* (typ *OLE_YPOS_PIXELS*).  
   
 10. Kliknij przycisk **Zakończ**.  
   
@@ -62,19 +62,19 @@ Niestandardowe metody różnią się od metod standardowych, nie są już zaimpl
   
  [!code-cpp[NVC_MFC_AxUI#18](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_1.h)]  
   
- Ten kod deklaruje obsługi metody wysyłania o nazwie `PtInCircle`. Ta funkcja może zostać wywołana kontroli użytkownik za pomocą zewnętrzną nazwę PtInCircle.  
+ Ten kod deklaruje obsługi metody wysyłania o nazwie `PtInCircle`. Ta funkcja może być wywoływany przez użytkownika formantu przy użyciu zewnętrzną nazwę `PtInCircle`.  
   
  Następujący wiersz jest dodawany do formantu. Plik IDL:  
   
  [!code-cpp[NVC_MFC_AxUI#19](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_2.idl)]  
   
- Ten wiersz przypisuje metody PtInCircle określonych numer identyfikacyjny metody pozycję na liście właściwości i metod Kreator dodawania metody. Ponieważ Kreator dodawania metody został użyty do dodania niestandardowej metody, wpis dla niego był automatycznie dodawany do projektu. Plik IDL.  
+ Ten wiersz przypisuje `PtInCircle` metoda określonych numer identyfikacyjny, metody pozycję na liście właściwości i metod Kreator dodawania metody. Ponieważ Kreator dodawania metody został użyty do dodania niestandardowej metody, wpis dla niego był automatycznie dodawany do projektu. Plik IDL.  
   
  Ponadto następujący wiersz znajduje się w implementacji (. Pliku CPP) klasy formant został dodany do formantu mapy wysyłania:  
   
  [!code-cpp[NVC_MFC_AxUI#20](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_3.cpp)]  
   
- `DISP_FUNCTION` Makra mapy metody PtInCircle funkcji obsługi formantu, `PtInCircle`, deklaruje typ zwrotny jako **VARIANT_BOOL**i deklaruje dwa parametry typu **vts_xpos_pixels —** i **VTS_YPOSPIXELS** do przekazania do `PtInCircle`.  
+ Disp_function — makro mapuje metody `PtInCircle` funkcji obsługi formantu, `PtInCircle`, deklaruje typ zwrotny jako **VARIANT_BOOL**i deklaruje dwa parametry typu **vts_xpos_pixels —** i **VTS_YPOSPIXELS** do przekazania do `PtInCircle`.  
   
  Ponadto Kreator dodawania metody dodaje funkcję stub `CSampleCtrl::PtInCircle` z dolną krawędzią formantu implementacji (. Pliku CPP). Aby uzyskać `PtInCircle` działanie, jak wspomniano wcześniej, go muszą zostać zmodyfikowane w następujący sposób:  
   

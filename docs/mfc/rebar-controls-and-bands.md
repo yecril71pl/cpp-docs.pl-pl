@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1fac5f83f19fab37604a14e239cf505891c737f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ae83c3e41ebabf62ad98211f3943af2b535c806
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349854"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929510"
 ---
 # <a name="rebar-controls-and-bands"></a>Formanty paska pomocniczego i paski
 Głównym celem formantu paska pomocniczego ma działać jako kontener dla okien podrzędnych, formanty standardowe okno dialogowe, menu, paski narzędzi i tak dalej. Zawieranie ten jest obsługiwany przez pojęcie "poza pasmem". Każdej grupy paska pomocniczego może zawierać dowolną kombinację pasek uchwytu, mapy bitowej etykietę tekstową i okna podrzędnego.  
@@ -43,7 +43,7 @@ Głównym celem formantu paska pomocniczego ma działać jako kontener dla okien
   
  [InsertBand](../mfc/reference/crebarctrl-class.md#insertband) i [DeleteBand](../mfc/reference/crebarctrl-class.md#deleteband) Dodawanie i usuwanie paskami pomocniczymi. [MinimizeBand](../mfc/reference/crebarctrl-class.md#minimizeband) i [MaximizeBand](../mfc/reference/crebarctrl-class.md#maximizeband) wpływa na rozmiar bieżącego taśmy szczególne paska pomocniczego. [MoveBand](../mfc/reference/crebarctrl-class.md#moveband) zmiany indeksu taśmy szczególne paska pomocniczego. [ShowBand](../mfc/reference/crebarctrl-class.md#showband) pokazuje lub ukrywa pasma paska pomocniczego od użytkownika.  
   
- W poniższym przykładzie pokazano, dodając pasek narzędzi (`m_wndToolBar`) do istniejącego formantu paska pomocniczego (`m_wndReBar`). Grupy jest opisane przez inicjowanie `rbi` struktury i wywołując `InsertBand` funkcji członkowskiej:  
+ W poniższym przykładzie pokazano, dodając pasek narzędzi (*m_wndToolBar*) do istniejącego formantu paska pomocniczego (*m_wndReBar*). Grupy jest opisane przez inicjowanie `rbi` struktury i wywołując `InsertBand` funkcji członkowskiej:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#27](../mfc/codesnippet/cpp/rebar-controls-and-bands_1.cpp)]  
   

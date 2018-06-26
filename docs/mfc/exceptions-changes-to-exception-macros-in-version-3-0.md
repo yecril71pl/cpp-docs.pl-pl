@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92d1691f9a61a11dc4d9dfe7e869ccb7899746bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c4e6c7744c3d5328985eee24e67ee1eb359fb3c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350015"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931021"
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Wyjątki: zmiany w makrach wyjątków w wersji 3.0
 Jest to zaawansowane tematu.  
@@ -46,13 +46,13 @@ Jest to zaawansowane tematu.
   
  [!code-cpp[NVC_MFCExceptions#19](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]  
   
- Zgłoszono jako **cexception —\***, nawet jeśli jest tworzony jako **CCustomException**. **CATCH** makr MFC wersji 2.5 i wcześniejszych zastosowań `CObject::IsKindOf` do testowania typu w czasie wykonywania. Ponieważ wyrażenie  
+ Zgłoszono jako `CException*`, nawet jeśli jest tworzony jako `CCustomException`. **CATCH** makr MFC wersji 2.5 i wcześniejszych zastosowań `CObject::IsKindOf` do testowania typu w czasie wykonywania. Ponieważ wyrażenie  
   
  [!code-cpp[NVC_MFCExceptions#20](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]  
   
  ma wartość true, pierwszy blok catch przechwytuje wyjątek. W wersji 3.0, która implementuje wiele makra Obsługa wyjątków za pomocą wyjątków języka C++, drugi blok catch zgodny element zgłaszany `CException`.  
   
- Kod podobny do tego jest rzadko. Zwykle wyświetlany, gdy obiekt wyjątku jest przekazywany do innej funkcji, który akceptuje ogólnego **cexception —\***, przetwarza "throw przed" i na koniec zgłasza wyjątek.  
+ Kod podobny do tego jest rzadko. Zwykle wyświetlany, gdy obiekt wyjątku jest przekazywany do innej funkcji, który akceptuje ogólnego `CException*`przetwarza "throw przed" i na koniec zgłasza wyjątek.  
   
  Aby obejść ten problem, Przenieś wyrażenia throw z funkcji do wywołującego kodu i Zgłoś wyjątek typu rzeczywistego nieznany wyjątek w czasie kompilator jest generowany.  
   
@@ -63,7 +63,7 @@ Jest to zaawansowane tematu.
   
  [!code-cpp[NVC_MFCExceptions#2](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_4.cpp)]  
   
- Przy użyciu **THROW** w catch bloku powoduje, że wskaźnik `e` do usunięcia, dzięki czemu witryny zewnętrzne catch otrzymają nieprawidłowego wskaźnika. Użyj `THROW_LAST` do ponowne generowanie `e`.  
+ Przy użyciu **THROW** w catch bloku powoduje, że wskaźnik `e` do usunięcia, dzięki czemu witryny zewnętrzne catch otrzymają nieprawidłowego wskaźnika. Użyj **throw_last —** do ponowne generowanie `e`.  
   
  Aby uzyskać więcej informacji, zobacz [wyjątki: wyjątki połowowe i usuwania](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   

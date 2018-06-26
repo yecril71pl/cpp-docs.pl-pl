@@ -16,22 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f02712f3df56bf2fc04fba736f28931250f7bcb8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2005391c6d91ee09703194eb8b8062ecfe08ba77
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349271"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929802"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>Kontrolki ActiveX MFC: dodawanie metod standardowych
-Podstawowe metody różni się od niestandardowej metody w tym został już zaimplementowany przez klasę [colecontrol —](../mfc/reference/colecontrol-class.md). Na przykład `COleControl` zawiera funkcję wstępnie zdefiniowanego elementu członkowskiego, która obsługuje metoda odświeżania dla formantu. Wpis mapy wysyłania dla tej metody akcji jest **DISP_STOCKFUNC_REFRESH**.  
+Podstawowe metody różni się od niestandardowej metody w tym został już zaimplementowany przez klasę [colecontrol —](../mfc/reference/colecontrol-class.md). Na przykład `COleControl` zawiera funkcję wstępnie zdefiniowanego elementu członkowskiego, która obsługuje metoda odświeżania dla formantu. Wpisu mapy wysyłania dla tej metody akcji jest DISP_STOCKFUNC_REFRESH.  
   
  `COleControl` obsługuje dwie metody akcji: DoClick i Odśwież. Odświeżanie jest wywoływany przez kontrolki użytkownika można natychmiast zaktualizować wygląd formantu; DoClick jest wywoływane w celu wyzwalać formantu kliknij zdarzenie.  
   
 |Metoda|Wpisu mapy wysyłania|Komentarz|  
 |------------|------------------------|-------------|  
 |`DoClick`|**(DISP_STOCKPROP_DOCLICK)**|Wyzwala zdarzenie Click.|  
-|**Odśwież**|**(DISP_STOCKPROP_REFRESH)**|Aktualizacje od razu wygląd formantu.|  
+|`Refresh`|**(DISP_STOCKPROP_REFRESH)**|Aktualizacje od razu wygląd formantu.|  
   
 ##  <a name="_core_adding_a_stock_method_using_classwizard"></a> Dodawanie metody akcji przy użyciu Kreator dodawania metody  
  Dodawanie metody akcji jest prosty przy użyciu [Kreator dodawania metody](../ide/add-method-wizard.md). W poniższej procedurze przedstawiono dodawanie do formantu utworzonych za pomocą Kreatora kontrolki ActiveX MFC metoda odświeżania.  

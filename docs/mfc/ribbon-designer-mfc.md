@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbde67e61a38190a2e26884659d273b55a63f89e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07131c64097457bd6a8035b5fe100ba376d49fbd
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382102"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931160"
 ---
 # <a name="ribbon-designer-mfc"></a>Projektant wstążki (MFC)
 Projektant wstążki umożliwia tworzenie i Dostosowywanie Wstążki w aplikacjach MFC. Wstążki jest elementem interfejsu użytkownika, który organizuje poleceń w grupy logiczne. Grupy te są wyświetlane na osobnych kartach pasek w górnej części okna. Wstążka zastępuje paska menu i pasków narzędzi. Wstążki może znacznie poprawić użyteczność aplikacji. Aby uzyskać więcej informacji, zobacz [wstążek](http://go.microsoft.com/fwlink/p/?linkid=129233). Na poniższej ilustracji przedstawiono wstążki.  
@@ -34,7 +34,7 @@ Projektant wstążki umożliwia tworzenie i Dostosowywanie Wstążki w aplikacja
 ## <a name="understanding-the-ribbon-designer"></a>Opis projektanta wstążki  
  Projektant wstążki tworzy i przechowuje wstążki jako zasób. Podczas tworzenia zasobu wstążki projektanta wstążki wykonuje te trzy czynności:  
   
--   Dodaje wpis w definicji skrypt zasobów projektu (* .rc). W poniższym przykładzie `IDR_RIBBON` jest unikatową nazwę, która identyfikuje zasób wstążki `RT_RIBBON_XML` jest typ zasobu i `ribbon.mfcribbon-ms` to nazwa pliku zasobu.  
+-   Dodaje wpis w definicji skrypt zasobów projektu (* .rc). W poniższym przykładzie IDR_RIBBON jest unikatową nazwę, która identyfikuje zasób wstążki, RT_RIBBON_XML jest typ zasobu i ribbon.mfcribbon ms to nazwa pliku zasobu.  
   
  ```  
     IDR_RIBBON RT_RIBBON_XML      "res\\ribbon.mfcribbon-ms"  

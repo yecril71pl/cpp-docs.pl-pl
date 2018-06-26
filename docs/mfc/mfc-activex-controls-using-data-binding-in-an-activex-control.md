@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab5195cc2381e515688182ad73452b07afd06b98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 267d47b7e061e3bde39b199cd948ba9875dea16b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353276"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929734"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Kontrolki ActiveX MFC: używanie powiązania danych w kontrolce ActiveX
 Jest jednym z bardziej zaawansowanych zastosowań kontrolki ActiveX powiązania danych, dzięki czemu właściwości formantu można powiązać z określonego pola w bazie danych. Gdy użytkownik modyfikuje danych w tej właściwości powiązanej, formantu powiadamia bazy danych i żądań, że można zaktualizować pola rekordu. Bazy danych jest następnie powiadamia formantu powodzenie lub Niepowodzenie żądania.  
@@ -51,7 +51,7 @@ Diagram koncepcyjny formantu powiązanego z danymi
  Możliwe jest tworzenie powiązanych z danymi właściwości podstawowych, chociaż jest bardziej prawdopodobne, że można [powiązania get/set, Metoda](#vchowcreatingbindablegetsetmethod).  
   
 > [!NOTE]
->  Właściwości podstawowe ma **powiązania** i **requestedit —** atrybuty domyślnie.  
+>  Właściwości podstawowe ma `bindable` i `requestedit` atrybuty domyślnie.  
   
 #### <a name="to-add-a-bindable-stock-property-using-the-add-property-wizard"></a>Aby dodać właściwości standardowych możliwej do wiązania za pomocą Kreatora dodawania właściwości  
   

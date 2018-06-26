@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d87b2a601e6e25d61de6ca6ad639ac6a62861ac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e5c2bced4f7f04cf75c72e68db0f99e0f89d2566
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347698"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930519"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>Zarządzanie danymi stanu modułów MFC
-W tym artykule omówiono dane stanu modułów MFC i jak ten stan jest aktualizowany, gdy przepływ wykonania (ścieżka kod ma za pośrednictwem aplikacji podczas wykonywania) uzyskuje i opuszcza modułu. Przełączanie stany modułów z `AFX_MANAGE_STATE` i `METHOD_PROLOGUE` również omówione makra.  
+W tym artykule omówiono dane stanu modułów MFC i jak ten stan jest aktualizowany, gdy przepływ wykonania (ścieżka kod ma za pośrednictwem aplikacji podczas wykonywania) uzyskuje i opuszcza modułu. Przełączanie stany modułów z makra afx_manage_state — i method_prologue — również jest omówiona.  
   
 > [!NOTE]
 >  Termin "module" w tym miejscu odnosi się do programu wykonywalnego lub do biblioteki DLL (lub zestaw biblioteki dll), które działają niezależnie od pozostałej części aplikacji, ale używają kopię udostępnionej biblioteki MFC DLL. Formant ActiveX jest typowym przykładem modułu.  

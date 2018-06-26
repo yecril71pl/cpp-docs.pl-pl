@@ -16,29 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b58af1efc0558fe9195f56c31df11827d57f731
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e09f8bc0b61e22435ee348968f117940b57132e3
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342897"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930878"
 ---
 # <a name="customizing-the-header-item39s-appearance"></a>Dostosowywanie elementu nagłówka&#39;wygląd s
 Przez ustawienie *dwStyle* parametru podczas tworzenia formantu nagłówka ([CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create)), można określić wygląd i zachowanie nagłówka elementy lub nagłówka samą kontrolką.  
   
  Oto przykładowy style, które można ustawić, a ich przeznaczenie:  
   
--   Aby element nagłówka wygląd przycisku polecenia, użyj `HDS_BUTTONS` stylu.  
+-   Aby element nagłówka wygląd przycisku polecenia, użyj **HDS_BUTTONS** stylu.  
   
      Użyj tego stylu, jeśli chcesz wykonywania akcji w odpowiedzi na kliknięcie myszą w elemencie nagłówka, takie jak sortowanie według określonej kolumny danych, co jest wykonywane w programie Microsoft Outlook.  
   
--   Aby dać elementów nagłówka wygląd "aktywne śledzenie", gdy wskaźnik myszy przesuwa się nad nimi, należy użyć `HDS_HOTTRACK` stylu.  
+-   Aby dać elementów nagłówka wygląd "aktywne śledzenie", gdy wskaźnik myszy przesuwa się nad nimi, należy użyć **HDS_HOTTRACK** stylu.  
   
      Aktywne śledzenie wyświetla 3D konspektu jako wskaźnik myszy przesuwa się nad elementu w innym przypadku płaskiej paska.  
   
--   Aby wskazać formantu nagłówka powinien być ukryty, użyj `HDS_HIDDEN` stylu.  
+-   Aby wskazać formantu nagłówka powinien być ukryty, użyj **HDS_HIDDEN** stylu.  
   
-     `HDS_HIDDEN` Styl wskazuje, że formantu nagłówka jest przeznaczony do użycia jako kontener danych i nie visual formantu. Ten styl nie ukrywa automatycznie formantu, ale zamiast tego wpływa na działanie `CHeaderCtrl::Layout`. Wartość zwracana w **cy** członkiem `WINDOWPOS` struktury będą miały wartość zero wskazujący, że kontrolka nie powinny być widoczne dla użytkownika.  
+     **HDS_HIDDEN** styl wskazuje, że formantu nagłówka jest przeznaczony do użycia jako kontener danych i nie visual formantu. Ten styl nie ukrywa automatycznie formantu, ale zamiast tego wpływa na działanie `CHeaderCtrl::Layout`. Wartość zwracana w *cy* członkiem `WINDOWPOS` struktury będą miały wartość zero wskazujący, że kontrolka nie powinny być widoczne dla użytkownika.  
   
  Aby uzyskać więcej informacji na temat tych właściwości, zobacz [elementów](http://msdn.microsoft.com/library/windows/desktop/bb775238) w zestawie Windows SDK. Aby uzyskać informacje dotyczące dodawania elementów do formantu nagłówka, zobacz [Dodawanie elementów do formantu nagłówka](../mfc/adding-items-to-the-header-control.md).  
   

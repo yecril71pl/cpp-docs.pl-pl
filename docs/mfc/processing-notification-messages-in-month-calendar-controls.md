@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26b4d73284b0cff362ba16248e0906b76c7f52a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ce9906a738ed6c577f46d2919a5cdac80b877110
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346916"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930992"
 ---
 # <a name="processing-notification-messages-in-month-calendar-controls"></a>Przetwarzanie komunikatów powiadomień w formantach kalendarza miesięcznego
 Jak użytkownicy korzystają z formant kalendarza miesięcznego (wybranie daty i/lub wyświetlanie inny miesiąc), formantu (`CMonthCalCtrl`) wysyła komunikaty powiadomień do nadrzędnego okna, zazwyczaj obiekt widoku lub okna dialogowego. Obsługi tych wiadomości, jeśli chcesz zrobić coś w odpowiedzi. Na przykład gdy użytkownik wybierze nowy miesiąc, aby wyświetlić, musisz podać zestaw dat, które powinny być wyróżniony.  
@@ -32,11 +32,11 @@ Jak użytkownicy korzystają z formant kalendarza miesięcznego (wybranie daty i
   
  Poniższa lista zawiera opis różnych powiadomienia wysyłane przez formant kalendarza miesięcznego.  
   
--   **Mcn_getdaystate —** żąda informacji o tym, które dni powinna być wyświetlana pogrubione. Informacje dotyczące obsługi tego powiadomienia, sekcji [Ustawianie stanu dnia formantu kalendarza miesięcznego](../mfc/setting-the-day-state-of-a-month-calendar-control.md).  
+-   Żądania mcn_getdaystate — informacje o tym, które dni powinna być wyświetlana pogrubione. Informacje dotyczące obsługi tego powiadomienia, sekcji [Ustawianie stanu dnia formantu kalendarza miesięcznego](../mfc/setting-the-day-state-of-a-month-calendar-control.md).  
   
--   **MCN_SELCHANGE** powiadamia element nadrzędny o zmianie wybranego datę lub zakres daty.  
+-   Notifies MCN_SELCHANGE nadrzędnej, czy wybrane datę lub zakres daty została zmieniona.  
   
--   **MCN_SELECT** powiadamia element nadrzędny, zgłaszający wyboru daty jawnego.  
+-   Notifies MCN_SELECT nadrzędnej, czy wprowadzono wyboru daty jawnego.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)   

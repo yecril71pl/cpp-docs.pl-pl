@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce7a4d6dc6edf122b5d9b5301768dea8389e771e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5879082ddc23630e5ee497d8abf6b65873a2b6d4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345920"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931967"
 ---
 # <a name="handling-ttnneedtext-notification-for-tool-tips"></a>Obsługa powiadomienia TTN_NEEDTEXT w przypadku etykietek narzędzi
 W ramach [Włączanie etykietek narzędzi](../mfc/enabling-tool-tips.md), obsługi **TTN_NEEDTEXT** wiadomości, dodając następujący wpis do mapy komunikatów z oknem właściciela:  
@@ -48,7 +48,7 @@ W ramach [Włączanie etykietek narzędzi](../mfc/enabling-tool-tips.md), obsłu
  Wskaźnik do [NMTTDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb760258) struktury. Ta struktura jest również omówione w dalszych [struktura TOOLTIPTEXT](../mfc/tooltiptext-structure.md).  
   
  `pResult`  
- Wskaźnik do kod wyniku można ustawić przed zwróceniem. **TTN_NEEDTEXT** programy obsługi można zignorować `pResult` parametru.  
+ Wskaźnik do kod wyniku można ustawić przed zwróceniem. **TTN_NEEDTEXT** programy obsługi można zignorować *pResult* parametru.  
   
  Na przykład obsługi powiadomień widoku formularza:  
   

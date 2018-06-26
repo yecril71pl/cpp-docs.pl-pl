@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95c896308970ffc6a2040657927dc127eee278ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f3608fbc0c7e34de4ae67ae60a12af23e9ac885
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342777"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931691"
 ---
 # <a name="callback-items-and-the-callback-mask"></a>Elementy wywołania zwrotnego i maska wywołania zwrotnego
 Dla każdego z jego elementów formantu widoku listy zwykle przechowuje tekst etykiety, indeks obrazu listy ikon elementu i zestaw bit flagi stanu elementu. Poszczególne elementy można zdefiniować jako elementy wywołania zwrotnego, które są przydatne, jeśli aplikacja już przechowuje niektóre informacje dla elementu.  
@@ -29,13 +29,13 @@ Dla każdego z jego elementów formantu widoku listy zwykle przechowuje tekst et
   
  Oprócz definiujący elementy wywołania zwrotnego, można również zmodyfikować maska wywołania zwrotnego formantu. Ta maska ustawiono flagi bitów, które określają stanów elementu, dla których aplikacji, a nie formantu, zapisuje bieżące dane. Maska wywołania zwrotnego ma zastosowanie do wszystkich elementów formantu, w odróżnieniu od oznaczenie elementu wywołania zwrotnego, która ma zastosowanie do określonego elementu. Maska wywołania zwrotnego wynosi zero domyślnie, co oznacza, że kontrolka śledzi wszystkie stany elementu. Aby zmienić to zachowanie domyślne, należy zainicjować masce dowolną kombinację następujących wartości:  
   
--   `LVIS_CUT` Element jest oznaczony do operacji kopiowania i wklejania.  
+-   **LVIS_CUT** element jest oznaczony do operacji kopiowania i wklejania.  
   
--   `LVIS_DROPHILITED` Element zostanie wyróżniona jako element docelowy przeciągania i upuszczania.  
+-   **LVIS_DROPHILITED** element zostanie wyróżniona jako element docelowy przeciągania i upuszczania.  
   
--   `LVIS_FOCUSED` Element ma fokus.  
+-   **LVIS_FOCUSED** element ma fokus.  
   
--   `LVIS_SELECTED` Element jest zaznaczony.  
+-   **LVIS_SELECTED** element jest zaznaczony.  
   
 -   **LVIS_OVERLAYMASK** aplikacja przechowuje indeksu listy obrazów bieżącego obrazu nakładki dla każdego elementu.  
   

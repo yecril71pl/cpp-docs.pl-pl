@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1be4c74a48f1367369582b433a2a833ceb8e1976
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8e9ff08054fbef3f15283395d7eb150551926dc
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343856"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928628"
 ---
 # <a name="exported-dll-function-entry-points"></a>Punkty wejścia wyeksportowanej funkcji DLL
 Dla eksportowanych funkcji biblioteki dll, użyj [afx_manage_state —](reference/extension-dll-macros.md#afx_manage_state) makra w celu prawidłowego stanu globalnego podczas przełączania z modułu DLL do biblioteki DLL z aplikacji wywołującej.  
   
  Po tym makro ustawia `pModuleState`, wskaźnik do `AFX_MODULE_STATE` struktury zawierającej dane globalne dla modułu, jak stan modułu skuteczne dla pozostałych zawierający zakres funkcji. Opuszczających zakres zawierający makro poprzedniego stanu modułu skuteczne zostanie automatycznie przywrócony.  
   
- To przełączanie jest to osiągane przez utworzenie wystąpienia **afx_module_state —** klasy na stosie. W jego konstruktorze tej klasy uzyskuje wskaźnik do bieżący stan modułu i zapisuje je w zmiennej członkowskiej, a następnie ustawia `pModuleState` jako nowy stan modułu skuteczne. W jego destruktora tej klasy przywraca wskaźnika przechowywane w jego zmiennej członkowskiej jako stan modułu skuteczne.  
+ To przełączanie jest to osiągane przez utworzenie wystąpienia `AFX_MODULE_STATE` klasy na stosie. W jego konstruktorze tej klasy uzyskuje wskaźnik do bieżący stan modułu i zapisuje je w zmiennej członkowskiej, a następnie ustawia `pModuleState` jako nowy stan modułu skuteczne. W jego destruktora tej klasy przywraca wskaźnika przechowywane w jego zmiennej członkowskiej jako stan modułu skuteczne.  
   
  Jeśli masz wyeksportowanej funkcji, takiej jak uruchamia okno dialogowe w bibliotece DLL należy dodać następujący kod na początku funkcji:  
   

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e08ea95c9cfe4bd67c0904cc22e6db19dcfb52e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ee88b7784abb6ca622e72a9dfb31efc39fa7816
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355685"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930943"
 ---
 # <a name="recommendations-for-handling-inputoutput"></a>Zalecenia dotyczące obsługi we/wy
 Przy użyciu operacji We/Wy na podstawie pliku lub nie zależy od tego, jak odpowiedzieć na pytania w następującym algorytmem:  
@@ -34,9 +34,9 @@ Przy użyciu operacji We/Wy na podstawie pliku lub nie zależy od tego, jak odpo
   
      **Aplikacji wczytać całego pliku do pamięci na otwieranie pliku i ponownie zapisać cały plik na dysku na zapisywanie pliku**  
   
-    -   Tak: Jest to domyślny MFC dokumentu. Użyj **CDocument** szeregowanie.  
+    -   Tak: Jest to domyślny MFC dokumentu. Użyj `CDocument` szeregowanie.  
   
-    -   Nie: To jest typowe w przypadku opartej na transakcjach aktualizacji pliku. Zaktualizuj plik na podstawie każdą transakcję i nie wymagają **CDocument** szeregowanie.  
+    -   Nie: To jest typowe w przypadku opartej na transakcjach aktualizacji pliku. Zaktualizuj plik na podstawie każdą transakcję i nie wymagają `CDocument` szeregowanie.  
   
 -   Nie, podstawowe nie znajdują się w pliku na dysku:  
   
@@ -50,7 +50,7 @@ Przy użyciu operacji We/Wy na podstawie pliku lub nie zależy od tego, jak odpo
   
          Przykładem tego przypadku: dane znajdują się w innej niż — ODBC DBMS; dane są odczytywane za pomocą innego mechanizmu, takiego jak OLE lub DDE.  
   
-         W takich przypadkach nie będzie można użyć serializacji, a aplikacja nie będzie otwarte i zapisać elementów menu. Można nadal używać **CDocument** jako podstawa głównej, podobnie jak MFC ODBC aplikacja używa dokumentu do przechowywania `CRecordset` obiektów. Ale nie będzie używać w ramach domyślnego pliku Otwórz/Zapisz dokument serializacji.  
+         W takich przypadkach nie będzie można użyć serializacji, a aplikacja nie będzie otwarte i zapisać elementów menu. Można nadal używać `CDocument` jako podstawa głównej, podobnie jak MFC ODBC aplikacja używa dokumentu do przechowywania `CRecordset` obiektów. Ale nie będzie używać w ramach domyślnego pliku Otwórz/Zapisz dokument serializacji.  
   
  Do obsługi otwartej, Zapisz i Zapisz jako polecenia w menu Plik, framework zapewnia serializacji dokumentu. Serializacja odczytuje i zapisuje dane, wraz z jej obiektami pochodzi od klasy `CObject`, stałe do magazynu, zwykle pliku na dysku. Serializacja jest łatwy w użyciu i obsługuje wiele potrzeb, ale może być nieodpowiednie w wiele aplikacji dostęp do danych. Dostęp do danych aplikacji zazwyczaj aktualizacji danych na podstawie każdą transakcję. Zaktualizowanie zmodyfikowanych transakcji zamiast odczytywania i zapisywania pliku danych całego jednocześnie rekordów.  
   

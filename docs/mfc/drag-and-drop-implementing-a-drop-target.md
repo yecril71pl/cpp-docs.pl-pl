@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 414437f044869fef7ae48883a88688ad50c9ac5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33088477c579cbdfe48140b806c6376b520e470c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344272"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928921"
 ---
 # <a name="drag-and-drop-implementing-a-drop-target"></a>Przeciąganie i upuszczanie: implementowanie miejsca docelowego
 W tym artykule opisano sposób wprowadzania aplikacji miejsca docelowego. Implementowanie miejsca docelowego przyjmuje nieco więcej pracy niż Implementowanie miejsca źródłowego, ale jest nadal stosunkowo proste. Metody te dotyczą także aplikacji innych niż OLE.  
@@ -30,7 +30,7 @@ W tym artykule opisano sposób wprowadzania aplikacji miejsca docelowego. Implem
   
 1.  Dodaj zmienną członkowską do każdego widoku w aplikacji, które mają być miejsca docelowego. Ta zmienna elementu członkowskiego musi być typu `COleDropTarget` lub klasą pochodną go.  
   
-2.  W klasie widoku funkcji, która obsługuje `WM_CREATE` komunikatu (zazwyczaj `OnCreate`), wywołaj nowej zmiennej członkowskiej `Register` funkcji członkowskiej. `Revoke` będzie ona wywoływana automatycznie dla możesz gdy widok zostanie zniszczony.  
+2.  W klasie widoku funkcji, która obsługuje **WM_CREATE** komunikatu (zazwyczaj `OnCreate`), wywołaj nowej zmiennej członkowskiej `Register` funkcji członkowskiej. `Revoke` będzie ona wywoływana automatycznie dla możesz gdy widok zostanie zniszczony.  
   
 3.  Zastąp następujące funkcje. Jeśli w całej aplikacji ma takie samo zachowanie, należy zastąpić te funkcje w klasie widoku. Aby zmodyfikować zachowanie w przypadku izolowanej lub chcesz włączyć porzucenie na inną niż`CView` z systemem windows, Zastąp te funkcje w Twojej `COleDropTarget`-klasy.  
   

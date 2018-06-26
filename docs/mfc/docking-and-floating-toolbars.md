@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430af2344888696e3cbf053677ef59c7249b50bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 317527d87c12a0c140c4a618ec4500dbe12bb003
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352792"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931892"
 ---
 # <a name="docking-and-floating-toolbars"></a>Zadokowane i przestawne paski narzędzi
 Microsoft Foundation Class Library obsługuje dokującego pasków narzędzi. Dokującego paska narzędzi można dołączyć, i zadokowane do dowolnej krawędzi okna nadrzędnego, lub można odłączyć, lub przestawione w osobnym oknie mini ramki. W tym artykule opisano sposób używania dokującego paski narzędzi w aplikacji.  
@@ -62,7 +62,7 @@ Microsoft Foundation Class Library obsługuje dokującego pasków narzędzi. Dok
  Ogólne MFC przykładu [DOCKTOOL](../visual-cpp-samples.md) przykłady.  
   
 ##  <a name="_core_enabling_docking_in_a_frame_window"></a> Włączanie dokowanie w oknie ramowym  
- Aby dokowania pasków narzędzi do ramki okna, okno ramowe (lub docelowego) musi być włączony umożliwia dokowania. Jest to realizowane przy użyciu [CFrameWnd::EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking) funkcji, która przyjmuje jeden `DWORD` parametr, który jest zestawem styl bits wskazujące, której stronie okno ramowe akceptuje dokowania. Jeśli ma być dokowany pasek narzędzi i istnieje wiele stron, które może być zadokowane, boków wskazane parametr przekazany do `EnableDocking` są używane w następującej kolejności: Góra, dół, lewo, prawo. Jeśli chcesz można było do formantu dokowania pasków dowolnego miejsca, należy przekazać `CBRS_ALIGN_ANY` do `EnableDocking`.  
+ Aby dokowania pasków narzędzi do ramki okna, okno ramowe (lub docelowego) musi być włączony umożliwia dokowania. Jest to realizowane przy użyciu [CFrameWnd::EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking) funkcji, która przyjmuje jeden *DWORD* parametr, który jest zestawem styl bits wskazujące, której stronie okno ramowe akceptuje dokowania. Jeśli ma być dokowany pasek narzędzi i istnieje wiele stron, które może być zadokowane, boków wskazane parametr przekazany do `EnableDocking` są używane w następującej kolejności: Góra, dół, lewo, prawo. Jeśli chcesz można było do formantu dokowania pasków dowolnego miejsca, należy przekazać **cbrs_align_any —** do `EnableDocking`.  
   
 ##  <a name="_core_enabling_docking_for_a_toolbar"></a> Włączanie Dokowanie paska narzędzi  
  Po przygotowaniu miejsca docelowego dla dokowania, należy przygotować paska narzędzi (lub źródła) w podobny sposób. Wywołanie [CControlBar::EnableDocking](../mfc/reference/ccontrolbar-class.md#enabledocking) dla poszczególnych narzędzi chcesz dock określania miejsca docelowego bokach powinien Dokowanie paska narzędzi. Jeśli żadna stron określone w wywołaniu `CControlBar::EnableDocking` stron dla dokowanie w oknie ramowym włączone są zgodne, nie Dokowanie paska narzędzi — przesunie się. Po zostały przestawione, pozostaje swobodny pasek narzędzi, nie można dock do ramki okna.  

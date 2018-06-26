@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2073e432dd0d0792e358a3f159892aea405197c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33068a96d8d0ca0a228012385da6437c455468e5
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346620"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928544"
 ---
 # <a name="document-classes"></a>Klasy dokumentów
 Obiekty klasy dokumentu, utworzone przez obiekty szablonu dokumentu, zarządzanie danych aplikacji. Klasy dokumentów uzyskuje z jednego z tych klas.  
@@ -29,7 +29,7 @@ Obiekty klasy dokumentu, utworzone przez obiekty szablonu dokumentu, zarządzani
  Obiektów klasy dokumentu interakcji z obiektami widoku. Obiekty widoku reprezentują obszaru klienckiego okna, dane dokumentu i Zezwól użytkownikom na interakcję z nią. Dokumenty i widoki są tworzone przez obiekt szablonu dokumentu.  
   
  [CDocument](../mfc/reference/cdocument-class.md)  
- Klasa podstawowa dla dokumentów aplikacji. Pochodzi z klasy dokumentu lub klas z **CDocument**.  
+ Klasa podstawowa dla dokumentów aplikacji. Pochodzi z klasy dokumentu lub klas z `CDocument`.  
   
  [COleDocument](../mfc/reference/coledocument-class.md)  
  Używane do implementacji złożonego dokumentu, a także zapewnia obsługę podstawowe kontenera. Służy jako kontener dla klas pochodnych [CDocItem](../mfc/reference/cdocitem-class.md). Ta klasa może służyć jako klasę podstawową dla dokumentów i jest klasą bazową dla kontenera `COleServerDoc`.  

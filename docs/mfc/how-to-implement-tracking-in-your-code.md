@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bae9696be10ab00a076a73c14281a9baabe3d6d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc21369dd8d241bd00da2a0a8005c977094c3abf
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349739"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932097"
 ---
 # <a name="how-to-implement-tracking-in-your-code"></a>Porady: implementowanie śledzenia w kodzie
 Aby śledzić element OLE, musi obsługiwać określone zdarzenia związanego z elementem, na przykład klikając je lub aktualizowanie widoku dokumentu. We wszystkich przypadkach jest wystarczające, aby zadeklarować tymczasowej [crecttracker —](../mfc/reference/crecttracker-class.md) obiektu i manipulowania elementem za pomocą tego obiektu.  
@@ -36,7 +36,7 @@ Aby śledzić element OLE, musi obsługiwać określone zdarzenia związanego z 
 |Kreskowane obramowanie|Element jest obecnie aktywny w miejscu|  
 |Element nakładki wzorzec kreskowaniu|Elementu server jest otwarty|  
   
- Może obsługiwać ten inicjowania za pomocą procedury, która sprawdza stan elementu OLE i ustawia odpowiednie style. **SetupTracker** funkcji dostępnej w przykładowym OCLIENT pokazuje inicjowania śledzenia. Parametry dla tej funkcji są adres śledzenia, *pTracker*; wskaźnik do elementu klienta, który jest powiązany z obiektem śledzącym, `pItem`; i wskaźnika do prostokąta, *pTrueRect*. Na pełniejsze przykład tej funkcji, zobacz przykład MFC OLE [OCLIENT](../visual-cpp-samples.md).  
+ Może obsługiwać ten inicjowania za pomocą procedury, która sprawdza stan elementu OLE i ustawia odpowiednie style. `SetupTracker` Funkcji dostępnej w przykładowym OCLIENT pokazuje inicjowania śledzenia. Parametry dla tej funkcji są adres śledzenia, *pTracker*; wskaźnik do elementu klienta, który jest powiązany z obiektem śledzącym, *pItem*; i wskaźnika do prostokąta, *pTrueRect* . Na pełniejsze przykład tej funkcji, zobacz przykład MFC OLE [OCLIENT](../visual-cpp-samples.md).  
   
  **SetupTracker** przykładowy kod przedstawia informacje o jednej funkcji; rozmieszczonymi wierszy funkcji z omówieniem funkcji funkcji:  
   
@@ -54,9 +54,9 @@ Aby śledzić element OLE, musi obsługiwać określone zdarzenia związanego z 
   
  [!code-cpp[NVC_MFCOClient#4](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_4.cpp)]  
   
- Ta funkcja może wywoływać, zawsze, gdy obiektem śledzącym ma być wyświetlana. Na przykład wywołanie tej funkcji z `OnDraw` funkcji klasy widoku. Spowoduje to zaktualizowanie wygląd tracker zawsze, gdy widok jest odowieżany. Pełny przykład, zobacz **CMainView::OnDraw** funkcja próbki MFC OLE [OCLIENT](../visual-cpp-samples.md).  
+ Ta funkcja może wywoływać, zawsze, gdy obiektem śledzącym ma być wyświetlana. Na przykład wywołanie tej funkcji z `OnDraw` funkcji klasy widoku. Spowoduje to zaktualizowanie wygląd tracker zawsze, gdy widok jest odowieżany. Pełny przykład, zobacz `CMainView::OnDraw` funkcja próbki MFC OLE [OCLIENT](../visual-cpp-samples.md).  
   
- W aplikacji zdarzenia, które wymagają kodu śledzenia, na przykład zmiany rozmiaru, przesuwania lub trafień wykrywanie, zostanie przeprowadzona. Te akcje zazwyczaj wskazują, że trwa próby pobrania lub Przenieś element. W takich sytuacjach należy zdecydować, co zostało chwycić: uchwyt zmiany rozmiaru lub części granicy między uchwyty zmiany rozmiaru. `OnLButtonDown` Obsługi wiadomości jest dobrym miejscem do testowania położenie myszy w odniesieniu do elementu. Wywoływania `CRectTracker::HitTest`. Jeśli test zwraca wartość inną niż **CRectTracker::hitOutside**, element jest zmiany rozmiaru lub przeniesiony. W związku z tym należy wywołanie `Track` funkcję elementu członkowskiego. Zobacz **CMainView::OnLButtonDown** funkcji znajduje się w przykładowym MFC OLE [OCLIENT](../visual-cpp-samples.md) pełny przykład.  
+ W aplikacji zdarzenia, które wymagają kodu śledzenia, na przykład zmiany rozmiaru, przesuwania lub trafień wykrywanie, zostanie przeprowadzona. Te akcje zazwyczaj wskazują, że trwa próby pobrania lub Przenieś element. W takich sytuacjach należy zdecydować, co zostało chwycić: uchwyt zmiany rozmiaru lub części granicy między uchwyty zmiany rozmiaru. `OnLButtonDown` Obsługi wiadomości jest dobrym miejscem do testowania położenie myszy w odniesieniu do elementu. Wywoływania `CRectTracker::HitTest`. Jeśli test zwraca wartość inną niż `CRectTracker::hitOutside`, element jest zmiany rozmiaru lub przeniesiony. W związku z tym należy wywołanie `Track` funkcję elementu członkowskiego. Zobacz `CMainView::OnLButtonDown` funkcji znajduje się w przykładowym MFC OLE [OCLIENT](../visual-cpp-samples.md) pełny przykład.  
   
  `CRectTracker` Klasa udostępnia kilka kształtów inny kursor służy do wskazania, czy ruch, Zmień rozmiar lub przeciągnij operacja odbywa się. Obsługa tego zdarzenia, sprawdź, czy jest zaznaczony element obecnie w użyciu myszy. Jeśli tak jest, wywoływania `CRectTracker::SetCursor`, lub wywołaj domyślny program obsługi. Poniższy przykład pochodzi z przykładowej MFC OLE [OCLIENT](../visual-cpp-samples.md):  
   

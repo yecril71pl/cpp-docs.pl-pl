@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8024acc4abbb02b14ed968df83779d34bd4a7271
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2551709652df0e0c65b1b0b6b5085550044e9966
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351653"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929000"
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>Porady: konwertowanie istniejącej wstążki MFC na zasób wstążki
 Wstążka zasoby są łatwiejsze do wizualizacji, modyfikowania i obsłudze niż wstążek kodowane ręcznie. W tym temacie opisano, jak przekonwertować kodowane ręcznie wstążki w projektach MFC na zasób wstążki.  
@@ -29,7 +29,7 @@ Wstążka zasoby są łatwiejsze do wizualizacji, modyfikowania i obsłudze niż
   
 ### <a name="to-convert-an-mfc-ribbon-to-a-ribbon-resource"></a>Aby przekonwertować wstążki MFC na zasób wstążki  
   
-1.  W programie Visual Studio w istniejącego projektu MFC, otwórz plik źródłowy, gdy obiekt CMFCRibbonBar został zainicjowany. Plik jest zazwyczaj mainfrm.cpp. Dodaj następujący kod po kodzie inicjowania dla wstążki.  
+1.  W programie Visual Studio w istniejącego projektu MFC, otwórz plik źródłowy gdzie `CMFCRibbonBar` obiekt został zainicjowany. Plik jest zazwyczaj mainfrm.cpp. Dodaj następujący kod po kodzie inicjowania dla wstążki.  
   
  ```  
     m_wndRibbonBar.SaveToXMLFile("RibbonOutput.xml");

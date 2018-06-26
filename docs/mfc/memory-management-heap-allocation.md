@@ -21,17 +21,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99df4a50f021e0981354a5d316606729bb824d94
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d7ef166201103b1544d0a36d82452b485af75418
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352415"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928612"
 ---
 # <a name="memory-management-heap-allocation"></a>Zarządzanie pamięcią: alokacja sterty
-Stos jest zarezerwowana na potrzeby alokacji pamięci programu. Istnieje obszar oprócz kodu programu i stosu. C — programy typowych funkcji `malloc` i **wolnego** można przydzielić i cofnięcia przydzielenia pamięci sterty. Wersja debugowania MFC zapewnia zmodyfikowanej wersji wbudowanych operatorów C++ **nowe** i **usunąć** można przydzielić i cofnięcie przydziału obiektów w pamięci sterty.  
+Stos jest zarezerwowana na potrzeby alokacji pamięci programu. Istnieje obszar oprócz kodu programu i stosu. Typowych programów C korzystanie z funkcji **— funkcja malloc** i **wolnego** można przydzielić i cofnięcia przydzielenia pamięci sterty. Wersja debugowania MFC zapewnia zmodyfikowanej wersji wbudowanych operatorów C++ **nowe** i **usunąć** można przydzielić i cofnięcie przydziału obiektów w pamięci sterty.  
   
- Jeśli używasz **nowe** i **usunąć** zamiast `malloc` i **wolnego**, jest możliwość debugowania zawiera ulepszenia zarządzania pamięcią biblioteki klas , które mogą być przydatne w wykrywanie przecieków pamięci. Podczas budowania programu z wersji MFC, wersje standard **nowe** i **usunąć** operatory umożliwiają wydajne przydzielić i cofnięcia przydzielenia pamięci (wydanej wersji programu MFC nie zawiera zmodyfikowanej wersji tych operatorów).  
+ Jeśli używasz **nowe** i **usunąć** zamiast **— funkcja malloc** i **wolnego**, można skorzystać z biblioteki klas Zarządzanie pamięcią debugowania ulepszeń, które mogą być przydatne w wykrywanie przecieków pamięci. Podczas budowania programu z wersji MFC, wersje standard **nowe** i **usunąć** operatory umożliwiają wydajne przydzielić i cofnięcia przydzielenia pamięci (wydanej wersji programu MFC nie zawiera zmodyfikowanej wersji tych operatorów).  
   
  Należy pamiętać, że łączny rozmiar obiektów przydzielony na stosie jest ograniczona tylko przez ilość dostępnej pamięci wirtualnej w systemie.  
   

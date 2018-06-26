@@ -24,17 +24,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8953cc28e35974f7a2a63754533ffd851ca62a3e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a386de558730e12bb8cf40da250c1d04dd4ff37a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350758"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931121"
 ---
 # <a name="exceptions-converting-from-mfc-exception-macros"></a>Wyjątki: konwertowanie z makr wyjątków MFC
 Jest to zaawansowane tematu.  
   
- W tym artykule opisano sposób konwertowania istniejący kod napisany za pomocą makr MFC — **SPRÓBUJ**, **CATCH**, **THROW**i tak dalej — do użycia, obsługa wyjątków języka C++ słowa kluczowe **spróbuj**, **catch**, i `throw`. Tematy obejmują:  
+ W tym artykule opisano sposób konwertowania istniejący kod napisany za pomocą makr MFC — **SPRÓBUJ**, **CATCH**, **THROW**i tak dalej — do użycia, obsługa wyjątków języka C++ słowa kluczowe **spróbuj**, **catch**, i **throw**. Tematy obejmują:  
   
 -   [Zalety konwersji](#_core_advantages_of_converting)  
   
@@ -47,7 +47,7 @@ Jest to zaawansowane tematu.
   
 -   Kompiluje kod, który używa słowa kluczowe języka C++ obsługi wyjątków do nieco mniejsze. Wywołanie pliku EXE lub. BIBLIOTEKI DLL.  
   
--   Słowa kluczowe języka C++ obsługi wyjątków są bardziej elastyczne: ich obsługi wyjątków każdego typu danych, które mogą zostać skopiowane (`int`, **float**, `char`i tak dalej), a makra obsługi wyjątków tylko klasy `CException` i klas pochodnych.  
+-   Słowa kluczowe języka C++ obsługi wyjątków są bardziej elastyczne: ich obsługi wyjątków każdego typu danych, które mogą zostać skopiowane (**int**, **float**, **char**i tak dalej), podczas gdy makra obsługi wyjątków tylko klasy `CException` i klas pochodnych.  
   
  Główna różnica między makra i słowa kluczowe jest, że kod przy użyciu makra "automatycznie" Usuwa zgłoszony wyjątek, gdy wyjątek wykracza poza zakres. Kodu za pomocą słowa kluczowe nie jest dostępne, dlatego należy jawnie usunąć zgłoszony wyjątek. Aby uzyskać więcej informacji, zobacz artykuł [wyjątki: wyjątki połowowe i usuwania](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   
@@ -69,19 +69,19 @@ Jest to zaawansowane tematu.
   
 2.  Ogranicznik bloki catch:  
   
-     Makra **CATCH** makra (z jego argumentów) rozpoczyna się pierwszego bloku catch; `AND_CATCH` makro rozpoczyna się bloki catch kolejnych i `END_CATCH` makro kończy sekwencji bloków catch.  
+     Makra **CATCH** makra (z jego argumentów) rozpoczyna się pierwszego bloku catch; **and_catch —** makro rozpoczyna się bloki catch kolejnych i **end_catch —** — makro kończy sekwencji bloków catch.  
   
-     Słów kluczowych **catch** — słowo kluczowe (z jego deklaracji wyjątku) rozpoczyna każdy blok catch. Nie ma odpowiednika do `END_CATCH` makro; zablokować kończy się jego zamykający nawias klamrowy catch.  
+     Słów kluczowych **catch** — słowo kluczowe (z jego deklaracji wyjątku) rozpoczyna każdy blok catch. Nie ma odpowiednika do **end_catch —** makro; zablokować kończy się jego zamykający nawias klamrowy catch.  
   
 3.  Wyrażenie throw:  
   
-     Użyj makra `THROW_LAST` ponowne wygenerowanie bieżącego wyjątku. `throw` — Słowo kluczowe z nie argumentów ma ten sam efekt.  
+     Użyj makra **throw_last —** ponowne wygenerowanie bieżącego wyjątku. **Throw** — słowo kluczowe z nie argumentów ma ten sam efekt.  
   
 ##  <a name="_core_doing_the_conversion"></a> Podczas konwersji  
   
 #### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>Aby przekonwertować kod przy użyciu makra, aby użyć słów kluczowych języka C++, obsługa wyjątków  
   
-1.  Znajdź wszystkie wystąpienia makr MFC **SPRÓBUJ**, **CATCH**, `AND_CATCH`, `END_CATCH`, **THROW**, i `THROW_LAST`.  
+1.  Znajdź wszystkie wystąpienia makr MFC **SPRÓBUJ**, **CATCH**, **and_catch —**, **end_catch —**, **THROW**, i **throw_last —**.  
   
 2.  Zamień lub Usuń wszystkie wystąpienia następujące makra:  
   
@@ -89,13 +89,13 @@ Jest to zaawansowane tematu.
   
      **CATCH** (go zastąpić **catch**)  
   
-     `AND_CATCH` (Go zastąpić **catch**)  
+     **And_catch —** (go zastąpić **catch**)  
   
-     `END_CATCH` (Usunąć jego)  
+     **End_catch —** (usunąć jego)  
   
-     **THROW** (go zastąpić `throw`)  
+     **THROW** (go zastąpić **throw**)  
   
-     `THROW_LAST` (Go zastąpić `throw`)  
+     **Throw_last —** (go zastąpić **throw**)  
   
 3.  Argumenty makra, dzięki czemu tworzą one deklaracje prawidłowy wyjątek.  
   

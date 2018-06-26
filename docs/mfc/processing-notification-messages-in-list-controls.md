@@ -15,17 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af648a0bf4ae78c5c5e8bcceeac12c5dbc87307a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c5412bbf1fcb7e139394b9563965244080e5c179
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347679"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932084"
 ---
 # <a name="processing-notification-messages-in-list-controls"></a>Przetwarzanie komunikatów powiadomień w kontrolkach listy
 Użytkownik kliknie przycisk nagłówki kolumn, przeciągnij ikony, Edytuj etykiety i tak dalej, kontrolki listy ([CListCtrl](../mfc/reference/clistctrl-class.md)) wysyła komunikaty powiadomień do jej okna nadrzędnego. Obsługi tych wiadomości, jeśli chcesz zrobić coś w odpowiedzi. Na przykład gdy użytkownik kliknie nagłówek kolumny, można posortować elementy na podstawie zawartości klikniętej kolumnę, tak jak Microsoft Outlook.  
   
- Proces **WM_NOTIFY** wiadomości z kontrolki listy w klasie widoku lub okna dialogowego. Okno właściwości do utworzenia [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) funkcji obsługi z instrukcji switch oparte na komunikat powiadomienia, które jest obsługiwane.  
+ Przetwarzaj wiadomości WM_NOTIFY z kontrolki listy w klasie widoku lub okna dialogowego. Okno właściwości do utworzenia [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) funkcji obsługi z instrukcji switch oparte na komunikat powiadomienia, które jest obsługiwane.  
   
  Lista powiadomień formant listy można wysyłać do jej okna nadrzędnego, zobacz [odwołania formantu widoku listy](http://msdn.microsoft.com/library/windows/desktop/bb774737) w zestawie Windows SDK.  
   

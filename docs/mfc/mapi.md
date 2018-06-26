@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19615aabce489049d38539b48300311504fbbbfe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1df0d00aa6356fa1741e7f4fc34d8063782da859
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347536"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930677"
 ---
 # <a name="mapi"></a>MAPI
-W tym artykule opisano Microsoft MAPI Messaging Application Programming Interface () dla deweloperów aplikacji klienta komunikatu. Obsługa podzbiór MAPI w klasie dostarcza MFC **CDocument** , ale nie Hermetyzowanie całego interfejsu API. Aby uzyskać więcej informacji, zobacz [Obsługa MAPI w MFC](../mfc/mapi-support-in-mfc.md).  
+W tym artykule opisano Microsoft MAPI Messaging Application Programming Interface () dla deweloperów aplikacji klienta komunikatu. Obsługa podzbiór MAPI w klasie dostarcza MFC `CDocument` , ale nie Hermetyzowanie całego interfejsu API. Aby uzyskać więcej informacji, zobacz [Obsługa MAPI w MFC](../mfc/mapi-support-in-mfc.md).  
   
  MAPI to zestaw funkcji, które aplikacje obsługujące pocztę i poczty używać do tworzenia, modyfikowania, transfer i przechowywania wiadomości e-mail. Programiści aplikacji narzędzia, aby zdefiniować cel i zawartość wiadomości e-mail, a daje im elastyczność zarządzania nimi, przechowywane wiadomości. MAPI także wspólny interfejs, który deweloperzy aplikacji można użyć do utworzenia z włączoną obsługą poczty oraz aplikacje z obsługą poczty niezależne od podstawowej system obsługi wiadomości.  
   

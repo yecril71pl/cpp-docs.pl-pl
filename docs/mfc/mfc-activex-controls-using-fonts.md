@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b53ab98e44a8696795e810b8d6f643720d8f9655
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f5d1475412de736970d0ae36a39540121bfbc01
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355142"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930718"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>Kontrolki ActiveX MFC: używanie czcionek
 Jeśli formant ActiveX jest wyświetlany tekst, można zezwolić użytkownikowi kontroli Zmienianie wyglądu tekstu, zmieniając właściwość czcionki. Właściwości czcionki są zaimplementowane jako obiekty czcionki i może być jedna z dwóch typów: standardowych lub niestandardowych. Właściwości podstawowe czcionki są właściwości preimplemented czcionki, które można dodać za pomocą Kreatora dodawania właściwości. Właściwości niestandardowe czcionki nie są preimplemented i dewelopera kontrolek określa zachowanie i użycia właściwości.  
@@ -137,11 +137,11 @@ Jeśli formant ActiveX jest wyświetlany tekst, można zezwolić użytkownikowi 
   
 8.  Kliknij przycisk **Zakończ**.  
   
- Kreator dodawania właściwości tworzy kod, aby dodać `HeadingFont` niestandardowa właściwość `CSampleCtrl` klasy i próbka. Plik IDL. Ponieważ `HeadingFont` jest typu Get/Set właściwości modyfikuje Kreatora dodawania właściwości `CSampleCtrl` klasy mapy wysyłania do uwzględnienia `DISP_PROPERTY_EX_ID` [disp_property_ex —](../mfc/reference/dispatch-maps.md#disp_property_ex) wpis makra:  
+ Kreator dodawania właściwości tworzy kod, aby dodać `HeadingFont` niestandardowa właściwość `CSampleCtrl` klasy i próbka. Plik IDL. Ponieważ `HeadingFont` jest typu Get/Set właściwości modyfikuje Kreatora dodawania właściwości `CSampleCtrl` klasy mapy wysyłania do uwzględnienia DISP_PROPERTY_EX_ID[disp_property_ex —](../mfc/reference/dispatch-maps.md#disp_property_ex) wpis makra:  
   
  [!code-cpp[NVC_MFC_AxFont#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_5.cpp)]  
   
- `DISP_PROPERTY_EX` Kojarzy makro `HeadingFont` nazwa właściwości z odpowiadającymi mu dostawcami `CSampleCtrl` klasy metody Get i Set, `GetHeadingFont` i `SetHeadingFont`. Typ wartości właściwości jest też określona; w takim przypadku **VT_FONT**.  
+ Disp_property_ex — makro kojarzy `HeadingFont` nazwa właściwości z odpowiadającymi mu dostawcami `CSampleCtrl` klasy metody Get i Set, `GetHeadingFont` i `SetHeadingFont`. Typ wartości właściwości jest też określona; w tym przypadku VT_FONT.  
   
  Dodaj właściwość dodaje także deklaracji w pliku nagłówka (. H) dla `GetHeadingFont` i `SetHeadingFont` funkcje i dodaje szablony ich funkcji w pliku implementacji (. CPP):  
   
@@ -160,11 +160,11 @@ Jeśli formant ActiveX jest wyświetlany tekst, można zezwolić użytkownikowi 
   
  W pliku implementacji (. CPP), wykonaj następujące czynności:  
   
--   Inicjowanie `m_fontHeading` w Konstruktorze formantu.  
+-   Inicjowanie *m_fontHeading* w Konstruktorze formantu.  
   
      [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]  
   
--   Deklarowanie statycznego **FONTDESC** struktury zawierającej domyślne atrybuty czcionki.  
+-   Deklarowanie struktury statycznej FONTDESC zawierający domyślne atrybuty czcionki.  
   
      [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]  
   
@@ -192,27 +192,27 @@ Jeśli formant ActiveX jest wyświetlany tekst, można zezwolić użytkownikowi 
   
      [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]  
   
- Po zaimplementowaniu niestandardowe właściwości Font standardowe strony właściwości czcionki powinny zostać wdrożone, umożliwiając użytkownikom kontroli zmiany bieżącej czcionki formantu. Aby dodać identyfikator strony właściwości dla standardowej strony właściwości czcionki, Wstaw następujący wiersz po `BEGIN_PROPPAGEIDS` makra:  
+ Po zaimplementowaniu niestandardowe właściwości Font standardowe strony właściwości czcionki powinny zostać wdrożone, umożliwiając użytkownikom kontroli zmiany bieżącej czcionki formantu. Aby dodać identyfikator strony właściwości dla standardowej strony właściwości czcionki, wstaw poniższy wiersz po begin_proppageids — makro:  
   
  [!code-cpp[NVC_MFC_AxFont#17](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_17.cpp)]  
   
- Należy również zwiększyć parametr liczba Twojej `BEGIN_PROPPAGEIDS` makro o jeden. Następujący wiersz przedstawiono to:  
+ Parametr liczba begin_proppageids — makro należy również zwiększyć o jeden. Następujący wiersz przedstawiono to:  
   
  [!code-cpp[NVC_MFC_AxFont#18](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_18.cpp)]  
   
  Po dokonaniu zmian, skompiluj ponownie cały projekt, aby włączyć dodatkowe funkcje.  
   
 ###  <a name="_core_processing_font_notifications"></a> Przetwarzanie powiadomień czcionki  
- W większości przypadków kontrolki musi znać modyfikacji właściwości obiektu czcionki. Każdy obiekt czcionki jest w stanie dostarczać powiadomienia o zmianie przez wywołanie funkcji członkowskiej klasy **IFontNotification** interfejsu implementowanego przez `COleControl`.  
+ W większości przypadków kontrolki musi znać modyfikacji właściwości obiektu czcionki. Każdy obiekt czcionki jest w stanie dostarczać powiadomienia o zmianie przez wywołanie funkcji członkowskiej klasy `IFontNotification` interfejsu implementowanego przez `COleControl`.  
   
- Jeśli formant używa standardowych właściwość czcionki, jego powiadomienia są obsługiwane przez `OnFontChanged` funkcji członkowskiej klasy `COleControl`. Podczas dodawania właściwości niestandardowe czcionki, może mieć za pomocą tego samego wykonania. W przykładzie w poprzedniej sekcji, to osiągnąć, przekazywanie &**m_xFontNotification** podczas inicjowania **m_fontHeading** zmiennej członkowskiej.  
+ Jeśli formant używa standardowych właściwość czcionki, jego powiadomienia są obsługiwane przez `OnFontChanged` funkcji członkowskiej klasy `COleControl`. Podczas dodawania właściwości niestandardowe czcionki, może mieć za pomocą tego samego wykonania. W przykładzie w poprzedniej sekcji, to osiągnąć, przekazywanie &*m_xFontNotification* podczas inicjowania *m_fontHeading* zmiennej członkowskiej.  
   
  ![Wdrażanie wielu interfejsów obiektów czcionek](../mfc/media/vc373q1.gif "vc373q1")  
 Wdrażanie wielu interfejsów obiektów czcionek  
   
- Pokaż linie ciągłe na powyższej ilustracji czy oba obiekty czcionki korzystają z tego samego wykonania **IFontNotification**. Może to powodować problemy, aby odróżnić zmianie czcionki, która.  
+ Pokaż linie ciągłe na powyższej ilustracji czy oba obiekty czcionki korzystają z tego samego wykonania `IFontNotification`. Może to powodować problemy, aby odróżnić zmianie czcionki, która.  
   
- Jednym ze sposobów rozróżnienia powiadomienia obiektu czcionki formantu jest utworzenie oddzielnych implementacja **IFontNotification** interfejsu dla każdego obiektu font w formancie. Ta technika pozwala optymalizacji kodu rysunku, aktualizując tylko ciąg lub ciągi, korzystających z ostatnio zmodyfikowane czcionki. Poniższe sekcje przedstawiają kroki niezbędne do zaimplementowania interfejsów osobne powiadomienie dla drugiego właściwość czcionki. Druga właściwość czcionki zakłada się, że `HeadingFont` właściwość, która została dodana w poprzedniej sekcji.  
+ Jednym ze sposobów rozróżnienia powiadomienia obiektu czcionki formantu jest utworzenie oddzielnych implementacja `IFontNotification` interfejsu dla każdego obiektu font w formancie. Ta technika pozwala optymalizacji kodu rysunku, aktualizując tylko ciąg lub ciągi, korzystających z ostatnio zmodyfikowane czcionki. Poniższe sekcje przedstawiają kroki niezbędne do zaimplementowania interfejsów osobne powiadomienie dla drugiego właściwość czcionki. Druga właściwość czcionki zakłada się, że `HeadingFont` właściwość, która została dodana w poprzedniej sekcji.  
   
 ###  <a name="_core_implementing_a_new_font_notification_interface"></a> Implementowanie nowy interfejs powiadomień czcionki  
  Aby odróżnić powiadomienia o dwóch lub więcej czcionek, nowy interfejs powiadomień musi być implementowana dla każdej czcionki używany w formancie. W poniższych sekcjach opisano sposobu wdrażania nowy interfejs powiadomienie czcionki przez zmodyfikowanie pliki formant nagłówka i implementacji.  
@@ -225,11 +225,11 @@ Wdrażanie wielu interfejsów obiektów czcionek
  Spowoduje to utworzenie implementacja `IPropertyNotifySink` interfejs o nazwie `HeadingFontNotify`. Ten interfejs zawiera metodę o nazwie `OnChanged`.  
   
 ### <a name="additions-to-the-implementation-file"></a>Dodatki do pliku implementacji  
- W kodzie, który inicjuje Czcionka nagłówka (w Konstruktorze sterowania), należy zmienić `&m_xFontNotification` do `&m_xHeadingFontNotify`. Następnie dodaj następujący kod:  
+ W kodzie, który inicjuje Czcionka nagłówka (w Konstruktorze sterowania), należy zmienić &*m_xFontNotification* do &*m_xHeadingFontNotify*. Następnie dodaj następujący kod:  
   
  [!code-cpp[NVC_MFC_AxFont#20](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_20.cpp)]  
   
- `AddRef` i `Release` metod w `IPropertyNotifySink` interfejsu zachować informacje o liczebności referencyjnej dla obiekt formantu ActiveX. Gdy formant uzyska dostęp do wskaźnika interfejsu, kontrolka wywołuje `AddRef` Aby zwiększyć liczbę odwołań. Po zakończeniu formantu ze wskaźnikiem wywołuje `Release`, znacznie tak samo jak robi **GlobalFree** może być wywołane w celu zwolnienia blok pamięci globalnej. Gdy liczba odwołań dla tego interfejsu przechodzi do zera, może zostać zwolnione implementacji interfejsu. W tym przykładzie `QueryInterface` funkcja zwraca wskaźnik do `IPropertyNotifySink` interfejsu dla określonego obiektu. Ta funkcja umożliwia formantu ActiveX do obiektu w celu określenia, jakie interfejsy obsługuje zapytania.  
+ `AddRef` i `Release` metod w `IPropertyNotifySink` interfejsu zachować informacje o liczebności referencyjnej dla obiekt formantu ActiveX. Gdy formant uzyska dostęp do wskaźnika interfejsu, kontrolka wywołuje `AddRef` Aby zwiększyć liczbę odwołań. Po zakończeniu formantu ze wskaźnikiem wywołuje `Release`, znacznie tak samo jak robi `GlobalFree` może być wywołane w celu zwolnienia blok pamięci globalnej. Gdy liczba odwołań dla tego interfejsu przechodzi do zera, może zostać zwolnione implementacji interfejsu. W tym przykładzie `QueryInterface` funkcja zwraca wskaźnik do `IPropertyNotifySink` interfejsu dla określonego obiektu. Ta funkcja umożliwia formantu ActiveX do obiektu w celu określenia, jakie interfejsy obsługuje zapytania.  
   
  Po wprowadzeniu tych zmian zostały wprowadzone do projektu, należy ponownie skompilować projekt i przetestować interfejs przy użyciu kontenera testu. Zobacz [testowanie właściwości i zdarzeń za pomocą kontenera testu](../mfc/testing-properties-and-events-with-test-container.md) informacji na temat sposobu dostępu kontener testu.  
   

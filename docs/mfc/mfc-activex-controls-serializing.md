@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74d62411747dbe920b772b66d11cd1e2a789c5db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9db6ff6c0cdda01875e4968e4d92ca087ad2b57
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353501"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930064"
 ---
 # <a name="mfc-activex-controls-serializing"></a>Kontrolki ActiveX MFC: serializacja
 W tym artykule omówiono sposób zserializować formantu ActiveX. Serializacja jest proces Odczyt lub zapis na nośniku magazynu trwałego, takich jak pliku na dysku. Biblioteka Microsoft Foundation Class (MFC) udostępnia wbudowaną obsługę serializacji w klasie `CObject`. `COleControl` Rozszerza ta obsługa do formantu ActiveX przy użyciu właściwości mechanizm wymiany.  
@@ -77,7 +77,7 @@ W tym artykule omówiono sposób zserializować formantu ActiveX. Serializacja j
  Aby uzyskać więcej informacji na temat tych właściwości funkcji programu exchange, zobacz [trwałości z OLE formanty](../mfc/reference/persistence-of-ole-controls.md) w *odwołania MFC*.  
   
 ##  <a name="_core_customizing_the_default_behavior_of_dopropexchange"></a> Dostosowywanie domyślnego zachowania DoPropExchange  
- Domyślna implementacja **DoPropertyExchange** (zgodnie z informacjami podanymi w temacie poprzedniej) nawiązuje połączenie klasa podstawowa `COleControl`. Serializuje to zbiór właściwości automatycznie obsługiwane przez `COleControl`, który używa więcej miejsca niż serializacja właściwości niestandardowe kontrolki. Usunięcie tego wywołania umożliwia obiekt można szeregować tylko właściwości, które należy wziąć pod uwagę ważne. Wszystkie stany właściwości standardowych zaimplementowała formantu nie będą wykonywane szeregowo podczas zapisywania lub wczytywania obiekt formantu, chyba że dodasz **PX_** odwołuje się do nich.  
+ Domyślna implementacja `DoPropertyExchange` (zgodnie z informacjami podanymi w temacie poprzedniej) nawiązuje połączenie klasa podstawowa `COleControl`. Serializuje to zbiór właściwości automatycznie obsługiwane przez `COleControl`, który używa więcej miejsca niż serializacja właściwości niestandardowe kontrolki. Usunięcie tego wywołania umożliwia obiekt można szeregować tylko właściwości, które należy wziąć pod uwagę ważne. Wszystkie stany właściwości standardowych zaimplementowała formantu nie będą wykonywane szeregowo podczas zapisywania lub wczytywania obiekt formantu, chyba że dodasz **PX_** odwołuje się do nich.  
   
 ##  <a name="_core_implementing_version_support"></a> Implementowanie obsługi wersji  
  Obsługa wersji umożliwia poprawione formantu ActiveX dodać nowe właściwości trwałych i nadal mieć możliwość wykrywania i załadować trwały stan utworzony we wcześniejszej wersji formantu. Aby udostępnić wersję formantu w ramach jego trwałych danych, należy wywołać [COleControl::ExchangeVersion](../mfc/reference/colecontrol-class.md#exchangeversion) w formancie `DoPropExchange` funkcji. To wywołanie jest automatycznie wstawiony, jeśli formant ActiveX został utworzony przy użyciu Kreatora formantów ActiveX. Można usunąć, jeśli nie jest potrzebna obsługa wersji. Jednak koszt rozmiar formantu jest bardzo mały (4 bajty) dodany elastyczność, która udostępnia obsługę wersji.  
@@ -87,7 +87,7 @@ W tym artykule omówiono sposób zserializować formantu ActiveX. Serializacja j
  [!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_2.cpp)]  
 [!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_4.cpp)]  
   
- Można użyć dowolnego `DWORD` jako numer wersji. Użyj projektów generowane przez kreatora formantu ActiveX **_wVerMinor** i **_wVerMajor** jako domyślny. Są to stałe globalne zdefiniowane w pliku implementacji klasy formantu ActiveX projektu. W pozostałej części sieci `DoPropExchange` funkcji, należy wywołać [CPropExchange::GetVersion](../mfc/reference/cpropexchange-class.md#getversion) w dowolnym momencie można pobrać wersji podczas zapisywania lub pobierania.  
+ Można użyć dowolnego **DWORD** jako numer wersji. Użyj projektów generowane przez kreatora formantu ActiveX `_wVerMinor` i `_wVerMajor` jako domyślny. Są to stałe globalne zdefiniowane w pliku implementacji klasy formantu ActiveX projektu. W pozostałej części sieci `DoPropExchange` funkcji, należy wywołać [CPropExchange::GetVersion](../mfc/reference/cpropexchange-class.md#getversion) w dowolnym momencie można pobrać wersji podczas zapisywania lub pobierania.  
   
  W poniższym przykładzie wersja 1 tego formantu próbki ma właściwość "ReleaseDate". W wersji 2 dodaje właściwość typu "OriginalDate". Jeśli formant jest instrukcją załadować trwały stan starszej wersji, inicjuje zmiennej członkowskiej dla nowych właściwości do wartości domyślnej.  
   

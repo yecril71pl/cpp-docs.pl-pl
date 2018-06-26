@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fc737a3d11307dff917132bfd113896b4ad801f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9d0c75325c62a92f65c56f2c76350bf752228fd
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350432"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932224"
 ---
 # <a name="ole-server-classes"></a>Klasy serwerów OLE
-Te klasy są używane przez serwer aplikacji. Dokumenty serwera są uzyskiwane z `COleServerDoc` , a nie z **CDocument**. Należy pamiętać, że ponieważ `COleServerDoc` jest pochodną `COleLinkingDoc`, dokumenty serwera można także kontenerów, które obsługuje łączenia.  
+Te klasy są używane przez serwer aplikacji. Dokumenty serwera są uzyskiwane z `COleServerDoc` , a nie z `CDocument`. Należy pamiętać, że ponieważ `COleServerDoc` jest pochodną `COleLinkingDoc`, dokumenty serwera można także kontenerów, które obsługuje łączenia.  
   
  `COleServerItem` Klasa reprezentuje dokumentu lub części dokumentu, która może być osadzony w innym dokumencie lub połączony.  
   

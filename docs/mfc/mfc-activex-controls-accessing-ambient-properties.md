@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 523fc0f5c87712cd61ec0709d94edcb7bcbde72c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd3376e19d7780922102240ae1bfaa1b4eb89b2b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348235"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931726"
 ---
 # <a name="mfc-activex-controls-accessing-ambient-properties"></a>Kontrolki ActiveX MFC: uzyskiwanie dostępu do właściwości otaczających
 W tym artykule opisano, jak kontrolki ActiveX można uzyskać dostępu do właściwości otaczających swojego kontenera formantu.  
@@ -44,7 +44,7 @@ W tym artykule opisano, jak kontrolki ActiveX można uzyskać dostępu do właś
 -   [AmbientFont](../mfc/reference/colecontrol-class.md#ambientfont)  
   
     > [!NOTE]
-    >  Obiekt wywołujący musi wywołać **wydania ()** zwrócony czcionki.  
+    >  Obiekt wywołujący musi wywołać `Release( )` zwrócony czcionki.  
   
 -   [AmbientForeColor](../mfc/reference/colecontrol-class.md#ambientforecolor)  
   
@@ -62,7 +62,7 @@ W tym artykule opisano, jak kontrolki ActiveX można uzyskać dostępu do właś
   
 -   [AmbientShowGrabHandles](../mfc/reference/colecontrol-class.md#ambientshowgrabhandles)  
   
- W przypadku zmiany wartości właściwości otaczających (za pośrednictwem niektóre akcje kontenera) **OnAmbientPropertyChanged** nosi nazwę funkcji członkowskiej klasy formantu. Przesłonić tę funkcję elementu członkowskiego do obsługi takiego powiadomienia. Parametr **OnAmbientPropertyChanged** jest Identyfikatorem wysyłania odpowiednich właściwości otoczenia. Wartość tego Identyfikatora wysyłania mogą być **DISPID_UNKNOWN**, co oznacza, że co najmniej jednej właściwości otoczenia został zmieniony, ale informacje o tym, które właściwości zostały zainfekowane są niedostępne.  
+ W przypadku zmiany wartości właściwości otaczających (za pośrednictwem niektóre akcje kontenera) `OnAmbientPropertyChanged` nosi nazwę funkcji członkowskiej klasy formantu. Przesłonić tę funkcję elementu członkowskiego do obsługi takiego powiadomienia. Parametr `OnAmbientPropertyChanged` jest Identyfikatorem wysyłania odpowiednich właściwości otoczenia. Wartość tego Identyfikatora wysyłania mogą być DISPID_UNKNOWN, co oznacza, że co najmniej jednej właściwości otoczenia został zmieniony, ale informacje o tym, które właściwości zostały zainfekowane jest niedostępny.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontrolki ActiveX MFC](../mfc/mfc-activex-controls.md)

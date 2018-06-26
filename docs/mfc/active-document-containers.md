@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a47db4f9715c539ecf9bcbfb78e48b7e8edbc94b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c912b6c703ef7e05825e070d09f0a1b3cd73003
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339030"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932162"
 ---
 # <a name="active-document-containers"></a>Kontenery dokumentów aktywnych
 Kontener dokumentów aktywnych, takich jak Microsoft Office Binder lub program Internet Explorer umożliwia pracę z dokumentami kilka typów innej aplikacji w ramach jednej ramki (zamiast wymuszania wielokrotnego do utworzenia i użycia wielu klatek aplikacji dla każdego Typ dokumentu).  
@@ -50,15 +50,15 @@ Kontener dokumentów aktywnych, takich jak Microsoft Office Binder lub program I
   
  Kontener dokumentów aktywnych, która integruje się dokumenty aktywne musi:  
   
--   Być może obsługiwać obiektu magazynu za pośrednictwem **IPersistStorage** interfejs, oznacza to, musi ona `IStorage` wystąpienie do każdego aktywnego dokumentu.  
+-   Być może obsługiwać obiektu magazynu za pośrednictwem `IPersistStorage` interfejs, oznacza to, musi ona `IStorage` wystąpienie do każdego aktywnego dokumentu.  
   
--   Obsługuje podstawowe funkcje osadzania dokumentów OLE, wymagających obiektów "witryna", (po jednym dla każdego dokumentu lub osadzania) które implementują **IOleClientSite** i **IAdviseSink**.  
+-   Obsługuje podstawowe funkcje osadzania dokumentów OLE, wymagających obiektów "witryna" (po jednym dla każdej dokumentu lub osadzania) które implementują `IOleClientSite` i `IAdviseSink`.  
   
--   Obsługuje aktywacji w miejscu osadzonych obiektów lub dokumentów aktywnych. Obiekty lokacji kontenera musi implementować `IOleInPlaceSite` i podać kontener ramki **IOleInPlaceFrame**.  
+-   Obsługuje aktywacji w miejscu osadzonych obiektów lub dokumentów aktywnych. Obiekty lokacji kontenera musi implementować `IOleInPlaceSite` i podać kontener ramki `IOleInPlaceFrame`.  
   
 -   Obsługuje dokumenty aktywne rozszerzeń zaimplementowanie `IOleDocumentSite` zapewnienie mechanizmu dla kontenera komunikował się z dokumentu. Opcjonalnie kontenera mogą implementować interfejsów dokumentów aktywnych `IOleCommandTarget` i `IContinueCallback` do pobrania prostych poleceń, takich jak drukowania lub zapisywania.  
   
- Opcjonalnie można zaimplementować obiekt ramki, obiekty widoku i kontenera obiektu **iolecommandtarget —** do obsługi wysyłania niektórych poleceń, zgodnie z opisem w [obiekty docelowe poleceń](../mfc/message-handling-and-command-targets.md). Opcjonalnie można zaimplementować widoku i kontenera obiektów `IPrint` i `IContinueCallback`, aby obsługiwać drukowanie programowe, zgodnie z opisem w [drukowanie programowe](../mfc/programmatic-printing.md).  
+ Opcjonalnie można zaimplementować obiekt ramki, obiekty widoku i kontenera obiektu `IOleCommandTarget` do obsługi wysyłania niektórych poleceń, zgodnie z opisem w [obiekty docelowe poleceń](../mfc/message-handling-and-command-targets.md). Opcjonalnie można zaimplementować widoku i kontenera obiektów `IPrint` i `IContinueCallback`, aby obsługiwać drukowanie programowe, zgodnie z opisem w [drukowanie programowe](../mfc/programmatic-printing.md).  
   
  Na poniższej ilustracji przedstawiono ogólne relacje między kontenera i jego składników (po lewej) i aktywny dokument i widokach (po prawej). Aktywny dokument zarządza magazynu i danych, a widok wyświetla lub opcjonalnie wyświetla dane. Interfejsy pogrubione są wymagane dla aktywnego dokumentu udział; pogrubionego oraz pochylonego są opcjonalne. Wszystkie inne interfejsy są wymagane.  
   
@@ -85,7 +85,7 @@ Kontener dokumentów aktywnych, takich jak Microsoft Office Binder lub program I
  Kontener, który obsługuje wiele widoków musi mieć możliwość tworzenia widoku wielu obiektów lokacji w lokacji dokumentu. Zapewnia każdego widoku z oddzielnych Aktywacja i dezaktywacja usługi zgodnie z za pośrednictwem `IOleInPlaceSite`.  
   
 ##  <a name="frame_object"></a> Obiekt ramki  
- Kontener ramki jest w większości przypadków tej samej ramki, w której jest używany do aktywacji w miejscu w dokumentach OLE, oznacza to, który obsługuje negocjacje menu i paska narzędzi. Wyświetl obiekt ma dostęp do tego obiektu ramki za pośrednictwem **IOleInPlaceSite::GetWindowContext**, zapewniające dostęp do obiektu kontenera reprezentujący kontenerem (która może obsłużyć negocjacji poziomu okienka narzędzi i wyliczanie obiektów zawartych w niej).  
+ Kontener ramki jest w większości przypadków tej samej ramki, w której jest używany do aktywacji w miejscu w dokumentach OLE, oznacza to, który obsługuje negocjacje menu i paska narzędzi. Wyświetl obiekt ma dostęp do tego obiektu ramki za pośrednictwem `IOleInPlaceSite::GetWindowContext`, zapewniające dostęp do obiektu kontenera reprezentujący kontenerem (która może obsłużyć negocjacji poziomu okienko narzędzi i wyliczanie obiektów zawartych w niej).  
   
  Kontener dokumentów aktywnych można rozszerzyć ramki, dodając `IOleCommandTarget`. Dzięki temu odbierania poleceń, które pochodzą z dokumentów aktywnych interfejsu użytkownika w taki sam sposób, że ten interfejs umożliwia kontenera do wysyłania tych samych poleceń (takich jak **nowy plik**, **Otwórz**,  **Zapisz jako**, **drukowania**; **Edytować kopii**, **Wklej**, **Cofnij**i inne) do aktywnego dokumentu. Aby uzyskać więcej informacji, zobacz [obiekty docelowe poleceń](../mfc/message-handling-and-command-targets.md).  
   

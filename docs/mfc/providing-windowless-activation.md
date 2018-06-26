@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbe72fcaf26a245d40544acaf59def9e24e0fa6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a42d952ade479c4eb117d21921c9b0feafb81cea
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351813"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931954"
 ---
 # <a name="providing-windowless-activation"></a>Zapewnianie aktywacji niepowiązanej z oknami
-Kod tworzenia okna (czyli wszystko, co się stanie w przypadku wywołania **właściwości CreateWindow**) jest kosztowne do wykonania. Formant, który obsługuje ekranowa okno ma zarządzać wiadomości dla okna. Formanty bez okien w związku z tym są szybsze niż formantów z systemem windows.  
+Kod tworzenia okna (czyli wszystko, co się stanie w przypadku wywołania `CreateWindow`) jest kosztowne do wykonania. Formant, który obsługuje ekranowa okno ma zarządzać wiadomości dla okna. Formanty bez okien w związku z tym są szybsze niż formantów z systemem windows.  
   
  Kolejną zaletą kontrolek bez okien jest, że w przeciwieństwie do formantów okna kontrolek bez okien obsługi malowanie przezroczyste i regiony ekranu nieprostokątny. Typowym przykładem przezroczystego formantu jest tekst formantu o przezroczyste tło. Formanty do malowania tekstu, ale nie w tle, niezależnie od jest pod tekstem widoczny. Formularze nowszej często wprowadzane Użyj nieprostokątny formantów, takich jak strzałki i zaokrąglona przycisków.  
   
@@ -41,7 +41,7 @@ Kod tworzenia okna (czyli wszystko, co się stanie w przypadku wywołania **wła
   
  Kod, aby dołączyć ta flaga jest automatycznie generowany w przypadku wybrania **aktywacji niepowiązanej z oknami** opcja [ustawienia kontroli](../mfc/reference/control-settings-mfc-activex-control-wizard.md) strony Kreator formantów MFC ActiveX.  
   
- Po włączeniu aktywacji niepowiązanej z oknami kontenera będzie delegowane komunikaty wejściowe do formantu `IOleInPlaceObjectWindowless` interfejsu. `COleControl`przez implementację tego interfejsu alokuje wiadomości formantu mapy komunikatów, po dostosowanie myszy koordynuje odpowiednio. Można przetwarzać komunikaty, takie jak komunikaty okna zwykłej, dodając odpowiednie wpisy mapy wiadomości. W programy obsługi dla tych wiadomości unikać `m_hWnd` zmiennej członkowskiej (lub dowolnej funkcji członkowskiej, która korzysta z niego) bez wcześniejszego sprawdzenia, że jego wartość nie jest **NULL**.  
+ Po włączeniu aktywacji niepowiązanej z oknami kontenera będzie delegowane komunikaty wejściowe do formantu `IOleInPlaceObjectWindowless` interfejsu. `COleControl`przez implementację tego interfejsu alokuje wiadomości formantu mapy komunikatów, po dostosowanie myszy koordynuje odpowiednio. Można przetwarzać komunikaty, takie jak komunikaty okna zwykłej, dodając odpowiednie wpisy mapy wiadomości. W programy obsługi dla tych wiadomości unikać *m_hWnd* zmiennej członkowskiej (lub dowolnej funkcji członkowskiej, która korzysta z niego) bez wcześniejszego sprawdzenia, że jego wartość nie jest **NULL**.  
   
  `COleControl` udostępnia funkcje Członkowskie, które wywołują przechwytywanie myszy, klawiatury, przewijanie i innych usług okna z kontenera zgodnie z potrzebami, w tym:  
   

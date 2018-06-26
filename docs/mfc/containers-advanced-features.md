@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ff48585a7f3e19939e8d951c513a8d39c0de47e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2999e82bd05d75cb8637ba7404c36cdc2be047a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347925"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932175"
 ---
 # <a name="containers-advanced-features"></a>Kontenery: funkcje zaawansowane
 W tym artykule opisano kroki niezbędne do włączają opcjonalne funkcje zaawansowane do istniejących aplikacji kontenera. Te funkcje są:  
@@ -70,13 +70,13 @@ W tym artykule opisano kroki niezbędne do włączają opcjonalne funkcje zaawan
   
     -   Połącz z `COleTemplateServer` obiektu do szablonów dokumentu przez wywołanie obiektu `ConnectTemplate` funkcję elementu członkowskiego.  
   
-    -   Wywołanie **COleTemplateServer::RegisterAll** funkcji członkowskiej do rejestrowania wszystkich obiektów klasy w systemie OLE.  
+    -   Wywołanie `COleTemplateServer::RegisterAll` funkcji członkowskiej do rejestrowania wszystkich obiektów klasy w systemie OLE.  
   
-    -   Wywołanie `COleTemplateServer::UpdateRegistry`. Tylko parametr `UpdateRegistry` powinien być `OAT_CONTAINER` Jeśli aplikacja nie zostanie uruchomiona z przełącznikiem "/ osadzonego". To rejestruje aplikację jako kontener, który może obsługiwać łącza do osadzonych obiektów.  
+    -   Wywołanie `COleTemplateServer::UpdateRegistry`. Tylko parametr `UpdateRegistry` powinien być *oat_container —* Jeśli aplikacja nie zostanie uruchomiona z przełącznikiem "/ osadzonego". To rejestruje aplikację jako kontener, który może obsługiwać łącza do osadzonych obiektów.  
   
          Jeśli aplikacja jest uruchomiona z przełącznikiem "/ osadzonego", nie powinny mieć jego głównego okna, podobnie jak aplikacja serwera.  
   
- Przykładowe MFC OLE [OCLIENT](../visual-cpp-samples.md) implementuje tę funkcję. Na przykład, jak to zrobić, zobacz `InitInstance` w OCLIENT funkcji. Pliku CPP tej aplikacji przykładowej.  
+ Przykładowe MFC OLE [OCLIENT](../visual-cpp-samples.md) implementuje tę funkcję. Na przykład, jak to zrobić, zobacz `InitInstance` działać w *OCLIENT. CPP* plików tej aplikacji przykładowej.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontenery](../mfc/containers.md)   

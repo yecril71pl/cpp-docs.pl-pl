@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96ec459e1c956c805991f2e37d22b8260f0ffdf2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48825a264b7d82152f47e70c5911bea400c313db
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343697"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932120"
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>Dostosowywanie wyglądu formantu paska narzędzi
 Klasa `CToolBarCtrl` udostępnia wiele style, które wpływają na wygląd (i, czasami zachowanie) obiektu paska narzędzi. Zmodyfikuj obiekt paska narzędzi przez ustawienie `dwCtrlStyle` parametr `CToolBarCtrl::Create` (lub `CToolBar::CreateEx`) funkcji członkowskiej, podczas tworzenia formantu paska narzędzi.  
@@ -47,17 +47,17 @@ Klasa `CToolBarCtrl` udostępnia wiele style, które wpływają na wygląd (i, c
 -   **TBSTYLE_ALTDRAG** umożliwia użytkownikom zmianę pozycji przycisku paska narzędzi, przeciągając go trzymając wciśnięty klawisz ALT. Jeśli nie określono tego stylu, użytkownik musi przytrzymaj klawisz SHIFT podczas przeciągania przycisku.  
   
     > [!NOTE]
-    >  `CCS_ADJUSTABLE` Styl należy określić umożliwiające przeciąganych przycisków paska narzędzi.  
+    >  **CCS_ADJUSTABLE** styl należy określić umożliwiające przeciąganych przycisków paska narzędzi.  
   
 -   **TBSTYLE_REGISTERDROP** generuje **TBN_GETOBJECT** powiadomień wiadomości, aby zażądać porzucić obiektów docelowych, gdy wskaźnik myszy przesuwa się nad przycisków paska narzędzi.  
   
  Pozostałe style wpływania na aspekty visual i niewidoczne obiektu narzędzi:  
   
--   `TBSTYLE_WRAPABLE` Tworzy pasek narzędzi, który może mieć wiele wierszy przycisków. Przyciski paska narzędzi można "wrap" do następnego wiersza po pasek narzędzi będzie zbyt ograniczone, aby uwzględnić wszystkie przyciski w tym samym wierszu. Zawijanie występuje na rozdzielenie i nongroup granic.  
+-   **TBSTYLE_WRAPABLE** tworzy mające wiele wierszy przycisków paska narzędzi. Przyciski paska narzędzi można "wrap" do następnego wiersza po pasek narzędzi będzie zbyt ograniczone, aby uwzględnić wszystkie przyciski w tym samym wierszu. Zawijanie występuje na rozdzielenie i nongroup granic.  
   
--   **TBSTYLE_CUSTOMERASE** generuje **NM_CUSTOMDRAW** komunikatów powiadomień podczas przetwarzania `WM_ERASEBKGND` wiadomości.  
+-   **TBSTYLE_CUSTOMERASE** generuje **NM_CUSTOMDRAW** komunikatów powiadomień podczas przetwarzania **WM_ERASEBKGND** wiadomości.  
   
--   `TBSTYLE_TOOLTIPS` Tworzy formantem etykietki narzędzia, która aplikacja może użyć do wyświetlenia opisu przycisków na pasku narzędzi.  
+-   **TBSTYLE_TOOLTIPS** tworzy formantem etykietki narzędzia, która aplikacja może użyć do wyświetlenia opisu przycisków na pasku narzędzi.  
   
  Pełna lista Style paska narzędzi i rozszerzonej, zobacz [formantu paska narzędzi oraz style przycisku](http://msdn.microsoft.com/library/windows/desktop/bb760439) i [narzędzi rozszerzone style](http://msdn.microsoft.com/library/windows/desktop/bb760430) w zestawie Windows SDK.  
   

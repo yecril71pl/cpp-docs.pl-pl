@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3527dabab96fe8f2832430f928a922941178ea97
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29dea08d778ba91c5b8ab3a10aaff998095e7123
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345189"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928772"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Wyjątki: przechwytywanie i usuwanie wyjątków
-Poniższe instrukcje i przykłady przedstawiają sposób catch i usuwanie wyjątków. Aby uzyskać więcej informacji na temat **spróbuj**, **catch**, i `throw` słów kluczowych, zobacz [Obsługa wyjątków języka C++](../cpp/cpp-exception-handling.md).  
+Poniższe instrukcje i przykłady przedstawiają sposób catch i usuwanie wyjątków. Aby uzyskać więcej informacji na temat **spróbuj**, **catch**, i **throw** słów kluczowych, zobacz [Obsługa wyjątków języka C++](../cpp/cpp-exception-handling.md).  
   
  Twoje programy obsługi wyjątków należy usunąć obiekty wyjątków, które obsługują, ponieważ nie powiodło się usunięcie wyjątek powoduje przeciek pamięci, zawsze, gdy wyjątek zostanie przechwycony przez ten kod.  
   
@@ -42,7 +42,7 @@ Poniższe instrukcje i przykłady przedstawiają sposób catch i usuwanie wyjąt
 -   Zwraca wykonywania z poziomu **catch** bloku.  
   
 > [!NOTE]
->  Podczas usuwania `CException`, użyj **usunąć** funkcji członkowskiej można usunąć wyjątku. Nie używaj **usunąć** — słowo kluczowe, ponieważ jego może zakończyć się niepowodzeniem, jeśli wyjątek nie znajduje się na stercie.  
+>  Podczas usuwania `CException`, użyj `Delete` funkcji członkowskiej można usunąć wyjątku. Nie używaj **usunąć** — słowo kluczowe, ponieważ jego może zakończyć się niepowodzeniem, jeśli wyjątek nie znajduje się na stercie.  
   
 #### <a name="to-catch-and-delete-exceptions"></a>Aby przechwycić i usuwanie wyjątków  
   

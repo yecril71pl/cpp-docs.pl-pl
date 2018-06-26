@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb40b356b5601e19c33083c7b731a1dc411de3c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c48f4525c01149840ca74eee249263eac27c24cf
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344152"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928705"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Dodawanie wielu widoków do pojedynczego dokumentu
 W aplikacji interfejsu pojedynczego dokumentu (SDI) utworzone za pomocą biblioteki Microsoft Foundation Class (MFC) każdego typu dokumentu jest skojarzona z typem jednego widoku. W niektórych przypadkach jest pożądane, aby mieć możliwość zmiany w bieżącym widoku dokumentu nowy widok.  
@@ -46,14 +46,14 @@ W aplikacji interfejsu pojedynczego dokumentu (SDI) utworzone za pomocą bibliot
   
  W pozostałej części tego tematu założono następujące czynności:  
   
--   Nazwa `CWinApp`-obiekt pochodnej jest `CMyWinApp`, i `CMyWinApp` został zadeklarowany i zdefiniowanych w MYWINAPP. H i MYWINAPP. CPP.  
+-   Nazwa `CWinApp`-obiekt pochodnej jest `CMyWinApp`, i `CMyWinApp` został zadeklarowany i zdefiniowanych w *MYWINAPP. H* i *MYWINAPP. CPP*.  
   
--   `CNewView` Nazwa nowej `CView`— pochodnych obiektu, i `CNewView` został zadeklarowany i zdefiniowanych w nowy widok. H i nowy widok. CPP.  
+-   `CNewView` to nazwa nowej `CView`-pochodnych obiektu, i `CNewView` został zadeklarowany i zdefiniowanych w *nowy widok. H* i *NEWVIEW. CPP*.  
   
 ##  <a name="vcconmodifyexistingapplicationa1"></a> Modyfikowanie istniejącej klasy aplikacji  
  Dla aplikacji w celu przełączania się między widokami należy zmodyfikować klasy aplikacji przez dodanie zmienne Członkowskie do przechowywania widoków i metody, aby przełączyć je.  
   
- Dodaj następujący kod do deklaracji `CMyWinApp` w MYWINAPP. H:  
+ Dodaj następujący kod do deklaracji `CMyWinApp` w *MYWINAPP. H*:  
   
  [!code-cpp[NVC_MFCDocViewSDI#1](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_1.h)]  
   
@@ -61,7 +61,7 @@ W aplikacji interfejsu pojedynczego dokumentu (SDI) utworzone za pomocą bibliot
   
  Ostatniej modyfikacji klasy aplikacji wymaga w tym nowy plik nagłówka, który definiuje komunikatów systemu Windows (**WM_INITIALUPDATE**) używany w funkcji przełączania.  
   
- Wstaw następujący wiersz w sekcji Dołącz MYWINAPP. CPP:  
+ Wstaw następujący wiersz w sekcji Dołącz *MYWINAPP. CPP*:  
   
  [!code-cpp[NVC_MFCDocViewSDI#2](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_2.cpp)]  
   
@@ -72,7 +72,7 @@ W aplikacji interfejsu pojedynczego dokumentu (SDI) utworzone za pomocą bibliot
   
  Po dodaniu klasy do projektu, trzeba będzie zmienić dostępność niektóre elementy członkowskie klasy widoku.  
   
- Zmodyfikuj nowy widok. H, zmieniając specyfikator dostępu z `protected` do **publicznego** Konstruktor i destruktor. Dzięki temu klasy tworzone i niszczone dynamicznie, a następnie zmodyfikować wygląd widoku przed udostępnieniem go.  
+ Modyfikowanie *nowy widok. H* zmieniając specyfikator dostępu z **chronione** do **publicznego** Konstruktor i destruktor. Dzięki temu klasy tworzone i niszczone dynamicznie, a następnie zmodyfikować wygląd widoku przed udostępnieniem go.  
   
  Zapisz zmiany i przejdź do następnego kroku.  
   
@@ -90,7 +90,7 @@ W aplikacji interfejsu pojedynczego dokumentu (SDI) utworzone za pomocą bibliot
 ##  <a name="vcconswitchingfunctiona4"></a> Implementowanie funkcji przełączania  
  W poprzednim kroku po dodaniu kod, który utworzone i zainicjowane nowy obiekt widoku. Ostatni element głównych jest implementacja metody przełączania `SwitchView`.  
   
- Na końcu pliku implementacji dla klasy aplikacji (MYWINAPP. CPP), dodaj następującą definicję metody:  
+ Na końcu pliku implementacji dla klasy aplikacji (*MYWINAPP. CPP*), dodaj następującą definicję metody:  
   
  [!code-cpp[NVC_MFCDocViewSDI#4](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_4.cpp)]  
   

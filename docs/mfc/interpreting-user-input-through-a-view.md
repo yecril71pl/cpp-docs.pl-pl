@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e3ade658046ad789a92bce044d12e5a6e76f7ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f62d64ed9479f1d1003536f8c4944b53d04d696f
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349432"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931993"
 ---
 # <a name="interpreting-user-input-through-a-view"></a>Interpretowanie danych wprowadzonych przez użytkownika za pośrednictwem widoku
 Inne funkcje Członkowskie widoku obsługi i interpretować wszystkie dane wejściowe użytkownika. Zazwyczaj określi funkcje Członkowskie obsługi wiadomości w klasie widoku do przetworzenia:  
@@ -44,7 +44,7 @@ Inne funkcje Członkowskie widoku obsługi i interpretować wszystkie dane wejś
   
  [Obsługa i mapowanie tematów komunikatów](../mfc/message-handling-and-mapping.md) wyjaśniono, jak przypisać elementów menu oraz inne obiekty interfejsu użytkownika poleceń i jak można powiązać z funkcjami programu obsługi poleceń. [Obsługa i mapowanie tematów komunikatów](../mfc/message-handling-and-mapping.md) również wyjaśniono, jak MFC kieruje poleceń i wysyła standardowe komunikaty systemu Windows do obiektów, które zawierają programy obsługi dla nich.  
   
- Na przykład aplikacja może wystąpić potrzeba wdrożenia bezpośredniego myszy Rysowanie w widoku. Bazgrołów pokazano sposób obsługi `WM_LBUTTONDOWN`, `WM_MOUSEMOVE`, i `WM_LBUTTONUP` wiadomości odpowiednio, aby rozpocząć, kontynuować i kończyć się rysowanie segment linii. Z drugiej strony czasami może być konieczne kliknięcie myszki w widoku jako zaznaczenia zinterpretować. W widoku `OnLButtonDown` funkcji obsługi by stwierdzić, czy rysowanie lub wybranie użytkownika. W przypadku wybrania opcji, program obsługi może określić, czy kliknięcie w granicach niektórych obiektów w widoku, a jeśli tak, zmiany były wyświetlane jako wybrany obiekt.  
+ Na przykład aplikacja może wystąpić potrzeba wdrożenia bezpośredniego myszy Rysowanie w widoku. Bazgrołów pokazano sposób obsługi wiadomości WM_LBUTTONDOWN, WM_MOUSEMOVE i WM_LBUTTONUP odpowiednio, aby rozpocząć, kontynuować i kończyć się rysowanie segment linii. Z drugiej strony czasami może być konieczne kliknięcie myszki w widoku jako zaznaczenia zinterpretować. W widoku `OnLButtonDown` funkcji obsługi by stwierdzić, czy rysowanie lub wybranie użytkownika. W przypadku wybrania opcji, program obsługi może określić, czy kliknięcie w granicach niektórych obiektów w widoku, a jeśli tak, zmiany były wyświetlane jako wybrany obiekt.  
   
  Widok może również obsługiwać niektórych poleceń menu, takich jak zasoby z menu Edycja na wycinanie, kopiowanie, wklej lub usuwanie wybranych danych korzystanie ze Schowka. Program obsługi spowodowałoby wywołanie niektóre członka dotyczące schowka funkcje klasy `CWnd` transferu elementu wybrane dane do lub ze Schowka.  
   

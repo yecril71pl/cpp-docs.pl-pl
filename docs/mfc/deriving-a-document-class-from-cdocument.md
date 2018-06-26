@@ -18,24 +18,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 698957d4e307ad1f099d5aef7de131c538ee4871
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a81f3c3a36f049e3f47401efa31b36677b3b9ba6
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342621"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931752"
 ---
 # <a name="deriving-a-document-class-from-cdocument"></a>Wyprowadzanie klasy dokumentów z obiektu CDocument
 Dokumenty zawierają i zarządzać danymi aplikacji. Aby używać klasy dokumentów dostarczonych przez Kreatora aplikacji MFC, wykonaj następujące czynności:  
   
--   Klasa wyprowadzona z **CDocument** dla każdego typu dokumentu.  
+-   Klasa wyprowadzona z `CDocument` dla każdego typu dokumentu.  
   
 -   Dodaj element członkowski zmienne do przechowywania danych każdy dokument.  
   
--   Zastąpienie **CDocument**w `Serialize` funkcji członkowskiej we własnej klasy dokumentu. `Serialize` zapisuje i odczytuje dane dokumentu do i z dysku.  
+-   Zastąpienie `CDocument`w `Serialize` funkcji członkowskiej we własnej klasy dokumentu. `Serialize` zapisuje i odczytuje dane dokumentu do i z dysku.  
   
 ## <a name="other-document-functions-often-overridden"></a>Inne funkcje dokumentu często zastępowane  
- Można także zastąpić inne **CDocument** funkcji elementów członkowskich. W szczególności często należy zastąpić [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) i [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) zainicjować elementy członkowskie danych dokumentu i [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) do zniszczenia dynamicznie przydzielane danych. Zawiera informacje o możliwym do zastąpienia członków, klasa [CDocument](../mfc/reference/cdocument-class.md) w *odwołania MFC*.  
+ Można także zastąpić inne `CDocument` funkcji elementów członkowskich. W szczególności często należy zastąpić [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) i [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) zainicjować elementy członkowskie danych dokumentu i [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) do zniszczenia dynamicznie przydzielane danych. Zawiera informacje o możliwym do zastąpienia członków, klasa [CDocument](../mfc/reference/cdocument-class.md) w *odwołania MFC*.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Używanie dokumentów](../mfc/using-documents.md)

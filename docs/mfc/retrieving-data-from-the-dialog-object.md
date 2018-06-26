@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ac243333c8dc778486dd18323658f262c6d6610
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b221bd97d9ee943e19b043bcc9be6aba0fa1672
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380211"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929598"
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>Pobieranie danych z obiektu okna dialogowego
 Platformę zapewnia prosty sposób zainicjować wartości formantów w oknie dialogowym oraz do pobierania wartości z kontroli. Więcej pracochłonne ręczne podejściem jest wywołaniem funkcji, takich jak `SetDlgItemText` i `GetDlgItemText` funkcji elementów członkowskich klasy `CWnd`, które mają zastosowanie do sterowania systemu windows. Z tych funkcji, należy każdy kontrola dostępu indywidualnie do ustawić lub pobrać jej wartość wywoływanie funkcji, takich jak `SetWindowText` i `GetWindowText`. Podejście framework automatyzuje zarówno inicjowania i pobierania.  
@@ -47,7 +47,7 @@ Platformę zapewnia prosty sposób zainicjować wartości formantów w oknie dia
   
  DDX i DDV omówiono bardziej szczegółowo w [wymiana danych okna dialogowego i weryfikacja](../mfc/dialog-data-exchange-and-validation.md).  
   
- Dla modalne okno dialogowe, można pobrać żadnych danych, które użytkownik wprowadził, kiedy `DoModal` zwraca **IDOK** , ale przed okna dialogowego obiekt zostanie zniszczony. Pola z niemodalnego okna dialogowego można pobrać dane z obiektu okna dialogowego w dowolnym momencie przez wywołanie metody `UpdateData` z argumentem **TRUE** , a następnie uzyskiwanie dostępu do zmiennych Członkowskich klasy okna dialogowego. Ten temat jest omówiona bardziej szczegółowo w [wymiana danych okna dialogowego i weryfikacja](../mfc/dialog-data-exchange-and-validation.md).  
+ Dla modalne okno dialogowe, można pobrać żadnych danych, które użytkownik wprowadził, kiedy `DoModal` zwraca IDOK, ale przed okna dialogowego obiekt zostanie zniszczony. Pola z niemodalnego okna dialogowego można pobrać dane z obiektu okna dialogowego w dowolnym momencie przez wywołanie metody `UpdateData` z argumentem **TRUE** , a następnie uzyskiwanie dostępu do zmiennych Członkowskich klasy okna dialogowego. Ten temat jest omówiona bardziej szczegółowo w [wymiana danych okna dialogowego i weryfikacja](../mfc/dialog-data-exchange-and-validation.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a45779034534ce87bd6bd4f55dfda4985a36f01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9252e08fe672f111dcf2b289b1b12891022a318d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343648"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931091"
 ---
 # <a name="bypassing-the-serialization-mechanism"></a>Pomijanie mechanizmu serializacji
 Jak już wspomniano, platformę umożliwia domyślne do odczytywania i zapisywania danych do i z plików. Serializacja za pośrednictwem obiektu archiwum odpowiada potrzebom z bardzo wielu aplikacji. Takiej aplikacji odczytuje plik wyłącznie w pamięci, użytkownicy będą mogli zaktualizować pliku, a następnie zapisuje zaktualizowanej wersji na dysku, ponownie.  
@@ -34,7 +34,7 @@ Jak już wspomniano, platformę umożliwia domyślne do odczytywania i zapisywan
   
  W takich przypadkach można zastąpić [serializacja](../mfc/reference/cobject-class.md#serialize) w inny sposób do pośredniczących plików akcji za pomocą funkcji [cfile —](../mfc/reference/cfile-class.md) obiektu zamiast [CArchive](../mfc/reference/carchive-class.md) obiektu.  
   
- Można użyć **Otwórz**, **odczytu**, **zapisu**, **Zamknij**, i `Seek` funkcji elementów członkowskich klasy `CFile` próbę otwarcia pliku , przenieś wskaźnik pliku (wyszukiwanie) do określonego punktu w pliku, w tym momencie Odczytaj rekord (określoną liczbę bajtów), umożliwiają zaktualizowanie użytkownika rekordu, następnie przejść do tego samego punktu ponownie i zapisu rekordu z powrotem do pliku. Platformę spowoduje otwarcie pliku dla Ciebie i można użyć `GetFile` funkcji członkowskiej klasy `CArchive` uzyskać wskaźnik do `CFile` obiektu. Użyj bardziej zaawansowane i elastyczne, można zastąpić [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) i [OnSaveDocument](../mfc/reference/cdocument-class.md#onsavedocument) funkcji elementów członkowskich klasy `CWinApp`. Aby uzyskać więcej informacji, zobacz klasy [cfile —](../mfc/reference/cfile-class.md) w *odwołania MFC*.  
+ Można użyć `Open`, `Read`, `Write`, `Close`, i `Seek` funkcji elementów członkowskich klasy `CFile` próbę otwarcia pliku, przenieś wskaźnik pliku (wyszukiwanie) do określonego punktu w pliku, Odczytaj rekord (przez określoną liczbę bajtów ) w tym momencie umożliwiają użytkownikowi zaktualizowania rekordu, a następnie ponownie przejść do tego samego punktu i ponownie zapisać rekord do pliku. Platformę spowoduje otwarcie pliku dla Ciebie i można użyć `GetFile` funkcji członkowskiej klasy `CArchive` uzyskać wskaźnik do `CFile` obiektu. Użyj bardziej zaawansowane i elastyczne, można zastąpić [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) i [OnSaveDocument](../mfc/reference/cdocument-class.md#onsavedocument) funkcji elementów członkowskich klasy `CWinApp`. Aby uzyskać więcej informacji, zobacz klasy [cfile —](../mfc/reference/cfile-class.md) w *odwołania MFC*.  
   
  W tym scenariuszu sieci `Serialize` zastąpienie nie robi nic, jeśli na przykład chcesz, aby go do odczytu i zapisu nagłówka pliku, aby zachować aktualne po zamknięciu dokumentu.  
   

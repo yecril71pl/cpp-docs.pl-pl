@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c6658c972b9d9cdeececd43a89ac424964d2289
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d052b2d77df8b3209671b4330347ef642877e47a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358810"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928885"
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>Kontrolki ActiveX MFC: dystrybucja kontrolek ActiveX
 W tym artykule opisano kilka problemów związanych z redystrybuowanie formantów ActiveX:  
@@ -60,7 +60,7 @@ W tym artykule opisano kilka problemów związanych z redystrybuowanie formantó
  Instalator zapewniają z formantów ActiveX powinien tworzenia specjalnych podkatalogu w katalogu systemu Windows i zainstaluj kontrolki. OCX w nim plików.  
   
 > [!NOTE]
->  Użyj okna **GetWindowsDirectory** interfejsu API programu Instalatora można uzyskać nazwy katalogu systemu Windows. Można uzyskać nazwy podkatalogu z nazwy firmy lub produktu.  
+>  Użyj okna `GetWindowsDirectory` interfejsu API programu Instalatora można uzyskać nazwy katalogu systemu Windows. Można uzyskać nazwy podkatalogu z nazwy firmy lub produktu.  
   
  Instalator musi zainstalować niezbędnych plików DLL pakietu redystrybucyjnego w katalogu systemu Windows. Jeśli którekolwiek z bibliotek DLL są już występuje na komputerze użytkownika, program instalacyjny należy porównać ich wersje z wersjami, którą instalujesz. Tylko wtedy, gdy jej numer wersji jest wyższy niż plik już zainstalowany, zainstaluj ponownie plik.  
   
@@ -71,14 +71,14 @@ W tym artykule opisano kilka problemów związanych z redystrybuowanie formantó
   
  Jeśli wolisz, możesz zapisywać Twoje Instalatora, aby zarejestrować formant bezpośrednio zamiast tego.  
   
- Użyj **LoadLibrary** załadować formantu DLL interfejsu API systemu Windows. Następnie użyj **GetProcAddress** uzyskać adresu funkcji "DllRegisterServer". Na koniec wywołania `DllRegisterServer` funkcji. Poniższy przykładowy kod przedstawia jedną metodę możliwe, gdy `hLib` przechowuje dojście Biblioteka kontrolek i `lpDllEntryPoint` przechowuje adresu funkcji "DllRegisterServer".  
+ Użyj `LoadLibrary` załadować formantu DLL interfejsu API systemu Windows. Następnie użyj `GetProcAddress` uzyskać adresu funkcji "DllRegisterServer". Na koniec wywołania `DllRegisterServer` funkcji. Poniższy przykładowy kod przedstawia jedną metodę możliwe, gdy `hLib` przechowuje dojście Biblioteka kontrolek i `lpDllEntryPoint` przechowuje adresu funkcji "DllRegisterServer".  
   
  [!code-cpp[NVC_MFC_AxCont#16](../mfc/codesnippet/cpp/mfc-activex-controls-distributing-activex-controls_1.cpp)]  
   
  Zaletą bezpośrednio rejestrowanie kontrolki jest konieczne do wywołania i załadować oddzielnych procesach (to znaczy, REGSVR32), skracając czas instalacji. Ponadto ponieważ wewnętrzny proces rejestracji, program instalacyjny można obsługi błędów i lepszym rozwiązaniem niż procesu zewnętrznego nieprzewidzianych sytuacjach można.  
   
 > [!NOTE]
->  Zanim program Instalator zainstaluje formantu ActiveX, należy wywołać **Funkcja OleInitialize**. Po zakończeniu instalacji programu wywołać **OleUnitialize**. To rozwiązanie zapewnia OLE systemowej biblioteki dll do prawidłowego stanu rejestrowania formantów ActiveX.  
+>  Zanim program Instalator zainstaluje formantu ActiveX, należy wywołać `OleInitialize`. Po zakończeniu instalacji programu wywołania `OleUnitialize`. To rozwiązanie zapewnia OLE systemowej biblioteki dll do prawidłowego stanu rejestrowania formantów ActiveX.  
   
  Należy zarejestrować MFCx0.DLL.  
   

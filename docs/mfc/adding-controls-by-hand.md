@@ -20,23 +20,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efe510c4376255c24470a799b5dde17021894bf0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c39f2d7803630aaaef6e803e90bf332c74937a71
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342478"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930618"
 ---
 # <a name="adding-controls-by-hand"></a>Ręczne dodawanie formantów
 Możesz albo [dodawanie formantów do okna dialogowego z edytora okien dialogowych](../mfc/using-the-dialog-editor-to-add-controls.md) lub dodawać je samodzielnie, z kodem.  
   
  Aby utworzyć obiekt formantu samodzielnie, będzie zazwyczaj osadzić C++ obiekt formantu w oknie dialogowym C++ lub obiektu okna ramowego. Podobnie jak wiele innych obiektów w ramach formanty wymagają dwuetapowa konstrukcja. Należy wywołać formantu **Utwórz** funkcji członkowskiej podczas tworzenia okna dialogowego pola lub ramki okno nadrzędne. W oknach dialogowych, zwykle odbywa się [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)i okna ramowe w [OnCreate](../mfc/reference/cwnd-class.md#oncreate).  
   
- W poniższym przykładzie pokazano, jak mogą zadeklarować `CEdit` obiektu w deklaracji klasy, klasy pochodnej okna dialogowego, a następnie wywołać **Utwórz** funkcji członkowskiej we `OnInitDialog`. Ponieważ `CEdit` obiektu jest zadeklarowany jako osadzonego obiektu, jest automatycznie tworzony, podczas konstruowania obiektu okna dialogowego, ale nadal musi zostać zainicjowany z własną **Utwórz** funkcję elementu członkowskiego.  
+ W poniższym przykładzie pokazano, jak mogą zadeklarować `CEdit` obiektu w deklaracji klasy, klasy pochodnej okna dialogowego, a następnie wywołać `Create` funkcji członkowskiej we `OnInitDialog`. Ponieważ `CEdit` obiektu jest zadeklarowany jako osadzonego obiektu, jest automatycznie tworzony, podczas konstruowania obiektu okna dialogowego, ale nadal musi zostać zainicjowany z własną `Create` funkcję elementu członkowskiego.  
   
  [!code-cpp[NVC_MFCControlLadenDialog#1](../mfc/codesnippet/cpp/adding-controls-by-hand_1.h)]  
   
- Następujące `OnInitDialog` funkcja ustawia prostokąt, następnie wywołuje **Utwórz** do tworzenia kontrolki edycji systemu Windows i dołącz je do niezainicjowanego `CEdit` obiektu.  
+ Następujące `OnInitDialog` funkcja ustawia prostokąt, następnie wywołuje `Create` do tworzenia kontrolki edycji systemu Windows i dołącz je do niezainicjowanego `CEdit` obiektu.  
   
  [!code-cpp[NVC_MFCControlLadenDialog#2](../mfc/codesnippet/cpp/adding-controls-by-hand_2.cpp)]  
   

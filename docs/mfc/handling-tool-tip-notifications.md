@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b9dffa2513c11a5feb3228cb4fdb1f6efbebe7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8df4b584a4e8b0ef940d5934a5968037427c607d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346379"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931817"
 ---
 # <a name="handling-tool-tip-notifications"></a>Obsługa powiadomień dotyczących etykietek narzędzi
-Po określeniu `TBSTYLE_TOOLTIPS` styl, na pasku narzędzi tworzy i którymi zarządza formantem etykietki narzędzia. Etykietka narzędzia, która jest mała okno podręczne zawiera wiersz tekst opisujący przycisku paska narzędzi. Etykietka narzędzia, która jest ukryty, znajdujących się tylko użytkownik umieszcza kursor na przycisku paska narzędzi po pozostawia jej istnieje dla około połowy drugi. Etykietka narzędzia, która jest wyświetlana obok kursora.  
+Po określeniu **TBSTYLE_TOOLTIPS** styl, na pasku narzędzi tworzy i którymi zarządza formantem etykietki narzędzia. Etykietka narzędzia, która jest mała okno podręczne zawiera wiersz tekst opisujący przycisku paska narzędzi. Etykietka narzędzia, która jest ukryty, znajdujących się tylko użytkownik umieszcza kursor na przycisku paska narzędzi po pozostawia jej istnieje dla około połowy drugi. Etykietka narzędzia, która jest wyświetlana obok kursora.  
   
  Przed wyświetleniem etykietka narzędzia, **TTN_NEEDTEXT** komunikatu powiadomienia są wysyłane do okna nadrzędnego pasku narzędzi można pobrać tekst opisowy dla przycisku. Jeśli okno właściciela paska narzędzi jest `CFrameWnd` okno porad są wyświetlane bez żadnych dodatkowych nakładów, ponieważ narzędzie `CFrameWnd` ma domyślny program obsługi dla **TTN_NEEDTEXT** powiadomień. Jeśli okno właściciela paska narzędzi nie pochodzi od `CFrameWnd`, takie jak widok okna dialogowego pola lub formularz, należy dodać wpis do mapy komunikatów z oknem właściciela i podać obsługi powiadomień w mapie komunikatów. Zapis do mapy komunikatów z oknem właściciela jest następujący:  
   
@@ -39,7 +39,7 @@ Po określeniu `TBSTYLE_TOOLTIPS` styl, na pasku narzędzi tworzy i którymi zar
   
  Oprócz **TTN_NEEDTEXT** powiadomienia formantem etykietki narzędzia można wysyłanie powiadomień do formantu toolbar:  
   
-|powiadomienia|Znaczenie|  
+|Powiadomienia|Znaczenie|  
 |------------------|-------------|  
 |**TTN_NEEDTEXTA**|Tekst w formacie ASCII (tylko system Windows 95) wymaga formantem etykietki narzędzia|  
 |**TTN_NEEDTEXTW**|Tekst UNICODE (tylko system Windows NT) wymaga formantem etykietki narzędzia|  

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08d86af5f54fb9dfe81327b4589d60e5290b2610
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f8f167ac560fd8e2109c149f30841ecbe3c44fc8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342163"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930979"
 ---
 # <a name="build-requirements-for-windows-vista-common-controls"></a>Wymagania kontrolek standardowych systemu Windows Vista dotyczące kompilacji
 Biblioteka Microsoft Foundation Class (MFC) obsługuje formanty standardowe systemu Windows w wersji 6.1. Formanty standardowe są uwzględnione w [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] i biblioteki wchodzi w skład [!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)]. Biblioteka zawiera nowych metod, które podnoszą istniejących klas i nowe klasy i metody, które obsługują [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] formantów standardowych. Podczas tworzenia aplikacji, należy wykonać wymagania dotyczące kompilacji i migracji, które zostały opisane w poniższych sekcjach.  
@@ -44,7 +44,7 @@ Biblioteka Microsoft Foundation Class (MFC) obsługuje formanty standardowe syst
  Wersja ANSI kilka metod MFC są przestarzałe, począwszy od formantów standardowych systemu Windows w wersji 6.1. Aby uzyskać więcej informacji, zobacz [przestarzałe interfejsy API ANSI](../mfc/deprecated-ansi-apis.md).  
   
 ## <a name="migration-requirements"></a>Wymagania dotyczące migracji  
- Jeśli używasz środowiska IDE programu Visual Studio do tworzenia nowej aplikacji MFC, która używa formanty standardowe systemu Windows w wersji 6.1 IDE automatycznie deklaruje odpowiednie manifestu. Jednak jeśli migracji istniejącej aplikacji MFC z wcześniejszej wersji programu Visual Studio, którego chcesz użyć nowe formanty wspólne IDE nie automatycznie zapewnia manifestu informacje dotyczące uaktualnienia wersji aplikacji. Zamiast tego należy ręcznie Wstaw następujący kod źródłowy w pliku stdafx.h:  
+ Jeśli używasz środowiska IDE programu Visual Studio do tworzenia nowej aplikacji MFC, która używa formanty standardowe systemu Windows w wersji 6.1 IDE automatycznie deklaruje odpowiednie manifestu. Jednak jeśli migracji istniejącej aplikacji MFC z wcześniejszej wersji programu Visual Studio, którego chcesz użyć nowe formanty wspólne IDE nie automatycznie zapewnia manifestu informacje dotyczące uaktualnienia wersji aplikacji. Zamiast tego należy ręcznie wstawić następujący kod źródłowy w sieci **stdafx.h** pliku:  
   
 ```  
 #ifdef UNICODE  

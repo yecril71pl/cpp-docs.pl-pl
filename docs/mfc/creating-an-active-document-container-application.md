@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 880c6953addd0ec7db3abf5864010bd472d2d5a3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8817133ba1004e746f568ad3e039de5130693174
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341352"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929448"
 ---
 # <a name="creating-an-active-document-container-application"></a>Tworzenie aplikacji kontenera dokumentów aktywnych
 Najprostszym i zalecany sposób tworzenia aplikacji kontenera dokumentów aktywnych jest tworzenie aplikacji kontenera MFC EXE za pomocą Kreatora aplikacji MFC, a następnie zmodyfikować aplikację do obsługi zawieranie dokumentów aktywnych.  
@@ -36,7 +36,7 @@ Najprostszym i zalecany sposób tworzenia aplikacji kontenera dokumentów aktywn
   
 3.  Wybierz **aplikacji MFC** w okienku po prawej stronie.  
   
-4.  Nazwij projekt `MyProj`, kliknij przycisk **OK**.  
+4.  Nazwij projekt *MyProj*, kliknij przycisk **OK**.  
   
 5.  Wybierz **Obsługa dokumentów złożonych** strony.  
   
@@ -48,9 +48,9 @@ Najprostszym i zalecany sposób tworzenia aplikacji kontenera dokumentów aktywn
   
 9. Po zakończeniu pracy Kreatora aplikacji MFC generowania aplikacji, należy otworzyć następujące pliki za pomocą Eksploratora rozwiązań:  
   
-    -   MyProjview.cpp  
+    -   *MyProjview.cpp*  
   
-10. W MyProjview.cpp wprowadź następujące zmiany:  
+10. W *MyProjview.cpp*, wprowadź następujące zmiany:  
   
     -   W `CMyProjView::OnPreparePrinting`, Zastąp zawartość funkcja następującym kodem:  
   
