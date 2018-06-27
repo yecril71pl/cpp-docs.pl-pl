@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c6f990a00fb96195a54ee7ed6906068985b052f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 30daf42d54b66d4e3c4ad47a406748ab023be79d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367051"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956635"
 ---
 # <a name="cdocobjectserveritem-class"></a>Klasa CDocObjectServerItem
 Implementuje zlecenia serwera OLE specjalnie z myślą o DocObject serwerów.  
@@ -90,10 +90,10 @@ CDocObjectServerItem(COleServerDoc* pServerDoc, BOOL bAutoDelete);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pServerDoc`  
+ *pServerDoc*  
  Wskaźnik do dokumentu, który będzie zawierać nowy element DocObject.  
   
- `bAutoDelete`  
+ *bAutoDelete*  
  Wskazuje, czy obiekt może zostać usunięta, gdy do niej łącza zostanie zwolniony. Argument ma wartość **FALSE** Jeśli `CDocObjectServerItem` obiekt jest integralną częścią danych dokumentu. Ustaw ją na **TRUE** Jeśli obiekt jest strukturą dodatkowej używany do identyfikowania zakresu w danych dokumentu, który może zostać usunięta przez platformę.  
   
 ##  <a name="getdocument"></a>  CDocObjectServerItem::GetDocument  

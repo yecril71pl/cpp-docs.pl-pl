@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40240367d3e8350cee030b2c08dc5a48325e05f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 145546a83bb91d09499049308b8d37e5adafeb92
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385310"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955677"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Uaktualnianie istniejącego kontrolki ActiveX
 Formanty ActiveX istniejących (dawniej formanty OLE) można używać w Internecie bez żadnych modyfikacji. Można zmodyfikować formantów, aby zwiększyć ich wydajność. Korzystając z formantu na stronie sieci Web, istnieją dodatkowe zagadnienia. Plik ocx i wszystkie pliki pomocnicze musi znajdować się na komputerze docelowym lub można pobrać przez Internet. Dzięki temu rozmiar kodu i pobierania czasu ważną kwestią. W pliku cab podpisem można spakować pliki do pobrania. Można oznaczyć jako bezpieczne do wykonywania skryptów i jako bezpieczne inicjowanie formantu.  
@@ -136,9 +136,9 @@ C:\CabDevKit\cabarc.exe -s 6144 N spindial.cab spindial.ocx spindial.inf
  `-s 6144` Parametr rezerwuje miejsce w pliku cab do podpisywania kodu.  
   
 ### <a name="the-version-tag"></a>Tag wersji  
- W tym miejscu zauważyć, że `#Version` informacji z pliku CAB ma zastosowanie do określonego przez formant `CLASSID` parametr `<OBJECT>` tag.  
+ Tutaj zauważyć, że `#Version` informacji z pliku CAB ma zastosowanie do określonego przez formant *CLASSID* parametr `<OBJECT>` tagu.  
   
- W zależności od wersji określone możesz wymusić pobierania formantu. Do ukończenia specyfikacji `OBJECT` tym tag `CODEBASE` parametrów, zobacz W3C odwołania.  
+ W zależności od wersji określone możesz wymusić pobierania formantu. Do ukończenia specyfikacji `OBJECT` tym tag *CODEBASE* parametrów, zobacz W3C odwołania.  
   
 ##  <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a> Oznaczenie bezpieczne kontrolki dla wykonywania skryptów i inicjalizacji  
  Kontrolki ActiveX używana na stronach sieci Web powinien być oznaczony jako bezpieczne do wykonywania skryptów i bezpieczne inicjowanie, jeśli w rzeczywistości są bezpieczne. Bezpieczne kontrolki zostanie nie we/wy dysku lub wykonać bezpośrednio uzyskać dostęp do pamięci lub rejestrów maszyny.  
@@ -236,7 +236,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
  W obszarze wytyczne OCX 96 formant zawsze należy pamiętać swoją paletę w tle.  
   
- Starsze kontenerów, które nie korzystają z właściwością otoczenia palety wyśle `WM_QUERYNEWPALETTE` i `WM_PALETTECHANGED` wiadomości. Można zastąpić formantu `OnQueryNewPalette` i `OnPaletteChanged` do obsługi tych wiadomości.  
+ Starsze kontenerów, które nie korzystają z właściwością otoczenia palety wyśle WM_QUERYNEWPALETTE i WM_PALETTECHANGED wiadomości. Można zastąpić formantu `OnQueryNewPalette` i `OnPaletteChanged` do obsługi tych wiadomości.  
   
 ##  <a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a> Programu Internet Explorer przeglądarki poziom bezpieczeństwa i kontroli zachowania  
  Przeglądarka musi opcje poziom bezpieczeństwa, można skonfigurować przez użytkownika. Strony sieci Web może zawierać zawartość, która może być szkodliwe dla komputera użytkownika, przeglądarek Zezwalaj użytkownikowi na wybranie opcji poziom bezpieczeństwa. W zależności od sposobu, w przeglądarce implementuje poziom bezpieczeństwa formantu nie może zostać pobrana w ogóle lub wyświetli certyfikatu lub komunikat ostrzegawczy, aby zezwolić użytkownikowi na wybranie w czasie wykonywania, czy nie można pobrać formantu. Poniżej przedstawiono zachowania formantów ActiveX w obszarze poziom bezpieczeństwa wysoki, średni i niski w programie Internet Explorer.  

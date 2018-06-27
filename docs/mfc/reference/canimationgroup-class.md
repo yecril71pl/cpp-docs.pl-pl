@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11b78cf273fd510b8ce224004c759dcc5bbe3bec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a6a2a65172115d42f984b8f59156d3849692bf8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355636"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955738"
 ---
 # <a name="canimationgroup-class"></a>Klasa CAnimationGroup
 Implementuje grupy animacji, które łączy scenorysu animacji, obiekty animacji i przejść do definiowania animacji.  
@@ -144,10 +144,10 @@ void AddKeyframes(IUIAnimationStoryboard* pStoryboard, BOOL bAddDeep);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pStoryboard`  
+ *pStoryboard*  
  Wskaźnik do obiektu storyboard COM.  
   
- `bAddDeep`  
+ *bAddDeep*  
  Określa, czy ta metoda należy dodać do kluczowych scenorysu, które są zależne od innych klatek.  
   
 ##  <a name="addtransitions"></a>  CAnimationGroup::AddTransitions  
@@ -160,10 +160,10 @@ void AddTransitions(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pStoryboard`  
+ *pStoryboard*  
  Wskaźnik do obiektu storyboard COM.  
   
- `bDependOnKeyframes`  
+ *bDependOnKeyframes*  
   
 ##  <a name="animate"></a>  CAnimationGroup::Animate  
  Animuje grupy.  
@@ -176,9 +176,9 @@ BOOL Animate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pManager`  
- `pTimer`  
- `bScheduleNow`  
+ *pManager*  
+ *pTimer*  
+ *bScheduleNow*  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli metoda zakończy się pomyślnie; w przeciwnym razie wartość FALSE.  
@@ -204,10 +204,10 @@ CAnimationGroup(CAnimationController* pParentController, UINT32 nGroupID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentController`  
+ *pParentController*  
  Wskaźnik do kontrolera animacji, który tworzy grupę.  
   
- `nGroupID`  
+ *nGroupID*  
  Określa identyfikator grupy.  
   
 ##  <a name="createtransitions"></a>  CAnimationGroup::CreateTransitions  
@@ -228,7 +228,7 @@ CAnimationBaseObject* FindAnimationObject(IUIAnimationVariable* pVariable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pVariable`  
+ *pVariable*  
  Wskaźnik do zmiennej animacji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -328,10 +328,10 @@ BOOL Schedule(IUIAnimationTimer* pTimer, UI_ANIMATION_SECONDS time);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pTimer`  
+ *pTimer*  
  Wskaźnik do czasomierza animacji.  
   
- `time`  
+ *czas*  
  Określa czas, aby zaplanować animacji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -348,7 +348,7 @@ void SetAutodestroyTransitions(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Określa, jak można zniszczyć przejścia.  
   
 ### <a name="remarks"></a>Uwagi  

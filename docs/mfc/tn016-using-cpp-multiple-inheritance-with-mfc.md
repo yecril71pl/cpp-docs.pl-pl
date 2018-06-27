@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe1e79324c4c1f7408e1b801cf2be581b9884717
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cba37344a2d065c84e196330e3b4f9d859975102
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384091"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954862"
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016: używanie dziedziczenia wielokrotnego języka C++ z MFC
 Ta uwaga informacje dotyczące używania dziedziczenie wielokrotne (MI) z Microsoft Foundation Classes. Użycie MI nie jest wymagane w przypadku MFC. MI nie jest używany w żadnych klas MFC i nie jest wymagana do zapisania biblioteki klas.  
@@ -52,7 +52,7 @@ class CListWnd : public CFrameWnd, public CObList
 CListWnd myListWnd;  
 ```  
   
- W takim przypadku `CObject` będzie dwa razy. Oznacza to, że konieczne sposób, aby odróżnić wszystkich odwołań do `CObject` metod lub operatorów. `operator new` i [operatora delete](../mfc/reference/cobject-class.md#operator_delete) są dwa operatory, które muszą być rozróżniane. Inny przykład następujący kod powoduje błąd w czasie kompilacji:  
+ W takim przypadku `CObject` będzie dwa razy. Oznacza to, że konieczne sposób, aby odróżnić wszystkich odwołań do `CObject` metod lub operatorów. **Nowy operator** i [operatora delete](../mfc/reference/cobject-class.md#operator_delete) są dwa operatory, które muszą być rozróżniane. Inny przykład następujący kod powoduje błąd w czasie kompilacji:  
   
 ```  
 myListWnd.Dump(afxDump);
@@ -60,7 +60,7 @@ myListWnd.Dump(afxDump);
 ```  
   
 ## <a name="reimplementing-cobject-methods"></a>Reimplementing metody CObject  
- Podczas tworzenia nowej klasy ma co najmniej dwóch `CObject` podstawowej klas pochodnych powinny reimplement `CObject` metod, które mają inne osoby. Operatory `new` i `delete` są obowiązkowe i [zrzutu](../mfc/reference/cobject-class.md#dump) jest zalecane. Następujące reimplements przykład `new` i `delete` operatory i `Dump` metody:  
+ Podczas tworzenia nowej klasy ma co najmniej dwóch `CObject` podstawowej klas pochodnych powinny reimplement `CObject` metod, które mają inne osoby. Operatory **nowe** i **usunąć** są obowiązkowe i [zrzutu](../mfc/reference/cobject-class.md#dump) jest zalecane. Następujące reimplements przykład **nowe** i **usunąć** operatory i `Dump` metody:  
   
 ```  
 class CListWnd : public CFrameWnd, public CObList  
@@ -89,9 +89,9 @@ public:
  Może wydawać się, że praktycznie dziedziczenie `CObject` może rozwiązać problem niejednoznaczności funkcji, ale nie jest uruchomiona. Ponieważ nie ma elementu członkowskiego danych w `CObject`, nie trzeba wirtualnego dziedziczenia, aby zapobiec wielu kopii danych elementu członkowskiego klasy podstawowej. W pierwszym przykładzie, która została przedstawiona wcześniej `Dump` metoda wirtualna jest nadal niejednoznaczne, ponieważ jest zaimplementowana w inny sposób `CFrameWnd` i `CObList`. Najlepszy sposób, aby usunąć niejednoznaczność jest postępować zgodnie z zaleceniami przedstawionych w poprzedniej sekcji.  
   
 ## <a name="cobjectiskindof-and-run-time-typing"></a>CObject::IsKindOf i wpisując środowiska wykonawczego  
- Mechanizm pisania środowiska wykonawczego obsługiwane przez MFC w `CObject` korzysta z makra `DECLARE_DYNAMIC`, `IMPLEMENT_DYNAMIC`, `DECLARE_DYNCREATE`, `IMPLEMENT_DYNCREATE`, `DECLARE_SERIAL` i `IMPLEMENT_SERIAL`. Tych makr można przeprowadzić sprawdzania typu run-time zagwarantowanie downcasts bezpieczne.  
+ Mechanizm pisania środowiska wykonawczego obsługiwane przez MFC w `CObject` korzysta z makra declare_dynamic —, implement_dynamic —, declare_dyncreate —, implement_dyncreate — declare_serial — i implement_serial —. Tych makr można przeprowadzić sprawdzania typu run-time zagwarantowanie downcasts bezpieczne.  
   
- Te makra obsługuje tylko pojedyncza klasa podstawowa i będzie działać w sposób ograniczony dla klasy mnożenie dziedziczone. Określ w klasie podstawowej `IMPLEMENT_DYNAMIC` lub `IMPLEMENT_SERIAL` powinny być klasą podstawową pierwszy (lub lewej). Ta umieszczania umożliwi kontrola lewej klasy podstawowej tylko typów. System typu run-time będzie wiedział nic o dodatkowych klas podstawowych. W poniższym przykładzie wykona systemów czasu wykonywania typu sprawdzania przed `CFrameWnd`, ale znasz nic o `CObList`.  
+ Te makra obsługuje tylko pojedyncza klasa podstawowa i będzie działać w sposób ograniczony dla klasy mnożenie dziedziczone. Klasy podstawowej, które określisz w implement_dynamic — lub implement_serial — powinien być pierwszym (lub lewej) klasy podstawowej. Ta umieszczania umożliwi kontrola lewej klasy podstawowej tylko typów. System typu run-time będzie wiedział nic o dodatkowych klas podstawowych. W poniższym przykładzie wykona systemów czasu wykonywania typu sprawdzania przed `CFrameWnd`, ale znasz nic o `CObList`.  
   
 ```  
 class CListWnd : public CFrameWnd,

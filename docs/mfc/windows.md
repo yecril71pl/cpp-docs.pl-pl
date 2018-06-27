@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88ba41b7bb921cc2834b4d45712be768b2d19f8e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97d8f7a0107f3f6d7aa9e5baa1454142e1426d9e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384468"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950477"
 ---
 # <a name="windows"></a>Windows
 Tej rodziny artykułów obejmuje obiekty okna w ramach MFC. Wszystkie windows MFC pochodzi od klasy [CWnd](../mfc/reference/cwnd-class.md), w tym okien ramowych, widoki, okien dialogowych i formantów.  
   
- W tym artykule opisano pierwszej grupy artykułów [obiektów okien](../mfc/window-objects.md) ogólnie. Odwołuje się do tej grupy, aby uzyskać ogólne informacje o C++ okna obiektów, jak ich Hermetyzowanie HWND i sposób ich używania podczas tworzenia własnego systemu windows, takich jak okno podrzędne.  
+ W tym artykule opisano pierwszej grupy artykułów [obiektów okien](../mfc/window-objects.md) ogólnie. Odwołuje się do tej grupy, aby uzyskać ogólne informacje o obiekty okna C++, jak Hermetyzowanie `HWND`, oraz sposób ich używania podczas tworzenia własnego systemu windows, takich jak okno podrzędne.  
   
  W tym artykule opisano drugiej grupy artykułów [okna ramowe](../mfc/frame-windows.md)— windows, które Umieść ramkę wokół zawartości — w szczególności. Odwołuje się do tej grupy, aby uzyskać informacje o zarządzaniu programu MFC framework okien ramowych i zawartość, która ich ramki, łącznie z widoków i paski sterowania.  
   

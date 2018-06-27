@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94609d9ee589d42c440324cb8782c35720b23214
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61dc2134a2da6570c748cebbfc770b213863de04
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353698"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957250"
 ---
 # <a name="cd2dlineargradientbrush-class"></a>Klasa CD2DLinearGradientBrush
 Otoka dla ID2D1LinearGradientBrush.  
@@ -121,7 +121,7 @@ void Attach(ID2D1LinearGradientBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pResource`  
+ *pResource*  
  Interfejs istniejącego zasobu. Nie może mieć wartości NULL  
   
 ##  <a name="cd2dlineargradientbrush"></a>  CD2DLinearGradientBrush::CD2DLinearGradientBrush  
@@ -140,28 +140,28 @@ CD2DLinearGradientBrush(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentTarget`  
+ *pParentTarget*  
  Wskaźnik do obiektu docelowego renderowania.  
   
- `gradientStops`  
+ *gradientStops*  
  Wskaźnik do tablicy D2D1_GRADIENT_STOP struktury.  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  Wartość większa niż lub równa 1, która określa liczbę gradientu w tablicy gradientStops.  
   
- `LinearGradientBrushProperties`  
+ *LinearGradientBrushProperties*  
  Punkt początkowy i końcowy gradientu.  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  Miejsca, w których kolor jest wykonywane interpolacji między gradientu.  
   
- `extendMode`  
+ *extendMode*  
  Zachowanie gradientu poza zakresem znormalizowane [0,1].  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Wskaźnik do nieprzezroczystość i transformacja pędzla.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Wskazuje, że obiekt zostanie zniszczony przez właściciela (pParentTarget).  
   
 ##  <a name="create"></a>  CD2DLinearGradientBrush::Create  
@@ -172,7 +172,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pRenderTarget`  
+ *pRenderTarget*  
  Wskaźnik do obiektu docelowego renderowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -257,7 +257,7 @@ void SetEndPoint(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `point`  
+ *Punkt*  
  Końcowy dwuwymiarowe współrzędne gradientu liniowego w przestrzeni współrzędnych pędzla  
   
 ##  <a name="setstartpoint"></a>  CD2DLinearGradientBrush::SetStartPoint  
@@ -268,7 +268,7 @@ void SetStartPoint(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `point`  
+ *Punkt*  
  Początkowy dwuwymiarowe współrzędne gradientu liniowego w przestrzeni współrzędnych pędzla  
   
 ## <a name="see-also"></a>Zobacz też  

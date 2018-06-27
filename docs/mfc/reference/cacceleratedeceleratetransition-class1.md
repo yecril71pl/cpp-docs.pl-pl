@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1dac40e91dd7b0a91c5d76b0d665d075e562267
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4342ed03991317bd030d308dbac9945734dcbd9e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357848"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954711"
 ---
 # <a name="cacceleratedeceleratetransition-class"></a>Klasa CAccelerateDecelerateTransition
 Implementuje accelerate-zwalnia przejścia.  
@@ -81,16 +81,16 @@ CAccelerateDecelerateTransition(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `duration`  
+ *Czas trwania*  
  Czas trwania przejścia.  
   
- `finalValue`  
+ *finalValue*  
  Wartość zmiennej animacji na końcu przejścia.  
   
- `accelerationRatio`  
+ *accelerationRatio*  
  Stosunek czas skraca czas trwania.  
   
- `decelerationRatio`  
+ *decelerationRatio*  
  Stosunek czas decelerating czasu trwania.  
   
 ##  <a name="create"></a>  CAccelerateDecelerateTransition::Create  
@@ -103,7 +103,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
-`pLibrary`  
+*pLibrary*  
  Wskaźnik do [interfejsu IUIAnimationTransitionLibrary](https://msdn.microsoft.com/library/windows/desktop/dd371897), który definiuje biblioteki standardowe przejścia.  
   
 ### <a name="return-value"></a>Wartość zwracana  

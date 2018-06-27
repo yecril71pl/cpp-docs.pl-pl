@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0b00c40ded45d1d71b42c126e2461c404eb5223
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6565ea15a2440855aa7f22ef7bbe37d2f583fb71
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378803"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957263"
 ---
 # <a name="cdockablepane-class"></a>Klasa CDockablePane
 Implementuje okienku, który może być zadokowany w witrynie dokowania lub zawarte w okienku z kartami.  
@@ -280,14 +280,14 @@ class CDockablePane : public CPane
   
 -   Przeciąganie okienko podczas wyświetlania prostokąt przeciągania.  
   
- Aby użyć okienko dokujące w aplikacji, pochodzi z klasy okienku `CDockablePane` klasy. Osadzenie pochodnej obiektu do obiektu główną ramkę okna lub obiekt window, która kontroluje wystąpienia okienka. Następnie wywołaj [CDockablePane::Create](#create) metody lub [CDockablePane::CreateEx](#createex) metody podczas przetwarzania `WM_CREATE` komunikat w oknie głównym ramki. Na koniec Skonfiguruj obiekt okienka przez wywołanie metody [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking), [CBasePane::DockPane](../../mfc/reference/cbasepane-class.md#dockpane), lub [CDockablePane::AttachToTabWnd](#attachtotabwnd).  
+ Aby użyć okienko dokujące w aplikacji, pochodzi z klasy okienku `CDockablePane` klasy. Osadzenie pochodnej obiektu do obiektu główną ramkę okna lub obiekt window, która kontroluje wystąpienia okienka. Następnie wywołaj [CDockablePane::Create](#create) metody lub [CDockablePane::CreateEx](#createex) metodą podczas przetwarzania komunikatu WM_CREATE głównego okna ramowego. Na koniec Skonfiguruj obiekt okienka przez wywołanie metody [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking), [CBasePane::DockPane](../../mfc/reference/cbasepane-class.md#dockpane), lub [CDockablePane::AttachToTabWnd](#attachtotabwnd).  
   
 ## <a name="customization-tips"></a>Porady dotyczące dostosowywania  
  Poniższe wskazówki dotyczą `CDockablePane` obiektów:  
   
 -   Jeśli należy wywołać [CDockablePane::AttachToTabWnd](#attachtotabwnd) dwóch okienek-kartach, dokującego wskaźnik do okna z kartami zostaną zwrócone w `ppTabbedControlBar` parametru. Możesz kontynuować dodawanie kart do okna z kartami za pomocą tego parametru.  
   
--   Rodzaj okienko z kartami, która jest tworzona przy [CDockablePane::AttachToTabWnd](#attachtotabwnd) jest określany przez `CDockablePane` obiektu w `pTabControlBarAttachTo` parametru. Możesz wywołać [CDockablePane::SetTabbedPaneRTC](#settabbedpanertc) do zestawu rodzaj okienko z kartami `CDockablePane` zostanie utworzona. Domyślny typ jest określany przez `dwTabbedStyle` z [CDockablePane::Create](#create) po pierwszym utworzeniu `CDockablePane`. Jeśli `dwTabbedStyle` jest domyślnym typem jest AFX_CBRS_OUTLOOK_TABS [klasy CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md); Jeśli `dwTabbedStyle` jest domyślnym typem jest AFX_CBRS_REGULAR_TABS [CTabbedPane klasy](../../mfc/reference/ctabbedpane-class.md).  
+-   Rodzaj okienko z kartami, która jest tworzona przy [CDockablePane::AttachToTabWnd](#attachtotabwnd) jest określany przez `CDockablePane` obiektu w *pTabControlBarAttachTo* parametru. Możesz wywołać [CDockablePane::SetTabbedPaneRTC](#settabbedpanertc) do zestawu rodzaj okienko z kartami `CDockablePane` zostanie utworzona. Domyślny typ jest określany przez `dwTabbedStyle` z [CDockablePane::Create](#create) po pierwszym utworzeniu `CDockablePane`. Jeśli *dwTabbedStyle* jest domyślnym typem jest AFX_CBRS_OUTLOOK_TABS [klasy CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md); Jeśli *dwTabbedStyle* AFX_CBRS_REGULAR_TABS domyślny typ jest [ Klasa CTabbedPane](../../mfc/reference/ctabbedpane-class.md).  
   
 -   Jeśli chcesz dock jedno okienko dokującego do innego, należy wywołać [CDockablePane::DockToWindow](#docktowindow) metody. Okienko oryginalnego musi być zadokowane innym przed wywołaniem tej metody.  
   
@@ -329,16 +329,16 @@ virtual CDockablePane* AttachToTabWnd(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] [out] `pTabControlBarAttachTo`  
+ [in] [out] *pTabControlBarAttachTo*  
  Określa okienku docelowego łączący bieżącego okienka. W okienku docelowego musi być zadokowane okienka.  
   
- [in] `dockMethod`  
+ [in] *dockMethod*  
  Określa metodę dokowania.  
   
- [in] `bSetActive`  
+ [in] *bSetActive*  
  `TRUE` Aby aktywować okienka z kartami po operacji dołączania; w przeciwnym razie `FALSE`.  
   
- [out] `ppTabbedControlBar`  
+ [out] *ppTabbedControlBar*  
  Zawiera kartach w okienku wyniki z operacji dołączania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -347,13 +347,13 @@ virtual CDockablePane* AttachToTabWnd(
 ### <a name="remarks"></a>Uwagi  
  Gdy jedno okienko dokującego dołącza do innego okienka za pomocą tej metody, są następujące operacje:  
   
-1.  Testy struktury czy w okienku docelowego `pTabControlBarAttachTo` jest zwykły dokujące okienko lub jeśli pochodzi z [CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md).  
+1.  Testy struktury czy w okienku docelowego *pTabControlBarAttachTo* jest zwykły dokujące okienko lub jeśli pochodzi z [CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md).  
   
 2.  Jeśli okienko docelowy to okienko z kartami, platformę dodaje bieżącego okienka do niego jako karty.  
   
 3.  Jeśli okienko docelowy jest regularne okienko dokujące, platformę tworzy okienko z kartami.  
   
-    -   Wywołania framework `pTabControlBarAttachTo->CreateTabbedPane`. Styl nowe okienko z kartami jest zależna od `m_pTabbedControlBarRTC` elementu członkowskiego. Domyślnie ten element członkowski ma ustawioną wartość klasy środowiska uruchomieniowego [CTabbedPane](../../mfc/reference/ctabbedpane-class.md). W przypadku przekazania `AFX_CBRS_OUTLOOK_TABS` styl jako `dwTabbedStyle` parametr [CDockablePane::Create](#create) metodę, obiekt klasy środowiska uruchomieniowego ustawiono klasy środowiska uruchomieniowego [CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md). Ten element członkowski można zmienić w dowolnym momencie zmienić styl nowe okienko.  
+    -   Wywołania framework `pTabControlBarAttachTo->CreateTabbedPane`. Styl nowe okienko z kartami jest zależna od `m_pTabbedControlBarRTC` elementu członkowskiego. Domyślnie ten element członkowski ma ustawioną wartość klasy środowiska uruchomieniowego [CTabbedPane](../../mfc/reference/ctabbedpane-class.md). W przypadku przekazania `AFX_CBRS_OUTLOOK_TABS` styl jako *dwTabbedStyle* parametr [CDockablePane::Create](#create) metodę, obiekt klasy środowiska uruchomieniowego ustawiono klasy środowiska uruchomieniowego [CMFCOutlookBar ](../../mfc/reference/cmfcoutlookbar-class.md). Ten element członkowski można zmienić w dowolnym momencie zmienić styl nowe okienko.  
   
     -   Gdy ta metoda tworzy okienko z kartami, platformę zastępuje wskaźnik do `pTabControlBarAttachTo` (Jeśli okienko jest zadokowane i przestawne okno multi mini) za pomocą wskaźnika do nowego okienka z kartami.  
   
@@ -375,10 +375,10 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bStretch`  
+ [in] *bStretch*  
  Nie używany.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  Nie używany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -392,11 +392,11 @@ virtual BOOL CanAcceptMiniFrame(CPaneFrameWnd* pMiniFrame) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pMiniFrame`  
+ [in] *pMiniFrame*  
  Wskaźnik do `CPaneFrameWnd` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli `pMiniFrame` może być zadokowany w okienku; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli *pMiniFrame* może być zadokowany w okienku; w przeciwnym razie `FALSE`.  
   
 ##  <a name="canacceptpane"></a>  CDockablePane::CanAcceptPane  
  Określa, czy innego okienka może być zadokowany do bieżącego okienka.  
@@ -406,7 +406,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pBar`  
+ [in] *pBar*  
  Określa okienko, aby zostało zadokowane do bieżącego okienka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -417,7 +417,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
   
  Przesłonić tę funkcję w klasie pochodnej, aby włączyć lub wyłączyć dokowanie do określonych okienka.  
   
- Domyślnie ta metoda zwraca `TRUE` Jeśli `pBar` lub jego element nadrzędny jest typu `CDockablePane`.  
+ Domyślnie ta metoda zwraca `TRUE` Jeśli *pBar* lub jego element nadrzędny jest typu `CDockablePane`.  
   
 ##  <a name="canautohide"></a>  CDockablePane::CanAutoHide  
  Określa, czy okienku można autoukrywania.  
@@ -469,7 +469,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bActiveTabOnly`  
+ [in] *bActiveTabOnly*  
  Podczas konwertowania `CTabbedPane`, określ `TRUE` przekonwertować aktywnej karty. Określ `FALSE` można przekonwertować wszystkie karty w okienku.  
   
 ##  <a name="checkautohidecondition"></a>  CDockablePane::CheckAutoHideCondition  
@@ -495,7 +495,7 @@ virtual BOOL CheckStopSlideCondition(BOOL bDirection);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bDirection`  
+ [in] *bDirection*  
  `TRUE` Jeśli okienko jest widoczny; `FALSE` Jeśli panel jest ukryty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -514,11 +514,11 @@ virtual void CopyState(CDockablePane* pOrgBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pOrgBar`  
+ [in] *pOrgBar*  
  Wskaźnik do okienka dokującego.  
   
 ### <a name="remarks"></a>Uwagi  
- `CDockablePane::CopyState` kopiuje stan `pOrgBar` do bieżącego okienka wywołując następujących metod:  
+ `CDockablePane::CopyState` kopiuje stan *pOrgBar* do bieżącego okienka wywołując następujących metod:  
   
 - [CPane::CopyState](../../mfc/reference/cpane-class.md#copystate)  
   
@@ -558,37 +558,37 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszCaption`  
+ [in] *lpszCaption*  
  Określa nazwę okna.  
   
- [in] [out] `pParentWnd`  
+ [in] [out] *pParentWnd*  
  Określa okno nadrzędne.  
   
- [in] `rect`  
- Określa rozmiar i położenie okna w współrzędne klienta `pParentWnd`.  
+ [in] *rect*  
+ Określa rozmiar i położenie okna w współrzędne klienta *pParentWnd*.  
   
- [in] `bHasGripper`  
+ [in] *bHasGripper*  
  `TRUE` Aby utworzyć w okienku z tekstem; w przeciwnym razie `FALSE`.  
   
- [in] `nID`  
+ [in] *nID*  
  Określa identyfikator okna podrzędnego. Ta wartość musi być unikatowy, aby zapisać ich stan dokujące okienko dokujące w tym.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Określa atrybuty stylu okna.  
   
- [in] `dwTabbedStyle`  
+ [in] *dwTabbedStyle*  
  Określa styl z kartami z kartami okna, który jest tworzony, gdy użytkownik przeciąga okienko na podpis w tym okienku.  
   
- [in] `dwControlBarStyle`  
+ [in] *dwControlBarStyle*  
  Określa styl dodatkowe atrybuty.  
   
- [in] [out] `pContext`  
+ [in] [out] *pContext*  
  Określa kontekst tworzenia okna.  
   
- [in] `lpszWindowName`  
+ [in] *lpszWindowName*  
  Określa nazwę okna.  
   
- [in] `sizeDefault`  
+ [in] *sizeDefault*  
  Określa rozmiar okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -597,9 +597,9 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Uwagi  
  Tworzy okienka systemu Windows i dołącza go do `CDockablePane` obiektu.  
   
- Jeśli `dwStyle` ma styl okna `CBRS_FLOAT_MULTI` flagę mini okno może float z innych okienka w oknie mini. Domyślnie Dokowanie okienka można tylko float pojedynczo.  
+ Jeśli *dwStyle* ma styl okna `CBRS_FLOAT_MULTI` flagę mini okno może float z innych okienka w oknie mini. Domyślnie Dokowanie okienka można tylko float pojedynczo.  
   
- Jeśli `dwTabbedStyle` parametr ma `AFX_CBRS_OUTLOOK_TABS` określona flaga okienku tworzy okienka stylu programu Outlook na kartach innego okienka jest dołączony do tego przy użyciu okienka [CDockablePane::AttachToTabWnd](#attachtotabwnd) metody. Domyślnie, dokującego okienka tworzenia regularne okienka z kartami typu [CTabbedPane](../../mfc/reference/ctabbedpane-class.md).  
+ Jeśli *dwTabbedStyle* parametr ma `AFX_CBRS_OUTLOOK_TABS` określona flaga okienku tworzy okienka stylu programu Outlook na kartach innego okienka jest dołączony do tego przy użyciu okienka [CDockablePane::AttachToTabWnd](#attachtotabwnd)metody. Domyślnie, dokującego okienka tworzenia regularne okienka z kartami typu [CTabbedPane](../../mfc/reference/ctabbedpane-class.md).  
   
 ##  <a name="createdefaultpanedivider"></a>  CDockablePane::CreateDefaultPaneDivider  
  Tworzy linię podziału domyślnego dla tego okienka, co jest zadokowany do ramki okna.  
@@ -612,20 +612,20 @@ static CPaneDivider* __stdcall CreateDefaultPaneDivider(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `dwAlignment`  
- Określa stronę główną ramkę, do której jest zadokowany okienka. Jeśli `dwAlignment` zawiera `CBRS_ALIGN_LEFT` lub `CBRS_ALIGN_RIGHT` flagi, ta metoda tworzy pionowym ( `CPaneDivider::SS_VERT`) podziału; w przeciwnym razie ta metoda tworzy poziomym ( `CPaneDivider::SS_HORZ`) podziału.  
+ [in] *dwAlignment*  
+ Określa stronę główną ramkę, do której jest zadokowany okienka. Jeśli *dwAlignment* zawiera `CBRS_ALIGN_LEFT` lub `CBRS_ALIGN_RIGHT` flagi, ta metoda tworzy pionowym ( `CPaneDivider::SS_VERT`) podziału; w przeciwnym razie ta metoda tworzy poziomym ( `CPaneDivider::SS_HORZ`) podziału.  
   
- [in] `pParent`  
+ [in] *pParent*  
  Wskaźnik do ramki nadrzędnej.  
   
- [in] `pSliderRTC`  
+ [in] *pSliderRTC*  
  Nie używany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Ta metoda zwraca wskaźnik do podziału nowo utworzone lub `NULL` Jeśli tworzenie podziału zakończy się niepowodzeniem.  
   
 ### <a name="remarks"></a>Uwagi  
- `dwAlignment` Możesz użyć dowolnej z następujących wartości:  
+ *dwAlignment* może być dowolną z następujących wartości:  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
@@ -652,34 +652,34 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `dwStyleEx`  
+ [in] *dwStyleEx*  
  Określa styl rozszerzony atrybuty dla nowego okna.  
   
- [in] `lpszCaption`  
+ [in] *lpszCaption*  
  Określa nazwę okna.  
   
- [in] [out] `pParentWnd`  
+ [in] [out] *pParentWnd*  
  Określa okno nadrzędne.  
   
- [in] `rect`  
- Określa rozmiar i położenie okna w współrzędne klienta `pParentWnd`.  
+ [in] *rect*  
+ Określa rozmiar i położenie okna w współrzędne klienta *pParentWnd*.  
   
- [in] `bHasGripper`  
+ [in] *bHasGripper*  
  `TRUE` Aby utworzyć w okienku z tekstem; w przeciwnym razie `FALSE`.  
   
- [in] `nID`  
+ [in] *nID*  
  Określa identyfikator okna podrzędnego. Ta wartość musi być unikatowa, jeśli chcesz zapisać stan dokujące okienko dokujące w tym.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Określa atrybuty stylu okna.  
   
- [in] `dwTabbedStyle`  
+ [in] *dwTabbedStyle*  
  Określa styl z kartami z kartami okna, który jest tworzony, gdy użytkownik przeciąga okienko na podpis w tym okienku.  
   
- [in] `dwControlBarStyle`  
+ [in] *dwControlBarStyle*  
  Określa styl dodatkowe atrybuty.  
   
- [in] [out] `pContext`  
+ [in] [out] *pContext*  
  Określa kontekst tworzenia okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -688,9 +688,9 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Uwagi  
  Tworzy okienka systemu Windows i dołącza go do `CDockablePane` obiektu.  
   
- Jeśli `dwStyle` ma styl okna `CBRS_FLOAT_MULTI` flagę mini okno może float z innych okienka w oknie mini. Domyślnie Dokowanie okienka można tylko float pojedynczo.  
+ Jeśli *dwStyle* ma styl okna `CBRS_FLOAT_MULTI` flagę mini okno może float z innych okienka w oknie mini. Domyślnie Dokowanie okienka można tylko float pojedynczo.  
   
- Jeśli `dwTabbedStyle` parametr ma `AFX_CBRS_OUTLOOK_TABS` określona flaga okienku tworzy okienka stylu programu Outlook na kartach innego okienka jest dołączony do tego przy użyciu okienka [CDockablePane::AttachToTabWnd](#attachtotabwnd) metody. Domyślnie, dokującego okienka tworzenia regularne okienka z kartami typu [CTabbedPane](../../mfc/reference/ctabbedpane-class.md).  
+ Jeśli *dwTabbedStyle* parametr ma `AFX_CBRS_OUTLOOK_TABS` określona flaga okienku tworzy okienka stylu programu Outlook na kartach innego okienka jest dołączony do tego przy użyciu okienka [CDockablePane::AttachToTabWnd](#attachtotabwnd)metody. Domyślnie, dokującego okienka tworzenia regularne okienka z kartami typu [CTabbedPane](../../mfc/reference/ctabbedpane-class.md).  
   
 ##  <a name="createtabbedpane"></a>  CDockablePane::CreateTabbedPane  
  Tworzy okienko z kartami na podstawie bieżącego okienka.  
@@ -720,20 +720,20 @@ virtual BOOL DockPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `barContainerManager`  
+ [in] *barContainerManager*  
  Odwołanie do kontenera Menedżera kontenera, w którym jest jest zadokowany.  
   
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  `DWORD` po stronie okienka, do którego jest zadokowany kontenera, który określa.  
   
- [in] `dockMethod`  
+ [in] *dockMethod*  
  Nie używany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `TRUE` Jeśli kontener został pomyślnie zadokowana okienku. w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
- `dwAlignment` Możesz użyć dowolnej z następujących wartości:  
+ *dwAlignment* może być dowolną z następujących wartości:  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
@@ -750,11 +750,11 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bWasDocked`  
+ [in] *bWasDocked*  
  Gdy metoda zwróci wartość, ta wartość zawiera `TRUE` czy okienku został pomyślnie zadokowanych; w przeciwnym razie, zawiera `FALSE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli okienko zostało zadokowane do okna z kartami lub okna z kartami został utworzony w wyniku dokowania, ta metoda zwraca wskaźnik do okna z kartami. Jeśli okienko został inaczej pomyślnie zadokowane, ta metoda zwraca `this` wskaźnika. Dokowanie nie powiodła się, ta metoda zwraca `NULL`.  
+ Jeśli okienko zostało zadokowane do okna z kartami lub okna z kartami został utworzony w wyniku dokowania, ta metoda zwraca wskaźnik do okna z kartami. Jeśli okienko został inaczej pomyślnie zadokowane, ta metoda zwraca **to** wskaźnika. Dokowanie nie powiodła się, ta metoda zwraca `NULL`.  
   
 ##  <a name="docktorecentpos"></a>  CDockablePane::DockToRecentPos  
  Stacje dokujące okienko do położenia dokowania przechowywane.  
@@ -780,20 +780,20 @@ virtual BOOL DockToWindow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] [out] `pTargetWindow`  
+ [in] [out] *pTargetWindow*  
  Określa dokującego okienko, aby dock w tym okienku do.  
   
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  Określa wyrównanie dokowania okienka. Może być jednym z CBRS_ALIGN_LEFT CBRS_ALIGN_TOP, CBRS_ALIGN_RIGHT CBRS_ALIGN_BOTTOM albo cbrs_align_any —. (Zdefiniowane w afxres.h).  
   
- [in] `lpRect`  
+ [in] *lprect —*  
  Określa dokowania prostokąt dla tego okienka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `TRUE` Jeśli okienko zostało zadokowane pomyślnie; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie tej metody do dock jedno okienko do innego okienka z wyrównanie określone przez `dwAlignment`.  
+ Wywołanie tej metody do dock jedno okienko do innego okienka z wyrównanie określone przez *dwAlignment*.  
   
 ##  <a name="drawcaption"></a>  CDockablePane::DrawCaption  
  Rysuje podpis okienko dokujące (nazywanych również uchwytu).  
@@ -805,10 +805,10 @@ virtual void DrawCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Reprezentuje kontekst urządzenia używanych na rysunku.  
   
- [in] `rectCaption`  
+ [in] *rectCaption*  
  Określa prostokąt ograniczający podpis okienka.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -824,13 +824,13 @@ void EnableAutohideAll(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  `TRUE` Aby włączyć autohide — wszystkie funkcję dokującego okienka; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Gdy użytkownik posiada `Ctrl` klucza i klika przycisk numeru pin, aby włączyć okienko autohide — tryb, wszystkie inne okienka w tym samym kontenerze są również przełączone do trybu autohide —.  
   
- Wywołanie tej metody za pomocą `bEnable` ustawioną `FALSE` Aby wyłączyć tę funkcję dla konkretnego okienka.  
+ Wywołanie tej metody za pomocą *bWłączenie* ustawioną `FALSE` Aby wyłączyć tę funkcję dla konkretnego okienka.  
   
 ##  <a name="enablegripper"></a>  CDockablePane::EnableGripper  
  Pokazuje lub ukrywa podpis (nazywanych również uchwytu).  
@@ -840,7 +840,7 @@ virtual void EnableGripper(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  `TRUE` Aby włączyć podpis; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -908,10 +908,10 @@ virtual AFX_CS_STATUS GetDockingStatus(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pt`  
+ [in] *pt*  
  Lokalizacja wskaźnika w współrzędne ekranu.  
   
- [in] `nSensitivity`  
+ [in] *nSensitivity*  
  Odległość w pikselach, od krawędzi prostokąta wskaźnik musi być umożliwienie dokowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -949,7 +949,7 @@ int GetLastPercentInPaneContainer() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `int` , Który określa procent wykorzystania miejsca okienku zajmuje w jego kontenera.  
+ *Int* , który określa procent wykorzystania miejsca okienku zajmuje w jego kontenera.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda jest używana, gdy kontener ustawia jego układ.  
@@ -964,10 +964,10 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `rectTabAreaTop`  
+ [in] *rectTabAreaTop*  
  `GetTabArea` wypełnia tę zmienną przy użyciu wartości obszar karty, jeśli karty znajdują się w górnej części okienka. Jeśli karty znajdują się w dolnej części okienka, ta zmienna jest wypełniony prostokąt pusty.  
   
- [in] `rectTabAreaBottom`  
+ [in] *rectTabAreaBottom*  
  `GetTabArea` wypełnia tę zmienną przy użyciu wartości obszar karty, jeśli karty znajdują się w dolnej części okienka. Jeśli karty znajdują się w górnej części okienka, ta zmienna jest wypełniony prostokąt pusty.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1011,24 +1011,24 @@ virtual int HitTest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `point`  
+ [in] *punktu*  
  Określa punkt do testowania.  
   
- [in] `bDetectCaption`  
+ [in] *bDetectCaption*  
  `TRUE` Jeśli `HTCAPTION` ma zostać zwrócony, jeśli punkt znajduje się w okienku podpis; w przeciwnym razie `FALSE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jedna z następujących wartości:  
   
-- `HTNOWHERE` Jeśli `point` nie znajduje się w okienku dokującego.  
+- `HTNOWHERE` Jeśli *punktu* nie znajduje się w okienku dokującego.  
   
-- `HTCLIENT` Jeśli `point` jest w klienckim obszarze okienka dokującego.  
+- `HTCLIENT` Jeśli *punktu* jest w klienckim obszarze okienka dokującego.  
   
-- `HTCAPTION` Jeśli `point` znajduje się w obszarze podpis dokującego okienka.  
+- `HTCAPTION` Jeśli *punktu* znajduje się w obszarze podpis dokującego okienka.  
   
-- `AFX_HTCLOSE` Jeśli `point` jest przycisk Zamknij.  
+- `AFX_HTCLOSE` Jeśli *punktu* jest przycisk Zamknij.  
   
-- `HTMAXBUTTON` Jeśli `point` jest przycisk numeru pin.  
+- `HTMAXBUTTON` Jeśli *punktu* jest przycisk numeru pin.  
   
 ##  <a name="isautohideallenabled"></a>  CDockablePane::IsAutohideAllEnabled  
  Wskazuje, czy okienko dokujące i wszystkie inne okienka w kontenerze może zostać przełączone do trybu autohide —.  
@@ -1193,7 +1193,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pWndOldParent`  
+ [in] *pWndOldParent*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1217,10 +1217,10 @@ virtual void OnBeforeChangeParent(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pWndNewParent`  
+ [in] *pWndNewParent*  
  Wskaźnik do nowego okna nadrzędnego.  
   
- [in] `bDelay`  
+ [in] *bDelay*  
  `BOOL` który określa, czy opóźnienie ponownego obliczania dokowania układu, jeśli panel jest zadokowany. Aby uzyskać więcej informacji, zobacz [CDockablePane::UndockPane](#undockpane).  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1238,10 +1238,10 @@ virtual BOOL OnBeforeFloat(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `rectFloat`  
+ [in] *rectFloat*  
  Określa położenie i rozmiar okienka, gdy jest on w stanie zmiennoprzecinkowych.  
   
- [in] `dockMethod`  
+ [in] *dockMethod*  
  Określa metodę dokowania. Zobacz [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) listę możliwych wartości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1258,7 +1258,7 @@ virtual void OnPressButtons(UINT nHit);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nHit`  
+ [in] *nHit*  
  Ten parametr nie jest używany.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1272,7 +1272,7 @@ virtual void OnSlide(BOOL bSlideOut);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bSlideOut`  
+ [in] *bSlideOut*  
  `TRUE` Aby wyświetlić okienko; `FALSE` Aby ukryć okienko.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1299,13 +1299,13 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pBarToReplaceWith`  
+ [in] *pBarToReplaceWith*  
  Wskaźnik do okienka dokującego.  
   
- [in] `dockMethod`  
+ [in] *dockMethod*  
  Nie używany.  
   
- [in] `bRegisterWithFrame`  
+ [in] *bRegisterWithFrame*  
  Jeśli `TRUE`, nowe okienko jest zarejestrowany przy użyciu Menedżera dokowania nadrzędnej starego okienka. Nowe okienko zostanie wstawiony w indeksie stare okienko na liście okienka obsługiwanej przez Menedżera dokowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1333,16 +1333,16 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bMode`  
+ [in] *bMode*  
  `TRUE` Aby włączyć tryb autohide —; `FALSE` Aby włączyć tryb dokowania regularne.  
   
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  Określa wyrównanie okienka autohide — Aby utworzyć.  
   
- [in] [out] `pCurrAutoHideBar`  
+ [in] [out] *pCurrAutoHideBar*  
  Wskaźnik do bieżącego narzędzi autohide —. Może być `NULL`.  
   
- [in] `bUseTimer`  
+ [in] *bUseTimer*  
  Określa, czy efekt autohide — należy stosować, gdy użytkownik zmienia okienku na tryb autohide — lub ukrywanie okienka natychmiast.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1363,10 +1363,10 @@ void SetAutoHideParents(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pToolBar`  
+ [in] *pToolBar*  
  Wskaźnik do automatyczne ukrywanie paska narzędzi.  
   
- [in] `pBtn`  
+ [in] *pBtn*  
  Wskaźnik do automatyczne ukrywanie przycisku.  
   
 ##  <a name="setlastpercentinpanecontainer"></a>  CDockablePane::SetLastPercentInPaneContainer  
@@ -1377,8 +1377,8 @@ void SetLastPercentInPaneContainer(int n);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `n`  
- `int` , Który określa procent wykorzystania miejsca okienku zajmuje w jego kontenera.  
+ [in] *n*  
+ **Int** , który określa procent wykorzystania miejsca okienku zajmuje w jego kontenera.  
   
 ### <a name="remarks"></a>Uwagi  
  Platformę dopasowuje okienko, aby używać nowej wartości podczas ponownego obliczania układu.  
@@ -1391,7 +1391,7 @@ void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `hRestoredSlider`  
+ [in] *hRestoredSlider*  
  Dojście do dzielnik (suwaka).  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1405,13 +1405,13 @@ void SetTabbedPaneRTC(CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pRTC`  
+ [in] *pRTC*  
  Informacje o klasie czasu wykonywania dla tego okienka z kartami.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę metodę, aby ustawić informacje o klasie czasu wykonywania dla okienka z kartami, które są tworzone dynamicznie. Taka sytuacja może wystąpić, gdy użytkownik przeciąga jedno okienko do podpisu innego okienka lub jeśli wywołujesz [CDockablePane::AttachToTabWnd](#attachtotabwnd) metody do programowego tworzenia okienko z kartami z dwóch okienek dokującego.  
   
- Domyślna klasa czasu wykonywania jest ustawiona zgodnie z `dwTabbedStyle` parametr [CDockablePane::Create](#create) i [CDockablePane::CreateEx](#createex). Aby dostosować nowe okienka z kartami, pochodną klasy jedną z następujących klas:  
+ Domyślna klasa czasu wykonywania jest ustawiona zgodnie z *dwTabbedStyle* parametr [CDockablePane::Create](#create) i [CDockablePane::CreateEx](#createex). Aby dostosować nowe okienka z kartami, pochodną klasy jedną z następujących klas:  
   
 - [Klasa CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md)  
   
@@ -1432,13 +1432,13 @@ virtual void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` Aby wyświetlić okienko; `FALSE` Aby ukryć okienko.  
   
- [in] `bDelay`  
+ [in] *bDelay*  
  `TRUE` opóźnienia dostosowania układu dokowania; `FALSE` Aby dostosować dokowania układ natychmiast.  
   
- [in] `bActivate`  
+ [in] *bActivate*  
  `TRUE` Aby aktywować okienku, gdy wyświetlana; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1454,10 +1454,10 @@ virtual void Slide(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bSlideOut`  
+ [in] *bSlideOut*  
  `TRUE` Aby wyświetlić okienko; `FALSE` Aby ukryć okienko.  
   
- [in] `bUseTimer`  
+ [in] *bUseTimer*  
  `TRUE` Aby pokazać lub ukryć okienko z mocą autohide —; `FALSE` aby pokazać lub ukryć okienko natychmiast.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1483,7 +1483,7 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bDelay`  
+ [in] *bDelay*  
  `TRUE` opóźnienia obliczanie dokowania układu; `FALSE` Aby natychmiast ponownie Oblicz układ dokowania.  
   
 ### <a name="remarks"></a>Uwagi  

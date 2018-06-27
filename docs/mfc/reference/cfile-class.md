@@ -1,7 +1,7 @@
 ---
 title: Cfile — klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -70,11 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee4086b25fe675aaab1b484f21ec7e22e5603781
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0b1effa59dcbada04d6cb363345a69025fcfdbb
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957559"
 ---
 # <a name="cfile-class"></a>Cfile — klasa
 Klasa podstawowa dla klasy plików MFC.  
@@ -169,9 +170,9 @@ virtual void Abort();
 ### <a name="remarks"></a>Uwagi  
  Jeśli plik nie został zamknięty przed niszczenie obiektu, destruktor zamyka dla Ciebie.  
   
- Podczas obsługi wyjątków, `CFile::Abort` różni się od `CFile::Close` na dwa sposoby ważne. Najpierw **przerwać** funkcja nie spowoduje zgłoszenie wyjątku na awarie ponieważ błędy są ignorowane przez **przerwania**. Drugi, **przerwać** nie **ASSERT** Jeśli plik nie został otwarty lub została wcześniej zamknięta.  
+ Podczas obsługi wyjątków, `CFile::Abort` różni się od `CFile::Close` na dwa sposoby ważne. Najpierw `Abort` funkcja nie spowoduje zgłoszenie wyjątku na awarie ponieważ błędy są ignorowane przez `Abort`. Drugi, `Abort` nie **ASSERT** Jeśli plik nie został otwarty lub została wcześniej zamknięta.  
   
- Jeśli używasz **nowe** przydzielić `CFile` obiektów na stercie, następnie należy ją usunąć po zamknięciu pliku. **Przerwij** ustawia `m_hFile` do `CFile::hFileNull`.  
+ Jeśli używasz **nowe** przydzielić `CFile` obiektów na stercie, następnie należy ją usunąć po zamknięciu pliku. `Abort` Ustawia `m_hFile` do `CFile::hFileNull`.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCFiles#5](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_1.cpp)]  
@@ -197,20 +198,20 @@ CAtlTransactionManager* pTM);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hFile`  
+ *hFile*  
  Dojście do pliku, aby dołączyć do `CFile` obiektu.  
   
- `lpszFileName`  
+ *lpszFileName*  
  Względna lub pełną ścieżkę do pliku do dołączenia do `CFile` obiektu.  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  Bitowe połączenie (lub) opcje dostępu do pliku dla określonego pliku. W sekcji uwag możliwe opcje.  
   
- `pTM`  
+ *pTM*  
  Wskaźnik do obiektu CAtlTransactionManager  
   
 ### <a name="remarks"></a>Uwagi  
- W poniższych tabelach pięć przedstawiono możliwe opcje `nOpenFlags` parametru.  
+ W poniższych tabelach pięć przedstawiono możliwe opcje *nOpenFlags* parametru.  
   
  Wybierz tylko jeden z następujących opcji trybu dostępu do pliku. Jest to domyślny tryb dostępu do pliku `CFile::modeRead`, który jest tylko do odczytu.  
   
@@ -241,7 +242,7 @@ CAtlTransactionManager* pTM);
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`CFile::modeCreate`|Tworzy nowy plik, jeśli plik nie istnieje.; Jeśli plik już istnieje, [CFileException](../../mfc/reference/cfileexception-class.md) jest wywoływane.|  
+|`CFile::modeCreate`|Tworzy nowy plik, jeśli plik nie istnieje. Jeśli plik już istnieje, jest zastąpione i początkowo ustawiona zerowej długości.|  
 |`CFile::modeNoTruncate`|Tworzy nowy plik, jeśli plik nie istnieje; w przeciwnym razie, jeśli plik już istnieje, jest on dołączony do `CFile` obiektu.|  
   
  Wybierz plik następujące opcje buforowania, zgodnie z opisem. Domyślnie system używa ogólnego przeznaczenia pamięci podręcznej schematu, która nie jest dostępna jako opcja.  
@@ -282,7 +283,7 @@ virtual void Close();
 ### <a name="remarks"></a>Uwagi  
  Jeśli plik nie został zamknięty przed niszczenie obiektu, destruktor zamyka dla Ciebie.  
   
- Jeśli używasz **nowe** przydzielić `CFile` obiektów na stercie, następnie należy ją usunąć po zamknięciu pliku. **Zamknij** ustawia `m_hFile` do `CFile::hFileNull`.  
+ Jeśli używasz **nowe** przydzielić `CFile` obiektów na stercie, następnie należy ją usunąć po zamknięciu pliku. `Close` Ustawia `m_hFile` do `CFile::hFileNull`.  
   
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CFile::CFile](#cfile).  
@@ -408,7 +409,7 @@ static BOOL PASCAL GetStatus(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rStatus`  
+ *rStatus*  
  Odwołanie do podanego użytkownika **CFileStatus** struktury, które będą otrzymywać informacje o stanie. **CFileStatus** struktury ma następujące pola:  
   
 - **Ctime — m_ctime** Data i godzina utworzenia pliku.  
@@ -423,10 +424,10 @@ static BOOL PASCAL GetStatus(
   
 - **CHAR — m_szFullName [_max_path —]** bezwzględnej nazwy pliku w zestawie znaków systemu Windows.  
   
- `lpszFileName`  
+ *lpszFileName*  
  Ciąg znaków Windows oznacza to ustawić ścieżkę do pliku. Ścieżka może być względna lub bezwzględna lub może zawierać nazwę ścieżki sieciowej.  
   
- `pTM`  
+ *pTM*  
  Wskaźnik do obiektu CAtlTransactionManager  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -476,10 +477,10 @@ virtual void LockRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwPos`  
+ *dwPos*  
  Przesunięcie bajtów początek zakresu bajtów do zablokowania.  
   
- `dwCount`  
+ *dwCount*  
  Liczba bajtów w zakresie do zablokowania.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -515,7 +516,7 @@ CAtlTransactionManager* m_pTM;
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="open"></a>  CFile::Open  
- Przeciążone. **Otwórz** jest przeznaczony do użytku z domyślnym `CFile` konstruktora.  
+ Przeciążone. `Open` jest przeznaczony do użytku z domyślnym `CFile` konstruktora.  
   
 ```  
 virtual BOOL Open(
@@ -532,27 +533,27 @@ virtual BOOL Open(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFileName`  
+ *lpszFileName*  
  Ciąg, który jest ścieżka do żądanego pliku. Ścieżka może być względna, bezwzględna lub nazwa sieciowa (UNC).  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  A **UINT** definiuje tryb dostępu i udostępniania plików. Określa akcję wykonywaną podczas otwierania pliku. Opcje można połączyć za pomocą wartości bitowe lub ( **&#124;** ) operatora. Opcji jednego udziału i uprawnień dostępu co są wymagane; **modeCreate** i **modeNoInherit** tryby są opcjonalne. Zobacz [cfile —](#cfile) konstruktora, aby uzyskać listę opcji trybu.  
   
- `pError`  
+ *pError*  
  Wskaźnik do istniejącego obiektu wyjątku plików, który zostanie wyświetlony stan operacji nie powiodło się.  
   
- `pTM`  
+ *pTM*  
  Wskaźnik do obiektu CAtlTransactionManager  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli Otwórz zakończyło się pomyślnie; w przeciwnym razie 0. `pError` Parametr ma znaczenie tylko wtedy, gdy zwracany jest 0.  
+ Różna od zera, jeśli Otwórz zakończyło się pomyślnie; w przeciwnym razie 0. *PError* parametr ma znaczenie tylko wtedy, gdy zwracany jest 0.  
   
 ### <a name="remarks"></a>Uwagi  
  Dwie funkcje stanowią metodę "bezpiecznej" na potrzeby otwierania pliku, w którym awarii jest to normalne, oczekiwane.  
   
- Gdy `CFile` Konstruktor spowoduje zgłoszenie wyjątku w stanie błędu **Otwórz** zwróci **FALSE** dla warunków błędu. **Otwórz** mogą nadal zainicjować [CFileException](../../mfc/reference/cfileexception-class.md) obiektu do opisu błędu, jednak. Jeśli nie podasz `pError` parametr, lub w przypadku przekazania **NULL** dla `pError`, **Otwórz** zwróci **FALSE** i nie `CFileException`. W przypadku przekazania wskaźnik do istniejącej `CFileException`, i **Otwórz** napotka błąd, funkcja wprowadzi ona informacji na temat tego błędu. Żadna wielkość wykona **Otwórz** zgłoszenia wyjątku.  
+ Gdy `CFile` Konstruktor spowoduje zgłoszenie wyjątku w stanie błędu `Open` zwróci **FALSE** dla warunków błędu. `Open` nadal można zainicjować [CFileException](../../mfc/reference/cfileexception-class.md) obiektu do opisu błędu, jednak. Jeśli nie podasz *pError* parametr, lub w przypadku przekazania **NULL** dla *pError*, `Open` zwróci **FALSE** i nie `CFileException`. W przypadku przekazania wskaźnik do istniejącej `CFileException`, i `Open` napotka błąd, funkcja wprowadzi ona informacji na temat tego błędu. Żadna wielkość wykona `Open` zgłoszenia wyjątku.  
   
- W poniższej tabeli opisano możliwe wyniki **Otwórz**.  
+ W poniższej tabeli opisano możliwe wyniki `Open`.  
   
 |`pError`|Wystąpił błąd|Wartość zwracana|Zawartość CFileException|  
 |--------------|------------------------|------------------|----------------------------|  
@@ -583,14 +584,14 @@ virtual UINT Read(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpBuf`  
+ *lpBuf*  
  Wskaźnik do buforu dostarczone przez użytkownika, który będzie odbierać dane odczytane z pliku.  
   
- `nCount`  
+ *nCount*  
  Maksymalna liczba bajtów do odczytu z pliku. Dla plików trybu tekstu pary wysuwu wiersza powrotu karetki są liczone jako pojedynczy znaki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczba bajtów przesłanych w buforze. Należy pamiętać, że dla wszystkich `CFile` klas, zwracana wartość może być mniejsza niż `nCount` czy osiągnięto koniec pliku.  
+ Liczba bajtów przesłanych w buforze. Należy pamiętać, że dla wszystkich `CFile` klas, zwracana wartość może być mniejsza niż *nCount* czy osiągnięto koniec pliku.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCFiles#15](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_11.cpp)]  
@@ -607,10 +608,10 @@ static void PASCAL Remove(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFileName`  
+ *lpszFileName*  
  Ciąg, który jest ścieżka do żądanego pliku. Ścieżka może być względna lub bezwzględna i może zawierać nazwy sieci.  
   
- `pTM`  
+ *pTM*  
  Wskaźnik do obiektu CAtlTransactionManager  
   
 ### <a name="remarks"></a>Uwagi  
@@ -632,13 +633,13 @@ static void PASCAL Rename(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszOldName`  
+ *lpszOldName*  
  Starej ścieżki.  
   
- `lpszNewName`  
+ *lpszNewName*  
  Nowej ścieżki.  
   
- `pTM`  
+ *pTM*  
  Wskaźnik do obiektu CAtlTransactionManager  
   
 ### <a name="remarks"></a>Uwagi  
@@ -657,17 +658,17 @@ UINT nFrom);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lOff`  
+ *lOff*  
  Liczba bajtów do przesuwania wskaźnika pliku. Dodatnie wartości przesunięcia wskaźnika pliku pod koniec pliku. wartości ujemne wskaźnika pliku na początku pliku.  
   
- `nFrom`  
+ *NZ*  
  Położenie do wyszukania z. W sekcji uwag możliwych wartości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Pozycja wskaźnika pliku, jeśli metoda zakończyło się pomyślnie; w przeciwnym razie wartość zwracana jest niezdefiniowane i wskaźnika do `CFileException` wyjątku.  
   
 ### <a name="remarks"></a>Uwagi  
- W poniższej tabeli przedstawiono możliwe wartości `nFrom` parametru.  
+ W poniższej tabeli przedstawiono możliwe wartości *NZ* parametru.  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
@@ -721,7 +722,7 @@ virtual void SetFilePath(LPCTSTR lpszNewName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszNewName`  
+ *lpszNewName*  
  Wskaźnik do ciąg określający nowej ścieżki.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -740,7 +741,7 @@ virtual void SetLength(ULONGLONG dwNewLen);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwNewLen`  
+ *dwNewLen*  
  Żądana długość pliku w bajtach. Ta wartość może być większa lub mniejsza niż bieżąca długość pliku. Plik zostanie rozszerzony lub obcięty odpowiednio.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -762,13 +763,13 @@ static void PASCAL SetStatus(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFileName`  
+ *lpszFileName*  
  Ciąg, który jest ścieżka do żądanego pliku. Ścieżka może być względna lub bezwzględna i może zawierać nazwy sieci.  
   
  *status*  
  Bufor zawierającego nowe informacje o stanie. Wywołanie **GetStatus** funkcji członkowskiej, aby wstępnie **CFileStatus** struktury bieżącymi wartościami, a następnie wprowadź wymagane zmiany. Jeśli wartość wynosi 0, odpowiadający mu element stan nie zostanie zaktualizowany. Zobacz [GetStatus](#getstatus) funkcji członkowskiej opis **CFileStatus** struktury.  
   
- `pTM`  
+ *pTM*  
  Wskaźnik do obiektu CAtlTransactionManager  
   
 ### <a name="remarks"></a>Uwagi  
@@ -789,10 +790,10 @@ virtual void UnlockRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwPos`  
+ *dwPos*  
  Przesunięcie bajtów początek zakresu bajtów, aby odblokować.  
   
- `dwCount`  
+ *dwCount*  
  Liczba bajtów w zakresie, aby odblokować.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -814,10 +815,10 @@ virtual void Write(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpBuf`  
+ *lpBuf*  
  Wskaźnik do buforu dostarczone przez użytkownika, zawierający dane są zapisywane w pliku.  
   
- `nCount`  
+ *nCount*  
  Liczba bajtów do przeniesienia z buforu. Dla plików trybu tekstu pary wysuwu wiersza powrotu karetki są liczone jako pojedynczy znaki.  
   
 ### <a name="remarks"></a>Uwagi  

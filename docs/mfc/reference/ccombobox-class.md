@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90495f2eccfb31169653f6dcb09f2cf52e5a05dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb514531e600243fe02f8b5a6a9cd91a30c14542
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357244"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952583"
 ---
 # <a name="ccombobox-class"></a>Ccombobox — klasa
 Udostępnia funkcjonalność pola kombi systemu Windows.  
@@ -254,7 +254,7 @@ class CComboBox : public CWnd
   
  Po osadzeniu `CComboBox` obiektu obiektu w innym oknie, nie trzeba go zniszcz. W przypadku utworzenia `CComboBox` obiektów na stosie, zostanie zniszczony automatycznie. W przypadku utworzenia `CComboBox` obiektów na stercie przy użyciu **nowe** funkcji, należy wywołać **usunąć** obiektu zniszczyć ją, gdy pole kombi systemu Windows zostanie zniszczony.  
   
- **Uwaga** aby obsłużyć `WM_KEYDOWN` i `WM_CHAR` wiadomości, masz do podklasy pola kombi edycji i formanty pola listy, pochodzi z klasy z `CEdit` i `CListBox`, i Dodaj programy obsługi dla tych wiadomości do pochodnej klasy. Aby uzyskać więcej informacji, zobacz [ http://support.microsoft.com/default.aspxscid=kb; en-us; Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667) i [CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).  
+ **Uwaga** Jeśli chcesz obsługiwać WM_KEYDOWN i WM_CHAR wiadomości, konieczne będzie podklasy pola kombi edycji i formanty pola listy, pochodzi z klasy z `CEdit` i `CListBox`, i Dodaj programy obsługi dla tych wiadomości do klasy pochodnej. Aby uzyskać więcej informacji, zobacz [ http://support.microsoft.com/default.aspxscid=kb; en-us; Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667) i [CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -276,7 +276,7 @@ int AddString(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszString`  
+ *lpszString*  
  Wskazuje ciąg zakończony zerem, który ma zostać dodany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -324,7 +324,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpCompareItemStruct`  
+ *lpCompareItemStruct*  
  Długie wskaźnik do [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md) struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -366,25 +366,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
+ *dwStyle*  
  Określa styl pola kombi. Zastosuj dowolną kombinację [style pola kombi](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) do pola.  
   
- `rect`  
+ *Rect*  
  Wskazuje położenie i rozmiar pola kombi. Może być [struktura RECT](../../mfc/reference/rect-structure1.md) lub `CRect` obiektu.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Określa okno nadrzędne pola kombi (zazwyczaj `CDialog`). Nie może być **NULL**.  
   
- `nID`  
+ *nID*  
  Określa identyfikator formantu pola kombi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Możesz utworzyć `CComboBox` obiektu w dwóch krokach. Najpierw należy wywołać konstruktora, a następnie wywołać **Utwórz**, która tworzy pole kombi systemu Windows i dołącza go do `CComboBox` obiektu.  
+ Możesz utworzyć `CComboBox` obiektu w dwóch krokach. Najpierw należy wywołać konstruktora, a następnie wywołać `Create`, która tworzy pole kombi systemu Windows i dołącza go do `CComboBox` obiektu.  
   
- Gdy **Utwórz** wykonuje system Windows wysyła [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), i [WM_ GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) wiadomości do pola kombi.  
+ Gdy `Create` wykonuje system Windows wysyła [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), i [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) komunikaty do pola kombi.  
   
  Komunikaty te są obsługiwane przez domyślnie [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), i [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) funkcje Członkowskie w `CWnd` klasy podstawowej. Aby rozszerzyć domyślnej obsługi wiadomości, klasa wyprowadzona z `CComboBox`, Dodaj mapowanie komunikatów do nowej klasy i zastąpienie poprzedniego funkcje Członkowskie obsługi wiadomości. Zastąpienie `OnCreate`, na przykład, aby wykonać wymagane inicjowania dla nowej klasy.  
   
@@ -428,7 +428,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpDeleteItemStruct`  
+ *lpDeleteItemStruct*  
  Długie wskaźnik do systemu Windows [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md) struktury, który zawiera informacje o usuniętego elementu. Zobacz [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) opis tej struktury.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -438,21 +438,21 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
  [!code-cpp[NVC_MFC_CComboBox#8](../../mfc/reference/codesnippet/cpp/ccombobox-class_8.cpp)]  
   
 ##  <a name="deletestring"></a>  CComboBox::DeleteString  
- Usuwa element w pozycji `nIndex` w polu kombi.  
+ Usuwa element w pozycji *nIndex* w polu kombi.  
   
 ```  
 int DeleteString(UINT nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Określa indeks na ciąg, który ma zostać usunięty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli wartość zwracana jest większa niż lub równa 0, to liczba ciągów na liście. Wartość zwracana jest **CB_ERR** Jeśli `nIndex` Określa indeks jest większy niż liczba elementów na liście.  
+ Jeśli wartość zwracana jest większa niż lub równa 0, to liczba ciągów na liście. Wartość zwracana jest **CB_ERR** Jeśli *nIndex* Określa indeks jest większy niż liczba elementów na liście.  
   
 ### <a name="remarks"></a>Uwagi  
- Wszystkie elementy występujące po słowie `nIndex` teraz Przenieś w dół o jedną pozycję. Na przykład jeśli pole kombi zawiera dwa elementy, usunięcie pierwszy element spowoduje, że element pozostałych się teraz na pierwszym miejscu. `nIndex`= 0 dla elementu na pierwszym miejscu.  
+ Wszystkie elementy po *nIndex* teraz Przenieś w dół o jedną pozycję. Na przykład jeśli pole kombi zawiera dwa elementy, usunięcie pierwszy element spowoduje, że element pozostałych się teraz na pierwszym miejscu. *nIndex*= 0 dla elementu na pierwszym miejscu.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CComboBox#9](../../mfc/reference/codesnippet/cpp/ccombobox-class_9.cpp)]  
@@ -467,8 +467,8 @@ int Dir(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `attr`  
- Może być dowolną kombinacją `enum` wartości opisanego w [CFile::GetStatus](../../mfc/reference/cfile-class.md#getstatus) lub dowolną kombinację następujących wartości:  
+ *attr*  
+ Może być dowolną kombinacją **wyliczenia** wartości opisanego w [CFile::GetStatus](../../mfc/reference/cfile-class.md#getstatus) lub dowolną kombinację następujących wartości:  
   
 - **DDL_READWRITE** plik może być z zapisu lub odczytu.  
   
@@ -478,15 +478,15 @@ int Dir(
   
 - **DDL_SYSTEM** plik jest plikiem systemu.  
   
-- **DDL_DIRECTORY** nazwa określona przez `lpszWildCard` Określa katalog.  
+- **DDL_DIRECTORY** nazwa określona przez *lpszWildCard* Określa katalog.  
   
 - **DDL_ARCHIVE** plik został zarchiwizowany.  
   
-- **DDL_DRIVES** obejmują wszystkie dyski, które odpowiada nazwie określonej przez `lpszWildCard`.  
+- **DDL_DRIVES** obejmują wszystkie dyski, które odpowiada nazwie określonej przez *lpszWildCard*.  
   
 - **DDL_EXCLUSIVE** flagę Exclusive. Jeśli ustawiono flagę exclusive, wyświetlane są tylko pliki o określonym typie. W przeciwnym razie pliki określonego typu są wyświetlane oprócz plików "normal".  
   
- `lpszWildCard`  
+ *lpszWildCard*  
  Wskazuje ciąg specyfikacji pliku. Ten ciąg może zawierać symboli wieloznacznych (na przykład *.\*).  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -506,13 +506,13 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Wskaźnik do [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) strukturę, która zawiera informacje o typie rysunku wymagane.  
   
 ### <a name="remarks"></a>Uwagi  
  **ItemAction** członkiem `DRAWITEMSTRUCT` struktury definiuje rysowania akcję, która ma zostać wykonane. Zobacz [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) opis tej struktury.  
   
- Domyślnie ta funkcja członkowska nie działa. Przesłonić tę funkcję elementu członkowskiego, aby zaimplementować rysunku rysowania przez właściciela `CComboBox` obiektu. Przed zakończenie funkcji członkowskiej, aplikacja powinna przywrócenie wszystkich obiektów grafiki urządzenia interfejsu (GDI), wybrane kontekst wyświetlania dostarczane w `lpDrawItemStruct`.  
+ Domyślnie ta funkcja członkowska nie działa. Przesłonić tę funkcję elementu członkowskiego, aby zaimplementować rysunku rysowania przez właściciela `CComboBox` obiektu. Przed zakończenie funkcji członkowskiej, aplikacja powinna przywrócenie wszystkich obiektów grafiki urządzenia interfejsu (GDI), wybrane kontekst wyświetlania dostarczane w *lpDrawItemStruct*.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CComboBox#11](../../mfc/reference/codesnippet/cpp/ccombobox-class_11.cpp)]  
@@ -527,10 +527,10 @@ int FindString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nStartAfter`  
- Zawiera liczony od zera indeks elementu przed pierwszym elementem do wyszukania. Podczas wyszukiwania przez nią miejsce osiągnie dolnej części pola listy, która kontynuuje od górnej krawędzi pola listy ponownie element określony przez `nStartAfter`. Jeśli wartość-1, przeszukiwany jest pole całą listę od początku.  
+ *nStartAfter*  
+ Zawiera liczony od zera indeks elementu przed pierwszym elementem do wyszukania. Podczas wyszukiwania przez nią miejsce osiągnie dolnej części pola listy, która kontynuuje od górnej krawędzi pola listy ponownie element określony przez *nStartAfter*. Jeśli wartość-1, przeszukiwany jest pole całą listę od początku.  
   
- `lpszString`  
+ *lpszString*  
  Wskazuje ciąg zakończony zerem, który zawiera prefiks do wyszukania. Wyszukiwanie jest niezależny, więc ten ciąg może zawierać żadnych kombinacji wielkich i małych liter.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -543,7 +543,7 @@ int FindString(
  [!code-cpp[NVC_MFC_CComboBox#12](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]  
   
 ##  <a name="findstringexact"></a>  CComboBox::FindStringExact  
- Wywołanie `FindStringExact` funkcji członkowskiej, aby znaleźć pierwszy ciąg pole listy (w polu kombi), który dopasowuje ciąg określony w `lpszFind`.  
+ Wywołanie `FindStringExact` funkcji członkowskiej, aby znaleźć pierwszy ciąg pole listy (w polu kombi), który dopasowuje ciąg określony w *lpszFind*.  
   
 ```  
 int FindStringExact(
@@ -552,17 +552,17 @@ int FindStringExact(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndexStart`  
- Określa liczony od zera indeks elementu przed pierwszym elementem do wyszukania. Podczas wyszukiwania przez nią miejsce osiągnie dolnej części pola listy, która kontynuuje od górnej krawędzi pola listy ponownie element określony przez `nIndexStart`. Jeśli `nIndexStart` wynosi -1, przeszukiwany jest pole całą listę od początku.  
+ *nIndexStart*  
+ Określa liczony od zera indeks elementu przed pierwszym elementem do wyszukania. Podczas wyszukiwania przez nią miejsce osiągnie dolnej części pola listy, która kontynuuje od górnej krawędzi pola listy ponownie element określony przez *nIndexStart*. Jeśli *nIndexStart* -1, jest przeszukiwany jest pole całą listę od początku.  
   
- `lpszFind`  
+ *lpszFind*  
  Wskazuje zerem ciąg do wyszukania. Ten ciąg może zawierać pełną nazwę pliku z rozszerzeniem. Wyszukiwanie nie jest uwzględniana wielkość liter, więc ten ciąg może zawierać żadnych kombinacji wielkich i małych liter.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczony od zera indeks pasującego elementu lub **CB_ERR** Jeśli wyszukiwanie nie powiodło się.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli pola kombi została utworzona przy użyciu stylu rysowania przez właściciela, ale bez [cbs_hasstrings —](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) styl `FindStringExact` próbuje dopasować wartość bitowego względem wartości `lpszFind`.  
+ Jeśli pola kombi została utworzona przy użyciu stylu rysowania przez właściciela, ale bez [cbs_hasstrings —](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) styl `FindStringExact` próbuje dopasować wartość bitowego względem wartości *lpszFind*.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CComboBox#13](../../mfc/reference/codesnippet/cpp/ccombobox-class_13.cpp)]  
@@ -612,8 +612,8 @@ BOOL GetCueBanner(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[out] `lpszText`|Wskaźnik do buforu, który odbiera tekst transparentu wskaźnika.|  
-|[in] `cchText`|Rozmiar buforu, który `lpszText` wskazuje parametr.|  
+|[out] *lpszText*|Wskaźnik do buforu, który odbiera tekst transparentu wskaźnika.|  
+|[in] *cchText*|Rozmiar buforu, który *lpszText* wskazuje parametr.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  W pierwszym przeciążenia [cstring —](../../atl-mfc-shared/using-cstring.md) obiekt, który zawiera tekst transparentu sygnalizacji, jeśli istnieje; w przeciwnym razie `CString` obiektu, który ma zerową długość.  
@@ -747,14 +747,14 @@ DWORD_PTR GetItemData(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Zawiera liczony od zera indeks elementu w polu listy pola kombi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  32-bitową wartość skojarzoną z elementem, lub **CB_ERR** w przypadku wystąpienia błędu.  
   
 ### <a name="remarks"></a>Uwagi  
- 32-bitową wartość można skonfigurować z `dwItemData` parametr [SetItemData](#setitemdata) wywołanie funkcji Członkowskich. Użyj `GetItemDataPtr` funkcji członkowskiej, jeśli wskaźnik jest 32-bitową wartość do pobrania ( **void\***).  
+ 32-bitową wartość można skonfigurować z *dwItemData* parametr [SetItemData](#setitemdata) wywołanie funkcji Członkowskich. Użyj `GetItemDataPtr` funkcji członkowskiej, jeśli wskaźnik jest 32-bitową wartość do pobrania ( **void\***).  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CComboBox#21](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]  
@@ -767,7 +767,7 @@ void* GetItemDataPtr(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Zawiera liczony od zera indeks elementu w polu listy pola kombi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -784,8 +784,8 @@ int GetItemHeight(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
- Określa składnik pola kombi, w których wysokość ma być pobrana. Jeśli `nIndex` parametru wynosi -1, wysokość kontrolki edycji (lub statycznego tekstu) część pola kombi są pobierane. Jeśli pole kombi ma [cbs_ownerdrawvariable —](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) styl `nIndex` określa liczony od zera indeks elementu listy, w których wysokość ma być pobrana. W przeciwnym razie `nIndex` powinna być równa 0.  
+ *nIndex*  
+ Określa składnik pola kombi, w których wysokość ma być pobrana. Jeśli *nIndex* parametru wynosi -1, wysokość kontrolki edycji (lub statycznego tekstu) część pola kombi są pobierane. Jeśli pole kombi ma [cbs_ownerdrawvariable —](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) styl *nIndex* określa liczony od zera indeks elementu listy, w których wysokość ma być pobrana. W przeciwnym razie *nIndex* powinna być równa 0.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wysokość w pikselach określonego elementu w polu kombi. Wartość zwracana jest **CB_ERR** w przypadku wystąpienia błędu.  
@@ -807,17 +807,17 @@ void GetLBText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Zawiera liczony od zera indeks ciągu pole listy ma zostać skopiowany.  
   
- `lpszText`  
+ *lpszText*  
  Wskazuje buforu, który ma otrzymać ciąg. Rozmiar buforu musi mieć wystarczającą ilość miejsca na ciąg i znak końcowy null.  
   
- `rString`  
+ *rString*  
  Odwołanie do `CString`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Długość (w bajtach) ciąg, z wyłączeniem znak końcowy null. Jeśli `nIndex` nie określa nieprawidłowy indeks, jest zwracana wartość **CB_ERR**.  
+ Długość (w bajtach) ciąg, z wyłączeniem znak końcowy null. Jeśli *nIndex* nie określa nieprawidłowy indeks, jest zwracana wartość **CB_ERR**.  
   
 ### <a name="remarks"></a>Uwagi  
  Drugi formularz tego elementu członkowskiego funkcji wypełnienia `CString` obiektu z tekstu elementu.  
@@ -833,11 +833,11 @@ int GetLBTextLen(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Zawiera liczony od zera indeks ciągu pola listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Długość ciągu w bajtach, z wyłączeniem znak końcowy null. Jeśli `nIndex` nie określa nieprawidłowy indeks, jest zwracana wartość **CB_ERR**.  
+ Długość ciągu w bajtach, z wyłączeniem znak końcowy null. Jeśli *nIndex* nie określa nieprawidłowy indeks, jest zwracana wartość **CB_ERR**.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CComboBox::GetLBText](#getlbtext).  
@@ -897,10 +897,10 @@ int InitStorage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItems`  
+ *nItems*  
  Określa liczbę elementów do dodania.  
   
- `nBytes`  
+ *nBytes*  
  Określa ilość pamięci w bajtach, można przydzielić elementu ciągów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -909,7 +909,7 @@ int InitStorage(
 ### <a name="remarks"></a>Uwagi  
  Wywołanie tej funkcji przed dodaniem dużą liczbę elementów w polu listy części `CComboBox`.  
   
- Windows 95/98: `wParam` jest ograniczony do 16-bitowych wartości parametru. Oznacza to, że pola listy nie może zawierać więcej niż 32 767 elementów. Mimo że liczba elementów jest ograniczone, łączny rozmiar elementów w polu listy jest ograniczona tylko przez ilość dostępnej pamięci.  
+ Windows 95/98: *wParam* jest ograniczony do 16-bitowych wartości parametru. Oznacza to, że pola listy nie może zawierać więcej niż 32 767 elementów. Mimo że liczba elementów jest ograniczone, łączny rozmiar elementów w polu listy jest ograniczona tylko przez ilość dostępnej pamięci.  
   
  Ta funkcja pomaga przyspieszyć inicjowania pola listy, które ma dużą liczbę elementów (więcej niż 100). Go preallocates określoną ilością pamięci, tak że kolejne [AddString](#addstring), [InsertString](#insertstring), i [Dir](#dir) funkcje pobierać najkrótszym czasie. Szacuje można użyć parametrów. Jeśli overestimate, niektóre dodatkową pamięć jest przydzielony; Jeśli w przypadku licznik nie uwzględniać, normalne alokacji jest używana dla elementów, które przekraczają ilość przydzielony wstępnie.  
   
@@ -926,10 +926,10 @@ int InsertString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Zawiera indeks liczony od zera pozycja w polu listy, który otrzyma ten ciąg. Jeśli ten parametr ma wartość -1, ten ciąg jest dodawany na końcu listy.  
   
- `lpszString`  
+ *lpszString*  
  Wskazuje ciąg zakończony zerem, który ma zostać wstawiony.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -952,7 +952,7 @@ BOOL LimitText(int nMaxChars);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nMaxChars`  
+ *nMaxChars*  
  Określa tekst, który użytkownik może wprowadzić długość (w bajtach). Jeśli ten parametr ma wartość 0, długość tekstu wynosi 65 535 bajtów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -974,7 +974,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpMeasureItemStruct`  
+ *lpMeasureItemStruct*  
  Długie wskaźnik do [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) struktury.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1020,10 +1020,10 @@ int SelectString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nStartAfter`  
- Zawiera liczony od zera indeks elementu przed pierwszym elementem do wyszukania. Podczas wyszukiwania przez nią miejsce osiągnie dolnej części pola listy, która kontynuuje od górnej krawędzi pola listy ponownie element określony przez `nStartAfter`. Jeśli wartość-1, przeszukiwany jest pole całą listę od początku.  
+ *nStartAfter*  
+ Zawiera liczony od zera indeks elementu przed pierwszym elementem do wyszukania. Podczas wyszukiwania przez nią miejsce osiągnie dolnej części pola listy, która kontynuuje od górnej krawędzi pola listy ponownie element określony przez *nStartAfter*. Jeśli wartość-1, przeszukiwany jest pole całą listę od początku.  
   
- `lpszString`  
+ *lpszString*  
  Wskazuje ciąg zakończony zerem, który zawiera prefiks do wyszukania. Wyszukiwanie jest niezależny, więc ten ciąg może zawierać żadnych kombinacji wielkich i małych liter.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1059,7 +1059,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
  Ta metoda wysyła [CB_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775897) komunikat, który jest opisany w zestawie SDK systemu Windows.  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykładowy kod definiuje zmienną, `m_combobox`, która jest używana do uzyskania programowego dostępu do kontrolki pola kombi. Ta zmienna jest używana w następnym przykładzie.  
+ Poniższy przykładowy kod definiuje zmienną, *m_combobox*, która jest używana do uzyskania programowego dostępu do kontrolki pola kombi. Ta zmienna jest używana w następnym przykładzie.  
   
  [!code-cpp[NVC_MFC_CComboBox_s1#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]  
   
@@ -1076,11 +1076,11 @@ int SetCurSel(int nSelect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nSelect`  
+ *Wybierz*  
  Określa liczony od zera indeks ciąg, aby wybrać. Jeśli wartość-1, zostaną usunięte wszystkie bieżące zaznaczenie w polu listy i kontrolki edycji jest wyczyszczone.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczony od zera indeks elementu wybranego w przypadku pomyślnego nawiązania wiadomości. Wartość zwracana jest **CB_ERR** Jeśli `nSelect` jest większa niż liczba elementów na liście lub, jeśli `nSelect` ma ustawioną wartość -1, co spowoduje wyczyszczenie zaznaczenia.  
+ Liczony od zera indeks elementu wybranego w przypadku pomyślnego nawiązania wiadomości. Wartość zwracana jest **CB_ERR** Jeśli *wybierz* jest większa niż liczba elementów na liście lub, jeśli *wybierz* ma ustawioną wartość -1, co spowoduje wyczyszczenie zaznaczenia.  
   
 ### <a name="remarks"></a>Uwagi  
  W razie potrzeby pole listy Przewija ciąg do widoku (Jeśli pole listy jest widoczna). Tekst w formancie edycyjnym pola kombi zostanie zmieniona w celu odzwierciedlenia wyboru nowego. Wszelkie poprzednie zaznaczenie w polu listy zostanie usunięte.  
@@ -1096,7 +1096,7 @@ int SetDroppedWidth(UINT nWidth);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nWidth`  
+ *nWidth*  
  Minimalna szerokość dopuszczalny części pola listy, pola kombi w pikselach.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1120,10 +1120,10 @@ BOOL SetEditSel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nStartChar`  
+ *nStartChar*  
  Określa położenie początkowe. Jeśli pozycja początkowa ma ustawioną wartość -1, zostaną usunięte wszystkie zaznaczone.  
   
- `nEndChar`  
+ *nEndChar*  
  Określa pozycję końcową. Pozycji końcowej ma ustawioną wartość -1, a następnie cały tekst z pozycji początkowej ostatni znak w formancie edycyjnym jest zaznaczone.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1191,10 +1191,10 @@ int SetItemData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Zawiera liczony od zera indeks w elemencie, aby ustawić.  
   
- `dwItemData`  
+ *dwItemData*  
  Zawiera nową wartość do skojarzenia z elementem.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1216,10 +1216,10 @@ int SetItemDataPtr(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Zawiera liczony od zera indeks w elemencie.  
   
- `pData`  
+ *pData*  
  Zawiera wskaźnik do skojarzenia z elementem.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1241,15 +1241,15 @@ int SetItemHeight(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Określa, czy ustawiono wysokość listy elementów lub wysokość kontrolki edycji (lub statycznego tekstu) część pola kombi.  
   
- Jeśli pole kombi ma [cbs_ownerdrawvariable —](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) styl `nIndex` liczony od zera indeks elementu listy, w których wysokość ma być ustawione; w przeciwnym razie Określa `nIndex` musi być równa 0 i wysokość listy wszystkich elementów zostanie ustawiona.  
+ Jeśli pole kombi ma [cbs_ownerdrawvariable —](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) styl *nIndex* liczony od zera indeks elementu listy, w których wysokość ma być ustawione; w przeciwnym razie Określa *nIndex* musi mieć wartość 0 i ustawi wysokość wszystkich elementów listy.  
   
- Jeśli `nIndex` jest wartość -1, wysokość formantu edycji lub statyczna tekstowym pola kombi, można ustawić.  
+ Jeśli *nIndex* jest wartość -1, wysokość formantu edycji lub statyczna tekstowym pola kombi, można ustawić.  
   
- `cyItemHeight`  
- Określa wysokość w pikselach, składnik pola kombi identyfikowany przez `nIndex`.  
+ *cyItemHeight*  
+ Określa wysokość w pikselach, składnik pola kombi identyfikowany przez *nIndex*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  **CB_ERR** Jeśli indeks lub wysokość jest nieprawidłowy; w przeciwnym razie wartość 0.  
@@ -1268,7 +1268,7 @@ LCID SetLocale(LCID nNewLocale);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nNewLocale`  
+ *nNewLocale*  
  Nowa wartość identyfikator (LCID) ustawień regionalnych dla pola kombi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1291,7 +1291,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `iMinVisible`|Określa minimalną liczbę widocznych elementów.|  
+|[in] *iMinVisible*|Określa minimalną liczbę widocznych elementów.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
@@ -1300,7 +1300,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
  Ta metoda wysyła [CB_SETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) komunikat, który jest opisany w zestawie SDK systemu Windows.  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykładowy kod definiuje zmienną, `m_combobox`, która jest używana do uzyskania programowego dostępu do kontrolki pola kombi. Ta zmienna jest używana w następnym przykładzie.  
+ Poniższy przykładowy kod definiuje zmienną, *m_combobox*, która jest używana do uzyskania programowego dostępu do kontrolki pola kombi. Ta zmienna jest używana w następnym przykładzie.  
   
  [!code-cpp[NVC_MFC_CComboBox_s1#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]  
   
@@ -1317,14 +1317,14 @@ int SetTopIndex(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Określa liczony od zera indeks elementu pola listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zero, jeśli to się powiedzie, lub **CB_ERR** w przypadku wystąpienia błędu.  
   
 ### <a name="remarks"></a>Uwagi  
- System jest przewijane pole listy do element określony przez `nIndex` pojawia się na początku listy pola lub przewijania maksymalny zakres został osiągnięty.  
+ System jest przewijane pole listy do element określony przez *nIndex* pojawia się na początku listy pola lub przewijania maksymalny zakres został osiągnięty.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CComboBox#40](../../mfc/reference/codesnippet/cpp/ccombobox-class_42.cpp)]  

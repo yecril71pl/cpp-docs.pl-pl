@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f564b70e850f3020956711ef15ab1fe9285a6ae4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 462882957999d607809e80908ae4a25c628f18d4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354151"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951746"
 ---
 # <a name="canimationcolor-class"></a>Klasa CAnimationColor
 Implementuje funkcje koloru, których składniki czerwony, zielonemu i niebieskiemu można animować.  
@@ -121,13 +121,13 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pRTransition`  
+ *pRTransition*  
  Przejście do składnika czerwony.  
   
- `pGTransition`  
+ *pGTransition*  
  Przejście do składnika zielony.  
   
- `pBTransition`  
+ *pBTransition*  
  Przejście do składnika niebieski.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -147,16 +147,16 @@ CAnimationColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `color`  
+ *Kolor*  
  Określa domyślny kolor.  
   
- `nGroupID`  
+ *nGroupID*  
  Określa identyfikator grupy.  
   
- `nObjectID`  
+ *nObjectID*  
  Określa identyfikator obiektu.  
   
- `dwUserData`  
+ *dwUserData*  
  Określa dane zdefiniowane przez użytkownika.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -170,7 +170,7 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*>& lst);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lst`  
+ *lst*  
  Funkcja zwraca wartość, zawiera wskaźniki do trzech obiektów CAnimationVariable reprezentująca składniki czerwonemu, zielonemu i niebieski.  
   
 ##  <a name="getb"></a>  CAnimationColor::GetB  
@@ -233,7 +233,7 @@ BOOL GetValue(COLORREF& color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `color`  
+ *Kolor*  
  Dane wyjściowe. Gdy metoda zwróci wartość, zawiera bieżącą wartość.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -279,7 +279,7 @@ void operator=(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `color`  
+ *Kolor*  
  Określa nową wartość koloru animacji.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -293,7 +293,7 @@ void SetDefaultValue(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `color`  
+ *Kolor*  
  Określa nowe wartości domyślne dla składników czerwonemu, zielonemu i niebieski.  
   
 ### <a name="remarks"></a>Uwagi  

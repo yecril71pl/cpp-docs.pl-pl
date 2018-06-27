@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca18f12c5aa1ae767b8921c28e650f3fb69d9942
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f0419e8f8aea141c3aaa54e320200160dae877f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384726"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957227"
 ---
 # <a name="tn029-splitter-windows"></a>TN029: okna podziału
 Ta uwaga opisuje MFC [CSplitterWnd klasy](../mfc/reference/csplitterwnd-class.md), zapewniające okno dzieli i zarządza rozmiaru innych okien okienka.  
@@ -66,7 +66,7 @@ Ta uwaga opisuje MFC [CSplitterWnd klasy](../mfc/reference/csplitterwnd-class.md
  Okienko:  
  Okno specyficzne dla aplikacji, która `CSplitterWnd` zarządza. Okienko jest zazwyczaj obiekt, który jest pochodną [cview — klasa](../mfc/reference/cview-class.md), ale może być dowolną [CWnd](../mfc/reference/cwnd-class.md) obiekt, który ma identyfikator podrzędnych odpowiednie okna.  
   
- Do używania `CWnd`-pochodnych obiektów należy przekazać `RUNTIME_CLASS` obiektu do `CreateView` działać tak jak w przypadku używania `CView`-pochodnej klasy. Należy użyć klasy `DECLARE_DYNCREATE` i `IMPLEMENT_DYNCREATE` ponieważ platformę używa dynamiczne tworzenie w czasie wykonywania. Mimo że wiele kodu w `CSplitterWnd` jest specyficzne dla `CView` klasy [CObject::IsKindOf](../mfc/reference/cobject-class.md#iskindof) jest zawsze używana, zanim te czynności są wykonywane.  
+ Do używania `CWnd`-pochodnych obiektów należy przekazać runtime_class — obiektu do `CreateView` działać tak jak w przypadku używania `CView`-pochodnej klasy. Klasy muszą używać declare_dyncreate — i implement_dyncreate —, ponieważ platforma korzysta z dynamicznego tworzenia w czasie wykonywania. Mimo że wiele kodu w `CSplitterWnd` jest specyficzne dla `CView` klasy [CObject::IsKindOf](../mfc/reference/cobject-class.md#iskindof) jest zawsze używana, zanim te czynności są wykonywane.  
   
  Pasek podziału:  
  Formant, który znajduje się między wierszy i kolumn okienka. Może służyć do dostosowania rozmiarów wierszy lub kolumn okienka.  
@@ -88,14 +88,14 @@ Ta uwaga opisuje MFC [CSplitterWnd klasy](../mfc/reference/csplitterwnd-class.md
 [      ][      ][v]  
 ```  
   
- Gdy użytkownik przesuwa na pasku przewijania `WM_VSCROLL` wiadomości zostaną wysłane do obu widokach. Gdy widoku albo Ustawia położenie paska przewijania, pasek przewijania udostępniony zostanie ustawiona.  
+ Gdy użytkownik przesuwa paska przewijania, WM_VSCROLL komunikaty będą wysyłane do obu widokach. Gdy widoku albo Ustawia położenie paska przewijania, pasek przewijania udostępniony zostanie ustawiona.  
   
  Należy zauważyć, że paski przewijania udostępnionego najbardziej przydatne z podobnymi obiektami widoku. Jeśli mieszać widoków o różnych typach w rozdzielacza, mogą mieć do pisania kodu specjalne skoordynowania stanowisk przewijania. Wszelkie `CView`-klasy, która używa `CWnd` paska przewijania interfejsów API będzie delegować do paska przewijania udostępnionego, jeśli istnieje. `CScrollView` Implementacja jest jednym z przykładów `CView` klasy, która obsługuje udostępnione paski przewijania. Klasy, które nie pochodzą z `CView`, klasy, które opierają się na paski przewijania-control lub klasy, które użyć standardowego implementacji systemu Windows (na przykład `CEditView`) nie będzie działać z funkcją paska przewijania udostępnionych z `CSplitterWnd`.  
   
 ## <a name="minimum-sizes"></a>Minimalny rozmiar  
  Dla każdego wiersza jest minimalną wysokość wiersza i dla każdej kolumny jest minimalną szerokość kolumny. Ta minimalna wielkość gwarantuje okienko nie jest za mały, który będzie wyświetlany szczegółowy.  
   
- Okna podziału statycznych początkowej wiersza minimalna wysokość i szerokość kolumny jest 0. Dla dynamiczne okno podziału, początkowej wiersza minimalna wysokość i szerokość kolumny są ustawiane przez `sizeMin` parametr `CSplitterWnd::Create` funkcji.  
+ Okna podziału statycznych początkowej wiersza minimalna wysokość i szerokość kolumny jest 0. Dla dynamiczne okno podziału, początkowej wiersza minimalna wysokość i szerokość kolumny są ustawiane przez *sizeMin* parametr `CSplitterWnd::Create` funkcji.  
   
  Minimalne rozmiary można zmieniać za pomocą [CSplitterWnd::SetRowInfo](../mfc/reference/csplitterwnd-class.md#setrowinfo) i [CSplitterWnd::SetColumnInfo](../mfc/reference/csplitterwnd-class.md#setcolumninfo) funkcji.  
   

@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 443e55ab69bc9585a780374a82d5d99b0fd9eef9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d6eb567babdea0d747e6b684f6373403cb685c6
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356035"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956671"
 ---
 # <a name="ccontrolbar-class"></a>Ccontrolbar — klasa
 Klasa podstawowa dla klasy pasków sterowania [cstatusbar —](../../mfc/reference/cstatusbar-class.md), [ctoolbar —](../../mfc/reference/ctoolbar-class.md), [cdialogbar —](../../mfc/reference/cdialogbar-class.md), [crebar —](../../mfc/reference/crebar-class.md), i [ COleResizeBar](../../mfc/reference/coleresizebar-class.md).  
@@ -141,21 +141,21 @@ virtual CSize CalcDynamicLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nLength`  
- Wymiar żądanego paska kontroli poziomej lub pionowej, w zależności od `dwMode`.  
+ *nLength*  
+ Wymiar żądanego paska kontroli poziomej lub pionowej, w zależności od *dwMode*.  
   
- `nMode`  
+ *nMode*  
  Następujące flagi wstępnie zdefiniowane są używane do określenia wysokość i szerokość paska dynamicznej kontroli. Użyj wartości bitowe lub (&#124;) operatora łączenia flag.  
   
 |Flagi trybu układu|Co to oznacza|  
 |-----------------------|-------------------|  
-|`LM_STRETCH`|Wskazuje, czy pasek sterowania powinny być rozciągany tak, aby rozmiar ramki. Zestaw, jeśli nie jest pasek dokowania paska (niedostępne dla dokowanie). Nie ustawiona, gdy pasek jest zadokowane i przestawne (dostępne dla dokowanie). Jeśli ustawiona, `LM_STRETCH` ignoruje `nLength` i zwraca wymiary na podstawie `LM_HORZ` stanu. `LM_STRETCH` działa podobnie do `bStretch` parametru użytego w [CalcFixedLayout](#calcfixedlayout); Zobacz tej funkcji członkowskiej, aby uzyskać więcej informacji na temat relacji między rozciąganie i orientacji.|  
-|`LM_HORZ`|Wskazuje, że pasek jest zorientowany poziomo czy pionowo. Ustaw Jeśli orientacji poziomej pasku, a jeśli tak jest w orientacji pionowej, nie jest ustawiona. `LM_HORZ` działa podobnie do `bHorz` parametru użytego w [CalcFixedLayout](#calcfixedlayout); Zobacz tej funkcji członkowskiej, aby uzyskać więcej informacji na temat relacji między rozciąganie i orientacji.|  
-|**LM_MRUWIDTH**|Ostatnio używane szerokość dynamicznych. Ignoruje `nLength` parametru i używa zapamiętanych ostatnio używane szerokości.|  
-|`LM_HORZDOCK`|Poziomy zadokowane wymiarów. Ignoruje `nLength` parametrów i zwraca rozmiar dynamicznej z największych szerokości.|  
-|`LM_VERTDOCK`|Pionowy zadokowane wymiarów. Ignoruje `nLength` parametrów i zwraca rozmiar dynamicznej z największą wysokość.|  
-|`LM_LENGTHY`|Jeśli `nLength` wskazuje zamiast szerokość, wysokość (kierunku Y).|  
-|`LM_COMMIT`|Resetuje **LM_MRUWIDTH** Bieżąca szerokość przestawne pasek sterowania.|  
+|`LM_STRETCH`|Wskazuje, czy pasek sterowania powinny być rozciągany tak, aby rozmiar ramki. Zestaw, jeśli nie jest pasek dokowania paska (niedostępne dla dokowanie). Nie ustawiona, gdy pasek jest zadokowane i przestawne (dostępne dla dokowanie). Jeśli ustawiona, `LM_STRETCH` ignoruje *nLength* i zwraca wymiary na podstawie `LM_HORZ` stanu. `LM_STRETCH` działa podobnie do *bStretch* parametru użytego w [CalcFixedLayout](#calcfixedlayout); Zobacz tej funkcji członkowskiej, aby uzyskać więcej informacji na temat relacji między rozciąganie i orientacji.|  
+|`LM_HORZ`|Wskazuje, że pasek jest zorientowany poziomo czy pionowo. Ustaw Jeśli orientacji poziomej pasku, a jeśli tak jest w orientacji pionowej, nie jest ustawiona. `LM_HORZ` działa podobnie do *bHorz* parametru użytego w [CalcFixedLayout](#calcfixedlayout); Zobacz tej funkcji członkowskiej, aby uzyskać więcej informacji na temat relacji między rozciąganie i orientacji.|  
+|`LM_MRUWIDTH`|Ostatnio używane szerokość dynamicznych. Ignoruje *nLength* parametru i używa zapamiętanych ostatnio używane szerokości.|  
+|`LM_HORZDOCK`|Poziomy zadokowane wymiarów. Ignoruje *nLength* parametrów i zwraca rozmiar dynamicznej z największych szerokości.|  
+|`LM_VERTDOCK`|Pionowy zadokowane wymiarów. Ignoruje *nLength* parametrów i zwraca rozmiar dynamicznej z największą wysokość.|  
+|`LM_LENGTHY`|Jeśli *nLength* wskazuje zamiast szerokość, wysokość (kierunku Y).|  
+|`LM_COMMIT`|Resetuje `LM_MRUWIDTH` Bieżąca szerokość przestawne pasek sterowania.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Pasek sterowania rozmiar, w pikselach, o [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.  
@@ -173,11 +173,11 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bStretch`  
- Wskazuje, czy pasek powinny być rozciągany tak, aby rozmiar ramki. `bStretch` Parametr jest różna od zera, gdy pasek nie jest pasek dokowania (niedostępne dla dokowanie) i jest 0 gdy jest zadokowane i przestawne (dostępne dla dokowanie).  
+ *bStretch*  
+ Wskazuje, czy pasek powinny być rozciągany tak, aby rozmiar ramki. *BStretch* parametr jest różna od zera, gdy pasek nie jest pasek dokowania (niedostępne dla dokowanie) i jest 0 gdy jest zadokowane i przestawne (dostępne dla dokowanie).  
   
- `bHorz`  
- Wskazuje, że pasek jest zorientowany poziomo czy pionowo. `bHorz` Parametr jest różna od zera, jeśli pasku jest orientacji poziomej i wynosi 0, jeśli jest w orientacji pionowej.  
+ *bHorz*  
+ Wskazuje, że pasek jest zorientowany poziomo czy pionowo. *BHorz* parametr jest różna od zera, jeśli pasku jest orientacji poziomej i wynosi 0, jeśli jest w orientacji pionowej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Pasek sterowania rozmiar, w pikselach, o `CSize` obiektu.  
@@ -185,7 +185,7 @@ virtual CSize CalcFixedLayout(
 ### <a name="remarks"></a>Uwagi  
  Paski sterowania, takie jak paski narzędzi mogą stretch poziomie lub pionie umożliwiających przycisków znajdujących się w pasek sterowania.  
   
- Jeśli `bStretch` jest **TRUE**, stretch wymiaru wzdłuż orientację pochodzącymi `bHorz`. Innymi słowy Jeśli `bHorz` jest **FALSE**, pasek sterowania jest rozciągany w pionie. Jeśli `bStretch` jest **FALSE**, stretch nie występuje. W poniższej tabeli przedstawiono możliwe permutacji, a wynikowy style pasek sterowania, z `bStretch` i `bHorz`.  
+ Jeśli *bStretch* jest **TRUE**, stretch wymiaru wzdłuż orientację dostarczonych przez *bHorz*. Innymi słowy Jeśli *bHorz* jest **FALSE**, pasek sterowania jest rozciągany w pionie. Jeśli *bStretch* jest **FALSE**, stretch nie występuje. W poniższej tabeli przedstawiono możliwe permutacji, a wynikowy style pasek sterowania, z *bStretch* i *bHorz*.  
   
 |bStretch|bHorz|Rozciąganie|Orientacja|Dokowanie nie dokowanie|  
 |--------------|-----------|----------------|-----------------|--------------------------|  
@@ -204,11 +204,11 @@ virtual void CalcInsideRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rect`  
+ *Rect*  
  Zawiera bieżącego rozmiaru pasek sterowania; w tym obramowania.  
   
- `bHorz`  
- Wskazuje, że pasek jest zorientowany poziomo czy pionowo. `bHorz` Parametr jest różna od zera, jeśli pasku jest orientacji poziomej i wynosi 0, jeśli jest w orientacji pionowej.  
+ *bHorz*  
+ Wskazuje, że pasek jest zorientowany poziomo czy pionowo. *BHorz* parametr jest różna od zera, jeśli pasku jest orientacji poziomej i wynosi 0, jeśli jest w orientacji pionowej.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja jest wywoływana przed pasek sterowania jest rysowane.  
@@ -230,7 +230,7 @@ virtual void DoPaint(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *podstawowego kontrolera domeny*  
  Wskazuje kontekstu urządzenia używanego do renderowania obramowania i uchwytu pasek sterowania.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -248,10 +248,10 @@ virtual void DrawBorders(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *podstawowego kontrolera domeny*  
  Wskazuje kontekstu urządzenia używanego do renderowania obramowania pasek sterowania.  
   
- `rect`  
+ *Rect*  
  A `CRect` obiektu zawierającego wymiary pasek sterowania.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -267,10 +267,10 @@ virtual void DrawGripper(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *podstawowego kontrolera domeny*  
  Wskazuje kontekstu urządzenia używanego do renderowania uchwytu pasek sterowania.  
   
- `rect`  
+ *Rect*  
  A `CRect` obiektu zawierającego wymiary uchwytu pasek sterowania.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -284,7 +284,7 @@ void EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwDockStyle`  
+ *dwDockStyle*  
  Określa, czy pasek sterowania obsługuje dokowanie i stron jej okna nadrzędnego, do której może być zadokowany pasek sterowania, jeśli jest to obsługiwane. Może to być jeden lub więcej z następujących czynności:  
   
 - `CBRS_ALIGN_TOP` Umożliwia dokowanie u góry obszaru klienckiego.  
@@ -325,7 +325,7 @@ CRect GetBorders() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A `CRect` obiekt, który zawiera bieżący szerokość (w pikselach) po obu stronach obiektu pasek sterowania. Na przykład wartość `left` elementu członkowskiego, z [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektów, to szerokość krawędzi lewej.  
+ A `CRect` obiekt, który zawiera bieżący szerokość (w pikselach) po obu stronach obiektu pasek sterowania. Na przykład wartość *po lewej stronie* elementu członkowskiego, z [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektów, to szerokość krawędzi lewej.  
   
 ##  <a name="getcount"></a>  CControlBar::GetCount  
  Zwraca liczbę z systemem innym niż `HWND` elementów na `CControlBar` obiektu.  
@@ -376,9 +376,9 @@ BOOL m_bAutoDelete;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `m_bAutoDelete` jest publiczny zmiennej typu **BOOL**.  
+ *m_bAutoDelete* jest publiczny zmiennej typu **BOOL**.  
   
- Obiekt pasek sterowania zwykle jest osadzony w obiekcie okna ramowego. W takim przypadku `m_bAutoDelete` wynosi 0, ponieważ obiekt osadzony pasek sterowania zostanie zniszczony, gdy okno ramowe zostanie zniszczony.  
+ Obiekt pasek sterowania zwykle jest osadzony w obiekcie okna ramowego. W takim przypadku *m_bAutoDelete* wynosi 0, ponieważ obiekt osadzony pasek sterowania zostanie zniszczony, gdy okno ramowe zostanie zniszczony.  
   
  Ustaw wartość tej zmiennej na wartość niezerową Jeśli przydzielone `CControlBar` obiektów na stercie, nie jest planowane wywołać **usunąć**.  
   
@@ -399,10 +399,10 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pTarget`  
+ *pTarget*  
  Wskazuje główną ramkę okna aplikacji. Ten wskaźnik jest używany do przesyłania wiadomości aktualizacji.  
   
- `bDisableIfNoHndler`  
+ *bDisableIfNoHndler*  
  Flaga wskazująca, czy formant, który ma bez obsługi aktualizacji powinna być automatycznie wyświetlana jako wyłączone.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -418,7 +418,7 @@ void SetBarStyle(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
+ *dwStyle*  
  Żądany style pasek sterowania. Może to być jeden lub więcej z następujących czynności:  
   
 - `CBRS_ALIGN_TOP` Umożliwia pasek sterowania możliwości dokowania u góry obszaru klienckiego okna ramki.  
@@ -445,7 +445,7 @@ void SetBarStyle(DWORD dwStyle);
   
 - `CBRS_FLYBY` Powoduje, że tekst komunikatu do aktualizacji w tym samym czasie jako etykietek narzędzi.  
   
-- **CBRS_GRIPPER** powoduje, że uchwytu, podobnie jak na paskami w **crebar —** obiektu, które będą używane dla każdego `CControlBar`-klasy.  
+- `CBRS_GRIPPER` Powoduje, że uchwytu, podobnie jak na paskami w `CReBar` obiektu, które będą używane dla każdego `CControlBar`-klasy.  
   
 ### <a name="remarks"></a>Uwagi  
  Nie wpływa na **WS_** ustawienia (styl okna).  
@@ -476,7 +476,7 @@ void SetBorders(LPCRECT lpRect);
  *cyBottom*  
  Wysokość (w pikselach) pasek sterowania dolnej krawędzi.  
   
- `lpRect`  
+ *lprect —*  
  Wskaźnik do [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który zawiera Bieżąca szerokość (w pikselach) każdej krawędzi obiektu pasek sterowania.  
   
 ### <a name="example"></a>Przykład  
@@ -492,7 +492,7 @@ void SetInPlaceOwner(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Wskaźnik do `CWnd` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36d960cfc0ce3d9d5632edd3a1b42903f3cdd0f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5faf4bb8f2ff416d90311d678543c48d212acdd
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352021"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953886"
 ---
 # <a name="cd2drectu-class"></a>Klasa CD2DRectU
 Otoka dla `D2D1_RECT_U`.  
@@ -48,7 +48,7 @@ class CD2DRectU : public D2D1_RECT_U;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CD2DRectU::IsNull](#isnull)|Zwraca `boolean` wartość, która wskazuje, czy wyrażenie nie zawiera prawidłowych danych ( `null`).|  
+|[CD2DRectU::IsNull](#isnull)|Zwraca **logiczna** wartość, która wskazuje, czy wyrażenie nie zawiera prawidłowych danych ( **null**).|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
@@ -81,19 +81,19 @@ CD2DRectU(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rect`  
+ *Rect*  
  Prostokąt źródła  
   
- `uLeft`  
+ *uLeft*  
  Lewa współrzędna źródła  
   
- `uTop`  
+ *uTop*  
  Górna współrzędna źródła  
   
- `uRight`  
+ *uRight*  
  prawa Współrzędna źródła  
   
- `uBottom`  
+ *uBottom*  
  Współrzędna dolnej źródła  
   
 ##  <a name="isnull"></a>  CD2DRectU::IsNull  

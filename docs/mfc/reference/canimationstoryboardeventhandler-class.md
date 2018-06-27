@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb7c89e6441379949386baecbddbb30f7c01ebff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: add30fe8bfe2c19973ff657ae05b739986965a9b
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352226"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957120"
 ---
 # <a name="canimationstoryboardeventhandler-class"></a>Klasa CAnimationStoryboardEventHandler
 Implementuje wywołanie zwrotne, które jest wywoływane przez interfejs API animacji w przypadku zmiany stanu scenorysu lub zaktualizowaniu scenorysu.  
@@ -89,10 +89,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pAnimationController`  
+ *pAnimationController*  
  Wskaźnik do kontrolera animacji, które będzie odbierało zdarzenia.  
   
- `ppHandler`  
+ *ppHandler*  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli metoda zakończy się powodzeniem, zwraca wartość S_OK. W przeciwnym wypadku zwraca kod błędu HRESULT.  
@@ -108,13 +108,13 @@ IFACEMETHOD(OnStoryboardStatusChanged) (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `storyboard`  
+ *scenorysu*  
  Wskaźnik do scenorysu, których stan zmienił się.  
   
- `newStatus`  
+ *newStatus*  
  Stan nowego scenorysu.  
   
- `previousStatus`  
+ *previousStatus*  
  Określa stan poprzedniej scenorysu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -128,7 +128,7 @@ IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `storyboard`  
+ *scenorysu*  
  Wskaźnik do scenorysu, który został zaktualizowany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -142,7 +142,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pAnimationController`  
+ *pAnimationController*  
  Wskaźnik do kontrolera animacji, które będzie odbierało zdarzenia.  
   
 ## <a name="see-also"></a>Zobacz też  

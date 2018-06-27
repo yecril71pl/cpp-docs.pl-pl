@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e35fc33b26fa6bead73458a46d7c4edee1cf136
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58646efaaa0087be2bd73e45acd8ade4a16e9767
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350995"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957094"
 ---
 # <a name="canimationvariablechangehandler-class"></a>Klasa CAnimationVariableChangeHandler
 Implementuje wywołanie zwrotne, które jest wywoływane przez interfejs API animacji, gdy zmienia się wartość zmiennej animacji.  
@@ -77,16 +77,16 @@ IFACEMETHOD(OnValueChanged) (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `storyboard`  
+ *scenorysu*  
  Scenorysu, który jest animacji zmiennej.  
   
- `variable`  
+ *Zmienna*  
  Zmienna animacji, który został zaktualizowany.  
   
- `newValue`  
+ *newValue*  
  Nowa wartość.  
   
- `previousValue`  
+ *previousValue*  
  Poprzednia wartość.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -100,7 +100,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pAnimationController`  
+ *pAnimationController*  
  Wskaźnik do kontrolera animacji, które będzie odbierało zdarzenia.  
   
 ## <a name="see-also"></a>Zobacz też  

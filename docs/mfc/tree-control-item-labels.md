@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 598dca9f0d5f394a8e742c1b886588eab3518bf4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3fc207dcff5002262c345b106be99a775ed626b9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381514"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953728"
 ---
 # <a name="tree-control-item-labels"></a>Etykiety elementów kontrolki drzewa
 Zazwyczaj należy określić tekst etykiety elementu podczas dodawania elementu do kontrolki drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)). `InsertItem` Może przekazać funkcji członkowskiej [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) struktury, która definiuje właściwości elementu, w tym ciąg zawierający tekst etykiety. `InsertItem` ma kilka przeciążeń, które mogą być wywoływane z różnych kombinacji parametrów.  
   
- Formant drzewa przydziela pamięć do przechowywania każdego elementu; tekst etykiety elementu zajmuje znaczna część tej pamięci. Jeśli aplikacja przechowuje kopię ciągów w drzewie, można zmniejszyć wymagania dotyczące pamięci formantu, określając **LPSTR_TEXTCALLBACK** wartość w **pszText** członkiem `TV_ITEM` lub `lpszItem` parametru zamiast przekazywanie rzeczywistych parametrów do formantu drzewa. Przy użyciu **LPSTR_TEXTCALLBACK** powoduje, że formant drzewa, aby pobrać tekst etykiety elementu z aplikacji zawsze, gdy element musi zostać narysowany ponownie. Aby pobrać tekst, wysyła do drzewa [TVN_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773518) komunikat powiadomienia, który zawiera adres [NMTVDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773418) struktury. Musi odpowiadać, ustawiając odpowiednie elementy członkowskie struktury uwzględnione.  
+ Formant drzewa przydziela pamięć do przechowywania każdego elementu; tekst etykiety elementu zajmuje znaczna część tej pamięci. Jeśli aplikacja przechowuje kopię ciągów w drzewie, można zmniejszyć wymagania dotyczące pamięci formantu, określając **LPSTR_TEXTCALLBACK** wartość w *pszText* członkiem `TV_ITEM` lub *lpszItem* parametru zamiast przekazywanie rzeczywistych parametrów do formantu drzewa. Przy użyciu **LPSTR_TEXTCALLBACK** powoduje, że formant drzewa, aby pobrać tekst etykiety elementu z aplikacji zawsze, gdy element musi zostać narysowany ponownie. Aby pobrać tekst, wysyła do drzewa [TVN_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773518) komunikat powiadomienia, który zawiera adres [NMTVDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773418) struktury. Musi odpowiadać, ustawiając odpowiednie elementy członkowskie struktury uwzględnione.  
   
  Formant drzewa używa pamięci przydzielonej sterty procesu, który tworzy na drzewie. Maksymalną liczbę elementów formantu drzewa zależy od ilości pamięci w stosie. Każdy element ma 64 bajtów.  
   

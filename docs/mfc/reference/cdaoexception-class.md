@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4531d63ff7047881f20368cbeaf8e5de4136bb9f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69d1d85f946ce596dae09779296fceab74113400
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369219"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952401"
 ---
 # <a name="cdaoexception-class"></a>Klasa CDaoException
 Reprezentuje warunku wyjątku wynikających z klasami baz danych MFC oparte na obiekty dostępu do danych (DAO).  
@@ -143,7 +143,7 @@ void GetErrorInfo(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Indeks informacji o błędach w kolekcji błędów aparatu bazy danych, wyszukiwanie według indeksu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -187,11 +187,11 @@ void GetErrorInfo(int nIndex);
   
 |Cdaoerrorinfo — element członkowski|Informacje|Znaczenie|  
 |--------------------------|-----------------|-------------|  
-|**m_lErrorCode**|Kod błędu|Kod błędu DAO|  
+|`m_lErrorCode`|Kod błędu|Kod błędu DAO|  
 |`m_strSource`|Źródło|Nazwa obiektu lub aplikacji, która początkowo wygenerował błąd|  
 |`m_strDescription`|Opis|Ciąg opisujący skojarzone z powodu błędu|  
 |`m_strHelpFile`|Plik pomocy|Ścieżka do pliku Pomocy systemu Windows, w którym użytkownik może uzyskać informacji o problemie|  
-|**m_lHelpContext**|Kontekst pomocy|Identyfikator kontekstu dla tematu w pliku pomocy DAO|  
+|`m_lHelpContext`|Kontekst pomocy|Identyfikator kontekstu dla tematu w pliku pomocy DAO|  
   
  Aby uzyskać szczegółowe informacje o informacje zawarte w `CDaoErrorInfo` obiektów, zobacz [cdaoerrorinfo —](../../mfc/reference/cdaoerrorinfo-structure.md) struktury.  
   

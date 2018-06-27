@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cce09994cf7dabdff1508ae5e12778ce6032624b
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: d46150ee76219732d0895e818fa00c68dc588853
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322514"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957393"
 ---
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055: migrowanie aplikacji klas baz danych MFC ODBC do klas MFC DAO
 
@@ -99,9 +99,9 @@ Poniżej przedstawiono najważniejszych zmian funkcji, które mogą mieć wpływ
 
    Klasy ODBC MFC wymagane do zdefiniowania tych opcji za pomocą makra lub wyliczyć typów.
 
-   Klasy DAO DAO znajduje się definicja tych opcji w pliku nagłówka (DBDAOINT. H). W związku z tym typ zbioru rekordów jest elementem wyliczenia `CRecordset`, ale z DAO jest stałą, zamiast tego. Na przykład można użyć `snapshot` podczas określania typu `CRecordset` w ODBC, ale `DB_OPEN_SNAPSHOT` podczas określania typu `CDaoRecordset`.
+   Klasy DAO DAO znajduje się definicja tych opcji w pliku nagłówka (DBDAOINT. H). W związku z tym typ zbioru rekordów jest elementem wyliczenia `CRecordset`, ale z DAO jest stałą, zamiast tego. Na przykład można użyć **migawki** podczas określania typu `CRecordset` w ODBC, ale **DB_OPEN_SNAPSHOT** podczas określania typu `CDaoRecordset`.
 
-- Domyślny typ rekordów dla `CRecordset` jest `snapshot` podczas domyślnego zestawu rekordów typu `CDaoRecordset` jest `dynaset` (zobacz uwaga poniżej dodatkowe problemu dotyczących migawek klasy ODBC).
+- Domyślny typ rekordów dla `CRecordset` jest **migawki** podczas domyślnego zestawu rekordów typu `CDaoRecordset` jest **dynamiczny** (zobacz uwaga poniżej dodatkowe problemu dotyczących migawek klasy ODBC).
 
 - ODBC `CRecordset` klasa ma możliwość utworzenia typu rekordów. W `CDaoRecordset` klasa, tylko do przodu nie jest typu zestawu rekordów, ale raczej właściwości (lub opcji) niektórych typów zestawów rekordów.
 
@@ -111,7 +111,7 @@ Poniżej przedstawiono najważniejszych zmian funkcji, które mogą mieć wpływ
 
 - Klasa wyjątku został zmieniony. `CDBExceptions` zostaną zgłoszone w klasach ODBC i `CDaoExceptions` w klasach DAO.
 
-- `RFX_Date` używa `CTime` i `TIMESTAMP_STRUCT` obiekty podczas `DFX_Date` używa `COleDateTime`. `COleDateTime` Jest niemal identyczna z `CTime`, ale jest oparta na OLE 8-bajtowych `DATE` zamiast 4-bajtowych `time_t` , może przechowywać znacznie większego zakresu danych.
+- `RFX_Date` używa `CTime` i `TIMESTAMP_STRUCT` obiekty podczas `DFX_Date` używa `COleDateTime`. `COleDateTime` Jest niemal identyczna z `CTime`, ale jest oparta na OLE 8-bajtowych **data** zamiast 4-bajtowych **time_t —** , może przechowywać znacznie większego zakresu danych.
 
    > [!NOTE]
    > Obiekty DAO (`CDaoRecordset`) migawki są tylko do odczytu podczas ODBC (`CRecordset`) migawki mogą być aktualizowalne w zależności od sterownika i korzystanie z biblioteki kursorów ODBC. Jeśli korzystasz z biblioteki kursorów `CRecordset` migawki są aktualizowalne. Jeśli używasz dowolnej sterowniki firmy Microsoft 3.0 pakiet sterownika pulpitu bez z biblioteki kursorów ODBC `CRecordset` migawki są tylko do odczytu. Jeśli używasz innym sterownikiem w dokumentacji sterownika czy migawek (`STATIC_CURSORS`) są tylko do odczytu.
