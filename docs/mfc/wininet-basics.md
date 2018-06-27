@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38506d0b25918bbc9d70ec1801971b070d620bf9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7061c3203436197eb1bd03ae56058e0bd0f26f9d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385927"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955586"
 ---
 # <a name="wininet-basics"></a>Podstawy WinInet
-Aby dodać obsługę FTP, aby pobrać i przekazywania plików z poziomu aplikacji, można użyć WinInet. Można zastąpić [OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback) i użyj `dwContext` parametru zapewnia informacje o postępie do użytkowników, jak wyszukiwanie i pobieranie plików.  
+Aby dodać obsługę FTP, aby pobrać i przekazywania plików z poziomu aplikacji, można użyć WinInet. Można zastąpić [OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback) i użyj *dwContext* parametru zapewnia informacje o postępie do użytkowników, jak wyszukiwanie i pobieranie plików.  
   
  Ten artykuł zawiera następujące tematy:  
   
@@ -57,14 +57,14 @@ Aby dodać obsługę FTP, aby pobrać i przekazywania plików z poziomu aplikacj
 ## <a name="use-onstatuscallback"></a>Użyj OnStatusCallback  
  Podczas używania klas WinInet, można użyć [OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback) członkiem aplikacji [CInternetSession](../mfc/reference/cinternetsession-class.md) obiektu można pobrać informacji o stanie. Przypadku klasy wyprowadzonej własne `CInternetSession` obiektów, Zastąp `OnStatusCallback`i Włącz stan wywołania zwrotne, wywoła MFC z `OnStatusCallback` funkcja postępu informacje o wszystkich działań w tej sesji Internet.  
   
- Ponieważ jedna sesja może obsługiwać wiele połączeń (które ich okresu istnienia, może wykonywać wiele różnych operacji distinct) `OnStatusCallback` musi mechanizm umożliwiający określenie każdej zmiany stanu z określonego połączenia lub transakcji. Ten mechanizm są udostępniane przez parametr ID kontekstu do wielu funkcji Członkowskich w klasach WinInet pomocy technicznej. Ten parametr jest zawsze typu `DWORD` i nosi nazwę zawsze `dwContext`.  
+ Ponieważ jedna sesja może obsługiwać wiele połączeń (które ich okresu istnienia, może wykonywać wiele różnych operacji distinct) `OnStatusCallback` musi mechanizm umożliwiający określenie każdej zmiany stanu z określonego połączenia lub transakcji. Ten mechanizm są udostępniane przez parametr ID kontekstu do wielu funkcji Członkowskich w klasach WinInet pomocy technicznej. Ten parametr jest zawsze typu **DWORD** i nosi nazwę zawsze *dwContext*.  
   
  Kontekst przypisane do określonego obiektu internetowych jest używany tylko do identyfikacji działania obiektu powoduje, że w `OnStatusCallback` członkiem `CInternetSession` obiektu. Wywołanie `OnStatusCallback` odbiera kilka parametrów; te parametry współpracują ze sobą poinformowanie aplikacji o jaki jest postęp które transakcji i połączenia.  
   
- Po utworzeniu `CInternetSession` obiektu, można określić `dwContext` parametru konstruktora. `CInternetSession` sam nie korzysta z Identyfikatorem kontekstu; Zamiast tego przechodzą identyfikator kontekstu do żadnego **InternetConnection**-pochodnych obiektów, które jawnie nie Pobierz identyfikator kontekstu we własnym. Z kolei, te `CInternetConnection` obiektów zostanie przekazany identyfikator kontekstu wzdłuż do `CInternetFile` obiekty tworzą, jeśli nie określisz jawnie identyfikatora inny kontekst Jeśli z drugiej strony, określ identyfikator kontekst własnych, obiekt i pracy będzie skojarzony z tym identyfikatorem kontekstu. Kontekst identyfikatorów umożliwia określenie, jakie informacje o stanie są przyznawane użytkownikowi w Twojej `OnStatusCallback` funkcji.  
+ Po utworzeniu `CInternetSession` obiektu, można określić *dwContext* parametru konstruktora. `CInternetSession` sam nie korzysta z Identyfikatorem kontekstu; Zamiast tego przechodzą identyfikator kontekstu do żadnego **InternetConnection**-pochodnych obiektów, które jawnie nie Pobierz identyfikator kontekstu we własnym. Z kolei, te `CInternetConnection` obiektów zostanie przekazany identyfikator kontekstu wzdłuż do `CInternetFile` obiekty tworzą, jeśli nie określisz jawnie identyfikatora inny kontekst Jeśli z drugiej strony, określ identyfikator kontekst własnych, obiekt i pracy będzie skojarzony z tym identyfikatorem kontekstu. Kontekst identyfikatorów umożliwia określenie, jakie informacje o stanie są przyznawane użytkownikowi w Twojej `OnStatusCallback` funkcji.  
   
 ##  <a name="_core_display_progress_information_while_transferring_files"></a> Wyświetl informacje o postępie podczas transferu plików  
- Na przykład, jeśli piszesz aplikację, która tworzy połączenie z serwerem FTP można odczytać pliku, a także łączy się z serwerem HTTP, można pobrać strony sieci Web, będziesz mieć `CInternetSession` obiektu, dwa `CInternetConnection` obiektów (co będzie **CFtpSession** , a drugi będzie **CHttpSession**), a dwie `CInternetFile` obiektów (po jednej dla każdego połączenia). Jeśli używane wartości domyślne dla `dwContext` parametrów, użytkownik nie będzie mógł rozróżnienia `OnStatusCallback` wywołań wskazujące postępu dla połączeń FTP i wskazujący postęp dla połączenia HTTP wywołań. Jeśli określisz `dwContext` identyfikator, który można później sprawdzić w `OnStatusCallback`, będzie wiadomo, które operacja wygenerowała wywołania zwrotnego.  
+ Na przykład, jeśli piszesz aplikację, która tworzy połączenie z serwerem FTP można odczytać pliku, a także łączy się z serwerem HTTP, można pobrać strony sieci Web, będziesz mieć `CInternetSession` obiektu, dwa `CInternetConnection` obiektów (co będzie `CFtpSession` , a drugi będzie `CHttpSession`), a dwie `CInternetFile` obiektów (po jednej dla każdego połączenia). Jeśli używane wartości domyślne dla *dwContext* parametrów, użytkownik nie będzie mógł rozróżnienia `OnStatusCallback` wywołań wskazujące postępu dla połączeń FTP i wskazujący postęp wywołań Połączenia HTTP. Jeśli określisz *dwContext* identyfikator, który można później sprawdzić w `OnStatusCallback`, będzie wiadomo, które operacja wygenerowała wywołania zwrotnego.  
   
 ## <a name="see-also"></a>Zobacz też  
  [MFC — podstawy programowania Internetu](../mfc/mfc-internet-programming-basics.md)   

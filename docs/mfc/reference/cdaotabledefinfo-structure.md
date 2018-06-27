@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53e20ca3f483bd9c00b298c69a526d8f5dd31cdb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80c1422c4d0e45599ca8bc2e9c86a4263b8ac9b6
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367737"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955612"
 ---
 # <a name="cdaotabledefinfo-structure"></a>CDaoTableDefInfo — Struktura
 `CDaoTableDefInfo` Struktura zawiera informacje dotyczące obiektu tabledef zdefiniowany dla obiektów dostępu do danych (DAO).  
@@ -46,13 +46,13 @@ struct CDaoTableDefInfo
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `m_strName`  
+ *m_strName*  
  Unikatowej nazwy obiektu tabledef. Aby bezpośrednio pobrać wartości tej właściwości, należy wywołać obiekt tabledef [GetName](../../mfc/reference/cdaotabledef-class.md#getname) funkcję elementu członkowskiego. Aby uzyskać więcej informacji zobacz temat "Właściwości Name" w pomocy DAO.  
   
- `m_bUpdatable`  
+ *m_bUpdatable*  
  Wskazuje, czy zmiany mogą być tworzone w tabeli. Szybkie ustalenie, czy tabela jest aktualizowalny jest otwarcie `CDaoTableDef` obiektu dla tabeli i wywołania obiektu [CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate) funkcję elementu członkowskiego. `CanUpdate` zawsze zwraca wartość niezerową (**TRUE**) dla obiekt tabledef nowo utworzona i 0 (**FALSE**) dla obiekt tabledef dołączone. Nowy obiekt tabledef można dołączać tylko do bazy danych, dla którego bieżący użytkownik ma uprawnienia do zapisu. Jeśli tabela zawiera tylko pola nonupdatable `CanUpdate` zwraca wartość 0. Gdy nadaje się do aktualizacji, co najmniej jedno pole `CanUpdate` zwraca różną od zera. Można edytować tylko pola nadaje się do aktualizacji. Aby uzyskać więcej informacji zobacz temat "Nadaje się do aktualizacji właściwości" w pomocy DAO.  
   
- `m_lAttributes`  
+ *m_lAttributes*  
  Określa charakterystykę reprezentowanych przez obiekt tabledef tabeli. Aby pobrać bieżące atrybuty tabledef, należy wywołać jej [GetAttributes](../../mfc/reference/cdaotabledef-class.md#getattributes) funkcję elementu członkowskiego. Wartość zwracana może być kombinacji tych długi stałych (przy użyciu wartości bitowe lub (**&#124;**) operatora):  
   
 - **dbAttachExclusive** dla baz danych, które używają aparatu bazy danych programu Microsoft Jet wskazuje tabela jest otwarta w trybie wyłączności dołączonej tabeli.  
@@ -67,22 +67,22 @@ struct CDaoTableDefInfo
   
 - **dbAttachedODBC** wskazuje jest dołączona tabela z bazy danych ODBC, takich jak Microsoft SQL Server.  
   
- `m_dateCreated`  
+ *m_dateCreated*  
  Data i godzina utworzenia tabeli. Aby bezpośrednio pobrać datę utworzenia tabeli, należy wywołać [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated) funkcji członkowskiej klasy `CDaoTableDef` obiekt skojarzony z tabelą. Aby uzyskać więcej informacji, zobacz uwagi poniżej. Powiązane informacje zobacz temat "DateCreated właściwości LastUpdated" w pomocy DAO.  
   
- `m_dateLastUpdated`  
+ *m_dateLastUpdated*  
  Data i godzina ostatniej zmiany wprowadzone w projekcie tabeli. Aby bezpośrednio pobrać datę ostatniej aktualizacji tabeli, należy wywołać [GetDateLastUpdated](../../mfc/reference/cdaotabledef-class.md#getdatelastupdated) funkcji członkowskiej klasy `CDaoTableDef` obiekt skojarzony z tabelą. Aby uzyskać więcej informacji, zobacz uwagi poniżej. Powiązane informacje zobacz temat "DateCreated właściwości LastUpdated" w pomocy DAO.  
   
  *m_strSrcTableName*  
  Określa nazwę dołączonej tabeli, jeśli istnieje. Aby bezpośrednio pobrać nazwy tabeli źródłowej, należy wywołać [GetSourceTableName](../../mfc/reference/cdaotabledef-class.md#getsourcetablename) funkcji członkowskiej klasy `CDaoTableDef` obiekt skojarzony z tabelą.  
   
- `m_strConnect`  
+ *m_strConnect*  
  Zawiera informacje o źródle otwartą bazę danych. Tej właściwości można sprawdzić przez wywołanie metody [GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect) funkcji członkowskiej klasy użytkownika `CDaoTableDef` obiektu. Aby uzyskać więcej informacji na temat ciągów połączenia, zobacz `GetConnect`.  
   
- `m_strValidationRule`  
+ *m_strValidationRule*  
  Wartość, która weryfikuje dane w polach tabledef, ponieważ są one zmienione lub dodane do tabeli. Walidacja jest obsługiwany tylko w przypadku baz danych, które używają aparatu bazy danych programu Microsoft Jet. Aby bezpośrednio pobrać reguły sprawdzania poprawności, należy wywołać [GetValidationRule](../../mfc/reference/cdaotabledef-class.md#getvalidationrule) funkcji członkowskiej klasy `CDaoTableDef` obiekt skojarzony z tabelą. Powiązane informacje zobacz temat "ValidationRule Property" w pomocy DAO.  
   
- `m_strValidationText`  
+ *m_strValidationText*  
  Wartość, która określa tekst wiadomości, która aplikacja powinien być wyświetlany, jeśli nie zostanie spełniony określony przez właściwość ValidationRule reguły weryfikacji. Powiązane informacje zobacz temat "Komunikat Property" w pomocy DAO.  
   
  *m_lRecordCount*  

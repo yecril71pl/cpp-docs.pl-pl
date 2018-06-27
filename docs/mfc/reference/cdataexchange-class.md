@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03d68359d075efd72a1bf1907daa71e74110fa28
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ed2f918a51c1dca1aa7e1713ac919102a599e38
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368940"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953350"
 ---
 # <a name="cdataexchange-class"></a>Cdataexchange — klasa
 Obsługuje wymiana danych okna dialogowego (DDX) i używane przez Microsoft Foundation classes procedury weryfikacji (DDV) danych okna dialogowego.  
@@ -75,7 +75,7 @@ class CDataExchange
   
  Klasa używana podczas pisania procedury wymiany danych w niestandardowe typy danych lub formantów, lub jeśli piszesz własne procedury walidacji danych. Aby uzyskać więcej informacji na temat pisania własnych procedury DDX i DDV, zobacz [26 Uwaga techniczna](../../mfc/tn026-ddx-and-ddv-routines.md). Omówienie DDX i DDV, zobacz [wymiana danych okna dialogowego i weryfikacja](../../mfc/dialog-data-exchange-and-validation.md) i [okien dialogowych](../../mfc/dialog-boxes.md).  
   
- A `CDataExchange` obiektu zawiera informacje o kontekście potrzebnego do podjęcia DDX i DDV Umieść. Flaga `m_bSaveAndValidate` jest **FALSE** po DDX jest używany do wypełniania wartości początkowe formantów okna dialogowego z elementów członkowskich danych. Flaga `m_bSaveAndValidate` jest **TRUE** po DDX jest używana do ustawiania bieżące wartości formantów okna dialogowego do elementów członkowskich danych i gdy DDV jest używany do sprawdzania poprawności wartości danych. W przypadku niepowodzenia weryfikacji DDV procedury DDV wyświetli okno komunikatu wyjaśniający błąd danych wejściowych. Następnie wywoła procedurę DDV **niepowodzenie** zresetować fokus do formantu ataku i Zgłoś wyjątek, aby zatrzymać proces sprawdzania poprawności.  
+ A `CDataExchange` obiektu zawiera informacje o kontekście potrzebnego do podjęcia DDX i DDV Umieść. Flaga *m_bSaveAndValidate* jest **FALSE** po DDX jest używany do wypełniania wartości początkowe formantów okna dialogowego z elementów członkowskich danych. Flaga *m_bSaveAndValidate* jest **TRUE** po DDX jest używana do ustawiania bieżące wartości formantów okna dialogowego do elementów członkowskich danych i gdy DDV jest używany do sprawdzania poprawności wartości danych. W przypadku niepowodzenia weryfikacji DDV procedury DDV wyświetli okno komunikatu wyjaśniający błąd danych wejściowych. Następnie wywoła procedurę DDV `Fail` zresetować fokus do formantu ataku i Zgłoś wyjątek, aby zatrzymać proces sprawdzania poprawności.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `CDataExchange`  
@@ -96,7 +96,7 @@ CDataExchange(
  *pDlgWnd*  
  Wskaźnik do okna nadrzędnego, który zawiera formant. Zazwyczaj jest to [cdialog —](../../mfc/reference/cdialog-class.md)-pochodzi z obiektu.  
   
- `bSaveAndValidate`  
+ *bSaveAndValidate*  
  Jeśli **TRUE**, ten obiekt sprawdza poprawność danych, a następnie zapisuje dane z kontrolki do elementów członkowskich. Jeśli **FALSE**, ten obiekt będzie przenieść dane z elementów członkowskich do kontrolek.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -113,9 +113,9 @@ void Fail();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- **Niepowodzenie** przywraca fokus i wybieranie kontroli, których Weryfikacja nie powiodła się (jeśli jest, aby przywrócić). **Niepowodzenie** następnie zgłasza wyjątek typu [CUserException](../../mfc/reference/cuserexception-class.md) Aby zatrzymać proces sprawdzania poprawności. Wyjątek powoduje, że okno komunikatu wyjaśniający błąd, który będzie wyświetlany. Po DDV sprawdzania poprawności zakończy się niepowodzeniem, użytkownik może ponownie danych w formancie ataku.  
+ `Fail` Przywraca fokus i wybieranie kontroli, których Weryfikacja nie powiodła się (jeśli jest, aby przywrócić). `Fail` następnie zgłasza wyjątek typu [CUserException](../../mfc/reference/cuserexception-class.md) Aby zatrzymać proces sprawdzania poprawności. Wyjątek powoduje, że okno komunikatu wyjaśniający błąd, który będzie wyświetlany. Po DDV sprawdzania poprawności zakończy się niepowodzeniem, użytkownik może ponownie danych w formancie ataku.  
   
- Można wywołać implementors niestandardowe procedury DDV **niepowodzenie** z ich procedury w przypadku niepowodzenia weryfikacji.  
+ Można wywołać implementors niestandardowe procedury DDV `Fail` z ich procedury w przypadku niepowodzenia weryfikacji.  
   
  Aby uzyskać więcej informacji na temat pisania własnych procedury DDX i DDV, zobacz [26 Uwaga techniczna](../../mfc/tn026-ddx-and-ddv-routines.md). Omówienie DDX i DDV, zobacz [wymiana danych okna dialogowego i weryfikacja](../../mfc/dialog-data-exchange-and-validation.md) i [tematy — okno dialogowe](../../mfc/dialog-boxes.md).  
   
@@ -153,7 +153,7 @@ HWND PrepareCtrl(int nIDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDC`  
+ *nIDC*  
  Identyfikator formantu, aby móc przywrócić DDX i DDV.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -176,7 +176,7 @@ HWND PrepareEditCtrl(int nIDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDC`  
+ *nIDC*  
  Identyfikator formantu edycji można przygotować DDX i DDV.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -199,7 +199,7 @@ COleControlSite* PrepareOleCtrl(int nIDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDC`  
+ *nIDC*  
  Identyfikator formantu OLE można przygotować DDX i DDV.  
   
 ### <a name="return-value"></a>Wartość zwracana  

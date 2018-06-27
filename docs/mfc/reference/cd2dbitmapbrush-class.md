@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8fb0833fc82895f1f32fb5c93a6e6519bfe119c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23728966dfd6bd759c16b364da063c7f80687b5e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354624"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954494"
 ---
 # <a name="cd2dbitmapbrush-class"></a>Klasa CD2DBitmapBrush
 Otoka dla ID2D1BitmapBrush.  
@@ -142,7 +142,7 @@ void Attach(ID2D1BitmapBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pResource`  
+ *pResource*  
  Interfejs istniejącego zasobu. Nie może mieć wartości NULL  
   
 ##  <a name="cd2dbitmapbrush"></a>  CD2DBitmapBrush::CD2DBitmapBrush  
@@ -176,28 +176,28 @@ CD2DBitmapBrush(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentTarget`  
+ *pParentTarget*  
  Wskaźnik do obiektu docelowego renderowania.  
   
- `pBitmapBrushProperties`  
+ *pBitmapBrushProperties*  
  Wskaźnik do tryby Rozszerz i tryb interpolacji pędzla mapy bitowej.  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Wskaźnik do nieprzezroczystość i transformacja pędzla.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Wskazuje, że obiekt zostanie zniszczony przez właściciela (pParentTarget).  
   
- `uiResID`  
+ *uiResID*  
  Identyfikatora zasobu zasobu.  
   
- `lpszType`  
+ *lpszType*  
  Wskaźnik do zerem ciąg, który zawiera typ zasobu.  
   
- `sizeDest`  
+ *sizeDest*  
  Rozmiar docelowego mapy bitowej.  
   
- `lpszImagePath`  
+ *lpszImagePath*  
  Wskaźnik do zerem ciąg, który zawiera nazwę pliku.  
   
 ##  <a name="commoninit"></a>  CD2DBitmapBrush::CommonInit  
@@ -208,7 +208,7 @@ void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pBitmapBrushProperties`  
+ *pBitmapBrushProperties*  
  Wskaźnik do właściwości pędzla mapy bitowej.  
   
 ##  <a name="create"></a>  CD2DBitmapBrush::Create  
@@ -219,7 +219,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pRenderTarget`  
+ *pRenderTarget*  
  Wskaźnik do obiektu docelowego renderowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -331,7 +331,7 @@ void SetBitmap(CD2DBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pBitmap`  
+ *pBitmap*  
  Używane przez pędzla źródła mapy bitowej  
   
 ##  <a name="setextendmodex"></a>  CD2DBitmapBrush::SetExtendModeX  
@@ -342,7 +342,7 @@ void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `extendModeX`  
+ *extendModeX*  
  Wartość, która określa, jak pędzla poziomie Kafelki tych obszarów, które wykraczają poza jego mapy bitowej  
   
 ##  <a name="setextendmodey"></a>  CD2DBitmapBrush::SetExtendModeY  
@@ -353,7 +353,7 @@ void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `extendModeY`  
+ *extendModeY*  
  Wartość, która określa, jak pędzla pionowo Kafelki tych obszarów, które wykraczają poza jego mapy bitowej  
   
 ##  <a name="setinterpolationmode"></a>  CD2DBitmapBrush::SetInterpolationMode  
@@ -364,7 +364,7 @@ void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `interpolationMode`  
+ *interpolationMode*  
  Tryb interpolacji używany, gdy pędzla mapy bitowej jest skalowany lub obracany  
   
 ## <a name="see-also"></a>Zobacz też  

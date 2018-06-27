@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc0fe5a59a5efedc00850da03be84bb212d4a51f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4dcd12f3d2f57b947beb71385327f0ad1a14975d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352102"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953275"
 ---
 # <a name="canimationtimereventhandler-class"></a>Klasa CAnimationTimerEventHandler
 Implementuje wywołanie zwrotne, które jest wywoływana przez interfejs API animacji, w przypadku wystąpienia zdarzenia czasowe.  
@@ -77,10 +77,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pAnimationController`  
+ *pAnimationController*  
  Wskaźnik do kontrolera animacji, które będzie odbierało zdarzenia.  
   
- `ppTimerEventHandler`  
+ *ppTimerEventHandler*  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli metoda zakończy się powodzeniem, zwraca wartość S_OK. W przeciwnym wypadku zwraca kod błędu HRESULT.  
@@ -113,7 +113,7 @@ IFACEMETHOD(OnRenderingTooSlow)(UINT32 fps);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `fps`  
+ *kl. / s*  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL.  
@@ -126,7 +126,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pAnimationController`  
+ *pAnimationController*  
  Wskaźnik do kontrolera animacji, które będzie odbierało zdarzenia.  
   
 ## <a name="see-also"></a>Zobacz też  

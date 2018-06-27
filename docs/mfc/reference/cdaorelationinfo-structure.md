@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 112af640d020dc579c1ec2b1b7eace509daa451e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a49bdfb00c3f2ceba424af7bfdfa652cacec929e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366265"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951295"
 ---
 # <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo — Struktura
 `CDaoRelationInfo` Struktura zawiera informacje dotyczące relacji między polami dwiema tabelami w [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) obiektu.  
@@ -44,7 +44,7 @@ struct CDaoRelationInfo
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `m_strName`  
+ *m_strName*  
  Unikatowej nazwy obiektu relacji. Aby uzyskać więcej informacji zobacz temat "Właściwości Name" w pomocy DAO.  
   
  *m_strTable*  
@@ -53,7 +53,7 @@ struct CDaoRelationInfo
  *m_strForeignTable*  
  Nazwa tabeli obcego w relacji. Obcy tabeli znajduje się tabela zawiera klucze obce. Ogólnie rzecz biorąc obcego tabela służy do nawiązywania lub wymusić integralności referencyjnej. Obcy tabeli jest zwykle po stronie "wielu" relacji jeden do wielu. Przykładami tabel obcych tabel zawierających kody stanów Ameryki ani prowincjach Kanady zamówień klienta.  
   
- `m_lAttributes`  
+ *m_lAttributes*  
  Zawiera informacje o typie relacji. Wartość tego elementu może być jedną z następujących czynności:  
   
 - **dbRelationUnique** jest relacja jeden do jednego.  
@@ -70,11 +70,11 @@ struct CDaoRelationInfo
   
 - **dbRelationDeleteCascade** kaskadowo zostaną usunięte.  
   
- `m_pFieldInfos`  
- Wskaźnik do tablicy [cdaorelationfieldinfo —](../../mfc/reference/cdaorelationfieldinfo-structure.md) struktury. Tablica zawiera jeden obiekt dla każdego pola w relacji. `m_nFields` Element członkowski danych zawiera liczbę elementów tablicy.  
+ *m_pFieldInfos*  
+ Wskaźnik do tablicy [cdaorelationfieldinfo —](../../mfc/reference/cdaorelationfieldinfo-structure.md) struktury. Tablica zawiera jeden obiekt dla każdego pola w relacji. *M_nfields —* element członkowski danych zawiera liczbę elementów tablicy.  
   
- `m_nFields`  
- Liczba `CDaoRelationFieldInfo` obiekty w `m_pFieldInfos` element członkowski danych.  
+ *m_nfields —*  
+ Liczba `CDaoRelationFieldInfo` obiekty w *m_pFieldInfos* element członkowski danych.  
   
 ## <a name="remarks"></a>Uwagi  
  Odwołania do podstawowego i zapasowego powyżej wskazują, jak informacje zwracane przez [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) funkcji członkowskiej klasy `CDaoDatabase`.  

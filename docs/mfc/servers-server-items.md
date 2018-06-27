@@ -18,19 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e83b75183fe226b4ff384a00b0b5260caba01efa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 72cbf640f7886eac65762520ebc7c21f3906f0c0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382505"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953090"
 ---
 # <a name="servers-server-items"></a>Serwery: elementy serwera
 Gdy kontener uruchamia serwer sieci, dzięki czemu użytkownik może edytować element osadzony lub połączony OLE, aplikacja serwera tworzy "elementu serwera". Element serwera, który jest obiektem klasy pochodne `COleServerItem`, udostępnia interfejs między dokument serwera i aplikacji kontenera.  
   
  `COleServerItem` Klasa definiuje kilka funkcji możliwym do zastąpienia elementów członkowskich, które są wywoływane przez OLE, zwykle w odpowiedzi na żądania z kontenera. Elementy serwera może reprezentować części dokumentu serwera lub całego dokumentu. Gdy element OLE jest osadzony w dokumencie kontenera, element serwera reprezentuje dokument całego serwera. Po połączeniu elementu OLE elementu serwera może reprezentować części dokumentu serwera lub całego dokumentu w zależności od tego, czy łącze jest części lub całości.  
   
- W [HIERSVR](../visual-cpp-samples.md) przykładowe, na przykład klasa elementu serwera **CServerItem**, ma element członkowski, który jest wskaźnikiem do obiektu klasy **CServerNode**. **CServerNode** obiektu jest węzłem w dokumencie aplikacji HIERSVR, w którym jest drzewo. Gdy **CServerNode** obiekt jest węzeł główny **CServerItem** obiekt reprezentuje cały dokument. Gdy **CServerNode** obiektu jest elementem podrzędnym, **CServerItem** obiekt reprezentuje część dokumentu. Zobacz przykład MFC OLE [HIERSVR](../visual-cpp-samples.md) przykład interakcji.  
+ W [HIERSVR](../visual-cpp-samples.md) przykładowe, na przykład klasa elementu serwera `CServerItem`, ma element członkowski, który jest wskaźnikiem do obiektu klasy `CServerNode`. `CServerNode` Obiektu jest węzłem w dokumencie aplikacji HIERSVR, w którym jest drzewo. Gdy `CServerNode` obiekt jest węzeł główny `CServerItem` obiekt reprezentuje cały dokument. Gdy `CServerNode` obiektu jest elementem podrzędnym, `CServerItem` obiekt reprezentuje część dokumentu. Zobacz przykład MFC OLE [HIERSVR](../visual-cpp-samples.md) przykład interakcji.  
   
 ##  <a name="_core_implementing_server_items"></a> Implementowanie elementy serwera  
  Jeśli używasz Kreatora aplikacji do tworzenia "starter" kodu aplikacji, wystarczy wykonać, aby uwzględnić elementy serwera w kodzie starter jest wybierz jedną z opcji serwera na stronie opcje OLE. Jeśli dodajesz serwera elementy do istniejącej aplikacji, wykonaj następujące czynności:  
@@ -50,7 +50,7 @@ Gdy kontener uruchamia serwer sieci, dzięki czemu użytkownik może edytować e
 ##  <a name="_core_a_tip_for_server.2d.item_architecture"></a> Porada dla architektury serwera — element  
  Zgodnie z opisem w [elementy Implementowanie serwera](#_core_implementing_server_items), aplikacje serwera musi mieć możliwość wyświetlania elementów zarówno w widoku serwera, jak i w metaplik używany przez aplikację kontenera. Biblioteka Microsoft Foundation klasy architektury aplikacji w, klasy widoku dla `OnDraw` funkcji członkowskiej renderuje element, gdy jest edytowany (zobacz [CView::OnDraw](../mfc/reference/cview-class.md#ondraw) w *informacje dotyczące biblioteki klas* ). Element serwera `OnDraw` renderuje element w metaplik we wszystkich innych przypadkach (zobacz [COleServerItem::OnDraw](../mfc/reference/coleserveritem-class.md#ondraw)).  
   
- Można uniknąć duplikowania kodu pisanie funkcji pomocnika w klasie dokument serwera i wywoływanie je z `OnDraw` funkcji w widoku i elementu serwera klas. Przykładowe MFC OLE [HIERSVR](../visual-cpp-samples.md) używa tej strategii: funkcje **CServerView::OnDraw** i **CServerItem::OnDraw** zarówno wywołania **CServerDoc::DrawTree**  do renderowania elementu.  
+ Można uniknąć duplikowania kodu pisanie funkcji pomocnika w klasie dokument serwera i wywoływanie je z `OnDraw` funkcji w widoku i elementu serwera klas. Przykładowe MFC OLE [HIERSVR](../visual-cpp-samples.md) używa tej strategii: funkcje `CServerView::OnDraw` i `CServerItem::OnDraw` zarówno wywołania `CServerDoc::DrawTree` do renderowania elementu.  
   
  Widoku i elementu `OnDraw` funkcje Członkowskie, ponieważ ich Rysowanie w różnych warunkach. Widok należy wziąć pod uwagę takie czynniki jak powiększanie, wybór rozmiaru i zakres wycinka i elementów interfejsu użytkownika, takich jak paski przewijania. Element serwera z drugiej strony, zawsze rysuje cały obiekt OLE.  
   

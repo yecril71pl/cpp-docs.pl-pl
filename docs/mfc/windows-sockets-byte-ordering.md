@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18fc3f586c7fc8861bfc29dade7b62e741bb0ffc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a95725565dee2b25fd7f2e39927fde88c9cddff
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385160"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956005"
 ---
 # <a name="windows-sockets-byte-ordering"></a>Windows Sockets: określanie kolejności bajtów
 W tym artykule i dwa artykuły pomocnika opisano kilka problemów w programowaniu Windows Sockets. W tym artykule omówiono określanie kolejności bajtów. Inne problemy zostały omówione w artykułach: [Windows Sockets: Blokowanie](../mfc/windows-sockets-blocking.md) i [Windows Sockets: Konwertowanie ciągów](../mfc/windows-sockets-converting-strings.md).  
@@ -80,7 +80,7 @@ W tym artykule i dwa artykuły pomocnika opisano kilka problemów w programowani
   
  [!code-cpp[NVC_MFCSimpleSocket#6](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_2.cpp)]  
   
- W języku C++ `struct` jest zasadniczo samym co klasa. `Message` Struktura może mieć funkcji elementów członkowskich, takich jak `Serialize` funkcja członkowska zadeklarowana powyżej. `Serialize` Funkcji członkowskiej może wyglądać następująco:  
+ W języku C++ **struktury** jest zasadniczo samym co klasa. `Message` Struktura może mieć funkcji elementów członkowskich, takich jak `Serialize` funkcja członkowska zadeklarowana powyżej. `Serialize` Funkcji członkowskiej może wyglądać następująco:  
   
  [!code-cpp[NVC_MFCSimpleSocket#7](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_3.cpp)]  
   

@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05bfd912d3c4b6ee8b462775f6919c5fe81cc936
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 51e3c24464ff74ab262cd241dcdce68037d530f9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357077"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955105"
 ---
 # <a name="cd2dgeometry-class"></a>Klasa CD2DGeometry
 Otoka dla ID2D1Geometry.  
@@ -141,7 +141,7 @@ void Attach(ID2D1Geometry* pResource);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pResource`  
+ *pResource*  
  Interfejs istniejącego zasobu. Nie może mieć wartości NULL  
   
 ##  <a name="cd2dgeometry"></a>  CD2DGeometry::CD2DGeometry  
@@ -154,10 +154,10 @@ CD2DGeometry(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentTarget`  
+ *pParentTarget*  
  Wskaźnik do obiektu docelowego renderowania.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Wskazuje, że obiekt zostanie zniszczony przez właściciela (pParentTarget).  
   
 ##  <a name="combinewithgeometry"></a>  CD2DGeometry::CombineWithGeometry  
@@ -173,19 +173,19 @@ BOOL CombineWithGeometry(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `inputGeometry`  
+ *inputGeometry*  
  Geometria do łączenia z tym wystąpieniem.  
   
- `combineMode`  
+ *combineMode*  
  Typ operację łączenia do wykonania.  
   
- `inputGeometryTransform`  
+ *inputGeometryTransform*  
  Przekształcenie do zastosowania do inputGeometry przed łączenie.  
   
- `geometrySink`  
+ *geometrySink*  
  Wynik operacji łączenia.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Granice maksymalną odległość między punktami w wielokątne zbliżenia mają geometrię. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale spowodować wolniejszy wykonanie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -202,13 +202,13 @@ D2D1_GEOMETRY_RELATION CompareWithGeometry(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `inputGeometry`  
+ *inputGeometry*  
  Geometria do testowania.  
   
- `inputGeometryTransform`  
+ *inputGeometryTransform*  
  Przekształcenie do zastosowania do inputGeometry.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Granice maksymalną odległość między punktami w wielokątne zbliżenia mają geometrię. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale spowodować wolniejszy wykonanie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -225,13 +225,13 @@ BOOL ComputeArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `worldTransform`  
+ *worldTransform*  
  Przekształcenie do zastosowania do tego geometrii przed rozpoczęciem przetwarzania jego obszaru.  
   
- `area`  
+ *obszar*  
  Gdy metoda zwróci wartość, zawiera wskaźnik do obszaru przekształcone, spłaszczoną wersję tego geometrii. Należy przydzielić magazynu dla tego parametru.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Granice maksymalną odległość między punktami w wielokątne zbliżenia geometrii. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale spowodować wolniejszy wykonanie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -248,13 +248,13 @@ BOOL ComputeLength(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `worldTransform`  
+ *worldTransform*  
  Przekształcenie do zastosowania do geometrii przed obliczeniem jego długość.  
   
- `length`  
+ *długość*  
  Gdy metoda zwróci wartość, zawiera wskaźnik do długości geometrii. W przypadku zamkniętego mają geometrię długość obejmuje segmentu niejawne zamknięcia. Należy przydzielić magazynu dla tego parametru.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Granice maksymalną odległość między punktami w wielokątne zbliżenia geometrii. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale spowodować wolniejszy wykonanie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -273,19 +273,19 @@ BOOL ComputePointAtLength(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `length`  
+ *długość*  
  Odległość wzdłuż geometrii punktu i tangens można znaleźć. Odległość w przypadku mniej następnie 0, ta metoda oblicza pierwszego punktu w geometrii. Jeśli ta odległość jest większa niż długość geometrii, ta metoda oblicza ostatniego punktu w geometrii.  
   
- `worldTransform`  
+ *worldTransform*  
  Przekształcenie do zastosowania do geometrii przed rozpoczęciem obliczanie określony punkt i tangens.  
   
- `point`  
+ *Punkt*  
  Lokalizacja w określonej odległości wzdłuż geometrii. Jeśli geometrii jest pusta, ten punkt zawiera NaN jako x i y wartości.  
   
- `unitTangentVector`  
+ *unitTangentVector*  
  Gdy metoda zwróci wartość, zawiera wskaźnik do stycznej wektor w określonej odległości wzdłuż geometrii. Jeśli geometrii jest pusta, to wektor zawiera NaN jako x i y wartości. Należy przydzielić magazynu dla tego parametru.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Granice maksymalną odległość między punktami w wielokątne zbliżenia geometrii. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale spowodować wolniejszy wykonanie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -320,16 +320,16 @@ BOOL FillContainsPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `point`  
+ *Punkt*  
  Punkt do testowania.  
   
- `worldTransform`  
+ *worldTransform*  
  Przekształcenie do zastosowania do geometrii przed testowanie pod kątem zawierania.  
   
- `contains`  
+ *Zawiera*  
  Po powrocie z tej metody zawiera wartość logiczna, która ma wartość PRAWDA, jeśli obszar wypełniony przez geometrii zawiera punkt; w przeciwnym razie wartość FALSE. Należy przydzielić magazynu dla tego parametru.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Liczbowa dokładność, z którym dokładne ścieżka geometryczne i przecięcia ścieżki jest obliczana. Brak wypełnienia o mniej niż tolerancja punktów nadal są traktowane jako wewnątrz. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale spowodować wolniejszy wykonanie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -354,8 +354,8 @@ CD2DRectF& bounds) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `worldTransform`  
- `bounds`  
+ *worldTransform*  
+ *granice*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -372,19 +372,19 @@ BOOL GetWidenedBounds(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `strokeWidth`  
+ *strokeWidth*  
  Wielkość, przez którą chcesz rozszerzyć geometrii przez używana do malowania konturu jej.  
   
- `strokeStyle`  
+ *strokeStyle*  
  Styl obrysu rozszerzająca geometrii.  
   
- `worldTransform`  
+ *worldTransform*  
  Przekształcenie do zastosowania do geometrii po geometrii jest przekształcana i geometrii zostały malowania.  
   
- `bounds`  
+ *granice*  
  Po powrocie z tej metody zawiera granice poszerzył geometrii. Należy przydzielić magazynu dla tego parametru.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Granice maksymalną odległość między punktami w wielokątne zbliżenia mają geometrię. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale spowodować wolniejszy wykonanie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -428,13 +428,13 @@ BOOL Outline(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `worldTransform`  
+ *worldTransform*  
  Przekształcenie do zastosowania do konturu geometrii.  
   
- `geometrySink`  
+ *geometrySink*  
  ID2D1SimplifiedGeometrySink, do którego jest dołączany konspektu przekształcone geometrii.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Granice maksymalną odległość między punktami w wielokątne zbliżenia geometrii. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale spowodować wolniejszy wykonanie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -452,16 +452,16 @@ BOOL Simplify(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `simplificationOption`  
+ *simplificationOption*  
  Wartość, która określa, czy uproszczony geometrii powinien zawierać krzywych.  
   
- `worldTransform`  
+ *worldTransform*  
  Przekształcenie do zastosowania do geometrii uproszczone.  
   
- `geometrySink`  
+ *geometrySink*  
  ID2D1SimplifiedGeometrySink, do którego jest dołączany uproszczony geometrii.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Granice maksymalną odległość między punktami w wielokątne zbliżenia geometrii. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale spowodować wolniejszy wykonanie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -481,22 +481,22 @@ BOOL StrokeContainsPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `point`  
+ *Punkt*  
  Punkt, aby sprawdzić zawieranie.  
   
- `strokeWidth`  
+ *strokeWidth*  
  Grubość pociągnięć do zastosowania.  
   
- `strokeStyle`  
+ *strokeStyle*  
  Styl obrysu do zastosowania.  
   
- `worldTransform`  
+ *worldTransform*  
  Przekształcenie do zastosowania do obrysowane geometrii.  
   
- `contains`  
+ *Zawiera*  
  Po powrocie z tej metody zawiera wartość logiczna, która jest ustawiona na wartość TRUE, jeśli obrysu geometrii zawiera określony punkt; w przeciwnym razie wartość FALSE. Należy przydzielić magazynu dla tego parametru.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Liczbowa dokładność, z którym dokładne ścieżka geometryczne i przecięcia ścieżki jest obliczana. Brak pociągnięcia przez mniej niż tolerancja punktów nadal są traktowane jako wewnątrz. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale spowodować wolniejszy wykonanie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -513,13 +513,13 @@ BOOL Tessellate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `worldTransform`  
+ *worldTransform*  
  Przekształcenie do zastosowania do tego geometry, lub wartość NULL.  
   
- `tessellationSink`  
+ *tessellationSink*  
  ID2D1TessellationSink, do którego tesselowaną jest dołączony.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Granice maksymalną odległość między punktami w wielokątne zbliżenia geometrii. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale spowodować wolniejszy wykonanie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -538,19 +538,19 @@ BOOL Widen(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `strokeWidth`  
+ *strokeWidth*  
  Wielkość, o którą należy zwiększyć wartość geometrii.  
   
- `strokeStyle`  
+ *strokeStyle*  
  Styl obrysu do zastosowania do geometrii, lub wartość NULL.  
   
- `worldTransform`  
+ *worldTransform*  
  Przekształcenie do zastosowania do geometrii po jego rozszerzenia.  
   
- `geometrySink`  
+ *geometrySink*  
  ID2D1SimplifiedGeometrySink, do którego jest dołączany poszerzył geometrii.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Granice maksymalną odległość między punktami w wielokątne zbliżenia geometrii. Mniejsze wartości pozwalają uzyskać dokładniejsze wyniki, ale spowodować wolniejszy wykonanie.  
   
 ### <a name="return-value"></a>Wartość zwracana  

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3793ca47aa0537d5ca8d6858c165fc2c5ac64943
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 14e6df9a5d4dc6631b6891f90b55b63b73989b30
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383448"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953961"
 ---
 # <a name="slider-control-member-functions"></a>Funkcje członkowskie formantu suwaka
 Aplikację można wywołać suwak funkcje Członkowskie formantu można pobrać informacji o suwaka ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) i zmianę jego właściwości.  
@@ -29,7 +29,7 @@ Aplikację można wywołać suwak funkcje Członkowskie formantu można pobrać 
   
  Zakres formantu suwaka to zbiór wartości ciągłym, reprezentujące suwaka. Większość aplikacji używa [SetRange](../mfc/reference/csliderctrl-class.md#setrange) funkcji członkowskiej można ustawić zakresu formantu suwaka po pierwszym utworzeniu. Aplikacje można dynamicznie zmieniać zakresu po utworzeniu za pomocą suwaka [SetRangeMax](../mfc/reference/csliderctrl-class.md#setrangemax) i [SetRangeMin](../mfc/reference/csliderctrl-class.md#setrangemin) funkcji elementów członkowskich. Aplikacja, która umożliwia zakresu do można zmienić dynamicznie zwykle pobiera ustawienia końcowy zakresu, gdy użytkownik zakończył pracę z suwaka. Aby pobrać te ustawienia, należy użyć [GetRange](../mfc/reference/csliderctrl-class.md#getrange), [GetRangeMax](../mfc/reference/csliderctrl-class.md#getrangemax), i [GetRangeMin](../mfc/reference/csliderctrl-class.md#getrangemin) funkcji elementów członkowskich.  
   
- Aplikacja może użyć `TBS_AUTOTICKS` styl, który ma znaczniki formantu suwaka wyświetlane automatycznie. Jeśli aplikacja musi kontrolować częstotliwość znaczników lub pozycji, jednak kilka funkcji członkowskich można.  
+ Aplikacja może używać styl TBS_AUTOTICKS ma automatycznie wyświetlane znaczniki formantu suwaka. Jeśli aplikacja musi kontrolować częstotliwość znaczników lub pozycji, jednak kilka funkcji członkowskich można.  
   
  Aby ustawić pozycji znacznika, aplikacja może użyć [SetTic](../mfc/reference/csliderctrl-class.md#settic) funkcję elementu członkowskiego. [SetTicFreq](../mfc/reference/csliderctrl-class.md#setticfreq) funkcji członkowskiej umożliwia aplikacji ustaw znaczników znaczników znajdujących się w regularnych odstępach czasu w zakresie kontrolka suwaka. Na przykład aplikacja można używać funkcji członkowskiej do wyświetlenia tylko 10 znaczniki w zakresie od 1 do 100.  
   
@@ -37,11 +37,11 @@ Aplikację można wywołać suwak funkcje Członkowskie formantu można pobrać 
   
  [ClearTics](../mfc/reference/csliderctrl-class.md#cleartics) funkcji członkowskiej powoduje usunięcie wszystkich znaczników osi suwaka.  
   
- Rozmiar wiersza formantu suwaka Określa, jak daleko zostanie przesunięty suwak, gdy aplikacja odbiera **TB_LINEDOWN** lub **TB_LINEUP** wiadomość z powiadomieniem. Podobnie, rozmiar strony określa odpowiedź na **TB_PAGEDOWN** i **TB_PAGEUP** komunikaty powiadomień. Aplikacje można pobierać i ustawiać wartości rozmiar wiersza i strony za pomocą [GetLineSize](../mfc/reference/csliderctrl-class.md#getlinesize), [SetLineSize](../mfc/reference/csliderctrl-class.md#setlinesize), [GetPageSize](../mfc/reference/csliderctrl-class.md#getpagesize), i [SetPageSize](../mfc/reference/csliderctrl-class.md#setpagesize) funkcji elementów członkowskich.  
+ Rozmiar wiersza formantu suwaka Określa, jak daleko zostanie przesunięty suwak, gdy aplikacja odbiera TB_LINEDOWN lub TB_LINEUP komunikatu powiadomienia. Podobnie rozmiar strony określa odpowiedź na TB_PAGEDOWN i TB_PAGEUP wiadomości powiadomienia. Aplikacje można pobierać i ustawiać wartości rozmiar wiersza i strony za pomocą [GetLineSize](../mfc/reference/csliderctrl-class.md#getlinesize), [SetLineSize](../mfc/reference/csliderctrl-class.md#setlinesize), [GetPageSize](../mfc/reference/csliderctrl-class.md#getpagesize), i [SetPageSize](../mfc/reference/csliderctrl-class.md#setpagesize) funkcji elementów członkowskich.  
   
  Aplikacja może używać funkcji elementów członkowskich do pobrania wymiarów kontrolki suwaka. [GetThumbRect](../mfc/reference/csliderctrl-class.md#getthumbrect) funkcji członkowskiej pobiera prostokąt ograniczający dla suwaka. [GetChannelRect](../mfc/reference/csliderctrl-class.md#getchannelrect) funkcji członkowskiej pobiera prostokąt ograniczający dla kanału kontroli suwaka. (Kanał jest obszar za pośrednictwem zostanie przesunięty suwak i zawierający wyróżnienie po wybraniu zakresu).  
   
- Jeśli w kontrolce slider `TBS_ENABLESELRANGE` stylu, użytkownik może wybrać zakres sąsiadujących wartości z niego. Liczba funkcji Członkowskich Zezwalaj wybranego zakresu do skorygowania dynamicznie. [SetSelection](../mfc/reference/csliderctrl-class.md#setselection) funkcji członkowskiej ustawia początkową i końcową pozycji zaznaczenia. Gdy użytkownik zakończy ustawienie wybranego zakresu, aplikacja może pobrać ustawienia za pomocą [GetSelection](../mfc/reference/csliderctrl-class.md#getselection) funkcję elementu członkowskiego. Aby wyczyścić określonego przez użytkownika, należy użyć [ClearSel](../mfc/reference/csliderctrl-class.md#clearsel) funkcję elementu członkowskiego.  
+ Jeśli w kontrolce slider styl TBS_ENABLESELRANGE, użytkownik może wybrać zakres sąsiadujących wartości z niego. Liczba funkcji Członkowskich Zezwalaj wybranego zakresu do skorygowania dynamicznie. [SetSelection](../mfc/reference/csliderctrl-class.md#setselection) funkcji członkowskiej ustawia początkową i końcową pozycji zaznaczenia. Gdy użytkownik zakończy ustawienie wybranego zakresu, aplikacja może pobrać ustawienia za pomocą [GetSelection](../mfc/reference/csliderctrl-class.md#getselection) funkcję elementu członkowskiego. Aby wyczyścić określonego przez użytkownika, należy użyć [ClearSel](../mfc/reference/csliderctrl-class.md#clearsel) funkcję elementu członkowskiego.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CSliderCtrl](../mfc/using-csliderctrl.md)   

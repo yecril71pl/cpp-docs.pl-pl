@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 197fc5ecb1b9676dd1ff11327c62950992f6f06d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d3a89cb258b7208346a76cd2a59eb8da40c38087
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359232"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950696"
 ---
 # <a name="cd2dlayer-class"></a>Klasa CD2DLayer
 Otoka dla ID2D1Layer.  
@@ -108,7 +108,7 @@ void Attach(ID2D1Layer* pResource);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pResource`  
+ *pResource*  
  Interfejs istniejącego zasobu. Nie może mieć wartości NULL  
   
 ##  <a name="cd2dlayer"></a>  CD2DLayer::CD2DLayer  
@@ -121,10 +121,10 @@ CD2DLayer(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentTarget`  
+ *pParentTarget*  
  Wskaźnik do obiektu docelowego renderowania.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Wskazuje, że obiekt zostanie zniszczony przez właściciela (pParentTarget).  
   
 ##  <a name="create"></a>  CD2DLayer::Create  
@@ -135,7 +135,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pRenderTarget`  
+ *pRenderTarget*  
  Wskaźnik do obiektu docelowego renderowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  

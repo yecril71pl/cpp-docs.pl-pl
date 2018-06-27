@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b51bf2b562f0d4eff5b9cfef557e62f996d53470
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c6fd065d13d3c61b88cc24144cfc64368020d16
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385583"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953974"
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows Sockets: powiadomienia dotyczące gniazd
 W tym artykule opisano funkcje powiadomień z klas gniazd. Funkcje Członkowskie są funkcje wywołania zwrotnego, które struktura wywołuje powiadomiono obiektu gniazda ważnych zdarzeń. Dostępne są następujące funkcje powiadomień:  
@@ -43,14 +43,14 @@ W tym artykule opisano funkcje powiadomień z klas gniazd. Funkcje Członkowskie
   
  Te funkcje są funkcje wywołania zwrotnego możliwym do zastąpienia. `CAsyncSocket` i `CSocket` przekonwertować komunikaty powiadomień, ale musi implementować jak powiadomienia funkcjonuje odpowiada, jeśli chcesz używać ich. Funkcje powiadomień są wywoływane w czasie Twojej gniazda jest powiadamiany o zdarzenia publicznej, takich jak obecności danych do odczytu.  
   
- MFC wywołuje funkcje powiadomień pozwala dostosować zachowanie programu gniazda w czasie, który ma otrzymywać powiadomienia. Na przykład może wywołać **Receive** z Twojej `OnReceive` funkcję powiadomień, oznacza to, na czym powiadomiony, że dane do odczytu, należy wywołać **Receive** do jego odczytu. Ta metoda nie jest konieczne, ale to nieprawidłowy scenariusz. Alternatywnie, można użyć funkcji powiadomień, aby śledzić postęp, wydrukować **śledzenia** wiadomości i tak dalej.  
+ MFC wywołuje funkcje powiadomień pozwala dostosować zachowanie programu gniazda w czasie, który ma otrzymywać powiadomienia. Na przykład może wywołać `Receive` z Twojej `OnReceive` funkcję powiadomień, oznacza to, na czym powiadomiony, że dane do odczytu, należy wywołać `Receive` do jego odczytu. Ta metoda nie jest konieczne, ale to nieprawidłowy scenariusz. Alternatywnie, można użyć funkcji powiadomień, aby śledzić postęp, wydrukować **śledzenia** wiadomości i tak dalej.  
   
  Zastępowanie funkcji powiadomień w klasie pochodnej gniazda i podając implementację możliwość korzystania z te powiadomienia.  
   
- Podczas operacji, takich jak odbieranie i wysyłanie danych `CSocket` obiekt staje się synchronicznego. W stanie synchronicznym przeznaczone dla innych sockets powiadomienia są umieszczane w kolejce podczas oczekiwania powiadomienie, które chce bieżącego gniazda. (Na przykład podczas **Receive** połączenia gniazda chce powiadomienie do odczytu.) Po gniazda ukończeniu dotyczącej jej operacji synchronicznych i asynchronicznych zostanie ponownie, inne gniazda można rozpocząć odbieranie powiadomień w kolejce.  
+ Podczas operacji, takich jak odbieranie i wysyłanie danych `CSocket` obiekt staje się synchronicznego. W stanie synchronicznym przeznaczone dla innych sockets powiadomienia są umieszczane w kolejce podczas oczekiwania powiadomienie, które chce bieżącego gniazda. (Na przykład podczas `Receive` połączenia gniazda chce powiadomienie do odczytu.) Po gniazda ukończeniu dotyczącej jej operacji synchronicznych i asynchronicznych zostanie ponownie, inne gniazda można rozpocząć odbieranie powiadomień w kolejce.  
   
 > [!NOTE]
->  W `CSocket`, `OnConnect` nigdy nie została wywołana funkcja powiadomień. Dla połączeń, należy wywołać **Connect**, który zwróci po zakończeniu połączenia (pomyślnie lub błąd). Sposób obsługi powiadomień połączenia jest szczegółów implementacji MFC.  
+>  W `CSocket`, `OnConnect` nigdy nie została wywołana funkcja powiadomień. Dla połączeń, należy wywołać `Connect`, który zwróci po zakończeniu połączenia (pomyślnie lub błąd). Sposób obsługi powiadomień połączenia jest szczegółów implementacji MFC.  
   
  Aby uzyskać szczegółowe informacje dotyczące każdej funkcji powiadomień, zobacz opis funkcji poniżej klasy `CAsyncSocket` w *odwołania MFC*. Kod źródłowy i informacje o MFC — przykłady, zobacz [MFC — przykłady](../visual-cpp-samples.md).  
   

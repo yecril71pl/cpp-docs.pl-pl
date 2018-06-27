@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7121915671f6e0ab52ae66c53e5ca31fa1faec1c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b10cd2d5c6174e63ff8aa74b4edc98b20375fae0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352743"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951936"
 ---
 # <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo — Struktura
 `CDaoDatabaseInfo` Struktura zawiera informacje dotyczące obiektu bazy danych zdefiniowany dla obiektów dostępu do danych (DAO).  
@@ -43,10 +43,10 @@ struct CDaoDatabaseInfo
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `m_strName`  
+ *m_strName*  
  Unikatowej nazwy obiektu bazy danych. Aby bezpośrednio pobrać tę właściwość, należy wywołać [CDaoDatabase::GetName](../../mfc/reference/cdaodatabase-class.md#getname). Aby uzyskać więcej informacji zobacz temat "Właściwości Name" w pomocy DAO.  
   
- `m_bUpdatable`  
+ *m_bUpdatable*  
  Wskazuje, czy zmiany mogą być tworzone w bazie danych. Aby bezpośrednio pobrać tę właściwość, należy wywołać [CDaoDatabase::CanUpdate](../../mfc/reference/cdaodatabase-class.md#canupdate). Aby uzyskać więcej informacji zobacz temat "Nadaje się do aktualizacji właściwości" w pomocy DAO.  
   
  *m_bTransactions*  
@@ -55,7 +55,7 @@ struct CDaoDatabaseInfo
  *m_strVersion*  
  Wskazuje wersję aparatu bazy danych programu Microsoft Jet. Aby bezpośrednio pobrać wartości tej właściwości, należy wywołać obiekt bazy danych [GetVersion](../../mfc/reference/cdaodatabase-class.md#getversion) funkcję elementu członkowskiego. Aby uzyskać więcej informacji zobacz temat "Właściwość Version" w pomocy DAO.  
   
- `m_lCollatingOrder`  
+ *m_lCollatingOrder*  
  Określa sekwencję kolejności sortowania w tekście do porównania ciągów i sortowania. Możliwe wartości:  
   
 - **dbSortGeneral** Użyj ogólne kolejność sortowania (angielskim, francuskim, niemieckim, portugalski, włoski i hiszpański nowoczesne).  
@@ -99,7 +99,7 @@ struct CDaoDatabaseInfo
  *m_nQueryTimeout*  
  Liczba sekund oczekiwania przed błąd upływu limitu czasu aparatu bazy danych programu Microsoft Jet występuje podczas wykonywania kwerendy w bazie danych ODBC. Domyślna wartość limitu czasu wynosi 60 sekund. Gdy QueryTimeout jest ustawiona na 0, nie przekroczony limit czasu; może to spowodować, że program może przestać odpowiadać. Aby bezpośrednio pobrać wartości tej właściwości, należy wywołać obiekt bazy danych [GetQueryTimeout](../../mfc/reference/cdaodatabase-class.md#getquerytimeout) funkcję elementu członkowskiego. Aby uzyskać więcej informacji zobacz temat "QueryTimeout Property" w pomocy DAO.  
   
- `m_strConnect`  
+ *m_strConnect*  
  Zawiera informacje o źródle otwartą bazę danych. Informacje o ciągów połączenia i informacje bezpośrednio do pobrania wartości tej właściwości, zobacz [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) funkcję elementu członkowskiego. Aby uzyskać więcej informacji zobacz temat "Połącz Property" w pomocy DAO.  
   
 ## <a name="remarks"></a>Uwagi  

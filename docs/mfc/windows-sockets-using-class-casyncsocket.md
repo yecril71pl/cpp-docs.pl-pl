@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a96ccdd4ce5c49f18c12aa85060954fc97a3408b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc461a0a2325f768711f6d7529949ee24a1b4a25
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385184"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954887"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets: używanie klasy CAsyncSocket
 W tym artykule opisano sposób użycia klasy [CAsyncSocket](../mfc/reference/casyncsocket-class.md). Należy pamiętać, że ta klasa hermetyzuje API systemu Windows Sockets na bardzo niskim poziomie. `CAsyncSocket` jest przeznaczona dla programistów, którzy znasz komunikacji sieciowej szczegółowo, ale mają wygodę wywołań zwrotnych dla powiadomień o zdarzeniach w sieci. W oparciu o ten założeń, w tym artykule przedstawiono tylko podstawowe instrukcji. Prawdopodobnie należy rozważyć użycie `CAsyncSocket` łatwość zajmowanie się wiele protokołów sieciowych w aplikacji MFC Windows Sockets ale nie chcesz pochodzących z elastyczność. Może również uznać, że można uzyskać lepszą wydajność programowania więcej łączności bezpośrednio można samodzielnie niż przy użyciu bardziej ogólne modelu alternatywnych klasy `CSocket`.  
@@ -57,9 +57,9 @@ W tym artykule opisano sposób użycia klasy [CAsyncSocket](../mfc/reference/cas
   
      [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]  
   
-     Tworzy konstruktora pierwszy powyżej `CAsyncSocket` obiektu na stosie. Tworzy drugi Konstruktor `CAsyncSocket` na stosie. Pierwszy [Utwórz](../mfc/reference/casyncsocket-class.md#create) wywołania powyżej korzysta z domyślnych parametrów można utworzyć gniazda strumienia. Drugi **Utwórz** wywołanie tworzy gniazdo datagramu z określonego portu i adres. (Możesz użyć dowolnej **Utwórz** wersję za pomocą jednej z metod konstrukcji.)  
+     Tworzy konstruktora pierwszy powyżej `CAsyncSocket` obiektu na stosie. Tworzy drugi Konstruktor `CAsyncSocket` na stosie. Pierwszy [Utwórz](../mfc/reference/casyncsocket-class.md#create) wywołania powyżej korzysta z domyślnych parametrów można utworzyć gniazda strumienia. Drugi `Create` wywołanie tworzy gniazdo datagramu z określonego portu i adres. (Możesz użyć dowolnej `Create` wersję za pomocą jednej z metod konstrukcji.)  
   
-     Parametry **Utwórz** są:  
+     Parametry `Create` są:  
   
     -   "port": krótki liczby całkowitej.  
   
@@ -82,7 +82,7 @@ W tym artykule opisano sposób użycia klasy [CAsyncSocket](../mfc/reference/cas
      Po zaakceptowaniu połączenia, można wykonywać zadania, takie jak sprawdzanie poprawności hasła.  
   
     > [!NOTE]
-    >  **Akceptuj** funkcji członkowskiej przyjmuje odwołanie do nowy, pusty `CSocket` obiektu jako jego parametr. Należy utworzyć ten obiekt przed wywołaniem **Akceptuj**. Jeśli ten obiekt gniazda odbędzie się poza zakresem, zamyka połączenie. Nie wywołuj **Utwórz** dla tego nowego obiektu gniazda. Na przykład, zobacz artykuł [Windows Sockets: Sekwencja operacji](../mfc/windows-sockets-sequence-of-operations.md).  
+    >  `Accept` Funkcji członkowskiej przyjmuje odwołanie do nowy, pusty `CSocket` obiektu jako jego parametr. Należy utworzyć ten obiekt przed wywołaniem `Accept`. Jeśli ten obiekt gniazda odbędzie się poza zakresem, zamyka połączenie. Nie wywołuj `Create` dla tego nowego obiektu gniazda. Na przykład, zobacz artykuł [Windows Sockets: Sekwencja operacji](../mfc/windows-sockets-sequence-of-operations.md).  
   
 3.  Przeprowadzać komunikacji z innymi sockets przez wywołanie metody `CAsyncSocket` obiektu funkcji elementów członkowskich, które zapewniają funkcje interfejsu API systemu Windows Sockets.  
   
@@ -107,7 +107,7 @@ W tym artykule opisano sposób użycia klasy [CAsyncSocket](../mfc/reference/cas
   
  Definicje tych warunków i dodatkowe informacje, zobacz [Windows Sockets: Blokowanie](../mfc/windows-sockets-blocking.md), [Windows Sockets: Określanie kolejności bajtów](../mfc/windows-sockets-byte-ordering.md), [Windows Sockets: Konwertowanie ciągów](../mfc/windows-sockets-converting-strings.md) .  
   
- Pomimo tych problemów klasy **CAsycnSocket** może być odpowiednie opcje dla Ciebie, jeśli aplikacja wymaga elastyczność i sterowania można uzyskać. Jeśli nie, należy rozważyć użycie klasy `CSocket` zamiast tego. `CSocket` ukrywa wiele szczegółowych od Ciebie: it pomp Windows komunikaty podczas blokowania połączeń i umożliwia dostęp do `CArchive`, która zarządza różnice kolejności bajtów i Konwersja ciągu dla Ciebie.  
+ Pomimo tych problemów klasy `CAsycnSocket` może być odpowiednie opcje dla Ciebie, jeśli aplikacja wymaga elastyczność i sterowania można uzyskać. Jeśli nie, należy rozważyć użycie klasy `CSocket` zamiast tego. `CSocket` ukrywa wiele szczegółowych od Ciebie: it pomp Windows komunikaty podczas blokowania połączeń i umożliwia dostęp do `CArchive`, która zarządza różnice kolejności bajtów i Konwersja ciągu dla Ciebie.  
   
  Aby uzyskać więcej informacji, zobacz:  
   

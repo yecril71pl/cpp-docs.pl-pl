@@ -113,12 +113,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ec93c2d39206bbc0c3076835f55e624d3eef715
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b91acd3537477e4213ea87dec77a97822b9e3d98
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356927"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955118"
 ---
 # <a name="canimationcontroller-class"></a>Klasa CAnimationController
 Implementuje kontrolera animacji, który udostępnia interfejs centralnej do tworzenia i zarządzania animacji.  
@@ -227,7 +227,7 @@ CAnimationGroup* AddAnimationObject(CAnimationBaseObject* pObject);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pObject`  
+ *pObject*  
  Wskaźnik do obiektu animacji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -246,10 +246,10 @@ BOOL AddKeyframeToGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nGroupID`  
+ *nGroupID*  
  Określa identyfikator grupy.  
   
- `pKeyframe`  
+ *pKeyframe*  
  Wskaźnik do kluczową.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -268,10 +268,10 @@ BOOL AnimateGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nGroupID`  
+ *nGroupID*  
  Określa identyfikator grupy.  
   
- `bScheduleNow`  
+ *bScheduleNow*  
  Określa, czy mają być uruchamiane natychmiast animacji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -296,10 +296,10 @@ void CleanUpGroup(CAnimationGroup* pGroup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nGroupID`  
+ *nGroupID*  
  Określa identyfikator grupy.  
   
- `pGroup`  
+ *pGroup*  
  Wskaźnik do grupy animacji, aby wyczyścić.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -321,16 +321,16 @@ CKeyFrame* CreateKeyframe(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nGroupID`  
+ *nGroupID*  
  Określa identyfikator grupy, dla której utworzona jest klatki kluczowej.  
   
- `pTransition`  
+ *pTransition*  
  Wskaźnik do przejścia. Klatki kluczowej zostanie wstawiony do scenorysu po ten proces przejścia.  
   
- `pKeyframe`  
+ *pKeyframe*  
  Wskaźnik do podstawowego klatki kluczowej dla tego klatki kluczowej.  
   
- `offset`  
+ *offset*  
  Przesunięcie w sekundach od podstawowej klatki kluczowej, określony przez pKeyframe.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -347,7 +347,7 @@ virtual BOOL EnableAnimationManagerEvent(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bEnable`  
+ *bWłączenie*  
  Określa, czy ustawienie lub wyłączenie obsługi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -366,10 +366,10 @@ virtual BOOL EnableAnimationTimerEventHandler(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bEnable`  
+ *bWłączenie*  
  Określa, czy ustawienie lub wyłączenie obsługi.  
   
- `idleBehavior`  
+ *idleBehavior*  
  Określa zachowanie bezczynności czasomierza programu obsługi aktualizacji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -386,7 +386,7 @@ virtual BOOL EnablePriorityComparisonHandler(DWORD dwHandlerType);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwHandlerType`  
+ *dwHandlerType*  
  Kombinacja UI_ANIMATION_PHT_ flagi (zobacz Uwagi), która określa, jakie programy obsługi się ustawienie lub wyłączenie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -405,10 +405,10 @@ virtual BOOL EnableStoryboardEventHandler(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nGroupID`  
+ *nGroupID*  
  Określa identyfikator grupy.  
   
- `bEnable`  
+ *bWłączenie*  
  Określa, czy ustawienie lub wyłączenie obsługi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -426,10 +426,10 @@ CAnimationGroup* FindAnimationGroup(IUIAnimationStoryboard* pStoryboard);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nGroupID`  
+ *nGroupID*  
  Określa identyfikator grupy.  
   
- `pStoryboard`  
+ *pStoryboard*  
  Wskaźnik do scenorysu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -449,13 +449,13 @@ BOOL FindAnimationObject(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pVariable`  
+ *pVariable*  
  Wskaźnik do zmiennej animacji.  
   
- `ppObject`  
+ *ppObject*  
  Dane wyjściowe. Zawiera wskaźnik do obiektu animacji lub wartość NULL.  
   
- `ppGroup`  
+ *ppGroup*  
  Dane wyjściowe. Zawiera wskaźnik do grupy animacji, która zawiera obiekt animacji lub wartość NULL.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -619,7 +619,7 @@ virtual void OnAfterSchedule(CAnimationGroup* pGroup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pGroup`  
+ *pGroup*  
  Wskaźnik do grupy animacji, które zostało zaplanowane.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -638,19 +638,19 @@ virtual void OnAnimationIntegerValueChanged(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pGroup`  
+ *pGroup*  
  Wskaźnik do grupy animacji przechowujący obiektu animacji, którego wartość została zmieniona.  
   
- `pObject`  
+ *pObject*  
  Wskaźnik do obiektu animacji, który zawiera zmienną animacji, którego wartość została zmieniona.  
   
- `variable`  
+ *Zmienna*  
  Wskaźnik do zmiennej animacji.  
   
- `newValue`  
+ *newValue*  
  Określa nową wartość.  
   
- `prevValue`  
+ *prevValue*  
  Określa poprzedniej wartości.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -666,10 +666,10 @@ virtual void OnAnimationManagerStatusChanged(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `newStatus`  
+ *newStatus*  
  Nowy stan Menedżera animacji.  
   
- `previousStatus`  
+ *previousStatus*  
  Poprzedni stan Menedżera animacji.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -703,7 +703,7 @@ virtual void OnAnimationTimerRenderingTooSlow(UINT32 fps);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `fps`  
+ *kl. / s*  
  Bieżąca szybkość klatek w klatkach na sekundę.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -722,19 +722,19 @@ virtual void OnAnimationValueChanged(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pGroup`  
+ *pGroup*  
  Wskaźnik do grupy animacji przechowujący obiektu animacji, którego wartość została zmieniona.  
   
- `pObject`  
+ *pObject*  
  Wskaźnik do obiektu animacji, który zawiera zmienną animacji, którego wartość została zmieniona.  
   
- `variable`  
+ *Zmienna*  
  Wskaźnik do zmiennej animacji.  
   
- `newValue`  
+ *newValue*  
  Określa nową wartość.  
   
- `prevValue`  
+ *prevValue*  
  Określa poprzedniej wartości.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -748,7 +748,7 @@ virtual void OnBeforeAnimationStart(CAnimationGroup* pGroup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pGroup`  
+ *pGroup*  
  Wskaźnik do grupy animacji, którego animacja się uruchomić.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -765,13 +765,13 @@ virtual BOOL OnHasPriorityCancel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pGroupScheduled`  
+ *pGroupScheduled*  
  Grupę, do której należy obecnie zaplanowane scenorysu.  
   
- `pGroupNew`  
+ *pGroupNew*  
  Grupę, do której należy nowego scenorysu, który jest w planowaniu konflikt z zaplanowanym scenorysu własnością pGroupScheduled.  
   
- `priorityEffect`  
+ *priorityEffect*  
  Potencjalny wpływ na pGroupNew Jeśli pGroupScheduled ma wyższy priorytet.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -791,13 +791,13 @@ virtual BOOL OnHasPriorityCompress(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pGroupScheduled`  
+ *pGroupScheduled*  
  Grupę, do której należy obecnie zaplanowane scenorysu.  
   
- `pGroupNew`  
+ *pGroupNew*  
  Grupę, do której należy nowego scenorysu, który jest w planowaniu konflikt z zaplanowanym scenorysu własnością pGroupScheduled.  
   
- `priorityEffect`  
+ *priorityEffect*  
  Potencjalny wpływ na pGroupNew Jeśli pGroupScheduled ma wyższy priorytet.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -817,13 +817,13 @@ virtual BOOL OnHasPriorityConclude(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pGroupScheduled`  
+ *pGroupScheduled*  
  Grupę, do której należy obecnie zaplanowane scenorysu.  
   
- `pGroupNew`  
+ *pGroupNew*  
  Grupę, do której należy nowego scenorysu, który jest w planowaniu konflikt z zaplanowanym scenorysu własnością pGroupScheduled.  
   
- `priorityEffect`  
+ *priorityEffect*  
  Potencjalny wpływ na pGroupNew Jeśli pGroupScheduled ma wyższy priorytet.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -843,13 +843,13 @@ virtual BOOL OnHasPriorityTrim(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pGroupScheduled`  
+ *pGroupScheduled*  
  Grupę, do której należy obecnie zaplanowane scenorysu.  
   
- `pGroupNew`  
+ *pGroupNew*  
  Grupę, do której należy nowego scenorysu, który jest w planowaniu konflikt z zaplanowanym scenorysu własnością pGroupScheduled.  
   
- `priorityEffect`  
+ *priorityEffect*  
  Potencjalny wpływ na pGroupNew Jeśli pGroupScheduled ma wyższy priorytet.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -869,13 +869,13 @@ virtual void OnStoryboardStatusChanged(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pGroup`  
+ *pGroup*  
  Wskaźnik do grupy animacji, który jest właścicielem scenorysu, których stan zmienił się.  
   
- `newStatus`  
+ *newStatus*  
  Określa nowy stan.  
   
- `previousStatus`  
+ *previousStatus*  
  Określa poprzedniego stanu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -889,7 +889,7 @@ virtual void OnStoryboardUpdated(CAnimationGroup* pGroup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pGroup`  
+ *pGroup*  
  Wskaźnik do grupy, który jest właścicielem scenorysu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -913,7 +913,7 @@ void RemoveAnimationGroup(UINT32 nGroupID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nGroupID`  
+ *nGroupID*  
  Określa identyfikator grupy animacji.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -929,10 +929,10 @@ void RemoveAnimationObject(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pObject`  
+ *pObject*  
  Wskaźnik do obiektu animacji.  
   
- `bNoDelete`  
+ *bNoDelete*  
  Jeśli ten parametr ma wartość TRUE nie można usunąć obiektu na usuwanie.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -946,7 +946,7 @@ void RemoveTransitions(UINT32 nGroupID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nGroupID`  
+ *nGroupID*  
  Określa identyfikator grupy.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -962,10 +962,10 @@ BOOL ScheduleGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nGroupID`  
+ *nGroupID*  
  Określa identyfikator grupy można zaplanować animacji.  
   
- `time`  
+ *czas*  
  Określa czas, aby zaplanować.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -982,7 +982,7 @@ void SetRelatedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Wskaźnik do obiektu okna, aby ustawić.  
   
 ### <a name="remarks"></a>Uwagi  

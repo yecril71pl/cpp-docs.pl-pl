@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1eb3bb0d96723f14f6dec56853d52860f0568c03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9407c98183fa923a58ca2939e8c534cd56dc8ef7
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357718"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954624"
 ---
 # <a name="ccontextmenumanager-class"></a>Klasa CContextMenuManager
 `CContextMenuManager` Zarządza obiekt menu skrótów, znanej także jako menu kontekstowe.  
@@ -115,20 +115,20 @@ BOOL AddMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiMenuNameResId`  
+ [in] *uiMenuNameResId*  
  Identyfikator zasobu ciągu zawierającego nazwę nowego menu.  
   
- [in] `uiMenuResId`  
+ [in] *uiMenuResId*  
  Identyfikator zasobu menu.  
   
- [in] `lpszName`  
+ [in] *lpszName*  
  Ciąg zawierający nazwę nowego menu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli metoda zakończyło się pomyślnie; 0, jeśli metoda nie powiedzie się.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda zakończy się niepowodzeniem, jeśli `uiMenuResId` jest nieprawidłowy lub jeśli innym menu o takiej samej nazwie jest już w `CContextMenuManager`.  
+ Ta metoda zakończy się niepowodzeniem, jeśli *uiMenuResId* jest nieprawidłowy lub jeśli innym menu o takiej samej nazwie jest już w `CContextMenuManager`.  
   
 ##  <a name="ccontextmenumanager"></a>  CContextMenuManager::CContextMenuManager  
  Konstruuje [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) obiektu.  
@@ -148,7 +148,7 @@ HMENU GetMenuById(UINT nMenuResId) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nMenuResId`  
+ [in] *nMenuResId*  
  Identyfikator zasobu menu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -164,17 +164,17 @@ HMENU GetMenuByName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszName`  
+ [in] *lpszName*  
  Ciąg zawierający nazwę menu do pobrania.  
   
- [out] `puiOrigResID`  
+ [out] *puiOrigResID*  
  Wskaźnik do `UINT`. Ten parametr zawiera menu określony identyfikator zasobu, jeśli znaleziono.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Dojście do menu, która jest zgodna z nazwą określoną przez `lpszName`. `NULL` Jeśli jest menu nie wywołuje `lpszName`.  
+ Dojście do menu, która jest zgodna z nazwą określoną przez *lpszName*. `NULL` Jeśli jest menu nie wywołuje *lpszName*.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli ta metoda umożliwia znalezienie menu, która odpowiada `lpszName`, `GetMenuByName` przechowuje identyfikator zasobu menu w parametrze `puiOrigResID`.  
+ Jeśli ta metoda umożliwia znalezienie menu, która odpowiada *lpszName*, `GetMenuByName` przechowuje identyfikator zasobu menu w parametrze *puiOrigResID*.  
   
 ##  <a name="getmenunames"></a>  CContextMenuManager::GetMenuNames  
  Zwraca listę nazw menu dodane do [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).  
@@ -184,7 +184,7 @@ void GetMenuNames(CStringList& listOfNames) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `listOfNames`  
+ [out] *listOfNames*  
  Odwołanie do [CStringList](../../mfc/reference/cstringlist-class.md) parametru. Ta metoda zapisuje listę nazw menu tego parametru.  
   
 ##  <a name="loadstate"></a>  CContextMenuManager::LoadState  
@@ -195,14 +195,14 @@ virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Ciąg, który zawiera względną ścieżkę klucza rejestru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli metoda zakończy się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- `lpszProfileName` Parametr nie jest ścieżką bezwzględną wpisu rejestru. Jest ścieżką względną, który zostanie dodany na końcu domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) i [CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) odpowiednio.  
+ *LpszProfileName* parametru nie jest ścieżką bezwzględną wpisu rejestru. Jest ścieżką względną, który zostanie dodany na końcu domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) i [CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) odpowiednio.  
   
  Użyj metody [CContextMenuManager::SaveState](#savestate) zapisać menu skrótów do rejestru.  
   
@@ -227,14 +227,14 @@ virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Ciąg, który zawiera względną ścieżkę klucza rejestru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli metoda zakończy się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- `lpszProfileName` Parametr nie jest ścieżką bezwzględną wpisu rejestru. Jest ścieżką względną, który zostanie dodany na końcu domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) i [CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) odpowiednio.  
+ *LpszProfileName* parametru nie jest ścieżką bezwzględną wpisu rejestru. Jest ścieżką względną, który zostanie dodany na końcu domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) i [CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) odpowiednio.  
   
  Użyj metody [CContextMenuManager::LoadState](#loadstate) załadować menu skrótów z rejestru.  
   
@@ -246,7 +246,7 @@ void SetDontCloseActiveMenu (BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bSet`  
+ [in] *bUstawienie*  
  Wartość logiczna parametr, który określa, czy zamknąć Aktywne menu podręczne. Wartość `TRUE` wskazuje aktywne menu podręczne nie jest zamknięty. `FALSE` Wskazuje, że aktywne menu podręczne jest zamknięty.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -276,29 +276,29 @@ virtual CMFCPopupMenu* ShowPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiMenuResId`  
+ [in] *uiMenuResId*  
  Identyfikator zasobu menu, która służy do wyświetlenia tej metody.  
   
- [in] `x`  
+ [in] *x*  
  Poziomej przesunięcia menu skrótów we współrzędnych klienta.  
   
- [in] `y`  
+ [in] *y*  
  Przesunięcie w pionie menu skrótów we współrzędnych klienta  
   
- [in] `pWndOwner`  
+ [in] *pWndOwner*  
  Wskaźnik do menu skrótów okna nadrzędnego.  
   
- [in] `bOwnMessage`  
- Parametrów typu Boolean wskazującą sposób kierowania wiadomości. Jeśli `bOwnMessage` jest `FALSE`, standardowego MFC routing jest używany. W przeciwnym razie `pWndOwner` odbiera komunikaty.  
+ [in] *bOwnMessage*  
+ Parametrów typu Boolean wskazującą sposób kierowania wiadomości. Jeśli *bOwnMessage* jest `FALSE`, standardowego MFC routing jest używany. W przeciwnym razie *pWndOwner* odbiera komunikaty.  
   
- [in] `hmenuPopup`  
+ [in] *hmenuPopup*  
  Dojście menu, która służy do wyświetlenia tej metody.  
   
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
  Parametrów typu Boolean wskazującą, czy menu zostaną automatycznie usunięte.  
   
- [in] `bRightAlign`  
- Parametrów typu Boolean, która wskazuje sposób wyrównania elementów menu. Jeśli `bRightAlign` jest `TRUE`, menu jest wyrównany do kolejność czytania od prawej do lewej.  
+ [in] *bRightAlign*  
+ Parametrów typu Boolean, która wskazuje sposób wyrównania elementów menu. Jeśli *bRightAlign* jest `TRUE`, menu jest wyrównany do kolejność czytania od prawej do lewej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Pierwszy przeciążenie metody zwraca różną od zera, jeśli metoda zawiera menu pomyślnie; w przeciwnym razie 0. Drugi przeciążenie metody zwraca wskaźnik do [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) Jeśli menu skrótów wyświetlane prawidłowo; w przeciwnym razie `NULL`.  
@@ -306,7 +306,7 @@ virtual CMFCPopupMenu* ShowPopupMenu(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda jest podobny metody [CContextMenuManager::TrackPopupMenu](#trackpopupmenu) w tym obu metod wyświetlić menu skrótów. Jednak `TrackPopupMenu` zwraca indeks wybrane polecenie.  
   
- Jeśli parametr `bAutoDestroy` jest `FALSE`, należy wywołać ręcznie dziedziczonego `DestroyMenu` metodę, aby zwolnić zasoby pamięci. Domyślna implementacja `ShowPopupMenu` nie używa parametru `bAutoDestroy`. Podano do użytku w przyszłości lub niestandardowych klas pochodnych `CContextMenuManager` klasy.  
+ Jeśli parametr *bAutoDestroy* jest `FALSE`, należy wywołać ręcznie dziedziczonego `DestroyMenu` metodę, aby zwolnić zasoby pamięci. Domyślna implementacja `ShowPopupMenu` nie używa parametru *bAutoDestroy*. Podano do użytku w przyszłości lub niestandardowych klas pochodnych `CContextMenuManager` klasy.  
   
 ##  <a name="trackpopupmenu"></a>  CContextMenuManager::TrackPopupMenu  
  Wyświetla menu skrótów określonego i zwraca indeks polecenia menu skrótów wybrane.  
@@ -321,20 +321,20 @@ virtual UINT TrackPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `hmenuPopup`  
+ [in] *hmenuPopup*  
  Dojście menu skrótów, które zawiera tę metodę.  
   
- [in] `x`  
+ [in] *x*  
  Poziomej przesunięcia menu skrótów we współrzędnych klienta.  
   
- [in] `y`  
+ [in] *y*  
  Pionowej przesunięcia menu skrótów we współrzędnych klienta.  
   
- [in] `pWndOwner`  
+ [in] *pWndOwner*  
  Wskaźnik do menu skrótów okna nadrzędnego.  
   
- [in] `bRightAlign`  
- Parametrów typu Boolean, która wskazuje sposób wyrównania elementów menu. Jeśli `bRightAlign` jest `TRUE`, menu jest wyrównany do kolejność czytania od prawej do lewej. Jeśli `bRightAlign` jest `FALSE`, menu jest wyrównany do kolejność czytania od lewej do prawej.  
+ [in] *bRightAlign*  
+ Parametrów typu Boolean, która wskazuje sposób wyrównania elementów menu. Jeśli *bRightAlign* jest `TRUE`, menu jest wyrównany do kolejność czytania od prawej do lewej. Jeśli *bRightAlign* jest `FALSE`, menu jest wyrównany do kolejność czytania od lewej do prawej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Identyfikator polecenia menu polecenia, które użytkownik wybierze; 0, jeśli użytkownik zamyka menu skrótów bez zaznaczania polecenia menu.  

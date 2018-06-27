@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1002ace78cf58c34c5e89bbafd81460ec5dabc1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3da7c168cc547ea32f57a145347d8ab2479482a6
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354138"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954679"
 ---
 # <a name="canimationsize-class"></a>Klasa CAnimationSize
 Implementuje funkcje obiektu rozmiar, których wymiarów można animować.  
@@ -114,10 +114,10 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCXTransition`  
+ *pCXTransition*  
  Wskaźnik do przejścia do szerokości.  
   
- `pCYTransition`  
+ *pCYTransition*  
  Wskaźnik do przejścia do wysokości.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -138,16 +138,16 @@ CAnimationSize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szDefault`  
+ *szDefault*  
  Określa domyślny rozmiar.  
   
- `nGroupID`  
+ *nGroupID*  
  Określa identyfikator grupy.  
   
- `nObjectID`  
+ *nObjectID*  
  Określa identyfikator obiektu.  
   
- `dwUserData`  
+ *dwUserData*  
  Określa dane zdefiniowane przez użytkownika.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -163,7 +163,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lst`  
+ *lst*  
  Funkcja zwraca wartość, zawiera wskaźniki do dwóch obiektów CAnimationVariable reprezentujący szerokości i wysokości.  
   
 ##  <a name="getcx"></a>  CAnimationSize::GetCX  
@@ -213,7 +213,7 @@ BOOL GetValue(CSize& szValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szValue`  
+ *szValue*  
  Dane wyjściowe. Gdy metoda zwróci wartość, zawiera bieżącą wartość.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -257,7 +257,7 @@ void operator=(const CSize& szSrc);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szSrc`  
+ *szSrc*  
  Odnosi się do CSize lub rozmiaru.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -271,7 +271,7 @@ void SetDefaultValue(const CSize& szDefault);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szDefault`  
+ *szDefault*  
  Określa nowy domyślny rozmiar.  
   
 ### <a name="remarks"></a>Uwagi  

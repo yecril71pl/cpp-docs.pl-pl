@@ -61,12 +61,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b92587d6cad3004c87ee6aee4716888d09c1270a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e37a8329e0afaa26b114d0ae0da53f0ec552e09e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354285"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954753"
 ---
 # <a name="cd2dbitmap-class"></a>Klasa CD2DBitmap
 Otoka dla ID2D1Bitmap.  
@@ -159,7 +159,7 @@ void Attach(ID2D1Bitmap* pResource);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pResource`  
+ *pResource*  
  Interfejs istniejącego zasobu. Nie może mieć wartości NULL  
   
 ##  <a name="cd2dbitmap"></a>  CD2DBitmap::CD2DBitmap  
@@ -194,25 +194,25 @@ CD2DBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentTarget`  
+ *pParentTarget*  
  Wskaźnik do obiektu docelowego renderowania.  
   
- `uiResID`  
+ *uiResID*  
  Identyfikatora zasobu zasobu.  
   
- `lpszType`  
+ *lpszType*  
  Wskaźnik do zerem ciąg, który zawiera typ zasobu.  
   
- `sizeDest`  
+ *sizeDest*  
  Rozmiar docelowego mapy bitowej.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Wskazuje, że obiekt zostanie zniszczony przez właściciela (pParentTarget).  
   
- `lpszPath`  
+ *lpszPath*  
  Wskaźnik do zerem ciąg, który zawiera nazwę pliku.  
   
- `hbmpSrc`  
+ *hbmpSrc*  
  Dojście do mapy bitowej.  
   
 ##  <a name="commoninit"></a>  CD2DBitmap::CommonInit  
@@ -233,13 +233,13 @@ HRESULT CopyFromBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pBitmap`  
+ *pBitmap*  
  Mapy bitowej do skopiowania  
   
- `destPoint`  
+ *destPoint*  
  W bieżącym mapy bitowej lewego górnego rogu obszaru, do którego region określony przez srcRect jest kopiowana  
   
- `srcRect`  
+ *srcRect*  
  Obszar mapy bitowej do skopiowania  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -256,13 +256,13 @@ HRESULT CopyFromMemory(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `srcData`  
+ *srcData*  
  Dane do skopiowania.  
   
- `pitch`  
+ *wysokość*  
  Krok lub wysokość mapy bitowej źródła przechowywane w srcData. Krok to liczba bajtów scanline (jeden wiersz pikseli w pamięci). Z następującej formuły można obliczyć krok: szerokość piksela * bajtów na piksel + uzupełnienia pamięci  
   
- `destRect`  
+ *destRect*  
  W bieżącym mapy bitowej lewego górnego rogu obszaru, do którego region określony przez srcRect jest kopiowana  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -279,13 +279,13 @@ HRESULT CopyFromRenderTarget(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pRenderTarget`  
+ *pRenderTarget*  
  Zawierający regionie można skopiować obiektu docelowego renderowania  
   
- `destPoint`  
+ *destPoint*  
  W bieżącym mapy bitowej lewego górnego rogu obszaru, do którego region określony przez srcRect jest kopiowana  
   
- `srcRect`  
+ *srcRect*  
  Obszar obiektu docelowego renderowania Aby skopiować  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -299,7 +299,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pRenderTarget`  
+ *pRenderTarget*  
  Wskaźnik do obiektu docelowego renderowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  

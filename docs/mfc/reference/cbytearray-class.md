@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e729c01d768d7ad74673b140496433ab73cf1f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4fa82ea58cfd5d64f6aa825fe08264cdd17c1985
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352938"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951068"
 ---
 # <a name="cbytearray-class"></a>Klasa CByteArray
 Obsługuje dynamiczne tablice bajtów.  
@@ -112,7 +112,7 @@ class CByteArray : public CObject
 |[[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|Ustawia lub pobiera element pod określonym indeksem.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CByteArray` zawiera `IMPLEMENT_SERIAL` makro do obsługi serializacji i zrzucanie swoich elementów. Jeśli tablica bajtów jest przechowywany w archiwum, za pomocą przeciążenia wstawiania ( **<<**) — operator lub `Serialize` funkcji członkowskiej, każdy element jest, więc serializacji.  
+ `CByteArray` zawiera implement_serial — makro do obsługi serializacji i zrzucanie swoich elementów. Jeśli tablica bajtów jest przechowywany w archiwum, za pomocą przeciążenia wstawiania ( **<<**) — operator lub `Serialize` funkcji członkowskiej, każdy element jest, więc serializacji.  
   
 > [!NOTE]
 >  Przed rozpoczęciem korzystania z tablicy, użyj `SetSize` jego rozmiar i przydzielić pamięci dla niego. Jeśli nie używasz `SetSize`, dodawanie elementów do macierzy powoduje jego przydzielić często i skopiować. Częste zmiany alokacji i kopiowanie są mało wydajne i można fragmentu pamięci.  

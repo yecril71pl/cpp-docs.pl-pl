@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82b729caaa650fde72741497d3f4ab3c131f46ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 617157c3adce8521eb54156988cb098c0e709fd2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383335"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953288"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>Przy użyciu CArchive &lt; &lt; i &gt; &gt; operatory
 `CArchive` udostępnia <\< i >> operatory do zapisywania i odczytywania proste typy danych jak również `CObject`s do i z pliku.  
@@ -40,13 +40,13 @@ ms.locfileid: "33383335"
   
      [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]  
   
- Zwykle, przechowywanie i ładowanie danych do i z pliku za pomocą archiwum w `Serialize` funkcje `CObject`-pochodzi z klasy, które musi być zadeklarowany z **DECLARE_SERIALIZE** makra. Odwołanie do `CArchive` obiekt jest przekazywany do Twojej `Serialize` funkcji. Należy wywołać `IsLoading` funkcji `CArchive` obiektem, aby określić czy `Serialize` została wywołana funkcja ładowania danych z pliku lub przechowywać dane w pliku.  
+ Zwykle, przechowywanie i ładowanie danych do i z pliku za pomocą archiwum w `Serialize` funkcje `CObject`-pochodzi z klasy, które musi być zadeklarowana jako makra DECLARE_SERIALIZE. Odwołanie do `CArchive` obiekt jest przekazywany do Twojej `Serialize` funkcji. Należy wywołać `IsLoading` funkcji `CArchive` obiektem, aby określić czy `Serialize` została wywołana funkcja ładowania danych z pliku lub przechowywać dane w pliku.  
   
  `Serialize` Funkcji serializacji `CObject`— Klasa pochodna zwykle ma następujący format:  
   
  [!code-cpp[NVC_MFCSerialization#9](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_3.cpp)]  
   
- Powyższego szablonu kodu jest dokładnie taka sama, jak kreatorami AppWizard tworzy dla `Serialize` funkcja dokumentu (klasą pochodną **CDocument)**. Ten szablon kodu ułatwia pisanie kodu, który jest łatwiejsze do przeglądania, ponieważ kod przechowywania i kod ładujący zawsze powinny być równoległe, jak w poniższym przykładzie:  
+ Powyższego szablonu kodu jest dokładnie taka sama, jak kreatorami AppWizard tworzy dla `Serialize` funkcja dokumentu (klasą pochodną `CDocument`). Ten szablon kodu ułatwia pisanie kodu, który jest łatwiejsze do przeglądania, ponieważ kod przechowywania i kod ładujący zawsze powinny być równoległe, jak w poniższym przykładzie:  
   
  [!code-cpp[NVC_MFCSerialization#10](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_4.cpp)]  
   
@@ -54,10 +54,10 @@ ms.locfileid: "33383335"
   
 ||||  
 |-|-|-|  
-|`CObject*`|**ROZMIAR i CSize**|**float**|  
+|`CObject*`|**ROZMIAR** i `CSize`|**float**|  
 |**WORD**|`CString`|**PUNKT** i `CPoint`|  
-|`DWORD`|**BAJTÓW**|`RECT` I `CRect`|  
-|**Double**|**DŁUGA**|`CTime` I `CTimeSpan`|  
+|`DWORD`|**BAJTÓW**|`RECT` i `CRect`|  
+|**Double**|**DŁUGA**|`CTime` i `CTimeSpan`|  
 |`Int`|**COleCurrency**|`COleVariant`|  
 |`COleDateTime`|`COleDateTimeSpan`||  
   

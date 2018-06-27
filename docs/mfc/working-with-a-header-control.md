@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 226b69c9521016a2d5abbbdb7225cbbec972db3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df916cddacd5a435ef5cb130f9f6f5b6a25d2d4c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383036"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952726"
 ---
 # <a name="working-with-a-header-control"></a>Praca z formantem nagłówka
-Prosty sposób używać formantu nagłówka ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) znajduje się w połączeniu z formantu listy; zobacz [za pomocą CListCtrl](../mfc/using-clistctrl.md) dalszej części tego tematu rodziny. Umożliwia także formantu nagłówka samodzielnie. Wywołania MFC **InitCommonControls** dla Ciebie. Kluczowe zadania są następujące:  
+Prosty sposób używać formantu nagłówka ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) znajduje się w połączeniu z formantu listy; zobacz [za pomocą CListCtrl](../mfc/using-clistctrl.md) dalszej części tego tematu rodziny. Umożliwia także formantu nagłówka samodzielnie. Wywołania MFC `InitCommonControls` dla Ciebie. Kluczowe zadania są następujące:  
   
 -   [Tworzenie formantu nagłówka](../mfc/creating-the-header-control.md)  
   

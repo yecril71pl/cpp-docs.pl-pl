@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 400114e557632c9a1dd11cc2f9ec5b3101eb8c37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ec6b8383f13e8b632163a1fe83a2cd79f7966c5
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385953"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956190"
 ---
 # <a name="windows-sockets-blocking"></a>Windows Sockets: blokowanie
 W tym artykule i dwa artykuły pomocnika opisano kilka problemów w programowaniu Windows Sockets. W tym artykule omówiono blokowania. Inne problemy zostały omówione w artykułach: [Windows Sockets: Określanie kolejności bajtów](../mfc/windows-sockets-byte-ordering.md) i [Windows Sockets: Konwertowanie ciągów](../mfc/windows-sockets-converting-strings.md).  
@@ -31,7 +31,7 @@ W tym artykule i dwa artykuły pomocnika opisano kilka problemów w programowani
  Jeśli jest używany lub pochodzi z klasy [CAsyncSocket](../mfc/reference/casyncsocket-class.md), musisz samodzielnie zarządzania tymi problemami. Jeśli jest używany lub pochodzi z klasy [CSocket —](../mfc/reference/csocket-class.md), MFC zarządza nimi automatycznie.  
   
 ## <a name="blocking"></a>Blokowanie  
- Gniazdo może być "Tryb blokowania" lub "Tryb nieblokujących". Funkcje gniazda w trybie blokowania (lub synchroniczne) zwraca aż do ich ukończenia tego działania. Ta metoda jest wywoływana blokuje ponieważ gniazda, w której funkcja została wywołana nie może wykonywać żadnych czynności — jest zablokowany — dopóki wywołanie zwraca. Wywołanie **Receive** funkcji członkowskiej, na przykład może potrwać arbitralnie długo jak oczekuje na aplikację wysyłającą do wysyłania (jest to, jeśli używasz `CSocket`, lub za pomocą `CAsyncSocket` z blokowaniem). Jeśli `CAsyncSocket` obiekt jest w trybie nieblokujących (asynchronicznie pracy), wywołanie zwraca natychmiast i bieżącego kodu błędu, pobieranie z [GetLastError](../mfc/reference/casyncsocket-class.md#getlasterror) funkcja członkowska jest **WSAEWOULDBLOCK**, wskazującą, czy wywołanie może mieć zablokowane ma on nie zwrócił natychmiast z powodu tryb. (`CSocket` nigdy nie zwraca **WSAEWOULDBLOCK**. Klasa zarządza blokuje dla Ciebie.)  
+ Gniazdo może być "Tryb blokowania" lub "Tryb nieblokujących". Funkcje gniazda w trybie blokowania (lub synchroniczne) zwraca aż do ich ukończenia tego działania. Ta metoda jest wywoływana blokuje ponieważ gniazda, w której funkcja została wywołana nie może wykonywać żadnych czynności — jest zablokowany — dopóki wywołanie zwraca. Wywołanie `Receive` funkcji członkowskiej, na przykład może potrwać arbitralnie długo jak oczekuje na aplikację wysyłającą do wysłania (jest to, jeśli używasz `CSocket`, lub za pomocą `CAsyncSocket` z blokowaniem). Jeśli `CAsyncSocket` obiekt jest w trybie nieblokujących (asynchronicznie pracy), wywołanie zwraca natychmiast i bieżącego kodu błędu, pobieranie z [GetLastError](../mfc/reference/casyncsocket-class.md#getlasterror) funkcja członkowska jest **WSAEWOULDBLOCK**, wskazującą, czy wywołanie może mieć zablokowane ma on nie zwrócił natychmiast z powodu tryb. (`CSocket` nigdy nie zwraca **WSAEWOULDBLOCK**. Klasa zarządza blokuje dla Ciebie.)  
   
  Zachowanie sockets różni się w 32-bitowych i 64-bitowych systemach operacyjnych (na przykład system Windows 95 lub Windows 98) niż w 16-bitowych systemach operacyjnych (na przykład Windows 3.1). W przeciwieństwie do 16-bitowe systemy operacyjne 32-bitowe i 64-bitowe systemy operacyjne Użyj wielozadaniowości cenią sobie wcześniejsze i podaj wielowątkowości. W 32-bitowych i 64-bitowych systemach operacyjnych możesz umieścić z gniazda w oddzielnych wątków. Gniazdo w wątku można zablokować, bez zakłócania innych działań w aplikacji i bez ponoszenia czasu obliczeniowego blokowania. Uzyskać informacji o programowanie wielowątkowe, zobacz artykuł [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).  
   
@@ -40,7 +40,7 @@ W tym artykule i dwa artykuły pomocnika opisano kilka problemów w programowani
   
  Pozostała część tego omówienia jest dla programistów przeznaczonych dla 16-bitowych systemach operacyjnych:  
   
- Zwykle Jeśli używasz `CAsyncSocket`, należy unikać blokowania operacji i obsługi zamiast asynchronicznie. W operacji asynchronicznych z punktu odbierania **WSAEWOULDBLOCK** kod błędu po wywołaniu **Receive**, na przykład czekać do Twojej `OnReceive` funkcja członkowska jest wywoływana w celu powiadomienia Użytkownik, który można odczytać ponownie. Wywołania asynchroniczne są wykonywane przez wywołań zwrotnych funkcja powiadomień odpowiednie wywołania zwrotnego z gniazda, takich jak [zdarzenia OnReceive](../mfc/reference/casyncsocket-class.md#onreceive).  
+ Zwykle Jeśli używasz `CAsyncSocket`, należy unikać blokowania operacji i obsługi zamiast asynchronicznie. W operacji asynchronicznych z punktu odbierania **WSAEWOULDBLOCK** kod błędu po wywołaniu `Receive`, na przykład czekać do momentu Twojej `OnReceive` informujący o tym, że możesz przeczytać nosi nazwę funkcji członkowskiej ponownie. Wywołania asynchroniczne są wykonywane przez wywołań zwrotnych funkcja powiadomień odpowiednie wywołania zwrotnego z gniazda, takich jak [zdarzenia OnReceive](../mfc/reference/casyncsocket-class.md#onreceive).  
   
  W systemie Windows blokowania połączeń są traktowane jako rozwiązaniem zły. Domyślnie [CAsyncSocket](../mfc/reference/casyncsocket-class.md) obsługuje wywołania asynchroniczne, a musi zarządzać blokuje samodzielnie przy użyciu powiadomienia wywołania zwrotnego. Klasa [CSocket —](../mfc/reference/csocket-class.md), z drugiej strony, jest synchroniczne. Pompy komunikatów systemu Windows, a zarządza blokuje dla Ciebie.  
   

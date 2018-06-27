@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a152c55944fca5fa858c148c009ef6301ff0f762
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d145129d8f9e640da9040c8c70a92cedcf3565d9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368036"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951712"
 ---
 # <a name="cexception-class"></a>Cexception — klasa
 Klasa podstawowa dla wszystkich wyjątków w Microsoft Foundation Class Library.  
@@ -99,24 +99,24 @@ explicit CException(BOOL bAutoDelete);
   
 ### <a name="parameters"></a>Parametry  
  *b_AutoDelete*  
- Określ **TRUE** Jeśli pamięć `CException` obiektu przydzielone na stercie. Spowoduje to `CException` obiektu do usunięcia po **usunąć** funkcja członkowska jest wywoływana, aby usunąć wyjątku. Określ **FALSE** Jeśli `CException` na stosie lub obiektu jest obiekt globalny. W takim przypadku `CException` obiektu nie zostanie usunięte, gdy **usunąć** została wywołana funkcja elementu członkowskiego.  
+ Określ **TRUE** Jeśli pamięć `CException` obiektu przydzielone na stercie. Spowoduje to `CException` obiektu do usunięcia po `Delete` funkcja członkowska jest wywoływana, aby usunąć wyjątku. Określ **FALSE** Jeśli `CException` na stosie lub obiektu jest obiekt globalny. W takim przypadku `CException` obiektu nie zostanie usunięte, gdy `Delete` została wywołana funkcja elementu członkowskiego.  
   
 ### <a name="remarks"></a>Uwagi  
  Zwykle nigdy nie należy bezpośrednio wywoływać tego konstruktora. Funkcja, która zgłasza wyjątek, należy utworzyć wystąpienie `CException`-klasy i Wywołaj jego konstruktora lub powinien użycie MFC zgłosić funkcje, takie jak [afxthrowfileexception —](exception-processing.md#afxthrowfileexception), aby zgłosić wstępnie zdefiniowanego typu. Ta dokumentacja jest dostępna tylko dla informacje były kompletne.  
   
 ##  <a name="delete"></a>  CException::Delete  
- Ta funkcja sprawdza, czy **cexception —** obiekt został utworzony na stosie, a jeśli tak jest, wywołuje metodę **usunąć** operator obiektu.  
+ Ta funkcja sprawdza, czy `CException` obiekt został utworzony na stosie, a jeśli tak jest, wywołuje metodę **usunąć** operator obiektu.  
   
 ```  
 void Delete();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Podczas usuwania **cexception —** obiektów, użyj **usunąć** funkcji członkowskiej można usunąć wyjątku. Nie używaj **usunąć** operator bezpośrednio, ponieważ `CException` obiektu może być obiektem globalnych lub zostały utworzone na stosie.  
+ Podczas usuwania `CException` obiektów, użyj `Delete` funkcji członkowskiej można usunąć wyjątku. Nie używaj **usunąć** operator bezpośrednio, ponieważ `CException` obiektu może być obiektem globalnych lub zostały utworzone na stosie.  
   
  Można określić, czy obiekt powinien zostać usunięte podczas konstruowania obiektu. Aby uzyskać więcej informacji, zobacz [CException::CException](#cexception).  
   
- Należy wywołać **usunąć** Jeśli używasz języka C++ **spróbuj**- **catch** mechanizmu. Jeśli używasz makr MFC **SPRÓBUJ** i **CATCH**, następnie tych makr automatycznie spowoduje wywołanie tej funkcji.  
+ Należy wywołać `Delete` Jeśli używasz języka C++ **spróbuj**- **catch** mechanizmu. Jeśli używasz makr MFC **SPRÓBUJ** i **CATCH**, następnie tych makr automatycznie spowoduje wywołanie tej funkcji.  
   
 ### <a name="example"></a>Przykład  
  ```cpp  
@@ -178,7 +178,7 @@ virtual int ReportError(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nType`  
+ *Npowiadomienia*  
  Określa styl okna komunikatu. Zastosuj dowolną kombinację [Style okna komunikatu](styles-used-by-mfc.md#message-box-styles) do pola. Jeśli ten parametr nie zostanie określony, wartością domyślną jest **mb_ok —**.  
   
  *nMessageID*  

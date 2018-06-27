@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba88269cf37f41cf8a594745eb2e98a57ccf64ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb8cc37396069dc7e0ea53506436b536100bdbb4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369018"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956132"
 ---
 # <a name="cgdiobject-class"></a>Klasa CGdiObject
 Udostępnia klasę podstawową dla różnych rodzajów grafiki Windows urządzenia interfejsu (GDI) obiektów, takich jak mapy bitowe, regiony pędzle, pióra, palet i czcionek.  
@@ -114,7 +114,7 @@ BOOL Attach(HGDIOBJ hObject);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hObject`  
+ *hObject*  
  A `HANDLE` do obiektów GDI systemu Windows (na przykład `HPEN` lub `HBRUSH`).  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -128,7 +128,7 @@ CGdiObject();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Nigdy nie twórz `CGdiObject` bezpośrednio. Zamiast tworzenia obiektu z jednej z jej klas pochodnych, takich jak `CPen` lub **cbrush —**.  
+ Nigdy nie twórz `CGdiObject` bezpośrednio. Zamiast tworzenia obiektu z jednej z jej klas pochodnych, takich jak `CPen` lub `Cbrush`.  
   
 ##  <a name="createstockobject"></a>  CGdiObject::CreateStockObject  
  Pobiera dojścia do wstępnie zdefiniowanych standardowych pióra GDI systemu Windows, Pędzle lub czcionek i dołącza obiektu GDI `CGdiObject` obiektu.  
@@ -138,7 +138,7 @@ BOOL CreateStockObject(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Określanie typu podstawowego obiektu żądanego stałą. Zobacz parametr *fnObject* dla [GetStockObject](http://msdn.microsoft.com/library/windows/desktop/dd144925) w zestawie Windows SDK opis odpowiednie wartości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -193,7 +193,7 @@ static CGdiObject* PASCAL FromHandle(HGDIOBJ hObject);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hObject`  
+ *hObject*  
  A `HANDLE` do obiektów GDI systemu Windows.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -214,10 +214,10 @@ int GetObject(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCount`  
- Określa liczbę bajtów do skopiowania do `lpObject` buforu.  
+ *nCount*  
+ Określa liczbę bajtów do skopiowania do *lpObject* buforu.  
   
- `lpObject`  
+ *lpObject*  
  Wskazuje buforu dostarczone przez użytkownika, który będzie odbierać dane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -306,7 +306,7 @@ BOOL operator!=(const CGdiObject& obj) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `obj`  
+ *obj*  
  Wskaźnik do istniejącej `CGdiObject`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -320,7 +320,7 @@ BOOL operator==(const CGdiObject& obj) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `obj`  
+ *obj*  
  Odwołanie do istniejącej `CGdiObject`.  
   
 ### <a name="remarks"></a>Uwagi  

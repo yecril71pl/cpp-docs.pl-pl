@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf80f2ebea8fe27596ce1b240cc414cc0db7a8db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3dd417872ab4009a9e0f6c06fc0958f5780de477
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356691"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954155"
 ---
 # <a name="ccmdui-class"></a>Ccmdui — klasa
 Jest używana tylko wewnątrz `ON_UPDATE_COMMAND_UI` obsługi w `CCmdTarget`-klasy.  
@@ -79,7 +79,7 @@ class CCmdUI
   
  Gdy użytkownik aplikacji ściąga dół menu, każdego menu elementu musi wiedzieć, czy ma być wyświetlany jako włączona lub wyłączona. Element docelowy polecenia menu udostępnia te informacje zaimplementowanie `ON_UPDATE_COMMAND_UI` obsługi. Dla każdego z obiektów interfejsu użytkownika poleceń w aplikacji umożliwiają utworzenie prototyp wpisu i funkcja mapy komunikatów dla każdej procedury obsługi okna właściwości.  
   
- Gdy menu jest obniżona, platformę wyszukuje i wywołuje każdą `ON_UPDATE_COMMAND_UI` obsługi, każdy program obsługi wywołuje `CCmdUI` takich jak funkcje Członkowskie **włączyć** i **Sprawdź**i następnie framework Wyświetla odpowiednio każdego elementu menu.  
+ Gdy menu jest obniżona, platformę wyszukuje i wywołuje każdą `ON_UPDATE_COMMAND_UI` obsługi, każdy program obsługi wywołuje `CCmdUI` takich jak funkcje Członkowskie `Enable` i `Check`, i w ramach następnie odpowiednio wyświetla każdy element menu.  
   
  Element menu można zastąpić przycisk pasek sterowania lub innego obiektu interfejsu użytkownika polecenia bez zmiany kodu w ramach `ON_UPDATE_COMMAND_UI` programu obsługi.  
   
@@ -119,7 +119,7 @@ virtual void Enable(BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bOn`  
+ *bW*  
  **Wartość TRUE,** Aby włączyć element, **FALSE** je wyłączyć.  
   
 ### <a name="example"></a>Przykład  
@@ -159,7 +159,7 @@ CMenu* m_pSubMenu;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- **Wartość NULL** Jeśli element nie jest menu. Jeśli okno podręczne pod menu `m_nID` zawiera identyfikator pierwszego elementu w menu podręcznym. Aby uzyskać więcej informacji, zobacz [techniczne notatkę 21](../../mfc/tn021-command-and-message-routing.md).  
+ **Wartość NULL** Jeśli element nie jest menu. Jeśli okno podręczne pod menu *m_nID* zawiera identyfikator pierwszego elementu w menu podręcznym. Aby uzyskać więcej informacji, zobacz [techniczne notatkę 21](../../mfc/tn021-command-and-message-routing.md).  
   
 ##  <a name="m_pother"></a>  CCmdUI::m_pOther  
  Wskaźnik (typu `CWnd`) do obiektu okna, na przykład narzędzi lub paska stanu, które wysłane powiadomienie.  
@@ -179,7 +179,7 @@ virtual void SetCheck(int nCheck = 1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCheck`  
+ *nSprawdź*  
  Określa stan wyboru, aby ustawić. Jeśli usuwa zaznaczenie 0; Jeśli 1, sprawdza; i jeśli 2, ustawia nieokreślony.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -207,7 +207,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszText`  
+ *lpszText*  
  Wskaźnik do ciągu tekstowego.  
   
 ### <a name="example"></a>Przykład  

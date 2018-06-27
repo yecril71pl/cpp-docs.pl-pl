@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 923b1b74a50fd13a57c1d9c7696f81acb28453e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b762c3abb5f57574dc2a60d6b2145af2e0c0484b
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356541"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952103"
 ---
 # <a name="canimationvalue-class"></a>Klasa CAnimationValue
 Implementuje funkcje obiektu animacji, który ma jedną wartość.  
@@ -104,7 +104,7 @@ void AddTransition(CBaseTransition* pTransition);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pTransition`  
+ *pTransition*  
  Wskaźnik do obiektu przejścia.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -125,16 +125,16 @@ CAnimationValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  Określa wartość domyślną.  
   
- `nGroupID`  
+ *nGroupID*  
  Określa identyfikator grupy.  
   
- `nObjectID`  
+ *nObjectID*  
  Określa identyfikator obiektu.  
   
- `dwUserData`  
+ *dwUserData*  
  Określa dane zdefiniowane przez użytkownika.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -150,7 +150,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lst`  
+ *lst*  
  Funkcja zwraca wartość, zawiera wskaźnik do CAnimationVariable reprezentujący wartość animowany.  
   
 ##  <a name="getvalue"></a>  CAnimationValue::GetValue  
@@ -162,10 +162,10 @@ BOOL GetValue(INT32& nValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dblValue`  
+ *dblValue*  
  Dane wyjściowe. Funkcja zwraca zawiera bieżącą wartość zmiennej animacji.  
   
- `nValue`  
+ *nWartość*  
  Dane wyjściowe. Funkcja zwraca zawiera bieżącą wartość zmiennej animacji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -229,10 +229,10 @@ void operator=(INT32 nVal);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dblVal`  
+ *dblVal*  
  Określa wartość do przypisania do wartości animacji.  
   
- `nVal`  
+ *nVal*  
  Określa wartość do przypisania do wartości animacji.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -246,7 +246,7 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  Określa wartość domyślną.  
   
 ### <a name="remarks"></a>Uwagi  

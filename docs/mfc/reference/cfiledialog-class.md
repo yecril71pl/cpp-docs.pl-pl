@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c52d2912edc1632dc2fbe4fe330def6d357f16d2
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 1512ae9a26b5b0cf25c4b4ebeff2d05bd0993f7f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255772"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955248"
 ---
 # <a name="cfiledialog-class"></a>Klasa CFileDialog
 Hermetyzuje wspólne okno dialogowe służy do otwartego pliku lub pliku w operacji zapisywania.  
@@ -248,7 +248,7 @@ class CFileDialog : public CCommonDialog
   
  Można użyć `CFileDialog` jest z konstruktorem podane lub mogą dziedziczyć klasa pól własne okna dialogowego z `CFileDialog` i zapisywanie konstruktora w zależności od potrzeb. W obu przypadkach tych okien dialogowych będą zachowywać się jak standardowe okna dialogowe MFC ponieważ pochodzą z [CCommonDialog klasy](../../mfc/reference/ccommondialog-class.md). `CFileDialog` zależy od pliku COMMDLG. Plik DLL, który znajduje się w systemie Windows.  
   
- Zarówno wygląd i funkcjonalność `CFileDialog` z systemem Windows Vista lub nowszym różnią się od wcześniejszych wersji systemu Windows. Wartość domyślna `CFileDialog` automatycznie używa nowego systemu Windows Vista lub nowszym styl bez zmiany kodu, jeśli program jest skompilowany i uruchomienia systemu Windows Vista lub nowszy. Użyj `bVistaStyle` parametru w konstruktora, aby ręcznie zmienić tej aktualizacji automatycznych. Wyjątek do aktualizacji automatycznych jest dostosowane okien dialogowych. Będą one nie można przekonwertować na nowy styl. Aby uzyskać więcej informacji na temat konstruktora, zobacz [CFileDialog::CFileDialog](#cfiledialog).  
+ Zarówno wygląd i funkcjonalność `CFileDialog` z systemem Windows Vista lub nowszym różnią się od wcześniejszych wersji systemu Windows. Wartość domyślna `CFileDialog` automatycznie używa nowego systemu Windows Vista lub nowszym styl bez zmiany kodu, jeśli program jest skompilowany i uruchomienia systemu Windows Vista lub nowszy. Użyj *bVistaStyle* parametru w konstruktora, aby ręcznie zmienić tej aktualizacji automatycznych. Wyjątek do aktualizacji automatycznych jest dostosowane okien dialogowych. Będą one nie można przekonwertować na nowy styl. Aby uzyskać więcej informacji na temat konstruktora, zobacz [CFileDialog::CFileDialog](#cfiledialog).  
   
 > [!NOTE]
 >  System kontroli identyfikator różni się w systemie Windows Vista lub nowszy z wcześniejszych wersji systemu Windows używając `CFileDialog`. Należy zaktualizować wszystkie odwołania do `CFileDialog` formantów w kodzie, zanim można portu projektu z wcześniejszej wersji systemu Windows.  
@@ -319,13 +319,13 @@ HRESULT AddCheckButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Identyfikator przycisk wyboru do dodania.  
   
- `strLabel`  
+ *strLabel*  
  Nazwa przycisku Sprawdź.  
   
- `bChecked`  
+ *bChecked*  
  Wartość logiczna wskazująca bieżący stan przycisku Sprawdź. `TRUE` Jeśli zaznaczone; `FALSE` inaczej  
   
 ### <a name="remarks"></a>Uwagi  
@@ -338,7 +338,7 @@ HRESULT AddComboBox(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Identyfikator pola kombi do dodania.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -354,13 +354,13 @@ HRESULT AddControlItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Identyfikator formantu kontenera można dodać elementu.  
   
- `dwIDItem`  
+ *dwIDItem*  
  Identyfikator elementu.  
   
- `strLabel`  
+ *strLabel*  
  Tekst elementu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -375,10 +375,10 @@ HRESULT AddEditBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Identyfikator pola edycji do dodania.  
   
- `strText`  
+ *strText*  
  Nazwa pola edycji.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -393,10 +393,10 @@ HRESULT AddMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Identyfikator menu do dodania.  
   
- `strLabel`  
+ *strLabel*  
  Nazwy menu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -416,13 +416,13 @@ void AddPlace(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFolder`  
+ *lpszFolder*  
  Ścieżka do folderu, który ma zostać udostępniony użytkownikowi. Może to być tylko folderu.  
   
- `fdap`  
+ *fdap*  
  Określa, gdzie folder jest umieszczony w obrębie listy.  
   
- `psi`  
+ *PSI*  
  Wskaźnik do IShellItem reprezentujący folder do udostępnienia do użytkownika. Może to być tylko folderu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -437,10 +437,10 @@ HRESULT AddPushButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Identyfikator przycisku do dodania.  
   
- `strLabel`  
+ *strLabel*  
  Nazwa przycisku.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -453,7 +453,7 @@ HRESULT AddRadioButtonList(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Identyfikator grupy przycisków opcji do dodania.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -466,7 +466,7 @@ HRESULT AddSeparator(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Dodaj identyfikator separatora.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -481,10 +481,10 @@ HRESULT AddText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Identyfikator tekst do dodania.  
   
- `strText`  
+ *strText*  
  Nazwa tekstu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -522,36 +522,36 @@ explicit CFileDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bOpenFileDialog`  
+ [in] *bOpenFileDialog*  
  Parametr, który określa, jakiego rodzaju okno dialogowe, aby utworzyć. Ustaw ją na `TRUE` do skonstruowania **Otwórz plik** okno dialogowe. Ustaw ją na `FALSE` do skonstruowania **Zapisz plik jako** okno dialogowe.  
   
- [in] `lpszDefExt`  
- Domyślne rozszerzenie nazwy pliku. Jeśli użytkownik nie ma rozszerzenie znanego (taki, który ma skojarzenie na komputerze użytkownika) w polu Nazwa pliku, rozszerzenie określony przez `lpszDefExt` jest automatycznie dołączane do nazwy pliku. Jeśli ten parametr ma `NULL`, jest dołączany bez rozszerzenia.  
+ [in] *lpszDefExt*  
+ Domyślne rozszerzenie nazwy pliku. Jeśli użytkownik nie ma rozszerzenie znanego (taki, który ma skojarzenie na komputerze użytkownika) w polu Nazwa pliku, rozszerzenie określony przez *lpszDefExt* jest automatycznie dołączane do nazwy pliku. Jeśli ten parametr ma `NULL`, jest dołączany bez rozszerzenia.  
   
- [in] `lpszFileName`  
+ [in] *lpszFileName*  
  Początkowa nazwa pliku w polu Nazwa pliku. Jeśli `NULL`, zostanie wyświetlone nie początkowa nazwa pliku.  
   
- [in] `dwFlags`  
+ [in] *wartość elementu dwFlags*  
  Połączenie z jedną lub więcej flag, które służy do dostosowywania okna dialogowego. Aby uzyskać opis tych flag, zobacz [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) struktury w zestawie Windows SDK. Jeśli zmodyfikujesz `m_ofn.Flags` struktury — członek, zachowane domyślne zachowanie za pomocą operator Alternatywy zmiany.  
   
- [in] `lpszFilter`  
+ [in] *lpszFilter*  
  Szereg pary ciągów, które określają filtrów można zastosować do pliku. Jeśli określisz filtry plików, tylko te pliki, które spełniają kryteria filtru będą wyświetlane na liście plików. Zobacz sekcję Uwagi, aby uzyskać więcej informacji na temat sposobu pracy z pliku filtrów.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Wskaźnik do okna nadrzędnego lub właściciela okna dialogowego pliku.  
   
- [in] `dwSize`  
+ [in] *dwSize*  
  Rozmiar `OPENFILENAME` struktury. Ta wartość zależy od wersji systemu operacyjnego. MFC pozwala określić rodzajem odpowiednie okno dialogowe, aby utworzyć tego parametru. Domyślny rozmiar 0 oznacza, że kod MFC określi rozmiar pola dialogowe poprawne do użycia na podstawie wersji systemu operacyjnego w ramach której działa program.  
   
- [in] `bVistaStyle`  
+ [in] *bVistaStyle*  
  **Uwaga** parametr ten jest dostępny w programie Visual Studio 2008 lub nowszym i zostanie spowodować, że okno dialogowe Nowy styl, aby można używać tylko wtedy, gdy są uruchomione w systemie Windows Vista lub nowszym.  
   
  Parametr, który określa styl okna dialogowego pliku. Ustaw ją na `TRUE` do użycia nowego okna dialogowe pliku styl Vista. W przeciwnym razie stary styl okna dialogowe będą używane. Zobacz w sekcji uwag, aby uzyskać więcej informacji uruchamiania Vista.  
   
 ### <a name="remarks"></a>Uwagi  
- Albo **Otwórz plik** lub **Zapisz plik jako** okno dialogowe jest tworzony w zależności od wartości `bOpenFileDialog`.  
+ Albo **Otwórz plik** lub **Zapisz plik jako** okno dialogowe jest tworzony w zależności od wartości *bOpenFileDialog*.  
   
- Określanie, rozszerzenie domyślne przy użyciu `lpszDefExt` nie może utworzyć zachowanie spodziewasz się, ponieważ rzadko jest przewidywalne, jakie rozszerzenia mają skojarzeń plików na komputerze użytkownika. Aby uzyskać większą kontrolę nad dołączyć domyślne rozszerzenie mogą dziedziczyć klasy z `CFileDialog`i Zastąp `CFileDialog::OnFileNameOK` metodę w celu obsługi własne rozszerzenia.  
+ Określanie, rozszerzenie domyślne przy użyciu *lpszDefExt* nie może utworzyć zachowanie spodziewasz się, ponieważ rzadko jest przewidywalne, jakie rozszerzenia mają skojarzeń plików na komputerze użytkownika. Aby uzyskać większą kontrolę nad dołączyć domyślne rozszerzenie mogą dziedziczyć klasy z `CFileDialog`i Zastąp `CFileDialog::OnFileNameOK` metodę w celu obsługi własne rozszerzenia.  
   
  Aby umożliwić użytkownikowi wybranie wielu plików, należy ustawić `OFN_ALLOWMULTISELECT` Flaga przed wywołaniem [DoModal](#domodal). Należy podać własne Bufor nazwy pliku do przechowywania zwrócona lista wielu nazw plików. To zrobić za pomocą zastąpienia `m_ofn.lpstrFile` za pomocą wskaźnika w buforze przydzielił, po utworzymy [CFileDialog](../../mfc/reference/cfiledialog-class.md), ale przed wywołaniem `DoModal`. Ponadto należy ustawić `m_ofn.nMaxFile` o liczbie znaków w buforze wskazywana przez `m_ofn.lpstrFile`. Jeśli ustawisz maksymalną liczbę plików, które można wybrać do `n`, rozmiar buforu niezbędne jest `n`*(_MAX_PATH + 1) + 1. Na przykład:  
   
@@ -559,7 +559,7 @@ explicit CFileDialog(
   
  Aby umożliwić użytkownikowi zmienianie rozmiaru okno dialogowe w stylu Eksploratora przy użyciu myszy lub klawiatury, ustaw `OFN_ENABLESIZING` flagi. Ustawienie tej flagi jest konieczne tylko wtedy, gdy udostępniono procedura haka lub szablonu niestandardowego. Flaga działa tylko w stylu Eksploratora okno dialogowe; Nie można zmienić rozmiaru okna dialogowe w starym stylu.  
   
- `lpszFilter` Parametr jest używany do określenia typu nazwa pliku musi mieć pliku, który będzie wyświetlany na liście plików. Pierwszy ciąg w parze ciąg opisuje filtru; drugi ciąg Określa rozszerzenie nazwy pliku do użycia. Przy użyciu średnika (znaku ';') ogranicznik, który można określić wiele rozszerzeń. Ciąg kończy się przy użyciu dwóch "&#124;' znaków, a następnie `NULL` znaków. Można również użyć [cstring —](../../atl-mfc-shared/using-cstring.md) obiekt dla tego parametru.  
+ *LpszFilter* parametr jest używany do określenia typu nazwa pliku musi mieć pliku, który będzie wyświetlany na liście plików. Pierwszy ciąg w parze ciąg opisuje filtru; drugi ciąg Określa rozszerzenie nazwy pliku do użycia. Przy użyciu średnika (znaku ';') ogranicznik, który można określić wiele rozszerzeń. Ciąg kończy się przy użyciu dwóch "&#124;' znaków, a następnie `NULL` znaków. Można również użyć [cstring —](../../atl-mfc-shared/using-cstring.md) obiekt dla tego parametru.  
   
  Na przykład [!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)] umożliwia użytkownikom otwieranie plików, które mają rozszerzenia xlc (wykres) lub xls (arkusz), między innymi. Filtr dla programu Excel może być zapisany jako:  
   
@@ -567,9 +567,9 @@ explicit CFileDialog(
   
  Jednak jeśli planujesz użyć tego ciągu bezpośrednio zaktualizować `OPENFILENAME` struktury, należy ograniczyć z ciągów znakiem null '\0' zamiast pionowych słupków ("&#124;").  
   
- `bVistaStyle` Parametr ma zastosowanie tylko wtedy, gdy uruchomiony w systemie Windows Vista lub nowszym. We wcześniejszych wersjach systemu Windows ten parametr jest ignorowany. Jeśli `bVistaStyle` ustawiono `TRUE`, podczas kompilowania programu z programu Visual Studio 2008 lub nowszym, nowy styl Vista **okna dialogowego pliku** będą używane. W przeciwnym razie wcześniejszy styl MFC **okna dialogowego pliku** będą używane.  
+ *BVistaStyle* parametr ma zastosowanie tylko wtedy, gdy uruchomiony w systemie Windows Vista lub nowszym. We wcześniejszych wersjach systemu Windows ten parametr jest ignorowany. Jeśli *bVistaStyle* ustawiono `TRUE`, podczas kompilowania programu z programu Visual Studio 2008 lub nowszym, nowy styl Vista **okna dialogowego pliku** będą używane. W przeciwnym razie wcześniejszy styl MFC **okna dialogowego pliku** będą używane.  
   
- Szablony okna dialogowego nie są obsługiwane w oknach dialogowych na podstawie `bVistaStyle`  
+ Szablony okna dialogowego nie są obsługiwane w oknach dialogowych na podstawie *bVistaStyle*  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CFileDialog::DoModal](#domodal).  
@@ -606,7 +606,7 @@ HRESULT EnableOpenDropDown(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Identyfikator listy rozwijanej.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -633,10 +633,10 @@ HRESULT GetCheckButtonState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Identyfikator pola wyboru.  
   
- `bChecked`  
+ *bChecked*  
  Stan pola wyboru. `TRUE` Wskazuje zaznaczone; `FALSE` wskazuje niezaznaczone.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -652,13 +652,13 @@ HRESULT GetControlItemState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Identyfikator formantu kontenera.  
   
- `dwIDItem`  
+ *dwIDItem*  
  Identyfikator elementu.  
   
- `dwState`  
+ *dwState*  
  Odwołanie do zmiennej, która odbiera więcej wartości z wyliczenia CDCONTROLSTATE, która wskazuje bieżący stan formantu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -673,10 +673,10 @@ HRESULT GetControlState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Identyfikator formantu.  
   
- `dwState`  
+ *dwState*  
  Odwołanie do zmiennej, która odbiera jedną lub więcej wartości z wyliczenia CDCONTROLSTATE, która wskazuje bieżący stan formantu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -691,10 +691,10 @@ HRESULT GetEditBoxText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Identyfikator pola edycji.  
   
- `strText`  
+ *strText*  
  Wartość tekstu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -773,7 +773,7 @@ IFileDialogCustomize* GetIFileDialogCustomize();
  Wskaźnik do wewnętrznego obiektu COM dla `CFileDialog`. Odpowiada Twojej wersji odpowiednio ten wskaźnik.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj tej funkcji tylko w systemie Windows Vista lub nowszym z obiektu, który ma `bVistaStyle` ustawioną `true`. Jeśli używasz tej funkcji po `bVistaStyle` jest `false`, zwróci `NULL` w trybie wersji i throw potwierdzenia w trybie debugowania.  
+ Użyj tej funkcji tylko w systemie Windows Vista lub nowszym z obiektu, który ma *bVistaStyle* ustawioną `true`. Jeśli używasz tej funkcji po *bVistaStyle* jest `false`, zwróci `NULL` w trybie wersji i throw potwierdzenia w trybie debugowania.  
   
  Aby uzyskać więcej informacji na temat `IFileDialogCustomize` interfejsu, zobacz [IFileDialogCustomize](http://msdn.microsoft.com/library/windows/desktop/bb775912).  
   
@@ -793,7 +793,7 @@ IFileOpenDialog* GetIFileOpenDialog();
  Wskaźnik do wewnętrznego obiektu COM dla `CFileDialog`. Odpowiada Twojej wersji odpowiednio ten wskaźnik.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj tej funkcji tylko w systemie Windows Vista lub nowszym z obiektu, który ma `bVistaStyle` ustawioną `true`. Ta funkcja zwraca `NULL` Jeśli `CFileDialog` nie jest **Otwórz** okno dialogowe lub, jeśli `bVistaStyle` ma ustawioną wartość `false`. W tym ostatnim przypadku zwraca tylko funkcja `NULL` w trybie wersji — w trybie debugowania go zgłosi potwierdzenia.  
+ Użyj tej funkcji tylko w systemie Windows Vista lub nowszym z obiektu, który ma *bVistaStyle* ustawioną `true`. Ta funkcja zwraca `NULL` Jeśli `CFileDialog` nie jest **Otwórz** okno dialogowe lub, jeśli *bVistaStyle* ma ustawioną wartość `false`. W tym ostatnim przypadku zwraca tylko funkcja `NULL` w trybie wersji — w trybie debugowania go zgłosi potwierdzenia.  
   
  Aby uzyskać więcej informacji na temat `IFileOpenDialog` interfejsu, zobacz [IFileOpenDialog](http://msdn.microsoft.com/library/windows/desktop/bb775834).  
   
@@ -813,7 +813,7 @@ IFileSaveDialog* GetIFileSaveDialog();
  Wskaźnik do wewnętrznego obiektu COM dla `CFileDialog`. Odpowiada Twojej wersji odpowiednio ten wskaźnik.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj tej funkcji tylko w systemie Windows Vista lub nowszym z obiektu, który ma `bVistaStyle` ustawioną `true`. Ta funkcja zwróci `NULL` Jeśli `CFileDialog` nie jest **zapisać** okno dialogowe lub, jeśli `bVistaStyle` ma ustawioną wartość `false`. W tym ostatnim przypadku zwraca tylko funkcja `NULL` w trybie wersji — w trybie debugowania go zgłosi potwierdzenia.  
+ Użyj tej funkcji tylko w systemie Windows Vista lub nowszym z obiektu, który ma *bVistaStyle* ustawioną `true`. Ta funkcja zwróci `NULL` Jeśli `CFileDialog` nie jest **zapisać** okno dialogowe lub, jeśli *bVistaStyle* ma ustawioną wartość `false`. W tym ostatnim przypadku zwraca tylko funkcja `NULL` w trybie wersji — w trybie debugowania go zgłosi potwierdzenia.  
   
  Aby uzyskać więcej informacji na temat `IFileSaveDialog` interfejsu, zobacz [IFileSaveDialog](http://msdn.microsoft.com/library/windows/desktop/bb775688).  
   
@@ -830,7 +830,7 @@ CString GetNextPathName(POSITION& pos) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pos`  
+ *POS*  
  Odwołanie do **pozycji** wartość zwrócona przez poprzednie `GetNextPathName` lub `GetStartPosition` wywołania funkcji. **Wartość NULL** czy osiągnięto koniec listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -924,10 +924,10 @@ HRESULT GetSelectedControlItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Identyfikator formantu kontenera.  
   
- `dwIDItem`  
+ *dwIDItem*  
  Identyfikator elementu zaznaczonego w formancie użytkownika.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -950,7 +950,7 @@ void HideControl(int nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nID`  
+ *nID*  
  Identyfikator formantu, aby ukryć.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -972,7 +972,7 @@ BOOL IsPickFoldersMode() const;
  `m_ofn` jest to struktura typu `OPENFILENAME`. Bieżący stan reprezentuje dane w tej strukturze `CFileDialog`.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta struktura jest używana do zainicjowania wygląd **Otwórz plik** lub **Zapisz plik jako** po go utworzyć, ale przed wyświetleniem go przy użyciu okna dialogowego [DoModal](#domodal) metody. Na przykład można ustawić `lpstrTitle` członkiem `m_ofn` podpis ma okno dialogowe, aby mieć.  
+ Ta struktura jest używana do zainicjowania wygląd **Otwórz plik** lub **Zapisz plik jako** po go utworzyć, ale przed wyświetleniem go przy użyciu okna dialogowego [DoModal](#domodal) metody. Na przykład można ustawić *lpstrTitle* członkiem `m_ofn` podpis ma okno dialogowe, aby mieć.  
   
  Z systemu Windows Vista lub nowszym styl [CFileDialog](../../mfc/reference/cfiledialog-class.md), `m_ofn` nie musi zawsze odpowiadać stanu okna dialogowego. Jest on zsynchronizowany z okna dialogowego w starszych wersjach systemu Windows. Zobacz [CFileDialog::ApplyOFNToShellDialog](#applyofntoshelldialog) i [CFileDialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog) Aby uzyskać więcej informacji na temat synchronizowania `m_ofn` struktury i `CFileDialog` stanu w systemie Windows Vista lub nowszym.  
   
@@ -1026,7 +1026,7 @@ HRESULT MakeProminent(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Identyfikator formantu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1039,7 +1039,7 @@ virtual void OnButtonClicked(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Identyfikator przycisku.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1054,10 +1054,10 @@ virtual void OnCheckButtonToggled(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Identyfikator pola wyboru.  
   
- `bChecked`  
+ *bChecked*  
  Zaznaczać lub usuwać zaznaczenia.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1070,7 +1070,7 @@ virtual void OnControlActivating(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Identyfikator formantu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1139,10 +1139,10 @@ virtual void OnItemSelected(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Identyfikator formantu kontenera.  
   
- `dwIDItem`  
+ *dwIDItem*  
  Identyfikator elementu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1161,17 +1161,17 @@ virtual void OnLBSelChangedNotify(
  *nIDBox*  
  Identyfikator pola listy lub pola kombi, w którym wystąpił zaznaczenia.  
   
- `iCurSel`  
+ *iCurSel*  
  Indeks bieżącego zaznaczenia.  
   
- `nCode`  
+ *nCode*  
  Kod powiadamiania kontrolki. Ten parametr musi mieć jedną z następujących wartości:  
   
-- **CD_LBSELCHANGE** Określa `iCurSel` jest wybrany element w polu listy pojedynczego wyboru.  
+- **CD_LBSELCHANGE** Określa *iCurSel* jest wybrany element w polu listy pojedynczego wyboru.  
   
-- **CD_LBSELSUB** Określa, że `iCurSel` nie jest zaznaczona w polu listy multiselection.  
+- **CD_LBSELSUB** Określa, że *iCurSel* nie jest zaznaczona w polu listy multiselection.  
   
-- **CD_LBSELADD** Określa, że `iCurSel` jest zaznaczona w polu listy multiselection.  
+- **CD_LBSELADD** Określa, że *iCurSel* jest zaznaczona w polu listy multiselection.  
   
 - **CD_LBSELNOITEMS** Określa, że nie wybrany element znajduje się w polu listy multiselection.  
   
@@ -1186,7 +1186,7 @@ virtual UINT OnShareViolation(LPCTSTR lpszPathName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszPathName`  
+ *lpszPathName*  
  Ścieżka pliku, w którym wystąpiło naruszenie zasad udostępniania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1225,10 +1225,10 @@ HRESULT RemoveControlItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Identyfikator formantu kontenera, aby usunąć element z.  
   
- `dwIDItem`  
+ *dwIDItem*  
  Identyfikator elementu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1243,10 +1243,10 @@ HRESULT SetCheckButtonState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Identyfikator pola wyboru.  
   
- `bChecked`  
+ *bChecked*  
  Stan pola wyboru. `TRUE` Wskazuje zaznaczone; `FALSE` wskazuje niezaznaczone.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1262,13 +1262,13 @@ HRESULT SetControlItemState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Identyfikator formantu kontenera.  
   
- `dwIDItem`  
+ *dwIDItem*  
  Identyfikator elementu.  
   
- `dwState`  
+ *dwState*  
  Co najmniej jedna wartość z wyliczenia CDCONTROLSTATE wskazujące nowy stan formantu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1284,13 +1284,13 @@ HRESULT SetControlItemText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Identyfikator formantu kontenera.  
   
- `dwIDItem`  
+ *dwIDItem*  
  Identyfikator elementu.  
   
- `strLabel`  
+ *strLabel*  
  Tekst elementu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1305,10 +1305,10 @@ HRESULT SetControlLabel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Identyfikator formantu.  
   
- `strLabel`  
+ *strLabel*  
  Nazwa kontrolki.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1323,10 +1323,10 @@ HRESULT SetControlState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Identyfikator formantu.  
   
- `dwState`  
+ *dwState*  
  Co najmniej jedna wartość z wyliczenia CDCONTROLSTATE, które wskazują bieżący stan formantu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1346,10 +1346,10 @@ void SetControlText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nID`  
+ [in] *nID*  
  Identyfikator formantu, do których chcesz ustawić tekst.  
   
- [in] `lpsz`  
+ [in] *lpsz*  
  Wskaźnik do ciąg zawierający tekst, który ma wartość dla formantu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1365,7 +1365,7 @@ void SetDefExt(LPCSTR lpsz);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpsz`  
+ *lpsz*  
  Wskaźnik do ciąg zawierający domyślne rozszerzenie dla obiekt okno dialogowe. Ten ciąg nie może zawierać kropki (.).  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1381,10 +1381,10 @@ HRESULT SetEditBoxText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Identyfikator pola edycji.  
   
- `strText`  
+ *strText*  
  Wartość tekstu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1397,7 +1397,7 @@ BOOL SetProperties(LPCWSTR lpszPropList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszPropList`  
+ *lpszPropList*  
  Listy wstępnie zdefiniowanych właściwości oddzielonymi znakiem ";". Aby uzyskać listę flag, zobacz `Flags` sekcji [OPENFILENAME](http://msdn.microsoft.com/en-us/8cecfd45-f7c1-4f8d-81a0-4e7fecc3b104).  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1412,10 +1412,10 @@ HRESULT SetSelectedControlItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Identyfikator formantu kontenera.  
   
- `dwIDItem`  
+ *dwIDItem*  
  Identyfikator elementu zaznaczonego w formancie użytkownika.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1435,16 +1435,16 @@ void SetTemplate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nWin3ID`  
+ [in] *nWin3ID*  
  Zawiera identyfikator zasobu szablon z systemem innym niż Eksploratora `CFileDialog` obiektu. Ten szablon jest używana tylko w systemie Windows NT 3.51 lub styl OFN_EXPLORER nie jest obecny.  
   
- [in] `nWin4ID`  
+ [in] *nWin4ID*  
  Zawiera identyfikator zasobu szablon Eksploratora `CFileDialog` obiektu. Ten szablon jest używany tylko w systemie [!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)] i nowszy, system operacyjny Windows 95 i nowszych wersjach, lub gdy styl OFN_EXPLORER jest obecny.  
   
- [in] `lpWin3ID`  
+ [in] *lpWin3ID*  
  Zawiera nazwę zasobu szablon z systemem innym niż Eksploratora `CFileDialog` obiektu. Ten szablon jest używana tylko w systemie Windows NT 3.51 lub styl OFN_EXPLORER nie jest obecny.  
   
- [in] `lpWin4ID`  
+ [in] *lpWin4ID*  
  Zawiera nazwę zasobu szablon Eksploratora `CFileDialog` obiektu. Ten szablon jest używany tylko w systemie [!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)] i nowszy, system operacyjny Windows 95 i nowszych wersjach, lub gdy styl OFN_EXPLORER jest obecny.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1463,10 +1463,10 @@ HRESULT StartVisualGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwIDCtl`  
+ *dwIDCtl*  
  Identyfikator grupy visual.  
   
- `strLabel`  
+ *strLabel*  
  Nazwa grupy.  
   
 ### <a name="remarks"></a>Uwagi  

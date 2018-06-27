@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc11b3eb79f0d535775f073c772e40c4ed9e822c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76396a402f348181fbcd65a2ccb962207216abda
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355423"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954663"
 ---
 # <a name="afx-messages"></a>Komunikaty AFX
 Komunikaty te są używane w MFC.  
@@ -89,7 +89,7 @@ Komunikaty te są używane w MFC.
   
 ||||||  
 |-|-|-|-|-|  
-|Komunikat|Opis|[in] `wParam`|`lParam` (Wszystkie parametry są [in] chyba że określono inaczej).|Wartość zwracana|  
+|Komunikat|Opis|[in] *wParam*|*lParam* (wszystkie parametry są [in] chyba że określono inaczej).|Wartość zwracana|  
 |AFX_WM_ACCGETOBJECT|Nie używany.|Nie używany.|Nie dotyczy.|Nie dotyczy.|  
 |AFX_WM_ACCGETSTATE|Używany dla ułatwień dostępu pomocy technicznej. Ten komunikat, aby wysłać `CMFCPopupMenu` lub `CMFCRibbonPanelMenu` można pobrać stanu bieżącego elementu.|Indeks elementu, który może być przycisk menu i separatora.|Nie używany.|Stan elementu. Jeśli indeks jest nieprawidłowy, -1 jest równa 0, jeśli przycisku menu nie ma żadnych specjalnych atrybutów. W przeciwnym razie jest kombinacją następujące flagi:<br /><br /> TBBS_DISABLED — element jest wyłączony.<br /><br /> TBBS_CHECKED — element jest zaznaczony.<br /><br /> TBBS_BUTTON — element jest standardowe przycisku polecenia<br /><br /> TBBS_PRESSED — przycisk jest naciśnięty.<br /><br /> TBBS_INDETERMINATE — Niezdefiniowany stanu<br /><br /> TBBS_SEPARATOR — zamiast przycisku menu stanowi element odstęp między innymi elementami menu|  
 |AFX_WM_CHANGE_ACTIVE_TAB|Platformę wysyła wiadomość do formantu paska formantu o zmiennym rozmiarze. Przetwarzać tego komunikatu, aby otrzymywać powiadomienia z `CMFCTabCtrl` obiektów, gdy użytkownik zmienia aktywnej karty.|Indeks karty.|Nie używany.|Różna od zera.|  
@@ -103,9 +103,9 @@ Komunikaty te są używane w MFC.
 |AFX_WM_DELETETOOLBAR|Wysyłany do głównego okna ramowego, gdy użytkownik należy usunąć w trybie Dostosowywanie paska narzędzi.<br /><br /> Przetwarzać tego komunikatu, aby podejmować dodatkowe akcje, gdy użytkownik usuwa w trybie Dostosowywanie paska narzędzi. Należy także wywołać domyślny program obsługi (`OnToolbarDelete`), które powoduje usunięcie paska narzędzi. Domyślny program obsługi zwraca wartość wskazującą, czy jest możliwe usuwanie na pasku narzędzi.|Nie używany.|Wskaźnik do `CMFCToolBar` obiektu do usunięcia.|Różna od zera, jeśli nie można usunąć pasek narzędzi; w przeciwnym razie 0.|  
 |AFX_WM_GETDOCUMENTCOLORS|`CMFCColorMenuButton` wysyła wiadomość do głównego okna ramowego można pobrać kolorów dokumentu.|Nie używany.|[w, out] Wskaźnik do `CList<COLORREF, COLORREF>` obiektu.|Zero.|  
 |AFX_WM_GETDRAGBOUNDS|Tylko do użytku wewnętrznego.|Nie dotyczy.|Nie dotyczy.|Nie dotyczy.|  
-|AFX_WM_HIGHLIGHT_RIBBON_LIST_ITEM|Wysyłany do głównego okna ramowego, gdy użytkownik wyróżnia elementu wstążki.|Indeks wyróżniony element|wskaźnik do `CMFCBaseRibbonElement`|Nie używany.|  
+|AFX_WM_HIGHLIGHT_RIBBON_LIST_ITEM|Wysyłany do głównego okna ramowego, gdy użytkownik wyróżnia elementu wstążki.|Indeks wyróżniony element|Wskaźnik do `CMFCBaseRibbonElement`|Nie używany.|  
 |AFX_WM_ON_AFTER_SHELL_COMMAND|Wysyłane do elementu nadrzędnego `CMFCShellListCtrl` lub `CMFCShellTreeCtrl` steruje po zakończeniu wykonywania polecenia powłoki użytkownika.|Identyfikator polecenia, które są wykonywane przez użytkownika|Nie używany.|Jeśli aplikacja przetwarza ten komunikat, powinien on zwrócić wartość zero.|  
-|AFX_WM_ON_BEFORE_SHOW_RIBBON_ITEM_MENU|Platformę wysyła wiadomość do nadrzędnego wstążki, przed wyświetleniem menu podręczne. Mogą przetwarzać tego komunikatu i zmodyfikować menu podręcznego w dowolnym momencie.|Nie używany.|wskaźnik do `CMFCBaseRibbonElement`|Nie używany.|  
+|AFX_WM_ON_BEFORE_SHOW_RIBBON_ITEM_MENU|Platformę wysyła wiadomość do nadrzędnego wstążki, przed wyświetleniem menu podręczne. Mogą przetwarzać tego komunikatu i zmodyfikować menu podręcznego w dowolnym momencie.|Nie używany.|Wskaźnik do `CMFCBaseRibbonElement`|Nie używany.|  
 |AFX_WM_ON_CANCELTABMOVE|Tylko do użytku wewnętrznego.|Nie dotyczy.|Nie dotyczy.||  
 |AFX_WM_ON_CHANGE_RIBBON_CATEGORY|Platformę wysyła wiadomość do ramki głównej, gdy użytkownik zmieni aktywnej kategorii kontroli wstążki.|Nie używany.|Wskaźnik do `CMFCRibbonBar` których kategorii została zmieniona.|Nie używany.|  
 |AFX_WM_ON_CLOSEPOPUPWINDOW|Platformę wysyła ten komunikat, aby poinformować o tym właściciela `CMFCDesktopAlertWnd` że okno zostanie zamknięte.|Nie używany.|Wskaźnik do `CMFCDesktopAlertWnd` obiektu.|Nie używany.|  
@@ -131,7 +131,7 @@ Komunikaty te są używane w MFC.
 |AFX_WM_UPDATETOOLTIPS|Wysłane do wszystkich właścicieli etykietka narzędzia, aby wskazać, że ich kontrolek typu etykieta powinien być tworzony ponownie.|Typ formantu, który powinien przetwarzać tego komunikatu. Znajdują się w tabeli w dalszej części tego tematu, aby uzyskać listę możliwych wartości.|Nie używany.|Nie używany.|  
 |AFX_WM_WINDOW_HELP|`CMFCWindowsManagerDialog` wysyła wiadomość do ramka nadrzędny, gdy użytkownik kliknie **pomocy** przycisk lub przejdzie do trybu pomocy, klikając **pomocy** przycisku Podpis lub klawisz F1.|Nie używany.|Wskaźnik do wystąpienia `CMFCWindowsManagerDialog`.|Nie używany.|  
   
- W poniższej tabeli przedstawiono wartości niższe słowo `lParam` parametru metody AFX_WM_HSCROLL:  
+ W poniższej tabeli przedstawiono wartości niższe słowo *lParam* parametru metody AFX_WM_HSCROLL:  
   
 |||  
 |-|-|  
@@ -147,9 +147,9 @@ Komunikaty te są używane w MFC.
 |SB_THUMBTRACK|Użytkownik przeciąga pole przewijania. AFX_WM_ON_HSCROLL wiadomości jest często z tej wartości dopóki użytkownik zwolni przycisk myszy. Wyraz znaczącymi bitami oznacza sytuację, do którego został przeciągnięty pole przewijania.|  
   
 > [!NOTE]
->  Wyrazu znaczącymi bitami `lParam` parametr określa bieżącą pozycję pola przewijania w przypadku programu word znaczącymi bitami SB_THUMBPOSITION lub SB_THUMBTRACK; w przeciwnym razie nie jest używany ten wyraz.  
+>  Wyrazu znaczącymi bitami *lParam* parametr określa bieżącą pozycję pola przewijania w przypadku programu word znaczącymi bitami SB_THUMBPOSITION lub SB_THUMBTRACK; w przeciwnym razie nie jest używany ten wyraz.  
   
- W poniższej tabeli wymieniono wartości flag `lParam` parametru komunikatu AFX_WM_UPDATETOOLTIPS:  
+ W poniższej tabeli wymieniono wartości flagi dla *lParam* parametru komunikatu AFX_WM_UPDATETOOLTIPS:  
   
 |||  
 |-|-|  

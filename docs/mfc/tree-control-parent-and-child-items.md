@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 260cbf640f6c57e4b145d01e8f883025a4dc6507
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e7937ef604d14c464141c6e432a4d20a9d06e172
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382518"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954510"
 ---
 # <a name="tree-control-parent-and-child-items"></a>Elementy nadrzędne i podrzędne kontrolki drzewa
 Dowolny element formantu drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) może mieć listy elementów podrzędnych, które są nazywane związane z nim elementy podrzędne. Element, który ma co najmniej jeden element podrzędny nosi nazwę elementu nadrzędnego. Element podrzędny jest wyświetlony poniżej jego element nadrzędny i tworzone jest wcięcie wskazująca, że jest podrzędny w stosunku do obiektu nadrzędnego. Element, który nie ma nadrzędnego znajduje się na szczycie hierarchii i nosi nazwę elementu głównego.  
   
  W dowolnym momencie stan listy elementów podrzędnych elementu nadrzędnego może zostać rozwinięte lub zwinięte. Po rozwinięciu stan elementy podrzędne są wyświetlane poniżej elementu nadrzędnego. Po zwinięciu, elementy podrzędne nie są wyświetlane. Listy automatycznie przełącza między Stanami rozwinięte i zwinięte, gdy użytkownik kliknie dwukrotnie elementu nadrzędnego lub, jeśli element nadrzędny ma **TVS_HASBUTTONS** stylu, gdy użytkownik kliknie przycisk skojarzone z elementem nadrzędnym. Aplikację można rozwinąć lub zwinąć elementy podrzędne za pomocą [rozwiń](../mfc/reference/ctreectrl-class.md#expand) funkcję elementu członkowskiego.  
   
- Dodaj element do formantu drzewa, wywołując [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) funkcję elementu członkowskiego. Ta funkcja zwraca uchwyt **HTREEITEM** typu, który unikatowo identyfikuje element. Podczas dodawania elementu, należy określić dojście nowego elementu nadrzędnego elementu. Jeśli określisz **NULL** lub **TVI_ROOT** zamiast uchwytu elementu nadrzędnego w wartości [TVINSERTSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb773452) struktury lub `hParent` parametru element zostanie dodany jako katalog główny element.  
+ Dodaj element do formantu drzewa, wywołując [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) funkcję elementu członkowskiego. Ta funkcja zwraca uchwyt **HTREEITEM** typu, który unikatowo identyfikuje element. Podczas dodawania elementu, należy określić dojście nowego elementu nadrzędnego elementu. Jeśli określisz **NULL** lub **TVI_ROOT** zamiast uchwytu elementu nadrzędnego w wartości [TVINSERTSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb773452) struktury lub *hParent* Parametr element zostanie dodany jako element główny.  
   
  Formant drzewa wysyła [TVN_ITEMEXPANDING](http://msdn.microsoft.com/library/windows/desktop/bb773537) powiadomienie, gdy ma być rozwijane czy zwijane listy elementów podrzędnych elementu nadrzędnego. Powiadomienia daje możliwość uniemożliwiają zmianę lub ustawić atrybuty elementu nadrzędnego, które są zależne od stanu na liście elementów podrzędnych. Po zmianie stanu z listy, wysyła do drzewa [TVN_ITEMEXPANDED](http://msdn.microsoft.com/library/windows/desktop/bb773533) wiadomość z powiadomieniem.  
   

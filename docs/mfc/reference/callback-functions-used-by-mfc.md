@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce96d90506176812ffb70b580c9d95a38c65fa19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 114411d0f8c7084e26f36f0ffc05e60a32407c44
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350888"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956837"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funkcje wywołania zwrotnego używane przez MFC
 Trzy funkcje wywołania zwrotnego są wyświetlane w programie Microsoft Foundation Class Library. Te funkcje wywołania zwrotnego są przekazywane do [CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC::GrayString](../../mfc/reference/cdc-class.md#graystring), i [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Należy pamiętać, że wszystkie funkcje wywołania zwrotnego musi przechwytują wyjątki MFC przed zwróceniem do systemu Windows, ponieważ nie może być wyjątek w granicach wywołania zwrotnego. Aby uzyskać więcej informacji o wyjątkach, zobacz artykuł [wyjątki](../../mfc/exception-handling-in-mfc.md).  
@@ -53,11 +53,11 @@ int CALLBACK EXPORT ObjectFunc(
  *lpszLogObject*  
  Wskazuje [LOGPEN](../../mfc/reference/logpen-structure.md) lub [LOGBRUSH](../../mfc/reference/logbrush-structure.md) struktura danych, która zawiera informacje dotyczące logicznej atrybutów obiektu.  
   
- `lpData`  
+ *lpData*  
  Punkty danych dostarczonych aplikacji przekazany do `EnumObjects` funkcji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Funkcja wywołania zwrotnego `int`. Wartość tego zwracany jest zdefiniowane przez użytkownika. Jeśli funkcja wywołania zwrotnego zwraca wartość 0, `EnumObjects` zatrzymuje wczesne wyliczenia.  
+ Funkcja wywołania zwrotnego **int**. Wartość tego zwracany jest zdefiniowane przez użytkownika. Jeśli funkcja wywołania zwrotnego zwraca wartość 0, `EnumObjects` zatrzymuje wczesne wyliczenia.  
   
 ### <a name="remarks"></a>Uwagi  
  Musi być eksportowany rzeczywistą nazwą.  
@@ -75,13 +75,13 @@ BOOL CALLBACK EXPORT OutputFunc(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hDC`  
- Identyfikuje kontekst urządzenia pamięci z mapą bitową co najmniej szerokości i wysokości określony przez `nWidth` i `nHeight` do `GrayString`.  
+ *elementu hDC*  
+ Identyfikuje kontekst urządzenia pamięci z mapą bitową co najmniej szerokości i wysokości określony przez *nWidth* i *nHeight* do `GrayString`.  
   
- `lpData`  
+ *lpData*  
  Wskazuje ciąg znaków do rysowania.  
   
- `nCount`  
+ *nCount*  
  Określa liczbę znaków do danych wyjściowych.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -105,8 +105,8 @@ BOOL CALLBACK EXPORT AbortFunc(
  *hPr*  
  Identyfikuje kontekst urządzenia.  
   
- `code`  
- Określa, czy wystąpił błąd. Jeśli wystąpił błąd nie jest 0. Jest **SP_OUTOFDISK** Jeśli Menedżera wydruku jest obecnie mało miejsca na dysku i stanie się dostępna, gdy aplikacja oczekuje więcej miejsca na dysku. Jeśli `code` jest **SP_OUTOFDISK**przerwać zadanie drukowania nie ma aplikacji. Jeśli nie, musi on uzyskanie Menedżera wydruku przez wywołanie metody **PeekMessage** lub **GetMessage** funkcji systemu Windows.  
+ *Kod*  
+ Określa, czy wystąpił błąd. Jeśli wystąpił błąd nie jest 0. Jest **SP_OUTOFDISK** Jeśli Menedżera wydruku jest obecnie mało miejsca na dysku i stanie się dostępna, gdy aplikacja oczekuje więcej miejsca na dysku. Jeśli *kod* jest **SP_OUTOFDISK**przerwać zadanie drukowania nie ma aplikacji. Jeśli nie, musi on uzyskanie Menedżera wydruku przez wywołanie metody `PeekMessage` lub `GetMessage` funkcji systemu Windows.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość zwracana funkcji obsługi przerwania jest różna od zera, jeśli zadanie drukowania jest kontynuowanie i 0, jeśli jest ona anulowana.  

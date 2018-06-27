@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5b931c7ad4b560ce247f78dcb126f9669bceb67
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 476e9b0bc5e9f4c3eec64e5d0d36d3f900988f48
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355866"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954221"
 ---
 # <a name="cbitmap-class"></a>Cbitmap — klasa
 Hermetyzuje mapy bitowej interfejsu (GDI) systemu Windows grafiki urządzenia i udostępnia funkcje elementów członkowskich do manipulowania mapy bitowej.  
@@ -130,26 +130,26 @@ BOOL CreateBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nWidth`  
+ *nWidth*  
  Określa szerokość (w pikselach) mapy bitowej.  
   
- `nHeight`  
+ *nHeight*  
  Określa wysokość mapy bitowej (w pikselach).  
   
- `nPlanes`  
+ *nPlanes*  
  Określa liczbę płaszczyzn kolorów w mapie bitowej.  
   
- `nBitcount`  
+ *nBitcount*  
  Określa liczbę kolorów bitów na piksel wyświetlania.  
   
- `lpBits`  
+ *lpBits*  
  Punkty na tablicę bajtów, które zawiera wartości bitowe początkowej mapy bitowej. Jeśli jest **NULL**, pozostanie nowej mapy bitowej niezainicjowany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Dla mapy bitowej kolor albo `nPlanes` lub `nBitcount` parametru powinna być równa 1. Jeśli oba te parametry są ustawione na 1, `CreateBitmap` tworzy monochromatyczny mapy bitowej.  
+ Dla mapy bitowej kolor albo *nPlanes* lub *nBitcount* parametru powinna być równa 1. Jeśli oba te parametry są ustawione na 1, `CreateBitmap` tworzy monochromatyczny mapy bitowej.  
   
  Mimo że mapy bitowej nie można wybrać bezpośrednio do wyświetlania na urządzeniach, można go ustawić jako bieżący mapy bitowej "pamięci urządzenia kontekstu" przy użyciu [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) i skopiowane do żadnego kontekstu zgodne urządzenie za pomocą [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) funkcji.  
   
@@ -158,14 +158,14 @@ BOOL CreateBitmap(
  Aby uzyskać więcej informacji, zobacz opis **bmBits** w **mapy BITOWEJ** struktury. [Mapy BITOWEJ](../../mfc/reference/bitmap-structure.md) struktury została opisana w sekcji [CBitmap::CreateBitmapIndirect](#createbitmapindirect) funkcję elementu członkowskiego.  
   
 ##  <a name="createbitmapindirect"></a>  CBitmap::CreateBitmapIndirect  
- Inicjuje mapę bitową szerokości, wysokości i wzorca bitowego (jeśli został określony) podany w strukturze wskazywana przez `lpBitmap`.  
+ Inicjuje mapę bitową szerokości, wysokości i wzorca bitowego (jeśli został określony) podany w strukturze wskazywana przez *lpBitmap*.  
   
 ```  
 BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpBitmap`  
+ *lpBitmap*  
  Wskazuje [mapy BITOWEJ](../../mfc/reference/bitmap-structure.md) struktury, który zawiera informacje o mapy bitowej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -174,12 +174,12 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="remarks"></a>Uwagi  
  Mimo że mapy bitowej nie można wybrać bezpośrednio do wyświetlania na urządzeniach, można go ustawić jako bieżący mapy bitowej dla kontekstu urządzenia pamięci za pomocą [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) i skopiowane do żadnego kontekstu zgodne urządzenie za pomocą [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) lub [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) funkcji. ( [CDC::PatBlt](../../mfc/reference/cdc-class.md#patblt) funkcji można kopiować mapy bitowej dla bieżącego pędzla bezpośrednio do kontekstu urządzenia wyświetlania.)  
   
- Jeśli **mapy BITOWEJ** wskazywanej przez `lpBitmap` parametru zostały wypełnione przy użyciu `GetObject` funkcji, nie są określone bity mapy bitowej i mapy bitowej jest zainicjowany. Aby zainicjować mapy bitowej, aplikację można użyć funkcji takich jak [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) lub [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) do skopiowania bity mapy bitowej identyfikowane przez pierwszy parametr `CGdiObject::GetObject` do mapy bitowej utworzone przez `CreateBitmapIndirect`.  
+ Jeśli **mapy BITOWEJ** wskazywanej przez *lpBitmap* parametru zostały wypełnione przy użyciu `GetObject` funkcji, nie są określone bity mapy bitowej i mapy bitowej jest zainicjowany. Aby zainicjować mapy bitowej, aplikację można użyć funkcji takich jak [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) lub [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) do skopiowania bity mapy bitowej identyfikowane przez pierwszy parametr `CGdiObject::GetObject` do mapy bitowej utworzone przez `CreateBitmapIndirect`.  
   
  Po zakończeniu pracy z `CBitmap` utworzone za pomocą obiektu `CreateBitmapIndirect` funkcji, najpierw wybierz mapy bitowej poza kontekstem urządzenia, a następnie usuń `CBitmap` obiektu.  
   
 ##  <a name="createcompatiblebitmap"></a>  CBitmap::CreateCompatibleBitmap  
- Inicjuje mapy bitowej, która jest zgodna z urządzenia określonego przez `pDC`.  
+ Inicjuje mapy bitowej, która jest zgodna z urządzenia określonego przez *kontrolera pDC*.  
   
 ```  
 BOOL CreateCompatibleBitmap(
@@ -189,22 +189,22 @@ BOOL CreateCompatibleBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *podstawowego kontrolera domeny*  
  Określa kontekst urządzenia.  
   
- `nWidth`  
+ *nWidth*  
  Określa szerokość (w pikselach) mapy bitowej.  
   
- `nHeight`  
+ *nHeight*  
  Określa wysokość mapy bitowej (w pikselach).  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Mapa bitowa ma taką samą liczbę płaszczyzn kolorów lub ten sam format bitów na piksel jako kontekst określonego urządzenia. Można wybrać jako bieżący mapy bitowej dla dowolnego urządzenia pamięci, który jest zgodny z określonym przez `pDC`.  
+ Mapa bitowa ma taką samą liczbę płaszczyzn kolorów lub ten sam format bitów na piksel jako kontekst określonego urządzenia. Można wybrać jako bieżący mapy bitowej dla dowolnego urządzenia pamięci, który jest zgodny z określonym przez *kontrolera pDC*.  
   
- Jeśli `pDC` jest kontekstu urządzenia pamięci mapy bitowej zwrócił ma tego samego formatu co mapy bitowej aktualnie wybranego w tym kontekście urządzenia. "Kontekstu urządzenia pamięci" to blok pamięci, który reprezentuje obszar wyświetlania. Może służyć do przygotowania obrazów w pamięci przed skopiowaniem ich do powierzchni wyświetlany zgodne urządzenie.  
+ Jeśli *kontrolera pDC* jest kontekstu urządzenia pamięci mapy bitowej zwrócił ma tego samego formatu co mapy bitowej aktualnie wybranego w tym kontekście urządzenia. "Kontekstu urządzenia pamięci" to blok pamięci, który reprezentuje obszar wyświetlania. Może służyć do przygotowania obrazów w pamięci przed skopiowaniem ich do powierzchni wyświetlany zgodne urządzenie.  
   
  Po utworzeniu kontekstu urządzenia pamięci GDI automatycznie wybiera monochromatyczny standardowych mapy bitowej dla niego.  
   
@@ -213,7 +213,7 @@ BOOL CreateCompatibleBitmap(
  Po zakończeniu pracy z `CBitmap` utworzone za pomocą obiektu `CreateCompatibleBitmap` funkcji, najpierw wybierz mapy bitowej poza kontekstem urządzenia, a następnie usuń `CBitmap` obiektu.  
   
 ##  <a name="creatediscardablebitmap"></a>  CBitmap::CreateDiscardableBitmap  
- Inicjuje discardable mapy bitowej zgodnego z kontekstu urządzenia identyfikowane przez `pDC`.  
+ Inicjuje discardable mapy bitowej zgodnego z kontekstu urządzenia identyfikowane przez *kontrolera pDC*.  
   
 ```  
 BOOL CreateDiscardableBitmap(
@@ -223,20 +223,20 @@ BOOL CreateDiscardableBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *podstawowego kontrolera domeny*  
  Określa kontekst urządzenia.  
   
- `nWidth`  
+ *nWidth*  
  Określa szerokość (w bitach) mapy bitowej.  
   
- `nHeight`  
+ *nHeight*  
  Określa wysokość (w bitach) mapy bitowej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Mapa bitowa ma taką samą liczbę płaszczyzn kolorów lub ten sam format bitów na piksel jako kontekst określonego urządzenia. Jako bieżący mapy bitowej dla urządzenie pamięci, który jest zgodny z określonym przez aplikację można wybrać tej mapy bitowej `pDC`.  
+ Mapa bitowa ma taką samą liczbę płaszczyzn kolorów lub ten sam format bitów na piksel jako kontekst określonego urządzenia. Jako bieżący mapy bitowej dla urządzenie pamięci, który jest zgodny z określonym przez aplikację można wybrać tej mapy bitowej *kontrolera pDC*.  
   
  Systemu Windows można odrzucić utworzony przez tę funkcję tylko wtedy, gdy aplikacja nie została wybrana go w kontekście wyświetlania mapy bitowej. Jeśli Windows odrzuca mapy bitowej, gdy nie jest zaznaczone i próbuje, wybierz aplikację później [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) funkcja zwróci **NULL**.  
   
@@ -250,7 +250,7 @@ static CBitmap* PASCAL FromHandle(HBITMAP hBitmap);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hBitmap`  
+ *hBitmap*  
  Określa mapę bitową GDI systemu Windows.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -267,7 +267,7 @@ int GetBitmap(BITMAP* pBitMap);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pBitMap`  
+ *pBitMap*  
  Wskaźnik do [struktury mapy BITOWEJ](../../mfc/reference/bitmap-structure.md) struktury, która odbierze właściwości obrazu. Ten parametr nie może być `NULL`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -285,10 +285,10 @@ DWORD GetBitmapBits(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwCount`  
+ *dwCount*  
  Liczba bajtów do skopiowania do buforu.  
   
- `lpBits`  
+ *lpBits*  
  Wskaźnik do buforu, który będzie otrzymywał mapy bitowej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -311,7 +311,7 @@ CSize GetBitmapDimension() const;
  Szerokość i wysokość uznaje się, że wcześniej zostały ustawione za pomocą [SetBitmapDimension](#setbitmapdimension) funkcję elementu członkowskiego.  
   
 ##  <a name="loadbitmap"></a>  CBitmap::LoadBitmap  
- Ładuje zasobu mapy bitowej o nazwie `lpszResourceName` lub identyfikowany przez numer identyfikacyjny w `nIDResource` z pliku wykonywalnego aplikacji.  
+ Ładuje zasobu mapy bitowej o nazwie *lpszResourceName* lub identyfikowany przez numer identyfikacyjny w *nIDResource* z pliku wykonywalnego aplikacji.  
   
 ```  
 BOOL LoadBitmap(LPCTSTR lpszResourceName);  
@@ -319,10 +319,10 @@ BOOL LoadBitmap(UINT nIDResource);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszResourceName`  
+ *lpszResourceName*  
  Wskazuje zerem ciągu zawierającego nazwę zasobu mapy bitowej.  
   
- `nIDResource`  
+ *nIDResource*  
  Określa identyfikator zasobu zasobu mapy bitowej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -331,7 +331,7 @@ BOOL LoadBitmap(UINT nIDResource);
 ### <a name="remarks"></a>Uwagi  
  Załadować mapy bitowej jest dołączony do `CBitmap` obiektu.  
   
- Jeśli mapy bitowej zidentyfikowana na podstawie `lpszResourceName` nie istnieje lub jeśli jest za mało pamięci, aby załadować mapy bitowej, funkcja zwraca wartość 0.  
+ Jeśli mapy bitowej zidentyfikowana na podstawie *lpszResourceName* nie istnieje lub jeśli jest za mało pamięci, aby załadować mapy bitowej, funkcja zwraca wartość 0.  
   
  Można użyć [CGdiObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) funkcji, aby usunąć mapy bitowej załadowanych przez `LoadBitmap` funkcji, lub `CBitmap` destruktora spowoduje usunięcie obiektu dla Ciebie.  
   
@@ -356,17 +356,17 @@ BOOL LoadMappedBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDBitmap`  
+ *nIDBitmap*  
  Identyfikator zasobu mapy bitowej.  
   
- `nFlags`  
+ *nFlags*  
  Flaga mapy bitowej. Może być równa zero lub **CMB_MASKED**.  
   
- `lpColorMap`  
+ *lpColorMap*  
  Wskaźnik do **COLORMAP** strukturę, która zawiera informacje kolor potrzebne do mapowania map bitowych. Jeśli ten parametr ma **NULL**, funkcja używa domyślnej kolorów mapy.  
   
  *nMapSize*  
- Liczba kolorów mapy wskazywana przez `lpColorMap`.  
+ Liczba kolorów mapy wskazywana przez *lpColorMap*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
@@ -384,7 +384,7 @@ BOOL LoadOEMBitmap(UINT nIDBitmap);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDBitmap`  
+ *nIDBitmap*  
  Numer identyfikacyjny wstępnie zdefiniowanych mapy bitowej systemu Windows. Poniżej przedstawiono możliwe wartości z systemu WINDOWS. H:  
   
 |||  
@@ -431,7 +431,7 @@ operator HBITMAP() const;
  Aby uzyskać więcej informacji o korzystaniu z obiektów graficznych, zobacz [obiektów grafiki](http://msdn.microsoft.com/library/windows/desktop/dd144962) w zestawie Windows SDK.  
   
 ##  <a name="setbitmapbits"></a>  CBitmap::SetBitmapBits  
- Ustawia bity mapy bitowej wartości bitowe przez `lpBits`.  
+ Ustawia bity mapy bitowej wartości bitowe przez *lpBits*.  
   
 ```  
 DWORD SetBitmapBits(
@@ -440,10 +440,10 @@ DWORD SetBitmapBits(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwCount`  
- Określa liczbę bajtów wskazywana przez `lpBits`.  
+ *dwCount*  
+ Określa liczbę bajtów wskazywana przez *lpBits*.  
   
- `lpBits`  
+ *lpBits*  
  Wskazuje **BAJTÓW** tablica, która zawiera wartości pikseli, który ma zostać skopiowany na `CBitmap` obiektu. Aby mapy bitowej można było poprawnie renderować obraz należy sformatować wartości odpowiadają wartości głębokość wysokość i szerokość kolorów, które zostały określone podczas tworzenia wystąpienia cbitmap —. Aby uzyskać więcej informacji, zobacz [CBitmap::CreateBitmap](#createbitmap).  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -459,10 +459,10 @@ CSize SetBitmapDimension(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nWidth`  
+ *nWidth*  
  Określa szerokość mapy bitowej (w jednostkach 0,1 milimetra).  
   
- `nHeight`  
+ *nHeight*  
  Określa wysokość mapy bitowej (w jednostkach 0,1 milimetra).  
   
 ### <a name="return-value"></a>Wartość zwracana  

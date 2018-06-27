@@ -16,18 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60b41c31c2fa8985953515700cc2e3c802aced31
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c087bb7782b7b140b07683b40cad358049f682c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381585"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953028"
 ---
 # <a name="using-cdatetimectrl"></a>Korzystanie z CDateTimeCtrl
 Formant selektora daty i godziny ([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) implementuje metodę intuicyjne i rozpoznawalnych wprowadzania lub wybranie określonej daty. Główne interfejsu formantu jest podobne do pola kombi. Użytkownik rozwija formantu (domyślnie), jest wyświetlany formant kalendarza miesięcznego zezwolenie użytkownikowi określenie określonej daty. Po wybraniu typu date, formant kalendarza miesięcznego automatycznie zniknie.  
   
 > [!NOTE]
->  Aby korzystać z obu **CDateTimePicker** i `CMonthCalCtrl` klasy w projekcie, musi zawierać AFXDTCTL. H, zazwyczaj w STDAFX Twojego projektu. Plik godz.  
+>  Aby korzystać z obu `CDateTimePicker` i `CMonthCalCtrl` klasy w projekcie, musi zawierać AFXDTCTL. H, zazwyczaj w STDAFX Twojego projektu. Plik godz.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b7f322003a36d89927930c0a57fd060078755f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb378bba1505f8bbc3739c070d52abe9ef4f8afc
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383022"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953830"
 ---
 # <a name="using-cstatusbarctrl-to-create-a-cstatusbarctrl-object"></a>Używanie formantu CStatusBarCtrl do tworzenia obiektu CStatusBarCtrl
 Oto przykład typowy sposób użycia protokołu [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md):  
@@ -37,7 +37,7 @@ Oto przykład typowy sposób użycia protokołu [CStatusBarCtrl](../mfc/referenc
   
 4.  Wywołanie [SetParts](../mfc/reference/cstatusbarctrl-class.md#setparts) można ustawić stanu kontroli i Współrzędna prawej krawędzi każdej części paska części.  
   
-5.  Wywołanie [SetText](../mfc/reference/cstatusbarctrl-class.md#settext) można ustawić tekst w ramach danego formantu paska stanu. Komunikat unieważnia części kontrolki, które uległy zmianie, powodując go, aby wyświetlić nowy tekst, gdy formant obok uzyskuje `WM_PAINT` wiadomości.  
+5.  Wywołanie [SetText](../mfc/reference/cstatusbarctrl-class.md#settext) można ustawić tekst w ramach danego formantu paska stanu. Komunikat unieważnia części kontrolki, które uległy zmianie, co powoduje wyświetlanie nowego tekstu, gdy formant uzyskuje następny komunikat WM_PAINT.  
   
  W niektórych przypadkach na pasku stanu musi tylko do wyświetlania wiersza tekstu. W takim przypadku wywoływania [SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple). To umieszcza formantu paska stanu w trybie "prosty", który wyświetla pojedynczą linie tekstu.  
   

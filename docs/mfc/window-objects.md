@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63b8d8dbde679d030eddd77fae6ca1fab519fdac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f040978c898dae3bfd4ca21c2cf9886fde9b5238
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385274"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951282"
 ---
 # <a name="window-objects"></a>Obiekty okien
 Klasa dostarcza MFC [CWnd](../mfc/reference/cwnd-class.md) celu hermetyzacji `HWND` uchwytu okna. `CWnd` Obiekt jest obiektem okna języka C++ różne od `HWND` reprezentujący systemu Windows, ale okna zawierającego go. Użyj `CWnd` pochodzić okna podrzędnego klas, lub użyj jednego z wielu klas MFC z `CWnd`. Klasa `CWnd` jest klasą bazową dla wszystkich windows, w tym okien ramowych, okna dialogowe okno podrzędne, formanty i paski sterowania, takie jak pasków narzędzi. Dobrą znajomość [relacja między obiektem okna języka C++ a właściwością HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md) ma kluczowe znaczenie dla skuteczne programowanie z MFC.  
@@ -44,7 +44,7 @@ Klasa dostarcza MFC [CWnd](../mfc/reference/cwnd-class.md) celu hermetyzacji `HW
  `CWnd` i jego [okna klas pochodnych](../mfc/derived-window-classes.md) konstruktorów, destruktory i funkcje Członkowskie do inicjalizacji obiektu, tworzenie podstawowej struktury systemu Windows i dostęp hermetyzowany `HWND`. `CWnd` udostępnia funkcje Członkowskie, które hermetyzują interfejsów API systemu Windows do wysyłania wiadomości, uzyskiwanie dostępu do stanu okna, Konwersja współrzędnych, aktualizowanie, przewijania, dostęp do Schowka i wiele innych zadań. Większość Windows API zarządzania systemem Windows, prowadzące `HWND` argumentu są hermetyzowane jako funkcji Członkowskich `CWnd`. Nazwy funkcji i ich parametry są zachowywane w `CWnd` funkcję elementu członkowskiego. Szczegółowe informacje na temat interfejsów API systemu Windows zamknięte przez `CWnd`, zobacz klasę [CWnd](../mfc/reference/cwnd-class.md).  
   
 ## <a name="cwnd-and-windows-messages"></a>Komunikaty systemu Windows i CWnd  
- Jedną z głównych przeznaczeń `CWnd` jest zapewnienie interfejs do obsługi komunikatów systemu Windows, takich jak `WM_PAINT` lub `WM_MOUSEMOVE`. Wiele funkcji Członkowskich `CWnd` są programy obsługi dla standardowych komunikatów — zaczynających się od identyfikatora **afx_msg** i prefiksu "Włączone", takie jak `OnPaint` i **OnMouseMove**. [Obsługa i mapowanie komunikatów](../mfc/message-handling-and-mapping.md) obejmuje wiadomości i obsługa szczegółowo komunikatów. Informacje dotyczą jednakowo framework w systemie windows oraz te, utworzyć samodzielnie do celów specjalnych.  
+ Jedną z głównych przeznaczeń `CWnd` jest zapewnienie interfejs do obsługi komunikatów systemu Windows, takich jak WM_PAINT lub WM_MOUSEMOVE. Wiele funkcji Członkowskich `CWnd` są programy obsługi dla standardowych komunikatów — zaczynających się od identyfikatora **afx_msg** i prefiksu "Włączone", takie jak `OnPaint` i `OnMouseMove`. [Obsługa i mapowanie komunikatów](../mfc/message-handling-and-mapping.md) obejmuje wiadomości i obsługa szczegółowo komunikatów. Informacje dotyczą jednakowo framework w systemie windows oraz te, utworzyć samodzielnie do celów specjalnych.  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
   

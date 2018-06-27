@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d628758f19c36112bf896e11c97df3e1f92cbc47
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: edb9fe1942f9fe8b462ce9fc6a56e37538866174
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355964"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954991"
 ---
 # <a name="cbasetabbedpane-class"></a>Klasa CBaseTabbedPane
 Rozszerza funkcjonalność [klasy CDockablePane](../../mfc/reference/cdockablepane-class.md) do obsługi tworzenia systemu windows z kartami.  
@@ -173,23 +173,23 @@ virtual BOOL AddTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] [out] `pNewBar`  
+ [in] [out] *pNewBar*  
  Wskaźnik do okienka do dodania. This, wskaźnik może stać się nieprawidłowy po wywołaniu tej metody. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.  
   
- [in] `bVisible`  
+ [in] *bVisible*  
  `TRUE` Aby wyświetlić na karcie; w przeciwnym razie `FALSE`.  
   
- [in] `bSetActive`  
+ [in] *bSetActive*  
  `TRUE` Aby na karcie karcie active; w przeciwnym razie `FALSE`.  
   
- [in] `bDetachable`  
+ [in] *bDetachable*  
  `TRUE` Aby wprowadzić na karcie odłączane; w przeciwnym razie `FALSE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `TRUE` Jeśli okienko został pomyślnie dodany jako karty i nie została zniszczona w procesie. `FALSE` Jeśli okienko dodawany jest obiekt typu `CBaseTabbedPane`. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołaj tę metodę, aby dodać okienka jako nową kartę w okienku z kartami. Jeśli `pNewBar` wskazuje na obiekt typu `CBaseTabbedPane`, wszystkie jego karty są kopiowane na kartach okienka, a następnie `pNewBar` zostanie zniszczony. W związku z tym `pNewBar` staje się nieprawidłowy wskaźnik i nie powinna być używana.  
+ Wywołaj tę metodę, aby dodać okienka jako nową kartę w okienku z kartami. Jeśli *pNewBar* wskazuje na obiekt typu `CBaseTabbedPane`, wszystkie jego karty są kopiowane na kartach okienka, a następnie *pNewBar* zostanie zniszczony. W związku z tym *pNewBar* staje się nieprawidłowy wskaźnik i nie powinna być używana.  
   
 ##  <a name="allowdestroyemptytabbedpane"></a>  CBaseTabbedPane::AllowDestroyEmptyTabbedPane  
  Określa, czy puste okienko z kartami może zostać zniszczone.  
@@ -212,7 +212,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bUseTabIndexes`  
+ [in] *bUseTabIndexes*  
  Ten parametr jest używana wewnętrznie przez platformę.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -249,7 +249,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bActiveTabOnly`  
+ [in] *bActiveTabOnly*  
  Podczas konwertowania z kartami okienku określ `TRUE` przekonwertować aktywnej karty. Określ `FALSE` można przekonwertować wszystkie karty w okienku.  
   
 ##  <a name="detachpane"></a>  CBaseTabbedPane::DetachPane  
@@ -262,14 +262,14 @@ virtual BOOL DetachPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pBar`  
+ [in] *pBar*  
  Wskaźnik do okienko, aby odłączyć.  
   
- [in] `bHide`  
+ [in] *bHide*  
  Wartość logiczna parametr, który określa, czy platformę powoduje ukrycie okienka po jest ona odłączona.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli w ramach pomyślnie odłącza okienku. `FALSE` Jeśli `pBar` jest `NULL` lub odwołuje się do okienka, który nie znajduje się w okienku z kartami.  
+ `TRUE` Jeśli w ramach pomyślnie odłącza okienku. `FALSE` Jeśli *pBar* jest `NULL` lub odwołuje się do okienka, który nie znajduje się w okienku z kartami.  
   
 ### <a name="remarks"></a>Uwagi  
  Odłączony okienko jest wyświetlany w ramach Jeśli to możliwe. Aby uzyskać więcej informacji, zobacz [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).  
@@ -282,7 +282,7 @@ virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  `TRUE` Aby zsynchronizować podpis okienko z kartami z podpisem aktywnej karcie; w przeciwnym razie `FALSE`.  
   
 ##  <a name="filldefaulttabsorderarray"></a>  CBaseTabbedPane::FillDefaultTabsOrderArray  
@@ -303,14 +303,14 @@ virtual CWnd* FindPaneByID(UINT uBarID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uBarID`  
+ [in] *uBarID*  
  Określa identyfikator okienku można znaleźć.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do okienka, jeśli został znaleziony; w przeciwnym razie `NULL`.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda porównuje wszystkie karty w okienku i zwraca z określonej przez identyfikator `uBarID` parametru.  
+ Ta metoda porównuje wszystkie karty w okienku i zwraca z określonej przez identyfikator *uBarID* parametru.  
   
 ##  <a name="findbarbytabnumber"></a>  CBaseTabbedPane::FindBarByTabNumber  
  Zwraca okienko, w którym znajduje się na karcie.  
@@ -322,17 +322,17 @@ virtual CWnd* FindBarByTabNumber(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nTabNum`  
+ [in] *nTabNum*  
  Określa liczony od zera indeks kartę, aby pobrać.  
   
- [in] `bGetWrappedBar`  
+ [in] *bGetWrappedBar*  
  `TRUE` Aby przywrócić źródłowy okna (opakowana) okienka zamiast okienka. w przeciwnym razie `FALSE`. Dotyczy to tylko okienka pochodną [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md).  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli okienko zostanie znaleziony, zwracana jest nieprawidłowy wskaźnik do okienka wyszukane; w przeciwnym razie `NULL`.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie tej metody można pobrać okienku znajdującej się na karcie określony przez `nTabNum` parametru.  
+ Wywołanie tej metody można pobrać okienku znajdującej się na karcie określony przez *nTabNum* parametru.  
   
 ##  <a name="floattab"></a>  CBaseTabbedPane::FloatTab  
  Przesunięty okienku, ale tylko wtedy, jeśli okienku aktualnie znajduje się na karcie odłączane.  
@@ -346,16 +346,16 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] [out] `pBar`  
+ [in] [out] *pBar*  
  Wskaźnik do typu float w okienku.  
   
- [in] `nTabID`  
+ [in] *nTabID*  
  Określa liczony od zera indeks kartę, aby float.  
   
- [in] `dockMethod`  
+ [in] *dockMethod*  
  Określa metodę używaną do Dokowanie okienka. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.  
   
- [in] `bHide`  
+ [in] *bHide*  
  `TRUE` Aby ukryć okienko zanim; w przeciwnym razie `FALSE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -364,7 +364,7 @@ virtual BOOL FloatTab(
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę metodę w celu float okienko, w którym aktualnie znajduje się na karcie odłączane.  
   
- Jeśli chcesz odłączyć okienko programowo, określ `DM_SHOW` dla `dockMethod` parametru. Jeśli chcesz float okienka w tym samym miejscu, gdzie przestawione wcześniej, określ `DM_DBL_CLICK` jako `dockMethod` parametru.  
+ Jeśli chcesz odłączyć okienko programowo, określ `DM_SHOW` dla *dockMethod* parametru. Jeśli chcesz float okienka w tym samym miejscu, gdzie przestawione wcześniej, określ `DM_DBL_CLICK` jako *dockMethod* parametru.  
   
 ##  <a name="getdefaulttabsorder"></a>  CBaseTabbedPane::GetDefaultTabsOrder  
  Zwraca domyślną kolejność kart, w okienku.  
@@ -387,7 +387,7 @@ virtual CWnd* GetFirstVisibleTab(int& iTabNum);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iTabNum`  
+ [in] *iTabNum*  
  Odwołanie do liczby całkowitej. Ta metoda zapisuje liczony od zera indeks pierwszej karcie wyświetlane do tego parametru lub wartość -1 Jeśli wyświetlane nie znaleziono kartę.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -401,11 +401,11 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `size`  
+ [out] *rozmiar*  
  A `CSize` obiekt, który jest wypełniony dozwolony rozmiar.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli aktywne jest spójne obsługi rozmiar minimalny okienka ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), `size` jest wypełniony dozwolony rozmiar dla aktywnej karty. W przeciwnym razie `size` jest wypełniony wartość zwracaną [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
+ Jeśli aktywne jest spójne obsługi rozmiar minimalny okienka ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), *rozmiar* jest wypełniony dozwolony rozmiar dla aktywnej karty. W przeciwnym razie *rozmiar* jest wypełniony wartość zwracaną [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
   
 ##  <a name="getpaneicon"></a>  CBaseTabbedPane::GetPaneIcon  
  Pobiera minimalny dozwolony rozmiar okienka.  
@@ -415,11 +415,11 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `size`  
+ [out] *rozmiar*  
  A `CSize` obiekt, który jest wypełniony dozwolony rozmiar.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli aktywne jest spójne obsługi rozmiar minimalny okienka ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), `size` jest wypełniony dozwolony rozmiar dla aktywnej karty. W przeciwnym razie `size` jest wypełniony wartość zwracaną [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
+ Jeśli aktywne jest spójne obsługi rozmiar minimalny okienka ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), *rozmiar* jest wypełniony dozwolony rozmiar dla aktywnej karty. W przeciwnym razie *rozmiar* jest wypełniony wartość zwracaną [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
   
 ##  <a name="getpanelist"></a>  CBaseTabbedPane::GetPaneList  
  Zwraca listę okienka, które są zawarte w okienku z kartami.  
@@ -431,10 +431,10 @@ virtual void GetPaneList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `lst`  
+ [out] *lst*  
  A `CObList` który jest wypełniony okienka, które są zawarte w okienku z kartami.  
   
- [in] `pRTCFilter`  
+ [in] *pRTCFilter*  
  Jeśli nie jest `NULL`, zwracana lista zawiera tylko okienek klasy wykonawcze.  
   
 ##  <a name="gettabarea"></a>  CBaseTabbedPane::GetTabArea  
@@ -447,10 +447,10 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `rectTabAreaTop`  
+ [out] *rectTabAreaTop*  
  Odbiera współrzędne ekranu obszaru górny karty.  
   
- [out] `rectTabAreaBottom`  
+ [out] *rectTabAreaBottom*  
  Odbiera współrzędne ekranu dolnej kartę.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -523,14 +523,14 @@ virtual BOOL RemovePane(CWnd* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] [out] `pBar`  
+ [in] [out] *pBar*  
  Wskaźnik do okienko, aby usunąć z okienka z kartami.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `TRUE` Jeśli okienku został pomyślnie usunięty z okienka z kartami i kartach okienko jest nadal ważny. `FALSE` Jeśli okienko ostatniego został usunięty z okienka z kartami i okienka z kartami ma zostać zniszczone. Jeśli wartość zwracana jest `FALSE`, nie używaj więcej okienka z kartami.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie tej metody, aby usunąć okienko określony przez `pBar` parametrów z okienka z kartami.  
+ Wywołanie tej metody, aby usunąć okienko określony przez *pBar* parametrów z okienka z kartami.  
   
 ##  <a name="setautodestroy"></a>  CBaseTabbedPane::SetAutoDestroy  
  Określa, czy pasek sterowania z kartami zostaną automatycznie usunięte.  
@@ -540,7 +540,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
  `TRUE` Jeśli okienko z kartami został utworzony dynamicznie, a nie sterowanej jego trwania. w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -558,23 +558,23 @@ virtual BOOL ShowTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pBar`  
+ [in] *pBar*  
  Wskaźnik do okienka, aby pokazać lub ukryć.  
   
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` Aby wyświetlić okienko; `FALSE` Aby ukryć okienko.  
   
- [in] `bDelay`  
+ [in] *bDelay*  
  `TRUE` opóźnienia dostosowania układu kartę; w przeciwnym razie `FALSE`.  
   
- [in] `bActivate`  
+ [in] *bActivate*  
  `TRUE` Aby na karcie karcie active; w przeciwnym razie `FALSE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `TRUE` Jeśli na karcie został pokazywane lub ukryte pomyślnie; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
- Gdy ta metoda jest wywoływana, okienko jest pokazywany lub ukryty, w zależności od wartości `bShow` parametru. Ukryj karty jest ostatni kartę widoczne w oknie kartę podstawowej, zostanie ukryte okienka z kartami. Pokaż kartę, jeśli wcześniej zostały widoczne żadne karty, przedstawiono okienko z kartami.  
+ Gdy ta metoda jest wywoływana, okienko jest pokazywany lub ukryty, w zależności od wartości *bShow* parametru. Ukryj karty jest ostatni kartę widoczne w oknie kartę podstawowej, zostanie ukryte okienka z kartami. Pokaż kartę, jeśli wcześniej zostały widoczne żadne karty, przedstawiono okienko z kartami.  
   
 ##  <a name="recalclayout"></a>  CBaseTabbedPane::RecalcLayout  
  Ponownie oblicza informacji o układzie dla tego okienka.  
@@ -600,16 +600,16 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bMode`  
+ [in] *bMode*  
  `TRUE` Aby włączyć tryb autoukrywania; `FALSE` Aby włączyć tryb dokowania regularne.  
   
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  Określa wyrównanie w okienku autoukrywania, który ma być utworzony. Aby uzyskać listę możliwych wartości, zobacz [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).  
   
- [in] [out] `pCurrAutoHideBar`  
+ [in] [out] *pCurrAutoHideBar*  
  Wskaźnik do bieżącego automatyczne ukrywanie paska narzędzi. Może być `NULL`.  
   
- [in] `bUseTimer`  
+ [in] *bUseTimer*  
  Określa, czy efekt autoukrywania stosować, gdy użytkownik zmienia okienku na tryb autoukrywania lub ukrywanie okienka natychmiast.  
   
 ### <a name="return-value"></a>Wartość zwracana  

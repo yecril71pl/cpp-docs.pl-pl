@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33fb1caa496c34111de133a113433a614ff5eb22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db1b807856baf4cab3cdef57092cd29fdff3a19d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383844"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951143"
 ---
 # <a name="wizards-and-the-resource-editors"></a>Kreatorzy i edytory zasobów
 Visual C++ obejmuje kilka kreatorów do użycia w programowaniu MFC, oraz wiele edytorów zintegrowanym. Dla formantów ActiveX programowania, [Kreator kontrolek ActiveX](../mfc/reference/mfc-activex-control-wizard.md) pełni funkcję, podobne jak w przypadku Kreator aplikacji MFC. Podczas pisania aplikacji MFC bez większość tych narzędzi, narzędzia znacznie uprościć i przyspieszyć pracę.  
@@ -41,7 +41,7 @@ Visual C++ obejmuje kilka kreatorów do użycia w programowaniu MFC, oraz wiele 
 > [!NOTE]
 >  Widok klasy pomaga również przesłonić funkcje wirtualne klas MFC. Wybierz klasę i funkcji wirtualnych do przesłonięcia. Pozostała część procesu jest podobny do obsługi wiadomości, zgodnie z opisem w poniższych punktach.  
   
- Aplikacje działające w systemie Windows są [komunikat zmiennych](../mfc/message-handling-and-mapping.md). Akcje użytkownika oraz inne zdarzenia, które występują w uruchomiony program spowodować systemu Windows do wysyłania komunikatów do systemu windows w programie. Na przykład, jeśli użytkownik kliknie przycisk myszy w oknie, system Windows wysyła `WM_LBUTTONDOWN` po naciśnięciu lewego przycisku myszy i a komunikatów `WM_LBUTTONUP` komunikatu po zwolnieniu przycisku. System Windows wysyła również **WM_COMMAND** wiadomości, gdy użytkownik wybierze polecenia na pasku menu.  
+ Aplikacje działające w systemie Windows są [komunikat zmiennych](../mfc/message-handling-and-mapping.md). Akcje użytkownika oraz inne zdarzenia, które występują w uruchomiony program spowodować systemu Windows do wysyłania komunikatów do systemu windows w programie. Na przykład, jeśli użytkownik kliknie przycisk myszy w oknie, system Windows wysyła wiadomości WM_LBUTTONDOWN po naciśnięciu lewego przycisku myszy, a komunikat WM_LBUTTONUP po zwolnieniu przycisku. System Windows wysyła również WM_COMMAND — komunikaty, gdy użytkownik wybierze polecenia na pasku menu.  
   
  W ramach MFC różnych obiektów, takich jak dokumenty, widoki, okien ramowych, szablony dokumentów i obiekt aplikacji może "obsługiwać" wiadomości. Taki obiekt zapewnia "Funkcja obsługi" jako jeden z jego elementów członkowskich funkcje i platformę mapy komunikatów przychodzących do jego obsługi.  
   

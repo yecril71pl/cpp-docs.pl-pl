@@ -20,26 +20,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c6475e8c259026618192489ac2c67c20ed03d92
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97c42f59042490f6408fb457b12f4bdb1a2eeb88
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385342"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953363"
 ---
 # <a name="tn039-mfcole-automation-implementation"></a>TN039: implementacja automatyzacji MFC/OLE
 > [!NOTE]
 >  Poniższe uwagi techniczne nie został zaktualizowany, ponieważ została ona uwzględniona w dokumentacji online. W związku z tym niektóre procedury i tematy mogą być nieaktualne lub niepoprawne. Najnowsze informacje zalecane jest, możesz wyszukać temat odsetek w indeksie dokumentacji online.  
   
 ## <a name="overview-of-ole-idispatch-interface"></a>Przegląd interfejsu IDispatch OLE  
- `IDispatch` Interfejs jest sposób za pomocą którego aplikacje uwidacznia metody i właściwości, tak aby wprowadzić inne aplikacje, takie jak Visual BASIC lub innych języków, użyj funkcji aplikacji. To najważniejszy element ten interfejs **IDispatch::Invoke** funkcji. MFC używa "mapy wysyłania" do zaimplementowania **IDispatch::Invoke**. Mapy wysyłania zawiera informacje implementacji MFC na układ lub "kształtu" Twoje `CCmdTarget`-pochodnej klasy, w taki sposób, że można bezpośrednio manipulowania właściwościami obiektu lub wywołać elementu członkowskiego funkcji w ramach obiektu do zaspokojenia  **IDispatch::Invoke** żądań.  
+ `IDispatch` Interfejs jest sposób za pomocą którego aplikacje uwidacznia metody i właściwości, tak aby wprowadzić inne aplikacje, takie jak Visual BASIC lub innych języków, użyj funkcji aplikacji. To najważniejszy element ten interfejs `IDispatch::Invoke` funkcji. MFC używa "mapy wysyłania" do zaimplementowania `IDispatch::Invoke`. Mapy wysyłania zawiera informacje implementacji MFC na układ lub "kształtu" Twoje `CCmdTarget`-pochodnej klasy, w taki sposób, że można bezpośrednio manipulowania właściwościami obiektu lub wywołać elementu członkowskiego funkcji w ramach obiektu do zaspokojenia `IDispatch::Invoke` żądania.  
   
  W większości przypadków ClassWizard i MFC współpracują w celu Ukryj większość szczegóły automatyzacji OLE z programisty aplikacji. Programistę koncentruje się na rzeczywiste funkcji do udostępnienia w aplikacji i nie trzeba się martwić o podstawowej żmudne procesy.  
   
  Brak przypadków, gdy konieczne jest zrozumienie MFC zadań w tle. Ta uwaga będzie dotyczyć jak przypisuje platformę **DISPID**s do funkcji Członkowskich i właściwości. Wiedza algorytmu MFC używa do przypisywania **DISPID**s jest konieczne tylko wtedy, gdy trzeba wiedzieć, identyfikatory, takie jak podczas tworzenia biblioteki"typu" obiektów w aplikacji.  
   
 ## <a name="mfc-dispid-assignment"></a>Przypisanie MFC DISPID  
- Chociaż Automatyzacja (Visual Basic użytkownika, na przykład), użytkownik końcowy widzi rzeczywiste nazwy automatyzację włączone właściwości i metody w kodzie ich (na przykład obiektu ShowWindow) wdrożenia **IDispatch::Invoke** nie otrzyma rzeczywiste nazwy. Ze względu na optymalizację odbiera **DISPID**, która jest 32-bitowe "magicznych plik cookie" opisujący metody lub właściwości, która ma być dostępny. Te **DISPID** wartości są zwracane z `IDispatch` wdrożenia za pomocą innej metody o nazwie **funkcji IDispatch::GetIDsOfNames**. Automatyzacja aplikacji klient nawiąże połączenie `GetIDsOfNames` po dla każdego elementu członkowskiego lub właściwości zamierza uzyskują dostęp do pamięci podręcznej je na nowsze wywołań **IDispatch::Invoke**. W ten sposób wyszukiwania kosztowne ciągu jest wykonywane tylko raz na użycie obiektu zamiast raz na **IDispatch::Invoke** wywołania.  
+ Chociaż Automatyzacja (Visual Basic użytkownika, na przykład), użytkownik końcowy widzi rzeczywiste nazwy automatyzację włączone właściwości i metody w kodzie ich (na przykład obiektu ShowWindow) wdrożenia `IDispatch::Invoke` nie otrzyma rzeczywiste nazwy. Ze względu na optymalizację odbiera **DISPID**, która jest 32-bitowe "magicznych plik cookie" opisujący metody lub właściwości, która ma być dostępny. Te **DISPID** wartości są zwracane z `IDispatch` wdrożenia za pomocą innej metody o nazwie `IDispatch::GetIDsOfNames`. Automatyzacja aplikacji klient nawiąże połączenie `GetIDsOfNames` po dla każdego elementu członkowskiego lub właściwości zamierza uzyskują dostęp do pamięci podręcznej ich nowsze wywołania `IDispatch::Invoke`. W ten sposób wyszukiwania kosztowne ciągu jest wykonywane tylko raz na użycie obiektu zamiast raz na `IDispatch::Invoke` wywołania.  
   
  Określa MFC **DISPID**s dla każdej metody i właściwości oparte na dwie czynności:  
   
@@ -131,23 +131,23 @@ property Y    (DISPID)0x00010002
 ## <a name="remarks"></a>Uwagi  
   
 ### <a name="parameters"></a>Parametry  
- `theClass`  
+ *theClass*  
  Nazwa klasy.  
   
- `pszName`  
+ *pszName*  
  Zewnętrzna nazwa właściwości.  
   
- `memberName`  
+ *memberName*  
  Nazwa zmiennej członkowskiej, w którym przechowywany jest właściwość.  
   
- `pfnAfterSet`  
+ *pfnAfterSet*  
  Nazwa elementu członkowskiego funkcja wywoływana, gdy właściwość zostanie zmieniona.  
   
- `vtPropType`  
+ *vtPropType*  
  Wartość określająca typ właściwości.  
   
 ## <a name="remarks"></a>Uwagi  
- Jest to makro, podobne jak w przypadku `DISP_PROPERTY`, z wyjątkiem tego, że akceptuje dodatkowy argument. Dodatkowy argument, *pfnAfterSet,* powinna być funkcji członkowskiej, która nie zwraca żadnego i nie przyjmuje żadnych parametrów "void OnPropertyNotify()". Będzie ona wywoływana **po** zmiennej członkowskiej został zmodyfikowany.  
+ To makro jest disp_property —, z wyjątkiem tego, że akceptuje dodatkowy argument. Dodatkowy argument, *pfnAfterSet,* powinna być funkcji członkowskiej, która nie zwraca żadnego i nie przyjmuje żadnych parametrów "void OnPropertyNotify()". Będzie ona wywoływana **po** zmiennej członkowskiej został zmodyfikowany.  
   
 ## <a name="disppropertyparam--macro-description"></a>Disp_property_param — — Opis elementu makro  
   
@@ -165,26 +165,26 @@ property Y    (DISPID)0x00010002
 ## <a name="remarks"></a>Uwagi  
   
 ### <a name="parameters"></a>Parametry  
- `theClass`  
+ *theClass*  
  Nazwa klasy.  
   
- `pszName`  
+ *pszName*  
  Zewnętrzna nazwa właściwości.  
   
- `memberGet`  
+ *memberGet*  
  Nazwa funkcji członkowskiej, używany do pobierania właściwości.  
   
- `memberSet`  
+ *zestaw elementów członkowskich*  
  Nazwa funkcji członkowskiej używany do ustawiania właściwości.  
   
- `vtPropType`  
+ *vtPropType*  
  Wartość określająca typ właściwości.  
   
- `vtsParams`  
+ *vtsParams*  
  Ciąg miejsca rozdzielone VTS_ dla każdego parametru.  
   
 ## <a name="remarks"></a>Uwagi  
- Podobnie jak `DISP_PROPERTY_EX` makra, to makro definiuje właściwość dostęp do osobnych funkcje Członkowskie Get i Set. To makro, jednak pozwala określić listę parametrów dla właściwości. Jest to przydatne w przypadku implementowania właściwości, które są indeksowane lub sparametryzowana w inny sposób. Parametry zawsze kładzie się najpierw, następuje nową wartość dla właściwości. Na przykład:  
+ Podobnie jak disp_property_ex — makro, to makro definiuje właściwość dostęp do osobnych funkcje Członkowskie Get i Set. To makro, jednak pozwala określić listę parametrów dla właściwości. Jest to przydatne w przypadku implementowania właściwości, które są indeksowane lub sparametryzowana w inny sposób. Parametry zawsze kładzie się najpierw, następuje nową wartość dla właściwości. Na przykład:  
   
 ```  
 DISP_PROPERTY_PARAM(CMyObject, "item",
@@ -244,32 +244,32 @@ void CMyObject::SetItem(short row,
 ## <a name="remarks"></a>Uwagi  
   
 ### <a name="parameters"></a>Parametry  
- `theClass`  
+ *theClass*  
  Nazwa klasy.  
   
- `pszName`  
+ *pszName*  
  Zewnętrzna nazwa właściwości.  
   
- `dispid`  
+ *identyfikator DISPID*  
  Stały identyfikator DISPID właściwości lub metody.  
   
- `pfnGet`  
+ *pfnGet*  
  Nazwa funkcji członkowskiej, używany do pobierania właściwości.  
   
- `pfnSet`  
+ *pfnSet*  
  Nazwa funkcji członkowskiej używany do ustawiania właściwości.  
   
- `memberName`  
+ *memberName*  
  Nazwa zmiennej członkowskiej, aby mapować do właściwości  
   
- `vtPropType`  
+ *vtPropType*  
  Wartość określająca typ właściwości.  
   
- `vtsParams`  
+ *vtsParams*  
  Ciąg miejsca rozdzielone VTS_ dla każdego parametru.  
   
 ## <a name="remarks"></a>Uwagi  
- Makra te umożliwiają określenie **DISPID** zamiast czekać MFC automatycznie przypisać jeden. Te zaawansowane makra mają takie same nazwy, z wyjątkiem ten identyfikator jest dołączany do nazwy makra (np. **DISP_PROPERTY_ID**) i identyfikator jest określany przez parametr określony tuż po `pszName` parametru. Zobacz AFXDISP. H, aby uzyskać więcej informacji na temat tych makr. **_ID** wpisy muszą znajdować się na końcu mapy wysyłania. Będzie miało wpływ na automatyczne **DISPID** Generowanie w taki sam sposób jak niż **_ID** czy wersji makra ( **DISPID**s są określane na podstawie pozycji). Na przykład:  
+ Makra te umożliwiają określenie **DISPID** zamiast czekać MFC automatycznie przypisać jeden. Te zaawansowane makra mają takie same nazwy, z wyjątkiem ten identyfikator jest dołączany do nazwy makra (np. **DISP_PROPERTY_ID**) i identyfikator jest określany przez parametr określony tuż po *pszName* parametru. Zobacz AFXDISP. H, aby uzyskać więcej informacji na temat tych makr. **_ID** wpisy muszą znajdować się na końcu mapy wysyłania. Będzie miało wpływ na automatyczne **DISPID** Generowanie w taki sam sposób jak niż **_ID** czy wersji makra ( **DISPID**s są określane na podstawie pozycji). Na przykład:  
   
 ```  
 BEGIN_DISPATCH_MAP(CDisp3DPoint,
@@ -298,7 +298,7 @@ property Z     (DISPID)0x00000001
  Określanie ustalonego **DISPID** przydaje się do zachowania zgodności z poprzednimi wersjami istniejących interfejs wysyłania lub zaimplementować niektórych właściwości lub metody zdefiniowane w systemie (zwykle wskazywany przez ujemny  **Identyfikator DISPID**, takich jak **DISPID_NEWENUM** kolekcji).  
   
 #### <a name="retrieving-the-idispatch-interface-for-a-coleclientitem"></a>Trwa pobieranie interfejsu IDispatch dla COleClientItem  
- Wiele serwerów będzie obsługiwać automatyzacji w ich obiekty dokumentu, wraz z funkcjonalności serwera OLE. W celu uzyskania dostępu do tego interfejsu automatyzacji, należy go bezpośrednio **COleClientItem::m_lpObject** zmiennej członkowskiej. Poniższy kod pobiera `IDispatch` interfejsu dla obiekt pochodną `COleClientItem`. Poniższy kod można uwzględnić w aplikacji, jeśli okaże się tej funkcji konieczne:  
+ Wiele serwerów będzie obsługiwać automatyzacji w ich obiekty dokumentu, wraz z funkcjonalności serwera OLE. W celu uzyskania dostępu do tego interfejsu automatyzacji, należy go bezpośrednio `COleClientItem::m_lpObject` zmiennej członkowskiej. Poniższy kod pobiera `IDispatch` interfejsu dla obiekt pochodną `COleClientItem`. Poniższy kod można uwzględnić w aplikacji, jeśli okaże się tej funkcji konieczne:  
   
 ```  
 LPDISPATCH CMyClientItem::GetIDispatch()  
@@ -346,7 +346,7 @@ return NULL;
 }  
 ```  
   
- Interfejs wysyłania zwracane z tej funkcji można następnie używane bezpośrednio lub dołączone do `COleDispatchDriver` dla bezpieczny dostęp. Jeśli używasz go bezpośrednio, upewnij się, należy wywołać jej **wersji** elementu członkowskiego kiedy za pomocą wskaźnika ( `COleDispatchDriver` destruktor nie).  
+ Interfejs wysyłania zwracane z tej funkcji można następnie używane bezpośrednio lub dołączone do `COleDispatchDriver` dla bezpieczny dostęp. Jeśli używasz go bezpośrednio, upewnij się, należy wywołać jej `Release` elementu członkowskiego kiedy za pomocą wskaźnika ( `COleDispatchDriver` destruktor nie).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)   

@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7b81c49ce96fd026cd1974e505ac50dec131611
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58c8c9aaaf212e98fdeff1e639bb09423304e643
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355165"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957406"
 ---
 # <a name="canimationpoint-class"></a>Klasa CAnimationPoint
 Implementuje funkcje punktu, w których współrzędne można animować.  
@@ -114,10 +114,10 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pXTransition`  
+ *pXTransition*  
  Wskaźnik do przejścia dla X współrzędnych.  
   
- `pYTransition`  
+ *pYTransition*  
  Wskaźnik do przejścia y współrzędną.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -138,16 +138,16 @@ CAnimationPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ptDefault`  
+ *ptDefault*  
  Określa domyślny współrzędnych punktu.  
   
- `nGroupID`  
+ *nGroupID*  
  Określa identyfikator grupy.  
   
- `nObjectID`  
+ *nObjectID*  
  Określa identyfikator obiektu.  
   
- `dwUserData`  
+ *dwUserData*  
  Określa dane zdefiniowane przez użytkownika.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -161,7 +161,7 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*, CAnimationVaria
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lst`  
+ *lst*  
  Funkcja zwraca wartość, zawiera wskaźniki do dwóch obiektów CAnimationVariable reprezentujący współrzędne X i Y.  
   
 ##  <a name="getdefaultvalue"></a>  CAnimationPoint::GetDefaultValue  
@@ -185,7 +185,7 @@ BOOL GetValue(CPoint& ptValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ptValue`  
+ *ptValue*  
  Dane wyjściowe. Gdy metoda zwróci wartość, zawiera bieżącą wartość.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -255,7 +255,7 @@ void operator=(const CPoint& ptSrc);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ptSrc`  
+ *ptSrc*  
  Odnosi się do CPoint lub punktu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -269,7 +269,7 @@ void SetDefaultValue(const POINT& ptDefault);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ptDefault`  
+ *ptDefault*  
  Określa domyślną wartość punktu.  
   
 ### <a name="remarks"></a>Uwagi  

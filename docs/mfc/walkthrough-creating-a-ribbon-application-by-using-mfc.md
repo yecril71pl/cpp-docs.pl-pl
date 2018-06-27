@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f715830c110f03811202d2e98dc097bfe712208
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b1dada4601b7e20dd4e05af861d48099ce2391c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385232"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950983"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Wskazówki: tworzenie aplikacji wstążki za pomocą MFC
 Ten przewodnik przedstawia sposób użycia **Kreator aplikacji MFC** do tworzenia aplikacji, która domyślnie ma wstążki. Można następnie rozwiń węzeł wstążki, dodając **niestandardowy** wstążki kategorię, która ma **ulubione** wstążki panelu, a następnie dodać niektóre często używane polecenia do panelu.  
@@ -32,7 +32,7 @@ Ten przewodnik przedstawia sposób użycia **Kreator aplikacji MFC** do tworzeni
   
 1.  Użyj **Kreator aplikacji MFC** do utworzenia aplikacji MFC, która ma wstążki. Aby uruchomić kreatora, na **pliku** menu wskaż **nowy**, a następnie kliknij przycisk **projektu**.  
   
-2.  W **nowy projekt** okna dialogowego rozwiń **Visual C++** węźle **zainstalowane szablony**, wybierz pozycję **MFC**, a następnie wybierz  **Aplikacja MFC**. Wpisz nazwę projektu, na przykład `MFCRibbonApp`, a następnie kliknij przycisk **OK**.  
+2.  W **nowy projekt** okna dialogowego rozwiń **Visual C++** węźle **zainstalowane szablony**, wybierz pozycję **MFC**, a następnie wybierz  **Aplikacja MFC**. Wpisz nazwę projektu, na przykład *MFCRibbonApp*, a następnie kliknij przycisk **OK**.  
   
 3.  Na pierwszej stronie **Kreator aplikacji MFC**, kliknij przycisk **dalej**.  
   
@@ -40,7 +40,7 @@ Ten przewodnik przedstawia sposób użycia **Kreator aplikacji MFC** do tworzeni
   
 5.  Na **Obsługa dokumentów złożonych** strony, upewnij się, że **Brak** jest zaznaczone, a następnie kliknij przycisk **dalej**.  
   
-6.  Na **właściwości szablonu dokumentu** strony w **rozszerzenie pliku** wpisz rozszerzenie nazwy pliku dla dokumentów, które tworzy tej aplikacji, na przykład `mfcrbnapp`. Kliknij przycisk **Dalej**.  
+6.  Na **właściwości szablonu dokumentu** strony w **rozszerzenie pliku** wpisz rozszerzenie nazwy pliku dla dokumentów, które tworzy tej aplikacji, na przykład *mfcrbnapp*. Kliknij przycisk **Dalej**.  
   
 7.  Na **obsługi bazy danych** strony, upewnij się, że **Brak** jest zaznaczone, a następnie kliknij przycisk **dalej**.  
   
@@ -62,14 +62,14 @@ Ten przewodnik przedstawia sposób użycia **Kreator aplikacji MFC** do tworzeni
   
      Kategorię, która ma podpis **kategoria 1** jest tworzony. Domyślnie kategoria zawiera jeden panel.  
   
-     Kliknij prawym przyciskiem myszy **kategoria 1** , a następnie kliknij przycisk **właściwości**. W **właściwości** Zmień **podpis** do `Custom`.  
+     Kliknij prawym przyciskiem myszy **kategoria 1** , a następnie kliknij przycisk **właściwości**. W **właściwości** Zmień **podpis** do *niestandardowy*.  
   
      **Duże obrazy** i **małe obrazy** właściwości określają mapy bitowe, które są używane jako ikony dla elementów wstążki w tej kategorii. Ponieważ tworzenie niestandardowych map bitowych wykracza poza zakres tego instruktażu, należy po prostu użyć map bitowych utworzonych przez kreatora. Małe mapy bitowe mają rozmiar 16 x 16 pikseli. Do małych obrazów należy stosować mapy bitowe wykorzystywane przez identyfikator zasobu IDB_FILESMALL. Duże mapy bitowe mają rozmiar 32 x 32 piksele. Do dużych obrazów należy stosować mapy bitowe używane przez identyfikator zasobu IDB_FILELARGE.  
   
     > [!NOTE]
     >  Na ekranach o dużej liczbie punktów na cal (HDPI) automatycznie są używane wersje HDPI obrazów.  
   
-3.  Następnie dostosuj panel. Panele służą do grupowania elementów, które są ze sobą logicznie powiązane. Na przykład na **Home** tej aplikacji, na karcie **Wytnij**, **kopiowania**, i **Wklej** polecenia znajdują się na  **Schowek** panelu. Aby dostosować panelu, kliknij prawym przyciskiem myszy **Panel1** , a następnie kliknij przycisk **właściwości**. W **właściwości** Zmień **podpis** do `Favorites`.  
+3.  Następnie dostosuj panel. Panele służą do grupowania elementów, które są ze sobą logicznie powiązane. Na przykład na **Home** tej aplikacji, na karcie **Wytnij**, **kopiowania**, i **Wklej** polecenia znajdują się na  **Schowek** panelu. Aby dostosować panelu, kliknij prawym przyciskiem myszy **Panel1** , a następnie kliknij przycisk **właściwości**. W **właściwości** Zmień **podpis** do *ulubione*.  
   
      Można określić **indeks obrazu** panelu. Liczba ta określa ikonę, która jest wyświetlana, jeśli panel wstążki jest dodawany do **pasek narzędzi Szybki dostęp**. Ikona nie jest wyświetlana na samym panelu wstążki.  
   
@@ -83,9 +83,9 @@ Ten przewodnik przedstawia sposób użycia **Kreator aplikacji MFC** do tworzeni
   
      Aby utworzyć **drukowania** przycisku, przeciągnij narzędzie przycisk do panelu.  
   
-     W **właściwości** Zmień **identyfikator** właściwości **id_file_print —**, który już powinien być zdefiniowany. Zmień **podpis** do `Print`. Zmień **indeks obrazu** do `4`.  
+     W **właściwości** Zmień **identyfikator** właściwości **id_file_print —**, który już powinien być zdefiniowany. Zmień **podpis** do *drukowania*. Zmień **indeks obrazu** do *4*.  
   
-     Aby utworzyć **szybkie drukowanie** , kliknij Dalej, aby kolumna wartości właściwości **elementów Menu**, a następnie kliknij przycisk wielokropka (**...** ). W **Edytor elementów**, kliknij przycisk bez etykiety **Dodaj** przycisk, aby utworzyć element menu. W **właściwości** Zmień **podpis** do `Quick Print`, **identyfikator** do `ID_FILE_PRINT_DIRECT`, i **obrazu** do `5` . Właściwość obrazu określa ikonę Szybkie drukowanie w zasobie mapy bitowej IDB_FILESMALL.  
+     Aby utworzyć **szybkie drukowanie** , kliknij Dalej, aby kolumna wartości właściwości **elementów Menu**, a następnie kliknij przycisk wielokropka (**...** ). W **Edytor elementów**, kliknij przycisk bez etykiety **Dodaj** przycisk, aby utworzyć element menu. W **właściwości** Zmień **podpis** do *szybkie drukowanie*, **identyfikator** do *ID_FILE_PRINT_DIRECT*, i **obrazu** do *5*. Właściwość obrazu określa ikonę Szybkie drukowanie w zasobie mapy bitowej IDB_FILESMALL.  
   
 3.  Aby sprawdzić, czy przyciski zostały dodane do panelu wstążki, skompiluj aplikację i ją uruchom. Do skompilowania aplikacji, na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**. Jeśli aplikacja tworzy się pomyślnie, uruchom aplikację, klikając **Rozpocznij debugowanie** na **debugowania** menu. **Drukowania** przycisk i pole kombi pole na **ulubione** panelu na **niestandardowy** powinna być wyświetlana na Wstążce.  
   

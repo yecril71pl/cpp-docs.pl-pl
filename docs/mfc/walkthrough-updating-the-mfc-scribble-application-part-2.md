@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eae1dd3c1662aafb6b52d2ecb821e073adc0bfd5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83caf353ca4a45e3ae834a41062de955a91dbb8a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385394"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952440"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Wskazówki: aktualizowanie aplikacji bazgrołów MFC (część 2)
 [Część 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) tego instruktażu pokazano, jak dodać Fluent wstążki pakietu Office do klasycznego Bazgroły aplikacji. Tej części przedstawiono sposób dodawania paneli Wstążki i kontrolek, które użytkownicy mogą używać zamiast menu i poleceń.  
@@ -47,31 +47,31 @@ ms.locfileid: "33385394"
   
 #### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>Aby dodać panel widoku i okno panel do pasek wstążki  
   
-1.  Utwórz panelu o nazwie `View`, która ma dwa pola wyboru, które Przełącz pasek stanu i narzędzi.  
+1.  Utwórz panelu o nazwie *widoku*, która ma dwa pola wyboru, które Przełącz pasek stanu i narzędzi.  
   
     1.  Z **przybornika**, przeciągnij **panelu** do **Home** kategorii. Przeciągnij dwa **pola wyboru** do panelu.  
   
-    2.  Kliknij panel można zmodyfikować jego właściwości. Zmień **podpis** do `View`.  
+    2.  Kliknij panel można zmodyfikować jego właściwości. Zmień **podpis** do *widoku*.  
   
-    3.  Kliknij pierwszy pole wyboru, aby zmodyfikować jego właściwości. Zmień **identyfikator** do `ID_VIEW_TOOLBAR` i **podpis** do `Toolbar`.  
+    3.  Kliknij pierwszy pole wyboru, aby zmodyfikować jego właściwości. Zmień **identyfikator** do *id_view_toolbar —* i **podpis** do *narzędzi*.  
   
-    4.  Kliknij przycisk drugie pole wyboru, aby zmodyfikować jego właściwości. Zmień **identyfikator** do `ID_VIEW_STATUS_BAR` i **podpis** do `Status Bar`.  
+    4.  Kliknij przycisk drugie pole wyboru, aby zmodyfikować jego właściwości. Zmień **identyfikator** do *id_view_status_bar —* i **podpis** do *pasek stanu*.  
   
-2.  Utwórz panelu o nazwie `Window` mający przycisku podziału. Po kliknięciu przycisku podziału menu skrótów wyświetlane trzy polecenia, które zostały już zdefiniowane w aplikacji bazgrołów.  
+2.  Utwórz panelu o nazwie *okna* mający przycisku podziału. Po kliknięciu przycisku podziału menu skrótów wyświetlane trzy polecenia, które zostały już zdefiniowane w aplikacji bazgrołów.  
   
     1.  Z **przybornika**, przeciągnij **panelu** do **Home** kategorii. Przeciągnij **przycisk** do panelu.  
   
-    2.  Kliknij panel można zmodyfikować jego właściwości. Zmień **podpis** do `Window`.  
+    2.  Kliknij panel można zmodyfikować jego właściwości. Zmień **podpis** do *okna*.  
   
-    3.  Kliknij przycisk. Zmień **podpis** do `Windows`, **klucze** do `w`, **indeks dużego obrazu** do `1`, i **Tryb podziału** Aby `False`. Następnie kliknij przycisk wielokropka (**...** ) obok pozycji **elementów Menu** otworzyć **Edytor elementów** okno dialogowe.  
+    3.  Kliknij przycisk. Zmień **podpis** do *Windows*, **klucze** do *w*, **indeks dużego obrazu** do *1* , i **Tryb podziału** do *False*. Następnie kliknij przycisk wielokropka (**...** ) obok pozycji **elementów Menu** otworzyć **Edytor elementów** okno dialogowe.  
   
     4.  Kliknij przycisk **Dodaj** trzy razy, aby dodać trzy przyciski.  
   
-    5.  Kliknij pierwszy przycisk, a następnie zmień **podpis** do `New Window`, i **identyfikator** do `ID_WINDOW_NEW`.  
+    5.  Kliknij pierwszy przycisk, a następnie zmień **podpis** do *nowe okno*, i **identyfikator** do *id_window_new —*.  
   
-    6.  Kliknij przycisk drugiej, a następnie zmień **podpis** do `Cascade`, i **identyfikator** do `ID_WINDOW_CASCADE`.  
+    6.  Kliknij przycisk drugiej, a następnie zmień **podpis** do *Cascade*, i **identyfikator** do *id_window_cascade —*.  
   
-    7.  Kliknij przycisk trzeci, a następnie zmień **podpis** do `Tile`, i **identyfikator** do `ID_WINDOW_TILE_HORZ`.  
+    7.  Kliknij przycisk trzeci, a następnie zmień **podpis** do *Kafelek*, i **identyfikator** do *id_window_tile_horz —*.  
   
 3.  Zapisać zmiany, a następnie kompilacji i uruchomić aplikację. **Widoku** i **okna** panele powinny być wyświetlane. Kliknij przyciski, aby potwierdzić, że działają poprawnie.  
   
@@ -84,11 +84,11 @@ ms.locfileid: "33385394"
   
 1.  Z **przybornika**, przeciągnij **panelu** do **Home** kategorii. Przeciągnij dwa **przyciski** do panelu.  
   
-2.  Kliknij panel można zmodyfikować jego właściwości. Zmień **podpis** do `Help`.  
+2.  Kliknij panel można zmodyfikować jego właściwości. Zmień **podpis** do *pomocy*.  
   
-3.  Kliknij pierwszy przycisk. Zmień **podpis** do `Help Topics`, i **identyfikator** do `ID_HELP_FINDER`.  
+3.  Kliknij pierwszy przycisk. Zmień **podpis** do *tematy Pomocy*, i **identyfikator** do *ID_HELP_FINDER*.  
   
-4.  Kliknij przycisk drugiego. Zmień **podpis** do `About Scribble...`, i **identyfikator** do `ID_APP_ABOUT`.  
+4.  Kliknij przycisk drugiego. Zmień **podpis** do *o bazgrołów...* , i **identyfikator** do *id_app_about —*.  
   
 5.  Zapisać zmiany, a następnie kompilacji i uruchomić aplikację. A **pomocy** powinien być wyświetlany panel, która zawiera dwa przyciski wstążki.  
   
@@ -106,21 +106,21 @@ ms.locfileid: "33385394"
   
 1.  Z **przybornika**, przeciągnij **panelu** do **Home** kategorii. Przeciągnij **pole wyboru** i dwa **pola kombi** do panelu.  
   
-2.  Kliknij panel można zmodyfikować jego właściwości. Zmień **podpis** do `Pen`.  
+2.  Kliknij panel można zmodyfikować jego właściwości. Zmień **podpis** do *pióra*.  
   
-3.  Kliknij pole wyboru. Zmień **podpis** do `Use Thick`, i **identyfikator** do `ID_PEN_THICK_OR_THIN`.  
+3.  Kliknij pole wyboru. Zmień **podpis** do *Użyj gruby*, i **identyfikator** do *ID_PEN_THICK_OR_THIN*.  
   
-4.  Kliknij pierwszy pola kombi. Zmień **podpis** do `Thin Pen`, **identyfikator** do `ID_PEN_THIN_WIDTH`, **tekst** do `2`, **typu** do `Drop List`, i **danych** do `1;2;3;4;5;6;7;8;9;`.  
+4.  Kliknij pierwszy pola kombi. Zmień **podpis** do *elastycznej pióra*, **identyfikator** do *ID_PEN_THIN_WIDTH*, **tekst** do *2* , **Typu** do *porzucić listy*, i **danych** do *1 2 3; 4; 5; 6; 7; 8; 9;*.  
   
-5.  Kliknij pole kombi drugiego. Zmień **podpis** do `Thick Pen`, **identyfikator** do `ID_PEN_THICK_WIDTH`, **tekst** do `5`, **typu** do `Drop List`, i **danych** do `5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`.  
+5.  Kliknij pole kombi drugiego. Zmień **podpis** do *grubość pióra*, **identyfikator** do *ID_PEN_THICK_WIDTH*, **tekst** do  *5*, **typu** do *porzucić listy*, i **danych** do *5, 6, 7; 8; 9; 10; 11; 12; 13; 14; 15; 16; 17; 18; 19, 20;*.  
   
 6.  Wszystkie istniejące elementy menu nie odpowiadają nowego pola kombi. Dlatego należy utworzyć element menu dla każdej opcji pióra.  
   
     1.  W **widok zasobów** okna, otwórz IDR_SCRIBBTYPE zasobów menu.  
   
-    2.  Kliknij przycisk **pióra** otworzyć p**en** menu. Następnie kliknij przycisk **typu w tym miejscu** i typu `Thi&n Pen`.  
+    2.  Kliknij przycisk **pióra** otworzyć p**en** menu. Następnie kliknij przycisk **typu w tym miejscu** i typ *gr & n pióra*.  
   
-    3.  Kliknij prawym przyciskiem myszy tekst, który właśnie wpisane w celu otwarcia **właściwości** okna, a następnie zmień identyfikator właściwości `ID_PEN_THIN_WIDTH`.  
+    3.  Kliknij prawym przyciskiem myszy tekst, który właśnie wpisane w celu otwarcia **właściwości** okna, a następnie zmień identyfikator właściwości *ID_PEN_THIN_WIDTH*.  
   
     4.  Należy także utworzyć program obsługi zdarzeń dla każdego elementu menu pióra. Kliknij prawym przyciskiem myszy **gr & n pióra** element menu, który właśnie utworzony, a następnie kliknij przycisk **Dodaj program obsługi zdarzeń**. **Kreator obsługi zdarzeń** jest wyświetlany.  
   
@@ -142,9 +142,9 @@ m_nThinWidth = atoi — (pThinComboBox -> GetItem(nCurSel));
   
     1.  In the **Resource View** window, open the IDR_SCRIBBTYPE menu resource.  
   
-    2.  Click **Pen** to open the pen menu. Then click **Type Here** and type `Thic&k Pen`.  
+    2.  Click **Pen** to open the pen menu. Then click **Type Here** and type *Thic&k Pen*.  
   
-    3.  Right-click the text that you just typed to display the **Properties** window. Change the ID property to `ID_PEN_THICK_WIDTH`.  
+    3.  Right-click the text that you just typed to display the **Properties** window. Change the ID property to *ID_PEN_THICK_WIDTH*.  
   
     4.  Right-click the **Thick Pen** menu item that you just created and then click **Add Event Handler**. The **Event Handler Wizard** is displayed.  
   
@@ -178,11 +178,11 @@ if (nCurSel>= 0)
   
 #### <a name="to-add-a-color-button-to-the-pen-panel"></a>Aby dodać przycisk koloru do panelu pióra  
   
-1.  Przed dodaniem przycisk koloru, należy utworzyć element menu dla niego. W **widok zasobów** okna, otwórz IDR_SCRIBBTYPE zasobów menu. Kliknij przycisk **pióra** element menu, aby otworzyć menu pióra. Następnie kliknij przycisk **typu w tym miejscu** i typu `&Color`. Kliknij prawym przyciskiem myszy tekst, który właśnie został wpisany do wyświetlenia **właściwości** okna. Zmień identyfikator do `ID_PEN_COLOR`.  
+1.  Przed dodaniem przycisk koloru, należy utworzyć element menu dla niego. W **widok zasobów** okna, otwórz IDR_SCRIBBTYPE zasobów menu. Kliknij przycisk **pióra** element menu, aby otworzyć menu pióra. Następnie kliknij przycisk **typu w tym miejscu** i typ *& kolorów*. Kliknij prawym przyciskiem myszy tekst, który właśnie został wpisany do wyświetlenia **właściwości** okna. Zmień identyfikator do *ID_PEN_COLOR*.  
   
 2.  Teraz Dodaj przycisk koloru. Z **przybornika**, przeciągnij **przycisk koloru** do **pióra** panelu.  
   
-3.  Kliknij przycisk koloru. Zmień **podpis** do `Color`, **identyfikator** do `ID_PEN_COLOR`, **SimpleLook** do `True`, **indeks dużego obrazu** do `1`, i **Tryb podziału** do `False`.  
+3.  Kliknij przycisk koloru. Zmień **podpis** do *kolor*, **identyfikator** do *ID_PEN_COLOR*, **SimpleLook** do  *Wartość true,*, **indeks dużego obrazu** do *1*, i **Tryb podziału** do *False*.  
   
 4.  Zapisać zmiany, a następnie kompilacji i uruchomić aplikację. Powinien być wyświetlany przycisk Nowy kolor na **pióra** panelu. Jednak nie można użyć, ponieważ nie ma jeszcze obsługi zdarzeń. W następnych krokach przedstawiono sposób dodawania obsługi zdarzeń dla przycisk koloru.  
   

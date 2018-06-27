@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcb63ade0d1f2ad179448f448a10d88b71b91037
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5240cf50b35b2e1a300071ccb6cc15a065ac364e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383977"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951640"
 ---
 # <a name="toolbar-fundamentals"></a>Paski narzędzi — podstawowe założenia
 W tym artykule opisano podstawowe implementacji MFC, które umożliwia dodanie narzędzi domyślne do aplikacji przez wybranie opcji w Kreatorze aplikacji. Tematy obejmują:  
@@ -56,11 +56,11 @@ W tym artykule opisano podstawowe implementacji MFC, które umożliwia dodanie n
 -   Zarządza narzędzi, łącznie z jej możliwości dokowania lub float.  
   
 ##  <a name="_core_the_toolbar_in_code"></a> Pasek narzędzi w kodzie  
- Pasek narzędzi jest [ctoolbar —](../mfc/reference/ctoolbar-class.md) obiektu zadeklarowany jako element członkowski danych klasy aplikacji **cmainframe —** klasy. Innymi słowy obiekt narzędzi jest osadzony w obiekcie okna w ramce głównej. Oznacza to, że MFC tworzy pasek narzędzi tworzy ramkę okna i niszczy paska narzędzi po jego niszczy okno ramowe. W następującej deklaracji klasy częściowej, wiele aplikacji interfejsu (MDI) dokumentu zawiera elementy członkowskie danych osadzonych narzędzi i paska stanu osadzonych. Przedstawiono również zastąpienia z `OnCreate` funkcję elementu członkowskiego.  
+ Pasek narzędzi jest [ctoolbar —](../mfc/reference/ctoolbar-class.md) obiektu zadeklarowany jako element członkowski danych klasy aplikacji `CMainFrame` klasy. Innymi słowy obiekt narzędzi jest osadzony w obiekcie okna w ramce głównej. Oznacza to, że MFC tworzy pasek narzędzi tworzy ramkę okna i niszczy paska narzędzi po jego niszczy okno ramowe. W następującej deklaracji klasy częściowej, wiele aplikacji interfejsu (MDI) dokumentu zawiera elementy członkowskie danych osadzonych narzędzi i paska stanu osadzonych. Przedstawiono również zastąpienia z `OnCreate` funkcję elementu członkowskiego.  
   
  [!code-cpp[NVC_MFCListView#6](../atl/reference/codesnippet/cpp/toolbar-fundamentals_1.h)]  
   
- Tworzenie narzędzi występuje w **CMainFrame::OnCreate**. Wywołania MFC [OnCreate](../mfc/reference/cwnd-class.md#oncreate) po utworzeniu okna ramki, ale przed staje się widoczna. Wartość domyślna `OnCreate` że Kreator aplikacja generuje wykonuje następujące zadania narzędzi:  
+ Tworzenie narzędzi występuje w `CMainFrame::OnCreate`. Wywołania MFC [OnCreate](../mfc/reference/cwnd-class.md#oncreate) po utworzeniu okna ramki, ale przed staje się widoczna. Wartość domyślna `OnCreate` że Kreator aplikacja generuje wykonuje następujące zadania narzędzi:  
   
 1.  Wywołania `CToolBar` obiektu [Utwórz](../mfc/reference/ctoolbar-class.md#create) funkcji członkowskiej, aby utworzyć podstawową [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) obiektu.  
   
@@ -69,7 +69,7 @@ W tym artykule opisano podstawowe implementacji MFC, które umożliwia dodanie n
 3.  Wywołania funkcji, aby umożliwić dokowania, zmiennoprzecinkowych i etykietki narzędzi. Aby uzyskać więcej informacji o tych wywołań, zobacz artykuł [dokowanie i przestawne paski narzędzi](../mfc/docking-and-floating-toolbars.md).  
   
 > [!NOTE]
->  Ogólne MFC próbki [DOCKTOOL](../visual-cpp-samples.md) zawiera ilustracje starych i nowych pasków narzędzi MFC. Paski narzędzi, które używają **coldtoolbar —** wymagają wywołań w kroku 2, aby `LoadBitmap` (zamiast `LoadToolBar`) i `SetButtons`. Nowych pasków narzędzi wymagają wywołań `LoadToolBar`.  
+>  Ogólne MFC próbki [DOCKTOOL](../visual-cpp-samples.md) zawiera ilustracje starych i nowych pasków narzędzi MFC. Paski narzędzi, które używają `COldToolbar` wymagają wywołań w kroku 2, aby `LoadBitmap` (zamiast `LoadToolBar`) i `SetButtons`. Nowych pasków narzędzi wymagają wywołań `LoadToolBar`.  
   
  Dokowanie, zmiennoprzecinkowych i wywołania etykietki narzędzia są opcjonalne. Możesz usunąć te wiersze z `OnCreate` Jeśli wolisz. Wynik jest narzędzi, które pozostają stałe, nie można float lub redock i nie można wyświetlić etykietek narzędzi.  
   

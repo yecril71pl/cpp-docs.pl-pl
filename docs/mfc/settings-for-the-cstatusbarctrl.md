@@ -17,24 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1eea701c33001ffa3585c2d5847f3056454b7850
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1dde1f005e53aff7ebe505d1ce619bf5c94410f8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380165"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955459"
 ---
 # <a name="settings-for-the-cstatusbarctrl"></a>Ustawienia formantu CStatusBarCtrl
-To domyślne położenie [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) okno stanu jest wzdłuż dolnej części okna nadrzędnego, ale można określić `CCS_TOP` styl, który był wyświetlany u góry obszaru klienckiego okna nadrzędnego.  
+To domyślne położenie [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) okno stanu jest wzdłuż dolnej części okna nadrzędnego, ale można określić styl CCS_TOP, który był wyświetlany u góry obszaru klienckiego okna nadrzędnego.  
   
- Można określić **SBARS_SIZEGRIP** stylu, aby uwzględnić uchwyt zmiany rozmiaru w prawym końcu `CStatusBarCtrl` okno stanu. Uchwyt zmiany rozmiaru jest podobny do rozmiaru obramowanie; jest prostokątny obszar, który użytkownik może kliknij i przeciągnij, aby zmienić rozmiar okna nadrzędnego.  
+ Można określić styl SBARS_SIZEGRIP, aby uwzględnić uchwyt zmiany rozmiaru w prawym końcu `CStatusBarCtrl` okno stanu. Uchwyt zmiany rozmiaru jest podobny do rozmiaru obramowanie; jest prostokątny obszar, który użytkownik może kliknij i przeciągnij, aby zmienić rozmiar okna nadrzędnego.  
   
 > [!NOTE]
->  Jeśli znajdzie się `CCS_TOP` i **SBARS_SIZEGRIP** style, wynikowy uchwyt zmiany rozmiaru nie działa mimo że rysuje go w oknie Stan systemu.  
+>  Jeśli znajdzie style CCS_TOP i SBARS_SIZEGRIP wynikowy uchwyt zmiany rozmiaru nie działa mimo że rysuje go w oknie Stan systemu.  
   
  Procedury okna dla okna stanu automatycznie ustawia początkowy rozmiar i położenie okna formantu. Szerokość jest taka sama jak obszaru klienckiego okna nadrzędnego. Wysokość jest oparta na metryki czcionki aktualnie wybranego w oknie Stan kontekstu urządzenia i szerokości obramowania okna.  
   
- Zawsze, gdy odbierze procedurę okna automatycznie dopasowuje rozmiar okna stanu `WM_SIZE` wiadomości. Zwykle, gdy okno nadrzędne zmienia się rozmiar, wysyła nadrzędnego `WM_SIZE` wiadomości do okna stanu.  
+ Zawsze, gdy odbierze komunikat WM_SIZE procedurę okna automatycznie dostosowuje rozmiar okna stanu. Zwykle gdy zmienia się rozmiar okna nadrzędnego, nadrzędnego wysyła komunikat WM_SIZE w oknie stanu.  
   
  Minimalna wysokość obszaru okno stanu można ustawić przez wywołanie metody [SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight), określając minimalną wysokość w pikselach. Obszar rysowania nie ma obramowanie okna.  
   

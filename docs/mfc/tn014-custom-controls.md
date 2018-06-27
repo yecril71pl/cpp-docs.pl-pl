@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a7ef7f6fd9a9da92c208366ee401d55d07fd5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9625b3eafa75bdafff7d17ea63db8904d9b49529
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384585"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956850"
 ---
 # <a name="tn014-custom-controls"></a>TN014: formanty niestandardowe
 Ta uwaga opisuje Obsługa MFC dla formantów niestandardowych i własnym rysowania. On również opisuje podklasy dynamicznej oraz relacji między [CWnd](../mfc/reference/cwnd-class.md) obiektów i `HWND`s.  
@@ -100,11 +100,11 @@ Ta uwaga opisuje Obsługa MFC dla formantów niestandardowych i własnym rysowan
 ## <a name="using-self-draw-controls-and-menus"></a>Za pomocą formantów własnym rysowania i menu  
  Własnym rysowania menu, konieczne jest przesłonięcie zarówno `OnMeasureItem` i `OnDrawItem` metody.  
   
- Pola listy własnym rysowania i pola kombi, konieczne jest przesłonięcie `OnMeasureItem` i `OnDrawItem`. Należy określić `LBS_OWNERDRAWVARIABLE` styl pól listy lub `CBS_OWNERDRAWVARIABLE` pola kombi styl szablonu okna dialogowego. `OWNERDRAWFIXED` Stylu nie będzie działać z własnym narysować elementy stałego elementu wysokość jest ustalana przed własnym narysować kontrolki są dołączone do pola listy. (Można użyć metod [CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight) i [CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight) Aby obejść to ograniczenie.)  
+ Pola listy własnym rysowania i pola kombi, konieczne jest przesłonięcie `OnMeasureItem` i `OnDrawItem`. Należy określić lbs_ownerdrawvariable — styl pola listy lub pola kombi cbs_ownerdrawvariable — styl szablonu okna dialogowego. Styl OWNERDRAWFIXED nie będzie działać z własnym narysować elementy stałego elementu wysokość jest ustalana przed własnym narysować kontrolki są dołączone do pola listy. (Można użyć metod [CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight) i [CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight) Aby obejść to ograniczenie.)  
   
- Przełączanie do `OWNERDRAWVARIABLE` styl wymusi systemu, aby zastosować `NOINTEGRALHEIGHT` styl do kontrolki. Ponieważ kontrolka nie może obliczyć całkowity wysokość o zmiennej wielkości elementów, domyślny styl `INTEGRALHEIGHT` jest ignorowany i kontrolka jest zawsze `NOINTEGRALHEIGHT`. Jeśli elementy są stałą wysokość, uniemożliwia elementów podzielonych na części są rysowane przez określenie rozmiaru formantu jako liczba całkowita mnożnik rozmiarze elementu.  
+ Przełączanie do stylu OWNERDRAWVARIABLE wymusi system, aby stosował styl NOINTEGRALHEIGHT do formantu. Ponieważ kontrolka nie może obliczyć całkowity wysokość o zmiennej wielkości elementów, domyślny styl INTEGRALHEIGHT jest ignorowana, a formant zawsze jest NOINTEGRALHEIGHT. Jeśli elementy są stałą wysokość, uniemożliwia elementów podzielonych na części są rysowane przez określenie rozmiaru formantu jako liczba całkowita mnożnik rozmiarze elementu.  
   
- Na własnym Rysowanie pola listy i pola kombi z `LBS_SORT` lub `CBS_SORT` stylu, konieczne jest przesłonięcie `OnCompareItem` metody.  
+ Na własnym Rysowanie pola listy i pola kombi w stylu lbs_sort — lub cbs_sort —, konieczne jest przesłonięcie `OnCompareItem` metody.  
   
  Na własnym Rysowanie pola listy i pola kombi `OnDeleteItem` zwykle nie jest przeciążona. Można zastąpić `OnDeleteItem` Jeśli chcesz wykonywać żadnych specjalnych przetwarzania. Jeden przypadek, których to dotyczy jest gdy dodatkowej pamięci lub innych zasobów, które są przechowywane z każdego elementu pola listy, jak pola lub kombi.  
   

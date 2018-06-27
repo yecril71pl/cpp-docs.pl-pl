@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bd7210f2f63d55fc4244a6b88456ede1265c8e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9cb5c8892583adac01ca883034b8c0af18595c9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384872"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954598"
 ---
 # <a name="using-tree-controls"></a>Używanie kontrolek drzewa
 Typowy sposób formantu drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) jest zgodny ze wzorcem poniżej:  
@@ -31,7 +31,7 @@ Typowy sposób formantu drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)
   
 -   Umieszczanie danych w formancie przez wywołanie metody `CTreeCtrl`w [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) funkcja raz dla każdego elementu danych. `InsertItem` Zwraca dojście do elementu, który służy do odwołuje się do niego później, takie jak kiedy dodawanie elementów podrzędnych. Odpowiedni moment, aby zainicjować danych jest w `OnInitDialog` (dla formantów w oknach dialogowych) lub `OnInitialUpdate` (dla widoków).  
   
--   Gdy użytkownik rozpocznie się za pomocą formantu, wysyła komunikaty powiadomień dotyczących różnych. Można określić funkcji do obsługi poszczególnych wiadomości mają być obsługiwane przez dodanie **on_notify_reflect —** makra mapy komunikatów okna kontrolki lub dodając `ON_NOTIFY` makra mapy komunikatów okna nadrzędnego. Zobacz [komunikaty powiadomień dotyczących formantu drzewa](../mfc/tree-control-notification-messages.md) dalszej części tego tematu listę możliwych powiadomienia.  
+-   Gdy użytkownik rozpocznie się za pomocą formantu, wysyła komunikaty powiadomień dotyczących różnych. Można określić funkcji do obsługi wszystkich wiadomości, które mają być obsługiwane przez dodanie on_notify_reflect — makro w mapie komunikatów okna kontrolki lub dodawanie on_notify — makro do mapy komunikatów okna nadrzędnego. Zobacz [komunikaty powiadomień dotyczących formantu drzewa](../mfc/tree-control-notification-messages.md) dalszej części tego tematu listę możliwych powiadomienia.  
   
 -   Wywołanie różnych funkcji członkowskich zestawu, aby ustawić wartości dla formantu. Zmiany, które można wprowadzić obejmują ustawianie wcięć i zmiana tekstu, obrazów lub dane skojarzone z elementem.  
   

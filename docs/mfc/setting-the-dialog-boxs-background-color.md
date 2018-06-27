@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 114a1b53e55d6e341c09d2437caa8d26b9c1b0fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29870af50c549f432e87b6cc39be50d41fa40240
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379986"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951220"
 ---
 # <a name="setting-the-dialog-boxs-background-color"></a>Ustawianie koloru tła okna dialogowego
-Można ustawić kolor tła z okien dialogowych Obsługa `WM_CTLCOLOR` wiadomości dla okna okno dialogowe. Kolor, który ustawiono jest używany tylko określonego okna dialogowego.  
+Aby ustawić kolor tła z okien dialogowych, należy obsługi wiadomości wm_ctlcolor — okno dialogowe. Kolor, który ustawiono jest używany tylko określonego okna dialogowego.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Cykl życiowy okna dialogowego](../mfc/life-cycle-of-a-dialog-box.md)   

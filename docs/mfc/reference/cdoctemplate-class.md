@@ -56,11 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7674e9a25f4794d40a977fce914ab6ac0131de25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a1ee27994a83206b576452d30b108f01c794353
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957566"
 ---
 # <a name="cdoctemplate-class"></a>Cdoctemplate — klasa
 Abstrakcyjna klasa podstawowa definiujący funkcje podstawowe dla szablonów dokumentów.  
@@ -106,7 +107,7 @@ class CDocTemplate : public CCmdTarget
 ## <a name="remarks"></a>Uwagi  
  Zazwyczaj utworzyć co najmniej jeden szablon dokumentu w implementacji aplikacji `InitInstance` funkcji. Szablon dokumentu definiuje relacje trzy typy klas:  
   
--   Klasy dokumentów, który pochodzi od **CDocument**.  
+-   Klasy dokumentów, który pochodzi od `CDocument`.  
   
 -   Klasy widoku, która zawiera dane z klasy dokumentu wymienionych powyżej. Można pochodzi ta klasa z `CView`, `CScrollView`, `CFormView`, lub `CEditView`. (Można również użyć `CEditView` bezpośrednio.)  
   
@@ -144,7 +145,7 @@ virtual void AddDocument(CDocument* pDoc);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDoc`  
+ *pDoc*  
  Wskaźnik do dokumentu, który ma zostać dodana.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -162,7 +163,7 @@ CDocTemplate (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDResource`  
+ *nIDResource*  
  Określa identyfikator zasoby używane do typu dokumentu. Może to obejmować menu, ikona tabeli akceleratora i zasoby ciągów.  
   
  Zasób ciągu składa się z maksymalnie siedem podciągów oddzielone znakiem "\n" (znak "\n" jest potrzebny jako symbolu zastępczego, jeśli nie dołączono podciągu jednak znakami "\n" nie są konieczne); te podciągów opisu typu dokumentu. Aby uzyskać informacje na podciągów, zobacz [GetDocString](#getdocstring). Ten zasób ciągu znajduje się w pliku zasobów aplikacji. Na przykład:  
@@ -179,13 +180,13 @@ CDocTemplate (
   
  Należy pamiętać, że ciąg rozpoczyna się od znaku "\n"; jest to spowodowane pierwszego podciągu nie jest używany przez aplikacje MDI i dlatego nie jest dołączana. Można edytować tego ciągu za pomocą Edytora ciągu; cały ciąg jest wyświetlany jako pojedynczy wpis w edytorze ciągu nie jako siedmiu oddzielne wpisy.  
   
- `pDocClass`  
- Wskazuje `CRuntimeClass` obiekt klasy dokumentu. Ta klasa jest **CDocument**-klasy definiowane w celu odzwierciedlenia dokumentów.  
+ *pDocClass*  
+ Wskazuje `CRuntimeClass` obiekt klasy dokumentu. Ta klasa jest `CDocument`-klasy definiowane w celu odzwierciedlenia dokumentów.  
   
- `pFrameClass`  
+ *pFrameClass*  
  Wskazuje `CRuntimeClass` obiekt klasy ramki okna. Ta klasa może być `CFrameWnd`-klasy lub może być `CFrameWnd` sam Jeśli domyślne zachowanie dla użytkownika głównego okna ramowego.  
   
- `pViewClass`  
+ *pViewClass*  
  Wskazuje `CRuntimeClass` obiekt klasy widoku. Ta klasa jest `CView`-klasy zdefiniuj do wyświetlania dokumentów.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -199,8 +200,8 @@ virtual void CloseAllDocuments(BOOL bEndSession);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bEndSession`  
- Określa, czy sesja zostanie zakończona. Jest **TRUE** Jeśli w sesji jest zakończone, w przeciwnym **FALSE**.  
+ *bEndSession*  
+ Nie używany.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja elementu członkowskiego zwykle jest używana jako część polecenia Exit pliku. Domyślna implementacja ta funkcja wymaga [CDocument::DeleteContents](../../mfc/reference/cdocument-class.md#deletecontents) funkcji członkowskiej można usunąć dokumentu danych, a następnie zamyka okna ramowe dla wszystkich widoków dołączonym do dokumentu.  
@@ -227,19 +228,19 @@ virtual CFrameWnd* CreateNewFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDoc`  
+ *pDoc*  
  Dokument, do którego należy odwoływać się nowe okno ramowe. Może być **NULL**.  
   
- `pOther`  
+ *pOther*  
  Okno ramowe nowe okno ramowe o podstawie. Może być **NULL**.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do okno ramowe nowo utworzony lub **NULL** w przypadku wystąpienia błędu.  
   
 ### <a name="remarks"></a>Uwagi  
- `CreateNewFrame` używa `CRuntimeClass` obiektów przekazany do konstruktora, aby utworzyć nowe okno ramowe widok i dołączony dokument. Jeśli `pDoc` parametr jest **NULL**, ramach danych wyjściowych śledzenia wiadomości.  
+ `CreateNewFrame` używa `CRuntimeClass` obiektów przekazany do konstruktora, aby utworzyć nowe okno ramowe widok i dołączony dokument. Jeśli *pDoc* parametr jest **NULL**, ramach danych wyjściowych śledzenia wiadomości.  
   
- `pOther` Parametr jest używany do wdrożenia nowego okna polecenia. Zapewnia on okno ramowe, na którym się nowe okno ramowe modelu. Nowe okno ramowe jest zazwyczaj tworzony niewidoczne. Wywołanie tej funkcji można utworzyć okna ramowe poza implementacja standardowych ramy nowy plik i Otwórz plik.  
+ *POther* parametr jest używany do wdrożenia nowego okna polecenia. Zapewnia on okno ramowe, na którym się nowe okno ramowe modelu. Nowe okno ramowe jest zazwyczaj tworzony niewidoczne. Wywołanie tej funkcji można utworzyć okna ramowe poza implementacja standardowych ramy nowy plik i Otwórz plik.  
   
 ##  <a name="createoleframe"></a>  CDocTemplate::CreateOleFrame  
  Tworzy okno ramowe OLE.  
@@ -252,20 +253,20 @@ CFrameWnd* CreateOleFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do ramki okna nadrzędnego.  
   
- `pDoc`  
+ *pDoc*  
  Wskaźnik do dokumentu, do którego należy odwoływać się nowe okno ramowe OLE.  
   
- `bCreateView`  
+ *bCreateView*  
  Określa, czy widok jest tworzony wraz z ramki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do okno ramowe w przypadku powodzenia; w przeciwnym razie **NULL**.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `bCreateView` wynosi zero, zostanie utworzona pusta ramka.  
+ Jeśli *bCreateView* wynosi zero, zostanie utworzona pusta ramka.  
   
 ##  <a name="getdocstring"></a>  CDocTemplate::GetDocString  
  Pobiera ciąg skojarzone z typem dokumentu.  
@@ -277,7 +278,7 @@ virtual BOOL GetDocString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rString`  
+ *rString*  
  Odwołanie do `CString` obiekt, który będzie zawierać ciąg, gdy funkcja zwraca wartość.  
   
  *index*  
@@ -321,7 +322,7 @@ virtual POSITION GetFirstDocPosition() const = 0;
  [CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md) i [CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md) zarówno zastąpienie tego czystej funkcji wirtualnej. Każda klasa pochodzi od `CDocTemplate` musi także zastępować tej funkcji.  
   
 ##  <a name="getnextdoc"></a>  CDocTemplate::GetNextDoc  
- Pobiera element listy identyfikowane przez `rPos`, następnie ustawia `rPos` do **pozycji** wartość następnego wpisu na liście.  
+ Pobiera element listy identyfikowane przez *RPO*, następnie ustawia *RPO* do **pozycji** wartość następnego wpisu na liście.  
   
 ```  
 virtual CDocument* GetNextDoc(POSITION& rPos) const = 0;  
@@ -331,11 +332,11 @@ virtual CDocument* GetNextDoc(POSITION& rPos) const = 0;
  Wskaźnik do następnego dokumentu na liście dokumentów skojarzone z tym szablonem.  
   
 ### <a name="parameters"></a>Parametry  
- `rPos`  
+ *RPO*  
  Odwołanie do **pozycji** wartość zwrócona przez poprzednie wywołanie [GetFirstDocPosition](#getfirstdocposition) lub `GetNextDoc`.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli element pobrane przez ostatnie na liście jest następnie nowa wartość `rPos` ustawiono **NULL**.  
+ Jeśli element pobrane przez ostatnie na liście jest następnie nowa wartość *RPO* ustawiono **NULL**.  
   
  Można użyć `GetNextDoc` w pętli do przodu iteracji, jeśli ustanowić położenie początkowe w wyniku wywołania [GetFirstDocPosition](#getfirstdocposition).  
   
@@ -352,17 +353,17 @@ virtual void InitialUpdateFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pFrame`  
+ *pFrame*  
  Okno ramowe wymaga aktualizacji początkowej.  
   
- `pDoc`  
+ *pDoc*  
  Dokument, z którą jest skojarzone ramki. Może być **NULL**.  
   
- `bMakeVisible`  
+ *bMakeVisible*  
  Wskazuje, czy ramki powinien być widoczny i aktywne.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie **IntitialUpdateFrame** po utworzeniu nowej ramki z `CreateNewFrame`. Wywołanie tej funkcji powoduje, że widoki w danym przedziale ramki do odbierania ich `OnInitialUpdate` wywołania. Ponadto jeśli nie ma wcześniej aktywny widok, widok głównej okno ramowe jest uaktywniona; podstawowy widok jest widokiem o identyfikatorze podrzędnych **AFX_IDW_PANE_FIRST**. Ponadto okno ramowe stają się widoczne czy `bMakeVisible` jest różna od zera. Jeśli `bMakeVisible` wynosi zero, bieżący fokus i wyświetlany stan okno ramowe zostanie zmieniona.  
+ Wywołanie **IntitialUpdateFrame** po utworzeniu nowej ramki z `CreateNewFrame`. Wywołanie tej funkcji powoduje, że widoki w danym przedziale ramki do odbierania ich `OnInitialUpdate` wywołania. Ponadto jeśli nie ma wcześniej aktywny widok, widok głównej okno ramowe jest uaktywniona; podstawowy widok jest widokiem o identyfikatorze podrzędnych **AFX_IDW_PANE_FIRST**. Ponadto okno ramowe stają się widoczne czy `bMakeVisible` jest różna od zera. Jeśli *bMakeVisible* wynosi zero, bieżący fokus i wyświetlany stan okno ramowe zostanie zmieniona.  
   
  Nie jest konieczne do wywołania tej funkcji, korzystając z programu framework implementacja nowy plik i Otwórz plik.  
   
@@ -386,11 +387,11 @@ virtual Confidence MatchDocType(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszPathName`  
+ *lpszPathName*  
  Nazwa ścieżki pliku, którego typ jest ustalany.  
   
- `rpDocMatch`  
- Wskaźnik do dokumentu, który jest przypisany pasującego dokumentu, jeśli plik określony przez `lpszPathName` jest już otwarty.  
+ *rpDocMatch*  
+ Wskaźnik do dokumentu, który jest przypisany pasującego dokumentu, jeśli plik określony przez *lpszPathName* jest już otwarty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość z zakresu od **zaufania** wyliczenia, który jest zdefiniowany w następujący sposób:  
@@ -410,9 +411,9 @@ enum Confidence
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja służy do określenia typu dokumentu szablon używany do otwierania pliku. Jeśli aplikacja obsługuje wiele typów plików, na przykład służy tej funkcji do określenia, który szablonów dokumentów dostępnych jest odpowiednie dla danego pliku, wywołując `MatchDocType` dla każdego szablonu Włącz i wybieranie szablonów zgodnie z zwracana wartość zaufania.  
   
- Jeśli plik określony przez `lpszPathName` jest już otwarty, funkcja zwraca **CDocTemplate::yesAlreadyOpen** i kopiuje plik **CDocument** obiektu do obiektu w `rpDocMatch`.  
+ Jeśli plik określony przez *lpszPathName* jest już otwarty, funkcja zwraca **CDocTemplate::yesAlreadyOpen** i kopiuje plik **CDocument** obiekt do obiekt w *rpDocMatch*.  
   
- Jeśli plik nie jest otwarty, ale rozszerzenie w `lpszPathName` określonego przez rozszerzenie **CDocTemplate::filterExt**, funkcja zwraca **CDocTemplate::yesAttemptNative** i ustawia `rpDocMatch` do **NULL**. Aby uzyskać więcej informacji na temat **CDocTemplate::filterExt**, zobacz [CDocTemplate::GetDocString](#getdocstring).  
+ Jeśli plik nie jest otwarty, ale rozszerzenie w *lpszPathName* określonego przez rozszerzenie **CDocTemplate::filterExt**, funkcja zwraca **CDocTemplate::yesAttemptNative** i ustawia *rpDocMatch* do **NULL**. Aby uzyskać więcej informacji na temat **CDocTemplate::filterExt**, zobacz [CDocTemplate::GetDocString](#getdocstring).  
   
  Jeśli żaden przypadek ma wartość PRAWDA, funkcja zwraca **CDocTemplate::yesAttemptForeign**.  
   
@@ -430,27 +431,27 @@ virtual CDocument* OpenDocumentFile(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszPathName`  
+ [in] *lpszPathName*  
  Wskaźnik do ścieżki pliku, który zawiera dokument, aby go otworzyć.  
   
- [in] `bAddToMRU`  
+ [in] *bAddToMRU*  
  `TRUE` Wskazuje, że dokument jest jednym z najbardziej aktualną plików; `FALSE` wskazuje dokumentu nie jest jednym z najnowszych plików.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do dokumentu, którego plik ma nazwę przez `lpszPathName`; `NULL` w przypadku niepowodzenia.  
+ Wskaźnik do dokumentu, którego plik ma nazwę przez *lpszPathName*; `NULL` w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Otwiera plik, w których ścieżka jest określona przez `lpszPathName`. Jeśli `lpszPathName` jest `NULL`, zostanie utworzony nowy plik, zawierający typu skojarzone z tym szablonem dokumentu.  
+ Otwiera plik, w których ścieżka jest określona przez *lpszPathName*. Jeśli *lpszPathName* jest `NULL`, zostanie utworzony nowy plik, zawierający typu skojarzone z tym szablonem dokumentu.  
   
 ##  <a name="removedocument"></a>  CDocTemplate::RemoveDocument  
- Usuwa dokumentu wskazywana przez `pDoc` z listy dokumentów skojarzone z tym szablonem.  
+ Usuwa dokumentu wskazywana przez *pDoc* z listy dokumentów skojarzone z tym szablonem.  
   
 ```  
 virtual void RemoveDocument(CDocument* pDoc);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDoc`  
+ *pDoc*  
  Wskaźnik do dokumentu, który ma zostać usunięty.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -474,13 +475,13 @@ void SetContainerInfo(UINT nIDOleInPlaceContainer);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDOleInPlaceContainer`  
+ *nIDOleInPlaceContainer*  
  Identyfikator zasoby używane po aktywowaniu osadzonego obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołanie tej funkcji, aby ustawić zasobów do użycia, kiedy obiekt OLE jest aktywowana w miejscu. Te zasoby mogą obejmować menu i tabele akceleratora. Ta funkcja jest zazwyczaj wywoływana [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) funkcji aplikacji.  
   
- Menu skojarzone z `nIDOleInPlaceContainer` zawiera separatorów umożliwiających menu aktywowanego elementu w miejscu do scalenia z menu kontenera aplikacji. Aby uzyskać więcej informacji dotyczących scalania menu serwera i kontener, zobacz artykuł [menu i zasoby (OLE)](../../mfc/menus-and-resources-ole.md).  
+ Menu skojarzone z *nIDOleInPlaceContainer* zawiera separatorów umożliwiających menu aktywowanego elementu w miejscu do scalenia z menu kontenera aplikacji. Aby uzyskać więcej informacji dotyczących scalania menu serwera i kontener, zobacz artykuł [menu i zasoby (OLE)](../../mfc/menus-and-resources-ole.md).  
   
 ##  <a name="setdefaulttitle"></a>  CDocTemplate::SetDefaultTitle  
  Wywołanie tej funkcji, aby załadować dokument domyślny tytuł i wyświetl ją w pasku tytułu dokumentu.  
@@ -511,7 +512,7 @@ void SetServerInfo(
  *nIDOleEmbedding*  
  Identyfikator zasoby używane podczas osadzonego obiektu jest otwarty w osobnym oknie.  
   
- `nIDOleInPlaceServer`  
+ *nIDOleInPlaceServer*  
  Identyfikator zasobów używanych w przypadku osadzonego obiektu aktywacji w miejscu.  
   
  *pOleFrameClass*  
@@ -523,7 +524,7 @@ void SetServerInfo(
 ### <a name="remarks"></a>Uwagi  
  Wywołanie tej funkcji Członkowskich umożliwia identyfikowanie zasobów, które będą używane przez aplikację serwera, gdy użytkownik zażąda aktywację, osadzonego obiektu. Te zasoby składają się z menu i tabele akceleratora. Ta funkcja jest zazwyczaj wywoływana `InitInstance` aplikacji.  
   
- Menu skojarzone z `nIDOleInPlaceServer` zawiera separatorów umożliwiających menu serwera można scalić menu kontenera. Aby uzyskać więcej informacji dotyczących scalania menu serwera i kontener, zobacz artykuł [menu i zasoby (OLE)](../../mfc/menus-and-resources-ole.md).  
+ Menu skojarzone z *nIDOleInPlaceServer* zawiera separatorów umożliwiających menu serwera można scalić menu kontenera. Aby uzyskać więcej informacji dotyczących scalania menu serwera i kontener, zobacz artykuł [menu i zasoby (OLE)](../../mfc/menus-and-resources-ole.md).  
   
 ##  <a name="createpreviewframe"></a>  CDocTemplate::CreatePreviewFrame  
  Tworzy ramkę podrzędnego używany do podglądu rozbudowanego.  
@@ -535,10 +536,10 @@ CFrameWnd* CreatePreviewFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do nadrzędnego okna (zazwyczaj udostępnianych przez powłokę).  
   
- `pDoc`  
+ *pDoc*  
  Wskaźnik do obiektu dokumentu, którego zawartość zostanie wyświetlona.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -557,13 +558,13 @@ void SetPreviewInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDPreviewFrame`  
+ *nIDPreviewFrame*  
  Określa identyfikator zasobu ramki podglądu.  
   
- `pPreviewFrameClass`  
+ *pPreviewFrameClass*  
  Określa wskaźnik do struktury informacji środowiska uruchomieniowego klasy ramki w wersji zapoznawczej.  
   
- `pPreviewViewClass`  
+ *pPreviewViewClass*  
  Określa wskaźnik do struktury informacji klasy środowiska uruchomieniowego widoku podglądu.  
   
 ### <a name="remarks"></a>Uwagi  

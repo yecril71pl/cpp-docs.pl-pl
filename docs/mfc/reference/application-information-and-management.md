@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41b6aa602956c6dcdeda8f6b8c24c1be48c58ce2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ecb761caaeabdd9b4d77f1713bd79a812a3c1a9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358485"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952495"
 ---
 # <a name="application-information-and-management"></a>Informacje o aplikacji i zarządzanie nią
 Podczas pisania aplikacji, Utwórz jeden [CWinApp](../../mfc/reference/cwinapp-class.md)-pochodzi z obiektu. W czasie, może zajść potrzeba uzyskania informacji na temat tego obiektu wynikające ze poza `CWinApp`-pochodzi z obiektu. Lub może być wymagany dostęp do innych obiektów globalnych "mananger".
@@ -84,7 +84,7 @@ CWinThread* AfxBeginThread(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pfnThreadProc`  
+ *pfnThreadProc*  
  Punkty do kontrolowania funkcji wątku roboczego. Nie może być **NULL**. Ta funkcja musi być zadeklarowana w następujący sposób:  
   
  `UINT __cdecl MyControllingFunction( LPVOID pParam );`  
@@ -93,22 +93,22 @@ CWinThread* AfxBeginThread(
  Runtime_class — obiektu pochodną [cwinthread —](../../mfc/reference/cwinthread-class.md).  
   
  *pParam*  
- Parametr przekazywany do kontrolowania funkcji, jak pokazano w deklaracji funkcji w parametrze `pfnThreadProc`.  
+ Parametr przekazywany do kontrolowania funkcji, jak pokazano w deklaracji funkcji w parametrze *pfnThreadProc*.  
   
- `nPriority`  
+ *nPriority*  
  Żądany priorytet wątku. Pełną listę i opis dostępnych priorytetów, zobacz [wykonanie funkcji SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) w zestawie Windows SDK.  
   
- `nStackSize`  
+ *nStackSize*  
  Określa rozmiar w bajtach stosu dla nowego wątku. Jeśli jest to 0, rozmiar stosu domyślnie sam stos rozmiar jako Tworzenie wątku.  
   
- `dwCreateFlags`  
+ *dwCreateFlags*  
  Określa dodatkowe flagi, który kontroluje Tworzenie wątku. Ta flaga może zawierać jedną z dwóch wartości:  
   
 - **CREATE_SUSPENDED** uruchomić wraz z liczbą Wstrzymaj jednego wątku. Użyj **CREATE_SUSPENDED** Jeśli chcesz zainicjować żadnych danych elementu członkowskiego `CWinThread` obiektów, takich jak [m_bAutoDelete](../../mfc/reference/cwinthread-class.md#m_bautodelete) lub członków klasy pochodnej, zanim uruchomienie wątku. Po zakończeniu inicjowania użytkownika, użyj [CWinThread::ResumeThread](../../mfc/reference/cwinthread-class.md#resumethread) można uruchomić wątku uruchomiona. Wątek nie zostanie wykonany, dopóki `CWinThread::ResumeThread` jest wywoływana.  
   
 - **0** uruchomić wątku natychmiast po utworzeniu.  
   
- `lpSecurityAttrs`  
+ *lpSecurityAttrs*  
  Wskazuje [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) strukturę, która określa atrybuty zabezpieczeń dla wątku. Jeśli **NULL**, takimi samymi zabezpieczeniami atrybuty jak tworzenie wątku, który będzie używany. Aby uzyskać więcej informacji na tej struktury zobacz zestaw Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -175,7 +175,7 @@ Użyj `AfxFindResourceHandle` zaprezentuje łańcucha zasobów i Znajdź określ
 HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );  
 ```
 ### <a name="parameters"></a>Parametry  
- `lpszName`  
+ *lpszName*  
  Wskaźnik do ciąg zawierający identyfikator zasobu.    
  *lpszType*  
  Wskaźnik do typu zasobu. Aby uzyskać listę typów zasobów, zobacz [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042) w zestawie Windows SDK.  
@@ -225,7 +225,7 @@ BOOL AFXAPI AfxFreeLibrary(HINSTANCE hInstLib);
   
  Użyj `AfxLoadLibrary` do mapowania modułu biblioteki DLL.  
   
- Należy użyć `AfxFreeLibrary` i `AfxLoadLibrary` (zamiast funkcji Win32 **FreeLibrary** i **LoadLibrary**) Jeśli aplikacja używa wielu wątków. Przy użyciu `AfxLoadLibrary` i `AfxFreeLibrary` upewnia się, że uruchamiania i wyłączania kod, który wykonuje się, gdy rozszerzenie MFC DLL jest załadowany i zwolniony nieuszkodzone stan globalny MFC.  
+ Należy użyć `AfxFreeLibrary` i `AfxLoadLibrary` (zamiast funkcji Win32 `FreeLibrary` i `LoadLibrary`) Jeśli aplikacja używa wielu wątków. Przy użyciu `AfxLoadLibrary` i `AfxFreeLibrary` upewnia się, że uruchamiania i wyłączania kod, który wykonuje się, gdy rozszerzenie MFC DLL jest załadowany i zwolniony nieuszkodzone stan globalny MFC.  
   
 ### <a name="example"></a>Przykład  
  Zobacz przykład [AfxLoadLibrary](#afxloadlibrary).  
@@ -297,12 +297,12 @@ CWnd* AFXAPI AfxGetMainWnd();
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli serwer ma obiekt, który jest w miejscu aktywny wewnątrz kontenera i ten kontener jest aktywna, funkcja zwraca wskaźnik do obiektu okna ramki, który zawiera aktywny dokument w miejscu.  
   
- Jeśli nie ma żadnego obiektu, który jest aktywny w miejscu w kontenerze lub aplikacja nie jest serwerem OLE, ta funkcja po prostu zwraca `m_pMainWnd` obiektu aplikacji.  
+ Jeśli nie ma żadnego obiektu, który jest aktywny w miejscu w kontenerze lub aplikacja nie jest serwerem OLE, ta funkcja po prostu zwraca *m_pMainWnd* obiektu aplikacji.  
   
  Jeśli `AfxGetMainWnd` jest wywoływana z wątku głównej aplikacji, zwraca głównego okna aplikacji zgodnie z regułami powyżej. Jeśli funkcja jest wywoływana z wątku dodatkowej w aplikacji, funkcja zwraca okno główne skojarzone z wątku, który zgłosił wywołania.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli aplikacja nie jest serwerem OLE, a następnie podczas wywoływania tej funkcji jest odpowiednikiem bezpośrednio odwołujących się do `m_pMainWnd` element członkowski obiektu aplikacji.  
+ Jeśli aplikacja nie jest serwerem OLE, a następnie podczas wywoływania tej funkcji jest odpowiednikiem bezpośrednio odwołujących się do *m_pMainWnd* element członkowski obiektu aplikacji.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCWindowing#129](../../mfc/reference/codesnippet/cpp/application-information-and-management_4.cpp)]  
@@ -329,7 +329,7 @@ BOOL AFXAPI AfxGetPerUserRegistration();
   **Nagłówek** afxstat_.h    
   
 ##  <a name="afxgetresourcehandle"></a>  Afxgetresourcehandle —  
- Użyj `HINSTANCE` zwracane przez tę funkcję bezpośredni dostęp do zasobów aplikacji, na przykład w wywołaniach funkcji systemu Windows dojście **FindResource**.  
+ Użyj `HINSTANCE` zwracane przez tę funkcję bezpośredni dostęp do zasobów aplikacji, na przykład w wywołaniach funkcji systemu Windows dojście `FindResource`.  
   
 ```   
 extern HINSTANCE  AfxGetResourceHandle(); 
@@ -406,7 +406,7 @@ Określa, czy okno danego obiektu rozszerzonej ramki.
 BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );  
 ```
 ### <a name="parameters"></a>Parametry  
- [in] `pWnd`  
+ [in] *pWnd*  
  Wskaźnik do obiektu, który jest pochodną `CWnd`.  
    
 ### <a name="return-value"></a>Wartość zwracana  
@@ -442,14 +442,14 @@ Określa, czy dany okna jest obiektem paska narzędzi.
 BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);  
 ```
 ### <a name="parameters"></a>Parametry  
- [in] `pWnd`  
+ [in] *pWnd*  
  Wskaźnik do obiektu, który jest pochodną `CWnd`.  
    
 ### <a name="return-value"></a>Wartość zwracana  
  `TRUE` Jeśli okno podana jest obiektem paska narzędzi w przeciwnym razie `FALSE`.  
    
 ### <a name="remarks"></a>Uwagi  
- Ta metoda zwraca `TRUE` Jeśli `pWnd` pochodną `CMFCToolBar`. Ta metoda jest przydatna, gdy trzeba sprawdzić, czy parametr metody lub funkcji jest `CMFCToolBar` obiektu.  
+ Ta metoda zwraca `TRUE` Jeśli *pWnd* pochodną `CMFCToolBar`. Ta metoda jest przydatna, gdy trzeba sprawdzić, czy parametr metody lub funkcji jest `CMFCToolBar` obiektu.  
    
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxpriv.h  
@@ -510,7 +510,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
   
  Każdy proces zachowuje licznika odwołań dla każdego modułu załadować biblioteki. Ten licznik odwołania jest zwiększany po każdej `AfxLoadLibrary` nosi nazwę i jest zmniejszana za każdym razem `AfxFreeLibrary` jest wywoływana. Jeśli liczba odwołań do zera, moduł jest usunięte przestrzeni adresowej procesu wywołującego i dojście nie jest już prawidłowy.  
   
- Należy użyć `AfxLoadLibrary` i `AfxFreeLibrary` (zamiast funkcji Win32 **LoadLibrary** i **FreeLibrary**) Jeśli aplikacja używa wielu wątków i dynamicznie ładuje MFC Biblioteka DLL rozszerzenia. Przy użyciu `AfxLoadLibrary` i `AfxFreeLibrary` temu, że uruchamiania i wyłączania kod, który wykonuje się, gdy ładowany i zwalnianie biblioteki DLL rozszerzenia MFC nie doprowadzić do uszkodzenia globalne MFC.  
+ Należy użyć `AfxLoadLibrary` i `AfxFreeLibrary` (zamiast funkcji Win32 `LoadLibrary` i `FreeLibrary`) Jeśli aplikacja używa wielu wątków i dynamicznie ładuje bibliotekę DLL rozszerzenia MFC. Przy użyciu `AfxLoadLibrary` i `AfxFreeLibrary` temu, że uruchamiania i wyłączania kod, który wykonuje się, gdy ładowany i zwalnianie biblioteki DLL rozszerzenia MFC nie doprowadzić do uszkodzenia globalne MFC.  
   
  Przy użyciu `AfxLoadLibrary` w aplikacji wymaga dynamiczne łącze do wersji biblioteki DLL MFC; plik nagłówka `AfxLoadLibrary`, Afxdll_.h, jest tylko włączone, jeśli MFC jest połączony z aplikacji jako biblioteki DLL. To jest celowe, ponieważ należy połączyć się z wersją biblioteki DLL MFC lub utworzeniu biblioteki DLL rozszerzeń MFC.  
   
@@ -567,7 +567,7 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
 ### <a name="remarks"></a>Uwagi  
  Funkcja ta klasa jest automatycznie wyrejestrować po zwolnić biblioteki DLL.  
   
- W kompilacjach-DLL `AfxRegisterClass` identyfikator jest zdefiniowany jako makra, który jest mapowany na funkcję Windows **RegisterClass**, ponieważ są automatycznie wyrejestrować klasy zarejestrowany w aplikacji. Jeśli używasz `AfxRegisterClass` zamiast **RegisterClass**, kod może być używany bez zmiany zarówno w aplikacji, jak i w bibliotece DLL.  
+ W kompilacjach-DLL `AfxRegisterClass` identyfikator jest zdefiniowany jako makra, który jest mapowany na funkcję Windows `RegisterClass`, ponieważ są automatycznie wyrejestrować klasy zarejestrowany w aplikacji. Jeśli używasz `AfxRegisterClass` zamiast `RegisterClass`, kod może być używany bez zmiany zarówno w aplikacji, jak i w bibliotece DLL.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_DLL#3](../../atl-mfc-shared/codesnippet/cpp/application-information-and-management_10.cpp)]  
@@ -598,17 +598,17 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
   
 -   Ustawia ikonę na standardowy, Flaga wymachują ikonę logo systemu Windows.  
   
- `hCursor`  
+ *hCursor*  
  Określa dojścia do zasobu kursora do zainstalowania w każdym oknie utworzone na podstawie klasy okna. Jeśli używasz domyślnego **0**, zostanie wyświetlony standardowy **IDC_ARROW** kursora.  
   
  *hbrBackground*  
  Określa dojścia do zasobu pędzla do zainstalowania w każdym oknie utworzone na podstawie klasy okna. Jeśli używasz domyślnego **0**, konieczne będzie **NULL** pędzel tła i sieci będą okna, domyślnie usunie jego tła podczas przetwarzania [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055).  
   
- `hIcon`  
+ *hIcon*  
  Określa dojścia do zasobu ikony do zainstalowania w każdym oknie utworzone na podstawie klasy okna. Jeśli używasz domyślnego **0**, zostanie wyświetlony standardowy, Flaga wymachują ikony logo systemu Windows.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zerem ciągu zawierającego nazwę klasy. Można przekazać tę nazwę klasy, aby **Utwórz** funkcji członkowskiej we `CWnd` lub innych **CWnd -** pochodzi z klasy można utworzyć okna. Nazwa jest generowany przez Microsoft Foundation Class Library.  
+ Zerem ciągu zawierającego nazwę klasy. Można przekazać tę nazwę klasy, aby `Create` funkcji członkowskiej we `CWnd` lub innych **CWnd -** pochodzi z klasy można utworzyć okna. Nazwa jest generowany przez Microsoft Foundation Class Library.  
   
 > [!NOTE]
 >  Wartość zwracana jest wskaźnik do statycznego buforu. Aby zapisać ten ciąg, przypisz go do `CString` zmiennej.  
@@ -636,7 +636,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  `TRUE` Wskazuje, że informacje rejestru jest kierowany do **HKCU** węzła; `FALSE` wskazuje, że aplikacja zapisuje informacje rejestru do domyślnego węzła. Domyślny węzeł jest **wpisów z HKEY_CLASSES_ROOT** ( **HKCR**).  
   
 ### <a name="remarks"></a>Uwagi  
@@ -660,7 +660,7 @@ void AFXAPI AfxSetResourceHandle(HINSTANCE hInstResource);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hInstResource`  
+ *hInstResource*  
  Dojście wystąpienia lub modułu do. Plik EXE lub DLL z której są ładowane zasoby aplikacji.  
   
 ### <a name="example"></a>Przykład  
@@ -691,8 +691,8 @@ BOOL AfxSocketInit(WSADATA* lpwsaData = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpwsaData`  
- Wskaźnik do [WSADATA](../../mfc/reference/wsadata-structure.md) struktury. Jeśli `lpwsaData` nie jest równa `NULL`, następnie adres `WSADATA` struktury jest wypełniony przez wywołanie `WSAStartup`. Ta funkcja także upewnia się, że `WSACleanup` jest wywoływana dla Ciebie, zanim zakończy aplikacji.  
+ *lpwsaData*  
+ Wskaźnik do [WSADATA](../../mfc/reference/wsadata-structure.md) struktury. Jeśli *lpwsaData* nie jest równa `NULL`, następnie adres `WSADATA` struktury jest wypełniony przez wywołanie `WSAStartup`. Ta funkcja także upewnia się, że `WSACleanup` jest wywoływana dla Ciebie, zanim zakończy aplikacji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
@@ -730,16 +730,16 @@ BOOL AFXAPI AfxWinInit(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hInstance`  
+ *hInstance*  
  Dojście moduł aktualnie uruchomione.  
   
  *hPrevInstance*  
  Dojście do poprzedniego wystąpienia aplikacji. W przypadku aplikacji z Win32 ten parametr jest zawsze **NULL**.  
   
- `lpCmdLine`  
+ *lpCmdLine*  
  Wskazuje zerem ciąg określający wiersz polecenia dla aplikacji.  
   
- `nCmdShow`  
+ *nCmdShow*  
  Określa, jak zostaną pokazane w głównym oknie aplikacji graficznego interfejsu użytkownika.  
   
 ### <a name="remarks"></a>Uwagi  

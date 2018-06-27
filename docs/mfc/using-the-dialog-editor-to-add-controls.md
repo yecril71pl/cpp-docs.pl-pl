@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f891366c4d195c012f57a6de9a6b96bc1aafceb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 19cb52659c92b470057098edf3b65de4042e3bb9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381954"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950373"
 ---
 # <a name="using-the-dialog-editor-to-add-controls"></a>Używanie edytora okien dialogowych do dodawania formantów
-Podczas tworzenia zasobu szablonu okna dialogowego z [Edytor okien dialogowych](../windows/dialog-editor.md), przeciągnij formanty z palety kontrolek i upuść je w oknie dialogowym. Spowoduje to dodanie specyfikacje dla tego typu zasobu szablonu okna dialogowego. Podczas konstruowania obiektu okna dialogowego i wywołanie jego **Utwórz** lub `DoModal` funkcji członkowskiej platformę tworzy kontrolki systemu Windows i umieszcza je w oknie dialogowym na ekranie.  
+Podczas tworzenia zasobu szablonu okna dialogowego z [Edytor okien dialogowych](../windows/dialog-editor.md), przeciągnij formanty z palety kontrolek i upuść je w oknie dialogowym. Spowoduje to dodanie specyfikacje dla tego typu zasobu szablonu okna dialogowego. Podczas konstruowania obiektu okna dialogowego i wywołanie jego `Create` lub `DoModal` funkcji członkowskiej platformę tworzy kontrolki systemu Windows i umieszcza je w oknie dialogowym na ekranie.  
   
  Zamiast tego możesz [ręcznie utworzyć formanty](../mfc/adding-controls-by-hand.md) Jeśli chcesz. To jest więcej pracy.  
   

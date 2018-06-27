@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e4e4fd0106687927706b0ba303035258de7e651
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f946a7af93a8cbf7a285f0c01ebd0512231f7b3f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357188"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953391"
 ---
 # <a name="carray-class"></a>Carray — klasa
 Obsługuje tablic, które są podobne do tablic C, ale dynamicznie pozwala zmniejszyć i wzrostu w razie potrzeby.  
@@ -70,11 +70,11 @@ class CArray : public CObject
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `TYPE`  
- Parametr szablonu, który określa typ obiekty przechowywane w tablicy. `TYPE` jest parametrem, który jest zwracany przez `CArray`.  
+ *TYP*  
+ Parametr szablonu, który określa typ obiekty przechowywane w tablicy. *Typ* jest parametrem, który jest zwracany przez `CArray`.  
   
- `ARG` *_* `TYPE`  
- Parametr szablonu, który określa typ argumentu, który umożliwia dostęp do obiektów przechowywanych w tablicy. Często odwołanie do `TYPE`. `ARG_TYPE` jest to parametr przekazywany do `CArray`.  
+ *ARG* *_* *TYPU*  
+ Parametr szablonu, który określa typ argumentu, który umożliwia dostęp do obiektów przechowywanych w tablicy. Często odwołanie do *typu*. *ARG_TYPE* parametr przekazywany do `CArray`.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -147,17 +147,17 @@ INT_PTR Add(ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Parametr szablonu określenie argumentów odwołania do elementów w tablicy tego typu.  
   
- `newElement`  
+ *newElement*  
  Element, który ma zostać dodany do tej tablicy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Indeks elementu dodany.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli [SetSize](#setsize) został użyty z `nGrowBy` wartość większą niż 1, a następnie dodatkowa pamięć może zostać przydzielona. Jednak górna granica zwiększy się tylko 1.  
+ Jeśli [SetSize](#setsize) został użyty z *nGrowBy* wartość większą niż 1, a następnie dodatkowa pamięć może zostać przydzielona. Jednak górna granica zwiększy się tylko 1.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#22](../../mfc/codesnippet/cpp/carray-class_1.cpp)]  
@@ -179,7 +179,7 @@ INT_PTR Append(const CArray& src);
 ### <a name="remarks"></a>Uwagi  
  Tablic muszą być tego samego typu.  
   
- W razie potrzeby **Append** mogą przydzielić dodatkową pamięć do uwzględnienia elementów dołączany do tablicy.  
+ W razie potrzeby `Append` mogą przydzielić dodatkową pamięć do uwzględnienia elementów dołączany do tablicy.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#23](../../mfc/codesnippet/cpp/carray-class_2.cpp)]  
@@ -211,7 +211,7 @@ void Copy(const CArray& src);
 ### <a name="remarks"></a>Uwagi  
  Wywołanie tej funkcji Członkowskich w celu zastąpienia elementów co tablica elementów innej tablicy.  
   
- **Kopia** nie spowoduje zwolnienia pamięci, ale w razie potrzeby **kopiowania** mogą przydzielić dodatkową pamięć do uwzględnienia elementów kopiowanych do tablicy.  
+ **Kopiuj** nie spowoduje zwolnienia pamięci, ale w razie potrzeby `Copy` mogą przydzielić dodatkową pamięć do uwzględnienia elementów kopiowanych do tablicy.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#25](../../mfc/codesnippet/cpp/carray-class_4.cpp)]  
@@ -225,7 +225,7 @@ const TYPE& ElementAt(INT_PTR nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Liczba całkowita indeksu, który jest większa lub równa 0 i mniejsza niż wartość zwrócona przez [GetUpperBound](#getupperbound).  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -262,7 +262,7 @@ const TYPE& GetAt(INT_PTR nIndex) const;
  *TYP*  
  Parametr szablonu określający typ elementów tablicy.  
   
- `nIndex`  
+ *nIndex*  
  Liczba całkowita indeksu, który jest większa lub równa 0 i mniejsza niż wartość zwrócona przez [GetUpperBound](#getupperbound).  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -336,7 +336,7 @@ INT_PTR GetUpperBound() const;
 ### <a name="remarks"></a>Uwagi  
  Ponieważ indeksy tablicy są liczony od zera, funkcja zwraca wartość 1 mniej niż `GetSize`.  
   
- Warunek **(GetUpperBound)** = -1 oznacza, że tablica nie zawiera żadnych elementów.  
+ Warunek `GetUpperBound( )` = -1 oznacza, że tablica nie zawiera żadnych elementów.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CArray::GetAt](#getat).  
@@ -356,28 +356,28 @@ void InsertAt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Liczba całkowita indeksu, który może być większa niż wartość zwrócona przez `GetUpperBound`.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Parametr szablonu określający typ elementów w tej macierzy.  
   
- `newElement`  
+ *newElement*  
  Element ma być umieszczone w tej macierzy.  
   
- `nCount`  
+ *nCount*  
  Ile razy ten element powinien być wstawiane (wartość domyślna to 1).  
   
- `nStartIndex`  
+ *nStartIndex*  
  Liczba całkowita indeksu, który może być większa niż wartość zwrócona przez [GetUpperBound](#getupperbound).  
   
- `pNewArray`  
+ *pNewArray*  
  Innej tablicy, który zawiera elementy, które mają zostać dodane do tej tablicy.  
   
 ### <a name="remarks"></a>Uwagi  
  W procesie przewiduje (zwiększając wartość indeksu) istniejącego elementu tego indeksu, a przewiduje się wszystkie elementy powyżej.  
   
- Druga wersja wstawia wszystkie elementy z innego `CArray` kolekcji, zaczynając od `nStartIndex` pozycji.  
+ Druga wersja wstawia wszystkie elementy z innego `CArray` kolekcji, zaczynając od *nStartIndex* pozycji.  
   
  `SetAt` Funkcji, natomiast zastępuje jeden element w określonej tablicy i nie przesunięcia żadnych elementów.  
   
@@ -406,7 +406,7 @@ const TYPE& operator[](int_ptr nindex) const;
  *TYP*  
  Parametr szablonu określający typ elementów w tej macierzy.  
   
- `nIndex`  
+ *nIndex*  
  Indeks elementu można uzyskać dostęp.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -429,17 +429,17 @@ AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pNewData`  
+ *pNewData*  
  Bufor nowego tablicę elementów.  
   
- `pData`  
+ *pData*  
  Stary tablicę elementów.  
   
- `nCount`  
+ *nCount*  
  Liczba elementów w tablicy stary.  
   
 ### <a name="remarks"></a>Uwagi  
- `pNewData` zawsze jest wystarczająco duży do przechowywania wszystkich `pData` elementów.  
+ *pNewData* zawsze jest wystarczająco duży do przechowywania wszystkich *pData* elementów.  
   
  [Carray —](../../mfc/reference/carray-class.md) implementacja używa tej metody można skopiować do bufor nowego stare dane, gdy tablica należy zwiększać i zmniejszać (gdy [SetSize](#setsize) lub [FreeExtra](#freeextra) są nazywane). Domyślna implementacja tylko kopiuje dane.  
   
@@ -468,10 +468,10 @@ void RemoveAt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Liczba całkowita indeksu, który jest większa lub równa 0 i mniejsza niż wartość zwrócona przez [GetUpperBound](#getupperbound).  
   
- `nCount`  
+ *nCount*  
  Liczba elementów do usunięcia.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -490,13 +490,13 @@ void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Liczba całkowita indeksu, który jest większa lub równa 0 i mniejsza niż wartość zwrócona przez [GetUpperBound](#getupperbound).  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Parametr szablonu określenie typu argumenty używane dla odwołania do elementów tablicy.  
   
- `newElement`  
+ *newElement*  
  Nowa wartość elementu mają być przechowywane w określonej pozycji.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -515,13 +515,13 @@ void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Liczba całkowita indeksu, który jest większa lub równa 0.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Parametr szablonu określający typ elementów w tablicy.  
   
- `newElement`  
+ *newElement*  
  Element, który ma zostać dodany do tej tablicy. A **NULL** wartość jest dozwolona.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -540,10 +540,10 @@ void SetSize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nNewSize`  
+ *nNewSize*  
  Nowy rozmiar tablicy (liczba elementów). Musi być większa lub równa 0.  
   
- `nGrowBy`  
+ *nGrowBy*  
  Minimalna liczba gniazd elementu można przydzielić, jeśli konieczne jest zwiększenie rozmiaru.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -551,7 +551,7 @@ void SetSize(
   
  Użyj tej funkcji, aby ustawić rozmiar tablica, przed rozpoczęciem korzystania z tablicy. Jeśli nie używasz `SetSize`, dodawanie elementów do macierzy powoduje jego przydzielić często i skopiować. Częste zmiany alokacji i kopiowanie są mało wydajne i można fragmentu pamięci.  
   
- `nGrowBy` Parametr ma wpływ alokacji pamięci wewnętrznej podczas rośnie tablicy. Zgłoszone przez wykorzystanie przez niego nigdy nie wpływa na rozmiar tablicy [GetSize](#getsize) i [GetUpperBound](#getupperbound). Jeśli zostanie użyta domyślna wartość, MFC przydziela pamięci obliczane, aby uniknąć fragmentacji pamięci i zoptymalizować wydajność, w większości przypadków.  
+ *NGrowBy* parametr ma wpływ alokacji pamięci wewnętrznej podczas rośnie tablicy. Zgłoszone przez wykorzystanie przez niego nigdy nie wpływa na rozmiar tablicy [GetSize](#getsize) i [GetUpperBound](#getupperbound). Jeśli zostanie użyta domyślna wartość, MFC przydziela pamięci obliczane, aby uniknąć fragmentacji pamięci i zoptymalizować wydajność, w większości przypadków.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [GetData](#getdata).  

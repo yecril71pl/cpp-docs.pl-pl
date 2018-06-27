@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822b75ec71d79b6e40ec6b61a77239707c32ce39
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00ace36eef483d8385d718e14e1fc4c5f4e9ea1e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384439"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956476"
 ---
 # <a name="writing-an-internet-client-application-using-mfc-wininet-classes"></a>Pisanie klienckich aplikacji internetowych przy użyciu klas MFC WinInet
 Podstawą co klienckich aplikacji internetowych jest sesji internetowej. MFC implementuje sesji internetowej jako obiektów klasy [CInternetSession](../mfc/reference/cinternetsession-class.md). Za pomocą tej klasy, można utworzyć sesji Internet jeden lub kilka jednoczesnych sesji.  
@@ -43,9 +43,9 @@ Podstawą co klienckich aplikacji internetowych jest sesji internetowej. MFC imp
   
 -   Jeśli używasz `CInternetSession::OpenURL` nawiązać połączenie z serwerem, wywołanie `OpenURL` zwraca `CStdioFile`.  
   
--   Jeśli użyj **CInternetSession::GetFtpConnection**, `GetGopherConnection`, lub `GetHttpConnection` nawiązać połączenie z serwerem, należy wywołać `CFtpConnection::OpenFile`, `CGopherConnection::OpenFile`, lub **CHttpConnection::OpenRequest,**  odpowiednio do zwrócenia `CInternetFile`, `CGopherFile`, lub `CHttpFile`odpowiednio.  
+-   Jeśli użyj `CInternetSession::GetFtpConnection`, `GetGopherConnection`, lub `GetHttpConnection` nawiązać połączenie z serwerem, należy wywołać `CFtpConnection::OpenFile`, `CGopherConnection::OpenFile`, lub `CHttpConnection::OpenRequest`odpowiednio do zwrócenia `CInternetFile`, `CGopherFile`, lub `CHttpFile`, odpowiednio.  
   
- Kroki implementowania klienckich aplikacji internetowych się różnić w zależności od tego, czy tworzyć ogólnego klienta internetowego na podstawie **OpenURL** lub przy użyciu jednej z klienta oparte na protokole **GetConnection** funkcje.  
+ Kroki implementowania klienckich aplikacji internetowych się różnić w zależności od tego, czy tworzyć ogólnego klienta internetowego na podstawie `OpenURL` lub przy użyciu jednej z klienta oparte na protokole `GetConnection` funkcji.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
   

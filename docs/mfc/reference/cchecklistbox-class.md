@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4129da35eca5aecfb1e976361d1716d1cd78e906
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 998a2124d80a03946df1cfeeb4a0223ccbf55b24
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358202"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956570"
 ---
 # <a name="cchecklistbox-class"></a>Klasa CCheckListBox
 Udostępnia funkcje pole listy kontrolnej systemu Windows.  
@@ -82,7 +82,7 @@ class CCheckListBox : public CListBox
   
  `CCheckListBox` jest tylko w przypadku kontrolek rysowanych przez właściciela, ponieważ lista zawiera więcej niż ciągów tekstowych. W najprostszym okno Lista kontrolna zawiera ciągi i pól wyboru, ale nie trzeba mieć tekstu. Na przykład można mieć listę małych map bitowych z polem wyboru obok każdego elementu.  
   
- Aby utworzyć własne pole listy kontrolnej, musi dziedziczyć klasy z `CCheckListBox`. Do własnych klasa wyprowadzona zapisywanie konstruktora klasy pochodnej, następnie wywołaj **Utwórz**.  
+ Aby utworzyć własne pole listy kontrolnej, musi dziedziczyć klasy z `CCheckListBox`. Do własnych klasa wyprowadzona zapisywanie konstruktora klasy pochodnej, następnie wywołaj `Create`.  
   
  Jeśli chcesz obsługiwać Windows komunikaty powiadomień wysłane przez pole listy do elementu nadrzędnego (zazwyczaj klasą pochodną [cdialog —](../../mfc/reference/cdialog-class.md)), Dodaj funkcji członkowskiej wpisu i program obsługi komunikatów map wiadomości do klasy nadrzędnej dla każdego komunikatu.  
   
@@ -96,7 +96,7 @@ class CCheckListBox : public CListBox
   
  **afx_msg** `void` `memberFxn` **();**  
   
- Istnieje tylko jeden wpis mapy komunikatów, który dotyczy w szczególności do **CCheckListBox** (Zobacz też wpisy mapy wiadomości, ale [clistbox —](../../mfc/reference/clistbox-class.md)):  
+ Istnieje tylko jeden wpis mapy komunikatów, który dotyczy w szczególności do `CCheckListBox` (Zobacz też wpisy mapy wiadomości, ale [clistbox —](../../mfc/reference/clistbox-class.md)):  
   
 - **ON_CLBN_CHKCHANGE** użytkownik zmienił stan elementu checkbox.  
   
@@ -126,7 +126,7 @@ CCheckListBox();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Możesz utworzyć `CCheckListBox` obiektu w dwóch krokach. Najpierw zdefiniować klasę pochodzącą od `CCheckListBox`, następnie wywołaj **Utwórz**, która inicjuje okno Lista kontrolna systemu Windows i dołącza go do `CCheckListBox` obiektu.  
+ Możesz utworzyć `CCheckListBox` obiektu w dwóch krokach. Najpierw zdefiniować klasę pochodzącą od `CCheckListBox`, następnie wywołaj `Create`, która inicjuje okno Lista kontrolna systemu Windows i dołącza go do `CCheckListBox` obiektu.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCControlLadenDialog#60](../../mfc/codesnippet/cpp/cchecklistbox-class_1.cpp)]  
@@ -143,25 +143,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
+ *dwStyle*  
  Określa styl pole listy kontrolnej. Styl musi być **lbs_hasstrings —** i **lbs_ownerdrawfixed —** (wszystkie elementy na liście są tego samego wysokość) lub **lbs_ownerdrawvariable —** (elementy na liście są zróżnicowanymi wysokości). Ten styl można łączyć z innymi [style pola listy](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) z wyjątkiem **lbs_usetabstops —**.  
   
- `rect`  
+ *Rect*  
  Określa pole listy kontrolnej rozmiar i położenie. Może to być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [RECT](../../mfc/reference/rect-structure1.md) struktury.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Określa okno nadrzędne pole listy kontrolnej (zazwyczaj `CDialog` obiektu). Nie może być **NULL**.  
   
- `nID`  
+ *nID*  
  Określa identyfikator formantu pole listy kontrolnej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Możesz utworzyć `CCheckListBox` obiektu w dwóch krokach. Najpierw należy zdefiniować klasę pochodzącą od **CcheckListBox** , a następnie wywołać **Utwórz**, która inicjuje okno Lista kontrolna systemu Windows i dołącza go do `CCheckListBox`. Zobacz [CCheckListBox::CCheckListBox](#cchecklistbox) przykładowe.  
+ Możesz utworzyć `CCheckListBox` obiektu w dwóch krokach. Najpierw należy zdefiniować klasę pochodzącą od `CcheckListBox` , a następnie wywołać `Create`, która inicjuje okno Lista kontrolna systemu Windows i dołącza go do `CCheckListBox`. Zobacz [CCheckListBox::CCheckListBox](#cchecklistbox) przykładowe.  
   
- Gdy **Utwórz** wykonuje system Windows wysyła [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), i [WM_ GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) wiadomości do formantu pole listy kontrolnej.  
+ Gdy `Create` wykonuje system Windows wysyła [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), i [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) komunikaty do formantu pole listy kontrolnej.  
   
  Komunikaty te są obsługiwane przez domyślnie [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), i [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) funkcje Członkowskie w `CWnd` klasy podstawowej. Rozszerzenie obsługi wiadomości domyślne, Dodaj mapowanie komunikatów do klasy pochodnej, a funkcje Członkowskie zastąpienie poprzedniego obsługi wiadomości. Zastąpienie `OnCreate`, na przykład, aby wykonać wymagane inicjowania dla nowej klasy.  
   
@@ -189,7 +189,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Długie wskaźnik do [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) strukturę, która zawiera informacje o typie rysunku wymagane.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -197,9 +197,9 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  Domyślnie ta funkcja rysuje domyślnej listy wyboru, składające się z listą parametrów o rozmiarze domyślnym pole wyboru po lewej stronie. Rozmiar listy wyboru jest określona w [Utwórz](#create).  
   
- Przesłonić tę funkcję elementu członkowskiego, aby zaimplementować rysowaniem pola listy kontrolnej rysowania przez właściciela, które nie są domyślnie, takich jak lista kontrolna pola z listy, które nie są ciągami, elementy o zmiennej wysokości lub pola wyboru, które nie są po lewej stronie. Aplikacja powinna przywrócenie wszystkich obiektów grafiki urządzenia interfejsu (GDI), wybrane kontekst wyświetlania dostarczane w `lpDrawItemStruct` przed zakończeniem tej funkcji Członkowskich.  
+ Przesłonić tę funkcję elementu członkowskiego, aby zaimplementować rysowaniem pola listy kontrolnej rysowania przez właściciela, które nie są domyślnie, takich jak lista kontrolna pola z listy, które nie są ciągami, elementy o zmiennej wysokości lub pola wyboru, które nie są po lewej stronie. Aplikacja powinna przywrócenie wszystkich obiektów grafiki urządzenia interfejsu (GDI), wybrane kontekst wyświetlania dostarczane w *lpDrawItemStruct* przed zakończeniem tej funkcji Członkowskich.  
   
- Jeśli elementy pola listy kontrolnej nie są tego samego wysokość, listę kontrolną polu Styl (określony w **Utwórz**) musi być **LBS_OWNERVARIABLE**, i konieczne jest przesłonięcie [MeasureItem](#measureitem) Funkcja.  
+ Jeśli elementy pola listy kontrolnej nie są tego samego wysokość, listę kontrolną polu Styl (określony w `Create`) musi być **LBS_OWNERVARIABLE**, i konieczne jest przesłonięcie [MeasureItem](#measureitem) funkcji.  
   
 ##  <a name="enable"></a>  CCheckListBox::Enable  
  Wywołanie tej funkcji, aby włączyć lub wyłączyć element pole listy kontrolnej.  
@@ -211,10 +211,10 @@ void Enable(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Indeks elementu pole listy kontrolnej włączenia.  
   
- `bEnabled`  
+ *bWłączony*  
  Określa, czy element jest włączony.  
   
 ##  <a name="getcheck"></a>  CCheckListBox::GetCheck  
@@ -225,7 +225,7 @@ int GetCheck(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Liczony od zera indeks pola wyboru, która znajduje się w polu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -258,7 +258,7 @@ BOOL IsEnabled(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Indeks elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -272,7 +272,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpMeasureItemStruct`  
+ *lpMeasureItemStruct*  
  Długie wskaźnik do [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) struktury.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -291,7 +291,7 @@ virtual CRect OnGetCheckPosition(
  *rectItem*  
  Położenie i rozmiar elementu listy.  
   
- `rectCheckBox`  
+ *rectCheckBox*  
  Domyślne położenie i rozmiar pola wyboru elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -310,14 +310,14 @@ void SetCheck(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Liczony od zera indeks pola wyboru, która znajduje się w polu listy.  
   
- `nCheck`  
+ *nSprawdź*  
  Stan przycisku dla określonego pola wyboru. W sekcji uwag możliwych wartości.  
   
 ### <a name="remarks"></a>Uwagi  
- W poniższej tabeli przedstawiono możliwe wartości `nCheck` parametru.  
+ W poniższej tabeli przedstawiono możliwe wartości *nSprawdź* parametru.  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
@@ -333,7 +333,7 @@ void SetCheckStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nStyle`  
+ *nStyle*  
  Określa styl pola wyboru w polu listy kontrolnej.  
   
 ### <a name="remarks"></a>Uwagi  

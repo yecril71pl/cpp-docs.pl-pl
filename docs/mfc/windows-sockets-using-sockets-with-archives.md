@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7ad4e5b94403582f9073e4d3bd3542f8aa75d08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc21c08dbd1d26e519fe7108018299d3d4e94854
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385541"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954370"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets: używanie gniazd z archiwami
 W tym artykule opisano [CSocket — model programowania](#_core_the_csocket_programming_model). Klasa [CSocket —](../mfc/reference/csocket-class.md) dostarcza obsługi gniazda na wyższym poziomie abstrakcji niż klasa [CAsyncSocket](../mfc/reference/casyncsocket-class.md). `CSocket` używana wersja protokołu serializacji MFC do przekazywania danych do i z obiektu gniazda za pomocą MFC [CArchive](../mfc/reference/carchive-class.md) obiektu. `CSocket` Umożliwia blokowanie (podczas zarządzania przetwarzania komunikatów systemu Windows w tle) i umożliwia dostęp do `CArchive`, która zarządza wielu aspektów komunikacji, który będzie musiał wykonać samodzielnie przy użyciu raw interfejsu API albo klasy `CAsyncSocket`.  
@@ -47,7 +47,7 @@ W tym artykule opisano [CSocket — model programowania](#_core_the_csocket_prog
   
 2.  Obiekt używany do tworzenia podstawowych **GNIAZDA** obsługi.  
   
-     Dla `CSocket` obiektu klienta o normalnie powinno być używane domyślne parametry [Utwórz](../mfc/reference/casyncsocket-class.md#create), chyba że potrzebne gniazda datagramów. Dla `CSocket` obiektu serwera, należy określić port w **Utwórz** wywołania.  
+     Dla `CSocket` obiektu klienta o normalnie powinno być używane domyślne parametry [Utwórz](../mfc/reference/casyncsocket-class.md#create), chyba że potrzebne gniazda datagramów. Aby uzyskać `CSocket` obiektu serwera, należy określić port w `Create` wywołania.  
   
     > [!NOTE]
     >  `CArchive` nie działa z gniazda do przesyłania datagramów. Jeśli chcesz użyć `CSocket` dla gniazda datagram, należy użyć klasy, jak w przypadku `CAsyncSocket`, która jest bez archiwizacji. Ponieważ datagramy są zawodnych (nie dotrą do i może zostać powtórzony lub poza sekwencją), nie są zgodne z serializacji za pomocą archiwum. Należy oczekiwać na zakończenie niezawodne i w sekwencji operacji serializacji. Jeśli spróbujesz użyć `CSocket` z `CArchive` obiektu dla datagramu, potwierdzenie MFC nie powiedzie się.  
@@ -59,7 +59,7 @@ W tym artykule opisano [CSocket — model programowania](#_core_the_csocket_prog
      Jeśli gniazda jest serwer, wywołanie [CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen) zacząć prób nasłuchiwania dla połączeń z klienta. Po odebraniu żądania połączenia, zaakceptuj ją przez wywołanie metody [CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept).  
   
     > [!NOTE]
-    >  **Akceptuj** funkcji członkowskiej przyjmuje odwołanie do nowy, pusty `CSocket` obiektu jako jego parametr. Należy utworzyć ten obiekt przed wywołaniem **Akceptuj**. Jeśli ten obiekt gniazda odbędzie się poza zakresem, zamyka połączenie. Nie wywołuj **Utwórz** dla tego nowego obiektu gniazda.  
+    >  `Accept` Funkcji członkowskiej przyjmuje odwołanie do nowy, pusty `CSocket` obiektu jako jego parametr. Należy utworzyć ten obiekt przed wywołaniem `Accept`. Jeśli ten obiekt gniazda odbędzie się poza zakresem, zamyka połączenie. Nie wywołuj `Create` dla tego nowego obiektu gniazda.  
   
 4.  Utwórz [CSocketFile](../mfc/reference/csocketfile-class.md) obiekt kojarzenie `CSocket` obiektu z nim.  
   

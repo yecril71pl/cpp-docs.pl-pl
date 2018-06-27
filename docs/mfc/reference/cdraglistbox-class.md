@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34655c244f13cb721693208fa93353582de452e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 78f2c1843602c1c1db6b05a16bbea0aceec70df2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367214"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955992"
 ---
 # <a name="cdraglistbox-class"></a>Klasa CDragListBox
 Oprócz funkcji pole listy Windows `CDragListBox` klasa umożliwia użytkownikowi Przenieś elementy pola listy, takich jak nazwy plików, w polu listy.  
@@ -96,7 +96,7 @@ virtual BOOL BeginDrag(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pt`  
+ *PT*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiekt, który zawiera współrzędne przeciąganie elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -113,7 +113,7 @@ virtual void CancelDrag(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pt`  
+ *PT*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiekt, który zawiera współrzędne przeciąganie elementu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -134,7 +134,7 @@ virtual UINT Dragging(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pt`  
+ *PT*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiekt, który zawiera x i y ekranu współrzędne kursora.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -157,7 +157,7 @@ virtual void DrawInsert(int nItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Liczony od zera indeks punktu wstawiania.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -176,14 +176,14 @@ virtual void Dropped(
  *nSrcIndex*  
  Określa liczony od zera indeks porzuconych ciągu.  
   
- `pt`  
+ *PT*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiekt, który zawiera współrzędne lokacji docelowej.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślne zachowanie kopiuje element pole listy i jego danych do nowej lokalizacji, a następnie usunięcie oryginalnego elementu. Należy przesłonić tę funkcję, aby dostosować zachowanie domyślne, np. włączenie kopii elementów pole listy ma zostać przeciągnięty do innych lokalizacji na liście.  
   
 ##  <a name="itemfrompt"></a>  CDragListBox::ItemFromPt  
- Wywołanie tej funkcji można pobrać liczony od zera indeks elementu pola listy znajdującym się w `pt`.  
+ Wywołanie tej funkcji można pobrać liczony od zera indeks elementu pola listy znajdującym się w *pt*.  
   
 ```  
 int ItemFromPt(
@@ -192,7 +192,7 @@ int ItemFromPt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pt`  
+ *PT*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiekt zawierający współrzędne punktu, w polu listy.  
   
  *bAutoScroll*  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7be9a6a9db842f1e80be62f48a9990cff36168e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 759f8e6f9349fdcac61f6aca81d311e3bbc39e1d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367259"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957048"
 ---
 # <a name="cdaoindexfieldinfo-structure"></a>CDaoIndexFieldInfo — Struktura
 `CDaoIndexFieldInfo` Struktura zawiera informacje dotyczące obiektu pola indeksu zdefiniowany dla obiektów dostępu do danych (DAO).  
@@ -38,7 +38,7 @@ struct CDaoIndexFieldInfo
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `m_strName`  
+ *m_strName*  
  Unikatowej nazwy obiektu pola indeksu. Aby uzyskać więcej informacji zobacz temat "Właściwości Name" w pomocy DAO.  
   
  *m_bDescending*  

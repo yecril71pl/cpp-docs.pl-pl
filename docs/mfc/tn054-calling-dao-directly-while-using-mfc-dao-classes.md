@@ -23,24 +23,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2acc0d6df4495ed38e7c5a6a34dcfd70108f34b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ed0fc9a18278c4e603b9ddae5197f6b5d03ee21
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385654"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950950"
 ---
 # <a name="tn054-calling-dao-directly-while-using-mfc-dao-classes"></a>TN054: wywoływanie obiektów DAO bezpośrednio podczas używania klas MFC DAO
 > [!NOTE]
 >  Środowiska Visual C++ i kreatorów nie obsługują DAO (mimo że uwzględniono klasy DAO i nadal można ich używać). Firma Microsoft zaleca użycie [szablony OLE DB](../data/oledb/ole-db-templates.md) lub [ODBC i MFC](../data/odbc/odbc-and-mfc.md) dla nowych projektów. Obiekty DAO należy używać tylko w zachowaniu istniejących aplikacji.  
   
- Podczas korzystania z klasami baz danych MFC DAO, mogą wystąpić sytuacje, w których należy użyć DAO bezpośrednio. Zazwyczaj nie będzie to wymagane, ale MFC udostępnił niektórych mechanizmów pomocnika do ułatwienia tworzenia bezpośrednie wywołania DAO proste podczas łączenia z bezpośrednim odwołaniem DAO użycia klas MFC. Tworzenie bezpośrednich DAO wywołania metod obiektu zarządzanego MFC DAO należy włączyć tylko kilka wierszy kodu. Jeśli musisz utworzyć i użyć obiektów DAO, które są *nie* zarządza MFC, trzeba będzie wykonać nieco więcej pracy faktycznie wywołując **wersji** obiektu. Ta uwaga techniczna wyjaśniono, kiedy warto wywołanie DAO bezpośrednio, pomocników MFC czynności ułatwiające i jak używać interfejsów DAO OLE. Ponadto ta uwaga zawiera niektóre funkcje przykład przedstawiający sposób wywołania DAO bezpośrednio do DAO funkcje zabezpieczeń.  
+ Podczas korzystania z klasami baz danych MFC DAO, mogą wystąpić sytuacje, w których należy użyć DAO bezpośrednio. Zazwyczaj nie będzie to wymagane, ale MFC udostępnił niektórych mechanizmów pomocnika do ułatwienia tworzenia bezpośrednie wywołania DAO proste podczas łączenia z bezpośrednim odwołaniem DAO użycia klas MFC. Tworzenie bezpośrednich DAO wywołania metod obiektu zarządzanego MFC DAO należy włączyć tylko kilka wierszy kodu. Jeśli musisz utworzyć i użyć obiektów DAO, które są *nie* zarządza MFC, trzeba będzie wykonać nieco więcej pracy faktycznie wywołując `Release` obiektu. Ta uwaga techniczna wyjaśniono, kiedy warto wywołanie DAO bezpośrednio, pomocników MFC czynności ułatwiające i jak używać interfejsów DAO OLE. Ponadto ta uwaga zawiera niektóre funkcje przykład przedstawiający sposób wywołania DAO bezpośrednio do DAO funkcje zabezpieczeń.  
   
 ## <a name="when-to-make-direct-dao-calls"></a>Kiedy do nawiązywania połączeń bezpośrednich DAO  
  Najbardziej typowe sytuacje wymagające dokonywania bezpośrednie wywołania DAO występuje, gdy kolekcje wymagają odświeżenia lub podczas wdrażania funkcji nie zostały opakowane przez MFC. Zabezpieczenia są najważniejszych funkcji, które nie są udostępniane przez MFC. Jeśli chcesz wdrożyć funkcje zabezpieczeń, należy korzystać bezpośrednio obiekt DAO użytkowników i grup. Oprócz zabezpieczeń istnieje tylko kilka innych DAO funkcji nie są obsługiwane przez MFC. Obejmują one zestaw rekordów klonowania i bazy danych funkcje replikacji, a także kilka późne dodatki do DAO.  
   
 ## <a name="a-brief-overview-of-dao-and-mfcs-implementation"></a>Krótki przegląd wdrożenia DAO i MFC  
- Zawijanie MFC DAO łatwiejsze przy użyciu obsługi wielu szczegółów, dzięki czemu nie trzeba martwić podstawowe czynności ułatwia DAO. Obejmuje to Zainicjowanie OLE, tworzenie i zarządzanie obiekty DAO (szczególnie obiekty kolekcji), błąd sprawdzania i udostępnia interfejsem jednoznacznie, prostszy (nie **VARIANT** lub `BSTR` argumenty). Możesz bezpośrednie wywoływanie DAO i nadal korzystać z tych funkcji. Kod należy wykonać wywołanie jest **wersji** dla obiektów utworzonych przez bezpośrednie DAO wywołuje i *nie* zmodyfikuj te z nich wskaźniki interfejsu, które MFC mogą polegać na wewnętrznie. Na przykład nie należy modyfikować **m_pDAORecordset** członkiem otwarty `CDaoRecordset` obiekt bez zrozumienia *wszystkie* konsekwencje wewnętrznego. Można jednak użyć **m_pDAORecordset** interfejsu wywoływanie obiektów DAO bezpośrednio do pobrania z kolekcji pól. W takim przypadku **m_pDAORecordset** nie będzie można zmodyfikować elementu członkowskiego. Po prostu trzeba wywoływać **wersji** w obiekcie kolekcji pól po zakończeniu pracy z obiektem.  
+ Zawijanie MFC DAO łatwiejsze przy użyciu obsługi wielu szczegółów, dzięki czemu nie trzeba martwić podstawowe czynności ułatwia DAO. Obejmuje to Zainicjowanie OLE, tworzenie i zarządzanie obiekty DAO (szczególnie obiekty kolekcji), błąd sprawdzania i udostępnia interfejsem jednoznacznie, prostszy (nie **VARIANT** lub `BSTR` argumenty). Możesz bezpośrednie wywoływanie DAO i nadal korzystać z tych funkcji. Kod należy wykonać wywołanie jest `Release` dla obiektów utworzonych przez bezpośrednie DAO wywołuje i *nie* zmodyfikuj te z nich wskaźniki interfejsu, które MFC mogą polegać na wewnętrznie. Na przykład nie należy modyfikować *m_pDAORecordset* członkiem otwarty `CDaoRecordset` obiekt bez zrozumienia *wszystkie* konsekwencje wewnętrznego. Można jednak użyć *m_pDAORecordset* interfejsu wywoływanie obiektów DAO bezpośrednio do pobrania z kolekcji pól. W takim przypadku *m_pDAORecordset* nie będzie można zmodyfikować elementu członkowskiego. Po prostu trzeba wywoływać `Release` w obiekcie kolekcji pól po zakończeniu pracy z obiektem.  
   
 ## <a name="description-of-helpers-to-make-dao-calls-easier"></a>Opis pomocników dokonanie DAO wywołuje łatwiejsze  
  Pomocnicy podane umożliwią wywoływanie obiektów DAO łatwiejsze są tego samego wątków, które są używane wewnętrznie w klasach bazy danych DAO MFC. Te pomocników są używane do sprawdzenia kodów powrotnych podczas nawiązywania bezpośredniego połączenia DAO, rejestrowania danych wyjściowych debugowania, sprawdzanie błędów oczekiwanego i zgłaszanie wyjątków odpowiednie, jeśli to konieczne. Istnieją dwa podstawowe funkcje pomocnicze i cztery makra, które mapują na jeden z tych dwóch pomocników. Najlepsze wyjaśnienie jest po prostu odczytać kodu. Zobacz **DAO_CHECK**, **DAO_CHECK_ERROR**, **DAO_CHECK_MEM**, i **DAO_TRACE** w AFXDAO. H Zobacz makra, i zobaczyć **AfxDaoCheck** i **AfxDaoTrace** w DAOCORE. CPP.  
@@ -48,9 +48,9 @@ ms.locfileid: "33385654"
 ## <a name="using-the-dao-ole-interfaces"></a>Za pomocą DAO interfejsy OLE  
  Interfejsy modelu OLE dla każdego obiektu w hierarchii obiektów DAO są zdefiniowane w pliku nagłówka DBDAOINT. H, który znajduje się w katalogu \Program Files\Microsoft 2003\VC7\include programu Visual Studio .NET. Te interfejsy Podaj metody, dzięki którym można manipulować w całej hierarchii DAO.  
   
- Dla wielu metod w interfejsach DAO, konieczne będzie manipulowania `BSTR` obiektu (prefiks długości ciągu używany w automatyzacji OLE). `BSTR` Obiektu zwykle jest hermetyzowany wewnątrz **VARIANT** — typ danych. Klasy MFC `COleVariant` sam dziedziczy **VARIANT** — typ danych. W zależności od tego, czy w przypadku kompilowania projektu dla ANSI lub Unicode, interfejsów DAO zwróci ANSI lub Unicode `BSTR`s. Makra dwóch **V_BSTR** i **V_BSTRT**, są używane do zapewnienia, że interfejs DAO pobiera `BSTR` oczekiwanego typu.  
+ Dla wielu metod w interfejsach DAO, konieczne będzie manipulowania `BSTR` obiektu (prefiks długości ciągu używany w automatyzacji OLE). `BSTR` Obiektu zwykle jest hermetyzowany wewnątrz **VARIANT** — typ danych. Klasy MFC `COleVariant` sam dziedziczy **VARIANT** — typ danych. W zależności od tego, czy w przypadku kompilowania projektu dla ANSI lub Unicode, interfejsów DAO zwróci ANSI lub Unicode `BSTR`s. Makra V_BSTR i V_BSTRT, są przydatne do zapewnienia, że interfejs DAO pobiera `BSTR` oczekiwanego typu.  
   
- **V_BSTR** wyodrębni **bstrVal** członkiem `COleVariant`. To makro jest zwykle używana, gdy trzeba przekazać zawartość `COleVariant` do metody interfejsu DAO. Poniższy fragment kodu przedstawia deklaracje i rzeczywistego użycia dla dwóch metod interfejsu DAO DAOUser wykorzystującego **V_BSTR** makra:  
+ Wyodrębnia V_BSTR *bstrVal* członkiem `COleVariant`. To makro jest zwykle używana, gdy trzeba przekazać zawartość `COleVariant` do metody interfejsu DAO. Poniższy fragment kodu przedstawia deklaracje i rzeczywistego użycia dla dwóch metod interfejsu DAO DAOUser, które korzystają z makra V_BSTR:  
   
 ```  
 COleVariant varOldName;  
@@ -71,7 +71,7 @@ DAO_CHECK(pUser->put_Name(V_BSTR (&varNewName)));
   
  Należy pamiętać, że `VT_BSTRT` określona w argumencie `COleVariant` Konstruktor powyżej gwarantuje, że będzie ANSI `BSTR` w `COleVariant` Jeśli kompilacji wersja ANSI Unicode i aplikacji `BSTR` wersji Unicode aplikacji. Jest to DAO oczekuje.  
   
- Inne makro **V_BSTRT**, wyodrębni ANSI lub Unicode **bstrVal** członkiem `COleVariant` w zależności od typu kompilacji (ANSI lub Unicode). Poniższy kod ilustruje sposób wyodrębnić `BSTR` wartość z `COleVariant` do `CString`:  
+ Wyodrębnia innych makro V_BSTRT, ANSI lub Unicode *bstrVal* członkiem `COleVariant` w zależności od typu kompilacji (ANSI lub Unicode). Poniższy kod ilustruje sposób wyodrębnić `BSTR` wartość z `COleVariant` do `CString`:  
   
 ```  
 COleVariant varName(_T("MyName"), VT_BSTRT);
@@ -79,10 +79,10 @@ COleVariant varName(_T("MyName"), VT_BSTRT);
 CString str = V_BSTRT(&varName);
 ```  
   
- **V_BSTRT** makra, wraz z innych technik, aby otworzyć inne typy, które są przechowywane w `COleVariant`, przedstawiono w przykładzie DAOVIEW. W szczególności tłumaczenie jest wykonywane w **CCrack::strVARIANT** metody. Tej metody, jeśli to możliwe, tłumaczy wartość `COleVariant` w wystąpienie klasy `CString`.  
+ Makro V_BSTRT, wraz z innych technik, aby otworzyć inne typy, które są przechowywane w `COleVariant`, przedstawiono w przykładzie DAOVIEW. W szczególności tłumaczenie jest wykonywane w `CCrack::strVARIANT` metody. Tej metody, jeśli to możliwe, tłumaczy wartość `COleVariant` w wystąpienie klasy `CString`.  
   
 ## <a name="simple-example-of-a-direct-call-to-dao"></a>Prosty przykład bezpośrednie wywołanie DAO  
- Sytuacjach może wystąpić, gdy jest to niezbędne odświeżyć kolekcji obiektów DAO. Zazwyczaj nie powinna być konieczne, ale jest prostą procedurę, w razie potrzeby. Przykład gdy kolekcja może wymagać odświeżenia to podczas pracy w środowisku wielodostępnym z wieloma użytkownikami, tworzenie nowych tabledefs —. W takim przypadku tabledefs — kolekcja, mogą stać się przestarzałe. Aby odświeżyć kolekcji, po prostu należy wywołać **Odśwież** metodę obiektu danej kolekcji i zaznacz pole wyboru dla błędów:  
+ Sytuacjach może wystąpić, gdy jest to niezbędne odświeżyć kolekcji obiektów DAO. Zazwyczaj nie powinna być konieczne, ale jest prostą procedurę, w razie potrzeby. Przykład gdy kolekcja może wymagać odświeżenia to podczas pracy w środowisku wielodostępnym z wieloma użytkownikami, tworzenie nowych tabledefs —. W takim przypadku tabledefs — kolekcja, mogą stać się przestarzałe. Aby odświeżyć kolekcji, po prostu należy wywołać `Refresh` metodę obiektu danej kolekcji i zaznacz pole wyboru dla błędów:  
   
 ```  
 DAO_CHECK(pMyDaoDatabase->  

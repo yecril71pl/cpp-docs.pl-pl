@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4412e8db861ac522c0f1b1d7192bfbb83612d64c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b8e52750f6f4589f90048e248305b2f0f5b4855
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383419"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953077"
 ---
 # <a name="serialization-making-a-serializable-class"></a>Serializacja: ustawianie klasy jako możliwej do serializacji
 Pięć głównych kroków są wymagane dokonanie klasę serializacji. Są one wymienione poniżej i wyjaśnione w poniższych sekcjach:  
@@ -71,7 +71,7 @@ Pięć głównych kroków są wymagane dokonanie klasę serializacji. Są one wy
  Można również użyć [CArchive::Read](../mfc/reference/carchive-class.md#read) i [CArchive::Write](../mfc/reference/carchive-class.md#write) funkcji elementów członkowskich do odczytywania i zapisywania dużych ilości danych bez typu.  
   
 ##  <a name="_core_using_the_declare_serial_macro"></a> Przy użyciu declare_serial — makro  
- `DECLARE_SERIAL` Makro jest wymagany w deklaracji klasy, które będą obsługiwać serializacji, jak pokazano poniżej:  
+ Declare_serial — makro jest wymagany w deklaracji klasy, które będą obsługiwać serializacji, jak pokazano poniżej:  
   
  [!code-cpp[NVC_MFCSerialization#3](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_3.h)]  
   
@@ -81,18 +81,18 @@ Pięć głównych kroków są wymagane dokonanie klasę serializacji. Są one wy
  Ten konstruktor może być deklarowana publicznych, chronionych lub prywatnych. Jeśli będzie to chronionych lub prywatnych, pomocy, upewnij się, że będzie tylko służyć za pomocą funkcji serializacji. Konstruktor umieścić obiekt w stanie, który umożliwi można usunąć, jeśli to konieczne.  
   
 > [!NOTE]
->  Jeśli zapomnisz do definiowania konstruktora bez argumentów w klasie, która używa `DECLARE_SERIAL` i `IMPLEMENT_SERIAL` makra, zostanie wyświetlone ostrzeżenie kompilatora "Brak domyślnego konstruktora dostępne" w wierszu gdzie `IMPLEMENT_SERIAL` makro jest używane.  
+>  Jeśli zapomnisz zdefiniowanie konstruktora bez argumentów w klasie, która używa declare_serial — i implement_serial — makra, otrzyma ostrzeżenie kompilatora "Brak domyślnego konstruktora dostępne" w wierszu, gdzie są używane implement_serial — makro.  
   
 ##  <a name="_core_using_the_implement_serial_macro_in_the_implementation_file"></a> W pliku implementacji przy użyciu implement_serial — makro  
- `IMPLEMENT_SERIAL` Makro jest używane do definiowania różnych funkcji wymagane podczas serializacji klasa wyprowadzona z `CObject`. Używanie tego makra w pliku implementacji (. CPP) dla klasy. Pierwsze dwa argumenty makra są nazwę klasy i nazwę swojej klasy podstawowej bezpośrednim.  
+ Implement_serial — makro jest używane do definiowania różnych funkcji, potrzebne podczas serializacji klasa wyprowadzona z `CObject`. Używanie tego makra w pliku implementacji (. CPP) dla klasy. Pierwsze dwa argumenty makra są nazwę klasy i nazwę swojej klasy podstawowej bezpośrednim.  
   
  Trzeci argument to makro jest liczbą schematu. Liczba schematu jest zasadniczo numer wersji dla obiektów klasy. Użyj liczba całkowita większa lub równa 0, dla liczby schematu. (Nie należy mylić numer ten schemat terminologii bazy danych.)  
   
  Kod serializacji MFC sprawdza numer schematu podczas odczytywania obiektów do pamięci. Jeśli numer schematu obiektu na dysku odpowiada numerowi schematu klasy w pamięci, zgłosi biblioteki `CArchiveException`, uniemożliwia odczytywania obiektu nieprawidłową wersję programu.  
   
- Jeśli chcesz z `Serialize` funkcji członkowskiej, aby można było odczytać wielu wersji — oznacza to, że pliki zapisywane z różnymi wersjami aplikacji — można użyć wartości **versionable_schema —** jako argument `IMPLEMENT_SERIAL` makra. Informacje o użyciu i przykładem, zobacz `GetObjectSchema` funkcji członkowskiej klasy `CArchive`.  
+ Jeśli chcesz z `Serialize` funkcji członkowskiej, aby można było odczytać wielu wersji — czyli plików napisane z różnych wersji aplikacji — można używać wartości *versionable_schema —* jako argument implement_serial — makra. Informacje o użyciu i przykładem, zobacz `GetObjectSchema` funkcji członkowskiej klasy `CArchive`.  
   
- Poniższy przykład przedstawia użycie `IMPLEMENT_SERIAL` dla klasy, `CPerson`, która jest pochodną `CObject`:  
+ Poniższy przykład przedstawia użycie implement_serial — dla klasy, `CPerson`, która jest pochodną `CObject`:  
   
  [!code-cpp[NVC_MFCSerialization#4](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_4.cpp)]  
   

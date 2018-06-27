@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b76e4a0c0533ceb0200757f86f332d77c3b39ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1dfc1c4d5cf753ae102d7656e94d63923004d2cc
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356495"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955664"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget — klasa
 Klasa podstawowa architektura mapy komunikatów Microsoft Foundation Class Library.  
@@ -131,7 +131,7 @@ void BeginWaitCursor();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Struktura wywołuje tę funkcję, aby pokazać użytkownika jest zajęty, takie jak kiedy **CDocument** obiektu ładuje lub sam jest zapisywany do pliku.  
+ Struktura wywołuje tę funkcję, aby pokazać użytkownika jest zajęty, takie jak kiedy `CDocument` obiektu ładuje lub sam jest zapisywany do pliku.  
   
  Akcje `BeginWaitCursor` nie zawsze są skuteczne poza obsługi wiadomości jako inne akcje, takie jak `OnSetCursor` obsługi, można zmienić kursora.  
   
@@ -159,16 +159,16 @@ BOOL DoOleVerb(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iVerb`  
+ *iVerb*  
  Identyfikator numeryczny zlecenia.  
   
- `lpMsg`  
+ *lpMsg*  
  Wskaźnik do [MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958) opisujące zdarzeń (na przykład kliknij dwukrotnie), który wywołał zlecenie struktury.  
   
- `hWndParent`  
+ *hWndParent*  
  Uchwyt okna dokumentu z obiektem.  
   
- `lpRect`  
+ *lprect —*  
  Wskaźnik do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury zawierającej współrzędne, w pikselach, które definiują obiektu do ograniczenia prostokąt w *hwndParent*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -228,11 +228,11 @@ BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ppenumOleVerb`  
+ *ppenumOleVerb*  
  Wskaźnik na wskaźnik do [IEnumOLEVERB](http://msdn.microsoft.com/library/windows/desktop/ms695084) interfejsu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość TRUE, jeśli obiekt obsługuje co najmniej jedno zlecenie OLE (w takim przypadku \* `ppenumOleVerb` wskazuje **IEnumOLEVERB** interfejsu modułu wyliczającego), w przeciwnym razie wartość FALSE.  
+ Wartość TRUE, jeśli obiekt obsługuje co najmniej jedno zlecenie OLE (w takim przypadku \* *ppenumOleVerb* wskazuje `IEnumOLEVERB` interfejsu modułu wyliczającego), w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja członkowska jest zasadniczo implementacja [IOleObject::EnumVerbs](http://msdn.microsoft.com/library/windows/desktop/ms692781).  
@@ -245,11 +245,11 @@ static CCmdTarget* PASCAL FromIDispatch(LPDISPATCH lpDispatch);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpDispatch`  
+ *lpDispatch*  
  Wskaźnik do `IDispatch` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do `CCmdTarget` obiekt skojarzony z `lpDispatch`. Ta funkcja zwraca **NULL** Jeśli `IDispatch` obiektu nie został rozpoznany jako klasa Microsoft Foundation `IDispatch` obiektu.  
+ Wskaźnik do `CCmdTarget` obiekt skojarzony z *lpDispatch*. Ta funkcja zwraca **NULL** Jeśli `IDispatch` obiektu nie został rozpoznany jako klasa Microsoft Foundation `IDispatch` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
  Wynikiem tej funkcji jest odwrotność wywołanie funkcji Członkowskich `GetIDispatch`.  
@@ -303,7 +303,7 @@ virtual UINT GetTypeInfoCount();
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja członkowska zasadniczo implementuje [IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12).  
   
- Klasy pochodne powinny przesłaniać tę funkcję, aby zwrócić liczby typu informacji interfejsami (0 lub 1). Jeśli nie została zastąpiona, **GetTypeInfoCount** zwraca wartość 0. Aby zastąpić, użyj [implement_oletypelib —](../../mfc/reference/type-library-access.md#implement_oletypelib) makra, która implementuje również `GetTypeLib` i `GetTypeLibCache`.  
+ Klasy pochodne powinny przesłaniać tę funkcję, aby zwrócić liczby typu informacji interfejsami (0 lub 1). Jeśli nie została zastąpiona, `GetTypeInfoCount` zwraca wartość 0. Aby zastąpić, użyj [implement_oletypelib —](../../mfc/reference/type-library-access.md#implement_oletypelib) makra, która implementuje również `GetTypeLib` i `GetTypeLibCache`.  
   
 ##  <a name="gettypeinfoofguid"></a>  CCmdTarget::GetTypeInfoOfGuid  
  Pobiera opis typu, który odpowiada określonym identyfikatorem GUID.  
@@ -316,17 +316,17 @@ HRESULT GetTypeInfoOfGuid(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lcid`  
+ *lcid*  
  Identyfikator ustawień regionalnych ( `LCID`).  
   
- `guid`  
+ *Identyfikator GUID*  
  [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931) opisu typu.  
   
- `ppTypeInfo`  
+ *ppTypeInfo*  
  Wskaźnik na wskaźnik do `ITypeInfo` interfejsu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- HRESULT oznaczający powodzenie lub Niepowodzenie wywołania. W przypadku powodzenia * `ppTypeInfo` wskazuje typ interfejsu informacji.  
+ HRESULT oznaczający powodzenie lub Niepowodzenie wywołania. W przypadku powodzenia * *ppTypeInfo* wskazuje typ interfejsu informacji.  
   
 ##  <a name="gettypelib"></a>  CCmdTarget::GetTypeLib  
  Pobiera wskaźnik do biblioteki typów.  
@@ -338,14 +338,14 @@ virtual HRESULT GetTypeLib(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lcid`  
+ *lcid*  
  Identyfikator ustawień regionalnych ( `LCID`).  
   
- `ppTypeLib`  
+ *ppTypeLib*  
  Wskaźnik na wskaźnik do `ITypeLib` interfejsu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- HRESULT oznaczający powodzenie lub Niepowodzenie wywołania. W przypadku powodzenia * `ppTypeLib` wskazuje typ interfejsu biblioteki.  
+ HRESULT oznaczający powodzenie lub Niepowodzenie wywołania. W przypadku powodzenia * *ppTypeLib* wskazuje typ interfejsu biblioteki.  
   
 ### <a name="remarks"></a>Uwagi  
  Klasy pochodne powinny przesłaniać funkcji członkowskiej (Jeśli nie została zastąpiona, `GetTypeLib` zwraca TYPE_E_CANTLOADLIBRARY). Użyj [implement_oletypelib —](../../mfc/reference/type-library-access.md#implement_oletypelib) makra, która implementuje również `GetTypeInfoCount` i `GetTypeLibCache`.  
@@ -358,27 +358,27 @@ virtual CTypeLibCache* GetTypeLibCache();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do **CTypeLibCache** obiektu.  
+ Wskaźnik do `CTypeLibCache` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Klasy pochodne powinny przesłaniać funkcji członkowskiej (Jeśli nie została zastąpiona, **GetTypeLibCache** zwraca wartość NULL). Użyj [implement_oletypelib —](../../mfc/reference/type-library-access.md#implement_oletypelib) makra, która implementuje również `GetTypeInfoCount` i `GetTypeLib`.  
+ Klasy pochodne powinny przesłaniać funkcji członkowskiej (Jeśli nie została zastąpiona, `GetTypeLibCache` zwraca wartość NULL). Użyj [implement_oletypelib —](../../mfc/reference/type-library-access.md#implement_oletypelib) makra, która implementuje również `GetTypeInfoCount` i `GetTypeLib`.  
   
 ##  <a name="isinvokeallowed"></a>  CCmdTarget::IsInvokeAllowed  
- Ta funkcja jest wywoływana przez implementacji MFC **IDispatch::Invoke** można określić, czy metoda danego automatyzacji (identyfikowane przez `dispid`) może być wywołany.  
+ Ta funkcja jest wywoływana przez implementacji MFC `IDispatch::Invoke` można określić, czy metoda danego automatyzacji (identyfikowane przez *dispid*) może być wywołany.  
   
 ```  
 virtual BOOL IsInvokeAllowed(DISPID dispid);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dispid`  
+ *identyfikator DISPID*  
  Identyfikator wysyłania  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartość TRUE, jeśli metoda może być wywołana, w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `IsInvokeAllowed` zwraca wartość PRAWDA, **Invoke** będzie kontynuowana, aby wywołać metodę; w przeciwnym razie `Invoke` zakończy się niepowodzeniem, zwracając E_UNEXPECTED.  
+ Jeśli `IsInvokeAllowed` zwraca wartość PRAWDA, `Invoke` będzie kontynuowana, aby wywołać metodę; w przeciwnym razie `Invoke` zakończy się niepowodzeniem, zwracając E_UNEXPECTED.  
   
  Klasy pochodne mogą zastąpić tę funkcję, aby zwrócić wartości odpowiednich (Jeśli nie została zastąpiona, `IsInvokeAllowed` zwraca wartość TRUE). W szczególności zobacz [COleControl::IsInvokeAllowed](../../mfc/reference/colecontrol-class.md#isinvokeallowed).  
   
@@ -411,17 +411,17 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nID`  
+ *nID*  
  Zawiera identyfikator polecenia.  
   
- `nCode`  
- Określa polecenie kod powiadomienia. Zobacz **uwagi** uzyskać więcej informacji o wartości `nCode`.  
+ *nCode*  
+ Określa polecenie kod powiadomienia. Zobacz **uwagi** uzyskać więcej informacji o wartości *nCode*.  
   
- `pExtra`  
- Używane zgodnie z wartością `nCode`. Zobacz **uwagi** uzyskać więcej informacji o `pExtra`.  
+ *pExtra*  
+ Używane zgodnie z wartością *nCode*. Zobacz **uwagi** uzyskać więcej informacji o *pExtra*.  
   
- `pHandlerInfo`  
- Jeśli nie **NULL**, `OnCmdMsg` wypełnia **pTarget** i **pmf** członkami `pHandlerInfo` struktury zamiast wysyłania polecenia. Zazwyczaj ten parametr powinien być **NULL**.  
+ *pHandlerInfo*  
+ Jeśli nie **NULL**, `OnCmdMsg` wypełnia *pTarget* i *pmf* członkami *pHandlerInfo* struktury zamiast wysyłania polecenie. Zazwyczaj ten parametr powinien być **NULL**.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli komunikat jest obsługiwany; w przeciwnym razie 0.  
@@ -433,9 +433,9 @@ virtual BOOL OnCmdMsg(
   
  W rzadkich przypadkach można przesłonić tę funkcję elementu członkowskiego, aby rozszerzyć w ramach standardowego routingu poleceń. Zapoznaj się [techniczne notatkę 21](../../mfc/tn021-command-and-message-routing.md) zaawansowane szczegółowe informacje o architekturze routing poleceń.  
   
- Jeśli można zastąpić `OnCmdMsg`, należy podać wartość odpowiednią dla `nCode`, polecenie kod powiadomienia, i `pExtra`, która jest zależna od wartości `nCode`. W poniższej tabeli wymieniono odpowiednimi wartościami:  
+ Jeśli można zastąpić `OnCmdMsg`, należy podać wartość odpowiednią dla *nCode*, polecenie kod powiadomienia, i *pExtra*, która jest zależna od wartości *nCode* . W poniższej tabeli wymieniono odpowiednimi wartościami:  
   
-|`nCode` Wartość|`pExtra` Wartość|  
+|*nCode* wartości|*pExtra* wartości|  
 |-------------------|--------------------|  
 |CN_COMMAND|[Ccmdui —](../../mfc/reference/ccmdui-class.md)*|  
 |CN_EVENT|AFX_EVENT *|  

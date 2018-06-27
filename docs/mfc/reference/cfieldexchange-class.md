@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bad68253525fd728b67f2e256c48a3edbf48d720
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 96c70bc7c6c506d033b39ca55ba2b1a090767b5d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367064"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951690"
 ---
 # <a name="cfieldexchange-class"></a>Klasa CFieldExchange
 Obsługuje wymiana pól rekordów (RFX) i procedury wymiany (zbiorczego RFX) pól rekordów zbiorczego używane przez klasy baz danych.  
@@ -53,7 +53,7 @@ class CFieldExchange
 > [!NOTE]
 >  Jeśli pracujesz z klas obiektów DAO (Data Access), a nie klasy otwarte połączenie bazy danych (ODBC), należy użyć klasy [CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md) zamiast tego. Aby uzyskać więcej informacji, zobacz artykuł [programowania omówienie: baza danych](../../data/data-access-programming-mfc-atl.md).  
   
- A `CFieldExchange` obiekt zapewnia informacje kontekstowe potrzebne wymiana pól rekordów lub zbiorcza wymiana pól rekordów podjęcie Umieść. `CFieldExchange` obiekty obsługują szereg działań, włącznie z parametrów wiązania i elementy członkowskie danych pola i ustawienie flagi różnych pól bieżącego rekordu. RFX i RFX zbiorcze operacje są wykonywane na klasy rekordów elementy członkowskie danych typów zdefiniowanych przez `enum` **typu pola** w `CFieldExchange`. Możliwe **typu pola** wartości to:  
+ A `CFieldExchange` obiekt zapewnia informacje kontekstowe potrzebne wymiana pól rekordów lub zbiorcza wymiana pól rekordów podjęcie Umieść. `CFieldExchange` obiekty obsługują szereg działań, włącznie z parametrów wiązania i elementy członkowskie danych pola i ustawienie flagi różnych pól bieżącego rekordu. RFX i RFX zbiorcze operacje są wykonywane na klasy rekordów elementy członkowskie danych typów zdefiniowanych przez **wyliczenia** **typu pola** w `CFieldExchange`. Możliwe **typu pola** wartości to:  
   
 - **CFieldExchange::outputColumn** dla elementy członkowskie danych pola.  
   
@@ -96,7 +96,7 @@ void SetFieldType(UINT nFieldType);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nFieldType`  
+ *nFieldType*  
  Wartość **wyliczenia typu pola**, zadeklarowanych w `CFieldExchange`, który może być jedną z następujących czynności:  
   
 - **CFieldExchange::outputColumn**  
@@ -121,7 +121,7 @@ void SetFieldType(UINT nFieldType);
 |**CFieldExchange::outputParam**|Parametr wyjściowy. Procedury składowanej zwracana wartość w zestawie rekordów.|  
 |**CFieldExchange::inoutParam**|Parametr wejścia/wyjścia. Wartość, która jest przekazany i zwrócony z procedury składowanej w zestawie rekordów.|  
   
- Ogólnie rzecz biorąc, każdej grupy wywołania funkcji RFX skojarzonych z elementy członkowskie danych pola lub elementy członkowskie danych parametru musi być poprzedzony przez wywołanie do `SetFieldType`. `nFieldType` Parametru każdego `SetFieldType` wywołania Określa typ elementów członkowskich danych reprezentowanego przez wywołania funkcji RFX, które należy wykonać `SetFieldType` wywołania.  
+ Ogólnie rzecz biorąc, każdej grupy wywołania funkcji RFX skojarzonych z elementy członkowskie danych pola lub elementy członkowskie danych parametru musi być poprzedzony przez wywołanie do `SetFieldType`. *NFieldType* parametru każdego `SetFieldType` wywołania Określa typ elementów członkowskich danych reprezentowanego przez wywołania funkcji RFX, które należy wykonać `SetFieldType` wywołania.  
   
  Aby uzyskać więcej informacji na temat obsługi parametry wejścia/wyjścia i danych wyjściowych, zobacz `CRecordset` funkcji członkowskiej [FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset). Aby uzyskać więcej informacji o funkcji RFX i RFX zbiorczego, zobacz temat [funkcje wymiany pól rekordów](../../mfc/reference/record-field-exchange-functions.md). Powiązane informacje zbiorcze pobieranie z wiersza, zobacz artykuł [zestaw rekordów: pobieranie rekordów zbiorczego (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   

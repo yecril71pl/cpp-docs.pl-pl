@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 324e6411673a509bdf75954634ff9c6dffc5ce1f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 718283893c9e8ec9798dea9a4b9fb307d1099e68
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354429"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952060"
 ---
 # <a name="cd2dbrush-class"></a>Klasa CD2DBrush
 Otoka dla ID2D1Brush.  
@@ -117,7 +117,7 @@ void Attach(ID2D1Brush* pResource);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pResource`  
+ *pResource*  
  Interfejs istniejącego zasobu. Nie może mieć wartości NULL  
   
 ##  <a name="cd2dbrush"></a>  CD2DBrush::CD2DBrush  
@@ -131,13 +131,13 @@ CD2DBrush(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentTarget`  
+ *pParentTarget*  
  Wskaźnik do obiektu docelowego renderowania.  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Wskaźnik do nieprzezroczystość i transformacja pędzla.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Wskazuje, że obiekt zostanie zniszczony przez właściciela (pParentTarget).  
   
 ##  <a name="destroy"></a>  CD2DBrush::Destroy  
@@ -185,7 +185,7 @@ void GetTransform(D2D1_MATRIX_3X2_F* transform) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `transform`  
+ *transform*  
  Po powrocie z to zawiera transformacji bieżącego obiektu docelowego renderowania. Ten parametr jest przekazywany jako niezainicjowany  
   
 ##  <a name="isvalid"></a>  CD2DBrush::IsValid  
@@ -230,7 +230,7 @@ void SetOpacity(FLOAT opacity);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `opacity`  
+ *Nieprzezroczystość.*  
  Wartość z zakresu od 0 do 1, która wskazuje przezroczystość pędzla. Ta wartość jest mnożnik stałej, która liniowo skaluje alfa wartość wszystkie piksele wypełnił pędzla. Wartość nieprzezroczystości są zablokowane za pomocą w zakresie od 0 do 1 przed są pomnożenie  
   
 ##  <a name="settransform"></a>  CD2DBrush::SetTransform  
@@ -241,7 +241,7 @@ void SetTransform(const D2D1_MATRIX_3X2_F* transform);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `transform`  
+ *transform*  
  Przekształcenie do zastosowania do obiektu docelowego renderowania  
   
 ## <a name="see-also"></a>Zobacz też  

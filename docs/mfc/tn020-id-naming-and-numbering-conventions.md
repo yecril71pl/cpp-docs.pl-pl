@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17b27b4cfc1b624c9c12138154a660951a0f2a13
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca1e78ab4b94d9055b8f0c7cc14bde12506695b8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384114"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951370"
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>TN020: konwencje nazewnictwa i numerowania identyfikatorów
 Ta uwaga opisuje identyfikator nazewnictwa i numerowania Konwencji MFC 2.0 korzysta z zasobów, polecenia, parametry, formantów i okien podrzędnych.  
@@ -68,7 +68,7 @@ Ta uwaga opisuje identyfikator nazewnictwa i numerowania Konwencji MFC 2.0 korzy
 |IDM_|Dla elementów menu, które nie korzystają z architektury polecenia MFC.|  
 |ID_|Dla polecenia menu, korzystających z architektury polecenia MFC.|  
   
- Polecenia, które należy wykonać polecenie architekturę MFC musi mieć `ON_COMMAND` polecenia Obsługa i może zawierać `ON_UPDATE_COMMAND_UI` obsługi. Jeśli te programy obsługi poleceń zgodna z architekturą polecenia MFC, będą one działać poprawnie Określa, czy są powiązane z polecenia menu, przycisk paska narzędzi lub przycisk paska dialogowego. Tego samego prefiksu "ID_" służy także do menu ciąg monitu, który jest wyświetlany na pasku komunikatów programu. Większość elementów menu w aplikacji powinny być zgodne z konwencjami polecenia MFC. Wszystkie standardowe identyfikatory poleceń (na przykład `ID_FILE_NEW`) wykonaj tę Konwencję.  
+ Polecenia, które należy wykonać polecenie architekturę MFC musi mieć program obsługi poleceń on_command — i może zawierać on_update_command_ui — program obsługi. Jeśli te programy obsługi poleceń zgodna z architekturą polecenia MFC, będą one działać poprawnie Określa, czy są powiązane z polecenia menu, przycisk paska narzędzi lub przycisk paska dialogowego. Tego samego prefiksu "ID_" służy także do menu ciąg monitu, który jest wyświetlany na pasku komunikatów programu. Większość elementów menu w aplikacji powinny być zgodne z konwencjami polecenia MFC. Wszystkie identyfikatory poleceń standardowych (na przykład id_file_new —) wykonaj tę Konwencję.  
   
  MFC używa również "IDP_" jako specjalna forma ciągów (zamiast "IDS_"). Ciągi z prefiksem "IDP_" są monity, czyli ciągów używanych w polach komunikatu. Ciągi "IDP_" może zawierać "%1" i "%2" jako symbole zastępcze ciągów określany przez program. "IDP_" ciągi, które są zwykle skojarzone z nimi tematy pomocy, a nie zawierają ciągi "IDS_". Zawsze są zlokalizowane ciągi "IDP_" i nie mogą być zlokalizowane ciągi "IDS_".  
   

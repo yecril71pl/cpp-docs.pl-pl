@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d64ec306f77174b72c130c3afc14a732464c43be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff998b8be93d1248775d49bcef7680f4c9777fd4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368351"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953678"
 ---
 # <a name="cfontdialog-class"></a>Klasa CFontDialog
 Umożliwia włączenie okno dialogowe Wybór czcionki do aplikacji.  
@@ -146,19 +146,19 @@ CFontDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- l `plfInitial`  
+ *plfInitial*  
  Wskaźnik do [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury danych, które można ustawić niektórych właściwości czcionki.  
   
- `charFormat`  
+ *charFormat*  
  Wskaźnik do [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) struktura danych, którą można ustawić niektórych właściwości czcionki w zaawansowanej edycji.  
   
- `dwFlags`  
+ *wartość elementu dwFlags*  
  Określa jedną lub więcej flag wybierz czcionkę. Co najmniej jeden wstępnie zdefiniowane wartości można łączyć przy użyciu bitowego operatora OR. Jeśli zmodyfikujesz `m_cf.Flag`s elementu członkowskiego struktury, należy użyć bitowy operator OR zmiany do zachowane zachowanie domyślne. Aby uzyskać szczegółowe informacje na każdym z tych flag, zobacz opis [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) struktury w zestawie Windows SDK.  
   
- pdcPrinter  
+ *pdcPrinter*  
  Wskaźnik do kontekstu urządzenia drukarki. Jeśli podany, ten parametr wskazuje kontekstu urządzenia drukarki dla drukarki, na którym można wybrać czcionki.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do okna nadrzędnego lub właściciela okno dialogowe czcionki.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -198,7 +198,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cf`  
+ *CF*  
  A [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) struktury zawierającej informacje o formatowanie znaków wybranej czcionki.  
   
 ##  <a name="getcolor"></a>  CFontDialog::GetColor  

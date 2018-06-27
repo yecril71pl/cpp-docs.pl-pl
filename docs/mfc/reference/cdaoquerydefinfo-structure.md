@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0b3e5834aa8b338448c2024603783cedb6f6cae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a31928bc98b8b2fd403f1db40c040357c388b104
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367233"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952290"
 ---
 # <a name="cdaoquerydefinfo-structure"></a>CDaoQueryDefInfo — Struktura
 `CDaoQueryDefInfo` Struktura zawiera informacje dotyczące obiektu querydef zdefiniowany dla obiektów dostępu do danych (DAO).  
@@ -45,10 +45,10 @@ struct CDaoQueryDefInfo
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `m_strName`  
+ *m_strName*  
  Unikatowej nazwy obiektu querydef. Aby uzyskać więcej informacji zobacz temat "Właściwości Name" w pomocy DAO. Wywołanie [CDaoQueryDef::GetName](../../mfc/reference/cdaoquerydef-class.md#getname) bezpośrednio pobrać tej właściwości.  
   
- `m_nType`  
+ *m_nType*  
  Wartość, która wskazuje operacyjne typu obiektu querydef. Wartość może być jedną z następujących czynności:  
   
 - **dbQSelect** wybierz — kwerenda wybiera rekordy.  
@@ -78,13 +78,13 @@ struct CDaoQueryDefInfo
   
  Aby uzyskać więcej informacji zobacz temat "Właściwość Type" w pomocy DAO.  
   
- `m_dateCreated`  
+ *m_dateCreated*  
  Data i godzina utworzenia obiektu querydef. Aby bezpośrednio pobrać datę utworzenia querydef, należy wywołać [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated) funkcji członkowskiej klasy `CDaoTableDef` obiekt skojarzony z tabelą. Aby uzyskać więcej informacji, zobacz uwagi poniżej. Również w temacie "DateCreated właściwości LastUpdated" w pomocy DAO.  
   
- `m_dateLastUpdated`  
+ *m_dateLastUpdated*  
  Data i godzina ostatniej zmiany wprowadzone do querydef. Aby bezpośrednio pobrać datę ostatniej aktualizacji tabeli, należy wywołać [GetDateLastUpdated](../../mfc/reference/cdaoquerydef-class.md#getdatelastupdated) funkcji członkowskiej klasy querydef. Aby uzyskać więcej informacji, zobacz uwagi poniżej. I zawiera temat "DateCreated właściwości LastUpdated" w pomocy DAO.  
   
- `m_bUpdatable`  
+ *m_bUpdatable*  
  Wskazuje, czy można zmodyfikować obiektu querydef. Jeśli ta właściwość jest **TRUE**querydef jest aktualizowalny; w przeciwnym razie, nie jest. Aktualizowalne oznacza, że można zmienić obiektu querydef definicji zapytania. Nadaje się do aktualizacji właściwości obiektu querydef ustawiono **TRUE** Jeśli definicja zapytania mogą być aktualizowane, nawet jeśli nie nadaje Wynikowy zestaw rekordów. Aby pobrać bezpośrednio, należy wywołać querydef [CanUpdate](../../mfc/reference/cdaoquerydef-class.md#canupdate) funkcję elementu członkowskiego. Aby uzyskać więcej informacji zobacz temat "Nadaje się do aktualizacji właściwości" w pomocy DAO.  
   
  *m_bReturnsRecords*  
@@ -93,7 +93,7 @@ struct CDaoQueryDefInfo
  *m_strSQL*  
  Instrukcja SQL, która definiuje zapytanie wykonywane przez obiektu querydef. Właściwość SQL zawiera instrukcję SQL, która określa, jak rekordy są wybrane, grupowanych i uporządkowanych podczas wykonywania zapytania. Zapytanie służy do wybierania rekordów do uwzględnienia w obiekcie zestaw rekordów typu dynamicznego lub migawek. Można również zdefiniować zbiorczego zapytania można zmodyfikować danych bez powrotu rekordów. Wartość tej właściwości można pobrać bezpośrednio, wywołując querydef [GetSQL](../../mfc/reference/cdaoquerydef-class.md#getsql) funkcję elementu członkowskiego.  
   
- `m_strConnect`  
+ *m_strConnect*  
  Zawiera informacje o źródle bazy danych używanych w zapytaniu przekazujące. Te informacje mają postać ciągu połączenia. Aby uzyskać więcej informacji o ciągów połączenia i informacje bezpośrednio do pobrania wartości tej właściwości, zobacz [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) funkcję elementu członkowskiego.  
   
  *m_nODBCTimeout*  

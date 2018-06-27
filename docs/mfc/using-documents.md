@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48f3bd6c6463bbbe26214a29960260d2be583e20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb5e6ad4cfcc1e14d3b6accc1e5adaf4037669a4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385641"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950217"
 ---
 # <a name="using-documents"></a>Używanie dokumentów
 Praca ze sobą, dokumentów i widoków:  
@@ -44,7 +44,7 @@ Praca ze sobą, dokumentów i widoków:
   
 -   [Obsługa](../mfc/handling-commands-in-the-document.md) większość poleceń i komunikatów aplikacji.  
   
- Dokument jest szczególnie zaangażowane w zarządzaniu danymi. Przechowywanie danych, zwykle w zmiennych Członkowskich klasy dokumentu. Widok używa tych zmiennych dostępu do danych w celu wyświetlenia i aktualizacji. Dokument domyślny mechanizm serializacji zarządza odczytywania i zapisywania danych do i z plików. Dokumenty mogą również obejmować poleceń (, ale nie systemu Windows inne niż wiadomości **WM_COMMAND**).  
+ Dokument jest szczególnie zaangażowane w zarządzaniu danymi. Przechowywanie danych, zwykle w zmiennych Członkowskich klasy dokumentu. Widok używa tych zmiennych dostępu do danych w celu wyświetlenia i aktualizacji. Dokument domyślny mechanizm serializacji zarządza odczytywania i zapisywania danych do i z plików. Dokumenty również może obsługiwać poleceń (ale nie komunikaty systemu Windows innego niż WM_COMMAND).  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
   

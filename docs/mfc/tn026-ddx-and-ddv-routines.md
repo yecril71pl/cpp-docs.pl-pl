@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44a946b21908f45b595056a956c75b234fdbb886
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c22db5aa9369d895b5a8d725148c841e3ffbfc8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386057"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955895"
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026: procedury DDX i DDV
 > [!NOTE]
@@ -67,7 +67,7 @@ DDV_Custom(pDX,
   
  Listę wszystkich procedury wymiany danych okna dialogowego i procedury walidacji danych okna dialogowego wyposażone w MFC, zobacz "afxdd_.h".  
   
- Dane okna dialogowego są właśnie tę: dane elementów członkowskich w **CMyDialog** klasy. Nie są przechowywane w struktury lub niczego podobne.  
+ Dane okna dialogowego są właśnie tę: dane elementów członkowskich w `CMyDialog` klasy. Nie są przechowywane w struktury lub niczego podobne.  
   
 ## <a name="notes"></a>Uwagi  
  Mimo że nazywamy to "dane okna dialogowego" wszystkie funkcje są dostępne w dowolnej klasy pochodne `CWnd` i nie są ograniczone do tylko okien dialogowych.  
@@ -83,17 +83,17 @@ DDV_Custom(pDX,
 ## <a name="how-does-it-work"></a>Jak to działa  
  Nie trzeba zrozumieć następujące, aby można było używać okna dialogowego danych. Jednak zrozumienie, jak to działa w tle pomoże Ci zapisu własnej procedury weryfikacji lub programu exchange.  
   
- `DoDataExchange` Funkcja członkowska jest podobne jak w przypadku `Serialize` funkcji członkowskiej — jest odpowiedzialny za pobierania lub ustawiania danych do/z formularza zewnętrznych (w tym przypadku kontrolki w oknie dialogowym) od i do elementu członkowskiego danych w klasie. `pDX` Parametr kontekstu dla podczas wymiany danych i jest podobny do `CArchive` parametr `CObject::Serialize`. `pDX` ( `CDataExchange` Obiektu) ma kierunek Flaga wiele podobnych `CArchive` ma Flaga kierunku:  
+ `DoDataExchange` Funkcja członkowska jest podobne jak w przypadku `Serialize` funkcji członkowskiej — jest odpowiedzialny za pobierania lub ustawiania danych do/z formularza zewnętrznych (w tym przypadku kontrolki w oknie dialogowym) od i do elementu członkowskiego danych w klasie. *PDX* parametr kontekstu dla podczas wymiany danych i jest podobny do `CArchive` parametr `CObject::Serialize`. *PDX* ( `CDataExchange` obiektu) ma kierunek Flaga wiele podobnych `CArchive` ma Flaga kierunku:  
   
--   Jeśli **! m_bSaveAndValidate**, następnie załadować stan danych do kontrolek.  
+-   Jeśli! *m_bSaveAndValidate*, następnie załadować stan danych do kontrolek.  
   
--   Jeśli `m_bSaveAndValidate`, następnie ustaw stan danych z kontrolki.  
+-   Jeśli *m_bSaveAndValidate*, następnie ustaw stan danych z kontrolki.  
   
- Sprawdzanie poprawności występuje tylko wtedy, gdy `m_bSaveAndValidate` jest ustawiona. Wartość `m_bSaveAndValidate` jest określana przez parametr BOOL `CWnd::UpdateData`.  
+ Sprawdzanie poprawności występuje tylko wtedy, gdy *m_bSaveAndValidate* jest ustawiona. Wartość *m_bSaveAndValidate* jest określana przez parametr BOOL `CWnd::UpdateData`.  
   
  Istnieją trzy inne interesujące `CDataExchange` członków:  
   
-- `m_pDlgWnd`: Okno (zazwyczaj okna dialogowego), który zawiera formanty. Ma to zapobiec wywołań DDX_ i DDV_ funkcje globalne do przekazania "this" do każdej procedury DDX/ddv za.  
+- *m_pDlgWnd*: okno (zazwyczaj okna dialogowego), które zawiera kontrolki. Ma to zapobiec wywołań DDX_ i DDV_ funkcje globalne do przekazania "this" do każdej procedury DDX/ddv za.  
   
 - `PrepareCtrl`, a `PrepareEditCtrl`: przygotowuje formantu okna dialogowego do wymiany danych. Przechowuje dojście tego formantu do ustawiania fokus, jeśli weryfikacja zakończy się niepowodzeniem. `PrepareCtrl` Służy do formantów nonedit i `PrepareEditCtrl` jest używany dla formantów edycyjnych.  
   
@@ -139,7 +139,7 @@ DDV_Custom(pDX,
     > [!NOTE]
     >  Takie dowolnego wyrażenia nie może być edytowany przez ClassWizard i powinna zostać przeniesiona poza komentarze specjalny format (/ / {{AFX_DATA_MAP(CMyClass)).  
   
- Ma **DoDialogExchange** funkcji członkowskiej obejmują warunków lub jakichkolwiek innych prawidłowy instrukcji C++ z mieszany — wymiana i Walidacja wywołania funkcji.  
+ Ma `DoDialogExchange` funkcji członkowskiej obejmują warunków lub jakichkolwiek innych prawidłowy instrukcji C++ z mieszany — wymiana i Walidacja wywołania funkcji.  
   
 ```  
 //{{AFX_DATA_MAP(CMyClass)  

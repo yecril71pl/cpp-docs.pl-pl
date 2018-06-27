@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88e6916056f988a1cee52020c8ce7e9fce11e574
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ba8f6d8cf90e7523fe4497cfc3b36c3616a8f10
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370523"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956281"
 ---
 # <a name="cftpfilefind-class"></a>Klasa CFtpFileFind
 Pomoc w wyszukiwania plików internetowych serwerów FTP.  
@@ -88,14 +88,14 @@ explicit CFtpFileFind(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pConnection`  
+ *pConnection*  
  Wskaźnik do `CFtpConnection` obiektu. Połączenie FTP można uzyskać przez wywołanie metody [CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection).  
   
- `dwContext`  
+ *dwContext*  
  Identyfikator kontekstu `CFtpFileFind` obiektu. Zobacz **uwagi** uzyskać więcej informacji dotyczących tego parametru.  
   
 ### <a name="remarks"></a>Uwagi  
- Wartość domyślna dla `dwContext` są wysyłane przez MFC do `CFtpFileFind` obiekt z [CInternetSession](../../mfc/reference/cinternetsession-class.md) utworzony obiekt `CFtpFileFind` obiektu. Można zastąpić domyślną ustawioną wartość wybrane identyfikator kontekstu. Identyfikator kontekstu jest zwracana do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zapewnienie stanu dla obiektu, z którym zostanie zidentyfikowana. Zapoznaj się z artykułem [pierwsze kroki Internet: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.  
+ Wartość domyślna dla *dwContext* są wysyłane przez MFC do `CFtpFileFind` obiekt z [CInternetSession](../../mfc/reference/cinternetsession-class.md) utworzony obiekt `CFtpFileFind` obiektu. Można zastąpić domyślną ustawioną wartość wybrane identyfikator kontekstu. Identyfikator kontekstu jest zwracana do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zapewnienie stanu dla obiektu, z którym zostanie zidentyfikowana. Zapoznaj się z artykułem [pierwsze kroki Internet: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.  
   
 ### <a name="example"></a>Przykład  
   Zapoznaj się z przykładem w omówieniu klasy wcześniej w tym temacie.  
@@ -110,10 +110,10 @@ virtual BOOL FindFile(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pstrName`  
+ *pstrName*  
  Wskaźnik do ciągu zawierającego nazwę znajduje się w pliku. Jeśli **NULL**, wywołanie przeprowadzi wyszukiwanie symbolu wieloznacznego (*).  
   
- `dwFlags`  
+ *wartość elementu dwFlags*  
  Flagi opisujące sposób obsługi tej sesji. Te flagi można łączyć z bitowego operatora OR (&#124;) i są następujące:  
   
 -   INTERNET_FLAG_RELOAD Pobierz dane z sieci, nawet jeśli jest buforowany lokalnie. Jest to domyślna wartość flagi.  

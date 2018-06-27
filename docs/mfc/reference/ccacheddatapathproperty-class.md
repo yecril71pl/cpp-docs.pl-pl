@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e46f7e65d6c2f9b5c0d29007cd31f660754957
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b264b2366ce4fb7234d5906222fb4f8aa750212
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355463"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951419"
 ---
 # <a name="ccacheddatapathproperty-class"></a>Klasa CCachedDataPathProperty
 Implementuje OLE kontrolować właściwości przesyłane asynchronicznie, a w pliku pamięci podręcznej.  
@@ -53,7 +53,7 @@ class CCachedDataPathProperty : public CDataPathProperty
 ## <a name="remarks"></a>Uwagi  
  Plik pamięci są przechowywane w pamięci RAM, a nie na dysku i jest przydatne w przypadku transferów fast tymczasowych.  
   
- Wraz z programem **CAysncMonikerFile** i `CDataPathProperty`, `CCachedDataPathProperty` zapewnia funkcje do użytku monikery asynchroniczne formantów OLE. Z `CCachedDataPathProperty` obiekty, są w stanie asynchronicznego przesyłania danych z pliku lub adres URL źródła i zapisz go w pliku pamięci za pomocą `m_Cache` zmiennej publicznej. Wszystkie dane są przechowywane w pliku pamięci i nie musi zastąpić [OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable) , chyba że chcesz obserwować powiadomienia i odpowiedzi. Na przykład w przypadku przenoszenia duży. Plik GIF, aby powiadomić formantu Odebrano większej ilości danych, a jego powinien automatyczne odświeżenie, należy zastąpić `OnDataAvailable` dotyczących powiadamiania.  
+ Wraz z programem `CAysncMonikerFile` i `CDataPathProperty`, `CCachedDataPathProperty` zapewnia funkcje do użytku monikery asynchroniczne formantów OLE. Z `CCachedDataPathProperty` obiekty, są w stanie asynchronicznego przesyłania danych z pliku lub adres URL źródła i zapisz go w pliku pamięci za pomocą `m_Cache` zmiennej publicznej. Wszystkie dane są przechowywane w pliku pamięci i nie musi zastąpić [OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable) , chyba że chcesz obserwować powiadomienia i odpowiedzi. Na przykład w przypadku przenoszenia duży. Plik GIF, aby powiadomić formantu Odebrano większej ilości danych, a jego powinien automatyczne odświeżenie, należy zastąpić `OnDataAvailable` dotyczących powiadamiania.  
   
  Klasa `CCachedDataPathProperty` jest pochodną `CDataPathProperty`.  
   
@@ -94,14 +94,14 @@ CCachedDataPathProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pControl`  
+ *pControl*  
  Wskaźnik do obiektu formantu ActiveX ma zostać skojarzony z tym `CCachedDataPathProperty` obiektu.  
   
- `lpszPath`  
+ *lpszPath*  
  Ścieżki, która może być bezwzględny lub względny, używany do tworzenia asynchroniczne krótkiej nazwy odwołujących się do rzeczywistej lokalizacji bezwzględnej właściwości. `CCachedDataPathProperty` używa adresów URL, a nie nazwy plików. Jeśli chcesz `CCachedDataPathProperty` obiektów do pliku, dołączenie wartości file:// do ścieżki.  
   
 ### <a name="remarks"></a>Uwagi  
- `COleControl` Obiekt wskazywany przez `pControl` jest używany przez [Otwórz](../../mfc/reference/cdatapathproperty-class.md#open) i pobrać klas pochodnych. Jeśli `pControl` jest **NULL**, kontrolki używane z **Otwórz** powinien być ustawiony z [SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol). Jeśli `lpszPath` jest **NULL**, można przekazać w ścieżce za pośrednictwem **Otwórz** lub ustaw ją z [SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath).  
+ `COleControl` Obiekt wskazywany przez *pControl* jest używany przez [Otwórz](../../mfc/reference/cdatapathproperty-class.md#open) i pobrać klas pochodnych. Jeśli *pControl* jest **NULL**, kontrolki używane z `Open` powinien być ustawiony z [SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol). Jeśli *lpszPath* jest **NULL**, można przekazać w ścieżce za pośrednictwem `Open` lub ustaw ją z [SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath).  
   
 ##  <a name="m_cache"></a>  CCachedDataPathProperty::m_Cache  
  Zawiera nazwę klasy w pliku pamięci, do którego dane są buforowane.  

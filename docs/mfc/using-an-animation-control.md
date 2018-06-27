@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecde11ddb55992032b2a8b052e2897a384293bc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d6b6b07040fbece5fae24fb2ca6be8985695eb0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382557"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950540"
 ---
 # <a name="using-an-animation-control"></a>Używanie formantu animacji
 Typowy sposób formantu animacji jest zgodny ze wzorcem poniżej:  
@@ -30,11 +30,11 @@ Typowy sposób formantu animacji jest zgodny ze wzorcem poniżej:
   
 -   Ładowanie klip AVI do formantu animacji, wywołując [Otwórz](../mfc/reference/canimatectrl-class.md#open) funkcję elementu członkowskiego. W przypadku formantu animacji w oknie dialogowym, dobrym miejscem, w tym celu jest klasy okien dialogowych [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) funkcji.  
   
--   Odtwarzania przez wywołanie metody [odtwarzanie](../mfc/reference/canimatectrl-class.md#play) funkcję elementu członkowskiego. W przypadku formantu animacji w oknie dialogowym, dobrym miejscem, w tym celu jest klasy okien dialogowych **OnInitDialog** funkcji. Wywoływanie **odtwarzanie** nie jest konieczne, jeśli ma formantu animacji `ACS_AUTOPLAY` styl zestawu.  
+-   Odtwarzania przez wywołanie metody [odtwarzanie](../mfc/reference/canimatectrl-class.md#play) funkcję elementu członkowskiego. W przypadku formantu animacji w oknie dialogowym, dobrym miejscem, w tym celu jest klasy okien dialogowych `OnInitDialog` funkcji. Wywoływanie `Play` nie jest konieczne, jeśli zestaw stylów ACS_AUTOPLAY formantu animacji.  
   
 -   Jeśli chcesz wyświetlić części klipu lub go odtworzyć klatka, użyj `Seek` funkcję elementu członkowskiego. Aby zatrzymać klip odtwarzany, użyj `Stop` funkcję elementu członkowskiego.  
   
--   Jeśli nie ma do zniszczenia kontrolki od razu, usunąć klip z pamięci przez wywołanie metody **Zamknij** funkcję elementu członkowskiego.  
+-   Jeśli nie ma do zniszczenia kontrolki od razu, usunąć klip z pamięci przez wywołanie metody `Close` funkcję elementu członkowskiego.  
   
 -   W przypadku formantu animacji w oknie dialogowym go i `CAnimateCtrl` obiektu zostaną automatycznie usunięte. Jeśli nie, musisz upewnij się, że oba formantu i `CAnimateCtrl` obiektu prawidłowo zostaną zniszczone. Likwidowanie formantu automatycznie zamyka klip AVI.  
   

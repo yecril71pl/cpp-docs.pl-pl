@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d899d9952ae13b23121fb0b7a188f8136315c342
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c033d33dd6b1e6c0ccd5bbdb4b6af6939521f592
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384137"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956177"
 ---
 # <a name="when-update-handlers-are-called"></a>Kiedy są wywoływane programy obsługi aktualizacji
-Załóżmy, że użytkownik kliknie przycisk myszy w menu Plik, który generuje `WM_INITMENUPOPUP` wiadomości. W ramach mechanizmu aktualizacji zbiorczo aktualizuje wszystkie elementy w menu plik przed menu górnego poziomu, więc użytkownik może go wyświetlić.  
+Załóżmy, że użytkownik kliknie przycisk myszy w menu Plik, który generuje komunikat WM_INITMENUPOPUP. W ramach mechanizmu aktualizacji zbiorczo aktualizuje wszystkie elementy w menu plik przed menu górnego poziomu, więc użytkownik może go wyświetlić.  
   
  Aby to zrobić, trasy framework zaktualizować polecenia dla wszystkich elementów menu w menu podręcznym wzdłuż standardowego routingu poleceń. Obiekty docelowe poleceń na routingu mógł zaktualizować wszystkie elementy menu, dopasowując polecenia aktualizacji z wpisem odpowiednie mapy komunikatów (w postaci `ON_UPDATE_COMMAND_UI`) i wywołanie funkcji "procedury obsługi aktualizacji". W związku z tym menu z sześciu elementów menu, sześć polecenia aktualizacji są wysyłane. Jeśli istnieje procedura obsługi aktualizacji dla Identyfikatora polecenia elementu menu, jest on nazywany wykonaj aktualizację. Jeśli nie, w ramach sprawdza istnienie obsługi dla tego Identyfikatora polecenia i włącza lub wyłącza element menu, zależnie od potrzeb.  
   
@@ -42,7 +42,7 @@ Załóżmy, że użytkownik kliknie przycisk myszy w menu Plik, który generuje 
   
  Jest to można wyłączyć domyślnego wyłączenie obiektów interfejsu użytkownika. Aby uzyskać więcej informacji, zobacz [m_bAutoMenuEnable](../mfc/reference/cframewnd-class.md#m_bautomenuenable) elementu członkowskiego klasy `CFrameWnd` w *odwołania MFC*.  
   
- Inicjowanie menu odbywa się automatycznie w ramach występuje, gdy aplikacja odbiera `WM_INITMENUPOPUP` wiadomości. Podczas wykonywania pętli bezczynności struktura wyszukuje polecenia routingu dla przycisku programy obsługi aktualizacji w podobny sposób jak w przypadku menu.  
+ Inicjowanie menu odbywa się automatycznie w ramach pojawiają się, kiedy aplikacja odbiera komunikat WM_INITMENUPOPUP. Podczas wykonywania pętli bezczynności struktura wyszukuje polecenia routingu dla przycisku programy obsługi aktualizacji w podobny sposób jak w przypadku menu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Instrukcje: aktualizowanie obiektów interfejsu użytkownika](../mfc/how-to-update-user-interface-objects.md)

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47d1c9769055e0ab69f57f58b136b7844cb1f860
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60e42aedd406e7478db83ecddca7d8b82230abc5
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386096"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951997"
 ---
 # <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053: niestandardowe procedury DFX dla klas baz danych DAO
 > [!NOTE]
@@ -134,19 +134,19 @@ PopUpEmployeeData(emp.m_strFirstName,
   
 |Operacja|Opis|  
 |---------------|-----------------|  
-|**AddToParameterList**|Klauzula parametry kompilacji|  
-|**AddToSelectList**|Klauzula SELECT kompilacji|  
-|**BindField**|Konfiguruje powiązanie — struktura|  
-|**BindParam**|Ustawia wartości parametrów|  
-|**Naprawy**|Ustawia stan o wartości NULL|  
-|**AllocCache**|Przydziela pamięć podręczna dla wyboru z zanieczyszczeniu|  
-|**StoreField**|Zapisuje bieżący rekord w pamięci podręcznej|  
-|**LoadField**|Przywraca pamięci podręcznej, aby wartości elementów członkowskich|  
-|**FreeCache**|Zwalnia pamięć podręczna|  
+|`AddToParameterList`|Klauzula parametry kompilacji|  
+|`AddToSelectList`|Klauzula SELECT kompilacji|  
+|`BindField`|Konfiguruje powiązanie — struktura|  
+|`BindParam`|Ustawia wartości parametrów|  
+|`Fixup`|Ustawia stan o wartości NULL|  
+|`AllocCache`|Przydziela pamięć podręczna dla wyboru z zanieczyszczeniu|  
+|`StoreField`|Zapisuje bieżący rekord w pamięci podręcznej|  
+|`LoadField`|Przywraca pamięci podręcznej, aby wartości elementów członkowskich|  
+|`FreeCache`|Zwalnia pamięć podręczna|  
 |`SetFieldNull`|Ustawia pola wartość NULL & stanu|  
-|**MarkForAddNew**|Znaki pól zanieczyszczone, jeśli nie PSEUDO NULL|  
-|**MarkForEdit**|Jeśli zanieczyszczone pola Znaczniki nie zgadzają się pamięci podręcznej|  
-|**SetDirtyField**|Ustawia pole wartości oznaczony jako zmieniony|  
+|`MarkForAddNew`|Znaki pól zanieczyszczone, jeśli nie PSEUDO NULL|  
+|`MarkForEdit`|Jeśli zanieczyszczone pola Znaczniki nie zgadzają się pamięci podręcznej|  
+|`SetDirtyField`|Ustawia pole wartości oznaczony jako zmieniony|  
   
  W następnej sekcji opisano każdej operacji bardziej szczegółowo dla `DFX_Text`.  
   
@@ -168,45 +168,45 @@ PopUpEmployeeData(emp.m_strFirstName,
 ##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a> Dfx_text — szczegóły  
  Jak wspomniano wcześniej, najlepszy sposób, aby wyjaśnić, jak działa DFX jest do pracy z przykładem. W tym celu przechodzenia przez funkcje wewnętrzne `DFX_Text` powinny działać bardzo dobrze, aby zapewnić co najmniej podstawową wiedzę DFX.  
   
- **AddToParameterList**  
- Ta operacja Kompilacje SQL **parametry** klauzuli ("`Parameters <param name>, <param type> ... ;`") wymagane przez Jet. Każdy parametr jest o nazwie i wpisana (określone w wywołaniu RFX). Zobacz opis funkcji **CDaoFieldExchange::AppendParamType** funkcji, aby wyświetlić nazwy poszczególnych typów. W przypadku liczby `DFX_Text`, jest używany typ `text`.  
+ `AddToParameterList`  
+ Ta operacja Kompilacje SQL **parametry** klauzuli ("`Parameters <param name>, <param type> ... ;`") wymagane przez Jet. Każdy parametr jest o nazwie i wpisana (określone w wywołaniu RFX). Zobacz opis funkcji `CDaoFieldExchange::AppendParamType` funkcji, aby wyświetlić nazwy poszczególnych typów. W przypadku liczby `DFX_Text`, jest używany typ **tekstu**.  
   
- **AddToSelectList**  
+ `AddToSelectList`  
  Kompilacje SQL **wybierz** klauzuli. Jest to bardzo proste do przodu jako nazwa kolumny określona przez wywołanie DFX jest po prostu dołączany ("`SELECT <column name>, ...`").  
   
- **BindField**  
+ `BindField`  
  Najbardziej złożonych operacji. Jak wspomniano wcześniej, jest to, gdzie DAO struktury powiązanie używane przez `GetRows` jest skonfigurowany. Jak widać z kodu w `DFX_Text` typy informacji w strukturze użytej DAO (**DAO_CHAR** lub **DAO_WCHAR** w odniesieniu `DFX_Text`). Dodatkowo typ powiązania używanego jest również ustawić. W sekcji wcześniejszych `GetRows` został krótko opisano, ale jest wystarczające, aby wyjaśnić, typ powiązania używanego przez MFC jest zawsze powiązanie bezpośredniego adresu (**DAOBINDING_DIRECT**). Ponadto dla powiązania kolumny o zmiennej długości (takie jak `DFX_Text`) powiązania wywołania zwrotnego jest używana co MFC można kontrolować alokacji pamięci i określić adres właściwą długość. Co to oznacza to, że MFC zawsze stwierdzić DAO ", gdzie" umieszczanie danych, dzięki czemu powiązanie bezpośrednio do zmiennych Członkowskich. Reszty struktury powiązanie jest wypełniane np. adres funkcja wywołania zwrotnego alokacji pamięci i typ powiązania kolumny (powiązanie według nazwy kolumn).  
   
- **BindParam**  
+ `BindParam`  
  To jest prostą operacją wywołującą `SetParamValue` z wartością parametru określony w elemencie członkowskim z parametru.  
   
- **Naprawy**  
+ `Fixup`  
  Wypełnia **NULL** stanu dla każdego pola.  
   
  `SetFieldNull`  
  Ta operacja oznacza tylko stan każdego pola jako **NULL** i ustawia wartość zmiennej członka **PSEUDO_NULL**.  
   
- **SetDirtyField**  
+ `SetDirtyField`  
  Wywołania `SetFieldValue` dla każdego pola oznaczonych jako zakłócone.  
   
  Wszystkie pozostałe operacje dotyczą tylko przy użyciu pamięci podręcznej danych. Pamięć podręczna danych jest dodatkowy bufor danych bieżącego rekordu, który używa w celu uproszczenia pewne zagadnienia. Na przykład pola "zakłóconych" może być wykrywane automatycznie. Zgodnie z opisem w dokumentacji online go można wyłączyć całkowicie lub na poziomie pola. Implementacja buforu wykorzystuje mapy. Ta mapa jest używany do dopasowywania się dynamicznie przydzielonego kopie danych z adresem pole "powiązane" (lub `CDaoRecordset` pochodnego elementu członkowskiego danych).  
   
- **AllocCache**  
+ `AllocCache`  
  Dynamicznie przydziela wartość pola pamięci podręcznej i dodaje go do mapy.  
   
- **FreeCache**  
+ `FreeCache`  
  Usuwa wartość pola pamięci podręcznej i usuwa go z mapy.  
   
- **StoreField**  
+ `StoreField`  
  Kopiuje bieżącą wartość pola do pamięci podręcznej danych.  
   
- **LoadField**  
+ `LoadField`  
  Kopiuje wartość w pamięci podręcznej do elementu członkowskiego pola.  
   
- **MarkForAddNew**  
+ `MarkForAddNew`  
  Sprawdza, czy bieżąca wartość pola ma wartość inną niż**NULL** i oznacza je zanieczyszczony w razie potrzeby.  
   
- **MarkForEdit**  
+ `MarkForEdit`  
  Porównuje bieżącą wartość pola z pamięci podręcznej danych i oznacza zanieczyszczone, jeśli to konieczne.  
   
 > [!TIP]

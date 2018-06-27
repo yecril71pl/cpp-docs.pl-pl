@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 515103fc66ad221a3806fc101dcbc01f507ef535
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a706c927a7aacaf69091d6b448e00bd7938c265f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383191"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950438"
 ---
 # <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064: model wątkowości typu apartment w kontrolkach ActiveX
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "33383191"
  Włączanie apartamentu model wątkowości jest bardzo proste dla większości formantów, zwłaszcza w przypadku, gdy mają one żadnych danych udostępnionych.  
   
 ## <a name="protecting-shared-data"></a>Ochrona danych udostępnionych  
- Jeśli formantu używa udostępnionych danych, takich jak statycznym elementem członkowskim zmiennej, dostęp do czy dane powinny być chronione przy użyciu sekcja krytyczna, aby zapobiec modyfikowanie danych w tym samym czasie więcej niż jeden wątek. Aby skonfigurować sekcja krytyczna w tym celu, należy zadeklarować zmienną statyczny element członkowski klasy `CCriticalSection` klasy formantu. Użyj `Lock` i **Unlock** funkcji Członkowskich w tej sekcji krytycznych obiektów wszędzie tam, gdzie kod uzyskuje dostęp do współużytkowanych danych.  
+ Jeśli formantu używa udostępnionych danych, takich jak statycznym elementem członkowskim zmiennej, dostęp do czy dane powinny być chronione przy użyciu sekcja krytyczna, aby zapobiec modyfikowanie danych w tym samym czasie więcej niż jeden wątek. Aby skonfigurować sekcja krytyczna w tym celu, należy zadeklarować zmienną statyczny element członkowski klasy `CCriticalSection` klasy formantu. Użyj `Lock` i `Unlock` funkcji Członkowskich w tej sekcji krytycznych obiektów wszędzie tam, gdzie kod uzyskuje dostęp do współużytkowanych danych.  
   
  Na przykład, należy rozważyć klasy formantu, który musi być ciągiem, który jest współużytkowana przez wszystkie wystąpienia. Ten ciąg może przechowywane w zmiennej statyczny element członkowski i chronione sekcja krytyczna. Deklaracja klasy formantu będzie zawierać następujące informacje:  
   
@@ -81,7 +81,7 @@ if (_strShared.Empty())
 ```  
   
 ## <a name="registering-an-apartment-model-aware-control"></a>Rejestrowania apartamentu modelu rozpoznają formantów  
- Formantów, które obsługują apartamentu model wątkowości powinny wskazywać tę funkcję w rejestrze, dodając wartość o nazwie "ThreadingModel" o wartości "Apartment" w ich klasy identyfikator wpisu rejestru *identyfikator klasy* \\ **InprocServer32** klucza. Aby spowodować, że ten klucz, aby być automatycznie rejestrowane dla formantu, należy przekazać `afxRegApartmentThreading` flagi w parametrze szóstego `AfxOleRegisterControlClass`:  
+ Formantów, które obsługują apartamentu model wątkowości powinny wskazywać tę funkcję w rejestrze, dodając wartość o nazwie "ThreadingModel" o wartości "Apartment" w ich klasy identyfikator wpisu rejestru *identyfikator klasy* \\ **InprocServer32** klucza. Aby spowodować, że ten klucz, aby być automatycznie rejestrowane dla formantu, należy przekazać *afxregapartmentthreading —* flagi w parametrze szóstego `AfxOleRegisterControlClass`:  
   
 ```  
 BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)  
@@ -108,9 +108,9 @@ BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)
   
  Jeśli projekt kontroli został wygenerowany przez ControlWizard w programie Visual C++ wersji 4.1 lub nowszą, ta flaga zostanie utworzona w kodzie. Żadne zmiany są niezbędne zarejestrować model wątkowy.  
   
- Jeśli projekt został wygenerowany za pomocą starszej wersji ControlWizard, istniejący kod ma wartość logiczną jako szóstego parametru. Jeśli istniejący parametr ma wartość PRAWDA, zmień go na `afxRegInsertable | afxRegApartmentThreading`. Jeśli istniejący parametr ma wartość FALSE, zmień go na `afxRegApartmentThreading`.  
+ Jeśli projekt został wygenerowany za pomocą starszej wersji ControlWizard, istniejący kod ma wartość logiczną jako szóstego parametru. Jeśli istniejący parametr ma wartość PRAWDA, zmień go na *afxreginsertable — | afxregapartmentthreading —*. Jeśli istniejący parametr ma wartość FALSE, zmień go na *afxregapartmentthreading —*.  
   
- Jeśli zasady apartamentu model wątkowości nie jest zgodna z formantu, należy nie przekazać `afxRegApartmentThreading` w tym parametrze.  
+ Jeśli zasady apartamentu model wątkowości nie jest zgodna z formantu, należy nie przekazać *afxregapartmentthreading —* w tym parametrze.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Uwagi techniczne według numerów](../mfc/technical-notes-by-number.md)   

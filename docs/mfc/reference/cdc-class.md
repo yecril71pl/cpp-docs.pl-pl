@@ -412,12 +412,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3a677d81343da6185ce37f1f4839f20cef3b943
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3e2f9edf2cdf6a0e462333224f3b8bd6d920fa2a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378855"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954094"
 ---
 # <a name="cdc-class"></a>Klasa CDC
 Definiuje klasę obiektów kontekstu urządzenia.  
@@ -657,7 +657,7 @@ class CDC : public CObject
  Aby użyć `CDC` obiektów, utworzyć go, a następnie wywołać jego elementów członkowskich funkcje, które w sposób równoległy funkcje systemu Windows, które używają konteksty urządzenia.  
   
 > [!NOTE]
->  W systemie Windows 95/98 wszystkie współrzędne ekranu mogą zawierać maksymalnie 16 bitów. W związku z tym `int` przekazany do `CDC` funkcji członkowskiej musi należeć do zakresu od -32768 do 32767.  
+>  W systemie Windows 95/98 wszystkie współrzędne ekranu mogą zawierać maksymalnie 16 bitów. W związku z tym **int** przekazany do `CDC` funkcji członkowskiej musi należeć do zakresu od -32768 do 32767.  
   
  Do określonych celów Microsoft Foundation Class Library zawiera kilka klas pochodnych `CDC` . `CPaintDC` hermetyzuje wywołań `BeginPaint` i `EndPaint`. `CClientDC` zarządza kontekst wyświetlania skojarzonych z obszaru klienckiego okna. `CWindowDC` zarządza kontekst wyświetlania skojarzonych z całe okno, łącznie z jej ramki i kontrolek. `CMetaFileDC` Kojarzy kontekstu urządzenia z metaplik.  
   
@@ -707,17 +707,17 @@ int AbortDoc();
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja członkowska zastępuje `ABORTDOC` escape drukarki.  
   
- **AbortDoc** powinien być używany do zakończenia następujące:  
+ `AbortDoc` należy użyć o zakończeniu następujących czynności:  
   
 -   Operacje drukowania, które nie należy określać funkcja przerwania za pomocą [SetAbortProc](#setabortproc).  
   
 -   Operacje drukowania, które nie osiągnęły jeszcze ich pierwszym **NEWFRAME** lub **NEXTBAND** escape wywołania.  
   
- Jeśli aplikacja napotka błąd drukowania lub anulowanej operacji wydruku, nie muszą podejmować zakończyć operację, używając [EndDoc](#enddoc) lub **AbortDoc** funkcji elementów członkowskich klasy `CDC`. GDI automatycznie kończy operację przed zwróceniem wartość błędu.  
+ Jeśli aplikacja napotka błąd drukowania lub anulowanej operacji wydruku, nie muszą podejmować zakończyć operację, używając [EndDoc](#enddoc) lub `AbortDoc` funkcji elementów członkowskich klasy `CDC`. GDI automatycznie kończy operację przed zwróceniem wartość błędu.  
   
- Jeśli aplikacja wyświetla okno dialogowe umożliwia użytkownikom anulować operację drukowania, należy wywołać **AbortDoc** przed niszczenie okna dialogowego.  
+ Jeśli aplikacja wyświetla okno dialogowe umożliwia użytkownikom anulować operację drukowania, należy wywołać `AbortDoc` przed niszczenie okna dialogowego.  
   
- Jeśli Menedżer drukowania był używany można rozpocząć zadania drukowania, wywoływania **AbortDoc** zadania całego buforu na partycje powoduje usunięcie — drukarki odbiera nothing. Jeśli nie użyto Menedżera wydruku można rozpocząć zadania drukowania, dane mógł zostać wysłany do drukarki przed **AbortDoc** została wywołana. W takim przypadku sterownika drukarki czy zresetować drukarki (jeśli jest to możliwe) i zamknięte zadania drukowania.  
+ Jeśli Menedżer drukowania był używany można rozpocząć zadania drukowania, wywoływania `AbortDoc` zadania całego buforu na partycje powoduje usunięcie — drukarki odbiera nothing. Jeśli nie użyto Menedżera wydruku można rozpocząć zadania drukowania, dane mógł zostać wysłany do drukarki przed `AbortDoc` została wywołana. W takim przypadku sterownika drukarki czy zresetować drukarki (jeśli jest to możliwe) i zamknięte zadania drukowania.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CDC::StartDoc](#startdoc).  
@@ -775,31 +775,31 @@ BOOL AlphaBlend(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `xDest`  
+ *xDest*  
  Określa współrzędną x, w jednostkach logicznych górnego lewego rogu prostokąta docelowego.  
   
- `yDest`  
+ *yDest*  
  Określa współrzędną y w jednostkach logicznych górnego lewego rogu prostokąta docelowego.  
   
- `nDestWidth`  
+ *nDestWidth*  
  Określa szerokość, w jednostkach logicznych, prostokąta docelowego.  
   
- `nDestHeight`  
+ *nDestHeight*  
  Określa wysokość w jednostkach logicznych, prostokąta docelowego.  
   
- `pSrcDC`  
+ *pSrcDC*  
  Wskaźnik do kontekstu urządzenia źródłowego.  
   
- `xSrc`  
+ *xSrc*  
  Określa współrzędną x, w jednostkach logicznych górnego lewego rogu prostokąta źródłowego.  
   
- `ySrc`  
+ *ySrc*  
  Określa współrzędną y jednostek logicznych, w lewym górnym rogu prostokąta źródłowego.  
   
- `nSrcWidth`  
+ *nSrcWidth*  
  Określa szerokość, w jednostkach logicznych, prostokąta źródłowego.  
   
- `nSrcHeight`  
+ *nSrcHeight*  
  Określa wysokość w jednostkach logicznych, prostokąta źródłowego.  
   
  *program Blend*  
@@ -871,37 +871,37 @@ BOOL Arc(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `x1`  
+ *x1*  
  Określa współrzędną x górnego lewego rogu prostokątem (w jednostkach logicznych).  
   
- `y1`  
+ *y1*  
  Określa współrzędną y lewego górnego rogu prostokątem (w jednostkach logicznych).  
   
- `x2`  
+ *x2*  
  Określa współrzędną x prawym dolnym rogu prostokątem (w jednostkach logicznych).  
   
- `y2`  
+ *y2*  
  Określa współrzędną y prawego dolnego rogu prostokątem (w jednostkach logicznych).  
   
  *x3*  
  Określa współrzędną x punktu, który definiuje łuk na rozpoczęcie (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk.  
   
- `y3`  
+ *Y3*  
  Określa współrzędną y punktu, który definiuje łuk na rozpoczęcie (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk.  
   
- `x4`  
+ *X4*  
  Określa współrzędną x punktu, który definiuje punkt końcowy łuku (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk.  
   
- `y4`  
+ *Y4*  
  Określa współrzędną y punktu, który definiuje punkt końcowy łuku (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk.  
   
- `lpRect`  
+ *lprect —*  
  Określa prostokąt ograniczający (w jednostkach logicznych). Można przekazać `LPRECT` lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt dla tego parametru.  
   
- `ptStart`  
+ *ptStart*  
  Określa, że współrzędne x i y punktu, który definiuje łuk na rozpoczęcie (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk. Można przekazać [punktu](../../mfc/reference/point-structure1.md) struktury lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiekt dla tego parametru.  
   
- `ptEnd`  
+ *ptEnd*  
  Określa współrzędne x i y punktu, który definiuje łuku punktu końcowego (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk. Można przekazać **punktu** struktury lub `CPoint` obiekt dla tego parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -937,63 +937,63 @@ BOOL ArcTo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `x1`  
+ *x1*  
  Określa współrzędną x górnego lewego rogu prostokątem (w jednostkach logicznych).  
   
- `y1`  
+ *y1*  
  Określa współrzędną y lewego górnego rogu prostokątem (w jednostkach logicznych).  
   
- `x2`  
+ *x2*  
  Określa współrzędną x prawym dolnym rogu prostokątem (w jednostkach logicznych).  
   
- `y2`  
+ *y2*  
  Określa współrzędną y prawego dolnego rogu prostokątem (w jednostkach logicznych).  
   
  *x3*  
  Określa współrzędną x punktu, który definiuje łuk na rozpoczęcie (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk.  
   
- `y3`  
+ *Y3*  
  Określa współrzędną y punktu, który definiuje łuk na rozpoczęcie (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk.  
   
- `x4`  
+ *X4*  
  Określa współrzędną x punktu, który definiuje punkt końcowy łuku (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk.  
   
- `y4`  
+ *Y4*  
  Określa współrzędną y punktu, który definiuje punkt końcowy łuku (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk.  
   
- `lpRect`  
+ *lprect —*  
  Określa prostokąt ograniczający (w jednostkach logicznych). Można przekazać wskaźnika do [RECT](../../mfc/reference/rect-structure1.md) struktury danych lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt dla tego parametru.  
   
- `ptStart`  
+ *ptStart*  
  Określa, że współrzędne x i y punktu, który definiuje łuk na rozpoczęcie (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk. Można przekazać [punktu](../../mfc/reference/point-structure1.md) struktury danych lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiekt dla tego parametru.  
   
- `ptEnd`  
+ *ptEnd*  
  Określa współrzędne x i y punktu, który definiuje łuku punktu końcowego (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk. Można przekazać **punktu** struktury danych lub `CPoint` obiekt dla tego parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja jest podobny do `CDC::Arc`, z wyjątkiem tego, czy bieżące położenie jest aktualizowany. Punkty ( `x1`, `y1`) i ( `x2`, `y2`) Określanie prostokąt ograniczający. Utworzone przez dany prostokątem elipsy definiuje krzywej łuk. Łuk rozszerza zegara (domyślny kierunek łuku) z punktów końcowe promieniowego wiersza z Centrum prostokątem do ( *x3*, `y3`). Końcowe promieniowego wiersza z Centrum prostokątem do zakończenia łuk ( `x4`, `y4`). Jeśli punkt początkowy i punkt końcowy są takie same, pełną elipsy jest rysowane.  
+ Ta funkcja jest podobny do `CDC::Arc`, z wyjątkiem tego, czy bieżące położenie jest aktualizowany. Punkty ( *x1*, *y1*) i ( *x2*, *y2*) Określanie prostokąt ograniczający. Utworzone przez dany prostokątem elipsy definiuje krzywej łuk. Łuk rozszerza zegara (domyślny kierunek łuku) z punktów końcowe promieniowego wiersza z Centrum prostokątem do ( *x3*, *y3*). Końcowe promieniowego wiersza z Centrum prostokątem do zakończenia łuk ( *x4*, *y4*). Jeśli punkt początkowy i punkt końcowy są takie same, pełną elipsy jest rysowane.  
   
  Wiersz jest przenoszony z bieżącej pozycji do punktu początkowego łuk. Jeśli nie występują błędy, bieżące położenie jest ustawiona do punktu końcowego łuku. Łuku przy użyciu bieżącego pióra; nie jest wypełnione.  
   
 ##  <a name="attach"></a>  CDC::attach  
- Użyj tej funkcji Członkowskich dołączyć `hDC` do `CDC` obiektu.  
+ Użyj tej funkcji Członkowskich dołączyć *elementu hDC* do `CDC` obiektu.  
   
 ```  
 BOOL Attach(HDC hDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hDC`  
+ *elementu hDC*  
  Kontekst urządzenia z systemem Windows.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- `hDC` Są przechowywane w obu `m_hDC`, kontekst urządzenia wyjściowego, a następnie w `m_hAttribDC`, atrybutu kontekstu urządzenia.  
+ *Elementu hDC* są przechowywane w obu `m_hDC`, kontekst urządzenia wyjściowego, a następnie w `m_hAttribDC`, atrybutu kontekstu urządzenia.  
   
 ##  <a name="beginpath"></a>  CDC::BeginPath  
  Zostanie otwarty nawias ścieżki w kontekście urządzenia.  
@@ -1035,19 +1035,19 @@ BOOL BitBlt(
  *y*  
  Określa logicznej współrzędną y górnego lewego rogu prostokąta docelowego.  
   
- `nWidth`  
+ *nWidth*  
  Określa szerokość (w jednostkach logicznych) docelowy prostokąt i źródła mapy bitowej.  
   
- `nHeight`  
+ *nHeight*  
  Określa wysokość mapy bitowej prostokąt i źródła docelowego (w jednostkach logicznych).  
   
- `pSrcDC`  
+ *pSrcDC*  
  Wskaźnik do `CDC` obiektu, który identyfikuje kontekst urządzenia, z którego będą kopiowane mapy bitowej. Musi to być **NULL** Jeśli *dwRop* określa operację rastrowe, która nie zawiera źródła.  
   
- `xSrc`  
+ *xSrc*  
  Określa logicznej współrzędną x górnego lewego rogu źródła mapy bitowej.  
   
- `ySrc`  
+ *ySrc*  
  Określa logicznej współrzędną y lewego górnego rogu źródła mapy bitowej.  
   
  *dwRop*  
@@ -1063,7 +1063,7 @@ BOOL BitBlt(
   
  `BitBlt` operacje na wyrównane bajtów prostokąty są znacznie krócej niż `BitBlt` operacji w prostokątach, które nie są wyrównane bajtów. Jeśli chcesz określić klasy style, takie jak bajtów wyrównanie kontekst urządzenia, musisz zarejestrować klasy okna zamiast polegania na Microsoft Foundation classes, aby to zrobił dla Ciebie. Użyj funkcji globalnej [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass).  
   
- Przekształca GDI `nWidth` i `nHeight`raz przy użyciu kontekstu urządzenia docelowego i raz przy użyciu kontekstu urządzenia źródłowego. Jeśli wynikowy zakresów nie są zgodne, GDI korzysta z systemu Windows `StretchBlt` funkcji, które mają być kompresowane lub rozciągnąć źródła mapy bitowej w razie potrzeby.  
+ Przekształca GDI *nWidth* i *nHeight*raz przy użyciu kontekstu urządzenia docelowego i raz przy użyciu kontekstu urządzenia źródłowego. Jeśli wynikowy zakresów nie są zgodne, GDI korzysta z systemu Windows `StretchBlt` funkcji, które mają być kompresowane lub rozciągnąć źródła mapy bitowej w razie potrzeby.  
   
  Jeśli docelowy, źródło i bitmapy wzorzec nie mają ten sam format koloru `BitBlt` funkcja konwertuje bitmapy źródła i wzorzec do dopasowania miejsca docelowego. Kolory pierwszego planu i tła mapy bitowej docelowej są używane do konwersji.  
   
@@ -1103,46 +1103,46 @@ BOOL Chord(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `x1`  
+ *x1*  
  Określa współrzędną x górnego lewego rogu akordu przez ograniczenia prostokąt (w jednostkach logicznych).  
   
- `y1`  
+ *y1*  
  Określa współrzędną y lewego górnego rogu akordu przez ograniczenia prostokąt (w jednostkach logicznych).  
   
- `x2`  
+ *x2*  
  Określa współrzędną x prawym dolnym rogu akordu przez ograniczenia prostokąt (w jednostkach logicznych).  
   
- `y2`  
+ *y2*  
  Określa współrzędną y prawego dolnego rogu akordu przez ograniczenia prostokąt (w jednostkach logicznych).  
   
  *x3*  
  Określa współrzędną x punktu, który definiuje akordu jego początkowy (w jednostkach logicznych).  
   
- `y3`  
+ *Y3*  
  Określa współrzędną y punktu, który definiuje akordu jego początkowy (w jednostkach logicznych).  
   
- `x4`  
+ *X4*  
  Określa współrzędną x punktu, który definiuje punkt końcowy akordu (w jednostkach logicznych).  
   
- `y4`  
+ *Y4*  
  Określa współrzędną y punktu, który definiuje punkt końcowy akordu (w jednostkach logicznych).  
   
- `lpRect`  
+ *lprect —*  
  Określa prostokąt ograniczający (w jednostkach logicznych). Można przekazać `LPRECT` lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt dla tego parametru.  
   
- `ptStart`  
+ *ptStart*  
  Określa, że współrzędne x i y punktu, który definiuje akordu jego początkowy (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na akordu. Można przekazać **punktu** struktury lub `CPoint` obiekt dla tego parametru.  
   
- `ptEnd`  
+ *ptEnd*  
  Określa współrzędne x i y punktu, który definiuje akordu punktu końcowego (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na akordu. Można przekazać [punktu](../../mfc/reference/point-structure1.md) struktury lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiekt dla tego parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- ( `x1`, `y1`) I ( `x2`, `y2`) parametry określają narożnikach górnego lewego i prawego dolnego odpowiednio obwiedni elipsy, który jest częścią akordu prostokąta. ( *X3*, `y3`) i ( `x4`, `y4`) parametry określają punkty końcowe linii przecina elipsy. Akordu jest rysowane przy użyciu wybranego pióra i wypełniane przy użyciu wybranego pędzla.  
+ ( *X1*, *y1*) i ( *x2*, *y2*) parametry określają narożnikach górnego lewego i prawego dolnego odpowiednio prostokąta ograniczenia elipsy, który jest częścią akordu. ( *X3*, *y3*) i ( *x4*, *y4*) parametry określają punkty końcowe linii przecina elipsy. Akordu jest rysowane przy użyciu wybranego pióra i wypełniane przy użyciu wybranego pędzla.  
   
- Rysunek narysowanymi przez `Chord` funkcja rozszerza do, ale nie zawiera współrzędne prawo i w dół. Oznacza to, że wysokość rysunku `y2`  -  `y1` i szerokość rysunku jest `x2`  -  `x1`.  
+ Rysunek narysowanymi przez `Chord` funkcja rozszerza do, ale nie zawiera współrzędne prawo i w dół. Oznacza to, że wysokość rysunku *y2* - *y1* i szerokość rysunku jest *x2* - *x1*.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#31](../../mfc/codesnippet/cpp/cdc-class_3.cpp)]  
@@ -1163,15 +1163,15 @@ BOOL CloseFigure();
  Rysunek w ścieżce jest otwarty, chyba że jawnie zamknięty przy użyciu tej funkcji. (Rysunku można otworzyć nawet, jeśli bieżącym punktem a punktem początkowym rysunku są takie same.) Dowolną linię lub krzywą dodawany do ścieżki po `CloseFigure` uruchamia nowe rysunku.  
   
 ##  <a name="createcompatibledc"></a>  CDC::CreateCompatibleDC  
- Tworzy kontekstu urządzenia pamięci, która jest zgodna z urządzenia określonego przez `pDC`.  
+ Tworzy kontekstu urządzenia pamięci, która jest zgodna z urządzenia określonego przez *kontrolera pDC*.  
   
 ```  
 BOOL CreateCompatibleDC(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
- Wskaźnik do kontekstu urządzenia. Jeśli `pDC` jest **NULL**, funkcja ta umożliwia tworzenie kontekstu urządzenia pamięci zgodnego z wyświetlania systemu.  
+ *podstawowego kontrolera domeny*  
+ Wskaźnik do kontekstu urządzenia. Jeśli *kontrolera pDC* jest **NULL**, funkcja ta umożliwia tworzenie kontekstu urządzenia pamięci zgodnego z wyświetlania systemu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
@@ -1198,17 +1198,17 @@ BOOL CreateDC(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszDriverName`  
+ *lpszDriverName*  
  Wskazuje zerem ciąg, który określa nazwę pliku (bez rozszerzenia) sterownik urządzenia (na przykład "EPSON"). Można również przekazać `CString` obiekt dla tego parametru.  
   
- `lpszDeviceName`  
- Wskazuje zerem ciąg określający nazwę określonego urządzenia obsługiwane (na przykład "EPSON FX-80"). `lpszDeviceName` Parametr jest używany, gdy moduł obsługuje więcej niż jedno urządzenie. Można również przekazać `CString` obiekt dla tego parametru.  
+ *lpszDeviceName*  
+ Wskazuje zerem ciąg określający nazwę określonego urządzenia obsługiwane (na przykład "EPSON FX-80"). *LpszDeviceName* parametr jest używany, gdy moduł obsługuje więcej niż jedno urządzenie. Można również przekazać `CString` obiekt dla tego parametru.  
   
- `lpszOutput`  
+ *lpszOutput*  
  Wskazuje zerem ciąg, który określa nazwę pliku lub urządzenia, dla średniej wielkości produkcji (port pliku lub dane wyjściowe). Można również przekazać `CString` obiekt dla tego parametru.  
   
- `lpInitData`  
- Wskazuje `DEVMODE` struktury zawierającej dane specyficzne dla urządzenia inicjowania sterownika urządzenia. Windows **DocumentProperties** funkcja pobiera tej struktury wypełniony dla danego urządzenia. `lpInitData` Parametr musi być **NULL** Jeżeli sterownik urządzenia jest użycie inicjowanie domyślnych (jeśli istnieje), określony przez użytkownika za pomocą Panelu sterowania.  
+ *lpInitData*  
+ Wskazuje `DEVMODE` struktury zawierającej dane specyficzne dla urządzenia inicjowania sterownika urządzenia. Systemu Windows `DocumentProperties` funkcja pobiera tej struktury wypełniony dla danego urządzenia. *LpInitData* parametr musi być **NULL** Jeżeli sterownik urządzenia jest użycie inicjowanie domyślnych (jeśli istnieje), określony przez użytkownika za pomocą Panelu sterowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
@@ -1230,17 +1230,17 @@ BOOL CreateIC(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszDriverName`  
+ *lpszDriverName*  
  Wskazuje zerem ciąg, który określa nazwę pliku (bez rozszerzenia) sterownik urządzenia (na przykład "EPSON"). Można przekazać `CString` obiekt dla tego parametru.  
   
- `lpszDeviceName`  
- Wskazuje zerem ciąg określający nazwę określonego urządzenia obsługiwane (na przykład "EPSON FX-80"). `lpszDeviceName` Parametr jest używany, gdy moduł obsługuje więcej niż jedno urządzenie. Można przekazać `CString` obiekt dla tego parametru.  
+ *lpszDeviceName*  
+ Wskazuje zerem ciąg określający nazwę określonego urządzenia obsługiwane (na przykład "EPSON FX-80"). *LpszDeviceName* parametr jest używany, gdy moduł obsługuje więcej niż jedno urządzenie. Można przekazać `CString` obiekt dla tego parametru.  
   
- `lpszOutput`  
+ *lpszOutput*  
  Wskazuje ciąg zakończony zerem, który określa nazwę pliku lub urządzenia dla średniej wielkości produkcji (plików lub port). Można przekazać `CString` obiekt dla tego parametru.  
   
- `lpInitData`  
- Punkty danych specyficznych dla urządzenia inicjowania sterownika urządzenia. `lpInitData` Parametr musi być **NULL** Jeżeli sterownik urządzenia jest użycie inicjowanie domyślnych (jeśli istnieje), określony przez użytkownika za pomocą Panelu sterowania. Zobacz `CreateDC` dla format danych do inicjowania specyficzne dla urządzenia.  
+ *lpInitData*  
+ Punkty danych specyficznych dla urządzenia inicjowania sterownika urządzenia. *LpInitData* parametr musi być **NULL** Jeżeli sterownik urządzenia jest użycie inicjowanie domyślnych (jeśli istnieje), określony przez użytkownika za pomocą Panelu sterowania. Zobacz `CreateDC` dla format danych do inicjowania specyficzne dla urządzenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
@@ -1297,7 +1297,7 @@ void DPtoHIMETRIC(LPSIZE lpSize) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpSize`  
+ *lpSize*  
  Wskazuje [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1316,16 +1316,16 @@ void DPtoLP(LPSIZE lpSize) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpPoints`  
+ *lpPoints*  
  Wskazuje tablicę [punktu](../../mfc/reference/point-structure1.md) struktury lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektów.  
   
- `nCount`  
+ *nCount*  
  Liczba punktów w tablicy.  
   
- `lpRect`  
+ *lprect —*  
  Wskazuje [RECT](../../mfc/reference/rect-structure1.md) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu. Ten parametr jest używany w przypadku prostego konwersji prostokąt jednego z punktów urządzenia logicznego punktów.  
   
- `lpSize`  
+ *lpSize*  
  Wskazuje [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1351,13 +1351,13 @@ void Draw3dRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect —*  
  Określa prostokąt ograniczający (w jednostkach logicznych). Można przekazać wskaźnika do [RECT](../../mfc/reference/rect-structure1.md) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt dla tego parametru.  
   
  *clrTopLeft*  
  Określa kolor górnej i lewej strony trójwymiarowy prostokąta.  
   
- `clrBottomRight`  
+ *clrBottomRight*  
  Określa kolor dolnej i prawej krawędzi prostokąta trójwymiarowych.  
   
  *x*  
@@ -1373,7 +1373,7 @@ void Draw3dRect(
  Określa wysokość prostokąta trójwymiarowych.  
   
 ### <a name="remarks"></a>Uwagi  
- Prostokąt będzie rysowany z górnej i lewej strony w kolorze określonym przez *clrTopLeft* i dolnej i prawej krawędzi w kolorze określonym przez `clrBottomRight`.  
+ Prostokąt będzie rysowany z górnej i lewej strony w kolorze określonym przez *clrTopLeft* i dolnej i prawej krawędzi w kolorze określonym przez *clrBottomRight*.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#33](../../mfc/codesnippet/cpp/cdc-class_5.cpp)]  
@@ -1392,19 +1392,19 @@ void DrawDragRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect —*  
  Wskazuje [RECT](../../mfc/reference/rect-structure1.md) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt określający współrzędne logicznej prostokąt — w tym przypadku pozycja końcowa prostokąta zostanie narysowany ponownie.  
   
- `size`  
+ *Rozmiar*  
  Określa przesunięcie od lewego górnego rogu zewnętrznej krawędzi do lewego górnego rogu wewnętrzny obramowania prostokąta (czyli grubość obramowania).  
   
- `lpRectLast`  
+ *lpRectLast*  
  Wskazuje [RECT](../../mfc/reference/rect-structure1.md) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt określający współrzędne logicznej pozycja prostokąta — w tym przypadku oryginalnego położenia prostokąta zostanie narysowany ponownie.  
   
  *sizeLast*  
  Określa przesunięcie od lewego górnego rogu zewnętrznej krawędzi do lewego górnego rogu granicy wewnętrzny (czyli grubość obramowania) oryginalnego prostokąta zostanie narysowany ponownie.  
   
- `pBrush`  
+ *pBrush*  
  Wskaźnik do obiektu pędzla. Ustaw **NULL** do użycia domyślny pędzel półtonów.  
   
  *pBrushLast*  
@@ -1413,7 +1413,7 @@ void DrawDragRect(
 ### <a name="remarks"></a>Uwagi  
  Wywołać go w pętli, jak przykładowe pozycji myszy, aby przekazać opinię visual. Podczas wywoływania `DrawDragRect`, poprzednie prostokąt jest czyszczone, a nowy jest rysowane. Na przykład jako użytkownik przeciąga prostokąt na ekranie `DrawDragRect` spowoduje wymazanie oryginalnego prostokąt i ponownie narysuj nowy w jego nowego położenia. Domyślnie `DrawDragRect` rysuje prostokąt przy użyciu pędzla półtonów eliminuje migotanie i utworzyć wygląd sprawnie przenoszenie prostokąta.  
   
- Przy pierwszym wywołaniu `DrawDragRect`, `lpRectLast` parametr powinien być **NULL**.  
+ Przy pierwszym wywołaniu `DrawDragRect`, *lpRectLast* parametr powinien być **NULL**.  
   
 ##  <a name="drawedge"></a>  CDC::DrawEdge  
  Wywołanie tej funkcji Członkowskich do rysowania krawędzi prostokąta określonego typu i stylu.  
@@ -1426,13 +1426,13 @@ BOOL DrawEdge(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect —*  
  Wskaźnik do **RECT** strukturę, która zawiera współrzędne logicznej prostokąta.  
   
  *nEdge*  
  Określa typ krawędzi wewnętrznych i zewnętrznych do rysowania. Ten parametr musi być kombinacją jedną flagę wewnętrzny obramowania i jedną flagę zewnętrzne obramowania. Zobacz [DrawEdge](http://msdn.microsoft.com/library/windows/desktop/dd162477) w zestawie Windows SDK dla tabeli typów parametrów.  
   
- `nFlags`  
+ *nFlags*  
  Flagi, które określają typ obramowania jest rysowany. Zobacz `DrawEdge` w zestawie Windows SDK dla tabeli wartości parametrów. Linii ukośnych **BF_RECT** flagi Określ punkt końcowy wektora ograniczone przez parametr prostokąta.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1449,20 +1449,20 @@ int DrawEscape(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nEscape`  
+ *nEscape*  
  Określa funkcja escape do wykonania.  
   
- `nInputSize`  
- Określa liczbę bajtów danych wskazywanego przez `lpszInputData` parametru.  
+ *nInputSize*  
+ Określa liczbę bajtów danych wskazywanego przez *lpszInputData* parametru.  
   
- `lpszInputData`  
+ *lpszInputData*  
  Wskazuje strukturze wejściowej wymagane dla określonego ucieczki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Określa wyniku funkcji. Większa niż zero, jeśli to się powiedzie, z wyjątkiem **QUERYESCSUPPORT** specjalne, które sprawdza, czy tylko; implementacji lub zero, jeśli po nim nie jest zaimplementowana; lub mniejsza niż zero, jeśli błąd wystąpił podczas rysowania.  
   
 ### <a name="remarks"></a>Uwagi  
- Gdy aplikacja wywołuje `DrawEscape`, danych, identyfikowany przez `nInputSize` i `lpszInputData` są przekazywane bezpośrednio do określonej sterownik.  
+ Gdy aplikacja wywołuje `DrawEscape`, danych, identyfikowany przez *nInputSize* i *lpszInputData* są przekazywane bezpośrednio do określonej sterownik.  
   
 ##  <a name="drawfocusrect"></a>  CDC::DrawFocusRect  
  Rysuje prostokąt w stylu służy do wskazania, że prostokąt ma fokus.  
@@ -1472,7 +1472,7 @@ void DrawFocusRect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect —*  
  Wskazuje [RECT](../../mfc/reference/rect-structure1.md) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt określający współrzędne logicznej prostokąta do narysowania.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1492,20 +1492,20 @@ BOOL DrawFrameControl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect —*  
  Wskaźnik do **RECT** strukturę, która zawiera współrzędne logicznej prostokąta.  
   
- `nType`  
+ *Npowiadomienia*  
  Określa typ formantu ramki do rysowania. Zobacz *uType* parametru w [DrawFrameControl](http://msdn.microsoft.com/library/windows/desktop/dd162480) w zestawie SDK systemu Windows, aby uzyskać listę możliwych wartości tego parametru.  
   
- `nState`  
- Określa początkowy stan formantu ramki. Może być jeden lub więcej wartości opisane dla *uState* parametru w `DrawFrameControl` w zestawie Windows SDK. Użyj `nState` wartość **DFCS_ADJUSTRECT** dostosowanie prostokątem do wykluczenia wokół krawędzi przycisku polecenia.  
+ *nInformacje*  
+ Określa początkowy stan formantu ramki. Może być jeden lub więcej wartości opisane dla *uState* parametru w `DrawFrameControl` w zestawie Windows SDK. Użyj *nInformacje* wartość **DFCS_ADJUSTRECT** dostosowanie prostokątem do wykluczenia wokół krawędzi przycisku polecenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- W niektórych przypadkach `nState` zależy od `nType` parametru. Na poniższej liście przedstawiono relacje między cztery `nType` wartości i `nState`:  
+ W niektórych przypadkach *nInformacje* zależy od *Npowiadomienia* parametru. Na poniższej liście przedstawiono relacje między cztery *Npowiadomienia* wartości i *nInformacje*:  
   
 - **DFC_BUTTON**  
   
@@ -1582,10 +1582,10 @@ BOOL DrawIcon(
  *y*  
  Określa logicznej współrzędną y lewego górnego rogu ikony.  
   
- `hIcon`  
+ *hIcon*  
  Identyfikuje dojście ikony do narysowania.  
   
- `point`  
+ *Punkt*  
  Określa logicznych i y współrzędne x górnego lewego rogu ikony. Można przekazać [punktu](../../mfc/reference/point-structure1.md) struktury lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiekt dla tego parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1603,7 +1603,7 @@ BOOL DrawIcon(
  Wywołanie tej funkcji Członkowskich do wyświetlania obrazu i stosowania efektem stan, na przykład wyłączony lub stanu domyślnego.  
   
 > [!NOTE]
->  Dla wszystkich `nFlag` stany z wyjątkiem **DSS_NORMAL**, obraz jest konwertowana na skali odcieni szarości przed zastosowaniem efekt.  
+>  Dla wszystkich *nFlag* stany z wyjątkiem **DSS_NORMAL**, obraz jest konwertowana na skali odcieni szarości przed zastosowaniem efekt.  
   
 ```  
 BOOL DrawState(
@@ -1677,43 +1677,43 @@ BOOL DrawState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pt`  
+ *PT*  
  Określa położenie obrazu.  
   
- `size`  
+ *Rozmiar*  
  Określa rozmiar obrazu.  
   
- `hBitmap`  
+ *hBitmap*  
  Dojście do mapy bitowej.  
   
- `nFlags`  
- Flagi, które określają typ obrazu i stanu. Zobacz [DrawState](http://msdn.microsoft.com/library/windows/desktop/dd162496) w zestawie Windows SDK dla możliwe `nFlags` typy i stanów.  
+ *nFlags*  
+ Flagi, które określają typ obrazu i stanu. Zobacz [DrawState](http://msdn.microsoft.com/library/windows/desktop/dd162496) w zestawie Windows SDK dla możliwe *nFlags* typy i stanów.  
   
- `hBrush`  
+ *hBrush*  
  Dojście do pędzla.  
   
- `pBitmap`  
+ *pBitmap*  
  Wskaźnik do obiektu cbitmap —.  
   
- `pBrush`  
+ *pBrush*  
  Wskaźnik do obiektu cbrush —.  
   
- `hIcon`  
+ *hIcon*  
  Dojście do ikony.  
   
- `lpszText`  
+ *lpszText*  
  Wskaźnik do tekstu.  
   
  *bPrefixText*  
- Tekst, który może zawierać wartość skrótu. `lData` Parametr określa adres ciągu i `nTextLen` parametr określa długość. Jeśli `nTextLen` wynosi 0, ciąg zakłada, że zerem.  
+ Tekst, który może zawierać wartość skrótu. *LData* parametr określa adres ciągu i *nTextLen* parametr określa długość. Jeśli *nTextLen* wynosi 0, ciąg zakłada, że zerem.  
   
- `nTextLen`  
- Długość ciągu tekstowego wskazywana przez `lpszText`. Jeśli `nTextLen` wynosi 0, ciąg zakłada, że zerem.  
+ *nTextLen*  
+ Długość ciągu tekstowego wskazywana przez *lpszText*. Jeśli *nTextLen* wynosi 0, ciąg zakłada, że zerem.  
   
  *lpDrawProc*  
- Wskaźnik do funkcji wywołania zwrotnego używany do renderowania obrazu. Ten parametr jest wymagany, jeśli typ obrazu w `nFlags` jest **DST_COMPLEX**. Jest opcjonalny i może być **NULL** Jeśli typ obrazu jest **DST_TEXT**. Ten parametr jest ignorowany dla wszystkich innych typów obrazów. Aby uzyskać więcej informacji na temat funkcji wywołania zwrotnego, zobacz [DrawStateProc](http://msdn.microsoft.com/library/windows/desktop/dd162497) funkcji w zestawie Windows SDK.  
+ Wskaźnik do funkcji wywołania zwrotnego używany do renderowania obrazu. Ten parametr jest wymagany, jeśli typ obrazu w *nFlags* jest **DST_COMPLEX**. Jest opcjonalny i może być **NULL** Jeśli typ obrazu jest **DST_TEXT**. Ten parametr jest ignorowany dla wszystkich innych typów obrazów. Aby uzyskać więcej informacji na temat funkcji wywołania zwrotnego, zobacz [DrawStateProc](http://msdn.microsoft.com/library/windows/desktop/dd162497) funkcji w zestawie Windows SDK.  
   
- `lData`  
+ *lData*  
  Określa informacje o obrazie. Znaczenie tego parametru zależy od typu obrazu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1737,35 +1737,35 @@ int DrawText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszString`  
- Wskazuje ciąg do narysowania. Jeśli `nCount` wynosi -1, ciąg musi być zakończony zerem.  
+ *lpszString*  
+ Wskazuje ciąg do narysowania. Jeśli *nCount* wynosi -1, ciąg musi być zakończony zerem.  
   
- `nCount`  
- Określa liczbę znaków w ciągu. Jeśli `nCount` wynosi -1, następnie `lpszString` zakłada, że wskaźnik długi ciąg znaków zakończony znakiem null i `DrawText` automatycznie oblicza liczbę znaków.  
+ *nCount*  
+ Określa liczbę znaków w ciągu. Jeśli *nCount* wynosi -1, następnie *lpszString* zakłada, że wskaźnik długi ciąg znaków zakończony znakiem null i `DrawText` automatycznie oblicza liczbę znaków.  
   
- `lpRect`  
+ *lprect —*  
  Wskazuje [RECT](../../mfc/reference/rect-structure1.md) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który zawiera prostokąt (we współrzędnych logicznego), w którym ma być sformatowany tekst.  
   
- `str`  
+ *str*  
  A [cstring —](../../atl-mfc-shared/reference/cstringt-class.md) obiekt zawierający znaki określony do narysowania.  
   
- `nFormat`  
- Określa metodę formatowania tekstu. Może być dowolną kombinację wartości opisane dla `uFormat` parametru w [DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498) w zestawie Windows SDK. (Połącz przy użyciu bitowego operatora OR):  
+ *nFormat*  
+ Określa metodę formatowania tekstu. Może być dowolną kombinację wartości opisane dla *uFormat* parametru w [DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498) w zestawie Windows SDK. (Połącz przy użyciu bitowego operatora OR):  
   
 > [!NOTE]
->  Niektóre `uFormat` kombinacji flagi może spowodować ciągu przekazany do zmodyfikowania. Przy użyciu **DT_MODIFYSTRING** przy użyciu jednej **DT_END_ELLIPSIS** lub **DT_PATH_ELLIPSIS** może spowodować ciąg, który ma być zmodyfikowana, co powoduje potwierdzenia w `CString` musi zostać zastąpiona. Wartości `DT_CALCRECT`, `DT_EXTERNALLEADING`, **DT_INTERNAL**, `DT_NOCLIP`, i `DT_NOPREFIX` nie można używać z `DT_TABSTOP` wartości.  
+>  Niektóre *uFormat* kombinacje flagi może spowodować ciągu przekazany do zmodyfikowania. Przy użyciu **DT_MODIFYSTRING** przy użyciu jednej **DT_END_ELLIPSIS** lub **DT_PATH_ELLIPSIS** może spowodować ciąg, który ma być zmodyfikowana, co powoduje potwierdzenia w `CString` musi zostać zastąpiona. Wartości `DT_CALCRECT`, `DT_EXTERNALLEADING`, **DT_INTERNAL**, `DT_NOCLIP`, i `DT_NOPREFIX` nie można używać z `DT_TABSTOP` wartości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wysokość tekstu, jeśli funkcja zakończy się pomyślnie.  
   
 ### <a name="remarks"></a>Uwagi  
- Rozszerzanie karty w odpowiednich obszarów wyrównanie tekstu w lewo, prawo, lub Centrum danego prostokąta i fundamentalne tekstu do wierszy, które mieszczą się w prostokącie danego formatowania tekstu. Typ formatowania jest określany przez `nFormat`.  
+ Rozszerzanie karty w odpowiednich obszarów wyrównanie tekstu w lewo, prawo, lub Centrum danego prostokąta i fundamentalne tekstu do wierszy, które mieszczą się w prostokącie danego formatowania tekstu. Typ formatowania jest określany przez *nFormat*.  
   
  Ta funkcja członkowska używa kontekstu urządzenia czcionkę, kolor tekstu i kolor tła pisania tekstu. O ile `DT_NOCLIP` format jest używany, `DrawText` klipy tekst nie będą wyświetlane poza prostokątem danego tekstu. Formatowanie wszystkich zakłada się, że ma wiele wierszy, chyba że `DT_SINGLELINE` podano formatu.  
   
  Jeśli wybrana czcionka jest zbyt duży dla określonego prostokąta `DrawText` funkcja członkowska nie jest podejmowana próba zastąpienia mniejszej czcionki.  
   
- Jeśli `DT_CALCRECT` określono flagę prostokąt określony przez `lpRect` zostaną zaktualizowane, aby odzwierciedlić szerokość i wysokość potrzeby pisania tekstu.  
+ Jeśli `DT_CALCRECT` określono flagę prostokąt określony przez *lprect —* zostaną zaktualizowane, aby odzwierciedlić szerokość i wysokość potrzeby pisania tekstu.  
   
  Jeśli **TA_UPDATECP** została ustawiona flaga wyrównanie tekstu (zobacz [CDC::SetTextAlign](#settextalign)), `DrawText` wyświetli tekst uruchamianie w bieżącym położeniu, a nie na lewo od danego prostokąta. `DrawText` tekst nie będzie zawijany podczas **TA_UPDATECP** została ustawiona flaga (to znaczy `DT_WORDBREAK` flagi nie odniesie żadnego skutku).  
   
@@ -1791,29 +1791,29 @@ int DrawTextEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszString`  
- Wskazuje ciąg do narysowania. Jeśli `nCount` wynosi -1, ciąg musi być zakończone znakiem null.  
+ *lpszString*  
+ Wskazuje ciąg do narysowania. Jeśli *nCount* wynosi -1, ciąg musi być zakończone znakiem null.  
   
- `nCount`  
- Określa liczbę znaków w ciągu. Jeśli `nCount` wynosi -1, następnie `lpszString` zakłada, że wskaźnik długi ciąg znaków zakończony znakiem null i `DrawText` automatycznie oblicza liczbę znaków.  
+ *nCount*  
+ Określa liczbę znaków w ciągu. Jeśli *nCount* wynosi -1, następnie *lpszString* zakłada, że wskaźnik długi ciąg znaków zakończony znakiem null i `DrawText` automatycznie oblicza liczbę znaków.  
   
- `lpRect`  
+ *lprect —*  
  Wskazuje [RECT](../../mfc/reference/rect-structure1.md) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który zawiera prostokąt (we współrzędnych logicznego), w którym ma być sformatowany tekst.  
   
- `str`  
+ *str*  
  A [cstring —](../../atl-mfc-shared/reference/cstringt-class.md) obiekt zawierający znaki określony do narysowania.  
   
- `nFormat`  
- Określa metodę formatowania tekstu. Może być dowolną kombinację wartości opisane dla `uFormat` parametru w [DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498) w zestawie Windows SDK. (Połączyć za pomocą operatora testu koniunkcji `OR` operatora):  
+ *nFormat*  
+ Określa metodę formatowania tekstu. Może być dowolną kombinację wartości opisane dla *uFormat* parametru w [DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498) w zestawie Windows SDK. (Połączyć za pomocą operatora testu koniunkcji `OR` operatora):  
   
 > [!NOTE]
->  Niektóre `uFormat` kombinacji flagi może spowodować ciągu przekazany do zmodyfikowania. Przy użyciu **DT_MODIFYSTRING** przy użyciu jednej **DT_END_ELLIPSIS** lub **DT_PATH_ELLIPSIS** może spowodować ciąg, który ma być zmodyfikowana, co powoduje potwierdzenia w `CString` musi zostać zastąpiona. Wartości `DT_CALCRECT`, `DT_EXTERNALLEADING`, **DT_INTERNAL**, `DT_NOCLIP`, i `DT_NOPREFIX` nie można używać z `DT_TABSTOP` wartości.  
+>  Niektóre *uFormat* kombinacje flagi może spowodować ciągu przekazany do zmodyfikowania. Przy użyciu **DT_MODIFYSTRING** przy użyciu jednej **DT_END_ELLIPSIS** lub **DT_PATH_ELLIPSIS** może spowodować ciąg, który ma być zmodyfikowana, co powoduje potwierdzenia w `CString` musi zostać zastąpiona. Wartości **DT_CALCRECT**, **DT_EXTERNALLEADING**, **DT_INTERNAL**, **DT_NOCLIP**, i **DT_NOPREFIX**nie można używać z **DT_TABSTOP** wartości.  
   
- `lpDTParams`  
+ *lpDTParams*  
  Wskaźnik do [DRAWTEXTPARAMS](http://msdn.microsoft.com/library/windows/desktop/dd162500) strukturę, która określa formatowanie dodatkowe opcje. Ten parametr może być **NULL**.  
   
 ### <a name="remarks"></a>Uwagi  
- Rozszerzanie karty w odpowiednich obszarów wyrównanie tekstu w lewo, prawo, lub Centrum danego prostokąta i fundamentalne tekstu do wierszy, które mieszczą się w prostokącie danego formatowania tekstu. Typ formatowania jest określany przez `nFormat` i `lpDTParams`. Aby uzyskać więcej informacji, zobacz [CDC::DrawText](#drawtext) i [DrawTextEx](http://msdn.microsoft.com/library/windows/desktop/dd162499) w zestawie Windows SDK.  
+ Rozszerzanie karty w odpowiednich obszarów wyrównanie tekstu w lewo, prawo, lub Centrum danego prostokąta i fundamentalne tekstu do wierszy, które mieszczą się w prostokącie danego formatowania tekstu. Typ formatowania jest określany przez *nFormat* i *lpDTParams*. Aby uzyskać więcej informacji, zobacz [CDC::DrawText](#drawtext) i [DrawTextEx](http://msdn.microsoft.com/library/windows/desktop/dd162499) w zestawie Windows SDK.  
   
  Kolor tekstu może zostać ustawiona przez [CDC::SetTextColor](#settextcolor).  
   
@@ -1831,28 +1831,28 @@ BOOL Ellipse(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `x1`  
+ *x1*  
  Określa logicznej współrzędną x górnego lewego rogu prostokątem elipsy.  
   
- `y1`  
+ *y1*  
  Określa logicznej współrzędną y lewego górnego rogu prostokątem elipsy.  
   
- `x2`  
+ *x2*  
  Określa logicznej współrzędną x prawym dolnym rogu prostokątem elipsy.  
   
- `y2`  
+ *y2*  
  Określa logicznej współrzędną y prawego dolnego rogu prostokątem elipsy.  
   
- `lpRect`  
+ *lprect —*  
  Określa, że elipsy do ograniczenia prostokąta. Można również przekazać [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt dla tego parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Centrum elipsy jest Centrum prostokątem określony przez `x1`, `y1`, `x2`, i `y2`, lub `lpRect`. Elipsy jest rysowany z bieżącego pióra, a jego wnętrza jest wypełniony bieżącego pędzla.  
+ Centrum elipsy jest Centrum prostokątem określony przez *x1*, *y1*, *x2*, i *y2*, lub  *lprect —*. Elipsy jest rysowany z bieżącego pióra, a jego wnętrza jest wypełniony bieżącego pędzla.  
   
- Rysunek rysowane przez tę funkcję rozciąga się do, ale nie zawiera współrzędne prawo i w dół. Oznacza to, że wysokość rysunku `y2`  -  `y1` i szerokość rysunku jest `x2`  -  `x1`.  
+ Rysunek rysowane przez tę funkcję rozciąga się do, ale nie zawiera współrzędne prawo i w dół. Oznacza to, że wysokość rysunku *y2* - *y1* i szerokość rysunku jest *x2* - *x1*.  
   
  Jeśli szerokość lub wysokość prostokątem ma wartość 0, elipsy nie jest rysowane.  
   
@@ -1923,10 +1923,10 @@ int EnumObjects(
  *nObjectType*  
  Określa typ obiektu. Może mieć wartości **OBJ_BRUSH** lub **OBJ_PEN**.  
   
- `lpfn`  
+ *lpfn*  
  Jest adresem instancję procedury funkcja zwrotnego dostarczone przez aplikację. Zobacz sekcję "Uwagi" poniżej.  
   
- `lpData`  
+ *lpData*  
  Punkty danych podane w aplikacji. Dane są przekazywane do funkcji wywołania zwrotnego wraz z informacji o obiekcie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1970,30 +1970,30 @@ int Escape(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nEscape`  
+ *nEscape*  
  Określa funkcja escape do wykonania.  
   
  Pełną listę funkcji anulowania, zobacz [Escape](http://msdn.microsoft.com/library/windows/desktop/dd162701) w zestawie Windows SDK.  
   
- `nCount`  
- Określa liczbę bajtów danych wskazywanego przez `lpszInData`.  
+ *nCount*  
+ Określa liczbę bajtów danych wskazywanego przez *lpszInData*.  
   
- `lpszInData`  
+ *lpszInData*  
  Wskazuje strukturę danych wejściowych wymaganych do tego ucieczki.  
   
- `lpOutData`  
- Wskazuje na strukturę, która będzie odbierać dane wyjściowe z tym ucieczki. `lpOutData` Parametr jest **NULL** Jeśli żadne dane nie zwrócone.  
+ *lpOutData*  
+ Wskazuje na strukturę, która będzie odbierać dane wyjściowe z tym ucieczki. *LpOutData* parametr jest **NULL** Jeśli żadne dane nie zwrócone.  
   
- `nInputSize`  
- Określa liczbę bajtów danych wskazywanego przez `lpszInputData` parametru.  
+ *nInputSize*  
+ Określa liczbę bajtów danych wskazywanego przez *lpszInputData* parametru.  
   
- `lpszInputData`  
+ *lpszInputData*  
  Wskazuje strukturze wejściowej wymagane dla określonego ucieczki.  
   
- `nOutputSize`  
- Określa liczbę bajtów danych wskazywanego przez `lpszOutputData` parametru.  
+ *nOutputSize*  
+ Określa liczbę bajtów danych wskazywanego przez *lpszOutputData* parametru.  
   
- `lpszOutputData`  
+ *lpszOutputData*  
  Wskazuje strukturę, który odbiera dane wyjściowe z tym ucieczki. Ten parametr powinien być **NULL** Jeśli żadne dane nie zwrócone.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -2044,19 +2044,19 @@ int ExcludeClipRect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `x1`  
+ *x1*  
  Określa logicznej współrzędna x górnego lewego rogu prostokąta.  
   
- `y1`  
+ *y1*  
  Określa logicznej współrzędna y górnego lewego rogu prostokąta.  
   
- `x2`  
+ *x2*  
  Określa logicznej współrzędną x prawym dolnym rogu prostokąta.  
   
- `y2`  
+ *y2*  
  Określa logicznej współrzędną y prawego dolnego rogu prostokąta.  
   
- `lpRect`  
+ *lprect —*  
  Określa prostokąta. Można też `CRect` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -2071,7 +2071,7 @@ int ExcludeClipRect(LPCRECT lpRect);
 - **SIMPLEREGION** regionie nie ma nakładające się obramowania.  
   
 ### <a name="remarks"></a>Uwagi  
- Szerokość prostokąta, określony przez wartość bezwzględną liczby `x2`  -  `x1`, nie może przekraczać 32 767 jednostki. Ten limit dotyczy wysokość prostokąta, jak również.  
+ Szerokość prostokąta, określony przez wartość bezwzględną liczby *x2* - *x1*, nie może przekraczać 32 767 jednostki. Ten limit dotyczy wysokość prostokąta, jak również.  
   
 ##  <a name="excludeupdatergn"></a>  CDC::ExcludeUpdateRgn  
  Zapobiega rysunku nieprawidłowy obszarach okna wyłączając zaktualizowane regionu okna z obszaru przycinania skojarzone z `CDC` obiektu.  
@@ -2081,7 +2081,7 @@ int ExcludeUpdateRgn(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Wskazuje obiekt window, którego okno jest aktualizowana.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -2113,25 +2113,25 @@ BOOL ExtFloodFill(
  *y*  
  Określa logicznej współrzędną y punktu, w którym rozpoczyna się wypełnianie.  
   
- `crColor`  
- Określa kolor granicy lub do wypełnienia obszaru. Interpretacja `crColor` zależy od wartości `nFillType`.  
+ *crColor*  
+ Określa kolor granicy lub do wypełnienia obszaru. Interpretacja *crColor* zależy od wartości *nFillType*.  
   
- `nFillType`  
+ *nFillType*  
  Określa typ wypełnienia powódź do wykonania. Musi być jedną z następujących wartości:  
   
-- **FLOODFILLBORDER** obszar wypełnienia jest ograniczone przez kolor określone przez `crColor`. Ten styl jest taki sam jak wypełnianie wykonywane przez `FloodFill`.  
+- **FLOODFILLBORDER** obszar wypełnienia jest ograniczone przez kolor określone przez *crColor*. Ten styl jest taki sam jak wypełnianie wykonywane przez `FloodFill`.  
   
-- **FLOODFILLSURFACE** obszar wypełnienia jest definiowana za pomocą kolorów, określony przez `crColor`. Wypełnianie nadal na zewnątrz we wszystkich kierunkach tak długo, jak napotkano kolor. Ten styl jest przydatna do wypełniania obszary o różnych kolorach granic.  
+- **FLOODFILLSURFACE** obszar wypełnienia jest definiowana za pomocą kolorów, określony przez *crColor*. Wypełnianie nadal na zewnątrz we wszystkich kierunkach tak długo, jak napotkano kolor. Ten styl jest przydatna do wypełniania obszary o różnych kolorach granic.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli funkcja zakończy się pomyślnie; w przeciwnym razie 0, jeśli wypełniania nie można wykonać, jeśli danego punktu ma obramowanie kolor określone przez `crColor` (Jeśli **FLOODFILLBORDER** zażądano), jeśli danego punktu nie jest określony przez kolor `crColor` (Jeśli **FLOODFILLSURFACE** zażądano), lub jeśli punkt jest spoza obszaru przycinania.  
+ Różna od zera, jeśli funkcja zakończy się pomyślnie; w przeciwnym razie 0, jeśli wypełniania nie można wykonać, jeśli danego punktu ma obramowanie kolor określone przez *crColor* (Jeśli **FLOODFILLBORDER** zażądano), jeśli danego punktu nie ma kolor określone przez *crColor* (Jeśli **FLOODFILLSURFACE** zażądano), lub jeśli punkt jest spoza obszaru przycinania.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska zapewnia większą elastyczność niż `FloodFill` ponieważ można określić typ wypełnienia w `nFillType`.  
+ Ta funkcja członkowska zapewnia większą elastyczność niż `FloodFill` ponieważ można określić typ wypełnienia w *nFillType*.  
   
- Jeśli `nFillType` ustawiono **FLOODFILLBORDER**, przyjęto, że obszar całkowicie być ograniczone przez kolor określone przez `crColor`. Funkcja zaczyna się od punktu określonego przez *x* i *y* i wypełnia wszystkie instrukcje granic kolorów.  
+ Jeśli *nFillType* ustawiono **FLOODFILLBORDER**, przyjęto, że obszar całkowicie być ograniczone przez kolor określone przez *crColor*. Funkcja zaczyna się od punktu określonego przez *x* i *y* i wypełnia wszystkie instrukcje granic kolorów.  
   
- Jeśli `nFillType` ustawiono **FLOODFILLSURFACE**, funkcja zaczyna się od punktu określonego przez *x* i *y* i kontynuuje we wszystkich kierunkach wypełnianie wszystkich obszarów sąsiadujących ze sobą zawierających określony przez kolor `crColor`.  
+ Jeśli *nFillType* ustawiono **FLOODFILLSURFACE**, funkcja zaczyna się od punktu określonego przez *x* i *y* i kontynuuje we wszystkich kierunki wypełnianie wszystkie obszary sąsiadujących zawierające kolor określone przez *crColor*.  
   
  Tylko konteksty urządzenia pamięci i urządzeń, które obsługują rastrowe monitorów technologii `ExtFloodFill`. Aby uzyskać więcej informacji, zobacz [GetDeviceCaps](#getdevicecaps) funkcję elementu członkowskiego.  
   
@@ -2165,26 +2165,26 @@ BOOL ExtTextOut(
  *y*  
  Określa logicznej współrzędną y górnej krawędzi komórki znak pierwszego znaku w określonym ciągu.  
   
- `nOptions`  
+ *nOptions*  
  Określa typ prostokąta. Ten parametr może być jedną, zarówno lub żadnej z następujących wartości:  
   
 - **ETO_CLIPPED** Określa, że zostanie obcięta prostokąta.  
   
 - **ETO_OPAQUE** Określa, czy bieżący kolor tła wypełnia prostokąta. (Można ustawić i można wyszukiwać bieżący kolor tła z [SetBkColor](#setbkcolor) i [GetBkColor](#getbkcolor) funkcji elementów członkowskich.)  
   
- `lpRect`  
+ *lprect —*  
  Wskazuje [RECT](../../mfc/reference/rect-structure1.md) struktury, która określa wymiary prostokąta. Ten parametr może być **NULL**. Można również przekazać [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt dla tego parametru.  
   
- `lpszString`  
+ *lpszString*  
  Wskazuje określony znak ciąg do narysowania. Można również przekazać [cstring —](../../atl-mfc-shared/reference/cstringt-class.md) obiekt dla tego parametru.  
   
- `nCount`  
+ *nCount*  
  Określa liczbę znaków w ciągu.  
   
- `lpDxWidths`  
- Wskazuje tablicy wartości, które wskazują odległość między źródeł znak sąsiadujących komórek. Na przykład `lpDxWidths`[ *i*] jednostki logiczne musi upłynąć źródła znaku *i* i znaku *i* + 1. Jeśli `lpDxWidths` jest **NULL**, `ExtTextOut` korzysta z domyślnego odstępów między znakami.  
+ *lpDxWidths*  
+ Wskazuje tablicy wartości, które wskazują odległość między źródeł znak sąsiadujących komórek. Na przykład *lpDxWidths*[ *i*] jednostki logiczne musi upłynąć źródła znaku *i* i znaku *i* + 1. Jeśli *lpDxWidths* jest **NULL**, `ExtTextOut` korzysta z domyślnego odstępów między znakami.  
   
- `str`  
+ *str*  
  A `CString` obiekt zawierający znaki określony do narysowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -2193,7 +2193,7 @@ BOOL ExtTextOut(
 ### <a name="remarks"></a>Uwagi  
  Prostokątny obszar może być nieprzezroczyste (wypełnione bieżący kolor tła) i może być obszar przycinania.  
   
- Jeśli `nOptions` 0 i `lpRect` jest **NULL**, funkcja zapisuje tekst do kontekstu urządzenia bez użycia prostokątny obszar. Domyślnie, funkcja nie używa ani nie aktualizuje bieżącej pozycji. Jeśli aplikacja musi zaktualizować bieżącą pozycję, gdy wywołuje `ExtTextOut`, aplikacja może wywołać `CDC` funkcji członkowskiej [SetTextAlign](#settextalign) z `nFlags` ustawioną **TA_UPDATECP**. Gdy ta flaga jest ustawiona, system Windows ignoruje *x* i *y* na kolejnych wywołań `ExtTextOut` i użyte zamiast bieżącego położenia. Jeśli aplikacja używa **TA_UPDATECP** można zaktualizować bieżącego położenia `ExtTextOut` na końcu poprzedniego wiersza tekstu lub pozycja określona za ostatnim elementem tablicy wskazywana przez Ustawiabieżącegopołożenia`lpDxWidths`, w zależności od jest większa.  
+ Jeśli *nOptions* 0 i *lprect —* jest **NULL**, funkcja zapisuje tekst do kontekstu urządzenia bez użycia prostokątny obszar. Domyślnie, funkcja nie używa ani nie aktualizuje bieżącej pozycji. Jeśli aplikacja musi zaktualizować bieżącą pozycję, gdy wywołuje `ExtTextOut`, aplikacja może wywołać `CDC` funkcji członkowskiej [SetTextAlign](#settextalign) z *nFlags* ustawioną **TA_UPDATECP**. Gdy ta flaga jest ustawiona, system Windows ignoruje *x* i *y* na kolejnych wywołań `ExtTextOut` i użyte zamiast bieżącego położenia. Jeśli aplikacja używa **TA_UPDATECP** można zaktualizować bieżącego położenia `ExtTextOut` na końcu poprzedniego wiersza tekstu lub pozycja określona za ostatnim elementem tablicy wskazywana przez Ustawiabieżącegopołożenia*lpDxWidths*, w zależności od jest większa.  
   
 ##  <a name="fillpath"></a>  CDC::FillPath  
  Zamyka wszystkie otwarte rysunki w bieżącej ścieżce i wypełnia wewnątrz ścieżki przy użyciu bieżącego pędzla i tryb wypełnianie wielokąta.  
@@ -2218,10 +2218,10 @@ void FillRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect —*  
  Wskazuje [RECT](../../mfc/reference/rect-structure1.md) strukturę, która zawiera współrzędne logicznej prostokąta do wypełnienia. Można również przekazać [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt dla tego parametru.  
   
- `pBrush`  
+ *pBrush*  
  Identyfikuje pędzel używany do wypełnienia prostokąta.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -2234,7 +2234,7 @@ void FillRect(
  `FillRect` przypomina [CDC::FillSolidRect](#fillsolidrect); jednak `FillRect` pobiera Pędzel i w związku z tym może służyć do wypełnienia prostokąt z pełnego koloru, kolor symulowany, kreskowanym Pędzle lub wzorzec. `FillSolidRect` używa tylko pełne kolory (wskazywanym przez **COLORREF** parametru). `FillRect` Zazwyczaj jest mniejsza niż `FillSolidRect`.  
   
 ##  <a name="fillrgn"></a>  CDC::FillRgn  
- Wypełnia obszaru określonego przez `pRgn` z pędzla określony przez `pBrush`.  
+ Wypełnia obszaru określonego przez *pRgn* z pędzla określony przez *pBrush*.  
   
 ```  
 BOOL FillRgn(
@@ -2243,17 +2243,17 @@ BOOL FillRgn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pRgn`  
+ *pRgn*  
  Wskaźnik do regionu zostać wypełnione. W jednostkach logicznych określony współrzędnych dla danego regionu.  
   
- `pBrush`  
+ *pBrush*  
  Identyfikuje pędzla, który ma być użyta do wypełnienia obszaru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Pędzel muszą być utworzone przy użyciu `CBrush` funkcje Członkowskie `CreateHatchBrush`, `CreatePatternBrush`, `CreateSolidBrush`, lub być pobierane przez **GetStockObject**.  
+ Pędzel muszą być utworzone przy użyciu `CBrush` funkcje Członkowskie `CreateHatchBrush`, `CreatePatternBrush`, `CreateSolidBrush`, lub być pobierane przez `GetStockObject`.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CRgn::CreateRoundRectRgn](../../mfc/reference/crgn-class.md#createroundrectrgn).  
@@ -2276,10 +2276,10 @@ void FillSolidRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect —*  
  Określa prostokąt ograniczający (w jednostkach logicznych). Można przekazać wskaźnika do [RECT](../../mfc/reference/rect-structure1.md) struktury danych lub `CRect` obiekt dla tego parametru.  
   
- `clr` Określa kolor, który ma być używany do wypełnienia prostokąta.  
+ *CLR* Określa kolor ma być używany do wypełnienia prostokąta.  
   
  *x*  
  Określa logicznej współrzędna x górnego lewego rogu prostokąta.  
@@ -2287,17 +2287,17 @@ void FillSolidRect(
  *y*  
  Określa logicznej współrzędną y górnego lewego rogu prostokąta docelowego.  
   
- `cx`  
+ *CX*  
  Określa szerokość prostokąta.  
   
- `cy`  
+ *CY*  
  Określa wysokość prostokąta.  
   
 ### <a name="remarks"></a>Uwagi  
  `FillSolidRect` jest bardzo podobny do [CDC::FillRect](#fillrect); jednak `FillSolidRect` używa tylko pełne kolory (wskazywanym przez **COLORREF** parametru), podczas `FillRect` pobiera Pędzel i może być użyta do wypełnienia Prostokąt z pełnego koloru, kolor symulowany, kreskowanym Pędzle lub wzorzec. `FillSolidRect` Zazwyczaj jest szybsza niż `FillRect`.  
   
 > [!NOTE]
->  Podczas wywoływania `FillSolidRect`, kolor tła, który został wcześniej ustawiony za pomocą [SetBkColor](#setbkcolor), jest ustawiona na kolor wskazywany przez `clr`.  
+>  Podczas wywoływania `FillSolidRect`, kolor tła, który został wcześniej ustawiony za pomocą [SetBkColor](#setbkcolor), jest ustawiona na kolor wskazywany przez *clr*.  
   
 ##  <a name="flattenpath"></a>  CDC::FlattenPath  
  Przekształca żadnych krzywych w ścieżce wybrane do bieżącego kontekstu urządzenia i zamienia każdy krzywej w sekwencji wierszy.  
@@ -2326,21 +2326,21 @@ BOOL FloodFill(
  *y*  
  Określa logicznej współrzędną y punktu, w którym rozpoczyna się wypełnianie.  
   
- `crColor`  
+ *crColor*  
  Określa kolor granicy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli funkcja zakończy się pomyślnie; w przeciwnym razie 0 jest zwracany, jeśli nie można ukończyć wypełniania, danego punktu ma kolor granic określone przez `crColor`, lub punkt jest spoza obszaru przycinania.  
+ Różna od zera, jeśli funkcja zakończy się pomyślnie; w przeciwnym razie 0 jest zwracany, jeśli nie można ukończyć wypełniania, danego punktu ma kolor granic określone przez *crColor*, lub punkt jest spoza obszaru przycinania.  
   
 ### <a name="remarks"></a>Uwagi  
- Obszar zakłada, że do wyznaczają jako określony przez `crColor`. `FloodFill` Funkcja zaczyna się od punktu określonego przez *x* i *y* i kontynuuje we wszystkich kierunkach do granicy kolorów.  
+ Obszar zakłada, że do wyznaczają jako określony przez *crColor*. `FloodFill` Funkcja zaczyna się od punktu określonego przez *x* i *y* i kontynuuje we wszystkich kierunkach do granicy kolorów.  
   
  Tylko konteksty urządzenia pamięci i urządzeń, które obsługują rastrowe monitorów technologii `FloodFill` funkcję elementu członkowskiego. Aby uzyskać informacje o **RC_BITBLT** możliwości, zobacz `GetDeviceCaps` funkcji członkowskiej.  
   
  `ExtFloodFill` Funkcja udostępnia podobną funkcję, ale większą elastyczność.  
   
 ##  <a name="framerect"></a>  CDC::FrameRect  
- Rysuje obramowanie prostokąt określony przez `lpRect`.  
+ Rysuje obramowanie prostokąt określony przez *lprect —*.  
   
 ```  
 void FrameRect(
@@ -2349,10 +2349,10 @@ void FrameRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect —*  
  Wskazuje [RECT](../../mfc/reference/rect-structure1.md) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który zawiera logicznej współrzędne górnego lewego i prawego dolnego rogu prostokąta. Można również przekazać `CRect` obiekt dla tego parametru.  
   
- `pBrush`  
+ *pBrush*  
  Identyfikuje pędzla stosowaną do framing prostokąta.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -2363,7 +2363,7 @@ void FrameRect(
  Obramowania rysowane przez `FrameRect` znajduje się w tym samym miejscu obramowanie rysowane przez **prostokąt** przy użyciu takich samych współrzędnych funkcji członkowskiej (Jeśli **prostokąt** używa pióro szerokości 1 jednostki logicznej). Wewnątrz prostokąta nie jest wypełnione przez `FrameRect`.  
   
 ##  <a name="framergn"></a>  CDC::FrameRgn  
- Rysuje obramowanie wokół obszaru określonego przez `pRgn` pędzla określony przez `pBrush`.  
+ Rysuje obramowanie wokół obszaru określonego przez *pRgn* pędzla określony przez *pBrush*.  
   
 ```  
 BOOL FrameRgn(
@@ -2374,16 +2374,16 @@ BOOL FrameRgn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pRgn`  
+ *pRgn*  
  Wskazuje `CRgn` obiekt, który identyfikuje region być umieszczony w obramowanie. W jednostkach logicznych określony współrzędnych dla danego regionu.  
   
- `pBrush`  
+ *pBrush*  
  Wskazuje `CBrush` obiektu, który identyfikuje pędzla, który ma być używany do rysowania obramowania.  
   
- `nWidth`  
+ *nWidth*  
  Określa szerokość obramowania w pionie pociągnięć w jednostkach urządzenia.  
   
- `nHeight`  
+ *nHeight*  
  Określa wysokość obramowania w poziomie pociągnięć w jednostkach urządzenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -2400,7 +2400,7 @@ static CDC* PASCAL FromHandle(HDC hDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hDC`  
+ *elementu hDC*  
  Zawiera dojścia do kontekstu urządzenia z systemem Windows.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -2480,10 +2480,10 @@ UINT GetBoundsRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRectBounds`  
+ *lpRectBounds*  
  Wskazuje buforu, który będzie otrzymywał bieżący prostokąt ograniczający. Prostokąt jest zwracany w logiczne współrzędnych.  
   
- `flags`  
+ *flagi*  
  Określa, czy prostokątem wyczyszczone po zwróceniu go. Ten parametr powinien być równy zero ani ustawić następującą wartość:  
   
 - **DCB_RESET** wymusza prostokątem do wyczyszczenia po zwróceniu go.  
@@ -2533,22 +2533,22 @@ DWORD GetCharacterPlacement(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpString`  
+ *lpString*  
  Wskaźnik do ciągu znaków do przetworzenia.  
   
- `nCount`  
+ *nCount*  
  Określa długość ciągu. Dla wersji ANSI jest liczba BAJTÓW i funkcji Unicode jest liczba programu WORD. Aby uzyskać więcej informacji, zobacz [GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx).  
   
- `nMaxExtent`  
- Określa maksymalny zakres (w jednostkach logicznych) do przetwarzania jest ciąg. Znaki, których przetwarzanie, spowoduje przekroczenie tego zakresu są ignorowane. Obliczenia dla wszelkie wymagane tablic porządkowanie lub symbolu dotyczą tylko dołączone znaków. Ten parametr jest używany tylko wtedy, gdy określona jest wartość GCP_MAXEXTENT w `dwFlags` parametru. Funkcja przetwarza ciągu wejściowego, każdego znaku i jego zakres są dodawane do danych wyjściowych, zakres i tablic tylko wtedy, gdy zakres łączny jeszcze nie przekroczono maksymalną. Po osiągnięciu limitu przetwarzanie zostanie zatrzymane.  
+ *nMaxExtent*  
+ Określa maksymalny zakres (w jednostkach logicznych) do przetwarzania jest ciąg. Znaki, których przetwarzanie, spowoduje przekroczenie tego zakresu są ignorowane. Obliczenia dla wszelkie wymagane tablic porządkowanie lub symbolu dotyczą tylko dołączone znaków. Ten parametr jest używany tylko wtedy, gdy określona jest wartość GCP_MAXEXTENT w *wartość elementu dwFlags* parametru. Funkcja przetwarza ciągu wejściowego, każdego znaku i jego zakres są dodawane do danych wyjściowych, zakres i tablic tylko wtedy, gdy zakres łączny jeszcze nie przekroczono maksymalną. Po osiągnięciu limitu przetwarzanie zostanie zatrzymane.  
   
  lpResults  
  Wskaźnik do [GCP_Results](http://msdn.microsoft.com/library/windows/desktop/dd144842\(v=vs.85\).aspx) struktury, który odbiera wyniki funkcji.  
   
- `dwFlags`  
- Określa sposób przetwarzania ciągu do tablic wymagane. Ten parametr może mieć jeden lub więcej wartości na liście `dwFlags` sekcji [GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx) tematu.  
+ *wartość elementu dwFlags*  
+ Określa sposób przetwarzania ciągu do tablic wymagane. Ten parametr może mieć jeden lub więcej wartości na liście *wartość elementu dwFlags* sekcji [GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx) tematu.  
   
- `str`  
+ *str*  
  Wskaźnik do [cstring —](../../atl-mfc-shared/reference/cstringt-class.md) obiekt do procesu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -2575,14 +2575,14 @@ BOOL GetCharABCWidths(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nFirstChar`  
+ *nFirstChar*  
  Określa pierwszy znak z zakresu znaków z bieżącą czcionkę, dla którego są zwracane szerokości znaków.  
   
- `nLastChar`  
+ *nLastChar*  
  Określa ostatni znak z zakresu znaków z bieżącą czcionkę, dla którego są zwracane szerokości znaków.  
   
- `lpabc`  
- Wskazuje tablicę [ABC](../../mfc/reference/abc-structure.md) struktury otrzymujących szerokości znaków po powrocie z funkcji. Ta tablica musi zawierać co najmniej tyle **ABC** struktury jako znaków znajduje się w zakresie określonym przez `nFirstChar` i `nLastChar` parametrów.  
+ *lpabc*  
+ Wskazuje tablicę [ABC](../../mfc/reference/abc-structure.md) struktury otrzymujących szerokości znaków po powrocie z funkcji. Ta tablica musi zawierać co najmniej tyle **ABC** struktury jako znaków znajduje się w zakresie określonym przez *nFirstChar* i *nLastChar* parametrów.  
   
  *lpABCF*  
  Wskazuje Bufor podany aplikacji z tablicą [ABCFLOAT](../../mfc/reference/abcfloat-structure.md) struktury tak, aby otrzymywać szerokości znaków, gdy funkcja zwraca wartość. Szerokości zwracane przez tę funkcję jest w formacie zmiennoprzecinkowej IEEE.  
@@ -2615,17 +2615,17 @@ BOOL GetCharABCWidthsI(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `giFirst`  
- Określa pierwszy indeks symbolu w grupie indeksy symboli kolejnych z bieżącej czcionki. Ten parametr jest używany tylko, jeśli `pgi` parametr jest **NULL**.  
+ *giFirst*  
+ Określa pierwszy indeks symbolu w grupie indeksy symboli kolejnych z bieżącej czcionki. Ten parametr jest używany tylko, jeśli *pgi* parametr jest **NULL**.  
   
- `cgi`  
+ *CGI*  
  Określa liczbę indeksy obiektów glyph.  
   
- `pgi`  
- Wskaźnik do tablicę zawierającą indeksy obiektów glyph. Jeśli wartość jest **NULL**, `giFirst` zamiast niego zostanie użyty parametr. `cgi` Parametr określa liczbę indeksy symboli w tej macierzy.  
+ *elementy PGI*  
+ Wskaźnik do tablicę zawierającą indeksy obiektów glyph. Jeśli wartość jest **NULL**, *giFirst* zamiast niego zostanie użyty parametr. *Cgi* parametr określa liczbę indeksy symboli w tej macierzy.  
   
- `lpabc`  
- Wskaźnik do tablicy [ABC](http://msdn.microsoft.com/library/windows/desktop/dd162454) struktury odbieranie szerokości znaków. Ta tablica musi zawierać co najmniej tyle **ABC** struktury są określone przez indeksy obiektów glyph `cgi` parametru.  
+ *lpabc*  
+ Wskaźnik do tablicy [ABC](http://msdn.microsoft.com/library/windows/desktop/dd162454) struktury odbieranie szerokości znaków. Ta tablica musi zawierać co najmniej tyle **ABC** struktury są określone przez indeksy obiektów glyph *cgi* parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
@@ -2649,13 +2649,13 @@ BOOL GetCharWidth(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nFirstChar`  
+ *nFirstChar*  
  Określa pierwszy znak w grupie kolejnych znaków w bieżącej czcionki.  
   
- `nLastChar`  
+ *nLastChar*  
  Określa ostatni znak w grupie kolejnych znaków w bieżącej czcionki.  
   
- `lpBuffer`  
+ *Sprawdzanie*  
  Wskazuje buforu, który będzie otrzymywał wartości szerokości dla grupy kolejnych znaków w bieżącej czcionki.  
   
  *lpFloatBuffer*  
@@ -2665,9 +2665,9 @@ BOOL GetCharWidth(
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Na przykład jeśli `nFirstChar` identyfikuje litery "" i `nLastChar` identyfikuje litera "z", funkcja pobiera szerokość wszystkie znaki na małe litery.  
+ Na przykład jeśli *nFirstChar* identyfikuje litery "" i *nLastChar* identyfikuje litera "z", funkcja pobiera szerokość wszystkie znaki na małe litery.  
   
- Funkcja przechowuje wartości w buforze wskazywana przez `lpBuffer`. Bufor musi być wystarczająco duży, aby pomieścić całą szerokość. Oznacza to musi istnieć co najmniej 26 wpisów w powyższym przykładzie.  
+ Funkcja przechowuje wartości w buforze wskazywana przez *sprawdzanie*. Bufor musi być wystarczająco duży, aby pomieścić całą szerokość. Oznacza to musi istnieć co najmniej 26 wpisów w powyższym przykładzie.  
   
  Jeśli znak w grupie kolejnych znaków nie istnieje w określonej czcionki, będzie można przypisać wartość szerokości domyślny znak.  
   
@@ -2683,16 +2683,16 @@ BOOL GetCharWidthI(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `giFirst`  
- Określa pierwszy indeks symbolu w grupie indeksy symboli kolejnych z bieżącej czcionki. Ten parametr jest używany tylko, jeśli `pgi` parametr jest **NULL**.  
+ *giFirst*  
+ Określa pierwszy indeks symbolu w grupie indeksy symboli kolejnych z bieżącej czcionki. Ten parametr jest używany tylko, jeśli *pgi* parametr jest **NULL**.  
   
- `cgi`  
+ *CGI*  
  Określa liczbę indeksy obiektów glyph.  
   
- `pgi`  
- Wskaźnik do tablicę zawierającą indeksy obiektów glyph. Jeśli wartość jest **NULL**, `giFirst` zamiast niego zostanie użyty parametr. `cgi` Parametr określa liczbę indeksy symboli w tej macierzy.  
+ *elementy PGI*  
+ Wskaźnik do tablicę zawierającą indeksy obiektów glyph. Jeśli wartość jest **NULL**, *giFirst* zamiast niego zostanie użyty parametr. *Cgi* parametr określa liczbę indeksy symboli w tej macierzy.  
   
- `lpBuffer`  
+ *Sprawdzanie*  
  Wskaźnik do buforu, który odbiera szerokości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -2709,7 +2709,7 @@ virtual int GetClipBox(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect —*  
  Wskazuje [RECT](../../mfc/reference/rect-structure1.md) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu, który ma otrzymać wymiary prostokąta.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -2724,7 +2724,7 @@ virtual int GetClipBox(LPRECT lpRect) const;
 - **SIMPLEREGION** obszar przycinania nie ma nakładające się obramowania.  
   
 ### <a name="remarks"></a>Uwagi  
- Wymiary są kopiowane do bufor wskazywany przez `lpRect`.  
+ Wymiary są kopiowane do bufor wskazywany przez *lprect —*.  
   
 ##  <a name="getcoloradjustment"></a>  CDC::GetColorAdjustment  
  Pobiera wartości dostosowywanie kolorów dla kontekstu urządzenia.  
@@ -2734,7 +2734,7 @@ BOOL GetColorAdjustment(LPCOLORADJUSTMENT lpColorAdjust) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpColorAdjust`  
+ *lpColorAdjust*  
  Wskazuje [COLORADJUSTMENT](../../mfc/reference/coloradjustment-structure.md) struktury danych do odbierania dopasowania wartości kolorów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -2856,7 +2856,7 @@ int GetDeviceCaps(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Określa typ danych do zwrócenia. Zobacz [GetDeviceCaps](http://msdn.microsoft.com/library/windows/desktop/dd144877) w zestawie SDK systemu Windows, aby uzyskać listę wartości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -2877,25 +2877,25 @@ DWORD GetFontData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwTable`  
+ *dwTable*  
  Określa nazwę tabeli metryki ma zostać zwrócona. Ten parametr może być jedną z tabel metryki udokumentowane w specyfikacji pliki czcionki TrueType opublikowane przez firmę Microsoft Corporation. Jeśli ten parametr ma wartość 0, informacje są pobierane, zaczynając od początku pliku czcionki.  
   
- `dwOffset`  
- Określa przesunięcie od początku tabeli, w którym należy rozpocząć pobieranie informacji. Jeśli ten parametr ma wartość 0, informacje są pobierane, zaczynając od początku tabeli określonej przez `dwTable` parametru. Jeśli ta wartość jest większa niż lub równe rozmiarowi tabeli `GetFontData` zwraca wartość 0.  
+ *dwOffset*  
+ Określa przesunięcie od początku tabeli, w którym należy rozpocząć pobieranie informacji. Jeśli ten parametr ma wartość 0, informacje są pobierane, zaczynając od początku tabeli określonej przez *dwTable* parametru. Jeśli ta wartość jest większa niż lub równe rozmiarowi tabeli `GetFontData` zwraca wartość 0.  
   
- `lpData`  
- Wskazuje buforu, który będzie otrzymywać informacje czcionki. Jeśli ta wartość jest **NULL**, funkcja zwraca rozmiar buforu wymagane przez dane czcionek określone w `dwTable` parametru.  
+ *lpData*  
+ Wskazuje buforu, który będzie otrzymywać informacje czcionki. Jeśli ta wartość jest **NULL**, funkcja zwraca rozmiar buforu wymagane przez dane czcionek określone w *dwTable* parametru.  
   
- `cbData`  
- Określa długość w bajtach informacje, które mają zostać pobrane. Jeśli ten parametr ma wartość 0, `GetFontData` zwraca rozmiaru danych określonego w `dwTable` parametru.  
+ *cbData*  
+ Określa długość w bajtach informacje, które mają zostać pobrane. Jeśli ten parametr ma wartość 0, `GetFontData` zwraca rozmiaru danych określonego w *dwTable* parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Określa liczbę bajtów zwracanych w buforze wskazywana przez `lpData` Jeśli funkcja zakończy się pomyślnie; w przeciwnym razie -1.  
+ Określa liczbę bajtów zwracanych w buforze wskazywana przez *lpData* Jeśli funkcja zakończy się pomyślnie; w przeciwnym razie -1.  
   
 ### <a name="remarks"></a>Uwagi  
  Informacje do pobrania jest identyfikowany przez określenie przesunięcie w pliku czcionki i długość danych do zwrócenia.  
   
- Czasami można użyć aplikacji `GetFontData` funkcji członkowskiej, aby zapisać czcionki TrueType z dokumentu. Aby to zrobić, aplikacji określa, czy czcionka można ją osadzić i następnie pobiera plik całej czcionki 0 w przypadku określania `dwTable`, `dwOffset`, i `cbData` parametrów.  
+ Czasami można użyć aplikacji `GetFontData` funkcji członkowskiej, aby zapisać czcionki TrueType z dokumentu. Aby to zrobić, aplikacji określa, czy czcionka można ją osadzić i następnie pobiera plik całej czcionki 0 w przypadku określania *dwTable*, *dwOffset*, i *cbData* Parametry.  
   
  Aplikacje można określić, czy można ją osadzić czcionki, sprawdzając **otmfsType** członkiem [OUTLINETEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd162755) struktury. Jeśli bit 1 **otmfsType** jest ustawione Osadzanie czcionki nie jest dozwolone. Jeśli bit 1 jest wyczyszczone, można ją osadzić czcionki. Jeśli ustawiono bit 2, osadzania jest tylko do odczytu.  
   
@@ -2928,36 +2928,36 @@ DWORD GetGlyphOutline(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nChar`  
+ *NChar*  
  Określa znak, dla którego ma zostać zwrócone informacje.  
   
- `nFormat`  
+ *nFormat*  
  Określa format, w którym funkcja do zwracania informacji. Może być jedną z następujących wartości lub 0:  
   
 |Wartość|Znaczenie|  
 |-----------|-------------|  
-|**GGO_BITMAP**|Zwraca mapę bitową symbolu. Gdy funkcja zwraca, bufor wskazywany przez `lpBuffer` zawiera start której wiersze na granicach z bitowego mapę bitową 1 bit każdego piksela.|  
-|**GGO_NATIVE**|Zwraca krzywej punktów danych w formacie native rasteryzator, za pomocą urządzenia jednostki. Gdy ta wartość jest określona, wszelkie przekształcania określonych w `lpmat2` jest ignorowana.|  
+|**GGO_BITMAP**|Zwraca mapę bitową symbolu. Gdy funkcja zwraca, bufor wskazywany przez *sprawdzanie* zawiera start której wiersze na granicach z bitowego mapę bitową 1 bit każdego piksela.|  
+|**GGO_NATIVE**|Zwraca krzywej punktów danych w formacie native rasteryzator, za pomocą urządzenia jednostki. Gdy ta wartość jest określona, wszelkie przekształcania określonych w *lpmat2* jest ignorowana.|  
   
- Jeśli wartość `nFormat` wynosi 0, funkcja wypełnia [GLYPHMETRICS](http://msdn.microsoft.com/library/windows/desktop/dd144955) struktury, ale nie zwrócił danych obrysu symbolu.  
+ Jeśli wartość *nFormat* wynosi 0, funkcja wypełnia [GLYPHMETRICS](http://msdn.microsoft.com/library/windows/desktop/dd144955) struktury, ale nie zwrócił danych obrysu symbolu.  
   
  *lpgm*  
  Wskazuje **GLYPHMETRICS** strukturę, która opisuje położenie symbolu w komórce znaków.  
   
- `cbBuffer`  
- Określa rozmiar buforu, w której funkcja kopiuje informacji na temat znaków konspektu. Jeśli ta wartość wynosi 0 i `nFormat` jest parametr **GGO_BITMAP** lub **GGO_NATIVE** wartości, funkcja zwraca wymagany rozmiar buforu.  
+ *cbBuffer*  
+ Określa rozmiar buforu, w której funkcja kopiuje informacji na temat znaków konspektu. Jeśli ta wartość wynosi 0 i *nFormat* jest parametr **GGO_BITMAP** lub **GGO_NATIVE** wartości, funkcja zwraca wymagany rozmiar buforu.  
   
- `lpBuffer`  
- Punkty w buforze, w której funkcja kopiuje informacji na temat znaków konspektu. Jeśli `nFormat` Określa **GGO_NATIVE** kopiuje wartość, informacje w postaci **TTPOLYGONHEADER** i **TTPOLYCURVE** struktury. Jeśli ta wartość jest **NULL** i `nFormat` jest **GGO_BITMAP** lub **GGO_NATIVE** wartości, funkcja zwraca wymagany rozmiar buforu.  
+ *Sprawdzanie*  
+ Punkty w buforze, w której funkcja kopiuje informacji na temat znaków konspektu. Jeśli *nFormat* Określa **GGO_NATIVE** kopiuje wartość, informacje w postaci **TTPOLYGONHEADER** i **TTPOLYCURVE** struktury. Jeśli ta wartość jest **NULL** i *nFormat* jest **GGO_BITMAP** lub **GGO_NATIVE** wartości, funkcja zwraca wymagany rozmiar bufor.  
   
- `lpmat2`  
- Wskazuje [MAT2](http://msdn.microsoft.com/library/windows/desktop/dd145048) strukturę, która zawiera macierzy transformacji znaku. Ten parametr nie może być **NULL**nawet wtedy, gdy **GGO_NATIVE** określono wartość dla `nFormat`.  
+ *lpmat2*  
+ Wskazuje [MAT2](http://msdn.microsoft.com/library/windows/desktop/dd145048) strukturę, która zawiera macierzy transformacji znaku. Ten parametr nie może być **NULL**nawet wtedy, gdy **GGO_NATIVE** określono wartość dla *nFormat*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Rozmiar w bajtach buforu wymagane pobrane informacje, jeśli `cbBuffer` ma wartość 0 lub `lpBuffer` jest **NULL**. W przeciwnym razie jest dodatnia, jeśli funkcja zakończy się pomyślnie, lub wartość -1, jeśli występuje błąd.  
+ Rozmiar w bajtach buforu wymagane pobrane informacje, jeśli *cbBuffer* ma wartość 0 lub *sprawdzanie* jest **NULL**. W przeciwnym razie jest dodatnia, jeśli funkcja zakończy się pomyślnie, lub wartość -1, jeśli występuje błąd.  
   
 ### <a name="remarks"></a>Uwagi  
- Aplikację można obracać znaków pobierane w formacie mapy bitowej, określając macierzy transformacji 2-za-2 w strukturze wskazywana przez `lpmat2`.  
+ Aplikację można obracać znaków pobierane w formacie mapy bitowej, określając macierzy transformacji 2-za-2 w strukturze wskazywana przez *lpmat2*.  
   
  Obrysu symbolu jest zwracana jako serię konturów. Każdy rozkład jest definiowana za pomocą [TTPOLYGONHEADER](http://msdn.microsoft.com/library/windows/desktop/dd145158) struktury następuje tyle **TTPOLYCURVE** struktury, które są wymagane do opisywania go. Wszystkie punkty zostaną zwrócone jako [POINTFX](http://msdn.microsoft.com/library/windows/desktop/dd162806) struktury i reprezentują położenia bezwzględne przenosi nie względną. Moment rozpoczęcia podana przez **pfxStart** członkiem [TTPOLYGONHEADER](http://msdn.microsoft.com/library/windows/desktop/dd145158) struktura jest punkt, w którym rozpoczyna się konspekt ROZKŁAD. [TTPOLYCURVE](http://msdn.microsoft.com/library/windows/desktop/dd145157) struktur, które należy wykonać może być rekordów łamanej lub rekordy krzywej składanej. Rekordy łamanej są serii punktów. linii między punktami Opisz konturu znak. Rejestruje krzywej składanej reprezentują kwadratową krzywych używanych przez TrueType (to znaczy kwadratową b krzywe).  
   
@@ -3003,11 +3003,11 @@ int GetKerningPairs(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPairs`  
- Określa liczbę [KERNINGPAIR](http://msdn.microsoft.com/library/windows/desktop/dd145024) struktury wskazywana przez `lpkrnpair`. Funkcja nie zostanie skopiowany pary kerningu więcej niż określony w `nPairs`.  
+ *nPairs*  
+ Określa liczbę [KERNINGPAIR](http://msdn.microsoft.com/library/windows/desktop/dd145024) struktury wskazywana przez *lpkrnpair*. Funkcja nie zostanie skopiowany pary kerningu więcej niż określony w *nPairs*.  
   
- `lpkrnpair`  
- Wskazuje tablicę **KERNINGPAIR** struktur, które odbierają kerning pary po powrocie z funkcji. Tablica musi zawierać co najmniej tyle struktury określony przez `nPairs`. Jeśli ten parametr ma **NULL**, funkcja zwraca sumę kerning pary czcionki.  
+ *lpkrnpair*  
+ Wskazuje tablicę **KERNINGPAIR** struktur, które odbierają kerning pary po powrocie z funkcji. Tablica musi zawierać co najmniej tyle struktury określony przez *nPairs*. Jeśli ten parametr ma **NULL**, funkcja zwraca sumę kerning pary czcionki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Określa liczbę pary pobrać kerningu lub całkowitą liczbę kerning pary czcionki, jeśli funkcja zakończy się pomyślnie. Zero jest zwracany, jeśli funkcja nie powiedzie się lub nie ma żadnych pary kerningu czcionki.  
@@ -3039,7 +3039,7 @@ int GetMapMode() const;
  Opis tryby mapowania, zobacz `SetMapMode` funkcję elementu członkowskiego.  
   
 > [!NOTE]
->  Jeśli należy wywołać [SetLayout](#setlayout) Aby zmienić kontroler domeny do układu od prawej do lewej, **SetLayout** automatycznie zmienia tryb mapowania do `MM_ISOTROPIC`. W rezultacie każde kolejne wywołanie `GetMapMode` zwróci `MM_ISOTROPIC`.  
+>  Jeśli należy wywołać [SetLayout](#setlayout) Aby zmienić kontroler domeny do układu od prawej do lewej, `SetLayout` automatycznie zmienia tryb mapowania do `MM_ISOTROPIC`. W rezultacie każde kolejne wywołanie `GetMapMode` zwróci `MM_ISOTROPIC`.  
   
 ##  <a name="getmiterlimit"></a>  CDC::GetMiterLimit  
  Zwraca limit ostre kontekst urządzenia.  
@@ -3062,11 +3062,11 @@ COLORREF GetNearestColor(COLORREF crColor) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `crColor`  
+ *crColor*  
  Określa kolor, który ma zostać dopasowany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość koloru RGB (czerwony, zielony, niebieski), który określa stałą koloru znajdujący się najbliżej `crColor` wartości reprezentujące urządzenia.  
+ Wartość koloru RGB (czerwony, zielony, niebieski), który określa stałą koloru znajdujący się najbliżej *crColor* wartości reprezentujące urządzenia.  
   
 ### <a name="remarks"></a>Uwagi  
  Danego urządzenia musi mieć możliwość reprezentują tego koloru.  
@@ -3081,20 +3081,20 @@ UINT GetOutlineTextMetrics(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpotm`  
+ *lpotm*  
  Wskazuje tablicę [OUTLINETEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd162755) struktury. Jeśli ten parametr ma **NULL**, funkcja zwraca rozmiar buforu wymagane pobrane danych metryki.  
   
- `cbData`  
+ *cbData*  
  Określa rozmiar w bajtach buforu, do którego informacje są zwracane.  
   
- `lpotm`  
+ *lpotm*  
  Wskazuje **OUTLINETEXTMETRIC** struktury. Jeśli ten parametr ma **NULL**, funkcja zwraca rozmiar buforu wymagane dla metryki pobrane informacje.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- [OUTLINETEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd162755) struktura zawiera większość informacji metryki czcionek dostępnych w formacie TrueType tym [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) struktury. Cztery ostatnie członkami **OUTLINETEXTMETRIC** struktury są wskaźnikami do ciągów. Aplikacje powinny zajmować miejsca na te ciągi, oprócz przestrzeni wymaganej na innych elementach członkowskich. Ponieważ nie ma żadnego limitu narzuconego przez system, rozmiar ciągów, najprostszą metodą przydziału pamięci jest pobrać rozmiar wymagany przez określenie **NULL** dla `lpotm` w pierwszym wywołaniu `GetOutlineTextMetrics` funkcji.  
+ [OUTLINETEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd162755) struktura zawiera większość informacji metryki czcionek dostępnych w formacie TrueType tym [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) struktury. Cztery ostatnie członkami **OUTLINETEXTMETRIC** struktury są wskaźnikami do ciągów. Aplikacje powinny zajmować miejsca na te ciągi, oprócz przestrzeni wymaganej na innych elementach członkowskich. Ponieważ nie ma żadnego limitu narzuconego przez system, rozmiar ciągów, najprostszą metodą przydziału pamięci jest pobrać rozmiar wymagany przez określenie **NULL** dla *lpotm* w pierwszym wywołaniu `GetOutlineTextMetrics` funkcji.  
   
 ##  <a name="getoutputcharwidth"></a>  CDC::GetOutputCharWidth  
  Używa kontekstu urządzenia wyjściowego, `m_hDC`i pobiera szerokość poszczególnych znaków w grupie kolejnych znaków z bieżącej czcionki.  
@@ -3107,22 +3107,22 @@ BOOL GetOutputCharWidth(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nFirstChar`  
+ *nFirstChar*  
  Określa pierwszy znak w grupie kolejnych znaków w bieżącej czcionki.  
   
- `nLastChar`  
+ *nLastChar*  
  Określa ostatni znak w grupie kolejnych znaków w bieżącej czcionki.  
   
- `lpBuffer`  
+ *Sprawdzanie*  
  Wskazuje buforu, który będzie otrzymywał wartości szerokości dla grupy kolejnych znaków w bieżącej czcionki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Na przykład jeśli `nFirstChar` identyfikuje litery "" i `nLastChar` identyfikuje litera "z", funkcja pobiera szerokość wszystkie znaki na małe litery.  
+ Na przykład jeśli *nFirstChar* identyfikuje litery "" i *nLastChar* identyfikuje litera "z", funkcja pobiera szerokość wszystkie znaki na małe litery.  
   
- Funkcja przechowuje wartości w buforze wskazywana przez `lpBuffer`. Bufor musi być wystarczająco duży, aby pomieścić całą szerokości; oznacza to musi istnieć co najmniej 26 wpisów w powyższym przykładzie.  
+ Funkcja przechowuje wartości w buforze wskazywana przez *sprawdzanie*. Bufor musi być wystarczająco duży, aby pomieścić całą szerokości; oznacza to musi istnieć co najmniej 26 wpisów w powyższym przykładzie.  
   
  Jeśli znak w grupie kolejnych znaków nie istnieje w określonej czcionki, będzie można przypisać wartość szerokości domyślny znak.  
   
@@ -3143,32 +3143,32 @@ CSize GetOutputTabbedTextExtent(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszString`  
+ *lpszString*  
  Wskazuje ciąg znaków ma być mierzony. Można również przekazać [cstring —](../../atl-mfc-shared/reference/cstringt-class.md) obiekt dla tego parametru.  
   
- `nCount`  
- Określa liczbę znaków w ciągu. Jeśli `nCount` wynosi -1, długość jest obliczana.  
+ *nCount*  
+ Określa liczbę znaków w ciągu. Jeśli *nCount* wynosi -1, długość jest obliczana.  
   
- `nTabPositions`  
- Określa liczbę pozycji tabulatorów w tablicy wskazywana przez `lpnTabStopPositions`.  
+ *nTabPositions*  
+ Określa liczbę pozycji tabulatorów w tablicy wskazywana przez *lpnTabStopPositions*.  
   
- `lpnTabStopPositions`  
+ *lpnTabStopPositions*  
  Punkty na tablicę zawierającą pozycje tabulatorów w jednostkach logicznych liczb całkowitych. Tabulatory muszą być posortowane w rosnącej kolejności. najmniejsza wartość x powinien być pierwszym elementem w tablicy. Wstecz karty nie są dozwolone.  
   
- `str`  
+ *str*  
  A `CString` obiekt, który zawiera mierzone określonych znaków.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wymiary ciągu (w jednostkach logicznych) w [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli ciąg zawiera jeden lub więcej znaków tabulacji, szerokości ciągu opiera się na tabulatory, określony przez `lpnTabStopPositions`. Funkcja używa aktualnie wybranej czcionki do obliczenia wymiarów ciągu.  
+ Jeśli ciąg zawiera jeden lub więcej znaków tabulacji, szerokości ciągu opiera się na tabulatory, określony przez *lpnTabStopPositions*. Funkcja używa aktualnie wybranej czcionki do obliczenia wymiarów ciągu.  
   
  Bieżący obszar przycinania nie przesunięcia, szerokość i wysokość zwrócony przez `GetOutputTabbedTextExtent` funkcji.  
   
  Ponieważ niektóre urządzenia nie zostanie znaków komórki regularne tablice (to znaczy one kerning znaki), sumę zakres znaków w ciągu nie może być równa wartości ciągu.  
   
- Jeśli `nTabPositions` 0 i `lpnTabStopPositions` jest **NULL**, karty zostaną rozwinięte do ośmiu znaków średni szerokości. Jeśli `nTabPositions` 1, tabulatory będą oddzielone odległości określonej przez pierwszą wartość w tablicy, do którego `lpnTabStopPositions` punktów. Jeśli `lpnTabStopPositions` punktów do więcej niż jedną wartość, dla każdej wartości w tablicy, do liczbie określonej przez ustawiono tabulatora `nTabPositions`.  
+ Jeśli *nTabPositions* 0 i *lpnTabStopPositions* jest **NULL**, karty zostaną rozwinięte do ośmiu znaków średni szerokości. Jeśli *nTabPositions* 1, tabulatory będą oddzielone odległości określonej przez pierwszą wartość w tablicy, do którego *lpnTabStopPositions* punktów. Jeśli *lpnTabStopPositions* punktów do więcej niż jedną wartość, dla każdej wartości w tablicy, do liczbie określonej przez ustawiono tabulatora *nTabPositions*.  
   
 ##  <a name="getoutputtextextent"></a>  CDC::GetOutputTextExtent  
  Wywołanie tej funkcji Członkowskich używać kontekstu urządzenia wyjściowego, [m_hDC](#m_hdc)i zasobów obliczeniowych, szerokość i wysokość wiersza tekstu przy użyciu bieżącej czcionki.  
@@ -3182,13 +3182,13 @@ CSize GetOutputTextExtent(const CString& str) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszString`  
+ *lpszString*  
  Wskazuje ciąg znaków. Można również przekazać [cstring —](../../atl-mfc-shared/reference/cstringt-class.md) obiekt dla tego parametru.  
   
- `nCount`  
- Określa liczbę znaków w ciągu. Jeśli `nCount` wynosi -1, długość jest obliczana.  
+ *nCount*  
+ Określa liczbę znaków w ciągu. Jeśli *nCount* wynosi -1, długość jest obliczana.  
   
- `str`  
+ *str*  
  A `CString` obiekt, który zawiera mierzone określonych znaków.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3207,7 +3207,7 @@ BOOL GetOutputTextMetrics(LPTEXTMETRIC lpMetrics) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpMetrics`  
+ *lpMetrics*  
  Wskazuje [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) struktury, która odbiera metryki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3224,29 +3224,29 @@ int GetPath(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpPoints`  
+ *lpPoints*  
  Wskazuje tablicę [punktu](../../mfc/reference/point-structure1.md) struktur danych lub `CPoint` znajdują się obiekty, których punkty końcowe linii i krzywych kontrolować punktów.  
   
- `lpTypes`  
+ *lpTypes*  
  Punkty na tablicę bajtów rozmieszczenia typy wierzchołka. Wartości są następujące:  
   
-- **PT_MOVETO** Określa, że odpowiednie punktu `lpPoints` uruchamia rozłącznego rysunku.  
+- **PT_MOVETO** Określa, że odpowiednie punktu *lpPoints* uruchamia rozłącznego rysunku.  
   
-- **PT_LINETO** Określa, że poprzedniego punktu i odpowiadający mu punktu `lpPoints` punktów końcowych wiersza.  
+- **PT_LINETO** Określa, że poprzedniego punktu i odpowiadający mu punktu *lpPoints* punktów końcowych wiersza.  
   
-- **PT_BEZIERTO** Określa, że odpowiednie punktu `lpPoints` jest punkt kontrolny lub punkt końcowy dla krzywej Bzier.  
+- **PT_BEZIERTO** Określa, że odpowiednie punktu *lpPoints* jest punkt kontrolny lub punkt końcowy dla krzywej Bzier.  
   
  **PT_BEZIERTO** typy są zawsze wykonywane w zestawach trzech. Punkt w ścieżce bezpośrednio przed ich określa punkt początkowy krzywej Bzier. Pierwsze dwie **PT_BEZIERTO** punkty są punkty kontrolne, a trzeci **PT_BEZIERTO** punkt jest punktem końcowym (jeśli wpisaną na stałe).  
   
-     A **PT_LINETO** lub **PT_BEZIERTO** typu mogą być łączone z następującą flagę (przy użyciu bitowego operatora `OR`) do wskazywania odpowiedniego punktu ostatniego punktu w rysunku, który Rysunek powinno zostać zamknięte:  
+     A **PT_LINETO** lub **PT_BEZIERTO** typu mogą być łączone z następującą flagę (przy użyciu bitowego operatora **lub**) do wskazywania odpowiedniego punktu ostatniego punktu w rysunku, które powinno zostać zamknięte ilustracji:  
   
 - **PT_CLOSEFIGURE** Określa, że wartość zostaje automatycznie zamknięty po odpowiednim wierszu lub krzywej jest rysowane. Rysunek jest zamknięty za pomocą rysowania linii z punktu końcowego linii lub krzywej do punktu odpowiadającego ostatniej **PT_MOVETO**.  
   
- `nCount`  
- Określa liczbę [punktu](../../mfc/reference/point-structure1.md) struktury danych, które mogą być umieszczane w `lpPoints` tablicy. Ta wartość musi być taka sama jak liczba bajtów, które mogą być umieszczane w `lpTypes` tablicy.  
+ *nCount*  
+ Określa liczbę [punktu](../../mfc/reference/point-structure1.md) struktury danych, które mogą być umieszczane w *lpPoints* tablicy. Ta wartość musi być taka sama jak liczba bajtów, które mogą być umieszczane w *lpTypes* tablicy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli `nCount` parametr jest różna od zera, liczba punktów wyliczone. Jeśli `nCount` ma wartość 0, łączną liczbę punktów na ścieżce (i `GetPath` zapisuje nic buforów). Jeśli `nCount` jest różna od zera i mniejszy niż liczba punktów w ścieżce, wartość zwracana jest wartość -1.  
+ Jeśli *nCount* parametr jest różna od zera, liczba punktów wyliczone. Jeśli *nCount* ma wartość 0, łączną liczbę punktów na ścieżce (i `GetPath` zapisuje nic buforów). Jeśli *nCount* jest różna od zera i mniejszy niż liczba punktów w ścieżce, wartość zwracana jest wartość -1.  
   
 ### <a name="remarks"></a>Uwagi  
  Kontekst urządzenia musi zawierać ścieżkę zamkniętą. Punkty ścieżki są zwracane w logiczne współrzędnych. Punkty są przechowywane w ścieżce we współrzędnych urządzenia, więc `GetPath` zmienia się punkty z współrzędnych urządzenia logicznego współrzędnych przy użyciu odwrotność bieżącego transformacji. `FlattenPath` Funkcji członkowskiej może zostać wywołana przed `GetPath`, aby przekonwertować wszystkie krzywych w ścieżce segmenty linii.  
@@ -3272,7 +3272,7 @@ COLORREF GetPixel(POINT point) const;
  *y*  
  Określa logicznej współrzędną y punktu, który ma być zbadana.  
   
- `point`  
+ *Punkt*  
  Określa logicznych i y współrzędne x punktu, który ma być zbadana.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3356,32 +3356,32 @@ CSize GetTabbedTextExtent(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszString`  
+ *lpszString*  
  Wskazuje ciąg znaków. Można również przekazać [cstring —](../../atl-mfc-shared/reference/cstringt-class.md) obiekt dla tego parametru.  
   
- `nCount`  
- Określa liczbę znaków w ciągu. Jeśli `nCount` wynosi -1, długość jest obliczana.  
+ *nCount*  
+ Określa liczbę znaków w ciągu. Jeśli *nCount* wynosi -1, długość jest obliczana.  
   
- `nTabPositions`  
- Określa liczbę pozycji tabulatorów w tablicy wskazywana przez `lpnTabStopPositions`.  
+ *nTabPositions*  
+ Określa liczbę pozycji tabulatorów w tablicy wskazywana przez *lpnTabStopPositions*.  
   
- `lpnTabStopPositions`  
+ *lpnTabStopPositions*  
  Punkty na tablicę zawierającą pozycje tabulatorów w jednostkach logicznych liczb całkowitych. Tabulatory muszą być posortowane w rosnącej kolejności. najmniejsza wartość x powinien być pierwszym elementem w tablicy. Wstecz karty nie są dozwolone.  
   
- `str`  
+ *str*  
  A `CString` obiekt zawierający znaki określony do narysowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wymiary ciągu (w jednostkach logicznych) w [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli ciąg zawiera jeden lub więcej znaków tabulacji, szerokości ciągu opiera się na tabulatory, określony przez `lpnTabStopPositions`. Funkcja używa aktualnie wybranej czcionki do obliczenia wymiarów ciągu.  
+ Jeśli ciąg zawiera jeden lub więcej znaków tabulacji, szerokości ciągu opiera się na tabulatory, określony przez *lpnTabStopPositions*. Funkcja używa aktualnie wybranej czcionki do obliczenia wymiarów ciągu.  
   
  Bieżący obszar przycinania nie przesunięcia, szerokość i wysokość zwrócony przez `GetTabbedTextExtent` funkcji.  
   
  Ponieważ niektóre urządzenia nie zostanie znaków komórki regularne tablice (to znaczy one kerning znaki), sumę zakres znaków w ciągu nie może być równa wartości ciągu.  
   
- Jeśli `nTabPositions` 0 i `lpnTabStopPositions` jest **NULL**, karty zostaną rozwinięte do ośmiu godzin szerokość znaku średnia. Jeśli `nTabPositions` 1, tabulatory będą oddzielone odległości określonej przez pierwszą wartość w tablicy, do którego `lpnTabStopPositions` punktów. Jeśli `lpnTabStopPositions` punktów do więcej niż jedną wartość, dla każdej wartości w tablicy, do liczbie określonej przez ustawiono tabulatora `nTabPositions`.  
+ Jeśli *nTabPositions* 0 i *lpnTabStopPositions* jest **NULL**, karty zostaną rozwinięte do ośmiu godzin szerokość znaku średnia. Jeśli *nTabPositions* 1, tabulatory będą oddzielone odległości określonej przez pierwszą wartość w tablicy, do którego *lpnTabStopPositions* punktów. Jeśli *lpnTabStopPositions* punktów do więcej niż jedną wartość, dla każdej wartości w tablicy, do liczbie określonej przez ustawiono tabulatora *nTabPositions*.  
   
 ##  <a name="gettextalign"></a>  CDC::GetTextAlign  
  Pobiera stan flagi wyrównanie tekstu do kontekstu urządzenia.  
@@ -3464,13 +3464,13 @@ CSize GetTextExtent(const CString& str) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszString`  
+ *lpszString*  
  Wskazuje ciąg znaków. Można również przekazać [cstring —](../../atl-mfc-shared/reference/cstringt-class.md) obiekt dla tego parametru.  
   
- `nCount`  
+ *nCount*  
  Określa liczbę znaków w ciągu.  
   
- `str`  
+ *str*  
  A `CString` obiekt, który zawiera określonych znaków.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3499,22 +3499,22 @@ BOOL GetTextExtentExPointI(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pgiIn`  
+ *pgiIn*  
  Wskaźnik do tablicy indeksy obiektów glyph, dla których mają być pobierane zakresów.  
   
- `cgi`  
- Określa liczbę symboli w tablicy wskazywana przez `pgiIn`.  
+ *CGI*  
+ Określa liczbę symboli w tablicy wskazywana przez *pgiIn*.  
   
- `nMaxExtent`  
+ *nMaxExtent*  
  Określa maksymalną szerokość dopuszczalna, w jednostkach logicznych sformatowanego ciągu.  
   
- `lpnFit`  
- Wskaźnik do liczba całkowita, która odbiera liczbę maksymalną liczbę znaków, które mieści się w obszarze określonej przez `nMaxExtent`. Gdy `lpnFit` jest **NULL**, `nMaxExtent` jest ignorowana.  
+ *lpnFit*  
+ Wskaźnik do liczba całkowita, która odbiera liczbę maksymalną liczbę znaków, które mieści się w obszarze określonej przez *nMaxExtent*. Gdy *lpnFit* jest **NULL**, *nMaxExtent* jest ignorowana.  
   
  *alpDx*  
- Wskaźnik do tablicy liczb całkowitych odbierająca zakresów z częściowa symbolu. Każdy element tablicy zapewnia odległość, w jednostkach logicznych, od początku tabeli indeksów symboli i jeden z symboli, które mieści się w obszarze określonej przez `nMaxExtent`. Mimo że ta tablica powinien mieć co najmniej tyle elementów, jak indeksy obiektów glyph określony przez `cgi`, funkcja wypełnia tablicy z zakresów tylko na tyle indeksy obiektów glyph są określone przez `lpnFit`. Jeśli *lpnDx* jest **NULL**, funkcja nie oblicza szerokości ciągu częściowej.  
+ Wskaźnik do tablicy liczb całkowitych odbierająca zakresów z częściowa symbolu. Każdy element tablicy zapewnia odległość, w jednostkach logicznych, od początku tabeli indeksów symboli do jednego symboli, który mieści się w obszarze określonej przez *nMaxExtent*. Mimo że ta tablica powinien mieć co najmniej tyle elementów, jak indeksy obiektów glyph określony przez *cgi*, funkcja wypełnia tablicy z zakresów tylko na tyle indeksy obiektów glyph są określone przez *lpnFit*. Jeśli *lpnDx* jest **NULL**, funkcja nie oblicza szerokości ciągu częściowej.  
   
- `lpSize`  
+ *lpSize*  
  Wskaźnik do [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) strukturę, która odbiera wymiarów tablicy wskaźników symbolu, w jednostkach logicznych. Ta wartość nie może być **NULL**.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3534,13 +3534,13 @@ BOOL GetTextExtentPointI(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pgiIn`  
+ *pgiIn*  
  Wskaźnik do tablicy indeksy obiektów glyph, dla których mają być pobierane zakresów.  
   
- `cgi`  
- Określa liczbę symboli w tablicy wskazywana przez `pgiIn`.  
+ *CGI*  
+ Określa liczbę symboli w tablicy wskazywana przez *pgiIn*.  
   
- `lpSize`  
+ *lpSize*  
  Wskaźnik do [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) strukturę, która odbiera wymiarów tablicy wskaźników symbolu, w jednostkach logicznych. Ta wartość nie może być **NULL**.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3561,13 +3561,13 @@ int GetTextFace(CString& rString) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCount`  
+ *nCount*  
  Określa rozmiar bufora (w bajtach). Jeśli nazwa kroju jest dłuższa niż liczba bajtów określonego przez tego parametru, nazwa zostanie obcięta.  
   
  *lpszFacename*  
  Wskazuje buforu dla nazwy krój czcionki.  
   
- `rString`  
+ *rString*  
  Odwołanie do [cstring —](../../atl-mfc-shared/reference/cstringt-class.md) obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3584,7 +3584,7 @@ BOOL GetTextMetrics(LPTEXTMETRIC lpMetrics) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpMetrics`  
+ *lpMetrics*  
  Wskazuje [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) struktury, która odbiera metryki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3651,7 +3651,7 @@ BOOL GetWorldTransform(XFORM& rXform) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rXform`  
+ *rXform*  
  Odwołanie do [XFORM](http://msdn.microsoft.com/library/windows/desktop/dd145228) strukturę, która odbiera bieżącej przestrzeni świata do przekształcania miejsca strony.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3683,13 +3683,13 @@ BOOL GradientFill(
  *nVertices*  
  Liczba wierzchołków.  
   
- `pMesh`  
+ *pMesh*  
  Tablica [GRADIENT_TRIANGLE](http://msdn.microsoft.com/library/windows/desktop/dd144959) struktury w trybie trójkąt lub tablicę [GRADIENT_RECT](http://msdn.microsoft.com/library/windows/desktop/dd144958) struktury w trybie prostokąta.  
   
  *nMeshElements*  
- Liczba elementów (trójkąty lub prostokąty) `pMesh`.  
+ Liczba elementów (trójkąty lub prostokąty) *pMesh*.  
   
- `dwMode`  
+ *dwMode*  
  Określa tryb wypełnieniem gradientowym. Aby uzyskać listę możliwych wartości, zobacz [GradientFill](http://msdn.microsoft.com/library/windows/desktop/dd144957) w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3717,17 +3717,17 @@ virtual BOOL GrayString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pBrush`  
+ *pBrush*  
  Identyfikuje pędzla stosowaną do przygasania (graying).  
   
- `lpfnOutput`  
- Określa adres instancję procedury dostarczone przez aplikację funkcja wywołania zwrotnego narysuje ciąg. Aby uzyskać więcej informacji, zobacz opis systemu Windows **OutputFunc** [funkcja wywołania zwrotnego](callback-functions-used-by-mfc.md#graystring). Jeśli ten parametr ma **NULL**, system używa systemu Windows `TextOut` funkcję, aby narysować ciągu znaków i `lpData` zakłada, że dużo wskaźnikiem do ciągu znaków jako dane wyjściowe.  
+ *lpfnOutput*  
+ Określa adres instancję procedury dostarczone przez aplikację funkcja wywołania zwrotnego narysuje ciąg. Aby uzyskać więcej informacji, zobacz opis systemu Windows **OutputFunc** [funkcja wywołania zwrotnego](callback-functions-used-by-mfc.md#graystring). Jeśli ten parametr ma **NULL**, system używa systemu Windows `TextOut` funkcję, aby narysować ciągu znaków i *lpData* zakłada, że dużo wskaźnikiem do ciągu znaków jako dane wyjściowe.  
   
- `lpData`  
- Określa daleko wskaźnika danych do przekazania do funkcji danych wyjściowych. Jeśli `lpfnOutput` jest **NULL**, `lpData` musi być wskaźnikiem długi ciąg jako dane wyjściowe.  
+ *lpData*  
+ Określa daleko wskaźnika danych do przekazania do funkcji danych wyjściowych. Jeśli *lpfnOutput* jest **NULL**, *lpData* musi być wskaźnikiem długi ciąg jako dane wyjściowe.  
   
- `nCount`  
- Określa liczbę znaków, które jako dane wyjściowe. Jeśli ten parametr ma wartość 0, `GrayString` oblicza długość ciągu (przy założeniu, że `lpData` jest wskaźnikiem do ciągu). Jeśli `nCount` jest wartość -1, a funkcja wskazywana przez `lpfnOutput` zwraca wartość 0, obraz jest wyświetlane, ale nie jest nieaktywne.  
+ *nCount*  
+ Określa liczbę znaków, które jako dane wyjściowe. Jeśli ten parametr ma wartość 0, `GrayString` oblicza długość ciągu (przy założeniu, że *lpData* jest wskaźnikiem do ciągu). Jeśli *nCount* jest wartość -1, a funkcja wskazywana przez *lpfnOutput* zwraca wartość 0, obraz jest wyświetlane, ale nie jest nieaktywne.  
   
  *x*  
  Określa logicznej współrzędną x pozycji początkowej prostokąta, który dodaje ciągu.  
@@ -3735,11 +3735,11 @@ virtual BOOL GrayString(
  *y*  
  Określa logicznej współrzędną y pozycji początkowej prostokąta, który dodaje ciągu.  
   
- `nWidth`  
- Określa szerokość (w jednostkach logicznych) prostokąt ograniczający ciąg. Jeśli `nWidth` ma wartość 0, `GrayString` oblicza szerokość obszaru, przy założeniu `lpData` jest wskaźnikiem do ciągu.  
+ *nWidth*  
+ Określa szerokość (w jednostkach logicznych) prostokąt ograniczający ciąg. Jeśli *nWidth* ma wartość 0, `GrayString` oblicza szerokość obszaru, przy założeniu *lpData* jest wskaźnikiem do ciągu.  
   
- `nHeight`  
- Określa wysokość prostokąta, który dodaje ciągu (w jednostkach logicznych). Jeśli `nHeight` ma wartość 0, `GrayString` oblicza wysokość obszaru, przy założeniu `lpData` jest wskaźnikiem do ciągu.  
+ *nHeight*  
+ Określa wysokość prostokąta, który dodaje ciągu (w jednostkach logicznych). Jeśli *nHeight* ma wartość 0, `GrayString` oblicza wysokość obszaru, przy założeniu *lpData* jest wskaźnikiem do ciągu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli ciąg jest rysowany, lub wartość 0, jeśli dowolny `TextOut` funkcji lub aplikacja dostarczona dane wyjściowe zwracane 0, lub za mało pamięci do utworzenia mapy bitowej pamięci dla wygaszania.  
@@ -3749,7 +3749,7 @@ virtual BOOL GrayString(
   
  Aplikacja może wykonywać Rysowanie wygaszone ciągów (wygaszone) na urządzeniach, które obsługuje jednolitego szarego koloru bez wywoływania elementu `GrayString` funkcję elementu członkowskiego. Kolor systemu **COLOR_GRAYTEXT** jest systemu szary pełny kolor używany do rysowania wyłączonego tekstu. Aplikacja może wywołać **GetSysColor** funkcji systemu Windows można pobrać wartości koloru **COLOR_GRAYTEXT**. Jeśli kolor jest równa 0 (czarny), aplikacja może wywołać `SetTextColor` funkcji członkowskiej, aby ustawić kolor tekstu wartości koloru i następnie narysuj ciąg bezpośrednio. Jeśli pobrane kolor czarny, aplikacja musi wywołać `GrayString` do dim (szary) tekst.  
   
- Jeśli `lpfnOutput` jest **NULL**, systemu Windows używa interfejsu GDI [TextOut](http://msdn.microsoft.com/library/windows/desktop/dd145133) funkcji i `lpData` zakłada, że daleko wskaźnik do znaku jako dane wyjściowe. Jeśli znaki mają być dane wyjściowe nie mogą być obsługiwane przez `TextOut` funkcji członkowskiej (na przykład ciąg jest przechowywana jako mapę bitową), aplikacji, musisz podać ma własną funkcję danych wyjściowych.  
+ Jeśli `lpfnOutput` jest **NULL**, systemu Windows używa interfejsu GDI [TextOut](http://msdn.microsoft.com/library/windows/desktop/dd145133) funkcji i *lpData* zakłada, że daleko wskaźnik do znaku jako dane wyjściowe. Jeśli znaki mają być dane wyjściowe nie mogą być obsługiwane przez `TextOut` funkcji członkowskiej (na przykład ciąg jest przechowywana jako mapę bitową), aplikacji, musisz podać ma własną funkcję danych wyjściowych.  
   
  Należy również zauważyć, że wszystkie funkcje wywołania zwrotnego musi przechwytują wyjątki Microsoft Foundation przed zwróceniem do systemu Windows, ponieważ nie może być wyjątek w granicach wywołania zwrotnego. Aby uzyskać więcej informacji o wyjątkach, zobacz artykuł [wyjątki](../../mfc/exception-handling-in-mfc.md).  
   
@@ -3765,7 +3765,7 @@ void HIMETRICtoDP(LPSIZE lpSize) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpSize`  
+ *lpSize*  
  Wskazuje [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -3779,7 +3779,7 @@ void HIMETRICtoLP(LPSIZE lpSize) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpSize`  
+ *lpSize*  
  Wskazuje [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -3788,7 +3788,7 @@ void HIMETRICtoLP(LPSIZE lpSize) const;
  Konwersja odbywa się przy pierwszym konwertowanie **HIMETRIC** jednostki w pikselach, a następnie konwertując te jednostki do jednostek logicznych przy użyciu jednostki mapowania z bieżącego kontekstu urządzenia. Należy pamiętać, że zakres okna i okienka ekranu urządzenia będzie miało wpływ na wynik.  
   
 ##  <a name="intersectcliprect"></a>  CDC::IntersectClipRect  
- Tworzy nowy obszar przycinania za stanowiące część wspólną bieżącego obszaru i prostokąt określony przez `x1`, `y1`, `x2`, i `y2`.  
+ Tworzy nowy obszar przycinania za stanowiące część wspólną bieżącego obszaru i prostokąt określony przez *x1*, *y1*, *x2*, i *y2*.  
   
 ```  
 int IntersectClipRect(
@@ -3801,19 +3801,19 @@ int IntersectClipRect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `x1`  
+ *x1*  
  Określa logicznej współrzędna x górnego lewego rogu prostokąta.  
   
- `y1`  
+ *y1*  
  Określa logicznej współrzędna y górnego lewego rogu prostokąta.  
   
- `x2`  
+ *x2*  
  Określa logicznej współrzędną x prawym dolnym rogu prostokąta.  
   
- `y2`  
+ *y2*  
  Określa logicznej współrzędną y prawego dolnego rogu prostokąta.  
   
- `lpRect`  
+ *lprect —*  
  Określa prostokąta. Można przekazać `CRect` obiekt lub wskaźnik do `RECT` struktury dla tego parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3838,7 +3838,7 @@ void InvertRect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect —*  
  Wskazuje `RECT` zawiera współrzędne logicznej prostokąta do można odwrócić. Można również przekazać `CRect` obiekt dla tego parametru.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -3850,14 +3850,14 @@ void InvertRect(LPCRECT lpRect);
  [!code-cpp[NVC_MFCDocView#36](../../mfc/codesnippet/cpp/cdc-class_8.cpp)]  
   
 ##  <a name="invertrgn"></a>  CDC::InvertRgn  
- Odwraca kolory w regionie, określony przez `pRgn`.  
+ Odwraca kolory w regionie, określony przez *pRgn*.  
   
 ```  
 BOOL InvertRgn(CRgn* pRgn);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pRgn`  
+ *pRgn*  
  Identyfikuje regionu do można odwrócić. Współrzędne obszaru są określone w jednostkach logicznych.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3877,7 +3877,7 @@ BOOL IsPrinting() const;
  Jeśli podano niezerowe `CDC` drukarka jest obiektu kontrolera domeny; w przeciwnym razie 0.  
   
 ##  <a name="lineto"></a>  CDC::LineTo  
- Rysuje linię z bieżącą pozycję w górę do, ale nie włącznie, określony przez punkt *x* i *y* (lub `point`).  
+ Rysuje linię z bieżącą pozycję w górę do, ale nie włącznie, określony przez punkt *x* i *y* (lub *punktu*).  
   
 ```  
 BOOL LineTo(
@@ -3894,14 +3894,14 @@ BOOL LineTo(POINT point);
  *y*  
  Określa logicznej współrzędną y punktu końcowego dla wiersza.  
   
- `point`  
+ *Punkt*  
  Określa punkt końcowy dla wiersza. Można przekazać **punktu** struktury lub `CPoint` obiekt dla tego parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli wiersz jest rysowany; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Wiersz jest rysowana dla wybranego pióra. Ma ustawioną wartość bieżącej pozycji *x*, *y* lub `point`.  
+ Wiersz jest rysowana dla wybranego pióra. Ma ustawioną wartość bieżącej pozycji *x*, *y* lub *punktu*.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CRect::CenterPoint](../../atl-mfc-shared/reference/crect-class.md#centerpoint).  
@@ -3919,16 +3919,16 @@ void LPtoDP(LPSIZE lpSize) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpPoints`  
+ *lpPoints*  
  Wskazuje tablicy punktów. Każdy punkt w tablicy jest [punktu](../../mfc/reference/point-structure1.md) struktury lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiektu.  
   
- `nCount`  
+ *nCount*  
  Liczba punktów w tablicy.  
   
- `lpRect`  
+ *lprect —*  
  Wskazuje [RECT](../../mfc/reference/rect-structure1.md) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu. Ten parametr jest używany w typowych przypadkach mapowania prostokąt od logicznych jednostek urządzenia.  
   
- `lpSize`  
+ *lpSize*  
  Wskazuje [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury lub [CSize](../../atl-mfc-shared/reference/csize-class.md) obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -3944,7 +3944,7 @@ void LPtoHIMETRIC(LPSIZE lpSize) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpSize`  
+ *lpSize*  
  Wskazuje **rozmiar** struktury lub `CSize` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -3997,29 +3997,29 @@ BOOL MaskBlt(
  *y*  
  Określa logicznej współrzędną y górnego lewego rogu prostokąta docelowego.  
   
- `nWidth`  
+ *nWidth*  
  Określa szerokość w logiczne jednostki docelowej prostokąt i źródła mapy bitowej.  
   
- `nHeight`  
+ *nHeight*  
  Określa wysokość w logiczne jednostki docelowej prostokąt i źródła mapy bitowej.  
   
- `pSrcDC`  
+ *pSrcDC*  
  Identyfikuje kontekst urządzenia, z którego ma zostać skopiowany mapy bitowej. Musi to być zero, jeśli *dwRop* parametr określa operacji rastrowe, która nie zawiera źródła.  
   
- `xSrc`  
+ *xSrc*  
  Określa logicznej współrzędną x górnego lewego rogu źródła mapy bitowej.  
   
- `ySrc`  
+ *ySrc*  
  Określa logicznej współrzędną y lewego górnego rogu źródła mapy bitowej.  
   
- `maskBitmap`  
+ *maskBitmap*  
  Identyfikuje mapy bitowej maski monochromatyczny połączone z kolorów mapy bitowej w kontekście urządzenia źródłowego.  
   
- `xMask`  
- Określa przesunięcie w poziomie pikseli mapy bitowej maski określony przez `maskBitmap` parametru.  
+ *xMask*  
+ Określa przesunięcie w poziomie pikseli mapy bitowej maski określony przez *maskBitmap* parametru.  
   
- `yMask`  
- Określa przesunięcie pikseli w pionie mapy bitowej maski określony przez `maskBitmap` parametru.  
+ *yMask*  
+ Określa przesunięcie pikseli w pionie mapy bitowej maski określony przez *maskBitmap* parametru.  
   
  *dwRop*  
  Określa pierwszego planu i tła trójargumentowy rastrowe operacji kodami, funkcja używa do kontrolowania kombinację danych źródłowych i docelowych. Kod operacji rastrowe tła jest przechowywany w bajcie Word wysokiej wartości; Kod operacji rastrowe pierwszego planu są przechowywane w bajcie Word wysokiej wartości; niski wyrazu ta wartość jest ignorowana, a powinna wynosić zero. Makro **MAKEROP4** tworzy kombinację pierwszego planu i tła rastrowe kody operacji. Zobacz sekcję uwag omówienie pierwszego planu i tła w kontekście tej funkcji. Zobacz `BitBlt` funkcji członkowskiej listę typowych kody operacji rastrowych.  
@@ -4028,7 +4028,7 @@ BOOL MaskBlt(
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Wartość 1 w masce określony przez `maskBitmap` wskazuje, czy kod operacji rastrowe pierwszego planu określony przez *dwRop* powinny być stosowane w tej lokalizacji. Wartość 0 w masce wskazuje, że kod operacji rastrowe tła określony przez *dwRop* powinny być stosowane w tej lokalizacji. Jeśli operacje rastrowe wymagają źródłem, prostokąt maski musi obejmować prostokąta źródłowego. Jeśli nie, funkcja zakończy się niepowodzeniem. Jeśli rastrowych źródło nie jest wymagane, prostokąt maski musi obejmować prostokąt docelowy. Jeśli nie, funkcja zakończy się niepowodzeniem.  
+ Wartość 1 w masce określony przez *maskBitmap* wskazuje, czy kod operacji rastrowe pierwszego planu określony przez *dwRop* powinny być stosowane w tej lokalizacji. Wartość 0 w masce wskazuje, że kod operacji rastrowe tła określony przez *dwRop* powinny być stosowane w tej lokalizacji. Jeśli operacje rastrowe wymagają źródłem, prostokąt maski musi obejmować prostokąta źródłowego. Jeśli nie, funkcja zakończy się niepowodzeniem. Jeśli rastrowych źródło nie jest wymagane, prostokąt maski musi obejmować prostokąt docelowy. Jeśli nie, funkcja zakończy się niepowodzeniem.  
   
  Jeśli transformację obrotu lub Ścinanie są włączone dla kontekstu urządzenia źródłowego, gdy ta funkcja jest wywoływana, wystąpi błąd. Jednak inne rodzaje przekształceń są dozwolone.  
   
@@ -4044,10 +4044,10 @@ BOOL ModifyWorldTransform(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rXform`  
+ *rXform*  
  Odwołanie do [XFORM](http://msdn.microsoft.com/library/windows/desktop/dd145228) struktury używane do modyfikowania transformacji świata kontekstu danego urządzenia.  
   
- `iMode`  
+ *iMode*  
  Określa, jak dane transformacji modyfikuje bieżącego transformacji świata. Aby uzyskać listę wartości, które można wykonać tego parametru, zobacz [ModifyWorldTransform](http://msdn.microsoft.com/library/windows/desktop/dd145060).  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -4061,7 +4061,7 @@ BOOL ModifyWorldTransform(
  Ta metoda opakowuje funkcję Windows GDI [ModifyWorldTransform](http://msdn.microsoft.com/library/windows/desktop/dd145060).  
   
 ##  <a name="moveto"></a>  CDC::MoveTo  
- Przenosi bieżące położenie punktu określonego przez *x* i *y* (lub `point`).  
+ Przenosi bieżące położenie punktu określonego przez *x* i *y* (lub *punktu*).  
   
 ```  
 CPoint MoveTo(
@@ -4078,7 +4078,7 @@ CPoint MoveTo(POINT point);
  *y*  
  Określa logicznej współrzędną y pozycji nowy.  
   
- `point`  
+ *Punkt*  
  Określa pozycję Nowy. Można przekazać **punktu** struktury lub `CPoint` obiekt dla tego parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -4105,7 +4105,7 @@ int OffsetClipRgn(SIZE size);
  *y*  
  Określa liczbę jednostek logicznych na przeniesienie w górę lub w dół.  
   
- `size`  
+ *Rozmiar*  
  Określa wielkość przesunięcia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -4132,10 +4132,10 @@ virtual CPoint OffsetViewportOrg(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nWidth`  
+ *nWidth*  
  Określa liczbę jednostek urządzenia można dodać do współrzędną x bieżący punkt początkowy.  
   
- `nHeight`  
+ *nHeight*  
  Określa liczbę jednostek urządzenia można dodać do współrzędną y bieżący punkt początkowy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -4151,10 +4151,10 @@ CPoint OffsetWindowOrg(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nWidth`  
+ *nWidth*  
  Określa liczbę jednostek logicznych do dodania do współrzędną x bieżący punkt początkowy.  
   
- `nHeight`  
+ *nHeight*  
  Określa liczbę jednostek logicznych do dodania do współrzędną y bieżący punkt początkowy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -4174,14 +4174,14 @@ operator HDC() const;
  Dojście służy do bezpośredniego wywoływania interfejsów API systemu Windows.  
   
 ##  <a name="paintrgn"></a>  CDC::PaintRgn  
- Wypełnia obszaru określonego przez `pRgn` bieżącego pędzla.  
+ Wypełnia obszaru określonego przez *pRgn* bieżącego pędzla.  
   
 ```  
 BOOL PaintRgn(CRgn* pRgn);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pRgn`  
+ *pRgn*  
  Identyfikuje region zostać wypełnione. W jednostkach logicznych określony współrzędnych dla danego regionu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -4206,10 +4206,10 @@ BOOL PatBlt(
  *y*  
  Określa logicznej współrzędna y górnego lewego rogu prostokąta, który ma otrzymać wzorzec.  
   
- `nWidth`  
+ *nWidth*  
  Określa szerokość (w jednostkach logicznych) prostokąta, który ma otrzymać ze wzorcem.  
   
- `nHeight`  
+ *nHeight*  
  Określa wysokość prostokąta, który ma otrzymać ze wzorcem (w jednostkach logicznych).  
   
  *dwRop*  
@@ -4255,48 +4255,48 @@ BOOL Pie(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `x1`  
+ *x1*  
  Określa współrzędną x górnego lewego rogu prostokątem (w jednostkach logicznych).  
   
- `y1`  
+ *y1*  
  Określa współrzędną y lewego górnego rogu prostokątem (w jednostkach logicznych).  
   
- `x2`  
+ *x2*  
  Określa współrzędną x prawym dolnym rogu prostokątem (w jednostkach logicznych).  
   
- `y2`  
+ *y2*  
  Określa współrzędną y prawego dolnego rogu prostokątem (w jednostkach logicznych).  
   
  *x3*  
  Określa współrzędną x punktu początkowego łuku (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk.  
   
- `y3`  
+ *Y3*  
  Określa współrzędną y punktu początkowego łuku (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk.  
   
- `x4`  
+ *X4*  
  Określa współrzędną x punktu końcowego łuku (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk.  
   
- `y4`  
+ *Y4*  
  Określa współrzędną y punktu końcowego łuku (w jednostkach logicznych). Ten punkt nie musi znajdować się dokładnie na łuk.  
   
- `lpRect`  
+ *lprect —*  
  Określa prostokątem. Można przekazać `CRect` obiekt lub wskaźnik do `RECT` struktury dla tego parametru.  
   
- `ptStart`  
+ *ptStart*  
  Określa punkt początkowy łuku. Ten punkt nie musi znajdować się dokładnie na łuk. Można przekazać [punktu](../../mfc/reference/point-structure1.md) struktury lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiekt dla tego parametru.  
   
- `ptEnd`  
+ *ptEnd*  
  Określa punkt końcowy łuk. Ten punkt nie musi znajdować się dokładnie na łuk. Można przekazać **punktu** struktury lub `CPoint` obiekt dla tego parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Centrum łuk jest Centrum prostokątem określony przez `x1`, `y1`, `x2`, i `y2` (lub `lpRect`). Określa początkową i końcową punkty łuku *x3*, `y3`, `x4`, i `y4` (lub `ptStart` i `ptEnd`).  
+ Centrum łuk jest Centrum prostokątem określony przez *x1*, *y1*, *x2*, i *y2* (lub *lprect —* ). Określa początkową i końcową punkty łuku *x3*, *y3*, *x4*, i *y4* (lub *ptStart*i *ptEnd*).  
   
- Łuku wybranego pióra, przenoszenie w wskazówek zegara. Dwa wiersze są pobierane z każdego punktu końcowego Centrum łuku. Obszar w kształcie koła jest wypełniony bieżącego pędzla. Jeśli *x3* jest równe `x4` i `y3` jest równe `y4`, wynikiem jest elipsę z jednym wierszu z Centrum elipsy w punkcie ( *x3*, `y3`) lub ( `x4`, `y4`).  
+ Łuku wybranego pióra, przenoszenie w wskazówek zegara. Dwa wiersze są pobierane z każdego punktu końcowego Centrum łuku. Obszar w kształcie koła jest wypełniony bieżącego pędzla. Jeśli *x3* jest równe *x4* i *y3* jest równe *y4*, wynikiem jest elipsę z jednym wierszu z Centrum elipsy w punkcie ( *x3*, *y3*) lub ( *x4*, *y4*).  
   
- Rysunek rysowane przez tę funkcję do rozszerzenie, ale nie zawiera współrzędne prawo i w dół. Oznacza to, że wysokość rysunku `y2`  -  `y1` i szerokość rysunku jest `x2`  -  `x1`. Szerokość i wysokość prostokąta obwiedni musi być większa niż 2 i mniejsza niż 32 767 jednostek.  
+ Rysunek rysowane przez tę funkcję do rozszerzenie, ale nie zawiera współrzędne prawo i w dół. Oznacza to, że wysokość rysunku *y2* - *y1* i szerokość rysunku jest *x2* - *x1*. Szerokość i wysokość prostokąta obwiedni musi być większa niż 2 i mniejsza niż 32 767 jednostek.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#37](../../mfc/codesnippet/cpp/cdc-class_9.cpp)]  
@@ -4320,7 +4320,7 @@ BOOL PlayMetaFile(
  *hEnhMetaFile*  
  Identyfikuje rozszerzony metaplik.  
   
- `lpBounds`  
+ *lpBounds*  
  Wskazuje `RECT` struktury lub `CRect` obiekt, który zawiera współrzędne prostokątem używany do wyświetlania obrazu. Współrzędne są określone w jednostkach logicznych.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -4329,7 +4329,7 @@ BOOL PlayMetaFile(
 ### <a name="remarks"></a>Uwagi  
  Metaplik można odtwarzać dowolną liczbę razy.  
   
- Druga wersja `PlayMetaFile` Wyświetla obraz przechowywany w danym metaplik rozszerzony format. Gdy aplikacja wywołuje druga wersja `PlayMetaFile`, system Windows używa ramki obrazu w nagłówku rozszerzonych metaplików do mapy obrazu na prostokąt wskazywana przez `lpBounds` parametru. (Ten obraz może być ścięty lub obracać o ustawienie transformacji świata urządzenia wyjściowego przed wywołaniem `PlayMetaFile`.) Punkty wzdłuż krawędzi prostokąta znajdują się na obrazie. Obraz rozszerzonych metaplików można zostać obcięty, definiując obszaru przycinania urządzenia wyjściowego przed odtwarzanie rozszerzony metaplik.  
+ Druga wersja `PlayMetaFile` Wyświetla obraz przechowywany w danym metaplik rozszerzony format. Gdy aplikacja wywołuje druga wersja `PlayMetaFile`, system Windows używa ramki obrazu w nagłówku rozszerzonych metaplików do mapy obrazu na prostokąt wskazywana przez *lpBounds* parametru. (Ten obraz może być ścięty lub obracać o ustawienie transformacji świata urządzenia wyjściowego przed wywołaniem `PlayMetaFile`.) Punkty wzdłuż krawędzi prostokąta znajdują się na obrazie. Obraz rozszerzonych metaplików można zostać obcięty, definiując obszaru przycinania urządzenia wyjściowego przed odtwarzanie rozszerzony metaplik.  
   
  Jeśli rozszerzony metaplik zawiera palety opcjonalne, konfigurując paletę kolorów na urządzenia wyjściowego przed wywołaniem druga wersja aplikacji można osiągnąć kolorów spójna `PlayMetaFile`. Aby pobrać palety opcjonalne, należy użyć **GetEnhMetaFilePaletteEntries** funkcji systemu Windows. Rozszerzony metaplik można ją osadzić w nowo utworzonej rozszerzony metaplik wywołując druga wersja `PlayMetaFile` i odtwarzanie źródła rozszerzony metaplik do kontekstu urządzenia nowy rozszerzony metaplik.  
   
@@ -4352,31 +4352,31 @@ BOOL PlgBlt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpPoint`  
+ *lppoint —*  
  Wskazuje tablicy trzech punktach logicznego miejsca identyfikujący trzy narożników równoległobok docelowego. Górnego lewego rogu prostokąta źródłowego jest zamapowane do pierwszego punktu w tej macierzy, prawym górnym rogu do drugiego w tej macierzy i lewym dolnym rogu trzeci punktu. Prawym dolnym rogu prostokąta źródłowego jest mapowana na niejawne punkt czwarty w równoległobok.  
   
- `pSrcDC`  
+ *pSrcDC*  
  Identyfikuje kontekst urządzenia źródłowego.  
   
- `xSrc`  
+ *xSrc*  
  Określa współrzędną x, w jednostkach logicznych górnego lewego rogu prostokąta źródłowego.  
   
- `ySrc`  
+ *ySrc*  
  Określa współrzędną y jednostek logicznych, w lewym górnym rogu prostokąta źródłowego.  
   
- `nWidth`  
+ *nWidth*  
  Określa szerokość, w jednostkach logicznych, prostokąta źródłowego.  
   
- `nHeight`  
+ *nHeight*  
  Określa wysokość w jednostkach logicznych, prostokąta źródłowego.  
   
- `maskBitmap`  
+ *maskBitmap*  
  Określa opcjonalne monochromatyczny mapy bitowej używanego do zamaskowania kolory prostokąta źródłowego.  
   
- `xMask`  
+ *xMask*  
  Określa współrzędną x górnego lewego rogu monochromatyczny mapy bitowej.  
   
- `yMask`  
+ *yMask*  
  Określa współrzędną y lewego górnego rogu monochromatyczny mapy bitowej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -4407,17 +4407,17 @@ BOOL PolyBezier(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpPoints`  
+ *lpPoints*  
  Wskazuje tablicę [punktu](../../mfc/reference/point-structure1.md) struktur danych, które zawierają punkty końcowe i punkty spline(s) sterujące.  
   
- `nCount`  
- Określa liczbę punktów `lpPoints` tablicy. Ta wartość musi być jedną więcej niż trzy razy liczba krzywe jest narysowanie, ponieważ każdy krzywej składanej Bzier wymaga dwa punkty kontrolne, punkt końcowy i początkowej krzywej składanej wymaga dodatkowy punkt początkowy.  
+ *nCount*  
+ Określa liczbę punktów *lpPoints* tablicy. Ta wartość musi być jedną więcej niż trzy razy liczba krzywe jest narysowanie, ponieważ każdy krzywej składanej Bzier wymaga dwa punkty kontrolne, punkt końcowy i początkowej krzywej składanej wymaga dodatkowy punkt początkowy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja rysuje sześcienny krzywe Bzier za pomocą punktów końcowych i punkty kontrolne, określony przez `lpPoints` parametru. Pierwszy krzywej składanej jest przenoszony z pierwszego punktu punktowi czwarty przy użyciu punktów drugiego i trzeciego jako punkty kontrolne. Każda kolejne krzywej składanej w sekwencji musi dokładnie trzy więcej punktów: punkt końcowy krzywej składanej poprzedniej służy jako punkt początkowy, następne dwa punkty w sekwencji są punkty kontrolne i trzeci jest punktem końcowym.  
+ Ta funkcja rysuje sześcienny krzywe Bzier za pomocą punktów końcowych i punkty kontrolne, określony przez *lpPoints* parametru. Pierwszy krzywej składanej jest przenoszony z pierwszego punktu punktowi czwarty przy użyciu punktów drugiego i trzeciego jako punkty kontrolne. Każda kolejne krzywej składanej w sekwencji musi dokładnie trzy więcej punktów: punkt końcowy krzywej składanej poprzedniej służy jako punkt początkowy, następne dwa punkty w sekwencji są punkty kontrolne i trzeci jest punktem końcowym.  
   
  Bieżące położenie nie jest używany ani zaktualizowany w `PolyBezier` funkcji. Wartość nie jest wypełnione. Ta funkcja rysuje linie przy użyciu bieżącego pióra.  
   
@@ -4431,17 +4431,17 @@ BOOL PolyBezierTo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpPoints`  
+ *lpPoints*  
  Wskazuje tablicę [punktu](../../mfc/reference/point-structure1.md) wskazuje struktury danych, które zawiera punkty końcowe i kontroli.  
   
- `nCount`  
- Określa liczbę punktów `lpPoints` tablicy. Ta wartość musi być trzy razy liczba krzywe rysowane, ponieważ każdy krzywej składanej Bzier wymaga dwa punkty kontrolne i punkt końcowy.  
+ *nCount*  
+ Określa liczbę punktów *lpPoints* tablicy. Ta wartość musi być trzy razy liczba krzywe rysowane, ponieważ każdy krzywej składanej Bzier wymaga dwa punkty kontrolne i punkt końcowy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja rysuje sześcienny krzywe Bzier przy użyciu punktów kontrolnych, określony przez `lpPoints` parametru. Pierwszy krzywej składanej jest przenoszony z bieżącego położenia w punkcie trzeci przy użyciu dwóch pierwszych punktów jako punkty kontrolne. Dla każdej kolejnej krzywej składanej funkcja musi dokładnie trzy punkty więcej i używa punktu końcowego krzywej składanej poprzedniej jako punkt początkowy dla następnej. `PolyBezierTo` Przenosi punkt końcowy ostatniej krzywej składanej Bzier bieżącego położenia. Wartość nie jest wypełnione. Ta funkcja rysuje linie przy użyciu bieżącego pióra.  
+ Ta funkcja rysuje sześcienny krzywe Bzier przy użyciu punktów kontrolnych, określony przez *lpPoints* parametru. Pierwszy krzywej składanej jest przenoszony z bieżącego położenia w punkcie trzeci przy użyciu dwóch pierwszych punktów jako punkty kontrolne. Dla każdej kolejnej krzywej składanej funkcja musi dokładnie trzy punkty więcej i używa punktu końcowego krzywej składanej poprzedniej jako punkt początkowy dla następnej. `PolyBezierTo` Przenosi punkt końcowy ostatniej krzywej składanej Bzier bieżącego położenia. Wartość nie jest wypełnione. Ta funkcja rysuje linie przy użyciu bieżącego pióra.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CDC::BeginPath](#beginpath).  
@@ -4457,11 +4457,11 @@ BOOL PolyDraw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpPoints`  
+ *lpPoints*  
  Wskazuje tablicę [punktu](../../mfc/reference/point-structure1.md) struktury danych, które zawierają punkty końcowe dla każdego segmentu i punkty końcowe linii i kontrolować punkty dla każdego Bzier krzywej składanej.  
   
- `lpTypes`  
- Wskazuje na tablicę, która określa, jak każdy punkt w `lpPoints` tablicy jest używany. Może to być jedną z następujących wartości:  
+ *lpTypes*  
+ Wskazuje na tablicę, która określa, jak każdy punkt w *lpPoints* tablicy jest używany. Może to być jedną z następujących wartości:  
   
 - **PT_MOVETO** Określa, że ten punkt uruchamiany rozłącznego rysunku. Ten punkt staje się nowych bieżącego położenia.  
   
@@ -4475,16 +4475,16 @@ BOOL PolyDraw(
   
 - **PT_CLOSEFIGURE** Określa, że wartość jest automatycznie zamknięte po **PT_LINETO** lub **PT_BEZIERTO** wpisz odbywa się tego punktu. Wiersz jest przenoszony z tego punktu do najnowszej **PT_MOVETO** lub `MoveTo` punktu.  
   
-     Ta flaga jest połączona z **PT_LINETO** typu dla wiersza lub z **PT_BEZIERTO** typu końcowy punkt krzywej składanej Bzier za pomocą operatora testu koniunkcji `OR` operatora. Bieżąca pozycja ma ustawioną wartość punktu końcowego linii zamknięcia.  
+     Ta flaga jest połączona z **PT_LINETO** typu dla wiersza lub z **PT_BEZIERTO** typu końcowy punkt krzywej składanej Bzier za pomocą operatora testu koniunkcji **lub** operatora. Bieżąca pozycja ma ustawioną wartość punktu końcowego linii zamknięcia.  
   
- `nCount`  
- Określa łączną liczbę punktów w `lpPoints` tablicy liczba bajtów w `lpTypes` tablicy.  
+ *nCount*  
+ Określa łączną liczbę punktów w *lpPoints* tablicy liczba bajtów w *lpTypes* tablicy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja może służyć do rysowania odłączony ilustracji zamiast kolejnych wywołań `CDC::MoveTo`, `CDC::LineTo`, i `CDC::PolyBezierTo` funkcji elementów członkowskich. Linie i krzywe są rysowane przy użyciu bieżącego pióra, a dane nie są wypełnione. Jeśli jest aktywna ścieżka uruchomiony przez wywołanie `CDC::BeginPath` funkcji członkowskiej `PolyDraw` dodaje do ścieżki. Zagadnienia zawarte w `lpPoints` tablicy w `lpTypes` wskazuje, czy każdy punkt jest częścią `CDC::MoveTo`, `CDC::LineTo`, lub **CDC::BezierTo** operacji. Istnieje również możliwość zamknąć figury. Ta funkcja aktualizuje bieżącego położenia.  
+ Ta funkcja może służyć do rysowania odłączony ilustracji zamiast kolejnych wywołań `CDC::MoveTo`, `CDC::LineTo`, i `CDC::PolyBezierTo` funkcji elementów członkowskich. Linie i krzywe są rysowane przy użyciu bieżącego pióra, a dane nie są wypełnione. Jeśli jest aktywna ścieżka uruchomiony przez wywołanie `CDC::BeginPath` funkcji członkowskiej `PolyDraw` dodaje do ścieżki. Zagadnienia zawarte w *lpPoints* tablicy w *lpTypes* wskazuje, czy każdy punkt jest częścią `CDC::MoveTo`, `CDC::LineTo`, lub **CDC::BezierTo** Operacja. Istnieje również możliwość zamknąć figury. Ta funkcja aktualizuje bieżącego położenia.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CDC::BeginPath](#beginpath).  
@@ -4499,10 +4499,10 @@ BOOL Polygon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpPoints`  
+ *lpPoints*  
  Wskazuje tablicy punktów, które określa wierzchołki wielokąta. Każdy punkt w tablicy jest **punktu** struktury lub `CPoint` obiektu.  
   
- `nCount`  
+ *nCount*  
  Określa liczbę wierzchołków w tablicy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -4517,7 +4517,7 @@ BOOL Polygon(
  [!code-cpp[NVC_MFCDocView#38](../../mfc/codesnippet/cpp/cdc-class_10.cpp)]  
   
 ##  <a name="polyline"></a>  CDC::Polyline  
- Pobiera zbiór segmenty linii łączących punkty określony przez `lpPoints`.  
+ Pobiera zbiór segmenty linii łączących punkty określony przez *lpPoints*.  
   
 ```  
 BOOL Polyline(
@@ -4526,10 +4526,10 @@ BOOL Polyline(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpPoints`  
+ *lpPoints*  
  Wskazuje tablicę **punktu** struktury lub `CPoint` obiekty do podłączenia.  
   
- `nCount`  
+ *nCount*  
  Określa liczbę punktów, które w tablicy. Ta wartość musi być co najmniej 2.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -4550,17 +4550,17 @@ BOOL PolylineTo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpPoints`  
+ *lpPoints*  
  Wskazuje tablicę [punktu](../../mfc/reference/point-structure1.md) struktur danych, które zawiera wierzchołki wiersza.  
   
- `nCount`  
+ *nCount*  
  Określa liczbę punktów, które w tablicy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Wiersz jest przenoszony z bieżącej pozycji do pierwszego punktu określonego przez `lpPoints` parametr przy użyciu bieżącego pióra. Dla każdego wiersza dodatkowych funkcji pobiera z punktu końcowego poprzedniego wiersza do następnego punktu określonego przez `lpPoints`. `PolylineTo` Przenosi bieżące położenie punktu końcowego ostatniego wiersza. Jeśli segmenty linii rysowane przez tę funkcję formularzu figurę zamkniętą. wartość nie jest wypełnione.  
+ Wiersz jest przenoszony z bieżącej pozycji do pierwszego punktu określonego przez *lpPoints* parametr przy użyciu bieżącego pióra. Dla każdego wiersza dodatkowych funkcji pobiera z punktu końcowego poprzedniego wiersza do następnego punktu określonego przez *lpPoints*. `PolylineTo` Przenosi bieżące położenie punktu końcowego ostatniego wiersza. Jeśli segmenty linii rysowane przez tę funkcję formularzu figurę zamkniętą. wartość nie jest wypełnione.  
   
 ##  <a name="polypolygon"></a>  CDC::PolyPolygon  
  Tworzy dwa lub więcej wielokąty, które są wypełniane przy użyciu bieżącego trybu wypełnianie wielokąta.  
@@ -4573,14 +4573,14 @@ BOOL PolyPolygon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpPoints`  
+ *lpPoints*  
  Wskazuje tablicę **punktu** struktury lub `CPoint` obiektów, które definiują wierzchołki wielokątów.  
   
- `lpPolyCounts`  
- Punkty na tablicę liczb całkowitych, z których każdy określa liczbę punktów, które w jednym z wielokąty w `lpPoints` tablicy.  
+ *lpPolyCounts*  
+ Punkty na tablicę liczb całkowitych, z których każdy określa liczbę punktów, które w jednym z wielokąty w *lpPoints* tablicy.  
   
- `nCount`  
- Liczba wpisów w `lpPolyCounts` tablicy. Liczba ta określa liczbę wielokątów do narysowania. Ta wartość musi być co najmniej 2.  
+ *nCount*  
+ Liczba wpisów w *lpPolyCounts* tablicy. Liczba ta określa liczbę wielokątów do narysowania. Ta wartość musi być co najmniej 2.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
@@ -4588,9 +4588,9 @@ BOOL PolyPolygon(
 ### <a name="remarks"></a>Uwagi  
  Wielokąty mogą być rozłączne lub nakładające się.  
   
- Każdego wielokąta określone w wywołaniu `PolyPolygon` funkcji muszą być zamknięte. W odróżnieniu od wielokątów utworzone przez **wielokąta** funkcji członkowskiej, wielokątów utworzone przez `PolyPolygon` nie zostaną automatycznie zamknięte.  
+ Każdego wielokąta określone w wywołaniu `PolyPolygon` funkcji muszą być zamknięte. W odróżnieniu od wielokątów utworzone przez `Polygon` funkcji członkowskiej, wielokątów utworzone przez `PolyPolygon` nie zostaną automatycznie zamknięte.  
   
- Funkcja tworzy dwa lub więcej wielokątów. Aby utworzyć jeden wielokąta, należy używać aplikacji **wielokąta** funkcję elementu członkowskiego.  
+ Funkcja tworzy dwa lub więcej wielokątów. Aby utworzyć jeden wielokąta, należy używać aplikacji `Polygon` funkcję elementu członkowskiego.  
   
  Bieżący tryb wielokąta wypełnianie można pobrać lub ustawić przy użyciu `GetPolyFillMode` i `SetPolyFillMode` funkcji elementów członkowskich.  
   
@@ -4605,14 +4605,14 @@ BOOL PolyPolyline(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpPoints`  
+ *lpPoints*  
  Wskazuje tablicy struktur, które zawiera wierzchołki linię. Linię podano po kolei.  
   
- `lpPolyPoints`  
- Wskazuje na tablicę zmiennych określająca liczbę punktów `lpPoints` tablicy dla odpowiedniego wielokąta. Każdy wpis musi być większa lub równa 2.  
+ *lpPolyPoints*  
+ Wskazuje na tablicę zmiennych określająca liczbę punktów *lpPoints* tablicy dla odpowiedniego wielokąta. Każdy wpis musi być większa lub równa 2.  
   
- `nCount`  
- Określa całkowitą liczbę liczników w `lpPolyPoints` tablicy.  
+ *nCount*  
+ Określa całkowitą liczbę liczników w *lpPolyPoints* tablicy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
@@ -4638,7 +4638,7 @@ BOOL PtVisible(POINT point) const;
  *y*  
  Określa logicznej współrzędną y punktu.  
   
- `point`  
+ *Punkt*  
  Określa punkt do zaewidencjonowania logicznej współrzędnych. Można przekazać **punktu** struktury lub `CPoint` obiekt dla tego parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -4685,19 +4685,19 @@ BOOL Rectangle(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `x1`  
+ *x1*  
  Określa współrzędną x górnego lewego rogu prostokąta (w jednostkach logicznych).  
   
- `y1`  
+ *y1*  
  Określa współrzędną y górnego lewego rogu prostokąta (w jednostkach logicznych).  
   
- `x2`  
+ *x2*  
  Określa współrzędną x prawym dolnym rogu prostokąta (w jednostkach logicznych).  
   
- `y2`  
+ *y2*  
  Określa współrzędną y prawego dolnego rogu prostokąta (w jednostkach logicznych).  
   
- `lpRect`  
+ *lprect —*  
  Określa prostokąt w jednostkach logicznych. Można przekazać `CRect` obiekt lub wskaźnik do `RECT` struktury dla tego parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -4706,7 +4706,7 @@ BOOL Rectangle(LPCRECT lpRect);
 ### <a name="remarks"></a>Uwagi  
  Wewnątrz prostokąta jest wypełniana przy użyciu bieżącego pędzla.  
   
- Prostokąt rozciąga się do, ale nie zawiera współrzędne prawo i w dół. Oznacza to, że wysokość prostokąta `y2`  -  `y1` i szerokość prostokąta jest `x2`  -  `x1`. Szerokość i wysokość prostokąta musi być większa niż 2 i mniejsza niż 32 767 jednostek.  
+ Prostokąt rozciąga się do, ale nie zawiera współrzędne prawo i w dół. Oznacza to, że wysokość prostokąta *y2* - *y1* i szerokość prostokąta jest *x2* - *x1*. Szerokość i wysokość prostokąta musi być większa niż 2 i mniejsza niż 32 767 jednostek.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#39](../../mfc/codesnippet/cpp/cdc-class_11.cpp)]  
@@ -4719,7 +4719,7 @@ virtual BOOL RectVisible(LPCRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect —*  
  Wskazuje `RECT` struktury lub `CRect` obiekt, który zawiera współrzędne logicznej określonego prostokąta.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -4743,7 +4743,7 @@ virtual void ReleaseOutputDC();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Nie można wywołać funkcji członkowskiej, jeśli kontekst urządzenia wyjściowego jest dołączony do `CDC` obiektu. Użyj **Detach** funkcji członkowskiej do odłączenia kontekstu urządzenia wyjściowego.  
+ Nie można wywołać funkcji członkowskiej, jeśli kontekst urządzenia wyjściowego jest dołączony do `CDC` obiektu. Użyj `Detach` funkcji członkowskiej do odłączenia kontekstu urządzenia wyjściowego.  
   
 ##  <a name="resetdc"></a>  CDC::ResetDC  
  Wywołanie tej funkcji Członkowskich zaktualizować opakowane przez kontekst urządzenia `CDC` obiektu.  
@@ -4769,15 +4769,15 @@ BOOL ResetDC(const DEVMODE* lpDevMode);
  Przed wywołaniem funkcji członkowskiej, upewnij się, że wybrano wszystkie obiekty (innych niż podstawowe obiektów), które miały zostały wybrane do kontekstu urządzenia limit.  
   
 ##  <a name="restoredc"></a>  CDC::RestoreDC  
- Przywraca kontekst urządzenia do poprzedniego stanu identyfikowane przez `nSavedDC`.  
+ Przywraca kontekst urządzenia do poprzedniego stanu identyfikowane przez *nSavedDC*.  
   
 ```  
 virtual BOOL RestoreDC(int nSavedDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nSavedDC`  
- Określa kontekst urządzenia do przywrócenia. Może być wartością zwrócony przez poprzednie `SaveDC` wywołania funkcji. Jeśli `nSavedDC` wynosi -1, ostatnio zapisaną kontekstu urządzenia zostanie przywrócony.  
+ *nSavedDC*  
+ Określa kontekst urządzenia do przywrócenia. Może być wartością zwrócony przez poprzednie `SaveDC` wywołania funkcji. Jeśli *nSavedDC* wynosi -1, ostatnio zapisaną kontekstu urządzenia zostanie przywrócony.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli określony kontekst został przywrócony; w przeciwnym razie 0.  
@@ -4785,7 +4785,7 @@ virtual BOOL RestoreDC(int nSavedDC);
 ### <a name="remarks"></a>Uwagi  
  `RestoreDC` Przywraca kontekst urządzenia przez wyświetlanie informacji o stanie stosu, utworzone przez wcześniejszą wywołania `SaveDC` funkcję elementu członkowskiego.  
   
- Stos może zawierać informacje o stanie dla kilku konteksty urządzenia. Jeśli określony kontekst przez `nSavedDC` nie znajduje się na szczycie stosu, `RestoreDC` usuwa wszystkie informacje o stanie od kontekstu urządzenia określonego przez `nSavedDC` i ze szczytu stosu. Usunięto informacje zostaną utracone.  
+ Stos może zawierać informacje o stanie dla kilku konteksty urządzenia. Jeśli określony kontekst przez *nSavedDC* nie znajduje się na szczycie stosu, `RestoreDC` usuwa wszystkie informacje o stanie od kontekstu urządzenia określonego przez *nSavedDC* i ze szczytu stosu. Usunięto informacje zostaną utracone.  
   
 ##  <a name="roundrect"></a>  CDC::RoundRect  
  Rysuje prostokąt z zaokrąglonymi narożnikami, przy użyciu bieżącego pióra.  
@@ -4806,29 +4806,29 @@ BOOL RoundRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `x1`  
+ *x1*  
  Określa współrzędną x górnego lewego rogu prostokąta (w jednostkach logicznych).  
   
- `y1`  
+ *y1*  
  Określa współrzędną y górnego lewego rogu prostokąta (w jednostkach logicznych).  
   
- `x2`  
+ *x2*  
  Określa współrzędną x prawym dolnym rogu prostokąta (w jednostkach logicznych).  
   
- `y2`  
+ *y2*  
  Określa współrzędną y prawego dolnego rogu prostokąta (w jednostkach logicznych).  
   
  *x3*  
  Określa szerokość elipsy używany do rysowania zaokrąglone narożniki (w jednostkach logicznych).  
   
- `y3`  
+ *Y3*  
  Określa wysokość elipsy używany do rysowania zaokrąglone narożniki (w jednostkach logicznych).  
   
- `lpRect`  
+ *lprect —*  
  Określa prostokąt ograniczający w jednostkach logicznych. Można przekazać `CRect` obiekt lub wskaźnik do `RECT` struktury dla tego parametru.  
   
- `point`  
- Współrzędna x `point` Określa szerokość elipsy do rysowania zaokrąglone narożniki (w jednostkach logicznych). Współrzędna y `point` określa wysokość elipsy do rysowania zaokrąglone narożniki (w jednostkach logicznych). Można przekazać **punktu** struktury lub `CPoint` obiekt dla tego parametru.  
+ *Punkt*  
+ Współrzędna x *punktu* Określa szerokość elipsy do rysowania zaokrąglone narożniki (w jednostkach logicznych). Współrzędna y *punktu* określa wysokość elipsy do rysowania zaokrąglone narożniki (w jednostkach logicznych). Można przekazać **punktu** struktury lub `CPoint` obiekt dla tego parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
@@ -4836,7 +4836,7 @@ BOOL RoundRect(
 ### <a name="remarks"></a>Uwagi  
  Wewnątrz prostokąta jest wypełniana przy użyciu bieżącego pędzla.  
   
- Rysunek, który pobiera tej funkcji rozciąga się do, ale nie uwzględnia współrzędne prawo i w dół. Oznacza to, że wysokość rysunku `y2`  -  `y1` i szerokość rysunku jest `x2`  -  `x1`. Wysokość i szerokość prostokątem musi być większa niż 2 i mniejsza niż 32 767 jednostek.  
+ Rysunek, który pobiera tej funkcji rozciąga się do, ale nie uwzględnia współrzędne prawo i w dół. Oznacza to, że wysokość rysunku *y2* - *y1* i szerokość rysunku jest *x2* - *x1*. Wysokość i szerokość prostokątem musi być większa niż 2 i mniejsza niż 32 767 jednostek.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#40](../../mfc/codesnippet/cpp/cdc-class_12.cpp)]  
@@ -4868,17 +4868,17 @@ virtual CSize ScaleViewportExt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `xNum`  
+ *xNum*  
  Określa, przez którą chcesz pomnożyć w bieżącym zakresie x.  
   
- `xDenom`  
- Określa, przez którą chcesz podzielić wynik mnożenia wartości w bieżącym zakresie x `xNum` parametru.  
+ *xDenom*  
+ Określa, przez którą chcesz podzielić wynik mnożenia wartości w bieżącym zakresie x *xNum* parametru.  
   
- `yNum`  
+ *yNum*  
  Określa, przez którą chcesz pomnożyć w bieżącym zakresie —.  
   
- `yDenom`  
- Określa, przez którą chcesz podzielić wynik mnożenia wartości w bieżącym zakresie- `yNum` parametru.  
+ *yDenom*  
+ Określa, przez którą chcesz podzielić wynik mnożenia wartości w bieżącym zakresie- *yNum* parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zakresy poprzedniego okienka ekranu (w jednostkach urządzenia) jako `CSize` obiektu.  
@@ -4904,17 +4904,17 @@ virtual CSize ScaleWindowExt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `xNum`  
+ *xNum*  
  Określa, przez którą chcesz pomnożyć w bieżącym zakresie x.  
   
- `xDenom`  
- Określa, przez którą chcesz podzielić wynik mnożenia wartości w bieżącym zakresie x `xNum` parametru.  
+ *xDenom*  
+ Określa, przez którą chcesz podzielić wynik mnożenia wartości w bieżącym zakresie x *xNum* parametru.  
   
- `yNum`  
+ *yNum*  
  Określa, przez którą chcesz pomnożyć w bieżącym zakresie —.  
   
- `yDenom`  
- Określa, przez którą chcesz podzielić wynik mnożenia wartości w bieżącym zakresie- `yNum` parametru.  
+ *yDenom*  
+ Określa, przez którą chcesz podzielić wynik mnożenia wartości w bieżącym zakresie- *yNum* parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zakresy poprzedniego okna (w jednostkach logicznych) jako `CSize` obiektu.  
@@ -4942,29 +4942,29 @@ BOOL ScrollDC(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dx`  
+ *DX*  
  Określa liczbę jednostek przewijania w poziomie.  
   
  *dy*  
  Określa liczbę jednostek przewijanie w pionie.  
   
- `lpRectScroll`  
+ *lpRectScroll*  
  Wskazuje `RECT` struktury lub `CRect` obiekt, który zawiera współrzędne przewijania prostokąta.  
   
- `lpRectClip`  
- Wskazuje `RECT` struktury lub `CRect` obiekt, który zawiera współrzędne Prostokątny wycinek. Po tym prostokącie, gdzie jest mniejszy niż oryginalna jedną wskazywana przez `lpRectScroll`, przewijanie występuje tylko w mniejszych prostokąta.  
+ *lpRectClip*  
+ Wskazuje `RECT` struktury lub `CRect` obiekt, który zawiera współrzędne Prostokątny wycinek. Po tym prostokącie, gdzie jest mniejszy niż oryginalna jedną wskazywana przez *lpRectScroll*, przewijanie występuje tylko w mniejszych prostokąta.  
   
- `pRgnUpdate`  
+ *pRgnUpdate*  
  Identyfikuje region niewykrytych przez proces przewijania. `ScrollDC` Funkcja definiuje ten region; nie jest zawsze prostokąta.  
   
- `lpRectUpdate`  
+ *lpRectUpdate*  
  Wskazuje `RECT` struktury lub `CRect` obiekt, który odbiera współrzędne prostokąt zakresem regionie przewijania aktualizacji. Jest to największa prostokątny obszar, która wymaga ponownego rysowania. Wartości w strukturze lub obiektu, gdy funkcja zwraca są we współrzędnych klienta, niezależnie od trybu mapowania dla kontekstu danego urządzenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli przewijanie jest wykonywane; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `lpRectUpdate` jest **NULL**, systemu Windows nie oblicza prostokąt aktualizacji. Jeśli oba `pRgnUpdate` i `lpRectUpdate` są **NULL**, systemu Windows nie oblicza region aktualizacji. Jeśli `pRgnUpdate` nie jest **NULL**, Windows przyjęto założenie, że zawiera on nieprawidłowy wskaźnik do regionu niewykrytych przez proces przewijania (zdefiniowane przez `ScrollDC` funkcji członkowskiej). Zwracane w regionie aktualizacji `lpRectUpdate` mogą zostać przekazane do `CWnd::InvalidateRgn` w razie potrzeby.  
+ Jeśli *lpRectUpdate* jest **NULL**, systemu Windows nie oblicza prostokąt aktualizacji. Jeśli oba *pRgnUpdate* i *lpRectUpdate* są **NULL**, systemu Windows nie oblicza region aktualizacji. Jeśli *pRgnUpdate* nie jest **NULL**, Windows przyjęto założenie, że zawiera on nieprawidłowy wskaźnik do regionu niewykrytych przez proces przewijania (zdefiniowane przez `ScrollDC` funkcji członkowskiej). Zwracane w regionie aktualizacji *lpRectUpdate* mogą zostać przekazane do `CWnd::InvalidateRgn` w razie potrzeby.  
   
  Aplikacja, należy użyć `ScrollWindow` funkcji członkowskiej klasy `CWnd` gdy jest to konieczne przewijać całą klienckim obszarze okna. W przeciwnym razie należy użyć `ScrollDC`.  
   
@@ -4976,7 +4976,7 @@ BOOL SelectClipPath(int nMode);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nMode`  
+ *nMode*  
  Określa sposób, aby użyć ścieżki. Dozwolone są następujące wartości:  
   
 - **RGN_AND** nowy obszar przycinania obejmuje przecięciu (nakładanie się obszarów) bieżącego obszaru przycinania i bieżącej ścieżki.  
@@ -5008,25 +5008,25 @@ int SelectClipRgn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pRgn`  
+ *pRgn*  
  Identyfikuje należy wybrać region.  
   
 -   Dla pierwszej wersji tej funkcji, jeśli ta wartość jest **NULL**całego obszaru klienta jest zaznaczone i nadal ma zostać przycięta w oknie danych wyjściowych.  
   
 -   Druga wersja tej funkcji można ta dojścia **NULL** tylko wtedy, gdy **RGN_COPY** określony tryb.  
   
- `nMode`  
+ *nMode*  
  Określa operacji do wykonania. Musi to być jedna z następujących wartości:  
   
-- **RGN_AND** nowy obszar przycinania łączy nakładające się obszary bieżącego obszaru przycinania i regionu określonego przez `pRgn`.  
+- **RGN_AND** nowy obszar przycinania łączy nakładające się obszary bieżącego obszaru przycinania i regionu określonego przez *pRgn*.  
   
-- **RGN_COPY** nowego obszaru przycinania jest kopią regionu określonego przez `pRgn`. Jest to funkcja jest taki sam jak pierwszej wersji `SelectClipRgn`. Jeśli region jest identyfikowane przez `pRgn` jest **NULL**, nowy obszar przycinania staje się obszaru przycinania domyślne (null region).  
+- **RGN_COPY** nowego obszaru przycinania jest kopią regionu określonego przez *pRgn*. Jest to funkcja jest taki sam jak pierwszej wersji `SelectClipRgn`. Jeśli region jest identyfikowane przez *pRgn* jest **NULL**, nowy obszar przycinania staje się obszaru przycinania domyślne (null region).  
   
-- **RGN_DIFF** nowy obszar przycinania łączy obszary bieżącego obszaru przycinania z tych obszarów wykluczone z regionu określonego przez `pRgn`.  
+- **RGN_DIFF** nowy obszar przycinania łączy obszaru z tych obszarów wykluczone z regionu określonego przez bieżący obszar przycinania *pRgn*.  
   
-- **RGN_OR** nowy obszar przycinania łączy bieżącego obszaru przycinania i regionu określonego przez `pRgn`.  
+- **RGN_OR** nowy obszar przycinania łączy bieżącego obszaru przycinania i regionu określonego przez *pRgn*.  
   
-- **RGN_XOR** nowy obszar przycinania łączy bieżącego obszaru przycinania i regionu określonego przez `pRgn` , ale nie obejmuje obszary nakładające się.  
+- **RGN_XOR** nowy obszar przycinania łączy bieżącego obszaru przycinania i regionu określonego przez *pRgn* , ale nie obejmuje obszary nakładające się.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Typ regionu. Może być jedną z następujących wartości:  
@@ -5062,19 +5062,19 @@ CGdiObject* SelectObject(CGdiObject* pObject);
  *pPen*  
  Wskaźnik do [cpen —](../../mfc/reference/cpen-class.md) obiektu do wybrania.  
   
- `pBrush`  
+ *pBrush*  
  Wskaźnik do [cbrush —](../../mfc/reference/cbrush-class.md) obiektu do wybrania.  
   
- `pFont`  
+ *pFont*  
  Wskaźnik do [cfont —](../../mfc/reference/cfont-class.md) obiektu do wybrania.  
   
- `pBitmap`  
+ *pBitmap*  
  Wskaźnik do [cbitmap —](../../mfc/reference/cbitmap-class.md) obiektu do wybrania.  
   
- `pRgn`  
+ *pRgn*  
  Wskaźnik do [CRgn](../../mfc/reference/crgn-class.md) obiektu do wybrania.  
   
- `pObject`  
+ *pObject*  
  Wskaźnik do [CGdiObject](../../mfc/reference/cgdiobject-class.md) obiektu do wybrania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -5091,14 +5091,14 @@ CGdiObject* SelectObject(CGdiObject* pObject);
 - **SIMPLEREGION** nowy obszar przycinania nie ma nakładające się obramowania.  
   
 ### <a name="remarks"></a>Uwagi  
- Klasa `CDC` zawiera pięć wersji przeznaczone do określonego rodzaju obiekty GDI, w tym pióra, pędzle czcionki, mapy bitowe i regionach. Nowo wybrany obiekt zastępuje poprzedni obiekt tego samego typu. Na przykład jeśli `pObject` ogólne wersji `SelectObject` wskazuje [cpen —](../../mfc/reference/cpen-class.md) obiektu, funkcja zastępuje bieżącego pióra Pióro określony przez `pObject`.  
+ Klasa `CDC` zawiera pięć wersji przeznaczone do określonego rodzaju obiekty GDI, w tym pióra, pędzle czcionki, mapy bitowe i regionach. Nowo wybrany obiekt zastępuje poprzedni obiekt tego samego typu. Na przykład jeśli *pObject* ogólne wersji `SelectObject` wskazuje [cpen —](../../mfc/reference/cpen-class.md) obiektu, funkcja zastępuje bieżącego pióra Pióro określony przez *pObject* .  
   
  Aplikację można wybrać mapy bitowej w kontekstach urządzenia pamięci tylko i do kontekstu urządzenia pamięci tylko jeden naraz. Format mapy bitowej musi być monochromatyczny lub zgodne z kontekstu urządzenia; Jeśli nie, `SelectObject` zwraca błąd.  
   
  Dla systemu Windows 3.1 lub nowszy `SelectObject` funkcja zwraca tę samą wartość, czy jest on używany w metaplik, czy nie. W poprzednich wersjach systemu Windows `SelectObject` zwróciła wartość różną od zera w przypadku powodzenia i 0, niepowodzenia używanego w metaplik.  
   
 ##  <a name="selectpalette"></a>  CDC::SelectPalette  
- Wybiera logiczną paletę, określonej przez `pPalette` jako palety wybranego obiektu kontekstu urządzenia.  
+ Wybiera logiczną paletę, określonej przez *pPalette* jako palety wybranego obiektu kontekstu urządzenia.  
   
 ```  
 CPalette* SelectPalette(
@@ -5107,14 +5107,14 @@ CPalette* SelectPalette(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPalette`  
+ *pPalette*  
  Identyfikuje logiczną paletę do wybrania. Tej palety, muszą już być utworzone z `CPalette` funkcji członkowskiej [CreatePalette](../../mfc/reference/cpalette-class.md#createpalette).  
   
- `bForceBackground`  
- Określa, czy logiczną paletę jest wymuszany palety tła. Jeśli `bForceBackground` jest różna od zera, wybranych palety jest zawsze palety tła, niezależnie od tego, czy okno ma fokus wprowadzania. Jeśli `bForceBackground` wynosi 0 i kontekst urządzenia jest dołączony do okna, logiczną paletę palety pierwszego planu, gdy okno ma fokus wprowadzania.  
+ *bForceBackground*  
+ Określa, czy logiczną paletę jest wymuszany palety tła. Jeśli *bForceBackground* jest różna od zera, wybranych palety jest zawsze palety tła, niezależnie od tego, czy okno ma fokus wprowadzania. Jeśli *bForceBackground* wynosi 0 i kontekst urządzenia jest dołączony do okna, logiczną paletę palety pierwszego planu, gdy okno ma fokus wprowadzania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do `CPalette` identyfikowanie logiczną paletę zastępuje palety określony przez obiekt `pPalette`. Jest **NULL** Jeśli występuje błąd.  
+ Wskaźnik do `CPalette` identyfikowanie logiczną paletę zastępuje palety określony przez obiekt *pPalette*. Jest **NULL** Jeśli występuje błąd.  
   
 ### <a name="remarks"></a>Uwagi  
  Nowa paleta staje się obiekt palety używany przez GDI do sterowania kolorów wyświetlany w kontekście urządzenia i zastępuje poprzedniego palety.  
@@ -5129,7 +5129,7 @@ virtual CGdiObject* SelectStockObject(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Określa typ obiektu podstawowego konieczne. Może być jedną z następujących wartości:  
   
 - **BLACK_BRUSH** czarne pędzla.  
@@ -5177,7 +5177,7 @@ int SetAbortProc(BOOL (CALLBACK* lpfn)(HDC, int));
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpfn`  
+ *lpfn*  
  Wskaźnik do funkcji przerwania można zainstalować jako procedura przerwania. Aby uzyskać więcej informacji o funkcji wywołania zwrotnego, zobacz [funkcja wywołania zwrotnego dla CDC::SetAbortProc](callback-functions-used-by-mfc.md#setabortproc).  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -5229,8 +5229,8 @@ int SetArcDirection(int nArcDirection);
   
 |Łuk|Kołowy|  
 |---------|---------|  
-|`ArcTo`|**Prostokąt**|  
-|`Chord`|`RoundRect`|  
+|**ArcTo**|**Prostokąt**|  
+|**Akordu**|**RoundRect**|  
 |**elipsy**||  
   
 ##  <a name="setattribdc"></a>  CDC::SetAttribDC  
@@ -5241,7 +5241,7 @@ virtual void SetAttribDC(HDC hDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hDC`  
+ *elementu hDC*  
  Kontekst urządzenia z systemem Windows.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -5255,7 +5255,7 @@ virtual COLORREF SetBkColor(COLORREF crColor);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `crColor`  
+ *crColor*  
  Określa nowy kolor tła.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -5300,20 +5300,20 @@ UINT SetBoundsRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRectBounds`  
+ *lpRectBounds*  
  Wskazuje `RECT` struktury lub `CRect` obiekt, który jest używany do ustawiania prostokątem. Prostokąt wymiary są podane w logiczne współrzędnych. Ten parametr może być **NULL**.  
   
- `flags`  
+ *flagi*  
  Określa, jak nowy prostokąt będzie połączona z skumulowany prostokąta. Ten parametr może mieć kombinację następujących wartości:  
   
-- **DCB_ACCUMULATE** dodać prostokąt określony przez `lpRectBounds` do prostokątem (przy użyciu operacji union prostokąt).  
+- **DCB_ACCUMULATE** dodać prostokąt określony przez *lpRectBounds* do prostokątem (przy użyciu operacji union prostokąt).  
   
 - **DCB_DISABLE** Wyłącz gromadzenie granic.  
   
 - **DCB_ENABLE** włączyć akumulacji granic. (Ustawienie domyślne akumulacji granice jest wyłączona).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Bieżący stan prostokątem, jeśli funkcja zakończy się pomyślnie. Podobnie jak `flags`, zwracana wartość może być kombinacją **DCB_** wartości:  
+ Bieżący stan prostokątem, jeśli funkcja zakończy się pomyślnie. Podobnie jak *flagi*, zwracana wartość może być kombinacją **DCB_** wartości:  
   
 - **DCB_ACCUMULATE** prostokątem nie jest pusty. Wartość ta będzie zawsze ustawiana.  
   
@@ -5342,7 +5342,7 @@ CPoint SetBrushOrg(POINT point);
  *y*  
  Określa współrzędną y (w jednostkach urządzenia) nowego źródła. Ta wartość musi należeć do zakresu 0-7.  
   
- `point`  
+ *Punkt*  
  Określa współrzędne x i y nowego źródła. Każda wartość musi należeć do zakresu 0-7. Można przekazać **punktu** struktury lub `CPoint` obiekt dla tego parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -5361,7 +5361,7 @@ BOOL SetColorAdjustment(const COLORADJUSTMENT* lpColorAdjust);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpColorAdjust`  
+ *lpColorAdjust*  
  Wskazuje [COLORADJUSTMENT](../../mfc/reference/coloradjustment-structure.md) struktura danych zawierająca wartości dostosowywanie kolorów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -5378,7 +5378,7 @@ COLORREF SetDCBrushColor(COLORREF crColor);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `crColor`  
+ *crColor*  
  Określa kolor pędzla.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -5397,7 +5397,7 @@ COLORREF SetDCPenColor(COLORREF crColor);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `crColor`  
+ *crColor*  
  Określa kolor pióra.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -5414,7 +5414,7 @@ int SetGraphicsMode(int iMode);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iMode`  
+ *iMode*  
  Określa tryb grafiki. Aby uzyskać listę wartości, które można wykonać tego parametru, zobacz [SetGraphicsMode](http://msdn.microsoft.com/library/windows/desktop/dd162977).  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -5433,7 +5433,7 @@ DWORD SetLayout(DWORD dwLayout);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwLayout`  
+ *dwLayout*  
  Flagi kontrolne układu kontekstu urządzenia i mapy bitowej. Może być kombinacją następujących wartości.  
   
 |Wartość|Znaczenie|  
@@ -5452,7 +5452,7 @@ DWORD SetLayout(DWORD dwLayout);
   
  Jeśli należy wywołać **SetLayout (LAYOUT_RTL** ), **SetLayout** automatycznie zmienia tryb mapowania do `MM_ISOTROPIC`. W rezultacie, kolejne wywołanie [GetMapMode](#getmapmode) zwróci **MM_ISOTROPIC** zamiast `MM_TEXT`.  
   
- W niektórych przypadkach takich jak wiele mapy bitowe, warto zachować w układzie od lewej do prawej. W takich przypadkach renderować obraz wywołując `BitBlt` lub `StretchBlt`, następnie należy ustawić flagę formantu mapy bitowej dla `dwLayout` do **LAYOUT_BITMAPORIENTATIONPRESERVED**.  
+ W niektórych przypadkach takich jak wiele mapy bitowe, warto zachować w układzie od lewej do prawej. W takich przypadkach renderować obraz wywołując `BitBlt` lub `StretchBlt`, następnie należy ustawić flagę formantu mapy bitowej dla *dwLayout* do **LAYOUT_BITMAPORIENTATIONPRESERVED**.  
   
  Jeśli zmienisz układ z **LAYOUT_RTL** Flaga flagi zwykle określenie prawej lub lewej zostały zamienione. Aby uniknąć pomyłek, można określić alternatywne nazwy dla standardowych flag. Listę sugerowane flagi alternatywnych nazw, zobacz [SetLayout](http://msdn.microsoft.com/library/windows/desktop/dd162979) w zestawie Windows SDK.  
   
@@ -5464,7 +5464,7 @@ virtual int SetMapMode(int nMapMode);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nMapMode`  
+ *nMapMode*  
  Określa tryb nowego mapowania. Może być jeden z następujących wartości:  
   
 - `MM_ANISOTROPIC` Jednostki logiczne są konwertowane na dowolne jednostki z arbitralnie skalowana osi. Ustawienie trybu mapowania `MM_ANISOTROPIC` nie zmienia bieżące ustawienia okna lub okienka ekranu. Aby zmienić jednostki, orientacji i skalowania, należy wywołać [SetWindowExt](#setwindowext) i [SetViewportExt](#setviewportext) funkcji elementów członkowskich.  
@@ -5492,7 +5492,7 @@ virtual int SetMapMode(int nMapMode);
  `MM_HIENGLISH`, `MM_HIMETRIC`, `MM_LOENGLISH`, `MM_LOMETRIC`, I `MM_TWIPS` tryby są przydatne w przypadku aplikacji, które muszą zwrócić w fizycznie znaczący jednostki (takich jak cale lub milimetry). `MM_ISOTROPIC` Tryb zapewnia współczynnik proporcji 1:1, co jest przydatne, jeśli ważne jest, aby zachować dokładne kształtu obrazu. `MM_ANISOTROPIC` Tryb umożliwia współrzędne x i y-dostosowana niezależnie.  
   
 > [!NOTE]
->  Jeśli należy wywołać [SetLayout](#setlayout) Aby zmienić kontroler domeny (kontekst urządzenia) na układ od prawej do lewej, **SetLayout** automatycznie zmienia tryb mapowania do `MM_ISOTROPIC`.  
+>  Jeśli należy wywołać [SetLayout](#setlayout) Aby zmienić kontroler domeny (kontekst urządzenia) na układ od prawej do lewej, `SetLayout` automatycznie zmienia tryb mapowania do `MM_ISOTROPIC`.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc).  
@@ -5505,7 +5505,7 @@ DWORD SetMapperFlags(DWORD dwFlag);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwFlag`  
+ *dwFlag*  
  Określa, czy czcionka mapowania próbuje dopasować czcionki aspekt wysokość i szerokość na urządzeniu. Jeśli ta wartość jest **ASPECT_FILTERING**, mapowania wybiera tylko czcionki, którego aspekt x i y aspekt dokładnie pasują do określonego urządzenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -5543,14 +5543,14 @@ virtual void SetOutputDC(HDC hDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hDC`  
+ *elementu hDC*  
  Kontekst urządzenia z systemem Windows.  
   
 ### <a name="remarks"></a>Uwagi  
  Funkcji członkowskiej można wywołać tylko, gdy kontekst urządzenia nie został dołączony do `CDC` obiektu. Ustawia funkcji członkowskiej `m_hDC` , ale nie dołączy do kontekstu urządzenia `CDC` obiektu.  
   
 ##  <a name="setpixel"></a>  CDC::setPixel  
- Ustawia piksel w najbliższej zbliżenia kolor określone przez podany punkt `crColor`.  
+ Ustawia piksel w najbliższej zbliżenia kolor określone przez podany punkt *crColor*.  
   
 ```  
 COLORREF SetPixel(
@@ -5571,14 +5571,14 @@ COLORREF SetPixel(
  *y*  
  Określa logicznej współrzędną y punktu, należy ustawić wartość.  
   
- `crColor`  
+ *crColor*  
  A **COLORREF** wartości RGB, która określa kolor używany do rysowania punktu. Zobacz [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) w zestawie Windows SDK opis tej wartości.  
   
- `point`  
+ *Punkt*  
  Określa logiczne — współrzędnych x i y punktu, należy ustawić wartość. Można przekazać **punktu** struktury lub `CPoint` obiekt dla tego parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartości RGB koloru, że punkt rzeczywiście jest rysowane. Ta wartość może być inny niż określony przez `crColor` użycie zbliżenia koloru. Jeśli funkcja nie (Jeśli punkt jest spoza obszaru przycinania), wartość zwracana jest wartość -1.  
+ Wartości RGB koloru, że punkt rzeczywiście jest rysowane. Ta wartość może być inny niż określony przez *crColor* użycie zbliżenia koloru. Jeśli funkcja nie (Jeśli punkt jest spoza obszaru przycinania), wartość zwracana jest wartość -1.  
   
 ### <a name="remarks"></a>Uwagi  
  Punkt musi należeć do obszaru przycinania. Jeśli punkt nie znajduje się w regionie wycinka, funkcja nie działa.  
@@ -5607,10 +5607,10 @@ BOOL SetPixelV(
  *y*  
  Określa współrzędną y, jednostki logiczne punktu, należy ustawić wartość.  
   
- `crColor`  
+ *crColor*  
  Określa kolor, który ma być używany do rysowania punktu.  
   
- `point`  
+ *Punkt*  
  Określa logiczne — współrzędnych x i y punktu, należy ustawić wartość. Można przekazać [punktu](../../mfc/reference/point-structure1.md) struktury danych lub [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) obiekt dla tego parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -5627,7 +5627,7 @@ int SetPolyFillMode(int nPolyFillMode);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPolyFillMode`  
+ *nPolyFillMode*  
  Określa nowy tryb wypełniania. Ta wartość może być **alternatywny** lub **ZAWIJANIA**. Jest to domyślny tryb w systemie Windows **alternatywny**.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -5646,7 +5646,7 @@ int SetROP2(int nDrawMode);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nDrawMode`  
+ *nDrawMode*  
  Określa nowy tryb rysowania. Może być jedną z następujących wartości:  
   
 - **R2_BLACK** pikseli jest zawsze czarny.  
@@ -5734,8 +5734,8 @@ UINT SetTextAlign(UINT nFlags);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nFlags`  
- Określa wyrównanie tekstu flagi. Flagi Określ relację między punktem a prostokąt zakresem tekstu. Punkt można bieżącego położenia albo współrzędne określona przez funkcję tekst wyjściowy. Prostokąt zakresem tekst jest zdefiniowany w komórkach sąsiedniego znaku w ciągu tekstowym. `nFlags` Parametr może mieć flagi co najmniej jeden z poniższych trzech kategorii. W każdej kategorii, należy wybrać tylko jedną flagę. Pierwsza kategoria wpływa na wyrównanie tekstu w kierunku x:  
+ *nFlags*  
+ Określa wyrównanie tekstu flagi. Flagi Określ relację między punktem a prostokąt zakresem tekstu. Punkt można bieżącego położenia albo współrzędne określona przez funkcję tekst wyjściowy. Prostokąt zakresem tekst jest zdefiniowany w komórkach sąsiedniego znaku w ciągu tekstowym. *NFlags* parametr może mieć flagi co najmniej jeden z poniższych trzech kategorii. W każdej kategorii, należy wybrać tylko jedną flagę. Pierwsza kategoria wpływa na wyrównanie tekstu w kierunku x:  
   
 - **TA_CENTER** wyrównuje punkt przy użyciu Centrum poziome prostokątem.  
   
@@ -5771,8 +5771,8 @@ int SetTextCharacterExtra(int nCharExtra);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCharExtra`  
- Określa ilość dodatkowego miejsca (w jednostkach logicznych) mają zostać dodane do każdego znaku. Jeśli nie jest bieżący tryb mapowania `MM_TEXT`, `nCharExtra` są przekształcane i zaokrąglana do najbliższego piksela.  
+ *nCharExtra*  
+ Określa ilość dodatkowego miejsca (w jednostkach logicznych) mają zostać dodane do każdego znaku. Jeśli nie jest bieżący tryb mapowania `MM_TEXT`, *nCharExtra* jest przekształcać i zaokrąglana do najbliższego piksela.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wielkość odstępów intercharacter w poprzedniej.  
@@ -5788,7 +5788,7 @@ virtual COLORREF SetTextColor(COLORREF crColor);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `crColor`  
+ *crColor*  
  Określa kolor tekstu jako wartości kolorów RGB.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -5812,7 +5812,7 @@ int SetTextJustification(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nBreakExtra`  
+ *nBreakExtra*  
  Określa całkowity dodatkowe miejsce do dodania do wiersza (w jednostkach logicznych). Jeśli nie jest bieżący tryb mapowania `MM_TEXT`, podana wartość tego parametru jest konwertowana na bieżący tryb mapowania i zaokrąglona do najbliższej liczby całkowitej urządzenia.  
   
  *nBreakCount*  
@@ -5826,13 +5826,13 @@ int SetTextJustification(
   
  Po `SetTextJustification` funkcja członkowska zostanie wywołana, wywołanie funkcji tekst wyjściowy (takie jak `TextOut`) dystrybuuje określonego dodatkowe miejsce równomiernie między określoną liczbę znaków podziału. Znak podziału jest zazwyczaj znak spacji (ASCII 32), ale może być zdefiniowana przez czcionkę jako innego znaku.  
   
- Funkcja członkowska `GetTextExtent` jest zwykle używana z `SetTextJustification`. `GetTextExtent` oblicza szerokość danego wiersza przed wyrównania. Aplikacja może określić ilości potrzebnego miejsca, aby określić w `nBreakExtra` parametru przez odjęcie wartości zwróconej przez `GetTextExtent` z szerokości ciągu po dostosowaniu.  
+ Funkcja członkowska `GetTextExtent` jest zwykle używana z `SetTextJustification`. `GetTextExtent` oblicza szerokość danego wiersza przed wyrównania. Aplikacja może określić ilości potrzebnego miejsca, aby określić w *nBreakExtra* parametru przez odjęcie wartości zwróconej przez `GetTextExtent` z szerokości ciągu po dostosowaniu.  
   
  `SetTextJustification` Funkcja może służyć do Dopasuj wiersz, który zawiera wiele jest uruchamiany w różnych czcionek. W takim przypadku wiersz musi wyrywkowo utworzony przez dopasowanie i zapisywanie każdym uruchomieniu oddzielnie.  
   
  Ponieważ błędów zaokrąglania mogą wystąpić podczas wyrównania, system przechowuje uruchomionych terminu błąd, który definiuje bieżącego błąd. Wyrównuje wiersz, który zawiera wiele przebiegów `GetTextExtent` automatycznie używa tego terminu błąd, gdy oblicza zakres przy następnym uruchomieniu. Dzięki temu funkcja tekst wyjściowy mieszania błąd do uruchomienia nowego.  
   
- Po każdym wierszu zostały wyrównane, określenie to błąd muszą zostać wyczyszczone, aby zapobiec jest włączona do następnego wiersza. Termin można wyczyścić wywołując `SetTextJustification` z `nBreakExtra` równa 0.  
+ Po każdym wierszu zostały wyrównane, określenie to błąd muszą zostać wyczyszczone, aby zapobiec jest włączona do następnego wiersza. Termin można wyczyścić wywołując `SetTextJustification` z *nBreakExtra* równa 0.  
   
 ##  <a name="setviewportext"></a>  CDC::SetViewportExt  
  Ustawia zakresów x i y okienka ekranu kontekstu urządzenia.  
@@ -5846,13 +5846,13 @@ CSize SetViewportExt(SIZE size);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cx`  
+ *CX*  
  Określa zakres x okienka ekranu (w jednostkach urządzenia).  
   
- `cy`  
+ *CY*  
  Określa zakres y okienka ekranu (w jednostkach urządzenia).  
   
- `size`  
+ *Rozmiar*  
  Określa zakres x i y okienka ekranu (w jednostkach urządzenia).  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -5891,7 +5891,7 @@ CPoint SetViewportOrg(POINT point);
  *y*  
  Określa współrzędną y (w jednostkach urządzenia) pochodzenia okienka ekranu. Wartość musi należeć do zakresu układu współrzędnych urządzenia.  
   
- `point`  
+ *Punkt*  
  Określa punkt początkowy okienka ekranu. Wartości muszą należeć do zakresu układu współrzędnych urządzenia. Można przekazać **punktu** struktury lub `CPoint` obiekt dla tego parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -5917,13 +5917,13 @@ CSize SetWindowExt(SIZE size);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cx`  
+ *CX*  
  Określa x zakres (w jednostkach logicznych) okna.  
   
- `cy`  
+ *CY*  
  Określa y zakres (w jednostkach logicznych) okna.  
   
- `size`  
+ *Rozmiar*  
  Określa x - i y zakres (w jednostkach logicznych) okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -5969,7 +5969,7 @@ CPoint SetWindowOrg(POINT point);
  *y*  
  Określa logicznej współrzędną y pochodzenia nowego okna.  
   
- `point`  
+ *Punkt*  
  Określa logicznej współrzędne pochodzenia nowego okna. Można przekazać **punktu** struktury lub `CPoint` obiekt dla tego parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -5988,7 +5988,7 @@ BOOL SetWorldTransform(const XFORM& rXform);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rXform`  
+ *rXform*  
  Odwołanie do [XFORM](http://msdn.microsoft.com/library/windows/desktop/dd145228) strukturę, która zawiera dane transformacji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -6077,25 +6077,25 @@ BOOL StretchBlt(
  *y*  
  Określa współrzędną y (w jednostkach logicznych) lewego górnego rogu prostokąta docelowego.  
   
- `nWidth`  
+ *nWidth*  
  Określa szerokość (w jednostkach logicznych) prostokąta docelowego.  
   
- `nHeight`  
+ *nHeight*  
  Określa wysokość (w jednostkach logicznych) prostokąta docelowego.  
   
- `pSrcDC`  
+ *pSrcDC*  
  Określa kontekst urządzenia źródłowego.  
   
- `xSrc`  
+ *xSrc*  
  Określa współrzędną x (w jednostkach logicznych) lewego górnego rogu prostokąta źródłowego.  
   
- `ySrc`  
+ *ySrc*  
  Określa współrzędną y (w jednostkach logicznych) lewego górnego rogu prostokąta źródłowego.  
   
- `nSrcWidth`  
+ *nSrcWidth*  
  Określa szerokość (w jednostkach logicznych) prostokąta źródłowego.  
   
- `nSrcHeight`  
+ *nSrcHeight*  
  Określa wysokość (w jednostkach logicznych) prostokąta źródłowego.  
   
  *dwRop*  
@@ -6137,9 +6137,9 @@ BOOL StretchBlt(
 ### <a name="remarks"></a>Uwagi  
  Funkcja używa trybu stretching kontekstu urządzenia docelowego (ustawione przez `SetStretchBltMode`) do określenia sposobu rozciągnąć lub skompresować mapy bitowej.  
   
- `StretchBlt` Funkcja mapy bitowej są przenoszone z urządzenia źródłowego określonego przez `pSrcDC` na urządzeniu docelowym reprezentowanych przez obiekt kontekstu urządzenia, którego funkcja członkowska jest wywoływana. `xSrc`, `ySrc`, `nSrcWidth`, I `nSrcHeight` parametry definiują lewym górnym rogu i wymiary prostokąta źródła. *x*, *y*, `nWidth`, i `nHeight` parametry zapewniają lewym górnym rogu i wymiary prostokąta docelowego. Operacja rastrowe określona przez *dwRop* definiuje sposób łączenia mapy bitowej źródła i bits już na urządzeniu docelowym.  
+ `StretchBlt` Funkcja mapy bitowej są przenoszone z urządzenia źródłowego określonego przez *pSrcDC* na urządzeniu docelowym reprezentowanych przez obiekt kontekstu urządzenia, którego funkcja członkowska jest wywoływana. *XSrc*, *ySrc*, *nSrcWidth*, i *nSrcHeight* parametry definiują lewym górnym rogu i wymiary prostokąta źródła . *x*, *y*, *nWidth*, i *nHeight* parametry zapewniają lewym górnym rogu i wymiary prostokąta docelowego. Operacja rastrowe określona przez *dwRop* definiuje sposób łączenia mapy bitowej źródła i bits już na urządzeniu docelowym.  
   
- `StretchBlt` Funkcja tworzy odbicie lustrzane mapy bitowej, jeśli oznaki `nSrcWidth` i `nWidth` lub `nSrcHeight` i `nHeight` różnią się parametrami. Jeśli `nSrcWidth` i `nWidth` mają różne znaki, funkcja ta umożliwia tworzenie lustrzanego mapy bitowej na osi x. Jeśli `nSrcHeight` i `nHeight` mają różne znaki, funkcja ta umożliwia tworzenie lustrzanego mapy bitowej wzdłuż osi y.  
+ `StretchBlt` Funkcja tworzy odbicie lustrzane mapy bitowej, jeśli oznaki *nSrcWidth* i *nWidth* lub *nSrcHeight* i *nHeight* różnią się parametrami. Jeśli *nSrcWidth* i *nWidth* mają różne znaki, funkcja ta umożliwia tworzenie lustrzanego mapy bitowej na osi x. Jeśli *nSrcHeight* i *nHeight* mają różne znaki, funkcja ta umożliwia tworzenie lustrzanego mapy bitowej wzdłuż osi y.  
   
  `StretchBlt` Funkcja rozciąga się lub kompresuje źródła mapy bitowej w pamięci, a następnie skopiować wyniku do miejsca docelowego. Jeśli deseń ma być połączony z wynikiem, nie jest łączony, dopóki rozciągnięta źródłowa mapa bitowa nie zostanie skopiowana do miejsca docelowego. Jeśli jest używany pędzel, jest to wybrany pędzel w kontekście urządzenia docelowego. Współrzędne miejsca przeznaczenia są przekształcane zgodnie z kontekstem urządzenia docelowego; współrzędne źródła są przekształcane zgodnie z kontekstem urządzenia źródłowego.  
   
@@ -6205,33 +6205,33 @@ CSize TabbedTextOut(
  *y*  
  Określa logicznej współrzędną y punktu początkowego ciągu.  
   
- `lpszString`  
+ *lpszString*  
  Wskazuje ciąg znaków do rysowania. Można przekazać albo wskaźnika do tablicy znaków lub [cstring —](../../atl-mfc-shared/reference/cstringt-class.md) obiekt dla tego parametru.  
   
- `nCount`  
- Określa liczbę znaków w ciągu. Jeśli `nCount` wynosi -1, długość jest obliczana.  
+ *nCount*  
+ Określa liczbę znaków w ciągu. Jeśli *nCount* wynosi -1, długość jest obliczana.  
   
- `nTabPositions`  
+ *nTabPositions*  
  Określa liczbę wartości w tablicy pozycji tabulatora.  
   
- `lpnTabStopPositions`  
+ *lpnTabStopPositions*  
  Wskazuje tablicę zawierającą pozycje tabulatorów (w jednostkach logicznych). Tabulatory muszą być posortowane w rosnącej kolejności. najmniejsza wartość x powinien być pierwszym elementem w tablicy.  
   
- `nTabOrigin`  
+ *nTabOrigin*  
  Określa współrzędną x pozycji początkowej, z którego karty zostaną rozwinięte (w jednostkach logicznych).  
   
- `str`  
+ *str*  
  A `CString` obiekt, który zawiera określonych znaków.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wymiary ciąg (w jednostkach logicznych) jako `CSize` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Tekst jest pisany w aktualnie wybranej czcionki. Jeśli `nTabPositions` 0 i `lpnTabStopPositions` jest **NULL**, karty zostaną rozwinięte do ośmiu godzin szerokość znaku średnia.  
+ Tekst jest pisany w aktualnie wybranej czcionki. Jeśli *nTabPositions* 0 i *lpnTabStopPositions* jest **NULL**, karty zostaną rozwinięte do ośmiu godzin szerokość znaku średnia.  
   
- Jeśli `nTabPositions` 1, karta zatrzymuje są oddzielone w odległości określonej przez pierwszą wartość `lpnTabStopPositions` tablicy. Jeśli `lpnTabStopPositions` tablica zawiera więcej niż jedną wartość, tabulator jest ustawiony dla każdej wartości w tablicy, do liczbie określonej przez `nTabPositions`. `nTabOrigin` Parametr umożliwia aplikacji wywołanie `TabbedTextOut` funkcji na jednym wierszu. Jeśli aplikacja wywołuje funkcję więcej niż jeden raz z `nTabOrigin` ustawioną taką samą wartość w każdym funkcja rozszerza wszystkich kartach względem pozycja określona przez `nTabOrigin`.  
+ Jeśli *nTabPositions* 1, karta zatrzymuje są oddzielone w odległości określonej przez pierwszą wartość *lpnTabStopPositions* tablicy. Jeśli *lpnTabStopPositions* tablica zawiera więcej niż jedną wartość, tabulator jest ustawiony dla każdej wartości w tablicy, do liczbie określonej przez *nTabPositions*. *NTabOrigin* parametr umożliwia aplikacji wywołanie `TabbedTextOut` funkcji na jednym wierszu. Jeśli aplikacja wywołuje funkcję więcej niż jeden raz z *nTabOrigin* ustawioną taką samą wartość w każdym funkcja rozszerza wszystkich kartach względem pozycja określona przez *nTabOrigin*.  
   
- Domyślnie, funkcja nie używa ani nie aktualizuje bieżącej pozycji. Jeśli aplikacja musi zaktualizować bieżącą pozycję, jeśli wywołuje funkcję, aplikacja może wywołać [SetTextAlign](#settextalign) funkcji członkowskiej z `nFlags` ustawioną **TA_UPDATECP**. Gdy ta flaga jest ustawiona, system Windows ignoruje *x* i *y* parametrów w kolejnych wywołań `TabbedTextOut`, zamiast bieżącego położenia.  
+ Domyślnie, funkcja nie używa ani nie aktualizuje bieżącej pozycji. Jeśli aplikacja musi zaktualizować bieżącą pozycję, jeśli wywołuje funkcję, aplikacja może wywołać [SetTextAlign](#settextalign) funkcji członkowskiej z *nFlags* ustawioną **TA_UPDATECP**. Gdy ta flaga jest ustawiona, system Windows ignoruje *x* i *y* parametrów w kolejnych wywołań `TabbedTextOut`, zamiast bieżącego położenia.  
   
 ##  <a name="textout"></a>  CDC::TextOut  
  Zapisuje ciąg znaków w określonej lokalizacji przy użyciu aktualnie wybranej czcionki.  
@@ -6257,13 +6257,13 @@ BOOL TextOut(
  *y*  
  Określa logiczną współrzędną y punktu początkowego tekstu.  
   
- `lpszString`  
+ *lpszString*  
  Wskazuje ciąg znaków do rysowania.  
   
- `nCount`  
+ *nCount*  
  Określa liczbę znaków w ciągu.  
   
- `str`  
+ *str*  
  A `CString` obiekt zawierający znaki, które będą używane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -6272,7 +6272,7 @@ BOOL TextOut(
 ### <a name="remarks"></a>Uwagi  
  Początki znaków są w lewym górnym rogu komórki znaków. Domyślnie, funkcja nie używa ani nie aktualizuje bieżącej pozycji.  
   
- Jeśli aplikacja musi zaktualizować bieżącą pozycję, gdy wywołuje `TextOut`, aplikacja może wywołać `SetTextAlign` funkcji członkowskiej z `nFlags` ustawioną **TA_UPDATECP**. Gdy ta flaga jest ustawiona, system Windows ignoruje *x* i *y* parametrów w kolejnych wywołań `TextOut`, zamiast bieżącego położenia.  
+ Jeśli aplikacja musi zaktualizować bieżącą pozycję, gdy wywołuje `TextOut`, aplikacja może wywołać `SetTextAlign` funkcji członkowskiej z *nFlags* ustawioną **TA_UPDATECP**. Gdy ta flaga jest ustawiona, system Windows ignoruje *x* i *y* parametrów w kolejnych wywołań `TextOut`, zamiast bieżącego położenia.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CDC::BeginPath](#beginpath).  
@@ -6295,41 +6295,41 @@ BOOL TransparentBlt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `xDest`  
+ *xDest*  
  Określa współrzędną x, w jednostkach logicznych górnego lewego rogu prostokąta docelowego.  
   
- `yDest`  
+ *yDest*  
  Określa współrzędną y w jednostkach logicznych górnego lewego rogu prostokąta docelowego.  
   
- `nDestWidth`  
+ *nDestWidth*  
  Określa szerokość, w jednostkach logicznych, prostokąta docelowego.  
   
- `nDestHeight`  
+ *nDestHeight*  
  Określa wysokość w jednostkach logicznych, prostokąta docelowego.  
   
- `pSrcDC`  
+ *pSrcDC*  
  Wskaźnik do kontekstu urządzenia źródłowego.  
   
- `xSrc`  
+ *xSrc*  
  Określa współrzędną x, w jednostkach logicznych, prostokąta źródłowego.  
   
- `ySrc`  
+ *ySrc*  
  Określa współrzędną y w jednostkach logicznych, prostokąta źródłowego.  
   
- `nSrcWidth`  
+ *nSrcWidth*  
  Określa szerokość, w jednostkach logicznych, prostokąta źródłowego.  
   
- `nSrcHeight`  
+ *nSrcHeight*  
  Określa wysokość w jednostkach logicznych, prostokąta źródłowego.  
   
- `clrTransparent`  
+ *clrTransparent*  
  Kolor RGB w mapie bitowej źródła można traktować jako przezroczysty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  **Wartość TRUE,** przypadku powodzenia; w przeciwnym razie **FALSE**.  
   
 ### <a name="remarks"></a>Uwagi  
- `TransparentBlt` Umożliwia przezroczystości; oznacza to, że wskazuje kolor RGB `clrTransparent` jest renderowany przezroczysty podczas transferu.  
+ `TransparentBlt` Umożliwia przezroczystości; oznacza to, że wskazuje kolor RGB *clrTransparent* jest renderowany przezroczysty podczas transferu.  
   
  Aby uzyskać więcej informacji, zobacz [TransparentBlt](http://msdn.microsoft.com/library/windows/desktop/dd145141) w zestawie Windows SDK.  
   

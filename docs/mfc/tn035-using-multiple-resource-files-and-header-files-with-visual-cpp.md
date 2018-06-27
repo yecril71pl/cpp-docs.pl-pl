@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c374e0d14375450533326be5fd406fe8147e475a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c23e0a978ab8cb3c63566bd8d5ce64ecb2a80d4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385381"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952417"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: używanie wielu plików zasobów i plików nagłówków z programem Visual C++
 > [!NOTE]
@@ -227,7 +227,7 @@ RESOURCE.H     AFXRES.H
 #endif //APSTUDIO_INVOKED  
 ```  
   
- Gdy kompiluje Visual C++. Definiuje RC plik **APSTUDIO_INVOKED** oraz **RC_INVOKED**. Visual C++ odczytuje wiersz #error powyżej struktury plików utworzony z kreatorami AppWizard jest uszkodzony, zgłasza błąd krytyczny i Przerwij Odczyt. Plik RC.  
+ Gdy kompiluje Visual C++. Definiuje RC plik `APSTUDIO_INVOKED` oraz `RC_INVOKED`. Visual C++ odczytuje wiersz #error powyżej struktury plików utworzony z kreatorami AppWizard jest uszkodzony, zgłasza błąd krytyczny i Przerwij Odczyt. Plik RC.  
   
  **Zarządzanie symbole współużytkowane przez wiele Visual C++, edytować. RC — pliki**  
   
@@ -262,19 +262,19 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
 #define _APS_NEXT_SYMED_VALUE     101  
 ```  
   
- **_APS_NEXT_RESOURCE_VALUE** jest następnej wartości symbol, który będzie służyć do zasobu okna dialogowego, zasobów menu i tak dalej. Prawidłowy zakres dla wartości symbol zasobu jest 0x6FFF do 1.  
+ `_APS_NEXT_RESOURCE_VALUE` jest następnej wartości symbol, który będzie służyć do zasobu okna dialogowego, zasobów menu i tak dalej. Prawidłowy zakres dla wartości symbol zasobu jest 0x6FFF do 1.  
   
- **_APS_NEXT_COMMAND_VALUE** jest następnej wartości symbolu, który będzie używany do identyfikacji polecenia. Prawidłowy zakres dla wartości symbolu polecenia jest 0x8000 do 0xDFFF.  
+ `_APS_NEXT_COMMAND_VALUE` to wartość następnego symbol, który będzie używany do identyfikacji polecenia. Prawidłowy zakres dla wartości symbolu polecenia jest 0x8000 do 0xDFFF.  
   
- **_APS_NEXT_CONTROL_VALUE** jest następnej wartości symbolu, który będzie używany dla formantu okna dialogowego. Prawidłowy zakres dla wartości symbolu formantu okna dialogowego jest 8 do 0xDFFF.  
+ `_APS_NEXT_CONTROL_VALUE` to wartość następnego symbol, który będzie używany dla formantu okna dialogowego. Prawidłowy zakres dla wartości symbolu formantu okna dialogowego jest 8 do 0xDFFF.  
   
- **_APS_NEXT_SYMED_VALUE** jest wartość symbolu następnego podczas ręcznie przypisać wartość symbolu, używając nowego polecenia w przeglądarce symbolu.  
+ `_APS_NEXT_SYMED_VALUE` Wartość symbolu następnego podczas ręcznie przypisać wartość symbolu jest użycie nowego polecenia, w przeglądarce symbolu.  
   
  Visual C++ rozpoczyna się od znaku nieco większe wartości prawna najniższą wartość, przy tworzeniu nowego. Plik RC. Kreatorami AppWizard zainicjuje także te wartości na bardziej odpowiednią dla aplikacji MFC. Aby uzyskać więcej informacji o zakresach wartość Identyfikatora, wyświetlić [20 Uwaga techniczna](../mfc/tn020-id-naming-and-numbering-conventions.md).  
   
- Po każdym utworzeniu nowego pliku zasobu, nawet w tym samym projekcie Visual C++ definiuje takie same **_APS_NEXT\_**  wartości. Oznacza to, że jeśli dodasz, powiedzieć wielu okien dialogowych programu w dwóch różnych. RC — pliki, istnieje duże prawdopodobieństwo który takie same #define będzie można przypisać wartości do różnych okien dialogowych. Na przykład IDD_MY_DLG1 w pierwszym. Plik RC mogą przypisano tę samą liczbę, 101, jako IDD_MY_DLG2 na sekundę. Plik RC.  
+ Po każdym utworzeniu nowego pliku zasobu, nawet w tym samym projekcie Visual C++ definiuje takie same `_APS_NEXT_` wartości. Oznacza to, że jeśli dodasz, powiedzieć wielu okien dialogowych programu w dwóch różnych. RC — pliki, istnieje duże prawdopodobieństwo który takie same #define będzie można przypisać wartości do różnych okien dialogowych. Na przykład IDD_MY_DLG1 w pierwszym. Plik RC mogą przypisano tę samą liczbę, 101, jako IDD_MY_DLG2 na sekundę. Plik RC.  
   
- Aby tego uniknąć, należy zarezerwować oddzielne zakresu numerycznego dla każdego z czterech domenach identyfikatorów we właściwej. RC — pliki. W tym celu ręczne aktualizowanie **_APS_NEXT** wartości w każdym. RC — pliki `before` dodawania zasobów. Na przykład jeśli pierwszy. RC plik używa domyślnej **_APS_NEXT** wartości, a następnie można przypisać następujące **_APS_NEXT** wartości przez drugą. Plik RC:  
+ Aby tego uniknąć, należy zarezerwować oddzielne zakresu numerycznego dla każdego z czterech domenach identyfikatorów we właściwej. RC — pliki. W tym celu ręczne aktualizowanie `_APS_NEXT` wartości w każdym. RC — pliki **przed** dodawania zasobów. Na przykład jeśli pierwszy. RC plik używa domyślnej `_APS_NEXT` wartości, a następnie można przypisać następujące `_APS_NEXT` wartości przez drugą. Plik RC:  
   
 ```  
 #define _APS_NEXT_RESOURCE_VALUE  2000  

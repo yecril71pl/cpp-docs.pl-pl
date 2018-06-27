@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa8bb4ab914b4e05eb21cfc45a243328d32bb6d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a60e4af31ba5da23f399f86175ed4fcf1e4ec14
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351640"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950307"
 ---
 # <a name="bitmap-structure"></a>Struktura BITMAP
 **Mapy BITOWEJ** struktury określa wysokość, szerokość, format koloru i wartości bitowe logiczne mapy bitowej **.**  
@@ -51,7 +51,7 @@ typedef struct tagBITMAP {  /* bm */
  Określa wysokość mapy bitowej w wierszach rastrowych. Wysokość musi być większa od 0.  
   
  *bmWidthBytes*  
- Określa liczbę bajtów w każdym wierszu rastrowym. Ta wartość musi być liczbą parzystą, ponieważ graficzny interfejs urządzenia (GDI) zakłada, że wartości bitowe mapy bitowej tworzą tablicę wartości całkowitych (2-bajtowych). Innymi słowy **bmWidthBytes** \* 8 musi być dalej wielokrotnością 16 większa lub równa wartości uzyskać po **bmWidth** elementu członkowskiego jest mnożona przez **bmBitsPixel**  elementu członkowskiego.  
+ Określa liczbę bajtów w każdym wierszu rastrowym. Ta wartość musi być liczbą parzystą, ponieważ graficzny interfejs urządzenia (GDI) zakłada, że wartości bitowe mapy bitowej tworzą tablicę wartości całkowitych (2-bajtowych). Innymi słowy *bmWidthBytes* \* 8 musi być dalej wielokrotnością 16 większa lub równa wartości uzyskać po *bmWidth* elementu członkowskiego jest mnożona przez *bmBitsPixel*  elementu członkowskiego.  
   
  *bmPlanes*  
  Określa liczbę płaszczyzn kolorów w mapie bitowej.  
@@ -60,7 +60,7 @@ typedef struct tagBITMAP {  /* bm */
  Określa liczbę bitów sąsiadujących kolorów na każdej płaszczyźnie niezbędnej do zdefiniowania piksela.  
   
  *bmBits*  
- Wskazuje lokalizację wartości bitowych mapy bitowej. **BmBits** element członkowski musi być długi wskaźnika do tablicy wartości 1-bajtowego.  
+ Wskazuje lokalizację wartości bitowych mapy bitowej. *BmBits* element członkowski musi być długi wskaźnika do tablicy wartości 1-bajtowego.  
   
 ## <a name="remarks"></a>Uwagi  
  Obecnie są stosowane dwa formaty map bitowych: monochromatyczne i kolorowe. Mapa bitowa monochromatyczna używa formatu 1-bitowego 1-płaszczyznowego. Każde skanowanie jest wielokrotnością 16 bitów.  

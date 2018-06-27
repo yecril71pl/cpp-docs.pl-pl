@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 379c5b4fb9ed302ad1ea0167f2b32c30e48ab2bf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e857d6f5bc2ebabb0f36a3c97e011a4f2a00d641
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384293"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953506"
 ---
 # <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059: używanie makr konwersji MFC MBCS/Unicode
 > [!NOTE]
@@ -86,9 +86,9 @@ pI->SomeFunctionThatNeedsUnicode(T2OLE(lpszA));
   
  Istnieją dodatkowe wywołania, gdy konwersja jest konieczne, ale przy użyciu makra jest prosta i skuteczna.  
   
- Implementacja każdego makra funkcja _alloca() została można przydzielić pamięci ze stosu zamiast sterty. Przydzielanie pamięci ze stosu jest znacznie szybsza niż przydzielania pamięci na stosie, a pamięć zwalnia się automatycznie, gdy funkcja jest zakończony. Ponadto makra Unikaj wywoływania **MultiByteToWideChar** (lub **Procedura WideCharToMultiByte**) więcej niż jeden raz. Jest to realizowane przez przydzielanie nieco więcej pamięci niż jest to konieczne. Wiemy, że MBC przekonwertuje do co najwyżej jeden **WCHAR** oraz że dla każdego **WCHAR** firma Microsoft będzie mieć co najwyżej dwa bajty MBC. Przydzielając nieco więcej niż jest to konieczne, ale zawsze wystarczająco do obsługi konwersji, drugie wywołanie drugi unika się wywołanie funkcji konwersji. Wywołanie funkcji pomocnika **AfxA2Whelper** zmniejsza liczbę wypchnięć argumentu, które należy wykonać w celu wykonania konwersji (powoduje to kodu mniejsze niż Jeśli mu **MultiByteToWideChar**bezpośrednio).  
+ Implementacja każdego makra funkcja _alloca() została można przydzielić pamięci ze stosu zamiast sterty. Przydzielanie pamięci ze stosu jest znacznie szybsza niż przydzielania pamięci na stosie, a pamięć zwalnia się automatycznie, gdy funkcja jest zakończony. Ponadto makra Unikaj wywoływania `MultiByteToWideChar` (lub `WideCharToMultiByte`) więcej niż jeden raz. Jest to realizowane przez przydzielanie nieco więcej pamięci niż jest to konieczne. Wiemy, że MBC przekonwertuje do co najwyżej jeden **WCHAR** oraz że dla każdego **WCHAR** firma Microsoft będzie mieć co najwyżej dwa bajty MBC. Przydzielając nieco więcej niż jest to konieczne, ale zawsze wystarczająco do obsługi konwersji, drugie wywołanie drugi unika się wywołanie funkcji konwersji. Wywołanie funkcji pomocnika `AfxA2Whelper` zmniejsza liczbę wypchnięć argumentu, które należy wykonać w celu wykonania konwersji (powoduje to kodu mniejsze niż Jeśli mu `MultiByteToWideChar` bezpośrednio).  
   
- W celu makr mieć miejsca do przechowywania tymczasowych długości, należy zadeklarować zmiennej lokalnej o nazwie _konwertuj, który dokonuje tego w każdej funkcji który korzysta z makra konwersji. Jest to realizowane przez wywoływanie **USES_CONVERSION** makra, jak pokazano w przykładzie powyżej.  
+ W celu makr mieć miejsca do przechowywania tymczasowych długości, należy zadeklarować zmiennej lokalnej o nazwie _konwertuj, który dokonuje tego w każdej funkcji który korzysta z makra konwersji. Jest to realizowane przez wywołanie makra USES_CONVERSION, jak pokazano w przykładzie powyżej.  
   
  Istnieją zarówno makra konwersji ogólny, jak i makra określonych OLE. Poniżej omówiono te dwa zestawy różnych — makro Wszystkie makra znajdują się w AFXPRIV. H.  
   
@@ -105,7 +105,7 @@ W2A      (LPCWSTR) -> (LPSTR)
  Oprócz wykonywania konwersji tekstu, dostępne są także makra i funkcje pomocnicze do konwertowania `TEXTMETRIC`, `DEVMODE`, `BSTR`i OLE przydzielone ciągów. Te makra wykraczają poza zakres tej dyskusji — dotyczą AFXPRIV. H, aby uzyskać więcej informacji na temat tych makr.  
   
 ## <a name="ole-conversion-macros"></a>Makra konwersji OLE  
- Makra konwersji OLE są zaprojektowane specjalnie z myślą o obsługę funkcji, które oczekują **OLESTR** znaków. Należy sprawdzić nagłówki OLE, będzie mógł przeglądać wiele odwołań do **LPCOLESTR** i **OLECHAR**. Te typy są używane do odwoływania się do typu znaków w interfejsy OLE w taki sposób, który nie jest specyficzne dla platformy. **OLECHAR** mapuje `char` na platformach Win16 i Macintosh i **WCHAR** w Win32.  
+ Makra konwersji OLE są zaprojektowane specjalnie z myślą o obsługę funkcji, które oczekują **OLESTR** znaków. Należy sprawdzić nagłówki OLE, będzie mógł przeglądać wiele odwołań do **LPCOLESTR** i **OLECHAR**. Te typy są używane do odwoływania się do typu znaków w interfejsy OLE w taki sposób, który nie jest specyficzne dla platformy. **OLECHAR** mapuje **char** na platformach Win16 i Macintosh i **WCHAR** w Win32.  
   
  Aby zapewnić liczbę **#ifdef** kod dyrektywy w MFC do minimum mamy makra podobne do każdej konwersji który którym są związane z ciągami OLE. Najczęściej używane są następujące makra:  
   
@@ -116,7 +116,7 @@ OLE2CT   (LPCOLESTR) -> (LPCTSTR)
 OLE2T   (LPCOLESTR) -> (LPCSTR)  
 ```  
   
- Ponownie, istnieją podobne makra może `TEXTMETRIC`, `DEVMODE`, `BSTR`i OLE przydzielone ciągów. Zapoznaj się AFXPRIV. H, aby uzyskać więcej informacji.  
+ Ponownie są podobne makra za TEXTMETRIC, DEVMODE BSTR i OLE przydzielone ciągów. Zapoznaj się AFXPRIV. H, aby uzyskać więcej informacji.  
   
 ## <a name="other-considerations"></a>Inne zagadnienia  
  Nie należy używać makra w ścisłej pętli. Na przykład czy chcesz zapisać następujący rodzaj kodu:  

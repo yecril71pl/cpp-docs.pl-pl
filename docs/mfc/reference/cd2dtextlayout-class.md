@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 343d56ebf3f92dadeb286ae2fa44b6e735498215
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: facfa4d9f98100666f267920cbd18c24ae516e72
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355928"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951614"
 ---
 # <a name="cd2dtextlayout-class"></a>Klasa CD2DTextLayout
 Otoka dla IDWriteTextLayout.  
@@ -119,19 +119,19 @@ CD2DTextLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentTarget`  
+ *pParentTarget*  
  Wskaźnik do obiektu docelowego renderowania.  
   
- `strText`  
+ *strText*  
  Cstring — obiekt, który zawiera ciąg do utworzenia nowego obiektu CD2DTextLayout z.  
   
- `textFormat`  
+ *textFormat*  
  Cstring — obiekt, który zawiera format do zastosowania do ciągu.  
   
- `sizeMax`  
+ *sizeMax*  
  Rozmiar pola układu.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Wskazuje, że obiekt zostanie zniszczony przez właściciela (pParentTarget).  
   
 ##  <a name="create"></a>  CD2DTextLayout::Create  
@@ -171,10 +171,10 @@ CString GetFontFamilyName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `currentPosition`  
+ *currentPosition*  
  Pozycja tekstu do sprawdzenia.  
   
- `textRange`  
+ *textRange*  
  Zakres tekstu, który ma taką samą formatowanie jako tekst w określonym przez currentPosition pozycji. Oznacza to, że ma dokładne formatowanie jako pozycja określona, w tym między innymi nazwę rodziny czcionek.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -190,10 +190,10 @@ CString GetLocaleName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `currentPosition`  
+ *currentPosition*  
  Pozycja tekstu do sprawdzenia.  
   
- `textRange`  
+ *textRange*  
  Zakres tekstu, który ma taką samą formatowanie jako tekst w określonym przez currentPosition pozycji. Oznacza to, że ma dokładne formatowanie jako pozycja określona, w tym między innymi Nazwa ustawień regionalnych.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -246,10 +246,10 @@ BOOL SetFontFamilyName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pwzFontFamilyName`  
+ *pwzFontFamilyName*  
  Nazwę rodziny czcionek, która ma zastosowanie do ciągu cały tekst w zakresie określonym przez textRange  
   
- `textRange`  
+ *textRange*  
  Zakres tekstu, którego dotyczy ta zmiana  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -265,10 +265,10 @@ BOOL SetLocaleName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pwzLocaleName`  
+ *pwzLocaleName*  
  Ciąg nazwy zerem ustawień regionalnych  
   
- `textRange`  
+ *textRange*  
  Zakres tekstu, którego dotyczy ta zmiana  
   
 ### <a name="return-value"></a>Wartość zwracana  

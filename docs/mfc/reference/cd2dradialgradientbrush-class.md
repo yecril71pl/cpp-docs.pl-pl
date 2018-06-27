@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1be476c43b0752b95a6514057e240a030325b95d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 002b9fd5d919bb277f9546f038e4b81c45380c81
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354355"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952277"
 ---
 # <a name="cd2dradialgradientbrush-class"></a>Klasa CD2DRadialGradientBrush
 Otoka dla ID2D1RadialGradientBrush.  
@@ -133,7 +133,7 @@ void Attach(ID2D1RadialGradientBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pResource`  
+ *pResource*  
  Interfejs istniejącego zasobu. Nie może mieć wartości NULL  
   
 ##  <a name="cd2dradialgradientbrush"></a>  CD2DRadialGradientBrush::CD2DRadialGradientBrush  
@@ -152,28 +152,28 @@ CD2DRadialGradientBrush(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentTarget`  
+ *pParentTarget*  
  Wskaźnik do obiektu docelowego renderowania.  
   
- `gradientStops`  
+ *gradientStops*  
  Wskaźnik do tablicy D2D1_GRADIENT_STOP struktury.  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  Wartość większa niż lub równa 1, która określa liczbę gradientu w tablicy gradientStops.  
   
- `RadialGradientBrushProperties`  
+ *RadialGradientBrushProperties*  
  Centrum, przesunięcie początek gradientu i x radius i y-radius pędzla przez gradientu.  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  Miejsca, w których kolor jest wykonywane interpolacji między gradientu.  
   
- `extendMode`  
+ *extendMode*  
  Zachowanie gradientu poza zakresem znormalizowane [0,1].  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Wskaźnik do nieprzezroczystość i transformacja pędzla.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Wskazuje, że obiekt zostanie zniszczony przez właściciela (pParentTarget).  
   
 ##  <a name="create"></a>  CD2DRadialGradientBrush::Create  
@@ -184,7 +184,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pRenderTarget`  
+ *pRenderTarget*  
  Wskaźnik do obiektu docelowego renderowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -289,7 +289,7 @@ void SetCenter(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `point`  
+ *Punkt*  
  Centrum gradientu elipsy, w przestrzeni współrzędnych pędzla  
   
 ##  <a name="setgradientoriginoffset"></a>  CD2DRadialGradientBrush::SetGradientOriginOffset  
@@ -300,7 +300,7 @@ void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `gradientOriginOffset`  
+ *gradientOriginOffset*  
  Przesunięcie punktu początkowego gradientu od środka elipsy gradientu  
   
 ##  <a name="setradiusx"></a>  CD2DRadialGradientBrush::SetRadiusX  
@@ -311,7 +311,7 @@ void SetRadiusX(FLOAT radiusX);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `radiusX`  
+ *radiusX*  
  Promień x elipsy gradientu. Ta wartość jest w przestrzeni współrzędnych pędzla  
   
 ##  <a name="setradiusy"></a>  CD2DRadialGradientBrush::SetRadiusY  
@@ -322,7 +322,7 @@ void SetRadiusY(FLOAT radiusY);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `radiusY`  
+ *radiusY*  
  Promień y elipsy gradientu. Ta wartość jest w przestrzeni współrzędnych pędzla  
   
 ## <a name="see-also"></a>Zobacz też  

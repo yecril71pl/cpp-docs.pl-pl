@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6560bf337f6e146bba19e41d56727945df771dd2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e741f172d0dfe528a166fad087460fd9ae18c0f3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349262"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951185"
 ---
 # <a name="afxextensionmodule-structure"></a>AFX_EXTENSION_MODULE — Struktura
 `AFX_EXTENSION_MODULE` Jest używany podczas inicjowania biblioteki DLL rozszerzeń MFC do przechowywania stanu modułu MFC DLL rozszerzenia.  
@@ -43,7 +43,7 @@ struct AFX_EXTENSION_MODULE
  *bInitialized*  
  **Wartość TRUE,** Jeśli modułu DLL został zainicjowany z `AfxInitExtensionModule`.  
   
- `hModule`  
+ *hModule*  
  Określa dojście modułu DLL.  
   
  *hResource*  
@@ -60,13 +60,13 @@ struct AFX_EXTENSION_MODULE
   
 -   Wywołanie [afxinitextensionmodule —](extension-dll-macros.md#afxinitextensionmodule) i sprawdzić wartość zwrotną.  
   
--   Utwórz **CDynLinkLibrary** obiektu, jeśli zostanie wyeksportowany plik DLL [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektów lub ma własne niestandardowe zasoby.  
+-   Utwórz `CDynLinkLibrary` obiektu, jeśli zostanie wyeksportowany plik DLL [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektów lub ma własne niestandardowe zasoby.  
   
  `AFX_EXTENSION_MODULE` Struktura jest używana do przechowywania kopii rozszerzenia MFC DLL modułu Państwa, w tym kopiowania obiektów klasy środowiska uruchomieniowego, które zostały zainicjowane przez bibliotekę DLL rozszerzenia MFC jako część konstrukcji obiektu statycznego normalne wykonywany przed `DllMain` jest wprowadzona. Na przykład:  
   
  [!code-cpp[NVC_MFC_DLL#2](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_1.cpp)]  
   
- Moduł informacji przechowywanych w `AFX_EXTENSION_MODULE` struktury mogą być kopiowane do **CDynLinkLibrary** obiektu. Na przykład:  
+ Moduł informacji przechowywanych w `AFX_EXTENSION_MODULE` struktury mogą być kopiowane do `CDynLinkLibrary` obiektu. Na przykład:  
   
  [!code-cpp[NVC_MFC_DLL#5](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_2.cpp)]  
   

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ba2a3f54ff39341c43ee497fcccda43cd3625fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ef1c1a328b785c189a2d7d4a2eb28ec3995a810
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358358"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952183"
 ---
 # <a name="cbitmapbutton-class"></a>Klasa CBitmapButton
 Tworzy łącznik formanty etykietą map bitowych obrazów zamiast tekstu.  
@@ -98,7 +98,7 @@ class CBitmapButton : public CButton
   
 6.  W `CDialog` obiektu [OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog) wywołaniu procedury, `CBitmapButton` obiektu [automatyczne ładowanie](#autoload) działanie, używając jako parametry Identyfikatora formantu przycisku i `CDialog` obiektu **to** wskaźnika.  
   
- Jeśli chcesz obsługi komunikatów powiadomień systemu Windows, takich jak **BN_CLICKED**, wysłanych przez kontrolkę przycisku mapy bitowej do elementu nadrzędnego (zwykle klasą pochodną **cdialog —)**, Dodaj do `CDialog`-pochodnych Obiekt mapy komunikatów wpisu i program obsługi komunikatów funkcją członkowską dla każdego komunikatu. Powiadomienia wysyłane przez `CBitmapButton` obiektu są takie same jak wysyłane przez [CButton](../../mfc/reference/cbutton-class.md) obiektu.  
+ Aby obsłużyć komunikaty powiadomień systemu Windows, takich jak BN_CLICKED, wysyłany przez kontrolkę przycisku mapy bitowej do elementu nadrzędnego (zazwyczaj klasą pochodną `CDialog`), Dodaj do `CDialog`-obiektu pochodne mapy komunikatów członka wpisu i obsługi wiadomości Funkcja dla każdego komunikatu. Powiadomienia wysyłane przez `CBitmapButton` obiektu są takie same jak wysyłane przez [CButton](../../mfc/reference/cbutton-class.md) obiektu.  
   
  Klasa [ctoolbar —](../../mfc/reference/ctoolbar-class.md) mają inne podejście do przycisków mapy bitowej.  
   
@@ -128,10 +128,10 @@ BOOL AutoLoad(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nID`  
+ *nID*  
  Identyfikator formantu przycisku.  
   
- `pParent`  
+ *pParent*  
  Wskaźnik do obiektu, który jest właścicielem przycisku.  
   
 ### <a name="return-value"></a>Wartość zwracana  

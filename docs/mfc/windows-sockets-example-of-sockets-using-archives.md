@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02cd74a20f0ccc54a366c1a62d913ee30e72471a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 942c3e8aa2aeccefc9c92cd9fd32d453dc5353cf
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384374"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956430"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: przykład gniazd korzystających z archiwów
 W tym artykule przedstawiono przykład za pomocą klasy [CSocket —](../mfc/reference/csocket-class.md). Przykład wykorzystuje `CArchive` obiekty do serializowania danych za pośrednictwem gniazda. Należy pamiętać, że nie jest serializacji dokumentu do lub z pliku.  
@@ -30,26 +30,26 @@ W tym artykule przedstawiono przykład za pomocą klasy [CSocket —](../mfc/ref
   
  [!code-cpp[NVC_MFCSimpleSocket#1](../mfc/codesnippet/cpp/windows-sockets-example-of-sockets-using-archives_1.cpp)]  
   
- Najważniejsze informacje w tym przykładzie jest, że jego struktury równoleżnikami MFC `Serialize` funkcji. **PacketSerialize** funkcji członkowskiej składa się z **Jeśli** instrukcji z **else** klauzuli. Funkcja otrzymuje dwa [CArchive](../mfc/reference/carchive-class.md) odwołania jako parametry: `arData` i `arAck`. Jeśli `arData` obiekt archiwum jest ustawiony do przechowywania (wysyłającym) **Jeśli** gałęzi wykonuje; w przeciwnym razie, jeśli `arData` jest ustawiona dla obciążenia (odbieranie) Funkcja przyjmuje **else** gałęzi. Aby uzyskać więcej informacji na temat serializacja w MFC, zobacz [szeregowanie](../mfc/how-to-make-a-type-safe-collection.md).  
+ Najważniejsze informacje w tym przykładzie jest, że jego struktury równoleżnikami MFC `Serialize` funkcji. `PacketSerialize` Funkcji członkowskiej składa się z **Jeśli** instrukcji z **else** klauzuli. Funkcja otrzymuje dwa [CArchive](../mfc/reference/carchive-class.md) odwołania jako parametry: *arData* i *arAck*. Jeśli *arData* obiekt archiwum jest ustawiony do przechowywania (wysyłającym) **Jeśli** gałęzi wykonuje; w przeciwnym razie, jeśli *arData* jest ustawiona dla obciążenia (odbieranie) Funkcja przyjmuje **else** gałęzi. Aby uzyskać więcej informacji na temat serializacja w MFC, zobacz [szeregowanie](../mfc/how-to-make-a-type-safe-collection.md).  
   
 > [!NOTE]
->  `arAck` Obiektu archiwum zakłada, że przeciwieństwem `arData`. Jeśli `arData` jest wysyłania, `arAck` odbierze, i odwrotnej ma wartość true.  
+>  *ArAck* obiektu archiwum zakłada, że przeciwieństwem *arData*. Jeśli *arData* jest wysyłania, *arAck* odbierze, i odwrotnej ma wartość true.  
   
- Wysyłanie, funkcja przykład pętli określoną liczbę razy, zawsze generowania niektórych losowe dane w celach demonstracyjnych. Aplikacja może uzyskać prawdziwe dane z określonego źródła, na przykład plik. `arData` Operator wstawiania w archiwum (**<<**) służy do wysyłania strumienia trzech kolejnych fragmentów danych:  
+ Wysyłanie, funkcja przykład pętli określoną liczbę razy, zawsze generowania niektórych losowe dane w celach demonstracyjnych. Aplikacja może uzyskać prawdziwe dane z określonego źródła, na przykład plik. *ArData* operator wstawiania w archiwum (**<<**) służy do wysyłania strumienia trzech kolejnych fragmentów danych:  
   
--   "Nagłówek", który określa rodzaj danych (w tym przypadku wartości `bValue` zmienną i liczbę kopii zostaną wysłane).  
+-   "Nagłówek", który określa rodzaj danych (w tym przypadku wartości *bDane wartości* zmienną i liczbę kopii zostaną wysłane).  
   
      Obie te pozycje są generowane losowo w tym przykładzie.  
   
 -   Określona liczba kopii danych.  
   
-     Wewnętrzny **dla** pętli wysyła `bValue` określoną liczbę razy.  
+     Wewnętrzny **dla** pętli wysyła *bDane wartości* określoną liczbę razy.  
   
--   Ciąg o nazwie `strText` wyświetlającego odbiorniku z użytkownikiem.  
+-   Ciąg o nazwie *strText* wyświetlającego odbiorniku z użytkownikiem.  
   
  Do odbierania, funkcja działa podobnie, z wyjątkiem tego, aby były używane operator wyodrębniania archiwum (**>>**) można pobrać danych z archiwum. Aplikacja odbierająca sprawdza dane odbierze, wyświetlany jest komunikat "Odebrane" końcowego i następnie przesyła komunikat "Wysłane" wysyłania aplikacji do wyświetlenia.  
   
- W tym modelu łączności słowo "Odebrane" wysłać wiadomości `strText` zmiennej, jest do wyświetlenia na końcu komunikacji, więc określa do odbierania użytkownika otrzymano pewna liczba pakietów danych. Odbiornik odpowiedzi z podobnych ciąg znaków "Wysyłane", do wyświetlenia na ekranie adres oryginalnego nadawcy. Otrzymania oba ciągi wskazuje czy łączność.  
+ W tym modelu łączności słowo "Odebrane" wysłać wiadomości *strText* zmiennej, jest do wyświetlenia na końcu komunikacji, więc określa do odbierania użytkownika zostały pewna liczba pakietów danych odebrane. Odbiornik odpowiedzi z podobnych ciąg znaków "Wysyłane", do wyświetlenia na ekranie adres oryginalnego nadawcy. Otrzymania oba ciągi wskazuje czy łączność.  
   
 > [!CAUTION]
 >  Jeśli piszesz program kliencki MFC do komunikacji z serwerami ustalonych (z systemem innym niż MFC) nie należy wysyłać obiektów C++ w archiwum. Chyba, że serwer jest aplikacją MFC obsługującą typy obiektów, które chcesz wysyłać, nie będzie mogła odbierać i deserializacji obiektów. Przykład w artykule [Windows Sockets: Określanie kolejności bajtów](../mfc/windows-sockets-byte-ordering.md) pokazuje komunikację tego typu.  

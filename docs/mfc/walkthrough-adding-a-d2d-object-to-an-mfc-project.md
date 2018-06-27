@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68a6d5a0cda8c4d7fd06cf7bb6b9c1b60e50374b
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 87e1c696f3da374d7b71e1b24e3a8bd3ebfe41b9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36306011"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954874"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>Wskazówki: dodawanie obiektu D2D do projektu MFC
 
@@ -48,7 +48,7 @@ W tym przewodniku muszą mieć zainstalowanego z programu Visual Studio **tworze
 
 1. Na **pliku** menu wskaż **nowy** , a następnie wybierz **projektu**.
 
-2. W **nowy projekt** okno dialogowe, w lewym okienku w obszarze **zainstalowane szablony**, rozwiń węzeł **Visual C++** , a następnie wybierz **MFC**. W środkowym okienku wybierz **aplikacji MFC**. W **nazwa** wpisz `MFCD2DWalkthrough`. Wybierz **OK**.
+2. W **nowy projekt** okno dialogowe, w lewym okienku w obszarze **zainstalowane szablony**, rozwiń węzeł **Visual C++** , a następnie wybierz **MFC**. W środkowym okienku wybierz **aplikacji MFC**. W **nazwa** wpisz *MFCD2DWalkthrough*. Wybierz **OK**.
 
 3. W **Kreator aplikacji MFC**, wybierz **Zakończ** bez zmieniania żadnych ustawień.
 
@@ -132,7 +132,7 @@ W tym przewodniku muszą mieć zainstalowanego z programu Visual Studio **tworze
 
 3. Na **wiadomości** , wybierz pozycję **Dodaj niestandardowy komunikat**.
 
-4. W **Dodaj niestandardowy komunikat** okna dialogowego, **komunikatów systemu Windows niestandardowego** wpisz `AFX_WM_DRAW2D`. W **nazwa obsługi wiadomości** wpisz `OnDraw2D`. Wybierz **zarejestrowany komunikat** opcji, a następnie wybierz pozycję **OK**. Ta akcja dodaje program obsługi komunikatów dla `AFX_WM_DRAW2D` wiadomości do `CMFCD2DWalkthroughView` klasy.
+4. W **Dodaj niestandardowy komunikat** okna dialogowego, **komunikatów systemu Windows niestandardowego** wpisz *AFX_WM_DRAW2D*. W **nazwa obsługi wiadomości** wpisz *OnDraw2D*. Wybierz **zarejestrowany komunikat** opcji, a następnie wybierz pozycję **OK**. Ta akcja powoduje dodanie obsługi wiadomości do wiadomości AFX_WM_DRAW2D `CMFCD2DWalkthroughView` klasy.
 
 5. W **istniejące programy obsługi** wybierz opcję `OnDraw2D`. Wybierz **Edytuj kod** do wyświetlenia `CMFCD2DWalkthroughView::OnDraw2D` metody. Użyj tego kodu dla `CMFCD2DWalkthroughView::OnDrawD2D` metody:
 

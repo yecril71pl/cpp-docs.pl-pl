@@ -26,17 +26,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a85ba03089a9536c8c6512bccd09f1eb34c0a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cadb06076ff7a3dd481a1bcedc9cd0afe4989f28
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381091"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950451"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>Implementacja paska stanu w MFC
 A [cstatusbar —](../mfc/reference/cstatusbar-class.md) obiekt jest pasek sterowania z wiersza okienek tekstu wyjściowego. Okienka dane wyjściowe są często używane jako wiersze komunikat, a wskaźniki stanu. Przykładami krótko opisano wybrane polecenie Wiersze komunikat pomocy menu i wskaźników określenia stanu blokady PRZEWIJANIA, NUM LOCK i kluczy.  
   
- Począwszy od wersji 4.0 MFC, pasków stanu są implementowane za pomocą klasy [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md), który hermetyzuje stan paska formantu wspólnego. W celu zapewnienia zgodności z poprzednimi wersjami MFC zachowuje starsze implementacja paska stanu w klasie **COldStatusBar**. Opisuje dokumentacja dla wcześniejszych wersji MFC **COldStatusBar** w obszarze `CStatusBar`.  
+ Począwszy od wersji 4.0 MFC, pasków stanu są implementowane za pomocą klasy [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md), który hermetyzuje stan paska formantu wspólnego. W celu zapewnienia zgodności z poprzednimi wersjami MFC zachowuje starsze implementacja paska stanu w klasie `COldStatusBar`. Opisuje dokumentacja dla wcześniejszych wersji MFC `COldStatusBar` w obszarze `CStatusBar`.  
   
  [CStatusBar::GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl), funkcji członkowskiej nowych 4.0 MFC umożliwia skorzystać z obsługi systemu Windows formantu wspólnego stanu paska dostosowania i dodatkowe funkcje. `CStatusBar` Funkcje Członkowskie zapewniają większość funkcjonalności formanty standardowe systemu Windows; Jednak jeśli wywołasz `GetStatusBarCtrl`, z paskami stanu można nadać jeszcze więcej właściwości paska stanu. Podczas wywoływania `GetStatusBarCtrl`, zwróci odwołanie do `CStatusBarCtrl` obiektu. Można użyć tego odwołania do manipulowania formantu paska stanu.  
   

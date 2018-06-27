@@ -76,12 +76,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81e7d3b093da8127887878b2ac5f2af652f549c3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3af520de7e92a887f9a49fea7262d7f51b74082
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375797"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954637"
 ---
 # <a name="cdaoquerydef-class"></a>Klasa CDaoQueryDef
 Reprezentuje definicji zapytania, lub "querydef" zazwyczaj jest to jeden zapisane w bazie danych.  
@@ -98,7 +98,7 @@ class CDaoQueryDef : public CObject
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CDaoQueryDef::CDaoQueryDef](#cdaoquerydef)|Konstruuje **CDaoQueryDef** obiektu. Następnie wywołaj **Otwórz** lub **Utwórz**, w zależności od potrzeb.|  
+|[CDaoQueryDef::CDaoQueryDef](#cdaoquerydef)|Konstruuje `CDaoQueryDef` obiektu. Następnie wywołaj `Open` lub `Create`, w zależności od potrzeb.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
@@ -107,7 +107,7 @@ class CDaoQueryDef : public CObject
 |[CDaoQueryDef::Append](#append)|Dołącza querydef do bazy danych querydefs — kolekcja jako zapisaną kwerendę.|  
 |[CDaoQueryDef::CanUpdate](#canupdate)|Zwraca wartość niezerową, jeśli zapytanie można zaktualizować bazy danych.|  
 |[CDaoQueryDef::Close](#close)|Zamyka obiektu querydef. Po zakończeniu pracy z nim, należy zniszczyć obiektu C++.|  
-|[CDaoQueryDef::Create](#create)|Tworzy obiekt querydef DAO. Użyj querydef jako tymczasowy kwerendy lub wywołanie **Append** go zapisać w bazie danych.|  
+|[CDaoQueryDef::Create](#create)|Tworzy obiekt querydef DAO. Użyj querydef jako tymczasowy kwerendy lub wywołanie `Append` go zapisać w bazie danych.|  
 |[CDaoQueryDef::Execute](#execute)|Wykonuje zapytanie zdefiniowane przez obiekt querydef.|  
 |[CDaoQueryDef::GetConnect](#getconnect)|Zwraca ciąg połączenia skojarzone z querydef. Parametry połączenia identyfikuje źródła danych. (Dla bazy danych SQL zapytań przekazujących tylko; w przeciwnym razie pusty ciąg.)|  
 |[CDaoQueryDef::GetDateCreated](#getdatecreated)|Zwraca daty utworzenia zapisanego zapytania.|  
@@ -154,9 +154,9 @@ class CDaoQueryDef : public CObject
   
     -   Aby korzystać z istniejącego zapisanego zapytania, wywołania obiektu querydef [Otwórz](#open) funkcji członkowskiej, podając nazwę zapisanego zapytania.  
   
-    -   Aby utworzyć nowy zapisane zapytanie, należy wywołać obiekt querydef [Utwórz](#create) funkcji członkowskiej, podając nazwę zapytania. Następnie wywołaj [Append](#append) Aby zapisać kwerendę przez dołączenie go do bazy danych querydefs — kolekcja. **Utwórz** umieszcza querydef w stanie otwartym, tak po wywołaniu **Utwórz** Nie wywołuj **Otwórz**.  
+    -   Aby utworzyć nowy zapisane zapytanie, należy wywołać obiekt querydef [Utwórz](#create) funkcji członkowskiej, podając nazwę zapytania. Następnie wywołaj [Append](#append) Aby zapisać kwerendę przez dołączenie go do bazy danych querydefs — kolekcja. `Create` umieszcza querydef w stanie otwartym, tak po wywołaniu `Create` Nie wywołuj `Open`.  
   
-    -   Aby utworzyć tymczasowy querydef, należy wywołać **Utwórz**. Przekazania pustego ciągu dla nazwy zapytania. Nie wywołuj **Append**.  
+    -   Aby utworzyć tymczasowy querydef, należy wywołać `Create`. Przekazania pustego ciągu dla nazwy zapytania. Nie wywołuj `Append`.  
   
  Po zakończeniu przy użyciu obiektu querydef wywołać jej [Zamknij](#close) element członkowski funkcji; następnie zniszcz obiektu querydef.  
   
@@ -168,14 +168,14 @@ class CDaoQueryDef : public CObject
   
 -   Aby utworzyć `CDaoRecordset` obiektu  
   
--   Aby wywołać obiektu **Execute** funkcji członkowskiej bezpośrednio wykonać zapytanie akcji lub przekazujący zapytanie SQL  
+-   Aby wywołać obiektu `Execute` funkcji członkowskiej bezpośrednio wykonać zapytanie akcji lub przekazujący zapytanie SQL  
   
- Można użyć obiektu querydef dla dowolnego typu zapytania, łącznie z select, działania, krzyżowej, Usuń, aktualizacji, Dołącz tworzącej, definicje danych, przekazywanego SQL, Unii i zbiorcze zapytania. Typ zapytania jest określana przez instrukcji SQL, które można dostarczać zawartość. Informacje o typach zapytania, zobacz **Execute** i [GetType](#gettype) funkcji elementów członkowskich. Zestawy rekordów są często używane w celu zwrócenia wierszy wysyła zapytanie, zwykle te przy użyciu **wybierz... Z** słów kluczowych. **Wykonanie** jest najczęściej używane dla operacji zbiorczej. Aby uzyskać więcej informacji, zobacz [Execute](#execute) i [cdaorecordset —](../../mfc/reference/cdaorecordset-class.md).  
+ Można użyć obiektu querydef dla dowolnego typu zapytania, łącznie z select, działania, krzyżowej, Usuń, aktualizacji, Dołącz tworzącej, definicje danych, przekazywanego SQL, Unii i zbiorcze zapytania. Typ zapytania jest określana przez instrukcji SQL, które można dostarczać zawartość. Informacje o typach zapytania, zobacz `Execute` i [GetType](#gettype) funkcji elementów członkowskich. Zestawy rekordów są często używane w celu zwrócenia wierszy wysyła zapytanie, zwykle te przy użyciu **wybierz... Z** słów kluczowych. `Execute` najczęściej używane dla operacji zbiorczej. Aby uzyskać więcej informacji, zobacz [Execute](#execute) i [cdaorecordset —](../../mfc/reference/cdaorecordset-class.md).  
   
 ## <a name="querydefs-and-recordsets"></a>Querydefs — i zestawy rekordów  
  Aby utworzyć za pomocą obiektu querydef `CDaoRecordset` obiektu, zwykle tworzenia lub otwierania querydef zgodnie z powyższym opisem. Następnie skonstruować obiektu zestawu rekordów, przekazanie wskaźnika do obiektu querydef podczas wywoływania [CDaoRecordset::Open](../../mfc/reference/cdaorecordset-class.md#open). Querydef, które przekazujesz musi być w stanie otwartym. Aby uzyskać więcej informacji, zobacz klasy [cdaorecordset —](../../mfc/reference/cdaorecordset-class.md).  
   
- Nie można użyć querydef, aby utworzyć zestaw rekordów (najczęściej używane dla querydef), chyba że jest w stanie otwartym. Poddane querydef otwarte przez wywołanie albo **Otwórz** lub **Utwórz**.  
+ Nie można użyć querydef, aby utworzyć zestaw rekordów (najczęściej używane dla querydef), chyba że jest w stanie otwartym. Poddane querydef otwarte przez wywołanie albo `Open` lub `Create`.  
   
 ## <a name="external-databases"></a>Zewnętrznych baz danych  
  Obiekty QueryDef są preferowany sposób użycia natywnego dialekt SQL aparatu zewnętrznej bazy danych. Na przykład można utworzyć kwerendy Transact SQL (tak jak w programie Microsoft SQL Server) i zapisz go w obiekcie querydef. Należy użyć kwerendy SQL nie są oparte na aparacie bazy danych programu Microsoft Jet, musisz podać parametry połączenia, który wskazuje z zewnętrznym źródłem danych. Zapytania z ciągami prawidłowe połączenie obejścia aparatu bazy danych i przekazać zapytanie bezpośrednio na serwer zewnętrznej bazy danych w celu przetwarzania.  
@@ -201,7 +201,7 @@ virtual void Append();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- **Dołącz** querydef jest zapisywany w bazie danych przez dodanie obiektu do bazy danych querydefs — kolekcja. Można użyć obiektu querydef jako tymczasowy obiekt bez dołączenie jej, ale jeśli chcesz, aby utrwalić, należy wywołać **Append**.  
+ `Append` zapisuje querydef w bazie danych przez dodanie obiektu do bazy danych querydefs — kolekcja. Można użyć obiektu querydef jako tymczasowy obiekt bez dołączenie jej, ale jeśli chcesz, aby utrwalić, należy wywołać `Append`.  
   
  Próba dołączenia obiektu querydef tymczasowego MFC zgłasza wyjątek typu [CDaoException](../../mfc/reference/cdaoexception-class.md).  
   
@@ -225,14 +225,14 @@ BOOL CanUpdate();
      Zależy to od tego, czy zostały zaimplementowane funkcje zabezpieczeń. MFC nie zapewnia obsługi zabezpieczeń; musisz zaimplementować ją samodzielnie za wywoływanie obiektów DAO bezpośrednio lub za pomocą programu Microsoft Access. Zobacz temat "Właściwości uprawnień" w pomocy DAO.  
   
 ##  <a name="cdaoquerydef"></a>  CDaoQueryDef::CDaoQueryDef  
- Konstruuje **CDaoQueryDef** obiektu.  
+ Konstruuje `CDaoQueryDef` obiektu.  
   
 ```  
 CDaoQueryDef(CDaoDatabase* pDatabase);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDatabase`  
+ *pDatabase*  
  Wskaźnik do otwartego [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -242,7 +242,7 @@ CDaoQueryDef(CDaoDatabase* pDatabase);
   
 -   Jeśli obiekt reprezentuje nowe querydef można zapisać, wywołanie obiektu [Utwórz](#create) funkcję elementu członkowskiego. Spowoduje to dodanie obiektu do bazy danych querydefs — kolekcja. Następnie wywołaj `CDaoQueryDef` funkcji elementów członkowskich, które można ustawić atrybutów obiektu. Na koniec wywołania [Append](#append).  
   
--   Jeśli obiekt reprezentuje tymczasowe querydef (nie można zapisać w bazie danych), należy wywołać **Utwórz**, przekazywanie pusty ciąg nazwy zapytania. Po wywołaniu **Utwórz**, zainicjować querydef bezpośrednio ustawiając jego atrybuty. Nie wywołuj **Append**.  
+-   Jeśli obiekt reprezentuje tymczasowe querydef (nie można zapisać w bazie danych), należy wywołać `Create`, przekazywanie pusty ciąg nazwy zapytania. Po wywołaniu `Create`, zainicjować querydef bezpośrednio ustawiając jego atrybuty. Nie wywołuj `Append`.  
   
  Aby ustawić atrybuty obiektu QueryDef, można użyć [SetName](#setname), [SetSQL](#setsql), [SetConnect](#setconnect), [SetODBCTimeout](#setodbctimeout)i [SetReturnsRecords](#setreturnsrecords) funkcji elementów członkowskich.  
   
@@ -268,16 +268,16 @@ virtual void Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszName`  
+ *lpszName*  
  Unikatowa nazwa zapytania zapisane w bazie danych. Aby uzyskać więcej informacji o ciągu zobacz temat "CreateQueryDef Method" w pomocy DAO. Jeśli zaakceptuj wartość domyślną, ciągiem pustym querydef tymczasowy zostanie utworzony. Takie kwerendy nie jest zapisany w querydefs — kolekcja.  
   
- `lpszSQL`  
+ *lpszSQL*  
  Ciąg SQL, który definiuje zapytania. Jeśli zaakceptuj wartość domyślną **NULL**, później należy wywołać [SetSQL](#setsql) można ustawić ciąg. Do tego czasu zapytanie jest niezdefiniowany. Można jednak Użyj Niezdefiniowany zapytania, aby Otwórz zestaw rekordów; Aby uzyskać więcej informacji, zobacz uwagi. Instrukcja SQL muszą być zdefiniowane przed querydef można dołączyć do querydefs — kolekcja.  
   
 ### <a name="remarks"></a>Uwagi  
- W przypadku przekazania nazwę w `lpszName`, można wywołać [Append](#append) do zapisania w bazie danych querydefs — kolekcja querydef. W przeciwnym razie obiekt jest tymczasowy querydef i nie został zapisany. W obu przypadkach querydef jest w stanie otwartym i możesz użyć jej do utworzenia [cdaorecordset —](../../mfc/reference/cdaorecordset-class.md) obiektu lub wywołać querydef [Execute](#execute) funkcję elementu członkowskiego.  
+ W przypadku przekazania nazwę w *lpszName*, można wywołać [Append](#append) do zapisania w bazie danych querydefs — kolekcja querydef. W przeciwnym razie obiekt jest tymczasowy querydef i nie został zapisany. W obu przypadkach querydef jest w stanie otwartym i możesz użyć jej do utworzenia [cdaorecordset —](../../mfc/reference/cdaorecordset-class.md) obiektu lub wywołać querydef [Execute](#execute) funkcję elementu członkowskiego.  
   
- Jeśli nie podasz instrukcję SQL w `lpszSQL`, nie można uruchomić zapytania z **Execute** , ale można go utworzyć zestaw rekordów. W takim przypadku MFC używa instrukcji SQL zestawu rekordów domyślne.  
+ Jeśli nie podasz instrukcję SQL w *lpszSQL*, nie można uruchomić zapytania z `Execute` , ale można go utworzyć zestaw rekordów. W takim przypadku MFC używa instrukcji SQL zestawu rekordów domyślne.  
   
 ##  <a name="execute"></a>  CDaoQueryDef::Execute  
  Wywołanie tej funkcji elementu członkowskiego, aby uruchomić zapytanie, zdefiniowane przez obiekt querydef.  
@@ -287,7 +287,7 @@ virtual void Execute(int nOptions = dbFailOnError);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nOptions`  
+ *nOptions*  
  Liczba całkowita, która określa właściwości zapytania. Powiązane informacje zobacz temat "Wykonywanie metody" w pomocy DAO. Można użyć operatora bitowego OR ( **&#124;**) do łączenia się z następujących stałych dla tego argumentu:  
   
 - **dbDenyWrite** Odmów uprawnienie zapisu do innych użytkowników.  
@@ -312,16 +312,16 @@ virtual void Execute(int nOptions = dbFailOnError);
   
 -   Przekazujący zapytania SQL  
   
- **Wykonanie** nie działa w przypadku zapytań zwracających rekordów, takich jak zapytania select. **Wykonanie** jest powszechnie używany do zbiorczego operację zapytania, takie jak **aktualizacji**, **Wstaw**, lub **SELECT INTO**, lub dla operacji (DDL) języka definicji danych.  
+ `Execute` nie działa w przypadku zapytań zwracających rekordów, takich jak zapytania select. `Execute` jest powszechnie używany do zbiorczego operację zapytania, takie jak **aktualizacji**, **Wstaw**, lub **SELECT INTO**, lub dla operacji (DDL) języka definicji danych.  
   
 > [!TIP]
 >  Preferowany sposób pracy z ODBC — źródła danych ma dołączyć tabel do programu Microsoft Jet (. Baza danych MDB). Aby uzyskać więcej informacji zobacz temat "Uzyskiwania dostępu do zewnętrznych baz danych z DAO" w pomocy DAO.  
   
- Wywołanie [GetRecordsAffected](#getrecordsaffected) funkcji członkowskiej klasy obiektem querydef, aby określić liczbę rekordów wpływ najnowszej **Execute** wywołania. Na przykład `GetRecordsAffected` zwraca informacje na temat liczby rekordów usunięty, zaktualizować lub wstawić podczas wykonywania zapytania akcji. Liczba zwrócił nie zreflektuje zmiany w tabelach pokrewnych, gdy w kaskadowego aktualizuje lub usuwa obowiązują.  
+ Wywołanie [GetRecordsAffected](#getrecordsaffected) funkcji członkowskiej klasy obiektem querydef, aby określić liczbę rekordów wpływ najnowszej `Execute` wywołania. Na przykład `GetRecordsAffected` zwraca informacje na temat liczby rekordów usunięty, zaktualizować lub wstawić podczas wykonywania zapytania akcji. Liczba zwrócił nie zreflektuje zmiany w tabelach pokrewnych, gdy w kaskadowego aktualizuje lub usuwa obowiązują.  
   
  Jeśli dołączysz zarówno **dbInconsistent** i **dbConsistent** lub jeśli nie, wynikiem jest wartość domyślna **dbInconsistent**.  
   
- **Wykonanie** nie zwraca zestawu rekordów. Przy użyciu **Execute** na zapytanie wybierające rekordy powoduje, że MFC do zgłoszenia wyjątku typu [CDaoException](../../mfc/reference/cdaoexception-class.md).  
+ `Execute` Zwraca zestaw rekordów. Przy użyciu `Execute` na zapytanie wybierające rekordy powoduje, że MFC do zgłoszenia wyjątku typu [CDaoException](../../mfc/reference/cdaoexception-class.md).  
   
 ##  <a name="getconnect"></a>  CDaoQueryDef::GetConnect  
  Wywołanie tej funkcji członkowskich można pobrać ciągu połączenia skojarzone ze źródłem danych querydef.  
@@ -397,13 +397,13 @@ void GetFieldInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Liczony od zera indeks żądanego pola w kolekcji Fields querydef, wyszukiwanie według indeksu.  
   
- `fieldinfo`  
+ *Element FieldInfo*  
  Odwołanie do `CDaoFieldInfo` obiekt, który zwraca żądane informacje.  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  Opcje, które określają, które informacje o polu do pobrania. Dostępne opcje są wyświetlane tutaj wraz z co spowodują one funkcja zwracająca:  
   
 - `AFX_DAO_PRIMARY_INFO` (Ustawienie domyślne) Nazwa, typ, rozmiar, atrybuty  
@@ -412,11 +412,11 @@ void GetFieldInfo(
   
 - `AFX_DAO_ALL_INFO` Głównych i dodatkowych informacji plus: domyślna wartość tekst sprawdzania poprawności reguły walidacji  
   
- `lpszName`  
+ *lpszName*  
  Ciąg zawierający nazwę żądanego pola wyszukiwania według nazwy. Można użyć [cstring —](../../atl-mfc-shared/reference/cstringt-class.md).  
   
 ### <a name="remarks"></a>Uwagi  
- Opis informacje zwracane w `fieldinfo`, zobacz [cdaofieldinfo —](../../mfc/reference/cdaofieldinfo-structure.md) struktury. Ta struktura ma elementów członkowskich, które odpowiadają opisowe informacje w obszarze `dwInfoOptions` powyżej. Jeśli użytkownik żąda informacji o jeden poziom, możesz uzyskać wszystkie wcześniejsze poziomy również informacje.  
+ Opis informacje zwracane w *fieldinfo*, zobacz [cdaofieldinfo —](../../mfc/reference/cdaofieldinfo-structure.md) struktury. Ta struktura ma elementów członkowskich, które odpowiadają opisowe informacje w obszarze *dwInfoOptions* powyżej. Jeśli użytkownik żąda informacji o jeden poziom, możesz uzyskać wszystkie wcześniejsze poziomy również informacje.  
   
 ##  <a name="getname"></a>  CDaoQueryDef::GetName  
  Wywołaj tę funkcję elementu członkowskiego, aby pobrać nazwę kwerendy reprezentowany przez querydef.  
@@ -479,22 +479,22 @@ void GetParameterInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Liczony od zera indeks żądany parametr w kolekcji parametrów querydef, wyszukiwanie według indeksu.  
   
- `paraminfo`  
+ *paraminfo*  
  Odwołanie do [cdaoparameterinfo —](../../mfc/reference/cdaoparameterinfo-structure.md) obiekt, który zwraca żądane informacje.  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  Opcje, które określają, które informacje dotyczące parametru do pobrania. Opcja dostępna w tym miejscu znajduje oraz co go powoduje, że funkcja zwraca:  
   
 - `AFX_DAO_PRIMARY_INFO` (Ustawienie domyślne) Nazwa, typ  
   
- `lpszName`  
+ *lpszName*  
  Ciąg zawierający nazwę parametru żądaną wyszukiwania według nazwy. Można użyć [cstring —](../../atl-mfc-shared/reference/cstringt-class.md).  
   
 ### <a name="remarks"></a>Uwagi  
- Opis informacje zwracane w `paraminfo`, zobacz [cdaoparameterinfo —](../../mfc/reference/cdaoparameterinfo-structure.md) struktury. Ta struktura ma elementów członkowskich, które odpowiadają opisowe informacje w obszarze `dwInfoOptions` powyżej.  
+ Opis informacje zwracane w *paraminfo*, zobacz [cdaoparameterinfo —](../../mfc/reference/cdaoparameterinfo-structure.md) struktury. Ta struktura ma elementów członkowskich, które odpowiadają opisowe informacje w obszarze *dwInfoOptions* powyżej.  
   
  Powiązane informacje zobacz temat "parametry deklaracji (SQL)" w pomocy DAO.  
   
@@ -507,10 +507,10 @@ virtual COleVariant GetParamValue(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszName`  
+ *lpszName*  
  Nazwa parametru, którego wartość należy do wyszukiwania według nazwy.  
   
- `nIndex`  
+ *nIndex*  
  Liczony od zera indeks parametru w kolekcji Parameters querydef, wyszukiwanie według indeksu. Możesz uzyskać tej wartości z wywołania [GetParameterCount](#getparametercount) i [GetParameterInfo](#getparameterinfo).  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -639,7 +639,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszName`  
+ *lpszName*  
  Ciąg zawierający nazwę zapisanego querydef, aby otworzyć. Można użyć [cstring —](../../atl-mfc-shared/reference/cstringt-class.md).  
   
 ### <a name="remarks"></a>Uwagi  
@@ -653,7 +653,7 @@ void SetConnect(LPCTSTR lpszConnect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszConnect`  
+ *lpszConnect*  
  Ciąg, który zawiera ciąg połączenia skojarzonych z nim [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -674,7 +674,7 @@ void SetName(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszName`  
+ *lpszName*  
  Ciąg, który zawiera nową nazwę dla nontemporary zapytania w skojarzonym [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -711,13 +711,13 @@ virtual void SetParamValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszName`  
+ *lpszName*  
  Nazwa parametru, którego chcesz ustawić wartość.  
   
- `varValue`  
+ *varValue*  
  Wartość do ustawienia; Zobacz uwagi.  
   
- `nIndex`  
+ *nIndex*  
  {Numer porządkowy pozycja parametru w kolekcji Parameters querydef. Możesz uzyskać tej wartości z wywołania [GetParameterCount](#getparametercount) i [GetParameterInfo](#getparameterinfo).  
   
 ### <a name="remarks"></a>Uwagi  
@@ -747,7 +747,7 @@ void SetSQL(LPCTSTR lpszSQL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszSQL`  
+ *lpszSQL*  
  Ciąg zawierający pełną instrukcję SQL, odpowiedni w przypadku wykonywania. Składnia tego ciągu zależy od systemu DBMS który celów zapytania. Omówienie składni stosowanej w aparacie bazy danych programu Microsoft Jet zobacz temat "Building instrukcje w kodu SQL" w pomocy DAO.  
   
 ### <a name="remarks"></a>Uwagi  

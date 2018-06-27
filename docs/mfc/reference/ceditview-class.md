@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b15d604670ec1c458c6ca8db5b3b4eab51fb8f65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5fb6e03e521b52e47b3c8853e2f6aa632614c55
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371546"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953404"
 ---
 # <a name="ceditview-class"></a>Klasa CEditView
 Typ widoku klasy, która udostępnia funkcje systemu Windows formantu edycyjnego i może służyć do implementowania prostego edytora tekstu.  
@@ -103,7 +103,7 @@ class CEditView : public CCtrlView
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CEditView::dwStyleDefault](#dwstyledefault)|Domyślny styl dla obiektów typu **CEditView.**|  
+|[CEditView::dwStyleDefault](#dwstyledefault)|Domyślny styl dla obiektów typu `CEditView`.|  
   
 ## <a name="remarks"></a>Uwagi  
  `CEditView` Klasy oferuje następujące dodatkowe funkcje:  
@@ -160,7 +160,7 @@ CEditView();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Po konstruowania obiektu, należy wywołać [CWnd::Create](../../mfc/reference/cwnd-class.md#create) działać, zanim będzie można użyć kontrolki edycji. Jeśli pochodzi z klasy `CEditView` i dodaj go do szablonu, za pomocą `CWinApp::AddDocTemplate`, struktura wywołuje zarówno ten konstruktor i **Utwórz** funkcji.  
+ Po konstruowania obiektu, należy wywołać [CWnd::Create](../../mfc/reference/cwnd-class.md#create) działać, zanim będzie można użyć kontrolki edycji. Jeśli pochodzi z klasy `CEditView` i dodaj go do szablonu, za pomocą `CWinApp::AddDocTemplate`, struktura wywołuje zarówno ten konstruktor i `Create` funkcji.  
   
 ##  <a name="dwstyledefault"></a>  CEditView::dwStyleDefault  
  Domyślny styl zawiera `CEditView` obiektu.  
@@ -170,7 +170,7 @@ static const DWORD dwStyleDefault;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Przekaż ten statyczny element członkowski jako `dwStyle` parametr **Utwórz** aby otrzymać domyślny styl `CEditView` obiektu.  
+ Przekaż ten statyczny element członkowski jako `dwStyle` parametr `Create` aby otrzymać domyślny styl `CEditView` obiektu.  
   
 ##  <a name="findtext"></a>  CEditView::FindText  
  Wywołanie `FindText` funkcja wyszukiwania `CEditView` buforu tekstu obiektu.  
@@ -183,20 +183,20 @@ BOOL FindText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFind`  
+ *lpszFind*  
  Tekst, który ma zostać odnaleziona.  
   
- `bNext`  
+ *bDalej*  
  Określa kierunek wyszukiwania. Jeśli **TRUE**, jest skierowany wyszukiwania do końca buforu. Jeśli **FALSE**, kierunek wyszukiwania jest początku buforu.  
   
- `bCase`  
+ *bCase*  
  Określa, czy wyszukiwanie uwzględnia wielkość liter. Jeśli **TRUE**, wyszukiwanie jest rozróżniana wielkość liter. Jeśli **FALSE**, wyszukiwanie nie jest uwzględniana wielkość liter.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli zostanie znaleziony tekst; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja wyszukuje tekst w buforze dla tekstu określonego przez `lpszFind`, rozpoczynając od bieżącego zaznaczenia w kierunku określony przez `bNext`oraz o wielkości liter, określony przez `bCase`. Jeśli tekst zostanie znaleziony, ustawia zaznaczenie znaleziony tekst i zwraca wartość różną od zera. Jeśli tekst nie zostanie znaleziony, funkcja zwraca wartość 0.  
+ Ta funkcja wyszukuje tekst w buforze dla tekstu określonego przez *lpszFind*, rozpoczynając od bieżącego zaznaczenia w kierunku określony przez *bDalej*oraz o wielkości liter, określony przez *bCase*. Jeśli tekst zostanie znaleziony, ustawia zaznaczenie znaleziony tekst i zwraca wartość różną od zera. Jeśli tekst nie zostanie znaleziony, funkcja zwraca wartość 0.  
   
  Zwykle nie trzeba wywołać `FindText` działać, chyba że nadpiszesz `OnFindNext`, które wywołuje `FindText`.  
   
@@ -252,7 +252,7 @@ void GetSelectedText(CString& strResult) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `strResult`  
+ *strResult*  
  Odwołanie do `CString` obiektu, który ma otrzymać zaznaczony tekst.  
   
 ##  <a name="lockbuffer"></a>  CEditView::LockBuffer  
@@ -266,7 +266,7 @@ LPCTSTR LockBuffer() const;
  Wskaźnik do kontrolki edycji buforu.  
   
 ##  <a name="onfindnext"></a>  CEditView::OnFindNext  
- Wyszukuje tekst w buforze dla tekstu określonego przez `lpszFind`, w tym kierunku określony przez `bNext`, o wielkości liter, określony przez `bCase`.  
+ Wyszukuje tekst w buforze dla tekstu określonego przez *lpszFind*, w tym kierunku określony przez *bDalej*, o wielkości liter, określony przez *bCase*.  
   
 ```  
 virtual void OnFindNext(
@@ -276,13 +276,13 @@ virtual void OnFindNext(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFind`  
+ *lpszFind*  
  Tekst, który ma zostać odnaleziona.  
   
- `bNext`  
+ *bDalej*  
  Określa kierunek wyszukiwania. Jeśli **TRUE**, jest skierowany wyszukiwania do końca buforu. Jeśli **FALSE**, kierunek wyszukiwania jest początku buforu.  
   
- `bCase`  
+ *bCase*  
  Określa, czy wyszukiwanie uwzględnia wielkość liter. Jeśli **TRUE**, wyszukiwanie jest rozróżniana wielkość liter. Jeśli **FALSE**, wyszukiwanie nie jest uwzględniana wielkość liter.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -301,19 +301,19 @@ virtual void OnReplaceAll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFind`  
+ *lpszFind*  
  Tekst, który ma zostać odnaleziona.  
   
- `lpszReplace`  
+ *lpszReplace*  
  Tekst, który zastępuje tekst wyszukiwania.  
   
- `bCase`  
+ *bCase*  
  Określa, czy wyszukiwanie uwzględnia wielkość liter. Jeśli **TRUE**, wyszukiwanie jest rozróżniana wielkość liter. Jeśli **FALSE**, wyszukiwanie nie jest uwzględniana wielkość liter.  
   
 ### <a name="remarks"></a>Uwagi  
- `OnReplaceAll` Wyszukiwanie tekstu w buforze dla tekstu określonego przez `lpszFind`, o wielkości liter, określony przez `bCase`. Wyszukiwanie rozpoczyna się na początku bieżącego zaznaczenia. Zawsze wyszukiwany tekst zostanie znaleziony, ta funkcja zastępuje to wystąpienie tekstu tekstu określonego przez `lpszReplace`. Wyszukiwanie odbywa się za pośrednictwem wywołania [ciąg FindText](#findtext). W implementacji domyślnej [OnTextNotFound](#ontextnotfound) jest wywoływana, gdy tekst nie zostanie znaleziony.  
+ `OnReplaceAll` Wyszukiwanie tekstu w buforze dla tekstu określonego przez *lpszFind*, o wielkości liter, określony przez *bCase*. Wyszukiwanie rozpoczyna się na początku bieżącego zaznaczenia. Zawsze wyszukiwany tekst zostanie znaleziony, ta funkcja zastępuje tekstu określonego przez to wystąpienie tekstu *lpszReplace*. Wyszukiwanie odbywa się za pośrednictwem wywołania [ciąg FindText](#findtext). W implementacji domyślnej [OnTextNotFound](#ontextnotfound) jest wywoływana, gdy tekst nie zostanie znaleziony.  
   
- Jeśli bieżące zaznaczenie nie odpowiada `lpszFind`, zaznaczenie jest aktualizowana w celu pierwszego wystąpienia tekstu określonego przez `lpszFind` i zamiany nie jest wykonywana. Dzięki temu użytkownikowi potwierdzić, że jest to chcą robić, jeśli zaznaczenie jest niezgodna z tekst do zastąpienia.  
+ Jeśli bieżące zaznaczenie nie odpowiada *lpszFind*, zaznaczenie jest aktualizowana w celu pierwszego wystąpienia tekstu określonego przez *lpszFind* i zamiany nie jest wykonywana. Dzięki temu użytkownikowi potwierdzić, że jest to chcą robić, jeśli zaznaczenie jest niezgodna z tekst do zastąpienia.  
   
  Zastąpienie `OnReplaceAll` zmienić sposób `CEditView`-obiektu pochodnego zamienia tekst.  
   
@@ -329,20 +329,20 @@ virtual void OnReplaceSel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFind`  
+ *lpszFind*  
  Tekst, który ma zostać odnaleziona.  
   
- `bNext`  
+ *bDalej*  
  Określa kierunek wyszukiwania. Jeśli **TRUE**, jest skierowany wyszukiwania do końca buforu. Jeśli **FALSE**, kierunek wyszukiwania jest początku buforu.  
   
- `bCase`  
+ *bCase*  
  Określa, czy wyszukiwanie uwzględnia wielkość liter. Jeśli **TRUE**, wyszukiwanie jest rozróżniana wielkość liter. Jeśli **FALSE**, wyszukiwanie nie jest uwzględniana wielkość liter.  
   
- `lpszReplace`  
+ *lpszReplace*  
  Tekst, który ma zastąpić znaleziony tekst.  
   
 ### <a name="remarks"></a>Uwagi  
- Po wymianie zaznaczenie, ta funkcja wyszukuje tekst w buforze na następne wystąpienie tekstu określonego przez `lpszFind`, w kierunku określony przez `bNext`, o wielkości liter, określony przez `bCase`. Wyszukiwanie odbywa się za pośrednictwem wywołania [ciąg FindText](#findtext). Jeśli tekst nie zostanie znaleziony, [OnTextNotFound](#ontextnotfound) jest wywoływana.  
+ Po wymianie zaznaczenie, ta funkcja wyszukuje tekst w buforze na następne wystąpienie tekstu określonego przez *lpszFind*, w kierunku określony przez *bDalej*, z rozróżniania wielkości liter. określony przez *bCase*. Wyszukiwanie odbywa się za pośrednictwem wywołania [ciąg FindText](#findtext). Jeśli tekst nie zostanie znaleziony, [OnTextNotFound](#ontextnotfound) jest wywoływana.  
   
  Zastąpienie `OnReplaceSel` zmienić sposób `CEditView`-obiektu pochodnego zastępuje zaznaczonego tekstu.  
   
@@ -354,7 +354,7 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFind`  
+ *lpszFind*  
  Tekst, który ma zostać odnaleziona.  
   
 ##  <a name="printinsiderect"></a>  CEditView::PrintInsideRect  
@@ -369,16 +369,16 @@ UINT PrintInsideRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia drukarki.  
   
  *rectLayout*  
  Odwołanie do [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [struktura RECT](../../mfc/reference/rect-structure1.md) Określanie prostokąt, w którym ma być renderowany tekst.  
   
- `nIndexStart`  
+ *nIndexStart*  
  Indeks pierwszego znaku do renderowania buforu.  
   
- `nIndexStop`  
+ *nIndexStop*  
  Indeks w buforze znaków po ostatnim znaku do renderowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -397,21 +397,21 @@ void SerializeRaw(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ar`  
+ *ar*  
  Odwołanie do `CArchive` obiekt, który przechowuje tekst serializacji.  
   
 ### <a name="remarks"></a>Uwagi  
  `SerializeRaw` różni się od `CEditView`w wewnętrznej implementacji `Serialize` w tym odczytuje i zapisuje tylko tekst bez poprzedzających opis obiektu danych.  
   
 ##  <a name="setprinterfont"></a>  CEditView::SetPrinterFont  
- Wywołanie `SetPrinterFont` do ustawienia czcionki drukarki do czcionki określony przez `pFont`.  
+ Wywołanie `SetPrinterFont` do ustawienia czcionki drukarki do czcionki określony przez *pFont*.  
   
 ```  
 void SetPrinterFont(CFont* pFont);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pFont`  
+ *pFont*  
  Wskaźnik do obiektu typu `CFont`. Jeśli **NULL**, czcionka używana na potrzeby drukowania jest oparta na wyświetlanie czcionek.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -425,7 +425,7 @@ void SetTabStops(int nTabStops);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nTabStops`  
+ *nTabStops*  
  Szerokość każdego tabulatora, w jednostkach okna dialogowego.  
   
 ### <a name="remarks"></a>Uwagi  

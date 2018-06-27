@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1032ffac46af6370c45f4bcb2c251ddae73ce69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48c431ecbcc415776ff9accfb68004c7c8e46d34
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356399"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952329"
 ---
 # <a name="canimatectrl-class"></a>Canimatectrl — klasa
 Udostępnia funkcje formantu animacji wspólne systemu Windows.  
@@ -146,23 +146,23 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
+ *dwStyle*  
  Określa styl formantu animacji. Zastosuj dowolną kombinację windows szczegółowo opisane w poniższej sekcji uwag i stylów formantu animacji style [stylów formantu animacji](http://msdn.microsoft.com/library/windows/desktop/bb761886) w zestawie Windows SDK.  
   
- `rect`  
+ *Rect*  
  Określa położenie i rozmiar formantu animacji. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [RECT](../../mfc/reference/rect-structure1.md) struktury.  
   
- `pParentWnd`  
- Określa okno nadrzędne kontrolki animacji, zwykle `CDialog`. Nie może być **wartości NULL.**  
+ *pParentWnd*  
+ Określa okno nadrzędne kontrolki animacji, zwykle `CDialog`. Nie może być **NULL**.  
   
- `nID`  
+ *nID*  
  Określa identyfikator formantu animacji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie wartość zero.  
   
 ### <a name="remarks"></a>Uwagi  
- Możesz utworzyć `CAnimateCtrl` w dwóch krokach. Najpierw należy wywołać konstruktora, a następnie wywołać **Utwórz**, która tworzy kontrolkę animacji i dołącza go do `CAnimateCtrl` obiektu.  
+ Możesz utworzyć `CAnimateCtrl` w dwóch krokach. Najpierw należy wywołać konstruktora, a następnie wywołać `Create`, która tworzy kontrolkę animacji i dołącza go do `CAnimateCtrl` obiektu.  
   
  Zastosuj następujące [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles) do formantu animacji.  
   
@@ -172,7 +172,7 @@ virtual BOOL Create(
   
 - **Ws_disabled —** rzadko  
   
- Jeśli chcesz style rozszerzonej systemu windows za pomocą formantu animacji, wywołanie [CreateEx](#createex) zamiast **Utwórz**.  
+ Jeśli chcesz style rozszerzonej systemu windows za pomocą formantu animacji, wywołanie [CreateEx](#createex) zamiast `Create`.  
   
  Oprócz Style okna wymienionych powyżej możesz zastosować przynajmniej jednej stylów formantu animacji do formantu animacji. Zobacz Windows SDK, aby uzyskać więcej informacji na [stylów formantu animacji](http://msdn.microsoft.com/library/windows/desktop/bb761886).  
   
@@ -192,19 +192,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwExStyle`  
- Określa styl rozszerzony formantu tworzona. Aby uzyskać listę rozszerzone style systemu Windows, zobacz `dwExStyle` parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ *dwExStyle*  
+ Określa styl rozszerzony formantu tworzona. Aby uzyskać listę rozszerzone style systemu Windows, zobacz *dwExStyle* parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Określa styl formantu animacji. Zastosuj dowolną kombinację okna i stylów formantu animacji opisanych w [stylów formantu animacji](http://msdn.microsoft.com/library/windows/desktop/bb761886) w zestawie Windows SDK.  
   
- `rect`  
- Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujące rozmiar i położenie okna, które ma zostać utworzony w współrzędne klienta `pParentWnd`.  
+ *Rect*  
+ Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujące rozmiar i położenie okna, które ma zostać utworzony w współrzędne klienta *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do okna, które jest elementem nadrzędnym formantu.  
   
- `nID`  
+ *nID*  
  Identyfikator formantu okna podrzędnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -235,10 +235,10 @@ BOOL Open(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFileName`  
+ *lpszFileName*  
  A `CString` obiekt lub wskaźnik do zerem ciąg, który zawiera nazwę pliku AVI albo nazwa zasobu AVI. Jeśli ten parametr ma **NULL**, system zamyka klip AVI, który został uprzednio otwarty dla formantu animacji, jeśli istnieje.  
   
- `nID`  
+ *nID*  
  Identyfikator zasobu AVI. Jeśli ten parametr ma **NULL**, system zamyka klip AVI, który został uprzednio otwarty dla formantu animacji, jeśli istnieje.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -269,10 +269,10 @@ BOOL Play(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nFrom`  
+ *NZ*  
  Liczony od zera indeks ramki, w którym rozpoczyna się odtwarzanie. Wartość musi być mniejsza niż 65536. Wartość 0 oznacza, że rozpoczynać się od pierwszej ramki w klip AVI.  
   
- `nTo`  
+ *nAby*  
  Liczony od zera indeks klatki którym odtwarzanie kończy się. Wartość musi być mniejsza niż 65536. Wartość - 1 oznacza kończyć ostatniej ramki w klip AVI.  
   
  *nRep*  
@@ -295,7 +295,7 @@ BOOL Seek(UINT nTo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nTo`  
+ *nAby*  
  Liczony od zera indeks ramki do wyświetlenia. Wartość musi być mniejsza niż 65536. Wartość 0 oznacza wyświetlenie pierwszej ramki w klip AVI. Wartość -1 oznacza wyświetlenie ramki ostatniego w klip AVI.  
   
 ### <a name="return-value"></a>Wartość zwracana  

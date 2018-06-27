@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f19939a50b5bdbf98d087450b6301a923651a433
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f349c955724b66ccc8cb1b19fc826ca0b8354258
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385099"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951952"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Wskazówki: używanie nowych formantów powłoki MFC
 W tym przewodniku utworzysz aplikację, która jest podobny Eksploratora plików. Utworzysz okna, który zawiera dwa okienka. W okienku po lewej stronie będzie zawierać [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) obiekt, który wyświetla pulpitu w hierarchiczny widok. Okienku po prawej stronie będzie zawierać [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) który zawiera pliki w folderze, który wybrano w okienku po lewej stronie.  
@@ -31,7 +31,7 @@ W tym przewodniku utworzysz aplikację, która jest podobny Eksploratora plików
   
 1.  Użyj **Kreator aplikacji MFC** do utworzenia nowej aplikacji MFC. Aby uruchomić kreatora, z **pliku** menu wybierz opcję **nowy**, a następnie wybierz **projektu**. **Nowy projekt** wyświetli się okno dialogowe.  
   
-2.  W **nowy projekt** okna dialogowego rozwiń **Visual C++** w węźle **typy projektów** okienka, a następnie wybierz **MFC**. Następnie w **szablony** okienku wybierz **aplikacji MFC**. Wpisz nazwę projektu, takie jak `MFCShellControls` i kliknij przycisk **OK**. **Kreator aplikacji MFC** będą wyświetlane.  
+2.  W **nowy projekt** okna dialogowego rozwiń **Visual C++** w węźle **typy projektów** okienka, a następnie wybierz **MFC**. Następnie w **szablony** okienku wybierz **aplikacji MFC**. Wpisz nazwę projektu, takie jak *MFCShellControls* i kliknij przycisk **OK**. **Kreator aplikacji MFC** będą wyświetlane.  
   
 3.  W **Kreator aplikacji MFC** okno dialogowe, kliknij przycisk **dalej**. **Typu aplikacji** pojawi się okienko.  
   
@@ -65,18 +65,21 @@ W tym przewodniku utworzysz aplikację, która jest podobny Eksploratora plików
   
      Teraz dodać zmiennej członka typu `CMFCShellListCtrl`. Po pierwsze Znajdź poniższy komentarz w pliku nagłówka:  
   
- "" * / / Wygenerowany funkcje mapy wiadomości  
+ ``` 
+    // Generated message map functions  
  ```  
   
-     Immediately above that comment add this code:  
+     Natychmiast powyżej tego komentarza, Dodaj ten kod:  
   
  ```  
-    prywatne: CMFCShellListCtrl m_wndList;  
+    private: 
+    CMFCShellListCtrl m_wndList;  
  ```  
   
-2.  The **MFC Application Wizard** already created a `CMFCShellTreeCtrl` object in the `CMainFrame` class, but it is a protected member. We will access this object later. Therefore, create an accessor for it now. Open the MainFrm.h header file by double-clicking it in the **Solution Explorer**. Locate the following comment:  
+2.  **Kreator aplikacji MFC** już utworzone `CMFCShellTreeCtrl` obiektu w `CMainFrame` klasy, ale jest chroniony element członkowski. Firma Microsoft będą uzyskiwać dostęp do tego obiektu później. W związku z tym teraz utworzyć metody dostępu dla niego. Otwórz plik nagłówka MainFrm.h, klikając go w **Eksploratora rozwiązań**. Znajdź następujący komentarza:  
   
- ``` *// Attributes  
+ ``` 
+    // Attributes  
  ```  
   
      Natychmiast w nim, należy dodać następujące deklaracji metody:  
@@ -84,66 +87,50 @@ W tym przewodniku utworzysz aplikację, która jest podobny Eksploratora plików
  ```  
     public: 
     CMFCShellTreeCtrl& GetShellTreeCtrl();
-
  ```  
   
      Następnie otwórz plik źródłowy MainFrm.cpp przez dwukrotne kliknięcie w **Eksploratora rozwiązań**. W dolnej części tego pliku Dodaj następującą definicję metody:  
   
  ```  
     CMFCShellTreeCtrl& CMainFrame::GetShellTreeCtrl()  
- {  
-    return m_wndTree;  
- }  
+    {  
+        return m_wndTree;  
+    }  
  ```  
   
-3.  Teraz możemy zaktualizować `CMFCShellControlsView` klasy do obsługi **WM_CREATE** komunikatów systemu windows. Otwórz plik nagłówka MFCShellControlsView.h i kliknij w tym wierszu kodu:  
+3.  Teraz możemy zaktualizować `CMFCShellControlsView` klasy do obsługi komunikatów systemu windows WM_CREATE. Otwórz plik nagłówka MFCShellControlsView.h i kliknij w tym wierszu kodu:  
   
  ```  
     class CMFCShellControlsView : public CView  
  ```  
   
-     Następnie w **właściwości** okna, kliknij przycisk **wiadomości** ikony. Przewiń w dół do pozycji **WM_CREATE** wiadomości. Z listy rozwijanej listy w polu **WM_CREATE**, wybierz pozycję  **\<Dodaj > OnCreate**. Tworzy program obsługi komunikatów w firmie Microsoft i automatycznie aktualizuje mapy komunikatów MFC.  
+     Następnie w **właściwości** okna, kliknij przycisk **wiadomości** ikony. Przewiń w dół do momentu znalezienia WM_CREATE wiadomości. Wybierz z listy rozwijanej obok WM_CREATE,  *\<Dodaj > OnCreate*. Tworzy program obsługi komunikatów w firmie Microsoft i automatycznie aktualizuje mapy komunikatów MFC.  
   
      W `OnCreate` metody teraz utworzymy naszych `CMFCShellListCtrl` obiektu. Znajdź `OnCreate` definicji metody w MFCShellControlsView.cpp plik źródłowy i zastąp jego implementacja następującym kodem:  
   
  ```  
     int CMFCShellControlsView::OnCreate(LPCREATESTRUCT lpCreateStruct)  
- {  
-    if (CView::OnCreate(lpCreateStruct) == -1)  
-    return -1;  
- 
-    CRect rectDummy (0,
-    0,
-    0,
-    0);
-
-    m_wndList.Create(WS_CHILD | WS_VISIBLE | LVS_REPORT,  
-    rectDummy,
-    this,
-    1);
-
- 
-    return 0;  
- }  
+    {  
+        if (CView::OnCreate(lpCreateStruct) == -1)  
+            return -1;  
+     
+        CRect rectDummy (0, 0, 0, 0);
+    
+        m_wndList.Create(WS_CHILD | WS_VISIBLE | LVS_REPORT, rectDummy, this, 1);
+    
+        return 0;  
+    }  
  ```  
   
-4.  Powtórz poprzedni krok, ale **WM_SIZE** wiadomości. Spowoduje to widoku aplikacji narysowania zawsze, gdy użytkownik zmienia rozmiar okna aplikacji. Zastąp definicję `OnSize` metodę z następującym kodem:  
+4.  Powtórz poprzedni krok, ale dla WM_SIZE komunikatu. Spowoduje to widoku aplikacji narysowania zawsze, gdy użytkownik zmienia rozmiar okna aplikacji. Zastąp definicję `OnSize` metodę z następującym kodem:  
   
  ```  
-    void CMFCShellControlsView::OnSize(UINT nType,
-    int cx,
-    int cy)  
- {  
-    CView::OnSize(nType,
-    cx,
-    cy);
-
-    m_wndList.SetWindowPos(NULL, -1, -1,
-    cx,
-    cy,  
-    SWP_NOMOVE | SWP_NOZORDER | SWP_NOACTIVATE);
-
- }  
+    void CMFCShellControlsView::OnSize(UINT nType, int cx, int cy)  
+    {  
+        CView::OnSize(nType, cx, cy);
+    
+        m_wndList.SetWindowPos(NULL, -1, -1, cx, cy, SWP_NOMOVE | SWP_NOZORDER | SWP_NOACTIVATE);
+    }  
  ```  
   
 5.  Ostatnim krokiem jest podłączenie `CMFCShellTreeCtrl` i `CMFCShellListCtrl` obiektów przy użyciu [CMFCShellTreeCtrl::SetRelatedList](../mfc/reference/cmfcshelltreectrl-class.md#setrelatedlist) metody. Po wywołaniu tej metody `CMFCShellListCtrl` zostanie automatycznie wyświetlona zawartość elementu wybranego w `CMFCShellTreeCtrl`. Spowoduje to wykonanie `OnActivateView` metodę, która zostanie zastąpiona z [CView::OnActivateView](../mfc/reference/cview-class.md#onactivateview).  
@@ -152,30 +139,21 @@ W tym przewodniku utworzysz aplikację, która jest podobny Eksploratora plików
   
  ```  
     protected: 
-    virtual void OnActivateView(BOOL bActivate,  
-    CView* pActivateView,  
-    CView* pDeactiveView);
-
+    virtual void OnActivateView(BOOL bActivate, CView* pActivateView, CView* pDeactiveView);
  ```  
   
      Następnie dodaj definicję dla tej metody w pliku źródłowym MFCShellControlsView.cpp:  
   
  ```  
-    void CMFCShellControlsView::OnActivateView(BOOL bActivate,  
-    CView* pActivateView,  
-    CView* pDeactiveView)   
- {  
-    if (bActivate&& AfxGetMainWnd() != NULL)  
- {  
- ((CMainFrame*)AfxGetMainWnd())->GetShellTreeCtrl().SetRelatedList(&m_wndList);
-
- }  
- 
-    CView::OnActivateView(bActivate,
-    pActivateView,
-    pDeactiveView);
-
- }  
+    void CMFCShellControlsView::OnActivateView(BOOL bActivate, CView* pActivateView, CView* pDeactiveView)   
+    {  
+        if (bActivate&& AfxGetMainWnd() != NULL)  
+        {  
+            ((CMainFrame*)AfxGetMainWnd())->GetShellTreeCtrl().SetRelatedList(&m_wndList);
+        }  
+     
+        CView::OnActivateView(bActivate, pActivateView, pDeactiveView);
+    }  
  ```  
   
      Ponieważ wywołania metody `CMainFrame` klasy, możemy dodać `#include` dyrektywy w górnej części pliku źródłowego MFCShellControlsView.cpp:  
@@ -198,4 +176,3 @@ W tym przewodniku utworzysz aplikację, która jest podobny Eksploratora plików
   
 ## <a name="see-also"></a>Zobacz też  
  [Przewodniki](../mfc/walkthroughs-mfc.md)
-

@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c76dc44993615e17ea3d99f9ac018a748e24d0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6d4fcfbe8e8e7eb174f85ced03bec822b4968bde
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381013"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954338"
 ---
 # <a name="using-an-unclipped-device-context"></a>Używanie nieobcinanego kontekstu urządzenia
-Jeśli masz pewność, że formantu nie można malować poza obszarem prostokąta jego klienta, można zrealizować korzyści szybkości mały, ale wykrywalny przez wyłączenie wywołanie `IntersectClipRect` który dokonuje `COleControl`. Aby to zrobić, należy usunąć **clipPaintDC** flagi z zestawu flagi zwrócony przez [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Na przykład:  
+Jeśli masz pewność, że formantu nie można malować poza obszarem prostokąta jego klienta, można zrealizować korzyści szybkości mały, ale wykrywalny przez wyłączenie wywołanie `IntersectClipRect` który dokonuje `COleControl`. Aby to zrobić, należy usunąć *clipPaintDC* flagi z zestawu flagi zwrócony przez [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Na przykład:  
   
  [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/using-an-unclipped-device-context_1.cpp)]  
 [!code-cpp[NVC_MFC_AxOpt#14](../mfc/codesnippet/cpp/using-an-unclipped-device-context_2.cpp)]  

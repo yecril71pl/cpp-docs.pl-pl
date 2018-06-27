@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2d55768f423feef3b5093ec0af6365aecfaafee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cfe91812d178618b1707f99aa10d6bd492109069
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385112"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956798"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Wskazówki: Aktualizowanie aplikacji bazgrołów MFC (część 1)
 W tym przewodniku przedstawiono sposób modyfikowania istniejącej aplikacji MFC korzystanie ze Wstążki. Program Visual Studio obsługuje zarówno wstążki pakietu Office 2007 i Windows 7 scen wstążki. Aby uzyskać więcej informacji na temat interfejsu użytkownika wstążki, zobacz [wstążek](http://go.microsoft.com/fwlink/p/?linkid=129233) w witrynie MSDN.  
@@ -186,31 +186,31 @@ W tym przewodniku przedstawiono sposób modyfikowania istniejącej aplikacji MFC
   
 3.  Przycisk aplikacji można dostosować, modyfikując jego właściwości. Identyfikatory komunikatów, które są używane w ten kod jest już zdefiniowany w menu Bazgroły 1.0.  
   
-4.  W widoku Projekt kliknij przycisk aplikacji, aby wyświetlić jego właściwości. Zmień wartości właściwości w następujący sposób: **obrazu** do `IDB_RIBBON_MAIN`, **monitu** do `File`, **klucze** do `f`, **duże obrazy** do `IDB_RIBBON_FILELARGE`, i **małe obrazy** do `IDB_RIBBON_FILESMALL`.  
+4.  W widoku Projekt kliknij przycisk aplikacji, aby wyświetlić jego właściwości. Zmień wartości właściwości w następujący sposób: **obrazu** do *IDB_RIBBON_MAIN*, **monitu** do *pliku*, **klucze** Aby *f*, **duże obrazy** do *IDB_RIBBON_FILELARGE*, i **małe obrazy** do *IDB_RIBBON_ FILESMALL*.  
   
 5.  Poniższe modyfikacje tworzenie menu wyświetlanym po kliknięciu przycisku aplikacji. Kliknij przycisk wielokropka (**...** ) obok pozycji **elementy główne** otworzyć **Edytor elementów**.  
   
-    1.  Kliknij przycisk **Dodaj** w celu dodania przycisku. Zmień **podpis** do `&New`, **identyfikator** do `ID_FILE_NEW`, **obrazu** do `0`, **duży obraz** do `0`.  
+    1.  Kliknij przycisk **Dodaj** w celu dodania przycisku. Zmień **podpis** do *& nowym*, **identyfikator** do *id_file_new —*, **obrazu** do *0*, **Duży obraz** do *0*.  
   
-    2.  Kliknij przycisk **Dodaj** w celu dodania drugiego przycisku. Zmień **podpis** do `&Save`, **identyfikator** do `ID_FILE_SAVE`, **obrazu** do `2`, i **duży obraz** do `2`.  
+    2.  Kliknij przycisk **Dodaj** w celu dodania drugiego przycisku. Zmień **podpis** do *Zapisz &*, **identyfikator** do *id_file_save —*, **obrazu** do *2* , i **duży obraz** do *2*.  
   
-    3.  Kliknij przycisk **Dodaj** na trzeci przycisk Dodaj. Zmień **podpis** do `Save &As`, **identyfikator** do `ID_FILE_SAVE_AS`, **obrazu** do `3`, i **duży obraz** do `3`.  
+    3.  Kliknij przycisk **Dodaj** na trzeci przycisk Dodaj. Zmień **podpis** do *Zapisz jako &*, **identyfikator** do *id_file_save_as —*, **obrazu** do *3*, i **duży obraz** do *3*.  
   
-    4.  Kliknij przycisk **Dodaj** do czwarty przycisk Dodaj. Zmień **podpis** do `&Print`, **identyfikator** do `ID_FILE_PRINT`, **obrazu** do `4`, i **duży obraz** do `4`.  
+    4.  Kliknij przycisk **Dodaj** do czwarty przycisk Dodaj. Zmień **podpis** do *& Drukuj*, **identyfikator** do *id_file_print —*, **obrazu** do *4* , i **duży obraz** do *4*.  
   
     5.  Zmień **elementu** typ **separatora** , a następnie kliknij przycisk **Dodaj**.  
   
-    6.  Zmień **elementu** typ **przycisk**. Kliknij przycisk **Dodaj** do piąty przycisk Dodaj. Zmień **podpis** do `&Close`, **identyfikator** do `ID_FILE_CLOSE`, **obrazu** do `5`, i **duży obraz** do `5`.  
+    6.  Zmień **elementu** typ **przycisk**. Kliknij przycisk **Dodaj** do piąty przycisk Dodaj. Zmień **podpis** do *& Zamknij*, **identyfikator** do *id_file_close —*, **obrazu** do *5* , i **duży obraz** do *5*.  
   
 6.  Poniższe modyfikacje utworzyć podmenu po kliknięciu przycisku Drukuj utworzony w poprzednim kroku.  
   
-    1.  Kliknij przycisk **drukowania** przycisku, zmień **elementu** typ **etykiety**, a następnie kliknij przycisk **Wstaw**. Zmień **podpis** do `Preview and print the document`.  
+    1.  Kliknij przycisk **drukowania** przycisku, zmień **elementu** typ **etykiety**, a następnie kliknij przycisk **Wstaw**. Zmień **podpis** do *Podgląd i drukować dokument*.  
   
-    2.  Kliknij przycisk **drukowania** przycisku, zmień **elementu** typ **przycisk**i kliknij przycisk **Wstaw**. Zmień **podpis** do `&Print`, **identyfikator** do `ID_FILE_PRINT`, **obrazu** do `4`, i **duży obraz** do `4`.  
+    2.  Kliknij przycisk **drukowania** przycisku, zmień **elementu** typ **przycisk**i kliknij przycisk **Wstaw**. Zmień **podpis** do *& Drukuj*, **identyfikator** do *id_file_print —*, **obrazu** do *4* , i **duży obraz** do *4*.  
   
-    3.  Kliknij przycisk **drukowania** przycisk, a następnie kliknij przycisk **Wstaw** w celu dodania przycisku. Zmień **podpis** do `&Quick Print`, **identyfikator** do `ID_FILE_PRINT_DIRECT`, **obrazu** do `7`, i **duży obraz** do `7`.  
+    3.  Kliknij przycisk **drukowania** przycisk, a następnie kliknij przycisk **Wstaw** w celu dodania przycisku. Zmień **podpis** do *& Szybkie drukowania*, **identyfikator** do *ID_FILE_PRINT_DIRECT*, **obrazu** do *7*, i **duży obraz** do *7*.  
   
-    4.  Kliknij przycisk **drukowania** przycisk, a następnie kliknij przycisk **Wstaw** można dodać inny przycisk. Zmień **podpis** do `Print Pre&view`, **identyfikator** do `ID_FILE_PRINT_PREVIEW`, **obrazu** do `6`, i **duży obraz** do `6`.  
+    4.  Kliknij przycisk **drukowania** przycisk, a następnie kliknij przycisk **Wstaw** można dodać inny przycisk. Zmień **podpis** do *& Podgląd wydruku*, **identyfikator** do *id_file_print_preview —*, **obrazu** do *6*, i **duży obraz** do *6*.  
   
     5.  Teraz zmodyfikowano **elementy główne**. Kliknij przycisk **Zamknij** aby zakończyć **Edytor elementów**.  
   
@@ -218,7 +218,7 @@ W tym przewodniku przedstawiono sposób modyfikowania istniejącej aplikacji MFC
   
     1.  W **właściwości** okna, kliknij przycisk wielokropka (**...** ) obok pozycji **przycisk** otworzyć **Edytor elementów**.  
   
-    2.  Kliknij przycisk **Dodaj** w celu dodania przycisku. Zmień **podpis** do `E&xit`, **identyfikator** do `ID_APP_EXIT`, **obrazu** do `8`.  
+    2.  Kliknij przycisk **Dodaj** w celu dodania przycisku. Zmień **podpis** do *& Zakończ*, **identyfikator** do *id_app_exit —*, **obrazu** do *8* .  
   
  [[Sekcje](#top)]  
   
@@ -233,7 +233,7 @@ W tym przewodniku przedstawiono sposób modyfikowania istniejącej aplikacji MFC
     CMFCRibbonBar m_wndRibbonBar;  
  ```  
   
-2.  In the mainfrm.cpp file, add the following code before the final `return` statement at the end of the `CMainFrame::OnCreate` function. This creates an instance of the ribbon bar.  
+2.  In the mainfrm.cpp file, add the following code before the final **return** statement at the end of the `CMainFrame::OnCreate` function. This creates an instance of the ribbon bar.  
   
  ``` *// Create the ribbon bar  
     if (!m_wndRibbonBar.Create(this))  
@@ -254,11 +254,11 @@ W tym przewodniku przedstawiono sposób modyfikowania istniejącej aplikacji MFC
   
 #### <a name="to-add-a-home-category-and-edit-panel"></a>Aby dodać głównej kategorii i edytować panelu  
   
-1.  Program bazgrołów wymaga tylko jedną kategorię. W widoku Projekt, kliknij przycisk **kategorii** Aby wyświetlić jego właściwości. Zmień wartości właściwości w następujący sposób: **podpis** do `&Home`, **duże obrazy** do `IDB_RIBBON_HOMELARGE`, **małe obrazy** do `IDB_RIBBON_HOMESMALL`.  
+1.  Program bazgrołów wymaga tylko jedną kategorię. W widoku Projekt, kliknij przycisk **kategorii** Aby wyświetlić jego właściwości. Zmień wartości właściwości w następujący sposób: **podpis** do *& Home*, **duże obrazy** do *IDB_RIBBON_HOMELARGE*,  **Małe obrazy** do *IDB_RIBBON_HOMESMALL*.  
   
-2.  Każda kategoria wstążki jest podzielony na nazwanym paneli. Każdy panel zawiera zestaw kontrolek, które wykonują operacje pokrewne. Ta kategoria zawiera jednego panelu. Kliknij przycisk **panelu**, a następnie zmień **podpis** do `Edit` i **indeks obrazu** do `0`.  
+2.  Każda kategoria wstążki jest podzielony na nazwanym paneli. Każdy panel zawiera zestaw kontrolek, które wykonują operacje pokrewne. Ta kategoria zawiera jednego panelu. Kliknij przycisk **panelu**, a następnie zmień **podpis** do *Edytuj* i **indeks obrazu** do *0*.  
   
-3.  Aby **Edytuj** panelu, Dodawanie przycisku, który jest odpowiedzialny za wyczyszczenie zawartości dokumentu. Identyfikator komunikatu dla tego przycisku został już zdefiniowany w zasobie menu IDR_SCRIBBTYPE. Określ `Clear All` jako tekst przycisku i indeks mapy bitowej programu decorates przycisku. Otwórz **przybornika**, a następnie przeciągnij **przycisk** do **Edytuj** panelu. Kliknij przycisk, a następnie zmień **podpis** do `Clear All`, **identyfikator** do `ID_EDIT_CLEAR_ALL`, **indeks obrazu** do `0`, **indeks dużego obrazu**  do `0`.  
+3.  Aby **Edytuj** panelu, Dodawanie przycisku, który jest odpowiedzialny za wyczyszczenie zawartości dokumentu. Identyfikator komunikatu dla tego przycisku został już zdefiniowany w zasobie menu IDR_SCRIBBTYPE. Określ *Wyczyść wszystko* jako tekst przycisku i indeks mapy bitowej programu decorates przycisku. Otwórz **przybornika**, a następnie przeciągnij **przycisk** do **Edytuj** panelu. Kliknij przycisk, a następnie zmień **podpis** do *Wyczyść wszystko*, **identyfikator** do *id_edit_clear_all —*, **indeks obrazu** do *0*, **indeks dużego obrazu** do *0*.  
   
 4.  Zapisać zmiany, a następnie kompilacji i uruchomić aplikację. Aplikacji bazgrołów powinien być wyświetlany, a powinien mieć pasek wstążki w górnej części okna zamiast paska menu. Pasek wstążki powinny mieć jedną kategorię **Home**, i **Home** powinien mieć jeden panel **Edytuj**. Przyciski wstążki, który został dodany powinna być skojarzona z istniejących programów obsługi zdarzeń i **Otwórz**, **Zamknij**, **zapisać**, **drukowania**, i **Wyczyść wszystko** przyciski powinny działać zgodnie z oczekiwaniami.  
   

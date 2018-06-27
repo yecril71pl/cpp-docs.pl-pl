@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b67aa3345f8739714cb6758f8363c3d2054dd4e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8c96e83d15110cb85e23cd7a8643d615cf7c0d8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355288"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952375"
 ---
 # <a name="cd2dgeometrysink-class"></a>Klasa CD2DGeometrySink
 Otoka dla ID2D1GeometrySink.  
@@ -125,7 +125,7 @@ void AddArc(const D2D1_ARC_SEGMENT& arc);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `arc`  
+ *Łuk*  
  Łuku do dodania do rysunku  
   
 ##  <a name="addbezier"></a>  CD2DGeometrySink::AddBezier  
@@ -136,7 +136,7 @@ void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bezier`  
+ *Beziera*  
  Struktura, która opisuje punktów kontrolnych i krzywej Beziera, aby dodać punkt końcowy.  
   
 ##  <a name="addbeziers"></a>  CD2DGeometrySink::AddBeziers  
@@ -149,7 +149,7 @@ void AddBeziers(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `beziers`  
+ *Beziera*  
  Tablica segmentów Beziera opisujący krzywych Beziera do utworzenia. Krzywa jest pobierana z obiektu sink geometrii bieżącego punktu (punkt końcowy ostatni segment rysowane lub lokalizacji określonej przez BeginFigure) do punktu końcowego pierwszy segment Beziera w tablicy. Jeśli tablica zawiera dodatkowe segmenty Beziera, każdy z kolejnych segmentów Beziera używa punktu końcowego segmentu Beziera jako jego punkt początkowy.  
   
 ##  <a name="addline"></a>  CD2DGeometrySink::AddLine  
@@ -160,7 +160,7 @@ void AddLine(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `point`  
+ *Punkt*  
  Punkt końcowy linii do rysowania.  
   
 ##  <a name="addlines"></a>  CD2DGeometrySink::AddLines  
@@ -173,7 +173,7 @@ void AddLines(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `points`  
+ *Punkty*  
  Tablica jeden lub więcej punktów, które opisują wierszy do rysowania. Wiersz jest przenoszony z bieżącego punktu zbiornika geometrii (punkt końcowy ostatni segment rysowane lub lokalizacji określonej przez BeginFigure) do pierwszego punktu w tablicy. Jeśli tablica zawiera dodatkowe punkty, wiersz jest przenoszony z pierwszego punktu do drugiego w tablicy, od drugiego punktu trzeciego punktu i tak dalej. Tablica punktów końcowych wierszy Rysowanie sekwencji.  
   
 ##  <a name="addquadraticbezier"></a>  CD2DGeometrySink::AddQuadraticBezier  
@@ -184,7 +184,7 @@ void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bezier`  
+ *Beziera*  
  Struktura, która opisuje punkt kontrolny i kwadratową krzywej Beziera, aby dodać punkt końcowy.  
   
 ##  <a name="addquadraticbeziers"></a>  CD2DGeometrySink::AddQuadraticBeziers  
@@ -197,7 +197,7 @@ void AddQuadraticBeziers(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `beziers`  
+ *Beziera*  
  Tablica sekwencji kwadratową segmentów Beziera.  
   
 ##  <a name="beginfigure"></a>  CD2DGeometrySink::BeginFigure  
@@ -210,10 +210,10 @@ void BeginFigure(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `startPoint`  
+ *startPoint*  
  Momentu, w którym można rozpocząć nowego rysunku.  
   
- `figureBegin`  
+ *figureBegin*  
  Określa, czy nowy rysunek powinien być pusty lub wypełniony.  
   
 ##  <a name="cd2dgeometrysink"></a>  CD2DGeometrySink::CD2DGeometrySink  
@@ -224,7 +224,7 @@ CD2DGeometrySink(CD2DPathGeometry& pathGeometry);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pathGeometry`  
+ *pathGeometry*  
  Istniejący obiekt CD2DPathGeometry.  
   
 ##  <a name="close"></a>  CD2DGeometrySink::Close  
@@ -245,7 +245,7 @@ void EndFigure(D2D1_FIGURE_END figureEnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `figureEnd`  
+ *figureEnd*  
  Wartość, która wskazuje, czy bieżący rysunek jest zamknięty. Jeśli rysunek jest zamknięty, między bieżącym punktem a punkt początkowy, określony przez BeginFigure jest rysowana linia.  
   
 ##  <a name="get"></a>  CD2DGeometrySink::Get  
@@ -293,7 +293,7 @@ void SetFillMode(D2D1_FILL_MODE fillMode);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `fillMode`  
+ *fillMode*  
  Metoda używana do określenia, czy dany punkt jest częścią geometrii.  
   
 ##  <a name="setsegmentflags"></a>  CD2DGeometrySink::SetSegmentFlags  
@@ -304,7 +304,7 @@ void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `vertexFlags`  
+ *vertexFlags*  
  Opcje obrysu i sprzężenia ma zostać zastosowany do nowych segmentów dodane do ujścia geometrii.  
   
 ## <a name="see-also"></a>Zobacz też  

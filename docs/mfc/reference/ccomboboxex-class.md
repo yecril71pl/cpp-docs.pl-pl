@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd7d2c5bbd3445e604620dc1f23f45004b7a3b73
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74dc76f0e638cb335c8ee762908aed36a41230eb
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358294"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952352"
 ---
 # <a name="ccomboboxex-class"></a>Ccomboboxex — klasa
 Rozszerza pole kombi kontrolki pola, zapewniając obsługę listy obrazów.  
@@ -146,16 +146,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
+ *dwStyle*  
  Określa kombinację style pola kombi stosowane do pola kombi. Zobacz **uwagi** poniżej Aby uzyskać więcej informacji na temat style.  
   
- `rect`  
+ *Rect*  
  Odwołanie do [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, która jest położenie i rozmiar pola kombi.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okna nadrzędnego pola kombi (zazwyczaj `CDialog`). Nie może być **NULL**.  
   
- `nID`  
+ *nID*  
  Określa identyfikator formantu pola kombi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -168,7 +168,7 @@ virtual BOOL Create(
   
 2.  Wywołanie tej funkcji elementu członkowskiego, który tworzy rozszerzonego pola kombi systemu Windows i dołącza go do `CComboBoxEx` obiektu.  
   
- Podczas wywoływania **Utwórz**, MFC inicjuje wspólne kontrolki.  
+ Podczas wywoływania `Create`, MFC inicjuje wspólne kontrolki.  
   
  Podczas tworzenia pola kombi, można określić dowolne z następujących style pola kombi:  
   
@@ -184,7 +184,7 @@ virtual BOOL Create(
   
  Wszystkie inne style przekazany podczas tworzenia okna są ignorowane. **ComboBoxEx** control obsługuje także rozszerzone style, które zapewniają dodatkowe funkcje. Te style są opisane w [ComboBoxEx kontrolować rozszerzone style](http://msdn.microsoft.com/library/windows/desktop/bb775742), w zestawie Windows SDK. Ustaw te style przez wywołanie metody [SetExtendedStyle](#setextendedstyle).  
   
- Jeśli chcesz style rozszerzonej systemu windows za pomocą formantu wywołanie [CreateEx](#createex) zamiast **Utwórz**.  
+ Jeśli chcesz style rozszerzonej systemu windows za pomocą formantu wywołanie [CreateEx](#createex) zamiast `Create`.  
   
 ##  <a name="createex"></a>  CComboBoxEx::CreateEx  
  Wywołanie tej funkcji, aby utworzyć formancie rozszerzonego pola kombi (okno podrzędne) i skojarzyć go z `CComboBoxEx` obiektu.  
@@ -199,28 +199,28 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwExStyle`  
- Określa styl rozszerzony formantu tworzona. Aby uzyskać listę rozszerzone style systemu Windows, zobacz `dwExStyle` parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ *dwExStyle*  
+ Określa styl rozszerzony formantu tworzona. Aby uzyskać listę rozszerzone style systemu Windows, zobacz *dwExStyle* parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Style kontrolki pola kombi. Zobacz [Utwórz](#create) listę style.  
   
- `rect`  
- Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujące rozmiar i położenie okna, które ma zostać utworzony w współrzędne klienta `pParentWnd`.  
+ *Rect*  
+ Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujące rozmiar i położenie okna, które ma zostać utworzony w współrzędne klienta *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do okna, które jest elementem nadrzędnym formantu.  
   
- `nID`  
+ *nID*  
  Identyfikator formantu okna podrzędnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj `CreateEx` zamiast **Utwórz** dotyczyć rozszerzone style systemu Windows, określone przez wstępu rozszerzonego stylu Windows **WS_EX_**.  
+ Użyj `CreateEx` zamiast `Create` dotyczyć rozszerzone style systemu Windows, określone przez wstępu rozszerzonego stylu Windows **WS_EX_**.  
   
- `CreateEx` Tworzy formantu z rozszerzone style Windows określonego przez `dwExStyle`. Należy ustawić rozszerzone style określone na kombi rozszerzonego pola formantu przy użyciu [SetExtendedStyle](#setextendedstyle). Na przykład użyć `CreateEx` można ustawić takie style jako **ws_ex_contexthelp —**, ale użyj `SetExtendedStyle` można ustawić takie style jako **CBES_EX_CASESENSITIVE**. Aby uzyskać więcej informacji, zobacz opisane w temacie style [ComboBoxEx kontroli rozszerzone style](http://msdn.microsoft.com/library/windows/desktop/bb775742) w zestawie Windows SDK.  
+ `CreateEx` Tworzy formantu z rozszerzone style Windows określonego przez *dwExStyle*. Należy ustawić rozszerzone style określone na kombi rozszerzonego pola formantu przy użyciu [SetExtendedStyle](#setextendedstyle). Na przykład użyć `CreateEx` można ustawić takie style jako **ws_ex_contexthelp —**, ale użyj `SetExtendedStyle` można ustawić takie style jako **CBES_EX_CASESENSITIVE**. Aby uzyskać więcej informacji, zobacz opisane w temacie style [ComboBoxEx kontroli rozszerzone style](http://msdn.microsoft.com/library/windows/desktop/bb775742) w zestawie Windows SDK.  
   
 ##  <a name="deleteitem"></a>  CComboBoxEx::DeleteItem  
  Usuwa element z **ComboBoxEx** formantu.  
@@ -230,11 +230,11 @@ int DeleteItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iIndex`  
+ *iIndex*  
  Liczony od zera indeks elementu do usunięcia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczba elementów w formancie. Jeśli `iIndex` jest nieprawidłowa, funkcja zwraca **CB_ERR**.  
+ Liczba elementów w formancie. Jeśli *iIndex* jest nieprawidłowa, funkcja zwraca **CB_ERR**.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja członkowska implementuje funkcje wiadomości [CBEM_DELETEITEM](http://msdn.microsoft.com/library/windows/desktop/bb775768), zgodnie z opisem w zestawie Windows SDK. Podczas wywoływania DeleteItem, [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) komunikatów z **CBEN_DELETEITEM** powiadomienie zostanie wysłane do okna nadrzędnego.  
@@ -303,7 +303,7 @@ BOOL GetItem(COMBOBOXEXITEM* pCBItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCBItem`  
+ *pCBItem*  
  Wskaźnik do [COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746) struktury, które będą otrzymywać informacje o elementach.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -333,7 +333,7 @@ int InsertItem(const COMBOBOXEXITEM* pCBItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCBItem`  
+ *pCBItem*  
  Wskaźnik do [COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746) struktury, które będą otrzymywać informacje o elementach. Ta struktura zawiera wartości flag wywołanie zwrotne dla elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -352,10 +352,10 @@ DWORD SetExtendedStyle(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwExMask`  
- A `DWORD` wartość, która wskazuje style w `dwExStyles` są, których to dotyczy. Tylko rozszerzone style w `dwExMask` zostanie zmieniona. Wszystkie inne style będzie przechowywany jest. Jeśli ten parametr ma wartość zero, a następnie wszystkie style w `dwExStyles` będzie dotyczył.  
+ *dwExMask*  
+ A `DWORD` wartość, która wskazuje style w *dwExStyles* są, których to dotyczy. Tylko rozszerzone style w *dwExMask* zostanie zmieniona. Wszystkie inne style będzie przechowywany jest. Jeśli ten parametr ma wartość zero, a następnie wszystkie style w *dwExStyles* będzie dotyczył.  
   
- `dwExStyles`  
+ *dwExStyles*  
  A `DWORD` wartości, która zawiera pole kombi kontrolować rozszerzone style do formantu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -374,7 +374,7 @@ CImageList* SetImageList(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pImageList`  
+ *pImageList*  
  Wskaźnik do `CImageList` obiekt zawierający obrazy do użycia z `CComboBoxEx` formantu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -393,7 +393,7 @@ BOOL SetItem(const COMBOBOXEXITEM* pCBItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCBItem`  
+ *pCBItem*  
  Wskaźnik do [COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746) struktury, które będą otrzymywać informacje o elementach.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -410,7 +410,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pszSubAppName`  
+ *pszSubAppName*  
  Wskaźnik zawiera styl wizualny pole kombi rozszerzonej można ustawić na ciąg Unicode.  
   
 ### <a name="return-value"></a>Wartość zwracana  

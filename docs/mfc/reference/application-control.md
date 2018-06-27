@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76d8ec079a7c3534211118e60c1d9d95a3a8510a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aa364ef0a817d46decef79b93e08bd5a359389d1
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355915"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954043"
 ---
 # <a name="application-control"></a>Sterowanie aplikacjami
 OLE wymaga znacznej kontrolę nad ich obiektów i aplikacji. Biblioteki DLL systemu OLE musi mieć możliwość uruchamiania i automatycznie wersji aplikacji, koordynować ich produkcyjnego i modyfikacji obiektów i tak dalej. Funkcje, w tym temacie spełnienia tych wymagań. Oprócz wywoływana przez system OLE bibliotek DLL, można wywołać przez aplikacje, a także czasami tych funkcji. 
@@ -53,7 +53,7 @@ BOOL AFXAPI AfxOleCanExitApp();
  Różna od zera, jeśli aplikacja może wyjść; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Aplikacja nie powinna przerywane, jeśli istnieją oczekujących odwołań do jej obiektów. Funkcje globalne `AfxOleLockApp` i `AfxOleUnlockApp` zwiększyć i zmniejszyć odpowiednio licznikiem odwołań do obiektów w aplikacji. Aplikacja należy nie wygasa, gdy ten licznik jest różna od zera. Jeśli licznik jest różna od zera, głównego okna aplikacji jest ukryty (nie niszczone), gdy użytkownik wybierze Zamknij z menu systemowego lub zakończenia w menu Plik. Struktura wywołuje tej funkcji **CFrameWnd::OnClose**.  
+ Aplikacja nie powinna przerywane, jeśli istnieją oczekujących odwołań do jej obiektów. Funkcje globalne `AfxOleLockApp` i `AfxOleUnlockApp` zwiększyć i zmniejszyć odpowiednio licznikiem odwołań do obiektów w aplikacji. Aplikacja należy nie wygasa, gdy ten licznik jest różna od zera. Jeśli licznik jest różna od zera, głównego okna aplikacji jest ukryty (nie niszczone), gdy użytkownik wybierze Zamknij z menu systemowego lub zakończenia w menu Plik. Struktura wywołuje tej funkcji `CFrameWnd::OnClose`.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCAutomation#2](../../mfc/codesnippet/cpp/application-control_1.cpp)]  
@@ -147,7 +147,7 @@ void AFXAPI AfxOleUnlockApp();
 ### <a name="remarks"></a>Uwagi  
  Zobacz `AfxOleLockApp` Aby uzyskać więcej informacji.  
   
- Gdy liczba obiektów active osiągnie wartość 0, **AfxOleOnReleaseAllObjects** jest wywoływana.  
+ Gdy liczba obiektów active osiągnie wartość 0, `AfxOleOnReleaseAllObjects` jest wywoływana.  
   
 ### <a name="example"></a>Przykład  
  Zobacz przykład [AfxOleLockApp](#afxolelockapp).  
@@ -164,10 +164,10 @@ BOOL AFXAPI AfxOleLockControl(  REFCLSID clsid  );
 BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );  
 ```
 ### <a name="parameters"></a>Parametry  
- `clsid`  
+ *Identyfikator CLSID*  
  Identyfikator unikatowy klasy formantu.  
   
- `lpszProgID`  
+ *lpszProgID*  
  Unikatowy identyfikator formantu.  
    
 ### <a name="return-value"></a>Wartość zwracana  
@@ -207,10 +207,10 @@ BOOL AFXAPI AfxOleRegisterServerClass(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `clsid`  
+ *Identyfikator CLSID*  
  Odwołanie do identyfikatora klasy OLE serwera  
   
- `lpszClassName`  
+ *lpszClassName*  
  Wskaźnik do ciągu zawierającego nazwę klasy obiektów serwera.  
   
  *lpszShortTypeName*  
@@ -219,7 +219,7 @@ BOOL AFXAPI AfxOleRegisterServerClass(
  *lpszLongTypeName*  
  Wskaźnik do ciąg zawierający długa nazwa typu obiektu serwera, na przykład "Wykres programu Microsoft Excel w wersji 5.0".  
   
- `nAppType`  
+ *nAppType*  
  Wartość, z **OLE_APPTYPE** wyliczenie określenie typu aplikacji OLE. Możliwe wartości są następujące:  
   
 - `OAT_INPLACE_SERVER` Serwer ma interfejs użytkownika całego serwera.  
@@ -230,19 +230,19 @@ BOOL AFXAPI AfxOleRegisterServerClass(
   
 - `OAT_DISPATCH_OBJECT` `IDispatch`— obsługuje obiektu.  
   
- `rglpszRegister`  
+ *rglpszRegister*  
  Tablicy wskaźników do ciągów reprezentujących klucze i wartości, które mają zostać dodane do rejestru systemowego OLE, jeśli zostaną znalezione nie istniejące wartości kluczy.  
   
- `rglpszOverwrite`  
+ *rglpszOverwrite*  
  Tablicy wskaźników do ciągów reprezentujących klucze i wartości do dodania do rejestru systemowego OLE Rejestr zawiera istniejące wartości dla danych kluczy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli klasa serwera zostanie pomyślnie zarejestrowana; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Większość aplikacji można użyć **COleTemplateServer::Register** zarejestrować typy dokumentów aplikacji. Jeśli format rejestru systemowego aplikacji nie mieści się typowy wzorzec, możesz użyć `AfxOleRegisterServerClass` uzyskać większą kontrolę.  
+ Większość aplikacji można użyć `COleTemplateServer::Register` zarejestrować typy dokumentów aplikacji. Jeśli format rejestru systemowego aplikacji nie mieści się typowy wzorzec, możesz użyć `AfxOleRegisterServerClass` uzyskać większą kontrolę.  
   
- Rejestr zawiera zestaw kluczy i wartości. `rglpszRegister` i `rglpszOverwrite` argumenty są tablic wskaźników do ciągów, składające się z klucza i wartości rozdzielonych **NULL** znak ( `'\0'`). Każdy z tych ciągów może mieć parametry wymienne, którego miejsca są oznaczane sekwencje znaków `%1` za pośrednictwem `%5`.  
+ Rejestr zawiera zestaw kluczy i wartości. *RglpszRegister* i *rglpszOverwrite* argumenty są tablic wskaźników do ciągów, składające się z klucza i wartości rozdzielonych **NULL** znak ( `'\0'`). Każdy z tych ciągów może mieć parametry wymienne, którego miejsca są oznaczane sekwencje znaków *%1* za pośrednictwem *%5*.  
   
  Symbole są wypełnione następujący sposób:  
   
@@ -271,16 +271,16 @@ void AFXAPI AfxOleSetEditMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pClient`  
+ *pClient*  
  Wskaźnik do elementu OLE klienta.  
   
- `pMenu`  
+ *pMenu*  
  Wskaźnik do obiektu menu aktualizacji.  
   
  *iMenuItem*  
  Indeks elementu menu aktualizacji.  
   
- `nIDVerbMin`  
+ *nIDVerbMin*  
  Identyfikator polecenia umożliwiająca zlecenia głównego.  
   
  *nIDVerbMax*  
@@ -290,7 +290,7 @@ void AFXAPI AfxOleSetEditMenu(
  Identyfikator elementu menu Convert.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli serwer rozpoznaje głównej zlecenie, staje się element menu "zlecenie *typename* obiektu" i `nIDVerbMin` polecenia jest wysyłany, gdy użytkownik wybierze polecenie. Jeśli serwer rozpoznaje kilku poleceń, a następnie staje się element menu " *typename* obiektu" i podmenu wszystkie zlecenia jest wyświetlany, gdy użytkownik wybierze polecenie. Gdy użytkownik wybierze zlecenia z podmenu `nIDVerbMin` są wysyłane, jeśli wybrano opcję pierwsze zlecenie, `nIDVerbMin` + 1 jest wysyłane, jeśli drugi zlecenie jest wybrane i tak dalej. Wartość domyślna `COleDocument` implementacji automatycznie obsługuje tę funkcję.  
+ Jeśli serwer rozpoznaje głównej zlecenie, staje się element menu "zlecenie *typename* obiektu" i *nIDVerbMin* polecenia jest wysyłany, gdy użytkownik wybierze polecenie. Jeśli serwer rozpoznaje kilku poleceń, a następnie staje się element menu " *typename* obiektu" i podmenu wszystkie zlecenia jest wyświetlany, gdy użytkownik wybierze polecenie. Gdy użytkownik wybierze zlecenia z podmenu *nIDVerbMin* są wysyłane, jeśli wybrano opcję pierwsze zlecenie, *nIDVerbMin* + 1 jest wysyłane, jeśli drugi zlecenie jest wybrane i tak dalej. Wartość domyślna `COleDocument` implementacji automatycznie obsługuje tę funkcję.  
   
  Musi mieć następującą instrukcję w skrypcie zasobów aplikacji klienta (. Plik RC):  
   
@@ -311,10 +311,10 @@ BOOL AFXAPI AfxOleUnlockControl( REFCLSID clsid );
 BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );  
 ```
 ### <a name="parameters"></a>Parametry  
- `clsid`  
+ *Identyfikator CLSID*  
  Identyfikator unikatowy klasy formantu.  
   
- `lpszProgID`  
+ *lpszProgID*  
  Unikatowy identyfikator formantu.  
    
 ### <a name="return-value"></a>Wartość zwracana  

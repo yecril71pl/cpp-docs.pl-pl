@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21499f65ac762dfd08d90decad41eedf3dfc5cdf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 635019011b655f338e499724c788bc433df5d571
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368985"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957081"
 ---
 # <a name="cfindreplacedialog-class"></a>Klasa CFindReplaceDialog
 Umożliwia wdrożenie standardowego ciągu Znajdź/Zamień okien dialogowych w aplikacji.  
@@ -95,7 +95,7 @@ class CFindReplaceDialog : public CCommonDialog
   
  Raz `CFindReplaceDialog` obiekt został skonstruowany, należy wywołać [Utwórz](#create) funkcji członkowskiej, aby utworzyć i wyświetlić okno dialogowe.  
   
- Użyj [m_fr](#m_fr) struktury zainicjować okno dialogowe przed wywołaniem **Utwórz**. `m_fr` Struktura jest typu [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Aby uzyskać więcej informacji na tej struktury zobacz zestaw Windows SDK.  
+ Użyj [m_fr](#m_fr) struktury zainicjować okno dialogowe przed wywołaniem `Create`. `m_fr` Struktura jest typu [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Aby uzyskać więcej informacji na tej struktury zobacz zestaw Windows SDK.  
   
  Aby okna nadrzędnego, który ma być powiadamiany o żądań Znajdź i Zamień, należy użyć systemu Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) funkcji i użyj [on_registered_message —](message-map-macros-mfc.md#on_registered_message) makra mapy wiadomości w sieci ramki okno obsługi tego komunikatu w zarejestrowany.  
   
@@ -133,9 +133,9 @@ CFindReplaceDialog();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ponieważ `CFindReplaceDialog` obiekt jest niemodalne okno dialogowe, należy tworzyć na stercie przy użyciu `new` operatora.  
+ Ponieważ `CFindReplaceDialog` obiekt jest niemodalne okno dialogowe, należy tworzyć na stercie przy użyciu **nowe** operatora.  
   
- Podczas niszczenia, próbuje wykonać platformę `delete this` na wskaźnik do okna dialogowego. Jeśli utworzono na stosie, okno dialogowe `this` wskaźnik nie istnieje i może spowodować niezdefiniowane zachowanie.  
+ Podczas niszczenia, próbuje wykonać platformę **usunąć ten** na wskaźnik do okna dialogowego. Jeśli utworzono okno dialogowe na stosie, **to** wskaźnik nie istnieje i może spowodować niezdefiniowane zachowanie.  
   
  Aby uzyskać więcej informacji na temat konstrukcji `CFindReplaceDialog` obiekty, zobacz [CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md) omówienie. Użyj [CFindReplaceDialog::Create](#create) funkcji członkowskiej, aby wyświetlić okno dialogowe.  
   
@@ -155,19 +155,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bFindDialogOnly`  
+ *bFindDialogOnly*  
  Ustaw ten parametr, `TRUE` do wyświetlenia **znaleźć** okno dialogowe. Ustaw ją na `FALSE` do wyświetlenia **Znajdź/Zamień** okno dialogowe.  
   
- `lpszFindWhat`  
+ *lpszFindWhat*  
  Wskaźnik do domyślnego ciągu wyszukiwania, gdy zostanie wyświetlone okno dialogowe. Jeśli `NULL`, okno dialogowe nie zawiera domyślnego ciągu wyszukiwania.  
   
- `lpszReplaceWith`  
+ *lpszReplaceWith*  
  Wskaźnik do domyślny ciąg zastępczy, gdy zostanie wyświetlone okno dialogowe. Jeśli `NULL`, okno dialogowe nie zawiera domyślny ciąg zastępczy.  
   
- `dwFlags`  
+ *wartość elementu dwFlags*  
  Jedną lub więcej flag, które można dostosować ustawienia okna dialogowego łączyć przy użyciu bitowego operatora OR. Wartość domyślna to `FR_DOWN`, który określa, czy wyszukiwanie ma odbywać się w dół kierunku. Zobacz [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835) struktury w zestawie SDK systemu Windows, aby uzyskać więcej informacji na temat tych flag.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do okna nadrzędnego lub właściciela okna dialogowego. To okno zostanie wyświetlony komunikat specjalne wskazujący zażądano akcji Znajdź i Zamień. Jeśli `NULL`, jest używany w głównym oknie aplikacji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -218,7 +218,7 @@ static CFindReplaceDialog* PASCAL GetNotifier(LPARAM lParam);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lParam`  
+ *lParam*  
  **Lparam** wartość przekazywana do okno ramowe **OnFindReplace** funkcję elementu członkowskiego.  
   
 ### <a name="return-value"></a>Wartość zwracana  

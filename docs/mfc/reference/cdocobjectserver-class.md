@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d9951fd087619371e24f06822774cec005787c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f89812fbc0e1b6a3df80cd7c99879d8d630179de
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367409"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956465"
 ---
 # <a name="cdocobjectserver-class"></a>Klasa CDocObjectServer
 Implementuje dodatkowe interfejsy OLE potrzebne do podejmowania zwykłym `COleDocument` serwera do całego serwera DocObject: `IOleDocument`, `IOleDocumentView`, `IOleCommandTarget`, i `IPrint`.  
@@ -95,7 +95,7 @@ void ActivateDocObject();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `ActivateDocObject` wywołania `IOleDocumentSite`w **ActivateMe** metody, ale nie są wyświetlane w widoku, ponieważ oczekuje, aby uzyskać szczegółowe instrukcje na temat sposobu ustawiania i Wyświetl widok, podany w wywołaniu [CDocObjectServer::OnActivateView](#onactivateview).  
+ `ActivateDocObject` wywołania `IOleDocumentSite`w `ActivateMe` metody, ale nie są wyświetlane w widoku, ponieważ oczekuje, aby uzyskać szczegółowe instrukcje na temat sposobu ustawiania i Wyświetl widok, podany w wywołaniu [CDocObjectServer::OnActivateView](#onactivateview).  
   
  Razem `ActivateDocObject` i `OnActivateView` aktywować i Wyświetl widok DocObject. Aktywacja DocObject różni się od innych rodzajów Aktywacja w miejscu OLE. Aktywacja DocObject Pomija wyświetlanie obramowanie kreskowania w miejscu i skojarzenia obiektu (na przykład uchwytów), ignoruje obiektu zakresu funkcji i rysuje paski przewijania w prostokącie widoku, a nie ich rysowania poza tym prostokącie (tak jak zwykle Aktywacja w miejscu).  
   
@@ -112,7 +112,7 @@ explicit CDocObjectServer(
  *pOwner*  
  Wskaźnik do dokumentu lokacji klienta, który jest klienta dla serwera DocObject.  
   
- `pDocSite`  
+ *pDocSite*  
  Wskaźnik do `IOleDocumentSite` interfejsu zaimplementowanego przez kontener.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -139,7 +139,7 @@ virtual void OnApplyViewState(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ar`  
+ *ar*  
  A `CArchive` obiektu, z którego można serializować stanu widoku.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -155,7 +155,7 @@ virtual void OnSaveViewState(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ar`  
+ *ar*  
  A `CArchive` obiekt, do którego serializowany jest stan widoku.  
   
 ### <a name="remarks"></a>Uwagi  

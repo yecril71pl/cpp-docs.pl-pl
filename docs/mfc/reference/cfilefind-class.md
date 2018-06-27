@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf77a5581dd9e8c9181c61287b6032f700d7d64b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: de63a53e23f4ea22a6fe8df7ab55bfc57d409779
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376574"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955079"
 ---
 # <a name="cfilefind-class"></a>Klasa CFileFind
 Przeprowadza wyszukiwanie pliku lokalnego i jest klasą bazową dla [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) i [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md), który wykonać wyszukiwania plików z Internetu.  
@@ -159,7 +159,7 @@ CFileFind(CAtlTransactionManager* pTM);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pTM`  
+ *pTM*  
  Wskaźnik do obiektu CAtlTransactionManager  
   
 ### <a name="example"></a>Przykład  
@@ -188,7 +188,7 @@ virtual void CloseContext();
 ### <a name="remarks"></a>Uwagi  
  Zamyka plik określony przez bieżącą wartość dojście wyszukiwania. Należy przesłonić tę funkcję, aby zmienić zachowanie domyślne.  
   
- Należy wywołać [FindFile](#findfile) lub [FindNextFile](#findnextfile) funkcje co najmniej raz, można pobrać uchwytu prawidłowe wyszukiwania. **FindFile** i `FindNextFile` funkcji przy użyciu uchwytu wyszukiwania do lokalizowania plików o nazwach odpowiadających podanej nazwie.  
+ Należy wywołać [FindFile](#findfile) lub [FindNextFile](#findnextfile) funkcje co najmniej raz, można pobrać uchwytu prawidłowe wyszukiwania. `FindFile` i `FindNextFile` funkcji przy użyciu uchwytu wyszukiwania do lokalizowania plików o nazwach odpowiadających podanej nazwie.  
   
 ##  <a name="findfile"></a>  CFileFind::FindFile  
  Wywołanie tej funkcji elementu członkowskiego, aby otworzyć wyszukiwania plików.  
@@ -200,17 +200,17 @@ virtual BOOL FindFile(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pstrName`  
- Wskaźnik do ciągu zawierającego nazwę znajduje się w pliku. W przypadku przekazania **NULL** dla `pstrName`, **FindFile** jest symbol wieloznaczny (*.\*) wyszukiwania.  
+ *pstrName*  
+ Wskaźnik do ciągu zawierającego nazwę znajduje się w pliku. W przypadku przekazania **NULL** dla *pstrName*, **FindFile** jest symbol wieloznaczny (*.\*) wyszukiwania.  
   
  *dwUnused*  
- Zarezerwowane dokonanie **FindFile** polimorficznym z klasy pochodnej. Musi być równa 0.  
+ Zarezerwowane dokonanie `FindFile` polimorficznym z klasy pochodnej. Musi być równa 0.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0. Aby uzyskać rozszerzone informacje o błędzie, wywołania funkcji Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Uwagi  
- Po wywołaniu **FindFile** aby rozpocząć wyszukiwanie plików, należy wywołać [FindNextFile](#findnextfile) można pobrać kolejne pliki. Należy wywołać `FindNextFile` co najmniej raz przed wywołaniem metody żadnego z następujących atrybutów funkcji elementów członkowskich:  
+ Po wywołaniu `FindFile` aby rozpocząć wyszukiwanie plików, należy wywołać [FindNextFile](#findnextfile) można pobrać kolejne pliki. Należy wywołać `FindNextFile` co najmniej raz przed wywołaniem metody żadnego z następujących atrybutów funkcji elementów członkowskich:  
   
 - [GetCreationTime](#getcreationtime)  
   
@@ -318,10 +318,10 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pTimeStamp`  
+ *pTimeStamp*  
  Wskaźnik do [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) struktury zawierającej czas utworzenia pliku.  
   
- `refTime`  
+ *refTime*  
  Odwołanie do [ctime —](../../atl-mfc-shared/reference/ctime-class.md) obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -435,10 +435,10 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `refTime`  
+ *refTime*  
  Odwołanie do [ctime —](../../atl-mfc-shared/reference/ctime-class.md) obiektu.  
   
- `pTimeStamp`  
+ *pTimeStamp*  
  Wskaźnik do [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) struktury zawierającej czas ostatniego dostępu do pliku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -462,10 +462,10 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pTimeStamp`  
+ *pTimeStamp*  
  Wskaźnik do [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) struktury zawierającej czas ostatniego został zapisany plik.  
   
- `refTime`  
+ *refTime*  
  Odwołanie do [ctime —](../../atl-mfc-shared/reference/ctime-class.md) obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -714,7 +714,7 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwMask`  
+ *dwMask*  
  Określa jeden lub więcej atrybutów plików zidentyfikowany w [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) strukturę, znaleziony plik. Aby wyszukiwać wiele atrybutów, należy użyć wartości bitowe lub (&#124;) operatora. Dopuszczalne jest dowolną kombinację następujących atrybutów:  
   
 -   FILE_ATTRIBUTE_ARCHIVE plik jest plikiem archiwum. Aplikacje użyć tego atrybutu, aby oznaczyć pliki kopii zapasowej lub usunięcia.  

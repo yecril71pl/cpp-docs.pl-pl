@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4eaf4b800fdc1954c54043aa7e2669613e6b27e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fc26f74de76205041228ce92e29309af1ce8959f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351956"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951679"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Kreator dodawania klasy z biblioteki typów
 Ten kreator służy do dodawania klasy MFC z biblioteki typów dostępne. Kreator utworzy klasę dla każdego interfejsu dodawanych z wybranej biblioteki typów.  
@@ -54,12 +54,12 @@ Ten kreator służy do dodawania klasy MFC z biblioteki typów dostępne. Kreato
 |**<\<**|Usuwa wszystkie klasy w **wygenerowane klasy** listy. Jeśli na wygaszone **wygenerowane klasy** lista jest pusta.|  
   
  **Wygenerowane klasy**  
- Określa nazwę klasy do wygenerowania z interfejsów dodane przy użyciu **>** lub **>>** przycisku. Można kliknąć to pole, aby wybierz klasę, a następnie górę lub w dół klucze do przewijania na liście wyświetlanie nazwy klasy w `Class` pole i nazwę pliku w **pliku** pola, które generuje kreatora po kliknięciu  **Zakończ**. Jednocześnie można wybrać tylko jedną klasę, w tym polu.  
+ Określa nazwę klasy do wygenerowania z interfejsów dodane przy użyciu **>** lub **>>** przycisku. Można kliknąć to pole, aby wybierz klasę, a następnie górę lub w dół klucze do przewijania na liście wyświetlanie nazwy klasy w **klasy** pole i nazwę pliku w **pliku** pole Kreator generuje, kiedy należy Kliknij przycisk **Zakończ**. Jednocześnie można wybrać tylko jedną klasę, w tym polu.  
   
  Klasy można usunąć, wybierając ją na liście i klikając **<**. Nie musisz wybrać klasę w polu klasy generowane, aby usunąć wszystkie klasy; klikając **<<**, należy usunąć wszystkie klasy w **wygenerowane klasy** pole.  
   
- `Class`  
- Określa nazwę klasy wybrany w **wygenerowane klasy** pola, które Kreator dodaje po kliknięciu **Zakończ**. Można edytować nazwy w `Class` pole.  
+ **Class**  
+ Określa nazwę klasy wybrany w **wygenerowane klasy** pola, które Kreator dodaje po kliknięciu **Zakończ**. Można edytować nazwy w **klasy** pole.  
   
  **Plik**  
  Ustawia nazwę pliku nagłówka dla nowej klasy. Domyślnie ta nazwa jest na podstawie nazwy podane **wygenerowane klasy**. Kliknij przycisk wielokropka, aby zapisać nazwę pliku w wybranej lokalizacji lub do dołączenia do istniejącego pliku deklaracji klasy. Jeśli wybierzesz istniejący plik, Kreator nie zapisze go w wybranej lokalizacji dopóki kliknij **Zakończ** w kreatorze.  

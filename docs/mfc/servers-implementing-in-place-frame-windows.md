@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc26e2874921d30ef233509ee46b776ec8e3e9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0f03d66fac6d58bdb48aa9b7a6d8aafe18a74ea
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380867"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956437"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Serwery: implementowanie okien ramowych w miejscu
 W tym artykule opisano, co należy zrobić, aby zaimplementować okna ramowe w miejscu w visual edytowania aplikacji serwera, jeśli nie używasz Kreatora aplikacji do tworzenia aplikacji serwera. Zamiast zgodnie z procedurą przedstawioną w tym artykule, można użyć istniejącej klasy okien ramowych w miejscu z aplikacją generowane przez Kreatora aplikacji lub próbkę dostarczone z programem Visual C++.  
@@ -32,13 +32,13 @@ W tym artykule opisano, co należy zrobić, aby zaimplementować okna ramowe w m
   
 1.  Klasy okien ramowych w miejscu z pochodzi `COleIPFrameWnd`.  
   
-    -   Użyj `DECLARE_DYNCREATE` makra w pliku nagłówka klasy.  
+    -   Użyj declare_dyncreate — makro w pliku nagłówka klasy.  
   
-    -   Użyj `IMPLEMENT_DYNCREATE` makra w pliku implementacji (.cpp) klasy. Dzięki temu obiektów tej klasy, które ma zostać utworzony przez platformę.  
+    -   Użyj implement_dyncreate — makro w pliku implementacji (.cpp) klasy. Dzięki temu obiektów tej klasy, które ma zostać utworzony przez platformę.  
   
 2.  Deklarowanie `COleResizeBar` elementu członkowskiego klasy okien ramowych. Jest to niezbędne, jeśli mają być obsługiwane w aplikacjach server zmiany rozmiaru w miejscu.  
   
-     Zadeklaruj `OnCreate` obsługi wiadomości (przy użyciu **właściwości** okna) i Wywołaj **Utwórz** dla Twojej `COleResizeBar` elementu członkowskiego, jeśli go.  
+     Zadeklaruj `OnCreate` obsługi wiadomości (przy użyciu **właściwości** okna) i Wywołaj `Create` dla Twojej `COleResizeBar` elementu członkowskiego, jeśli go.  
   
 3.  Jeśli masz paska narzędzi zadeklarować `CToolBar` elementu członkowskiego klasy okien ramowych.  
   

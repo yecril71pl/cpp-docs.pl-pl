@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fba91f4c16c5b356b1e7a11e35380a15eb98eb1
-ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
+ms.openlocfilehash: 98410fb8b62eb160e21803b60a14ce731ffc8c23
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463082"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957458"
 ---
 # <a name="cedit-class"></a>Klasa CEdit
 Udostępnia funkcje kontrolki edycji systemu Windows.  
@@ -181,7 +181,7 @@ class CEdit : public CWnd
   
  Formant edycji można utworzyć szablonu okna dialogowego lub bezpośrednio w kodzie. W obu przypadkach należy najpierw wywołać konstruktora `CEdit` do skonstruowania `CEdit` obiekt, a następnie wywołaj [Utwórz](#create) funkcji członkowskiej można utworzyć okna formantu edycyjnego i dołączenie go do `CEdit` obiektu.  
   
- Konstrukcja może być jednoetapowy proces w klasie pochodnej z `CEdit`. Zapisywanie konstruktora klasy pochodnej i wywołanie **Utwórz** z wewnątrz konstruktora.  
+ Konstrukcja może być jednoetapowy proces w klasie pochodnej z `CEdit`. Zapisywanie konstruktora klasy pochodnej i wywołanie `Create` z wewnątrz konstruktora.  
   
  `CEdit` Najważniejsze funkcje z dziedziczy `CWnd`. Do ustawiania i pobierania tekstu z `CEdit` obiektów, użyj `CWnd` funkcje Członkowskie [SetWindowText](cwnd-class.md#setwindowtext) i [GetWindowText](cwnd-class.md#getwindowtext), które set lub get kontrolować całą zawartość edycji, nawet jeśli jego jest wielowierszowe kontrolki. Wiersze tekstu w wielowierszowym formancie są rozdzielone przez sekwencje znaków "\r\n". Ponadto w przypadku wielowierszowe kontrolki edycji get i set część tekstu formantu przez wywołanie metody `CEdit` funkcje Członkowskie [GetLine](#getline), [SetSel](#setsel), [GetSel](#getsel)i [ ReplaceSel](#replacesel).  
   
@@ -249,7 +249,7 @@ BOOL CanUndo() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli ostatnia operacja edycji można cofnąć przez wywołanie do **Cofnij** funkcja członkowska; 0, jeśli nie można cofnąć.  
+ Różna od zera, jeśli ostatnia operacja edycji można cofnąć przez wywołanie do `Undo` funkcja członkowska; 0, jeśli nie można cofnąć.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji, zobacz [EM_CANUNDO](http://msdn.microsoft.com/library/windows/desktop/bb775468) w zestawie Windows SDK.  
@@ -278,7 +278,7 @@ int CharFromPos(CPoint pt) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pt`  
+ *PT*  
  Współrzędne punktu w obszarze klienckim tego `CEdit` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -302,7 +302,7 @@ void Clear();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Usunięcie wykonywane przez **wyczyść** mogą zostać cofnięte przez wywołanie metody [Cofnij](#undo) funkcję elementu członkowskiego.  
+ Usunięcie wykonywane przez `Clear` mogą zostać cofnięte przez wywołanie metody [Cofnij](#undo) funkcję elementu członkowskiego.  
   
  Aby usunąć bieżące zaznaczenie i umieść usunięto zawartość w Schowku, należy wywołać [Wytnij](#cut) funkcję elementu członkowskiego.  
   
@@ -336,25 +336,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
+ *dwStyle*  
  Określa styl formantu edycyjnego. Zastosuj dowolną kombinację [style edycji](styles-used-by-mfc.md#edit-styles) do formantu.  
   
- `rect`  
+ *Rect*  
  Określa rozmiar i położenie kontrolki edycji. Może być `CRect` obiektu lub `RECT` struktury.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Określa okno nadrzędne kontrolki edycji (zazwyczaj `CDialog`). Nie może być **NULL**.  
   
- `nID`  
+ *nID*  
  Określa identyfikator kontrolki edycji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli inicjowanie zakończy się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Możesz utworzyć `CEdit` obiektu w dwóch krokach. Najpierw należy wywołać `CEdit` , a następnie wywołania konstruktora **Utwórz**, która tworzy kontrolkę edycji systemu Windows i dołącza go do `CEdit` obiektu.  
+ Możesz utworzyć `CEdit` obiektu w dwóch krokach. Najpierw należy wywołać `CEdit` , a następnie wywołania konstruktora `Create`, która tworzy kontrolkę edycji systemu Windows i dołącza go do `CEdit` obiektu.  
   
- Gdy **Utwórz** wykonuje system Windows wysyła [WM_NCCREATE](http://msdn.microsoft.com/library/windows/desktop/ms632635), [WM_NCCALCSIZE](http://msdn.microsoft.com/library/windows/desktop/ms632634), [WM_CREATE](http://msdn.microsoft.com/library/windows/desktop/ms632619), i [WM_ GETMINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632626) wiadomości do kontrolki edycji.  
+ Gdy `Create` wykonuje system Windows wysyła [WM_NCCREATE](http://msdn.microsoft.com/library/windows/desktop/ms632635), [WM_NCCALCSIZE](http://msdn.microsoft.com/library/windows/desktop/ms632634), [WM_CREATE](http://msdn.microsoft.com/library/windows/desktop/ms632619), i [WM_GETMINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632626) wiadomości do kontrolki edycji.  
   
  Komunikaty te są obsługiwane przez domyślnie [OnNcCreate](cwnd-class.md#onnccreate), [OnNcCalcSize](cwnd-class.md#onnccalcsize), [OnCreate](cwnd-class.md#oncreate), i [OnGetMinMaxInfo](cwnd-class.md#ongetminmaxinfo) funkcje Członkowskie w `CWnd` klasy podstawowej. Aby rozszerzyć domyślnej obsługi wiadomości, klasa wyprowadzona z `CEdit`, Dodaj mapowanie komunikatów do nowej klasy i zastąpienie powyżej funkcje Członkowskie obsługi wiadomości. Zastąpienie `OnCreate`, na przykład, aby wykonać wymagane inicjowania dla nowej klasy.  
   
@@ -381,7 +381,7 @@ void Cut();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Usunięcie wykonywane przez **Wytnij** mogą zostać cofnięte przez wywołanie metody [Cofnij](#undo) funkcję elementu członkowskiego.  
+ Usunięcie wykonywane przez `Cut` mogą zostać cofnięte przez wywołanie metody [Cofnij](#undo) funkcję elementu członkowskiego.  
   
  Aby usunąć bieżące zaznaczenie bez wprowadzania usunięty tekst do Schowka, wywołaj [wyczyść](#clear) funkcję elementu członkowskiego.  
   
@@ -445,10 +445,10 @@ CString GetCueBanner() const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `lpszText`  
+ [out] *lpszText*  
  Wskaźnik do ciąg, który zawiera tekst wskaźnika.  
   
- [in] `cchText`  
+ [in] *cchText*  
  Liczba znaków, które mogą być odbierane. Liczba ta obejmuje Kończenie `NULL` znaków.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -513,8 +513,8 @@ BOOL GetHighlight(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[out] `pichStart`|Liczony od zera indeks pierwszego znaku w zakresie tekstu, który zostanie wyróżniona.|  
-|[out] `pichEnd`|Liczony od zera indeks ostatni znak w zakres tekstu, które są wyróżnione.|  
+|[out] *pichStart*|Liczony od zera indeks pierwszego znaku w zakresie tekstu, który zostanie wyróżniona.|  
+|[out] *pichEnd*|Liczony od zera indeks ostatni znak w zakres tekstu, które są wyróżnione.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
@@ -544,7 +544,7 @@ UINT GetLimitText() const;
  [!code-cpp[NVC_MFC_CEdit#11](../../mfc/reference/codesnippet/cpp/cedit-class_11.cpp)]  
   
 ##  <a name="getline"></a>  CEdit::GetLine  
- Wywołanie tej funkcji można pobrać wiersza z formantu edycyjnego i umieszcza je w `lpszBuffer`.  
+ Wywołanie tej funkcji można pobrać wiersza z formantu edycyjnego i umieszcza je w *lpszBuffer*.  
   
 ```  
 int GetLine(
@@ -558,17 +558,17 @@ int GetLine(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Określa numer wiersza, który można pobrać z wielu linii edycji kontrolki. Numerowanie wierszy jest liczony od zera; wartość 0 określa pierwszego wiersza. Ten parametr jest ignorowana przez kontrolkę edycji jeden wiersz.  
   
- `lpszBuffer`  
+ *lpszBuffer*  
  Wskazuje buforu, który otrzyma kopię wiersza. Pierwsze słowo buforu, należy określić maksymalną liczbę znaków, które mogą zostać skopiowane do buforu.  
   
- `nMaxLength`  
- Określa maksymalną liczbę bajtów, które mogą zostać skopiowane do buforu. `GetLine` umieszcza tę wartość w pierwszej wyrazu `lpszBuffer` przed wykonaniem połączenia do systemu Windows.  
+ *nMaxLength*  
+ Określa maksymalną liczbę bajtów, które mogą zostać skopiowane do buforu. `GetLine` umieszcza tę wartość w pierwszej wyrazu *lpszBuffer* przed wykonaniem połączenia do systemu Windows.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczba bajtów faktycznie skopiowane. Zwracana wartość wynosi 0, jeśli numer wiersza określony przez `nIndex` jest większa niż liczba wierszy w formancie edycyjnym.  
+ Liczba bajtów faktycznie skopiowane. Zwracana wartość wynosi 0, jeśli numer wiersza określony przez *nIndex* jest większa niż liczba wierszy w formancie edycyjnym.  
   
 ### <a name="remarks"></a>Uwagi  
  Skopiowanego wiersza nie zawiera znaku zakończenia wartości null.  
@@ -661,7 +661,7 @@ void GetRect(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect —*  
  Wskazuje `RECT` strukturę, która odbiera formatowania prostokąta.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -686,10 +686,10 @@ void GetSel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nStartChar`  
+ *nStartChar*  
  Odwołanie do wartości całkowitej, który będzie otrzymywał pozycja pierwszego znaku w bieżącym zaznaczeniu.  
   
- `nEndChar`  
+ *nEndChar*  
  Odwołanie do wartości całkowitej, który będzie otrzymywał pozycja pierwszego znaku nonselected poza końcem bieżącego zaznaczenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -722,7 +722,7 @@ void LimitText(int nChars = 0);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nChars`  
+ *nChars*  
  Określa tekst, który użytkownik może wprowadzić długość (w bajtach). Jeśli ten parametr ma wartość 0, ma ustawioną wartość długość tekstu **uint_max —** bajtów. Jest to zachowanie domyślne.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -744,11 +744,11 @@ int LineFromChar(int nIndex = -1) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
- Zawiera wartość indeksu żądany znak w tekście kontrolki edycji lub zawiera wartość -1. Jeśli `nIndex` wynosi -1, określa bieżącego wiersza, oznacza to, że wiersz zawierający karetki.  
+ *nIndex*  
+ Zawiera wartość indeksu żądany znak w tekście kontrolki edycji lub zawiera wartość -1. Jeśli *nIndex* wynosi -1, określa bieżącego wiersza, oznacza to, że wiersz zawierający karetki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczony od zera numery wierszy zawierających określony przez indeks znaków `nIndex`. Jeśli `nIndex` wynosi -1, jest zwracany numer wiersza, który zawiera pierwszy znak zaznaczenia. Jeśli nie ma żadnego zaznaczenia, zwracany jest bieżący numer wiersza.  
+ Liczony od zera numery wierszy zawierających określony przez indeks znaków *nIndex*. Jeśli *nIndex* wynosi -1, jest zwracany numer wiersza, który zawiera pierwszy znak zaznaczenia. Jeśli nie ma żadnego zaznaczenia, zwracany jest bieżący numer wiersza.  
   
 ### <a name="remarks"></a>Uwagi  
  Indeks znaków jest liczbę znaków od początku kontrolki edycji.  
@@ -768,11 +768,11 @@ int LineIndex(int nLine = -1) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nLine`  
- Zawiera wartość indeksu dla żądanego wiersza w tekście kontrolki edycji lub zawiera wartość -1. Jeśli `nLine` wynosi -1, określa bieżącego wiersza, oznacza to, że wiersz zawierający karetki.  
+ *nLine*  
+ Zawiera wartość indeksu dla żądanego wiersza w tekście kontrolki edycji lub zawiera wartość -1. Jeśli *nLine* wynosi -1, określa bieżącego wiersza, oznacza to, że wiersz zawierający karetki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Indeks znaków wiersza określony w `nLine` lub wartość -1 Jeśli liczba określonego wiersza jest większa niż liczba wierszy w formancie edycyjnym.  
+ Indeks znaków wiersza określony w *nLine* lub wartość -1 Jeśli liczba określonego wiersza jest większa niż liczba wierszy w formancie edycyjnym.  
   
 ### <a name="remarks"></a>Uwagi  
  Indeks znaków jest liczbę znaków od początku kontrolki edycji określony wiersz.  
@@ -792,17 +792,17 @@ int LineLength(int nLine = -1) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nLine`  
+ *nLine*  
  Liczony od zera indeks znaków w wierszu, którego długość ma być pobrana. Wartość domyślna wynosi -1.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Dla formantów edycyjnych jeden wiersz, wartość zwracana jest długość, w `TCHAR`s tekstu w formancie edycyjnym.  
   
- Dla wielowierszowych formantów edycyjnych, wartość zwracana jest długość, `TCHAR`s wiersza określony przez `nLine` parametru. Aby uzyskać [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] tekstu, długość jest to liczba bajtów w wierszu; tekst Unicode, długość jest liczba znaków w wierszu. Długość nie zawiera znak powrotu karetki na końcu linii.  
+ Dla wielowierszowych formantów edycyjnych, wartość zwracana jest długość, `TCHAR`s wiersza określony przez *nLine* parametru. Aby uzyskać [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] tekstu, długość jest to liczba bajtów w wierszu; tekst Unicode, długość jest liczba znaków w wierszu. Długość nie zawiera znak powrotu karetki na końcu linii.  
   
- Jeśli `nLine` parametru jest większa niż liczba znaków w formancie, zwracana wartość wynosi zero.  
+ Jeśli *nLine* parametru jest większa niż liczba znaków w formancie, zwracana wartość wynosi zero.  
   
- Jeśli `nLine` parametru wynosi -1, wartość zwracana jest liczba niezaznaczone znaków w wierszy, które zawierają znaki wybrane. Na przykład jeśli zaznaczenie rozciąga się od czwarty znaku o jeden wiersz za pośrednictwem osiem znaków od końca następnego wiersza, zwracana wartość wynosi 10. Oznacza to trzy znaki na pierwszy wiersz i siedem przy następnym.  
+ Jeśli *nLine* parametru wynosi -1, wartość zwracana jest liczba niezaznaczone znaków w wierszy, które zawierają znaki wybrane. Na przykład jeśli zaznaczenie rozciąga się od czwarty znaku o jeden wiersz za pośrednictwem osiem znaków od końca następnego wiersza, zwracana wartość wynosi 10. Oznacza to trzy znaki na pierwszy wiersz i siedem przy następnym.  
   
  Aby uzyskać więcej informacji na temat `TCHAR` typu, zobacz `TCHAR` wiersza w tabeli w [typów danych systemu Windows](http://msdn.microsoft.com/library/windows/desktop/aa383751).  
   
@@ -822,16 +822,16 @@ void LineScroll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nLines`  
+ *nLines*  
  Określa liczbę wierszy, aby przewijać w pionie.  
   
- `nChars`  
+ *nChars*  
  Określa liczbę pozycji znaku można przewijać w poziomie. Ta wartość jest ignorowana, jeśli formant edycyjny ma albo **es_right —** lub **es_center —** stylu.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja członkowska jest przetwarzany tylko przez formantów edycyjnych wielu linii.  
   
- Formant edycyjny nie jest przewijane w pionie poza ostatni wiersz tekstu w formancie edycyjnym. Jeśli bieżący wiersz i liczby wierszy określony przez `nLines` przekracza całkowitą liczbę wierszy w formancie edycyjnym, wartość jest ustawione tak, aby ostatni wiersz kontrolki edycji jest przewijane w górnej części okna kontrolki edycji.  
+ Formant edycyjny nie jest przewijane w pionie poza ostatni wiersz tekstu w formancie edycyjnym. Jeśli bieżący wiersz i liczby wierszy określony przez *nLines* przekracza całkowitą liczbę wierszy w formancie edycyjnym, wartość jest ustawione tak, aby ostatni wiersz kontrolki edycji jest przewijane w górnej części okna kontrolki edycji.  
   
  `LineScroll` można przewijać w poziomie poza ostatni znak każdego wiersza.  
   
@@ -863,14 +863,14 @@ CPoint PosFromChar(UINT nChar) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nChar`  
+ *NChar*  
  Liczony od zera indeks określony znak.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Współrzędne górnego lewego rogu znak określony przez `nChar`.  
+ Współrzędne górnego lewego rogu znak określony przez *nChar*.  
   
 ### <a name="remarks"></a>Uwagi  
- Znak jest określona przez podanie jego liczony od zera indeks wartości. Jeśli `nChar` jest większa niż indeks ostatni znak w tym `CEdit` obiektu, zwracana wartość określa współrzędne znaku na pozycji tylko po ostatnim znakiem w tym `CEdit` obiektu.  
+ Znak jest określona przez podanie jego liczony od zera indeks wartości. Jeśli *nChar* jest większa niż indeks ostatni znak w tym `CEdit` obiektu, zwracana wartość określa współrzędne znaku na pozycji tylko po ostatnim znakiem w tym `CEdit` obiektu.  
   
 > [!NOTE]
 >  Ta funkcja członkowska jest dostępnych w programie Windows 95 i Windows NT 4.0.  
@@ -881,17 +881,17 @@ CPoint PosFromChar(UINT nChar) const;
   Zobacz przykład [CEdit::LineFromChar](#linefromchar).  
   
 ##  <a name="replacesel"></a>  CEdit::ReplaceSel  
- Wywołanie tej funkcji, aby zastąpić bieżące zaznaczenie w formancie edycji tekstu określonego przez `lpszNewText`.  
+ Wywołanie tej funkcji, aby zastąpić bieżące zaznaczenie w formancie edycji tekstu określonego przez *lpszNewText*.  
   
 ```  
 void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszNewText`  
+ *lpszNewText*  
  Wskazuje zerem ciąg zawierający tekst zastępczy.  
   
- `bCanUndo`  
+ *bCanUndo*  
  Aby określić, że ta funkcja może być cofnięte, ustaw wartość tego parametru, aby **TRUE** . Wartość domyślna to **FALSE**.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -917,10 +917,10 @@ BOOL SetCueBanner(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszText`  
+ [in] *lpszText*  
  Wskaźnik do ciąg, który zawiera wskaźnik do wyświetlenia w formancie edycyjnym.  
   
- [in] `fDrawWhenFocused`  
+ [in] *fDrawWhenFocused*  
  Jeśli `false`, transparent wskaźnika nie jest rysowana, gdy użytkownik kliknie przycisk w formancie edycyjnym i przenosi fokus na formantu.  
   
  Jeśli `true`, transparent wskaźnika jest rysowany nawet wtedy, gdy formant ma fokus. Transparent sygnalizacji zniknie uruchomienia wpisz w formancie użytkownika.  
@@ -981,8 +981,8 @@ void SetHighlight(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `ichStart`|Liczony od zera indeks pierwszego znaku w zakres tekstu, aby wyróżnić.|  
-|[in] `ichEnd`|Liczony od zera indeks ostatni znak w zakres tekstu, aby wyróżnić.|  
+|[in] *ichStart*|Liczony od zera indeks pierwszego znaku w zakres tekstu, aby wyróżnić.|  
+|[in] *ichEnd*|Liczony od zera indeks ostatni znak w zakres tekstu, aby wyróżnić.|  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wysyła [EM_SETHILITE](http://msdn.microsoft.com/library/windows/desktop/bb761643) komunikat, który jest opisany w zestawie SDK systemu Windows.  
@@ -995,7 +995,7 @@ void SetLimitText(UINT nMax);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nMax`  
+ *nMax*  
  Nowy limit tekstu, w znakach.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1044,7 +1044,7 @@ void SetModify(BOOL bModified = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bModified`  
+ *bModified*  
  Wartość **TRUE** wskazuje, czy tekst został zmodyfikowany i wartość **FALSE** wskazuje on pozostaje niezmieniona. Domyślnie została ustawiona flaga zmodyfikowane.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1088,7 +1088,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bReadOnly`  
+ *bReadOnly*  
  Określa, czy do ustawiania lub usuwania stanie tylko do odczytu kontrolki edycji. Wartość **TRUE** ustawia stan tylko do odczytu; wartość **FALSE** ustawia stan odczytu/zapisu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1110,7 +1110,7 @@ void SetRect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect —*  
  Wskazuje `RECT` struktury lub `CRect` obiekt, który określa nowe wymiary formatowania prostokąta.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1135,7 +1135,7 @@ void SetRectNP(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect —*  
  Wskazuje `RECT` struktury lub `CRect` obiekt, który określa nowe wymiary prostokąta.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1176,10 +1176,10 @@ void SetSel(
  *bNoScroll*  
  Wskazuje, czy karetkę powinien zostać wyświetlony w wyniku przewijania. Jeśli **FALSE**, karetkę jest wyświetlony w wyniku przewijania. Jeśli **TRUE**, karetkę nie jest przewijane w widoku.  
   
- `nStartChar`  
- Określa położenie początkowe. Jeśli `nStartChar` 0 i `nEndChar` wynosi -1, wszystkie tekst w formancie edycyjnym jest zaznaczone. Jeśli `nStartChar` wynosi -1, wszystkie bieżące zaznaczenie jest usunięte.  
+ *nStartChar*  
+ Określa położenie początkowe. Jeśli *nStartChar* 0 i *nEndChar* wynosi -1, wszystkie tekst w formancie edycyjnym jest zaznaczone. Jeśli *nStartChar* wynosi -1, wszystkie bieżące zaznaczenie jest usunięte.  
   
- `nEndChar`  
+ *nEndChar*  
  Określa pozycję końcową.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1202,13 +1202,13 @@ BOOL SetTabStops(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cxEachStop`  
- Określa, że tabulatorów był co `cxEachStop` jednostki okna dialogowego.  
+ *cxEachStop*  
+ Określa, że tabulatorów był co *cxEachStop* jednostki okna dialogowego.  
   
- `nTabStops`  
- Określa liczbę tabulatorów zawarte w `rgTabStops`. Ta liczba musi być większa niż 1.  
+ *nTabStops*  
+ Określa liczbę tabulatorów zawarte w *rgTabStops*. Ta liczba musi być większa niż 1.  
   
- `rgTabStops`  
+ *rgTabStops*  
  Punkty na tablicę liczb całkowitych bez znaku, określając karcie zatrzymuje się w jednostkach okna dialogowego. Jednostki okna dialogowego jest odległość pozioma lub pionowa. Jednostki okna dialogowego w poziomie jest taki sam, jak jedna czwarta bieżąca jednostka podstawowa szerokość okna dialogowego i 1 jednostka pionowy okna dialogowego jest równa 1 / 8 bieżąca jednostka podstawowa wysokość okna dialogowego. Jednostki podstawowy okna dialogowego są obliczane na podstawie wysokość i szerokość bieżącej czcionki systemowej. **GetDialogBaseUnits** systemu Windows funkcja zwraca bieżącego okna dialogowego podstawowej jednostki w pikselach.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1217,7 +1217,7 @@ BOOL SetTabStops(
 ### <a name="remarks"></a>Uwagi  
  Jeśli tekst jest kopiowany do formantu edycji wielu linii, wszelkie znak tabulacji w tekście spowoduje miejsca do wygenerowania do następnego tabulatora.  
   
- Ustawić tabulatorów domyślny rozmiar 32 jednostki okna dialogowego, należy wywołać wersji bez parametrów funkcji członkowskiej. Tabulatorów rozmiar niż 32, wywołaj wersji z `cxEachStop` parametru. Tabulatorów na tablicę rozmiary, użyj wersji z dwoma parametrami.  
+ Ustawić tabulatorów domyślny rozmiar 32 jednostki okna dialogowego, należy wywołać wersji bez parametrów funkcji członkowskiej. Tabulatorów rozmiar niż 32, wywołaj wersji z *cxEachStop* parametru. Tabulatorów na tablicę rozmiary, użyj wersji z dwoma parametrami.  
   
  Funkcji członkowskiej jest przetwarzany tylko przez formantów edycyjnych wielu linii.  
   
@@ -1245,10 +1245,10 @@ BOOL ShowBalloonTip(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `pEditBalloonTip`|Wskaźnik do [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) struktury, która opisuje etykieta dymka.|  
-|[in] `lpszTitle`|Wskaźnik do ciągu Unicode, który zawiera tytuł etykieta dymka.|  
-|[in] `lpszText`|Wskaźnik do ciągu Unicode, który zawiera tekst etykiety dymka.|  
-|[in] `ttiIcon`|`INT` Określająca typ ikona do skojarzenia z etykieta dymka. Wartość domyślna to `TTI_NONE`. Aby uzyskać więcej informacji, zobacz `ttiIcon` członkiem [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) struktury.|  
+|[in] *pEditBalloonTip*|Wskaźnik do [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) struktury, która opisuje etykieta dymka.|  
+|[in] *lpszTitle*|Wskaźnik do ciągu Unicode, który zawiera tytuł etykieta dymka.|  
+|[in] *lpszText*|Wskaźnik do ciągu Unicode, który zawiera tekst etykiety dymka.|  
+|[in] *ttiIcon*|**INT** określająca typ ikona do skojarzenia z etykieta dymka. Wartość domyślna to `TTI_NONE`. Aby uzyskać więcej informacji, zobacz `ttiIcon` członkiem [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) struktury.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
@@ -1277,7 +1277,7 @@ BOOL Undo();
  Kontrolki edycji jeden wiersz zwracana wartość jest zawsze różną od zera. Kontrolki edycji wielu linii, zwracana wartość jest różna od zera, jeśli operacja cofania zakończy się pomyślnie, lub wartość 0 w przypadku niepowodzenia operacji cofania.  
   
 ### <a name="remarks"></a>Uwagi  
- Można także cofnąć operacji cofania. Na przykład można przywrócić usuniętego tekstu w pierwszym wywołaniu **Cofnij**. Tak długo, jak brak pośredniczące operacji edycji, należy usunąć go ponownie, używając drugie wywołanie **Cofnij**.  
+ Można także cofnąć operacji cofania. Na przykład można przywrócić usuniętego tekstu w pierwszym wywołaniu `Undo`. Tak długo, jak brak pośredniczące operacji edycji, należy usunąć go ponownie, używając drugie wywołanie `Undo`.  
   
  Aby uzyskać więcej informacji, zobacz [EM_UNDO](http://msdn.microsoft.com/library/windows/desktop/bb761670) w zestawie Windows SDK.  
   

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0093c92604013e4c1aef4046f244d7bcd3f71958
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e939d189d991ef234e940b272291c2da6c931684
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353328"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954481"
 ---
 # <a name="cd2dsizef-class"></a>Klasa CD2DSizeF
 Otoka dla D2D1_SIZE_F.  
@@ -48,7 +48,7 @@ class CD2DSizeF : public D2D1_SIZE_F;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CD2DSizeF::IsNull](#isnull)|Zwraca `boolean` wartość, która wskazuje, czy wyrażenie nie zawiera prawidłowych danych ( `null`).|  
+|[CD2DSizeF::IsNull](#isnull)|Zwraca **logiczna** wartość, która wskazuje, czy wyrażenie nie zawiera prawidłowych danych ( **null**).|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
@@ -79,13 +79,13 @@ CD2DSizeF(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `size`  
+ *Rozmiar*  
  Rozmiar źródła  
   
- `cx`  
+ *CX*  
  szerokość źródła  
   
- `cy`  
+ *CY*  
  wysokość źródła  
   
 ##  <a name="isnull"></a>  CD2DSizeF::IsNull  

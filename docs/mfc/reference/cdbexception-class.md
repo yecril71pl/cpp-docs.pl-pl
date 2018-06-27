@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 824ac88326042eb55ecb9667c39331d1ab5464e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7766b56e75edefda4f40194a5ce18572c8d6d78d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368338"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952251"
 ---
 # <a name="cdbexception-class"></a>Klasa CDBException
 Reprezentuje warunku wyjątku wynikających z klasami baz danych.  
@@ -92,13 +92,13 @@ class CDBException : public CException
   
 - **AFX_SQL_ERROR_LOCK_MODE_NOT_SUPPORTED** nie można przeprowadzić żądanie blokady rekordów do aktualizacji, ponieważ sterownik ODBC nie obsługuje operacji blokowania.  
   
-- **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED** należy wywołać `CRecordset::Update` lub **usunąć** dla tabeli bez klucza unikatowy i zmienić wielu rekordów.  
+- **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED** należy wywołać `CRecordset::Update` lub `Delete` dla tabeli bez klucza unikatowy i zmienić wielu rekordów.  
   
 - **AFX_SQL_ERROR_NO_CURRENT_RECORD** próbowano edytować lub usunąć wcześniej usunięty rekord. Po usunięciu musi przewiń bieżącego rekordu.  
   
 - **AFX_SQL_ERROR_NO_POSITIONED_UPDATES** Twojego żądania dla dynamiczny zestaw wyników nie może być spełnione, ponieważ sterownik ODBC nie obsługuje aktualizacje pozycjonowane.  
   
-- **AFX_SQL_ERROR_NO_ROWS_AFFECTED** należy wywołać `CRecordset::Update` lub **usunąć**, ale w momencie rozpoczęcia operacji nie można odnaleźć rekordu.  
+- **AFX_SQL_ERROR_NO_ROWS_AFFECTED** należy wywołać `CRecordset::Update` lub `Delete`, ale w momencie rozpoczęcia operacji nie można odnaleźć rekordu.  
   
 - **AFX_SQL_ERROR_ODBC_LOAD_FAILED** próba załadowania ODBC. Biblioteki DLL nie powiodła się; System Windows nie może znaleźć lub nie można załadować tę bibliotekę DLL. Ten błąd jest krytyczny.  
   
@@ -114,7 +114,7 @@ class CDBException : public CException
   
 - **AFX_SQL_ERROR_RECORDSET_READONLY** podjęła próbę zaktualizowania rekordów tylko do odczytu lub źródło danych jest tylko do odczytu. Żadne operacje aktualizacji może odbywać się przy użyciu zestawu rekordów lub `CDatabase` obiekt jest skojarzony.  
   
-- **Wartość SQL_ERROR** funkcji nie powiodło się. Komunikat o błędzie zwrócony przez funkcję ODBC **SQLError** są przechowywane w **m_strError** element członkowski danych.  
+- **Wartość SQL_ERROR** funkcji nie powiodło się. Komunikat o błędzie zwrócony przez funkcję ODBC `SQLError` są przechowywane w **m_strError** element członkowski danych.  
   
 - **SQL_INVALID_HANDLE** funkcji nie powiodło się z powodu środowiska nieprawidłowy uchwyt, dojścia połączenia lub instrukcji. Oznacza to błąd programistyczny. Dodatkowe informacje są niedostępne z funkcji ODBC **SQLError**.  
   
@@ -132,11 +132,11 @@ class CDBException : public CException
 ### <a name="remarks"></a>Uwagi  
  Ten ciąg ma formularza "Stan: % s, Native: % ld źródła: % s", gdzie kodów formatu w kolejności, są zastępowane przez wartości, które opisują:  
   
--   **SQLSTATE**, zerem ciąg zawierający 5 znaków zwrócony kod w *szSqlState* parametru funkcji ODBC **SQLError**. **SQLSTATE** wartości są wymienione w dodatku A [kody błędów ODBC](https://msdn.microsoft.com/library/ms714687.aspx)w *Podręcznik programisty ODBC*. Przykład: "S0022".  
+-   **SQLSTATE**, zerem ciąg zawierający 5 znaków zwrócony kod w *szSqlState* parametru funkcji ODBC `SQLError`. **SQLSTATE** wartości są wymienione w dodatku A [kody błędów ODBC](https://msdn.microsoft.com/library/ms714687.aspx)w *Podręcznik programisty ODBC*. Przykład: "S0022".  
   
--   Zwrócony kod błędu macierzystego, określonego w źródle danych w *pfNativeError* parametr **SQLError** funkcji. Przykład: 207.  
+-   Zwrócony kod błędu macierzystego, określonego w źródle danych w *pfNativeError* parametr `SQLError` funkcji. Przykład: 207.  
   
--   Tekst komunikatu o błędzie zwracany w *szErrorMsg* parametr **SQLError** funkcji. Ten komunikat składa się z kilku nazw w nawiasach kwadratowych. Jako błąd jest przekazywany od źródła do użytkownika, każdy składnik ODBC (źródła danych, sterowników i Menedżera sterowników) dołącza własną nazwę. Informacje te pomagają wskazać przyczynę błędu. Przykład: [Microsoft] [sterownik ODBC SQL Server] [SQL Server]  
+-   Tekst komunikatu o błędzie zwracany w *szErrorMsg* parametr `SQLError` funkcji. Ten komunikat składa się z kilku nazw w nawiasach kwadratowych. Jako błąd jest przekazywany od źródła do użytkownika, każdy składnik ODBC (źródła danych, sterowników i Menedżera sterowników) dołącza własną nazwę. Informacje te pomagają wskazać przyczynę błędu. Przykład: [Microsoft] [sterownik ODBC SQL Server] [SQL Server]  
   
  Platformę interpretuje ciąg błędu i umieszczenie jej składników do **m_strStateNativeOrigin**; Jeśli **m_strStateNativeOrigin** zawiera informacje o więcej niż jeden błąd, błędy są oddzielone newlines. Platformę umieszcza tekst błędu alfanumeryczne w **m_strError**.  
   

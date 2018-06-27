@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4abdb76523f0b7b1ab87beb6daaf723c4dff5cc8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0792601ae773cf9abc8bb44218eb7395ff68da77
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353644"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952787"
 ---
 # <a name="cautohidedocksite-class"></a>Klasa CAutoHideDockSite
 `CAutoHideDockSite` Rozszerza [klasy CDockSite](../../mfc/reference/cdocksite-class.md) do zaimplementowania autoukrywania dock okienka.  
@@ -115,10 +115,10 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] `pBar`|Okienko podstawową platformę testów.|  
+|[in] *pBar*|Okienko podstawową platformę testów.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli `pBar` jest pochodną `CMFCAutoHideBar`; `FALSE` inaczej.  
+ `TRUE` Jeśli *pBar* jest pochodną `CMFCAutoHideBar`; `FALSE` inaczej.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli obiekt podstawowy okienko jest pochodną `CMFCAutoHideBar`, może zawierać `CAutoHideDockSite`.  
@@ -138,14 +138,14 @@ virtual void DockPane(
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] `pWnd`|Okienka stacje dokujące platformę.|  
-|[in] `dockMethod`|Dokowanie opcje okienka.|  
-|[in] `lpRect`|Prostokąt określa granice zadokowanego panelu.|  
+|[in] *pWnd*|Okienka stacje dokujące platformę.|  
+|[in] *dockMethod*|Dokowanie opcje okienka.|  
+|[in] *lprect —*|Prostokąt określa granice zadokowanego panelu.|  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja nie używa parametru `dockMethod`, które jest dostarczane do użytku w przyszłości.  
+ Domyślna implementacja nie używa parametru *dockMethod*, które jest dostarczane do użytku w przyszłości.  
   
- Jeśli `lpRect` jest `NULL`, platformę umieszcza okienka w domyślnej lokalizacji w witrynie dokowania. Jeśli witryna dock jest poziomy, domyślna lokalizacja to lewej strony witryny dokowania. W przeciwnym razie wartość domyślna lokalizacja to u góry lokacji dokowania.  
+ Jeśli *lprect —* jest `NULL`, platformę umieszcza okienka w domyślnej lokalizacji w witrynie dokowania. Jeśli witryna dock jest poziomy, domyślna lokalizacja to lewej strony witryny dokowania. W przeciwnym razie wartość domyślna lokalizacja to u góry lokacji dokowania.  
   
 ##  <a name="getalignrect"></a>  CAutoHideDockSite::GetAlignRect  
  Pobiera informacje o rozmiarze lokacji dokowania we współrzędnych ekranu.  
@@ -159,7 +159,7 @@ void GetAlignRect(CRect& rect) const;
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] `rect`|Odwołanie do prostokąta. Metoda przechowuje rozmiar lokacji dock w tym prostokącie.|  
+|[in] *rect*|Odwołanie do prostokąta. Metoda przechowuje rozmiar lokacji dock w tym prostokącie.|  
   
 ### <a name="remarks"></a>Uwagi  
  Prostokąt zostanie zmieniona dla przesunięcia marginesów tak, aby nie są uwzględniane.  
@@ -182,7 +182,7 @@ void SetOffsetLeft(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nOffset`  
+ [in] *nOffset*  
  Przesunięcie nowe.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -196,7 +196,7 @@ void SetOffsetRight(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nOffset`  
+ [in] *nOffset*  
  Przesunięcie nowe.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -214,10 +214,10 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] `rectNewClientArea`|Wartością zastrzeżoną.|  
+|[in] *rectNewClientArea*|Wartością zastrzeżoną.|  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja używa `rectNewClientArea`. Ponownie go rysuje okienka z marginesami globalne narzędzi i odstęp.  
+ Domyślna implementacja używa *rectNewClientArea*. Ponownie go rysuje okienka z marginesami globalne narzędzi i odstęp.  
   
 ##  <a name="unsetautohidemode"></a>  CAutoHideDockSite::UnSetAutoHideMode  
  Wywołania [CMFCAutoHideBar::UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) dla obiektów w lokacji dokowania.  
@@ -231,10 +231,10 @@ void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] `pAutoHideToolbar`|Wskaźnik do [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) okienko obiektów znajdujących się na `CAutoHideDockSite`.|  
+|[in] *pAutoHideToolbar*|Wskaźnik do [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) okienko obiektów znajdujących się na `CAutoHideDockSite`.|  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda szuka wiersza, który zawiera `pAutoHideToolbar`. Wywołuje `CMFCAutoHideBar.UnSetAutoHideMode` dla wszystkich `CMFCAutoHideBar` obiektów w tym wierszu. Jeśli `pAutoHideToolbar` nie można odnaleźć lub jest ona `NULL`, ta metoda wywołuje `CMFCAutoHideBar.UnSetAutoHideMode` dla wszystkich `CMFCAutoHideBar` obiektów na `CAutoHideDockSite`.  
+ Ta metoda szuka wiersza, który zawiera *pAutoHideToolbar*. Wywołuje `CMFCAutoHideBar.UnSetAutoHideMode` dla wszystkich `CMFCAutoHideBar` obiektów w tym wierszu. Jeśli *pAutoHideToolbar* nie można odnaleźć lub jest ona `NULL`, ta metoda wywołuje `CMFCAutoHideBar.UnSetAutoHideMode` dla wszystkich `CMFCAutoHideBar` obiektów na `CAutoHideDockSite`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

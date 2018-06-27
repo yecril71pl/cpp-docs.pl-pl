@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac864831e9d3a0cf0cd5e67501f1ac8396f99473
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2763335a9165c1667160864a40200dcfd44b7f34
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352609"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953103"
 ---
 # <a name="carchiveexception-class"></a>Klasa CArchiveException
 Reprezentuje stan wyjątek serializacji  
@@ -69,7 +69,7 @@ class CArchiveException : public CException
  **Nagłówek:** afx.h  
   
 ##  <a name="carchiveexception"></a>  CArchiveException::CArchiveException  
- Konstruuje `CArchiveException` obiektu przechowywanie wartości `cause` w obiekcie.  
+ Konstruuje `CArchiveException` obiektu przechowywanie wartości *spowodować* w obiekcie.  
   
 ```  
 CArchiveException(
@@ -78,10 +78,10 @@ CArchiveException(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cause`  
+ *Przyczyna*  
  Zmienna Typ wyliczany wskazujący przyczynę wyjątek. Lista wyliczenia, zobacz [m_cause](#m_cause) element członkowski danych.  
   
- `lpszArchiveName`  
+ *lpszArchiveName*  
  Wskazuje ciąg zawierający nazwę `CArchive` obiektu wyjątku.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -97,7 +97,7 @@ int m_cause;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ten element członkowski danych jest publiczny zmiennej typu `int`. Wartości są definiowane przez `CArchiveException` typ wyliczeniowy. Moduły wyliczające i ich znaczenie są następujące:  
+ Ten element członkowski danych jest publiczny zmiennej typu **int**. Wartości są definiowane przez `CArchiveException` typ wyliczeniowy. Moduły wyliczające i ich znaczenie są następujące:  
   
 - **CArchiveException::none** nie wystąpił żaden błąd.  
   

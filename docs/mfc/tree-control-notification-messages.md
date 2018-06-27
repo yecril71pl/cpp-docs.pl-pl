@@ -18,30 +18,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7c352da9f9283f53c926a8223984620ee7fa6ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 92035d3f1a20a0fd9cc0c7b95d7238ef014033da
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385739"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950970"
 ---
 # <a name="tree-control-notification-messages"></a>Komunikaty powiadomień dotyczących kontrolki drzewa
-Formant drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) wysyła następujące komunikaty powiadomień jako **WM_NOTIFY** wiadomości:  
+Formant drzewa ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) wysyła następujące komunikaty powiadomień w postaci wiadomości WM_NOTIFY:  
   
 |Komunikat z powiadomieniem|Opis|  
 |--------------------------|-----------------|  
-|**TVN_BEGINDRAG**|Sygnalizuje uruchomienia operacji przeciągania i upuszczania|  
-|**TVN_BEGINLABELEDIT**|Sygnalizuje początek Edytowanie etykiet w miejscu|  
-|**TVN_BEGINRDRAG**|Sygnalizuje uruchomienia operacji przeciągania i upuszczania, za pomocą prawego przycisku myszy|  
-|**TVN_DELETEITEM**|Sygnały usunięcia określonego elementu|  
-|**TVN_ENDLABELEDIT**|Sygnalizuje koniec Edytowanie etykiet|  
-|**TVN_GETDISPINFO**|Żąda informacji, że drzewie wymaga, aby wyświetlić elementy|  
-|**TVN_ITEMEXPANDED**|Sygnały, że listy elementów podrzędnych elementu nadrzędnego został rozwinięte lub zwinięte|  
-|**TVN_ITEMEXPANDING**|Sygnalizuje, że można rozwinięte lub zwinięte listy elementów podrzędnych elementu nadrzędnego|  
-|**TVN_KEYDOWN**|Sygnały zdarzenia klawiatury|  
-|**TVN_SELCHANGED**|Sygnalizuje, że zaznaczenie zostało zmienione z jednego elementu na inny|  
-|**TVN_SELCHANGING**|Sygnalizuje, że zaznaczenie zostanie zmieniony z jednego elementu na inny|  
-|**TVN_SETDISPINFO**|Powiadomienie, aby zaktualizować informacje dla elementu|  
+|TVN_BEGINDRAG|Sygnalizuje uruchomienia operacji przeciągania i upuszczania|  
+|TVN_BEGINLABELEDIT|Sygnalizuje początek Edytowanie etykiet w miejscu|  
+|TVN_BEGINRDRAG|Sygnalizuje uruchomienia operacji przeciągania i upuszczania, za pomocą prawego przycisku myszy|  
+|TVN_DELETEITEM|Sygnały usunięcia określonego elementu|  
+|TVN_ENDLABELEDIT|Sygnalizuje koniec Edytowanie etykiet|  
+|TVN_GETDISPINFO|Żąda informacji, że drzewie wymaga, aby wyświetlić elementy|  
+|TVN_ITEMEXPANDED|Sygnały, że listy elementów podrzędnych elementu nadrzędnego został rozwinięte lub zwinięte|  
+|TVN_ITEMEXPANDING|Sygnalizuje, że można rozwinięte lub zwinięte listy elementów podrzędnych elementu nadrzędnego|  
+|TVN_KEYDOWN|Sygnały zdarzenia klawiatury|  
+|TVN_SELCHANGED|Sygnalizuje, że zaznaczenie zostało zmienione z jednego elementu na inny|  
+|TVN_SELCHANGING|Sygnalizuje, że zaznaczenie zostanie zmieniony z jednego elementu na inny|  
+|TVN_SETDISPINFO|Powiadomienie, aby zaktualizować informacje dla elementu|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Korzystanie z CTreeCtrl](../mfc/using-ctreectrl.md)   

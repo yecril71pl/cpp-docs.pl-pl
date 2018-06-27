@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b08f8d5ad1fa7c925e3a6dc2243079aba21452b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3959ae03d40bac93ca6453c254e894b8782f5333
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357090"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957201"
 ---
 # <a name="canimationrect-class"></a>Klasa CAnimationRect
 Implementuje funkcje prostokąta, którego boki można animować.  
@@ -139,16 +139,16 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pLeftTransition`  
+ *pLeftTransition*  
  Określa przejście do lewej.  
   
- `pTopTransition`  
+ *pTopTransition*  
  Określa przejście dla górnej.  
   
- `pRightTransition`  
+ *pRightTransition*  
  Określa przejście dla prawej strony.  
   
- `pBottomTransition`  
+ *pBottomTransition*  
  Określa przejście do dołu strony.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -187,34 +187,34 @@ CAnimationRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rect`  
+ *Rect*  
  Określa domyślny prostokąta.  
   
- `nGroupID`  
+ *nGroupID*  
  Określa identyfikator grupy.  
   
- `nObjectID`  
+ *nObjectID*  
  Określa identyfikator obiektu.  
   
- `dwUserData`  
+ *dwUserData*  
  Określa dane zdefiniowane przez użytkownika.  
   
- `pt`  
+ *PT*  
  Współrzędne górnego lewego rogu.  
   
- `sz`  
+ *Sz*  
  Rozmiar prostokąta.  
   
- `nLeft`  
+ *nLeft*  
  Określa współrzędną lewej granicy.  
   
- `nTop`  
+ *nTop*  
  Określa współrzędną TOP powiązany.  
   
- `nRight`  
+ *nRight*  
  Określa współrzędną prawej granicy.  
   
- `nBottom`  
+ *nBottom*  
  Określa współrzędną dolnej powiązany.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -230,7 +230,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lst`  
+ *lst*  
  Funkcja zwraca wartość, zawiera wskaźniki do czterech obiektów CAnimationVariable reprezentujący współrzędne prostokąta.  
   
 ##  <a name="getbottom"></a>  CAnimationRect::GetBottom  
@@ -306,7 +306,7 @@ BOOL GetValue(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rect`  
+ *Rect*  
  Dane wyjściowe. Gdy metoda zwróci wartość, zawiera bieżącą wartość.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -381,7 +381,7 @@ void operator=(const RECT& rect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rect`  
+ *Rect*  
  Nowa wartość prostokąta animacji.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -395,7 +395,7 @@ void SetDefaultValue(const CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rect`  
+ *Rect*  
  Określa nowe wartości domyślne dla lewej, górnej, prawej i dolnej.  
   
 ### <a name="remarks"></a>Uwagi  

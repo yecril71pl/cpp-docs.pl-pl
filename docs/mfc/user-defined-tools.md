@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3b755fc35c98652ab87231e9d8f58cde748bfc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b78e9a4fefad884f4ac683cd0c7f18688a5bdfe
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384351"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950817"
 ---
 # <a name="user-defined-tools"></a>Narzędzia zdefiniowane przez użytkownika
 MFC obsługuje narzędzia zdefiniowane przez użytkownika. Narzędzia zdefiniowane przez użytkownika jest polecenie specjalne, które wykonuje program zewnętrznych, określone przez użytkownika. Procesu dostosowywania służy do zarządzania narzędzia zdefiniowane przez użytkownika. Jednak nie można użyć tego procesu, jeśli obiekt aplikacji nie jest pochodną [CWinAppEx klasy](../mfc/reference/cwinappex-class.md). Aby uzyskać więcej informacji dotyczących dostosowywania, zobacz [Dostosowywanie MFC](../mfc/customization-for-mfc.md).  
@@ -32,11 +32,11 @@ Karta narzędzi okna dialogowego dostosowania
 ## <a name="enabling-user-defined-tools-support"></a>Włączenie użytkownika narzędzia pomocy technicznej  
  Aby włączyć narzędzia zdefiniowane przez użytkownika w aplikacji, należy wywołać [CWinAppEx::EnableUserTools](../mfc/reference/cwinappex-class.md#enableusertools). Jednak należy najpierw zdefiniować kilka stałych w plikach zasobów aplikacji w celu użycia jako parametry dla tego wywołania.  
   
- W edytorze zasobów należy utworzyć fikcyjny polecenia, które używa identyfikatora odpowiednie polecenie. W poniższym przykładzie używamy **ID_TOOLS_ENTRY** jako identyfikator polecenia. Ten identyfikator polecenia oznacza lokalizacji w menu, gdzie platformę powoduje wstawienie narzędzia zdefiniowane przez użytkownika.  
+ W edytorze zasobów należy utworzyć fikcyjny polecenia, które używa identyfikatora odpowiednie polecenie. W poniższym przykładzie używamy `ID_TOOLS_ENTRY` jako identyfikator polecenia. Ten identyfikator polecenia oznacza lokalizacji w menu, gdzie platformę powoduje wstawienie narzędzia zdefiniowane przez użytkownika.  
   
- Należy ustawić Odłóż niektórych kolejnych identyfikatorów w tabeli ciągów do reprezentowania narzędzia zdefiniowane przez użytkownika. Liczba parametrów, które wyznaczoną wynosi maksymalna liczba użytkowników narzędzia, które użytkownicy mogą definiować. W poniższym przykładzie są o nazwie **ID_USER_TOOL1** za pośrednictwem **ID_USER_TOOL10**.  
+ Należy ustawić Odłóż niektórych kolejnych identyfikatorów w tabeli ciągów do reprezentowania narzędzia zdefiniowane przez użytkownika. Liczba parametrów, które wyznaczoną wynosi maksymalna liczba użytkowników narzędzia, które użytkownicy mogą definiować. W poniższym przykładzie są o nazwie `ID_USER_TOOL1` za pośrednictwem `ID_USER_TOOL10`.  
   
- Możesz również zaoferować sugestie użytkowników, aby ułatwić im wybierz katalogów i argumenty dla zewnętrznych programów, które będą wywoływane jako narzędzia. Aby to zrobić, należy utworzyć dwa menu podręcznego w edytorze zasobów. W poniższym przykładzie są one nazywane **IDR_MENU_ARGS** i **IDR_MENU_DIRS**. Dla każdego polecenia w menu należy zdefiniować ciąg w tabeli ciągów Twojej aplikacji. Identyfikator zasobu ciągu musi być taki sam identyfikator polecenia.  
+ Możesz również zaoferować sugestie użytkowników, aby ułatwić im wybierz katalogów i argumenty dla zewnętrznych programów, które będą wywoływane jako narzędzia. Aby to zrobić, należy utworzyć dwa menu podręcznego w edytorze zasobów. W poniższym przykładzie są one nazywane `IDR_MENU_ARGS` i `IDR_MENU_DIRS`. Dla każdego polecenia w menu należy zdefiniować ciąg w tabeli ciągów Twojej aplikacji. Identyfikator zasobu ciągu musi być taki sam identyfikator polecenia.  
   
  Można również utworzyć klasy pochodnej z [klasy CUserTool](../mfc/reference/cusertool-class.md) zastąpić domyślną implementację. Aby to zrobić, należy przekazać dane środowiska uruchomieniowego dla klasy pochodnej jako czwartego parametru w CWinAppEx::EnableUserTools zamiast runtime_class — ([CUserTool klasy](../mfc/reference/cusertool-class.md)).  
   
@@ -46,7 +46,7 @@ Karta narzędzi okna dialogowego dostosowania
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#1](../mfc/codesnippet/cpp/user-defined-tools_1.cpp)]  
   
- W tym przykładzie zostanie włączone na karcie Narzędzia **dostosowywania** okno dialogowe. Platformę spowoduje zastąpienie dowolnego polecenia, który jest zgodny z Identyfikatorem polecenia **ID_TOOLS_ENTRY** dowolnego menu przy użyciu zestawu narzędzi zdefiniowanych użytkownika przy każdym otwarciu tego menu. Identyfikatory poleceń **ID_USER_TOOL1** za pośrednictwem **ID_USER_TOOL10** są zarezerwowane do użytku dla narzędzia zdefiniowane przez użytkownika. Klasa [klasy CUserTool](../mfc/reference/cusertool-class.md) obsługuje wywołania do narzędzi użytkownika. Ustawienia na karcie Narzędzia **dostosowywania** okno dialogowe zawiera przyciski z prawej strony pola wejścia argumentu i katalog na dostęp do menu **IDR_MENU_ARGS** i **IDR_MENU_DIRS**. Platformę, gdy użytkownik wybierze polecenie w jednym z tych menu, dołącza do odpowiednim polu tekstowym, ciąg, który ma taki sam identyfikator polecenia. identyfikator zasobu  
+ W tym przykładzie zostanie włączone na karcie Narzędzia **dostosowywania** okno dialogowe. Platformę spowoduje zastąpienie dowolnego polecenia, który jest zgodny z Identyfikatorem polecenia `ID_TOOLS_ENTRY` dowolnego menu przy użyciu zestawu narzędzi zdefiniowanych użytkownika przy każdym otwarciu tego menu. Identyfikatory poleceń `ID_USER_TOOL1` za pośrednictwem `ID_USER_TOOL10` są zarezerwowane do użytku dla narzędzia zdefiniowane przez użytkownika. Klasa [klasy CUserTool](../mfc/reference/cusertool-class.md) obsługuje wywołania do narzędzi użytkownika. Ustawienia na karcie Narzędzia **dostosowywania** okno dialogowe zawiera przyciski z prawej strony pola wejścia argumentu i katalog na dostęp do menu **IDR_MENU_ARGS** i **IDR_MENU_DIRS**. Platformę, gdy użytkownik wybierze polecenie w jednym z tych menu, dołącza do odpowiednim polu tekstowym, ciąg, który ma taki sam identyfikator polecenia. identyfikator zasobu  
   
 ### <a name="including-predefined-tools"></a>W tym narzędzia wstępnie zdefiniowane  
  Jeśli chcesz wstępnie niektóre narzędzia podczas uruchamiania aplikacji, konieczne jest przesłonięcie [CFrameWnd::LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) metody okna głównego aplikacji. W tej metody należy wykonać następujące kroki.  

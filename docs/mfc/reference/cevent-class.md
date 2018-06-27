@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da3dc6df825988794481795ca7e47e72b5736bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8450f4b4105f5302750ea0f369d0e6c1dc2925ab
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367506"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950888"
 ---
 # <a name="cevent-class"></a>Klasa CEvent
 Reprezentuje zdarzenia jest obiekt synchronizacji, który umożliwia jeden wątek, aby powiadomić innego wystąpienia zdarzenia.  
@@ -64,7 +64,7 @@ class CEvent : public CSyncObject
   
  `CEvent` obiekty mają dwa typy: ręczna i automatyczna.  
   
- Automatyczne `CEvent` obiektu automatycznie powróci do stanu (niedostępne)-sygnalizowane po wydaniu co najmniej jeden wątek. Domyślnie `CEvent` obiektu jest automatycznie, chyba że przekazujesz `TRUE` dla `bManualReset` parametru podczas tworzenia.  
+ Automatyczne `CEvent` obiektu automatycznie powróci do stanu (niedostępne)-sygnalizowane po wydaniu co najmniej jeden wątek. Domyślnie `CEvent` obiektu jest automatycznie, chyba że przekazujesz `TRUE` dla *bManualReset* parametru podczas tworzenia.  
   
  Podręcznik `CEvent` obiektu pozostaje w stanie ustawione przez [SetEvent](#setevent) lub [ResetEvent](#resetevent) do momentu wywołania innych funkcji. Aby utworzyć ręcznego `CEvent` obiektów należy przekazać `TRUE` dla `bManualReset` parametru podczas tworzenia.  
   
@@ -103,16 +103,16 @@ CEvent(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bInitiallyOwn`  
- Jeśli **TRUE**, wątku dla **CMultilock** lub `CSingleLock` obiektu jest włączone. W przeciwnym razie należy poczekać wszystkie wątki chcą uzyskać dostęp do zasobu.  
+ *bInitiallyOwn*  
+ Jeśli **TRUE**, wątku dla `CMultilock` lub `CSingleLock` obiektu jest włączone. W przeciwnym razie należy poczekać wszystkie wątki chcą uzyskać dostęp do zasobu.  
   
  *bManualReset*  
  Jeśli **TRUE**, określa, że obiekt zdarzenia jest zdarzenie ręczne, w przeciwnym razie obiekt zdarzenia jest automatyczne zdarzenia.  
   
- `lpszName`  
+ *lpszName*  
  Nazwa `CEvent` obiektu. Musi być dostarczona, jeśli obiekt będzie można użyć poza granicami procesu. Jeśli nazwa pasuje do zdarzenia istniejącego, konstruktora tworzy nową `CEvent` obiektu, który odwołuje się zdarzenie o tej nazwie. Jeśli nazwa jest zgodna z istniejącym obiektem synchronizacji nie jest zdarzeniem, konstrukcji zakończy się niepowodzeniem. Jeśli **NULL**, nazwa będzie miała wartość null.  
   
- `lpsaAttribute`  
+ *lpsaAttribute*  
  Atrybuty zabezpieczeń dla obiekt zdarzenia. Pełny opis tej struktury, zobacz [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) w zestawie Windows SDK.  
   
 ### <a name="remarks"></a>Uwagi  

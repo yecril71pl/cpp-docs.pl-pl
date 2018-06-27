@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1095061cce8ff8f189984aca99a06eb741a46e83
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 315526a8f95a1d62ac89f3a76fab492c9b136715
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382076"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956385"
 ---
 # <a name="window-procedure-entry-points"></a>Punkty wejścia procedury okna
-Aby chronić procedury okna MFC, statycznych łączy modułu, z implementacją procedury specjalne okno. Powiązanie odbywa się automatycznie, gdy moduł jest połączony z MFC. Korzysta z tej procedury okna `AFX_MANAGE_STATE` makra, aby poprawnie ustawić stan modułu skuteczne, a następnie wywołuje **AfxWndProc**, który z kolei deleguje do `WindowProc` funkcji członkowskiej klasy odpowiednie `CWnd`-pochodnych obiekt.  
+Aby chronić procedury okna MFC, statycznych łączy modułu, z implementacją procedury specjalne okno. Powiązanie odbywa się automatycznie, gdy moduł jest połączony z MFC. Tę procedurę okna używa makro AFX_MANAGE_STATE Aby poprawnie ustawić stan modułu skuteczne, a następnie wywołuje `AfxWndProc`, który z kolei deleguje do `WindowProc` funkcji członkowskiej klasy odpowiednie `CWnd`-pochodzi z obiektu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zarządzanie danymi stanu modułów MFC](../mfc/managing-the-state-data-of-mfc-modules.md)

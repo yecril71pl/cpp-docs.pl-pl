@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42da6afd054f05bb37ac0b4ea8bf497a31e433b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff365134a9b952b92211418c03d147a65077c66e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368049"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951855"
 ---
 # <a name="cdialogex-class"></a>Klasa CDialogEx
 `CDialogEx` Klasa określa kolor tła i obraz tła okna dialogowego.  
@@ -90,16 +90,16 @@ CDialogEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nIDTemplate`  
+ [in] *nIDTemplate*  
  Identyfikator zasobu szablonu — okno dialogowe.  
   
- [in] `lpszTemplateName`  
+ [in] *lpszTemplateName*  
  Nazwa zasobu szablonu — okno dialogowe.  
   
- [in] `pParent`  
+ [in] *pParent*  
  Wskaźnik do okna nadrzędnego. Wartość domyślna to `NULL`.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Wskaźnik do okna nadrzędnego. Wartość domyślna to `NULL`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -116,10 +116,10 @@ void SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `color`  
+ [in] *kolorów*  
  Wartości kolorów RGB.  
   
- [in] `bRepaint`  
+ [in] *bRepaint*  
  `TRUE` Aby natychmiast zaktualizować ekranu; w przeciwnym razie `FALSE`. Wartość domyślna to `TRUE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -142,19 +142,19 @@ BOOL SetBackgroundImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `hBitmap`  
+ [in] *hBitmap*  
  Dojście do obrazu tła.  
   
- [in] `uiBmpResId`  
+ [in] *uiBmpResId*  
  Identyfikator zasobu obrazu tła.  
   
- [in] `location`  
+ [in] *lokalizacji*  
  Jeden z `CDialogEx::BackgroundLocation` wartości, które określają lokalizację obrazu. Prawidłowe wartości to BACKGR_TILE, BACKGR_TOPLEFT BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT i BACKGR_BOTTOMRIGHT. Wartość domyślna to BACKGR_TILE.  
   
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
  `TRUE` Aby automatycznie zniszczyć obraz tła; w przeciwnym razie `FALSE`.  
   
- [in] `bRepaint`  
+ [in] *bRepaint*  
  `TRUE` Aby natychmiast odświeżyć okno dialogowe; w przeciwnym razie `FALSE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  

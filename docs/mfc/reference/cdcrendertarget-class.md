@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4129f57d8985a6e3368a4caf3574669342f06bc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36f8a038cd282ddf233fe2cf15a134c52962ebff
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366476"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953704"
 ---
 # <a name="cdcrendertarget-class"></a>Klasa CDCRenderTarget
 Otoka dla ID2D1DCRenderTarget.  
@@ -94,7 +94,7 @@ void Attach(ID2D1DCRenderTarget* pTarget);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pTarget`  
+ *pTarget*  
  Istniejący interfejs docelowego renderowania. Nie może mieć wartości NULL  
   
 ##  <a name="binddc"></a>  CDCRenderTarget::BindDC  
@@ -107,10 +107,10 @@ BOOL BindDC(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dc`  
+ *Kontroler domeny*  
  Kontekst urządzenia, do którego obiektu docelowego renderowania wydaje polecenia rysowania  
   
- `rect`  
+ *Rect*  
  Wymiary dojścia do kontekstu urządzenia (elementu HDC), z którym powiązany jest obiektu docelowego renderowania  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -131,7 +131,7 @@ BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `props`  
+ *właściwości*  
  Tryb renderowania, format piksela opcje remoting, DPI informacji i minimalna obsługa DirectX wymagane do renderowania sprzętowego.  
   
 ### <a name="return-value"></a>Wartość zwracana  

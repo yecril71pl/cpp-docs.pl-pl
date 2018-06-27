@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76325d2b078f51860cad7fa3fab61ed7c518a41c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50e7cb936c55ced1f16a325a031dccd1edde7d06
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382853"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951910"
 ---
 # <a name="using-image-lists-in-a-toolbar-control"></a>Używanie list obrazów w formancie paska narzędzi
 Domyślnie obrazy używane przez przycisków w formancie paska narzędzi są przechowywane jako pojedynczy mapy bitowej. Można jednak przechowywać obrazy dla przycisków w zestawie listy obrazów. Obiekt formantu paska narzędzi można używać do trzech list osobny obraz:  
@@ -30,7 +30,7 @@ Domyślnie obrazy używane przez przycisków w formancie paska narzędzi są prz
   
 -   Wyłączone obraz listy zawiera obrazy dla przycisków paska narzędzi, które są obecnie wyłączone.  
   
--   Wyróżnione obraz listy zawiera obrazy dla przycisków paska narzędzi, które są aktualnie podświetlonej. Ta lista obrazu jest używana tylko wtedy, gdy korzysta z narzędzi **TBSTYLE_FLAT** stylu.  
+-   Wyróżnione obraz listy zawiera obrazy dla przycisków paska narzędzi, które są aktualnie podświetlonej. Ta lista obrazu jest używana tylko wtedy, gdy styl TBSTYLE_FLAT korzysta z paska narzędzi.  
   
  Te listy obrazów są używane przez kontrolkę paska narzędzi po skojarzeniu ich z `CToolBarCtrl` obiektu. To skojarzenie odbywa się przy wywołaniach [CToolBarCtrl::SetImageList](../mfc/reference/ctoolbarctrl-class.md#setimagelist), [SetDisabledImageList](../mfc/reference/ctoolbarctrl-class.md#setdisabledimagelist), i [SetHotImageList](../mfc/reference/ctoolbarctrl-class.md#sethotimagelist).  
   

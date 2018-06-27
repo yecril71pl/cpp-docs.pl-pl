@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9230a304473c3f29bda2652f8941fb692b14c038
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf2ffe62760e3879d834409f5b3207588ea06f36
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357231"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956310"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA — Struktura
 `AFX_GLOBAL_DATA` Struktura zawiera pola i metody, które są używane do zarządzania w ramach lub dostosować wygląd i działanie aplikacji.  
@@ -148,13 +148,13 @@ HRESULT D2D1MakeRotateMatrix(
 ```  
   
 ### <a name="parameters"></a>Parametry   
- `angle`  
+ *kąt*  
  Kąt obrót w prawo w stopniach.  
   
- `center`  
+ *Centrum*  
  Punkt o tym, które można obracać.  
   
- `matrix`  
+ *Macierz*  
  Gdy metoda zwróci wartość, zawiera nowe przekształcania obrotu. Należy przydzielić magazynu dla tego parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -172,13 +172,13 @@ BOOL DrawParentBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [in] `pWnd`  
+ [in] *pWnd*  
  Wskaźnik do okna formantu.  
   
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- [in] `lpRect`  
+ [in] *lprect —*  
  Wskaźnik do prostokąt zakresem powierzchni do rysowania. Wartość domyślna to `NULL`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -202,42 +202,42 @@ BOOL DrawTextOnGlass(
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [in] `hTheme`  
+ [in] *hTheme*  
  Dojście do danych motywu okna, lub `NULL`. Platforma korzysta określony motyw pisania tekstu, jeśli ten parametr nie jest `NULL` i kompozycji są obsługiwane. W przeciwnym razie platformę nie używa motyw pisania tekstu.  
   
  Użyj [OpenThemeData](http://msdn.microsoft.com/library/windows/desktop/bb759821) metodę w celu utworzenia `HTHEME`.  
   
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- [in] `iPartId`  
+ [in] *iPartId*  
  Element formantu, który ma wygląd odpowiedni tekst. Aby uzyskać więcej informacji, zobacz części kolumny tabeli w [części i stanów](http://msdn.microsoft.com/library/windows/desktop/bb773210). Jeśli ta wartość wynosi 0, tekstu jest rysowana w domyślnej czcionki lub Czcionka zaznaczona w kontekście urządzenia.  
   
- [in] `iStateId`  
+ [in] *iStateId*  
  Stan formantu ma wygląd odpowiedni tekst. Aby uzyskać więcej informacji, zobacz stany kolumna tabeli określonej w [części i stanów](http://msdn.microsoft.com/library/windows/desktop/bb773210).  
   
- [in] `strText`  
+ [in] *strText*  
  Tekst do rysowania.  
   
- [in] `rect`  
+ [in] *rect*  
  Granica obszaru, w którym zostanie narysowana określony tekst.  
   
- [in] `dwFlags`  
+ [in] *wartość elementu dwFlags*  
  Bitowe połączenie (lub) flagi określające, jak określony tekst jest rysowane.  
   
- Jeśli `hTheme` parametr jest `NULL` lub jeśli kompozycji nie są obsługiwane i włączone, `nFormat` parametr [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) metoda opisuje prawidłowe flagi. Jeśli są obsługiwane kompozycje, `dwFlags` parametr [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) metoda opisuje prawidłowe flagi.  
+ Jeśli *hTheme* parametr jest `NULL` lub jeśli kompozycji nie są obsługiwane i włączone, *nFormat* parametr [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) poprawne opisuje — metoda flagi. Jeśli są obsługiwane kompozycje, *wartość elementu dwFlags* parametr [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) metoda opisuje prawidłowe flagi.  
   
- [in] `nGlowSize`  
+ [in] *nGlowSize*  
  Rozmiar efekt blask, który jest rysowana na tle przed narysowaniem określony tekst. Wartość domyślna to 0.  
   
- [in] `clrText`  
+ [in] *clrText*  
  Kolor, w którym zostanie narysowana określony tekst. Wartość domyślna to domyślny kolor.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `TRUE` Jeśli motyw jest używany do rysowania określonego tekstu. w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
- Motyw definiuje styl wizualny aplikacji. Motyw nie jest używana do pisania tekstu, jeśli `hTheme` parametr jest `NULL`, lub jeśli [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) metoda nie jest obsługiwana, lub jeśli [Menedżera okien pulpitu](http://msdn.microsoft.com/library/windows/desktop/aa969540) kompozycji (DWM) jest wyłączona .  
+ Motyw definiuje styl wizualny aplikacji. Motyw nie jest używana do pisania tekstu, jeśli *hTheme* parametr jest `NULL`, lub jeśli [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) metoda nie jest obsługiwana, lub jeśli [Menedżera okien pulpitu](http://msdn.microsoft.com/library/windows/desktop/aa969540) () Kompozycja DWM) jest wyłączona.  
   
 ### <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
@@ -257,7 +257,7 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [in] `bEnable`  
+ [in] *bWłączenie*  
  `TRUE` Aby włączyć obsługę ułatwień dostępu; `FALSE` do wyłączenia ułatwień dostępu pomocy technicznej. Wartość domyślna to `TRUE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -283,25 +283,25 @@ BOOL ExcludeTag(
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [in] `strBuffer`  
+ [in] *strBuffer*  
  Buforu tekstu.  
   
- [in] `lpszTag`  
+ [in] *lpszTag*  
  Nazwa pary otwierające i zamykające znaczniki XML.  
   
- [out] `strTag`  
- Gdy metoda zwróci wartość, `strTag` parametr zawiera tekst, który jest między otwarcia i zamknięcia XML tagi, które są reprezentowane przez `lpszTag` parametru. Żadnych spacji wiodących lub końcowych jest usuwane z wyników.  
+ [out] *strTag*  
+ Gdy metoda zwróci wartość, *strTag* parametr zawiera tekst, który jest między otwarcia i zamknięcia XML tagi, które są reprezentowane przez *lpszTag* parametru. Żadnych spacji wiodących lub końcowych jest usuwane z wyników.  
   
- [in] `bIsCharsList`  
- `TRUE` Aby przekonwertować symboli dla znaki specjalne w `strTag` parametru na znaki ucieczki rzeczywiste; `FALSE` nie można dokonać konwersji. Wartość domyślna to `FALSE`. Aby uzyskać więcej informacji zobacz uwagi.  
+ [in] *bIsCharsList*  
+ `TRUE` Aby przekonwertować symboli dla znaki specjalne w *strTag* parametru na znaki ucieczki rzeczywiste; `FALSE` nie można dokonać konwersji. Wartość domyślna to `FALSE`. Aby uzyskać więcej informacji zobacz uwagi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `TRUE` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
- Para tagu XML składa się z o nazwie otwierające i zamykające znaczniki, które wskazują początek i koniec uruchom tekstu w buforze określona. `strBuffer` Parametr określa buforu i `lpszTag` parametr określa nazwę tagów XML.  
+ Para tagu XML składa się z o nazwie otwierające i zamykające znaczniki, które wskazują początek i koniec uruchom tekstu w buforze określona. *StrBuffer* parametr określa buforu i *lpszTag* parametr określa nazwę tagów XML.  
   
- Kodowanie zestawu znaków ucieczki w buforze określona za pomocą tych symboli w poniższej tabeli. Określ `TRUE` dla `bIsCharsList` parametr można przekonwertować symbole w `strTag` parametru na znaki ucieczki rzeczywistych. W poniższej tabeli używa [_T()](../../c-runtime-library/data-type-mappings.md) makra, aby określić symbol i ciągi znaków ucieczki.  
+ Kodowanie zestawu znaków ucieczki w buforze określona za pomocą tych symboli w poniższej tabeli. Określ `TRUE` dla *bIsCharsList* parametr można przekonwertować symbole w *strTag* parametru na znaki ucieczki rzeczywistych. W poniższej tabeli używa [_T()](../../c-runtime-library/data-type-mappings.md) makra, aby określić symbol i ciągi znaków ucieczki.  
   
 |Symbol|Znak ucieczki|  
 |------------|----------------------|  
@@ -322,14 +322,14 @@ COLORREF GetColor(int nColor);
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [in] `nColor`  
- Wartość określająca element interfejsu użytkownika, którego kolor są pobierane. Aby uzyskać listę prawidłowych wartości, zobacz `nIndex` parametr [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) metody.  
+ [in] *nColor*  
+ Wartość określająca element interfejsu użytkownika, którego kolor są pobierane. Aby uzyskać listę prawidłowych wartości, zobacz *nIndex* parametr [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) metody.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wartości kolorów RGB elementu interfejsu użytkownika. Aby uzyskać więcej informacji zobacz uwagi.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `nColor` parametru jest spoza zakresu, zwracana wartość wynosi zero. Ponieważ zero jest również prawidłowe wartości RGB, nie możesz użyć tej metody do ustalenia, czy kolorem systemowym jest obsługiwana przez bieżący system operacyjny. Zamiast tego należy użyć [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927) metody, która zwraca `NULL` Jeśli kolor nie jest obsługiwana.  
+ Jeśli *nColor* parametru jest spoza zakresu, zwracana wartość wynosi zero. Ponieważ zero jest również prawidłowe wartości RGB, nie możesz użyć tej metody do ustalenia, czy kolorem systemowym jest obsługiwana przez bieżący system operacyjny. Zamiast tego należy użyć [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927) metody, która zwraca `NULL` Jeśli kolor nie jest obsługiwana.  
   
 ### <a name="see-also"></a>Zobacz też  
 
@@ -368,7 +368,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [w, out] `info`  
+ [w, out] *informacji*  
  A [NONCLIENTMETRICS](http://msdn.microsoft.com/library/windows/desktop/ff729175) strukturę, która zawiera metryki skalowalne, skojarzone z obszar niekliencki okna nonminimized.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -387,7 +387,7 @@ int GetTextHeight(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [in] `bHorz`  
+ [in] *bHorz*  
  `TRUE` Aby pobrać wysokość znaków, gdy tekst działa jedynie w pionie. `FALSE` można pobrać wysokość znaków uruchomienie tekstu w pionie. Wartość domyślna to `TRUE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -426,10 +426,10 @@ BOOL InitD2D(
 ```  
   
 ### <a name="parameters"></a>Parametry   
- `d2dFactoryType`  
+ *d2dFactoryType*  
  Model wątkowości fabryki D2D i zasoby, które tworzy.  
   
- `writeFactoryType`  
+ *writeFactoryType*  
  Wartość określająca, czy obiekt fabryki zapisu zostaną udostępnione lub samodzielnie  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -645,14 +645,14 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [in] `lpszClassNamePrefix`  
+ [in] *lpszClassNamePrefix*  
  Nazwa klasy okna do zarejestrowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Kwalifikowana nazwa klasy zarejestrowane, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie [wyjątek zasobów](http://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d).  
   
 ### <a name="remarks"></a>Uwagi  
- Wartość zwracana jest rozdzielana średnikami lista `lpszClassNamePrefix` ciąg parametru i reprezentacje szesnastkowym dojść bieżącego wystąpienia aplikacji; kursor aplikacji jest kursor strzałkę, którego identyfikator jest IDC_ARROW; i Pędzel tła. Aby uzyskać więcej informacji na temat rejestrowanie klas okien MFC, zobacz [afxregisterclass —](../../mfc/reference/application-information-and-management.md#afxregisterclass).  
+ Wartość zwracana jest rozdzielana średnikami lista *lpszClassNamePrefix* ciąg parametru i reprezentacje szesnastkowym dojść bieżące wystąpienie aplikacji; kursora aplikacji, która jest strzałkę kursor, którego identyfikator jest IDC_ARROW; i Pędzel tła. Aby uzyskać więcej informacji na temat rejestrowanie klas okien MFC, zobacz [afxregisterclass —](../../mfc/reference/application-information-and-management.md#afxregisterclass).  
   
 ### <a name="see-also"></a>Zobacz też    
  [Afxregisterclass —](../../mfc/reference/application-information-and-management.md#afxregisterclass)   
@@ -685,17 +685,17 @@ BOOL SetLayeredAttrib(
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [in] `hwnd`  
+ [in] *hwnd*  
  Dojście do okna warstwowego.  
   
- [in] `crKey`  
+ [in] *crKey*  
  Przezroczysty kolor klucza [Menedżera okien pulpitu](http://msdn.microsoft.com/library/windows/desktop/aa969540) używa się utworzenie okna warstwowego.  
   
- [in] `bAlpha`  
+ [in] *bAlpha*  
  Wartość alfa używany do opisania nieprzezroczystość okna warstwowego.  
   
- [in] `dwFlags`  
- Bitowe połączenie (lub) flagi określające, które parametry metody do użycia. Określ LWA_COLORKEY do użycia `crKey` parametr jako przezroczysty kolor. Określ LWA_ALPHA do użycia `bAlpha` parametr, aby określić przezroczystość okna warstwowego.  
+ [in] *wartość elementu dwFlags*  
+ Bitowe połączenie (lub) flagi określające, które parametry metody do użycia. Określ LWA_COLORKEY do użycia *crKey* parametr jako przezroczysty kolor. Określ LWA_ALPHA do użycia *bAlpha* parametr, aby określić przezroczystość okna warstwowego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `TRUE` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `FALSE`.   
@@ -715,10 +715,10 @@ BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>Parametry   
- [in] `lpLogFont`  
+ [in] *lpLogFont*  
  Wskaźnik do struktury, która zawiera atrybuty czcionki.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  `TRUE` Aby określić, czy tekst jest uruchomiony na poziomie; `FALSE` do określenia, czy tekst jest uruchomiony w pionie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -824,17 +824,17 @@ HRESULT ShellCreateItemFromParsingName(
 ```  
   
 ### <a name="parameters"></a>Parametry   
- `pszPath`  
+ *pszPath*  
  [in] Wskaźnik do nazwy wyświetlanej.  
   
- `pbc`  
+ *pbc*  
  Wskaźnik do kontekstu powiązania kontrolujące operacji analizy.  
   
- `riid`  
+ *Parametr riid*  
  Odwołanie do identyfikatora interfejsu.  
   
- `ppv`  
- [out] Po powrocie z tej funkcji zawiera wskaźnik interfejsu w `riid`. Są to zazwyczaj `IShellItem` lub `IShellItem2`.  
+ *ppv*  
+ [out] Po powrocie z tej funkcji zawiera wskaźnik interfejsu w *riid*. Są to zazwyczaj `IShellItem` lub `IShellItem2`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość S_OK w przypadku powodzenia; w przeciwnym razie wartość błędu.  

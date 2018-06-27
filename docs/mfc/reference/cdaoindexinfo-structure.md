@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d8c98181a9ec049308d7b85e57c028740927cc2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 85e59173ec330d0a5abb968225ce6b2e12263948
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367038"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954068"
 ---
 # <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo — Struktura
 `CDaoIndexInfo` Struktury zawiera informacje o obiekcie indeksu zdefiniowany dla obiektów dostępu do danych (DAO).  
@@ -48,14 +48,14 @@ struct CDaoIndexInfo {
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `m_strName`  
+ *m_strName*  
  Unikatowej nazwy obiektu pola. Aby uzyskać więcej informacji zobacz temat "Właściwości Name" w pomocy DAO.  
   
- `m_pFieldInfos`  
+ *m_pFieldInfos*  
  Wskaźnik do tablicy [cdaoindexfieldinfo —](../../mfc/reference/cdaoindexfieldinfo-structure.md) obiektów wskazujące, które pola tabledef lub zestawu rekordów pola klucza w indeksie. Każdy obiekt identyfikuje jedno pole w indeksie. Rosnąca domyślnej kolejności indeksu. Obiekt indeksu może mieć co najmniej jedno pole reprezentujący kluczy indeksu dla każdego rekordu. Mogą one rosnącej, malejącej, lub połączenie.  
   
- `m_nFields`  
- Liczba pól przechowywane w `m_pFieldInfos`.  
+ *m_nfields —*  
+ Liczba pól przechowywane w *m_pFieldInfos*.  
   
  *m_bPrimary*  
  W przypadku właściwości podstawowego **TRUE**, obiekt indeksu reprezentuje podstawowy indeks. Podstawowy indeks składa się z co najmniej jedno pole, które jednoznacznie identyfikują wszystkie rekordy w tabeli w preferowanej kolejności. Ponieważ pole indeksu musi być unikatowa, również ma ustawioną właściwość unikatowy indeks obiektu **TRUE** w DAO. Jeśli podstawowy indeks obejmuje więcej niż jedno pole, każde pole może zawierać zduplikowanych wartości, ale każda kombinacja wartości od indeksowanego pól muszą być unikatowe. Podstawowy indeks składa się z klucza tabeli i zwykle zawiera te same pola jako klucz podstawowy.  
@@ -89,7 +89,7 @@ struct CDaoIndexInfo {
   
  Aby uzyskać więcej informacji zobacz temat "IgnoreNulls Property" w pomocy DAO.  
   
- `m_bRequired`  
+ *m_bRequired*  
  Wskazuje, czy obiekt DAO indeksu wymaga wartości innej niż Null. Jeśli ta właściwość jest **TRUE**, obiekt indeks nie zezwala na wartości Null. Aby uzyskać więcej informacji zobacz temat "Wymagana właściwość" w pomocy DAO.  
   
 > [!TIP]
@@ -106,7 +106,7 @@ struct CDaoIndexInfo {
   
  Indeks obiekty nie są reprezentowane przez klasę MFC. Zamiast tego DAO obiektów MFC obiektów klasy [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) lub [cdaorecordset —](../../mfc/reference/cdaorecordset-class.md) zawiera kolekcję obiektów indeksu, nazywanych kolekcji indeksów. Te klasy podać funkcji elementów członkowskich, aby uzyskiwać dostęp do poszczególnych elementów informacji indeksu lub uzyskać dostępu do nich jednocześnie z `CDaoIndexInfo` obiektu przez wywołanie metody `GetIndexInfo` funkcji członkowskiej krawędzi zawierającego go obiektu.  
   
- `CDaoIndexInfo` Konstruktor i destruktor, aby można było poprawnie przydzielić i cofnięcia przydzielenia pola informacji o indeksie `m_pFieldInfos`.  
+ `CDaoIndexInfo` Konstruktor i destruktor, aby można było poprawnie przydzielić i cofnięcia przydzielenia pola informacji o indeksie *m_pFieldInfos*.  
   
  Informacje o pobrane przez `GetIndexInfo` funkcji członkowskiej klasy obiektu tabledef są przechowywane w `CDaoIndexInfo` struktury. Wywołanie `GetIndexInfo` funkcji członkowskiej klasy obiektu zawierającego tabledef, w których kolekcji indeksów jest obiekt indeksu. `CDaoIndexInfo` definiuje również `Dump` kompilacje funkcji członkowskiej podczas debugowania. Można użyć `Dump` do zrzutu zawartość `CDaoIndexInfo` obiektu.  
   

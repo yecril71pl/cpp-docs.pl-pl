@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8658868c36008c5ed6b9db9747eb63ae37e4d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2be47da802fd1168ec7b43c2f7701351b3c88d8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382976"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951511"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: mapowanie uchwytów okien na obiekty
 Ta uwaga opisuje MFC dojścia do obiektów C++ obiekt procedur, które obsługuje mapowania systemu Windows.  
@@ -56,15 +56,15 @@ Ta uwaga opisuje MFC dojścia do obiektów C++ obiekt procedur, które obsługuj
   
 -   GNIAZDA ([CSocket —](../mfc/reference/csocket-class.md))  
   
- Podane dojście do dowolnego z tych obiektów, można znaleźć obiektu MFC, który opakowuje dojście przez wywołanie metody statycznej `FromHandle`. Na przykład, dla danego HWND o nazwie `hWnd`, zwraca wskaźnik do następującego `CWnd` który opakowuje `hWnd`:  
+ Podane dojście do dowolnego z tych obiektów, można znaleźć obiektu MFC, który opakowuje dojście przez wywołanie metody statycznej `FromHandle`. Na przykład, dla danego HWND o nazwie *hWnd*, zwraca wskaźnik do następującego `CWnd` który opakowuje *hWnd*:  
   
 ```  
 CWnd::FromHandle(hWnd)  
 ```  
   
- Jeśli `hWnd` nie ma określonego obiektu, tymczasowej `CWnd` utworzeniu opakowywać `hWnd`. Dzięki temu można uzyskać prawidłowy obiekt C++ z dowolnego uchwytu.  
+ Jeśli *hWnd* nie ma określonego obiektu, tymczasowej `CWnd` utworzeniu opakowywać *hWnd*. Dzięki temu można uzyskać prawidłowy obiekt C++ z dowolnego uchwytu.  
   
- Po utworzeniu obiektu można pobrać uchwytu zmiennej publicznego elementu członkowskiego klasy otoki. W przypadku liczby `CWnd`, `m_hWnd` zawiera HWND dla tego obiektu.  
+ Po utworzeniu obiektu można pobrać uchwytu zmiennej publicznego elementu członkowskiego klasy otoki. W przypadku liczby `CWnd`, *m_hWnd* zawiera HWND dla tego obiektu.  
   
 ## <a name="attaching-handles-to-mfc-objects"></a>Dołączanie dojść do obiektów MFC  
  Biorąc pod uwagę nowo utworzony uchwyt-obiektu i dojścia do obiektu systemu Windows, można skojarzyć dwa przez wywołanie metody `Attach` działać jak w poniższym przykładzie:  
@@ -74,7 +74,7 @@ CWnd myWnd;
 myWnd.Attach(hWnd);
 ```  
   
- Dzięki temu podczas kojarzenia stałe mapy wpis `myWnd` i `hWnd`. Wywoływanie `CWnd::FromHandle(hWnd)` teraz zwraca wskaźnik do `myWnd`. Gdy `myWnd` jest usunięte, destruktor automatycznie zniszczy `hWnd` przez wywołanie systemu Windows [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682) funkcji. Jeśli jest to niepożądane, `hWnd` musi zostać odłączony od `myWnd` przed `myWnd` zostanie zniszczony (zwykle, podczas opuszczania zakresu, w którym `myWnd` została zdefiniowana). `Detach` Metody robi to.  
+ Dzięki temu podczas kojarzenia stałe mapy wpis *myWnd* i *hWnd*. Wywoływanie `CWnd::FromHandle(hWnd)` teraz zwraca wskaźnik do *myWnd*. Gdy *myWnd* jest usunięte, destruktor automatycznie zniszczy *hWnd* przez wywołanie systemu Windows [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682) funkcji. Jeśli jest to niepożądane, *hWnd* musi zostać odłączony od *myWnd* przed *myWnd* zostanie zniszczony (zwykle, podczas opuszczania zakresu, w którym *myWnd*została zdefiniowana). `Detach` Metody robi to.  
   
 ```  
 myWnd.Detach();

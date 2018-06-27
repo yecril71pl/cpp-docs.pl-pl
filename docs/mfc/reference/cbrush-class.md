@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39c5167c81d6c44fa62f9bff87c6c04f73f9f6d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ffd5e43267ad6a5a462705f410cc1073161ecf0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355892"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954107"
 ---
 # <a name="cbrush-class"></a>Cbrush — klasa
 Hermetyzuje pędzla interfejsu (GDI) systemu Windows grafiki urządzenia.  
@@ -105,10 +105,10 @@ explicit CBrush(CBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `crColor`  
+ *crColor*  
  Określa kolor pędzla jako kolor RGB. Jeśli jest wyklutych pędzla, ten parametr określa kolor kreskowaniu.  
   
- `nIndex`  
+ *nIndex*  
  Określa styl kreskowania pędzla. Może być jeden z następujących wartości:  
   
 - `HS_BDIAGONAL` Dół kreskowania (od lewej do prawej), na 45 stopni  
@@ -123,7 +123,7 @@ explicit CBrush(CBitmap* pBitmap);
   
 - `HS_VERTICAL` Pionowy kreskowania  
   
- `pBitmap`  
+ *pBitmap*  
  Wskazuje `CBitmap` obiekt, który określa mapę bitową, z którym rysują pędzla.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -133,7 +133,7 @@ explicit CBrush(CBitmap* pBitmap);
   
  Konstruktor za pomocą jednej [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametru konstruuje pędzla jednolitym kolorem określony. Kolor określa wartości RGB i mogą być zbudowane z `RGB` makra w systemie WINDOWS. H.  
   
- Konstruktor z dwoma parametrami tworzy kreskowania pędzla. `nIndex` Parametr określa indeks kreskowanym wzorca. `crColor` Parametr określa kolor.  
+ Konstruktor z dwoma parametrami tworzy kreskowania pędzla. *NIndex* parametr określa indeks kreskowanym wzorca. *CrColor* parametr określa kolor.  
   
  Konstruktora z `CBitmap` parametru konstruuje deseniem pędzla. Parametr identyfikuje mapy bitowej. Mapy bitowej jest zakłada się, że zostały utworzone przy użyciu [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), lub [ CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap). Minimalny rozmiar mapy bitowej do użycia w deseń wypełnienia jest 8 x pikseli 8.  
   
@@ -198,9 +198,9 @@ BOOL CreateDIBPatternBrush(
   
  Dwie wersje różnią się w sposób obsługi DIB:  
   
--   W pierwszej wersji, można uzyskać dojścia do DIB wywołujesz systemu Windows **działanie funkcji GlobalAlloc** funkcji można przydzielić bloku pamięci globalnej i następnie wypełnienie pamięci spakowana DIB.  
+-   W pierwszej wersji, można uzyskać dojścia do DIB wywołujesz systemu Windows `GlobalAlloc` funkcji można przydzielić bloku pamięci globalnej i następnie wypełnienie pamięci spakowana DIB.  
   
--   W drugiej wersji nie jest konieczne do wywołania **działanie funkcji GlobalAlloc** można przydzielić pamięci dla spakowanych DIB.  
+-   W drugiej wersji nie jest konieczne do wywołania `GlobalAlloc` można przydzielić pamięci dla spakowanych DIB.  
   
  Spakowana DIB składa się z `BITMAPINFO` struktury danych bezpośrednio po nim tablicę bajtów, który definiuje pikseli mapy bitowej. Mapy bitowe używane jako wzorce wypełnienia powinna być 8 x pikseli 8. Jeśli mapy bitowej jest większy, system Windows tworzy deseń wypełnienia przy użyciu tylko usługi bits odpowiadający pierwsze 8 wierszy i kolumn 8 pikseli w lewym górnym rogu mapy bitowej.  
   
@@ -208,7 +208,7 @@ BOOL CreateDIBPatternBrush(
   
  Aby dowiedzieć się, jak przy użyciu następujących funkcji systemu Windows zobacz zestaw Windows SDK:  
   
-- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (Ta funkcja jest udostępniany tylko dla zgodności z aplikacjami napisane dla systemu Windows w wersjach starszych niż 3.0; użyj **CreateDIBPatternBrushPt** funkcji.)  
+- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (Ta funkcja jest udostępniany tylko dla zgodności z aplikacjami napisane dla systemu Windows w wersjach starszych niż 3.0; użyj `CreateDIBPatternBrushPt` funkcji.)  
   
 - [CreateDIBPatternBrushPt](http://msdn.microsoft.com/library/windows/desktop/dd183493) (tej funkcji należy używać aplikacji Win32).  
   
@@ -227,7 +227,7 @@ BOOL CreateHatchBrush(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Określa styl kreskowania pędzla. Może być jeden z następujących wartości:  
   
 - `HS_BDIAGONAL` Dół kreskowania (od lewej do prawej), na 45 stopni  
@@ -242,7 +242,7 @@ BOOL CreateHatchBrush(
   
 - `HS_VERTICAL` Pionowy kreskowania  
   
- `crColor`  
+ *crColor*  
  Określa kolor pędzla jako kolor RGB (kolor kreskowaniu). Zobacz [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) w zestawie SDK systemu Windows, aby uzyskać więcej informacji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -262,14 +262,14 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pBitmap`  
+ *pBitmap*  
  Identyfikuje mapy bitowej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Następnie można wybrać pędzel dla dowolnego kontekstu urządzenia, który obsługuje rastrowych. Mapa bitowa identyfikowane przez `pBitmap` jest zwykle inicjowana przy użyciu [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), lub [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) funkcji.  
+ Następnie można wybrać pędzel dla dowolnego kontekstu urządzenia, który obsługuje rastrowych. Mapa bitowa identyfikowane przez *pBitmap* jest zwykle inicjowana przy użyciu [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [cbitmap —:: LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), lub [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) funkcji.  
   
  Mapy bitowe używane jako wzorce wypełnienia powinna być 8 x pikseli 8. W przypadku większych mapy bitowej systemu Windows będzie używana tylko bity odpowiadający pierwsze 8 wiersze i kolumny pikseli w lewym górnym rogu mapy bitowej.  
   
@@ -290,8 +290,8 @@ BOOL CreateSolidBrush(COLORREF crColor);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `crColor`  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) struktury, która określa kolor pędzla. Kolor określa wartości RGB i mogą być zbudowane z `RGB` makra w systemie WINDOWS. H.  
+ *crColor*  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) struktury, która określa kolor pędzla. Kolor określa wartości RGB i mogą być zbudowane z makra RGB w systemie WINDOWS. H.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
@@ -312,7 +312,7 @@ BOOL CreateSysColorBrush(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Określa indeks koloru. Ta wartość odpowiada kolor używany do rysowania jeden z elementów 21 okna. Zobacz [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) w zestawie SDK systemu Windows, aby uzyskać listę wartości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -334,7 +334,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hBrush`  
+ *hBrush*  
  `HANDLE` Aby pędzla GDI systemu Windows.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -356,13 +356,13 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pLogBrush`  
+ *pLogBrush*  
  Wskazuje [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) struktury, który zawiera informacje o pędzla.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli funkcja zakończy się powodzeniem, a `pLogBrush` nieprawidłowy wskaźnik, wartość zwracana jest liczba bajtów przechowywanych w buforze.  
+ Jeśli funkcja zakończy się powodzeniem, a *pLogBrush* nieprawidłowy wskaźnik, wartość zwracana jest liczba bajtów przechowywanych w buforze.  
   
- Jeśli funkcja zakończy się powodzeniem, a `pLogBrush` jest **NULL**, jest zwracana wartość liczbę bajtów wymaganą do przechowywania informacji o funkcji będzie przechowywać w buforze.  
+ Jeśli funkcja zakończy się powodzeniem, a *pLogBrush* jest **NULL**, jest zwracana wartość liczbę bajtów wymaganą do przechowywania informacji o funkcji będzie przechowywać w buforze.  
   
  Jeśli funkcja nie powiedzie się, zwracana wartość to 0.  
   

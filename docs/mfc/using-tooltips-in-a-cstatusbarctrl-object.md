@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 323f2861da9fcc498e34792c30c763b4dffb2fd1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9cce98e4a3b3ffd506607529b9fea6f0c1114cc3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385966"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951271"
 ---
 # <a name="using-tooltips-in-a-cstatusbarctrl-object"></a>Używanie etykietek narzędzi w obiekcie CStatusBarCtrl
-Aby włączyć etykietki narzędzi dla formantu paska stanu, należy utworzyć `CStatusBarCtrl` obiekt z **SBT_TOOLTIPS** stylu.  
+Aby włączyć etykietki narzędzi dla formantu paska stanu, należy utworzyć `CStatusBarCtrl` obiektu przy użyciu stylu SBT_TOOLTIPS.  
   
 > [!NOTE]
->  Jeśli używasz `CStatusBar` obiekt do wdrożenia na pasku stanu, użyj `CStatusBar::CreateEx` funkcji. Umożliwia określenie dodatkowych style osadzonego **CStatusBarCtrl** obiektu.  
+>  Jeśli używasz `CStatusBar` obiekt do wdrożenia na pasku stanu, użyj `CStatusBar::CreateEx` funkcji. Umożliwia określenie dodatkowych style osadzonego `CStatusBarCtrl` obiektu.  
   
  Raz `CStatusBarCtrl` obiekt został pomyślnie utworzony, użyj [CStatusBarCtrl::SetTipText](../mfc/reference/cstatusbarctrl-class.md#settiptext) i [CStatusBarCtrl::GetTipText](../mfc/reference/cstatusbarctrl-class.md#gettiptext) ustawiania i pobierania tekst porady dla określonych okienka.  
   

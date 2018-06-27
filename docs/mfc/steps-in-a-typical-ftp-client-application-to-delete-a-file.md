@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb595dfdc1a73ecd068e251cec5df99d4daaab30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 220d1d38c6be33652a8613c60c4e4baa053a8296
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380568"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951923"
 ---
 # <a name="steps-in-a-typical-ftp-client-application-to-delete-a-file"></a>Procedura usuwania pliku w typowej aplikacji klienckiej FTP
 W poniższej tabeli przedstawiono kroki, które można wykonywać w typowej aplikacji klienckiej FTP, która usuwa plik.  
@@ -35,7 +35,7 @@ W poniższej tabeli przedstawiono kroki, które można wykonywać w typowej apli
 |Przejdź do nowego katalogu FTP na serwerze.|Użyj [CFtpConnection::SetCurrentDirectory](../mfc/reference/cftpconnection-class.md#setcurrentdirectory).|Zmienia nazwę katalogu, którego jesteś obecnie podłączony do na serwerze.|  
 |Znajdź pierwszy plik w katalogu FTP.|Użyj [CFtpFileFind::FindFile](../mfc/reference/cftpfilefind-class.md#findfile).|Znajduje pierwszy plik. Zwraca wartość FAŁSZ, jeśli nie są można odnaleźć plików.|  
 |Znajdź następny plik w katalogu FTP.|Użyj [CFtpFileFind::FindNextFile](../mfc/reference/cftpfilefind-class.md#findnextfile).|Znajduje następny plik. Zwraca wartość FAŁSZ, jeśli plik nie został znaleziony.|  
-|Usuń plik został znaleziony przez klasę **FindFile** lub `FindNextFile`.|Użyj [CFtpConnection::Remove](../mfc/reference/cftpconnection-class.md#remove), przy użyciu nazwy pliku zwracane przez **FindFile** lub `FindNextFile`.|Usuwa plik na serwerze do odczytu lub zapisu.|  
+|Usuń plik został znaleziony przez klasę `FindFile` lub `FindNextFile`.|Użyj [CFtpConnection::Remove](../mfc/reference/cftpconnection-class.md#remove), przy użyciu nazwy pliku zwracane przez `FindFile` lub `FindNextFile`.|Usuwa plik na serwerze do odczytu lub zapisu.|  
 |Obsługa wyjątków.|Użyj [CInternetException](../mfc/reference/cinternetexception-class.md) klasy.|Obsługuje wszystkie popularne typy wyjątków Internet.|  
 |Kończenie sesji FTP.|Usuwa [CInternetSession](../mfc/reference/cinternetsession-class.md) obiektu.|Automatycznie oczyszcza dojścia do plików Otwórz i połączeń.|  
   

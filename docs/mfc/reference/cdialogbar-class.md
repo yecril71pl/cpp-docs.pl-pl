@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dbb2d8202e9b87d2825b7d40a0dde4323246aa0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5477921ff89c8bb0b23245d3848139a7c7c86444
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366717"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951559"
 ---
 # <a name="cdialogbar-class"></a>Cdialogbar — klasa
 Udostępnia funkcje niemodalnego okna dialogowego systemu Windows w pasek sterowania.  
@@ -53,7 +53,7 @@ class CDialogBar : public CControlBar
 ## <a name="remarks"></a>Uwagi  
  Okno dialogowe jest podobny do paska dialogowego zawierają formanty standardowe systemu Windows, które użytkownik może karcie między. Inny podobieństwa jest utworzenie szablonu okna dialogowego do reprezentowania paska dialogowego.  
   
- Tworzenie i używanie paska dialogowego jest podobny do tworzenia i używania `CFormView` obiektu. Najpierw użyj [Edytor okien dialogowych](../../windows/dialog-editor.md) do definiowania szablonu okna dialogowego przy użyciu stylu **ws_child —** i żaden inny styl. Szablon nie może mieć styl **ws_visible —**. W kodzie aplikacji należy wywołać konstruktora, aby utworzyć `CDialogBar` obiekt, a następnie wywołaj **Utwórz** Tworzenie okna paska dialogowego i dołączenie go do `CDialogBar` obiektu.  
+ Tworzenie i używanie paska dialogowego jest podobny do tworzenia i używania `CFormView` obiektu. Najpierw użyj [Edytor okien dialogowych](../../windows/dialog-editor.md) do definiowania szablonu okna dialogowego przy użyciu stylu **ws_child —** i żaden inny styl. Szablon nie może mieć styl **ws_visible —**. W kodzie aplikacji należy wywołać konstruktora, aby utworzyć `CDialogBar` obiekt, a następnie wywołaj `Create` Tworzenie okna paska dialogowego i dołączenie go do `CDialogBar` obiektu.  
   
  Aby uzyskać więcej informacji na temat `CDialogBar`, zapoznaj się z artykułem [paski dialogowe](../../mfc/dialog-bars.md) i [31 Uwaga techniczna](../../mfc/tn031-control-bars.md), paski sterowania.  
   
@@ -100,22 +100,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do elementu nadrzędnego `CWnd` obiektu.  
   
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Wskaźnik do nazwy `CDialogBar` obiektu okno dialogowe zasobu szablon.  
   
- `nStyle`  
+ *nStyle*  
  Styl toolbar. Style dodatkowych narzędzi obsługiwane są następujące:  
   
-- `CBRS_TOP` Pasek sterowania jest u góry okna ramki.  
+- **CBRS_TOP** pasek sterowania jest u góry okna ramki.  
   
-- `CBRS_BOTTOM` Pasek sterowania jest w dolnej części okna ramki.  
+- **CBRS_BOTTOM** jest pasek sterowania w dolnej części okna ramki.  
   
-- `CBRS_NOALIGN` Pasek sterowania nie zostaje przeniesiony, gdy zmieniany jest rozmiar obiektu nadrzędnego.  
+- **CBRS_NOALIGN** pasek sterowania nie zostaje przeniesiony, gdy zmieniany jest rozmiar obiektu nadrzędnego.  
   
-- `CBRS_TOOLTIPS` Pasek sterowania Wyświetla etykietki narzędzi.  
+- **Cbrs_tooltips —** pasek sterowania Wyświetla etykietki narzędzi.  
   
 - **Cbrs_size_dynamic —** pasek sterowania jest dynamiczny.  
   
@@ -123,21 +123,21 @@ virtual BOOL Create(
   
 - **CBRS_FLOATING** zmiennoprzecinkową jest pasek sterowania.  
   
-- `CBRS_FLYBY` Pasek stanu wyświetla informacje o przycisku.  
+- **Cbrs_flyby —** pasek stanu wyświetla informacje o przycisku.  
   
 - **CBRS_HIDE_INPLACE** pasek sterowania jest niewidoczny dla użytkownika.  
   
- `nID`  
+ *nID*  
  Identyfikator formantu paska dialogowego.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Identyfikator zasobu `CDialogBar` obiektu okno dialogowe szablonu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli określisz `CBRS_TOP` lub `CBRS_BOTTOM` styl wyrównanie szerokość paska dialogowego jest to, że ramka okna i jego wysokość jest zasobu określonego przez `nIDTemplate`. Jeśli określisz `CBRS_LEFT` lub `CBRS_RIGHT` styl wyrównanie wysokość paska dialogowego jest to, że ramka okna i szerokości, jest zasobu określonego przez `nIDTemplate`.  
+ Jeśli określisz **CBRS_TOP** lub **CBRS_BOTTOM** styl wyrównanie szerokość paska dialogowego jest to, że ramka okna i jego wysokość jest zasobu określonego przez *nIDTemplate*. Jeśli określisz **CBRS_LEFT** lub **CBRS_RIGHT** styl wyrównanie wysokość paska dialogowego jest to, że ramka okna i szerokości, jest zasobu określonego przez *nIDTemplate*.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCMessageMaps#13](../../mfc/reference/codesnippet/cpp/cdialogbar-class_1.cpp)]  

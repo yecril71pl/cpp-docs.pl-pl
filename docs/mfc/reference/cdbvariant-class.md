@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27970a7d3854dca398943bfe13c67f6a4e1f92f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e88eb810c252e4963a5f189d7f90e5aca531cf7
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369086"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951822"
 ---
 # <a name="cdbvariant-class"></a>Cdbvariant — klasa
 Reprezentuje typ danych variant dla klas MFC ODBC.  
@@ -85,7 +85,7 @@ class CDBVariant
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[CDBVariant::m_boolVal](#m_boolval)|Zawiera wartość typu **BOOL**.|  
-|[CDBVariant::m_chVal](#m_chval)|Zawiera wartość typu `unsigned char`.|  
+|[CDBVariant::m_chVal](#m_chval)|Zawiera wartość typu **unsigned char**.|  
 |[CDBVariant::m_dblVal](#m_dblval)|Zawiera wartość typu **podwójne**.|  
 |[CDBVariant::m_fltVal](#m_fltval)|Zawiera wartość typu **float**.|  
 |[CDBVariant::m_iVal](#m_ival)|Zawiera wartość typu **krótki**.|  
@@ -127,9 +127,9 @@ void Clear();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli wartość [m_dwType](#m_dwtype) elementu członkowskiego danych jest **DBVT_DATE**, **DBVT_STRING**, lub **DBVT_BINARY**, **wyczyść**zwalnia pamięć skojarzone z danym elementem Unii wskaźnika. **Wyczyść** ustawia `m_dwType` do **DBVT_NULL**.  
+ Jeśli wartość [m_dwType](#m_dwtype) elementu członkowskiego danych jest **DBVT_DATE**, **DBVT_STRING**, lub **DBVT_BINARY**, `Clear` zwalnia pamięć skojarzono element członkowski Unii wskaźnika. `Clear` Ustawia `m_dwType` do **DBVT_NULL**.  
   
- `CDBVariant` Wywołania destruktora **wyczyść**.  
+ `CDBVariant` Wywołania destruktora `Clear`.  
   
 ##  <a name="m_boolval"></a>  CDBVariant::m_boolVal  
  Przechowuje wartość typu **BOOL**.  

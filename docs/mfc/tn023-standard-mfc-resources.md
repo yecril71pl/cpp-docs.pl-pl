@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61d6520aef1ec04c6419fb1c9c901475c9c109f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 967485f358d6659d759f2651c80c9390bff0b912
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383178"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952040"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023: standardowe zasoby MFC
 Ta uwaga opisuje standardowe zasoby podłączone do, a wymagane przez biblioteki MFC.  
@@ -45,7 +45,7 @@ Ta uwaga opisuje standardowe zasoby podłączone do, a wymagane przez biblioteki
   
 -   Indicate.RC: Zawiera zasoby ciągów dla wskaźników klucza stanu paska stanu, takie jak "CAP" dla włączony klawisz Caps Lock.  
   
--   Prompts.RC: Zawiera zasoby ciągów menu wiersz dla każdego wstępnie zdefiniowanego polecenia, takie jak "Utwórz nowy dokument" `ID_FILE_NEW`.  
+-   Prompts.RC: Id_file_new — zawiera zasoby ciągów menu wiersz dla każdego wstępnie zdefiniowanego polecenia, takie jak "Utwórz nowy dokument".  
   
 -   COMMDLG.RC: Visual C++ .rc zgodny plik zawierający standardowe szablony okna dialogowego pliku COMMDLG.  
   
@@ -77,7 +77,7 @@ Ta uwaga opisuje standardowe zasoby podłączone do, a wymagane przez biblioteki
 >  Nie można więc przypadkowo trwale przenoszenia zasobów poza Common.rc. Przytrzymując klawisz CTRL podczas przeciągania zasobów, spowoduje utworzenie kopii. Jeśli użytkownik nie przytrzymaj klawisz CTRL podczas przeciągania, zasoby będą przeniesione. Jeśli dane mogą przypadkowo wprowadzone zmiany w pliku Common.rc, kliknij przycisk "Nie", po wyświetleniu pytania, czy zapisać zmiany w Common.rc.  
   
 > [!NOTE]
->  .RC — pliki zasobów ma specjalnego `TEXTINCLUDE` w tych zasobów, które będą zapobiegać przypadkowemu zapisywania na standardowe .RC — pliki.  
+>  .RC — pliki zasobów ma specjalne zasobu TEXTINCLUDE w nich, które uniemożliwiają przypadkowo zapisywania na standardowe .RC — pliki.  
   
 ### <a name="customizing-standard-framework-resources"></a>Dostosowywanie standardowe zasoby  
  Standardowe zasoby zwykle znajdują się w aplikacji przy użyciu # polecenie include w pliku zasobów aplikacji. Kreatorami AppWizard wygeneruje plik zasobów. Ten plik zawiera zasoby odpowiednie struktury standardowe, w zależności od tego, jakie opcje kreatorami AppWizard wybierz. Można przejrzeć, dodać lub usunąć zasobów, do których mają zostać uwzględnione zmiana dyrektywy kompilacji. Aby to zrobić, otwórz **zasobów** menu i wybierz **ustawić obejmuje**. Spójrz na edytowanie elementu "Dyrektywy kompilacji". Na przykład:  

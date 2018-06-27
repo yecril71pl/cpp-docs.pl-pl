@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b2c10583a4c3fc2b988e50c15b6c1dcf206af65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2e8e6c7d5f8144b2aec6c7783680feeff5f6f8a1
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384914"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951627"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Wskazówki: dodawanie obiektu CTaskDialog do aplikacji
 W tym przewodniku przedstawiono [klasy obiektu CTaskDialog](../mfc/reference/ctaskdialog-class.md) i pokazuje, jak i dodaj je do aplikacji.  
@@ -44,7 +44,7 @@ W tym przewodniku przedstawiono [klasy obiektu CTaskDialog](../mfc/reference/cta
   
 #### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>Aby zastąpić obiektu CTaskDialog okno komunikatu systemu Windows  
   
-1.  Utwórz nowy projekt aplikacji MFC z ustawieniami domyślnymi. Wywołać ją `MyProject`.  
+1.  Utwórz nowy projekt aplikacji MFC z ustawieniami domyślnymi. Wywołać ją *MyProject*.  
   
 2.  Użyj **Eksploratora rozwiązań** można otworzyć pliku MyProject.cpp.  
   
@@ -74,7 +74,7 @@ W tym przewodniku przedstawiono [klasy obiektu CTaskDialog](../mfc/reference/cta
  }  
  ```  
   
-6.  Wstaw następujący kod w nawiasie po `if` instrukcji z kroku 5. Ten kod tworzy `CTaskDialog`.  
+6.  Wstaw następujący kod w nawiasie po **Jeśli** instrukcji z kroku 5. Ten kod tworzy `CTaskDialog`.  
   
  ```  
     CTaskDialog taskDialog(message,
@@ -111,9 +111,9 @@ W tym przewodniku przedstawiono [klasy obiektu CTaskDialog](../mfc/reference/cta
   
 2.  Rozwiń węzeł **widok zasobów** do czasu możesz wybrać **tabeli ciągów** folderu. Rozwiń ją, a następnie kliknij dwukrotnie ikonę **tabeli ciągów** wpisu.  
   
-3.  Przewiń w dół tabeli ciągów i Dodaj nowy wpis. Zmień identyfikator do `TEMP_LINE1`. Ustaw podpis **1 wiersz polecenia**.  
+3.  Przewiń w dół tabeli ciągów i Dodaj nowy wpis. Zmień identyfikator do *TEMP_LINE1*. Ustaw podpis *1 wiersz polecenia*.  
   
-4.  Dodaj nowy wpis innego. Zmień identyfikator do `TEMP_LINE2`. Ustaw podpis **2 wiersza polecenia**.  
+4.  Dodaj nowy wpis innego. Zmień identyfikator do *TEMP_LINE2*. Ustaw podpis *2 wiersza polecenia*.  
   
 5.  Przejdź z powrotem do MyProject.cpp.  
   
@@ -192,7 +192,7 @@ W tym przewodniku przedstawiono [klasy obiektu CTaskDialog](../mfc/reference/cta
   
 2.  Przejdź do nawiasu zamykającego dla `if (CTaskDialog::IsSupported())` instrukcji.  
   
-3.  Wstaw następujący kod bezpośrednio przed zamykającym nawiasem `if` instrukcji (przed `else` blok):  
+3.  Wstaw następujący kod bezpośrednio przed zamykającym nawiasem **Jeśli** instrukcji (przed **else** blok):  
   
  ```  
     HRESULT result2 = CTaskDialog::ShowDialog(L"My error message",

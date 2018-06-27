@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9b21777ba272819c9921aed90ede185b759ba45
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 897be7063385566f2fd0e717eba0f89b335c2c48
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349951"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950416"
 ---
 # <a name="cd2dbrushproperties-class"></a>Klasa CD2DBrushProperties
 Otoka dla `D2D1_BRUSH_PROPERTIES`.  
@@ -72,10 +72,10 @@ CD2DBrushProperties(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_opacity`  
+ *_opacity*  
  Podstawowy przezroczystość pędzla. Wartość domyślna to 1.0.  
   
- `_transform`  
+ *_transform*  
  Przekształcenie do zastosowania pędzla  
   
 ##  <a name="commoninit"></a>  CD2DBrushProperties::CommonInit  

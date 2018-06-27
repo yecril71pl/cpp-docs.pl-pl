@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bd8f7b12eee847fd6b8784d21f4b565c7fc6a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d292c3f48f0a375fbd914cf287f1e8d2cef5c6c3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357018"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952388"
 ---
 # <a name="ccommandlineinfo-class"></a>Klasa CCommandLineInfo
 Pomoc podczas analizy wiersza polecenia podczas uruchamiania aplikacji.  
@@ -89,15 +89,15 @@ class CCommandLineInfo : public CObject
   
 |Argument wiersza polecenia|Polecenie wykonane|  
 |----------------------------|----------------------|  
-|*Aplikacji*|Nowy plik.|  
+|*aplikacji*|Nowy plik.|  
 |*Aplikacja* filename|Otwórz plik.|  
 |*Aplikacja* `/p` filename|Plik wydruku do drukarki domyślnej.|  
 |*Aplikacja* `/pt` portu sterownika drukarki filename|Drukowanie pliku do określonej drukarki.|  
-|*Aplikacji* `/dde`|Uruchom i poczekać na DDE polecenia.|  
-|*Aplikacji* `/Automation`|Uruchomiony jako serwer automatyzacji OLE.|  
-|*Aplikacji* `/Embedding`|Uruchamiać można edytować element osadzony OLE.|  
-|*Aplikacji* `/Register`<br /><br /> *Aplikacji* `/Regserver`|Informuje o aplikacji do wykonywania wszystkich zadań rejestracji.|  
-|*Aplikacji* `/Unregister`<br /><br /> *Aplikacji* `/Unregserver`|Informuje o aplikacji do wykonywania wszystkich zadań wyrejestrować.|  
+|*aplikacji* `/dde`|Uruchom i poczekać na DDE polecenia.|  
+|*aplikacji* `/Automation`|Uruchomiony jako serwer automatyzacji OLE.|  
+|*aplikacji* `/Embedding`|Uruchamiać można edytować element osadzony OLE.|  
+|*aplikacji* `/Register`<br /><br /> *aplikacji* `/Regserver`|Informuje o aplikacji do wykonywania wszystkich zadań rejestracji.|  
+|*aplikacji* `/Unregister`<br /><br /> *aplikacji* `/Unregserver`|Informuje o aplikacji do wykonywania wszystkich zadań wyrejestrować.|  
   
  Klasa wyprowadzona z nowego `CCommandLineInfo` do obsługi inne flagi i wartości parametrów. Zastąpienie [ParseParam](#parseparam) do obsługi nowych flag.  
   
@@ -270,31 +270,31 @@ virtual void ParseParam(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pszParam`  
+ *pszParam*  
  Parametr lub flagi.  
   
  *bFlag*  
- Wskazuje, czy `pszParam` jest parametr lub flagę.  
+ Wskazuje, czy *pszParam* jest parametr lub flagę.  
   
- `bLast`  
+ *Wielkich*  
  Wskazuje, czy to jest ostatni parametr lub flagi w wierszu polecenia.  
   
 ### <a name="remarks"></a>Uwagi  
- [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) wywołania `ParseParam` raz dla każdego parametru lub flagi w wierszu polecenia, przekazywanie argument `pszParam`. Jeśli pierwszy znak w parametrze " **-**"lub " **/**", a następnie jest usuwany i *bFlag* ma ustawioną wartość `TRUE`. Podczas analizowania ostatni parametr `bLast` ma ustawioną wartość `TRUE`.  
+ [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) wywołania `ParseParam` raz dla każdego parametru lub flagi w wierszu polecenia, przekazywanie argument *pszParam*. Jeśli pierwszy znak w parametrze " **-**"lub " **/**", a następnie jest usuwany i *bFlag* ma ustawioną wartość `TRUE`. Podczas analizowania ostatni parametr *wielkich* ma ustawioną wartość `TRUE`.  
   
  Domyślna implementacja tej funkcji rozpoznaje następujące flagi: `/p`, `/pt`, `/dde`, `/Automation`, i `/Embedding`, jak pokazano w poniższej tabeli:  
   
 |Argument wiersza polecenia|Polecenie wykonane|  
 |----------------------------|----------------------|  
-|*Aplikacji*|Nowy plik.|  
+|*aplikacji*|Nowy plik.|  
 |*Aplikacja* filename|Otwórz plik.|  
 |*Aplikacja* `/p` filename|Plik wydruku do drukarki domyślnej.|  
 |*Aplikacja* `/pt` portu sterownika drukarki filename|Drukowanie pliku do określonej drukarki.|  
-|*Aplikacji* `/dde`|Uruchom i poczekać na DDE polecenia.|  
-|*Aplikacji* `/Automation`|Uruchomiony jako serwer automatyzacji OLE.|  
-|*Aplikacji* `/Embedding`|Uruchamiać można edytować element osadzony OLE.|  
-|*Aplikacji* `/Register`<br /><br /> *Aplikacji* `/Regserver`|Informuje o aplikacji do wykonywania wszystkich zadań rejestracji.|  
-|*Aplikacji* `/Unregister`<br /><br /> *Aplikacji* `/Unregserver`|Informuje o aplikacji do wykonywania wszystkich zadań wyrejestrować.|  
+|*aplikacji* `/dde`|Uruchom i poczekać na DDE polecenia.|  
+|*aplikacji* `/Automation`|Uruchomiony jako serwer automatyzacji OLE.|  
+|*aplikacji* `/Embedding`|Uruchamiać można edytować element osadzony OLE.|  
+|*aplikacji* `/Register`<br /><br /> *aplikacji* `/Regserver`|Informuje o aplikacji do wykonywania wszystkich zadań rejestracji.|  
+|*aplikacji* `/Unregister`<br /><br /> *aplikacji* `/Unregserver`|Informuje o aplikacji do wykonywania wszystkich zadań wyrejestrować.|  
   
  Te informacje są przechowywane w [m_bRunAutomated](#m_brunautomated), [m_bRunEmbedded](#m_brunembedded), i [m_nShellCommand](#m_nshellcommand). Flagi są oznaczane albo kreskami ukośnymi " **/**"lub łącznika" **-**".  
   

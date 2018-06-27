@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d6e713f6d5238d99af8f9311eb05a4b2dd39f7b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6aba8c9ebe1eee6ca80d17fdff20c7d3dc30e2ae
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353908"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956866"
 ---
 # <a name="ccriticalsection-class"></a>Klasa CCriticalSection
 Reprezentuje "sekcja krytyczna" — obiektu synchronizacji, który umożliwia jeden wątek jednocześnie dostęp do zasobów lub sekcji kodu.  
@@ -119,7 +119,7 @@ BOOL Lock(DWORD dwTimeout);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwTimeout`  
+ *dwTimeout*  
  `Lock` ignoruje wartości tego parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
