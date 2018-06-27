@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81c3804ccc4f9e30e2d287102c408c98a77c6833
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd6af2ab524711c591772c28ed47742e6aa406ad
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382934"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955875"
 ---
 # <a name="special-cwinapp-services"></a>Specjalne usługi CWinApp
 Poza systemem pętli komunikatów i zapewniając możliwość inicjowania aplikacji i wyczyścić, po którym [CWinApp](../mfc/reference/cwinapp-class.md) zawiera kilka innych usług.  
@@ -61,7 +61,7 @@ Poza systemem pętli komunikatów i zapewniając możliwość inicjowania aplika
   
  Jeśli chcesz zainicjować GDI + aplikacji (wywołując [GdiplusStartup](https://msdn.microsoft.com/library/ms534077) w Twojej [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) funkcji), należy pominąć GDI + wątek w tle.  
   
- Można to zrobić przez ustawienie **SuppressBackgroundThread** członkiem [GdiplusStartupInput](https://msdn.microsoft.com/library/ms534067) struktury do **TRUE**. Gdy pomijanie GDI + w tle wątku, **NotificationHook** i **NotificationUnhook** wywołania należy po prostu wcześniejsze wprowadzanie i zamykanie pętli komunikatów aplikacji. Aby uzyskać więcej informacji o tych wywołań, zobacz [GdiplusStartupOutput](https://msdn.microsoft.com/library/ms534068). W związku z tym dobrym miejscem do wywołania **GdiplusStartup** i funkcji punktów zaczepienia powiadomień będzie znajdować się w przesłonięcie funkcji wirtualnej [CWinApp::Run](../mfc/reference/cwinapp-class.md#run), jak pokazano poniżej:  
+ Można to zrobić przez ustawienie `SuppressBackgroundThread` członkiem [GdiplusStartupInput](https://msdn.microsoft.com/library/ms534067) struktury do **TRUE**. Gdy pomijanie GDI + w tle wątku, `NotificationHook` i `NotificationUnhook` wywołania należy po prostu wcześniejsze wprowadzanie i zamykanie pętli komunikatów aplikacji. Aby uzyskać więcej informacji o tych wywołań, zobacz [GdiplusStartupOutput](https://msdn.microsoft.com/library/ms534068). W związku z tym dobrym miejscem do wywołania `GdiplusStartup` i funkcji punktów zaczepienia powiadomień będzie znajdować się w przesłonięcie funkcji wirtualnej [CWinApp::Run](../mfc/reference/cwinapp-class.md#run), jak pokazano poniżej:  
   
  [!code-cpp[NVC_MFCDocView#6](../mfc/codesnippet/cpp/special-cwinapp-services_1.cpp)]  
   

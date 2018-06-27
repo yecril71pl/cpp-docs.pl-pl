@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a1061f4a7d4394cb84c26514795c406f78146df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 22fcb3f9815e5100251e6bf478c6714fbb0b7df3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384959"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955725"
 ---
 # <a name="tn021-command-and-message-routing"></a>TN021: routing poleceń i komunikatów
 > [!NOTE]
@@ -34,11 +34,11 @@ ms.locfileid: "33384959"
  Zapoznaj się Visual C++ szczegółowe ogólne informacje dotyczące architektury opisanych tutaj, szczególnie różnicy między Windows komunikaty powiadomień dotyczących formantu karty i poleceń. Ta uwaga zakłada znajomości problemy opisane w dokumentacji drukowanej i dotyczy tylko tematy bardzo zaawansowane.  
   
 ## <a name="command-routing-and-dispatch-mfc-10-functionality-evolves-to-mfc-20-architecture"></a>Routing poleceń i wysyłania MFC 1.0 z MFC 2.0 rozwoju środowisko funkcji architektury  
- System Windows ma **WM_COMMAND** komunikat, który jest przeciążone w celu zapewnienia powiadomienia polecenia menu, klawisze skrótów i powiadomień dotyczących formantów okna dialogowego.  
+ System Windows ma komunikat WM_COMMAND, który jest przeciążone w celu zapewnienia powiadomienia polecenia menu, klawisze skrótów i powiadomień dotyczących formantów okna dialogowego.  
   
- MFC 1.0 oparty na który nieco zezwalając programem obsługi (na przykład "OnFileNew") **CWnd** klasy do jest wywoływana w odpowiedzi na określony **WM_COMMAND**. Jest zmiana koloru wraz ze strukturą danych o nazwie mapy komunikatów i powoduje mechanizm bardzo miejsca sprawności polecenia.  
+ MFC 1.0 oparty na który nieco zezwalając programem obsługi (na przykład "OnFileNew") `CWnd` klasy do jest wywoływana w odpowiedzi na określone WM_COMMAND. Jest zmiana koloru wraz ze strukturą danych o nazwie mapy komunikatów i powoduje mechanizm bardzo miejsca sprawności polecenia.  
   
- MFC 1.0 w nim również podane dodatkowe funkcje do oddzielania powiadomień dotyczących formantów z komunikaty poleceń. Polecenia są reprezentowane przez identyfikator 16-bitowych, czasami znana jako identyfikatora polecenia. Poleceń zazwyczaj rozpoczyna się od **cframewnd —** (to znaczy menu wybierz opcję lub przetłumaczonego akceleratora) i pobrać kierowane do różnych innych okien.  
+ MFC 1.0 w nim również podane dodatkowe funkcje do oddzielania powiadomień dotyczących formantów z komunikaty poleceń. Polecenia są reprezentowane przez identyfikator 16-bitowych, czasami znana jako identyfikatora polecenia. Poleceń zazwyczaj rozpoczyna się od `CFrameWnd` (to znaczy menu wybierz opcję lub przetłumaczonego akceleratora) i pobrać kierowane do różnych innych okien.  
   
  MFC 1.0 używany routing poleceń w ograniczonym znaczeniu dla implementacji interfejsu dokumentu wielu (MDI). (Ramki okna MDI delegować poleceń, aby jego aktywne okno potomne MDI).  
   
@@ -63,9 +63,9 @@ ms.locfileid: "33384959"
   
 -   Być może w tablicy identyfikator używany do tworzenia paska narzędzi.  
   
--   W **on_command —** makra.  
+-   On_command — makro.  
   
--   Być może w **on_update_command_ui —** makra.  
+-   Być może w on_update_command_ui — makro.  
   
  Obecnie można tylko implementacja MFC, która wymaga identyfikatory poleceń > = 0x8000 jest implementacją GOSUB okien dialogowych/poleceń.  
   
@@ -78,23 +78,23 @@ ms.locfileid: "33384959"
   
  Normalny przycisk można umieścić w normalnych modalnego okna dialogowego z IDC przycisku ustawiony identyfikator odpowiednie polecenie. Po wybraniu przycisku właściciela okna dialogowego (zazwyczaj głównego okna ramowego) pobiera polecenia, podobnie jak inne polecenia. Jest to polecenie GOSUB, ponieważ zwykle jest używany do innego okna dialogowego (GOSUB pierwszego okna dialogowego)  
   
- Możesz także wywołać funkcję **CWnd::UpdateDialogControls** na Twoje okno dialogowe i przekaż go adres główną ramkę okna. Ta funkcja będzie włączać lub wyłączać formantów okna dialogowego na podstawie tego, czy mają one programy obsługi poleceń w ramce. Ta funkcja jest wywoływana automatycznie dla Ciebie pasków sterowania w pętli bezczynności aplikacji, ale należy wywołać go bezpośrednio do normalnego okna dialogowe, które chcesz użyć tej funkcji.  
+ Możesz także wywołać funkcję `CWnd::UpdateDialogControls` na Twoje okno dialogowe i przekaż go adres główną ramkę okna. Ta funkcja będzie włączać lub wyłączać formantów okna dialogowego na podstawie tego, czy mają one programy obsługi poleceń w ramce. Ta funkcja jest wywoływana automatycznie dla Ciebie pasków sterowania w pętli bezczynności aplikacji, ale należy wywołać go bezpośrednio do normalnego okna dialogowe, które chcesz użyć tej funkcji.  
   
 ## <a name="when-onupdatecommandui-is-called"></a>Gdy jest wywoływana on_update_command_ui —  
- Zachowanie stanu włączone zaznaczone, program wszystkich elementów menu cały czas może być kosztowne w praktyce problem. Typowe techniki jest enable/wyboru elementów menu tylko wtedy, gdy użytkownik wybierze opcję menu PODRĘCZNEGO. Implementacja MFC 2.0 **cframewnd —** dojść **WM_INITMENUPOPUP** wiadomości i korzysta z architektury routingu poleceń w celu ustalenia stanów menu za pośrednictwem **ON_UPDATE_COMMAND_ Interfejs użytkownika** programów obsługi.  
+ Zachowanie stanu włączone zaznaczone, program wszystkich elementów menu cały czas może być kosztowne w praktyce problem. Typowe techniki jest enable/wyboru elementów menu tylko wtedy, gdy użytkownik wybierze opcję menu PODRĘCZNEGO. Implementacja MFC 2.0 `CFrameWnd` obsługuje komunikat WM_INITMENUPOPUP i korzysta z architektury routingu poleceń w celu ustalenia stanów menu za pomocą programów obsługi on_update_command_ui —.  
   
- **Cframewnd —** obsługuje także **WM_ENTERIDLE** komunikat opisujący bieżący menu wybranego elementu w pasku (znanej także jako wiersz wiadomości) stanu.  
+ `CFrameWnd` obsługuje także komunikatów WM_ENTERIDLE do opisywania bieżącego menu wybranego elementu w pasku (znanej także jako wiersz wiadomości) stanu.  
   
- Struktura menu aplikacji, edytowany przez Visual C++, jest używana do reprezentowania polecenia potencjalnych dostępne pod adresem **WM_INITMENUPOPUP** czasu. **On_update_command_ui —** programy obsługi można modyfikować stanu lub tekst elementu menu lub dla zaawansowanych używa (na przykład listy ostatnio używanych plików lub menu podręcznego zleceń OLE), faktycznie zmodyfikować struktury menu przed narysowaniem menu.  
+ Struktura menu aplikacji, edytowany przez Visual C++, jest używana do reprezentowania polecenia potencjalnych dostępne w czasie WM_INITMENUPOPUP. Obsługi on_update_command_ui — można zmodyfikować stanu lub tekst menu, lub do celów Zaawansowane (na przykład listy ostatnio używanych plików lub menu podręcznego zleceń OLE), faktycznie zmodyfikować struktury menu przed narysowaniem menu.  
   
- Taki sam sortowania z **on_update_command_ui —** przetwarzania odbywa się paski narzędzi (i innych paski sterowania) po przejściu jego pętli bezczynności aplikacji. Zobacz *informacje dotyczące biblioteki klas* i [31 Uwaga techniczna](../mfc/tn031-control-bars.md) uzyskać więcej informacji na temat paski sterowania.  
+ Paski narzędzi (i innych paski sterowania) odbywa się tego samego sortowania przetwarzania on_update_command_ui — po przejściu jego pętli bezczynności aplikacji. Zobacz *informacje dotyczące biblioteki klas* i [31 Uwaga techniczna](../mfc/tn031-control-bars.md) uzyskać więcej informacji na temat paski sterowania.  
   
 ## <a name="nested-pop-up-menus"></a>Zagnieżdżone menu wyskakujące  
- Jeśli używasz struktury zagnieżdżone menu, można zauważyć, że **on_update_command_ui —** obsługi dla pierwszego elementu menu w menu podręczne jest wywoływana w dwóch różnych przypadkach.  
+ Jeśli używasz struktury zagnieżdżone menu, można zauważyć, że obsługa on_update_command_ui — pierwszy element menu w menu podręcznym jest wywoływana w dwóch różnych przypadkach.  
   
- Najpierw jest wywoływana dla samego menu podręcznym. Jest to konieczne, ponieważ menu wyskakujące nie mają identyfikatorów i używamy identyfikator pierwszego elementu menu wyskakującego menu do odwoływania się do całego menu podręczne. W takim przypadku **m_pSubMenu** zmiennej członkowskiej z **CCmdUI** obiekt będzie mieć wartości NULL i wskaż menu podręczne.  
+ Najpierw jest wywoływana dla samego menu podręcznym. Jest to konieczne, ponieważ menu wyskakujące nie mają identyfikatorów i używamy identyfikator pierwszego elementu menu wyskakującego menu do odwoływania się do całego menu podręczne. W takim przypadku *m_pSubMenu* zmiennej członkowskiej z `CCmdUI` obiekt będzie mieć wartości NULL i wskaż menu podręczne.  
   
- Po drugie jest ona wywoływana tuż przed elementów menu w menu podręcznym mają być tworzone. W takim przypadku Identyfikatora dotyczy tylko pierwszego elementu menu i **m_pSubMenu** zmiennej członkowskiej z **CCmdUI** obiektu będzie mieć wartości NULL.  
+ Po drugie jest ona wywoływana tuż przed elementów menu w menu podręcznym mają być tworzone. W takim przypadku Identyfikatora dotyczy tylko pierwszego elementu menu i *m_pSubMenu* zmiennej członkowskiej z `CCmdUI` obiektu będzie mieć wartości NULL.  
   
  Umożliwia włączenie menu podręczne różne od jego elementy menu, ale wymaga napisanie kodu pamiętać menu. Na przykład w zagnieżdżonych menu o następującej strukturze:  
   

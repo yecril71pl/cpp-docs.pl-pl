@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55658efabf8c9df795ed8069d9659ebf0e01e364
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fae1d569f49a50d3b7281e86c72fd12c69b40832
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352115"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956362"
 ---
 # <a name="canimationvariableintegerchangehandler-class"></a>Klasa CAnimationVariableIntegerChangeHandler
 Implementuje wywołanie zwrotne, które jest wywoływane przez interfejs API animacji, gdy zmienia się wartość zmiennej animacji.  
@@ -88,10 +88,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pAnimationController`  
+ *pAnimationController*  
  Wskaźnik do kontrolera animacji, które będzie odbierało zdarzenia.  
   
- `ppHandler`  
+ *ppHandler*  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli metoda zakończy się powodzeniem, zwraca wartość S_OK. W przeciwnym wypadku zwraca kod błędu HRESULT.  
@@ -108,16 +108,16 @@ IFACEMETHOD(OnIntegerValueChanged) (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `storyboard`  
+ *scenorysu*  
  Scenorysu, który jest animacji zmiennej.  
   
- `variable`  
+ *Zmienna*  
  Zmienna animacji, który został zaktualizowany.  
   
- `newValue`  
+ *newValue*  
  Nowa wartość zaokrąglone.  
   
- `previousValue`  
+ *previousValue*  
  Zaokrąglony poprzedniej wartości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -131,7 +131,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pAnimationController`  
+ *pAnimationController*  
  Wskaźnik do kontrolera animacji, które będzie odbierało zdarzenia.  
   
 ## <a name="see-also"></a>Zobacz też  

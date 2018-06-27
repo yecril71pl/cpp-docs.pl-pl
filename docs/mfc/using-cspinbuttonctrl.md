@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03b1e83977c1d75070e8878dfdcc53c7afca7a86
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bea2f2f51ed3b012ee9b5afe2572b2a6be9e0d57
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384403"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955485"
 ---
 # <a name="using-cspinbuttonctrl"></a>Korzystanie z CSpinButtonCtrl
 *Pokrętła* formantu (znanej także jako *góra dół* kontroli) zawiera pary strzałki, które użytkownik może kliknąć, aby dostosować wartość. Ta wartość jest znana jako *bieżącego położenia*. Pozycja pozostaje w zakresie przycisku pokrętła. Gdy użytkownik kliknie strzałkę w górę, pozycja jest przesuwany maksymalną; a kiedy użytkownik kliknie strzałkę w dół, pozycja jest przesuwany minimum.  
@@ -36,7 +36,7 @@ ms.locfileid: "33384403"
   
  Zazwyczaj bieżące położenie jest wyświetlany w formancie pomocnika. Formant pomocnika nosi nazwę *zaprzyjaźnione okno*. Ilustracja kontrolki przycisku pokrętła, zobacz [o Up-Down — formanty](http://msdn.microsoft.com/library/windows/desktop/bb759889) w zestawie Windows SDK.  
   
- Aby utworzyć pokrętła i zaprzyjaźnione okno kontrolki edycji w programie Visual Studio, najpierw przeciągnij formant edycyjny do okna dialogowego lub okna, a następnie przeciągnij formant pokrętła. Wybierz kontrolki pokrętła i ustaw jej **automatyczne Zaprzyjaźnianie** i **Ustaw Buddy Integer** właściwości **True**. Również ustawić **wyrównanie** właściwości; **Wyrównaj do prawej** jest najbardziej typowych. Przy użyciu tych ustawień kontrolki edycji jest ustawiony jako okna zaprzyjaźnionego, ponieważ bezpośrednio poprzedza kontrolki edycji w kolejności tabulacji. Kontrolka edycji wyświetli liczb całkowitych i kontrolki pokrętła jest osadzony w prawej części kontrolki edycji. Opcjonalnie, należy określić prawidłowy zakres kontrolki pokrętła przy użyciu [CSpinButtonCtrl::SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) metody. Nie obsługi zdarzeń są niezbędne do komunikacji między pokrętła i zaprzyjaźnione okno, ponieważ ich wymiany danych bezpośrednio. Jeśli używasz pokrętła dla niektórych innych celów, na przykład stronę przez system windows lub w oknach dialogowych, Dodaj obsługi dla `UDN_DELTAPOS` wiadomości i wykonać akcji niestandardowej.  
+ Aby utworzyć pokrętła i zaprzyjaźnione okno kontrolki edycji w programie Visual Studio, najpierw przeciągnij formant edycyjny do okna dialogowego lub okna, a następnie przeciągnij formant pokrętła. Wybierz kontrolki pokrętła i ustaw jej **automatyczne Zaprzyjaźnianie** i **Ustaw Buddy Integer** właściwości **True**. Również ustawić **wyrównanie** właściwości; **Wyrównaj do prawej** jest najbardziej typowych. Przy użyciu tych ustawień kontrolki edycji jest ustawiony jako okna zaprzyjaźnionego, ponieważ bezpośrednio poprzedza kontrolki edycji w kolejności tabulacji. Kontrolka edycji wyświetli liczb całkowitych i kontrolki pokrętła jest osadzony w prawej części kontrolki edycji. Opcjonalnie, należy określić prawidłowy zakres kontrolki pokrętła przy użyciu [CSpinButtonCtrl::SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) metody. Nie obsługi zdarzeń są niezbędne do komunikacji między pokrętła i zaprzyjaźnione okno, ponieważ ich wymiany danych bezpośrednio. Użycie pokrętła do niektórych innych celów, na przykład strony przez system windows lub w oknach dialogowych, następnie dodaj obsługę wiadomości UDN_DELTAPOS i wykonać akcji niestandardowej.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
   

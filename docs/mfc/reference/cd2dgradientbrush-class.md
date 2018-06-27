@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c01dbb3b14c13182afc85412b5c3ffa3ac0e9cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e479c156967addc7add8f048d2ef1c3abab0dd8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354197"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956236"
 ---
 # <a name="cd2dgradientbrush-class"></a>Klasa CD2DGradientBrush
 Klasa podstawowa klasy CD2DRadialGradientBrush i CD2DLinearGradientBrush.  
@@ -102,25 +102,25 @@ CD2DGradientBrush(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentTarget`  
+ *pParentTarget*  
  Wskaźnik do obiektu docelowego renderowania.  
   
- `gradientStops`  
+ *gradientStops*  
  Wskaźnik do tablicy D2D1_GRADIENT_STOP struktury.  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  Wartość większa niż lub równa 1, która określa liczbę gradientu w tablicy gradientStops.  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  Miejsca, w których kolor jest wykonywane interpolacji między gradientu.  
   
- `extendMode`  
+ *extendMode*  
  Zachowanie gradientu poza zakresem znormalizowane [0,1].  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Wskaźnik do nieprzezroczystość i transformacja pędzla.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Wskazuje, że obiekt zostanie zniszczony przez właściciela (pParentTarget).  
   
 ##  <a name="destroy"></a>  CD2DGradientBrush::Destroy  
