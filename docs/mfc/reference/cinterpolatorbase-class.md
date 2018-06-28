@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0ca520fe89e04d984e6490c495f2622a6037c79
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81ad51fe00a0b205000b15a05ede9497850f488e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367763"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041276"
 ---
 # <a name="cinterpolatorbase-class"></a>Klasa CInterpolatorBase
 Implementuje wywołanie zwrotne, które jest wywoływane przez interfejs API animacji, gdy należy obliczyć nową wartość zmiennej animacji.  
@@ -104,10 +104,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pInterpolator`  
+ *pInterpolator*  
  Wskaźnik do interpolatora niestandardowych.  
   
- `ppHandler`  
+ *ppHandler*  
  Dane wyjściowe. Zawiera wskaźnik do wystąpienia CInterpolatorBase po powrocie z funkcji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -123,13 +123,13 @@ IFACEMETHOD(GetDependencies)(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `initialValueDependencies`  
+ *initialValueDependencies*  
  Dane wyjściowe. Do SetInitialValueAndVelocity przekazany aspektów interpolatora, które są zależne od wartości początkowej.  
   
- `initialVelocityDependencies`  
+ *initialVelocityDependencies*  
  Dane wyjściowe. Aspekty interpolatora, które są zależne od prędkości początkowej przekazany do SetInitialValueAndVelocity.  
   
- `durationDependencies`  
+ *durationDependencies*  
  Dane wyjściowe. Aspekty interpolatora, które są zależne od czasu trwania przekazany do SetDuration.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -143,7 +143,7 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `duration`  
+ *Czas trwania*  
  Dane wyjściowe. Czas trwania przejścia, w sekundach.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -157,7 +157,7 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `value`  
+ *value*  
  Dane wyjściowe. Końcowa wartość zmiennej na końcu przejścia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -173,10 +173,10 @@ IFACEMETHOD(InterpolateValue)(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `offset`  
+ *offset*  
  Przesunięcie od początku przejścia. Przesunięcie zawsze jest większa niż lub równa zero i mniejsza niż czas trwania przejścia. Ta metoda nie jest wywoływana, jeśli czas trwania przejścia jest równy zero.  
   
- `value`  
+ *value*  
  Dane wyjściowe. Wartość interpolowanym.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -192,10 +192,10 @@ IFACEMETHOD(InterpolateVelocity)(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `offset`  
+ *offset*  
  Przesunięcie od początku przejścia. Przesunięcie zawsze jest większa lub równa zero i mniejsza niż czas trwania przejścia. Ta metoda nie jest wywoływana, jeśli czas trwania przejścia jest równy zero.  
   
- `velocity`  
+ *szybkość pracy*  
  Dane wyjściowe. Szybkość pracy zmiennej przy przesunięciu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -209,7 +209,7 @@ void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pInterpolator`  
+ *pInterpolator*  
  Wskaźnik do interpolatora niestandardowych.  
   
 ##  <a name="setduration"></a>  CInterpolatorBase::SetDuration  
@@ -220,7 +220,7 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `duration`  
+ *Czas trwania*  
  Czas trwania przejścia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -236,10 +236,10 @@ IFACEMETHOD(SetInitialValueAndVelocity)(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `initialValue`  
+ *Wartość początkowa*  
  Wartość zmiennej w chwili rozpoczęcia przejścia.  
   
- `initialVelocity`  
+ *initialVelocity*  
  Szybkość pracy zmiennej w chwili rozpoczęcia przejścia.  
   
 ### <a name="return-value"></a>Wartość zwracana  

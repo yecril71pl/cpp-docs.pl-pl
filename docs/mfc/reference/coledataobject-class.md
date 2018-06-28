@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9cd159597440dfb55bbe8abe147623096cdf449
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0e5beccea254db8c7db6b6f52fee6c5d3021da71
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374513"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038338"
 ---
 # <a name="coledataobject-class"></a>Klasa COleDataObject
 Używany podczas transferów danych do odzyskiwania danych w różnych formatach ze Schowka, za pomocą operacji przeciągania i upuszczania, lub z elementu osadzone OLE.  
@@ -107,7 +107,7 @@ void Attach(
  *lpDataObject*  
  Wskazuje obiektu danych.  
   
- `bAutoRelease`  
+ *bAutoRelease*  
  **Wartość TRUE,** będą obiekcie danych OLE zwalniana, kiedy `COleDataObject` obiekt jest niszczone; w przeciwnym razie **FALSE**.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -178,14 +178,14 @@ BOOL GetData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cfFormat`  
+ *cfFormat*  
  Format, w którym ma zostać zwrócone dane. Ten parametr może być jedną z wstępnie zdefiniowane formaty Schowka lub wartość zwracana przez natywnego Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkcji.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Wskazuje [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) strukturę, która będzie odbierać dane.  
   
- `lpFormatEtc`  
- Wskazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury opisujące format, w którym ma zostać zwrócone dane. Podaj wartość dla tego parametru, jeśli chcesz określić format dodatkowych informacji poza określonej przez format schowka `cfFormat`. Jeśli jest **NULL**, wartości domyślne są używane w przypadku innych pól w **FORMATETC** struktury.  
+ *lpFormatEtc*  
+ Wskazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury opisujące format, w którym ma zostać zwrócone dane. Podaj wartość dla tego parametru, jeśli chcesz określić format dodatkowych informacji poza określonej przez format schowka *cfFormat*. Jeśli jest **NULL**, wartości domyślne są używane w przypadku innych pól w **FORMATETC** struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
@@ -205,11 +205,11 @@ CFile* GetFileData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cfFormat`  
+ *cfFormat*  
  Format, w którym ma zostać zwrócone dane. Ten parametr może być jedną z wstępnie zdefiniowane formaty Schowka lub wartość zwracana przez natywnego Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkcji.  
   
- `lpFormatEtc`  
- Wskazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury opisujące format, w którym ma zostać zwrócone dane. Podaj wartość dla tego parametru, jeśli chcesz określić format dodatkowych informacji poza określonej przez format schowka `cfFormat`. Jeśli jest **NULL**, wartości domyślne są używane w przypadku innych pól w **FORMATETC** struktury.  
+ *lpFormatEtc*  
+ Wskazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury opisujące format, w którym ma zostać zwrócone dane. Podaj wartość dla tego parametru, jeśli chcesz określić format dodatkowych informacji poza określonej przez format schowka *cfFormat*. Jeśli jest **NULL**, wartości domyślne są używane w przypadku innych pól w **FORMATETC** struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do nowego `CFile` lub `CFile`-pochodnej obiektu zawierającego dane w przypadku powodzenia; w przeciwnym razie **NULL**.  
@@ -234,11 +234,11 @@ HGLOBAL GetGlobalData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cfFormat`  
+ *cfFormat*  
  Format, w którym ma zostać zwrócone dane. Ten parametr może być jedną z wstępnie zdefiniowane formaty Schowka lub wartość zwracana przez natywnego Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkcji.  
   
- `lpFormatEtc`  
- Wskazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury opisujące format, w którym ma zostać zwrócone dane. Podaj wartość dla tego parametru, jeśli chcesz określić format dodatkowych informacji poza określonej przez format schowka `cfFormat`. Jeśli jest **NULL**, wartości domyślne są używane w przypadku innych pól w **FORMATETC** struktury.  
+ *lpFormatEtc*  
+ Wskazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury opisujące format, w którym ma zostać zwrócone dane. Podaj wartość dla tego parametru, jeśli chcesz określić format dodatkowych informacji poza określonej przez format schowka *cfFormat*. Jeśli jest **NULL**, wartości domyślne są używane w przypadku innych pól w **FORMATETC** struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Dojście bloku pamięci globalnej zawierające dane w przypadku powodzenia; w przeciwnym razie **NULL**.  
@@ -256,7 +256,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Wskazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) strukturę, która otrzymuje informacji o formacie po powrocie z wywołania funkcji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -279,11 +279,11 @@ BOOL IsDataAvailable(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cfFormat`  
- Formatu danych schowka do użycia w strukturze wskazywana przez `lpFormatEtc`. Ten parametr może być jedną z wstępnie zdefiniowane formaty Schowka lub wartość zwracana przez natywnego Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkcji.  
+ *cfFormat*  
+ Formatu danych schowka do użycia w strukturze wskazywana przez *lpFormatEtc*. Ten parametr może być jedną z wstępnie zdefiniowane formaty Schowka lub wartość zwracana przez natywnego Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkcji.  
   
- `lpFormatEtc`  
- Wskazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury opisujący żądany format. Podaj wartość dla tego parametru, tylko, jeśli chcesz określić format dodatkowych informacji poza określonej przez format schowka `cfFormat`. Jeśli jest **NULL**, wartości domyślne są używane w przypadku innych pól w **FORMATETC** struktury.  
+ *lpFormatEtc*  
+ Wskazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury opisujący żądany format. Podaj wartość dla tego parametru, tylko, jeśli chcesz określić format dodatkowych informacji poza określonej przez format schowka *cfFormat*. Jeśli jest **NULL**, wartości domyślne są używane w przypadku innych pól w **FORMATETC** struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli dane są dostępne w określonym formacie. w przeciwnym razie 0.  
@@ -306,7 +306,7 @@ void Release();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `IDataObject` Został skojarzony z `COleDataObject` przez wywołanie metody **Attach** lub `AttachClipboard` jawnie ani przez platformę. Jeśli `bAutoRelease` parametr **Attach** jest **FALSE**, `IDataObject` obiektu nie zostanie zwolniony. W takim przypadku obiekt wywołujący jest odpowiedzialny za zwolnienie `IDataObject` przez wywołanie metody [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317).  
+ `IDataObject` Został skojarzony z `COleDataObject` przez wywołanie metody `Attach` lub `AttachClipboard` jawnie ani przez platformę. Jeśli `bAutoRelease` parametr `Attach` jest **FALSE**, `IDataObject` obiektu nie zostanie zwolniony. W takim przypadku obiekt wywołujący jest odpowiedzialny za zwolnienie `IDataObject` przez wywołanie metody [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przykładowe MFC HIERSVR](../../visual-cpp-samples.md)   

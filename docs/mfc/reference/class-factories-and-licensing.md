@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b311d81e5e9becab2bf0ab88d30321019e5da95d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e8f411aeb88a2d76265c6e8c277b367cb1ebce57
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367077"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038239"
 ---
 # <a name="class-factories-and-licensing"></a>Fabryki klas i licencjonowanie
 Aby utworzyć wystąpienia formantu OLE, aplikacji kontenera wywołania funkcji członkowskiej klasy fabryki klasy formantu. Ponieważ formantu rzeczywistego obiektu OLE, fabryki klasy jest odpowiedzialny za tworzenie wystąpienia formantu. Każda klasa formantu OLE musi mieć fabrykę klas.  
@@ -140,23 +140,23 @@ BOOL AFXAPI AfxVerifyLicFile(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hInstance`  
+ *hInstance*  
  Dojście wystąpienia skojarzony z formantem licencjonowane biblioteki dll.  
   
- `pszLicFileName`  
+ *pszLicFileName*  
  Wskazuje ciąg znaków zakończony znakiem null, zawierający nazwę pliku licencji.  
   
- `pszLicFileContents`  
+ *pszLicFileContents*  
  Punkty sekwencji bajtów, która musi być zgodna sekwencji znaleziono na początku pliku licencji.  
   
- `cch`  
- Liczba znaków w `pszLicFileContents`.  
+ *CCH*  
+ Liczba znaków w *pszLicFileContents*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli istnieje plik licencji rozpoczyna się od sekwencja znaków w `pszLicFileContents`; w przeciwnym razie wartość 0.  
+ Różna od zera, jeśli istnieje plik licencji rozpoczyna się od sekwencja znaków w *pszLicFileContents*; w przeciwnym razie wartość 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `cch` wynosi -1, korzysta z tej funkcji:  
+ Jeśli *cch* wynosi -1, korzysta z tej funkcji:  
   
  [!code-cpp[NVC_MFC_Utilities#36](../../mfc/codesnippet/cpp/class-factories-and-licensing_2.cpp)]  
 

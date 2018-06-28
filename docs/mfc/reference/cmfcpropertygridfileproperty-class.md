@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2b123b5c473c834e958263edb926ef25103d788
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c1ba2bb78260ade8dc95685789ec6af7e0ff58a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367799"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038916"
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>Klasa CMFCPropertyGridFileProperty
 `CMFCPropertyGridFileProperty` Klasa obsługuje elementu formantu listy właściwości, które otwiera okno dialogowe wyboru pliku.  
@@ -78,28 +78,28 @@ CMFCPropertyGridFileProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `strName`  
+ [in] *strName*  
  Nazwa właściwości.  
   
- [in] `bOpenFileDialog`  
+ [in] *bOpenFileDialog*  
  `TRUE` Aby otworzyć **Otwieranie pliku** okno dialogowe; `FALSE` otworzyć **Zapisz plik** okno dialogowe.  
   
- [in] `strFileName`  
+ [in] *strFileName*  
  Początkowa nazwa pliku.  
   
- [in] `lpszDefExt`  
+ [in] *lpszDefExt*  
  Ciąg jednego lub więcej rozszerzeń nazw plików. Wartość domyślna to `NULL`.  
   
- [in] `dwFlags`  
+ [in] *wartość elementu dwFlags*  
  Flagi — okno dialogowe. Wartość domyślna to bitowe połączenie (lub) `OFN_HIDEREADONLY` i `OFN_OVERWRITEPROMPT`.  
   
- [in] `lpszFilter`  
+ [in] *lpszFilter*  
  Ciąg co najmniej jeden filtr plików. Wartość domyślna to `NULL`.  
   
- [in] `lpszDescr`  
+ [in] *lpszDescr*  
  Opis elementu właściwości. Wartość domyślna to `NULL`.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Dane specyficzne dla aplikacji, które jest skojarzone z elementem właściwości. Na przykład 32-bitową liczbą całkowitą lub wskaźnik do innych danych. Wartość domyślna to 0.  
   
 ### <a name="return-value"></a>Wartość zwracana  

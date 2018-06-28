@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1680305b359bb273ba492083dd2e99703e2d930d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c7264273f3db1dab1e6cab72333c0629a802e28
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368621"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041997"
 ---
 # <a name="cmfcdropdownframe-class"></a>Klasa CMFCDropDownFrame
 Udostępnia funkcję okna ramkę z listy rozwijanej do listy rozwijanej paski narzędzi i przycisków paska narzędzi z listy rozwijanej.  
@@ -107,10 +107,10 @@ virtual BOOL Create(
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] `pWndParent`|Okno nadrzędne ramki listy rozwijanej.|  
-|[in] `x`|Współrzędna pozioma ekranu dla lokalizacji ramki rozwijana w dół.|  
-|[in] `y`|Współrzędna pionowym ekranie lokalizację ramki, w dół do dołu.|  
-|[in] `pWndOriginToolbar`|Pasek narzędzi z przycisków listy rozwijanej, który używa tej metody do wypełnienia nowego obiektu ramkę z listy rozwijanej.|  
+|[in] *pWndParent*|Okno nadrzędne ramki listy rozwijanej.|  
+|[in] *x*|Współrzędna pozioma ekranu dla lokalizacji ramki rozwijana w dół.|  
+|[in] *y*|Współrzędna pionowym ekranie lokalizację ramki, w dół do dołu.|  
+|[in] *pWndOriginToolbar*|Pasek narzędzi z przycisków listy rozwijanej, który używa tej metody do wypełnienia nowego obiektu ramkę z listy rozwijanej.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `TRUE` Jeśli pomyślnie utworzono ramki listy rozwijanej; w przeciwnym razie `FALSE`.  
@@ -158,7 +158,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] `bNotify`|Nieużywane.|  
+|[in] *bNotify*|Nieużywane.|  
   
 ### <a name="remarks"></a>Uwagi  
  Struktura wywołuje tę metodę, po utworzeniu ramki listy rozwijanej lub zmiany rozmiaru okna nadrzędnego. Ta metoda oblicza położenie i rozmiar ramki listy rozwijanej przy użyciu pozycji i rozmiaru okna nadrzędnego.  
@@ -171,11 +171,11 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
  `TRUE` Aby automatycznie zniszczyć okna narzędzi listy rozwijanej skojarzone; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `bAutoDestroy` jest `TRUE`, a następnie `CMFCDropDownFrame` destruktora niszczy okno narzędzi listy rozwijanej skojarzone. Wartość domyślna to `TRUE`.  
+ Jeśli *bAutoDestroy* jest `TRUE`, a następnie `CMFCDropDownFrame` destruktora niszczy okno narzędzi listy rozwijanej skojarzone. Wartość domyślna to `TRUE`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

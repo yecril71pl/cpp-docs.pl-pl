@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21114a3c04f96f2867f5440d47e856958060233e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b2b3c2ff247014a692a78084f42c208b4497023
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367919"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040236"
 ---
 # <a name="cmfccolordialog-class"></a>Klasa CMFCColorDialog
 `CMFCColorDialog` Klasa reprezentuje okno dialogowe wybór kolorów.  
@@ -125,16 +125,16 @@ CMFCColorDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `clrInit`  
+ [in] *clrInit*  
  Domyślny wybór kolorów. Jeśli wartość nie zostanie określona, wartością domyślną jest RGB(0,0,0) (czarny).  
   
- [in] `dwFlags`  
+ [in] *wartość elementu dwFlags*  
  (Zastrzeżone).  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Wskaźnik do okna nadrzędnego lub właściciela okna dialogowego.  
   
- [in] `hPal`  
+ [in] *hPal*  
  Dojście do paletę kolorów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -182,7 +182,7 @@ void SetCurrentColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `rgb`  
+ [in] *rgb*  
  Wartości kolorów RGB  
   
 ### <a name="remarks"></a>Uwagi  
@@ -195,7 +195,7 @@ void SetNewColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `rgb`  
+ [in] *rgb*  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) , który określa kolor RGB.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -211,13 +211,13 @@ void SetPageOne(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `R`  
+ [in] *R*  
  Określa składnika czerwony wartości RGB.  
   
- [in] `G`  
+ [in] *G*  
  Określa składnika zielony wartości RGB.  
   
- [in] `B`  
+ [in] *B*  
  Określa składnika niebieski wartości RGB.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -233,13 +233,13 @@ void SetPageTwo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `R`  
+ [in] *R*  
  Określa składnik red wartości RGB  
   
- [in] `G`  
+ [in] *G*  
  Określa składnika zielony wartości RGB  
   
- [in] `B`  
+ [in] *B*  
  Określa składnika niebieski wartości RGB  
   
 ### <a name="remarks"></a>Uwagi  

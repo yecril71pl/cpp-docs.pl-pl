@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ed492198c5c667fa1ffadcaa9a3bcc0461c16d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65e7c613f5c4a4273208e30cd0fc6284ef4e420c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373389"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037873"
 ---
 # <a name="coledispatchexception-class"></a>Klasa COleDispatchException
 Obsługi wyjątków specyficzne dla OLE `IDispatch` interfejsu, który jest kluczowym elementem automatyzacji OLE.  
@@ -55,7 +55,7 @@ class COleDispatchException : public CException
 |[COleDispatchException::m_wCode](#m_wcode)|`IDispatch`— Kod błędu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jak pochodną klasy wyjątków `CException` klasa, podstawowa `COleDispatchException` mogą być używane z **THROW**, `THROW_LAST`, **SPRÓBUJ**, **CATCH**, `AND_CATCH`, i `END_CATCH` makra.  
+ Jak pochodną klasy wyjątków `CException` podstawowa klasa `COleDispatchException` może być używany z THROW, throw_last — TRY, CATCH, and_catch — i end_catch — makra.  
   
  Ogólnie rzecz biorąc, należy wywołać [afxthrowoledispatchexception —](exception-processing.md#afxthrowoledispatchexception) do tworzenia i throw `COleDispatchException` obiektu.  
   

@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bb9f87ed5ae3027e7743a36c2484017d6381f95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f3ba2a92ad523994a458abad9d4acee506e8e85
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374042"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038893"
 ---
 # <a name="cmdiframewnd-class"></a>Cmdiframewnd — klasa
 Udostępnia funkcje systemu Windows wielu okno ramowe interfejsu (MDI) dokumentu, wraz z elementów członkowskich do zarządzania okna.  
@@ -91,11 +91,11 @@ class CMDIFrameWnd : public CFrameWnd
   
  Można utworzyć przez wywołanie metody ramki okna MDI [Utwórz](../../mfc/reference/cframewnd-class.md#create) lub [LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe) funkcji członkowskiej klasy `CFrameWnd`.  
   
- Przed wywołaniem **Utwórz** lub `LoadFrame`, musi konstruowania obiektu okno ramowe na stercie przy użyciu języka C++ **nowe** operatora. Przed wywołaniem **Utwórz** można również zarejestrować klasy okna z [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) funkcji globalnej do ustawiania ikony, jak i klasy stylów ramki.  
+ Przed wywołaniem `Create` lub `LoadFrame`, musi konstruowania obiektu okno ramowe na stercie przy użyciu języka C++ **nowe** operatora. Przed wywołaniem `Create` można również zarejestrować klasy okna z [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) funkcji globalnej do ustawiania ikony, jak i klasy stylów ramki.  
   
- Użyj **Utwórz** funkcji członkowskiej do przekazania parametrów tworzenia ramki natychmiastowego jako argumenty.  
+ Użyj `Create` funkcji członkowskiej do przekazania parametrów tworzenia ramki natychmiastowego jako argumenty.  
   
- `LoadFrame` wymaga mniejszej liczby argumentów niż **Utwórz**, a zamiast tego pobiera większość jego wartości domyślnej z zasobów, w tym ramki podpis, ikona tabeli akceleratora i menu. Dostępu do `LoadFrame`, te zasoby muszą mieć ten sam identyfikator zasobów (na przykład **IDR_MAINFRAME**).  
+ `LoadFrame` wymaga mniejszej liczby argumentów niż `Create`, a zamiast tego pobiera większość jego wartości domyślnej z zasobów, w tym ramki podpis, ikona tabeli akceleratora i menu. Dostępu do `LoadFrame`, te zasoby muszą mieć ten sam identyfikator zasobów (na przykład **IDR_MAINFRAME**).  
   
  Chociaż **MDIFrameWnd** jest pochodną `CFrameWnd`, pochodną klasy okna ramowe `CMDIFrameWnd` nie muszą być zadeklarowane z `DECLARE_DYNCREATE`.  
   
@@ -145,7 +145,7 @@ CMDIFrameWnd();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie **Utwórz** lub `LoadFrame` funkcji członkowskiej, aby utworzyć okno ramowe widoczne MDI.  
+ Wywołanie `Create` lub `LoadFrame` funkcji członkowskiej, aby utworzyć okno ramowe widoczne MDI.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCWindowing#13](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_1.cpp)]  
@@ -160,10 +160,10 @@ virtual BOOL CreateClient(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpCreateStruct`  
+ *lpCreateStruct*  
  Długie wskaźnik do [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) struktury.  
   
- `pWindowMenu`  
+ *pWindowMenu*  
  Wskaźnik do menu podręcznego okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -187,16 +187,16 @@ CMDIChildWnd* CreateNewChild(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pClass`  
+ *pClass*  
  Klasa czasu wykonywania okna podrzędnego, który ma zostać utworzony.  
   
  *nResource*  
  Identyfikator udostępnionego zasoby skojarzone z okna podrzędnego.  
   
- `hMenu`  
+ *hMenu*  
  Menu okna podrzędnego.  
   
- `hAccel`  
+ *hAccel*  
  Okno podrzędne akceleratora.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -260,7 +260,7 @@ void MDICascade(int nType);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nType`  
+ *Npowiadomienia*  
  Określa flagi cascade. Można określić tylko następujące flagi: `MDITILE_SKIPDISABLED`, który uniemożliwia trwa kaskadowy przez wyłączone okien podrzędnych MDI.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -307,7 +307,7 @@ void MDIMaximize(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Wskazuje okno, aby zmaksymalizować.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -349,7 +349,7 @@ void MDIRestore(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Wskazuje okna do przywrócenia.  
   
 ### <a name="example"></a>Przykład  
@@ -368,7 +368,7 @@ CMenu* MDISetMenu(
  *pFrameMenu*  
  Określa menu nowego menu okna ramowego. Jeśli **NULL**, menu nie zostanie zmieniona.  
   
- `pWindowMenu`  
+ *pWindowMenu*  
  Określa menu nowego menu podręcznego okna. Jeśli **NULL**, menu nie zostanie zmieniona.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -397,7 +397,7 @@ void MDITile(int nType);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nType`  
+ *Npowiadomienia*  
  Określa flagi kafelków. Ten parametr może być jednym z następujących flag:  
   
 - `MDITILE_HORIZONTAL` Kafelki okien podrzędnych MDI, że jedno okno pojawi się nad innym.  
@@ -407,7 +407,7 @@ void MDITile(int nType);
 - `MDITILE_VERTICAL` Kafelki okien podrzędnych MDI, że jedno okno jest wyświetlany obok innego.  
   
 ### <a name="remarks"></a>Uwagi  
- Pierwszą wersję `MDITile`, bez parametrów, Rozmieszcza okna sąsiadująco w pionie w systemie Windows w wersji 3.1 lub nowszej. Druga wersja Kafelki windows pionie lub poziomie, w zależności od wartości `nType` parametru.  
+ Pierwszą wersję `MDITile`, bez parametrów, Rozmieszcza okna sąsiadująco w pionie w systemie Windows w wersji 3.1 lub nowszej. Druga wersja Kafelki windows pionie lub poziomie, w zależności od wartości *Npowiadomienia* parametru.  
   
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CMDIFrameWnd::MDICascade](#mdicascade).  

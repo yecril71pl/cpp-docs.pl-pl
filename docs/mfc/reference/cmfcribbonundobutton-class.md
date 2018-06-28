@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 233f37fc0ab31afcd8ba112677af8cd144d01c2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcddf0f1848bdd75714bd5b931dcf8520e68cf8c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370171"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041251"
 ---
 # <a name="cmfcribbonundobutton-class"></a>Klasa CMFCRibbonUndoButton
 `CMFCRibbonUndoButton` Klasa implementuje przycisk listy rozwijanej, który zawiera najnowsze poleceń użytkownika. Użytkownicy mogą wybrać co najmniej jeden z najnowszych poleceń, z listy rozwijanej, aby cofnąć je albo wykonaj ponownie.  
@@ -89,7 +89,7 @@ void AddUndoAction(LPCTSTR lpszLabel);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Etykieta akcji, który będzie wyświetlany na liście rozwijanej.  
   
 ##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
@@ -117,19 +117,19 @@ CMFCRibbonUndoButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nID`  
+ [in] *nID*  
  Określa identyfikator polecenia.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Określa tekst etykiety przycisku.  
   
- [in] `nSmallImageIndex`  
+ [in] *nSmallImageIndex*  
  Liczony od zera indeks obiektu nadrzędnego dla przycisku mały obraz na liście obrazów.  
   
- [in] `nLargeImageIndex`  
+ [in] *nLargeImageIndex*  
  Liczony od zera indeks obrazu na liście obiektu nadrzędnego dla dużych obrazu przycisku.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Dojście do ikonę, która służy jako obrazu przycisku.  
   
 ##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  
