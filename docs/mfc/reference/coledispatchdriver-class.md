@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57f9eaa33abd0f24a1d584c5ba2a1e4d6f9e5d44
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1d7a15243f68143f043d12486f9fd21b27373a17
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374555"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039963"
 ---
 # <a name="coledispatchdriver-class"></a>Klasa COleDispatchDriver
 Implementuje automatyzacji OLE po stronie klienta.  
@@ -89,7 +89,7 @@ class COleDispatchDriver
 ## <a name="remarks"></a>Uwagi  
  `COleDispatchDriver` nie ma klasy podstawowej.  
   
- Interfejsy modelu OLE wysyłania zapewniają dostęp do metody i właściwości obiektu. Funkcje Członkowskie `COleDispatchDriver` dołączyć, odłączyć, tworzenie i zwolnij typ połączenia wysyłania `IDispatch`. Inne funkcje Członkowskie upraszczanie telefonicznej przy użyciu listy zmiennych argumentów **IDispatch::Invoke**.  
+ Interfejsy modelu OLE wysyłania zapewniają dostęp do metody i właściwości obiektu. Funkcje Członkowskie `COleDispatchDriver` dołączyć, odłączyć, tworzenie i zwolnij typ połączenia wysyłania `IDispatch`. Inne funkcje Członkowskie upraszczanie telefonicznej przy użyciu listy zmiennych argumentów `IDispatch::Invoke`.  
   
  Ta klasa może być używana bezpośrednio, ale jest zwykle używany tylko przez klasy tworzone przez Kreatora dodawania klasy. Podczas tworzenia nowych klas C++ przez zaimportowanie biblioteki typów, nowych klas są uzyskiwane z `COleDispatchDriver`.  
   
@@ -115,10 +115,10 @@ void AttachDispatch(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpDispatch`  
+ *lpDispatch*  
  Wskaźnik do OLE `IDispatch` obiektu jest dołączony do `COleDispatchDriver` obiektu.  
   
- `bAutoRelease`  
+ *bAutoRelease*  
  Określa, czy wysyłki zwolnione, gdy ten obiekt wykracza poza zakres.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -137,13 +137,13 @@ COleDispatchDriver(LPDISPATCH lpDispatch, BOOL bAutoRelease = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpDispatch`  
+ *lpDispatch*  
  Wskaźnik do OLE `IDispatch` obiektu jest dołączony do `COleDispatchDriver` obiektu.  
   
- `bAutoRelease`  
+ *bAutoRelease*  
  Określa, czy wysyłki zwolnione, gdy ten obiekt wykracza poza zakres.  
   
- `dispatchSrc`  
+ *dispatchSrc*  
  Odwołanie do istniejącej `COleDispatchDriver` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -171,13 +171,13 @@ BOOL CreateDispatch(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `clsid`  
+ *Identyfikator CLSID*  
  Identyfikator klasy `IDispatch` obiektu połączenie ma zostać utworzony.  
   
- `pError`  
+ *pError*  
  Wskaźnik do obiektu OLE wyjątku, której będą przechowywane kod stanu, w wyniku tworzenia.  
   
- `lpszProgID`  
+ *lpszProgID*  
  Wskaźnik do identyfikator programowy, takie jak "Excel.Document.5", dla której ma być tworzony obiektu dyspozytora obiektu automatyzacji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -205,7 +205,7 @@ LPDISPATCH DetachDispatch();
  [!code-cpp[NVC_MFCOleContainer#5](../../mfc/codesnippet/cpp/coledispatchdriver-class_3.cpp)]  
   
 ##  <a name="getproperty"></a>  COleDispatchDriver::GetProperty  
- Pobiera określony przez właściwość obiektu `dwDispID`.  
+ Pobiera określony przez właściwość obiektu *dwDispID*.  
   
 ```  
 void GetProperty(
@@ -215,20 +215,20 @@ void GetProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwDispID`  
+ *dwDispID*  
  Określa właściwości, które mają zostać pobrane.  
   
- `vtProp`  
+ *vtProp*  
  Określa właściwość, które mają zostać pobrane. Możliwe wartości w sekcji uwag dla [COleDispatchDriver::InvokeHelper](#invokehelper).  
   
- `pvProp`  
- Adres zmiennej, która otrzyma wartość właściwości. Musi on być zgodny z typem określonym przez `vtProp`.  
+ *pvProp*  
+ Adres zmiennej, która otrzyma wartość właściwości. Musi on być zgodny z typem określonym przez *vtProp*.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCOleContainer#6](../../mfc/codesnippet/cpp/coledispatchdriver-class_4.cpp)]  
   
 ##  <a name="invokehelper"></a>  COleDispatchDriver::InvokeHelper  
- Wywołuje metodę obiektu lub określona przez właściwość `dwDispID`, w ramach określonej przez `wFlags`.  
+ Wywołuje metodę obiektu lub określona przez właściwość *dwDispID*, w ramach określonej przez *wFlags*.  
   
 ```  
 void AFX_CDECL InvokeHelper(
@@ -240,32 +240,32 @@ void AFX_CDECL InvokeHelper(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwDispID`  
+ *dwDispID*  
  Określa metody lub właściwości do wywołania.  
   
- `wFlags`  
- Flagi opisujące Kontekst wywołania **IDispatch::Invoke**. . Aby uzyskać listę możliwych wartości, zobacz `wFlags` parametru w [IDispatch::Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx) w zestawie Windows SDK.  
+ *wFlags*  
+ Flagi opisujące Kontekst wywołania **IDispatch::Invoke**. . Aby uzyskać listę możliwych wartości, zobacz *wFlags* parametru w [IDispatch::Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx) w zestawie Windows SDK.  
   
- `vtRet`  
+ *vtRet*  
  Określa typ zwracanej wartości. Możliwe wartości znajduje się w sekcji uwag.  
   
- `pvRet`  
- Adres zmiennej, która będzie odbierać wartość właściwości ani zwracanej wartości. Musi on być zgodny z typem określonym przez `vtRet`.  
+ *pvRet*  
+ Adres zmiennej, która będzie odbierać wartość właściwości ani zwracanej wartości. Musi on być zgodny z typem określonym przez *vtRet*.  
   
- `pbParamInfo`  
- Wskaźnik do zerem ciągu bajtów Określanie typów parametrów po `pbParamInfo`.  
+ *pbParamInfo*  
+ Wskaźnik do zerem ciągu bajtów Określanie typów parametrów po *pbParamInfo*.  
   
  *...*  
- Zmiennej listy parametrów typów określonych w `pbParamInfo`.  
+ Zmiennej listy parametrów typów określonych w *pbParamInfo*.  
   
 ### <a name="remarks"></a>Uwagi  
- `pbParamInfo` Parametr określa typy parametrów przekazanych do metody lub właściwości. Listy zmiennych argumentów jest reprezentowana przez **...**  w deklaracji składni.  
+ *PbParamInfo* parametr określa typy parametrów przekazanych do metody lub właściwości. Listy zmiennych argumentów jest reprezentowana przez **...**  w deklaracji składni.  
   
- Możliwe wartości `vtRet` argumentu są pobierane z `VARENUM` wyliczenia. Dopuszczalne są następujące wartości:  
+ Możliwe wartości *vtRet* argumentu są pobierane z `VARENUM` wyliczenia. Dopuszczalne są następujące wartości:  
   
 |Symbol|Zwracany typ|  
 |------------|-----------------|  
-|`VT_EMPTY`|`void`|  
+|`VT_EMPTY`|**void**|  
 |`VT_I2`|**short**|  
 |`VT_I4`|**long**|  
 |`VT_R4`|**float**|  
@@ -273,15 +273,15 @@ void AFX_CDECL InvokeHelper(
 |`VT_CY`|**CY**|  
 |`VT_DATE`|**DATA**|  
 |`VT_BSTR`|`BSTR`|  
-|**VT_DISPATCH**|`LPDISPATCH`|  
+|`VT_DISPATCH`|`LPDISPATCH`|  
 |`VT_ERROR`|`SCODE`|  
 |`VT_BOOL`|**BOOL**|  
-|**VT_VARIANT**|**VARIANT**|  
-|**VT_UNKNOWN**|`LPUNKNOWN`|  
+|`VT_VARIANT`|**VARIANT**|  
+|`VT_UNKNOWN`|`LPUNKNOWN`|  
   
- `pbParamInfo` Argument jest rozdzieloną spacjami listę **VTS_** stałe. Co najmniej jeden z tych wartości, rozdzielając je spacjami (nie przecinkami), określa listę parametrów funkcji. Możliwe wartości są wyświetlane z [event_custom —](event-maps.md#event_custom) makra.  
+ *PbParamInfo* argument jest rozdzieloną spacjami listę **VTS_** stałe. Co najmniej jeden z tych wartości, rozdzielając je spacjami (nie przecinkami), określa listę parametrów funkcji. Możliwe wartości są wyświetlane z [event_custom —](event-maps.md#event_custom) makra.  
   
- Ta funkcja konwertuje parametry **VARIANTARG** wartości, a następnie wywołuje [IDispatch::Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx) metody. Jeśli wywołanie `Invoke` kończy się niepowodzeniem, ta funkcja spowoduje zgłoszenie wyjątku. Jeśli `SCODE` (kod stanu) zwrócone przez **IDispatch::Invoke** jest `DISP_E_EXCEPTION`, funkcja zwraca [COleException](../../mfc/reference/coleexception-class.md) obiektu; w przeciwnym razie zwraca [ COleDispatchException](../../mfc/reference/coledispatchexception-class.md).  
+ Ta funkcja konwertuje parametry **VARIANTARG** wartości, a następnie wywołuje [IDispatch::Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx) metody. Jeśli wywołanie `Invoke` kończy się niepowodzeniem, ta funkcja spowoduje zgłoszenie wyjątku. Jeśli `SCODE` (kod stanu) zwrócone przez `IDispatch::Invoke` jest `DISP_E_EXCEPTION`, funkcja zwraca [COleException](../../mfc/reference/coleexception-class.md) obiektu; w przeciwnym razie zwraca [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).  
   
  Aby uzyskać więcej informacji, zobacz [VARIANTARG](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118), [implementowania interfejsu IDispatch](http://msdn.microsoft.com/library/windows/desktop/ms221037\(v=vs.85\).aspx), [IDispatch::Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx), i [struktury z COM kody błędów](http://msdn.microsoft.com/library/windows/desktop/ms690088) w systemie Windows SDK.  
   
@@ -326,7 +326,7 @@ const COleDispatchDriver& operator=(const COleDispatchDriver& dispatchSrc);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dispatchSrc`  
+ *dispatchSrc*  
  Wskaźnik do istniejącej `COleDispatchDriver` obiektu.  
   
 ##  <a name="operator_lpdispatch"></a>  COleDispatchDriver::operator LPDISPATCH  
@@ -347,13 +347,13 @@ void ReleaseDispatch();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli automatycznie wersji został ustawiony dla tego połączenia, wywołania tej funkcji **IDispatch::Release** przed zwolnieniem interfejsu.  
+ Jeśli automatycznie wersji został ustawiony dla tego połączenia, wywołania tej funkcji `IDispatch::Release` przed zwolnieniem interfejsu.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [COleDispatchDriver::AttachDispatch](#attachdispatch).  
   
 ##  <a name="setproperty"></a>  COleDispatchDriver::SetProperty  
- Ustawia właściwości obiektu OLE, określony przez `dwDispID`.  
+ Ustawia określone przez właściwość obiektu OLE *dwDispID*.  
   
 ```  
 void AFX_CDECL SetProperty(
@@ -362,14 +362,14 @@ void AFX_CDECL SetProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwDispID`  
+ *dwDispID*  
  Identyfikuje właściwość ma zostać ustawiona.  
   
- `vtProp`  
+ *vtProp*  
  Określa typ właściwości do ustawienia. Możliwe wartości w sekcji uwag dla [COleDispatchDriver::InvokeHelper](#invokehelper).  
   
  *...*  
- Pojedynczy parametr typu określony przez `vtProp`.  
+ Pojedynczy parametr typu określony przez *vtProp*.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCOleContainer#7](../../mfc/codesnippet/cpp/coledispatchdriver-class_7.cpp)]  

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 431e743396cfc22d49c13a2a9e2f50c88c5ee036
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3cd166cac7d6d2cddbc12b3cbaa14b28d00c1357
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369232"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037272"
 ---
 # <a name="cmonikerfile-class"></a>Klasa CMonikerFile
 Reprezentuje strumienia danych ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) o nazwie [imoniker —](http://msdn.microsoft.com/library/windows/desktop/ms679705).  
@@ -113,7 +113,7 @@ IBindCtx* CreateBindContext(CFileException* pError);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pError`  
+ *pError*  
  Wskaźnik do wyjątku plików. W przypadku wystąpienia błędu zostanie ustawiona do przyczyna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -130,7 +130,7 @@ BOOL Detach(CFileException* pError = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pError`  
+ *pError*  
  Wskaźnik do wyjątku plików. W przypadku wystąpienia błędu zostanie ustawiona do przyczyna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -164,22 +164,22 @@ virtual BOOL Open(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszURL`  
+ *lpszURL*  
  Adres URL lub nazwa pliku, który ma zostać otwarty.  
   
- `pError`  
+ *pError*  
  Wskaźnik do wyjątku plików. W przypadku wystąpienia błędu zostanie ustawiona do przyczyna.  
   
- `pMoniker`  
+ *pMoniker*  
  Wskaźnik do interfejsu moniker `IMoniker` ma być używany do uzyskania strumienia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- `lpszURL` Parametru nie można używać na komputerze Macintosh. Tylko `pMoniker` formę **Otwórz** może być używany na komputerze Macintosh.  
+ *LpszURL* parametru nie można używać na komputerze Macintosh. Tylko *pMoniker* formę **Otwórz** może być używany na komputerze Macintosh.  
   
- Możesz użyć adresu URL lub nazwę pliku dla `lpszURL` parametru. Na przykład:  
+ Możesz użyć adresu URL lub nazwę pliku dla *lpszURL* parametru. Na przykład:  
   
  [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/cmonikerfile-class_1.cpp)]  
   

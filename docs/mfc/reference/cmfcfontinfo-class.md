@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9e4c1031ba06eaabe67418a018f95d689f71d1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 27858b6dad2744965e85bcd8287ba62cbf5b60c0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368296"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038604"
 ---
 # <a name="cmfcfontinfo-class"></a>Klasa CMFCFontInfo
 `CMFCFontInfo` Klasa opisuje nazwę i inne atrybuty czcionki.  
@@ -94,22 +94,22 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszName`  
+ [in] *lpszName*  
  Nazwa czcionki. Aby uzyskać więcej informacji, zobacz `lfFaceName` członkiem [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury.  
   
- [in] `lpszScript`  
+ [in] *lpszScript*  
  Nazwa skryptu (zestaw znaków) czcionki.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Wartość, która określa zestaw znaków (skrypt) czcionki. Aby uzyskać więcej informacji, zobacz `lfCharSet` członkiem [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury.  
   
- [in] `nPitchAndFamily`  
+ [in] *nPitchAndFamily*  
  Wartość, która określa gęstość i rodzinę czcionek. Aby uzyskać więcej informacji, zobacz `lfPitchAndFamily` członkiem [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury.  
   
- [in] `nType`  
+ [in] *Npowiadomienia*  
  Wartość, która określa typ czcionki. Ten parametr może być bitowe połączenie (lub) DEVICE_FONTTYPE, RASTER_FONTTYPE i TRUETYPE_FONTTYPE.  
   
- [in] `src`  
+ [in] *src*  
  Istniejące `CMFCFontInfo` obiektu, której członkami są używane do skonstruowania to `CMFCFontInfo` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -138,7 +138,7 @@ const BYTE m_nCharSet;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz `nCharSet` parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktora.  
+ Aby uzyskać więcej informacji, zobacz *nCharSet* parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktora.  
   
 ##  <a name="m_npitchandfamily"></a>  CMFCFontInfo::m_nPitchAndFamily  
  Wartość, która określa gęstość (rozmiar czcionki) i rodzinę (na przykład serif, sans-serif i o stałej szerokości) czcionki.  
@@ -148,7 +148,7 @@ const BYTE m_nPitchAndFamily;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz `nPitchAndFamily` parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktora.  
+ Aby uzyskać więcej informacji, zobacz *nPitchAndFamily* parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktora.  
   
 ##  <a name="m_ntype"></a>  CMFCFontInfo::m_nType  
  Wartość, która określa typ czcionki.  
@@ -158,7 +158,7 @@ const int m_nType;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz `nType` parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktora.  
+ Aby uzyskać więcej informacji, zobacz *Npowiadomienia* parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktora.  
   
 ##  <a name="m_strname"></a>  CMFCFontInfo::m_strName  
  Nazwa czcionki: na przykład **Arial**.  
@@ -168,7 +168,7 @@ const CString m_strName;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz `lpszName` parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktora.  
+ Aby uzyskać więcej informacji, zobacz *lpszName* parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktora.  
   
 ##  <a name="m_strscript"></a>  CMFCFontInfo::m_strScript  
  Nazwa zestawu znaków (skrypt) skojarzone z czcionki.  
@@ -178,7 +178,7 @@ const CString m_strScript;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz `lpszScript` parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktora.  
+ Aby uzyskać więcej informacji, zobacz *lpszScript* parametr [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) konstruktora.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

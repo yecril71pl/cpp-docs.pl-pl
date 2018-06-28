@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe37e1a159fa0138c237b58ffbd622292dcba714
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 843c79d9b3c7ffeb0ceef7338132048ac51d52ef
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369850"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039976"
 ---
 # <a name="colelinkingdoc-class"></a>Klasa COleLinkingDoc
 Klasa podstawowa dla kontenerami OLE, które obsługują łączenie z elementami osadzonych, które zawierają.  
@@ -79,7 +79,7 @@ class COleLinkingDoc : public COleDocument
   
  [!code-cpp[NVC_MFCOleContainer#24](../../mfc/codesnippet/cpp/colelinkingdoc-class_2.cpp)]  
   
- Połącz z `COleTemplateServer` obiektu do szablonów dokumentu przez wywołanie obiektu `ConnectTemplate` funkcji członkowskiej i klasy wszystkie obiekty w systemie OLE przez wywołanie metody register **COleTemplateServer::RegisterAll**:  
+ Połącz z `COleTemplateServer` obiektu do szablonów dokumentu przez wywołanie obiektu `ConnectTemplate` funkcji członkowskiej i klasy wszystkie obiekty w systemie OLE przez wywołanie metody register `COleTemplateServer::RegisterAll`:  
   
  [!code-cpp[NVC_MFCOleContainer#25](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]  
   
@@ -119,7 +119,7 @@ virtual COleClientItem* OnFindEmbeddedItem(LPCTSTR lpszItemName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszItemName`  
+ *lpszItemName*  
  Wskaźnik do nazwy osadzonych obiektów OLE żądanego elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -136,7 +136,7 @@ virtual COleServerItem* OnGetLinkedItem(LPCTSTR lpszItemName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszItemName`  
+ *lpszItemName*  
  Wskaźnik do nazwy połączonej OLE żądanego elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -158,7 +158,7 @@ BOOL Register(
  *pFactory*  
  Wskaźnik do obiektu fabryki (może być **NULL**).  
   
- `lpszPathName`  
+ *lpszPathName*  
  Wskaźnik do dokumentu kontenera pełną ścieżkę.  
   
 ### <a name="return-value"></a>Wartość zwracana  

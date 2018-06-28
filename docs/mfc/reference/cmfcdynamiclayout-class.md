@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76faab221b5e36f9795595d07cd13d0bbf1df200
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d89f82f03a4c6a9faf2ddf3e8c3f2a0b7b3fd1d2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370724"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042368"
 ---
 # <a name="cmfcdynamiclayout-class"></a>Klasa CMFCDynamicLayout
 Określa, jak przenieść i zmiany rozmiaru, ponieważ użytkownik zmienia rozmiar okna kontrolki w oknie.  
@@ -105,16 +105,16 @@ BOOL AddItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hwnd`  
+ *Właściwość hwnd*  
  Dojście do okna, aby dodać.  
   
- `nID`  
+ *nID*  
  Identyfikator formantu podrzędnego do dodania.  
   
- `moveSettings`  
+ *moveSettings*  
  Struktura, która opisuje, jak kontrolka powinna zostać przeniesiona wraz ze zmianą rozmiaru okna.  
   
- `sizeSettings`  
+ *sizeSettings*  
  Struktura, która opisuje, jak powinny być zmieniony rozmiar formantu jako zmiany rozmiaru okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -141,7 +141,7 @@ BOOL Create(CWnd* pHostWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- pHostWnd  
+ *pHostWnd*  
  Wskaźnik do okna hosta.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -183,7 +183,7 @@ void GetHostWndRect(CRect& rect,);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rect`  
+ *Rect*  
  Po powrocie z funkcji ten parametr zawiera prostokątem obszaru układu. To jest parametrem wyjściowym; wartość wejściowa jest zastępowany.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -196,7 +196,7 @@ BOOL HasItem(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hwnd`  
+ *Właściwość hwnd*  
  Uchwytu okna dla formantu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -226,13 +226,13 @@ static BOOL LoadResource(CWnd* pHostWnd,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pHostWnd`  
+ *pHostWnd*  
  Wskaźnik do okna hosta.  
   
- `lpResource`  
+ *lpResource*  
  Wskaźnik do buforu, który zawiera zasób AFX_DIALOG_LAYOUT.  
   
- `dwSize`  
+ *dwSize*  
  Rozmiar buforu w bajtach.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -248,7 +248,7 @@ static MoveSettings MoveHorizontal(int nRatio);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nRatio`  
+ *nRatio*  
  Określa w procentach, jak daleko kontrolka podrzędna zostanie przesunięta w poziomie, gdy użytkownik zmienia rozmiar okna hosta.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -264,10 +264,10 @@ static MoveSettings MoveHorizontalAndVertical(int nXRatio int nYRatio);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nXRatio`  
+ *nXRatio*  
  Określa w procentach, jak daleko kontrolka podrzędna zostanie przesunięta w poziomie, gdy użytkownik zmienia rozmiar okna hosta.  
   
- `nYRatio`  
+ *nYRatio*  
  Określa w procentach, jak daleko kontrolka podrzędna zostanie przesunięta w pionie, gdy użytkownik zmienia rozmiar okna hosta.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -336,7 +336,7 @@ static MoveSettings MoveVertical(int nRatio);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nRatio`  
+ *nRatio*  
  Określa w procentach, jak daleko kontrolka podrzędna zostanie przesunięta w pionie, gdy użytkownik zmienia rozmiar okna hosta.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -352,7 +352,7 @@ void SetMinSize(const CSize& size);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `size`  
+ *Rozmiar*  
  Wymagany rozmiar, poniżej którego układ nie jest dostosowywany.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -366,7 +366,7 @@ static SizeSettings SizeHorizontal(int nRatio);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nRatio`  
+ *nRatio*  
  Określa w procentach, jak daleko kontrolka podrzędna poziomie zmieni się rozmiar, gdy użytkownik zmienia rozmiar okna hosta.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -382,10 +382,10 @@ static SizeSettings SizeHorizontalAndVertical(int nXRatio int nYRatio);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nXRatio`  
+ *nXRatio*  
  Określa w procentach, jak daleko kontrolka podrzędna poziomie zmieni się rozmiar, gdy użytkownik zmienia rozmiar okna hosta.  
   
- `nYRatio`  
+ *nYRatio*  
  Określa w procentach, jak daleko kontrolka podrzędna pionie zmieni się rozmiar, gdy użytkownik zmienia rozmiar okna hosta.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -453,7 +453,7 @@ static SizeSettings SizeVertical(int nRatio);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nRatio`  
+ *nRatio*  
  Określa w procentach, jak daleko kontrolka podrzędna pionie zmieni się rozmiar, gdy użytkownik zmienia rozmiar okna hosta.  
   
 ### <a name="return-value"></a>Wartość zwracana  

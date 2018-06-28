@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ef3d04291c874bf91ac6ae25fb15929a5c7317f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aede6e3224149bd237ca2bb830370718105e1f83
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374477"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037762"
 ---
 # <a name="cmfcpopupmenubar-class"></a>Klasa CMFCPopupMenuBar
 Pasek menu osadzone w menu podręczne.  
@@ -140,7 +140,7 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bRecalcLayout`  
+ [in] *bRecalcLayout*  
  `TRUE` Aby automatycznie ponownie Oblicz układ okienku paska menu podręcznego. w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -153,7 +153,7 @@ BOOL BuildOrigItems(UINT uiMenuResID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiMenuResID`  
+ [in] *uiMenuResID*  
  Określa identyfikator menu zasobów menu do załadowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -190,7 +190,7 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `point`  
+ [in] *punktu*  
  Punkt na ekranie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -257,10 +257,10 @@ virtual BOOL ImportFromMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `hMenu`  
+ [in] *hMenu*  
  Menu, z którego będą importowane przycisków menu podręcznego.  
   
- [in] `bShowAllCommands`  
+ [in] *bShowAllCommands*  
  `TRUE` w przypadku wszystkich poleceń menu do zaimportowania, lub `FALSE` Jeśli rzadko używane te mogą być ukryte.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -325,7 +325,7 @@ BOOL LoadFromHash(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `hMenu`  
+ [in] *hMenu*  
  Dojście do menu zarchiwizowane załadować.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -364,10 +364,10 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nIndex`  
+ [in] *nIndex*  
  Liczony od zera indeks przycisku paska narzędzi, którego styl ma być utworzony.  
   
- [in] `nStyle`  
+ [in] *nStyle*  
  Styl przycisku. Zobacz [style formantu ToolBar](../../mfc/reference/toolbar-control-styles.md) listę dostępnych narzędzi style przycisku.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -380,7 +380,7 @@ void SetOffset(int iOffset);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iOffset`  
+ [in] *iOffset*  
  Liczba wierszy na pasku menu podręcznego powinien przesunięcia.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -395,10 +395,10 @@ void StartPopupMenuTimer(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pMenuButton`  
+ [in] *pMenuButton*  
  Wskaźnik do przycisku menu, do których chcesz ustawić czasomierza opóźnienia.  
   
- [in] `nDelayFactor`  
+ [in] *nDelayFactor*  
  Współczynnik opóźnienie równa co najmniej jeden, aby pomnożyć przez czas opóźnienia standardowe menu (zazwyczaj między pół sekundy i 5 sekund).  
   
 ### <a name="remarks"></a>Uwagi  

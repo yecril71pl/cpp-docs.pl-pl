@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de452365a02b69798c62e2eecfd8051afcf08bb8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 86d8cf9b3011865fac58515fb3429a363dd5946f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366974"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038962"
 ---
 # <a name="chtmleditdoc-class"></a>Klasa CHtmlEditDoc
 Z [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), funkcje platformy edycji WebBrowser w kontekście architektury dokument widok MFC.  
@@ -100,7 +100,7 @@ virtual BOOL OpenURL(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszURL`  
+ *lpszURL*  
  Adres URL do otwarcia.  
   
 ### <a name="return-value"></a>Wartość zwracana  

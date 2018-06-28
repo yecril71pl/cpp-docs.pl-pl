@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7a1af8887a1c07aefd3fc3593b0aae6222e51a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 613076e38d8033a5af92913fcbe8e195ebdc2c60
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378046"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042147"
 ---
 # <a name="cmfcribbonpanel-class"></a>Klasa CMFCRibbonPanel
 Implementuje panelu, który zawiera zbiór elementów wstążki. Podczas rysowania panelu Wyświetla dowolną liczbę elementów jak to możliwe, podany rozmiar panelu.  
@@ -235,7 +235,7 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [w, out] `pElem`  
+ [w, out] *pElem*  
  Wskaźnik do elementu wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -262,16 +262,16 @@ UINT uiDisabledResID = 0);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiToolbarResID`  
+ [in] *uiToolbarResID*  
  Określa identyfikator zasobu paska narzędzi do dodania.  
   
- [in] `uiColdResID`  
+ [in] *uiColdResID*  
  Określa identyfikator zasobu obrazów zimnych pasku narzędzi.  
   
- [in] `uiHotResID`  
+ [in] *uiHotResID*  
  Określa identyfikator zasobu paska narzędzi dynamicznej obrazów.  
   
- [in] `uiDisabledResID`  
+ [in] *uiDisabledResID*  
  Określa identyfikator zasobu obrazów wyłączonego paska narzędzi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -292,13 +292,13 @@ CMFCRibbonPanel(CMFCRibbonGallery* pPaletteButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszName`  
+ [in] *lpszName*  
  Nazwa panelu wstążki.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Dojście do ikony przycisk domyślny panelu wstążki.  
   
- [in] `pPaletteButton`  
+ [in] *pPaletteButton*  
  Wskaźnik do galerii wstążki panelu wstążki.  
   
 ##  <a name="findbydata"></a>  CMFCRibbonPanel::FindByData  
@@ -309,7 +309,7 @@ CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `dwData`  
+ [in] *dwData*  
  Dane skojarzone z elementem wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -325,7 +325,7 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Identyfikator polecenia elementu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -397,11 +397,11 @@ CMFCRibbonBaseElement* GetElement(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nIndex`  
+ [in] *nIndex*  
  Określa liczony od zera indeks elementu do pobrania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Nieprawidłowy wskaźnik do elementu podstawowego wstążki znajdujący się w pozycji `nIndex` w panelu Wstążki lub `NULL` Jeśli żaden element w określonym indeksie.  
+ Nieprawidłowy wskaźnik do elementu podstawowego wstążki znajdujący się w pozycji *nIndex* w panelu Wstążki lub `NULL` Jeśli żaden element w określonym indeksie.  
   
 ##  <a name="getelements"></a>  CMFCRibbonPanel::GetElements  
  Pobiera wszystkich elementów wstążki, które są zawarte w panelu wstążki.  
@@ -411,7 +411,7 @@ void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arEleme
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `arElements`  
+ [out] *arElements*  
  Tablica umożliwia wypełnienie wszystkich elementów wstążki, które znajdują się w panelu wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -426,10 +426,10 @@ CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Identyfikator polecenia dla elementu wstążki.  
   
- [in] `arElements`  
+ [in] *arElements*  
  Tablica elementów wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -455,7 +455,7 @@ virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pElem`  
+ [in] *pElem*  
  Wskaźnik do elementu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -471,7 +471,7 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `lstItems`  
+ [out] *lstItems*  
  Lista identyfikatorów poleceń dla elementów wstążki, które są zawarte w panelu wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -528,7 +528,7 @@ virtual BOOL GetPreferedMenuLocation(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `rect`  
+ [out] *rect*  
  Ten parametr nie jest używany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -569,7 +569,7 @@ BOOL HasElement(const CMFCRibbonBaseElement* pElem) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pElem`  
+ [in] *pElem*  
  Wskaźnik do elementu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -587,10 +587,10 @@ CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bHighlight`  
+ [in] *bHighlight*  
  `TRUE` Aby wyróżnić panelu wstążki; `FALSE` do unhighlight panelu wstążki.  
   
- [in] `point`  
+ [in] *punktu*  
  Współrzędne x i y wskaźnika względem lewego górnego rogu okna.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -605,10 +605,10 @@ BOOL bCheckPanelCaption = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `point`  
+ [in] *punktu*  
  Współrzędne x i y wskaźnika względem lewego górnego rogu okna.  
   
- [in] `bCheckPanelCaption`  
+ [in] *bCheckPanelCaption*  
  `TRUE` Aby przetestować podpis panelu wstążki; w przeciwnym razie `FALSE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -625,7 +625,7 @@ virtual int HitTestEx(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `point`  
+ [in] *punktu*  
  Współrzędne x i y wskaźnika względem lewego górnego rogu okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -644,17 +644,17 @@ int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [w, out] `pElem`  
+ [w, out] *pElem*  
  Wskaźnik do elementu wstążki.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  Liczony od zera wartość, z zakresu od -1 do liczby elementów wstążki, które są zawarte w tablicy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `TRUE` Jeśli został pomyślnie; wstawić element wstążki w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli wartość `nIndex` wynosi -1, lub jeśli `nIndex` jest równa liczbie elementów wstążki w tablicy, element określony wstążki zostanie dodany do końca tablicy. Jeśli wartość `nIndex` jest poza zakresem, metoda zakończy się niepowodzeniem.  
+ Jeśli wartość *nIndex* wynosi -1, lub jeśli *nIndex* jest równa liczbie elementów wstążki w tablicy, element określony wstążki zostanie dodany do końca tablicy. Jeśli wartość *nIndex* jest poza zakresem, metoda zakończy się niepowodzeniem.  
   
 ##  <a name="insertseparator"></a>  CMFCRibbonPanel::InsertSeparator  
  Wstawia separator w określonej pozycji.  
@@ -664,14 +664,14 @@ virtual BOOL InsertSeparator(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nIndex`  
+ [in] *nIndex*  
  Określa liczony od zera indeks, w którym zostanie wstawiony separatora.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `TRUE` Jeśli separator został wstawiony pomyślnie; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie tej metody, aby wstawić separator na pozycji określonej przez `nIndex`. Aby wstawić separatora obok ostatnio dodanego elementu wstążki, należy wywołać [CMFCRibbonPanel::AddSeparator](#addseparator).  
+ Wywołanie tej metody, aby wstawić separator na pozycji określonej przez *nIndex*. Aby wstawić separatora obok ostatnio dodanego elementu wstążki, należy wywołać [CMFCRibbonPanel::AddSeparator](#addseparator).  
   
 ##  <a name="iscentercolumnvert"></a>  CMFCRibbonPanel::IsCenterColumnVert  
  Wskazuje, czy pionowy położenia elementów wstążki jest wyśrodkowywana w ich prostokątny obszar wyświetlania.  
@@ -753,7 +753,7 @@ virtual BOOL OnKey(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nChar`  
+ [in] *nChar*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -769,10 +769,10 @@ int nHeight);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia panelu wstążki.  
   
- [in] `nHeight`  
+ [in] *nHeight*  
  Wysokość panelu wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -788,14 +788,14 @@ BOOL bDelete = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nIndex`  
+ [in] *nIndex*  
  Określa liczony od zera indeks elementu, który zostanie usunięty z panelu wstążki.  
   
- [in] `bDelete`  
+ [in] *bUsuń*  
  `TRUE` Aby usunąć element usunięte; w przeciwnym razie `FALSE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli element został usunięty i usunąć (Jeśli `bDelete` jest `TRUE`); `FALSE` Jeśli element nie został usunięty lub jeśli nie ma elementu wstążki znajdujący się w `nIndex`.  
+ `TRUE` Jeśli element został usunięty i usunąć (Jeśli *bUsuń* jest `TRUE`); `FALSE` Jeśli element nie został usunięty lub jeśli nie ma elementu wstążki znajdujący się w *nIndex*.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę metodę, aby usunąć element z panelu wstążki.  
@@ -820,10 +820,10 @@ CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nIndex`  
+ [in] *nIndex*  
  Określa liczony od zera indeks elementu do zamiany.  
   
- [in] [out] `pElem`  
+ [in] [out] *pElem*  
  Nieprawidłowy wskaźnik do elementu, który zastępuje oryginalnego elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -842,10 +842,10 @@ CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Określa identyfikator polecenia elementu, aby zastąpić.  
   
- [in] [out] `pElem`  
+ [in] [out] *pElem*  
  Nieprawidłowy wskaźnik do elementu, który spowoduje zastąpienie oryginalnego elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -862,7 +862,7 @@ void SetCenterColumnVert(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bSet`  
+ [in] *bUstawienie*  
  `TRUE` Aby wyśrodkować współrzędne elementów wstążki w ich prostokątny obszar wyświetlania; `FALSE` Aby wyłączyć tę funkcję.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -875,7 +875,7 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `dwData`  
+ [in] *dwData*  
  Określa dane zdefiniowane przez użytkownika.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -900,19 +900,19 @@ BOOL bRightAlign = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Określa identyfikator polecenia elementu wstążki, gdy menu zostanie dodany.  
   
- [in] `hMenu`  
+ [in] *hMenu*  
  Określa dojście do menu systemu Windows, aby dodać Panel wstążki.  
   
- [in] `bIsDefautCommand`  
+ [in] *bIsDefautCommand*  
  `TRUE` Aby określić, czy mają zostać wykonane polecenie skojarzone z elementem wstążki, po kliknięciu elementu wstążki. W takim przypadku menu jest otwarty tylko, gdy użytkownik kliknie strzałkę obok elementu wstążki. `FALSE` Aby określić, że polecenie skojarzone z elementem wstążki nie powinien być wykonywany po kliknięciu elementu wstążki. W takim przypadku niezależnie od tego, gdy użytkownik kliknie w elemencie zostanie wyświetlone menu podręcznego.  
   
- [in] `bRightAlign`  
+ [in] *bRightAlign*  
  `TRUE` Aby określić, czy menu podręczne jest wyrównany do prawej; w przeciwnym razie `FALSE`.  
   
- [in] `uiMenuResID`  
+ [in] *uiMenuResID*  
  Określa identyfikator zasobu menu Dodaj do panelu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -931,10 +931,10 @@ CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nIndex`  
+ [in] *nIndex*  
  Określa liczony od zera indeks elementu wstążki do dodania.  
   
- [in] [out] `pRTC`  
+ [in] [out] *pRTC*  
  Wskaźnik do informacji o klasie czasu wykonywania dla elementu wstążki, który jest dodawany do panelu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -953,10 +953,10 @@ CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Określa identyfikator polecenia elementu wstążki do dodania.  
   
- [in] [out] `pRTC`  
+ [in] [out] *pRTC*  
  Wskaźnik do informacji o klasie czasu wykonywania skojarzony z elementem wstążki, który jest dodawany do panelu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -999,7 +999,7 @@ void SetJustifyColumns(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bSet`  
+ [in] *bUstawienie*  
  `TRUE` Aby dostosować szerokość elementów wstążki w tej samej kolumnie do szerokości największy element wstążki w kolumnach. `FALSE` można wyłączyć tego korekta szerokości.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1013,7 +1013,7 @@ void SetKeys(LPCTSTR lpszKeys);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszKeys`  
+ [in] *lpszKeys*  
  Właściwości keytip jako przycisk domyślny panelu wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1027,7 +1027,7 @@ CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pButton`  
+ [in] *pButton*  
  Wskaźnik do przycisk domyślny panelu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1044,7 +1044,7 @@ void SetFocused(CMFCRibbonBaseElement* pNewFocus);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pNewFocus`  
+ *pNewFocus*  
  Wskaźnik do elementu wstążki, który otrzymuje fokus.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1057,7 +1057,7 @@ void MakeGalleryItemVisible(CMFCRibbonBaseElement* pItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Wskaźnik do elementu wstążki do wyświetlenia.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1084,7 +1084,7 @@ CMFCRibbonBaseElement*>& arElements);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `arElements`  
+ *arElements*  
  Gdy funkcja zwraca wartość, ten parametr zawiera tablicę widoczne elementy.  
   
 ### <a name="remarks"></a>Uwagi  

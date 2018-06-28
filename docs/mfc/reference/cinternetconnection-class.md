@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b269afce3ec0c3ef60e6cc37782fdea18260cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 227637dc042777725692122babe0d4c7b232d578
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366681"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037781"
 ---
 # <a name="cinternetconnection-class"></a>Klasa CInternetConnection
 Zarządzanie połączeniem internetowym serwerze.  
@@ -89,17 +89,17 @@ CInternetConnection(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pSession`  
+ *pSession*  
  Wskaźnik do [CInternetSession](../../mfc/reference/cinternetsession-class.md) obiektu.  
   
- `pstrServer`  
+ *pstrServer*  
  Wskaźnik do ciąg zawierający nazwę serwera.  
   
- `nPort`  
+ *nPort*  
  Liczba, która identyfikuje portu internetowego dla tego połączenia.  
   
- `dwContext`  
- Identyfikator kontekstu `CInternetConnection` obiektu. Zobacz **uwagi** uzyskać więcej informacji o `dwContext`.  
+ *dwContext*  
+ Identyfikator kontekstu `CInternetConnection` obiektu. Zobacz **uwagi** uzyskać więcej informacji o *dwContext*.  
   
 ### <a name="remarks"></a>Uwagi  
  Nigdy nie należy wywołać `CInternetConnection` ; zamiast tego wywołać [CInternetSession](../../mfc/reference/cinternetsession-class.md) funkcji członkowskiej typu chcesz ustanowić połączenie:  
@@ -110,7 +110,7 @@ CInternetConnection(
   
 - [CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection)  
   
- Wartością domyślną dla `dwContext` są wysyłane przez MFC do `CInternetConnection`-pochodnych obiektu z [CInternetSession](../../mfc/reference/cinternetsession-class.md) utworzony obiekt **InternetConnection**-pochodzi z obiektu. Wartość domyślna jest ustawiona na 1; jednak można jawnie przypisać identyfikatora kontekstu określonych w [CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession) konstruktora dla połączenia. Obiekt i pracę go nie będą skojarzone z tym identyfikatorem kontekstu. Identyfikator kontekstu jest zwracana do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zapewnienie stanu dla obiektu, z którym zostanie zidentyfikowana. Zapoznaj się z artykułem [pierwsze kroki Internet: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.  
+ Wartość domyślna dla *dwContext* są wysyłane przez MFC do `CInternetConnection`-pochodnych obiektu z [CInternetSession](../../mfc/reference/cinternetsession-class.md) utworzony obiekt **InternetConnection**- Obiekt pochodnych. Wartość domyślna jest ustawiona na 1; jednak można jawnie przypisać identyfikatora kontekstu określonych w [CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession) konstruktora dla połączenia. Obiekt i pracę go nie będą skojarzone z tym identyfikatorem kontekstu. Identyfikator kontekstu jest zwracana do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zapewnienie stanu dla obiektu, z którym zostanie zidentyfikowana. Zapoznaj się z artykułem [pierwsze kroki Internet: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.  
   
 ##  <a name="getcontext"></a>  CInternetConnection::GetContext  
  Wywołanie tej funkcji członkowskich można uzyskać Identyfikatora kontekstu dla tej sesji.  
@@ -125,7 +125,7 @@ DWORD_PTR GetContext() const;
 ### <a name="remarks"></a>Uwagi  
  W pierwotnie został określony identyfikator kontekstu [CInternetSession](../../mfc/reference/cinternetsession-class.md) i propaguje do `CInternetConnection`- i [CInternetFile](../../mfc/reference/cinternetfile-class.md)-pochodzi z klasy, chyba że określono inaczej w wywołaniu funkcji, który zostanie otwarty połączenie. Identyfikator kontekstu jest skojarzony z żadnej operacji danego obiektu i identyfikuje operacji informacje o stanie zwracanych przez [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).  
   
- Aby uzyskać więcej informacji o tym, jak **GetContext** współpracuje z innymi Wininet — klasy zapewniające informacje o stanie użytkownika, zobacz artykuł [pierwsze kroki Internet: WinInet](../../mfc/wininet-basics.md) Aby uzyskać więcej informacji o kontekście Identyfikator.  
+ Aby uzyskać więcej informacji o tym, jak `GetContext` współpracuje z innymi Wininet — klasy zapewniające informacje o stanie użytkownika, zobacz artykuł [pierwsze kroki Internet: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.  
   
 ##  <a name="getservername"></a>  CInternetConnection::GetServerName  
  Wywołanie tej funkcji członkowskich można odczytać nazwy serwera skojarzonego z tym połączeniem z Internetem.  

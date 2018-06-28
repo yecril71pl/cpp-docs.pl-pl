@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38c27d2fa0e04770bae69901e1164da84c2186ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34babea47abaab9fcfb45f57aedd5cec94e82963
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377243"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041714"
 ---
 # <a name="cobject-class"></a>CObject — klasa
 Główna klasa podstawowa dla Microsoft Foundation Class Library.  
@@ -137,7 +137,7 @@ CObject(const CObject& objectSrc);
 ### <a name="remarks"></a>Uwagi  
  Domyślna wersja jest wywoływana automatycznie przez konstruktora klasy pochodnej.  
   
- Jeśli klasa jest możliwy do serializacji (zawiera `IMPLEMENT_SERIAL` makro), wówczas musi mieć konstruktora domyślnego (konstruktora bez argumentów) w Twojej deklaracji klasy. Jeśli konstruktora domyślnego nie jest wymagane, Zadeklaruj prywatnej lub chronione "pustego" konstruktora. Aby uzyskać więcej informacji, zobacz [CObject za pomocą](../../mfc/using-cobject.md).  
+ Jeśli klasa jest możliwy do serializacji (zawiera implement_serial — makro), wówczas musi mieć konstruktora domyślnego (konstruktora bez argumentów) w Twojej deklaracji klasy. Jeśli konstruktora domyślnego nie jest wymagane, Zadeklaruj prywatnej lub chronione "pustego" konstruktora. Aby uzyskać więcej informacji, zobacz [CObject za pomocą](../../mfc/using-cobject.md).  
   
  Konstruktor kopiujący klasy domyślne w usłudze standard C++ powoduje przywrócenie kopii elementu członkowskiego elementu członkowskiego. Obecność prywatna `CObject` Konstruktor kopiujący gwarantuje komunikat o błędzie kompilatora, jeśli Konstruktor kopiujący klasy jest wymagana, ale nie jest dostępna. W związku z tym musisz podać konstruktora kopiującego, jeśli klasa ta funkcja jest wymagana.  
   
@@ -154,11 +154,11 @@ virtual void Dump(CDumpContext& dc) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dc`  
+ *Kontroler domeny*  
  Zrzucanie, zwykle w kontekście diagnostycznych zrzutu `afxDump`.  
   
 ### <a name="remarks"></a>Uwagi  
- Podczas pisania własne klasy powinny zastępować `Dump` funkcji usługi diagnostyczne dla siebie i innych użytkowników klasy. Zastąpione `Dump` zwykle wymaga `Dump` funkcja jej klasa podstawowa przed wydrukowaniem elementy członkowskie danych unikatowe dla klasy pochodnej. `CObject::Dump` Wyświetla nazwę klasy, jeśli używa klasy `IMPLEMENT_DYNAMIC` lub `IMPLEMENT_SERIAL` makra.  
+ Podczas pisania własne klasy powinny zastępować `Dump` funkcji usługi diagnostyczne dla siebie i innych użytkowników klasy. Zastąpione `Dump` zwykle wymaga `Dump` funkcja jej klasa podstawowa przed wydrukowaniem elementy członkowskie danych unikatowe dla klasy pochodnej. `CObject::Dump` Wyświetla nazwę klasy, jeśli używa klasy `IMPLEMENT_DYNAMIC` lub implement_serial — makro.  
   
 > [!NOTE]
 >  Twoje `Dump` funkcja powinna nie do drukowania znaku nowego wiersza na koniec dane wyjściowe.  
@@ -216,14 +216,14 @@ BOOL IsKindOf(const CRuntimeClass* pClass) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pClass`  
+ *pClass*  
  Wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) struktury skojarzone z Twojej `CObject`-klasy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli obiekt odpowiada klasie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja sprawdza `pClass` czy (1) jest obiekt określonej klasy lub (2) jest obiekt klasy pochodzącej od określonej klasy. Ta funkcja działa tylko w przypadku klasy zadeklarowany z [declare_dynamic —](run-time-object-model-services.md#declare_dynamic), [declare_dyncreate —](run-time-object-model-services.md#declare_dyncreate), lub [declare_serial —](run-time-object-model-services.md#declare_serial) makra.  
+ Ta funkcja sprawdza *pClass* czy (1) jest obiekt określonej klasy lub (2) jest obiekt klasy pochodzącej od określonej klasy. Ta funkcja działa tylko w przypadku klasy zadeklarowany z [declare_dynamic —](run-time-object-model-services.md#declare_dynamic), [declare_dyncreate —](run-time-object-model-services.md#declare_dyncreate), lub [declare_serial —](run-time-object-model-services.md#declare_serial) makra.  
   
  Należy używać tej funkcji często, ponieważ jego pozbawia funkcji polimorfizm C++. Zamiast tego użyj funkcji wirtualnych.  
   
@@ -330,7 +330,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ar`  
+ *ar*  
  A `CArchive` obiektu do zserializowania do lub z.  
   
 ### <a name="remarks"></a>Uwagi  

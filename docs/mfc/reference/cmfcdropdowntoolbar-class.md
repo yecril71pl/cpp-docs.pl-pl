@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4f56a02f469babe22c8e5cbb9ebb4d6b806499f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74005682036e0a4d15d17d147b5994864fa97378
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369811"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042121"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolbar — klasa
 Pasek narzędzi, który jest wyświetlany, gdy użytkownik naciśnie i przechowuje przycisku paska narzędzi najwyższego poziomu.  
@@ -133,22 +133,22 @@ virtual BOOL LoadBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiResID`  
+ [in] *uiResID*  
  Identyfikator zasobu mapy bitowej, która odwołuje się do obrazów gorących paska narzędzi.  
   
- [in] `uiColdResID`  
+ [in] *uiColdResID*  
  Identyfikator zasobu mapy bitowej, która odwołuje się do obrazów zimnych paska narzędzi.  
   
- [in] `uiMenuResID`  
+ [in] *uiMenuResID*  
  Identyfikator zasobu mapy bitowej, która odwołuje się do obrazów regularne menu.  
   
- [in] `bLocked`  
+ [in] *zablokowane*  
  `TRUE` Aby zablokować narzędzi; w przeciwnym razie `FALSE`.  
   
- [in] `uiDisabledResID`  
+ [in] *uiDisabledResID*  
  Identyfikator zasobu mapy bitowej, która odwołuje się do obrazów wyłączonego paska narzędzi.  
   
- [in] `uiMenuDisabledResID`  
+ [in] *uiMenuDisabledResID*  
  Identyfikator zasobu mapy bitowej, która odwołuje się do obrazów menu wyłączone.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -174,13 +174,13 @@ virtual BOOL LoadToolBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiResID`  
- [in] `uiColdResID`  
- [in] `uiMenuResID`  
- [in] `BOOL`  
- [in] `uiDisabledResID`  
- [in] `uiMenuDisabledResID`  
- [in] `uiHotResID`  
+ [in] *uiResID*  
+ [in] *uiColdResID*  
+ [in] *uiMenuResID*  
+ [in] *BOOL*  
+ [in] *uiDisabledResID*  
+ [in] *uiMenuDisabledResID*  
+ [in] *uiHotResID*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -196,8 +196,8 @@ afx_msg void OnLButtonUp(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nFlags`  
- [in] `point`  
+ [in] *nFlags*  
+ [in] *punktu*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -211,8 +211,8 @@ afx_msg void OnMouseMove(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nFlags`  
- [in] `point`  
+ [in] *nFlags*  
+ [in] *punktu*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -224,7 +224,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pButton`  
+ [in] *pButton*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -240,8 +240,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pTarget`  
- [in] `bDisableIfNoHndler`  
+ [in] *pTarget*  
+ [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Uwagi  
   

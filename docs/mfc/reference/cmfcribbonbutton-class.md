@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68320402a21fadd516e2c2f37b7cb437df6b74a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8dc6e780ece78bca59a95f8050a36a77656f0ad6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376421"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040041"
 ---
 # <a name="cmfcribbonbutton-class"></a>Klasa CMFCRibbonButton
 `CMFCRibbonButton` Klasa implementuje przycisków, który można umieścić na wstążce paska elementów, takich jak panele, szybkie paskach narzędzi i w menu wyskakujące.  
@@ -261,10 +261,10 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pSubItem`  
+ [in] *pSubItem*  
  Określa wskaźnik do nowego elementu do dodania.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  Określa indeks, w którym można dodać elementu do tablicy elementów menu przycisku; -1, aby dodać element na końcu tablicę elementów menu.  
   
 ##  <a name="canbestretched"></a>  CMFCRibbonButton::CanBeStretched  
@@ -318,19 +318,19 @@ CMFCRibbonButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nID`  
+ [in] *nID*  
  Określa identyfikator polecenia przycisku.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Określa tekst etykiety przycisku.  
   
- [in] `nSmallImageIndex`  
+ [in] *nSmallImageIndex*  
  Określa liczony od zera indeks mały obraz przycisku obrazu na liście Kategoria nadrzędnego.  
   
- [in] `nLargeImageIndex`  
+ [in] *nLargeImageIndex*  
  Określa liczony od zera indeks dużego obrazu przycisku obrazu na liście Kategoria nadrzędnego.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Określa dojścia do ikony, która aplikacja używa jako obrazu przycisku.  
   
 ### <a name="example"></a>Przykład  
@@ -348,8 +348,8 @@ CSize DrawBottomText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
- [in] `bCalcOnly`  
+ [in] *podstawowego kontrolera domeny*  
+ [in] *bCalcOnly*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -366,9 +366,9 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
- [in] `type`  
- [in] `rectImage`  
+ [in] *podstawowego kontrolera domeny*  
+ [in] *typu*  
+ [in] *rectImage*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -385,11 +385,11 @@ virtual int DrawRibbonText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
- [in] `strText`  
- [in] `rectText`  
- [in] `uiDTFlags`  
- [in] `clrText`  
+ [in] *podstawowego kontrolera domeny*  
+ [in] *strText*  
+ [in] *rectText*  
+ [in] *uiDTFlags*  
+ [in] *clrText*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -403,11 +403,11 @@ int FindSubItemIndexByID(UINT uiID) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiID`  
+ [in] *uiID*  
  Określa identyfikator polecenia elementu menu podręcznego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczony od zera indeks elementu podrzędnego, z którym skojarzony jest `uiID`. -1, jeśli nie ma elementu podrzędnego.  
+ Liczony od zera indeks elementu podrzędnego, z którym skojarzony jest *uiID*. -1, jeśli nie ma elementu podrzędnego.  
   
 ##  <a name="getcommandrect"></a>  CMFCRibbonButton::GetCommandRect  
 
@@ -428,7 +428,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -442,7 +442,7 @@ HICON GetIcon(BOOL bLargeIcon = TRUE) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bLargeIcon`  
+ [in] *bLargeIcon*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -456,7 +456,7 @@ int GetImageIndex(BOOL bLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bLargeImage`  
+ [in] *bLargeImage*  
  Jeśli `TRUE`, zwraca indeks obrazu z listy obrazów, który zawiera duże obrazy; w przeciwnym razie zwraca indeks obrazu z listy obrazów, który zawiera małe obrazy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -470,7 +470,7 @@ virtual CSize GetImageSize(RibbonImageType type) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `type`  
+ [in] *typu*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -484,7 +484,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -519,7 +519,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -751,7 +751,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -763,7 +763,7 @@ virtual void OnClick(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `point`  
+ [in] *punktu*  
  Określa położenie kliknięcia myszą.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -777,7 +777,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -789,7 +789,7 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -801,7 +801,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -822,11 +822,11 @@ BOOL RemoveSubItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nIndex`  
+ [in] *nIndex*  
  Określa liczony od zera indeks elementu menu, który chcesz usunąć.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli określony element został usunięty pomyślnie; w przeciwnym razie `FALSE` Jeśli `nIndex` jest ujemna lub większa niż liczba elementów menu w menu podręcznym.  
+ `TRUE` Jeśli określony element został usunięty pomyślnie; w przeciwnym razie `FALSE` Jeśli *nIndex* jest ujemna lub większa niż liczba elementów menu w menu podręcznym.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonButton::SetACCData  
  Ustawia dane ułatwień dostępu dla przycisku wstążki.  
@@ -838,10 +838,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParent`  
+ *pParent*  
  W oknie nadrzędnym elementem wstążki.  
   
- `data`  
+ *Dane*  
  Dane ułatwień dostępu dla elementu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -857,7 +857,7 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bSet`  
+ [in] *bUstawienie*  
  Jeśli `TRUE`, przycisk wyświetla duży obraz. W przeciwnym razie przycisku wyświetla mały obraz.  
   
 ##  <a name="setdefaultcommand"></a>  CMFCRibbonButton::SetDefaultCommand  
@@ -868,11 +868,11 @@ void SetDefaultCommand(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bSet`  
+ [in] *bUstawienie*  
  Jeśli `TRUE`, przycisk można wykonać polecenia jego domyślny. Jeśli `FALSE`, przycisku nie można wykonać polecenia jego domyślny.  
   
 ### <a name="remarks"></a>Uwagi  
- `bSet` ma zastosowanie tylko wtedy, gdy przycisk ma menu. Jeśli `bSet` jest `TRUE`, przycisk można wykonać polecenia jego domyślny i przypisane menu podręczne jest wyświetlana tylko wtedy, gdy użytkownik kliknie strzałkę po prawej krawędzi przycisku. W przeciwnym razie przycisku nie można wykonać polecenia domyślne i menu podręczne jest wyświetlany niezależnie od tego, którego obszaru przycisk zostanie kliknięty.  
+ *bUstawienie* ma zastosowanie tylko wtedy, gdy przycisk ma menu. Jeśli *bUstawienie* jest `TRUE`, przycisk można wykonać polecenia jego domyślny i przypisane menu podręczne jest wyświetlana tylko wtedy, gdy użytkownik kliknie strzałkę po prawej krawędzi przycisku. W przeciwnym razie przycisku nie można wykonać polecenia domyślne i menu podręczne jest wyświetlany niezależnie od tego, którego obszaru przycisk zostanie kliknięty.  
   
 ##  <a name="setdescription"></a>  CMFCRibbonButton::SetDescription  
 
@@ -882,7 +882,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszText`  
+ [in] *lpszText*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -896,10 +896,10 @@ void SetImageIndex(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nIndex`  
+ [in] *nIndex*  
  Określa indeks obrazu.  
   
- [in] `bLargeImage`  
+ [in] *bLargeImage*  
  Jeśli `TRUE`, określony indeks odwołuje się do listy dużych obrazów. W przeciwnym razie wartość indeksu odwołuje się do listy małych obrazów.  
   
 ##  <a name="setmenu"></a>  CMFCRibbonButton::SetMenu  
@@ -918,20 +918,20 @@ void SetMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hMenu`  
+ *hMenu*  
  Dojście do menu systemu Windows.  
   
- `bIsDefaultCommand`  
+ *bIsDefaultCommand*  
  Jeśli `TRUE`, przycisk można wykonać polecenia jego domyślny; w przeciwnym razie przycisku wyświetlane menu podręczne.  
   
- `bRightAlign`  
+ *bRightAlign*  
  Jeśli `TRUE`, menu jest wyrównany do prawej. W przeciwnym razie jest wyrównany.  
   
- `uiMenuResID`  
+ *uiMenuResID*  
  Identyfikator zasobu menu.  
   
 ### <a name="remarks"></a>Uwagi  
- Gdy aplikacja przypisuje przycisk menu, przycisk wyświetla Strzałka po jego prawej stronie. Jeśli `bIsDefaultCommand` jest `TRUE`, tylko gdy użytkownik kliknie strzałkę w wyświetlonym menu. Gdy użytkownik kliknie przycisk, jego domyślny polecenia została wykonana. Jeśli `bIsDefaultCommand` jest `FALSE`, w wyświetlonym menu przez kliknięcie przycisku w dowolnym miejscu.  
+ Gdy aplikacja przypisuje przycisk menu, przycisk wyświetla Strzałka po jego prawej stronie. Jeśli *bIsDefaultCommand* jest `TRUE`, tylko gdy użytkownik kliknie strzałkę w wyświetlonym menu. Gdy użytkownik kliknie przycisk, jego domyślny polecenia została wykonana. Jeśli *bIsDefaultCommand* jest `FALSE`, w wyświetlonym menu przez kliknięcie przycisku w dowolnym miejscu.  
   
 ##  <a name="setparentcategory"></a>  CMFCRibbonButton::SetParentCategory  
 
@@ -941,7 +941,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pParent`  
+ [in] *pParent*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -953,7 +953,7 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bSet`  
+ [in] *bUstawienie*  
  Jeśli `TRUE`, menu jest wyrównany do prawej. W przeciwnym razie menu jest wyrównany do lewej  
   
 ##  <a name="settext"></a>  CMFCRibbonButton::SetText  
@@ -964,7 +964,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszText`  
+ [in] *lpszText*  
   
 ### <a name="remarks"></a>Uwagi  
   

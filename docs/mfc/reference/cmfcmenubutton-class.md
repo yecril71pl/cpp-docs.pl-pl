@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d611acb34d4159abb41ffa333b4b2cfb6d94442
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09d68cd7c0e4796b3368e1167888d703d37a8cf8
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375392"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040171"
 ---
 # <a name="cmfcmenubutton-class"></a>Klasa CMFCMenuButton
 Przycisk menu podręcznego i raporty w opcji menu użytkownika.  
@@ -167,7 +167,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pMsg`  
+ [in] *pMsg*  
  Wskazuje [MSG](../../mfc/reference/msg-structure1.md) strukturę, która zawiera komunikat do przetworzenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -183,14 +183,14 @@ virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bCalcOnly`  
+ [in] *bCalcOnly*  
  Parametrów typu Boolean wskazującą, czy ta metoda zmienia rozmiar przycisku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) obiekt, który określa nowy rozmiar dla przycisku.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli wywołanie tej funkcji i `bCalcOnly` jest `TRUE`, `SizeToContent` oblicza nowy rozmiar przycisku.  
+ Jeśli wywołanie tej funkcji i *bCalcOnly* jest `TRUE`, `SizeToContent` oblicza nowy rozmiar przycisku.  
   
  Nowy rozmiar przycisku jest obliczana spełniających tekst przycisku, obrazu i strzałki. Platformę oferuje również wstępnie zdefiniowane marginesy 10 pikseli poziome Edge i 5 pikseli pionowy Edge.  
   

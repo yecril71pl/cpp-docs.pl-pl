@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 795e5548e93323af389c3faeaefa7dda0bf7d80c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: af19a9dcb207afa482f54e26540a6b706d607ce0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376252"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040772"
 ---
 # <a name="cmfcimageeditordialog-class"></a>Klasa CMFCImageEditorDialog
 `CMFCImageEditorDialog` Klasa obsługuje okno dialogowe Edytor obrazu.  
@@ -86,14 +86,14 @@ CMFCImageEditorDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pBitmap`  
+ *pBitmap*  
  Wskaźnik do obrazu.  
   
- `pParent`  
+ *pParent*  
  Wskaźnik do okna nadrzędnego bieżące okno dialogowe Edytor obrazu.  
   
- `nBitsPixel`  
- Liczba bitów używany do reprezentowania kolor piksela, który jest również określana jako głębi kolorów.  Jeśli `nBitsPixel` parametru wynosi -1, głębi kolorów jest określana na podstawie określonego przez obrazu `pBitmap` parametru. Wartość domyślna wynosi -1.  
+ *nBitsPixel*  
+ Liczba bitów używany do reprezentowania kolor piksela, który jest również określana jako głębi kolorów.  Jeśli *nBitsPixel* parametru wynosi -1, głębi kolorów jest określana na podstawie określonego przez obrazu *pBitmap* parametru. Wartość domyślna wynosi -1.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Aby zmodyfikować obraz, wskaźnikiem obrazu do `CMFCImageEditorDialog` konstruktora. Następnie wywołaj `DoModal` metodę, aby otworzyć modalne okno dialogowe. Gdy `DoModal` metoda zwróci wartość, mapy bitowej zawiera nowy obraz.  

@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35217ee967554332002d8597a00dc21df928306d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d66c26fb94fa0f4e1863a6a6a9663de4239611db
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378421"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039134"
 ---
 # <a name="coblist-class"></a>Klasa cObList
 uporządkowana lista nieunikatowy fSupports `CObject` wskaźniki dostępny sekwencyjnie lub przez wskaźnik wartości.  
@@ -117,7 +117,7 @@ class CObList : public CObject
   
  Element wstawiania jest bardzo szybkiego w head listy, na końcu oraz w znanego **pozycji**. Sekwencyjne wyszukiwania jest Wyszukiwanie elementu przez wartość lub indeksu. To wyszukiwanie może działać powoli, jeśli lista jest długa.  
   
- `CObList` zawiera `IMPLEMENT_SERIAL` makro do obsługi serializacji i zrzucanie swoich elementów. Jeśli lista `CObject` wskaźniki są przechowywane do archiwum z operatorem przeciążone wstawiania lub z `Serialize` wszystkich funkcji członkowskiej `CObject` element jest serializowany z kolei.  
+ `CObList` zawiera implement_serial — makro do obsługi serializacji i zrzucanie swoich elementów. Jeśli lista `CObject` wskaźniki są przechowywane do archiwum z operatorem przeciążone wstawiania lub z `Serialize` wszystkich funkcji członkowskiej `CObject` element jest serializowany z kolei.  
   
  Jeśli potrzebujesz zrzutu osoba `CObject` elementów na liście, należy ustawić głębokość kontekstu zrzutu 1 lub większą.  
   
@@ -147,11 +147,11 @@ void AddHead(CObList* pNewList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `newElement`  
+ *newElement*  
  `CObject` Wskaźnika do dodania do tej listy.  
   
- `pNewList`  
- Wskaźnik do innego `CObList` listy. Elementy w `pNewList` zostaną dodane do tej listy.  
+ *pNewList*  
+ Wskaźnik do innego `CObList` listy. Elementy w *pNewList* zostaną dodane do tej listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca pierwszą wersję **pozycji** wartość nowo wstawiony element.  
@@ -188,11 +188,11 @@ void AddTail(CObList* pNewList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `newElement`  
+ *newElement*  
  `CObject` Wskaźnika do dodania do tej listy.  
   
- `pNewList`  
- Wskaźnik do innego `CObList` listy. Elementy w `pNewList` zostaną dodane do tej listy.  
+ *pNewList*  
+ Wskaźnik do innego `CObList` listy. Elementy w *pNewList* zostaną dodane do tej listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca pierwszą wersję **pozycji** wartość nowo wstawiony element.  
@@ -228,11 +228,11 @@ CObList(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nBlockSize`  
+ *nBlockSize*  
  Stopień szczegółowości Alokacja pamięci dla rozszerzenia wykazu.  
   
 ### <a name="remarks"></a>Uwagi  
- Wraz z rozwojem listy, w jednostkach jest przydzielana pamięć `nBlockSize` wpisów. W przypadku niepowodzenia alokacji pamięci `CMemoryException` jest generowany.  
+ Wraz z rozwojem listy, w jednostkach jest przydzielana pamięć *nBlockSize* wpisów. W przypadku niepowodzenia alokacji pamięci `CMemoryException` jest generowany.  
   
  W poniższej tabeli przedstawiono innego członka funkcje, które są podobne do `CObList::CObList`.  
   
@@ -260,10 +260,10 @@ POSITION Find(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `searchValue`  
+ *Wyszukiwana_wartość*  
  Wskaźnik obiektu ma zostać odnaleziona na liście.  
   
- `startAfter`  
+ *startAfter*  
  Pozycja początkowa wyszukiwania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -285,18 +285,18 @@ POSITION Find(
  [!code-cpp[NVC_MFCCollections#93](../../mfc/codesnippet/cpp/coblist-class_5.cpp)]  
   
 ##  <a name="findindex"></a>  CObList::FindIndex  
- Używa wartości `nIndex` jako indeks w liście.  
+ Używa wartości *nIndex* jako indeks w liście.  
   
 ```  
 POSITION FindIndex(INT_PTR nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Liczony od zera indeks elementu listy do znalezienia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A **pozycji** wartość, która może służyć do iteracji lub pobieranie wskaźnika obiektu; **NULL** Jeśli `nIndex` jest zbyt duży. (Platformę generuje potwierdzenia, jeśli `nIndex` jest ujemna.)  
+ A **pozycji** wartość, która może służyć do iteracji lub pobieranie wskaźnika obiektu; **NULL** Jeśli *nIndex* jest zbyt duży. (Platformę generuje potwierdzenia, jeśli *nIndex* jest ujemna.)  
   
 ### <a name="remarks"></a>Uwagi  
  Rozpoczyna się kolejny skanowania z węzła głównego listy zatrzymywanie na *n*th element.  
@@ -323,7 +323,7 @@ const CObject*& GetAt(POSITION position) const;
   
 ### <a name="parameters"></a>Parametry  
  *Stanowisko*  
- A **pozycji** wartość zwrócona przez poprzednie `GetHeadPosition` lub **znaleźć** wywołanie funkcji Członkowskich.  
+ A **pozycji** wartość zwrócona przez poprzednie `GetHeadPosition` lub `Find` wywołanie funkcji Członkowskich.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zobacz opis wartości zwracanej [GetHead](#gethead).  
@@ -418,7 +418,7 @@ POSITION GetHeadPosition() const;
  [!code-cpp[NVC_MFCCollections#97](../../mfc/codesnippet/cpp/coblist-class_9.cpp)]  
   
 ##  <a name="getnext"></a>  CObList::GetNext  
- Pobiera element listy identyfikowane przez `rPosition`, następnie ustawia `rPosition` do `POSITION` wartości następnego wpisu na liście.  
+ Pobiera element listy identyfikowane przez *rPosition*, następnie ustawia *rPosition* do `POSITION` wartości następnego wpisu na liście.  
   
 ```  
 CObject*& GetNext(POSITION& rPosition);  
@@ -426,7 +426,7 @@ const CObject* GetNext(POSITION& rPosition) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rPosition`  
+ *rPosition*  
  Odwołanie do `POSITION` wartość zwrócona przez poprzednie `GetNext`, `GetHeadPosition`, lub inne wywołanie funkcji Członkowskich.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -437,7 +437,7 @@ const CObject* GetNext(POSITION& rPosition) const;
   
  Upewnij się, że Twoje `POSITION` wartość reprezentuje prawidłową pozycją na liście. Jeśli jest nieprawidłowa wersja do debugowania programu Microsoft Foundation Class Library potwierdzeń.  
   
- Jeśli element pobrane przez ostatnie na liście jest następnie nowa wartość `rPosition` ma ustawioną wartość `NULL`.  
+ Jeśli element pobrane przez ostatnie na liście jest następnie nowa wartość *rPosition* ma ustawioną wartość `NULL`.  
   
  Istnieje możliwość usunięcia elementu podczas iteracji. Zobacz przykład [Element RemoveAt](#removeat).  
   
@@ -463,7 +463,7 @@ const CObject* GetNext(POSITION& rPosition) const;
  `a CAge at $46C0 21`  
   
 ##  <a name="getprev"></a>  CObList::GetPrev  
- Pobiera element listy identyfikowane przez `rPosition`, następnie ustawia `rPosition` do `POSITION` wartość poprzedniej pozycji listy.  
+ Pobiera element listy identyfikowane przez *rPosition*, następnie ustawia *rPosition* do `POSITION` wartość poprzedniej pozycji listy.  
   
 ```  
 CObject*& GetPrev(POSITION& rPosition);  
@@ -471,7 +471,7 @@ const CObject* GetPrev(POSITION& rPosition) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rPosition`  
+ *rPosition*  
  Odwołanie do `POSITION` wartość zwrócona przez poprzednie `GetPrev` lub inne wywołanie funkcji Członkowskich.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -589,7 +589,7 @@ POSITION InsertAfter(
   
 ### <a name="parameters"></a>Parametry  
  *Stanowisko*  
- A **pozycji** wartość zwrócona przez poprzednie `GetNext`, `GetPrev`, lub **znaleźć** wywołanie funkcji Członkowskich.  
+ A **pozycji** wartość zwrócona przez poprzednie `GetNext`, `GetPrev`, lub `Find` wywołanie funkcji Członkowskich.  
   
  `newElement`  
  Wskaźnik obiektu ma zostać dodany do tej listy.  
@@ -630,9 +630,9 @@ POSITION InsertBefore(
   
 ### <a name="parameters"></a>Parametry  
  *Stanowisko*  
- A **pozycji** wartość zwrócona przez poprzednie `GetNext`, `GetPrev`, lub **znaleźć** wywołanie funkcji Członkowskich.  
+ A **pozycji** wartość zwrócona przez poprzednie `GetNext`, `GetPrev`, lub `Find` wywołanie funkcji Członkowskich.  
   
- `newElement`  
+ *newElement*  
  Wskaźnik obiektu ma zostać dodany do tej listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -802,10 +802,10 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pos`  
+ *POS*  
  **Pozycji** można ustawić elementu.  
   
- `newElement`  
+ *newElement*  
  `CObject` Wskaźnik do zapisania do listy.  
   
 ### <a name="remarks"></a>Uwagi  

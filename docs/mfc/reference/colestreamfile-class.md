@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 805c32145d844cc1103cab7c4987c0595ff5935f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7bbd2b19e85f70ae9e61044ccd5a6c369e61b296
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371393"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041448"
 ---
 # <a name="colestreamfile-class"></a>Klasa COleStreamFile
 Reprezentuje strumienia danych ( `IStream`) w pliku złożonego jako część OLE magazynem strukturalnym.  
@@ -92,7 +92,7 @@ void Attach(LPSTREAM lpStream);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpStream`  
+ *lpStream*  
  Wskazuje strumienia OLE ( `IStream`) ma zostać skojarzony z obiektem. Nie może być **NULL**.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -108,11 +108,11 @@ COleStreamFile(LPSTREAM lpStream = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpStream`  
+ *lpStream*  
  Wskaźnik do strumienia OLE ma zostać skojarzony z obiektem.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `lpStream` jest **NULL**, obiekt nie jest skojarzony z strumienia OLE, w przeciwnym wypadku obiekt jest skojarzony z dostarczonego strumienia OLE.  
+ Jeśli *lpStream* jest **NULL**, obiekt nie jest skojarzony z strumienia OLE, w przeciwnym wypadku obiekt jest skojarzony z dostarczonego strumienia OLE.  
   
  Aby uzyskać więcej informacji, zobacz [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) w zestawie Windows SDK.  
   
@@ -124,7 +124,7 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pError`  
+ *pError*  
  Wskazuje [CFileException](../../mfc/reference/cfileexception-class.md) obiektu lub **NULL** wskazuje, że stan ukończenia operacji tworzenia. Podaj ten parametr, jeśli chcesz monitorować możliwych wyjątków generowanych przez próby utworzenia strumienia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -147,23 +147,23 @@ BOOL CreateStream(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpStorage`  
+ *lpStorage*  
  Wskazuje obiekt magazynu OLE, który zawiera strumienia, który ma zostać utworzony. Nie może być **NULL**.  
   
- `lpszStreamName`  
+ *lpszStreamName*  
  Nazwa strumienia, który ma zostać utworzony. Nie może być **NULL**.  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  Tryb dostępu do używania podczas otwierania strumienia. Na wyłączność, odczytu/zapisu i tworzenia trybów używanych domyślnie. Aby uzyskać pełną listę dostępnych trybów, zobacz [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).  
   
- `pError`  
+ *pError*  
  Wskazuje [CFileException](../../mfc/reference/cfileexception-class.md) obiektu lub **NULL**. Podaj ten parametr, jeśli chcesz monitorować możliwych wyjątków generowanych przez próby utworzenia strumienia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli strumień został utworzony pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Plik zostanie wygenerowany wyjątek Jeśli Otwórz nie powiedzie się i `pError` nie jest **NULL**.  
+ Plik zostanie wygenerowany wyjątek Jeśli Otwórz nie powiedzie się i *pError* nie jest **NULL**.  
   
  Aby uzyskać więcej informacji, zobacz [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) w zestawie Windows SDK.  
   
@@ -204,23 +204,23 @@ BOOL OpenStream(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpStorage`  
+ *lpStorage*  
  Wskazuje obiekt magazynu OLE, który zawiera strumienia do otwarcia. Nie może być **NULL**.  
   
- `lpszStreamName`  
+ *lpszStreamName*  
  Nazwa strumienia do otwarcia. Nie może być **NULL**.  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  Tryb dostępu do używania podczas otwierania strumienia. Wyłączny i trybów używanych domyślnie odczytu/zapisu. Aby uzyskać pełną listę dostępnych trybów, zobacz [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).  
   
- `pError`  
+ *pError*  
  Wskazuje [CFileException](../../mfc/reference/cfileexception-class.md) obiektu lub **NULL**. Podaj ten parametr, jeśli chcesz monitorować możliwych wyjątków generowanych przez próby otwarcia strumienia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli strumień jest otwarty pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Plik zostanie wygenerowany wyjątek Jeśli Otwórz nie powiedzie się i `pError` nie jest **NULL**.  
+ Plik zostanie wygenerowany wyjątek Jeśli Otwórz nie powiedzie się i *pError* nie jest **NULL**.  
   
  Aby uzyskać więcej informacji, zobacz [IStorage::OpenStream](http://msdn.microsoft.com/library/windows/desktop/aa380025) w zestawie Windows SDK.  
   

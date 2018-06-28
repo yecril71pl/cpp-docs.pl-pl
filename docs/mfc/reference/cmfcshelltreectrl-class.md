@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdd7e13e74fc3ae739c825f8aff95a79db8b5e29
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e014219a12985142c6d45aae711d0410ff12642
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371449"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041948"
 ---
 # <a name="cmfcshelltreectrl-class"></a>Klasa CMFCShellTreeCtrl
 `CMFCShellTreeCtrl` Rozszerza klasy [ctreectrl — klasa](../../mfc/reference/ctreectrl-class.md) funkcji Wyświetlając hierarchię elementów powłoki.  
@@ -104,7 +104,7 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  Wartość logiczna określająca, czy włączyć menu skrótów.  
   
 ##  <a name="getflags"></a>  CMFCShellTreeCtrl::GetFlags  
@@ -130,19 +130,19 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `strPath`  
+ [out] *strPath*  
  Odwołanie do parametr typu string. Metoda zapisuje ścieżka elementu tego parametru.  
   
- [in] `htreeItem`  
+ [in] *htreeItem*  
  Metoda pobiera ścieżkę dla tego elementu formantu drzewa.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli ta metoda zawiedzie, `strPath` zawiera pusty ciąg.  
+ Jeśli ta metoda zawiedzie, *strPath* zawiera pusty ciąg.  
   
- Jeśli nie określisz `hTreeItem`, ta metoda próbuje uzyskać ciąg dla aktualnie wybranego elementu. Jeśli nie wybrano elementów i `hTreeItem` jest `NULL`, ta metoda zakończy się niepowodzeniem.  
+ Jeśli nie określisz *hTreeItem*, ta metoda próbuje uzyskać ciąg dla aktualnie wybranego elementu. Jeśli nie wybrano elementów i *hTreeItem* jest `NULL`, ta metoda zakończy się niepowodzeniem.  
   
 ##  <a name="getrelatedlist"></a>  CMFCShellTreeCtrl::GetRelatedList  
  Zwraca wskaźnik do [klasy CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) obiekt, który jest skojarzony z tym [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) obiektu.  
@@ -169,10 +169,10 @@ virtual BOOL OnChildNotify(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `message`  
- [in] `wParam`  
- [in] `lParam`  
- [in] `pLResult`  
+ [in] *wiadomości*  
+ [in] *wParam*  
+ [in] *lParam*  
+ [in] *pLResult*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -188,8 +188,8 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pItem`  
- [in] `bSelected`  
+ [in] *pItem*  
+ [in] *bSelected*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -203,7 +203,7 @@ virtual CString OnGetItemText(LPAFX_SHELLITEMINFO pItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pItem`  
+ [in] *pItem*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -228,10 +228,10 @@ BOOL SelectPath(LPCITEMIDLIST lpidl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszPath`  
+ [in] *lpszPath*  
  Ciąg, który określa ścieżkę elementu.  
   
- [in] `lpidl`  
+ [in] *lpidl*  
  PIDL, która określa, że element  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -247,10 +247,10 @@ void SetFlags(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `dwFlags`  
+ [in] *wartość elementu dwFlags*  
  Flagi do ustawienia.  
   
- [in] `bRefresh`  
+ [in] *bRefresh*  
  Wartość logiczna określająca, czy `CMFCShellTreeCtrl` należy odświeżyć natychmiast.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -264,7 +264,7 @@ void SetRelatedList(CMFCShellListCtrl* pShellList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pShellList`  
+ [in] *pShellList*  
  Wskaźnik do `CMFCShellListCtrl` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  

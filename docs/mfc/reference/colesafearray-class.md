@@ -70,12 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e21cecc00c9aab170c79247bced635783541be48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b85c64837f9bc7a0c8c1873f434855d77c01fb1b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376880"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041636"
 ---
 # <a name="colesafearray-class"></a>Klasa COleSafeArray
 Klasa do pracy z tablicami dowolnego typu i wymiaru.  
@@ -154,7 +154,7 @@ void AccessData(void** ppvData);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ppvData`  
+ *ppvData*  
  Wskaźnik do wskaźnika do tablicy danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -181,7 +181,7 @@ void AllocDescriptor(DWORD dwDims);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwDims`  
+ *dwDims*  
  Liczba wymiarów w bezpiecznej tablicy.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -237,23 +237,23 @@ COleSafeArray(const COleVariant& varSrc);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `saSrc`  
+ *saSrc*  
  Istniejące `COleSafeArray` obiektu lub **SAFEARRAY** ma zostać skopiowany do nowego `COleSafeArray` obiektu.  
   
- `vtSrc`  
+ *vtSrc*  
  **VARTYPE** nowej `COleSafeArray` obiektu.  
   
- `psaSrc`  
+ *psaSrc*  
  Wskaźnik do **SAFEARRAY** ma zostać skopiowany do nowego `COleSafeArray` obiektu.  
   
  *varSrc*  
  Istniejące **VARIANT** lub `COleVariant` obiekt ma zostać skopiowany do nowego `COleSafeArray` obiektu.  
   
- `pSrc`  
+ *pSrc*  
  Wskaźnik do **VARIANT** obiekt ma zostać skopiowany do nowego `COleSafeArray` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Wszystkie te konstruktorów tworzenia nowych `COleSafeArray` obiektów. Jeśli istnieje żaden parametr pustą `COleSafeArray` obiekt jest tworzony ( `VT_EMPTY`). Jeśli `COleSafeArray` zostaną skopiowane z innego tablica której [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) znany jest niejawnie ( `COleSafeArray`, `COleVariant`, lub **VARIANT**), **VARTYPE** z Tablica źródłowa jest zachowywana i nie musi być określony. Jeśli `COleSafeArray` zostaną skopiowane z innego tablica której **VARTYPE** nie jest znany ( **SAFEARRAY**), **VARTYPE** musi zostać określona w `vtSrc` parametru.  
+ Wszystkie te konstruktorów tworzenia nowych `COleSafeArray` obiektów. Jeśli istnieje żaden parametr pustą `COleSafeArray` obiekt jest tworzony ( `VT_EMPTY`). Jeśli `COleSafeArray` zostaną skopiowane z innego tablica której [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) znany jest niejawnie ( `COleSafeArray`, `COleVariant`, lub **VARIANT**), **VARTYPE** z Tablica źródłowa jest zachowywana i nie musi być określony. Jeśli `COleSafeArray` zostaną skopiowane z innego tablica której **VARTYPE** nie jest znany ( **SAFEARRAY**), **VARTYPE** musi zostać określona w *vtSrc* parametru.  
   
  W przypadku błędu, funkcja zwraca [CMemoryException](../../mfc/reference/cmemoryexception-class.md) lub [COleException](../../mfc/reference/coleexception-class.md).  
   
@@ -288,10 +288,10 @@ void Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `vtSrc`  
- Typ podstawowy elementu tablicy (to znaczy **VARTYPE** każdego elementu w tablicy). **VARTYPE** jest ograniczony do podzbioru typów variant. Ani **VT_ARRAY** ani **VT_BYREF** flagę można ustawić. `VT_EMPTY` i **VT_NULL** nie są prawidłowe typy podstawowe dla tablicy. Wszystkie inne typy są prawnych.  
+ *vtSrc*  
+ Typ podstawowy elementu tablicy (to znaczy **VARTYPE** każdego elementu w tablicy). **VARTYPE** jest ograniczony do podzbioru typów variant. Ani **VT_ARRAY** ani **VT_BYREF** flagę można ustawić. **VT_EMPTY** i **VT_NULL** nie są prawidłowe typy podstawowe dla tablicy. Wszystkie inne typy są prawnych.  
   
- `dwDims`  
+ *dwDims*  
  Liczba wymiarów tablicy. Można to zmienić po utworzeniu tablicy o [Redim](#redim).  
   
  *rgElements*  
@@ -318,20 +318,20 @@ void CreateOneDim(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `vtSrc`  
+ *vtSrc*  
  Typ podstawowy elementu tablicy (to znaczy **VARTYPE** każdego elementu w tablicy).  
   
- `dwElements`  
+ *dwElements*  
  Liczba elementów w tablicy. Można to zmienić po utworzeniu tablicy o [ResizeOneDim](#resizeonedim).  
   
- `pvSrcData`  
+ *pvSrcData*  
  Wskaźnik do danych można skopiować do tablicy.  
   
  *nLBound*  
  Dolna granica tablicy.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja przydziela i inicjuje dane dla tablicy kopiowanie określone dane, jeśli wskaźnik `pvSrcData` nie jest **NULL**.  
+ Funkcja przydziela i inicjuje dane dla tablicy kopiowanie określone dane, jeśli wskaźnik *pvSrcData* nie jest **NULL**.  
   
  W przypadku błędu, funkcja zwraca [CMemoryException](../../mfc/reference/cmemoryexception-class.md).  
   
@@ -394,7 +394,7 @@ void GetByteArray(CByteArray& bytes);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bytes`  
+ *Bajty*  
  Odwołanie do [CByteArray](../../mfc/reference/cbytearray-class.md) obiektu.  
   
 ##  <a name="getdim"></a>  COleSafeArray::GetDim  
@@ -420,14 +420,14 @@ void GetElement(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rgIndices`  
+ *rgIndices*  
  Wskaźnik do tablicy indeksów dla każdego wymiaru tablicy.  
   
- `pvData`  
+ *pvData*  
  Wskaźnik do elementu tablicy na położenie.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja ta automatycznie wywołuje funkcje systemu windows `SafeArrayLock` i `SafeArrayUnlock` przed i po pobraniu elementu. Jeśli element danych jest ciąg, obiekt lub typ variant, funkcja kopiuje element w prawidłowy sposób. Parametr `pvData` powinny wskazywać na dużej wystarczająco dużego buforu zawiera element.  
+ Funkcja ta automatycznie wywołuje funkcje systemu windows `SafeArrayLock` i `SafeArrayUnlock` przed i po pobraniu elementu. Jeśli element danych jest ciąg, obiekt lub typ variant, funkcja kopiuje element w prawidłowy sposób. Parametr *pvData* powinny wskazywać na dużej wystarczająco dużego buforu zawiera element.  
   
  W przypadku błędu, funkcja zwraca [CMemoryException](../../mfc/reference/cmemoryexception-class.md) lub [COleException](../../mfc/reference/coleexception-class.md).  
   
@@ -454,7 +454,7 @@ void GetLBound(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwDim`  
+ *dwDim*  
  Wymiar tablicy, do których chcesz pobrać dolnej granicy.  
   
  *pLBound*  
@@ -489,7 +489,7 @@ void GetUBound(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwDim`  
+ *dwDim*  
  Wymiar tablicy, do których chcesz pobrać górną granicę.  
   
  *pUBound*  
@@ -581,11 +581,11 @@ PtrOfIndex void (Liczba długa * rgIndices,
 ```  
   
 ### Parameters  
- `rgIndices`  
+ *rgIndices*  
  An array of index values that identify an element of the array. All indexes for the element must be specified.  
   
- `ppvData`  
- On return, pointer to the element identified by the values in `rgIndices`.  
+ *ppvData*  
+ On return, pointer to the element identified by the values in *rgIndices*.  
   
 ##  <a name="putelement"></a>  COleSafeArray::PutElement  
  Assigns a single element into the array.  
@@ -596,11 +596,11 @@ PutElement void (Liczba długa * rgIndices,
 ```  
   
 ### Parameters  
- `rgIndices`  
+ *rgIndices*  
  Pointer to an array of indexes for each dimension of the array.  
   
- `pvData`  
- Pointer to the data to assign to the array. **VT_DISPATCH**, **VT_UNKNOWN**, and `VT_BSTR` variant types are pointers and do not require another level of indirection.  
+ *pvData*  
+ Pointer to the data to assign to the array. **VT_DISPATCH**, **VT_UNKNOWN**, and **VT_BSTR** variant types are pointers and do not require another level of indirection.  
   
 ### Remarks  
  This function automatically calls the Windows functions [SafeArrayLock](https://msdn.microsoft.com/library/windows/desktop/ms221492.aspx) and [SafeArrayUnlock](https://msdn.microsoft.com/library/windows/desktop/ms221246.aspx) before and after assigning the element. If the data element is a string, object, or variant, the function copies it correctly, and if the existing element is a string, object, or variant, it is cleared correctly.  
@@ -634,7 +634,7 @@ void ResizeOneDim (DWORD dwElements);
 ```  
   
 ### Parameters  
- `dwElements`  
+ *dwElements*  
  Number of elements in the one-dimensional safe array.  
   
 ### Remarks  

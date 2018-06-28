@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73a3bb877bec385a9f7e56191286c9b560da8610
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: afd30c9f27d83e7d4cfaf9b993b258b069f73dc4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378829"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039235"
 ---
 # <a name="cmfcbutton-class"></a>Klasa CMFCButton
 `CMFCButton` Klasa dodaje funkcjonalność do [CButton](../../mfc/reference/cbutton-class.md) klasy, takie jak wyrównanie tekstu przycisku, łączenie przycisk tekstowych i obrazów, wybierając kursora i określanie etykietka narzędzia.  
@@ -218,7 +218,7 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bOn`  
+ [in] *bW*  
  `TRUE` Aby wyświetlić cały tekst; `FALSE` do tekstu wyświetlanego obcięte.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -233,10 +233,10 @@ void EnableMenuFont(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bOn`  
+ [in] *bW*  
  `TRUE` Aby używać menu aplikacji jako czcionki tekstu przycisku; `FALSE` do użycia czcionki systemowej. Wartość domyślna to `TRUE`.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` Aby natychmiast odświeżyć ekran; w przeciwnym razie `FALSE`. Wartość domyślna to `TRUE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -250,7 +250,7 @@ static void EnableWindowsTheming(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  `TRUE` Aby użyć bieżącego motywu systemu Windows do rysowania obramowań przycisk; `FALSE` nie korzystać z kompozycji systemu Windows. Wartość domyślna to `TRUE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -473,13 +473,13 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- [in] `rect`  
+ [in] *rect*  
  Odwołanie do prostokąt zakresem przycisku.  
   
- [in] `uiState`  
+ [in] *uiState*  
  Bieżący stan przycisku. Aby uzyskać więcej informacji, zobacz `itemState` członkiem [struktura DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) tematu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -496,13 +496,13 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  Odwołanie do prostokąt zakresem przycisku.  
   
- [in] `uiState`  
+ [in] *uiState*  
  Bieżący stan przycisku. Aby uzyskać więcej informacji, zobacz `itemState` członkiem [struktura DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) tematu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -518,10 +518,10 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  Odwołanie do prostokąt zakresem przycisku.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -540,19 +540,19 @@ virtual void OnDrawText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- [in] `rect`  
+ [in] *rect*  
  Odwołanie do prostokąt zakresem przycisku.  
   
- [in] `strText`  
+ [in] *strText*  
  Tekst do rysowania.  
   
- [in] `uiDTFlags`  
- Flagi, które określają sposób formatowania tekstu. Aby uzyskać więcej informacji, zobacz `nFormat` parametr [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) metody.  
+ [in] *uiDTFlags*  
+ Flagi, które określają sposób formatowania tekstu. Aby uzyskać więcej informacji, zobacz *nFormat* parametr [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) metody.  
   
- [in] `uiState`  
+ [in] *uiState*  
  (Zastrzeżone).  
   
 ### <a name="remarks"></a>Uwagi  
@@ -568,10 +568,10 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  Odwołanie do prostokąt zakresem przycisku.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -585,7 +585,7 @@ virtual CFont* SelectFont(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -601,11 +601,11 @@ void SetAutorepeatMode(int nTimeDelay=500);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nTimeDelay`  
+ [in] *nTimeDelay*  
  Nieujemna liczba, która określa interwał między wiadomości, które są wysyłane do okna nadrzędnego. Interwał jest mierzony w milisekundach i jego wartość domyślna to 500 milisekund. Określ wartości zero spowoduje wyłączenie trybu auto-repeat wiadomości.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda powoduje, że przycisk stale wysyłaj WM_COMMAND — komunikaty do okna nadrzędnego, aż zwolnieniu przycisku lub `nTimeDelay` parametr ma wartość zero.  
+ Ta metoda powoduje, że przycisk stale wysyłaj WM_COMMAND — komunikaty do okna nadrzędnego, aż zwolnieniu przycisku lub *nTimeDelay* parametr ma wartość zero.  
   
 ##  <a name="setcheckedimage"></a>  CMFCButton::SetCheckedImage  
  Ustawia obraz dla przycisku zaznaczenia.  
@@ -634,40 +634,40 @@ void SetCheckedImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `hIcon`  
+ [in] *hIcon*  
  Dojście do ikony, która zawiera mapę bitową i maska dla nowego obrazu.  
   
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
  `TRUE` Aby określić zasoby mapy bitowej niszczone automatycznie; w przeciwnym razie `FALSE`. Wartość domyślna to `TRUE`.  
   
- [in] `hIconHot`  
+ [in] *hIconHot*  
  Dojście do ikony, która zawiera obraz dla wybranego stanu.  
   
- [in] `hBitmap`  
+ [in] *hBitmap*  
  Dojście do mapy bitowej, który zawiera obraz stanu niezaznaczone.  
   
- [in] `hBitmapHot`  
+ [in] *hBitmapHot*  
  Dojście do mapy bitowej zawierającego obraz dla wybranego stanu.  
   
- [in] `bMap3dColors`  
+ [in] *bMap3dColors*  
  Określa przezroczysty kolor tła przycisku; oznacza to, powierzchni przycisku. `TRUE` Aby użyć wartości kolorów RGB (192, 192, 192); `FALSE` Aby użyć wartości kolorów zdefiniowanych przez `AFX_GLOBAL_DATA::clrBtnFace`.  
   
- [in] `uiBmpResId`  
+ [in] *uiBmpResId*  
  Identyfikator zasobu obrazu niezaznaczone.  
   
- [in] `uiBmpHotResId`  
+ [in] *uiBmpHotResId*  
  Identyfikator zasobu dla wybranego obrazu.  
   
- [in] `hIconDisabled`  
+ [in] *hIconDisabled*  
  Dojście do ikony dla wyłączonego obrazu.  
   
- [in] `hBitmapDisabled`  
+ [in] *hBitmapDisabled*  
  Dojście do mapy bitowej, który zawiera wyłączenia obraz.  
   
- [in] `uiBmpDsblResID`  
+ [in] *uiBmpDsblResID*  
  Identyfikator zasobu mapy bitowej wyłączone.  
   
- [in] `bAlphaBlend`  
+ [in] *bAlphaBlend*  
  `TRUE` Aby użyć tylko obrazy 32-bitowych używających kanał alfa. `FALSE`, aby nie używać tylko obrazy kanału alfa. Wartość domyślna to `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -682,10 +682,10 @@ void SetFaceColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `crFace`  
+ [in] *crFace*  
  Wartości kolorów RGB.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` Aby odświeżyć ekran natychmiast; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -718,40 +718,40 @@ void SetImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `hIcon`  
+ [in] *hIcon*  
  Dojście do ikony, która zawiera mapę bitową i maska dla nowego obrazu.  
   
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
  `TRUE` Aby określić zasoby mapy bitowej niszczone automatycznie; w przeciwnym razie `FALSE`. Wartość domyślna to `TRUE`.  
   
- [in] `hIconHot`  
+ [in] *hIconHot*  
  Dojście do ikony, która zawiera obraz dla wybranego stanu.  
   
- [in] `hBitmap`  
+ [in] *hBitmap*  
  Dojście do mapy bitowej, który zawiera obraz stanu niezaznaczone.  
   
- [in] `hBitmapHot`  
+ [in] *hBitmapHot*  
  Dojście do mapy bitowej zawierającego obraz dla wybranego stanu.  
   
- [in] `uiBmpResId`  
+ [in] *uiBmpResId*  
  Identyfikator zasobu obrazu niezaznaczone.  
   
- [in] `uiBmpHotResId`  
+ [in] *uiBmpHotResId*  
  Identyfikator zasobu dla wybranego obrazu.  
   
- [in] `bMap3dColors`  
+ [in] *bMap3dColors*  
  Określa przezroczysty kolor tła przycisku; oznacza to, powierzchni przycisku. `TRUE` Aby użyć wartości kolorów RGB (192, 192, 192); `FALSE` Aby użyć wartości kolorów zdefiniowanych przez `AFX_GLOBAL_DATA::clrBtnFace`.  
   
- [in] `hIconDisabled`  
+ [in] *hIconDisabled*  
  Dojście do ikony dla wyłączonego obrazu.  
   
- [in] `hBitmapDisabled`  
+ [in] *hBitmapDisabled*  
  Dojście do mapy bitowej, który zawiera wyłączenia obraz.  
   
- [in] `uiBmpDsblResID`  
+ [in] *uiBmpDsblResID*  
  Identyfikator zasobu mapy bitowej wyłączone.  
   
- [in] `bAlphaBlend`  
+ [in] *bAlphaBlend*  
  `TRUE` Aby użyć tylko obrazy 32-bitowych używających kanał alfa. `FALSE`, aby nie używać tylko obrazy kanału alfa. Wartość domyślna to `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -770,7 +770,7 @@ void SetMouseCursor(HCURSOR hcursor);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `hcursor`  
+ [in] *hcursor*  
  Dojście kursora.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -803,13 +803,13 @@ void SetStdImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `id`  
+ [in] *id*  
  Jeden z identyfikatorów obrazu przycisku zdefiniowanych w `CMenuImage::IMAGES_IDS` wyliczenia. Wartości obrazu Określ obrazy, takie jak strzałki, numery PIN i przycisków radiowych.  
   
- [in] `state`  
+ [in] *stanu*  
  Jeden z identyfikatorów stan obrazu przycisku zdefiniowanych w `CMenuImages::IMAGE_STATE` wyliczenia. Stany obrazu Określ przycisk kolorów, takich jak czarny, szary, światła szary, biały i ciemny szary. Wartość domyślna to `CMenuImages::ImageBlack`.  
   
- [in] `idDisabled`  
+ [in] *idDisabled*  
  Jeden z identyfikatorów obrazu przycisku zdefiniowanych w `CMenuImage::IMAGES_IDS` wyliczenia. Obraz wskazuje, czy przycisk jest wyłączona. Wartość domyślna to pierwszy obraz przycisku ( `CMenuImages::IdArrowDown`).  
   
 ### <a name="remarks"></a>Uwagi  
@@ -822,7 +822,7 @@ void SetTextColor(COLORREF clrText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `clrText`  
+ [in] *clrText*  
  Wartości kolorów RGB.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -835,7 +835,7 @@ void SetTextHotColor(COLORREF clrTextHot);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `clrTextHot`  
+ [in] *clrTextHot*  
  Wartości kolorów RGB.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -848,7 +848,7 @@ void SetTooltip(LPCTSTR lpszToolTipText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszToolTipText`  
+ [in] *lpszToolTipText*  
  Wskaźnik do tekst etykietki narzędzia. Określ wartość NULL, aby wyłączyć etykietka narzędzia.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -861,7 +861,7 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bCalcOnly`  
+ [in] *bCalcOnly*  
  `TRUE` Aby obliczyć, ale nie można zmieniać nowy rozmiar przycisku; `FALSE` Aby zmienić rozmiar przycisku. Wartość domyślna to `FALSE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b9d4aace502310836429ec8f8f9db74d7cf17ff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 27ff8f622eb3af52ad23f8f4fc7a20ecb8be9b77
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369105"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041139"
 ---
 # <a name="ckeyboardmanager-class"></a>Klasa CKeyboardManager
 Zarządza skrótów tabel klucza głównego okna ramowego i podrzędnych okien ramowych.  
@@ -134,23 +134,23 @@ static BOOL FindDefaultAccelerator(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Identyfikator polecenia.  
   
- [out] `str`  
+ [out] *str*  
  Odwołanie do `CString` obiektu.  
   
- [in] `pWndFrame`  
+ [in] *pWndFrame*  
  Wskaźnik do ramki okna.  
   
- [in] `bIsDefaultFrame`  
+ [in] *bIsDefaultFrame*  
  Określa, czy okno ramowe domyślnego ramki okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli skrót zostanie odnaleziony; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wyszukuje określone przez polecenie `uiCmd` i pobiera domyślny klucz skrótów. Następnie metoda pobiera parametry skojarzone z tym klawisz skrótu i zapisuje wartość `str` parametru.  
+ Ta metoda wyszukuje określone przez polecenie *uiCmd* i pobiera domyślny klucz skrótów. Następnie metoda pobiera parametry skojarzone z tym klawisz skrótu i zapisuje wartość *str* parametru.  
   
 ##  <a name="iskeyhandled"></a>  CKeyboardManager::IsKeyHandled  
  Określa, czy określony klucz jest obsługiwany przez [CKeyboardManager klasy](../../mfc/reference/ckeyboardmanager-class.md).  
@@ -168,16 +168,16 @@ static BOOL __stdcall IsKeyHandled(
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] `nKey`|Klucz do sprawdzenia.|  
-|[in] `fVirt`|Określa zachowanie klawisza skrótu. Aby uzyskać listę możliwych wartości, zobacz [struktury AKCELERACJA](http://msdn.microsoft.com/library/windows/desktop/ms646340).|  
-|[in] `pWndFrame`|Okno ramowe. Ta metoda określa, czy klawisz skrótu jest obsługiwana w tej ramce.|  
-|[in] `bIsDefaultFrame`|Parametrów typu Boolean, która wskazuje, czy `pWndFrame` jest domyślnego ramki okna.|  
+|[in] *nKey*|Klucz do sprawdzenia.|  
+|[in] *fVirt*|Określa zachowanie klawisza skrótu. Aby uzyskać listę możliwych wartości, zobacz [struktury AKCELERACJA](http://msdn.microsoft.com/library/windows/desktop/ms646340).|  
+|[in] *pWndFrame*|Okno ramowe. Ta metoda określa, czy klawisz skrótu jest obsługiwana w tej ramce.|  
+|[in] *bIsDefaultFrame*|Parametrów typu Boolean, która wskazuje, czy *pWndFrame* jest domyślnego ramki okna.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli klawisz skrótu jest obsługiwane. `FALSE` Jeśli klucz nie jest obsługiwana lub `pWndFrame` jest `NULL`.  
+ `TRUE` Jeśli klawisz skrótu jest obsługiwane. `FALSE` Jeśli klucz nie jest obsługiwana lub *pWndFrame* jest `NULL`.  
   
 ### <a name="remarks"></a>Uwagi  
- Parametry wejściowe muszą być zgodne wpisu tabeli akceleratora zarówno dla `nKey` i `fVirt` ustalenie, czy klawisz skrótu jest obsługiwana w `pWndFrame`.  
+ Parametry wejściowe muszą być zgodne wpisu tabeli akceleratora zarówno dla *nKey* i *fVirt* ustalenie, czy klawisz skrótu jest obsługiwana w *pWndFrame*.  
   
 ##  <a name="iskeyprintable"></a>  CKeyboardManager::IsKeyPrintable  
  Wskazuje, czy znak jest do druku.  
@@ -191,7 +191,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] `nChar`|Ta metoda sprawdza znak.|  
+|[in] *nChar*|Ta metoda sprawdza znak.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli znak jest drukowania, zero, jeśli nie jest.  
@@ -222,17 +222,17 @@ BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Ścieżka rejestru gdzie `CKeyboardManager` dane są zapisywane.  
   
- [in] `pDefaultFrame`  
+ [in] *pDefaultFrame*  
  Wskaźnik do okno ramowe ma być używana jako domyślnego okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli stan został pomyślnie załadowany lub równa 0 w przeciwnym razie wartość.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `lpszProfileName` parametr jest `NULL`, ta metoda sprawdza domyślnej lokalizacji rejestru `CKeyboardManager` danych. Domyślna lokalizacja rejestru jest określona przez [CWinAppEx klasy](../../mfc/reference/cwinappex-class.md). Dane muszą być wcześniej zapisane przy użyciu metody [CKeyboardManager::SaveState](#savestate).  
+ Jeśli *lpszProfileName* parametr jest `NULL`, ta metoda sprawdza domyślnej lokalizacji rejestru `CKeyboardManager` danych. Domyślna lokalizacja rejestru jest określona przez [CWinAppEx klasy](../../mfc/reference/cwinappex-class.md). Dane muszą być wcześniej zapisane przy użyciu metody [CKeyboardManager::SaveState](#savestate).  
   
  Jeśli nie określisz domyślnego okna głównego okna ramowego aplikacji będą używane.  
   
@@ -256,17 +256,17 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Ścieżka rejestru zapisywania `CKeyboardManager` stanu.  
   
- [in] `pDefaultFrame`  
+ [in] *pDefaultFrame*  
  Wskaźnik do ramki okna, które staje się oknem domyślne.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli stan Menedżera klawiatury została zapisana pomyślnie, lub wpisz 0, w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `lpszProfileName` parametr jest `NULL`, ta metoda będzie zapisywać `CKeyboardManager` stanu do domyślnej lokalizacji podanej przez [CWinAppEx klasy](../../mfc/reference/cwinappex-class.md). Jeśli określisz lokalizacji można załadować danych później przy użyciu metody [CKeyboardManager::LoadState](#loadstate).  
+ Jeśli *lpszProfileName* parametr jest `NULL`, ta metoda będzie zapisywać `CKeyboardManager` stanu do domyślnej lokalizacji podanej przez [CWinAppEx klasy](../../mfc/reference/cwinappex-class.md). Jeśli określisz lokalizacji można załadować danych później przy użyciu metody [CKeyboardManager::LoadState](#loadstate).  
   
  Jeśli nie określisz domyślnego okna głównego okna ramowego będzie używany jako domyślnego okna.  
   
@@ -280,16 +280,16 @@ static void ShowAllAccelerators(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bShowAll`  
+ [in] *bShowAll*  
  Jeśli `true`, wyświetlane są wszystkie klawisze skrótu. Jeśli `false`, zostanie wyświetlony tylko pierwszy klawisz skrótu.  
   
- [in] `lpszDelimiter`  
+ [in] *lpszDelimiter*  
  Ciąg, aby wstawić między klawiszy skrótów. Tym ogranicznikiem nie ma znaczenia, jeśli tylko jeden klawisz skrótu jest wyświetlany.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie jeśli polecenie ma więcej niż jeden klawisz skrótu skojarzony z nim, tylko pierwszy klawisz skrótu będą wyświetlane. Ta funkcja umożliwia listę wszystkich skojarzonych z wszystkich poleceń klawiszy skrótów.  
   
- Klawisze skrótu będzie wyświetlane obok polecenia na pasku menu. Jeśli wyświetlane są wszystkie klawisze skrótu, ciąg udostępniane przez `lpszDelimiter` musi upłynąć klawiszy skrótów.  
+ Klawisze skrótu będzie wyświetlane obok polecenia na pasku menu. Jeśli wyświetlane są wszystkie klawisze skrótu, ciąg udostępniane przez *lpszDelimiter* musi upłynąć klawiszy skrótów.  
   
 ##  <a name="translatechartoupper"></a>  CKeyboardManager::TranslateCharToUpper  
  Konwertuje znak na jego górnej rejestru.  
@@ -299,7 +299,7 @@ static UINT TranslateCharToUpper(const UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nChar`  
+ [in] *nChar*  
  Znak do konwersji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -323,19 +323,19 @@ BOOL UpdateAccelTable(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pTemplate`  
+ [in] *pTemplate*  
  Wskaźnik do szablonu dokumentu.  
   
- [in] `lpAccel`  
+ [in] *lpAccel*  
  Wskaźnik do nowego klucza skrótu.  
   
- [in] `nSize`  
+ [in] *nSize*  
  Rozmiar nowej tabeli skrótów.  
   
- [in] `pDefaultFrame`  
+ [in] *pDefaultFrame*  
  Wskaźnik do domyślnego ramki okna.  
   
- [in] `hAccelNew`  
+ [in] *hAccelNew*  
  Dojście do nowej tabeli skrótów.  
   
 ### <a name="return-value"></a>Wartość zwracana  

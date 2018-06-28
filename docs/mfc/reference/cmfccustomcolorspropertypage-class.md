@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c02c2590e4143460a2cd89bb2b7e7e167c92c0e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8123db8e4a8dfba94e469881af8fbb2ecb40e2a0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370812"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041984"
 ---
 # <a name="cmfccustomcolorspropertypage-class"></a>Klasa CMFCCustomColorsPropertyPage
 Reprezentuje stronę właściwości, który można wybrać kolory niestandardowe w oknie dialogowym koloru.  
@@ -91,9 +91,9 @@ void Setup(
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] `R`|Czerwony składnik wartości RGB.|  
-|[in] `G`|Zielony składnik wartości RGB.|  
-|[in] `B`|Niebieski składnik wartości RGB.|  
+|[in] *R*|Czerwony składnik wartości RGB.|  
+|[in] *G*|Zielony składnik wartości RGB.|  
+|[in] *B*|Niebieski składnik wartości RGB.|  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda aktualizacji bieżącego RGB i skojarzone HLS (hue, jasność i nasycenie) wartości kolorów stronę właściwości. [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo) metoda wywołuje tę metodę w ramach inicjuje okno dialogowe kolorów lub naciśnięciu lewego przycisku myszy. Aby uzyskać więcej informacji na temat `CMFCColorDialog`, zobacz [CMFCColorDialog klasy](../../mfc/reference/cmfccolordialog-class.md).  

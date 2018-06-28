@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2be83e3791121bdea4d7f650f7d6801517df31ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a1a4ca77e4b7a2cda10d87bd657e73931a50612
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373895"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038009"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>Klasa CMultiPageDHtmlDialog
 Wielostronicowe okna dialogowego sekwencyjnie zawiera wiele stron HTML i obsługuje zdarzenia z każdej strony.  
@@ -100,19 +100,19 @@ CMultiPageDHtmlDialog();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Ciąg zerem to nazwa zasobu szablon okno dialogowe.  
   
- `szHtmlResID`  
+ *szHtmlResID*  
  Ciąg zerem to nazwa zasobu HTML.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do obiektu okna nadrzędnego lub właściciela (typu [CWnd](../../mfc/reference/cwnd-class.md)) do której należy obiektu okna dialogowego. Jeśli jest **NULL**, okna nadrzędnego obiektu okna dialogowego ma ustawioną wartość okna głównego aplikacji.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Zawiera identyfikator zasobu szablon okno dialogowe.  
   
- `nHtmlResID`  
+ *nHtmlResID*  
  Zawiera identyfikator zasobu HTML.  
   
 ##  <a name="_dtorcmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog  

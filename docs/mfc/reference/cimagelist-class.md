@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54804ff4c6b2410aa47ea4d7cf5f5d3ab48316f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 86250968fa8f6dfd9cb1a3b9a790549f70baa569
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375849"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039119"
 ---
 # <a name="cimagelist-class"></a>Cimagelist — klasa
 Udostępnia funkcje formantu listy typowych obrazu systemu Windows.  
@@ -189,16 +189,16 @@ int Add(HICON hIcon);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pbmImage`  
+ *pbmImage*  
  Wskaźnik do mapy bitowej zawierającego obraz lub obrazów. Liczba obrazów jest wywnioskowany na podstawie szerokość mapy bitowej.  
   
- `pbmMask`  
+ *pbmMask*  
  Wskaźnik do mapy bitowej zawierającego maski. Maska nie jest używana z listy obrazów, ten parametr jest ignorowana.  
   
- `crMask`  
+ *crMask*  
  Kolor używany do generowania maski. Każdego piksela tego koloru w danym mapę bitową zostało zmienione na kolor czarny i odpowiadający mu bit maski ma wartość 1.  
   
- `hIcon`  
+ *hIcon*  
  Dojście ikonę, która zawiera mapę bitową i maska dla nowego obrazu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -218,7 +218,7 @@ BOOL Attach(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hImageList`  
+ *hImageList*  
  Dojście do obiektu listy obrazów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -237,10 +237,10 @@ BOOL BeginDrag(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nImage`  
+ *nImage*  
  Liczony od zera indeks obrazu do przeciągnij.  
   
- `ptHotSpot`  
+ *ptHotSpot*  
  Współrzędne pozycji początkowej przeciągania (zazwyczaj pozycji kursora). Współrzędne są podawane względem lewym górnym rogu obrazu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -280,10 +280,10 @@ BOOL Copy(
  *iDst*  
  Liczony od zera indeks obrazu, który ma być używany jako docelowy operacji kopiowania.  
   
- `iSrc`  
+ *Kod*  
  Liczony od zera indeks obrazu, który ma być używany jako źródło operacji kopiowania.  
   
- `uFlags`  
+ *uFlags*  
  Wartość Flaga bitowa określa rodzaj operacji kopiowania ma zostać wykonane. Ten parametr może mieć jedną z następujących wartości:  
   
 |Wartość|Znaczenie|  
@@ -291,7 +291,7 @@ BOOL Copy(
 |`ILCF_MOVE`|Obraz źródłowy jest kopiowana na indeks obrazu docelowego. Ta operacja powoduje wielu wystąpień danego obrazu. `ILCF_MOVE` jest ustawieniem domyślnym.|  
 |`ILCF_SWAP`|Obraz źródłowy i docelowy wymiany pozycji w liście obrazu.|  
   
- `pSrc`  
+ *pSrc*  
  Wskaźnik do `CImageList` obiektu, który jest miejscem docelowym operacji kopiowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -338,13 +338,13 @@ BOOL Create(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cx`  
+ *CX*  
  Wymiary każdego obrazu w pikselach.  
   
- `cy`  
+ *CY*  
  Wymiary każdego obrazu w pikselach.  
   
- `nFlags`  
+ *nFlags*  
  Określa typ listy obrazów do utworzenia. Ten parametr może być kombinacją następujące wartości, ale może zawierać tylko jeden z `ILC_COLOR` wartości.  
   
 |Wartość|Znaczenie|  
@@ -358,40 +358,40 @@ BOOL Create(CImageList* pImageList);
 |`ILC_COLORDDB`|Użyj mapy bitowej zależne od urządzenia.|  
 |`ILC_MASK`|Używa maski. Listy obrazów zawiera dwa mapy bitowe, z których jeden jest monochromatyczny mapę bitową maskowania. Jeśli ta wartość nie jest uwzględniona, listy obrazów zawiera tylko jeden mapy bitowej. Zobacz [rysowanie obrazów z listy obrazów](../../mfc/drawing-images-from-an-image-list.md) dodatkowe informacje na temat obrazów maskowanego.|  
   
- `nInitial`  
+ *nInitial*  
  Liczba obrazów, które początkowo zawiera listy obrazów.  
   
- `nGrow`  
+ *nGrow*  
  Liczba obrazów za pomocą których może zwiększyć listy obrazów, podczas których system potrzebuje do zmiany rozmiaru na liście, aby zwolnić miejsce dla nowych obrazów. Tego parametru oznacza liczbę nowych obrazów, może zawierać listę obraz o zmienionym rozmiarze.  
   
- `nBitmapID`  
+ *nBitmapID*  
  Identyfikatory zasobu mapy bitowej ma zostać skojarzony z listy obrazów.  
   
- `crMask`  
+ *crMask*  
  Kolor używany do generowania maski. Podana mapa bitowa tego koloru każdego piksela zostanie zmieniona na kolor czarny i odpowiadający mu bit maski ma wartość 1.  
   
- `lpszBitmapID`  
+ *lpszBitmapID*  
  Ciąg zawierający identyfikatorów obrazów zasobów.  
   
- `imagelist1`  
+ *imagelist1*  
  Odwołanie do `CImageList` obiektu.  
   
- `nImage1`  
+ *nImage1*  
  Indeks pierwszego istniejącego obrazu.  
   
- `imagelist2`  
+ *imagelist2*  
  Odwołanie do `CImageList` obiektu.  
   
- `nImage2`  
+ *nImage2*  
  Indeks drugi istniejącego obrazu.  
   
- `dx`  
+ *DX*  
  Przesunięcie osi x drugiego obrazu w stosunku do pierwszego obrazu w pikselach.  
   
- `dy`  
+ *dy*  
  Przesunięcie osi y drugiego obrazu w stosunku do pierwszego obrazu w pikselach.  
   
- `pImageList`  
+ *pImageList*  
  Wskaźnik do `CImageList` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -443,7 +443,7 @@ HIMAGELIST Detach();
   Zobacz przykład [CImageList::Attach](#attach).  
   
 ##  <a name="dragenter"></a>  CImageList::DragEnter  
- Podczas operacji przeciągania, blokuje aktualizacji do okna, określony przez `pWndLock` i wyświetla obraz przeciągania pozycji określonej przez `point`.  
+ Podczas operacji przeciągania, blokuje aktualizacji do okna, określony przez *pWndLock* i wyświetla obraz przeciągania pozycji określonej przez *punktu*.  
   
 ```  
 static BOOL PASCAL DragEnter(
@@ -452,10 +452,10 @@ static BOOL PASCAL DragEnter(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWndLock`  
+ *pWndLock*  
  Wskaźnik do okna posiadającego obrazu przeciągania.  
   
- `point`  
+ *Punkt*  
  Pozycja jaką do wyświetlania obrazu przeciągania. Współrzędne są względem lewym górnym rogu okna (nie obszaru klienckiego).  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -464,7 +464,7 @@ static BOOL PASCAL DragEnter(
 ### <a name="remarks"></a>Uwagi  
  Współrzędne są względem oknie w lewym górnym rogu, więc musi kompensacji szerokości okna elementów, takich jak obramowania paska tytułu i paska menu, określając współrzędne.  
   
- Jeśli `pWndLock` jest **NULL**, ta funkcja rysuje obraz w kontekście wyświetlania skojarzony z oknem pulpitu i współrzędne są podawane względem lewym górnym rogu ekranu.  
+ Jeśli *pWndLock* jest **NULL**, ta funkcja rysuje obraz w kontekście wyświetlania skojarzony z oknem pulpitu i współrzędne są podawane względem lewym górnym rogu ekranu.  
   
  Ta funkcja umożliwia zablokowanie wszystkie aktualizacje w oknie danego podczas operacji przeciągania. Jeśli trzeba dowolnego rysunku podczas operacji przeciągania, takich jak wyróżnianie obiekt docelowy operacji przeciągania i upuszczania, można ukryć przeciąganego obrazu przy użyciu [CImageList::DragLeave](#dragleave) funkcji.  
   
@@ -472,14 +472,14 @@ static BOOL PASCAL DragEnter(
   Zobacz przykład [CImageList::BeginDrag](#begindrag).  
   
 ##  <a name="dragleave"></a>  CImageList::DragLeave  
- Odblokowuje okna, określony przez `pWndLock` i ukrywa obrazu przeciągania, umożliwiając okna do zaktualizowania.  
+ Odblokowuje okna, określony przez *pWndLock* i ukrywa obrazu przeciągania, umożliwiając okna do zaktualizowania.  
   
 ```  
 static BOOL PASCAL DragLeave(CWnd* pWndLock);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWndLock`  
+ *pWndLock*  
  Wskaźnik do okna posiadającego obrazu przeciągania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -496,7 +496,7 @@ static BOOL PASCAL DragMove(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pt`  
+ *PT*  
  Nowa pozycja przeciągania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -516,7 +516,7 @@ static BOOL PASCAL DragShowNolock(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bShow`  
+ *bShow*  
  Określa, czy ma być wyświetlany obraz przeciągania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -537,23 +537,23 @@ BOOL Draw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia docelowego.  
   
- `nImage`  
+ *nImage*  
  Liczony od zera indeks obrazu do rysowania.  
   
- `pt`  
+ *PT*  
  Lokalizację, w której ma zostać narysowany w kontekście określonego urządzenia.  
   
- `nStyle`  
+ *nStyle*  
  Flaga, określając styl rysowania. Może to być co najmniej jeden z następujących wartości:  
   
 |Wartość|Znaczenie|  
 |-----------|-------------|  
 |`ILD_BLEND25`, **ILD_FOCUS**|Rysuje obraz mieszania 25 procent kolorem wyróżnienie systemu. Ta wartość nie ma efektu Jeśli listy obrazów nie zawiera maski.|  
 |`ILD_BLEND50`, **ILD_SELECTED**, **ILD_BLEND**|Rysuje obraz mieszania 50 procent kolorem wyróżnienie systemu. Ta wartość nie ma efektu Jeśli listy obrazów nie zawiera maski.|  
-|**ILD_MASK**|Rysuje maski.|  
+|`ILD_MASK`|Rysuje maski.|  
 |`ILD_NORMAL`|Rysuje obraz za pomocą kolor tła dla listy obrazów. Jeśli kolor tła jest `CLR_NONE` wartość, obraz jest wybierana w sposób niewidoczny dla użytkownika za pomocą maski.|  
 |`ILD_TRANSPARENT`|Rysuje obraz przezroczysty za pomocą maski, niezależnie od koloru tła.|  
   
@@ -578,17 +578,17 @@ BOOL DrawEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia docelowego.  
   
- `nImage`  
+ *nImage*  
  Liczony od zera indeks obrazu do rysowania.  
   
- `pt`  
+ *PT*  
  Lokalizację, w której ma zostać narysowany w kontekście określonego urządzenia.  
   
- `sz`  
- Rozmiar część obrazu do rysowania względem lewego górnego rogu obrazu. Zobacz `dx` i *dy* w [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) w systemie Windows SDK.  
+ *Sz*  
+ Rozmiar część obrazu do rysowania względem lewego górnego rogu obrazu. Zobacz *dx* i *dy* w [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) w zestawie Windows SDK.  
   
  *clrBk*  
  Kolor tła obrazu. Zobacz *rgbBk* w [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) w zestawie Windows SDK.  
@@ -596,7 +596,7 @@ BOOL DrawEx(
  *clrFg*  
  Kolor pierwszego planu z obrazu. Zobacz *rgbFg* w [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) w zestawie Windows SDK.  
   
- `nStyle`  
+ *nStyle*  
  Flaga, określając styl rysowania. Zobacz *fStyle* w [ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -634,30 +634,30 @@ BOOL DrawIndirect(
  *pimldp*  
  Wskaźnik do [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) struktury, która zawiera informacje na temat operacji rysowania.  
   
- `pDC`  
+ *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia docelowego. Należy usunąć ten [CDC](../../mfc/reference/cdc-class.md) obiektu, gdy wszystko będzie gotowe z nim.  
   
- `nImage`  
+ *nImage*  
  Liczony od zera indeks obrazu do narysowania.  
   
- `pt`  
+ *PT*  
  A [punktu](http://msdn.microsoft.com/library/windows/desktop/dd162805) struktury zawierającej współrzędne x i y miejsca zostanie rysowania obrazu.  
   
- `sz`  
+ *Sz*  
  A [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) wskazaniem wielkości obraz, który ma być rysowany struktury.  
   
  *ptOrigin*  
  A [punktu](http://msdn.microsoft.com/library/windows/desktop/dd162805) struktury zawierającej współrzędne x i y Określanie lewego górnego rogu operacji rysowania względem samego obrazu. Nie są rysowane piksele obrazu, które są w lewo współrzędną x i powyżej współrzędną y.  
   
- `fStyle`  
+ *fStyle*  
  Flaga, określając styl rysowania i, opcjonalnie, obrazu nakładki. Zobacz sekcję uwag informacji w obrazie nakładki. Domyślna implementacja MFC `ILD_NORMAL`, Rysuje obraz za pomocą kolor tła dla listy obrazów. Jeśli kolor tła jest `CLR_NONE` wartość, obraz jest wybierana w sposób niewidoczny dla użytkownika za pomocą maski.  
   
- Opisano w innych możliwych stylów **fStyle** członkiem [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) struktury.  
+ Opisano w innych możliwych stylów *fStyle* członkiem [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) struktury.  
   
  *dwRop*  
- Wartość określającą kod operacji rastrowych. Te kody zdefiniuj, jak dane kolor prostokąta źródłowego zostanie połączona z danych kolor prostokąta docelowego do osiągnięcia ostateczny kolor. MFC Domyślna implementacja, **SRCCOPY**, kopiuje prostokąta źródłowego bezpośrednio do prostokąta docelowego. Ten parametr jest ignorowana, jeśli `fStyle` nie ma parametru **ILD_ROP** flagi.  
+ Wartość określającą kod operacji rastrowych. Te kody zdefiniuj, jak dane kolor prostokąta źródłowego zostanie połączona z danych kolor prostokąta docelowego do osiągnięcia ostateczny kolor. MFC Domyślna implementacja, **SRCCOPY**, kopiuje prostokąta źródłowego bezpośrednio do prostokąta docelowego. Ten parametr jest ignorowana, jeśli *fStyle* nie ma parametru **ILD_ROP** flagi.  
   
- Inne możliwe wartości zostały opisane w obszarze **dwRop** członkiem [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) struktury.  
+ Inne możliwe wartości zostały opisane w obszarze *dwRop* członkiem [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) struktury.  
   
  *rgbBack*  
  Kolor tła obrazów, domyślnie `CLR_DEFAULT`. Ten parametr może być wartości RGB zdefiniowanym przez aplikację lub jeden z następujących wartości:  
@@ -675,7 +675,7 @@ BOOL DrawIndirect(
 |`CLR_DEFAULT`|Domyślny kolor pierwszego planu. Obraz jest rysowane przy użyciu systemu kolor wyróżnienia jako kolor pierwszego planu.|  
 |`CLR_NONE`|Brak koloru mieszania. Obraz jest mieszane kolorem kontekstu urządzenia docelowego.|  
   
- Ten parametr jest używany tylko wtedy, gdy `fStyle` obejmuje `ILD_BLEND25` lub `ILD_BLEND50` flagi.  
+ Ten parametr jest używany tylko wtedy, gdy *fStyle* obejmuje `ILD_BLEND25` lub `ILD_BLEND50` flagi.  
   
  *fState*  
  Flaga określający stan rysowania. Ten element członkowski może zawierać jedną lub więcej flag stan listy obrazów.  
@@ -696,7 +696,7 @@ BOOL DrawIndirect(
 ### <a name="remarks"></a>Uwagi  
  Jeśli chcesz samodzielnie wypełnić struktury Win32, należy użyć pierwszej wersji. Druga wersja należy użyć, jeśli chcesz korzystać z co najmniej jeden z argumentów domyślnych MFC lub uniknąć Zarządzanie struktury.  
   
- Nakładka obraz to obraz, który ma zostać narysowana na podstawowy obraz, określona w funkcji członkowskiej przez `nImage` parametru. Rysowanie za pomocą maski nakładki [rysowania](#draw) funkcja członkowska o indeksie na podstawie co określony za pomocą maski nakładki [INDEXTOOVERLAYMASK](http://msdn.microsoft.com/library/windows/desktop/bb761408) makra.  
+ Nakładka obraz to obraz, który ma zostać narysowana na podstawowy obraz, określona w funkcji członkowskiej przez *nImage* parametru. Rysowanie za pomocą maski nakładki [rysowania](#draw) funkcja członkowska o indeksie na podstawie co określony za pomocą maski nakładki [INDEXTOOVERLAYMASK](http://msdn.microsoft.com/library/windows/desktop/bb761408) makra.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CImageList#11](../../mfc/reference/codesnippet/cpp/cimagelist-class_10.cpp)]  
@@ -722,7 +722,7 @@ HICON ExtractIcon(int nImage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nImage`  
+ *nImage*  
  Liczony od zera indeks obrazu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -742,7 +742,7 @@ static CImageList* PASCAL FromHandle(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hImageList`  
+ *hImageList*  
  Określa listę obrazu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -762,7 +762,7 @@ static CImageList* PASCAL FromHandlePermanent(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hImageList`  
+ *hImageList*  
  Określa listę obrazu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -797,7 +797,7 @@ static CImageList* PASCAL GetDragImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpPoint`  
+ *lppoint —*  
  Adres [punktu](http://msdn.microsoft.com/library/windows/desktop/dd162805) struktury, która odbiera bieżącego przeciągnij pozycji.  
   
  *lpPointHotSpot*  
@@ -829,7 +829,7 @@ BOOL GetImageInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nImage`  
+ *nImage*  
  Liczony od zera indeks obrazu.  
   
  *pImageInfo*  
@@ -889,7 +889,7 @@ BOOL Read(CArchive* pArchive);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pArchive`  
+ *pArchive*  
  Wskaźnik do `CArchive` obiektu, z którego listy obrazów jest do odczytu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -906,14 +906,14 @@ BOOL Remove(int nImage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nImage`  
+ *nImage*  
  Liczony od zera indeks obrazu do usunięcia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Wszystkie elementy występujące po słowie `nImage` teraz Przenieś w dół o jedną pozycję. Na przykład jeśli listy obrazów zawiera dwa elementy, usunięcie pierwszy element spowoduje, że element pozostałych się teraz na pierwszym miejscu. `nImage`= 0 dla elementu na pierwszym miejscu.  
+ Wszystkie elementy po *nImage* teraz Przenieś w dół o jedną pozycję. Na przykład jeśli listy obrazów zawiera dwa elementy, usunięcie pierwszy element spowoduje, że element pozostałych się teraz na pierwszym miejscu. *nImage*= 0 dla elementu na pierwszym miejscu.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CImageList#19](../../mfc/reference/codesnippet/cpp/cimagelist-class_19.cpp)]  
@@ -934,22 +934,22 @@ int Replace(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nImage`  
+ *nImage*  
  Liczony od zera indeks obrazu do zastąpienia.  
   
- `pbmImage`  
+ *pbmImage*  
  Wskaźnik do mapy bitowej zawierającego obraz.  
   
- `pbmMask`  
+ *pbmMask*  
  Wskaźnik do mapy bitowej zawierającego maski. Maska nie jest używana z listy obrazów, ten parametr jest ignorowana.  
   
- `hIcon`  
+ *hIcon*  
  Dojście do ikony, która zawiera mapę bitową i maska dla nowego obrazu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wersja zwracanie **BOOL** zwraca różną od zera w przypadku powodzenia; w przeciwnym razie wartość 0.  
   
- Wersja zwracanie `int` zwraca liczony od zera indeks obrazu w przypadku powodzenia; w przeciwnym razie - 1.  
+ Wersja zwracanie **int** zwraca liczony od zera indeks obrazu w przypadku powodzenia; w przeciwnym razie - 1.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołanie tej funkcji Członkowskich po wywołaniu [SetImageCount](#setimagecount) można przypisać nową, prawidłową obrazów do symbolu zastępczego obrazu numery indeksu.  
@@ -965,7 +965,7 @@ COLORREF SetBkColor(COLORREF cr);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cr`  
+ *CR*  
  Kolor tła do ustawienia. Można ją `CLR_NONE`. W takim przypadku obrazy są rysowane niewidocznie za pomocą maski.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -987,7 +987,7 @@ BOOL SetDragCursorImage(
  *nDrag*  
  Indeks obrazu do połączenia z obrazem przeciągania.  
   
- `ptHotSpot`  
+ *ptHotSpot*  
  Położenie punktu aktywnego w ramach nowego obrazu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1028,7 +1028,7 @@ BOOL SetOverlayImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nImage`  
+ *nImage*  
  Liczony od zera indeks obrazu do użycia jako maski nakładki.  
   
  *nOverlay*  
@@ -1053,7 +1053,7 @@ BOOL Write(CArchive* pArchive);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pArchive`  
+ *pArchive*  
  Wskaźnik do `CArchive` obiektu, w którym ma być przechowywany listy obrazów.  
   
 ### <a name="return-value"></a>Wartość zwracana  

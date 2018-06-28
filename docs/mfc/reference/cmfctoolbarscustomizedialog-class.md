@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7015e3be189bce8745777ef7353e1f2788a6f6be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b4c2d7de8c9be8aa33cd5849c089a2caac1271b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378184"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041880"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>Klasa CMFCToolBarsCustomizeDialog
 Karta niemodalne okno dialogowe ( [cpropertysheet — klasa](../../mfc/reference/cpropertysheet-class.md)), który umożliwia użytkownikowi dostosowywanie pasków narzędzi, menu, skróty klawiaturowe, narzędzia zdefiniowane przez użytkownika i stylu wizualnego w aplikacji. Zazwyczaj użytkownik uzyskuje dostęp do tego okna dialogowego, wybierając **Dostosuj** z **narzędzia** menu.  
@@ -137,16 +137,16 @@ void AddButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCategoryId`  
+ [in] *uiCategoryId*  
  Określa identyfikator kategorii, do której mają zostać wstawione przycisku.  
   
- [in] `button`  
+ [in] *przycisku*  
  Określa przycisk Wstaw.  
   
- [in] `iInsertBefore`  
+ [in] *iInsertBefore*  
  Określa liczony od zera indeks przycisku paska narzędzi, przed którym zostanie wstawiony przycisku.  
   
- [in] `lpszCategory`  
+ [in] *lpszCategory*  
  Określa ciąg kategorii przycisk Wstaw.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -171,14 +171,14 @@ BOOL AddMenu(UINT uiMenuResId);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiMenuResId`  
+ [in] *uiMenuResId*  
  Określa identyfikator zasobu menu do załadowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `TRUE` Jeśli menu został dodany pomyślnie; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
- W wywołaniu `AddMenuCommands`, `bPopup` jest `FALSE`. W związku z tym tej metody nie dodaje elementy menu, które zawiera podmenu do listy poleceń. Ta metoda dodawania elementów menu w podmenu do listy poleceń.  
+ W wywołaniu `AddMenuCommands`, *bPopup* jest `FALSE`. W związku z tym tej metody nie dodaje elementy menu, które zawiera podmenu do listy poleceń. Ta metoda dodawania elementów menu w podmenu do listy poleceń.  
   
 ##  <a name="addmenucommands"></a>  CMFCToolBarsCustomizeDialog::AddMenuCommands  
  Dodaje elementy do listy poleceń w **polecenia** strony do reprezentowania wszystkich elementów w określonym menu.  
@@ -192,22 +192,22 @@ void AddMenuCommands(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pMenu`  
+ [in] *pMenu*  
  Wskaźnik do obiektu cmenu — do dodania.  
   
- [in] `bPopup`  
+ [in] *bPopup*  
  Określa, czy można wstawić elementów menu podręcznego do listy poleceń.  
   
- [in] `lpszCategory`  
+ [in] *lpszCategory*  
  Nazwa kategorii, aby wstawić menu.  
   
- [in] `lpszMenuPath`  
+ [in] *lpszMenuPath*  
  Prefiks, który jest dodawany do nazwy po poleceniu jest wyświetlany w **wszystkie kategorie** listy.  
   
 ### <a name="remarks"></a>Uwagi  
- `AddMenuCommands` Metody pętle za pośrednictwem wszystkich elementów menu `pMenu`. Dla każdego elementu menu, która nie zawiera podmenu, ta metoda tworzy [klasy CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) obiektu i wywołania [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) metodę, aby dodać element menu jako pasek narzędzi przycisk do listy poleceń na **polecenia** strony. Separatory są ignorowane w tym procesie.  
+ `AddMenuCommands` Metody pętle za pośrednictwem wszystkich elementów menu *pMenu*. Dla każdego elementu menu, która nie zawiera podmenu, ta metoda tworzy [klasy CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) obiektu i wywołania [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) metodę, aby dodać element menu jako pasek narzędzi przycisk do listy poleceń na **polecenia** strony. Separatory są ignorowane w tym procesie.  
   
- Jeśli `bPopup` jest `TRUE`, dla każdego elementu menu, która zawiera podmenu ta metoda tworzy [klasy CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) obiektu i wstawia go do listy poleceń, wywołując `AddButton`. W przeciwnym razie elementów menu, które zawierają podmenu nie są wyświetlane na liście poleceń. W obu przypadkach gdy `AddMenuCommands` napotkał element menu z podmenu wywołuje sam rekursywnie, przekazywanie do podmenu jako wskaźnik `pMenu` parametru i dołączenie etykiety podmenu `lpszMenuPath`.  
+ Jeśli *bPopup* jest `TRUE`, dla każdego elementu menu, która zawiera podmenu ta metoda tworzy [klasy CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) obiektu i wstawia go do listy poleceń, wywołując `AddButton` . W przeciwnym razie elementów menu, które zawierają podmenu nie są wyświetlane na liście poleceń. W obu przypadkach gdy `AddMenuCommands` napotkał element menu z podmenu wywołuje sam rekursywnie, przekazywanie do podmenu jako wskaźnik *pMenu* parametru i dołączenie etykiety podmenu *lpszMenuPath*.  
   
 ##  <a name="addtoolbar"></a>  CMFCToolBarsCustomizeDialog::AddToolBar  
  Ładuje paska narzędzi z zasobów. Następnie dla każdego polecenia w wywołaniach menu [CMFCToolBarsCustomizeDialog::AddButton](#addbutton) metodę, aby wstawić przycisk listy poleceń na **polecenia** strony z określonej kategorii.  
@@ -223,13 +223,13 @@ BOOL AddToolBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCategoryId`  
+ [in] *uiCategoryId*  
  Określa identyfikator zasobu kategorii narzędzi, aby dodać.  
   
- [in] `uiToolbarResId`  
+ [in] *uiToolbarResId*  
  Określa identyfikator zasobu narzędzi, w której polecenia są wstawiane do listy poleceń.  
   
- [in] `lpszCategory`  
+ [in] *lpszCategory*  
  Określa nazwę kategorii, do której ma zostać dodany na pasku narzędzi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -251,7 +251,7 @@ virtual BOOL CheckToolsValidity(const CObList& lstTools);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lstTools`  
+ [in] *lstTools*  
  Z listy zdefiniowanej przez użytkownika narzędzi do sprawdzenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -274,13 +274,13 @@ CMFCToolBarsCustomizeDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pWndParentFrame`  
+ [in] *pWndParentFrame*  
  Wskaźnik do ramki nadrzędnej. Ten parametr nie może być `NULL`.  
   
- [in] `bAutoSetFromMenus`  
+ [in] *bAutoSetFromMenus*  
  Wartość logiczna określająca, czy mają zostać dodane do listy poleceń polecenia menu ze wszystkich menu na **polecenia** strony. Jeśli ten parametr ma `TRUE`, są dodawane poleceń menu. W przeciwnym razie nie zostaną dodane poleceń menu.  
   
- [in] `uiFlags`  
+ [in] *uiFlags*  
  Kombinacja flag, które wpływają na zachowanie okna dialogowego. Ten parametr może mieć co najmniej jeden z następujących wartości:  
   
 - `AFX_CUSTOMIZE_MENU_SHADOWS`  
@@ -299,13 +299,13 @@ CMFCToolBarsCustomizeDialog(
   
 - `AFX_CUSTOMIZE_NO_LARGE_ICONS`  
   
- [in] `plistCustomPages`  
+ [in] *plistCustomPages*  
  Wskaźnik do listy `CRuntimeClass` obiektów, które określają dodatkowe strony niestandardowe.  
   
 ### <a name="remarks"></a>Uwagi  
- `plistCustomPages` Parametr odnosi się do listy `CRuntimeClass` obiektów, które określają dodatkowe strony niestandardowe. Konstruktor dodaje więcej stron do okna dialogowego za pomocą [CRuntimeClass::CreateObject](../../mfc/reference/cruntimeclass-structure.md#createobject) metody. Zobacz przykład CustomPages na przykład, który dodaje więcej stron do **Dostosuj** okno dialogowe.  
+ *PlistCustomPages* parametr odnosi się do listy `CRuntimeClass` obiektów, które określają dodatkowe strony niestandardowe. Konstruktor dodaje więcej stron do okna dialogowego za pomocą [CRuntimeClass::CreateObject](../../mfc/reference/cruntimeclass-structure.md#createobject) metody. Zobacz przykład CustomPages na przykład, który dodaje więcej stron do **Dostosuj** okno dialogowe.  
   
- Aby uzyskać więcej informacji o wartości, które mogą upłynąć w `uiFlags` parametrów, zobacz [CMFCToolBarsCustomizeDialog::GetFlags](#getflags).  
+ Aby uzyskać więcej informacji o wartości, które mogą upłynąć w *uiFlags* parametrów, zobacz [CMFCToolBarsCustomizeDialog::GetFlags](#getflags).  
   
 ### <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano sposób tworzenia obiektu `CMFCToolBarsCustomizeDialog` klasy. Następujący fragment kodu jest częścią [próbki niestandardowych stron](../../visual-cpp-samples.md).  
@@ -333,13 +333,13 @@ void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  `TRUE` Aby włączyć paskach zdefiniowane przez użytkownika; `FALSE` wyłączyć pasków narzędzi.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `bEnable` jest `TRUE`, **nowy**, **zmienić** i **usunąć** przyciski są wyświetlane na **paski narzędzi** strony.  
+ Jeśli *bWłączenie* jest `TRUE`, **nowy**, **zmienić** i **usunąć** przyciski są wyświetlane na **paski narzędzi**  strony.  
   
- Domyślnie lub jeśli `bEnable` jest `FALSE`, nie są wyświetlane tych przycisków i użytkownik nie może definiować nowych pasków narzędzi.  
+ Domyślnie lub jeśli *bWłączenie* jest `FALSE`, nie są wyświetlane tych przycisków i użytkownik nie może definiować nowych pasków narzędzi.  
   
 ##  <a name="fillallcommandslist"></a>  CMFCToolBarsCustomizeDialog::FillAllCommandsList  
  Wypełnia dostarczonych `CListBox` obiektu za pomocą poleceń w **wszystkie polecenia** kategorii.  
@@ -369,10 +369,10 @@ void FillCategoriesComboBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `wndCategory`  
+ [out] *wndCategory*  
  Odwołanie do `CComboBox` obiektu, aby wypełnić.  
   
- [in] `bAddEmpty`  
+ [in] *bAddEmpty*  
  Wartość logiczna określająca, czy mają zostać dodane do pola kombi, które nie mają polecenia kategorii. Jeśli ten parametr ma `TRUE`, pusty kategorie są dodawane do pola kombi. W przeciwnym razie wartość pusta kategorii nie zostaną dodane.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -394,10 +394,10 @@ void FillCategoriesListBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `wndCategory`  
+ [out] *wndCategory*  
  Odwołanie do `CListBox` obiektu, aby wypełnić.  
   
- [in] `bAddEmpty`  
+ [in] *bAddEmpty*  
  Wartość logiczna określająca, czy mają zostać dodane do pola listy, które nie mają polecenia kategorii. Jeśli ten parametr ma `TRUE`, pusty kategorie są dodawane do pola listy. W przeciwnym razie wartość pusta kategorii nie zostaną dodane.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -417,7 +417,7 @@ LPCTSTR GetCommandName(UINT uiCmd) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Identyfikator polecenia do pobrania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -433,17 +433,17 @@ int GetCountInCategory(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszItemName`  
+ [in] *lpszItemName*  
  Etykieta tekstowa do dopasowania.  
   
- [in] `lstCommands`  
+ [in] *lstCommands*  
  Odwołanie do listy, która zawiera `CMFCToolBarButton` obiektów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczba elementów w określonych listy którego tekst etykiety equals `lpszItemName`.  
+ Liczba elementów w określonych listy którego tekst etykiety equals *lpszItemName*.  
   
 ### <a name="remarks"></a>Uwagi  
- Każdy element na liście udostępnionego obiektu musi być typu `CMFCToolBarButton`. Ta metoda porównuje `lpszItemName` z [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext) element członkowski danych.  
+ Każdy element na liście udostępnionego obiektu musi być typu `CMFCToolBarButton`. Ta metoda porównuje *lpszItemName* z [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext) element członkowski danych.  
   
 ##  <a name="getflags"></a>  CMFCToolBarsCustomizeDialog::GetFlags  
  Pobiera zestaw flag, które wpływają na zachowanie okna dialogowego.  
@@ -456,7 +456,7 @@ UINT GetFlags() const;
  Zestaw flag, które wpływają na zachowanie okna dialogowego.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda pobiera wartość `uiFlags` parametr przekazany do konstruktora. Zwracana wartość może być co najmniej jeden z następujących wartości:  
+ Ta metoda pobiera wartość *uiFlags* parametr przekazany do konstruktora. Zwracana wartość może być co najmniej jeden z następujących wartości:  
   
  `AFX_CUSTOMIZE_MENU_SHADOWS`  
  Umożliwia użytkownikowi określenie wyglądu tle menu.  
@@ -492,7 +492,7 @@ virtual void OnAfterChangeTool(CUserTool* pSelTool);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [w, out] `pSelTool`  
+ [w, out] *pSelTool*  
  Wskaźnik do obiektu narzędzia użytkownika, który został zmieniony.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -506,7 +506,7 @@ virtual BOOL OnAssignKey(ACCEL* pAccel);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [w, out] `pAccel`  
+ [w, out] *pAccel*  
  Wskaźnik do klawiatury proponowanych przypisania Active Directory, które są jest wyrażone jako [AKCELERACJA](http://msdn.microsoft.com/library/windows/desktop/ms646340) struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -523,11 +523,11 @@ virtual void OnBeforeChangeTool(CUserTool* pSelTool);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [w, out] `pSelTool`  
+ [w, out] *pSelTool*  
  Wskaźnik do obiektu narzędzia użytkownika, który ma zostać zastąpiony.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda jest wywoływana przez platformę, gdy właściwości narzędzia zdefiniowane przez użytkownika ma zostać zmieniona. Domyślna implementacja nie działa. Zastąpienie `OnBeforeChangeTool` metodę w klasie pochodnej z `CMFCToolBarsCustomizeDialog` Jeśli chcesz wykonać przetwarzania, zanim nastąpi zmiana narzędzia użytkownika, takie jak zwolnienie zasobów który `pSelTool` używa.  
+ Ta metoda jest wywoływana przez platformę, gdy właściwości narzędzia zdefiniowane przez użytkownika ma zostać zmieniona. Domyślna implementacja nie działa. Zastąpienie `OnBeforeChangeTool` metodę w klasie pochodnej z `CMFCToolBarsCustomizeDialog` Jeśli chcesz wykonać przetwarzania, zanim nastąpi zmiana narzędzia użytkownika, takie jak zwolnienie zasobów który *pSelTool* używa.  
   
 ##  <a name="onedittoolbarmenuimage"></a>  CMFCToolBarsCustomizeDialog::OnEditToolbarMenuImage  
  Zostanie uruchomiony Edytor obrazów, dzięki czemu użytkownik może dostosować ikony elementu menu lub przycisku paska narzędzi.  
@@ -540,13 +540,13 @@ virtual BOOL OnEditToolbarMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Wskaźnik do okna nadrzędnego.  
   
- [in] `bitmap`  
+ [in] *mapy bitowej*  
  Odwołanie do obiektu bitmap do edycji.  
   
- [in] `nBitsPerPixel`  
+ [in] *nBitsPerPixel*  
  Bitmap rozdzielczość kolorów w bitów na piksel.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -604,20 +604,20 @@ int RemoveButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCategoryId`  
+ [in] *uiCategoryId*  
  Określa identyfikator kategorii, z którego mają zostać usunięte przycisku.  
   
- [in] `uiCmdId`  
+ [in] *uiCmdId*  
  Określa identyfikator polecenia przycisku.  
   
- [in] `lpszCategory`  
+ [in] *lpszCategory*  
  Określa nazwę kategorii, z którego mają zostać usunięte przycisku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczony od zera indeks przycisk usunięty lub -1, jeśli polecenie o określonym identyfikatorze nie został znaleziony w wybranej kategorii. Jeśli `uiCategoryId` -1, jest zwracana wartość wynosi 0.  
+ Liczony od zera indeks przycisk usunięty lub -1, jeśli polecenie o określonym identyfikatorze nie został znaleziony w wybranej kategorii. Jeśli *uiCategoryId* -1, jest zwracana wartość wynosi 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby usunąć przycisk z wszystkich kategorii, wywołaj metodę pierwszy przeciążenia tej metody lub zestawu `uiCategoryId` -1.  
+ Aby usunąć przycisk z wszystkich kategorii, wywołaj metodę pierwszy przeciążenia tej metody lub zestawu *uiCategoryId* -1.  
   
 ##  <a name="renamecategory"></a>  CMFCToolBarsCustomizeDialog::RenameCategory  
  Zmienia nazwę kategorii w polu listy kategorii na **polecenia** strony.  
@@ -629,10 +629,10 @@ BOOL RenameCategory(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszCategoryOld`  
+ [in] *lpszCategoryOld*  
  Nazwa kategorii, aby zmienić.  
   
- [in] `lpszCategoryNew`  
+ [in] *lpszCategoryNew*  
  Nowa nazwa kategorii.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -651,11 +651,11 @@ void ReplaceButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Określa polecenie przycisku mają zostać zastąpione.  
   
- [in] `button`  
- A `const` odwołanie do obiektu przycisku paska narzędzi, który zastępuje stary przycisku.  
+ [in] *przycisku*  
+ A **const** odwołanie do obiektu przycisku paska narzędzi, który zastępuje stary przycisku.  
   
 ### <a name="remarks"></a>Uwagi  
  Gdy [CMFCToolBarsCustomizeDialog::AddMenu](#addmenu), [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands), lub [CMFCToolBarsCustomizeDialog::AddToolBar](#addtoolbar) dodaje polecenie **polecenia** strony, że polecenie jest w formie [klasy CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) obiektu (lub [klasy CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) obiektu do menu element zawierający podmenu dodane przez `AddMenuCommands`). Struktura wywołuje również tych trzech metod, aby automatycznie dodać polecenia. Polecenie może być reprezentowana przez typ pochodny zamiast tego należy wywołać `ReplaceButton` i podaj przycisku typu pochodnego.  
@@ -673,7 +673,7 @@ BOOL SetUserCategory(LPCTSTR lpszCategory);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszCategory`  
+ [in] *lpszCategory*  
  Nazwa kategorii.  
   
 ### <a name="return-value"></a>Wartość zwracana  

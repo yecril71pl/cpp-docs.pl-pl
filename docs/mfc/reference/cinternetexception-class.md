@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6908b72f30b3a2561f7091b912e8144f2b763cc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6db83d88eec06ce21258ed751c5e1b232f696836
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366899"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037892"
 ---
 # <a name="cinternetexception-class"></a>Klasa CInternetException
 Reprezentuje warunku wyjątku związanych z operacją Internet.  
@@ -76,7 +76,7 @@ CInternetException(DWORD dwError);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwError`  
+ *dwError*  
  Błąd, który spowodował wyjątek.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -90,7 +90,7 @@ DWORD_PTR m_dwContext;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Identyfikator kontekstu pierwotnie została określona w [CInternetSession](../../mfc/reference/cinternetsession-class.md) i przekazywane przez MFC do [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)- i [CInternetFile](../../mfc/reference/cinternetfile-class.md)-klas pochodnych. Można zastąpić to ustawienie domyślne i przypisać jedną `dwContext` wartość wybrane parametru. `dwContext` jest powiązany z żadnej operacji danego obiektu. `dwContext` Określa informacje o stanie operacji zwrócony przez [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).  
+ Identyfikator kontekstu pierwotnie została określona w [CInternetSession](../../mfc/reference/cinternetsession-class.md) i przekazywane przez MFC do [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)- i [CInternetFile](../../mfc/reference/cinternetfile-class.md)-klas pochodnych. Można zastąpić to ustawienie domyślne i przypisać jedną *dwContext* wartość wybrane parametru. *dwContext* jest skojarzony z żadnej operacji danego obiektu. *dwContext* identyfikuje operacji informacje o stanie zwracanych przez [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).  
   
 ##  <a name="m_dwerror"></a>  CInternetException::m_dwError  
  Błąd, który spowodował wyjątek.  

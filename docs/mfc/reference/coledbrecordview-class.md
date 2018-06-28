@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b69aafa7f8b07d96d754d080e7fb5abd170e167
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 122ceb1715323e1482b2a8a8544cbe3f6270c713
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372209"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037860"
 ---
 # <a name="coledbrecordview-class"></a>Coledbrecordview — klasa
 Widok, który wyświetla rekordów bazy danych w kontrolkach.  
@@ -92,10 +92,10 @@ COleDBRecordView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Zawiera ciąg zerem, który jest nazwa zasobu szablonu okna dialogowego.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Zawiera identyfikator zasobu szablonu okna dialogowego.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -116,7 +116,7 @@ virtual CRowset<>* OnGetRowset() = 0;
  Standard `HRESULT` wartość.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę funkcję elementu członkowskiego, utworzyć lub uzyskać obiektu zestawu wierszy i przywrócenie dojścia. Deklarowanie klasy widoków rekordów z ClassWizard kreator zapisuje zastąpienie domyślnego dla Ciebie. W ClassWizard Domyślna implementacja zwraca dojście wierszy przechowywane w widoku rekordu, jeśli taka istnieje. Jeśli nie, tworzy go typu obiektu zestawu wierszy określono wywołań i ClassWizard jego **Otwórz** element członkowski funkcji można otworzyć tabeli, lub uruchomić zapytanie, a następnie zwraca uchwyt do obiektu.  
+ Należy przesłonić tę funkcję elementu członkowskiego, utworzyć lub uzyskać obiektu zestawu wierszy i przywrócenie dojścia. Deklarowanie klasy widoków rekordów z ClassWizard kreator zapisuje zastąpienie domyślnego dla Ciebie. W ClassWizard Domyślna implementacja zwraca dojście wierszy przechowywane w widoku rekordu, jeśli taka istnieje. Jeśli nie, tworzy go typu obiektu zestawu wierszy określono wywołań i ClassWizard jego `Open` element członkowski funkcji można otworzyć tabeli, lub uruchomić zapytanie, a następnie zwraca uchwyt do obiektu.  
   
 > [!NOTE]
 >  Wstecz, aby MFC 7.0 `OnGetRowset` zwrócił wskaźnik do `CRowset`. Jeśli masz kod, który wywołuje `OnGetRowset`, należy zmienić typ zwracany do szablonowej klasy **CRowset <>**.  
@@ -134,7 +134,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDMoveCommand`  
+ *nIDMoveCommand*  
  Jedna z następujących wartości Identyfikatora standardowego polecenia:  
   
 - `ID_RECORD_FIRST` — Przejście do pierwszego rekordu w zestawie rekordów.  
@@ -149,7 +149,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  Różna od zera, jeśli przeniesienie zakończyło się pomyślnie; w przeciwnym razie 0, jeśli żądanie przeniesienia zostało odrzucone.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja wywołuje odpowiednie **Przenieś** funkcji członkowskiej klasy `CRowset` obiekt skojarzony z widokiem rekordów.  
+ Domyślna implementacja wywołuje odpowiednie `Move` funkcji członkowskiej klasy `CRowset` obiekt skojarzony z widokiem rekordów.  
   
  Domyślnie `OnMove` aktualizacji bieżącego rekordu w źródle danych, jeśli użytkownik zmienił się on w widoku rekordu.  
   

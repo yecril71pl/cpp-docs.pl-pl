@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9dbcaa3f8e02a87713363f1ea38c5d2260171df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba1d156d9453cd6a74a3543295d9d90d761e77f9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367974"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040749"
 ---
 # <a name="cmemorystate-structure"></a>Struktura CMemoryState
 Zapewnia to wygodny sposób wykrywania przecieki pamięci w programie.  
@@ -66,7 +66,7 @@ struct CMemoryState
   
  Podobnie jak w przypadku innych diagnostyki `CMemoryState` diagnostyki są dostępne tylko w wersjach debugowania programu. Wersja do debugowania musi mieć **_DEBUG** stała zdefiniowane.  
   
- Jeśli podejrzewasz, program ma przeciek pamięci, możesz użyć `Checkpoint`, **różnica**, i `DumpStatistics` funkcje odnajdywania różnica między stanem pamięci (obiekty przydzielone) w dwóch różnych punktach w programie wykonanie. Ta informacje mogą być przydatne w określeniu, czy funkcja czyści wszystkie obiekty, które go przydziela.  
+ Jeśli podejrzewasz, program ma przeciek pamięci, możesz użyć `Checkpoint`, `Difference`, i `DumpStatistics` funkcje odnajdywania różnica między stanem pamięci (obiekty przydzielone) w dwóch różnych punktach wykonywania programu. Ta informacje mogą być przydatne w określeniu, czy funkcja czyści wszystkie obiekty, które go przydziela.  
   
  Jeśli po prostu wiedząc, gdzie występuje niezgodność alokacji i dezalokacji nie zawiera wystarczającej ilości informacji, możesz użyć `DumpAllObjectsSince` zrzut wszystkich obiektów przydzielonych od czasu poprzedniego wywołania funkcji `Checkpoint`. Ten zrzut zawiera kolejność alokacji, plik źródłowy oraz wiersza, w którym obiekt został przydzielony (Jeśli używasz `DEBUG_NEW` alokacji) i pochodnym obiektu, jego adres oraz jego rozmiaru. `DumpAllObjectsSince` Każdy obiekt wymaga także `Dump` funkcji, aby podać informacje o bieżącym stanie.  
   

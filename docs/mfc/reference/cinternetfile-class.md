@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60ee6e3d23dc197f7d8114f571bd121f864701d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c60027195024a9abb1af5ce5ec47dc6f6a6bfbf8
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372421"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038988"
 ---
 # <a name="cinternetfile-class"></a>Klasa CInternetFile
 Umożliwia dostęp do plików w systemach zdalnych, które używają protokołów internetowych.  
@@ -97,7 +97,7 @@ class CInternetFile : public CStdioFile
 ## <a name="remarks"></a>Uwagi  
  Udostępnia klasę podstawową dla [CHttpFile](../../mfc/reference/chttpfile-class.md) i [cgopherfile —](../../mfc/reference/cgopherfile-class.md) klasy plików. Nigdy nie twórz `CInternetFile` obiekt bezpośrednio. Zamiast tego utworzyć przez wywołanie obiektu jednej z jej klas pochodnych [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) lub [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest). Można również utworzyć `CInternetFile` obiektu przez wywołanie metody [CFtpConnection::OpenFile](../../mfc/reference/cftpconnection-class.md#openfile).  
   
- `CInternetFile` Funkcje Członkowskie **Otwórz**, `LockRange`, `UnlockRange`, i `Duplicate` nie są zaimplementowane w przypadku `CInternetFile`. Jeśli wywoływać te funkcje na `CInternetFile` obiektu, otrzymasz [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
+ `CInternetFile` Funkcje Członkowskie `Open`, `LockRange`, `UnlockRange`, i `Duplicate` nie są zaimplementowane w przypadku `CInternetFile`. Jeśli wywoływać te funkcje na `CInternetFile` obiektu, otrzymasz [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
   
  Aby dowiedzieć się więcej na temat `CInternetFile` współpracuje z innych klas MFC Internet, zapoznaj się z artykułem [Internet programowanie za pomocą interfejsu WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
@@ -123,7 +123,7 @@ virtual void Abort();
 ### <a name="remarks"></a>Uwagi  
  Jeśli plik nie został zamknięty przed niszczenie obiektu, destruktor zamyka dla Ciebie.  
   
- Podczas obsługi wyjątków, **przerwać** różni się od [Zamknij](#close) na dwa sposoby ważne. Najpierw **przerwać** funkcji nie Zgłoś wyjątek przy błędach ponieważ ignoruje ona błędów. Drugi, **przerwać** nie **ASSERT** Jeśli plik nie został otwarty lub została wcześniej zamknięta.  
+ Podczas obsługi wyjątków, `Abort` różni się od [Zamknij](#close) na dwa sposoby ważne. Najpierw `Abort` funkcji nie Zgłoś wyjątek przy błędach ponieważ ignoruje ona błędów. Drugi, `Abort` nie **ASSERT** Jeśli plik nie został otwarty lub została wcześniej zamknięta.  
   
 ##  <a name="cinternetfile"></a>  CInternetFile::CInternetFile  
  Ta funkcja członkowska jest wywoływane, gdy `CInternetFile` tworzony jest obiekt.  
@@ -146,25 +146,25 @@ CInternetFile(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hFile`  
+ *hFile*  
  Dojście do pliku internetowych.  
   
- `pstrFileName`  
+ *pstrFileName*  
  Wskaźnik do ciąg zawierający nazwę pliku.  
   
- `pConnection`  
+ *pConnection*  
  Wskaźnik do [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) obiektu.  
   
  *bReadMode*  
  Wskazuje, czy plik jest tylko do odczytu.  
   
- `hSession`  
+ *hSession*  
  Dojście do sesji Internetu.  
   
- `pstrServer`  
+ *pstrServer*  
  Wskaźnik do ciąg zawierający nazwę serwera.  
   
- `dwContext`  
+ *dwContext*  
  Identyfikator kontekstu `CInternetFile` obiektu. Zobacz [podstawy WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -212,7 +212,7 @@ operator HINTERNET() const;
 ```  
   
 ##  <a name="read"></a>  CInternetFile::Read  
- Wywołanie tej funkcji Członkowskich do odczytu do danego pamięci, zaczynając od `lpvBuf`, określona liczba bajtów, `nCount`.  
+ Wywołanie tej funkcji Członkowskich do odczytu do danego pamięci, zaczynając od *lpvBuf*, określona liczba bajtów, *nCount*.  
   
 ```  
 virtual UINT Read(
@@ -221,17 +221,17 @@ virtual UINT Read(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpBuf`  
+ *lpBuf*  
  Wskaźnik do adres pamięci, aby plik, który jest do odczytu danych.  
   
- `nCount`  
+ *nCount*  
  Liczba bajtów do zapisania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczba bajtów przesłanych w buforze. Wartość zwracana może być mniejsza niż `nCount` czy osiągnięto koniec pliku.  
+ Liczba bajtów przesłanych w buforze. Wartość zwracana może być mniejsza niż *nCount* czy osiągnięto koniec pliku.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja zwraca liczbę bajtów odczytanych w rzeczywistości — liczba, która może być mniejsza niż `nCount` , gdy kończy się plik. Jeśli wystąpi błąd podczas odczytywania pliku, funkcja zwraca [CInternetException](../../mfc/reference/cinternetexception-class.md) obiektu, który opisuje błąd. Należy pamiętać, że odczytu poza końcem pliku nie jest traktowane jako błąd i nie zostanie wygenerowany wyjątek.  
+ Funkcja zwraca liczbę bajtów odczytanych w rzeczywistości — liczba, która może być mniejsza niż *nCount* , gdy kończy się plik. Jeśli wystąpi błąd podczas odczytywania pliku, funkcja zwraca [CInternetException](../../mfc/reference/cinternetexception-class.md) obiektu, który opisuje błąd. Należy pamiętać, że odczytu poza końcem pliku nie jest traktowane jako błąd i nie zostanie wygenerowany wyjątek.  
   
  Aby upewnić się, wszystkie dane są pobierane, aplikacja musi nadal wywołać **CInternetFile::Read** metody do momentu metoda zwraca wartość zero.  
   
@@ -248,13 +248,13 @@ virtual LPTSTR ReadString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pstr`  
+ *pstr*  
  Wskaźnik do ciągu, który zostanie wyświetlony wiersz odczytu.  
   
- `nMax`  
+ *nMax*  
  Maksymalna liczba znaków do odczytania.  
   
- `rString`  
+ *rString*  
  Odwołanie do [cstring —](../../atl-mfc-shared/reference/cstringt-class.md) obiekt, który odbiera odczytu wiersza.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -263,7 +263,7 @@ virtual LPTSTR ReadString(
  **Wartość NULL** jeśli osiągnięto koniec pliku przed odczytaniem żadnych danych; lub, jeśli jest to wartość logiczna, **FALSE** czy osiągnięto koniec pliku przed odczytaniem żadnych danych.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja umieszcza wynikowego wiersza w pamięci odwołuje się `pstr` parametru. Zatrzymuje, odczytywanie znaków po dotarciu maksymalną liczbę znaków, określony przez `nMax`. Bufor zawsze odbiera znak końcowy null.  
+ Funkcja umieszcza wynikowego wiersza w pamięci odwołuje się *pstr* parametru. Zatrzymuje, odczytywanie znaków po dotarciu maksymalną liczbę znaków, określony przez *nMax*. Bufor zawsze odbiera znak końcowy null.  
   
  Jeśli należy wywołać `ReadString` bez wywoływania pierwszego elementu [SetReadBufferSize](#setreadbuffersize), otrzymasz buforu 4096 bajtów.  
   
@@ -277,17 +277,17 @@ virtual ULONGLONG Seek(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lOffset`  
+ *lOffset*  
  Przesunięcie w bajtach, aby przenieść wskaźnik odczytu/zapisu w pliku.  
   
- `nFrom`  
+ *NZ*  
  Odwołanie względne przesunięcia. Musi być jedną z następujących wartości:  
   
-- **CFile::begin** przesunięcia wskaźnika pliku `lOff` bajtów w przód od początku pliku.  
+- **CFile::begin** przesunięcia wskaźnika pliku *lOff* bajtów w przód od początku pliku.  
   
-- **CFile::current** przesunięcia wskaźnika pliku `lOff` bajtów z bieżącej pozycji w pliku.  
+- **CFile::current** przesunięcia wskaźnika pliku *lOff* bajtów z bieżącej pozycji w pliku.  
   
-- **CFile::end** przesunięcia wskaźnika pliku `lOff` bajtów na końcu pliku. `lOff` może być ujemna do wyszukania z istniejącym plikiem; wartości dodatnie będzie wyszukiwać poza końcem pliku.  
+- **CFile::end** przesunięcia wskaźnika pliku *lOff* bajtów na końcu pliku. *lOff* musi być ujemna do wyszukania do istniejącego pliku; dodatnią wartości będzie wyszukiwać poza końcem pliku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Przesunięcie od początku pliku, jeśli żądana pozycja jest dozwolony; nowy bajtów w przeciwnym razie wartość jest niezdefiniowana i [CInternetException](../../mfc/reference/cinternetexception-class.md) obiekt jest generowany.  
@@ -320,7 +320,7 @@ BOOL SetReadBufferSize(UINT nReadSize);
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0. W przypadku niepowodzenia wywołania funkcji Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) może zostać wywołana w celu ustalenia przyczyny błędu.  
   
 ### <a name="remarks"></a>Uwagi  
- Podstawowych interfejsów API usługi WinInet nie wykonać buforowanie, więc wybrać rozmiaru buforu, który pozwala aplikacji na odczytywanie danych, niezależnie od ilości danych do odczytu. W przypadku każdego wywołania w celu [odczytu](#read) zwykle obejmuje aount dużych danych (na przykład w kilobajtach cztery lub więcej), nie należy buforu. Jednak jeśli wywołujesz **odczytu** uzyskanie małych fragmentów danych, lub jeśli używasz [ReadString](#readstring) odczytać poszczególnych wierszy w czasie, buforu odczytu poprawia wydajność aplikacji, a następnie.  
+ Podstawowych interfejsów API usługi WinInet nie wykonać buforowanie, więc wybrać rozmiaru buforu, który pozwala aplikacji na odczytywanie danych, niezależnie od ilości danych do odczytu. W przypadku każdego wywołania w celu [odczytu](#read) zwykle obejmuje aount dużych danych (na przykład w kilobajtach cztery lub więcej), nie należy buforu. Jednak jeśli wywołujesz `Read` uzyskanie małych fragmentów danych, lub jeśli używasz [ReadString](#readstring) odczytać poszczególnych wierszy w czasie, buforu odczytu poprawia wydajność aplikacji, a następnie.  
   
  Domyślnie `CInternetFile` obiekt nie ma żadnych buforowania do odczytu. Wywołanie funkcji członkowskiej, należy się upewnić, że plik został otwarty do odczytu.  
   
@@ -346,7 +346,7 @@ BOOL SetWriteBufferSize(UINT nWriteSize);
  Domyślnie `CInternetFile` obiekt nie ma żadnych buforowanie zapisu. Wywołanie funkcji członkowskiej, należy się upewnić, że plik został otwarty do zapisu. Rozmiar buforu zapisu można zmienić w dowolnym momencie, ale powoduje to wywołanie niejawne [opróżnić](#flush).  
   
 ##  <a name="write"></a>  CInternetFile::Write  
- Wywołanie tej funkcji Członkowskich do zapisu w danym pamięci `lpvBuf`, określona liczba bajtów, `nCount`.  
+ Wywołanie tej funkcji Członkowskich do zapisu w danym pamięci *lpvBuf*, określona liczba bajtów, *nCount*.  
   
 ```  
 virtual void Write(
@@ -355,10 +355,10 @@ virtual void Write(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpBuf`  
+ *lpBuf*  
  Wskaźnik do pierwszego bajtu do zapisania.  
   
- `nCount`  
+ *nCount*  
  Określa liczbę bajtów do zapisania.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -372,7 +372,7 @@ virtual void WriteString(LPCTSTR pstr);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pstr`  
+ *pstr*  
  Wskaźnik do ciąg zawierający zawartość do zapisania.  
   
 ### <a name="remarks"></a>Uwagi  

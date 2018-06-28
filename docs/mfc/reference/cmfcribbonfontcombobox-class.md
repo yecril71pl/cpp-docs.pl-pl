@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86a46614cdb61e39af1016e496b12518b87f59ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 857eb87caf42e39366e261ac92c3b2f289fb41d9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370510"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039378"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>Klasa CMFCRibbonFontComboBox
 Implementuje pola kombi, który zawiera listę czcionek. Umieszcza pole kombi na panelu wstążki.  
@@ -106,13 +106,13 @@ void BuildFonts(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nFontType`  
+ [in] *nFontType*  
  Określa krój czcionki do dodania.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Określa zestaw znaków czcionki do dodania.  
   
- [in] `nPitchAndFamily`  
+ [in] *nPitchAndFamily*  
  Określa gęstość i rodzinę czcionek do dodania.  
   
 ##  <a name="cmfcribbonfontcombobox"></a>  CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
@@ -128,25 +128,25 @@ CMFCRibbonFontComboBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nID`  
+ [in] *nID*  
  Identyfikator polecenia polecenie, które wykonuje się, gdy użytkownik wybiera element w polu kombi.  
   
- [in] `nFontType`  
+ [in] *nFontType*  
  Określa typy czcionki, która mają być wyświetlane w polu kombi. Prawidłowe opcje to **DEVICE_FONTTYPE**, **RASTER_FONTTYPE**, i **TRUETYPE_FONTTYPE**, lub dowolną ich kombinację bitowe.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Filtry czcionki w polu kombi do tych, które należą do określonego zestawu znaków.  
   
- [in] `nPitchAndFamily`  
+ [in] *nPitchAndFamily*  
  Określa gęstość i rodzinę czcionek, które są wyświetlane w polu kombi.  
   
- [in] `nWidth`  
+ [in] *nWidth*  
  Określa szerokość w pikselach, pola kombi.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji na temat możliwości `nFontType` wartości parametrów, zobacz [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) w dokumentacji zestawu SDK systemu Windows.  
+ Aby uzyskać więcej informacji na temat możliwości *nFontType* wartości parametrów, zobacz [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) w dokumentacji zestawu SDK systemu Windows.  
   
- Aby uzyskać więcej informacji na temat zestawów prawidłowych znaków, które można przypisać do `nCharSet`i prawidłowe wartości, które można przypisać do `nPitchAndFamily`, zobacz [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) w dokumentacji zestawu SDK systemu Windows.  
+ Aby uzyskać więcej informacji na temat zestawów prawidłowych znaków, które można przypisać do *nCharSet*i prawidłowe wartości, które można przypisać do *nPitchAndFamily*, zobacz [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) w Dokumentacja zestawu SDK systemu Windows.  
   
 ##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -156,7 +156,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iIndex`  
+ [in] *iIndex*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -183,13 +183,13 @@ BOOL SetFont(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszName`  
+ "lpszName *  
  Określa nazwę czcionki, aby wybrać.  
   
- `nCharSet`  
+ *nCharSet*  
  Określa zestaw znaków dla wybranej czcionki.  
   
- `bExact`  
+ *bExact*  
  `TRUE` Aby określić, że zestaw znaków muszą być zgodne, wybierając czcionki; `FALSE` do określenia, czy zestaw znaków, można zignorować, wybierając czcionki.  
   
 ### <a name="return-value"></a>Wartość zwracana  

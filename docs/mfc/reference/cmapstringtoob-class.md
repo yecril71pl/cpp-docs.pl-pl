@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52adc7ce08644fb002b2a0a2cd91d20d15d4f24a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e4ea4ea24dfae26b1b43fe6480cac7f7a480fa4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375774"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042251"
 ---
 # <a name="cmapstringtoob-class"></a>Klasa CMapStringToOb
 Klasy kolekcji słownik mapujący unikatowy `CString` obiekty do `CObject` wskaźników.  
@@ -121,11 +121,11 @@ CMapStringToOb(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nBlockSize`  
+ *nBlockSize*  
  Określa poziom szczegółowości Alokacja pamięci dla rozszerzanie mapy.  
   
 ### <a name="remarks"></a>Uwagi  
- Wraz z rozwojem mapy, w jednostkach jest przydzielana pamięć `nBlockSize` wpisów.  
+ Wraz z rozwojem mapy, w jednostkach jest przydzielana pamięć *nBlockSize* wpisów.  
   
  W poniższej tabeli przedstawiono innego członka funkcje, które są podobne do **CMapStringToOb:: CMapStringToOb**.  
   
@@ -311,7 +311,7 @@ UINT HashKey(LPCTSTR key) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `key`  
+ *Klucz*  
  Klucz wartości skrótu, którego ma zostać obliczona.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -339,10 +339,10 @@ void InitHashTable(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hashSize`  
+ *hashSize*  
  Liczba wpisów w tablicy skrótów.  
   
- `bAllocNow`  
+ *bAllocNow*  
  Jeśli **TRUE**, przydziela tablicy skrótów po zainicjowaniu; w przeciwnym razie tabeli jest przydzielane w razie potrzeby.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -394,10 +394,10 @@ BOOL Lookup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `key`  
+ *Klucz*  
  Określa klucz ciąg identyfikujący elementu, który ma być wyszukiwane.  
   
- `rValue`  
+ *r-wartości*  
  Określa wartość zwrócona z elementu wyszukiwanego w górę.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -432,10 +432,10 @@ BOOL LookupKey(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `key`  
+ *Klucz*  
  Określa klucz ciąg identyfikujący elementu, który ma być wyszukiwane.  
   
- `rKey`  
+ *rKey*  
  Odwołanie do skojarzony klucz.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -459,7 +459,7 @@ CObject*& operator[ ](lpctstr key);
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Odwołanie do wskaźnika do `CObject` obiekt; lub **NULL** Jeśli mapy jest pusta lub `key` jest poza zakresem.  
+ Odwołanie do wskaźnika do `CObject` obiekt; lub **NULL** Jeśli mapy jest pusta lub *klucza* jest poza zakresem.  
   
 ### <a name="remarks"></a>Uwagi  
  W związku z tym można używać tylko po lewej stronie instrukcji przypisania (wartością l-value). Jeśli nie ma mapy elementu z określonym kluczem, jest tworzony nowy element.  
@@ -526,7 +526,7 @@ BOOL RemoveKey(LPCTSTR key);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `key`  
+ *Klucz*  
  Określa ciąg używany do wyszukiwania mapy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -571,10 +571,10 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `key`  
+ *Klucz*  
  Określa ciąg, który jest kluczem nowego elementu.  
   
- `newValue`  
+ *newValue*  
  Określa `CObject` wskaźnika, która jest wartością nowego elementu.  
   
 ### <a name="remarks"></a>Uwagi  

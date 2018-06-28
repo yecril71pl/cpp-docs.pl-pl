@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 673ce0694357a397590a29f7328612cfcc3cce09
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b59a1ef4d1a70063c15b7de41963abc60dd341a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375340"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041932"
 ---
 # <a name="colecontrolcontainer-class"></a>Klasa COleControlContainer
 Działa jako kontener kontroli dla formantów ActiveX.  
@@ -122,7 +122,7 @@ class COleControlContainer : public CCmdTarget
 |[COleControlContainer::GetDlgItem](#getdlgitem)|Pobiera formant określonego okna dialogowego.|  
 |[COleControlContainer::GetDlgItemInt](#getdlgitemint)|Pobiera wartość określonego okna dialogowego formantu.|  
 |[COleControlContainer::GetDlgItemText](#getdlgitemtext)|Pobiera Podpis formantu określonego okna dialogowego.|  
-|[COleControlContainer::HandleSetFocus](#handlesetfocus)|Określa, czy kontener obsługuje `WM_SETFOCUS` wiadomości.|  
+|[COleControlContainer::HandleSetFocus](#handlesetfocus)|Określa, czy kontener obsługuje WM_SETFOCUS wiadomości.|  
 |[COleControlContainer::HandleWindowlessMessage](#handlewindowlessmessage)|Obsługuje komunikatów wysyłanych z formantem bez okien.|  
 |[COleControlContainer::IsDlgButtonChecked](#isdlgbuttonchecked)|Określa stan określonego przycisku.|  
 |[COleControlContainer::OnPaint](#onpaint)|Wywoływane w celu odświeżenia część kontenera.|  
@@ -178,10 +178,10 @@ void AttachControlSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Wskaźnik do `CWnd` obiektu.  
   
- `nIDC`  
+ *nIDC*  
  Identyfikator formantu jest dołączony.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -198,7 +198,7 @@ virtual void BroadcastAmbientPropertyChange(DISPID dispid);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dispid`  
+ *identyfikator DISPID*  
  Identyfikator wysyłania właściwość otoczenia zmieniane.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -214,10 +214,10 @@ virtual void CheckDlgButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDButton`  
+ *nIDButton*  
  Identyfikator przycisku do zmodyfikowania.  
   
- `nCheck`  
+ *nSprawdź*  
  Określa stan przycisku. Może to być jeden z następujących elementów:  
   
 - **BST_CHECKED** ustawia stan przycisku do zaznaczenia.  
@@ -237,13 +237,13 @@ virtual void CheckRadioButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDFirstButton`  
+ *nIDFirstButton*  
  Określa identyfikator pierwszego przycisku radiowego w grupie.  
   
- `nIDLastButton`  
+ *nIDLastButton*  
  Określa identyfikator ostatniego przycisku radiowego w grupie.  
   
- `nIDCheckButton`  
+ *nIDCheckButton*  
  Określa identyfikator przycisku radiowego jest sprawdzane.  
   
 ##  <a name="colecontrolcontainer"></a>  COleControlContainer::COleControlContainer  
@@ -254,7 +254,7 @@ explicit COleControlContainer(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Wskaźnik do okna nadrzędnego formantu kontenera.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -292,53 +292,53 @@ BOOL CreateControl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWndCtrl`  
+ *pWndCtrl*  
  Wskaźnik do obiekt window reprezentujący formantu.  
   
- `clsid`  
+ *Identyfikator CLSID*  
  Identyfikator unikatowy klasy formantu.  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  Wskaźnik do tekstu wyświetlanego w formancie. Ustawia wartości właściwości podpisu lub tekst formantu (jeśli istnieje). Jeśli **NULL**, właściwości podpisu lub tekst formantu nie ulega zmianie.  
   
- `dwStyle`  
+ *dwStyle*  
  Style systemu Windows. Dostępne style są wyświetlane w obszarze **uwagi** sekcji.  
   
- `rect`  
+ *Rect*  
  Określa rozmiar i położenie formantu. Może być albo `CRect` obiektu lub `RECT` struktury.  
   
- `nID`  
+ *nID*  
  Określa identyfikator formantu podrzędnego okna.  
   
- `pPersist`  
+ *pPersist*  
  Wskaźnik do `CFile` zawierający trwały stan formantu. Wartość domyślna to **NULL**, wskazującą, czy formant inicjuje się bez przywracania stanu z dowolnego magazynu trwałego. Jeśli nie **NULL**, powinny być wskaźnikiem do `CFile`-pochodnych obiekt, który zawiera trwałych danych formantu w postaci strumienia lub magazynu. Można te dane zostały zapisane w poprzednim aktywacji klienta. `CFile` Może zawierać innych danych, lecz musi mieć jego wskaźnika odczytu i zapisu, ustaw do pierwszego bajtu trwałych danych w momencie wywołania `CreateControl`.  
   
- `bStorage`  
- Wskazuje, czy dane w `pPersist` powinny być rozumiane jako `IStorage` lub `IStream` danych. Jeśli dane w `pPersist` magazynu, `bStorage` powinien być **TRUE**. Jeśli dane w `pPersist` jest typu stream, `bStorage` powinien być **FALSE**. Wartość domyślna to **FALSE**.  
+ *bStorage*  
+ Wskazuje, czy dane w *pPersist* powinny być rozumiane jako `IStorage` lub `IStream` danych. Jeśli dane w *pPersist* magazynu, *bStorage* powinien być **TRUE**. Jeśli dane w *pPersist* jest typu stream, *bStorage* powinien być **FALSE**. Wartość domyślna to **FALSE**.  
   
- `bstrLicKey`  
+ *bstrLicKey*  
  Opcjonalne dane klucza licencji. Tych danych jest konieczne tylko w przypadku tworzenia formantów, które wymagają klucz licencji środowiska wykonawczego. Jeśli formant obsługuje licencjonowania, należy podać klucz licencji w celu utworzenia kontrolki została wykonana pomyślnie. Wartość domyślna to **NULL**.  
   
  *ppNewSite*  
  Wskaźnik do istniejącej lokacji kontroli obsługującym kontrolka tworzona. Wartość domyślna to **NULL**, wskazujący, że nowej lokacji sterowania zostanie automatycznie utworzona i dołączony do nowego formantu.  
   
- `ppt`  
- Wskaźnik do **punktu** struktury, która zawiera górnego lewego rogu formantu. Rozmiar formantu jest określana przez wartość *psize*. `ppt` i *psize* wartości są opcjonalne metodę określania rozmiaru i pozycji formantu.  
+ *ppt*  
+ Wskaźnik do **punktu** struktury, która zawiera górnego lewego rogu formantu. Rozmiar formantu jest określana przez wartość *psize*. *Ppt* i *psize* wartości są opcjonalne metodę określania rozmiaru i pozycji formantu.  
   
  *psize*  
- Wskaźnik do **rozmiar** struktury, która zawiera rozmiar formantu. Lewy górny róg jest określana przez wartość `ppt`. `ppt` i *psize* wartości są opcjonalne metodę określania rozmiaru i pozycji formantu.  
+ Wskaźnik do **rozmiar** struktury, która zawiera rozmiar formantu. Lewy górny róg jest określana przez wartość *ppt*. *Ppt* i *psize* wartości są opcjonalne metodę określania rozmiaru i pozycji formantu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Tylko podzestaw systemu Windows `dwStyle` flagi są obsługiwane przez `CreateControl`:  
+ Tylko podzestaw systemu Windows *dwStyle* flagi są obsługiwane przez `CreateControl`:  
   
 - **Ws_visible —** tworzy okna, które jest początkowo widoczne. Wymagane, jeśli formantu ma być widoczna od razu, takich jak zwykłe systemu windows.  
   
 - **Ws_disabled —** tworzy okno, które jest początkowo wyłączone. Wyłączone okna nie mogą otrzymywać dane wejściowe użytkownika. Można ustawić, jeśli formant ma właściwość Enabled.  
   
-- `WS_BORDER` Tworzy okno z elastycznej linii obramowania. Można ustawić, jeśli formant ma właściwości BorderStyle.  
+- **Ws_border —** tworzy okno z elastycznej linii obramowania. Można ustawić, jeśli formant ma właściwości BorderStyle.  
   
 - **Ws_group —** Określa pierwszą kontrolkę grupy formantów. Użytkownik może zmienić fokus klawiatury z jednego formantu w grupie do następnego przy użyciu kluczy kierunku. Wszystkie formanty zdefiniowane z **ws_group —** styl po pierwszą kontrolkę należą do tej samej grupy. Następnego formantu z **ws_group —** styl kończy się grupie i uruchamia następnej grupy.  
   
@@ -354,7 +354,7 @@ void CreateOleFont(CFont* pFont);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pFont`  
+ *pFont*  
  Wskaźnik do czcionki do użycia przez kontener formantu.  
   
 ##  <a name="finditem"></a>  COleControlContainer::FindItem  
@@ -365,7 +365,7 @@ virtual COleControlSite* FindItem(UINT nID) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nID`  
+ *nID*  
  Identyfikator elementu, który ma zostać odnaleziona.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -379,7 +379,7 @@ void FreezeAllEvents(BOOL bFreeze);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bFreeze`  
+ *bFreeze*  
  Różna od zera, jeśli zdarzenia zostaną przetworzone; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -398,10 +398,10 @@ virtual BOOL GetAmbientProp(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pSite`  
+ *pSite*  
  Wskaźnik do lokacji formantu, z którego będzie można pobrać właściwości otoczenia.  
   
- `dispid`  
+ *identyfikator DISPID*  
  Identyfikator wysyłania żądanej właściwości otoczenia.  
   
  *pVarResult*  
@@ -422,10 +422,10 @@ virtual void GetDlgItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nID`  
+ *nID*  
  Identyfikator elementu okna dialogowego do pobrania.  
   
- `phWnd`  
+ *phWnd*  
  Wskaźnik do uchwytu elementu okna dialogowego określony obiekt window.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -442,21 +442,21 @@ virtual UINT GetDlgItemInt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nID`  
+ *nID*  
  Identyfikator formantu.  
   
- `lpTrans`  
+ *lpTrans*  
  Wskaźnik do zmiennej typu Boolean, który odbiera wartość powodzeń/niepowodzeń funkcji ( **TRUE** oznacza Powodzenie, **FALSE** wskazuje niepowodzenie).  
   
- `bSigned`  
- Określa, czy funkcja należy zbadać tekst znakiem minus na początku i zwraca wartość liczby całkowitej ze znakiem, jeśli zostanie znaleziony. Jeśli `bSigned` parametr jest **TRUE**, określając, że wartość do pobrania jest wartość całkowita rzutowania wartości zwracanej do `int` typu. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ *bSigned*  
+ Określa, czy funkcja należy zbadać tekst znakiem minus na początku i zwraca wartość liczby całkowitej ze znakiem, jeśli zostanie znaleziony. Jeśli *bSigned* parametr jest **TRUE**, określając, że wartość do pobrania jest wartość całkowita rzutowania wartości zwracanej do **int** typu. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli się powiedzie, zmienna wskazywana przez `lpTrans` ma ustawioną wartość **TRUE**, i wartość zwracana jest wartość przetłumaczonego tekstu formantu.  
+ Jeśli się powiedzie, zmienna wskazywana przez *lpTrans* ma ustawioną wartość **TRUE**, i wartość zwracana jest wartość przetłumaczonego tekstu formantu.  
   
- W przypadku niepowodzenia funkcji zmiennej wskazywana przez `lpTrans` ustawiono **FALSE**, i wartość zwracana jest wartość zero. Należy pamiętać, że od zera jest możliwa wartość przetłumaczonego, zwracana wartość zero nie samodzielnie wskazania błędu.  
+ W przypadku niepowodzenia funkcji zmiennej wskazywana przez *lpTrans* ustawiono **FALSE**, i wartość zwracana jest wartość zero. Należy pamiętać, że od zera jest możliwa wartość przetłumaczonego, zwracana wartość zero nie samodzielnie wskazania błędu.  
   
- Jeśli `lpTrans` jest **NULL**, funkcja zwraca żadnych informacji o powodzeniu lub niepowodzeniu.  
+ Jeśli *lpTrans* jest **NULL**, funkcja zwraca żadnych informacji o powodzeniu lub niepowodzeniu.  
   
 ### <a name="remarks"></a>Uwagi  
  Funkcja tłumaczy tekst pobrane przez usuwanie dodatkowe spacje na początku tekstu, a następnie konwertując cyfr dziesiętnych. Funkcja zatrzymuje tłumaczenia, gdy osiągnie koniec tekstu lub napotka liczbą znaków.  
@@ -474,14 +474,14 @@ virtual int GetDlgItemText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nID`  
+ *nID*  
  Identyfikator formantu.  
   
- `lpStr`  
+ *lpStr*  
  Wskaźnik do tekst formantu.  
   
- `nMaxCount`  
- Określa maksymalną długość w znakach ciąg, który ma zostać skopiowany na bufor wskazywany przez `lpStr`. Jeśli długość ciągu przekracza limit, ciąg został obcięty.  
+ *nMaxCount*  
+ Określa maksymalną długość w znakach ciąg, który ma zostać skopiowany na bufor wskazywany przez *lpStr*. Jeśli długość ciągu przekracza limit, ciąg został obcięty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli funkcja zakończy się powodzeniem, zwracana wartość określa liczbę znaków kopiowania do buforu, nie włączając znak końcowy null.  
@@ -489,14 +489,14 @@ virtual int GetDlgItemText(
  Jeśli funkcja nie powiedzie się, zwracana wartość wynosi zero. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus  
- Określa, czy kontener obsługuje `WM_SETFOCUS` wiadomości.  
+ Określa, czy kontener obsługuje WM_SETFOCUS wiadomości.  
   
 ```  
 virtual BOOL HandleSetFocus();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli kontener obsługuje `WM_SETFOCUS` wiadomości; w przeciwnym razie wartość zero.  
+ Różna od zera, jeśli kontener obsługuje WM_SETFOCUS wiadomości. w przeciwnym razie wartość zero.  
   
 ##  <a name="handlewindowlessmessage"></a>  COleControlContainer::HandleWindowlessMessage  
  Przetwarza komunikatów okien kontrolek bez okien.  
@@ -510,14 +510,14 @@ virtual BOOL HandleWindowlessMessage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `message`  
+ *komunikat*  
  Identyfikator komunikatu w oknie, dostarczonymi przez system Windows.  
   
- `wParam`  
- Parametr message; dostępna w systemie Windows. Określa dodatkowe informacje specyficzne dla wiadomości. Zawartość tego parametru zależy od wartości `message` parametru.  
+ *wParam*  
+ Parametr message; dostępna w systemie Windows. Określa dodatkowe informacje specyficzne dla wiadomości. Zawartość tego parametru zależy od wartości *komunikat* parametru.  
   
- `lParam`  
- Parametr message; dostępna w systemie Windows. Określa dodatkowe informacje specyficzne dla wiadomości. Zawartość tego parametru zależy od wartości `message` parametru.  
+ *lParam*  
+ Parametr message; dostępna w systemie Windows. Określa dodatkowe informacje specyficzne dla wiadomości. Zawartość tego parametru zależy od wartości *komunikat* parametru.  
   
  *plResult*  
  Kod wyniku systemu Windows. Określa wynik przetwarzania komunikatów i jest zależna od wiadomość została wysłana.  
@@ -536,7 +536,7 @@ virtual UINT IsDlgButtonChecked(int nIDButton) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDButton`  
+ *nIDButton*  
  Identyfikator formantu przycisku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -622,14 +622,14 @@ CMapPtrToPtr m_siteMap;
 ```  
   
 ##  <a name="onpaint"></a>  COleControlContainer::OnPaint  
- Wywoływane przez platformę, by obsłużyć `WM_PAINT` żądań.  
+ Wywoływane przez platformę, by obsłużyć żądań WM_PAINT.  
   
 ```  
 virtual BOOL OnPaint(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia używane przez kontener.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -639,28 +639,28 @@ virtual BOOL OnPaint(CDC* pDC);
  Zastąpienie tej funkcji w celu dostosowania procesu malowania.  
   
 ##  <a name="onuiactivate"></a>  COleControlContainer::OnUIActivate  
- Wywoływane przez platformę, gdy lokacji kontroli wskazywana przez `pSite`, ma być aktywowana w miejscu.  
+ Wywoływane przez platformę, gdy lokacji kontroli wskazywana przez *pSite*, ma być aktywowana w miejscu.  
   
 ```  
 virtual void OnUIActivate(COleControlSite* pSite);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pSite`  
+ *pSite*  
  Wskaźnik do sterowania lokacji zostanie aktywowana w miejscu.  
   
 ### <a name="remarks"></a>Uwagi  
  Aktywacja w miejscu oznacza kontenera menu główne zostanie zastąpiony w miejscu złożone menu.  
   
 ##  <a name="onuideactivate"></a>  COleControlContainer::OnUIDeactivate  
- Wywoływane przez platformę, gdy lokacji kontroli wskazywana przez `pSite`, ma być dezaktywowane.  
+ Wywoływane przez platformę, gdy lokacji kontroli wskazywana przez *pSite*, ma być dezaktywowane.  
   
 ```  
 virtual void OnUIDeactivate(COleControlSite* pSite);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pSite`  
+ *pSite*  
  Wskaźnik do sterowania lokacji o dezaktywowane.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -676,7 +676,7 @@ virtual void ScrollChildren(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dx`  
+ *DX*  
  Wielkość, wyrażoną w pikselach przewijanie wzdłuż osi x.  
   
  *dy*  
@@ -694,16 +694,16 @@ virtual LRESULT SendDlgItemMessage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nID`  
+ *nID*  
  Określa identyfikator formantu, który odbiera wiadomości.  
   
- `message`  
+ *komunikat*  
  Określa komunikat do wysłania.  
   
- `wParam`  
+ *wParam*  
  Określa dodatkowe informacje specyficzne dla wiadomości.  
   
- `lParam`  
+ *lParam*  
  Określa dodatkowe informacje specyficzne dla wiadomości.  
   
 ##  <a name="setdlgitemint"></a>  COleControlContainer::SetDlgItemInt  
@@ -717,17 +717,17 @@ virtual void SetDlgItemInt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nID`  
+ *nID*  
  Identyfikator formantu.  
   
- `nValue`  
+ *nWartość*  
  Wartość całkowita, która ma być wyświetlany.  
   
- `bSigned`  
- Określa, czy `nValue` parametr został podpisany ani bez znaku. Jeśli ten parametr ma **TRUE**, `nValue` jest podpisany. Jeśli ten parametr ma **TRUE** i `nValue` jest mniejsza od zera, minus znak jest umieszczony przed pierwszą cyfrą w ciągu. Jeśli ten parametr ma **FALSE**, `nValue` nie jest podpisany.  
+ *bSigned*  
+ Określa, czy *nWartość* parametr został podpisany ani bez znaku. Jeśli ten parametr ma **TRUE**, *nWartość* jest podpisany. Jeśli ten parametr ma **TRUE** i *nWartość* jest mniejsza od zera, minus znak jest umieszczony przed pierwszą cyfrą w ciągu. Jeśli ten parametr ma **FALSE**, *nWartość* nie jest podpisany.  
   
 ##  <a name="setdlgitemtext"></a>  COleControlContainer::SetDlgItemText  
- Ustawia tekst określony formant przy użyciu tekstu zawartych w `lpszString`.  
+ Ustawia tekst określony formant przy użyciu tekstu zawartych w *lpszString*.  
   
 ```  
 virtual void SetDlgItemText(
@@ -736,10 +736,10 @@ virtual void SetDlgItemText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nID`  
+ *nID*  
  Identyfikator formantu.  
   
- `lpszString`  
+ *lpszString*  
  Wskaźnik do tekst formantu.  
   
 ## <a name="see-also"></a>Zobacz też  

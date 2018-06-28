@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2a84e73c165efd8f2f17e66af149e33d90395e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 25337104da2f1ff397d3c61170ab6ad5a8817130
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372524"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039144"
 ---
 # <a name="clist-class"></a>Clist — klasa
 Obsługuje uporządkowane listy obiektów nieunikatowy dostępny sekwencyjnie lub przez wartość.  
@@ -151,14 +151,14 @@ void AddHead(CList* pNewList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Parametr szablonu określający typ elementu listy (może być odwołaniem).  
   
- `newElement`  
+ *newElement*  
  Nowy element.  
   
- `pNewList`  
- Wskaźnik do innego `CList` listy. Elementy w `pNewList` zostaną dodane do tej listy.  
+ *pNewList*  
+ Wskaźnik do innego `CList` listy. Elementy w *pNewList* zostaną dodane do tej listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca pierwszą wersję **pozycji** wartość nowo wstawiony element.  
@@ -178,14 +178,14 @@ void AddTail(CList* pNewList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Parametr szablonu określający typ elementu listy (może być odwołaniem).  
   
- `newElement`  
+ *newElement*  
  Element, który ma zostać dodany do tej listy.  
   
- `pNewList`  
- Wskaźnik do innego `CList` listy. Elementy w `pNewList` zostaną dodane do tej listy.  
+ *pNewList*  
+ Wskaźnik do innego `CList` listy. Elementy w *pNewList* zostaną dodane do tej listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca pierwszą wersję **pozycji** wartość nowo wstawiony element.  
@@ -204,17 +204,17 @@ CList(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nBlockSize`  
+ *nBlockSize*  
  Stopień szczegółowości Alokacja pamięci dla rozszerzenia wykazu.  
   
 ### <a name="remarks"></a>Uwagi  
- Wraz z rozwojem listy, w jednostkach jest przydzielana pamięć `nBlockSize` wpisów.  
+ Wraz z rozwojem listy, w jednostkach jest przydzielana pamięć *nBlockSize* wpisów.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#38](../../mfc/codesnippet/cpp/clist-class_4.cpp)]  
   
 ##  <a name="find"></a>  CList::Find  
- Wyszukuje liście sekwencyjnie, aby znaleźć pierwszego elementu dopasowania określonego `searchValue`.  
+ Wyszukuje liście sekwencyjnie, aby znaleźć pierwszego elementu dopasowania określonego *Wyszukiwana_wartość*.  
   
 ```  
 POSITION Find(
@@ -223,13 +223,13 @@ POSITION Find(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Parametr szablonu określający typ elementu listy (może być odwołaniem).  
   
- `searchValue`  
+ *Wyszukiwana_wartość*  
  Wartość, która ma zostać odnaleziona na liście.  
   
- `startAfter`  
+ *startAfter*  
  Pozycja początkowa wyszukiwania. Jeśli nie określono wartości, wyszukiwanie rozpoczyna się od elementu głównego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -239,18 +239,18 @@ POSITION Find(
  [!code-cpp[NVC_MFCCollections#39](../../mfc/codesnippet/cpp/clist-class_5.cpp)]  
   
 ##  <a name="findindex"></a>  CList::FindIndex  
- Używa wartości `nIndex` jako indeks w liście.  
+ Używa wartości *nIndex* jako indeks w liście.  
   
 ```  
 POSITION FindIndex(INT_PTR nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Liczony od zera indeks elementu listy do znalezienia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A **pozycji** wartość, która może służyć do iteracji lub pobieranie wskaźnika obiektu; **NULL** Jeśli `nIndex` jest ujemny lub zbyt duży.  
+ A **pozycji** wartość, która może służyć do iteracji lub pobieranie wskaźnika obiektu; **NULL** Jeśli *nIndex* jest ujemny lub zbyt duży.  
   
 ### <a name="remarks"></a>Uwagi  
  Rozpoczyna się kolejny skanowania z węzła głównego listy zatrzymywanie na *n*th element.  
@@ -338,7 +338,7 @@ POSITION GetHeadPosition() const;
  [!code-cpp[NVC_MFCCollections#42](../../mfc/codesnippet/cpp/clist-class_8.cpp)]  
   
 ##  <a name="getnext"></a>  CList::GetNext  
- Pobiera element listy identyfikowane przez `rPosition`, następnie ustawia `rPosition` do **pozycji** wartość następnego wpisu na liście.  
+ Pobiera element listy identyfikowane przez *rPosition*, następnie ustawia *rPosition* do **pozycji** wartość następnego wpisu na liście.  
   
 ```  
 TYPE& GetNext(POSITION& rPosition);  
@@ -349,7 +349,7 @@ const TYPE& GetNext(POSITION& rPosition) const;
  *TYP*  
  Określenie typu elementów na liście parametrów szablonu.  
   
- `rPosition`  
+ *rPosition*  
  Odwołanie do **pozycji** wartość zwrócona przez poprzednie `GetNext`, [GetHeadPosition](#getheadposition), lub inne wywołanie funkcji Członkowskich.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -358,7 +358,7 @@ const TYPE& GetNext(POSITION& rPosition) const;
  Jeśli lista jest **const**, `GetNext` zwraca odwołanie do elementu listy. Umożliwia funkcji można używać po obu stronach instrukcji przypisania i w związku z tym umożliwia pozycji na liście do zmodyfikowania.  
   
 ### <a name="remarks"></a>Uwagi  
- Można użyć `GetNext` w pętli do przodu iteracji, jeśli ustanowić położenie początkowe w wyniku wywołania `GetHeadPosition` lub **znaleźć**.  
+ Można użyć `GetNext` w pętli do przodu iteracji, jeśli ustanowić położenie początkowe w wyniku wywołania `GetHeadPosition` lub `Find`.  
   
  Upewnij się, że Twoje **pozycji** wartość reprezentuje prawidłową pozycją na liście. Jeśli jest nieprawidłowa wersja do debugowania programu Microsoft Foundation Class Library potwierdzeń.  
   
@@ -379,7 +379,7 @@ const TYPE& GetPrev(POSITION& rPosition) const;
  *TYP*  
  Określenie typu elementów na liście parametrów szablonu.  
   
- `rPosition`  
+ *rPosition*  
  Odwołanie do **pozycji** wartość zwrócona przez poprzednie `GetPrev` lub inne wywołanie funkcji Członkowskich.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -388,11 +388,11 @@ const TYPE& GetPrev(POSITION& rPosition) const;
  Jeśli lista jest **const**, `GetPrev` zwraca odwołanie do elementu listy. Umożliwia funkcji można używać po obu stronach instrukcji przypisania i w związku z tym umożliwia pozycji na liście do zmodyfikowania.  
   
 ### <a name="remarks"></a>Uwagi  
- Można użyć `GetPrev` w odwrotnej iteracji pętli po nawiązaniu położenie początkowe w wyniku wywołania `GetTailPosition` lub **znaleźć**.  
+ Można użyć `GetPrev` w odwrotnej iteracji pętli po nawiązaniu położenie początkowe w wyniku wywołania `GetTailPosition` lub `Find`.  
   
  Upewnij się, że Twoje **pozycji** wartość reprezentuje prawidłową pozycją na liście. Jeśli jest nieprawidłowa wersja do debugowania programu Microsoft Foundation Class Library potwierdzeń.  
   
- Jeśli element pobrane pierwszy na liście jest następnie nowa wartość `rPosition` ustawiono **NULL**.  
+ Jeśli element pobrane pierwszy na liście jest następnie nowa wartość *rPosition* ustawiono **NULL**.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCCollections#44](../../mfc/codesnippet/cpp/clist-class_10.cpp)]  
@@ -456,12 +456,12 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
   
 ### <a name="parameters"></a>Parametry  
  *Stanowisko*  
- A **pozycji** wartość zwrócona przez poprzednie `GetNext`, `GetPrev`, lub **znaleźć** wywołanie funkcji Członkowskich.  
+ A **pozycji** wartość zwrócona przez poprzednie `GetNext`, `GetPrev`, lub `Find` wywołanie funkcji Członkowskich.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Parametr szablonu określający typ elementu listy.  
   
- `newElement`  
+ *newElement*  
  Element, który ma zostać dodany do tej listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -479,12 +479,12 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
   
 ### <a name="parameters"></a>Parametry  
  *Stanowisko*  
- A **pozycji** wartość zwrócona przez poprzednie `GetNext`, `GetPrev`, lub **znaleźć** wywołanie funkcji Członkowskich.  
+ A **pozycji** wartość zwrócona przez poprzednie `GetNext`, `GetPrev`, lub `Find` wywołanie funkcji Członkowskich.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Parametr szablonu określający typ elementu listy (może być odwołaniem).  
   
- `newElement`  
+ *newElement*  
  Element, który ma zostać dodany do tej listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -587,13 +587,13 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pos`  
+ *POS*  
  **Pozycji** można ustawić elementu.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Parametr szablonu określający typ elementu listy (może być odwołaniem).  
   
- `newElement`  
+ *newElement*  
  Element, który ma zostać dodany do listy.  
   
 ### <a name="remarks"></a>Uwagi  

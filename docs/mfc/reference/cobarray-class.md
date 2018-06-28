@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3995734918f50ed01fe6df7fb034c3ea37b630cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 41165f177671379eecbc700df016cd19aea69962
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377917"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040210"
 ---
 # <a name="cobarray-class"></a>Klasa CObArray
 Obsługuje tablic `CObject` wskaźników.  
@@ -113,7 +113,7 @@ class CObArray : public CObject
   
  Za pomocą tablicy C, czas dostępu dla `CObArray` indeksowanego elementu jest stała i nie zależy od rozmiaru tablicy.  
   
- `CObArray` zawiera `IMPLEMENT_SERIAL` makro do obsługi serializacji i zrzucanie swoich elementów. Jeśli tablica `CObject` wskaźniki są przechowywane do archiwum z operatorem przeciążone wstawiania lub z `Serialize` wszystkich funkcji członkowskiej `CObject` element z kolei serializacji wraz z jego indeksu tablicy.  
+ `CObArray` zawiera implement_serial — makro do obsługi serializacji i zrzucanie swoich elementów. Jeśli tablica `CObject` wskaźniki są przechowywane do archiwum z operatorem przeciążone wstawiania lub z `Serialize` wszystkich funkcji członkowskiej `CObject` element z kolei serializacji wraz z jego indeksu tablicy.  
   
  Jeśli potrzebujesz zrzutu osoba `CObject` elementów w tablicy, należy ustawić głębokość `CDumpContext` obiekt do 1 lub większą.  
   
@@ -125,7 +125,7 @@ class CObArray : public CObject
  Tablica pochodnym klasy jest podobna do wyprowadzenia listy. Aby uzyskać szczegółowe informacje na pochodnym klasy listy specjalnych, zobacz artykuł [kolekcji](../../mfc/collections.md).  
   
 > [!NOTE]
->  Należy użyć `IMPLEMENT_SERIAL` makra w implementacji klasy pochodnej Jeśli zamierzasz serializować tablicy.  
+>  Implement_serial — makro należy użyć w implementacji klasy pochodnej, jeśli zamierzasz serializować tablicy.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -143,14 +143,14 @@ INT_PTR Add(CObject* newElement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `newElement`  
+ *newElement*  
  `CObject` Wskaźnika do dodania do tej tablicy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Indeks elementu dodany.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli [SetSize](#setsize) został użyty z `nGrowBy` wartość większą niż 1, a następnie dodatkowa pamięć może zostać przydzielona. Jednak górna granica zwiększy się tylko 1.  
+ Jeśli [SetSize](#setsize) został użyty z *nGrowBy* wartość większą niż 1, a następnie dodatkowa pamięć może zostać przydzielona. Jednak górna granica zwiększy się tylko 1.  
   
  W poniższej tabeli przedstawiono innego członka funkcje, które są podobne do `CObArray::Add`.  
   
@@ -193,7 +193,7 @@ INT_PTR Append(const CObArray& src);
 ### <a name="remarks"></a>Uwagi  
  Tablic muszą być tego samego typu.  
   
- W razie potrzeby **Append** mogą przydzielić dodatkową pamięć do uwzględnienia elementów dołączany do tablicy.  
+ W razie potrzeby `Append` mogą przydzielić dodatkową pamięć do uwzględnienia elementów dołączany do tablicy.  
   
  W poniższej tabeli przedstawiono innego członka funkcje, które są podobne do `CObArray::Append`.  
   
@@ -223,7 +223,7 @@ void Copy(const CObArray& src);
  Źródło elementów do skopiowania do tablicy.  
   
 ### <a name="remarks"></a>Uwagi  
- **Kopia** nie spowoduje zwolnienia pamięci, ale w razie potrzeby **kopiowania** mogą przydzielić dodatkową pamięć do uwzględnienia elementów kopiowanych do tablicy.  
+ `Copy` nie spowoduje zwolnienia pamięci. Jednakże, jeśli to konieczne, `Copy` mogą przydzielić dodatkową pamięć do uwzględnienia elementów kopiowanych do tablicy.  
   
  W poniższej tabeli przedstawiono innego członka funkcje, które są podobne do `CObArray::Copy`.  
   
@@ -273,7 +273,7 @@ CObject*& ElementAt(INT_PTR nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Liczba całkowita indeksu, który jest większa lub równa 0 i mniejsza niż wartość zwrócona przez `GetUpperBound`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -328,7 +328,7 @@ CObject* GetAt(INT_PTR nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Liczba całkowita indeksu, który jest większa lub równa 0 i mniejsza niż wartość zwrócona przez `GetUpperBound`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -490,25 +490,25 @@ void InsertAt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Liczba całkowita indeksu, który może być większa niż wartość zwrócona przez `GetUpperBound`.  
   
- `newElement`  
- `CObject` Wskaźnika, które mają być umieszczone w tej macierzy. A `newElement` wartości **NULL** jest dozwolone.  
+ *newElement*  
+ `CObject` Wskaźnika, które mają być umieszczone w tej macierzy. A *newElement* wartości **NULL** jest dozwolone.  
   
- `nCount`  
+ *nCount*  
  Ile razy ten element powinien być wstawiane (wartość domyślna to 1).  
   
- `nStartIndex`  
+ *nStartIndex*  
  Liczba całkowita indeksu, który może być większa niż wartość zwrócona przez `GetUpperBound`.  
   
- `pNewArray`  
+ *pNewArray*  
  Innej tablicy, który zawiera elementy, które mają zostać dodane do tej tablicy.  
   
 ### <a name="remarks"></a>Uwagi  
  Pierwszą wersję `InsertAt` wstawia jednego elementu (lub wiele kopii elementu) od określonego indeksu tablicy. W procesie przewiduje (zwiększając wartość indeksu) istniejącego elementu tego indeksu, a przewiduje się wszystkie elementy powyżej.  
   
- Druga wersja wstawia wszystkie elementy z innego `CObArray` kolekcji, zaczynając od `nStartIndex` pozycji.  
+ Druga wersja wstawia wszystkie elementy z innego `CObArray` kolekcji, zaczynając od *nStartIndex* pozycji.  
   
  `SetAt` Funkcji, natomiast zastępuje jeden element w określonej tablicy i nie przesunięcia żadnych elementów.  
   
@@ -615,10 +615,10 @@ void RemoveAt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Liczba całkowita indeksu, który jest większa lub równa 0 i mniejsza niż wartość zwrócona przez `GetUpperBound`.  
   
- `nCount`  
+ *nCount*  
  Liczba elementów do usunięcia.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -660,10 +660,10 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Liczba całkowita indeksu, który jest większa lub równa 0 i mniejsza niż wartość zwrócona przez `GetUpperBound`.  
   
- `newElement`  
+ *newElement*  
  Wskaźnik obiektu ma zostać wstawiony w tej macierzy. A **NULL** wartość jest dozwolona.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -705,10 +705,10 @@ void SetAtGrow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Liczba całkowita indeksu, który jest większa lub równa 0.  
   
- `newElement`  
+ *newElement*  
  Wskaźnik obiektu ma zostać dodany do tej tablicy. A **NULL** wartość jest dozwolona.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -752,16 +752,16 @@ void SetSize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nNewSize`  
+ *nNewSize*  
  Nowy rozmiar tablicy (liczba elementów). Musi być większa lub równa 0.  
   
- `nGrowBy`  
+ *nGrowBy*  
  Minimalna liczba gniazd elementu można przydzielić, jeśli konieczne jest zwiększenie rozmiaru.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli nowy rozmiar jest mniejszy niż stary rozmiar, zostanie obcięta tablicy i zwolnieniu wszystkich nieużywanej pamięci. W celu zwiększenia wydajności, należy wywołać `SetSize` można ustawić rozmiar tablicy przed jego użyciem. Zapobiega to potrzebę Przydziel ponownie, a następnie skopiuj tablicy za każdym razem, gdy element zostanie dodany.  
   
- `nGrowBy` Parametr ma wpływ alokacji pamięci wewnętrznej podczas rośnie tablicy. Zgłoszone przez wykorzystanie przez niego nigdy nie wpływa na rozmiar tablicy `GetSize` i `GetUpperBound`.  
+ *NGrowBy* parametr ma wpływ alokacji pamięci wewnętrznej podczas rośnie tablicy. Zgłoszone przez wykorzystanie przez niego nigdy nie wpływa na rozmiar tablicy `GetSize` i `GetUpperBound`.  
   
  Jeśli rozmiar tablicy został rozszerzony, wszystkie nowo przydzielone **CObject \***  wskaźniki jest ustawiana wartość NULL.  
   

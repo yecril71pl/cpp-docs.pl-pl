@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e7acda3bf3734a325c7d603489c1305cb63bc3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f224def5d91d47cad0cb61938f1ce9a538109014
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367617"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039046"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>Klasa CMFCPropertyGridFontProperty
 `CMFCPropertyGridFileProperty` Klasa obsługuje elementu formantu listy właściwości, które umożliwia otwarcie okna dialogowego wyboru czcionki.  
@@ -83,22 +83,22 @@ CMFCPropertyGridFontProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `strName`  
+ [in] *strName*  
  Nazwa właściwości.  
   
- [in] `lf`  
+ [in] *lf*  
  Struktura logiczna czcionki, która określa atrybuty czcionki.  
   
- [in] `dwFontDialogFlags`  
- Style, które są stosowane do czcionki — okno dialogowe wyświetlane po kliknięciu przycisku rozwijanego wartości właściwości. Wartość domyślna to bitowe połączenie (lub) CF_EFFECTS i CF_SCREENFONTS. Aby uzyskać więcej informacji, zobacz `Flags` parametr [struktury CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
+ [in] *dwFontDialogFlags*  
+ Style, które są stosowane do czcionki — okno dialogowe wyświetlane po kliknięciu przycisku rozwijanego wartości właściwości. Wartość domyślna to bitowe połączenie (lub) CF_EFFECTS i CF_SCREENFONTS. Aby uzyskać więcej informacji, zobacz *flagi* parametr [struktury CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
   
- [in] `lpszDescr`  
+ [in] *lpszDescr*  
  Opis właściwości czcionki. Wartość domyślna to `NULL`.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Dane specyficzne dla aplikacji, takich jak liczby całkowitej lub wskaźnika do innych danych, która jest skojarzona z właściwością. Wartość domyślna to 0.  
   
- [in] `color`  
+ [in] *kolorów*  
  Kolor czcionki. Wartość domyślna to domyślny kolor.  
   
 ### <a name="remarks"></a>Uwagi  

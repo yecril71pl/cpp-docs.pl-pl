@@ -122,12 +122,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eecc1a08a3e0dcf8d8b3f1c31594488901a848f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 906e956bae9bce14c83d938218f51dfea9288b96
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377626"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041893"
 ---
 # <a name="cmdichildwndex-class"></a>Klasa CMDIChildWndEx
 `CMDIChildWndEx` Klasa udostępnia funkcje systemu Windows wiele okien podrzędnych interfejsu (MDI) dokumentu. Rozszerza funkcjonalność [cmdichildwnd — klasa](../../mfc/reference/cmdichildwnd-class.md). Framework wymaga tej klasy, gdy aplikacja MDI używa niektórych klas MFC.  
@@ -239,10 +239,10 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Wskaźnik do okienka.  
   
- [in] `bTail`  
+ [in] *bTail*  
  `TRUE` Aby dodać okienku na końcu listy okienka dokowania Menedżera; w przeciwnym razie `FALSE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -256,7 +256,7 @@ void AddTabbedPane(CDockablePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Wskaźnik do okienka.  
   
 ##  <a name="adjustdockinglayout"></a>  CMDIChildWndEx::AdjustDockingLayout  
@@ -267,7 +267,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `hdwp`  
+ [in] *hdwp*  
  Dojście do struktury położenie okna opóźnieniem.  
   
 ##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs  
@@ -305,17 +305,17 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pBar`  
+ [in] *pBar*  
  Wskaźnik do okienka.  
   
- [in] `nDockBarID`  
+ [in] *nDockBarID*  
  Identyfikator okienka.  
   
- [in] `lpRect`  
+ [in] *lprect —*  
  Wskaźnik do prostokąta.  
   
 ### <a name="remarks"></a>Uwagi  
- `lpRect` Parametr nie jest używany.  
+ *Lprect —* parametr nie jest używany.  
   
 ##  <a name="dockpaneleftof"></a>  CMDIChildWndEx::DockPaneLeftOf  
  Doków jedno okienko na lewo od innego okienka.  
@@ -327,17 +327,17 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pBar`  
+ *pBar*  
  Wskaźnik do okienka, który ma być zadokowane.  
   
- `pLeftOf`  
+ *pLeftOf*  
  Wskaźnik do okienka, która służy jako punkt odniesienia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `TRUE` w przypadku powodzenia `FALSE` w przypadku awarii.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda przyjmuje okienko określony przez `pBar` i stacje dokujące go po lewej stronie okienko określony przez `pLeftOf`.  
+ Ta metoda przyjmuje okienko określony przez *pBar* i stacje dokujące go po lewej stronie okienko określony przez *pLeftOf*.  
   
  Tę metodę można wywołać, aby dock kilku okienek w kolejności wstępnie zdefiniowane.  
   
@@ -349,7 +349,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
  Określa strony główną ramkę okna, który jest włączony. Użyj co najmniej jeden z następujących flag.  
   
 - `CBRS_ALIGN_LEFT`  
@@ -371,7 +371,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
  Określa wyrównanie dokowania, aby włączyć.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -453,7 +453,7 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nID`  
+ [in] *nID*  
  Identyfikator formantu okienka można znaleźć.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -506,14 +506,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Wskaźnik do okienka do wstawienia.  
   
- [in] `pTarget`  
+ [in] *pTarget*  
  Wskaźnik do okienka sąsiadujących ze sobą.  
   
- [in] `bAfter`  
- Jeśli `TRUE`, `pControlBar` po `pTarget`. Jeśli `FALSE`, `pControlBar` dodaje się przed `pTarget`.  
+ [in] *bPo*  
+ Jeśli `TRUE`, *pControlBar* po *pTarget*. Jeśli `FALSE`, *pControlBar* dodaje się przed *pTarget*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `TRUE` Jeśli metoda zakończy się powodzeniem, `FALSE` inaczej.  
@@ -529,13 +529,13 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `point`  
+ [in] *punktu*  
  Określony punkt.  
   
- [in] `dwBarAlignment`  
+ [in] *dwBarAlignment*  
  Określa, które krawędzi punkt znajduje się w pobliżu. Możliwe wartości to `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, i `CBRS_ALIGN_BOTTOM`  
   
- [in] `bOuterEdge`  
+ [in] *bOuterEdge*  
  `TRUE` Jeśli punkt jest bliski zewnętrzną krawędzią dokowania lokacji; `FALSE` inaczej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -580,7 +580,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pFrame`  
+ [in] *pFrame*  
  Wskaźnik do okno ramowe minimalnej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -596,10 +596,10 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bPreview`  
+ [in] *bPreview*  
  Jeśli `TRUE`, wprowadź tryb podglądu wydruku. Jeśli `FALSE`, Zamknij tryb podglądu wydruku.  
   
- [in] `pState`  
+ [in] *stanu wydajności*  
  Wskaźnik do struktury stanu podglądu wydruku.  
   
 ##  <a name="onupdateframetitle"></a>  CMDIChildWndEx::OnUpdateFrameTitle  
@@ -610,7 +610,7 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bAddToTitle`  
+ [in] *bAddToTitle*  
  Jeśli `TRUE`, Dodaj nazwę dokumentu do tytułu.  
   
 ##  <a name="panefrompoint"></a>  CMDIChildWndEx::PaneFromPoint  
@@ -631,19 +631,19 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `point`  
+ [in] *punktu*  
  Określa punkt, we współrzędnych ekranu, aby sprawdzić.  
   
- [in] `nSensitivity`  
+ [in] *nSensitivity*  
  Zwiększ obszar o tę wartość. Okienko spełnia kryteria wyszukiwania, jeśli znajduje się w obszarze zwiększona danego punktu.  
   
- [in] `bExactBar`  
- `TRUE` ignorowanie `nSensitivity` parametru; w przeciwnym razie `FALSE`.  
+ [in] *bExactBar*  
+ `TRUE` ignorowanie *nSensitivity* parametru; w przeciwnym razie `FALSE`.  
   
- [in] `pRTCBarType`  
+ [in] *pRTCBarType*  
  Jeśli nie `NULL`, metoda szuka tylko okienka określonego typu.  
   
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  Jeśli okienko zostanie znaleziony w określonym momencie, ten parametr zawiera po stronie okienka, który był najbardziej zbliżony do określonego punktu. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -652,7 +652,7 @@ CBasePane* PaneFromPoint(
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę metodę, aby określić, czy okienko zawiera określony punkt zgodnie z określonych warunków, takich jak klasa środowiska uruchomieniowego i widoczności.  
   
- Gdy funkcja zwraca i okienku został znaleziony, `dwAlignment` zawiera wyrównanie określony punkt. Na przykład, jeśli punkt się najbliżej w górnej części okienka `dwAlignment` ma ustawioną wartość `CBRS_ALIGN_TOP`.  
+ Gdy funkcja zwraca i okienku został znaleziony, *dwAlignment* zawiera wyrównanie określony punkt. Na przykład, jeśli punkt się najbliżej w górnej części okienka *dwAlignment* ma ustawioną wartość `CBRS_ALIGN_TOP`.  
   
 ##  <a name="recalclayout"></a>  CMDIChildWndEx::RecalcLayout  
  Ponownie oblicza układ okna.  
@@ -662,7 +662,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bNotify`  
+ [in] *bNotify*  
  Jeśli `TRUE`, aktywny element w miejscu okna otrzymuje powiadomienia o zmianie układu.  
   
 ##  <a name="removepanefromdockmanager"></a>  CMDIChildWndEx::RemovePaneFromDockManager  
@@ -678,19 +678,19 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Wskaźnik do okienka do usunięcia.  
   
- [in] `bDestroy`  
+ [in] *bDestroy*  
  Jeśli `TRUE`, usunięto okienko zostanie zniszczony.  
   
- [in] `bAdjustLayout`  
+ [in] *bAdjustLayout*  
  Jeśli `TRUE`, natychmiast dostosować układ dokowania.  
   
- [in] `bAutoHide`  
+ [in] *bAutoHide*  
  Jeśli `TRUE`, dokującego układ jest powiązany z listy paski autohide —. Jeśli `FALSE`, dokowania układ jest powiązany z listy regularne okienka.  
   
- [in] `pBarReplacement`  
+ [in] *pBarReplacement*  
  Wskaźnik do okienka zastępujący okienku usunięte.  
   
 ##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup  
@@ -701,7 +701,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `p`  
+ [in] *p*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -717,10 +717,10 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pBar`  
- [in] `bShow`  
- [in] `bDelay`  
- [in] `bActivate`  
+ [in] *pBar*  
+ [in] *bShow*  
+ [in] *bDelay*  
+ [in] *bActivate*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -732,7 +732,7 @@ virtual void UpdateTaskbarTabIcon(HICON hIcon);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hIcon`  
+ *hIcon*  
  Dojście ikonę, aby wyświetlić na karcie paska zadań systemu Windows 7.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -745,7 +745,7 @@ void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bCheckRegisteredMDIChildCount`  
+ *bCheckRegisteredMDIChildCount*  
  Określa, czy ta funkcja musi sprawdzić liczbę elementów podrzędnych MDI zarejestrowany z kartami MDI. Jeśli ta liczba jest równa 0, następnie ta funkcja usuwa Prostokątny wycinek aplikacji miniatur paska zadań.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -758,7 +758,7 @@ virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rect`  
+ *Rect*  
  Określa Prostokątny wycinek nowe. W przypadku pusty lub zerowy prostokąt wycinka jest usuwany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -774,7 +774,7 @@ void SetTaskbarTabProperties(DWORD dwFlags);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwFlags`  
+ *wartość elementu dwFlags*  
  Kombinacja wartości STPFLAG. Aby uzyskać więcej informacji, zobacz [ITaskbarList4::SetTabProperties](http://msdn.microsoft.com/library/dd562049\(vs.85\).aspx).  
   
 ### <a name="remarks"></a>Uwagi  
@@ -787,7 +787,7 @@ void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWndBefore`  
+ *pWndBefore*  
  Wskaźnik do której miniaturę dodaje się po lewej stronie okna podrzędnego MDI. To okno musi już być zarejestrowany za pośrednictwem `RegisterTaskbarTab`. Jeśli ta wartość jest `NULL`, nowe miniatur zostanie dodany na końcu listy.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -809,7 +809,7 @@ virtual void RegisterTaskbarTab(CMDIChildWndEx* pWndBefore = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWndBefore`  
+ *pWndBefore*  
  Wskaźnik do której miniaturę dodaje się po lewej stronie okna podrzędnego MDI. To okno musi już być zarejestrowany za pośrednictwem `RegisterTaskbarTab`. Jeśli ta wartość jest `NULL`, nowe miniatur zostanie dodany na końcu listy.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -826,16 +826,16 @@ virtual BOOL OnTaskbarTabThumbnailStretch(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hBmpDst`  
+ *hBmpDst*  
  Dojście do mapy bitowej docelowego.  
   
- `rectDst`  
+ *rectDst*  
  Określa docelowy prostokąt.  
   
- `hBmpSrc`  
+ *hBmpSrc*  
  Dojście do źródła mapy bitowej.  
   
- `rectSrc`  
+ *rectSrc*  
  Określa prostokątne źródła.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -852,13 +852,13 @@ virtual int OnTaskbarTabThumbnailMouseActivate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDesktopWnd`  
+ *pDesktopWnd*  
  Określa wskaźnik do okna nadrzędnego najwyższego poziomu okna aktywowane. Wskaźnik mogą być tymczasowe i nie powinny być przechowywane.  
   
- `nHitTest`  
+ *nHitTest*  
  Określa numer kierunkowy trafień testu. Testu trafienia jest test, który określa lokalizację kursora.  
   
- `message`  
+ *komunikat*  
  Określa numer komunikatu myszy.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -875,13 +875,13 @@ virtual void OnTaskbarTabThumbnailActivate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nState`  
+ *nInformacje*  
  Określa, czy `CWnd` jest aktywowany lub dezaktywowany.  
   
- `pWndOther`  
+ *pWndOther*  
  Wskaźnik do `CWnd` aktywowany lub dezaktywowany. Wskaźnik może być `NULL`, i może być tymczasowe.  
   
- `bMinimized`  
+ *bMinimized*  
  Określa stan zminimalizowane `CWnd` aktywowany lub dezaktywowany. Wartość `TRUE` wskazuje okna jest zminimalizowany.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -906,10 +906,10 @@ virtual HBITMAP OnGetIconicThumbnail(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nWidth`  
+ *nWidth*  
  Określa szerokość wymagane mapy bitowej.  
   
- `nHeight`  
+ *nHeight*  
  Określa wysokość wymagane mapy bitowej.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -924,10 +924,10 @@ virtual HBITMAP OnGetIconicLivePreviewBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bIsMDIChildActive`  
+ *bIsMDIChildActive*  
  Ten parametr jest `TRUE` Jeśli mapy bitowej jest wymagany dla elementu podrzędnego MDI, który jest obecnie aktywny i okna głównego nie jest zminimalizowany. Domyślnie w takim przypadku przetwarzania wykonuje migawkę głównego okna.  
   
- `ptLocation`  
+ *ptLocation*  
  Określa lokalizację mapy bitowej w głównym (najwyższego poziomu) współrzędne klienta okna. Ten punkt powinny być dostarczone przez funkcję wywołującą.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1039,7 +1039,7 @@ void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bEnable`  
+ *bWłączenie*  
  Określa, czy włączyć ( `TRUE`), lub Wyłącz ( `FALSE`) automatyczny wybór część obszaru klienckiego okna do wyświetlenia.  
   
 ### <a name="remarks"></a>Uwagi  

@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48dc35a5b3e7f6b12376a47d68a95602bed48c49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a62dcb52c6e50897c3ae4a518b1cd8f2b704c7a1
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375314"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038302"
 ---
 # <a name="cmfcautohidebutton-class"></a>Klasa CMFCAutoHideButton
 Przycisk, który wyświetla lub ukrywa [klasy CDockablePane](../../mfc/reference/cdockablepane-class.md) skonfigurowanego do ukrycia.  
@@ -144,13 +144,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pParentBar`  
+ [in] *pParentBar*  
  Wskaźnik do narzędzi nadrzędnej.  
   
- [in] `pAutoHideWnd`  
+ [in] *pAutoHideWnd*  
  Wskaźnik do [CDockablePane](../../mfc/reference/cdockablepane-class.md) obiektu. Ten przycisk autoukrywania ukrywa i wskazuje, że `CDockablePane`.  
   
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  Wartość, która określa sposób wyrównania przycisku z głównego okna ramowego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -159,7 +159,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Uwagi  
  Po utworzeniu `CMFCAutoHideButton` obiektu, przycisk autoukrywania należy skojarzyć z określonym `CDockablePane`. Użytkownik może użyć przycisku autoukrywania, aby ukryć i pokazać skojarzony `CDockablePane`.  
   
- `dwAlignment` Parametr wskazuje, gdzie znajduje się przycisk autoukrywania w aplikacji. Parametr może być jednym z następujących wartości:  
+ *DwAlignment* parametr wskazuje, gdzie znajduje się przycisk autoukrywania w aplikacji. Parametr może być jednym z następujących wartości:  
   
 - `CBRS_ALIGN_LEFT`  
   
@@ -303,7 +303,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -320,13 +320,13 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- [in] `rectBounds`  
+ [in] *rectBounds*  
  Prostokąt ograniczający automatyczne ukrywanie przycisku.  
   
- [in] `rectBorderSize`  
+ [in] *rectBorderSize*  
  Grubość obramowania dla każdej strony automatyczne ukrywanie przycisku.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -342,10 +342,10 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- [in] `rect`  
+ [in] *rect*  
  Prostokąt ograniczający automatyczne ukrywanie przycisku.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -359,7 +359,7 @@ void ShowAttachedWindow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bShow`  
+ [in] *bShow*  
  Wartość logiczna określająca, czy ta metoda, pokazuje dołączonego `CDockablePane`.  
   
 ##  <a name="showbutton"></a>  CMFCAutoHideButton::ShowButton  
@@ -370,7 +370,7 @@ virtual void ShowButton(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bShow`  
+ [in] *bShow*  
  Wartość logiczna określająca, czy wyświetlać przycisk autoukrywania.  
   
 ##  <a name="move"></a>  CMFCAutoHideButton::Move  
@@ -381,7 +381,7 @@ void Move(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nOffset`  
+ [in] *nOffset*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -393,7 +393,7 @@ void ReplacePane(CDockablePane* pNewBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pNewBar`  
+ [in] *pNewBar*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -405,7 +405,7 @@ virtual void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pFirstBarInGroup`  
+ [in] *pFirstBarInGroup*  
  Wskaźnik do pierwszego paska w grupie.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -418,7 +418,7 @@ virtual void HighlightButton(BOOL bHighlight);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bHighlight`  
+ *bHighlight*  
  Określa nowe automatyczne ukrywanie stanu przycisku. `TRUE` Wskazuje przycisk zostanie wyróżniona, `FALSE` wskazuje przycisku nie są wyróżnione.  
   
 ### <a name="remarks"></a>Uwagi  

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 041b707bec58abeb19617fbfd275428ca2cf67e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9aaf60141747f1ff1db2256815f24e6708307ab7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374884"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042173"
 ---
 # <a name="coleinsertdialog-class"></a>Klasa COleInsertDialog
 Używane w oknie dialogowym Wstaw obiekt OLE.  
@@ -114,7 +114,7 @@ COleInsertDialog (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwFlags`  
+ *wartość elementu dwFlags*  
  Tworzenie Flaga, która zawiera dowolną liczbę następujące wartości, aby można było połączyć za pomocą operatora bitowego OR:  
   
 - **IOF_SHOWHELP** Określa, czy przycisk Pomoc, aby będą wyświetlane, gdy jest wywoływana w oknie dialogowym.  
@@ -131,7 +131,7 @@ COleInsertDialog (
   
 - **IOF_VERIFYSERVERSEXIST** Określa, że okno dialogowe należy sprawdzić, czy klasy dodaje do pola listy, zapewniając, czy serwery określone w bazie danych rejestracji istnieją przed wyświetleniem okna dialogowego. Ustawienie tej flagi może znacznie obniżyć wydajność.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskazuje obiekt okna nadrzędnego lub właściciela (typu `CWnd`) do której należy obiektu okna dialogowego. Jeśli jest **NULL**, okno nadrzędne obiektu okna dialogowego ma ustawioną wartość okna głównego aplikacji.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -145,7 +145,7 @@ BOOL CreateItem(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Wskazuje element, który ma zostać utworzony.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -167,7 +167,7 @@ INT_PTR
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwFlags`  
+ *wartość elementu dwFlags*  
  Jedna z następujących wartości:  
   
  `COleInsertDialog::DocObjectsOnly` Wstawia tylko DocObjects.  

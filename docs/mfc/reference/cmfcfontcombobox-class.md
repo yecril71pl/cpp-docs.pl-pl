@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b37901bddec6a886ddb1ae538f3294bd9d28d9a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9141dec6fdcb966dcdb664bb8dc090b50a10a614
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375748"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040002"
 ---
 # <a name="cmfcfontcombobox-class"></a>Klasa CMFCFontComboBox
 `CMFCFontComboBox` Klasy tworzy kontrolki pola kombi, który zawiera listę czcionek.  
@@ -132,13 +132,13 @@ BOOL SelectFont(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDesc`  
+ [in] *pDesc*  
  Wskazuje obiekt opis czcionki.  
   
- [in] `lpszName`  
+ [in] *lpszName*  
  Określa nazwę czcionki.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Określa zestaw znaków. Wartość domyślna to DEFAULT_CHARSET. Aby uzyskać więcej informacji, zobacz `lfCharSet` członkiem [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -164,13 +164,13 @@ BOOL Setup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nFontType`  
+ [in] *nFontType*  
  Określa typ czcionki. Wartość domyślna to bitowe połączenie (lub) DEVICE_FONTTYPE, RASTER_FONTTYPE i TRUETYPE_FONTTYPE.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Określa zestaw znaków czcionki. Wartość domyślna to DEFAULT_CHARSET.  
   
- [in] `nPitchAndFamily`  
+ [in] *nPitchAndFamily*  
  Określa czcionkę gęstość i rodzinę. Wartość domyślna to DEFAULT_PITCH.  
   
 ### <a name="return-value"></a>Wartość zwracana  

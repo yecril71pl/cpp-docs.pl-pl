@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53988248ac183fd551d100ede29648bcecd067f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68d78e221b9bcdbffbfc80ba26c6106498c4fa41
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372917"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040990"
 ---
 # <a name="cmfctabdroptarget-class"></a>Klasa CMFCTabDropTarget
 Udostępnia mechanizm komunikacji między formantem karty i bibliotek OLE.  
@@ -100,13 +100,13 @@ virtual DROPEFFECT OnDragEnter(
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] `pWnd`|Nieużywane.|  
-|[in] `pDataObject`|Wskaźnik do obiektu, którą przeciąga użytkownik.|  
-|[in] `dwKeyState`|Zawiera stan klawisze modyfikujące. To jest kombinacją dowolną liczbę następujących: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, i `MK_RBUTTON`.|  
-|[in] `point`|Lokalizacja kursora we współrzędnych klienta.|  
+|[in] *pWnd*|Nieużywane.|  
+|[in] *pDataObject*|Wskaźnik do obiektu, którą przeciąga użytkownik.|  
+|[in] *dwKeyState*|Zawiera stan klawisze modyfikujące. To jest kombinacją dowolną liczbę następujących: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, i `MK_RBUTTON`.|  
+|[in] *punktu*|Lokalizacja kursora we współrzędnych klienta.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Efekt, który powoduje spadek występuje w lokalizacji określonej przez `point`. Można co najmniej jeden z następujących czynności:  
+ Efekt, który powoduje spadek występuje w lokalizacji określonej przez *punktu*. Można co najmniej jeden z następujących czynności:  
   
 - `DROPEFFECT_NONE`  
   
@@ -135,7 +135,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] `pWnd`|Nieużywane.|  
+|[in] *pWnd*|Nieużywane.|  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wywołuje `CMFCBaseTabCtrl::OnDragLeave` metody do wykonania tej operacji przeciągania.  
@@ -156,13 +156,13 @@ virtual DROPEFFECT OnDragOver(
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] `pWnd`|Nieużywane.|  
-|[in] `pDataObject`|Wskaźnik do obiektu, którą przeciąga użytkownik.|  
-|[in] `dwKeyState`|Zawiera stan klawisze modyfikujące. To jest kombinacją dowolną liczbę następujących: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, i `MK_RBUTTON`.|  
-|[in] `point`|Lokalizacja wskaźnika myszy we współrzędnych klienta.|  
+|[in] *pWnd*|Nieużywane.|  
+|[in] *pDataObject*|Wskaźnik do obiektu, którą przeciąga użytkownik.|  
+|[in] *dwKeyState*|Zawiera stan klawisze modyfikujące. To jest kombinacją dowolną liczbę następujących: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, i `MK_RBUTTON`.|  
+|[in] *punktu*|Lokalizacja wskaźnika myszy we współrzędnych klienta.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Efekt, który powoduje spadek występuje w lokalizacji określonej przez `point`. Można co najmniej jeden z następujących czynności:  
+ Efekt, który powoduje spadek występuje w lokalizacji określonej przez *punktu*. Można co najmniej jeden z następujących czynności:  
   
 - `DROPEFFECT_NONE`  
   
@@ -196,11 +196,11 @@ virtual DROPEFFECT OnDropEx(
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] `pWnd`|Nieużywane.|  
-|[in] `pDataObject`|Wskaźnik do obiektu, którą przeciąga użytkownik.|  
-|[in] `dropEffect`|Operacja jej porzucenia domyślne.|  
-|[in] `dropList`|Nieużywane.|  
-|[in] `point`|Lokalizacja wskaźnika myszy we współrzędnych klienta.|  
+|[in] *pWnd*|Nieużywane.|  
+|[in] *pDataObject*|Wskaźnik do obiektu, którą przeciąga użytkownik.|  
+|[in] *dropEffect*|Operacja jej porzucenia domyślne.|  
+|[in] *listy rozwijanej*|Nieużywane.|  
+|[in] *punktu*|Lokalizacja wskaźnika myszy we współrzędnych klienta.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Skutek upuszczania. Można co najmniej jeden z następujących czynności:  
@@ -216,7 +216,7 @@ virtual DROPEFFECT OnDropEx(
 - `DROPEFFECT_SCROLL`  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wywołuje `CMFCBaseTabCtrl::OnDrop` Jeśli framework paska narzędzi w trybie dostosowania i formatu danych Schowka jest dostępny. Jeśli wywołanie `CMFCBaseTabCtrl::OnDrop` zwraca wartość różną od zera, ta metoda zwraca domyślny efekt upuszczania określony przez `dropEffect`. W przeciwnym razie ta metoda zwraca `DROPEFFECT_NONE`. Aby uzyskać więcej informacji o skutki upuszczania, zobacz [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).  
+ Ta metoda wywołuje `CMFCBaseTabCtrl::OnDrop` Jeśli framework paska narzędzi w trybie dostosowania i formatu danych Schowka jest dostępny. Jeśli wywołanie `CMFCBaseTabCtrl::OnDrop` zwraca wartość różną od zera, ta metoda zwraca domyślny efekt upuszczania określony przez *dropEffect*. W przeciwnym razie ta metoda zwraca `DROPEFFECT_NONE`. Aby uzyskać więcej informacji o skutki upuszczania, zobacz [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).  
   
  Aby uzyskać więcej informacji dotyczących trybu dostosowania, zobacz [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Aby uzyskać więcej informacji na temat formatów danych schowka, zobacz [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).  
   
@@ -232,7 +232,7 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] `pOwner`|Formantu karty, aby zarejestrować jako miejsca docelowego.|  
+|[in] *pOwner*|Formantu karty, aby zarejestrować jako miejsca docelowego.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli rejestracja powiodła się. w przeciwnym razie 0.  

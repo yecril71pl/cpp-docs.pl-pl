@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d541702d73befedab72ad7b130b56a125a5817aa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5c287d30a2a54b6e300f34ca83703baf154b36bf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376312"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042511"
 ---
 # <a name="cmfctoolbarcomboboxedit-class"></a>Klasa CMFCToolBarComboBoxEdit
 Używa w ramach `CMFCToolBarComboBoxEdit` klasy w celu utworzenia przycisku paska narzędzi, który zachowuje się jak kontrolkę pola kombi do edycji.  
@@ -74,7 +74,7 @@ CMFCToolBarComboBoxEdit(CMFCToolBarComboBoxButton& combo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `combo`  
+ [in] *kombi*  
  Odwołanie do [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) obiektu, który jest przycisku paska narzędzi, który zawiera kontrolki pola kombi.  
   
 ### <a name="example"></a>Przykład  

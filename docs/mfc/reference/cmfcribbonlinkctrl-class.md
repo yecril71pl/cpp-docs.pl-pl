@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9267dd6ab89871bcf8058529f32eb3686be937df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d078900c3436c2205905b92d651bab86e94db246
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368439"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039014"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>Klasa CMFCRibbonLinkCtrl
 Implementuje hiperłącze, które znajduje się na Wstążce. Hiperłącze otwiera stronę sieci Web, gdy zostanie kliknięty.  
@@ -106,13 +106,13 @@ CMFCRibbonLinkCtrl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nID`  
+ [in] *nID*  
  Określa identyfikator polecenia polecenia wykonywany po kliknięciu formantu łącza.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Określa etykietę do wyświetlenia w formancie łącza.  
   
- [in] `lpszLink`  
+ [in] *lpszLink*  
  Określa hiperłącze skojarzony z formantem łącza.  
   
 ### <a name="example"></a>Przykład  
@@ -128,7 +128,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `src`  
+ [in] *src*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -140,7 +140,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -166,7 +166,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -191,8 +191,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `CDC*`  
- [in] `CRect`  
+ [in] *CDC**  
+ [in] *CRect*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -217,7 +217,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -229,7 +229,7 @@ virtual void OnMouseMove(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `point`  
+ [in] *punktu*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -263,7 +263,7 @@ void SetLink(LPCTSTR lpszLink);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszLink`  
+ [in] *lpszLink*  
  Określa tekst hiperłącza.  
   
 ## <a name="see-also"></a>Zobacz też  

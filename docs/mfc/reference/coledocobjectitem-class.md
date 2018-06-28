@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af2b13b8da5f70cf55b47ddf3b7864f9f9151a40
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0842904ddb6e534cabc9fff8b5d2b2b4855f410
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373582"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042212"
 ---
 # <a name="coledocobjectitem-class"></a>Klasa COleDocObjectItem
 Zawieranie dokumentów aktywnych implements.  
@@ -108,7 +108,7 @@ COleDocObjectItem(COleDocument* pContainerDoc = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pContainerDoc`  
+ *pContainerDoc*  
  Wskaźnik do `COleDocument` obiektu działający jako kontener dokumentów aktywnych. Ten parametr musi być **NULL** umożliwiające **IMPLEMENT_SERIALIZE**. Zwykle elementy OLE są konstruowane z innej **NULL** wskaźnik dokumentu.  
   
 ##  <a name="dodefaultprinting"></a>  COleDocObjectItem::DoDefaultPrinting  
@@ -121,10 +121,10 @@ static HRESULT DoDefaultPrinting(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCaller`  
+ *pCaller*  
  Wskaźnik do [CView](../../mfc/reference/cview-class.md) obiektu, który wysyła polecenie drukowania.  
   
- `pInfo`  
+ *pInfo*  
  Wskaźnik do [cprintinfo —](../../mfc/reference/cprintinfo-structure.md) obiekt, który opisano zadania, które ma być drukowana.  
   
 ##  <a name="execcommand"></a>  COleDocObjectItem::ExecCommand  
@@ -138,14 +138,14 @@ HRESULT ExecCommand(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCmdID`  
- Identyfikator polecenia do wykonania. Musi należeć do grupy identyfikowanej przez `pguidCmdGroup`.  
+ *nCmdID*  
+ Identyfikator polecenia do wykonania. Musi należeć do grupy identyfikowanej przez *pguidCmdGroup*.  
   
- `nCmdExecOpt`  
+ *nCmdExecOpt*  
  Określa opcje wykonywania polecenia. Domyślnie można wykonać polecenia bez monitowania użytkownika. Zobacz [OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930) listę wartości.  
   
- `pguidCmdGroup`  
- Unikatowy identyfikator grupy polecenia. Domyślnie **NULL**, określającej grupę standardów. Polecenie przekazano `nCmdID` musi należeć do grupy.  
+ *pguidCmdGroup*  
+ Unikatowy identyfikator grupy polecenia. Domyślnie **NULL**, określającej grupę standardów. Polecenie przekazano *nCmdID* musi należeć do grupy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca `S_OK` w przypadku powodzenia; w przeciwnym razie zwraca jedną z następujących kodów błędów.  
@@ -155,14 +155,14 @@ HRESULT ExecCommand(
 |**E_UNEXPECTED**|Wystąpił nieoczekiwany błąd.|  
 |**E_FAIL**|Wystąpił błąd.|  
 |**E_NOTIMPL**|Wskazuje MFC sam powinien próbować tłumaczenie i wysyłać polecenia.|  
-|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup` ma wartość inną niż **NULL** , ale nie określa grupę rozpoznanego polecenia.|  
-|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID` Nie rozpoznano jako prawidłowego polecenia w pGroup grupy.|  
-|**OLECMDERR_DISABLED**|Polecenie identyfikowane przez `nCmdID` jest wyłączona i nie może zostać wykonana.|  
-|**OLECMDERR_NOHELP**|Obiekt wywołujący w opiniach pomocy w polecenie identyfikowane przez `nCmdID` , ale nie jest dostępna Pomoc.|  
+|**OLECMDERR_E_UNKNOWNGROUP**|*pguidCmdGroup* ma wartość inną niż **NULL** , ale nie określa grupę rozpoznanego polecenia.|  
+|**OLECMDERR_E_NOTSUPPORTED**|*nCmdID* nie rozpoznano jako prawidłowego polecenia w pGroup grupy.|  
+|**OLECMDERR_DISABLED**|Polecenie identyfikowane przez *nCmdID* jest wyłączona i nie może zostać wykonana.|  
+|**OLECMDERR_NOHELP**|Obiekt wywołujący w opiniach pomocy w polecenie identyfikowane przez *nCmdID* , ale nie jest dostępna Pomoc.|  
 |**OLECMDERR_CANCELLED**|Użytkownik anulował wykonywania.|  
   
 ### <a name="remarks"></a>Uwagi  
- `pguidCmdGroup` i `nCmdID` parametry razem identyfikują polecenie do wywołania. `nCmdExecOpt` Parametr określa dokładne akcję do wykonania.  
+ *PguidCmdGroup* i *nCmdID* parametry razem identyfikują polecenie do wywołania. *NCmdExecOpt* parametr określa dokładne akcję do wykonania.  
   
 ##  <a name="getactiveview"></a>  COleDocObjectItem::GetActiveView  
  Wywołanie tej funkcji Członkowskich otrzymywać wskaźnik do `IOleDocumentView` interfejsu aktualnie aktywnego widoku.  
@@ -207,13 +207,13 @@ static BOOL OnPreparePrinting(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCaller`  
+ *pCaller*  
  Wskaźnik do [CView](../../mfc/reference/cview-class.md) obiektu, który wysyła polecenie drukowania.  
   
- `pInfo`  
+ *pInfo*  
  Wskaźnik do [cprintinfo —](../../mfc/reference/cprintinfo-structure.md) obiekt, który opisano zadania, które ma być drukowana.  
   
- `bPrintAll`  
+ *bPrintAll*  
  Określa, czy ma być drukowana całego dokumentu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -230,13 +230,13 @@ static void OnPrint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCaller`  
+ *pCaller*  
  Wskaźnik do obiektu CView, który wysyła polecenie drukowania.  
   
- `pInfo`  
+ *pInfo*  
  Wskaźnik do [cprintinfo —](../../mfc/reference/cprintinfo-structure.md) obiekt, który opisano zadania, które ma być drukowana.  
   
- `bPrintAll`  
+ *bPrintAll*  
  Określa, czy ma być drukowana całego dokumentu.  
   
 ##  <a name="querycommand"></a>  COleDocObjectItem::QueryCommand  
@@ -251,16 +251,16 @@ HRESULT QueryCommand(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCmdID`  
+ *nCmdID*  
  Identyfikator polecenia, którego dotyczy zapytanie.  
   
- `pdwStatus`  
+ *pdwStatus*  
  Wskaźnik do flagi zwrócone w wyniku zapytania. Aby uzyskać listę możliwych wartości, zobacz [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237).  
   
- `pCmdText`  
+ *pCmdText*  
  Wskaźnik do [OLECMDTEXT](http://msdn.microsoft.com/library/windows/desktop/ms693314) struktury, do której należy zwrócić nazwę oraz informacje o stanie dla pojedynczego polecenia. Może być **NULL** wskazująca, czy obiekt wywołujący nie jest konieczne te informacje.  
   
- `pguidCmdGroup`  
+ *pguidCmdGroup*  
  Unikatowy identyfikator grupy polecenia; może być **NULL** do określenia standardowe grupy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -277,7 +277,7 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwCloseOption`  
+ *dwCloseOption*  
  Flaga określenie, w jakich okolicznościach elementu OLE jest zapisywana, gdy powraca do stanu załadowany. Aby uzyskać listę możliwych wartości, zobacz [COleClientItem::Close](../../mfc/reference/coleclientitem-class.md#close).  
   
 ### <a name="remarks"></a>Uwagi  

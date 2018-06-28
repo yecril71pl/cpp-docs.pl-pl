@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d22fa264f48d3c5b1b6b88db338bc3be45c3f398
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc609fac36ccdbb9f84ce8f2b9b7c0ccfc5ccd3f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369053"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038506"
 ---
 # <a name="cjumplist-class"></a>Klasa CJumpList
 A `CJumpList` znajduje się lista skrótów ujawniony po kliknięciu prawym przyciskiem myszy ikonę na pasku zadań.  
@@ -131,19 +131,19 @@ BOOL AddDestination(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpcszCategoryName`  
+ *lpcszCategoryName*  
  Określa nazwę kategorii. Określona kategoria nie istnieje, zostanie utworzona.  
   
- `strDestinationPath`  
+ *strDestinationPath*  
  Określa ścieżkę do pliku docelowego.  
   
- `strCategoryName`  
+ *strCategoryName*  
  Określa nazwę kategorii. Określona kategoria nie istnieje, zostanie utworzona.  
   
- `pShellItem`  
+ *pShellItem*  
  Określa element powłoki reprezentujący docelowego dodawany.  
   
- `pShellLink`  
+ *pShellLink*  
  Określa łącze powłoki reprezentujący docelowego dodawany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -159,7 +159,7 @@ BOOL AddKnownCategory(KNOWNDESTCATEGORY category);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `category`  
+ *category*  
  Określa typ znanej kategorii. Może to być albo `KDC_RECENT`, lub `KDC_KNOWN`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -182,22 +182,22 @@ BOOL AddTask(IShellLink* pShellLink);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `strTargetExecutablePath`  
+ *strTargetExecutablePath*  
  Określa ścieżkę docelową zadań.  
   
- `strCommandLineArgs`  
+ *strCommandLineArgs*  
  Określa argumenty wiersza polecenia plik wykonywalny określony przez strTargetExecutablePath.  
   
- `strTitle`  
+ *strTitle*  
  Nazwa zadania, który będzie wyświetlany na liście docelowej.  
   
- `strIconLocation`  
+ *strIconLocation*  
  Lokalizacja ikonę, która będzie wyświetlana na liście docelowej, wraz z tytułu.  
   
- `iIconIndex`  
+ *iIconIndex*  
  Indeks ikony.  
   
- `pShellLink`  
+ *pShellLink*  
  Łącze powłoki reprezentujący zadanie ma zostać dodana.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -213,7 +213,7 @@ BOOL AddTasks(IObjectArray* pObjectCollection);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pObjectCollection`  
+ *pObjectCollection*  
  Kolekcja zadań ma zostać dodana.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -239,7 +239,7 @@ CJumpList(BOOL bAutoCommit = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bAutoCommit`  
+ *bAutoCommit*  
  Jeśli ten parametr ma wartość FALSE listy nie jest automatycznie zadeklarowana w destruktora.  
   
 ##  <a name="clearall"></a>  CJumpList::ClearAll  
@@ -330,7 +330,7 @@ void SetAppID(LPCTSTR strAppID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `strAppID`  
+ *strAppID*  
  Ciąg określający identyfikator modelu użytkownika aplikacji.  
   
 ## <a name="see-also"></a>Zobacz też  

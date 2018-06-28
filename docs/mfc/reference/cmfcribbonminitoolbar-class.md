@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d8aebd796e0edb587e18db910df808fa349ca37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07b20d43c53fc0f485d33f71805e73f885c1200a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371676"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041753"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>Klasa CMFCRibbonMiniToolBar
 Implementuje kontekstowe podręcznego paska narzędzi.  
@@ -98,10 +98,10 @@ void SetCommands(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pRibbonBar`  
+ [in] *pRibbonBar*  
  Na pasku wstążki, wyszukująca w przypadku przycisków wyświetlić podręczny pasek narzędzi.  
   
- [in] `lstCommands`  
+ [in] *lstCommands*  
  Listę poleceń, który będzie wyświetlany na podręczny pasek narzędzi. Aby znaleźć skojarzone przycisków przeszukiwane są wszystkie kategorie wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -122,10 +122,10 @@ BOOL Show(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `x`  
+ [in] *x*  
  Określa położenie paska we współrzędnych ekranu.  
   
- [in] `y`  
+ [in] *y*  
  Określa położenie w pionie podręczny pasek narzędzi we współrzędnych ekranu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -143,16 +143,16 @@ BOOL ShowWithContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `x`  
+ [in] *x*  
  Określa położenie menu kontekstowe we współrzędnych ekranu.  
   
- [in] `y`  
+ [in] *y*  
  Określa położenie w pionie menu kontekstowe we współrzędnych ekranu.  
   
- [in] `uiMenuResID`  
+ [in] *uiMenuResID*  
  Określa identyfikator zasobu menu kontekstowe do wyświetlenia.  
   
- [in] `pWndOwner`  
+ [in] *pWndOwner*  
  Określa okno, który odbiera komunikaty z menu kontekstowego.  
   
 ### <a name="return-value"></a>Wartość zwracana  

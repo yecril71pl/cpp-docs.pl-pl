@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cea6fc2a543a528a0838479b2c47bea99f21cf96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd59f9575fdbde798b46bee343f7f7724968a478
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371116"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038315"
 ---
 # <a name="cmfccolorbutton-class"></a>Klasa CMFCColorButton
 `CMFCColorButton` i [klasy CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) klasy są używane razem aby wdrażanie kontroli próbnika kolorów.  
@@ -159,13 +159,13 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Określa tekst przycisku automatycznego.  
   
- [in] `colorAutomatic`  
+ [in] *colorAutomatic*  
  Wartości RGB, która określa kolor domyślny przycisk Automatyczny.  
   
- [in] `bEnable`  
+ [in] *bWłączenie*  
  Określa, czy przycisk Automatyczny jest włączone.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -181,13 +181,13 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Określa tekst przycisku.  
   
- [in] `bAltColorDlg`  
+ [in] *bAltColorDlg*  
  Określa, czy [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) dialogowego lub okna dialogowego kolorów systemu jest otwierany, gdy użytkownik kliknie przycisk.  
   
- [in] `bEnable`  
+ [in] *bWłączenie*  
  Określa, czy przycisk "other" jest włączona.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -249,13 +249,13 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskazuje kontekst urządzenia, który jest używany do renderowania obrazu przycisku.  
   
- [in] `rect`  
+ [in] *rect*  
  Prostokąt zakresem przycisku.  
   
- [in] `uiState`  
+ [in] *uiState*  
  Określa stan wizualny przycisku.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -272,13 +272,13 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskazuje kontekstu urządzenia używany do rysowania obramowania.  
   
- [in] `rectClient`  
- Prostokąt w kontekście urządzenia określonego przez `pDC` parametr, który definiuje granice przycisku do narysowania.  
+ [in] *rectClient*  
+ Prostokąt w kontekście urządzenia określonego przez *kontrolera pDC* parametr, który definiuje granice przycisku do narysowania.  
   
- [in] `uiState`  
+ [in] *uiState*  
  Określa stan wizualny przycisku.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -294,11 +294,11 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskazuje kontekstu urządzenia używany do rysowania prostokąt fokusu.  
   
- [in] `rectClient`  
- Prostokąt w kontekście urządzenia określonego przez `pDC` parametr, który definiuje granice przycisku.  
+ [in] *rectClient*  
+ Prostokąt w kontekście urządzenia określonego przez *kontrolera pDC* parametr, który definiuje granice przycisku.  
   
 ### <a name="remarks"></a>Uwagi  
  Zastępuje tę metodę, aby dostosować wygląd prostokąt fokusu.  
@@ -323,7 +323,7 @@ void RebuildPalette(CPalette* pPal);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `pPal`|Wskaźnik do logiczną paletę lub `NULL`. Jeśli `NULL`, jest używany z domyślnej palety systemu.|  
+|[in] *pPal*|Wskaźnik do logiczną paletę lub `NULL`. Jeśli `NULL`, jest używany z domyślnej palety systemu.|  
   
 ##  <a name="setcolor"></a>  CMFCColorButton::SetColor  
  Określa kolor przycisku.  
@@ -333,7 +333,7 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `color`  
+ [in] *kolorów*  
  Wartości RGB.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -348,10 +348,10 @@ static void SetColorName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `color`  
+ [in] *kolorów*  
  Kolor RGB wartość.  
   
- [in] `strName`  
+ [in] *strName*  
  Nazwa koloru.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -365,7 +365,7 @@ void SetColumnsNumber(int nColumns);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nColumns`  
+ [in] *nColumns*  
  Określa liczbę kolumn.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -381,14 +381,14 @@ void SetDocumentColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Określa etykietę do wyświetlenia przy użyciu zestawu kolorów dokumentu.  
   
- [in] `lstColors`  
+ [in] *lstColors*  
  Odwołanie do listy wartości RGB.  
   
 ### <a name="remarks"></a>Uwagi  
- A `CMFCColorButton` obiekt przechowuje listę wartości RGB, które są przenoszone do [klasy CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) obiektu. Po wyświetleniu paska koloru kolorów te są wyświetlane w sekcji specjalne, których etykiety jest określona przez `lpszLabel` parametru.  
+ A `CMFCColorButton` obiekt przechowuje listę wartości RGB, które są przenoszone do [klasy CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) obiektu. Po wyświetleniu paska koloru kolorów te są wyświetlane w sekcji specjalne, których etykiety jest określona przez *lpszLabel* parametru.  
   
 ##  <a name="setpalette"></a>  CMFCColorButton::SetPalette  
  Określa standardowe kolory do wyświetlenia w podręcznym pasku koloru.  
@@ -398,7 +398,7 @@ void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pPalette`  
+ [in] *pPalette*  
  Wskaźnik do paletę kolorów.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -411,7 +411,7 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bCalcOnly`  
+ [in] *bCalcOnly*  
  Jeśli jest różna od zera, nowy rozmiar kontrolki przycisku jest obliczane, ale rzeczywisty rozmiar nie ulega zmianie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -427,11 +427,11 @@ virtual void UpdateColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `color`  
+ [in] *kolorów*  
  Kolor wybrany przez użytkownika.  
   
 ### <a name="remarks"></a>Uwagi  
- `UpdateColor` Funkcji zmienia kolor aktualnie wybrany przycisk i powiadamia jego element nadrzędny, wysyłając `WM_COMMAND` komunikatów z `BN_CLICKED` powiadomień w wersji standard. Użyj [CMFCColorButton::GetColor](#getcolor) metoda pobierania wybranego koloru.  
+ `UpdateColor` Funkcji zmienia kolor aktualnie wybrany przycisk i powiadamia jego element nadrzędny, wysyłając wiadomość WM_COMMAND z BN_CLICKED powiadomień w wersji standard. Użyj [CMFCColorButton::GetColor](#getcolor) metoda pobierania wybranego koloru.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63c123e135458ff627bc6004e3299c667354ed41
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d358e256e28ea61c9b9c287429dfdfcb7b1435c6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367146"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041834"
 ---
 # <a name="cmapwordtoob-class"></a>Klasa CMapWordToOb
 Obsługuje mapy `CObject` wskaźniki wyznaczaną przez słowa 16-bitowych.  
@@ -61,7 +61,7 @@ class CMapWordToOb : public CObject
 ```  
   
 ## <a name="members"></a>Elementy członkowskie  
- Funkcje Członkowskie `CMapWordToOb` są podobne do funkcji Członkowskich klasy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ze względu na to podobieństwa, można użyć `CMapStringToOb` odwołania dokumentacji charakterystykę funkcja elementu członkowskiego. Po wyświetleniu `CString` lub **const** wskaźnik do `char` jako parametr funkcji lub wartości zwracanej, Zastąp **WORD**.  
+ Funkcje Członkowskie `CMapWordToOb` są podobne do funkcji Członkowskich klasy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ze względu na to podobieństwa, można użyć `CMapStringToOb` odwołania dokumentacji charakterystykę funkcja elementu członkowskiego. Po wyświetleniu `CString` lub **const** wskaźnik do **char** jako parametr funkcji lub wartości zwracanej, Zastąp **WORD**.  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   

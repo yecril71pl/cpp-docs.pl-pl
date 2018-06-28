@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ebe013e8ce674efb0782112cc8cbc8b1462ef24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5894f1fc9bd901bef6e830250f4e1f8e9bdd335
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371517"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040757"
 ---
 # <a name="cmfcribboncombobox-class"></a>Klasa CMFCRibbonComboBox
 `CMFCRibbonComboBox` Klasa implementuje kontrolki pola kombi dodawanego do pasek wstążki, panel Wstążki lub menu podręcznego wstążki.  
@@ -127,10 +127,10 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszItem`  
+ [in] *lpszItem*  
  Ciąg element do dodania.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Dane skojarzone z elementem do dodania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -153,19 +153,19 @@ CMFCRibbonComboBox();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nID`  
+ [in] *nID*  
  Identyfikator pola kombi.  
   
- [in] `bHasEditBox`  
+ [in] *bHasEditBox*  
  `TRUE` Jeśli chcesz, aby pole edycji w formancie; `FALSE` inaczej.  
   
- [in] `nWidth`  
+ [in] *nWidth*  
  Szerokość pola kombi w pikselach; lub wartość -1 domyślnej szerokości.  
   
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Wyświetl etykietę pola kombi.  
   
- [in] `nImage`  
+ [in] *nImage*  
  Indeks mały obraz pola kombi.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -182,13 +182,13 @@ BOOL DeleteItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iIndex`  
+ [in] *iIndex*  
  Liczony od zera indeks elementu do usunięcia.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Dane skojarzone z elementem, który ma zostać usunięty.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Ciąg elementu do usunięcia. Jeśli istnieje wiele elementów z tych samych parametrach, pierwszy element zostanie usunięty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -204,7 +204,7 @@ void EnableDropDownListResize(BOOL bEnable=FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  `TRUE` Aby umożliwić zmianę rozmiaru; `FALSE` można wyłączyć zmiany rozmiaru.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -218,7 +218,7 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszText`  
+ [in] *lpszText*  
  Ciąg elementu w polu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -268,7 +268,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia pola kombi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -285,7 +285,7 @@ LPCTSTR GetItem(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iIndex`  
+ [in] *iIndex*  
  Liczony od zera indeks elementu w polu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -301,7 +301,7 @@ DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iIndex`  
+ [in] *iIndex*  
  Liczony od zera indeks elementu w polu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -340,7 +340,7 @@ virtual void OnSelectItem(int nItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nItem`  
+ [in] *nItem*  
  Indeks wybranego elementu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -366,13 +366,13 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iIndex`  
+ [in] *iIndex*  
  Liczony od zera indeks elementu w polu listy.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Dane skojarzone z elementu w polu listy.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Ciąg elementu w polu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -388,7 +388,7 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nHeight`  
+ [in] *nHeight*  
  Wysokość w pikselach pola listy.  
   
 ### <a name="remarks"></a>Uwagi  

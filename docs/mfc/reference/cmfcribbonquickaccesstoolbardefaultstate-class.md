@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9baeb204234a6df50be062c5944e9b257cb2d2c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9fd8c983e0133644b6531e87f5fc1dec0fdc7b7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370923"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041808"
 ---
 # <a name="cmfcribbonquickaccesstoolbardefaultstate-class"></a>Klasa CMFCRibbonQuickAccessToolBarDefaultState
 Klasa pomocy, która zarządza stan domyślny dla paska narzędzi Szybki dostęp, który znajduje się w pasku wstążki ( [CMFCRibbonBar klasy](../../mfc/reference/cmfcribbonbar-class.md)).  
@@ -80,10 +80,10 @@ void AddCommand(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `[in] uiCmd`  
+ *[in] uiCmd*  
  Określa identyfikator polecenia.  
   
- `[in] bIsVisible`  
+ *[in] bIsVisible*  
  Ustawia widoczność polecenia, gdy pasek narzędzi Szybki dostęp jest w stanie domyślnym.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -97,7 +97,7 @@ void CopyFrom(const CMFCRibbonQuickAccessToolBarDefaultState& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `src`  
+ [in] *src*  
  Odwołanie do źródła `CMFCRibbonQuickAccessToolBarDefaultState` obiektu do skopiowania.  
   
 ### <a name="remarks"></a>Uwagi  

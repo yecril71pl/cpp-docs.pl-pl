@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b2c5734618bf1bedc72fe78dbeaada8c437391f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53f87dd55373599f8ab8394284a6271930b9fcd6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372785"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037512"
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>Klasa CMFCToolBarFontSizeComboBox
 Przycisk paska narzędzi, który zawiera kontrolki pola kombi, które umożliwia użytkownikowi wybranie rozmiaru czcionki.  
@@ -105,7 +105,7 @@ void RebuildFontSizes(const CString& strFontName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `[in] strFontName`  
+ [in] *strFontName*  
  Określa nazwę czcionki.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -119,7 +119,7 @@ void SetTwipSize(int nSize);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nSize`  
+ [in] *nSize*  
  Określa rozmiar czcionki (w twipach), aby ustawić.  
   
 ### <a name="remarks"></a>Uwagi  

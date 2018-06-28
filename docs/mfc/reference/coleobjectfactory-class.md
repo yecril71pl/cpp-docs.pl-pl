@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd68493c9be5eb0bff63504cf49b38b9a2f216d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 706cc03e3f0a074e68d0e92acdce5a747552819b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375940"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038212"
 ---
 # <a name="coleobjectfactory-class"></a>Coleobjectfactory — klasa
 Implementuje OLE klasy factory, które tworzy obiektów OLE, takich jak serwery, obiekty automatyzacji i dokumenty.  
@@ -137,29 +137,29 @@ COleObjectFactory(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `clsid`  
+ *Identyfikator CLSID*  
  Reprezentuje odwołanie do Identyfikatora klasy OLE fabryki tego obiektu.  
   
- `pRuntimeClass`  
+ *pRuntimeClass*  
  Wskaźnik do klasy środowiska wykonawczego obiektów C++, których można utworzyć tej fabryki.  
   
- `bMultiInstance`  
+ *bMultiInstance*  
  Wskazuje, czy pojedyncze wystąpienie aplikacji może obsługiwać wiele wystąpień. Jeśli **TRUE**, wiele wystąpień aplikacji będą uruchamiane dla każdego żądania do utworzenia obiektu.  
   
- `nFlags`  
+ *nFlags*  
  Zawiera co najmniej jeden z następujących flag:  
   
 - **afxRegDefault** ThreadingModel ustawia model wątkowości typu Apartment =.  
   
 - **afxreginsertable —** umożliwia sterowanie pojawią się w **Wstaw obiekt** okno dialogowe dla obiektów OLE.  
   
-- `afxRegApartmentThreading` Ustawia model wątkowości w rejestrze ThreadingModel = apartamentu.  
+- **afxregapartmentthreading —** ustawia model wątkowości w rejestrze ThreadingModel = apartamentu.  
   
 - **afxregfreethreading —** ustawia model wątkowości w rejestrze ThreadingModel = wolne.  
   
      Możesz połączyć ze sobą dwie flagi `afxRegApartmentThreading` i `afxRegFreeThreading` można ustawić ThreadingModel = jednocześnie. Zobacz [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) w zestawie SDK systemu Windows, aby uzyskać więcej informacji o rejestracji modelu wątkowości.  
   
- `lpszProgID`  
+ *lpszProgID*  
  Wskaźnik do ciąg zawierający identyfikator ustne programu, takie jak "Microsoft Excel."  
   
 ### <a name="remarks"></a>Uwagi  
@@ -181,7 +181,7 @@ REFCLSID GetClassID() const;
  Aby uzyskać więcej informacji, zobacz [klucz CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) w zestawie Windows SDK.  
   
 ##  <a name="getlicensekey"></a>  COleObjectFactory::GetLicenseKey  
- Żąda licencji Unikatowy klucz z biblioteki DLL formantu i przechowuje ją w `BSTR` wskazywana przez `pbstrKey`.  
+ Żąda licencji Unikatowy klucz z biblioteki DLL formantu i przechowuje ją w `BSTR` wskazywana przez *pbstrKey*.  
   
 ```  
 virtual BOOL GetLicenseKey(
@@ -190,10 +190,10 @@ virtual BOOL GetLicenseKey(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwReserved`  
+ *dwReserved*  
  Zarezerwowane do użytku w przyszłości.  
   
- `pbstrKey`  
+ *pbstrKey*  
  Wskaźnik do `BSTR` którym będzie przechowywany klucz licencji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -300,10 +300,10 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszProgID`  
+ *lpszProgID*  
  Wskaźnik do ciąg zawierający identyfikator programu zrozumiałą dla użytkownika, takie jak "Excel.Document.5."  
   
- `bRegister`  
+ *bRegister*  
  Określa, czy fabrykę obiektów klasy formantu ma zostać zarejestrowany.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -311,7 +311,7 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
   
 - **UpdateRegistry (** `lpszProgID` **)** rejestruje fabrykę tego obiektu z rejestru systemowego OLE. Ta funkcja jest zazwyczaj wywoływana [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) po uruchomieniu aplikacji.  
   
-- **UpdateRegistry (** `bRegister` **)** ten formularz funkcji jest możliwym do zastąpienia. Jeśli `bRegister` jest **TRUE**, ta funkcja rejestruje klasy formantu z rejestru systemowego. W przeciwnym razie go wyrejestrowuje klasy.  
+- **UpdateRegistry (** `bRegister` **)** ten formularz funkcji jest możliwym do zastąpienia. Jeśli *bRegister* jest **TRUE**, ta funkcja rejestruje klasy formantu z rejestru systemowego. W przeciwnym razie go wyrejestrowuje klasy.  
   
      Jeśli używasz MFC ActiveX ControlWizard do tworzenia projektu ControlWizard dostarcza zastąpienie tego czystej funkcji wirtualnej.  
   
@@ -323,7 +323,7 @@ static BOOL PASCAL UpdateRegistryAll(BOOL bRegister = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bRegister`  
+ *bRegister*  
  Określa, czy fabrykę obiektów klasy formantu ma zostać zarejestrowany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -340,14 +340,14 @@ virtual BOOL VerifyLicenseKey(BSTR bstrKey);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bstrKey`  
+ *bstrKey*  
  A `BSTR` przechowywania wersji kontenera ciągu licencji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli licencji jest nieprawidłowy; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołania wersji domyślnej [GetLicenseKey](#getlicensekey) uzyskać kopię formantu ciąg licencji użytkownika i porównuje ją z ciągiem w `bstrKey`. Jeśli dwa ciągi zgodne, funkcja zwraca wartość niezerową; w przeciwnym razie zwraca wartość 0.  
+ Wywołania wersji domyślnej [GetLicenseKey](#getlicensekey) uzyskać kopię formantu ciąg licencji użytkownika i porównuje ją z ciągiem w *bstrKey*. Jeśli dwa ciągi zgodne, funkcja zwraca wartość niezerową; w przeciwnym razie zwraca wartość 0.  
   
  Można zastąpić tę funkcję, aby zapewnić dostosowane weryfikację licencji.  
   

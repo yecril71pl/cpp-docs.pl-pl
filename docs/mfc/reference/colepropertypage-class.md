@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8328fb4987044c5a28b1a6a6ce19c674039dea9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a1b98cd7bfb6983a4133e0bb48e3c75b8a973ddf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376213"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042550"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage — klasa
 Umożliwia wyświetlenie właściwości formantu niestandardowego interfejsu graficznego, podobnie do okna dialogowego.  
@@ -140,7 +140,7 @@ BOOL GetControlStatus(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nID`  
+ *nID*  
  Identyfikator zasobu formantu strony właściwości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -154,14 +154,14 @@ LPDISPATCH* GetObjectArray(ULONG* pnObjects);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pnObjects`  
+ *pnObjects*  
  Wskaźnik do niepodpisanego długich liczb całkowitych odbioru liczbę obiektów edytowany przez stronę.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do tablicy `IDispatch` wskaźników, które są używane do dostępu do właściwości każdej kontrolki na stronie właściwości. Obiekt wywołujący nie trzeba zwolnić te wskaźniki interfejsu.  
   
 ### <a name="remarks"></a>Uwagi  
- Każdy obiekt strony właściwości zachowuje tablicy wskaźników do `IDispatch` interfejsów obiektów edytowany przez stronę. Ta funkcja ustawia jego `pnObjects` argument liczba elementów w tablicy i zwraca wskaźnik do pierwszego elementu tablicy.  
+ Każdy obiekt strony właściwości zachowuje tablicy wskaźników do `IDispatch` interfejsów obiektów edytowany przez stronę. Ta funkcja ustawia jego *pnObjects* argument liczba elementów w tablicy i zwraca wskaźnik do pierwszego elementu tablicy.  
   
 ##  <a name="getpagesite"></a>  COlePropertyPage::GetPageSite  
  Pobiera wskaźnik do strony właściwości `IPropertyPageSite` interfejsu.  
@@ -184,7 +184,7 @@ void IgnoreApply(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nID`  
+ *nID*  
  Identyfikator formantu ma być ignorowane.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -208,7 +208,7 @@ virtual BOOL OnEditProperty(DISPID dispid);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dispid`  
+ *identyfikator DISPID*  
  Identyfikator wysyłania właściwości edytowany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -279,10 +279,10 @@ BOOL SetControlStatus(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nID`  
+ *nID*  
  Zawiera identyfikator formantu strony właściwości.  
   
- `bDirty`  
+ *bDirty*  
  Określa, jeśli zmodyfikowano pola strony właściwości. Ustaw **TRUE** w przypadku modyfikacji pola **FALSE** Jeśli nie zostały zmodyfikowane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -316,7 +316,7 @@ void SetHelpInfo(
  *lpszDocString*  
  Ciąg zawierający informacje pomocy krótki do wyświetlania na pasku stanu lub innej lokalizacji.  
   
- `lpszHelpFile`  
+ *lpszHelpFile*  
  Nazwa pliku pomocy strony właściwości.  
   
  *dwHelpContext*  
@@ -330,7 +330,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bModified`  
+ *bModified*  
  Określa nową wartość flagi zmodyfikowane strony właściwości.  
   
 ##  <a name="setpagename"></a>  COlePropertyPage::SetPageName  

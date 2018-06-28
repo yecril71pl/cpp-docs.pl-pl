@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7a38e9ba4c01e5f3d92640f5ec55c63a45d70fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23f3672a3b78b1bf86c481b6991c003267e6b0bf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368862"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037437"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>Klasa CMFCRibbonButtonsGroup
 `CMFCRibbonButtonsGroup` Klasa umożliwia organizowanie zestaw przycisków wstążki do grupy. Wszystkie przycisków w grupie są bezpośrednio sąsiadujących ze sobą w poziomie i w obramowanie.  
@@ -106,7 +106,7 @@ void AddButton(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pButton`  
+ [in] *pButton*  
  Wskaźnik do przycisk, aby dodać.  
   
 ##  <a name="addbuttons"></a>  CMFCRibbonButtonsGroup::AddButtons  
@@ -118,7 +118,7 @@ void AddButtons(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lstButtons`  
+ [in] *lstButtons*  
  Lista wskaźników do przycisków, które chcesz dodać.  
   
 ##  <a name="cmfcribbonbuttonsgroup"></a>  CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup  
@@ -130,7 +130,7 @@ CMFCRibbonButtonsGroup(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pButton`  
+ [in] *pButton*  
  Określa przycisk, aby dodać do nowo utworzony `CMFCRibbonButtonsGroup` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -145,7 +145,7 @@ CMFCRibbonBaseElement* GetButton(int i) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `i`  
+ [in] *i*  
  Liczony od zera indeks przycisk, aby wrócić.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -183,7 +183,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia grupy wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -214,16 +214,16 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia z `CMFCRibbonButtonsGroup` obiektu.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  Prostokąt, w którym do rysowania obrazu.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Przycisk do rysowania obrazu.  
   
- [in] `nImageIndex`  
+ [in] *nImageIndex*  
  Indeks obrazu do rysowania przycisk (w jednym tablic trzy obrazu przycisków normalne, wyróżnione lub wyłączone).  
   
 ### <a name="remarks"></a>Uwagi  
@@ -248,13 +248,13 @@ void SetImages(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pImages`  
+ [in] *pImages*  
  Regularne obrazów.  
   
- [in] `pHotImages`  
+ [in] *pHotImages*  
  Gorących obrazów.  
   
- [in] `pDisabledImages`  
+ [in] *pDisabledImages*  
  Obrazy wyłączone.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -271,7 +271,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pCategory`  
+ [in] *pCategory*  
  Wskaźnik do kategorii nadrzędnej, aby ustawić (grupy z kartami w formantów wstążki są nazywane kategorii).  
   
 ### <a name="remarks"></a>Uwagi  

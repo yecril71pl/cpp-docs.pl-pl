@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 943dc2e56b896531b7deeb14a17602c97484926c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e32b127a31cf27fa2bddb189335d2edf19a8f7de
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378230"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041198"
 ---
 # <a name="cmdiframewndex-class"></a>Klasa CMDIFrameWndEx
 Rozszerza funkcjonalność [cmdiframewnd —](../../mfc/reference/cframewnd-class.md), okno ramowe interfejsu Windows wielu dokumentów (MDI).  
@@ -314,10 +314,10 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Wskaźnik do okienka do zarejestrowania.  
   
- [in] `bTail`  
+ [in] *bTail*  
  Określa, czy mają zostać dodane w tym okienku na końcu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -341,7 +341,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `hdwp`  
+ [in] *hdwp*  
  Określa strukturę wielu okna pozycji. Tę wartość można uzyskać przez wywołanie metody `BeginDeferWindowPos`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -355,7 +355,7 @@ BOOL AreMDITabs(int* pnMDITabsType=NULL) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `pnMDITabsType`  
+ [out] *pnMDITabsType*  
  Wskaźnik do zmiennej liczba całkowita, która wskazuje, które funkcje są włączone:  
   
 -   0: wszystkie funkcje zostały wyłączone.  
@@ -395,7 +395,7 @@ virtual CMDIChildWndEx* ControlBarToTabbedDocument(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pBar`  
+ *pBar*  
  Wskaźnik do dokujące okienko, aby przekonwertować.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -414,10 +414,10 @@ virtual CMDIChildWndEx* CreateDocumentWindow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpcszDocName`  
+ [in] *lpcszDocName*  
  Ciąg tekstowy, który zawiera identyfikator dokumentu. Zazwyczaj jest pełna ścieżka pliku dokumentu.  
   
- [in] `pObj`  
+ [in] *pObj*  
  Wskaźnik do obiektu użytkownika. Na przykład deweloper może utworzyć strukturę dane specyficzne dla aplikacji opisujące dokumentu i informuje, jak dokument powinien być inicjowany podczas uruchamiania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -445,10 +445,10 @@ virtual CMDIChildWndEx* CreateNewWindow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpcszDocName`  
+ [in] *lpcszDocName*  
  Nazwa dokumentu.  
   
- [in] `pObj`  
+ [in] *pObj*  
  Zarezerwowane do użytku w przyszłości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -465,13 +465,13 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pBar`  
+ [in] *pBar*  
  Wskaźnik do okienko, aby dokowania.  
   
- [in] `nDockBarID`  
+ [in] *nDockBarID*  
  Określa, które strony zostało zadokowane do ramki okna.  
   
- [in] `lpRect`  
+ [in] *lprect —*  
  Nie używany.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -492,17 +492,17 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pBar`  
+ [in] *pBar*  
  Wskaźnik do dokowania panelu.  
   
- [in] `pLeftOf`  
+ [in] *pLeftOf*  
  Wskaźnik do okienka służy jako lokacji dokowania. .  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca `TRUE` Jeśli operacja zakończy się pomyślnie. W przeciwnym razie zwraca `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołaj tę metodę w celu dock okienku obiekty w preferowanej kolejności. Ta metoda stacje dokujące okienko określony przez `pBar` do lewego okienka określony przez `pLeftOf`.  
+ Wywołaj tę metodę w celu dock okienku obiekty w preferowanej kolejności. Ta metoda stacje dokujące okienko określony przez *pBar* do lewego okienka określony przez *pLeftOf*.  
   
 ### <a name="example"></a>Przykład  
  W poniższym przykładzie przedstawiono sposób `DockPaneLeftOf` metoda jest używana w [VisualStudioDemo próbki: aplikacji Visual Studio MFC](../../visual-cpp-samples.md).  
@@ -517,7 +517,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
  Określa strony główną ramkę okna, które zostaną włączone. Użyj co najmniej jeden z następujących flag.  
   
 - `CBRS_ALIGN_LEFT`  
@@ -546,7 +546,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
  Określa styl dokowania, który chcesz zastosować.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -567,7 +567,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnableMenu`  
+ [in] *bEnableMenu*  
  `TRUE` Aby wyświetlić menu głównego w trybie pełnoekranowym lub `FALSE` aby je ukryć.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -580,7 +580,7 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiFullScreenCmd`  
+ [in] *uiFullScreenCmd*  
  Identyfikator polecenia, która włącza lub wyłącza tryb pełnoekranowy.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -594,7 +594,7 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  `TRUE` Aby włączyć ładowanie stanu dokowania `FALSE` można wyłączyć ładowania stanu dokowania.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -609,10 +609,10 @@ void EnableMDITabbedGroups(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  Jeśli `TRUE`, funkcja grupy z kartami MDI jest włączona; Jeśli `FALSE`, funkcja grupy z kartami MDI jest wyłączona.  
   
- [in] `params`  
+ [in] *params*  
  Określa parametry, których dotyczy platformę okno podrzędne, które są tworzone w obszarze klienta MDI.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -628,9 +628,9 @@ void EnableMDITabbedGroups(
   
 -   Aplikację można zapisać bieżący układ systemu windows z kartami i listę aktualnie otwartych dokumentów.  
   
- Jeśli wywołanie tej metody za pomocą `bEnable` ustawioną `FALSE`, `params` jest ignorowana.  
+ Jeśli wywołanie tej metody za pomocą *bWłączenie* ustawioną `FALSE`, *params* jest ignorowana.  
   
- Nawet jeśli grup z kartami MDI jest już włączony, można wywołać tej metody ponownie, aby zmodyfikować ustawienia okien podrzędnych. Wywołaj metodę z `bEnable` ustawioną `TRUE` i modyfikuje członków `CMDITabInfo` obiektów, które są określone przez `params` parametru.  
+ Nawet jeśli grup z kartami MDI jest już włączony, można wywołać tej metody ponownie, aby zmodyfikować ustawienia okien podrzędnych. Wywołaj metodę z *bWłączenie* ustawioną `TRUE` i modyfikuje członków `CMDITabInfo` obiektów, które są określone przez *params* parametru.  
   
  Więcej informacji o sposobie używania MDI grupy z kartami, można znaleźć [grupy z kartami MDI](../../mfc/mdi-tabbed-groups.md).  
   
@@ -654,33 +654,33 @@ void EnableMDITabs(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bEnable`  
+ *bWłączenie*  
  Określa, czy karty są włączone.  
   
- `bIcons`  
+ *bIcons*  
  Określa, czy ikony powinny być wyświetlane na kartach.  
   
- `tabLocation`  
+ *tabLocation*  
  Określa położenie etykiet kartę.  
   
- `bTabCloseButton`  
+ *bTabCloseButton*  
  Określa, czy mają być wyświetlane przyciski Zamknij kartę.  
   
- `style`  
+ *Styl*  
  Określa styl karty. Użyj `STYLE_3D_SCROLLED` dla zwykłe karty lub `STYLE_3D_ONENOTE` dla programu Microsoft OneNote kart.  
   
- `bTabCustomTooltips`  
+ *bTabCustomTooltips*  
  Określa, czy włączono niestandardowych etykietek narzędzi.  
   
- `bActiveTabCloseButton`  
+ *bActiveTabCloseButton*  
  Jeśli `TRUE`, **Zamknij** przycisk będzie wyświetlana na karcie active zamiast w prawym rogu wartości obszar karty.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę metodę, aby włączyć lub wyłączyć funkcję kart MDI ramki okna MDI. Po włączeniu wszystkich okno podrzędne są wyświetlane jako karty.  
   
- Etykiety kart może znajdować się u góry lub u dołu ramki, w zależności od ustawienia parametru `tabLocation`. Można określać `CMFCTabCtrl::LOCATION_BOTTOM` (ustawienie domyślne) lub `CMFCTabCtrl::LOCATION_TOP`.  
+ Etykiety kart może znajdować się u góry lub u dołu ramki, w zależności od ustawienia parametru *tabLocation*. Można określać `CMFCTabCtrl::LOCATION_BOTTOM` (ustawienie domyślne) lub `CMFCTabCtrl::LOCATION_TOP`.  
   
- Jeśli `bTabCustomTooltips` jest `TRUE`, `AFX_WM_ON_GET_TAB_TOOLTIP` wiadomość zostanie wysłana do głównego okna ramowego. Kod może obsłużyć ten komunikat i udostępnia platformę z niestandardowych etykietek narzędzi dla kart MDI.  
+ Jeśli *bTabCustomTooltips* jest `TRUE`, `AFX_WM_ON_GET_TAB_TOOLTIP` wiadomość zostanie wysłana do głównego okna ramowego. Kod może obsłużyć ten komunikat i udostępnia platformę z niestandardowych etykietek narzędzi dla kart MDI.  
   
 ### <a name="example"></a>Przykład  
  W poniższym przykładzie przedstawiono sposób `EnableMDITabs` jest używany w [MDITabsDemo próbki: aplikacji z kartami MDI MFC](../../visual-cpp-samples.md).  
@@ -695,7 +695,7 @@ void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bLastActiveTab`  
+ [in] *bLastActiveTab*  
  Jeśli `TRUE`, włączyć aktywacji ostatniego aktywnej karty. Jeśli `FALSE`, wyłączanie aktywacji ostatniego aktywnej karty.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -723,22 +723,22 @@ void EnablePaneMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  Jeśli `TRUE`, włączono automatyczną obsługę menu okienka; Jeśli `FALSE`, automatyczną obsługę jest wyłączona.  
   
- [in] `uiCustomizeCmd`  
+ [in] *uiCustomizeCmd*  
  Identyfikator polecenia **Dostosuj** elementu menu. Ten element menu jest zwykle dodawane na końcu listy okienka.  
   
- [in] `strCustomizeLabel`  
+ [in] *strCustomizeLabel*  
  Tekst, który ma być wyświetlany dla **Dostosuj** element menu (dla lokalizacji).  
   
- [in] `uiViewToolbarsMenuEntryID`  
+ [in] *uiViewToolbarsMenuEntryID*  
  Określa identyfikator elementu menu paska narzędzi, którego kliknięcie spowoduje otwarcie menu okienka. Zazwyczaj jest to **paski narzędzi** podmenu **widoku** menu.  
   
- [in] `bContextMenuShowsToolbarsOnly`  
+ [in] *bContextMenuShowsToolbarsOnly*  
  Jeśli `TRUE`, menu okienku zostanie wyświetlona tylko lista pasków narzędzi. Jeśli `FALSE`, menu zostanie wyświetlona lista pasków narzędzi i dokowania pasków.  
   
- [in] `bViewMenuShowsToolbarsOnly`  
+ [in] *bViewMenuShowsToolbarsOnly*  
  Jeśli `TRUE`, menu okienku zostanie wyświetlona tylko lista pasków narzędzi. Jeśli `FALSE`, menu zostanie wyświetlona lista pasków narzędzi i dokowania pasków.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -768,20 +768,20 @@ void EnableWindowsDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiMenuId`  
+ [in] *uiMenuId*  
  Określa identyfikator zasobu menu.  
   
- [in] `lpszMenuText`  
+ [in] *lpszMenuText*  
  Określa tekst elementu.  
   
- [in] `bShowHelpButton`  
+ [in] *bShowHelpButton*  
  Określa, czy mają być wyświetlane **pomocy** przycisk w oknie dialogowym Zarządzanie systemem windows.  
   
- [in] `uiMenuTextResId`  
+ [in] *uiMenuTextResId*  
  Identyfikator zasobu ciągu zawiera ciąg tekstu elementu.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj tej metody, aby wstawić element menu, w których polecenie wywołuje okno dialogowe Zarządzanie okna podrzędnego MDI ( [CMFCWindowsManagerDialog klasy](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)). Nowy element znajduje się w menu, określony przez `uiMenuId`. Wywołanie `EnableWindowsDialog` podczas przetwarzania `WM_CREATE` wiadomości.  
+ Użyj tej metody, aby wstawić element menu, w których polecenie wywołuje okno dialogowe Zarządzanie okna podrzędnego MDI ( [CMFCWindowsManagerDialog klasy](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)). Nowy element znajduje się w menu, określony przez *uiMenuId*. Wywołanie `EnableWindowsDialog` podczas przetwarzania komunikatu WM_CREATE.  
   
 ### <a name="example"></a>Przykład  
  W poniższym przykładzie przedstawiono sposób `EnableWindowsDialog` jest używany w [VisualStudioDemo próbki: aplikacji Visual Studio MFC](../../visual-cpp-samples.md).  
@@ -884,11 +884,11 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nID`  
+ [in] *nID*  
  Identyfikator formantu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do okienka ma identyfikator określonego formantu, jeśli istnieje. W przeciwnym razie `NULL`.  
+ Wskaźnik do okienka ma identyfikator określonego formantu, jeśli istnieje. w przeciwnym razie `NULL`.  
   
 ##  <a name="getribbonbar"></a>  CMDIFrameWndEx::GetRibbonBar  
  Pobiera formantu paska wstążki ramki.  
@@ -925,10 +925,10 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pButton`  
+ [in] *pButton*  
  Wskaźnik do przycisku paska narzędzi.  
   
- [in] `strTTText`  
+ [in] *strTTText*  
  Tekst etykietki narzędzia, która ma być wyświetlany dla przycisku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -947,20 +947,20 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Wskaźnik do okienka do wstawienia.  
   
- [in] `pTarget`  
+ [in] *pTarget*  
  Wskaźnik do okienka przed lub po upływie którego do wstawienia w okienku.  
   
- [in] `bAfter`  
- Jeśli `TRUE`, `pControlBar` po `pTarget`. Jeśli `FALSE`, `pControlBar` dodaje się przed `pTarget`.  
+ [in] *bPo*  
+ Jeśli `TRUE`, *pControlBar* po *pTarget*. Jeśli `FALSE`, *pControlBar* dodaje się przed *pTarget*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `TRUE` Jeśli metoda rejestruje pomyślnie okienku `FALSE` Jeśli okienku została już zarejestrowana przy użyciu Menedżera dokowania.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda umożliwia Opisz Menedżera dokujące okienko określony przez `pControlBar`. Menedżer dokowania są wyrównane w tym okienku, zgodnie z okienka wyrównanie i pozycji na liście wewnętrzny Menedżera dokowania.  
+ Ta metoda umożliwia Opisz Menedżera dokujące okienko określony przez *pControlBar*. Menedżer dokowania są wyrównane w tym okienku, zgodnie z okienka wyrównanie i pozycji na liście wewnętrzny Menedżera dokowania.  
   
 ##  <a name="isfullscreen"></a>  CMDIFrameWndEx::IsFullScreen  
  Określa, czy okno ramowe jest w trybie pełnoekranowym.  
@@ -996,7 +996,7 @@ BOOL IsMemberOfMDITabGroup(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pWnd`  
+ [in] *pWnd*  
  Wskaźnik do okna z kartami.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1023,13 +1023,13 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `point`  
+ [in] *punktu*  
  Określony punkt we współrzędnych ekranu.  
   
- [in] `dwBarAlignment`  
+ [in] *dwBarAlignment*  
  Określa, które krawędzi punkt znajduje się w pobliżu. Możliwe wartości to `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, i `CBRS_ALIGN_BOTTOM`  
   
- [in] `bOuterEdge`  
+ [in] *bOuterEdge*  
  `TRUE` Jeśli punkt jest bliski zewnętrzną krawędzią dokowania lokacji; `FALSE` inaczej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1062,16 +1062,16 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nIDResource`  
+ [in] *nIDResource*  
  Identyfikator zasobu udostępnionego skojarzony z oknem ramki.  
   
- [in] `dwDefaultStyle`  
+ [in] *dwDefaultStyle*  
  Styl ramkę okna.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Wskaźnik do elementu nadrzędnego ramki.  
   
- [in] `pContext`  
+ [in] *pContext*  
  Wskaźnik do [struktury CCreateContext](../../mfc/reference/ccreatecontext-structure.md). Ten parametr może być `NULL`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1085,7 +1085,7 @@ virtual BOOL LoadMDIState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Określa nazwę profilu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1115,7 +1115,7 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bNext`  
+ [in] *bDalej*  
  Jeśli `TRUE`, Przenieś karcie do następnej grupy z kartami. Jeśli `FALSE`, przenieś go do poprzedniej grupy z kartami.  
   
 ##  <a name="mditabnewgroup"></a>  CMDIFrameWndEx::MDITabNewGroup  
@@ -1126,7 +1126,7 @@ void MDITabNewGroup(BOOL bVert=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bVert`  
+ [in] *bVert*  
  Określa wyrównanie nowej grupy. Jeśli `TRUE`, nowej grupy jest wyrównane w pionie. Jeśli `FALSE`, nowej grupy jest wyrównane w poziomie.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1178,7 +1178,7 @@ virtual BOOL NegotiateBorderSpace(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nBorderCmd`  
+ [in] *nBorderCmd*  
  Zawiera jedną z następujących wartości z wyliczenia `CFrameWnd::BorderCmd`:  
   
 - `borderGet` = 1  
@@ -1187,7 +1187,7 @@ virtual BOOL NegotiateBorderSpace(
   
 - `borderSet` = 3  
   
- [w, out] `lpRectBorder`  
+ [w, out] *lpRectBorder*  
  Wskaźnik do [struktura RECT](../../mfc/reference/rect-structure1.md) lub [klasy CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt określający współrzędne obramowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1204,11 +1204,11 @@ virtual BOOL OnCloseDockingPane(CDockablePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pWnd`  
+ [in] *pWnd*  
  Wskaźnik do okienka zamknięte.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli okienko dokujące może zostać zamknięty. W przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli okienko dokujące może zostać zamknięty. w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Zastępuje tę metodę do ukrywania elementów Dokowanie okienka obsługi. Zwraca `FALSE` Jeśli chcesz zapobiec okienko dokujące ukrywane.  
@@ -1223,11 +1223,11 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pWnd`  
+ [in] *pWnd*  
  Wskaźnik do mini ramkę okna zamknięte.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli przestawne okno ramowe minimalnej może zostać zamknięty. W przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli przestawne okno ramowe minimalnej może zostać zamknięty. w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Zastępuje tę metodę do ukrywania elementów pływające mini ramka okna obsługi. Zwraca `FALSE` Jeśli chcesz zapobiec ukrywane przestawne okno ramowe minimalnej.  
@@ -1242,7 +1242,7 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pMenuPopup`  
+ [in] *pMenuPopup*  
  Wskaźnik do menu podręczne.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1260,17 +1260,17 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nID`  
+ [in] *nID*  
  Identyfikator polecenia.  
   
- [in] `nCode`  
- Określa polecenie kod powiadomienia. Zobacz [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) uzyskać więcej informacji o wartości `nCode`.  
+ [in] *nCode*  
+ Określa polecenie kod powiadomienia. Zobacz [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) uzyskać więcej informacji o wartości *nCode*.  
   
- [in] `pExtra`  
- Używane zgodnie z wartością `nCode`. Zobacz [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) uzyskać więcej informacji o `pExtra`.  
+ [in] *pExtra*  
+ Używane zgodnie z wartością *nCode*. Zobacz [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) uzyskać więcej informacji o *pExtra*.  
   
- [w, out] `pHandlerInfo`  
- Zazwyczaj ten parametr powinien być `NULL`. Jeśli nie `NULL`, `OnCmdMsg` wypełnia `pTarget` i `pmf` członkami `pHandlerInfo` struktury zamiast wysyłania polecenia.  
+ [w, out] *pHandlerInfo*  
+ Zazwyczaj ten parametr powinien być `NULL`. Jeśli nie `NULL`, `OnCmdMsg` wypełnia `pTarget` i `pmf` członkami *pHandlerInfo* struktury zamiast wysyłania polecenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli komunikat jest obsługiwany; w przeciwnym razie 0.  
@@ -1286,13 +1286,13 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- [in] `pMenuButton`  
+ [in] *pMenuButton*  
  Wskaźnik do przycisku menu.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  Prostokąt ograniczający obrazu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1302,7 +1302,7 @@ virtual BOOL OnDrawMenuImage(
  Przesłonić tę metodę, jeśli chcesz dostosować renderowanie obrazów dla elementów menu, które należą do paska menu własnością `CMDIFrameWndEx`-pochodzi z obiektu. Domyślna implementacja nie działa.  
   
 ##  <a name="ondrawmenulogo"></a>  CMDIFrameWndEx::OnDrawMenuLogo  
- Wywoływane przez platformę, gdy [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)procesów `WM_PAINT` wiadomości.  
+ Wywoływane przez platformę, gdy [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)przetwarza komunikat WM_PAINT.  
   
 ```  
 virtual void OnDrawMenuLogo(
@@ -1325,10 +1325,10 @@ virtual BOOL OnEraseMDIClientBackground(CDC*);
  `TRUE` Jeśli aplikacja przetwarza komunikat i usuwa tła.  
   
 ### <a name="remarks"></a>Uwagi  
- Przesłonić tę funkcję elementu członkowskiego, jeśli chcesz przetworzyć `WM_ERASEBKGND` komunikatów w `CMDIFrameWndEx`-klasy.  
+ Przesłonić tę funkcję elementu członkowskiego, aby przetworzyć komunikatu WM_ERASEBKGND w `CMDIFrameWndEx`-klasy.  
   
 ##  <a name="onmenubuttontoolhittest"></a>  CMDIFrameWndEx::OnMenuButtonToolHitTest  
- Wywoływane przez platformę, gdy [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)obiekt procesów `WM_NCHITTEST` wiadomości.  
+ Wywoływane przez platformę, gdy [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)obiektu przetwarza komunikat WM_NCHITTEST.  
   
 ```  
 virtual BOOL OnMenuButtonToolHitTest(
@@ -1337,14 +1337,14 @@ virtual BOOL OnMenuButtonToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pButton`  
+ [in] *pButton*  
  Przycisk paska narzędzi.  
   
- [out] `pTI`  
+ [out] *pTI*  
  Wskaźnik do [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli aplikacja wypełnia `pTI` parametru. Domyślna implementacja zwraca `FALSE`.  
+ `TRUE` Jeśli aplikacja wypełnia *pTI* parametru. Domyślna implementacja zwraca `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę, jeśli chcesz podać informacje o określonym menu elementów do etykietka narzędzia. Domyślna implementacja nie działa.  
@@ -1357,7 +1357,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pFrame`  
+ [in] *pFrame*  
  Wskaźnik do okno ramowe minimalnej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1373,10 +1373,10 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bPreview`  
+ [in] *bPreview*  
  Jeśli `TRUE`, ustawia tryb podglądu wydruku. Jeśli `FALSE`, anuluje podgląd trybu.  
   
- [in] `pState`  
+ [in] *stanu wydajności*  
  Wskaźnik do `CPrintPreviewState` struktury.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1392,10 +1392,10 @@ virtual BOOL OnShowCustomizePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pMenuPane`  
+ [in] *pMenuPane*  
  Wskaźnik do szybkiego dostosowywania okienka.  
   
- [in] `uiToolbarID`  
+ [in] *uiToolbarID*  
  Identyfikator formantu paska narzędzi, aby dostosować.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1417,10 +1417,10 @@ virtual BOOL OnShowMDITabContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `point`  
+ [in] *punktu*  
  Lokalizacja menu na współrzędne ekranu.  
   
- [in] `dwAllowedItems`  
+ [in] *dwAllowedItems*  
  Alternatywy kombinację flagi wskazującą, jakie akcje są dozwolone dla bieżącej karty:  
   
 - `BCGP_MDI_CREATE_VERT_GROUP` — można utworzyć grupę tabulator pionowy.  
@@ -1433,7 +1433,7 @@ virtual BOOL OnShowMDITabContextMenu(
   
 - `BCGP_MDI_CAN_BE_DOCKED` -Przełącznik dokument z kartami zadokowanych stan (dotyczy tylko z kartami dokumentów).  
   
- [in] `bTabDrop`  
+ [in] *bTabDrop*  
  `TRUE` Aby wyświetlić menu wyniku przeciąganie karcie na innej grupy z kartami. `FALSE` Aby wyświetlić menu jako menu skrótów, na karcie obecnie aktywne.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1455,11 +1455,11 @@ virtual BOOL OnShowPanes(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` Aby wyświetlić okienka, `FALSE` Aby ukryć okienka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli zmieni się stan okienka wyniku wywołaniem tej metody `FALSE` okienka są już w stanie określonej przez `bShow`. Na przykład, jeśli są ukryte okienka i `bShow` jest `FALSE`, jest zwracana wartość `FALSE`.  
+ `TRUE` Jeśli zmieni się stan okienka wyniku wywołaniem tej metody `FALSE` okienka są już w stanie określonej przez *bShow*. Na przykład, jeśli są ukryte okienka i *bShow* jest `FALSE`, jest zwracana wartość `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja usuwa pasek narzędzi okna ramowego najwyższego poziomu.  
@@ -1474,7 +1474,7 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu*);
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli menu podręczne ma być wyświetlany. W przeciwnym razie `FALSE`. Domyślna implementacja zwraca `TRUE`.  
+ `TRUE` Jeśli menu podręczne ma być wyświetlany. w przeciwnym razie `FALSE`. Domyślna implementacja zwraca `TRUE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę, jeśli chcesz wdrożyć specjalnego przetwarzania po aktywacji menu podręczne. Na przykład jeśli chcesz zmienić kolor przycisków menu elementów menu regularne, skonfiguruj oderwania paski i tak dalej.  
@@ -1491,10 +1491,10 @@ virtual void OnSizeMDIClient(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `rectOld`  
+ [in] *rectOld*  
  Bieżący rozmiar okno klienckie MDI.  
   
- [in] `rectNew`  
+ [in] *rectNew*  
  Nowy rozmiar okna MDI klienta.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1509,10 +1509,10 @@ virtual BOOL OnTearOffMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pMenuPopup`  
+ [in] *pMenuPopup*  
  Wskaźnik do menu podręczne.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Wskaźnik do paskiem oderwania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1529,7 +1529,7 @@ virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `hMenuAlt`  
+ [in] *hMenuAlt*  
  Dojście do menu.  
   
 ##  <a name="panefrompoint"></a>  CMDIFrameWndEx::PaneFromPoint  
@@ -1550,23 +1550,23 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `point`  
+ [in] *punktu*  
  Punkt (we współrzędnych ekranu).  
   
- [in] `nSensitivity`  
+ [in] *nSensitivity*  
  Prostokąt okna każde zaznaczone okienko powiększenia we wszystkich kierunkach tej wartości.  
   
- [in] `bExactBar`  
- Jeśli `TRUE`, `nSensitivity` parametru jest ignorowana.  
+ [in] *bExactBar*  
+ Jeśli `TRUE`, *nSensitivity* parametru jest ignorowana.  
   
- [in] `pRTCBarType`  
+ [in] *pRTCBarType*  
  Jeśli z systemem innym niż `NULL`, metoda wykonuje iterację na tylko okienka określonego typu.  
   
- [out] `dwAlignment`  
+ [out] *dwAlignment*  
  Jeśli okienko zostanie znaleziony, ten parametr określa, które strony panelu zbliżony do określonego punktu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do okienko dokujące lub `NULL` Jeśli formant nie zawiera punktu określonego przez `point`.  
+ Wskaźnik do okienko dokujące lub `NULL` Jeśli formant nie zawiera punktu określonego przez *punktu*.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołanie jest przekierowywany do [CDockingManager klasy](../../mfc/reference/cdockingmanager-class.md). Zobacz [CDockingManager::ControlBarFromPoint](../../mfc/reference/cdockingmanager-class.md#panefrompoint) Aby uzyskać więcej informacji.  
@@ -1579,7 +1579,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bNotify`  
+ [in] *bNotify*  
  Określa, czy aktywny element w miejscu dla okno ramowe otrzymuje powiadomienia o zmianie układu. Jeśli `TRUE`, element jest notyfikowana; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1598,19 +1598,19 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Wskaźnik do okienka do usunięcia.  
   
- [in] `bDestroy`  
+ [in] *bDestroy*  
  `TRUE` Aby zniszczyć okienku usunięte. `FALSE` nie zniszczyć ją.  
   
- [in] `bAdjustLayout`  
+ [in] *bAdjustLayout*  
  `TRUE` Aby dostosować układ dokowania natychmiast. Jeśli `FALSE`, dostosowanie zostanie przeprowadzona tylko, gdy zdarzenie ponownego rysowania wystąpi z innych powodów (użytkownik zmienia rozmiar okna, przeciąga ramki głównej itp.).  
   
- [in] `bAutoHide`  
+ [in] *bAutoHide*  
  `TRUE` Aby usunąć w okienku z listy autohide — okienka. `FALSE` Aby usunąć okienka z listy regularne okienka.  
   
- [in] `pBarReplacement`  
+ [in] *pBarReplacement*  
  Wskaźnik do okienka zastępujący okienku usunięte.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1626,7 +1626,7 @@ virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Określa nazwę profilu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1660,7 +1660,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pWnd`  
+ [in] *pWnd*  
  Wskaźnik do podglądu wydruku ramki okna.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1676,13 +1676,13 @@ void SetupToolbarMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `menu`  
+ [in] *menu*  
  Odwołanie do [cmenu — klasa](../../mfc/reference/cmenu-class.md) obiekt do zmodyfikowania.  
   
- [in] `uiViewUserToolbarCmdFirst`  
+ [in] *uiViewUserToolbarCmdFirst*  
  Określa pierwsze polecenie zdefiniowane przez użytkownika.  
   
- [in] `uiViewUserToolbarCmdLast`  
+ [in] *uiViewUserToolbarCmdLast*  
  Określa ostatnie polecenie zdefiniowane przez użytkownika.  
   
 ##  <a name="showfullscreen"></a>  CMDIFrameWndEx::ShowFullScreen  
@@ -1706,16 +1706,16 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pBar`  
+ [in] *pBar*  
  Wskaźnik do okienka mają być pokazywane lub ukryte.  
   
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` Aby wyświetlić okienko. `FALSE` Aby ukryć okienko.  
   
- [in] `bDelay`  
+ [in] *bDelay*  
  `TRUE` Opóźnienie ponownego obliczania dokowania układu. `FALSE` Aby natychmiast ponownie Oblicz układ dokowania.  
   
- [in] `bActivate`  
+ [in] *bActivate*  
  `TRUE` Aby pokazać okienko powinien jako aktywne. `FALSE` Aby wyświetlić okienko jako nieaktywne.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1746,7 +1746,7 @@ virtual BOOL TabbedDocumentToControlBar(CMDIChildWndEx* pMDIChildWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pMDIChildWnd`  
+ *pMDIChildWnd*  
  Wskaźnik do okna podrzędnego MDI, który zawiera okienko dokujące.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1786,11 +1786,11 @@ virtual void WinHelp(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `dwData`  
- Określa dane zgodnie z wymaganiami dla typu określonego przez Pomoc `nCmd`.  
+ [in] *dwData*  
+ Określa dane zgodnie z wymaganiami dla typu określonego przez Pomoc *nCmd*.  
   
- [in] `nCmd`  
- Określa typ żądanie pomocy. Listę możliwych wartości i ich wpływ na `dwData` parametrów, zobacz [funkcję WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) w zestawie Windows SDK.  
+ [in] *nCmd*  
+ Określa typ żądanie pomocy. Listę możliwych wartości i ich wpływ na *dwData* parametrów, zobacz [funkcję WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) w zestawie Windows SDK.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda zastępuje [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp).  

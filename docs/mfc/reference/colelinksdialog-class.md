@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e190c8b8cb11fefccb2847214dcaebf713f35dc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb24b73ba23b430e29ed9144e51372eefdb673a3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368972"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042537"
 ---
 # <a name="colelinksdialog-class"></a>Klasa COleLinksDialog
 Używane dla okna dialogowego OLE Edytuj łącza.  
@@ -117,16 +117,16 @@ COleLinksDialog (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDoc`  
+ *pDoc*  
  Wskazuje dokumentu OLE, który zawiera łącza do edycji.  
   
- `pView`  
- Wskazuje bieżący widok na `pDoc`.  
+ *pView*  
+ Wskazuje bieżący widok na *pDoc*.  
   
- `dwFlags`  
+ *wartość elementu dwFlags*  
  Tworzenie flagę zawiera albo 0 lub **ELF_SHOWHELP** do określenia, czy przycisk Pomoc, będzie wyświetlana, gdy zostanie wyświetlone okno dialogowe.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskazuje obiekt okna nadrzędnego lub właściciela (typu `CWnd`) do której należy obiektu okna dialogowego. Jeśli jest **NULL**, okno nadrzędne, okno dialogowe ma ustawioną wartość okna głównego aplikacji.  
   
 ### <a name="remarks"></a>Uwagi  

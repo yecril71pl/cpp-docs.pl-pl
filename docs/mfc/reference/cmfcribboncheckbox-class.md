@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 109c3b2f6337adece6c371f1fafa98291468485e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 444d42c7273e64a07966592b315660b92ddf8ee0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369710"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042059"
 ---
 # <a name="cmfcribboncheckbox-class"></a>Klasa CMFCRibbonCheckBox
 `CMFCRibbonCheckBox` Klasa implementuje pole wyboru, które można dodać do menu panelu, pasek narzędzi Szybki dostęp lub okna podręcznego wstążki.  
@@ -77,7 +77,7 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
 ```  
 CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)  
 ```  
-gdzie `nID` jest identyfikator polecenia pole wyboru i `lpszText` jest etykieta tekstowa pola wyboru.  
+gdzie *nID* jest identyfikator polecenia pole wyboru i *lpszText* jest etykieta tekstowa pola wyboru.  
   
  Można dodać pola wyboru do panelu wstążki za pomocą [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
   
@@ -103,10 +103,10 @@ CMFCRibbonCheckBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nID`  
+ [in] *nID*  
  Określa identyfikator polecenia.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Określa tekst etykiety.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -125,7 +125,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do `CDC` skojarzone z wyboru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -142,7 +142,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do `CDC` skojarzone z tego pola wyboru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -159,7 +159,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do `CDC` obiekt skojarzony z tego pola wyboru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -188,7 +188,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do `CDC` do rysowania pole wyboru.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -201,10 +201,10 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `CDC*`  
+ [in] *CDC**  
  Wskaźnik do `CDC` skojarzone z wyboru.  
   
- [in] `CRect`  
+ [in] *CRect*  
  A `CRect` obiektu Określanie prostokąt do rysowania obrazu menu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -227,22 +227,22 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia do rysowania pole wyboru.  
   
- [in] `strText`  
+ [in] *strText*  
  Wyświetlany tekst.  
   
- [in] `nTextOffset`  
+ [in] *nTextOffset*  
  Odległość w pikselach, po lewej stronie pola listy do wyświetlania tekstu.  
   
- [in] `rect`  
+ [in] *rect*  
  Prostokątny obszar wyświetlania pola wyboru.  
   
- [in] `bIsSelected`  
+ [in] *bIsSelected*  
  `TRUE` Jeśli pole wyboru jest zaznaczone, lub `FALSE` , jeśli nie.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  `TRUE` Jeśli pole wyboru jest podświetlona, lub `FALSE` , jeśli nie.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -257,10 +257,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParent`  
+ *pParent*  
  Okno nadrzędne pola wyboru.  
   
- `data`  
+ *Dane*  
  Dane dostępności pola wyboru.  
   
 ### <a name="return-value"></a>Wartość zwracana  

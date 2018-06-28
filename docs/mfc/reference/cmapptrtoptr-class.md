@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1b7140c9d6a175c6464fdaa41cf3cc022e8a6ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b3af1336c35fe9520834018d9c668005048db82
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366827"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037768"
 ---
 # <a name="cmapptrtoptr-class"></a>Klasa CMapPtrToPtr
 Obsługuje mapy wskaźniki typu void, wyznaczaną przez wskaźniki typu void.  
@@ -61,7 +61,7 @@ class CMapPtrToPtr : public CObject
 ```  
   
 ## <a name="members"></a>Elementy członkowskie  
- Funkcje Członkowskie `CMapPtrToPtr` są podobne do funkcji Członkowskich klasy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ze względu na to podobieństwa, można użyć `CMapStringToOb` odwołania dokumentacji charakterystykę funkcja elementu członkowskiego. Po wyświetleniu `CObject` wskaźnika jako parametr funkcji lub wartości zwracanej, Zastąp wskaźnik do `void`. Po wyświetleniu `CString` lub **const** wskaźnik do `char` jako parametr funkcji lub wartości zwracanej, Zastąp wskaźnik do `void`.  
+ Funkcje Członkowskie `CMapPtrToPtr` są podobne do funkcji Członkowskich klasy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ze względu na to podobieństwa, można użyć `CMapStringToOb` odwołania dokumentacji charakterystykę funkcja elementu członkowskiego. Po wyświetleniu `CObject` wskaźnika jako parametr funkcji lub wartości zwracanej, Zastąp wskaźnik do **void**. Po wyświetleniu `CString` lub **const** wskaźnik do `char` jako parametr funkcji lub wartości zwracanej, Zastąp wskaźnik do **void**.  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   

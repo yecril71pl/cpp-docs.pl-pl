@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85161e7f3dd752c6df27afedf6276f8823e7ec6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f758a3cc82d4f6cfcc28f89ae206a82b899c0042
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371367"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037618"
 ---
 # <a name="colemessagefilter-class"></a>Klasa COleMessageFilter
 Zarządza współbieżności wymagane przez interakcji w aplikacji OLE.  
@@ -110,7 +110,7 @@ virtual void BeginBusyState();
   
  `BeginBusyState` i `EndBusyState` wywołań zwiększyć i zmniejszyć, licznik, który określa, czy aplikacja jest zajęta. Na przykład dwa wywołań `BeginBusyState` i jedno wywołanie `EndBusyState` nadal doprowadzi do stanu zajętości. Aby anulować zajęty stanu, należy wywołać `EndBusyState` taką samą liczbę razy `BeginBusyState` została wywołana.  
   
- Domyślnie platformę przechodzi do stanu zajętości podczas przetwarzanie w stanie bezczynności, które jest wykonywane przez [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Gdy aplikacja jest obsługa **ON_COMMANDUPDATEUI** powiadomienia, połączenia przychodzące są obsługiwane później, po zakończeniu przetwarzanie w stanie bezczynności.  
+ Domyślnie platformę przechodzi do stanu zajętości podczas przetwarzanie w stanie bezczynności, które jest wykonywane przez [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Gdy aplikacja jest Obsługa powiadomień dotyczących ON_COMMANDUPDATEUI, połączenia przychodzące są obsługiwane później, po zakończeniu przetwarzanie w stanie bezczynności.  
   
 ##  <a name="colemessagefilter"></a>  COleMessageFilter::COleMessageFilter  
  Tworzy `COleMessageFilter` obiektu.  
@@ -153,7 +153,7 @@ virtual void EndBusyState();
   
  `BeginBusyState` i `EndBusyState` wywołań zwiększyć i zmniejszyć, licznik, który określa, czy aplikacja jest zajęta. Na przykład dwa wywołań `BeginBusyState` i jedno wywołanie `EndBusyState` nadal doprowadzi do stanu zajętości. Aby anulować zajęty stanu, należy wywołać `EndBusyState` taką samą liczbę razy `BeginBusyState` została wywołana.  
   
- Domyślnie platformę przechodzi do stanu zajętości podczas przetwarzanie w stanie bezczynności, które jest wykonywane przez [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Gdy aplikacja jest obsługa `ON_UPDATE_COMMAND_UI` powiadomienia, połączenia przychodzące są obsługiwane, po zakończeniu przetwarzanie w stanie bezczynności.  
+ Domyślnie platformę przechodzi do stanu zajętości podczas przetwarzanie w stanie bezczynności, które jest wykonywane przez [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle). Gdy aplikacja jest obsługa on_update_command_ui — powiadomienia, połączenia przychodzące są obsługiwane po zakończeniu przetwarzanie w stanie bezczynności.  
   
 ##  <a name="onmessagepending"></a>  COleMessageFilter::OnMessagePending  
  Metoda wywoływana przez platformę do przetwarzania komunikatów, gdy wywołanie OLE jest w toku.  
@@ -163,14 +163,14 @@ virtual BOOL OnMessagePending(const MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pMsg`  
+ *pMsg*  
  Wskaźnik do oczekujących komunikatów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera w przypadku powodzenia; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Gdy aplikacja wywołująca oczekuje na połączenie, należy wykonać, struktura wywołuje `OnMessagePending` za pomocą wskaźnika do oczekujących komunikatów. Domyślnie wywołuje platformę `WM_PAINT` komunikaty, dzięki czemu aktualizacji okna może wystąpić podczas wywołania, która jest zbyt długi czas.  
+ Gdy aplikacja wywołująca oczekuje na połączenie, należy wykonać, struktura wywołuje `OnMessagePending` za pomocą wskaźnika do oczekujących komunikatów. Domyślnie platformę komunikaty będą rozsyłane WM_PAINT, tak aby aktualizacji okna może wystąpić podczas wywołania, która jest zbyt długi czas.  
   
  Filtr komunikatu musi zarejestrować za pomocą wywołania [zarejestrować](#register) przed może zostać uaktywniony.  
   
@@ -233,7 +233,7 @@ void SetMessagePendingDelay(DWORD nTimeout = 5000);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nTimeout`  
+ *Nlimit*  
  Wyrażony w milisekundach czas opóźnienia oczekujących komunikatów.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -247,7 +247,7 @@ void SetRetryReply(DWORD nRetryReply = 0);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nRetryReply`  
+ *nRetryReply*  
  Liczba milisekund między kolejnymi próbami.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -255,7 +255,7 @@ void SetRetryReply(DWORD nRetryReply = 0);
   
  Odpowiedź wywołującego jest kontrolowany przez funkcje `SetRetryReply` i [SetMessagePendingDelay](#setmessagependingdelay). `SetRetryReply` Określa, jak długo aplikacja wywołująca powinna czekać między kolejnymi próbami dla danego połączenia. `SetMessagePendingDelay` Określa, jak długo aplikacja wywołująca czeka na odpowiedź z serwera przed podjęciem dalszych działań.  
   
- Zwykle wartości domyślne są dozwolone i nie muszą zostać zmienione. Platformę ponowi próbę połączenia co `nRetryReply` milisekund, dopóki wywołania przechodzi przez lub opóźnienia komunikatów oczekujących utracił ważność. Wartość 0 dla `nRetryReply` określa natychmiastowego ponawiania i - 1 oznacza anulowania wywołania.  
+ Zwykle wartości domyślne są dozwolone i nie muszą zostać zmienione. Platformę ponowi próbę połączenia co *nRetryReply* milisekund, dopóki wywołania przechodzi przez lub opóźnienia komunikatów oczekujących utracił ważność. Wartość 0 dla *nRetryReply* określa natychmiastowego ponawiania i - 1 oznacza anulowania wywołania.  
   
  Gdy opóźnienie komunikatów oczekujących utracił ważność, OLE "zajęty okna dialogowego" (zobacz [COleBusyDialog](../../mfc/reference/colebusydialog-class.md)) jest wyświetlana, dzięki czemu użytkownik może anulować lub ponów próbę połączenia. Wywołanie [EnableBusyDialog](#enablebusydialog) Aby włączyć lub wyłączyć tego okna dialogowego.  
   

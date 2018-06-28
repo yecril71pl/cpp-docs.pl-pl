@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e27551c04be5d6e985c6e7829f11f94d0aafeba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 037a6091f11ad12a8f4e46ccb837c48f1f9a685b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369352"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040850"
 ---
 # <a name="cmdichildwnd-class"></a>Cmdichildwnd — klasa
 Udostępnia funkcje systemu Windows wiele okien podrzędnych interfejsu (MDI) dokumentu, wraz z elementów członkowskich do zarządzania okna.  
@@ -75,17 +75,17 @@ class CMDIChildWnd : public CFrameWnd
   
  Istnieją trzy sposoby tworzenia okna podrzędnego MDI:  
   
--   Bezpośrednio utworzyć za pomocą **Utwórz**.  
+-   Bezpośrednio utworzyć za pomocą `Create`.  
   
 -   Bezpośrednio utworzyć za pomocą `LoadFrame`.  
   
 -   Pośrednio utworzenia go za pomocą szablonu dokumentu.  
   
- Przed wywołaniem **Utwórz** lub `LoadFrame`, należy tworzyć obiektu okno ramowe na stercie przy użyciu języka C++ **nowe** operatora. Przed wywołaniem **Utwórz** można również zarejestrować klasy okna z [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) funkcji globalnej do ustawiania ikony, jak i klasy stylów ramki.  
+ Przed wywołaniem `Create` lub `LoadFrame`, należy tworzyć obiektu okno ramowe na stercie przy użyciu języka C++ **nowe** operatora. Przed wywołaniem `Create` można również zarejestrować klasy okna z [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) funkcji globalnej do ustawiania ikony, jak i klasy stylów ramki.  
   
- Użyj **Utwórz** funkcji członkowskiej do przekazania parametrów tworzenia ramki natychmiastowego jako argumenty.  
+ Użyj `Create` funkcji członkowskiej do przekazania parametrów tworzenia ramki natychmiastowego jako argumenty.  
   
- `LoadFrame` wymaga mniejszej liczby argumentów niż **Utwórz**, a zamiast tego pobiera większość jego wartości domyślnej z zasobów, w tym ramki podpis, ikona tabeli akceleratora i menu. Aby mieć dostęp `LoadFrame`, te zasoby muszą mieć ten sam identyfikator zasobów (na przykład **IDR_MAINFRAME**).  
+ `LoadFrame` wymaga mniejszej liczby argumentów niż `Create`, a zamiast tego pobiera większość jego wartości domyślnej z zasobów, w tym ramki podpis, ikona tabeli akceleratora i menu. Aby mieć dostęp `LoadFrame`, te zasoby muszą mieć ten sam identyfikator zasobów (na przykład **IDR_MAINFRAME**).  
   
  Gdy `CMDIChildWnd` obiektu zawiera widoki i dokumentów, są tworzone pośrednio przez platformę, a nie bezpośrednio przez programistę. `CDocTemplate` Obiektu organizuje tworzenia ramki, tworzenie widoków zawierających i połączenie widoki dokument. Parametry `CDocTemplate` Określ konstruktora `CRuntimeClass` trzech klas zaangażowana (dokument, ramki i widoku). A `CRuntimeClass` obiekt jest używany przez platformę w celu dynamicznego tworzenia nowych ramek, gdy został określony przez użytkownika (na przykład przy użyciu polecenia nowy plik lub nowego okna MDI polecenia).  
   
@@ -142,22 +142,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszClassName`  
+ *lpszClassName*  
  Wskazuje na ciąg znaków zakończony znakiem null nazwy klasy systemu Windows ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struktury). Nazwa klasy może być dowolną nazwą zarejestrowany [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) funkcji globalnej. Powinien być **NULL** dla standardowej `CMDIChildWnd`.  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  Wskazuje ciąg znaków zakończony znakiem null, który reprezentuje nazwę okna. Używane jako tekst paska tytułu.  
   
- `dwStyle`  
+ *dwStyle*  
  Określa okno [styl](../../mfc/reference/styles-used-by-mfc.md#window-styles) atrybutów. **Ws_child —** styl jest wymagana.  
   
- `rect`  
+ *Rect*  
  Zawiera rozmiar i położenie okna. `rectDefault` Wartość umożliwia systemu Windows określić rozmiar i położenie nowej `CMDIChildWnd`.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Określa okna nadrzędnego. Jeśli **NULL**, jest używany w głównym oknie aplikacji.  
   
- `pContext`  
+ *pContext*  
  Określa [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) struktury. Ten parametr może być **NULL**.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -166,7 +166,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Uwagi  
  Aktualnie aktywne okno ramowe podrzędnych MDI można określić podpis ramkę okna nadrzędnego. Ta funkcja jest wyłączona, wyłączając **fws_addtotitle —** bit stylu ramki okna podrzędnego.  
   
- Struktura wywołuje tej funkcji Członkowskich w odpowiedzi na polecenie użytkownika można utworzyć okna podrzędnego i używa w ramach `pContext` parametru nawiązać prawidłowo okno podrzędne aplikacji. Podczas wywoływania **Utwórz**, `pContext` może być **NULL**.  
+ Struktura wywołuje tej funkcji Członkowskich w odpowiedzi na polecenie użytkownika można utworzyć okna podrzędnego i używa w ramach *pContext* parametru nawiązać prawidłowo okno podrzędne aplikacji. Podczas wywoływania `Create`, *pContext* może być **NULL**.  
   
 ### <a name="example"></a>Przykład  
  Przykład 1:  
@@ -255,10 +255,10 @@ void SetHandles(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hMenu`  
+ *hMenu*  
  Dojście zasobów menu.  
   
- `hAccel`  
+ *hAccel*  
  Dojście zasobów akceleratora.  
   
 ### <a name="remarks"></a>Uwagi  

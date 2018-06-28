@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e677879079eaab3dd36481fec76ca53da92ef87d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d30ad25a21bf380dd7687ccd0da0fb261aeeb023
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373306"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042316"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>Klasa CMFCOutlookBarTabCtrl
 Formant karty, który ma wygląd **okienka nawigacji** w programie Microsoft Outlook.  
@@ -148,19 +148,19 @@ void AddControl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pWndCtrl`  
+ [in] *pWndCtrl*  
  Wskaźnik do formantu do dodania.  
   
- [in] `lpszName`  
+ [in] *lpszName*  
  Określa nazwę karty.  
   
- [in] `bDetachable`  
+ [in] *bDetachable*  
  Jeśli `TRUE`, strona zostanie utworzona jako odłączane.  
   
- [in] `nImageID`  
+ [in] *nImageID*  
  Indeks obrazu na liście wewnętrznych obrazu dla obrazu do wyświetlenia na nowej karcie.  
   
- [in] `dwControlBarStyle`  
+ [in] *dwControlBarStyle*  
  Określa AFX_ `CBRS_`* styl opakowana okienka dokowania.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -168,7 +168,7 @@ void AddControl(
   
  Ta funkcja wymaga wewnętrznie w sprawie [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab).  
   
- Jeśli ustawisz `bDetachable` do `TRUE`, `AddControl` wewnętrznie tworzy `CDockablePaneAdapter` obiektu i opakowuje dodano formantu. Automatycznie ustawia klasa środowiska uruchomieniowego okna z kartami na klasę środowiska uruchomieniowego `CMFCOutlookBar` i klasa czasu wykonywania ramki przestawne `CMultiPaneFrameWnd`.  
+ Jeśli ustawisz *bDetachable* do `TRUE`, `AddControl` wewnętrznie tworzy `CDockablePaneAdapter` obiektu i opakowuje dodano formantu. Automatycznie ustawia klasa środowiska uruchomieniowego okna z kartami na klasę środowiska uruchomieniowego `CMFCOutlookBar` i klasa czasu wykonywania ramki przestawne `CMultiPaneFrameWnd`.  
   
 ### <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano sposób użycia `AddControl` metoda `CMFCOutlookBarTabCtrl` klasy. Następujący fragment kodu jest częścią [próbka Outlook Demo](../../visual-cpp-samples.md).  
@@ -212,20 +212,20 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `rect`  
+ [in] *rect*  
  Określa początkowy rozmiar i położenie w pikselach.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Wskazuje okno nadrzędne. Nie może być `NULL`.  
   
- [in] `nID`  
+ [in] *nID*  
  Identyfikator formantu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli formant został utworzony pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Zazwyczaj formanty kartę paska programu outlook są tworzone, gdy [klasy CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md) formanty `WM_CREATE` komunikat procesu.  
+ Zazwyczaj formanty kartę paska programu outlook są tworzone, gdy [klasy CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md) steruje komunikat WM_CREATE procesu.  
   
 ##  <a name="enableanimation"></a>  CMFCOutlookBarTabCtrl::EnableAnimation  
  Określa, czy włączono animacji, która występuje podczas przełącznika między kartami active.  
@@ -235,7 +235,7 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  Określa, czy animacja powinna być włączona lub wyłączona.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -251,7 +251,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bEnable`  
+ *bWłączenie*  
  Jeśli `TRUE`, Włącz edycji w miejscu tekst etykiety. Jeśli `FALSE`, wyłącz edycji w miejscu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -268,13 +268,13 @@ void EnableScrollButtons(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  Określa, czy są wyświetlane przyciski przewijania.  
   
- [in] `bIsUp`  
+ [in] *bIsUp*  
  Określa, czy jest wyświetlany górny pasek przewijania.  
   
- [in] `bIsDown`  
+ [in] *bIsDown*  
  Określa, czy jest wyświetlany pasek przewijania dolnej.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -367,7 +367,7 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iTab`  
+ [in] *iTab*  
  Liczony od zera indeks kartę, aby go otworzyć.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -384,7 +384,7 @@ void SetBorderSize(int nBorderSize);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nBorderSize`  
+ [in] *nBorderSize*  
  Określa nowy rozmiar obramowania w pikselach.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -400,16 +400,16 @@ void SetPageButtonTextAlign(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiAlign`  
+ [in] *uiAlign*  
  Określa wyrównanie tekstu.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  Jeśli `TRUE`, zostanie narysowany ponownie okno programu outlook.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja służy do zmiany wyrównania tekstu dla strony przycisków.  
   
- `uiAlign` Może to być jedna z następujących wartości:  
+ *uiAlign* może być jedną z następujących wartości:  
   
 |Stała|Znaczenie|  
 |--------------|-------------|  
@@ -430,13 +430,13 @@ BOOL SetToolbarImageList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiID`  
+ [in] *uiID*  
  Określa identyfikator zasobu obrazu do załadowania.  
   
- [in] `cx`  
+ [in] *cx*  
  Określa szerokość obrazu na liście obrazu w pikselach.  
   
- [in] `clrTransp`  
+ [in] *clrTransp*  
  Wartości RGB, która określa kolor przezroczysty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -455,7 +455,7 @@ void SetVisiblePageButtons(int nVisiblePageButtons);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nVisiblePageButtons`  
+ [in] *nVisiblePageButtons*  
   
 ### <a name="remarks"></a>Uwagi  
   

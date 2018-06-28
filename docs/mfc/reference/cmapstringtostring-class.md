@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a196e2f3f4641d94bbbbda57dd1471066fb1dfa2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43c9fdc667f5bd40b6c683f6e48753a084266847
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368150"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037651"
 ---
 # <a name="cmapstringtostring-class"></a>Klasa CMapStringToString
 Obsługuje mapy `CString` obiektów, wyznaczaną przez `CString` obiektów.  
@@ -69,7 +69,7 @@ class CMapStringToString : public CObject
 ```  
   
 ## <a name="members"></a>Elementy członkowskie  
- Funkcje Członkowskie `CMapStringToString` są podobne do funkcji Członkowskich klasy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ze względu na to podobieństwa, można użyć `CMapStringToOb` odwołania dokumentacji charakterystykę funkcja elementu członkowskiego. Po wyświetleniu `CObject` wskaźnik wartości zwracanej lub "output" parametru, funkcji zastępuje wskaźnik do `char`. Po wyświetleniu `CObject` wskaźnika jako parametr funkcji "wejściowy" zastępuje wskaźnik do `char`.  
+ Funkcje Członkowskie `CMapStringToString` są podobne do funkcji Członkowskich klasy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ze względu na to podobieństwa, można użyć `CMapStringToOb` odwołania dokumentacji charakterystykę funkcja elementu członkowskiego. Po wyświetleniu `CObject` wskaźnik wartości zwracanej lub "output" parametru, funkcji zastępuje wskaźnik do **char**. Po wyświetleniu `CObject` wskaźnika jako parametr funkcji "wejściowy" zastępuje wskaźnik do **char**.  
   
  `BOOL CMapStringToOb::Lookup(const char*<key>, CObject*&<rValue>) const;`  
   
@@ -169,7 +169,7 @@ CPair* PGetFirstAssoc();
  [!code-cpp[NVC_MFCCollections#73](../../mfc/codesnippet/cpp/cmapstringtostring-class_1.cpp)]  
   
 ##  <a name="pgetnextassoc"></a>  CMapStringToString::PGetNextAssoc  
- Pobiera element map wskazywana przez `pAssocRec`.  
+ Pobiera element map wskazywana przez *pAssocRec*.  
   
 ```  
 const CPair *PGetNextAssoc(const CPair* pAssoc) const;  
@@ -200,7 +200,7 @@ CPair* PLookup(LPCTSTR key);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `key`  
+ *Klucz*  
  Wskaźnik do klucza dla elementu, który ma zostać wyszukany.  
   
 ### <a name="return-value"></a>Wartość zwracana  

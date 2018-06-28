@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa188930f6fe80d26282252ef3aae875aa19922f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7bc3b4be5b7b5a6168287135511f3f401203a7e2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372563"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037918"
 ---
 # <a name="cmfcribboncolorbutton-class"></a>Klasa CMFCRibbonColorButton
 `CMFCRibbonColorButton` Klasa implementuje przycisk koloru, które można dodać do pasek wstążki. Przycisk koloru wstążki Wyświetla menu rozwijanego, który zawiera co najmniej jeden palety kolorów.  
@@ -128,13 +128,13 @@ void AddColorsGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszName`  
+ [in] *lpszName*  
  Nazwa grupy.  
   
- [in] `lstColors`  
+ [in] *lstColors*  
  Lista kolorów.  
   
- [in] `bContiguousColumns`  
+ [in] *bContiguousColumns*  
  Określa, jak elementy kolorów są wyświetlane w grupie. Jeśli `TRUE`, kolor elementów są rysowane bez odstępy w pionie. Jeśli `FALSE`, kolor elementów są rysowane z odstępów w pionie.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -164,22 +164,22 @@ CMFCRibbonColorButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nID`  
+ [in] *nID*  
  Określa identyfikator polecenia do wykonania, gdy użytkownik kliknie przycisk polecenia.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Określa tekst wyświetlany na przycisku.  
   
- [in] `nSmallImageIndex`  
+ [in] *nSmallImageIndex*  
  Liczony od zera indeks mały obraz wyświetlany na przycisku.  
   
- [in] `color`  
+ [in] *kolorów*  
  Kolor przycisku (wartość domyślna to czarny).  
   
- [in] `bSimpleButtonLook`  
+ [in] *bSimpleButtonLook*  
  Jeśli `TRUE`, przycisk jest rysowane jako prosty prostokąt.  
   
- [in] `nLargeImageIndex`  
+ [in] *nLargeImageIndex*  
  Liczony od zera indeks duży obraz wyświetlany na przycisku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -200,22 +200,22 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Etykieta dla **automatyczne** przycisku.  
   
- [in] `colorAutomatic`  
+ [in] *colorAutomatic*  
  Wartości RGB, który określa **automatyczne** przycisku domyślny kolor.  
   
- [in] `bEnable`  
+ [in] *bWłączenie*  
  `TRUE` Jeśli **automatyczne** przycisk jest włączony; `FALSE` Jeśli została ona wyłączona.  
   
- [in] `lpszToolTip`  
+ [in] *lpszToolTip*  
  Etykietka narzędzia **automatyczne** przycisku.  
   
- [in] `bOnTop`  
+ [in] *bOnTop*  
  Określa, czy **automatyczne** znajduje się przycisk u góry, przed paletę kolorów.  
   
- [in] `bDrawBorder`  
+ [in] *bDrawBorder*  
  `TRUE` Jeśli aplikacja rysuje obramowanie pasek koloru na Wstążce przycisk koloru. Pasek koloru Wyświetla wybrany kolor. `FALSE` Jeśli aplikacja nie narysować obramowanie  
   
 ##  <a name="enableotherbutton"></a>  CMFCRibbonColorButton::EnableOtherButton  
@@ -228,10 +228,10 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszLabel`  
+ *lpszLabel*  
  Etykieta przycisku.  
   
- `lpszToolTip`  
+ *lpszToolTip*  
  Tekst etykietki narzędzia dla **innych** przycisku.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -307,7 +307,7 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `color`  
+ [in] *kolorów*  
  Aby ustawić kolor.  
   
 ##  <a name="setcolorboxsize"></a>  CMFCRibbonColorButton::SetColorBoxSize  
@@ -318,7 +318,7 @@ void SetColorBoxSize(CSize sizeBox);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `sizeBox`  
+ [in] *sizeBox*  
  Nowy rozmiar przycisków kolorów palety kolorów.  
   
 ##  <a name="setcolorname"></a>  CMFCRibbonColorButton::SetColorName  
@@ -331,10 +331,10 @@ static void __stdcall SetColorName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `color`  
+ [in] *kolorów*  
  Wartości RGB koloru.  
   
- [in] `strName`  
+ [in] *strName*  
  Nowa nazwa dla określonego koloru.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -348,7 +348,7 @@ void SetColumns(int nColumns);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nColumns`  
+ [in] *nColumns*  
  Liczba ikon koloru do wyświetlenia w każdym wierszu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -363,10 +363,10 @@ void SetDocumentColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Tekst wyświetlany kolory dokumentu.  
   
- [in] `lstColors`  
+ [in] *lstColors*  
  Odwołanie do listy wartości RGB.  
   
 ##  <a name="setpalette"></a>  CMFCRibbonColorButton::SetPalette  
@@ -377,7 +377,7 @@ void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pPalette`  
+ [in] *pPalette*  
  Wskaźnik do paletę kolorów.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -390,11 +390,11 @@ void UpdateColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `color`  
+ [in] *kolorów*  
  Kolor wybrany przez użytkownika.  
   
 ### <a name="remarks"></a>Uwagi  
- `CMFCRibbonColorButton::UpdateColor` Metody zmienia kolor aktualnie wybrany przycisk i powiadamia jego elementu nadrzędnego, wysyłając `WM_COMMAND` komunikatów z `BN_CLICKED` powiadomień w wersji standard. Użyj [CMFCRibbonColorButton::GetColor](#getcolor) metoda pobierania wybranego koloru.  
+ `CMFCRibbonColorButton::UpdateColor` Metody zmienia kolor aktualnie wybrany przycisk i powiadamia jego elementu nadrzędnego, wysyłając wiadomość WM_COMMAND z BN_CLICKED powiadomień w wersji standard. Użyj [CMFCRibbonColorButton::GetColor](#getcolor) metoda pobierania wybranego koloru.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

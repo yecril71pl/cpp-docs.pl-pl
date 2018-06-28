@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10f474ce860bf5d9071a93f17654123f4777efa7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ca4d5a88b14f32064e473bd129fcd0f8ddd7898
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367347"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040616"
 ---
 # <a name="chtmleditview-class"></a>Klasa CHtmlEditView
 Udostępnia funkcję edytowania platformy WebBrowser w kontekście architektury dokument/widok MFC.  
@@ -100,25 +100,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszClassName`  
+ *lpszClassName*  
  Punkty na ciąg znaków zakończony znakiem null nazwy klasy systemu Windows. Nazwa klasy może być dowolną nazwą zarejestrowany [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) funkcji globalnej lub **RegisterClass** funkcji systemu Windows. Jeśli **NULL**, będzie używana domyślna wstępnie zdefiniowanych [cframewnd —](../../mfc/reference/cframewnd-class.md) atrybutów.  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  Wskazuje ciąg znaków zakończony znakiem null, który reprezentuje nazwę okna.  
   
- `dwStyle`  
+ *dwStyle*  
  Określa atrybuty stylu okna. Domyślnie **ws_visible —** i **ws_child —** ustawiono style systemu Windows.  
   
- `rect`  
- Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktura określająca rozmiar i położenie okna. `rectDefault` Wartość umożliwia systemu Windows określić rozmiar i położenie nowego okna.  
+ *Rect*  
+ Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktura określająca rozmiar i położenie okna. *RectDefault* wartość umożliwia systemu Windows określić rozmiar i położenie nowego okna.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do okno nadrzędne kontrolki.  
   
- `nID`  
+ *nID*  
  Identyfikator widoku. Domyślnie ustawioną **AFX_IDW_PANE_FIRST**.  
   
- `pContext`  
+ *pContext*  
  Wskaźnik do [CCreateContext](../../mfc/reference/ccreatecontext-structure.md). **Wartość NULL** domyślnie.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -132,7 +132,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ppDocument`  
+ *ppDocument*  
  [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interfejsu.  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument  

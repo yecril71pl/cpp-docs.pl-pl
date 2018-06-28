@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec36bfc82064272e165ea274cd127cc626731643
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df36f8a6af5d8ad7e2a96780e02f236e3225333d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368780"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040632"
 ---
 # <a name="cmfccaptionbutton-class"></a>Klasa CMFCCaptionButton
 `CMFCCaptionButton` Klasa implementuje przycisku, który jest wyświetlany na pasku podpisu okienko dokujące lub okno ramowe minimalnej. Zazwyczaj platformę tworzy podpis przyciski automatycznie.  
@@ -106,13 +106,13 @@ CMFCCaptionButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nHit`  
+ [in] *nHit*  
  Polecenie skojarzone z przyciskiem.  
   
- [in] `bLeftAlign`  
+ [in] *bLeftAlign*  
  Określa, czy przycisk jest wyrównany do lewej.  
   
- W poniższej tabeli przedstawiono możliwe wartości `nHit` parametru.  
+ W poniższej tabeli przedstawiono możliwe wartości *nHit* parametru.  
   
 |Wartość|Polecenie|  
 |-----------|-------------|  
@@ -161,10 +161,10 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bHorz`  
+ [in] *bHorz*  
  `TRUE` Strzałka w lewo lub w prawo obrazu identyfikatorów; `FALSE` dla obrazu identyfikatorów w górę lub Strzałka w dół.  
   
- [in] `bMaximized`  
+ [in] *bMaximized*  
  `TRUE` Identyfikator obrazu Maksymalizuj; `FALSE` dla Minimalizuj obrazu identyfikatora.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -221,10 +221,10 @@ void Move(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `ptTo`  
+ [in] *ptTo*  
  Nowa lokalizacja.  
   
- [in] `bHide`  
+ [in] *bHide*  
  Określa, czy wyświetlać przycisk.  
   
 ##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw  
@@ -240,23 +240,23 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia dla przycisku.  
   
- [in] `bActive`  
+ [in] *bWykonywanie aktywnych*  
  Określa, czy do rysowania obrazu przycisku.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  Zarezerwowane do użytku w klasie pochodnej.  
   
- [in] `bMaximized`  
+ [in] *bMaximized*  
  Określa, czy do rysowania obrazu przycisku zmaksymalizowane.  
   
- [in] `bDisabled`  
+ [in] *bWyłączone*  
  Określa, czy do rysowania obrazu przycisku włączone.  
   
 ### <a name="remarks"></a>Uwagi  
- `bMaximized` Parametr jest używany, gdy przycisk jest Maksymalizuj lub przycisk Minimalizuj.  
+ *BMaximized* parametr jest używany, gdy przycisk jest Maksymalizuj lub przycisk Minimalizuj.  
   
 ##  <a name="setminiframebutton"></a>  CMFCCaptionButton::SetMiniFrameButton  
  Określa rozmiar podręczny pasek tytułu.  
@@ -266,7 +266,7 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bSet`  
+ [in] *bUstawienie*  
  `TRUE` Wysokość paska tytułu mini; `FALSE` dla domyślna wysokość paska tytułu.  
   
 ## <a name="see-also"></a>Zobacz też  

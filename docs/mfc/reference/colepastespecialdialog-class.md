@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e2e668a2ad15ec9ec2fb779be32d35c17eb57cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1be5cdc05ab387000828ce6424aed1fcc253d6c2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374360"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039170"
 ---
 # <a name="colepastespecialdialog-class"></a>Klasa COlePasteSpecialDialog
 Używane dla okna dialogowego OLE Wklej specjalne.  
@@ -68,7 +68,7 @@ class COlePasteSpecialDialog : public COleDialog
 |----------|-----------------|  
 |[COlePasteSpecialDialog::AddFormat](#addformat)|Dodaje niestandardowe formaty do listy formatów, które można wkleić aplikacji.|  
 |[COlePasteSpecialDialog::AddLinkEntry](#addlinkentry)|Dodaje nowy wpis do listy obsługiwanych formatów Schowka.|  
-|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|Dodaje **CF_BITMAP**, **CF_DIB**, `CF_METAFILEPICT`i opcjonalnie `CF_LINKSOURCE` do listy formatów można wkleić aplikacji.|  
+|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|Dodaje **CF_BITMAP**, **CF_DIB**, **CF_METAFILEPICT**i opcjonalnie **CF_LINKSOURCE** do listy formatów można wkleić aplikacji .|  
 |[COlePasteSpecialDialog::CreateItem](#createitem)|Tworzy element w dokumencie kontenera w określonym formacie.|  
 |[COlePasteSpecialDialog::DoModal](#domodal)|Wyświetla okno dialogowe w OLE Wklej specjalne.|  
 |[COlePasteSpecialDialog::GetDrawAspect](#getdrawaspect)|Informuje, czy ma zostać narysowany element jako ikony lub nie.|  
@@ -130,22 +130,22 @@ void AddFormat(
  *formatowaniu*  
  Odwołanie do typu danych do dodania.  
   
- `lpszFormat`  
+ *lpszFormat*  
  Ciąg opisujący formatu dla użytkownika.  
   
  *lpszResult*  
  Ciąg opisujący wynik ten format jest wybrany w oknie dialogowym.  
   
- `flags`  
+ *flagi*  
  Różne łączenie i osadzanie opcji dostępnych dla tego formatu. Ta flaga jest bitowe połączenie co najmniej jednego różne wartości w **OLEUIPASTEFLAG** typ wyliczeniowy.  
   
- `cf`  
+ *CF*  
  Format schowka do dodania.  
   
  *tymed*  
  Typy nośniki dostępne w tym formacie. Jest to bitowe połączenie co najmniej jedną z wartości w **TYMED** typ wyliczeniowy.  
   
- `nFormatID`  
+ *nFormatID*  
  Identyfikator ciągu, która identyfikuje ten format. Format ten ciąg jest dwa oddzielne ciągi oddzielone znakiem "\n". Pierwszy ciąg jest taki sam, które zostaną przekazane w *lpstrFormat* parametr, a drugi jest taka sama jak *lpstrResult* parametru.  
   
  *bEnableIcon*  
@@ -169,7 +169,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cf`  
+ *CF*  
  Format schowka do dodania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -192,7 +192,7 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
   
 - **CF_DIB**  
   
-- `CF_METAFILEPICT`  
+- **CF_METAFILEPICT**  
   
 - **"Osadzonego"**  
   
@@ -211,7 +211,7 @@ COlePasteSpecialDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwFlags`  
+ *wartość elementu dwFlags*  
  Flagi tworzenia zawiera dowolną liczbę następujące flagi łączyć, używając operator Alternatywy:  
   
 - `PSF_SELECTPASTE` Określa, że przycisk radiowy Wklej będą sprawdzane początkowo wywołanego okna dialogowego. Nie można używać w połączeniu z `PSF_SELECTPASTELINK`. Domyślnie włączone.  
@@ -222,10 +222,10 @@ COlePasteSpecialDialog(
   
 - `PSF_SHOWHELP` Określa, czy przycisk Pomoc, aby będą wyświetlane, gdy jest wywoływana w oknie dialogowym.  
   
- `pDataObject`  
+ *Obiekt pDataObject*  
  Wskazuje [COleDataObject](../../mfc/reference/coledataobject-class.md) wklejania. Jeśli ta wartość jest **NULL**, pobiera `COleDataObject` ze Schowka.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskazuje obiekt okna nadrzędnego lub właściciela (typu `CWnd`) do której należy obiektu okna dialogowego. Jeśli jest **NULL**, okno nadrzędne, okno dialogowe ma ustawioną wartość okna głównego aplikacji.  
   
 ### <a name="remarks"></a>Uwagi  

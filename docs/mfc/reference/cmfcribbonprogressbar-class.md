@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b9d0d1ab9722b14caddc3935d820301ae229f5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 24981d2544c2b3e2c8be6a3307829f8a1e1c29ad
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369339"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040223"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Klasa CMFCRibbonProgressBar
 Implementuje formant, który wskazuje wizualnie postępu długotrwałej operacji.  
@@ -106,13 +106,13 @@ CMFCRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nID`  
+ [in] *nID*  
  Określa identyfikator polecenia pasek postępu wstążki.  
   
- [in] `nWidth`  
+ [in] *nWidth*  
  Określa szerokość w pikselach, pasek postępu wstążki.  
   
- [in] `nHeight`  
+ [in] *nHeight*  
  Określa wysokość w pikselach, pasek postępu wstążki.  
   
 ##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos  
@@ -158,7 +158,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -185,7 +185,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -197,7 +197,7 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bSet`  
+ [in] *bUstawienie*  
  `TRUE` Aby określić, czy pasek postępu jest w trybie nieskończone; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -213,10 +213,10 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nPos`  
+ [in] *nPos*  
  Określa położenie, do którego jest ustawiona na pasku postępu.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  Określa, czy pasek postępu powinien być narysowany ponownie.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -232,10 +232,10 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nMin`  
+ [in] *nMin*  
  Określa minimalną wartość zakresu.  
   
- [in] `nMax`  
+ [in] *nMax*  
  Określa maksymalną wartość zakresu.  
   
 ### <a name="remarks"></a>Uwagi  

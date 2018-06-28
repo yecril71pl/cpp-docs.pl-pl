@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb1ef84aabed69554ded868bbe9092c3e8b7082f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a94ad813ff72eaed2642e9c78a098b999bf128fa
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370415"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040080"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>Klasa CMFCPreviewCtrlImpl
 Ta klasa implementuje okno, w którym znajduje się w oknie hostów udostępnianych przez powłokę dla podglądu rozbudowanego.  
@@ -136,13 +136,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hWndParent`  
+ *hWndParent*  
  Dojście do okna hosta dostarczone przez powłokę dla podglądu rozbudowanego.  
   
- `prc`  
+ *ChRL*  
  Określa początkowy rozmiar i położenie okna.  
   
- `pContext`  
+ *pContext*  
  Wskaźnik do tworzenia kontekstu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -169,7 +169,7 @@ virtual void DoPaint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia dla malowania.  
 
 
@@ -246,7 +246,7 @@ void SetDocument(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDocument`  
+ *pDocument*  
  Wskaźnik do implementacji dokumentu.  
 
 ## <a name="sethost"></a> CMFCPreviewCtrlImpl::SetHost  
@@ -261,7 +261,7 @@ virtual void SetHost(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hWndParent`  
+ *hWndParent*  
  Dojście do nowego okna nadrzędnego.  
 
 ## <a name="setpreviewvisuals"></a> CMFCPreviewCtrlImpl::SetPreviewVisuals  
@@ -278,13 +278,13 @@ virtual void SetPreviewVisuals(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `clrBack`  
+ *clrBack*  
  Kolor tła okna podglądu.  
   
- `clrText`  
+ *clrText*  
  Kolor tekstu okna podglądu.  
   
- `plf`  
+ *PLF*  
  Czcionka używana do wyświetlania tekstu w okienku podglądu. 
 
 ##  <a name="setrect"></a> CMFCPreviewCtrlImpl::SetRect  
@@ -300,10 +300,10 @@ virtual void SetRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `prc`  
+ *ChRL*  
  Określa nowy rozmiar i położenie formant podglądu.  
   
- `bRedraw`  
+ *bRedraw*  
  Określa, czy formant powinien być narysowany ponownie.  
   
 ### <a name="remarks"></a>Uwagi  

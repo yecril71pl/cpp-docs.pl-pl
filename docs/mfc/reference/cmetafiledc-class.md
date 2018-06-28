@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a588a848e7964a70f47d4cf29a5f5ef2741881d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eaec2b7951b0655a8a47106374c7527dad27bd20
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368157"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039540"
 ---
 # <a name="cmetafiledc-class"></a>Cmetafiledc — klasa
 Implementuje metaplik systemu Windows, który zawiera sekwencję grafiki urządzenia (GDI) interfejsu poleceń, które odtwarzasz można utworzyć odpowiedni obraz lub tekst.  
@@ -64,7 +64,7 @@ class CMetaFileDC : public CDC
   
  Następnie wysłać `CMetaFileDC` obiekt sekwencji `CDC` GDI polecenia przeznaczonych dla niego powtarzania. Tylko tych poleceń GDI tworzące dane wyjściowe, takich jak `MoveTo` i `LineTo`, mogą być używane.  
   
- Po żądanych poleceń zostało wysłane do metaplik, wywołać **Zamknij** funkcji członkowskiej, który zamyka metaplik kontekstach urządzenia i zwraca uchwyt metaplik. Następnie usuwa `CMetaFileDC` obiektu.  
+ Po żądanych poleceń zostało wysłane do metaplik, wywołać `Close` funkcji członkowskiej, który zamyka metaplik kontekstach urządzenia i zwraca uchwyt metaplik. Następnie usuwa `CMetaFileDC` obiektu.  
   
  [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) dojście metaplik można następnie użyć do odtwarzanie metaplik. Metaplik może również używać funkcji systemu Windows takich jak [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480), który kopiuje metaplik na dysku.  
   
@@ -171,16 +171,16 @@ BOOL CreateEnhanced(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDCRef`  
+ *pDCRef*  
  Identyfikuje urządzenie odwołanie na potrzeby rozszerzony metaplik.  
   
- `lpszFileName`  
+ *lpszFileName*  
  Wskazuje ciąg znaków zakończony znakiem null. Określa nazwę pliku rozszerzony metaplik ma zostać utworzony. Jeśli ten parametr ma **NULL**, rozszerzony metaplik jest pamięci na podstawie i jego zawartość utraty, gdy obiekt zostanie zniszczony lub Win32 **DeleteEnhMetaFile** funkcja jest wywoływana.  
   
- `lpBounds`  
+ *lpBounds*  
  Wskazuje [RECT](../../mfc/reference/rect-structure1.md) struktury danych lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który określa wymiary w **HIMETRIC** jednostki (w przyrostach.01 milimetra) obraz ma być przechowywany w rozszerzony metaplik.  
   
- `lpszDescription`  
+ *lpszDescription*  
  Wskazuje ciąg zakończony zerem, który określa nazwę aplikacji, która utworzyła obraz, tytuł obrazu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -189,15 +189,15 @@ BOOL CreateEnhanced(
 ### <a name="remarks"></a>Uwagi  
  Ten kontroler domeny może służyć do przechowywania obrazu niezależnych od urządzenia.  
   
- System Windows używa urządzenia odwołanie określone przez `pDCRef` parametr, aby zarejestrować rozdzielczość i jednostki urządzenia, na którym pierwotnie pojawił się obraz. Jeśli `pDCRef` parametr jest **NULL**, używa bieżące urządzenie wyświetlające odwołania.  
+ System Windows używa urządzenia odwołanie określone przez *pDCRef* parametr, aby zarejestrować rozdzielczość i jednostki urządzenia, na którym pierwotnie pojawił się obraz. Jeśli *pDCRef* parametr jest **NULL**, używa bieżące urządzenie wyświetlające odwołania.  
   
- Po lewej stronie i największe członków `RECT` struktury danych wskazywanego przez `lpBounds` parametru musi być mniejsza niż elementy w prawo i w dół, odpowiednio. Punkty wzdłuż krawędzi prostokąta znajdują się na obrazie. Jeśli `lpBounds` jest **NULL**, graficzny interfejs urządzenia (GDI) oblicza wymiary najmniejszego prostokąta, który można umieścić obraz rysowane przez aplikację. `lpBounds` Podany parametr, jeśli jest to możliwe.  
+ Po lewej stronie i największe członków `RECT` struktury danych wskazywanego przez *lpBounds* parametru musi być mniejsza niż elementy w prawo i w dół, odpowiednio. Punkty wzdłuż krawędzi prostokąta znajdują się na obrazie. Jeśli *lpBounds* jest **NULL**, graficzny interfejs urządzenia (GDI) oblicza wymiary najmniejszego prostokąta, który można umieścić obraz rysowane przez aplikację. *LpBounds* podany parametr, jeśli jest to możliwe.  
   
- Ciąg wskazywana przez `lpszDescription` parametr musi zawierać znak null między nazwę aplikacji i nazwę obrazu i musi kończyć się znakami null — na przykład "XYZ grafiki Editor\0Bald Eagle\0\0," gdzie \0 reprezentuje wartości null znak. Jeśli `lpszDescription` jest **NULL**, Brak odpowiedniego wpisu w nagłówku rozszerzony metaplik.  
+ Ciąg wskazywana przez *lpszDescription* parametr musi zawierać znak null między nazwę aplikacji i nazwę obrazu i musi kończyć się znakami null — na przykład "XYZ grafiki Editor\0Bald Eagle\0\0, "gdzie \0 reprezentuje znak null. Jeśli *lpszDescription* jest **NULL**, Brak odpowiedniego wpisu w nagłówku rozszerzony metaplik.  
   
  Aplikacje do przechowywania obrazu grafiki w rozszerzony metaplik używają DC utworzony przez tę funkcję. Dojście identyfikujący ten kontroler domeny mogą być przekazywane do dowolnej funkcji GDI.  
   
- Po aplikacja przechowuje obrazu w rozszerzony metaplik, będzie możliwe wyświetlenie obraz na dowolnym urządzeniu danych wyjściowych przez wywołanie metody `CDC::PlayMetaFile` funkcji. Podczas wyświetlania obrazu, system Windows używa prostokąt wskazywana przez `lpBounds` parametrów i danych rozwiązania z urządzenia odwołania do umieszczenia i Skaluj obraz. Kontekst urządzenia zwracane przez tę funkcję zawiera te same atrybuty domyślne skojarzone z dowolnego nowego kontrolera domeny.  
+ Po aplikacja przechowuje obrazu w rozszerzony metaplik, będzie możliwe wyświetlenie obraz na dowolnym urządzeniu danych wyjściowych przez wywołanie metody `CDC::PlayMetaFile` funkcji. Podczas wyświetlania obrazu, system Windows używa prostokąt wskazywana przez *lpBounds* parametrów i danych rozwiązania z urządzenia odwołania do umieszczenia i Skaluj obraz. Kontekst urządzenia zwracane przez tę funkcję zawiera te same atrybuty domyślne skojarzone z dowolnego nowego kontrolera domeny.  
   
  Aplikacje muszą używać środowiska Win32 **GetWinMetaFileBits** funkcji konwersji do formatu Windows metafile starsze rozszerzony metaplik.  
   

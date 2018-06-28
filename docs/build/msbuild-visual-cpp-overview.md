@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae6e6d826f4bc1e8c9ab6cc28686e4ad1e6e3b02
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe3499cdd8f9a9a1cfb91a45e9f039e1b8be2e76
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379266"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039092"
 ---
 # <a name="msbuild-visual-c-overview"></a>Informacje o MSBuild (Visual C++)  
   
@@ -126,7 +126,7 @@ Brak setki obiektów docelowych w pliki obsługi programu Visual C++. Jednak wi�
   
 W poniższej tabeli wymieniono kilka przydatne cele zorientowane na użytkownika.  
   
-|docelowy|Opis|  
+|Docelowy|Opis|  
 |------------|-----------------|  
 |BscMake|Wykonuje narzędzie przeglądać informacje o konserwacji narzędzie Microsoft bscmake.exe.|  
 |Kompilacja|Kompiluje projekt.<br /><br /> Jest to domyślny obiekt docelowy dla projektu.|  
@@ -139,7 +139,10 @@ W poniższej tabeli wymieniono kilka przydatne cele zorientowane na użytkownika
 |Skompiluj ponownie|Czyści a potem kompiluje projektu.|  
 |ResourceCompile|Wykonuje narzędzia kompilatora zasobów systemu Windows firmy Microsoft rc.exe.|  
 |Xdcmake —|Wykonuje narzędzie dokumentacji XML xdcmake.exe.|  
-|XSD|Wykonuje narzędzie definicji schematu XML xsd.exe.|  
+|XSD|Wykonuje narzędzie definicji schematu XML xsd.exe. *Zobacz uwagi poniżej.*|  
+
+> [!NOTE] 
+> W programie Visual Studio 2017 r, C++ projektu obsługę **xsd** plików jest przestarzały. Można nadal używać **Microsoft.VisualC.CppCodeProvider** przez dodanie **CppCodeProvider.dll** ręcznie do pamięci podręcznej GAC.
   
 ## <a name="see-also"></a>Zobacz też  
   

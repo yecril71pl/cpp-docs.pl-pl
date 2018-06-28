@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb52739977b641cd5d52f018efcd30a51ecf1e32
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fec20d8bb960d48392f2d174dab9ee6497738c80
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373136"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039605"
 ---
 # <a name="coledroptarget-class"></a>Klasa COleDropTarget
 Udostępnia mechanizm komunikacji między okna i bibliotek OLE.  
@@ -110,20 +110,20 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Wprowadza punktów do okna kursora.  
   
- `pDataObject`  
+ *Obiekt pDataObject*  
  Wskazuje na obiekt danych zawierające dane, które można było porzucić.  
   
- `dwKeyState`  
+ *dwKeyState*  
  Zawiera stan klawisze modyfikujące. To jest kombinacją dowolną liczbę następujących: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, i **MK_RBUTTON**.  
   
- `point`  
+ *Punkt*  
  Zawiera bieżącą lokalizację kursora we współrzędnych klienta.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wpływ, jaki sytuacji, gdy spadek podjęto w lokalizacji określonej przez `point`. Można co najmniej jeden z następujących czynności:  
+ Wpływ, jaki sytuacji, gdy spadek podjęto w lokalizacji określonej przez *punktu*. Można co najmniej jeden z następujących czynności:  
   
 - `DROPEFFECT_NONE` Spadek będzie niemożliwe.  
   
@@ -148,7 +148,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Opuszcza punktów do okna kursora.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -168,20 +168,20 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Punkty do okna, nad którym znajduje się kursor.  
   
- `pDataObject`  
+ *Obiekt pDataObject*  
  Wskazuje na obiekt danych, który zawiera dane, które ma być przerwane.  
   
- `dwKeyState`  
+ *dwKeyState*  
  Zawiera stan klawisze modyfikujące. To jest kombinacją dowolną liczbę następujących: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, i **MK_RBUTTON**.  
   
- `point`  
+ *Punkt*  
  Zawiera bieżącą lokalizację kursora we współrzędnych klienta.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wpływ, jaki sytuacji, gdy spadek podjęto w lokalizacji określonej przez `point`. Można co najmniej jeden z następujących czynności:  
+ Wpływ, jaki sytuacji, gdy spadek podjęto w lokalizacji określonej przez *punktu*. Można co najmniej jeden z następujących czynności:  
   
 - `DROPEFFECT_NONE` Spadek będzie niemożliwe.  
   
@@ -202,7 +202,7 @@ virtual DROPEFFECT OnDragOver(
  [!code-cpp[NVC_MFCOleContainer#21](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
   
 ##  <a name="ondragscroll"></a>  COleDropTarget::OnDragScroll  
- Metoda wywoływana przez platformę przed wywołaniem [OnDragEnter](#ondragenter) lub [OnDragOver](#ondragover) ustalenie, czy `point` znajduje się w regionie przewijania.  
+ Metoda wywoływana przez platformę przed wywołaniem [OnDragEnter](#ondragenter) lub [OnDragOver](#ondragover) ustalenie, czy *punktu* znajduje się w regionie przewijania.  
   
 ```  
 virtual DROPEFFECT OnDragScroll(
@@ -212,17 +212,17 @@ virtual DROPEFFECT OnDragScroll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Punkty do okna, gdy kursor jest aktualnie za pośrednictwem.  
   
- `dwKeyState`  
+ *dwKeyState*  
  Zawiera stan klawisze modyfikujące. To jest kombinacją dowolną liczbę następujących: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, i **MK_RBUTTON**.  
   
- `point`  
+ *Punkt*  
  Zawiera lokalizację kursor w pikselach, względem ekranu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wpływ, jaki sytuacji, gdy spadek podjęto w lokalizacji określonej przez `point`. Można co najmniej jeden z następujących czynności:  
+ Wpływ, jaki sytuacji, gdy spadek podjęto w lokalizacji określonej przez *punktu*. Można co najmniej jeden z następujących czynności:  
   
 - `DROPEFFECT_NONE` Spadek będzie niemożliwe.  
   
@@ -249,13 +249,13 @@ virtual BOOL OnDrop(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Punkty do okna, gdy kursor jest aktualnie za pośrednictwem.  
   
- `pDataObject`  
+ *Obiekt pDataObject*  
  Wskazuje na obiekt danych, który zawiera dane, które ma być przerwane.  
   
- `dropEffect`  
+ *dropEffect*  
  Wpływ, jaki użytkownik wybrał dla operacji usuwania. Można co najmniej jeden z następujących czynności:  
   
 - `DROPEFFECT_COPY` Czy można wykonać operacji kopiowania.  
@@ -264,7 +264,7 @@ virtual BOOL OnDrop(
   
 - `DROPEFFECT_LINK` Czy można ustanowić łącze z porzuconych danych do oryginalnych danych.  
   
- `point`  
+ *Punkt*  
  Zawiera lokalizację kursor w pikselach, względem ekranu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -290,23 +290,23 @@ virtual DROPEFFECT OnDropEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Punkty do okna, gdy kursor jest aktualnie za pośrednictwem.  
   
- `pDataObject`  
+ *Obiekt pDataObject*  
  Wskazuje na obiekt danych, który zawiera dane, które ma być przerwane.  
   
- `dropDefault`  
+ *dropDefault*  
  Wpływ, jaki użytkownik wybrał dla operacji upuszczania domyślne na podstawie bieżącego stanu klucza. Można ją `DROPEFFECT_NONE`. Efekty upuszczania omówiono w sekcji uwag.  
   
- `dropList`  
+ *listy rozwijanej*  
  Lista efekty upuszczania, które obsługuje miejsca źródłowego. Wartości efekt listy można łączyć, używając wartości bitowe lub ( **&#124;**) operacji. Efekty upuszczania omówiono w sekcji uwag.  
   
- `point`  
+ *Punkt*  
  Zawiera lokalizację kursor w pikselach, względem ekranu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Efekt upuszczania, który jest wynikiem próby porzucenia w lokalizacji określonej przez `point`. Efekty upuszczania omówiono w sekcji uwag.  
+ Efekt upuszczania, który jest wynikiem próby porzucenia w lokalizacji określonej przez *punktu*. Efekty upuszczania omówiono w sekcji uwag.  
   
 ### <a name="remarks"></a>Uwagi  
  Struktura wywołuje najpierw tej funkcji. Jeśli nie obsługuje usuwania, struktura następnie wywołuje [OnDrop](#ondrop). Zazwyczaj spowoduje zastąpienie [OnDropEx](../../mfc/reference/cview-class.md#ondropex) w klasie widoku do obsługi prawego przycisku myszy przeciągania i upuszczania. Zazwyczaj klasa widoku [OnDrop](../../mfc/reference/cview-class.md#ondrop) służy do obsługi w przypadku obsługę prostych operacji przeciągania i upuszczania.  
@@ -335,7 +335,7 @@ BOOL Register(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Punkty do okna, które ma zostać zarejestrowany jako miejsca docelowego.  
   
 ### <a name="return-value"></a>Wartość zwracana  

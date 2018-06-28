@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 496c6905276e789a72c55db1835187b0d4ab342a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b18eef5b828577f6d77846a5e9e231dcf828332
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369154"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040730"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>Klasa CMFCBaseVisualManager
 Warstwa między menedżerami visual pochodnej i interfejs API kompozycji systemu Windows.  
@@ -136,31 +136,31 @@ virtual BOOL DrawCheckBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia  
   
- [in] `rect`  
+ [in] *rect*  
  Prostokąt ograniczający pole wyboru.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  Określa, czy pole wyboru zostanie wyróżniona.  
   
- [in] `nState`  
+ [in] *nInformacje*  
  0 nie jest zaznaczona, 1 dla zaznaczonych normalny  
   
  2-mieszane normalny.  
   
- [in] `bEnabled`  
+ [in] *bWłączony*  
  Określa, czy pole wyboru jest włączone.  
   
- [in] `bPressed`  
+ [in] *bPressed*  
  Określa, czy pole wyboru zostanie naciśnięty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `TRUE` Jeśli włączono interfejs API motywu; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
- Wartości `nState` odpowiadają następujące style pola wyboru.  
+ Wartości *nInformacje* odpowiadają następujące style pola wyboru.  
   
 |nInformacje|Styl pola wyboru|  
 |------------|---------------------|  
@@ -181,19 +181,19 @@ virtual BOOL DrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- [in] `rect`  
+ [in] *rect*  
  Prostokąt ograniczający obramowanie pola kombi.  
   
- [in] `bDisabled`  
+ [in] *bWyłączone*  
  Określa, czy obramowanie pola kombi jest wyłączone.  
   
- [in] `bIsDropped`  
+ [in] *bIsDropped*  
  Określa, czy jest rozwijana obramowanie pola kombi.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Określa, czy zostanie wyróżniona obramowanie pola kombi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -215,11 +215,11 @@ virtual BOOL DrawComboDropButton(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `pDC`|Wskaźnik do kontekstu urządzenia.|  
-|[in] `rect`|Prostokąt ograniczający przycisku rozwijanego pola kombi.|  
-|[in] `bDisabled`|Określa, czy przycisk listy rozwijanej pola kombi jest wyłączone.|  
-|[in] `bIsDropped`|Określa, czy jest rozwijana przycisku rozwijanego pola kombi.|  
-|[in] `bIsHighlighted`|Określa, czy zostanie wyróżniona przycisku rozwijanego pola kombi.|  
+|[in] *podstawowego kontrolera domeny*|Wskaźnik do kontekstu urządzenia.|  
+|[in] *rect*|Prostokąt ograniczający przycisku rozwijanego pola kombi.|  
+|[in] *bWyłączone*|Określa, czy przycisk listy rozwijanej pola kombi jest wyłączone.|  
+|[in] *bIsDropped*|Określa, czy jest rozwijana przycisku rozwijanego pola kombi.|  
+|[in] *bIsHighlighted*|Określa, czy zostanie wyróżniona przycisku rozwijanego pola kombi.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `TRUE` Jeśli włączono interfejs API motywu; w przeciwnym razie `FALSE`.  
@@ -236,17 +236,17 @@ virtual BOOL DrawPushButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- [in] `rect`  
+ [in] *rect*  
  Prostokąt ograniczający przycisku polecenia.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Wskaźnik do [klasy CMFCButton](../../mfc/reference/cmfcbutton-class.md) obiektu do rysowania.  
   
- [in] `uiState`  
- Ignorowane. Stan jest pobierana z `pButton`.  
+ [in] *uiState*  
+ Ignorowane. Stan jest pobierana z *pButton*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `TRUE` Jeśli włączono interfejs API motywu; w przeciwnym razie `FALSE`.  
@@ -265,22 +265,22 @@ virtual BOOL DrawRadioButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- [in] `rect`  
+ [in] *rect*  
  Prostokąt ograniczający przycisku radiowego.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  Określa, czy przycisk radiowy zostanie wyróżniona.  
   
- [in] `bChecked`  
+ [in] *bChecked*  
  Określa, czy przycisk radiowy jest zaznaczony.  
   
- [in] `bEnabled`  
+ [in] *bWłączony*  
  Określa, czy przycisk radiowy jest włączone.  
   
- [in] `bPressed`  
+ [in] *bPressed*  
  Określa, czy zostanie naciśnięty przycisk radiowy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -303,31 +303,31 @@ virtual BOOL DrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- [in] `pStatusBar`  
+ [in] *pStatusBar*  
  Wskaźnik do paska stanu. Ta wartość jest ignorowana.  
   
- [in] `rectProgress`  
- Prostokąt ograniczający pasek postępu w `pDC` współrzędnych.  
+ [in] *rectProgress*  
+ Prostokąt ograniczający pasek postępu w *kontrolera pDC* współrzędnych.  
   
- [in] `nProgressTotal`  
+ [in] *nProgressTotal*  
  Wartość całkowita postępu.  
   
- [in] `nProgressCurr`  
+ [in] *nProgressCurr*  
  Bieżąca wartość postępu.  
   
- [in] `clrBar`  
+ [in] *clrBar*  
  Kolor początkowy. `CMFCBaseVisualManager` ignoruje to. Klasy pochodne może być używany do gradientu koloru.  
   
- [in] `clrProgressBarDest`  
+ [in] *clrProgressBarDest*  
  Kolor końcowy. `CMFCBaseVisualManager` ignoruje to. Klasy pochodne może być używany do gradientu koloru.  
   
- [in] `clrProgressText`  
+ [in] *clrProgressText*  
  Kolor tekstu w toku. `CMFCBaseVisualManager` ignoruje to. Kolor tekstu jest definiowana za pomocą `afxGlobalData.clrBtnText`.  
   
- [in] `bProgressText`  
+ [in] *bProgressText*  
  Określa, czy do wyświetlania tekstu w toku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -344,13 +344,13 @@ virtual void FillReBarPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Wskaźnik do tła, których ma być rysowany okienka.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  Prostokąt ograniczający do wypełnienia obszaru.  
   
 ### <a name="return-value"></a>Wartość zwracana  

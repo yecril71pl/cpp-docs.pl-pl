@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4df2584bd9b74640266d8ddf87087e2820deaac8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3b5060c850a1fcdba089b732d019f958f2e7410
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376710"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038558"
 ---
 # <a name="coledatasource-class"></a>COleDataSource — klasa
 Działa jako pamięci podręcznej, w którym aplikacja umieszcza dane, które będzie oferować podczas danych transfer operacji, takich jak Schowek lub operacji przeciągania i upuszczania.  
@@ -117,14 +117,14 @@ void CacheData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cfFormat`  
+ *cfFormat*  
  Format Schowka, w którym ma być oferowana danych. Ten parametr może być jedną z wstępnie zdefiniowane formaty Schowka lub wartość zwracana przez natywnego Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkcji.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Wskazuje [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struktury zawierającej dane w formacie określonym.  
   
- `lpFormatEtc`  
- Wskazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury opisujące format, w którym ma być oferowana danych. Podaj wartość dla tego parametru, jeśli chcesz określić format dodatkowych informacji poza określonej przez format schowka `cfFormat`. Jeśli jest **NULL**, zostaną użyte wartości domyślne dla innych pól **FORMATETC** struktury.  
+ *lpFormatEtc*  
+ Wskazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury opisujące format, w którym ma być oferowana danych. Podaj wartość dla tego parametru, jeśli chcesz określić format dodatkowych informacji poza określonej przez format schowka *cfFormat*. Jeśli jest **NULL**, zostaną użyte wartości domyślne dla innych pól **FORMATETC** struktury.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy podać danych, ponieważ ta funkcja udostępnia go za pomocą bezpośredniego renderowania. Dane są buforowane, dopóki nie potrzebne.  
@@ -150,14 +150,14 @@ void CacheGlobalData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cfFormat`  
+ *cfFormat*  
  Format Schowka, w którym ma być oferowana danych. Ten parametr może być jedną z wstępnie zdefiniowane formaty Schowka lub wartość zwracana przez natywnego Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkcji.  
   
  *wartości hGlobal*  
  Dojście do bloku pamięci globalnej zawierające dane w formacie określonym.  
   
- `lpFormatEtc`  
- Wskazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury opisujące format, w którym ma być oferowana danych. Podaj wartość dla tego parametru, jeśli chcesz określić format dodatkowych informacji poza określonej przez format schowka `cfFormat`. Jeśli jest **NULL**, zostaną użyte wartości domyślne dla innych pól **FORMATETC** struktury.  
+ *lpFormatEtc*  
+ Wskazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury opisujące format, w którym ma być oferowana danych. Podaj wartość dla tego parametru, jeśli chcesz określić format dodatkowych informacji poza określonej przez format schowka *cfFormat*. Jeśli jest **NULL**, zostaną użyte wartości domyślne dla innych pól **FORMATETC** struktury.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja udostępnia dane przy użyciu renderowania bezpośredniego, należy podać danych podczas wywoływania funkcji; dane są buforowane, dopóki nie potrzebne. Użyj `CacheData` funkcji członkowskiej, jeśli są dostarczanie dużej ilości danych lub jeśli wymagają średniej lub magazynem strukturalnym.  
@@ -185,11 +185,11 @@ void DelayRenderData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cfFormat`  
+ *cfFormat*  
  Format Schowka, w którym ma być oferowana danych. Ten parametr może być jedną z wstępnie zdefiniowane formaty Schowka lub wartość zwracana przez natywnego Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkcji.  
   
- `lpFormatEtc`  
- Wskazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury opisujące format, w którym ma być oferowana danych. Podaj wartość dla tego parametru, jeśli chcesz określić format dodatkowych informacji poza określonej przez format schowka `cfFormat`. Jeśli jest **NULL**, zostaną użyte wartości domyślne dla innych pól **FORMATETC** struktury.  
+ *lpFormatEtc*  
+ Wskazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury opisujące format, w którym ma być oferowana danych. Podaj wartość dla tego parametru, jeśli chcesz określić format dodatkowych informacji poza określonej przez format schowka *cfFormat*. Jeśli jest **NULL**, zostaną użyte wartości domyślne dla innych pól **FORMATETC** struktury.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja udostępnia dane przy użyciu renderowania opóźnione, więc dane nie są dostarczane bezpośrednio. [OnRenderData](#onrenderdata) lub [OnRenderGlobalData](#onrenderglobaldata) funkcja członkowska jest wywoływana w celu żądania danych.  
@@ -212,11 +212,11 @@ void DelayRenderFileData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cfFormat`  
+ *cfFormat*  
  Format Schowka, w którym ma być oferowana danych. Ten parametr może być jedną z wstępnie zdefiniowane formaty Schowka lub wartość zwracana przez natywnego Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkcji.  
   
- `lpFormatEtc`  
- Wskazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury opisujące format, w którym ma być oferowana danych. Podaj wartość dla tego parametru, jeśli chcesz określić format dodatkowych informacji poza określonej przez format schowka `cfFormat`. Jeśli jest **NULL**, zostaną użyte wartości domyślne dla innych pól **FORMATETC** struktury.  
+ *lpFormatEtc*  
+ Wskazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury opisujące format, w którym ma być oferowana danych. Podaj wartość dla tego parametru, jeśli chcesz określić format dodatkowych informacji poza określonej przez format schowka *cfFormat*. Jeśli jest **NULL**, zostaną użyte wartości domyślne dla innych pól **FORMATETC** struktury.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja udostępnia dane przy użyciu renderowania opóźnione, więc dane nie są dostarczane bezpośrednio. [OnRenderFileData](#onrenderfiledata) funkcja członkowska jest wywoływana w celu żądania danych.  
@@ -239,11 +239,11 @@ void DelaySetData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cfFormat`  
+ *cfFormat*  
  Format Schowka, w którym ma być umieszczone dane. Ten parametr może być jedną z wstępnie zdefiniowane formaty Schowka lub wartość zwracana przez natywnego Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) funkcji.  
   
- `lpFormatEtc`  
- Wskazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury opisujące format, w którym ma zostać zastąpiony danych. Podaj wartość dla tego parametru, jeśli chcesz określić format dodatkowych informacji poza określonej przez format schowka `cfFormat`. Jeśli jest **NULL**, zostaną użyte wartości domyślne dla innych pól **FORMATETC** struktury.  
+ *lpFormatEtc*  
+ Wskazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury opisujące format, w którym ma zostać zastąpiony danych. Podaj wartość dla tego parametru, jeśli chcesz określić format dodatkowych informacji poza określonej przez format schowka *cfFormat*. Jeśli jest **NULL**, zostaną użyte wartości domyślne dla innych pól **FORMATETC** struktury.  
   
 ### <a name="remarks"></a>Uwagi  
  [OnSetData](#onsetdata) wywoływane przez platformę w takim przypadku. Tylko jest używana, gdy w ramach zwraca źródła danych z [COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). Jeśli `DelaySetData` nie jest wywoływany z `OnSetData` nigdy nie zostanie wywołana funkcja. `DelaySetData` powinna być wywoływana dla każdej Schowka lub **FORMATETC** format obsługiwanych.  
@@ -263,7 +263,7 @@ DROPEFFECT DoDragDrop(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwEffects`  
+ *dwEffects*  
  Przeciągnij i upuść operacje, które są dozwolone w tym źródle danych. Może to być jeden lub więcej z następujących czynności:  
   
 - `DROPEFFECT_COPY` Można wykonać operacji kopiowania.  
@@ -274,7 +274,7 @@ DROPEFFECT DoDragDrop(
   
 - `DROPEFFECT_SCROLL` Wskazuje, że może wystąpić przewijania operacji przeciągania.  
   
- `lpRectStartDrag`  
+ *lpRectStartDrag*  
  Wskaźnik do prostokąt, który określa, gdzie faktycznie uruchamia przeciągania. Aby uzyskać więcej informacji zobacz następujące sekcji uwag.  
   
  *pDropSource*  
@@ -284,7 +284,7 @@ DROPEFFECT DoDragDrop(
  Efekt wygenerowanych przez operację przeciągania i upuszczania; w przeciwnym razie `DROPEFFECT_NONE` Jeśli nigdy nie rozpocznie się wykonywanie operacji, ponieważ użytkownik wydane przycisk myszy przed opuszczeniem podany prostokąt.  
   
 ### <a name="remarks"></a>Uwagi  
- Operacja przeciągania i upuszczania nie rozpoczyna się natychmiast. Oczekuje, aż wskaźnik myszy opuści prostokąt określony przez `lpRectStartDrag` lub dopóki nie upłynie określoną liczbę milisekund. Jeśli `lpRectStartDrag` jest **NULL**, rozmiar prostokąta jest jeden piksel.  
+ Operacja przeciągania i upuszczania nie rozpoczyna się natychmiast. Oczekuje, aż wskaźnik myszy opuści prostokąt określony przez *lpRectStartDrag* lub dopóki nie upłynie określoną liczbę milisekund. Jeśli *lpRectStartDrag* jest **NULL**, rozmiar prostokąta jest jeden piksel.  
   
  Czas opóźnienia jest określany przez ustawienie klucza rejestru. Można zmienić czas opóźnienia, wywołując [CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) lub [CWinApp::WriteProfileInt](../../mfc/reference/cwinapp-class.md#writeprofileint). Jeśli nie określisz czas opóźnienia, jest używana wartość domyślna 200 ms. Czas opóźnienia przeciągania są przechowywane w następujący sposób:  
   
@@ -340,10 +340,10 @@ virtual BOOL OnRenderData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Wskazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury, określając format, w którym jest wymagane informacje.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Wskazuje [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struktury, w którym ma zostać zwrócone dane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -352,7 +352,7 @@ virtual BOOL OnRenderData(
 ### <a name="remarks"></a>Uwagi  
  Określony format jest jednym wcześniej umieszczone w `COleDataSource` przy użyciu [DelayRenderData](#delayrenderdata) lub [DelayRenderFileData](#delayrenderfiledata) funkcji członkowskiej do renderowania opóźnione. Domyślna implementacja tej funkcji będzie wywoływać [OnRenderFileData](#onrenderfiledata) lub [OnRenderGlobalData](#onrenderglobaldata) Jeśli podany nośnik jest odpowiednio pliku lub pamięci. Jeśli żadna z tych formatów są dostarczane, domyślna implementacja będzie zwracać 0 i nic nie rób. Aby uzyskać więcej informacji na opóźnione renderowanie, ponieważ obsługiwane przez MFC, zobacz artykuł [obiekty danych i źródła danych: manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Jeśli `lpStgMedium` ->  *tymed* jest **TYMED_NULL**, **STGMEDIUM** powinny być przydzielone i wypełnione określony przez *lpFormatEtc -> tymed*. Jeśli nie jest **TYMED_NULL**, **STGMEDIUM** powinno być wypełnione w miejscu z danymi.  
+ Jeśli *lpStgMedium*-> *tymed* jest **TYMED_NULL**, **STGMEDIUM** powinny być przydzielone i wypełnione określony przez *lpFormatEtc -> tymed*. Jeśli nie jest **TYMED_NULL**, **STGMEDIUM** powinno być wypełnione w miejscu z danymi.  
   
  Jest to zaawansowane możliwym do zastąpienia. Należy przesłonić tę funkcję, aby przekazać dane w formacie żądanego i średnia liczba godzin. W zależności od danych warto override jednego z innych wersji tej funkcji. Jeśli dane są małe i stały rozmiar, Zastąp `OnRenderGlobalData`. Jeśli znajduje się w pliku danych lub o rozmiarze zmiennej, Zastąp `OnRenderFileData`.  
   
@@ -368,10 +368,10 @@ virtual BOOL OnRenderFileData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Wskazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury, określając format, w którym jest wymagane informacje.  
   
- `pFile`  
+ *pFile*  
  Wskazuje [cfile —](../../mfc/reference/cfile-class.md) obiektu, w którym ma być renderowany danych.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -394,10 +394,10 @@ virtual BOOL OnRenderGlobalData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Wskazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury, określając format, w którym jest wymagane informacje.  
   
- `phGlobal`  
+ *phGlobal*  
  Wskazuje dojścia do globalnej pamięci, w którym ma zostać zwrócone dane. Jeśli jeden nie jeszcze przydzielono, ten parametr może być **NULL**.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -406,7 +406,7 @@ virtual BOOL OnRenderGlobalData(
 ### <a name="remarks"></a>Uwagi  
  Określony format jest jednym wcześniej umieszczone w `COleDataSource` przy użyciu [DelayRenderData](#delayrenderdata) funkcji członkowskiej do renderowania opóźnione. Domyślna implementacja tej funkcji po prostu zwraca **FALSE**.  
   
- Jeśli `phGlobal` jest **NULL**, następnie nowy `HGLOBAL` powinny być przydzielone i zwracany w `phGlobal`. W przeciwnym razie `HGLOBAL` określonego przez `phGlobal` powinno być wypełnione z danymi. Ilość danych umieszczone w `HGLOBAL` nie może przekraczać bieżący rozmiar bloku pamięci. Ponadto nie można przydzielić bloku, aby większy rozmiar.  
+ Jeśli *phGlobal* jest **NULL**, następnie nowy `HGLOBAL` powinny być przydzielone i zwracany w *phGlobal*. W przeciwnym razie `HGLOBAL` określonego przez *phGlobal* powinno być wypełnione z danymi. Ilość danych umieszczone w `HGLOBAL` nie może przekraczać bieżący rozmiar bloku pamięci. Ponadto nie można przydzielić bloku, aby większy rozmiar.  
   
  Jest to zaawansowane możliwym do zastąpienia. Należy przesłonić tę funkcję, aby przekazać dane w formacie żądanego i średnia liczba godzin. W zależności od danych warto override jednego z innych wersji tej funkcji. Jeśli chcesz obsługiwać wiele nośników, Zastąp [OnRenderData](#onrenderdata). Jeśli znajduje się w pliku danych lub o rozmiarze zmiennej, Zastąp [OnRenderFileData](#onrenderfiledata). Aby uzyskać więcej informacji na opóźnione renderowanie, ponieważ obsługiwane przez MFC, zobacz artykuł [obiekty danych i źródła danych: manipulowanie](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
@@ -423,14 +423,14 @@ virtual BOOL OnSetData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Wskazuje [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) struktury, określając format, w którym dane są zastępowane.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Wskazuje [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) struktury zawierającej dane, które zastąpi bieżącą zawartość `COleDataSource` obiektu.  
   
- `bRelease`  
- Wskazuje, kto jest właścicielem nośnik po zakończeniu wywołania funkcji. Obiekt wywołujący decyduje, kto jest odpowiedzialny za zwolnienie zasobów przydzielonych imieniu nośnika magazynowania. Obiekt wywołujący robi to przez ustawienie `bRelease`. Jeśli `bRelease` jest różna od zera, źródła danych przejmuje, zwalnianie nośnik, po zakończeniu używania go. Gdy `bRelease` ma wartość 0, wywołujący zachowuje własność i źródła danych można użyć nośnik tylko na czas trwania wywołania.  
+ *bRelease*  
+ Wskazuje, kto jest właścicielem nośnik po zakończeniu wywołania funkcji. Obiekt wywołujący decyduje, kto jest odpowiedzialny za zwolnienie zasobów przydzielonych imieniu nośnika magazynowania. Obiekt wywołujący robi to przez ustawienie *bRelease*. Jeśli *bRelease* jest różna od zera, źródła danych przejmuje, zwalnianie nośnik, po zakończeniu używania go. Gdy *bRelease* ma wartość 0, wywołujący zachowuje własność i źródła danych można użyć nośnik tylko na czas trwania wywołania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  

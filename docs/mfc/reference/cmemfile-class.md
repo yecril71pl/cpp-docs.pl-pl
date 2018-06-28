@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81421c99623fd3ab0abde20b479ec1ba91c3f936
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e13c3b609a53e8c885e04530995a11218bf2704d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368364"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040067"
 ---
 # <a name="cmemfile-class"></a>Klasa CMemFile
 [Cfile —](../../mfc/reference/cfile-class.md)-klasy, który obsługuje pliki pamięci.  
@@ -108,7 +108,7 @@ virtual BYTE* Alloc(SIZE_T nBytes);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nBytes`  
+ *nBytes*  
  Liczba bajtów pamięci do przydzielenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -130,23 +130,23 @@ void Attach(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpBuffer`  
+ *Sprawdzanie*  
  Wskaźnik do buforu, który jest dołączony do `CMemFile`.  
   
- `nBufferSize`  
+ *nBufferSize*  
  Liczba całkowita określająca rozmiar bufora w bajtach.  
   
- `nGrowBytes`  
+ *nGrowBytes*  
  Przyrost alokacji pamięci w bajtach.  
   
 ### <a name="remarks"></a>Uwagi  
  Powoduje to `CMemFile` do użycia jako plik pamięci bloku pamięci.  
   
- Jeśli `nGrowBytes` ma wartość 0, `CMemFile` ustawi długość pliku `nBufferSize`. Oznacza to, że dane w bloku pamięci przed został dołączony do `CMemFile` będzie służyć jako plik. Nie można zwiększyć pamięci plików utworzonych w ten sposób.  
+ Jeśli *nGrowBytes* ma wartość 0, `CMemFile` ustawi długość pliku *nBufferSize*. Oznacza to, że dane w bloku pamięci przed został dołączony do `CMemFile` będzie służyć jako plik. Nie można zwiększyć pamięci plików utworzonych w ten sposób.  
   
- Ponieważ plik nie może być parametrach wymaganych, należy uważać, aby nie spowodować `CMemFile` prób powiększania pliku. Na przykład nie wywołuj `CMemFile` zastąpień o [CFile:Write](../../mfc/reference/cfile-class.md#write) do zapisu poza końcem lub Nie wywołuj [CFile:SetLength](../../mfc/reference/cfile-class.md#setlength) o długości ponad `nBufferSize`.  
+ Ponieważ plik nie może być parametrach wymaganych, należy uważać, aby nie spowodować `CMemFile` prób powiększania pliku. Na przykład nie wywołuj `CMemFile` zastąpień o [CFile:Write](../../mfc/reference/cfile-class.md#write) do zapisu poza końcem lub Nie wywołuj [CFile:SetLength](../../mfc/reference/cfile-class.md#setlength) o długości ponad *nBufferSize*.  
   
- Jeśli `nGrowBytes` jest większa niż 0, `CMemFile` zignoruje zawartości bloku pamięci jest podłączona. Będzie konieczne zapisanie zawartości pliku pamięci od podstaw przy użyciu `CMemFile` zastąpienie `CFile::Write`. Próba zapisu poza końcem pliku lub rozszerzenie pliku przez wywołanie metody `CMemFile` zastąpienie `CFile::SetLength`, `CMemFile` wzrośnie alokacji pamięci w przyrostach `nGrowBytes`. Rośnie alokacji pamięci zakończy się niepowodzeniem, jeśli blok pamięci, należy przekazać do **Attach** nie zostało przydzielone za pomocą metody, które są zgodne z [alokacji](#alloc). Aby był zgodny z domyślną implementację elementu `Alloc`, należy przydzielić pamięci za pomocą funkcji biblioteki wykonawczej [— funkcja malloc](../../c-runtime-library/reference/malloc.md) lub [calloc —](../../c-runtime-library/reference/calloc.md).  
+ Jeśli *nGrowBytes* jest większa niż 0, `CMemFile` zignoruje zawartości bloku pamięci jest podłączona. Będzie konieczne zapisanie zawartości pliku pamięci od podstaw przy użyciu `CMemFile` zastąpienie `CFile::Write`. Próba zapisu poza końcem pliku lub rozszerzenie pliku przez wywołanie metody `CMemFile` zastąpienie `CFile::SetLength`, `CMemFile` wzrośnie alokacji pamięci w przyrostach *nGrowBytes*. Rośnie alokacji pamięci zakończy się niepowodzeniem, jeśli blok pamięci, należy przekazać do `Attach` nie zostało przydzielone za pomocą metody, które są zgodne z [alokacji](#alloc). Aby był zgodny z domyślną implementację elementu `Alloc`, należy przydzielić pamięci za pomocą funkcji biblioteki wykonawczej [— funkcja malloc](../../c-runtime-library/reference/malloc.md) lub [calloc —](../../c-runtime-library/reference/calloc.md).  
   
 ##  <a name="cmemfile"></a>  CMemFile::CMemFile  
  Pierwszy przeciążenia otwiera plik pusty pamięci.  
@@ -162,19 +162,19 @@ CMemFile(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nGrowBytes`  
+ *nGrowBytes*  
  Przyrost alokacji pamięci w bajtach.  
   
  *lpBuffe*r  
- Wskaźnik do buforu, który odbiera informacje o rozmiarze `nBufferSize`.  
+ Wskaźnik do buforu, który odbiera informacje o rozmiarze *nBufferSize*.  
   
- `nBufferSize`  
+ *nBufferSize*  
  Liczba całkowita określająca rozmiar bufora pliku w bajtach.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy pamiętać, że plik jest otwarty przez konstruktora i że nie należy wywołania [CFile::Open](../../mfc/reference/cfile-class.md#open).  
   
- Przeciążenie drugi działa, takie same tak, jakby używane pierwszy Konstruktor i natychmiast o nazwie [Attach](#attach) z takimi samymi parametrami. Zobacz **Attach** szczegółowe informacje.  
+ Przeciążenie drugi działa, takie same tak, jakby używane pierwszy Konstruktor i natychmiast o nazwie [Attach](#attach) z takimi samymi parametrami. Zobacz `Attach` szczegółowe informacje.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCFiles#36](../../atl-mfc-shared/reference/codesnippet/cpp/cmemfile-class_1.cpp)]  
@@ -190,7 +190,7 @@ BYTE* Detach();
  Wskaźnik do bloku pamięci, która zawiera zawartość pliku pamięci.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie tej funkcji również zamyka `CMemFile`. Można ponownie dołączyć bloku pamięci `CMemFile` przez wywołanie metody [Attach](#attach). Jeśli chcesz ponownie dołączyć plik i korzystanie z danych, należy wywołać [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) uzyskać długość pliku przed wywołaniem **Detach**. Należy pamiętać, że po dołączeniu bloku pamięci `CMemFile` , aby mogli używać swoich danych ( `nGrowBytes` == 0), a następnie nie będzie można powiększać pliku pamięci.  
+ Wywołanie tej funkcji również zamyka `CMemFile`. Można ponownie dołączyć bloku pamięci `CMemFile` przez wywołanie metody [Attach](#attach). Jeśli chcesz ponownie dołączyć plik i korzystanie z danych, należy wywołać [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) uzyskać długość pliku przed wywołaniem `Detach`. Należy pamiętać, że po dołączeniu bloku pamięci `CMemFile` , aby mogli używać swoich danych ( `nGrowBytes` == 0), a następnie nie będzie można powiększać pliku pamięci.  
   
 ##  <a name="free"></a>  CMemFile::Free  
  Ta funkcja jest wywoływana `CMemFile` funkcji elementów członkowskich.  
@@ -200,7 +200,7 @@ virtual void Free(BYTE* lpMem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpMem`  
+ *lpMem*  
  Wskaźnik do pamięci do przydzielenia.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -214,7 +214,7 @@ virtual void GrowFile(SIZE_T dwNewLen);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwNewLen`  
+ *dwNewLen*  
  Nowy rozmiar pliku pamięci.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -231,17 +231,17 @@ virtual BYTE* Memcpy(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpMemTarget`  
+ *lpMemTarget*  
  Wskaźnik do bloku pamięci, do którego zostaną skopiowane pamięci źródła.  
   
- `lpMemSource`  
+ *lpMemSource*  
  Wskaźnik do bloku pamięci źródłowego.  
   
- `nBytes`  
+ *nBytes*  
  Liczba bajtów do skopiowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Kopię `lpMemTarget`.  
+ Kopię *lpMemTarget*.  
   
 ### <a name="remarks"></a>Uwagi  
  Zastąpienie tej funkcji, jeśli chcesz zmienić sposób który `CMemFile` jest te kopie pamięci.  
@@ -256,10 +256,10 @@ virtual BYTE* Realloc(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpMem`  
+ *lpMem*  
  Wskaźnik do bloku pamięci odbiorczego.  
   
- `nBytes`  
+ *nBytes*  
  Nowy rozmiar bloku pamięci.  
   
 ### <a name="return-value"></a>Wartość zwracana  

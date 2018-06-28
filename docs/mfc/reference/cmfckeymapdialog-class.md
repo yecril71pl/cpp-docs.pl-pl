@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25d86a4797479fe3ee95dde162e22cde63aaa71e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 46210f5a8c785a60a95b3cbfacf03b4f84ed2dda
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369037"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037291"
 ---
 # <a name="cmfckeymapdialog-class"></a>Klasa CMFCKeyMapDialog
 `CMFCKeyMapDialog` Klasa obsługuje formant, który mapuje poleceń z klawiszami na klawiaturze.  
@@ -110,10 +110,10 @@ CMFCKeyMapDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pWndParentFrame`  
+ [in] *pWndParentFrame*  
  Wskaźnik do okna nadrzędnego `CMFCKeyMapDialog` obiektu.  
   
- [in] `bEnablePrint`  
+ [in] *bEnablePrint*  
  `TRUE` Jeśli można go wydrukować lista klawiszy skrótów; w przeciwnym razie `FALSE`. Wartość domyślna to `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -144,7 +144,7 @@ virtual CString FormatItem(int nItem) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nItem`  
+ [in] *nItem*  
  Liczony od zera indeks elementu na wewnętrznej liście mapowań klucza.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -160,7 +160,7 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Identyfikator polecenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -178,10 +178,10 @@ virtual void OnInsertItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pButton`  
+ [in] *pButton*  
  Wskaźnik do przycisku paska narzędzi, który jest używany do mapowania klawiatury kombinacji klawiszy polecenia nazwę i opis. Element mapy klucza jest przechowywany w formancie listy wewnętrznej.  
   
- [in] `nItem`  
+ [in] *nItem*  
  Liczony od zera indeks, który określa, gdzie Wstaw nowy element mapy klucza w formancie listy wewnętrznej.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -197,13 +197,13 @@ virtual int OnPrintHeader(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `dc`  
+ [in] *kontrolera domeny*  
  Kontekst urządzenia dla drukarki.  
   
- [in] `nPage`  
+ [in] *nPage*  
  Numer strony do drukowania.  
   
- [in] `cx`  
+ [in] *cx*  
  Przesunięcie w poziomie nagłówka, w pikselach.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -225,19 +225,19 @@ virtual int OnPrintItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `dc`  
+ [in] *kontrolera domeny*  
  Kontekst urządzenia drukarki.  
   
- [in] `nItem`  
+ [in] *nItem*  
  Liczony od zera indeks elementu do drukowania.  
   
- [in] `y`  
+ [in] *y*  
  Przesunięcie w pionie między górnej części strony i pozycja elementu.  
   
- [in] `cx`  
+ [in] *cx*  
  Przesunięcie w poziomie między po lewej stronie i pozycja elementu.  
   
- [in] `bCalcHeight`  
+ [in] *bCalcHeight*  
  `TRUE` Aby obliczyć najlepsze wysokość elementu wydruku; `FALSE` obcięcia wydruku elementu, tak aby zmieścił domyślna przestrzeń.  
   
 ### <a name="return-value"></a>Wartość zwracana  

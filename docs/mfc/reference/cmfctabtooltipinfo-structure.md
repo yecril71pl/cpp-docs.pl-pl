@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb2d1a139a5bc61d665a28f21ab10979802045b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e27dfd3570226aeab20d10f204d147f9f2b456d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373732"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037486"
 ---
 # <a name="cmfctabtooltipinfo-structure"></a>Struktura CMFCTabToolTipInfo
 Ta struktura zawiera informacje dotyczące użytkownika znajduje się na karcie MDI.  
@@ -43,7 +43,7 @@ struct CMFCTabToolTipInfo
 |[CMFCTabToolTipInfo::m_strText](#m_strtext)|Tekst etykietki narzędzia.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wskaźnik do `CMFCTabToolTipInfo` struktury jest przekazywana jako parametr `AFX_WM_ON_GET_TAB_TOOLTIP` wiadomości. Ten komunikat jest wyświetlany, gdy kart MDI są włączone i użytkownik jest przesuwany nad formantem karty.  
+ Wskaźnik do `CMFCTabToolTipInfo` struktury jest przekazywana jako parametr AFX_WM_ON_GET_TAB_TOOLTIP wiadomości. Ten komunikat jest wyświetlany, gdy kart MDI są włączone i użytkownik jest przesuwany nad formantem karty.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie przedstawiono sposób `CMFCTabToolTipInfo` jest używany w [MDITabsDemo próbki: aplikacji z kartami MDI MFC](../../visual-cpp-samples.md).  

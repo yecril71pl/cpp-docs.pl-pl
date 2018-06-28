@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50d2d68aedaf1d5560c39971e9dd5f74b4492ac6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3bde85e64fe8593ec2637e767e8c3c70d3b8200
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372463"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038080"
 ---
 # <a name="cmutex-class"></a>Klasa CMutex
 Reprezentuje "mutex" — obiektu synchronizacji, umożliwiająca jeden wątek wykluczają się wzajemnie dostęp do zasobu.  
@@ -74,13 +74,13 @@ CMutex(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bInitiallyOwn`  
+ *bInitiallyOwn*  
  Określa, czy tworzenie wątku `CMutex` obiektu początkowo ma dostęp do zasobów kontrolowane przez obiektu mutex.  
   
- `lpszName`  
- Nazwa `CMutex` obiektu. Jeśli istnieje innego obiektu mutex o takiej samej nazwie, `lpszName` musi być dostarczona, jeśli obiekt będzie można użyć poza granicami procesu. Jeśli **NULL**, obiektu mutex nie będą mieć nazwy. Jeśli nazwa pasuje do istniejącego obiektu mutex, konstruktora tworzy nową `CMutex` obiektu, który odwołuje się do obiektu mutex o tej nazwie. Jeśli nazwa jest zgodna z istniejącym obiektem synchronizacji nie jest obiektu mutex, konstrukcji zakończy się niepowodzeniem.  
+ *lpszName*  
+ Nazwa `CMutex` obiektu. Jeśli istnieje innego obiektu mutex o takiej samej nazwie, *lpszName* musi być dostarczona, jeśli obiekt będzie można użyć poza granicami procesu. Jeśli **NULL**, obiektu mutex nie będą mieć nazwy. Jeśli nazwa pasuje do istniejącego obiektu mutex, konstruktora tworzy nową `CMutex` obiektu, który odwołuje się do obiektu mutex o tej nazwie. Jeśli nazwa jest zgodna z istniejącym obiektem synchronizacji nie jest obiektu mutex, konstrukcji zakończy się niepowodzeniem.  
   
- `lpsaAttribute`  
+ *lpsaAttribute*  
  Atrybuty zabezpieczeń dla obiektu mutex. Pełny opis tej struktury, zobacz [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) w zestawie Windows SDK.  
   
 ### <a name="remarks"></a>Uwagi  

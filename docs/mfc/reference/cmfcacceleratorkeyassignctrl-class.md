@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a2906071ce1e8c8f65f21554915feed0d134276
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7728df79bf2ab842910b580b1404f109034e55b7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367948"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037249"
 ---
 # <a name="cmfcacceleratorkeyassignctrl-class"></a>Klasa CMFCAcceleratorKeyAssignCtrl
 `CMFCAcceleratorKeyAssignCtrl` Rozszerza klasy [klasy CEdit](../../mfc/reference/cedit-class.md) do obsługi dodatkowych systemu przycisków ALT, sterowania i SHIFT.  
@@ -138,7 +138,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pMsg`  
+ [in] *pMsg*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b95706603c8fe8a8f53be8cd0db405cd649271f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b3676db7cedbca1fe831e44c9ff7cf018360adc
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368098"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040056"
 ---
 # <a name="cmditabinfo-class"></a>Klasa CMDITabInfo
 `CMDITabInfo` Klasa jest używana do przekazania parametrów do [CMDIFrameWndEx::EnableMDITabbedGroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) metody. Grupy z kartami zestaw elementów członkowskich tej klasy, do sterowania zachowaniem MDI.  
@@ -235,7 +235,7 @@ void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `ar`  
+ [in] *ar*  
  A [CArchive — klasa](../../mfc/reference/carchive-class.md) obiektu do zserializowania.  
   
 ## <a name="see-also"></a>Zobacz też  

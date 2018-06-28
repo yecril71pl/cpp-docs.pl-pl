@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894d782f0f896837474c24255703a60e228737ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76980dab9246527162e124b9ce599791b49c8a26
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366739"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038409"
 ---
 # <a name="cinstantaneoustransition-class"></a>Klasa CInstantaneousTransition
 Hermetyzuje natychmiastowe przejścia.  
@@ -79,7 +79,7 @@ CInstantaneousTransition(DOUBLE dblFinalValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dblFinalValue`  
+ *dblFinalValue*  
  Wartość zmiennej animacji na końcu przejścia.  
   
 ##  <a name="create"></a>  CInstantaneousTransition::Create  
@@ -92,7 +92,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
-`pLibrary`  
+*pLibrary*  
  Wskaźnik do [interfejsu IUIAnimationTransitionLibrary](https://msdn.microsoft.com/library/windows/desktop/dd371897), który definiuje biblioteki standardowe przejścia.  
 
   

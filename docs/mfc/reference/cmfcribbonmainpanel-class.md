@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05257749c95b619c479538a1322746ae2b487b6a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d92df2378ea8f41c140b69ba3878ca0d7a18e08a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367961"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037375"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>Klasa CMFCRibbonMainPanel
 Implementuje panelu wstążki wyświetlanym po kliknięciu [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md).  
@@ -90,7 +90,7 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] [out] `pElem`  
+ [in] [out] *pElem*  
  Wskaźnik do elementu wstążki do dodania do głównego panelu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -106,10 +106,10 @@ void AddRecentFilesList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszLabel`  
+ *lpszLabel*  
  Określa ciąg, aby dodać do listy ostatnio używanych plików.  
   
- `nWidth`  
+ *nWidth*  
  Określa szerokość w pikselach, ostatnie panelu listy plików.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -122,7 +122,7 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] [out] `pElem`  
+ [in] [out] *pElem*  
  Wskaźnik do elementu wstążki do dodania do dołu główny panel.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -137,10 +137,10 @@ void AddToRight(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pElem`  
+ *pElem*  
  Wskaźnik do elementu wstążki do dodania do prawego panelu głównego.  
   
- `nWidth`  
+ *nWidth*  
  Określa szerokość w pikselach, prawym panelu.  
   
 ### <a name="remarks"></a>Uwagi  

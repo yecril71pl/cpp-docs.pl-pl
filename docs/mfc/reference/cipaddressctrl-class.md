@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86d6c4cdff533538c2f0ea7f0be1fa44bfd27359
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3e5f88dc011e358c0438209f0a4b3e277419be9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368917"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042160"
 ---
 # <a name="cipaddressctrl-class"></a>Klasa CIPAddressCtrl
 Udostępnia funkcje formant adresu IP systemu Windows.  
@@ -119,16 +119,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
+ *dwStyle*  
  Styl formantu adresu IP. Zastosowanie Style okna. Należy uwzględnić **ws_child —** stylów formantu musi być oknem podrzędnym. Zobacz [właściwości CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie SDK systemu Windows lista style systemu windows.  
   
- `rect`  
+ *Rect*  
  Odwołanie do rozmiar i położenie formant adresu IP. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do okna nadrzędnego formant adresu IP. Nie może być **wartości NULL.**  
   
- `nID`  
+ *nID*  
  Identyfikator formantu adresu IP.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -139,9 +139,9 @@ virtual BOOL Create(
   
 1.  Wywołanie konstruktora, który tworzy `CIPAddressCtrl` obiektu.  
   
-2.  Wywołanie **Utwórz**, co powoduje formant adresu IP.  
+2.  Wywołanie `Create`, co powoduje formant adresu IP.  
   
- Jeśli chcesz style rozszerzonej systemu windows za pomocą formantu wywołanie [CreateEx](#createex) zamiast **Utwórz**.  
+ Jeśli chcesz style rozszerzonej systemu windows za pomocą formantu wywołanie [CreateEx](#createex) zamiast `Create`.  
   
 ##  <a name="createex"></a>  CIPAddressCtrl::CreateEx  
  Wywołanie tej funkcji można utworzyć formantu (okno podrzędne) i skojarz ją z `CIPAddressCtrl` obiektu.  
@@ -156,19 +156,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwExStyle`  
- Określa styl rozszerzony formantu tworzona. Aby uzyskać listę rozszerzone style systemu Windows, zobacz `dwExStyle` parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ *dwExStyle*  
+ Określa styl rozszerzony formantu tworzona. Aby uzyskać listę rozszerzone style systemu Windows, zobacz *dwExStyle* parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Styl formantu adresu IP. Zastosowanie Style okna. Należy uwzględnić **ws_child —** stylów formantu musi być oknem podrzędnym. Zobacz [właściwości CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie SDK systemu Windows lista style systemu windows.  
   
- `rect`  
- Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujące rozmiar i położenie okna, które ma zostać utworzony w współrzędne klienta `pParentWnd`.  
+ *Rect*  
+ Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujące rozmiar i położenie okna, które ma zostać utworzony w współrzędne klienta *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do okna, które jest elementem nadrzędnym formantu.  
   
- `nID`  
+ *nID*  
  Identyfikator formantu okna podrzędnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -191,26 +191,26 @@ int GetAddress(DWORD& dwAddress);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nField0`  
+ *nField0*  
  Odwołanie do wartości pola 0 z spakowana adresu IP.  
   
- `nField1`  
+ *nField1*  
  Odwołanie do wartości pola 1 z spakowana adresu IP.  
   
- `nField2`  
+ *nField2*  
  Odwołanie do wartości pola 2 z spakowana adresu IP.  
   
- `nField3`  
+ *nField3*  
  Odwołanie do wartości pola 3 z spakowana adresu IP.  
   
- `dwAddress`  
- Odwołanie do adresu `DWORD` wartość, która otrzymuje adres IP. Zobacz **uwagi** dla tabeli, która przedstawia sposób `dwAddress` jest wypełnione.  
+ *dwAddress*  
+ Odwołanie do adresu `DWORD` wartość, która otrzymuje adres IP. Zobacz **uwagi** dla tabeli, która przedstawia sposób *dwAddress* jest wypełnione.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczba pól niepustych formant adresu IP.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378), zgodnie z opisem w zestawie Windows SDK. W pierwszym prototypu powyżej liczby w polach od 0 do 3 formantu, przeczytaj od lewej do prawej odpowiednio, wypełnić cztery parametry. W drugim prototyp powyżej `dwAddress` jest wypełniana w następujący sposób.  
+ Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378), zgodnie z opisem w zestawie Windows SDK. W pierwszym prototypu powyżej liczby w polach od 0 do 3 formantu, przeczytaj od lewej do prawej odpowiednio, wypełnić cztery parametry. W drugim prototyp powyżej *dwAddress* jest wypełniana w następujący sposób.  
   
 |Pole|Usługa BITS zawierający wartość pola|  
 |-----------|-------------------------------------|  
@@ -246,23 +246,23 @@ void SetAddress(DWORD dwAddress);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nField0`  
+ *nField0*  
  Wartość pola 0 z spakowana adresu IP.  
   
- `nField1`  
+ *nField1*  
  Wartość pola 1 z spakowana adresu IP.  
   
- `nField2`  
+ *nField2*  
  Wartość pola 2 z spakowana adresu IP.  
   
- `nField3`  
+ *nField3*  
  Wartość pola 3 z spakowana adresu IP.  
   
- `dwAddress`  
+ *dwAddress*  
  A `DWORD` wartości, która zawiera nowego adresu IP. Zobacz **uwagi** dla tabeli, która przedstawia sposób `DWORD` wprowadzono wartość.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380), zgodnie z opisem w zestawie Windows SDK. W pierwszym prototypu powyżej liczby w polach od 0 do 3 formantu, przeczytaj od lewej do prawej odpowiednio, wypełnić cztery parametry. W drugim prototyp powyżej `dwAddress` jest wypełniana w następujący sposób.  
+ Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380), zgodnie z opisem w zestawie Windows SDK. W pierwszym prototypu powyżej liczby w polach od 0 do 3 formantu, przeczytaj od lewej do prawej odpowiednio, wypełnić cztery parametry. W drugim prototyp powyżej *dwAddress* jest wypełniana w następujący sposób.  
   
 |Pole|Usługa BITS zawierający wartość pola|  
 |-----------|-------------------------------------|  
@@ -279,7 +279,7 @@ void SetFieldFocus(WORD nField);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nField`  
+ *nPole*  
  Indeks pola liczony od zera, do którego można ustawić fokusu. Jeśli ta wartość jest większa niż liczba pól, fokus jest ustawiony na pierwsze pole puste. Jeśli wszystkie pola są niepustą, fokus jest ustawiony pierwsze pole.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -296,17 +296,17 @@ void SetFieldRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nField`  
+ *nPole*  
  Indeks pola liczony od zera, do którego zostanie zastosowana zakresu.  
   
- `nLower`  
+ *nLower*  
  Odwołanie do liczby całkowitej odbieranie dolny limit określonego pola w tym formancie adresu IP.  
   
- `nUpper`  
+ *nUpper*  
  Odwołanie do liczby całkowitej odbieranie górnego limitu określonego pola w tym formancie adresu IP.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382), zgodnie z opisem w zestawie Windows SDK. Użyj tych dwóch parametrów `nLower` i `nUpper`, aby wskazać dolna i górna granicami pola, zamiast *wRange* parametrem komunikat Win32.  
+ Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382), zgodnie z opisem w zestawie Windows SDK. Użyj tych dwóch parametrów *nLower* i *nUpper*, aby wskazać dolna i górna granicami pola, zamiast *wRange* parametrem komunikat Win32.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CWnd](../../mfc/reference/cwnd-class.md)   

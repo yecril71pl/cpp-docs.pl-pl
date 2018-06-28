@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d51b29f9ea2719f98f263565680ded2360197572
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e6c56116c94abeaf4dd266ca823e66c68d099fd
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370848"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037499"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>Klasa CMFCTasksPaneTaskGroup
 `CMFCTasksPaneTaskGroup` Klasa jest używana przez klasę Pomocnika [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) formantu. Obiekty typu `CMFCTasksPaneTaskGroup` reprezentują *grupy zadań*. Grupy zadań znajduje się lista elementów, które w ramach będzie wyświetlany w osobnym oknie posiadające przycisk Zwiń. Pole może mieć opcjonalnym podpisem (nazwa grupy). Jeśli grupa jest zwinięte, na liście zadań nie jest widoczne.  
@@ -116,22 +116,22 @@ CMFCTasksPaneTaskGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszName`  
+ *lpszName*  
  Określa nazwę grupy w nagłówku grupy.  
   
- `bIsBottom`  
+ *bIsBottom*  
  Określa, czy grupa jest wyrównany do dołu formant okienka zadań.  
   
- `bIsSpecial`  
+ *bIsSpecial*  
  Określa, czy grupa jest oznaczony jako *specjalne* i w związku z tym, czy podpis grupy jest wypełniana innym kolorem.  
   
- `bIsCollapsed`  
+ *bIsCollapsed*  
  Określa, czy grupa zostanie zwinięta.  
   
- `pPage`  
+ *Strona_fizyczna*  
  Określa stronę właściwości należącego do tej grupy zadań.  
   
- `hIcon`  
+ *hIcon*  
  Określa ikonę, która wyświetla tytuł grupy.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -216,14 +216,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pParent`  
+ [in] *pParent*  
  Reprezentuje okno nadrzędne bieżącej grupy zadań.  
   
- [out] `data`  
+ [out] *danych*  
  Obiekt typu `CAccessibilityData` który jest wypełniane przy użyciu danych dostępności bieżącej grupy zadań.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli `data` parametr został pomyślnie wypełnione przy użyciu danych dostępności bieżącej grupy zadań, a w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli *danych* parametr został pomyślnie wypełnione przy użyciu danych dostępności bieżącej grupy zadań, a w przeciwnym razie `FALSE`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

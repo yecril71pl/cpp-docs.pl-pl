@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b53228b6983c0293eb288cd0f38669d1b5db928
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c09234cbf41201df14aec4993174e6313c6a7d1
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371585"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040837"
 ---
 # <a name="cmultidoctemplate-class"></a>Klasa CMultiDocTemplate
 Definiuje szablonu dokumentu, który implementuje interfejs dokumentu wielokrotnego (MDI).  
@@ -85,7 +85,7 @@ CMultiDocTemplate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDResource`  
+ *nIDResource*  
  Określa identyfikator zasoby używane do typu dokumentu. Może to obejmować menu, ikona tabeli akceleratora i zasoby ciągów.  
   
  Zasób ciągu składa się z maksymalnie siedem podciągów oddzielone znakiem "\n" (znak "\n" jest potrzebny jako symbolu zastępczego, jeśli nie dołączono podciągu jednak znakami "\n" nie są konieczne); te podciągów opisu typu dokumentu. Aby uzyskać informacje na podciągów, zobacz [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Ten zasób ciągu znajduje się w pliku zasobów aplikacji. Na przykład:  
@@ -104,13 +104,13 @@ CMultiDocTemplate(
   
  Aby uzyskać więcej informacji na temat tych typów zasobów, zobacz [edytory zasobów](../../windows/resource-editors.md).  
   
- `pDocClass`  
- Wskazuje `CRuntimeClass` obiekt klasy dokumentu. Ta klasa jest **CDocument**-klasy definiowane w celu odzwierciedlenia dokumentów.  
+ *pDocClass*  
+ Wskazuje `CRuntimeClass` obiekt klasy dokumentu. Ta klasa jest `CDocument`-klasy definiowane w celu odzwierciedlenia dokumentów.  
   
- `pFrameClass`  
+ *pFrameClass*  
  Wskazuje `CRuntimeClass` obiekt klasy okien ramowych. Ta klasa może być `CMDIChildWnd`-klasy lub może być `CMDIChildWnd` sam Jeśli domyślne zachowanie dla Twojego okien ramowych dokumentu.  
   
- `pViewClass`  
+ *pViewClass*  
  Wskazuje `CRuntimeClass` obiekt klasy widoku. Ta klasa jest `CView`-klasy zdefiniuj do wyświetlania dokumentów.  
   
 ### <a name="remarks"></a>Uwagi  

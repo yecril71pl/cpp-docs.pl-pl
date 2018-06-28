@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1c4c3b286f020d8d409b344c5d8c05ebc200425
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bed63f6752f0335e3c1917e6597e7f8b096c8df6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370861"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039799"
 ---
 # <a name="cmfcribbonseparator-class"></a>Klasa CMFCRibbonSeparator
 Implementuje separatora wstążki.  
@@ -113,14 +113,14 @@ virtual int AddToListBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pWndListBox`  
+ [in] *pWndListBox*  
  Wskaźnik do **polecenia** gdzie jest dodana separatora listy.  
   
- [in] `bDeep`  
+ [in] *bDeep*  
  Ignorowane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczony od zera indeks na ciąg w polu listy, określony przez `pWndListBox`.  
+ Liczony od zera indeks na ciąg w polu listy, określony przez *pWndListBox*.  
   
 ##  <a name="cmfcribbonseparator"></a>  CMFCRibbonSeparator::CMFCRibbonSeparator  
  Konstruuje `CMFCRibbonSeparator` obiektu.  
@@ -130,7 +130,7 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bIsHoriz`  
+ [in] *bIsHoriz*  
  Jeśli `TRUE`, separator jest poziomy; Jeśli `FALSE`, separator jest pionowy.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -149,7 +149,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `Src`  
+ [in] *Src*  
  Element wstążki źródła do skopiowania.  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonSeparator::GetRegularSize  
@@ -160,7 +160,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do zawartości urządzenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -197,7 +197,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
 ##  <a name="ondrawonlist"></a>  CMFCRibbonSeparator::OnDrawOnList  
@@ -218,12 +218,12 @@ virtual void OnDrawOnList(
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] `pDC`|Wskaźnik do kontekstu urządzenia.|  
-|[in] `strText`|Tekst wyświetlany na liście.|  
-|[in] `nTextOffset`|Odstęp między tekstem a prostokątem z lewej strony.|  
-|[in] `rect`|Określa prostokątem.|  
-|[in] `bIsSelected`|Ignorowane.|  
-|[in] `bHighlighted`|Ignorowane.|  
+|[in] *podstawowego kontrolera domeny*|Wskaźnik do kontekstu urządzenia.|  
+|[in] *strText*|Tekst wyświetlany na liście.|  
+|[in] *nTextOffset*|Odstęp między tekstem a prostokątem z lewej strony.|  
+|[in] *rect*|Określa prostokątem.|  
+|[in] *bIsSelected*|Ignorowane.|  
+|[in] *bHighlighted*|Ignorowane.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

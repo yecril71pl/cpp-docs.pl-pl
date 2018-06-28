@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a9e9ff3d6e3e4bcccf8e9ebd46f791f60f1cc37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56fa354a46e40704ac063791931ca01d1386a558
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367188"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038461"
 ---
 # <a name="ckeyframe-class"></a>Klasa CKeyFrame
 Reprezentuje klatek kluczowych animacji.  
@@ -102,10 +102,10 @@ virtual BOOL AddToStoryboard(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pStoryboard`  
+ *pStoryboard*  
  Wskaźnik do scenorysu.  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  Określa, czy dodać klatki kluczowej lub przejście rekursywnie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -124,10 +124,10 @@ BOOL AddToStoryboardAfterTransition(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pStoryboard`  
+ *pStoryboard*  
  Wskaźnik do scenorysu.  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  Określa, czy dodać rekursywnie przejścia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -146,10 +146,10 @@ virtual BOOL AddToStoryboardAtOffset(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pStoryboard`  
+ *pStoryboard*  
  Wskaźnik do scenorysu.  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  Określa, czy dodać kluczową to klatki kluczowej zależy rekursywnie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -171,13 +171,13 @@ CKeyFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pTransition`  
+ *pTransition*  
  Wskaźnik do przejścia.  
   
- `pKeyframe`  
+ *pKeyframe*  
  Wskaźnik do klatki kluczowej.  
   
- `offset`  
+ *offset*  
  Przesunięcie w sekundach, z określonym przez pKeyframe klatki kluczowej.  
   
 ### <a name="remarks"></a>Uwagi  

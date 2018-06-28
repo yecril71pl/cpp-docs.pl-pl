@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9073c3443b1c74a27c9de9be142c67fab7f40ba8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6862803540a87aed129ace3a05d4e41e9e1ba90
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374966"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040824"
 ---
 # <a name="cmfcshelllistctrl-class"></a>Klasa CMFCShellListCtrl
 `CMFCShellListCtrl` Klasa udostępnia funkcje sterowania listy systemu Windows i rozszerza się przy tym możliwość wyświetlania listy elementów powłoki.  
@@ -130,10 +130,10 @@ virtual HRESULT DisplayFolder(LPAFX_SHELLITEMINFO lpItemInfo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszPath`  
+ [in] *lpszPath*  
  Ciąg, który zawiera ścieżkę do folderu.  
   
- [in] `lpItemInfo`  
+ [in] *lpItemInfo*  
  Wskaźnik do `LPAFX_SHELLITEMINFO` strukturę, która opisuje folderu do wyświetlenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -157,7 +157,7 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  Wartość logiczna określająca, czy struktura umożliwia menu skrótów.  
   
 ##  <a name="getcurrentfolder"></a>  CMFCShellListCtrl::GetCurrentFolder  
@@ -168,7 +168,7 @@ BOOL GetCurrentFolder(CString& strPath) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `strPath`  
+ [out] *strPath*  
  Odwołanie do parametr typu string, którego metoda zapisuje ścieżki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -185,7 +185,7 @@ BOOL GetCurrentFolderName(CString& strName) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `strName`  
+ [out] *strName*  
  Odwołanie do parametr typu string, gdy metoda zapisuje nazwy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -227,17 +227,17 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `strPath`  
+ [out] *strPath*  
  Odwołanie do ciąg, który odbiera ścieżki.  
   
- [in] `iItem`  
+ [in] *towaru*  
  Indeks elementu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `TRUE` w przypadku powodzenia; `FALSE` inaczej.  
   
 ### <a name="remarks"></a>Uwagi  
- Indeks dostarczony przez `iItem` jest oparta na elementach wyświetlanych przez [klasy CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) obiektu.  
+ Indeks dostarczony przez *towaru* jest oparta na elementach wyświetlanych przez [klasy CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) obiektu.  
   
 ##  <a name="getitemtypes"></a>  CMFCShellListCtrl::GetItemTypes  
  Zwraca typ elementów wyświetlanych przez [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) obiektu.  
@@ -273,9 +273,9 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lParam1`  
- [in] `lParam2`  
- [in] `iColumn`  
+ [in] *lParam1*  
+ [in] *lParam2*  
+ [in] *iColumn*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -291,10 +291,10 @@ virtual void OnFormatFileDate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `tmFile`  
+ [in] *tmFile*  
  Data skojarzonych z plikiem.  
   
- [out] `str`  
+ [out] *str*  
  Ciąg, który zawiera datę sformatowanym plikiem.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -310,10 +310,10 @@ virtual void OnFormatFileSize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lFileSize`  
+ [in] *lFileSize*  
  Rozmiar pliku, która będzie wyświetlana w ramach.  
   
- [out] `str`  
+ [out] *str*  
  Ciąg, który zawiera rozmiar sformatowanym plikiem.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -329,10 +329,10 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iItem`  
+ [in] *towaru*  
  Indeks elementu.  
   
- [in] `pItem`  
+ [in] *pItem*  
  A `LPAFX_SHELLITEMINFO` parametr, który zawiera opis elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -341,7 +341,7 @@ virtual int OnGetItemIcon(
 ### <a name="remarks"></a>Uwagi  
  Indeks obrazu ikony opiera się na liście obrazu systemu.  
   
- Domyślnie ta metoda polega na `pItem` parametru. Wartość `iItem` nie jest używany w implementacji domyślnej. Można użyć `iItem` do zaimplementowania niestandardowego zachowania.  
+ Domyślnie ta metoda polega na *pItem* parametru. Wartość *towaru* nie jest używany w implementacji domyślnej. Można użyć *towaru* do zaimplementowania niestandardowego zachowania.  
   
 ##  <a name="ongetitemtext"></a>  CMFCShellListCtrl::OnGetItemText  
  Platformę wywołuje tę metodę, gdy tekst elementu powłoki muszą zostać pobrane.  
@@ -354,13 +354,13 @@ virtual CString OnGetItemText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iItem`  
+ [in] *towaru*  
  Indeks elementu.  
   
- [in] `iColumn`  
+ [in] *iColumn*  
  Kolumna zainteresowań.  
   
- [in] `pItem`  
+ [in] *pItem*  
  A `LPAFX_SHELLITEMINFO` parametr, który zawiera opis elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -369,7 +369,7 @@ virtual CString OnGetItemText(
 ### <a name="remarks"></a>Uwagi  
  Każdy element `CMFCShellListCtrl` obiekt może mieć tekstu w co najmniej jedną kolumnę. Gdy struktura wywołuje tę metodę, określa kolumny, która jest zainteresowana. Jeśli ręcznie wywołanie tej funkcji, należy także określić kolumnę, którą chcesz.  
   
- Domyślnie ta metoda polega na `pItem` parametr, aby określić, który element do procesu. Wartość `iItem` nie jest używany w implementacji domyślnej.  
+ Domyślnie ta metoda polega na *pItem* parametr, aby określić, który element do procesu. Wartość *towaru* nie jest używany w implementacji domyślnej.  
   
 ##  <a name="onsetcolumns"></a>  CMFCShellListCtrl::OnSetColumns  
  Struktura wywołuje tę metodę po ustawia nazwy kolumn.  
@@ -402,7 +402,7 @@ void SetItemTypes(SHCONTF nTypes);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nTypes`  
+ [in] *nTypes*  
  Typy listę elementów, które `CMFCShellListCtrl` obiekt obsługuje.  
   
 ### <a name="remarks"></a>Uwagi  

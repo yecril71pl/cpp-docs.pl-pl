@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b061d2cc31a67c2e6059abeaadb6062b77cacb88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4af90e9354e7d443cb50acbafaa1468c99c12c85
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374373"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040915"
 ---
 # <a name="colebusydialog-class"></a>Klasa COleBusyDialog
 Używana w oknach dialogowych OLE serwer nie odpowiada lub serwer jest zajęty.  
@@ -107,7 +107,7 @@ explicit COleBusyDialog(
  *bNotResponding*  
  Jeśli **TRUE**, wywołaj okno dialogowe nie odpowiada zamiast okna dialogowego serwer jest zajęty. Treść w oknie dialogowym nie odpowiada są nieco inne niż treść w oknie dialogowym serwer jest zajęty, a przycisk Anuluj jest wyłączony.  
   
- `dwFlags`  
+ *wartość elementu dwFlags*  
  Flagi tworzenia. Może zawierać zero lub więcej z następujących wartości, które są połączone z operator Alternatywy:  
   
 - **BZ_DISABLECANCELBUTTON** Wyłącz przycisk Anuluj, podczas wywoływania okna dialogowego.  
@@ -116,7 +116,7 @@ explicit COleBusyDialog(
   
 - **BZ_DISABLERETRYBUTTON** wyłącza przycisk Ponów próbę, podczas wywoływania okna dialogowego.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskazuje obiekt okna nadrzędnego lub właściciela (typu `CWnd`) do której należy obiektu okna dialogowego. Jeśli jest **NULL**, okno nadrzędne obiektu okna dialogowego ma ustawioną wartość okna głównego aplikacji.  
   
 ### <a name="remarks"></a>Uwagi  

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de336692a821ba374996fac9ee7d282d2990bd08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9b1728958d8560362f9b330c3ba570e933d824d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367997"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040811"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>Klasa CMFCPropertyGridColorProperty
 `CMFCPropertyGridColorProperty` Klasa obsługuje elementu formantu listy właściwości, które otwiera okno dialogowe Wybieranie koloru.  
@@ -103,19 +103,19 @@ CMFCPropertyGridColorProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `strName`  
+ [in] *strName*  
  Nazwa właściwości.  
   
- [in] `color`  
+ [in] *kolorów*  
  Wartość koloru właściwości.  
   
- [in] `pPalette`  
+ [in] *pPalette*  
  Wskaźnik do palety kolorów. Wartość domyślna to `NULL`.  
   
- [in] `lpszDescr`  
+ [in] *lpszDescr*  
  Opis właściwości. Wartość domyślna to `NULL`.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Dane specyficzne dla aplikacji, takich jak liczby całkowitej lub wskaźnika do innych danych, która jest skojarzona z właściwością. Wartość domyślna to 0.  
   
 ##  <a name="enableautomaticbutton"></a>  CMFCPropertyGridColorProperty::EnableAutomaticButton  
@@ -129,13 +129,13 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Tekst etykiety przycisk Automatyczny.  
   
- [in] `colorAutomatic`  
+ [in] *colorAutomatic*  
  Wartości kolorów RGB koloru automatyczne (ustawienie domyślne).  
   
- [in] `bEnable`  
+ [in] *bWłączenie*  
  `TRUE` Aby włączyć automatyczne przycisk; w przeciwnym razie `FALSE`. Wartość domyślna to `TRUE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -151,13 +151,13 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Tekst etykiety inny przycisk.  
   
- [in] `bAltColorDlg`  
+ [in] *bAltColorDlg*  
  `TRUE` Aby wyświetlić `CMFCColorDialog` okno dialogowe; `FALSE` do wyświetlenia okna dialogowego wyboru Kolor standardowy. Wartość domyślna to `TRUE`.  
   
- [in] `bEnable`  
+ [in] *bWłączenie*  
  `TRUE` Aby wyświetlić przycisk; w przeciwnym razie `FALSE`.  Wartość domyślna to `TRUE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -182,7 +182,7 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `color`  
+ [in] *kolorów*  
  Wartości kolorów RGB.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -195,7 +195,7 @@ void SetColumnsNumber(int nColumnsNumber);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nColumnsNumber`  
+ [in] *nColumnsNumber*  
  Preferowaną liczbę kolumn w siatce właściwości kolorów.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -209,7 +209,7 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `varValue`  
+ [in] *varValue*  
  Wartość.  
   
 ### <a name="remarks"></a>Uwagi  

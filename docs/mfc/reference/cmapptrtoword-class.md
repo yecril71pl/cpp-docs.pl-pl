@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 180c6db999ed72a83de3f4addbec3db73ee64fa1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2fee346e1bc16206df72f3056e6fbb3d73d0d21a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368081"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038250"
 ---
 # <a name="cmapptrtoword-class"></a>Klasa CMapPtrToWord
 Obsługuje mapy słowa 16-bitowych, wyznaczaną przez wskaźniki typu void.  
@@ -61,7 +61,7 @@ class CMapPtrToWord : public CObject
 ```  
   
 ## <a name="members"></a>Elementy członkowskie  
- Funkcje Członkowskie `CMapPtrToWord` są podobne do funkcji Członkowskich klasy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ze względu na to podobieństwa, można użyć `CMapStringToOb` odwołania dokumentacji charakterystykę funkcja elementu członkowskiego. Po wyświetleniu `CObject` wskaźnika jako parametr funkcji lub wartości zwracanej, Zastąp **WORD**. Po wyświetleniu `CString` lub **const** wskaźnik do `char` jako parametr funkcji lub wartości zwracanej, Zastąp wskaźnik do `void`.  
+ Funkcje Członkowskie `CMapPtrToWord` są podobne do funkcji Członkowskich klasy [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Ze względu na to podobieństwa, można użyć `CMapStringToOb` odwołania dokumentacji charakterystykę funkcja elementu członkowskiego. Po wyświetleniu `CObject` wskaźnika jako parametr funkcji lub wartości zwracanej, Zastąp **WORD**. Po wyświetleniu `CString` lub **const** wskaźnik do **char** jako parametr funkcji lub wartości zwracanej, Zastąp wskaźnik do **void**.  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   

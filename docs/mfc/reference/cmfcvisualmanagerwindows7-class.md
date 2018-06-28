@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6599ddf3663f56c651907fe3823849787a05b50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c4bcc39645c079ef9a0b61a4e12782223dd19a92
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373706"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042225"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>Klasa CMFCVisualManagerWindows7
 `CMFCVisualManagerWindows7` Daje aplikacji wygląd [!INCLUDE[win7](../../build/includes/win7_md.md)] aplikacji.  
@@ -149,20 +149,20 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pEdit`  
+ [in] *pEdit*  
  Wskaźnik do kontrolki edycji. Ta wartość nie może być `NULL`.  
   
- [out] `bIsHighlighted`  
+ [out] *bIsHighlighted*  
  Zwraca czy zostanie wyróżniona pole wstążki.  
   
- [out] `bIsPaneHighlighted`  
- Zwraca `TRUE` czy wstążki panelu, który zawiera `pEdit` zostanie wyróżniona.  
+ [out] *bIsPaneHighlighted*  
+ Zwraca `TRUE` czy wstążki panelu, który zawiera *pEdit* zostanie wyróżniona.  
   
- [out] `bIsDisabled`  
- Zwraca czy `pEdit` jest wyłączona.  
+ [out] *bIsDisabled*  
+ Zwraca czy *pEdit* jest wyłączona.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Kolor tła pola edycji `pEdit`.  
+ Kolor tła pola edycji *pEdit*.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -178,16 +178,16 @@ virtual void OnFillMenuImageRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia przycisku menu.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Wskaźnik do `CMFCToolBarButton`. Platformę wypełnienia tła dla tego przycisku.  
   
- [in] `rect`  
+ [in] *rect*  
  Prostokąt, który określa granice obszaru obrazu przycisku menu.  
   
- [in] `state`  
+ [in] *stanu*  
  Stan przycisku.  
   
 ### <a name="remarks"></a>Uwagi  

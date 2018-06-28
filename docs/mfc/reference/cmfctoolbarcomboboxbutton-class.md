@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddfa4d26ed0a4328714fbd1a921fe7c204ca3752
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 49142f4ad7ea9793bbe533be6430bce929adf9cc
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377369"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039197"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>Klasa CMFCToolBarComboBoxButton
 Przycisk paska narzędzi, który zawiera kontrolki pola kombi ( [ccombobox — klasa](../../mfc/reference/ccombobox-class.md)).  
@@ -138,7 +138,7 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
   
  2. Utworzyć `CMFCToolBarComboBoxButton` obiektu.  
   
- 3. Programu obsługi wiadomości, który przetwarza `AFX_WM_RESETTOOLBAR` komunikatów, Zastąp fikcyjny przycisk Nowy przycisk pole kombi za pomocą [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
+ 3. Programu obsługi wiadomości, który przetwarza komunikat AFX_WM_RESETTOOLBAR, Zastąp fikcyjny przycisk Nowy przycisk pole kombi za pomocą [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
   
  Aby uzyskać więcej informacji, zobacz [wskazówki: umieszczanie formantów na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md). Na przykład przycisku paska narzędzi pole kombi zobacz przykładowy projekt VisualStudioDemo.  
   
@@ -168,10 +168,10 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszItem`  
+ [in] *lpszItem*  
  Tekst elementu do dodania do listy.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Dane skojarzone z elementem można dodać do listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -192,10 +192,10 @@ virtual INT_PTR AddSortedItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszItem`  
+ [in] *lpszItem*  
  Tekst elementu do dodania do listy.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Dane skojarzone z elementem można dodać do listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -226,16 +226,16 @@ CMFCToolBarComboBoxButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiID`  
+ [in] *uiID*  
  Identyfikator polecenia przycisku Nowy.  
   
- [in] `iImage`  
+ [in] *iImage*  
  Indeks obrazu skojarzonego z przycisku nowego obrazu.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Styl przycisku Nowy.  
   
- [in] `iWidth`  
+ [in] *iWidth*  
  Szerokość w pikselach przycisku Nowy.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -263,10 +263,10 @@ virtual int Compare(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszItem1`  
+ [in] *lpszItem1*  
  Pierwszy ciąg do porównania.  
   
- [in] `lpszItem2`  
+ [in] *lpszItem2*  
  Drugi ciąg do porównania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -306,10 +306,10 @@ virtual CComboBox* CreateCombo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Wskaźnik do okna nadrzędnego przycisku.  
   
- [in] `rect`  
+ [in] *rect*  
  Prostokąt ograniczający pola kombi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -326,13 +326,13 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Wskaźnik do okna nadrzędnego przycisku.  
   
- [in] `rect`  
+ [in] *rect*  
  Prostokąt ograniczający nowego pola edycji.  
   
- [in] `dwEditStyle`  
+ [in] *dwEditStyle*  
  Styl formantu nowe pola edycji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -351,13 +351,13 @@ BOOL DeleteItem(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iIndex`  
+ [in] *iIndex*  
  Liczony od zera indeks elementu do usunięcia.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Dane skojarzone z elementem, który ma zostać usunięty.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Tekst elementu do usunięcia. Jeśli istnieje wiele elementów z tego samego tekstu, pierwszy element zostanie usunięty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -383,7 +383,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  `TRUE` Aby włączyć edit- and -kombi pól. `FALSE` wyłączyć pola edycji i kombi.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -397,7 +397,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `menuButton`  
+ [out] *przycisk menu*  
  Odwołanie do przycisku menu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -411,7 +411,7 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszText`  
+ [in] *lpszText*  
  Tekst do wyszukania w polu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -429,10 +429,10 @@ static CMFCToolBarComboBoxButton* GetByCmd(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Identyfikator polecenia przycisk pola kombi.  
   
- [in] `bIsFocus`  
+ [in] *bIsFocus*  
  `TRUE` Aby wyszukać tylko fokus przyciski; `FALSE` do wyszukania wszystkich przycisków.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -482,7 +482,7 @@ static int GetCountAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Identyfikator polecenia przycisk pola kombi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -511,7 +511,7 @@ static int GetCurSelAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Identyfikator polecenia przycisk pola kombi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -550,7 +550,7 @@ LPCTSTR GetItem(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iIndex`  
+ [in] *iIndex*  
  Liczony od zera indeks elementu w polu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -569,10 +569,10 @@ static LPCTSTR GetItemAll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Identyfikator polecenia przycisk pola kombi.  
   
- [in] `iIndex`  
+ [in] *iIndex*  
  Liczony od zera indeks elementu w polu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -589,7 +589,7 @@ DWORD_PTR GetItemData(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iIndex`  
+ [in] *iIndex*  
  Liczony od zera indeks elementu w polu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -608,10 +608,10 @@ static DWORD_PTR GetItemDataAll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Identyfikator polecenia przycisk pola kombi.  
   
- [in] `iIndex`  
+ [in] *iIndex*  
  Liczony od zera indeks elementu w polu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -630,10 +630,10 @@ static void* GetItemDataPtrAll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Identyfikator polecenia przycisk pola kombi.  
   
- [in] `iIndex`  
+ [in] *iIndex*  
  Liczony od zera indeks elementu w polu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -674,7 +674,7 @@ static LPCTSTR GetTextAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Identyfikator polecenia przycisk pola kombi określone.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -728,7 +728,7 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `hwnd`  
+ [in] *hwnd*  
  Uchwyt okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -765,7 +765,7 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iNotifyCode`  
+ [in] *iNotifyCode*  
  Komunikat powiadomienia, który jest skojarzony z poleceniem.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -789,13 +789,13 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Kontekst urządzenia wyświetlającego przycisk pola kombi.  
   
- [in] `sizeDefault`  
+ [in] *sizeDefault*  
  Rozmiar domyślny przycisk pola kombi.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  Stan dokowania paska narzędzi nadrzędnej. `TRUE` gdy pasek narzędzi jest zadokowany w poziomie i `FALSE` gdy pasek narzędzi jest zadokowany w pionie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -809,7 +809,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Wskaźnik do nowego nadrzędne paska narzędzi.  
   
 ##  <a name="onclick"></a>  CMFCToolBarComboBoxButton::OnClick  
@@ -822,10 +822,10 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pWnd`  
+ [in] *pWnd*  
  Wskaźnik do okna nadrzędnego przycisku pola kombi.  
   
- [in] `bDelay`  
+ [in] *bDelay*  
  Zarezerwowane do użytku w klasie pochodnej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -841,10 +841,10 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Kontekst urządzenia wyświetlającego przycisk pola kombi.  
   
- [in] `nCtlColor`  
+ [in] *nCtlColor*  
  Nieużywane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -869,28 +869,28 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `Pdc`  
+ [in] *Podstawowego kontrolera domeny*  
  Kontekst urządzenia wyświetlającego przycisku.  
   
- [in] `rect`  
+ [in] *rect*  
  Prostokąt ograniczający przycisku.  
   
- [in] `pImages`  
+ [in] *pImages*  
  Kolekcja obrazów, która jest skojarzona z przyciskiem.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  Stan dokowania paska narzędzi nadrzędnej. `TRUE` gdy pasek narzędzi jest zadokowany w poziomie i `FALSE` gdy pasek narzędzi jest zadokowany w pionie.  
   
- [in] `bCustomizeMode`  
+ [in] *bCustomizeMode*  
  Określa, czy aplikacja jest w trybie dostosowania.  
   
- [in] `bHighlight`  
+ [in] *bHighlight*  
  Określa, czy Rysowanie przycisk pola kombi wyróżnione.  
   
- [in] `bDrawBorder`  
+ [in] *bDrawBorder*  
  Określa, czy Rysowanie przycisk pola kombi z obramowanie.  
   
- [in] `bGrayDisabledButtons`  
+ [in] *bGrayDisabledButtons*  
  `TRUE` Rysowanie przyciemnione przyciski wyłączone; `FALSE` do użycia niepełnosprawnych obrazy kolekcji.  
   
 ##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarComboBoxButton::OnDrawOnCustomizeList  
@@ -904,13 +904,13 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Kontekst urządzenia wyświetlającego przycisk pola kombi.  
   
- [in] `rect`  
+ [in] *rect*  
  Prostokąt ograniczający przycisk pola kombi.  
   
- [in] `bSelected`  
+ [in] *bSelected*  
  `TRUE` Jeśli pole kombi polu przycisk zostanie wybrany; w przeciwnym razie `FALSE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -938,7 +938,7 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bShow`  
+ [in] *bShow*  
  Czy mają być wyświetlany przycisk pola kombi.  
   
 ##  <a name="onsize"></a>  CMFCToolBarComboBoxButton::OnSize  
@@ -949,7 +949,7 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iSize`  
+ [in] *iSize*  
  Szerokość nowy przycisk pola kombi.  
   
 ##  <a name="onupdatetooltip"></a>  CMFCToolBarComboBoxButton::OnUpdateToolTip  
@@ -964,16 +964,16 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Wskaźnik do okna nadrzędnego przycisk pola kombi.  
   
- [in] `iButtonIndex`  
+ [in] *iButtonIndex*  
  Identyfikator przycisk pola kombi.  
   
- [in] `wndToolTip`  
+ [in] *wndToolTip*  
  Etykietka narzędzia do skojarzenia z przycisk pola kombi.  
   
- [in] `str`  
+ [in] *str*  
  Tekst wskazówki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1002,16 +1002,16 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iIndex`  
+ [in] *iIndex*  
  Liczony od zera indeks elementu w polu listy.  
   
- [in] `bNotify`  
+ [in] *bNotify*  
  `TRUE` Aby powiadomić przycisk pole kombi wyboru; w przeciwnym razie `FALSE`.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Dane skojarzone z elementu w polu listy.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Tekst elementu w polu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1039,16 +1039,16 @@ static BOOL SelectItemAll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Identyfikator polecenia przycisku pole kombi, który zawiera pola listy.  
   
- [in] `iIndex`  
+ [in] *iIndex*  
  Liczony od zera indeks elementu w polu listy. Wartość -1 usuwa wszystkie bieżące zaznaczenie w polu listy i czyści pole edycji.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Dane elementu w polu listy.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Tekst elementu w polu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1064,7 +1064,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [w, out] `ar`  
+ [w, out] *ar*  
  `CArchive` Obiektu do zserializowania.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1080,10 +1080,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pParent`  
+ [in] *pParent*  
  Okno nadrzędne przycisk pola kombi.  
   
- [out] `data`  
+ [out] *danych*  
  A `CAccessibilityData` obiekt, który odbiera dane dostępności z przycisk pola kombi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1097,7 +1097,7 @@ static void SetCenterVert(BOOL bCenterVert=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bCenterVert`  
+ [in] *bCenterVert*  
  `TRUE` Aby wyśrodkować przycisk pola kombi na pasku narzędzi; `FALSE` , aby były wyrównane przycisk pola kombi na początku pasku narzędzi.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1111,7 +1111,7 @@ void SetContextMenuID(UINT uiResID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiResID`  
+ [in] *uiResID*  
  Identyfikator zasobu menu skrótów  
   
 ##  <a name="setdropdownheight"></a>  CMFCToolBarComboBoxButton::SetDropDownHeight  
@@ -1122,7 +1122,7 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nHeight`  
+ [in] *nHeight*  
  Wysokość w pikselach pola listy.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1136,7 +1136,7 @@ static void SetFlatMode(BOOL bFlat=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bFlat`  
+ [in] *bFlat*  
  `TRUE` dla płaski wygląd; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1150,7 +1150,7 @@ virtual void SetStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nStyle`  
+ [in] *nStyle*  
  Bitowe połączenie (lub) style paska narzędzi.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1164,7 +1164,7 @@ void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszText`  
+ [in] *lpszText*  
  Wskaźnik do ciągu, czy zawiera tekst pola edycji.  
   
 ## <a name="see-also"></a>Zobacz też  

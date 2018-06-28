@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abb880c1add83ec03d787c28b816f2e82caeddd6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fcef7bab4fd2b0cd913c0da929534d6964730215
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368803"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037964"
 ---
 # <a name="cmfcrebar-class"></a>Klasa CMFCReBar
 A `CMFCReBar` obiekt jest pasek sterowania, który zapewnia układu, trwałości i informacje o formantach paska pomocniczego stanie.  
@@ -110,22 +110,22 @@ BOOL AddBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] [out] `pBar`  
+ [in] [out] *pBar*  
  Wskaźnik do okna podrzędnego, który ma zostać wstawione do paska pomocniczego. Odwołuje się do obiektu musi mieć **ws_child —** styl okna.  
   
- [in] `pszText`  
+ [in] *pszText*  
  Określa tekst wyświetlany na paska pomocniczego. Tekst nie jest częścią okna podrzędnego. Zamiast jest wyświetlany na paska pomocniczego, do samej siebie.  
   
- [in] [out] `pbmp`  
+ [in] [out] *pbmp*  
  Określa mapy bitowej, który będzie wyświetlany na tła paska pomocniczego.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Zawiera styl, aby zastosować do grupy. Pełną listę stylów poza pasmem, zobacz opis `fStyle` w [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) struktury w dokumentacji zestawu SDK systemu Windows.  
   
- [in] `clrFore`  
+ [in] *clrFore*  
  Reprezentuje kolor pierwszego planu paska pomocniczego.  
   
- [in] `clrBack`  
+ [in] *clrBack*  
  Reprezentuje kolor tła paska pomocniczego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -143,16 +143,16 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] [out] `pParentWnd`  
+ [in] [out] *pParentWnd*  
  Wskaźnik do okna nadrzędnego tego formantu paska pomocniczego.  
   
- [in] `dwCtrlStyle`  
+ [in] *dwCtrlStyle*  
  Określa styl formantu paska pomocniczego. Styl wartość domyślna to **RBS_BANDBORDERS**, która wyświetla zawęzić wierszy w celu rozdzielenia sąsiadujących paskami w formancie paska pomocniczego. Lista prawidłowy style, zobacz [stylów formantu paska pomocniczego](http://msdn.microsoft.com/library/windows/desktop/bb774377) w dokumentacji zestawu SDK systemu Windows.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Styl okna w formancie paska pomocniczego. Lista prawidłowy style, zobacz [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `nID`  
+ [in] *nID*  
  Identyfikator paska pomocniczego okna podrzędnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -183,8 +183,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -209,7 +209,7 @@ void EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -232,7 +232,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `CPoint`  
+ [in] *CPoint*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -248,8 +248,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `point`  
- [in] `pTI`  
+ [in] *punktu*  
+ [in] *pTI*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -265,8 +265,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pTarget`  
- [in] `bDisableIfNoHndler`  
+ [in] *pTarget*  
+ [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -278,7 +278,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
   
 ### <a name="remarks"></a>Uwagi  
   

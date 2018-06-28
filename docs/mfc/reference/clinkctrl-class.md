@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2312861a1b13ecb432c7893a27d72c61ecd78ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 47cd25a92e572d02996008de9fc5265138d4ecb6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371702"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042381"
 ---
 # <a name="clinkctrl-class"></a>Klasa CLinkCtrl
 Udostępnia funkcje formantu SysLink wspólne systemu Windows.  
@@ -131,19 +131,19 @@ virtual BOOL Create(DWORD dwStyle,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszLinkMarkup`  
+ *lpszLinkMarkup*  
  Wskaźnik do zakończony zerem ciąg, który zawiera oznaczony jako tekst do wyświetlenia. Aby uzyskać więcej informacji, zobacz sekcję "Znaczników i łącze Access" w temacie [omówienie formanty SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
   
- `dwStyle`  
+ *dwStyle*  
  Określa styl kontrolki łącza. Zastosuj dowolną kombinację stylów formantu. Zobacz [najczęściej używane style formantu](http://msdn.microsoft.com/library/windows/desktop/bb775498) w `Windows SDK` Aby uzyskać więcej informacji.  
   
- `rect`  
+ *Rect*  
  Określa rozmiar i położenie kontrolki łącza. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [RECT](../../mfc/reference/rect-structure1.md) struktury.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Określa okno nadrzędne kontrolki łącza. Nie może być `NULL`.  
   
- `nID`  
+ *nID*  
  Określa identyfikator kontrolki łącza.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -152,7 +152,7 @@ virtual BOOL Create(DWORD dwStyle,
 ### <a name="remarks"></a>Uwagi  
  Możesz utworzyć `CLinkCtrl` obiektu w dwóch krokach. Najpierw należy wywołać konstruktora, a następnie wywołać `Create`, która tworzy kontrolkę łącza i dołącza go do `CLinkCtrl` obiektu. Jeśli chcesz style rozszerzonej systemu windows za pomocą formantu wywołanie [CLinkCtrl::CreateEx](#createex) zamiast `Create`.  
   
- Drugiej formy `Create` metoda jest przestarzała. Pierwszy formularz, który określa korzystać `lpszLinkMarkup` parametru.  
+ Drugiej formy `Create` metoda jest przestarzała. Pierwszy formularz, który określa korzystać *lpszLinkMarkup* parametru.  
   
 ### <a name="example"></a>Przykład  
  Poniższy przykład kodu definiuje dwie zmienne o nazwie `m_Link1` i `m_Link2`, które umożliwiają dostęp do dwóch formantów łącza.  
@@ -185,22 +185,22 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszLinkMarkup`  
+ *lpszLinkMarkup*  
  Wskaźnik do zakończony zerem ciąg, który zawiera oznaczony jako tekst do wyświetlenia. Aby uzyskać więcej informacji, zobacz sekcję "Znaczników i łącze Access" w temacie [omówienie formanty SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
   
- `dwExStyle`  
- Określa styl rozszerzony kontrolki łącza. Aby uzyskać listę rozszerzone style systemu Windows, zobacz `dwExStyle` parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ *dwExStyle*  
+ Określa styl rozszerzony kontrolki łącza. Aby uzyskać listę rozszerzone style systemu Windows, zobacz *dwExStyle* parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Określa styl kontrolki łącza. Zastosuj dowolną kombinację stylów formantu. Aby uzyskać więcej informacji, zobacz [najczęściej używane style formantu](http://msdn.microsoft.com/library/windows/desktop/bb775498) w zestawie Windows SDK.  
   
- `rect`  
+ *Rect*  
  Określa rozmiar i położenie kontrolki łącza. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [RECT](../../mfc/reference/rect-structure1.md) struktury.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Określa okno nadrzędne kontrolki łącza. Nie może być `NULL`.  
   
- `nID`  
+ *nID*  
  Określa identyfikator kontrolki łącza.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -209,7 +209,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
 ### <a name="remarks"></a>Uwagi  
  Użyj `CreateEx` zamiast [Utwórz](#create) do zastosowania rozszerzonej stałe styl systemu Windows.  
   
- Drugiej formy `CreateEx` metoda jest przestarzała. Pierwszy formularz, który określa korzystać `lpszLinkMarkup` parametru.  
+ Drugiej formy `CreateEx` metoda jest przestarzała. Pierwszy formularz, który określa korzystać *lpszLinkMarkup* parametru.  
   
 ##  <a name="getidealheight"></a>  CLinkCtrl::GetIdealHeight  
  Pobiera idealne wysokość kontrolki łącza.  
@@ -237,11 +237,11 @@ int GetIdealSize(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `cxMaxWidth`|Maksymalna szerokość łącze w pikselach.|  
-|[out] * `pSize`|Wskaźnik do systemu Windows [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury. Gdy metoda zwróci wartość, `cy` członkiem `SIZE` struktura zawiera łącze idealne wysokość tekstu szerokości tekstu łącza, określonej przez `cxMaxWidth`. `cx` Elementu członkowskiego struktury zawiera szerokość tekstu łącza, wymaganej w danym momencie.|  
+|[in] *cxMaxWidth*|Maksymalna szerokość łącze w pikselach.|  
+|[out] * *pSize*|Wskaźnik do systemu Windows [rozmiar](http://msdn.microsoft.com/library/windows/desktop/dd145106) struktury. Gdy metoda zwróci wartość, *cy* członkiem `SIZE` struktura zawiera łącze idealne wysokość tekstu szerokości tekstu łącza, określonej przez *cxMaxWidth*. *Cx* elementu członkowskiego struktury zawiera szerokość tekstu łącza, wymaganej w danym momencie.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Preferowana wysokość tekst łącza w pikselach. Zwracana wartość jest taka sama jak wartość `cy` członkiem `SIZE` struktury.  
+ Preferowana wysokość tekst łącza w pikselach. Zwracana wartość jest taka sama jak wartość *cy* członkiem `SIZE` struktury.  
   
 ### <a name="remarks"></a>Uwagi  
  Przykład `GetIdealSize` metody, zapoznaj się z przykładem w [CLinkCtrl::Create](#create).  
@@ -256,7 +256,7 @@ BOOL GetItem(PLITEM pItem) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Wskaźnik do [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) struktury otrzymywanie informacji elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -280,7 +280,7 @@ BOOL GetItemID(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iLink`  
+ *iLink*  
  Indeks elementu kontrolki łącza.  
   
  *strID*  
@@ -312,13 +312,13 @@ BOOL GetItemState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iLink`  
+ *iLink*  
  Indeks elementu kontrolki łącza.  
   
- `pnState`  
+ *pnState*  
  Wartość elementu określonego stanu.  
   
- `stateMask`  
+ *stateMask*  
  Kombinacja flagi opisujące stan elementy do pobrania. Aby uzyskać listę wartości, zobacz opis **stanu** element członkowski w [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) struktury. Dopuszczalne elementy są identyczne jak dozwolone w **stanu**.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -342,13 +342,13 @@ BOOL GetItemUrl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iLink`  
+ *iLink*  
  Indeks elementu kontrolki łącza.  
   
- `strUrl`  
+ *strUrl*  
  A [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) obiekt zawierający adres URL reprezentowany przez określony element  
   
- `szUrl`  
+ *szUrl*  
  Zerem ciąg zawierający adres URL reprezentowany przez określony element  
   
  *cchUrl*  
@@ -388,7 +388,7 @@ BOOL SetItem(PLITEM pItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Wskaźnik do [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) struktury zawierającej informacji do ustawienia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -407,7 +407,7 @@ BOOL SetItemID(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iLink`  
+ *iLink*  
  Indeks elementu kontrolki łącza.  
   
  *szID*  
@@ -430,13 +430,13 @@ BOOL SetItemState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iLink`  
+ *iLink*  
  Indeks elementu kontrolki łącza.  
   
- `pnState`  
+ *pnState*  
  Wartość elementu określonego stanu ustawiany.  
   
- `stateMask`  
+ *stateMask*  
  Kombinacja flagi opisujące element stanu ustawiany. Aby uzyskać listę wartości, zobacz opis **stanu** element członkowski w [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) struktury. Dopuszczalne elementy są identyczne jak dozwolone w **stanu**.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -455,10 +455,10 @@ BOOL SetItemUrl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iLink`  
+ *iLink*  
  Indeks elementu kontrolki łącza.  
   
- `szUrl`  
+ *szUrl*  
  Zerem ciąg zawierający adres URL reprezentowany przez określony element  
   
 ### <a name="return-value"></a>Wartość zwracana  

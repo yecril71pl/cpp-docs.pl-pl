@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 048bb65ae7e8c82df0d4003916da5d7a36a9b569
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0dbb6df911f0594b106f7b069a97b1fd6590c737
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378684"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042267"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Klasa CMFCRibbonBaseElement
 `CMFCRibbonBaseElement` Klasa jest klasą bazową dla wszystkich elementów, które można dodać do [pasek wstążki](../../mfc/reference/cmfcribbonbar-class.md). Przykłady elementów wstążki to wstążki przyciski wstążki pola wyboru i wstążki pola kombi.  
@@ -423,7 +423,7 @@ virtual void AddToKeyList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `arElems`  
+ [in] *arElems*  
  Odwołanie do [carray —](../../mfc/reference/carray-class.md) z poradami dotyczącymi klawiszy.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -439,10 +439,10 @@ virtual int AddToListBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pWndListBox`  
+ [in] *pWndListBox*  
  Wskaźnik do pola listy poleceń.  
   
- [in] `bDeep`  
+ [in] *bDeep*  
  Ten parametr nie jest używany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -529,7 +529,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `src`  
+ [in] *src*  
  Źródło [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -555,19 +555,19 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- [in] `type`  
+ [in] *typu*  
  Typ obrazu wyliczyć wartość. Zobacz sekcję uwag listę możliwych wartości.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  Prostokąt obrazu.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda nie działa. Zastępuje tę metodę w klasie pochodnej, aby narysować obraz dla elementu wstążki.  
   
- W poniższej tabeli przedstawiono możliwe wartości `type` parametru:  
+ W poniższej tabeli przedstawiono możliwe wartości *typu* parametru:  
   
  `RibbonImageLarge`  
  Duży rozmiar obraz 32 x 32 pikseli.  
@@ -583,11 +583,11 @@ virtual CMFCRibbonBaseElement* Find(const CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pElement`  
+ [in] *pElement*  
  Wskaźnik do elementu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do elementu wstążki Jeśli `pElement` wskazuje bieżący obiekt; w przeciwnym razie `NULL`.  
+ Wskaźnik do elementu wstążki Jeśli *pElement* wskazuje bieżący obiekt; w przeciwnym razie `NULL`.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -599,7 +599,7 @@ virtual CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `dwData`  
+ [in] *dwData*  
  Dane skojarzone z elementem wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -615,7 +615,7 @@ virtual CMFCRibbonBaseElement* FindByID(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Identyfikator polecenia dla elementu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -631,7 +631,7 @@ virtual CMFCRibbonBaseElement* FindByOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pOriginal`  
+ [in] *pOriginal*  
  Wskaźnik do elementu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -648,7 +648,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -698,7 +698,7 @@ virtual void GetElements(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [w, out] `arElements`  
+ [w, out] *arElements*  
  Tablica elementów wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -713,10 +713,10 @@ virtual void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Identyfikator polecenia elementu wstążki.  
   
- [in] `arElements`  
+ [in] *arElements*  
  Tablica elementów wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -761,7 +761,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -787,10 +787,10 @@ virtual CRect GetKeyTipRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- [in] `bIsMenu`  
+ [in] *bIsMenu*  
  `TRUE` Jeśli element wstążki Wyświetla menu podręczne. w przeciwnym razie `FALSE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -807,7 +807,7 @@ virtual CSize GetKeyTipSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -965,7 +965,7 @@ virtual CSize GetRegularSize(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -984,7 +984,7 @@ virtual CSize GetSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1083,7 +1083,7 @@ virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `point`  
+ [in] *punktu*  
  Ten parametr nie jest używany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1126,7 +1126,7 @@ virtual BOOL IsAutoRepeatMode(int& nDelay) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nDelay`  
+ [in] *nDelay*  
  Ten parametr nie jest używany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1378,7 +1378,7 @@ BOOL NotifyCommand(BOOL bWithDelay = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bWithDelay`  
+ [in] *bWithDelay*  
  `TRUE` Aby dodać powiadomienia polecenie do kolejki komunikatów okna nadrzędnego; `FALSE` można natychmiast wysłać wiadomości do okna nadrzędnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1394,7 +1394,7 @@ virtual void NotifyHighlightListItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nIndex`  
+ [in] *nIndex*  
  Indeks elementu wstążki na liście.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1407,7 +1407,7 @@ virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `qat`  
+ [in] *qat*  
  Pasek narzędzi Szybki dostęp.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1423,7 +1423,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Ten parametr nie jest używany.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1450,7 +1450,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Ten parametr nie jest używany.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1465,10 +1465,10 @@ virtual void OnChangeMenuHighlight(CMFCRibbonPanelMenuBar* pPanelMenuBar
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pPanelMenuBar`  
+ [in] *pPanelMenuBar*  
  Ten parametr nie jest używany.  
   
- [in] `pHot`  
+ [in] *pHot*  
  Ten parametr nie jest używany.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1482,7 +1482,7 @@ virtual void OnDraw(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1499,13 +1499,13 @@ virtual void OnDrawKeyTip(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- [in] `rect`  
+ [in] *rect*  
  Prostokąt granic dla właściwości keytip.  
   
- [in] `bIsMenu`  
+ [in] *bIsMenu*  
  `TRUE` w przypadku właściwości keytip dla przycisku menu podręcznego; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1520,10 +1520,10 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- [in] `rect`  
+ [in] *rect*  
  Menu obrazu prostokąta.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1545,22 +1545,22 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia dla elementu wstążki.  
   
- [in] `strText`  
+ [in] *strText*  
  Wyświetlany tekst.  
   
- [in] `nTextOffset`  
+ [in] *nTextOffset*  
  Odległość w pikselach, po lewej stronie pola listy do wyświetlania tekstu.  
   
- [in] `rect`  
+ [in] *rect*  
  Prostokątny obszar wyświetlania elementu wstążki.  
   
- [in] `bIsSelected`  
+ [in] *bIsSelected*  
  Ten parametr nie jest używany.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  Ten parametr nie jest używany.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1574,7 +1574,7 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bIsMenuKey`  
+ [in] *bIsMenuKey*  
  `TRUE` Jeśli właściwości keytip Wyświetla menu podręczne; w przeciwnym razie `FALSE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1590,7 +1590,7 @@ virtual BOOL OnMenuKey(UINT nUpperChar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nUpperChar`  
+ [in] *nUpperChar*  
  Ten parametr nie jest używany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1607,7 +1607,7 @@ virtual BOOL OnProcessKey(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nChar`  
+ [in] *nChar*  
  Ten parametr nie jest używany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1624,7 +1624,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bIsRTL`  
+ [in] *bIsRTL*  
  Ten parametr nie jest używany.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1648,7 +1648,7 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bShow`  
+ [in] *bShow*  
  Ten parametr nie jest używany.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1672,7 +1672,7 @@ void PostMenuCommand(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmdId`  
+ [in] *uiCmdId*  
  Parametr nie jest używany.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1698,10 +1698,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParent`  
+ *pParent*  
  W oknie nadrzędnym elementem wstążki.  
   
- `data`  
+ *Dane*  
  Dane ułatwień dostępu dla elementu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1718,13 +1718,13 @@ virtual void SetCompactMode(BOOL bCompactMode = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bCompactMode`  
+ [in] *bCompactMode*  
  `TRUE` Aby zmniejszyć rozmiar wyświetlania elementu wstążki; `FALSE` zwiększyć rozmiar wyświetlania elementu wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
  Poniższa tabela zawiera podsumowanie logikę tej metody.  
   
-|`bCompactMode`|Bieżący rozmiar elementu wstążki|Nowy rozmiar elementu wstążki|  
+|*bCompactMode*|Bieżący rozmiar elementu wstążki|Nowy rozmiar elementu wstążki|  
 |--------------------|---------------------------------|-----------------------------|  
 |`TRUE`|CD|Brak zmian.|  
 |`TRUE`|Średni|CD, jeśli jest to możliwe.|  
@@ -1739,7 +1739,7 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `dwData`  
+ [in] *dwData*  
  Wartość danych.  
   
 ##  <a name="setdefaultmenulook"></a>  CMFCRibbonBaseElement::SetDefaultMenuLook  
@@ -1750,7 +1750,7 @@ void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bIsDefaultMenuLook`  
+ [in] *bIsDefaultMenuLook*  
  `TRUE` można ustawić element wstążki były wyświetlane jako podręcznego polecenia; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1763,7 +1763,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszText`  
+ [in] *lpszText*  
  Opis elementu wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1777,7 +1777,7 @@ virtual void SetID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nID`  
+ [in] *nID*  
  Identyfikator polecenia.  
   
 ##  <a name="setinitialmode"></a>  CMFCRibbonBaseElement::SetInitialMode  
@@ -1788,7 +1788,7 @@ virtual void SetInitialMode(BOOL bOneRow = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bOneRow`  
+ [in] *bOneRow*  
  `TRUE` Aby ograniczyć rozmiar wyświetlania dla elementów wstążki, aby skompaktować lub pośredniego; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1804,10 +1804,10 @@ virtual void SetKeys(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszKeys`  
+ [in] *lpszKeys*  
  Właściwości keytip elementu wstążki.  
   
- [in] `lpszMenuKeys`  
+ [in] *lpszMenuKeys*  
  Właściwości keytip menu wyskakującego elementu wstążki.  
   
 ##  <a name="setoriginal"></a>  CMFCRibbonBaseElement::SetOriginal  
@@ -1818,7 +1818,7 @@ virtual void SetOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pOriginal`  
+ [in] *pOriginal*  
  Wskaźnik do elementu wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1832,7 +1832,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pParent`  
+ [in] *pParent*  
  Wskaźnik do kategorii wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1846,7 +1846,7 @@ virtual void SetParentMenu(CMFCRibbonPanelMenuBar* pMenuBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pMenuBar`  
+ [in] *pMenuBar*  
  Menu nadrzędnego.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1859,7 +1859,7 @@ virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pRibbonBar`  
+ [in] *pRibbonBar*  
  Wskaźnik do nadrzędnego pasek wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1872,7 +1872,7 @@ void SetRect(CRect rect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `rect`  
+ [in] *rect*  
  Wymiary prostokąta.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1885,11 +1885,11 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszText`  
+ [in] *lpszText*  
  Tekst i właściwości keytip elementu wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby ustawić właściwości keytip dla elementu wstążki, Dołącz sekwencji unikowej nowego wiersza następują znaki właściwości keytip do `lpszText`.  
+ Aby ustawić właściwości keytip dla elementu wstążki, Dołącz sekwencji unikowej nowego wiersza następują znaki właściwości keytip do *lpszText*.  
   
 ### <a name="example"></a>Przykład  
   
@@ -1910,7 +1910,7 @@ virtual void SetTextAlwaysOnRight(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bSet`  
+ [in] *bUstawienie*  
  `TRUE` Aby wyświetlić tekst po prawej stronie; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1923,7 +1923,7 @@ virtual void SetToolTipText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszText`  
+ [in] *lpszText*  
  Tekst etykietki narzędzia.  
   
 ##  <a name="setvisible"></a>  CMFCRibbonBaseElement::SetVisible  
@@ -1934,7 +1934,7 @@ void SetVisible(BOOL bIsVisible);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bIsVisible`  
+ [in] *bIsVisible*  
  `TRUE` Aby wyświetlić element wstążki; `FALSE` do ukrywania elementów wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1959,10 +1959,10 @@ virtual BOOL StretchToWholeRow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Ten parametr nie jest używany.  
   
- [in] `nHeight`  
+ [in] *nHeight*  
  Wysokość wiersza.  
   
 ### <a name="return-value"></a>Wartość zwracana  

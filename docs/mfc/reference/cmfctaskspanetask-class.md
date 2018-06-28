@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4008389121a1a78ca746798af7f3fc18c9663b93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c16644a90bb349a78cac43867fdc648e9c01223d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371335"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040704"
 ---
 # <a name="cmfctaskspanetask-class"></a>Klasa CMFCTasksPaneTask
 `CMFCTasksPaneTask` Klasy to klasa pomocy, która reprezentuje zadania dla formantu w okienku zadań ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). Obiekt zadania reprezentuje element w grupie zadań ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Każde zadanie może mieć polecenie, które wykonuje platformę, gdy użytkownik kliknie zadania, a ikona wyświetlana na lewo od nazwy zadania.  
@@ -118,28 +118,28 @@ CMFCTasksPaneTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pGroup`  
+ *pGroup*  
  Określa [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) do której należy zadanie.  
   
- `lpszName`  
+ *lpszName*  
  Określa nazwę zadania.  
   
- `nIcon`  
+ *nIcon*  
  Określa indeks obrazu tego zadania na liście obrazów.  
   
- `uiCommandID`  
+ *uiCommandID*  
  Określa identyfikator polecenia polecenia, która jest wykonywana, gdy zadanie zostanie kliknięty.  
   
- `dwUserData`  
+ *dwUserData*  
  Dane zdefiniowane przez użytkownika.  
   
- `hwndTask`  
+ *hwndTask*  
  Określa dojścia do okna zadań.  
   
- `bAutoDestroyWindow`  
+ *bAutoDestroyWindow*  
  Jeśli `TRUE`, okna zadania zostaną automatycznie usunięte.  
   
- `nWindowHeight`  
+ *nWindowHeight*  
  Określa wysokość okna zadań.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -252,14 +252,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pParent`  
+ [in] *pParent*  
  Reprezentuje okna nadrzędnego bieżącego zadania.  
   
- [out] `data`  
+ [out] *danych*  
  Obiekt typu `CAccessibilityData` który jest wypełniane przy użyciu danych dostępności bieżącego zadania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli `data` parametr został pomyślnie wypełnione z danymi dostępności bieżące zadanie, a w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli *danych* parametr został pomyślnie wypełnione z danymi dostępności bieżące zadanie, a w przeciwnym razie `FALSE`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

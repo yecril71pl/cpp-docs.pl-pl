@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b675cfd635fd4dea962c30605072beec1545dda1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a67b1e405f1e3be472f9b9b3b5ebe00be3fb8a5d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375102"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041048"
 ---
 # <a name="colechangeicondialog-class"></a>Klasa COleChangeIconDialog
 Używane dla okna dialogowego OLE Zmień ikonę.  
@@ -100,10 +100,10 @@ explicit COleChangeIconDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Wskazuje element do skonwertowania.  
   
- `dwFlags`  
+ *wartość elementu dwFlags*  
  Tworzenie flagę zawiera dowolną liczbę następujące wartości łączyć, używając operatora testu koniunkcji- lub operator:  
   
 - **CIF_SELECTCURRENT** Określa, że bieżący przycisk radiowy wybrany zostanie początkowo wywołanego okna dialogowego. Domyślnie włączone.  
@@ -116,7 +116,7 @@ explicit COleChangeIconDialog(
   
 - **CIF_USEICONEXE** Określa, czy ikona powinny zostać wyodrębniony z plik wykonywalny określony w **szIconExe** pole [m_ci](#m_ci) zamiast pobranej z typu. Jest to przydatne do osadzania lub łączenia plików innych niż OLE.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskazuje obiekt okna nadrzędnego lub właściciela (typu `CWnd`) do której należy obiektu okna dialogowego. Jeśli jest **NULL**, okno nadrzędne okna dialogowego zostanie ustawiona do okna głównego aplikacji.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -132,7 +132,7 @@ BOOL DoChangeIcon(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Wskazuje element, którego ikonę jest zmieniana.  
   
 ### <a name="return-value"></a>Wartość zwracana  

@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2083c26943768afff4b3b20a2ba95c709648dd50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8786a35653dbf3d4de14b81563011b3a031c9c4b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376141"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039001"
 ---
 # <a name="cmfccolorbar-class"></a>Klasa CMFCColorBar
 `CMFCColorBar` Klasa reprezentuje dokujący pasek sterowania, który można wybrać kolory dokumentu lub aplikacji.  
@@ -244,7 +244,7 @@ virtual void AdjustLocations();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda jest wywoływana przez framework podczas `WM_SIZE` przetwarzania komunikatów.  
+ Ta metoda jest wywoływana przez framework podczas przetwarzania komunikatu WM_SIZE.  
   
 ##  <a name="allowchangetextlabels"></a>  CMFCColorBar::AllowChangeTextLabels  
  Wskazuje, czy tekst etykiety kolor przycisków może się zmieniać.  
@@ -280,7 +280,7 @@ virtual CSize CalcSize(BOOL bVertDock);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bVertDock`  
+ [in] *bVertDock*  
  `TRUE` Aby określić, że formant pasek koloru jest zadokowany pionowo; `FALSE` do określenia, że formantu paska kolorów jest zadokowany poziomo.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -324,50 +324,50 @@ CMFCColorBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `colors`  
+ [in] *kolorów*  
  Tablica kolorów, które Wyświetla platformę w formancie paska koloru.  
   
- [in] `color`  
+ [in] *kolorów*  
  Początkowo wybranego koloru.  
   
- [in] `lpszAutoColor`  
+ [in] *lpszAutoColor*  
  Etykieta tekstowa elementu *automatyczne* przycisk koloru (ustawienie domyślne), lub `NULL`.  
   
  Standardowa etykieta przycisku automatycznego **automatyczne**.  
   
- [in] `lpszOtherColor`  
+ [in] *lpszOtherColor*  
  Etykieta tekstowa elementu *innych* przycisku, który wyświetla więcej kolorów, lub `NULL`.  
   
  Standardowe Etykieta przycisku innych **więcej kolorów...** .  
   
- [in] `lpszDocColors`  
+ [in] *lpszDocColors*  
  Etykieta tekstowa przycisk kolory dokumentu. Palety kolorów dokumentu zawiera listę wszystkich kolorów, które obecnie używane.  
   
- [in] `lstDocColors`  
+ [in] *lstDocColors*  
  Lista kolorów, które są obecnie używane.  
   
- [in] `nColumns`  
+ [in] *nColumns*  
  Liczba kolumn, które ma tablicę kolorów.  
   
- [in] `nRowsDockHorz`  
+ [in] *nRowsDockHorz*  
  Liczba wierszy, które pasek koloru ma, gdy jest zadokowany poziomo.  
   
- [in] `nColDockVert`  
+ [in] *nColDockVert*  
  Liczba kolumn, które pasek koloru ma, gdy jest zadokowany w pionie.  
   
- [in] `colorAutomatic`  
+ [in] *colorAutomatic*  
  Domyślny kolor platformę stosuje się po kliknięciu przycisku automatycznego.  
   
- [in] `nCommandID`  
+ [in] *nCommandID*  
  Identyfikator polecenia sterowania pasek koloru.  
   
- [in] `pParentBtn`  
+ [in] *pParentBtn*  
  Wskaźnik do nadrzędnego przycisku.  
   
- [in] `src`  
+ [in] *src*  
  Istniejące `CMFCColorBar` obiekt ma zostać skopiowany do nowego `CMFCColorBar` obiektu.  
   
- [in] `uiCommandID`  
+ [in] *uiCommandID*  
  Identyfikator polecenia.  
   
 ##  <a name="contexttosize"></a>  CMFCColorBar::ContextToSize  
@@ -383,8 +383,8 @@ void ContextToSize(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `bSquareButtons`|`TRUE` kształt przycisków w formancie paska koloru są kwadratowe; w przeciwnym razie `FALSE`. Wartość domyślna to `TRUE`.|  
-|[in] `bCenterButtons`|`TRUE` Aby określić, że jest wyśrodkowywana zawartości rachunku przycisku paska koloru; w przeciwnym razie `FALSE`. Wartość domyślna to `TRUE`.|  
+|[in] *bSquareButtons*|`TRUE` kształt przycisków w formancie paska koloru są kwadratowe; w przeciwnym razie `FALSE`. Wartość domyślna to `TRUE`.|  
+|[in] *bCenterButtons*|`TRUE` Aby określić, że jest wyśrodkowywana zawartości rachunku przycisku paska koloru; w przeciwnym razie `FALSE`. Wartość domyślna to `TRUE`.|  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -403,25 +403,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Wskaźnik do okna nadrzędnego.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Bitowe połączenie (lub) [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `nID`  
+ [in] *nID*  
  Identyfikator polecenia.  
   
- [in] `pPalette`  
+ [in] *pPalette*  
  Wskaźnik do palety kolorów. Wartość domyślna to `NULL`.  
   
- [in] `nColumns`  
+ [in] *nColumns*  
  Liczba kolumn w formancie paska koloru. Wartość domyślna to 0.  
   
- [in] `nRowsDockHorz`  
+ [in] *nRowsDockHorz*  
  Liczba wierszy w formancie paska koloru, gdy jest zadokowany poziomo. Wartość domyślna to 0.  
   
- [in] `nColDockVert`  
+ [in] *nColDockVert*  
  Liczba kolumn w formancie paska koloru, gdy jest zadokowany w pionie. Wartość domyślna to 0.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -443,26 +443,26 @@ virtual BOOL CreateControl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Wskaźnik do okna nadrzędnego. Nie może być `NULL`.  
   
- [in] `rect`  
+ [in] *rect*  
  Prostokąt ograniczający Określa, gdzie można narysować kontrolkę paska koloru.  
   
- [in] `nID`  
+ [in] *nID*  
  Identyfikator formantu.  
   
- [in] `nColumns`  
+ [in] *nColumns*  
  Nadaje się doskonale liczba kolumn w formancie paska koloru. Ta metoda modyfikuje ten numer do dopasowania określonej paletę kolorów. Wartość domyślna to -1, co oznacza, że ten parametr nie zostanie określony.  
   
- [in] `pPalette`  
+ [in] *pPalette*  
  Wskaźnik do palety kolorów, lub `NULL`. Jeśli ten parametr jest `NULL`, ta metoda oblicza rozmiar formantu paska koloru tak, jakby określono 20 kolorów. Wartość domyślna to `NULL`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `TRUE` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda używa `rect`, `nColumns`, i `pPalette` parametrów można obliczyć odpowiedniego lub wierszy i kolumn w formantu paska kolorów, a następnie wywołania [CMFCColorBar::Create](#create) metody.  
+ Ta metoda używa *rect*, *nColumns*, i *pPalette* parametrów można obliczyć odpowiedniego lub wierszy i kolumn w formantu paska kolorów, a następnie wywołania [CMFCColorBar::Create](#create) metody.  
   
 ##  <a name="createpalette"></a>  CMFCColorBar::CreatePalette  
  Inicjuje palety kolorów w określonej tablicy kolorów.  
@@ -477,8 +477,8 @@ static BOOL CreatePalette(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `arColors`|Tablica kolorów.|  
-|[in] `palette`|Palety kolorów.|  
+|[in] *arColors*|Tablica kolorów.|  
+|[in] *palety*|Palety kolorów.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `TRUE` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `FALSE`.  
@@ -494,19 +494,19 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Etykieta tekstowa elementu *automatyczne* przycisk koloru (ustawienie domyślne), lub `NULL`.  
   
  Standardowa etykieta przycisku automatycznego **automatyczne**.  
   
- [in] `colorAutomatic`  
+ [in] *colorAutomatic*  
  Domyślny kolor platformę stosuje się po kliknięciu przycisku automatycznego.  
   
- [in] `bEnable`  
+ [in] *bWłączenie*  
  `TRUE` Aby włączyć automatyczne przycisk; `FALSE` wyłączyć przycisk Automatyczny. Wartość domyślna to `TRUE`.  
   
 ### <a name="remarks"></a>Uwagi  
- Etykieta tekstowa elementu przycisk Automatyczny zostanie usunięty w przypadku `lpszLabel` parametr jest `NULL` lub `bEnable` parametr jest `FALSE`.  
+ Etykieta tekstowa elementu przycisk Automatyczny zostanie usunięty w przypadku *lpszLabel* parametr jest `NULL` lub *bWłączenie* parametr jest `FALSE`.  
   
 ##  <a name="enableotherbutton"></a>  CMFCColorBar::EnableOtherButton  
  Włącza lub wyłącza wyświetlanie okna dialogowego, w którym użytkownik może zaznaczyć więcej kolorów.  
@@ -519,12 +519,12 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Etykieta tekstowa elementu *innych* przycisku, który wyświetla więcej kolorów, lub `NULL`.  
   
  Standardowa etykieta ten przycisk jest **więcej kolorów...** .  
   
- [in] `bAltColorDlg`  
+ [in] *bAltColorDlg*  
  `TRUE` Aby wyświetlić [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) okno dialogowe; `FALSE` do wyświetlenia standardowego [CColorDialog](../../mfc/reference/ccolordialog-class.md) okno dialogowe. Wartość domyślna to `TRUE`.  
   
  [in] `bEnable`  
@@ -551,7 +551,7 @@ CSize GetColorGridSize(BOOL bVertDock) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `bVertDock`|`TRUE` do przeprowadzenia obliczeń kontrolkę pionowo zadokowany pasek koloru; w przeciwnym razie wykonuje obliczenia poziomo zadokowanych formantu.|  
+|[in] *bVertDock*|`TRUE` do przeprowadzenia obliczeń kontrolkę pionowo zadokowany pasek koloru; w przeciwnym razie wykonuje obliczenia poziomo zadokowanych formantu.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) którego `cx` składnika zawiera liczbę kolumn i których `cy` składnik zawiera liczbę wierszy.  
@@ -567,7 +567,7 @@ UINT GetCommandID() const;
  Identyfikator polecenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Gdy użytkownik wybierze nowy kolor, platformę wysyła identyfikator polecenia w `WM_COMMAND` wiadomości do powiadamiania elementu nadrzędnego `CMFCColorBar` obiektu.  
+ Gdy użytkownik wybierze nowy kolor, platformę wysyła identyfikator polecenia w komunikacie WM_COMMAND, by powiadomić element nadrzędny `CMFCColorBar` obiektu.  
   
 ##  <a name="getextraheight"></a>  CMFCColorBar::GetExtraHeight  
  Oblicza dodatkowe wysokość, który bieżącego pasek koloru wymaga, aby wyświetlić elementy interfejsu użytkownika inne, takie jak **innych** kolory przycisku lub dokumentu.  
@@ -580,7 +580,7 @@ int GetExtraHeight(int nNumColumns) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `nNumColumns`|Jeśli formant pasek koloru zawiera kolory dokumentu, numer kolumny do wyświetlenia w siatce kolory dokumentu. W przeciwnym razie ta wartość nie jest używana.|  
+|[in] *nNumColumns*|Jeśli formant pasek koloru zawiera kolory dokumentu, numer kolumny do wyświetlenia w siatce kolory dokumentu. W przeciwnym razie ta wartość nie jest używana.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Obliczony wysokość dodatkowe wymagane.  
@@ -630,8 +630,8 @@ static int InitColors(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `pPalette`|Wskaźnik do obiektu palety lub `NULL`. Jeśli ten parametr jest `NULL`, ta metoda korzysta z domyślnej palety systemu operacyjnego.|  
-|[in] `arColors`|Tablica kolorów.|  
+|[in] *pPalette*|Wskaźnik do obiektu palety lub `NULL`. Jeśli ten parametr jest `NULL`, ta metoda korzysta z domyślnej palety systemu operacyjnego.|  
+|[in] *arColors*|Tablica kolorów.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczba elementów w tablicy kolorów.  
@@ -657,7 +657,7 @@ virtual BOOL OnKey(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nChar`  
+ [in] *nChar*  
  Kod klawisza wirtualnego klucz, który użytkownik nacisnął klawisz.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -674,7 +674,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `pButton`|Wskaźnik do formantu, który znajduje się na pasku narzędzi.|  
+|[in] *pButton*|Wskaźnik do formantu, który znajduje się na pasku narzędzi.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `TRUE` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `FALSE`.  
@@ -689,10 +689,10 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pTarget`  
+ [in] *pTarget*  
  Wskaźnik do typu window, który zawiera element interfejsu użytkownika do zaktualizowania.  
   
- [in] `bDisableIfNoHndler`  
+ [in] *bDisableIfNoHndler*  
  `TRUE` Aby wyłączyć elementu interfejsu użytkownika, jeśli bez obsługi jest zdefiniowany w mapy komunikatów; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -708,10 +708,10 @@ virtual BOOL OpenColorDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `colorDefault`  
+ [in] *colorDefault*  
  Kolor, który jest domyślnie zaznaczona, gdy zostanie otwarte okno dialogowe kolorów.  
   
- [out] `colorRes`  
+ [out] *colorRes*  
  Kolor wybranego użytkownika.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -737,7 +737,7 @@ CPalette* SelectPalette(CDC* pDC);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `pDC`|Wskaźnik do kontekstu urządzenia przycisku nadrzędnego bieżącego formantu paska koloru.|  
+|[in] *podstawowego kontrolera domeny*|Wskaźnik do kontekstu urządzenia przycisku nadrzędnego bieżącego formantu paska koloru.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do zastępowany przez palety przycisku nadrzędnego bieżącego formantu paska kolorów palety.  
@@ -750,7 +750,7 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `color`  
+ [in] *kolorów*  
  Wartości kolorów RGB.  
   
 ##  <a name="setcolorname"></a>  CMFCColorBar::SetColorName  
@@ -763,10 +763,10 @@ static void SetColorName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `color`  
+ [in] *kolorów*  
  Wartości RGB koloru.  
   
- [in] `strName`  
+ [in] *strName*  
  Nowa nazwa dla określonego koloru.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -780,7 +780,7 @@ void SetCommandID(UINT nCommandID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nCommandID`  
+ [in] *nCommandID*  
  Identyfikator polecenia.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -797,13 +797,13 @@ void SetDocumentColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszCaption`  
+ [in] *lpszCaption*  
  Podpis wyświetlany, gdy nie jest zadokowany formantu paska kolorów.  
   
- [in] `lstDocColors`  
+ [in] *lstDocColors*  
  Lista kolorów zastępuje kolorów bieżącego dokumentu.  
   
- [in] `bShowWhenDocked`  
+ [in] *bShowWhenDocked*  
  `TRUE` Aby wyświetlić kolory dokumentu, gdy jest zadokowany formantu paska koloru; w przeciwnym razie `FALSE`. Wartość domyślna to `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -817,7 +817,7 @@ void SetHorzMargin(int nHorzMargin);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nHorzMargin`  
+ [in] *nHorzMargin*  
  Poziomy margines w pikselach.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -834,7 +834,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `pWndList`|Wskaźnik do obiektu formantu siatki właściwości.|  
+|[in] *pWndList*|Wskaźnik do obiektu formantu siatki właściwości.|  
   
 ##  <a name="setvertmargin"></a>  CMFCColorBar::SetVertMargin  
  Ustawia margines pionowy, czyli miejsce między komórki kolor górny lub dolny a obramowaniem obszaru klienta.  
@@ -844,7 +844,7 @@ void SetVertMargin(int nVertMargin);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nVertMargin`  
+ [in] *nVertMargin*  
  Pionowego marginesu w pikselach.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -858,11 +858,11 @@ virtual void ShowCommandMessageString(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmdId`  
+ [in] *uiCmdId*  
  Identyfikator polecenia. (Ten parametr jest ignorowany.)  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła `WM_SETMESSAGESTRING` komunikat do właściciela formantu paska kolorów.  
+ Ta metoda wysyła komunikat WM_SETMESSAGESTRING właścicielowi kontrolki paska koloru.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

@@ -112,12 +112,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1101e4115efa3c5c822d0d64b767cdee379a0e0b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34baec7ddcb04cb3de564484a2b4afd04e36eae9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377839"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042283"
 ---
 # <a name="clistbox-class"></a>Clistbox — klasa
 Udostępnia funkcje systemu Windows pola listy.  
@@ -195,7 +195,7 @@ class CListBox : public CWnd
   
  Można utworzyć pole listy z szablonu okna dialogowego lub bezpośrednio w kodzie. Aby utworzyć bezpośrednio, należy utworzyć `CListBox` obiekt, a następnie wywołaj [Utwórz](#create) funkcji członkowskiej Utwórz kontrolkę pola listy z systemem Windows i dołączenie go do `CListBox` obiektu. Aby użyć pola listy w szablonu okna dialogowego, zadeklarować zmiennej pole listy w klasie — okno dialogowe, a następnie użyj `DDX_Control` w klasie — okno dialogowe `DoDataExchange` funkcji, aby połączyć zmiennej członka do kontrolki. (to jest wykonywane automatycznie podczas dodawania do własnej klasy okno dialogowe Zmienna sterująca.)  
   
- Konstrukcja może być jednoetapowy proces w klasie pochodnej z `CListBox`. Zapisywanie konstruktora klasy pochodnej i wywołanie **Utwórz** z wewnątrz konstruktora.  
+ Konstrukcja może być jednoetapowy proces w klasie pochodnej z `CListBox`. Zapisywanie konstruktora klasy pochodnej i wywołanie `Create` z wewnątrz konstruktora.  
   
  Jeśli chcesz obsługiwać Windows komunikaty powiadomień wysłane przez pole listy do elementu nadrzędnego (zazwyczaj klasą pochodną [cdialog —](../../mfc/reference/cdialog-class.md)), Dodaj funkcji członkowskiej wpisu i program obsługi komunikatów map wiadomości do klasy nadrzędnej dla każdego komunikatu.  
   
@@ -253,7 +253,7 @@ int AddString(LPCTSTR lpszItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszItem`  
+ *lpszItem*  
  Wskazuje ciąg zakończony zerem, który ma zostać dodany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -277,10 +277,10 @@ virtual int CharToItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nKey`  
+ *nKey*  
  Kod ANSI znaku wpisana przez użytkownika.  
   
- `nIndex`  
+ *nIndex*  
  Bieżąca pozycja karetkę pola listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -312,7 +312,7 @@ CListBox();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Możesz utworzyć `CListBox` obiektu w dwóch krokach. Po pierwsze wywołanie konstruktora **clistbox —** , a następnie wywołać **Utwórz**, która inicjuje pola listy z systemem Windows i dołącza go do `CListBox`.  
+ Możesz utworzyć `CListBox` obiektu w dwóch krokach. Po pierwsze wywołanie konstruktora `ClistBox` , a następnie wywołać `Create`, która inicjuje pola listy z systemem Windows i dołącza go do `CListBox`.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CListBox#1](../../mfc/codesnippet/cpp/clistbox-class_3.cpp)]  
@@ -325,7 +325,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpCompareItemStruct`  
+ *lpCompareItemStruct*  
  Długie wskaźnik do `COMPAREITEMSTRUCT` struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -357,25 +357,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
+ *dwStyle*  
  Określa styl pola listy. Zastosuj dowolną kombinację [style pola listy](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) do pola.  
   
- `rect`  
+ *Rect*  
  Określa pole listy rozmiar i położenie. Może to być albo `CRect` obiektu lub `RECT` struktury.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Określa okno nadrzędne pole listy (zazwyczaj `CDialog` obiektu). Nie może być **NULL**.  
   
- `nID`  
+ *nID*  
  Określa identyfikator formantu pola listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Możesz utworzyć `CListBox` obiektu w dwóch krokach. Najpierw należy wywołać konstruktora, a następnie wywołać **Utwórz**, która inicjuje pola listy z systemem Windows i dołącza go do `CListBox` obiektu.  
+ Możesz utworzyć `CListBox` obiektu w dwóch krokach. Najpierw należy wywołać konstruktora, a następnie wywołać `Create`, która inicjuje pola listy z systemem Windows i dołącza go do `CListBox` obiektu.  
   
- Gdy **Utwórz** wykonuje system Windows wysyła [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), i [WM_ GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) wiadomości do kontrolki pola listy.  
+ Gdy `Create` wykonuje system Windows wysyła [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), i [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) wiadomości do kontrolki pola listy.  
   
  Komunikaty te są obsługiwane przez domyślnie [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), i [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) funkcje Członkowskie w `CWnd` klasy podstawowej. Aby rozszerzyć domyślnej obsługi wiadomości, klasa wyprowadzona z `CListBox`, Dodaj mapowanie komunikatów do nowej klasy i zastąpienie poprzedniego funkcje Członkowskie obsługi wiadomości. Zastąpienie `OnCreate`, na przykład, aby wykonać wymagane inicjowania dla nowej klasy.  
   
@@ -406,7 +406,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpDeleteItemStruct`  
+ *lpDeleteItemStruct*  
  Długie wskaźnik do systemu Windows [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md) struktury, który zawiera informacje o usuniętego elementu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -425,14 +425,14 @@ int DeleteString(UINT nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Określa liczony od zera indeks ciąg, który ma zostać usunięty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczba parametrów na liście. Wartość zwracana jest **LB_ERR** Jeśli `nIndex` Określa indeks jest większy niż liczba elementów na liście.  
+ Liczba parametrów na liście. Wartość zwracana jest **LB_ERR** Jeśli *nIndex* Określa indeks jest większy niż liczba elementów na liście.  
   
 ### <a name="remarks"></a>Uwagi  
- Wszystkie elementy występujące po słowie `nIndex` teraz Przenieś w dół o jedną pozycję. Na przykład jeśli pole listy zawiera dwa elementy, usunięcie pierwszy element spowoduje, że element pozostałych się teraz na pierwszym miejscu. `nIndex`= 0 dla elementu na pierwszym miejscu.  
+ Wszystkie elementy po *nIndex* teraz Przenieś w dół o jedną pozycję. Na przykład jeśli pole listy zawiera dwa elementy, usunięcie pierwszy element spowoduje, że element pozostałych się teraz na pierwszym miejscu. *nIndex*= 0 dla elementu na pierwszym miejscu.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CListBox#7](../../mfc/codesnippet/cpp/clistbox-class_7.cpp)]  
@@ -447,8 +447,8 @@ int Dir(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `attr`  
- Może być dowolną kombinacją `enum` wartości opisanego w **CFile::GetStatu**[s](../../mfc/reference/cfile-class.md#getstatus), lub dowolną kombinację następujących wartości:  
+ *attr*  
+ Może być dowolną kombinacją **wyliczenia** wartości opisanego w **CFile::GetStatu**[s](../../mfc/reference/cfile-class.md#getstatus), lub dowolną kombinację następujących wartości:  
   
 |Wartość|Znaczenie|  
 |-----------|-------------|  
@@ -456,12 +456,12 @@ int Dir(
 |0x0001|Plik można odczytywać, ale nie zapisane.|  
 |0x0002|Plik jest ukryta i nie ma na liście zawartości katalogu.|  
 |0x0004|Plik jest plikiem systemu.|  
-|0x0010|Nazwa określona przez `lpszWildCard` Określa katalog.|  
+|0x0010|Nazwa określona przez *lpszWildCard* Określa katalog.|  
 |0x0020|Plik został zarchiwizowany.|  
-|0x4000|Obejmują wszystkie dyski, które odpowiada nazwie określonej przez `lpszWildCard`.|  
+|0x4000|Obejmują wszystkie dyski, które odpowiada nazwie określonej przez *lpszWildCard*.|  
 |0x8000|Flagę Exclusive. Jeśli ustawiono flagę exclusive, wyświetlane są tylko pliki o określonym typie. W przeciwnym razie pliki określonego typu są wyświetlane oprócz plików "normal".|  
   
- `lpszWildCard`  
+ *lpszWildCard*  
  Wskazuje ciąg specyfikacji pliku. Ten ciąg może zawierać symboli wieloznacznych (na przykład *.\*).  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -478,13 +478,13 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Długie wskaźnik do [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) strukturę, która zawiera informacje o typie rysunku wymagane.  
   
 ### <a name="remarks"></a>Uwagi  
  **ItemAction** i **itemState** członkami `DRAWITEMSTRUCT` struktury zdefiniować rysowania akcję, która ma zostać wykonane.  
   
- Domyślnie ta funkcja członkowska nie działa. Przesłonić tę funkcję elementu członkowskiego, aby zaimplementować rysunku rysowania przez właściciela `CListBox` obiektu. Aplikacja powinna przywrócenie wszystkich obiektów grafiki urządzenia interfejsu (GDI), wybrane kontekst wyświetlania dostarczane w `lpDrawItemStruct` przed ten element członkowski kończy funkcji.  
+ Domyślnie ta funkcja członkowska nie działa. Przesłonić tę funkcję elementu członkowskiego, aby zaimplementować rysunku rysowania przez właściciela `CListBox` obiektu. Aplikacja powinna przywrócenie wszystkich obiektów grafiki urządzenia interfejsu (GDI), wybrane kontekst wyświetlania dostarczane w *lpDrawItemStruct* przed ten element członkowski kończy funkcji.  
   
  Zobacz [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) opis `DRAWITEMSTRUCT` struktury.  
   
@@ -501,10 +501,10 @@ int FindString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nStartAfter`  
- Zawiera liczony od zera indeks elementu przed pierwszym elementem do wyszukania. Podczas wyszukiwania przez nią miejsce osiągnie dolnej części pola listy, która kontynuuje od górnej krawędzi pola listy ponownie element określony przez `nStartAfter`. Jeśli `nStartAfter` wynosi -1, przeszukiwany jest pole całą listę od początku.  
+ *nStartAfter*  
+ Zawiera liczony od zera indeks elementu przed pierwszym elementem do wyszukania. Podczas wyszukiwania przez nią miejsce osiągnie dolnej części pola listy, która kontynuuje od górnej krawędzi pola listy ponownie element określony przez *nStartAfter*. Jeśli *nStartAfter* -1, jest przeszukiwany jest pole całą listę od początku.  
   
- `lpszItem`  
+ *lpszItem*  
  Wskazuje ciąg zakończony zerem, który zawiera prefiks do wyszukania. Wyszukiwanie jest niezależny, więc ten ciąg może zawierać żadnych kombinacji wielkich i małych liter.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -517,7 +517,7 @@ int FindString(
  [!code-cpp[NVC_MFC_CListBox#10](../../mfc/codesnippet/cpp/clistbox-class_10.cpp)]  
   
 ##  <a name="findstringexact"></a>  CListBox::FindStringExact  
- Znajduje pierwszy ciąg pole listy, który dopasowuje ciąg określony w `lpszFind`.  
+ Znajduje pierwszy ciąg pole listy, który dopasowuje ciąg określony w *lpszFind*.  
   
 ```  
 int FindStringExact(
@@ -526,17 +526,17 @@ int FindStringExact(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndexStart`  
- Określa liczony od zera indeks elementu przed pierwszym elementem do wyszukania. Podczas wyszukiwania przez nią miejsce osiągnie dolnej części pola listy, która kontynuuje od górnej krawędzi pola listy ponownie element określony przez `nIndexStart`. Jeśli `nIndexStart` wynosi -1, przeszukiwany jest pole całą listę od początku.  
+ *nIndexStart*  
+ Określa liczony od zera indeks elementu przed pierwszym elementem do wyszukania. Podczas wyszukiwania przez nią miejsce osiągnie dolnej części pola listy, która kontynuuje od górnej krawędzi pola listy ponownie element określony przez *nIndexStart*. Jeśli *nIndexStart* -1, jest przeszukiwany jest pole całą listę od początku.  
   
- `lpszFind`  
+ *lpszFind*  
  Wskazuje zerem ciąg do wyszukania. Ten ciąg może zawierać pełną nazwę pliku z rozszerzeniem. Wyszukiwanie nie jest uwzględniana wielkość liter, więc ciąg może zawierać żadnych kombinacji wielkich i małych liter.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Indeks pasującego elementu, lub **LB_ERR** Jeśli wyszukiwanie nie powiodło się.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli pole listy została utworzona przy użyciu stylu rysowania przez właściciela, ale bez [lbs_hasstrings —](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) styl `FindStringExact` funkcji członkowskiej próbuje dopasować wartość bitowego względem wartości `lpszFind`.  
+ Jeśli pole listy została utworzona przy użyciu stylu rysowania przez właściciela, ale bez [lbs_hasstrings —](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) styl `FindStringExact` funkcji członkowskiej próbuje dopasować wartość bitowego względem wartości *lpszFind*.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CListBox#11](../../mfc/codesnippet/cpp/clistbox-class_11.cpp)]  
@@ -631,14 +631,14 @@ DWORD_PTR GetItemData(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Określa liczony od zera indeks elementu w polu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  32-bitową wartość skojarzoną z elementem, lub **LB_ERR** w przypadku wystąpienia błędu.  
   
 ### <a name="remarks"></a>Uwagi  
- Wartość bitowego `dwItemData` parametr [SetItemData](#setitemdata) wywołania.  
+ Wartość bitowego *dwItemData* parametr [SetItemData](#setitemdata) wywołania.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CListBox#15](../../mfc/codesnippet/cpp/clistbox-class_15.cpp)]  
@@ -651,7 +651,7 @@ void* GetItemDataPtr(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Określa liczony od zera indeks elementu w polu listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -668,11 +668,11 @@ int GetItemHeight(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Określa liczony od zera indeks elementu w polu listy. Ten parametr jest używany tylko wtedy, gdy pole listy ma **lbs_ownerdrawvariable —** styl; w przeciwnym razie musi mieć wartość 0.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wysokość w pikselach elementów w polu listy. Jeśli pole listy ma [lbs_ownerdrawvariable —](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) stylu, jest zwracana wartość wysokość element określony przez `nIndex`. Jeśli wystąpi błąd, jest zwracana wartość **LB_ERR**.  
+ Wysokość w pikselach elementów w polu listy. Jeśli pole listy ma [lbs_ownerdrawvariable —](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) stylu, jest zwracana wartość wysokość element określony przez *nIndex*. Jeśli wystąpi błąd, jest zwracana wartość **LB_ERR**.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CListBox#17](../../mfc/codesnippet/cpp/clistbox-class_17.cpp)]  
@@ -687,10 +687,10 @@ int GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Określa liczony od zera indeks elementu.  
   
- `lpRect`  
+ *lprect —*  
  Określa długi wskaźnik [struktura RECT](../../mfc/reference/rect-structure1.md) odbierająca współrzędne klienta pole listy elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -736,7 +736,7 @@ int GetSel(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Określa liczony od zera indeks elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -773,11 +773,11 @@ int GetSelItems(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nMaxItems`  
+ *nMaxItems*  
  Określa maksymalną liczbę wybranych elementów, których numery elementu zostaną umieszczone w buforze.  
   
- `rgIndex`  
- Określa wskaźnik do dużej liczby liczb całkowitych, określony przez bufor `nMaxItems`.  
+ *rgIndex*  
+ Określa wskaźnik do dużej liczby liczb całkowitych, określony przez bufor *nMaxItems*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Rzeczywista liczba elementów umieszczone w buforze. Jeśli pole listy ma postać pola listy z pojedynczym wyborem, jest zwracana wartość `LB_ERR`.  
@@ -799,17 +799,17 @@ void GetText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Określa liczony od zera indeks ciąg do pobrania.  
   
- `lpszBuffer`  
+ *lpszBuffer*  
  Wskazuje buforu, który odbiera ciąg. Rozmiar buforu musi mieć wystarczającą ilość miejsca na ciąg i znak końcowy null. Rozmiar ciągu można ustalić wcześniej, wywołując `GetTextLen` funkcję elementu członkowskiego.  
   
- `rString`  
+ *rString*  
  Odwołanie do `CString` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Długość (w bajtach) ciąg, z wyłączeniem znak końcowy null. Jeśli `nIndex` nie określa nieprawidłowy indeks, jest zwracana wartość **LB_ERR**.  
+ Długość (w bajtach) ciąg, z wyłączeniem znak końcowy null. Jeśli *nIndex* nie określa nieprawidłowy indeks, jest zwracana wartość **LB_ERR**.  
   
 ### <a name="remarks"></a>Uwagi  
  Drugi formularz tego elementu członkowskiego funkcji wypełnienia `CString` obiekt z ciągu tekstowego.  
@@ -825,11 +825,11 @@ int GetTextLen(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Określa liczony od zera indeksu ciągu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Długość ciągu znakami z wyłączeniem znak końcowy null. Jeśli `nIndex` nie określa nieprawidłowy indeks, jest zwracana wartość **LB_ERR**.  
+ Długość ciągu znakami z wyłączeniem znak końcowy null. Jeśli *nIndex* nie określa nieprawidłowy indeks, jest zwracana wartość **LB_ERR**.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CListBox::GetText](#gettext).  
@@ -860,10 +860,10 @@ int InitStorage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItems`  
+ *nItems*  
  Określa liczbę elementów do dodania.  
   
- `nBytes`  
+ *nBytes*  
  Określa ilość pamięci w bajtach, można przydzielić elementu ciągów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -874,7 +874,7 @@ int InitStorage(
   
  Ta funkcja pomaga przyspieszyć inicjowania pola listy, które ma dużą liczbę elementów (więcej niż 100). Go preallocates określoną ilością pamięci, tak że kolejne [AddString](#addstring), [InsertString](#insertstring), i [Dir](#dir) funkcje pobierać najkrótszym czasie. Szacuje można użyć parametrów. Jeśli overestimate, niektóre dodatkową pamięć jest przydzielony; Jeśli w przypadku licznik nie uwzględniać, normalne alokacji jest używana dla elementów, które przekraczają ilość przydzielony wstępnie.  
   
- Windows 95/98: `nItems` jest ograniczony do 16-bitowych wartości parametru. Oznacza to, że pola listy nie może zawierać więcej niż 32 767 elementów. Mimo że liczba elementów jest ograniczone, łączny rozmiar elementów w polu listy jest ograniczona tylko przez ilość dostępnej pamięci.  
+ Windows 95/98: *nItems* jest ograniczony do 16-bitowych wartości parametru. Oznacza to, że pola listy nie może zawierać więcej niż 32 767 elementów. Mimo że liczba elementów jest ograniczone, łączny rozmiar elementów w polu listy jest ograniczona tylko przez ilość dostępnej pamięci.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CListBox#23](../../mfc/codesnippet/cpp/clistbox-class_23.cpp)]  
@@ -889,10 +889,10 @@ int InsertString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Określa liczony od zera indeks pozycji, aby wstawić ciąg. Jeśli ten parametr ma wartość -1, ten ciąg jest dodawany na końcu listy.  
   
- `lpszItem`  
+ *lpszItem*  
  Wskazuje ciąg zakończony zerem, który ma zostać wstawiony.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -905,7 +905,7 @@ int InsertString(
  [!code-cpp[NVC_MFC_CListBox#24](../../mfc/codesnippet/cpp/clistbox-class_24.cpp)]  
   
 ##  <a name="itemfrompoint"></a>  CListBox::ItemFromPoint  
- Określa element pole listy najbliższy punkt określony w `pt`.  
+ Określa element pole listy najbliższy punkt określony w *pt*.  
   
 ```  
 UINT ItemFromPoint(
@@ -914,14 +914,14 @@ UINT ItemFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pt`  
+ *PT*  
  Wskaż, dla której ma zostać znaleziony element najbliższej określony względem lewego górnego rogu obszaru klienckiego pola listy.  
   
- `bOutside`  
- Odwołanie do `BOOL` zmiennej, która zostanie ustawiona na `TRUE` Jeśli `pt` znajduje się poza obszaru klienckiego elementu najbliższej pola listy `FALSE` Jeśli `pt` znajduje się wewnątrz obszaru klienckiego elementu najbliższej pola listy.  
+ *bOutside*  
+ Odwołanie do `BOOL` zmiennej, która zostanie ustawiona na `TRUE` Jeśli `pt` znajduje się poza obszaru klienckiego elementu najbliższej pola listy `FALSE` Jeśli *pt* znajduje się wewnątrz obszaru klienckiego elementu najbliższej pola listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Indeks elementu najbliższy punkt określony w `pt`.  
+ Indeks elementu najbliższy punkt określony w *pt*.  
   
 ### <a name="remarks"></a>Uwagi  
  Można użyć tej funkcji, aby określić, który przesuwa kursor myszy nad element pola listy.  
@@ -937,7 +937,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpMeasureItemStruct`  
+ *lpMeasureItemStruct*  
  Długie wskaźnik do [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) struktury.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -970,10 +970,10 @@ int SelectString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nStartAfter`  
- Zawiera liczony od zera indeks elementu przed pierwszym elementem do wyszukania. Podczas wyszukiwania przez nią miejsce osiągnie dolnej części pola listy, która kontynuuje od górnej krawędzi pola listy ponownie element określony przez `nStartAfter`. Jeśli `nStartAfter` wynosi -1, przeszukiwany jest pole całą listę od początku.  
+ *nStartAfter*  
+ Zawiera liczony od zera indeks elementu przed pierwszym elementem do wyszukania. Podczas wyszukiwania przez nią miejsce osiągnie dolnej części pola listy, która kontynuuje od górnej krawędzi pola listy ponownie element określony przez *nStartAfter*. Jeśli *nStartAfter* -1, jest przeszukiwany jest pole całą listę od początku.  
   
- `lpszItem`  
+ *lpszItem*  
  Wskazuje ciąg zakończony zerem, który zawiera prefiks do wyszukania. Wyszukiwanie jest niezależny, więc ten ciąg może zawierać żadnych kombinacji wielkich i małych liter.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -984,7 +984,7 @@ int SelectString(
   
  Ta funkcja członkowska nie można używać z pola listy, który ma [lbs_multiplesel —](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) stylu.  
   
- Element jest wybrany tylko wtedy, gdy jego znaków (od punktu początkowego) pasować do znaków w ciągu określonej przez `lpszItem`.  
+ Element jest wybrany tylko wtedy, gdy jego znaków (od punktu początkowego) pasować do znaków w ciągu określonej przez *lpszItem*.  
   
  Użyj `FindString` funkcji członkowskiej, aby znaleźć ciąg bez zaznaczania elementu.  
   
@@ -1002,20 +1002,20 @@ int SelItemRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bSelect`  
- Określa, jak ustawić zaznaczenia. Jeśli `bSelect` jest **TRUE**, ciąg jest zaznaczone i wyróżniony; Jeśli **FALSE**, zaznaczenie jest usunięte i ciąg nie jest zaznaczone.  
+ *bWybierz*  
+ Określa, jak ustawić zaznaczenia. Jeśli *bbWybierz* jest **TRUE**, ciąg jest zaznaczone i wyróżniony; Jeśli **FALSE**, zaznaczenie jest usunięte i ciąg nie jest zaznaczone.  
   
- `nFirstItem`  
+ *nFirstItem*  
  Określa liczony od zera indeks pierwszego elementu można ustawić.  
   
- `nLastItem`  
+ *nLastItem*  
  Określa liczony od zera indeks ostatni element do ustawienia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  **LB_ERR** w przypadku wystąpienia błędu.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj tej funkcji Członkowskich tylko z polami listy wielokrotnego wyboru. Jeśli musisz wybrać tylko jeden element w polu listy wielokrotnego wyboru — oznacza to, że jeśli `nFirstItem` jest równa `nLastItem` — wywołania [SetSel](#setsel) zamiast funkcji członkowskiej.  
+ Użyj tej funkcji Członkowskich tylko z polami listy wielokrotnego wyboru. Jeśli musisz wybrać tylko jeden element w polu listy wielokrotnego wyboru — oznacza to, że jeśli *nFirstItem* jest równa *nLastItem* — wywołania [SetSel](#setsel) zamiast funkcji członkowskiej.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CListBox#28](../../mfc/codesnippet/cpp/clistbox-class_28.cpp)]  
@@ -1028,7 +1028,7 @@ void SetAnchorIndex(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Określa liczony od zera indeks elementu pola listy, który będzie zakotwiczenia.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1047,7 +1047,7 @@ int SetCaretIndex(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Określa liczony od zera indeks elementu do odbierania prostokąt fokusu w polu listy.  
   
  *bScroll*  
@@ -1070,7 +1070,7 @@ void SetColumnWidth(int cxWidth);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cxWidth`  
+ *cxWidth*  
  Określa szerokość w pikselach wszystkie kolumny.  
   
 ### <a name="example"></a>Przykład  
@@ -1084,8 +1084,8 @@ int SetCurSel(int nSelect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nSelect`  
- Określa liczony od zera indeks ciąg, który można wybrać. Jeśli `nSelect` wynosi -1, pole listy ma ustawioną wartość ma Brak zaznaczenia.  
+ *Wybierz*  
+ Określa liczony od zera indeks ciąg, który można wybrać. Jeśli *wybierz* wynosi -1, pole listy ma ustawioną wartość ma Brak zaznaczenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `LB_ERR` Jeśli wystąpi błąd.  
@@ -1131,10 +1131,10 @@ int SetItemData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Określa liczony od zera indeks elementu.  
   
- `dwItemData`  
+ *dwItemData*  
  Określa wartość, która ma zostać skojarzony z elementem.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1153,10 +1153,10 @@ int SetItemDataPtr(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Określa liczony od zera indeks elementu.  
   
- `pData`  
+ *pData*  
  Określa wskaźnik do skojarzenia z elementem.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1178,17 +1178,17 @@ int SetItemHeight(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Określa liczony od zera indeks elementu w polu listy. Ten parametr jest używany tylko wtedy, gdy pole listy ma **lbs_ownerdrawvariable —** styl; w przeciwnym razie musi mieć wartość 0.  
   
- `cyItemHeight`  
+ *cyItemHeight*  
  Określa wysokość w pikselach elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  **LB_ERR** Jeśli indeks lub wysokość jest nieprawidłowa.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli pole listy ma [lbs_ownerdrawvariable —](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) stylu, ta funkcja Ustawia wysokość element określony przez `nIndex`. W przeciwnym razie ta funkcja Ustawia wysokość wszystkie elementy w polu listy.  
+ Jeśli pole listy ma [lbs_ownerdrawvariable —](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) stylu, ta funkcja Ustawia wysokość element określony przez *nIndex*. W przeciwnym razie ta funkcja Ustawia wysokość wszystkie elementy w polu listy.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CListBox#36](../../mfc/codesnippet/cpp/clistbox-class_36.cpp)]  
@@ -1201,7 +1201,7 @@ LCID SetLocale(LCID nNewLocale);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nNewLocale`  
+ *nNewLocale*  
  Nowa wartość identyfikator (LCID) ustawień regionalnych można ustawić pola listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1223,11 +1223,11 @@ int SetSel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
- Zawiera liczony od zera indeks ciąg do ustawienia. Jeśli wartość -1, zaznaczenie jest dodane lub usunięte ze wszystkich ciągów w zależności od wartości `bSelect`.  
+ *nIndex*  
+ Zawiera liczony od zera indeks ciąg do ustawienia. Jeśli wartość -1, zaznaczenie jest dodane lub usunięte ze wszystkich ciągów w zależności od wartości *bbWybierz*.  
   
- `bSelect`  
- Określa, jak ustawić zaznaczenia. Jeśli `bSelect` jest `TRUE`, ciąg jest zaznaczone i wyróżniony; Jeśli `FALSE`, zaznaczenie jest usunięte i ciąg nie jest zaznaczone. Określony ciąg jest zaznaczony, a następnie wyróżnione domyślnie.  
+ *bWybierz*  
+ Określa, jak ustawić zaznaczenia. Jeśli *bbWybierz* jest `TRUE`, ciąg jest zaznaczone i wyróżniony; Jeśli `FALSE`, zaznaczenie jest usunięte i ciąg nie jest zaznaczone. Określony ciąg jest zaznaczony, a następnie wyróżnione domyślnie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `LB_ERR` Jeśli wystąpi błąd.  
@@ -1254,22 +1254,22 @@ BOOL SetTabStops(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cxEachStop`  
- Tabulatorów są ustawione na każdym `cxEachStop` jednostki okna dialogowego. Zobacz *rgTabStops* opis jednostki okna dialogowego.  
+ *cxEachStop*  
+ Tabulatorów są ustawione na każdym *cxEachStop* jednostki okna dialogowego. Zobacz *rgTabStops* opis jednostki okna dialogowego.  
   
- `nTabStops`  
+ *nTabStops*  
  Określa liczbę tabulatorów w polu listy.  
   
- `rgTabStops`  
+ *rgTabStops*  
  Wskazuje pierwszego elementu członkowskiego tablicy liczb całkowitych zawierającą pozycje tabulatorów w jednostkach okna dialogowego. Jednostki okna dialogowego jest odległość pozioma lub pionowa. Jednostki okna dialogowego w poziomie jest taki sam, jak jedna czwarta bieżąca jednostka podstawowa szerokość okna dialogowego i jednostki okna dialogowego pionowy jest równa 1 / 8 bieżąca jednostka podstawowa wysokość okna dialogowego. Jednostki podstawowy okna dialogowego są obliczane na podstawie wysokość i szerokość bieżącej czcionki systemowej. **GetDialogBaseUnits** systemu Windows funkcja zwraca bieżącego okna dialogowego podstawowej jednostki w pikselach. Tabulatory muszą być posortowane w rosnącej kolejności. Wstecz karty nie są dozwolone.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli ustawiono wszystkich kart; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ustawić tabulatorów domyślny rozmiar jednostki okna dialogowego 2, należy wywołać wersji bez parametrów funkcji członkowskiej. Tabulatorów rozmiar niż 2, wywołaj wersji z `cxEachStop` argumentu.  
+ Ustawić tabulatorów domyślny rozmiar jednostki okna dialogowego 2, należy wywołać wersji bez parametrów funkcji członkowskiej. Tabulatorów rozmiar niż 2, wywołaj wersji z *cxEachStop* argumentu.  
   
- Aby ustawić tabulatory na tablicę rozmiary, użyj wersji z `rgTabStops` i `nTabStops` argumentów. Tabulator zostanie ustawiona dla każdej wartości w `rgTabStops`, maksymalnie liczbie określonej przez `nTabStops`.  
+ Aby ustawić tabulatory na tablicę rozmiary, użyj wersji z *rgTabStops* i *nTabStops* argumentów. Tabulator zostanie ustawiona dla każdej wartości w *rgTabStops*, maksymalnie liczbie określonej przez *nTabStops*.  
   
  Aby odpowiedzieć na wywołanie `SetTabStops` funkcji członkowskiej liście muszą być utworzone z [lbs_usetabstops —](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) stylu.  
   
@@ -1284,14 +1284,14 @@ int SetTopIndex(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Określa liczony od zera indeks elementu pola listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zero, jeśli to się powiedzie, lub **LB_ERR** w przypadku wystąpienia błędu.  
   
 ### <a name="remarks"></a>Uwagi  
- System jest przewijane pole listy do element określony przez `nIndex` pojawia się na początku listy pola lub przewijania maksymalny zakres został osiągnięty.  
+ System jest przewijane pole listy do element określony przez *nIndex* pojawia się na początku listy pola lub przewijania maksymalny zakres został osiągnięty.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CListBox#40](../../mfc/codesnippet/cpp/clistbox-class_40.cpp)]  
@@ -1306,10 +1306,10 @@ virtual int VKeyToItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nKey`  
+ *nKey*  
  Kod klucza wirtualnego klucza użytkownik kliknął przycisk. Listę standardowych wirtualnego kodów klucza Zobacz Winuser.h  
   
- `nIndex`  
+ *nIndex*  
  Bieżąca pozycja karetkę pola listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  

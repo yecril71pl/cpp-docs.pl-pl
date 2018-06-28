@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16c37fd1b9b9b61bed78811c3b6b57325041105b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 10f183ed498fde15166a6e8ee7e7d10cfe9f60d7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378626"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040938"
 ---
 # <a name="cmfctaskspane-class"></a>Klasa CMFCTasksPane
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -399,19 +399,19 @@ int AddGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nPageIdx`  
+ [in] *nPageIdx*  
  Określa indeks strony liczony od zera.  
   
- [in] `lpszGroupName`  
+ [in] *lpszGroupName*  
  Określa nazwę grupy.  
   
- [in] `bBottomLocation`  
+ [in] *bBottomLocation*  
  `TRUE` Aby utworzyć grupę w dolnej części kontroli okienka zadań. w przeciwnym razie `FALSE`.  
   
- [in] `bSpecial`  
+ [in] *bOpcje specjalne*  
  `TRUE` Aby oznaczyć ta grupa jest *specjalne* grupy; w przeciwnym razie `FALSE`. Aby uzyskać więcej informacji na temat specjalnych grup, zobacz sekcję uwag `CMFCTasksPane`.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Określa ikonę, aby wyświetlić w nagłówku grupy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -434,20 +434,20 @@ int AddLabel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nGroup`  
+ [in] *nGroup*  
  Określa indeks grupy, gdzie jest dodana etykiety.  
   
- [in] `lpszLabelName`  
+ [in] *lpszLabelName*  
  Określa nazwę etykiety.  
   
- [in] `nTaskIcon`  
+ [in] *nTaskIcon*  
  Określa ikonę do wyświetlenia obok etykiety. Platformę przechowuje ikony na liście obrazów. Ten parametr jest indeks do tej listy.  
   
- [in] `bIsBold`  
+ [in] *bIsBold*  
  `TRUE` Aby wyświetlić etykiety pogrubione; w przeciwnym razie `FALSE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczony od zera indeks grupy, którym został dodany etykiety lub -1, jeśli określona grupa przez `nGroup` nie istnieje.  
+ Liczony od zera indeks grupy, którym został dodany etykiety lub -1, jeśli określona grupa przez *nGroup* nie istnieje.  
   
 ### <a name="remarks"></a>Uwagi  
  Platformę obsługuje zadania i etykiet w inny sposób. Gdy użytkownik kliknie zadania, platformę wykonuje polecenie. Gdy użytkownik kliknie etykietę, brak polecenia jest wykonywany. Aby uzyskać więcej informacji, zobacz [CMFCTasksPane::AddTask](#addtask).  
@@ -462,14 +462,14 @@ int AddMRUFilesList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nGroup`  
+ [in] *nGroup*  
  Określa indeks grupy. Ta metoda dodaje listy ostatnio używanych plików do grupy określonej przez ten parametr.  
   
- [in] `nMaxFiles`  
+ [in] *nMaxFiles*  
  Określa liczbę plików do wyświetlenia na liście ostatnio używanych plików.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczony od zera indeks grupy, w którym dodano listy ostatnio używanych plików, lub wartość -1, jeśli grupa określony przez `nGroup` nie istnieje.  
+ Liczony od zera indeks grupy, w którym dodano listy ostatnio używanych plików, lub wartość -1, jeśli grupa określony przez *nGroup* nie istnieje.  
   
 ##  <a name="addpage"></a>  CMFCTasksPane::AddPage  
  Dodaje strony do okienka zadań.  
@@ -479,7 +479,7 @@ int AddPage(LPCTSTR lpszPageLabel);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszPageLabel`  
+ [in] *lpszPageLabel*  
  Określa etykietę dla strony.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -493,7 +493,7 @@ int AddSeparator(int nGroup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nGroup`  
+ [in] *nGroup*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -512,23 +512,23 @@ int AddTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nGroup`  
+ [in] *nGroup*  
  Określa indeks grupy, gdy zadanie zostanie dodane.  
   
- [in] `lpszTaskName`  
+ [in] *lpszTaskName*  
  Określa nazwę zadania.  
   
- [in] `nTaskIcon`  
+ [in] *nTaskIcon*  
  Określa ikonę do wyświetlenia obok zadania. Platformę przechowuje ikony na liście obrazów. Ten parametr jest indeks do tej listy.  
   
- [in] `uiCommandID`  
- Określa identyfikator polecenia polecenie do wykonania, gdy użytkownik kliknie zadania. Zadanie jest traktowany jako etykieta `uiCommandID` ma wartość 0.  
+ [in] *uiCommandID*  
+ Określa identyfikator polecenia polecenie do wykonania, gdy użytkownik kliknie zadania. Zadanie jest traktowany jako etykieta *uiCommandID* ma wartość 0.  
   
- [in] `dwUserData`  
+ [in] *dwUserData*  
  Określa dane zdefiniowane przez użytkownika mają być skojarzone z zadaniem.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczony od zera indeks grupy, w którym zadanie zostało dodane lub -1, jeśli określona grupa przez `nGroup` nie istnieje.  
+ Liczony od zera indeks grupy, w którym zadanie zostało dodane lub -1, jeśli określona grupa przez *nGroup* nie istnieje.  
   
 ##  <a name="addwindow"></a>  CMFCTasksPane::AddWindow  
  Dodaje okno podrzędne do okienka zadań.  
@@ -543,23 +543,23 @@ int AddWindow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nGroup`  
+ [in] *nGroup*  
  Określa indeks grupy, gdy okno jest dodawany.  
   
- [in] `hwndTask`  
+ [in] *hwndTask*  
  Określa uchwyt okna, aby dodać.  
   
- [in] `nWndHeight`  
+ [in] *nWndHeight*  
  Określa wysokość okna.  
   
- [in] `bAutoDestroyWindow`  
+ [in] *bAutoDestroyWindow*  
  `TRUE` Aby zniszczyć okna, gdy zadanie zostanie usunięta; w przeciwnym razie `FALSE`.  
   
- [in] `dwUserData`  
+ [in] *dwUserData*  
  Określa dane zdefiniowane przez użytkownika skojarzonych z zadaniem.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczony od zera indeks grupy, gdy okno zostało dodane lub -1, jeśli określona grupa przez `nGroup` nie istnieje.  
+ Liczony od zera indeks grupy, gdy okno zostało dodane lub -1, jeśli określona grupa przez *nGroup* nie istnieje.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę metodę, aby dodać kontrolkę do okienka zadań. Na przykład można dodać formantu edycyjnego działa podobnie jak pasek wyszukiwania.  
@@ -584,8 +584,8 @@ void CollapseAllGroups(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bCollapse`  
- [in] `nPageIdx`  
+ [in] *bCollapse*  
+ [in] *nPageIdx*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -604,13 +604,13 @@ BOOL CollapseGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pGroup`  
+ [in] *pGroup*  
  Określa grupę, aby zwinąć.  
   
- [in] `bCollapse`  
+ [in] *bCollapse*  
  `TRUE` Aby zwinąć grupy; `FALSE` do rozwiń grupę.  
   
- [in] `nGroup`  
+ [in] *nGroup*  
  Określa liczony od zera indeks grupy, aby zwinąć na wewnętrznej liście grup.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -627,7 +627,7 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `rectInitial`  
+ [in] *rectInitial*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -656,7 +656,7 @@ void EnableAnimation(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  `TRUE` Aby włączyć animacji, gdy grupa zadań rozwija lub zwija; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -670,7 +670,7 @@ void EnableGroupCollapse(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  `TRUE` Jeśli użytkowników można zwinąć grupy zadań; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -684,7 +684,7 @@ void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  `TRUE` Włącz menu rozwijanych **dalej** i **Wstecz** przycisków nawigacji; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -706,16 +706,16 @@ void EnableNavigationToolbar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  `TRUE` Aby włączyć narzędzi nawigacji; w przeciwnym razie `FALSE`.  
   
- [in] `uiToolbarBmpRes`  
+ [in] *uiToolbarBmpRes*  
  Określa identyfikator zasobu mapy bitowej, który zawiera obrazów do wyświetlania na pasku narzędzi.  
   
- [in] `sizeToolbarImage`  
+ [in] *sizeToolbarImage*  
  Określa rozmiar obrazów paska narzędzi.  
   
- [in] `sizeToolbarButton`  
+ [in] *sizeToolbarButton*  
  Określa rozmiar przycisku paska narzędzi.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -731,7 +731,7 @@ void EnableOffsetCustomControls(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -743,7 +743,7 @@ void EnableScrollButtons(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  `TRUE` Aby wyświetlić przyciski przewijania w okienku zadań zamiast paska przewijania; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -757,7 +757,7 @@ void EnableWrapLabels(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  `TRUE` Aby zawijać tekst w etykietach, które znajdują się w okienku zadań. w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -771,7 +771,7 @@ void EnableWrapTasks(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  `TRUE` Aby zawijać zadań w okienku zadań. w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -840,10 +840,10 @@ BOOL GetGroupLocation(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pGroup`  
+ [in] *pGroup*  
  Określa grupę zadania, którego lokalizacja są pobierane.  
   
- [out] `nGroup`  
+ [out] *nGroup*  
  Zawiera liczony od zera indeks grupy zadań.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -880,7 +880,7 @@ void GetNextPages(CStringList& lstNextPages) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lstNextPages`  
+ [in] *lstNextPages*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -894,14 +894,14 @@ BOOL GetPageByGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nGroup`  
+ [in] *nGroup*  
  Określa liczony od zera indeks grupy zadań.  
   
- [out] `nPage`  
+ [out] *nPage*  
  Zawiera indeks strony dla określonej grupy. Jeśli grupa zadań zawiera tylko domyślną stronę, zwracanej wartości to 0.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli grupa `nGroup` istnieje; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli grupa *nGroup* istnieje; w przeciwnym razie `FALSE`.  
   
 ##  <a name="getpagescount"></a>  CMFCTasksPane::GetPagesCount  
  Zwraca liczbę stron.  
@@ -921,7 +921,7 @@ void GetPreviousPages(CStringList& lstPrevPages) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lstPrevPages`  
+ [in] *lstPrevPages*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -933,7 +933,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nBar`  
+ [in] *nBar*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -949,11 +949,11 @@ CMFCTasksPaneTask* GetTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nGroup`  
+ [in] *nGroup*  
  Określa liczony od zera indeks grupy, która zawiera zadania.  
   
- [in] `nTask`  
- Określa liczony od zera indeks zadanie na liście określony przez `nGroup`.  
+ [in] *nNie*  
+ Określa liczony od zera indeks zadanie na liście określony przez *nGroup*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zadanie o określonym indeksie.  
@@ -966,11 +966,11 @@ int GetTaskCount(int nGroup) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nGroup`  
+ [in] *nGroup*  
  Określa indeks grupy zadań.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczba zadań w określonej grupie lub 0, jeśli `nGroup` jest nieprawidłowy.  
+ Liczba zadań w określonej grupie lub 0, jeśli *nGroup* jest nieprawidłowy.  
   
 ##  <a name="gettaskgroup"></a>  CMFCTasksPane::GetTaskGroup  
  Zwraca wartość indeksu określona grupa grupy zadań.  
@@ -980,7 +980,7 @@ CMFCTasksPaneTaskGroup* GetTaskGroup(int nGroup) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nGroup`  
+ [in] *nGroup*  
  Określa liczony od zera indeks grupy do pobrania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1007,26 +1007,26 @@ BOOL GetTaskLocation(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCommandID`  
+ [in] *uiCommandID*  
  Określa identyfikator polecenia zadanie ma zostać znaleziony.  
   
- [out] `nGroup`  
+ [out] *nGroup*  
  Zawiera indeks grupy zadań.  
   
- [out] `nTask`  
+ [out] *nNie*  
  Zawiera indeks zadania w grupie zadań.  
   
- [in] `hwndTask`  
+ [in] *hwndTask*  
  Określa okno skojarzone z zadaniem.  
   
- [in] `pTask`  
+ [in] *pTask*  
  Określa zadanie, które można znaleźć.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `TRUE` Jeśli lokalizacja zadań została odnaleziona; `FALSE` Jeśli określonego zadania nie istnieje.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda pobiera grupy zadań indeks i dla określonego zadania. Jeśli metoda zwraca `FALSE`, `nGroup` i `nTask` są ustawione na wartość -1.  
+ Ta metoda pobiera grupy zadań indeks i dla określonego zadania. Jeśli metoda zwraca `FALSE`, *nGroup* i *nNie* są ustawione na wartość -1.  
   
 ##  <a name="gettaskshorzoffset"></a>  CMFCTasksPane::GetTasksHorzOffset  
  Zwraca przesunięcie w poziomie zadań.  
@@ -1199,9 +1199,9 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszProfileName`  
- [in] `nIndex`  
- [in] `uiID`  
+ [in] *lpszProfileName*  
+ [in] *nIndex*  
+ [in] *uiID*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -1238,20 +1238,20 @@ virtual void OnClickTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nGroupNumber`  
+ [in] *nGroupNumber*  
  Określa liczony od zera indeks grupy zawierającej klikniętej zadań.  
   
- [in] `nTaskNumber`  
+ [in] *nTaskNumber*  
  Określa liczony od zera indeks klikniętej zadań.  
   
- [in] `uiCommandID`  
+ [in] *uiCommandID*  
  Określa identyfikator polecenia skojarzony z zadaniem.  
   
- [in] `dwUserData`  
+ [in] *dwUserData*  
  Zawiera dane zdefiniowane przez użytkownika, skojarzone z zadaniem kliknięty.  
   
 ### <a name="remarks"></a>Uwagi  
- Struktura wywołuje tej metody, gdy użytkownik kliknie zadania. Domyślnie platformę sprawdza identyfikator polecenia skojarzone z zadaniem klikniętej i, jeśli nie wynosi zero, wysyła `WM_COMMAND` komunikat do właściciela formant okienka zadań.  
+ Struktura wywołuje tej metody, gdy użytkownik kliknie zadania. Domyślnie platformę sprawdza identyfikator polecenia skojarzone z zadaniem klikniętej i, jeśli nie wynosi zero, wysyła wiadomość WM_COMMAND do właściciela formant okienka zadań.  
   
  Zastępuje tę metodę w klasie pochodnej na wykonanie kodu niestandardowego, gdy zadanie zostanie kliknięty.  
   
@@ -1310,8 +1310,8 @@ virtual void OnPressOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pbtn`  
- [in] `pWndOwner`  
+ [in] *pbtn*  
+ [in] *pWndOwner*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1323,7 +1323,7 @@ virtual BOOL OnSetAccData(long lVal);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lVal`  
+ [in] *lVal*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -1339,8 +1339,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pTarget`  
- [in] `bDisableIfNoHndler`  
+ [in] *pTarget*  
+ [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1352,7 +1352,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pMsg`  
+ [in] *pMsg*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -1366,7 +1366,7 @@ void RecalcLayout(BOOL bRedraw = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bRedraw`  
+ [in] *bRedraw*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1378,11 +1378,11 @@ void RemoveAllGroups(int nPageIdx = 0);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nPageIdx`  
+ [in] *nPageIdx*  
  Określa liczony od zera indeks strony.  
   
 ### <a name="remarks"></a>Uwagi  
- Usuwa wszystkie grupy na stronie określony przez `nPageIdx`, lub wszystkich grup, jeśli istnieje tylko domyślnej strony.  
+ Usuwa wszystkie grupy na stronie określony przez *nPageIdx*, lub wszystkich grup, jeśli istnieje tylko domyślnej strony.  
   
 ##  <a name="removeallpages"></a>  CMFCTasksPane::RemoveAllPages  
  Usuwa wszystkich stron w okienku zadań, z wyjątkiem domyślnej strony (pierwszy).  
@@ -1399,7 +1399,7 @@ void RemoveAllTasks(int nGroup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nGroup`  
+ [in] *nGroup*  
  Określa liczony od zera indeks grupy.  
   
 ##  <a name="removegroup"></a>  CMFCTasksPane::RemoveGroup  
@@ -1410,7 +1410,7 @@ void RemoveGroup(int nGroup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nGroup`  
+ [in] *nGroup*  
  Określa liczony od zera indeks grupy do usunięcia.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1426,7 +1426,7 @@ void RemovePage(int nPageIdx);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nPageIdx`  
+ [in] *nPageIdx*  
  Określa liczony od zera indeks strony do usunięcia.  
   
 ##  <a name="removetask"></a>  CMFCTasksPane::RemoveTask  
@@ -1440,17 +1440,17 @@ BOOL RemoveTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nGroup`  
+ [in] *nGroup*  
  Określa liczony od zera indeks zawierający zadań w celu usunięcia grupy zadań.  
   
- [in] `nTask`  
+ [in] *nNie*  
  Określa liczony od zera indeks zadań w celu usunięcia.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` Aby odświeżyć okienko; w przeciwnym razie `FALSE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli funkcja zakończy się pomyślnie; `FALSE` Jeśli `nGroup` lub `nTask` jest nieprawidłowy.  
+ `TRUE` Jeśli funkcja zakończy się pomyślnie; `FALSE` Jeśli *nGroup* lub *nNie* jest nieprawidłowy.  
   
 ##  <a name="savestate"></a>  CMFCTasksPane::SaveState  
 
@@ -1463,9 +1463,9 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszProfileName`  
- [in] `nIndex`  
- [in] `uiID`  
+ [in] *lpszProfileName*  
+ [in] *nIndex*  
+ [in] *uiID*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -1479,7 +1479,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `ar`  
+ [in] *ar*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1491,11 +1491,11 @@ void SetActivePage(int nPageIdx);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nPageIdx`  
+ [in] *nPageIdx*  
  Określa liczony od zera indeks strony do wyświetlenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda potwierdzeń, jeśli `nPageIdx` jest nieprawidłowy.  
+ Ta metoda potwierdzeń, jeśli *nPageIdx* jest nieprawidłowy.  
   
 ##  <a name="setcaption"></a>  CMFCTasksPane::SetCaption  
  Ustawia nazwę podpisu okienka zadań.  
@@ -1505,7 +1505,7 @@ void SetCaption(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszName`  
+ [in] *lpszName*  
  Określa nazwę podpisu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1519,13 +1519,13 @@ void SetGroupCaptionHeight(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `n`  
+ [in] *n*  
  Określa wysokość podpis.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę metodę, aby dostosować marginesy elementy w okienku zadań.  
   
- Jeśli `n` wynosi -1, platformę określa wartość margines za pomocą Menedżera visual ( `CMFCVisualManager::GetTasksPaneGroupCaptionHeight`). Domyślna wysokość podpis jest 25 pikseli.  
+ Jeśli *n* wynosi -1, platformę określa wartość margines za pomocą Menedżera visual ( `CMFCVisualManager::GetTasksPaneGroupCaptionHeight`). Domyślna wysokość podpis jest 25 pikseli.  
   
 ##  <a name="setgroupcaptionhorzoffset"></a>  CMFCTasksPane::SetGroupCaptionHorzOffset  
  Ustawia przesunięcie w poziomie podpis grupy.  
@@ -1535,7 +1535,7 @@ void SetGroupCaptionHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `n`  
+ [in] *n*  
  Określa przesunięcie w poziomie podpis grupy.  
   
 ##  <a name="setgroupcaptionvertoffset"></a>  CMFCTasksPane::SetGroupCaptionVertOffset  
@@ -1546,7 +1546,7 @@ void SetGroupCaptionVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `n`  
+ [in] *n*  
  Określa przesunięcie w pionie w pikselach podpis grupy.  
   
 ##  <a name="setgroupname"></a>  CMFCTasksPane::SetGroupName  
@@ -1559,10 +1559,10 @@ BOOL SetGroupName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nGroup`  
+ [in] *nGroup*  
  Określa liczony od zera indeks grupy.  
   
- [in] `lpszGroupName`  
+ [in] *lpszGroupName*  
  Określa nazwę grupy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1579,13 +1579,13 @@ BOOL SetGroupTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nGroup`  
+ [in] *nGroup*  
  Określa liczony od zera indeks grupy.  
   
- [in] `color`  
+ [in] *kolorów*  
  Określa kolor tekstu.  
   
- [in] `colorHot`  
+ [in] *colorHot*  
  Określa kolor tekstu dla zaznaczonej grupy. Jeśli wartość-1, używany jest domyślny kolor wyróżnienia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1599,13 +1599,13 @@ void SetGroupVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `n`  
+ [in] *n*  
  Określa przesunięcie w pionie.  
   
 ### <a name="remarks"></a>Uwagi  
  Przesunięcie w pionie jest odległość między grupą zadań i obramowania w okienku zadań.  
   
- Wywołaj tę metodę, aby dostosować marginesy elementy w okienku zadań. Jeśli `n` wynosi -1, platformę określa wartość margines za pomocą Menedżera visual ( `CMFCVisualManager::GetTasksPaneGroupVertOffset`). Przesunięcie domyślną jest 15 pikseli.  
+ Wywołaj tę metodę, aby dostosować marginesy elementy w okienku zadań. Jeśli *n* wynosi -1, platformę określa wartość margines za pomocą Menedżera visual ( `CMFCVisualManager::GetTasksPaneGroupVertOffset`). Przesunięcie domyślną jest 15 pikseli.  
   
 ##  <a name="sethorzmargin"></a>  CMFCTasksPane::SetHorzMargin  
  Ustawia poziomy margines.  
@@ -1615,7 +1615,7 @@ void SetHorzMargin(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `n`  
+ [in] *n*  
  Określa wartość marginesu w pikselach.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1636,16 +1636,16 @@ void SetIconsList(HIMAGELIST hIcons);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiImageListResID`  
+ [in] *uiImageListResID*  
  Określa identyfikator zasobu listy obrazów.  
   
- [in] `cx`  
+ [in] *cx*  
  Określa rozmiar ikon na liście obrazów.  
   
- [in] `clrTransparent`  
+ [in] *clrTransparent*  
  Określa kolor przezroczysty.  
   
- [in] `hIcons`  
+ [in] *hIcons*  
  Określa listę obrazu zawierający ikony na pasku zadań.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1663,10 +1663,10 @@ void SetPageCaption(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nPageIdx`  
+ [in] *nPageIdx*  
  Określa liczony od zera indeks strony.  
   
- [in] `lpszName`  
+ [in] *lpszName*  
  Określa podpis tekst wyświetlany na stronie.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1683,13 +1683,13 @@ BOOL SetTaskName(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nGroup`  
+ [in] *nGroup*  
  Określa liczony od zera indeks grupy zadań.  
   
- [in] `nTask`  
+ [in] *nNie*  
  Określa liczony od zera indeks zadania.  
   
- [in] `lpszTaskName`  
+ [in] *lpszTaskName*  
  Określa nazwę zadania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1703,13 +1703,13 @@ void SetTasksHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `n`  
+ [in] *n*  
  Określa przesunięcie w poziomie.  
   
 ### <a name="remarks"></a>Uwagi  
  Przesunięcie w poziomie jest odległość w pikselach, z lewej i prawej krawędzi grupy.  
   
- Jeśli `n` wynosi -1, ta metoda ustawiono wartość zwrócona przez przesunięcie w poziomie `CMFCVisualManager::GetTasksPaneTaskHorzOffset` metody.  
+ Jeśli *n* wynosi -1, ta metoda ustawiono wartość zwrócona przez przesunięcie w poziomie `CMFCVisualManager::GetTasksPaneTaskHorzOffset` metody.  
   
  Przesunięcie w poziomie domyślny to 12 pikseli.  
   
@@ -1721,7 +1721,7 @@ void SetTasksIconHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `n`  
+ [in] *n*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1733,7 +1733,7 @@ void SetTasksIconVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `n`  
+ [in] *n*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1749,16 +1749,16 @@ BOOL SetTaskTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nGroup`  
+ [in] *nGroup*  
  Określa liczony od zera indeks grupy zadań, która zawiera zadania.  
   
- [in] `nTask`  
+ [in] *nNie*  
  Określa liczony od zera indeks zadania.  
   
- [in] `color`  
+ [in] *kolorów*  
  Określa kolor tekstu dla zadania.  
   
- [in] `colorHot`  
+ [in] *colorHot*  
  Określa kolor tekstu dla zaznaczonej grupy. Jeśli wartość-1, ta metoda używa domyślny kolor wyróżnienia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1772,13 +1772,13 @@ void SetVertMargin(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `n`  
+ [in] *n*  
  Określa pionowego marginesu można ustawić.  
   
 ### <a name="remarks"></a>Uwagi  
  Pionowego marginesu jest odległość między okienka zadań i pionowych krawędzi obszaru klienckiego.  
   
- Jeśli `n` wynosi -1, platformę określa wartość margines za pomocą Menedżera visual ( `CMFCVisualManager::GetTasksPaneVertMargin`). Domyślny margines to 12 pikseli.  
+ Jeśli *n* wynosi -1, platformę określa wartość margines za pomocą Menedżera visual ( `CMFCVisualManager::GetTasksPaneVertMargin`). Domyślny margines to 12 pikseli.  
   
 ##  <a name="setwindowheight"></a>  CMFCTasksPane::SetWindowHeight  
  Określa wysokość formantu okna.  
@@ -1796,17 +1796,17 @@ BOOL SetWindowHeight(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nGroup`  
+ [in] *nGroup*  
  Określa liczony od zera indeks grupy, która zawiera kontrolki okna.  
   
- [in] `hwndTask`  
+ [in] *hwndTask*  
  Określa dojścia do okna formantu.  
   
- [in] `nWndHeight`  
+ [in] *nWndHeight*  
  Określa wysokość można ustawić.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli skonfigurowano wysokość formantu okna; `FALSE` Jeśli `nGroup` jest nieprawidłowy lub, jeśli `hwndTask` nie istnieje.  
+ `TRUE` Jeśli skonfigurowano wysokość formantu okna; `FALSE` Jeśli *nGroup* jest nieprawidłowy lub, jeśli *hwndTask* nie istnieje.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołanie [CMFCTasksPane::AddWindow](#addwindow) można dodać zadania związane z kontrolki okna.  
@@ -1819,7 +1819,7 @@ virtual void ShowCommandMessageString(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmdId`  
+ [in] *uiCmdId*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1835,16 +1835,16 @@ BOOL ShowTask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nGroup`  
+ [in] *nGroup*  
  Określa liczony od zera indeks grupy.  
   
- [in] `nTask`  
+ [in] *nNie*  
  Określa liczony od zera indeks zadań do wyświetlenia lub ukrycia.  
   
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` Aby wyświetlić zadania; `FALSE` Aby ukryć zadanie.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` Aby odświeżyć okienko; w przeciwnym razie `FALSE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1864,13 +1864,13 @@ BOOL ShowTaskByCmdId(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCommandID`  
+ [in] *uiCommandID*  
  Określa identyfikator polecenia zadania, aby pokazać lub ukryć.  
   
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` Aby wyświetlić zadania; `FALSE` Aby ukryć zadanie.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` Aby odświeżyć okienko; w przeciwnym razie `FALSE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  

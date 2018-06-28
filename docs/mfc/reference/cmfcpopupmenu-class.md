@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d18ab91e1b1c3af7e676cbad9992094238214e38
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f92f600d5005fbc85b1dd82ce66274020adb4b2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377723"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042199"
 ---
 # <a name="cmfcpopupmenu-class"></a>Klasa CMFCPopupMenu
 Implementuje funkcje menu podręcznego systemu Windows i rozszerza ją, dodając funkcje, takie jak oderwania menu i etykietki narzędzi.
@@ -315,8 +315,8 @@ static BOOL __stdcall ActivatePopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pTopFrame`  
- [in] `pPopupMenu`  
+ [in] *pTopFrame*  
+ [in] *pPopupMenu*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -330,7 +330,7 @@ static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` Jeśli menu podręczne wyświetla pusty wpisy. `FALSE` inaczej.  
   
 ##  <a name="areallcommandsshown"></a>  CMFCPopupMenu::AreAllCommandsShown  
@@ -352,7 +352,7 @@ MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `ptScreen`  
+ [in] *ptScreen*  
  Punkt, we współrzędnych ekranu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -361,17 +361,17 @@ MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
 ### <a name="remarks"></a>Uwagi  
  Parametr MENUAREA_TYPE może mieć jeden z następujących wartości.  
   
--   POZA - `ptScreen` znajduje się poza menu podręczne.  
+-   POZA - *ptScreen* znajduje się poza menu podręczne.  
   
--   LOGO - `ptScreen` znajduje się nad obszarem logo.  
+-   LOGO - *ptScreen* znajduje się nad obszarem logo.  
   
--   TEAROFF_CAPTION - `ptScreen` znajduje się nad oderwania podpis.  
+-   TEAROFF_CAPTION - *ptScreen* znajduje się nad oderwania podpis.  
   
--   SHADOW_BOTTOM - `ptScreen` znajduje się nad kopii w tle dołu menu podręczne.  
+-   SHADOW_BOTTOM - *ptScreen* znajduje się nad kopii w tle dołu menu podręczne.  
   
--   SHADOW_RIGHT - `ptScreen` znajduje się nad prawy cień menu podręczne.  
+-   SHADOW_RIGHT - *ptScreen* znajduje się nad prawy cień menu podręczne.  
   
--   MENU — `ptScreen` znajduje się nad polecenia.  
+-   MENU — *ptScreen* znajduje się nad polecenia.  
   
 ##  <a name="closemenu"></a>  CMFCPopupMenu::CloseMenu  
 
@@ -381,7 +381,7 @@ void CloseMenu(BOOL bSetFocusToBar = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bSetFocusToBar`  
+ [in] *bSetFocusToBar*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -395,10 +395,10 @@ CMFCPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pCustPage`  
+ [in] *pCustPage*  
  Wskaźnik do dostosowania strony.  
   
- [in] `lpszTitle`  
+ [in] *lpszTitle*  
  Ciąg, który zawiera podpis menu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -418,29 +418,29 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Okno nadrzędne dla `CMFCPopupMenu`.  
   
- [in] `x`  
+ [in] *x*  
  Współrzędna pozioma ekranu dla lokalizacji menu podręczne  
   
- [in] `y`  
+ [in] *y*  
  Współrzędna pionowy ekranu dla lokalizacji pop menu.  
   
- [in] `hMenu`  
+ [in] *hMenu*  
  Dojście do zasobu menu.  
   
- [in] `bLocked`  
+ [in] *zablokowane*  
  Parametrów typu Boolean wskazującą, czy menu jest możliwe. `FALSE` Wskazuje, że menu podręczne jest można dostosowywać.  
   
- [in] `bOwnMessage`  
+ [in] *bOwnMessage*  
  Parametrów typu Boolean wskazującą sposób platformę kieruje komunikaty menu. Zobacz sekcję uwag więcej szczegółów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `TRUE` Jeśli metoda zakończy się pomyślnie; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `bOwnMessage` jest `TRUE`, platformę kieruje komunikaty menu do `pWndParent`. `pWndParent` nie może być `NULL` Jeśli `bOwnMessage` jest `TRUE.` Jeśli `bOwnMessage` jest `FALSE`, platformę kieruje komunikaty menu do menu podręczne nadrzędnej.  
+ Jeśli *bOwnMessage* jest `TRUE`, platformę kieruje komunikaty menu do *pWndParent*. *pWndParent* nie może być `NULL` Jeśli *bOwnMessage* jest `TRUE.` Jeśli *bOwnMessage* jest `FALSE`, platformę kieruje komunikaty menu do menu podręczne nadrzędnego .  
   
 ### <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano sposób użycia `Create` metody `CMFCPopuMenu` klasy. Następujący fragment kodu jest częścią [próbki niestandardowych stron](../../visual-cpp-samples.md).  
@@ -458,9 +458,9 @@ virtual CPane* CreateTearOffBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pWndMain`  
- [in] `uiID`  
- [in] `lpszName`  
+ [in] *pWndMain*  
+ [in] *uiID*  
+ [in] *lpszName*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -487,16 +487,16 @@ void EnableMenuLogo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iLogoSize`  
+ [in] *iLogoSize*  
  Rozmiar logo, w pikselach.  
   
- [in] `nLogoLocation`  
+ [in] *nLogoLocation*  
  Typ wyliczeniowy danych, który wskazuje lokalizację logo.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby wyświetlić logo, zaimplementuj metodę [CFrameWndEx::OnDrawMenuLogo](../../mfc/reference/cframewndex-class.md#ondrawmenulogo) w głównego okna ramowego.  
   
- Możliwe wartości `nLogoLocation` są MENU_LOGO_LEFT, MENU_LOGO_RIGHT MENU_LOGO_TOP i MENU_LOGO_BOTTOM.  
+ Możliwe wartości *nLogoLocation* są MENU_LOGO_LEFT, MENU_LOGO_RIGHT MENU_LOGO_TOP i MENU_LOGO_BOTTOM.  
   
 ##  <a name="enablemenusound"></a>  CMFCPopupMenu::EnableMenuSound  
  Włącza dźwięk menu.  
@@ -506,7 +506,7 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  `TRUE` Aby włączyć dźwięk, `FALSE` inaczej.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -520,7 +520,7 @@ void EnableResize(CSize sizeMinResize);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `sizeMinResize`  
+ [in] *sizeMinResize*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -532,7 +532,7 @@ void EnableScrolling(BOOL = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `BOOL`  
+ [in] *BOOL*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -544,7 +544,7 @@ void EnableVertResize(int nMinResize);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nMinResize`  
+ [in] *nMinResize*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -556,7 +556,7 @@ CMFCToolBarMenuButton* FindSubItemByCommand(UINT uiCmd) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmd`  
+ [in] *uiCmd*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -596,7 +596,7 @@ static CMFCPopupMenu::ANIMATION_TYPE GetAnimationType(BOOL bNoSystem = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bNoSystem`  
+ [in] *bNoSystem*  
  Parametrów typu Boolean wskazującą, czy ta metoda sprawdza wartości globalnej. Wartość FALSE, jeśli chcesz tę metodę, aby zwrócić styl animacji dla tego wystąpienia [CMFCPopupMenu klasy](../../mfc/reference/cmfcpopupmenu-class.md).  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -682,7 +682,7 @@ CMFCToolBarMenuButton* GetMenuItem(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iIndex`  
+ [in] *iIndex*  
  Liczony od zera indeks elementu menu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -722,7 +722,7 @@ virtual CWnd* GetParentArea(CRect& rectParentBtn);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `rectParentBtn`  
+ [in] *rectParentBtn*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -849,17 +849,17 @@ int InsertItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `button`  
+ [in] *przycisku*  
  Odwołanie do elementu menu do dodania.  
   
- [in] `iInsertAt`  
- Liczony od zera indeks dla nowego elementu. Jeśli `iInsertAt` wynosi -1, element został dodany na końcu elementu menu.  
+ [in] *iInsertAt*  
+ Liczony od zera indeks dla nowego elementu. Jeśli *iInsertAt* wynosi -1, element został dodany na końcu elementu menu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczony od zera indeks pozycji, gdzie został wstawiony element. -1, jeśli metoda nie powiedzie się.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda zakończy się niepowodzeniem, jeśli zawiera nieprawidłową wartość dla `iInsertAt`, takie jak liczba całkowita większa niż liczba elementów aktualnie w menu podręcznym.  
+ Ta metoda zakończy się niepowodzeniem, jeśli zawiera nieprawidłową wartość dla *iInsertAt*, takie jak liczba całkowita większa niż liczba elementów aktualnie w menu podręcznym.  
   
 ##  <a name="insertseparator"></a>  CMFCPopupMenu::InsertSeparator  
  Wstawia separator do menu podręcznego w określonej lokalizacji.  
@@ -869,16 +869,16 @@ int InsertSeparator(int iInsertAt = -1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iInsertAt`  
+ [in] *iInsertAt*  
  Liczony od zera indeks sytuację, w której ta metoda powoduje wstawienie separatora.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczony od zera indeks pozycji, których dodano separatora. -1, jeśli ta metoda nie powiedzie się.  
   
 ### <a name="remarks"></a>Uwagi  
- Wartość -1 dla `iInsertAt` oznacza, że ta metoda doda separator na końcu menu podręczne.  
+ Wartość -1 dla *iInsertAt* oznacza, że ta metoda doda separator na końcu menu podręczne.  
   
- Ta metoda zakończy się niepowodzeniem, jeśli `iInsertAt` jest nieprawidłową wartością.  
+ Ta metoda zakończy się niepowodzeniem, jeśli *iInsertAt* jest nieprawidłową wartością.  
   
 ##  <a name="isalwaysclose"></a>  CMFCPopupMenu::IsAlwaysClose  
 
@@ -1013,7 +1013,7 @@ static BOOL IsSendMenuSelectMsg();
  `TRUE` Jeśli w ramach powiadamia ramka nadrzędny; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
- Platformę powiadamia ramka nadrzędny przez wysłanie ich `WM_MENUSELECT` komunikatu po wybraniu używane polecenia menu.  
+ Platformę powiadamia ramka nadrzędny przez wysłanie ich komunikat WM_MENUSELECT po wybraniu używane polecenia menu.  
   
 ##  <a name="isshown"></a>  CMFCPopupMenu::IsShown  
  Wskazuje, czy menu podręczne jest widoczne.  
@@ -1033,7 +1033,7 @@ void MoveTo(const CPoint& pt);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pt`  
+ [in] *pt*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1045,7 +1045,7 @@ virtual void OnChangeHot(int nHot);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nHot`  
+ [in] *nHot*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1057,7 +1057,7 @@ virtual void OnChooseItem(UINT uidCmdID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uidCmdID`  
+ [in] *uidCmdID*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1073,10 +1073,10 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nID`  
- [in] `nCode`  
- [in] `pExtra`  
- [in] `pHandlerInfo`  
+ [in] *nID*  
+ [in] *nCode*  
+ [in] *pExtra*  
+ [in] *pHandlerInfo*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -1090,7 +1090,7 @@ BOOL PostCommand(UINT uiCommandID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCommandID`  
+ [in] *uiCommandID*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -1104,7 +1104,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pMsg`  
+ [in] *pMsg*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -1118,7 +1118,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bNotify`  
+ [in] *bNotify*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1137,7 +1137,7 @@ BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iIndex`  
+ [in] *iIndex*  
  Liczony od zera indeks elementu do usunięcia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1163,13 +1163,13 @@ static void SetAnimationSpeed(UINT nElapse);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nElapse`  
+ [in] *nElapse*  
  Nowe prędkość animacji, w milisekundach.  
   
 ### <a name="remarks"></a>Uwagi  
  Szybkość animacji jest globalna wartość i dotyczy wszystkich menu podręcznego w aplikacji. Ta wartość określa, jak długo trwa animacji dla menu podręczne zakończyć.  
   
- Domyślnie tego parametru wynosi 30 milisekund. Zakres prawidłowych wartości dla `nElapse` jest z zakresu od 0 do 200.  
+ Domyślnie tego parametru wynosi 30 milisekund. Zakres prawidłowych wartości dla *nElapse* jest z zakresu od 0 do 200.  
   
 ##  <a name="setanimationtype"></a>  CMFCPopupMenu::SetAnimationType  
  Ustawia typ animacji dla tego menu podręczne.  
@@ -1179,11 +1179,11 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `type`  
+ [in] *typu*  
  Typ wyliczeniowy danych, który określa typ animacji.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [CMFCPopupMenu::GetAnimationType](#getanimationtype) listę prawidłowych wartości dla `type`.  
+ Zobacz [CMFCPopupMenu::GetAnimationType](#getanimationtype) listę prawidłowych wartości dla *typu*.  
   
 ##  <a name="setautodestroy"></a>  CMFCPopupMenu::SetAutoDestroy  
 
@@ -1193,7 +1193,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1205,7 +1205,7 @@ void SetDefaultItem(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Identyfikator polecenia menu polecenie Nowy domyślny.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1219,7 +1219,7 @@ static void SetForceMenuFocus(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bValue`  
+ [in] *bDane wartości*  
  `TRUE` Jeśli chcesz, aby framework do wymuszenia fokus wprowadzania na pasku menu, gdy menu podręczne jest wyświetlany. `FALSE` Jeśli chcesz menu podręczne, aby zachować fokus.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1233,7 +1233,7 @@ static void SetForceShadow(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bValue`  
+ [in] *bDane wartości*  
  `TRUE` Jeśli chcesz, aby platformę, by narysować menu shadows `FALSE` inaczej.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1247,7 +1247,7 @@ void SetMaxWidth(int iMaxWidth);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iMaxWidth`  
+ [in] *iMaxWidth*  
  Maksymalna szerokość menu podręcznego w pikselach.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1261,7 +1261,7 @@ void SetMessageWnd(CWnd* pMsgWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pMsgWnd`  
+ [in] *pMsgWnd*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1273,7 +1273,7 @@ void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pElem`  
+ [in] *pElem*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1285,7 +1285,7 @@ void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `Type`  
+ [in] *Typu*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1306,7 +1306,7 @@ void SetRightAlign(BOOL bRightAlign = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bRightAlign`  
+ [in] *bRightAlign*  
  Wartość logiczna wskazującą wyrównanie menu. `TRUE` Określa wyrównanie do prawej, `FALSE` wskazuje wyrównanie do lewej.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1320,7 +1320,7 @@ static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bSet`  
+ [in] *bUstawienie*  
  `TRUE` Jeśli menu podręczne powiadamia jego ramka nadrzędny `FALSE` inaczej.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1353,7 +1353,7 @@ static void UpdateAllShadows(LPRECT lprectScreen = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lprectScreen`  
+ [in] *lprectScreen*  
  Prostokąt, który określa region, aby zaktualizować, we współrzędnych ekranu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1367,7 +1367,7 @@ void UpdateShadow(LPRECT lprectScreen = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lprectScreen`  
+ [in] *lprectScreen*  
  Prostokąt, we współrzędnych ekranu, który określa granice region, aby zaktualizować.  
   
 ### <a name="remarks"></a>Uwagi  

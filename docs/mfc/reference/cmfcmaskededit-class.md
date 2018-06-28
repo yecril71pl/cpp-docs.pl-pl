@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985cd4011dbb1ea8ccad7cd40c81833dd5507f11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ff84edab9166072e04637bb82dfc52c42f1722e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371800"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040106"
 ---
 # <a name="cmfcmaskededit-class"></a>Klasa CMFCMaskedEdit
 `CMFCMaskedEdit` Klasa obsługuje formant zamaskowanej edycji, który sprawdza poprawność danych wejściowych użytkownika przed maski i wyświetla zweryfikowanych wyników na podstawie szablonu.  
@@ -132,7 +132,7 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  `TRUE` Aby określić, że [CMFCMaskedEdit::GetWindowText](#getwindowtext) metody pobierania tylko maskowane znaków. `FALSE` do określenia, że metoda pobieranie całego tekstu. Wartość domyślna to `TRUE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -150,16 +150,16 @@ void EnableMask(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszMask`  
- Ciąg maski, który określa typ znaków, które mogą być wyświetlane na każdej pozycji w danych wejściowych użytkownika. Długość `lpszInputTemplate` i `lpszMask` ciągów parametrów muszą być takie same. W sekcji uwag więcej szczegółów na temat znaków maski.  
+ [in] *lpszMask*  
+ Ciąg maski, który określa typ znaków, które mogą być wyświetlane na każdej pozycji w danych wejściowych użytkownika. Długość *lpszInputTemplate* i *lpszMask* ciągów parametrów muszą być takie same. W sekcji uwag więcej szczegółów na temat znaków maski.  
   
- [in] `lpszInputTemplate`  
- Ciąg szablonu maski, który określa, że literał znaków, które mogą występować na każdej pozycji w danych wejściowych użytkownika. Użyj znaku podkreślenia (_) jako symbol zastępczy znaków. Długość `lpszInputTemplate` i `lpszMask` ciągów parametrów muszą być takie same.  
+ [in] *lpszInputTemplate*  
+ Ciąg szablonu maski, który określa, że literał znaków, które mogą występować na każdej pozycji w danych wejściowych użytkownika. Użyj znaku podkreślenia (_) jako symbol zastępczy znaków. Długość *lpszInputTemplate* i *lpszMask* ciągów parametrów muszą być takie same.  
   
- [in] `chMaskInputTemplate`  
+ [in] *chMaskInputTemplate*  
  Domyślny znak platformę zastępuje każdy nieprawidłowy znak w danych wejściowych użytkownika. Wartością domyślną tego parametru jest znak podkreślenia (_).  
   
- [in] `lpszValid`  
+ [in] *lpszValid*  
  Ciąg, który zawiera zbiór prawidłowych znaków. `NULL` Wskazuje, czy wszystkie znaki są poprawne. Wartością domyślną tego parametru jest `NULL`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -186,7 +186,7 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  `TRUE` Aby wybrać tylko grupy; `FALSE` aby zaznaczyć cały tekst. Wartość domyślna to `TRUE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -218,7 +218,7 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  `TRUE` do weryfikacji użytkownika porównanie danych wejściowych tylko maskowane znaków. `FALSE` na potrzeby sprawdzania poprawności całej maski. Wartość domyślna to `TRUE`.  
   
 ##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText  
@@ -233,20 +233,20 @@ void GetWindowText(CString& rstrString) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `lpszStringBuf`  
+ [out] *lpszStringBuf*  
  Wskaźnik do buforu, który odbiera tekst w formancie edycji.  
   
- [in] `nMaxCount`  
+ [in] *nMaxCount*  
  Maksymalna liczba znaków do odbierania.  
   
- [out] `rstrString`  
+ [out] *rstrString*  
  Odwołanie do obiektu ciąg, który odbiera tekst w formancie edycji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Pierwszy przeciążenie metody zwraca liczbę bajtów ciąg, który jest kopiowany do `lpszStringBuf` buforu parametru; 0, jeśli kontrolka zamaskowanej edycji nie ma tekstu.  
+ Pierwszy przeciążenie metody zwraca liczbę bajtów ciąg, który jest kopiowany do *lpszStringBuf* buforu parametru; 0, jeśli kontrolka zamaskowanej edycji nie ma tekstu.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda kopiuje tekst z maskowana kontrolka edycji do `lpszStringBuf` buforu lub `rstrString` ciągu.  
+ Ta metoda kopiuje tekst z maskowana kontrolka edycji do *lpszStringBuf* buforu lub *rstrString* ciąg.  
   
  Ta metoda ponownie definiuje [CWnd::GetWindowText](../../mfc/reference/cwnd-class.md#getwindowtext).  
   
@@ -260,14 +260,14 @@ virtual BOOL IsMaskedChar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `chChar`  
+ [in] *chChar*  
  Znak do sprawdzenia poprawności.  
   
- [in] `chMaskChar`  
+ [in] *chMaskChar*  
  Odpowiedni znak z ciągu maski.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli `chChar` parametr jest typu znaków dozwoloną przez `chMaskChar` parametru; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli *chChar* parametr jest typu znaków dozwoloną przez *chMaskChar* parametru; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
  Zastępuje tę metodę do sprawdzania poprawności wprowadzania znaków samodzielnie. Aby uzyskać więcej informacji na temat znaków maski, zobacz [CMFCMaskedEdit::EnableMask](#enablemask) metody.  
@@ -280,7 +280,7 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszValid`  
+ [in] *lpszValid*  
  Ciąg, który zawiera zbiór prawidłowych znaków wejściowego. `NULL` oznacza, że wszystkie znaki są poprawne. Wartością domyślną tego parametru jest `NULL`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -298,7 +298,7 @@ void SetWindowText(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszString`  
+ [in] *lpszString*  
  Wskazuje ciąg zerem, który będzie używany jako wiersz.  
   
 ### <a name="remarks"></a>Uwagi  

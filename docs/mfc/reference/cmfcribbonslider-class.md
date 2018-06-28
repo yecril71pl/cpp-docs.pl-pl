@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a4264f26028db4c581fe1dc143905ac0ffc8f66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06575c4d014f72ddbae63ea5f02c3081b4228e1d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372700"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037732"
 ---
 # <a name="cmfcribbonslider-class"></a>Klasa CMFCRibbonSlider
 `CMFCRibbonSlider` Klasa implementuje formant suwaka, który można dodać do pasek Wstążki lub pasek stanu wstążki. Kontrolka suwaka wstążki podobny suwaki powiększenia, które są widoczne w aplikacjach pakietu Office 2007.  
@@ -112,14 +112,14 @@ CMFCRibbonSlider(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nID`  
+ [in] *nID*  
  Identyfikator suwaka.  
   
- [in]. `nWidth`  
+ [in]. *nWidth*  
  Szerokość suwak w pikselach.  
   
 ### <a name="remarks"></a>Uwagi  
- Konstruuje suwaka wstążki, który jest `nWidth` pikseli szerokości w kategorii panelu, gdy suwak jest dodawany. Domyślnie suwak jest poziomy.  
+ Konstruuje suwaka wstążki, który jest *nWidth* pikseli szerokości w kategorii panelu, gdy suwak jest dodawany. Domyślnie suwak jest poziomy.  
   
 ##  <a name="getpos"></a>  CMFCRibbonSlider::GetPos  
  Zwraca bieżące położenie suwaka.  
@@ -159,7 +159,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -193,7 +193,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -207,10 +207,10 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nPos`  
+ [in] *nPos*  
  Określa położenie do ustawienia dla suwaka. Pozycja jest określana względem początku suwaka.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  Jeśli `TRUE`, suwak zostanie narysowany ponownie.  
   
 ##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange  
@@ -223,10 +223,10 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nMin`  
+ [in] *nMin*  
  Określa minimalną wartość suwaka.  
   
- [in] `nMax`  
+ [in] *nMax*  
  Określa maksymalną wartość suwaka.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -240,7 +240,7 @@ void SetZoomButtons(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in]. `bSet`  
+ [in]. *bUstawienie*  
  `TRUE` Aby wyświetlić przycisków powiększenia; `FALSE` aby je ukryć.  
   
 ##  <a name="setzoomincrement"></a>  CMFCRibbonSlider::SetZoomIncrement  
@@ -251,7 +251,7 @@ void SetZoomIncrement(int nZoomIncrement);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nZoomIncrement`  
+ [in] *nZoomIncrement*  
  Określa zmiany wielkości suwaka.  
   
 ## <a name="see-also"></a>Zobacz też  

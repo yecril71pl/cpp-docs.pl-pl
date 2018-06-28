@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51fa0fc4f58a7b83267863918d3e1b46baa38e59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 766faaa50e4efead96ff72c67aee71fec2386b18
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378385"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038589"
 ---
 # <a name="cminiframewnd-class"></a>Klasa CMiniFrameWnd
 Reprezentuje okno ramowe wysokości, zazwyczaj występuje wokół przestawne paski narzędzi.  
@@ -98,7 +98,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpClassName`  
+ *lpClassName*  
  Punkty na ciąg znaków zakończony znakiem null nazwy klasy systemu Windows. Nazwa klasy może być dowolną nazwą zarejestrowana w globalnej [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) funkcji. Jeśli **NULL**, klasę okna zostanie zarejestrowany dla Ciebie przez platformę. MFC udostępnia domyślną klasę następujące style i atrybuty:  
   
 -   Ustawia styl bit **CS_DBLCLKS**, które wysyła kliknij dwukrotnie wiadomości do procedury okna, gdy użytkownik kliknie dwukrotnie myszy.  
@@ -113,10 +113,10 @@ virtual BOOL Create(
   
 -   Ustawia okno domyślny rozmiar i położenie wskazywany przez system Windows.  
   
- `lpWindowName`  
+ *lpWindowName*  
  Wskazuje ciąg znaków zakończony znakiem null, który zawiera nazwę okna.  
   
- `dwStyle`  
+ *dwStyle*  
  Określa atrybuty stylu okna. Obejmują one Style okna standardowej i co najmniej jeden z następujących stylów specjalne:  
   
 - **MFS_MOVEFRAME** umożliwia mini ramkę okna do przeniesienia, klikając na dowolnej krawędzi okna, a nie tylko podpis.  
@@ -131,13 +131,13 @@ virtual BOOL Create(
   
  Zobacz [CWnd::Create](../../mfc/reference/cwnd-class.md#create) opis okna możliwych wartości stylu. Typowy kombinacja używany dla okien ramowych mini jest **ws_popup —&#124;ws_caption —&#124;ws_sysmenu —**.  
   
- `rect`  
+ *Rect*  
  A `RECT` struktury, określając odpowiednią wymiary okna.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskazuje okno nadrzędne. Użyj **NULL** dla systemu windows najwyższego poziomu.  
   
- `nID`  
+ *nID*  
  Jeśli okno ramowe mini został utworzony jako okna podrzędnego, jest to identyfikator kontrolki podrzędnej; w przeciwnym razie 0.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -161,25 +161,25 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwExStyle`  
+ *dwExStyle*  
  Określa styl rozszerzonej `CMiniFrameWnd` tworzona. Zastosuj wszelkie z [rozszerzone Style okna](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) do okna.  
   
- `lpClassName`  
+ *lpClassName*  
  Wskazuje na ciąg znaków zakończony znakiem null nazwy klasy systemu Windows ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) struktury). Nazwa klasy może być dowolną nazwą zarejestrowana w globalnej [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) funkcji lub żadnej z nazw wstępnie zdefiniowane klasy formantu. Nie może być **NULL**.  
   
- `lpWindowName`  
+ *lpWindowName*  
  Wskazuje ciąg znaków zakończony znakiem null, który zawiera nazwę okna.  
   
- `dwStyle`  
+ *dwStyle*  
  Określa atrybuty stylu okna. Zobacz [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles) i [CWnd::Create](../../mfc/reference/cwnd-class.md#create) opis możliwych wartości.  
   
- `rect`  
- Rozmiar i położenie okna w współrzędne klienta `pParentWnd`.  
+ *Rect*  
+ Rozmiar i położenie okna w współrzędne klienta *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskazuje obiektu okna nadrzędnego.  
   
- `nID`  
+ *nID*  
  Identyfikator okna podrzędnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -194,9 +194,9 @@ virtual BOOL CreateEx(
   
  Zastąpienie dalsze **na *** komunikat* komunikatu programów obsługi, aby dodać dodatkowe funkcje do klasy pochodnej.  
   
- Jeśli **ws_visible —** podano stylu, system Windows wysyła okna wszystkie komunikaty, które są wymagane do aktywowania i wyświetlenie okna. Jeśli styl okna określa paska tytułu, tytuł okna wskazywana przez `lpszWindowName` parametru jest wyświetlany w pasku tytułu.  
+ Jeśli **ws_visible —** podano stylu, system Windows wysyła okna wszystkie komunikaty, które są wymagane do aktywowania i wyświetlenie okna. Jeśli styl okna określa paska tytułu, tytuł okna wskazywana przez *lpszWindowName* parametru jest wyświetlany w pasku tytułu.  
   
- `dwStyle` Parametr może być dowolną kombinacją [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+ *DwStyle* parametr może być dowolną kombinacją [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
  Stary windows przybornika palety stylu nie są już obsługiwane. Stary styl, który nie ma przycisku Zamknij "X", jest obsługiwana podczas działania aplikacji MFC w poprzednich wersjach systemu Windows, ale nie jest już obsługiwana w programie Visual C++ .NET. Tylko nowe `WS_EX_TOOLWINDOW` styl jest teraz obsługiwana; opis tego stylu, zobacz [rozszerzone Style okna](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).  
   

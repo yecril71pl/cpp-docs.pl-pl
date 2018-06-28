@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea8f05c20c3a3276f51b4267b6763831dc23eacf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3826a1a649cf4a2c3f292b660e90384edac2575e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373530"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040093"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>Klasa CMFCToolBarFontComboBox
 Przycisku paska narzędzi, który zawiera kontrolki pola kombi, który umożliwia użytkownikowi wybranie czcionki z listy czcionek systemu.  
@@ -64,7 +64,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
   
 2.  Utworzyć `CMFCToolBarFontComboBox` obiektu.  
   
-3.  Programu obsługi wiadomości, który przetwarza `AFX_WM_RESETTOOLBAR` komunikatów, Zastąp oryginalny przycisk Nowy przycisk pole kombi za pomocą [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
+3.  Programu obsługi wiadomości, który przetwarza komunikat AFX_WM_RESETTOOLBAR, Zastąp oryginalny przycisk Nowy przycisk pole kombi za pomocą [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
   
 4.  Synchronizuj czcionki, która jest wybrane w polu kombi czcionki w dokumencie przy użyciu [CMFCToolBarFontComboBox::SetFont](#setfont) metody.  
   
@@ -110,13 +110,13 @@ CMFCToolBarFontComboBox();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiID`  
+ [in] *uiID*  
  Identyfikator polecenia pola kombi.  
   
- [in] `iImage`  
+ [in] *iImage*  
  Liczony od zera indeks obrazu paska narzędzi. Obraz znajduje się w [klasy CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md) obiekt, który [klasy CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md) obsługuje klasy.  
   
- [in] `nFontType`  
+ [in] *nFontType*  
  Typów czcionek, które zawiera pola kombi. Ten parametr może mieć kombinację (wartość logiczna lub) z następujących wartości:  
   
  DEVICE_FONTTYPE  
@@ -125,23 +125,23 @@ CMFCToolBarFontComboBox();
   
  TRUETYPE_FONTTYPE  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Jeśli ustawiono DEFAULT_CHARSET, pole kombi zawiera wszystkie unikatowej nazwy czcionki w wszystkich zestawów znaków. (Jeśli istnieją dwie czcionki o takiej samej nazwie, pole kombi zawiera jeden z nich). Jeśli ustawionym na wartość zestawu prawidłowych znaków pole kombi zawiera tylko czcionki w określonego zestawu znaków. Zobacz [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) listę możliwych znak ustawia.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Style pola kombi. (zobacz [style pola kombi](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  
   
- [in] `iWidth`  
+ [in] *iWidth*  
  Szerokość w pikselach kontrolki edycji.  
   
- [in] `nPitchAndFamily`  
+ [in] *nPitchAndFamily*  
  Jeśli ustawiono DEFAULT_PITCH, pole kombi zawiera czcionki, niezależnie od tego, wysokość. Jeśli ustawiono wartość FIXED_PITCH lub VARIABLE_PITCH, pole kombi zawiera tylko czcionki z danym typem wysokość. Filtrowanie oparte na rodziny czcionek nie jest obecnie obsługiwane.  
   
- [out] `pLstFontsExternal`  
+ [out] *pLstFontsExternal*  
  Wskaźnik do [klasy CObList](../../mfc/reference/coblist-class.md) obiekt zawierający informacje dostępne czcionki.  
   
 ### <a name="remarks"></a>Uwagi  
- Zazwyczaj `CMFCToolBarFontComboBox` obiektów przechowywania listy dostępnych czcionek w jednym udostępnionych `CObList` obiektu. Jeśli używasz drugi przeciążenia konstruktora i podaj prawidłowy wskaźnik do `pLstFontsExternal`, że `CMFCToolBarFontComboBox` obiektu zamiast spowoduje wypełnienie `CObList` który `pLstFontsExternal` wskazuje dostępnych czcionek.  
+ Zazwyczaj `CMFCToolBarFontComboBox` obiektów przechowywania listy dostępnych czcionek w jednym udostępnionych `CObList` obiektu. Jeśli używasz drugi przeciążenia konstruktora i podaj prawidłowy wskaźnik do *pLstFontsExternal*, że `CMFCToolBarFontComboBox` obiektu zamiast spowoduje wypełnienie `CObList` który *pLstFontsExternal* Wskazuje z dostępnych czcionek.  
   
 ### <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano sposób tworzenia `CMFCToolBarFontComboBox` obiektu. Następujący fragment kodu jest częścią [przykład konsola programu Word](../../visual-cpp-samples.md).  
@@ -156,11 +156,11 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iIndex`  
+ [in] *iIndex*  
  Określa liczony od zera indeks elementu pola kombi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do `CMFCFontInfo` obiektu. Jeśli `iIndex` nie określa indeks elementów prawidłową wartość zwracana jest `NULL`.  
+ Wskaźnik do `CMFCFontInfo` obiektu. Jeśli *iIndex* nie określa indeks elementów prawidłową wartość zwracana jest `NULL`.  
   
 ##  <a name="m_nfontheight"></a>  CMFCToolBarFontComboBox::m_nFontHeight  
  Określa wysokość w pikselach, znaków w polu kombi czcionki, jeśli pole kombi ma właściciela styl rysowania.  
@@ -183,20 +183,20 @@ BOOL SetFont(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszName`  
+ [in] *lpszName*  
  Określa nazwę czcionki lub prefiks.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Określa zestaw znaków.  
   
- [in] `bExact`  
- Określa, czy `lpszName` zawiera nazwę czcionki lub prefiks czcionki.  
+ [in] *bExact*  
+ Określa, czy *lpszName* zawiera nazwę czcionki lub prefiks czcionki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli wybrano pomyślnie; Czcionka w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `bExact` jest `TRUE`, ta metoda wybiera czcionkę, która dokładnie odpowiada nazwie określonej jako `lpszName`. Jeśli `bExact` jest `FALSE`, ta metoda wybiera czcionkę, która rozpoczyna się od tekstu określonego jako `lpszName` i który korzysta z zestawu znaków, który został określony jako `nCharSet`. Jeśli `nCharSet` ustawiono dla DEFAULT_CHARSET, zestaw znaków będzie ignorowana i to tylko `lpszName` zostanie użyta do wyboru czcionki.  
+ Jeśli *bExact* jest `TRUE`, ta metoda wybiera czcionkę, która dokładnie odpowiada nazwie określonej jako *lpszName*. Jeśli *bExact* jest `FALSE`, ta metoda wybiera czcionkę, która rozpoczyna się od tekstu określonego jako *lpszName* i który korzysta z zestawu znaków, który został określony jako *nCharSet*. Jeśli *nCharSet* ustawiono dla DEFAULT_CHARSET, zestaw znaków będzie ignorowana i to tylko *lpszName* zostanie użyta do wyboru czcionki.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

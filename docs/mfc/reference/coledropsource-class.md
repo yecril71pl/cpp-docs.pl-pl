@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e510811fcaac81aa54699250ef37f48ffe1f40e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3f601c2b15f5f117f77b1f916027107708e8f19
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374900"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038230"
 ---
 # <a name="coledropsource-class"></a>Klasa COleDropSource
 Umożliwia danych przeciąganych do miejsca docelowego.  
@@ -90,7 +90,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dropEffect`  
+ *dropEffect*  
  Efekt, który może zostać wyświetlony dla użytkownika, zwykle wskazujący, co się stanie, jeśli spadek wystąpił w tym punkcie z wybranych danych. Zazwyczaj jest to wartość zwrócona przez wywołanie najnowszych [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) lub [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover). Można co najmniej jeden z następujących czynności:  
   
 - `DROPEFFECT_NONE` Spadek będzie niemożliwe.  
@@ -119,7 +119,7 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Wskazuje okna zawierającego wybrane dane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -141,7 +141,7 @@ virtual SCODE QueryContinueDrag(
  *bEscapePressed*  
  Określają, czy został naciśnięty klawisz ESC od czasu ostatniego wywołania `COleDropSource::QueryContinueDrag`.  
   
- `dwKeyState`  
+ *dwKeyState*  
  Zawiera stan klawisze modyfikujące na klawiaturze. To jest kombinacją dowolną liczbę następujących: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, i **MK_RBUTTON**.  
   
 ### <a name="return-value"></a>Wartość zwracana  

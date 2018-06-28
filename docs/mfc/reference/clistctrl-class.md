@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b44878f5b860a05029f31492a7ca8ae06d83b607
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4a81ce168c99f4ad473619c72941842085c3a5a8
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379050"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042420"
 ---
 # <a name="clistctrl-class"></a>Clistctrl — klasa
 Hermetyzuje funkcjonalność "kontrolka widoku listy," którym są wyświetlane kolekcję elementów każde składa się z ikoną (z listy obrazów) oraz etykiety.  
@@ -487,7 +487,7 @@ class CListCtrl : public CWnd
 ## <a name="items-and-subitems"></a>Elementów i podelementów  
  Każdy element w kontrolce widok listy składa się z ikony (z listy obrazów), etykietę, bieżący stan i wartość zdefiniowane przez aplikację (określanych jako "danych elementu"). Jeden lub więcej podrzędnych również może być skojarzony z każdym elementem. "Podelementu" jest ciągiem, który w widoku raportu mogą być wyświetlane w kolumnie z prawej strony ikony i etykiety elementu. Wszystkie elementy w kontrolce widok listy muszą mieć taką samą liczbę podrzędnych.  
   
- Klasa **CListCtrl** zawiera kilka funkcji dla Wstawianie, usuwanie, wyszukiwanie i zmodyfikowanie tych elementów. Aby uzyskać więcej informacji, zobacz [CListCtrl::GetItem](#getitem), [CListCtrl::InsertItem](#insertitem), i [CListCtrl::FindItem](#finditem), [Dodawanie elementów do formantu](../adding-items-to-the-control.md), i [przewijanie, porządkowanie, sortowanie i znajdowanie w formantach listy](../scrolling-arranging-sorting-and-finding-in-list-controls.md).  
+ Klasa `CListCtrl` zawiera kilka funkcji dla Wstawianie, usuwanie, wyszukiwanie i zmodyfikowanie tych elementów. Aby uzyskać więcej informacji, zobacz [CListCtrl::GetItem](#getitem), [CListCtrl::InsertItem](#insertitem), i [CListCtrl::FindItem](#finditem), [Dodawanie elementów do formantu](../adding-items-to-the-control.md), i [przewijanie, porządkowanie, sortowanie i znajdowanie w formantach listy](../scrolling-arranging-sorting-and-finding-in-list-controls.md).  
   
  Domyślnie formantu widoku listy jest odpowiedzialny za przechowywanie atrybuty elementu ikony, jak i tekstu. Jednak oprócz tych typów elementów klasy `CListCtrl` obsługuje "elementy wywołania zwrotnego." "Element wywołania zwrotnego" jest elementu widoku listy, dla którego aplikacja — zamiast formantu — przechowuje tekst i ikona. Maska wywołania zwrotnego służy do określania, które atrybuty elementu (tekstu i/lub ikonę) są dostarczane przez aplikację. Jeśli aplikacja używa elementy wywołania zwrotnego, należy podać atrybutów tekstu i/lub ikonę na żądanie. Elementy wywołania zwrotnego są przydatne, gdy aplikacja już zachowuje niektóre z tych informacji. Aby uzyskać więcej informacji, zobacz [za pomocą CListCtrl: elementy wywołania zwrotnego i maska wywołania zwrotnego](../callback-items-and-the-callback-mask.md).  
   
@@ -535,10 +535,10 @@ CSize ApproximateViewRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `sz`  
+ *Sz*  
  Wymiary proponowanych formantu w pikselach. Jeśli nie określono wymiarów, platforma korzysta z bieżącej wartości szerokości lub wysokości formantu.  
   
- `iCount`  
+ *iCount*  
  Liczba elementów do wyświetlenia w formancie. Jeśli ten parametr ma wartość -1, platformę używa całkowitą liczbę elementów aktualnie w formancie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -555,7 +555,7 @@ BOOL Arrange(UINT nCode);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCode`  
+ *nCode*  
  Określa styl wyrównania elementów. Może być jedną z następujących wartości:  
   
 - `LVA_ALIGNLEFT` Wyrównuje elementy wzdłuż lewej krawędzi okna.  
@@ -570,7 +570,7 @@ BOOL Arrange(UINT nCode);
  Różna od zera, w przypadku powodzenia; w przeciwnym razie wartość zero.  
   
 ### <a name="remarks"></a>Uwagi  
- `nCode` Parametr określa styl wyrównania.  
+ *NCode* parametr określa styl wyrównania.  
   
 ### <a name="example"></a>Przykład    
 ```cpp  
@@ -610,25 +610,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
+ *dwStyle*  
  Określa styl formantu listy. Zastosuj dowolną kombinację stylów formantu listy do formantu. Zobacz [Style okna widoku listy](http://msdn.microsoft.com/library/windows/desktop/bb774739) w zestawie SDK systemu Windows, aby uzyskać pełną listę tych stylów. Rozszerzone style właściwe dla formantu przy użyciu zestawu [SetExtendedStyle](#setextendedstyle).  
   
- `rect`  
+ *Rect*  
  Określa rozmiar i położenie kontrolki listy. Może być albo `CRect` obiektu lub [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Określa okno nadrzędne kontrolki listy, zwykle `CDialog`. Nie może być **NULL**.  
   
- `nID`  
+ *nID*  
  Określa identyfikator kontrolki listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie wartość zero.  
   
 ### <a name="remarks"></a>Uwagi  
- Możesz utworzyć `CListCtrl` w dwóch krokach. Najpierw należy wywołać konstruktora, a następnie wywołać **Utwórz**, która tworzy formantu widoku listy i dołącza go do `CListCtrl` obiektu.  
+ Możesz utworzyć `CListCtrl` w dwóch krokach. Najpierw należy wywołać konstruktora, a następnie wywołać `Create`, która tworzy formantu widoku listy i dołącza go do `CListCtrl` obiektu.  
   
- Aby zastosować obiekt formantu listy rozszerzone style systemu Windows, należy wywołać [CreateEx](#createex) zamiast **Utwórz**.  
+ Aby zastosować obiekt formantu listy rozszerzone style systemu Windows, należy wywołać [CreateEx](#createex) zamiast `Create`.  
   
 ### <a name="example"></a>Przykład  
 
@@ -652,19 +652,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwExStyle`  
- Określa styl rozszerzony formantu tworzona. Aby uzyskać listę rozszerzone style systemu Windows, zobacz `dwExStyle` parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ *dwExStyle*  
+ Określa styl rozszerzony formantu tworzona. Aby uzyskać listę rozszerzone style systemu Windows, zobacz *dwExStyle* parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Określa styl formantu listy. Zastosuj dowolną kombinację stylów formantu listy do formantu. Aby uzyskać pełną listę tych stylów, zobacz [Style okna widoku listy](http://msdn.microsoft.com/library/windows/desktop/bb774739) w zestawie Windows SDK.  
   
- `rect`  
- Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujące rozmiar i położenie okna, które ma zostać utworzony w współrzędne klienta `pParentWnd`.  
+ *Rect*  
+ Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujące rozmiar i położenie okna, które ma zostać utworzony w współrzędne klienta *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do okna, które jest elementem nadrzędnym formantu.  
   
- `nID`  
+ *nID*  
  Identyfikator formantu okna podrzędnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -673,10 +673,10 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Uwagi  
  Użyj `CreateEx` zamiast [Utwórz](#create) dotyczyć rozszerzone style systemu Windows, określone przez wstępu rozszerzonego stylu Windows **WS_EX_**.  
   
- `CreateEx` Tworzy formantu z rozszerzone style Windows określonego przez `dwExStyle`. Aby ustawić rozszerzone style określonego formantu, należy wywołać [SetExtendedStyle](#setextendedstyle). Na przykład użyć `CreateEx` można ustawić takie style jako **ws_ex_contexthelp —**, ale użyj `SetExtendedStyle` można ustawić takie style jako **LVS_EX_FULLROWSELECT**. Aby uzyskać więcej informacji, zobacz opisane w temacie style [rozszerzone style widoku listy](http://msdn.microsoft.com/library/windows/desktop/bb774732) w zestawie Windows SDK.  
+ `CreateEx` Tworzy formantu z rozszerzone style Windows określonego przez *dwExStyle*. Aby ustawić rozszerzone style określonego formantu, należy wywołać [SetExtendedStyle](#setextendedstyle). Na przykład użyć `CreateEx` można ustawić takie style jako **ws_ex_contexthelp —**, ale użyj `SetExtendedStyle` można ustawić takie style jako **LVS_EX_FULLROWSELECT**. Aby uzyskać więcej informacji, zobacz opisane w temacie style [rozszerzone style widoku listy](http://msdn.microsoft.com/library/windows/desktop/bb774732) w zestawie Windows SDK.  
   
 ##  <a name="createdragimage"></a>  CListCtrl::CreateDragImage  
- Tworzy listę przeciągania obrazu dla element określony przez `nItem`.  
+ Tworzy listę przeciągania obrazu dla element określony przez *nItem*.  
   
 ```  
 CImageList* CreateDragImage(
@@ -685,10 +685,10 @@ CImageList* CreateDragImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Indeks elementu, którego listy obrazów przeciągania ma być utworzony.  
   
- `lpPoint`  
+ *lppoint —*  
  Adres [punktu](http://msdn.microsoft.com/library/windows/desktop/dd162805) struktury, która otrzymuje początkową lokalizację w lewym górnym rogu obrazu, w widoku koordynuje.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -734,7 +734,7 @@ BOOL DeleteColumn(int nCol);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCol`  
+ *nCol*  
  Indeks kolumny do usunięcia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -761,7 +761,7 @@ BOOL DeleteItem(int nItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Określa indeks elementu do usunięcia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -787,7 +787,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Długie wskaźnik do `DRAWITEMSTRUCT` strukturę, która zawiera informacje o typie rysunku wymagane.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -805,7 +805,7 @@ CEdit* EditLabel(int nItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Indeks elementu widoku listy, który ma być edytowany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -836,7 +836,7 @@ LRESULT EnableGroupView(BOOL fEnable);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `fEnable`  
+ *fEnable*  
  Wskazuje, czy umożliwiające formantu listview do grupy wyświetlane elementów. **Wartość TRUE,** umożliwia grupowanie; **FALSE** je wyłączyć.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -861,17 +861,17 @@ BOOL EnsureVisible(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Indeks elementu widoku listy, który ma być widoczny.  
   
- `bPartialOK`  
+ *bPartialOK*  
  Określa, czy dopuszczalny jest widoczność częściowej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie wartość zero.  
   
 ### <a name="remarks"></a>Uwagi  
- Kontrolka widoku listy zostanie wyświetlony w wyniku, jeśli to konieczne. Jeśli `bPartialOK` parametr jest różna od zera, przewijanie nie występuje, jeśli element jest częściowo widoczne.  
+ Kontrolka widoku listy zostanie wyświetlony w wyniku, jeśli to konieczne. Jeśli *bPartialOK* parametr jest różna od zera, przewijanie nie występuje, jeśli element jest częściowo widoczne.  
   
 ### <a name="example"></a>Przykład  
 ```cpp  
@@ -892,17 +892,17 @@ int FindItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pFindInfo`  
+ *pFindInfo*  
  Wskaźnik do [LVFINDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774745) struktury zawierający informacje na temat elementu, który ma zostać wyszukany.  
   
- `nStart`  
- Indeks element, aby rozpocząć wyszukiwanie przy użyciu lub -1, aby rozpocząć od początku. Element pod `nStart` został wykluczony z wyszukiwania, jeśli `nStart` nie jest równa -1.  
+ *nczas uruchomienia*  
+ Indeks element, aby rozpocząć wyszukiwanie przy użyciu lub -1, aby rozpocząć od początku. Element pod *nczas uruchomienia* został wykluczony z wyszukiwania, jeśli *nczas uruchomienia* nie jest równa -1.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Indeks elementu w przypadku powodzenia lub wartość -1 w inny sposób.  
   
 ### <a name="remarks"></a>Uwagi  
- `pFindInfo` Parametr wskazuje **LVFINDINFO** struktury, która zawiera informacje używane do wyszukiwania dla elementu widoku listy.  
+ *PFindInfo* parametr wskazuje **LVFINDINFO** struktury, która zawiera informacje używane do wyszukiwania dla elementu widoku listy.  
   
 ### <a name="example"></a>Przykład  
 
@@ -942,7 +942,7 @@ BOOL GetBkImage(LVBKIMAGE* plvbkImage) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `plvbkImage`  
+ *plvbkImage*  
  Wskaźnik do **LVBKIMAGE** struktury zawierającej bieżący obraz tła w widoku listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -991,7 +991,7 @@ BOOL GetCheck(int nItem) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Liczony od zera indeks elementu kontrolki listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1013,10 +1013,10 @@ BOOL GetColumn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCol`  
+ *nCol*  
  Indeks kolumny, których atrybuty mają zostać pobrane.  
   
- `pColumn`  
+ *pColumn*  
  Adres [LVCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743) struktury, która określa informacje do pobrania i odbiera informacji o kolumnie. **Maski** elementu członkowskiego Określa, która kolumna atrybuty do pobrania. Jeśli **maski** określa element członkowski `LVCF_TEXT` wartość **pszText** elementu członkowskiego musi zawierać adres buforu, który odbiera tekst elementu i **cchTextMax** element członkowski musi być określony rozmiar buforu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1051,10 +1051,10 @@ BOOL GetColumnOrderArray(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `piArray`  
+ *piArray*  
  Wskaźnik do buforu, który będzie zawierać wartości indeksów kolumn formantu widoku listy. Rozmiar buforu musi być wystarczająco duży, aby zawierać łączna liczba kolumn w formancie widoku listy.  
   
- `iCount`  
+ *iCount*  
  Liczba kolumn w formancie widoku listy. Jeśli ten parametr ma wartość -1, liczba kolumn jest automatycznie pobierany przez platformę.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1100,11 +1100,11 @@ int GetColumnWidth(int nCol) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCol`  
+ *nCol*  
  Określa indeks kolumny, których szerokość ma być pobrana.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Szerokość w pikselach Kolumna określona przez `nCol`.  
+ Szerokość w pikselach Kolumna określona przez *nCol*.  
   
 ### <a name="example"></a>Przykład  
 
@@ -1251,10 +1251,10 @@ int GetGroupInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iGroupId`  
+ *iGroupId*  
  Identyfikator grupy, których informacje ma być pobrana.  
   
- `pgrp`  
+ *pgrp*  
  Wskaźnik do [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) zawierające informacje dotyczące danej grupy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1276,8 +1276,8 @@ BOOL GetGroupInfoByIndex(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `iIndex`|Liczony od zera indeks grupy.|  
-|[out] `pGroup`|Wskaźnik do [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) strukturę, która otrzymuje informacje na temat grupy określonej przez `iIndex` parametru.<br /><br /> Element wywołujący jest odpowiedzialny za inicjowanie członków [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) struktury. Ustaw `cbSize` elementu członkowskiego do rozmiaru struktury i flagi z `mask` członka Określ informacje niezbędne do pobrania.|  
+|[in] *iIndex*|Liczony od zera indeks grupy.|  
+|[out] *pGroup*|Wskaźnik do [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) strukturę, która otrzymuje informacje na temat grupy określonej przez *iIndex* parametru.<br /><br /> Element wywołujący jest odpowiedzialny za inicjowanie członków [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) struktury. Ustaw `cbSize` elementu członkowskiego do rozmiaru struktury i flagi z `mask` członka Określ informacje niezbędne do pobrania.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
@@ -1333,7 +1333,7 @@ void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pGroupMetrics`  
+ *pGroupMetrics*  
  Wskaźnik do [LVGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb774752) zawierającego informacje o grupie metryki.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1353,15 +1353,15 @@ BOOL GetGroupRect(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `iGroupId`|Określa grupę.|  
-|[w, out] `lpRect`|Wskaźnik do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Jeśli ta metoda zakończy się pomyślnie, struktura odbiera współrzędne prostokąt grupy, która jest określona przez `iGroupId`.|  
-|[in] `iCoords`|Określa współrzędne prostokąta do pobrania. Użyj jednej z następujących wartości:<br /><br /> - `LVGGR_GROUP` -Współrzędne całej grupy rozszerzonej (ustawienie domyślne).<br />- `LVGGR_HEADER` -Współrzędne tylko nagłówek (zwinięte grupy).<br />- `LVGGR_SUBSETLINK` -Współrzędne tylko łącze podzestawu (podzbiorem znaczników).|  
+|[in] *iGroupId*|Określa grupę.|  
+|[w, out] *lprect —*|Wskaźnik do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Jeśli ta metoda zakończy się pomyślnie, struktura odbiera współrzędne prostokąt grupy, która jest określona przez *iGroupId*.|  
+|[in] *iCoords*|Określa współrzędne prostokąta do pobrania. Użyj jednej z następujących wartości:<br /><br /> - `LVGGR_GROUP` -Współrzędne całej grupy rozszerzonej (ustawienie domyślne).<br />- `LVGGR_HEADER` -Współrzędne tylko nagłówek (zwinięte grupy).<br />- `LVGGR_SUBSETLINK` -Współrzędne tylko łącze podzestawu (podzbiorem znaczników).|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
- Element wywołujący jest odpowiedzialny za alokację [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) wskazywanej przez `pRect` parametru.  
+ Element wywołujący jest odpowiedzialny za alokację [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) wskazywanej przez *pRect* parametru.  
   
  Ta metoda wysyła [LVM_GETGROUPRECT](http://msdn.microsoft.com/library/windows/desktop/bb774935) komunikat, który jest opisany w zestawie SDK systemu Windows.  
   
@@ -1406,14 +1406,14 @@ UINT GetGroupState(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `iGroupId`|Liczony od zera indeks grupy.|  
-|[in] `dwMask`|Maska, który określa wartość stanu do pobrania dla określonej grupy. Aby uzyskać więcej informacji, zobacz `mask` członkiem [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) struktury.|  
+|[in] *iGroupId*|Liczony od zera indeks grupy.|  
+|[in] *dwMask*|Maska, który określa wartość stanu do pobrania dla określonej grupy. Aby uzyskać więcej informacji, zobacz `mask` członkiem [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) struktury.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Żądany stan dla określonej grupy lub 0, jeśli nie można odnaleźć grupy.  
   
 ### <a name="remarks"></a>Uwagi  
- Wartość zwracana jest wynik operacji i na `dwMask` parametr i wartość `state` członkiem [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) strukturę, która reprezentuje bieżący formant widoku listy.  
+ Wartość zwracana jest wynik operacji i na *dwMask* parametr i wartość `state` członkiem [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) strukturę, która reprezentuje bieżący formant widoku listy.  
   
  Ta metoda wysyła [LVM_GETGROUPSTATE](http://msdn.microsoft.com/library/windows/desktop/bb774936) komunikat, który jest opisany w zestawie SDK systemu Windows. Aby uzyskać więcej informacji, zobacz [ListView_GetGroupState](http://msdn.microsoft.com/library/windows/desktop/bb761288) makra.  
   
@@ -1512,7 +1512,7 @@ CImageList* GetImageList(int nImageList) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nImageList`  
+ *nImageList*  
  Określenie listy obrazów, które można pobrać wartość. Może być jedną z następujących wartości:  
   
 - `LVSIL_NORMAL` Listy obrazów z dużych ikon.  
@@ -1541,7 +1541,7 @@ BOOL GetInsertMark(LPLVINSERTMARK lvim) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lvim`  
+ *lvim*  
  Wskaźnik do [LVINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774758) struktury zawierającej informacje dla znacznika wstawiania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1571,7 +1571,7 @@ int GetInsertMarkRect(LPRECT pRect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pRect`  
+ *pRect*  
  Wskaźnik do `RECT` struktury, która zawiera współrzędne prostokąt zakresem punkt wstawiania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1592,7 +1592,7 @@ BOOL GetItem(LVITEM* pItem) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Wskaźnik do [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) strukturę, która odbiera atrybuty elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1622,7 +1622,7 @@ DWORD_PTR GetItemData(int nItem) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Indeks elementu listy jest którego dane mają zostać pobrane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1660,10 +1660,10 @@ BOOL GetItemIndexRect(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `pItemIndex`|Wskaźnik do [LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762) strukturę dla nadrzędnego elementu podelement.<br /><br /> Element wywołujący jest odpowiedzialny za przydzielanie i ustawianie elementów członkowskich [LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762) struktury. Ten parametr nie może być `NULL`.|  
-|[in] `iColumn`|Liczony od zera indeks kolumny w formancie.|  
-|[in] `rectType`|Część podelementu widoku listy, dla którego są pobierane prostokątem. Określ jedną z następujących wartości:<br /><br /> `LVIR_BOUNDS` -Zwraca prostokąt ograniczający podelement całego, w tym ikonę i etykietę.<br /><br /> `LVIR_ICON` -Zwraca prostokąt ograniczający ikony lub małe ikony podelement.<br /><br /> `LVIR_LABEL` -Zwraca prostokąt ograniczający podelementu tekstu.|  
-|[out] `pRect`|Wskaźnik do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, która otrzymuje informacje na temat prostokątem podelement.<br /><br /> Element wywołujący jest odpowiedzialny za alokację [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Ten parametr nie może być `NULL`.|  
+|[in] *pItemIndex*|Wskaźnik do [LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762) strukturę dla nadrzędnego elementu podelement.<br /><br /> Element wywołujący jest odpowiedzialny za przydzielanie i ustawianie elementów członkowskich [LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762) struktury. Ten parametr nie może być `NULL`.|  
+|[in] *iColumn*|Liczony od zera indeks kolumny w formancie.|  
+|[in] *rectType*|Część podelementu widoku listy, dla którego są pobierane prostokątem. Określ jedną z następujących wartości:<br /><br /> `LVIR_BOUNDS` -Zwraca prostokąt ograniczający podelement całego, w tym ikonę i etykietę.<br /><br /> `LVIR_ICON` -Zwraca prostokąt ograniczający ikony lub małe ikony podelement.<br /><br /> `LVIR_LABEL` -Zwraca prostokąt ograniczający podelementu tekstu.|  
+|[out] *pRect*|Wskaźnik do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, która otrzymuje informacje na temat prostokątem podelement.<br /><br /> Element wywołujący jest odpowiedzialny za alokację [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Ten parametr nie może być `NULL`.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
@@ -1709,10 +1709,10 @@ BOOL GetItemPosition(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Indeks elementu, którego pozycja ma być pobrana.  
   
- `lpPoint`  
+ *lppoint —*  
  Adres [punktu](http://msdn.microsoft.com/library/windows/desktop/dd162805) struktury, która odbiera położenie elementu w lewym górnym rogu, w widoku koordynuje.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1746,13 +1746,13 @@ BOOL GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Indeks elementu, którego pozycja ma być pobrana.  
   
- `lpRect`  
+ *lprect —*  
  Adres [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, która odbiera prostokątem.  
   
- `nCode`  
+ *nCode*  
  Część elementu widoku listy, dla którego można pobrać prostokątem. Może być jedną z następujących wartości:  
   
 - `LVIR_BOUNDS` Zwraca prostokąt ograniczający cały element, w tym ikonę i etykietę.  
@@ -1821,9 +1821,9 @@ BOOL GetItemSpacing(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `fSmall`|Widok, dla którego można pobrać elementu odstępów. Określ `true` dla widoku małych ikon lub `false` dla widoku ikon.|  
-|[out] `pnHorzSpacing`|Zawiera odstęp między elementami.|  
-|[out] `pnVertSpacing`|Zawiera odstępy w pionie między elementami.|  
+|[in] *fSmall*|Widok, dla którego można pobrać elementu odstępów. Określ `true` dla widoku małych ikon lub `false` dla widoku ikon.|  
+|[out] *pnHorzSpacing*|Zawiera odstęp między elementami.|  
+|[out] *pnVertSpacing*|Zawiera odstępy w pionie między elementami.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
@@ -1841,10 +1841,10 @@ UINT GetItemState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Indeks elementu, którego stan ma być pobrana.  
   
- `nMask`  
+ *nMask*  
  Maska określający, którego stan elementu flagi do zwrócenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1872,25 +1872,25 @@ CString GetItemText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Indeks elementu, którego tekst ma być pobrana.  
   
- `nSubItem`  
+ *nSubItem*  
  Określa podelement którego tekst ma być pobrana.  
   
- `lpszText`  
+ *lpszText*  
  Wskaźnik na ciąg, który ma otrzymać tekstu elementu.  
   
- `nLen`  
- Długość buforu wskazywana przez `lpszText`.  
+ *nLen*  
+ Długość buforu wskazywana przez *lpszText*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wersja zwracanie `int` zwraca długość ciągu pobrane.  
+ Wersja zwracanie **int** zwraca długość ciągu pobrane.  
   
  Wersja zwracanie `CString` zwraca tekst elementu.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `nSubItem` wynosi zero, ta funkcja pobiera etykiety elementu; Jeśli `nSubItem` jest różna od zera, jego pobiera tekst podelement. Aby uzyskać więcej informacji na temat argumentu podelementu można znaleźć w omówieniu [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) struktury w zestawie Windows SDK.  
+ Jeśli *nSubItem* wynosi zero, ta funkcja pobiera etykiety elementu; Jeśli *nSubItem* jest różna od zera, jego pobiera tekst podelement. Aby uzyskać więcej informacji na temat argumentu podelementu można znaleźć w omówieniu [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) struktury w zestawie Windows SDK.  
   
 ##  <a name="getnextitem"></a>  CListCtrl::GetNextItem  
  Wyszukuje listę wyświetlić element, który ma określonych właściwości i który posiada określonej relacji do danego elementu.  
@@ -1902,10 +1902,10 @@ int GetNextItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Indeks element, aby rozpocząć wyszukiwanie za pomocą lub -1, można znaleźć pierwszego elementu, który odpowiada określonym flagi. Wyszukiwanie określonego elementu jest niedozwolona.  
   
- `nFlags`  
+ *nFlags*  
  Geometrycznych relacji żądany element określony element i stan żądanego elementu. Geometrycznych relacji może być jedną z następujących wartości:  
   
 - `LVNI_ABOVE` Wyszukiwanie elementu, który przekracza określony element.  
@@ -1944,30 +1944,30 @@ BOOL GetNextItemIndex(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[w, out] `pItemIndex`|Wskaźnik do [LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762) strukturę, która zawiera opis elementu, gdy rozpocznie się wyszukiwanie lub wartość -1, aby znaleźć pierwszego elementu, który odpowiada flagi w `nFlags` parametru.<br /><br /> Jeśli ta metoda zakończy się pomyślnie, `LVITEMINDEX` struktura zawiera opis elementu znalezione przez wyszukiwanie.|  
-|[in] `nFlags`|Bitowe połączenie (lub) flagi określające, jak wykonać wyszukiwanie.<br /><br /> Wyszukiwanie może zależeć od indeksu, stanu lub wygląd elementu docelowego lub element docelowy fizyczny pozycja względem elementu określona przez `pItemIndex` parametru. Aby uzyskać więcej informacji, zobacz `flags` parametru w [LVM_GETNEXTITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761059) wiadomości.|  
+|[w, out] *pItemIndex*|Wskaźnik do [LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762) strukturę, która zawiera opis elementu, gdy rozpocznie się wyszukiwanie lub wartość -1, aby znaleźć pierwszego elementu, który odpowiada flagi w *nFlags* parametru.<br /><br /> Jeśli ta metoda zakończy się pomyślnie, `LVITEMINDEX` struktura zawiera opis elementu znalezione przez wyszukiwanie.|  
+|[in] *nFlags*|Bitowe połączenie (lub) flagi określające, jak wykonać wyszukiwanie.<br /><br /> Wyszukiwanie może zależeć od indeksu, stanu lub wygląd elementu docelowego lub element docelowy fizyczny pozycja względem elementu określona przez *pItemIndex* parametru. Aby uzyskać więcej informacji, zobacz *flagi* parametru w [LVM_GETNEXTITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761059) wiadomości.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
- Element wywołujący jest odpowiedzialny za przydzielanie i ustawianie elementów członkowskich `LVITEMINDEX` wskazywanej przez `pItemIndex` parametru.  
+ Element wywołujący jest odpowiedzialny za przydzielanie i ustawianie elementów członkowskich `LVITEMINDEX` wskazywanej przez *pItemIndex* parametru.  
   
  Ta metoda wysyła [LVM_GETNEXTITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761059) komunikat, który jest opisany w zestawie SDK systemu Windows.  
   
 ##  <a name="getnextselecteditem"></a>  CListCtrl::GetNextSelectedItem  
- Pobiera indeks elementu listy identyfikowane przez `pos`, następnie ustawia *pos* do **pozycji** wartość.  
+ Pobiera indeks elementu listy identyfikowane przez *pos*, następnie ustawia *pos* do **pozycji** wartość.  
   
 ```  
 int GetNextSelectedItem(POSITION& pos) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pos`  
+ *POS*  
  Odwołanie do **pozycji** wartość zwrócona przez poprzednie wywołanie `GetNextSelectedItem` lub `GetFirstSelectedItemPosition`. Wartość jest aktualizowana do pozycji dalej przez to wywołanie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Indeks elementu listy identyfikowane przez `pos`.  
+ Indeks elementu listy identyfikowane przez *pos*.  
   
 ### <a name="remarks"></a>Uwagi  
  Można użyć `GetNextSelectedItem` w pętli do przodu iteracji, jeśli ustanowić położenie początkowe w wyniku wywołania `GetFirstSelectedItemPosition`.  
@@ -2058,7 +2058,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpPoint`  
+ *lppoint —*  
  Adres [punktu](http://msdn.microsoft.com/library/windows/desktop/dd162805) strukturę, która odbiera pochodzenia widoku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -2137,11 +2137,11 @@ int GetStringWidth(LPCTSTR lpsz) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpsz`  
+ *lpsz*  
  Adres zerem ciągu, których szerokość zostanie określony.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Szerokość w pikselach ciągu wskazywana przez `lpsz`.  
+ Szerokość w pikselach ciągu wskazywana przez *lpsz*.  
   
 ### <a name="remarks"></a>Uwagi  
  Szerokość zwrócony uwzględnia formantu bieżącą czcionkę i marginesy kolumny, ale nie szerokość małych ikon.  
@@ -2190,7 +2190,7 @@ BOOL GetSubItemRect(
   
 - `LVIR_LABEL` Zwraca prostokąt ograniczający cały element, w tym ikonę i etykietę. Jest to identyczne `LVIR_BOUNDS`.  
   
- `ref`  
+ *ref*  
  Odwołanie do [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który zawiera współrzędne podelement przez ograniczenia prostokąta.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -2250,7 +2250,7 @@ BOOL GetTileViewInfo(PLVTILEVIEWINFO ptvi) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ptvi`  
+ *ptvi*  
  Wskaźnik do [LVTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb774768) struktury, która odbiera pobrane informacje.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -2334,7 +2334,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect —*  
  Adres [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -2353,10 +2353,10 @@ void GetWorkAreas(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nWorkAreas`  
+ *nWorkAreas*  
  Liczba `RECT` struktury zawarte w *ChRL* tablicy.  
   
- `prc`  
+ *ChRL*  
  Wskaźnik do tablicy `RECT` struktury (lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektów) otrzymujący obszary robocze formantu widoku listy. Wartości te struktury są we współrzędnych klienta.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -2373,7 +2373,7 @@ BOOL HasGroup(int iGroupId) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iGroupId`  
+ *iGroupId*  
  Identyfikator grupy żądanej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -2394,22 +2394,22 @@ int HitTest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pHitTestInfo`  
+ *pHitTestInfo*  
  Adres **LVHITTESTINFO** strukturę, która zawiera pozycji trafienie testu oraz że odbiera informacje na temat wyników testu trafienia.  
   
- `pt`  
+ *PT*  
  Punkt, który ma zostać przetestowana.  
   
- `pFlags`  
+ *pFlags*  
  Wskaźnik do wartości całkowitej, która otrzymuje informacje o wynikach testu. Patrz wyjaśnienia **flagi** członkiem [LVHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb774754) struktury w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Indeks elementu w miejscu określonym przez `pHitTestInfo`, jeśli istnieje, lub wartość -1 w inny sposób.  
+ Indeks elementu w miejscu określonym przez *pHitTestInfo*, jeśli istnieje, lub wartość -1 w inny sposób.  
   
 ### <a name="remarks"></a>Uwagi  
  Można użyć `LVHT_ABOVE`, `LVHT_BELOW`, `LVHT_TOLEFT`, i `LVHT_TORIGHT` wartości struktury **flagi** elementu członkowskiego w celu określenia, czy by przewinąć zawartość formantu widoku listy. Dwa z tych flag można łączyć, na przykład, jeśli pozycja jest powyżej i z lewej strony obszaru klienckiego.  
   
- Można sprawdzić **LVHT_ONITEM** wartość struktury **flagi** członka, aby ustalić, czy określonej pozycji znajduje się nad elementu widoku listy. Ta wartość jest operacją Alternatywy na `LVHT_ONITEMICON`, `LVHT_ONITEMLABEL`, i `LVHT_ONITEMSTATEICON` wartości struktury **flagi** elementu członkowskiego.  
+ Można sprawdzić `LVHT_ONITEM` wartość struktury **flagi** członka, aby ustalić, czy określonej pozycji znajduje się nad elementu widoku listy. Ta wartość jest operacją Alternatywy na `LVHT_ONITEMICON`, `LVHT_ONITEMLABEL`, i `LVHT_ONITEMSTATEICON` wartości struktury **flagi** elementu członkowskiego.  
   
 ### <a name="example"></a>Przykład  
 
@@ -2452,22 +2452,22 @@ int InsertColumn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCol`  
+ *nCol*  
  Indeks nowej kolumny.  
   
- `pColumn`  
+ *pColumn*  
  Adres **LVCOLUMN** strukturę, która zawiera atrybuty nowej kolumny.  
   
  *lpszColumnHeading*  
  Adres ciąg zawierający nagłówek kolumny.  
   
- `nFormat`  
+ *nFormat*  
  Liczba całkowita określająca wyrównanie kolumny. Może być jedną z następujących wartości: **LVCFMT_LEFT**, **LVCFMT_RIGHT**, lub **LVCFMT_CENTER**.  
   
- `nWidth`  
+ *nWidth*  
  Szerokość kolumny w pikselach. Jeśli ten parametr ma wartość -1, szerokość kolumny nie jest ustawiona.  
   
- `nSubItem`  
+ *nSubItem*  
  Indeks podelement skojarzone z kolumną. Jeśli ten parametr ma wartość -1, podelementu, nie jest skojarzony z kolumną.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -2491,7 +2491,7 @@ LRESULT InsertGroup(
  *index*  
  Indeks elementu, gdy grupa jest do wstawienia.  
   
- `pgrp`  
+ *pgrp*  
  Wskaźnik do [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) struktury zawierający grupę do dodania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -2546,29 +2546,29 @@ int InsertItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Wskaźnik do [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) struktury, która określa atrybuty elementu zgodnie z opisem w zestawie Windows SDK.  
   
- `nItem`  
+ *nItem*  
  Indeks elementu do wstawienia.  
   
- `lpszItem`  
+ *lpszItem*  
  Adres ciąg zawierający etykiety elementu, lub `LPSTR_TEXTCALLBACK` Jeśli element jest elementem wywołania zwrotnego. Aby uzyskać informacje na elementy wywołania zwrotnego, zobacz [CListCtrl::GetCallbackMask](#getcallbackmask).  
   
- `nImage`  
+ *nImage*  
  Indeks obrazu do elementu, lub `I_IMAGECALLBACK` Jeśli element jest elementem wywołania zwrotnego. Aby uzyskać informacje na elementy wywołania zwrotnego, zobacz [CListCtrl::GetCallbackMask](#getcallbackmask).  
   
- `nMask`  
- `nMask` Parametr określa, który element przekazywane jako parametry atrybutów są prawidłowe. Może być jeden lub więcej wartości maski opisanych w [struktury LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) w zestawie Windows SDK. Prawidłowe wartości można łączyć z bitowego operatora OR.  
+ *nMask*  
+ *NMask* parametr określa, który element przekazywane jako parametry atrybutów są prawidłowe. Może być jeden lub więcej wartości maski opisanych w [struktury LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) w zestawie Windows SDK. Prawidłowe wartości można łączyć z bitowego operatora OR.  
   
- `nState`  
+ *nInformacje*  
  Wskazuje nakładki obrazów, obraz stanu i stanu elementu. Zobacz Tematy zestaw Windows SDK [struktury LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Aby uzyskać więcej informacji i [stanów elementu widoku listy](http://msdn.microsoft.com/library/windows/desktop/bb774733) listę prawidłowe flagi.  
   
- `nStateMask`  
+ *nStateMask*  
  Wskazuje, które elementy członkowskie stanu będą pobierane lub zmodyfikowany. Zobacz [struktury LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) w zestawie SDK systemu Windows, aby uzyskać więcej informacji.  
   
- `lParam`  
- Wartość specyficzna dla aplikacji 32-bitowych skojarzone z elementem. Jeśli ten parametr jest określony, musisz ustawić `nMask` atrybutu `LVIF_PARAM`.  
+ *lParam*  
+ Wartość specyficzna dla aplikacji 32-bitowych skojarzone z elementem. Jeśli ten parametr jest określony, musisz ustawić *nMask* atrybutu `LVIF_PARAM`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Indeks nowy element w przypadku powodzenia lub wartość -1 w inny sposób.  
@@ -2611,10 +2611,10 @@ int InsertMarkHitTest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPoint`  
+ *pPoint*  
  Wskaźnik do [punktu](http://msdn.microsoft.com/library/windows/desktop/dd162805) struktury, która zawiera testu trafienia koordynuje, względem obszaru klienckiego kontrolki listy.  
   
- `lvim`  
+ *lvim*  
  Wskaźnik do [LVINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774758) strukturę, która określa punkt wstawiania najbliżej współrzędne zdefiniowane przez parametr punktu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -2647,7 +2647,7 @@ BOOL IsItemVisible(int index) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `index`|Liczony od zera indeks elementu w bieżącym formantu widoku listy.|  
+|[in] *indeksu*|Liczony od zera indeks elementu w bieżącym formantu widoku listy.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli określony element jest widoczny w przeciwnym razie `false`.  
@@ -2666,7 +2666,7 @@ UINT MapIDToIndex(UINT id) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `id`|Unikatowy identyfikator elementu.|  
+|[in] *id*|Unikatowy identyfikator elementu.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Bieżący indeks dla określonego identyfikatora.  
@@ -2689,7 +2689,7 @@ UINT MapIndexToID(UINT index) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `index`|Liczony od zera indeks elementu.|  
+|[in] *indeksu*|Liczony od zera indeks elementu.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Unikatowy identyfikator określonego elementu.  
@@ -2751,10 +2751,10 @@ LRESULT MoveGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iGroupId`  
+ *iGroupId*  
  Identyfikator grupy do przeniesienia.  
   
- `toIndex`  
+ *toIndex*  
  Liczony od zera indeks, w którym ma zostać przesunięta grupy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -2773,10 +2773,10 @@ void MoveItemToGroup(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `idItemFrom`  
+ [in] *idItemFrom*  
  Indeks elementu do przeniesienia.  
   
- [in] `idGroupTo`  
+ [in] *idGroupTo*  
  Identyfikator grupy element zostanie przeniesiona do.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -2796,17 +2796,17 @@ BOOL RedrawItems(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nFirst`  
+ *nFirst*  
  Indeks pierwszego elementu ma zostać wyświetlony ponownie, tak.  
   
- `nLast`  
+ *Nostatnia*  
  Indeks ostatniego elementu ma zostać wyświetlony ponownie, tak.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie wartość zero.  
   
 ### <a name="remarks"></a>Uwagi  
- Określone elementy nie są w rzeczywistości odowieżany do momentu otrzymania przez okno widoku listy `WM_PAINT` wiadomości. Aby natychmiast odświeżyć, wywołanie systemu Windows [UpdateWindow](http://msdn.microsoft.com/library/windows/desktop/dd145167) funkcja po użyciu tej funkcji.  
+ Określone elementy nie są faktycznie odowieżany, dopóki okno widoku listy otrzymuje komunikat WM_PAINT. Aby natychmiast odświeżyć, wywołanie systemu Windows [UpdateWindow](http://msdn.microsoft.com/library/windows/desktop/dd145167) funkcja po użyciu tej funkcji.  
   
 ##  <a name="removeallgroups"></a>  CListCtrl::RemoveAllGroups  
  Usuwa wszystkie grupy z formantu widoku listy.  
@@ -2826,7 +2826,7 @@ LRESULT RemoveGroup(int iGroupId);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iGroupId`  
+ *iGroupId*  
  Identyfikator grupy, które ma zostać usunięta.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -2843,8 +2843,8 @@ BOOL Scroll(CSize size);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `size`  
- A `CSize` obiektu określania ilości poziome i pionowe przewijanie w pikselach. **y** członkiem `size` przez wysokość w pikselach wiersza formantu widoku listy i kontrolka jest przewijane przez wynikowa liczba wierszy.  
+ *Rozmiar*  
+ A `CSize` obiektu określania ilości poziome i pionowe przewijanie w pikselach. **y** członkiem *rozmiar* przez wysokość w pikselach wiersza formantu widoku listy i kontrolka jest przewijane przez wynikowa liczba wierszy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie wartość zero.  
@@ -2857,7 +2857,7 @@ BOOL SetBkColor(COLORREF cr);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cr`  
+ *CR*  
  Kolor, aby ustawić, tła lub `CLR_NONE` wartość bez koloru tła. Kontrolki widoku listy z kolorów tła odświeżyć się znacznie szybciej niż jednostki bez kolorów tła. Aby uzyskać informacje, zobacz [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -2894,13 +2894,13 @@ BOOL SetBkImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `plvbkImage`  
+ *plvbkImage*  
  Adres **LVBKIMAGE** struktury, zawierającego nowe informacje o obrazu tła.  
   
- `hbm`  
+ *hbm*  
  Dojście do mapy bitowej.  
   
- `pszUrl`  
+ *pszUrl*  
  A **NULL**-zakończony ciąg znaków zawierający adres URL obrazu tła.  
   
  *fTile*  
@@ -2931,7 +2931,7 @@ BOOL SetCallbackMask(UINT nMask);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nMask`  
+ *nMask*  
  Nowa wartość maska wywołania zwrotnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -2959,11 +2959,11 @@ BOOL SetCheck(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Liczony od zera indeks elementu kontrolki listy.  
   
- `fCheck`  
- Określa, czy obraz stanu elementu powinny być widoczne czy nie. Domyślnie *zapoznaj* jest **TRUE** i obrazu stanu jest widoczny. Jeśli `fCheck` jest **FALSE**, nie jest widoczny.  
+ *Zapoznaj*  
+ Określa, czy obraz stanu elementu powinny być widoczne czy nie. Domyślnie *zapoznaj* jest **TRUE** i obrazu stanu jest widoczny. Jeśli *zapoznaj* jest **FALSE**, nie jest widoczny.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli element jest zaznaczony, w przeciwnym razie wartość 0.  
@@ -2997,10 +2997,10 @@ BOOL SetColumn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCol`  
+ *nCol*  
  Indeks kolumny, których atrybuty mają być tworzone.  
   
- `pColumn`  
+ *pColumn*  
  Adres [LVCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743) atrybutów struktury, która zawiera nową kolumnę, zgodnie z opisem w zestawie Windows SDK. Struktura **maski** elementu członkowskiego Określa, która kolumna atrybutów do ustawienia. Jeśli **maski** określa element członkowski `LVCF_TEXT` wartość struktury **pszText** element członkowski jest adres ciąg znaków zakończony znakiem null i struktura **cchTextMax**element członkowski zostanie zignorowany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3019,10 +3019,10 @@ BOOL SetColumnOrderArray(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `piArray`  
+ *piArray*  
  Wskaźnik do buforu, zawierające wartości indeksów kolumn w formancie widok listy (od lewej do prawej). Rozmiar buforu musi być wystarczająco duży, aby zawierać łączna liczba kolumn w formancie widoku listy.  
   
- `iCount`  
+ *iCount*  
  Liczba kolumn w formancie widoku listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3044,10 +3044,10 @@ BOOL SetColumnWidth(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCol`  
+ *nCol*  
  Indeks kolumny, dla którego ma być ustawiona szerokość. W widoku listy ten parametr musi być 0.  
   
- `cx`  
+ *CX*  
  Nową szerokość kolumny. Może to być albo **LVSCW_AUTOSIZE** lub **LVSCW_AUTOSIZE_USEHEADER**, zgodnie z opisem w [LVM_SETCOLUMNWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb761163) w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3061,7 +3061,7 @@ DWORD SetExtendedStyle(DWORD dwNewStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwNewStyle`  
+ *dwNewStyle*  
  Kombinacja rozszerzone style ma być używany przez formant widoku listy. Opisowa listę tych stylów, zobacz [rozszerzone style widoku listy](http://msdn.microsoft.com/library/windows/desktop/bb774732) tematu w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3090,10 +3090,10 @@ int SetGroupInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iGroupId`  
+ *iGroupId*  
  Identyfikator grupy, których informacje są skonfigurowane.  
   
- `pgrp`  
+ *pgrp*  
  Wskaźnik do [LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769) struktury, który zawiera informacje, które można ustawić. Element wywołujący jest odpowiedzialny za podziału ta struktura i ustawienie jej elementów członkowskich.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3110,7 +3110,7 @@ void SetGroupMetrics(PLVGROUPMETRICS pGroupMetrics);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pGroupMetrics`  
+ *pGroupMetrics*  
  Wskaźnik do [LVGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb774752) struktury zawierającej informacje metryki grupy, należy ustawić wartość.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -3146,7 +3146,7 @@ int SetHotItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iIndex`  
+ *iIndex*  
  Liczony od zera indeks elementu ma być ustawiona jako element dynamicznej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3190,13 +3190,13 @@ CSize SetIconSpacing(CSize size);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cx`  
+ *CX*  
  Odległość (w pikselach) między ikony na osi x.  
   
- `cy`  
+ *CY*  
  Odległość (w pikselach) między ikony na osi y.  
   
- `size`  
+ *Rozmiar*  
  A `CSize` obiekt określający między ikony na x - i osiami y odległość (w pikselach).  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3224,10 +3224,10 @@ CImageList* SetImageList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pImageList`  
+ *pImageList*  
  Wskaźnik do listy obrazów do przypisania.  
   
- `nImageListType`  
+ *nImageListType*  
  Typ listy obrazów. Może być jedną z następujących wartości:  
   
 - `LVSIL_NORMAL` Listy obrazów z dużych ikon.  
@@ -3267,7 +3267,7 @@ BOOL SetInsertMark(LPLVINSERTMARK lvim);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lvim`  
+ *lvim*  
  Wskaźnik do [LVINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774758) struktury Określanie miejsca ustawić punkt wstawiania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3284,7 +3284,7 @@ COLORREF SetInsertMarkColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `color`  
+ *Kolor*  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) struktury określanie koloru, aby ustawić punkt wstawiania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3324,47 +3324,47 @@ BOOL SetItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Adres [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) atrybutów struktury, która zawiera nowego elementu, zgodnie z opisem w zestawie Windows SDK. Struktura **towaru** i **iSubItem** członków zidentyfikować element lub podelementu i struktura **maski** elementu członkowskiego określenie atrybutów, które można ustawić. Aby uzyskać więcej informacji na temat **maski** — członek, zobacz **uwagi**.  
   
- `nItem`  
+ *nItem*  
  Indeks elementu, którego atrybuty mają być tworzone.  
   
- `nSubItem`  
+ *nSubItem*  
  Indeks podelement atrybutów, których mają być tworzone.  
   
- `nMask`  
+ *nMask*  
  Określa atrybutów, które mają być ustawiona (zobacz Uwagi).  
   
- `lpszItem`  
+ *lpszItem*  
  Adres zerem ciąg określający etykiety elementu.  
   
- `nImage`  
+ *nImage*  
  Indeks obrazu do elementu w obrębie listy obrazów.  
   
- `nState`  
+ *nInformacje*  
  Określa wartości stanów zostanie zmieniony (zobacz Uwagi).  
   
- `nStateMask`  
+ *nStateMask*  
  Określa, które stany mają być zmienione (zobacz Uwagi).  
   
- `lParam`  
+ *lParam*  
  Wartość specyficzna dla aplikacji 32-bitowa ma zostać skojarzony z elementem.  
   
- `nIndent`  
- Szerokość w pikselach wcięcie. Jeśli `nIndent` jest mniejsza niż zdefiniowana w systemie szerokość minimalna nową szerokość ma ustawioną wartość minimalna zdefiniowane przez system  
+ *nIndent*  
+ Szerokość w pikselach wcięcie. Jeśli *nIndent* jest mniejsza niż zdefiniowana w systemie szerokość minimalna nową szerokość ma ustawioną wartość minimalna zdefiniowane przez system  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie wartość zero.  
   
 ### <a name="remarks"></a>Uwagi  
- **Towaru** i **iSubItem** członkami **LVITEM** struktury i `nItem` i `nSubItem` parametry Zidentyfikuj element i którego podpozycji atrybuty do ustawienia.  
+ **Towaru** i **iSubItem** członkami **LVITEM** struktury i *nItem* i *nSubItem* Parametry zidentyfikować elementów i podelementów, w których atrybuty mają być tworzone.  
   
- **Maski** członkiem **LVITEM** struktury i `nMask` parametr określać elementu atrybuty do ustawienia:  
+ **Maski** członkiem **LVITEM** struktury i *nMask* parametr określać elementu atrybuty do ustawienia:  
   
-- `LVIF_TEXT` **PszText** elementu członkowskiego lub `lpszItem` parametru jest adresem ciąg znaków zakończony znakiem null; **cchTextMax** element członkowski zostanie zignorowany.  
+- `LVIF_TEXT` **PszText** elementu członkowskiego lub *lpszItem* parametru jest adresem ciąg znaków zakończony znakiem null; **cchTextMax** element członkowski zostanie zignorowany.  
   
-- `LVIF_STATE` **StateMask** elementu członkowskiego lub `nStateMask` parametr określa, który element stanów zmiany i **stanu** elementu członkowskiego lub `nState` parametrów zawiera wartości dla tych stanów.  
+- `LVIF_STATE` **StateMask** elementu członkowskiego lub *nStateMask* parametr określa, który element stanów zmiany i **stanu** elementu członkowskiego lub *nInformacje* Parametr zawiera wartości dla tych stanów.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CListCtrl::HitTest](#hittest).  
@@ -3377,7 +3377,7 @@ void SetItemCount(int nItems);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItems`  
+ *nItems*  
  Liczba elementów zawierających formantu zostanie ostatecznie.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -3413,10 +3413,10 @@ BOOL SetItemCountEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iCount`  
+ *iCount*  
  Liczba elementów zawierających formantu zostanie ostatecznie.  
   
- `dwFlags`  
+ *wartość elementu dwFlags*  
  Określa zachowanie formantu widoku listy po przywróceniu liczba elementów. Ta wartość może być kombinacją następujących czynności:  
   
 - **LVSICF_NOINVALIDATEALL** formantu widoku listy nie będzie odświeżenia, chyba że objęte elementy są obecnie w widoku. Jest to wartość domyślna.  
@@ -3451,17 +3451,17 @@ BOOL SetItemCountEx(
 
   
 ##  <a name="setitemdata"></a>  CListCtrl::SetItemData  
- Ustawia wartość specyficzne dla aplikacji 32-bitowych skojarzone z elementem określonym przez `nItem`.  
+ Ustawia wartość specyficzne dla aplikacji 32-bitowych skojarzone z elementem określonym przez *nItem*.  
   
 ```  
 BOOL SetItemData(int nItem, DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Indeks elementu listy, w których dane są określone.  
   
- `dwData`  
+ *dwData*  
  32-bitową wartość ma zostać skojarzony z elementem.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3496,17 +3496,17 @@ BOOL SetItemIndexState(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `pItemIndex`|Wskaźnik do [LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762) strukturę, która zawiera opis elementu. Element wywołujący jest odpowiedzialny za podziału ta struktura i ustawienie jej elementów członkowskich.|  
-|[in] `dwState`|Stan można ustawić elementu, który jest bitowe połączenie [stanów elementu widoku listy](http://msdn.microsoft.com/library/windows/desktop/bb774733). Określ zero, aby Resetowanie lub jedna, aby ustawić stanu.|  
-|[in] `dwMask`|Maska bitów nieprawidłowy stan określony przez `dwState` parametru. Określ bitowe połączenie (lub) [stanów elementu widoku listy](http://msdn.microsoft.com/library/windows/desktop/bb774733).|  
+|[in] *pItemIndex*|Wskaźnik do [LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762) strukturę, która zawiera opis elementu. Element wywołujący jest odpowiedzialny za podziału ta struktura i ustawienie jej elementów członkowskich.|  
+|[in] *dwState*|Stan można ustawić elementu, który jest bitowe połączenie [stanów elementu widoku listy](http://msdn.microsoft.com/library/windows/desktop/bb774733). Określ zero, aby Resetowanie lub jedna, aby ustawić stanu.|  
+|[in] *dwMask*|Maska bitów nieprawidłowy stan określony przez *dwState* parametru. Określ bitowe połączenie (lub) [stanów elementu widoku listy](http://msdn.microsoft.com/library/windows/desktop/bb774733).|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji na temat `dwState` parametrów, zobacz [stanów elementu widoku listy](http://msdn.microsoft.com/library/windows/desktop/bb774733).  
+ Aby uzyskać więcej informacji na temat *dwState* parametrów, zobacz [stanów elementu widoku listy](http://msdn.microsoft.com/library/windows/desktop/bb774733).  
   
- Aby uzyskać więcej informacji na temat `dwMask` parametrów, zobacz `stateMask` członkiem [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) struktury.  
+ Aby uzyskać więcej informacji na temat *dwMask* parametrów, zobacz *stateMask* członkiem [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) struktury.  
   
  Ta metoda wysyła [LVM_SETITEMINDEXSTATE](http://msdn.microsoft.com/library/windows/desktop/bb761190) komunikat, który jest opisany w zestawie SDK systemu Windows.  
   
@@ -3520,10 +3520,10 @@ BOOL SetItemPosition(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Indeks elementu, którego pozycja ma być utworzony.  
   
- `pt`  
+ *PT*  
  A [punktu](http://msdn.microsoft.com/library/windows/desktop/dd162805) struktury, określając nowe miejsce, w widoku współrzędne, elementu w lewym górnym rogu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3553,16 +3553,16 @@ BOOL SetItemState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Indeks elementu, którego stan ma być utworzony.  
   
- `pItem`  
+ *pItem*  
  Adres [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) struktury, zgodnie z opisem w zestawie Windows SDK. Struktura **stateMask** elementu członkowskiego Określa, które stanu usługi bits do zmiany i struktury **stanu** elementu członkowskiego zawiera nowe wartości tych usługi BITS. Inne elementy członkowskie są ignorowane.  
   
- `nState`  
+ *nInformacje*  
  Nowe wartości bitów stanu. Aby uzyskać listę możliwych wartości, zobacz [CListCtrl::GetNextItem](#getnextitem) i [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) stanu elementu członkowskiego.  
   
- `nMask`  
+ *nMask*  
  Maska określenie, które stanu usługi bits można zmienić. Ta wartość odpowiada stateMask członkiem [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3585,13 +3585,13 @@ BOOL SetItemText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Indeks elementu, którego tekst jest do ustawienia.  
   
- `nSubItem`  
+ *nSubItem*  
  Indeks podelement lub zero, można ustawić etykiety elementu.  
   
- `lpszText`  
+ *lpszText*  
  Wskaźnik do ciąg, który zawiera nowego tekstu elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3611,7 +3611,7 @@ COLORREF SetOutlineColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `color`  
+ *Kolor*  
  Nowy [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) struktury zawierającej kolor konturu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3645,7 +3645,7 @@ int SetSelectionMark(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iIndex`  
+ *iIndex*  
  Liczony od zera indeks pierwszego elementu w wyborze wielokrotnym.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3665,7 +3665,7 @@ BOOL SetTextBkColor(COLORREF cr);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cr`  
+ *CR*  
  A **COLORREF** określanie na nowy kolor tła tekstu. Aby uzyskać informacje, zobacz [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3690,7 +3690,7 @@ BOOL SetTextColor(COLORREF cr);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cr`  
+ *CR*  
  A **COLORREF** określanie na nowy kolor tekstu. Aby uzyskać informacje, zobacz [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3733,7 +3733,7 @@ BOOL SetTileViewInfo(PLVTILEVIEWINFO ptvi);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ptvi`  
+ *ptvi*  
  Wskaźnik do [LVTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb774768) struktury zawierającej informacji do ustawienia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3750,7 +3750,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWndTip`  
+ *pWndTip*  
  Wskaźnik do `CToolTipCtrl` obiektu, który będzie używany przez formant listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3788,10 +3788,10 @@ void SetWorkAreas(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nWorkAreas`  
- Liczba `RECT` struktury (lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekty) w tablicy wskazywana przez `lpRect`.  
+ *nWorkAreas*  
+ Liczba `RECT` struktury (lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekty) w tablicy wskazywana przez *lprect —*.  
   
- `lpRect`  
+ *lprect —*  
  Adres tablicę `RECT` struktury (lub `CRect` obiektów) określające nowych obszarów roboczych formantu widoku listy. Należy określić tych obszarów we współrzędnych klienta. Jeśli ten parametr ma **NULL**, obszar roboczy zostanie ustawiona do obszaru klienckiego formantu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -3816,10 +3816,10 @@ BOOL SortGroups(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `_pfnGroupCompare`  
+ *_pfnGroupCompare*  
  Wskaźnik do funkcji porównania grupy.  
   
- `_plv`  
+ *_plv*  
  Wskaźnik void.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3838,12 +3838,12 @@ BOOL SortItems(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pfnCompare`  
+ [in] *pfnCompare*  
  Adres funkcji zdefiniowanych przez aplikację do porównania.  
   
  Operacja sortowania wywołuje funkcję porównania zawsze, gdy trzeba określić względną kolejność dwóch elementów listy. Porównanie funkcji musi być statyczny element członkowski klasy lub funkcji autonomiczna, która nie jest członkiem żadnej klasy.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Wartość zdefiniowanym przez aplikację, która jest przekazywany do funkcji porównania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -3852,7 +3852,7 @@ BOOL SortItems(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda zmiany indeksu każdego elementu w celu uwzględnienia nowej sekwencji.  
   
- Funkcja porównywania `pfnCompare`, ma następujący format:  
+ Funkcja porównywania *pfnCompare*, ma następujący format:  
   
 ```  
 int CALLBACK CompareFunc(LPARAM lParam1,
@@ -3861,12 +3861,12 @@ int CALLBACK CompareFunc(LPARAM lParam1,
 ```  
 Funkcja porównywania musi zwracać wartość ujemną, jeśli pierwszy element należy poprzedzać drugiego, wartość dodatnią, jeśli pierwszy element powinien być zgodny drugi lub zero, jeśli dwa elementy są takie same.  
   
- `lParam1` Parametr jest 32-bitowa wartość skojarzoną z pierwszego elementu, który jest porównywany i `lParam2` parametr ma wartość skojarzoną z drugiego elementu. Są to wartości, które zostały określone w `lParam` członkiem elementu [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) struktury, jeśli zostały one umieszczone na liście. `lParamSort` Parametru jest taka sama jak `dwData` wartość.  
+ *LParam1* parametr jest 32-bitowa wartość skojarzoną z pierwszego elementu, który jest porównywany i *lParam2* parametr ma wartość skojarzoną z drugiego elementu. Są to wartości, które zostały określone w *lParam* członkiem elementu [LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) struktury, jeśli zostały one umieszczone na liście. *LParamSort* parametru jest taka sama jak *dwData* wartości.  
   
  Ta metoda wysyła [LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227) komunikat, który jest opisany w zestawie SDK systemu Windows.  
   
 ### <a name="example"></a>Przykład  
- Poniżej przedstawiono prosty porównanie funkcji, która powoduje elementy są sortowane według ich `lParam` wartości.  
+ Poniżej przedstawiono prosty porównanie funkcji, która powoduje elementy są sortowane według ich *lParam* wartości.  
   
 ```cpp  
 // Sort items by associated lParam
@@ -3899,8 +3899,8 @@ BOOL SortItemsEx(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `pfnCompare`|Adres funkcji zdefiniowanych przez aplikację do porównania.<br /><br /> Operacja sortowania wywołuje funkcję porównania zawsze, gdy trzeba określić względną kolejność dwóch elementów listy. Porównanie funkcji musi być statyczny element członkowski klasy lub funkcji autonomiczna, która nie jest członkiem żadnej klasy.|  
-|[in] `dwData`|Wartości zdefiniowane przez aplikację przekazany do funkcji porównania.|  
+|[in] *pfnCompare*|Adres funkcji zdefiniowanych przez aplikację do porównania.<br /><br /> Operacja sortowania wywołuje funkcję porównania zawsze, gdy trzeba określić względną kolejność dwóch elementów listy. Porównanie funkcji musi być statyczny element członkowski klasy lub funkcji autonomiczna, która nie jest członkiem żadnej klasy.|  
+|[in] *dwData*|Wartości zdefiniowane przez aplikację przekazany do funkcji porównania.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
@@ -3908,14 +3908,14 @@ BOOL SortItemsEx(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda zmiany indeksu każdego elementu w celu uwzględnienia nowej sekwencji.  
   
- Funkcja porównywania `pfnCompare`, ma następujący format:  
+ Funkcja porównywania *pfnCompare*, ma następujący format:  
   
 ```  
 int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParam2,
     LPARAM lParamSort);
 ```  
-Ten komunikat jest jak [LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227), z wyjątkiem typu danych przekazany do funkcji porównania. W [LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227), `lParam1` i `lParam2` są wartości elementów do porównania. W [LVM_SORTITEMSEX](http://msdn.microsoft.com/library/windows/desktop/bb761228), `lParam1` jest bieżący indeks pierwszego elementu do porównania i `lParam2` jest bieżącego indeksu drugiego elementu. Możesz wysłać [LVM_GETITEMTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761055) komunikat, aby pobrać więcej informacji na temat elementu.  
+Ten komunikat jest jak [LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227), z wyjątkiem typu danych przekazany do funkcji porównania. W [LVM_SORTITEMS](http://msdn.microsoft.com/library/windows/desktop/bb761227), *lParam1* i *lParam2* są wartości elementów do porównania. W [LVM_SORTITEMSEX](http://msdn.microsoft.com/library/windows/desktop/bb761228), *lParam1* jest bieżący indeks pierwszego elementu do porównania i *lParam2* jest bieżącego indeksu drugiego elementu. Możesz wysłać [LVM_GETITEMTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761055) komunikat, aby pobrać więcej informacji na temat elementu.  
   
  Funkcja porównywania musi zwracać wartość ujemną, jeśli pierwszy element należy poprzedzać drugiego, wartość dodatnią, jeśli pierwszy element powinien być zgodny drugi lub zero, jeśli dwa elementy są takie same.  
   
@@ -3977,7 +3977,7 @@ int SubItemHitTest(LPLVHITTESTINFO pInfo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pInfo`  
+ *pInfo*  
  Wskaźnik do [LVHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb774754) struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -4008,14 +4008,14 @@ LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
 
   
 ##  <a name="update"></a>  CListCtrl::Update  
- Kontrolka widoku listy, aby odświeżyć element określony przez wymusza `nItem`.  
+ Kontrolka widoku listy, aby odświeżyć element określony przez wymusza *nItem*.  
   
 ```  
 BOOL Update(int nItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nItem`  
+ *nItem*  
  Indeks elementu do zaktualizowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  

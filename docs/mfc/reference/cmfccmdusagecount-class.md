@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b4824632d7ce38e50859172a24a47bdeb49f1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0089647fcdd1da5ddbab6194f4c3e9dae291ad3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369245"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037347"
 ---
 # <a name="cmfccmdusagecount-class"></a>Klasa CMFCCmdUsageCount
 Śledzenie użycia liczba komunikatów systemu Windows, takich jak użytkownik wybrał element z menu.  
@@ -104,7 +104,7 @@ void AddCmd(UINT uiCmd);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] `uiCmd`|Określa licznik polecenie, aby zwiększyć.|  
+|[in] *uiCmd*|Określa licznik polecenie, aby zwiększyć.|  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda dodaje nowy wpis do struktury mapy liczników polecenia `m_CmdUsage`, jeśli wpis nie istnieje.  
@@ -113,9 +113,9 @@ void AddCmd(UINT uiCmd);
   
 -   W ramach narzędzi jest w trybie dostosowania ( [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode) metoda zwraca wartość niezerową).  
   
--   Polecenie odwołuje się do menu lub podmenu separatora ( `uiCmd` jest równa 0 lub wartość -1).  
+-   Polecenie odwołuje się do menu lub podmenu separatora ( *uiCmd* jest równa 0 lub wartość -1).  
   
-- `uiCmd` odwołuje się do poleceń standardowych (globalnej `IsStandardCommand` funkcja zwraca wartość niezerową).  
+- *uiCmd* odwołuje się do poleceń standardowych (globalnej `IsStandardCommand` funkcja zwraca wartość niezerową).  
   
 ##  <a name="getcount"></a>  CMFCCmdUsageCount::GetCount  
  Pobiera Licznik użycia, skojarzony z identyfikatorem danego polecenia.  
@@ -129,7 +129,7 @@ UINT GetCount(UINT uiCmd) const;
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] `uiCmd`|Identyfikator polecenia licznika można pobrać.|  
+|[in] *uiCmd*|Identyfikator polecenia licznika można pobrać.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Licznik użycia, skojarzony z identyfikatorem danego polecenia.  
@@ -161,7 +161,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] `uiCmd`|Określa polecenie, aby sprawdzić.|  
+|[in] *uiCmd*|Określa polecenie, aby sprawdzić.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli polecenie jest często używane; w przeciwnym razie 0.  
@@ -193,7 +193,7 @@ virtual void Serialize(CArchive& ar);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] `ar`|A `CArchive` obiektu do zserializowania z lub do.|  
+|[in] *ar*|A `CArchive` obiektu do zserializowania z lub do.|  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wykonuje serializację struktury mapy liczników polecenia `m_CmdUsage`i użycie polecenia całkowita `m_nTotalUsage`, licznik z lub do określonego archiwum.  
@@ -214,14 +214,14 @@ static BOOL __stdcall SetOptions(
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] `nStartCount`|Początkowa liczba nowych poleceń wszystkie śledzone.|  
-|[in] `nMinUsagePercentage`|Nowy procent użycia minimalnej.|  
+|[in] *nStartCount*|Początkowa liczba nowych poleceń wszystkie śledzone.|  
+|[in] *nMinUsagePercentage*|Nowy procent użycia minimalnej.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli metoda zakończy się powodzeniem, `FALSE` Jeśli `nMinUsagePercentage` parametr jest większa niż lub równa 100.  
+ `TRUE` Jeśli metoda zakończy się powodzeniem, `FALSE` Jeśli *nMinUsagePercentage* parametr jest większa niż lub równa 100.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda ustawia udostępnionego `CMFCCmdUsageCount` klasy elementy członkowskie danych `m_nStartCount` i `m_nMinUsagePercentage` do `nStartCount` i `nMinUsagePercentage`odpowiednio. `m_nStartCount` jest używany przez [CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation) metodę, aby określić, czy ten obiekt zebrał minimalną ilość danych śledzenia. `m_nMinUsagePercentage` jest używany przez [CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd) metodę, aby określić, czy dane polecenie jest często używany.  
+ Ta metoda ustawia udostępnionego `CMFCCmdUsageCount` klasy elementy członkowskie danych `m_nStartCount` i `m_nMinUsagePercentage` do *nStartCount* i *nMinUsagePercentage*odpowiednio. `m_nStartCount` jest używany przez [CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation) metodę, aby określić, czy ten obiekt zebrał minimalną ilość danych śledzenia. `m_nMinUsagePercentage` jest używany przez [CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd) metodę, aby określić, czy dane polecenie jest często używany.  
   
  W kompilacjach debugowania ta metoda generuje błąd potwierdzenia, jeśli `nMinUsagePercentage` parametr jest większa niż lub równa 100.  
   

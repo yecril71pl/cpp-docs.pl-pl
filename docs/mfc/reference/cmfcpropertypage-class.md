@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3352841b1b495d1718ffa6be034239ecd7e50c6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c58e279a2e99201656e8af02d8c1c5d4d944f88d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366645"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042085"
 ---
 # <a name="cmfcpropertypage-class"></a>Klasa CMFCPropertyPage
 `CMFCPropertyPage` Klasa obsługuje wyświetlanie menu wyskakujące na stronie właściwości.  
@@ -88,13 +88,13 @@ CMFCPropertyPage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDTemplate`  
+ *nIDTemplate*  
  Identyfikator zasobu szablon dla tej strony.  
   
- `nIDCaption`  
+ *nIDCaption*  
  Identyfikator zasobu etykiety mają zostać umieszczone w karcie tej strony. W przypadku wartości 0 nazwy są uzyskiwane z szablonu okno dialogowe dla tej strony. Wartość domyślna to 0.  
   
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Wskazuje nazwę szablonu dla tej strony. Nie może być `NULL`.  
   
 ### <a name="return-value"></a>Wartość zwracana  

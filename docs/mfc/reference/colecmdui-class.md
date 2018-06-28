@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6195735c25bb188449638750f6100869a44f082
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c80c3b81b804a66e70efe9269b12d4e18d31c676
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370760"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040717"
 ---
 # <a name="colecmdui-class"></a>Klasa COleCmdUI
 Implementuje metodę MFC zaktualizować stan obiektów interfejsu użytkownika związane z `IOleCommandTarget`-driven funkcji aplikacji.  
@@ -82,13 +82,13 @@ COleCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rgCmds`  
+ *rgCmds*  
  Listę obsługiwanych poleceń skojarzone z danym identyfikatorem GUID. **OLECMD** struktury kojarzy poleceń z flagami polecenia.  
   
  *cCmds*  
- Liczba poleceń w `rgCmds`.  
+ Liczba poleceń w *rgCmds*.  
   
- `pGroup`  
+ *pGroup*  
  Wskaźnik do identyfikatora GUID, który identyfikuje zestaw poleceń.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -102,7 +102,7 @@ virtual void Enable(BOOL bOn);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bOn`  
+ *bW*  
  Wskazuje, czy polecenie skojarzone z `COleCmdUI` obiektu powinny być włączone lub wyłączone. NonZero włącza polecenie; 0 wyłącza polecenie.  
   
 ##  <a name="setcheck"></a>  COleCmdUI::SetCheck  
@@ -113,7 +113,7 @@ virtual void SetCheck(int nCheck);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nCheck`  
+ *nSprawdź*  
  Określanie stanu można ustawić lub wyłącza przełączanie wartość polecenia. Dostępne są następujące wartości:  
   
 |Wartość|Opis|  
@@ -130,7 +130,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszText`  
+ *lpszText*  
  Wskaźnik do tekst, który ma być używany z poleceniem.  
   
 ## <a name="see-also"></a>Zobacz też  

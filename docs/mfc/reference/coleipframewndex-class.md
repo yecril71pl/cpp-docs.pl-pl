@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71610035d029c4d8f5ca403c52d9eddd575e3a8b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b79f65b39aa741a9794fbe05721c7dc44287603
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377574"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041649"
 ---
 # <a name="coleipframewndex-class"></a>Klasa COleIPFrameWndEx
 `COleIPFrameWndEx` Klasa implementuje kontener OLE, który obsługuje MFC. Klasy okna ramowe w miejscu musi pochodzić z aplikacji `COleIPFrameWndEx` klasy zamiast wynikających z [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)klasy. 
@@ -217,8 +217,8 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pControlBar`  
- [in] `bTail`  
+ [in] *pControlBar*  
+ [in] *bTail*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -232,7 +232,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `hdwp`  
+ [in] *hdwp*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -247,9 +247,9 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pBar`  
- [in] `nDockBarID`  
- [in] `lpRect`  
+ [in] *pBar*  
+ [in] *nDockBarID*  
+ [in] *lprect —*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -263,17 +263,17 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pBar`  
+ [in] *pBar*  
  Wskaźnik do okienko, aby dokowania.  
   
- [in] `pLeftOf`  
+ [in] *pLeftOf*  
  Wskaźnik do okienka, która służy jako punkt początkowy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca `TRUE` Jeśli operacja zakończy się pomyślnie. W przeciwnym razie zwraca `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołaj tę metodę w celu dock okienku obiekty w preferowanej kolejności. Ta metoda stacje dokujące okienko określony przez `pBar` do lewego okienka określony przez `pLeftOf`.  
+ Wywołaj tę metodę w celu dock okienku obiekty w preferowanej kolejności. Ta metoda stacje dokujące okienko określony przez *pBar* do lewego okienka określony przez *pLeftOf*.  
   
 ##  <a name="enableautohidepanes"></a>  COleIPFrameWndEx::EnableAutoHidePanes  
 
@@ -283,7 +283,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -297,7 +297,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -317,12 +317,12 @@ void EnablePaneMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
- [in] `uiCustomizeCmd`  
- [in] `strCustomizeLabel`  
- [in] `uiViewToolbarsMenuEntryID`  
- [in] `bContextMenuShowsToolbarsOnly`  
- [in] `bViewMenuShowsToolbarsOnly`  
+ [in] *bWłączenie*  
+ [in] *uiCustomizeCmd*  
+ [in] *strCustomizeLabel*  
+ [in] *uiViewToolbarsMenuEntryID*  
+ [in] *bContextMenuShowsToolbarsOnly*  
+ [in] *bViewMenuShowsToolbarsOnly*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -417,7 +417,7 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nID`  
+ [in] *nID*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -446,10 +446,10 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pButton`  
+ [in] *pButton*  
  Wskaźnik na przycisku.  
   
- [in] `strTTText`  
+ [in] *strTTText*  
  Wskaźnik do tekst etykietki narzędzia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -469,17 +469,17 @@ void InitUserToolbars(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszRegEntry`  
+ [in] *lpszRegEntry*  
  Wpis rejestru, w której biblioteki przechowuje ustawienia paska narzędzi użytkownika.  
   
- [in] `uiUserToolbarFirst`  
+ [in] *uiUserToolbarFirst*  
  Identyfikator formantu przypisany do pierwszej narzędzi zdefiniowane przez użytkownika.  
   
- [in] `uiUserToolbarLast`  
+ [in] *uiUserToolbarLast*  
  Identyfikator formantu przypisane do ostatniego narzędzi zdefiniowane przez użytkownika.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja służy do inicjowania szereg kontroli identyfikatorów do przypisania do pasków narzędzi, które użytkownicy definiować dynamicznie. Parametry `uiUserToolbarFirst` i `uiUserToolbarLast` zdefiniować zakres formantu toolbar dozwolone identyfikatory. Aby wyłączyć tworzenie użytkownika paski narzędzi, ustaw `uiUserToolbarFirst` lub `uiUserToolbarLast` -1.  
+ Ta funkcja służy do inicjowania szereg kontroli identyfikatorów do przypisania do pasków narzędzi, które użytkownicy definiować dynamicznie. Parametry *uiUserToolbarFirst* i *uiUserToolbarLast* zdefiniować zakres formantu toolbar dozwolone identyfikatory. Aby wyłączyć tworzenie użytkownika paski narzędzi, ustaw *uiUserToolbarFirst* lub *uiUserToolbarLast* -1.  
   
 ##  <a name="insertpane"></a>  COleIPFrameWndEx::InsertPane  
 
@@ -492,9 +492,9 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pControlBar`  
- [in] `pTarget`  
- [in] `bAfter`  
+ [in] *pControlBar*  
+ [in] *pTarget*  
+ [in] *bPo*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -524,9 +524,9 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `point`  
- [in] `dwBarAlignment`  
- [in] `bOuterEdge`  
+ [in] *punktu*  
+ [in] *dwBarAlignment*  
+ [in] *bOuterEdge*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -544,10 +544,10 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nIDResource`  
- [in] `dwDefaultStyle`  
- [in] `pParentWnd`  
- [in] `pContext`  
+ [in] *nIDResource*  
+ [in] *dwDefaultStyle*  
+ [in] *pParentWnd*  
+ [in] *pContext*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -561,7 +561,7 @@ virtual BOOL OnCloseDockingPane(CDockablePane*);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `CDockablePane*`  
+ [in] *CDockablePane**  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -575,25 +575,25 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `CPaneFrameWnd*`  
+ [in] *CPaneFrameWnd\**  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onclosepopupmenu"></a>  COleIPFrameWndEx::OnClosePopupMenu  
- Wywoływane przez platformę, gdy aktywne menu podręczne przetwarza `WM_DESTROY` wiadomości.  
+ Wywoływane przez platformę, gdy aktywne menu podręczne przetwarza komunikat WM_DESTROY.  
   
 ```  
 virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pMenuPopup`  
+ [in] *pMenuPopup*  
  Wskaźnik do obiektu menu podręczne.  
   
 ### <a name="remarks"></a>Uwagi  
- Przesłonić tę metodę w celu otrzymywania powiadomień od `CMFCPopupMenu` obiekty podczas przetwarzania `WM_DESTROY` wiadomości.  
+ Przesłonić tę metodę w celu otrzymywania powiadomień od `CMFCPopupMenu` obiekty podczas przetwarzania wiadomości WM_DESTROY.  
   
 ##  <a name="oncmdmsg"></a>  COleIPFrameWndEx::OnCmdMsg  
 
@@ -607,10 +607,10 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nID`  
- [in] `nCode`  
- [in] `pExtra`  
- [in] `pHandlerInfo`  
+ [in] *nID*  
+ [in] *nCode*  
+ [in] *pExtra*  
+ [in] *pHandlerInfo*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -627,13 +627,13 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- [in] `pMenuButton`  
+ [in] *pMenuButton*  
  Wskaźnik do przycisku menu.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  Obraz skojarzony z elementem menu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -643,7 +643,7 @@ virtual BOOL OnDrawMenuImage(
  Przesłonić tę metodę, jeśli chcesz dostosować obraz rysowania dla elementów menu, które należą do paska menu własnością `COleIPFrameWndEx`-pochodzi z obiektu.  
   
 ##  <a name="ondrawmenulogo"></a>  COleIPFrameWndEx::OnDrawMenuLogo  
- Wywoływane przez platformę, gdy [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)obiekt procesów `WM_PAINT` wiadomości.  
+ Wywoływane przez platformę, gdy [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)obiektu przetwarza komunikat WM_PAINT.  
   
 ```  
 virtual void OnDrawMenuLogo(
@@ -653,13 +653,13 @@ virtual void OnDrawMenuLogo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- [in] `pMenu`  
+ [in] *pMenu*  
  Wskaźnik do obiektu menu podręczne.  
   
- [in] `rectLogo`  
+ [in] *rectLogo*  
  Wskaźnik do logo do wyświetlenia.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -682,7 +682,7 @@ virtual BOOL OnMenuButtonToolHitTest(
  Wskaźnik do `TOOLINFO` struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Domyślna implementacja nie robi nic i zwraca wartość 0. Implementacji powinien zwracać wartość inną niż zero, jeśli jego wypełniania `pTI` parametru.  
+ Domyślna implementacja nie robi nic i zwraca wartość 0. Implementacji powinien zwracać wartość inną niż zero, jeśli jego wypełniania *pTI* parametru.  
   
 ### <a name="remarks"></a>Uwagi  
  Zastępuje tę metodę, możesz podać ToolTip informacje dotyczące elementu menu określonych.  
@@ -695,7 +695,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pFrame`  
+ [in] *pFrame*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -711,8 +711,8 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bPreview`  
- [in] `pState`  
+ [in] *bPreview*  
+ [in] *stanu wydajności*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -726,8 +726,8 @@ virtual BOOL OnShowCustomizePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pMenuPane`  
- [in] `uiToolbarID`  
+ [in] *pMenuPane*  
+ [in] *uiToolbarID*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -741,7 +741,7 @@ virtual BOOL OnShowPanes(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bShow`  
+ [in] *bShow*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -755,7 +755,7 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `[in] pMenuPopup`  
+ [in] *pMenuPopup*  
  Wskaźnik do menu podręczne, które mają być wyświetlane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -774,10 +774,10 @@ virtual BOOL OnTearOffMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pMenuPopup`  
+ [in] *pMenuPopup*  
  Wskaźnik do menu podręcznego wybranego użytkownika.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Wskaźnik do okienka, który jest hostem menu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -804,11 +804,11 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `point`  
- [in] `nSensitivity`  
- [in] `bExactBar`  
- [in] `pRTCBarType`  
- [in] `dwAlignment`  
+ [in] *punktu*  
+ [in] *nSensitivity*  
+ [in] *bExactBar*  
+ [in] *pRTCBarType*  
+ [in] *dwAlignment*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -822,7 +822,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pMsg`  
+ [in] *pMsg*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -836,7 +836,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bNotify`  
+ [in] *bNotify*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -853,11 +853,11 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pControlBar`  
- [in] `bDestroy`  
- [in] `bAdjustLayout`  
- [in] `bAutoHide`  
- [in] `pBarReplacement`  
+ [in] *pControlBar*  
+ [in] *bDestroy*  
+ [in] *bAdjustLayout*  
+ [in] *bAutoHide*  
+ [in] *pBarReplacement*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -869,7 +869,7 @@ void SetDockState(const CDockState& state);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `state`  
+ [in] *stanu*  
  Określa stan dokowania.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -886,13 +886,13 @@ void SetupToolbarMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `menu`  
+ [in] *menu*  
  Odwołanie do [cmenu —](../../mfc/reference/cmenu-class.md) obiekt do zmodyfikowania.  
   
- [in] `uiViewUserToolbarCmdFirst`  
+ [in] *uiViewUserToolbarCmdFirst*  
  Określa pierwsze polecenie zdefiniowane przez użytkownika.  
   
- [in] `uiViewUserToolbarCmdLast`  
+ [in] *uiViewUserToolbarCmdLast*  
  Określa ostatnie polecenie zdefiniowane przez użytkownika.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -909,10 +909,10 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pBar`  
- [in] `bShow`  
- [in] `bDelay`  
- [in] `bActivate`  
+ [in] *pBar*  
+ [in] *bShow*  
+ [in] *bDelay*  
+ [in] *bActivate*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -927,10 +927,10 @@ virtual void WinHelp(
   
 ### <a name="parameters"></a>Parametry  
  [in] dwData  
- Określa dane zgodnie z wymaganiami dla typu określonego przez Pomoc `nCmd`.  
+ Określa dane zgodnie z wymaganiami dla typu określonego przez Pomoc *nCmd*.  
   
- [in] `nCmd`  
- Określa typ żądanie pomocy. Listę możliwych wartości i ich wpływ na `dwData` parametrów, zobacz [funkcję WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) w zestawie Windows SDK.  
+ [in] *nCmd*  
+ Określa typ żądanie pomocy. Listę możliwych wartości i ich wpływ na *dwData* parametrów, zobacz [funkcję WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) w zestawie Windows SDK.  
   
 ### <a name="remarks"></a>Uwagi  
   

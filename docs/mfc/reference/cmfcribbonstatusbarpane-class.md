@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df9109ef4613a2fb905fc5bef525f3553155417b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f59822504e317ee43ad7fb84345fa616fe72fae
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369193"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038435"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>Klasa CMFCRibbonStatusBarPane
 `CMFCRibbonStatusBarPane` Klasa implementuje element wstążki, które można dodać do wstążki paska stanu.  
@@ -136,31 +136,31 @@ CMFCRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nCmdID`  
+ [in] *nCmdID*  
  Określa identyfikator polecenia okienka.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Określa ciąg tekstowy, który będzie wyświetlany w okienku.  
   
- [in] `bIsStatic`  
+ [in] *bIsStatic*  
  Jeśli `TRUE`, w okienku stanu nie może być wyróżniony ani przez kliknięcie przycisku go.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Określa dojścia do ikony mają być wyświetlane w okienku.  
   
- [in] `lpszAlmostLargeText`  
+ [in] *lpszAlmostLargeText*  
  Określa najdłuższy ciąg tekstowy, który może być wyświetlany w okienku.  
   
- [in] `hBmpAnimationList`  
+ [in] *hBmpAnimationList*  
  Określa dojścia do listy obrazów, który jest używany dla animacji.  
   
- [in] `cxAnimation`  
+ [in] *cxAnimation*  
  Określa szerokość w pikselach, ikony w listy obrazów, który jest używany dla animacji.  
   
- [in] `clrTrnsp`  
+ [in] *clrTrnsp*  
  Określa kolor przezroczysty obrazów z listy obrazów, które są używane do animacji.  
   
- [in] `uiAnimationListResID`  
+ [in] *uiAnimationListResID*  
  Określa identyfikator zasobu, listy obrazów, który jest używany dla animacji.  
   
 ##  <a name="getalmostlargetext"></a>  CMFCRibbonStatusBarPane::GetAlmostLargeText  
@@ -217,7 +217,7 @@ virtual void OnDrawBorder(CDC*);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `CDC*`  
+ [in] *CDC**  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -229,7 +229,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -253,11 +253,11 @@ void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszAlmostLargeText`  
+ [in] *lpszAlmostLargeText*  
  Określa ciąg najdłuższym mogą być wyświetlane w okienku paska stanu bez obcinania.  
   
 ### <a name="remarks"></a>Uwagi  
- Biblioteka oblicza rozmiar tekstu, który `lpszAlmostLargeText` określa i powoduje zmianę rozmiaru okienka. Jeśli nadal nie mieści się w okienku, tekst zostanie obcięta.  
+ Biblioteka oblicza rozmiar tekstu, który *lpszAlmostLargeText* określa i powoduje zmianę rozmiaru okienka. Jeśli nadal nie mieści się w okienku, tekst zostanie obcięta.  
   
 ##  <a name="setanimationlist"></a>  CMFCRibbonStatusBarPane::SetAnimationList  
  Dołącza do okienku paska stanu listy obrazów, który może służyć do animacji.  
@@ -275,16 +275,16 @@ BOOL SetAnimationList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `hBmpAnimationList`  
+ [in] *hBmpAnimationList*  
  Określa dojścia do listy obrazów.  
   
- [in] `cxAnimation`  
+ [in] *cxAnimation*  
  Określa szerokość w pikselach ramkę z listy obrazów.  
   
- [in] `clrTransp`  
+ [in] *clrTransp*  
  Określa kolor przezroczysty listy obrazów.  
   
- [in] `uiAnimationListResID`  
+ [in] *uiAnimationListResID*  
  Określa identyfikator zasobu listy obrazów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -298,11 +298,11 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nAlign`  
+ [in] *nAlign*  
  Określa wyrównanie tekstu.  
   
 ### <a name="remarks"></a>Uwagi  
- `nAlign` Może mieć jeden z następujących wartości:  
+ *nAlign* może mieć jeden z następujących wartości:  
   
 - `TA_LEFT`: wyrównanie do lewej  
   
@@ -320,10 +320,10 @@ void StartAnimation(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nFrameDelay`  
+ [in] *nFrameDelay*  
  Określa szybkość animacji, w milisekundach.  
   
- [in] `nDuration`  
+ [in] *nDuration*  
  Określa, jak długo ma być odtworzony animacji, w milisekundach. Użyj wartości -1 dla pętli nieskończonej.  
   
 ### <a name="remarks"></a>Uwagi  

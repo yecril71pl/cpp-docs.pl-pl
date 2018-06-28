@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 582ffffc4461edd41078f1a89844bdc260b2dd40
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e765241029c0380dce7b28fa9fb4f9c84410d515
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376024"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041961"
 ---
 # <a name="cheaderctrl-class"></a>Cheaderctrl — klasa
 Udostępnia funkcje formantu nagłówka wspólne systemu Windows.  
@@ -196,7 +196,7 @@ BOOL ClearFilter(int nColumn);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nColumn`  
+ *nColumn*  
  Wartość kolumny wskazujący, który filtr, aby wyczyścić.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -220,23 +220,23 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
+ *dwStyle*  
  Określa styl nagłówka formantu. Opis elementu style formantu nagłówka, zobacz [stylów formantu nagłówka](http://msdn.microsoft.com/library/windows/desktop/bb775241) w zestawie Windows SDK.  
   
- `rect`  
+ *Rect*  
  Określa rozmiar i położenie formantu nagłówka. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Określa okno nadrzędne kontrolki nagłówka, zwykle `CDialog`. Nie może być **NULL**.  
   
- `nID`  
+ *nID*  
  Określa identyfikator formantu nagłówka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli inicjowanie zakończyło się pomyślnie; w przeciwnym razie wartość zero.  
   
 ### <a name="remarks"></a>Uwagi  
- Możesz utworzyć `CHeaderCtrl` obiektu w dwóch krokach. Najpierw należy wywołać konstruktora, a następnie wywołać **Utwórz**, która tworzy kontrolkę nagłówka i dołącza go do `CHeaderCtrl` obiektu.  
+ Możesz utworzyć `CHeaderCtrl` obiektu w dwóch krokach. Najpierw należy wywołać konstruktora, a następnie wywołać `Create`, która tworzy kontrolkę nagłówka i dołącza go do `CHeaderCtrl` obiektu.  
   
  Oprócz stylów formantu nagłówka, można użyć następujących najczęściej używane style kontrolki do określenia sposobu formantu nagłówka umieszcza i samodzielnie zmienia rozmiar (zobacz [najczęściej używane style formantu](http://msdn.microsoft.com/library/windows/desktop/bb775498) Aby uzyskać więcej informacji):  
   
@@ -264,7 +264,7 @@ virtual BOOL Create(
   
 - **Ws_tabstop —** określa jeden z dowolną liczbę formantów za pomocą których użytkownik może przenieść za pomocą klawisza TAB. Klawisz TAB przenosi użytkownika do następnego formantu określony przez **ws_tabstop —** stylu.  
   
- Jeśli chcesz style rozszerzonej systemu windows za pomocą formantu wywołanie [CreateEx](#createex) zamiast **Utwórz**.  
+ Jeśli chcesz style rozszerzonej systemu windows za pomocą formantu wywołanie [CreateEx](#createex) zamiast `Create`.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CHeaderCtrl#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_4.cpp)]  
@@ -282,26 +282,26 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwExStyle`  
- Określa styl rozszerzony formantu tworzona. Aby uzyskać listę rozszerzone style systemu Windows, zobacz `dwExStyle` parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ *dwExStyle*  
+ Określa styl rozszerzony formantu tworzona. Aby uzyskać listę rozszerzone style systemu Windows, zobacz *dwExStyle* parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Styl formantu nagłówka. Opis elementu style formantu nagłówka, zobacz [stylów formantu nagłówka](http://msdn.microsoft.com/library/windows/desktop/bb775241) w zestawie Windows SDK. Zobacz [Utwórz](#create) listę dodatkowych style.  
   
- `rect`  
- Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujące rozmiar i położenie okna, które ma zostać utworzony w współrzędne klienta `pParentWnd`.  
+ *Rect*  
+ Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujące rozmiar i położenie okna, które ma zostać utworzony w współrzędne klienta *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do okna, które jest elementem nadrzędnym formantu.  
   
- `nID`  
+ *nID*  
  Identyfikator formantu okna podrzędnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj `CreateEx` zamiast **Utwórz** dotyczyć rozszerzone style systemu Windows, określone przez wstępu rozszerzonego stylu Windows **WS_EX_**.  
+ Użyj `CreateEx` zamiast `Create` dotyczyć rozszerzone style systemu Windows, określone przez wstępu rozszerzonego stylu Windows **WS_EX_**.  
   
 ##  <a name="createdragimage"></a>  CHeaderCtrl::CreateDragImage  
  Tworzy przezroczyste wersję obrazu elementu w formancie nagłówka.  
@@ -311,7 +311,7 @@ CImageList* CreateDragImage(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Liczony od zera indeks elementu w formancie nagłówka. Obraz przypisany do tego elementu jest podstawą przezroczystego obrazu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -330,7 +330,7 @@ BOOL DeleteItem(int nPos);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPos`  
+ *nPos*  
  Określa liczony od zera indeks elementu do usunięcia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -347,7 +347,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Wskaźnik do [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) opisujące elementu, który ma zostać narysowany struktury.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -355,7 +355,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  Domyślnie ta funkcja członkowska nie działa. Przesłonić tę funkcję elementu członkowskiego, aby zaimplementować rysunku rysowania przez właściciela `CHeaderCtrl` obiektu.  
   
- Aplikacja powinna przywrócenie wszystkich obiektów grafiki urządzenia interfejsu (GDI), wybrane kontekst wyświetlania dostarczane w `lpDrawItemStruct` przed ten element członkowski kończy funkcji.  
+ Aplikacja powinna przywrócenie wszystkich obiektów grafiki urządzenia interfejsu (GDI), wybrane kontekst wyświetlania dostarczane w *lpDrawItemStruct* przed ten element członkowski kończy funkcji.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CHeaderCtrl#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_6.cpp)]  
@@ -370,10 +370,10 @@ BOOL EditFilter(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nColumn`  
+ *nColumn*  
  Kolumny do edycji.  
   
- `bDiscardChanges`  
+ *bDiscardChanges*  
  Wartość, która określa sposób obsługi użytkownika do edycji zmiany, jeśli użytkownik jest w trakcie edycji filtru podczas [HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312) jest wysyłany komunikat.  
   
  Określ `true` odrzucić zmiany wprowadzone przez użytkownika, lub `false` celu zaakceptowania zmian wprowadzonych przez użytkownika.  
@@ -452,10 +452,10 @@ BOOL GetItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPos`  
+ *nPos*  
  Określa liczony od zera indeks elementu do pobrania.  
   
- `pHeaderItem`  
+ *pHeaderItem*  
  Wskaźnik do [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) struktury, która odbiera nowy element. Ta struktura jest używany z `InsertItem` i `SetItem` funkcji elementów członkowskich. Ustaw flagi **maski** element upewnij się, że wartości w odpowiednie elementy są poprawnie wypełnione po powrocie. Jeśli **maski** element jest ustawiony na wartość zero, wartości w innych elementach struktury nie mają znaczenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -490,8 +490,8 @@ BOOL GetItemDropDownRect(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `iItem`|Liczony od zera indeks elementu nagłówka o stylu `HDF_SPLITBUTTON`. Aby uzyskać więcej informacji, zobacz `fmt` członkiem [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) struktury.|  
-|[out] `lpRect`|Wskaźnik do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury do odbierania informacji prostokąt ograniczający.|  
+|[in] *towaru*|Liczony od zera indeks elementu nagłówka o stylu `HDF_SPLITBUTTON`. Aby uzyskać więcej informacji, zobacz `fmt` członkiem [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) struktury.|  
+|[out] *lprect —*|Wskaźnik do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury do odbierania informacji prostokąt ograniczający.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli ta funkcja zakończy się pomyślnie; w przeciwnym razie `false`.  
@@ -519,10 +519,10 @@ BOOL GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Liczony od zera indeks elementu kontrolki nagłówka.  
   
- `lpRect`  
+ *lprect —*  
  Wskaźnik do adresu [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, który odbiera dane prostokąt ograniczający.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -541,10 +541,10 @@ BOOL GetOrderArray(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `piArray`  
+ *piArray*  
  Wskaźnik do adres buforu, który odbiera wartości indeksu elementów w formancie nagłówka, w kolejności, w jakiej widnieją od lewej do prawej.  
   
- `iCount`  
+ *iCount*  
  Liczba elementów do formantu nagłówka. Musi być nieujemna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -567,7 +567,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[out] `lpRect`|Wskaźnik do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, który odbiera dane prostokąt ograniczający.|  
+|[out] *lprect —*|Wskaźnik do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, który odbiera dane prostokąt ograniczający.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli ta funkcja zakończy się pomyślnie; w przeciwnym razie `false`.  
@@ -598,7 +598,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[w, out] `phdhti`|Wskaźnik do [HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245) struktury, która określa punkt do testowania i odbiera wyniki testu.|  
+|[w, out] *phdhti*|Wskaźnik do [HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245) struktury, która określa punkt do testowania i odbiera wyniki testu.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczony od zera indeks elementu nagłówka, jeśli istnieje w określonej pozycji; w przeciwnym razie wartość -1.  
@@ -626,7 +626,7 @@ int InsertItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPos`  
+ *nPos*  
  Liczony od zera indeks elementu do wstawienia. Jeśli wartość wynosi zero, element są wstawiane na początku nagłówka formantu. Jeśli wartość jest większa niż wartość maksymalna, element są wstawiane na końcu formantu nagłówka.  
   
  *phdi*  
@@ -683,7 +683,7 @@ int SetBitmapMargin(int nWidth);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nWidth`  
+ *nWidth*  
  Szerokość określone w pikselach margines wokół mapy bitowej w ramach istniejącego formantu nagłówka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -726,7 +726,7 @@ BOOL SetFocusedItem(int iItem);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `iItem`|Liczony od zera indeks elementu nagłówka.|  
+|[in] *towaru*|Liczony od zera indeks elementu nagłówka.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
@@ -753,10 +753,10 @@ int SetHotDivider(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pt`  
+ *PT*  
  Pozycja wskaźnika. Formant nagłówka prezentuje odpowiednią linię podziału na podstawie położenia wskaźnika.  
   
- `nIndex`  
+ *nIndex*  
  Indeks wyróżnione podziału.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -776,7 +776,7 @@ CImageList* SetImageList(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pImageList`  
+ *pImageList*  
  Wskaźnik do `CImageList` obiekt, który zawiera listy obrazów, który ma być przypisany do formantu nagłówka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -798,10 +798,10 @@ BOOL SetItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPos`  
+ *nPos*  
  Liczony od zera indeks elementu, który ma być modyfikowany w zakresie.  
   
- `pHeaderItem`  
+ *pHeaderItem*  
  Wskaźnik do [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) struktury, który zawiera informacje dotyczące nowego elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -820,10 +820,10 @@ BOOL SetOrderArray(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iCount`  
+ *iCount*  
  Liczba elementów do formantu nagłówka.  
   
- `piArray`  
+ *piArray*  
  Wskaźnik do adres buforu, który odbiera wartości indeksu elementów w formancie nagłówka, w kolejności, w jakiej widnieją od lewej do prawej.  
   
 ### <a name="return-value"></a>Wartość zwracana  

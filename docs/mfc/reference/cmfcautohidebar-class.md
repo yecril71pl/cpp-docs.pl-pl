@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d9c60ee3601cd4055e963997a6cd4f8bbd48b14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 506ef6d9d70f336ad5a8b8df36a07ed5ba6480e6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369876"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042186"
 ---
 # <a name="cmfcautohidebar-class"></a>Klasa CMFCAutoHideBar
 `CMFCAutoHideBar` Klasa jest klasą specjalnych narzędzi implementujący funkcja.  
@@ -136,16 +136,16 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pAutoHideWnd`  
+ [in] *pAutoHideWnd*  
  W oknie, w którym chcesz ukryć.  
   
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  Wartość, która określa sposób wyrównania automatyczne ukrywanie przycisku w oknie aplikacji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
 ### <a name="remarks"></a>Uwagi  
- `dwAlignment` Parametr wskazuje, gdzie znajduje się przycisk autoukrywania w aplikacji. Parametr może być jednym z następujących wartości:  
+ *DwAlignment* parametr wskazuje, gdzie znajduje się przycisk autoukrywania w aplikacji. Parametr może być jednym z następujących wartości:  
   
 - `CBRS_ALIGN_LEFT`  
   
@@ -176,8 +176,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -207,13 +207,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszClassName`  
- [in] `dwStyle`  
- [in] `rect`  
- [in] `pParentWnd`  
- [in] `nID`  
- [in] `dwControlBarStyle`  
- [in] `pContext`  
+ [in] *lpszClassName*  
+ [in] *dwStyle*  
+ [in] *rect*  
+ [in] *pParentWnd*  
+ [in] *nID*  
+ [in] *dwControlBarStyle*  
+ [in] *pContext*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -261,7 +261,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `CPoint`  
+ [in] *CPoint*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -275,7 +275,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- CDockablePane * `pAutoHideWnd`  
+ CDockablePane * *pAutoHideWnd*  
  Automatyczne ukrywanie okna do usunięcia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -291,7 +291,7 @@ virtual void SetActiveInGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] WARTOŚĆ LOGICZNA `bActive`  
+ [in] Wartość logiczna *bWykonywanie aktywnych*  
  Wartość TRUE, aby aktywna; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -305,7 +305,7 @@ void SetRecentVisibleState(BOOL bState);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bState`  
+ [in] *bState*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -320,11 +320,11 @@ BOOL ShowAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] CDockablePane * `pAutoHideWnd`  
- [in] WARTOŚĆ LOGICZNA `bShow`  
+ [in] CDockablePane * *pAutoHideWnd*  
+ [in] Wartość logiczna *bShow*  
  Wartość TRUE, aby wyświetlić okno.  
   
- [in] WARTOŚĆ LOGICZNA `bDelay`  
+ [in] Wartość logiczna *bDelay*  
  Ten parametr jest ignorowany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -342,10 +342,10 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nLength`  
+ [in] *nLength*  
  Wartość nie jest używana w implementacji podstawowej. W implementacjach pochodnej Użyj tej wartości, aby określić czas, po zmianie rozmiaru okienka.  
   
- [in] `bVert`  
+ [in] *bVert*  
  Wartość nie jest używana w implementacji podstawowej. W implementacji pochodnej, użyj `TRUE` do obsługi w przypadku, gdy pasek autoukrywania zwinięciu pionowo, i `FALSE` w przypadku, gdy pasek autoukrywania zwinięciu poziomo.  
   
 ### <a name="return-value"></a>Wartość zwracana  

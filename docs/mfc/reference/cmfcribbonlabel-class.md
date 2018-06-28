@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcbc552560325e844cf0812a3002088f829d6c60
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36b2d78bb3f1ffaefa67a062c6498c195d46336f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370125"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042498"
 ---
 # <a name="cmfcribbonlabel-class"></a>Klasa CMFCRibbonLabel
 Implementuje etykietę tekstową nieaktywne dla wstążki.  
@@ -80,10 +80,10 @@ CMFCRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszText`  
+ [in] *lpszText*  
  Tekst wyświetlany w etykiecie.  
   
- [in] `bIsMultiLine`  
+ [in] *bIsMultiLine*  
  `TRUE` Aby określić, czy etykieta jest etykieta wielowierszowego; w przeciwnym razie `FALSE`.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
@@ -96,14 +96,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pParent`  
+ [in] *pParent*  
  Reprezentuje okno nadrzędne bieżącej etykiety wstążki.  
   
- [out] `data`  
+ [out] *danych*  
  Obiekt typu `CAccessibilityData` który jest wypełniane przy użyciu danych dostępności bieżącej etykiety wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli `data` parametr został pomyślnie wypełnione przy użyciu danych dostępności bieżącej etykiety wstążki; w przeciwnym razie `FALSE`.  
+ `TRUE` Jeśli *danych* parametr został pomyślnie wypełnione przy użyciu danych dostępności bieżącej etykiety wstążki; w przeciwnym razie `FALSE`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

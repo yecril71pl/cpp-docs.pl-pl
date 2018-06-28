@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cddd48c51e1e9b5d206cefa56e2879dfb3ace3b1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c284f5d5fdfee09349cc6eb9cbde38da21918d25
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367932"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040964"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>Klasa CMFCPropertyGridToolTipCtrl
 Implementuje w etykietce narzędzia kontrolować, które [klasy CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md) używa wyświetlać elementy ToolTip.  
@@ -106,7 +106,7 @@ BOOL Create(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Wskaźnik do okna nadrzędnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -130,7 +130,7 @@ void GetLastRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `rect`  
+ [out] *rect*  
  Zawiera ostatniej pozycji formantu tooltip.  
   
 ##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide  
@@ -148,7 +148,7 @@ void SetTextMargin(int nTextMargin);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nTextMargin`  
+ [in] *nTextMargin*  
  Określa odstępy między tekst formantu tooltip i krawędź okna etykietki narzędzia. Wartość domyślna to 10 pikseli.  
   
 ##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track  
@@ -161,14 +161,14 @@ void Track(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `rect`  
+ [in] *rect*  
  Określa położenie i rozmiar formantu tooltip.  
   
- [in] `strText`  
+ [in] *strText*  
  Określa tekst, który ma być wyświetlany w etykietce narzędzia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda Wyświetla formantu tooltip pozycji i rozmiaru określonego przez `rect`. Jeśli pozycja, rozmiar i tekst nie uległy zmianie od czasu, gdy ta metoda została wywołana, ta metoda nie ma znaczenia.  
+ Ta metoda Wyświetla formantu tooltip pozycji i rozmiaru określonego przez *rect*. Jeśli pozycja, rozmiar i tekst nie uległy zmianie od czasu, gdy ta metoda została wywołana, ta metoda nie ma znaczenia.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

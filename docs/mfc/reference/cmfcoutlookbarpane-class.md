@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe72b43d8930e77bea274e20e5f150cc93617c20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd073dc7876a755a8dc309efc7e11fb63521ab5a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374087"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037905"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Klasa CMFCOutlookBarPane
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -184,31 +184,31 @@ BOOL AddButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiImage`  
+ [in] *uiImage*  
  Określa identyfikator zasobu mapy bitowej.  
   
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Określa tekst przycisku.  
   
- [in] `iIdCommand`  
+ [in] *iIdCommand*  
  Określa identyfikator formantu przycisku.  
   
- [in] `iInsertAt`  
+ [in] *iInsertAt*  
  Określa liczony od zera indeks na stronie paska outlook w celu wstawienia przycisku.  
   
- [in] `uiLabel`  
+ [in] *uiLabel*  
  Identyfikator zasobu ciągu.  
   
- [in] `szBmpFileName`  
+ [in] *szBmpFileName*  
  Określa nazwę pliku obrazu dysku do załadowania.  
   
- [in] `szLabel`  
+ [in] *szLabel*  
  Określa tekst przycisku.  
   
- [in] `hBmp`  
+ [in] *hBmp*  
  Dojście do mapy bitowej przycisku.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Dojście do ikony przycisków.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -217,9 +217,9 @@ BOOL AddButton(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda umożliwia wstawienie nowego przycisku paska Outlook strony. Obraz przycisku mogą być ładowane z zasobów aplikacji lub pliku na dysku.  
   
- Jeśli określony identyfikator strony przez `uiPageID` wynosi -1, przycisk zostaną wstawione do pierwszej strony.  
+ Jeśli określony identyfikator strony przez *uiPageID* wynosi -1, przycisk zostaną wstawione do pierwszej strony.  
   
- Jeśli indeks określony przez `iInsertAt` wynosi -1, zostanie dodany na końcu strony.  
+ Jeśli indeks określony przez *iInsertAt* wynosi -1, zostanie dodany na końcu strony.  
   
 ##  <a name="canbeattached"></a>  CMFCOutlookBarPane::CanBeAttached  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -254,16 +254,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Określa okno nadrzędne kontrolki okienku paska programu Outlook. Nie może być `NULL`.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Styl okna.  Aby uzyskać listę Style okna, zobacz [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `uiID`  
+ [in] *uiID*  
  Identyfikator formantu. Musi być unikatowa, aby umożliwić zapisanie stanu formantu.  
   
- [in] `dwControlBarStyle`  
+ [in] *dwControlBarStyle*  
  Określa style specjalne, definiujące zachowanie formantu okienku paska Outlook odłączeniem z paska Outlook.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -284,10 +284,10 @@ virtual BOOL EnableContextMenuItems(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pButton`  
+ [in] *pButton*  
  Wskaźnik, że użytkownik kliknął przycisk paska narzędzi.  
   
- [in] `pPopup`  
+ [in] *pPopup*  
  Wskaźnik do menu skrótów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -309,7 +309,7 @@ void EnablePageScrollMode(BOOL bPageScroll=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bPageScroll`  
+ [in] *bPageScroll*  
  Jeśli `TRUE`, Włącz tryb przewijania strony. Jeśli `FALSE`, wyłącz tryb przewijania strony.  
   
 ##  <a name="getregularcolor"></a>  CMFCOutlookBarPane::GetRegularColor  
@@ -365,7 +365,7 @@ BOOL RemoveButton(UINT iIdCommand);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iIdCommand`  
+ [in] *iIdCommand*  
  Określa identyfikator polecenia przycisk Usuń.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -379,7 +379,7 @@ void SetBackColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `color`  
+ [in] *kolorów*  
  Określa nowy kolor tła.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -393,7 +393,7 @@ void SetBackImage(UINT uiImageID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiImageID`  
+ [in] *uiImageID*  
  Określa identyfikator zasobu obrazu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -426,10 +426,10 @@ void SetTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `clrRegText`  
+ [in] *clrRegText*  
  Określa nowy kolor tekstu niezaznaczone.  
   
- [in] `clrSelText`  
+ [in] *clrSelText*  
  Określa nowy kolor dla zaznaczonego tekstu.  
   
 ##  <a name="settransparentcolor"></a>  CMFCOutlookBarPane::SetTransparentColor  
@@ -440,7 +440,7 @@ void SetTransparentColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `color`  
+ *Kolor*  
  Określa kolor przezroczysty.  
   
 ### <a name="remarks"></a>Uwagi  

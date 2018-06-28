@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 738c8c3fa25fcfe0a657685b370f8e973d483861
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c95fbe88f91f3eaf0787fa9762d507a49f231c4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375927"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039209"
 ---
 # <a name="cmultipaneframewnd-class"></a>Klasa CMultiPaneFrameWnd
 `CMultiPaneFrameWnd` Rozszerza klasy [CPaneFrameWnd klasy](../../mfc/reference/cpaneframewnd-class.md). Może obsługiwać wiele okienek. Zamiast pojedynczego osadzonych dojścia do pasek sterowania `CMultiPaneFrameWnd` zawiera [klasy CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) obiekt, który umożliwia użytkownikowi dock jedną `CMultiPaneFrameWnd` na inny i dynamicznie utworzyć wiele przestawne, z kartami systemu Windows.  
@@ -188,7 +188,7 @@ virtual void AddPane(CBasePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pWnd`  
+ [in] *pWnd*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -200,7 +200,7 @@ virtual BOOL AddRecentPane(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -237,11 +237,11 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pWndToDock`  
- [in] `ptMouse`  
- [in] `rectResult`  
- [in] `bDrawTab`  
- [in] `ppTargetBar`  
+ [in] *pWndToDock*  
+ [in] *ptMouse*  
+ [in] *rectResult*  
+ [in] *bDrawTab*  
+ [in] *ppTargetBar*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -264,7 +264,7 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDockingBar`  
+ [in] *pDockingBar*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -307,8 +307,8 @@ virtual BOOL DockFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDockedFrame`  
- [in] `dockMethod`  
+ [in] *pDockedFrame*  
+ [in] *dockMethod*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -322,7 +322,7 @@ virtual BOOL DockPane(CDockablePane* pDockedBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDockedBar`  
+ [in] *pDockedBar*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -336,7 +336,7 @@ virtual void DockRecentPaneToMainFrame(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -419,9 +419,9 @@ virtual BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pControlBar`  
- [in] `pTarget`  
- [in] `bAfter`  
+ [in] *pControlBar*  
+ [in] *pTarget*  
+ [in] *bPo*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -437,8 +437,8 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszProfileName`  
- [in] `uiID`  
+ [in] *lpszProfileName*  
+ [in] *uiID*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -490,8 +490,8 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pBar`  
- [in] `bShow`  
+ [in] *pBar*  
+ [in] *bShow*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -506,9 +506,9 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `point`  
- [in] `nSensitivity`  
- [in] `bCheckVisibility`  
+ [in] *punktu*  
+ [in] *nSensitivity*  
+ [in] *bCheckVisibility*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -534,9 +534,9 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pBar`  
- [in] `bDestroy`  
- [in] `bNoDelayedDestroy`  
+ [in] *pBar*  
+ [in] *bDestroy*  
+ [in] *bNoDelayedDestroy*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -550,8 +550,8 @@ virtual void ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pBarOrg`  
- [in] `pBarReplaceWith`  
+ [in] *pBarOrg*  
+ [in] *pBarReplaceWith*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -565,8 +565,8 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszProfileName`  
- [in] `uiID`  
+ [in] *lpszProfileName*  
+ [in] *uiID*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -580,7 +580,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `ar`  
+ [in] *ar*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -592,7 +592,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDockManager`  
+ [in] *pDockManager*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -604,7 +604,7 @@ void SetLastFocusedPane(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `hwnd`  
+ [in] *hwnd*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -619,9 +619,9 @@ virtual BOOL SetPreDockState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `preDockState`  
- [in] `pBarToDock`  
- [in] `dockMethod`  
+ [in] *preDockState*  
+ [in] *pBarToDock*  
+ [in] *dockMethod*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -635,7 +635,7 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -649,8 +649,8 @@ virtual void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDockingBar`  
- [in] `pTabbedBar`  
+ [in] *pDockingBar*  
+ [in] *pTabbedBar*  
   
 ### <a name="remarks"></a>Uwagi  
   

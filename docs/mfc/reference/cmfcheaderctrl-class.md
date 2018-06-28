@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a1c10cd6242f2845d64965d914093455da21c8a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6af0859811ad4064c12f6e4ef8d470437fe3ded9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370032"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037664"
 ---
 # <a name="cmfcheaderctrl-class"></a>Klasa CMFCHeaderCtrl
 `CMFCHeaderCtrl` Klasa obsługuje sortowanie wiele kolumn w formancie nagłówka.  
@@ -137,7 +137,7 @@ void EnableMultipleSort(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  `TRUE` Aby włączyć tryb sortowania kolumny wielu; `FALSE` wyłączyć tryb sortowania kolumny wiele i usunąć kolumn z listy sortowanej kolumny. Wartość domyślna to `TRUE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -151,7 +151,7 @@ int GetColumnState(int iColumn) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iColumn`  
+ [in] *iColumn*  
  Liczony od zera indeks kolumny.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -227,19 +227,19 @@ virtual void OnDrawItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- [in] `iItem`  
+ [in] *towaru*  
  Liczony od zera indeks elementu do rysowania.  
   
- [in] `rect`  
+ [in] *rect*  
  Prostokąt ograniczający element do rysowania.  
   
- [in] `bIsPressed`  
+ [in] *bIsPressed*  
  `TRUE` do rysowania elementu w stan naciśnięcia; w przeciwnym razie `FALSE`.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  `TRUE` do rysowania elementu w stanie wyróżnione; w przeciwnym razie `FALSE`.  
   
 ##  <a name="ondrawsortarrow"></a>  CMFCHeaderCtrl::OnDrawSortArrow  
@@ -252,10 +252,10 @@ virtual void OnDrawSortArrow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- [in] `rectArrow`  
+ [in] *rectArrow*  
  Prostokąt ograniczający strzałkę sortowania.  
   
 ##  <a name="onfillbackground"></a>  CMFCHeaderCtrl::OnFillBackground  
@@ -266,7 +266,7 @@ virtual void OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -279,7 +279,7 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iColumn`  
+ [in] *iColumn*  
  Liczony od zera indeks kolumny do usunięcia.  
   
 ##  <a name="setsortcolumn"></a>  CMFCHeaderCtrl::SetSortColumn  
@@ -293,14 +293,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iColumn`  
+ [in] *iColumn*  
  Liczony od zera indeks kolumny formantu nagłówka. Jeśli ten parametr jest mniejsza od zera, ta metoda usuwa wszystkie kolumny z listy kolumn, sortowania.  
   
- [in] `bAscending`  
- Określa porządek sortowania kolumny, która `iColumn` określa parametr. `TRUE` Aby ustawić rosnąco; `FALSE` można ustawić w kolejności malejącej. Wartość domyślna to `TRUE`.  
+ [in] *bAscending*  
+ Określa porządek sortowania kolumny, która *iColumn* określa parametr. `TRUE` Aby ustawić rosnąco; `FALSE` można ustawić w kolejności malejącej. Wartość domyślna to `TRUE`.  
   
- [in] `bAdd`  
- `TRUE` Aby ustawić kolejność sortowania kolumny `iColumn` określa parametr.  
+ [in] *bDodaj*  
+ `TRUE` Aby ustawić kolejność sortowania kolumny *iColumn* określa parametr.  
   
  W przypadku bieżącego formantu nagłówka *wielu sortowanie kolumn* tryb, ta metoda dodaje określonej kolumny do listy kolumn, sortowania. Użyj [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) można ustawić wiele Tryb sortowania kolumny.  
   

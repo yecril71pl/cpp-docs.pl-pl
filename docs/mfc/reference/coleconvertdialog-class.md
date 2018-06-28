@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90453d4e8550038493545b691c978b59bda90fad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dce62b489cce44070111586959796aadd04079b7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370292"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042524"
 ---
 # <a name="coleconvertdialog-class"></a>Klasa COleConvertDialog
 Aby uzyskać więcej informacji, zobacz [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) struktury w zestawie Windows SDK.  
@@ -110,10 +110,10 @@ explicit COleConvertDialog (
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Punkty elementu, który ma zostać poddany konwersji lub aktywowane.  
   
- `dwFlags`  
+ *wartość elementu dwFlags*  
  Tworzenie flagę zawiera dowolną liczbę następujące wartości łączyć, używając operatora testu koniunkcji- lub operator:  
   
 - **CF_SELECTCONVERTTO** Określa, że przycisk radiowy Konwertuj na wybrany zostanie początkowo wywołanego okna dialogowego. Domyślnie włączone.  
@@ -126,10 +126,10 @@ explicit COleConvertDialog (
   
 - **CF_SHOWHELPBUTTON** Określa, czy przycisk Pomoc, aby będą wyświetlane, gdy jest wywoływana w oknie dialogowym.  
   
- `pClassID`  
- Wskazuje identyfikator CLSID elementu, który ma zostać poddany konwersji lub aktywowane. Jeśli **NULL**, **CLSID** skojarzone z `pItem` będą używane.  
+ *pClassID*  
+ Wskazuje identyfikator CLSID elementu, który ma zostać poddany konwersji lub aktywowane. Jeśli **NULL**, **CLSID** skojarzone z *pItem* będą używane.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskazuje obiekt okna nadrzędnego lub właściciela (typu `CWnd`) do której należy obiektu okna dialogowego. Jeśli jest **NULL**, okno nadrzędne, okno dialogowe ma ustawioną wartość okna głównego aplikacji.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -145,7 +145,7 @@ BOOL DoConvert(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Punkty elementu, który ma zostać poddany konwersji lub aktywowane. Nie może być **NULL**.  
   
 ### <a name="return-value"></a>Wartość zwracana  

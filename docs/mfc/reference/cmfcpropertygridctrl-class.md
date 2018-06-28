@@ -160,12 +160,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79cba2981a6ae6a742ad2839499f2acff6f0a5f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3d40ad0bf70fb3fda32265da321a3474723e8037
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379024"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039261"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Klasa CMFCPropertyGridCtrl
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -332,8 +332,8 @@ virtual HRESULT accSelect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `flagsSelect`  
- [in] `varChild`  
+ [in] *flagsSelect*  
+ [in] *varChild*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -350,13 +350,13 @@ int AddProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pProp`  
+ [in] *pProp*  
  Wskaźnik do właściwości.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` Aby odświeżyć właściwość natychmiast; w przeciwnym razie `FALSE`. Wartość domyślna to `TRUE`.  
   
- [in] `bAdjustLayout`  
+ [in] *bAdjustLayout*  
  `TRUE` Aby ponownie obliczyć jak rysowanie tekstu i wartości właściwości, a następnie narysuj właściwości; `FALSE` Aby użyć istniejącego obliczeń do rysowania właściwości. Wartość domyślna to `TRUE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -383,7 +383,7 @@ void AlwaysShowUserToolTip(BOOL bShow = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bShow`  
+ [in] *bShow*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -418,19 +418,19 @@ virtual int CompareProps(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pProp1`  
+ *pProp1*  
  Wskaźnik do właściwości.  
   
- `pProp2`  
+ *pProp2*  
  Wskaźnik do właściwości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
 |Wartość zwracana|Opis|  
 |------------------|-----------------|  
-|< 0|Nazwa `pProp1` parametrów jest mniejsza niż nazwa `pProp2` parametru.|  
-|0|Nazwa `pProp1` parametr jest taka sama jak nazwa z `pProp2` parametru.|  
-|> 0|Nazwa `pProp1` obiekt jest większy niż nazwa `pProp2` parametru.|  
+|< 0|Nazwa *pProp1* parametrów jest mniejsza niż nazwa *pProp2* parametru.|  
+|0|Nazwa *pProp1* parametr jest taka sama jak nazwa z *pProp2* parametru.|  
+|> 0|Nazwa *pProp1* obiekt jest większy niż nazwa *pProp2* parametru.|  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta metoda używa [CString::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) metody do porównania `CMFCPropertyGridProperty::m_strName` członków określonych parametrów.  
@@ -447,16 +447,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Bitowe połączenie (lub) [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `rect`  
- Współrzędne prostokątem, który określa rozmiar i położenie okna w kliencie `pParentWnd`.  
+ [in] *rect*  
+ Współrzędne prostokątem, który określa rozmiar i położenie okna w kliencie *pParentWnd*.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Wskaźnik do okna nadrzędnego. Nie może być `NULL`.  
   
- [in] `nID`  
+ [in] *nID*  
  Identyfikator okna podrzędnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -481,13 +481,13 @@ BOOL DeleteProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pProp`  
+ [in] *pProp*  
  Wskaźnik do właściwości.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` Aby odświeżyć kontroli siatki właściwości. w przeciwnym razie `FALSE`. Wartość domyślna to `TRUE`.  
   
- [in] `bAdjustLayout`  
+ [in] *bAdjustLayout*  
  `TRUE` Aby ponownie obliczyć jak narysować cały tekst, obrazy i elementów w formancie siatki właściwości, a następnie narysować kontrolkę; w przeciwnym razie `FALSE`. Wartość domyślna to `TRUE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -517,10 +517,10 @@ virtual BOOL EditItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pProp`  
+ [in] *pProp*  
  Wskaźnik do właściwości.  
   
- [in] `lptClick`  
+ [in] *lptClick*  
  Punkt na formantu siatki właściwości, który użytkownik kliknął ma zostać rozpoczęta operacja edycji. Punkt znajduje się we współrzędnych klienta formantu. Wartość domyślna to `NULL`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -536,7 +536,7 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  `TRUE` Aby włączyć obszar opisu; `FALSE` wyłączyć obszar opisu. Wartość domyślna to `TRUE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -553,13 +553,13 @@ void EnableHeaderCtrl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  `TRUE` Aby włączyć formantu nagłówka; `FALSE` można wyłączyć formantu nagłówka. Wartość domyślna to `TRUE`.  
   
- [in] `lpszLeftColumn`  
+ [in] *lpszLeftColumn*  
  Tytuł lewej kolumnie formantu nagłówka. Wartość domyślna to **właściwości**.  
   
- [in] `lpszRightColumn`  
+ [in] *lpszRightColumn*  
  Tytuł prawej kolumnie formantu nagłówka. Wartość domyślna to **wartość**.  
   
 ##  <a name="endedititem"></a>  CMFCPropertyGridCtrl::EndEditItem  
@@ -570,7 +570,7 @@ virtual BOOL EndEditItem(BOOL bUpdateData=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bUpdateData`  
+ [in] *bUpdateData*  
  `TRUE` Aby określić, czy dane zmodyfikowane właściwości musi zostać zweryfikowany, po zakończeniu operacji edycji; w przeciwnym razie `FALSE`. Wartość domyślna to `TRUE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -588,10 +588,10 @@ void EnsureVisible(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pProp`  
+ [in] *pProp*  
  Wskaźnik do właściwości.  
   
- [in] `bExpandParents`  
+ [in] *bExpandParents*  
  `TRUE` Aby rozszerzyć elementów nadrzędnych, aby wyświetlić właściwości określonej; w przeciwnym razie `FALSE`. Wartość domyślna to `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -604,7 +604,7 @@ void ExpandAll(BOOL bExpand=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bExpand`  
+ [in] *bExpand*  
  `TRUE` Aby rozwinąć wszystkie węzły; `FALSE` do zwijanie wszystkich węzłów. Wartość domyślna to `TRUE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -619,10 +619,10 @@ CMFCPropertyGridProperty* FindItemByData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `dwData`  
+ [in] *dwData*  
  A `DWORD` wartość.  
   
- [in] `bSearchSubItems`  
+ [in] *bSearchSubItems*  
  `TRUE` Aby wyszukać elementy podrzędne właściwości. w przeciwnym razie `FALSE`. Wartość domyślna to `TRUE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -653,7 +653,7 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pvarChild`  
+ [in] *pvarChild*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -669,8 +669,8 @@ virtual HRESULT get_accHelp(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `varChild`  
- [in] `pszHelp`  
+ [in] *varChild*  
+ [in] *pszHelp*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -687,9 +687,9 @@ virtual HRESULT get_accHelpTopic(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pszHelpFile`  
- [in] `varChild`  
- [in] `pidTopic`  
+ [in] *pszHelpFile*  
+ [in] *varChild*  
+ [in] *pidTopic*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -705,8 +705,8 @@ virtual HRESULT get_accKeyboardShortcut(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `varChild`  
- [in] `pszKeyboardShortcut`  
+ [in] *varChild*  
+ [in] *pszKeyboardShortcut*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -720,7 +720,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pvarChildren`  
+ [in] *pvarChildren*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -776,25 +776,25 @@ void GetCustomColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `clrBackground`  
+ [out] *clrBackground*  
  Kolor tła wartości właściwości.  
   
- [out] `clrText`  
+ [out] *clrText*  
  Kolor nazw właściwości i tekst wartości właściwości.  
   
- [out] `clrGroupBackground`  
+ [out] *clrGroupBackground*  
  Kolor tła grupy właściwości.  
   
- [out] `clrGroupText`  
+ [out] *clrGroupText*  
  Kolor tekstu w grupie właściwości.  
   
- [out] `clrDescriptionBackground`  
+ [out] *clrDescriptionBackground*  
  Kolor tła obszaru Opis.  
   
- [out] `clrDescriptionText`  
+ [out] *clrDescriptionText*  
  Kolor tekstu w obszarze opisu.  
   
- [out] `clrLine`  
+ [out] *clrLine*  
  Kolor linii, które są rysowane między właściwościami.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -883,10 +883,10 @@ CMFCPropertyGridProperty* GetProperty(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nIndex`  
+ [in] *nIndex*  
  Liczony od zera indeks elementu kontrolki siatki właściwości.  
   
- Ta metoda potwierdzeń, jeśli `nIndex` parametr jest większa niż zero lub większa niż liczba właściwości.  
+ Ta metoda potwierdzeń, jeśli *nIndex* parametr jest większa niż zero lub większa niż liczba właściwości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do obiektu właściwości, który odpowiada określonym indeksie. Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `NULL`.  
@@ -939,7 +939,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nBar`  
+ [in] *nBar*  
  Orientacja paska przewijania musi być `SB_VERT`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -972,24 +972,24 @@ CMFCPropertyGridProperty* HitTest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pt`  
+ [in] *pt*  
  Punkt, we współrzędnych klienta.  
   
- [w, out] `pnArea`  
+ [w, out] *pnArea*  
  Wskaźnik do `ClickArea` zmiennej. Po powrocie z tej metody oznacza zmiennej *obszar właściwości* zawierający określony punkt. Aby uzyskać więcej informacji o obszarze właściwości Zobacz uwagi.  
   
- [in] `bPropsOnly`  
+ [in] *bPropsOnly*  
  `TRUE` Aby przetestować tylko w obszarze właściwości; `FALSE` do testowania *obszar opisu* Jeśli określony punkt nie znajduje się w obszarze właściwości. Wartość domyślna to `FALSE`. Aby uzyskać więcej informacji na temat obszar opisu zobacz uwagi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli `bPropsOnly` parametr jest `TRUE` i określony punkt znajduje się w obszarze właściwości, wartość zwracana jest wskaźnik do odpowiedniego obiektu właściwości. Ponadto `pnArea` ustawiono parametr do określonego obszaru, który zawiera określony punkt. W przeciwnym razie jest zwracana wartość `NULL` i `pnArea` parametru nie jest modyfikowany.  
+ Jeśli *bPropsOnly* parametr jest `TRUE` i określony punkt znajduje się w obszarze właściwości, wartość zwracana jest wskaźnik do odpowiedniego obiektu właściwości. Ponadto *pnArea* ustawiono parametr do określonego obszaru, który zawiera określony punkt. W przeciwnym razie jest zwracana wartość `NULL` i *pnArea* parametru nie jest modyfikowany.  
   
- Jeśli `bPropsOnly` parametr jest `FALSE`, zwracana wartość jest zawsze `NULL`. Jednakże, jeśli określony punkt znajduje się w obszarze opisu `pnArea` ustawiono parametr `CMFCPropertyGridProperty::ClickDescription`.  
+ Jeśli *bPropsOnly* parametr jest `FALSE`, zwracana wartość jest zawsze `NULL`. Jednakże, jeśli określony punkt znajduje się w obszarze opisu *pnArea* ustawiono parametr `CMFCPropertyGridProperty::ClickDescription`.  
   
 ### <a name="remarks"></a>Uwagi  
  Termin *obszar właściwości* odnosi się do dowolnego z nazwą, wartością, lub rozwiń pole elementu formantu siatki właściwości. *Obszar opisu* jest strefa u dołu formantu siatki właściwości. Po kliknięciu elementu formantu siatki właściwości obszar opisu Wyświetla opis odpowiedniej właściwości.  
   
- Ta metoda ustawia wartość zmiennej `pnArea` wskazuje parametr. W poniższej tabeli wymieniono możliwe wartości oraz odpowiadające im obszary.  
+ Ta metoda ustawia wartość zmiennej *pnArea* wskazuje parametr. W poniższej tabeli wymieniono możliwe wartości oraz odpowiadające im obszary.  
   
 |Wartość|Obszar|  
 |-----------|----------|  
@@ -1127,10 +1127,10 @@ void MarkModifiedProperties(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bMark`  
+ [in] *bMark*  
  `TRUE` Aby wyświetlić zmodyfikował właściwości stylu bold; `FALSE` do wyświetlenia w stylu regularne zmodyfikowane właściwości. Wartość domyślna to `TRUE`.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` Aby odświeżyć od razu; formantu siatki właściwości w przeciwnym razie `FALSE`. Wartość domyślna to `TRUE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1148,8 +1148,8 @@ virtual void OnChangeSelection(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `pNewSel`|Wskaźnik do nowo wybranej właściwości.|  
-|[in] `pOldSel`|Wskaźnik do wcześniej wybranej właściwości.|  
+|[in] *pNewSel*|Wskaźnik do nowo wybranej właściwości.|  
+|[in] *pOldSel*|Wskaźnik do wcześniej wybranej właściwości.|  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja tej metody nie działają.  
@@ -1162,7 +1162,7 @@ virtual void OnClickButton(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `point`  
+ [in] *punktu*  
  Punkt, we współrzędnych klienta.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1176,7 +1176,7 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1191,10 +1191,10 @@ virtual void OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- [in] `rect`  
+ [in] *rect*  
  Prostokąt, który określa, gdzie można narysować obszar opisu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1208,7 +1208,7 @@ virtual void OnDrawList(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1223,10 +1223,10 @@ virtual int OnDrawProperty(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- [in] `pProp`  
+ [in] *pProp*  
  Wskaźnik do obiektu właściwości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1242,7 +1242,7 @@ virtual void OnPropertyChanged(CMFCPropertyGridProperty* pProp) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pProp`  
+ [in] *pProp*  
  Wskaźnik do obiektu właściwości, której wartość została zmieniona.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1274,7 +1274,7 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` Aby odświeżyć listę właściwości; w przeciwnym razie `FALSE`. Wartość domyślna to `TRUE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1287,7 +1287,7 @@ void SetAlphabeticMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bSet`  
+ [in] *bUstawienie*  
  `TRUE` można ustawić trybu alfabetycznego; `FALSE` trybu alfabetycznego resetowania. Wartość domyślna to `TRUE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1303,10 +1303,10 @@ void SetBoolLabels(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszTrue`  
+ [in] *lpszTrue*  
  Ciąg tekstowy, który ma być wyświetlany dla Boolean wartość true.  
   
- [in] `lpszFalse`  
+ [in] *lpszFalse*  
  Ciąg tekstowy, który ma być wyświetlany dla wartość logiczną FAŁSZ.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1321,10 +1321,10 @@ void SetCurSel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pProp`  
+ [in] *pProp*  
  Wskaźnik do obiektu właściwości.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` Aby odświeżyć od razu; formantu siatki właściwości w przeciwnym razie `FALSE`. Wartość domyślna to `TRUE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1345,25 +1345,25 @@ void SetCustomColors(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `clrBackground`  
+ [in] *clrBackground*  
  Kolor tła wartości właściwości.  
   
- [in] `clrText`  
+ [in] *clrText*  
  Kolor nazw właściwości i tekst wartości właściwości.  
   
- [in] `clrGroupBackground`  
+ [in] *clrGroupBackground*  
  Kolor tła grupy właściwości.  
   
- [in] `clrGroupText`  
+ [in] *clrGroupText*  
  Kolor tekstu nowej grupy właściwości.  
   
- [in] `clrDescriptionBackground`  
+ [in] *clrDescriptionBackground*  
  Kolor tła obszaru Opis.  
   
- [in] `clrDescriptionText`  
+ [in] *clrDescriptionText*  
  Kolor tekstu w obszarze opisu.  
   
- [in] `clrLine`  
+ [in] *clrLine*  
  Kolor linii, które są rysowane między właściwościami.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1379,7 +1379,7 @@ void SetDescriptionRows(int nDescRows);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nDescRows`  
+ [in] *nDescRows*  
  Liczba wierszy do wyświetlenia w opisie właściwości.  
   
 ##  <a name="setgroupnamefullwidth"></a>  CMFCPropertyGridCtrl::SetGroupNameFullWidth  
@@ -1392,10 +1392,10 @@ void SetGroupNameFullWidth(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bGroupNameFullWidth`  
+ [in] *bGroupNameFullWidth*  
  `TRUE` Aby wyświetlić pełną szerokość nazwę kategorii, niezależnie od szerokość kolumny nazwę właściwości. `FALSE` Aby ograniczyć szerokość nazwy kategorii szerokość kolumny nazwę właściwości. Wartość domyślna to `TRUE`.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` Aby zaktualizować właściwości kontrolki siatki natychmiast; `FALSE` Aby aktualizować formantu podczas następnego odświeżyć zdarzeń wystąpienia. Wartość domyślna to `TRUE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1411,11 +1411,11 @@ void SetListDelimiter(TCHAR c);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `c`  
+ [in] *c*  
  Znak jako ogranicznik.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda służy do definiowania znak ogranicznika w listę wartości właściwości, które są używane w [CMFCPropertyGridProperty::CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#cmfcpropertygridproperty) konstruktora. W tym konstruktorze ustawić `bIsValueList` parametr `TRUE`.  
+ Ta metoda służy do definiowania znak ogranicznika w listę wartości właściwości, które są używane w [CMFCPropertyGridProperty::CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#cmfcpropertygridproperty) konstruktora. W tym konstruktorze ustawić *bIsValueList* parametr `TRUE`.  
   
  Domyślnie [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) Konstruktor Ustawia znak ogranicznika przecinkiem (',').  
   
@@ -1427,7 +1427,7 @@ void SetShowDragContext(BOOL bShowDragContext = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bShowDragContext`  
+ [in] *bShowDragContext*  
  `TRUE` Aby odświeżyć kolumny nazw i wartości podczas operacji zmiany rozmiaru; `FALSE` ponowne kolumn po ukończeniu operacji przeciągania. Wartość domyślna to `TRUE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1441,7 +1441,7 @@ void SetVSDotNetLook(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bSet`  
+ [in] *bUstawienie*  
  `TRUE` Aby ustawić właściwości kontrolki siatki styl, który jest używany w programie Visual Studio .NET; w przeciwnym razie `FALSE`. Wartość domyślna to `TRUE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1454,7 +1454,7 @@ virtual void UpdateColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `color`  
+ [in] *kolorów*  
  Wartości kolorów RGB.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -1471,13 +1471,13 @@ virtual BOOL ValidateItemData(CMFCPropertyGridProperty* pProp);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `pProp`|Wskaźnik do właściwości. Ten parametr nie jest używany.|  
+|[in] *pProp*|Wskaźnik do właściwości. Ten parametr nie jest używany.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zawsze `TRUE`.  
   
 ### <a name="remarks"></a>Uwagi  
- [CMFCPropertyGridCtrl::EndEditItem](#endedititem) metoda wywołuje tę metodę do sprawdzania poprawności danych. Domyślnie ta metoda nie używają jej `pProp` parametr i jego wartości zwracanej jest zawsze `TRUE`.  
+ [CMFCPropertyGridCtrl::EndEditItem](#endedititem) metoda wywołuje tę metodę do sprawdzania poprawności danych. Domyślnie ta metoda nie używają jej *pProp* parametr i jego wartości zwracanej jest zawsze `TRUE`.  
   
  W przypadku przesłonięcia tej metody, zwraca `TRUE` Jeśli określona właściwość dane są prawidłowe. W przeciwnym razie zwraca `FALSE`, w którym to przypadku platformę nie aktualizuje właściwości.  
   

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 495bf2a3eab9ceee4ca0bab337d590c1820905e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00933a392486064fac7c9a526d8b0c096703460c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369625"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037739"
 ---
 # <a name="cmfclistctrl-class"></a>Klasa CMFCListCtrl
 `CMFCListCtrl` Klasa rozszerza funkcjonalność [clistctrl — klasa](../../mfc/reference/clistctrl-class.md) klasy dzięki obsłudze nagłówka zaawansowane funkcje sterowania [CMFCHeaderCtrl klasy](../../mfc/reference/cmfcheaderctrl-class.md).  
@@ -105,10 +105,10 @@ void EnableMarkSortedColumn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bMark`  
+ [in] *bMark*  
  Wartość logiczna parametr, który określa, czy włączyć inny kolor tła.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  Wartość logiczna parametr, który określa, czy natychmiast odświeżyć formantu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -122,7 +122,7 @@ void EnableMultipleSort(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  Wartość logiczna określająca, czy włączyć wiele Tryb sortowania kolumny.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -165,13 +165,13 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lParam1`  
+ [in] *lParam1*  
  Pierwszy element do porównania.  
   
- [in] `lParam2`  
+ [in] *lParam2*  
  Drugi element do porównania.  
   
- [in] `iColumn`  
+ [in] *iColumn*  
  Indeks kolumny, która jest sortowania tej metody.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -213,13 +213,13 @@ virtual HFONT OnGetCellFont(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nRow`  
+ [in] *nRow*  
  Wiersz w komórce.  
   
- [in] `nColumn`  
+ [in] *nColumn*  
  Kolumna w komórce.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Dane zdefiniowane przez użytkownika. Domyślna implementacja nie korzysta z tego parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -238,10 +238,10 @@ virtual COLORREF OnGetCellTextColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nRow`  
+ [in] *nRow*  
  Wiersz w komórce.  
   
- [in] `nColumn`  
+ [in] *nColumn*  
  Kolumna w komórce.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -258,7 +258,7 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iColumn`  
+ [in] *iColumn*  
  Kolumna usunąć.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -275,14 +275,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iColumn`  
+ [in] *iColumn*  
  Kolumna sortowania.  
   
- [in] `bAscending`  
+ [in] *bAscending*  
  Wartość logiczna, która określa porządek sortowania.  
   
- [in] `bAdd`  
- Wartość logiczna określająca, czy metoda dodaje kolumnę wskazywanym przez `iColumn` do listy kolumn, sortowania.  
+ [in] *bDodaj*  
+ Wartość logiczna określająca, czy metoda dodaje kolumnę wskazywanym przez *iColumn* do listy kolumn, sortowania.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda przekazuje parametry wejściowe do formantu nagłówka przy użyciu metody [CMFCHeaderCtrl::SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn).  
@@ -298,14 +298,14 @@ virtual void Sort(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iColumn`  
+ [in] *iColumn*  
  Kolumna sortowania.  
   
- [in] `bAscending`  
+ [in] *bAscending*  
  Wartość logiczna, która określa porządek sortowania.  
   
- [in] `bAdd`  
- Wartość logiczna określająca, czy ta metoda dodaje kolumnę wskazywanym przez `iColumn` do listy kolumn, sortowania.  
+ [in] *bDodaj*  
+ Wartość logiczna określająca, czy ta metoda dodaje kolumnę wskazywanym przez *iColumn* do listy kolumn, sortowania.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

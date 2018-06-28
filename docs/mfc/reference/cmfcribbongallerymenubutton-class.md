@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27d2d4e95bffa3bd074ca1c6d4bf6d9c7e095a56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2dd3d47b2175a64be605ac8db9fdb1502ce2755
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370910"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041263"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>Klasa CMFCRibbonGalleryMenuButton
 Implementuje zawierający galerii na Wstążce przycisk menu na Wstążce.  
@@ -108,7 +108,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `src`  
+ [in] *src*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -132,22 +132,22 @@ CMFCRibbonGalleryMenuButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `uiID`  
- Identyfikator polecenia przycisku. Jest to wartość wysyłane w **WM_COMMAND** komunikatu po kliknięciu tego przycisku.  
+ *uiID*  
+ Identyfikator polecenia przycisku. Jest to wartość wysyłane w komunikacie WM_COMMAND po kliknięciu tego przycisku.  
   
- `iImage`  
- Indeks obrazu do wyświetlenia w galerii przycisk menu. Obrazy są przechowywane w `imagesPalette` parametru.  
+ *iImage*  
+ Indeks obrazu do wyświetlenia w galerii przycisk menu. Obrazy są przechowywane w *imagesPalette* parametru.  
   
- `lpszText`  
+ *lpszText*  
  Tekst wyświetlany na przycisku menu.  
   
- `imagesPalette`  
+ *imagesPalette*  
  Zawiera listę obrazów do wyświetlenia w galerii.  
   
- `uiImagesPaletteResID`  
+ *uiImagesPaletteResID*  
  Identyfikator zasobu obrazu na liście obrazów do wyświetlenia w galerii.  
   
- `cxPaletteImage`  
+ *cxPaletteImage*  
  Określa szerokość obrazu do wyświetlenia w galerii w pikselach.  
   
 ### <a name="remarks"></a>Uwagi  

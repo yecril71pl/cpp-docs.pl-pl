@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad7e67cc32621fc30108767493c3a7bffd481b68
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a3d4c8af6373f2b526c07ee570f4be878bd073d4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374818"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042046"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>Klasa CMFCColorPickerCtrl
 `CMFCColorPickerCtrl` Klasa udostępnia funkcje dla formantu, który jest używany do wybierania kolorów.  
@@ -158,10 +158,10 @@ virtual void DrawCursor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- [in] `rect`  
+ [in] *rect*  
  Określa prostokątny obszar wokół wybranego koloru.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -190,13 +190,13 @@ void GetHLS(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `hue`  
+ [out] *hue*  
  Wskaźnik do zmiennej typu double służącą do odbierania informacji hue.  
   
- [out] `luminance`  
+ [out] *jasności*  
  Wskaźnik do zmiennej typu double odbierająca jasności informacji.  
   
- [out] `saturation`  
+ [out] *nasycenie*  
  Wskaźnik do zmiennej typu double odbierająca nasycenie informacji.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -253,19 +253,19 @@ BOOL SelectCellHexagon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `R`  
+ [in] *R*  
  Składnik kolor czerwony.  
   
- [in] `G`  
+ [in] *G*  
  Składnik kolor zielony.  
   
- [in] `B`  
+ [in] *B*  
  Składnik niebieski.  
   
- [in] `x`  
+ [in] *x*  
  Współrzędna x kursor wskazuje sześciokąt komórki.  
   
- [in] `y`  
+ [in] *y*  
  Współrzędna y kursor wskazuje sześciokąt komórki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -284,7 +284,7 @@ void SetColor(COLORREF Color);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `Color`  
+ [in] *Kolorów*  
  Wartości kolorów RGB.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -301,16 +301,16 @@ void SetHLS(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `hue`  
+ [in] *hue*  
  Wartość hue.  
   
- [in] `luminance`  
+ [in] *jasności*  
  Wartość jasności.  
   
- [in] `saturation`  
+ [in] *nasycenie*  
  Nasycenie.  
   
- [in] `bInvalidate`  
+ [in] *bInvalidate*  
  `TRUE` Aby wymusić okno, aby natychmiast zaktualizować na nowy kolor; w przeciwnym razie `FALSE`. Wartość domyślna to `TRUE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -323,7 +323,7 @@ void SetHue(double Hue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `Hue`  
+ [in] *Hue*  
  Wartość hue.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -336,7 +336,7 @@ void SetLuminance(double Luminance);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `Luminance`  
+ [in] *Jasności*  
  Wartość jasności.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -349,11 +349,11 @@ void SetLuminanceBarWidth(int w);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `w`  
+ [in] *w*  
  Szerokość paska jasności (w pikselach).  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda służy do zmiany rozmiaru paska jasności, który znajduje się w **niestandardowy** kartę formantu selektora kolorów. `w` Parametr określa nową szerokość paska jasności. Wartość szerokości jest ignorowana, jeśli jego rozmiar przekracza trzy czwarte szerokość obszaru klienta.  
+ Ta metoda służy do zmiany rozmiaru paska jasności, który znajduje się w **niestandardowy** kartę formantu selektora kolorów. *w* parametr określa nową szerokość paska jasności. Wartość szerokości jest ignorowana, jeśli jego rozmiar przekracza trzy czwarte szerokość obszaru klienta.  
   
 ##  <a name="setoriginalcolor"></a>  CMFCColorPickerCtrl::SetOriginalColor  
  Ustawia kolor wybranego początkowej.  
@@ -363,7 +363,7 @@ void SetOriginalColor(COLORREF ref);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `ref`  
+ [in] *ref*  
  Wartości kolorów RGB.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -377,7 +377,7 @@ void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pPalette`  
+ [in] *pPalette*  
  Wskaźnik do paletę kolorów.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -391,7 +391,7 @@ void SetSaturation(double Saturation);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `Saturation`  
+ [in] *Nasycenie*  
  Nasycenie.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -404,7 +404,7 @@ void SetType(COLORTYPE colorType);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `colorType`  
+ [in] *colorType*  
  Typ formantu selektora kolorów.  
   
  Typy są definiowane przez `CMFCColorPickerCtrl::COLORTYPE` wyliczenia. Możliwe typy `LUMINANCE`, `PICKER`, `HEX` i `HEX_GREYSCALE`. Jest to domyślny typ `PICKER`.  

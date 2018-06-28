@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d61d773e2c35bb67f34ae2b4a989a388d8b4015
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 358798e3945378d0fa43fa6e2fa91d686212efab
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371689"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040184"
 ---
 # <a name="colepropertiesdialog-class"></a>Klasa COlePropertiesDialog
 Hermetyzuje okno dialogowe właściwości obiektów OLE wspólne systemu Windows.  
@@ -112,7 +112,7 @@ COlePropertiesDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Wskaźnik do elementu dokument, którego właściwości są używane.  
   
  *nScaleMin*  
@@ -121,7 +121,7 @@ COlePropertiesDialog(
  *nScaleMax*  
  Maksymalny procent dla obrazu elementu dokumentu skalowania.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do nadrzędnego okna dialogowego lub właściciela.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -228,10 +228,10 @@ virtual BOOL OnApplyScale(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Wskaźnik do elementu dokument, którego właściwości są używane.  
   
- `nCurrentScale`  
+ *nCurrentScale*  
  Liczbowa wartość skalowania okna dialogowego.  
   
  *bRelativeToOrig*  
@@ -244,7 +244,7 @@ virtual BOOL OnApplyScale(
  Domyślna implementacja nie działa. Konieczne jest przesłonięcie tej funkcji, aby włączyć formanty skalowania.  
   
 > [!NOTE]
->  Przed wyświetleniem wspólne okno dialogowe właściwości obiektu OLE, struktura wywołuje tę funkcję z **NULL** dla `pItem` i 1 dla `nCurrentScale`. Jest to realizowane ustalenie skalowania kontrolki powinno być włączone.  
+>  Przed wyświetleniem wspólne okno dialogowe właściwości obiektu OLE, struktura wywołuje tę funkcję z **NULL** dla *pItem* i 1 dla *nCurrentScale*. Jest to realizowane ustalenie skalowania kontrolki powinno być włączone.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przykładowe MFC OK](../../visual-cpp-samples.md)   

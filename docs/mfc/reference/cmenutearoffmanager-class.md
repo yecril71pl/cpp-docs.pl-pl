@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dcbd5ea33b50e66d1c9e858669a3174042a19e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 105c933ee36c9bbeb634d85963d9254f3b68ebe4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367672"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041016"
 ---
 # <a name="cmenutearoffmanager-class"></a>Klasa CMenuTearOffManager
 Zarządza oderwania menu. Menu oderwania jest menu na pasku menu. Użytkownik może usunąć menu oderwania z menu paska menu oderwania float powoduje.  
@@ -99,8 +99,8 @@ void Build(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiTearOffBarID`  
- [in] `strText`  
+ [in] *uiTearOffBarID*  
+ [in] *strText*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -136,20 +136,20 @@ BOOL Initialize(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszRegEntry`  
+ [in] *lpszRegEntry*  
  Ciąg, który zawiera ścieżkę wpisu rejestru. Aplikacje przechowuje ustawienia oderwania paski w ten wpis rejestru.  
   
- [in] `uiTearOffMenuFirst`  
+ [in] *uiTearOffMenuFirst*  
  Pierwszy identyfikator menu dla menu oderwania.  
   
- [in] `uiTearOffMenuLast`  
+ [in] *uiTearOffMenuLast*  
  Identyfikator ostatniego menu dla menu oderwania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Zakres identyfikatorów menu z `uiTearOffMenuFirst` do `uiTearOffMenuLast` musi być ciągłe interwału. Interwał definiuje kilka kolejnych menu oderwania, które mogą być wyświetlane w tym samym czasie w aplikacji.  
+ Zakres identyfikatorów menu z *uiTearOffMenuFirst* do *uiTearOffMenuLast* musi być ciągłe interwału. Interwał definiuje kilka kolejnych menu oderwania, które mogą być wyświetlane w tym samym czasie w aplikacji.  
   
 ##  <a name="isdynamicid"></a>  CMenuTearOffManager::IsDynamicID  
 
@@ -159,7 +159,7 @@ BOOL IsDynamicID(UINT uiID) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiID`  
+ [in] *uiID*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -173,7 +173,7 @@ UINT Parse(CString& str);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `str`  
+ [in] *str*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -187,7 +187,7 @@ void Reset(HMENU hmenu);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `hmenu`  
+ [in] *hmenu*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -201,8 +201,8 @@ void SetInUse(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmdId`  
- [in] `bUse`  
+ [in] *uiCmdId*  
+ [in] *bUżyj*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -214,7 +214,7 @@ void SetupTearOffMenus(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `hMenu`  
+ [in] *hMenu*  
   
 ### <a name="remarks"></a>Uwagi  
   

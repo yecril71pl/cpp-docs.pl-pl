@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b6c5501159cfdb46107b4fef34637195d52f465
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 542c34fc02eca1f090072f49b9688d3edd4d78e6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368010"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040678"
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>Klasa CMFCRibbonCustomizePropertyPage
 Implementuje niestandardowej strony dla **Dostosuj** okno dialogowe w aplikacjach opartych na Wstążce.  
@@ -98,11 +98,11 @@ void AddCustomCategory(
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] `lpszName`|Określa nazwę kategorii niestandardowej.|  
-|[in] `lstIDS`|Zawiera polecenie wstążki identyfikatorów ma być wyświetlany w kategorii niestandardowej.|  
+|[in] *lpszName*|Określa nazwę kategorii niestandardowej.|  
+|[in] *lstIDS*|Zawiera polecenie wstążki identyfikatorów ma być wyświetlany w kategorii niestandardowej.|  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda dodaje kategorię o nazwie `lpszName` do **polecenia** pola kombi. Po wybraniu przez użytkownika kategorii, polecenia określone w `lstIDS` znajdują się na liście polecenia.  
+ Ta metoda dodaje kategorię o nazwie *lpszName* do **polecenia** pola kombi. Po wybraniu przez użytkownika kategorii, polecenia określone w *lstIDS* znajdują się na liście polecenia.  
   
 ##  <a name="cmfcribboncustomizepropertypage"></a>  CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
  Konstruuje `CMFCRibbonCustomizePropertyPage` obiektu.  
@@ -112,7 +112,7 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pRibbonBar`  
+ [in] *pRibbonBar*  
  Wskaźnik do sterowania wstążki, dla którego opcje, aby dostosować.  
   
 ##  <a name="onok"></a>  CMFCRibbonCustomizePropertyPage::OnOK  

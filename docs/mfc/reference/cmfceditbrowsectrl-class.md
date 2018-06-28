@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c7214e4da0bce1a01834df556289b61e0ed8574
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 495f6360601fc41493f68bd4fdd7ac769b9a634c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369326"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037977"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Klasa CMFCEditBrowseCtrl
 `CMFCEditBrowseCtrl` Klasa obsługuje przeglądania edycji, znajduje się pole edycji tekstu, która opcjonalnie zawiera przycisk Przeglądaj. Gdy użytkownik kliknie przycisk Przeglądaj, formantu wykonuje akcję niestandardową lub wyświetla standardowe okno dialogowe zawiera przeglądarka plików lub folder przeglądarki.  
@@ -108,7 +108,7 @@ class CMFCEditBrowseCtrl : public CEdit
   
 6.  Aby zapewnić niestandardowego obrazu dla przycisku przeglądania, należy wywołać [SetBrowseButtonImage](#setbrowsebuttonimage) metody lub zastąpienie [OnDrawBrowseButton](#ondrawbrowsebutton) metody.  
   
-7.  Aby usunąć przycisk przeglądania kontrolki edycji przeglądania, wywołaj [EnableBrowseButton](#enablebrowsebutton) metody z `bEnable` ustawiono parametr `FALSE`.  
+7.  Aby usunąć przycisk przeglądania kontrolki edycji przeglądania, wywołaj [EnableBrowseButton](#enablebrowsebutton) metody z *bWłączenie* ustawiono parametr `FALSE`.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -140,14 +140,14 @@ void EnableBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bEnable`  
+ *bWłączenie*  
  `TRUE` Aby wyświetlić przycisk przeglądania; `FALSE` nie, aby wyświetlić przycisk Przeglądaj. Wartość domyślna to `TRUE`.  
   
- `szLabel`  
+ *szLabel*  
  Etykiety, który jest wyświetlany na przycisku Przeglądaj. Wartość domyślna to " **...** ".  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `bEnable` parametr jest `TRUE`, wykonania niestandardowej akcji do wykonania po kliknięciu przycisku Przeglądaj. Do wykonania akcji niestandardowej, klasa wyprowadzona z `CMFCEditBrowseCtrl` klasy, a następnie zastąpić jej [OnBrowse](#onbrowse) metody.  
+ Jeśli *bWłączenie* parametr jest `TRUE`, wykonania niestandardowej akcji do wykonania po kliknięciu przycisku Przeglądaj. Do wykonania akcji niestandardowej, klasa wyprowadzona z `CMFCEditBrowseCtrl` klasy, a następnie zastąpić jej [OnBrowse](#onbrowse) metody.  
   
  Jeśli `bEnable` parametr jest `TRUE`, jest w trybie przeglądania kontrolki `BrowseMode_Default`; w przeciwnym razie tryb przeglądania jest `BrowseMode_None`. Aby uzyskać więcej informacji na temat trybów przeglądania, zobacz [GetMode](#getmode) metody.  
   
@@ -162,13 +162,13 @@ void EnableFileBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszDefExt`  
+ *lpszDefExt*  
  Określa domyślne rozszerzenie nazwy pliku używanego w oknie dialogowym Wybieranie pliku. Wartość domyślna to `NULL`.  
   
- `lpszFilter`  
+ *lpszFilter*  
  Określa domyślny ciąg filtru jest używana w oknie dialogowym Wybieranie pliku. Wartość domyślna to `NULL`.  
   
- `dwFlags`  
+ *wartość elementu dwFlags*  
  Flagi — okno dialogowe. Wartość domyślna to bitowe połączenie (lub) OFN_HIDEREADONLY i OFN_OVERWRITEPROMPT.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -250,16 +250,16 @@ virtual void OnDrawBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- `Rect`  
+ *Rect*  
  Prostokąt ograniczający przycisk Przeglądaj.  
   
- `bIsButtonPressed`  
+ *bIsButtonPressed*  
  `TRUE` Jeśli przycisk jest naciśnięty; w przeciwnym razie `FALSE`.  
   
- `bIsButtonHot`  
+ *bIsButtonHot*  
  `TRUE` Jeśli przycisk jest wyróżniony; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -282,16 +282,16 @@ void SetBrowseButtonImage(UINT uiBmpResId);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hIcon`  
+ *hIcon*  
  Dojście ikony.  
   
- `hBitmap`  
+ *hBitmap*  
  Dojście mapy bitowej.  
   
- `uiBmpResId`  
+ *uiBmpResId*  
  Identyfikator zasobu mapy bitowej.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  `TRUE` Aby usunąć określony ikony lub mapy bitowej, gdy ta metoda jest kończona; w przeciwnym razie `FALSE`. Wartość domyślna to `TRUE`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -305,7 +305,7 @@ virtual BOOL OnIllegalFileName(CString& strFileName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `strFileName`  
+ *strFileName*  
  Określa nazwę pliku niedozwolona.  
   
 ### <a name="return-value"></a>Wartość zwracana  

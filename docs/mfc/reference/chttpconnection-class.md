@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 808c88e3a98df12d35afa9ce207f57456520b169
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09f92440a926f547f051dd0bee73468a1958813e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367649"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041029"
 ---
 # <a name="chttpconnection-class"></a>Klasa CHttpConnection
 Zarządza nawiązanie połączenia z serwerem HTTP.  
@@ -100,36 +100,36 @@ CHttpConnection(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pSession`  
+ *pSession*  
  Wskaźnik do [CInternetSession](../../mfc/reference/cinternetsession-class.md) obiektu.  
   
- `hConnected`  
+ *hConnected*  
  Dojście do połączenia internetowego.  
   
- `pstrServer`  
+ *pstrServer*  
  Wskaźnik do ciąg zawierający nazwę serwera.  
   
- `dwContext`  
- Identyfikator kontekstu `CInternetConnection` obiektu. Zobacz **uwagi** uzyskać więcej informacji o `dwContext`.  
+ *dwContext*  
+ Identyfikator kontekstu `CInternetConnection` obiektu. Zobacz **uwagi** uzyskać więcej informacji o *dwContext*.  
   
- `nPort`  
+ *nPort*  
  Liczba, która identyfikuje portu internetowego dla tego połączenia.  
   
- `pstrUserName`  
+ *pstrUserName*  
  Wskaźnik do zerem ciąg, który określa nazwę użytkownika, aby się zalogować. Jeśli **NULL**, wartością domyślną jest anonimowy.  
   
- `pstrPassword`  
- Wskaźnik do zerem ciąg, który określa hasło używane do logowania. Jeśli oba `pstrPassword` i `pstrUserName` są **NULL**, domyślne hasła anonimowego jest nazwa e-mail użytkownika. Jeśli `pstrPassword` jest **NULL** (lub ciąg pusty), ale `pstrUserName` nie jest **NULL**, puste hasło jest używane. W poniższej tabeli opisano zachowanie cztery ustawienia możliwe `pstrUserName` i `pstrPassword`:  
+ *pstrPassword*  
+ Wskaźnik do zerem ciąg, który określa hasło używane do logowania. Jeśli oba *pstrPassword* i *pstrUserName* są **NULL**, domyślne hasła anonimowego jest nazwa e-mail użytkownika. Jeśli *pstrPassword* jest **NULL** (lub ciąg pusty), ale *pstrUserName* nie jest **NULL**, puste hasło jest używane. W poniższej tabeli opisano zachowanie cztery ustawienia możliwe *pstrUserName* i *pstrPassword*:  
   
-|`pstrUserName`|`pstrPassword`|Nazwa użytkownika jest wysyłane do serwera FTP|Hasło wysłane do serwera FTP|  
+|*pstrUserName*|*pstrPassword*|Nazwa użytkownika jest wysyłane do serwera FTP|Hasło wysłane do serwera FTP|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
 |**Wartość NULL** lub ""|**Wartość NULL** lub ""|"anonymous"|Nazwa e-mail użytkownika|  
-|Nie- **NULL** ciągu|**Wartość NULL** lub ""|`pstrUserName`|" "|  
+|Nie- **NULL** ciągu|**Wartość NULL** lub ""|*pstrUserName*|" "|  
 |**Wartość NULL** z systemem innym niż **NULL** ciągu|**ERROR**|**ERROR**||  
-|Nie- **NULL** ciągu|Nie- **NULL** ciągu|`pstrUserName`|`pstrPassword`|  
+|Nie- **NULL** ciągu|Nie- **NULL** ciągu|*pstrUserName*|*pstrPassword*|  
   
- `dwFlags`  
- Dowolną kombinację **INTERNET_ FLAG_\***  flagi. Zobacz tabelę w **uwagi** sekcji [CHttpConnection::OpenRequest](#openrequest) opis `dwFlags` wartości.  
+ *wartość elementu dwFlags*  
+ Dowolną kombinację **INTERNET_ FLAG_\***  flagi. Zobacz tabelę w **uwagi** sekcji [CHttpConnection::OpenRequest](#openrequest) opis *wartość elementu dwFlags* wartości.  
   
 ### <a name="remarks"></a>Uwagi  
  Nigdy nie twórz `CHttpConnection` bezpośrednio. Zamiast tworzenia obiektu przez wywołanie metody [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection).  
@@ -159,31 +159,31 @@ CHttpFile* OpenRequest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pstrVerb`  
+ *pstrVerb*  
  Wskaźnik do ciąg zawierający zlecenie do użycia w żądaniu. Jeśli `NULL`, "GET" jest używany.  
   
- `pstrObjectName`  
+ *pstrObjectName*  
  Wskaźnik do ciąg zawierający określone zlecenie obiektu docelowego. Zwykle jest to nazwy pliku wykonywalnego modułu i specyfikator wyszukiwania.  
   
- `pstrReferer`  
- Wskaźnik do ciąg określający adres (URL) dokumentu, z którego adres URL w żądaniu ( `pstrObjectName`) został uzyskany. Jeśli `NULL`, określono brak nagłówka HTTP.  
+ *pstrReferer*  
+ Wskaźnik do ciąg określający adres (URL) dokumentu, z którego adres URL w żądaniu ( *pstrObjectName*) został uzyskany. Jeśli `NULL`, określono brak nagłówka HTTP.  
   
- `dwContext`  
- Identyfikator kontekstu `OpenRequest` operacji. Zobacz sekcję uwag, aby uzyskać więcej informacji `dwContext`.  
+ *dwContext*  
+ Identyfikator kontekstu `OpenRequest` operacji. Zobacz sekcję uwag, aby uzyskać więcej informacji *dwContext*.  
   
- `ppstrAcceptTypes`  
- Wskaźnik tablicy zerem `LPCTSTR` wskaźniki do ciągów wskazująca typy zawartości zaakceptowane przez klienta. Jeśli `ppstrAcceptTypes` jest `NULL`, serwery zinterpretować, czy klient akceptuje tylko dokumenty typu "tekstu / *" (oznacza to, że tylko dokumenty tekstowe i nie obrazy lub inne pliki binarne). Typ zawartości jest odpowiednikiem typ_zawartości zmiennej CGI, który określa typ danych dla zapytań, które zostały podłączone informacji, takich jak HTTP POST i PUT.  
+ *ppstrAcceptTypes*  
+ Wskaźnik tablicy zerem `LPCTSTR` wskaźniki do ciągów wskazująca typy zawartości zaakceptowane przez klienta. Jeśli *ppstrAcceptTypes* jest `NULL`, serwery zinterpretować, czy klient akceptuje tylko dokumenty typu "tekstu / *" (oznacza to, że tylko dokumenty tekstowe i nie obrazy lub inne pliki binarne). Typ zawartości jest odpowiednikiem typ_zawartości zmiennej CGI, który określa typ danych dla zapytań, które zostały podłączone informacji, takich jak HTTP POST i PUT.  
   
- `pstrVersion`  
+ *pstrVersion*  
  Wskaźnik do ciągu Definiowanie wersji protokołu HTTP. Jeśli `NULL`, służy "HTTP/1.0".  
   
- `dwFlags`  
- Dowolna kombinacja flag INTERNET_ FLAG_ *. Opis możliwości w sekcji uwag `dwFlags` wartości.  
+ *wartość elementu dwFlags*  
+ Dowolna kombinacja flag INTERNET_ FLAG_ *. Opis możliwości w sekcji uwag *wartość elementu dwFlags* wartości.  
   
- `nVerb`  
+ *nVerb*  
  Liczba skojarzone z typem żądania HTTP. Może to być jeden z następujących elementów:  
   
-|Typ żądania HTTP|`nVerb` Wartość|  
+|Typ żądania HTTP|*nVerb* wartości|  
 |-----------------------|-------------------|  
 |`HTTP_VERB_POST`|0|  
 |`HTTP_VERB_GET`|1|  
@@ -197,7 +197,7 @@ CHttpFile* OpenRequest(
  Wskaźnik do [CHttpFile](../../mfc/reference/chttpfile-class.md) żądanego obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- `dwFlags` Może to być jedna z następujących czynności:  
+ *wartość elementu dwFlags* może być jedną z następujących czynności:  
   
 |Flaga Internet|Opis|  
 |-------------------|-----------------|  

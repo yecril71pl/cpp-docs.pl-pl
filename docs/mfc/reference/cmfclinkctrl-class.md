@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b91bc8fec3eebba5f3037633b5840d9b1abca731
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c8b0a512d0969f88d270ab7373be4807b1c55914
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371731"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038357"
 ---
 # <a name="cmfclinkctrl-class"></a>Klasa CMFCLinkCtrl
 `CMFCLinkCtrl` Klasa przedstawia przycisk jako hiperłącze i wywołuje docelowy łącza, po kliknięciu przycisku.  
@@ -91,10 +91,10 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  Prostokąt zakresem kontrolki łącza.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -108,7 +108,7 @@ void SetURL(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszURL`  
+ [in] *lpszURL*  
  Tekst przycisku do wyświetlenia.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -121,7 +121,7 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszPrefix`  
+ [in] *lpszPrefix*  
  Prefiks adresu URL protokołu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -137,10 +137,10 @@ virtual CSize SizeToContent(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bVCenter`  
+ [in] *bVCenter*  
  `TRUE` Tekst przycisku center i mapy bitowej w pionie między górą a dołem kontroli łączy. w przeciwnym razie `FALSE`. Wartość domyślna to `FALSE`.  
   
- [in] `bHCenter`  
+ [in] *bHCenter*  
  `TRUE` Aby wyśrodkować tekst przycisku i mapy bitowej poziomo od lewej i prawej stronie formantu łącze; w przeciwnym razie `FALSE`. Wartość domyślna to `FALSE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
