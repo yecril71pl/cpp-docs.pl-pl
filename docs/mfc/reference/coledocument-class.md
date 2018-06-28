@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6317d7c14f76355df908c9809df633533df3fb61
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f492e7fc3e29c74caba7303179b72c5dacad72e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377125"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040691"
 ---
 # <a name="coledocument-class"></a>Klasa COleDocument
 Klasa podstawowa dla dokumentów OLE, które obsługują edycji.  
@@ -119,15 +119,15 @@ class COleDocument : public CDocument
 |[COleDocument::OnUpdatePasteMenu](#onupdatepastemenu)|Wywoływane przez platformę, by zaktualizować polecenia interfejsu użytkownika dla opcji menu Paste.|  
   
 ## <a name="remarks"></a>Uwagi  
- `COleDocument` jest pochodną **CDocument**, dzięki czemu aplikacje OLE do użycia architektury dokument/widok udostępniane przez Microsoft Foundation Class Library.  
+ `COleDocument` jest pochodną `CDocument`, dzięki czemu aplikacje OLE do użycia architektury dokument/widok udostępniane przez Microsoft Foundation Class Library.  
   
  `COleDocument` traktuje dokumentu jako kolekcja [CDocItem](../../mfc/reference/cdocitem-class.md) obiekty do obsługi elementów OLE. Zarówno kontenera i aplikacji serwera wymagają takie architekturę, ponieważ swoje dokumenty muszą mieć możliwość zawiera elementy OLE. [COleServerItem](../../mfc/reference/coleserveritem-class.md) i [COleClientItem](../../mfc/reference/coleclientitem-class.md) klasy zarówno pochodną `CDocItem`, zarządzanie interakcje między aplikacjami i elementy OLE.  
   
- Podczas pisania aplikacji kontenera proste, pochodzi z klasy dokumentu `COleDocument`. Podczas pisania aplikacji kontenera, który obsługuje łączenie elementy osadzone zawarty w swoje dokumenty, pochodzi z klasy dokumentu [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md). Jeśli piszesz serwera aplikacji lub kombinacji kontener/serwer, pochodzi z klasy dokumentu [COleServerDoc](../../mfc/reference/coleserverdoc-class.md). `COleLinkingDoc` i `COleServerDoc` pochodne `COleDocument`, więc te klasy dziedziczy wszystkie usługi dostępne w `COleDocument` i **CDocument**.  
+ Podczas pisania aplikacji kontenera proste, pochodzi z klasy dokumentu `COleDocument`. Podczas pisania aplikacji kontenera, który obsługuje łączenie elementy osadzone zawarty w swoje dokumenty, pochodzi z klasy dokumentu [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md). Jeśli piszesz serwera aplikacji lub kombinacji kontener/serwer, pochodzi z klasy dokumentu [COleServerDoc](../../mfc/reference/coleserverdoc-class.md). `COleLinkingDoc` i `COleServerDoc` pochodne `COleDocument`, więc te klasy dziedziczy wszystkie usługi dostępne w `COleDocument` i `CDocument`.  
   
  Aby użyć `COleDocument`, pochodną klasy oraz dodawać funkcje do zarządzania aplikacji innych niż OLE jak i elementy osadzone i połączone. W przypadku definiowania `CDocItem`-pochodnej klasy do przechowywania danych natywnych aplikacji, można użyć w implementacji domyślnej zdefiniowane przez `COleDocument` do przechowywania OLE i danych innych niż OLE. Można również projektować własnych struktur danych do przechowywania danych innych niż OLE niezależnie od elementy OLE. Aby uzyskać więcej informacji, zobacz artykuł [kontenery: pliki złożone](../../mfc/containers-compound-files.md)...  
   
- **Cdocument —** obsługuje wysyłanie dokumentu pocztą, jeśli występuje obsługi poczty (MAPI). `COleDocument` zaktualizował [OnFileSendMail](#onfilesendmail) do obsługi dokumentów złożonych poprawnie. Aby uzyskać więcej informacji, zobacz artykuły [MAPI](../../mfc/mapi.md) i [Obsługa MAPI w MFC](../../mfc/mapi-support-in-mfc.md)...  
+ `CDocument` obsługuje wysyłanie dokumentu pocztą, jeśli jest obecny obsługi poczty (MAPI). `COleDocument` zaktualizował [OnFileSendMail](#onfilesendmail) do obsługi dokumentów złożonych poprawnie. Aby uzyskać więcej informacji, zobacz artykuły [MAPI](../../mfc/mapi.md) i [Obsługa MAPI w MFC](../../mfc/mapi-support-in-mfc.md)...  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -149,7 +149,7 @@ virtual void AddItem(CDocItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Wskaźnik do dokumentu element dodawany.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -164,10 +164,10 @@ BOOL ApplyPrintDevice(const PRINTDLG* ppd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ptd`  
+ *ptd*  
  Wskaźnik do **DVTARGETDEVICE** struktury danych, który zawiera informacje dotyczące nowego urządzenia docelowego drukowania. Może być **NULL**.  
   
- `ppd`  
+ *PPD*  
  Wskaźnik do **PRINTDLG** struktury danych, który zawiera informacje dotyczące nowego urządzenia docelowego drukowania. Może być **NULL**.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -197,7 +197,7 @@ void EnableCompoundFile(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bEnable`  
+ *bWłączenie*  
  Określa, czy obsługa złożone plików jest włączona.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -208,14 +208,14 @@ void EnableCompoundFile(BOOL bEnable = TRUE);
  Po Obsługa pliku złożonego jest włączone lub wyłączone dla dokumentu, ustawienia nie można zmienić okres istnienia dokumentu.  
   
 ##  <a name="getinplaceactiveitem"></a>  COleDocument::GetInPlaceActiveItem  
- Wywołanie tej funkcji, aby uzyskać OLE elementu, który jest aktywowany w miejscu okno ramowe zawierające widok identyfikowane przez `pWnd`.  
+ Wywołanie tej funkcji, aby uzyskać OLE elementu, który jest aktywowany w miejscu okno ramowe zawierające widok identyfikowane przez *pWnd*.  
   
 ```  
 virtual COleClientItem* GetInPlaceActiveItem(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Wskaźnik do okna, które wyświetla dokument, do kontenera.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -229,14 +229,14 @@ COleClientItem* GetNextClientItem(POSITION& pos) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pos`  
+ *POS*  
  Odwołanie do **pozycji** wartość zestawu przez poprzednie wywołanie `GetNextClientItem`; wartość początkowa jest zwracany przez `GetStartPosition` funkcji członkowskiej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do następnego elementu klienta w dokumencie lub **NULL** Jeśli nie ma żadnych więcej towarów klienta.  
   
 ### <a name="remarks"></a>Uwagi  
- Po każdym wywołaniu wartość `pos` ustawiono dla następnego elementu w dokumencie, który może lub nie może być elementem klienta.  
+ Po każdym wywołaniu wartość *pos* ustawiono dla następnego elementu w dokumencie, który może lub nie może być elementem klienta.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCOleContainer#1](../../mfc/codesnippet/cpp/coledocument-class_1.cpp)]  
@@ -249,14 +249,14 @@ virtual CDocItem* GetNextItem(POSITION& pos) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pos`  
+ *POS*  
  Odwołanie do **pozycji** wartość zestawu przez poprzednie wywołanie `GetNextItem`; wartość początkowa jest zwracany przez `GetStartPosition` funkcji członkowskiej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do elementu dokumentu w określonej pozycji.  
   
 ### <a name="remarks"></a>Uwagi  
- Po każdym wywołaniu wartość `pos` ustawiono **pozycji** wartość następnego elementu w dokumencie. Jeśli element pobrane jest ostatnim elementem w dokumencie, nowa wartość `pos` jest **NULL**.  
+ Po każdym wywołaniu wartość *pos* ustawiono **pozycji** wartość następnego elementu w dokumencie. Jeśli element pobrane jest ostatnim elementem w dokumencie, nowa wartość *pos* jest **NULL**.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCOleContainer#2](../../mfc/codesnippet/cpp/coledocument-class_2.cpp)]  
@@ -269,14 +269,14 @@ COleServerItem* GetNextServerItem(POSITION& pos) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pos`  
+ *POS*  
  Odwołanie do **pozycji** wartość zestawu przez poprzednie wywołanie `GetNextServerItem`; wartość początkowa jest zwracany przez `GetStartPosition` funkcji członkowskiej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do następnego elementu serwera w dokumencie lub **NULL** Jeśli nie ma żadnych więcej towarów serwera.  
   
 ### <a name="remarks"></a>Uwagi  
- Po każdym wywołaniu wartość `pos` ustawiono dla następnego elementu w dokumencie, który może lub nie może być elementem serwera.  
+ Po każdym wywołaniu wartość *pos* ustawiono dla następnego elementu w dokumencie, który może lub nie może być elementem serwera.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCOleServer#2](../../mfc/codesnippet/cpp/coledocument-class_3.cpp)]  
@@ -289,7 +289,7 @@ virtual COleClientItem* GetPrimarySelectedItem(CView* pView);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pView`  
+ *pView*  
  Wskaźnik do obiektu widoku aktywnego wyświetlania dokumentu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -366,7 +366,7 @@ afx_msg void OnFileSendMail();
 ### <a name="remarks"></a>Uwagi  
  `OnFileSendMail` wywołania `OnSaveDocument` do serializacji (bez tytułu i zmodyfikowane dokumenty do pliku tymczasowego, który jest następnie wysyłana za pośrednictwem poczty elektronicznej Zapisz). Jeśli dokument nie został zmodyfikowany, plik tymczasowy nie jest wymagane; oryginalny są wysyłane. `OnFileSendMail` ładuje MAPI32. Biblioteki DLL, jeśli nie został już załadowany.  
   
- W przeciwieństwie do wykonania `OnFileSendMail` dla **CDocument**, ta funkcja obsługuje pliki złożone poprawnie.  
+ W przeciwieństwie do wykonania `OnFileSendMail` dla `CDocument`, ta funkcja obsługuje pliki złożone poprawnie.  
   
  Aby uzyskać więcej informacji, zobacz [tematy MAPI](../../mfc/mapi.md) i [Obsługa MAPI w MFC](../../mfc/mapi-support-in-mfc.md) artykułów.  
   
@@ -378,7 +378,7 @@ virtual void OnShowViews(BOOL bVisible);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bVisible`  
+ *bVisible*  
  Wskazuje, czy dokument ma stają się widoczne lub niewidoczne.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -392,8 +392,8 @@ afx_msg void OnUpdateEditChangeIcon(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCmdUI`  
- Wskaźnik do `CCmdUI` strukturę, która reprezentuje menu generowane polecenia update. Wywołuje program obsługi aktualizacji **włączyć** funkcji członkowskiej klasy `CCmdUI` struktury za pośrednictwem `pCmdUI` można zaktualizować interfejsu użytkownika.  
+ *pCmdUI*  
+ Wskaźnik do `CCmdUI` strukturę, która reprezentuje menu generowane polecenia update. Wywołuje program obsługi aktualizacji `Enable` funkcji członkowskiej klasy `CCmdUI` struktury za pośrednictwem *pCmdUI* można zaktualizować interfejsu użytkownika.  
   
 ### <a name="remarks"></a>Uwagi  
  `OnUpdateEditChangeIcon` Aktualizuje polecenia interfejsu użytkownika, w zależności od tego, czy jest prawidłową ikoną istnieje w dokumencie. Należy przesłonić tę funkcję, aby zmienić zachowanie.  
@@ -406,8 +406,8 @@ afx_msg void OnUpdateEditLinksMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCmdUI`  
- Wskaźnik do `CCmdUI` strukturę, która reprezentuje menu generowane polecenia update. Wywołuje program obsługi aktualizacji **włączyć** funkcji członkowskiej klasy `CCmdUI` struktury za pośrednictwem `pCmdUI` można zaktualizować interfejsu użytkownika.  
+ *pCmdUI*  
+ Wskaźnik do `CCmdUI` strukturę, która reprezentuje menu generowane polecenia update. Wywołuje program obsługi aktualizacji `Enable` funkcji członkowskiej klasy `CCmdUI` struktury za pośrednictwem *pCmdUI* można zaktualizować interfejsu użytkownika.  
   
 ### <a name="remarks"></a>Uwagi  
  Począwszy od pierwszego elementu OLE w dokumencie `OnUpdateEditLinksMenu` uzyskuje dostęp do każdego elementu, sprawdza, czy element jest łączem i, jeśli jest to łącze umożliwia polecenie łącza. Należy przesłonić tę funkcję, aby zmienić zachowanie.  
@@ -420,8 +420,8 @@ afx_msg void OnUpdateObjectVerbMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCmdUI`  
- Wskaźnik do `CCmdUI` strukturę, która reprezentuje menu generowane polecenia update. Wywołuje program obsługi aktualizacji **włączyć** funkcji członkowskiej klasy `CCmdUI` struktury za pośrednictwem `pCmdUI` można zaktualizować interfejsu użytkownika.  
+ *pCmdUI*  
+ Wskaźnik do `CCmdUI` strukturę, która reprezentuje menu generowane polecenia update. Wywołuje program obsługi aktualizacji `Enable` funkcji członkowskiej klasy `CCmdUI` struktury za pośrednictwem *pCmdUI* można zaktualizować interfejsu użytkownika.  
   
 ### <a name="remarks"></a>Uwagi  
  `OnUpdateObjectVerbMenu` aktualizacje *ObjectName* polecenia interfejsu użytkownika, w zależności od tego, czy istnieje prawidłowy obiekt w dokumencie. Jeśli istnieje obiekt, *ObjectName* polecenie menu Edycja jest włączone. Po wybraniu tego polecenia menu podmenu zlecenie jest wyświetlany. Podmenu zlecenie zawiera wszystkie polecenia zlecenie dostępne dla obiektu, na przykład edycji, właściwości i tak dalej. Należy przesłonić tę funkcję, aby zmienić zachowanie.  
@@ -434,8 +434,8 @@ afx_msg void OnUpdatePasteLinkMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCmdUI`  
- Wskaźnik do `CCmdUI` strukturę, która reprezentuje menu generowane polecenia update. Wywołuje program obsługi aktualizacji **włączyć** funkcji członkowskiej klasy `CCmdUI` struktury za pośrednictwem `pCmdUI` można zaktualizować interfejsu użytkownika.  
+ *pCmdUI*  
+ Wskaźnik do `CCmdUI` strukturę, która reprezentuje menu generowane polecenia update. Wywołuje program obsługi aktualizacji `Enable` funkcji członkowskiej klasy `CCmdUI` struktury za pośrednictwem *pCmdUI* można zaktualizować interfejsu użytkownika.  
   
 ### <a name="remarks"></a>Uwagi  
  Wklej specjalne polecenie jest włączone lub wyłączone w zależności od tego, czy element można wkleić do dokumentu lub nie.  
@@ -448,8 +448,8 @@ afx_msg void OnUpdatePasteMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pCmdUI`  
- Wskaźnik do `CCmdUI` strukturę, która reprezentuje menu generowane polecenia update. Wywołuje program obsługi aktualizacji **włączyć** funkcji członkowskiej klasy `CCmdUI` struktury za pośrednictwem `pCmdUI` można zaktualizować interfejsu użytkownika.  
+ *pCmdUI*  
+ Wskaźnik do `CCmdUI` strukturę, która reprezentuje menu generowane polecenia update. Wywołuje program obsługi aktualizacji `Enable` funkcji członkowskiej klasy `CCmdUI` struktury za pośrednictwem *pCmdUI* można zaktualizować interfejsu użytkownika.  
   
 ### <a name="remarks"></a>Uwagi  
  Polecenia menu Paste i przycisk są włączone lub wyłączone w zależności od tego, czy element można wkleić do dokumentu lub nie.  
@@ -462,7 +462,7 @@ virtual void RemoveItem(CDocItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pItem`  
+ *pItem*  
  Wskaźnik do elementu dokumentu do usunięcia.  
   
 ### <a name="remarks"></a>Uwagi  

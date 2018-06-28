@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d920ca54c9e97273e4bda563921a144339eafd0f
-ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
+ms.openlocfilehash: 6e1020c8b0f2b97053951cde6eeb0724dcf60d02
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36271350"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039079"
 ---
 # <a name="chttpfile-class"></a>Klasa CHttpFile
 Udostępnia funkcje do żądania i odczytywać pliki na serwerze HTTP.  
@@ -109,10 +109,10 @@ BOOL AddRequestHeaders(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pstrHeaders`  
+ *pstrHeaders*  
  Wskaźnik do ciąg zawierający nagłówek lub nagłówków, aby dołączyć do żądania. Każdy nagłówek musi być zakończona pary CR/LF.  
   
- `dwFlags`  
+ *wartość elementu dwFlags*  
  Zmienia semantykę nowe nagłówki. Może to być jeden z następujących elementów:  
   
 - `HTTP_ADDREQ_FLAG_COALESCE` Scala nagłówków o takiej samej nazwie, za pomocą flagi, aby dodać pierwszy nagłówek znaleziono do kolejnych nagłówka. Na przykład "Zaakceptuj: tekst /\*" następuje "Zaakceptuj: audio /\*" powoduje utworzenie pojedynczego nagłówka "Zaakceptuj: tekst /\*audio /\*". Jest wywoływania aplikacji w celu zapewnienia spójnego schematu względem danych otrzymywanych przez żądania wysyłane z nagłówkami scalone lub osobnych.  
@@ -123,10 +123,10 @@ BOOL AddRequestHeaders(
   
 - `HTTP_ADDREQ_FLAG_ADD` Używane z ZAMIEŃ. Dodaje nagłówek, jeśli nie istnieje.  
   
- `dwHeadersLen`  
- Długość w znakach, z `pstrHeaders`. Jeśli jest to L-1, następnie `pstrHeaders` muszą być zakończony zerem i długość jest kolumną obliczaną.  
+ *dwHeadersLen*  
+ Długość w znakach, z *pstrHeaders*. Jeśli jest to L-1, następnie *pstrHeaders* muszą być zakończony zerem i długość jest kolumną obliczaną.  
   
- `str`  
+ *str*  
  Odwołanie do [cstring —](../../atl-mfc-shared/reference/cstringt-class.md) obiekt, który zawiera nagłówek żądania lub nagłówków do dodania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -136,7 +136,7 @@ BOOL AddRequestHeaders(
  `AddRequestHeaders` Dołącza nagłówki dodatkowych, w dowolnym formacie Obsługa żądania HTTP. Jest przeznaczony do użytku przez zaawansowane klientów, którzy potrzebują szczegółową kontrolę nad dokładne żądanie wysłane do serwera HTTP.  
   
 > [!NOTE]
->  Aplikacja może przekazać wiele nagłówków w `pstrHeaders` lub `str` dla `AddRequestHeaders` wywołanie przy użyciu `HTTP_ADDREQ_FLAG_ADD` lub `HTTP_ADDREQ_FLAG_ADD_IF_NEW`. Jeśli aplikacja próbuje usunąć lub zamienić nagłówka przy użyciu **HTTP_ADDREQ_FLAG_REMOVE** lub `HTTP_ADDREQ_FLAG_REPLACE`, można podać tylko jeden nagłówek w `lpszHeaders`.  
+>  Aplikacja może przekazać wiele nagłówków w *pstrHeaders* lub *str* dla `AddRequestHeaders` wywołanie przy użyciu `HTTP_ADDREQ_FLAG_ADD` lub `HTTP_ADDREQ_FLAG_ADD_IF_NEW`. Jeśli aplikacja próbuje usunąć lub zamienić nagłówka przy użyciu `HTTP_ADDREQ_FLAG_REMOVE` lub `HTTP_ADDREQ_FLAG_REPLACE`, można podać tylko jeden nagłówek w *lpszHeaders*.  
   
 ##  <a name="chttpfile"></a>  CHttpFile::CHttpFile  
  Ta funkcja elementu członkowskiego jest wywoływana w celu utworzenia `CHttpFile` obiektu.  
@@ -159,25 +159,25 @@ CHttpFile(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hFile`  
+ *hFile*  
  Dojście do pliku internetowych.  
   
- `hSession`  
+ *hSession*  
  Dojście do sesji Internetu.  
   
  *pstrObject*  
  Wskaźnik do ciągu zawierającego `CHttpFile` obiektu.  
   
- `pstrServer`  
+ *pstrServer*  
  Wskaźnik do ciąg zawierający nazwę serwera.  
   
- `pstrVerb`  
- Wskaźnik do ciąg zawierający metody, które będą używane podczas wysyłania żądania. Może być **POST**, **HEAD**, lub `GET`.  
+ *pstrVerb*  
+ Wskaźnik do ciąg zawierający metody, które będą używane podczas wysyłania żądania. Może być **POST**, **HEAD**, lub **UZYSKAĆ**.  
   
- dwContext  
+ *dwContext*  
  Identyfikator kontekstu `CHttpFile` obiektu. Zobacz **uwagi** uzyskać więcej informacji dotyczących tego parametru.  
   
- `pConnection`  
+ *pConnection*  
  Wskaźnik do [CHttpConnection](../../mfc/reference/chttpconnection-class.md) obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -196,20 +196,20 @@ BOOL EndRequest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwFlags`  
+ *wartość elementu dwFlags*  
  Flagi opisujące operację. Listę odpowiednich flagi, zawiera [HttpEndRequest](http://msdn.microsoft.com/library/windows/desktop/aa384230) w zestawie Windows SDK.  
   
- `lpBuffIn`  
+ *lpBuffIn*  
  Wskaźnik do zainicjowane [INTERNET_BUFFERS](http://msdn.microsoft.com/library/windows/desktop/aa385132) opisujący buforu wejściowego używany dla tej operacji.  
   
- `dwContext`  
+ *dwContext*  
  Identyfikator kontekstu `CHttpFile` operacji. Aby uzyskać więcej informacji o tym parametrze, zobacz uwagi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0. Jeśli połączenie nie powiedzie się, należy określić przyczynę niepowodzenia, sprawdzając zgłoszenia [CInternetException](../../mfc/reference/cinternetexception-class.md) obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Wartość domyślna dla `dwContext` są wysyłane przez MFC do `CHttpFile` obiekt z [CInternetSession](../../mfc/reference/cinternetsession-class.md) utworzony obiekt `CHttpFile` obiektu. Podczas wywoływania [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) lub [CHttpConnection](../../mfc/reference/chttpconnection-class.md) do skonstruowania `CHttpFile` obiektu, można zastąpić domyślną ustawioną wartość wybrane identyfikator kontekstu. Identyfikator kontekstu jest zwracana do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zapewnienie stanu dla obiektu, z którym zostanie zidentyfikowana. Zobacz artykuł [pierwsze kroki Internet: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.  
+ Wartość domyślna dla *dwContext* są wysyłane przez MFC do `CHttpFile` obiekt z [CInternetSession](../../mfc/reference/cinternetsession-class.md) utworzony obiekt `CHttpFile` obiektu. Podczas wywoływania [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) lub [CHttpConnection](../../mfc/reference/chttpconnection-class.md) do skonstruowania `CHttpFile` obiektu, można zastąpić domyślną ustawioną wartość wybrane identyfikator kontekstu. Identyfikator kontekstu jest zwracana do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zapewnienie stanu dla obiektu, z którym zostanie zidentyfikowana. Zobacz artykuł [pierwsze kroki Internet: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.  
   
 ##  <a name="getfileurl"></a>  CHttpFile::GetFileURL  
  Wywołanie tej funkcji członkowskich można pobrać nazwy pliku HTTP jako adres URL.  
@@ -272,10 +272,10 @@ BOOL QueryInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwInfoLevel`  
+ *dwInfoLevel*  
  Kombinacja atrybutu z zapytania i następujące flagi, które określają typ żądanych informacji:  
   
-- **HTTP_QUERY_CUSTOM** znajduje nazwę nagłówka i zwraca tę wartość w `lpvBuffer` w danych wyjściowych. **HTTP_QUERY_CUSTOM** zgłasza wyjątek potwierdzenia, jeśli nie zostanie odnaleziony nagłówka.  
+- **HTTP_QUERY_CUSTOM** znajduje nazwę nagłówka i zwraca tę wartość w *lpvBuffer* w danych wyjściowych. **HTTP_QUERY_CUSTOM** zgłasza wyjątek potwierdzenia, jeśli nie zostanie odnaleziony nagłówka.  
   
 - **HTTP_QUERY_FLAG_REQUEST_HEADERS** zwykle aplikacja odwołuje się nagłówki odpowiedzi, ale aplikacja także zbadać nagłówki żądania przy użyciu tej flagi.  
   
@@ -285,20 +285,20 @@ BOOL QueryInfo(
   
  Zobacz **uwagi** sekcja zawiera listę możliwych wartości.  
   
- `lpvBuffer`  
+ *lpvBuffer*  
  Wskaźnik do buforu, który odbiera dane.  
   
- `lpdwBufferLength`  
+ *lpdwBufferLength*  
  Na wejściu wskazuje to na wartość zawierającą długości buforu danych w liczbie znaków lub bajtów. Zobacz **uwagi** sekcji, aby uzyskać szczegółowe informacje na temat tego parametru.  
   
- `lpdwIndex`  
- Wskaźnik do indeksu nagłówka liczony od zera. Może być **NULL**. Użyj tej flagi wyliczyć wiele nagłówków o takiej samej nazwie. W danych wejściowych `lpdwIndex` wskazuje indeks określony nagłówek do zwrócenia. W danych wyjściowych `lpdwIndex` wskazuje indeks następnego nagłówka. Jeśli nie można odnaleźć następnego indeksu, **ERROR_HTTP_HEADER_NOT_FOUND** jest zwracany.  
+ *lpdwIndex*  
+ Wskaźnik do indeksu nagłówka liczony od zera. Może być **NULL**. Użyj tej flagi wyliczyć wiele nagłówków o takiej samej nazwie. W danych wejściowych *lpdwIndex* wskazuje indeks określony nagłówek do zwrócenia. W danych wyjściowych *lpdwIndex* wskazuje indeks następnego nagłówka. Jeśli nie można odnaleźć następnego indeksu, **ERROR_HTTP_HEADER_NOT_FOUND** jest zwracany.  
   
- `str`  
+ *str*  
  Odwołanie do [cstring —](../../atl-mfc-shared/reference/cstringt-class.md) obiektu odbierającego zwrócone informacje.  
   
- `dwIndex`  
- Wartość indeksu. Zobacz `lpdwIndex`.  
+ *dwIndex*  
+ Wartość indeksu. Zobacz *lpdwIndex*.  
   
  *pSysTime*  
  Wskaźnik do Win32 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struktury.  
@@ -319,7 +319,7 @@ BOOL QueryInfo(
   
  Po ciągu są zapisywane w buforze, a funkcja członkowska zakończy się powodzeniem, `lpdwBufferLength` zawiera długość ciągu znakami pomniejszonej o 1 dla przerywanie **NULL** znaków.  
   
- Możliwe `dwInfoLevel` wartości to:  
+ Możliwe *dwInfoLevel* wartości to:  
   
 - **HTTP_QUERY_MIME_VERSION**  
   
@@ -368,14 +368,14 @@ BOOL QueryInfo(
 - **HTTP_QUERY_RAW_HEADERS_CRLF**  
   
 ##  <a name="queryinfostatuscode"></a>  CHttpFile::QueryInfoStatusCode  
- Wywołanie tej funkcji członkowskich można pobrać kodu stan skojarzony z żądaniem HTTP i umieszczenie go w podane `dwStatusCode` parametru.  
+ Wywołanie tej funkcji członkowskich można pobrać kodu stan skojarzony z żądaniem HTTP i umieszczenie go w podane *dwStatusCode* parametru.  
   
 ```  
 BOOL QueryInfoStatusCode(DWORD& dwStatusCode) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStatusCode`  
+ *dwStatusCode*  
  Odwołanie do kodu stanu. Kody stanu oznaczający powodzenie lub niepowodzenie żądane zdarzenie. Zobacz **uwagi** wyboru opisy kodów stanu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -422,19 +422,19 @@ BOOL SendRequest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pstrHeaders`  
+ *pstrHeaders*  
  Wskaźnik do ciąg zawierający nazwę nagłówków do wysłania.  
   
- `dwHeadersLen`  
- Długość nagłówków identyfikowane przez `pstrHeaders`.  
+ *dwHeadersLen*  
+ Długość nagłówków identyfikowane przez *pstrHeaders*.  
   
- `lpOptional`  
+ *lpOptional*  
  Opcjonalnymi danymi wysłać natychmiast po nagłówki żądania. Jest to zazwyczaj używane do **POST** i **PUT** operacji. Może to być **NULL** Jeśli nie ma żadnych opcjonalne danych do wysyłania.  
   
  *dwOptionalLen*  
- Długość `lpOptional`.  
+ Długość *lpOptional*.  
   
- `strHeaders`  
+ *strHeaders*  
  Ciąg zawierający nazwę nagłówki dla żądania wysyłane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -461,13 +461,13 @@ BOOL SendRequestEx(
  *dwTotalLen*  
  Liczba bajtów do wysłania w żądaniu.  
   
- `dwFlags`  
+ *wartość elementu dwFlags*  
  Flagi opisujące operację. Listę odpowiednich flagi, zawiera [HttpSendRequestEx](http://msdn.microsoft.com/library/windows/desktop/aa384318) w zestawie Windows SDK.  
   
- `dwContext`  
+ *dwContext*  
  Identyfikator kontekstu `CHttpFile` operacji. Aby uzyskać więcej informacji o tym parametrze, zobacz uwagi.  
   
- `lpBuffIn`  
+ *lpBuffIn*  
  Wskaźnik do zainicjowane [INTERNET_BUFFERS](http://msdn.microsoft.com/library/windows/desktop/aa385132) opisujący buforu wejściowego używany dla tej operacji.  
   
  *lpBuffOut*  
@@ -481,7 +481,7 @@ BOOL SendRequestEx(
   
  Po zapisaniu zawartości do pliku, należy wywołać [EndRequest](#endrequest) aby zakończyć operację.  
   
- Wartość domyślna dla `dwContext` są wysyłane przez MFC do `CHttpFile` obiekt z [CInternetSession](../../mfc/reference/cinternetsession-class.md) utworzony obiekt `CHttpFile` obiektu. Podczas wywoływania [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) lub [CHttpConnection](../../mfc/reference/chttpconnection-class.md) do skonstruowania `CHttpFile` obiektu, można zastąpić domyślną ustawioną wartość wybrane identyfikator kontekstu. Identyfikator kontekstu jest zwracana do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zapewnienie stanu dla obiektu, z którym zostanie zidentyfikowana. Zapoznaj się z artykułem [pierwsze kroki Internet: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.  
+ Wartość domyślna dla *dwContext* są wysyłane przez MFC do `CHttpFile` obiekt z [CInternetSession](../../mfc/reference/cinternetsession-class.md) utworzony obiekt `CHttpFile` obiektu. Podczas wywoływania [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) lub [CHttpConnection](../../mfc/reference/chttpconnection-class.md) do skonstruowania `CHttpFile` obiektu, można zastąpić domyślną ustawioną wartość wybrane identyfikator kontekstu. Identyfikator kontekstu jest zwracana do [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) zapewnienie stanu dla obiektu, z którym zostanie zidentyfikowana. Zapoznaj się z artykułem [pierwsze kroki Internet: WinInet](../../mfc/wininet-basics.md) uzyskać więcej informacji o identyfikatorze kontekstu.  
   
 ### <a name="example"></a>Przykład  
  Fragmentu kodu wysyła zawartość ciągu o nazwie MFCISAPI biblioteki DLL. Biblioteki DLL na serwerze hosta lokalnego. Gdy w tym przykładzie użyto tylko jedno wywołanie `WriteString`, dopuszczalny jest użycie wielu wywołań do wysyłania danych w blokach.  

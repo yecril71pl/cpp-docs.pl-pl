@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf09b2f598391a599df5106fcf8933c580dd30e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1947f93e65126df403feee658ade15648b081076
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370659"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039991"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>Klasa CMFCDesktopAlertWnd
 `CMFCDesktopAlertWnd` Klasa implementuje funkcje niemodalne okno dialogowe, który jest wyświetlany na ekranie, aby poinformować użytkownika o zdarzeniu.  
@@ -163,22 +163,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] [out] `pWndOwner`  
+ [in] [out] *pWndOwner*  
  Określa właściciela oknie alert. Tego właściciela Zadzwonimy wszystkie powiadomienia dla alertów oknie pulpitu. Ta wartość nie może być `NULL`.  
   
- [in] `uiDlgResID`  
+ [in] *uiDlgResID*  
  Określa identyfikator zasobu okna alertu.  
   
- [in] `hMenu`  
+ [in] *hMenu*  
  Określa menu wyświetlanym po kliknięciu przycisku menu. Jeśli `NULL`, nie jest wyświetlany przycisk menu.  
   
- [in] `ptPos`  
+ [in] *ptPos*  
  Określa położenie początkowe, w którym jest wyświetlana w oknie alert, za pomocą współrzędnych ekranu. Jeśli ten parametr ma (-1, -1), w oknie alert jest wyświetlany w prawym dolnym rogu ekranu.  
   
- [in] `pRTIDlgBar`  
+ [in] *pRTIDlgBar*  
  Informacje o klasie czasu wykonywania dla klasy pole niestandardowe okno dialogowe, które obejmuje obszaru klienckiego okna alertu.  
   
- [in] `params`  
+ [in] *params*  
  Określa parametry, które są używane w celu utworzenia okna alertu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -297,7 +297,7 @@ virtual BOOL OnBeforeShow(CPoint&);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `CPoint&`  
+ [in] *CPoint &*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -311,7 +311,7 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Ten parametr nie jest używany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -330,8 +330,8 @@ virtual BOOL OnCommand(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `wParam`  
- [in] `lParam`  
+ [in] *wParam*  
+ [in] *lParam*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -345,7 +345,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -357,7 +357,7 @@ BOOL ProcessCommand(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `hwnd`  
+ [in] *hwnd*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -371,7 +371,7 @@ void SetAnimationSpeed(UINT nSpeed);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nSpeed`  
+ [in] *nSpeed*  
  Określa nowe prędkość animacji, w milisekundach.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -385,7 +385,7 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `type`  
+ [in] *typu*  
  Określa typ animacji.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -409,7 +409,7 @@ void SetAutoCloseTime(int nTime);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nTime`  
+ [in] *nTime*  
  Czas w milisekundach, który musi upłynąć przed oknie alert zostanie automatycznie zamknięte.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -423,7 +423,7 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bSmallCaption`  
+ [in] *bSmallCaption*  
  `TRUE` Aby określić, czy w oknie alert zawiera nagłówek małych; w przeciwnym razie `FALSE` do określenia, czy w oknie alert zawiera nagłówek zwykły rozmiar.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -437,7 +437,7 @@ void SetTransparency(BYTE nTransparency);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nTransparency`  
+ [in] *nTransparency*  
  Określa poziom przezroczystości. Ta wartość musi być z zakresu od 0 do 255 włącznie. Im większa wartość, więcej nieprzezroczyste okna.  
   
 ### <a name="remarks"></a>Uwagi  

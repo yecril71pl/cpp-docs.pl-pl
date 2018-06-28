@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf000b45e2bd24ec40e1ae15001c3df46d1b12c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3046fa4c9446afeba45fd41a6b571ccf58f2cfb
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375619"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040119"
 ---
 # <a name="coleresizebar-class"></a>Klasa COleResizeBar
 Typ pasków sterowania, który obsługuje zmienianie rozmiaru w miejscu elementy OLE.  
@@ -92,13 +92,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do okno nadrzędne paska zmiany rozmiaru.  
   
- `dwStyle`  
+ *dwStyle*  
  Określa [styl okna](../../mfc/reference/styles-used-by-mfc.md#window-styles) atrybutów.  
   
- `nID`  
+ *nID*  
  Identyfikator pasek zmiany rozmiaru okna podrzędnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
