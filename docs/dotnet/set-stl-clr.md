@@ -105,19 +105,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 99ea41a77a8ed01cb78df3513ccb79b6b2a8b3f1
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 21c2ebc9ba59e6581a9f6d286f136c907b7c73aa
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305894"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079880"
 ---
 # <a name="set-stlclr"></a>set (STL/CLR)
 Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp dwukierunkowego. Użyj kontenera `set` do zarządzania sekwencję elementów jako drzewo uporządkowanej zrównoważony (prawie) węzły, każdy przechowywania jeden element.  
   
  W polu poniżej, opis `GValue` jest taka sama jak `GKey`, który z kolei jest taka sama jak `Key` o ile nie jest typu ref, w którym to przypadku jest `Key^`.  
   
-### <a name="syntax"></a>Składnia  
+## <a name="syntax"></a>Składnia  
   
 ```  
 template<typename Key>  
@@ -133,10 +133,15 @@ template<typename Key>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  Key  
  Typ części klucza elementu w kontrolowanej sekwencji.  
   
+## <a name="requirements"></a>Wymagania  
+ **Nagłówek:** \<cliext/set >  
+  
+ **Namespace:** cliext  
+
 ## <a name="declarations"></a>Deklaracje  
   
 |Definicja typu|Opis|  
@@ -202,7 +207,7 @@ template<typename Key>
 |<xref:System.Collections.Generic.ICollection%601>|Obsługa grupę elementów typu.|  
 |ITree\<klucza, wartość >|Obsługa ogólnego kontenera.|  
   
-### <a name="remarks"></a>Uwagi  
+## <a name="remarks"></a>Uwagi  
  Obiekt przydziela i zwalnia magazynu w sekwencji, które kontroluje jako poszczególnych węzłach. Elementy do wstawienia w drzewie zrównoważony (prawie) zapewnia uporządkowanych, zmieniając łącza między węzłami, nigdy nie, kopiując zawartość z jednego węzła do innego. Oznacza to, można wstawiać i usuwanie elementów za darmo, bez zakłóceń pozostałe elementy.  
   
  Obiekt porządkuje sekwencji kontroluje przez wywołanie metody typu obiektu delegowanego przechowywanych [set::key_compare (STL/CLR)](../dotnet/set-key-compare-stl-clr.md). Można określić obiektu delegowanego przechowywane, podczas tworzenia zestawu; Jeśli określisz ma obiektu delegowanego, wartość domyślna to porównanie `operator<(key_type, key_type)`. Dostęp do tego obiektu przechowywanych przez wywołanie funkcji Członkowskich [set::key_comp (STL/CLR)](../dotnet/set-key-comp-stl-clr.md)`()`.  
@@ -228,11 +233,6 @@ template<typename Key>
  Iterator zestaw przechowuje dojścia do węzła związany jest zestaw, który z kolei przechowuje dojście do jego skojarzony kontenera. Iteratory można użyć tylko w przypadku ich obiekty skojarzone kontenera. Iterator zestaw pozostaje ważny tak długo, jak jego węzła związany jest zestaw jest skojarzony z niektórych zestawu. Ponadto prawidłowy iteratora jest dereferencable — służy do dostępu lub zmienić wartości elementu ustanowi — tak długo, jak nie jest równa `end()`.  
   
  Wymazywanie lub usunięcie elementu wywołuje destruktor dla jej wartości przechowywanej. Niszczenie kontenera powoduje wymazanie wszystkich elementów. W związku z tym kontenera, której typ elementów jest klasa ref gwarantuje, że żadnych elementów outlive kontenera. Należy jednak pamiętać, że jest kontenerem dojść `not` zniszczyć elementów.  
-  
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** \<cliext/set >  
-  
- **Namespace:** cliext  
  
 ## <a name="members"></a>Elementy członkowskie
 

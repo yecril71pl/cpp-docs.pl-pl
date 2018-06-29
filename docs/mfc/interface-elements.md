@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25f9de4ab5f7d12d240625e0fdf5f857563e8ce2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1906505e75273cc62a0eac55e6ed1a9686a3b76f
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352580"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078447"
 ---
 # <a name="interface-elements"></a>Elementy interfejsu
-W tym dokumencie opisano elementy interfejsu, które zostały wprowadzone w [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] z dodatkiem SP1, a także opisano różnice ze starszą wersją biblioteki.  
+Ten dokument zawiera opis elementów interfejsu, które zostały wprowadzone w programie Visual Studio 2008 z dodatkiem SP1 i opisano również w przypadku wcześniejszych wersji biblioteki.  
   
  Na poniższej ilustracji przedstawiono aplikację, która została skompilowana przy użyciu nowych elementów interfejsu.  
   

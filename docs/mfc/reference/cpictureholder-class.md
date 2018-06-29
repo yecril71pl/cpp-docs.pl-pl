@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c2ffbe685ac643116fa60d4f97d03781d1efc83
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b81a35a696d3d5cdcb22a6f9a66425320b544c2
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375444"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079452"
 ---
 # <a name="cpictureholder-class"></a>Klasa CPictureHolder
 Implementuje właściwości obrazu, dzięki czemu użytkownika wyświetlić obraz w formantu.  
@@ -133,29 +133,29 @@ BOOL CreateFromBitmap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `idResource`  
+ *idResource*  
  Identyfikator zasobu zasobu mapy bitowej.  
   
- `pBitmap`  
+ *pBitmap*  
  Wskaźnik do [cbitmap —](../../mfc/reference/cbitmap-class.md) obiektu.  
   
  *pPal*  
  Wskaźnik do [cpalette —](../../mfc/reference/cpalette-class.md) obiektu.  
   
- `bTransferOwnership`  
+ *bTransferOwnership*  
  Wskazuje, czy obiekt obrazu będzie przejąć na własność obiekt mapy bitowej i palety.  
   
- `hbm`  
+ *hbm*  
  Dojście do mapy bitowej, z którego `CPictureHolder` tworzony jest obiekt.  
   
- `hpal`  
+ *hpal*  
  Dojście do palety używany do renderowania mapy bitowej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli obiekt jest pomyślnie utworzony; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `bTransferOwnership` jest **TRUE**, obiekt wywołujący nie należy używać mapy bitowej lub zwraca obiekt palety w jakikolwiek sposób po tym wywołaniu. Jeśli `bTransferOwnership` jest **FALSE**, element wywołujący jest odpowiedzialny za zapewnienie, że obiekt mapy bitowej i palety pozostają w mocy okres istnienia obiektu obrazu.  
+ Jeśli *bTransferOwnership* jest **TRUE**, obiekt wywołujący nie należy używać mapy bitowej lub zwraca obiekt palety w jakikolwiek sposób po tym wywołaniu. Jeśli *bTransferOwnership* jest **FALSE**, element wywołujący jest odpowiedzialny za zapewnienie, że obiekt mapy bitowej i palety pozostają w mocy okres istnienia obiektu obrazu.  
   
 ##  <a name="createfromicon"></a>  CPictureHolder::CreateFromIcon  
  Używa ikonę można zainicjować obiektu obrazu w `CPictureHolder`.  
@@ -171,20 +171,20 @@ BOOL CreateFromIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `idResource`  
+ *idResource*  
  Identyfikator zasobu zasobu mapy bitowej.  
   
- `hIcon`  
+ *hIcon*  
  Dojście do ikony, z którego `CPictureHolder` tworzony jest obiekt.  
   
- `bTransferOwnership`  
+ *bTransferOwnership*  
  Wskazuje, czy obiekt obrazu będzie przejąć na własność obiekt ikony.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli obiekt jest pomyślnie utworzony; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `bTransferOwnership` jest **TRUE**, obiekt wywołujący nie należy używać obiekt ikony w jakikolwiek sposób po powrocie tego wywołania. Jeśli `bTransferOwnership` jest **FALSE**, element wywołujący jest odpowiedzialny za egzekwowanie obiekt ikony pozostaje ważny przez czas ich istnienia obiektu obrazu.  
+ Jeśli *bTransferOwnership* jest **TRUE**, obiekt wywołujący nie należy używać obiekt ikony w jakikolwiek sposób po powrocie tego wywołania. Jeśli *bTransferOwnership* jest **FALSE**, element wywołujący jest odpowiedzialny za egzekwowanie obiekt ikony pozostaje ważny przez czas ich istnienia obiektu obrazu.  
   
 ##  <a name="createfrommetafile"></a>  CPictureHolder::CreateFromMetafile  
  Używa metaplik można zainicjować obiektu obrazu w `CPictureHolder`.  
@@ -198,7 +198,7 @@ BOOL CreateFromMetafile(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hmf`  
+ *HMF*  
  Dojście do metaplik użyty do utworzenia `CPictureHolder` obiektu.  
   
  *xExt*  
@@ -207,14 +207,14 @@ BOOL CreateFromMetafile(
  *yExt*  
  Zakres Y obrazu.  
   
- `bTransferOwnership`  
+ *bTransferOwnership*  
  Wskazuje, czy obiekt obrazu będzie przejąć prawo własności obiektu metaplik.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli obiekt jest pomyślnie utworzony; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `bTransferOwnership` jest **TRUE**, obiekt wywołujący nie należy używać obiektu metaplik w jakikolwiek sposób po powrocie tego wywołania. Jeśli `bTransferOwnership` jest **FALSE**, element wywołujący jest odpowiedzialny za egzekwowanie obiektu metaplik pozostaje ważny przez czas ich istnienia obiektu obrazu.  
+ Jeśli *bTransferOwnership* jest **TRUE**, obiekt wywołujący nie należy używać obiektu metaplik w jakikolwiek sposób po powrocie tego wywołania. Jeśli *bTransferOwnership* jest **FALSE**, element wywołujący jest odpowiedzialny za egzekwowanie obiektu metaplik pozostaje ważny przez czas ich istnienia obiektu obrazu.  
   
 ##  <a name="getdisplaystring"></a>  CPictureHolder::GetDisplayString  
  Pobiera ciąg, który jest wyświetlany w przeglądarce właściwości kontenera.  
@@ -224,7 +224,7 @@ BOOL GetDisplayString(CString& strValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `strValue`  
+ *strValue*  
  Odwołanie do [cstring —](../../atl-mfc-shared/reference/cstringt-class.md) do przechowywania ciągu wyświetlanego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -269,7 +269,7 @@ LPPICTURE m_pPict;
 ```  
   
 ##  <a name="render"></a>  CPictureHolder::Render  
- Renderuje obraz w prostokącie odwołuje się `rcRender`.  
+ Renderuje obraz w prostokącie odwołuje się *rcRender*.  
   
 ```  
 void Render(
@@ -279,14 +279,14 @@ void Render(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu wyświetlania, w którym ma być renderowany obraz.  
   
- `rcRender`  
+ *rcRender*  
  Prostokąt, w którym ma być renderowany obraz.  
   
  *rcWBounds*  
- Prostokąt reprezentujący prostokątem obiektu renderowania obrazu. W przypadku formantu tym prostokącie, gdzie jest `rcBounds` parametr przekazany do zastępowania [COleControl::OnDraw](../../mfc/reference/colecontrol-class.md#ondraw).  
+ Prostokąt reprezentujący prostokątem obiektu renderowania obrazu. W przypadku formantu tym prostokącie, gdzie jest *rcBounds* parametr przekazany do zastępowania [COleControl::OnDraw](../../mfc/reference/colecontrol-class.md#ondraw).  
   
 ##  <a name="setpicturedispatch"></a>  CPictureHolder::SetPictureDispatch  
  Łączy `CPictureHolder` do obiektu `IPictureDisp` interfejsu.  
@@ -296,7 +296,7 @@ void SetPictureDispatch(LPPICTUREDISP pDisp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDisp`  
+ *pDisp*  
  Wskaźnik do nowego `IPictureDisp` interfejsu.  
   
 ## <a name="see-also"></a>Zobacz też  

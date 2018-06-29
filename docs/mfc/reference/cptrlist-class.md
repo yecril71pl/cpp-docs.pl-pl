@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a143fd99a79212ed0078f06b334ab6ae0964b3f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 421373969beb83d033ce8ca14bd11fdb5d8dcb14
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370243"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078624"
 ---
 # <a name="cptrlist-class"></a>Klasa CPtrList
 Obsługuje listy wskaźniki typu void.  
@@ -35,7 +35,7 @@ class CPtrList : public CObject
 ```  
   
 ## <a name="members"></a>Elementy członkowskie  
- Funkcje Członkowskie `CPtrList` są podobne do funkcji Członkowskich klasy [CObList](../../mfc/reference/coblist-class.md). Ze względu na to podobieństwa, można użyć `CObList` odwołania dokumentacji charakterystykę funkcja elementu członkowskiego. Po wyświetleniu `CObject` wskaźnika jako parametr funkcji lub wartości zwracanej, Zastąp wskaźnik do `void`.  
+ Funkcje Członkowskie `CPtrList` są podobne do funkcji Członkowskich klasy [CObList](../../mfc/reference/coblist-class.md). Ze względu na to podobieństwa, można użyć `CObList` odwołania dokumentacji charakterystykę funkcja elementu członkowskiego. Po wyświetleniu `CObject` wskaźnika jako parametr funkcji lub wartości zwracanej, Zastąp wskaźnik do **void**.  
   
  `CObject*& CObList::GetHead() const;`  
   

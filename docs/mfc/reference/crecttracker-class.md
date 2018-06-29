@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eff57e1fde0af6e794c2c47db7d1e31daf545715
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c4ce3c4dbfbf49791673392a1e1234728a680611
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375911"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079671"
 ---
 # <a name="crecttracker-class"></a>Crecttracker — klasa
 Umożliwia element do wyświetlenia, przenieść i zmiany rozmiaru w różnych fashions.  
@@ -124,16 +124,16 @@ virtual void AdjustRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nHandle`  
+ *nHandle*  
  Indeks uchwyt używany.  
   
- `lpRect`  
+ *lprect —*  
  Wskaźnik do bieżącego rozmiaru prostokąta. (Rozmiar prostokąta znajduje się przez jego wysokość i szerokość).  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie ta funkcja umożliwia orientacji prostokąta można zmienić tylko wtedy, gdy `Track` i `TrackRubberBand` są nazywane z odwracanie dozwolone.  
   
- Należy przesłonić tę funkcję, aby kontrolować dostosowania prostokąt śledzenia podczas operacji przeciągania. Na przykład dopasować współrzędne określony przez `lpRect` przed zwróceniem.  
+ Należy przesłonić tę funkcję, aby kontrolować dostosowania prostokąt śledzenia podczas operacji przeciągania. Na przykład dopasować współrzędne określone przez *lprect —* przed zwróceniem.  
   
  Specjalne funkcje, które nie są bezpośrednio obsługiwane przez `CRectTracker`, takie jak przyciąganie do siatki lub keep proporcje, może być zaimplementowany przez zastępowanie tej funkcji.  
   
@@ -150,10 +150,10 @@ CRectTracker(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpSrcRect`  
+ *lpSrcRect*  
  Współrzędne obiektu prostokąta.  
   
- `nStyle`  
+ *nStyle*  
  Określa styl `CRectTracker` obiektu. Obsługiwane są następujące style:  
   
 - **CRectTracker::solidLine** Użyj linię ciągłą obramowania prostokąta.  
@@ -169,7 +169,7 @@ CRectTracker(
 - **CRectTracker::hatchInside** Hatched wzorzec obejmuje całą prostokąta.  
   
 ### <a name="remarks"></a>Uwagi  
- Konstruktor domyślny inicjuje `CRectTracker` obiektu wartościami z `lpSrcRect` i inicjuje innych rozmiarach do wartości domyślnych systemu. Jeśli obiekt jest tworzony bez parametrów `m_rect` i `m_nStyle` elementy członkowskie danych są niezainicjowany.  
+ Konstruktor domyślny inicjuje `CRectTracker` obiektu wartościami z *lpSrcRect* i inicjuje innych rozmiarach do wartości domyślnych systemu. Jeśli obiekt jest tworzony bez parametrów `m_rect` i `m_nStyle` elementy członkowskie danych są niezainicjowany.  
   
 ##  <a name="draw"></a>  CRectTracker::Draw  
  Wywołanie tej funkcji do rysowania linii zewnętrzne i wewnętrzne region prostokąta.  
@@ -179,7 +179,7 @@ void Draw(CDC* pDC) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia, na którym ma zostać narysowany.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -197,16 +197,16 @@ virtual void DrawTrackerRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect —*  
  Wskaźnik do `RECT` zawierający prostokąta do rysowania.  
   
- `pWndClipTo`  
+ *pWndClipTo*  
  Wskaźnik do okna do użycia w wycinka prostokąta.  
   
- `pDC`  
+ *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia, na którym ma zostać narysowany.  
   
- `pWnd`  
+ *pWnd*  
  Wskaźnik do okna, na którym zostanie przeprowadzona rysunku.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -243,11 +243,11 @@ void GetTrueRect(LPRECT lpTrueRect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpTrueRect`  
+ *lpTrueRect*  
  Wskaźnik do `RECT` struktury, która będzie zawierać urządzenia współrzędne `CRectTracker` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Wymiary prostokąta obejmują wysokość i szerokość uchwytów wszelkie zmiany rozmiaru znajduje się na granicy zewnętrznej. Na zwrócenie, `lpTrueRect` jest zawsze znormalizowane prostokąt we współrzędnych urządzenia.  
+ Wymiary prostokąta obejmują wysokość i szerokość uchwytów wszelkie zmiany rozmiaru znajduje się na granicy zewnętrznej. Na zwrócenie, *lpTrueRect* jest zawsze znormalizowane prostokąt we współrzędnych urządzenia.  
   
 ##  <a name="hittest"></a>  CRectTracker::HitTest  
  Wywołanie tej funkcji, aby dowiedzieć się, czy użytkownik ma chwycić uchwyt zmiany rozmiaru.  
@@ -257,7 +257,7 @@ int HitTest(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `point`  
+ *Punkt*  
  Punkt we współrzędnych urządzenia, aby przetestować.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -328,7 +328,7 @@ int NormalizeHit(int nHandle) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nHandle`  
+ *nHandle*  
  Dojście wybrane przez użytkownika.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -363,17 +363,17 @@ BOOL SetCursor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Wskazuje okna zawierającego kursora.  
   
- `nHitTest`  
- Wyniki poprzedniego testu trafienia z `WM_SETCURSOR` wiadomości.  
+ *nHitTest*  
+ Wyniki poprzedniego testu trafienia z komunikat WM_SETCURSOR.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeżeli Poprzednie trafienie za pośrednictwem prostokąt tracker; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie tej funkcji z wewnątrz funkcji okna obsługująca `WM_SETCURSOR` komunikatu (zazwyczaj `OnSetCursor`).  
+ Wywołanie tej funkcji z wewnątrz funkcji okna obsługująca komunikat WM_SETCURSOR (zazwyczaj `OnSetCursor`).  
   
 ##  <a name="track"></a>  CRectTracker::Track  
  Wywołanie tej funkcji, aby wyświetlić interfejs użytkownika do zmiany rozmiaru okna.  
@@ -387,17 +387,17 @@ BOOL Track(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Obiekt okna, który zawiera prostokąta.  
   
- `point`  
+ *Punkt*  
  Współrzędne urządzenia bieżącego położenia kursora myszy względem obszaru klienckiego.  
   
- `bAllowInvert`  
+ *bAllowInvert*  
  Jeśli **TRUE**, prostokąt może być odwrócony wzdłuż osi x i y; w przeciwnym razie **FALSE**.  
   
- `pWndClipTo`  
- Okno operacje rysowania zostanie obcięta do. Jeśli **NULL**, `pWnd` jest używany jako Prostokątny wycinek.  
+ *pWndClipTo*  
+ Okno operacje rysowania zostanie obcięta do. Jeśli **NULL**, *pWnd* jest używany jako Prostokątny wycinek.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zostanie naciśnięty klawisz ESC, proces śledzenie jest zatrzymywane, prostokąt przechowywane w module śledzącym nie ulega zmianie i zwracane jest 0. Jeśli zmiana zostaje zatwierdzona, przesuwanie wskaźnika myszy i zwolnienie lewego przycisku myszy, nowe położenie i/lub rozmiar jest rejestrowany w monitorze prostokąt i zwracany jest różna od zera.  
@@ -407,7 +407,7 @@ BOOL Track(
   
  Ta funkcja będzie przechwytywać mysz, dopóki użytkownik zwalnia lewego przycisku myszy, naciśnie klawisz ESC lub naciśnie prawym przyciskiem myszy. Jako użytkownik przesuwa wskaźnik myszy, opinii jest aktualizowany przez wywołanie metody `DrawTrackerRect` i `OnChangedRect`.  
   
- Jeśli `bAllowInvert` jest **TRUE**, prostokąt śledzenia może być zmieniany na osi x lub osi y.  
+ Jeśli *bAllowInvert* jest **TRUE**, prostokąt śledzenia może być zmieniany na osi x lub osi y.  
   
 ##  <a name="trackrubberband"></a>  CRectTracker::TrackRubberBand  
  Wywołanie tej funkcji w celu zaznaczenia gumki —.  
@@ -420,20 +420,20 @@ BOOL TrackRubberBand(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Obiekt okna, który zawiera prostokąta.  
   
- `point`  
+ *Punkt*  
  Współrzędne urządzenia bieżącego położenia kursora myszy względem obszaru klienckiego.  
   
- `bAllowInvert`  
+ *bAllowInvert*  
  Jeśli **ma wartość TRUE,** prostokąt może być odwrócony wzdłuż osi x i y; w przeciwnym razie **FALSE**.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli wskaźnik myszy została przeniesiona i prostokąt nie jest pusty; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Zazwyczaj jest wywoływana z wewnątrz funkcji aplikacji, która obsługuje `WM_LBUTTONDOWN` komunikatu (zazwyczaj `OnLButtonDown`).  
+ Zazwyczaj jest wywoływana z wewnątrz funkcji aplikacji, która obsługuje wiadomość WM_LBUTTONDOWN (zazwyczaj `OnLButtonDown`).  
   
  Ta funkcja będzie przechwytywać mysz, dopóki użytkownik zwalnia lewego przycisku myszy, naciśnie klawisz ESC lub naciśnie prawym przyciskiem myszy. Jako użytkownik przesuwa wskaźnik myszy, opinii jest aktualizowany przez wywołanie metody `DrawTrackerRect` i `OnChangedRect`.  
   

@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d00d78acf7ddf8cfa27e117cbcdbbb00c7d6fa6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71871eae42fc720481852be1e60c934f941858c6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374841"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078159"
 ---
 # <a name="collection-class-helpers"></a>Pomocnicy klasy kolekcji
-Klasy kolekcji `CMap`, `CList`, i `CArray` za pomocą funkcji opartego na szablonie globalne pomocnika do celów takich jak porównywanie, kopiowanie i elementy serializacji. Jako część implementacji klasy na podstawie `CMap`, `CList`, i `CArray`, konieczne jest przesłonięcie tych funkcji w razie potrzeby z wersjami dostosowane do typu danych przechowywanych w mapie, listy lub tablicy. Aby uzyskać informacje dotyczące zastępowania takich jak funkcje pomocnicze `SerializeElements`, zapoznaj się z artykułem [kolekcje: porady: tworzenie bezpiecznej kolekcji](../../mfc/how-to-make-a-type-safe-collection.md). Należy pamiętać, że **constructelements —** i **destructelements —** są przestarzałe.  
+Klasy kolekcji `CMap`, `CList`, i `CArray` za pomocą funkcji opartego na szablonie globalne pomocnika do celów takich jak porównywanie, kopiowanie i elementy serializacji. Jako część implementacji klasy na podstawie `CMap`, `CList`, i `CArray`, konieczne jest przesłonięcie tych funkcji w razie potrzeby z wersjami dostosowane do typu danych przechowywanych w mapie, listy lub tablicy. Aby uzyskać informacje dotyczące zastępowania takich jak funkcje pomocnicze `SerializeElements`, zapoznaj się z artykułem [kolekcje: porady: tworzenie bezpiecznej kolekcji](../../mfc/how-to-make-a-type-safe-collection.md). Należy pamiętać, że `ConstructElements` i `DestructElements` są przestarzałe.  
   
  Microsoft Foundation Class Library zapewnia następujące funkcje globalne w afxtempl.h do dostosowywania klas kolekcji:  
   
@@ -57,24 +57,24 @@ CompareElements(
  *TYP*  
  Typ pierwszego elementu ma być porównywana.  
   
- `pElement1`  
+ *pElement1*  
  Wskaźnik do pierwszego elementu ma być porównywana.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  Typ drugiego elementu ma być porównywana.  
   
- `pElement2`  
+ *pElement2*  
  Wskaźnik do drugiego elementu ma być porównywana.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli obiekt wskazywany przez `pElement1` jest taki sam obiekt wskazywany przez `pElement2`; w przeciwnym razie wartość 0.  
+ Różna od zera, jeśli obiekt wskazywany przez *pElement1* jest taki sam obiekt wskazywany przez *pElement2*; w przeciwnym razie wartość 0.  
   
 ### <a name="remarks"></a>Uwagi  
  `CMap` Wymaga użycia `CMap` parametrów szablonu *klucza* i `ARG_KEY`.  
   
  Domyślna implementacja zwraca wynik porównania  *\*pElement1* i  *\*pElement2*. Należy przesłonić tę funkcję, dzięki czemu porównuje elementów w taki sposób, który jest odpowiedni dla twojej aplikacji.  
   
- Operator porównania definiuje języka C++ ( `==`) dla typów prostych ( `char`, `int`, **float**i tak dalej), ale nie definiuje operator porównania dla klas i struktur. Jeśli chcesz użyć `CompareElements` lub można utworzyć wystąpienia jednego z klasy kolekcji, które korzysta z niego, należy zdefiniować operator porównania lub przeciążenia `CompareElements` przy użyciu wersji, która zwraca odpowiednie wartości.  
+ Operator porównania definiuje języka C++ ( `==`) dla typów prostych ( **char**, **int**, **float**i tak dalej), ale nie definiuje operator porównania dla klasy i struktury. Jeśli chcesz użyć `CompareElements` lub można utworzyć wystąpienia jednego z klasy kolekcji, które korzysta z niego, należy zdefiniować operator porównania lub przeciążenia `CompareElements` przy użyciu wersji, która zwraca odpowiednie wartości.  
   
 ### <a name="requirements"></a>Wymagania  
    **Nagłówek:** afxtempl.h   
@@ -94,13 +94,13 @@ void AFXAPI CopyElements(
  *TYP*  
  Parametr szablonu określający typ elementów do skopiowania.  
   
- `pDest`  
+ *pDest*  
  Wskaźnik do miejsca docelowego, do której zostaną skopiowane elementy.  
   
- `pSrc`  
+ *pSrc*  
  Wskaźnik do źródła elementów do skopiowania.  
   
- `nCount`  
+ *nCount*  
  Liczba elementów do skopiowania.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -123,20 +123,20 @@ void  AFXAPI DumpElements(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dc`  
+ *Kontroler domeny*  
  Zrzut kontekst dla zrzucanie elementów.  
   
  *TYP*  
  Parametr szablonu określający typ elementów.  
   
- `pElements`  
+ *pElements*  
  Wskaźnik do elementy, aby można utworzyć zrzutu.  
   
- `nCount`  
+ *nCount*  
  Liczba elementów do można utworzyć zrzutu.  
   
 ### <a name="remarks"></a>Uwagi  
- **CArray::Dump**, **CList::Dump**, i **CMap::Dump** wywołania funkcji, to jeśli głębokością zrzutu jest większa niż 0.  
+ `CArray::Dump`, `CList::Dump`, I `CMap::Dump` wywołania funkcji, to jeśli głębokością zrzutu jest większa niż 0.  
   
  Domyślna implementacja nie działa. Jeśli elementy kolekcji są uzyskiwane z `CObject`, zwykle iteracji zastąpienia przez elementy kolekcji, wywoływania `Dump` dla każdego elementu w ruchu.  
   
@@ -153,10 +153,10 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ARG_KEY`  
+ *ARG_KEY*  
  Parametr szablonu określający typ danych używany do dostępu do kluczy mapy.  
   
- `key`  
+ *Klucz*  
  Klucz wartości skrótu, którego ma zostać obliczona.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -165,7 +165,7 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja jest wywoływana bezpośrednio przez [CMap::RemoveKey](cmap-class.md#removekey) i pośrednio przez [CMap::Lookup](cmap-class.md#lookup) i [CMap::Operator &#91; &#93; ](cmap-class.md#operator_at).
   
- Domyślna implementacja tworzy wartość skrótu przy przesunięciu `key` bezpośrednio przez cztery pozycji. Należy przesłonić tę funkcję, dzięki czemu wartości skrótu zwraca odpowiedni dla twojej aplikacji.  
+ Domyślna implementacja tworzy wartość skrótu przy przesunięciu *klucza* bezpośrednio przez cztery pozycji. Należy przesłonić tę funkcję, dzięki czemu wartości skrótu zwraca odpowiedni dla twojej aplikacji.  
   
 ### <a name="example"></a>Przykład
  ```cpp  
@@ -192,13 +192,13 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
  *TYP*  
  Parametr szablonu określający typ elementów.  
   
- `ar`  
+ *ar*  
  Obiekt archiwum archiwizacji lub wejściowych.  
   
- `pElements`  
+ *pElements*  
  Wskaźnik do elementów archiwizowane.  
   
- `nCount`  
+ *nCount*  
  Liczba elementów jest archiwizowany  
   
 ### <a name="remarks"></a>Uwagi  

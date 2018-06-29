@@ -107,12 +107,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 973957609b56f3bcd697f650c75c59d07cc97173
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 5d5b3e94b0b594174538aebe6542b04df7214f1b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305774"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079815"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp losowy. Użyj kontenera `vector` do zarządzania sekwencję elementów jako ciągłego bloku pamięci masowej. Blok jest implementowany jako tablicę, która rozwoju na żądanie.  
@@ -135,7 +135,7 @@ template<typename Value>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  Wartość  
  Typ elementu w kontrolowanej sekwencji.  
   
@@ -225,10 +225,7 @@ template<typename Value>
   
  Wymazywanie lub usunięcie elementu wywołuje destruktor dla jej wartości przechowywanej. Niszczenie kontenera powoduje wymazanie wszystkich elementów. W związku z tym kontenera, której typ elementów jest klasa ref gwarantuje, że żadnych elementów outlive kontenera. Należy jednak pamiętać, kontener dojść nie niszczy swoich elementów.  
   
-## <a name="requirements"></a>Wymagania  
- **Nagłówek:** \<cliext/wektor >  
-  
- **Namespace:** cliext  
+## <a name="members"></a>Elementy członkowskie
 
 ## <a name="assign"></a> Vector::ASSIGN (STL/CLR)
 Zamienia wszystkie elementy.  

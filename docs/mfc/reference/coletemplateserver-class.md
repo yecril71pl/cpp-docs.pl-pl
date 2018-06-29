@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90b24d65dbd6f800dda0b25088288bee6fdcf3c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38ade76568f261c0e0320002d1a53ef1858c9509
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374386"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37077981"
 ---
 # <a name="coletemplateserver-class"></a>Klasa COleTemplateServer
 Używany dla OLE visual edycji serwery, serwery automatyzacji i łącze kontenery (aplikacje, które obsługują łącza do osadzonego).  
@@ -96,13 +96,13 @@ void ConnectTemplate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `clsid`  
+ *Identyfikator CLSID*  
  Odwołanie do Identyfikatora klasy OLE żąda szablonu.  
   
- `pDocTemplate`  
+ *pDocTemplate*  
  Wskaźnik do szablonu dokumentu.  
   
- `bMultiInstance`  
+ *bMultiInstance*  
  Wskazuje, czy pojedyncze wystąpienie aplikacji może obsługiwać wiele wystąpień. Jeśli **TRUE**, wiele wystąpień aplikacji będą uruchamiane dla każdego żądania do utworzenia obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -133,7 +133,7 @@ void UpdateRegistry(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nAppType`  
+ *nAppType*  
  Wartość z zakresu od **OLE_APPTYPE** wyliczenia, która jest zdefiniowana w AFXDISP. H. Może mieć jeden z następujących wartości:  
   
 - `OAT_INPLACE_SERVER` Serwer ma interfejs użytkownika całego serwera.  
@@ -144,25 +144,25 @@ void UpdateRegistry(
   
 - `OAT_DISPATCH_OBJECT` Obiekt jest `IDispatch`-stanie.  
   
-- **OAT_DOC_OBJECT_SERVER** Server obsługuje zarówno osadzanie i składnik modelu obiektu dokumentu.  
+- `OAT_DOC_OBJECT_SERVER` Serwer obsługuje zarówno osadzanie i składnik modelu obiektu dokumentu.  
   
- `rglpszRegister`  
+ *rglpszRegister*  
  Lista wpisy są zapisywane w rejestrze tylko wtedy, gdy istnieje żadnych wpisów.  
   
- `rglpszOverwrite`  
+ *rglpszOverwrite*  
  Lista wpisy w rejestrze niezależnie od tego, czy istnieją wszystkie poprzednie wpisy są zapisywane.  
   
- `bRegister`  
- Określa, czy klasa jest rejestrowana. Jeśli `bRegister` jest **TRUE**, klasa został zarejestrowany za pomocą rejestru systemu. W przeciwnym razie go wyrejestrowuje klasy.  
+ *bRegister*  
+ Określa, czy klasa jest rejestrowana. Jeśli *bRegister* jest **TRUE**, klasa został zarejestrowany za pomocą rejestru systemu. W przeciwnym razie go wyrejestrowuje klasy.  
   
 ### <a name="remarks"></a>Uwagi  
  Informacje o rejestracji jest ładowany za pomocą wywołania [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Podciągi pobierane są identyfikowane przez indeksy **regFileTypeId**, **regFileTypeName**, i **fileNewName**, zgodnie z opisem w `GetDocString` Odwołanie do strony.  
   
  Jeśli **regFileTypeId** podciąg jest pusty lub jeśli wywołanie `GetDocString` kończy się niepowodzeniem dla innego powodu, ta funkcja nie powiedzie się, a informacje o pliku nie została wprowadzona w rejestrze.  
   
- Informacje w argumentach `rglpszRegister` i `rglpszOverwrite` są zapisywane w rejestrze poprzez wywołanie [afxoleregisterserverclass —](application-control.md#afxoleregisterserverclass). Domyślne informacje, który jest zarejestrowany, gdy są dwa argumenty **NULL**, jest odpowiedni dla większości aplikacji. Aby uzyskać informacje na temat struktury informacji z tych argumentów, zobacz `AfxOleRegisterServerClass`.  
+ Informacje w argumentach *rglpszRegister* i *rglpszOverwrite* są zapisywane w rejestrze poprzez wywołanie [afxoleregisterserverclass —](application-control.md#afxoleregisterserverclass). Domyślne informacje, który jest zarejestrowany, gdy są dwa argumenty **NULL**, jest odpowiedni dla większości aplikacji. Aby uzyskać informacje na temat struktury informacji z tych argumentów, zobacz `AfxOleRegisterServerClass`.  
   
- Aby uzyskać więcej informacji, zobacz [implementowania interfejsu IDispatch](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+ Aby uzyskać więcej informacji, zobacz [implementowania interfejsu IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przykładowe MFC HIERSVR](../../visual-cpp-samples.md)   

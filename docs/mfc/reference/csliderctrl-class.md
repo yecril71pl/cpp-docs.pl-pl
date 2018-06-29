@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e5b0fac11c2472bbaf0d5f4a3ede7d4f5658f9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c26df378c500b8c1384f7a357b93693b215ca10
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377161"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079619"
 ---
 # <a name="csliderctrl-class"></a>Csliderctrl — klasa
 Udostępnia funkcje systemu Windows wspólnej suwaka.  
@@ -155,7 +155,7 @@ class CSliderCtrl : public CWnd
   
  Suwak jest przesuwany w przyrostach określające podczas jego tworzenia. Na przykład, jeśli określono, że suwak powinny mieć zakresu pięć, suwak można tylko zajmują sześciu położenia: pozycji suwaka i jedną pozycję dla każdego kolejnego przyrostu wartości z zakresu po lewej stronie. Zazwyczaj każdego z tych pozycji jest identyfikowany przez znacznika.  
   
- Utwórz suwaka przy użyciu konstruktora i **Utwórz** funkcji członkowskiej klasy `CSliderCtrl`. Po utworzeniu formantu suwaka, można użyć funkcji Członkowskich w `CSliderCtrl` zmiany wielu jego właściwości. Zmiany, które można wprowadzić obejmują ustawienie pozycji minimalną i maksymalną dla suwaka, rysowania znaczniki ustawienie wybranego zakresu i położenia suwaka.  
+ Utwórz suwaka przy użyciu konstruktora i `Create` funkcji członkowskiej klasy `CSliderCtrl`. Po utworzeniu formantu suwaka, można użyć funkcji Członkowskich w `CSliderCtrl` zmiany wielu jego właściwości. Zmiany, które można wprowadzić obejmują ustawienie pozycji minimalną i maksymalną dla suwaka, rysowania znaczniki ustawienie wybranego zakresu i położenia suwaka.  
   
  Aby uzyskać więcej informacji na temat używania `CSliderCtrl`, zobacz [formanty](../../mfc/controls-mfc.md) i [przy użyciu CSliderCtrl](../../mfc/using-csliderctrl.md).  
   
@@ -179,7 +179,7 @@ void ClearSel(BOOL bRedraw = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bRedraw`  
+ *bRedraw*  
  Narysuj element ponownie flagi. Jeśli ten parametr ma **TRUE**, suwak jest narysowany ponownie po wyboru jest wyczyszczone; w przeciwnym razie nie jest rysowane suwaka.  
   
 ##  <a name="cleartics"></a>  CSliderCtrl::ClearTics  
@@ -190,7 +190,7 @@ void ClearTics(BOOL bRedraw = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bRedraw`  
+ *bRedraw*  
  Narysuj element ponownie flagi. Jeśli ten parametr ma **TRUE**, suwak jest narysowany ponownie po znaczniki zostały wyczyszczone; w przeciwnym razie nie jest rysowane suwaka.  
   
 ##  <a name="create"></a>  CSliderCtrl::Create  
@@ -205,27 +205,27 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
+ *dwStyle*  
  Określa styl formantu suwaka. Zastosuj dowolną kombinację [style formantu suwaka](http://msdn.microsoft.com/library/windows/desktop/bb760147), które zostały opisane w zestawie SDK systemu Windows do formantu.  
   
- `rect`  
+ *Rect*  
  Określa rozmiar i położenie kontrolki suwaka. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Określa okno nadrzędne kontrolki suwaka, zwykle `CDialog`. Nie może być **NULL**.  
   
- `nID`  
+ *nID*  
  Określa identyfikator formantu suwaka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli inicjowanie zakończyło się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Możesz utworzyć `CSliderCtrl` w dwóch krokach. Najpierw należy wywołać konstruktora, a następnie wywołać **Utwórz**, która tworzy suwaka i dołącza go do `CSliderCtrl` obiektu.  
+ Możesz utworzyć `CSliderCtrl` w dwóch krokach. Najpierw należy wywołać konstruktora, a następnie wywołać `Create`, która tworzy suwaka i dołącza go do `CSliderCtrl` obiektu.  
   
  W zależności od wartości `dwStyle`, suwak może mieć orientacji pionowej lub poziomej. Znaczniki osi po obu stronach może mieć obu stronach lub nie. Można go również używane do określania zakresu kolejnych wartości.  
   
- Aby zastosować rozszerzone Style okna dla kontrolki suwaka, wywołaj [CreateEx](#createex) zamiast **Utwórz**.  
+ Aby zastosować rozszerzone Style okna dla kontrolki suwaka, wywołaj [CreateEx](#createex) zamiast `Create`.  
   
 ##  <a name="createex"></a>  CSliderCtrl::CreateEx  
  Tworzy kontrolkę (okno podrzędne) i kojarzy ją z `CSliderCtrl` obiektu.  
@@ -240,19 +240,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwExStyle`  
- Określa styl rozszerzony formantu tworzona. Aby uzyskać listę rozszerzone style systemu Windows, zobacz `dwExStyle` parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ *dwExStyle*  
+ Określa styl rozszerzony formantu tworzona. Aby uzyskać listę rozszerzone style systemu Windows, zobacz *dwExStyle* parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Określa styl formantu suwaka. Zastosuj dowolną kombinację [style formantu suwaka](http://msdn.microsoft.com/library/windows/desktop/bb760147), które zostały opisane w zestawie SDK systemu Windows do formantu.  
   
- `rect`  
- Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujące rozmiar i położenie okna, które ma zostać utworzony w współrzędne klienta `pParentWnd`.  
+ *Rect*  
+ Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujące rozmiar i położenie okna, które ma zostać utworzony w współrzędne klienta *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do okna, które jest elementem nadrzędnym formantu.  
   
- `nID`  
+ *nID*  
  Identyfikator formantu okna podrzędnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -276,7 +276,7 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `fLocation`  
+ *fLocation*  
  Wartość logiczna, która wskazuje, które dwóch buddy okna dojść do pobrania. Może to być jedna z następujących wartości:  
   
 - **Wartość TRUE,** pobiera dojścia do buddy po lewej stronie suwaka. Jeśli używa suwaka `TBS_VERT` styl komunikatu pobierze buddy powyżej suwaka.  
@@ -297,7 +297,7 @@ void GetChannelRect(LPRECT lprc) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lprc`  
+ *lprc*  
  Wskaźnik do [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który zawiera rozmiar i położenie kanału do ograniczenia prostokąt po powrocie z funkcji.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -359,14 +359,14 @@ void GetRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nMin`  
+ *nMin*  
  Odwołanie do liczba całkowita, która odbiera minimalna pozycji.  
   
- `nMax`  
+ *nMax*  
  Odwołanie do liczba całkowita, która odbiera maksymalną pozycji.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja skopiowanie wartości do liczb całkowitych, odwołuje się `nMin` i `nMax`.  
+ Ta funkcja skopiowanie wartości do liczb całkowitych, odwołuje się *nMin* i *nMax*.  
   
 ##  <a name="getrangemax"></a>  CSliderCtrl::GetRangeMax  
  Pobiera maksymalną położenie suwaka w kontrolce slider.  
@@ -398,10 +398,10 @@ void GetSelection(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nMin`  
+ *nMin*  
  Odwołanie do liczba całkowita, która odbiera pozycja początkowa bieżącego zaznaczenia.  
   
- `nMax`  
+ *nMax*  
  Odwołanie do liczba całkowita, która odbiera pozycji końcowej bieżącego zaznaczenia.  
   
 ##  <a name="getthumblength"></a>  CSliderCtrl::GetThumbLength  
@@ -425,7 +425,7 @@ void GetThumbRect(LPRECT lprc) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lprc`  
+ *lprc*  
  Wskaźnik do `CRect` obiekt, który zawiera prostokątem na suwaku, gdy funkcja zwraca wartość.  
   
 ##  <a name="gettic"></a>  CSliderCtrl::GetTic  
@@ -436,11 +436,11 @@ int GetTic(int nTic) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nTic`  
+ *nTic*  
  Liczony od zera indeks identyfikacji znacznika.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Pozycja określonego znacznika lub - 1, gdy `nTic` nie określa prawidłowego indeksu.  
+ Pozycja określonego znacznika lub - 1, gdy *nTic* nie określa prawidłowego indeksu.  
   
 ##  <a name="getticarray"></a>  CSliderCtrl::GetTicArray  
  Pobiera adres tablicę zawierającą położenie znaczników osi dla kontrolki suwaka.  
@@ -460,11 +460,11 @@ int GetTicPos(int nTic) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nTic`  
+ *nTic*  
  Liczony od zera indeks identyfikacji znacznika.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Fizyczny pozycja, we współrzędnych klienta określonego znacznika lub - 1, gdy `nTic` nie określa prawidłowego indeksu.  
+ Fizyczny pozycja, we współrzędnych klienta określonego znacznika lub - 1, gdy *nTic* nie określa prawidłowego indeksu.  
   
 ##  <a name="gettooltips"></a>  CSliderCtrl::GetToolTips  
  Pobiera dojścia do formantu tooltip przypisany do kontrolki suwaka, jeśli istnieje.  
@@ -491,10 +491,10 @@ CWnd* SetBuddy(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWndBuddy`  
+ *pWndBuddy*  
  Wskaźnik do `CWnd` obiekt, który zostanie ustawiony jako partner kontrolka suwaka.  
   
- `fLocation`  
+ *fLocation*  
  Wartość określający lokalizację, w której do wyświetlenia okna buddy. Ta wartość może być jedną z następujących czynności:  
   
 - **Wartość TRUE,** buddy pojawi się na lewo od elemencie trackbar, jeśli używa TrackBar — formant `TBS_HORZ` stylu. Jeśli używany w elemencie trackbar `TBS_VERT` styl buddy pojawia się powyżej TrackBar — formant.  
@@ -517,7 +517,7 @@ int SetLineSize(int nSize);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nSize`  
+ *nSize*  
  Nowy rozmiar wiersza suwaka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -534,7 +534,7 @@ int SetPageSize(int nSize);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nSize`  
+ *nSize*  
  Nowy rozmiar strony suwaka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -551,7 +551,7 @@ void SetPos(int nPos);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPos`  
+ *nPos*  
  Określa nowe położenie suwaka.  
   
 ##  <a name="setrange"></a>  CSliderCtrl::SetRange  
@@ -565,13 +565,13 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nMin`  
+ *nMin*  
  Minimalna pozycja suwaka.  
   
- `nMax`  
+ *nMax*  
  Maksymalna pozycja suwaka.  
   
- `bRedraw`  
+ *bRedraw*  
  Flaga ponownego rysowania. Jeśli ten parametr ma **TRUE**, suwak jest narysowany ponownie po ustawiono zakres; w przeciwnym razie nie jest rysowane suwaka.  
   
 ##  <a name="setrangemax"></a>  CSliderCtrl::SetRangeMax  
@@ -584,10 +584,10 @@ void SetRangeMax(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nMax`  
+ *nMax*  
  Maksymalna pozycja suwaka.  
   
- `bRedraw`  
+ *bRedraw*  
  Flaga ponownego rysowania. Jeśli ten parametr ma **TRUE**, suwak jest narysowany ponownie po ustawiono zakres; w przeciwnym razie nie jest rysowane suwaka.  
   
 ##  <a name="setrangemin"></a>  CSliderCtrl::SetRangeMin  
@@ -600,10 +600,10 @@ void SetRangeMin(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nMin`  
+ *nMin*  
  Minimalna pozycja suwaka.  
   
- `bRedraw`  
+ *bRedraw*  
  Flaga ponownego rysowania. Jeśli ten parametr ma **TRUE**, suwak jest narysowany ponownie po ustawiono zakres; w przeciwnym razie nie jest rysowane suwaka.  
   
 ##  <a name="setselection"></a>  CSliderCtrl::SetSelection  
@@ -616,10 +616,10 @@ void SetSelection(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nMin`  
+ *nMin*  
  Pozycja początkowa suwaka.  
   
- `nMax`  
+ *nMax*  
  Pozycja końcowa suwaka.  
   
 ##  <a name="setthumblength"></a>  CSliderCtrl::SetThumbLength  
@@ -633,7 +633,7 @@ void SetThumbLength(int nLength);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `nLength`|Długość suwak w pikselach.|  
+|[in] *nLength*|Długość suwak w pikselach.|  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wymaga, aby mieć ustawioną TrackBar — formant [TBS_FIXEDLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760147) stylu.  
@@ -658,7 +658,7 @@ BOOL SetTic(int nTic);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nTic`  
+ *nTic*  
  Pozycja znacznika. Ten parametr należy określić wartość dodatnią.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -688,11 +688,11 @@ int SetTipSide(int nLocation);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nLocation`  
+ *Nlokalizacja*  
  Wartość reprezentująca lokalizację, w której można wyświetlić formantu tooltip. Listę możliwych wartości wyświetlony komunikat Win32 [TBM_SETTIPSIDE](http://msdn.microsoft.com/library/windows/desktop/bb760240), zgodnie z opisem w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość, która reprezentuje poprzedniej lokalizacji formantu tooltip. Zwracana wartość jest równa jedną z możliwych wartości dla `nLocation`.  
+ Wartość, która reprezentuje poprzedniej lokalizacji formantu tooltip. Zwracana wartość jest równa jedną z możliwych wartości dla *Nlokalizacja*.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja członkowska implementuje zachowanie komunikatu Win32 **TBM_SETTIPSIDE**, zgodnie z opisem w zestawie Windows SDK. Określa zasady używające **TBS_TOOLTIPS** styl wyświetlania etykietek narzędzi. Opis elementu style formantu suwaka, zobacz [stylów formantu Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) w zestawie Windows SDK.  
@@ -705,7 +705,7 @@ void SetToolTips(CToolTipCtrl* pWndTip);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWndTip`  
+ *pWndTip*  
  Wskaźnik do [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) obiekt zawierający etykietki narzędzi, aby za pomocą suwaka.  
   
 ### <a name="remarks"></a>Uwagi  

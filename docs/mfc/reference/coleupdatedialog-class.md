@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54088de4c07f1c58656aad468160ef58f0e41398
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0208a24b69c1884d72c0ae525ce95b3d3258271
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373054"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079977"
 ---
 # <a name="coleupdatedialog-class"></a>Klasa COleUpdateDialog
 Używane dla przypadków specjalnych okna dialogowego OLE Edytuj łącza, który powinien być używany podczas należy zaktualizować tylko istniejące połączone lub obiekty osadzone w dokumencie.  
@@ -85,7 +85,7 @@ explicit COleUpdateDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDoc`  
+ *pDoc*  
  Wskazuje dokument zawierający łącza, które mogą wymagać aktualizacji.  
   
  *bUpdateLinks*  
@@ -94,7 +94,7 @@ explicit COleUpdateDialog(
  *bUpdateEmbeddings*  
  Flaga określająca, czy mają być aktualizowane osadzonych obiektów.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskazuje obiekt okna nadrzędnego lub właściciela (typu `CWnd`) do której należy obiektu okna dialogowego. Jeśli jest **NULL**, okno nadrzędne okna dialogowego zostanie ustawiona do okna głównego aplikacji.  
   
 ### <a name="remarks"></a>Uwagi  

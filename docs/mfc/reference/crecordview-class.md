@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3784bfd637c40f326a67807d0002fae66177ac37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d3d040f2da622cbfd6d1577729861917a5a03270
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373488"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079150"
 ---
 # <a name="crecordview-class"></a>CRecordView — klasa
 Widok, który wyświetla rekordów bazy danych w kontrolkach.  
@@ -109,10 +109,10 @@ explicit CRecordView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Zawiera zerem ciąg określający nazwę zasobu szablonu okna dialogowego.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Zawiera identyfikator zasobu szablonu okna dialogowego.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -124,7 +124,7 @@ explicit CRecordView(UINT nIDTemplate);
  **CRecordView::OnInitialUpdate** wywołania `UpdateData`, które wywołuje `DoDataExchange`. To wywołanie początkowej `DoDataExchange` łączy `CRecordView` (pośrednio) do kontrolki `CRecordset` utworzone przez ClassWizard elementy członkowskie danych pola. Te elementy członkowskie danych nie można użyć dopiero po wywołaniu metody klasy podstawowej **CFormView::OnInitialUpdate** funkcję elementu członkowskiego.  
   
 > [!NOTE]
->  Jeśli używasz ClassWizard, Kreator definiuje `enum` wartość `CRecordView::IDD`określa go w deklaracji klasy i używa go na liście inicjowanie elementu członkowskiego dla konstruktora.  
+>  Jeśli używasz ClassWizard, Kreator definiuje **wyliczenia** wartość `CRecordView::IDD`określa go w deklaracji klasy i używa go na liście inicjowanie elementu członkowskiego dla konstruktora.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDatabase#32](../../mfc/codesnippet/cpp/crecordview-class_1.cpp)]  
@@ -158,7 +158,7 @@ BOOL IsOnLastRecord();
  Ta funkcja jest przydatna do zapisywania własnych implementacji domyślnej programy obsługi aktualizacji poleceń, które ClassWizard zapisuje do obsługi interfejsu użytkownika do przechodzenia między rekordami.  
   
 > [!CAUTION]
->  Wynik tej funkcji jest niezawodne, z wyjątkiem tego widoku nie może wykryć koniec zestawu rekordów, dopóki użytkownik został przeniesiony poza jej. Użytkownik musi przenieść poza ostatni rekord przed widoku rekordu można określić, czy należy wyłączyć wszystkie obiekty interfejsu użytkownika do przechodzenia do następnego lub ostatniego rekordu. Jeśli użytkownik przenosi poza ostatniego rekordu, a następnie jest przenoszony do ostatniego rekordu (lub przed nim), widoku rekordu można śledzić położenie użytkownika w zestawie rekordów i poprawnie wyłączyć obiekty interfejsu użytkownika. `IsOnLastRecord` jest również zawodnych po wywołaniu funkcji implementacji **OnRecordLast**, która obsługuje `ID_RECORD_LAST` polecenia, lub `CRecordset::MoveLast`.  
+>  Wynik tej funkcji jest niezawodne, z wyjątkiem tego widoku nie może wykryć koniec zestawu rekordów, dopóki użytkownik został przeniesiony poza jej. Użytkownik musi przenieść poza ostatni rekord przed widoku rekordu można określić, czy należy wyłączyć wszystkie obiekty interfejsu użytkownika do przechodzenia do następnego lub ostatniego rekordu. Jeśli użytkownik przenosi poza ostatniego rekordu, a następnie jest przenoszony do ostatniego rekordu (lub przed nim), widoku rekordu można śledzić położenie użytkownika w zestawie rekordów i poprawnie wyłączyć obiekty interfejsu użytkownika. `IsOnLastRecord` jest również zawodnych po wywołaniu funkcji implementacji `OnRecordLast`, która obsługuje `ID_RECORD_LAST` polecenia, lub `CRecordset::MoveLast`.  
   
 ##  <a name="ongetrecordset"></a>  CRecordView::OnGetRecordset  
  Zwraca wskaźnik do `CRecordset`-pochodnych obiekt skojarzony z widokiem rekordów.  
@@ -171,7 +171,7 @@ virtual CRecordset* OnGetRecordset() = 0;
  Wskaźnik do `CRecordset`-pochodnych obiektu, jeśli obiekt został pomyślnie utworzony; w przeciwnym razie **NULL** wskaźnika.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę funkcję elementu członkowskiego, utworzyć lub uzyskać obiekty zestawów rekordów i zwraca wskaźnik do niego. Deklarowanie klasy widoków rekordów z ClassWizard kreator zapisuje zastąpienie domyślnego dla Ciebie. W ClassWizard Domyślna implementacja zwraca wskaźnik rekordów przechowywane w widoku rekordu, jeśli taka istnieje. Jeśli nie, jego tworzy obiekt zestaw rekordów typu określono wywołań i ClassWizard jego **Otwórz** element członkowski funkcji można otworzyć tabeli, lub uruchomić zapytanie, a następnie zwraca wskaźnik do obiektu.  
+ Należy przesłonić tę funkcję elementu członkowskiego, utworzyć lub uzyskać obiekty zestawów rekordów i zwraca wskaźnik do niego. Deklarowanie klasy widoków rekordów z ClassWizard kreator zapisuje zastąpienie domyślnego dla Ciebie. W ClassWizard Domyślna implementacja zwraca wskaźnik rekordów przechowywane w widoku rekordu, jeśli taka istnieje. Jeśli nie, jego tworzy obiekt zestaw rekordów typu określono wywołań i ClassWizard jego `Open` element członkowski funkcji można otworzyć tabeli, lub uruchomić zapytanie, a następnie zwraca wskaźnik do obiektu.  
   
  Aby uzyskać dodatkowe informacje i przykłady, zobacz artykuł [widoków rekordów: Używanie widoku rekordu](../../data/using-a-record-view-mfc-data-access.md).  
   
@@ -198,7 +198,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  Różna od zera, jeśli przeniesienie zakończyło się pomyślnie; w przeciwnym razie 0, jeśli żądanie przeniesienia zostało odrzucone.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja wywołuje odpowiednie **Przenieś** funkcji członkowskiej klasy `CRecordset` obiekt skojarzony z widokiem rekordów.  
+ Domyślna implementacja wywołuje odpowiednie `Move` funkcji członkowskiej klasy `CRecordset` obiekt skojarzony z widokiem rekordów.  
   
  Domyślnie `OnMove` aktualizacji bieżącego rekordu w źródle danych, jeśli użytkownik zmienił się on w widoku rekordu.  
   
@@ -207,7 +207,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  Po przeniesieniu poza ostatni rekord w zestawie rekordów widoku rekordu jest nadal wyświetlana ostatniego rekordu. Po przeniesieniu poza pierwszy rekord wstecz widoku rekordu jest nadal wyświetlana pierwszy rekord.  
   
 > [!CAUTION]
->  Wywoływanie `OnMove` zgłasza wyjątek, jeśli zestaw nie zawiera żadnych rekordów. Wywołanie funkcji obsługi aktualizacji interfejsu odpowiedniego użytkownika — **OnUpdateRecordFirst**, **OnUpdateRecordLast**, **OnUpdateRecordNext**, lub  **OnUpdateRecordPrev** — przed odpowiednich operacji przenoszenia w celu określenia, czy zestaw rekordów zawiera rekordy.  
+>  Wywoływanie `OnMove` zgłasza wyjątek, jeśli zestaw nie zawiera żadnych rekordów. Wywołanie funkcji obsługi aktualizacji interfejsu odpowiedniego użytkownika — `OnUpdateRecordFirst`, `OnUpdateRecordLast`, `OnUpdateRecordNext`, lub `OnUpdateRecordPrev` — przed odpowiednich operacji przenoszenia w celu określenia, czy zestaw rekordów zawiera rekordy.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CFormView](../../mfc/reference/cformview-class.md)   

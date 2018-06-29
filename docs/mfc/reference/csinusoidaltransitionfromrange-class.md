@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09c302ec414e26c71d8989bb6d624314c8eb6db4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 646878a1cfd77dd61fbb854512c56512083ff609
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370210"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078686"
 ---
 # <a name="csinusoidaltransitionfromrange-class"></a>Klasa CSinusoidalTransitionFromRange
 Hermetyzuje z danego zakresu oscylacji przejście sinusoidalnego zakresu.  
@@ -93,7 +93,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pLibrary`  
+ *pLibrary*  
  Wskaźnik do przejścia biblioteki, która odpowiada za tworzenie przejścia standardowe.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -112,19 +112,19 @@ CSinusoidalTransitionFromRange(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `duration`  
+ *Czas trwania*  
  Czas trwania przejścia.  
   
- `dblMinimumValue`  
+ *dblMinimumValue*  
  Wartość zmiennej animacji na rynience sinusoidalnego wave.  
   
- `dblMaximumValue`  
+ *dblMaximumValue*  
  Wartość zmiennej animacji w piku sinusoidalnego wave.  
   
- `period`  
+ *Okres*  
  Okres oscylacji sinusoidalnego wave w sekundach.  
   
- `slope`  
+ *kąt nachylenia*  
  Kąt nachylenia w chwili rozpoczęcia przejścia.  
   
 ##  <a name="m_dblmaximumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMaximumValue  

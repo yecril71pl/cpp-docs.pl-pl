@@ -151,12 +151,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 71399d254b2b47b33959695a00227e316c04a008
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: a494993eea8a82307243ee1a05b92212dd4cb216
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305803"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079841"
 ---
 # <a name="algorithm-stlclr"></a>algorithm (STL/CLR)
 Definiuje funkcje szablonu kontenera STL/CLR, wykonujących algorytmów.  
@@ -172,7 +172,7 @@ Definiuje funkcje szablonu kontenera STL/CLR, wykonujących algorytmów.
   
  **Namespace:** cliext  
     
-## <a name="functions"></a>Funkcje  
+## <a name="declarations"></a>Deklaracje  
   
 |Funkcja|Opis|  
 |--------------|-----------------|  
@@ -243,6 +243,7 @@ Definiuje funkcje szablonu kontenera STL/CLR, wykonujących algorytmów.
 |[unique_copy (STL/CLR)](#unique_copy)|Kopiuje elementy z zakresu źródłowego do zakresu docelowego z wyjątkiem zduplikowanych elementów, które ze sobą sąsiadują.|  
 |[upper_bound (STL/CLR)](#upper_bound)|Znajduje pozycję pierwszego elementu w uporządkowanym zakresie, który ma wartość większą niż określona wartość, gdzie kryterium sortowania może być określone przez predykat binarny.|  
  
+## <a name="members"></a>Elementy członkowskie
 
 ## <a name="adjacent_find"></a> adjacent_find — (STL/CLR)
 Wyszukuje dwa sąsiadujące elementy, które są równe lub spełniają określony warunek.  

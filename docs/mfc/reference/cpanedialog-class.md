@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36f620f0a29e7d1715e7cb5bfb83c0685f97f643
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 022fe884f611eb5bc3254ef23c7078280e2a1046
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374943"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078546"
 ---
 # <a name="cpanedialog-class"></a>Klasa CPaneDialog
 `CPaneDialog` Klasa obsługuje okno dialogowe niemodalne, dokującego.  
@@ -58,7 +58,7 @@ class CPaneDialog : public CDockablePane
 |`CPaneDialog::OnEraseBkgnd`|Obsługuje [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) wiadomości. (Ponownie definiuje [CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd).)|  
 |`CPaneDialog::OnLButtonDblClk`|Obsługuje [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) wiadomości. (Ponownie definiuje [CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk).)|  
 |`CPaneDialog::OnLButtonDown`|Obsługuje [WM_LBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645607) wiadomości. (Ponownie definiuje [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown).)|  
-|`CPaneDialog::OnUpdateCmdUI`|Wywoływane przez platformę, by zaktualizować okno dialogowe. (Przesłania [CDockablePane::OnUpdateCmdUI](http://msdn.microsoft.com/en-us/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
+|`CPaneDialog::OnUpdateCmdUI`|Wywoływane przez platformę, by zaktualizować okno dialogowe. (Przesłania [CDockablePane::OnUpdateCmdUI](http://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
 |`CPaneDialog::OnWindowPosChanging`|Obsługuje [WM_WINDOWPOSCHANGING](http://msdn.microsoft.com/library/windows/desktop/ms632653) wiadomości. (Ponownie definiuje [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging).)|  
 |[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|Określa szablon dla okna dialogowego, który jest kontenerze formantów OLE.|  
   
@@ -122,31 +122,31 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszWindowName`  
+ [in] *lpszWindowName*  
  Nazwa okna dialogowego dokowania.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Wskazuje okno nadrzędne.  
   
- [in] `bHasGripper`  
+ [in] *bHasGripper*  
  `TRUE` Aby utworzyć okno dialogowe dokowania z tekstem (uchwytu); w przeciwnym razie `FALSE`.  
   
- [in] `lpszTemplateName`  
+ [in] *lpszTemplateName*  
  Nazwa zasobu szablonu okna dialogowego.  
   
- [in] `nStyle`  
+ [in] *nStyle*  
  Styl systemu Windows.  
   
- [in] `nID`  
+ [in] *nID*  
  Identyfikator formantu.  
   
- [in] `nIDTemplate`  
+ [in] *nIDTemplate*  
  Identyfikator zasobu szablonu okna dialogowego.  
   
- [in] `dwTabbedStyle`  
+ [in] *dwTabbedStyle*  
  Styl okna karty wyników, gdy użytkownik przeciąga innego panelu sterowania na podpis w tym okienku formantu. Wartość domyślna to `AFX_CBRS_REGULAR_TABS`. Aby uzyskać więcej informacji, zobacz sekcję uwag [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) metody.  
   
- [in] `dwControlBarStyle`  
+ [in] *dwControlBarStyle*  
  Styl dodatkowe atrybuty. Wartość domyślna to `AFX_DEFAULT_DOCKING_PANE_STYLE`. Aby uzyskać więcej informacji, zobacz sekcję uwag [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) metody.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -170,14 +170,14 @@ afx_msg LRESULT HandleInitDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `wParam`  
+ [in] *wParam*  
  Dojście do formantu, który ma fokus klawiatury domyślne.  
   
- [in] `lParam`  
+ [in] *lParam*  
  Określa dodatkowe inicjowania danych.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `FALSE`. Ponadto `TRUE` Ustawia fokus klawiatury do kontrolki określony przez `wParam` parametru; `FALSE` uniemożliwia ustawienie domyślne fokus klawiatury.  
+ `TRUE` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `FALSE`. Ponadto `TRUE` Ustawia fokus klawiatury do kontrolki określony przez *wParam* parametru; `FALSE` uniemożliwia ustawienie domyślne fokus klawiatury.  
   
 ### <a name="remarks"></a>Uwagi  
  Platformę używa tej metody można zainicjować kontrolek i wyglądu w oknie dialogowym. Struktura wywołuje tę metodę, przed wyświetleniem okna dialogowego.  
@@ -190,7 +190,7 @@ virtual BOOL SetOccDialogInfo(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pOccDialogInfo`  
+ [in] *pOccDialogInfo*  
  Wskaźnik do szablonu okno dialogowe, który służy do tworzenia obiektu okno dialogowe. Wartość tego parametru jest następnie przekazywane do [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) metody.  
   
 ### <a name="return-value"></a>Wartość zwracana  

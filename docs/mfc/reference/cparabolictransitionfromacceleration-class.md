@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02cf84f2774a10ec0ca2751dbeffd4eb3c52e8a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f54f600e9a98304f1113c6e9e22389f6c974a80
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370978"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078898"
 ---
 # <a name="cparabolictransitionfromacceleration-class"></a>Klasa CParabolicTransitionFromAcceleration
 Hermetyzuje przejścia paraboliczne przyspieszenia.  
@@ -88,13 +88,13 @@ CParabolicTransitionFromAcceleration(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dblFinalValue`  
+ *dblFinalValue*  
  Wartość zmiennej animacji na końcu przejścia.  
   
- `dblFinalVelocity`  
+ *dblFinalVelocity*  
  Prędkość animacji zmiennej na końcu przejścia.  
   
- `dblAcceleration`  
+ *dblAcceleration*  
  Akceleracja zmiennej animacji podczas przejścia.  
   
 ##  <a name="create"></a>  CParabolicTransitionFromAcceleration::Create  
@@ -107,7 +107,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pLibrary`  
+ *pLibrary*  
  Wskaźnik do przejścia biblioteki, która odpowiada za tworzenie przejścia standardowe.  
   
 ### <a name="return-value"></a>Wartość zwracana  

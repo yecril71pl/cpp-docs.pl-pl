@@ -107,12 +107,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c5be90e57d558ba2dcceb3965d1cc1474dcaf463
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 693d4f8b8f0e7271a4c1f7df9931e0a85e57c332
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305881"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079723"
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
 Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp dwukierunkowego. Użyj kontenera `multimap` do zarządzania sekwencję elementów jako drzewo uporządkowanej zrównoważony (prawie) węzły, każdy przechowywania jeden element. Element składa się z kluczem porządkowania sekwencji i zmapowane wartość, która dotyczy jazdy.  
@@ -127,7 +127,7 @@ Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych dług
   
  `GMapped` jest taka sama jak `Mapped` o ile nie jest typu ref, w którym to przypadku jest `Mapped^`  
   
-### <a name="syntax"></a>Składnia  
+## <a name="syntax"></a>Składnia  
   
 ```  
 template<typename Key,  
@@ -144,11 +144,11 @@ template<typename Key,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  Key  
  Typ części klucza elementu w kontrolowanej sekwencji.  
   
- zamapowane  
+ Zamapowane  
  Typ składnika dodatkowe elementu w kontrolowanej sekwencji.  
   
 ## <a name="requirements"></a>Wymagania  
@@ -222,7 +222,7 @@ template<typename Key,
 |<xref:System.Collections.Generic.ICollection%601>|Obsługa grupę elementów typu.|  
 |ITree\<klucza, wartość >|Obsługa ogólnego kontenera.|  
   
-### <a name="remarks"></a>Uwagi  
+## <a name="remarks"></a>Uwagi  
  Obiekt przydziela i zwalnia magazynu w sekwencji, które kontroluje jako poszczególnych węzłach. Elementy do wstawienia w drzewie zrównoważony (prawie) zapewnia uporządkowanych, zmieniając łącza między węzłami, nigdy nie, kopiując zawartość z jednego węzła do innego. Oznacza to, można wstawiać i usuwanie elementów za darmo, bez zakłóceń pozostałe elementy.  
   
  Obiekt porządkuje sekwencji kontroluje przez wywołanie metody typu obiektu delegowanego przechowywanych [multimap::key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md). Można określić obiektu delegowanego przechowywanych podczas konstruowania multimap; Jeśli określisz ma obiektu delegowanego, wartość domyślna to porównanie `operator<(key_type, key_type)`. Dostęp do tego obiektu przechowywanych przez wywołanie funkcji Członkowskich [multimap::key_comp (STL/CLR)](../dotnet/multimap-key-comp-stl-clr.md)`()`.  

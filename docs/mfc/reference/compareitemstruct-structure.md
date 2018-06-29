@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a94d39c6b6c256444cd2850f7e55a7e4b87f6d7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a54b4f4749e7865d793559a9cb5f475c1d57898
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368634"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078261"
 ---
 # <a name="compareitemstruct-structure"></a>Struktura COMPAREITEMSTRUCT
 `COMPAREITEMSTRUCT` Struktury dostarcza identyfikatorów i aplikacja dostarczona danych dla dwóch elementów w polu posortowana lista rysowanych przez właściciela lub pola kombi.  
@@ -41,13 +41,13 @@ typedef struct tagCOMPAREITEMSTRUCT {
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `CtlType`  
+ *CtlType*  
  **ODT_LISTBOX** (który określa rysowania przez właściciela pole listy) lub **ODT_COMBOBOX** (który określa rysowania przez właściciela pole kombi).  
   
- `CtlID`  
+ *CtlID*  
  Identyfikator formantu pole listy lub pola kombi.  
   
- `hwndItem`  
+ *hwndItem*  
  Uchwyt okna formantu.  
   
  *itemID1*  
@@ -63,7 +63,7 @@ typedef struct tagCOMPAREITEMSTRUCT {
  Dane dostarczone przez aplikację drugiego elementu porównywane. Ta wartość została przekazana wywołania dodania elementu do pola kombi lub listy.  
   
 ## <a name="remarks"></a>Uwagi  
- Zawsze, gdy aplikacja dodaje nowy element pole listy rysowane przez właściciela lub pola kombi utworzone za pomocą **cbs_sort —** lub **lbs_sort —** stylu, system Windows wysyła właściciela `WM_COMPAREITEM` wiadomości. `lParam` Parametr wiadomości zawiera długi wskaźnik do `COMPAREITEMSTRUCT` struktury. Po otrzymaniu komunikatu, właściciel porównuje dwa elementy i zwraca wartość wskazującą, który element sortuje przed innych.  
+ Zawsze, gdy aplikacja dodaje nowy element pole listy rysowane przez właściciela lub pola kombi utworzone za pomocą **cbs_sort —** lub **lbs_sort —** stylu, system Windows wysyła właściciela WM_COMPAREITEM wiadomości. *LParam* parametr wiadomości zawiera długi wskaźnik do `COMPAREITEMSTRUCT` struktury. Po otrzymaniu komunikatu, właściciel porównuje dwa elementy i zwraca wartość wskazującą, który element sortuje przed innych.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** winuser.h  

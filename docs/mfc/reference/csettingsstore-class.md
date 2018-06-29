@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5ed7d1dad634d330ac857f52d6ef35ef36c9c9a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7711e0105085f0b7af1344ce230839e90f2b6851
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376896"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079491"
 ---
 # <a name="csettingsstore-class"></a>Klasa CSettingsStore
 Opakowuje funkcje interfejsu API systemu Windows, zapewniając zorientowane obiektowo interfejs, który umożliwia uzyskiwanie dostępu do rejestru.  
@@ -102,14 +102,14 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pszPath`  
+ [in] *pszPath*  
  Określa nazwę klucza do utworzenia lub otwarcia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  0 w przypadku powodzenia; w przeciwnym razie wartość różną od zera.  
   
 ### <a name="remarks"></a>Uwagi  
- `CreateKey` używa `m_hKey` jako katalog główny rejestru zapytania. Wyszukuje `pszPath` jako podklucz `m_hKey`. Jeśli klucz nie istnieje, `CreateKey` tworzy go. W przeciwnym razie zostanie otwarty klucza. `CreateKey` następnie ustawia `m_hKey` do klucza utworzone lub otwarte.  
+ `CreateKey` używa `m_hKey` jako katalog główny rejestru zapytania. Wyszukuje *pszPath* jako podklucz `m_hKey`. Jeśli klucz nie istnieje, `CreateKey` tworzy go. W przeciwnym razie zostanie otwarty klucza. `CreateKey` następnie ustawia `m_hKey` do klucza utworzone lub otwarte.  
   
 ##  <a name="csettingsstore"></a>  CSettingsStore::CSettingsStore  
  Tworzy `CSettngsStore` obiektu.  
@@ -121,16 +121,16 @@ CSettingsStore(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bAdmin`  
+ [in] *bŚcieżka*  
  Parametrów typu Boolean określającą czy `CSettingsStore` obiektu działa w trybie administratora.  
   
- [in] `bReadOnly`  
+ [in] *bReadOnly*  
  Parametrów typu Boolean określającą czy `CSettingsStore` obiekt jest tworzony w trybie tylko do odczytu.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `bAdmin` ustawiono `true`, `m_hKey` ustawiono zmiennej członkowskiej `HKEY_LOCAL_MACHINE`. Jeśli ustawisz `bAdmin` do `false`, `m_hKey` ma ustawioną wartość `HKEY_CURRENT_USER`.  
+ Jeśli *bŚcieżka* ustawiono `true`, `m_hKey` ustawiono zmiennej członkowskiej `HKEY_LOCAL_MACHINE`. Jeśli ustawisz *bŚcieżka* do `false`, `m_hKey` ma ustawioną wartość `HKEY_CURRENT_USER`.  
   
- Zabezpieczenia dostępu jest zależna od `bReadOnly` parametru. Jeśli `bReadonly` jest `false`, zabezpieczenia dostępu zostaną ustawione na `KEY_ALL_ACCESS`. Jeśli `bReadyOnly` jest `true`, zabezpieczenia dostępu zostaną ustawione na kombinacji `KEY_QUERY_VALUE, KEY_NOTIFY` i `KEY_ENUMERATE_SUB_KEYS`. Aby uzyskać więcej informacji o dostępie wraz z rejestru, zobacz [zabezpieczeń klucza rejestru i prawa dostępu](http://msdn.microsoft.com/library/windows/desktop/ms724878).  
+ Zabezpieczenia dostępu jest zależna od *bReadOnly* parametru. Jeśli *bReadonly* jest `false`, zabezpieczenia dostępu zostaną ustawione na `KEY_ALL_ACCESS`. Jeśli *bReadyOnly* jest `true`, zabezpieczenia dostępu zostaną ustawione na kombinacji `KEY_QUERY_VALUE, KEY_NOTIFY` i `KEY_ENUMERATE_SUB_KEYS`. Aby uzyskać więcej informacji o dostępie wraz z rejestru, zobacz [zabezpieczeń klucza rejestru i prawa dostępu](http://msdn.microsoft.com/library/windows/desktop/ms724878).  
   
  Destruktor dla elementu `CSettingsStore` zwalnia `m_hKey` automatycznie.  
   
@@ -144,10 +144,10 @@ virtual BOOL DeleteKey(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pszPath`  
+ [in] *pszPath*  
  Nazwa klucza do usunięcia.  
   
- [in] `bAdmin`  
+ [in] *bŚcieżka*  
  Przełącznik, który określa lokalizację klucza do usunięcia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -156,7 +156,7 @@ virtual BOOL DeleteKey(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda zakończy się niepowodzeniem, jeśli `CSettingsStore` obiekt jest w trybie tylko do odczytu.  
   
- Jeśli parametr `bAdmin` wynosi zero, `DeleteKey` wyszukuje klucz do usunięcia w obszarze `HKEY_CURRENT_USER`. Jeśli `bAdmin` jest różna od zera, `DeleteKey` wyszukuje klucz do usunięcia w obszarze `HKEY_LOCAL_MACHINE`.  
+ Jeśli parametr *bŚcieżka* wynosi zero, `DeleteKey` wyszukuje klucz do usunięcia w obszarze `HKEY_CURRENT_USER`. Jeśli *bŚcieżka* jest różna od zera, `DeleteKey` wyszukuje klucz do usunięcia w obszarze `HKEY_LOCAL_MACHINE`.  
   
 ##  <a name="deletevalue"></a>  CSettingsStore::DeleteValue  
  Usuwa wartość z zakresu od `m_hKey`.  
@@ -166,7 +166,7 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pszValue`  
+ [in] *pszValue*  
  Określa pole wartości do usunięcia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -180,7 +180,7 @@ virtual BOOL Open(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pszPath`  
+ [in] *pszPath*  
  Nazwa klucza rejestru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -265,59 +265,59 @@ virtual BOOL Read(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pszKey`  
+ [in] *pszKey*  
  Wskaźnik do zerem ciąg, który zawiera nazwę wartości, które można odczytać z rejestru.  
   
- [out] `iVal`  
+ [out] *iVal*  
  Odwołanie do zmiennej liczba całkowita, która otrzymuje wartość odczytać z klucza rejestru.  
   
- [out] `dwVal`  
+ [out] *dwVal*  
  Odwołanie do zmiennej 32-bitowe o podwójnej precyzji word, który odbiera wartość odczytać z klucza rejestru.  
   
- [out] `sVal`  
+ [out] *sVal*  
  Odwołanie do zmiennej ciągu, który odbiera wartość odczytać z klucza rejestru.  
   
- [out] `scStringList`  
+ [out] *scStringList*  
  Odwołanie do zmiennej listy ciąg, który odbiera wartość odczytać z klucza rejestru.  
   
- [out] `scArray`  
+ [out] *scArray*  
  Odwołanie do zmiennej tablicy ciąg, który odbiera wartość odczytać z klucza rejestru.  
   
- [out] `dwcArray`  
+ [out] *dwcArray*  
  Odwołanie do zmiennej tablicy 32-bitowe o podwójnej precyzji word, który odbiera wartość odczytać z klucza rejestru.  
   
- [out] `wcArray`  
+ [out] *wcArray*  
  Odwołanie do zmiennej tablicy word 16-bitowych, która otrzymuje wartość odczytać z klucza rejestru.  
   
- [out] `bcArray`  
+ [out] *bcArray*  
  Odwołanie do zmiennej tablicy typu byte, która otrzymuje wartość odczytać z klucza rejestru.  
   
- [out] `lpPoint`  
+ [out] *lppoint —*  
  Odwołanie do wskaźnika do `POINT` odczytać struktury, która otrzymuje wartość z klucza rejestru.  
   
- [out] `rect`  
+ [out] *rect*  
  Odwołanie do [CRect](../../atl-mfc-shared/reference/crect-class.md) zmienna, która odbiera wartość odczytać z klucza rejestru.  
   
- [out] `ppData`  
+ [out] *ppData*  
  Wskaźnik na wskaźnik do danych, który odbiera wartość odczytu z klucza rejestru.  
   
- [out] `pBytes`  
- Wskaźnik do zmiennej liczby całkowitej bez znaku. Ta zmienna odbiera rozmiar buforu który `ppData` wskazuje.  
+ [out] *pBytes*  
+ Wskaźnik do zmiennej liczby całkowitej bez znaku. Ta zmienna odbiera rozmiar buforu który *ppData* wskazuje.  
   
- [out] `list`  
+ [out] *listy*  
  Odwołanie do [CObList](../../mfc/reference/coblist-class.md) zmienna, która odbiera wartość odczytać z klucza rejestru.  
   
- [out] `obj`  
+ [out] *obj.*  
  Odwołanie do [CObject](../../mfc/reference/cobject-class.md) zmienna, która odbiera wartość odczytać z klucza rejestru.  
   
- [out] `pObj`  
+ [out] *pObj*  
  Odwołanie do wskaźnika do `CObject` zmienna, która odbiera wartość odczytać z klucza rejestru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- `Read` sprawdza, czy `pszKey` jako podklucz `m_hKey`.  
+ `Read` sprawdza, czy *pszKey* jako podklucz `m_hKey`.  
   
 ##  <a name="write"></a>  CSettingsStore::Write  
  Zapisuje wartość rejestru w kluczu otwarte.  
@@ -395,59 +395,59 @@ virtual BOOL Write(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pszKey`  
+ [in] *pszKey*  
  Wskaźnik do ciągu zawierającego nazwę wartość do ustawienia.  
   
- [in] `iVal`  
+ [in] *iVal*  
  Odwołanie do zmiennej liczba całkowita, która zawiera dane, które mają być przechowywane.  
   
- [in] `dwVal`  
+ [in] *dwVal*  
  Odwołanie do zmiennej 32-bitowe o podwójnej precyzji word, która zawiera dane, które mają być przechowywane.  
   
- [in] `pszVal`  
+ [in] *pszVal*  
  Wskaźnik do zmiennej ciągu zakończonego wartością null, która zawiera dane, które mają być przechowywane.  
   
- [in] `scStringList`  
+ [in] *scStringList*  
  Odwołanie do [CStringList](../../mfc/reference/cstringlist-class.md) zmienna, która zawiera dane, które mają być przechowywane.  
   
- [in] `bcArray`  
+ [in] *bcArray*  
  Odwołanie do zmiennej tablicy typu byte, która zawiera dane, które mają być przechowywane.  
   
- [in] `scArray`  
+ [in] *scArray*  
  Odwołanie do zmiennej tablicy ciągów, która zawiera dane, które mają być przechowywane.  
   
- [in] `dwcArray`  
+ [in] *dwcArray*  
  Odwołanie do zmiennej tablicy 32-bitowe o podwójnej precyzji word, która zawiera dane, które mają być przechowywane.  
   
- [in] `wcArray`  
+ [in] *wcArray*  
  Odwołanie do zmiennej tablicy word 16-bitowego, która zawiera dane, które mają być przechowywane.  
   
- [in] `rect`  
+ [in] *rect*  
  Odwołanie do [CRect](../../atl-mfc-shared/reference/crect-class.md) zmienna, która zawiera dane, które mają być przechowywane.  
   
- [in] `lpPoint`  
+ [in] *lppoint —*  
  Odwołanie do wskaźnika do `POINT` zmienna, która zawiera dane, które mają być przechowywane.  
   
- [in] `pData`  
+ [in] *pData*  
  Wskaźnik do buforu, który zawiera dane, które mają być przechowywane.  
   
- [in] `nBytes`  
- Określa rozmiar w bajtach danych, do których `pData` punktów parametru.  
+ [in] *nBytes*  
+ Określa rozmiar w bajtach danych, do których *pData* punktów parametru.  
   
- [in] `list`  
+ [in] *listy*  
  Odwołanie do [CObList](../../mfc/reference/coblist-class.md) zmienna, która zawiera dane, które mają być przechowywane.  
   
- [in] `obj`  
+ [in] *obj.*  
  Odwołanie do [CObject](../../mfc/reference/cobject-class.md) zmienna, która zawiera dane, które mają być przechowywane.  
   
- [in] `pObj`  
+ [in] *pObj*  
  Wskaźnik na wskaźnik do `CObject` zmienna, która zawiera dane, które mają być przechowywane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `TRUE` w przypadku powodzenia; w przeciwnym razie `FALSE`.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby można było zapisać w rejestrze, należy ustawić `bReadOnly` jako wartość niezerową, podczas tworzenia [CSettingsStore](../../mfc/reference/csettingsstore-class.md) obiektu. Aby uzyskać więcej informacji, zobacz [CSettingsStore::CSettingsStore](#csettingsstore).  
+ Aby można było zapisać w rejestrze, należy ustawić *bReadOnly* jako wartość niezerową, podczas tworzenia [CSettingsStore](../../mfc/reference/csettingsstore-class.md) obiektu. Aby uzyskać więcej informacji, zobacz [CSettingsStore::CSettingsStore](#csettingsstore).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

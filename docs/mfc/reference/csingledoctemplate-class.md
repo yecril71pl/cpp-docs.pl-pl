@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 413b7b4a7cf11ff7e83596ecc61423d4bc4f0358
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: efdd8f5b806b7e5745aed0091a2638c8592a6ecc
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371624"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079068"
 ---
 # <a name="csingledoctemplate-class"></a>Klasa CSingleDocTemplate
 Definiuje szablonu dokumentu, który implementuje interfejs pojedynczego dokumentu (SDI).  
@@ -45,7 +45,7 @@ class CSingleDocTemplate : public CDocTemplate
   
  Szablon dokumentu definiuje relację między trzy typy klas:  
   
--   Klasy dokumentów, który pochodzi od **CDocument**.  
+-   Klasy dokumentów, który pochodzi od `CDocument`.  
   
 -   Klasy widoku, która zawiera dane z klasy dokumentu wymienionych powyżej. Można pochodzi ta klasa z `CView`, `CScrollView`, `CFormView`, lub `CEditView`. (Można również użyć `CEditView` bezpośrednio.)  
   
@@ -81,7 +81,7 @@ CSingleDocTemplate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDResource`  
+ *nIDResource*  
  Określa identyfikator zasoby używane do typu dokumentu. Może to obejmować menu, ikona tabeli akceleratora i zasoby ciągów.  
   
  Zasób ciągu składa się z maksymalnie siedem podciągów oddzielone znakiem "\n" (znak "\n" jest potrzebny jako symbol zastępczy, jeśli nie dołączono podciągu jednak znakami "\n" nie są konieczne); te podciągów opisu typu dokumentu. Aby uzyskać informacje o podciągów, zobacz [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Ten zasób ciągu znajduje się w pliku zasobów aplikacji. Na przykład:  
@@ -100,13 +100,13 @@ CSingleDocTemplate(
   
  Aby uzyskać więcej informacji na temat tych typów zasobów, zobacz [edytor ciągów](../../windows/string-editor.md).  
   
- `pDocClass`  
- Wskazuje `CRuntimeClass` obiekt klasy dokumentu. Ta klasa jest **CDocument**-klasy definiowane w celu odzwierciedlenia dokumentów.  
+ *pDocClass*  
+ Wskazuje `CRuntimeClass` obiekt klasy dokumentu. Ta klasa jest `CDocument`-klasy definiowane w celu odzwierciedlenia dokumentów.  
   
- `pFrameClass`  
+ *pFrameClass*  
  Wskazuje `CRuntimeClass` obiekt klasy ramki okna. Ta klasa może być `CFrameWnd`-klasy lub może być `CFrameWnd` sam Jeśli domyślne zachowanie dla użytkownika głównego okna ramowego.  
   
- `pViewClass`  
+ *pViewClass*  
  Wskazuje `CRuntimeClass` obiekt klasy widoku. Ta klasa jest `CView`-klasy zdefiniuj do wyświetlania dokumentów.  
   
 ### <a name="remarks"></a>Uwagi  

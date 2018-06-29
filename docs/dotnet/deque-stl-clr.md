@@ -108,12 +108,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ec92f1fcda75c8d632ea2c5a8f66583d960c744a
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 881db763518f31d9682ba050e460d4a3f7b39317
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305868"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079828"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp losowy. Użyj kontenera `deque` do zarządzania sekwencję elementów wygląda jak ciągłego bloku magazynu, ale który można zwiększać i zmniejszać na końcu bez konieczności kopiowania wszelkie pozostałe elementy. W związku z tym można efektywnie zaimplementować `double-ended queue`. (Stąd nazwa.)  
@@ -148,7 +148,7 @@ template<typename Value>
   
  **Namespace:** cliext  
 
-## <a name="members"></a>Elementy członkowskie  
+## <a name="declarations"></a>Deklaracje  
   
 |Definicja typu|Opis|  
 |---------------------|-----------------|  
@@ -229,7 +229,7 @@ template<typename Value>
   
  Wymazywanie lub usunięcie elementu wywołuje destruktor dla jej wartości przechowywanej. Niszczenie kontenera powoduje wymazanie wszystkich elementów. W związku z tym kontenera, której typ elementów jest klasa ref gwarantuje, że żadnych elementów outlive kontenera. Należy jednak pamiętać, że jest kontenerem dojść `not` zniszczyć elementów.  
  
-## <a name="member-definitions"></a>Definicje elementu członkowskiego
+## <a name="members"></a>Elementy członkowskie
 
 ## <a name="assign"></a> deque::ASSIGN (STL/CLR)
 Zamienia wszystkie elementy.  

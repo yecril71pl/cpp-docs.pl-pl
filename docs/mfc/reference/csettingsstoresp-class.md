@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1852f4e280fa49a2436c421d4669e9d735d66c3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d9b7cdc0d75ec207e3bd8141ac3a0f9c5ce1d3eb
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376054"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078702"
 ---
 # <a name="csettingsstoresp-class"></a>Klasa CSettingsStoreSP
 `CSettingsStoreSP` Klasy to klasa pomocy, która służy do tworzenia wystąpień [CSettingsStore klasy](../../mfc/reference/csettingsstore-class.md).  
@@ -88,10 +88,10 @@ CSettingsStore& CSettingsStoreSP Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bAdmin`  
+ [in] *bŚcieżka*  
  Parametr wartość logiczna określająca czy `CSettingsStore` obiekt jest tworzony w trybie administratora.  
   
- [in] `bReadOnly`  
+ [in] *bReadOnly*  
  Parametr wartość logiczna określająca czy `CSettingsStore` obiekt jest tworzony na dostęp tylko do odczytu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -102,7 +102,7 @@ CSettingsStore& CSettingsStoreSP Create(
   
  W przypadku utworzenia `CSettingsStore` obiektów w trybie administratora, domyślna lokalizacja dla każdego dostępu z rejestru to HKEY_LOCAL_MACHINE. W przeciwnym razie wartość domyślną lokalizacją dla wszystkich dostępu do rejestru jest HKEY_CURRENT_USER.  
   
- Jeśli `bAdmin` jest `TRUE`, aplikacja musi mieć prawa administracyjne. W przeciwnym razie nie będzie, podczas próby dostępu do rejestru.  
+ Jeśli *bŚcieżka* jest `TRUE`, aplikacja musi mieć prawa administracyjne. W przeciwnym razie nie będzie, podczas próby dostępu do rejestru.  
   
 ### <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano sposób użycia `Create` metody `CSettingsStoreSP` klasy.  
@@ -117,11 +117,11 @@ CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `dwUserData`  
+ [in] *dwUserData*  
  Dane zdefiniowane przez użytkownika który `CSettingsStoreSP` obiekt magazynów.  
   
 ### <a name="remarks"></a>Uwagi  
- `CSettingsStoreSP` Obiekt przechowuje dane z `dwUserData` w zmiennej członka chronionego `m_dwUserData`.  
+ `CSettingsStoreSP` Obiekt przechowuje dane z *dwUserData* w zmiennej członka chronionego `m_dwUserData`.  
   
 ##  <a name="setruntimeclass"></a>  CSettingsStoreSP::SetRuntimeClass  
  Ustawia klasę środowiska uruchomieniowego. Metoda [CSettingsStoreSP::Create](#create) korzysta klasa środowiska uruchomieniowego, aby określić typ obiektu do utworzenia.  
@@ -131,11 +131,11 @@ static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pRTI`  
+ [in] *pRTI*  
  Wskaźnik do informacji o klasie czasu wykonywania dla klasy pochodzące z [CSettingsStore klasy](../../mfc/reference/csettingsstore-class.md).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` w przypadku powodzenia; `FALSE` Jeśli klasa jest oznaczona `pRTI` nie pochodzi od `CSettingsStore`.  
+ `TRUE` w przypadku powodzenia; `FALSE` Jeśli klasa jest oznaczona *pRTI* nie pochodzi od `CSettingsStore`.  
   
 ### <a name="remarks"></a>Uwagi  
  Można użyć [klasy CSettingsStoreSP](../../mfc/reference/csettingsstoresp-class.md) wyprowadzenia klasy z `CSettingsStore`. Użyj metody `SetRuntimeClass` Jeśli chcesz utworzyć obiektów klasy niestandardowej pochodzącej z `CSettingsStore`.  

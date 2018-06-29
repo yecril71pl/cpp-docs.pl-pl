@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cffe2d337d611dff0387805c99965c3c2e9ef87
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd96f0240f8dd97fdda54fd2d00231db14ae3d47
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374652"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079186"
 ---
 # <a name="cpagesetupdialog-class"></a>Klasa CPageSetupDialog
 Hermetyzuje usług świadczonych przez okno dialogowe Ustawienia strony OLE wspólne systemu Windows z obsługą dodatkowych ustawień i modyfikowania marginesów.  
@@ -123,7 +123,7 @@ CPageSetupDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwFlags`  
+ *wartość elementu dwFlags*  
  Jedną lub więcej flag, które służy do dostosowywania ustawień w oknie dialogowym. Wartości można łączyć, używając operatora bitowego OR. Te wartości mają następujące znaczenie:  
   
 - **PSD_DEFAULTMINMARGINS** Ustawia minimalną dozwoloną szerokości marginesy strony, aby być taka sama jak minimów drukarki. Ta flaga jest ignorowana, jeśli **PSD_MARGINS** i **PSD_MINMARGINS** również określonych flag.  
@@ -162,7 +162,7 @@ CPageSetupDialog(
   
 - **PSD_DISABLEPAGEPAINTING** wyłącza obszaru rysowania okna dialogowego.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do nadrzędnego okna dialogowego lub właściciela.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -213,7 +213,7 @@ CString GetDeviceName() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Nazwa urządzenia używane przez **CPageSetupDialog** obiektu.  
+ Nazwa urządzenia używane przez `CPageSetupDialog` obiektu.  
   
 ##  <a name="getdevmode"></a>  CPageSetupDialog::GetDevMode  
  Wywołanie tej funkcji po wywołaniu `DoModal` można pobrać informacji o kontekście urządzenia drukarki `CPageSetupDialog` obiektu.  
@@ -301,10 +301,10 @@ virtual UINT OnDrawPage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia drukarki.  
   
- `nMessage`  
+ *nkomunikat*  
  Określa komunikat, informujący o obszarze strony obecnie rysowane. Może to być jeden z następujących elementów:  
   
 - **WM_PSD_FULLPAGERECT** obszaru całej strony.  
@@ -319,7 +319,7 @@ virtual UINT OnDrawPage(
   
 - **WM_PSD_YAFULLPAGERECT** obszaru dla reprezentacji adres zwrotny. Rozszerza ten obszar do krawędzi obszaru przykładowe strony.  
   
- `lpRect`  
+ *lprect —*  
  Wskaźnik do [CRect](../../atl-mfc-shared/reference/crect-class.md) lub [RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us) obiekt zawierający współrzędne obszaru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -328,11 +328,11 @@ virtual UINT OnDrawPage(
 ### <a name="remarks"></a>Uwagi  
  Ten obraz jest wyświetlone jako część wspólne okna dialogowe Ustawienia strony OLE. Domyślna implementacja Rysuje obraz strony tekstu.  
   
- Należy przesłonić tę funkcję, aby dostosować rysunku określonego obszaru obrazu lub całego obrazu. Można to zrobić za pomocą `switch` instrukcji z **przypadku** instrukcje wartości `nMessage`. Na przykład aby dostosować renderowania zawartości obrazu strony, można użyć Poniższy przykładowy kod:  
+ Należy przesłonić tę funkcję, aby dostosować rysunku określonego obszaru obrazu lub całego obrazu. Można to zrobić za pomocą **przełącznika** instrukcji z **przypadku** instrukcje wartości *nkomunikat*. Na przykład aby dostosować renderowania zawartości obrazu strony, można użyć Poniższy przykładowy kod:  
   
  [!code-cpp[NVC_MFCDocView#96](../../mfc/codesnippet/cpp/cpagesetupdialog-class_3.cpp)]  
   
- Należy pamiętać, że nie należy do obsługi każdego przypadku `nMessage`. Można obsługiwać jeden składnik obrazu kilka składników obrazu lub cały obszar.  
+ Należy pamiętać, że nie należy do obsługi każdego przypadku *nkomunikat*. Można obsługiwać jeden składnik obrazu kilka składników obrazu lub cały obszar.  
   
 ##  <a name="predrawpage"></a>  CPageSetupDialog::PreDrawPage  
  Wywoływane przez platformę przed narysowaniem obrazu ekranu z wydrukowaną stroną.  
@@ -348,7 +348,7 @@ virtual UINT PreDrawPage(
  *wPaper*  
  Określa wartość, która wskazuje rozmiar papieru. Ta wartość może być jedną z **DMPAPER_** wartości wymienionych w opisie [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) struktury.  
   
- `wFlags`  
+ *wFlags*  
  Określa orientację papieru lub koperty, oraz czy drukarka jest-Mozaika lub urządzenie HPPCL (Hewlett Packard drukarki kontroli Language). Ten parametr może mieć jedną z następujących wartości:  
   
 -   0x001 papier w trybie krajobraz (Mozaika)  
@@ -367,7 +367,7 @@ virtual UINT PreDrawPage(
   
 -   0x01f koperta w trybie portret (Mozaika)  
   
- `pPSD`  
+ *pPSD*  
  Wskaźnik do **PAGESETUPDLG** struktury. Aby uzyskać więcej informacji na temat [PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842), zobacz zestaw Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  

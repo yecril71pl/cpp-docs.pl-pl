@@ -61,19 +61,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 300cb9e7708c02717aeb8ea8fda59986f3fd9fa7
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: abfe2a740a51ffe8b2735942bc9387f0b13bb0d2
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36306037"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079534"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 Klasa szablonu opisuje obiekt, który kontroluje zróżnicowanie długości uporządkowane sekwencji elementów, który ma ograniczony dostęp. Użyj karty kontenera `priority_queue` Zarządzanie kontenerem podstawowej jako priorytet kolejki.  
   
  W polu poniżej, opis `GValue` jest taka sama jak `Value` o ile nie jest typu ref, w którym to przypadku jest `Value^`. Podobnie `GContainer` jest taka sama jak `Container` o ile nie jest typu ref, w którym to przypadku jest `Container^`.  
   
-### <a name="syntax"></a>Składnia  
+## <a name="syntax"></a>Składnia  
   
 ```  
 template<typename Value,  
@@ -84,7 +84,7 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  Wartość  
  Typ elementu w kontrolowanej sekwencji.  
   
@@ -138,7 +138,7 @@ template<typename Value,
 |<xref:System.ICloneable>|Zduplikowany obiekt.|  
 |IPriorityQueue\<wartość, kontener >|Obsługa karty Ogólne kontenera.|  
   
-### <a name="remarks"></a>Uwagi  
+## <a name="remarks"></a>Uwagi  
  Przydziela i zwalnia magazynu na potrzeby sekwencji steruje się za pomocą podstawowej kontenera, typu obiektu `Container`, który przechowuje `Value` elementów i rozwoju na żądanie. Zapewnia sekwencji uporządkowane jako sterty, z elementem najwyższy priorytet (górny element) łatwo dostępne i wymiennych. Obiekt ogranicza dostęp do wypychania nowych elementów i wyświetlanie tylko najwyższy priorytet elementu Implementowanie priorytet kolejki.  
   
  Obiekt porządkuje sekwencji kontroluje przez wywołanie metody typu obiektu delegowanego przechowywanych [priority_queue::value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md). Można określić obiektu delegowanego przechowywanych podczas konstruowania priority_queue —; Jeśli określisz ma obiektu delegowanego, wartość domyślna to porównanie `operator<(value_type, value_type)`. Dostęp do tego obiektu przechowywanych przez wywołanie funkcji Członkowskich [priority_queue::value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)`()`.  

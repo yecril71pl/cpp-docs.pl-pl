@@ -105,12 +105,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 02678db98c40927114adf1b061482d9e8304aa30
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 3e5db2aafb10ad6d95fe50d073085041a1016cac
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305842"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079869"
 ---
 # <a name="hashmultiset-stlclr"></a>hash_multiset (STL/CLR)
 Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp dwukierunkowego. Użyj kontenera `hash_multiset` do zarządzania sekwencję elementów jako tablicy skrótów, każdego wpisu tabeli przechowywania dwukierunkowy połączone listy węzłów i w każdym węźle przechowywania jeden element. Wartość każdego elementu jest używany jako klucz porządkowania sekwencji.  
@@ -133,7 +133,7 @@ template<typename Key>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  Key  
  Typ części klucza elementu w kontrolowanej sekwencji.  
 
@@ -142,7 +142,7 @@ template<typename Key>
   
  **Namespace:** cliext  
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="declarations"></a>Deklaracje  
   
 |Definicja typu|Opis|  
 |---------------------|-----------------|  
@@ -207,7 +207,7 @@ template<typename Key>
 |<xref:System.Collections.Generic.ICollection%601>|Obsługa grupę elementów typu.|  
 |IHash\<klucza, wartość >|Obsługa ogólnego kontenera.|  
   
-### <a name="remarks"></a>Uwagi  
+## <a name="remarks"></a>Uwagi  
  Obiekt przydziela i zwalnia magazynu w sekwencji, które kontroluje jako poszczególne węzły połączonej listy dwukierunkowego. Aby przyśpieszyć dostępu, obiekt przechowuje zróżnicowanych długość tablicy wskaźników do listy (tablicy skrótów) efektywne zarządzanie całą listę sekwencję podlist, lub pakiety w ramach Agreement. Wstawia elementy na zasobnik, który utrzymuje uporządkowanych, zmieniając łącza między węzłami, nigdy nie, kopiując zawartość z jednego węzła do innego. Oznacza to, można wstawiać i usuwanie elementów za darmo, bez zakłóceń pozostałe elementy.  
   
  Obiekt porządkuje każdego zasobnika kontroluje przez wywołanie metody typu obiektu delegowanego przechowywanych [hash_set::key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). Można określić obiektu delegowanego przechowywanych podczas konstruowania hash_set; Jeśli określisz ma obiektu delegowanego, wartość domyślna to porównanie `operator<=(key_type, key_type)`.  
@@ -240,6 +240,8 @@ template<typename Key>
   
  Wymazywanie lub usunięcie elementu wywołuje destruktor dla jej wartości przechowywanej. Niszczenie kontenera powoduje wymazanie wszystkich elementów. W związku z tym kontenera, której typ elementów jest klasa ref gwarantuje, że żadnych elementów outlive kontenera. Należy jednak pamiętać, że jest kontenerem dojść `not` zniszczyć elementów.  
   
+## <a name="members"></a>Elementy członkowskie
+
 ## <a name="begin"></a> hash_multiset::BEGIN (STL/CLR)
 Określa początek kontrolowanej sekwencji.  
   

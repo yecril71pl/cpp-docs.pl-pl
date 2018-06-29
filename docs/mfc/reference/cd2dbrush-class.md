@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 718283893c9e8ec9798dea9a4b9fb307d1099e68
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 95fdd973d94c0d60e5e3177260740c5d62f1ea5b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952060"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078559"
 ---
 # <a name="cd2dbrush-class"></a>Klasa CD2DBrush
 Otoka dla ID2D1Brush.  
@@ -110,7 +110,7 @@ virtual ~CD2DBrush();
 ```  
   
 ##  <a name="attach"></a>  CD2DBrush::attach  
- Dołącza istniejący interfejs zasobów do obiektu  
+ Dołącza istniejący interfejs zasobów do obiektu.  
   
 ```  
 void Attach(ID2D1Brush* pResource);
@@ -118,7 +118,7 @@ void Attach(ID2D1Brush* pResource);
   
 ### <a name="parameters"></a>Parametry  
  *pResource*  
- Interfejs istniejącego zasobu. Nie może mieć wartości NULL  
+ Interfejs istniejącego zasobu. Nie może mieć wartości NULL.  
   
 ##  <a name="cd2dbrush"></a>  CD2DBrush::CD2DBrush  
  Tworzy obiekt CD2DBrush.  
@@ -148,7 +148,7 @@ virtual void Destroy();
 ```  
   
 ##  <a name="detach"></a>  CD2DBrush::detach  
- Odłącza interfejsu zasobów z obiektu  
+ Odłącza interfejsu zasobów z obiektu.  
   
 ```  
 ID2D1Brush* Detach();
@@ -175,7 +175,7 @@ FLOAT GetOpacity() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość z zakresu od 0 do 1, która wskazuje przezroczystość pędzla. Ta wartość jest mnożnik stałej, która liniowo skaluje alfa wartość wszystkie piksele wypełnił pędzla. Wartość nieprzezroczystości są zablokowane za pomocą w zakresie od 0 do 1 przed są pomnożenie  
+ Wartość z zakresu od 0 do 1, która wskazuje przezroczystość pędzla. Ta wartość jest mnożnik stałej, która liniowo skaluje alfa wartość wszystkie piksele wypełnił pędzla. Wartość nieprzezroczystości są zablokowane za pomocą w zakresie od 0 do 1 przed są pomnożenie.  
   
 ##  <a name="gettransform"></a>  CD2DBrush::GetTransform  
  Pobiera bieżący transformacji obiektu docelowego renderowania  
@@ -186,7 +186,7 @@ void GetTransform(D2D1_MATRIX_3X2_F* transform) const;
   
 ### <a name="parameters"></a>Parametry  
  *transform*  
- Po powrocie z to zawiera transformacji bieżącego obiektu docelowego renderowania. Ten parametr jest przekazywany jako niezainicjowany  
+ Po powrocie z to zawiera transformacji bieżącego obiektu docelowego renderowania. Ten parametr jest przekazywany niezainicjowany.  
   
 ##  <a name="isvalid"></a>  CD2DBrush::IsValid  
  Sprawdzanie poprawności zasobów  
@@ -231,10 +231,10 @@ void SetOpacity(FLOAT opacity);
   
 ### <a name="parameters"></a>Parametry  
  *Nieprzezroczystość.*  
- Wartość z zakresu od 0 do 1, która wskazuje przezroczystość pędzla. Ta wartość jest mnożnik stałej, która liniowo skaluje alfa wartość wszystkie piksele wypełnił pędzla. Wartość nieprzezroczystości są zablokowane za pomocą w zakresie od 0 do 1 przed są pomnożenie  
+ Wartość z zakresu od 0 do 1, która wskazuje przezroczystość pędzla. Ta wartość jest mnożnik stałej, która liniowo skaluje alfa wartość wszystkie piksele wypełnił pędzla. Wartość nieprzezroczystości są zablokowane za pomocą w zakresie od 0 do 1 przed są pomnożenie.  
   
 ##  <a name="settransform"></a>  CD2DBrush::SetTransform  
- Stosuje określona transformacja do obiektu docelowego renderowania, zastępując istniejące transformacji. Wszystkie kolejne operacje rysowania występują w przestrzeni po przekształceniu  
+ Stosuje określona transformacja do obiektu docelowego renderowania, zastępując istniejące transformacji. Wszystkie kolejne operacje rysowania występują w przekształcone miejsca.  
   
 ```  
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);

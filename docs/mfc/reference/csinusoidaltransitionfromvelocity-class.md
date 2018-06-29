@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9833607065407e66473a9fab1907bf2262816296
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9f5cc55adac2bf5900d9891635a025716b9c1f3
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370643"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078582"
 ---
 # <a name="csinusoidaltransitionfromvelocity-class"></a>Klasa CSinusoidalTransitionFromVelocity
 Hermetyzuje przejście sinusoidalnego szybkość pracy, które ma amplitudy określonej na podstawie początkowej prędkość animacji zmiennej.  
@@ -84,7 +84,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pLibrary`  
+ *pLibrary*  
  Wskaźnik do przejścia biblioteki, która odpowiada za tworzenie przejścia standardowe.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -100,10 +100,10 @@ CSinusoidalTransitionFromVelocity(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `duration`  
+ *Czas trwania*  
  Czas trwania przejścia.  
   
- `period`  
+ *Okres*  
  Okres oscylacji sinusoidalnego wave w sekundach.  
   
 ##  <a name="m_duration"></a>  CSinusoidalTransitionFromVelocity::m_duration  

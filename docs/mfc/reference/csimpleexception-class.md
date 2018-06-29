@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d04a2f643add489d3302e58a9bde995303ecddd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: be5d27adabe8b271e2f8f3ed338e63e18d2432fc
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369928"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078239"
 ---
 # <a name="csimpleexception-class"></a>Klasa CSimpleException
 Ta klasa jest klasą bazową dla zasobu o znaczeniu krytycznym wyjątków MFC.  
@@ -84,8 +84,8 @@ explicit CSimpleException(BOOL bAutoDelete);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bAutoDelete`  
- Określ **TRUE** Jeśli pamięć `CSimpleException` obiektu przydzielone na stercie. Spowoduje to `CSimpleException` obiektu do usunięcia po **usunąć** funkcja członkowska jest wywoływana, aby usunąć wyjątku. Określ **FALSE** Jeśli `CSimpleException` na stosie lub obiektu jest obiekt globalny. W takim przypadku `CSimpleException` obiektu nie zostanie usunięte, gdy **usunąć** została wywołana funkcja elementu członkowskiego.  
+ *bAutoDelete*  
+ Określ **TRUE** Jeśli pamięć `CSimpleException` obiektu przydzielone na stercie. Spowoduje to `CSimpleException` obiektu do usunięcia po `Delete` funkcja członkowska jest wywoływana, aby usunąć wyjątku. Określ **FALSE** Jeśli `CSimpleException` na stosie lub obiektu jest obiekt globalny. W takim przypadku `CSimpleException` obiektu nie zostanie usunięte, gdy `Delete` została wywołana funkcja elementu członkowskiego.  
   
 ### <a name="remarks"></a>Uwagi  
  Zwykle nigdy nie należy bezpośrednio wywoływać tego konstruktora. Funkcja, która zgłasza wyjątek, należy utworzyć wystąpienie `CException`-klasy i Wywołaj jego konstruktora lub powinien użycie MFC zgłosić funkcje, takie jak [afxthrowfileexception —](exception-processing.md#afxthrowfileexception), aby zgłosić wstępnie zdefiniowanego typu.  
@@ -101,13 +101,13 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszError`  
+ *lpszError*  
  Wskaźnik do buforu, który zostanie wyświetlony komunikat o błędzie.  
   
- `nMaxError`  
+ *nMaxError*  
  Maksymalna liczba znaków, może przechowywać buforu, łącznie z **NULL** terminator.  
   
- `pnHelpContext`  
+ *pnHelpContext*  
  Adres **UINT** który zostanie wyświetlony identyfikator pomocy kontekstu. Jeśli **NULL**, zostanie zwrócony żaden identyfikator.  
   
 ### <a name="return-value"></a>Wartość zwracana  

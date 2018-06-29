@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d22aa408fe2933803083adc784c2dbf3a85dd4df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ad0d928f7190d3908c41560c7fb106e3024ebc6e
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377174"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079651"
 ---
 # <a name="cpagerctrl-class"></a>Klasa CPagerCtrl
 `CPagerCtrl` Klasy opakowuje formantu modułu stronicowania systemu Windows, które mogą być przewijane w widoku zawartego okna, który nie mieści się okna nadrzędnego.  
@@ -151,10 +151,10 @@ virtual BOOL Create(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `dwStyle`|Bitowe połączenie (lub) [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles) i [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859) ma zostać zastosowany do formantu.|  
-|[in] `rect`|Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zawiera położenie i rozmiar formantu we współrzędnych klienta.|  
-|[in] `pParentWnd`|Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okno nadrzędne kontrolki. Ten parametr nie może być `NULL`.|  
-|[in] `nID`|Identyfikator formantu.|  
+|[in] *dwStyle*|Bitowe połączenie (lub) [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles) i [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859) ma zostać zastosowany do formantu.|  
+|[in] *rect*|Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zawiera położenie i rozmiar formantu we współrzędnych klienta.|  
+|[in] *pParentWnd*|Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okno nadrzędne kontrolki. Ten parametr nie może być `NULL`.|  
+|[in] *nID*|Identyfikator formantu.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
@@ -183,11 +183,11 @@ virtual BOOL CreateEx(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `dwExStyle`|Bitowe połączenie rozszerzone style, które mają być zastosowane do formantu. Aby uzyskać więcej informacji, zobacz `dwExStyle` parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funkcji.|  
-|[in] `dwStyle`|Bitowe połączenie (lub) [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles) i [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859) ma zostać zastosowany do formantu.|  
-|[in] `rect`|Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zawiera położenie i rozmiar formantu we współrzędnych klienta.|  
-|[in] `pParentWnd`|Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okno nadrzędne kontrolki. Ten parametr nie może być `NULL`.|  
-|[in] `nID`|Identyfikator formantu.|  
+|[in] *dwExStyle*|Bitowe połączenie rozszerzone style, które mają być zastosowane do formantu. Aby uzyskać więcej informacji, zobacz *dwExStyle* parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funkcji.|  
+|[in] *dwStyle*|Bitowe połączenie (lub) [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles) i [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859) ma zostać zastosowany do formantu.|  
+|[in] *rect*|Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która zawiera położenie i rozmiar formantu we współrzędnych klienta.|  
+|[in] *pParentWnd*|Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okno nadrzędne kontrolki. Ten parametr nie może być `NULL`.|  
+|[in] *nID*|Identyfikator formantu.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
@@ -206,7 +206,7 @@ void ForwardMouse(BOOL bForward);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `bForward`|`true` do przesyłania dalej komunikatów myszy lub `false` nie przekazywanie komunikatów myszy.|  
+|[in] *bForward*|`true` do przesyłania dalej komunikatów myszy lub `false` nie przekazywanie komunikatów myszy.|  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wysyła [PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867) komunikat, który jest opisany w zestawie SDK systemu Windows.  
@@ -273,10 +273,10 @@ DWORD GetButtonState(int iButton) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `iButton`|Wskazuje, dla której są pobierane stan przycisku. W przypadku stylu formantu pagera `PGS_HORZ`, określ `PGB_TOPORLEFT` dla przycisku po lewej stronie i `PGB_BOTTOMORRIGHT` dla prawego przycisku. W przypadku stylu formantu pagera `PGS_VERT`, określ `PGB_TOPORLEFT` do góry i `PGB_BOTTOMORRIGHT` dla przycisku dolnej. Aby uzyskać więcej informacji, zobacz [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Wskazuje, dla której są pobierane stan przycisku. W przypadku stylu formantu pagera `PGS_HORZ`, określ `PGB_TOPORLEFT` dla przycisku po lewej stronie i `PGB_BOTTOMORRIGHT` dla prawego przycisku. W przypadku stylu formantu pagera `PGS_VERT`, określ `PGB_TOPORLEFT` do góry i `PGB_BOTTOMORRIGHT` dla przycisku dolnej. Aby uzyskać więcej informacji, zobacz [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Stan określonego przez naciśnięcie przycisku `iButton` parametru. Stan jest `PGF_INVISIBLE`, `PGF_NORMAL`, `PGF_GRAYED`, `PGF_DEPRESSED`, lub `PGF_HOT`. Aby uzyskać więcej informacji, zobacz sekcję zwrócić wartość [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) wiadomości.  
+ Stan określonego przez naciśnięcie przycisku *iButton* parametru. Stan jest `PGF_INVISIBLE`, `PGF_NORMAL`, `PGF_GRAYED`, `PGF_DEPRESSED`, lub `PGF_HOT`. Aby uzyskać więcej informacji, zobacz sekcję zwrócić wartość [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) wiadomości.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wysyła [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) komunikat, który jest opisany w zestawie SDK systemu Windows.  
@@ -325,7 +325,7 @@ BOOL IsButtonDepressed(int iButton) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `iButton`|Wskazuje, dla której są pobierane stan przycisku. W przypadku stylu formantu pagera `PGS_HORZ`, określ `PGB_TOPORLEFT` dla przycisku po lewej stronie i `PGB_BOTTOMORRIGHT` dla prawego przycisku. W przypadku stylu formantu pagera `PGS_VERT`, określ `PGB_TOPORLEFT` do góry i `PGB_BOTTOMORRIGHT` dla przycisku dolnej. Aby uzyskać więcej informacji, zobacz [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Wskazuje, dla której są pobierane stan przycisku. W przypadku stylu formantu pagera `PGS_HORZ`, określ `PGB_TOPORLEFT` dla przycisku po lewej stronie i `PGB_BOTTOMORRIGHT` dla prawego przycisku. W przypadku stylu formantu pagera `PGS_VERT`, określ `PGB_TOPORLEFT` do góry i `PGB_BOTTOMORRIGHT` dla przycisku dolnej. Aby uzyskać więcej informacji, zobacz [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` w przypadku określonego przycisku w stan naciśnięcia; w przeciwnym razie `false`.  
@@ -344,7 +344,7 @@ BOOL IsButtonGrayed(int iButton) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `iButton`|Wskazuje, dla której są pobierane stan przycisku. W przypadku stylu formantu pagera `PGS_HORZ`, określ `PGB_TOPORLEFT` dla przycisku po lewej stronie i `PGB_BOTTOMORRIGHT` dla prawego przycisku. W przypadku stylu formantu pagera `PGS_VERT`, określ `PGB_TOPORLEFT` do góry i `PGB_BOTTOMORRIGHT` dla przycisku dolnej. Aby uzyskać więcej informacji, zobacz [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Wskazuje, dla której są pobierane stan przycisku. W przypadku stylu formantu pagera `PGS_HORZ`, określ `PGB_TOPORLEFT` dla przycisku po lewej stronie i `PGB_BOTTOMORRIGHT` dla prawego przycisku. W przypadku stylu formantu pagera `PGS_VERT`, określ `PGB_TOPORLEFT` do góry i `PGB_BOTTOMORRIGHT` dla przycisku dolnej. Aby uzyskać więcej informacji, zobacz [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli określonego przycisku jest w stanie wygaszone; w przeciwnym razie `false`.  
@@ -363,7 +363,7 @@ BOOL IsButtonHot(int iButton) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `iButton`|Wskazuje, dla której są pobierane stan przycisku. W przypadku stylu formantu pagera `PGS_HORZ`, określ `PGB_TOPORLEFT` dla przycisku po lewej stronie i `PGB_BOTTOMORRIGHT` dla prawego przycisku. W przypadku stylu formantu pagera `PGS_VERT`, określ `PGB_TOPORLEFT` do góry i `PGB_BOTTOMORRIGHT` dla przycisku dolnej. Aby uzyskać więcej informacji, zobacz [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Wskazuje, dla której są pobierane stan przycisku. W przypadku stylu formantu pagera `PGS_HORZ`, określ `PGB_TOPORLEFT` dla przycisku po lewej stronie i `PGB_BOTTOMORRIGHT` dla prawego przycisku. W przypadku stylu formantu pagera `PGS_VERT`, określ `PGB_TOPORLEFT` do góry i `PGB_BOTTOMORRIGHT` dla przycisku dolnej. Aby uzyskać więcej informacji, zobacz [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli określonego przycisku jest w stanie gorących; w przeciwnym razie `false`.  
@@ -382,7 +382,7 @@ BOOL IsButtonInvisible(int iButton) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `iButton`|Wskazuje, dla której są pobierane stan przycisku. W przypadku stylu formantu pagera `PGS_HORZ`, określ `PGB_TOPORLEFT` dla przycisku po lewej stronie i `PGB_BOTTOMORRIGHT` dla prawego przycisku. W przypadku stylu formantu pagera `PGS_VERT`, określ `PGB_TOPORLEFT` do góry i `PGB_BOTTOMORRIGHT` dla przycisku dolnej. Aby uzyskać więcej informacji, zobacz [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Wskazuje, dla której są pobierane stan przycisku. W przypadku stylu formantu pagera `PGS_HORZ`, określ `PGB_TOPORLEFT` dla przycisku po lewej stronie i `PGB_BOTTOMORRIGHT` dla prawego przycisku. W przypadku stylu formantu pagera `PGS_VERT`, określ `PGB_TOPORLEFT` do góry i `PGB_BOTTOMORRIGHT` dla przycisku dolnej. Aby uzyskać więcej informacji, zobacz [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli określonego przycisku jest w stanie niewidoczne; w przeciwnym razie `false`.  
@@ -408,7 +408,7 @@ BOOL IsButtonNormal(int iButton) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `iButton`|Wskazuje, dla której są pobierane stan przycisku. W przypadku stylu formantu pagera `PGS_HORZ`, określ `PGB_TOPORLEFT` dla przycisku po lewej stronie i `PGB_BOTTOMORRIGHT` dla prawego przycisku. W przypadku stylu formantu pagera `PGS_VERT`, określ `PGB_TOPORLEFT` do góry i `PGB_BOTTOMORRIGHT` dla przycisku dolnej. Aby uzyskać więcej informacji, zobacz [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] *iButton*|Wskazuje, dla której są pobierane stan przycisku. W przypadku stylu formantu pagera `PGS_HORZ`, określ `PGB_TOPORLEFT` dla przycisku po lewej stronie i `PGB_BOTTOMORRIGHT` dla prawego przycisku. W przypadku stylu formantu pagera `PGS_VERT`, określ `PGB_TOPORLEFT` do góry i `PGB_BOTTOMORRIGHT` dla przycisku dolnej. Aby uzyskać więcej informacji, zobacz [stylów formantu pagera](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` w przypadku określonego przycisku w normalnym stanie; w przeciwnym razie `false`.  
@@ -447,7 +447,7 @@ COLORREF SetBkColor(COLORREF clrBk);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `clrBk`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartości, która zawiera na nowy kolor tła formantu modułu stronicowania.|  
+|[in] *clrBk*|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartości, która zawiera na nowy kolor tła formantu modułu stronicowania.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartości, która zawiera poprzednie kolor tła formantu modułu stronicowania.  
@@ -471,7 +471,7 @@ int SetBorder(int iBorder);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `iBorder`|Nowy rozmiar obramowania (w pikselach). Jeśli `iBorder` parametru jest ujemna, rozmiar obramowania jest ustawione na zero.|  
+|[in] *iBorder*|Nowy rozmiar obramowania (w pikselach). Jeśli *iBorder* parametru jest ujemna, rozmiar obramowania jest ustawione na zero.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Poprzedni rozmiar obramowania (w pikselach).  
@@ -495,7 +495,7 @@ int SetButtonSize(int iButtonSize);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `iButtonSize`|Nowy rozmiar przycisku (w pikselach).|  
+|[in] *iButtonSize*|Nowy rozmiar przycisku (w pikselach).|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Rozmiar przycisku poprzedniego (w pikselach).  
@@ -521,7 +521,7 @@ void SetChild(HWND hwndChild);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `hwndChild`|Dojście do okna, które mają być zawarte.|  
+|[in] *hwndChild*|Dojście do okna, które mają być zawarte.|  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wysyła [PGM_SETCHILD](http://msdn.microsoft.com/library/windows/desktop/bb760884) komunikat, który jest opisany w zestawie SDK systemu Windows.  
@@ -544,7 +544,7 @@ void SetScrollPos(int iPos);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `iPos`|Nowa pozycja przewijania (w pikselach).|  
+|[in] *iPos*|Nowa pozycja przewijania (w pikselach).|  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wysyła [PGM_SETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760886) komunikat, który jest opisany w zestawie SDK systemu Windows.  

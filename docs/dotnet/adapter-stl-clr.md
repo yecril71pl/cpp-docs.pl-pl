@@ -59,12 +59,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 598159ff01fe1628a693085f84077d9adfcbbf49
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: a472284df67993a65de98df7db698ea533451ea3
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305545"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079439"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 Nagłówek STL/CLR `<cliext/adapter>` określa dwóch szablonów klas (`collection_adapter` i `range_adapter`), a funkcja szablonu `make_collection`.  
@@ -80,7 +80,7 @@ Nagłówek STL/CLR `<cliext/adapter>` określa dwóch szablonów klas (`collecti
   
  **Namespace:** cliext 
   
-## <a name="members"></a>Elementy członkowskie  
+## <a name="declarations"></a>Deklaracje  
   
 |Class|Opis|  
 |-----------|-----------------|  
@@ -91,6 +91,8 @@ Nagłówek STL/CLR `<cliext/adapter>` określa dwóch szablonów klas (`collecti
 |--------------|-----------------|  
 |[make_collection (STL/CLR)](#make_collection)|Tworzy kartą zakresu przy użyciu pary iteratora.|   
   
+## <a name="members"></a>Elementy członkowskie
+
 ## <a name="collection_adapter"></a> collection_adapter — (STL/CLR)
 Opakowuje kolekcji .NET do użycia jako kontenera STL/CLR. A `collection_adapter` to klasa szablonu, który opisuje prostego obiektu kontenera STL/CLR. Opakowuje interfejsu biblioteki klasy podstawowej (BCL) i zwraca pary iteratora używanej do manipulowania kontrolowanej sekwencji.  
   

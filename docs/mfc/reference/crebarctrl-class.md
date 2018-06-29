@@ -108,12 +108,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e595db4e194744ce5d1f1d644a55423c1022fc2e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 85a3c51f5c59b510e1024cc5f363096952c0f35a
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377590"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079465"
 ---
 # <a name="crebarctrl-class"></a>Crebarctrl — klasa
 Hermetyzuje funkcjonalność formantu paska pomocniczego, który jest kontenerem dla okna podrzędnego.  
@@ -234,11 +234,11 @@ void BeginDrag(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `uBand`  
+ *uBand*  
  Liczony od zera indeks poza pasmem, które wpływają na operację przeciągania i upuszczania.  
   
- `dwPos`  
- A `DWORD` wartość, która zawiera początkowy współrzędne myszy. Współrzędna pozioma jest zawarta w LOWORD i pionowy współrzędnych znajduje się w HIWORD. W przypadku przekazania `(DWORD)-1`, formantu paska pomocniczego użyje położenie myszy ostatniego wątku formantu o nazwie **GetMessage** lub **PeekMessage**.  
+ *dwPos*  
+ A `DWORD` wartość, która zawiera początkowy współrzędne myszy. Współrzędna pozioma jest zawarta w LOWORD i pionowy współrzędnych znajduje się w HIWORD. W przypadku przekazania `(DWORD)-1`, formantu paska pomocniczego użyje położenie myszy ostatniego wątku formantu o nazwie `GetMessage` lub `PeekMessage`.  
   
 ##  <a name="create"></a>  CReBarCtrl::Create  
  Tworzy kontrolkę paska pomocniczego i dołącza go do `CReBarCtrl` obiektu.  
@@ -252,16 +252,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
+ *dwStyle*  
  Określa kombinację stylów formantu paska pomocniczego stosowane do formantu. Zobacz [stylów formantu paska pomocniczego](http://msdn.microsoft.com/library/windows/desktop/bb774377) w zestawie SDK systemu Windows, aby uzyskać listę obsługiwanych style.  
   
- `rect`  
+ *Rect*  
  Odwołanie do [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, która jest położenie i rozmiar formantu paska pomocniczego.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiekt, który jest okno nadrzędne kontrolki paska pomocniczego. Nie może być **NULL**.  
   
- `nID`  
+ *nID*  
  Określa identyfikator formantu paska pomocniczego kontrolki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -292,19 +292,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwExStyle`  
- Określa styl rozszerzony formantu tworzona. Aby uzyskać listę rozszerzone style systemu Windows, zobacz `dwExStyle` parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ *dwExStyle*  
+ Określa styl rozszerzony formantu tworzona. Aby uzyskać listę rozszerzone style systemu Windows, zobacz *dwExStyle* parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Określa kombinację stylów formantu paska pomocniczego stosowane do formantu. Aby uzyskać listę obsługiwanych style, zobacz [stylów formantu paska pomocniczego](http://msdn.microsoft.com/library/windows/desktop/bb774377) w zestawie Windows SDK.  
   
- `rect`  
- Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujące rozmiar i położenie okna, które ma zostać utworzony w współrzędne klienta `pParentWnd`.  
+ *Rect*  
+ Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujące rozmiar i położenie okna, które ma zostać utworzony w współrzędne klienta *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do okna, które jest elementem nadrzędnym formantu.  
   
- `nID`  
+ *nID*  
  Identyfikator formantu okna podrzędnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -331,7 +331,7 @@ BOOL DeleteBand(UINT uBand);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `uBand`  
+ *uBand*  
  Liczony od zera indeks poza pasmem do usunięcia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -348,8 +348,8 @@ void DragMove(DWORD dwPos = (DWORD)-1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwPos`  
- A `DWORD` wartości, która zawiera nowe współrzędne myszy. Współrzędna pozioma jest zawarta w LOWORD i pionowy współrzędnych znajduje się w HIWORD. W przypadku przekazania `(DWORD)-1`, formantu paska pomocniczego użyje położenie myszy ostatniego wątku formantu o nazwie **GetMessage** lub **PeekMessage**.  
+ *dwPos*  
+ A `DWORD` wartości, która zawiera nowe współrzędne myszy. Współrzędna pozioma jest zawarta w LOWORD i pionowy współrzędnych znajduje się w HIWORD. W przypadku przekazania `(DWORD)-1`, formantu paska pomocniczego użyje położenie myszy ostatniego wątku formantu o nazwie `GetMessage` lub `PeekMessage`.  
   
 ##  <a name="enddrag"></a>  CReBarCtrl::EndDrag  
  Implementuje zachowanie komunikatu Win32 [RB_ENDDRAG](http://msdn.microsoft.com/library/windows/desktop/bb774435), zgodnie z opisem w zestawie Windows SDK.  
@@ -368,10 +368,10 @@ void GetBandBorders(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `uBand`  
+ *uBand*  
  Liczony od zera indeks poza pasmem, dla którego mają zostać pobrane obramowania.  
   
- `prc`  
+ *ChRL*  
  Wskaźnik do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, który otrzyma obramowania poza pasmem. Jeśli z formantem paska pomocniczego **RBS_BANDBORDERS** stylu, każdy członek tej struktury otrzymają liczba pikseli na stronie odpowiedniej grupy, wchodzących w skład obramowania. Jeśli nie ma formantu paska pomocniczego **RBS_BANDBORDERS** styl, tylko po lewej stronie członkiem tej struktury otrzymuje nieprawidłowe informacje. Aby uzyskać opis stylów formantu paska pomocniczego, zobacz [stylów formantu paska pomocniczego](http://msdn.microsoft.com/library/windows/desktop/bb774377) w zestawie Windows SDK.  
   
 ##  <a name="getbandcount"></a>  CReBarCtrl::GetBandCount  
@@ -394,10 +394,10 @@ BOOL GetBandInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `uBand`  
+ *uBand*  
  Liczony od zera indeks poza pasmem, dla którego będą pobierane informacje.  
   
- `prbbi`  
+ *prbbi*  
  Wskaźnik do [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) struktury otrzymywanie informacji poza pasmem. Należy ustawić `cbSize` członkiem tej struktury `sizeof(REBARBANDINFO)` i ustaw **fMask** elementu członkowskiego do elementów do pobrania przed wysłaniem tej wiadomości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -435,8 +435,8 @@ BOOL GetBarInfo(REBARINFO* prbi) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `prbi`  
- Wskaźnik do [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) struktury, która odbierze informacji formantu paska pomocniczego. Należy ustawić `cbSize` członkiem tej struktury `sizeof(REBARINFO)` przed wysłaniem tej wiadomości.  
+ *prbi*  
+ Wskaźnik do [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) struktury, która odbierze informacji formantu paska pomocniczego. Należy ustawić *elementu cbSize* członkiem tej struktury `sizeof(REBARINFO)` przed wysłaniem tej wiadomości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie wartość zero.  
@@ -459,7 +459,7 @@ BOOL GetColorScheme(COLORSCHEME* lpcs);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpcs`  
+ *LPC*  
  Wskaźnik do [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) struktury, zgodnie z opisem w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -486,7 +486,7 @@ DWORD GetExtendedStyle() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Bitowe połączenie (lub) flag, które wskazują rozszerzone style. Możliwe flagi są `RBS_EX_SPLITTER` i `RBS_EX_TRANSPARENT`. Aby uzyskać więcej informacji, zobacz `dwMask` parametr [CReBarCtrl::SetExtendedStyle](#setextendedstyle) metody.  
+ Bitowe połączenie (lub) flag, które wskazują rozszerzone style. Możliwe flagi są `RBS_EX_SPLITTER` i `RBS_EX_TRANSPARENT`. Aby uzyskać więcej informacji, zobacz *dwMask* parametr [CReBarCtrl::SetExtendedStyle](#setextendedstyle) metody.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wysyła [RB_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb774433) komunikat, który jest opisany w zestawie SDK systemu Windows.  
@@ -530,10 +530,10 @@ BOOL GetRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `uBand`  
+ *uBand*  
  Liczony od zera indeks poza pasmem w formancie paska pomocniczego.  
   
- `prc`  
+ *ChRL*  
  Wskaźnik do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, który otrzyma granice pasmem paska pomocniczego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -636,8 +636,8 @@ BOOL InsertBand(
  *uIndex*  
  Liczony od zera indeks lokalizacji, w którym zostanie wstawiony grupy. Jeśli ten parametr jest ustawiony na wartość -1, formantu doda nową grupę w ostatnim miejscu.  
   
- `prbbi`  
- Wskaźnik do [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) strukturę, która definiuje poza pasmem do wstawienia. Należy ustawić `cbSize` członkiem tej struktury `sizeof(REBARBANDINFO)` przed wywołaniem tej funkcji.  
+ *prbbi*  
+ Wskaźnik do [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) strukturę, która definiuje poza pasmem do wstawienia. Należy ustawić *elementu cbSize* członkiem tej struktury `sizeof(REBARBANDINFO)` przed wywołaniem tej funkcji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie wartość zero.  
@@ -653,7 +653,7 @@ void MaximizeBand(UINT uBand);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `uBand`  
+ *uBand*  
  Liczony od zera indeks grupy, aby być zmaksymalizowane.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -670,7 +670,7 @@ void MinimizeBand(UINT uBand);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `uBand`  
+ *uBand*  
  Liczony od zera indeks pasmem minimalizowanie.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -708,11 +708,11 @@ void PushChevron(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `uBand`  
+ *uBand*  
  Liczony od zera indeks poza pasmem, których cudzysłów ostrokątny ma zostać przeniesiony.  
   
- `lAppValue`  
- 32-bitową wartość zdefiniowanym przez aplikację. Zobacz `lAppValue` w [RB_PUSHCHEVRON](http://msdn.microsoft.com/library/windows/desktop/bb774506) w systemie Windows SDK.  
+ *lAppValue*  
+ 32-bitową wartość zdefiniowanym przez aplikację. Zobacz *lAppValue* w [RB_PUSHCHEVRON](http://msdn.microsoft.com/library/windows/desktop/bb774506) w zestawie Windows SDK.  
   
 ##  <a name="restoreband"></a>  CReBarCtrl::RestoreBand  
  Zmienia rozmiar poza pasmem w formancie paska pomocniczego do jego rozmiar idealny.  
@@ -722,7 +722,7 @@ void RestoreBand(UINT uBand);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `uBand`  
+ *uBand*  
  Liczony od zera indeks grupy, aby być zmaksymalizowane.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -741,10 +741,10 @@ BOOL SetBandInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `uBand`  
+ *uBand*  
  Liczony od zera indeks grupy, aby zastosować nowe ustawienia.  
   
- `prbbi`  
+ *prbbi*  
  Wskaźnik do [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) strukturę, która definiuje poza pasmem do wstawienia. Należy ustawić `cbSize` członkiem tej struktury `sizeof(REBARBANDINFO)` przed wysłaniem tej wiadomości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -766,8 +766,8 @@ BOOL SetBandWidth(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `uBand`|Liczony od zera indeks pasmem paska pomocniczego.|  
-|[in] `cxWidth`|Nową szerokość paska pomocniczego poza pasmem, a w pikselach.|  
+|[in] *uBand*|Liczony od zera indeks pasmem paska pomocniczego.|  
+|[in] *cxWidth*|Nową szerokość paska pomocniczego poza pasmem, a w pikselach.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  `true` Jeśli metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
@@ -793,7 +793,7 @@ BOOL SetBarInfo(REBARINFO* prbi);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `prbi`  
+ *prbi*  
  Wskaźnik do [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) strukturę, która zawiera informacje, które ma zostać ustawiona. Należy ustawić `cbSize` członkiem tej struktury `sizeof(REBARINFO)` przed wysłaniem tego komunikatu  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -810,7 +810,7 @@ COLORREF SetBkColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `clr`  
+ *CLR*  
  **COLORREF** wartość, która reprezentuje nowy domyślny kolor tła.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -846,8 +846,8 @@ DWORD SetExtendedStyle(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `dwMask`|Bitowe połączenie (lub) flagi określające flag, które w `dwStyleEx` parametr dotyczy. Należy użyć co najmniej jeden z następujących wartości:<br /><br /> RBS_EX_SPLITTER: Domyślnie zawierają rozdzielacza u dołu w poziomym trybie i w prawo w pionowym trybie.<br /><br /> RBS_EX_TRANSPARENT: Przekazuj [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) wiadomości do okna nadrzędnego.|  
-|[in] `dwStyleEx`|Bitowe połączenie (lub) flagi określające, style, które mają zastosowanie. Aby ustawić stylu, należy określić tę samą flagę, która jest używana w `dwMask` parametru. Aby zresetować stylu, określ binarne zero.|  
+|[in] *dwMask*|Bitowe połączenie (lub) flagi określające flag, które w *dwStyleEx* parametr dotyczy. Należy użyć co najmniej jeden z następujących wartości:<br /><br /> RBS_EX_SPLITTER: Domyślnie zawierają rozdzielacza u dołu w poziomym trybie i w prawo w pionowym trybie.<br /><br /> RBS_EX_TRANSPARENT: Przekazuj [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) wiadomości do okna nadrzędnego.|  
+|[in] *dwStyleEx*|Bitowe połączenie (lub) flagi określające, style, które mają zastosowanie. Aby ustawić stylu, należy określić tę samą flagę, która jest używana w *dwMask* parametru. Aby zresetować stylu, określ binarne zero.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Poprzedni rozszerzone style.  
@@ -863,7 +863,7 @@ BOOL SetImageList(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pImageList`  
+ *pImageList*  
  Wskaźnik do [CImageList](../../mfc/reference/cimagelist-class.md) obiekt, który zawiera listy obrazów, który ma zostać przypisany do formantu paska pomocniczego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -877,7 +877,7 @@ CWnd* SetOwner(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWnd`  
+ *pWnd*  
  Wskaźnik do `CWnd` obiektu można ustawić jako właściciel formantu paska pomocniczego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -914,7 +914,7 @@ COLORREF SetTextColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `clr`  
+ *CLR*  
  A **COLORREF** kolor wartość, która reprezentuje nowy tekst `CReBarCtrl` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -945,7 +945,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pszSubAppName`  
+ *pszSubAppName*  
  Wskaźnik do ciąg Unicode, który zawiera styl wizualny paska pomocniczego do ustawienia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -964,7 +964,7 @@ BOOL ShowBand(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `uBand`  
+ *uBand*  
  Liczony od zera indeks poza pasmem w formancie paska pomocniczego.  
   
  *fShow*  
@@ -981,7 +981,7 @@ BOOL SizeToRect(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rect`  
+ *Rect*  
  Odwołanie do [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który określa prostokąt formantu paska pomocniczego powinny być ustalone na.  
   
 ### <a name="return-value"></a>Wartość zwracana  

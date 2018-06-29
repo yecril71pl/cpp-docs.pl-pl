@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9849ebea812ecdb98a686e140c7b9d280634938d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b1052c7197d8679272cc917402a8936983649acb
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378359"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079241"
 ---
 # <a name="cshellmanager-class"></a>Klasa CShellManager
 Implementuje kilka metod, które umożliwiają pracę z wskaźniki do listy identyfikator (PIDLs).  
@@ -104,29 +104,29 @@ BOOL BrowseForFolder(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `strOutFolder`  
+ [out] *strOutFolder*  
  Ciąg używany przez metodę do przechowywania ścieżkę do wybranego folderu.  
   
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Wskaźnik do okna nadrzędnego.  
   
- [in] `lplszInitialFolder`  
+ [in] *lplszInitialFolder*  
  Ciąg, który zawiera folder, który jest domyślnie zaznaczona, gdy zostanie wyświetlone okno dialogowe.  
   
- [in] `lpszTitle`  
+ [in] *lpszTitle*  
  Tytuł okna dialogowego.  
   
- [in] `ulFlags`  
+ [in] *ulFlags*  
  Flag określając opcje w oknie dialogowym. Zobacz [BROWSEINFO](http://msdn.microsoft.com/library/windows/desktop/bb773205) szczegółowy opis.  
   
- [out] `piFolderImage`  
+ [out] *piFolderImage*  
  Wskaźnik do wartości całkowitej, gdy metoda zapisuje indeks obrazu wybranego folderu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli użytkownik wybierze folder z okna dialogowego; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Gdy ta metoda jest wywoływana, aplikacja tworzy i wyświetla okno dialogowe, które umożliwia użytkownikowi wybranie folderu. Metoda zapisze ścieżkę folderu w `strOutFolder` parametru.  
+ Gdy ta metoda jest wywoływana, aplikacja tworzy i wyświetla okno dialogowe, które umożliwia użytkownikowi wybranie folderu. Metoda zapisze ścieżkę folderu w *strOutFolder* parametru.  
   
 ### <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano, jak pobrać odwołanie do `CShellManager` obiektu za pomocą `CWinAppEx::GetShellManager` — metoda i sposobu użycia `BrowseForFolder` metody. Następujący fragment kodu jest częścią [przykładowy Eksplorator](../../visual-cpp-samples.md).  
@@ -143,17 +143,17 @@ LPITEMIDLIST ConcatenateItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pidl1`  
+ [in] *pidl1*  
  Pierwszy element.  
   
- [in] `pidl2`  
+ [in] *pidl2*  
  Drugi element.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do nowego listy element, jeśli funkcja zakończy się powodzeniem, w przeciwnym razie `NULL`.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda tworzy nowy [ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321) wystarczająco duże, aby obie zawierają `pidl1` i `pidl2`. Następnie kopiuje `pidl1` i `pidl2` na nową listę.  
+ Ta metoda tworzy nowy [ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321) wystarczająco duże, aby obie zawierają *pidl1* i *pidl2*. Następnie kopiuje *pidl1* i *pidl2* na nową listę.  
   
 ##  <a name="copyitem"></a>  CShellManager::CopyItem  
  Kopiuje listy elementów.  
@@ -163,7 +163,7 @@ LPITEMIDLIST CopyItem(LPCITEMIDLIST pidlSource);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pidlSource`  
+ [in] *pidlSource*  
  Oryginalnej listy elementów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -180,7 +180,7 @@ LPITEMIDLIST CreateItem(UINT cbSize);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `cbSize`  
+ [in] *elementu cbSize*  
  Rozmiar listy elementów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -204,7 +204,7 @@ void FreeItem(LPITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pidl`  
+ [in] *pidl*  
  Listy elementów do usunięcia.  
   
 ##  <a name="getitemcount"></a>  CShellManager::GetItemCount  
@@ -215,7 +215,7 @@ UINT GetItemCount(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pidl`  
+ [in] *pidl*  
  Wskaźnik do listy elementów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -229,7 +229,7 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pidl`  
+ [in] *pidl*  
  Wskaźnik do listy elementów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -243,7 +243,7 @@ LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pidl`  
+ [in] *pidl*  
  Na liście elementów w celu wykonania iteracji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -262,10 +262,10 @@ int GetParentItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpidl`  
+ [in] *lpidl*  
  PIDL, których elementem nadrzędnym zostaną pobrane.  
   
- [out] `lpidlParent`  
+ [out] *lpidlParent*  
  Odwołanie do PIDL, na której metoda będzie przechowywać wynik.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -284,10 +284,10 @@ HRESULT ItemFromPath(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszPath`  
+ [in] *lpszPath*  
  Ciąg, który określa ścieżkę do elementu.  
   
- [out] `pidl`  
+ [out] *pidl*  
  Odwołanie do PIDL. Metoda używa tego PIDL do przechowywania wskaźnik do jego wartości zwracanej.  
   
 ### <a name="return-value"></a>Wartość zwracana  

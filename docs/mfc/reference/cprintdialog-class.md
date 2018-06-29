@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 842565b460ff88ae70d108bc1b1db71b22674eb2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d72b96e0be786aab18903e95f346eccd5364dd4b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377230"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079658"
 ---
 # <a name="cprintdialog-class"></a>Klasa CPrintDialog
 Hermetyzuje usług świadczonych przez okno dialogowe wspólne systemu Windows do drukowania.  
@@ -159,13 +159,13 @@ CPrintDialog(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bPrintSetupOnly`  
- Określa, czy jest wyświetlany standardowe okno dialogowe Drukuj lub okno dialogowe Ustawienia wydruku. Ustaw ten parametr, **TRUE** do wyświetlenia standardowe okno dialogowe Ustawienia wydruku systemu Windows. Ustaw ją na **FALSE** Aby wyświetlić okno dialogowe drukowania w systemie Windows. Jeśli `bPrintSetupOnly` jest **FALSE**, przycisk opcji Ustawienia wydruku jest nadal wyświetlany w oknie dialogowym drukowania.  
+ *bPrintSetupOnly*  
+ Określa, czy jest wyświetlany standardowe okno dialogowe Drukuj lub okno dialogowe Ustawienia wydruku. Ustaw ten parametr, **TRUE** do wyświetlenia standardowe okno dialogowe Ustawienia wydruku systemu Windows. Ustaw ją na **FALSE** Aby wyświetlić okno dialogowe drukowania w systemie Windows. Jeśli *bPrintSetupOnly* jest **FALSE**, przycisk opcji Ustawienia wydruku jest nadal wyświetlany w oknie dialogowym drukowania.  
   
- `dwFlags`  
+ *wartość elementu dwFlags*  
  Jedną lub więcej flag, które można dostosować ustawienia okna dialogowego łączyć przy użyciu bitowego operatora OR. Na przykład **PD_ALLPAGES** flagi ustawia domyślny zakres drukowania do wszystkich stron dokumentu. Zobacz [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) struktury w zestawie SDK systemu Windows, aby uzyskać więcej informacji na temat tych flag.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do okna nadrzędnego lub właściciela okna dialogowego.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -209,7 +209,7 @@ virtual INT_PTR DoModal();
   
  Po wywołaniu `DoModal`, innego członka można wywołać funkcji można pobrać ustawień lub wprowadzania informacji przez użytkownika w oknie dialogowym.  
   
- Należy pamiętać, że podczas wywoływania konstruktora z `bPrintSetupOnly` ustawioną **FALSE**, **PD_RETURNDC** Flaga służy automatycznie. Po wywołaniu `DoModal`, `GetDefaults`, lub `GetPrinterDC`, drukarki kontrolera domeny, które zostaną zwrócone w `m_pd.hDC`. Ten kontroler domeny musi zostać zwolniony z wywołaniem do [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) przez obiekt wywołujący `CPrintDialog`.  
+ Należy pamiętać, że podczas wywoływania konstruktora z *bPrintSetupOnly* ustawioną **FALSE**, **PD_RETURNDC** Flaga służy automatycznie. Po wywołaniu `DoModal`, `GetDefaults`, lub `GetPrinterDC`, drukarki kontrolera domeny, które zostaną zwrócone w `m_pd.hDC`. Ten kontroler domeny musi zostać zwolniony z wywołaniem do [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) przez obiekt wywołujący `CPrintDialog`.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CPrintDialog::CreatePrinterDC](#createprinterdc).  
@@ -243,7 +243,7 @@ BOOL GetDefaults();
 ### <a name="remarks"></a>Uwagi  
  Pobrane wartości są umieszczane w `m_pd` struktury.  
   
- W niektórych przypadkach wywoła wywołanie tej funkcji [Konstruktor](#cprintdialog) dla `CPrintDialog` z `bPrintSetupOnly` ustawioną **FALSE**. W takich przypadkach drukarki kontrolera domeny i **hDevNames** i **pole hDevMode** (dojść do dwóch znajduje się w `m_pd` elementu członkowskiego danych) są przydzielane automatycznie.  
+ W niektórych przypadkach wywoła wywołanie tej funkcji [Konstruktor](#cprintdialog) dla `CPrintDialog` z *bPrintSetupOnly* ustawioną **FALSE**. W takich przypadkach drukarki kontrolera domeny i **hDevNames** i **pole hDevMode** (dojść do dwóch znajduje się w `m_pd` elementu członkowskiego danych) są przydzielane automatycznie.  
   
  Jeśli Konstruktor `CPrintDialog` została wywołana z `bPrintSetupOnly` ustawioną **FALSE**, ta funkcja nie będzie zwracać tylko **hDevNames** i **pole hDevMode** (znajdujący się w **m_pd.hDevNames** i **m_pd.hDevMode**) do obiektu wywołującego, ale również zwróci drukarki kontrolera domeny w **m_pd.hDC**. Jest odpowiedzialny za obiekt wywołujący, aby usunąć drukarki kontrolera domeny i wywołań systemu Windows [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) funkcja na dojściach po zakończeniu pracy z `CPrintDialog` obiektu.  
   
@@ -345,7 +345,7 @@ HDC GetPrinterDC() const;
  Dojście do kontekstu urządzenia drukarki w przypadku powodzenia; w przeciwnym razie **NULL**.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `bPrintSetupOnly` parametr `CPrintDialog` konstruktor został **FALSE** (co oznacza, że zostanie wyświetlone okno dialogowe drukowania), następnie `GetPrinterDC` zwraca uchwyt do kontekstu urządzenia drukarki. Należy wywołać systemu Windows [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) funkcji, aby usunąć kontekst urządzenia, po zakończeniu korzystania z niego.  
+ Jeśli *bPrintSetupOnly* parametr `CPrintDialog` konstruktor został **FALSE** (co oznacza, że zostanie wyświetlone okno dialogowe drukowania), następnie `GetPrinterDC` Zwraca dojście do urządzenia drukarki kontekst. Należy wywołać systemu Windows [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) funkcji, aby usunąć kontekst urządzenia, po zakończeniu korzystania z niego.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#109](../../mfc/codesnippet/cpp/cprintdialog-class_5.cpp)]  

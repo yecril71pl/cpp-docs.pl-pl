@@ -119,12 +119,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4e6ae13efabd34c6c685b07691789634ca0aed9c
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: db7398512e6b981f4da3fc0b88b6fbc7890c6016
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305920"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079789"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp dwukierunkowego. Użyj kontenera `list` Zarządzanie sekwencję elementów jako dwukierunkowy połączonej listy węzłów, w każdym przechowywania jeden element.  
@@ -146,7 +146,7 @@ template<typename Value>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  Wartość  
  Typ elementu w kontrolowanej sekwencji.  
   
@@ -155,7 +155,7 @@ template<typename Value>
   
  **Namespace:** cliext 
 
-## <a name="members"></a>Elementy członkowskie  
+## <a name="declarations"></a>Deklaracje  
   
 |Definicja typu|Opis|  
 |---------------------|-----------------|  
@@ -240,6 +240,8 @@ template<typename Value>
   
  Wymazywanie lub usunięcie elementu wywołuje destruktor dla jej wartości przechowywanej. Niszczenie kontenera powoduje wymazanie wszystkich elementów. W związku z tym kontenera, której typ elementów jest klasa ref gwarantuje, że żadnych elementów outlive kontenera. Należy jednak pamiętać, że jest kontenerem dojść `not` zniszczyć elementów.  
   
+## <a name="members"></a>Elementy członkowskie
+
 ## <a name="assign"></a> list::ASSIGN (STL/CLR)
 Zamienia wszystkie elementy.  
   

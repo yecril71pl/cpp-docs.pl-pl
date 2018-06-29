@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f234b3f06e22308a31e8e5694648fd5664b448a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fef6d3e30791d2a08a82d1b152cd849cd4ebf24b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377343"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078411"
 ---
 # <a name="cpropexchange-class"></a>Klasa CPropExchange
 Obsługuje implementacji trwałości dla formantów OLE.  
@@ -95,20 +95,20 @@ virtual BOOL ExchangeBlobProp(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pszPropName`  
+ *pszPropName*  
  Nazwa właściwości są wymieniane.  
   
- `phBlob`  
+ *phBlob*  
  Wskaźnik do zmiennej wskazuje do przechowywania właściwości (zmienna jest zwykle elementu członkowskiego klasy).  
   
- `hBlobDefault`  
+ *hBlobDefault*  
  Wartość domyślna właściwości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli wymiany zakończyło się pomyślnie; 0 w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wartość właściwości jest odczytu lub zapisu do, odpowiednio, zmienna odwołuje się `phBlob`. Jeśli `hBlobDefault` jest określony, będzie on używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, serializacji formantu nie powiedzie się.  
+ Wartość właściwości jest odczytu lub zapisu do, odpowiednio, zmienna odwołuje się *phBlob*. Jeśli *hBlobDefault* jest określony, będzie on używany jako wartość domyślna właściwości. Ta wartość jest używana, jeśli z jakiegokolwiek powodu, serializacji formantu nie powiedzie się.  
   
  Funkcje **CArchivePropExchange::ExchangeBlobProp**, **CResetPropExchange::ExchangeBlobProp**, i **CPropsetPropExchange::ExchangeBlobProp** zastąpienia czystej funkcji wirtualnej.  
   
@@ -124,23 +124,23 @@ virtual BOOL ExchangeFontProp(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pszPropName`  
+ *pszPropName*  
  Nazwa właściwości są wymieniane.  
   
- `font`  
+ *Czcionki*  
  Odwołanie do [CFontHolder](../../mfc/reference/cfontholder-class.md) obiekt, który zawiera właściwość czcionki.  
   
- `pFontDesc`  
- Wskaźnik do [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782) struktury zawierającej wartości inicjowanie domyślnego stanu właściwość czcionki podczas `pFontDispAmbient` jest **NULL**.  
+ *pFontDesc*  
+ Wskaźnik do [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782) struktury zawierającej wartości inicjowanie domyślnego stanu właściwość czcionki podczas *pFontDispAmbient* jest **NULL**.  
   
- `pFontDispAmbient`  
+ *pFontDispAmbient*  
  Wskaźnik do **IFontDisp** interfejsu czcionki do użycia dla inicjowanie domyślnego stanu właściwość czcionki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli wymiany zakończyło się pomyślnie; 0 w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli właściwość czcionki jest ładowany z nośnika do kontrolki, ustawienia czcionek są pobierane z nośnika i `CFontHolder` zawiera odwołanie do obiektu `font` jest inicjowany z nich. Jeśli właściwość czcionki są przechowywane, właściwości w obiekcie czcionki są zapisywane na nośniku.  
+ Jeśli właściwość czcionki jest ładowany z nośnika do kontrolki, ustawienia czcionek są pobierane z nośnika i `CFontHolder` zawiera odwołanie do obiektu *czcionki* jest inicjowany z nich. Jeśli właściwość czcionki są przechowywane, właściwości w obiekcie czcionki są zapisywane na nośniku.  
   
  Funkcje **CArchivePropExchange::ExchangeFontProp**, **CResetPropExchange::ExchangeFontProp**, i **CPropsetPropExchange::ExchangeFontProp** zastąpienia czystej funkcji wirtualnej.  
   
@@ -156,16 +156,16 @@ virtual BOOL ExchangePersistentProp(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pszPropName`  
+ *pszPropName*  
  Nazwa właściwości są wymieniane.  
   
- `ppUnk`  
+ *ppUnk*  
  Wskaźnik do zmiennej zawierający wskaźnik z właściwością **IUnknown** interfejsu (Ta zmienna jest zwykle elementu członkowskiego klasy).  
   
- `iid`  
+ *identyfikator IID*  
  Identyfikator interfejsu interfejsu we właściwości, który będzie używany przez formant.  
   
- `pUnkDefault`  
+ *pUnkDefault*  
  Wartość domyślna właściwości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -188,10 +188,10 @@ virtual BOOL ExchangeProp(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pszPropName`  
+ *pszPropName*  
  Nazwa właściwości są wymieniane.  
   
- `vtProp`  
+ *vtProp*  
  Symbol określenie typu właściwości są wymieniane. Możliwe wartości to:  
   
 |Symbol|Typ właściwości|  
@@ -204,7 +204,7 @@ virtual BOOL ExchangeProp(
 |`VT_R4`|**float**|  
 |`VT_R8`|**double**|  
   
- `pvProp`  
+ *pvProp*  
  Wskaźnik do wartości właściwości.  
   
  *pvDefault*  
@@ -214,7 +214,7 @@ virtual BOOL ExchangeProp(
  Różna od zera, jeśli wymiany zakończyło się pomyślnie; 0 w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli właściwość jest ładowany z nośnika do formantu, wartość właściwości jest pobierana z nośnika i przechowywane w wskazywanego przez obiekt `pvProp`. Jeśli właściwość są przechowywane na nośniku, wartość obiektu wskazywana przez `pvProp` jest zapisywany na nośniku.  
+ Jeśli właściwość jest ładowany z nośnika do formantu, wartość właściwości jest pobierana z nośnika i przechowywane w wskazywanego przez obiekt *pvProp*. Jeśli właściwość są przechowywane na nośniku, wartość obiektu wskazywana przez *pvProp* jest zapisywany na nośniku.  
   
  Funkcje **CArchivePropExchange::ExchangeProp**, **CResetPropExchange::ExchangeProp**, i **CPropsetPropExchange::ExchangeProp** zastąpienie tym czysty funkcję wirtualną.  
   
@@ -232,10 +232,10 @@ virtual BOOL ExchangeVersion(
  *dwVersionLoaded*  
  Odwołanie do zmiennej przechowywania numer wersji ładowanych danych trwałych.  
   
- `dwVersionDefault`  
+ *dwVersionDefault*  
  Bieżący numer wersji formantu.  
   
- `bConvert`  
+ *bConvert*  
  Wskazuje, czy do konwersji danych trwałych do bieżącej wersji lub zachowania jej w tej samej wersji, która została załadowana.  
   
 ### <a name="return-value"></a>Wartość zwracana  

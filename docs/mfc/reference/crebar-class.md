@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94fc1e0ccad8980e0ed5a1cc0f8c0262502e1398
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ea2a1047864c19be3f5bbd6c303b4b00fb132dc
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371149"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078772"
 ---
 # <a name="crebar-class"></a>Crebar — klasa
 Pasek sterowania oferuje układu, trwałości i informacje o formantach paska pomocniczego stanie.  
@@ -56,10 +56,10 @@ class CReBar : public CControlBar
 ## <a name="rebar-control"></a>Paska pomocniczego kontrolki  
  Obiekt paska pomocniczego działa podobnie do obiektu paska narzędzi. Paska pomocniczego używa mechanizmu kliknij i przeciągnij zmiany rozmiaru jego pasma. Formantu paska pomocniczego może zawierać jeden lub więcej grup, z każdej grupy o dowolnej kombinacji pasek uchwytu, mapy bitowej etykietę tekstową i okna podrzędnego. Jednak pasma nie może zawierać więcej niż jedno okno podrzędne.  
   
- **Crebar —** używa [crebarctrl —](../../mfc/reference/crebarctrl-class.md) klasy, aby zapewnić jego wykonania. Dostęp można uzyskać za pomocą formantu paska pomocniczego [getrebarctrl —](#getrebarctrl) Aby skorzystać z opcji dostosowywania formantu. Aby uzyskać informacje o formantach paska pomocniczego, zobacz `CReBarCtrl`. Aby uzyskać więcej informacji o używaniu formanty paska pomocniczego, zobacz [crebarctrl przy użyciu —](../../mfc/using-crebarctrl.md).  
+ `CReBar` używa [crebarctrl —](../../mfc/reference/crebarctrl-class.md) klasy, aby zapewnić jego wykonania. Dostęp można uzyskać za pomocą formantu paska pomocniczego [getrebarctrl —](#getrebarctrl) Aby skorzystać z opcji dostosowywania formantu. Aby uzyskać informacje o formantach paska pomocniczego, zobacz `CReBarCtrl`. Aby uzyskać więcej informacji o używaniu formanty paska pomocniczego, zobacz [crebarctrl przy użyciu —](../../mfc/using-crebarctrl.md).  
   
 > [!CAUTION]
->  Paska pomocniczego i obiektów formantu paska pomocniczego nie obsługują formantu MFC paska dokowania. Jeśli **CRebar::EnableDocking** jest wywoływana, aplikacja będzie potwierdzenia.  
+>  Paska pomocniczego i obiektów formantu paska pomocniczego nie obsługują formantu MFC paska dokowania. Jeśli `CRebar::EnableDocking` jest wywoływana, aplikacja będzie potwierdzenia.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -95,16 +95,16 @@ BOOL AddBar(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pBar`  
+ *pBar*  
  Wskaźnik do `CWnd` obiektu, który ma zostać wstawiony do paska pomocniczego okna podrzędnego. Odwołuje się do obiektu musi mieć **ws_child —**.  
   
- `lpszText`  
- Wskaźnik do ciąg zawierający tekst do wyświetlenia na paska pomocniczego. **Wartość NULL** domyślnie. Tekst wyświetlany w `lpszText` nie jest częścią okna podrzędnego; znajduje się na paska pomocniczego, do samej siebie.  
+ *lpszText*  
+ Wskaźnik do ciąg zawierający tekst do wyświetlenia na paska pomocniczego. **Wartość NULL** domyślnie. Tekst wyświetlany w *lpszText* nie jest częścią okna podrzędnego; znajduje się na paska pomocniczego, do samej siebie.  
   
- `pbmp`  
+ *pbmp*  
  Wskaźnik do `CBitmap` obiektu, który będzie wyświetlany na tła paska pomocniczego. **Wartość NULL** domyślnie.  
   
- `dwStyle`  
+ *dwStyle*  
  A `DWORD` zawierający styl paska pomocniczego. Zobacz **fStyle** funkcja opis w strukturze Win32 [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) pełną listę stylów poza pasmem.  
   
  *clrFore*  
@@ -131,16 +131,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do `CWnd` obiektu, którego okna systemu Windows jest nadrzędny paska stanu. Zwykle okna ramki.  
   
- `dwCtrlStyle`  
+ *dwCtrlStyle*  
  Styl formantu paska pomocniczego. Domyślnie **RBS_BANDBORDERS**, która wyświetla zawęzić wierszy w celu rozdzielenia sąsiadujących paskami w formancie paska pomocniczego. Zobacz [stylów formantu paska pomocniczego](http://msdn.microsoft.com/library/windows/desktop/bb774377) w zestawie SDK systemu Windows lista style.  
   
- `dwStyle`  
+ *dwStyle*  
  Style okna paska pomocniczego.  
   
- `nID`  
+ *nID*  
  Identyfikator paska pomocniczego okna podrzędnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  

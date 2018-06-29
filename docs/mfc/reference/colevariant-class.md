@@ -30,15 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b7f0da1f53bf2c6b0e216195be37746eab9abd1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0966aa28595d5384fd6877f30452d3cc24853f29
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378524"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079212"
 ---
 # <a name="colevariant-class"></a>Klasa COleVariant
-Hermetyzuje [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) — typ danych.  
+Hermetyzuje [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) — typ danych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -76,14 +76,14 @@ class COleVariant : public tagVARIANT
 |[COleVariant::operator &lt; &lt;, &gt;&gt;](#operator_lt_lt__gt_gt)|Dane wyjściowe `COleVariant` do wartości `CArchive` lub `CDumpContext` i danych wejściowych `COleVariant` obiekt z `CArchive`.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ten typ danych jest używany w automatyzacji OLE. W szczególności [DISPPARAMS](http://msdn.microsoft.com/en-us/a16e5a21-766e-4287-b039-13429aa78f8b) struktura zawiera wskaźnik do tablicy **VARIANT** struktury. A **DISPPARAMS** struktura jest używana do przekazania parametrów do [IDispatch::Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d).  
+ Ten typ danych jest używany w automatyzacji OLE. W szczególności [DISPPARAMS](http://msdn.microsoft.com/a16e5a21-766e-4287-b039-13429aa78f8b) struktura zawiera wskaźnik do tablicy **VARIANT** struktury. A **DISPPARAMS** struktura jest używana do przekazania parametrów do [IDispatch::Invoke](http://msdn.microsoft.com/964ade8e-9d8a-4d32-bd47-aa678912a54d).  
   
 > [!NOTE]
 >  Ta klasa pochodzi od **VARIANT** struktury. Oznacza to, że można przekazać `COleVariant` w parametr, który odwołuje się do **VARIANT** i elementów członkowskich danych **VARIANT** struktury są elementami członkowskimi danych dostępny `COleVariant`.  
   
  Dwa powiązanych klas MFC [COleCurrency](../../mfc/reference/colecurrency-class.md) i [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) Hermetyzowanie typów danych variant **waluty** ( `VT_CY`) i **data** ( `VT_DATE`). `COleVariant` Bardzo często używane klasy w klasach DAO; Zobacz te klasy w typowy sposób użycia tej klasy, na przykład [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) i [cdaorecordset —](../../mfc/reference/cdaorecordset-class.md).  
   
- Aby uzyskać więcej informacji, zobacz [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118), [waluty](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e), [DISPPARAMS](http://msdn.microsoft.com/en-us/a16e5a21-766e-4287-b039-13429aa78f8b), i [IDispatch::Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d) wpisów w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118), [waluty](http://msdn.microsoft.com/5e81273c-7289-45c7-93c0-32c1553f708e), [DISPPARAMS](http://msdn.microsoft.com/a16e5a21-766e-4287-b039-13429aa78f8b), i [IDispatch::Invoke](http://msdn.microsoft.com/964ade8e-9d8a-4d32-bd47-aa678912a54d) wpisów w zestawie Windows SDK.  
   
  Aby uzyskać więcej informacji na temat `COleVariant` klasy i jego użycia w automatyzacji OLE, zobacz "Przekazywanie parametrów w automatyzacji OLE" w artykule [automatyzacji](../../mfc/automation.md).  
   
@@ -96,7 +96,7 @@ class COleVariant : public tagVARIANT
  **Nagłówek:** afxdisp.h  
   
 ##  <a name="attach"></a>  COleVariant::Attach  
- Wywołanie tej funkcji można dołączyć podanego [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) obiektu do bieżącego `COleVariant` obiektu.  
+ Wywołanie tej funkcji można dołączyć podanego [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) obiektu do bieżącego `COleVariant` obiektu.  
   
 ```  
 void Attach(VARIANT& varSrc);
@@ -107,9 +107,9 @@ void Attach(VARIANT& varSrc);
  Istniejące **VARIANT** obiektu jest dołączony do bieżącego `COleVariant` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja ustawia [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) z *varSrc* do `VT_EMPTY`.  
+ Ta funkcja ustawia [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) z *varSrc* do `VT_EMPTY`.  
   
- Aby uzyskać więcej informacji, zobacz [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) i [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) wpisów w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) i [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) wpisów w zestawie Windows SDK.  
   
 ##  <a name="colevariant"></a>  COleVariant::COleVariant  
  Konstruuje `COleVariant` obiektu.  
@@ -138,40 +138,40 @@ COleVariant(LPCITEMIDLIST pidl);
  *varSrc*  
  Istniejące `COleVariant` lub **VARIANT** obiekt ma zostać skopiowany do nowego `COleVariant` obiektu.  
   
- `pSrc`  
+ *pSrc*  
  Wskaźnik do **VARIANT** obiektów, które zostaną skopiowane do nowego `COleVariant` obiektu.  
   
- `lpszSrc`  
+ *lpszSrc*  
  Ciąg zakończony zerem, można skopiować do nowego `COleVariant` obiektu.  
   
- `vtSrc`  
+ *vtSrc*  
  `VARTYPE` Nowego `COleVariant` obiektu.  
   
- `strSrc`  
+ *strSrc*  
  A [cstring —](../../atl-mfc-shared/reference/cstringt-class.md) obiekt ma zostać skopiowany do nowego `COleVariant` obiektu.  
   
- `nSrc`, `lSrc`  
+ *nSrc*, *lSrc*  
  Wartość liczbową można skopiować do nowego `COleVariant` obiektu.  
   
- `vtSrc`  
+ *vtSrc*  
  `VARTYPE` Nowego `COleVariant` obiektu.  
   
- `curSrc`  
+ *curSrc*  
  A [COleCurrency](../../mfc/reference/colecurrency-class.md) obiekt ma zostać skopiowany do nowego `COleVariant` obiektu.  
   
- `fltSrc`, `dblSrc`  
+ *fltSrc*, *dblSrc*  
  Wartość liczbową można skopiować do nowego `COleVariant` obiektu.  
   
- `timeSrc`  
+ *timeSrc*  
  A [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) obiekt ma zostać skopiowany do nowego `COleVariant` obiektu.  
   
- `arrSrc`  
+ *arrSrc*  
  A [CByteArray](../../mfc/reference/cbytearray-class.md) obiekt ma zostać skopiowany do nowego `COleVariant` obiektu.  
   
- `lbSrc`  
+ *lbSrc*  
  A [clongbinary —](../../mfc/reference/clongbinary-class.md) obiekt ma zostać skopiowany do nowego `COleVariant` obiektu.  
   
- `pidl`  
+ *PIDL*  
  Wskaźnik do [ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321) struktury ma zostać skopiowany do nowego `COleVariant` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -185,15 +185,15 @@ COleVariant(LPCITEMIDLIST pidl);
   
 - **COleVariant (** `lpszSrc` **)** kopiuje ciąg do nowego obiektu `VT_BSTR` (UNICODE).  
   
-- **COleVariant (** `lpszSrc` **,** `vtSrc` **)** kopiuje ciąg do nowego obiektu. Parametr `vtSrc` musi być `VT_BSTR` (UNICODE) lub `VT_BSTRT` (ANSI).  
+- **COleVariant (** `lpszSrc` **,** `vtSrc` **)** kopiuje ciąg do nowego obiektu. Parametr *vtSrc* musi być `VT_BSTR` (UNICODE) lub `VT_BSTRT` (ANSI).  
   
 - **COleVariant (** `strSrc` **)** kopiuje ciąg do nowego obiektu **VT_BSTR** (UNICODE).  
   
 - **COleVariant (** `nSrc` **)** 8-bitową liczbę całkowitą są kopiowane do nowego obiektu `VT_UI1`.  
   
-- **COleVariant (** `nSrc` **,** `vtSrc` **)** 16-bitową liczbę całkowitą (lub wartość logiczna) są kopiowane do nowego obiektu. Parametr `vtSrc` musi być `VT_I2` lub `VT_BOOL`.  
+- **COleVariant (** `nSrc` **,** `vtSrc` **)** 16-bitową liczbę całkowitą (lub wartość logiczna) są kopiowane do nowego obiektu. Parametr *vtSrc* musi być `VT_I2` lub `VT_BOOL`.  
   
-- **COleVariant (** `lSrc` **,** `vtSrc` **)** kopiuje 32-bitową liczbę całkowitą (lub `SCODE` wartość) do nowego obiektu. Parametr `vtSrc` musi być `VT_I4`, `VT_ERROR`, lub `VT_BOOL`.  
+- **COleVariant (** `lSrc` **,** `vtSrc` **)** kopiuje 32-bitową liczbę całkowitą (lub `SCODE` wartość) do nowego obiektu. Parametr *vtSrc* musi być `VT_I4`, `VT_ERROR`, lub `VT_BOOL`.  
   
 - **COleVariant (** `curSrc` **)** kopie **COleCurrency** wartości do nowego obiektu `VT_CY`.  
   
@@ -217,14 +217,14 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `vartype`  
- [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) dla tego `COleVariant` obiektu.  
+ *VarType*  
+ [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) dla tego `COleVariant` obiektu.  
   
- `pSrc`  
- Wskaźnik do [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) obiektu do skonwertowania. Jeśli ta wartość jest **NULL**, to `COleVariant` obiekt jest używany jako źródło do konwersji.  
+ *pSrc*  
+ Wskaźnik do [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) obiektu do skonwertowania. Jeśli ta wartość jest **NULL**, to `COleVariant` obiekt jest używany jako źródło do konwersji.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji, zobacz [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118), [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4), i [VariantChangeType](http://msdn.microsoft.com/en-us/48a51e32-95d7-4eeb-8106-f5043ffa2fd1) wpisów w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118), [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4), i [VariantChangeType](http://msdn.microsoft.com/48a51e32-95d7-4eeb-8106-f5043ffa2fd1) wpisów w zestawie Windows SDK.  
   
 ##  <a name="clear"></a>  COleVariant::Clear  
  Czyści **VARIANT**.  
@@ -239,19 +239,19 @@ void Clear();
  Aby uzyskać więcej informacji, zobacz `VARIANT`, `VARTYPE`, i `VariantClear` wpisów w zestawie Windows SDK.  
   
 ##  <a name="detach"></a>  COleVariant::Detach  
- Odłącza odpowiadającego [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) obiektu z tego `COleVariant` obiektu.  
+ Odłącza odpowiadającego [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) obiektu z tego `COleVariant` obiektu.  
   
 ```  
 VARIANT Detach();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja ustawia [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) tego `COleVariant` do obiektu `VT_EMPTY`.  
+ Ta funkcja ustawia [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) tego `COleVariant` do obiektu `VT_EMPTY`.  
   
 > [!NOTE]
->  Po wywołaniu **Detach**, odpowiada wywołującego wywołać **VariantClear** na powstałe w ten sposób **VARIANT** struktury.  
+>  Po wywołaniu `Detach`, odpowiada wywołującego wywołać **VariantClear** na powstałe w ten sposób **VARIANT** struktury.  
   
- Aby uzyskać więcej informacji, zobacz [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118), [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4), i [VariantClear](http://msdn.microsoft.com/en-us/28741d81-8404-4f85-95d3-5c209ec13835) wpisów w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118), [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4), i [VariantClear](http://msdn.microsoft.com/28741d81-8404-4f85-95d3-5c209ec13835) wpisów w zestawie Windows SDK.  
   
 ##  <a name="getbytearrayfromvariantarray"></a>  COleVariant::GetByteArrayFromVariantArray  
  Pobiera tablicę bajtów z tablicy istniejące wariantu  
@@ -261,7 +261,7 @@ void GetByteArrayFromVariantArray(CByteArray& bytes);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bytes`  
+ *Bajty*  
  Odwołanie do istniejącej [CByteArray](../../mfc/reference/cbytearray-class.md) obiektu.  
   
 ##  <a name="operator_lpcvariant"></a>  COleVariant::operator LPCVARIANT  
@@ -310,13 +310,13 @@ const COleVariant& operator=(const CLongBinary& lbSrc);
   
 - **Operator = (** *varSrc ***)** umożliwia skopiowanie istniejącej **VARIANT** lub `COleVariant` obiektu do tego obiektu.  
   
-- **Operator = (** `pSrc` **)** kopie **VARIANT** dostęp do obiektu `pSrc` do tego obiektu.  
+- **Operator = (** `pSrc` **)** kopie **VARIANT** obiektu uzyskiwał *pSrc* do tego obiektu.  
   
 - **Operator = (** `lpszSrc` **)** kopiuje ciąg znaków zakończony znakiem null do tego obiektu i ustawia **VARTYPE** do `VT_BSTR`.  
   
 - **Operator = (** `strSrc` **)** kopie [cstring —](../../atl-mfc-shared/reference/cstringt-class.md) obiektu do tego obiektu i zestawy **VARTYPE** do `VT_BSTR`.  
   
-- **Operator = (** `nSrc` **)** 8 lub 16-bitową liczbę całkowitą są kopiowane do tego obiektu. Jeśli `nSrc` jest 8-bitową wartość **VARTYPE** to jest ustawiony na wartość `VT_UI1`. Jeśli `nSrc` jest 16-bitową wartość i **VARTYPE** tego jest `VT_BOOL`, jest ona przechowywane; w przeciwnym razie, ma ustawioną wartość `VT_I2`.  
+- **Operator = (** `nSrc` **)** 8 lub 16-bitową liczbę całkowitą są kopiowane do tego obiektu. Jeśli *nSrc* jest 8-bitową wartość **VARTYPE** to jest ustawiony na wartość `VT_UI1`. Jeśli *nSrc* jest 16-bitową wartość i **VARTYPE** tego jest `VT_BOOL`, jest ona przechowywane; w przeciwnym razie, ma ustawioną wartość `VT_I2`.  
   
 - **Operator = (** `lSrc` **)** wartość 32-bitową liczbę całkowitą są kopiowane do tego obiektu. Jeśli **VARTYPE** tego jest `VT_ERROR`, jest ona przechowywane; w przeciwnym razie, ma ustawioną wartość `VT_I4`.  
   
@@ -332,7 +332,7 @@ const COleVariant& operator=(const CLongBinary& lbSrc);
   
 - **Operator = (** `lbSrc` **)** kopie [clongbinary —](../../mfc/reference/clongbinary-class.md) obiektu do tego `COleVariant` obiektu.  
   
- Aby uzyskać więcej informacji, zobacz [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) i [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) wpisów w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) i [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) wpisów w zestawie Windows SDK.  
   
 ##  <a name="operator_eq_eq"></a>  COleVariant::operator ==  
  Ten operator porównuje dwie wartości typu variant i zwraca wartość niezerową, czy są równe; w przeciwnym razie 0.  
@@ -370,16 +370,16 @@ void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszSrc`  
+ *lpszSrc*  
  Ciąg zakończony zerem, można skopiować do nowego `COleVariant` obiektu.  
   
- *VtSrc*  
+ *vtSrc*  
  **VARTYPE** nowego `COleVariant` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Parametr `vtSrc` musi być `VT_BSTR` (UNICODE) lub `VT_BSTRT` (ANSI). `SetString` zwykle jest używana do ustawioną ciągów ANSI, ponieważ wartość domyślna dla [COleVariant::COleVariant](#colevariant) konstruktora z ciągu lub parametru wskaźnik ciągu i nie **VARTYPE** jest UNICODE.  
+ Parametr *vtSrc* musi być `VT_BSTR` (UNICODE) lub `VT_BSTRT` (ANSI). `SetString` zwykle jest używana do ustawioną ciągów ANSI, ponieważ wartość domyślna dla [COleVariant::COleVariant](#colevariant) konstruktora z ciągu lub parametru wskaźnik ciągu i nie **VARTYPE** jest UNICODE.  
   
- Zestaw rekordów DAO kompilacji z systemem innym niż UNICODE oczekuje ciągów ANSI za. W związku z tym dla DAO funkcje używające `COleVariant` obiekty, jeśli nie utworzysz zestaw rekordów UNICODE, należy użyć **COleVariant::COleVariant (** `lpszSrc` **,** `vtSrc` **)**  forma konstruktora z `vtSrc` ustawioną `VT_BSTRT` (ANSI) lub użyj `SetString` z `vtSrc` ustawioną `VT_BSTRT` dokonanie ciągów ANSI. Na przykład `CDaoRecordset` funkcje [CDaoRecordset::Seek](../../mfc/reference/cdaorecordset-class.md#seek) i [CDaoRecordset::SetFieldValue](../../mfc/reference/cdaorecordset-class.md#setfieldvalue) użyć `COleVariant` obiektów jako parametry. Te obiekty muszą być ANSI, jeśli zestaw rekordów DAO nie jest UNICODE.  
+ Zestaw rekordów DAO kompilacji z systemem innym niż UNICODE oczekuje ciągów ANSI za. W związku z tym dla DAO funkcje używające `COleVariant` obiekty, jeśli nie utworzysz zestaw rekordów UNICODE, należy użyć **COleVariant::COleVariant (** `lpszSrc` **,** `vtSrc` **)**  forma konstruktora z *vtSrc* ustawioną `VT_BSTRT` (ANSI) lub użyj `SetString` z *vtSrc* ustawioną `VT_BSTRT` dokonanie ciągów ANSI. Na przykład `CDaoRecordset` funkcje [CDaoRecordset::Seek](../../mfc/reference/cdaorecordset-class.md#seek) i [CDaoRecordset::SetFieldValue](../../mfc/reference/cdaorecordset-class.md#setfieldvalue) użyć `COleVariant` obiektów jako parametry. Te obiekty muszą być ANSI, jeśli zestaw rekordów DAO nie jest UNICODE.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wykres hierarchii](../../mfc/hierarchy-chart.md)

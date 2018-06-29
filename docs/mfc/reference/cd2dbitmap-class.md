@@ -61,12 +61,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e37a8329e0afaa26b114d0ae0da53f0ec552e09e
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 03c41bc17b6d8e5853203533a2d20d81063316a1
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954753"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079292"
 ---
 # <a name="cd2dbitmap-class"></a>Klasa CD2DBitmap
 Otoka dla ID2D1Bitmap.  
@@ -152,7 +152,7 @@ virtual ~CD2DBitmap();
 ```  
   
 ##  <a name="attach"></a>  CD2DBitmap::attach  
- Dołącza istniejący interfejs zasobów do obiektu  
+ Dołącza istniejący interfejs zasobów do obiektu.  
   
 ```  
 void Attach(ID2D1Bitmap* pResource);
@@ -160,7 +160,7 @@ void Attach(ID2D1Bitmap* pResource);
   
 ### <a name="parameters"></a>Parametry  
  *pResource*  
- Interfejs istniejącego zasobu. Nie może mieć wartości NULL  
+ Interfejs istniejącego zasobu. Nie może mieć wartości NULL.  
   
 ##  <a name="cd2dbitmap"></a>  CD2DBitmap::CD2DBitmap  
  Tworzy obiekt CD2DBitmap z zasobu.  
@@ -216,14 +216,14 @@ CD2DBitmap(
  Dojście do mapy bitowej.  
   
 ##  <a name="commoninit"></a>  CD2DBitmap::CommonInit  
- Inicjuje obiekt  
+ Inicjuje obiekt.  
   
 ```  
 void CommonInit();
 ```  
   
 ##  <a name="copyfrombitmap"></a>  CD2DBitmap::CopyFromBitmap  
- Kopiuje określony region z Podana mapa bitowa do bieżącego mapy bitowej  
+ Kopiuje określony region z Podana mapa bitowa do bieżącego mapy bitowej.  
   
 ```  
 HRESULT CopyFromBitmap(
@@ -234,19 +234,19 @@ HRESULT CopyFromBitmap(
   
 ### <a name="parameters"></a>Parametry  
  *pBitmap*  
- Mapy bitowej do skopiowania  
+ Mapy bitowej do skopiowania.  
   
  *destPoint*  
- W bieżącym mapy bitowej lewego górnego rogu obszaru, do którego region określony przez srcRect jest kopiowana  
+ W bieżącym mapy bitowej lewego górnego rogu obszaru, do którego region określony przez srcRect zostanie skopiowany.  
   
  *srcRect*  
- Obszar mapy bitowej do skopiowania  
+ Obszar mapy bitowej do skopiowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli metoda zakończy się powodzeniem, zwraca wartość S_OK. W przeciwnym wypadku zwraca kod błędu HRESULT.  
   
 ##  <a name="copyfrommemory"></a>  CD2DBitmap::CopyFromMemory  
- Kopiuje określony region z pamięci do bieżącego mapy bitowej  
+ Kopiuje określony region z pamięci do bieżącego mapy bitowej.  
   
 ```  
 HRESULT CopyFromMemory(
@@ -260,16 +260,16 @@ HRESULT CopyFromMemory(
  Dane do skopiowania.  
   
  *wysokość*  
- Krok lub wysokość mapy bitowej źródła przechowywane w srcData. Krok to liczba bajtów scanline (jeden wiersz pikseli w pamięci). Z następującej formuły można obliczyć krok: szerokość piksela * bajtów na piksel + uzupełnienia pamięci  
+ Krok lub wysokość mapy bitowej źródła przechowywane w srcData. Krok to liczba bajtów scanline (jeden wiersz pikseli w pamięci). Z następującej formuły można obliczyć krok: szerokość piksela * bajtów na piksel + uzupełnienia pamięci.  
   
  *destRect*  
- W bieżącym mapy bitowej lewego górnego rogu obszaru, do którego region określony przez srcRect jest kopiowana  
+ W bieżącym mapy bitowej lewego górnego rogu obszaru, do którego region określony przez srcRect zostanie skopiowany. 
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli metoda zakończy się powodzeniem, zwraca wartość S_OK. W przeciwnym wypadku zwraca kod błędu HRESULT.  
   
 ##  <a name="copyfromrendertarget"></a>  CD2DBitmap::CopyFromRenderTarget  
- Kopie określonego regionu z określonym elementem docelowym renderowania do bieżącego mapy bitowej  
+ Kopie określonego regionu z określonym elementem docelowym renderowania do bieżącego mapy bitowej.  
   
 ```  
 HRESULT CopyFromRenderTarget(
@@ -280,13 +280,13 @@ HRESULT CopyFromRenderTarget(
   
 ### <a name="parameters"></a>Parametry  
  *pRenderTarget*  
- Zawierający regionie można skopiować obiektu docelowego renderowania  
+ Docelowy renderowania, który zawiera region do skopiowania.  
   
  *destPoint*  
- W bieżącym mapy bitowej lewego górnego rogu obszaru, do którego region określony przez srcRect jest kopiowana  
+ W bieżącym mapy bitowej lewego górnego rogu obszaru, do którego region określony przez srcRect zostanie skopiowany.  
   
  *srcRect*  
- Obszar obiektu docelowego renderowania Aby skopiować  
+ Obszar obiektu docelowego renderowania Aby skopiować.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli metoda zakończy się powodzeniem, zwraca wartość S_OK. W przeciwnym wypadku zwraca kod błędu HRESULT.  
@@ -313,7 +313,7 @@ virtual void Destroy();
 ```  
   
 ##  <a name="detach"></a>  CD2DBitmap::detach  
- Odłącza interfejsu zasobów z obiektu  
+ Odłącza interfejsu zasobów z obiektu.  
   
 ```  
 ID2D1Bitmap* Detach();
@@ -323,7 +323,7 @@ ID2D1Bitmap* Detach();
  Wskaźnik do zasobów odłączyć interfejs.  
   
 ##  <a name="get"></a>  CD2DBitmap::Get  
- Zwraca interfejs ID2D1Bitmap  
+ Zwraca interfejs ID2D1Bitmap.  
   
 ```  
 ID2D1Bitmap* Get();
@@ -333,7 +333,7 @@ ID2D1Bitmap* Get();
  Wskaźnik do interfejsu ID2D1Bitmap lub wartość NULL, jeśli obiekt nie został jeszcze zainicjowany.  
   
 ##  <a name="getdpi"></a>  CD2DBitmap::GetDPI  
- Zwraca punktów na cal (DPI) mapy bitowej  
+ Zwróć punktów na cal (DPI) mapy bitowej.  
   
 ```  
 CD2DSizeF GetDPI() const;  
@@ -353,7 +353,7 @@ D2D1_PIXEL_FORMAT GetPixelFormat() const;
  Piksel format i alfa tryb mapy bitowej.  
   
 ##  <a name="getpixelsize"></a>  CD2DBitmap::GetPixelSize  
- Zwraca rozmiar w jednostki zależne od urządzenia (w pikselach), mapy bitowej  
+ Zwraca rozmiar w jednostki zależne od urządzenia (w pikselach), mapy bitowej.  
   
 ```  
 CD2DSizeU GetPixelSize() const;  
@@ -363,7 +363,7 @@ CD2DSizeU GetPixelSize() const;
  Rozmiar w pikselach, mapy bitowej.  
   
 ##  <a name="getsize"></a>  CD2DBitmap::GetSize  
- Zwraca rozmiar w pikselach niezależnych od urządzenia (DIP) mapy bitowej  
+ Zwraca rozmiar w pikselach niezależnych od urządzenia (DIP) mapy bitowej.  
   
 ```  
 CD2DSizeF GetSize() const;  
@@ -373,7 +373,7 @@ CD2DSizeF GetSize() const;
  Rozmiar w pikselach DIP mapy bitowej.  
   
 ##  <a name="isvalid"></a>  CD2DBitmap::IsValid  
- Sprawdzanie poprawności zasobów  
+ Sprawdza poprawność zasobów.  
   
 ```  
 virtual BOOL IsValid() const;  

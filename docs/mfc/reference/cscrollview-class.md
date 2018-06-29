@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82ffdb26c5766a0ff7cbada511c9bc9c82ebfd93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b480ee1118551b09c705fb4f79f8a50c0a1f895
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375545"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079570"
 ---
 # <a name="cscrollview-class"></a>Klasa CScrollView
 A [CView](../../mfc/reference/cview-class.md) dzięki możliwości.  
@@ -100,7 +100,7 @@ class CScrollView : public CView
   
  Przed `OnDraw` po wywołaniu funkcji członkowskiej klasy pochodnej widoku `CScrollView` automatycznie dopasowuje początek okienka ekranu dla `CPaintDC` obiektu kontekstu urządzenia, przesyłanego do `OnDraw`.  
   
- Aby dostosować okienka ekranu początkowego okno przewijania `CScrollView` zastępuje [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc). Dostosowanie to odbywa się automatycznie dla `CPaintDC` kontekstu urządzenia który `CScrollView` przekazuje do `OnDraw`, ale należy wywołać **CScrollView::OnPrepareDC** samodzielnie dla innych kontekstach urządzenia należy użyć, np. `CClientDC`. Można zastąpić **CScrollView::OnPrepareDC** ustawić pióra, kolor tła i inne atrybuty rysowania, ale Wywołaj klasę bazową do skalowania.  
+ Aby dostosować okienka ekranu początkowego okno przewijania `CScrollView` zastępuje [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc). To dopasowanie jest automatyczne dla `CPaintDC` kontekstu urządzenia który `CScrollView` przekazuje do `OnDraw`, ale należy wywołać `CScrollView::OnPrepareDC` samodzielnie dla innych kontekstach urządzenia używasz, takich jak `CClientDC`. Można zastąpić `CScrollView::OnPrepareDC` ustawić pióra, kolor tła i inne atrybuty rysowania, ale Wywołaj klasę bazową do skalowania.  
   
  Paski przewijania mogą być wyświetlane w trzech miejscach względem widoku, jak pokazano w następujących przypadkach:  
   
@@ -162,10 +162,10 @@ void FillOutsideRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *podstawowego kontrolera domeny*  
  Kontekst urządzenia, w którym ma zostać wykonane wypełniania.  
   
- `pBrush`  
+ *pBrush*  
  Pędzel, z którym ma zostać wypełniony obszaru.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -190,7 +190,7 @@ CPoint GetDeviceScrollPosition() const;
  `GetDeviceScrollPosition` Zwraca wartości w jednostkach urządzenia. Jednostki logiczne, należy użyć `GetScrollPosition` zamiast tego.  
   
 ##  <a name="getdevicescrollsizes"></a>  CScrollView::GetDeviceScrollSizes  
- `GetDeviceScrollSizes` Pobiera bieżący tryb mapowania, łączny rozmiar i rozmiary wiersza i strony przewijanego widoku.  
+ `GetDeviceScrollSizes` pobiera bieżący tryb mapowania, łączny rozmiar i rozmiary wiersza i strony przewijanego widoku.  
   
 ```  
 void GetDeviceScrollSizes(
@@ -201,16 +201,16 @@ void GetDeviceScrollSizes(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nMapMode`  
+ *nMapMode*  
  Zwraca bieżący tryb mapowania dla tego widoku. Aby uzyskać listę możliwych wartości, zobacz `SetScrollSizes`.  
   
- `sizeTotal`  
+ *sizeTotal*  
  Zwraca bieżący łączny rozmiar widoku przewijania w jednostkach urządzenia.  
   
- `sizePage`  
+ *sizePage*  
  Zwraca bieżący kwoty poziome i pionowe przewijanie w każdym kierunku w odpowiedzi na myszy kliknij wale paska przewijania. **Cx** elementu członkowskiego zawiera kwotę poziomej. **Cy** elementu członkowskiego zawiera kwotę pionowej.  
   
- `sizeLine`  
+ *sizeLine*  
  Zwraca bieżący kwoty poziome i pionowe przewijanie w każdym kierunku w odpowiedzi na myszy, kliknij strzałkę przewijania. **Cx** elementu członkowskiego zawiera kwotę poziomej. **Cy** elementu członkowskiego zawiera kwotę pionowej.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -267,7 +267,7 @@ void ScrollToPosition(POINT pt);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pt`  
+ *PT*  
  Punkt przewinięcia w jednostkach logicznych. **x** elementu członkowskiego musi być wartością dodatnią (większa lub równa 0, maksymalnie całkowity rozmiar widoku). Dotyczy to także **y** elementu członkowskiego, gdy tryb mapowania jest `MM_TEXT`. **y** element członkowski ma ujemną wartość w innych niż mapowania tryby `MM_TEXT`.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -281,7 +281,7 @@ void SetScaleToFitSize(SIZE sizeTotal);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `sizeTotal`  
+ *sizeTotal*  
  Poziome i pionowe rozmiary, do których ma być skalowana w widoku. Rozmiar widoku przewijania jest mierzony w jednostkach logicznych. Rozmiar poziomych znajduje się w **cx** elementu członkowskiego. Rozmiar pionowy znajduje się w **cy** elementu członkowskiego. Zarówno **cx** i **cy** musi być większa lub równa 0.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -307,7 +307,7 @@ void SetScrollSizes(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nMapMode`  
+ *nMapMode*  
  Tryb mapowania, które można ustawić dla tego widoku. Możliwe wartości:  
   
 |Tryb mapowania|Jednostka logiczna|Rozszerzenie dodatnią osi y...|  
@@ -321,13 +321,13 @@ void SetScrollSizes(
   
  Wszystkie te tryby są definiowane przez system Windows. Dwa tryby mapowania standardowe, `MM_ISOTROPIC` i `MM_ANISOTROPIC`, nie są używane do `CScrollView`. Biblioteka klas zawiera `SetScaleToFitSize` funkcji członkowskiej skalowania widok do rozmiaru okna. Kolumna trzech w powyższej tabeli opisano współrzędnych orientacji.  
   
- `sizeTotal`  
+ *sizeTotal*  
  Całkowity rozmiar przewijania widoku. **Cx** elementu członkowskiego zawiera poziome zakresu. **Cy** elementu członkowskiego zawiera pionowego. Rozmiary są w jednostkach logicznych. Zarówno **cx** i **cy** musi być większa lub równa 0.  
   
- `sizePage`  
+ *sizePage*  
  Kwoty poziome i pionowe przewijanie w każdym kierunku w odpowiedzi na myszy kliknij wale paska przewijania. **Cx** elementu członkowskiego zawiera kwotę poziomej. **Cy** elementu członkowskiego zawiera kwotę pionowej.  
   
- `sizeLine`  
+ *sizeLine*  
  Kwoty poziome i pionowe przewijanie w każdym kierunku w odpowiedzi na myszy kliknij strzałkę przewijania. **Cx** elementu członkowskiego zawiera kwotę poziomej. **Cy** elementu członkowskiego zawiera kwotę pionowej.  
   
 ### <a name="remarks"></a>Uwagi  

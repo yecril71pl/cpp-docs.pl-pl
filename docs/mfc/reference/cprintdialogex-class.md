@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f511eb1414a5cd5e22b9a3e05f81caef15b908e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e005d18b57a4ada2c1a3aad605b7724f17a62347
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376649"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079101"
 ---
 # <a name="cprintdialogex-class"></a>Klasa CPrintDialogEx
 Hermetyzuje usług świadczonych przez arkusz właściwości wydruku systemu Windows.  
@@ -146,10 +146,10 @@ CPrintDialogEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwFlags`  
+ *wartość elementu dwFlags*  
  Jedną lub więcej flag, które można dostosować ustawienia okna dialogowego łączyć przy użyciu bitowego operatora OR. Na przykład **PD_ALLPAGES** flagi ustawia domyślny zakres drukowania do wszystkich stron dokumentu. Zobacz [PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844) struktury w zestawie SDK systemu Windows, aby uzyskać więcej informacji na temat tych flag.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do okna nadrzędnego lub właściciela okna dialogowego.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -248,7 +248,7 @@ CString GetDriverName() const;
  A `CString` określania nazwy sterownika zdefiniowane przez system.  
   
 ### <a name="remarks"></a>Uwagi  
- Za pomocą wskaźnika do `CString` obiektu zwróconego przez `GetDriverName` jako wartość `lpszDriverName` w wywołaniu [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
+ Za pomocą wskaźnika do `CString` obiektu zwróconego przez `GetDriverName` jako wartość *lpszDriverName* w wywołaniu [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
   
 ##  <a name="getportname"></a>  CPrintDialogEx::GetPortName  
  Wywołanie tej funkcji po wywołaniu [DoModal](#domodal) lub [GetDefaults](#getdefaults) można pobrać nazwy portu aktualnie wybranej drukarki.  

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 623e341610fbecb3dfc9ea0c2e2eed5ee06abebb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 21ec3a9491054ac6ecd0cdb4aad0c4c91d13dbd6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373469"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079056"
 ---
 # <a name="creversaltransition-class"></a>Klasa CReversalTransition
 Hermetyzuje przejścia wycofania.  
@@ -81,7 +81,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pLibrary`  
+ *pLibrary*  
  Wskaźnik do przejścia biblioteki, która odpowiada za tworzenie przejścia standardowe.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -95,7 +95,7 @@ CReversalTransition(UI_ANIMATION_SECONDS duration);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `duration`  
+ *Czas trwania*  
  Czas trwania przejścia.  
   
 ##  <a name="m_duration"></a>  CReversalTransition::m_duration  

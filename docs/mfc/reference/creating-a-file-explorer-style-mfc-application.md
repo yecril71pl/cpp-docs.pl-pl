@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b0f5d4bdabc987d4f4177f616ce756c351b8b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a2c3e8e1c7956a5dff33cd8ff78612f5f844ad6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370158"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078424"
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>Tworzenie aplikacji MFC w stylu eksploratora plików
 Wiele aplikacji systemu Windows używa interfejsu użytkownika (UI) w Eksploratorze plików. Po ponownym uruchomieniu Eksploratora plików, na przykład pojawić aplikacji przy użyciu rozdzielacza pionowy pasek dzielenia obszaru klienckiego. Lewej obszaru klienckiego zapewnia nawigacji i funkcji przeglądania, i prawego obszaru klienckiego przedstawia szczegółowe informacje dotyczące zaznaczenie w okienku po lewej stronie. Po kliknięciu elementu w okienku po lewej stronie aplikacji repopulates okienku po prawej stronie. W aplikacji MDI, możesz użyć polecenia w **widoku** menu, aby zmienić poziom szczegółów wyświetlany w okienku po prawej stronie. (W SDI lub wiele dokumentów najwyższego poziomu aplikacji, można zmienić szczegóły, korzystając z przycisków paska narzędzi.)  
@@ -32,7 +32,7 @@ Wiele aplikacji systemu Windows używa interfejsu użytkownika (UI) w Eksplorato
   
  Kreator tworzy następujące klasy dla Ciebie:  
   
--   **CLeftView** klasa definiuje w okienku po lewej stronie obszaru klienckiego. Zawsze jest pochodną [CTreeView —](../../mfc/reference/ctreeview-class.md).  
+-   `CLeftView` Klasa definiuje w okienku po lewej stronie obszaru klienckiego. Zawsze jest pochodną [CTreeView —](../../mfc/reference/ctreeview-class.md).  
   
 -   C*nazwa_projektu.nazwa_modułu.nazwa_procedury*widoku klasy definiuje okienku po prawej stronie obszaru klienckiego. Domyślnie, pochodzi z [clistview —](../../mfc/reference/clistview-class.md) , ale może być inny rodzaj widoku w zależności od klasy z **klasa podstawowa** na liście [wygenerowane klasy](../../mfc/reference/generated-classes-mfc-application-wizard.md) strony Kreator.  
   

@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 434a0b428199b7c2298815523517097aeee2ab47
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: beeef0d8ff1a89a003987f9cd79172ad2ff86d75
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376177"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079632"
 ---
 # <a name="cpropertypage-class"></a>Cpropertypage — klasa
 Reprezentuje poszczególnych stron arkusza właściwości, znanej także jako okno dialogowe kartę.  
@@ -165,19 +165,19 @@ void Construct(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDTemplate`  
+ *nIDTemplate*  
  Identyfikator szablonu używany dla tej strony.  
   
- `nIDCaption`  
+ *nIDCaption*  
  Identyfikator nazwy na umieszczenie w karcie tej strony. Jeśli jest to 0, nazwę zostaną pobrane z szablonu okna dialogowego dla tej strony.  
   
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Zawiera zerem ciąg określający nazwę zasobu szablon.  
   
- `nIDHeaderTitle`  
+ *nIDHeaderTitle*  
  Identyfikator nazwy na umieszczenie w lokalizacji tytuł właściwości nagłówka strony. Domyślnie 0.  
   
- `nIDHeaderSubTitle`  
+ *nIDHeaderSubTitle*  
  Identyfikator nazwy na umieszczenie w lokalizacji podtytuł właściwości nagłówka strony. Domyślnie 0.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -189,9 +189,9 @@ void Construct(
   
 -   Użytkownik wybrał (z kartami na) tej strony.  
   
- Wywołanie **skonstruować** Jeśli jeden z innych konstruktorów klasy nie została wywołana. `Construct` Funkcja członkowska jest elastyczna, ponieważ można jest pusta instrukcja parametrów, a następnie określ wiele parametrów i konstrukcji w dowolnym momencie w kodzie.  
+ Wywołanie `Construct` Jeśli jeden z innych konstruktorów klasy nie została wywołana. `Construct` Funkcja członkowska jest elastyczna, ponieważ można jest pusta instrukcja parametrów, a następnie określ wiele parametrów i konstrukcji w dowolnym momencie w kodzie.  
   
- Należy użyć `Construct` podczas pracy z tablicami i należy wywołać **skonstruować** dla każdego elementu członkowskiego tablicy, tak aby elementy członkowskie danych przypisano odpowiednie wartości.  
+ Należy użyć `Construct` podczas pracy z tablicami i należy wywołać `Construct` dla każdego elementu członkowskiego tablicy, tak aby elementy członkowskie danych przypisano odpowiednie wartości.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#112](../../mfc/codesnippet/cpp/cpropertypage-class_1.cpp)]  
@@ -232,20 +232,20 @@ CPropertyPage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDTemplate`  
+ *nIDTemplate*  
  Identyfikator szablonu używany dla tej strony.  
   
- `nIDCaption`  
+ *nIDCaption*  
  Identyfikator nazwy na umieszczenie w karcie tej strony. Jeśli jest to 0, nazwę zostaną pobrane z szablonu okna dialogowego dla tej strony.  
   
- `dwSize`  
- `lpszTemplateName`  
+ *dwSize*  
+ *lpszTemplateName*  
  Wskazuje ciąg zawierający nazwę szablonu dla tej strony. Nie może być **NULL**.  
   
- `nIDHeaderTitle`  
+ *nIDHeaderTitle*  
  Identyfikator nazwy na umieszczenie w lokalizacji tytuł właściwości nagłówka strony.  
   
- `nIDHeaderSubTitle`  
+ *nIDHeaderSubTitle*  
  Identyfikator nazwy na umieszczenie w lokalizacji podtytuł właściwości nagłówka strony.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -488,10 +488,10 @@ LRESULT QuerySiblings(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `wParam`  
+ *wParam*  
  Określa dodatkowe informacje zależne od wiadomości.  
   
- `lParam`  
+ *lParam*  
  Określa dodatkowe informacje zależne od wiadomości  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -515,7 +515,7 @@ void SetModified(BOOL bChanged = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bChanged`  
+ *bChanged*  
  **Wartość TRUE,** wskazująca, że od czasu ostatniego zostały one zastosowane; zostały zmodyfikowane ustawienia strony właściwości **FALSE** wskazująca, czy ustawienia strony właściwości zostały zastosowane, lub należy ją ignorować.  
   
 ### <a name="remarks"></a>Uwagi  

@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe943bcc0a1e1a027e432911bd2ad722fc7c7c1f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: face2637f308a56d95baa7563a6409dd38870d73
+ms.sourcegitcommit: 2f571220e16f6c20e1fdb005f6cbc9e7ef5608f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399026"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37070080"
 ---
 # <a name="feclearexcept"></a>feclearexcept
 
@@ -72,7 +72,7 @@ Zwraca zero, jeśli *z wyjątkiem* wynosi zero, lub jeśli określone wyjątki p
 |FE_INVALID|Wystąpił błąd domeny w wcześniej operacji zmiennoprzecinkowej.|
 |FE_OVERFLOW|Wystąpił błąd zakresu; wcześniej wynik operacji zmiennoprzecinkowej jest zbyt duży, może być reprezentowana.|
 |FE_UNDERFLOW|Wynik operacji zmiennoprzecinkowej wcześniej był za mały na pełne precyzji; wartość została utworzona.|
-|FE_ALLEXCEPT|Bitowe lub wszystkie obsługiwane wyjątki zmiennoprzecinkowe.|
+|FE_ALL_EXCEPT|Bitowe lub wszystkie obsługiwane wyjątki zmiennoprzecinkowe.|
 
 *z wyjątkiem* argument może być zero lub wartość logiczną lub co najmniej jednego z makr wyjątków obsługiwanych. Wynik dowolna inna wartość argumentu jest niezdefiniowany.
 

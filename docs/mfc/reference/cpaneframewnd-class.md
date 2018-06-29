@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6846f50b0e89193992a42ea50e785009f31e6d19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c17c81fb39d4397c58b4baba7124de2bda646db7
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378790"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079697"
 ---
 # <a name="cpaneframewnd-class"></a>Klasa CPaneFrameWnd
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -271,7 +271,7 @@ virtual void AddPane(CBasePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pWnd`  
+ [in] *pWnd*  
  Okienko, aby dodać.  
   
 ##  <a name="addremovepanefromgloballist"></a>  CPaneFrameWnd::AddRemovePaneFromGlobalList  
@@ -284,10 +284,10 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pWnd`  
+ [in] *pWnd*  
  Okienko, aby dodać lub usunąć.  
   
- [in] `bAdd`  
+ [in] *bDodaj*  
  Jeśli zera, należy dodać okienka. Jeśli jest to 0, Usuń okienko.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -317,7 +317,7 @@ virtual void CalcBorderSize(CRect& rectBorderSize) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `rectBorderSize`  
+ [out] *rectBorderSize*  
  Zawiera rozmiar wyrażony w pikselach obramowania mini okno.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -336,23 +336,23 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pWndToDock`  
+ [in] *pWndToDock*  
  Wskaźnik do okna, aby dokowania.  
   
- [in] `ptMouse`  
+ [in] *ptMouse*  
  Lokalizacja myszy.  
   
- [out] `rectResult`  
+ [out] *rectResult*  
  Obliczony prostokąt.  
   
- [out] `bDrawTab`  
+ [out] *bDrawTab*  
  Jeśli `TRUE`, Rysuj karty. Jeśli `FALSE`, nie Rysuj karty.  
   
- [out] `ppTargetBar`  
+ [out] *ppTargetBar*  
  Wskaźnik do okienka docelowej.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda oblicza prostokąt okna zajmują użytkownika przeciągania okna do punktu określonego przez `ptMouse` i zadokowane go brak.  
+ Ta metoda oblicza prostokąt okna zajmują użytkownika przeciągania okna do punktu określonego przez *ptMouse* i zadokowane go brak.  
   
 ##  <a name="canbeattached"></a>  CPaneFrameWnd::CanBeAttached  
  Określa, czy bieżące okienko może być zadokowany do innego okienka lub ramki okna.  
@@ -372,11 +372,11 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDockingBar`  
+ [in] *pDockingBar*  
  Okienko.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli można zadokowana mini ramki `pDockingBar`; w przeciwnym razie wartość 0.  
+ Różna od zera, jeśli można zadokowana mini ramki *pDockingBar*; w przeciwnym razie wartość 0.  
   
 ##  <a name="checkgrippervisibility"></a>  CPaneFrameWnd::CheckGripperVisibility  
 
@@ -407,19 +407,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszWindowName`  
+ [in] *lpszWindowName*  
  Określa tekst do wyświetlenia na mini okno.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Określa styl okna. Aby uzyskać więcej informacji, zobacz [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `rect`  
+ [in] *rect*  
  Określa początkowy rozmiar i położenie okna mini.  
   
- [in] [out] `pParentWnd`  
+ [in] [out] *pParentWnd*  
  Określa ramki mini okno nadrzędne. Ta wartość nie może być `NULL`.  
   
- [in] [out] `pContext`  
+ [in] [out] *pContext*  
  Określa kontekst zdefiniowane przez użytkownika.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -442,22 +442,22 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `dwStyleEx`  
+ [in] *dwStyleEx*  
  Określa styl okna rozszerzonej. Aby uzyskać więcej informacji, zobacz [rozszerzone Style okna](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
   
- [in] `lpszWindowName`  
+ [in] *lpszWindowName*  
  Określa tekst do wyświetlenia na mini okno.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Określa styl okna. Aby uzyskać więcej informacji, zobacz [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `rect`  
+ [in] *rect*  
  Określa początkowy rozmiar i położenie okna mini.  
   
- [in] [out] `pParentWnd`  
+ [in] [out] *pParentWnd*  
  Określa ramki mini okno nadrzędne. Ta wartość nie może być `NULL`.  
   
- [in] [out] `pContext`  
+ [in] [out] *pContext*  
  Określa kontekst zdefiniowane przez użytkownika.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -474,7 +474,7 @@ virtual CDockablePane* DockPane(BOOL& bWasDocked);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `bWasDocked`  
+ [out] *bWasDocked*  
  `TRUE` Jeśli już zostało zadokowane okienku; w przeciwnym razie `FALSE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -488,7 +488,7 @@ static CBasePane* FindFloatingPaneByID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nID`  
+ [in] *nID*  
  Reprezentuje identyfikator formantu okienka ma zostać znaleziony.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -506,20 +506,20 @@ static CPaneFrameWnd* __stdcall FrameFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pt`  
+ [in] *pt*  
  Punkt we współrzędnych ekranu.  
   
- [in] `nSensitivity`  
+ [in] *nSensitivity*  
  Zwiększ obszar wyszukiwania okno ramowe mini przez ten rozmiar. Okno ramowe mini spełnia kryteria wyszukiwania, jeśli znajduje się w obszarze zwiększona danego punktu.  
   
- [in] `pFrameToExclude`  
+ [in] *pFrameToExclude*  
  Określa okno ramowe mini do wykluczenia z wyszukiwania.  
   
- [in] `bFloatMultiOnly`  
+ [in] *bFloatMultiOnly*  
  Jeśli `TRUE`, wyszukiwanie tylko okien ramowych minimalnej, które mają `CBRS_FLOAT_MULTI` stylu. Jeśli `FALSE`, wyszukiwanie wszystkich okien ramowych minimalnej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do mini ramkę okna zawierającą `pt`; w przeciwnym razie `NULL`.  
+ Wskaźnik do mini ramkę okna zawierającą *pt*; w przeciwnym razie `NULL`.  
   
 ##  <a name="getcaptionheight"></a>  CPaneFrameWnd::GetCaptionHeight  
  Zwraca wysokość minimalna ramki tytuł okna.  
@@ -542,7 +542,7 @@ virtual void GetCaptionRect(CRect& rectCaption) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `rectCaption`  
+ [out] *rectCaption*  
  Zawiera rozmiar i położenie tytuł okna mini ramki, we współrzędnych ekranu.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -688,10 +688,10 @@ virtual LRESULT HitTest(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `point`  
+ [in] *punktu*  
  Punkt do testowania.  
   
- [in] `bDetectCaption`  
+ [in] *bDetectCaption*  
  Jeśli `TRUE`, sprawdź punktu przed podpis. Jeśli `FALSE`, zignorować podpis.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -780,10 +780,10 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Nazwa profilu.  
   
- [in] `uiID`  
+ [in] *uiID*  
  Identyfikator okienka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -836,7 +836,7 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Kontekst urządzenia używany do rysowania obramowania.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -859,10 +859,10 @@ virtual void OnMovePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pBar`  
+ [in] *pBar*  
  Wskaźnik do okienka (zignorowany).  
   
- [in] `ptOffset`  
+ [in] *ptOffset*  
  Przesunięcie, przez którą chcesz przenieść okienko.  
   
 ##  <a name="onpanerecalclayout"></a>  CPaneFrameWnd::OnPaneRecalcLayout  
@@ -894,10 +894,10 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pBar`  
+ [in] *pBar*  
  Okienko, który jest pokazywany lub ukryty.  
   
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` Jeśli jest wyświetlane okienku; `FALSE` Jeśli okienko jest ukrywane.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -911,7 +911,7 @@ void Pin(BOOL bPin = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bPin`  
+ [in] *bPin*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -926,13 +926,13 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `point`  
+ [in] *punktu*  
  Punkt, który użytkownik kliknął we współrzędnych ekranu.  
   
- [in] `nSensitivity`  
+ [in] *nSensitivity*  
  Ten parametr nie jest używany.  
   
- [in] `bCheckVisibility`  
+ [in] *bCheckVisibility*  
  `TRUE` Aby określić, że powinny być zwracane tylko widoczne okienka; w przeciwnym razie `FALSE`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -969,17 +969,17 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pWnd`  
+ [in] *pWnd*  
  Wskaźnik do okienka do usunięcia.  
   
- [in] `bDestroy`  
- Określa, co się dzieje z okno ramowe minimalnej. Jeśli `bDestroy` jest `TRUE`, ta metoda niszczy okno ramowe mini natychmiast. Jeśli jest `FALSE`, ta metoda niszczy okno ramowe mini z pewnym opóźnieniem.  
+ [in] *bDestroy*  
+ Określa, co się dzieje z okno ramowe minimalnej. Jeśli *bDestroy* jest `TRUE`, ta metoda niszczy okno ramowe mini natychmiast. Jeśli jest `FALSE`, ta metoda niszczy okno ramowe mini z pewnym opóźnieniem.  
   
- [in] `bNoDelayedDestroy`  
+ [in] *bNoDelayedDestroy*  
  Jeśli `TRUE`opóźnione zniszczenie jest wyłączona. Jeśli `FALSE`opóźnione zniszczenie jest włączona.  
   
 ### <a name="remarks"></a>Uwagi  
- Platformę można zniszczyć okna ramowe mini natychmiast, albo z pewnym opóźnieniem. Niszczenie okien ramowych mini opóźnienia należy przekazać `FALSE` w `bNoDelayedDestroy` parametru. Opóźnione zniszczenie występuje podczas przetwarzania w ramach `AFX_WM_CHECKEMPTYMINIFRAME` wiadomości.  
+ Platformę można zniszczyć okna ramowe mini natychmiast, albo z pewnym opóźnieniem. Niszczenie okien ramowych mini opóźnienia należy przekazać `FALSE` w *bNoDelayedDestroy* parametru. Opóźnione zniszczenie występuje podczas przetwarzania w ramach `AFX_WM_CHECKEMPTYMINIFRAME` wiadomości.  
   
 ##  <a name="replacepane"></a>  CPaneFrameWnd::ReplacePane  
  Zastępuje jedno okienko na inny.  
@@ -991,10 +991,10 @@ virtual void ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pBarOrg`  
+ [in] *pBarOrg*  
  Wskaźnik do oryginalnego okienka.  
   
- [in] `pBarReplaceWith`  
+ [in] *pBarReplaceWith*  
  Wskaźnik do okienka zastępuje oryginalnego okienka.  
   
 ##  <a name="savestate"></a>  CPaneFrameWnd::SaveState  
@@ -1007,10 +1007,10 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Nazwa profilu.  
   
- [in] `uiID`  
+ [in] *uiID*  
  Identyfikator okienka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1024,7 +1024,7 @@ virtual void SetCaptionButtons(DWORD dwButtons);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `dwButtons`  
+ [in] *dwButtons*  
  Alternatywy kombinację następujących wartości:  
   
 - `AFX_CAPTION_BTN_CLOSE`  
@@ -1043,7 +1043,7 @@ void SetDelayShow(BOOL bDelayShow);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bDelayShow`  
+ [in] *bDelayShow*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1055,7 +1055,7 @@ void SetDockingManager(CDockingManager* pManager);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pManager`  
+ [in] *pManager*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1067,7 +1067,7 @@ void SetDockingTimer(UINT nTimeOut);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nTimeOut`  
+ [in] *Nlimit*  
  Wartość limitu czasu w milisekundach.  
   
 ##  <a name="setdockstate"></a>  CPaneFrameWnd::SetDockState  
@@ -1078,7 +1078,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDockManager`  
+ [in] *pDockManager*  
  Wskaźnik do Menedżera dokowania.  
   
 ##  <a name="sethotpoint"></a>  CPaneFrameWnd::SetHotPoint  
@@ -1089,7 +1089,7 @@ void SetHotPoint(CPoint& ptNew);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `ptNew`  
+ [in] *ptNew*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1104,7 +1104,7 @@ virtual BOOL SetPreDockState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `preDockState`  
+ [in] *preDockState*  
  Możliwe wartości:  
   
 - `PDS_NOTHING`,  
@@ -1113,10 +1113,10 @@ virtual BOOL SetPreDockState(
   
 - `PDS_DOCK_TO_TAB`  
   
- [in] `pBarToDock`  
+ [in] *pBarToDock*  
  Wskaźnik do okienko, aby dokowania.  
   
- [in] `dockMethod`  
+ [in] *dockMethod*  
  Metoda dokowania. (Ten parametr jest ignorowany.)  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1140,7 +1140,7 @@ BOOL StartTearOff(CMFCPopu* pMenu);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pMenu`  
+ [in] *pMenu*  
  Wskaźnik do menu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1154,7 +1154,7 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1168,8 +1168,8 @@ virtual void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDockingBar`  
- [in] `pTabbedBar`  
+ [in] *pDockingBar*  
+ [in] *pTabbedBar*  
   
 ### <a name="remarks"></a>Uwagi  
   

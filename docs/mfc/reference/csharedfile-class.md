@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bee22940fb197d480f4ae3550d8dd59780c256b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df3c052f3cefb3aa7d2a55e81fd5f7813632ceb1
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370184"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078286"
 ---
 # <a name="csharedfile-class"></a>Klasa CSharedFile
 [CMemFile](../../mfc/reference/cmemfile-class.md)-klasy pochodnej, która obsługuje udostępnionych plików pamięci.  
@@ -56,9 +56,9 @@ class CSharedFile : public CMemFile
 ## <a name="remarks"></a>Uwagi  
  Pliki pamięci przypominają plików na dysku, z wyjątkiem tego, że plik jest przechowywany w pamięci RAM, a nie na dysku. Pliku pamięci jest przydatne do szybkiego tymczasowego przechowywania lub przesyłania bajtów raw lub serializować obiektów między procesami niezależne.  
   
- Pliki pamięci współużytkowanej różnią się od innych plików pamięci jest przydzielana pamięć dla nich, z [działanie funkcji GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) funkcji systemu Windows. `CSharedFile` Klasy przechowuje dane w bloku globalnie alokacji pamięci (utworzone za pomocą **działanie funkcji GlobalAlloc**), a ten blok pamięci może być udostępniony przy użyciu DDE, Schowek lub innych OLE/COM uniform operacji transferu danych, na przykład przy użyciu `IDataObject`.  
+ Pliki pamięci współużytkowanej różnią się od innych plików pamięci jest przydzielana pamięć dla nich, z [działanie funkcji GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) funkcji systemu Windows. `CSharedFile` Klasy przechowuje dane w bloku globalnie alokacji pamięci (utworzone za pomocą `GlobalAlloc`), a ten blok pamięci może być udostępniony przy użyciu DDE, Schowek lub innych OLE/COM uniform operacji transferu danych, na przykład za pomocą `IDataObject`.  
   
- **Działanie funkcji GlobalAlloc** zwraca `HGLOBAL` obsługi zamiast wskaźnik do pamięci, takich jak zwrócony przez wskaźnik [— funkcja malloc](../../c-runtime-library/reference/malloc.md). `HGLOBAL` Dojścia jest niezbędne w niektórych aplikacjach. Na przykład umieszczanie danych w Schowku należy `HGLOBAL` obsługi.  
+ `GlobalAlloc` Zwraca `HGLOBAL` obsługi zamiast wskaźnik do pamięci, takich jak zwrócony przez wskaźnik [— funkcja malloc](../../c-runtime-library/reference/malloc.md). `HGLOBAL` Dojścia jest niezbędne w niektórych aplikacjach. Na przykład umieszczanie danych w Schowku należy `HGLOBAL` obsługi.  
   
  Należy pamiętać, że `CSharedFile` nie nie używaj mapowanych na pamięć plików i danych nie można udostępnić bezpośrednio między procesami.  
   
@@ -91,7 +91,7 @@ CSharedFile(
  *nAllocFlags*  
  Flagi wskazującą, jaki jest pamięci do przydzielenia. Zobacz [działanie funkcji GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) listę prawidłowych wartości flag.  
   
- `nGrowBytes`  
+ *nGrowBytes*  
  Przyrost alokacji pamięci w bajtach.  
   
 ##  <a name="detach"></a>  CSharedFile::Detach  
@@ -120,11 +120,11 @@ void SetHandle(
  *hGlobalMemory*  
  Dojście do globalnej pamięci jest dołączony do `CSharedFile`.  
   
- `bAllowGrow`  
+ *bAllowGrow*  
  Określa, czy blok pamięci może wzrosnąć.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `bAllowGrow` różną od zera, rozmiaru bloku pamięci zwiększa się zgodnie z potrzebami, na przykład, jeśli próba dokonania do większej liczby bajtów do zapisu pliku niż przydzielonych dla bloku pamięci.  
+ Jeśli *bAllowGrow* różną od zera, rozmiaru bloku pamięci zwiększa się zgodnie z potrzebami, na przykład, jeśli próba dokonania do większej liczby bajtów do zapisu pliku niż przydzielonych dla bloku pamięci.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CMemFile](../../mfc/reference/cmemfile-class.md)   

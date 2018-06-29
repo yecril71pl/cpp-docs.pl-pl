@@ -73,12 +73,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b4d591d2abd7613777dec6ae668badd84fe31d0c
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 1ae23bf845e3fa78a1971def6ea0034c94b57991
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305556"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079710"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 Klasa szablonu opisuje obiekt, który określa sekwencję zróżnicowanych długość elementów, która ma dostęp w pierwszym FIFO. Użyj karty kontenera `queue` Zarządzanie kontenerem podstawowej jako kolejki.  
@@ -97,7 +97,7 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  Wartość  
  Typ elementu w kontrolowanej sekwencji.  
   
@@ -157,7 +157,7 @@ template<typename Value,
 |<xref:System.ICloneable>|Zduplikowany obiekt.|  
 |IQueue\<wartość, kontener >|Obsługa karty Ogólne kontenera.|  
   
-### <a name="remarks"></a>Uwagi  
+## <a name="remarks"></a>Uwagi  
  Przydziela i zwalnia magazynu na potrzeby sekwencji steruje się za pomocą podstawowej kontenera, typu obiektu `Container`, który przechowuje `Value` elementów i rozwoju na żądanie. Obiekt ogranicza dostęp do wypychania tylko pierwszy element i wyświetlanie ostatnim elementem, implementacja FIFO w pierwszej kolejki (znanej także jako kolejce FIFO lub po prostu kolejki).  
   
 ## <a name="members"></a>Elementy członkowskie

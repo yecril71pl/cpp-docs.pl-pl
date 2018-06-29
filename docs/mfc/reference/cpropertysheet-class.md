@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7b49aba6ea5d2397baa0dc72f36b2693810fbeb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f194b8119cb080c9a3b29e63781595ada0027ef
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377465"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079776"
 ---
 # <a name="cpropertysheet-class"></a>Cpropertysheet — klasa
 Reprezentuje arkuszy właściwości, znanej także jako okna dialogowe kart.  
@@ -175,7 +175,7 @@ void AddPage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPage`  
+ *Strona_fizyczna*  
  Wskazuje stronę do dodania do arkusza właściwości. Nie może być **NULL**.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -227,25 +227,25 @@ void Construct(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDCaption`  
+ *nIDCaption*  
  Identyfikator podpisu ma być używany dla tego arkusza właściwości.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do nadrzędnego okna arkusza właściwości. Jeśli **NULL**, okno nadrzędne będzie głównego okna aplikacji.  
   
- `iSelectPage`  
+ *iSelectPage*  
  Indeks strony, która będzie początkowo u góry. Domyślny jest pierwszą stroną dodane do arkusza.  
   
- `pszCaption`  
+ *pszCaption*  
  Wskaźnik do ciąg zawierający podpis, który ma służyć do arkusza właściwości. Nie może być **NULL**.  
   
- `hbmWatermark`  
+ *hbmWatermark*  
  Dojście do mapy bitowej znaku wodnego strony właściwości.  
   
- `hpalWatermark`  
+ *hpalWatermark*  
  Dojście do palety mapy bitowej znaku wodnego i/lub mapy bitowej nagłówka.  
   
- `hbmHeader`  
+ *hbmHeader*  
  Dojście do mapy bitowej nagłówka strony właściwości.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -253,7 +253,7 @@ void Construct(
   
  Aby wyświetlić arkusz właściwości, należy wywołać [DoModal](#domodal) lub [Utwórz](#create). Ciąg znajdujący się w pierwszym parametrze zostaną umieszczone w pasku podpisu dla tego arkusza właściwości.  
   
- Można wyświetlać znaków wodnych i/lub nagłówek obrazy automatycznie, jeśli używasz trzeci lub czwarty prototypów `Construct`, wymienione powyżej, i podaj prawidłowe wartości dla `hbmWatermark`, `hpalWatermark`, i/lub `hbmHeader` parametrów.  
+ Można wyświetlać znaków wodnych i/lub nagłówek obrazy automatycznie, jeśli używasz trzeci lub czwarty prototypów `Construct`, wymienione powyżej, i podaj prawidłowe wartości dla *hbmWatermark*, *hpalWatermark* , i/lub *hbmHeader* parametrów.  
   
 ### <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano, w przypadku okoliczności, w jakich spowodowałoby wywołanie `Construct`.  
@@ -298,25 +298,25 @@ CPropertySheet(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDCaption`  
+ *nIDCaption*  
  Identyfikator podpisu ma być używany dla tego arkusza właściwości.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Punkty do nadrzędnego okna arkusza właściwości. Jeśli **NULL**, okno nadrzędne będzie głównego okna aplikacji.  
   
- `iSelectPage`  
+ *iSelectPage*  
  Indeks strony, która będzie początkowo u góry. Domyślny jest pierwszą stroną dodane do arkusza.  
   
- `pszCaption`  
+ *pszCaption*  
  Wskazuje ciąg zawierający podpis, który ma służyć do arkusza właściwości. Nie może być **NULL**.  
   
- `hbmWatermark`  
+ *hbmWatermark*  
  Dojście do mapy bitowej tła arkusza właściwości.  
   
- `hpalWatermark`  
+ *hpalWatermark*  
  Dojście do palety mapy bitowej znaku wodnego i/lub mapy bitowej nagłówka.  
   
- `hbmHeader`  
+ *hbmHeader*  
  Dojście do mapy bitowej nagłówka strony właściwości.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -324,7 +324,7 @@ CPropertySheet(
   
  Jeśli masz wiele parametrów (na przykład, jeśli używasz tablicy), użyj [skonstruować](#construct) zamiast `CPropertySheet`.  
   
- Można wyświetlać znaków wodnych i/lub nagłówek obrazy automatycznie, jeśli używasz trzeci lub czwarty prototypów `CPropertySheet`powyżej, i podaj prawidłowe wartości dla `hbmWatermark`, `hpalWatermark`, i/lub `hbmHeader` parametrów.  
+ Można wyświetlać znaków wodnych i/lub nagłówek obrazy automatycznie, jeśli używasz trzeci lub czwarty prototypów `CPropertySheet`powyżej, i podaj prawidłowe wartości dla *hbmWatermark*, *hpalWatermark*, i / lub *hbmHeader* parametrów.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#131](../../mfc/codesnippet/cpp/cpropertysheet-class_3.cpp)]  
@@ -339,26 +339,26 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentWnd`  
+ *pParentWnd*  
  Wskazuje okno nadrzędne. Jeśli **NULL**, nadrzędny jest pulpitu.  
   
- `dwStyle`  
+ *dwStyle*  
  Style okna arkusza właściwości. Aby uzyskać pełną listę dostępnych stylów, zobacz [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- `dwExStyle`  
+ *dwExStyle*  
  Rozszerzone Style okna arkusza właściwości. Aby uzyskać pełną listę dostępnych stylów, zobacz [rozszerzone Style okna](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli arkusz właściwości jest tworzony pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie **Utwórz** może znajdować się w konstruktorze lub można ją wywołać po wywołaniu konstruktora.  
+ Wywołanie `Create` może znajdować się w konstruktorze lub można ją wywołać po wywołaniu konstruktora.  
   
- Domyślny styl wyrażonych przez przekazanie -1 jako `dwStyle`, jest w rzeczywistości **ws_sysmenu —&#124;**`WS_POPUP`**&#124;ws_caption —&#124;DS_MODALFRAME&#124;DS_CONTEXTHELP&#124;WS_ WIDOCZNE**. Wartość domyślna rozszerzone style okna, wyrażonych przez przekazanie 0 jako `dwExStyle`, jest w rzeczywistości **ws_ex_dlgmodalframe —**.  
+ Domyślny styl wyrażonych przez przekazanie -1 jako *dwStyle*, jest w rzeczywistości **ws_sysmenu —&#124;**`WS_POPUP`**&#124;ws_caption —&#124;DS_MODALFRAME&#124;DS_ CONTEXTHELP&#124;ws_visible —**. Wartość domyślna rozszerzone style okna, wyrażonych przez przekazanie 0 jako *dwExStyle*, jest w rzeczywistości **ws_ex_dlgmodalframe —**.  
   
- **Utwórz** funkcji członkowskiej zwraca natychmiast po utworzeniu arkusza właściwości. Aby zniszczyć arkusza właściwości, należy wywołać [CWnd::DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow).  
+ `Create` Funkcji członkowskiej zwraca natychmiast po utworzeniu arkusza właściwości. Aby zniszczyć arkusza właściwości, należy wywołać [CWnd::DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow).  
   
- Niemodalne arkusze właściwości wyświetlane w wyniku wywołania **Utwórz** nie mają przyciski OK, Anuluj Zastosuj teraz i pomoc, tak jak arkusze właściwości modalne. Żądany przycisków musi zostać utworzony przez użytkownika.  
+ Niemodalne arkusze właściwości wyświetlane w wyniku wywołania `Create` nie mają przyciski OK, Anuluj Zastosuj teraz i pomoc, tak jak arkusze właściwości modalne. Żądany przycisków musi zostać utworzony przez użytkownika.  
   
  Aby wyświetlić modalny arkusz właściwości, należy wywołać [DoModal](#domodal) zamiast tego.  
   
@@ -418,13 +418,13 @@ void EnableStackedTabs(BOOL bStacked);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bStacked`  
- Wskazuje, czy karty skumulowany są włączone w arkuszu właściwości. Wyłącz skumulowany wierszy tagów, ustawiając `bStacked` do **FALSE**.  
+ *bStacked*  
+ Wskazuje, czy karty skumulowany są włączone w arkuszu właściwości. Wyłącz skumulowany wierszy tagów, ustawiając *bStacked* do **FALSE**.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślnie jeśli w arkuszu właściwości więcej kart niż mieści się w jednym wierszu w szerokość arkusza właściwości kart będą umieszczane w wielu wierszach. Aby użyć karty przewijania zamiast tabulatorów stosu, należy wywołać `EnableStackedTabs` z `bStacked` ustawioną **FALSE** przed wywołaniem [DoModal](#domodal) lub [Utwórz](#create).  
+ Domyślnie jeśli w arkuszu właściwości więcej kart niż mieści się w jednym wierszu w szerokość arkusza właściwości kart będą umieszczane w wielu wierszach. Aby użyć karty przewijania zamiast tabulatorów stosu, należy wywołać `EnableStackedTabs` z *bStacked* ustawioną **FALSE** przed wywołaniem [DoModal](#domodal) lub [Utwórz](#create).  
   
- Należy wywołać `EnableStackedTabs` podczas tworzenia modalne lub niemodalnego arkusza właściwości. Włączenie tego stylu w `CPropertySheet`-pochodnej klasy, zapisać program obsługi komunikatów dla `WM_CREATE`. W wersji przesłoniętych [CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate), wywołaj **EnableStackedTabs (FALSE)** przed wywołaniem klasy podstawowej implementacji.  
+ Należy wywołać `EnableStackedTabs` podczas tworzenia modalne lub niemodalnego arkusza właściwości. Aby włączyć ten styl w `CPropertySheet`-pochodnej klasy, zapisać WM_CREATE obsługi wiadomości. W wersji przesłoniętych [CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate), wywołaj **EnableStackedTabs (FALSE)** przed wywołaniem klasy podstawowej implementacji.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#134](../../mfc/codesnippet/cpp/cpropertysheet-class_6.cpp)]  
@@ -485,11 +485,11 @@ CPropertyPage* GetPage(int nPage) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPage`  
+ *nPage*  
  Indeks żądanej strony, zaczynając od 0. Musi być między 0 a mniejszy niż liczba stron w arkuszu właściwości włącznie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do strony odpowiadający `nPage` parametru.  
+ Wskaźnik do strony odpowiadający *nPage* parametru.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CPropertyPage::OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish).  
@@ -515,7 +515,7 @@ int GetPageIndex(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPage`  
+ *Strona_fizyczna*  
  Wskazuje stronę z indeksu, który ma zostać odnaleziona. Nie może być **NULL**.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -547,7 +547,7 @@ CTabCtrl* GetTabControl() const;
  Struktura, której członkowie przechowywania właściwości [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546).  
   
 ### <a name="remarks"></a>Uwagi  
- Ta struktura jest używana do zainicjowania wygląd arkusza właściwości po go jest tworzony, ale przed wyświetleniem z [DoModal](#domodal) funkcję elementu członkowskiego. Na przykład ustawić `dwSize` członkiem `m_psh` rozmiar ma arkusza właściwości, aby mieć.  
+ Ta struktura jest używana do zainicjowania wygląd arkusza właściwości po go jest tworzony, ale przed wyświetleniem z [DoModal](#domodal) funkcję elementu członkowskiego. Na przykład ustawić *dwSize* członkiem `m_psh` rozmiar ma arkusza właściwości, aby mieć.  
   
  Więcej informacji dotyczących tej struktury, w tym listę jej członków, zobacz **PROPSHEETHEADER** w zestawie Windows SDK.  
   
@@ -562,7 +562,7 @@ void MapDialogRect(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpRect`  
+ *lprect —*  
  Wskazuje [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który zawiera okno dialogowe koordynuje do skonwertowania.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -570,7 +570,7 @@ void MapDialogRect(LPRECT lpRect) const;
   
  [GetDialogBaseUnits](http://msdn.microsoft.com/library/windows/desktop/ms645475) systemu Windows funkcja zwraca informacje o rozmiarze czcionki systemu, ale można określić inną czcionkę dla każdego arkusza właściwości, jeśli używasz **DS_SETFONT** stylu w Plik definicji zasobu. [MapDialogRect](http://msdn.microsoft.com/library/windows/desktop/ms645502) funkcji systemu Windows, opisane w zestawie SDK systemu Windows używa odpowiednią czcionkę dla tego okna dialogowego.  
   
- `MapDialogRect` Funkcji członkowskiej zastępuje jednostki okno dialogowe `lpRect` z ekranu jednostki (w pikselach), dzięki czemu prostokąt umożliwia tworzenie okna dialogowego lub ustaw kontrolkę w polu.  
+ `MapDialogRect` Funkcji członkowskiej zastępuje jednostki okno dialogowe *lprect —* z ekranu jednostki (w pikselach), dzięki czemu prostokąt umożliwia tworzenie okna dialogowego lub ustaw kontrolkę w polu.  
   
 ##  <a name="oninitdialog"></a>  CPropertySheet::OnInitDialog  
  Zastąpienia, aby rozszerzyć inicjowanie arkusza właściwości.  
@@ -580,10 +580,10 @@ virtual BOOL OnInitDialog();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Określa, czy aplikacja ma fokus wprowadzania formantów w arkuszu właściwości. Jeśli **OnInitDialog** zwraca różną od zera, system Windows konfiguruje fokus wprowadzania pierwszą kontrolkę w arkuszu właściwości. Aplikacja może zwrócić 0 tylko wtedy, gdy fokus wprowadzania została jawnie ustawiona do formantów w arkuszu właściwości.  
+ Określa, czy aplikacja ma fokus wprowadzania formantów w arkuszu właściwości. Jeśli `OnInitDialog` zwraca różną od zera, system Windows konfiguruje fokus wprowadzania pierwszą kontrolkę w arkuszu właściwości. Aplikacja może zwrócić 0 tylko wtedy, gdy fokus wprowadzania została jawnie ustawiona do formantów w arkuszu właściwości.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja elementu członkowskiego jest wywoływana w odpowiedzi na **WM_INITDIALOG** wiadomości. Ten komunikat jest wysyłany do arkusza właściwości podczas [Utwórz](#create) lub [DoModal](#domodal) wywołań, które występują bezpośrednio przed wyświetleniem arkusza właściwości.  
+ Ta funkcja elementu członkowskiego jest wywoływana w odpowiedzi na komunikat WM_INITDIALOG. Ten komunikat jest wysyłany do arkusza właściwości podczas [Utwórz](#create) lub [DoModal](#domodal) wywołań, które występują bezpośrednio przed wyświetleniem arkusza właściwości.  
   
  Przesłonić tę funkcję elementu członkowskiego, jeśli zachodzi potrzeba wykonania specjalnego przetwarzania, po zainicjowaniu arkusza właściwości. W wersji przesłonięte, najpierw wywołaj klasę bazową `OnInitDialog` , ale pominąć jego wartości zwracanej. Zwykle zwróci **TRUE** z funkcji zastąpionym elementem członkowskim.  
   
@@ -597,7 +597,7 @@ void PressButton(int nButton);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nButton`  
+ *nButton*  
  nButton: identyfikuje przycisk jest naciśnięty. Ten parametr może mieć jedną z następujących wartości:  
   
 - **PSBTN_BACK** wybierze przycisk Wstecz.  
@@ -631,10 +631,10 @@ void RemovePage(int nPage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pPage`  
+ *Strona_fizyczna*  
  Wskazuje strony, aby były usuwane z arkusza właściwości. Nie może być `NULL`.  
   
- `nPage`  
+ *nPage*  
  Indeks strony do usunięcia. Musi być między 0 a mniejszy niż liczba stron w arkuszu właściwości włącznie.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -649,10 +649,10 @@ BOOL SetActivePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPage`  
+ *nPage*  
  Indeks strony, aby ustawić. Musi być między 0 a mniejszy niż liczba stron w arkuszu właściwości włącznie.  
   
- `pPage`  
+ *Strona_fizyczna*  
  Wskazuje stronę, aby ustawić w arkuszu właściwości. Nie można go **NULL**.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -672,7 +672,7 @@ void SetFinishText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszText`  
+ *lpszText*  
  Wskazuje tekst, który będzie wyświetlany na przycisku polecenia.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -691,10 +691,10 @@ void SetTitle(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nStyle`  
+ *nStyle*  
  Określa styl tytuł arkusza właściwości. Styl należy określić w lokalizacji 0 lub jako **PSH_PROPTITLE**. Jeżeli styl jest ustawiony jako **PSH_PROPTITLE**, wyraz "Właściwości" pojawia się po tekście określony jako podpis. Na przykład wywołanie elementu `SetTitle`("Prosta" **PSH_PROPTITLE**) spowoduje podpis arkusz właściwości "Proste właściwości".  
   
- `lpszText`  
+ *lpszText*  
  Wskazuje tekst, który ma służyć jako podpisu na pasku tytułu arkusza właściwości.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -711,7 +711,7 @@ void SetWizardButtons(DWORD dwFlags);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwFlags`  
+ *wartość elementu dwFlags*  
  Zestaw flag, które dostosować wygląd przycisków kreatora i funkcji. Ten parametr może mieć kombinację następujących wartości:  
   
 - **PSWIZB_BACK** przycisk Wstecz  

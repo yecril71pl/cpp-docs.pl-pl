@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36cc13fa77becf5bdeb3960f6ac9db18d5d63dbb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb5aeef3970488c293d4199261d765f2531c201a
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377279"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079684"
 ---
 # <a name="cpalette-class"></a>Cpalette — klasa
 Hermetyzuje palety kolorów systemu Windows.  
@@ -108,14 +108,14 @@ void AnimatePalette(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nStartIndex`  
+ *nStartIndex*  
  Określa pierwszą pozycję w palecie to animowanie.  
   
- `nNumEntries`  
+ *nNumEntries*  
  Określa liczbę wpisów w palecie to animowanie.  
   
- `lpPaletteColors`  
- Wskazuje pierwszego elementu członkowskiego tablicy [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) struktury tak, aby zastąpić wpisy palety identyfikowane przez `nStartIndex` i `nNumEntries`.  
+ *lpPaletteColors*  
+ Wskazuje pierwszego elementu członkowskiego tablicy [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) struktury tak, aby zastąpić wpisy palety identyfikowane przez *nStartIndex* i *nNumEntries*.  
   
 ### <a name="remarks"></a>Uwagi  
  Gdy aplikacja wywołuje `AnimatePalette`, nie ma aktualizacji obszaru klienckiego, ponieważ Windows mapuje nowe wpisy w palecie systemu natychmiast.  
@@ -140,7 +140,7 @@ BOOL CreateHalftonePalette(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *podstawowego kontrolera domeny*  
  Identyfikuje kontekst urządzenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -159,7 +159,7 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpLogPalette`  
+ *lpLogPalette*  
  Wskazuje [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) struktury, który zawiera informacje o kolorów w palecie logiczne.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -176,7 +176,7 @@ static CPalette* PASCAL FromHandle(HPALETTE hPalette);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hPalette`  
+ *hPalette*  
  Dojście do paletę kolorów GDI systemu Windows.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -203,7 +203,7 @@ UINT GetNearestPaletteIndex(COLORREF crColor) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `crColor`  
+ *crColor*  
  Określa kolor, który ma zostać dopasowany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -220,14 +220,14 @@ UINT GetPaletteEntries(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nStartIndex`  
+ *nStartIndex*  
  Określa pierwszą pozycję w logiczną paletę do pobrania.  
   
- `nNumEntries`  
+ *nNumEntries*  
  Określa liczbę wpisów w logiczną paletę do pobrania.  
   
- `lpPaletteColors`  
- Wskazuje tablicę [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) struktury danych, aby otrzymać wpisy palety. Tablica musi zawierać co najmniej tyle struktur danych określony przez `nNumEntries`.  
+ *lpPaletteColors*  
+ Wskazuje tablicę [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) struktury danych, aby otrzymać wpisy palety. Tablica musi zawierać co najmniej tyle struktur danych określony przez *nNumEntries*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczba wpisów pobranych z logiczną paletę; 0, jeśli funkcja nie powiodła się.  
@@ -248,14 +248,14 @@ operator HPALETTE() const;
  Aby uzyskać więcej informacji o korzystaniu z obiektów graficznych, zobacz artykuł [obiektów grafiki](http://msdn.microsoft.com/library/windows/desktop/dd144962) w zestawie Windows SDK.  
   
 ##  <a name="resizepalette"></a>  CPalette::ResizePalette  
- Zmienia rozmiar logiczną paletę dołączony do `CPalette` obiektu liczby wpisy określone przez `nNumEntries`.  
+ Zmienia rozmiar logiczną paletę dołączony do `CPalette` obiektu liczby wpisy określone przez *nNumEntries*.  
   
 ```  
 BOOL ResizePalette(UINT nNumEntries);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nNumEntries`  
+ *nNumEntries*  
  Określa liczbę wpisów w palecie po został zmieniony.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -277,14 +277,14 @@ UINT SetPaletteEntries(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nStartIndex`  
+ *nStartIndex*  
  Określa pierwszą pozycję w logiczną paletę do ustawienia.  
   
- `nNumEntries`  
+ *nNumEntries*  
  Określa liczbę wpisów w logiczną paletę do ustawienia.  
   
- `lpPaletteColors`  
- Wskazuje tablicę [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) struktury danych, aby otrzymać wpisy palety. Tablica musi zawierać co najmniej tyle struktur danych określony przez `nNumEntries`.  
+ *lpPaletteColors*  
+ Wskazuje tablicę [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) struktury danych, aby otrzymać wpisy palety. Tablica musi zawierać co najmniej tyle struktur danych określony przez *nNumEntries*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczba wpisów w logiczną paletę; 0, jeśli funkcja nie powiodła się.  
