@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 380b470531fd28d8cfe68aa931105430111c3dbf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 582ddd1340dd94f367d5401d517e9335d370b634
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372998"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122640"
 ---
 # <a name="cvslistbox-class"></a>Klasa CVSListBox
 `CVSListBox` Klasa obsługuje kontrolki edycji listy.  
@@ -124,20 +124,20 @@ virtual int AddItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `strIext`  
+ [in] *strIext*  
  Odwołanie do ciągu.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Specyficzne dla aplikacji 32-bitowa wartość skojarzoną z ciągiem. Wartość domyślna to 0.  
   
- [in] `iIndex`  
- Liczony od zera indeks położenie, w którym będą przechowywane na ciąg. Jeśli `iIndex` parametr ma wartość -1, ten ciąg jest dodawane na końcu listy. Wartość domyślna wynosi -1.  
+ [in] *iIndex*  
+ Liczony od zera indeks położenie, w którym będą przechowywane na ciąg. Jeśli *iIndex* parametr ma wartość -1, ten ciąg jest dodawane na końcu listy. Wartość domyślna wynosi -1.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczony od zera indeks pozycji ciągu w formancie listy.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj [CVSListBox::GetItemData](#getitemdata) metodę, aby pobrać wartość, która jest określona przez `dwData` parametru. Ta wartość może być liczbą całkowitą specyficzne dla aplikacji lub wskaźnik do innych danych.  
+ Użyj [CVSListBox::GetItemData](#getitemdata) metodę, aby pobrać wartość, która jest określona przez *dwData* parametru. Ta wartość może być liczbą całkowitą specyficzne dla aplikacji lub wskaźnik do innych danych.  
   
 ##  <a name="cvslistbox"></a>  CVSListBox::CVSListBox  
  Konstruuje `CVSListBox` obiektu.  
@@ -158,11 +158,11 @@ virtual BOOL EditItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iIndex`  
+ [in] *iIndex*  
  Liczony od zera indeks elementu kontrolki listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli operacja edytowania rozpoczyna się pomyślnie; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli operacja edytowania uruchamia się pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
  Użytkownik uruchamia operację edycji, klikając etykietę elementu lub naciskając klawisz **F2** lub **spacja** klucza, gdy element ma fokus.  
@@ -188,7 +188,7 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iIndex`  
+ [in] *iIndex*  
  Liczony od zera indeks elementu kontrolki edycji listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -246,11 +246,11 @@ virtual BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iIndex`  
+ [in] *iIndex*  
  Liczony od zera indeks elementu kontrolki edycji listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli określony element jest usunięty; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli określony element jest usunięty; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -262,11 +262,11 @@ virtual BOOL SelectItem(int iItem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iItem`  
+ [in] *towaru*  
  Liczony od zera indeks elementu kontrolki edycji listy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wybiera określony element i w razie potrzeby, przewinąć element w celu wyświetlenia.  
@@ -281,10 +281,10 @@ virtual void SetItemData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `iIndex`  
+ [in] *iIndex*  
  Liczony od zera indeks elementu kontrolki edycji listy.  
   
- [in] `dwData`  
+ [in] *dwData*  
  32-bitowa wartość. Ta wartość może być liczbą całkowitą specyficzne dla aplikacji lub wskaźnik do innych danych.  
   
 ### <a name="remarks"></a>Uwagi  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdb7daba666e8aaf983eadc77417cad46180e7df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff4596a52170d0c6d197a0bda431963b5f0e9344
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378272"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37120943"
 ---
 # <a name="drawitemstruct-structure"></a>Struktura DRAWITEMSTRUCT
 `DRAWITEMSTRUCT` Struktury informuje okno właściciela musi mieć do określania, jak namalować elementu menu lub formant rysowanych przez właściciela.  
@@ -43,65 +43,65 @@ typedef struct tagDRAWITEMSTRUCT {
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `CtlType`  
+ *CtlType*  
  Typ formantu. Wartości dla typów kontroli są następujące:  
   
-- **ODT_BUTTON** przyciskiem rysowanym przez właściciela  
+- ODT_BUTTON przycisk rysowanych przez właściciela  
   
-- **ODT_COMBOBOX** pola kombi rysowanych przez właściciela  
+- Pole kombi rysowanych przez właściciela ODT_COMBOBOX  
   
-- **ODT_LISTBOX** pole listy rysowane przez właściciela  
+- Pole listy rysowane przez właściciela ODT_LISTBOX  
   
-- **ODT_MENU** rysowanych przez właściciela menu  
+- ODT_MENU rysowanych przez właściciela menu  
   
-- **ODT_LISTVIEW** formantu widoku listy  
+- Kontrolka widoku listy ODT_LISTVIEW  
   
-- **ODT_STATIC** rysowanych przez właściciela statyczną kontrolkę  
+- ODT_STATIC rysowanych przez właściciela statyczną kontrolkę  
   
-- **ODT_TAB** karcie formantu  
+- Formant karty ODT_TAB  
   
- `CtlID`  
+ *CtlID*  
  Identyfikator formantu dla pola kombi, pole listy lub przycisku. Ten element członkowski nie jest używany do menu.  
   
- `itemID`  
- Identyfikator elementu menu dla menu lub indeks elementu w polu listy lub pola kombi. Lista jest pusta lub polu kombi, ten element członkowski jest wartością ujemną, dzięki czemu aplikacji do rysowania tylko prostokąt fokusu we współrzędnych określonych przez **rcItem** Członkowskie nawet wtedy, gdy nie ma żadnych towarów w formancie. W związku z tym można pokazać użytkownika czy pole listy lub pole kombi ma fokus wprowadzania. Ustawienie usługi bits w **itemAction** elementu członkowskiego Określa, czy ma być rysowany tak, jakby pole listy lub pole kombi ma wejściowych fokus prostokąta.  
+ *Identyfikator elementu*  
+ Identyfikator elementu menu dla menu lub indeks elementu w polu listy lub pola kombi. Lista jest pusta lub polu kombi, ten element członkowski jest wartością ujemną, dzięki czemu aplikacji do rysowania tylko prostokąt fokusu we współrzędnych określonych przez `rcItem` Członkowskie nawet wtedy, gdy nie ma żadnych towarów w formancie. W związku z tym można pokazać użytkownika czy pole listy lub pole kombi ma fokus wprowadzania. Ustawienie usługi bits w `itemAction` elementu członkowskiego Określa, czy ma być rysowany tak, jakby pole listy lub pole kombi ma wejściowych fokus prostokąta.  
   
- `itemAction`  
+ *itemAction*  
  Definiuje rysowania czynności. Może to mieć co najmniej jeden z następujących bitów:  
   
-- **ODA_DRAWENTIRE** ten bit jest ustawiona, gdy potrzebne jest narysowanie całego formantu.  
+- ODA_DRAWENTIRE ten bit jest ustawiona, gdy potrzebne jest narysowanie całego formantu.  
   
-- **ODA_FOCUS** ten bit jest ustawiony, gdy formant uzyska lub utraci fokus wprowadzania. **ItemState** Członkowskie powinny być sprawdzane w celu określenia, czy formant ma fokus.  
+- ODA_FOCUS ten bit jest ustawiona, gdy formant uzyska lub utraci fokus wprowadzania. `itemState` Członkowskie powinny być sprawdzane w celu określenia, czy formant ma fokus.  
   
-- **ODA_SELECT** ten bit jest ustawiony, gdy zostanie zmieniony stan zaznaczenia. **ItemState** elementu członkowskiego powinien być sprawdzany w celu określenia nowy stan zaznaczenia.  
+- ODA_SELECT ten bit jest ustawiony, gdy zostanie zmieniony stan zaznaczenia. `itemState` Elementu członkowskiego powinien być sprawdzany w celu określenia nowy stan zaznaczenia.  
   
  *itemState*  
- Określa stanu wizualnego elementu po wystąpieniu rysowania bieżącej akcji. Oznacza to, czy element menu jest być nieaktywne, flagi stanu **ODS_GRAYED** zostanie ustawiona. Flagi stanu są następujące:  
+ Określa stanu wizualnego elementu po wystąpieniu rysowania bieżącej akcji. Oznacza to czy element menu ma być nieaktywne, Flaga stanu ODS_GRAYED zostanie ustawiona. Flagi stanu są następujące:  
   
-- **ODS_CHECKED** ten bit jest ustawiona, jeśli element menu ma być sprawdzony. Ten bit jest używana tylko w menu.  
+- ODS_CHECKED ten bit jest ustawiony, jeśli element menu ma być sprawdzony. Ten bit jest używana tylko w menu.  
   
-- **ODS_DISABLED** ten bit jest ustawiona, jeśli element ma być rysowany jako wyłączone.  
+- ODS_DISABLED ten bit jest ustawiona, jeśli element ma być rysowany jako wyłączone.  
   
-- **ODS_FOCUS** ten bit jest ustawiona, jeśli element ma wejściowych fokus.  
+- ODS_FOCUS ten bit jest ustawiona, jeśli element ma wejściowych fokus.  
   
-- **ODS_GRAYED** ten bit jest ustawiona, jeśli element znajduje się na wygaszone. Ten bit jest używana tylko w menu.  
+- ODS_GRAYED ten bit jest ustawiona, jeśli element znajduje się na wygaszone. Ten bit jest używana tylko w menu.  
   
-- **ODS_SELECTED** ten bit jest ustawiony, jeśli stan elementu jest zaznaczone.  
+- ODS_SELECTED ten bit jest ustawiony, jeśli stan elementu jest zaznaczone.  
   
-- **ODS_COMBOBOXEDIT** rysunku odbywa się w polu Wybór (kontrolki edycji) ownerdrawn pola kombi.  
+- ODS_COMBOBOXEDIT rysunek odbywa się w polu Wybór (kontrolki edycji) ownerdrawn pola kombi.  
   
-- **ODS_DEFAULT** element jest elementem domyślnym.  
+- ODS_DEFAULT element jest elementem domyślnym.  
   
- `hwndItem`  
- Określa uchwytu okna kontrolki pola kombi, pola listy i przycisków. Określa dojście menu (`HMENU`) zawierający element menu.  
+ *hwndItem*  
+ Określa uchwytu okna kontrolki pola kombi, pola listy i przycisków. Określa dojście menu (HMENU), który zawiera element menu.  
   
- `hDC`  
+ *elementu hDC*  
  Identyfikuje kontekst urządzenia. Ten kontekst urządzenia należy użyć podczas wykonywania operacji rysowania w formancie.  
   
  *rcItem*  
- Prostokąt w kontekście urządzenia określonego przez `hDC` elementu członkowskiego, który definiuje granice formantu do narysowania. System Windows automatycznie klipy coś właściciela rysuje kontekstu urządzenia dla pola kombi, pola listy i przyciski, ale go nie obcina elementów menu. Podczas rysowania elementów menu, właściciel musi nie Rysuj poza obszarem prostokąta zdefiniowane przez **rcItem** elementu członkowskiego.  
+ Prostokąt w kontekście urządzenia określonego przez *elementu hDC* elementu członkowskiego, który definiuje granice formantu do narysowania. System Windows automatycznie klipy coś właściciela rysuje kontekstu urządzenia dla pola kombi, pola listy i przyciski, ale go nie obcina elementów menu. Podczas rysowania elementów menu, właściciel musi nie Rysuj poza obszarem prostokąta zdefiniowane przez `rcItem` elementu członkowskiego.  
   
- `itemData`  
+ *itemData*  
  Pola kombi lub pola listy tego elementu członkowskiego zawiera wartość, która została przekazana do pola listy przez jedną z następujących czynności:  
   
 - [CComboBox::AddString](../../mfc/reference/ccombobox-class.md#addstring)  
@@ -121,7 +121,7 @@ typedef struct tagDRAWITEMSTRUCT {
 - [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu)  
   
 ## <a name="remarks"></a>Uwagi  
- Okno właściciela elementu menu lub formant rysowanych przez właściciela otrzymuje wskaźnik tej struktury jako `lParam` parametr `WM_DRAWITEM` wiadomości.  
+ Okno właściciela elementu menu lub formant rysowanych przez właściciela otrzymuje wskaźnik tej struktury jako *lParam* parametru WM_DRAWITEM wiadomości.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** winuser.h  

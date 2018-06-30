@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e3bf8d9ee58143e7a96b85174e4533b3c2e50ec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f1198c85b8366d7dec4d38d002b65468c38347c
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372638"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121732"
 ---
 # <a name="csocketfile-class"></a>Klasa CSocketFile
 A `CFile` obiekt używany do wysyłania i odbierania danych przez sieć za pośrednictwem usługi Windows Sockets.  
@@ -48,11 +48,11 @@ class CSocketFile : public CFile
  Do serializowania danych (Wyślij), możesz wstawić je do archiwum, które wywołuje `CSocketFile` funkcje Członkowskie zapisu danych do `CSocket` obiektu. Do deserializacji (odbierać) dane, wyodrębnij z archiwum. Powoduje to archiwum do wywołania `CSocketFile` funkcje Członkowskie można odczytać danych z `CSocket` obiektu.  
   
 > [!TIP]
->  Oprócz funkcji `CSocketFile` zgodnie z opisem w tym miejscu, można go jako obiekt autonomicznego pliku tak samo jak w przypadku `CFile`, jej klasy podstawowej. Można również użyć `CSocketFile` z dowolnej funkcji serializacji archiwum na podstawie MFC. Ponieważ `CSocketFile` nie obsługuje wszystkich `CFile`przez funkcję, niektóre domyślne MFC serializować funkcje nie są zgodne z `CSocketFile`. Jest to szczególnie istotne w `CEditView` klasy. Nie należy próbować serializować `CEditView` danych za pośrednictwem `CArchive` obiekt dołączony do `CSocketFile` przy użyciu `CEditView::SerializeRaw`; użyj **CEditView::Serialize** zamiast tego. `SerializeRaw` Funkcja oczekuje obiektu pliku ma funkcje, takie jak `Seek`, że `CSocketFile` nie ma.  
+>  Oprócz funkcji `CSocketFile` zgodnie z opisem w tym miejscu, można go jako obiekt autonomicznego pliku tak samo jak w przypadku `CFile`, jej klasy podstawowej. Można również użyć `CSocketFile` z dowolnej funkcji serializacji archiwum na podstawie MFC. Ponieważ `CSocketFile` nie obsługuje wszystkich `CFile`przez funkcję, niektóre domyślne MFC serializować funkcje nie są zgodne z `CSocketFile`. Jest to szczególnie istotne w `CEditView` klasy. Nie należy próbować serializować `CEditView` danych za pośrednictwem `CArchive` obiekt dołączony do `CSocketFile` przy użyciu `CEditView::SerializeRaw`; użyj `CEditView::Serialize` zamiast tego. `SerializeRaw` Funkcja oczekuje obiektu pliku ma funkcje, takie jak `Seek`, że `CSocketFile` nie ma.  
   
- Jeśli używasz `CArchive` z `CSocketFile` i `CSocket`, może wystąpić sytuacja, gdy **CSocket::Receive** wprowadza pętlę (przez **PumpMessages(FD_READ)**) oczekiwania na Żądana liczba bajtów. Wynika to z faktu Windows sockets Zezwalaj tylko jedno wywołanie ustawiania dla jednego powiadomienia FD_READ, ale `CSocketFile` i `CSocket` Zezwalaj na wiele wywołań otrzymanych na FD_READ. Jeśli otrzymasz FD_READ, gdy nie ma żadnych danych do odczytu, aplikacja zawiesza się. Jeśli nigdy nie otrzymasz innej FD_READ, aplikacja przestaje komunikacji za pośrednictwem gniazda.  
+ Jeśli używasz `CArchive` z `CSocketFile` i `CSocket`, może wystąpić sytuacja, gdy `CSocket::Receive` wprowadza pętlę (przez `PumpMessages(FD_READ)`) oczekiwania na żądanej ilości bajtów. Wynika to z faktu Windows sockets Zezwalaj tylko jedno wywołanie ustawiania dla jednego powiadomienia FD_READ, ale `CSocketFile` i `CSocket` Zezwalaj na wiele wywołań otrzymanych na FD_READ. Jeśli otrzymasz FD_READ, gdy nie ma żadnych danych do odczytu, aplikacja zawiesza się. Jeśli nigdy nie otrzymasz innej FD_READ, aplikacja przestaje komunikacji za pośrednictwem gniazda.  
   
- Można rozwiązać ten problem w następujący sposób. W `OnReceive` metody klasy gniazda, wywołanie **CAsyncSocket::IOCtl (FIONREAD,...)**  przed wywołaniem `Serialize` metody klasy wiadomości gdy oczekiwane dane mają być odczytane z gniazda jest większy niż jeden pakiet TCP (maksymalna jednostka transmisji nośnika sieci zazwyczaj co najmniej 1096 bajtów). Jeśli rozmiar danych dostępne jest mniejsza niż jest to potrzebne, poczekaj, aż wszystkie dane odebrania, a następnie uruchomienie operacji odczytu.  
+ Można rozwiązać ten problem w następujący sposób. W `OnReceive` metody klasy gniazda, wywołanie `CAsyncSocket::IOCtl(FIONREAD, ...)` przed wywołaniem `Serialize` metody klasy wiadomości gdy oczekiwane dane mają być odczytane z gniazda jest większy niż jeden pakiet TCP (maksymalna jednostka transmisji ze średnim sieci zazwyczaj co najmniej 1096 bajtów). Jeśli rozmiar danych dostępne jest mniejsza niż jest to potrzebne, poczekaj, aż wszystkie dane odebrania, a następnie uruchomienie operacji odczytu.  
   
  W poniższym przykładzie `m_dwExpected` jest przybliżoną liczbę bajtów, które użytkownik zamierza odbierania. Zakłada się, że należy zadeklarować go w innym miejscu w kodzie.  
   
@@ -80,17 +80,17 @@ explicit CSocketFile(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pSocket`  
+ *pSocket*  
  Gniazda do dołączenia do `CSocketFile` obiektu.  
   
- `bArchiveCompatible`  
- Określa, czy obiekt pliku jest przeznaczona do użytku z `CArchive` obiektu. Przekaż **FALSE** tylko wtedy, gdy chcesz użyć `CSocketFile` obiektu w sposób autonomicznych, jak w przypadku autonomicznego `CFile` obiektu, z pewnymi ograniczeniami. Ta flaga zmienia sposób `CArchive` obiekt dołączony do `CSocketFile` obiektu zarządza swojego bufora do odczytu.  
+ *bArchiveCompatible*  
+ Określa, czy obiekt pliku jest przeznaczona do użytku z `CArchive` obiektu. Przebieg FALSE tylko wtedy, gdy chcesz użyć `CSocketFile` obiektu w sposób autonomicznych, jak w przypadku autonomicznego `CFile` obiektu, z pewnymi ograniczeniami. Ta flaga zmienia sposób `CArchive` obiekt dołączony do `CSocketFile` obiektu zarządza swojego bufora do odczytu.  
   
 ### <a name="remarks"></a>Uwagi  
  Destruktor obiektu powoduje usunięcie samej z obiektu gniazda podczas wykracza poza zakres lub usunięcia obiektu.  
   
 > [!NOTE]
->  A `CSocketFile` może również służyć jako plik (ograniczone) bez `CArchive` obiektu. Domyślnie `CSocketFile` konstruktora `bArchiveCompatible` parametr jest **TRUE**. Określa, że obiekt pliku jest przeznaczona do użytku z archiwum. Aby użyć obiektu pliku bez archiwizacji, należy przekazać **FALSE** w `bArchiveCompatible` parametru.  
+>  A `CSocketFile` może również służyć jako plik (ograniczone) bez `CArchive` obiektu. Domyślnie `CSocketFile` konstruktora *bArchiveCompatible* parametr ma wartość PRAWDA. Określa, że obiekt pliku jest przeznaczona do użytku z archiwum. Aby użyć obiektu pliku bez archiwizacji, należy przekazać wartość FALSE w *bArchiveCompatible* parametru.  
   
  W trybie "compatible Archiwizuj" `CSocketFile` obiektu zapewnia lepszą wydajność i zmniejsza zagrożenie "zakleszczenie." Zakleszczenie występuje, gdy gniazd nadawczych i odbiorczych oczekują na siebie lub do wspólnych zasobów. Taka sytuacja może wystąpić, jeśli `CArchive` obiektu doświadczenie z `CSocketFile` sposób za pomocą `CFile` obiektu. Z `CFile`, archiwum można założyć, że jeśli odbierze mniej bajtów niż zażądała na końcu pliku został osiągnięty.  
   

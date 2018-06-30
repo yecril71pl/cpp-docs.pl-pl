@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bfaf418ec78a750f6030683801d00a1450364d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8c423f1423c874dbf110cfd6951b3510fe0506af
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375606"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121880"
 ---
 # <a name="csocket-class"></a>CSocket — klasa
 Pochodną `CAsyncSocket`dziedziczy jego hermetyzacja interfejsu API systemu Windows Sockets i reprezentuje wyższym poziomie abstrakcji niż `CAsyncSocket` obiektu.  
@@ -58,10 +58,10 @@ class CSocket : public CAsyncSocket
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CSocket::Attach](#attach)|Dołącza **GNIAZDA** dojścia do `CSocket` obiektu.|  
+|[CSocket::Attach](#attach)|Dołącza do uchwytu GNIAZDA `CSocket` obiektu.|  
 |[CSocket::CancelBlockingCall](#cancelblockingcall)|Anuluje blokowania połączenie, które jest obecnie w toku.|  
 |[CSocket::Create](#create)|Tworzy gniazda.|  
-|[CSocket::FromHandle](#fromhandle)|Zwraca wskaźnik do `CSocket` obiekt, na podstawie **GNIAZDA** obsługi.|  
+|[CSocket::FromHandle](#fromhandle)|Zwraca wskaźnik do `CSocket` obiektu podane dojście GNIAZDA.|  
 |[CSocket::IsBlocking](#isblocking)|Określa, czy wywołanie blokowania jest w toku.|  
   
 ### <a name="protected-methods"></a>Metody chronione  
@@ -73,9 +73,9 @@ class CSocket : public CAsyncSocket
 ## <a name="remarks"></a>Uwagi  
  `CSocket` działa z klasami `CSocketFile` i `CArchive` do zarządzania wysyłania i odbierania danych.  
   
- A `CSocket` obiekt zapewnia także blokuje, co jest niezbędne do działania synchroniczne `CArchive`. Blokowanie funkcje, takie jak `Receive`, `Send`, `ReceiveFrom`, `SendTo`, i `Accept` (wszystkie odziedziczone z `CAsyncSocket`), nie zwracać `WSAEWOULDBLOCK` błąd w `CSocket`. Zamiast tego należy te funkcje zaczekać, aż do zakończenia operacji. Ponadto wywołanie oryginalnego zostanie zamknięty z powodu błędu `WSAEINTR` Jeśli `CancelBlockingCall` jest wywoływana, gdy jeden z tych funkcji jest zablokowana.  
+ A `CSocket` obiekt zapewnia także blokuje, co jest niezbędne do działania synchroniczne `CArchive`. Blokowanie funkcje, takie jak `Receive`, `Send`, `ReceiveFrom`, `SendTo`, i `Accept` (wszystkie odziedziczone z `CAsyncSocket`), nie zwracać `WSAEWOULDBLOCK` błąd w `CSocket`. Zamiast tego należy te funkcje zaczekać, aż do zakończenia operacji. Ponadto oryginalnego wywołania zostanie zakończona z powodu błędu WSAEINTR, jeśli `CancelBlockingCall` jest wywoływana, gdy jeden z tych funkcji jest zablokowana.  
   
- Umożliwia `CSocket` obiekt, należy wywołać konstruktora, następnie wywołaj `Create` utworzyć podstawową `SOCKET` obsługi (typu `SOCKET`). Parametry domyślne `Create` utworzyć gniazda strumienia, ale jeśli nie używasz gniazda z `CArchive` obiektu, można określić parametr zamiast tego utworzyć gniazda datagram lub powiązania do określonego portu można utworzyć gniazda serwera. Połączenie gniazda klienta przy użyciu `Connect` po stronie klienta i `Accept` po stronie serwera. Następnie utwórz `CSocketFile` obiektów i powiązać ją do `CSocket` obiektu w `CSocketFile` konstruktora. Następnie należy utworzyć `CArchive` obiekt do wysyłania i jeden do odbierania danych (w razie potrzeby), następnie skojarzyć je z `CSocketFile` obiektu w `CArchive` konstruktora. Po zakończeniu komunikacji zniszczyć `CArchive`, `CSocketFile`, i `CSocket` obiektów. `SOCKET` — Typ danych jest opisana w artykule [Windows Sockets: tła](../../mfc/windows-sockets-background.md).  
+ Aby użyć `CSocket` obiekt, należy wywołać konstruktora, wywoływać `Create` można utworzyć podstawowej uchwyt GNIAZDA (typ GNIAZDA). Parametry domyślne `Create` utworzyć gniazda strumienia, ale jeśli nie używasz gniazda z `CArchive` obiektu, można określić parametr zamiast tego utworzyć gniazda datagram lub powiązania do określonego portu można utworzyć gniazda serwera. Połączenie gniazda klienta przy użyciu `Connect` po stronie klienta i `Accept` po stronie serwera. Następnie utwórz `CSocketFile` obiektów i powiązać ją do `CSocket` obiektu w `CSocketFile` konstruktora. Następnie należy utworzyć `CArchive` obiekt do wysyłania i jeden do odbierania danych (w razie potrzeby), następnie skojarzyć je z `CSocketFile` obiektu w `CArchive` konstruktora. Po zakończeniu komunikacji zniszczyć `CArchive`, `CSocketFile`, i `CSocket` obiektów. Typ danych GNIAZDA jest opisana w artykule [Windows Sockets: tła](../../mfc/windows-sockets-background.md).  
   
  Jeśli używasz `CArchive` z `CSocketFile` i `CSocket`, może wystąpić sytuacja, gdy `CSocket::Receive` wprowadza pętlę (przez `PumpMessages(FD_READ)`) oczekiwania na żądanej ilości bajtów. Wynika to z faktu Windows sockets Zezwalaj tylko jedno wywołanie ustawiania dla jednego powiadomienia FD_READ, ale `CSocketFile` i `CSocket` Zezwalaj na wiele wywołań otrzymanych na FD_READ. Jeśli otrzymasz FD_READ, gdy nie ma żadnych danych do odczytu, aplikacja zawiesza się. Jeśli nigdy nie otrzymasz innej FD_READ, aplikacja przestaje komunikacji za pośrednictwem gniazda.  
   
@@ -108,14 +108,14 @@ BOOL Attach(SOCKET hSocket);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hSocket`  
+ *hSocket*  
  Zawiera dojścia do gniazda.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli funkcja zakończy się pomyślnie.  
   
 ### <a name="remarks"></a>Uwagi  
- **GNIAZDA** dojścia jest przechowywany w obiekcie [m_hSocket](../../mfc/reference/casyncsocket-class.md#m_hsocket) element członkowski danych.  
+ Uchwyt GNIAZDA jest przechowywany w obiekcie [m_hSocket](../../mfc/reference/casyncsocket-class.md#m_hsocket) element członkowski danych.  
   
  Aby uzyskać więcej informacji, zobacz [Windows Sockets: przy użyciu gniazda z archiwami](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
@@ -134,11 +134,11 @@ void CancelBlockingCall();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja umożliwia anulowanie oczekujących operacji blokowania, dla tego gniazda. Oryginalny blokowania wywołanie zakończy się tak szybko, jak to możliwe z powodu błędu **WSAEINTR**.  
+ Ta funkcja umożliwia anulowanie oczekujących operacji blokowania, dla tego gniazda. Oryginalny wywołania blokowania spowoduje przerwanie tak szybko, jak to możliwe z powodu błędu WSAEINTR.  
   
- W przypadku zablokowania **Connect** operacji implementacji usługi Windows Sockets spowoduje przerwanie blokowania wywołania jak to możliwe, ale może nie być możliwe w dla zasobów gniazda do zwolnienia aż do zakończenia połączenia (i następnie został zresetowany) lub upłynął limit czasu. To może być widoczny tylko wtedy, gdy aplikacja próbuje natychmiast, aby otworzyć nowe gniazdo (jeśli gniazda nie są dostępne) lub nawiązywania połączenia z tym samym węzłem równorzędnym.  
+ W przypadku zablokowania `Connect` operacji implementacji usługi Windows Sockets spowoduje przerwanie blokowania wywołania jak to możliwe, ale może nie być możliwe w dla zasobów gniazda przeznaczone do momentu połączenia ukończył (i następnie został zresetowany) lub Upłynął limit czasu. To może być widoczny tylko wtedy, gdy aplikacja próbuje natychmiast, aby otworzyć nowe gniazdo (jeśli gniazda nie są dostępne) lub nawiązywania połączenia z tym samym węzłem równorzędnym.  
   
- Anulowanie żadnej operacji innych niż **Akceptuj** można pozostawić gniazdo w stanie nieokreślonym. Jeśli aplikacja anuluje operacji blokowania na gnieździe, jedyną operacją, która aplikacja może zależeć od możliwość wykonania w gnieździe jest wywołanie **Zamknij**, mimo że inne operacje może działać na niektórych Windows Sockets implementacje. Przenośność maksymalną wymaganych aplikacji, musi być zachować ostrożność i nie zależą od operacji po anulowania.  
+ Anulowanie żadnej operacji innych niż `Accept` można pozostawić gniazdo w stanie nieokreślonym. Jeśli aplikacja anuluje operacji blokowania na gnieździe, jedyną operacją, która aplikacja może zależeć od możliwość wykonania w gnieździe jest wywołanie `Close`, mimo że inne operacje może działać w niektórych implementacjach Windows Sockets. Przenośność maksymalną wymaganych aplikacji, musi być zachować ostrożność i nie zależą od operacji po anulowania.  
   
  Aby uzyskać więcej informacji, zobacz [Windows Sockets: przy użyciu gniazda z archiwami](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
@@ -153,27 +153,27 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nSocketPort`  
+ *nSocketPort*  
  Określonego portu do użycia z gniazda lub 0, jeśli chcesz MFC, aby wybrać port.  
   
- `nSocketType`  
- **SOCK_STREAM** lub **SOCK_DGRAM**.  
+ *nSocketType*  
+ SOCK_STREAM lub SOCK_DGRAM.  
   
- `lpszSocketAddress`  
- Wskaźnik do ciąg zawierający adres sieciowy połączone gniazdo, liczbę kropkami, na przykład "128.56.22.8". Przekazywanie **NULL** ciągu dla tego parametru oznacza **CSocket —** wystąpienia powinna nasłuchiwać aktywność klienta na wszystkich interfejsach sieciowych.  
+ *lpszSocketAddress*  
+ Wskaźnik do ciąg zawierający adres sieciowy połączone gniazdo, liczbę kropkami, na przykład "128.56.22.8". Przekazywanie wartości NULL ciągu dla tego parametru oznacza `CSocket` wystąpienia powinna nasłuchiwać aktywność klienta na wszystkich interfejsach sieciowych.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli funkcja zakończy się pomyślnie; w przeciwnym razie wartość 0, a kod błędu można pobranej poprzez wywołanie `GetLastError`.  
   
 ### <a name="remarks"></a>Uwagi  
- **Utwórz** następnie wywołuje **powiązać** można powiązać gniazda do określonego adresu. Obsługiwane są następujące typy gniazda:  
+ `Create` następnie wywołuje `Bind` można powiązać gniazda do określonego adresu. Obsługiwane są następujące typy gniazda:  
   
-- **SOCK_STREAM** zapewnia sekwencjonowania, strumienie bajtów niezawodne, dwukierunkowe, opartego na połączeniach. Używa protokołu Transmission Control Protocol (TCP) dla rodziny adresu internetowego.  
+- Udostępnia SOCK_STREAM sekwencjonowania, strumienie bajtów niezawodne, dwukierunkowe, opartego na połączeniach. Używa protokołu Transmission Control Protocol (TCP) dla rodziny adresu internetowego.  
   
-- **SOCK_DGRAM** obsługuje datagramy są bez połączenia, zawodne buforów stała długość maksymalną (zazwyczaj jest to mała). Używa protokołu UDP (User Datagram) dla systemów z rodziny adresu internetowego. Aby użyć tej opcji, nie mogą używać gniazda z `CArchive` obiektu.  
+- Datagramy obsługuje SOCK_DGRAM są bez połączenia, zawodne buforów stała długość maksymalną (zazwyczaj jest to mała). Używa protokołu UDP (User Datagram) dla systemów z rodziny adresu internetowego. Aby użyć tej opcji, nie mogą używać gniazda z `CArchive` obiektu.  
   
     > [!NOTE]
-    >  **Akceptuj** funkcji członkowskiej przyjmuje odwołanie do nowy, pusty `CSocket` obiektu jako jego parametr. Należy utworzyć ten obiekt przed wywołaniem **Akceptuj**. Należy pamiętać, że jeśli ten obiekt gniazda trafia zakresu, zamyka połączenie. Nie wywołuj **Utwórz** dla tego nowego obiektu gniazda.  
+    >  `Accept` Funkcji członkowskiej przyjmuje odwołanie do nowy, pusty `CSocket` obiektu jako jego parametr. Należy utworzyć ten obiekt przed wywołaniem `Accept`. Należy pamiętać, że jeśli ten obiekt gniazda trafia zakresu, zamyka połączenie. Nie wywołuj `Create` dla tego nowego obiektu gniazda.  
   
  Aby uzyskać więcej informacji na temat gniazd strumienia i datagram, zobacz artykuły [Windows Sockets: tła](../../mfc/windows-sockets-background.md), [Windows Sockets: porty i adresy gniazd](../../mfc/windows-sockets-ports-and-socket-addresses.md), i [Windows Sockets: przy użyciu Gniazda z archiwami](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
@@ -185,7 +185,7 @@ CSocket();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Po wykonaniu konstrukcji, należy wywołać **Utwórz** funkcję elementu członkowskiego.  
+ Po wykonaniu konstrukcji, należy wywołać `Create` funkcję elementu członkowskiego.  
   
  Aby uzyskać więcej informacji, zobacz [Windows Sockets: przy użyciu gniazda z archiwami](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
@@ -197,14 +197,14 @@ static CSocket* PASCAL FromHandle(SOCKET hSocket);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hSocket`  
+ *hSocket*  
  Zawiera dojścia do gniazda.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do `CSocket` obiekt, lub **NULL** w przypadku nie `CSocket` obiekt dołączony do `hSocket`.  
+ Wskaźnik do `CSocket` obiektu lub wartość NULL, jeśli istnieje nie `CSocket` obiekt dołączony do *hSocket*.  
   
 ### <a name="remarks"></a>Uwagi  
- Gdy **GNIAZDA** obsługi, jeśli `CSocket` obiekt nie jest dołączony do uchwytu, zwraca funkcja członkowska **NULL** i nie tworzy tymczasowy obiekt.  
+ Gdy podane dojście GNIAZDA, jeśli `CSocket` obiekt nie jest dołączony do uchwytu, funkcja członkowska zwraca wartość NULL i nie tworzy tymczasowy obiekt.  
   
  Aby uzyskać więcej informacji, zobacz [Windows Sockets: przy użyciu gniazda z archiwami](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdb0c8679990a48740032017a2c0e11b7148f2d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f312d7e829657f2cc9c7c41c65afad8d8f8b343
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376398"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121867"
 ---
 # <a name="ctypedptrmap-class"></a>Ctypedptrmap — klasa
 Udostępnia bezpieczne "otoki" dla obiektów klasy mapy wskaźnika `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, i `CMapStringToPtr`.  
@@ -42,13 +42,13 @@ class CTypedPtrMap : public BASE_CLASS
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Klasa podstawowa klasy mapy typizowaną wskaźnika; musi być klasą mapy wskaźnika ( `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, lub `CMapStringToPtr`).  
   
- `KEY`  
+ *KEY*  
  Klasa Obiekt używany jako klucz do mapy.  
   
- `VALUE`  
+ *WARTOŚĆ*  
  Klasa obiektu przechowywane na mapie.  
   
 ## <a name="members"></a>Elementy członkowskie  
@@ -94,25 +94,25 @@ void GetNextAssoc(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rPosition`  
- Określa odwołania do **pozycji** wartość zwrócona przez poprzednie `GetNextAssoc` lub `BASE_CLASS` **:: GetStartPosition** wywołania.  
+ *rPosition*  
+ Określa odwołania do wartości pozycji zwrócony przez poprzednie `GetNextAssoc` lub `BASE_CLASS` **:: GetStartPosition** wywołania.  
   
  *KEY*  
  Parametr szablonu określenie typu kluczy mapy.  
   
- `rKey`  
+ *rKey*  
  Określa klucz zwróconego elementu pobrane.  
   
  *WARTOŚĆ*  
  Parametr szablonu określający typ wartości mapy.  
   
- `rValue`  
+ *r-wartości*  
  Określa wartość elementu pobrane.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja jest najbardziej przydatny w przypadku iteracja przez wszystkie elementy na mapie. Należy pamiętać, że sekwencji pozycji nie jest zawsze taki sam jak wartości klucza sekwencji.  
   
- Jeśli element pobrane przez ostatnie na mapie jest następnie nowa wartość `rNextPosition` ustawiono **NULL**.  
+ Jeśli element pobrane przez ostatnie na mapie jest następnie nowa wartość `rNextPosition` jest równa NULL.  
   
  Wywołania tej funkcji wbudowanej `BASE_CLASS` **:: GetNextAssoc**.  
   
@@ -124,16 +124,16 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Parametr szablonu określający klasą podstawową klasy tej mapy.  
   
- `key`  
+ *Klucz*  
  Klucz elementu, który ma być wyszukiwane.  
   
  *WARTOŚĆ*  
  Parametr szablonu określający typ wartości przechowywanych na tej mapie.  
   
- `rValue`  
+ *r-wartości*  
  Określa wartość elementu pobrane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -153,10 +153,10 @@ VALUE& operator[ ](base_class ::base_arg_key key);
  *WARTOŚĆ*  
  Parametr szablonu określający typ wartości przechowywanych na tej mapie.  
   
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Parametr szablonu określający klasą podstawową klasy tej mapy.  
   
- `key`  
+ *Klucz*  
  Klucz elementu do przeszukiwać lub utworzenia na mapie.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -173,7 +173,7 @@ BOOL RemoveKey(KEY key);
  *KEY*  
  Parametr szablonu określenie typu kluczy mapy.  
   
- `key`  
+ *Klucz*  
  Klucz elementu do usunięcia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -193,10 +193,10 @@ void SetAt(KEY key, VALUE newValue);
  *KEY*  
  Parametr szablonu określenie typu kluczy mapy.  
   
- `key`  
+ *Klucz*  
  Określa wartość klucza newValue.  
   
- `newValue`  
+ *newValue*  
  Określa wskaźnik do obiektu, który jest wartością nowego elementu.  
   
 ### <a name="remarks"></a>Uwagi  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1e6f2e8cc501f9a466e4970d27a2e6ecd9174ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d817ec62734b3646c4df0977daa8161601e5c592
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372985"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122695"
 ---
 |||  
 |-|-|  
@@ -31,7 +31,7 @@ ms.locfileid: "33372985"
 |[END_DELEGATE_MAP —](#end_delegate_map)|Kończy się mapy delegata.|
 |[END_INTERFACE_MAP —](#end_interface_map)|Kończy się na mapie interfejsu w pliku implementacji. |
 |[EVENT_DELEGATE_ENTRY —](#event_delegate_entry)|Tworzy wpis w mapie delegata.|
-|[INTERFACE_PART —](#interface_part)|Używany podczas komunikacji między `BEGIN_INTERFACE_MAP` makro i `END_INTERFACE_MAP` makro dla każdego interfejsu obiektu będzie obsługiwać.|
+|[INTERFACE_PART —](#interface_part)|Używany podczas komunikacji między begin_interface_map — makro i end_interface_map — makro dla każdego interfejsu, który będzie obsługiwać obiektu.|
 |[MAKE_DELEGATE —](#make_delegate)|Dołącza program obsługi zdarzeń do zarządzanego formantu.|
 
 
@@ -43,7 +43,7 @@ Rozpoczyna się mapy delegata.
 BEGIN_DELEGATE_MAP(  CLASS );  
 ```
 ### <a name="parameters"></a>Parametry  
- `CLASS`  
+ *KLASY*  
  Klasa, w którym jest hostowany zarządzanego formantu.  
    
 ### <a name="remarks"></a>Uwagi  
@@ -63,14 +63,14 @@ Rozpoczyna się definicji podłączony mapy, gdy są używane w pliku implementa
 BEGIN_INTERFACE_MAP( theClass, baseClass )  
 ```
 ### <a name="parameters"></a>Parametry  
- `theClass`  
+ *theClass*  
  Klasy, w którym ma być zdefiniowana mapy interfejsu  
   
- `baseClass`  
- Klasy, z którego `theClass` pochodną.  
+ *baseclass —*  
+ Klasy, z którego *theClass* pochodną.  
    
 ### <a name="remarks"></a>Uwagi  
- Dla każdego interfejsu, która jest zaimplementowana, istnieje co najmniej jeden `INTERFACE_PART` makro wywołań. Dla każdego wartość zagregowaną, która korzysta z klasy, istnieje **INTERFACE_AGGREGATE** wywołanie makra.  
+ Dla każdego interfejsu, która jest zaimplementowana istnieje co najmniej jednego wywołania makro interface_part —. Dla każdego wartość zagregowaną, która korzysta z klasy istnieje jedno wywołanie makra INTERFACE_AGGREGATE.  
   
  Aby uzyskać więcej informacji na map interfejsów, zobacz [38 Uwaga techniczna](../tn038-mfc-ole-iunknown-implementation.md).  
    
@@ -85,7 +85,7 @@ Rejestruje wywołanie zwrotne metody źródło polecenia.
 delegate void CommandHandler(  UINT^ cmdID  );  
 ```
 ### <a name="parameters"></a>Parametry  
- `cmdID`  
+ *cmdID*  
  Identyfikator polecenia.  
    
 ### <a name="remarks"></a>Uwagi  
@@ -109,10 +109,10 @@ Rejestruje metody wywołania zwrotnego komunikat polecenia aktualizacji interfej
 delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);  
 ```
 ### <a name="parameters"></a>Parametry  
- `cmdID`  
+ *cmdID*  
  Identyfikator polecenia.  
   
- `cmdUI`  
+ *cmdUI*  
  Identyfikator polecenia komunikatu.  
    
 ### <a name="remarks"></a>Uwagi  
@@ -173,20 +173,20 @@ Tworzy wpis w mapie delegata.
 EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);  
 ```
 ### <a name="parameters"></a>Parametry  
- `MEMBER`  
+ *ELEMENT CZŁONKOWSKI*  
  Metoda obsługi zdarzeń jest dołączony do formantu.  
   
- `ARG0`  
- Pierwszy argument metoda obsługi zdarzeń zarządzanych, takich jak **Object ^**.  
+ *ARG0*  
+ Pierwszy argument metoda obsługi zdarzeń zarządzanych, takich jak `Object^`.  
   
- `ARG1`  
- Drugi argument funkcji metoda obsługi zdarzeń zarządzanych, takich jak **EventArgs ^**.  
+ *ARG1*  
+ Drugi argument funkcji metoda obsługi zdarzeń zarządzanych, takich jak `EventArgs^`.  
    
 ### <a name="remarks"></a>Uwagi  
  Każdy wpis w mapie delegata odpowiada delegata obsługi zarządzanych zdarzeń utworzonych przez [make_delegate —](#make_delegate).  
    
 ### <a name="example"></a>Przykład  
- Poniższy przykładowy kod przedstawia sposób użycia `EVENT_DELEGATE_ENTRY` utworzyć wpis w mapie delegowanego dla `OnClick` obsługi zdarzeń; Zobacz też przykładowy kod w `MAKE_DELEGATE`. Aby uzyskać więcej informacji, zobacz [porady: obiekt Sink zdarzenia formularzy systemu Windows z natywnego klas C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).  
+ W poniższym przykładzie przedstawiono użycie event_delegate_entry — można utworzyć wpis w mapie delegowanego dla `OnClick` obsługi zdarzeń; również Zobacz przykład kodu w make_delegate —. Aby uzyskać więcej informacji, zobacz [porady: obiekt Sink zdarzenia formularzy systemu Windows z natywnego klas C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).  
   
  ```cpp
 BEGIN_DELEGATE_MAP(CMyView)
@@ -205,22 +205,22 @@ END_DELEGATE_MAP()
  
 
 ##  <a name="interface_part"></a>INTERFACE_PART —
-Używany podczas komunikacji między `BEGIN_INTERFACE_MAP` makro i `END_INTERFACE_MAP` makro dla każdego interfejsu obiektu będzie obsługiwać.  
+Używany podczas komunikacji między begin_interface_map — makro i end_interface_map — makro dla każdego interfejsu, który będzie obsługiwać obiektu.  
    
 ### <a name="syntax"></a>Składnia    
 ```
 INTERFACE_PART( theClass, iid, localClass)  
 ```
 ### <a name="parameters"></a>Parametry  
- `theClass`  
+ *theClass*  
  Nazwa klasy zawierającej mapy interfejsu.    
- `iid`  
+ *identyfikator IID*  
  Identyfikator IID, który ma być zmapowana do osadzonego klasy.    
  *localClass*  
  Nazwa klasy lokalnej.  
    
 ### <a name="remarks"></a>Uwagi  
- Umożliwia mapowanie identyfikatora IID do elementu członkowskiego klasy oznaczona `theClass` i *localClass*.  
+ Umożliwia mapowanie identyfikatora IID do elementu członkowskiego klasy oznaczona *theClass* i *localClass*.  
   
  Aby uzyskać więcej informacji na map interfejsów, zobacz [38 Uwaga techniczna](../tn038-mfc-ole-iunknown-implementation.md).  
    
@@ -236,14 +236,14 @@ Dołącza program obsługi zdarzeń do zarządzanego formantu.
 MAKE_DELEGATE( DELEGATE,  MEMBER) ;  
 ```
 ### <a name="parameters"></a>Parametry  
- `DELEGATE`  
+ *DELEGAT*  
  Typem obsługi zdarzeń zarządzanych delegować, takich jak [EventHandler](assetId:///T:System.EventHandler?qualifyHint=False&autoUpgrade=True).  
   
- `MEMBER`  
+ *ELEMENT CZŁONKOWSKI*  
  Nazwa metody obsługi zdarzeń jest dołączony do formantu.  
    
 ### <a name="remarks"></a>Uwagi  
- To makro tworzy delegata obsługi zdarzeń zarządzanego typu `DELEGATE` i nazwy `MEMBER`. Obiektu delegowanego obsługi zdarzeń zarządzanych umożliwia klasy natywnej do obsługi zdarzeń zarządzanych.  
+ To makro tworzy delegata obsługi zdarzeń zarządzanego typu *DELEGOWAĆ* i nazwy *elementu członkowskiego*. Obiektu delegowanego obsługi zdarzeń zarządzanych umożliwia klasy natywnej do obsługi zdarzeń zarządzanych.  
    
 ### <a name="example"></a>Przykład  
  Poniższy przykład kodu pokazuje sposób wywoływania `MAKE_DELEGATE` dołączyć `OnClick` program obsługi zdarzeń do formantu MFC `MyControl`. Dla szerszego opis działania tego makra w aplikacji MFC, zobacz [porady: obiekt Sink zdarzenia formularzy systemu Windows z natywnego klas C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).  

@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43b0967309813603e4f683f35c3ca51dce99fd8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ddf8e6530530552a4ef7b811698c816352f7719c
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374694"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122970"
 ---
 # <a name="cspinbuttonctrl-class"></a>Cspinbuttonctrl — klasa
 Udostępnia funkcje systemu Windows wspólnej przycisku pokrętła.  
@@ -120,25 +120,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
+ *dwStyle*  
  Określa styl formantu przycisku pokrętła. Zastosuj dowolną kombinację stylów formantu przycisku pokrętła do formantu. Te style są opisane w [stylów formantu góra-dół](http://msdn.microsoft.com/library/windows/desktop/bb759885) w zestawie Windows SDK.  
   
- `rect`  
+ *Rect*  
  Określa rozmiar i położenie formantu przycisku pokrętła. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) — struktura  
   
- `pParentWnd`  
- Wskaźnik do okno nadrzędne kontrolki przycisku pokrętła, zwykle `CDialog`. Nie może być **wartości NULL.**  
+ *pParentWnd*  
+ Wskaźnik do okno nadrzędne kontrolki przycisku pokrętła, zwykle `CDialog`. Nie może być wartością NULL.  
   
- `nID`  
+ *nID*  
  Określa identyfikator formantu przycisku pokrętła.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli inicjowanie zakończyło się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Możesz utworzyć `CSpinButtonCtrl` obiekt w dwóch krokach, wywołanie konstruktora, a następnie wywołać **Utwórz**, która tworzy przycisku pokrętła i dołącza go do `CSpinButtonCtrl` obiektu.  
+ Możesz utworzyć `CSpinButtonCtrl` obiekt w dwóch krokach, wywołanie konstruktora, a następnie wywołać `Create`, która tworzy przycisku pokrętła i dołącza go do `CSpinButtonCtrl` obiektu.  
   
- Aby utworzyć przycisku pokrętła z rozszerzone Style okna, należy wywołać [CSpinButtonCtrl::CreateEx](#createex) zamiast **Utwórz**.  
+ Aby utworzyć przycisku pokrętła z rozszerzone Style okna, należy wywołać [CSpinButtonCtrl::CreateEx](#createex) zamiast `Create`.  
   
 ##  <a name="createex"></a>  CSpinButtonCtrl::CreateEx  
  Tworzy kontrolkę (okno podrzędne) i kojarzy ją z `CSpinButtonCtrl` obiektu.  
@@ -153,26 +153,26 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwExStyle`  
- Określa styl rozszerzony formantu tworzona. Lista style rozszerzonej systemu windows, zobacz `dwExStyle` parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ *dwExStyle*  
+ Określa styl rozszerzony formantu tworzona. Lista style rozszerzonej systemu windows, zobacz *dwExStyle* parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Określa styl formantu przycisku pokrętła. Zastosuj dowolną kombinację stylów formantu przycisku pokrętła do formantu. Te style są opisane w [stylów formantu góra-dół](http://msdn.microsoft.com/library/windows/desktop/bb759885) w zestawie Windows SDK.  
   
- `rect`  
- Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujące rozmiar i położenie okna, które ma zostać utworzony w współrzędne klienta `pParentWnd`.  
+ *Rect*  
+ Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujące rozmiar i położenie okna, które ma zostać utworzony w współrzędne klienta *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do okna, które jest elementem nadrzędnym formantu.  
   
- `nID`  
+ *nID*  
  Identyfikator formantu okna podrzędnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj `CreateEx` zamiast [Utwórz](#create) dotyczyć rozszerzone style systemu Windows, określone przez wstępu rozszerzonego stylu Windows **WS_EX_**.  
+ Użyj `CreateEx` zamiast [Utwórz](#create) dotyczyć rozszerzone style systemu Windows, określone przez wstępu rozszerzonego stylu Windows WS_EX_.  
   
 ##  <a name="cspinbuttonctrl"></a>  CSpinButtonCtrl::CSpinButtonCtrl  
  Konstruuje `CSpinButtonCtrl` obiektu.  
@@ -191,10 +191,10 @@ UINT GetAccel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nAccel`  
- Liczba elementów w tablicy określona przez `pAccel`.  
+ *nAccel*  
+ Liczba elementów w tablicy określona przez *pAccel*.  
   
- `pAccel`  
+ *pAccel*  
  Wskaźnik do tablicy [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) struktur, które otrzymuje informacje przyspieszenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -229,7 +229,7 @@ int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;
   
 ### <a name="parameters"></a>Parametry  
  *lpbError*  
- Wskaźnik do wartość logiczna, która jest równa zero, jeśli wartość jest pobrane pomyślnie, lub zera w przypadku wystąpienia błędu. Jeśli ten parametr ma wartość **NULL**, nie zostały zgłoszone błędy.  
+ Wskaźnik do wartość logiczna, która jest równa zero, jeśli wartość jest pobrane pomyślnie, lub zera w przypadku wystąpienia błędu. Jeśli ten parametr ma wartość null, nie są zgłaszane błędy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Pierwszą wersję zwraca bieżącą pozycję w programie word znaczącymi bitami 16-bitowych. Word znaczących jest różna od zera, jeśli wystąpił błąd.  
@@ -255,7 +255,7 @@ void GetRange32(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *Niższe*  
+ *niższe*  
  Odwołanie do liczba całkowita, która odbiera dolnej granicy formantu.  
   
  *górny*  
@@ -277,11 +277,11 @@ BOOL SetAccel(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nAccel`  
- Liczba [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) struktury określony przez `pAccel`.  
+ *nAccel*  
+ Liczba [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) struktury określony przez *pAccel*.  
   
- `pAccel`  
- Wskaźnik do tablicy `UDACCEL` struktur, które zawierają informacje przyspieszenia. Elementy mają być sortowane w kolejności rosnącej według **nSec** elementu członkowskiego.  
+ *pAccel*  
+ Wskaźnik do tablicy UDACCEL struktur, które zawierają informacje przyspieszenia. Elementy mają być sortowane w kolejności rosnącej według `nSec` elementu członkowskiego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
@@ -294,7 +294,7 @@ int SetBase(int nBase);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nBase`  
+ *nBase*  
  Nowa wartość podstawową dla formantu. Może być 10 dla typu decimal lub 16 w przypadku wartości szesnastkowych.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -311,7 +311,7 @@ CWnd* SetBuddy(CWnd* pWndBuddy);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWndBuddy`  
+ *pWndBuddy*  
  Wskaźnik do nowego okna buddy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -329,7 +329,7 @@ int SetPos32(int nPos);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPos`  
+ *nPos*  
  Nowa pozycja dla formantu. Ta wartość musi być w zakresie określonym przez górny i dolny limit dla formantu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -353,8 +353,8 @@ void SetRange32(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nLower` I `nUpper`  
- Górny i dolny limit dla formantu. Dla `SetRange`, limit nie może być większa niż **UD_MAXVAL** lub mniej niż **UD_MINVAL**; Ponadto nie może przekraczać różnicę między dwiema granicami **UD_MAXVAL**. `SetRange32` nie nakłada żadnych ograniczeń na granicach; Użyj dowolnej liczby całkowite.  
+ *nLower* i *nUpper*  
+ Górny i dolny limit dla formantu. Aby uzyskać `SetRange`, limit nie może być większa niż UD_MAXVAL lub mniej niż UD_MINVAL; ponadto różnicę między dwiema granicami nie może przekraczać UD_MAXVAL. `SetRange32` nie nakłada żadnych ograniczeń na granicach; Użyj dowolnej liczby całkowite.  
   
 ### <a name="remarks"></a>Uwagi  
  Funkcja członkowska `SetRange32` ustawia zakresu 32-bitowego dla przycisku pokrętła.  

@@ -128,15 +128,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63882cd6ae167e78bc5e3cf509650ae3d84fd0ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdf57093ff1feeccc0f805bee197959dd4fb453b
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378642"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123074"
 ---
 # <a name="cwinappex-class"></a>Klasa CWinAppEx
-`CWinAppEx` Obsługuje stan aplikacji, zapisuje stan w rejestrze ładuje stan z rejestru, inicjuje menedżerów aplikacji i łącza do tych samym menedżerów aplikacji.  
+`CWinAppEx` obsługuje stan aplikacji, zapisuje stan w rejestrze ładuje stan z rejestru, inicjuje menedżerów aplikacji i łącza do tych samym menedżerów aplikacji.  
   
    [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
 ## <a name="syntax"></a>Składnia  
@@ -210,7 +210,7 @@ class CWinAppEx : public CWinApp
 |----------|-----------------|  
 |[CWinAppEx::LoadCustomState](#loadcustomstate)|Wywoływane przez platformę, gdy załadowano stan aplikacji.|  
 |[CWinAppEx::LoadWindowPlacement](#loadwindowplacement)|Wywoływane przez platformę, gdy ładuje rozmiar i położenie aplikacji z rejestru. Załadowane dane obejmują rozmiar i położenie ramki głównej w czasie ostatniego zamknięcia aplikacji.|  
-|[CWinAppEx::OnClosingMainFrame](#onclosingmainframe)|Wywoływane przez platformę, gdy główne okno ramowe przetwarza `WM_CLOSE`.|  
+|[CWinAppEx::OnClosingMainFrame](#onclosingmainframe)|Wywoływane przez platformę, gdy główne okno ramowe przetwarza WM_CLOSE.|  
 |[CWinAppEx::PreLoadState](#preloadstate)|Wywoływane przez platformę, bezpośrednio przed załadowaniem stanu aplikacji.|  
 |[CWinAppEx::PreSaveState](#presavestate)|Wywoływane przez platformę, bezpośrednio przed stan aplikacji jest zapisywany.|  
 |[CWinAppEx::ReloadWindowPlacement](#reloadwindowplacement)|Ponownie ładuje rozmiar i położenie okna dostarczonego z rejestru|  
@@ -254,14 +254,14 @@ virtual BOOL CleanState(LPCTSTR lpszSectionName=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszSectionName`  
+ [in] *lpszSectionName*  
  Ciąg, który zawiera ścieżkę klucza rejestru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli metoda zakończyło się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda powoduje wyczyszczenie danych aplikacji z określonej sekcji rejestru. Można określić sekcji, aby wyczyścić za pomocą parametru `lpszSectionName`. Jeśli `lpszSectionName` jest `NULL`, ta metoda użyje domyślnej ścieżki rejestru przechowywane w `CWinAppEx` obiektu. Aby uzyskać domyślnej ścieżki rejestru, należy użyć [CWinAppEx::GetRegistryBase](#getregistrybase).  
+ Ta metoda powoduje wyczyszczenie danych aplikacji z określonej sekcji rejestru. Można określić sekcji, aby wyczyścić za pomocą parametru *lpszSectionName*. Jeśli *lpszSectionName* ma wartość NULL, ta metoda użyje domyślnej ścieżki rejestru przechowywane w `CWinAppEx` obiektu. Aby uzyskać domyślnej ścieżki rejestru, należy użyć [CWinAppEx::GetRegistryBase](#getregistrybase).  
   
 ##  <a name="cwinappex"></a>  CWinAppEx::CWinAppEx  
  Konstruuje `CWinAppEx` obiektu.  
@@ -271,7 +271,7 @@ CWinAppEx(BOOL bResourceSmartUpdate = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bResourceSmartUpdate`  
+ [in] *bResourceSmartUpdate*  
  Parametr wartość logiczna określająca, czy obiekt workspace powinna wykryć i obsługiwać aktualizacji zasobów.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -285,11 +285,11 @@ void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
+ [in] *bWłączenie*  
  Określa, czy ładowania aplikacji początkowy rozmiar i położenie okna ramki głównej z rejestru.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślnie rozmiar i położenie ramki głównej są ładowane z rejestru, a także inne ustawienia aplikacji. Dzieje się tak podczas [CWinAppEx::LoadState](#loadstate). Jeśli nie chcesz załadować położenie okna z rejestru, wywołanie tej metody za pomocą `bEnable` ustawioną `false`.  
+ Domyślnie rozmiar i położenie ramki głównej są ładowane z rejestru, a także inne ustawienia aplikacji. Dzieje się tak podczas [CWinAppEx::LoadState](#loadstate). Jeśli nie chcesz załadować położenie okna z rejestru, wywołanie tej metody za pomocą *bWłączenie* ustawiony na wartość FALSE.  
   
 ##  <a name="enabletearoffmenus"></a>  CWinAppEx::EnableTearOffMenus  
  Tworzy i inicjuje [CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md) obiektu.  
@@ -302,17 +302,17 @@ BOOL EnableTearOffMenus(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszRegEntry`  
+ [in] *lpszRegEntry*  
  Ciąg, który zawiera ścieżkę klucza rejestru. Aplikacja używa tego klucza rejestru do przechowywania informacji o oderwania menu.  
   
- [in] `uiCmdFirst`  
+ [in] *uiCmdFirst*  
  Identyfikator pierwszego wydzielić menu.  
   
- [in] `uiCmdLast`  
+ [in] *uiCmdLast*  
  Identyfikator ostatniego wydzielić menu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `True` Jeśli `CMenuTearOffManager` jest utworzone i zainicjowane pomyślnie; `false` Jeśli wystąpi błąd lub `CMenuTearOffManager` już istnieje.  
+ Wartość TRUE, jeśli `CMenuTearOffManager` jest utworzone i zainicjowane pomyślnie; Wartość FALSE, jeśli wystąpi błąd lub `CMenuTearOffManager` już istnieje.  
   
 ### <a name="remarks"></a>Uwagi  
  Użyj tej funkcji, aby włączyć oderwania menu w aplikacji. Należy wywołać tę funkcję z `InitInstance`.  
@@ -331,31 +331,31 @@ BOOL EnableUserTools(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmdToolsDummy`  
+ [in] *uiCmdToolsDummy*  
  Liczba całkowita bez znaku używanego przez platformę jako symbol zastępczy dla Identyfikatora polecenia w menu Narzędzia użytkownika.  
   
- [in] `uiCmdFirst`  
+ [in] *uiCmdFirst*  
  Identyfikator polecenia dla pierwszego polecenia narzędzia użytkownika.  
   
- [in] `uiCmdLast`  
+ [in] *uiCmdLast*  
  Identyfikator polecenia dla ostatniego polecenia narzędzia użytkownika.  
   
- [in] `pToolRTC`  
+ [in] *pToolRTC*  
  Klasa który `CUserToolsManager` obiekt używa do tworzenia nowych narzędzi do użytkownika.  
   
- [in] `uArgMenuID`  
+ [in] *uArgMenuID*  
  Identyfikator argumentu menu.  
   
- [in] `uInitDirMenuID`  
+ [in] *uInitDirMenuID*  
  Identyfikator menu katalogu narzędzia początkowej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli metoda tworzy i inicjuje `CUserToolsManager` obiekt; `FALSE` Jeśli metoda nie działa lub `CUserToolsManager` obiekt już istnieje.  
+ Wartość TRUE, jeśli metoda tworzy i inicjuje `CUserToolsManager` obiekt; Wartość FALSE, jeśli metoda nie działa lub `CUserToolsManager` obiekt już istnieje.  
   
 ### <a name="remarks"></a>Uwagi  
  Po włączeniu narzędzia zdefiniowane przez użytkownika struktura automatycznie obsługuje menu dynamiczne, które mogą zostać rozszerzone w trakcie dostosowywania realizowanego. Platformę kojarzy każdy nowy element za pomocą wiersza polecenia zewnętrznych. Platformę wywołuje następujące polecenia, gdy użytkownik wybiera odpowiednią pozycję z **narzędzia** menu.  
   
- Za każdym razem, gdy użytkownik dodaje nowy element, w ramach tworzy nowy obiekt. Typ klasy dla nowego obiektu jest zdefiniowana przez `pToolRTC`. `pToolRTC` Musi być pochodną klasy typu [CUserTool klasy](../../mfc/reference/cusertool-class.md).  
+ Za każdym razem, gdy użytkownik dodaje nowy element, w ramach tworzy nowy obiekt. Typ klasy dla nowego obiektu jest zdefiniowana przez *pToolRTC*. *PToolRTC* musi być pochodną klasy typu [CUserTool klasy](../../mfc/reference/cusertool-class.md).  
   
  Aby uzyskać więcej informacji o narzędziach użytkownika i jak włączyć je do aplikacji, zobacz [narzędzia zdefiniowane przez użytkownika](../../mfc/user-defined-tools.md).  
   
@@ -381,22 +381,22 @@ BOOL GetBinary(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Ciąg zawierający nazwę klucza rejestru.  
   
- [out] `ppData`  
+ [out] *ppData*  
  Wskaźnik do buforu, który wypełnia metody przy użyciu danych binarnych.  
   
- [out] `pBytes`  
+ [out] *pBytes*  
  Wskaźnik na liczbę całkowitą bez znaku, który używa metody do zapisu liczba bajtów odczytanych.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `True` w przypadku powodzenia; `false` inaczej.  
+ Wartość TRUE, jeśli pomyślnie; Wartość FALSE w przeciwnym razie wartość.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda odczytuje dane binarne zapisywane w rejestrze. Można zapisać danych do rejestru, użyj metody [CWinAppEx::WriteBinary](#writebinary) i [CWinAppEx::WriteSectionBinary](#writesectionbinary).  
   
- `lpszEntry` Parametru jest nazwa wpisu rejestru znajduje się w obszarze domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
+ *LpszEntry* parametru jest nazwa wpisu rejestru znajduje się w obszarze domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
   
 ##  <a name="getcontextmenumanager"></a>  CWinAppEx::GetContextMenuManager  
  Zwraca wskaźnik do globalnej [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) obiektu.  
@@ -452,19 +452,19 @@ int GetInt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Ciąg zawierający nazwę wpisu rejestru.  
   
- [in] `nDefault`  
+ [in] *nDefault*  
  Wartość domyślna, metoda zwraca, jeśli określony wpis rejestru nie istnieje.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Dane rejestru, jeśli metoda zakończyło się pomyślnie; w przeciwnym razie `nDefault`.  
+ Dane rejestru, jeśli metoda zakończyło się pomyślnie; w przeciwnym razie *nDefault*.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda odczytuje danych liczb całkowitych z rejestru. Jeśli nie ma żadnych danych całkowitą skojarzoną z kluczem rejestru wskazywanym przez `lpszEntry`, ta metoda zwraca `nDefault`. Można zapisać danych do rejestru, użyj metody [CWinAppEx::WriteSectionInt](#writesectionint) i [CWinAppEx::WriteInt](#writeint).  
+ Ta metoda odczytuje danych liczb całkowitych z rejestru. Jeśli nie ma żadnych danych całkowitą skojarzoną z kluczem rejestru wskazywanym przez *lpszEntry*, ta metoda zwraca *nDefault*. Można zapisać danych do rejestru, użyj metody [CWinAppEx::WriteSectionInt](#writesectionint) i [CWinAppEx::WriteInt](#writeint).  
   
- `lpszEntry` Parametru jest nazwa wpisu rejestru znajduje się w obszarze domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
+ *LpszEntry* parametru jest nazwa wpisu rejestru znajduje się w obszarze domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
   
 ##  <a name="getkeyboardmanager"></a>  CWinAppEx::GetKeyboardManager  
  Zwraca wskaźnik do globalnej [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md) obiektu.  
@@ -502,10 +502,10 @@ BOOL GetObject(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Ciąg, który zawiera ścieżkę względną wpisu rejestru.  
   
- [out] `obj`  
+ [out] *obj.*  
  Odwołanie do `CObject`. Metoda używa tego odwołania do przechowywania danych rejestru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -514,7 +514,7 @@ BOOL GetObject(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda odczytuje dane z rejestru, która jest pochodną `CObject`. Aby zapisać `CObject` danych do rejestru, użyj jednej [CWinAppEx::WriteObject](#writeobject) lub [CWinAppEx::WriteSectionObject](#writesectionobject).  
   
- `lpszEntry` Parametr jest nazwą wpis rejestru, który znajduje się w obszarze domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
+ *LpszEntry* parametr jest nazwą wpis rejestru, który znajduje się w obszarze domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
   
 ##  <a name="getregistrybase"></a>  CWinAppEx::GetRegistryBase  
  Pobiera domyślną ścieżkę rejestru dla aplikacji.  
@@ -537,14 +537,14 @@ CString GetRegSectionPath(LPCTSTR szSectionAdd = _T(""));
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `szSectionAdd`  
+ [in] *szSectionAdd*  
  Ciąg, który zawiera względną ścieżkę klucza rejestru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  A `CString` zawierający bezwzględną ścieżkę klucza rejestru.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda definiuje bezwzględną ścieżkę klucza rejestru, dodając ścieżkę względną w `szSectionAdd` do domyślnej lokalizacji rejestru dla aplikacji. Aby uzyskać domyślny klucz rejestru, należy użyć metody [CWinAppEx::GetRegistryBase](#getregistrybase).  
+ Ta metoda definiuje bezwzględną ścieżkę klucza rejestru, dodając ścieżkę względną w *szSectionAdd* do domyślnej lokalizacji rejestru dla aplikacji. Aby uzyskać domyślny klucz rejestru, należy użyć metody [CWinAppEx::GetRegistryBase](#getregistrybase).  
   
 ##  <a name="getsectionbinary"></a>  CWinAppEx::GetSectionBinary  
  Odczytuje dane binarne z rejestru.  
@@ -558,25 +558,25 @@ BOOL GetSectionBinary(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszSubSection`  
+ [in] *lpszSubSection*  
  Ciąg, który zawiera względną ścieżkę klucza rejestru.  
   
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Ciąg, który zawiera wartości do odczytu.  
   
- [out] `ppData`  
+ [out] *ppData*  
  Wskaźnik do buforu, której metody przechowuje dane.  
   
- [out] `pBytes`  
- Wskaźnik na liczbę całkowitą bez znaku. Metoda zapisuje rozmiar `ppData` do tego parametru.  
+ [out] *pBytes*  
+ Wskaźnik na liczbę całkowitą bez znaku. Metoda zapisuje rozmiar *ppData* do tego parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `True` w przypadku powodzenia; w przeciwnym razie `false`.  
+ Wartość TRUE, jeśli pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda odczytuje dane binarne, które są zapisywane w rejestrze za pomocą metod [CWinAppEx::WriteBinary](#writebinary) i [CWinAppEx::WriteSectionBinary](#writesectionbinary).  
   
- `lpszSubSection` Parametr nie jest ścieżką bezwzględną wpisu rejestru. Jest ścieżką względną, który jest dołączany na końcu domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
+ *LpszSubSection* parametr nie jest ścieżką bezwzględną wpisu rejestru. Jest ścieżką względną, który jest dołączany na końcu domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
   
 ##  <a name="getsectionint"></a>  CWinAppEx::GetSectionInt  
  Odczytuje danych liczb całkowitych z rejestru.  
@@ -589,22 +589,22 @@ int GetSectionInt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszSubSection`  
+ [in] *lpszSubSection*  
  Ciąg, który zawiera względną ścieżkę klucza rejestru.  
   
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Ciąg, który zawiera wartości do odczytu.  
   
- [in] `nDefault`  
+ [in] *nDefault*  
  Domyślna wartość do zwrócenia, jeśli określona wartość nie istnieje.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczba całkowita dane są przechowywane w określonej wartości rejestru; `nDefault` Jeśli danych nie istnieje.  
+ Liczba całkowita dane są przechowywane w określonej wartości rejestru; *nDefault* Jeśli danych nie istnieje.  
   
 ### <a name="remarks"></a>Uwagi  
  Użyj metody [CWinAppEx::WriteInt](#writeint) i [CWinAppEx::WriteSectionInt](#writesectionint) można zapisać danych liczb całkowitych w rejestrze.  
   
- `lpszSubSection` Parametr nie jest ścieżką bezwzględną wpisu rejestru. Jest ścieżką względną, który zostanie dodany na końcu domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
+ *LpszSubSection* parametr nie jest ścieżką bezwzględną wpisu rejestru. Jest ścieżką względną, który zostanie dodany na końcu domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
   
 ##  <a name="getsectionobject"></a>  CWinAppEx::GetSectionObject  
  Odczytuje [CObject](../../mfc/reference/cobject-class.md) danych rejestru z rejestru.  
@@ -617,13 +617,13 @@ BOOL GetSectionObject(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszSubSection`  
+ [in] *lpszSubSection*  
  Ciąg, który zawiera względną ścieżkę klucza rejestru.  
   
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Ciąg, który zawiera wartości do odczytu.  
   
- [out] `obj`  
+ [out] *obj.*  
  Odwołanie do `CObject`. Metoda używa to `CObject` do przechowywania danych rejestru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -632,7 +632,7 @@ BOOL GetSectionObject(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda odczytuje dane z rejestru. Dane odczytane jest `CObject` danych, lub dla klasy pochodzącej od `CObject`. Aby zapisać `CObject` danych do rejestru, użyj jednej [CWinAppEx::WriteObject](#writeobject) lub [CWinAppEx::WriteSectionObject](#writesectionobject).  
   
- `lpszSubSection` Parametr nie jest ścieżką bezwzględną wpisu rejestru. Jest ścieżką względną, który jest dołączany na końcu domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
+ *LpszSubSection* parametr nie jest ścieżką bezwzględną wpisu rejestru. Jest ścieżką względną, który jest dołączany na końcu domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
   
 ##  <a name="getsectionstring"></a>  CWinAppEx::GetSectionString  
  Odczyty ciągu danych z rejestru.  
@@ -645,22 +645,22 @@ CString GetSectionString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszSubSection`  
+ [in] *lpszSubSection*  
  Ciąg, który zawiera względną ścieżkę klucza rejestru.  
   
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Ciąg, który zawiera wartości do odczytu.  
   
- [in] `lpszDefault`  
+ [in] *lpszDefault*  
  Domyślna wartość do zwrócenia, jeśli określona wartość nie istnieje.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Ciąg dane przechowywane w określonej wartości rejestru, jeśli istnieje danych; w przeciwnym razie `lpszDefault`.  
+ Ciąg dane przechowywane w określonej wartości rejestru, jeśli istnieje danych; w przeciwnym razie *lpszDefault*.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda odczytuje dane ciągu zapisywane w rejestrze. Użyj [CWinAppEx::WriteString](#writestring) i [CWinAppEx::WriteSectionString](#writesectionstring) można zapisać danych ciąg do rejestru.  
   
- `lpszSubSection` Parametr nie jest ścieżką bezwzględną wpisu rejestru. Jest ścieżką względną, który jest dołączany na końcu domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
+ *LpszSubSection* parametr nie jest ścieżką bezwzględną wpisu rejestru. Jest ścieżką względną, który jest dołączany na końcu domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
   
 ##  <a name="getshellmanager"></a>  CWinAppEx::GetShellManager  
  Zwraca wskaźnik do globalnej [CShellManager](../../mfc/reference/cshellmanager-class.md) obiektu.  
@@ -685,19 +685,19 @@ CString GetString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Ciąg zawierający nazwę klucza rejestru  
   
- [in] `lpzDefault`  
+ [in] *lpzDefault*  
  Wartość domyślna, metoda zwraca, jeśli określony wpis rejestru nie istnieje.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Ciąg danych przechowywanych w rejestrze, w przypadku powodzenia; `lpszDefault` inaczej.  
+ Ciąg danych przechowywanych w rejestrze, w przypadku powodzenia; *lpszDefault* inaczej.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda odczytuje dane ciągu zapisywane w rejestrze. Można zapisać danych do rejestru, użyj metody [CWinAppEx::WriteString](#writestring) lub [CWinAppEx::WriteSectionString](#writesectionstring).  
   
- `lpszEntry` Parametru jest nazwa wpisu rejestru znajduje się w obszarze domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
+ *LpszEntry* parametru jest nazwa wpisu rejestru znajduje się w obszarze domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
   
 ##  <a name="gettooltipmanager"></a>  CWinAppEx::GetTooltipManager  
  Zwraca wskaźnik do globalnej [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) obiektu.  
@@ -720,7 +720,7 @@ CUserToolsManager* GetUserToolsManager();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do globalnej `CUserToolsManager` obiekt; `NULL` Jeśli użytkownika narzędzia zarządzania nie jest włączone dla aplikacji.  
+ Wskaźnik do globalnej `CUserToolsManager` obiekt; Wartość NULL, jeśli użytkownik narzędzi zarządzania nie jest włączone dla aplikacji.  
   
 ### <a name="remarks"></a>Uwagi  
  Przed pobraniem wskaźnik do `CUserToolsManager` obiektu, należy zainicjować Menedżera wywołując [CWinAppEx::EnableUserTools](#enableusertools).  
@@ -819,7 +819,7 @@ BOOL IsStateExists(LPCTSTR lpszSectionName);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszSectionName`  
+ [in] *lpszSectionName*  
  Ciąg, który zawiera ścieżkę klucza rejestru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -862,13 +862,13 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pFrame`  
+ [in] *pFrame*  
  Wskaźnik do obiektu ramki okna. Metoda dotyczy to okno ramowe informacje o stanie w rejestrze.  
   
- [in] `lpszSectionName`  
+ [in] *lpszSectionName*  
  Ciąg, który zawiera względną ścieżkę klucza rejestru.  
   
- [in] `pFrameImpl`  
+ [in] *pFrameImpl*  
  Wskaźnik do `CFrameImpl` obiektu. Metoda dotyczy to okno ramowe informacje o stanie w rejestrze.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -879,7 +879,7 @@ virtual BOOL LoadState(
   
  Domyślna implementacja `CFrameImpl::OnLoadFrame` wywołania `LoadState`.  
   
- `lpszSectionName` Parametr nie jest ścieżką bezwzględną wpisu rejestru. Jest ścieżką względną, który zostanie dodany na końcu domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
+ *LpszSectionName* parametru nie jest ścieżką bezwzględną wpisu rejestru. Jest ścieżką względną, który zostanie dodany na końcu domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
   
 ##  <a name="loadwindowplacement"></a>  CWinAppEx::LoadWindowPlacement  
  Wywoływane przez platformę, gdy ładuje rozmiar i położenie główną ramkę okna z rejestru.  
@@ -892,13 +892,13 @@ virtual BOOL LoadWindowPlacement(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `rectNormalPosition`  
+ [out] *rectNormalPosition*  
  Prostokąt zawiera współrzędne główną ramkę okna, gdy jest on w przywróconej pozycji.  
   
- [out] `nFlags`  
+ [out] *nFlags*  
  Flagi sterujące pozycja zminimalizowanego okna i jak system operacyjny przełącza między zminimalizowanego okna i przywrócone okna.  
   
- [out] `nShowCmd`  
+ [out] *nShowCmd*  
  Liczba całkowita określająca Pokaż stan okna. Aby uzyskać więcej informacji na temat możliwych wartości, zobacz [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -929,28 +929,28 @@ virtual void OnAppContextHelp(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pWndControl`  
+ [in] *pWndControl*  
  Wskaźnik do obiektu okna, dla której użytkownik wywołał Pomoc kontekstowa.  
   
- [in] `dwHelpIDArray[]`  
+ [in] *[dwHelpIDArray]*  
  Wartością zastrzeżoną.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda jest aktualnie zarezerwowane do użytku w przyszłości. Domyślna implementacja nie działa, a obecnie nie jest wywoływany przez platformę.  
   
 ##  <a name="onclosingmainframe"></a>  CWinAppEx::OnClosingMainFrame  
- Struktura wywołuje tę metodę, gdy okno ramowe przetwarza `WM_CLOSE`.  
+ Struktura wywołuje tę metodę, gdy okno ramowe przetwarza WM_CLOSE.  
   
 ```  
 virtual void OnClosingMainFrame(CFrameImpl* pFrameImpl);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pFrameImpl`  
+ [in] *pFrameImpl*  
  Wskaźnik do `CFrameImpl` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja tej metody zapisuje stan `pFrameImpl`.  
+ Domyślna implementacja tej metody zapisuje stan *pFrameImpl*.  
   
 ##  <a name="onviewdoubleclick"></a>  CWinAppEx::OnViewDoubleClick  
  Wywołuje polecenie zdefiniowane przez użytkownika, który jest skojarzony z widokiem, gdy użytkownik kliknie dwukrotnie dowolne miejsce w tym widoku.  
@@ -962,17 +962,17 @@ virtual BOOL OnViewDoubleClick(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pWnd`  
+ [in] *pWnd*  
  Wskaźnik do obiektu pochodną [cview — klasa](../../mfc/reference/cview-class.md).  
   
- [in] `iViewId`  
+ [in] *iViewId*  
  Identyfikator widoku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `True` Jeśli platformę znajdzie polecenia; w przeciwnym razie wartość false.  
+ Wartość TRUE, jeśli w ramach znajduje polecenia; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby zapewnić obsługę niestandardowego zachowania, należy wywołać tej funkcji w przypadku przetwarzania `WM_LBUTTONDBLCLK` wiadomości. Ta metoda będzie wykonywać polecenia skojarzonych z Identyfikatorem widoku dostarczonych przez `iViewId`. Aby uzyskać więcej informacji dotyczących zachowania myszy niestandardowych, zobacz [Dostosowywanie klawiatury i myszy](../../mfc/keyboard-and-mouse-customization.md).  
+ Aby zapewnić obsługę niestandardowego zachowania, możesz wywoływać tej funkcji, jeśli przetworzyć komunikatu WM_LBUTTONDBLCLK. Ta metoda będzie wykonywać polecenia skojarzonych z Identyfikatorem widoku dostarczonych przez *iViewId*. Aby uzyskać więcej informacji dotyczących zachowania myszy niestandardowych, zobacz [Dostosowywanie klawiatury i myszy](../../mfc/keyboard-and-mouse-customization.md).  
   
 ##  <a name="onworkspaceidle"></a>  CWinAppEx::OnWorkspaceIdle  
 
@@ -982,7 +982,7 @@ virtual BOOL OnWorkspaceIdle(CWnd*);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `CWnd*`  
+ [in] *CWnd&#38;*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -1016,7 +1016,7 @@ virtual BOOL ReloadWindowPlacement(CFrameWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pFrame`  
+ [in] *pFrame*  
  Wskaźnik do ramki okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1060,22 +1060,22 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszSectionName`  
+ [in] *lpszSectionName*  
  Ciąg, który zawiera względną ścieżkę klucza rejestru.  
   
- [in] `pFrameImpl`  
+ [in] *pFrameImpl*  
  Wskaźnik do `CFrameImpl` obiektu. Ta ramka jest zapisywany w rejestrze systemu Windows.  
   
- [in] `pFrame`  
+ [in] *pFrame*  
  Wskaźnik do obiektu ramki okna. Ta ramka jest zapisywany w rejestrze systemu Windows.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `True` w przypadku powodzenia; `false` inaczej.  
+ Wartość TRUE, jeśli pomyślnie; Wartość FALSE w przeciwnym razie wartość.  
   
 ### <a name="remarks"></a>Uwagi  
  Metoda ta zapisuje stan aplikacji i żadnych informacji o stanie dla podanego ramkę okna. Jeśli nie podasz okno ramowe, metoda tylko zapisuje stan aplikacji. Informacje o aplikacji zawiera stan [klasy CMouseManager](../../mfc/reference/cmousemanager-class.md), [klasy CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md), [klasy CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)i [ Klasa CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md).  
   
- `lpszSectionName` Parametr nie jest ścieżką bezwzględną wpisu rejestru. Jest ścieżką względną, który jest dołączany na końcu domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
+ *LpszSectionName* parametru nie jest ścieżką bezwzględną wpisu rejestru. Jest ścieżką względną, który jest dołączany na końcu domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
   
 ##  <a name="setregistrybase"></a>  CWinAppEx::SetRegistryBase  
  Ustawia domyślną ścieżkę rejestru dla aplikacji.  
@@ -1085,7 +1085,7 @@ LPCTSTR SetRegistryBase(LPCTSTR lpszSectionName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszSectionName`  
+ [in] *lpszSectionName*  
  Ciąg, który zawiera ścieżkę klucza rejestru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1105,20 +1105,20 @@ virtual BOOL ShowPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiMenuResId`  
+ [in] *uiMenuResId*  
  Identyfikator zasobu menu.  
   
- [in] `point`  
+ [in] *punktu*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) określający pozycji menu we współrzędnych ekranu.  
   
- [in] `pWnd`  
+ [in] *pWnd*  
  Wskaźnik do okna, który jest właścicielem menu podręczne.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli pomyślnie; zostanie wyświetlone menu podręcznego w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda Wyświetla menu skojarzone z `uiMenuResId`.  
+ Ta metoda Wyświetla menu skojarzone z *uiMenuResId*.  
   
  Aby obsługiwać menu podręcznego, musisz mieć [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) obiektu. Jeśli nie ma zainicjować `CContextMenuManager` obiektu `ShowPopupMenu` zakończy się niepowodzeniem.  
   
@@ -1133,13 +1133,13 @@ virtual BOOL StoreWindowPlacement(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `nFlags`  
+ [in] *nFlags*  
  Flagi sterujące pozycja zminimalizowanego okna i jak system operacyjny przełącza między zminimalizowanego okna i przywrócone okna.  
   
- [in] `nShowCmd`  
+ [in] *nShowCmd*  
  Liczba całkowita określająca Pokaż stan okna. Aby uzyskać więcej informacji na temat możliwych wartości, zobacz [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
   
- [in] `rectNormalPosition`  
+ [in] *rectNormalPosition*  
  Prostokąt zawiera współrzędne główną ramkę okna, gdy jest on w stanie przywrócone.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -1161,22 +1161,22 @@ BOOL WriteBinary(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Ciąg zawierający nazwę klucza rejestru.  
   
- [in] `pData`  
+ [in] *pData*  
  Dane, które mają być przechowywane.  
   
- [in] `nBytes`  
- Rozmiar `pData` w bajtach.  
+ [in] *nBytes*  
+ Rozmiar *pData* w bajtach.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- `lpszEntry` Parametr jest nazwą wpis rejestru, który znajduje się w obszarze domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
+ *LpszEntry* parametr jest nazwą wpis rejestru, który znajduje się w obszarze domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
   
- Jeśli klucz określony przez `lpszEntry` nie istnieje, zostanie utworzony przez tę metodę.  
+ Jeśli klucz określony przez *lpszEntry* nie istnieje, zostanie utworzony przez tę metodę.  
   
 ##  <a name="writeint"></a>  CWinAppEx::WriteInt  
  Zapisuje dane liczbowe w rejestrze.  
@@ -1188,19 +1188,19 @@ BOOL WriteInt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Ciąg zawierający nazwę klucza rejestru.  
   
- [in] `nValue`  
+ [in] *nWartość*  
  Dane, które mają być przechowywane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- `lpszEntry` Parametru jest nazwa wpisu rejestru znajduje się w obszarze domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
+ *LpszEntry* parametru jest nazwa wpisu rejestru znajduje się w obszarze domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
   
- Jeśli klucz określony przez `lpszEntry` nie istnieje, zostanie utworzony przez tę metodę.  
+ Jeśli klucz określony przez *lpszEntry* nie istnieje, zostanie utworzony przez tę metodę.  
   
 ##  <a name="writeobject"></a>  CWinAppEx::WriteObject  
  Zapisuje dane pochodzące z [CObject — klasa](../../mfc/reference/cobject-class.md) w rejestrze.  
@@ -1212,17 +1212,17 @@ BOOL WriteObject(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Ciąg zawierający wartość do ustawienia.  
   
- [in] `obj`  
+ [in] *obj.*  
  Odwołanie do `CObject` dane, które będą przechowywać metody.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda zapisuje `obj` danych z podaną wartością w kluczu rejestru domyślne. Użyj [CWinAppEx::GetRegistryBase](#getregistrybase) ustalenie bieżącego klucza rejestru.  
+ Ta metoda zapisuje *obj* danych z podaną wartością w kluczu rejestru domyślne. Użyj [CWinAppEx::GetRegistryBase](#getregistrybase) ustalenie bieżącego klucza rejestru.  
   
 ##  <a name="writesectionbinary"></a>  CWinAppEx::WriteSectionBinary  
  Zapisuje dane binarne wartości w rejestrze.  
@@ -1236,25 +1236,25 @@ BOOL WriteSectionBinary(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszSubSection`  
+ [in] *lpszSubSection*  
  Ciąg zawierający nazwę klucza rejestru  
   
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Ciąg zawierający wartość do ustawienia.  
   
- [in] `pData`  
+ [in] *pData*  
  Dane do zapisania w rejestrze.  
   
- [in] `nBytes`  
- Rozmiar `pData` w bajtach.  
+ [in] *nBytes*  
+ Rozmiar *pData* w bajtach.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- `lpszSubSection` Parametr nie jest ścieżką bezwzględną wpisu rejestru. Jest ścieżką względną, który jest dołączany na końcu domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
+ *LpszSubSection* parametru nie jest ścieżką bezwzględną wpisu rejestru. Jest ścieżką względną, który jest dołączany na końcu domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
   
- Jeśli klucz określony przez `lpszEntry` nie istnieje, zostanie utworzony przez tę metodę.  
+ Jeśli klucz określony przez *lpszEntry* nie istnieje, zostanie utworzony przez tę metodę.  
   
 ##  <a name="writesectionint"></a>  CWinAppEx::WriteSectionInt  
  Zapisuje dane liczbowe w rejestrze.  
@@ -1267,22 +1267,22 @@ BOOL WriteSectionInt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszSubSection`  
+ [in] *lpszSubSection*  
  Ciąg, który zawiera względną ścieżkę klucza rejestru.  
   
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Ciąg zawierający wartość do ustawienia.  
   
- [in] `nValue`  
+ [in] *nWartość*  
  Dane do zapisania w rejestrze.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- `lpszSubSection` Parametr nie jest ścieżką bezwzględną wpisu rejestru. Jest ścieżką względną dołączany domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
+ *LpszSubSection* parametr nie jest ścieżką bezwzględną wpisu rejestru. Jest ścieżką względną dołączany domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
   
- Jeśli klucz określony przez `lpszEntry` nie istnieje, zostanie utworzony przez tę metodę.  
+ Jeśli klucz określony przez *lpszEntry* nie istnieje, zostanie utworzony przez tę metodę.  
   
 ##  <a name="writesectionobject"></a>  CWinAppEx::WriteSectionObject  
  Zapisuje dane pochodzące z [CObject — klasa](../../mfc/reference/cobject-class.md) wartości rejestru.  
@@ -1295,22 +1295,22 @@ BOOL WriteSectionObject(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszSubSection`  
+ [in] *lpszSubSection*  
  Ciąg zawierający nazwę klucza rejestru.  
   
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Ciąg zawierający nazwę wartość do ustawienia.  
   
- [in] `obj`  
+ [in] *obj.*  
  Dane, które mają być przechowywane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- `lpszSubSection` Parametr nie jest ścieżką bezwzględną wpisu rejestru. Jest ścieżką względną, który jest dołączany na końcu domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase)odpowiednio.  
+ *LpszSubSection* parametr nie jest ścieżką bezwzględną wpisu rejestru. Jest ścieżką względną, który jest dołączany na końcu domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase)odpowiednio.  
   
- Jeśli wartość jest określona przez `lpszEntry` nie istnieje w kluczu rejestru określony przez `lpszSubSection`, ta metoda spowoduje utworzenie tej wartości.  
+ Jeśli wartość jest określona przez *lpszEntry* nie istnieje w kluczu rejestru określony przez *lpszSubSection*, ta metoda spowoduje utworzenie tej wartości.  
   
 ##  <a name="writesectionstring"></a>  CWinAppEx::WriteSectionString  
  Zapisuje dane ciągu wartości w rejestrze.  
@@ -1323,22 +1323,22 @@ BOOL WriteSectionString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszSubSection`  
+ [in] *lpszSubSection*  
  Ciąg zawierający nazwę klucza rejestru.  
   
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Ciąg zawierający wartość do ustawienia.  
   
- [in] `lpszValue`  
+ [in] *lpszValue*  
  Dane ciągu do zapisu w rejestrze.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- `lpszSubSection` Parametr nie jest ścieżką bezwzględną wpisu rejestru. Jest ścieżką względną, który jest dołączany na końcu domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase)odpowiednio.  
+ *LpszSubSection* parametr nie jest ścieżką bezwzględną wpisu rejestru. Jest ścieżką względną, który jest dołączany na końcu domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase)odpowiednio.  
   
- Jeśli wartość jest określona przez `lpszEntry` nie istnieje w obszarze `lpszSubSection`, zostanie utworzony przez tę metodę.  
+ Jeśli wartość jest określona przez *lpszEntry* nie istnieje w *lpszSubSection*, zostanie utworzony przez tę metodę.  
   
 ##  <a name="writestring"></a>  CWinAppEx::WriteString  
  Zapisuje dane ciągu w rejestrze.  
@@ -1350,19 +1350,19 @@ BOOL WriteString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszEntry`  
+ [in] *lpszEntry*  
  Ciąg zawierający nazwę klucza rejestru.  
   
- [in] `lpszValue`  
+ [in] *lpszValue*  
  Dane, które mają być przechowywane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- `lpszEntry` Parametru jest nazwa wpisu rejestru znajduje się w obszarze domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
+ *LpszEntry* parametru jest nazwa wpisu rejestru znajduje się w obszarze domyślny klucz rejestru dla aplikacji. Aby pobrać lub ustawić klucz rejestru domyślne, należy użyć metod [CWinAppEx::GetRegistryBase](#getregistrybase) i [CWinAppEx::SetRegistryBase](#setregistrybase) odpowiednio.  
   
- Jeśli klucz określony przez `lspzEntry` nie istnieje, zostanie utworzony przez tę metodę.  
+ Jeśli klucz określony przez *lspzEntry* nie istnieje, zostanie utworzony przez tę metodę.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

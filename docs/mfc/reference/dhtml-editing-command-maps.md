@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69630d00b09534d97d5e46a8400b73f0e9d85b24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1d040f3cb4c9bf8e1f3afc0e8213cd4513fc8571
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375138"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123373"
 ---
 # <a name="dhtml-editing-command-maps"></a>Mapy poleceń edycji DHTML
 Następujące makra może służyć do mapy poleceń edycji DHTML [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-klas pochodnych. Na przykład ich użycia, zobacz [próbki HTMLEdit](../../visual-cpp-samples.md).  
@@ -42,7 +42,7 @@ DECLARE_DHTMLEDITING_CMDMAP(className)
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `className`  
+ *className*  
  Nazwa klasy.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -64,13 +64,13 @@ BEGIN_DHTMLEDITING_CMDMAP(className)
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `className`  
+ *className*  
  Nazwa klasy zawierającej mapy poleceń edycji DHTML. Ta klasa powinien pochodzić od bezpośrednio lub pośrednio [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) i obejmują [declare_dhtmlediting_cmdmap —](#declare_dhtmlediting_cmdmap) makra w ramach swojej definicji klasy.  
   
 ### <a name="remarks"></a>Uwagi  
  Dodaj mapy poleceń edycji DHTML na klasę do mapowania polecenia interfejsu użytkownika poleceń edycji HTML.  
   
- Miejsce `BEGIN_DHTMLEDITING_CMDMAP` następuje makra w pliku implementacji (.cpp) klasy [dhtmlediting_cmd_entry —](#dhtmlediting_cmd_entry) makra dla poleceń jest klasę do mapowania (na przykład z **id_edit_cut —** do  **IDM_CUT**). Użyj [end_dhtmlediting_cmdmap —](#end_dhtmlediting_cmdmap) makra w celu oznaczenia zakończenia Mapa zdarzeń.  
+ Begin_dhtmlediting_cmdmap — makro należy umieścić w pliku implementacji (.cpp) tej klasy, a następnie [dhtmlediting_cmd_entry —](#dhtmlediting_cmd_entry) makra dla poleceń jest klasę do mapowania (na przykład z id_edit_cut — do IDM_CUT). Użyj [end_dhtmlediting_cmdmap —](#end_dhtmlediting_cmdmap) makra w celu oznaczenia zakończenia Mapa zdarzeń.  
   
 ### <a name="requirements"></a>Wymagania  
   **Nagłówek** afxhtml.h  
@@ -99,11 +99,11 @@ DHTMLEDITING_CMD_ENTRY(cmdID,  dhtmlcmdID)
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cmdID`  
- Identyfikator polecenia (takich jak **id_edit_copy —**).  
+ *cmdID*  
+ Identyfikator polecenia (na przykład id_edit_copy —).  
   
- `dhtmlcmdID`  
- HTML, polecenia, do którego edycji `cmdID` mapy (takich jak **IDM_COPY**).  
+ *dhtmlcmdID*  
+ HTML, polecenia, do którego edycji *cmdID* mapy (na przykład IDM_COPY).  
   
 ### <a name="example"></a>Przykład  
  Zobacz [próbki HTMLEdit](../../visual-cpp-samples.md).  
@@ -119,13 +119,13 @@ DHTMLEDITING_CMD_ENTRY_FUNC(cmdID, dhtmlcmdID,  member_func_name)
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cmdID`  
- Identyfikator polecenia (takich jak **id_edit_copy —**).  
+ *cmdID*  
+ Identyfikator polecenia (na przykład id_edit_copy —).  
   
- `dhtmlcmdID`  
- HTML, polecenia, do którego edycji `cmdID` mapy (takich jak **IDM_COPY**).  
+ *dhtmlcmdID*  
+ HTML, polecenia, do którego edycji *cmdID* mapy (na przykład IDM_COPY).  
   
- `member_func_name`  
+ *member_func_name*  
  Nazwa funkcji obsługi wiadomości zamapowany polecenia.  
   
 ### <a name="example"></a>Przykład  
@@ -142,14 +142,14 @@ DHTMLEDITING_CMD_ENTRY_TYPE(cmdID  ,   dhtmlcmdID  ,    elemType)
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cmdID`  
- Identyfikator polecenia (takich jak **id_edit_copy —**).  
+ *cmdID*  
+ Identyfikator polecenia (na przykład id_edit_copy —).  
   
- `dhtmlcmdID`  
- HTML, polecenia, do którego edycji `cmdID` mapy (takich jak **IDM_COPY**).  
+ *dhtmlcmdID*  
+ HTML, polecenia, do którego edycji *cmdID* mapy (na przykład IDM_COPY).  
   
- `elemType`  
- Typ elementu interfejsu użytkownika; jeden z **AFX_UI_ELEMTYPE_NORMAL**, **AFX_UI_ELEMTYPE_CHECKBOX**, lub **AFX_UI_ELEMTYPE_RADIO**.  
+ *elemType*  
+ Typ elementu interfejsu użytkownika; jeden z AFX_UI_ELEMTYPE_NORMAL, AFX_UI_ELEMTYPE_CHECKBOX lub AFX_UI_ELEMTYPE_RADIO.  
   
 ### <a name="example"></a>Przykład  
  Zobacz [próbki HTMLEdit](../../visual-cpp-samples.md).  
@@ -165,17 +165,17 @@ DHTMLEDITING_CMD_ENTRY_FUNC_TYPE(cmdID, dhtmlcmdID, member_func_name,  elemType)
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cmdID`  
- Identyfikator polecenia (takich jak **id_edit_copy —**).  
+ *cmdID*  
+ Identyfikator polecenia (na przykład id_edit_copy —).  
   
- `dhtmlcmdID`  
- HTML, polecenia, do którego edycji `cmdID` mapy (takich jak **IDM_COPY**).  
+ *dhtmlcmdID*  
+ HTML, polecenia, do którego edycji *cmdID* mapy (na przykład IDM_COPY).  
   
- `member_func_name`  
+ *member_func_name*  
  Nazwa funkcji obsługi wiadomości zamapowany polecenia.  
   
- `elemType`  
- Typ elementu interfejsu użytkownika; jeden z **AFX_UI_ELEMTYPE_NORMAL**, **AFX_UI_ELEMTYPE_CHECKBOX**, lub **AFX_UI_ELEMTYPE_RADIO**.  
+ *elemType*  
+ Typ elementu interfejsu użytkownika; jeden z AFX_UI_ELEMTYPE_NORMAL, AFX_UI_ELEMTYPE_CHECKBOX lub AFX_UI_ELEMTYPE_RADIO.  
   
 ### <a name="example"></a>Przykład  
  Zobacz [próbki HTMLEdit](../../visual-cpp-samples.md).  

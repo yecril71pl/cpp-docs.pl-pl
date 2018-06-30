@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f34711389478997b3e2c43cb2d812b1b961df714
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b89f51fbcb3ca46afdb5ad56a6e162e7fe42cf0d
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375532"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122898"
 ---
 # <a name="cstatusbarctrl-class"></a>Cstatusbarctrl — klasa
 Udostępnia funkcje formantu paska stanu wspólne systemu Windows.  
@@ -132,27 +132,27 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
- Określa styl formantu paska stanu. Zastosuj dowolną kombinację pasek stylów formantu na liście stanu [najczęściej używane style formantu](http://msdn.microsoft.com/library/windows/desktop/bb775498) w zestawie Windows SDK. Ten parametr musi zawierać **ws_child —** stylu. Należy uwzględnić również **ws_visible —** stylu.  
+ *dwStyle*  
+ Określa styl formantu paska stanu. Zastosuj dowolną kombinację pasek stylów formantu na liście stanu [najczęściej używane style formantu](http://msdn.microsoft.com/library/windows/desktop/bb775498) w zestawie Windows SDK. Ten parametr musi zawierać ws_child — styl. Obejmuje również ws_visible — styl.  
   
- `rect`  
+ *Rect*  
  Określa rozmiar i położenie formantu paska stanu. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
   
- `pParentWnd`  
- Określa stan paska okno nadrzędne kontrolki, zwykle `CDialog`. Nie może być **wartości NULL.**  
+ *pParentWnd*  
+ Określa stan paska okno nadrzędne kontrolki, zwykle `CDialog`. Nie może być wartością NULL.  
   
- `nID`  
+ *nID*  
  Określa identyfikator formantu paska stanu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie wartość zero.  
   
 ### <a name="remarks"></a>Uwagi  
- Możesz utworzyć `CStatusBarCtrl` w dwóch krokach. Najpierw należy wywołać konstruktora, a następnie wywołać **Utwórz**, która tworzy kontrolkę paska stanu i dołącza go do `CStatusBarCtrl` obiektu.  
+ Możesz utworzyć `CStatusBarCtrl` w dwóch krokach. Najpierw należy wywołać konstruktora, a następnie wywołać `Create`, która tworzy kontrolkę paska stanu i dołącza go do `CStatusBarCtrl` obiektu.  
   
- Jest to domyślne położenie okna stanu wzdłuż dolnej części okna nadrzędnego, ale można określić `CCS_TOP` styl, który był wyświetlany u góry obszaru klienckiego okna nadrzędnego. Można określić **SBARS_SIZEGRIP** stylu, aby uwzględnić uchwyt zmiany rozmiaru po prawej stronie okna stanu. Łączenie `CCS_TOP` i **SBARS_SIZEGRIP** style nie jest zalecane, ponieważ wynikowa uchwyt zmiany rozmiaru nie działa mimo że rysuje go w oknie Stan systemu.  
+ Jest to domyślne położenie okna stanu wzdłuż dolnej części okna nadrzędnego, ale można określić styl CCS_TOP, który był wyświetlany u góry obszaru klienckiego okna nadrzędnego. Można określić styl SBARS_SIZEGRIP, aby uwzględnić uchwyt zmiany rozmiaru po prawej stronie okna stanu. Łączenie style CCS_TOP i SBARS_SIZEGRIP nie jest zalecane, ponieważ wynikowa uchwyt zmiany rozmiaru nie działa mimo że rysuje go w oknie Stan systemu.  
   
- Aby utworzyć pasek stanu z rozszerzone Style okna, należy wywołać [CStatusBarCtrl::CreateEx](#createex) zamiast **Utwórz**.  
+ Aby utworzyć pasek stanu z rozszerzone Style okna, należy wywołać [CStatusBarCtrl::CreateEx](#createex) zamiast `Create`.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#1](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_1.cpp)]  
@@ -170,19 +170,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwExStyle`  
- Określa styl rozszerzony formantu tworzona. Aby uzyskać listę rozszerzone style systemu Windows, zobacz `dwExStyle` parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ *dwExStyle*  
+ Określa styl rozszerzony formantu tworzona. Aby uzyskać listę rozszerzone style systemu Windows, zobacz *dwExStyle* parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
   
- `dwStyle`  
- Określa styl formantu paska stanu. Zastosuj dowolną kombinację pasek stylów formantu na liście stanu [najczęściej używane style formantu](http://msdn.microsoft.com/library/windows/desktop/bb775498) w zestawie Windows SDK. Ten parametr musi zawierać **ws_child —** stylu. Należy uwzględnić również **ws_visible —** stylu.  
+ *dwStyle*  
+ Określa styl formantu paska stanu. Zastosuj dowolną kombinację pasek stylów formantu na liście stanu [najczęściej używane style formantu](http://msdn.microsoft.com/library/windows/desktop/bb775498) w zestawie Windows SDK. Ten parametr musi zawierać ws_child — styl. Obejmuje również ws_visible — styl.  
   
- `rect`  
- Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujące rozmiar i położenie okna, które ma zostać utworzony w współrzędne klienta `pParentWnd`.  
+ *Rect*  
+ Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujące rozmiar i położenie okna, które ma zostać utworzony w współrzędne klienta *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do okna, które jest elementem nadrzędnym formantu.  
   
- `nID`  
+ *nID*  
  Identyfikator formantu okna podrzędnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -206,15 +206,15 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Długie wskaźnik do [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) strukturę, która zawiera informacje o typie rysunku wymagane.  
   
 ### <a name="remarks"></a>Uwagi  
- **ItemAction** członkiem `DRAWITEMSTRUCT` struktury definiuje rysowania akcję, która ma zostać wykonane.  
+ `itemAction` Członkiem `DRAWITEMSTRUCT` struktury definiuje rysowania akcję, która ma zostać wykonane.  
   
  Domyślnie ta funkcja członkowska nie działa. Przesłonić tę funkcję elementu członkowskiego, aby zaimplementować rysunku rysowania przez właściciela `CStatusBarCtrl` obiektu.  
   
- Aplikacja powinna przywrócenie wszystkich obiektów grafiki urządzenia interfejsu (GDI), wybrane kontekst wyświetlania dostarczane w `lpDrawItemStruct` przed ten element członkowski kończy funkcji.  
+ Aplikacja powinna przywrócenie wszystkich obiektów grafiki urządzenia interfejsu (GDI), wybrane kontekst wyświetlania dostarczane w *lpDrawItemStruct* przed ten element członkowski kończy funkcji.  
   
 ##  <a name="getborders"></a>  CStatusBarCtrl::GetBorders  
  Pobiera bieżący szerokości formantu paska stanu obramowań poziome i pionowe i odstęp między prostokąty.  
@@ -261,10 +261,10 @@ HICON GetIcon(int iPart) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] `iPart`|Liczony od zera indeks części, która zawiera ikonę, które mają zostać pobrane. Jeśli ten parametr ma wartość -1, na pasku stanu zakłada się, że tryb prosty paska stanu.|  
+|[in] *iPart*|Liczony od zera indeks części, która zawiera ikonę, które mają zostać pobrane. Jeśli ten parametr ma wartość -1, na pasku stanu zakłada się, że tryb prosty paska stanu.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Dojście do ikony Jeśli metoda pomyślnie; w przeciwnym razie `NULL`.  
+ Dojście do ikony Jeśli metoda pomyślnie; w przeciwnym razie wartość NULL.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wysyła [SB_GETICON](http://msdn.microsoft.com/library/windows/desktop/bb760744) komunikat, który jest opisany w zestawie SDK systemu Windows.  
@@ -291,11 +291,11 @@ int GetParts(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nParts`  
+ *nParts*  
  Liczba części, dla których mają zostać pobrane współrzędnych. Jeśli ten parametr jest większa niż liczba elementów w formancie, komunikat pobiera współrzędne tylko istniejącej części.  
   
  *pParts*  
- Adres mających taką samą liczbę elementów jak numer części określone w tablicy całkowitą `nParts`. Każdy element tablicy odbiera Współrzędna prawej krawędzi odpowiedniej części klienta. Jeśli element ma ustawioną wartość - 1, pozycja prawą krawędź w tej części rozszerza do prawej krawędzi paska stanu.  
+ Adres mających taką samą liczbę elementów jak numer części określone w tablicy całkowitą *nParts*. Każdy element tablicy odbiera Współrzędna prawej krawędzi odpowiedniej części klienta. Jeśli element ma ustawioną wartość - 1, pozycja prawą krawędź w tej części rozszerza do prawej krawędzi paska stanu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Liczba części w kontroli w przypadku powodzenia lub wartość zero, w przeciwnym razie.  
@@ -316,10 +316,10 @@ BOOL GetRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPane`  
+ *nPane*  
  Liczony od zera indeks części, których prostokątem ma być pobrana.  
   
- `lpRect`  
+ *lprect —*  
  Adres [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, która odbiera prostokątem.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -343,22 +343,22 @@ int GetText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszText`  
+ *lpszText*  
  Adres buforu, który odbiera tekst. Ten parametr jest ciąg znaków zakończony znakiem null.  
   
- `nPane`  
+ *nPane*  
  Liczony od zera indeks części, z których mają zostać pobrane tekstu.  
   
- `pType`  
+ *pType*  
  Wskaźnik do wartości całkowitej, która otrzymuje informacje o typie. Jako typ można określić jedną z następujących wartości:  
   
 - **0** tekstu jest rysowana obramowaniem być niższe niż płaszczyzna na pasku stanu.  
   
-- `SBT_NOBORDERS` Tekst jest rysowane bez granic.  
+- SBT_NOBORDERS tekstu jest rysowana bez granic.  
   
-- `SBT_POPOUT` Tekst jest rysowany z obramowanie być wyższa niż rzutu na pasku stanu.  
+- SBT_POPOUT tekstu jest rysowana obramowaniem być wyższa niż rzutu na pasku stanu.  
   
-- `SBT_OWNERDRAW` Jeśli tekst ma `SBT_OWNERDRAW` typu, rysunku `pType` odbiera ten komunikat i zwraca wartość 32-bitowych skojarzone z tekstem zamiast typu długość i operację.  
+- SBT_OWNERDRAW, czy tekst ma SBT_OWNERDRAW typu, rysunku *pType* odbiera ten komunikat i zwraca wartość 32-bitowych skojarzone z tekstem zamiast typu długość i operację.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Długość w znakach tekstu lub [cstring —](../../atl-mfc-shared/reference/cstringt-class.md) zawierający dany tekst.  
@@ -376,19 +376,19 @@ int GetTextLength(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPane`  
+ *nPane*  
  Liczony od zera indeks części, z których mają zostać pobrane tekstu.  
   
- `pType`  
+ *pType*  
  Wskaźnik do wartości całkowitej, która otrzymuje informacje o typie. Jako typ można określić jedną z następujących wartości:  
   
 - **0** tekstu jest rysowana obramowaniem być niższe niż płaszczyzna na pasku stanu.  
   
-- `SBT_NOBORDERS` Tekst jest rysowane bez granic.  
+- SBT_NOBORDERS tekstu jest rysowana bez granic.  
   
-- `SBT_OWNERDRAW` Tekst jest rysowane przez okno nadrzędne.  
+- SBT_OWNERDRAW tekstu jest rysowana przez okno nadrzędne.  
   
-- `SBT_POPOUT` Tekst jest rysowany z obramowanie być wyższa niż rzutu na pasku stanu.  
+- SBT_POPOUT tekstu jest rysowana obramowaniem być wyższa niż rzutu na pasku stanu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Długość w znakach tekstu.  
@@ -404,7 +404,7 @@ CString GetTipText(int nPane) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPane`  
+ *nPane*  
  Liczony od zera indeks w okienku paska stanu do odbierania tekst etykietki narzędzia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -437,8 +437,8 @@ COLORREF SetBkColor(COLORREF cr);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cr`  
- **COLORREF** wartość, która określa nowy kolor tła. Określ `CLR_DEFAULT` wartość, aby spowodować, że pasek stanu, aby użyć jego domyślny kolor tła.  
+ *CR*  
+ Wartość COLORREF Określa nowy kolor tła. Określ wartość CLR_DEFAULT spowodować pasek stanu, aby użyć jego domyślny kolor tła.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość, która reprezentuje poprzedniej domyślny kolor tła.  
@@ -459,11 +459,11 @@ BOOL SetIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPane`  
+ *nPane*  
  Liczony od zera indeks okienka, który będzie otrzymywał ikony. Jeśli ten parametr ma wartość -1, na pasku stanu zakłada się, że pasek stanu proste.  
   
- `hIcon`  
- Dojście do ikonę, aby ustawić. Jeśli ta wartość jest **NULL**, ikona jest usuwany z części.  
+ *hIcon*  
+ Dojście do ikonę, aby ustawić. Jeśli ta wartość jest równa NULL, ikona jest usuwany z części.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie wartość zero.  
@@ -482,11 +482,11 @@ void SetMinHeight(int nMin);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nMin`  
+ *nMin*  
  Minimalna wysokość w pikselach formantu.  
   
 ### <a name="remarks"></a>Uwagi  
- Minimalna wysokość jest sumą `nMin` i dwukrotnie szerokość w pikselach pionowy obramowania formantu paska stanu.  
+ Minimalna wysokość jest sumą *nMin* i dwukrotnie szerokość w pikselach pionowy obramowania formantu paska stanu.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#9](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_11.cpp)]  
@@ -501,11 +501,11 @@ BOOL SetParts(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nParts`  
+ *nParts*  
  Liczba części, aby ustawić. Liczba części nie może być większa niż 255.  
   
  *pWidths*  
- Adres mających taką samą liczbę elementów jako części określone w tablicy całkowitą `nParts`. Każdy element tablicy Określa położenie prawej krawędzi odpowiedniej części współrzędne klienta. Jeśli element ma wartość-1, pozycja prawą krawędź w tej części rozszerza prawą krawędzią formantu.  
+ Adres mających taką samą liczbę elementów jako części określone w tablicy całkowitą *nParts*. Każdy element tablicy Określa położenie prawej krawędzi odpowiedniej części współrzędne klienta. Jeśli element ma wartość-1, pozycja prawą krawędź w tej części rozszerza prawą krawędzią formantu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie wartość zero.  
@@ -521,8 +521,8 @@ BOOL SetSimple(BOOL bSimple = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bSimple`  
- Typ monitora flagi. Jeśli ten parametr ma `TRUE`, kontrolka Wyświetla prosty tekst; Jeśli jest `FALSE`, zawiera wiele części.  
+ [in] *bSimple*  
+ Typ monitora flagi. Jeśli ten parametr ma wartość TRUE, kontrolka Wyświetla prosty tekst; Jeśli ma ona wartość FALSE, wyświetla wiele części.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zawsze zwraca wartość 0.  
@@ -541,20 +541,20 @@ BOOL SetText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszText`  
- Adres zerem ciąg określający tekst do ustawienia. Jeśli `nType` jest `SBT_OWNERDRAW`, `lpszText` reprezentuje 32-bitowy danych.  
+ *lpszText*  
+ Adres zerem ciąg określający tekst do ustawienia. Jeśli *Npowiadomienia* jest SBT_OWNERDRAW, *lpszText* reprezentuje 32-bitowy danych.  
   
- `nPane`  
+ *nPane*  
  Liczony od zera indeks części, aby ustawić. Jeśli ta wartość wynosi 255, formantu paska stanu zakłada się, że prostego formantu o tylko jedną część.  
   
- `nType`  
+ *Npowiadomienia*  
  Typ operacji rysowania. Zobacz [komunikat SB_SETTEXT](http://msdn.microsoft.com/library/bb760758\(vs.85\).aspx) listę możliwych wartości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie wartość zero.  
   
 ### <a name="remarks"></a>Uwagi  
- Komunikat unieważnia części kontrolki, które uległy zmianie, powodując go, aby wyświetlić nowy tekst, gdy formant obok uzyskuje `WM_PAINT` wiadomości.  
+ Komunikat unieważnia części kontrolki, które uległy zmianie, co powoduje wyświetlanie nowego tekstu, gdy formant uzyskuje następny komunikat WM_PAINT.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#11](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_13.cpp)]  
@@ -569,7 +569,7 @@ void SetTipText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPane`  
+ *nPane*  
  Liczony od zera indeks w okienku paska stanu do odbierania tekst etykietki narzędzia.  
   
  *pszTipText*  

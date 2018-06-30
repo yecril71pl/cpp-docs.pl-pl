@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7596140f48b62a63189444bee6fb363552766fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1fe7c8518366065e93360187247cbd07df42d79f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371562"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122500"
 ---
 # <a name="cwinformsdialog-class"></a>Klasa CWinFormsDialog
 Otoka dla klasy okien dialogowych MFC, obsługującym kontrolki użytkownika formularza systemu Windows.  
@@ -85,7 +85,7 @@ CWinFormsDialog(UINT nIDTemplate = IDD);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDTemplate`  
+ *nIDTemplate*  
  Zawiera identyfikator zasobu szablon — okno dialogowe. Edytor okien dialogowych umożliwia tworzenie szablonu okna dialogowego i zapisz go w pliku skryptu zasobu aplikacji. Aby uzyskać więcej informacji na szablony okna dialogowego, zobacz [cdialog — klasa](../../mfc/reference/cdialog-class.md).  
   
 ##  <a name="getcontrol"></a>  CWinFormsDialog::GetControl  
@@ -119,7 +119,7 @@ virtual BOOL OnInitDialog();
  Wartość logiczna, która określa, czy aplikacja ma fokus wprowadzania formantów w oknie dialogowym. Jeśli `OnInitDialog` zwraca różną od zera, Windows ustawia fokus wprowadzania do pierwszego formantu w oknie dialogowym. Ta metoda może zwracać 0 tylko wtedy, gdy aplikacja ma jawnie ustawiona fokus wprowadzania do formantów w oknie dialogowym.  
   
 ### <a name="remarks"></a>Uwagi  
- Podczas tworzenia okna dialogowego MFC (przy użyciu [Utwórz](../../mfc/reference/cdialog-class.md#create), [CreateIndirect](../../mfc/reference/cdialog-class.md#createindirect), lub [DoModal](../../mfc/reference/cdialog-class.md#domodal) metody dziedziczone z [cdialog —](../../mfc/reference/cdialog-class.md)), `WM_INITDIALOG` jest wysyłany komunikat, a ta metoda jest wywoływana. Tworzy wystąpienie formantu formularzy systemu Windows w oknie dialogowym i dopasowuje rozmiar okna dialogowego, aby pomieścić rozmiaru kontrolki użytkownika. Następnie obsługuje nowego formantu w oknie dialogowym MFC.  
+ Podczas tworzenia okna dialogowego MFC (przy użyciu [Utwórz](../../mfc/reference/cdialog-class.md#create), [CreateIndirect](../../mfc/reference/cdialog-class.md#createindirect), lub [DoModal](../../mfc/reference/cdialog-class.md#domodal) metody dziedziczone z [cdialog —](../../mfc/reference/cdialog-class.md)), WM_ INITDIALOG komunikat jest wysyłany, a ta metoda jest wywoływana. Tworzy wystąpienie formantu formularzy systemu Windows w oknie dialogowym i dopasowuje rozmiar okna dialogowego, aby pomieścić rozmiaru kontrolki użytkownika. Następnie obsługuje nowego formantu w oknie dialogowym MFC.  
   
  Przesłonić tę funkcję elementu członkowskiego, jeśli należy przeprowadzić specjalnego przetwarzania, gdy okno dialogowe jest inicjowany. Aby uzyskać więcej informacji na temat używania tej metody, zobacz [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog).  
   

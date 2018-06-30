@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb2e9d2494463b502fda85c03fa1b861e1182cfc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6de53324eac663df7c12ee0cb2c0f4f02558157d
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372078"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121705"
 ---
 # <a name="ddxdhtml-helper-macros"></a>Makra pomocnika DDX_DHtml
 Zezwalaj na makra pomocnika DDX_DHtml łatwy dostęp do często używanych właściwości formantów na stronie HTML.  
@@ -66,13 +66,13 @@ DDX_DHtml_Anchor_Href(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `dx`  
+ *DX*  
  Wskaźnik do [cdataexchange —](../../mfc/reference/cdataexchange-class.md) obiektu.  
   
- `name`  
+ *Nazwa*  
  Wartość określona dla parametru Identyfikatora kontrolka HTML.  
   
- `var`  
+ *var*  
  Wartość wymianie.  
   
 ## <a name="remarks"></a>Uwagi  
@@ -89,13 +89,13 @@ DDX_DHtml_Anchor_Target(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `dx`  
+ *DX*  
  Wskaźnik do [cdataexchange —](../../mfc/reference/cdataexchange-class.md) obiektu.  
   
- `name`  
+ *Nazwa*  
  Wartość określona dla parametru Identyfikatora kontrolka HTML.  
   
- `var`  
+ *var*  
  Wartość wymianie.  
   
 ## <a name="remarks"></a>Uwagi  
@@ -114,13 +114,13 @@ DDX_DHtml_ElementInnerHtml(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `dx`  
+ *DX*  
  Wskaźnik do [cdataexchange —](../../mfc/reference/cdataexchange-class.md) obiektu.  
   
- `name`  
+ *Nazwa*  
  Wartość określona dla parametru Identyfikatora kontrolka HTML.  
   
- `var`  
+ *var*  
  Wartość wymianie.  
   
 ## <a name="remarks"></a>Uwagi  
@@ -140,13 +140,13 @@ DDX_DHtml_ElementInnerText(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `dx`  
+ *DX*  
  Wskaźnik do [cdataexchange —](../../mfc/reference/cdataexchange-class.md) obiektu.  
   
- `name`  
+ *Nazwa*  
  Wartość określona dla parametru Identyfikatora kontrolka HTML.  
   
- `var`  
+ *var*  
  Wartość wymianie.  
   
 ## <a name="remarks"></a>Uwagi  
@@ -163,13 +163,13 @@ DDX_DHtml_ElementValue(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `dx`  
+ *DX*  
  Wskaźnik do [cdataexchange —](../../mfc/reference/cdataexchange-class.md) obiektu.  
   
- `name`  
+ *Nazwa*  
  Wartość określona dla parametru Identyfikatora kontrolka HTML.  
   
- `var`  
+ *var*  
  Wartość wymianie. Zobacz *wartość* w [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext).  
   
 ## <a name="remarks"></a>Uwagi  
@@ -188,13 +188,13 @@ DDX_DHtml_Frame_Src(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `dx`  
+ *DX*  
  Wskaźnik do [cdataexchange —](../../mfc/reference/cdataexchange-class.md) obiektu.  
   
- `name`  
+ *Nazwa*  
  Wartość określona dla parametru Identyfikatora kontrolka HTML.  
   
- `var`  
+ *var*  
  Wartość wymianie.  
   
 ## <a name="remarks"></a>Uwagi  
@@ -213,13 +213,13 @@ DDX_DHtml_IFrame_Src(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `dx`  
+ *DX*  
  Wskaźnik do [cdataexchange —](../../mfc/reference/cdataexchange-class.md) obiektu.  
   
- `name`  
+ *Nazwa*  
  Wartość określona dla parametru Identyfikatora kontrolka HTML.  
   
- `var`  
+ *var*  
  Wartość wymianie.  
   
 ## <a name="remarks"></a>Uwagi  
@@ -236,17 +236,17 @@ DDX_DHtml_Img_Src(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `dx`  
+ *DX*  
  Wskaźnik do [cdataexchange —](../../mfc/reference/cdataexchange-class.md) obiektu.  
   
- `name`  
+ *Nazwa*  
  Wartość określona dla parametru Identyfikatora kontrolka HTML.  
   
- `var`  
+ *var*  
  Wartość wymianie.  
   
 ## <a name="remarks"></a>Uwagi  
- Korzystając z `DDX_DHtml_Img_Src` makro można pobrać właściwości src elementu obrazu obiektu obrazu programu Internet Explorer będzie zwracać pełni zmienionym adres URL źródła obrazu. Na przykład, jeśli używasz `DDX_DHtml_Img_Src` makro można ustawić właściwości src elementu obrazu do ciągu "niektóre ciekawe obraz," zwraca ciąg "res://d:\myapplication\myapp.exe/some% podczas pobierania właściwości programu Internet Explorer 20interesting % 20picture."  
+ Korzystając z makra DDX_DHtml_Img_Src można pobrać właściwości src elementu obrazu, obiektu obrazu programu Internet Explorer będzie zwracać pełni zmienionym adres URL źródła obrazu. Na przykład użycie makra DDX_DHtml_Img_Src można ustawić właściwości src elementu obrazu do ciągu "niektóre ciekawe obrazów", gdy pobrać tej właściwości, Internet Explorer zwróci ciąg "res://d:\myapplication\myapp.exe/some% 20interesting % 20picture."  
   
  Wymaga to makro [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) przy użyciu DISPID_IHTMLIMGELEMENT_SRC funkcję wysyłania identyfikatora.  
 

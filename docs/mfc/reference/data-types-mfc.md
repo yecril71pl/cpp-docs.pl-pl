@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6cdd84b9ac7547ac7c0ae0a664de0f672c10202
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d098a88e57ecbbedfde1a4674a915e13c28ab435
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375356"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121017"
 ---
 # <a name="data-types-mfc"></a>Typy danych (MFC)
 Ten temat zawiera listę typów danych najczęściej używane w programie Microsoft Foundation Class Library. Większość typów danych są takie same jak w platformie Software Development Kit (SDK), a inne są unikatowe dla MFC.  
@@ -48,9 +48,9 @@ Ten temat zawiera listę typów danych najczęściej używane w programie Micros
   
  Następujące typy danych są unikatowe dla Microsoft Foundation Class Library:  
   
--   **POZYCJA** wartość używany do określenia położenie elementu w kolekcji; używane przez klasy kolekcji MFC.  
+-   Ustaw wartość używana do oznaczania położenie elementu w kolekcji; używane przez klasy kolekcji MFC.  
   
--   **Lpcrect —** wskaźnika A 32-bitowych na stałą (niemodyfikowalnymi) `RECT` struktury.  
+-   Lpcrect — wskaźnik A 32-bitowych na stałą (niemodyfikowalnymi) `RECT` struktury.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przegląd klas](../../mfc/class-library-overview.md)   

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89de8dddae6d6549fe12086b84e6bb656afcbc4f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95e05c071057025bda8e841be2cd5c6b17971626
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374991"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122571"
 ---
 # <a name="cstdiofile-class"></a>Klasa CStdioFile
 Reprezentuje plik strumienia środowiska wykonawczego C, jak otworzyć za pomocą funkcji środowiska wykonawczego [fopen —](../../c-runtime-library/reference/fopen-wfopen.md).  
@@ -109,28 +109,28 @@ CStdioFile(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pOpenStream`  
+ *pOpenStream*  
  Określa wskaźnika pliku zwrócony przez wywołanie funkcji wykonawcze języka C [fopen —](../../c-runtime-library/reference/fopen-wfopen.md).  
   
- `lpszFileName`  
+ *lpszFileName*  
  Określa ciąg, który jest ścieżka do żądanego pliku. Ścieżka może być względna lub bezwzględna.  
   
- `nOpenFlags`  
- Określa opcje tworzenia pliku, udostępniania plików i tryby dostępu do pliku. Można określić wiele opcji przy użyciu wartości bitowe lub ( `|`) operatora.  
+ *nOpenFlags*  
+ Określa opcje tworzenia pliku, udostępniania plików i tryby dostępu do pliku. Można określić wiele opcji przy użyciu wartości bitowe lub ( **|** ) operatora.  
   
  W trybie jednego dostępu do pliku jest wymagana; inne sposoby są opcjonalne. Zobacz [CFile::CFile](../../mfc/reference/cfile-class.md#cfile) listę opcji trybu i inne flagi. W wersji 3.0 i nowszych MFC udziału flagi są dozwolone.  
   
- `pTM`  
+ *pTM*  
  Wskaźnik do obiektu CAtlTransactionManager.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślny konstruktor nie dołączyć plik do `CStdioFile` obiektu. Podczas używania tego konstruktora, należy użyć `CStdioFile::Open` metody w celu otwarcia pliku i dołączenie go do `CStdioFile` obiektu.  
   
- Konstruktor jednym parametrem dołącza strumienia otwarty plik do `CStdioFile` obiektu. Dozwolone wartości wskaźnika zawierają wskaźniki wstępnie zdefiniowanych pliku wejścia/wyjścia `stdin`, `stdout`, lub `stderr`.  
+ Konstruktor jednym parametrem dołącza strumienia otwarty plik do `CStdioFile` obiektu. Dozwolone wartości wskaźnika zawierają wskaźniki wstępnie zdefiniowanych pliku wejścia/wyjścia *stdin*, *stdout*, lub *stderr*.  
   
  Tworzy konstruktora dwóch parametrów `CStdioFile` obiektu i otwiera odpowiedniego pliku z danej ścieżki.  
   
- W przypadku przekazania `NULL` dla dowolnego `pOpenStream` lub `lpszFileName`, zgłasza konstruktora `CInvalidArgException*`.  
+ W przypadku przekazania wartości NULL dla dowolnego *pOpenStream* lub *lpszFileName*, zgłasza konstruktora `CInvalidArgException*`.  
   
  Jeśli pliku nie można otworzyć lub utworzyć, zgłasza konstruktora `CFileException*`.  
   
@@ -145,7 +145,7 @@ FILE* m_pStream;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Jest **NULL** Jeśli plik nie został otwarty lub został zamknięty.  
+ Jeśli plik nie został otwarty lub został zamknięty, ma wartość NULL.  
   
 ##  <a name="open"></a>  CStdioFile::Open  
  Przeciążone. Otwórz jest przeznaczony do użytku z domyślnym `CStdioFile` konstruktora.  
@@ -165,25 +165,25 @@ virtual BOOL Open(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszFileName`  
+ *lpszFileName*  
  Ciąg, który jest ścieżka do żądanego pliku. Ścieżka może być względna lub bezwzględna.  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  Tryb dostępu i udostępniania. Określa akcję wykonywaną podczas otwierania pliku. Opcje można połączyć za pomocą wartości bitowe lub (&#124;) operatora. Opcji jednego udziału i uprawnień dostępu co są wymagane; tryby modeCreate i modeNoInherit są opcjonalne.  
   
- `pError`  
+ *pError*  
  Wskaźnik do istniejącego obiektu wyjątku plików, który zostanie wyświetlony stan operacji nie powiodło się.  
   
- `pTM`  
+ *pTM*  
  Wskaźnik do `CAtlTransactionManager` obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` w przypadku powodzenia; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="readstring"></a>  CStdioFile::ReadString  
- Odczytuje dane tekstu w buforze, do limitu `nMax`-1, znaki z pliku skojarzone z `CStdioFile` obiektu.  
+ Odczytuje dane tekstu w buforze, do limitu *nMax*-1, znaki z pliku skojarzone z `CStdioFile` obiektu.  
   
 ```  
 virtual LPTSTR ReadString(
@@ -194,25 +194,25 @@ virtual BOOL ReadString(CString& rString);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpsz`  
+ *lpsz*  
  Określa wskaźnik do buforu dostarczone przez użytkownika, który będzie otrzymywał ciąg tekstowy zerem.  
   
- `nMax`  
+ *nMax*  
  Określa maksymalną liczbę znaków do odczytu, nie licząc znak końcowy null.  
   
- `rString`  
+ *rString*  
  Odwołanie do `CString` obiekt, który będzie zawierać ciąg, gdy funkcja zwraca wartość.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do buforu, zawierający dane tekstowe. **Wartość NULL** jeśli osiągnięto koniec pliku przed odczytaniem żadnych danych; lub jeśli jest to wartość logiczna, **FALSE** czy osiągnięto koniec pliku przed odczytaniem żadnych danych.  
+ Wskaźnik do buforu, zawierający dane tekstowe. Wartość NULL, jeśli osiągnięto koniec pliku przed odczytaniem żadnych danych; lub jeśli logiczną, wartość FALSE, jeśli plik końcowy został osiągnięty przed odczytaniem żadnych danych.  
   
 ### <a name="remarks"></a>Uwagi  
- Odczytywanie została zatrzymana przez pierwszy znak nowego wiersza. Jeśli w tym przypadku mniej niż `nMax`odczytano wartość-1 znaków, znaków nowego wiersza są przechowywane w buforze. Znak null ('\0') jest dołączany w każdym przypadku.  
+ Odczytywanie została zatrzymana przez pierwszy znak nowego wiersza. Jeśli w tym przypadku mniej niż *nMax*odczytano wartość-1 znaków, znaków nowego wiersza są przechowywane w buforze. Znak null ('\0') jest dołączany w każdym przypadku.  
   
  [CFile::Read](../../mfc/reference/cfile-class.md#read) jest również dostępna dla danych wejściowych w trybie tekstowym, ale nie zakończy na parę wysuwu wiersza powrotu karetki.  
   
 > [!NOTE]
->  `CString` Wersja ta funkcja usuwa `'\n'` Jeśli występuje; `LPTSTR` nie obsługuje wersji.  
+>  `CString` Wersja ta funkcja usuwa `'\n'` Jeśli występuje; nie obsługuje wersji LPTSTR.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCFiles#38](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_2.cpp)]  
@@ -227,17 +227,17 @@ virtual ULONGLONG Seek(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lOff`  
+ *lOff*  
  Liczba bajtów do wskaźnika.  
   
- `nFrom`  
+ *NZ*  
  Tryb przesuwanie wskaźnika. Musi być jedną z następujących wartości:  
   
-- `CFile::begin`: Wskaźnika pliku `lOff` bajtów w przód od początku pliku.  
+- `CFile::begin`: Wskaźnika pliku *lOff* bajtów w przód od początku pliku.  
   
-- `CFile::current`: Wskaźnika pliku `lOff` bajtów z bieżącej pozycji w pliku.  
+- `CFile::current`: Wskaźnika pliku *lOff* bajtów z bieżącej pozycji w pliku.  
   
-- `CFile::end`: Wskaźnika pliku `lOff` bajtów na końcu pliku. Należy pamiętać, że `lOff` musi być ujemna do wyszukania do istniejącego pliku; dodatnią wartości będzie wyszukiwać poza końcem pliku.  
+- `CFile::end`: Wskaźnika pliku *lOff* bajtów na końcu pliku. Należy pamiętać, że *lOff* musi być ujemna do wyszukania do istniejącego pliku; dodatnią wartości będzie wyszukiwać poza końcem pliku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Jeśli żądana pozycja jest dozwolony, `Seek` zwraca nowe przesunięcie bajtów od początku pliku. W przeciwnym razie wartość zwracana jest niezdefiniowane i `CFileException` obiekt jest generowany.  
@@ -262,15 +262,15 @@ virtual void WriteString(LPCTSTR lpsz);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpsz`  
+ *lpsz*  
  Określa wskaźnik do buforu, który zawiera ciąg znaków zakończony znakiem null.  
   
 ### <a name="remarks"></a>Uwagi  
- Znak końcowy null ( `\0`) nie są zapisywane do pliku. Ta metoda zapisuje znaki nowego wiersza `lpsz` do pliku jako para powrotu/wysuw wiersza karetki.  
+ Znak końcowy null ( `\0`) nie są zapisywane do pliku. Ta metoda zapisuje znaki nowego wiersza *lpsz* do pliku jako para powrotu/wysuw wiersza karetki.  
   
  Jeśli chcesz zapisać dane, które nie jest zerem do pliku, użyj `CStdioFile::Write` lub [CFile::Write](../../mfc/reference/cfile-class.md#write).  
   
- Ta metoda zgłasza `CInvalidArgException*` Jeśli określisz `NULL` dla `lpsz` parametru.  
+ Ta metoda zgłasza `CInvalidArgException*` Jeśli określono wartość NULL w przypadku *lpsz* parametru.  
   
  Ta metoda zgłasza `CFileException*` w odpowiedzi na błędy systemu plików.  
   

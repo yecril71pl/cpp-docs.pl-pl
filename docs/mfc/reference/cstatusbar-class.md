@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 199aa7adc6cb96a4bc92e196ff94d57abdedfede
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb5fb6b09ba6d27828c9f76a1b2ee21323197f6b
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374302"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122944"
 ---
 # <a name="cstatusbar-class"></a>Cstatusbar — klasa
 Pasek sterowania z wiersza tekstu wyjściowego okienka lub "wskaźników."  
@@ -110,7 +110,7 @@ class CStatusBar : public CControlBar
   
 1.  Wywołanie [CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) do zaktualizowania tekstu w okienku tylko 0.  
   
-2.  Wywołanie [CCmdUI::SetText](../../mfc/reference/ccmdui-class.md#settext) na pasku stanu `ON_UPDATE_COMMAND_UI` obsługi.  
+2.  Wywołanie [CCmdUI::SetText](../../mfc/reference/ccmdui-class.md#settext) w obsłudze on_update_command_ui — pasek stanu.  
   
 3.  Wywołanie [SetPaneText](#setpanetext) do zaktualizowania tekstu dla dowolnego okienka.  
   
@@ -140,7 +140,7 @@ int CommandToIndex(UINT nIDFind) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIDFind`  
+ *nIDFind*  
  Identyfikator ciągu wskaźnika, którego indeks ma być pobrana.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -160,19 +160,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiektu, którego okna systemu Windows jest nadrzędny paska stanu.  
   
- `dwStyle`  
+ *dwStyle*  
  Style paska stanu. Oprócz standardowych systemu Windows [style](../../mfc/reference/styles-used-by-mfc.md#window-styles), te style są obsługiwane.  
   
-- `CBRS_TOP` Pasek sterowania jest u góry okna ramowego.  
+- Pasek sterowania CBRS_TOP jest u góry okna ramowego.  
   
-- `CBRS_BOTTOM` Pasek sterowania jest u dołu okna ramowego.  
+- Pasek sterowania CBRS_BOTTOM jest u dołu okna ramowego.  
   
-- `CBRS_NOALIGN` Pasek sterowania nie zostaje przeniesiony, gdy zmieniany jest rozmiar obiektu nadrzędnego.  
+- Pasek sterowania CBRS_NOALIGN nie zostaje przeniesiony, gdy zmieniany jest rozmiar obiektu nadrzędnego.  
   
- `nID`  
+ *nID*  
  Identyfikator paska narzędzi okna podrzędnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -193,22 +193,22 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do [CWnd](../../mfc/reference/cwnd-class.md) obiektu, którego okna systemu Windows jest nadrzędny paska stanu.  
   
- `dwCtrlStyle`  
+ *dwCtrlStyle*  
  Dodatkowe style w celu utworzenia osadzonego [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) obiektu. Domyślnie określa pasek stanu bez uchwyt zmiany rozmiaru lub etykietka narzędzia obsługi. Style paska stanu, obsługiwane są następujące:  
   
-- **SBARS_SIZEGRIP** formantu paska stanu zawiera uchwyt zmiany rozmiaru na prawym końcu paska stanu. Uchwyt zmiany rozmiaru jest podobny do rozmiaru obramowanie; jest prostokątny obszar, który użytkownik może kliknij i przeciągnij, aby zmienić rozmiar okna nadrzędnego.  
+- SBARS_SIZEGRIP formantu paska stanu obejmuje uchwyt zmiany rozmiaru na prawym końcu paska stanu. Uchwyt zmiany rozmiaru jest podobny do rozmiaru obramowanie; jest prostokątny obszar, który użytkownik może kliknij i przeciągnij, aby zmienić rozmiar okna nadrzędnego.  
   
-- **SBT_TOOLTIPS** pasek stanu obsługuje etykietki.  
+- Pasek stanu SBT_TOOLTIPS obsługuje etykietki.  
   
  Aby uzyskać więcej informacji o tych stylów, zobacz [ustawienia formantu CStatusBarCtrl](../../mfc/settings-for-the-cstatusbarctrl.md).  
   
- `dwStyle`  
+ *dwStyle*  
  Style paska stanu. Wartość domyślna Określa utworzony pasek stanu widoczne w dolnej części okna ramowe. Zastosuj dowolną kombinację pasek stylów formantu na liście stanu [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles) i [CDialogBar::Create](../../mfc/reference/cdialogbar-class.md#create). Jednak ten parametr powinien zawsze należy uwzględniać ws_child — i ws_visible — style.  
   
- `nID`  
+ *nID*  
  Identyfikator okna podrzędnego na pasku stanu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -217,7 +217,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Uwagi  
  Ta funkcja także ustawia czcionkę początkowej i ustawia stan wysokość paska wartość domyślna.  
   
- Użyj `CreateEx`, zamiast [Utwórz](#create)w przypadku niektórych style musi być obecny podczas tworzenia formantu paska stanu osadzonych. Na przykład ustawić `dwCtrlStyle` do **SBT_TOOLTIPS** do wyświetlenia etykietki narzędzi w obiekcie paska stanu.  
+ Użyj `CreateEx`, zamiast [Utwórz](#create)w przypadku niektórych style musi być obecny podczas tworzenia formantu paska stanu osadzonych. Na przykład ustawić *dwCtrlStyle* do SBT_TOOLTIPS do wyświetlenia etykietki narzędzi w obiekcie paska stanu.  
   
 ##  <a name="cstatusbar"></a>  CStatusBar::CStatusBar  
  Konstruuje `CStatusBar` obiekt, tworzy domyślną czcionkę paska stanu w razie potrzeby i ustawia charakterystyki czcionki do wartości domyślnych.  
@@ -234,28 +234,28 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Wskaźnik do [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) strukturę, która zawiera informacje o typie rysunku wymagane.  
   
 ### <a name="remarks"></a>Uwagi  
- **ItemAction** członkiem `DRAWITEMSTRUCT` struktury definiuje rysowania akcję, która ma zostać wykonane. Przesłonić tę funkcję elementu członkowskiego, aby zaimplementować rysunku rysowania przez właściciela `CStatusBar` obiektu. Aplikacja powinna przywrócenie wszystkich obiektów grafiki urządzenia interfejsu (GDI), wybrane kontekst wyświetlania dostarczane w `lpDrawItemStruct` przed zakończeniem tej funkcji Członkowskich.  
+ `itemAction` Członkiem `DRAWITEMSTRUCT` struktury definiuje rysowania akcję, która ma zostać wykonane. Przesłonić tę funkcję elementu członkowskiego, aby zaimplementować rysunku rysowania przez właściciela `CStatusBar` obiektu. Aplikacja powinna przywrócenie wszystkich obiektów grafiki urządzenia interfejsu (GDI), wybrane kontekst wyświetlania dostarczane w *lpDrawItemStruct* przed zakończeniem tej funkcji Członkowskich.  
   
 ##  <a name="getitemid"></a>  CStatusBar::GetItemID  
- Zwraca identyfikator określony przez wskaźnik `nIndex`.  
+ Zwraca identyfikator określony przez wskaźnik *nIndex*.  
   
 ```  
 UINT GetItemID(int nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Indeks wskaźnika o identyfikatorze ma być pobrana.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Identyfikator określony przez wskaźnik `nIndex`.  
+ Identyfikator określony przez wskaźnik *nIndex*.  
   
 ##  <a name="getitemrect"></a>  CStatusBar::GetItemRect  
- Kopiuje współrzędnych wskaźnika określony przez `nIndex` w strukturze wskazywana przez `lpRect`.  
+ Kopiuje współrzędnych wskaźnika określony przez *nIndex* w strukturze wskazywana przez *lprect —*.  
   
 ```  
 void GetItemRect(
@@ -264,17 +264,17 @@ void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Indeks wskaźnika współrzędnych prostokąta, których mają zostać pobrane.  
   
- `lpRect`  
- Wskazuje [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który otrzyma współrzędnych wskaźnika określony przez `nIndex`.  
+ *lprect —*  
+ Wskazuje [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury lub [CRect](../../atl-mfc-shared/reference/crect-class.md) obiekt, który otrzyma współrzędnych wskaźnika określony przez *nIndex*.  
   
 ### <a name="remarks"></a>Uwagi  
  Współrzędne są podawane w pikselach względem lewego górnego rogu paska stanu.  
   
 ##  <a name="getpaneinfo"></a>  CStatusBar::GetPaneInfo  
- Ustawia `nID`, `nStyle`, i `cxWidth` do Identyfikatora, stylu i szerokości panelu wskaźnika w lokalizacji określonej przez `nIndex`.  
+ Ustawia *nID*, *nStyle*, i *cxWidth* do Identyfikatora, stylu i szerokości panelu wskaźnika w lokalizacji określonej przez *nIndex*.  
   
 ```  
 void GetPaneInfo(
@@ -285,16 +285,16 @@ void GetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Indeks okienka, którego informacje ma być pobrana.  
   
- `nID`  
- Odwołanie do **UINT** który jest ustawiona na identyfikator okienka.  
+ *nID*  
+ Odwołanie do Unit ustawiony na identyfikator okienka.  
   
- `nStyle`  
- Odwołanie do **UINT** która jest ustawiona na styl okienka.  
+ *nStyle*  
+ Odwołanie do Unit ustawionym Styl okienka.  
   
- `cxWidth`  
+ *cxWidth*  
  Odwołanie do liczba całkowita, która ma ustawioną wartość szerokość panelu.  
   
 ##  <a name="getpanestyle"></a>  CStatusBar::GetPaneStyle  
@@ -305,11 +305,11 @@ UINT GetPaneStyle(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Indeks okienka, którego styl ma być pobrana.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Styl w okienku paska stanu określonego przez `nIndex`.  
+ Styl w okienku paska stanu określonego przez *nIndex*.  
   
 ### <a name="remarks"></a>Uwagi  
  Styl okienka Określa, jak okienku zostanie wyświetlona.  
@@ -324,10 +324,10 @@ CString GetPaneText(int nIndex) const;  void GetPaneText(int nIndex, CString& rS
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Indeks okienko tekstu, którego ma być pobrana.  
   
- `rString`  
+ *rString*  
  Odwołanie do [cstring —](../../atl-mfc-shared/reference/cstringt-class.md) obiekt zawierający tekst, który ma zostać pobrane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -352,7 +352,7 @@ CStatusBarCtrl& GetStatusBarCtrl() const;
  Więcej ogólnych informacji na temat typowych formantów, zobacz [formanty standardowe](http://msdn.microsoft.com/library/windows/desktop/bb775493) w zestawie Windows SDK.  
   
 ##  <a name="setindicators"></a>  CStatusBar::SetIndicators  
- Ustawia identyfikator każdy wskaźnik do wartości określonej przez odpowiadający mu element w tablicy `lpIDArray`Ładuje określony przez każdy identyfikator zasobu ciągu i ustawia tekst wskaźnika do ciągu.  
+ Ustawia identyfikator każdy wskaźnik do wartości określonej przez odpowiadający mu element w tablicy *lpIDArray*Ładuje określony przez każdy identyfikator zasobu ciągu i ustawia tekst wskaźnika do ciągu.  
   
 ```  
 BOOL SetIndicators(
@@ -361,11 +361,11 @@ BOOL SetIndicators(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpIDArray`  
+ *lpIDArray*  
  Wskaźnik do tablicy identyfikatorów.  
   
- `nIDCount`  
- Liczba elementów w tablicy wskazywana przez `lpIDArray`.  
+ *nIDCount*  
+ Liczba elementów w tablicy wskazywana przez *lpIDArray*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
@@ -382,30 +382,30 @@ void SetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Indeks w okienku wskaźnika, którego styl ma być utworzony.  
   
- `nID`  
+ *nID*  
  Nowy identyfikator dla tego okienka wskaźnika.  
   
- `nStyle`  
+ *nStyle*  
  Styl nowego okienka wskaźnika.  
   
- `cxWidth`  
+ *cxWidth*  
  Nową szerokość wskaźnika okienka.  
   
 ### <a name="remarks"></a>Uwagi  
  Obsługiwane są następujące style wskaźnika:  
   
-- **SBPS_NOBORDERS** nie 3-obramowania wokół okienka.  
+- SBPS_NOBORDERS nr 3-obramowania wokół okienka.  
   
-- **SBPS_POPOUT** wstecznego obramowania tak, czy tekst "pojawia się."  
+- Wycofaj SBPS_POPOUT obramowania tak, czy tekst "pojawia się."  
   
-- **SBPS_DISABLED** nie Rysuj tekst.  
+- Nie należy SBPS_DISABLED Rysowanie tekstu.  
   
-- **SBPS_STRETCH** Stretch okienko, aby wypełnić nieużywane miejsce. Tylko jedno okienko na pasku stanu może zawierać ten styl.  
+- Okienko SBPS_STRETCH Stretch, aby wypełnić nieużywane miejsce. Tylko jedno okienko na pasku stanu może zawierać ten styl.  
   
-- **SBPS_NORMAL** stretch, obramowania i wyskakującego.  
+- Nr SBPS_NORMAL stretch, obramowanie lub wyskakującego.  
   
 ##  <a name="setpanestyle"></a>  CStatusBar::SetPaneStyle  
  Wywołanie funkcji członkowskiej na ustawienie stylu okienku paska stanu.  
@@ -417,10 +417,10 @@ void SetPaneStyle(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Indeks okienka, którego styl ma być utworzony.  
   
- `nStyle`  
+ *nStyle*  
  Styl okienka, którego styl ma być utworzony.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -429,7 +429,7 @@ void SetPaneStyle(
  Aby uzyskać listę style dostępne na paskach stanu, zobacz [SetPaneInfo](#setpaneinfo).  
   
 ##  <a name="setpanetext"></a>  CStatusBar::SetPaneText  
- Wywołanie tej funkcji członkowskich można ustawić tekst okienko na ciąg wskazywana przez `lpszNewText`.  
+ Wywołanie tej funkcji członkowskich można ustawić tekst okienko na ciąg wskazywana przez *lpszNewText*.  
   
 ```  
 BOOL SetPaneText(
@@ -439,14 +439,14 @@ BOOL SetPaneText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Indeks okienko tekstu, którego ma dotyczyć.  
   
- `lpszNewText`  
+ *lpszNewText*  
  Wskaźnik do nowego tekstu panelu.  
   
  *baktualizacji*  
- Jeśli **TRUE**, okienku jest unieważniona po ustawieniu tekst.  
+ Jeśli PRAWDA, okienku jest unieważniona po ustawieniu tekst.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  

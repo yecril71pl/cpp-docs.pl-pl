@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81b14e0c397ac9179142627bca04b647c1db96db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 79de28847809a9b9d7e0a160f2a4a45375f0e1fe
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371934"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121516"
 ---
 # <a name="document-template-strings-mfc-add-class-wizard"></a>Ciągi szablonu dokumentu, kreator dodawania klas MFC
 Ta strona kreatora jest dostępna tylko dla klas spełniającego następujące kryteria:  
@@ -43,7 +43,7 @@ Ta strona kreatora jest dostępna tylko dla klas spełniającego następujące k
  Dotyczy aplikacji, które tworzą dokumenty użytkowników. Użytkownicy mogą otworzyć i zapisywać dokumenty więcej łatwo Jeśli typ dokumentu ma rozszerzenie pliku i identyfikator typu pliku Te elementy nie są zlokalizowane, ponieważ są one używane przez system, a nie przez użytkownika.  
   
  **Rozszerzenie pliku**  
- Określa rozszerzenie pliku skojarzone z typem dokumentu dla tej aplikacji formularzy. Domyślne rozszerzenie pliku na podstawie nazwy klasy. Na przykład, jeśli nosi nazwę nowej klasy MFC **CWidget**, domyślnie jest rozszerzeniem. wid. Rozszerzenie pliku jest używany w pliku filtrów i **Otwórz** i **Zapisz jako** okien dialogowych.  
+ Określa rozszerzenie pliku skojarzone z typem dokumentu dla tej aplikacji formularzy. Domyślne rozszerzenie pliku na podstawie nazwy klasy. Na przykład, jeśli nosi nazwę nowej klasy MFC `CWidget`, domyślnie jest rozszerzeniem. wid. Rozszerzenie pliku jest używany w pliku filtrów i **Otwórz** i **Zapisz jako** okien dialogowych.  
   
  Jeśli zmienisz rozszerzenie pliku, zmiana ta jest uwzględniana w **nazwę filtru** pole.  
   
@@ -63,10 +63,10 @@ Ta strona kreatora jest dostępna tylko dla klas spełniającego następujące k
  Ustawia nazwę, która może wskazywać użytkownicy, można znaleźć plików określonego typu pliku. Ta opcja jest dostępna z **pliki typu** i **Zapisz jako typ** opcje w oknach standardowe **Otwórz** i **Zapisz jako** okien dialogowych. Domyślnie nazwa opiera się na nazwę projektu oraz pliki, a następnie przez rozszerzenie wskazanych w **rozszerzenie pliku**. Na przykład, jeśli projekt nosi nazwę elementu Widget i rozszerzenie pliku jest .wid **nazwę filtru** jest domyślnie pliki Widget (*.wid).  
   
  **Krótka nazwa nowego pliku**  
- Ustawia nazwę znajdujących się w standardowych oknach `New` okno dialogowe, jeśli projekt zawiera więcej niż jeden szablon dokumentu. Jeśli aplikacja jest [serwer automatyzacji](../../mfc/automation-servers.md), ta nazwa jest używana jako krótka nazwa obiektu automatyzacji. Domyślnie ta nazwa jest oparta na nazwę klasy.  
+ Ustawia nazwę znajdujących się w standardowych oknach **nowy** okno dialogowe, jeśli projekt zawiera więcej niż jeden szablon dokumentu. Jeśli aplikacja jest [serwer automatyzacji](../../mfc/automation-servers.md), ta nazwa jest używana jako krótka nazwa obiektu automatyzacji. Domyślnie ta nazwa jest oparta na nazwę klasy.  
   
  **Długa nazwa typu pliku**  
- Ustawia nazwę typu pliku w rejestrze systemu. Jeśli aplikacja serwera automatyzacji, ta nazwa jest używana jako długa nazwa obiektu automatyzacji. Domyślnie ta nazwa opiera się na nazwę klasy plus. Dokument. Na przykład, jeśli nazwa klasy jest **CWidget**, **długa nazwa typu pliku** jest dokumentem elementu Widget.  
+ Ustawia nazwę typu pliku w rejestrze systemu. Jeśli aplikacja serwera automatyzacji, ta nazwa jest używana jako długa nazwa obiektu automatyzacji. Domyślnie ta nazwa opiera się na nazwę klasy plus. Dokument. Na przykład, jeśli nazwa klasy jest `CWidget`, **długa nazwa typu pliku** jest dokumentem elementu Widget.  
   
  **Klasy dokumentów**  
  Wskazuje klasa dokumentu typu projektu. Domyślnie ta klasa jest klasa dokumentu aplikacji głównej, wymienione w [Przejrzyj wygenerowane klasy](../../mfc/reference/generated-classes-mfc-application-wizard.md) Kreatora aplikacji MFC. Jeśli dodano inne klasy dokumentu w projekcie, możesz wybrać inną klasę dokumentu z listy.  

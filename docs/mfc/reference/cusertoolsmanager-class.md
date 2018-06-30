@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaa99952daf401132768d9be5d4c589b5fdbee52
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cf73aa44134aa05a61b372080b7e2033a73bf5b0
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376200"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122879"
 ---
 # <a name="cusertoolsmanager-class"></a>Klasa CUserToolsManager
 Zapewnia zbiór [klasy CUserTool](../../mfc/reference/cusertool-class.md) obiektów w aplikacji. Narzędzie użytkownika jest element menu uruchomionym aplikacji zewnętrznej. `CUserToolsManager` Obiektu umożliwia użytkownika lub deweloperem, aby dodać nowe narzędzia użytkownika do aplikacji. Obsługuje wykonywanie polecenia powiązane z narzędzi użytkownika, a także zapisuje informacje o narzędziach użytkownika w rejestrze systemu Windows.  
@@ -135,7 +135,7 @@ CUserTool* CreateNewTool();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do narzędzia nowo utworzonego użytkownika lub `NULL` jeśli przekracza maksymalną liczbę narzędzi użytkownika. Zwrócony typ jest taki sam jak typ, który jest przekazywany do `CWinAppEx::EnableUserTools` jako `pToolRTC` parametru.  
+ Wskaźnik do nowo utworzonego użytkownika narzędzia lub wartość NULL, jeśli przekracza maksymalną liczbę użytkowników narzędzia. Zwrócony typ jest taki sam jak typ, który jest przekazywany do `CWinAppEx::EnableUserTools` jako *pToolRTC* parametru.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda znajduje pierwszy identyfikator polecenia menu dostępne w zakresie, która jest dostarczana w wywołaniu [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) i przypisuje narzędzia użytkownika tego identyfikatora.  
@@ -159,22 +159,22 @@ CUserToolsManager(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmdToolsDummy`  
+ [in] *uiCmdToolsDummy*  
  Liczba całkowita bez znaku używanego przez platformę jako symbol zastępczy dla Identyfikatora polecenia w menu Narzędzia użytkownika.  
   
- [in] `uiCmdFirst`  
+ [in] *uiCmdFirst*  
  Identyfikator polecenia dla pierwszego polecenia narzędzia użytkownika.  
   
- [in] `uiCmdLast`  
+ [in] *uiCmdLast*  
  Identyfikator polecenia dla ostatniego polecenia narzędzia użytkownika.  
   
- [in] `pToolRTC`  
+ [in] *pToolRTC*  
  Klasa który [CUserToolsManager::CreateNewTool](#createnewtool) tworzy. Za pomocą tej klasy, można użyć typu pochodnego [klasy CUserTool](../../mfc/reference/cusertool-class.md) zamiast w implementacji domyślnej.  
   
- [in] `uArgMenuID`  
+ [in] *uArgMenuID*  
  Identyfikator zasobu menu menu podręcznego argumentów.  
   
- [in] `uInitDirMenuID`  
+ [in] *uInitDirMenuID*  
  Identyfikator zasobu menu menu podręcznego początkowy katalog.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -188,14 +188,14 @@ CUserTool* FindTool(UINT uiCmdId) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmdId`  
+ [in] *uiCmdId*  
  Identyfikator polecenia menu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do [klasy CUserTool](../../mfc/reference/cusertool-class.md) lub `CUserTool`-pochodnych obiektu, jeśli Powodzenie; w przeciwnym razie `NULL`.  
+ Wskaźnik do [klasy CUserTool](../../mfc/reference/cusertool-class.md) lub `CUserTool`-pochodnych obiektu, jeśli Powodzenie; w przeciwnym razie wartość NULL.  
   
 ### <a name="remarks"></a>Uwagi  
- Gdy `FindTool` jest powodzenia zwrócony typ jest taki sam jak typ `pToolRTC` parametr [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
+ Gdy `FindTool` jest powodzenia zwrócony typ jest taki sam jak typ *pToolRTC* parametr [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
   
 ##  <a name="getargumentsmenuid"></a>  CUserToolsManager::GetArgumentsMenuID  
  Zwraca identyfikator zasobu, który jest skojarzony z **argumenty** menu **narzędzia** karcie **Dostosuj** okno dialogowe.  
@@ -208,7 +208,7 @@ UINT GetArgumentsMenuID() const;
  Identyfikator zasobu menu.  
   
 ### <a name="remarks"></a>Uwagi  
- `uArgMenuID` Parametr [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) Określa identyfikator zasobu.  
+ *UArgMenuID* parametr [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) Określa identyfikator zasobu.  
   
 ##  <a name="getdefext"></a>  CUserToolsManager::GetDefExt  
  Zwraca domyślne rozszerzenie, które **Otwórz plik** okno dialogowe ( [CFileDialog](../../mfc/reference/cfiledialog-class.md#cfiledialog)) używa w **polecenia** na **narzędzia** karty **Dostosuj** okno dialogowe.  
@@ -241,7 +241,7 @@ UINT GetInitialDirMenuID() const;
  Identyfikator zasobu menu.  
   
 ### <a name="remarks"></a>Uwagi  
- Zwrócony identyfikator jest określony w `uInitDirMenuID` parametr [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
+ Zwrócony identyfikator jest określony w *uInitDirMenuID* parametr [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
   
 ##  <a name="getmaxtools"></a>  CUserToolsManager::GetMaxTools  
  Zwraca maksymalną liczbę narzędzi użytkownika, które mogą być przydzielone w aplikacji.  
@@ -254,7 +254,7 @@ int GetMaxTools() const;
  Maksymalna liczba użytkowników narzędzia, które mogą być przydzielone.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołaj tę metodę, aby pobrać maksymalną liczbę narzędzia, które mogą być przydzielone w aplikacji. Ta liczba jest liczba identyfikatorów w zakresie od `uiCmdFirst` za pośrednictwem `uiCmdLast` parametry przekazywane do [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
+ Wywołaj tę metodę, aby pobrać maksymalną liczbę narzędzia, które mogą być przydzielone w aplikacji. Ta liczba jest liczba identyfikatorów w zakresie od *uiCmdFirst* za pośrednictwem *uiCmdLast* parametry przekazywane do [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
   
 ##  <a name="gettoolsentrycmd"></a>  CUserToolsManager::GetToolsEntryCmd  
  Zwraca identyfikator polecenia symbol zastępczy elementu menu dla użytkownika narzędzia.  
@@ -267,7 +267,7 @@ UINT GetToolsEntryCmd() const;
  Identyfikator polecenia symbol zastępczy.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby włączyć narzędzia użytkownika, należy wywołać [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools). `uiCmdToolsDummy` Parametr określa identyfikator polecenia polecenie wpisu narzędzia. Ta metoda zwraca identyfikator narzędzia wpis polecenia. Wszędzie tam, gdzie ten identyfikator jest używany w menu, po wyświetleniu menu jest zastępowany przez listę narzędzi użytkownika.  
+ Aby włączyć narzędzia użytkownika, należy wywołać [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools). *UiCmdToolsDummy* parametr określa identyfikator polecenia polecenie wpisu narzędzia. Ta metoda zwraca identyfikator narzędzia wpis polecenia. Wszędzie tam, gdzie ten identyfikator jest używany w menu, po wyświetleniu menu jest zastępowany przez listę narzędzi użytkownika.  
   
 ##  <a name="getusertools"></a>  CUserToolsManager::GetUserTools  
  Zwraca odwołanie do listy użytkownika narzędzia.  
@@ -280,7 +280,7 @@ const CObList& GetUserTools() const;
  Stała odwołanie do [klasy CObList](../../mfc/reference/coblist-class.md) obiekt, który zawiera listę narzędzi użytkownika.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie tej metody, aby pobrać listę użytkownika narzędzi, które [CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md) obiekt zachowuje. Narzędzie każdego użytkownika jest reprezentowana przez obiekt typu [klasy CUserTool](../../mfc/reference/cusertool-class.md) lub typ pochodzący od `CUserTool`. Typ jest określany przez `pToolRTC` parametr podczas wywoływania [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) Aby włączyć narzędzia użytkownika.  
+ Wywołanie tej metody, aby pobrać listę użytkownika narzędzi, które [CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md) obiekt zachowuje. Narzędzie każdego użytkownika jest reprezentowana przez obiekt typu [klasy CUserTool](../../mfc/reference/cusertool-class.md) lub typ pochodzący od `CUserTool`. Typ jest określany przez *pToolRTC* parametr podczas wywoływania [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) Aby włączyć narzędzia użytkownika.  
   
 ##  <a name="invoketool"></a>  CUserToolsManager::InvokeTool  
  Wykonuje aplikacji skojarzonej z narzędziem użytkownika, który ma identyfikator określonego polecenia.  
@@ -290,14 +290,14 @@ BOOL InvokeTool(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmdId`  
+ [in] *uiCmdId*  
  Identyfikator polecenia menu skojarzony z narzędzia użytkownika.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli polecenie skojarzone z narzędzia użytkownika zostało wykonane pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie narzędzia tę metodę w celu wykonania aplikacji skojarzonych z użytkownikiem, który ma określony przez identyfikator polecenia `uiCmdId`.  
+ Wywołanie narzędzia tę metodę w celu wykonania aplikacji skojarzonych z użytkownikiem, który ma określony przez identyfikator polecenia *uiCmdId*.  
   
 ##  <a name="isusertoolcmd"></a>  CUserToolsManager::IsUserToolCmd  
  Określa, czy identyfikator polecenia jest skojarzony z narzędziem do użytkownika.  
@@ -307,7 +307,7 @@ BOOL IsUserToolCmd(UINT uiCmdId) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `uiCmdId`  
+ [in] *uiCmdId*  
  Identyfikator polecenia elementu menu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -324,7 +324,7 @@ BOOL LoadState(LPCTSTR lpszProfileName=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Ścieżka klucza rejestru systemu Windows.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -343,14 +343,14 @@ BOOL MoveToolDown(CUserTool* pTool);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pTool`  
+ [in] *pTool*  
  Określa narzędzie użytkownika, aby przenieść.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli narzędzie użytkownika został pomyślnie; przenieść w dół w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Metoda kończy się niepowodzeniem, jeśli narzędzie który `pTool` określa nie jest na liście wewnętrznych lub jeśli narzędzie to jest ostatni na liście.  
+ Metoda kończy się niepowodzeniem, jeśli narzędzie który *pTool* określa nie jest na liście wewnętrznych lub jeśli narzędzie to jest ostatni na liście.  
   
 ##  <a name="movetoolup"></a>  CUserToolsManager::MoveToolUp  
  Zostanie przesunięty narzędzia określonego użytkownika na liście użytkownika narzędzia.  
@@ -360,14 +360,14 @@ BOOL MoveToolUp(CUserTool* pTool);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pTool`  
+ [in] *pTool*  
  Określa narzędzie użytkownika, aby przenieść.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli narzędzie użytkownika została przeniesiona pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Metoda kończy się niepowodzeniem, jeśli narzędzie który `pTool` określa parametr nie jest na liście wewnętrznych lub jeśli narzędzie to jest pierwszy element narzędzia na liście.  
+ Metoda kończy się niepowodzeniem, jeśli narzędzie który *pTool* określa parametr nie jest na liście wewnętrznych lub jeśli narzędzie to jest pierwszy element narzędzia na liście.  
   
 ##  <a name="removetool"></a>  CUserToolsManager::RemoveTool  
  Usuwa określonego użytkownika narzędzia z aplikacji.  
@@ -377,14 +377,14 @@ BOOL RemoveTool(CUserTool* pTool);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [w, out] `pTool`  
+ [w, out] *pTool*  
  Wskaźnik do narzędzia użytkownika do usunięcia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli narzędzie został pomyślnie usunięty. W przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli narzędzie został pomyślnie usunięty. W przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli narzędzie została pomyślnie usunięta, ta metoda usuwa `pTool`.  
+ Jeśli narzędzie została pomyślnie usunięta, ta metoda usuwa *pTool*.  
   
 ##  <a name="savestate"></a>  CUserToolsManager::SaveState  
  Przechowuje informacje dotyczące narzędzi użytkownika w rejestrze systemu Windows.  
@@ -394,7 +394,7 @@ BOOL SaveState(LPCTSTR lpszProfileName=NULL);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Ścieżka do klucza rejestru systemu Windows.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -413,7 +413,7 @@ void SetDefExt(const CString& strDefExt);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `strDefExt`  
+ [in] *strDefExt*  
  Ciąg tekstowy, który zawiera domyślne rozszerzenie nazwy pliku.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -427,7 +427,7 @@ void SetFilter(const CString& strFilter);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `strFilter`  
+ [in] *strFilter*  
  Określa filtr.  
   
 ## <a name="see-also"></a>Zobacz też  

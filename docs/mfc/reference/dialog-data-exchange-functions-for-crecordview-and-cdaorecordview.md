@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 538acbf4e12c1d18e8d07337c6f428a0a0dc4b1a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: faa94f14461ed41229d11857125a317b00c27abd
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377520"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123035"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funkcje wymiany danych w oknie dialogowym dla formularzy CRecordView i CDaoRecordView
 W tym temacie wymieniono ddx_field — funkcje używane do wymiany danych między [crecordset —](../../mfc/reference/crecordset-class.md) i [CRecordView](../../mfc/reference/crecordview-class.md) formularza lub [cdaorecordset —](../../mfc/reference/cdaorecordset-class.md) i [ Cdaorecordview —](../../mfc/reference/cdaorecordview-class.md) formularza.  
@@ -77,16 +77,16 @@ void AFXAPI DDX_FieldCBIndex(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Wskaźnik do [cdataexchange —](../../mfc/reference/cdataexchange-class.md) obiektu. Platformę dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.  
   
- `nIDC`  
+ *nIDC*  
  Identyfikator formantu w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) obiektu.  
   
  *index*  
  Odwołanie do elementu członkowskiego danych pola w skojarzonym `CRecordset` lub `CDaoRecordset` obiektu.  
   
- `pRecordset`  
+ *pRecordset*  
  Wskaźnik do [crecordset —](../../mfc/reference/crecordset-class.md) lub [cdaorecordset —](../../mfc/reference/cdaorecordset-class.md) obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -120,16 +120,16 @@ void AFXAPI DDX_FieldCBString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Wskaźnik do [cdataexchange —](../../mfc/reference/cdataexchange-class.md) obiektu. Platformę dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.  
   
- `nIDC`  
+ *nIDC*  
  Identyfikator formantu w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) obiektu.  
   
  *value*  
  Odwołanie do elementu członkowskiego danych pola w skojarzonym `CRecordset` lub `CDaoRecordset` obiektu.  
   
- `pRecordset`  
+ *pRecordset*  
  Wskaźnik do [crecordset —](../../mfc/reference/crecordset-class.md) lub [cdaorecordset —](../../mfc/reference/cdaorecordset-class.md) obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -163,16 +163,16 @@ void AFXAPI DDX_FieldCBStringExact(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Wskaźnik do [cdataexchange —](../../mfc/reference/cdataexchange-class.md) obiektu. Platformę dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.  
   
- `nIDC`  
+ *nIDC*  
  Identyfikator formantu w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) obiektu.  
   
  *value*  
  Odwołanie do elementu członkowskiego danych pola w skojarzonym `CRecordset` lub `CDaoRecordset` obiektu.  
   
- `pRecordset`  
+ *pRecordset*  
  Wskaźnik do [crecordset —](../../mfc/reference/crecordset-class.md) lub [cdaorecordset —](../../mfc/reference/cdaorecordset-class.md) obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -189,7 +189,7 @@ void AFXAPI DDX_FieldCBStringExact(
   **Nagłówek** afxdao.h  
   
 ##  <a name="ddx_fieldcheck"></a>  Ddx_fieldcheck —  
- `DDX_FieldCheck` Funkcji zarządzania transferem `int` tworzą dane między kontrolkę pola wyboru w oknie dialogowym, widoku lub formantu widoku obiektu i `int` element członkowski danych okno dialogowe, widoku Formularz lub formant widoku obiektu.  
+ `DDX_FieldCheck` Funkcji zarządzania transferem **int** tworzą dane między kontrolkę pola wyboru w oknie dialogowym, widoku lub formantu widoku obiektu i **int** okno dialogowe, widoku Formularz lub formant — członek danych Obiekt widoku.  
   
 ```  
 void AFXAPI DDX_FieldCheck(
@@ -206,16 +206,16 @@ void AFXAPI DDX_FieldCheck(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Wskaźnik do [cdataexchange —](../../mfc/reference/cdataexchange-class.md) obiektu. Platformę dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.  
   
- `nIDC`  
+ *nIDC*  
  Identyfikator zasobu kontrolkę pola wyboru skojarzone z właściwości formantu.  
   
  *value*  
  Odwołanie do zmiennej członkowskiej — okno dialogowe, widoku Formularz lub formant widoku obiektu wymiany danych.  
   
- `pRecordset`  
+ *pRecordset*  
  Wskaźnik do [crecordset —](../../mfc/reference/crecordset-class.md) lub [cdaorecordset —](../../mfc/reference/cdaorecordset-class.md) obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -227,7 +227,7 @@ void AFXAPI DDX_FieldCheck(
   **Nagłówek** afxdao.h  
   
 ##  <a name="ddx_fieldlbindex"></a>  Ddx_fieldlbindex —  
- `DDX_FieldLBIndex` Funkcja synchronizuje indeks wybranego elementu w formancie pola listy, w widoku rekordu i `int` pola danych członkiem zestawu rekordów skojarzonego z widokiem rekordu.  
+ `DDX_FieldLBIndex` Funkcja synchronizuje indeks wybranego elementu w formancie pola listy, w widoku rekordu i **int** pola danych członkiem zestawu rekordów skojarzonego z widokiem rekordu.  
   
 ```  
 void AFXAPI DDX_FieldLBIndex(
@@ -244,16 +244,16 @@ void AFXAPI DDX_FieldLBIndex(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Wskaźnik do [cdataexchange —](../../mfc/reference/cdataexchange-class.md) obiektu. Platformę dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.  
   
- `nIDC`  
+ *nIDC*  
  Identyfikator formantu w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) obiektu.  
   
  *index*  
  Odwołanie do elementu członkowskiego danych pola w skojarzonym `CRecordset` lub `CDaoRecordset` obiektu.  
   
- `pRecordset`  
+ *pRecordset*  
  Wskaźnik do [crecordset —](../../mfc/reference/crecordset-class.md) lub [cdaorecordset —](../../mfc/reference/cdaorecordset-class.md) obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -287,16 +287,16 @@ void AFXAPI DDX_FieldLBString(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Wskaźnik do [cdataexchange —](../../mfc/reference/cdataexchange-class.md) obiektu. Platformę dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.  
   
- `nIDC`  
+ *nIDC*  
  Identyfikator formantu w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) obiektu.  
   
  *value*  
  Odwołanie do elementu członkowskiego danych pola w skojarzonym `CRecordset` lub `CDaoRecordset` obiektu.  
   
- `pRecordset`  
+ *pRecordset*  
  Wskaźnik do [crecordset —](../../mfc/reference/crecordset-class.md) lub [cdaorecordset —](../../mfc/reference/cdaorecordset-class.md) obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -330,16 +330,16 @@ void AFXAPI DDX_FieldLBStringExact(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Wskaźnik do [cdataexchange —](../../mfc/reference/cdataexchange-class.md) obiektu. Platformę dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.  
   
- `nIDC`  
+ *nIDC*  
  Identyfikator formantu w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) obiektu.  
   
  *value*  
  Odwołanie do elementu członkowskiego danych pola w skojarzonym `CRecordset` lub `CDaoRecordset` obiektu.  
   
- `pRecordset`  
+ *pRecordset*  
  Wskaźnik do [crecordset —](../../mfc/reference/crecordset-class.md) lub [cdaorecordset —](../../mfc/reference/cdaorecordset-class.md) obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -356,7 +356,7 @@ void AFXAPI DDX_FieldLBStringExact(
   **Nagłówek** afxdao.h  
   
 ##  <a name="ddx_fieldradio"></a>  Ddx_fieldradio —  
- `DDX_FieldRadio` Kojarzy liczony od zera funkcja `int` zmiennej członkowskiej rekordów z widoków rekordów z aktualnie wybranego przycisku radiowego w grupie przycisków radiowych w widoku rekordu.  
+ `DDX_FieldRadio` Kojarzy liczony od zera funkcja **int** zmiennej członkowskiej rekordów z widoków rekordów z aktualnie wybranego przycisku radiowego w grupie przycisków radiowych w widoku rekordu.  
   
 ```  
 void AFXAPI DDX_FieldRadio(
@@ -373,16 +373,16 @@ void AFXAPI DDX_FieldRadio(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Wskaźnik do [cdataexchange —](../../mfc/reference/cdataexchange-class.md) obiektu. Platformę dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.  
   
- `nIDC`  
- Identyfikator pierwszego w grupie (stylem **ws_group —**) kontrolek przycisków radiowych sąsiadujących ze sobą w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) obiektu.  
+ *nIDC*  
+ Identyfikator pierwszego w grupie (stylem ws_group —) kontrolek przycisków radiowych sąsiadujących ze sobą w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) obiektu.  
   
  *value*  
  Odwołanie do elementu członkowskiego danych pola w skojarzonym `CRecordset` lub `CDaoRecordset` obiektu.  
   
- `pRecordset`  
+ *pRecordset*  
  Wskaźnik do [crecordset —](../../mfc/reference/crecordset-class.md) lub [cdaorecordset —](../../mfc/reference/cdaorecordset-class.md) obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -399,7 +399,7 @@ void AFXAPI DDX_FieldRadio(
   **Nagłówek** afxdao.h  
   
 ##  <a name="ddx_fieldscroll"></a>  Ddx_fieldscroll —  
- `DDX_FieldScroll` Funkcja synchronizuje jego położenie przewijania formantu paska przewijania w widoku rekordu i `int` pola danych członkiem zestawu rekordów skojarzonego z widokiem rekordu (lub z dowolnego zmienna całkowitoliczbowa wybrać go do mapowania).  
+ `DDX_FieldScroll` Funkcja synchronizuje jego położenie przewijania formantu paska przewijania w widoku rekordu i **int** pola danych członkiem zestawu rekordów skojarzonego z widokiem rekordu (lub z dowolnego zmienna całkowitoliczbowa wybrać go do mapowania) .  
   
 ```  
 void AFXAPI DDX_FieldScroll(
@@ -416,16 +416,16 @@ void AFXAPI DDX_FieldScroll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Wskaźnik do [cdataexchange —](../../mfc/reference/cdataexchange-class.md) obiektu. Platformę dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.  
   
- `nIDC`  
- Identyfikator pierwszego w grupie (stylem **ws_group —**) kontrolek przycisków radiowych sąsiadujących ze sobą w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) obiektu.  
+ *nIDC*  
+ Identyfikator pierwszego w grupie (stylem ws_group —) kontrolek przycisków radiowych sąsiadujących ze sobą w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) obiektu.  
   
  *value*  
  Odwołanie do elementu członkowskiego danych pola w skojarzonym `CRecordset` lub `CDaoRecordset` obiektu.  
   
- `pRecordset`  
+ *pRecordset*  
  Wskaźnik do [crecordset —](../../mfc/reference/crecordset-class.md) lub [cdaorecordset —](../../mfc/reference/cdaorecordset-class.md) obiektu wymiany danych.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -442,7 +442,7 @@ void AFXAPI DDX_FieldScroll(
   **Nagłówek** afxdao.h  
 
   ## <a name="nameddxfieldslidera--ddxfieldslider"></a>name = "ddx_fieldslider —" ></a> ddx_fieldslider —
-`DDX_FieldSlider` Funkcja synchronizuje pozycji przycisku przewijania suwaka w widoku rekordu i `int` pola danych członkiem zestawu rekordów skojarzonego z widokiem rekordu (lub z dowolnego zmienna całkowitoliczbowa wybrać go do mapowania).  
+`DDX_FieldSlider` Funkcja synchronizuje pozycji przycisku przewijania suwaka w widoku rekordu i **int** pola danych członkiem zestawu rekordów skojarzonego z widokiem rekordu (lub z dowolnego zmienna całkowitoliczbowa wybrać go do mapowania).  
    
 ### <a name="syntax"></a>Składnia  
   ```
@@ -459,16 +459,16 @@ void AFXAPI DDX_FieldSlider(
      CDaoRecordset* pRecordset );  
 ```
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Wskaźnik do [cdataexchange —](cdataexchange-class.md) obiektu. Platformę dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.  
   
- `nIDC`  
+ *nIDC*  
  Identyfikator zasobu suwaka.  
   
  *value*  
  Odwołanie do wartości, aby wymienić. Ten parametr zawiera lub będzie można określić bieżącej pozycji przycisku przewijania suwaka.  
   
- `pRecordset`  
+ *pRecordset*  
  Wskaźnik do skojarzonego `CRecordset` lub `CDaoRecordset` obiektu wymiany danych.  
    
 ### <a name="remarks"></a>Uwagi  
@@ -490,7 +490,7 @@ void AFXAPI DDX_FieldSlider(
  [Makra i funkcje globalne](mfc-macros-and-globals.md)   
   
 ##  <a name="ddx_fieldtext"></a>  Ddx_fieldtext —  
- `DDX_FieldText` Funkcji zarządzania transferem `int`, **krótki**, **długi**, `DWORD`, [cstring —](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **podwójne**, **BOOL**, lub **BAJTÓW** danych między kontrolkę pola edycji i elementy członkowskie danych pola zestawu rekordów.  
+ `DDX_FieldText` Funkcji zarządzania transferem **int**, **krótki**, **długi**, DWORD, [cstring —](../../atl-mfc-shared/reference/cstringt-class.md), **liczbzmiennoprzecinkowych**, **podwójne**, **BOOL**, lub **BAJTÓW** danych między kontrolkę pola edycji i elementy członkowskie danych pola zestawu rekordów.  
   
 ```  
 void AFXAPI DDX_FieldText(
@@ -603,16 +603,16 @@ void AFXAPI DDX_FieldText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Wskaźnik do [cdataexchange —](../../mfc/reference/cdataexchange-class.md) obiektu. Platformę dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.  
   
- `nIDC`  
+ *nIDC*  
  Identyfikator formantu w [CRecordView](../../mfc/reference/crecordview-class.md) lub [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) obiektu.  
   
  *value*  
  Odwołanie do elementu członkowskiego danych pola w skojarzonym `CRecordset` lub `CDaoRecordset` obiektu. Typ danych wartości zależy od której zastąpionej wersji `DDX_FieldText` używasz.  
   
- `pRecordset`  
+ *pRecordset*  
  Wskaźnik do [crecordset —](../../mfc/reference/crecordset-class.md) lub [cdaorecordset —](../../mfc/reference/cdaorecordset-class.md) obiektu wymiany danych. Włącza ten wskaźnik `DDX_FieldText` wykrywania i ustawić wartości Null.  
   
 ### <a name="remarks"></a>Uwagi  

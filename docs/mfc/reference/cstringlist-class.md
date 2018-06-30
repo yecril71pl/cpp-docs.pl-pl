@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91a88fc73b27323327bce477fa2cdaca747ed21c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31e13222ccd5ac12768961ff5e93d11e68ecfded
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375151"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122718"
 ---
 # <a name="cstringlist-class"></a>Klasa CStringList
 Obsługuje listy `CString` obiektów.  
@@ -128,7 +128,7 @@ class CStringList : public CObject
 ## <a name="remarks"></a>Uwagi  
  Wszystkie porównania są realizowane przez wartość, co oznacza, że zamiast adresów ciągów są porównywane znaków w ciągu.  
   
- `CStringList` zawiera `IMPLEMENT_SERIAL` makro do obsługi serializacji i zrzucanie swoich elementów. Jeśli lista `CString` obiekty są przechowywane do archiwum z operatorem przeciążone wstawiania lub z `Serialize` wszystkich funkcji członkowskiej `CString` element jest serializowany z kolei.  
+ `CStringList` zawiera implement_serial — makro do obsługi serializacji i zrzucanie swoich elementów. Jeśli lista `CString` obiekty są przechowywane do archiwum z operatorem przeciążone wstawiania lub z `Serialize` wszystkich funkcji członkowskiej `CString` element jest serializowany z kolei.  
   
  Jeśli potrzebujesz zrzutu osoba `CString` elementów, musisz ustawić głębokość kontekstu zrzutu 1 lub większą.  
   

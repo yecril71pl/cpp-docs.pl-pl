@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a71d72f8ab9e107e6a1557c73873effc8da7a5c6
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 107dba503c11d3810f75dcd4ee6e6f5af47008fc
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322286"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122983"
 ---
 # <a name="dispatch-maps"></a>Mapy wysyłania
 
@@ -51,10 +51,10 @@ DECLARE_DISPATCH_MAP()
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj `DECLARE_DISPATCH_MAP` makro końca z deklaracji klasy. Następnie w. Funkcje pliku CPP, który definiuje element członkowski klasy, należy użyć `BEGIN_DISPATCH_MAP` makra. Następnie dołączyć wpisy makro dla każdej klasy obiektu uwidocznione metody i właściwości ( `DISP_FUNCTION`, `DISP_PROPERTY`i tak dalej). Na koniec użyj `END_DISPATCH_MAP` makra.
+Użyj declare_dispatch_map — makro końca z deklaracji klasy. Następnie w. Pliku CPP, który definiuje funkcji elementów członkowskich klasy, użyj begin_dispatch_map — makro. Następnie należy dołączyć wpisy makro dla każdej z metod narażonych swojej klasy i właściwości (disp_function —, disp_property — itd.). Na koniec użyj end_dispatch_map — makro.
 
 > [!NOTE]
-> W przypadku jakichkolwiek członków, po `DECLARE_DISPATCH_MAP`, należy określić nowy typ dostępu ( **publicznego**, **prywatnej**, lub **chronione**) dla nich.
+> Jeśli po declare_dispatch_map — należy zadeklarować żadnych elementów członkowskich, należy określić nowy typ dostępu ( **publicznego**, **prywatnej**, lub **chronione**) dla nich.
 
 Kreatorzy Kreatora aplikacji i kod pomagają w klasy automatyzacji tworzenia i utrzymywania mapy wysyłania. Aby uzyskać więcej informacji na mapy wysyłania, zobacz [serwery automatyzacji](../../mfc/automation-servers.md).
 
@@ -84,7 +84,7 @@ Określa nazwę klasy podstawowej *theClass*.
 
 ### <a name="remarks"></a>Uwagi
 
-W pliku implementacji (.cpp), który definiuje funkcje Członkowskie dla klasy, należy uruchomić mapy wysyłania `BEGIN_DISPATCH_MAP` makra, Dodaj makro wpisy dla wszystkich funkcji wysyłania i właściwości, a następnie ukończ mapy wysyłania `END_DISPATCH_MAP` makra.
+W pliku implementacji (.cpp), który definiuje funkcje Członkowskie dla klasy rozpoczynać mapy wysyłania begin_dispatch_map — makro, Dodaj makro wpisy dla wszystkich funkcji wysyłania i właściwości i ukończyć END_DISPATCH_ mapy wysyłania Makra mapy.
 
 ### <a name="requirements"></a>Wymagania
 
@@ -100,7 +100,7 @@ END_DISPATCH_MAP()
 
 ### <a name="remarks"></a>Uwagi
 
-Należy go używać w połączeniu z `BEGIN_DISPATCH_MAP`.
+Należy go używać w połączeniu z begin_dispatch_map —.
 
 ### <a name="requirements"></a>Wymagania
 
@@ -138,23 +138,23 @@ Rozdzielonej spacjami listy co najmniej jedną stałą określenie listy paramet
 
 ### <a name="remarks"></a>Uwagi
 
-*VtRetVal* argument jest typu **VARTYPE**. Następujące możliwe wartości dla tego argumentu są pobierane z `VARENUM` wyliczenie:
+*VtRetVal* argument jest typu VARTYPE. Następujące możliwe wartości dla tego argumentu są pobierane z `VARENUM` wyliczenie:
 
 |Symbol|Zwracany typ|
 |------------|-----------------|
-|`VT_EMPTY`|**void**|
-|`VT_I2`|**short**|
-|`VT_I4`|**long**|
-|`VT_R4`|**float**|
-|`VT_R8`|**double**|
-|`VT_CY`|`CY`|
-|`VT_DATE`|`DATE`|
-|`VT_BSTR`|`BSTR`|
-|`VT_DISPATCH`|`LPDISPATCH`|
-|`VT_ERROR`|`SCODE`|
-|`VT_BOOL`|`BOOL`|
-|`VT_VARIANT`|`VARIANT`|
-|`VT_UNKNOWN`|`LPUNKNOWN`|
+|VT_EMPTY|**void**|
+|VT_I2|**short**|
+|VT_I4|**long**|
+|VT_R4|**float**|
+|VT_R8|**double**|
+|VT_CY|CY|
+|VT_DATE|DATA|
+|VT_BSTR|BSTR|
+|VT_DISPATCH|LPDISPATCH|
+|VT_ERROR|SCODE|
+|VT_BOOL|WARTOŚĆ LOGICZNA|
+|VT_VARIANT|VARIANT|
+|VT_UNKNOWN|LPUNKNOWN|
 
 *VtsParams* argument jest rozdzielonej spacjami listy wartości z `VTS_*` stałe. Co najmniej jeden z tych wartości, rozdzielając je spacjami (nie przecinkami) określa listę parametrów funkcji. Na przykład
 
@@ -166,31 +166,31 @@ Określa listę zawierającą krótka liczba całkowita, następuje wskaźnik do
 
 |Symbol|Typ parametru|
 |------------|--------------------|
-|`VTS_I2`|**short**|
-|`VTS_I4`|**long**|
-|`VTS_R4`|**float**|
-|`VTS_R8`|**double**|
-|`VTS_CY`|`const CY` lub `CY*`|
-|`VTS_DATE`|`DATE`|
-|`VTS_BSTR`|`LPCSTR`|
-|`VTS_DISPATCH`|`LPDISPATCH`|
-|`VTS_SCODE`|`SCODE`|
-|`VTS_BOOL`|`BOOL`|
-|`VTS_VARIANT`|`const VARIANT*` lub `VARIANT&`|
-|`VTS_UNKNOWN`|`LPUNKNOWN`|
-|`VTS_PI2`|__krótki\*__|
-|`VTS_PI4`|__długa\*__|
-|`VTS_PR4`|__float\*__|
-|`VTS_PR8`|__podwójne\*__|
-|`VTS_PCY`|`CY*`|
-|`VTS_PDATE`|`DATE*`|
-|`VTS_PBSTR`|`BSTR*`|
-|`VTS_PDISPATCH`|`LPDISPATCH*`|
-|`VTS_PSCODE`|`SCODE*`|
-|`VTS_PBOOL`|`BOOL*`|
-|`VTS_PVARIANT`|`VARIANT*`|
-|`VTS_PUNKNOWN`|`LPUNKNOWN*`|
-|`VTS_NONE`|Brak parametrów|
+|VTS_I2|**short**|
+|VTS_I4|**long**|
+|VTS_R4|**float**|
+|VTS_R8|**double**|
+|VTS_CY|`const CY` lub `CY*`|
+|VTS_DATE|DATA|
+|VTS_BSTR|LPCSTR|
+|VTS_DISPATCH|LPDISPATCH|
+|VTS_SCODE|SCODE|
+|VTS_BOOL|WARTOŚĆ LOGICZNA|
+|VTS_VARIANT|`const VARIANT*` lub `VARIANT&`|
+|VTS_UNKNOWN|LPUNKNOWN|
+|VTS_PI2|__krótki\*__|
+|VTS_PI4|__długa\*__|
+|VTS_PR4|__float\*__|
+|VTS_PR8|__podwójne\*__|
+|VTS_PCY|`CY*`|
+|VTS_PDATE|`DATE*`|
+|VTS_PBSTR|`BSTR*`|
+|VTS_PDISPATCH|`LPDISPATCH*`|
+|VTS_PSCODE|`SCODE*`|
+|VTS_PBOOL|`BOOL*`|
+|VTS_PVARIANT|`VARIANT*`|
+|VTS_PUNKNOWN|`LPUNKNOWN*`|
+|VTS_NONE|Brak parametrów|
 
 ### <a name="requirements"></a>Wymagania
 
@@ -224,22 +224,22 @@ Wartość określająca typ właściwości.
 
 ### <a name="remarks"></a>Uwagi
 
-*VtPropType* argument jest typu **VARTYPE**. Możliwe wartości dla tego argumentu są pobierane z `VARENUM` wyliczenie:
+*VtPropType* argument jest typu **VARTYPE**. Możliwe wartości dla tego argumentu są pobierane z wyliczenia VARENUM:
 
 |Symbol|Typ właściwości|
 |------------|-----------------------|
-|`VT_I2`|**short**|
-|`VT_I4`|**long**|
-|`VT_R4`|**float**|
-|`VT_R8`|**double**|
-|`VT_CY`|`CY`|
-|`VT_DATE`|`DATE`|
-|`VT_BSTR`|`CString`|
-|`VT_DISPATCH`|`LPDISPATCH`|
-|`VT_ERROR`|`SCODE`|
-|`VT_BOOL`|`BOOL`|
-|`VT_VARIANT`|`VARIANT`|
-|`VT_UNKNOWN`|`LPUNKNOWN`|
+|VT_I2|**short**|
+|VT_I4|**long**|
+|VT_R4|**float**|
+|VT_R8|**double**|
+|VT_CY|CY|
+|VT_DATE|DATA|
+|VT_BSTR|`CString`|
+|VT_DISPATCH|LPDISPATCH|
+|VT_ERROR|SCODE|
+|VT_BOOL|WARTOŚĆ LOGICZNA|
+|VT_VARIANT|VARIANT|
+|VT_UNKNOWN|LPUNKNOWN|
 
 Zmiany właściwości, wartość zmiennej członkowskiej, określony przez klientom zewnętrznym *memberName* zmienia; nie jest prezentowane nie powiadomienie o zmianie.
 
@@ -281,7 +281,7 @@ Wartość określająca typ właściwości.
 
 *MemberGet* i *zestaw elementów członkowskich* funkcje mają podpisy ustaleniami *vtPropType* argumentu. *MemberGet* funkcja nie przyjmuje żadnych argumentów i zwraca wartość typu określonego przez *vtPropType*. *Zestaw elementów członkowskich* funkcja przyjmuje argument typu określony przez *vtPropType* i nie zwraca żadnego.
 
-*VtPropType* argument jest typu `VARTYPE`. Możliwe wartości dla tego argumentu są pobierane z `VARENUM` wyliczenia. Aby uzyskać listę tych wartości, zobacz uwagi dla *vtRetVal* parametru w [disp_function —](#disp_function). Należy pamiętać, że `VT_EMPTY`, wymienionych w `DISP_FUNCTION` uwagi, jest niedozwolony jako typ danych właściwości.
+*VtPropType* argument jest typu VARTYPE. Możliwe wartości dla tego argumentu są pobierane z wyliczenia VARENUM. Aby uzyskać listę tych wartości, zobacz uwagi dla *vtRetVal* parametru w [disp_function —](#disp_function). Należy pamiętać, że VT_EMPTY uwagi disp_function — na liście jest niedozwolony jako typ danych właściwości.
 
 ### <a name="requirements"></a>Wymagania
 
@@ -319,24 +319,24 @@ Wartość określająca typ właściwości.
 
 ### <a name="remarks"></a>Uwagi
 
-W odróżnieniu od właściwości zdefiniowane z `DISP_PROPERTY`, właściwość zdefiniowana z `DISP_PROPERTY_NOTIFY` automatycznie wywoła funkcji określonej przez *pfnAfterSet* zmiany właściwości.
+W odróżnieniu od właściwości zdefiniowane z disp_property —, właściwość zdefiniowana z disp_property_notify — automatycznie wywoła funkcji określonej przez *pfnAfterSet* zmiany właściwości.
 
-*VtPropType* argument jest typu `VARTYPE`. Możliwe wartości dla tego argumentu są pobierane z `VARENUM` wyliczenie:
+*VtPropType* argument jest typu VARTYPE. Możliwe wartości dla tego argumentu są pobierane z wyliczenia VARENUM:
 
 |Symbol|Typ właściwości|
 |------------|-----------------------|
-|`VT_I2`|**short**|
-|`VT_I4`|**long**|
-|`VT_R4`|**float**|
-|`VT_R8`|**double**|
-|`VT_CY`|`CY`|
-|`VT_DATE`|`DATE`|
-|`VT_BSTR`|`CString`|
-|`VT_DISPATCH`|`LPDISPATCH`|
-|`VT_ERROR`|`SCODE`|
-|`VT_BOOL`|`BOOL`|
-|`VT_VARIANT`|`VARIANT`|
-|`VT_UNKNOWN`|`LPUNKNOWN`|
+|VT_I2|**short**|
+|VT_I4|**long**|
+|VT_R4|**float**|
+|VT_R8|**double**|
+|VT_CY|CY|
+|VT_DATE|DATA|
+|VT_BSTR|`CString`|
+|VT_DISPATCH|LPDISPATCH|
+|VT_ERROR|SCODE|
+|VT_BOOL|WARTOŚĆ LOGICZNA|
+|VT_VARIANT|VARIANT|
+|VT_UNKNOWN|LPUNKNOWN|
 
 ### <a name="requirements"></a>Wymagania
 
@@ -378,7 +378,7 @@ Ciąg rozdzielany `VTS_*` typów parametru variant, po jednej dla każdego param
 
 ### <a name="remarks"></a>Uwagi
 
-W odróżnieniu od `DISP_PROPERTY_EX` makra, to makro umożliwia określenie listy parametrów dla właściwości. Jest to przydatne stosowania właściwości, które są indeksowane lub sparametryzowana.
+W odróżnieniu od disp_property_ex — makro to makro umożliwia określenie listy parametrów dla właściwości. Jest to przydatne stosowania właściwości, które są indeksowane lub sparametryzowana.
 
 ### <a name="example"></a>Przykład
 
@@ -386,7 +386,7 @@ Należy wziąć pod uwagę następujące oświadczenie get i zestawu funkcji, kt
 
 [!code-cpp[NVC_MFCActiveXControl#9](../../mfc/codesnippet/cpp/dispatch-maps_3.h)]
 
-Odpowiadają one następujące `DISP_PROPERTY_PARAM` makra mapy wysyłania sterowania:
+Odpowiadają one następujące disp_property_param — makro mapy wysyłania sterowania:
 
 [!code-cpp[NVC_MFCActiveXControl#10](../../mfc/codesnippet/cpp/dispatch-maps_4.cpp)]
 
@@ -394,7 +394,7 @@ Inny przykład wziąć pod uwagę następujące get i zestawu funkcji:
 
 [!code-cpp[NVC_MFCActiveXControl#11](../../mfc/codesnippet/cpp/dispatch-maps_5.h)]
 
-Odpowiadają one następujące `DISP_PROPERTY_PARAM` makra mapy wysyłania sterowania:
+Odpowiadają one następujące disp_property_param — makro mapy wysyłania sterowania:
 
 [!code-cpp[NVC_MFCActiveXControl#12](../../mfc/codesnippet/cpp/dispatch-maps_6.cpp)]
 

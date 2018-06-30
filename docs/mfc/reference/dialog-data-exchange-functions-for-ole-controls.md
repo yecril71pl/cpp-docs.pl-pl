@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5dd7e1b9b18e8478cfa4e61a22806cf067cb3699
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 542afe8ba67e1d9c6138998320483a964a08724a
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375976"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121828"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Funkcje wymiany danych w oknie dialogowym dla formantów OLE
 W tym temacie wymieniono funkcje DDX_OC używanego do wymiany danych między właściwości formantu OLE w okno dialogowe, widoku formularza lub kontrolki widoku obiektu i element członkowski danych klasy okno dialogowe, widoku Formularz lub formant widoku obiektu.  
@@ -48,8 +48,8 @@ W tym temacie wymieniono funkcje DDX_OC używanego do wymiany danych między wł
 |[Ddx_occolorro —](#ddx_occolorro)|Zarządza transferem **OLE_COLOR** danych między właściwością tylko do odczytu formantów OLE i **OLE_COLOR** element członkowski danych.|  
 |[Ddx_ocfloat —](#ddx_ocfloat)|Zarządza transferem **float** (lub **podwójne**) dane między właściwością kontrolkę OLE i **float** (lub **podwójne**) elementu członkowskiego danych.|  
 |[Ddx_ocfloatro —](#ddx_ocfloatro)|Zarządza transferem **float** (lub **podwójne**) dane między właściwością tylko do odczytu formantów OLE i **float** (lub **podwójne**) danych element członkowski.|  
-|[Ddx_ocint —](#ddx_ocint)|Zarządza transferem `int` (lub **długi**) dane między właściwością kontrolkę OLE i `int` (lub **długi**) elementu członkowskiego danych.|  
-|[Ddx_ocintro —](#ddx_ocintro)|Zarządza transferem `int` (lub **długi**) dane między właściwością tylko do odczytu formantów OLE i `int` (lub **długi**) elementu członkowskiego danych.|  
+|[Ddx_ocint —](#ddx_ocint)|Zarządza transferem **int** (lub **długi**) dane między właściwością kontrolkę OLE i **int** (lub **długi**) elementu członkowskiego danych.|  
+|[Ddx_ocintro —](#ddx_ocintro)|Zarządza transferem **int** (lub **długi**) dane między właściwością tylko do odczytu formantów OLE i **int** (lub **długi**) elementu członkowskiego danych.|  
 |[Ddx_ocshort —](#ddx_ocshort)|Zarządza transferem **krótki** danych między właściwości formantu OLE i **krótki** element członkowski danych.|  
 |[Ddx_ocshortro —](#ddx_ocshortro)|Zarządza transferem **krótki** danych między właściwością tylko do odczytu formantów OLE i **krótki** element członkowski danych.|  
 |[Ddx_octext —](#ddx_octext)|Zarządza transferem **cstring —** danych między właściwości formantu OLE i **cstring —** element członkowski danych.|  
@@ -67,13 +67,13 @@ void AFXAPI DDX_OCBool(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Wskaźnik do `CDataExchange` obiektu. Platformę dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.  
   
- `nIDC`  
+ *nIDC*  
  Identyfikator formantu OLE w okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
- `dispid`  
+ *identyfikator DISPID*  
  Identyfikator wysyłania właściwości formantu.  
   
  *value*  
@@ -97,13 +97,13 @@ void AFXAPI DDX_OCBoolRO(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Wskaźnik do `CDataExchange` obiektu. Platformę dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.  
   
- `nIDC`  
+ *nIDC*  
  Identyfikator formantu OLE w okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
- `dispid`  
+ *identyfikator DISPID*  
  Identyfikator wysyłania właściwości formantu.  
   
  *value*  
@@ -116,7 +116,7 @@ void AFXAPI DDX_OCBoolRO(
   **Nagłówek** afxdisp.h  
   
 ##  <a name="ddx_occolor"></a>  Ddx_occolor —  
- `DDX_OCColor` Funkcji zarządzania transferem **OLE_COLOR** tworzą dane między właściwością kontrolkę OLE w oknie dialogowym, widoku lub formantu widoku obiektu i **OLE_COLOR** element członkowski danych okna dialogowego Widok formularza, lub obiekt formantu widoku.  
+ `DDX_OCColor` Funkcja zarządza transferem danych OLE_COLOR między właściwości formantu OLE w widoku formularza, okno dialogowe lub obiekt formantu widoku i element członkowski danych OLE_COLOR okna dialogowego widok formularza lub kontrolować obiekt widoku.  
   
 ```   
 void AFXAPI DDX_OCColor(
@@ -127,13 +127,13 @@ void AFXAPI DDX_OCColor(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Wskaźnik do `CDataExchange` obiektu. Platformę dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.  
   
- `nIDC`  
+ *nIDC*  
  Identyfikator formantu OLE w okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
- `dispid`  
+ *identyfikator DISPID*  
  Identyfikator wysyłania właściwości formantu.  
   
  *value*  
@@ -146,7 +146,7 @@ void AFXAPI DDX_OCColor(
   **Nagłówek** afxdisp.h  
   
 ##  <a name="ddx_occolorro"></a>  Ddx_occolorro —  
- `DDX_OCColorRO` Funkcji zarządzania transferem **OLE_COLOR** danych między formantów OLE w oknie dialogowym właściwości tylko do odczytu formularza widoku lub formantu widoku obiektu i **OLE_COLOR** elementu członkowskiego danych okno dialogowe, widoku formularza lub kontrolki widok obiektu.  
+ `DDX_OCColorRO` Funkcja zarządza transferem danych OLE_COLOR między właściwością tylko do odczytu formantu OLE w widoku formularza, okno dialogowe lub obiekt formantu widoku i element członkowski danych OLE_COLOR okna dialogowego widok formularza lub kontrolować obiekt widoku.  
   
 ```   
 void AFXAPI DDX_OCColorRO(
@@ -157,13 +157,13 @@ void AFXAPI DDX_OCColorRO(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Wskaźnik do `CDataExchange` obiektu. Platformę dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.  
   
- `nIDC`  
+ *nIDC*  
  Identyfikator formantu OLE w okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
- `dispid`  
+ *identyfikator DISPID*  
  Identyfikator wysyłania właściwości formantu.  
   
  *value*  
@@ -193,13 +193,13 @@ void AFXAPI DDX_OCFloat(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Wskaźnik do `CDataExchange` obiektu. Platformę dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.  
   
- `nIDC`  
+ *nIDC*  
  Identyfikator formantu OLE w okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
- `dispid`  
+ *identyfikator DISPID*  
  Identyfikator wysyłania właściwości formantu.  
   
  *value*  
@@ -229,13 +229,13 @@ void AFXAPI DDX_OCFloatRO(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Wskaźnik do `CDataExchange` obiektu. Platformę dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.  
   
- `nIDC`  
+ *nIDC*  
  Identyfikator formantu OLE w okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
- `dispid`  
+ *identyfikator DISPID*  
  Identyfikator wysyłania właściwości formantu.  
   
  *value*  
@@ -248,7 +248,7 @@ void AFXAPI DDX_OCFloatRO(
   **Nagłówek** afxdisp.h  
   
 ##  <a name="ddx_ocint"></a>  Ddx_ocint —  
- `DDX_OCInt` Funkcji zarządzania transferem `int` (lub **długi**) tworzą dane między właściwością kontrolkę OLE w oknie dialogowym, widoku lub formantu widoku obiektu i `int` (lub **long**) elementu członkowskiego danych okno dialogowe, widoku Formularz lub formant widoku obiektu.  
+ `DDX_OCInt` Funkcji zarządzania transferem **int** (lub **długi**) tworzą dane między właściwością kontrolkę OLE w oknie dialogowym, widoku lub formantu widoku obiektu i **int**(lub **długi**) elementu członkowskiego danych okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
 ```   
 void AFXAPI DDX_OCInt(
@@ -265,13 +265,13 @@ void AFXAPI DDX_OCInt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Wskaźnik do `CDataExchange` obiektu. Platformę dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.  
   
- `nIDC`  
+ *nIDC*  
  Identyfikator formantu OLE w okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
- `dispid`  
+ *identyfikator DISPID*  
  Identyfikator wysyłania właściwości formantu.  
   
  *value*  
@@ -284,7 +284,7 @@ void AFXAPI DDX_OCInt(
   **Nagłówek** afxdisp.h  
   
 ##  <a name="ddx_ocintro"></a>  Ddx_ocintro —  
- `DDX_OCIntRO` Funkcji zarządzania transferem `int` (lub **długi**) tworzą dane między właściwością tylko do odczytu formantów OLE w oknie dialogowym, widoku lub formantu widoku obiektu i `int` (lub **długa** ) elementu członkowskiego danych okno dialogowe, widoku Formularz lub formant widoku obiektu.  
+ `DDX_OCIntRO` Funkcji zarządzania transferem **int** (lub **długi**) tworzą dane między właściwością tylko do odczytu formantów OLE w oknie dialogowym, widoku lub formantu widoku obiektu i **int** (lub **długi**) elementu członkowskiego danych okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
 ```   
 void AFXAPI DDX_OCIntRO(
@@ -301,13 +301,13 @@ void AFXAPI DDX_OCIntRO(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Wskaźnik do `CDataExchange` obiektu. Platformę dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.  
   
- `nIDC`  
+ *nIDC*  
  Identyfikator formantu OLE w okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
- `dispid`  
+ *identyfikator DISPID*  
  Identyfikator wysyłania właściwości formantu.  
   
  *value*  
@@ -331,13 +331,13 @@ void AFXAPI DDX_OCShort(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Wskaźnik do `CDataExchange` obiektu. Platformę dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.  
   
- `nIDC`  
+ *nIDC*  
  Identyfikator formantu OLE w okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
- `dispid`  
+ *identyfikator DISPID*  
  Identyfikator wysyłania właściwości formantu.  
   
  *value*  
@@ -361,13 +361,13 @@ void AFXAPI DDX_OCShortRO(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Wskaźnik do `CDataExchange` obiektu. Platformę dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.  
   
- `nIDC`  
+ *nIDC*  
  Identyfikator formantu OLE w okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
- `dispid`  
+ *identyfikator DISPID*  
  Identyfikator wysyłania właściwości formantu.  
   
  *value*  
@@ -391,13 +391,13 @@ void AFXAPI DDX_OCText(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Wskaźnik do **cdataexchange —** obiektu. Platformę dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.  
   
- `nIDC`  
+ *nIDC*  
  Identyfikator formantu OLE w okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
- `dispid`  
+ *identyfikator DISPID*  
  Identyfikator wysyłania właściwości formantu.  
   
  *value*  
@@ -421,13 +421,13 @@ void AFXAPI DDX_OCTextRO(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDX`  
+ *pDX*  
  Wskaźnik do `CDataExchange` obiektu. Platformę dostarcza tego obiektu w celu ustanowienia kontekście wymiany danych, w tym kierunku.  
   
- `nIDC`  
+ *nIDC*  
  Identyfikator formantu OLE w okno dialogowe, widoku Formularz lub formant widoku obiektu.  
   
- `dispid`  
+ *identyfikator DISPID*  
  Identyfikator wysyłania właściwości formantu.  
   
  *value*  

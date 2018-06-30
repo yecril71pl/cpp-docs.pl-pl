@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e7bc4755d2e96c78735f1b3ef175ff3603686fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d89cd3a27869434bc5874037005fee6a592db233
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372511"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122674"
 ---
 # <a name="cwaitcursor-class"></a>Klasa CWaitCursor
 Zapewnia sposób jednego wiersza Pokaż kursora oczekiwania, który zazwyczaj jest wyświetlany jako Klepsydra podczas podczas wykonywania długotrwałej operacji.  
@@ -62,7 +62,7 @@ class CWaitCursor
 > [!NOTE]
 >  Ze względu na sposób ich konstruktory i destruktory działania `CWaitCursor` obiektów zawsze są deklarowane jako zmienne lokalne — nigdy nie jest zadeklarowany jako jako zmienne globalne nie są one przydzielane z **nowe**.  
   
- Jeśli operacja, która może spowodować, że kursor zostanie zmieniony, takie jak wyświetlanie okna komunikatu lub okno dialogowe, wywołaj [przywrócić](#restore) funkcji członkowskiej, aby przywrócić kursora oczekiwania. Można wywołać **przywrócić** nawet gdy kursor oczekiwania jest aktualnie wyświetlany.  
+ Jeśli operacja, która może spowodować, że kursor zostanie zmieniony, takie jak wyświetlanie okna komunikatu lub okno dialogowe, wywołaj [przywrócić](#restore) funkcji członkowskiej, aby przywrócić kursora oczekiwania. Można wywołać `Restore` nawet gdy kursor oczekiwania jest aktualnie wyświetlany.  
   
  Innym sposobem wyświetlenia kursora oczekiwania jest użycie kombinacji [CCmdTarget::BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor), [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)i być może [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor). Jednak `CWaitCursor` jest łatwiejsza w użyciu, ponieważ nie trzeba ustawić kursor do poprzedniego kursora po zakończeniu długotrwałej operacji.  
   
@@ -106,7 +106,7 @@ void Restore();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Jest OK, aby wywołać **przywrócić** nawet gdy kursor oczekiwania jest aktualnie wyświetlany.  
+ Jest OK, aby wywołać `Restore` nawet gdy kursor oczekiwania jest aktualnie wyświetlany.  
   
  Jeśli trzeba przywrócić oczekiwania kursor znajduje się w funkcji innego niż ten, w którym `CWaitCursor` jest zadeklarowany jako obiekt, można wywołać [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor).  
   

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1712f0d26fc0d9ac3dcfb0f2a15a906351f43154
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcc5290b08b6a0b6159c1ba9b0b5b05d02a178ba
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374100"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122072"
 ---
 # <a name="csyncobject-class"></a>Klasa CSyncObject
 Czysty klasy wirtualnych zapewnia funkcje wspólne dla obiektów synchronizacji Win32.  
@@ -89,8 +89,8 @@ virtual ~CSyncObject();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pstrName`  
- Nazwa obiektu. Jeśli **NULL**, *pstrName* będzie mieć wartość null.  
+ *pstrName*  
+ Nazwa obiektu. Jeśli wartość NULL, *pstrName* będzie mieć wartość null.  
   
 ##  <a name="lock"></a>  CSyncObject::Lock  
  Wywołanie tej funkcji w celu uzyskania dostępu do zasobów kontrolowane przez obiekt synchronizacji.  
@@ -100,8 +100,8 @@ virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwTimeout`  
- Określa ilość czasu w milisekundach czas oczekiwania na obiekt synchronizacji mają być dostępne (sygnalizowane). Jeśli **NIESKOŃCZONE**, `Lock` będzie czekał na obiekt zostanie zasygnalizowane przed zwróceniem.  
+ *dwTimeout*  
+ Określa ilość czasu w milisekundach czas oczekiwania na obiekt synchronizacji mają być dostępne (sygnalizowane). Jeśli NIESKOŃCZONE, `Lock` będzie czekał na obiekt zostanie zasygnalizowane przed zwróceniem.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli funkcja zakończyło się pomyślnie; w przeciwnym razie 0.  
@@ -124,7 +124,7 @@ operator HANDLE() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- W przypadku powodzenia uchwyt obiektu synchronizacji; w przeciwnym razie **NULL**.  
+ W przypadku powodzenia uchwyt obiektu synchronizacji; w przeciwnym razie wartość NULL.  
   
 ### <a name="remarks"></a>Uwagi  
  Dojście służy do bezpośredniego wywoływania interfejsów API systemu Windows.  
@@ -139,17 +139,17 @@ virtual BOOL Unlock() = 0; virtual BOOL Unlock(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lCount`  
+ *lCount*  
  Nie jest używany przez domyślną implementację.  
   
- `lpPrevCount`  
+ *lpPrevCount*  
  Nie jest używany przez domyślną implementację.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Domyślna implementacja zawsze zwraca **TRUE**.  
+ Domyślna implementacja zawsze zwraca wartość PRAWDA.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja deklaracji z dwoma parametrami zawsze zwraca **TRUE**. Ta funkcja jest wywoływana, aby zwolnić dostępu do obiektu synchronizacji posiadanych przez wątek wywołujący. Druga deklaracja jest dostępna dla obiektów synchronizacji, takich jak semaforów umożliwiających dostęp więcej niż jednego kontrolą zasobu.  
+ Domyślna implementacja deklaracji z dwoma parametrami zawsze zwraca wartość PRAWDA. Ta funkcja jest wywoływana, aby zwolnić dostępu do obiektu synchronizacji posiadanych przez wątek wywołujący. Druga deklaracja jest dostępna dla obiektów synchronizacji, takich jak semaforów umożliwiających dostęp więcej niż jednego kontrolą zasobu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [CObject — klasa](../../mfc/reference/cobject-class.md)   

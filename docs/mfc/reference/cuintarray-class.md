@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb8c7d46a2ffc2d569cc123d51aaebbf43b5e328
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2f5f0a72c08aeabcd764cf4c7763c9506769585
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372408"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121627"
 ---
 # <a name="cuintarray-class"></a>Klasa CUIntArray
 Obsługuje tablic liczb całkowitych bez znaku.  
@@ -69,7 +69,7 @@ class CUIntArray : public CObject
 ```  
   
 ## <a name="members"></a>Elementy członkowskie  
- Funkcje Członkowskie `CUIntArray` są podobne do funkcji Członkowskich klasy [CObArray](../../mfc/reference/cobarray-class.md). Ze względu na to podobieństwa, można użyć `CObArray` odwołania dokumentacji charakterystykę funkcja elementu członkowskiego. Po wyświetleniu `CObject` wskaźnika jako parametr funkcji lub wartości zwracanej, Zastąp **UINT**.  
+ Funkcje Członkowskie `CUIntArray` są podobne do funkcji Członkowskich klasy [CObArray](../../mfc/reference/cobarray-class.md). Ze względu na to podobieństwa, można użyć `CObArray` odwołania dokumentacji charakterystykę funkcja elementu członkowskiego. Po wyświetleniu `CObject` wskaźnika jako parametr funkcji lub wartości zwracanej, Zastąp Unit.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -94,7 +94,7 @@ class CUIntArray : public CObject
 |[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Zwalnia wszystkie nieużywanej pamięci powyżej bieżącego górną granicę.|  
 |[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Zwraca wartość pod danym indeksem.|  
 |[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Pobiera liczbę elementów w tej macierzy.|  
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Umożliwia dostęp do elementów w tablicy. Może być **NULL**.|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Umożliwia dostęp do elementów w tablicy. Może mieć wartości NULL.|  
 |[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Pobiera liczbę elementów w tej macierzy.|  
 |[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Zwraca największy nieprawidłowy indeks.|  
 |[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Wstawia elementu (lub wszystkie elementy w innej tablicy) od określonego indeksu.|  
@@ -112,7 +112,7 @@ class CUIntArray : public CObject
 |[[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|Ustawia lub pobiera element pod określonym indeksem.|  
   
 ## <a name="remarks"></a>Uwagi  
- Całkowitą bez znaku lub **UINT**, różni się od słowa i doublewords w tym fizyczny rozmiar **UINT** można zmienić w zależności od docelowego środowisko pracy. A **UINT** jest taki sam rozmiar jak z bitowego.  
+ Całkowitą bez znaku lub UINT, różni się od słowa i doublewords fizycznego rozmiaru Unit można zmieniać w zależności od docelowego środowisko pracy. UINT jest taki sam rozmiar jak z bitowego.  
   
  `CUIntArray` zawiera [implement_dynamic —](run-time-object-model-services.md#implement_dynamic) makro do obsługi dostępu typu run-time i zrzucanie [CDumpContext](../../mfc/reference/cdumpcontext-class.md) obiektu. Zrzut liczbę całkowitą bez znaku poszczególnych elementów, należy do co najmniej 1 należy ustawić głębokość kontekstu zrzutu. Nie można zserializować tablice liczbę całkowitą bez znaku.  
   

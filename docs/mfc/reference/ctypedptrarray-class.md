@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbbe2d9ed6ab7a17ccbd110d12070d4e295a62ec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9082e28aad1edc584a1796d5bb5e97b5601753f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375823"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122918"
 ---
 # <a name="ctypedptrarray-class"></a>Ctypedptrarray — klasa
 Udostępnia bezpieczne "otoki" dla obiektów klasy `CPtrArray` lub `CObArray`.  
@@ -50,10 +50,10 @@ class CTypedPtrArray : public BASE_CLASS
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Klasa podstawowa klasy array typizowaną wskaźnika; musi być klasą tablicy ( `CObArray` lub `CPtrArray`).  
   
- `TYPE`  
+ *TYP*  
  Typ elementów przechowywane w tablicy klasy podstawowej.  
   
 ## <a name="members"></a>Elementy członkowskie  
@@ -105,7 +105,7 @@ INT_PTR Add(TYPE newElement);
  *TYP*  
  Parametr szablonu określający typ elementu do dodania do tablicy.  
   
- `newElement`  
+ *newElement*  
  Element, który ma zostać dodany do tej tablicy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -115,14 +115,14 @@ INT_PTR Add(TYPE newElement);
  Aby uzyskać bardziej szczegółowe uwagi, zobacz [CObArray::Add](../../mfc/reference/cobarray-class.md#add).  
   
 ##  <a name="append"></a>  CTypedPtrArray::Append  
- Wywołania funkcji członkowskiej `BASE_CLASS` **:: Append**.  
+ Wywołania funkcji członkowskiej `BASE_CLASS`:: Append **.  
   
 ```  
 INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Klasa podstawowa klasy array typizowaną wskaźnika; musi być klasą tablicy ( [CObArray](../../mfc/reference/cobarray-class.md) lub [CPtrArray](../../mfc/reference/cptrarray-class.md)).  
   
  *TYP*  
@@ -145,7 +145,7 @@ void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Klasa podstawowa klasy array typizowaną wskaźnika; musi być klasą tablicy ( [CObArray](../../mfc/reference/cobarray-class.md) lub [CPtrArray](../../mfc/reference/cptrarray-class.md)).  
   
  *TYP*  
@@ -168,11 +168,11 @@ TYPE& ElementAt(INT_PTR nIndex);
  *TYP*  
  Parametr szablonu określający typ elementów przechowywanych w tej macierzy.  
   
- `nIndex`  
+ *nIndex*  
  Liczba całkowita indeksu, który jest większa lub równa 0 i mniejsza niż wartość zwrócona przez `BASE_CLASS` **:: GetUpperBound**.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Tymczasowe odwołanie do elementu w lokalizacji określonej przez `nIndex`. Ten element jest typu określonego przez parametr szablonu *typu*.  
+ Tymczasowe odwołanie do elementu w lokalizacji określonej przez *nIndex*. Ten element jest typu określonego przez parametr szablonu *typu*.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać bardziej szczegółowe uwagi, zobacz [CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat).  
@@ -188,11 +188,11 @@ TYPE GetAt(INT_PTR nIndex) const;
  *TYP*  
  Określenie typu elementy przechowywane w tablicy parametrów szablonu.  
   
- `nIndex`  
+ *nIndex*  
  Liczba całkowita indeksu, który jest większa lub równa 0 i mniejsza niż wartość zwrócona przez `BASE_CLASS` **:: GetUpperBound**.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Kopia elementu w lokalizacji określonej przez `nIndex`. Ten element jest typu określonego przez parametr szablonu *typu*.  
+ Kopia elementu w lokalizacji określonej przez *nIndex*. Ten element jest typu określonego przez parametr szablonu *typu*.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać bardziej szczegółowe uwagi, zobacz [CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)  
@@ -213,25 +213,25 @@ void InsertAt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Liczba całkowita indeksu, który może być większa niż wartość zwrócona przez [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).  
   
  *TYP*  
  Typ elementów przechowywane w tablicy klasy podstawowej.  
   
- `newElement`  
- Wskaźnik do obiektu mają być umieszczone w tej macierzy. A `newElement` wartości **NULL** jest dozwolone.  
+ *newElement*  
+ Wskaźnik do obiektu mają być umieszczone w tej macierzy. A *newElement* wartości **NULL** jest dozwolone.  
   
- `nCount`  
+ *nCount*  
  Ile razy ten element powinien być wstawiane (wartość domyślna to 1).  
   
- `nStartIndex`  
+ *nStartIndex*  
  Liczba całkowita indeksu, który może być większa niż wartość zwrócona przez `CObArray::GetUpperBound`.  
   
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Klasa podstawowa klasy array typizowaną wskaźnika; musi być klasą tablicy ( [CObArray](../../mfc/reference/cobarray-class.md) lub [CPtrArray](../../mfc/reference/cptrarray-class.md)).  
   
- `pNewArray`  
+ *pNewArray*  
  Innej tablicy, który zawiera elementy, które mają zostać dodane do tej tablicy.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -249,7 +249,7 @@ TYPE operator[ ](int_ptr nindex) const;
  *TYP*  
  Określenie typu elementy przechowywane w tablicy parametrów szablonu.  
   
- `nIndex`  
+ *nIndex*  
  Liczba całkowita indeksu, który jest większa lub równa 0 i mniejsza niż wartość zwrócona przez `BASE_CLASS` **:: GetUpperBound**.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -267,7 +267,7 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Liczba całkowita indeksu, który jest większa lub równa 0 i mniejsza niż wartość zwrócona przez [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).  
   
  *TYP*  
@@ -289,13 +289,13 @@ void SetAtGrow(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Liczba całkowita indeksu, który jest większa lub równa 0.  
   
  *TYP*  
  Typ elementów przechowywane w tablicy klasy podstawowej.  
   
- `newElement`  
+ *newElement*  
  Wskaźnik obiektu ma zostać dodany do tej tablicy. A **NULL** wartość jest dozwolona.  
   
 ### <a name="remarks"></a>Uwagi  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d126c7e6ef77142f20a9dd9d7ed68c44ede5fc1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00ec945c5f0cdbb0c12f49b90719c31bf841ef2f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375282"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121640"
 ---
 # <a name="cwinformscontrol-class"></a>Klasa CWinFormsControl
 Zapewnia podstawowe funkcje do hostowania kontrolki formularzy systemu Windows.  
@@ -113,25 +113,25 @@ inline BOOL CreateManagedControl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pType`  
+ *pType*  
  Typ danych formantu, który ma zostać utworzony. Musi być [typu](https://msdn.microsoft.com/en-us/library/system.type) — typ danych.  
   
- `dwStyle`  
+ *dwStyle*  
  Styl okna, aby zastosować do formantu. Określ kombinację [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles). Obecnie są obsługiwane tylko następujące style: ws_tabstop —, ws_visible — i ws_disabled — ws_group —.  
   
- `rect`  
+ *Rect*  
  A [struktura RECT](../../mfc/reference/rect-structure1.md) definiuje współrzędne górnego lewego i prawego dolnego rogu formantu (najpierw przeciążenia tylko).  
   
- `nPlaceHolderID`  
+ *nPlaceHolderID*  
  Uchwyt formantu posiadacz statycznych miejscu umieścić w edytorze zasobów. Nowo utworzony formantu formularzy systemu Windows zastępuje kontrolki statycznej, zakładając, że jego położenie porządek osi i style (drugi przeciążenia tylko).  
   
- `pParentWnd`  
+ *pParentWnd*  
  Wskaźnik do okna nadrzędnego.  
   
- `nID`  
+ *nID*  
  Identyfikatora zasobu do przypisania do nowo utworzonego formantu.  
   
- `pControl`  
+ *pControl*  
  Wystąpienie formantu formularzy systemu Windows ma zostać skojarzony z [CWinFormsControl](../../mfc/reference/cwinformscontrol-class.md) obiektu (tylko w przypadku przeciążenia czwarty).  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -140,13 +140,13 @@ inline BOOL CreateManagedControl(
 ### <a name="remarks"></a>Uwagi  
  Ta metoda tworzy wystąpienie formantu formularzy systemu Windows programu .NET Framework w kontenerze MFC.  
   
- Typ danych .NET Framework akceptuje pierwszy przeciążenia metody `pType` tak, aby MFC można utworzyć wystąpienia nowy obiekt tego typu. `pType` musi być [typu](https://msdn.microsoft.com/en-us/library/system.type) — typ danych.  
+ Typ danych .NET Framework akceptuje pierwszy przeciążenia metody *pType* tak, aby MFC można utworzyć wystąpienia nowy obiekt tego typu. *pType* musi być [typu](https://msdn.microsoft.com/en-us/library/system.type) — typ danych.  
   
- Drugi przeciążenia metody tworzy formantu formularzy systemu Windows na podstawie `TManagedControl` parametru szablonu `CWinFormsControl` klasy. Rozmiar i położenie formantu jest oparta na `RECT` struktury przekazywany do metody. Tylko `dwStyle` ma znaczenie dla stylów.  
+ Drugi przeciążenia metody tworzy formantu formularzy systemu Windows na podstawie `TManagedControl` parametru szablonu `CWinFormsControl` klasy. Rozmiar i położenie formantu jest oparta na `RECT` struktury przekazywany do metody. Tylko *dwStyle* ma znaczenie dla stylów.  
   
- Trzeci przeciążenia metody tworzy kontrolki formularza systemu Windows, który zastępuje statyczną kontrolkę niszczenie go przy założeniu, że jego położenie porządek osi i style. Kontrolki statycznej służy tylko jako symbolu zastępczego dla formantu formularzy systemu Windows. Podczas tworzenia kontrolki, to przeciążenie łączy style z `dwStyle` przy użyciu stylów zasobów kontrolki statycznej.  
+ Trzeci przeciążenia metody tworzy kontrolki formularza systemu Windows, który zastępuje statyczną kontrolkę niszczenie go przy założeniu, że jego położenie porządek osi i style. Kontrolki statycznej służy tylko jako symbolu zastępczego dla formantu formularzy systemu Windows. Podczas tworzenia kontrolki, to przeciążenie łączy style z *dwStyle* przy użyciu stylów zasobów kontrolki statycznej.  
   
- Czwarty przeciążenia metody umożliwia przekazywanie w formancie formularzy systemu Windows już wystąpień `pControl` który MFC będzie zawijany. Musi być tego samego typu co `TManagedControl` parametru szablonu `CWinFormsControl` klasy.  
+ Czwarty przeciążenia metody umożliwia przekazywanie w formancie formularzy systemu Windows już wystąpień *pControl* który MFC będzie zawijany. Musi być tego samego typu co `TManagedControl` parametru szablonu `CWinFormsControl` klasy.  
   
  Zobacz [za pomocą formantu użytkownika formularza systemu Windows w MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md) dla przykładów w formularzu systemu Windows kontrolki.  
   

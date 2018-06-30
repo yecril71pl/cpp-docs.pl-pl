@@ -1,7 +1,7 @@
 ---
 title: Kreator konsumenta OLE DB ATL | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d51569eaece5e3fac59c7cc2ff82a8454a5f959
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f53d8273a708b7f84393290dd578933a5390313c
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364953"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121692"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Kreator konsumenta OLE DB ATL
 Ten kreator konfiguruje klasę konsumenta OLE DB z powiązaniami danych niezbędnych do uzyskania dostępu z określonego źródła danych za pomocą określonego dostawcy OLE DB.  
@@ -133,7 +133,7 @@ Ten kreator konfiguruje klasę konsumenta OLE DB z powiązaniami danych niezbęd
   
  ``` 
  // Table accessor class  
-    class COrdersAccessor; *// Table class  
+    class COrdersAccessor; // Table class  
     class COrders : public CTable<CAccessor<COrdersAccessor>>;  
  ... 
  // Column map  
@@ -172,13 +172,13 @@ Ten kreator konfiguruje klasę konsumenta OLE DB z powiązaniami danych niezbęd
  **Tabela**  
  Wybierz tę opcję, jeśli chcesz użyć `CTable` lub **db_table —** do utworzenia tabeli, a akcesor tabeli deklaracji klasy.  
   
- **polecenie**  
+ **Polecenie**  
  Wybierz tę opcję, jeśli chcesz użyć `CCommand` lub **db_command —** do tworzenia poleceń i polecenia akcesor deklaracji klasy. To ustawienie domyślne.  
   
  **Obsługa**  
  Zaznacz pola wyboru, aby określić typy aktualizacji do konsumenta (domyślna wartość to brak). Następujące ustawi [DBPROP_IRowsetChange](https://msdn.microsoft.com/library/ms715892.aspx) i odpowiednie wpisy [DBPROP_UPDATABILITY](https://msdn.microsoft.com/library/ms722676.aspx) we właściwości należy ustawić mapy.  
   
- **zmiany**  
+ **Zmiany**  
  Określa, czy klient obsługuje aktualizacje danych wiersza w zestawie wierszy.  
   
  **Wstaw**  

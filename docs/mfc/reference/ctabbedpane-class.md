@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a6c42a4203fb1d0224f5f31e4123dca9a6fad65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9da7016e98d9bd84e62c3b05cae32346827142f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373817"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121841"
 ---
 # <a name="ctabbedpane-class"></a>Klasa CTabbedPane
 Implementuje funkcje okienka zawierającego karty odłączane.  
@@ -88,7 +88,7 @@ class CTabbedPane : public CBaseTabbedPane
 ## <a name="remarks"></a>Uwagi  
  Platformę automatycznie tworzy wystąpienia tej klasy, gdy użytkownik dołącza jedno okienko na inny poprzez wskazanie podpis drugi okienka. Wszystkie okienka z kartami, które są tworzone przez platformę ma Identyfikatora-1.  
   
- Aby określić zwykłe karty zamiast tabulatorów w stylu programu Outlook, należy przekazać `AFX_CBRS_REGULAR_TABS` stylów do [CDockablePane::CreateEx](../../mfc/reference/cdockablepane-class.md#createex) metody.  
+ Aby określić zwykłe karty zamiast tabulatorów w stylu programu Outlook, należy przekazać do stylu AFX_CBRS_REGULAR_TABS [CDockablePane::CreateEx](../../mfc/reference/cdockablepane-class.md#createex) metody.  
   
  Po utworzeniu okienko z kartami z karty odłączane okienku może zostać zniszczone automatycznie przez platformę, nie należy przechowywać wskaźnika. Aby otrzymywać wskaźnik do okienka z kartami, należy wywołać `CBasePane::GetParentTabbedPane` metody.  
   
@@ -177,8 +177,8 @@ virtual BOOL DetachPane(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pBar`  
- [in] `bHide`  
+ [in] *pBar*  
+ [in] *bHide*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -192,8 +192,8 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `bEnable`  
- `TRUE` Aby włączyć automatyczne kolorowanie kart; w przeciwnym razie `FALSE`.  
+ [in] *bWłączenie*  
+ Wartość TRUE, aby włączyć automatyczne kolorowanie kart; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
  Użyj tej metody statyczne, aby włączyć lub wyłączyć automatyczne kolorowanie kart w wszystkich kartach okienka w aplikacji. Gdy ta funkcja jest włączona, każda karta jest wypełniane przez własną kolorów. Można znaleźć na liście kolorów, które są używane do kolorów karty przez wywołanie metody [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) metody.  
@@ -214,10 +214,10 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pBar`  
- [in] `nTabID`  
- [in] `dockMethod`  
- [in] `bHide`  
+ [in] *pBar*  
+ [in] *nTabID*  
+ [in] *dockMethod*  
+ [in] *bHide*  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
@@ -233,10 +233,10 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [out] `rectTabAreaTop`  
+ [out] *rectTabAreaTop*  
  Zawiera rozmiar i położenie wartości obszar karty top, we współrzędnych ekranu.  
   
- [out] `rectTabAreaBottom`  
+ [out] *rectTabAreaBottom*  
  Zawiera rozmiar i położenie we współrzędnych ekranu obszaru karty dolnej.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -274,7 +274,7 @@ virtual BOOL IsTabLocationBottom() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli wartości obszar karty znajduje się w dolnej części okna z kartami; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli obszar karty znajduje się w dolnej części okna z kartami; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -286,11 +286,11 @@ AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ustaw ten statyczny element członkowski `TRUE` wymusić wszystkich kartach w aplikacji, który będzie wyświetlany w górnej części okienka z kartami.  
+ Ustaw ten statyczny element członkowski na true, aby wymusić wszystkich kartach w aplikacji, który będzie wyświetlany w górnej części okienka z kartami.  
   
  Tę wartość należy ustawić przed utworzeniem okienko z kartami.  
   
- Wartość domyślna to `FALSE`.  
+ Wartość domyślna to FALSE.  
   
 ##  <a name="m_ptabwndrtc"></a>  CTabbedPane::m_pTabWndRTC  
  Informacje o klasie czasu wykonywania dla niestandardowego `CMFCTabCtrl`-pochodzi z obiektu.  
@@ -320,7 +320,7 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `arColors`  
+ [in] *arColors*  
  Zawiera tablicę kolorów, by ustawić.  
   
 ### <a name="remarks"></a>Uwagi  

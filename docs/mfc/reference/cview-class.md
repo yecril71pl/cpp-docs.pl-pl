@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ca94e9d1f870fe028faec413a79f13d8a3b8eaa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b7ff4e48bd7006c3706909d1791b82aa8cda2658
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377904"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123126"
 ---
 # <a name="cview-class"></a>Cview — klasa
 Zapewnia podstawowe funkcje dla klas widoku zdefiniowane przez użytkownika.  
@@ -155,7 +155,7 @@ class AFX_NOVTABLE CView : public CWnd
   
 - [CTreeView —](../../mfc/reference/ctreeview-class.md), widoku, który umożliwia użycie dokumentu — architektura widoku z drzewa formantów.  
   
- `CView` Klasa ma również klasy pochodnej wdrożenia o nazwie **CPreviewView**, używany przez platformę do wykonania, wyświetlanie podglądu wydruku. Ta klasa obsługuje funkcje unikatowy w oknie Podgląd wydruku, takich jak pasek narzędzi podglądu stronę o podwójnej precyzji lub jednym i powiększanie, który jest powiększając wyświetlanego obrazu. Nie trzeba wywołać lub przesłonić **CPreviewView**przez funkcje Członkowskie, chyba że implementowania interfejsu podglądu wydruku (na przykład, jeśli mają być obsługiwane, edytowanie w trybie podglądu wydruku). Aby uzyskać więcej informacji na temat używania `CView`, zobacz [architektury dokument/widok](../../mfc/document-view-architecture.md) i [drukowanie](../../mfc/printing.md). Ponadto zobacz [30 Uwaga techniczna](../../mfc/tn030-customizing-printing-and-print-preview.md) Aby uzyskać więcej informacji o dostosowywaniu podglądu wydruku.  
+ `CView` Klasa ma również klasy pochodnej wdrożenia o nazwie `CPreviewView`, używany przez platformę do wykonania, wyświetlanie podglądu wydruku. Ta klasa obsługuje funkcje unikatowy w oknie Podgląd wydruku, takich jak pasek narzędzi podglądu stronę o podwójnej precyzji lub jednym i powiększanie, który jest powiększając wyświetlanego obrazu. Nie trzeba wywołać lub przesłonić `CPreviewView`przez funkcje Członkowskie, chyba że implementowania interfejsu podglądu wydruku (na przykład, jeśli mają być obsługiwane, edytowanie w trybie podglądu wydruku). Aby uzyskać więcej informacji na temat używania `CView`, zobacz [architektury dokument/widok](../../mfc/document-view-architecture.md) i [drukowanie](../../mfc/printing.md). Ponadto zobacz [30 Uwaga techniczna](../../mfc/tn030-customizing-printing-and-print-preview.md) Aby uzyskać więcej informacji o dostosowywaniu podglądu wydruku.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -187,14 +187,14 @@ BOOL DoPreparePrinting(CPrintInfo* pInfo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pInfo`  
+ *pInfo*  
  Wskazuje [cprintinfo —](../../mfc/reference/cprintinfo-structure.md) struktury, która opisuje bieżącego zadania drukowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli można rozpocząć drukowania lub podglądu drukowania; 0, jeśli operacja została anulowana.  
   
 ### <a name="remarks"></a>Uwagi  
- Zachowanie tej funkcji zależy od tego, czy jest ona wywoływana dla drukowania lub podglądu drukowania (określonego przez **m_bPreview** członkiem `pInfo` parametru). Jeśli plik jest drukowanie, ta funkcja wywołuje okno dialogowe drukowania przy użyciu wartości w [cprintinfo —](../../mfc/reference/cprintinfo-structure.md) struktury, która `pInfo` wskazuje; po użytkownika zostało zamknięte okno dialogowe, funkcja ta umożliwia tworzenie kontekstu urządzenia drukarki na podstawie ustawień użytkownika określonego w oknie dialogowym i zwraca ten kontekst urządzenia za pośrednictwem `pInfo` parametru. Ten kontekst urządzenia służy do drukowania dokumentu.  
+ Zachowanie tej funkcji zależy od tego, czy jest ona wywoływana dla drukowania lub podglądu drukowania (określonego przez `m_bPreview` członkiem *pInfo* parametru). Jeśli plik jest drukowanie, ta funkcja wywołuje okno dialogowe drukowania przy użyciu wartości w [cprintinfo —](../../mfc/reference/cprintinfo-structure.md) struktury, która *pInfo* wskazuje; po użytkownika zostało zamknięte okno dialogowe, funkcja ta umożliwia tworzenie kontekst urządzenia drukarki na podstawie ustawień użytkownika określonego w oknie dialogowym i zwraca ten kontekst urządzenia za pośrednictwem *pInfo* parametru. Ten kontekst urządzenia służy do drukowania dokumentu.  
   
  Jeśli plik jest przeglądany, ta funkcja tworzy kontekstu urządzenia drukarki przy użyciu bieżących ustawień drukarek; Ten kontekst urządzenia jest używana do symulowania drukarki w wersji zapoznawczej.  
   
@@ -206,7 +206,7 @@ CDocument* GetDocument() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do [CDocument](../../mfc/reference/cdocument-class.md) obiekt skojarzony z widokiem. **Wartość NULL** Jeśli widok nie jest dołączony do dokumentu.  
+ Wskaźnik do [CDocument](../../mfc/reference/cdocument-class.md) obiekt skojarzony z widokiem. Wartość NULL, jeśli widok nie jest dołączony do dokumentu.  
   
 ### <a name="remarks"></a>Uwagi  
  Dzięki temu można wywołać funkcji Członkowskich dokumentu.  
@@ -219,14 +219,14 @@ virtual BOOL IsSelected(const CObject* pDocItem) const;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDocItem`  
+ *pDocItem*  
  Wskazuje element dokumentu testowana.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli zaznaczono element określony dokument; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja ta funkcja zwraca **FALSE**. Zastąpienie tej funkcji w przypadku wdrażania przy użyciu wybór [CDocItem](../../mfc/reference/cdocitem-class.md) obiektów. Należy przesłonić tę funkcję, jeśli widok zawiera elementy OLE.  
+ Domyślna implementacja ta funkcja zwraca wartość FALSE. Zastąpienie tej funkcji w przypadku wdrażania przy użyciu wybór [CDocItem](../../mfc/reference/cdocitem-class.md) obiektów. Należy przesłonić tę funkcję, jeśli widok zawiera elementy OLE.  
   
 ##  <a name="onactivateframe"></a>  CView::OnActivateFrame  
  Wywoływane przez platformę, gdy okno ramowe zawierające widok jest aktywowane lub dezaktywowane.  
@@ -238,16 +238,16 @@ virtual void OnActivateFrame(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nState`  
+ *nInformacje*  
  Określa, czy okno ramowe jest aktywowane lub dezaktywowane. Może być jedną z następujących wartości:  
   
-- **WA_INACTIVE** okno ramowe jest dezaktywowana.  
+- Trwa dezaktywowanie WA_INACTIVE ramkę okna.  
   
-- **WA_ACTIVE** okno ramowe jest aktywowane za pomocą niektóre metody inne niż (na przykład przy użyciu interfejsu klawiatury, aby wybrać okno) kliknij przycisk myszy.  
+- Kliknij WA_ACTIVE, który okno ramowe jest uaktywniany przez niektóre metody innej niż myszy (na przykład przy użyciu interfejsu klawiatury, aby wybrać okno).  
   
-- **WA_CLICKACTIVE** okno ramowe jest uaktywniany przez kliknięcie myszą  
+- Trwa aktywowanie WA_CLICKACTIVE okno ramowe przez kliknięcie myszą  
   
- `pFrameWnd`  
+ *pFrameWnd*  
  Wskaźnik do okno ramowe, który ma być aktywowany.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -264,19 +264,19 @@ virtual void OnActivateView(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `bActivate`  
+ *bActivate*  
  Wskazuje, czy widok jest aktywowane lub dezaktywowane.  
   
- `pActivateView`  
+ *pActivateView*  
  Wskazuje obiekt widoku, który jest aktywowane.  
   
- `pDeactiveView`  
+ *pDeactiveView*  
  Wskazuje obiekt widoku, który jest dezaktywowana.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja ta funkcja Ustawia fokus do widoku aktywowane. Należy przesłonić tę funkcję, jeśli chcesz wykonać specjalnego przetwarzania, gdy widok jest aktywowane lub dezaktywowane. Na przykład jeśli chcesz podać specjalne wizualnych, które odróżnienia widoku aktywnego nieaktywne widoki, czy sprawdzić `bActivate` parametru i odpowiednio zaktualizować wygląd widoku.  
+ Domyślna implementacja ta funkcja Ustawia fokus do widoku aktywowane. Należy przesłonić tę funkcję, jeśli chcesz wykonać specjalnego przetwarzania, gdy widok jest aktywowane lub dezaktywowane. Na przykład jeśli chcesz podać specjalne wizualnych, które odróżnienia widoku aktywnego nieaktywne widoki, czy sprawdzić *bActivate* parametru i odpowiednio zaktualizować wygląd widoku.  
   
- `pActivateView` i `pDeactiveView` parametry polecenie tego samego widoku, jeśli aktywowano aplikacji główne okno ramowe bez żadnych zmian w aktywnym widoku — na przykład, jeśli fokus jest przenoszona z innej aplikacji z tym komputerem, a nie z jednego Wyświetl do innej aplikacji lub podczas przełączania między oknami podrzędnymi MDI. Widok do osiągnięcia ponownie swoją paletę dzięki temu w razie potrzeby.  
+ *PActivateView* i *pDeactiveView* parametry polecenie tego samego widoku, jeśli aktywowano aplikacji główne okno ramowe bez żadnych zmian w aktywnym widoku — na przykład, jeśli są fokus przeniesione z innej aplikacji z tym komputerem, a nie z jeden widok do innej aplikacji lub podczas przełączania między oknami podrzędnymi MDI. Widok do osiągnięcia ponownie swoją paletę dzięki temu w razie potrzeby.  
   
  Te parametry są różne podczas [CFrameWnd::SetActiveView](../../mfc/reference/cframewnd-class.md#setactiveview) jest wywoływana z widoku, który jest inny niż co [CFrameWnd::GetActiveView](../../mfc/reference/cframewnd-class.md#getactiveview) zwróci. Najczęściej dzieje się z okna podziału.  
   
@@ -290,10 +290,10 @@ virtual void OnBeginPrinting(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *podstawowego kontrolera domeny*  
  Wskazuje kontekstu urządzenia drukarki.  
   
- `pInfo`  
+ *pInfo*  
  Wskazuje [cprintinfo —](../../mfc/reference/cprintinfo-structure.md) struktury, która opisuje bieżącego zadania drukowania.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -312,30 +312,30 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDataObject`  
+ *Obiekt pDataObject*  
  Wskazuje [COleDataObject](../../mfc/reference/coledataobject-class.md) przeciąganie obszar upuszczania widoku.  
   
- `dwKeyState`  
- Zawiera stan klawisze modyfikujące. To jest kombinacją dowolną liczbę następujących: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, i **MK_RBUTTON**.  
+ *dwKeyState*  
+ Zawiera stan klawisze modyfikujące. To jest kombinacją dowolną liczbę następujących: MK_CONTROL, MK_SHIFT MK_ALT, MK_LBUTTON, MK_MBUTTON i MK_RBUTTON.  
   
- `point`  
+ *Punkt*  
  Bieżącego położenia kursora myszy względem obszaru klienckiego widoku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość z zakresu od `DROPEFFECT` wyliczany typ, który wskazuje typ listy, który może mieć miejsce, jeśli użytkownik usunął obiektu, w tym miejscu. Typ listy zależy zwykle od bieżącego stanu klucza wskazywanym przez `dwKeyState`. Standardowe mapowanie Director do `DROPEFFECT` wartości to:  
+ Wartość z zakresu od DROPEFFECT wyliczany typ, który wskazuje typ listy, który może mieć miejsce, jeśli użytkownik usunął obiektu, w tym miejscu. Typ listy zależy zwykle od bieżącego stanu klucza wskazywanym przez *dwKeyState*. Standardowe mapowanie Director DROPEFFECT wartości to:  
   
-- `DROPEFFECT_NONE` Nie można porzucić obiektu danych w tym oknie.  
+- Nie można porzucić DROPEFFECT_NONE obiekt danych w tym oknie.  
   
-- `DROPEFFECT_LINK` Aby uzyskać **MK_CONTROL &#124; MK_SHIFT** tworzy powiązania między obiektem i jego serwera.  
+- DROPEFFECT_LINK dla MK_CONTROL &#124; MK_SHIFT tworzy powiązania między obiektem i jego serwera.  
   
-- `DROPEFFECT_COPY` Aby uzyskać **MK_CONTROL** tworzy kopię upuszczony obiekt.  
+- DROPEFFECT_COPY dla MK_CONTROL tworzy kopię upuszczony obiekt.  
   
-- `DROPEFFECT_MOVE` Aby uzyskać **MK_ALT** tworzy kopię upuszczony obiekt i usunąć oryginalny obiekt. Zazwyczaj jest to domyślny efekt upuść, gdy widok może zaakceptować tego obiektu danych.  
+- DROPEFFECT_MOVE dla MK_ALT tworzy kopię upuszczony obiekt i usuń oryginalny obiekt. Zazwyczaj jest to domyślny efekt upuść, gdy widok może zaakceptować tego obiektu danych.  
   
  Aby uzyskać więcej informacji, zobacz przykład pojęcia zaawansowane MFC [OCLIENT](../../visual-cpp-samples.md).  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja jest nic nie rób i zwracać `DROPEFFECT_NONE`.  
+ Domyślna implementacja jest nic nie rób i zwracać DROPEFFECT_NONE.  
   
  Przesłonić tę funkcję, aby przygotować się do przyszłych wywołaniach [OnDragOver](#ondragover) funkcję elementu członkowskiego. Wszystkie dane wymagane z obiektu danych powinny zostać pobrane w tej chwili do użycia w `OnDragOver` funkcję elementu członkowskiego. Widok należy również zaktualizować w tej chwili, aby przekazać opinię visual użytkownika. Aby uzyskać więcej informacji, zobacz artykuł [przeciąganie i upuszczanie: Implementowanie docelowego upuszczania](../../mfc/drag-and-drop-implementing-a-drop-target.md).  
   
@@ -360,30 +360,30 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDataObject`  
+ *Obiekt pDataObject*  
  Wskazuje [COleDataObject](../../mfc/reference/coledataobject-class.md) przeciągany nad element docelowy upuszczania.  
   
- `dwKeyState`  
- Zawiera stan klawisze modyfikujące. To jest kombinacją dowolną liczbę następujących: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, i **MK_RBUTTON**.  
+ *dwKeyState*  
+ Zawiera stan klawisze modyfikujące. To jest kombinacją dowolną liczbę następujących: MK_CONTROL, MK_SHIFT MK_ALT, MK_LBUTTON, MK_MBUTTON i MK_RBUTTON.  
   
- `point`  
+ *Punkt*  
  Bieżąca pozycja myszy względem obszaru klienckiego widoku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość z zakresu od `DROPEFFECT` wyliczany typ, który wskazuje typ listy, który może mieć miejsce, jeśli użytkownik usunął obiektu, w tym miejscu. Typ listy często zależy od bieżącego stanu klucza wskazywany przez `dwKeyState`. Standardowe mapowanie Director do `DROPEFFECT` wartości to:  
+ Wartość z zakresu od DROPEFFECT wyliczany typ, który wskazuje typ listy, który może mieć miejsce, jeśli użytkownik usunął obiektu, w tym miejscu. Typ listy często zależy od bieżącego stanu klucza wskazywany przez *dwKeyState*. Standardowe mapowanie Director DROPEFFECT wartości to:  
   
-- `DROPEFFECT_NONE` Nie można porzucić obiektu danych w tym oknie.  
+- Nie można porzucić DROPEFFECT_NONE obiekt danych w tym oknie.  
   
-- `DROPEFFECT_LINK` Aby uzyskać **MK_CONTROL &#124; MK_SHIFT** tworzy powiązania między obiektem i jego serwera.  
+- DROPEFFECT_LINK dla MK_CONTROL &#124; MK_SHIFT tworzy powiązania między obiektem i jego serwera.  
   
-- `DROPEFFECT_COPY` Aby uzyskać **MK_CONTROL** tworzy kopię upuszczony obiekt.  
+- DROPEFFECT_COPY dla MK_CONTROL tworzy kopię upuszczony obiekt.  
   
-- `DROPEFFECT_MOVE` Aby uzyskać **MK_ALT** tworzy kopię upuszczony obiekt i usunąć oryginalny obiekt. Zazwyczaj jest to domyślny efekt upuść, gdy widok może zaakceptować obiekt danych.  
+- DROPEFFECT_MOVE dla MK_ALT tworzy kopię upuszczony obiekt i usuń oryginalny obiekt. Zazwyczaj jest to domyślny efekt upuść, gdy widok może zaakceptować obiekt danych.  
   
  Aby uzyskać więcej informacji, zobacz przykład pojęcia zaawansowane MFC [OCLIENT](../../visual-cpp-samples.md).  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja jest nic nie rób i zwracać `DROPEFFECT_NONE`.  
+ Domyślna implementacja jest nic nie rób i zwracać DROPEFFECT_NONE.  
   
  Należy przesłonić tę funkcję, aby przekazać opinię visual użytkownika podczas operacji przeciągania. Ponieważ ta funkcja jest wywoływana w sposób ciągły, dowolny kod zawarty w niej powinno być zoptymalizowane pod możliwie. Aby uzyskać więcej informacji, zobacz artykuł [przeciąganie i upuszczanie: Implementowanie docelowego upuszczania](../../mfc/drag-and-drop-implementing-a-drop-target.md).  
   
@@ -397,24 +397,24 @@ virtual DROPEFFECT OnDragScroll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwKeyState`  
- Zawiera stan klawisze modyfikujące. To jest kombinacją dowolną liczbę następujących: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, i **MK_RBUTTON**.  
+ *dwKeyState*  
+ Zawiera stan klawisze modyfikujące. To jest kombinacją dowolną liczbę następujących: MK_CONTROL, MK_SHIFT MK_ALT, MK_LBUTTON, MK_MBUTTON i MK_RBUTTON.  
   
- `point`  
+ *Punkt*  
  Zawiera lokalizację kursor w pikselach, względem ekranu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość z zakresu od `DROPEFFECT` wyliczany typ, który wskazuje typ listy, który może mieć miejsce, jeśli użytkownik usunął obiektu, w tym miejscu. Typ listy zależy zwykle od bieżącego stanu klucza wskazywanym przez `dwKeyState`. Standardowe mapowanie Director do `DROPEFFECT` wartości to:  
+ Wartość z zakresu od DROPEFFECT wyliczany typ, który wskazuje typ listy, który może mieć miejsce, jeśli użytkownik usunął obiektu, w tym miejscu. Typ listy zależy zwykle od bieżącego stanu klucza wskazywanym przez *dwKeyState*. Standardowe mapowanie Director DROPEFFECT wartości to:  
   
-- `DROPEFFECT_NONE` Nie można porzucić obiektu danych w tym oknie.  
+- Nie można porzucić DROPEFFECT_NONE obiekt danych w tym oknie.  
   
-- `DROPEFFECT_LINK` Aby uzyskać **MK_CONTROL &#124; MK_SHIFT** tworzy powiązania między obiektem i jego serwera.  
+- DROPEFFECT_LINK dla MK_CONTROL &#124; MK_SHIFT tworzy powiązania między obiektem i jego serwera.  
   
-- `DROPEFFECT_COPY` Aby uzyskać **MK_CONTROL** tworzy kopię upuszczony obiekt.  
+- DROPEFFECT_COPY dla MK_CONTROL tworzy kopię upuszczony obiekt.  
   
-- `DROPEFFECT_MOVE` Aby uzyskać **MK_ALT** tworzy kopię upuszczony obiekt i usunąć oryginalny obiekt.  
+- DROPEFFECT_MOVE dla MK_ALT tworzy kopię upuszczony obiekt i usuń oryginalny obiekt.  
   
-- `DROPEFFECT_SCROLL` Wskazuje, że operacja przewijania przeciągania może nastąpić, lub występuje w widok elementu docelowego.  
+- DROPEFFECT_SCROLL wskazuje, że operacja przewijania przeciągania może nastąpić lub występuje w widok elementu docelowego.  
   
  Aby uzyskać więcej informacji, zobacz przykład pojęcia zaawansowane MFC [OCLIENT](../../visual-cpp-samples.md).  
   
@@ -429,13 +429,13 @@ virtual void OnDraw(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *podstawowego kontrolera domeny*  
  Wskazuje kontekstu urządzenia używanego do renderowania obrazu dokumentu.  
   
 ### <a name="remarks"></a>Uwagi  
  Struktura wywołuje tę funkcję, aby wykonać ekranu, drukowania i podglądu wydruku, a następnie przekazuje kontekst innego urządzenia w każdym przypadku. Brak implementacji domyślnej.  
   
- Należy przesłonić tę funkcję, aby wyświetlić dokument. Można tworzyć przy użyciu wywołania interfejsu (GDI) urządzenia graficznego [CDC](../../mfc/reference/cdc-class.md) obiekt wskazywany przez `pDC` parametru. Możesz wybrać GDI zasoby, takie jak pióra lub czcionki, do kontekstu urządzenia przed rysowaniem i usuń zaznaczenie opcji je później. Często kod rysowania może być niezależny od urządzenia; oznacza to, że nie wymaga informacji o rodzaju urządzenia są wyświetlane obrazu.  
+ Należy przesłonić tę funkcję, aby wyświetlić dokument. Można tworzyć przy użyciu wywołania interfejsu (GDI) urządzenia graficznego [CDC](../../mfc/reference/cdc-class.md) obiekt wskazywany przez *kontrolera pDC* parametru. Możesz wybrać GDI zasoby, takie jak pióra lub czcionki, do kontekstu urządzenia przed rysowaniem i usuń zaznaczenie opcji je później. Często kod rysowania może być niezależny od urządzenia; oznacza to, że nie wymaga informacji o rodzaju urządzenia są wyświetlane obrazu.  
   
  Aby zoptymalizować rysunku, należy wywołać [RectVisible](../../mfc/reference/cdc-class.md#rectvisible) funkcji członkowskiej klasy kontekstu urządzenia, aby dowiedzieć się, będzie rysowany danego prostokąta. Do rozróżniania normalne ekranu i drukowanie należy wywołać [IsPrinting](../../mfc/reference/cdc-class.md#isprinting) funkcji członkowskiej klasy kontekstu urządzenia.  
   
@@ -450,28 +450,28 @@ virtual BOOL OnDrop(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDataObject`  
+ "obiekt pDataObject *  
  Wskazuje [COleDataObject](../../mfc/reference/coledataobject-class.md) który są przenoszone do miejsca docelowego.  
   
- `dropEffect`  
+ *dropEffect*  
  Efekt upuszczania, który użytkownik zgłosił żądanie.  
   
-- `DROPEFFECT_COPY` Tworzy kopię obiektu danych usuwane.  
+- DROPEFFECT_COPY tworzy kopię obiektu danych usuwane.  
   
-- `DROPEFFECT_MOVE` Przenosi obiekt danych do bieżącej lokalizacji myszy.  
+- DROPEFFECT_MOVE przenosi obiekt danych do bieżącej lokalizacji myszy.  
   
-- `DROPEFFECT_LINK` Tworzy łącze z obiektu danych i serwerem.  
+- DROPEFFECT_LINK tworzy łącze z obiektu danych i serwerem.  
   
- `point`  
+ *Punkt*  
  Bieżąca pozycja myszy względem obszaru klienckiego widoku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli listy zakończyło się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja nie robi nic i zwraca **FALSE**.  
+ Domyślna implementacja nie robi nic i zwraca wartość FALSE.  
   
- Zastąpienie tej funkcji do zaimplementowania efekt upuszczanie OLE do obszaru klienckiego widoku. Obiekt danych można zbadać za pomocą `pDataObject` dla danych ze Schowka formaty i danych usunięte w określonym momencie.  
+ Zastąpienie tej funkcji do zaimplementowania efekt upuszczanie OLE do obszaru klienckiego widoku. Obiekt danych można zbadać za pomocą *pDataObject* dla danych ze Schowka formaty i danych usunięte w określonym momencie.  
   
 > [!NOTE]
 >  Platformę nie wywołanie tej funkcji, jeśli zastąpienie [OnDropEx](#ondropex) w tej klasie widoku.  
@@ -488,20 +488,20 @@ virtual DROPEFFECT OnDropEx(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDataObject`  
+ *Obiekt pDataObject*  
  Wskazuje [COleDataObject](../../mfc/reference/coledataobject-class.md) który są przenoszone do miejsca docelowego.  
   
- `dropDefault`  
- Wpływ, jaki użytkownik wybrał dla operacji upuszczania domyślne na podstawie bieżącego stanu klucza. Być może jest ona `DROPEFFECT_NONE`. Efekty upuszczania omówiono w sekcji uwag.  
+ *dropDefault*  
+ Wpływ, jaki użytkownik wybrał dla operacji upuszczania domyślne na podstawie bieżącego stanu klucza. Może to być DROPEFFECT_NONE. Efekty upuszczania omówiono w sekcji uwag.  
   
- `dropList`  
+ *listy rozwijanej*  
  Lista efekty upuszczania, które obsługuje miejsca źródłowego. Wartości efekt listy można łączyć, używając wartości bitowe lub ( **&#124;**) operacji. Efekty upuszczania omówiono w sekcji uwag.  
   
- `point`  
+ *Punkt*  
  Bieżąca pozycja myszy względem obszaru klienckiego widoku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Efekt upuszczania, który jest wynikiem próby porzucenia w lokalizacji określonej przez `point`. Musi to być jedna z wartości wskazywane przez *dropEffectList*. Efekty upuszczania omówiono w sekcji uwag.  
+ Efekt upuszczania, który jest wynikiem próby porzucenia w lokalizacji określonej przez *punktu*. Musi to być jedna z wartości wskazywane przez *dropEffectList*. Efekty upuszczania omówiono w sekcji uwag.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja jest nic nie rób i zwracać wartość zastępczego (-1) aby wskazać, że platformę powinny wywoływać [OnDrop](#ondrop) programu obsługi.  
@@ -512,27 +512,27 @@ virtual DROPEFFECT OnDropEx(
   
 -   Jeśli prawy przycisk myszy jest wyłączony, zastąpienia powinien być wyświetlany menu podręczne, które oferuje obsługę efekty upuszczania przez źródło upuszczania.  
   
-    -   Sprawdź `dropList` do określenia wpływu upuszczania obsługiwane przez źródło upuszczania. Włącz tylko te akcje w menu podręcznym.  
+    -   Sprawdź *listy rozwijanej* do określenia wpływu upuszczania obsługiwane przez źródło upuszczania. Włącz tylko te akcje w menu podręcznym.  
   
-    -   Użyj [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996) można ustawić domyślną akcję na podstawie `dropDefault`.  
+    -   Użyj [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996) można ustawić domyślną akcję na podstawie *dropDefault*.  
   
     -   Na koniec wykonaj akcję wskazywanym przez określonego użytkownika, w menu podręcznym.  
   
--   Jeśli prawy przycisk myszy nie jest w dół, zastąpienia należy przetworzyć tę jako standardowa upuść żądanie. Za pomocą efektu upuszczania określone w `dropDefault`. Alternatywnie zastąpienia może zwrócić wartość zastępczego (-1) aby wskazać, że `OnDrop` obsłuży tej operacji usuwania.  
+-   Jeśli prawy przycisk myszy nie jest w dół, zastąpienia należy przetworzyć tę jako standardowa upuść żądanie. Za pomocą efektu upuszczania określone w *dropDefault*. Alternatywnie zastąpienia może zwrócić wartość zastępczego (-1) aby wskazać, że `OnDrop` obsłuży tej operacji usuwania.  
   
- Użyj `pDataObject` do sprawdzenia `COleDataObject` dla danych ze Schowka format i danych usunięte w określonym momencie.  
+ Użyj *pDataObject* do sprawdzenia `COleDataObject` dla danych ze Schowka format i danych usunięte w określonym momencie.  
   
  Efekty upuszczania opisują akcję skojarzoną z operacji usuwania. Lista poniższych upuszczania efekty:  
   
-- `DROPEFFECT_NONE` Spadek będzie niemożliwe.  
+- DROPEFFECT_NONE spadek nie będzie dozwolone.  
   
-- `DROPEFFECT_COPY` Czy można wykonać operacji kopiowania.  
+- DROPEFFECT_COPY, który będzie można wykonać operacji kopiowania.  
   
-- `DROPEFFECT_MOVE` Czy można wykonać operacji przenoszenia.  
+- DROPEFFECT_MOVE, który będzie można wykonać operacji przenoszenia.  
   
-- `DROPEFFECT_LINK` Czy można ustanowić łącze z porzuconych danych do oryginalnych danych.  
+- Czy można ustanowić łącze A DROPEFFECT_LINK porzuconych danych do oryginalnych danych.  
   
-- `DROPEFFECT_SCROLL` Wskazuje, że operacja przewijania przeciągania może nastąpić, lub jest wykonywana w celu.  
+- DROPEFFECT_SCROLL oznacza to, że operację przeciągania przewijania może nastąpić lub występuje w miejscu docelowym.  
   
  Aby uzyskać więcej informacji na temat ustawiania domyślne polecenie menu, zobacz [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996) w zestawie Windows SDK i [CMenu::GetSafeHmenu](../../mfc/reference/cmenu-class.md#getsafehmenu) w tym woluminie.  
   
@@ -546,10 +546,10 @@ virtual void OnEndPrinting(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *podstawowego kontrolera domeny*  
  Wskazuje kontekstu urządzenia drukarki.  
   
- `pInfo`  
+ *pInfo*  
  Wskazuje [cprintinfo —](../../mfc/reference/cprintinfo-structure.md) struktury, która opisuje bieżącego zadania drukowania.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -567,20 +567,20 @@ virtual void OnEndPrintPreview(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *podstawowego kontrolera domeny*  
  Wskazuje kontekstu urządzenia drukarki.  
   
- `pInfo`  
+ *pInfo*  
  Wskazuje [cprintinfo —](../../mfc/reference/cprintinfo-structure.md) struktury, która opisuje bieżącego zadania drukowania.  
   
- `point`  
+ *Punkt*  
  Określa punkt strony, który został ostatnio wyświetlane w wersji zapoznawczej.  
   
- `pView`  
+ *pView*  
  Wskazuje obiekt widok używany do podglądu.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja ta funkcja wymaga [OnEndPrinting](#onendprinting) funkcji członkowskiej i przywraca rozpoczęcia głównego okna ramowego do stanu sprzed podglądu wydruku. Należy przesłonić tę funkcję, wykonywanie specjalnego przetwarzania, gdy tryb podglądu jest zakończony. Na przykład, jeśli chcesz zachować pozycji użytkownika w dokumencie podczas przełączania z trybu podglądu do trybu normalnego wyświetlania można przechodzić do pozycji opisanego przez `point` parametru i `m_nCurPage` członkiem `CPrintInfo` — struktura które `pInfo` wskazuje parametr.  
+ Domyślna implementacja ta funkcja wymaga [OnEndPrinting](#onendprinting) funkcji członkowskiej i przywraca rozpoczęcia głównego okna ramowego do stanu sprzed podglądu wydruku. Należy przesłonić tę funkcję, wykonywanie specjalnego przetwarzania, gdy tryb podglądu jest zakończony. Na przykład, jeśli chcesz zachować pozycji użytkownika w dokumencie podczas przełączania z trybu podglądu do trybu normalnego wyświetlania można przechodzić do pozycji opisanego przez *punktu* parametru i `m_nCurPage` członkiem `CPrintInfo` struktury, która *pInfo* wskazuje parametr.  
   
  Wywoływanie zawsze wersja klasy podstawowej `OnEndPrintPreview` z zastąpienia, zwykle na końcu funkcji.  
   
@@ -592,7 +592,7 @@ virtual void OnInitialUpdate();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja ta funkcja wymaga [OnUpdate](#onupdate) funkcji członkowskiej bez informacji o wskazówki (oznacza to, za pomocą domyślnej wartości 0 dla `lHint` parametru i **NULL** dla `pHint` parametru). Należy przesłonić tę funkcję, by wykonać jednorazowe inicjowanie, która wymaga informacji na temat dokumentu. Na przykład jeśli aplikacja ma dokumentów o stałym rozmiarze, funkcja ta zainicjować limity przewijania widoku na podstawie rozmiaru dokumentu. Jeśli aplikacja obsługuje dokumenty o zmiennej długości, użyj [OnUpdate](#onupdate) zaktualizować przewijania ogranicza zawsze zmiany w dokumencie.  
+ Domyślna implementacja ta funkcja wymaga [OnUpdate](#onupdate) funkcji członkowskiej bez informacji o wskazówki (oznacza to, za pomocą domyślnej wartości 0 dla *lHint* parametr i wartość NULL w przypadku  *pHint* parametru). Należy przesłonić tę funkcję, by wykonać jednorazowe inicjowanie, która wymaga informacji na temat dokumentu. Na przykład jeśli aplikacja ma dokumentów o stałym rozmiarze, funkcja ta zainicjować limity przewijania widoku na podstawie rozmiaru dokumentu. Jeśli aplikacja obsługuje dokumenty o zmiennej długości, użyj [OnUpdate](#onupdate) zaktualizować przewijania ogranicza zawsze zmiany w dokumencie.  
   
 ##  <a name="onpreparedc"></a>  CView::OnPrepareDC  
  Metoda wywoływana przez platformę przed [OnDraw](#ondraw) funkcja członkowska jest wywoływana dla ekranu i przed [OnPrint](#onprint) funkcja członkowska jest wywoływana dla każdej strony podczas drukowania lub podglądu drukowania.  
@@ -604,24 +604,24 @@ virtual void OnPrepareDC(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *podstawowego kontrolera domeny*  
  Wskazuje kontekstu urządzenia używanego do renderowania obrazu dokumentu.  
   
- `pInfo`  
- Wskazuje [cprintinfo —](../../mfc/reference/cprintinfo-structure.md) struktury, który opisuje bieżącego zadania drukowania, jeśli `OnPrepareDC` jest wywoływana dla drukowania lub podglądu drukowania; `m_nCurPage` elementu członkowskiego Określa stronę o do drukowania. Ten parametr jest **NULL** Jeśli `OnPrepareDC` jest wywoływana dla ekranu.  
+ *pInfo*  
+ Wskazuje [cprintinfo —](../../mfc/reference/cprintinfo-structure.md) struktury, który opisuje bieżącego zadania drukowania, jeśli `OnPrepareDC` jest wywoływana dla drukowania lub podglądu drukowania; `m_nCurPage` elementu członkowskiego Określa stronę o do drukowania. Ten parametr ma wartość NULL, jeśli `OnPrepareDC` jest wywoływana dla ekranu.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja tej funkcji nie działają, jeśli funkcja jest wywoływana dla ekranu. Jednak ta funkcja jest przesłonięte w klasach pochodnych, takich jak [CScrollView](../../mfc/reference/cscrollview-class.md), by dostosować atrybuty kontekstu urządzenia; w związku z tym, zawsze powinny wywoływać implementację klasy podstawowej na początku zastąpienia.  
   
- Jeśli funkcja jest wywoływana do drukowania, domyślna implementacja sprawdza, czy strona informacji przechowywanych w `pInfo` parametru. Jeśli nie została określona długość dokumentu, `OnPrepareDC` przyjmuje dokumentu do jednej strony, które długie i zatrzymuje pętli drukowania po wydrukowaniu jedną stronę. Funkcja zatrzymuje pętli wydruku przez ustawienie `m_bContinuePrinting` elementu członkowskiego struktury do **FALSE**.  
+ Jeśli funkcja jest wywoływana do drukowania, domyślna implementacja sprawdza, czy strona informacji przechowywanych w *pInfo* parametru. Jeśli nie została określona długość dokumentu, `OnPrepareDC` przyjmuje dokumentu do jednej strony, które długie i zatrzymuje pętli drukowania po wydrukowaniu jedną stronę. Funkcja zatrzymuje pętli wydruku przez ustawienie `m_bContinuePrinting` elementu członkowskiego struktury na wartość FALSE.  
   
  Zastąpienie `OnPrepareDC` dla żadnego z następujących powodów:  
   
 -   Aby dostosować atrybuty kontekstu urządzenia, zgodnie z potrzebami dla określonej strony. Na przykład ustawić tryb mapowania lub innych parametrów kontekstu urządzenia należy to zrobić w tej funkcji.  
   
--   Aby wykonać godzina drukowania podział na strony. Zwykle określ długość dokumentu po rozpoczęciu drukowanie za pomocą [OnPreparePrinting](#onprepareprinting) funkcję elementu członkowskiego. Jednak jeśli nie znasz z wyprzedzeniem, jak długo dokumentu jest (na przykład podczas drukowania nieokreślonej liczba rekordów z bazy danych), Zastąp `OnPrepareDC` próba na końcu dokumentu podczas drukowania jest niemożliwe. Jeśli istnieje już dokument do wydrukowania, należy skonfigurować `m_bContinuePrinting` członkiem `CPrintInfo` struktury do **FALSE**.  
+-   Aby wykonać godzina drukowania podział na strony. Zwykle określ długość dokumentu po rozpoczęciu drukowanie za pomocą [OnPreparePrinting](#onprepareprinting) funkcję elementu członkowskiego. Jednak jeśli nie znasz z wyprzedzeniem, jak długo dokumentu jest (na przykład podczas drukowania nieokreślonej liczba rekordów z bazy danych), Zastąp `OnPrepareDC` próba na końcu dokumentu podczas drukowania jest niemożliwe. Jeśli istnieje już dokument do wydrukowania, należy skonfigurować `m_bContinuePrinting` członkiem `CPrintInfo` struktury na wartość FALSE.  
   
--   Aby wysłać kody ESC do drukarki na podstawie strony strona. Wysłać kody ucieczki z `OnPrepareDC`, wywołaj **Escape** funkcji członkowskiej klasy `pDC` parametru.  
+-   Aby wysłać kody ESC do drukarki na podstawie strony strona. Wysłać kody ucieczki z `OnPrepareDC`, wywołaj `Escape` funkcji członkowskiej klasy *kontrolera pDC* parametru.  
   
  Wywołanie klasy podstawowej wersji `OnPrepareDC` na początku zastąpienia.  
   
@@ -636,7 +636,7 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pInfo`  
+ *pInfo*  
  Wskazuje [cprintinfo —](../../mfc/reference/cprintinfo-structure.md) struktury, która opisuje bieżącego zadania drukowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -645,13 +645,13 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 ### <a name="remarks"></a>Uwagi  
  Domyślna implementacja nie działa.  
   
- Należy przesłonić tę funkcję, aby włączyć drukowania i podglądu wydruku. Wywołanie [DoPreparePrinting](#doprepareprinting) funkcji członkowskiej, przekazanie jej `pInfo` parametr, a następnie wróć jego wartości zwracanej; `DoPreparePrinting` Wyświetla okno dialogowe Drukuj i tworzy kontekstu urządzenia drukarki. Jeśli chcesz zainicjować okno dialogowe drukowania z wartości innych niż domyślne, przypisanie wartości do elementów członkowskich `pInfo`. Na przykład, jeśli znasz długość dokumentu, wartość należy przekazać do [SetMaxPage](../../mfc/reference/cprintinfo-structure.md#setmaxpage) funkcji członkowskiej klasy `pInfo` przed wywołaniem `DoPreparePrinting`. Ta wartość jest wyświetlana w polu do: pole w części zakresu okno dialogowe drukowania.  
+ Należy przesłonić tę funkcję, aby włączyć drukowania i podglądu wydruku. Wywołanie [DoPreparePrinting](#doprepareprinting) funkcji członkowskiej, przekazanie jej *pInfo* parametr, a następnie wróć jego wartości zwracanej; `DoPreparePrinting` Wyświetla okno dialogowe Drukuj i tworzy kontekstu urządzenia drukarki. Jeśli chcesz zainicjować okno dialogowe drukowania z wartości innych niż domyślne, przypisanie wartości do elementów członkowskich *pInfo*. Na przykład, jeśli znasz długość dokumentu, wartość należy przekazać do [SetMaxPage](../../mfc/reference/cprintinfo-structure.md#setmaxpage) funkcji członkowskiej klasy *pInfo* przed wywołaniem `DoPreparePrinting`. Ta wartość jest wyświetlana w polu do: pole w części zakresu okno dialogowe drukowania.  
   
- `DoPreparePrinting` nie wyświetla okno dialogowe drukowania dla zadania w wersji zapoznawczej. Jeśli chcesz pominąć okno dialogowe drukowania w zadaniu drukowania, sprawdź, czy **m_bPreview** członkiem `pInfo` jest **FALSE** i ustaw ją na **TRUE** przed przekazaniem go do `DoPreparePrinting`; zresetować go do **FALSE** później.  
+ `DoPreparePrinting` nie wyświetla okno dialogowe drukowania dla zadania w wersji zapoznawczej. Jeśli chcesz pominąć okno dialogowe drukowania w zadaniu drukowania, sprawdź, czy `m_bPreview` członkiem *pInfo* ma wartość FALSE, a następnie ustaw wartość true przed przekazaniem go do `DoPreparePrinting`; zresetować je później FAŁSZ.  
   
  Jeśli zachodzi potrzeba wykonania operacji inicjowania, które wymagają dostępu do `CDC` obiekt reprezentujący drukarki kontekstu urządzenia (na przykład należy wiedzieć przed określeniem długość dokumentu do rozmiaru strony), Zastąp `OnBeginPrinting` elementu członkowskiego Funkcja.  
   
- Jeśli chcesz ustawić wartość **m_nNumPreviewPages** lub **m_strPageDesc** członkami `pInfo` parametru zrobić po wywołaniu `DoPreparePrinting`. `DoPreparePrinting` Zestawy funkcji elementów członkowskich **m_nNumPreviewPages** wartość znalezioną w aplikacji. Plik INI i ustawia **m_strPageDesc** na wartość domyślną.  
+ Jeśli chcesz ustawić wartość `m_nNumPreviewPages` lub `m_strPageDesc` członkami *pInfo* parametru zrobić po wywołaniu `DoPreparePrinting`. `DoPreparePrinting` Zestawy funkcji elementów członkowskich `m_nNumPreviewPages` wartość znalezioną w aplikacji. Plik INI i ustawia `m_strPageDesc` na wartość domyślną.  
   
 ### <a name="example"></a>Przykład  
   Zastąpienie `OnPreparePrinting` i Wywołaj `DoPreparePrinting` z zastąpienie tak, aby w ramach spowoduje wyświetlenie okna dialogowego drukowania i utworzenie drukarki kontrolera domeny do.  
@@ -672,14 +672,14 @@ virtual void OnPrint(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDC`  
+ *podstawowego kontrolera domeny*  
  Wskazuje kontekstu urządzenia drukarki.  
   
- `pInfo`  
+ *pInfo*  
  Wskazuje `CPrintInfo` struktury, która opisuje bieżącego zadania drukowania.  
   
 ### <a name="remarks"></a>Uwagi  
- Dla każdej strony drukowanej struktura wywołuje natychmiast po wywołaniu tej funkcji [OnPrepareDC](#onpreparedc) funkcję elementu członkowskiego. Drukowanej strony jest określona przez `m_nCurPage` członkiem [cprintinfo —](../../mfc/reference/cprintinfo-structure.md) struktury, która `pInfo` wskazuje. Domyślna implementacja wywołuje [OnDraw](#ondraw) funkcji członkowskiej i przekazuje je kontekstu urządzenia drukarki.  
+ Dla każdej strony drukowanej struktura wywołuje natychmiast po wywołaniu tej funkcji [OnPrepareDC](#onpreparedc) funkcję elementu członkowskiego. Drukowanej strony jest określona przez `m_nCurPage` członkiem [cprintinfo —](../../mfc/reference/cprintinfo-structure.md) struktury, która *pInfo* wskazuje. Domyślna implementacja wywołuje [OnDraw](#ondraw) funkcji członkowskiej i przekazuje je kontekstu urządzenia drukarki.  
   
  Zastąpienie tej funkcji dla żadnego z następujących powodów:  
   
@@ -691,7 +691,7 @@ virtual void OnPrint(
   
 -   Aby zaimplementować nagłówków i stopek. Można nadal używać `OnDraw` celu renderowania przez ograniczenie obszaru można drukować na.  
   
- Należy pamiętać, że **m_rectDraw** członkiem `pInfo` parametru opisano obszar drukowania strony w jednostkach logicznych.  
+ Należy pamiętać, że `m_rectDraw` członkiem *pInfo* parametru opisano obszar drukowania strony w jednostkach logicznych.  
   
  Nie wywołuj `OnPrepareDC` w zastąpienia z `OnPrint`; framework wywołania `OnPrepareDC` automatycznie przed wywołaniem `OnPrint`.  
   
@@ -713,34 +713,34 @@ virtual BOOL OnScroll(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nScrollCode`  
+ *nScrollCode*  
  Kod paska przewijania, który wskazuje użytkownika do przewijania żądania. Ten parametr składa się z dwóch części: mniej znaczącego bajtu, który określa typ przewijania występujących w poziomie, a bajt znaczących, który określa typ przewijania występujących w pionie:  
   
-- **SB_BOTTOM** Przewija do dołu.  
+- Przewija SB_BOTTOM do dołu.  
   
-- **SB_LINEDOWN** Przewija jeden wiersz w dół.  
+- Przewija SB_LINEDOWN jeden wiersz w dół.  
   
-- **SB_LINEUP** Przewija jeden wiersz w górę.  
+- Przewija SB_LINEUP jeden wiersz w górę.  
   
-- **SB_PAGEDOWN** Przewija jedną stronę w dół.  
+- Przewija SB_PAGEDOWN jedną stronę w dół.  
   
-- **SB_PAGEUP** Przewija jedną stronę w górę.  
+- Przewija SB_PAGEUP jedną stronę w górę.  
   
-- **SB_THUMBTRACK** Drags suwaka do określonej pozycji. Bieżąca pozycja jest określona w `nPos`.  
+- SB_THUMBTRACK Drags przewiń okno na określonej pozycji. Bieżąca pozycja jest określona w *nPos*.  
   
-- **SB_TOP** Przewija do góry.  
+- Przewija SB_TOP do góry.  
   
- `nPos`  
- Zawiera bieżącą pozycję pola przewijania, jeśli kod pasek przewijania jest **SB_THUMBTRACK**; w przeciwnym razie nie jest używany. W zależności od zakresu początkowej przewijania `nPos` może być ujemna ani powinny być rzutowane na `int` w razie potrzeby.  
+ *nPos*  
+ Zawiera bieżącą pozycję pola przewijania, jeśli kod pasek przewijania jest SB_THUMBTRACK; w przeciwnym razie nie jest używany. W zależności od zakresu początkowej przewijania *nPos* może być ujemna ani powinny być rzutowane na **int** w razie potrzeby.  
   
- `bDoScroll`  
- Określa, czy rzeczywiście należy wykonać przewijania określonej akcji. Jeśli **ma wartość TRUE,** , a następnie przewijanie powinno nastąpić; Jeśli **FALSE**, a następnie przewijanie nie powinien wystąpić.  
+ *bDoScroll*  
+ Określa, czy rzeczywiście należy wykonać przewijania określonej akcji. Jeśli PRAWDA, następnie przewijanie powinno nastąpić; w przypadku wartości FAŁSZ następnie przewijanie nie powinien wystąpić.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli `bDoScroll` jest **TRUE** i widoku została faktycznie przewijane, zwracany jest różna od zera; w przeciwnym razie 0. Jeśli `bDoScroll` jest **FALSE**, zwracany jest wartość, która będzie zwrócono Jeśli `bDoScroll` zostały **TRUE**, nawet jeśli użytkownik faktycznie nie przewijania.  
+ Jeśli *bDoScroll* ma wartość TRUE i widoku została faktycznie przewijane, zwracany jest różna od zera; w przeciwnym razie 0. Jeśli *bDoScroll* jest wartość FAŁSZ, a następnie zwraca wartość, która będzie zwrócono Jeśli *bDoScroll* zostały wartość TRUE, nawet jeśli użytkownik faktycznie nie przewijania.  
   
 ### <a name="remarks"></a>Uwagi  
- W przypadku jednego ta funkcja jest wywoływana przez platformę z `bDoScroll` ustawioną **TRUE** gdy widok odbiera komunikat pasek przewijania. W takim przypadku należy faktycznie przewijania widoku. W przeciwnym razie ta funkcja jest wywoływana z `bDoScroll` ustawioną **FALSE** po elementu OLE początkowo zostanie przeciągnięty w regionie przewijania automatycznego miejsca docelowego, zanim faktycznie przewijanie ma miejsce. W takim przypadku należy nie faktycznie przewijania widoku.  
+ W przypadku jednego ta funkcja jest wywoływana przez platformę z *bDoScroll* ustawiona na wartość TRUE, gdy widok otrzyma komunikat pasek przewijania. W takim przypadku należy faktycznie przewijania widoku. W przeciwnym razie ta funkcja jest wywoływana z *bDoScroll* ustawiona na wartość FALSE, gdy element OLE początkowo zostanie przeciągnięty w regionie przewijania automatycznego miejsca docelowego przed faktycznie przewijanie ma miejsce. W takim przypadku należy nie faktycznie przewijania widoku.  
   
 ##  <a name="onscrollby"></a>  CView::OnScrollBy  
  Wywoływane przez platformę, gdy użytkownik odwiedza obszarze poza obecny widoku dokumentu, przeciągając element OLE względem granic bieżącego widoku lub manipulowanie pionowych lub poziomych pasków przewijania.  
@@ -752,11 +752,11 @@ virtual BOOL OnScrollBy(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `sizeScroll`  
+ *sizeScroll*  
  Liczba pikseli przewijane w poziomie i w pionie.  
   
- `bDoScroll`  
- Określa, czy występuje przewijania widoku. Jeśli **ma wartość TRUE,** , a następnie przewijania odbywa się; Jeśli **FALSE**, a następnie przewijanie nie występuje.  
+ *bDoScroll*  
+ Określa, czy występuje przewijania widoku. Jeśli PRAWDA, następnie przewijanie ma miejsce; w przypadku wartości FAŁSZ następnie przewijanie nie występuje.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Różna od zera, jeśli widok mógł być przewijane; w przeciwnym razie 0.  
@@ -766,7 +766,7 @@ virtual BOOL OnScrollBy(
   
  Domyślna implementacja tej metody nie zmienia widoku, ale jeśli nie zostanie wywołany, widok nie będzie przewijany w `CScrollView`-klasy.  
   
- Jeśli dokument szerokości lub wysokości przekracza 32767 pikseli, przewijanie poza 32767 będzie działać, ponieważ `OnScrollBy` jest wywoływana z nieprawidłową `sizeScroll` argumentu.  
+ Jeśli dokument szerokości lub wysokości przekracza 32767 pikseli, przewijanie poza 32767 będzie działać, ponieważ `OnScrollBy` jest wywoływana z nieprawidłową *sizeScroll* argumentu.  
   
 ##  <a name="onupdate"></a>  CView::OnUpdate  
  Wywoływane przez platformę po zmodyfikowaniu widoku dokumentu; Ta funkcja jest wywoływana [CDocument::UpdateAllViews](../../mfc/reference/cdocument-class.md#updateallviews) i umożliwia widoku, aby zaktualizować jej wyświetlania w celu odzwierciedlenia tych zmian.  
@@ -779,23 +779,23 @@ virtual void OnUpdate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pSender`  
- Wskazuje widok, który zmodyfikował dokument, lub **NULL** w przypadku wszystkich widoków aktualizacji.  
+ *pSender*  
+ Wskazuje widok, który zmodyfikował dokument, lub wartość NULL, jeśli mają być aktualizowane wszystkie widoki.  
   
- `lHint`  
+ *lHint*  
  Zawiera informacje dotyczące zmiany.  
   
- `pHint`  
+ *pHint*  
  Punkty do przechowywania informacji na temat zmian obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Jest również wywoływany przez domyślną implementację elementu [OnInitialUpdate](#oninitialupdate). Domyślna implementacja unieważnia całego obszaru klienta, oznaczając je do malowania podczas następnego `WM_PAINT` odebrać wiadomości. Należy przesłonić tę funkcję, jeśli chcesz zaktualizować tylko tych regionów, które mapują zmodyfikowane części dokumentu. W tym celu należy przekazać informacji na temat zmiany przy użyciu parametrów wskazówki.  
+ Jest również wywoływany przez domyślną implementację elementu [OnInitialUpdate](#oninitialupdate). Domyślna implementacja unieważnia całego obszaru klienta, oznaczając je do malowania po odebraniu następny komunikat WM_PAINT. Należy przesłonić tę funkcję, jeśli chcesz zaktualizować tylko tych regionów, które mapują zmodyfikowane części dokumentu. W tym celu należy przekazać informacji na temat zmiany przy użyciu parametrów wskazówki.  
   
- Aby użyć `lHint`, zdefiniuj wartości wskazówka specjalne, zwykle maską bitów lub Typ wyliczany i dokument przekazać jedną z następujących wartości. Do użycia `pHint`, klasa wyprowadzona z wskazówka [CObject](../../mfc/reference/cobject-class.md) i przekazać wskaźnik do obiektu wskazówkę; w przypadku przesłaniania dokumentu `OnUpdate`, użyj [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof) funkcji Członkowskich Określ typ środowiska wykonawczego obiektu wskazówki.  
+ Aby użyć *lHint*, zdefiniuj wartości wskazówka specjalne, zwykle maską bitów lub Typ wyliczany i dokument przekazać jedną z następujących wartości. Aby użyć *pHint*, klasa wyprowadzona z wskazówka [CObject](../../mfc/reference/cobject-class.md) i przekazać wskaźnik do obiektu wskazówkę; w przypadku przesłaniania dokumentu `OnUpdate`, użyj [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof) Funkcja członkowska można ustalić typu czasu wykonywania obiektu wskazówki.  
   
  Zazwyczaj powinien nie wykonywania rysowanie bezpośrednio z `OnUpdate`. Zamiast tego należy określić prostokąt opisujący we współrzędnych urządzenia obszar, który wymaga zaktualizowania; Przekaż prostokąta do [CWnd::InvalidateRect](../../mfc/reference/cwnd-class.md#invalidaterect). Powoduje to rysowania do przy następnym [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) odebrać wiadomości.  
   
- Jeśli `lHint` 0 i `pHint` jest **NULL**, dokumentu zostało wysłane powiadomienie o aktualizacji ogólnych. Jeśli widok otrzyma powiadomienie o aktualizacji ogólnych lub nie można zdekodować wskazówek, należy go unieważnienie obszaru klienckiego cały.  
+ Jeśli *lHint* 0 i *pHint* ma wartość NULL, dokumentu zostało wysłane powiadomienie o aktualizacji ogólnych. Jeśli widok otrzyma powiadomienie o aktualizacji ogólnych lub nie można zdekodować wskazówek, należy go unieważnienie obszaru klienckiego cały.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przykładowe MFC MDIDOCVW](../../visual-cpp-samples.md)   

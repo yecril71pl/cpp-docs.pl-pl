@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59f5ab622d6124e830028ea61a0c77583f76d015
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 925e93afae4682497263eb96832aa466c6034231
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374756"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121319"
 ---
 # <a name="cusertool-class"></a>Klasa CUserTool
 Narzędzie użytkownika jest element menu uruchomionym aplikacji zewnętrznej. **Narzędzia** na karcie **Dostosuj** okno dialogowe ( [CMFCToolBarsCustomizeDialog klasy](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) umożliwia użytkownikowi, aby dodać użytkownika narzędzia i określ nazwę, argumentów i początkowy katalog dla każdego użytkownika narzędzia.  
@@ -122,10 +122,10 @@ void DrawToolIcon(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `pDC`  
+ [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  Określa współrzędne obszaru, aby wyświetlić ikonę.  
   
 ##  <a name="getcommand"></a>  CUserTool::GetCommand  
@@ -169,7 +169,7 @@ virtual HICON LoadDefaultIcon();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Dojście do ikony załadować ( `HICON`), lub `NULL` Jeśli ikona domyślna nie może zostać załadowany.  
+ Dojście do ikony załadować (HICON), lub wartość NULL, jeśli nie można załadować domyślną ikonę.  
   
 ### <a name="remarks"></a>Uwagi  
  Platformę wywołuje tę metodę, gdy nie można załadować z pliku wykonywalnego narzędzia ikony narzędzia zdefiniowane przez użytkownika.  
@@ -211,7 +211,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `ar`  
+ [in] *ar*  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -223,7 +223,7 @@ void SetCommand(LPCTSTR lpszCmd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] `lpszCmd`  
+ [in] *lpszCmd*  
  Określa nową aplikację do skojarzenia z narzędzia użytkownika.  
   
 ### <a name="remarks"></a>Uwagi  

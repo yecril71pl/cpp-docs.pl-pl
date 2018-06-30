@@ -1,7 +1,7 @@
 ---
 title: Komentarze języka C | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a6c2d32596aa8205d02ee5cddb28b5ba3c8166
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c2eccff8ab582270f766fdbcb448fdb91145e348
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384349"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121747"
 ---
 # <a name="c-comments"></a>Komentarze języka C
 "comment" jest sekwencji znaków, zaczynając od kombinacji kreską ułamkową/gwiazdki (<b>/\*</b>) który jest traktowany jako pojedynczy znak odstępu przez kompilator, a w przeciwnym razie jest ignorowana. Komentarz może zawierać dowolną kombinację znaków z zestawu można przedstawić znaku, łącznie ze znakami nowego wiersza, z wyłączeniem ogranicznika "końca komentarza" (<b>\*/</b>). Komentarze mogą zajmować więcej niż jeden wiersz, ale nie mogą być zagnieżdżone.  
@@ -70,13 +70,13 @@ printf( "Hello\n" );  /* Comments can go here */
   
  **Microsoft Specific**  
   
- Kompilator Microsoft obsługuje również Komentarze jednowierszowe poprzedzony przez dwa ukośniki (**//**). W przypadku kompilacji z użyciem /Za (standard ANSI), te komentarze spowodują wygenerowanie błędów. Nie można rozszerzać komentarzy do drugiego wiersza.  
+ Kompilator Microsoft obsługuje również Komentarze jednowierszowe poprzedzony przez dwa ukośniki (__//__). W przypadku kompilacji z użyciem /Za (standard ANSI), te komentarze spowodują wygenerowanie błędów. Nie można rozszerzać komentarzy do drugiego wiersza.  
   
 ```  
 // This is a valid comment  
 ```  
   
- Komentarze, począwszy od dwa ukośniki (**//**) kończą się przez następny znak nowego wiersza, który nie jest poprzedzony znakiem ucieczki. W następnym przykładzie znaku nowego wiersza jest poprzedzony ukośnikiem (**\\**), tworzenie "sekwencji unikowej". Ta sekwencja ucieczki powoduje, że kompilator traktuje następny wiersz jako część poprzedniego wiersza. (Aby uzyskać więcej informacji, zobacz [sekwencji ucieczki](../c-language/escape-sequences.md).)  
+ Komentarze, począwszy od dwa ukośniki (__//__) kończą się przez następny znak nowego wiersza, który nie jest poprzedzony znakiem ucieczki. W następnym przykładzie znaku nowego wiersza jest poprzedzony ukośnikiem (**\\**), tworzenie "sekwencji unikowej". Ta sekwencja ucieczki powoduje, że kompilator traktuje następny wiersz jako część poprzedniego wiersza. (Aby uzyskać więcej informacji, zobacz [sekwencji ucieczki](../c-language/escape-sequences.md).)  
   
 ```  
 // my comment \  

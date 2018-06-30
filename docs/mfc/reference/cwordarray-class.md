@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf19865b4c11bb8305bea62b3682faebe39bef74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 562f0eff1470a4754d3eaac15a94d08fefb95951
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376688"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123022"
 ---
 # <a name="cwordarray-class"></a>Klasa CWordArray
 Obsługuje tablic słowa 16-bitowych.  
@@ -69,7 +69,7 @@ class CWordArray : public CObject
 ```  
   
 ## <a name="members"></a>Elementy członkowskie  
- Funkcje Członkowskie `CWordArray` są podobne do funkcji Członkowskich klasy [CObArray](../../mfc/reference/cobarray-class.md). Ze względu na to podobieństwa, można użyć `CObArray` odwołania dokumentacji charakterystykę funkcja elementu członkowskiego. Po wyświetleniu [CObject](../../mfc/reference/cobject-class.md) wskaźnika jako parametr funkcji lub wartości zwracanej, Zastąp **WORD**.  
+ Funkcje Członkowskie `CWordArray` są podobne do funkcji Członkowskich klasy [CObArray](../../mfc/reference/cobarray-class.md). Ze względu na to podobieństwa, można użyć `CObArray` odwołania dokumentacji charakterystykę funkcja elementu członkowskiego. Po wyświetleniu [CObject](../../mfc/reference/cobject-class.md) wskaźnika jako parametr funkcji lub wartości zwracanej, Zastąp wyrazu.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -94,7 +94,7 @@ class CWordArray : public CObject
 |[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Zwalnia wszystkie nieużywanej pamięci powyżej bieżącego górną granicę.|  
 |[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Zwraca wartość pod danym indeksem.|  
 |[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Pobiera liczbę elementów w tej macierzy.|  
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Umożliwia dostęp do elementów w tablicy. Może być **NULL**.|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Umożliwia dostęp do elementów w tablicy. Może mieć wartości NULL.|  
 |[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Pobiera liczbę elementów w tej macierzy.|  
 |[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Zwraca największy nieprawidłowy indeks.|  
 |[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Wstawia elementu (lub wszystkie elementy w innej tablicy) od określonego indeksu.|  
@@ -153,14 +153,14 @@ void AddCommandHandler(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cmdID`  
+ *cmdID*  
  Identyfikator polecenia.  
   
- `cmdHandler`  
+ *cmdHandler*  
  Dojście do metody obsługi poleceń.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda dodaje program obsługi poleceń `cmdHandler` do obiektu źródłowego polecenia i mapowania programu obsługi do `cmdID`.  
+ Ta metoda dodaje program obsługi poleceń *cmdHandler* do obiektu źródłowego polecenia i mapowania programu obsługi do *cmdID*.  
   
  Zobacz [porady: dodawanie do formantu formularzy systemu Windows Routing poleceń](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) przykład sposobu użycia `AddCommandHandler`.  
   
@@ -175,13 +175,13 @@ void AddCommandRangeHandler(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cmdIDMin`  
+ *cmdIDMin*  
  Indeks początkowy zakres Identyfikatora polecenia.  
   
- `cmdIDMax`  
+ *cmdIDMax*  
  Indeks końcowy zakres Identyfikatora polecenia.  
   
- `cmdHandler`  
+ *cmdHandler*  
  Dojście do metody obsługi wiadomości zamapowany poleceń.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -198,13 +198,13 @@ void AddCommandRangeUIHandler(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cmdIDMin`  
+ *cmdIDMin*  
  Indeks początkowy zakres Identyfikatora polecenia.  
   
- `cmdIDMax`  
+ *cmdIDMax*  
  Indeks końcowy zakres Identyfikatora polecenia.  
   
- `cmdHandler`  
+ *cmdHandler*  
  Dojście do metody obsługi wiadomości zamapowany poleceń.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -220,14 +220,14 @@ void AddCommandUIHandler(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cmdID`  
+ *cmdID*  
  Identyfikator polecenia.  
   
- `cmdUIHandler`  
+ *cmdUIHandler*  
  Dojście do metody obsługi wiadomości polecenia interfejsu użytkownika.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda dodaje obsługi wiadomości polecenia interfejsu użytkownika `cmdHandler` do obiektu źródłowego polecenia i mapowania programu obsługi do `cmdID`.  
+ Ta metoda dodaje obsługi wiadomości polecenia interfejsu użytkownika *cmdHandler* do obiektu źródłowego polecenia i mapowania programu obsługi do *cmdID*.  
   
 ##  <a name="postcommand"></a>  ICommandSource::PostCommand  
  Zapisuje komunikat bez oczekiwania na przetworzenie.  
@@ -237,11 +237,11 @@ void PostCommand(unsigned int command);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `command`  
+ *Polecenie*  
  Identyfikator polecenia komunikatu zaksięgowania.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda asynchronicznie zapisuje komunikat zamapowane na identyfikator określony przez `command`. Wywołuje [CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage) do umieszczenia wiadomości w kolejki komunikatów i zwraca okna bez oczekiwania na odpowiednie okno, aby przetworzyć komunikatu.  
+ Ta metoda asynchronicznie zapisuje komunikat zamapowane na identyfikator określony przez *polecenia*. Wywołuje [CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage) do umieszczenia wiadomości w kolejki komunikatów i zwraca okna bez oczekiwania na odpowiednie okno, aby przetworzyć komunikatu.  
   
 ##  <a name="removecommandhandler"></a>  ICommandSource::RemoveCommandHandler  
  Usuwa programem obsługi z obiektem źródłowym polecenia.  
@@ -251,11 +251,11 @@ void RemoveCommandHandler(unsigned int cmdID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cmdID`  
+ *cmdID*  
  Identyfikator polecenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda usuwa mapowane na program obsługi poleceń `cmdID` od źródła obiektu polecenia.  
+ Ta metoda usuwa mapowane na program obsługi poleceń *cmdID* z polecenia obiektu źródłowego.  
   
 ##  <a name="removecommandrangehandler"></a>  ICommandSource::RemoveCommandRangeHandler  
  Usuwa grupę programy obsługi poleceń z obiektem źródłowym polecenia.  
@@ -267,14 +267,14 @@ void RemoveCommandRangeUIHandler(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cmdIDMin`  
+ *cmdIDMin*  
  Indeks początkowy zakres Identyfikatora polecenia.  
   
- `cmdIDMax`  
+ *cmdIDMax*  
  Indeks końcowy zakres Identyfikatora polecenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda usuwa grupę programów obsługi wiadomości, zamapowane na określone identyfikatory polecenia przez `cmdIDMin` i `cmdIDMax`, od źródła obiektu polecenia.  
+ Ta metoda usuwa grupę programów obsługi wiadomości, zamapowane na określone identyfikatory polecenia przez *cmdIDMin* i *cmdIDMax*, od źródła obiektu polecenia.  
   
 ##  <a name="removecommandrangeuihandler"></a>  ICommandSource::RemoveCommandRangeUIHandler  
  Usuwa grupę programów obsługi wiadomości polecenia interfejsu użytkownika z obiektem źródłowym polecenia.  
@@ -286,14 +286,14 @@ void RemoveCommandRangeUIHandler(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cmdIDMin`  
+ *cmdIDMin*  
  Indeks początkowy zakres Identyfikatora polecenia.  
   
- `cmdIDMax`  
+ *cmdIDMax*  
  Indeks końcowy zakres Identyfikatora polecenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda usuwa grupę użytkownika interfejsu polecenie Programy obsługi wiadomości, zamapowane na określone identyfikatory polecenia przez `cmdIDMin` i `cmdIDMax`, od źródła obiektu polecenia.  
+ Ta metoda usuwa grupę użytkownika interfejsu polecenie Programy obsługi wiadomości, zamapowane na określone identyfikatory polecenia przez *cmdIDMin* i *cmdIDMax*, od źródła obiektu polecenia.  
   
 ##  <a name="removecommanduihandler"></a>  ICommandSource::RemoveCommandUIHandler  
  Usuwa program obsługi komunikatów polecenia interfejsu użytkownika z obiektem źródłowym polecenia.  
@@ -303,11 +303,11 @@ void RemoveCommandUIHandler(unsigned int cmdID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cmdID`  
+ *cmdID*  
  Identyfikator polecenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda usuwa mapowane do obsługi wiadomości użytkownika interfejsu polecenia `cmdID` od źródła obiektu polecenia.  
+ Ta metoda usuwa mapowane do obsługi wiadomości użytkownika interfejsu polecenia *cmdID* z polecenia obiektu źródłowego.  
   
 ##  <a name="sendcommand"></a>  ICommandSource::SendCommand  
  Wysyła komunikat i czeka na jego przetworzenie przed zwróceniem.  
@@ -317,11 +317,11 @@ void SendCommand(unsigned int command);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `command`  
+ *Polecenie*  
  Identyfikator polecenia komunikatu do wysłania.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda synchronicznie wysyła wiadomość zamapowane na identyfikator określony przez `command`. Wywołuje [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) można umieścić wiadomości w okna kolejki komunikatów i czeka, aż do tej procedury okna przed zwróceniem przetworzył wiadomość.  
+ Ta metoda synchronicznie wysyła wiadomość zamapowane na identyfikator określony przez *polecenia*. Wywołuje [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) można umieścić wiadomości w okna kolejki komunikatów i czeka, aż do tej procedury okna przed zwróceniem przetworzył wiadomość.  
   
 ##  <a name="icommandtarget_interface"></a>  Interfejs obiektu ICommandTarget  
  Udostępnia kontrolkę użytkownika przy użyciu interfejsu do odbierania poleceń z obiektem źródłowym polecenia.  
@@ -345,13 +345,13 @@ void Initialize(ICommandSource^ cmdSource);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `cmdSource`  
+ *cmdSource*  
  Dojście do obiektu źródłowego polecenia.  
   
 ### <a name="remarks"></a>Uwagi  
  Kiedy host kontrolkę użytkownika w widoku MFC [CWinFormsView](../../mfc/reference/cwinformsview-class.md) polecenia tras i aktualizacji polecenia interfejsu użytkownika wiadomości do kontrolki użytkownika pozwala na jego poleceń MFC.  
   
- Ta metoda inicjuje obiekt docelowy polecenia i kojarzy ją z obiektem źródłowym określone polecenie `cmdSource`. Powinna być wywoływana w implementacji klasy formantu użytkownika. Podczas inicjowania, należy zarejestrować programy obsługi poleceń z obiektem źródłowym polecenia, wywołując [ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md) w `Initialize` implementacji. Zobacz [porady: Dodawanie polecenia routingu do formantu formularzy systemu Windows](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) przykład sposobu użycia `Initialize` w tym celu.  
+ Ta metoda inicjuje obiekt docelowy polecenia i kojarzy ją z obiektem źródłowym określone polecenie *cmdSource*. Powinna być wywoływana w implementacji klasy formantu użytkownika. Podczas inicjowania, należy zarejestrować programy obsługi poleceń z obiektem źródłowym polecenia, wywołując [ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md) w `Initialize` implementacji. Zobacz [porady: Dodawanie polecenia routingu do formantu formularzy systemu Windows](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) przykład sposobu użycia `Initialize` w tym celu.  
   
 ##  <a name="icommandui_interface"></a>  Interfejs ICommandUI  
  Zarządza polecenia interfejsu użytkownika.  
@@ -395,7 +395,7 @@ void ContinueRouting();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- To jest funkcja Zaawansowane elementu członkowskiego, które mają być używane w połączeniu z [on_command_ex —](message-map-macros-mfc.md#on_command_ex) obsługi, która zwraca `FALSE`. Aby uzyskać więcej informacji, zobacz Uwaga techniczna [TN006: mapy komunikatów](../../mfc/tn006-message-maps.md).  
+ To jest funkcja Zaawansowane elementu członkowskiego, które mają być używane w połączeniu z [on_command_ex —](message-map-macros-mfc.md#on_command_ex) obsługi, która zwraca wartość FALSE. Aby uzyskać więcej informacji, zobacz Uwaga techniczna [TN006: mapy komunikatów](../../mfc/tn006-message-maps.md).  
   
 ##  <a name="enabled"></a>  ICommandUI::Enabled  
  Włącza lub wyłącza element interfejsu użytkownika dla tego polecenia.  
@@ -405,7 +405,7 @@ property bool Enabled;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Tej właściwości Włącza lub wyłącza element interfejsu użytkownika dla tego polecenia. Ustaw `Enabled` do `TRUE` Aby włączyć element, `FALSE` je wyłączyć.  
+ Tej właściwości Włącza lub wyłącza element interfejsu użytkownika dla tego polecenia. Ustaw `Enabled` wartość true, aby włączyć element, FALSE, aby ją wyłączyć.  
   
 ##  <a name="id"></a>  ICommandUI::ID  
  Pobiera identyfikator obiektu interfejsu użytkownika reprezentowanego przez `ICommandUI` obiektu.  
@@ -435,7 +435,7 @@ property bool Radio;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Dana właściwość ustawia element interfejsu użytkownika dla tego polecenia do stanu odpowiedniego wyboru. Ustaw `Radio` do `TRUE` umożliwiające elementu; w przeciwnym razie `FALSE`.  
+ Dana właściwość ustawia element interfejsu użytkownika dla tego polecenia do stanu odpowiedniego wyboru. Ustaw `Radio` wartość true, aby włączyć elementu; w przeciwnym razie wartość FALSE.  
   
 ##  <a name="text"></a>  ICommandUI::Text  
  Ustawia tekst elementu interfejsu użytkownika dla tego polecenia.  
@@ -469,7 +469,7 @@ void OnActivateView(bool activate);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `activate`  
+ *Aktywuj*  
  Wskazuje, czy widok jest aktywowane lub dezaktywowane.  
   
 ##  <a name="oninitialupdate"></a>  IView::OnInitialUpdate  

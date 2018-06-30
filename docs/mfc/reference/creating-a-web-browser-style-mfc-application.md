@@ -1,7 +1,7 @@
 ---
 title: Tworzenie aplikacji MFC w stylu przeglądarki sieci Web | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20c7228b08200466bd62d1cdbbf7e2f66f8efebb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1553f7ccc3b22b4e3d76d8c49d94ba2a61c19e97
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374526"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122556"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Tworzenie aplikacji MFC w stylu przeglądarki sieci Web
 Do aplikacji w stylu przeglądarki sieci Web ma dostęp do informacji z Internetu (na przykład HTML lub aktywne dokumenty) lub intranet, jak również folderów w lokalnym systemie plików, a w sieci. Przez wyprowadzanie klasy widoku aplikacji z [CHtmlView](../../mfc/reference/chtmlview-class.md), efektywnie ułatwić przeglądarki sieci Web aplikacji, zapewniając widoku za pomocą formantu WebBrowser.  
@@ -50,30 +50,30 @@ Do aplikacji w stylu przeglądarki sieci Web ma dostęp do informacji z Internet
   
  `CHtmlView` działa jako otoka dla formant przeglądarki sieci Web, co daje aplikacji widoku na sieci Web lub strony HTML. Kreator tworzy zastąpienia [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) funkcji w klasie widoku udostępnienie łącza nawigacji do witryny sieci Web Microsoft Visual C++:  
   
-```  
+```cpp
 void CWebView::OnInitialUpdate()  
 {  
     CHtmlView::OnInitialUpdate();
 
- *// TODO: This code navigates to a popular spot on the web. *//  change the code to go where you'd like.  
+    // TODO: This code navigates to a popular spot on the web.
+    // Change the code to go where you'd like.  
     Navigate2(_T("http://www.msdn.microsoft.com/vstudio/"),
-    NULL,
-    NULL);
+        NULL,
+        NULL);
+}
+```
 
-} 
-```  
+Tej witryny można zastąpić własny lub użyć [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource) funkcji członkowskiej, aby otworzyć stronę HTML, która znajduje się w skrypt zasobów projektu jako domyślnej zawartości widoku. Na przykład:  
   
- Tej witryny można zastąpić własny lub użyć [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource) funkcji członkowskiej, aby otworzyć stronę HTML, która znajduje się w skrypt zasobów projektu jako domyślnej zawartości widoku. Na przykład:  
-  
-```  
+```cpp
 void CWebView::OnInitialUpdate()  
 {  
     CHtmlView::OnInitialUpdate();
 
- *// TODO: This code navigates to a popular spot on the web. *//  change the code to go where you'd like.  
+    // TODO: This code navigates to a popular spot on the web.
+    // Change the code to go where you'd like.  
     LoadFromResource(IDR_HTML1);
-
-} 
+}
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
