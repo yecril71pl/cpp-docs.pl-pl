@@ -41,9 +41,10 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 903ad9d5a44bb455bede52aa3456d03456f54d13
 ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379344"
 ---
 # <a name="microsoft-extensions-to-c-and-c"></a>Rozszerzenia Microsoft do C i C++
 Środowisko Visual C++ rozszerza standardy ANSI języków C i C++ w następujący sposób.  
