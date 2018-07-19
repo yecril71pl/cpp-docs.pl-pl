@@ -14,14 +14,14 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: 73469182938a51d89a9ca9777f5481824e54dbeb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ccabc523ed502a3841cb9299ea2ccd2115115743
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862617"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961545"
 ---
-# <a name="ltregexgt-operators"></a>&lt;wyrażenie regularne&gt; operatory
+# <a name="ltregexgt-operators"></a>&lt;wyrażenie regularne&gt; operatorów
 
 ||||
 |-|-|-|
@@ -31,7 +31,7 @@ ms.locfileid: "33862617"
 
 ## <a name="op_neq"></a>  operator! =
 
-Nie równa się porównania dla różnych obiektów.
+Nie równa się porównanie różnych obiektów.
 
 ```cpp
 template <class BidIt>
@@ -70,19 +70,19 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parametry
 
-`BidIt` Typ iteratora.
+*BidIt* typ iteratora.
 
-`IOtraits` Klasa cech ciągu.
+*IOtraits* klasa cech ciągu.
 
-`Alloc` Allocator — klasa.
+*ALLOC* klasa alokatora.
 
-`left` Po lewej stronie obiekt do porównania.
+*po lewej stronie* lewy obiekt do porównania.
 
-`right` Prawy obiekt do porównania.
+*prawy* prawo obiekt do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca każdego szablonu operatora `!(left == right)`.
+Każdy szablon operator zwraca `!(left == right)`.
 
 ### <a name="example"></a>Przykład
 
@@ -181,19 +181,19 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametry
 
-`BidIt` Typ iteratora.
+*BidIt* typ iteratora.
 
-`IOtraits` Klasa cech ciągu.
+*IOtraits* klasa cech ciągu.
 
-`Alloc` Allocator — klasa.
+*ALLOC* klasa alokatora.
 
-`left` Po lewej stronie obiekt do porównania.
+*po lewej stronie* lewy obiekt do porównania.
 
-`right` Prawy obiekt do porównania.
+*prawy* prawo obiekt do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator każdego szablonu Konwertuje argumenty typu string i zwraca wartość true tylko wtedy, gdy wartość przekonwertowanego `left` porównuje mniejsza niż wartość przekonwertowanego `right`.
+Każdy szablon operator Konwertuje argumenty typu string i zwraca wartość PRAWDA, tylko wtedy, gdy przekonwertowana wartości *po lewej stronie* porównuje mniejszej niż wartość przekonwertowanego *prawo*.
 
 ### <a name="example"></a>Przykład
 
@@ -262,17 +262,17 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>Parametry
 
-`Elem` Typ elementu.
+*Elem* typ elementu.
 
-`IOtraits` Klasa cech ciągu.
+*IOtraits* klasa cech ciągu.
 
-`Alloc` Allocator — klasa.
+*ALLOC* klasa alokatora.
 
-`BidIt` Typ iteratora.
+*BidIt* typ iteratora.
 
-`os` W strumieniu wyjściowym.
+*system operacyjny* strumienia wyjściowego.
 
-`right` Obiekt do wstawienia.
+*prawy* obiekt do wstawienia.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -342,19 +342,19 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametry
 
-`BidIt` Typ iteratora.
+*BidIt* typ iteratora.
 
-`IOtraits` Klasa cech ciągu.
+*IOtraits* klasa cech ciągu.
 
-`Alloc` Allocator — klasa.
+*ALLOC* klasa alokatora.
 
-`left` Po lewej stronie obiekt do porównania.
+*po lewej stronie* lewy obiekt do porównania.
 
-`right` Prawy obiekt do porównania.
+*prawy* prawo obiekt do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca każdego szablonu operatora `!(right < left)`.
+Każdy szablon operator zwraca `!(right < left)`.
 
 ### <a name="example"></a>Przykład
 
@@ -413,7 +413,7 @@ sub <= 'a' == false
 
 ## <a name="op_eq_eq"></a>  operator ==
 
-Taki sam porównania dla różnych obiektów.
+Porównanie równego dla różnych obiektów.
 
 ```cpp
 template <class BidIt>
@@ -452,27 +452,27 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parametry
 
-`BidIt` Typ iteratora.
+*BidIt* typ iteratora.
 
-`IOtraits` Klasa cech ciągu.
+*IOtraits* klasa cech ciągu.
 
-`Alloc` Allocator — klasa.
+*ALLOC* klasa alokatora.
 
-`left` Po lewej stronie obiekt do porównania.
+*po lewej stronie* lewy obiekt do porównania.
 
-`right` Prawy obiekt do porównania.
+*prawy* prawo obiekt do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator każdego szablonu konwertuje każdego z jego argumentów typu ciąg i zwraca wynik porównanie przekonwertowanego obiektów pod kątem równości.
+Każdy operator szablonu konwertuje każdy z jej argumentów typu ciąg i zwraca wynik porównanie przekonwertowanego obiekty pod kątem równości.
 
-Gdy operator szablonu Konwertuje argumenty typu string używa pierwszy następujące przekształcenia, który ma zastosowanie:
+Gdy operator szablonu Konwertuje argumenty typu string używa pierwszego dnia następujące przekształcenia, która ma zastosowanie:
 
-argumenty, których typy są specjalizacji szablonu klasy `match_results` lub `sub_match` są konwertowane przez wywołanie metody `str` funkcja członkowska;
+argumenty, których typy są specjalizacji szablonu klasy `match_results` lub `sub_match` są konwertowane przez wywołanie metody `str` funkcję członkowską;
 
-argumenty, których typy są specjalizacji szablonu klasy `basic_string` są takie same jak;
+argumenty, których typy są specjalizacji szablonu klasy `basic_string` są bez zmian;
 
-wszystkie inne typy argumentu są konwertowane przekazując wartość argumentu do konstruktora dla odpowiednich specjalizacji szablonu klasy `basic_string`.
+inne typy argumentów są konwertowane, przekazując wartość argumentu do konstruktora dla odpowiednich specjalizacji szablonu klasy `basic_string`.
 
 ### <a name="example"></a>Przykład
 
@@ -536,7 +536,7 @@ sub == 'a' == false
 
 ## <a name="op_gt"></a>  Operator&gt;
 
-Większa niż porównania dla różnych obiektów.
+Większe niż porównania dla różnych obiektów.
 
 ```cpp
 template <class BidIt>
@@ -571,19 +571,19 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametry
 
-`BidIt` Typ iteratora.
+*BidIt* typ iteratora.
 
-`IOtraits` Klasa cech ciągu.
+*IOtraits* klasa cech ciągu.
 
-`Alloc` Allocator — klasa.
+*ALLOC* klasa alokatora.
 
-`left` Po lewej stronie obiekt do porównania.
+*po lewej stronie* lewy obiekt do porównania.
 
-`right` Prawy obiekt do porównania.
+*prawy* prawo obiekt do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca każdego szablonu operatora `right < left`.
+Każdy szablon operator zwraca `right < left`.
 
 ### <a name="example"></a>Przykład
 
@@ -642,7 +642,7 @@ sub > 'a' == true
 
 ## <a name="op_gt_eq"></a>  Operator&gt;=
 
-Większe lub równe porównania dla różnych obiektów.
+Większe lub równe porównanie różnych obiektów.
 
 ```cpp
 template <class BidIt>
@@ -677,19 +677,19 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametry
 
-`BidIt` Typ iteratora.
+*BidIt* typ iteratora.
 
-`IOtraits` Klasa cech ciągu.
+*IOtraits* klasa cech ciągu.
 
-`Alloc` Allocator — klasa.
+*ALLOC* klasa alokatora.
 
-`left` Po lewej stronie obiekt do porównania.
+*po lewej stronie* lewy obiekt do porównania.
 
-`right` Prawy obiekt do porównania.
+*prawy* prawo obiekt do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca każdego szablonu operatora `!(left < right)`.
+Każdy szablon operator zwraca `!(left < right)`.
 
 ### <a name="example"></a>Przykład
 
@@ -750,7 +750,7 @@ sub >= 'a' == true
 [\<regex>](../standard-library/regex.md)<br/>
 [regex_constants, klasa](../standard-library/regex-constants-class.md)<br/>
 [regex_error, klasa](../standard-library/regex-error-class.md)<br/>
-[\<wyrażenie regularne > Funkcje](../standard-library/regex-functions.md)<br/>
+[\<wyrażenie regularne > funkcji](../standard-library/regex-functions.md)<br/>
 [regex_iterator, klasa](../standard-library/regex-iterator-class.md)<br/>
 [regex_token_iterator, klasa](../standard-library/regex-token-iterator-class.md)<br/>
 [regex_traits, klasa](../standard-library/regex-traits-class.md)<br/>

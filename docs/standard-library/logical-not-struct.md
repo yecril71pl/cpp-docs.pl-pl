@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0d654c526e5c856431d69c045c5018d77a6fed3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf93d84534671cb65c873555d70fea756036fe06
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860021"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961642"
 ---
 # <a name="logicalnot-struct"></a>logical_not — Struktura
 
-Obiekt wstępnie zdefiniowanych funkcji, który wykonuje logicznym nie operacji ( `operator!`) na jej argument.
+Obiekt wstępnie zdefiniowana funkcja, która wykonuje logiczny nie operacji (`operator!`) na jej argument.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,13 +49,13 @@ struct logical_not<void>
 
 ### <a name="parameters"></a>Parametry
 
-`Type` Dowolnego typu, który obsługuje `operator!` który przyjmuje argument typu określonego lub wykrywany.
+*Typ* dowolnego typu, który obsługuje `operator!` która przyjmuje argument typu określonego lub wywnioskowane uprawnienie.
 
-`Left` Operand operatora logicznego nie operacji. Szablon klasy niespecjalizowanej przyjmuje argument odwołania l-wartością typu `Type`. Specjalne szablonu doskonała przekazującej lewostronnie i argumenty odwołanie do r-wartości wywnioskować typu `Type`.
+*Po lewej stronie* operand logicznego nie operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *typu*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wynik `!Left`. Specjalne szablonu doskonała przekazywanie wynik, który ma typ zwracany przez `operator!`.
+Wynik `!Left`. Szablon wyspecjalizowane doskonała przekazywania wyniku, który ma typ, który jest zwracany przez `operator!`.
 
 ## <a name="example"></a>Przykład
 
@@ -106,7 +106,7 @@ The deque with its values negated is:
 
 **Nagłówek:** \<funkcjonalności >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

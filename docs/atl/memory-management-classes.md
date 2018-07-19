@@ -1,5 +1,5 @@
 ---
-title: Klasy zarządzania pamięci (ATL) | Dokumentacja firmy Microsoft
+title: Klasy zarządzania pamięcią (ATL) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,58 +14,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6849327d796afd1f500102167b82b08b9c60be18
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2b7b66989b140b7c93abefdd8075adb640b04b6f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356511"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961100"
 ---
-# <a name="memory-management-classes"></a>Klasy zarządzania pamięci
-Te klasy zapewniają obsługę wskaźniki stosu, wskaźniki inteligentne i innych procedur alokacji pamięci.  
+# <a name="memory-management-classes"></a>Klasy zarządzania pamięcią
+Te klasy zapewniają obsługę wskaźniki stosu, inteligentne wskaźniki i innych procedur alokacji pamięci.  
   
--   [CAutoPtr](../atl/reference/cautoptr-class.md) ta klasa reprezentuje obiekt wskaźnika inteligentnego.  
+-   [CAutoPtr](../atl/reference/cautoptr-class.md) ta klasa reprezentuje obiekt inteligentnego wskaźnika.  
   
--   [CAutoPtrArray](../atl/reference/cautoptrarray-class.md) ta klasa dostarcza metody przydatne podczas konstruowania tablicę wskaźniki inteligentne.  
+-   [CAutoPtrArray](../atl/reference/cautoptrarray-class.md) ta klasa dostarcza metody, które przydatne przy konstruowaniu tablicy inteligentnych wskaźników.  
   
--   [CAutoPtrList](../atl/reference/cautoptrlist-class.md) ta klasa dostarcza metody przydatne podczas konstruowania listy wskaźniki inteligentne.  
+-   [CAutoPtrList](../atl/reference/cautoptrlist-class.md) ta klasa dostarcza metody, które przydatne podczas tworzenia listy inteligentne wskaźniki.  
   
--   [CAutoVectorPtr](../atl/reference/cautovectorptr-class.md) ta klasa reprezentuje obiekt wskaźnika inteligentnego, używając nowy wektor i operatory delete.  
+-   [CAutoVectorPtr](../atl/reference/cautovectorptr-class.md) ta klasa reprezentuje obiekt inteligentny wskaźnik, używając nowy wektor i operatory delete.  
   
--   [CComAllocator](../atl/reference/ccomallocator-class.md) ta klasa dostarcza metody do zarządzania przy użyciu procedury pamięci COM pamięci.  
+-   [CComAllocator](../atl/reference/ccomallocator-class.md) ta klasa dostarcza metody do zarządzania ilości pamięci za pomocą procedury pamięci COM.  
   
--   [CComGITPtr](../atl/reference/ccomgitptr-class.md) ta klasa dostarcza metody zajmujących się wskaźniki interfejsu i tabela interfejsu globalnego (GIT).  
+-   [CComGITPtr](../atl/reference/ccomgitptr-class.md) ta klasa dostarcza metody radzenia sobie z wskaźniki interfejsu i tabeli interfejsu globalnego (GIT).  
   
 -   [CComHeap](../atl/reference/ccomheap-class.md) ta klasa implementuje [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) przy użyciu funkcji alokacji pamięci COM.  
   
--   [CComHeapPtr](../atl/reference/ccomheapptr-class.md) klasy wskaźnika inteligentnego wskaźniki stosu zarządzania.  
+-   [CComHeapPtr](../atl/reference/ccomheapptr-class.md) klasa inteligentnego wskaźnika, wskaźniki stosu zarządzania.  
   
--   [CComPtr](../atl/reference/ccomptr-class.md) Zarządzanie wskaźników interfejsów COM. klasę wskaźnika inteligentnego.  
+-   [CComPtr](../atl/reference/ccomptr-class.md) klasa inteligentnego wskaźnika, związanych z zarządzaniem wskaźniki interfejsu COM.  
   
--   [CComPtrBase](../atl/reference/ccomptrbase-class.md) ta klasa stanowi podstawę dla klas wskaźnika inteligentnego przy użyciu procedury oparte na modelu COM pamięci.  
+-   [CComPtrBase](../atl/reference/ccomptrbase-class.md) ta klasa stanowi podstawę dla klas inteligentnego wskaźnika za pomocą procedury opartym na modelu COM pamięci.  
   
--   [CComQIPtr](../atl/reference/ccomqiptr-class.md) Zarządzanie wskaźników interfejsów COM. klasę wskaźnika inteligentnego.  
+-   [CComQIPtr](../atl/reference/ccomqiptr-class.md) klasa inteligentnego wskaźnika, związanych z zarządzaniem wskaźniki interfejsu COM.  
   
--   [CCRTAllocator](../atl/reference/ccrtallocator-class.md) ta klasa dostarcza metody do zarządzania przy użyciu procedury pamięci CRT pamięci.  
+-   [CCRTAllocator](../atl/reference/ccrtallocator-class.md) ta klasa dostarcza metody do zarządzania ilości pamięci za pomocą procedury pamięci CRT.  
   
--   [CCRTHeap](../atl/reference/ccrtheap-class.md) ta klasa implementuje [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) przy użyciu funkcji CRT stosu.  
+-   [CCRTHeap](../atl/reference/ccrtheap-class.md) ta klasa implementuje [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) przy użyciu stosu CRT.  
   
--   [CGlobalHeap](../atl/reference/cglobalheap-class.md) ta klasa implementuje [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) przy użyciu funkcji globalnych sterty Win32.  
+-   [CGlobalHeap](../atl/reference/cglobalheap-class.md) ta klasa implementuje [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) przy użyciu funkcji sterty globalnej Win32.  
   
 -   [CHandle](../atl/reference/chandle-class.md) ta klasa dostarcza metody do tworzenia i używania obiektu uchwyt.  
   
--   [CHeapPtr](../atl/reference/cheapptr-class.md) klasy wskaźnika inteligentnego wskaźniki stosu zarządzania.  
+-   [CHeapPtr](../atl/reference/cheapptr-class.md) klasa inteligentnego wskaźnika, wskaźniki stosu zarządzania.  
   
--   [CHeapPtrBase](../atl/reference/cheapptrbase-class.md) ta klasa stanowi podstawę dla kilku inteligentne klasy wskaźnik stosu.  
+-   [CHeapPtrBase](../atl/reference/cheapptrbase-class.md) ta klasa stanowi podstawę dla kilku inteligentnych klasy wskaźnik stosu.  
   
--   [CHeapPtrList](../atl/reference/cheapptrlist-class.md) ta klasa dostarcza metody przydatne podczas konstruowania listy wskaźniki stosu.  
+-   [CHeapPtrList](../atl/reference/cheapptrlist-class.md) ta klasa dostarcza metody, które przydatne podczas tworzenia listy wskaźników sterty.  
   
--   [CLocalHeap](../atl/reference/clocalheap-class.md) ta klasa implementuje [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) przy użyciu funkcji lokalnego stosu Win32.  
+-   [CLocalHeap](../atl/reference/clocalheap-class.md) ta klasa implementuje [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) przy użyciu funkcji lokalnej sterty systemu Win32.  
   
 -   [CWin32Heap](../atl/reference/cwin32heap-class.md) ta klasa implementuje [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) przy użyciu funkcji alokacji sterty Win32.  
   
 -   [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) ta klasa reprezentuje interfejs do Menedżera pamięci.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../atl/atl-class-overview.md)
 

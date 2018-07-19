@@ -32,16 +32,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08e2505a77643053c60c4ce1a164dc89cc1e0952
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 554b6a1c405060c975e914340b5e4b312d9b25b7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862010"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961558"
 ---
 # <a name="uniqueptr-class"></a>unique_ptr — Klasa
 
-Przechowuje wskaźnik do obiektu należące do firmy lub tablicy. Obiekt/tablicy jest własnością nie innych `unique_ptr`. Obiekt/tablicy zostanie zniszczony podczas `unique_ptr` zostanie zniszczony.
+Przechowuje wskaźnik do posiadanego obiektu lub tablicy. Obiekt/tablicy jest własnością żadnego innego `unique_ptr`. Obiekt/tablicy jest niszczony, gdy `unique_ptr` zostanie zniszczony.
 
 ## <a name="syntax"></a>Składnia
 
@@ -104,29 +104,33 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-`Right` A `unique_ptr`.
+*Po prawej stronie*  
+ A `unique_ptr`.
 
-`Nptr` `rvalue` Typu `std::nullptr_t`.
+*Nptr*  
+ `rvalue` Typu `std::nullptr_t`.
 
-`Ptr` A `pointer`.
+*PTR*  
+ A `pointer`.
 
-`Deleter` A `deleter` funkcja, która jest powiązana z `unique_ptr`.
+*Deleter*  
+ A `deleter` funkcja, która jest powiązana z `unique_ptr`.
 
 ## <a name="exceptions"></a>Wyjątki
 
-Żadne wyjątki są generowane przez `unique_ptr`.
+Żadne wyjątki generowane przez `unique_ptr`.
 
 ## <a name="remarks"></a>Uwagi
 
-`unique_ptr` Zastępuje klasy `auto_ptr`i może być używany jako element kontenerów standardowa biblioteka C++.
+`unique_ptr` Zastępuje klasy `auto_ptr`i może służyć jako element kontenerów standardowej biblioteki języka C++.
 
-Użyj [make_unique](../standard-library/memory-functions.md#make_unique) funkcja pomocnika służąca do wydajnie tworzyć nowe wystąpienia klasy `unique_ptr`.
+Użyj [make_unique](../standard-library/memory-functions.md#make_unique) funkcja pomocnika służąca do wydajnego tworzenia nowych wystąpień `unique_ptr`.
 
-`unique_ptr` zarządza jednoznacznie zasobu. Każdy `unique_ptr` obiekt przechowuje wskaźnik do obiektu jest właścicielem lub przechowuje wskaźnika o wartości null. Zasób może należeć do nie więcej niż jednego `unique_ptr` obiekt;  gdy `unique_ptr` obiektu, który jest właścicielem określonego zasobu, zasób zostanie zwolniona. A `unique_ptr` obiektu może być przeniesiony, ale nie został skopiowany;  Aby uzyskać więcej informacji, zobacz [deklarator odwołania do r-wartości: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+`unique_ptr` jednoznacznie zarządza zasobem. Każdy `unique_ptr` obiekt przechowuje wskaźnik do obiektu, który posiada lub przechowuje wskaźnik zerowy. Zasób może być własnością tylko jednego `unique_ptr` obiektu;  gdy `unique_ptr` niszczony jest obiekt, który posiada określony zasób, zasób zostanie zwolniony. Element `unique_ptr` obiektu może być przeniesiony, ale nie można go kopiować;  Aby uzyskać więcej informacji, zobacz [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-Zasób zostanie zwolniona przez wywołanie metody przechowywanych `deleter` typu obiektu `Del` który zna sposób przydzielania zasobów dla określonego `unique_ptr`. Wartość domyślna `deleter` `default_delete<T>` przyjęto założenie, że zasobu wskazywanego przez `ptr` przydzielonych za pomocą `new`, i który może być zwolniony przez wywołanie metody `delete _Ptr`. (Częściowa specjalizacja `unique_ptr<T[]>`zarządza tablicy obiektów przydzielonych za pomocą `new[]`, i ma domyślnie `deleter` `default_delete<T[]>`, wyspecjalizowany wywołać delete [] `ptr`.)
+Zasób zostanie zwolniony przez wywołanie przechowywanego `deleter` obiektu typu `Del` który wie, jak zasoby są przydzielane dla danego `unique_ptr`. Wartość domyślna `deleter` `default_delete<T>` przyjęto założenie, że zasób wskazywany przez `ptr` została przydzielona z `new`, i który może zostać uwolniony przez wywołanie metody `delete _Ptr`. (Częściowa specjalizacja `unique_ptr<T[]>`zarządza obiektami tablicy przydzielonymi `new[]`, i ma domyślny `deleter` `default_delete<T[]>`, wyspecjalizowany w celu wywoływania delete [] `ptr`.)
 
-Przechowywane wskaźnik do należących do zasobów `stored_ptr` ma typ `pointer`. Jest `Del::pointer` Jeśli została zdefiniowana, a `T *` , jeśli nie. Zapisana `deleter` obiektu `stored_deleter` zajmuje bez spacji w obiekcie, jeśli `deleter` jest bezstanowe. Należy pamiętać, że `Del` może być typem referencyjnym.
+Przechowywany wskaźnik do zasobu będącego własnością `stored_ptr` ma typ `pointer`. Jest `Del::pointer` Jeśli zdefiniowane, a `T *` w przeciwnym razie. Przechowywany `deleter` obiektu `stored_deleter` nie zajmuje miejsca w obiekcie Jeśli `deleter` jest bezstanowy. Należy pamiętać, że `Del` może być typem referencyjnym.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -134,44 +138,44 @@ Przechowywane wskaźnik do należących do zasobów `stored_ptr` ma typ `pointer
 
 |Konstruktor|Opis|
 |-|-|
-|[unique_ptr](#unique_ptr)|Istnieje siedem konstruktory `unique_ptr`.|
+|[unique_ptr](#unique_ptr)|Istnieje siedem konstruktorów `unique_ptr`.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Nazwa typu|Opis|
 |-|-|
-|[deleter_type](#deleter_type)|Synonim parametru szablonu `Del`.|
-|[element_type](#element_type)|Synonim parametru szablonu `T`.|
-|[pointer](#pointer)|Jest to synonim `Del::pointer` Jeśli zdefiniowane, w przeciwnym razie `T *`.|
+|[deleter_type](#deleter_type)|Synonim dla parametru szablonu `Del`.|
+|[element_type](#element_type)|Synonim dla parametru szablonu `T`.|
+|[pointer](#pointer)|Synonim dla `Del::pointer` Jeśli zdefiniowane, w przeciwnym razie `T *`.|
 
 ### <a name="member-functions"></a>Funkcje Członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja elementu członkowskiego|Opis|
 |-|-|
 |[get](#get)|Zwraca `stored_ptr`.|
 |[get_deleter](#get_deleter)|Zwraca odwołanie do `stored_deleter`.|
-|[Zlecenia](#release)|przechowuje `pointer()` w `stored_ptr` i zwraca jego poprzedniej zawartości.|
-|[Resetowanie](#reset)|Zwalnia aktualnie posiadany zasób i akceptuje nowy zasób.|
-|[swap](#swap)|Zamienia zasobów i `deleter` się za pomocą podanych `unique_ptr`.|
+|[Wydania](#release)|przechowuje `pointer()` w `stored_ptr` i zwraca jego poprzednią zawartość.|
+|[Resetuj](#reset)|Zwalnia aktualnie posiadany zasób i akceptuje nowy zasób.|
+|[swap](#swap)|Wymienia zasób i `deleter` z dostępnego `unique_ptr`.|
 
 ### <a name="operators"></a>Operatory
 
 |Operator|Opis|
 |-|-|
-|`operator bool`|Zwraca wartość typu, który można przekonwertować na typ `bool`. Wynik konwersji na `bool` jest `true` podczas `get() != pointer()`, w przeciwnym razie `false`.|
-|`operator->`|Zwraca funkcję elementu członkowskiego `stored_ptr`.|
-|`operator*`|Zwraca funkcję elementu członkowskiego `*stored_ptr`.|
+|**bool — operator**|Operator zwraca wartość typu, który jest konwertowany na **bool**. Wynik konwersji **bool** jest **true** podczas `get() != pointer()`, w przeciwnym razie **false**.|
+|`operator->`|Funkcja elementu członkowskiego zwraca `stored_ptr`.|
+|`operator*`|Funkcja elementu członkowskiego zwraca `*stored_ptr`.|
 |[unique_ptr operator=](#unique_ptr_operator_eq)|Przypisuje wartość `unique_ptr` (lub `pointer-type`) do bieżącego `unique_ptr`.|
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<pamięci >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="deleter_type"></a>  deleter_type
 
-Typ jest synonimem parametru szablonu `Del`.
+Typ jest synonimem dla parametru szablonu `Del`.
 
 ```cpp
 typedef Del deleter_type;
@@ -179,11 +183,11 @@ typedef Del deleter_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem parametru szablonu `Del`.
+Typ jest synonimem dla parametru szablonu `Del`.
 
 ## <a name="element_type"></a>  ELEMENT_TYPE
 
-Typ jest synonimem parametru szablonu `Type`.
+Typ jest synonimem dla parametru szablonu `Type`.
 
 ```cpp
 typedef Type element_type;
@@ -191,7 +195,7 @@ typedef Type element_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem parametru szablonu `Ty`.
+Typ jest synonimem dla parametru szablonu `Ty`.
 
 ## <a name="get"></a>  unique_ptr::Get
 
@@ -203,7 +207,7 @@ pointer get() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca funkcję elementu członkowskiego `stored_ptr`.
+Funkcja elementu członkowskiego zwraca `stored_ptr`.
 
 ## <a name="get_deleter"></a>  unique_ptr::get_deleter
 
@@ -217,11 +221,11 @@ const Del& get_deleter() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca odwołanie do `stored_deleter`.
+Funkcja elementu członkowskiego zwraca odwołanie do `stored_deleter`.
 
 ## <a name="unique_ptr_operator_eq"></a>  unique_ptr operator =
 
-Przypisuje adres dostarczonych `unique_ptr` do bieżącej.
+Przypisuje adres podany `unique_ptr` do bieżącej.
 
 ```cpp
 unique_ptr& operator=(unique_ptr&& right);
@@ -232,15 +236,15 @@ unique_ptr& operator=(pointer-type);
 
 ### <a name="parameters"></a>Parametry
 
-A `unique_ptr` odwołania przypisywać wartości do bieżącego `unique_ptr`.
+A `unique_ptr` odwołania używane do przypisywania wartości do bieżącego `unique_ptr`.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje Członkowskie wywołania `reset(right.release())` i Przenieś `right.stored_deleter` do `stored_deleter`, następnie zwracany `*this`.
+Element członkowski funkcji wywołanie `reset(right.release())` i Przenieś `right.stored_deleter` do `stored_deleter`, a następnie wróć `*this`.
 
 ## <a name="pointer"></a>  Wskaźnik
 
-Jest to synonim `Del::pointer` Jeśli zdefiniowane, w przeciwnym razie `Type *`.
+Synonim dla `Del::pointer` Jeśli zdefiniowane, w przeciwnym razie `Type *`.
 
 ```cpp
 typedef T1 pointer;
@@ -248,11 +252,11 @@ typedef T1 pointer;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem `Del::pointer` Jeśli zdefiniowane, w przeciwnym razie `Type *`.
+Typ jest synonimem dla `Del::pointer` Jeśli zdefiniowane, w przeciwnym razie `Type *`.
 
 ## <a name="release"></a>  unique_ptr::Release
 
-Zwalnia własność zwrócony przechowywanych wskaźnik do obiektu wywołującego i ustawia wartość wskaźnika przechowywanych `nullptr`.
+Zwalnia własność zwrócone przechowywany wskaźnik do obiektu wywołującego i ustawia wartość przechowywany wskaźnik **nullptr**.
 
 ```cpp
 pointer release();
@@ -260,11 +264,11 @@ pointer release();
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj `release` do Przejmij na własność raw wskaźnika przechowywane przez `unique_ptr`. Element wywołujący jest odpowiedzialny za usunięcie wskaźnika zwrócony. `unique-ptr` Ustawiono skonstruowany domyślnego stanu pustego. Można przypisać innego wskaźnika zgodne z typem `unique_ptr` po wywołaniu `release`.
+Użyj `release` przejąć własność surowy wskaźnik przechowywane przez `unique_ptr`. Obiekt wywołujący jest odpowiedzialny za usunięcie zwrócony wskaźnik. `unique-ptr` Ustawiono stan zbudowanego domyślnie puste. Możesz przypisać inny wskaźnik zgodne z typem `unique_ptr` po wywołaniu `release`.
 
 ### <a name="example"></a>Przykład
 
-Ten przykład przedstawia, jak jest odpowiedzialny za zwrócony obiekt wywołujący wersji:
+Ten przykład pokazuje, jak jest odpowiedzialny za zwrócony obiekt wywołujący wersji:
 
 ```cpp
 // stl_release_unique.cpp
@@ -315,7 +319,7 @@ Deleting Sample(3)
 
 ## <a name="reset"></a>  unique_ptr::reset
 
-Przejmuje parametr wskaźnika, a następnie usunięcie oryginalnego przechowywanych wskaźnika. Jeśli nowy wskaźnik jest taka sama jak oryginalny wskaźnik przechowywane, `reset` usuwa wskaźnik i ustawia wskaźnik przechowywanych `nullptr`.
+Przejmuje na własność parametru wskaźnika, a następnie usuwa oryginalny przechowywany wskaźnik. Jeśli nowy wskaźnik jest taki sam jak oryginalne przechowywany wskaźnik `reset` usuwa wskaźnika i ustawia przechowywany wskaźnik **nullptr**.
 
 ```cpp
 void reset(pointer ptr = pointer());
@@ -326,17 +330,17 @@ void reset(nullptr_t ptr);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`ptr`|Wskaźnik do zasobu, aby przejąć na własność.|
+|*ptr*|Wskaźnik do zasobu, aby przejąć prawo własności.|
 
 ### <a name="remarks"></a>Uwagi
 
-Użyj `reset` zmienić zapisana [wskaźnika](#pointer) własnością `unique_ptr` do `ptr` , a następnie usuń oryginalny wskaźnik przechowywane. Jeśli `unique_ptr` nie jest pusty, `reset` wywołuje zwrócona przez funkcję deleter [get_deleter](#get_deleter) oryginalnego wskaźnika przechowywane.
+Użyj `reset` zmienić przechowywaną [wskaźnik](#pointer) własnością `unique_ptr` do *ptr* , a następnie usuń oryginalny przechowywany wskaźnik. Jeśli `unique_ptr` nie jest pusta, `reset` wywołuje funkcję deleter zwrócone przez [get_deleter —](#get_deleter) na oryginalnym przechowywany wskaźnik.
 
-Ponieważ `reset` najpierw przechowuje nowego wskaźnika `ptr`, a następnie usunięcie oryginalnego wskaźnika przechowywane, istnieje możliwość `reset` można natychmiast usunąć `ptr` Jeśli jest taka sama jak oryginalny wskaźnik przechowywane.
+Ponieważ `reset` najpierw przechowuje nowy wskaźnik *ptr*, a następnie usuwa oryginalny przechowywany wskaźnik, możliwe jest `reset` można natychmiast usunąć *ptr* Jeśli jest taka sama jak oryginalny przechowywany wskaźnik.
 
 ## <a name="swap"></a>  unique_ptr::swap
 
-Zamienia wskaźniki między dwiema `unique_ptr` obiektów.
+Wymienia wskaźników między dwoma `unique_ptr` obiektów.
 
 ```cpp
 void swap(unique_ptr& right);
@@ -344,15 +348,16 @@ void swap(unique_ptr& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` A `unique_ptr` używany do wymiany wskaźników.
+*right*  
+ A `unique_ptr` umożliwiają zamienianie wskaźników.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zamienia `stored_ptr` z `right.stored_ptr` i `stored_deleter` z `right.stored_deleter`.
+Funkcja elementu członkowskiego zamienia `stored_ptr` z `right.stored_ptr` i `stored_deleter` z `right.stored_deleter`.
 
 ## <a name="unique_ptr"></a>  unique_ptr::unique_ptr
 
-Istnieje siedem konstruktory `unique_ptr`.
+Istnieje siedem konstruktorów `unique_ptr`.
 
 ```cpp
 unique_ptr();
@@ -377,19 +382,19 @@ unique_ptr(unique_ptr<Ty2, Del2>&& right);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`ptr`|Wskaźnik do zasobów, które ma być przypisany do `unique_ptr.`|
-|`_Deleter`|A `deleter` do przypisania do `unique_ptr`.|
-|`right`|`rvalue reference` Do `unique_ptr` z którego `unique_ptr` pola są przenoszenia przypisane do nowo utworzone `unique_ptr`.|
+|*ptr*|Wskaźnik do zasobu, który ma być przypisane do `unique_ptr.`|
+|*_Deleter*|A `deleter` ma być przypisane do `unique_ptr`.|
+|*right*|`rvalue reference` Do `unique_ptr` z którego `unique_ptr` pola są przypisane do nowo skonstruowany przenoszenia `unique_ptr`.|
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwsze dwa konstruktory utworzenia obiektu zarządzanego przez żaden z zasobów. Trzeci magazynów konstruktora `ptr` w `stored_ptr`. Czwarty magazynów konstruktora `ptr` w `stored_ptr` i `deleter` w `stored_deleter`.
+Dwa pierwsze konstruktory skonstruować obiekt, który zarządza żaden z zasobów. Trzeci Konstruktor magazynów *ptr* w `stored_ptr`. Czwarty Konstruktor magazynów *ptr* w `stored_ptr` i `deleter` w `stored_deleter`.
 
-Piąty magazynów konstruktora `ptr` w `stored_ptr` i przenosi `deleter` do `stored_deleter`. Magazyn konstruktorów szóstego lub siódmego `right.release()` w `stored_ptr` i przenosi `right.get_deleter()` do `stored_deleter`.
+Piąty Konstruktor magazynów *ptr* w `stored_ptr` i przenosi `deleter` do `stored_deleter`. Magazyn konstruktory szóstego i siódmego `right.release()` w `stored_ptr` i przenosi `right.get_deleter()` do `stored_deleter`.
 
 ## <a name="dtorunique_ptr"></a>  unique_ptr ~ unique_ptr
 
-Destruktor dla elementu `unique_ptr`, niszczy `unique_ptr` obiektu.
+Destruktor dla `unique_ptr`, niszczy `unique_ptr` obiektu.
 
 ```cpp
 ~unique_ptr();

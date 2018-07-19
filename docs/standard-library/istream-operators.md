@@ -12,18 +12,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5068c0bd540b1c44d2cdc484c2e511276bd12666
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 60ec526dd8874529b60558f7131c31f0bf4a2d3b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853063"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961116"
 ---
-# <a name="ltistreamgt-operators"></a>&lt;IStream&gt; operatory
+# <a name="ltistreamgt-operators"></a>&lt;IStream&gt; operatorów
 
 ## <a name="op_gt_gt"></a>  Operator&gt;&gt;
 
-Wyodrębnia znaki i ciągi ze strumienia.
+Wyodrębnia znaki oraz ciągi znaków ze strumienia.
 
 ```cpp
 template <class Elem, class Tr>
@@ -64,13 +64,13 @@ basic_istream<Elem, Tr>& operator>>(
 
 ### <a name="parameters"></a>Parametry
 
-`Ch` Znak.
+*Ch* znak.
 
-`Istr` Strumień.
+*Istr* strumienia.
 
-`str` Ciąg.
+*str* ciągu.
 
-`val` Typ.
+*Val* typu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -88,9 +88,9 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem* str);
 ```
 
-wyodrębnia do *N* - 1 elementów i zapisuje je w tablicy, zaczynając od _ *Str*. If `Istr`. [szerokość](../standard-library/ios-base-class.md#width) jest większa od zera, *N* jest `Istr`. **szerokość**; w przeciwnym razie jest rozmiar największego tablica **elementu** mogą być deklarowane. Funkcja zawsze przechowuje wartość **Elem()** po wyodrębnieniu dowolne elementy są przechowywane. Wyodrębnianie wczesne zatrzymuje się na końcu pliku, na znak o wartości **elementu**(0) (który jest nie wyodrębnić), lub w dowolnym elemencie (który nie jest wyodrębniany), który będzie odrzucany przez [ws](../standard-library/istream-functions.md#ws). Jeśli funkcja wyodrębnia żadnych elementów, wywołuje metodę `Istr`. [Metoda setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). W każdym przypadku wywołuje `Istr`. **szerokość**(0) i zwraca `Istr`.
+wyodrębnia maksymalnie *N* - 1 elementy i przechowuje je w tablicy, zaczynając od _ *Str*. If `Istr`. [szerokość](../standard-library/ios-base-class.md#width) jest większa od zera, *N* jest `Istr`. **szerokość**; w przeciwnym razie jest rozmiar największego tablicę `Elem` mogą być deklarowane. Funkcja zawsze przechowuje wartość `Elem()` po wyodrębnieniu dowolne elementy, które są przechowywane. Wyodrębnianie wcześnie zatrzymuje się na końcu pliku, na znak o wartości **Elem**(0) (który jest nie wyodrębnić), lub w dowolnym elemencie, (która nie jest wyodrębniany), który będzie odrzucany przez [ws](../standard-library/istream-functions.md#ws). Jeśli funkcja wyodrębnia żadnych elementów, wywołuje metodę `Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). W każdym przypadku wywoływanych przez nią `Istr`. **szerokość**(0) i zwraca *Istr*.
 
-**Uwaga dotycząca zabezpieczeń** ciąg znaków zakończony znakiem null, wyodrębniania ze strumienia wejściowego nie może przekraczać rozmiar buforu docelowego `str`. Aby uzyskać więcej informacji, zobacz [unikanie Overruns buforu](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Uwaga dotycząca zabezpieczeń** ciąg zakończony zerem wyodrębniania ze strumienia wejściowego, nie może przekraczać rozmiaru bufora docelowego *str*. Aby uzyskać więcej informacji, zobacz [unikanie przepełnień bufora](http://msdn.microsoft.com/library/windows/desktop/ms717795).
 
 Funkcja szablonu:
 
@@ -100,7 +100,7 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem& Ch);
 ```
 
-wyodrębnia element, jeśli jest to możliwe i przechowuje ją w `Ch`. W przeciwnym razie wywołuje **jest**. [Metoda setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). W każdym przypadku zwraca `Istr`.
+wyodrębnia element, jeśli jest to możliwe i zapisuje go w *Ch*. W przeciwnym razie wywoływanych przez nią **jest**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). W każdym przypadku zwraca *Istr*.
 
 Funkcja szablonu:
 

@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d062912a441f16e9eb26415287fbbb574b829e9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 91132492ab6173d9d462eeb74d6393dce41f6833
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843811"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961594"
 ---
 # <a name="iscompound-class"></a>is_compound — Klasa
 
-Testy, jeśli określony typ nie jest podstawowym.
+Sprawdza, czy określony typ nie jest podstawową.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,11 +37,11 @@ struct is_compound;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zapytania.
+*Ty* typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu przechowuje `false` Jeśli typ `Ty` jest typem podstawowym (to znaczy, jeśli [is_fundamental —](../standard-library/is-fundamental-class.md)\<Ty > przechowuje `true`); w przeciwnym razie posiada `true`. W związku z tym przechowuje predykatu `true` Jeśli `Ty` jest tablicą, typ funkcji, wskaźnik do `void` lub obiekt lub funkcja, odwołaniem, klasę, a Unii, wyliczenie lub wskaźnik do elementu członkowskiego klasy niestatyczna lub a  *kwalifikowana CV* formularza jednego z nich.
+Wystąpienie typu predykatu ma **false** Jeśli typ *Ty* jest typem podstawowym (to znaczy, jeśli [is_fundamental —](../standard-library/is-fundamental-class.md)\<Ty > przechowuje  **wartość true,**); w przeciwnym razie przechowuje **true**. W związku z tym, zawiera predykat **true** Jeśli *Ty* jest typu tablicowego, typu funkcji, wskaźnik do **void** lub obiekt lub funkcję, a odwołanie, klasę, złożenia, wyliczenia lub w wskaźnik do składowej niestatycznych klas lub *kwalifikowana cv* postaci jednego z nich.
 
 ## <a name="example"></a>Przykład
 
@@ -89,7 +89,7 @@ is_compound<int> == false
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9591e11774550f198de601f36fce0350f76cf6bd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4cef7f0b51d9dc7a44e6dbc45c32f1296825ca30
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852100"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961509"
 ---
 # <a name="logicalor-struct"></a>logical_or — Struktura
 
-Obiekt wstępnie zdefiniowanych funkcji, który wykonuje operację rozłączenie logiczne ( `operator||`) na jego argumenty.
+Obiekt wstępnie zdefiniowana funkcja, który wykonuje operację rozłączenie logiczne ( `operator||`) na jego argumenty.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,19 +49,19 @@ struct logical_or<void>
 
 ### <a name="parameters"></a>Parametry
 
-`Type`, `T`, `U` Dowolnego typu, który obsługuje `operator||` pobierającej argumentów operacji typu określonego lub wywnioskowany.
+*Typ*, *T*, *U* dowolnego typu, który obsługuje `operator||` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
 
-`Left` Lewy operand operacji logicznego rozłączenia. Szablon klasy niespecjalizowanej przyjmuje argument odwołania l-wartością typu `Type`. Specjalne szablonu doskonała przekazującej lewostronnie i argumenty odwołanie do r-wartości wywnioskować typu `T`.
+*Po lewej stronie* lewy operand logicznego rozłączenia operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
 
-`Right` Prawy argument operacji rozłączenie logiczne. Szablon klasy niespecjalizowanej przyjmuje argument odwołania l-wartością typu `Type`. Specjalne szablonu doskonała przekazującej lewostronnie i argumenty odwołanie do r-wartości wywnioskować typu `U`.
+*Po prawej stronie* prawy operand logicznego rozłączenia operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wynik `Left || Right`. Specjalne szablonu doskonała przekazywanie wynik, który ma typ zwracany przez `operator||`.
+Wynik `Left || Right`. Szablon wyspecjalizowane doskonała przekazywania wyniku, który ma typ, który jest zwracany przez `operator||`.
 
 ## <a name="remarks"></a>Uwagi
 
-Typy danych zdefiniowane przez użytkownika jest nie zwarcie operand oceny. Oba argumenty są oceniane przez `operator||`.
+Typy zdefiniowane przez użytkownika jest nie zwarcie oceny operand. Oba argumenty są obliczane przez `operator||`.
 
 ## <a name="example"></a>Przykład
 
@@ -127,7 +127,7 @@ The deque which is the disjuction of d1 & d2 is:
 
 **Nagłówek:** \<funkcjonalności >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

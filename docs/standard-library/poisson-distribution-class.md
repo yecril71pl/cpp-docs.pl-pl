@@ -33,16 +33,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d88359bbf1521ad9fa464f22149c82497101ecb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 108182e7f54453bb88d9ea6e001f672c0c214a2c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857288"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961629"
 ---
 # <a name="poissondistribution-class"></a>poisson_distribution — Klasa
 
-Generuje rozkład Poissona.
+Generuje rozkład Poisson.
 
 ## <a name="syntax"></a>Składnia
 
@@ -77,28 +77,28 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*IntType* domyślnie integer — typ wyniku `int`. Dla typów możliwych [ \<losowe >](../standard-library/random.md).
+*IntType* typ wyniku liczby całkowitej, wartość domyślna to **int**. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje dystrybucji, który spowoduje utworzenie wartości określonych przez użytkownika typu całkowitego z rozkład Poissona. Poniższe łącza tabeli do artykułów na temat poszczególnych członków.
+Klasa szablonu opisuje dystrybucji, która wytwarza wartości typu całkowitego określone przez użytkownika z rozkład Poisson. Poniższa tabela zawiera linki do artykułów na temat poszczególnych elementów członkowskich.
 
 ||||
 |-|-|-|
 |[poisson_distribution](#poisson_distribution)|`poisson_distribution::mean`|`poisson_distribution::param`|
 |`poisson_distribution::operator()`||[param_type](#param_type)|
 
-Funkcja właściwości `mean()` zwraca wartość parametru dystrybucji przechowywanych *oznacza*.
+Funkcja właściwości `mean()` zwraca wartość parametru przechowywanych dystrybucji *oznacza*.
 
-Element członkowski właściwości `param()` Ustawia lub zwraca `param_type` dystrybucji składowanych parametr pakietu.
+Właściwość elementu członkowskiego `param()` Ustawia lub zwraca `param_type` pakiet parametrów przechowywanych dystrybucji.
 
-`min()` i `max()` funkcje Członkowskie zwracają najmniejsza możliwa wynik i największa możliwa wynik, odpowiednio.
+`min()` i `max()` funkcje Członkowskie zwracają najmniejsza możliwa wynik i największych możliwych wyników, odpowiednio.
 
-`reset()` Funkcji członkowskiej odrzuca wszystkie buforowane wartości, tak aby wynik następne wywołanie `operator()` nie zależy od wartości uzyskane z aparatu przed wywołaniem.
+`reset()` Funkcja elementu członkowskiego odrzuca wszystkie wartości z pamięci podręcznej, tak aby wynik następnego wywołania metody `operator()` nie zależy od żadnych wartości uzyskane z aparatu przed wywołaniem.
 
-`operator()` Elementu członkowskiego zwracają wartość następnego wygenerowanego oparty na aparacie URNG, z bieżącego pakietu parametrów lub pakiet określony parametr.
+`operator()` Funkcje Członkowskie zwracają dalej wygenerowaną wartość opartą na aparacie URNG, z bieżącego pakietu parametrów lub pakietu określony parametr.
 
-Aby uzyskać więcej informacji o dystrybucji klasy i ich elementy członkowskie, zobacz [ \<losowe >](../standard-library/random.md).
+Aby uzyskać więcej informacji o dystrybucji klasy i składowe, zobacz [ \<losowy >](../standard-library/random.md).
 
 Aby uzyskać szczegółowe informacje na temat rozkład Poissona, zobacz artykuł Wolfram MathWorld [rozkład Poissona](http://go.microsoft.com/fwlink/p/?linkid=401112).
 
@@ -156,7 +156,7 @@ int main()
 
 ```
 
-Pierwszego testu:
+Pierwszy test:
 
 ```Output
 Use CTRL-Z to bypass data entry and run using default values.
@@ -202,13 +202,13 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowe >
+**Nagłówek:** \<losowy >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="poisson_distribution"></a>  poisson_distribution::poisson_distribution
 
-Tworzy dystrybucji.
+Tworzy rozkład.
 
 ```cpp
 explicit poisson_distribution(RealType mean = 1.0);
@@ -219,15 +219,15 @@ explicit binomial_distribution(const param_type& parm);
 
 *oznacza* `mean` parametru dystrybucji.
 
-*Parametr* struktury parametr używany do budowy dystrybucji.
+*Parametr* struktury parametr, używane do konstruowania dystrybucji.
 
 ### <a name="remarks"></a>Uwagi
 
 **Warunek wstępny:** `0.0 < mean`
 
-Pierwszy Konstruktor konstrukcji obiektu których przechowywane `mean` wartość przechowuje wartość *oznacza*.
+Pierwszy Konstruktor konstruuje obiekt, którego przechowywane `mean` wartość przechowuje wartość *oznacza*.
 
-Drugi Konstruktor konstrukcji obiektu, którego parametry przechowywane są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżących parametrów istniejącego dystrybucji przez wywołanie metody `param()` funkcję elementu członkowskiego.
+Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżących parametrów istniejącego dystrybucji przez wywołanie metody `param()` funkcja elementu członkowskiego.
 
 ## <a name="param_type"></a>  poisson_distribution::param_type
 
@@ -246,14 +246,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-Zobacz parametrów konstruktora [poisson_distribution —](#poisson_distribution).
+Zobacz parametry konstruktora, aby [poisson_distribution —](#poisson_distribution).
 
 ### <a name="remarks"></a>Uwagi
 
 **Warunek wstępny:** `0.0 < mean`
 
-Ta struktura może być przekazany do konstruktora klasy dystrybucji przy tworzeniu wystąpienia, do `param()` funkcji członkowskiej, aby ustawić parametry przechowywane istniejących dystrybucji oraz do `operator()` do użycia zamiast przechowywane parametry.
+Ta struktura może być przekazywany do konstruktora klasy dystrybucji przy konkretyzacji, do `param()` funkcję elementu członkowskiego, aby ustawić przechowywanych parametrów istniejącego dystrybucji oraz do `operator()` ma być używany zamiast przechowywanych parametrów.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<losowe >](../standard-library/random.md)<br/>
+[\<losowy >](../standard-library/random.md)<br/>
