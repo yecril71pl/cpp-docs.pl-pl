@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c02018ee3cefb1b98c2df850d44578cf3a092c64
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d832d2978bf9db82b290d77b236fea1c9bcada58
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355842"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953045"
 ---
 # <a name="iunknown"></a>IUnknown
-[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) jest podstawowy interfejs każdego interfejsu COM.  Ten interfejs definiuje trzy metody: [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521), [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), i [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317). [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) umożliwia użytkownikowi interfejs uzyskać obiekt wskaźnika do innej interfejsy. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) i [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317) zaimplementować zliczanie w interfejsie.  
+[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) jest interfejsem podstawowy każdego interfejsu COM.  Ten interfejs definiuje trzy metody: [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521), [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), i [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317). [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) pozwala użytkownikowi interfejsu poprosić obiekt o wskaźnik do innego z jego interfejsów. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) i [wersji](http://msdn.microsoft.com/library/windows/desktop/ms682317) zaimplementować na interfejsie zliczanie odwołań.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie do COM](../atl/introduction-to-com.md)   
- [IUnknown i dziedziczenie — interfejs](http://msdn.microsoft.com/library/windows/desktop/ms692713)
+ [Wprowadzenie do modelu COM](../atl/introduction-to-com.md)   
+ [IUnknown i dziedziczenia interfejsu](http://msdn.microsoft.com/library/windows/desktop/ms692713)
 

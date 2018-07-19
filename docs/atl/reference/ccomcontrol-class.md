@@ -29,18 +29,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6017d06715146a0440887a2a2e10828398d5044b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 77b0c115dbd820ea715b739dd3e4d6eb2c5f4950
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365558"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883453"
 ---
 # <a name="ccomcontrol-class"></a>Klasa CComControl
-Ta klasa dostarcza metody do tworzenia i zarządzania kontrolek ALT.  
+Ta klasa dostarcza metody do tworzenia i zarządzania formantami ATL.  
   
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -51,11 +51,11 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Klasa implementująca formantu.  
+ *T*  
+ Klasa Implementowanie formantu.  
   
  *WinBase*  
- Klasa podstawowa, która implementuje funkcje okien. Domyślnie [CWindowImpl](../../atl/reference/cwindowimpl-class.md).  
+ Klasa bazowa implementuje funkcji obsługi okien. Wartość domyślna to [CWindowImpl](../../atl/reference/cwindowimpl-class.md).  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -70,17 +70,17 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[CComControl::ControlQueryInterface](#controlqueryinterface)|Pobiera wskaźnik do żądanego interfejsu.|  
-|[CComControl::CreateControlWindow](#createcontrolwindow)|Utworzenie okna dla kontrolki.|  
-|[CComControl::FireOnChanged](#fireonchanged)|Powiadamia zbiornika kontenera, który zmieniono właściwość formantu.|  
-|[CComControl::FireOnRequestEdit](#fireonrequestedit)|Powiadamia kontenera obiektu sink właściwości formantu o zbliżającym się zmienić i że obiektu prosi obiekt sink postępowania.|  
-|[CComControl::MessageBox](#messagebox)|Wywołanie tej metody do tworzenia, wyświetlania i działać okno komunikatu.|  
+|[CComControl::CreateControlWindow](#createcontrolwindow)|Tworzy okno, dla formantu.|  
+|[CComControl::FireOnChanged](#fireonchanged)|Powiadamia obiekt sink kontenera, które uległy zmianie właściwości formantu.|  
+|[CComControl::FireOnRequestEdit](#fireonrequestedit)|Powiadamia obiekt sink kontenera, gdy dla właściwości kontrolki zostanie zmienione i czy obiekt jest zapytaniem ujścia dalszego postępowania.|  
+|[CComControl::MessageBox](#messagebox)|Wywołaj tę metodę w celu tworzenia, wyświetlania i obsługiwanie okno komunikatu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CComControl` to zestaw funkcji pomocnika przydatne kontroli i elementy członkowskie danych istotnych dla kontrolek ALT. Podczas tworzenia formantu standardowego lub formantu DHTML przy użyciu Kreator formantu ATL, Kreator automatycznie uzyskuje klasy z `CComControl`. `CComControl` większość jego metody pochodzi [CComControlBase](../../atl/reference/ccomcontrolbase-class.md).  
+ `CComControl` to zestaw funkcji pomocnika przydatne kontroli i elementy członkowskie danych istotnych dla kontrolek ATL. Podczas tworzenia kontrolki standardowej lub kontrolki DHTML przy użyciu kreator kontrolki ATL, Kreator automatycznie, z której pochodzą z klasy `CComControl`. `CComControl` wywodzi się większość jego metody z [CComControlBase](../../atl/reference/ccomcontrolbase-class.md).  
   
- Aby uzyskać więcej informacji o tworzeniu formantu, zobacz [ALT — samouczek](../../atl/active-template-library-atl-tutorial.md). Aby uzyskać więcej informacji o Kreatorze Projekt ATL, zobacz artykuł [tworzenie Projekt ATL](../../atl/reference/creating-an-atl-project.md).  
+ Aby uzyskać więcej informacji na temat tworzenia kontrolki zobacz [ALT — samouczek](../../atl/active-template-library-atl-tutorial.md). Aby uzyskać więcej informacji na temat Kreator projektów ATL, zobacz artykuł [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md).  
   
- Dla pokaz `CComControl` metod i elementów członkowskich danych, zobacz [OK](../../visual-cpp-samples.md) próbki.  
+ Do pokazania `CComControl` metod i składowych danych, zobacz [OK](../../visual-cpp-samples.md) próbki.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `WinBase`  
@@ -100,7 +100,7 @@ CComControl();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołania [CComControlBase](ccomcontrolbase-class.md#ccomcontrolbase) konstruktora, przekazywanie `m_hWnd` dziedziczony element członkowski danych za pośrednictwem [CWindowImpl](../../atl/reference/cwindowimpl-class.md).  
+ Wywołania [CComControlBase](ccomcontrolbase-class.md#ccomcontrolbase) konstruktora, przekazując `m_hWnd` element członkowski danych dziedziczone [CWindowImpl](../../atl/reference/cwindowimpl-class.md).  
   
 ##  <a name="controlqueryinterface"></a>  CComControl::ControlQueryInterface  
  Pobiera wskaźnik do żądanego interfejsu.  
@@ -110,40 +110,40 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iid`  
- [in] Identyfikator GUID żądanego interfejsu.  
+ *IID*  
+ [in] Identyfikator GUID interfejsu żądanej.  
   
- `ppv`  
- [out] Wskaźnik do wskaźnika interfejsu identyfikowane przez `iid`, lub **NULL** Jeśli nie można odnaleźć interfejsu.  
+ *ppv*  
+ [out] Wskaźnik do wskaźnika interfejsu identyfikowane przez *iid*, lub wartość NULL, jeśli nie można odnaleźć interfejsu.  
   
 ### <a name="remarks"></a>Uwagi  
- Obsługuje tylko interfejsy COM tabeli mapy.  
+ obsługuje tylko interfejsów COM tabeli mapy.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_COM#15](../../atl/codesnippet/cpp/ccomcontrol-class_1.cpp)]  
   
 ##  <a name="createcontrolwindow"></a>  CComControl::CreateControlWindow  
- Domyślnie tworzy okna dla kontrolki przez wywołanie metody `CWindowImpl::Create`.  
+ Domyślnie tworzy okna dla kontrolki, wywołując `CWindowImpl::Create`.  
   
 ```
 virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hWndParent`  
+ *hWndParent*  
  [in] Dojście do okna nadrzędnego lub właściciela. Należy podać prawidłowy uchwyt okna. Okno kontrolki jest ograniczona do obszaru okna nadrzędnego.  
   
- `rcPos`  
+ *rcPos*  
  [in] Początkowy rozmiar i położenie okna, które ma zostać utworzony.  
   
 ### <a name="remarks"></a>Uwagi  
- Przesłonić tę metodę, jeśli chcesz zrobić coś innego niż tworzenie jednego okna, na przykład, aby utworzyć dwa okna, z których jedna staje się narzędzi dla formantu.  
+ Przesłonić tę metodę, jeśli chcesz zrobić coś innego niż tworzenie jednego okna, na przykład aby utworzyć dwa okna, z których jedna staje się pasek narzędzi dla formantu.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_COM#16](../../atl/codesnippet/cpp/ccomcontrol-class_2.cpp)]  
   
 ##  <a name="fireonchanged"></a>  CComControl::FireOnChanged  
- Powiadamia zbiornika kontenera, który zmieniono właściwość formantu.  
+ Powiadamia obiekt sink kontenera, które uległy zmianie właściwości formantu.  
   
 ```
 HRESULT FireOnChanged(DISPID dispID);
@@ -151,21 +151,21 @@ HRESULT FireOnChanged(DISPID dispID);
   
 ### <a name="parameters"></a>Parametry  
  *dispID*  
- [in] Identyfikator właściwości, która została zmieniona.  
+ [in] Identyfikator właściwości, które uległy zmianie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeden standardowy wartości HRESULT.  
+ Jedna z wartości HRESULT standardowych.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli pochodną klasy formantu [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), ta metoda wywołuje [CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged) powiadomiono wszystkie połączone `IPropertyNotifySink` interfejsów określonego formantu Właściwość zostanie zmieniona. Jeśli nie jest pochodną klasy formantu `IPropertyNotifySink`, ta metoda zwraca `S_OK`. 
+ Jeśli pochodną klasy kontrolki [ipropertynotifysink —](http://msdn.microsoft.com/library/windows/desktop/ms692638), ta metoda wywołuje [CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged) powiadomić wszystkich połączonych `IPropertyNotifySink` interfejsów określoną kontrolkę Właściwość zostanie zmieniona. Jeśli nie jest pochodną klasy kontrolki `IPropertyNotifySink`, ta metoda zwraca wartość S_OK. 
   
- Ta metoda jest bezpiecznie wywołać nawet wtedy, gdy formant nie obsługuje punkty połączenia.  
+ Ta metoda jest bezpieczny do wywołania, nawet jeśli formant nie obsługuje punktów połączenia.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_COM#17](../../atl/codesnippet/cpp/ccomcontrol-class_3.cpp)]  
   
 ##  <a name="fireonrequestedit"></a>  CComControl::FireOnRequestEdit  
- Powiadamia kontenera obiektu sink właściwości formantu o zbliżającym się zmienić i że obiektu prosi obiekt sink postępowania.  
+ Powiadamia obiekt sink kontenera, gdy dla właściwości kontrolki zostanie zmienione i czy obiekt jest zapytaniem ujścia dalszego postępowania.  
   
 ```
 HRESULT FireOnRequestEdit(DISPID dispID);
@@ -173,22 +173,22 @@ HRESULT FireOnRequestEdit(DISPID dispID);
   
 ### <a name="parameters"></a>Parametry  
  *dispID*  
- [in] Identyfikator właściwości zostać zmieniona.  
+ [in] Identyfikator właściwości, które chcesz zmienić.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeden standardowy wartości HRESULT.  
+ Jedna z wartości HRESULT standardowych.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli pochodną klasy formantu [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), ta metoda wywołuje [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) powiadomiono wszystkie połączone `IPropertyNotifySink` interfejsów określony Właściwość formantu ma zostać zmieniona. Jeśli nie jest pochodną klasy formantu `IPropertyNotifySink`, ta metoda zwraca `S_OK`.  
+ Jeśli pochodną klasy kontrolki [ipropertynotifysink —](http://msdn.microsoft.com/library/windows/desktop/ms692638), ta metoda wywołuje [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) powiadomić wszystkich połączonych `IPropertyNotifySink` interfejsów określonego właściwości kontrolki zostanie zmienione. Jeśli nie jest pochodną klasy kontrolki `IPropertyNotifySink`, ta metoda zwraca wartość S_OK.  
 
   
- Ta metoda jest bezpiecznie wywołać nawet wtedy, gdy formant nie obsługuje punkty połączenia.  
+ Ta metoda jest bezpieczny do wywołania, nawet jeśli formant nie obsługuje punktów połączenia.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_COM#18](../../atl/codesnippet/cpp/ccomcontrol-class_4.cpp)]  
   
 ##  <a name="messagebox"></a>  CComControl::MessageBox  
- Wywołanie tej metody do tworzenia, wyświetlania i działać okno komunikatu.  
+ Wywołaj tę metodę w celu tworzenia, wyświetlania i obsługiwanie okno komunikatu.  
   
 ```
 int MessageBox(
@@ -198,23 +198,23 @@ int MessageBox(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszText`  
+ *lpszText*  
  Tekst, który ma być wyświetlany w oknie komunikatu.  
   
- `lpszCaption`  
+ *lpszCaption*  
  Tytuł okna dialogowego. Jeśli wartość NULL (ustawienie domyślne), tytuł "Error" jest używany.  
   
- `nType`  
- Określa zawartość i zachowanie okna dialogowego. Zobacz [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) wpis w dokumentacji zestawu SDK systemu Windows zawiera listę dostępnych pól inny komunikat. Domyślnie udostępnia prostą **OK** przycisku.  
+ *nNie*  
+ Określa zawartość i zachowanie okna dialogowego. Zobacz [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) wpisu w dokumentacji zestawu SDK Windows listę dostępnych pól inny komunikat. Wartość domyślna zapewnia prosty **OK** przycisku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość całkowitą, określając jedną z wartości elementu menu kategorii [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) w dokumentacji zestawu SDK systemu Windows.  
+ Zwraca wartość całkowitą określającą jedną z wartości element menu na liście [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) w dokumentacji zestawu Windows SDK.  
   
 ### <a name="remarks"></a>Uwagi  
- `MessageBox` jest przydatne podczas rozwoju i w prosty sposób, aby wyświetlić błąd lub ostrzeżenie dla użytkownika.  
+ `MessageBox` jest przydatne zarówno podczas tworzenia, jak i w prosty sposób, aby wyświetlić błąd lub ostrzeżenie dla użytkownika.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CWindowImpl](../../atl/reference/cwindowimpl-class.md)   
- [Przegląd klas](../../atl/atl-class-overview.md)   
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)   
  [Klasa CComControlBase](../../atl/reference/ccomcontrolbase-class.md)   
  [Klasa CComCompositeControl](../../atl/reference/ccomcompositecontrol-class.md)

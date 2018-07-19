@@ -52,18 +52,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6daec3347aecaed3ba0aba5dec106d049a6a701
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7804513c45de1951935e0fdf2fd485b9457e2a5e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366643"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885301"
 ---
 # <a name="cregkey-class"></a>Klasa CRegKey
-Ta klasa dostarcza metody do manipulowania wpisy w rejestrze systemu.  
+Ta klasa dostarcza metody do manipulowania wpisy w rejestrze systemowym.  
   
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -84,34 +84,34 @@ class CRegKey
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CRegKey::Attach](#attach)|Wywołanie tej metody, aby dołączyć HKEY do `CRegKey` obiektu przez ustawienie [m_hKey](#m_hkey) uchwytu elementu członkowskiego do `hKey`.|  
-|[CRegKey::Close](#close)|Wywołanie tej metody, aby zwolnić [m_hKey](#m_hkey) element członkowski obsługi i ustaw ją na wartość NULL.|  
-|[CRegKey::Create](#create)|Wywołanie tej metody można utworzyć określony klucz, jeśli nie istnieje jako podklucz `hKeyParent`.|  
+|[CRegKey::Attach](#attach)|Wywołanie tej metody, aby dołączyć HKEY do `CRegKey` obiektu przez ustawienie [m_hKey](#m_hkey) elementu członkowskiego dojścia do `hKey`.|  
+|[CRegKey::Close](#close)|Wywołaj tę metodę, aby zwolnić [m_hKey](#m_hkey) elementu członkowskiego obsługi i ustaw ją na wartość NULL.|  
+|[CRegKey::Create](#create)|Wywołaj tę metodę, aby utworzyć określony klucz, jeśli nie istnieje jako podklucz `hKeyParent`.|  
 |[CRegKey::DeleteSubKey](#deletesubkey)|Wywołaj tę metodę w celu usunięcia określonego klucza z rejestru.|  
-|[CRegKey::DeleteValue](#deletevalue)|Wywołanie tej metody, aby usunąć pola wartości z [m_hKey](#m_hkey).|  
-|[CRegKey::Detach](#detach)|Wywołanie tej metody można odłączyć [m_hKey](#m_hkey) uchwytu elementu członkowskiego z `CRegKey` obiektu i ustaw `m_hKey` na wartość NULL.|  
-|[CRegKey::EnumKey](#enumkey)|Wywołanie tej metody można wyliczyć podkluczy klucza rejestru otwarte.|  
+|[CRegKey::DeleteValue](#deletevalue)|Wywołaj tę metodę, aby usunąć pole wartości z [m_hKey](#m_hkey).|  
+|[CRegKey::Detach](#detach)|Wywołanie tej metody można odłączyć [m_hKey](#m_hkey) dojście do elementu członkowskiego z `CRegKey` obiektu i ustaw `m_hKey` na wartość NULL.|  
+|[CRegKey::EnumKey](#enumkey)|Wywołaj tę metodę można wyliczyć podkluczy klucza rejestru Otwórz.|  
 |[CRegKey::Flush](#flush)|Wywołaj tę metodę, aby zapisać wszystkie atrybuty otworzyć klucza rejestru do rejestru.|  
 |[CRegKey::GetKeySecurity](#getkeysecurity)|Wywołaj tę metodę, aby pobrać kopię deskryptora zabezpieczeń, ochrony otworzyć klucza rejestru.|  
-|[CRegKey::NotifyChangeKeyValue](#notifychangekeyvalue)|Ta metoda powiadamia wywołującego o zmianach atrybuty lub zawartość otworzyć klucza rejestru.|  
-|[CRegKey::Open](#open)|Wywołanie tej metody, aby otworzyć określony klucz i ustawić [m_hKey](#m_hkey) do realizacji tego klucza.|  
-|[CRegKey::QueryBinaryValue](#querybinaryvalue)|Wywołanie tej metody do pobierania danych binarnych dla nazwy określonej wartości.|  
-|[CRegKey::QueryDWORDValue](#querydwordvalue)|Wywołaj tę metodę, aby pobrać dane DWORD o nazwę określonej wartości.|  
-|[CRegKey::QueryGUIDValue](#queryguidvalue)|Wywołanie tej metody do pobierania danych identyfikatora GUID dla nazwy określonej wartości.|  
-|[CRegKey::QueryMultiStringValue](#querymultistringvalue)|Wywołaj tę metodę w celu pobrania danych wielociągu dla nazwy określonej wartości.|  
-|[CRegKey::QueryQWORDValue](#queryqwordvalue)|Wywołanie tej metody do pobierania danych QWORD dla nazwy określonej wartości.|  
-|[CRegKey::QueryStringValue](#querystringvalue)|Wywołanie tej metody do pobierania danych ciągu dla nazwy określonej wartości.|  
-|[CRegKey::QueryValue](#queryvalue)|Wywołanie tej metody do pobierania danych dla określonej wartości pola [m_hKey](#m_hkey). Starsze wersje tej metody nie są już obsługiwane i są oznaczone jako **ATL_DEPRECATED**.|  
-|[CRegKey::RecurseDeleteKey](#recursedeletekey)|Wywołaj tę metodę w celu usunięcia określonego klucza z rejestru i usunąć wszystkie podklucze.|  
-|[CRegKey::SetBinaryValue](#setbinaryvalue)|Wywołanie tej metody można ustawić wartości binarnej klucza rejestru.|  
-|[CRegKey::SetDWORDValue](#setdwordvalue)|Wywołanie tej metody można ustawić wartości DWORD klucza rejestru.|  
+|[CRegKey::NotifyChangeKeyValue](#notifychangekeyvalue)|Ta metoda powiadamia obiekt wywołujący o zmianach wprowadzonych do atrybutów lub zawartość otworzyć klucza rejestru.|  
+|[CRegKey::Open](#open)|Wywołanie tej metody, aby otworzyć określony klucz i ustawić [m_hKey](#m_hkey) obsługiwać tego klucza.|  
+|[CRegKey::QueryBinaryValue](#querybinaryvalue)|Wywołaj tę metodę w celu pobrania danych binarnych dla nazwy określonej wartości.|  
+|[CRegKey::QueryDWORDValue](#querydwordvalue)|Wywołaj tę metodę, aby pobrać dane typu DWORD nazwę określoną wartość.|  
+|[CRegKey::QueryGUIDValue](#queryguidvalue)|Wywołaj tę metodę w celu pobrania danych identyfikatora GUID dla nazwy określonej wartości.|  
+|[CRegKey::QueryMultiStringValue](#querymultistringvalue)|Wywołaj tę metodę w celu pobrania danych wielociągu nazwę określoną wartość.|  
+|[CRegKey::QueryQWORDValue](#queryqwordvalue)|Wywołaj tę metodę w celu pobrania danych QWORD nazwę określoną wartość.|  
+|[CRegKey::QueryStringValue](#querystringvalue)|Wywołaj tę metodę, aby pobrać dane ciągu dla nazwy określonej wartości.|  
+|[CRegKey::QueryValue](#queryvalue)|Wywołanie tej metody do pobierania danych dla określonej wartości pola [m_hKey](#m_hkey). Wcześniejszych wersjach tej metody nie są już obsługiwane i są oznaczone jako ATL_DEPRECATED.|  
+|[CRegKey::RecurseDeleteKey](#recursedeletekey)|Wywołaj tę metodę w celu usunięcia określonego klucza z rejestru i jawnie usunąć wszystkie podklucze.|  
+|[CRegKey::SetBinaryValue](#setbinaryvalue)|Wywołaj tę metodę, aby ustawić wartość binarną klucza rejestru.|  
+|[CRegKey::SetDWORDValue](#setdwordvalue)|Wywołaj tę metodę, aby ustawić wartość DWORD klucza rejestru.|  
 |[CRegKey::SetGUIDValue](#setguidvalue)|Wywołaj tę metodę, aby ustawić wartość identyfikatora GUID klucza rejestru.|  
-|[CRegKey::SetKeySecurity](#setkeysecurity)|Wywołanie tej metody można ustawić zabezpieczeń klucza rejestru.|  
-|[CRegKey::SetKeyValue](#setkeyvalue)|Wywołanie tej metody do przechowywania danych w polu określoną wartość z określonym kluczem.|  
-|[CRegKey::SetMultiStringValue](#setmultistringvalue)|Wywołanie tej metody, aby ustawić wartość wielociągu klucza rejestru.|  
+|[CRegKey::SetKeySecurity](#setkeysecurity)|Wywołaj tę metodę, aby ustawić zabezpieczenia klucza rejestru.|  
+|[CRegKey::SetKeyValue](#setkeyvalue)|Wywołaj tę metodę, aby przechowywać dane w polu określoną wartość z określonym kluczem.|  
+|[CRegKey::SetMultiStringValue](#setmultistringvalue)|Wywołaj tę metodę można ustawić wartości wielociągu klucza rejestru.|  
 |[CRegKey::SetQWORDValue](#setqwordvalue)|Wywołaj tę metodę, aby ustawić wartość QWORD klucza rejestru.|  
 |[CRegKey::SetStringValue](#setstringvalue)|Wywołaj tę metodę, aby ustawić wartość ciągu klucza rejestru.|  
-|[CRegKey::SetValue](#setvalue)|Wywołanie tej metody do przechowywania danych w polu określonej wartości [m_hKey](#m_hkey). Starsze wersje tej metody nie są już obsługiwane i są oznaczone jako **ATL_DEPRECATED**.|  
+|[CRegKey::SetValue](#setvalue)|Wywołanie tej metody do przechowywania danych w polu określoną wartość [m_hKey](#m_hkey). Wcześniejszych wersjach tej metody nie są już obsługiwane i są oznaczone jako ATL_DEPRECATED.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
@@ -124,38 +124,38 @@ class CRegKey
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CRegKey::m_hKey](#m_hkey)|Zawiera dojście do klucza rejestru, skojarzone z `CRegKey` obiektu.|  
+|[CRegKey::m_hKey](#m_hkey)|Zawiera uchwyt klucza rejestru, skojarzone z `CRegKey` obiektu.|  
 |[CRegKey::m_pTM](#m_ptm)|Wskaźnik do `CAtlTransactionManager` obiektu|  
   
 ## <a name="remarks"></a>Uwagi  
- `CRegKey` udostępnia metody do tworzenia i usuwania kluczy i wartości w rejestrze systemu. Rejestr zawiera specyficznych dla instalacji zestawu definicji dla składników systemu, takich jak numery wersji oprogramowania, mapowania logiczne fizyczne zainstalowanego sprzętu i obiektów COM.  
+ `CRegKey` zawiera metody służące do tworzenia i usuwania kluczy i wartości w rejestrze systemowym. Rejestr zawiera zestaw definicji składników systemu, takich jak numery wersji oprogramowania, mapowania logicznego na fizyczne zainstalowany sprzęt i obiekty COM specyficznych dla instalacji.  
   
- `CRegKey` udostępnia interfejs programowania do rejestru systemowego dla danej maszyny. Na przykład można otworzyć klucza rejestru w szczególności, należy wywołać `CRegKey::Open`. Aby pobrać lub zmodyfikować wartość danych, należy wywołać `CRegKey::QueryValue` lub `CRegKey::SetValue`odpowiednio. Aby zamknąć klucza, należy wywołać `CRegKey::Close`.  
+ `CRegKey` udostępnia interfejs programowania do rejestru systemowego na danym komputerze. Na przykład można otworzyć klucza rejestru w szczególności, należy wywołać `CRegKey::Open`. Aby pobrać lub zmodyfikować wartość danych, należy wywołać `CRegKey::QueryValue` lub `CRegKey::SetValue`, odpowiednio. Aby zamknąć klucza, należy wywołać `CRegKey::Close`.  
   
- Po zamknięciu klucza, jego dane rejestru są zapisywane (wyczyszczone) na dysku twardym. Ten proces może potrwać kilka sekund. Jeśli aplikacja musi jawnie zapisać danych rejestru dysku twardego, należy wywołać [RegFlushKey](http://msdn.microsoft.com/library/windows/desktop/ms724867) funkcji Win32. Jednak **RegFlushKey** używa wielu zasobów systemowych i powinna być wywoływana tylko wtedy, gdy jest to bezwzględnie konieczne.  
+ Po zamknięciu klucza, jego rejestru dane są zapisywane (opróżniania buforów) na dysku twardym. Ten proces może potrwać kilka sekund. Jeśli aplikacja musi jawnie zapisu danych rejestru na dysku twardym, można wywołać [RegFlushKey](http://msdn.microsoft.com/library/windows/desktop/ms724867) funkcję Win32. Jednak `RegFlushKey` używa wielu zasobów systemowych i powinna być wywoływana tylko wtedy, gdy jest to absolutnie konieczne.  
   
 > [!IMPORTANT]
->  Żadnych metod umożliwiających obiekt wywołujący, aby określić lokalizację rejestru mieć możliwość odczytu danych, która nie może być zaufane. Użycie metody, które należy [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) należy wziąć pod uwagę, że ta funkcja nie obsługuje jawnie ciągów, które są zakończone znakiem NULL. Oba te warunki mają być wyszukiwane przez kod wywołujący.  
+>  Wszystkie metody, które umożliwiają obiektowi wywołującemu określenie lokalizacji w rejestrze ma możliwość odczytywania danych, który nie jest zaufany. Użycie metody ułatwiające wykonanie [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) należy wziąć pod uwagę, że ta funkcja nie obsługuje jawnie ciągów, które są zakończone znakiem NULL. Oba warunki powinny zostać sprawdzone przez kod wywołujący.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlbase.h  
   
 ##  <a name="attach"></a>  CRegKey::Attach  
- Wywołanie tej metody, aby dołączyć HKEY do `CRegKey` obiektu przez ustawienie [m_hKey](#m_hkey) uchwytu elementu członkowskiego do `hKey`.  
+ Wywołanie tej metody, aby dołączyć HKEY do `CRegKey` obiektu przez ustawienie [m_hKey](#m_hkey) elementu członkowskiego dojścia do *hKey*.  
   
 ```
 void Attach(HKEY hKey) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hKey`  
- Dojście do klucza rejestru.  
+ *hKey*  
+ Uchwyt klucza rejestru.  
   
 ### <a name="remarks"></a>Uwagi  
- **Dołącz** będzie assert, jeśli `m_hKey` jest różna od NULL.  
+ `Attach` będzie potwierdzenia, jeśli `m_hKey` jest różna od NULL.  
   
 ##  <a name="close"></a>  CRegKey::Close  
- Wywołanie tej metody, aby zwolnić [m_hKey](#m_hkey) element członkowski obsługi i ustaw ją na wartość NULL.  
+ Wywołaj tę metodę, aby zwolnić [m_hKey](#m_hkey) elementu członkowskiego obsługi i ustaw ją na wartość NULL.  
   
 ```
 LONG Close() throw();
@@ -165,7 +165,7 @@ LONG Close() throw();
  Jeśli to się powiedzie, zwraca ERROR_SUCCESS; w przeciwnym razie zwraca wartość błędu.  
   
 ##  <a name="create"></a>  CRegKey::Create  
- Wywołanie tej metody można utworzyć określony klucz, jeśli nie istnieje jako podklucz `hKeyParent`.  
+ Wywołaj tę metodę, aby utworzyć określony klucz, jeśli nie istnieje jako podklucz *hKeyParent*.  
   
 ```
 LONG Create(  
@@ -179,32 +179,32 @@ LONG Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hKeyParent`  
+ *hKeyParent*  
  Dojście otwartego klucza.  
   
- `lpszKeyName`  
- Określa nazwę klucza do utworzenia lub otwarcia. Ta nazwa musi być podklucz `hKeyParent`.  
+ *lpszKeyName*  
+ Określa nazwę klucza, który ma zostać utworzony lub otwarty. Ta nazwa musi być podklucz *hKeyParent*.  
   
- `lpszClass`  
- Określa klasę klucza do utworzenia lub otwarcia. Wartość domyślna to REG_NONE.  
+ *lpszClass*  
+ Określa klasę klucza, który ma zostać utworzony lub otwarty. Wartość domyślna to REG_NONE.  
   
- `dwOptions`  
+ *dwOptions*  
  Opcje dla klucza. Wartość domyślna to REG_OPTION_NON_VOLATILE. Aby uzyskać listę możliwych wartości i opisy, zobacz [RegCreateKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724844) w zestawie Windows SDK.  
   
- `samDesired`  
- Zabezpieczeń dostępu do klucza. Wartość domyślna to KEY_READ &#124; KEY_WRITE. Aby uzyskać listę możliwych wartości i opisy, zobacz **RegCreateKeyEx**.  
+ *samDesired*  
+ Zabezpieczeń dostępu do klucza. Wartość domyślna to KEY_READ &#124; KEY_WRITE. Aby uzyskać listę możliwych wartości i opisy, zobacz `RegCreateKeyEx`.  
   
  *lpSecAttr*  
- Wskaźnik do [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) struktury, która wskazuje, czy dojście klucza mogą być dziedziczone przez procesu podrzędnego. Domyślnie ten parametr ma wartość NULL (znaczenie, które nie może być dziedziczona dojście).  
+ Wskaźnik do [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) strukturę, która wskazuje, czy uchwyt klucza może być dziedziczona przez proces podrzędny. Domyślnie ten parametr ma wartość NULL (znaczenie, który nie może być dziedziczona uchwyt).  
   
  *lpdwDisposition*  
- [out] Jeśli inną niż NULL, pobiera REG_CREATED_NEW_KEY (Jeśli klucz nie istnieje i został utworzony) lub REG_OPENED_EXISTING_KEY (Jeśli klucz istniał i został otwarty).  
+ [out] Jeśli innych niż NULL, pobiera REG_CREATED_NEW_KEY (Jeśli klucz nie istnieje i został utworzony) lub REG_OPENED_EXISTING_KEY (Jeśli klucz istniał i został otwarty).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli to się powiedzie, zwraca ERROR_SUCCESS i otwiera klucza. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowane w powiodło się. kod błędu różną od zera. H.  
+ Jeśli to się powiedzie, zwraca ERROR_SUCCESS i otwiera klucza. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowany w powiodło się. kod błędu różny od zera. H.  
   
 ### <a name="remarks"></a>Uwagi  
- **Utwórz** ustawia [m_hKey](#m_hkey) elementu członkowskiego do realizacji tego klucza.  
+ `Create` Ustawia [m_hKey](#m_hkey) elementu członkowskiego do realizacji tego klucza.  
   
 ##  <a name="cregkey"></a>  CRegKey::CRegKey  
  Konstruktor.  
@@ -217,17 +217,17 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `key`  
+ *Klucz*  
  Odwołanie do `CRegKey` obiektu.  
   
- `hKey`  
+ *hKey*  
  Dojście do klucza rejestru.  
   
- `pTM`  
+ *pTM*  
  Wskaźnik do obiektu CAtlTransactionManager  
   
 ### <a name="remarks"></a>Uwagi  
- Tworzy nową `CRegKey` obiektu. Można utworzyć obiektu z istniejącego `CRegKey` obiektu lub dojście do klucza rejestru.  
+ Tworzy nową `CRegKey` obiektu. Obiekt można tworzyć na podstawie istniejącego `CRegKey` obiektu lub dojście do klucza rejestru.  
   
 ##  <a name="dtor"></a>  CRegKey:: ~ CRegKey  
  Destruktor.  
@@ -237,7 +237,7 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Wersje destruktora `m_hKey`.  
+ Wersje destruktor `m_hKey`.  
   
 ##  <a name="deletesubkey"></a>  CRegKey::DeleteSubKey  
  Wywołaj tę metodę w celu usunięcia określonego klucza z rejestru.  
@@ -247,41 +247,41 @@ LONG DeleteSubKey(LPCTSTR lpszSubKey) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszSubKey`  
+ *lpszSubKey*  
  Określa nazwę klucza do usunięcia. Ta nazwa musi być podklucz [m_hKey](#m_hkey).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli to się powiedzie, zwraca ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowane w powiodło się. kod błędu różną od zera. H.  
+ Jeśli to się powiedzie, zwraca ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowany w powiodło się. kod błędu różny od zera. H.  
   
 ### <a name="remarks"></a>Uwagi  
- `DeleteSubKey` można usunąć tylko klucz, który ma podklucze nie. Jeśli klucz ma podklucze, wywołanie [RecurseDeleteKey](#recursedeletekey) zamiast tego.  
+ `DeleteSubKey` usunąć można tylko klucz, który ma nie kluczy podrzędnych. Jeśli klucz ma podklucze, wywołaj [RecurseDeleteKey](#recursedeletekey) zamiast tego.  
   
 ##  <a name="deletevalue"></a>  CRegKey::DeleteValue  
- Wywołanie tej metody, aby usunąć pola wartości z [m_hKey](#m_hkey).  
+ Wywołaj tę metodę, aby usunąć pole wartości z [m_hKey](#m_hkey).  
   
 ```
 LONG DeleteValue(LPCTSTR lpszValue) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszValue`  
+ *lpszValue*  
  Określa pole wartości do usunięcia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli to się powiedzie, zwraca ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowane w powiodło się. kod błędu różną od zera. H.  
+ Jeśli to się powiedzie, zwraca ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowany w powiodło się. kod błędu różny od zera. H.  
   
 ##  <a name="detach"></a>  CRegKey::Detach  
- Wywołanie tej metody można odłączyć [m_hKey](#m_hkey) uchwytu elementu członkowskiego z `CRegKey` obiektu i ustaw `m_hKey` na wartość NULL.  
+ Wywołanie tej metody można odłączyć [m_hKey](#m_hkey) dojście do elementu członkowskiego z `CRegKey` obiektu i ustaw `m_hKey` na wartość NULL.  
   
 ```
 HKEY Detach() throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Klucz HKEY skojarzone z `CRegKey` obiektu.  
+ HKEY skojarzone z `CRegKey` obiektu.  
   
 ##  <a name="enumkey"></a>  CRegKey::EnumKey  
- Wywołanie tej metody można wyliczyć podkluczy klucza rejestru otwarte.  
+ Wywołaj tę metodę można wyliczyć podkluczy klucza rejestru Otwórz.  
   
 ```
 LONG EnumKey(  
@@ -292,23 +292,23 @@ LONG EnumKey(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iIndex`  
- Indeks podkluczy. Ten parametr powinien być zero jako pierwsze wywołanie i zwiększana w kolejnych wywołaniach  
+ *iIndex*  
+ Indeks podklucza. Ten parametr powinna wynosić zero dla pierwszego wywołania i następnie są zwiększane dla kolejnych wywołań  
   
- `pszName`  
- Wskaźnik do buforu, który odbiera nazwa podklucza, w tym znak końcowy null. Nazwa podklucza jest kopiowana do buforu, nie hierarchii pełnej klucza.  
+ *pszName*  
+ Wskaźnik do buforu, który otrzymuje nazwę podklucza, w tym kończącego znaku null. Nazwa podklucza który jest kopiowany do buforu, a nie pełne kluczowej hierarchii.  
   
  *pnNameLength*  
- Wskaźnik do zmiennej, która określa rozmiar w TCHARs buforu określony przez `pszName` parametru. Ten rozmiar powinna zawierać znak końcowy null. Gdy metoda zwróci wartość, wskazywanej przez zmienną *pnNameLength* zawiera liczbę znaków przechowywanych w buforze. Liczba zwrócił nie zawiera znak końcowy null.  
+ Wskaźnik do zmiennej, która określa rozmiar w TCHARs buforu określony przez *pszName* parametru. Ten rozmiar powinien zawierać kończącego znaku null. Gdy metoda zwróci wartość, zmienna wskazywany przez *pnNameLength* zawiera liczbę znaków przechowywanych w buforze. Liczba zwracane nie obejmuje kończącego znaku null.  
   
  *pftLastWriteTime*  
  Wskaźnik do zmiennej, która odbiera czas ostatniego zapisania podklucz wyliczany do.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, wartość zwracana jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowane w powiodło się. kod błędu różną od zera. H.  
+ Jeśli metoda się powiedzie, wartością zwracaną jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowany w powiodło się. kod błędu różny od zera. H.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby wyliczyć podkluczy, należy wywołać `CRegKey::EnumKey` o indeksie zero. Zwiększ wartość indeksu i powtórz metoda zwraca ERROR_NO_MORE_ITEMS. Aby uzyskać więcej informacji, zobacz [RegEnumKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724862) w zestawie Windows SDK.  
+ Aby wyliczyć podkluczy, należy wywołać `CRegKey::EnumKey` o indeksie zero. Zwiększ wartość indeksu, a następnie powtórz, metoda zwraca ERROR_NO_MORE_ITEMS. Aby uzyskać więcej informacji, zobacz [RegEnumKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724862) w zestawie Windows SDK.  
   
 ##  <a name="flush"></a>  CRegKey::Flush  
  Wywołaj tę metodę, aby zapisać wszystkie atrybuty otworzyć klucza rejestru do rejestru.  
@@ -318,7 +318,7 @@ LONG Flush() throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, wartość zwracana jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowane w powiodło się. kod błędu różną od zera. H.  
+ Jeśli metoda się powiedzie, wartością zwracaną jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowany w powiodło się. kod błędu różny od zera. H.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji, zobacz [RegEnumFlush](http://msdn.microsoft.com/library/windows/desktop/ms724867) w zestawie Windows SDK.  
@@ -334,23 +334,23 @@ LONG GetKeySecurity(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `si`  
+ *SI*  
  [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573) wartość, która wskazuje żądane informacje o zabezpieczeniach.  
   
- `psd`  
- Wskaźnik do buforu, który otrzyma kopię deskryptora zabezpieczeń żądanej.  
+ *PSD*  
+ Wskaźnik do buforu, który otrzymuje kopię deskryptora zabezpieczeń żądanej.  
   
- `pnBytes`  
- Rozmiar w bajtach buforu wskazywana przez `psd`.  
+ *pnBytes*  
+ Rozmiar w bajtach, bufor wskazywany przez *psd*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, wartość zwracana jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest niezerowa błąd jest zdefiniowany w powiodło się. H.  
+ Jeśli metoda się powiedzie, wartością zwracaną jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest, że zdefiniowano powiodło się. kod błędu różny od zera. H.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji, zobacz [RegGetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379313).  
   
 ##  <a name="m_hkey"></a>  CRegKey::m_hKey  
- Zawiera dojście do klucza rejestru, skojarzone z `CRegKey` obiektu.  
+ Zawiera uchwyt klucza rejestru, skojarzone z `CRegKey` obiektu.  
   
 ```
 HKEY m_hKey;
@@ -366,7 +366,7 @@ CAtlTransactionManager* m_pTM;
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="notifychangekeyvalue"></a>  CRegKey::NotifyChangeKeyValue  
- Ta metoda powiadamia wywołującego o zmianach atrybuty lub zawartość otworzyć klucza rejestru.  
+ Ta metoda powiadamia obiekt wywołujący o zmianach wprowadzonych do atrybutów lub zawartość otworzyć klucza rejestru.  
   
 ```
 LONG NotifyChangeKeyValue(  
@@ -378,36 +378,36 @@ LONG NotifyChangeKeyValue(
   
 ### <a name="parameters"></a>Parametry  
  *bWatchSubtree*  
- Określa flagę wskazującą, czy zgłaszać zmiany w określonym kluczem i wszystkich jego podkluczy lub tylko określonego klucza. Jeśli ten parametr ma wartość TRUE, metoda zgłasza zmian w kluczu i jego podkluczach. Jeśli parametr ma wartość FALSE, metoda zgłasza zmiany tylko w kluczu.  
+ Określa flagi, która wskazuje, czy do zgłaszania zmian w określonym kluczu i wszystkich jego podkluczy lub tylko określonego klucza. Jeśli ten parametr ma wartość TRUE, metoda zgłasza zmian w kluczu i jego podkluczach. Jeśli parametr ma wartość FALSE, metoda zgłasza zmiany tylko w kluczu.  
   
  *dwNotifyFilter*  
- Określa, że należy podać zestaw flagi sterujące, jakie zmiany. Ten parametr może mieć kombinację następujących wartości:  
+ Określa, że zestaw flag, które kontrolują, które zmiany powinny być raportowane. Ten parametr może być kombinacją następujących wartości:  
   
 |Wartość|Znaczenie|  
 |-----------|-------------|  
-|REG_NOTIFY_CHANGE_NAME|Powiadomić wywołującego, jeśli podklucz zostanie dodany lub usunięty.|  
-|REG_NOTIFY_CHANGE_ATTRIBUTES|Powiadomić wywołującego zmiany atrybutów klucza, takie jak informacje deskryptora zabezpieczeń.|  
-|REG_NOTIFY_CHANGE_LAST_SET|Powiadomić wywołującego zmiana wartości klucza. Mogą to być Dodawanie lub usuwanie wartość lub zmianę istniejącej wartości.|  
-|REG_NOTIFY_CHANGE_SECURITY|Powiadomić wywołującego zmian do deskryptora zabezpieczeń klucza.|  
+|REG_NOTIFY_CHANGE_NAME|Powiadomić obiekt wywołujący, jeśli podklucz zostanie dodany lub usunięty.|  
+|REG_NOTIFY_CHANGE_ATTRIBUTES|Powiadamia obiekt wywołujący zmiany atrybutów klucza, takie jak informacje deskryptora zabezpieczeń.|  
+|REG_NOTIFY_CHANGE_LAST_SET|Powiadamia obiekt wywołujący zmiana wartości klucza. Może to obejmować dodawanie lub usuwanie wartości lub zmianę istniejącej wartości.|  
+|REG_NOTIFY_CHANGE_SECURITY|Powiadamia obiekt wywołujący zmiany deskryptor zabezpieczeń klucza.|  
   
- `hEvent`  
- Dojście do zdarzenia. Jeśli *bAsync* parametr ma wartość TRUE, metoda zwraca natychmiast i zmiany są zgłaszane przez sygnalizowania tego zdarzenia. Jeśli `bAsync` ma wartość FALSE, `hEvent` jest ignorowana.  
+ *hEvent*  
+ Obsłuż to zdarzenie. Jeśli *bAsync* parametr ma wartość TRUE, metoda zwraca natychmiast, a zmiany są zgłaszane przez sygnalizowanie tego zdarzenia. Jeśli *bAsync* ma wartość FAŁSZ, *hEvent* jest ignorowana.  
   
- `bAsync`  
- Określa flagi, która wskazuje, jak metoda zgłasza zmiany. Jeśli ten parametr ma wartość TRUE, metoda zwraca natychmiast i raporty zmian przez sygnalizowania określone zdarzenie. Jeśli ten parametr ma wartość FALSE, metoda nie zwraca dopóki nastąpiła zmiana. Jeśli `hEvent` nie został określony prawidłowy zdarzenia `bAsync` parametr nie może mieć wartość TRUE.  
+ *bAsync*  
+ Określa flagi, która wskazuje, jak metoda raporty zmiany. Jeśli ten parametr ma wartość TRUE, metoda zwraca niezwłocznie i raporty zmiany przez sygnalizowanie określonego zdarzenia. Jeśli ten parametr ma wartość FALSE, metoda nie zwraca do momentu zostało zmienione. Jeśli *hEvent* nie określa ważnego zdarzenia *bAsync* parametr nie może mieć wartość TRUE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, wartość zwracana jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowane w powiodło się. kod błędu różną od zera. H.  
+ Jeśli metoda się powiedzie, wartością zwracaną jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowany w powiodło się. kod błędu różny od zera. H.  
   
 ### <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ta metoda nie powiadomić wywołującego, jeśli określony klucz jest usuwany.  
+>  Ta metoda nie powoduje powiadomienia obiekt wywołujący, jeśli określony klucz zostanie usunięty.  
   
- Dalsze szczegółowe informacje i przykładowy program, zobacz [wywołanie funkcji RegNotifyChangeKeyValue](http://msdn.microsoft.com/library/windows/desktop/ms724892).  
+ Aby uzyskać więcej informacji i przykładowy program, zobacz [wywołanie funkcji RegNotifyChangeKeyValue](http://msdn.microsoft.com/library/windows/desktop/ms724892).  
   
 ##  <a name="open"></a>  CRegKey::Open  
- Wywołanie tej metody, aby otworzyć określony klucz i ustawić [m_hKey](#m_hkey) do realizacji tego klucza.  
+ Wywołanie tej metody, aby otworzyć określony klucz i ustawić [m_hKey](#m_hkey) obsługiwać tego klucza.  
   
 ```
 LONG Open(  
@@ -417,22 +417,22 @@ LONG Open(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hKeyParent`  
+ *hKeyParent*  
  Dojście otwartego klucza.  
   
- `lpszKeyName`  
- Określa nazwę klucza do utworzenia lub otwarcia. Ta nazwa musi być podklucz `hKeyParent`.  
+ *lpszKeyName*  
+ Określa nazwę klucza, który ma zostać utworzony lub otwarty. Ta nazwa musi być podklucz *hKeyParent*.  
   
- `samDesired`  
+ *samDesired*  
  Zabezpieczeń dostępu do klucza. Wartość domyślna to KEY_ALL_ACCESS. Aby uzyskać listę możliwych wartości i opisy, zobacz [RegCreateKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724844) w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli to się powiedzie, zwraca ERROR_SUCCESS; w przeciwnym razie wartość niezerową błąd zdefiniowany w powiodło się. H.  
+ Jeśli to się powiedzie, zwraca ERROR_SUCCESS; w przeciwnym razie wartość błędu różny od zera jest zdefiniowany w powiodło się. H.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `lpszKeyName` parametr ma wartość NULL lub punktów na pusty ciąg, **Otwórz** otwiera nowy uchwyt klucz identyfikowany przez `hKeyParent`, ale nie zamyka wszystkie wcześniej otwarte dojście.  
+ Jeśli *lpszKeyName* parametr ma wartość NULL lub punktów do pustego ciągu, `Open` zostanie otwarty nowy uchwyt klucza identyfikowane przez *hKeyParent*, ale nie zamyka wszystkie wcześniej otwarte dojście.  
   
- W odróżnieniu od [CRegKey::Create](#create), **Otwórz** nie utworzy określony klucz, jeśli nie istnieje.  
+ W odróżnieniu od [CRegKey::Create](#create), `Open` nie utworzy określony klucz, jeśli nie istnieje.  
   
 ##  <a name="operator_hkey"></a>  CRegKey::operator HKEY  
  Konwertuje `CRegKey` obiektu HKEY.  
@@ -449,17 +449,17 @@ CRegKey& operator= (CRegKey& key) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `key`  
+ *Klucz*  
  Klucz do skopiowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca odwołanie do nowego klucza.  
   
 ### <a name="remarks"></a>Uwagi  
- Odłącza tego operatora `key` z jego bieżący obiekt, a następnie przypisuje go do `CRegKey` zamiast tego obiektu.  
+ Ten operator odłącza *klucz* z jej bieżącego obiektu i przypisuje go do `CRegKey` zamiast tego obiektu.  
   
 ##  <a name="querybinaryvalue"></a>  CRegKey::QueryBinaryValue  
- Wywołanie tej metody do pobierania danych binarnych dla nazwy określonej wartości.  
+ Wywołaj tę metodę w celu pobrania danych binarnych dla nazwy określonej wartości.  
   
 ```
 LONG QueryBinaryValue(  
@@ -469,26 +469,26 @@ LONG QueryBinaryValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pszValueName`  
- Wskaźnik do zerem ciąg zawierający nazwę wartości do zapytania.  
+ *pszValueName*  
+ Wskaźnik na ciąg zakończony wartością null zawierający nazwę wartości do zapytania.  
   
- `pValue`  
- Wskaźnik do buforu, który odbiera dane tej wartości.  
+ *pValue*  
+ Wskaźnik do buforu, który odbiera dane z tej wartości.  
   
- `pnBytes`  
- Wskaźnik do zmiennej, która określa rozmiar w bajtach buforu wskazywana przez `pValue` parametru. Gdy metoda zwróci wartość, ta zmienna uwzględnia rozmiar danych kopiowania do buforu.  
+ *pnBytes*  
+ Wskaźnik do zmiennej, która określa rozmiar w bajtach, bufor wskazywany przez *pValue* parametru. Gdy metoda zwróci wartość, ta zmienna uwzględnia rozmiar danych skopiowane do buforu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, zwracany jest ERROR_SUCCESS. Jeśli metoda nie może odczytać wartości, zwraca zdefiniowane w powiodło się. kod błędu różną od zera. H. Jeśli odwołuje się do danych nie jest typu REG_BINARY, zwracany jest ERROR_INVALID_DATA.  
+ Jeśli metoda się powiedzie, zwracany jest ERROR_SUCCESS. Jeśli metoda nie może odczytać wartości, zwraca zdefiniowane w powiodło się. kod błędu różny od zera. H. Jeśli dane przywoływane nie jest typu REG_BINARY, zwracany jest ERROR_INVALID_DATA.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda korzysta z **RegQueryValueEx** i potwierdza, że zwracana jest poprawny typ danych. Zobacz [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) więcej szczegółów.  
+ Ta metoda korzysta z `RegQueryValueEx` i potwierdza, że zwracany jest poprawny typ danych. Zobacz [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) Aby uzyskać więcej informacji.  
   
 > [!IMPORTANT]
->  Ta metoda umożliwia obiekt wywołujący, aby określić dowolną lokalizację rejestru, potencjalny Odczyt danych, która nie jest zaufany. Ponadto [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funkcja używane przez tę metodę nie obsługuje jawnie ciągów, które są zakończone znakiem NULL. Oba te warunki mają być wyszukiwane przez kod wywołujący.  
+>  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, potencjalny Odczyt danych, który nie jest zaufany. Ponadto [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funkcja używana przez tę metodę nie obsługuje jawnie ciągów, które są zakończone znakiem NULL. Oba warunki powinny zostać sprawdzone przez kod wywołujący.  
   
 ##  <a name="querydwordvalue"></a>  CRegKey::QueryDWORDValue  
- Wywołaj tę metodę, aby pobrać dane DWORD o nazwę określonej wartości.  
+ Wywołaj tę metodę, aby pobrać dane typu DWORD nazwę określoną wartość.  
   
 ```
 LONG QueryDWORDValue(  
@@ -497,23 +497,23 @@ LONG QueryDWORDValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pszValueName`  
- Wskaźnik do zerem ciąg zawierający nazwę wartości do zapytania.  
+ *pszValueName*  
+ Wskaźnik na ciąg zakończony wartością null zawierający nazwę wartości do zapytania.  
   
- `dwValue`  
- Wskaźnik do buforu, który odbiera wartość typu DWORD.  
+ *dwValue*  
+ Wskaźnik do buforu, który otrzymuje wartości DWORD.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, zwracany jest ERROR_SUCCESS. Jeśli metoda nie może odczytać wartości, zwraca zdefiniowane w powiodło się. kod błędu różną od zera. H. Jeśli odwołuje się do danych nie jest typu REG_DWORD, zwracany jest ERROR_INVALID_DATA.  
+ Jeśli metoda się powiedzie, zwracany jest ERROR_SUCCESS. Jeśli metoda nie może odczytać wartości, zwraca zdefiniowane w powiodło się. kod błędu różny od zera. H. Jeśli dane przywoływane nie jest typu REG_DWORD, zwracany jest ERROR_INVALID_DATA.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda korzysta z **RegQueryValueEx** i potwierdza, że zwracana jest poprawny typ danych. Zobacz [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) więcej szczegółów.  
+ Ta metoda korzysta z `RegQueryValueEx` i potwierdza, że zwracany jest poprawny typ danych. Zobacz [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) Aby uzyskać więcej informacji.  
   
 > [!IMPORTANT]
->  Ta metoda umożliwia obiekt wywołujący, aby określić dowolną lokalizację rejestru, potencjalny Odczyt danych, która nie jest zaufany. Ponadto [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funkcja używane przez tę metodę nie obsługuje jawnie ciągów, które są zakończone znakiem NULL. Oba te warunki mają być wyszukiwane przez kod wywołujący.  
+>  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, potencjalny Odczyt danych, który nie jest zaufany. Ponadto [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funkcja używana przez tę metodę nie obsługuje jawnie ciągów, które są zakończone znakiem NULL. Oba warunki powinny zostać sprawdzone przez kod wywołujący.  
   
 ##  <a name="queryguidvalue"></a>  CRegKey::QueryGUIDValue  
- Wywołanie tej metody do pobierania danych identyfikatora GUID dla nazwy określonej wartości.  
+ Wywołaj tę metodę w celu pobrania danych identyfikatora GUID dla nazwy określonej wartości.  
   
 ```
 LONG QueryGUIDValue(  
@@ -522,23 +522,23 @@ LONG QueryGUIDValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pszValueName`  
- Wskaźnik do zerem ciąg zawierający nazwę wartości do zapytania.  
+ *pszValueName*  
+ Wskaźnik na ciąg zakończony wartością null zawierający nazwę wartości do zapytania.  
   
- `guidValue`  
- Wskaźnik do zmiennej, która odbiera identyfikatora GUID.  
+ *guidValue*  
+ Wskaźnik do zmiennej, która odbiera identyfikator GUID.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, zwracany jest ERROR_SUCCESS. Jeśli metoda nie może odczytać wartości, zwraca zdefiniowane w powiodło się. kod błędu różną od zera. H. Jeśli odwołuje się do danych nie jest prawidłowym identyfikatorem GUID, zwracany jest ERROR_INVALID_DATA.  
+ Jeśli metoda się powiedzie, zwracany jest ERROR_SUCCESS. Jeśli metoda nie może odczytać wartości, zwraca zdefiniowane w powiodło się. kod błędu różny od zera. H. Jeśli dane przywoływane nie jest prawidłowym identyfikatorem GUID, zwracany jest ERROR_INVALID_DATA.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda korzysta z `CRegKey::QueryStringValue` i konwertuje ciąg na identyfikator GUID za pomocą [CLSIDFromString](http://msdn.microsoft.com/library/windows/desktop/ms680589).  
   
 > [!IMPORTANT]
->  Ta metoda umożliwia obiekt wywołujący, aby określić dowolną lokalizację rejestru, potencjalny Odczyt danych, która nie jest zaufany.  
+>  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, potencjalny Odczyt danych, który nie jest zaufany.  
   
 ##  <a name="querymultistringvalue"></a>  CRegKey::QueryMultiStringValue  
- Wywołaj tę metodę w celu pobrania danych wielociągu dla nazwy określonej wartości.  
+ Wywołaj tę metodę w celu pobrania danych wielociągu nazwę określoną wartość.  
   
 ```
 LONG QueryMultiStringValue(  
@@ -548,26 +548,26 @@ LONG QueryMultiStringValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pszValueName`  
- Wskaźnik do zerem ciąg zawierający nazwę wartości do zapytania.  
+ *pszValueName*  
+ Wskaźnik na ciąg zakończony wartością null zawierający nazwę wartości do zapytania.  
   
- `pszValue`  
- Wskaźnik do buforu, który odbiera dane wielociągu. Kolumny jest tablicą ciągów zerem został przerwany przez dwa znaki null.  
+ *pszValue*  
+ Wskaźnik do buforu, który odbiera dane wielociągu. FixedLength jest tablicą ciągów zakończony znakiem null, został przerwany przez dwa znaki o wartości null.  
   
- `pnChars`  
- Rozmiar w TCHARs buforu wskazywana przez `pszValue`. Gdy metoda zwróci wartość, `pnChars` zawiera rozmiar w TCHARs z kolumny pobrać, w tym znak końcowy null.  
+ *pnChars*  
+ Rozmiar w TCHARs buforu wskazywany przez *pszValue*. Po powrocie z metody *pnChars* zawiera rozmiar w TCHARs z FixedLength pobierane, w tym kończącego znaku null.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, zwracany jest ERROR_SUCCESS. Jeśli metoda nie może odczytać wartości, zwraca zdefiniowane w powiodło się. kod błędu różną od zera. H. Jeśli odwołuje się do danych nie jest typu REG_MULTI_SZ, zwracany jest ERROR_INVALID_DATA.  
+ Jeśli metoda się powiedzie, zwracany jest ERROR_SUCCESS. Jeśli metoda nie może odczytać wartości, zwraca zdefiniowane w powiodło się. kod błędu różny od zera. H. Jeśli dane przywoływane nie jest typu REG_MULTI_SZ, zwracany jest ERROR_INVALID_DATA.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda korzysta z **RegQueryValueEx** i potwierdza, że zwracana jest poprawny typ danych. Zobacz [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) więcej szczegółów.  
+ Ta metoda korzysta z `RegQueryValueEx` i potwierdza, że zwracany jest poprawny typ danych. Zobacz [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) Aby uzyskać więcej informacji.  
   
 > [!IMPORTANT]
->  Ta metoda umożliwia obiekt wywołujący, aby określić dowolną lokalizację rejestru, potencjalny Odczyt danych, która nie jest zaufany. Ponadto [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funkcja używane przez tę metodę nie obsługuje jawnie ciągów, które są zakończone znakiem NULL. Oba te warunki mają być wyszukiwane przez kod wywołujący.  
+>  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, potencjalny Odczyt danych, który nie jest zaufany. Ponadto [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funkcja używana przez tę metodę nie obsługuje jawnie ciągów, które są zakończone znakiem NULL. Oba warunki powinny zostać sprawdzone przez kod wywołujący.  
   
 ##  <a name="queryqwordvalue"></a>  CRegKey::QueryQWORDValue  
- Wywołanie tej metody do pobierania danych QWORD dla nazwy określonej wartości.  
+ Wywołaj tę metodę w celu pobrania danych QWORD nazwę określoną wartość.  
   
 ```
 LONG QueryQWORDValue(  
@@ -576,23 +576,23 @@ LONG QueryQWORDValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pszValueName`  
- Wskaźnik do zerem ciąg zawierający nazwę wartości do zapytania.  
+ *pszValueName*  
+ Wskaźnik na ciąg zakończony wartością null zawierający nazwę wartości do zapytania.  
   
- `qwValue`  
- Wskaźnik do buforu, który odbiera QWORD.  
+ *qwValue*  
+ Wskaźnik do buforu, który otrzymuje QWORD.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, zwracany jest ERROR_SUCCESS. Jeśli metoda nie może odczytać wartości, zwraca zdefiniowane w powiodło się. kod błędu różną od zera. H. Jeśli odwołuje się do danych nie jest typu REG_QWORD, zwracany jest ERROR_INVALID_DATA.  
+ Jeśli metoda się powiedzie, zwracany jest ERROR_SUCCESS. Jeśli metoda nie może odczytać wartości, zwraca zdefiniowane w powiodło się. kod błędu różny od zera. H. Jeśli dane przywoływane nie jest typu REG_QWORD, zwracany jest ERROR_INVALID_DATA.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda korzysta z **RegQueryValueEx** i potwierdza, że zwracana jest poprawny typ danych. Zobacz [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) więcej szczegółów.  
+ Ta metoda korzysta z `RegQueryValueEx` i potwierdza, że zwracany jest poprawny typ danych. Zobacz [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) Aby uzyskać więcej informacji.  
   
 > [!IMPORTANT]
->  Ta metoda umożliwia obiekt wywołujący, aby określić dowolną lokalizację rejestru, potencjalny Odczyt danych, która nie jest zaufany. Ponadto [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funkcja używane przez tę metodę nie obsługuje jawnie ciągów, które są zakończone znakiem NULL. Oba te warunki mają być wyszukiwane przez kod wywołujący.  
+>  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, potencjalny Odczyt danych, który nie jest zaufany. Ponadto [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funkcja używana przez tę metodę nie obsługuje jawnie ciągów, które są zakończone znakiem NULL. Oba warunki powinny zostać sprawdzone przez kod wywołujący.  
   
 ##  <a name="querystringvalue"></a>  CRegKey::QueryStringValue  
- Wywołanie tej metody do pobierania danych ciągu dla nazwy określonej wartości.  
+ Wywołaj tę metodę, aby pobrać dane ciągu dla nazwy określonej wartości.  
   
 ```
 LONG QueryStringValue(  
@@ -602,26 +602,26 @@ LONG QueryStringValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pszValueName`  
- Wskaźnik do zerem ciąg zawierający nazwę wartości do zapytania.  
+ *pszValueName*  
+ Wskaźnik na ciąg zakończony wartością null zawierający nazwę wartości do zapytania.  
   
- `pszValue`  
+ *pszValue*  
  Wskaźnik do buforu, który odbiera dane ciągu.  
   
- `pnChars`  
- Rozmiar w TCHARs buforu wskazywana przez `pszValue`. Gdy metoda zwróci wartość, `pnChars` zawiera rozmiar w TCHARs ciągu pobrać, w tym znak końcowy null.  
+ *pnChars*  
+ Rozmiar w TCHARs buforu wskazywany przez *pszValue*. Po powrocie z metody *pnChars* zawiera rozmiar w TCHARs ciągu pobierane, w tym kończącego znaku null.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, zwracany jest ERROR_SUCCESS. Jeśli metoda nie może odczytać wartości, zwraca zdefiniowane w powiodło się. kod błędu różną od zera. H. Jeśli odwołuje się do danych nie jest typu REG_SZ, zwracany jest ERROR_INVALID_DATA. Jeśli metoda zwraca kod ERROR_MORE_DATA, `pnChars` równa zero nie wymagany rozmiar buforu w bajtach.  
+ Jeśli metoda się powiedzie, zwracany jest ERROR_SUCCESS. Jeśli metoda nie może odczytać wartości, zwraca zdefiniowane w powiodło się. kod błędu różny od zera. H. Jeśli dane przywoływane nie jest typu REG_SZ, zwracany jest ERROR_INVALID_DATA. Jeśli metoda zwraca kod ERROR_MORE_DATA, *pnChars* jest równa zero nie wymagany rozmiar buforu w bajtach.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda korzysta z **RegQueryValueEx** i potwierdza, że zwracana jest poprawny typ danych. Zobacz [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) więcej szczegółów.  
+ Ta metoda korzysta z `RegQueryValueEx` i potwierdza, że zwracany jest poprawny typ danych. Zobacz [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) Aby uzyskać więcej informacji.  
   
 > [!IMPORTANT]
->  Ta metoda umożliwia obiekt wywołujący, aby określić dowolną lokalizację rejestru, potencjalny Odczyt danych, która nie jest zaufany. Ponadto [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funkcja używane przez tę metodę nie obsługuje jawnie ciągów, które są zakończone znakiem NULL. Oba te warunki mają być wyszukiwane przez kod wywołujący.  
+>  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, potencjalny Odczyt danych, który nie jest zaufany. Ponadto [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) funkcja używana przez tę metodę nie obsługuje jawnie ciągów, które są zakończone znakiem NULL. Oba warunki powinny zostać sprawdzone przez kod wywołujący.  
   
 ##  <a name="queryvalue"></a>  CRegKey::QueryValue  
- Wywołanie tej metody do pobierania danych dla określonej wartości pola [m_hKey](#m_hkey). Starsze wersje tej metody nie są już obsługiwane i są oznaczone jako **ATL_DEPRECATED**.  
+ Wywołanie tej metody do pobierania danych dla określonej wartości pola [m_hKey](#m_hkey). Wcześniejszych wersjach tej metody nie są już obsługiwane i są oznaczone jako ATL_DEPRECATED.  
   
 ```
 LONG QueryValue(  
@@ -641,43 +641,43 @@ ATL_DEPRECATED LONG QueryValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pszValueName`  
- Wskaźnik do zerem ciąg zawierający nazwę wartości do zapytania. Jeśli `pszValueName` ma wartość NULL lub pusty ciąg "" metoda pobiera typ i dane dla klucza bez jego nazwy lub wartość domyślna, jeśli istnieje.  
+ *pszValueName*  
+ Wskaźnik na ciąg zakończony wartością null zawierający nazwę wartości do zapytania. Jeśli *pszValueName* ma wartość NULL lub pustym ciągiem, "" metoda pobiera typ i danych dla klucza użytkownika nienazwane lub wartość domyślna, jeśli istnieje.  
   
- `pdwType`  
- Wskaźnik do zmiennej, która odbiera kod wskazujący typ danych przechowywanych w określonej wartości. `pdwType` Parametr może mieć wartość NULL, jeśli kod typu nie jest wymagana.  
+ *pdwType*  
+ Wskaźnik do zmiennej, która odbiera kod, wskazujący typ danych przechowywanych na określoną wartość. *PdwType* parametr może mieć wartość NULL, jeśli kod typu nie jest wymagana.  
   
- `pData`  
- Wskaźnik do buforu, który odbiera dane tej wartości. Ten parametr może mieć wartości NULL, jeśli dane nie są wymagane.  
+ *pData*  
+ Wskaźnik do buforu, który odbiera dane z tej wartości. Ten parametr może być wartością NULL, jeśli dane nie jest wymagana.  
   
- `pnBytes`  
- Wskaźnik do zmiennej, która określa rozmiar w bajtach buforu wskazywana przez `pData` parametru. Gdy metoda zwróci wartość, ta zmienna uwzględnia rozmiar danych skopiowane do *pData.*  
+ *pnBytes*  
+ Wskaźnik do zmiennej, która określa rozmiar w bajtach, bufor wskazywany przez *pData* parametru. Gdy metoda zwróci wartość, ta zmienna uwzględnia rozmiar danych skopiowane do *pData.*  
   
- `dwValue`  
- Pole wartości danych numerycznych.  
+ *dwValue*  
+ Pole wartości danych liczbowych.  
   
- `lpszValueName`  
- Określa wartość pola można wykonać zapytania.  
+ *lpszValueName*  
+ Określa wartość pola można wykonywać zapytania.  
   
- `szValue`  
- Pole wartości danych ciągu.  
+ *szValue*  
+ Dane ciągu w polu wartość.  
   
- `pdwCount`  
- Rozmiar danych ciągu. Jego wartość jest początkowo ustawiona rozmiar `szValue` buforu.  
+ *pdwCount*  
+ Rozmiar danych ciągu. Jego wartość jest początkowo ustawiona do rozmiaru *szValue* buforu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli to się powiedzie, zwraca ERROR_SUCCESS; w przeciwnym razie wartość niezerową błąd zdefiniowany w powiodło się. H.  
+ Jeśli to się powiedzie, zwraca ERROR_SUCCESS; w przeciwnym razie kod błędu różny od zera jest zdefiniowany w powiodło się. H.  
   
 ### <a name="remarks"></a>Uwagi  
- Dwie wersje oryginalnego `QueryValue` nie są już obsługiwane i są oznaczone jako **ATL_DEPRECATED**. Kompilator będzie ostrzeżenie, jeśli formularze te są używane.  
+ Dwie wersje oryginalnego `QueryValue` nie są już obsługiwane i są oznaczone jako ATL_DEPRECATED. Kompilator zgłosi ostrzeżenie, jeśli używane są te formularze.  
   
  Pozostałe wywołania metody RegQueryValueEx.  
   
 > [!IMPORTANT]
->  Ta metoda umożliwia obiekt wywołujący, aby określić dowolną lokalizację rejestru, potencjalny Odczyt danych, która nie jest zaufany. Ponadto funkcja RegQueryValueEx używane przez tę metodę nie obsługuje jawnie ciągów, które są `NULL` zakończone. Oba te warunki mają być wyszukiwane przez kod wywołujący.  
+>  Ta metoda umożliwia obiektowi wywołującemu określenie dowolnej lokalizacji w rejestrze, potencjalny Odczyt danych, który nie jest zaufany. Ponadto funkcja RegQueryValueEx używane przez tę metodę nie obsługuje jawnie ciągów, które są zakończone znakiem NULL. Oba warunki powinny zostać sprawdzone przez kod wywołujący.  
   
 ##  <a name="recursedeletekey"></a>  CRegKey::RecurseDeleteKey  
- Wywołaj tę metodę w celu usunięcia określonego klucza z rejestru i usunąć wszystkie podklucze.  
+ Wywołaj tę metodę w celu usunięcia określonego klucza z rejestru i jawnie usunąć wszystkie podklucze.  
   
 ```
 LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
@@ -688,13 +688,13 @@ LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
  Określa nazwę klucza do usunięcia. Ta nazwa musi być podklucz [m_hKey](#m_hkey).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli to się powiedzie, zwraca ERROR_SUCCESS; w przeciwnym razie wartość niezerową błąd zdefiniowany w powiodło się. H.  
+ Jeśli to się powiedzie, zwraca ERROR_SUCCESS; w przeciwnym razie wartość błędu różny od zera jest zdefiniowany w powiodło się. H.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli klucz ma podklucze, należy wywołać tę metodę, aby usunąć klucz.  
+ Jeśli klucz ma podklucze, należy wywołać tę metodę w celu usunięcia klucza.  
   
 ##  <a name="setbinaryvalue"></a>  CRegKey::SetBinaryValue  
- Wywołanie tej metody można ustawić wartości binarnej klucza rejestru.  
+ Wywołaj tę metodę, aby ustawić wartość binarną klucza rejestru.  
   
 ```
 LONG SetBinaryValue(  
@@ -704,40 +704,40 @@ LONG SetBinaryValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pszValueName`  
- Wskaźnik do ciągu zawierającego nazwę wartość do ustawienia. Jeśli wartość o tej nazwie nie jest już istnieje, metoda dodaje do klucza.  
+ *pszValueName*  
+ Wskaźnik do ciągu zawierającego nazwę wartości do ustawienia. Jeśli wartość z tą nazwą nie jest już obecny, metoda dodaje ją do klucza.  
   
- `pValue`  
- Wskaźnik do buforu, zawierający dane, które mają być przechowywane o nazwie określonej wartości.  
+ *pValue*  
+ Wskaźnik do buforu, zawierające dane, które mają być przechowywane z wartością o określonej nazwie.  
   
- `nBytes`  
- Określa rozmiar w bajtach informacji wskazywana przez `pValue` parametru.  
+ *nBytes*  
+ Określa rozmiar w bajtach informacji wskazywany przez *pValue* parametru.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, wartość zwracana jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowane w powiodło się. kod błędu różną od zera. H.  
+ Jeśli metoda się powiedzie, wartością zwracaną jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowany w powiodło się. kod błędu różny od zera. H.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda używa [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) do zapisu wartości do rejestru.  
+ Ta metoda używa [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) do zapisu wartości w rejestrze.  
   
 ##  <a name="setdwordvalue"></a>  CRegKey::SetDWORDValue  
- Wywołanie tej metody można ustawić wartości DWORD klucza rejestru.  
+ Wywołaj tę metodę, aby ustawić wartość DWORD klucza rejestru.  
   
 ```
 LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pszValueName`  
- Wskaźnik do ciągu zawierającego nazwę wartość do ustawienia. Jeśli wartość o tej nazwie nie jest już istnieje, metoda dodaje do klucza.  
+ *pszValueName*  
+ Wskaźnik do ciągu zawierającego nazwę wartości do ustawienia. Jeśli wartość z tą nazwą nie jest już obecny, metoda dodaje ją do klucza.  
   
- `dwValue`  
- DWORD przechowywania danych o nazwie określonej wartości.  
+ *dwValue*  
+ Dane typu DWORD, które mają być przechowywane z wartością o określonej nazwie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, wartość zwracana jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowane w powiodło się. kod błędu różną od zera. H.  
+ Jeśli metoda się powiedzie, wartością zwracaną jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowany w powiodło się. kod błędu różny od zera. H.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda używa [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) do zapisu wartości do rejestru.  
+ Ta metoda używa [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) do zapisu wartości w rejestrze.  
   
 ##  <a name="setguidvalue"></a>  CRegKey::SetGUIDValue  
  Wywołaj tę metodę, aby ustawić wartość identyfikatora GUID klucza rejestru.  
@@ -747,20 +747,20 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pszValueName`  
- Wskaźnik do ciągu zawierającego nazwę wartość do ustawienia. Jeśli wartość o tej nazwie nie jest już istnieje, metoda dodaje do klucza.  
+ *pszValueName*  
+ Wskaźnik do ciągu zawierającego nazwę wartości do ustawienia. Jeśli wartość z tą nazwą nie jest już obecny, metoda dodaje ją do klucza.  
   
- `guidValue`  
- Odwołanie do identyfikatora GUID do przechowywania o nazwie określonej wartości.  
+ *guidValue*  
+ Odwołanie do identyfikatora GUID, które mają być przechowywane z wartością o określonej nazwie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, wartość zwracana jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowane w powiodło się. kod błędu różną od zera. H.  
+ Jeśli metoda się powiedzie, wartością zwracaną jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowany w powiodło się. kod błędu różny od zera. H.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda korzysta z `CRegKey::SetStringValue` i konwertuje identyfikator GUID na ciąg za pomocą [StringFromGUID2](http://msdn.microsoft.com/library/windows/desktop/ms683893).  
+ Ta metoda korzysta z `CRegKey::SetStringValue` i konwertuje ciąg za pomocą identyfikatora GUID [StringFromGUID2](http://msdn.microsoft.com/library/windows/desktop/ms683893).  
   
 ##  <a name="setkeyvalue"></a>  CRegKey::SetKeyValue  
- Wywołanie tej metody do przechowywania danych w polu określoną wartość z określonym kluczem.  
+ Wywołaj tę metodę, aby przechowywać dane w polu określoną wartość z określonym kluczem.  
   
 ```
 LONG SetKeyValue(  
@@ -770,67 +770,67 @@ LONG SetKeyValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszKeyName`  
- Określa nazwę klucza do utworzenia lub otwarcia. Ta nazwa musi być podklucz [m_hKey](#m_hkey).  
+ *lpszKeyName*  
+ Określa nazwę klucza, który ma zostać utworzony lub otwarty. Ta nazwa musi być podklucz [m_hKey](#m_hkey).  
   
- `lpszValue`  
- Określa dane, które mają być przechowywane. Ten parametr musi mieć wartości NULL.  
+ *lpszValue*  
+ Określa dane, które mają być przechowywane. Ten parametr musi być inna niż NULL.  
   
- `lpszValueName`  
- Określa pole wartość do ustawienia. Jeśli wartość pola o tej nazwie nie istnieje już w kluczu, jest dodawany.  
+ *lpszValueName*  
+ Określa pole wartości do ustawienia. Jeśli wartość pola o tej nazwie już istnieje w kluczu, zostanie dodany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli to się powiedzie, zwraca ERROR_SUCCESS; w przeciwnym razie wartość niezerową błąd zdefiniowany w powiodło się. H.  
+ Jeśli to się powiedzie, zwraca ERROR_SUCCESS; w przeciwnym razie kod błędu różny od zera jest zdefiniowany w powiodło się. H.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie tej metody można utworzyć lub otworzyć `lpszKeyName` klucza i przechowywać `lpszValue` danych w `lpszValueName` wartość pola.  
+ Wywołanie tej metody, aby utworzyć lub otworzyć *lpszKeyName* klucza i przechowywać *lpszValue* dane w *lpszValueName* pole wartości.  
   
 ##  <a name="setkeysecurity"></a>  CRegKey::SetKeySecurity  
- Wywołanie tej metody można ustawić zabezpieczeń klucza rejestru.  
+ Wywołaj tę metodę, aby ustawić zabezpieczenia klucza rejestru.  
   
 ```
 LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `si`  
- Określa składniki można ustawić deskryptora zabezpieczeń. Wartość może być kombinacją następujących wartości:  
+ *SI*  
+ Określa składniki, które można ustawić deskryptora zabezpieczeń. Wartość może być kombinacją następujących wartości:  
   
 |Wartość|Znaczenie|  
 |-----------|-------------|  
-|DACL_SECURITY_INFORMATION|Ustawia klucz listy DACL kontroli dostępu (DACL). Klucz musi mieć dostęp WRITE_DAC lub proces wywołujący musi być właściciela obiektu.|  
-|GROUP_SECURITY_INFORMATION|Ustawia klucz podstawowy grupy-identyfikator zabezpieczeń (SID). Klucz musi mieć dostęp WRITE_OWNER lub proces wywołujący musi być właściciela obiektu.|  
-|OWNER_SECURITY_INFORMATION|Ustawia identyfikator SID właściciela klucza. Klucz musi mieć dostęp WRITE_OWNER lub proces wywołujący musi być właściciela obiektu lub mieć włączone uprawnienia SE_TAKE_OWNERSHIP_NAME.|  
-|SACL_SECURITY_INFORMATION|Ustawia listę kontroli dostępu systemu klucza (SACL). Klucz musi mieć dostęp ACCESS_SYSTEM_SECURITY. Właściwy sposób, aby uzyskać dostęp, jest umożliwienie SE_SECURITY_NAME [uprawnień](http://msdn.microsoft.com/library/windows/desktop/aa379306) wywołującego bieżącego tokenu dostępu, otworzyć uchwytu ACCESS_SYSTEM_SECURITY dostępu, a następnie wyłącz odpowiednie uprawnienie.|  
+|DACL_SECURITY_INFORMATION|Ustawia klucz poufnej-listy kontroli dostępu (DACL). Klucz musi mieć dostęp WRITE_DAC lub proces wywołujący musi być właścicielem obiektu.|  
+|GROUP_SECURITY_INFORMATION|Ustawia identyfikator zabezpieczeń grupy podstawowej klucza (SID). Klucz musi mieć dostęp WRITE_OWNER lub proces wywołujący musi być właścicielem obiektu.|  
+|OWNER_SECURITY_INFORMATION|Ustawia identyfikator SID właściciela klucza. Klucz musi mieć dostęp WRITE_OWNER lub proces wywołujący musi być właścicielem obiektu lub mieć włączone uprawnienie SE_TAKE_OWNERSHIP_NAME.|  
+|SACL_SECURITY_INFORMATION|Ustawia listy kontroli dostępu systemu klucza (SACL). Klucz musi mieć dostęp ACCESS_SYSTEM_SECURITY. Odpowiednie sposobem uzyskania takiego dostępu jest umożliwienie SE_SECURITY_NAME [uprawnień](http://msdn.microsoft.com/library/windows/desktop/aa379306) w bieżącym tokenu dostępu obiektu wywołującego, otworzyć uchwytu ACCESS_SYSTEM_SECURITY dostępu, a następnie wyłącz uprawnienia.|  
   
- `psd`  
- Wskaźnik do [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561) struktury, która określa atrybuty zabezpieczeń można ustawić dla określonego klucza.  
+ *PSD*  
+ Wskaźnik do [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561) strukturę, która określa atrybuty zabezpieczeń, aby ustawić dla określonego klucza.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, wartość zwracana jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowane w powiodło się. kod błędu różną od zera. H.  
+ Jeśli metoda się powiedzie, wartością zwracaną jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowany w powiodło się. kod błędu różny od zera. H.  
   
 ### <a name="remarks"></a>Uwagi  
- Ustawia atrybuty zabezpieczeń klucza. Zobacz [RegSetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379314) więcej szczegółów.  
+ Ustawia atrybuty zabezpieczeń klucza. Zobacz [RegSetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379314) Aby uzyskać więcej informacji.  
   
 ##  <a name="setmultistringvalue"></a>  CRegKey::SetMultiStringValue  
- Wywołanie tej metody, aby ustawić wartość wielociągu klucza rejestru.  
+ Wywołaj tę metodę można ustawić wartości wielociągu klucza rejestru.  
   
 ```
 LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pszValueName`  
- Wskaźnik do ciągu zawierającego nazwę wartość do ustawienia. Jeśli wartość o tej nazwie nie jest już istnieje, metoda dodaje do klucza.  
+ *pszValueName*  
+ Wskaźnik do ciągu zawierającego nazwę wartości do ustawienia. Jeśli wartość z tą nazwą nie jest już obecny, metoda dodaje ją do klucza.  
   
- `pszValue`  
- Wskaźnik do wielociągu dane mają być przechowywane o nazwie określonej wartości. Kolumny jest tablicą ciągów zerem został przerwany przez dwa znaki null.  
+ *pszValue*  
+ Wskaźnik do wielociągu dane, które mają być przechowywane z wartością o określonej nazwie. FixedLength jest tablicą ciągów zakończony znakiem null, został przerwany przez dwa znaki o wartości null.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, wartość zwracana jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowane w powiodło się. kod błędu różną od zera. H.  
+ Jeśli metoda się powiedzie, wartością zwracaną jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowany w powiodło się. kod błędu różny od zera. H.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda używa [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) do zapisu wartości do rejestru.  
+ Ta metoda używa [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) do zapisu wartości w rejestrze.  
   
 ##  <a name="setqwordvalue"></a>  CRegKey::SetQWORDValue  
  Wywołaj tę metodę, aby ustawić wartość QWORD klucza rejestru.  
@@ -840,17 +840,17 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pszValueName`  
- Wskaźnik do ciągu zawierającego nazwę wartość do ustawienia. Jeśli wartość o tej nazwie nie jest już istnieje, metoda dodaje do klucza.  
+ *pszValueName*  
+ Wskaźnik do ciągu zawierającego nazwę wartości do ustawienia. Jeśli wartość z tą nazwą nie jest już obecny, metoda dodaje ją do klucza.  
   
- `qwValue`  
- QWORD przechowywania danych o nazwie określonej wartości.  
+ *qwValue*  
+ QWORD dane mają być przechowywane z wartością o określonej nazwie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, wartość zwracana jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowane w powiodło się. kod błędu różną od zera. H.  
+ Jeśli metoda się powiedzie, wartością zwracaną jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowany w powiodło się. kod błędu różny od zera. H.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda używa [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) do zapisu wartości do rejestru.  
+ Ta metoda używa [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) do zapisu wartości w rejestrze.  
   
 ##  <a name="setstringvalue"></a>  CRegKey::SetStringValue  
  Wywołaj tę metodę, aby ustawić wartość ciągu klucza rejestru.  
@@ -863,23 +863,23 @@ LONG SetStringValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pszValueName`  
- Wskaźnik do ciągu zawierającego nazwę wartość do ustawienia. Jeśli wartość o tej nazwie nie jest już istnieje, metoda dodaje do klucza.  
+ *pszValueName*  
+ Wskaźnik do ciągu zawierającego nazwę wartości do ustawienia. Jeśli wartość z tą nazwą nie jest już obecny, metoda dodaje ją do klucza.  
   
- `pszValue`  
- Wskaźnik do przechowywania o nazwie określonej wartości danych ciągu.  
+ *pszValue*  
+ Wskaźnik do danych ciągu, które mają być przechowywane z wartością o określonej nazwie.  
   
- `dwType`  
- Typ parametrów do zapisu w rejestrze: REG_SZ (ustawienie domyślne) lub REG_EXPAND_SZ (dla multistrings).  
+ *dwType*  
+ Typ ciągu do zapisu w rejestrze: REG_SZ (ustawienie domyślne) lub REG_EXPAND_SZ (do multistrings).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli metoda zakończy się powodzeniem, wartość zwracana jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowane w powiodło się. kod błędu różną od zera. H.  
+ Jeśli metoda się powiedzie, wartością zwracaną jest ERROR_SUCCESS. Jeśli metoda nie powiedzie się, wartość zwracana jest zdefiniowany w powiodło się. kod błędu różny od zera. H.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda używa [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923\(v=vs.85\).aspx) do zapisu wartości do rejestru.  
+ Ta metoda używa [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923\(v=vs.85\).aspx) do zapisu wartości w rejestrze.  
   
 ##  <a name="setvalue"></a>  CRegKey::SetValue  
- Wywołanie tej metody do przechowywania danych w polu określonej wartości [m_hKey](#m_hkey). Starsze wersje tej metody nie są już obsługiwane i są oznaczone jako **ATL_DEPRECATED**.  
+ Wywołanie tej metody do przechowywania danych w polu określoną wartość [m_hKey](#m_hkey). Wcześniejszych wersjach tej metody nie są już obsługiwane i są oznaczone jako ATL_DEPRECATED.  
   
 ```
 LONG SetValue(  
@@ -906,47 +906,47 @@ ATL_DEPRECATED LONG SetValue(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pszValueName`  
- Wskaźnik do ciągu zawierającego nazwę wartość do ustawienia. Jeśli wartość o tej nazwie nie jest już obecne w kluczu, metoda dodaje go do klucza. Jeśli `pszValueName` ma wartość NULL lub pusty ciąg "" metoda ustawia typ i dane dla klucza bez jego nazwy lub wartość domyślna.  
+ *pszValueName*  
+ Wskaźnik do ciągu zawierającego nazwę wartości do ustawienia. Jeśli wartość z tą nazwą nie jest już obecne w kluczu, metoda dodaje ją do klucza. Jeśli *pszValueName* ma wartość NULL lub pustym ciągiem, "" metoda ustawia typ i danych dla klucza użytkownika nienazwane lub wartość domyślna.  
   
- `dwType`  
- Określa kod wskazujący typ danych wskazywanego przez `pValue` parametru.  
+ *dwType*  
+ Określa kod, wskazujący typ danych, do których prowadzą *pValue* parametru.  
   
- `pValue`  
- Wskaźnik do buforu, zawierający dane, które mają być przechowywane o nazwie określonej wartości.  
+ *pValue*  
+ Wskaźnik do buforu, zawierające dane, które mają być przechowywane z wartością o określonej nazwie.  
   
- `nBytes`  
- Określa rozmiar w bajtach informacji wskazywana przez `pValue` parametru. Jeśli dane są typu REG_SZ, REG_EXPAND_SZ lub REG_MULTI_SZ, `nBytes` musi zawierać rozmiar znak końcowy null.  
+ *nBytes*  
+ Określa rozmiar w bajtach informacji wskazywany przez *pValue* parametru. Jeśli dane są typu REG_SZ, REG_EXPAND_SZ lub REG_MULTI_SZ, *nBytes* musi zawierają rozmiaru kończącego znaku null.  
   
- `hKeyParent`  
+ *hKeyParent*  
  Dojście otwartego klucza.  
   
- `lpszKeyName`  
- Określa nazwę klucza do utworzenia lub otwarcia. Ta nazwa musi być podklucz `hKeyParent`.  
+ *lpszKeyName*  
+ Określa nazwę klucza, który ma zostać utworzony lub otwarty. Ta nazwa musi być podklucz *hKeyParent*.  
   
- `lpszValue`  
- Określa dane, które mają być przechowywane. Ten parametr musi mieć wartości NULL.  
+ *lpszValue*  
+ Określa dane, które mają być przechowywane. Ten parametr musi być inna niż NULL.  
   
- `lpszValueName`  
- Określa pole wartość do ustawienia. Jeśli wartość pola o tej nazwie nie istnieje już w kluczu, jest dodawany.  
+ *lpszValueName*  
+ Określa pole wartości do ustawienia. Jeśli wartość pola o tej nazwie już istnieje w kluczu, zostanie dodany.  
   
- `dwValue`  
+ *dwValue*  
  Określa dane, które mają być przechowywane.  
   
- `bMulti`  
- W przypadku wartości FAŁSZ oznacza, że ten ciąg jest typu REG_SZ. Jeśli ma wartość true, wskazuje, że ten ciąg jest kolumny typu REG_MULTI_SZ.  
+ *bMulti*  
+ W przypadku wartości FAŁSZ oznacza, że ten ciąg jest typu REG_SZ. W przypadku opcji true wskazuje, że ten ciąg jest FixedLength typu REG_MULTI_SZ.  
   
- `nValueLen`  
- Jeśli `bMulti` ma wartość true, `nValueLen` długość *lpszValue* ciąg znaków. Jeśli `bMulti` ma wartość false, wartość -1 wskazuje, że metoda obliczania długości automatycznie.  
+ *nValueLen*  
+ Jeśli *bMulti* ma wartość true, *nValueLen* jest długością *lpszValue* ciąg znaków. Jeśli *bMulti* ma wartość false, wartość -1 wskazuje, że metoda oblicza długość automatycznie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli to się powiedzie, zwraca ERROR_SUCCESS; w przeciwnym razie wartość niezerową błąd zdefiniowany w powiodło się. H.  
+ Jeśli to się powiedzie, zwraca ERROR_SUCCESS; w przeciwnym razie kod błędu różny od zera jest zdefiniowany w powiodło się. H.  
   
 ### <a name="remarks"></a>Uwagi  
- Dwie wersje oryginalnego `SetValue` są oznaczone jako **ATL_DEPRECATED** i nie powinna być używana. Kompilator będzie ostrzeżenie, jeśli formularze te są używane.  
+ Dwie wersje oryginalnego `SetValue` są oznaczone jako ATL_DEPRECATED i już nie powinny być używane. Kompilator zgłosi ostrzeżenie, jeśli używane są te formularze.  
   
  Trzeci wywołania metody [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykładowe DCOM](../../visual-cpp-samples.md)   
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Przykładowy model DCOM](../../visual-cpp-samples.md)   
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

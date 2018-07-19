@@ -16,34 +16,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8e7edfb2cb4040238985c6cd78e8f1e5756f4d6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c2830584ea3c54ec0963dc115318be7b7d5880c
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358772"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881217"
 ---
 # <a name="options-atl-property-page-wizard"></a>Opcje, Kreator strony właściwości ATL
-Ta strona kreatora umożliwia definiowanie wątkowy model i agregacji poziomu strony właściwości, które tworzysz.  
+Ta strona kreatora umożliwia definiowanie wątkowości modelu i agregację poziomu strony właściwości, które tworzysz.  
   
  **Model wątkowości**  
- Określa model wątkowy używany przez stronę właściwości.  
+ Określa model wątkowy posługują się na stronie właściwości.  
   
  Zobacz [określanie modelu wątkowości projektu](../../atl/specifying-the-threading-model-for-a-project-atl.md) Aby uzyskać więcej informacji.  
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|`Single`|Strona właściwości działa tylko w podstawowym wątku com.|  
-|**Apartamentu**|Strona właściwości mogą być tworzone w dowolnym komórka wątku pojedynczego. Domyślnie.|  
+|**Single**|Na stronie właściwości działa tylko w podstawowym wątku com.|  
+|**Apartamentu**|Na stronie właściwości można utworzyć w dowolnym komórka wątku pojedynczego. Domyślnie.|  
   
  **Agregacja**  
- Dodaje obsługę funkcji agregacji dla strony właściwości, które tworzysz. Zobacz [agregacji](../../atl/aggregation.md) Aby uzyskać więcej informacji.  
+ Dodaje obsługę agregacji dla strony właściwości, które tworzysz. Zobacz [agregacji](../../atl/aggregation.md) Aby uzyskać więcej informacji.  
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**Tak**|Utwórz stronę właściwości, która może być agregowany.|  
+|**Tak**|Utwórz stronę właściwości, który może być agregowany.|  
 |**Brak**|Utwórz stronę właściwości nie można agregować.|  
-|**Only**|Utwórz stronę właściwości, które można wdrożyć tylko za pośrednictwem agregacji.|  
+|**Only**|Utwórz stronę właściwości wystąpienia można tworzyć tylko za pomocą agregacji.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kreator strony właściwości ATL](../../atl/reference/atl-property-page-wizard.md)   
