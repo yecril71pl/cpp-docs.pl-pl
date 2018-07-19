@@ -1,5 +1,5 @@
 ---
-title: Rejestrator ALT i Nauer formularz Backus tworzą składni (BNF) | Dokumentacja firmy Microsoft
+title: Rejestrator ALT i Backus Nauer formularz składni (BNF) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,39 +15,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4137dd94886456d5813076f3cb328bac5ecf5c03
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bf1033007a02ea21e7625068bc23d762c103aa41
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854144"
 ---
-# <a name="understanding-backus-nauer-form-bnf-syntax"></a>Opis Nauer formularz Backus składni formularza (BNF)
-W tym temacie przy użyciu składni BNF, który używa notacji pokazano w poniższej tabeli opisano skryptów używanych przez rejestrator ALT.  
+# <a name="understanding-backus-nauer-form-bnf-syntax"></a>Opis składni formularza (BNF) Backus Nauer
+Skrypty używane przez rejestrator ALT są opisane w tym temacie, przy użyciu składni BNF, który używa notacji pokazano w poniższej tabeli.  
   
 |Konwencja/symbol|Znaczenie|  
 |------------------------|-------------|  
-|`::=`|Odpowiednik|  
-|`&#124;`|LUB|  
-|`X+`|Co najmniej jeden `X`s.|  
-|`[X]`|`X` jest opcjonalna. Ograniczniki opcjonalne są wskazywane przez `[]`.|  
+|::=|Odpowiednik|  
+|&#124;|LUB|  
+|X +|Co najmniej jeden Xs.|  
+|[X]|X jest opcjonalne. Ograniczniki opcjonalne są wskazywane przez \[].|  
 |Wszelkie **bold** tekstu|Literał ciągu.|  
-|Wszelkie *kursywy* tekstu|Jak utworzyć literału ciągu.|  
+|Wszelkie *kursywą* tekstu|Jak utworzyć literału ciągu.|  
   
- Jak wskazano w powyższej tabeli, skrypty rejestratora Używaj literałów ciągów. Te wartości są tekstu, który musi występować w skrypcie. W poniższej tabeli opisano Literały ciągu używany w skrypcie Rejestrator ALT.  
+ Jak wskazano w powyższej tabeli, skrypty rejestratora Używaj literałów ciągów. Te wartości są rzeczywiste tekst, który musi znajdować się w skrypcie. W poniższej tabeli opisano literałów ciągów używanych w skrypcie Rejestrator ALT.  
   
 |Literał ciągu|Akcja|  
 |--------------------|------------|  
-|**ForceRemove**|Powoduje całkowite usunięcie następnego klucza (jeśli istnieje), a następnie ponownie tworzy go.|  
-|**NoRemove**|Nie powoduje usunięcia klawisza Następna podczas Unregister.|  
-|**Val**|Określa, że `<Key Name>` jest rzeczywiście nazwanej wartości.|  
+|**ForceRemove**|Powoduje całkowite usunięcie kluczowi (jeśli istnieje), a następnie ponownie tworzy go.|  
+|**NoRemove**|Nie powoduje usunięcia kluczowi podczas wyrejestrowania.|  
+|**Val**|Określa, że `<Key Name>` jest faktycznie nazwanej wartości.|  
 |**Usuwanie**|Usuwa następny klucz w rejestrze.|  
-|**s**|Określa, że wartość następnego ciąg (**REG_SZ**).|  
-|**d**|Określa, że wartość następnego **DWORD** (**REG_DWORD**).|  
-|**m**|Określa, że następna wartość ciągu wielokrotnego (**REG_MULTI_SZ**).|  
-|**b**|Określa, że wartość następnego wartość binarną (**REG_BINARY**).|  
+|**s**|Określa następną wartość ciągu (REG_SZ).|  
+|**d**|Określa następną wartość DWORD (REG_DWORD).|  
+|**m**|Określa, że wartość następnego FixedLength (REG_MULTI_SZ).|  
+|**b**|Określa, że następną wartość jest wartością binarną (REG_BINARY).|  
   
 ## <a name="bnf-syntax-examples"></a>Przykłady składni BNF  
- Oto kilka przykładów składni, aby lepiej zrozumieć, jak działają notacji i ciągów literałów w skrypcie Rejestrator ALT.  
+ Poniżej przedstawiono kilka przykładów składni, aby pomóc Ci zrozumieć, jak i notacji literałów współdziałać w skrypcie Rejestrator ALT.  
   
 ### <a name="syntax-example-1"></a>Przykład składni 1  
   
@@ -63,7 +64,7 @@ W tym temacie przy użyciu składni BNF, który używa notacji pokazano w poniż
 <registry expression> ::= <Add Key> | <Delete Key>  
 ```  
   
- Określa, że `registry expression` jest odpowiednikiem albo `Add Key` lub `Delete Key`.  
+ Określa, że `registry expression` jest równoważny z typem `Add Key` lub `Delete Key`.  
   
 ### <a name="syntax-example-3"></a>Przykład składni 3  
   
@@ -79,7 +80,7 @@ W tym temacie przy użyciu składni BNF, który używa notacji pokazano w poniż
 <Add Key> ::= [ForceRemove | NoRemove | val]<Key Name>  
 ```  
   
- Określa, że `Add Key` jest odpowiednikiem `Key Name`oraz że literałów ciągów `ForceRemove`, `NoRemove`, i `val`, są opcjonalne.  
+ Określa, że `Add Key` jest odpowiednikiem `Key Name`oraz że literały ciągów `ForceRemove`, `NoRemove`, i `val`, są opcjonalne.  
   
 ### <a name="syntax-example-5"></a>Przykład składni 5  
   
@@ -87,7 +88,7 @@ W tym temacie przy użyciu składni BNF, który używa notacji pokazano w poniż
 <AlphaNumeric> ::= any character not NULL, that is, ASCII 0  
 ```  
   
- Określa, że `AlphaNumeric` jest równoważna do dowolny znak firmy innej niż NULL.  
+ Określa, że `AlphaNumeric` jest równoważna do dowolnego znak NIEPUSTY.  
   
 ### <a name="syntax-example-6"></a>Przykład składni 6  
   
@@ -95,7 +96,7 @@ W tym temacie przy użyciu składni BNF, który używa notacji pokazano w poniż
 val 'testmulti' = m 'String 1\0String 2\0'  
 ```  
   
- Określa, że nazwa klucza `testmulti` wartość wielociągu składa się z `String 1` i `String 2`.  
+ Określa, że nazwa klucza `testmulti` wartości wielociągu składa się z `String 1` i `String 2`.  
   
 ### <a name="syntax-example-7"></a>Przykład składni 7  
   
@@ -103,7 +104,7 @@ val 'testmulti' = m 'String 1\0String 2\0'
 val 'testhex' = d '&H55'  
 ```  
   
- Określa, że nazwa klucza `testhex` jest **DWORD** wartość szesnastkową 55 (decimal 85). Ten format jest zgodna Uwaga **& H** notacji jako znaleziono w specyfikacji języka Visual Basic.  
+ Określa, że nazwa klucza `testhex` ustawiono wartość DWORD na szesnastkowe 55 (dziesiętna 85). Ten format jest zgodna Uwaga **& H** notacji, jak znaleźć w specyfikacji języka Visual Basic.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Tworzenie skryptów rejestratora](../atl/creating-registrar-scripts.md)

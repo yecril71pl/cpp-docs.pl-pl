@@ -1,5 +1,5 @@
 ---
-title: Cpalette — klasa | Dokumentacja firmy Microsoft
+title: Klasa CPalette | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,15 +36,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb5aeef3970488c293d4199261d765f2531c201a
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: cdd8dd32b0f805e55e17d12428c045d64820196d
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079684"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849408"
 ---
-# <a name="cpalette-class"></a>Cpalette — klasa
-Hermetyzuje palety kolorów systemu Windows.  
+# <a name="cpalette-class"></a>Klasa CPalette
+Hermetyzuje palety kolorów Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -58,34 +58,34 @@ class CPalette : public CGdiObject
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CPalette::CPalette](#cpalette)|Konstruuje `CPalette` obiektu z nie dołączonych palety systemu Windows. Należy zainicjować `CPalette` obiektu z jednej z funkcji Członkowskich inicjowania, zanim będzie można go używać.|  
+|[CPalette::CPalette](#cpalette)|Konstruuje `CPalette` obiektu, nie dołączonych palety Windows. Należy zainicjować `CPalette` obiektu przy użyciu jednego z inicjowanie funkcji Członkowskich, zanim będzie można jej używać.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CPalette::AnimatePalette](#animatepalette)|Zastępuje wpisów w logiczną paletę identyfikowane przez `CPalette` obiektu. Aplikacja nie ma można zaktualizować obszaru klienckiego, ponieważ Windows mapuje nowe wpisy w palecie systemu natychmiast.|  
-|[CPalette::CreateHalftonePalette](#createhalftonepalette)|Paleta półtonów kontekstu urządzenia i dołącza go do `CPalette` obiektu.|  
-|[CPalette::CreatePalette](#createpalette)|Tworzy palety kolorów systemu Windows i dołącza go do `CPalette` obiektu.|  
-|[CPalette::FromHandle](#fromhandle)|Zwraca wskaźnik do `CPalette` obiektu, gdy uchwyt do obiektu palety systemu Windows.|  
-|[CPalette::GetEntryCount](#getentrycount)|Pobiera liczbę wpisów palety w logiczną paletę.|  
-|[CPalette::GetNearestPaletteIndex](#getnearestpaletteindex)|Zwraca indeks wpisu w palecie logiczne, która najlepiej pasuje do wartości koloru.|  
-|[CPalette::GetPaletteEntries](#getpaletteentries)|Pobiera zakres wpisy palety w logiczną paletę.|  
-|[CPalette::ResizePalette](#resizepalette)|Zmienia rozmiar logiczną paletę określony przez `CPalette` obiektu do określonej liczby wpisów.|  
-|[CPalette::SetPaletteEntries](#setpaletteentries)|Ustawia flagi i wartości kolorów RGB w zakresie wpisów w logiczną paletę.|  
+|[CPalette::AnimatePalette](#animatepalette)|Zastępuje wpisy palety logiczne identyfikowane przez `CPalette` obiektu. Aplikacja nie ma można zaktualizować obszaru klienckiego, ponieważ Windows mapuje nowych wpisów na palecie system natychmiast.|  
+|[CPalette::CreateHalftonePalette](#createhalftonepalette)|Paleta półtonów kontekstu urządzenia i dołącza je do `CPalette` obiektu.|  
+|[CPalette::CreatePalette](#createpalette)|Tworzy palety kolorów Windows i dołącza je do `CPalette` obiektu.|  
+|[CPalette::FromHandle](#fromhandle)|Zwraca wskaźnik do `CPalette` obiektu, gdy dojścia do obiektu Windows palety.|  
+|[CPalette::GetEntryCount](#getentrycount)|Pobiera numer wpisy palety logiczne palety.|  
+|[CPalette::GetNearestPaletteIndex](#getnearestpaletteindex)|Zwraca indeks wpis logiczną paletę, która najlepiej pasuje do wartości koloru.|  
+|[CPalette::GetPaletteEntries](#getpaletteentries)|Pobiera zakres wpisy palety logiczne palety.|  
+|[CPalette::ResizePalette](#resizepalette)|Zmienia rozmiar logiczną paletę określony przez `CPalette` obiektu określoną liczbę pozycji.|  
+|[CPalette::SetPaletteEntries](#setpaletteentries)|Ustawia wartości kolorów RGB i flagi w zakresie wpisy palety logiczne.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[HPALETTE CPalette::operator](#operator_hpalette)|Zwraca `HPALETTE` dołączony do `CPalette`.|  
+|[HPALETTE CPalette::operator](#operator_hpalette)|Zwraca HPALETTE dołączone do `CPalette`.|  
   
 ## <a name="remarks"></a>Uwagi  
- Palety interfejs pomiędzy aplikacją i urządzenie wyjściowe kolorów (na przykład urządzenia wyświetlającego). Interfejs umożliwia aplikacji w pełni wykorzystać możliwości kolor urządzenia wyjściowego bez poważnie zakłócać kolorów wyświetlany przez inne aplikacje. System Windows używa aplikacji logiczną paletę (Lista kolory potrzebne) i palety systemu (który definiuje dostępne kolory) w celu określenia kolory używane.  
+ Palety udostępnia interfejs między aplikacją a urządzeniem kolor danych wyjściowych (np. urządzenia wyświetlającego). Interfejs umożliwia aplikacji, w pełni wykorzystać możliwości kolor urządzenia wyjściowego bez konieczności zmieniania poważnie kolory wyświetlane przez inne aplikacje. Windows korzysta z palety logiczne aplikacji (Lista kolorów wymagane) i paleta systemu, (która określa dostępnych kolorów), aby określić kolory używane.  
   
- A `CPalette` obiektu zapewnia funkcje Członkowskie manipulowanie palety określonych przez obiekt. Utworzyć `CPalette` obiektu i używać jej funkcji elementów członkowskich, do tworzenia rzeczywistych palety, obiekt graphics urządzenia (GDI) interfejsu i operowania nim wpisów i inne właściwości.  
+ Element `CPalette` obiektu dostarcza funkcji elementów członkowskich do manipulowania palety określonego przez obiekt. Konstruowania `CPalette` obiektu i używać jej elementów członkowskich, do tworzenia rzeczywistych palety, obiekt interface (GDI) urządzenia grafiki i operowania nim wpisów oraz inne właściwości.  
   
- Aby uzyskać więcej informacji na temat używania `CPalette`, zobacz [obiektów graficznych](../../mfc/graphic-objects.md).  
+ Aby uzyskać więcej informacji na temat korzystania z `CPalette`, zobacz [obiektów graficznych](../../mfc/graphic-objects.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -98,7 +98,7 @@ class CPalette : public CGdiObject
  **Nagłówek:** afxwin.h  
   
 ##  <a name="animatepalette"></a>  CPalette::AnimatePalette  
- Zastępuje wpisów w logiczną paletę dołączony do `CPalette` obiektu.  
+ Zastępuje wpisy palety logiczne, dołączone do `CPalette` obiektu.  
   
 ```  
 void AnimatePalette(
@@ -109,18 +109,18 @@ void AnimatePalette(
   
 ### <a name="parameters"></a>Parametry  
  *nStartIndex*  
- Określa pierwszą pozycję w palecie to animowanie.  
+ Określa pierwszy wpis w palety aby być animowane.  
   
  *nNumEntries*  
- Określa liczbę wpisów w palecie to animowanie.  
+ Określa liczbę wpisów w palety aby być animowane.  
   
  *lpPaletteColors*  
- Wskazuje pierwszego elementu członkowskiego tablicy [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) struktury tak, aby zastąpić wpisy palety identyfikowane przez *nStartIndex* i *nNumEntries*.  
+ Wskazuje pierwszego elementu członkowskiego tablicy [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) struktur, aby zastąpić wpisy palety identyfikowane przez *nStartIndex* i *nNumEntries*.  
   
 ### <a name="remarks"></a>Uwagi  
- Gdy aplikacja wywołuje `AnimatePalette`, nie ma aktualizacji obszaru klienckiego, ponieważ Windows mapuje nowe wpisy w palecie systemu natychmiast.  
+ Kiedy aplikacja wywołuje `AnimatePalette`, nie ma aktualizacji obszaru klienckiego, ponieważ Windows mapuje nowych wpisów na palecie system natychmiast.  
   
- `AnimatePalette` Funkcja spowoduje jedynie zmianę wpisów z **PC_RESERVED** Flaga w odpowiednich **palPaletteEntry** członkiem [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) — struktura dołączony do `CPalette` obiektu. Zobacz **LOGPALETTE** w zestawie SDK systemu Windows, aby uzyskać więcej informacji na temat tej struktury.  
+ `AnimatePalette` Funkcji spowoduje jedynie zmianę wpisów z flagą PC_RESERVED w odpowiednich `palPaletteEntry` członkiem [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) strukturę, która jest dołączona do `CPalette` obiektu. Zobacz LOGPALETTE w zestawie Windows SDK, aby uzyskać więcej informacji na temat tej struktury.  
   
 ##  <a name="cpalette"></a>  CPalette::CPalette  
  Konstruuje `CPalette` obiektu.  
@@ -130,10 +130,10 @@ CPalette();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Z obiektem nie jest brak palety dołączone do czasu wywołania `CreatePalette` dołączyć jeden.  
+ Obiekt ma nie dołączonych palety, dopóki nie zostanie wywołana `CreatePalette` można dołączyć jeden.  
   
 ##  <a name="createhalftonepalette"></a>  CPalette::CreateHalftonePalette  
- Tworzy palety półtonów dla kontekstu urządzenia.  
+ Tworzy palety półtonów kontekstu urządzenia.  
   
 ```  
 BOOL CreateHalftonePalette(CDC* pDC);
@@ -147,12 +147,12 @@ BOOL CreateHalftonePalette(CDC* pDC);
  Różne od zera, jeśli funkcja zakończyła się pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Aplikacji powinien utworzyć palety półtonów, gdy ustawiono tryb stretching kontekstu urządzenia **PÓŁTONÓW**. Palety logicznej półtonów zwrócony przez [CreateHalftonePalette](http://msdn.microsoft.com/library/windows/desktop/dd183503) funkcji członkowskiej należy następnie można wybrać i zrealizowane do kontekstu urządzenia przed [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) lub [ StretchDIBits](http://msdn.microsoft.com/library/windows/desktop/dd145121) funkcja jest wywoływana.  
+ Aplikację należy utworzyć palety półtonów, gdy PÓŁTONÓW ma wartość trybu rozciągania kontekstu urządzenia. Palety logiczne półtonów zwrócony przez [CreateHalftonePalette](http://msdn.microsoft.com/library/windows/desktop/dd183503) funkcja elementu członkowskiego należy następnie można wybrać i wykonywane w kontekście urządzenia przed [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) lub [ StretchDIBits](http://msdn.microsoft.com/library/windows/desktop/dd145121) funkcja jest wywoływana.  
   
- Zobacz Windows SDK, aby uzyskać więcej informacji `CreateHalftonePalette` i **StretchDIBits**.  
+ Zobacz zestaw SDK Windows, aby uzyskać więcej informacji na temat `CreateHalftonePalette` i `StretchDIBits`.  
   
 ##  <a name="createpalette"></a>  CPalette::CreatePalette  
- Inicjuje `CPalette` obiektu tworząc paletę kolorów logiczny systemu Windows i dołączenie go do `CPalette` obiektu.  
+ Inicjuje `CPalette` obiektu, tworząc Windows logiczną paletę i dołączania ich do `CPalette` obiektu.  
   
 ```  
 BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
@@ -160,16 +160,16 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
   
 ### <a name="parameters"></a>Parametry  
  *lpLogPalette*  
- Wskazuje [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) struktury, który zawiera informacje o kolorów w palecie logiczne.  
+ Wskazuje [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) strukturę, która zawiera informacje dotyczące kolorów palety logiczne.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz Windows SDK, aby uzyskać więcej informacji **LOGPALETTE** struktury.  
+ Zobacz zestaw SDK Windows, aby uzyskać więcej informacji na temat `LOGPALETTE` struktury.  
   
 ##  <a name="fromhandle"></a>  CPalette::FromHandle  
- Zwraca wskaźnik do `CPalette` obiektu, gdy uchwyt do obiektu palety systemu Windows.  
+ Zwraca wskaźnik do `CPalette` obiektu, gdy dojścia do obiektu Windows palety.  
   
 ```  
 static CPalette* PASCAL FromHandle(HPALETTE hPalette);
@@ -177,26 +177,26 @@ static CPalette* PASCAL FromHandle(HPALETTE hPalette);
   
 ### <a name="parameters"></a>Parametry  
  *hPalette*  
- Dojście do paletę kolorów GDI systemu Windows.  
+ Dojście do palety kolorów Windows GDI.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do `CPalette` obiektu w przypadku powodzenia; w przeciwnym razie **NULL**.  
+ Wskaźnik do `CPalette` obiektu, jeśli operacja się powiedzie; w przeciwnym razie wartość NULL.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `CPalette` obiekt nie jest już dołączony do systemu Windows palety, tymczasowej `CPalette` obiekt jest tworzony i dołączyć. To tymczasowe `CPalette` obiekt jest prawidłowy tylko do momentu przy następnym aplikacja ma czas bezczynności w pętli jego zdarzeń, w czasu grafiki wszystkie tymczasowe obiekty zostaną usunięte. Innymi słowy tymczasowy obiekt jest prawidłowy tylko podczas przetwarzania komunikatu jedno okno.  
+ Jeśli `CPalette` obiekt nie jest już dołączony do palety Windows, tymczasowego `CPalette` obiekt zostanie utworzony i dołączony. Ten tymczasowy `CPalette` obiekt jest prawidłowy tylko do momentu przy następnym aplikacji ma czas bezczynności, po jego pętlę zdarzeń, w której czas wszystkich tymczasowych grafiki obiekty zostaną usunięte. Innymi słowy tymczasowy obiekt jest prawidłowy tylko podczas przetwarzania komunikatu jednego okna.  
   
 ##  <a name="getentrycount"></a>  CPalette::GetEntryCount  
- Wywołaj tę funkcję elementu członkowskiego, aby pobrać liczbę wpisów w danym logiczną paletę.  
+ Wywołaj tę funkcję elementu członkowskiego, aby pobrać liczbę wpisów w danym palety logiczne.  
   
 ```  
 int GetEntryCount();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczba wpisów w logiczną paletę.  
+ Liczba wpisów w palety logiczne.  
   
 ##  <a name="getnearestpaletteindex"></a>  CPalette::GetNearestPaletteIndex  
- Zwraca indeks wpisu w palecie logicznej, która najlepiej pasuje do wartości koloru.  
+ Zwraca indeks wpisu w palecie logiczny, który najlepiej pasuje do wartości określonego koloru.  
   
 ```  
 UINT GetNearestPaletteIndex(COLORREF crColor) const;  
@@ -204,13 +204,13 @@ UINT GetNearestPaletteIndex(COLORREF crColor) const;
   
 ### <a name="parameters"></a>Parametry  
  *crColor*  
- Określa kolor, który ma zostać dopasowany.  
+ Określa kolor do dopasowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Indeks wpis w logiczną paletę. Wpis zawiera kolor, który najlepiej pasuje podany kolor.  
+ Indeks wpis palety logiczne. Wpis zawiera kolor, który najlepiej pasuje określonego koloru.  
   
 ##  <a name="getpaletteentries"></a>  CPalette::GetPaletteEntries  
- Pobiera zakres wpisy palety w logiczną paletę.  
+ Pobiera zakres wpisy palety logiczne palety.  
   
 ```  
 UINT GetPaletteEntries(
@@ -221,16 +221,16 @@ UINT GetPaletteEntries(
   
 ### <a name="parameters"></a>Parametry  
  *nStartIndex*  
- Określa pierwszą pozycję w logiczną paletę do pobrania.  
+ Określa pierwszy wpis w logiczną paletę do pobrania.  
   
  *nNumEntries*  
  Określa liczbę wpisów w logiczną paletę do pobrania.  
   
  *lpPaletteColors*  
- Wskazuje tablicę [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) struktury danych, aby otrzymać wpisy palety. Tablica musi zawierać co najmniej tyle struktur danych określony przez *nNumEntries*.  
+ Wskazuje na tablicę [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) struktur danych, aby otrzymać wpisy palety. Tablica musi zawierać co najmniej tyle struktur danych określony przez *nNumEntries*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczba wpisów pobranych z logiczną paletę; 0, jeśli funkcja nie powiodła się.  
+ Liczba wpisów jest pobierana z logiczną paletę; 0, jeśli funkcja nie powiodło się.  
   
 ##  <a name="operator_hpalette"></a>  HPALETTE CPalette::operator  
  Użyj tego operatora, aby uzyskać dojście Windows GDI dołączonych `CPalette` obiektu.  
@@ -240,15 +240,15 @@ operator HPALETTE() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli się powiedzie, uchwyt do obiektu Windows GDI reprezentowany przez `CPalette` obiektu; w przeciwnym razie **NULL**.  
+ Jeśli operacja się powiedzie, dojścia do obiektu Windows GDI reprezentowany przez `CPalette` obiektu; w przeciwnym razie wartość NULL.  
   
 ### <a name="remarks"></a>Uwagi  
- Ten operator jest operatora rzutowania obsługuje bezpośredniego użycia `HPALETTE` obiektu.  
+ Ten operator jest operatora rzutowania obsługuje bezpośredniego użycia obiektu HPALETTE.  
   
  Aby uzyskać więcej informacji o korzystaniu z obiektów graficznych, zobacz artykuł [obiektów grafiki](http://msdn.microsoft.com/library/windows/desktop/dd144962) w zestawie Windows SDK.  
   
 ##  <a name="resizepalette"></a>  CPalette::ResizePalette  
- Zmienia rozmiar logiczną paletę dołączony do `CPalette` obiektu liczby wpisy określone przez *nNumEntries*.  
+ Zmienia rozmiar logiczną paletę dołączone do `CPalette` obiektu do liczby pozycji określonej przez *nNumEntries*.  
   
 ```  
 BOOL ResizePalette(UINT nNumEntries);
@@ -259,15 +259,15 @@ BOOL ResizePalette(UINT nNumEntries);
  Określa liczbę wpisów w palecie po został zmieniony.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli pomyślnie zmiany rozmiaru palety; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli palety został pomyślnie zmieniony; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli aplikacja wymaga `ResizePalette` pozwala zmniejszyć paletę wpisy pozostałych po zmianie rozmiaru palety nie uległy zmianie. Jeśli aplikacja wywoła `ResizePalette` Aby powiększyć palety, wpisy palety dodatkowe są ustawione na kolor czarny (wartości czerwonemu, zielonemu i niebieska są wszystkie 0) i flag wszystkie dodatkowe wpisy są ustawione na 0.  
+ Jeśli aplikacja wywołuje `ResizePalette` pozwala zmniejszyć paletę pozostałe w palecie o zmienionym rozmiarze wpisy ulegną zmianie. Jeśli aplikacja wywołuje `ResizePalette` Aby powiększyć palety, wpisy palety dodatkowe są ustawione na czarny (wartość czerwonego, zielonego i niebieskiego są wszystkie 0), a flagi dla wszystkich wpisów dodatkowe są ustawione na 0.  
   
- Aby uzyskać więcej informacji na temat interfejsu API systemu Windows `ResizePalette`, zobacz [ResizePalette](http://msdn.microsoft.com/library/windows/desktop/dd162928) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji na temat interfejsu API Windows `ResizePalette`, zobacz [ResizePalette](http://msdn.microsoft.com/library/windows/desktop/dd162928) w zestawie Windows SDK.  
   
 ##  <a name="setpaletteentries"></a>  CPalette::SetPaletteEntries  
- Ustawia flagi i wartości kolorów RGB w zakresie wpisów w logiczną paletę.  
+ Ustawia wartości kolorów RGB i flagi w zakresie wpisy palety logiczne.  
   
 ```  
 UINT SetPaletteEntries(
@@ -278,24 +278,24 @@ UINT SetPaletteEntries(
   
 ### <a name="parameters"></a>Parametry  
  *nStartIndex*  
- Określa pierwszą pozycję w logiczną paletę do ustawienia.  
+ Określa pierwszy wpis w logiczną paletę do ustawienia.  
   
  *nNumEntries*  
  Określa liczbę wpisów w logiczną paletę do ustawienia.  
   
  *lpPaletteColors*  
- Wskazuje tablicę [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) struktury danych, aby otrzymać wpisy palety. Tablica musi zawierać co najmniej tyle struktur danych określony przez *nNumEntries*.  
+ Wskazuje na tablicę [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) struktur danych, aby otrzymać wpisy palety. Tablica musi zawierać co najmniej tyle struktur danych określony przez *nNumEntries*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczba wpisów w logiczną paletę; 0, jeśli funkcja nie powiodła się.  
+ Liczba wpisów w logiczną paletę; 0, jeśli funkcja nie powiodło się.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli logiczną paletę zostanie wybrane do kontekstu urządzenia, gdy aplikacja wywołuje `SetPaletteEntries`, zmiany zostaną uwzględnione po wywołania aplikacji [CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette).  
+ Jeśli logiczną paletę zostanie wybrany do kontekstu urządzenia, gdy aplikacja wywołuje `SetPaletteEntries`, zmiany nie zostały zastosowane do czasu wywołania aplikacji [CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette).  
   
- Aby uzyskać więcej informacji na temat struktury Windows **PALETTEENTRY**, zobacz [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji na temat struktury Windows `PALETTEENTRY`, zobacz [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) w zestawie Windows SDK.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykładowe MFC DIBLOOK](../../visual-cpp-samples.md)   
+ [Próbki MFC DIBLOOK](../../visual-cpp-samples.md)   
  [Klasa CGdiObject](../../mfc/reference/cgdiobject-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [CPalette::GetPaletteEntries](#getpaletteentries)   

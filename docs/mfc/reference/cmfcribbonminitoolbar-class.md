@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b20d43c53fc0f485d33f71805e73f885c1200a
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: d97e3e993571392893533be220e243b045b81e30
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041753"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852890"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>Klasa CMFCRibbonMiniToolBar
-Implementuje kontekstowe podręcznego paska narzędzi.  
+Implementuje kontekstowy podręczny pasek narzędzi.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -56,17 +56,17 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 |Nazwa|Opis|  
 |----------|-----------------|  
 |`CMFCRibbonMiniToolBar::CreateObject`|Używane przez platformę do tworzenia dynamicznych wystąpienia tego typu klasy.|  
-|`CMFCRibbonMiniToolBar::GetThisClass`|Używany przez platformę do uzyskania wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiekt, który jest skojarzony z tym typem klasy.|  
+|`CMFCRibbonMiniToolBar::GetThisClass`|Używane przez architekturę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tym typem klasy.|  
 |[CMFCRibbonMiniToolBar::IsContextMenuMode](#iscontextmenumode)||  
 |[CMFCRibbonMiniToolBar::IsRibbonMiniToolBar](#isribbonminitoolbar)|(Przesłania `CMFCPopupMenu::IsRibbonMiniToolBar`.)|  
-|[CMFCRibbonMiniToolBar::SetCommands](#setcommands)|Ustawia listę poleceń, który będzie wyświetlany na pasku narzędzi.|  
-|[CMFCRibbonMiniToolBar::Show](#show)|Wyświetla współrzędne ekranu podręcznego paska narzędzi.|  
+|[CMFCRibbonMiniToolBar::SetCommands](#setcommands)|Ustawia listę poleceń, które mają być wyświetlane na pasku narzędzi.|  
+|[CMFCRibbonMiniToolBar::Show](#show)|Wyświetla podręczny pasek narzędzi na współrzędne ekranu.|  
 |[CMFCRibbonMiniToolBar::ShowWithContextMenu](#showwithcontextmenu)|Wyświetla podręczny pasek narzędzi wraz z menu kontekstowego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Podręczny pasek narzędzi jest zwykle wyświetlany po użytkownik wybierze obiekt w dokumencie. Na przykład po wybraniu bloku tekstu w edytorze tekstu, aplikacja wyświetla podręczny pasek narzędzi, który zawiera polecenia formatowania tekstu.  
+ Podręczny pasek narzędzi jest zwykle wyświetlany po użytkownik wybierze obiekt w dokumencie. Na przykład po użytkownik wybiera blok tekstu w edytorze tekstu, aplikacja wyświetla podręczny pasek narzędzi, który zawiera polecenia służące do formatowania tekstu.  
   
- Przezroczysty podręczny pasek narzędzi, gdy wskaźnik myszy znajduje się poza granicami podręczny pasek narzędzi.  
+ Podręczny pasek narzędzi staje się przezroczyste, gdy wskaźnik myszy znajduje się poza granicami podręczny pasek narzędzi.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -75,7 +75,7 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [Cframewnd —](../../mfc/reference/cframewnd-class.md)  
+ [CFrameWnd](../../mfc/reference/cframewnd-class.md)  
   
  [CMiniFrameWnd](../../mfc/reference/cminiframewnd-class.md)  
   
@@ -89,7 +89,7 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
  **Nagłówek:** afxRibbonMiniToolBar.h  
   
 ##  <a name="setcommands"></a>  CMFCRibbonMiniToolBar::SetCommands  
- Ustawia listę poleceń, który będzie wyświetlany na pasku narzędzi.  
+ Ustawia listę poleceń, które mają być wyświetlane na pasku narzędzi.  
   
 ```  
 void SetCommands(
@@ -99,21 +99,21 @@ void SetCommands(
   
 ### <a name="parameters"></a>Parametry  
  [in] *pRibbonBar*  
- Na pasku wstążki, wyszukująca w przypadku przycisków wyświetlić podręczny pasek narzędzi.  
+ Paska wstążki, paska wyszukiwania przyciski, aby wyświetlić program.  
   
  [in] *lstCommands*  
- Listę poleceń, który będzie wyświetlany na podręczny pasek narzędzi. Aby znaleźć skojarzone przycisków przeszukiwane są wszystkie kategorie wstążki.  
+ Lista poleceń, który będzie wyświetlany w podręczny pasek narzędzi. Wszystkie kategorie wstążki są przeszukiwane w celu skojarzone przycisk Znajdź.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj tej funkcji, aby ustawić listę poleceń, które mają być wyświetlane w podręczny pasek narzędzi.  
+ Aby ustawić listę poleceń, które mają być wyświetlane w podręczny pasek narzędzi, należy użyć tej funkcji.  
   
 ### <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano sposób użycia `SetCommands` metody `CMFCRibbonMiniToolBar` klasy. Następujący fragment kodu jest częścią [próbka MS Office 2007 Demo](../../visual-cpp-samples.md).  
+ Poniższy przykład pokazuje sposób użycia `SetCommands` metody `CMFCRibbonMiniToolBar` klasy. Ten fragment kodu jest częścią [próbka MS Office 2007 Demo](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#9](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]  
   
 ##  <a name="show"></a>  CMFCRibbonMiniToolBar::Show  
- Wyświetla współrzędne ekranu podręcznego paska narzędzi.  
+ Wyświetla podręczny pasek narzędzi na współrzędne ekranu.  
   
 ```  
 BOOL Show(
@@ -123,13 +123,13 @@ BOOL Show(
   
 ### <a name="parameters"></a>Parametry  
  [in] *x*  
- Określa położenie paska we współrzędnych ekranu.  
+ Określa położenie w poziomie podręczny pasek narzędzi w współrzędne ekranu.  
   
  [in] *y*  
- Określa położenie w pionie podręczny pasek narzędzi we współrzędnych ekranu.  
+ Określa położenie w pionie podręczny pasek narzędzi w współrzędne ekranu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli podręczny pasek narzędzi został wyświetlony pomyślnie; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli pomyślnie; zobrazilo podręczny pasek narzędzi w przeciwnym razie wartość FALSE.  
   
 ##  <a name="showwithcontextmenu"></a>  CMFCRibbonMiniToolBar::ShowWithContextMenu  
  Wyświetla podręczny pasek narzędzi wraz z menu kontekstowego.  
@@ -144,22 +144,22 @@ BOOL ShowWithContextMenu(
   
 ### <a name="parameters"></a>Parametry  
  [in] *x*  
- Określa położenie menu kontekstowe we współrzędnych ekranu.  
+ Określa położenie menu kontekstowego w poziomie w współrzędne ekranu.  
   
  [in] *y*  
- Określa położenie w pionie menu kontekstowe we współrzędnych ekranu.  
+ Określa położenie menu kontekstowego w pionie w współrzędne ekranu.  
   
  [in] *uiMenuResID*  
- Określa identyfikator zasobu menu kontekstowe do wyświetlenia.  
+ Określa identyfikator zasobu menu kontekstowe do wyświetlania.  
   
  [in] *pWndOwner*  
- Określa okno, który odbiera komunikaty z menu kontekstowego.  
+ Identyfikuje okna, która odbiera komunikaty z menu kontekstowego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli menu kontekstowe został wyświetlony pomyślnie; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli pomyślnie; zobrazilo menu kontekstowe w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja służy do wyświetlenia podręczny pasek narzędzi, z menu kontekstowego. Menu kontekstowe jest rozmieszczanych 15 pikseli poniżej paska.  
+ Ta funkcja umożliwia wyświetlenie mini pasek narzędzi, który ma menu kontekstowego. Menu kontekstowe jest określonym położeniem 15 pikseli poniżej podręczny pasek narzędzi.  
   
 ##  <a name="iscontextmenumode"></a>  CMFCRibbonMiniToolBar::IsContextMenuMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  

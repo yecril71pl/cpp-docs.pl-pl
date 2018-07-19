@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0b4c038389810fcc6a847cdbf7837568b3007b6
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 2a0566ef5eead5950f2b4de1f6e1a220f79bcfbe
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078611"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849330"
 ---
 # <a name="cricheditcntritem-class"></a>Klasa CRichEditCntrItem
-Z [cricheditview —](../../mfc/reference/cricheditview-class.md) i [cricheditdoc —](../../mfc/reference/cricheditdoc-class.md), udostępnia funkcje kontrolki zaawansowanej edycji w kontekście architektura widoku dokumentu MFC.  
+Za pomocą [CRichEditView](../../mfc/reference/cricheditview-class.md) i [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md), zapewnia funkcję rozwiniętej kontroli edycji w kontekście architektury widoku dokumentu MFC.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,16 +48,16 @@ class CRichEditCntrItem : public COleClientItem
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CRichEditCntrItem::SyncToRichEditObject](#synctoricheditobject)|Aktywuje element jako innego typu.|  
+|[CRichEditCntrItem::SyncToRichEditObject](#synctoricheditobject)|Uaktywnia elementu jako innego typu.|  
   
 ## <a name="remarks"></a>Uwagi  
- "Kontrolki zaawansowanej edycji" jest oknem, w którym użytkownik może wprowadzić i edytować tekst. Tekst można przypisać formatowanie znaków i akapitów i mogą zawierać osadzonych obiektów OLE. Formanty edycji wzbogaconej udostępniają interfejs programowania do formatowania tekstu. Jednak aplikacja musi implementować wszystkie składniki interfejsu użytkownika należy udostępnić użytkownikowi operacji formatowania.  
+ "Kontrolki edycji wzbogaconej" to okno, w którym użytkownik może wprowadzić i edytować tekst. Tekst można przypisać znaków i formatowanie akapitów i mogą zawierać osadzonych obiektów OLE. Kontrolki edycji wzbogaconej dostarczające interfejs programowania do formatowania tekstu. Jednak aplikacja musi zaimplementować wszelkie niezbędne udostępnić użytkownikowi operacji formatowania składników interfejsu użytkownika.  
   
- `CRichEditView` przechowuje tekst i właściwości formatowania tekstu. `CRichEditDoc` przechowuje listę OLE elementy klienckie, które znajdują się w widoku. `CRichEditCntrItem` udostępnia kontener po stronie klienta elementu OLE.  
+ `CRichEditView` przechowuje tekst i właściwości formatowania tekstu. `CRichEditDoc` przechowuje listę elementów klienta OLE, które znajdują się w widoku. `CRichEditCntrItem` udostępnia siebie kontener elementu klienta OLE.  
   
- Ten formant wspólne systemu Windows (i w związku z tym [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) i związanych z klasy) jest dostępne tylko dla programów w wersji Windows 95/98 i Windows NT 3.51 lub nowszej.  
+ Ten formant Windows wspólnej (i w związku z tym [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) i pokrewne klasy) jest dostępna tylko dla programów uruchomionych w wersji Windows 95/98 i Windows NT 3.51 lub nowszej.  
   
- Na przykład przy użyciu elementów kontenera zaawansowanej edycji w aplikacji MFC, zobacz [WORDPAD](../../visual-cpp-samples.md) przykładowej aplikacji.  
+ Przykład przy użyciu bogatej edycji kontenerów elementów w aplikacji MFC, zobacz [WORDPAD](../../visual-cpp-samples.md) przykładowej aplikacji.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -74,7 +74,7 @@ class CRichEditCntrItem : public COleClientItem
  **Nagłówek:** afxrich.h  
   
 ##  <a name="cricheditcntritem"></a>  CRichEditCntrItem::CRichEditCntrItem  
- Wywołanie tej funkcji, aby utworzyć `CRichEditCntrItem` obiektu i dodaj go do dokumentu kontenera.  
+ Wywołaj tę funkcję, aby utworzyć `CRichEditCntrItem` obiektu i dodaj go do dokumentu kontenera.  
   
 ```  
 CRichEditCntrItem(
@@ -84,18 +84,18 @@ CRichEditCntrItem(
   
 ### <a name="parameters"></a>Parametry  
  *preo*  
- Wskaźnik do [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) strukturę, która opisuje element OLE. Nowe `CRichEditCntrItem` konstruowania obiektu wokół tego elementu OLE. Jeśli *preo* jest **NULL**, element klienta jest pusta.  
+ Wskaźnik do [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) struktury, które opisują elementu OLE. Nowy `CRichEditCntrItem` obiekt jest konstruowany wokół tego elementu OLE. Jeśli *preo* ma wartość NULL, element klienta jest pusty.  
   
  *pContainer*  
- Wskaźnik do dokumentu kontenera, który zawiera ten element. Jeśli *pContainer* jest **NULL**, musisz jawnie wywołać [COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem) można dodać tego elementu klienta do dokumentu.  
+ Wskaźnik do dokumentu kontenera, który będzie zawierać tego elementu. Jeśli *element pContainer* ma wartość NULL, należy jawnie wywołać [COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem) można dodać tego elementu klienta do dokumentu.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja nie wykonuje żadnych inicjowania OLE.  
+ Ta funkcja nie wykonuje żadnych Inicjalizacja OLE.  
   
  Aby uzyskać więcej informacji, zobacz [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) struktury w zestawie Windows SDK.  
   
 ##  <a name="synctoricheditobject"></a>  CRichEditCntrItem::SyncToRichEditObject  
- Wywołanie tej funkcji, aby zsynchronizować aspekt urządzenia [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318), tego `CRichEditCntrltem` do określonej przez *Otwórz*.  
+ Wywołaj tę funkcję, aby zsynchronizować aspektu urządzenia [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318), to `CRichEditCntrltem` do określonej przez *Otwórz*.  
   
 ```  
 void SyncToRichEditObject(REOBJECT& reo);
@@ -103,14 +103,14 @@ void SyncToRichEditObject(REOBJECT& reo);
   
 ### <a name="parameters"></a>Parametry  
  *Otwórz*  
- Odwołanie do [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) strukturę, która opisuje element OLE.  
+ Odwołanie do [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) struktury, które opisują elementu OLE.  
   
 ### <a name="remarks"></a>Uwagi  
  Aby uzyskać więcej informacji, zobacz [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) w zestawie Windows SDK.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykładowe MFC WORDPAD](../../visual-cpp-samples.md)   
+ [Próbki MFC WORDPAD](../../visual-cpp-samples.md)   
  [Klasa COleClientItem](../../mfc/reference/coleclientitem-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
- [Cricheditdoc — klasa](../../mfc/reference/cricheditdoc-class.md)   
+ [Klasa CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)   
  [Klasa CRichEditView](../../mfc/reference/cricheditview-class.md)

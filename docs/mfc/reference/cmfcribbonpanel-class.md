@@ -124,15 +124,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 613076e38d8033a5af92913fcbe8e195ebdc2c60
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: d61c5698a0ad9d6eb2c13edc6147b757a86f20e9
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042147"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850173"
 ---
 # <a name="cmfcribbonpanel-class"></a>Klasa CMFCRibbonPanel
-Implementuje panelu, który zawiera zbiór elementów wstążki. Podczas rysowania panelu Wyświetla dowolną liczbę elementów jak to możliwe, podany rozmiar panelu.  
+Implementuje panel, który zawiera zbiór elementów wstążki. Podczas rysowania panelu Wyświetla tyle elementów, jak to możliwe, uwzględniając rozmiar panelu.  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
  
@@ -159,23 +159,23 @@ class CMFCRibbonPanel : public CObject
 |[CMFCRibbonPanel::AddSeparator](#addseparator)|Dodaje separator do panelu wstążki.|  
 |[CMFCRibbonPanel::AddToolBar](#addtoolbar)|Dodaje pasek narzędzi do panelu wstążki.|  
 |[CMFCRibbonPanel::FindByData](#findbydata)||  
-|[CMFCRibbonPanel::FindByID](#findbyid)|Zwraca element identyfikowany przez identyfikator określonego polecenia.|  
+|[CMFCRibbonPanel::FindByID](#findbyid)|Zwraca element identyfikowane przez identyfikator określonego polecenia.|  
 |[CMFCRibbonPanel::GetCaptionHeight](#getcaptionheight)||  
 |[CMFCRibbonPanel::GetCount](#getcount)|Zwraca liczbę elementów w panelu wstążki.|  
-|[CMFCRibbonPanel::GetData](#getdata)|Zwraca dane zdefiniowane przez użytkownika skojarzonych z panelu.|  
+|[CMFCRibbonPanel::GetData](#getdata)|Zwraca dane zdefiniowane przez użytkownika, skojarzone z panelu.|  
 |[CMFCRibbonPanel::GetDefaultButton](#getdefaultbutton)||  
 |[CMFCRibbonPanel::GetDroppedDown](#getdroppeddown)||  
-|[CMFCRibbonPanel::GetElement](#getelement)|Zwraca element wstążki znajdujący się w określonym indeksie.|  
+|[CMFCRibbonPanel::GetElement](#getelement)|Zwraca element wstążki, znajdujący się w określonym indeksie.|  
 |[CMFCRibbonPanel::GetElements](#getelements)|Pobiera wszystkie elementy, które są zawarte w panelu wstążki.|  
 |[CMFCRibbonPanel::GetElementsByID](#getelementsbyid)||  
 |[CMFCRibbonPanel::GetFocused](#getfocused)|Zwraca element z fokusem.|  
-|[CMFCRibbonPanel::GetGalleryRect](#getgalleryrect)|Zwraca prostokąt ograniczający elementu galerii.|  
+|[CMFCRibbonPanel::GetGalleryRect](#getgalleryrect)|Zwraca prostokąt otaczający elementu galerii.|  
 |[CMFCRibbonPanel::GetHighlighted](#gethighlighted)||  
 |[CMFCRibbonPanel::GetIndex](#getindex)||  
 |[CMFCRibbonPanel::GetItemIDsList](#getitemidslist)||  
 |[CMFCRibbonPanel::GetName](#getname)||  
 |[CMFCRibbonPanel::GetParentButton](#getparentbutton)||  
-|[CMFCRibbonPanel::GetParentCategory](#getparentcategory)|Zwraca nadrzędny kategorii Panelu wstążki.|  
+|[CMFCRibbonPanel::GetParentCategory](#getparentcategory)|Zwraca kategorii nadrzędnej, panelu wstążki.|  
 |[CMFCRibbonPanel::GetParentMenuBar](#getparentmenubar)||  
 |[CMFCRibbonPanel::GetPreferedMenuLocation](#getpreferedmenulocation)||  
 |[CMFCRibbonPanel::GetPressed](#getpressed)||  
@@ -184,38 +184,38 @@ class CMFCRibbonPanel : public CObject
 |[CMFCRibbonPanel::HasElement](#haselement)||  
 |[CMFCRibbonPanel::HitTest](#hittest)||  
 |[CMFCRibbonPanel::HitTestEx](#hittestex)||  
-|[CMFCRibbonPanel::Insert](#insert)|Wstawia element wstążki w określonej pozycji.|  
-|[CMFCRibbonPanel::InsertSeparator](#insertseparator)|Wstawia separator w określonej pozycji.|  
-|[CMFCRibbonPanel::IsCenterColumnVert](#iscentercolumnvert)|Określa, czy wszystkie elementy panelu powinien być wyśrodkowany (wyrównanie) pionie według kolumny.|  
+|[CMFCRibbonPanel::Insert](#insert)|Wstawia element wstążki w danej pozycji.|  
+|[CMFCRibbonPanel::InsertSeparator](#insertseparator)|Wstawia separatorem w danej pozycji.|  
+|[CMFCRibbonPanel::IsCenterColumnVert](#iscentercolumnvert)|Określa, czy wszystkie elementy panelu powinien być wyśrodkowany (wyrównane) w pionie, według kolumny.|  
 |[CMFCRibbonPanel::IsCollapsed](#iscollapsed)||  
 |[CMFCRibbonPanel::IsHighlighted](#ishighlighted)||  
-|[CMFCRibbonPanel::IsJustifyColumns](#isjustifycolumns)|Określa, czy wszystkie kolumny panelu mają tej samej szerokości.|  
+|[CMFCRibbonPanel::IsJustifyColumns](#isjustifycolumns)|Określa, czy wszystkie kolumny panelu mają taką samą szerokość.|  
 |[CMFCRibbonPanel::IsMainPanel](#ismainpanel)||  
 |[CMFCRibbonPanel::IsMenuMode](#ismenumode)||  
-|[CMFCRibbonPanel::MakeGalleryItemVisible](#makegalleryitemvisible)|Przewija galerii, aby wyświetlić określony element wstążki.|  
+|[CMFCRibbonPanel::MakeGalleryItemVisible](#makegalleryitemvisible)|Przewija galerię, aby uwidocznić określony element wstążki.|  
 |[CMFCRibbonPanel::OnKey](#onkey)||  
 |[CMFCRibbonPanel::RecalcWidths](#recalcwidths)||  
-|[CMFCRibbonPanel::Remove](#remove)|Usuwa i opcjonalnie element znajduje się w określonym indeksie.|  
-|[CMFCRibbonPanel::RemoveAll](#removeall)|Usuwa wszystkie elementy panelu wstążki.|  
-|[CMFCRibbonPanel::Replace](#replace)|Zastępuje jeden element z inną na podstawie ich wartości odpowiednich indeksu.|  
+|[CMFCRibbonPanel::Remove](#remove)|Usuwa i opcjonalnie usuwa element znajdujący się pod określonym indeksem.|  
+|[CMFCRibbonPanel::RemoveAll](#removeall)|Usuwa wszystkie elementy z panelu wstążki.|  
+|[CMFCRibbonPanel::Replace](#replace)|Zastępuje jeden element drugiego w oparciu o ich wartości odpowiednich indeksów.|  
 |[CMFCRibbonPanel::ReplaceByID](#replacebyid)|Zamienia jeden element drugiego w oparciu o identyfikator określonego polecenia.|  
 |[CMFCRibbonPanel::SetCenterColumnVert](#setcentercolumnvert)|Ustala kolejność panelu Dopasuj elementy w pionie według kolumny.|  
-|[CMFCRibbonPanel::SetData](#setdata)|Skojarzone dane zdefiniowane przez użytkownika za pomocą panelu wstążki.|  
-|[CMFCRibbonPanel::SetElementMenu](#setelementmenu)|Przypisuje menu podręcznego do elementu, który ma identyfikator danego polecenia.|  
-|[CMFCRibbonPanel::SetElementRTC](#setelementrtc)|Dodaje element wstążki określił informacji o klasie podana środowiska uruchomieniowego do panelu wstążki.|  
-|[CMFCRibbonPanel::SetElementRTCByID](#setelementrtcbyid)|Dodaje element wstążki określił informacji o klasie podana środowiska uruchomieniowego do panelu wstążki.|  
-|[CMFCRibbonPanel::SetFocused](#setfocused)|Ustawia okno określonego elementu wstążki.|  
+|[CMFCRibbonPanel::SetData](#setdata)|Kojarzy dane zdefiniowane przez użytkownika za pomocą panelu wstążki.|  
+|[CMFCRibbonPanel::SetElementMenu](#setelementmenu)|Przypisuje element, który ma identyfikator polecenia menu podręczne|  
+|[CMFCRibbonPanel::SetElementRTC](#setelementrtc)|Dodaje element wstążki, określony przez informacji o klasie podana środowiska uruchomieniowego do panelu wstążki.|  
+|[CMFCRibbonPanel::SetElementRTCByID](#setelementrtcbyid)|Dodaje element wstążki, określony przez informacji o klasie podana środowiska uruchomieniowego do panelu wstążki.|  
+|[CMFCRibbonPanel::SetFocused](#setfocused)|Ustawia fokus do określonego elementu wstążki.|  
 |[CMFCRibbonPanel::SetJustifyColumns](#setjustifycolumns)|Włącza lub wyłącza uzasadnienie kolumny.|  
-|[CMFCRibbonPanel::SetKeys](#setkeys)|Ustawia skrót klawiaturowy, który wyświetla panel wstążki.|  
+|[CMFCRibbonPanel::SetKeys](#setkeys)|Ustawia skrót klawiaturowy, który powoduje wyświetlenie panelu wstążki.|  
 |[CMFCRibbonPanel::ShowPopup](#showpopup)||  
   
 ## <a name="remarks"></a>Uwagi  
- Panele wstążki to logiczne grupowanie powiązanych zadań utworzonych w ramach kategorii wstążki. Ponieważ rozmiar zmiany wstążki Układ panelu automatycznie dostosowuje do wyświetlenia tyle elementów, jak to możliwe.  
+ Panele wstążki to logiczne grupowanie powiązanych zadań tworzonych w ramach kategorii wstążki. Jak rozmiar zmiany wstążki Układ panelu automatycznie dostosowuje się do wyświetlania tyle elementów, jak to możliwe.  
   
- Możesz uzyskać wstążki panele, które znajduje się w kategorii wstążki, wywołując [CMFCRibbonCategory::GetPanel](../../mfc/reference/cmfcribboncategory-class.md#getpanel) metody.  
+ Wstążkę można uzyskać paneli, które znajduje się w kategorii wstążki, wywołując [CMFCRibbonCategory::GetPanel](../../mfc/reference/cmfcribboncategory-class.md#getpanel) metody.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano sposób konfigurowania `CMFCRibbonPanel` obiektu przy użyciu różnych metod w `CMFCRibbonPanel` klasy. W przykładzie przedstawiono sposób ustawienie skrót klawiaturowy, który wyświetla panel wstążki, Dopasuj elementy w panelu w pionie według kolumny i włączyć uzasadnienie kolumny. Następujący fragment kodu jest częścią [próbka MS Office 2007 Demo](../../visual-cpp-samples.md).  
+ Poniższy przykład pokazuje, jak skonfigurować `CMFCRibbonPanel` obiektu przy użyciu różnych metod w `CMFCRibbonPanel` klasy. W przykładzie pokazano, jak ustawić skrót klawiaturowy, który powoduje wyświetlenie panelu wstążki, Dopasuj elementy w panelu w pionie według kolumny i włączyć uzasadnienie kolumny. Ten fragment kodu jest częścią [próbka MS Office 2007 Demo](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#10](../../mfc/reference/codesnippet/cpp/cmfcribbonpanel-class_1.cpp)]  
   
@@ -228,14 +228,14 @@ class CMFCRibbonPanel : public CObject
  **Nagłówek:** afxRibbonPanel.h  
   
 ##  <a name="add"></a>  CMFCRibbonPanel::Add  
- Dołącza element określony wstążki do tablicy elementów wstążki, który jest zawarty w panelu wstążki.  
+ Dołącza element wstążki określonej tablicy elementów wstążki, która znajduje się w panelu wstążki.  
   
 ```  
 virtual void Add(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [w, out] *pElem*  
+ [out w] *pElem*  
  Wskaźnik do elementu wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
@@ -248,7 +248,7 @@ virtual void AddSeparator();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołaj tę metodę, aby dodać separator do panelu wstążki. Separator zostanie dodany obok elementem wstążki, która została dodana przez poprzednie wywołanie [CMFCRibbonPanel::Add](#add). Aby wstawić separator na określonej pozycji, należy wywołać [CMFCRibbonPanel::InsertSeparator](#insertseparator).  
+ Wywołaj tę metodę, aby dodać separator do panelu wstążki. Separator zostaną dodane obok elementu wstążki, który został dodany przez poprzednie wywołanie [CMFCRibbonPanel::Add](#add). Wstaw separator na określonej pozycji, należy wywołać [CMFCRibbonPanel::InsertSeparator](#insertseparator).  
   
 ##  <a name="addtoolbar"></a>  CMFCRibbonPanel::AddToolBar  
  Dodaje pasek narzędzi do panelu wstążki.  
@@ -263,22 +263,22 @@ UINT uiDisabledResID = 0);
   
 ### <a name="parameters"></a>Parametry  
  [in] *uiToolbarResID*  
- Określa identyfikator zasobu paska narzędzi do dodania.  
+ Określa identyfikator zasobu paska narzędzi, aby dodać.  
   
  [in] *uiColdResID*  
- Określa identyfikator zasobu obrazów zimnych pasku narzędzi.  
+ Określa identyfikator zasobu zimnych obrazy paska narzędzi.  
   
  [in] *uiHotResID*  
- Określa identyfikator zasobu paska narzędzi dynamicznej obrazów.  
+ Określa identyfikator zasobu wymiennymi obrazami paska narzędzi.  
   
  [in] *uiDisabledResID*  
- Określa identyfikator zasobu obrazów wyłączonego paska narzędzi.  
+ Określa identyfikator zasobu paska narzędzi obrazów wyłączone.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wywołaj tę metodę, aby dodać pasek narzędzi do panelu wstążki. Pasek narzędzi zostanie dodany obok elementu wstążki dodany przez poprzednie wywołanie [CMFCRibbonPanel::Add](#add).  
+ Wywołaj tę metodę, aby dodać pasek narzędzi do panelu wstążki. Pasek narzędzi zostanie dodany obok elementu wstążki dodane przez poprzednie wywołanie [CMFCRibbonPanel::Add](#add).  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji na temat paski narzędzi, gorących obrazów, zimnych obrazów i wyłączonych obrazów, zobacz [CMFCToolBar klasy](../../mfc/reference/cmfctoolbar-class.md).  
+ Aby uzyskać więcej informacji na temat paski narzędzi, wymiennymi obrazami, zimnych obrazów i obrazów wyłączone, zobacz [klasa CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md).  
   
 ##  <a name="cmfcribbonpanel"></a>  CMFCRibbonPanel::CMFCRibbonPanel  
  Tworzy i inicjuje [CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md) obiektu.  
@@ -296,10 +296,10 @@ CMFCRibbonPanel(CMFCRibbonGallery* pPaletteButton);
  Nazwa panelu wstążki.  
   
  [in] *hIcon*  
- Dojście do ikony przycisk domyślny panelu wstążki.  
+ Uchwyt ikony przycisk domyślny w panelu wstążki.  
   
  [in] *pPaletteButton*  
- Wskaźnik do galerii wstążki panelu wstążki.  
+ Wskaźnik do galerii wstążki, panelu wstążki.  
   
 ##  <a name="findbydata"></a>  CMFCRibbonPanel::FindByData  
  Pobiera element wstążki, który jest skojarzony z określonymi danymi.  
@@ -313,7 +313,7 @@ CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData) const;
  Dane skojarzone z elementem wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do elementu wstążki, jeśli metoda zakończyło się pomyślnie; w przeciwnym razie `NULL`.  
+ Wskaźnik do elementu wstążki, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość NULL.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -329,17 +329,17 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID) const;
  Identyfikator polecenia elementu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Element wstążki, który jest identyfikowany przez identyfikator określonego polecenia; w przeciwnym razie `NULL` Jeśli żaden element wstążki zostanie zidentyfikowana z identyfikatorem określonego polecenia.  
+ Element wstążki, który jest identyfikowany przez identyfikator określonego polecenia; w przeciwnym razie wartość NULL, jeśli żaden element wstążki jest identyfikowany za pomocą identyfikatora określonego polecenia.  
   
 ##  <a name="getcaptionheight"></a>  CMFCRibbonPanel::GetCaptionHeight  
- Pobiera wysokość podpis panelu wstążki.  
+ Pobiera wysokość podpis dla panelu wstążki.  
   
 ```  
 int GetCaptionHeight() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wysokość w pikselach podpis panelu wstążki.  
+ Wysokość w pikselach, podpis dla panelu wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -354,17 +354,17 @@ int GetCount() const;
  Liczba elementów wstążki, które są zawarte w panelu wstążki.  
   
 ##  <a name="getdata"></a>  CMFCRibbonPanel::GetData  
- Zwraca dane zdefiniowane przez użytkownika skojarzonych z panelu.  
+ Zwraca dane zdefiniowane przez użytkownika, skojarzone z panelu.  
   
 ```  
 DWORD_PTR GetData() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Dane zdefiniowane przez użytkownika skojarzonych z panelu.  
+ Dane użytkownika skojarzone z panelu.  
   
 ##  <a name="getdefaultbutton"></a>  CMFCRibbonPanel::GetDefaultButton  
- Pobiera przycisk domyślny panelu wstążki.  
+ Pobiera przycisk domyślny w panelu wstążki.  
   
 ```  
 CMFCRibbonButton& GetDefaultButton();
@@ -374,7 +374,7 @@ CMFCRibbonButton& GetDefaultButton();
  Przycisk domyślny panelu wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
- Przycisk domyślny jest wyświetlane, gdy panelu wstążki ma za mało miejsca, aby wyświetlić jego elementów wstążki.  
+ Przycisk domyślny jest wyświetlane, gdy panelu wstążki ma za mało miejsca, aby wyświetlić jego elementy wstążki.  
   
 ##  <a name="getdroppeddown"></a>  CMFCRibbonPanel::GetDroppedDown  
  Pobiera wskaźnik do elementu wstążki, jeśli jego menu podręczne jest rozwijana.  
@@ -384,13 +384,13 @@ CMFCRibbonBaseElement* GetDroppedDown() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do elementu wstążki, który ma jego menu podręczne rozwinięto; w przeciwnym razie `NULL` Jeśli żaden element wstążki zawiera menu podręczne rozwinięto.  
+ Wskaźnik do elementu wstążki, który ma jego menu podręcznego rozwinął; w przeciwnym razie wartość NULL, jeśli żaden element wstążki zawiera menu podręczne rozwinął.  
   
 ### <a name="remarks"></a>Uwagi  
- Sprawdzane są tylko elementów wstążki, które są zawarte w panelu wstążki.  
+ Sprawdzane są tylko te elementy wstążki, które są zawarte w panelu wstążki.  
   
 ##  <a name="getelement"></a>  CMFCRibbonPanel::GetElement  
- Zwraca element wstążki znajdujący się w określonym indeksie.  
+ Zwraca element wstążki, znajdujący się w określonym indeksie.  
   
 ```  
 CMFCRibbonBaseElement* GetElement(int nIndex) const;  
@@ -401,10 +401,10 @@ CMFCRibbonBaseElement* GetElement(int nIndex) const;
  Określa liczony od zera indeks elementu do pobrania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Nieprawidłowy wskaźnik do elementu podstawowego wstążki znajdujący się w pozycji *nIndex* w panelu Wstążki lub `NULL` Jeśli żaden element w określonym indeksie.  
+ Nieprawidłowy wskaźnik do elementu wstążki podstawowej znajdujący się w pozycji *nIndex* w panelu Wstążki lub wartość NULL, jeśli nie ma żadnego elementu pod określonym indeksem.  
   
 ##  <a name="getelements"></a>  CMFCRibbonPanel::GetElements  
- Pobiera wszystkich elementów wstążki, które są zawarte w panelu wstążki.  
+ Pobiera wszystkie elementy wstążki, które są zawarte w panelu wstążki.  
   
 ```  
 void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
@@ -412,12 +412,12 @@ void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arEleme
   
 ### <a name="parameters"></a>Parametry  
  [out] *arElements*  
- Tablica umożliwia wypełnienie wszystkich elementów wstążki, które znajdują się w panelu wstążki.  
+ Tablica umożliwia wypełnienie wszystkich elementów wstążki, które są zawarte w panelu wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="getelementsbyid"></a>  CMFCRibbonPanel::GetElementsByID  
- Dodaje elementów wstążki, które mają identyfikator określonego polecenia do określonej tablicy.  
+ Dodaje elementy wstążki, które mają polecenie o określonym identyfikatorze do określonej tablicy.  
   
 ```  
 void GetElementsByID(
@@ -433,22 +433,22 @@ CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
  Tablica elementów wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
- Sprawdzane są tylko elementów wstążki, które są zawarte w panelu wstążki.  
+ Sprawdzane są tylko te elementy wstążki, które są zawarte w panelu wstążki.  
   
 ##  <a name="gethighlighted"></a>  CMFCRibbonPanel::GetHighlighted  
- Pobiera element wstążki, do którego zostanie wyróżniona w panelu wstążki.  
+ Pobiera element wstążki, który jest wyróżniona na panelu wstążki.  
   
 ```  
 CMFCRibbonBaseElement* GetHighlighted() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do elementu wstążki, które są wyróżnione na panelu wstążki.  
+ Wskaźnik do elementu wstążki, który jest wyróżniona na panelu wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="getindex"></a>  CMFCRibbonPanel::GetIndex  
- Pobiera liczony od zera indeks elementu określony wstążki z tablicy elementów wstążki, które są zawarte w panelu wstążki.  
+ Pobiera liczony od zera indeks elementu określonego wstążki z tablicy elementów wstążki, które są zawarte w panelu wstążki.  
   
 ```  
 virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;  
@@ -459,12 +459,12 @@ virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;
  Wskaźnik do elementu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczony od zera indeks elementu określony wstążki, jeśli metoda zakończyło się pomyślnie; w przeciwnym razie wartość-1.  
+ Liczony od zera indeks elementu określonego wstążki, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość-1.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="getitemidslist"></a>  CMFCRibbonPanel::GetItemIDsList  
- Pobiera identyfikatory poleceń dla wszystkich elementów wstążki w panelu wstążki.  
+ Pobiera identyfikatory poleceń dla wszystkich elementów wstążki, panelu wstążki.  
   
 ```  
 void GetItemIDsList(CList<UINT, UINT>& lstItems) const;  
@@ -500,14 +500,14 @@ CMFCRibbonBaseElement* GetParentButton() const;
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="getparentcategory"></a>  CMFCRibbonPanel::GetParentCategory  
- Zwraca nadrzędny kategorii Panelu wstążki.  
+ Zwraca kategorii nadrzędnej, panelu wstążki.  
   
 ```  
 CMFCRibbonCategory* GetParentCategory() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do kategorię wstążki, która zawiera pasku wstążki.  
+ Wskaźnik do kategorii wstążki, która zawiera tego panelu wstążki.  
   
 ##  <a name="getparentmenubar"></a>  CMFCRibbonPanel::GetParentMenuBar  
 
@@ -521,7 +521,7 @@ CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="getpreferedmenulocation"></a>  CMFCRibbonPanel::GetPreferedMenuLocation  
- Pobiera prostokątny obszar wyświetlania preferowanych menu wyskakującego panelu wstążki.  
+ Pobiera prostokąt preferowany sposób wyświetlania wyskakujących menu panelu wstążki.  
   
 ```  
 virtual BOOL GetPreferedMenuLocation(CRect& rect);
@@ -532,20 +532,20 @@ virtual BOOL GetPreferedMenuLocation(CRect& rect);
  Ten parametr nie jest używany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zawsze zwraca `FALSE`.  
+ Zawsze zwraca wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda zawsze zwraca `FALSE`. Zastępuje tę metodę można pobrać prostokątny obszar wyświetlania preferowanych menu wyskakującego panelu wstążki.  
+ Ta metoda zawsze zwraca wartość FALSE. Zastępuje tę metodę można pobrać prostokąt preferowany sposób wyświetlania wyskakujących menu panelu wstążki.  
   
 ##  <a name="getpressed"></a>  CMFCRibbonPanel::GetPressed  
- Pobiera wskaźnik do elementu wstążki w panelu wstążki, gdy użytkownik naciśnie obecnie go.  
+ Pobiera wskaźnik do elementu wstążki, panelu wstążki, gdy użytkownik naciśnie obecnie go.  
   
 ```  
 CMFCRibbonBaseElement* GetPressed() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do elementu wstążki, gdy użytkownik naciśnie obecnie w przeciwnym razie `NULL`.  
+ Wskaźnik do elementu wstążki, gdy użytkownik naciśnie obecnie w przeciwnym razie wartość NULL.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -573,12 +573,12 @@ BOOL HasElement(const CMFCRibbonBaseElement* pElem) const;
  Wskaźnik do elementu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli panel wstążki zawiera element określony wstążki; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli panel wstążki zawiera element wstążki określonego; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="highlight"></a>  CMFCRibbonPanel::Highlight  
- Ustawia kolor wyróżnienia panelu wybranego Wstążki i dla elementu wstążki, określony przez punkt.  
+ Ustawia kolor wyróżnienia panelu wstążki wybranego i określony przez punkt element wstążki.  
   
 ```  
 virtual void Highlight(
@@ -588,7 +588,7 @@ CPoint point);
   
 ### <a name="parameters"></a>Parametry  
  [in] *bHighlight*  
- `TRUE` Aby wyróżnić panelu wstążki; `FALSE` do unhighlight panelu wstążki.  
+ Wartość TRUE, aby wyróżnić panelu wstążki; Wartość FALSE unhighlight panelu wstążki.  
   
  [in] *punktu*  
  Współrzędne x i y wskaźnika względem lewego górnego rogu okna.  
@@ -609,13 +609,13 @@ BOOL bCheckPanelCaption = FALSE);
  Współrzędne x i y wskaźnika względem lewego górnego rogu okna.  
   
  [in] *bCheckPanelCaption*  
- `TRUE` Aby przetestować podpis panelu wstążki; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, aby przetestować podpis panelu wstążki; w przeciwnym razie wartość FALSE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do elementu wstążki, jeśli określony punkt znajduje się w nim; w przeciwnym razie `NULL`.  
+ Wskaźnik do elementu wstążki, jeśli określony punkt znajduje się w nim; w przeciwnym razie wartość NULL.  
   
 ### <a name="remarks"></a>Uwagi  
- Sprawdzane są tylko elementów wstążki, które są zawarte w panelu wstążki.  
+ Sprawdzane są tylko te elementy wstążki, które są zawarte w panelu wstążki.  
   
 ##  <a name="hittestex"></a>  CMFCRibbonPanel::HitTestEx  
  Pobiera liczony od zera indeks elementu wstążki, który ma określony punkt znajduje się w nim.  
@@ -632,10 +632,10 @@ virtual int HitTestEx(CPoint point) const;
  Liczony od zera indeks elementu wstążki, który ma określony punkt znajduje się w nim; w przeciwnym razie wartość-1.  
   
 ### <a name="remarks"></a>Uwagi  
- Sprawdzane są tylko elementów wstążki, które są zawarte w panelu wstążki.  
+ Sprawdzane są tylko te elementy wstążki, które są zawarte w panelu wstążki.  
   
 ##  <a name="insert"></a>  CMFCRibbonPanel::Insert  
- Wstawia element wstążki określony w określonej pozycji w tablicy elementów wstążki zawarte w panelu wstążki.  
+ Wstawia element wstążki określony w określonej pozycji w tablicy elementów wstążki znajdujące się w panelu wstążki.  
   
 ```  
 virtual BOOL Insert(
@@ -644,20 +644,20 @@ int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [w, out] *pElem*  
+ [out w] *pElem*  
  Wskaźnik do elementu wstążki.  
   
  [in] *nIndex*  
- Liczony od zera wartość, z zakresu od -1 do liczby elementów wstążki, które są zawarte w tablicy.  
+ Liczony od zera wartość zakresu od -1 do liczby elementów wstążki, które są zawarte w tablicy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli został pomyślnie; wstawić element wstążki w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli pomyślnie; dodano element wstążki w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli wartość *nIndex* wynosi -1, lub jeśli *nIndex* jest równa liczbie elementów wstążki w tablicy, element określony wstążki zostanie dodany do końca tablicy. Jeśli wartość *nIndex* jest poza zakresem, metoda zakończy się niepowodzeniem.  
+ Jeśli wartość *nIndex* wynosi -1, lub jeśli *nIndex* jest równa liczbie elementów wstążki w tablicy, wstążki określony element zostanie dodany do końca tablicy. Jeśli wartość *nIndex* jest poza zakresem, metoda nie powiedzie się.  
   
 ##  <a name="insertseparator"></a>  CMFCRibbonPanel::InsertSeparator  
- Wstawia separator w określonej pozycji.  
+ Wstawia separatorem w danej pozycji.  
   
 ```  
 virtual BOOL InsertSeparator(int nIndex);
@@ -665,23 +665,23 @@ virtual BOOL InsertSeparator(int nIndex);
   
 ### <a name="parameters"></a>Parametry  
  [in] *nIndex*  
- Określa liczony od zera indeks, w którym zostanie wstawiony separatora.  
+ Określa liczony od zera indeks polegający na wstawieniu separatora.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli separator został wstawiony pomyślnie; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli pomyślnie; włożono separatora w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie tej metody, aby wstawić separator na pozycji określonej przez *nIndex*. Aby wstawić separatora obok ostatnio dodanego elementu wstążki, należy wywołać [CMFCRibbonPanel::AddSeparator](#addseparator).  
+ Wywołaj tę metodę, aby wstawić separator w miejscu określonym przez *nIndex*. Wstaw separator obok ostatnio dodanych elementów wstążki, należy wywołać [CMFCRibbonPanel::AddSeparator](#addseparator).  
   
 ##  <a name="iscentercolumnvert"></a>  CMFCRibbonPanel::IsCenterColumnVert  
- Wskazuje, czy pionowy położenia elementów wstążki jest wyśrodkowywana w ich prostokątny obszar wyświetlania.  
+ Wskazuje, czy współrzędne elementów wstążki jest wyśrodkowywana w prostokącie ich wyświetlania.  
   
 ```  
 BOOL IsCenterColumnVert() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli pionową umieszcza z elementów wstążki jest wyśrodkowywana w ich prostokątny obszar wyświetlania; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli współrzędne elementów wstążki jest wyśrodkowywana w ich prostokątny obszar wyświetlania; w przeciwnym razie wartość FALSE.  
   
 ##  <a name="iscollapsed"></a>  CMFCRibbonPanel::IsCollapsed  
  Wskazuje, czy rozmiar wyświetlania panelu wstążki jest zminimalizowany w kierunku poziomym.  
@@ -691,48 +691,48 @@ BOOL IsCollapsed() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli rozmiar wyświetlania panelu wstążki jest zminimalizowany w kierunku poziomym; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli rozmiar wyświetlania panelu wstążki jest zminimalizowany w kierunku poziomym; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Po zwinięciu panelu wstążki, wyświetla jedynie jego przycisk domyślny, jego nazwa i strzałkę listy rozwijanej.  
+ Jeśli panelu wstążki jest zwinięte, wyświetla jego przycisk domyślny, jego nazwa i strzałki listy rozwijanej.  
   
 ##  <a name="ishighlighted"></a>  CMFCRibbonPanel::IsHighlighted  
- Wskazuje, czy zostanie wyróżniona Wyświetlanie panelu wstążki.  
+ Wskazuje, czy jest wyróżniona Wyświetlanie panelu wstążki.  
   
 ```  
 BOOL IsHighlighted() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli wyświetlanie Panelu wstążki jest wyróżniony; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli Wyświetlanie panelu wstążki jest wyróżniony; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Wyświetlanie panelu wstążki zostanie wyróżniona, gdy wskaźnik myszy jest nad nim.  
+ Wyświetlanie panelu wstążki jest wyróżniona, gdy wskaźnik znajduje się nad nią.  
   
 ##  <a name="isjustifycolumns"></a>  CMFCRibbonPanel::IsJustifyColumns  
- Wskazuje, czy wymiary wyświetlania elementów wstążki, które znajdują się w tej samej kolumny w panelu wstążki są ustawione na tej samej szerokości.  
+ Wskazuje, czy wymiarów wyświetlania elementów wstążki, które znajdują się w tej samej kolumny w panelu wstążki są ustawione na taką samą szerokość.  
   
 ```  
 BOOL IsJustifyColumns() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli ustawiono wymiarów wyświetlania elementów wstążki, które znajdują się w tej samej kolumny w panelu wstążki do tej samej szerokości; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli mają taką samą szerokość; wymiarów wyświetlania elementów wstążki, które znajdują się w tej samej kolumny w panelu wstążki w przeciwnym razie wartość FALSE.  
   
 ##  <a name="ismainpanel"></a>  CMFCRibbonPanel::IsMainPanel  
- Wskazuje, czy panel wstążki panelu głównego wstążki.  
+ Wskazuje, czy panel wstążki jest panelu głównego wstążki.  
   
 ```  
 virtual BOOL IsMainPanel() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zawsze zwraca `FALSE`.  
+ Zawsze zwraca wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda zawsze zwraca `FALSE`. Zastępuje tę metodę, aby wskazać, czy panel wstążki panelu głównego wstążki.  
+ Ta metoda zawsze zwraca wartość FALSE. Zastępuje tę metodę, aby wskazać, czy panelu wstążki panelu wstążki głównego.  
   
- Panel główny wstążki jest wyświetlane, gdy użytkownik wybierze przycisk aplikacji.  
+ Na panelu głównego wstążki jest wyświetlane, gdy użytkownik wybierze przycisk aplikacji.  
   
 ##  <a name="ismenumode"></a>  CMFCRibbonPanel::IsMenuMode  
 
@@ -760,7 +760,7 @@ virtual BOOL OnKey(UINT nChar);
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="recalcwidths"></a>  CMFCRibbonPanel::RecalcWidths  
- Ponownie oblicza szerokość każdej konfiguracji układu wyświetlania panelu wstążki.  
+ Ponownie oblicza szerokość każdej konfiguracji układu ekranu panelu wstążki.  
   
 ```  
 virtual void RecalcWidths(
@@ -770,16 +770,16 @@ int nHeight);
   
 ### <a name="parameters"></a>Parametry  
  [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia panelu wstążki.  
+ Wskaźnik do kontekstu urządzenia do panelu wstążki.  
   
  [in] *nHeight*  
  Wysokość panelu wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
- Panel wstążki zmienia jego konfigurację układu jako szerokość dostępne zmiany.  
+ Panel wstążki umożliwia zmianę konfiguracji jego układ zgodnie ze zmianami szerokość dostępne.  
   
 ##  <a name="remove"></a>  CMFCRibbonPanel::Remove  
- Usuwa i opcjonalnie element znajduje się w określonym indeksie.  
+ Usuwa i opcjonalnie usuwa element znajdujący się pod określonym indeksem.  
   
 ```  
 BOOL Remove(
@@ -792,16 +792,16 @@ BOOL bDelete = TRUE);
  Określa liczony od zera indeks elementu, który zostanie usunięty z panelu wstążki.  
   
  [in] *bUsuń*  
- `TRUE` Aby usunąć element usunięte; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, aby usunąć element usunięte; w przeciwnym razie wartość FALSE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli element został usunięty i usunąć (Jeśli *bUsuń* jest `TRUE`); `FALSE` Jeśli element nie został usunięty lub jeśli nie ma elementu wstążki znajdujący się w *nIndex*.  
+ Wartość TRUE, jeśli element został usunięty i usunąć (Jeśli *bUsuń* ma wartość TRUE); Wartość FALSE, jeśli element nie został usunięty lub jeśli jest nie elementu ribbon znajdującym się w *nIndex*.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołaj tę metodę, aby usunąć element z panelu wstążki.  
   
 ##  <a name="removeall"></a>  CMFCRibbonPanel::RemoveAll  
- Usuwa wszystkie elementy wstążki z panelu wstążki.  
+ Usuwa wszystkie elementy wstążki, panelu wstążki.  
   
 ```  
 void RemoveAll();
@@ -811,7 +811,7 @@ void RemoveAll();
  Wszystkie elementy wstążki są usuwane z panelu Wstążki i niszczone.  
   
 ##  <a name="replace"></a>  CMFCRibbonPanel::Replace  
- Zastępuje jeden element z inną na podstawie ich wartości indeksu.  
+ Zastępuje jeden element drugiego w oparciu o ich wartość indeksu.  
   
 ```  
 BOOL Replace(
@@ -824,13 +824,13 @@ CMFCRibbonBaseElement* pElem);
  Określa liczony od zera indeks elementu do zamiany.  
   
  [in] [out] *pElem*  
- Nieprawidłowy wskaźnik do elementu, który zastępuje oryginalnego elementu.  
+ Nieprawidłowy wskaźnik do elementu, który zastępuje oryginalny element.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli w oryginalnym elemencie wstążki została zastąpiona pomyślnie nowego elementu wstążki; `FALSE` Jeśli elementem wstążki nie został zastąpiony lub Brak elementów w określonym indeksie.  
+ Wartość TRUE, jeśli w oryginalnym elemencie wstążki został zastąpiony pomyślnie nowego elementu wstążki; Wartość FALSE, jeśli nie zmieniono element wstążki lub jeśli nie ma żadnego elementu pod określonym indeksem.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby zastąpić element wstążki za pomocą Identyfikatora polecenia, należy wywołać [CMFCRibbonPanel::ReplaceByID](#replacebyid).  
+ Aby zastąpić element wstążki według Identyfikatora polecenia, należy wywołać [CMFCRibbonPanel::ReplaceByID](#replacebyid).  
   
 ##  <a name="replacebyid"></a>  CMFCRibbonPanel::ReplaceByID  
  Zamienia jeden element drugiego w oparciu o identyfikator określonego polecenia.  
@@ -843,16 +843,16 @@ CMFCRibbonBaseElement* pElem);
   
 ### <a name="parameters"></a>Parametry  
  [in] *uiCmdID*  
- Określa identyfikator polecenia elementu, aby zastąpić.  
+ Określa polecenie identyfikator elementu w celu zastąpienia.  
   
  [in] [out] *pElem*  
  Nieprawidłowy wskaźnik do elementu, który spowoduje zastąpienie oryginalnego elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli w oryginalnym elemencie wstążki została zastąpiona pomyślnie nowego elementu wstążki; `FALSE` czy elementem wstążki nie został zastąpiony, czy istnieje żaden element o identyfikatorze określonego polecenia.  
+ Wartość TRUE, jeśli w oryginalnym elemencie wstążki został zastąpiony pomyślnie nowego elementu wstążki; Wartość FALSE, jeśli nie zmieniono element wstążki lub jeśli żaden element z określonym poleceniem identyfikator faktycznie istnieje.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby zastąpić element wstążki, na podstawie pozycji, należy wywołać [CMFCRibbonPanel::Replace](#replace).  
+ Aby zastąpić element wstążki, na podstawie położenia, należy wywołać [CMFCRibbonPanel::Replace](#replace).  
   
 ##  <a name="setcentercolumnvert"></a>  CMFCRibbonPanel::SetCenterColumnVert  
  Włącza lub wyłącza centrowanie współrzędne elementów wstążki w prostokącie ich wyświetlania.  
@@ -863,12 +863,12 @@ void SetCenterColumnVert(BOOL bSet = TRUE);
   
 ### <a name="parameters"></a>Parametry  
  [in] *bUstawienie*  
- `TRUE` Aby wyśrodkować współrzędne elementów wstążki w ich prostokątny obszar wyświetlania; `FALSE` Aby wyłączyć tę funkcję.  
+ Wartość TRUE, aby wyśrodkować współrzędne elementów wstążki w prostokącie ich wyświetlania; Wartość FALSE, aby wyłączyć tę funkcję.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="setdata"></a>  CMFCRibbonPanel::SetData  
- Skojarzone dane zdefiniowane przez użytkownika za pomocą panelu wstążki.  
+ Kojarzy dane zdefiniowane przez użytkownika za pomocą panelu wstążki.  
   
 ```  
 void SetData(DWORD_PTR dwData);
@@ -882,7 +882,7 @@ void SetData(DWORD_PTR dwData);
  Wywołaj tę metodę, aby skojarzyć danych zdefiniowane przez użytkownika za pomocą panelu wstążki.  
   
 ##  <a name="setelementmenu"></a>  CMFCRibbonPanel::SetElementMenu  
- Przypisuje menu podręcznego do elementu, który ma identyfikator danego polecenia.  
+ Przypisuje element, który ma identyfikator polecenia menu podręczne  
   
 ```  
 BOOL SetElementMenu(
@@ -901,28 +901,28 @@ BOOL bRightAlign = FALSE);
   
 ### <a name="parameters"></a>Parametry  
  [in] *uiCmdID*  
- Określa identyfikator polecenia elementu wstążki, gdy menu zostanie dodany.  
+ Określa identyfikator polecenia elementu wstążki, gdy zostanie dodany menu.  
   
  [in] *hMenu*  
- Określa dojście do menu systemu Windows, aby dodać Panel wstążki.  
+ Określa dojścia do menu Windows, aby dodać do panelu wstążki.  
   
  [in] *bIsDefautCommand*  
- `TRUE` Aby określić, czy mają zostać wykonane polecenie skojarzone z elementem wstążki, po kliknięciu elementu wstążki. W takim przypadku menu jest otwarty tylko, gdy użytkownik kliknie strzałkę obok elementu wstążki. `FALSE` Aby określić, że polecenie skojarzone z elementem wstążki nie powinien być wykonywany po kliknięciu elementu wstążki. W takim przypadku niezależnie od tego, gdy użytkownik kliknie w elemencie zostanie wyświetlone menu podręcznego.  
+ Wartość TRUE, aby określić, czy mają zostać wykonane polecenie skojarzone z elementem wstążki, po kliknięciu elementu wstążki. W tym przypadku menu zostanie otwarty tylko, gdy użytkownik kliknie strzałkę obok elementu wstążki. Wartość FALSE, aby określić, że polecenie skojarzone z elementem wstążki nie powinien być wykonywany po kliknięciu elementu wstążki. W tym przypadku niezależnie od tego, gdy użytkownik kliknie element zostanie wyświetlone menu podręcznego.  
   
  [in] *bRightAlign*  
- `TRUE` Aby określić, czy menu podręczne jest wyrównany do prawej; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, aby określić, że menu podręczne jest wyrównany do prawej; w przeciwnym razie wartość FALSE.  
   
  [in] *uiMenuResID*  
- Określa identyfikator zasobu menu Dodaj do panelu wstążki.  
+ Określa identyfikator zasobu menu, aby dodać do panelu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli menu zostanie przypisana do elementu wstążki; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli menu przypisany do elementu wstążki; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie tej metody, aby przypisać menu podręcznego do elementu wstążki, który ma identyfikator danego polecenia.  
+ Wywołanie tej metody, aby przypisać menu podręczne element wstążki, który ma identyfikator danego polecenia.  
   
 ##  <a name="setelementrtc"></a>  CMFCRibbonPanel::SetElementRTC  
- Dodaje element wstążki, określonym przez informacji o klasie podana środowiska uruchomieniowego do panelu wstążki.  
+ Dodaje element wstążki, który jest określony przez informacji o klasie podana środowiska uruchomieniowego do panelu wstążki.  
   
 ```  
 CMFCRibbonBaseElement* SetElementRTC(
@@ -938,10 +938,10 @@ CRuntimeClass* pRTC);
  Wskaźnik do informacji o klasie czasu wykonywania dla elementu wstążki, który jest dodawany do panelu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Element wstążki, który został utworzony przy użyciu informacji o klasie wykonawcze.  
+ Element wstążki, który został utworzony przy użyciu informacji o klasie określonego środowiska uruchomieniowego.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli chcesz dodać elementu niestandardowego (na przykład przycisk koloru) do panelu wstążki, należy określić informacje o klasie czasu wykonywania elementu niestandardowego. Wstążka przechowuje te informacje, tworzy niestandardowy element i zastępuje istniejący element, który znajduje się (określone przez) identyfikator określonego polecenia. Wstążka zwraca wskaźnik do nowo utworzonego elementu.  
+ Jeśli chcesz dodać element niestandardowy (na przykład przycisk koloru) do panelu wstążki, należy określić informacje o klasie czasu wykonywania element niestandardowy. Wstążka przechowuje te informacje, tworzy niestandardowy element i zastępuje istniejący element, który znajduje się (identyfikowanych na podstawie) identyfikator określonego polecenia. Wstążka następnie zwraca wskaźnik do nowo utworzonego elementu.  
   
 ##  <a name="setelementrtcbyid"></a>  CMFCRibbonPanel::SetElementRTCByID  
  Dodaje element wstążki, który jest określony przez informacji o klasie podana środowiska uruchomieniowego do panelu wstążki.  
@@ -957,16 +957,16 @@ CRuntimeClass* pRTC);
  Określa identyfikator polecenia elementu wstążki do dodania.  
   
  [in] [out] *pRTC*  
- Wskaźnik do informacji o klasie czasu wykonywania skojarzony z elementem wstążki, który jest dodawany do panelu wstążki.  
+ Wskaźnik do informacji o klasie czasu wykonywania, które zostały skojarzone z elementem wstążki, który jest dodawany do panelu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Element wstążki, który został utworzony przy użyciu informacji o klasie wykonawcze.  
+ Element wstążki, który został utworzony przy użyciu informacji o klasie określonego środowiska uruchomieniowego.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli chcesz dodać elementu niestandardowego (na przykład przycisk koloru) do panelu wstążki, należy określić informacje o klasie czasu wykonywania elementu niestandardowego. Wstążka przechowuje te informacje, tworzy niestandardowy element i zastępuje istniejący element znajduje się według identyfikatora określonego polecenia. Następnie zwraca wskaźnik do nowo utworzonego elementu.  
+ Jeśli chcesz dodać element niestandardowy (na przykład przycisk koloru) do panelu wstążki, należy określić informacje o klasie czasu wykonywania element niestandardowy. Wstążka przechowuje te informacje, tworzy niestandardowy element i zamienia istniejący element znajduje się przez identyfikator określonego polecenia. Następnie zwraca wskaźnik do nowo utworzonego elementu.  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykład przedstawia użycie `SetElementRTCByID` metody:  
+ Poniższy przykład pokazuje, jak używać `SetElementRTCByID` metody:  
   
 ```  
  
@@ -992,7 +992,7 @@ pColorButton->EnableAutomaticButton(_T("Automatic"),
 ```  
   
 ##  <a name="setjustifycolumns"></a>  CMFCRibbonPanel::SetJustifyColumns  
- Włącza lub wyłącza ustawienie szerokości elementów wstążki w tej samej kolumnie.  
+ Włącza lub wyłącza dopasowywanie szerokości elementów wstążki w tej samej kolumnie.  
   
 ```  
 void SetJustifyColumns(BOOL bSet = TRUE);
@@ -1000,13 +1000,13 @@ void SetJustifyColumns(BOOL bSet = TRUE);
   
 ### <a name="parameters"></a>Parametry  
  [in] *bUstawienie*  
- `TRUE` Aby dostosować szerokość elementów wstążki w tej samej kolumnie do szerokości największy element wstążki w kolumnach. `FALSE` można wyłączyć tego korekta szerokości.  
+ Wartość TRUE, aby dopasować szerokości elementów wstążki w tej samej kolumnie do szerokości największy element wstążki w kolumnach. Wartość FALSE, aby wyłączyć to dostosowanie szerokości.  
   
 ### <a name="remarks"></a>Uwagi  
- Po włączeniu tej funkcji w panelu wstążki szerokość elementów wstążki w tej samej kolumnie zostaną odpowiednio szerokość największy element wstążki w tej samej kolumnie.  
+ Gdy ta funkcja jest włączona w panelu wstążki, szerokość, elementy wstążki w tej samej kolumnie są dostosowywane do szerokości największego elementu wstążki w tej samej kolumnie.  
   
 ##  <a name="setkeys"></a>  CMFCRibbonPanel::SetKeys  
- Ustawia właściwości keytip jako przycisk domyślny panelu wstążki.  
+ Określa poradę dotyczącą klawiszy domyślnego przycisku panelu wstążki.  
   
 ```  
 void SetKeys(LPCTSTR lpszKeys);
@@ -1014,13 +1014,13 @@ void SetKeys(LPCTSTR lpszKeys);
   
 ### <a name="parameters"></a>Parametry  
  [in] *lpszKeys*  
- Właściwości keytip jako przycisk domyślny panelu wstążki.  
+ Poradę dotyczącą klawiszy domyślnego przycisku panelu wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
- Przycisk domyślny jest wyświetlane, gdy panelu wstążki ma za mało miejsca, aby wyświetlić jego elementów wstążki.  
+ Przycisk domyślny jest wyświetlane, gdy panelu wstążki ma za mało miejsca, aby wyświetlić jego elementy wstążki.  
   
 ##  <a name="showpopup"></a>  CMFCRibbonPanel::ShowPopup  
- Tworzy i wyświetla menu podręczne panelu wstążki.  
+ Tworzy i wyświetla menu podręczne dla panelu wstążki.  
   
 ```  
 CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
@@ -1028,16 +1028,16 @@ CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
   
 ### <a name="parameters"></a>Parametry  
  [in] *pButton*  
- Wskaźnik do przycisk domyślny panelu wstążki.  
+ Wskaźnik do przycisk domyślny w panelu wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do menu podręczne panelu wstążki, jeśli metoda zakończyło się pomyślnie; w przeciwnym razie `NULL`.  
+ Wskaźnik do menu podręczne dla panelu wstążki, jeśli metoda zakończyła się pomyślnie; w przeciwnym razie wartość NULL.  
   
 ### <a name="remarks"></a>Uwagi  
- Menu podręczne panelu wstążki jest dostępna tylko po zwinięciu Wyświetlanie panelu wstążki.  
+ Menu podręczne dla panelu wstążki jest dostępna tylko w przypadku, gdy Wyświetlanie panelu wstążki jest zwinięty.  
   
 ##  <a name="setfocused"></a>  CMFCRibbonPanel::SetFocused  
- Ustawia okno określonego elementu wstążki.  
+ Ustawia fokus do określonego elementu wstążki.  
   
 ```  
 void SetFocused(CMFCRibbonBaseElement* pNewFocus);
@@ -1045,12 +1045,12 @@ void SetFocused(CMFCRibbonBaseElement* pNewFocus);
   
 ### <a name="parameters"></a>Parametry  
  *pNewFocus*  
- Wskaźnik do elementu wstążki, który otrzymuje fokus.  
+ Wskaźnik do elementu wstążki, który zostanie ustawiony fokus.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="makegalleryitemvisible"></a>  CMFCRibbonPanel::MakeGalleryItemVisible  
- Przewija galerii, aby wyświetlić określony element wstążki.  
+ Przewija galerię, aby uwidocznić określony element wstążki.  
   
 ```  
 void MakeGalleryItemVisible(CMFCRibbonBaseElement* pItem);
@@ -1063,14 +1063,14 @@ void MakeGalleryItemVisible(CMFCRibbonBaseElement* pItem);
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="iswindows7look"></a>  CMFCRibbonPanel::IsWindows7Look  
- Wskazuje, czy na Wstążce nadrzędny ma wyglądać (przycisk małych aplikacji prostokątne) w systemie Windows 7.  
+ Wskazuje, czy wstążki nadrzędny ma Windows 7, Szukaj (mała aplikacja prostokątny przycisk).  
   
 ```  
 BOOL IsWindows7Look() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli na Wstążce nadrzędny ma wyglądać; w systemie Windows 7 w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli Wstążka nadrzędnego Windows 7, Szukaj; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -1085,12 +1085,12 @@ CMFCRibbonBaseElement*>& arElements);
   
 ### <a name="parameters"></a>Parametry  
  *arElements*  
- Gdy funkcja zwraca wartość, ten parametr zawiera tablicę widoczne elementy.  
+ Gdy funkcja zwróci wartość, ten parametr zawiera tablicę widoczne elementy.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="getgalleryrect"></a>  CMFCRibbonPanel::GetGalleryRect  
- Zwraca prostokąt ograniczający elementu galerii.  
+ Zwraca prostokąt otaczający elementu galerii.  
   
 ```  
 CRect GetGalleryRect();
@@ -1109,13 +1109,13 @@ CMFCRibbonBaseElement* GetFocused() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do elementu ukierunkowanych lub `NULL`.  
+ Wskaźnik do wąsko zdefiniowany element lub wartość NULL.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [Klasy](../../mfc/reference/mfc-classes.md)   
- [CObject — klasa](../../mfc/reference/cobject-class.md)   
+ [Klasa CObject](../../mfc/reference/cobject-class.md)   
  [Klasa CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md)   
  [Klasa CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)

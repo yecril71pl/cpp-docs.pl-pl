@@ -1,5 +1,5 @@
 ---
-title: Cpropertypage — klasa | Dokumentacja firmy Microsoft
+title: Klasa CPropertyPage | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -50,15 +50,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: beeef0d8ff1a89a003987f9cd79172ad2ff86d75
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 4c6a5b0e031aebb658b4da20d3aa9a6dd47f8c2a
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079632"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851564"
 ---
 # <a name="cpropertypage-class"></a>Cpropertypage — klasa
-Reprezentuje poszczególnych stron arkusza właściwości, znanej także jako okno dialogowe kartę.  
+Przedstawia pojedyncze strony arkusza właściwości, znane również jako zakładki okna dialogowego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -78,34 +78,34 @@ class CPropertyPage : public CDialog
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CPropertyPage::CancelToClose](#canceltoclose)|Zmienia przycisk OK, aby odczytać Zamknij i wyłącza przycisk Anuluj, po zmianie nieodwracalny na stronie modalny arkusz właściwości.|  
-|[CPropertyPage::Construct](#construct)|Konstruuje `CPropertyPage` obiektu. Użyj `Construct` Jeśli chcesz określić parametry w czasie wykonywania, lub jeśli używasz tablic.|  
-|[CPropertyPage::GetPSP](#getpsp)|Pobiera systemu Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548) struktury skojarzone z `CPropertyPage` obiektu.|  
+|[CPropertyPage::CancelToClose](#canceltoclose)|Zmienia przycisk OK, aby odczytać Zamknij i wyłącza przycisk Anuluj, po zmianie nieodwracalny, na stronie modalny arkusz właściwości.|  
+|[CPropertyPage::Construct](#construct)|Konstruuje `CPropertyPage` obiektu. Użyj `Construct` czy chcesz określić parametry w czasie wykonywania, czy używasz tablic.|  
+|[CPropertyPage::GetPSP](#getpsp)|Pobiera Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548) struktury skojarzone z `CPropertyPage` obiektu.|  
 |[CPropertyPage::OnApply](#onapply)|Wywoływane przez platformę, gdy kliknięto przycisk Zastosuj teraz.|  
 |[CPropertyPage::OnCancel](#oncancel)|Wywoływane przez platformę, gdy kliknięto przycisk Anuluj.|  
 |[CPropertyPage::OnKillActive](#onkillactive)|Wywoływane przez platformę, gdy bieżąca strona nie jest już stroną aktywną. Wykonaj sprawdzanie poprawności danych w tym miejscu.|  
-|[CPropertyPage::OnOK](#onok)|Wywoływane przez platformę, gdy zostanie kliknięty OK, Zastosuj teraz lub przycisk Zamknij.|  
-|[CPropertyPage::OnQueryCancel](#onquerycancel)|Wywoływane przez platformę, gdy kliknięto przycisk Anuluj i zanim akcja została anulowana.|  
+|[CPropertyPage::OnOK](#onok)|Wywoływane przez platformę, gdy kliknięto OK, Zastosuj teraz lub przycisk Zamknij.|  
+|[CPropertyPage::OnQueryCancel](#onquerycancel)|Wywoływane przez platformę, gdy kliknięto przycisk Anuluj i przed anulowanie.|  
 |[CPropertyPage::OnReset](#onreset)|Wywoływane przez platformę, gdy kliknięto przycisk Anuluj.|  
 |[CPropertyPage::OnSetActive](#onsetactive)|Wywoływane przez platformę, gdy strona staje się stroną aktywną.|  
-|[CPropertyPage::OnWizardBack](#onwizardback)|Wywoływane przez platformę, gdy kliknięto przycisk Wstecz w czasie korzystania z arkusza właściwości typu Kreator.|  
-|[CPropertyPage::OnWizardFinish](#onwizardfinish)|Wywoływane przez platformę, po kliknięciu przycisku Zakończ podczas korzystania z arkusza właściwości typu Kreator.|  
+|[CPropertyPage::OnWizardBack](#onwizardback)|Wywoływane przez platformę, gdy kliknięto przycisk Wróć w czasie korzystania z arkusza właściwości typu Kreator.|  
+|[CPropertyPage::OnWizardFinish](#onwizardfinish)|Wywoływane przez platformę, gdy kliknięto przycisk Zakończ w czasie korzystania z arkusza właściwości typu Kreator.|  
 |[CPropertyPage::OnWizardNext](#onwizardnext)|Wywoływane przez platformę, gdy kliknięto przycisk Następny w czasie korzystania z arkusza właściwości typu Kreator.|  
-|[CPropertyPage::QuerySiblings](#querysiblings)|Przesyła wiadomość na każdej stronie arkusza właściwości.|  
-|[CPropertyPage::SetModified](#setmodified)|Wywołanie aktywować lub dezaktywować przycisk Zastosuj teraz.|  
+|[CPropertyPage::QuerySiblings](#querysiblings)|Przekazuje komunikat do każdej strony arkusza właściwości.|  
+|[CPropertyPage::SetModified](#setmodified)|Wywołanie, aby aktywować lub dezaktywować przycisk Zastosuj teraz.|  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CPropertyPage::m_psp](#m_psp)|Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548) struktury. Zapewnia dostęp do parametrów strony właściwości podstawowych.|  
+|[CPropertyPage::m_psp](#m_psp)|Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548) struktury. Zapewnia dostęp do właściwości podstawowe parametry strony.|  
   
 ## <a name="remarks"></a>Uwagi  
- Zgodnie z polami standardowe okno dialogowe wyprowadzenia klasy z `CPropertyPage` dla każdej strony w arkuszu właściwości. Aby użyć `CPropertyPage`-obiekty pochodne, najpierw utwórz [cpropertysheet —](../../mfc/reference/cpropertysheet-class.md) obiekt, a następnie utwórz obiekt dla każdej strony, który jest przesyłany w arkuszu właściwości. Wywołanie [CPropertySheet::AddPage](../../mfc/reference/cpropertysheet-class.md#addpage) dla każdej strony w arkuszu, a następnie Wyświetl arkusz właściwości, wywołując [CPropertySheet::DoModal](../../mfc/reference/cpropertysheet-class.md#domodal) dla modalny arkusz właściwości, lub [cpropertysheet —:: Utwórz](../../mfc/reference/cpropertysheet-class.md#create) dla niemodalnego arkusza właściwości.  
+ Jak za pomocą standardowych oknach dialogowych, należy wyprowadzić klasę z `CPropertyPage` dla każdej strony w arkuszu właściwości. Aby użyć `CPropertyPage`-obiektów pochodnych, należy najpierw utworzyć [CPropertySheet](../../mfc/reference/cpropertysheet-class.md) obiektu, a następnie utwórz obiekt, dla każdej strony, który znajduje się w arkuszu właściwości. Wywołaj [CPropertySheet::AddPage](../../mfc/reference/cpropertysheet-class.md#addpage) dla każdej strony w arkuszu, a następnie wyświetlić arkusz właściwości, wywołując [CPropertySheet::DoModal](../../mfc/reference/cpropertysheet-class.md#domodal) dla modalny arkusz właściwości, lub [CPropertySheet:: Utwórz](../../mfc/reference/cpropertysheet-class.md#create) dla niemodalnego arkusza właściwości.  
   
- Można utworzyć typu o nazwie kreatora, który składa się z arkusza właściwości z sekwencją strony właściwości, które prowadzą użytkownika przez kroki operacji, takich jak Konfigurowanie urządzenia lub tworzenia biuletynu okno dialogowe kartę. W oknie dialogowym kartę typu Kreator strony właściwości nie ma karty, a tylko jedna właściwość strona jest widoczna w czasie. Ponadto zamiast przyciski OK i Zastosuj teraz okno dialogowe Kreator typ ma przycisk Wstecz, przycisku Dalej lub Zakończ i przycisk Anuluj.  
+ Można utworzyć typu zakładki okna dialogowego o nazwie Kreator, który składa się z arkusza właściwości, za pomocą sekwencji stron właściwości, które prowadzą użytkownika przez kroki operacji, takich jak Konfigurowanie urządzenia lub tworzenia biuletynu. W oknie dialogowym kartę Typ kreatora na stronach właściwości nie ma karty, a tylko jedną właściwość strona jest widoczna w danym momencie. Dodatkowo zamiast OK, Zastosuj teraz przyciski, typ kreatora zakładki okna dialogowego posiada przycisku Wstecz, przycisk Dalej albo Zakończ i przycisk Anuluj.  
   
- Aby uzyskać więcej informacji na ustanawianie arkusz właściwości jako kreatora, zobacz [CPropertySheet::SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode). Aby uzyskać więcej informacji na temat używania `CPropertyPage` obiektów, zobacz artykuł [arkusze właściwości i strony właściwości](../../mfc/property-sheets-and-property-pages-in-mfc.md).  
+ Aby uzyskać więcej informacji na temat ustanawiania arkusz właściwości jako kreatora, zobacz [CPropertySheet::SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode). Aby uzyskać więcej informacji na temat korzystania z `CPropertyPage` obiektów, zobacz artykuł [arkusze właściwości i strony właściwości](../../mfc/property-sheets-and-property-pages-in-mfc.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -122,22 +122,22 @@ class CPropertyPage : public CDialog
  **Nagłówek:** afxdlgs.h  
   
 ##  <a name="canceltoclose"></a>  CPropertyPage::CancelToClose  
- Wywołanie tej funkcji po dokonaniu zmiany odzyskać danych na stronie modalny arkusz właściwości.  
+ Wywołaj tę funkcję, po dokonaniu zmiany nieodwracalny, do danych na stronie modalny arkusz właściwości.  
   
 ```  
 void CancelToClose();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja będzie zmiana na zamknięcie przycisk OK i wyłącza przycisk Anuluj. Ta zmiana alertów, które nie może być anulowana użytkownika, że zmiana jest trwałe i modyfikacji.  
+ Ta funkcja będzie zmiana przycisku OK na zamknięcie i wyłączyć przycisk Anuluj. Ta zmiana alerty, których nie można anulować użytkownika, że zmiana jest trwałe i modyfikacji.  
   
- `CancelToClose` Funkcji członkowskiej nie działa w niemodalnego arkusza właściwości, ponieważ domyślnie niemodalnego arkusza właściwości nie ma przycisku Anuluj.  
+ `CancelToClose` Funkcji składowej nie wykonuje żadnych czynności w niemodalnego arkusza właściwości, ponieważ domyślnie niemodalnego arkusza właściwości nie ma przycisk Anuluj.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CPropertyPage::QuerySiblings](#querysiblings).  
   
 ##  <a name="construct"></a>  CPropertyPage::Construct  
- Wywołanie tej funkcji Członkowskich do skonstruowania `CPropertyPage` obiektu.  
+ Wywołaj tę funkcję elementu członkowskiego do konstruowania `CPropertyPage` obiektu.  
   
 ```  
 void Construct(
@@ -166,32 +166,32 @@ void Construct(
   
 ### <a name="parameters"></a>Parametry  
  *nIDTemplate*  
- Identyfikator szablonu używany dla tej strony.  
+ Identyfikator szablonu użytego dla tej strony.  
   
  *nIDCaption*  
- Identyfikator nazwy na umieszczenie w karcie tej strony. Jeśli jest to 0, nazwę zostaną pobrane z szablonu okna dialogowego dla tej strony.  
+ Identyfikator nazwy mają być umieszczone w karcie tej strony. Jeśli jest to 0, nazwy będą pobierane z szablonu okna dialogowego na tej stronie.  
   
  *lpszTemplateName*  
- Zawiera zerem ciąg określający nazwę zasobu szablon.  
+ Zawiera ciąg zakończony znakiem null, nazwę zasobu szablon.  
   
  *nIDHeaderTitle*  
- Identyfikator nazwy na umieszczenie w lokalizacji tytuł właściwości nagłówka strony. Domyślnie 0.  
+ Identyfikator nazwy należy umieścić w lokalizacji tytuł właściwości nagłówka strony. Domyślnie 0.  
   
  *nIDHeaderSubTitle*  
- Identyfikator nazwy na umieszczenie w lokalizacji podtytuł właściwości nagłówka strony. Domyślnie 0.  
+ Identyfikator nazwy należy umieścić w lokalizacji napisów właściwości nagłówka strony. Domyślnie 0.  
   
 ### <a name="remarks"></a>Uwagi  
  Obiekt jest wyświetlany po są spełnione wszystkie następujące warunki:  
   
--   Strona został dodany do arkusza właściwości przy użyciu [CPropertySheet::AddPage](../../mfc/reference/cpropertysheet-class.md#addpage).  
+-   Strona została dodana do arkusza właściwości przy użyciu [CPropertySheet::AddPage](../../mfc/reference/cpropertysheet-class.md#addpage).  
   
 -   Arkusz właściwości [DoModal](../../mfc/reference/cpropertysheet-class.md#domodal) lub [Utwórz](../../mfc/reference/cpropertysheet-class.md#create) funkcja została wywołana.  
   
--   Użytkownik wybrał (z kartami na) tej strony.  
+-   Użytkownik wybrał (z kartami na) na tej stronie.  
   
- Wywołanie `Construct` Jeśli jeden z innych konstruktorów klasy nie została wywołana. `Construct` Funkcja członkowska jest elastyczna, ponieważ można jest pusta instrukcja parametrów, a następnie określ wiele parametrów i konstrukcji w dowolnym momencie w kodzie.  
+ Wywołaj `Construct` Jeśli jeden z innych Konstruktory klasy nie została wywołana. `Construct` Funkcja członkowska jest elastyczny, ponieważ jest pusta instrukcja parametrów, a następnie określić wiele parametrów i konstrukcji, w dowolnym momencie w kodzie.  
   
- Należy użyć `Construct` podczas pracy z tablicami i należy wywołać `Construct` dla każdego elementu członkowskiego tablicy, tak aby elementy członkowskie danych przypisano odpowiednie wartości.  
+ Należy użyć `Construct` podczas pracy z tablicami i należy wywołać `Construct` dla każdego elementu członkowskiego tablicy, aby elementy członkowskie danych są przypisywane odpowiednimi wartościami.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#112](../../mfc/codesnippet/cpp/cpropertypage-class_1.cpp)]  
@@ -233,29 +233,29 @@ CPropertyPage(
   
 ### <a name="parameters"></a>Parametry  
  *nIDTemplate*  
- Identyfikator szablonu używany dla tej strony.  
+ Identyfikator szablonu użytego dla tej strony.  
   
  *nIDCaption*  
- Identyfikator nazwy na umieszczenie w karcie tej strony. Jeśli jest to 0, nazwę zostaną pobrane z szablonu okna dialogowego dla tej strony.  
+ Identyfikator nazwy mają być umieszczone w karcie tej strony. Jeśli jest to 0, nazwy będą pobierane z szablonu okna dialogowego na tej stronie.  
   
- *dwSize*  
+ *niezerowego*  
  *lpszTemplateName*  
- Wskazuje ciąg zawierający nazwę szablonu dla tej strony. Nie może być **NULL**.  
+ Wskazuje ciąg zawierający nazwę szablonu dla tej strony. Nie może mieć wartości NULL.  
   
  *nIDHeaderTitle*  
- Identyfikator nazwy na umieszczenie w lokalizacji tytuł właściwości nagłówka strony.  
+ Identyfikator nazwy należy umieścić w lokalizacji tytuł właściwości nagłówka strony.  
   
  *nIDHeaderSubTitle*  
- Identyfikator nazwy na umieszczenie w lokalizacji podtytuł właściwości nagłówka strony.  
+ Identyfikator nazwy należy umieścić w lokalizacji napisów właściwości nagłówka strony.  
   
 ### <a name="remarks"></a>Uwagi  
  Obiekt jest wyświetlany po są spełnione wszystkie następujące warunki:  
   
--   Strona został dodany do arkusza właściwości przy użyciu [CPropertySheet::AddPage](../../mfc/reference/cpropertysheet-class.md#addpage).  
+-   Strona została dodana do arkusza właściwości przy użyciu [CPropertySheet::AddPage](../../mfc/reference/cpropertysheet-class.md#addpage).  
   
 -   Arkusz właściwości [DoModal](../../mfc/reference/cpropertysheet-class.md#domodal) lub [Utwórz](../../mfc/reference/cpropertysheet-class.md#create) funkcja została wywołana.  
   
--   Użytkownik wybrał (z kartami na) tej strony.  
+-   Użytkownik wybrał (z kartami na) na tej stronie.  
   
  Jeśli masz wiele parametrów (na przykład, jeśli używasz tablicy), użyj [CPropertySheet::Construct](../../mfc/reference/cpropertysheet-class.md#construct) zamiast `CPropertyPage`.  
   
@@ -263,7 +263,7 @@ CPropertyPage(
  [!code-cpp[NVC_MFCDocView#113](../../mfc/codesnippet/cpp/cpropertypage-class_2.cpp)]  
   
 ##  <a name="getpsp"></a>  CPropertyPage::GetPSP  
- Pobiera systemu Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548) struktury skojarzone z `CPropertyPage` obiektu.  
+ Pobiera Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548) struktury skojarzone z `CPropertyPage` obiektu.  
   
 ```  
 const PROPSHEETPAGE& GetPSP() const;  
@@ -272,39 +272,39 @@ PROPSHEETPAGE& GetPSP();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Odwołanie do **PROPSHEETPAGE** struktury.  
+ Odwołanie do `PROPSHEETPAGE` struktury.  
   
 ##  <a name="m_psp"></a>  CPropertyPage::m_psp  
- `m_psp` jest strukturą, której członkowie przechowywania właściwości [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548).  
+ `m_psp` jest strukturą, której członkowie przechowywania charakterystyki [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548).  
   
 ```  
 PROPSHEETPAGE m_psp;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Aby zainicjować wyglądu strony właściwości po go jest tworzony, należy użyć tej struktury.  
+ Aby zainicjować wygląd strony właściwości po jest tworzony, należy użyć tej struktury.  
   
- Więcej informacji dotyczących tej struktury, w tym listę jej członków, zobacz **PROPSHEETPAGE** w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji na temat tej struktury, w tym listę swoich elementów członkowskich, zobacz `PROPSHEETPAGE` w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#128](../../mfc/codesnippet/cpp/cpropertypage-class_3.cpp)]  
   
 ##  <a name="onapply"></a>  CPropertyPage::OnApply  
- Ta funkcja elementu członkowskiego jest wywoływana przez platformę, gdy użytkownik wybierze przycisk Zastosuj teraz lub OK.  
+ Ta funkcja członkowska jest wywoływana przez platformę, gdy użytkownik wybierze przycisk Zastosuj teraz lub OK.  
   
 ```  
 virtual BOOL OnApply();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli zmiany są akceptowane; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli zmiany są akceptowane; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Gdy struktura wywołuje tę funkcję, zmiany wprowadzone na wszystkie strony właściwości w arkuszu właściwości są akceptowane, arkusz właściwości zachowuje fokus, i `OnApply` zwraca **TRUE** (wartość 1). Przed `OnApply` mogą być wywoływane przez platformę, musi być wywołana [SetModified](#setmodified) i ustawić jej parametr **TRUE**. Uaktywni przycisk Zastosuj teraz jak użytkownik dokona zmian na stronie właściwości.  
+ Gdy struktura wywołuje tę funkcję, zmiany wprowadzone na wszystkich stronach właściwości arkusza właściwości są akceptowane, arkusz właściwości zachowuje fokus, a `OnApply` zwraca wartość TRUE (wartość 1). Przed `OnApply` mogą być wywoływane przez platformę, musi być wywołana [SetModified](#setmodified) i jego parametr jest ustawiony na wartość TRUE. To uaktywni przycisk Zastosuj teraz, jak najszybciej po użytkownik wprowadza zmianę na stronie właściwości.  
   
- Przesłonić tę funkcję elementu członkowskiego, aby określić, jakie działanie ma programu, gdy użytkownik kliknie przycisk Zastosuj teraz. Podczas zastępowania, funkcja powinna zwrócić **TRUE** celu zaakceptowania zmian i **FALSE** uniemożliwić podjęcie wpływu zmiany.  
+ Zastąpienie tej funkcji elementu członkowskiego, aby określić, jakie działanie ma program, gdy użytkownik kliknie przycisk Zastosuj teraz. Podczas zastępowania, funkcja powinna zwrócić wartość TRUE, aby zaakceptować zmiany i wartość FALSE, aby uniemożliwić zmiany wpływają.  
   
- Domyślna implementacja `OnApply` wywołania `OnOK`.  
+ Domyślna implementacja klasy `OnApply` wywołania `OnOK`.  
   
  Aby uzyskać więcej informacji na temat komunikaty powiadomień wysłane, gdy użytkownik naciśnie Zastosuj teraz lub przycisk OK w arkuszu właściwości, zobacz [PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552) w zestawie Windows SDK.  
   
@@ -312,51 +312,51 @@ virtual BOOL OnApply();
   Zobacz przykład [CPropertyPage::OnOK](#onok).  
   
 ##  <a name="oncancel"></a>  CPropertyPage::OnCancel  
- Ta funkcja elementu członkowskiego jest wywoływana przez platformę, po wybraniu przycisku Anuluj.  
+ Ta funkcja członkowska jest wywoływana przez platformę, po wybraniu przycisku Anuluj.  
   
 ```  
 virtual void OnCancel();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Przesłonić tę funkcję elementu członkowskiego do wykonania akcji przycisk Anuluj. Wartość domyślna Negacja wszelkie zmiany, które zostały wprowadzone.  
+ Zastąpienie tej funkcji elementu członkowskiego, aby wykonać akcje przycisk Anuluj. Wartość domyślna neguje wszelkie zmiany, które zostały wprowadzone.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#114](../../mfc/codesnippet/cpp/cpropertypage-class_4.cpp)]  
   
 ##  <a name="onkillactive"></a>  CPropertyPage::OnKillActive  
- Ta funkcja elementu członkowskiego jest wywoływana przez platformę, gdy strona nie jest już aktywna strona.  
+ Ta funkcja członkowska jest wywoływana przez platformę, gdy strona nie jest już stroną aktywną.  
   
 ```  
 virtual BOOL OnKillActive();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli dane zostały zaktualizowane pomyślnie, w przeciwnym razie wartość 0.  
+ Wartość różną od zera, jeśli dane zostały zaktualizowane pomyślnie, w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Przesłonić tę funkcję elementu członkowskiego do wykonywania zadań weryfikacji danych specjalne.  
+ Należy przesłonić tę funkcję elementu członkowskiego, aby wykonywać zadania sprawdzania poprawności danych specjalne.  
   
- Domyślna implementacja funkcji członkowskiej kopiuje ustawienia z kontrolki na stronie właściwości ze zmiennymi Członkowskimi strony właściwości. Jeśli dane nie zostały zaktualizowane pomyślnie z powodu błędu sprawdzania poprawności (DDV) danych okna dialogowego, strona zachowuje fokus.  
+ Domyślna implementacja tej funkcji elementu członkowskiego kopiuje ustawienia z formantów na stronie właściwości do zmiennych na stronie właściwości. Jeśli dane nie zostały pomyślnie zaktualizowane z powodu błędu sprawdzania poprawności (DDV) danych okna dialogowego, strona zachowuje fokus.  
   
- Po tej funkcji Członkowskich zwraca pomyślnie, platforma wywoła strony [OnOK](#onok) funkcji.  
+ Po tej funkcji elementu członkowskiego zwraca pomyślnie, w ramach będzie wywoływać strony [onok —](#onok) funkcji.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#115](../../mfc/codesnippet/cpp/cpropertypage-class_5.cpp)]  
   
 ##  <a name="onok"></a>  CPropertyPage::OnOK  
- Ta funkcja członkowska jest wywoływane przez platformę, gdy użytkownik wybierze przycisk Zastosuj teraz lub OK natychmiast po wywołania framework [OnKillActive](#onkillactive).  
+ Ta funkcja elementu członkowskiego jest wywoływana przez platformę, gdy użytkownik wybierze przycisk Zastosuj teraz lub OK natychmiast po struktura wywołuje [onkillactive —](#onkillactive).  
   
 ```  
 virtual void OnOK();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Gdy użytkownik wybierze przycisk Zastosuj teraz lub OK, otrzymuje platformę [PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552) powiadomienia na stronie właściwości. Wywołanie `OnOK` nie będzie mieć miejsce, gdy należy wywołać [CPropertySheet::PressButton](../../mfc/reference/cpropertysheet-class.md#pressbutton) ponieważ stronę właściwości nie wysyła powiadomienia w takiej sytuacji.  
+ Gdy użytkownik wybierze przycisk Zastosuj teraz lub OK, struktura odbiera [PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552) powiadomień z poziomu strony właściwości. Wywołanie `OnOK` nie będzie mieć miejsce, gdy wywołujesz [CPropertySheet::PressButton](../../mfc/reference/cpropertysheet-class.md#pressbutton) ponieważ strona właściwości wysyłał powiadomienie w takiej sytuacji.  
   
- Przesłonić tę funkcję elementu członkowskiego do zaimplementowania dodatkowe zachowanie specyficzne dla aktualnie aktywnej strony, gdy użytkownik odrzuci arkusz właściwości całego.  
+ Zastąp tę funkcję elementu członkowskiego, aby zaimplementować dodatkowe zachowania specyficzne dla obecnie aktywnej strony po użytkownik odrzuci arkusza właściwości całego.  
   
- Domyślna implementacja funkcji członkowskiej oznaczona jako "clean", aby odzwierciedlić, że dane zostały zaktualizowane w `OnKillActive` funkcji.  
+ Domyślna implementacja tej funkcji elementu członkowskiego oznaczona jako "Wyczyść", aby odzwierciedlić, że dane zostały zaktualizowane w `OnKillActive` funkcji.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#116](../../mfc/codesnippet/cpp/cpropertypage-class_6.cpp)]  
@@ -369,87 +369,87 @@ virtual BOOL OnQueryCancel();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca **FALSE** Anuluj operację lub wartość TRUE, aby umożliwić jego.  
+ Zwraca wartość FALSE, aby uniemożliwić operacji anulowania lub wartość PRAWDA, aby umożliwić mu.  
   
 ### <a name="remarks"></a>Uwagi  
- Przesłonić tę funkcję elementu członkowskiego, aby określić akcję podejmowaną po kliknięciu przycisku Anuluj.  
+ Zastąpienie tej funkcji elementu członkowskiego, aby określić akcję podejmowaną po użytkownik kliknie przycisk Anuluj.  
   
- Domyślna implementacja `OnQueryCancel` zwraca **TRUE**.  
+ Domyślna implementacja klasy `OnQueryCancel` zwraca wartość TRUE.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#117](../../mfc/codesnippet/cpp/cpropertypage-class_7.cpp)]  
   
 ##  <a name="onreset"></a>  CPropertyPage::OnReset  
- Ta funkcja elementu członkowskiego jest wywoływana przez platformę, gdy użytkownik wybierze przycisk Anuluj.  
+ Ta funkcja członkowska jest wywoływana przez platformę, gdy użytkownik wybierze przycisk Anuluj.  
   
 ```  
 virtual void OnReset();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Gdy struktura wywołuje tę funkcję, zmiany do wszystkich stron właściwości, które zostały dokonane przez użytkownika, wcześniej wybierając przycisk Zastosuj teraz zostaną odrzucone i arkusza właściwości zachowuje fokus.  
+ Gdy struktura wywołuje tę funkcję, zmiany do wszystkich stron właściwości, które zostały wprowadzone przez użytkownika, wcześniej wybierając przycisk Zastosuj teraz zostaną odrzucone i arkusza właściwości zachowuje fokus.  
   
- Przesłonić tę funkcję elementu członkowskiego, aby określić, jakie działanie ma program, gdy użytkownik kliknie przycisk Anuluj.  
+ Zastąpienie tej funkcji elementu członkowskiego, aby określić, jakie działanie ma program, gdy użytkownik kliknie przycisk Anuluj.  
   
- Domyślna implementacja `OnReset` nie działają.  
+ Domyślna implementacja klasy `OnReset` nic nie robi.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CPropertyPage::OnCancel](#oncancel).  
   
 ##  <a name="onsetactive"></a>  CPropertyPage::OnSetActive  
- Ta funkcja elementu członkowskiego jest wywoływana przez platformę, gdy strona jest wybierany przez użytkownika i staje się stroną aktywną.  
+ Ta funkcja członkowska jest wywoływana przez platformę, gdy strona jest wybierany przez użytkownika i staje się stroną aktywną.  
   
 ```  
 virtual BOOL OnSetActive();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli strona została pomyślnie active; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli strona została pomyślnie active; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Przesłonić tę funkcję elementu członkowskiego do wykonywania zadań, gdy strona jest aktywna. Zastąpienia funkcji członkowskiej zwykle spowodowałoby wywołanie wersja domyślna po zaktualizowaniu elementy członkowskie danych, aby zezwalała na aktualizowanie formantów strony przy użyciu nowych danych.  
+ Zastąpienie tej funkcji elementu członkowskiego do wykonywania zadań, gdy strona jest aktywna. Zastąpienie metody tej funkcji elementu członkowskiego wywoływałby zazwyczaj domyślna wersja po zaktualizowaniu składowe danych, aby zezwalała na aktualizowanie formantów strony z nowymi danymi.  
   
- Domyślna implementacja tworzy okno strony, jeśli nie wcześniej utworzona i ułatwia aktywnej strony.  
+ Domyślna implementacja tworzy okno dla tej strony, w przeciwnym razie utworzone wcześniej i sprawia, że się stroną aktywną.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CPropertySheet::SetFinishText](../../mfc/reference/cpropertysheet-class.md#setfinishtext).  
   
 ##  <a name="onwizardback"></a>  CPropertyPage::OnWizardBack  
- Ta funkcja elementu członkowskiego jest wywoływana przez platformę, gdy użytkownik kliknie przycisk Wstecz w kreatorze.  
+ Ta funkcja członkowska jest wywoływana przez platformę, gdy użytkownik kliknie przycisk Wstecz w kreatorze.  
   
 ```  
 virtual LRESULT OnWizardBack();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- 0, aby automatycznie przejść do następnej strony; -1, aby uniemożliwić zmianę strony. Aby przejść do strony innego niż dalej, zwróć identyfikatora wyświetlania okna dialogowego.  
+ 0, aby automatycznie przejść do następnej strony; -1, aby uniemożliwić zmianę na stronie. Aby przejść do strony inne niż kolejny, zwróć identyfikator okna dialogowego, które mają być wyświetlane.  
   
 ### <a name="remarks"></a>Uwagi  
- Przesłonić tę funkcję elementu członkowskiego, aby określić niektóre akcje, które musi wykonać użytkownik po naciśnięciu przycisku Wstecz.  
+ Zastąpienie tej funkcji elementu członkowskiego, aby określić niektóre akcje, które użytkownik musi wykonać po naciśnięciu przycisku Wstecz.  
   
- Aby uzyskać więcej informacji o sposobie tworzenia arkusza właściwości typu Kreator, zobacz [CPropertySheet::SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode).  
+ Aby uzyskać więcej informacji na temat sposobu wykonywania arkusza właściwości typu Kreator, zobacz [CPropertySheet::SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode).  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#118](../../mfc/codesnippet/cpp/cpropertypage-class_8.cpp)]  
   
 ##  <a name="onwizardfinish"></a>  CPropertyPage::OnWizardFinish  
- Ta funkcja elementu członkowskiego jest wywoływana przez platformę, gdy użytkownik kliknie przycisk Zakończ w kreatorze.  
+ Ta funkcja członkowska jest wywoływana przez platformę, gdy użytkownik kliknie przycisk Zakończ, w kreatorze.  
   
 ```  
 virtual BOOL OnWizardFinish();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli arkusz właściwości jest niszczony po zakończeniu pracy Kreatora; w przeciwnym razie wartość zero.  
+ Wartość różną od zera, jeśli arkusz właściwości jest niszczony, kiedy Kreator zakończy pracę; w przeciwnym razie wartość zero.  
   
 ### <a name="remarks"></a>Uwagi  
- Gdy użytkownik kliknie **Zakończ** przycisk w ramach kreatora, wywołania tej funkcji; gdy `OnWizardFinish` zwraca **TRUE** (wartość niezerową), może zostać zniszczone arkusza właściwości (ale nie jest rzeczywiście zniszczone). Wywołanie `DestroyWindow` do zniszczenia arkusza właściwości. Nie wywołuj `DestroyWindow` z `OnWizardFinish`; spowodowałoby uszkodzenie stosu lub inne błędy.  
+ Kiedy użytkownik kliknie **Zakończ** przycisku w kreatorze, struktura wywołuje tę funkcję; gdy `OnWizardFinish` zwraca wartość TRUE (wartość różną od zera), arkusz właściwości może zostać zniszczone (ale nie jest faktycznie niszczony). Wywołaj `DestroyWindow` zniszczyć arkusza właściwości. Nie wywołuj `DestroyWindow` z `OnWizardFinish`; spowodowałoby uszkodzenie sterty lub inne błędy.  
   
- Można zastąpić tę funkcję elementu członkowskiego, aby określić niektóre akcje, które musi wykonać użytkownik, po kliknięciu przycisku Zakończ. W przypadku przesłaniania tej funkcji, zwracany **FALSE** aby zapobiec niszczony arkusza właściwości.  
+ Można zastąpić, ta funkcja elementu członkowskiego, aby określić niektóre akcje, które użytkownik musi wykonać po naciśnięciu przycisku Zakończ. Podczas zastępowania tej funkcji, zwraca wartość FALSE, aby uniemożliwić niszczone arkusza właściwości.  
   
  Aby uzyskać więcej informacji na temat komunikaty powiadomień wysłane, gdy użytkownik naciśnie przycisk Zakończ w arkuszu właściwości kreatora, zobacz [PSN_WIZFINISH](http://msdn.microsoft.com/library/windows/desktop/bb774571) w zestawie Windows SDK.  
   
- Aby uzyskać więcej informacji o sposobie tworzenia arkusza właściwości typu Kreator, zobacz [CPropertySheet::SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode).  
+ Aby uzyskać więcej informacji na temat sposobu wykonywania arkusza właściwości typu Kreator, zobacz [CPropertySheet::SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode).  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#119](../../mfc/codesnippet/cpp/cpropertypage-class_9.cpp)]  
@@ -461,25 +461,25 @@ virtual BOOL OnWizardFinish();
  [!code-cpp[NVC_MFCDocView#122](../../mfc/codesnippet/cpp/cpropertypage-class_12.cpp)]  
   
 ##  <a name="onwizardnext"></a>  CPropertyPage::OnWizardNext  
- Ta funkcja elementu członkowskiego jest wywoływana przez platformę, gdy użytkownik kliknie przycisk Dalej w kreatorze.  
+ Ta funkcja członkowska jest wywoływana przez platformę, gdy użytkownik kliknie przycisk Dalej w kreatorze.  
   
 ```  
 virtual LRESULT OnWizardNext();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- 0, aby automatycznie przejść do następnej strony; -1, aby uniemożliwić zmianę strony. Aby przejść do strony innego niż dalej, zwróć identyfikatora wyświetlania okna dialogowego.  
+ 0, aby automatycznie przejść do następnej strony; -1, aby uniemożliwić zmianę na stronie. Aby przejść do strony inne niż kolejny, zwróć identyfikator okna dialogowego, które mają być wyświetlane.  
   
 ### <a name="remarks"></a>Uwagi  
- Przesłonić tę funkcję elementu członkowskiego, aby określić niektóre akcje, które musi wykonać użytkownik po naciśnięciu przycisku Dalej.  
+ Zastąpienie tej funkcji elementu członkowskiego, aby określić niektóre akcje, które użytkownik musi wykonać, po kliknięciu przycisku Dalej.  
   
- Aby uzyskać więcej informacji o sposobie tworzenia arkusza właściwości typu Kreator, zobacz [CPropertySheet::SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode).  
+ Aby uzyskać więcej informacji na temat sposobu wykonywania arkusza właściwości typu Kreator, zobacz [CPropertySheet::SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode).  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#123](../../mfc/codesnippet/cpp/cpropertypage-class_13.cpp)]  
   
 ##  <a name="querysiblings"></a>  CPropertyPage::QuerySiblings  
- Wywołanie tej funkcji Członkowskich do przesyłania dalej wiadomości do każdej strony w arkuszu właściwości.  
+ Wywołaj tę funkcję elementu członkowskiego do przesyłania dalej wiadomości do każdej strony w arkuszu właściwości.  
   
 ```  
 LRESULT QuerySiblings(
@@ -495,10 +495,10 @@ LRESULT QuerySiblings(
  Określa dodatkowe informacje zależne od wiadomości  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość niezerowa ze strony w arkuszu właściwości lub 0, jeśli wszystkie strony zwracają wartość 0.  
+ Wartość różną od zera, ze strony w arkuszu właściwości lub 0, jeśli wszystkie strony zwracają wartość 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli strona zwróci wartość niezerową, arkusza właściwości nie wysyła komunikat do kolejnych stron.  
+ Jeśli strona zwraca wartość różną od zera, arkusz właściwości nie wysyła komunikat do kolejnych stron.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#124](../../mfc/codesnippet/cpp/cpropertypage-class_14.cpp)]  
@@ -508,7 +508,7 @@ LRESULT QuerySiblings(
  [!code-cpp[NVC_MFCDocView#126](../../mfc/codesnippet/cpp/cpropertypage-class_16.cpp)]  
   
 ##  <a name="setmodified"></a>  CPropertyPage::SetModified  
- Wywołanie tej funkcji Członkowskich, aby włączyć lub wyłączyć przycisk Zastosuj teraz według tego, czy do odpowiedniego obiektu zewnętrznego, w którym mają zostać zastosowane ustawienia na stronie właściwości.  
+ Wywołaj tę funkcję elementu członkowskiego, aby włączyć lub wyłączyć przycisk Zastosuj teraz oparte na tego, czy ustawienia na stronie właściwości stosuje się do odpowiedniego obiektu zewnętrznego.  
   
 ```  
 void SetModified(BOOL bChanged = TRUE);
@@ -516,10 +516,10 @@ void SetModified(BOOL bChanged = TRUE);
   
 ### <a name="parameters"></a>Parametry  
  *bChanged*  
- **Wartość TRUE,** wskazująca, że od czasu ostatniego zostały one zastosowane; zostały zmodyfikowane ustawienia strony właściwości **FALSE** wskazująca, czy ustawienia strony właściwości zostały zastosowane, lub należy ją ignorować.  
+ Wartość TRUE, aby wskazać, że ustawienia strony właściwości zostały zmodyfikowane od czasu ostatniego one zostały zastosowane; FALSE, aby wskazać, że ustawienia strony właściwości zostały zastosowane lub mają być ignorowane.  
   
 ### <a name="remarks"></a>Uwagi  
- Platformę przechowuje ścieżki, które strony są "zakłóconych", oznacza to, strony właściwości, dla których wywołaniu **SetModified (PRAWDA)**. Jeśli wywołujesz będzie zawsze włączony przycisk Zastosuj teraz **SetModified (PRAWDA)** dla jednej strony. Przycisk Zastosuj teraz zostanie wyłączony podczas wywoływania **SetModified (FALSE)** dla jednej strony, ale tylko jeśli żaden z innych stron nie jest "zakłóconych".  
+ Struktura zapewnia śledzenia, które strony są "zanieczyszczony", oznacza to, strony właściwości, dla których mają o nazwie `SetModified( TRUE )`. Jeśli wywołasz będzie zawsze włączony przycisk Zastosuj teraz `SetModified( TRUE )` jednej strony. Przycisk Zastosuj teraz zostanie wyłączona po wywołaniu `SetModified( FALSE )` jednej strony, ale tylko wtedy, gdy żaden z innych stron jest "zakłóconych".  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#127](../../mfc/codesnippet/cpp/cpropertypage-class_17.cpp)]  
@@ -527,8 +527,8 @@ void SetModified(BOOL bChanged = TRUE);
 ## <a name="see-also"></a>Zobacz też  
  [CMNCTRL1 próbki MFC](../../visual-cpp-samples.md)   
  [CMNCTRL2 próbki MFC](../../visual-cpp-samples.md)   
- [Przykładowe MFC PROPDLG](../../visual-cpp-samples.md)   
- [Przykładowe MFC SNAPVW](../../visual-cpp-samples.md)   
+ [Próbki MFC PROPDLG](../../visual-cpp-samples.md)   
+ [Próbki MFC SNAPVW](../../visual-cpp-samples.md)   
  [Cdialog — klasa](../../mfc/reference/cdialog-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [Cpropertysheet — klasa](../../mfc/reference/cpropertysheet-class.md)   

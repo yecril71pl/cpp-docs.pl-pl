@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68d78e221b9bcdbffbfc80ba26c6106498c4fa41
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 2991135d7cbb7e2e9df66e871b5d047e69b93d16
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040990"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852971"
 ---
 # <a name="cmfctabdroptarget-class"></a>Klasa CMFCTabDropTarget
 Udostępnia mechanizm komunikacji między formantem karty i bibliotek OLE.  
@@ -56,16 +56,16 @@ class CMFCTabDropTarget : public COleDropTarget
 |||  
 |-|-|  
 |Nazwa|Opis|  
-|[CMFCTabDropTarget::OnDragEnter](#ondragenter)|Wywoływane przez platformę, gdy użytkownik przeciąga obiektu w oknie kartę. (Przesłania [COleDropTarget::OnDragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).)|  
-|[CMFCTabDropTarget::OnDragLeave](#ondragleave)|Wywoływane przez platformę, gdy użytkownik przeciąga obiektu poza oknem kartę, który ma fokus. (Przesłania [COleDropTarget::OnDragLeave](../../mfc/reference/coledroptarget-class.md#ondragleave).)|  
-|[CMFCTabDropTarget::OnDragOver](#ondragover)|Wywoływane przez platformę, gdy użytkownik przeciąga obiektu na okno karty, który ma fokus. (Przesłania [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover).)|  
-|[CMFCTabDropTarget::OnDropEx](#ondropex)|Wywoływane przez platformę, gdy użytkownik zwolni przycisk myszy w końcu operacja przeciągania. (Przesłania [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).)|  
-|[CMFCTabDropTarget::Register](#register)|Rejestruje, jaką może być elementem docelowym operacji przeciągania i upuszczania OLE.|  
+|[CMFCTabDropTarget::OnDragEnter](#ondragenter)|Wywoływane przez platformę, gdy użytkownik przeciągnie obiektu do okna karty. (Przesłania [COleDropTarget::OnDragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).)|  
+|[CMFCTabDropTarget::OnDragLeave](#ondragleave)|Wywoływane przez platformę, gdy użytkownik przeciągnie obiekt poza oknem karty, który ma fokus. (Przesłania [COleDropTarget::OnDragLeave](../../mfc/reference/coledroptarget-class.md#ondragleave).)|  
+|[CMFCTabDropTarget::OnDragOver](#ondragover)|Wywoływane przez platformę, gdy użytkownik przeciągnie obiektu na okno karty, który ma fokus. (Przesłania [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover).)|  
+|[CMFCTabDropTarget::OnDropEx](#ondropex)|Wywoływane przez platformę, gdy użytkownik zwolni przycisk myszy po zakończeniu operacji przeciągania. (Przesłania [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).)|  
+|[CMFCTabDropTarget::Register](#register)|Rejestruje formantu jako taki, który może być celem operacji przeciągania i upuszczania OLE.|  
   
 ### <a name="remarks"></a>Uwagi  
- Ta klasa umożliwia obsługę przeciągania i upuszczania `CMFCBaseTabCtrl` klasy. Jeśli aplikacja jest inicjowana przy użyciu bibliotek OLE [afxoleinit —](ole-initialization.md#afxoleinit) funkcji `CMFCBaseTabCtrl` obiektów rejestrują się dla operacji przeciągania i upuszczania.  
+ Ta klasa umożliwia przeciąganie i upuszczanie `CMFCBaseTabCtrl` klasy. Jeśli aplikacja inicjuje bibliotek OLE przy użyciu [afxoleinit —](ole-initialization.md#afxoleinit) funkcji `CMFCBaseTabCtrl` obiektów rejestrować się w przypadku operacji przeciągania i upuszczania.  
   
- `CMFCTabDropTarget` Klasa rozszerza swojej klasy podstawowej, wprowadzając karcie podczas operacji przeciągania active jest pod kursorem. Aby uzyskać więcej informacji na temat operacji przeciągania i upuszczania, zobacz [przeciąganie i upuszczanie (OLE)](../../mfc/drag-and-drop-ole.md).  
+ `CMFCTabDropTarget` Klasa rozszerza swojej klasy bazowej, wprowadzając kartę która podczas operacji przeciągania active jest pod kursorem. Aby uzyskać więcej informacji na temat operacji przeciągania i upuszczania, zobacz [przeciąganie i upuszczanie (OLE)](../../mfc/drag-and-drop-ole.md).  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano sposób tworzenia `CMFCTabDropTarget` obiektu i używać jej `Register` metody.  
@@ -85,7 +85,7 @@ class CMFCTabDropTarget : public COleDropTarget
  **Nagłówek:** afxbasetabctrl.h  
   
 ##  <a name="ondragenter"></a>  CMFCTabDropTarget::OnDragEnter  
- Wywoływane przez platformę, gdy użytkownik przeciąga obiektu w oknie kartę.  
+ Wywoływane przez platformę, gdy użytkownik przeciągnie obiektu do okna karty.  
   
 ```  
 virtual DROPEFFECT OnDragEnter(
@@ -101,30 +101,30 @@ virtual DROPEFFECT OnDragEnter(
 |-|-|  
 |Parametr|Opis|  
 |[in] *pWnd*|Nieużywane.|  
-|[in] *pDataObject*|Wskaźnik do obiektu, którą przeciąga użytkownik.|  
-|[in] *dwKeyState*|Zawiera stan klawisze modyfikujące. To jest kombinacją dowolną liczbę następujących: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, i `MK_RBUTTON`.|  
-|[in] *punktu*|Lokalizacja kursora we współrzędnych klienta.|  
+|[in] *pDataObject*|Wskaźnik do obiektu, który użytkownik przeciąga.|  
+|[in] *dwKeyState*|Zawiera stan klawisze modyfikujące. Jest to kombinacja pojawiły się następujące: MK_CONTROL, MK_SHIFT, MK_ALT MK_LBUTTON, MK_MBUTTON i MK_RBUTTON.|  
+|[in] *punktu*|Lokalizacja kursora w współrzędne klienta.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Efekt, który powoduje spadek występuje w lokalizacji określonej przez *punktu*. Można co najmniej jeden z następujących czynności:  
+ Wpływ, jaki wyniki, jeśli listy występuje w lokalizacji określonej przez *punktu*. Może być co najmniej jeden z następujących czynności:  
   
-- `DROPEFFECT_NONE`  
+- DROPEFFECT_NONE  
   
-- `DROPEFFECT_COPY`  
+- DROPEFFECT_COPY  
   
-- `DROPEFFECT_MOVE`  
+- DROPEFFECT_MOVE  
   
-- `DROPEFFECT_LINK`  
+- DROPEFFECT_LINK  
   
-- `DROPEFFECT_SCROLL`  
+- DROPEFFECT_SCROLL  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda zwraca `DROPEFFECT_NONE` framework paska narzędzi nie jest w trybie dostosowywania lub formatu danych Schowka jest niedostępny. W przeciwnym razie zwraca wartość wyniku wywołania metody `CMFCBaseTabCtrl::OnDragEnter` z podanych parametrów.  
+ Ta metoda zwraca DROPEFFECT_NONE, jeśli struktura paska narzędzi nie jest w trybie dostosowywania lub formatu danych Schowka jest niedostępny. W przeciwnym razie zwraca wartość wyniku wywołania metody `CMFCBaseTabCtrl::OnDragEnter` przy użyciu podanych parametrów.  
   
- Aby uzyskać więcej informacji dotyczących trybu dostosowania, zobacz [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Aby uzyskać więcej informacji na temat formatów danych schowka, zobacz [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).  
+ Aby uzyskać więcej informacji na temat trybu dostosowania, zobacz [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Aby uzyskać więcej informacji na temat formatów danych schowka zobacz [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).  
   
 ##  <a name="ondragleave"></a>  CMFCTabDropTarget::OnDragLeave  
- Wywoływane przez platformę, gdy użytkownik przeciąga obiektu poza oknem kartę, który ma fokus.  
+ Wywoływane przez platformę, gdy użytkownik przeciągnie obiekt poza oknem karty, który ma fokus.  
   
 ```  
 virtual void OnDragLeave(CWnd* pWnd);
@@ -141,7 +141,7 @@ virtual void OnDragLeave(CWnd* pWnd);
  Ta metoda wywołuje `CMFCBaseTabCtrl::OnDragLeave` metody do wykonania tej operacji przeciągania.  
   
 ##  <a name="ondragover"></a>  CMFCTabDropTarget::OnDragOver  
- Wywoływane przez platformę, gdy użytkownik przeciąga obiektu na okno karty, który ma fokus.  
+ Wywoływane przez platformę, gdy użytkownik przeciągnie obiektu na okno karty, który ma fokus.  
   
 ```  
 virtual DROPEFFECT OnDragOver(
@@ -157,30 +157,30 @@ virtual DROPEFFECT OnDragOver(
 |-|-|  
 |Parametr|Opis|  
 |[in] *pWnd*|Nieużywane.|  
-|[in] *pDataObject*|Wskaźnik do obiektu, którą przeciąga użytkownik.|  
-|[in] *dwKeyState*|Zawiera stan klawisze modyfikujące. To jest kombinacją dowolną liczbę następujących: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, i `MK_RBUTTON`.|  
-|[in] *punktu*|Lokalizacja wskaźnika myszy we współrzędnych klienta.|  
+|[in] *pDataObject*|Wskaźnik do obiektu, który użytkownik przeciąga.|  
+|[in] *dwKeyState*|Zawiera stan klawisze modyfikujące. Jest to kombinacja pojawiły się następujące: MK_CONTROL, MK_SHIFT, MK_ALT MK_LBUTTON, MK_MBUTTON i MK_RBUTTON.|  
+|[in] *punktu*|Lokalizacja wskaźnik myszy na współrzędne klienta.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Efekt, który powoduje spadek występuje w lokalizacji określonej przez *punktu*. Można co najmniej jeden z następujących czynności:  
+ Wpływ, jaki wyniki, jeśli listy występuje w lokalizacji określonej przez *punktu*. Może być co najmniej jeden z następujących czynności:  
   
-- `DROPEFFECT_NONE`  
+- DROPEFFECT_NONE  
   
-- `DROPEFFECT_COPY`  
+- DROPEFFECT_COPY  
   
-- `DROPEFFECT_MOVE`  
+- DROPEFFECT_MOVE  
   
-- `DROPEFFECT_LINK`  
+- DROPEFFECT_LINK  
   
-- `DROPEFFECT_SCROLL`  
+- DROPEFFECT_SCROLL  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda powoduje, że karcie podczas operacji przeciągania active jest pod kursorem. Zwraca `DROPEFFECT_NONE` framework paska narzędzi nie jest w trybie dostosowywania lub formatu danych Schowka jest niedostępny. W przeciwnym razie zwraca wartość wyniku wywołania metody `CMFCBaseTabCtrl::OnDragOver` z podanych parametrów.  
+ Ta metoda powoduje, że karta, która jest pod kursorem w przypadku aktywnych operacji przeciągania. Zwraca DROPEFFECT_NONE, jeśli w ramach narzędzi nie jest w trybie dostosowywania lub formatu danych Schowka jest niedostępny. W przeciwnym razie zwraca wartość wyniku wywołania metody `CMFCBaseTabCtrl::OnDragOver` przy użyciu podanych parametrów.  
   
- Aby uzyskać więcej informacji dotyczących trybu dostosowania, zobacz [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Aby uzyskać więcej informacji na temat formatów danych schowka, zobacz [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).  
+ Aby uzyskać więcej informacji na temat trybu dostosowania, zobacz [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Aby uzyskać więcej informacji na temat formatów danych schowka zobacz [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).  
   
 ##  <a name="ondropex"></a>  CMFCTabDropTarget::OnDropEx  
- Wywoływane przez platformę, gdy użytkownik zwolni przycisk myszy w końcu operacja przeciągania.  
+ Wywoływane przez platformę, gdy użytkownik zwolni przycisk myszy po zakończeniu operacji przeciągania.  
   
 ```  
 virtual DROPEFFECT OnDropEx(
@@ -197,31 +197,31 @@ virtual DROPEFFECT OnDropEx(
 |-|-|  
 |Parametr|Opis|  
 |[in] *pWnd*|Nieużywane.|  
-|[in] *pDataObject*|Wskaźnik do obiektu, którą przeciąga użytkownik.|  
-|[in] *dropEffect*|Operacja jej porzucenia domyślne.|  
+|[in] *pDataObject*|Wskaźnik do obiektu, który użytkownik przeciąga.|  
+|[in] *dropEffect*|Limit czasu operacji listy domyślne.|  
 |[in] *listy rozwijanej*|Nieużywane.|  
-|[in] *punktu*|Lokalizacja wskaźnika myszy we współrzędnych klienta.|  
+|[in] *punktu*|Lokalizacja wskaźnik myszy na współrzędne klienta.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Skutek upuszczania. Można co najmniej jeden z następujących czynności:  
+ Ostateczny wynik listy. Może być co najmniej jeden z następujących czynności:  
   
-- `DROPEFFECT_NONE`  
+- DROPEFFECT_NONE  
   
-- `DROPEFFECT_COPY`  
+- DROPEFFECT_COPY  
   
-- `DROPEFFECT_MOVE`  
+- DROPEFFECT_MOVE  
   
-- `DROPEFFECT_LINK`  
+- DROPEFFECT_LINK  
   
-- `DROPEFFECT_SCROLL`  
+- DROPEFFECT_SCROLL  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wywołuje `CMFCBaseTabCtrl::OnDrop` Jeśli framework paska narzędzi w trybie dostosowania i formatu danych Schowka jest dostępny. Jeśli wywołanie `CMFCBaseTabCtrl::OnDrop` zwraca wartość różną od zera, ta metoda zwraca domyślny efekt upuszczania określony przez *dropEffect*. W przeciwnym razie ta metoda zwraca `DROPEFFECT_NONE`. Aby uzyskać więcej informacji o skutki upuszczania, zobacz [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).  
+ Ta metoda wywołuje `CMFCBaseTabCtrl::OnDrop` Jeśli framework narzędzi jest w trybie dostosowywania i formatu danych Schowka jest dostępna. Jeśli wywołanie `CMFCBaseTabCtrl::OnDrop` zwraca wartość różną od zera, ta metoda zwraca domyślny efekt listy określonego przez *dropEffect*. W przeciwnym razie metoda ta zwraca DROPEFFECT_NONE. Aby uzyskać więcej informacji na temat skutków listy zobacz [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).  
   
- Aby uzyskać więcej informacji dotyczących trybu dostosowania, zobacz [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Aby uzyskać więcej informacji na temat formatów danych schowka, zobacz [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).  
+ Aby uzyskać więcej informacji na temat trybu dostosowania, zobacz [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Aby uzyskać więcej informacji na temat formatów danych schowka zobacz [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).  
   
 ##  <a name="register"></a>  CMFCTabDropTarget::Register  
- Rejestruje, jaką może być elementem docelowym operacji przeciągania i upuszczania OLE.  
+ Rejestruje formantu jako taki, który może być celem operacji przeciągania i upuszczania OLE.  
   
 ```  
 BOOL Register(CMFCBaseTabCtrl *pOwner);
@@ -232,13 +232,13 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 |||  
 |-|-|  
 |Parametr|Opis|  
-|[in] *pOwner*|Formantu karty, aby zarejestrować jako miejsca docelowego.|  
+|[in] *pOwner*|Kontrolka karty, aby zarejestrować się jako miejsca docelowego.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli rejestracja powiodła się. w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli rejestracja powiodła się; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wywołuje [COleDropTarget::Register](../../mfc/reference/coledroptarget-class.md#register) zarejestrować formant dla operacji przeciągania i upuszczania.  
+ Ta metoda wywołuje [COleDropTarget::Register](../../mfc/reference/coledroptarget-class.md#register) do rejestrowania formantu dla operacji przeciągania i upuszczania.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

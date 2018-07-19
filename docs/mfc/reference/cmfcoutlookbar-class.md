@@ -48,15 +48,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2be91dee4b05a7886ab94358a6490ed2091acf3e
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 0b9de076f4682bd3649f62940a0dd492eb801e28
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37123087"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850186"
 ---
 # <a name="cmfcoutlookbar-class"></a>Klasa CMFCOutlookBar
-Okienko z kartami z wygląd **okienka nawigacji** w programie Microsoft Outlook 2000 lub Outlook 2003. `CMFCOutlookBar` Zawiera obiekt [klasy CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md) obiekt i szereg kart. Karty mogą być [klasy CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md) obiektów lub `CWnd`-pochodnych obiektów. Do użytkownika zostanie wyświetlony pasek Outlook jako serię przycisków i obszaru wyświetlania. Gdy użytkownik kliknie przycisk, odpowiedniego formantu lub przycisk okienko jest wyświetlana.  
+Okienka z zakładkami z wygląd **okienka nawigacji** w programie Microsoft Outlook 2000 lub Outlook 2003. `CMFCOutlookBar` Obiekt zawiera [klasa CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md) obiektu i szereg kart. Karty mogą być [klasa CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md) obiektów lub `CWnd`-obiektami wywodzącymi. Użytkownikowi jako seria przycisków i obszar wyświetlacza zostanie wyświetlony pasek programu Outlook. Gdy użytkownik kliknie przycisk, wyświetlany jest odpowiedni formant lub okienko przycisku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -77,22 +77,22 @@ class CMFCOutlookBar : public CBaseTabbedPane
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CMFCOutlookBar::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Określa, czy puste okienko z kartami może zostać zniszczone. (Przesłania [CBaseTabbedPane::AllowDestroyEmptyTabbedPane](../../mfc/reference/cbasetabbedpane-class.md#allowdestroyemptytabbedpane).)|  
-|[CMFCOutlookBar::CanAcceptPane](#canacceptpane)|Określa, czy innego okienka może być zadokowany w okienku paska programu Outlook. (Zastępuje CDockablePane::CanAcceptPane).|  
-|[CMFCOutlookBar::CanSetCaptionTextToTabName](#cansetcaptiontexttotabname)|Określa, czy podpis dla tego okienka z kartami tego samego tekstu jest wyświetlana jako aktywnej karty. (Przesłania [CBaseTabbedPane::CanSetCaptionTextToTabName](../../mfc/reference/cbasetabbedpane-class.md#cansetcaptiontexttotabname).)|  
-|[CMFCOutlookBar::Create](#create)|Tworzy kontrolkę paska programu Outlook.|  
-|[CMFCOutlookBar::CreateCustomPage](#createcustompage)|Tworzy niestandardowe kartę pasek programu Outlook.|  
+|[CMFCOutlookBar::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Określa, czy mogą zostać zniszczone pustego okienka z zakładkami. (Przesłania [CBaseTabbedPane::AllowDestroyEmptyTabbedPane](../../mfc/reference/cbasetabbedpane-class.md#allowdestroyemptytabbedpane).)|  
+|[CMFCOutlookBar::CanAcceptPane](#canacceptpane)|Określa, czy do okienko paska Outlook może być zadokowane innego okienka. (Przesłania CDockablePane::CanAcceptPane).|  
+|[CMFCOutlookBar::CanSetCaptionTextToTabName](#cansetcaptiontexttotabname)|Określa, czy podpisu dla okienka z zakładkami ten sam tekst jest wyświetlany jako aktywną kartę. (Przesłania [CBaseTabbedPane::CanSetCaptionTextToTabName](../../mfc/reference/cbasetabbedpane-class.md#cansetcaptiontexttotabname).)|  
+|[CMFCOutlookBar::Create](#create)|Tworzy kontrolkę paska Outlook.|  
+|[CMFCOutlookBar::CreateCustomPage](#createcustompage)|Tworzy niestandardowej karty pasek programu Outlook.|  
 |`CMFCOutlookBar::CreateObject`|Używane przez platformę do tworzenia dynamicznych wystąpienia tego typu klasy.|  
 |[CMFCOutlookBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Określa, czy użytkownik dokowany pasek sterowania do zewnętrznej krawędzi paska Outlook.|  
-|[CMFCOutlookBar::FloatTab](#floattab)|Przesunięty okienku, ale tylko wtedy, jeśli okienku aktualnie znajduje się na karcie odłączane. (Przesłania [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).)|  
-|[CMFCOutlookBar::GetButtonsFont](#getbuttonsfont)|Zwraca czcionki tekstu na przycisków paska Outlook.|  
-|[CMFCOutlookBar::GetTabArea](#gettabarea)|Zwraca rozmiar i położenie obszarów karty na pasku Outlook. (Przesłania [CBaseTabbedPane::GetTabArea](../../mfc/reference/cbasetabbedpane-class.md#gettabarea).)|  
-|`CMFCOutlookBar::GetThisClass`|Używany przez platformę do uzyskania wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiekt, który jest skojarzony z tym typem klasy.|  
-|[CMFCOutlookBar::IsMode2003](#ismode2003)|Określa, czy zachowanie paska Outlook naśladuje Microsoft Outlook pakietu Office 2003 (zobacz Uwagi).|  
-|[CMFCOutlookBar::OnAfterAnimation](#onafteranimation)|Wywoływane przez [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) po active karta została ustawiona przy użyciu animacji.|  
-|[CMFCOutlookBar::OnBeforeAnimation](#onbeforeanimation)|Wywoływane przez [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) przed karty zostanie ustawiona jako aktywnej karty przy użyciu animacji.|  
-|[CMFCOutlookBar::OnScroll](#onscroll)|Wywoływane przez platformę, gdy pasek Outlook jest przewijania w górę lub w dół.|  
-|[CMFCOutlookBar::RemoveCustomPage](#removecustompage)|Usuwa niestandardowego kartę paska programu Outlook.|  
+|[CMFCOutlookBar::FloatTab](#floattab)|Liczby zmiennoprzecinkowe okienko, ale tylko wtedy, jeśli zawartość okienka aktualnie znajduje się na karcie odłączane. (Przesłania [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).)|  
+|[CMFCOutlookBar::GetButtonsFont](#getbuttonsfont)|Zwraca czcionkę tekstu, przycisków paska Outlook.|  
+|[CMFCOutlookBar::GetTabArea](#gettabarea)|Zwraca rozmiar i położenie obszarów kartę paska Outlook. (Przesłania [CBaseTabbedPane::GetTabArea](../../mfc/reference/cbasetabbedpane-class.md#gettabarea).)|  
+|`CMFCOutlookBar::GetThisClass`|Używane przez architekturę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tym typem klasy.|  
+|[CMFCOutlookBar::IsMode2003](#ismode2003)|Określa, czy zachowanie paska Outlook naśladuje Microsoft Office Outlook 2003 (zobacz Uwagi).|  
+|[CMFCOutlookBar::OnAfterAnimation](#onafteranimation)|Wywoływane przez [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) po aktywną kartę została ustawiona za pomocą animacji.|  
+|[CMFCOutlookBar::OnBeforeAnimation](#onbeforeanimation)|Wywoływane przez [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) przed karta zostanie ustawiona jako aktywną kartę za pomocą animacji.|  
+|[CMFCOutlookBar::OnScroll](#onscroll)|Wywoływane przez platformę, gdy pasek programu Outlook jest przewijanie w górę lub w dół.|  
+|[CMFCOutlookBar::RemoveCustomPage](#removecustompage)|Usuwa niestandardowej karty pasek programu Outlook.|  
 |[CMFCOutlookBar::SetButtonsFont](#setbuttonsfont)|Ustawia czcionkę tekstu przycisków paska Outlook.|  
 |[CMFCOutlookBar::SetMode2003](#setmode2003)|Określa, czy zachowanie paska Outlook naśladuje Outlook 2003 (zobacz Uwagi).|  
   
@@ -100,9 +100,9 @@ class CMFCOutlookBar : public CBaseTabbedPane
  Na przykład paska Outlook zobacz [OutlookDemo próbki: aplikacja OutlookDemo MFC](../../visual-cpp-samples.md).  
   
 ## <a name="implementing-the-outlook-bar"></a>Implementacja paska Outlook  
- Aby użyć `CMFCOutlookBar` kontroli aplikacji, wykonaj następujące kroki:  
+ Aby użyć `CMFCOutlookBar` kontrolkę w aplikacji, wykonaj następujące kroki:  
   
-1.  Osadź `CMFCOutlookBar` obiektu do klasy okna w ramce głównej.  
+1.  Osadzanie `CMFCOutlookBar` obiektu do klasy okna głównej ramki.  
   
     ```cpp
     class CMainFrame : public CMDIFrameWnd  
@@ -114,7 +114,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
     };  
     ```
 
-2.  Podczas przetwarzania `WM_CREATE` komunikat w ramce głównej wywołania [CMFCOutlookBar::Create](#create) metodę w celu utworzenia paska formantu karty Outlook.  
+2.  Podczas przetwarzania komunikatu WM_CREATE w ramce głównej, należy wywołać [CMFCOutlookBar::Create](#create) metody tworzenia paska sterowania kartę Outlook.  
   
     ```cpp
     m_wndOutlookBar.Create (_T("Shortcuts"),
@@ -124,13 +124,13 @@ class CMFCOutlookBar : public CBaseTabbedPane
         WS_CHILD | WS_VISIBLE | CBRS_LEFT);
     ```
 
-3.  Uzyskiwanie wskaźnika do odpowiadającego `CMFCOutlookBarTabCtrl` za pomocą [CBaseTabbedPane::GetUnderlyingWindow](../../mfc/reference/cbasetabbedpane-class.md#getunderlyingwindow).  
+3.  Uzyskiwanie wskaźnika do bazowego `CMFCOutlookBarTabCtrl` przy użyciu [CBaseTabbedPane::GetUnderlyingWindow](../../mfc/reference/cbasetabbedpane-class.md#getunderlyingwindow).  
   
     ```cpp
     CMFCOutlookBarTabCtrl* pOutlookBar = (CMFCOutlookBarTabCtrl*) m_wndOutlookBar.GetUnderlyingWindow ();
     ```
     
-4.  Utwórz [klasy CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md) obiektu dla każdej karty, który zawiera przyciski.  
+4.  Tworzenie [klasa CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md) obiektu dla każdej karty, który zawiera przyciski.  
   
     ```cpp
     m_wndOutlookPane.Create(&m_wndOutlookBar,
@@ -151,23 +151,23 @@ class CMFCOutlookBar : public CBaseTabbedPane
         ID_FILE_OPEN);
     ```
 
-5.  Wywołanie [CMFCOutlookBarTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) można dodać każdego nowej karcie. Ustaw `bDetachable` parametr `FALSE` dokonanie niemożliwe do odłączenia strony. Lub użyj [CMFCOutlookBarTabCtrl::AddControl](../../mfc/reference/cmfcoutlookbartabctrl-class.md#addcontrol) dodać odłączane strony.  
+5.  Wywołaj [CMFCOutlookBarTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) dodać każdej nowej karty. Ustaw *bDetachable* parametru na wartość FALSE, aby nadać stronie niemożliwe do odłączenia. Możesz też korzystać z [CMFCOutlookBarTabCtrl::AddControl](../../mfc/reference/cmfcoutlookbartabctrl-class.md#addcontrol) dodać odłączane strony.  
   
     ```cpp
     pOutlookBar->AddTab (&m_wndOutlookPane, "General", (UINT) -1, TRUE);
     ```  
 
-6.  Aby dodać `CWnd`— pochodnych kontroli (na przykład [CMFCShellTreeCtrl klasy](../../mfc/reference/cmfcshelltreectrl-class.md)) jako karty, Utwórz kontroli i wywołanie [CMFCOutlookBarTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) Aby dodać go do paska Outlook.  
+6.  Aby dodać `CWnd`— pochodne kontroli (na przykład [klasa CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md)) jako znak tabulatora, tworzyć formantu i wywołaniu [CMFCOutlookBarTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) ją dodać do paska Outlook.  
   
 > [!NOTE]
->  Należy używać formantu unikatowych identyfikatorów dla każdego [klasy CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md) obiektu i dla każdego `CWnd`-pochodzi z obiektu.  
+>  Należy używać kontroli unikatowych identyfikatorów dla każdego [klasa CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md) obiektu i dla każdego `CWnd`-pochodnych obiektu.  
   
- Do dynamicznego dodawania i usuwania nowych stron w czasie wykonywania, użyj [CMFCOutlookBar::CreateCustomPage](#createcustompage) i [CMFCOutlookBar::RemoveCustomPage](#removecustompage).  
+ Aby dynamicznie dodać lub usunąć nowych stron w czasie wykonywania, należy użyć [CMFCOutlookBar::CreateCustomPage](#createcustompage) i [CMFCOutlookBar::RemoveCustomPage](#removecustompage).  
   
-## <a name="outlook-2003-mode"></a>Program Outlook w trybie 2003  
- W trybie Outlook 2003 przycisków karty znajdują się w dolnej części okienka paska programu Outlook. Jeśli nie jest wystarczające miejsca, aby wyświetlić przycisków, zostaną one wyświetlone jako ikony w obszarze pasek narzędzi wzdłuż dolnej części okienka.  
+## <a name="outlook-2003-mode"></a>Program Outlook 2003 w trybie  
+ W trybie Outlook 2003 przycisków karty są umieszczane w dolnej części okienka paska Outlook. Jeśli nie ma wystarczającej ilości miejsca do wyświetlenia przycisków, zostaną one wyświetlone jako ikony w obszarze pasek narzędzi wzdłuż dolnej części okienka.  
   
- Użyj [CMFCOutlookBar::SetMode2003](#setmode2003) Aby włączyć tryb Outlook 2003. Użyj [CMFCOutlookBarTabCtrl::SetToolbarImageList](../../mfc/reference/cmfcoutlookbartabctrl-class.md#settoolbarimagelist) można ustawić mapy bitowej, który zawiera ikony, które są wyświetlane w dolnej części paska Outlook. Ikony w mapie bitowej musi zostać określona przez indeks.  
+ Użyj [CMFCOutlookBar::SetMode2003](#setmode2003) Aby włączyć tryb Outlook 2003. Użyj [CMFCOutlookBarTabCtrl::SetToolbarImageList](../../mfc/reference/cmfcoutlookbartabctrl-class.md#settoolbarimagelist) można ustawić mapy bitowej, który zawiera ikony, które są wyświetlane w dolnej części paska Outlook. Ikony w mapie bitowej muszą być uporządkowane według kolejność tabulacji.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -190,20 +190,20 @@ class CMFCOutlookBar : public CBaseTabbedPane
  **Nagłówek:** afxoutlookbar.h  
   
 ##  <a name="allowdestroyemptytabbedpane"></a>  CMFCOutlookBar::AllowDestroyEmptyTabbedPane  
- Określa, czy puste okienko z kartami może zostać zniszczone.  
+ Określa, czy mogą zostać zniszczone pustego okienka z zakładkami.  
   
 ```cpp  
 virtual BOOL AllowDestroyEmptyTabbedPane() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli pusty okienko z kartami może zostać zniszczone; w przeciwnym razie `FALSE`. Domyślna implementacja zawsze zwraca `TRUE`.  
+ Wartość TRUE, jeśli pustego może zostać zniszczone okienka z zakładkami; w przeciwnym razie wartość FALSE. Domyślna implementacja zawsze zwraca wartość PRAWDA.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli nie może zostać zniszczone pusty okienko z kartami, platformę ukrywa on zamiast tego.  
+ Jeśli nie może zostać zniszczone pustego okienka z zakładkami, struktura ukrywa on zamiast tego.  
   
 ##  <a name="canacceptpane"></a>  CMFCOutlookBar::CanAcceptPane  
- Określa, czy innego okienka może być zadokowany w okienku paska programu Outlook.  
+ Określa, czy do okienko paska Outlook może być zadokowane innego okienka.  
   
 ```cpp  
 virtual BOOL CanAcceptPane(const CBasePane* pBar) const;  
@@ -211,35 +211,35 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
   
 ### <a name="parameters"></a>Parametry  
  [in] *pBar*  
- Wskaźnik do innego okienka, który jest jest zadokowane do tego okienka.  
+ Wskaźnik do innego okienka, który jest jest zadokowany do to okienko.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli innego okienka może być zadokowany w okienku paska Outlook; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli w kolejnym okienku może być zadokowane, aby okienko paska Outlook; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli pasek Outlook jest w trybie Outlook 2003, dokowanie nie jest obsługiwany, dlatego zwracana wartość jest `FALSE`.  
+ Jeśli program Outlook, pasek jest w trybie Outlook 2003 dokowanie nie jest obsługiwany, więc wartość zwracana jest wartość FALSE.  
   
- Jeśli *pBar* parametr jest `NULL`, ta metoda zwraca `FALSE`.  
+ Jeśli *pBar* parametr ma wartość NULL, ta metoda zwraca wartość FALSE.  
   
- W przeciwnym razie ta metoda działa jako podstawowej metody [CBasePane::CanAcceptPane](../../mfc/reference/cbasepane-class.md#canacceptpane), z wyjątkiem tego, że nawet jeśli nie włączono dokowania, pasek Outlook można włączyć innego paska Outlook możliwości dokowania nad nim.  
+ W przeciwnym razie metoda ta działa jako podstawowej metody [CBasePane::CanAcceptPane](../../mfc/reference/cbasepane-class.md#canacceptpane), z tą różnicą, że nawet jeśli nie włączono dokowania, paska Outlook można włączyć innego paska Outlook bez możliwości dokowania nad nim.  
   
 ##  <a name="cansetcaptiontexttotabname"></a>  CMFCOutlookBar::CanSetCaptionTextToTabName  
- Określa, czy podpis dla tego okienka z kartami tego samego tekstu jest wyświetlana jako aktywnej karty.  
+ Określa, czy podpisu dla okienka z zakładkami ten sam tekst jest wyświetlany jako aktywną kartę.  
   
 ```cpp  
 virtual BOOL CanSetCaptionTextToTabName() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli paska tytuł okna Outlook jest automatycznie ustawiana tekst karcie active; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli program Outlook paska tytuł okna jest automatycznie ustawiana na tekst aktywną kartę; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
  Użyj [CBaseTabbedPane::EnableSetCaptionTextToTabName](../../mfc/reference/cbasetabbedpane-class.md#enablesetcaptiontexttotabname) Aby włączyć lub wyłączyć tę funkcję.  
   
- W trybie 2003 programu Outlook to ustawienie jest zawsze włączone.  
+ W trybie Outlook 2003 to ustawienie jest zawsze włączone.  
   
 ##  <a name="create"></a>  CMFCOutlookBar::Create  
- Tworzy kontrolkę paska programu Outlook.  
+ Tworzy kontrolkę paska Outlook.  
   
 ```cpp  
 virtual BOOL Create(
@@ -257,39 +257,39 @@ virtual BOOL Create(
  Określa tytuł okna.  
   
  [in] *pParentWnd*  
- Określa wskaźnik do okna nadrzędnego. Nie może być wartością NULL.  
+ Określa wskaźnik do okna nadrzędnego. Nie może być równa NULL.  
   
  [in] *rect*  
  Określa program outlook paska rozmiar i położenie w pikselach.  
   
  [in] *nID*  
- Określa identyfikator formantu. Musi się różnić od innych kontroli identyfikatory używane w aplikacji.  
+ Określa identyfikator kontrolki. Musi się różnić od innego formantu identyfikatory używane w aplikacji.  
   
  [in] *dwStyle*  
- Określa styl paska żądanego formantu. Możliwe wartości, zobacz [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+ Określa styl paska sterowania żądaną. Możliwe wartości, zobacz [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
  [in] *dwControlBarStyle*  
- Określa specjalne style zdefiniowane w bibliotece.  
+ Określa specjalne style zdefiniowane przez bibliotekę.  
   
  [in] *pContext*  
- Tworzenie kontekstu.  
+ Utwórz kontekst.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli metoda zakończy się pomyślnie; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli metoda się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Możesz utworzyć `CMFCOutlookBar` obiektu w dwóch krokach. Pierwsze wywołanie konstruktora, a następnie wywołać `Create`, która tworzy kontrolkę paska outlook i dołącza go do `CMFCOutlookBar` obiektu.  
+ Konstruowanie `CMFCOutlookBar` obiektu w dwóch krokach. Pierwsze wywołanie konstruktora, a następnie wywołaj `Create`, która tworzy kontrolkę paska outlook i dołącza go do `CMFCOutlookBar` obiektu.  
   
- Zobacz [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) listę dostępnych style zdefiniowane biblioteki określoną przez *dwControlBarStyle*.  
+ Zobacz [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) listę dostępnych stylów zdefiniowany w bibliotece określoną przez *dwControlBarStyle*.  
   
 ### <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano sposób użycia `Create` metody `CMFCOutlookBar` klasy. Następujący fragment kodu jest częścią [próbki Outlook wielu widoków](../../visual-cpp-samples.md).  
+ Poniższy przykład pokazuje sposób użycia `Create` metody `CMFCOutlookBar` klasy. Ten fragment kodu jest częścią [przykładowy program Outlook wielu widoków](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_OutlookMultiViews#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_1.h)]  
 [!code-cpp[NVC_MFC_OutlookMultiViews#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_2.cpp)]  
   
 ##  <a name="createcustompage"></a>  CMFCOutlookBar::CreateCustomPage  
- Tworzy niestandardowe kartę pasek programu Outlook.  
+ Tworzy niestandardowej karty pasek programu Outlook.  
   
 ```cpp  
 CMFCOutlookBarPane* CreateCustomPage(
@@ -304,42 +304,42 @@ CMFCOutlookBarPane* CreateCustomPage(
  Etykieta strony.  
   
  [in] *bActivatePage*  
- Jeśli `TRUE`, strona staje się aktywny po jego utworzeniu.  
+ W przypadku opcji TRUE stronie staje się aktywny przy jej tworzeniu.  
   
  [in] *dwEnabledDocking*  
- Kombinacja flag CBRS_ALIGN_ określa włączone strony dokowania odłączeniem strony.  
+ Kombinacja flag CBRS_ALIGN_ określa włączone strony dokowania, gdy strona jest odłączona.  
   
  [in] *bEnableTextLabels*  
- Jeśli `TRUE`, etykiety są włączone w przypadku przycisków, które znajdują się na stronie.  
+ W przypadku opcji TRUE etykiety tekstowe są włączone dla przycisków, które znajdują się na stronie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do nowo utworzonej strony, lub `NULL` Jeśli tworzenie nie powiodło się.  
+ Wskaźnik do nowo utworzonej stronie, lub wartość NULL, jeśli nie można utworzyć.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj tej metody, aby użytkownicy mogli tworzyć niestandardowe strony paska programu Outlook. Możesz utworzyć maksymalnie 100 stron w aplikacji. Formant strony identyfikatorów rozpoczyna się od 0xF000. Tworzenie zakończy się niepowodzeniem, jeśli łączna liczba niestandardowe strony paska Outlook przekracza 100.  
+ Ta metoda umożliwia Zezwól użytkownikom na tworzenie niestandardowych stron pasek programu Outlook. Możesz utworzyć maksymalnie 100 stron w aplikacji. Kontrolka strony identyfikatory rozpoczynają się od 0xF000. Tworzenie zakończy się niepowodzeniem, jeśli łączna liczba stron niestandardowych paska Outlook przekracza 100.  
   
  Użyj [CMFCOutlookBar::RemoveCustomPage](#removecustompage) można usunąć strony niestandardowe.  
   
 ##  <a name="doesallowdyninsertbefore"></a>  CMFCOutlookBar::DoesAllowDynInsertBefore  
- Określa, czy użytkownik może dock okienko do zewnętrznej krawędzi paska Outlook.  
+ Określa, czy użytkownika można zadokować okienko do zewnętrznej krawędzi paska Outlook.  
   
 ```  
 DECLARE_MESSAGE_MAP virtual BOOL DoesAllowDynInsertBefore() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Domyślna implementacja zwraca `FALSE`.  
+ Domyślna implementacja zwraca wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołania framework `DoesAllowDynInsertBefore` metoda będzie szukał lokalizację do dock dynamiczne okienka. Jeśli funkcja zwraca `FALSE`, platformę nie zezwala na dokowanie wszelkie dynamiczne okienku zewnętrznej krawędzi okienka.  
+ Struktura wywołuje `DoesAllowDynInsertBefore` metody podczas wyszukiwania lokalizacji zadokować okienku dynamicznej. Jeśli funkcja zwraca wartość FALSE, struktura nie zezwala na dokowanie wszelkie dynamiczne okienku u zewnętrznych krawędzi okienka.  
   
- Zazwyczaj utworzenie paska Outlook jako statyczną kontrolkę niezmienny. Należy przesłonić tę funkcję w klasie pochodnej i zwracać `TRUE` Aby zmienić to zachowanie.  
+ Zazwyczaj należy utworzyć paska Outlook jako formant statyczny niezmienny. Można zastąpić tę funkcję w klasie pochodnej i zwraca wartość TRUE, aby zmienić to zachowanie.  
   
 > [!NOTE]
->  Ponieważ dynamiczne okienka sprawdzić stan zadokowanego okienka statycznych podczas dokowania, powinien dock dynamiczne okienka po okienka statycznych, jeśli to możliwe.  
+>  Ponieważ okienka dynamicznej sprawdzić stan zadokowanego okienka statycznego, gdy dokowania, powinien zadokować okienka dynamicznej po statyczne okienek, jeśli to możliwe.  
   
 ##  <a name="floattab"></a>  CMFCOutlookBar::FloatTab  
- Pojawia się okienko.  
+ Liczby zmiennoprzecinkowe okienko.  
   
 ```cpp  
 virtual BOOL FloatTab(
@@ -351,22 +351,22 @@ virtual BOOL FloatTab(
   
 ### <a name="parameters"></a>Parametry  
  [in] *pBar*  
- Wskaźnik do typu float w okienku.  
+ Wskaźnik do okienka na typ zmiennoprzecinkowy.  
   
  [in] *nTabID*  
- Liczony od zera indeks kartę, aby float.  
+ Liczony od zera indeks karty na typ zmiennoprzecinkowy.  
   
  [in] *dockMethod*  
- Określa metodę używaną do Dokowanie okienka.  Aby uzyskać więcej informacji, zobacz [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).  
+ Określa metodę używaną do dokowanie panelu.  Aby uzyskać więcej informacji, zobacz [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).  
   
  [in] *bHide*  
- `TRUE` Aby ukryć okienko zanim; w przeciwnym razie `FALSE`. W odróżnieniu od klasy podstawowej wersji tej metody ten parametr nie ma wartości domyślnej.  
+ Wartość TRUE, aby ukryć okienko przed liczb zmiennoprzecinkowych; w przeciwnym razie wartość FALSE. W odróżnieniu od klasy bazowej wersję tej metody ten parametr nie ma wartości domyślnej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli okienko przestawione; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli zawartość okienka przestawione; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda jest podobna [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab) z tą różnicą, że nie pozwala na karcie pozostałych ostatniego formantu paska Outlook float.  
+ Ta metoda przypomina [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab) z tą różnicą, że nie uwzględnia ostatnią kartę pozostałe w formancie paska Outlook na typ zmiennoprzecinkowy.  
   
 ##  <a name="getbuttonsfont"></a>  CMFCOutlookBar::GetButtonsFont  
  Zwraca czcionki tekstu na stronie karty przycisk paska Outlook.  
@@ -376,13 +376,13 @@ CFont* GetButtonsFont() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do obiektu czcionki, który jest używany do wyświetlania tekstu w programie Outlook pasku karty przycisku.  
+ Wskaźnik do obiektu czcionki, który jest używany do wyświetlania tekstu w programie Outlook paska kart przycisk strony.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja służy do pobierania czcionki, który służy do wyświetlania tekstu na programu Outlook przycisk karty. Czcionkę można ustawić poprzez wywołanie w [CMFCOutlookBar::SetButtonsFont](#setbuttonsfont).  
+ Ta funkcja służy do pobierania czcionka, która jest używana do wyświetlania tekstu w kartach przycisk Strona programu Outlook. Czcionkę można ustawić za pomocą wywołania na [CMFCOutlookBar::SetButtonsFont](#setbuttonsfont).  
   
 ##  <a name="gettabarea"></a>  CMFCOutlookBar::GetTabArea  
- Określa rozmiar i położenie obszarów karty na pasku Outlook.  
+ Określa rozmiar i położenie karty obszarów paska Outlook.  
   
 ```cpp  
 virtual void GetTabArea(
@@ -392,17 +392,17 @@ virtual void GetTabArea(
   
 ### <a name="parameters"></a>Parametry  
  [out] *rectTabAreaTop*  
- Po powrocie z funkcji zawiera rozmiar i położenie (we współrzędnych klienta) wartości obszar karty top.  
+ Zawiera rozmiar i położenie (we współrzędnych klienta) obszaru górnej karty, jeśli funkcja zwraca.  
   
  [out] *rectTabAreaBottom*  
- Gdy funkcja zwraca zawiera rozmiar i położenie (we współrzędnych klienta) wartości obszar karty dolnej.  
+ Zawiera rozmiar i położenie (we współrzędnych klienta) wartości obszar karty w dół, gdy funkcja zwraca.  
   
 ### <a name="remarks"></a>Uwagi  
- Struktura wywołuje tę metodę, aby określić typ Dokowanie do okienka docelowej. Platformę Określa, że użytkownik przeciąga okienko, aby być zadokowane, nad obszarem kartę okienka docelowej, próbuje do dodania pierwszego okienka jako nową kartę okienka docelowej. W przeciwnym razie próby dock pierwszego okienka w odpowiedniej strony panelu docelowego. Platformę tworzy nowy kontener z suwaka, aby zmieścił się w okienku zadokowanych dodatkowe.  
+ Struktura wywołuje tę metodę, aby określić rodzaj Dokowanie do okienka docelowego. Gdy struktura okaże się, że użytkownik przeciągnie okienko aby być zadokowane, za pośrednictwem obszaru karty w okienku docelowego, próbuje dodać pierwszego okienka jako na nowej karcie w okienku docelowego. W przeciwnym razie próbuje zadokować pierwszego okienka boku odpowiednie okienko docelowego. Szablon tworzy nowy kontener za pomocą suwaka, aby uwzględnić dodatkowe zadokowanego okienka.  
   
- Domyślna implementacja `GetTabArea` zwraca obszaru klienckiego całego paska Outlook, jeśli paska Outlook static; będący, jeśli nie float paska Outlook. W przeciwnym wypadku zwraca obszaru przycisków strony zająć się u góry i u dołu formantu paska programu Outlook.  
+ Domyślna implementacja klasy `GetTabArea` zwraca cały obszar klienta paska Outlook, jeśli pasek programu Outlook jest statyczna; będącego, jeśli pasek programu Outlook nie liczb zmiennoprzecinkowych. W przeciwnym razie zwraca obszaru przyciski strony zająć się u góry i u dołu kontrolki paska.  
   
- Należy przesłonić tę metodę w klasie pochodnej z `CMFCOutlookBar` Aby zmienić to zachowanie.  
+ Należy przesłonić tę metodę w klasie pochodnej od `CMFCOutlookBar` Aby zmienić to zachowanie.  
   
 ##  <a name="ismode2003"></a>  CMFCOutlookBar::IsMode2003  
  Określa, czy zachowanie paska Outlook naśladuje Microsoft Office Outlook 2003.  
@@ -412,13 +412,13 @@ BOOL IsMode2003() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli paska Outlook jest uruchomiony w trybie Microsoft Office 2003; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli pasek programu Outlook działa w trybie Microsoft Office 2003; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- W tym trybie można włączyć za pomocą [CMFCOutlookBar::SetMode2003](#setmode2003).  
+ Możesz włączyć ten tryb, za pomocą [CMFCOutlookBar::SetMode2003](#setmode2003).  
   
 ##  <a name="onafteranimation"></a>  CMFCOutlookBar::OnAfterAnimation  
- Wywoływane przez [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) po active karta została ustawiona przy użyciu animacji.  
+ Wywoływane przez [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) po aktywną kartę została ustawiona za pomocą animacji.  
   
 ```cpp  
 virtual void OnAfterAnimation(int nPage);
@@ -426,13 +426,13 @@ virtual void OnAfterAnimation(int nPage);
   
 ### <a name="parameters"></a>Parametry  
  [in] *nPage*  
- Liczony od zera indeks strony kartę, która ma zostać aktywowane.  
+ Liczony od zera indeks strony karty, który ma zostać aktywowane.  
   
 ### <a name="remarks"></a>Uwagi  
- Efekt ustawienia na karcie active zależy od tego, czy włączono animacji. Aby uzyskać więcej informacji, zobacz [CMFCOutlookBarTabCtrl::EnableAnimation](../../mfc/reference/cmfcoutlookbartabctrl-class.md#enableanimation).  
+ Efekt wizualny ustawienia aktywnej karcie zależy od tego, czy włączono animacji. Aby uzyskać więcej informacji, zobacz [CMFCOutlookBarTabCtrl::EnableAnimation](../../mfc/reference/cmfcoutlookbartabctrl-class.md#enableanimation).  
   
 ##  <a name="onbeforeanimation"></a>  CMFCOutlookBar::OnBeforeAnimation  
- Wywoływane przez [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) przed karty zostanie ustawiona jako aktywnej karty przy użyciu animacji.  
+ Wywoływane przez [CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) przed karta zostanie ustawiona jako aktywną kartę za pomocą animacji.  
   
 ```cpp  
 virtual BOOL OnBeforeAnimation(int nPage);
@@ -443,12 +443,12 @@ virtual BOOL OnBeforeAnimation(int nPage);
  Liczony od zera indeks strony karty, który ma aktywne.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca `TRUE` czy animacja powinna być używana w karcie active nowe ustawienie lub `FALSE` czy animacja powinna być wyłączona.  
+ Zwraca wartość TRUE, jeśli animacje powinny być używane w nowej karcie aktywne ustawienia, lub FAŁSZ, jeśli animacja powinna być wyłączona.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onscroll"></a>  CMFCOutlookBar::OnScroll  
- Wywoływane przez platformę, gdy pasek Outlook jest przewijania w górę lub w dół.  
+ Wywoływane przez platformę, gdy pasek programu Outlook jest przewijanie w górę lub w dół.  
   
 ```cpp  
 virtual void OnScroll(BOOL bDown);
@@ -456,12 +456,12 @@ virtual void OnScroll(BOOL bDown);
   
 ### <a name="parameters"></a>Parametry  
  [in] *bDown*  
- `TRUE` Jeśli pasek Outlook jest przewijania w dół, lub `FALSE` Jeśli jest przewijanie w górę.  
+ Wartość TRUE, jeśli pasek programu Outlook jest przewinięcie w dół, lub FAŁSZ, jeśli jest przewijanie w górę.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="removecustompage"></a>  CMFCOutlookBar::RemoveCustomPage  
- Usuwa niestandardowe strony karty paska programu Outlook.  
+ Usuwa niestandardowej strony karty pasek programu Outlook.  
   
 ```cpp  
 BOOL RemoveCustomPage(
@@ -477,12 +477,12 @@ BOOL RemoveCustomPage(
  Pointerto okno nadrzędne programu Outlook.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli niestandardowej strony zostało usunięte pomyślnie; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli niestandardowy strona została usunięta pomyślnie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie tej funkcji można usunąć strony niestandardowe. Po usunięciu stronie jego identyfikator formantu jest zwracana do puli dostępnych identyfikatorów.  
+ Wywołaj tę funkcję można usunąć strony niestandardowe. Gdy strona zostaje usunięta jego identyfikator kontrolki są zwracane do puli dostępnych identyfikatorów.  
   
- Należy podać wskaźnik do [klasy CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md) obiekt, w którym znajduje się strony, aby można obecnie usunąć. Należy pamiętać, że odłączane stron dla użytkownika mogą być przenoszone między różnych pasków programu Outlook, ale informacje o niestandardowej strony znajduje się w obiekcie pasek programu Outlook, dla której wywołano [CMFCOutlookBar::CreateCustomPage](#createcustompage).  
+ Należy podać wskaźnik do [klasa CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md) obiekt, w którym znajduje się Strona ma zostać usunięty obecnie. Należy pamiętać, że odłączane stron dla użytkownika mogą być przenoszone między różne słupki programu Outlook, ale informacje o niestandardowej strony znajduje się w obiekcie pasek programu Outlook, dla którego należy wywoływana [CMFCOutlookBar::CreateCustomPage](#createcustompage).  
   
  Użyj [CBaseTabbedPane::GetUnderlyingWindow](../../mfc/reference/cbasetabbedpane-class.md#getunderlyingwindow) uzyskać wskaźnik do okna programu Outlook.  
   
@@ -497,13 +497,13 @@ void SetButtonsFont(
   
 ### <a name="parameters"></a>Parametry  
  [in] *pFont*  
- Określa czcionkę nowego.  
+ Określa czcionkę nowe.  
   
  [in] *bRedraw*  
- Jeśli `TRUE`, zostanie narysowany ponownie na pasku programu Outlook.  
+ W przypadku opcji TRUE pasek programu Outlook zostanie narysowany ponownie.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda umożliwia Ustaw czcionkę dla tekstu wyświetlanego na przycisków strony karty programu outlook.  
+ Ta metoda umożliwia ustawianie czcionki dla tekstu wyświetlanego na przyciskach strony karty programu outlook.  
   
 ##  <a name="setmode2003"></a>  CMFCOutlookBar::SetMode2003  
  Określa, czy zachowanie paska Outlook naśladuje Outlook 2003.  
@@ -514,12 +514,12 @@ void SetMode2003(BOOL bMode2003=TRUE);
   
 ### <a name="parameters"></a>Parametry  
  [in] *bMode2003*  
- Jeśli PRAWDA, jest włączony tryb pakietu Office 2003.  
+ W przypadku opcji TRUE jest włączony tryb Office 2003.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj tej funkcji, aby włączyć lub wyłączyć tryb pakietu Office 2003. W tym trybie paska Outlook ma dodatkowych narzędzi z przycisku dostosowywania. Zachowanie paska Outlook jest zgodna z zachowaniem paska Outlook pakietu Microsoft Office 2003.  
+ Aby włączyć lub wyłączyć tryb Office 2003, należy użyć tej funkcji. W tym trybie paska Outlook zawiera dodatkowych narzędzi, za pomocą przycisku dostosowywania. Zachowanie paska Outlook jest zgodny z zachowaniem paska Outlook, Microsoft Office 2003.  
   
- Ten tryb jest domyślnie wyłączona.  
+ Domyślnie ten tryb jest wyłączona.  
   
 > [!NOTE]
 >  Ta funkcja musi zostać wywołana przed [CMFCOutlookBar::Create](#create).  

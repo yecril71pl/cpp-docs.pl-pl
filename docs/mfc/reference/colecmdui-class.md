@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c80c3b81b804a66e70efe9269b12d4e18d31c676
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 9b057620e0ea348559b9c37f55ba7658b7f5270c
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040717"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851486"
 ---
 # <a name="colecmdui-class"></a>Klasa COleCmdUI
-Implementuje metodę MFC zaktualizować stan obiektów interfejsu użytkownika związane z `IOleCommandTarget`-driven funkcji aplikacji.  
+Implementuje metodę dla MFC zaktualizować stan obiektów interfejsu użytkownika związane z `IOleCommandTarget`-driven funkcje aplikacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -52,19 +52,19 @@ class COleCmdUI : public CCmdUI
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[COleCmdUI::Enable](#enable)|Ustawia lub usuwa flagę polecenia enable.|  
-|[COleCmdUI::SetCheck](#setcheck)|Ustawia stan przełącznika/Wyłącz polecenia.|  
-|[COleCmdUI::SetText](#settext)|Zwraca ciąg nazwy lub stan tekstu polecenia.|  
+|[COleCmdUI::Enable](#enable)|Ustawia lub czyści flagi polecenie Włącz.|  
+|[COleCmdUI::SetCheck](#setcheck)|Ustawia stan wł. / wył. przełącznik polecenia.|  
+|[COleCmdUI::SetText](#settext)|Zwraca nazwę lub stan ciąg tekstowy dla polecenia.|  
   
 ## <a name="remarks"></a>Uwagi  
- W aplikacji, która nie jest włączona dla DocObjects, gdy użytkownik wyświetla menu w aplikacji MFC procesów **UPDATE_COMMAND_UI** powiadomień według. Każdy powiadomienia [CCmdUI](../../mfc/reference/ccmdui-class.md) obiekt, który można manipulować w celu odzwierciedlenia stanu określonego polecenia. Jednak po włączeniu aplikacji dla DocObjects przetwarza MFC **UPDATE_OLE_COMMAND_UI** powiadomień i przypisuje `COleCmdUI` obiektów.  
+ W aplikacji, który nie włączono DocObjects, kiedy widoki użytkowników w menu w aplikacji MFC przetwarza UPDATE_COMMAND_UI powiadomień według. Każdego powiadomienia [CCmdUI](../../mfc/reference/ccmdui-class.md) obiekt, który można manipulować w celu odzwierciedlenia stanu określonego polecenia. Jednak jeśli aplikacja została włączona dla DocObjects, MFC przetwarza UPDATE_OLE_COMMAND_UI powiadomienia i przypisuje `COleCmdUI` obiektów.  
   
- `COleCmdUI` Umożliwia DocObject do odbierania poleceń, które pochodzą z jego kontenera interfejsu użytkownika (na przykład nowy plik, Otwórz, drukowania i tak dalej) i pozwala kontener służący do odbierania poleceń, które pochodzą z DocObject interfejsu użytkownika. Mimo że `IDispatch` może służyć do wysyłania tych samych poleceń `IOleCommandTarget` zapewnia prostszy sposób wykonywania zapytań i wykonać operacji, ponieważ zależy od standardowy zestaw poleceń, zazwyczaj bez argumentów, a uczestniczy bez informacji o typach. `COleCmdUI` można włączyć, zaktualizowania i ustawić inne właściwości polecenia interfejsu użytkownika DocObject. Do wywołania polecenia, należy wywołać [COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd).  
+ `COleCmdUI` zezwala na DocObject w celu odbierania poleceń, które pochodzą z jego kontenerem interfejsu użytkownika (na przykład nowy plik, Otwórz, drukowania i tak dalej) i umożliwia kontenera w celu odbierania poleceń, które pochodzą z interfejsu użytkownika DocObject. Mimo że `IDispatch` może służyć do wysyłania tych samych poleceń `IOleCommandTarget` zapewnia prostszy sposób wykonywania zapytań i wykonać operacji, ponieważ opiera się na zestaw standardowych poleceń, zwykle bez argumentów, i jest używana nie informacji o typie. `COleCmdUI` można włączyć, aktualizowanie i ustawić inne właściwości polecenia interfejsu użytkownika DocObject. Jeśli chcesz wywołać polecenie wywołania [COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd).  
   
- Aby uzyskać więcej informacji o DocObjects zobacz [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) i [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md). Zobacz też [pierwsze kroki Internet: dokumenty aktywne](../../mfc/active-documents-on-the-internet.md) i [dokumenty aktywne](../../mfc/active-documents-on-the-internet.md).  
+ Aby uzyskać więcej informacji na temat DocObjects zobacz [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) i [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md). Zobacz też [Internet pierwszych kroków: dokumenty aktywne](../../mfc/active-documents-on-the-internet.md) i [dokumenty aktywne](../../mfc/active-documents-on-the-internet.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
- [Ccmdui —](../../mfc/reference/ccmdui-class.md)  
+ [CCmdUI](../../mfc/reference/ccmdui-class.md)  
   
  `COleCmdUI`  
   
@@ -83,30 +83,30 @@ COleCmdUI(
   
 ### <a name="parameters"></a>Parametry  
  *rgCmds*  
- Listę obsługiwanych poleceń skojarzone z danym identyfikatorem GUID. **OLECMD** struktury kojarzy poleceń z flagami polecenia.  
+ Listę obsługiwanych poleceń skojarzone z danym identyfikatorem GUID. `OLECMD` Struktury kojarzy poleceń przy użyciu flag poleceń.  
   
  *cCmds*  
  Liczba poleceń w *rgCmds*.  
   
  *pGroup*  
- Wskaźnik do identyfikatora GUID, który identyfikuje zestaw poleceń.  
+ Wskaźnik na identyfikator GUID, który identyfikuje zestaw poleceń.  
   
 ### <a name="remarks"></a>Uwagi  
- `COleCmdUI` Obiektu zapewnia interfejs programistyczny aktualizowanie obiektów interfejsu użytkownika DocObject, takich jak elementy menu lub przycisków pasek sterowania. Obiekty interfejsu użytkownika można być włączone, wyłączone, zaznaczone i/lub wyczyszczone za pośrednictwem `COleCmdUI` obiektu.  
+ `COleCmdUI` Obiekt zapewnia interfejs programistyczny dla aktualizowanie obiektów interfejsu użytkownika DocObject, np. w menu i przycisków paska sterowania. Obiekty interfejsu użytkownika może być włączone, wyłączone, zaznaczone i/lub wyczyszczone za pośrednictwem `COleCmdUI` obiektu.  
   
 ##  <a name="enable"></a>  COleCmdUI::Enable  
- Wywołanie tej funkcji, aby ustawić flagę polecenia `COleCmdUI` do obiektu **OLECOMDF_ENABLED**, który informuje interfejsu polecenie jest dostępna i włączona, lub Wyczyść flagę polecenia.  
+ Wywołaj tę funkcję, należy ustawić flagę polecenia `COleCmdUI` obiektu OLECOMDF_ENABLED, która informuje o tym interfejsie polecenie jest dostępna i włączona, lub Wyczyść flagę polecenia.  
   
 ```  
 virtual void Enable(BOOL bOn);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *bW*  
- Wskazuje, czy polecenie skojarzone z `COleCmdUI` obiektu powinny być włączone lub wyłączone. NonZero włącza polecenie; 0 wyłącza polecenie.  
+ *bOn*  
+ Wskazuje, czy polecenie skojarzone z `COleCmdUI` obiektów, które powinny być włączone lub wyłączone. NonZero umożliwia polecenie. 0 wyłącza polecenie.  
   
 ##  <a name="setcheck"></a>  COleCmdUI::SetCheck  
- Wywołanie tej funkcji można ustawić stanu przełącznika/Wyłącz polecenia.  
+ Wywołaj tę funkcję, aby ustawić stan włączenia/wyłączenia Przełącz polecenia.  
   
 ```  
 virtual void SetCheck(int nCheck);
@@ -114,16 +114,16 @@ virtual void SetCheck(int nCheck);
   
 ### <a name="parameters"></a>Parametry  
  *nSprawdź*  
- Określanie stanu można ustawić lub wyłącza przełączanie wartość polecenia. Dostępne są następujące wartości:  
+ Wartość określająca stan używany do ustawiania wł. / wył. przełącznik polecenia. Dostępne są następujące wartości:  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|**1**|Ustawia na polecenie.|  
-|**2**|Ustawia polecenie nieokreślony; Nie można określić stanu, ponieważ ten atrybut to polecenie jest zarówno i wyłączanie stanów w wyborze odpowiednich.|  
-|Dowolna inna wartość|Ustawia polecenia wyłączone.|  
+|**1**|Ustawia na polecenia.|  
+|**2**|Ustawia polecenia nieokreślony; Nie można ustalić stanu, ponieważ atrybut tego polecenia jest zarówno i wyłączanie stanów w odpowiedni wybór.|  
+|Dowolna inna wartość|Określa polecenie, aby wyłączyć.|  
   
 ##  <a name="settext"></a>  COleCmdUI::SetText  
- Wywołanie tej funkcji, aby zwrócić nazwę lub stan ciąg tekstowy dla polecenia.  
+ Wywołaj tę funkcję, aby zwrócić nazwę lub stan ciąg tekstowy dla polecenia.  
   
 ```  
 virtual void SetText(LPCTSTR lpszText);
@@ -131,10 +131,10 @@ virtual void SetText(LPCTSTR lpszText);
   
 ### <a name="parameters"></a>Parametry  
  *lpszText*  
- Wskaźnik do tekst, który ma być używany z poleceniem.  
+ Wskaźnik na tekst, który ma być używany z poleceniem.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Ccmdui — klasa](../../mfc/reference/ccmdui-class.md)   
+ [Klasa CCmdUI](../../mfc/reference/ccmdui-class.md)   
  [Wykres hierarchii](../../mfc/hierarchy-chart.md)
 
 

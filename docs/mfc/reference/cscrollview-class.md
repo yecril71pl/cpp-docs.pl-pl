@@ -38,15 +38,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b480ee1118551b09c705fb4f79f8a50c0a1f895
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 43ad1d1d047b9e44da27d1c9eb24dde39fd429ef
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079570"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849919"
 ---
 # <a name="cscrollview-class"></a>Klasa CScrollView
-A [CView](../../mfc/reference/cview-class.md) dzięki możliwości.  
+A [CView](../../mfc/reference/cview-class.md) z możliwościami przewijania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -66,51 +66,51 @@ class CScrollView : public CView
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CScrollView::CheckScrollBars](#checkscrollbars)|Wskazuje, czy widok przewijania paski przewijania w poziomie i w pionie.|  
+|[CScrollView::CheckScrollBars](#checkscrollbars)|Wskazuje, czy widok przewijania, ma poziome i pionowe paski przewijania.|  
 |[CScrollView::FillOutsideRect](#filloutsiderect)|Wypełnia obszar poza obszarem przewijania widoku.|  
-|[CScrollView::GetDeviceScrollPosition](#getdevicescrollposition)|Pobiera bieżące położenie przewijania w jednostkach urządzenia.|  
-|[CScrollView::GetDeviceScrollSizes](#getdevicescrollsizes)|Pobiera bieżący tryb mapowania, łączny rozmiar i rozmiary wiersza i strony przewijanego widoku. Rozmiary są w jednostkach urządzenia.|  
-|[CScrollView::GetScrollPosition](#getscrollposition)|Pobiera bieżące położenie przewijania w jednostkach logicznych.|  
+|[CScrollView::GetDeviceScrollPosition](#getdevicescrollposition)|Pobiera bieżącą pozycję przewijania w jednostkach urządzenia.|  
+|[CScrollView::GetDeviceScrollSizes](#getdevicescrollsizes)|Pobiera bieżący tryb mapowania, całkowity rozmiar i rozmiary wiersza i strony przewijany widoku. Rozmiary są w jednostkach urządzenia.|  
+|[CScrollView::GetScrollPosition](#getscrollposition)|Pobiera bieżącą pozycję przewijania w jednostkach logicznych.|  
 |[CScrollView::GetTotalSize](#gettotalsize)|Pobiera całkowity rozmiar widoku przewijania w jednostkach logicznych.|  
 |[CScrollView::ResizeParentToFit](#resizeparenttofit)|Powoduje, że rozmiar widoku dyktowania rozmiar ramki.|  
-|[CScrollView::ScrollToPosition](#scrolltoposition)|Przewija widok do danego punktu, określona w jednostkach logicznych.|  
-|[CScrollView::SetScaleToFitSize](#setscaletofitsize)|Umieszcza przewijania widoku w trybie skalowanie do dopasowania.|  
-|[CScrollView::SetScrollSizes](#setscrollsizes)|Ustawia tryb mapowania widoku przewijania, łączny rozmiar i kwoty przewijania w poziomie i w pionie.|  
+|[CScrollView::ScrollToPosition](#scrolltoposition)|Przewija widok do danego punktu, określonego w jednostkach logicznych.|  
+|[CScrollView::SetScaleToFitSize](#setscaletofitsize)|Umieszcza widok przewijania z trybu skalowania do dopasowania.|  
+|[CScrollView::SetScrollSizes](#setscrollsizes)|Ustawia tryb mapowania widoku przewijania, całkowity rozmiar i poziome i pionowe przewijanie kwoty.|  
   
 ## <a name="remarks"></a>Uwagi  
- Można obsługiwać standard przewijanie samodzielnie w dowolnej klasy pochodne `CView` przez zastąpienie mapowanych komunikat [OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) i [OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll) funkcji elementów członkowskich. Ale `CScrollView` dodaje następujące funkcje do jego `CView` możliwości:  
+ Może obsługiwać standard przewijanie samodzielnie w dowolnej klasie pochodnej `CView` przez zastąpienie mapowanych komunikat [OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) i [OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll) funkcji elementów członkowskich. Ale `CScrollView` dodaje następujące funkcje, aby jego `CView` możliwości:  
   
--   Zarządza rozmiarów okna i okienka ekranu i tryby mapowania.  
+-   Zarządza tryby mapowania i rozmiary okna i okienka ekranu.  
   
 -   Automatycznie przewija w odpowiedzi na komunikaty paska przewijania.  
   
--   Automatycznie przewija w odpowiedzi na wiadomości z klawiatury, bez przewijania myszy i kółka myszy IntelliMouse.  
+-   Automatycznie przewija w odpowiedzi na wiadomości z klawiatury, myszy bez przewijania lub kółka myszy IntelliMouse.  
   
- Aby przewijać automatycznie w odpowiedzi na wiadomości z klawiatury, Dodaj komunikat WM_KEYDOWN i przetestowania VK_DOWN, VK_PREV i wywołanie [SetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787597).  
+ Automatyczne przewijanie w odpowiedzi na wiadomości przy użyciu klawiatury, Dodaj przetłumaczyła komunikat i przetestować VK_DOWN, VK_PREV i wywołania [SetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787597).  
   
- Może obsłużyć kółka myszy przewijanie się przez zastąpienie mapowanych komunikat [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) i [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) funkcji elementów członkowskich. Jak w przypadku `CScrollView`, zalecane zachowania obsługuje te funkcje Członkowskie [WM_MOUSEWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645617), komunikat obrotu kółka.  
+ Może obsługiwać obrót kółkiem myszy do przewijania samodzielnie przez zastąpienie mapowanych komunikat [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) i [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) funkcji elementów członkowskich. Są one dla `CScrollView`, te funkcje elementów członkowskich obsługuje zalecane zachowania [WM_MOUSEWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645617), komunikat obrót kółkiem.  
   
- Aby skorzystać z automatycznego przewijania, pochodzi z klasy widoku `CScrollView` zamiast z `CView`. Widok najpierw utworzenia, aby obliczyć rozmiar przewijanego widok, w oparciu o rozmiar dokumentu, wywołanie `SetScrollSizes` funkcji członkowskiej z zastąpienia albo [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) lub [ CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (Musi pisania kodu do badania rozmiar dokumentu. Na przykład zobacz [próbki bazgrołów](../../visual-cpp-samples.md).)  
+ Można skorzystać z automatycznego przewijania, pochodzi z klasy widoku `CScrollView` zamiast z `CView`. Widok najpierw utworzenia, aby obliczyć rozmiar przewijany widok, w zależności od rozmiaru dokumentu, wywołanie `SetScrollSizes` funkcji składowej z przesłonięcia albo [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) lub [ CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (Należy napisać własny kod do wykonywania zapytań rozmiar dokumentu. Aby uzyskać przykład, zobacz [próbki Bazgroły](../../visual-cpp-samples.md).)  
   
- Wywołanie `SetScrollSizes` funkcji członkowskiej Ustawia tryb mapowania widoku, całkowita liczba wymiarów widoku przewijania i kwoty przewijanie w poziomie i w pionie. Wszystkie rozmiary są w jednostkach logicznych. Rozmiar logiczny widoku zwykle jest obliczana na podstawie danych przechowywanych w dokumencie, ale w niektórych przypadkach możesz określić o stałym rozmiarze. Przykłady z obu metod można znaleźć [CScrollView::SetScrollSizes](#setscrollsizes).  
+ Wywołanie `SetScrollSizes` funkcja elementu członkowskiego Ustawia tryb mapowania tego widoku, łączna liczba wymiarów w widoku przewijania i kwoty, aby przewijać w poziomie i w pionie. Wszystkie rozmiary są w jednostkach logicznych. Rozmiar logiczny widoku zwykle jest obliczana na podstawie danych przechowywanych w dokumencie, ale w niektórych przypadkach możesz chcieć określić stały rozmiar. Aby zapoznać się z przykładami w obu przypadkach efekt, zobacz [CScrollView::SetScrollSizes](#setscrollsizes).  
   
- Należy określić ilości przewijanie w poziomie i w pionie w jednostkach logicznych. Domyślnie, gdy użytkownik kliknie wale paska przewijania, poza pole przewijania `CScrollView` Przewija "page". Jeśli użytkownik kliknie strzałkę przewijania na końcu paska przewijania, `CScrollView` Przewija "wiersz". Domyślnie strony jest 1/10 całkowitego rozmiaru widoku. wiersz jest 1/10 rozmiaru strony. Zastąp te wartości domyślne przez przekazanie rozmiarów niestandardowych w `SetScrollSizes` funkcję elementu członkowskiego. Na przykład może ustawienie rozmiaru na poziomie niektórych część szerokość całkowity rozmiar i pionowe rozmiaru wysokość wiersza w bieżącej czcionki.  
+ Należy określić kwoty, aby przewijać w poziomie i w pionie w jednostkach logicznych. Domyślnie, jeśli użytkownik kliknie wałka paska przewijania, poza pole przewijania `CScrollView` Przewija "page". Jeśli użytkownik kliknie przycisk strzałki przewijania na końcu paska przewijania, `CScrollView` Przewija "wiersz". Domyślnie strona jest 1/10 całkowitego rozmiaru widoku. wiersz jest 1/10 rozmiaru strony. Zastąp te wartości domyślne, przekazując rozmiary niestandardowe w `SetScrollSizes` funkcja elementu członkowskiego. Na przykład możesz ustawić poziomy rozmiar do końcowej szerokości całkowity rozmiar i pionowy rozmiar, aby wysokość wiersza w bieżącej czcionki.  
   
- Zamiast przewijania, `CScrollView` może automatycznie skalować widoku do bieżącego rozmiaru okna. W tym trybie widoku nie ma pasków przewijania i widok logiczny jest rozciągany tak, lub zmniejszyć, aby dokładnie dopasować obszaru klienckiego okna. Aby używać tej możliwości skalowania do dopasowania, należy wywołać [CScrollView::SetScaleToFitSize](#setscaletofitsize). (Wywołania albo `SetScaleToFitSize` lub `SetScrollSizes`, ale nie oba.)  
+ Zamiast przewijanie, `CScrollView` może automatycznie skalować widok, aby bieżący rozmiar okna. W tym trybie widoku nie ma pasków przewijania i widok logiczny jest rozciągany lub zmniejszyć, aby dokładnie dopasować obszaru klienckiego okna. Aby używać tej funkcji skalowania do dopasowania, należy wywołać [CScrollView::SetScaleToFitSize](#setscaletofitsize). (Wywołania albo `SetScaleToFitSize` lub `SetScrollSizes`, ale nie oba jednocześnie.)  
   
- Przed `OnDraw` po wywołaniu funkcji członkowskiej klasy pochodnej widoku `CScrollView` automatycznie dopasowuje początek okienka ekranu dla `CPaintDC` obiektu kontekstu urządzenia, przesyłanego do `OnDraw`.  
+ Przed `OnDraw` funkcji składowej klasy pochodnej widoku jest wywoływany, `CScrollView` automatycznie dostosowuje okienka ekranu początkowego `CPaintDC` obiekt kontekstu urządzenia, który przejdzie do `OnDraw`.  
   
- Aby dostosować okienka ekranu początkowego okno przewijania `CScrollView` zastępuje [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc). To dopasowanie jest automatyczne dla `CPaintDC` kontekstu urządzenia który `CScrollView` przekazuje do `OnDraw`, ale należy wywołać `CScrollView::OnPrepareDC` samodzielnie dla innych kontekstach urządzenia używasz, takich jak `CClientDC`. Można zastąpić `CScrollView::OnPrepareDC` ustawić pióra, kolor tła i inne atrybuty rysowania, ale Wywołaj klasę bazową do skalowania.  
+ Aby dopasować pochodzenia okienka ekranu okna przewijania `CScrollView` zastępuje [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc). To dopasowanie jest automatyczny dla `CPaintDC` kontekstu urządzenia, `CScrollView` przekazuje do `OnDraw`, ale należy wywołać `CScrollView::OnPrepareDC` samodzielnie dla innych kontekstach urządzenia używasz, takie jak `CClientDC`. Można zastąpić `CScrollView::OnPrepareDC` zestawu pióra, kolor tła i inne atrybuty rysowania, ale wywołanie klasy bazowej w celu skalowania.  
   
  Paski przewijania mogą być wyświetlane w trzech miejscach względem widoku, jak pokazano w następujących przypadkach:  
   
--   Paski przewijania standardowe styl okna można ustawić dla widoku za pomocą **ws_hscroll —** i **ws_vscroll —**[style Windows](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+-   Styl okna standardowych pasków przewijania mogą być ustawiane dla widoku przy użyciu WS_HSCROLL i WS_VSCROLL[style Windows](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
--   Formanty paska przewijania można również dodać do ramki zawierający widok, przesyła dalej przypadku platformę `WM_HSCROLL` i `WM_VSCROLL` komunikaty z ramkę okna do aktualnie aktywnego widoku.  
+-   Formanty paska przewijania mogą być również dodawane do ramki, zawierający widok, w tym przypadku ramach przekazuje WM_HSCROLL i WM_VSCROLL wiadomości z oknem ramki do aktualnie aktywnego widoku.  
   
--   Platformę również przekazuje przewiń komunikaty z `CSplitterWnd` splitter — formant (Widok) w okienku podziału obecnie aktywne. Po umieszczeniu w [CSplitterWnd](../../mfc/reference/csplitterwnd-class.md) pasków przewijania udostępnionego `CScrollView` obiektu będzie używać udostępnionego te zamiast tworzenia własnego.  
+-   Struktura również przekazuje przewiń wiadomości z `CSplitterWnd` Splitter — formant do okienka aktualnie aktywnego rozdzielacza (view). Po umieszczeniu w [CSplitterWnd](../../mfc/reference/csplitterwnd-class.md) pasków przewijania udostępnionego `CScrollView` obiektu będzie używać udostępnionego te zamiast tworzenia własnej.  
   
- Aby uzyskać więcej informacji na temat używania `CScrollView`, zobacz [architektury dokument/widok](../../mfc/document-view-architecture.md) i [pochodnych widoku klasy dostępne w MFC](../../mfc/derived-view-classes-available-in-mfc.md).  
+ Aby uzyskać więcej informacji na temat korzystania z `CScrollView`, zobacz [architektury dokument/widok](../../mfc/document-view-architecture.md) i [pochodne Widok klas dostępne w MFC](../../mfc/derived-view-classes-available-in-mfc.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -119,7 +119,7 @@ class CScrollView : public CView
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [Cview —](../../mfc/reference/cview-class.md)  
+ [CView](../../mfc/reference/cview-class.md)  
   
  `CScrollView`  
   
@@ -127,7 +127,7 @@ class CScrollView : public CView
  **Nagłówek:** afxwin.h  
   
 ##  <a name="checkscrollbars"></a>  CScrollView::CheckScrollBars  
- Wywołanie tej funkcji Członkowskich, aby określić, czy poziome i pionowe paski przewijania widoku.  
+ Wywołaj tę funkcję elementu członkowskiego, aby ustalić, czy poziome i pionowe paski przewijania widoku.  
   
 ```  
 void CheckScrollBars(
@@ -153,7 +153,7 @@ CScrollView();
  Należy wywołać `SetScrollSizes` lub `SetScaleToFitSize` przed przewijania widoku są wykorzystywane.  
   
 ##  <a name="filloutsiderect"></a>  CScrollView::FillOutsideRect  
- Wywołanie `FillOutsideRect` aby wypełnił obszar widoku, który pojawi się poza obszarem przewijania.  
+ Wywołaj `FillOutsideRect` aby wypełnił obszar widoku, który pojawia się poza przewijanym obszarze.  
   
 ```  
 void FillOutsideRect(
@@ -169,13 +169,13 @@ void FillOutsideRect(
  Pędzel, z którym ma zostać wypełniony obszaru.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj `FillOutsideRect` w danym widoku przewijania `OnEraseBkgnd` funkcji obsługi, aby uniknąć nadmiernego tła ponownego rysowania.  
+ Użyj `FillOutsideRect` w widoku przewijania `OnEraseBkgnd` funkcji obsługi, aby uniknąć nadmiernego tła odświeżenie.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#164](../../mfc/codesnippet/cpp/cscrollview-class_1.cpp)]  
   
 ##  <a name="getdevicescrollposition"></a>  CScrollView::GetDeviceScrollPosition  
- Wywołanie `GetDeviceScrollPosition` potrzebne bieżącym poziomie i w pionie położenie pola przewijania pasków przewijania.  
+ Wywołaj `GetDeviceScrollPosition` gdy będziesz potrzebować bieżącego poziome i pionowe położenia okna przewijania w paski przewijania.  
   
 ```  
 CPoint GetDeviceScrollPosition() const;  
@@ -185,12 +185,12 @@ CPoint GetDeviceScrollPosition() const;
  Położenie poziome i pionowe (w jednostkach urządzenia) pola przewijania jako `CPoint` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Tej pary współrzędnych odnosi się do lokalizacji w dokumencie, do którego zostały przewijane lewego górnego rogu widoku. Jest to przydatne dla przesunięcie pozycji myszy urządzenia do położenia urządzenia przewijania widoku.  
+ Ta para współrzędnych odnosi się do lokalizacji w dokumencie, do którego został przewijane w lewym górnym rogu widoku. Ułatwia to przesunięcie pozycji urządzenie myszy w widoku przewijania urządzenia miejsca.  
   
- `GetDeviceScrollPosition` Zwraca wartości w jednostkach urządzenia. Jednostki logiczne, należy użyć `GetScrollPosition` zamiast tego.  
+ `GetDeviceScrollPosition` Zwraca wartości w jednostkach urządzenia. Jeśli chcesz, aby jednostki logiczne, użyj `GetScrollPosition` zamiast tego.  
   
 ##  <a name="getdevicescrollsizes"></a>  CScrollView::GetDeviceScrollSizes  
- `GetDeviceScrollSizes` pobiera bieżący tryb mapowania, łączny rozmiar i rozmiary wiersza i strony przewijanego widoku.  
+ `GetDeviceScrollSizes` pobiera bieżący tryb mapowania, całkowity rozmiar i rozmiary wiersza i strony przewijany widoku.  
   
 ```  
 void GetDeviceScrollSizes(
@@ -208,16 +208,16 @@ void GetDeviceScrollSizes(
  Zwraca bieżący łączny rozmiar widoku przewijania w jednostkach urządzenia.  
   
  *sizePage*  
- Zwraca bieżący kwoty poziome i pionowe przewijanie w każdym kierunku w odpowiedzi na myszy kliknij wale paska przewijania. **Cx** elementu członkowskiego zawiera kwotę poziomej. **Cy** elementu członkowskiego zawiera kwotę pionowej.  
+ Zwraca bieżący kwoty poziome i pionowe do przewijania w każdym kierunku w odpowiedzi na myszy kliknij wałka paska przewijania. `cx` Elementu członkowskiego zawiera poziomy kwotę. `cy` Elementu członkowskiego zawiera kwotę pionowy.  
   
  *sizeLine*  
- Zwraca bieżący kwoty poziome i pionowe przewijanie w każdym kierunku w odpowiedzi na myszy, kliknij strzałkę przewijania. **Cx** elementu członkowskiego zawiera kwotę poziomej. **Cy** elementu członkowskiego zawiera kwotę pionowej.  
+ Zwraca bieżący kwoty poziome i pionowe do przewijania w każdym kierunku w odpowiedzi na myszy kliknij strzałki przewijania. `cx` Elementu członkowskiego zawiera poziomy kwotę. `cy` Elementu członkowskiego zawiera kwotę pionowy.  
   
 ### <a name="remarks"></a>Uwagi  
- Rozmiary są w jednostkach urządzenia. Ta funkcja elementu członkowskiego rzadko jest wywoływana.  
+ Rozmiary są w jednostkach urządzenia. Ta funkcja elementu członkowskiego rzadko są wywoływane.  
   
 ##  <a name="getscrollposition"></a>  CScrollView::GetScrollPosition  
- Wywołanie `GetScrollPosition` potrzebne bieżącym poziomie i w pionie położenie pola przewijania pasków przewijania.  
+ Wywołaj `GetScrollPosition` gdy będziesz potrzebować bieżącego poziome i pionowe położenia okna przewijania w paski przewijania.  
   
 ```  
 CPoint GetScrollPosition() const;  
@@ -227,22 +227,22 @@ CPoint GetScrollPosition() const;
  Położenie poziome i pionowe (w jednostkach logicznych) pola przewijania jako `CPoint` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Tej pary współrzędnych odnosi się do lokalizacji w dokumencie, do którego zostały przewijane lewego górnego rogu widoku.  
+ Ta para współrzędnych odnosi się do lokalizacji w dokumencie, do którego został przewijane w lewym górnym rogu widoku.  
   
- `GetScrollPosition` Zwraca wartości w jednostkach logicznych. Jednostki urządzenia, należy użyć `GetDeviceScrollPosition` zamiast tego.  
+ `GetScrollPosition` Zwraca wartości w jednostkach logicznych. Jeśli jednostki urządzenia, należy użyć `GetDeviceScrollPosition` zamiast tego.  
   
 ##  <a name="gettotalsize"></a>  CScrollView::GetTotalSize  
- Wywołanie `GetTotalSize` można pobrać bieżącego rozmiary poziome i pionowe przewijania widoku.  
+ Wywołaj `GetTotalSize` można pobrać bieżących rozmiarach poziome i pionowe widoku przewijania.  
   
 ```  
 CSize GetTotalSize() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Całkowity rozmiar widoku przewijania w jednostkach logicznych. Poziomy rozmiar jest **cx** członkiem `CSize` zwracają wartość. Jest pionowy rozmiar **cy** elementu członkowskiego.  
+ Całkowity rozmiar widoku przewijania w jednostkach logicznych. Trwa rozmiar poziomy `cx` członkiem `CSize` zwracają wartość. Trwa pionowy rozmiar `cy` elementu członkowskiego.  
   
 ##  <a name="resizeparenttofit"></a>  CScrollView::ResizeParentToFit  
- Wywołanie `ResizeParentToFit` aby umożliwić rozmiar widoku dyktowania rozmiar ramki okna.  
+ Wywołaj `ResizeParentToFit` umożliwiające rozmiar widoku dyktowanie rozmiar okna ramki.  
   
 ```  
 void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
@@ -250,31 +250,31 @@ void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
   
 ### <a name="parameters"></a>Parametry  
  *bShrinkOnly*  
- Rodzaj operacji zmiany rozmiaru do wykonania. Wartość domyślna to **TRUE**, zmniejsza okno ramowe w razie potrzeby. Paski przewijania będzie wyświetlany dla widoków duże lub małe ramka okna. Wartość **FALSE** powoduje, że widok, aby zawsze dokładnie zmiany rozmiaru okna ramki. Może to być nieco niebezpieczne, ponieważ okno ramowe można pobrać zbyt duży, aby zmieścił się wewnątrz okno ramowe interfejsu (MDI) wielu dokumentów lub ekranu.  
+ Rodzaj zmiana rozmiaru do wykonania. Wartość domyślna to TRUE, zmniejsza okno ramowe, jeśli to stosowne. Paski przewijania nadal będą wyświetlane dla widoków dużych lub małych okna ramowe. Wartość FALSE powoduje, że w celu zawsze dokładnie zmiany rozmiaru okna ramki. Może to być nieco niebezpieczne, ponieważ okno ramowe można pobrać zbyt duży, aby zmieścił się wewnątrz okna ramki (MDI) interfejsu wielu dokumentów lub ekranu.  
   
 ### <a name="remarks"></a>Uwagi  
- Jest to zalecane tylko dla widoków w oknach ramowych podrzędnych MDI. Użyj `ResizeParentToFit` w `OnInitialUpdate` funkcji obsługi sieci pochodnej `CScrollView` klasy. Na przykład funkcji członkowskiej zobacz [CScrollView::SetScrollSizes](#setscrollsizes).  
+ Jest to zalecane tylko dla widoków okien ramek podrzędnych MDI. Użyj `ResizeParentToFit` w `OnInitialUpdate` funkcji obsługi usługi pochodnej `CScrollView` klasy. Na przykład ta funkcja elementu członkowskiego zobacz [CScrollView::SetScrollSizes](#setscrollsizes).  
   
- `ResizeParentToFit` zakłada się, czy rozmiar okna widok został ustawiony. Jeśli rozmiar okna widoku nie została ustawiona podczas `ResizeParentToFit` jest wywoływana, otrzymasz potwierdzenia. Aby upewnić się, że tak nie jest, należy wykonać następujące wywołanie przed wywołaniem `ResizeParentToFit`:  
+ `ResizeParentToFit` przyjęto założenie, że ustawiono rozmiaru okna widoku. Jeśli rozmiar okna widoku nie została ustawiona podczas `ResizeParentToFit` jest wywoływana, otrzymasz potwierdzenie. Aby upewnić się, że tak nie jest, należy wykonać następujące wywołanie przed wywołaniem `ResizeParentToFit`:  
   
  [!code-cpp[NVC_MFCDocView#165](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
 ##  <a name="scrolltoposition"></a>  CScrollView::ScrollToPosition  
- Wywołanie `ScrollToPosition` przewiń do danego punktu w widoku.  
+ Wywołaj `ScrollToPosition` przewiń do danego punktu w widoku.  
   
 ```  
 void ScrollToPosition(POINT pt);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *PT*  
- Punkt przewinięcia w jednostkach logicznych. **x** elementu członkowskiego musi być wartością dodatnią (większa lub równa 0, maksymalnie całkowity rozmiar widoku). Dotyczy to także **y** elementu członkowskiego, gdy tryb mapowania jest `MM_TEXT`. **y** element członkowski ma ujemną wartość w innych niż mapowania tryby `MM_TEXT`.  
+ *(czas pacyficzny)*  
+ Punkt przewinięcia w jednostkach logicznych. `x` Elementu członkowskiego musi być wartością dodatnią (większe niż lub równa 0, aż do całkowitego rozmiaru widoku). Dotyczy to także `y` przy włączonym trybie mapowania MM_TEXT element członkowski. `y` Elementu członkowskiego ma ujemną wartość w trybach mapowanie innych niż MM_TEXT.  
   
 ### <a name="remarks"></a>Uwagi  
- Widok będzie przewijane, tak aby ten punkt znajduje się w lewym górnym rogu okna. Nie można wywołać funkcji członkowskiej, jeśli widok jest skalowane w celu dopasowania.  
+ Widok będzie przewijane, tak aby ten punkt znajduje się w lewym górnym rogu okna. Nie można wywołać tej funkcji elementu członkowskiego, jeśli widok jest skalowane w celu dopasowania.  
   
 ##  <a name="setscaletofitsize"></a>  CScrollView::SetScaleToFitSize  
- Wywołanie `SetScaleToFitSize` Jeśli chcesz automatycznie skalować rozmiaru okienka ekranu do bieżącego rozmiaru okna.  
+ Wywołaj `SetScaleToFitSize` umożliwia automatyczne skalowanie rozmiaru okienka ekranu do bieżącego rozmiaru okna.  
   
 ```  
 void SetScaleToFitSize(SIZE sizeTotal);
@@ -282,21 +282,21 @@ void SetScaleToFitSize(SIZE sizeTotal);
   
 ### <a name="parameters"></a>Parametry  
  *sizeTotal*  
- Poziome i pionowe rozmiary, do których ma być skalowana w widoku. Rozmiar widoku przewijania jest mierzony w jednostkach logicznych. Rozmiar poziomych znajduje się w **cx** elementu członkowskiego. Rozmiar pionowy znajduje się w **cy** elementu członkowskiego. Zarówno **cx** i **cy** musi być większa lub równa 0.  
+ Poziome i pionowe rozmiary, do których ma być skalowana w widoku. Rozmiar widoku przewijania jest mierzona w jednostkach logicznych. Rozmiar poziomy znajduje się w `cx` elementu członkowskiego. Pionowy rozmiar znajduje się w `cy` elementu członkowskiego. Zarówno `cx` i `cy` musi być większa lub równa 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Pasków przewijania tylko część widoku logicznym może być widoczny w dowolnym momencie. Z możliwością Skaluj do rozmiaru widoku nie ma pasków przewijania a widok logiczny jest rozciągany tak, lub zmniejszyć, aby dokładnie dopasować obszaru klienckiego okna. Gdy zmieniany jest rozmiar okna, widok rysuje jego danych w nowej skali, zależnie od rozmiaru okna.  
+ Z pasków przewijania w dowolnym momencie może być widoczny tylko część widok logiczny. Ale za pomocą funkcji skalowania do rozmiaru widoku nie ma pasków przewijania i widok logiczny jest rozciągany lub zmniejszyć, aby dokładnie dopasować obszaru klienckiego okna. Przy zmianie rozmiaru okna widoku rysuje swoje dane w nowej skali, w zależności od rozmiaru okna.  
   
- Zwykle będzie Umieść wywołanie `SetScaleToFitSize` w zastąpienia widoku `OnInitialUpdate` funkcję elementu członkowskiego. Jeśli nie chcesz, automatyczne skalowanie, wywołanie `SetScrollSizes` zamiast funkcji członkowskiej.  
+ Zwykle będzie umieścić wywołanie `SetScaleToFitSize` w przesłonięcia widoku `OnInitialUpdate` funkcja elementu członkowskiego. Jeśli nie chcesz, automatycznego skalowania, należy wywołać `SetScrollSizes` zamiast tego funkcję członkowską.  
   
- `SetScaleToFitSize` może służyć do zaimplementowania operację "Powiększenie Dopasuj". Użyj `SetScrollSizes` może ponownie zainicjować przewijania.  
+ `SetScaleToFitSize` może służyć do implementacji operacji "Powiększenie do Fit". Użyj `SetScrollSizes` ponowne zainicjowanie przewijania.  
   
- `SetScaleToFitSize` zakłada się, czy rozmiar okna widok został ustawiony. Jeśli rozmiar okna widoku nie została ustawiona podczas `SetScaleToFitSize` jest wywoływana, otrzymasz potwierdzenia. Aby upewnić się, że tak nie jest, należy wykonać następujące wywołanie przed wywołaniem `SetScaleToFitSize`:  
+ `SetScaleToFitSize` przyjęto założenie, że ustawiono rozmiaru okna widoku. Jeśli rozmiar okna widoku nie została ustawiona podczas `SetScaleToFitSize` jest wywoływana, otrzymasz potwierdzenie. Aby upewnić się, że tak nie jest, należy wykonać następujące wywołanie przed wywołaniem `SetScaleToFitSize`:  
   
  [!code-cpp[NVC_MFCDocView#165](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
 ##  <a name="setscrollsizes"></a>  CScrollView::SetScrollSizes  
- Wywołanie `SetScrollSizes` po widok ma być aktualizowane.  
+ Wywołaj `SetScrollSizes` gdy widok jest około do zaktualizowania.  
   
 ```  
 void SetScrollSizes(
@@ -308,40 +308,40 @@ void SetScrollSizes(
   
 ### <a name="parameters"></a>Parametry  
  *nMapMode*  
- Tryb mapowania, które można ustawić dla tego widoku. Możliwe wartości:  
+ Tryb mapowania, aby ustawić dla tego widoku. Możliwe wartości:  
   
-|Tryb mapowania|Jednostka logiczna|Rozszerzenie dodatnią osi y...|  
+|Tryb mapowania|Jednostka logiczna|Rozszerzenie dodatnie y...|  
 |------------------|------------------|---------------------------------|  
-|`MM_TEXT`|1 piksela|W dół|  
-|`MM_HIMETRIC`|0,01 mm|W górę|  
-|`MM_TWIPS`|1/1440 w|W górę|  
-|`MM_HIENGLISH`|0,001 in|W górę|  
-|`MM_LOMETRIC`|0,1 mm|W górę|  
-|`MM_LOENGLISH`|0,01 in|W górę|  
+|MM_TEXT|1 piksel|W dół|  
+|MM_HIMETRIC|0,01 mm|W górę|  
+|MM_TWIPS|od 1/1440 w|W górę|  
+|MM_HIENGLISH|0,001 w|W górę|  
+|MM_LOMETRIC|0,1 mm|W górę|  
+|MM_LOENGLISH|0,01 w|W górę|  
   
- Wszystkie te tryby są definiowane przez system Windows. Dwa tryby mapowania standardowe, `MM_ISOTROPIC` i `MM_ANISOTROPIC`, nie są używane do `CScrollView`. Biblioteka klas zawiera `SetScaleToFitSize` funkcji członkowskiej skalowania widok do rozmiaru okna. Kolumna trzech w powyższej tabeli opisano współrzędnych orientacji.  
+ Wszystkie te tryby są definiowane przez Windows. Dwa tryby standardowa mapowania MM_ISOTROPIC i MM_ANISOTROPIC, nie są używane przez `CScrollView`. Biblioteka klas zawiera `SetScaleToFitSize` funkcję członkowską skalowanie widok do rozmiaru okna. W kolumnie trzy w powyższej tabeli opisano współrzędnych orientacji.  
   
  *sizeTotal*  
- Całkowity rozmiar przewijania widoku. **Cx** elementu członkowskiego zawiera poziome zakresu. **Cy** elementu członkowskiego zawiera pionowego. Rozmiary są w jednostkach logicznych. Zarówno **cx** i **cy** musi być większa lub równa 0.  
+ Całkowity rozmiar widoku przewijania. `cx` Elementu członkowskiego zawiera poziomy zakresu. `cy` Elementu członkowskiego zawiera pionowego. Rozmiary są w jednostkach logicznych. Zarówno `cx` i `cy` musi być większa lub równa 0.  
   
  *sizePage*  
- Kwoty poziome i pionowe przewijanie w każdym kierunku w odpowiedzi na myszy kliknij wale paska przewijania. **Cx** elementu członkowskiego zawiera kwotę poziomej. **Cy** elementu członkowskiego zawiera kwotę pionowej.  
+ Kwoty poziome i pionowe przewijanie w każdym kierunku w odpowiedzi na myszy kliknij wałka paska przewijania. `cx` Elementu członkowskiego zawiera poziomy kwotę. `cy` Elementu członkowskiego zawiera kwotę pionowy.  
   
  *sizeLine*  
- Kwoty poziome i pionowe przewijanie w każdym kierunku w odpowiedzi na myszy kliknij strzałkę przewijania. **Cx** elementu członkowskiego zawiera kwotę poziomej. **Cy** elementu członkowskiego zawiera kwotę pionowej.  
+ Kwoty poziome i pionowe przewijanie w każdym kierunku w odpowiedzi na myszy kliknij strzałki przewijania. `cx` Elementu członkowskiego zawiera poziomy kwotę. `cy` Elementu członkowskiego zawiera kwotę pionowy.  
   
 ### <a name="remarks"></a>Uwagi  
- Telefonować zastąpienia z `OnUpdate` funkcji członkowskiej, aby dostosować właściwości przewijania, gdy na przykład początkowo wyświetlana jest dokumentu lub zmiany rozmiaru.  
+ Zakres jest wywoływany w zastąpienie metody `OnUpdate` funkcję elementu członkowskiego, aby dostosować właściwości przewijania, gdy na przykład początkowo jest wyświetlany dokument lub zmienia rozmiar.  
   
- Będą zazwyczaj uzyskiwać informacje o rozmiarze z widoku skojarzonego dokumentu, przez wywołanie funkcji członkowskiej dokumentu, być może wywołać `GetMyDocSize`, wprowadzona z klasy pochodnej dokumentu. Poniższy kod przedstawia tego podejścia:  
+ Informacje o rozmiarze będzie zazwyczaj uzyskiwany z tego widoku powiązany dokument, przez wywołanie funkcji elementu członkowskiego dokument, może być wywoływana `GetMyDocSize`, przez użytkownika za pomocą klasy pochodnej dokumentu. Poniższy kod ilustruje takie podejście:  
   
  [!code-cpp[NVC_MFCDocView#166](../../mfc/codesnippet/cpp/cscrollview-class_3.cpp)]  
   
- Można również czasami konieczne może być ustawiona o stałym rozmiarze, zgodnie z poniższym kodem:  
+ Alternatywnie mogą czasami musisz ustawić o stałym rozmiarze, zgodnie z poniższym kodem:  
   
  [!code-cpp[NVC_MFCDocView#167](../../mfc/codesnippet/cpp/cscrollview-class_4.cpp)]  
   
- Musisz ustawić tryb mapowania na dowolnym trybie mapowania systemu Windows z wyjątkiem `MM_ISOTROPIC` lub `MM_ANISOTROPIC`. Jeśli chcesz używać trybu nieograniczonego mapowania wywołanie `SetScaleToFitSize` funkcji członkowskiej zamiast `SetScrollSizes`.  
+ Należy ustawić tryb mapowania do dowolnego z trybów mapowania Windows z wyjątkiem MM_ISOTROPIC lub MM_ANISOTROPIC. Jeśli chcesz użyć trybu nieograniczonego mapowania wywołać `SetScaleToFitSize` funkcja elementu członkowskiego zamiast `SetScrollSizes`.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDocView#168](../../mfc/codesnippet/cpp/cscrollview-class_5.cpp)]  
@@ -349,7 +349,7 @@ void SetScrollSizes(
  [!code-cpp[NVC_MFCDocView#169](../../mfc/codesnippet/cpp/cscrollview-class_6.cpp)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykładowe MFC DIBLOOK](../../visual-cpp-samples.md)   
+ [Próbki MFC DIBLOOK](../../visual-cpp-samples.md)   
  [Cview — klasa](../../mfc/reference/cview-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [Cview — klasa](../../mfc/reference/cview-class.md)   

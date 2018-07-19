@@ -54,15 +54,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1947f93e65126df403feee658ade15648b081076
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 6347c6c3cb5bd9499bbf84a2ef1cb33efeac76e1
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039991"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852240"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>Klasa CMFCDesktopAlertWnd
-`CMFCDesktopAlertWnd` Klasa implementuje funkcje niemodalne okno dialogowe, który jest wyświetlany na ekranie, aby poinformować użytkownika o zdarzeniu.  
+`CMFCDesktopAlertWnd` Klasa implementuje funkcje niemodalnego okna dialogowego który jest wyświetlany na ekranie, aby poinformować użytkownika o zdarzeniu.  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
 ## <a name="syntax"></a>Składnia  
@@ -78,56 +78,56 @@ class CMFCDesktopAlertWnd : public CWnd
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[CMFCDesktopAlertWnd::Create](#create)|Tworzy i inicjuje okno alertu pulpitu.|  
-|[CMFCDesktopAlertWnd::GetAnimationSpeed](#getanimationspeed)|Zwraca prędkość animacji.|  
+|[CMFCDesktopAlertWnd::GetAnimationSpeed](#getanimationspeed)|Zwraca szybkość animacji.|  
 |[CMFCDesktopAlertWnd::GetAnimationType](#getanimationtype)|Zwraca typ animacji.|  
-|[CMFCDesktopAlertWnd::GetAutoCloseTime](#getautoclosetime)|Zwraca limit czasu automatycznego zamykania.|  
+|[CMFCDesktopAlertWnd::GetAutoCloseTime](#getautoclosetime)|Zwraca wartość limitu czasu automatycznego zamykania.|  
 |[CMFCDesktopAlertWnd::GetCaptionHeight](#getcaptionheight)|Zwraca wysokość podpis.|  
 |[CMFCDesktopAlertWnd::GetDialogSize](#getdialogsize)||  
-|[CMFCDesktopAlertWnd::GetLastPos](#getlastpos)|Zwraca ostatni prawidłową pozycję oknie alertu pulpitu na ekranie.|  
+|[CMFCDesktopAlertWnd::GetLastPos](#getlastpos)|Zwraca ostatni prawidłowy alert okien pulpitu na ekranie.|  
 |[CMFCDesktopAlertWnd::GetTransparency](#gettransparency)|Zwraca poziom przezroczystości.|  
-|[CMFCDesktopAlertWnd::HasSmallCaption](#hassmallcaption)|Określa, czy okna alertu pulpitu jest wyświetlana z podpisem mała.|  
+|[CMFCDesktopAlertWnd::HasSmallCaption](#hassmallcaption)|Określa, czy okno alertu pulpitu jest wyświetlana przy użyciu małych podpis.|  
 |[CMFCDesktopAlertWnd::OnBeforeShow](#onbeforeshow)||  
-|[CMFCDesktopAlertWnd::OnClickLinkButton](#onclicklinkbutton)|Wywoływane przez platformę, gdy użytkownik kliknie przycisk łącze znajduje się w menu alertu pulpitu.|  
-|[CMFCDesktopAlertWnd::OnCommand](#oncommand)|Struktura wywołuje funkcji członkowskiej, gdy użytkownik wybierze element menu, gdy formant podrzędny wysyła powiadomienie, lub gdy jest translacja klawiszy skrótów. (Przesłania [CWnd::OnCommand](../../mfc/reference/cwnd-class.md#oncommand).)|  
+|[CMFCDesktopAlertWnd::OnClickLinkButton](#onclicklinkbutton)|Wywoływane przez platformę, gdy użytkownik kliknie przycisk link znajdujący się w menu alertu pulpitu.|  
+|[CMFCDesktopAlertWnd::OnCommand](#oncommand)|Struktura wywołuje tej funkcji elementu członkowskiego, gdy użytkownik wybierze element menu, gdy kontrolka podrzędna wysyła komunikat z powiadomieniem lub po naciśnięciu klawisza skrótu jest tłumaczony. (Przesłania [CWnd::OnCommand](../../mfc/reference/cwnd-class.md#oncommand).)|  
 |[CMFCDesktopAlertWnd::OnDraw](#ondraw)||  
 |[CMFCDesktopAlertWnd::ProcessCommand](#processcommand)||  
-|[CMFCDesktopAlertWnd::SetAnimationSpeed](#setanimationspeed)|Ustawia nowe prędkość animacji.|  
+|[CMFCDesktopAlertWnd::SetAnimationSpeed](#setanimationspeed)|Ustawia nowe szybkość animacji.|  
 |[CMFCDesktopAlertWnd::SetAnimationType](#setanimationtype)|Ustawia typ animacji.|  
 |[CMFCDesktopAlertWnd::SetAutoCloseTime](#setautoclosetime)|Ustawia limit czasu automatycznego zamykania.|  
-|[CMFCDesktopAlertWnd::SetSmallCaption](#setsmallcaption)|Przełącza między małych i normalnym podpisów.|  
+|[CMFCDesktopAlertWnd::SetSmallCaption](#setsmallcaption)|Przełącza między małe i normalnym transkrypcji.|  
 |[CMFCDesktopAlertWnd::SetTransparency](#settransparency)|Ustawia poziom przezroczystości.|  
   
 ## <a name="remarks"></a>Uwagi  
- Pulpitu oknie alert może być przezroczysty, może wystąpić z efektami animacji i może zniknąć, (po określonym czasie lub gdy użytkownik odrzuci go, klikając przycisk Zamknij).  
+ Alert okien pulpitu może być przezroczysty, może wystąpić przy użyciu efektów animacji i może zniknąć, (po określonym czasie opóźnienia lub jeśli użytkownik odrzuci ją, klikając przycisk Zamknij).  
   
- Pulpitu oknie alert może również zawierać domyślne okno dialogowe, które z kolei zawiera ikonę, tekst komunikatu (etykieta) oraz łącza. Alternatywnie pulpitu oknie alert może zawierać niestandardowe okno dialogowe z zasobów aplikacji.  
+ Alert okien pulpitu może również zawierać domyślny okna dialogowego, który z kolei zawiera ikonę, tekst komunikatu (etykieta) oraz łącze. Alternatywnie okno alertu pulpitu może zawierać niestandardowe okno dialogowe z zasobów aplikacji.  
   
- Można utworzyć pulpitu alertu okna w dwóch krokach. Najpierw należy wywołać konstruktora, aby utworzyć `CMFCDesktopAlertWnd` obiektu. Po drugie, wywołaj [CMFCDesktopAlertWnd::Create](#create) funkcji członkowskiej utworzyć okna i dołączenie go do `CMFCDesktopAlertWnd` obiektu.  
+ Utworzysz okno alertu pulpitu w dwóch krokach. Po pierwsze wywołanie konstruktora do konstruowania `CMFCDesktopAlertWnd` obiektu. Po drugie wywołanie [CMFCDesktopAlertWnd::Create](#create) funkcja elementu członkowskiego, aby utworzyć okno i dołączyć go do `CMFCDesktopAlertWnd` obiektu.  
   
- `CMFCDesktopAlertWnd` Obiektu tworzy specjalne podrzędne okno dialogowe, które wypełnia obszaru klienckiego okna alertu pulpitu. Okno dialogowe jest właścicielem wszystkich kontrolek, które znajdują się na nim.  
+ `CMFCDesktopAlertWnd` Obiektu tworzy okno dialogowe specjalne podrzędne, które wypełnia obszar kliencki okno alertu pulpitu. Okno dialogowe jest właścicielem wszystkich kontrolek, które są umieszczone na nim.  
   
- Aby wyświetlić okno dialogowe niestandardowe w oknie podręcznym, wykonaj następujące kroki:  
+ Aby wyświetlić niestandardowe okno dialogowe, w oknie podręcznym, wykonaj następujące kroki:  
   
-1.  Klasa wyprowadzona z `CMFCDesktopAlertDialog`.  
+1.  Wyprowadzić klasę z `CMFCDesktopAlertDialog`.  
   
-2.  Tworzenie szablonu okno podrzędne okna dialogowego w zasobach.  
+2.  Tworzenie szablonu okna dialogowego podrzędnych w zasobach.  
   
-3.  Wywołanie [CMFCDesktopAlertWnd::Create](#create) przy użyciu Identyfikatora zasobu szablon okno dialogowe i wskaźnika do informacji o klasie czasu wykonywania klasy pochodnej.  
+3.  Wywołaj [CMFCDesktopAlertWnd::Create](#create) przy użyciu Identyfikatora zasobu szablonu okna dialogowego i wskaźnik do informacji o klasie czasu wykonywania klasy pochodnej.  
   
-4.  Okno dialogowe niestandardowe, aby obsłużyć wszystkie powiadomienia pochodzące z formantów hostowanej program lub program hostowanej służy do obsługi te powiadomienia bezpośrednio.  
+4.  Okno dialogowe niestandardowe do obsługi wszystkich powiadomień pochodzące z hostowanej formanty programu lub program hostowanej służy do obsługi tych powiadomień bezpośrednio.  
   
- Do sterowania zachowaniem pulpitu oknie alert, należy użyć następujących funkcji:  
+ Aby kontrolować zachowanie okno alertu pulpitu, należy użyć następujących funkcji:  
   
--   Ustaw typ animacji przez wywołanie metody [CMFCDesktopAlertWnd::SetAnimationType](#setanimationtype). Prawidłowe opcje to ujawniać, Przesuń i stopniowe.  
+-   Ustaw typ animacji, wywołując [CMFCDesktopAlertWnd::SetAnimationType](#setanimationtype). Prawidłowe opcje to rozwijania, Przesuń i zastosowania blaknięcia.  
   
--   Ustaw szybkość ramki animacji przez wywołanie metody [CMFCDesktopAlertWnd::SetAnimationSpeed](#setanimationspeed).  
+-   Ustawia szybkość ramki animacji, wywołując [CMFCDesktopAlertWnd::SetAnimationSpeed](#setanimationspeed).  
   
--   Ustaw poziom przezroczystości wywołując [CMFCDesktopAlertWnd::SetTransparency](#settransparency).  
+-   Ustaw poziom przezroczystości, wywołując [CMFCDesktopAlertWnd::SetTransparency](#settransparency).  
   
--   Zmień rozmiar podpisu dla małych wywołując [CMFCDesktopAlertWnd::SetSmallCaption](#setsmallcaption). Mała podpis jest 7 pikseli.  
+-   Zmień rozmiar podpisu dla małych, wywołując [CMFCDesktopAlertWnd::SetSmallCaption](#setsmallcaption). Małe podpis jest 7 pikseli.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia sposób użycia różnych metod w `CMFCDesktopAlertWnd` klasa do konfigurowania `CMFCDesktopAlertWnd` obiektu. W przykładzie przedstawiono sposób ustawić typ animacji, ustaw przezroczystość okno podręczne, określ, czy w oknie alert zawiera nagłówek małych i ustaw czas, jaki upływa przed oknie alert zostanie automatycznie zamknięte. W przykładzie pokazano również sposób tworzenia i inicjowania okna alertu pulpitu. Następujący fragment kodu jest częścią [próbka Demo alertu pulpitu](../../visual-cpp-samples.md).  
+ Poniższy przykład ilustruje sposób używania różnych metod w `CMFCDesktopAlertWnd` klasa umożliwiająca skonfigurowanie `CMFCDesktopAlertWnd` obiektu. W przykładzie pokazano, jak ustawić typ animacji, ustaw przezroczystość okna podręcznego, określ, czy okno alertu powoduje wyświetlenie małych podpisu i ustawić czas, jaki musi upłynąć, zanim okno alertu zostanie automatycznie zamknięte. W przykładzie pokazano również sposób tworzenia i zainicjować okno alertu pulpitu. Ten fragment kodu jest częścią [próbka Demo alertu pulpitu](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#1](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwnd-class_1.cpp)]  
   
@@ -164,35 +164,35 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  [in] [out] *pWndOwner*  
- Określa właściciela oknie alert. Tego właściciela Zadzwonimy wszystkie powiadomienia dla alertów oknie pulpitu. Ta wartość nie może być `NULL`.  
+ Określa właściciela okno alertu. Ten właściciel następnie będą otrzymywać wszystkie powiadomienia dla okno alertu pulpitu. Ta wartość nie może mieć wartości NULL.  
   
  [in] *uiDlgResID*  
- Określa identyfikator zasobu okna alertu.  
+ Określa identyfikator zasobu w oknie alert.  
   
  [in] *hMenu*  
- Określa menu wyświetlanym po kliknięciu przycisku menu. Jeśli `NULL`, nie jest wyświetlany przycisk menu.  
+ Określa menu wyświetlanym po kliknięciu przycisku menu. Jeśli ma wartość NULL, nie jest wyświetlany przycisk menu.  
   
  [in] *ptPos*  
  Określa położenie początkowe, w którym jest wyświetlana w oknie alert, za pomocą współrzędnych ekranu. Jeśli ten parametr ma (-1, -1), w oknie alert jest wyświetlany w prawym dolnym rogu ekranu.  
   
  [in] *pRTIDlgBar*  
- Informacje o klasie czasu wykonywania dla klasy pole niestandardowe okno dialogowe, które obejmuje obszaru klienckiego okna alertu.  
+ Informacje o klasie czasu wykonywania dla klasy pole niestandardowe okno dialogowe, w którym omówiono obszaru klienckiego okna alertu.  
   
  [in] *params*  
- Określa parametry, które są używane w celu utworzenia okna alertu.  
+ Określa parametry, które są używane w celu utworzenia alertu okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli w oknie alert został utworzony pomyślnie; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli w oknie alert został utworzony pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołaj tę metodę w celu utworzenia okna alertu. Obszar klienta okna alertu zawiera podrzędne okno dialogowe, które obsługuje wszystkie formanty, które są wyświetlane dla użytkownika.  
+ Wywołaj tę metodę w celu utworzenia alertu okna. Obszar kliencki okno alertu zawiera podrzędne okno dialogowe, który obsługuje wszystkich kontrolek, które są widoczne dla użytkownika.  
   
- Pierwszy przeciążenie metody tworzy okno alertu, zawierającą podrzędne okno dialogowe, które są ładowane z zasobów aplikacji. Pierwszy przeciążenie metody można również określić informacje o klasie czasu wykonywania dla klasy okno dialogowe niestandardowych.  
+ Pierwsze przeciążenie metody tworzy alert okien, zawierającą podrzędne okno dialogowe, który jest ładowany z zasobów aplikacji. Pierwsze przeciążenie metody można również określić informacje o klasie czasu wykonywania dla klasy pole niestandardowe okno dialogowe.  
   
- Drugi przeciążenie metody tworzy okno alertu, zawierający domyślne formanty. Można określić, która kontroluje, aby wyświetlić modyfikując [CMFCDesktopAlertWndInfo klasy](../../mfc/reference/cmfcdesktopalertwndinfo-class.md).  
+ Drugie przeciążenie metody tworzy alert okien, zawierający kontrolkami domyślnymi. Można określić, która kontroluje, aby wyświetlić, modyfikując [klasa CMFCDesktopAlertWndInfo](../../mfc/reference/cmfcdesktopalertwndinfo-class.md).  
   
 ##  <a name="getanimationspeed"></a>  CMFCDesktopAlertWnd::GetAnimationSpeed  
- Zwraca prędkość animacji.  
+ Zwraca szybkość animacji.  
   
 ```  
 UINT GetAnimationSpeed() const;  
@@ -202,7 +202,7 @@ UINT GetAnimationSpeed() const;
  Szybkość animacji okna alertu, w milisekundach.  
   
 ### <a name="remarks"></a>Uwagi  
- Szybkość animacji opisuje tempa otwiera i zamyka w oknie alert.  
+ Szybkość animacji w tym artykule opisano sposób szybkiego otwiera i zamyka w oknie alert.  
   
 ##  <a name="getanimationtype"></a>  CMFCDesktopAlertWnd::GetAnimationType  
  Zwraca typ animacji.  
@@ -212,30 +212,30 @@ CMFCPopupMenu::ANIMATION_TYPE GetAnimationType();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeden z następujących typów animacji:  
+ Jednym z następujących typów animacji:  
   
-- `NO_ANIMATION`  
+- NO_ANIMATION  
   
-- `UNFOLD`  
+- ROZWIJANIA  
   
-- `SLIDE`  
+- SLAJD  
   
-- `FADE`  
+- ZANIKANIE  
   
-- `SYSTEM_DEFAULT_ANIMATION`  
+- SYSTEM_DEFAULT_ANIMATION  
   
 ##  <a name="getautoclosetime"></a>  CMFCDesktopAlertWnd::GetAutoCloseTime  
- Zwraca limit czasu automatycznego zamykania.  
+ Zwraca wartość limitu czasu automatycznego zamykania.  
   
 ```  
 int GetAutoCloseTime() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Czas w milisekundach, po jakim oknie alert zostanie automatycznie zamknięte.  
+ Czas w milisekundach, po czym w oknie alert zostanie automatycznie zamknięte.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj tej metody, aby określić, ile czasu powinno, po jakim oknie alert zostanie automatycznie zamknięte.  
+ Metoda ta jest przydatna w celu określenia, ile czasu powinien upłynąć, zanim alert okno zostanie automatycznie zamknięte.  
   
 ##  <a name="getcaptionheight"></a>  CMFCDesktopAlertWnd::GetCaptionHeight  
  Zwraca wysokość podpis.  
@@ -245,23 +245,23 @@ virtual int GetCaptionHeight();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wysokość w pikselach podpisu.  
+ Wysokość w pikselach, podpis.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda może zostać zastąpiona w klasie pochodnej. Domyślna implementacja albo: zwraca podpis mała wartość wysokości (w pikselach 7), jeśli powinien być wyświetlany w oknie podręcznym małych podpis lub wartość uzyskane z funkcji Windows API `GetSystemMetrics(SM_CYSMCAPTION)`.  
+ Ta metoda może zostać zastąpiona w klasie pochodnej. Domyślna implementacja albo: zwraca wartość wysokości małych podpisu (7 w pikselach), jeśli wyskakujące powinien być wyświetlany w małych podpis lub uzyskaną z funkcji Windows API `GetSystemMetrics(SM_CYSMCAPTION)`.  
   
 ##  <a name="getlastpos"></a>  CMFCDesktopAlertWnd::GetLastPos  
- Zwraca ostatnie położenie okna alertu pulpitu na ekranie.  
+ Zwraca pozycję ostatniego okno alertu pulpitu, na ekranie.  
   
 ```  
 CPoint GetLastPos() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Punkt, we współrzędnych ekranu.  
+ Punkt, w współrzędne ekranu.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda zwraca ostatniej pozycji prawidłowe w oknie alert na ekranie.  
+ Ta metoda zwraca prawidłową ostatniej pozycji w oknie alert na ekranie.  
   
 ##  <a name="gettransparency"></a>  CMFCDesktopAlertWnd::GetTransparency  
  Zwraca poziom przezroczystości.  
@@ -271,23 +271,23 @@ BYTE GetTransparency() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Poziom przezroczystości zakresu od 0 do 255 włącznie. Im większa wartość, więcej nieprzezroczyste okna.  
+ Poziom przezroczystości zakresu od 0 do 255 włącznie. Im większa wartość, więcej nieprzezroczysty okna.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj tej metody można pobrać bieżący poziom przezroczystości oknie alert.  
+ Ta metoda umożliwia pobieranie bieżącego poziomu przezroczystości okno alertu.  
   
 ##  <a name="hassmallcaption"></a>  CMFCDesktopAlertWnd::HasSmallCaption  
- Określa, czy pulpitu oknie alert ma małych podpisu lub podpis zwykły rozmiar.  
+ Określa, czy okno alertu pulpitu, ma mały podpisu lub podpis zwykłych rozmiar.  
   
 ```  
 BOOL HasSmallCaption() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli w oknie podręcznym jest wyświetlany z tekstem małych; `FALSE` Jeśli oknie podręcznym jest wyświetlane z tekstem o rozmiarze regularne.  
+ Wartość TRUE, jeśli zostanie wyświetlone okno popup, poprzedzoną małych; Wartość FALSE, jeśli wyskakujące jest wyświetlane z tekstem o rozmiarze zwykłych.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj tej metody, aby określić, czy w oknie podręcznym małych podpisu lub podpis zwykły rozmiar. Domyślnie małych podpis jest 7 pikseli. Wysokość podpis zwykły rozmiar można uzyskać przez wywołanie funkcji Windows API `GetSystemMetrics(SM_CYCAPTION)`.  
+ Ta metoda umożliwia określić, czy okno podręczne małych podpisu lub podpis zwykłych rozmiar. Domyślnie małych podpis jest 7 pikseli. Wysokość podpis zwykłych rozmiar można uzyskać przez wywołanie funkcji interfejsu Windows API `GetSystemMetrics(SM_CYCAPTION)`.  
   
 ##  <a name="onbeforeshow"></a>  CMFCDesktopAlertWnd::OnBeforeShow  
 
@@ -304,7 +304,7 @@ virtual BOOL OnBeforeShow(CPoint&);
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onclicklinkbutton"></a>  CMFCDesktopAlertWnd::OnClickLinkButton  
- Wywoływane przez platformę, gdy użytkownik kliknie przycisk łącze znajduje się w menu alertu pulpitu.  
+ Wywoływane przez platformę, gdy użytkownik kliknie przycisk link znajdujący się w menu alertu pulpitu.  
   
 ```  
 virtual BOOL OnClickLinkButton(UINT uiCmdID);
@@ -315,10 +315,10 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
  Ten parametr nie jest używany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zawsze `FALSE`.  
+ Zawsze wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę metodę w klasie pochodnej, aby otrzymać powiadomienie, gdy użytkownik kliknie łącze w oknie alert.  
+ Przesłonić tę metodę w klasie pochodnej, jeśli chcesz otrzymywać powiadomienia, gdy użytkownik kliknie link w oknie alert.  
   
 ##  <a name="oncommand"></a>  CMFCDesktopAlertWnd::OnCommand  
 
@@ -364,7 +364,7 @@ BOOL ProcessCommand(HWND hwnd);
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="setanimationspeed"></a>  CMFCDesktopAlertWnd::SetAnimationSpeed  
- Ustawia nowe prędkość animacji.  
+ Ustawia nowe szybkość animacji.  
   
 ```  
 void SetAnimationSpeed(UINT nSpeed);
@@ -372,10 +372,10 @@ void SetAnimationSpeed(UINT nSpeed);
   
 ### <a name="parameters"></a>Parametry  
  [in] *nSpeed*  
- Określa nowe prędkość animacji, w milisekundach.  
+ Określa nowe szybkość animacji w milisekundach.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołaj tę metodę, aby ustawić szybkość animacji oknie alert. Szybkość animacji domyślny to 30 milisekund.  
+ Wywołaj tę metodę, aby ustawić szybkość animacji okno alertu. Szybkość animacji domyślny to 30 milisekund.  
   
 ##  <a name="setanimationtype"></a>  CMFCDesktopAlertWnd::SetAnimationType  
  Ustawia typ animacji.  
@@ -389,17 +389,17 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
  Określa typ animacji.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie tej metody, aby ustawić typ animacji. Można określić jedną z następujących wartości:  
+ Wywołaj tę metodę, aby ustawić typ animacji. Można określić jedną z następujących wartości:  
   
-- `NO_ANIMATION`  
+- NO_ANIMATION  
   
-- `UNFOLD`  
+- ROZWIJANIA  
   
-- `SLIDE`  
+- SLAJD  
   
-- `FADE`  
+- ZANIKANIE  
   
-- `SYSTEM_DEFAULT_ANIMATION`  
+- SYSTEM_DEFAULT_ANIMATION  
   
 ##  <a name="setautoclosetime"></a>  CMFCDesktopAlertWnd::SetAutoCloseTime  
  Ustawia limit czasu automatycznego zamykania.  
@@ -410,13 +410,13 @@ void SetAutoCloseTime(int nTime);
   
 ### <a name="parameters"></a>Parametry  
  [in] *nTime*  
- Czas w milisekundach, który musi upłynąć przed oknie alert zostanie automatycznie zamknięte.  
+ Czas w milisekundach, który musi upłynąć, zanim okno alertu zostanie automatycznie zamknięte.  
   
 ### <a name="remarks"></a>Uwagi  
- W oknie alert zostaje automatycznie zamknięty po określonym czasie, jeśli użytkownik nie wchodzi w interakcję z okna.  
+ W oknie alert zostaje automatycznie zamknięty po określonym czasie, jeśli użytkownik nie wchodzi w interakcję z oknem.  
   
 ##  <a name="setsmallcaption"></a>  CMFCDesktopAlertWnd::SetSmallCaption  
- Przełącza między małych i rozmiar regular podpisów.  
+ Przełącza między małe i rozmiar zwykłych transkrypcji.  
   
 ```  
 void SetSmallCaption(BOOL bSmallCaption = TRUE);
@@ -424,13 +424,13 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
   
 ### <a name="parameters"></a>Parametry  
  [in] *bSmallCaption*  
- `TRUE` Aby określić, czy w oknie alert zawiera nagłówek małych; w przeciwnym razie `FALSE` do określenia, czy w oknie alert zawiera nagłówek zwykły rozmiar.  
+ Wartość TRUE, aby określić, czy okno alertu powoduje wyświetlenie małych podpis; w przeciwnym razie wartość FALSE, aby określić, czy okno alertu powoduje wyświetlenie podpis zwykłych rozmiar.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołaj tę metodę, aby wyświetlić małe lub zwykły rozmiar podpisu. Domyślnie małych podpis jest 7 pikseli. Rozmiar podpisu regularnych można uzyskać przez wywołanie funkcji Windows API `GetSystemMetrics(SM_CYCAPTION)`.  
+ Wywołaj tę metodę, aby wyświetlić podpis małe lub rozmiar zwykłych. Domyślnie małych podpis jest 7 pikseli. Rozmiar podpisu regularnych można uzyskać przez wywołanie funkcji interfejsu Windows API `GetSystemMetrics(SM_CYCAPTION)`.  
   
 ##  <a name="settransparency"></a>  CMFCDesktopAlertWnd::SetTransparency  
- Ustawia poziom przezroczystości okna podręcznego.  
+ Ustawia poziom przezroczystości w oknie podręcznym.  
   
 ```  
 void SetTransparency(BYTE nTransparency);
@@ -438,10 +438,10 @@ void SetTransparency(BYTE nTransparency);
   
 ### <a name="parameters"></a>Parametry  
  [in] *nTransparency*  
- Określa poziom przezroczystości. Ta wartość musi być z zakresu od 0 do 255 włącznie. Im większa wartość, więcej nieprzezroczyste okna.  
+ Określa poziom przezroczystości. Ta wartość musi być z zakresu od 0 do 255 włącznie. Im większa wartość, więcej nieprzezroczysty okna.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie tej funkcji, aby ustawić poziom przezroczystości okna podręcznego.  
+ Wywołaj tę funkcję, aby ustawić poziom przezroczystości w oknie podręcznym.  
   
 ##  <a name="getdialogsize"></a>  CMFCDesktopAlertWnd::GetDialogSize  
 

@@ -56,15 +56,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1f2fcdedb6b01025b06e4384ec2c32e95d08b6e
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0c11e50755097176b276c82877c7a636be149756
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040132"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852578"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>Klasa CMFCFilterChunkValueImpl
-Jest to klasa, która upraszcza zarówno fragmentu, jak i właściwość logiki pary wartości.  
+Jest to klasa, która upraszcza fragment i właściwość logiczną pary wartości.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -86,42 +86,42 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[CMFCFilterChunkValueImpl::Clear](#clear)|Czyści ChunkValue.|  
-|[CMFCFilterChunkValueImpl::CopyChunk](#copychunk)|Kopiuje tego fragmentu struktury opisujące właściwości fragmentu.|  
-|[CMFCFilterChunkValueImpl::CopyFrom](#copyfrom)|Inicjuje wartość fragmentu inne wartości tego parametru.|  
+|[CMFCFilterChunkValueImpl::CopyChunk](#copychunk)|Kopiuje ten fragment do struktury opisujących charakterystyki fragmentu.|  
+|[CMFCFilterChunkValueImpl::CopyFrom](#copyfrom)|Inicjuje tę wartość fragmentów z inną wartość.|  
 |[CMFCFilterChunkValueImpl::GetChunkGUID](#getchunkguid)|Pobiera fragmentu identyfikatora GUID.|  
-|[CMFCFilterChunkValueImpl::GetChunkPID](#getchunkpid)|Pobiera fragmentu identyfikatora PID (identyfikator właściwości).|  
-|[CMFCFilterChunkValueImpl::GetChunkType](#getchunktype)|Pobiera bryłkach typu.|  
+|[CMFCFilterChunkValueImpl::GetChunkPID](#getchunkpid)|Pobiera fragmentu identyfikatora PID (właściwość ID).|  
+|[CMFCFilterChunkValueImpl::GetChunkType](#getchunktype)|Pobiera Podziel typu.|  
 |[CMFCFilterChunkValueImpl::GetString](#getstring)|Pobiera wartość ciągu.|  
 |[CMFCFilterChunkValueImpl::GetValue](#getvalue)|Pobiera wartość jako przydzielony propvariant.|  
-|[CMFCFilterChunkValueImpl::GetValueNoAlloc](#getvaluenoalloc)|Wartość zwraca nieprzydzielone (wartość wewnętrznego).|  
+|[CMFCFilterChunkValueImpl::GetValueNoAlloc](#getvaluenoalloc)|Zwraca nieprzydzielonym (wartość wewnętrznego) wartość.|  
 |[CMFCFilterChunkValueImpl::IsValid](#isvalid)|Sprawdza, czy wartość tej właściwości jest nieprawidłowa lub nie.|  
 |[CMFCFilterChunkValueImpl::SetBoolValue](#setboolvalue)|Przeciążone. Ustawia właściwość według klucza na wartość logiczną.|  
-|[CMFCFilterChunkValueImpl::SetDwordValue](#setdwordvalue)|Ustawia właściwość przez klucza DWORD.|  
-|[CMFCFilterChunkValueImpl::SetFileTimeValue](#setfiletimevalue)|Ustawia właściwość przez klucz do filetime.|  
-|[CMFCFilterChunkValueImpl::SetInt64Value](#setint64value)|Ustawia właściwość przez klucz do wartości typu int64.|  
-|[CMFCFilterChunkValueImpl::SetIntValue](#setintvalue)|Ustawia właściwość przez klucz do int.|  
-|[CMFCFilterChunkValueImpl::SetLongValue](#setlongvalue)|Ustawia właściwość przez klucz do postaci DŁUGIEJ.|  
-|[CMFCFilterChunkValueImpl::SetSystemTimeValue](#setsystemtimevalue)|Ustawia właściwość przez klucz do SystemTime.|  
+|[CMFCFilterChunkValueImpl::SetDwordValue](#setdwordvalue)|Ustawia właściwość według klucza DWORD.|  
+|[CMFCFilterChunkValueImpl::SetFileTimeValue](#setfiletimevalue)|Ustawia właściwość klucza, aby wartość filetime.|  
+|[CMFCFilterChunkValueImpl::SetInt64Value](#setint64value)|Ustawia właściwość według klucza do int64.|  
+|[CMFCFilterChunkValueImpl::SetIntValue](#setintvalue)|Ustawia właściwość według klucza do int.|  
+|[CMFCFilterChunkValueImpl::SetLongValue](#setlongvalue)|Ustawia właściwość według klucza na wartość typu LONG.|  
+|[CMFCFilterChunkValueImpl::SetSystemTimeValue](#setsystemtimevalue)|Ustawia właściwość według klucza do SystemTime.|  
 |[CMFCFilterChunkValueImpl::SetTextValue](#settextvalue)|Ustawia właściwość przez klucz na ciąg Unicode.|  
   
 ### <a name="protected-methods"></a>Metody chronione  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CMFCFilterChunkValueImpl::SetChunk](#setchunk)|Funkcja pomocnika, która ustawia typowe właściwości fragmentu.|  
+|[CMFCFilterChunkValueImpl::SetChunk](#setchunk)|Funkcja pomocnicza, która ustawia typowe właściwości fragmentów.|  
   
 ## <a name="remarks"></a>Uwagi  
- Aby użyć, po prostu utworzyć klasę CMFCFilterChunkValueImpl rodzaju prawo  
+ Aby użyć, po prostu Utwórz klasa CMFCFilterChunkValueImpl rodzaj  
   
  Przykład:  
   
- Fragmentu CMFCFilterChunkValueImpl;  
+ Fragment CMFCFilterChunkValueImpl;  
   
- hr = fragmentu. SetBoolValue(PKEY_IsAttachment, true);  
+ hr = fragmentów. SetBoolValue(PKEY_IsAttachment, true);  
   
  lub  
   
- hr = fragmentu. SetFileTimeValue (PKEY_ItemDate, ftLastModified);  
+ hr = fragmentów. SetFileTimeValue (PKEY_ItemDate, ftLastModified);  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `ATL::IFilterChunkValue`  
@@ -159,7 +159,7 @@ virtual ~CMFCFilterChunkValueImpl();
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="copychunk"></a>  CMFCFilterChunkValueImpl::CopyChunk  
- Kopiuje tego fragmentu struktury opisujące właściwości fragmentu.  
+ Kopiuje ten fragment do struktury opisujących charakterystyki fragmentu.  
   
 ```  
 HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
@@ -167,7 +167,7 @@ HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
   
 ### <a name="parameters"></a>Parametry  
  *pStatChunk*  
- Wskaźnik do wartości docelowej opisujące właściwości fragmentu.  
+ Wskaźnik do wartości docelowej opisujących charakterystyki fragmentów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  S_OK w przypadku powodzenia; w przeciwnym razie kod błędu.  
@@ -175,7 +175,7 @@ HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="copyfrom"></a>  CMFCFilterChunkValueImpl::CopyFrom  
- Inicjuje wartość fragmentu inne wartości tego parametru.  
+ Inicjuje tę wartość fragmentów z inną wartość.  
   
 ```  
 void CopyFrom (IFilterChunkValue* pValue);
@@ -200,14 +200,14 @@ REFGUID GetChunkGUID() const;
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="getchunkpid"></a>  CMFCFilterChunkValueImpl::GetChunkPID  
- Pobiera fragmentu identyfikatora PID (identyfikator właściwości).  
+ Pobiera fragmentu identyfikatora PID (właściwość ID).  
   
 ```  
 DWORD GetChunkPID() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość DWORD zawierającą identyfikator właściwości.  
+ Wartość DWORD zawierający identyfikator właściwości.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -219,7 +219,7 @@ CHUNKSTATE GetChunkType() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość CHUNKSTATE wyliczone, która określa, czy bieżącego fragmentu jest właściwością typu tekst lub typ wartości właściwości.  
+ Wartość wyliczenia CHUNKSTATE, która określa, czy bieżącego fragmentu jest właściwość Typ tekstu lub typu wartości.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -231,7 +231,7 @@ CString &GetString();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Ciąg zawierający wartość fragmentu.  
+ Ciąg zawierający wartość fragmentów.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -244,22 +244,22 @@ HRESULT GetValue(PROPVARIANT** ppPropVariant);
   
 ### <a name="parameters"></a>Parametry  
  *ppPropVariant*  
- Gdy funkcja zwraca wartość, ten parametr zawiera wartość fragmentu.  
+ Gdy funkcja zwróci wartość, ten parametr zawiera wartość fragmentów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- S_OK Jeśli PROPVARIANT została przydzielona pomyślnie, a wartość fragmentu została pomyślnie skopiowana do *ppPropVariant*; w przeciwnym razie kod błędu.  
+ S_OK, jeśli PROPVARIANT została przydzielona pomyślnie, a wartość fragmentów zostały pomyślnie skopiowane do *ppPropVariant*; w przeciwnym razie kod błędu.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="getvaluenoalloc"></a>  CMFCFilterChunkValueImpl::GetValueNoAlloc  
- Zwraca wartość-przydzielone (wewnętrzne wartości).  
+ Zwraca wartość nieprzydzielonym (wewnętrzny wartość).  
   
 ```  
 PROPVARIANT GetValueNoAlloc ();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca bieżącą wartość fragmentu.  
+ Zwraca bieżącą wartość fragmentów.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -271,7 +271,7 @@ BOOL IsValid() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli bieżąca wartość fragmentu jest nieprawidłowy; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli bieżąca wartość fragmentów jest ważny; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -307,19 +307,19 @@ HRESULT SetBoolValue(
  Określa wartość fragmentu do ustawienia.  
   
  *chunkType*  
- Flagi wskazują, czy ten fragmentu zawiera typ tekstu lub typ wartości właściwości. Wartości flagi są pobierane z wyliczenia CHUNKSTATE.  
+ Flagi wskazują, czy ten fragment zawiera typ tekstu lub właściwość typu wartości. Wartości flagi są pobierane z wyliczenia CHUNKSTATE.  
   
  *Ustawienia regionalne*  
- Język i odmianą języka skojarzone z fragmentów tekstu. Ustawienia regionalne fragmentu jest używany przez indeksatory dokumentu do wykonywania odpowiednich dzielenia tekstu wyrazów. Jeśli fragmentów nie jest typu tekst ani typem wartości o typie danych VT_LPWSTR, VT_LPSTR lub VT_BSTR, to pole jest ignorowane.  
+ Język i podjęzyk skojarzone z fragment tekstu. Ustawienia regionalne fragmentów służy indeksatory dokumentu do wykonania odpowiednich wyrazów tekstu. W przypadku typ tekstu ani typem wartości o typie danych VT_LPWSTR, VT_LPSTR lub VT_BSTR fragmentów to pole jest ignorowany.  
   
  *cwcLenSource*  
- Długość w znakach tekst źródłowy, z którego pochodzi bieżącego fragmentu. Wartość zero oznacza znak po znaku zgodności między tekst źródłowy i pochodne tekstu. Wartość niezerowa oznacza, czy istnieje nie bezpośrednie zgodności.  
+ Długość w znakach tekst źródłowy, z którego pochodzi bieżącego fragmentu. Wartość zero oznacza znak po znaku zgodności między tekst źródłowy i pochodnej tekstu. Wartość różną od zera oznacza, że istnieje nie bezpośredniej korespondencji.  
   
  *cwcStartSource*  
- Przesunięcie, z którego tekst źródłowy pochodnej fragmentu rozpoczyna się we fragmencie źródła.  
+ Przesunięcie, w którym tekst źródłowy dla fragmentu pochodnej rozpoczyna się we fragmencie źródła.  
   
  *chunkBreakType*  
- Typ podziału, która oddziela poprzedniego fragmentu od bieżącego fragmentu. Wartości pochodzą z wyliczania CHUNK_BREAKTYPE.  
+ Typ podziału oddzielający poprzedniego fragmentu od bieżącego fragmentu. Wartości są z wyliczenia CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  S_OK w przypadku powodzenia; w przeciwnym razie kod błędu.  
@@ -327,7 +327,7 @@ HRESULT SetBoolValue(
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="setchunk"></a>  CMFCFilterChunkValueImpl::SetChunk  
- Funkcja pomocnika, która ustawia typowe właściwości fragmentu.  
+ Funkcja pomocnicza, która ustawia typowe właściwości fragmentów.  
   
 ```  
 HRESULT SetChunk(
@@ -344,19 +344,19 @@ HRESULT SetChunk(
  Określa klucz właściwości.  
   
  *chunkType*  
- Flagi wskazują, czy ten fragmentu zawiera typ tekstu lub typ wartości właściwości. Wartości flagi są pobierane z wyliczenia CHUNKSTATE.  
+ Flagi wskazują, czy ten fragment zawiera typ tekstu lub właściwość typu wartości. Wartości flagi są pobierane z wyliczenia CHUNKSTATE.  
   
  *Ustawienia regionalne*  
- Język i odmianą języka skojarzone z fragmentów tekstu. Ustawienia regionalne fragmentu jest używany przez indeksatory dokumentu do wykonywania odpowiednich dzielenia tekstu wyrazów. Jeśli fragmentów nie jest typu tekst ani typem wartości o typie danych VT_LPWSTR, VT_LPSTR lub VT_BSTR, to pole jest ignorowane.  
+ Język i podjęzyk skojarzone z fragment tekstu. Ustawienia regionalne fragmentów służy indeksatory dokumentu do wykonania odpowiednich wyrazów tekstu. W przypadku typ tekstu ani typem wartości o typie danych VT_LPWSTR, VT_LPSTR lub VT_BSTR fragmentów to pole jest ignorowany.  
   
  *cwcLenSource*  
- Długość w znakach tekst źródłowy, z którego pochodzi bieżącego fragmentu. Wartość zero oznacza znak po znaku zgodności między tekst źródłowy i pochodne tekstu. Wartość niezerowa oznacza, czy istnieje nie bezpośrednie zgodności.  
+ Długość w znakach tekst źródłowy, z którego pochodzi bieżącego fragmentu. Wartość zero oznacza znak po znaku zgodności między tekst źródłowy i pochodnej tekstu. Wartość różną od zera oznacza, że istnieje nie bezpośredniej korespondencji.  
   
  *cwcStartSource*  
- Przesunięcie, z którego tekst źródłowy pochodnej fragmentu rozpoczyna się we fragmencie źródła.  
+ Przesunięcie, w którym tekst źródłowy dla fragmentu pochodnej rozpoczyna się we fragmencie źródła.  
   
  *chunkBreakType*  
- Typ podziału, która oddziela poprzedniego fragmentu od bieżącego fragmentu. Wartości pochodzą z wyliczania CHUNK_BREAKTYPE.  
+ Typ podziału oddzielający poprzedniego fragmentu od bieżącego fragmentu. Wartości są z wyliczenia CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  S_OK w przypadku powodzenia; w przeciwnym razie kod błędu.  
@@ -364,7 +364,7 @@ HRESULT SetChunk(
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="setdwordvalue"></a>  CMFCFilterChunkValueImpl::SetDwordValue  
- Ustaw właściwość przez klucza DWORD.  
+ Ustaw właściwość według klucza DWORD.  
   
 ```  
 HRESULT SetDwordValue(
@@ -385,19 +385,19 @@ HRESULT SetDwordValue(
  Określa wartość fragmentu do ustawienia.  
   
  *chunkType*  
- Flagi wskazują, czy ten fragmentu zawiera typ tekstu lub typ wartości właściwości. Wartości flagi są pobierane z wyliczenia CHUNKSTATE.  
+ Flagi wskazują, czy ten fragment zawiera typ tekstu lub właściwość typu wartości. Wartości flagi są pobierane z wyliczenia CHUNKSTATE.  
   
  *Ustawienia regionalne*  
- Język i odmianą języka skojarzone z fragmentów tekstu. Ustawienia regionalne fragmentu jest używany przez indeksatory dokumentu do wykonywania odpowiednich dzielenia tekstu wyrazów. Jeśli fragmentów nie jest typu tekst ani typem wartości o typie danych VT_LPWSTR, VT_LPSTR lub VT_BSTR, to pole jest ignorowane.  
+ Język i podjęzyk skojarzone z fragment tekstu. Ustawienia regionalne fragmentów służy indeksatory dokumentu do wykonania odpowiednich wyrazów tekstu. W przypadku typ tekstu ani typem wartości o typie danych VT_LPWSTR, VT_LPSTR lub VT_BSTR fragmentów to pole jest ignorowany.  
   
  *cwcLenSource*  
- Długość w znakach tekst źródłowy, z którego pochodzi bieżącego fragmentu. Wartość zero oznacza znak po znaku zgodności między tekst źródłowy i pochodne tekstu. Wartość niezerowa oznacza, czy istnieje nie bezpośrednie zgodności.  
+ Długość w znakach tekst źródłowy, z którego pochodzi bieżącego fragmentu. Wartość zero oznacza znak po znaku zgodności między tekst źródłowy i pochodnej tekstu. Wartość różną od zera oznacza, że istnieje nie bezpośredniej korespondencji.  
   
  *cwcStartSource*  
- Przesunięcie, z którego tekst źródłowy pochodnej fragmentu rozpoczyna się we fragmencie źródła.  
+ Przesunięcie, w którym tekst źródłowy dla fragmentu pochodnej rozpoczyna się we fragmencie źródła.  
   
  *chunkBreakType*  
- Typ podziału, która oddziela poprzedniego fragmentu od bieżącego fragmentu. Wartości pochodzą z wyliczania CHUNK_BREAKTYPE.  
+ Typ podziału oddzielający poprzedniego fragmentu od bieżącego fragmentu. Wartości są z wyliczenia CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  S_OK w przypadku powodzenia; w przeciwnym razie kod błędu.  
@@ -405,7 +405,7 @@ HRESULT SetDwordValue(
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="setfiletimevalue"></a>  CMFCFilterChunkValueImpl::SetFileTimeValue  
- Ustaw właściwość przez klucz do filetime.  
+ Ustaw właściwość klucza, aby wartość filetime.  
   
 ```  
 HRESULT SetFileTimeValue(
@@ -426,19 +426,19 @@ HRESULT SetFileTimeValue(
  Określa wartość fragmentu do ustawienia.  
   
  *chunkType*  
- Flagi wskazują, czy ten fragmentu zawiera typ tekstu lub typ wartości właściwości. Wartości flagi są pobierane z wyliczenia CHUNKSTATE.  
+ Flagi wskazują, czy ten fragment zawiera typ tekstu lub właściwość typu wartości. Wartości flagi są pobierane z wyliczenia CHUNKSTATE.  
   
  *Ustawienia regionalne*  
- Język i odmianą języka skojarzone z fragmentów tekstu. Ustawienia regionalne fragmentu jest używany przez indeksatory dokumentu do wykonywania odpowiednich dzielenia tekstu wyrazów. Jeśli fragmentów nie jest typu tekst ani typem wartości o typie danych VT_LPWSTR, VT_LPSTR lub VT_BSTR, to pole jest ignorowane.  
+ Język i podjęzyk skojarzone z fragment tekstu. Ustawienia regionalne fragmentów służy indeksatory dokumentu do wykonania odpowiednich wyrazów tekstu. W przypadku typ tekstu ani typem wartości o typie danych VT_LPWSTR, VT_LPSTR lub VT_BSTR fragmentów to pole jest ignorowany.  
   
  *cwcLenSource*  
- Długość w znakach tekst źródłowy, z którego pochodzi bieżącego fragmentu. Wartość zero oznacza znak po znaku zgodności między tekst źródłowy i pochodne tekstu. Wartość niezerowa oznacza, czy istnieje nie bezpośrednie zgodności.  
+ Długość w znakach tekst źródłowy, z którego pochodzi bieżącego fragmentu. Wartość zero oznacza znak po znaku zgodności między tekst źródłowy i pochodnej tekstu. Wartość różną od zera oznacza, że istnieje nie bezpośredniej korespondencji.  
   
  *cwcStartSource*  
- Przesunięcie, z którego tekst źródłowy pochodnej fragmentu rozpoczyna się we fragmencie źródła.  
+ Przesunięcie, w którym tekst źródłowy dla fragmentu pochodnej rozpoczyna się we fragmencie źródła.  
   
  *chunkBreakType*  
- Typ podziału, która oddziela poprzedniego fragmentu od bieżącego fragmentu. Wartości pochodzą z wyliczania CHUNK_BREAKTYPE.  
+ Typ podziału oddzielający poprzedniego fragmentu od bieżącego fragmentu. Wartości są z wyliczenia CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  S_OK w przypadku powodzenia; w przeciwnym razie kod błędu.  
@@ -446,7 +446,7 @@ HRESULT SetFileTimeValue(
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="setint64value"></a>  CMFCFilterChunkValueImpl::SetInt64Value  
- Ustaw właściwość przez klucz do wartości typu int64.  
+ Ustaw właściwość według klucza do int64.  
   
 ```  
 HRESULT SetInt64Value(
@@ -467,19 +467,19 @@ HRESULT SetInt64Value(
  Określa wartość fragmentu do ustawienia.  
   
  *chunkType*  
- Flagi wskazują, czy ten fragmentu zawiera typ tekstu lub typ wartości właściwości. Wartości flagi są pobierane z wyliczenia CHUNKSTATE.  
+ Flagi wskazują, czy ten fragment zawiera typ tekstu lub właściwość typu wartości. Wartości flagi są pobierane z wyliczenia CHUNKSTATE.  
   
  *Ustawienia regionalne*  
- Język i odmianą języka skojarzone z fragmentów tekstu. Ustawienia regionalne fragmentu jest używany przez indeksatory dokumentu do wykonywania odpowiednich dzielenia tekstu wyrazów. Jeśli fragmentów nie jest typu tekst ani typem wartości o typie danych VT_LPWSTR, VT_LPSTR lub VT_BSTR, to pole jest ignorowane.  
+ Język i podjęzyk skojarzone z fragment tekstu. Ustawienia regionalne fragmentów służy indeksatory dokumentu do wykonania odpowiednich wyrazów tekstu. W przypadku typ tekstu ani typem wartości o typie danych VT_LPWSTR, VT_LPSTR lub VT_BSTR fragmentów to pole jest ignorowany.  
   
  *cwcLenSource*  
- Długość w znakach tekst źródłowy, z którego pochodzi bieżącego fragmentu. Wartość zero oznacza znak po znaku zgodności między tekst źródłowy i pochodne tekstu. Wartość niezerowa oznacza, czy istnieje nie bezpośrednie zgodności.  
+ Długość w znakach tekst źródłowy, z którego pochodzi bieżącego fragmentu. Wartość zero oznacza znak po znaku zgodności między tekst źródłowy i pochodnej tekstu. Wartość różną od zera oznacza, że istnieje nie bezpośredniej korespondencji.  
   
  *cwcStartSource*  
- Przesunięcie, z którego tekst źródłowy pochodnej fragmentu rozpoczyna się we fragmencie źródła.  
+ Przesunięcie, w którym tekst źródłowy dla fragmentu pochodnej rozpoczyna się we fragmencie źródła.  
   
  *chunkBreakType*  
- Typ podziału, która oddziela poprzedniego fragmentu od bieżącego fragmentu. Wartości pochodzą z wyliczania CHUNK_BREAKTYPE.  
+ Typ podziału oddzielający poprzedniego fragmentu od bieżącego fragmentu. Wartości są z wyliczenia CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  S_OK w przypadku powodzenia; w przeciwnym razie kod błędu.  
@@ -487,7 +487,7 @@ HRESULT SetInt64Value(
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="setintvalue"></a>  CMFCFilterChunkValueImpl::SetIntValue  
- Ustaw właściwość przez klucz do int.  
+ Ustaw właściwość według klucza do int.  
   
 ```  
 HRESULT SetIntValue(
@@ -508,19 +508,19 @@ HRESULT SetIntValue(
  Określa wartość fragmentu do ustawienia.  
   
  *chunkType*  
- Flagi wskazują, czy ten fragmentu zawiera typ tekstu lub typ wartości właściwości. Wartości flagi są pobierane z wyliczenia CHUNKSTATE.  
+ Flagi wskazują, czy ten fragment zawiera typ tekstu lub właściwość typu wartości. Wartości flagi są pobierane z wyliczenia CHUNKSTATE.  
   
  *Ustawienia regionalne*  
- Język i odmianą języka skojarzone z fragmentów tekstu. Ustawienia regionalne fragmentu jest używany przez indeksatory dokumentu do wykonywania odpowiednich dzielenia tekstu wyrazów. Jeśli fragmentów nie jest typu tekst ani typem wartości o typie danych VT_LPWSTR, VT_LPSTR lub VT_BSTR, to pole jest ignorowane.  
+ Język i podjęzyk skojarzone z fragment tekstu. Ustawienia regionalne fragmentów służy indeksatory dokumentu do wykonania odpowiednich wyrazów tekstu. W przypadku typ tekstu ani typem wartości o typie danych VT_LPWSTR, VT_LPSTR lub VT_BSTR fragmentów to pole jest ignorowany.  
   
  *cwcLenSource*  
- Długość w znakach tekst źródłowy, z którego pochodzi bieżącego fragmentu. Wartość zero oznacza znak po znaku zgodności między tekst źródłowy i pochodne tekstu. Wartość niezerowa oznacza, czy istnieje nie bezpośrednie zgodności.  
+ Długość w znakach tekst źródłowy, z którego pochodzi bieżącego fragmentu. Wartość zero oznacza znak po znaku zgodności między tekst źródłowy i pochodnej tekstu. Wartość różną od zera oznacza, że istnieje nie bezpośredniej korespondencji.  
   
  *cwcStartSource*  
- Przesunięcie, z którego tekst źródłowy pochodnej fragmentu rozpoczyna się we fragmencie źródła.  
+ Przesunięcie, w którym tekst źródłowy dla fragmentu pochodnej rozpoczyna się we fragmencie źródła.  
   
  *chunkBreakType*  
- Typ podziału, która oddziela poprzedniego fragmentu od bieżącego fragmentu. Wartości pochodzą z wyliczania CHUNK_BREAKTYPE.  
+ Typ podziału oddzielający poprzedniego fragmentu od bieżącego fragmentu. Wartości są z wyliczenia CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  S_OK w przypadku powodzenia; w przeciwnym razie kod błędu.  
@@ -528,7 +528,7 @@ HRESULT SetIntValue(
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="setlongvalue"></a>  CMFCFilterChunkValueImpl::SetLongValue  
- Ustaw właściwość przez klucz do postaci DŁUGIEJ.  
+ Ustaw właściwość według klucza na wartość typu LONG.  
   
 ```  
 HRESULT SetLongValue(
@@ -549,19 +549,19 @@ HRESULT SetLongValue(
  Określa wartość fragmentu do ustawienia.  
   
  *chunkType*  
- Flagi wskazują, czy ten fragmentu zawiera typ tekstu lub typ wartości właściwości. Wartości flagi są pobierane z wyliczenia CHUNKSTATE.  
+ Flagi wskazują, czy ten fragment zawiera typ tekstu lub właściwość typu wartości. Wartości flagi są pobierane z wyliczenia CHUNKSTATE.  
   
  *Ustawienia regionalne*  
- Język i odmianą języka skojarzone z fragmentów tekstu. Ustawienia regionalne fragmentu jest używany przez indeksatory dokumentu do wykonywania odpowiednich dzielenia tekstu wyrazów. Jeśli fragmentów nie jest typu tekst ani typem wartości o typie danych VT_LPWSTR, VT_LPSTR lub VT_BSTR, to pole jest ignorowane.  
+ Język i podjęzyk skojarzone z fragment tekstu. Ustawienia regionalne fragmentów służy indeksatory dokumentu do wykonania odpowiednich wyrazów tekstu. W przypadku typ tekstu ani typem wartości o typie danych VT_LPWSTR, VT_LPSTR lub VT_BSTR fragmentów to pole jest ignorowany.  
   
  *cwcLenSource*  
- Długość w znakach tekst źródłowy, z którego pochodzi bieżącego fragmentu. Wartość zero oznacza znak po znaku zgodności między tekst źródłowy i pochodne tekstu. Wartość niezerowa oznacza, czy istnieje nie bezpośrednie zgodności.  
+ Długość w znakach tekst źródłowy, z którego pochodzi bieżącego fragmentu. Wartość zero oznacza znak po znaku zgodności między tekst źródłowy i pochodnej tekstu. Wartość różną od zera oznacza, że istnieje nie bezpośredniej korespondencji.  
   
  *cwcStartSource*  
- Przesunięcie, z którego tekst źródłowy pochodnej fragmentu rozpoczyna się we fragmencie źródła.  
+ Przesunięcie, w którym tekst źródłowy dla fragmentu pochodnej rozpoczyna się we fragmencie źródła.  
   
  *chunkBreakType*  
- Typ podziału, która oddziela poprzedniego fragmentu od bieżącego fragmentu. Wartości pochodzą z wyliczania CHUNK_BREAKTYPE.  
+ Typ podziału oddzielający poprzedniego fragmentu od bieżącego fragmentu. Wartości są z wyliczenia CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  S_OK w przypadku powodzenia; w przeciwnym razie kod błędu.  
@@ -569,7 +569,7 @@ HRESULT SetLongValue(
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="setsystemtimevalue"></a>  CMFCFilterChunkValueImpl::SetSystemTimeValue  
- Ustawia właściwość przez klucz do SystemTime.  
+ Ustawia właściwość według klucza do SystemTime.  
   
 ```  
 HRESULT SetSystemTimeValue(
@@ -590,19 +590,19 @@ HRESULT SetSystemTimeValue(
  Określa wartość fragmentu do ustawienia.  
   
  *chunkType*  
- Flagi wskazują, czy ten fragmentu zawiera typ tekstu lub typ wartości właściwości. Wartości flagi są pobierane z wyliczenia CHUNKSTATE.  
+ Flagi wskazują, czy ten fragment zawiera typ tekstu lub właściwość typu wartości. Wartości flagi są pobierane z wyliczenia CHUNKSTATE.  
   
  *Ustawienia regionalne*  
- Język i odmianą języka skojarzone z fragmentów tekstu. Ustawienia regionalne fragmentu jest używany przez indeksatory dokumentu do wykonywania odpowiednich dzielenia tekstu wyrazów. Jeśli fragmentów nie jest typu tekst ani typem wartości o typie danych VT_LPWSTR, VT_LPSTR lub VT_BSTR, to pole jest ignorowane.  
+ Język i podjęzyk skojarzone z fragment tekstu. Ustawienia regionalne fragmentów służy indeksatory dokumentu do wykonania odpowiednich wyrazów tekstu. W przypadku typ tekstu ani typem wartości o typie danych VT_LPWSTR, VT_LPSTR lub VT_BSTR fragmentów to pole jest ignorowany.  
   
  *cwcLenSource*  
- Długość w znakach tekst źródłowy, z którego pochodzi bieżącego fragmentu. Wartość zero oznacza znak po znaku zgodności między tekst źródłowy i pochodne tekstu. Wartość niezerowa oznacza, czy istnieje nie bezpośrednie zgodności.  
+ Długość w znakach tekst źródłowy, z którego pochodzi bieżącego fragmentu. Wartość zero oznacza znak po znaku zgodności między tekst źródłowy i pochodnej tekstu. Wartość różną od zera oznacza, że istnieje nie bezpośredniej korespondencji.  
   
  *cwcStartSource*  
- Przesunięcie, z którego tekst źródłowy pochodnej fragmentu rozpoczyna się we fragmencie źródła.  
+ Przesunięcie, w którym tekst źródłowy dla fragmentu pochodnej rozpoczyna się we fragmencie źródła.  
   
  *chunkBreakType*  
- Typ podziału, która oddziela poprzedniego fragmentu od bieżącego fragmentu. Wartości pochodzą z wyliczania CHUNK_BREAKTYPE.  
+ Typ podziału oddzielający poprzedniego fragmentu od bieżącego fragmentu. Wartości są z wyliczenia CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  S_OK w przypadku powodzenia; w przeciwnym razie kod błędu.  
@@ -631,19 +631,19 @@ HRESULT SetTextValue(
  Określa wartość fragmentu do ustawienia.  
   
  *chunkType*  
- Flagi wskazują, czy ten fragmentu zawiera typ tekstu lub typ wartości właściwości. Wartości flagi są pobierane z wyliczenia CHUNKSTATE.  
+ Flagi wskazują, czy ten fragment zawiera typ tekstu lub właściwość typu wartości. Wartości flagi są pobierane z wyliczenia CHUNKSTATE.  
   
  *Ustawienia regionalne*  
- Język i odmianą języka skojarzone z fragmentów tekstu. Ustawienia regionalne fragmentu jest używany przez indeksatory dokumentu do wykonywania odpowiednich dzielenia tekstu wyrazów. Jeśli fragmentów nie jest typu tekst ani typem wartości o typie danych VT_LPWSTR, VT_LPSTR lub VT_BSTR, to pole jest ignorowane.  
+ Język i podjęzyk skojarzone z fragment tekstu. Ustawienia regionalne fragmentów służy indeksatory dokumentu do wykonania odpowiednich wyrazów tekstu. W przypadku typ tekstu ani typem wartości o typie danych VT_LPWSTR, VT_LPSTR lub VT_BSTR fragmentów to pole jest ignorowany.  
   
  *cwcLenSource*  
- Długość w znakach tekst źródłowy, z którego pochodzi bieżącego fragmentu. Wartość zero oznacza znak po znaku zgodności między tekst źródłowy i pochodne tekstu. Wartość niezerowa oznacza, czy istnieje nie bezpośrednie zgodności.  
+ Długość w znakach tekst źródłowy, z którego pochodzi bieżącego fragmentu. Wartość zero oznacza znak po znaku zgodności między tekst źródłowy i pochodnej tekstu. Wartość różną od zera oznacza, że istnieje nie bezpośredniej korespondencji.  
   
  *cwcStartSource*  
- Przesunięcie, z którego tekst źródłowy pochodnej fragmentu rozpoczyna się we fragmencie źródła.  
+ Przesunięcie, w którym tekst źródłowy dla fragmentu pochodnej rozpoczyna się we fragmencie źródła.  
   
  *chunkBreakType*  
- Typ podziału, która oddziela poprzedniego fragmentu od bieżącego fragmentu. Wartości pochodzą z wyliczania CHUNK_BREAKTYPE.  
+ Typ podziału oddzielający poprzedniego fragmentu od bieżącego fragmentu. Wartości są z wyliczenia CHUNK_BREAKTYPE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  S_OK w przypadku powodzenia; w przeciwnym razie kod błędu.  

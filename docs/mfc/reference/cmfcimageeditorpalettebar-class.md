@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e377a465dd55d8940e74617130216220d03f1218
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3b10e18e12b5a2f27c0b83562ef16321da67422
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370045"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851460"
 ---
 # <a name="cmfcimageeditorpalettebar-class"></a>Klasa CMFCImageEditorPaletteBar
-Zapewnia funkcję pasek palety okno dialogowe Edytor obrazu.  
+Zapewnia funkcje paska palety okno dialogowe edytora obrazu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,12 +44,12 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
 |-|-|  
 |Nazwa|Opis|  
 |[CMFCImageEditorPaletteBar::GetRowHeight](#getrowheight)|Zwraca wysokość przycisków paska narzędzi. (Przesłania [CMFCToolBar::GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight).)|  
-|[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Określa, czy pasek narzędzi można wyświetlić rozszerzono obramowania przycisków. (Przesłania [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|  
+|[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Określa, czy pasek narzędzi można wyświetlić przyciski, który został rozszerzony obramowania. (Przesłania [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|  
   
 ### <a name="remarks"></a>Uwagi  
  Ta klasa nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
- Platformę korzysta z tej klasy wyświetlania paska palety w oknie dialogowym edytora obrazów. Aby uzyskać więcej informacji na temat okno dialogowe Edytor obrazu, zobacz [CMFCImageEditorDialog klasy](../../mfc/reference/cmfcimageeditordialog-class.md).  
+ Struktura używa tej klasy, aby wyświetlić pasek palety w okno dialogowe edytora obrazu. Aby uzyskać więcej informacji na temat okno dialogowe edytora obrazu, zobacz [klasa CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -82,14 +82,14 @@ virtual int GetRowHeight() const;
  Wysokość każdego przycisku na pasku narzędzi.  
   
 ##  <a name="isbuttonextrasizeavailable"></a>  CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable  
- Określa, czy pasek narzędzi można wyświetlić rozszerzono obramowania przycisków.  
+ Określa, czy pasek narzędzi można wyświetlić przyciski, który został rozszerzony obramowania.  
   
 ```  
 virtual BOOL IsButtonExtraSizeAvailable() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca `FALSE`.  
+ Ta metoda zwraca wartość FALSE.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46f554e375e8c0185e8c2b75c81eeae5ee615c51
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 731ec7b359995fc8ecbfdeae89595442d8186eeb
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370474"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851395"
 ---
 # <a name="coleexception-class"></a>Klasa COleException
-Reprezentuje warunku wyjątku związanych z operacją OLE.  
+Przedstawia warunek wyjątku związany z operacją OLE.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,25 +42,25 @@ class COleException : public CException
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[COleException::Process](#process)|Wykonuje translację zgłoszony wyjątek do kodu powrotnego OLE.|  
+|[COleException::Process](#process)|Wykonuje translację przechwycony wyjątek do zwróciło kod powrotny OLE.|  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[COleException::m_sc](#m_sc)|Zawiera kod stanu wskazujący przyczynę wyjątek.|  
+|[COleException::m_sc](#m_sc)|Zawiera kod stanu, która wskazuje przyczynę wyjątku.|  
   
 ## <a name="remarks"></a>Uwagi  
- `COleException` Klasa zawiera element członkowski danych publicznych, który zawiera kod stanu wskazujący z powodu wyjątku.  
+ `COleException` Klasa zawiera element członkowski danych publicznego, który zawiera kod stanu wskazujący przyczynę, dla wyjątku.  
   
- Ogólnie rzecz biorąc, nie należy tworzyć `COleException` obiekt bezpośrednio; zamiast tego należy wywołać [afxthrowoleexception —](exception-processing.md#afxthrowoleexception).  
+ Ogólnie rzecz biorąc, nie należy tworzyć `COleException` obiektu bezpośrednio; zamiast tego należy wywołać [afxthrowoleexception —](exception-processing.md#afxthrowoleexception).  
   
- Aby uzyskać więcej informacji dotyczących wyjątków, zobacz artykuły [obsługi wyjątków (MFC)](../../mfc/exception-handling-in-mfc.md) i [wyjątki: wyjątki OLE](../../mfc/exceptions-ole-exceptions.md).  
+ Aby uzyskać więcej informacji na temat wyjątków, zobacz artykuły [obsługi wyjątków (MFC)](../../mfc/exception-handling-in-mfc.md) i [wyjątki: wyjątki OLE](../../mfc/exceptions-ole-exceptions.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [Cexception —](../../mfc/reference/cexception-class.md)  
+ [CException](../../mfc/reference/cexception-class.md)  
   
  `COleException`  
   
@@ -68,7 +68,7 @@ class COleException : public CException
  **Nagłówek:** afxdisp.h  
   
 ##  <a name="m_sc"></a>  COleException::m_sc  
- Ten element członkowski danych zawiera kod stanu OLE wskazujący przyczynę wyjątek.  
+ Ten element członkowski danych przechowuje kod stanu OLE, która wskazuje przyczynę wyjątku.  
   
 ```  
 SCODE m_sc;  
@@ -77,13 +77,13 @@ SCODE m_sc;
 ### <a name="remarks"></a>Uwagi  
  Wartość tej zmiennej jest ustawiana przez [afxthrowoleexception —](exception-processing.md#afxthrowoleexception).  
   
- Aby uzyskać więcej informacji na temat `SCODE`, zobacz [struktury COM kody błędów](http://msdn.microsoft.com/library/windows/desktop/ms690088) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji na temat SCODE, zobacz [struktury COM kody błędów](http://msdn.microsoft.com/library/windows/desktop/ms690088) w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCOleContainer#22](../../mfc/codesnippet/cpp/coleexception-class_1.cpp)]  
   
 ##  <a name="process"></a>  COleException::Process  
- Wywołanie **procesu** funkcji członkowskiej tłumaczenie zgłoszony wyjątek do kodu stanu OLE.  
+ Wywołaj **procesu** funkcja elementu członkowskiego do translacji zgłoszony wyjątek, kod stanu OLE.  
   
 ```  
 static SCODE PASCAL Process(const CException* pAnyException);
@@ -91,7 +91,7 @@ static SCODE PASCAL Process(const CException* pAnyException);
   
 ### <a name="parameters"></a>Parametry  
  *pAnyException*  
- Wskaźnik do zgłoszony wyjątek.  
+ Wskaźnik do przechwyconego wyjątku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Kod stanu OLE.  
@@ -99,16 +99,16 @@ static SCODE PASCAL Process(const CException* pAnyException);
 ### <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  Ta funkcja jest **statycznych**.  
+>  Ta funkcja jest **statyczne**.  
   
- Aby uzyskać więcej informacji na temat `SCODE`, zobacz [struktury COM kody błędów](http://msdn.microsoft.com/library/windows/desktop/ms690088) w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji na temat SCODE, zobacz [struktury COM kody błędów](http://msdn.microsoft.com/library/windows/desktop/ms690088) w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykładowe MFC CALCDRIV](../../visual-cpp-samples.md)   
- [Cexception — klasa](../../mfc/reference/cexception-class.md)   
+ [Próbki MFC CALCDRIV](../../visual-cpp-samples.md)   
+ [Klasa CException](../../mfc/reference/cexception-class.md)   
  [Wykres hierarchii](../../mfc/hierarchy-chart.md)
 
 

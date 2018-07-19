@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8b0a512d0969f88d270ab7373be4807b1c55914
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 13f411f9f50b1a498dba718b41245f8fbb7c6e79
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038357"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851590"
 ---
 # <a name="cmfclinkctrl-class"></a>Klasa CMFCLinkCtrl
-`CMFCLinkCtrl` Klasa przedstawia przycisk jako hiperłącze i wywołuje docelowy łącza, po kliknięciu przycisku.  
+`CMFCLinkCtrl` Klasy Wyświetla przycisk jako hiperłącze i wywołuje cel łącza po kliknięciu przycisku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,9 +46,9 @@ class CMFCLinkCtrl : public CMFCButton
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CMFCLinkCtrl::SetURL](#seturl)|Określony adres URL będzie wyświetlany jako tekst przycisku.|  
-|[CMFCLinkCtrl::SetURLPrefix](#seturlprefix)|Ustawia niejawne protokół (na przykład "http:") adresu URL.|  
-|[CMFCLinkCtrl::SizeToContent](#sizetocontent)|Zmienia rozmiar przycisku zawierają tekst przycisku lub mapy bitowej.|  
+|[CMFCLinkCtrl::SetURL](#seturl)|Wyświetla wybrany adres URL w postaci tekstu przycisku.|  
+|[CMFCLinkCtrl::SetURLPrefix](#seturlprefix)|Ustawia protokół niejawne (na przykład "http:") adresu URL.|  
+|[CMFCLinkCtrl::SizeToContent](#sizetocontent)|Zmienia rozmiar przycisku, które zawierają tekst przycisku lub mapy bitowej.|  
   
 ### <a name="protected-methods"></a>Metody chronione  
   
@@ -57,10 +57,10 @@ class CMFCLinkCtrl : public CMFCButton
 |[CMFCLinkCtrl::OnDrawFocusRect](#ondrawfocusrect)|Wywoływane przez platformę przed narysowaniem prostokąt fokusu przycisku.|  
   
 ## <a name="remarks"></a>Uwagi  
- Po kliknięciu przycisku, który jest pochodną `CMFCLinkCtrl` klasy, struktury przekazuje adres URL przycisku jako parametr `ShellExecute` metody. Następnie przy użyciu `ShellExecute` metody otwiera obiekt docelowy adresu URL.  
+ Po kliknięciu przycisku, który jest tworzony na podstawie `CMFCLinkCtrl` klasa, struktura przekazanie adresu URL przycisku jako parametr do `ShellExecute` metody. A następnie `ShellExecute` metoda zostanie otwarty obiekt docelowy adresu URL.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano sposób ustawiania rozmiaru `CMFCLinkCtrl` obiektu oraz jak ustawić adres url i etykietki narzędzia w `CMFCLinkCtrl` obiektu. Ten przykład jest częścią [próbki nowe formanty](../../visual-cpp-samples.md).  
+ Poniższy przykład pokazuje, jak ustawić rozmiar `CMFCLinkCtrl` obiektu i jak ustawić adres url i etykietka narzędzia w `CMFCLinkCtrl` obiektu. W tym przykładzie jest częścią [przykładowe nowych formantów](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_NewControls#9](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#10](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_2.cpp)]  
@@ -95,13 +95,13 @@ virtual void OnDrawFocusRect(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *rectClient*  
- Prostokąt zakresem kontrolki łącza.  
+ Prostokąt, który granic kontrolki łącza.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę metodę, jeśli chcesz użyć własnego kodu do rysowania prostokąt fokusu przycisku.  
+ Należy przesłonić tę metodę, jeśli chcesz użyć własnego kodu, aby narysować prostokąt fokusu na przycisku.  
   
 ##  <a name="seturl"></a>  CMFCLinkCtrl::SetURL  
- Określony adres URL będzie wyświetlany jako tekst przycisku.  
+ Wyświetla wybrany adres URL w postaci tekstu przycisku.  
   
 ```  
 void SetURL(LPCTSTR lpszURL);
@@ -114,7 +114,7 @@ void SetURL(LPCTSTR lpszURL);
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="seturlprefix"></a>  CMFCLinkCtrl::SetURLPrefix  
- Ustawia niejawne protokół (na przykład "http:") adresu URL.  
+ Ustawia protokół niejawne (na przykład "http:") adresu URL.  
   
 ```  
 void SetURLPrefix(LPCTSTR lpszPrefix);
@@ -122,13 +122,13 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
   
 ### <a name="parameters"></a>Parametry  
  [in] *lpszPrefix*  
- Prefiks adresu URL protokołu.  
+ Prefiks Protokół adresu URL.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj tej metody, aby ustawić prefiksu adresu URL. Prefiks nie jest wyświetlany na przycisku, ale służy do pomocy, przejdź do docelowego adresu URL.  
+ Użyj tej metody można ustawić prefiks adresu URL. Prefiks nie jest wyświetlany na powierzchni przycisku, ale służy do pomocy, przejdź do docelowego adresu URL.  
   
 ##  <a name="sizetocontent"></a>  CMFCLinkCtrl::SizeToContent  
- Zmienia rozmiar przycisku zawierają tekst przycisku lub mapy bitowej.  
+ Zmienia rozmiar przycisku, które zawierają tekst przycisku lub mapy bitowej.  
   
 ```  
 virtual CSize SizeToContent(
@@ -138,10 +138,10 @@ virtual CSize SizeToContent(
   
 ### <a name="parameters"></a>Parametry  
  [in] *bVCenter*  
- `TRUE` Tekst przycisku center i mapy bitowej w pionie między górą a dołem kontroli łączy. w przeciwnym razie `FALSE`. Wartość domyślna to `FALSE`.  
+ Wartość TRUE, aby wyśrodkować przycisku tekstu i mapy bitowej w pionie między górą a dołem kontroli łącza. w przeciwnym razie wartość FALSE. Wartość domyślna to FALSE.  
   
  [in] *bHCenter*  
- `TRUE` Aby wyśrodkować tekst przycisku i mapy bitowej poziomo od lewej i prawej stronie formantu łącze; w przeciwnym razie `FALSE`. Wartość domyślna to `FALSE`.  
+ Wartość TRUE, aby wyśrodkować przycisku tekstu i mapy bitowej w poziomie od lewej i prawej stronie kontroli łącza. w przeciwnym razie wartość FALSE. Wartość domyślna to FALSE.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) obiekt, który zawiera nowy rozmiar kontrolki łącza.  

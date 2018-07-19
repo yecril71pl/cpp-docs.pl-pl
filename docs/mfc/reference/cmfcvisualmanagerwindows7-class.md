@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4bcc39645c079ef9a0b61a4e12782223dd19a92
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 17ec3560e7faf8c49f410437c79609bfb871a9c9
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042225"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849952"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>Klasa CMFCVisualManagerWindows7
-`CMFCVisualManagerWindows7` Daje aplikacji wygląd [!INCLUDE[win7](../../build/includes/win7_md.md)] aplikacji.  
+`CMFCVisualManagerWindows7` Nadaje aplikacji wygląd [!INCLUDE[win7](../../build/includes/win7_md.md)] aplikacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,19 +43,19 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[CMFCVisualManagerWindows7::CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7)|Domyślny konstruktor.|  
-|[CMFCVisualManagerWindows7:: ~ CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7__~cmfcvisualmanagerwindows7)|Destruktor domyślne.|  
+|[CMFCVisualManagerWindows7:: ~ CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7__~cmfcvisualmanagerwindows7)|Domyślny destruktor.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
 |`CMFCVisualManagerWindows7::CleanStyle`|Usuwa bieżący styl wizualny i przywraca domyślny styl wizualny.|  
-|`CMFCVisualManagerWindows7::CleanUp`|Usuwa wszystkie obiekty w interfejsie użytkownika i przywraca menu.|  
-|`CMFCVisualManagerWindows7::DrawNcBtn`|Rysuje przycisku w obszarze klienckim z systemem innym niż w ramce. Używa framework tę metodę, aby narysować zminimalizować, zmaksymalizować, zamknij i przywracanie przycisków w prawym górnym rogu ramki okna. Ta metoda nie jest wywoływane, gdy program używa-Aero motywu.|  
-|`CMFCVisualManagerWindows7::DrawNcText`|Rysuje tekst w obszarze klienckim z systemem innym niż w ramce. Platformę używa tej metody do rysowania Tytuł aplikacji na pasku tytułu w górnej części okna ramki.|  
-|`CMFCVisualManagerWindows7::DrawSeparator`|Rysuje separator w [CMFCToolBar klasy](../../mfc/reference/cmfctoolbar-class.md).|  
-|`CMFCVisualManagerWindows7::GetRibbonBar`|Pobiera [klasy CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) skojarzoną z interfejsem użytkownika.|  
-|[CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor](#getribboneditbackgroundcolor)|Uzyskuje kolor tła pola edycji wstążki.|  
+|`CMFCVisualManagerWindows7::CleanUp`|Czyści wszystkie obiekty w interfejsie użytkownika i resetuje menu.|  
+|`CMFCVisualManagerWindows7::DrawNcBtn`|Rysuje przycisku w obszarze-client w ramce. Zastosowań framework tę metodę, aby narysować zminimalizować, Maksymalizuj, zamknij i przywrócić przycisków w prawym górnym rogu ramki okna. Ta metoda nie jest wywoływana, gdy program używa-Aero motywu.|  
+|`CMFCVisualManagerWindows7::DrawNcText`|Rysuje tekst w obszarze-client w ramce. Struktura używa tej metody, aby narysować Tytuł aplikacji na pasku tytułu w górnej części okna ramki.|  
+|`CMFCVisualManagerWindows7::DrawSeparator`|Rysuje separatorem w [klasa CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md).|  
+|`CMFCVisualManagerWindows7::GetRibbonBar`|Pobiera [klasa CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) skojarzoną z interfejsem użytkownika.|  
+|[CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor](#getribboneditbackgroundcolor)|Pobiera kolor tła pola edycji wstążki.|  
 |`CMFCVisualManagerWindows7::GetRibbonPopupBorderSize`|Zastępuje [CMFCVisualManager::GetRibbonPopupBorderSize](../../mfc/reference/cmfcvisualmanager-class.md#getribbonpopupbordersize)|  
 |`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarChevronOffset`|Zastępuje [CMFCVisualManager::GetRibbonQuickAccessToolBarChevronOffset](../../mfc/reference/cmfcvisualmanager-class.md#getribbonquickaccesstoolbarchevronoffset)|  
 |`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarRightMargin`|Zastępuje [CMFCVisualManager::GetRibbonQuickAccessToolBarRightMargin](../../mfc/reference/cmfcvisualmanager-class.md#getribbonquickaccesstoolbarrightmargin)|  
@@ -92,20 +92,20 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |`CMFCVisualManagerWindows7::OnDrawStatusBarSizeBox`|Zastępuje [CMFCVisualManagerWindows::OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawstatusbarsizebox)|  
 |`CMFCVisualManagerWindows7::OnFillBarBackground`|Zastępuje [CMFCVisualManagerWindows::OnFillBarBackground](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbarbackground)|  
 |`CMFCVisualManagerWindows7::OnFillButtonInterior`|Zastępuje [CMFCVisualManagerWindows::OnFillButtonInterior](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbuttoninterior)|  
-|[CMFCVisualManagerWindows7::OnFillMenuImageRect](#onfillmenuimagerect)|Struktura wywołuje tę metodę po zapełnieniu obszar wokół obrazów elementów menu.|  
+|[CMFCVisualManagerWindows7::OnFillMenuImageRect](#onfillmenuimagerect)|Struktura wywołuje tę metodę, gdy wypełnił obszar wokół obrazów elementów menu.|  
 |`CMFCVisualManagerWindows7::OnFillRibbonButton`|Zastępuje [CMFCVisualManager::OnFillRibbonButton](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonbutton)|  
 |`CMFCVisualManagerWindows7::OnFillRibbonQuickAccessToolBarPopup`|Zastępuje [CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonquickaccesstoolbarpopup)|  
 |`CMFCVisualManagerWindows7::OnHighlightMenuItem`|Zastępuje [CMFCVisualManagerWindows::OnHighlightMenuItem](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onhighlightmenuitem)|  
 |`CMFCVisualManagerWindows7::OnNcActivate`|Zastępuje [CMFCVisualManager::OnNcActivate](../../mfc/reference/cmfcvisualmanager-class.md#onncactivate)|  
 |`CMFCVisualManagerWindows7::OnNcPaint`|Zastępuje [CMFCVisualManager::OnNcPaint](../../mfc/reference/cmfcvisualmanager-class.md#onncpaint)|  
 |`CMFCVisualManagerWindows7::OnUpdateSystemColors`|Zastępuje [CMFCVisualManagerWindows::OnUpdateSystemColors](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onupdatesystemcolors)|  
-|`CMFCVisualManagerWindows7::SetResourceHandle`|Ustawia dojście do zasobu, zawiera opis atrybutów visual menedżera.|  
+|`CMFCVisualManagerWindows7::SetResourceHandle`|Ustawia dojście do zasobu, który opisuje atrybuty visual menedżera.|  
 |`CMFCVisualManagerWindows7::SetStyle`|Ustawia schemat kolorów `CMFCVisualManagerWindows7` graficznego interfejsu użytkownika.|  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj `CMFCVisualManagerWindows7` klasy, aby zmienić wygląd aplikacji w celu naśladować domyślny [!INCLUDE[win7](../../build/includes/win7_md.md)] aplikacji. Ta klasa może być nieprawidłowy, jeśli aplikacja działa w wersji systemu Windows starszych niż [!INCLUDE[win7](../../build/includes/win7_md.md)]. W tym scenariuszu aplikacja używa domyślnego menedżera visual zdefiniowane w [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).  
+ Użyj `CMFCVisualManagerWindows7` klasy, aby zmienić wygląd aplikacji do naśladowania domyślny [!INCLUDE[win7](../../build/includes/win7_md.md)] aplikacji. Ta klasa może być nieprawidłowy, jeśli aplikacja jest uruchomiona w wersji systemu Windows starszych niż [!INCLUDE[win7](../../build/includes/win7_md.md)]. W tym scenariuszu aplikacja używa domyślnego menedżera visual zdefiniowane w [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).  
   
- CMFCVisualManagerWindows7 dziedziczy wiele metod z obu [klasy program CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md) i `CMFCVisualManager` klasy. Z metod opisanych w poprzedniej sekcji są nowe do metody `CMFCVisualManagerWindows7` klasy.  
+ CMFCVisualManagerWindows7 dziedziczy na wiele sposobów zarówno [klasa CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md) i `CMFCVisualManager` klasy. Metody wymienione w poprzedniej sekcji są metodami jesteś nowym użytkownikiem `CMFCVisualManagerWindows7` klasy.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -114,9 +114,9 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
   
  [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)  
   
- [Program CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)  
+ [CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)  
   
- [Program CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md)  
+ [CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md)  
   
  `CMFCVisualManagerWindows7`  
   
@@ -124,7 +124,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
  **Nagłówek:** afxvisualmanagerwindows7.h  
   
 ##  <a name="_dtorcmfcvisualmanagerwindows7"></a>  CMFCVisualManagerWindows7:: ~ CMFCVisualManagerWindows7  
- Destruktor domyślne.  
+ Domyślny destruktor.  
   
 ```  
 virtual ~CMFCVisualManagerWindows7();
@@ -138,7 +138,7 @@ CMFCVisualManagerWindows7();
 ```  
   
 ##  <a name="getribboneditbackgroundcolor"></a>  CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor  
- Uzyskuje kolor tła pole edycji wstążki.  
+ Pobiera kolor tła pola edycji wstążki.  
   
 ```  
 virtual COLORREF GetRibbonEditBackgroundColor (
@@ -150,13 +150,13 @@ virtual COLORREF GetRibbonEditBackgroundColor (
   
 ### <a name="parameters"></a>Parametry  
  [in] *pEdit*  
- Wskaźnik do kontrolki edycji. Ta wartość nie może być `NULL`.  
+ Wskaźnik do kontrolki edycji. Ta wartość nie może mieć wartości NULL.  
   
  [out] *bIsHighlighted*  
- Zwraca czy zostanie wyróżniona pole wstążki.  
+ Zwraca, czy pole wstążki jest wyróżniona.  
   
  [out] *bIsPaneHighlighted*  
- Zwraca `TRUE` czy wstążki panelu, który zawiera *pEdit* zostanie wyróżniona.  
+ Zwraca wartość TRUE, jeśli panelu wstążki, który zawiera *pEdit* zostanie wyróżniona.  
   
  [out] *bIsDisabled*  
  Zwraca czy *pEdit* jest wyłączona.  
@@ -167,7 +167,7 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onfillmenuimagerect"></a>  CMFCVisualManagerWindows7::OnFillMenuImageRect  
- Struktura wywołuje tę metodę po zapełnieniu obszar wokół obrazu elementu menu.  
+ Struktura wywołuje tę metodę, gdy wypełnił obszar wokół obrazu elementu menu.  
   
 ```  
 virtual void OnFillMenuImageRect(
@@ -182,10 +182,10 @@ virtual void OnFillMenuImageRect(
  Wskaźnik do kontekstu urządzenia przycisku menu.  
   
  [in] *pButton*  
- Wskaźnik do `CMFCToolBarButton`. Platformę wypełnienia tła dla tego przycisku.  
+ Wskaźnik do `CMFCToolBarButton`. Struktura wypełnia tło tego przycisku.  
   
  [in] *rect*  
- Prostokąt, który określa granice obszaru obrazu przycisku menu.  
+ Prostokąt, który określa granice obszar obrazu przycisku menu.  
   
  [in] *stanu*  
  Stan przycisku.  

@@ -40,15 +40,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6af0859811ad4064c12f6e4ef8d470437fe3ded9
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 97e0a81fc5e317f018924efd3d564d39618cb2b5
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037664"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850085"
 ---
 # <a name="cmfcheaderctrl-class"></a>Klasa CMFCHeaderCtrl
-`CMFCHeaderCtrl` Klasa obsługuje sortowanie wiele kolumn w formancie nagłówka.  
+`CMFCHeaderCtrl` Klasa obsługuje sortowanie wielu kolumn w formancie nagłówka.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -69,31 +69,31 @@ class CMFCHeaderCtrl : public CHeaderCtrl
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)|Włącza lub wyłącza *wielu sortowanie kolumn* tryb dla bieżącego formantu nagłówka.|  
-|[CMFCHeaderCtrl::GetColumnState](#getcolumnstate)|Wskazuje, czy kolumna nie jest posortowana, czy są posortowane w kolejności rosnącej lub malejącej.|  
+|[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)|Włącza lub wyłącza *sortowanie wielu kolumn* tryb dla bieżącego kontrolki nagłówka.|  
+|[CMFCHeaderCtrl::GetColumnState](#getcolumnstate)|Wskazuje, czy kolumna nie jest sortowana lub są posortowane w kolejności rosnącej lub malejącej.|  
 |[CMFCHeaderCtrl::GetSortColumn](#getsortcolumn)|Pobiera liczony od zera indeks pierwszego kolumna posortowana w formancie nagłówka.|  
-|`CMFCHeaderCtrl::GetThisClass`|Używany przez platformę do uzyskania wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiekt, który jest skojarzony z tym typem klasy.|  
-|[CMFCHeaderCtrl::IsAscending](#isascending)|Wskazuje, czy wszystkie kolumny w formancie nagłówka jest sortowany w kolejności rosnącej.|  
-|[CMFCHeaderCtrl::IsDialogControl](#isdialogcontrol)|Wskazuje, czy okno nadrzędne bieżącego formantu nagłówka jest okno dialogowe.|  
-|[CMFCHeaderCtrl::IsMultipleSort](#ismultiplesort)|Wskazuje, czy bieżący formantu nagłówka jest *wielu sortowanie kolumn* tryb.|  
-|[CMFCHeaderCtrl::RemoveSortColumn](#removesortcolumn)|Usuwa określonej kolumny z listy kolumn, sortowania.|  
-|[CMFCHeaderCtrl::SetSortColumn](#setsortcolumn)|Określa porządek sortowania dla określonej kolumny w formancie nagłówka.|  
+|`CMFCHeaderCtrl::GetThisClass`|Używane przez architekturę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tym typem klasy.|  
+|[CMFCHeaderCtrl::IsAscending](#isascending)|Wskazuje, czy dowolną kolumnę w formancie nagłówka jest sortowany w kolejności rosnącej.|  
+|[CMFCHeaderCtrl::IsDialogControl](#isdialogcontrol)|Wskazuje, czy okno nadrzędne kontrolki nagłówka bieżące okno dialogowe.|  
+|[CMFCHeaderCtrl::IsMultipleSort](#ismultiplesort)|Wskazuje, czy bieżący kontrolki nagłówka znajduje się w *sortowanie wielu kolumn* trybu.|  
+|[CMFCHeaderCtrl::RemoveSortColumn](#removesortcolumn)|Usuwa określonej kolumny z listy kolumn sortowania.|  
+|[CMFCHeaderCtrl::SetSortColumn](#setsortcolumn)|Ustawia kolejność sortowania określona kolumna w formancie nagłówka.|  
   
 ### <a name="protected-methods"></a>Metody chronione  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CMFCHeaderCtrl::OnDrawItem](#ondrawitem)|Wywoływane przez platformę, by narysować kontrolki nagłówek kolumny.|  
-|[CMFCHeaderCtrl::OnDrawSortArrow](#ondrawsortarrow)|Wywoływane przez platformę, by narysować strzałkę sortowania.|  
-|[CMFCHeaderCtrl::OnFillBackground](#onfillbackground)|Wywoływane przez platformę, by wypełnienia tła formantu nagłówka kolumny.|  
+|[CMFCHeaderCtrl::OnDrawItem](#ondrawitem)|Metoda wywoływana przez platformę, by narysować nagłówka kolumny kontrolki.|  
+|[CMFCHeaderCtrl::OnDrawSortArrow](#ondrawsortarrow)|Metoda wywoływana przez platformę, by narysować strzałkę sortowania.|  
+|[CMFCHeaderCtrl::OnFillBackground](#onfillbackground)|Metoda wywoływana przez platformę, by wypełnienia tła formantu nagłówek kolumny.|  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano sposób tworzenia obiektu `CMFCHeaderCtrl` klasy i jak włączyć *wielu sortowanie kolumn* tryb dla bieżącego formantu nagłówka.  
+ W poniższym przykładzie pokazano sposób tworzenia obiektu `CMFCHeaderCtrl` klasy oraz jak włączyć *sortowanie wielu kolumn* tryb dla bieżącego kontrolki nagłówka.  
   
  [!code-cpp[NVC_MFC_RibbonApp#24](../../mfc/reference/codesnippet/cpp/cmfcheaderctrl-class_1.cpp)]  
   
 ## <a name="remarks"></a>Uwagi  
- `CMFCHeaderCtrl` Klasy Rysuje strzałkę sortowania w nagłówek kolumny formantu, aby wskazać, że będzie sortowana kolumna. Użyj *wielu sortowania kolumn* tryb, jeśli zestaw kolumn w formancie listy nadrzędnej ( [CMFCListCtrl klasy](../../mfc/reference/cmfclistctrl-class.md)) mogą być sortowane w tym samym czasie.  
+ `CMFCHeaderCtrl` Klasy Rysuje strzałkę sortowania w kolumnie kontrolki nagłówka, aby wskazać, czy kolumny są sortowane. Użyj *sortowanie wielu kolumn* trybu, jeśli zestaw kolumn w formancie listy nadrzędnej ( [klasa CMFCListCtrl](../../mfc/reference/cmfclistctrl-class.md)) mogą być sortowane w tym samym czasie.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -117,20 +117,20 @@ CMFCHeaderCtrl::CMFCHeaderCtrl()
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ten konstruktor inicjuje następujące zmienne Członkowskie do określonych wartości:  
+ Ten konstruktor inicjuje następujące zmienne Członkowskie do określonej wartości:  
   
-|Zmiennej członkowskiej|Wartość|  
+|Zmienna składowa|Wartość|  
 |---------------------|-----------|  
-|`m_bIsMousePressed`|`FALSE`|  
-|`m_bMultipleSort`|`FALSE`|  
-|`m_bAscending`|`TRUE`|  
+|`m_bIsMousePressed`|FAŁSZ|  
+|`m_bMultipleSort`|FAŁSZ|  
+|`m_bAscending`|WARTOŚĆ TRUE|  
 |`m_nHighlightedItem`|-1|  
-|`m_bTracked`|`FALSE`|  
-|`m_bIsDlgControl`|`FALSE`|  
-|`m_hFont`|`NULL`|  
+|`m_bTracked`|FAŁSZ|  
+|`m_bIsDlgControl`|FAŁSZ|  
+|`m_hFont`|NULL|  
   
 ##  <a name="enablemultiplesort"></a>  CMFCHeaderCtrl::EnableMultipleSort  
- Włącza lub wyłącza *wielu sortowanie kolumn* tryb dla bieżącego formantu nagłówka.  
+ Włącza lub wyłącza *sortowanie wielu kolumn* tryb dla bieżącego kontrolki nagłówka.  
   
 ```  
 void EnableMultipleSort(BOOL bEnable=TRUE);
@@ -138,13 +138,13 @@ void EnableMultipleSort(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>Parametry  
  [in] *bWłączenie*  
- `TRUE` Aby włączyć tryb sortowania kolumny wielu; `FALSE` wyłączyć tryb sortowania kolumny wiele i usunąć kolumn z listy sortowanej kolumny. Wartość domyślna to `TRUE`.  
+ Wartość TRUE, aby włączyć tryb sortowanie wielu kolumn; Wartość FALSE, aby wyłączyć tryb sortowanie wielu kolumn i Usuń wszystkie kolumny z listy posortowane kolumny. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj tej metody, aby włączyć lub wyłączyć wielu Tryb sortowania kolumny. Dwie lub więcej kolumn mogą uczestniczyć w sortowania, jeśli formant nagłówka znajduje się wiele Tryb sortowania kolumny.  
+ Aby włączyć lub wyłączyć tryb sortowanie wielu kolumn, należy użyć tej metody. Co najmniej dwóch kolumn mogą uczestniczyć w sortowania, jeśli kontrolki nagłówka znajduje się w wielu Tryb sortowania kolumn.  
   
 ##  <a name="getcolumnstate"></a>  CMFCHeaderCtrl::GetColumnState  
- Wskazuje, czy kolumna jest posortowany lub są posortowane w kolejności rosnącej lub malejącej.  
+ Wskazuje, czy kolumna jest posortowana, czy są posortowane w kolejności rosnącej lub malejącej.  
   
 ```  
 int GetColumnState(int iColumn) const;  
@@ -155,12 +155,12 @@ int GetColumnState(int iColumn) const;
  Liczony od zera indeks kolumny.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość, która wskazuje stan sortowania dla określonej kolumny. W poniższej tabeli przedstawiono możliwe wartości:  
+ Wartość, która wskazuje stan sortowania dla określonej kolumny. W poniższej tabeli wymieniono możliwe wartości:  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
 |-1|Posortowane w kolejności malejącej.|  
-|0|Nie jest posortowana.|  
+|0|Nie są sortowane.|  
 |1|Posortowane w kolejności rosnącej.|  
   
 ### <a name="remarks"></a>Uwagi  
@@ -173,49 +173,49 @@ int GetSortColumn() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Indeks sortowanej kolumny lub wartość -1 w przypadku nieznalezienia nie sortowanej kolumny.  
+ Indeks kolumna posortowanego lub -1, jeśli znajduje się żadna kolumna posortowanego.  
   
 ### <a name="remarks"></a>Uwagi  
- W przypadku formantu nagłówka *wielu sortowania kolumn* tryb i skompilować aplikację w trybie debugowania, ta metoda potwierdzeń i informacją o tym, aby użyć [CMFCHeaderCtrl::GetColumnState](#getcolumnstate) metody zamiast tego. Jeśli formantu nagłówka wielu Tryb sortowania kolumny i skompilować aplikację w trybie sprzedaży detalicznej, ta metoda zwraca wartość -1.  
+ Jeśli kontrolki nagłówka znajduje się w *sortowanie wielu kolumn* tryb i skompilowanych aplikacji w trybie debugowania, ta metoda potwierdza i informacją o tym, aby użyć [CMFCHeaderCtrl::GetColumnState](#getcolumnstate) metody zamiast tego. Jeśli kontrolki nagłówka znajduje się w wielu Tryb sortowania kolumn i skompilowano aplikację w trybie sprzedaży detalicznej, ta metoda zwraca wartość -1.  
   
 ##  <a name="isascending"></a>  CMFCHeaderCtrl::IsAscending  
- Wskazuje, czy wszystkie kolumny w formancie nagłówka jest sortowany w kolejności rosnącej.  
+ Wskazuje, czy dowolną kolumnę w formancie nagłówka jest sortowany w kolejności rosnącej.  
   
 ```  
 BOOL IsAscending() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli wszystkie kolumny w formancie nagłówka jest posortowane w kolejności rosnącej kolejności; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli wszystkie kolumny w formancie nagłówka jest sortowany w kolejności rosnącej kolejności. w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda zwraca wartość jest używana Aby wyświetlić strzałkę odpowiedniego sortowania w elemencie formantu nagłówka. Użyj [CMFCHeaderCtrl::SetSortColumn](#setsortcolumn) metodę, aby ustawić kolejność sortowania.  
+ Ta metoda zwraca wartość służy do wyświetlenia strzałki odpowiedniego sortowania na element kontroli nagłówka. Użyj [CMFCHeaderCtrl::SetSortColumn](#setsortcolumn) metodę, aby ustawić kolejność sortowania.  
   
 ##  <a name="isdialogcontrol"></a>  CMFCHeaderCtrl::IsDialogControl  
- Wskazuje, czy okno nadrzędne bieżącego formantu nagłówka jest okno dialogowe.  
+ Wskazuje, czy okno nadrzędne kontrolki nagłówka bieżące okno dialogowe.  
   
 ```  
 BOOL IsDialogControl() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli okno nadrzędne bieżącego formantu nagłówka to okno dialogowe; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli to okno nadrzędne kontrolki nagłówka bieżące okno dialogowe; w przeciwnym razie wartość FALSE.  
   
 ##  <a name="ismultiplesort"></a>  CMFCHeaderCtrl::IsMultipleSort  
- Wskazuje, czy bieżący formantu nagłówka jest *wielu sortowanie kolumn* tryb.  
+ Wskazuje, czy bieżący kontrolki nagłówka znajduje się w *sortowanie wielu kolumn* trybu.  
   
 ```  
 BOOL IsMultipleSort() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli włączono tryb sortowania kolumny wielu; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli jest włączony tryb sortowania kolumn wielu; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) metody, aby włączyć lub wyłączyć wielu Tryb sortowania kolumny. Dwie lub więcej kolumn mogą uczestniczyć w sortowania, jeśli formant nagłówka znajduje się wiele Tryb sortowania kolumny.  
+ Użyj [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) metodę, aby włączyć lub wyłączyć tryb sortowanie wielu kolumn. Co najmniej dwóch kolumn mogą uczestniczyć w sortowania, jeśli kontrolki nagłówka znajduje się w wielu Tryb sortowania kolumn.  
   
 ##  <a name="ondrawitem"></a>  CMFCHeaderCtrl::OnDrawItem  
- Wywoływane przez platformę, by narysować kontrolki nagłówek kolumny.  
+ Metoda wywoływana przez platformę, by narysować nagłówka kolumny kontrolki.  
   
 ```  
 virtual void OnDrawItem(
@@ -234,16 +234,16 @@ virtual void OnDrawItem(
  Liczony od zera indeks elementu do rysowania.  
   
  [in] *rect*  
- Prostokąt ograniczający element do rysowania.  
+ Element, aby narysować prostokąt otaczający.  
   
  [in] *bIsPressed*  
- `TRUE` do rysowania elementu w stan naciśnięcia; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, aby rysować element w stan naciśnięcia; w przeciwnym razie wartość FALSE.  
   
  [in] *bIsHighlighted*  
- `TRUE` do rysowania elementu w stanie wyróżnione; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, aby rysować element w stanie wyróżnione; w przeciwnym razie wartość FALSE.  
   
 ##  <a name="ondrawsortarrow"></a>  CMFCHeaderCtrl::OnDrawSortArrow  
- Wywoływane przez platformę, by narysować strzałkę sortowania.  
+ Metoda wywoływana przez platformę, by narysować strzałkę sortowania.  
   
 ```  
 virtual void OnDrawSortArrow(
@@ -256,10 +256,10 @@ virtual void OnDrawSortArrow(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *rectArrow*  
- Prostokąt ograniczający strzałkę sortowania.  
+ Prostokąt otaczający strzałkę sortowania.  
   
 ##  <a name="onfillbackground"></a>  CMFCHeaderCtrl::OnFillBackground  
- Wywoływane przez platformę, by wypełnienia tła formantu nagłówka kolumny.  
+ Metoda wywoływana przez platformę, by wypełnienia tła formantu nagłówek kolumny.  
   
 ```  
 virtual void OnFillBackground(CDC* pDC);
@@ -272,7 +272,7 @@ virtual void OnFillBackground(CDC* pDC);
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="removesortcolumn"></a>  CMFCHeaderCtrl::RemoveSortColumn  
- Usuwa określonej kolumny z listy kolumn, sortowania.  
+ Usuwa określonej kolumny z listy kolumn sortowania.  
   
 ```  
 void RemoveSortColumn(int iColumn);
@@ -283,7 +283,7 @@ void RemoveSortColumn(int iColumn);
  Liczony od zera indeks kolumny do usunięcia.  
   
 ##  <a name="setsortcolumn"></a>  CMFCHeaderCtrl::SetSortColumn  
- Określa porządek sortowania dla określonej kolumny w formancie nagłówka.  
+ Ustawia kolejność sortowania określona kolumna w formancie nagłówka.  
   
 ```  
 void SetSortColumn(
@@ -294,22 +294,22 @@ void SetSortColumn(
   
 ### <a name="parameters"></a>Parametry  
  [in] *iColumn*  
- Liczony od zera indeks kolumny formantu nagłówka. Jeśli ten parametr jest mniejsza od zera, ta metoda usuwa wszystkie kolumny z listy kolumn, sortowania.  
+ Liczony od zera indeks kolumny kontrolki nagłówka. Jeśli ten parametr jest mniejsza niż zero, ta metoda usuwa wszystkie kolumny z listy kolumn sortowania.  
   
  [in] *bAscending*  
- Określa porządek sortowania kolumny, która *iColumn* określa parametr. `TRUE` Aby ustawić rosnąco; `FALSE` można ustawić w kolejności malejącej. Wartość domyślna to `TRUE`.  
+ Określa porządek sortowania kolumny, która *iColumn* określa parametr. Wartość TRUE, aby ustawić rosnąco; Wartość FALSE, aby ustawić w kolejności malejącej. Wartość domyślna to TRUE.  
   
  [in] *bDodaj*  
- `TRUE` Aby ustawić kolejność sortowania kolumny *iColumn* określa parametr.  
+ Wartość true, aby ustawić kolejność sortowania dla kolumny, *iColumn* określa parametr.  
   
- W przypadku bieżącego formantu nagłówka *wielu sortowanie kolumn* tryb, ta metoda dodaje określonej kolumny do listy kolumn, sortowania. Użyj [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) można ustawić wiele Tryb sortowania kolumny.  
+ Jeśli bieżący kontrolki nagłówka znajduje się w *sortowanie wielu kolumn* tryb, ta metoda dodaje określonej kolumny do listy kolumn sortowania. Użyj [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) można ustawić tryb sortowanie wielu kolumn.  
   
- Jeśli nie ustawiono wiele Tryb sortowania kolumny, a ta metoda jest skompilowana w trybie debugowania, potwierdza tej metody. Jeśli nie ustawiono wiele Tryb sortowania kolumny i ta metoda jest skompilowana w trybie sprzedaży detalicznej, ta metoda najpierw usuwa wszystkie kolumny z listy kolumn, sortowania, a następnie dodanie określonej kolumny do listy.  
+ Jeśli nie ustawiono wiele Tryb sortowania kolumn, a ta metoda jest skompilowany w trybie debugowania, ta metoda potwierdza. Jeśli nie ustawiono wiele Tryb sortowania kolumn, ta metoda jest skompilowany w trybie handlu detalicznego tej metody najpierw usuwa wszystkie kolumny z listy kolumn, sortowania, a następnie dodaje określonej kolumny do listy.  
   
- `FALSE` Aby najpierw usunąć wszystkie kolumny z listy kolumn, sortowania, a następnie dodaj określonej kolumny do listy. Wartość domyślna to `FALSE`.  
+ Wartość FALSE, najpierw usuń wszystkie kolumny z listy kolumn, sortowania, a następnie dodaj określonej kolumny do listy. Wartość domyślna to FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj tej metody, aby ustawić kolejność sortowania kolumny. Jeśli to konieczne, ta metoda dodaje kolumnę do listy kolumn, sortowania. Formant nagłówka używa kolejność sortowania do rysowania sortowania Strzałka w górę lub w dół.  
+ Ta metoda umożliwia Sortuj kolumny. Jeśli to konieczne, ta metoda dodaje kolumnę do listy kolumn sortowania. Kontrolki nagłówka używa kolejności sortowania, aby narysować sortowania Strzałka w górę lub w dół.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

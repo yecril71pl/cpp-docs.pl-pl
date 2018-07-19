@@ -104,15 +104,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b79f65b39aa741a9794fbe05721c7dc44287603
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 80244a328fb374c4302f068c3c8b64f5b5d5c676
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041649"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850137"
 ---
 # <a name="coleipframewndex-class"></a>Klasa COleIPFrameWndEx
-`COleIPFrameWndEx` Klasa implementuje kontener OLE, który obsługuje MFC. Klasy okna ramowe w miejscu musi pochodzić z aplikacji `COleIPFrameWndEx` klasy zamiast wynikających z [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)klasy. 
+`COleIPFrameWndEx` Klasa implementuje kontener OLE, który obsługuje MFC. Uzyskujesz klasę okna ramowego w miejscu dla aplikacji z `COleIPFrameWndEx` klasy zamiast wywodzić ją z [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)klasy. 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]   
   
 ## <a name="syntax"></a>Składnia  
@@ -131,33 +131,33 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 |[COleIPFrameWndEx::AddPane](#addpane)||  
 |[COleIPFrameWndEx::AdjustDockingLayout](#adjustdockinglayout)||  
 |[COleIPFrameWndEx::DockPane](#dockpane)||  
-|[COleIPFrameWndEx::DockPaneLeftOf](#dockpaneleftof)|Doków jedno okienko na lewo od innego okienka.|  
+|[COleIPFrameWndEx::DockPaneLeftOf](#dockpaneleftof)|Doków jedno okienko po lewej stronie okienka innego.|  
 |[COleIPFrameWndEx::EnableAutoHidePanes](#enableautohidepanes)||  
 |[COleIPFrameWndEx::EnableDocking](#enabledocking)||  
 |[COleIPFrameWndEx::EnablePaneMenu](#enablepanemenu)||  
-|[COleIPFrameWndEx::GetActivePopup](#getactivepopup)|Zwraca wskaźnik do menu podręcznego aktualnie wyświetlany.|  
+|[COleIPFrameWndEx::GetActivePopup](#getactivepopup)|Zwraca wskaźnik do menu podręczne aktualnie wyświetlany.|  
 |[COleIPFrameWndEx::GetContainerFrameWindow](#getcontainerframewindow)||  
-|[COleIPFrameWndEx::GetDefaultResId](#getdefaultresid)|Zwraca identyfikator zasobu okno ramowe określone, gdy okno zostało załadowane.|  
+|[COleIPFrameWndEx::GetDefaultResId](#getdefaultresid)|Zwraca identyfikator zasobu okno ramowe określone, gdy załadowano okna.|  
 |[COleIPFrameWndEx::GetDockFrame](#getdockframe)||  
 |[COleIPFrameWndEx::GetDockingManager](#getdockingmanager)||  
 |[COleIPFrameWndEx::GetMainFrame](#getmainframe)||  
-|[COleIPFrameWndEx::GetMenuBar](#getmenubar)|Zwraca wskaźnik do obiektu paska menu dołączony do ramki okna.|  
+|[COleIPFrameWndEx::GetMenuBar](#getmenubar)|Zwraca wskaźnik do obiekt paska menu, które są dołączone do ramki okna.|  
 |[COleIPFrameWndEx::GetPane](#getpane)||  
-|[COleIPFrameWndEx::GetTearOffBars](#gettearoffbars)|Zwraca listę okienko obiekty, które są w stanie oderwania.|  
-|[COleIPFrameWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|Wywoływane przez platformę przed wyświetleniem etykietki narzędzia dla przycisku.|  
+|[COleIPFrameWndEx::GetTearOffBars](#gettearoffbars)|Zwraca listę obiektów okienko, które są w stanie odrywania.|  
+|[COleIPFrameWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|Wywoływane przez platformę, zanim zostanie wyświetlona etykietka narzędzia dla przycisku.|  
 |[COleIPFrameWndEx::InsertPane](#insertpane)||  
-|[COleIPFrameWndEx::IsMenuBarAvailable](#ismenubaravailable)|Określa, czy wskaźnik do obiektu paska menu nie jest `NULL`.|  
+|[COleIPFrameWndEx::IsMenuBarAvailable](#ismenubaravailable)|Określa, czy wskaźnik do obiektu pasek menu nie jest wartością `NULL`.|  
 |[COleIPFrameWndEx::IsPointNearDockSite](#ispointneardocksite)||  
 |[COleIPFrameWndEx::LoadFrame](#loadframe)|(Przesłania `COleIPFrameWnd::LoadFrame`.)|  
 |[COleIPFrameWndEx::OnCloseDockingPane](#onclosedockingpane)||  
 |[COleIPFrameWndEx::OnCloseMiniFrame](#oncloseminiframe)||  
 |[COleIPFrameWndEx::OnClosePopupMenu](#onclosepopupmenu)|Wywoływane przez platformę, gdy aktywne menu podręczne przetwarza komunikat WM_DESTROY.|  
 |[COleIPFrameWndEx::OnCmdMsg](#oncmdmsg)|(Przesłania `CFrameWnd::OnCmdMsg`.)|  
-|[COleIPFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|Wywoływane przez platformę, podczas rysowania obrazu skojarzonego z elementem menu.|  
+|[COleIPFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|Wywoływane przez platformę podczas rysowania obrazu skojarzonego z elementem menu.|  
 |[COleIPFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Wywoływane przez platformę, gdy [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)obiektu przetwarza komunikat WM_PAINT.|  
-|[COleIPFrameWndEx::OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|Wywoływane przez platformę, gdy [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)komunikat WM_NCHITTEST procesów obiektu.|  
+|[COleIPFrameWndEx::OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|Wywoływane przez platformę, gdy [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)komunikat WM_NCHITTEST procesy obiektu.|  
 |[COleIPFrameWndEx::OnMoveMiniFrame](#onmoveminiframe)||  
-|[COleIPFrameWndEx::OnSetPreviewMode](#onsetpreviewmode)|Wywołanie tej funkcji członkowskich można ustawić aplikacji główną ramkę okna w i poza trybem Podgląd wydruku. (Przesłania [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode).)|  
+|[COleIPFrameWndEx::OnSetPreviewMode](#onsetpreviewmode)|Wywołaj tę funkcję elementu członkowskiego, aby ustawić aplikacji głównej ramki okna w i poza trybem Podgląd wydruku. (Przesłania [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode).)|  
 |[COleIPFrameWndEx::OnShowCustomizePane](#onshowcustomizepane)||  
 |[COleIPFrameWndEx::OnShowPanes](#onshowpanes)||  
 |[COleIPFrameWndEx::OnShowPopupMenu](#onshowpopupmenu)|Wywoływane przez platformę, gdy menu podręczne jest aktywowane.|  
@@ -166,19 +166,19 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 |[COleIPFrameWndEx::PreTranslateMessage](#pretranslatemessage)|(Przesłania `COleIPFrameWnd::PreTranslateMessage`.)|  
 |[COleIPFrameWndEx::RecalcLayout](#recalclayout)|(Przesłania `COleIPFrameWnd::RecalcLayout`.)|  
 |[COleIPFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)||  
-|[COleIPFrameWndEx::SetDockState](#setdockstate)|Dotyczy określonego stanu dokowania okienka, które należą do ramki okna.|  
-|[COleIPFrameWndEx::SetupToolbarMenu](#setuptoolbarmenu)|Modyfikuje obiekt paska narzędzi przez wyszukiwanie elementów fikcyjny i zastępowanie określone elementy zdefiniowane przez użytkownika.|  
+|[COleIPFrameWndEx::SetDockState](#setdockstate)|Stosuje określony stan dokowania do okienek, które należą do ramki okna.|  
+|[COleIPFrameWndEx::SetupToolbarMenu](#setuptoolbarmenu)|Modyfikuje obiekt paska narzędzi przez wyszukiwanie elementów fikcyjnego i zastępowała je przy użyciu określonych elementów zdefiniowanych przez użytkownika.|  
 |[COleIPFrameWndEx::ShowPane](#showpane)||  
-|[COleIPFrameWndEx::WinHelpA](#winhelpa)|Wywoływane przez platformę, by zainicjować pomocy WinHelp aplikacji lub w kontekście.|  
+|[COleIPFrameWndEx::WinHelpA](#winhelpa)|Metoda wywoływana przez platformę, by zainicjować WinHelp aplikacji lub kontekstu pomocy.|  
   
 ### <a name="protected-methods"></a>Metody chronione  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[COleIPFrameWndEx::InitUserToobars](#initusertoobars)|Określa platformę, by zainicjować zakresu kontroli identyfikatorów, które są przypisane do użytkownika pasków narzędzi.|  
+|[COleIPFrameWndEx::InitUserToobars](#initusertoobars)|Informuje platformę, by zainicjować szereg kontroli identyfikatorów, które są przypisane do paska narzędzi zdefiniowane przez użytkownika.|  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano sposób podklasy instancję programu `COleIPFrameWndEx` klasy i za pośrednictwem, które wywołują metody. W przykładzie pokazano, jak powyżej, które wywołują `OnDestory` metody `RepositionFrame` metody, `RecalcLayout` metody i `CalcWindowRect` — metoda. Następujący fragment kodu jest częścią [przykład konsola programu Word](../../visual-cpp-samples.md).  
+ W poniższym przykładzie pokazano sposób podklasy wystąpienie `COleIPFrameWndEx` klasy i przez zastąpienie jej metody. W przykładzie pokazano, jak się ponad `OnDestory` metody `RepositionFrame` metody `RecalcLayout` metody i `CalcWindowRect` metody. Ten fragment kodu jest częścią [przykład konsola programu Word](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_WordPad#1](../../mfc/reference/codesnippet/cpp/coleipframewndex-class_1.cpp)]  
   
@@ -189,7 +189,7 @@ class COleIPFrameWndEx : public COleIPFrameWnd
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [Cframewnd —](../../mfc/reference/cframewnd-class.md)  
+ [CFrameWnd](../../mfc/reference/cframewnd-class.md)  
   
  [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)  
   
@@ -254,7 +254,7 @@ void DockPane(
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="dockpaneleftof"></a>  COleIPFrameWndEx::DockPaneLeftOf  
- Doków jedno okienko na lewo od innego okienka.  
+ Doków jedno okienko po lewej stronie okienka innego.  
   
 ```  
 BOOL DockPaneLeftOf(
@@ -264,16 +264,16 @@ BOOL DockPaneLeftOf(
   
 ### <a name="parameters"></a>Parametry  
  [in] *pBar*  
- Wskaźnik do okienko, aby dokowania.  
+ Wskaźnik do okienka, aby zadokować.  
   
  [in] *pLeftOf*  
  Wskaźnik do okienka, która służy jako punkt początkowy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca `TRUE` Jeśli operacja zakończy się pomyślnie. W przeciwnym razie zwraca `FALSE`.  
+ Zwraca wartość PRAWDA, jeśli operacja się powiedzie. W przeciwnym razie zwraca wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołaj tę metodę w celu dock okienku obiekty w preferowanej kolejności. Ta metoda stacje dokujące okienko określony przez *pBar* do lewego okienka określony przez *pLeftOf*.  
+ Wywołaj tę metodę, aby zadokować kilka obiektów okienko w preferowanej kolejności. Ta metoda jest dokowane okienka określony przez *pBar* po lewej stronie okienka określony przez *pLeftOf*.  
   
 ##  <a name="enableautohidepanes"></a>  COleIPFrameWndEx::EnableAutoHidePanes  
 
@@ -327,17 +327,17 @@ void EnablePaneMenu(
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="getactivepopup"></a>  COleIPFrameWndEx::GetActivePopup  
- Zwraca wskaźnik do aktualnie wyświetlanego menu podręczne.  
+ Zwraca wskaźnik do aktualnie wyświetlonego menu podręcznego.  
   
 ```  
 CMFCPopupMenu* GetActivePopup() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do aktywnego menu podręcznego; w przeciwnym razie `NULL`.  
+ Wskaźnik do aktywne menu podręczne; w przeciwnym razie wartość NULL.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda umożliwia uzyskiwanie wskaźnika do [klasy CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) obiekt, który jest aktualnie wyświetlany.  
+ Ta metoda umożliwia uzyskiwanie wskaźnika do [klasa CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) obiekt, który jest aktualnie wyświetlany.  
   
 ##  <a name="getcontainerframewindow"></a>  COleIPFrameWndEx::GetContainerFrameWindow  
 
@@ -351,7 +351,7 @@ COleCntrFrameWndEx* GetContainerFrameWindow();
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="getdefaultresid"></a>  COleIPFrameWndEx::GetDefaultResId  
- Zwraca identyfikator zasobu menu, która została określona, kiedy okno ramowe ładowane menu.  
+ Zwraca identyfikator zasobu menu, który został określony, gdy okno ramowe załadowane menu.  
   
 ```  
 UINT GetDefaultResId() const;  
@@ -361,7 +361,7 @@ UINT GetDefaultResId() const;
  Zwraca identyfikator zasobu menu lub 0, jeśli okno ramowe nie ma paska menu.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie tę funkcję, aby pobrać identyfikator zasobu, który został określony, gdy okno ramowe załadować zasobów menu przez wywołanie metody `COleIPFrameWndEx::LoadFrame`.  
+ Wywołanie tej funkcji można pobrać Identyfikatora zasobu, który został określony, gdy okno ramowe załadowany zasobów menu przez wywołanie `COleIPFrameWndEx::LoadFrame`.  
   
 ##  <a name="getdockframe"></a>  COleIPFrameWndEx::GetDockFrame  
 
@@ -397,7 +397,7 @@ CFrameWnd* GetMainFrame();
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="getmenubar"></a>  COleIPFrameWndEx::GetMenuBar  
- Zwraca wskaźnik do obiektu paska menu dołączony do ramki okna.  
+ Zwraca wskaźnik do obiekt paska menu, które są dołączone do ramki okna.  
   
 ```  
 const CMFCMenuBar* GetMenuBar() const;  
@@ -424,20 +424,20 @@ CBasePane* GetPane(UINT nID);
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="gettearoffbars"></a>  COleIPFrameWndEx::GetTearOffBars  
- Zwraca listę okienko obiekty, które są w stanie oderwania.  
+ Zwraca listę obiektów okienko, które są w stanie odrywania.  
   
 ```  
 const CObList& GetTearOffBars() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Odwołanie do `CObList` obiekt, który zawiera kolekcję wskaźników do [klasy CBasePane](../../mfc/reference/cbasepane-class.md)-pochodnych obiektów.  
+ Odwołanie do `CObList` obiekt, który zawiera zbiór wskaźniki do [klasa CBasePane](../../mfc/reference/cbasepane-class.md)-obiektami wywodzącymi.  
   
 ### <a name="remarks"></a>Uwagi  
- `COleIPFrameWndEx` Obiekt zachowuje kolekcji oderwania menu jako lista [klasy CBasePane](../../mfc/reference/cbasepane-class.md)-pochodnych obiektów. Użyj tej metody można pobrać odwołania do tej listy.  
+ `COleIPFrameWndEx` Obiekt przechowuje kolekcję menu odrywania jako listę [klasa CBasePane](../../mfc/reference/cbasepane-class.md)-obiektami wywodzącymi. Użyj tej metody można pobrać odwołania do tej listy.  
   
 ##  <a name="gettoolbarbuttontooltiptext"></a>  COleIPFrameWndEx::GetToolbarButtonToolTipText  
- Wywoływane przez platformę przed wyświetleniem etykietki narzędzia dla przycisku.  
+ Wywoływane przez platformę, zanim zostanie wyświetlona etykietka narzędzia dla przycisku.  
   
 ```  
 virtual BOOL GetToolbarButtonToolTipText(
@@ -456,10 +456,10 @@ virtual BOOL GetToolbarButtonToolTipText(
  Domyślna implementacja zwraca wartość 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę funkcję, aby dostosować wyświetlanie podpowiedzi na przyciskach.  
+ Należy przesłonić tę funkcję, aby dostosować wyświetlanie etykietek narzędzi w przycisków paska narzędzi.  
   
 ##  <a name="initusertoobars"></a>  COleIPFrameWndEx::InitUserToobars  
- Określa zakres kontroli identyfikatorów, które platformę przypisuje paski narzędzi zdefiniowane przez użytkownika.  
+ Określa zakres kontroli identyfikatorów, które ramach przypisuje do pasków narzędzi zdefiniowane przez użytkownika.  
   
 ```  
 void InitUserToolbars(
@@ -470,16 +470,16 @@ void InitUserToolbars(
   
 ### <a name="parameters"></a>Parametry  
  [in] *lpszRegEntry*  
- Wpis rejestru, w której biblioteki przechowuje ustawienia paska narzędzi użytkownika.  
+ Wpis rejestru, w której biblioteka przechowuje ustawienia narzędzi użytkownika.  
   
  [in] *uiUserToolbarFirst*  
- Identyfikator formantu przypisany do pierwszej narzędzi zdefiniowane przez użytkownika.  
+ Identyfikator formantu przypisany do pierwszej paska narzędzi zdefiniowane przez użytkownika.  
   
  [in] *uiUserToolbarLast*  
- Identyfikator formantu przypisane do ostatniego narzędzi zdefiniowane przez użytkownika.  
+ Identyfikator formantu przypisane do ostatniego paska narzędzi zdefiniowane przez użytkownika.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja służy do inicjowania szereg kontroli identyfikatorów do przypisania do pasków narzędzi, które użytkownicy definiować dynamicznie. Parametry *uiUserToolbarFirst* i *uiUserToolbarLast* zdefiniować zakres formantu toolbar dozwolone identyfikatory. Aby wyłączyć tworzenie użytkownika paski narzędzi, ustaw *uiUserToolbarFirst* lub *uiUserToolbarLast* -1.  
+ Aby zainicjować szereg kontroli identyfikatorów w celu przypisania do pasków narzędzi, które użytkownicy definiować dynamicznie, należy użyć tej funkcji. Parametry *uiUserToolbarFirst* i *uiUserToolbarLast* zdefiniować zakres dozwolonych toolbar — formant identyfikatorów. Aby wyłączyć tworzenie paska narzędzi zdefiniowane przez użytkownika, ustaw *uiUserToolbarFirst* lub *uiUserToolbarLast* na -1.  
   
 ##  <a name="insertpane"></a>  COleIPFrameWndEx::InsertPane  
 
@@ -501,17 +501,17 @@ BOOL InsertPane(
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="ismenubaravailable"></a>  COleIPFrameWndEx::IsMenuBarAvailable  
- Określa, czy nie jest wskaźnik do obiektu paska menu `NULL`  
+ Określa, czy wskaźnik do obiektu pasek menu nie ma wartości NULL  
   
 ```  
 BOOL IsMenuBarAvailable() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość zwraca wartość inną niż zero, jeśli okno ramowe ma pasku menu; w przeciwnym razie zwraca wartość 0.  
+ Zwraca różna od zera wartość, jeśli okno ramowe ma pasku menu; w przeciwnym razie zwraca wartość 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie tej metody, aby określić, czy okno ramowe obsługuje niż `NULL` wskaźnik do jego obiektu paska menu.  
+ Wywołaj tę metodę w celu ustalenia, czy okno ramowe przechowuje wskaźnik ZEROWY do jego obiekt paska menu.  
   
 ##  <a name="ispointneardocksite"></a>  COleIPFrameWndEx::IsPointNearDockSite  
 
@@ -590,10 +590,10 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
   
 ### <a name="parameters"></a>Parametry  
  [in] *pMenuPopup*  
- Wskaźnik do obiektu menu podręczne.  
+ Wskaźnik do obiektu menu podręcznego.  
   
 ### <a name="remarks"></a>Uwagi  
- Przesłonić tę metodę w celu otrzymywania powiadomień od `CMFCPopupMenu` obiekty podczas przetwarzania wiadomości WM_DESTROY.  
+ Przesłoń tę metodę w celu otrzymywania powiadomień od `CMFCPopupMenu` obiekty podczas przetwarzania komunikatów WM_DESTROY.  
   
 ##  <a name="oncmdmsg"></a>  COleIPFrameWndEx::OnCmdMsg  
 
@@ -617,7 +617,7 @@ virtual BOOL OnCmdMsg(
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="ondrawmenuimage"></a>  COleIPFrameWndEx::OnDrawMenuImage  
- Wywoływane przez platformę, podczas rysowania obrazu, który jest skojarzony z elementem menu.  
+ Wywoływane przez platformę podczas rysowania obrazu, który jest skojarzony z elementem menu.  
   
 ```  
 virtual BOOL OnDrawMenuImage(
@@ -631,16 +631,16 @@ virtual BOOL OnDrawMenuImage(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *pMenuButton*  
- Wskaźnik do przycisku menu.  
+ Wskaźnik na przycisku menu.  
   
  [in] *rectImage*  
- Obraz skojarzony z elementem menu.  
+ Obraz, który skojarzone z elementem menu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Domyślna implementacja nie robi nic i zwraca wartość 0.  
+ Domyślna implementacja nic nie robi i zwraca wartość 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Przesłonić tę metodę, jeśli chcesz dostosować obraz rysowania dla elementów menu, które należą do paska menu własnością `COleIPFrameWndEx`-pochodzi z obiektu.  
+ Przesłonić tę metodę, jeśli chcesz dostosować obraz rysowania elementów menu, które należą do paska menu należące do `COleIPFrameWndEx`-pochodnych obiektu.  
   
 ##  <a name="ondrawmenulogo"></a>  COleIPFrameWndEx::OnDrawMenuLogo  
  Wywoływane przez platformę, gdy [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)obiektu przetwarza komunikat WM_PAINT.  
@@ -657,16 +657,16 @@ virtual void OnDrawMenuLogo(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *pMenu*  
- Wskaźnik do obiektu menu podręczne.  
+ Wskaźnik do obiektu menu podręcznego.  
   
  [in] *rectLogo*  
  Wskaźnik do logo do wyświetlenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Przesłonić tę metodę, aby wyświetlić logo w menu podręcznym skojarzone z paska menu należących do `COleIPFrameWndEx`-pochodzi z obiektu. Domyślna implementacja nie działa.  
+ Przesłoń tę metodę, aby wyświetlić logo w menu podręcznym skojarzone z paska menu należące do `COleIPFrameWndEx`-pochodnych obiektu. Domyślna implementacja nic nie robi.  
   
 ##  <a name="onmenubuttontoolhittest"></a>  COleIPFrameWndEx::OnMenuButtonToolHitTest  
- Wywoływane przez platformę, gdy [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)obiekt procesów `WM_NCHITTEST` wiadomości.  
+ Wywoływane przez platformę, gdy [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)obiektu przetwarza komunikat WM_NCHITTEST.  
   
 ```  
 virtual BOOL OnMenuButtonToolHitTest(
@@ -676,16 +676,16 @@ virtual BOOL OnMenuButtonToolHitTest(
   
 ### <a name="parameters"></a>Parametry  
  [in] pButton  
- Wskaźnik do przycisku menu.  
+ Wskaźnik na przycisku menu.  
   
  [out] pTI  
  Wskaźnik do `TOOLINFO` struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Domyślna implementacja nie robi nic i zwraca wartość 0. Implementacji powinien zwracać wartość inną niż zero, jeśli jego wypełniania *pTI* parametru.  
+ Domyślna implementacja nic nie robi i zwraca wartość 0. Twoja implementacja powinna zwrócić wartość różna od zera, jeśli jego wypełniania *pTI* parametru.  
   
 ### <a name="remarks"></a>Uwagi  
- Zastępuje tę metodę, możesz podać ToolTip informacje dotyczące elementu menu określonych.  
+ Przesłoń tę metodę, aby dowiedzieć się etykietka narzędzia elementu menu określonych.  
   
 ##  <a name="onmoveminiframe"></a>  COleIPFrameWndEx::OnMoveMiniFrame  
 
@@ -748,7 +748,7 @@ virtual BOOL OnShowPanes(BOOL bShow);
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onshowpopupmenu"></a>  COleIPFrameWndEx::OnShowPopupMenu  
- Wywoływane przez platformę, gdy zostanie wyświetlone menu podręczne.  
+ Wywoływane przez platformę, gdy jest wyświetlana w menu podręcznym.  
   
 ```  
 virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenuPopup);
@@ -756,16 +756,16 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenuPopup);
   
 ### <a name="parameters"></a>Parametry  
  [in] *pMenuPopup*  
- Wskaźnik do menu podręczne, które mają być wyświetlane.  
+ Wskaźnik mają być wyświetlane w menu podręcznym.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Domyślna implementacja nie robi nic i zwraca wartość inną niż zero. Implementacji powinien zwrócić `FALSE` Jeśli nie można wyświetlić menu podręczne.  
+ Domyślna implementacja nic nie robi i zwraca wartość różna od zera. Twoja implementacja powinna zwrócić FALSE, jeśli nie można wyświetlić menu podręcznego.  
   
 ### <a name="remarks"></a>Uwagi  
- Zastępuje tę metodę, aby dostosować wyświetlanie menu podręczne. Na przykład można zmienić przyciski menu na kolor przycisków menu lub zainicjować oderwania pasków.  
+ Zastępuje tę metodę, aby dostosować wyświetlanie wyskakujących menu. Na przykład można zmienić przyciski menu, przyciski menu Kolor lub zainicjować odrywania pasków.  
   
 ##  <a name="ontearoffmenu"></a>  COleIPFrameWndEx::OnTearOffMenu  
- Wywoływane przez platformę, gdy użytkownik wybierze menu z paskiem oderwania.  
+ Wywoływane przez platformę, gdy użytkownik wybierze się paskiem oderwania menu.  
   
 ```  
 virtual BOOL OnTearOffMenu(
@@ -775,13 +775,13 @@ virtual BOOL OnTearOffMenu(
   
 ### <a name="parameters"></a>Parametry  
  [in] *pMenuPopup*  
- Wskaźnik do menu podręcznego wybranego użytkownika.  
+ Wskaźnik do menu podręcznego, który użytkownik zaznaczył.  
   
  [in] *pBar*  
  Wskaźnik do okienka, który jest hostem menu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli chcesz, aby platformę, by aktywować menu podręcznego; w przeciwnym razie `FALSE`. Wartość domyślna to `TRUE`.  
+ Wartość TRUE, jeśli chcesz, aby platformę, by aktywować wyskakujących menu. w przeciwnym razie wartość FALSE. Wartość domyślna to TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę funkcję, jeśli chcesz dostosować instalację paskiem oderwania.  
@@ -862,7 +862,7 @@ void RemovePaneFromDockManager(
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="setdockstate"></a>  COleIPFrameWndEx::SetDockState  
- Dotyczy określonego stanu dokowania okienka, które należą do ramki okna.  
+ Stosuje określony stan dokowania do okienek, które należą do ramki okna.  
   
 ```  
 void SetDockState(const CDockState& state);
@@ -873,10 +873,10 @@ void SetDockState(const CDockState& state);
  Określa stan dokowania.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja służy do określenia stanu nowych dokowania okienka, które należą do `COleIPFrameWndEx` obiektu.  
+ Ta funkcja służy do określenia stanu nowych dokowania okienek, które należą do `COleIPFrameWndEx` obiektu.  
   
 ##  <a name="setuptoolbarmenu"></a>  COleIPFrameWndEx::SetupToolbarMenu  
- Modyfikuje obiekt paska narzędzi przez wyszukiwanie elementów fikcyjny i zastępowanie określone elementy zdefiniowane przez użytkownika.  
+ Modyfikuje obiekt paska narzędzi przez wyszukiwanie elementów fikcyjnego i zastępowała je przy użyciu określonych elementów zdefiniowanych przez użytkownika.  
   
 ```  
 void SetupToolbarMenu(
@@ -887,7 +887,7 @@ void SetupToolbarMenu(
   
 ### <a name="parameters"></a>Parametry  
  [in] *menu*  
- Odwołanie do [cmenu —](../../mfc/reference/cmenu-class.md) obiekt do zmodyfikowania.  
+ Odwołanie do [CMenu](../../mfc/reference/cmenu-class.md) obiekt do zmodyfikowania.  
   
  [in] *uiViewUserToolbarCmdFirst*  
  Określa pierwsze polecenie zdefiniowane przez użytkownika.  
@@ -917,7 +917,7 @@ void ShowPane(
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="winhelpa"></a>  COleIPFrameWndEx::WinHelpA  
- Wywoływane przez platformę, by zainicjować pomocy WinHelp aplikacji lub w kontekście.  
+ Metoda wywoływana przez platformę, by zainicjować WinHelp aplikacji lub kontekstu pomocy.  
   
 ```  
 virtual void WinHelp(
@@ -930,7 +930,7 @@ virtual void WinHelp(
  Określa dane zgodnie z wymaganiami dla typu określonego przez Pomoc *nCmd*.  
   
  [in] *nCmd*  
- Określa typ żądanie pomocy. Listę możliwych wartości i ich wpływ na *dwData* parametrów, zobacz [funkcję WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) w zestawie Windows SDK.  
+ Określa typ żądanego pomocy. Aby uzyskać listę możliwych wartości i ich wpływ *dwData* parametrów, zobacz [funkcję WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) w zestawie Windows SDK.  
   
 ### <a name="remarks"></a>Uwagi  
   

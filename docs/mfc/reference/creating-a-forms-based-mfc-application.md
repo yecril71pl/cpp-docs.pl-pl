@@ -17,46 +17,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5ee588d7fe90e5bfc39aa8e4ab7a7499b62ad98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 292e3d5b0fdc7e42bd44e6993535cd176e877ca5
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372450"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851642"
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>Tworzenie aplikacji MFC opartej na formularzach
-Formularz to okno dialogowe z kontrolkami, które umożliwiają użytkownikowi dostęp i ewentualnie modyfikowanie danych. Można utworzyć aplikację, w której użytkownik wybiera jeden z wielu formularzy. Zazwyczaj oparte na formularzach aplikacji umożliwia formularzy dostępu użytkownika przez kliknięcie **nowy** z **pliku** menu. Aplikacji opartych na oknach dialogowych, który nie zapewnia użytkownikom dostęp do **nowy** opcji **pliku** menu jest traktowana jako aplikację na podstawie formularzy.  
+Formularz to okno dialogowe z kontrolkami, które umożliwiają użytkownikowi dostęp i ewentualnie modyfikowanie danych. Można utworzyć aplikację, w której użytkownik wybiera jeden z wielu formularzy. Często, aplikacją opartą na formularzach umożliwia formularzy dostępu użytkownika poprzez kliknięcie **New** z **pliku** menu. Aplikacja oparta na oknach dialogowych, która nie zapewnia użytkownikom dostęp do **New** opcji **pliku** menu jest również uważana za aplikacją opartą na formularzach.  
   
- Aplikacja oparta na formularzach wykorzystująca mechanizm interfejsu pojedynczego dokumentu (SDI) umożliwia działanie równocześnie tylko jednego wystąpienie danego formularza. Istnieje możliwość uruchamiania różnych formularzach jednocześnie z SDI oparte na formularzach aplikacji przez wybranie nowego formularza z **nowy** opcji **pliku** menu.  
+ Aplikacja oparta na formularzach wykorzystująca mechanizm interfejsu pojedynczego dokumentu (SDI) umożliwia działanie równocześnie tylko jednego wystąpienie danego formularza. Można uruchomić różne formularze w tym samym czasie z aplikacji interfejsu SDI opartego na formularzach, wybierając nowy formularz z **New** opcji **pliku** menu.  
   
  W przypadku utworzenia aplikacji opartej na formularzach wykorzystującej mechanizm interfejsu wielu dokumentów (MDI) będzie ona obsługiwała wiele wystąpień tego samego formularza.  
   
- W aplikacji z obsługą wielu dokumentów najwyższego poziomu niejawnym obiektem nadrzędnym dla dokumentu jest pulpit, a ramka dokumentu nie ogranicza się do obszaru klienckiego aplikacji. Można otworzyć wiele wystąpień dokumentu, każdy z własną ramką, menu i ikoną paska zadań. Zamknij kolejne wystąpienia dokumenty pojedynczo, ale po zaznaczeniu `Exit` opcję **pliku** menu początkowej wystąpienia aplikacji, zamyka wszystkie wystąpienia.  
+ W aplikacji z obsługą wielu dokumentów najwyższego poziomu niejawnym obiektem nadrzędnym dla dokumentu jest pulpit, a ramka dokumentu nie ogranicza się do obszaru klienckiego aplikacji. Można otworzyć wiele wystąpień dokumentu, każdy z własną ramką, menu i ikoną paska zadań. Kolejne wystąpienia dokumentów można zamknąć pojedynczo, ale w przypadku wybrania **zakończenia** opcję **pliku** menu pierwszego wystąpienia aplikacji spowoduje zamknięcie wszystkich wystąpień.  
   
  Aplikacje obsługujące interfejsy SDI i MDI oraz wiele dokumentów najwyższego poziomu są oparte na formularzach i wykorzystują architekturę dokument/widok.  
   
  Każda aplikacja oparta na oknach dialogowych jest z definicji oparta na formularzach. Aplikacja oparta na oknach dialogowych nie używa architektury dokument/widok, w związku z czym trzeba zarządzać tworzeniem własnych dodatkowych formularzy i metodami dostępu do nich.  
   
- Klasa podstawowa dla aplikacji opartej na formularzu jest [CFormView](../../mfc/reference/cformview-class.md). Jeśli aplikacja obsługuje bazę danych, można również wybrać dowolną klasę pochodzącą od klasy `CFormView`. Formularzem jest dowolne okno pochodzące od klasy `CFormView` albo od dowolnej klasy dziedziczącej z klasy `CFormView`.  
+ Klasa bazowa dla aplikacji opartych na formularzach jest [CFormView](../../mfc/reference/cformview-class.md). Jeśli aplikacja obsługuje bazę danych, można również wybrać dowolną klasę pochodzącą od klasy `CFormView`. Formularzem jest dowolne okno pochodzące od klasy `CFormView` albo od dowolnej klasy dziedziczącej z klasy `CFormView`.  
   
- Nawet w przypadku takich jak używać klasy podstawowej [CView](../../mfc/reference/cview-class.md), później pozwala aplikacji na podstawie formularzy przez [Dodawanie klasy MFC](../../mfc/reference/adding-an-mfc-class.md) pochodną `CFormView` i sprawdzanie **Generowanie opcję zasoby** checkbox w [Kreator klas MFC](../../mfc/reference/document-template-strings-mfc-add-class-wizard.md).  
+ Nawet wtedy, gdy takie jak używana klasa bazowa [CView](../../mfc/reference/cview-class.md), można później przekształcić swoje aplikacje oparte na formularzach przez [Dodawanie klasy MFC](../../mfc/reference/adding-an-mfc-class.md) pochodną `CFormView` i sprawdzanie **tym Generowanie zasoby** pola wyboru w [Kreator klas MFC](../../mfc/reference/document-template-strings-mfc-add-class-wizard.md).  
   
  Po ukończeniu pracy w kreatorze zostanie otwarty projekt. Jeśli jako klasę bazową wybrano `CFormView` (lub klasę dziedziczącą z klasy `CFormView`) lub jeśli utworzono aplikację opartą na oknach dialogowych, zostanie otwarty edytor okien dialogowych. Teraz można przystąpić do projektowania pierwszego formularza.  
   
 ### <a name="to-begin-creating-a-forms-based-mfc-executable"></a>Aby rozpocząć tworzenie pliku wykonywalnego MFC opartego na formularzach  
   
-1.  Postępuj zgodnie z instrukcjami w [tworzenie aplikacji MFC](../../mfc/reference/creating-an-mfc-application.md).  
+1.  Postępuj zgodnie z instrukcjami [tworzenie aplikacji MFC](../../mfc/reference/creating-an-mfc-application.md).  
   
-2.  W Kreatorze aplikacji MFC [typu aplikacji](../../mfc/reference/application-type-mfc-application-wizard.md) wybierz pozycję **wsparcie dla architektury dokument/widok** pole wyboru.  
+2.  W Kreatorze aplikacji MFC [typ aplikacji](../../mfc/reference/application-type-mfc-application-wizard.md) wybierz opcję **Obsługa architektury dokument/widok** pole wyboru.  
   
-3.  Wybierz **pojedynczego dokumentu**, **wielu dokumentów**, lub **wiele dokumentów najwyższego poziomu**.  
+3.  Wybierz **pojedynczego dokumentu**, **wiele dokumentów**, lub **wiele dokumentów najwyższego poziomu**.  
   
     > [!NOTE]
-    >  W przypadku wybrania SDI MDI i aplikacji interfejsu wielu dokumentów najwyższego poziomu, domyślnie `CView` jest ustawiony jako klasę podstawową dla widoku aplikacji w [wygenerowane klasy](../../mfc/reference/generated-classes-mfc-application-wizard.md) stronie kreatora. Aby utworzyć aplikację opartą na formularzach, jako klasę bazową widoku aplikacji należy wybrać klasę `CFormView`. Kreator nie zapewnia funkcji drukowania dla aplikacji opartej na formularzach.  
+    >  W przypadku wybrania SDI, MDI lub obsługi aplikacji interfejsu wielu dokumentów najwyższego poziomu, domyślnie `CView` jest ustawiony jako klasę bazową widoku aplikacji w [wygenerowane klasy](../../mfc/reference/generated-classes-mfc-application-wizard.md) strony kreatora. Aby utworzyć aplikację opartą na formularzach, jako klasę bazową widoku aplikacji należy wybrać klasę `CFormView`. Kreator nie zapewnia funkcji drukowania dla aplikacji opartej na formularzach.  
   
 4.  Na pozostałych stronach kreatora skonfiguruj inne opcje projektu.  
   
-5.  Kliknij przycisk **Zakończ** do generowania szkielet aplikacji.  
+5.  Kliknij przycisk **Zakończ** do zostanie wygenerowany szkielet aplikacji.  
   
  Aby uzyskać więcej informacji, zobacz:  
   

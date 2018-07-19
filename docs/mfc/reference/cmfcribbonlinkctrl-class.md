@@ -42,15 +42,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d078900c3436c2205905b92d651bab86e94db246
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 26837b4eda881bdf83e2f34f0c81a1b0e7034ffe
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039014"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851499"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>Klasa CMFCRibbonLinkCtrl
-Implementuje hiperłącze, które znajduje się na Wstążce. Hiperłącze otwiera stronę sieci Web, gdy zostanie kliknięty.  
+Implementuje hiperłącze, które jest umieszczone na Wstążce. Hiperłącze otwiera stronę sieci Web, gdy zostanie kliknięte.  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ## <a name="syntax"></a>Składnia  
@@ -73,7 +73,7 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
 |----------|-----------------|  
 |[CMFCRibbonLinkCtrl::CopyFrom](#copyfrom)|(Przesłania `CMFCRibbonButton::CopyFrom`.)|  
 |[CMFCRibbonLinkCtrl::GetCompactSize](#getcompactsize)|(Przesłania [CMFCRibbonButton::GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|  
-|[CMFCRibbonLinkCtrl::GetLink](#getlink)|Zwraca wartość hiperłącza.|  
+|[CMFCRibbonLinkCtrl::GetLink](#getlink)|Zwraca wartość hiperłącze.|  
 |[CMFCRibbonLinkCtrl::GetRegularSize](#getregularsize)|(Przesłania [CMFCRibbonButton::GetRegularSize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).)|  
 |[CMFCRibbonLinkCtrl::GetToolTipText](#gettooltiptext)|(Przesłania [CMFCRibbonButton::GetToolTipText](../../mfc/reference/cmfcribbonbutton-class.md#gettooltiptext).)|  
 |[CMFCRibbonLinkCtrl::IsDrawTooltipImage](#isdrawtooltipimage)|(Przesłania `CMFCRibbonButton::IsDrawTooltipImage`.)|  
@@ -81,11 +81,11 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
 |[CMFCRibbonLinkCtrl::OnDrawMenuImage](#ondrawmenuimage)|(Przesłania [CMFCRibbonBaseElement::OnDrawMenuImage](../../mfc/reference/cmfcribbonbaseelement-class.md#ondrawmenuimage).)|  
 |[CMFCRibbonLinkCtrl::OnMouseMove](#onmousemove)|(Przesłania `CMFCRibbonButton::OnMouseMove`.)|  
 |[CMFCRibbonLinkCtrl::OnSetIcon](#onseticon)||  
-|[CMFCRibbonLinkCtrl::OpenLink](#openlink)|Otwiera stronę sieci Web określonego w hiperłączu.|  
-|[CMFCRibbonLinkCtrl::SetLink](#setlink)|Ustawia wartość hiperłącza.|  
+|[CMFCRibbonLinkCtrl::OpenLink](#openlink)|Otwiera stronę sieci Web, określone w hiperlink.|  
+|[CMFCRibbonLinkCtrl::SetLink](#setlink)|Ustawia wartość hiperłącze.|  
   
 ## <a name="remarks"></a>Uwagi  
- Po utworzeniu hiperłącza, dodaj go do panelu wywołując [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
+ Po utworzeniu hiperłącze, dodaj go do panelu, wywołując [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md) [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
@@ -107,16 +107,16 @@ CMFCRibbonLinkCtrl(
   
 ### <a name="parameters"></a>Parametry  
  [in] *nID*  
- Określa identyfikator polecenia polecenia wykonywany po kliknięciu formantu łącza.  
+ Określa identyfikator polecenia polecenia, który jest wykonywany po kliknięciu kontrolki łącza.  
   
  [in] *lpszText*  
  Określa etykietę do wyświetlenia w formancie łącza.  
   
  [in] *lpszLink*  
- Określa hiperłącze skojarzony z formantem łącza.  
+ Określa hiperłącze skojarzonego z kontrolką łącza.  
   
 ### <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano sposób użycia konstruktora `CMFCRibbonLinkCtrl` klasy. Następujący fragment kodu jest częścią [próbki gadżetów wstążki](../../visual-cpp-samples.md).  
+ Poniższy przykład pokazuje, jak używać konstruktora `CMFCRibbonLinkCtrl` klasy. Ten fragment kodu jest częścią [przykładowe gadżetów wstążki](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_RibbonGadgets#1](../../mfc/reference/codesnippet/cpp/cmfcribbonlinkctrl-class_1.cpp)]  
   
@@ -147,14 +147,14 @@ virtual CSize GetCompactSize(CDC* pDC);
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="getlink"></a>  CMFCRibbonLinkCtrl::GetLink  
- Zwraca wartość hiperłącza.  
+ Zwraca wartość hiperłącze.  
   
 ```  
 LPCTSTR GetLink() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Bieżąca wartość hiperłącza.  
+ Bieżąca wartość hiperłącze.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -191,7 +191,7 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- [in] *CDC**  
+ [in] *Przechwytywania zmian danych**  
  [in] *CRect*  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -243,20 +243,20 @@ virtual void OnSetIcon();
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="openlink"></a>  CMFCRibbonLinkCtrl::OpenLink  
- Otwiera stronę sieci Web określonego w hiperłączu.  
+ Otwiera stronę sieci Web, określone w hiperlink.  
   
 ```  
 BOOL OpenLink();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli skojarzone strona sieci Web została otwarta pomyślnie; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli skojarzona strona sieci Web została otwarta pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Otwiera stronę sieci web przy użyciu hiperłącza skojarzonego z `CMFCRibbonLinkCtrl` obiektu.  
+ Otwiera stronę sieci Web przy użyciu hiperłącza skojarzonego z `CMFCRibbonLinkCtrl` obiektu.  
   
 ##  <a name="setlink"></a>  CMFCRibbonLinkCtrl::SetLink  
- Ustawia wartość hiperłącza.  
+ Ustawia wartość hiperłącze.  
   
 ```  
 void SetLink(LPCTSTR lpszLink);
@@ -264,7 +264,7 @@ void SetLink(LPCTSTR lpszLink);
   
 ### <a name="parameters"></a>Parametry  
  [in] *lpszLink*  
- Określa tekst hiperłącza.  
+ Określa tekst, hiperłącze.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

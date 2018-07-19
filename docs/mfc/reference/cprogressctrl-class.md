@@ -1,5 +1,5 @@
 ---
-title: Cprogressctrl — klasa | Dokumentacja firmy Microsoft
+title: Klasa CProgressCtrl | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,15 +52,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38ccc4acfdfd618bf0fa11f4a49c1e0b78f009ca
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: ca1c4d1d2a7c37838a57a55189330465cd0700e8
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079393"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850160"
 ---
-# <a name="cprogressctrl-class"></a>Cprogressctrl — klasa
-Udostępnia funkcje formantu paska postępu wspólnej systemu Windows.  
+# <a name="cprogressctrl-class"></a>Klasa CProgressCtrl
+Oferuje funkcje formantu Windows typowego paska postępu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -80,30 +80,30 @@ class CProgressCtrl : public CWnd
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CProgressCtrl::Create](#create)|Tworzy kontrolkę paska postępu i dołącza go do `CProgressCtrl` obiektu.|  
-|[CProgressCtrl::CreateEx](#createex)|Tworzy formantu postępu w określonym stylu rozszerzonej systemu Windows i dołącza go do `CProgressCtrl` obiektu.|  
+|[CProgressCtrl::Create](#create)|Tworzy kontrolkę paska postępu i dołącza je do `CProgressCtrl` obiektu.|  
+|[CProgressCtrl::CreateEx](#createex)|Tworzy formant postępu przy użyciu określonego stylów rozszerzonej Windows i dołącza je do `CProgressCtrl` obiektu.|  
 |[CProgressCtrl::GetBarColor](#getbarcolor)|Pobiera kolor paska wskaźnika postępu dla bieżącego formantu paska postępu.|  
 |[CProgressCtrl::GetBkColor](#getbkcolor)|Pobiera kolor tła bieżącego pasek postępu.|  
 |[CProgressCtrl::GetPos](#getpos)|Pobiera bieżącą pozycję pasek postępu.|  
-|[CProgressCtrl::GetRange](#getrange)|Pobiera dolny i górny limit zakresu formantu paska postępu.|  
+|[CProgressCtrl::GetRange](#getrange)|Pobiera dolny i górny limit zakresu kontrolkę paska postępu.|  
 |[CProgressCtrl::GetState](#getstate)|Pobiera stan bieżącego formantu paska postępu.|  
-|[CProgressCtrl::GetStep](#getstep)|Pobiera przyrost kroku paska postępu bieżącego formantu paska postępu.|  
-|[CProgressCtrl::OffsetPos](#offsetpos)|Przesuwa bieżącej pozycji formantu paska postępu o określoną wartość i ponownie rysuje pasku w celu uwzględnienia nowej pozycji.|  
-|[CProgressCtrl::SetBarColor](#setbarcolor)|Ustawia kolor linii paska wskaźnika postępu w bieżącym formantu paska postępu.|  
+|[CProgressCtrl::GetStep](#getstep)|Pobiera przyrost krok aż pasek postępu bieżącego formantu paska postępu.|  
+|[CProgressCtrl::OffsetPos](#offsetpos)|Bieżące położenie formantu paska postępu jest przesuwany o określoną wartość i ponownie rysuje na pasku, aby odzwierciedlić nowe położenie.|  
+|[CProgressCtrl::SetBarColor](#setbarcolor)|Ustawia kolor paska wskaźnika postępu w bieżącym formantu paska postępu.|  
 |[CProgressCtrl::SetBkColor](#setbkcolor)|Ustawia kolor tła paska postępu.|  
-|[CProgressCtrl::SetMarquee](#setmarquee)|Włącza tryb ustawiony na marquee lub wyłącz bieżącego formantu paska postępu.|  
-|[CProgressCtrl::SetPos](#setpos)|Ustawia bieżącego położenia kontrolki paska postępu i ponownie rysuje pasku w celu uwzględnienia nowej pozycji.|  
-|[CProgressCtrl::SetRange](#setrange)|Ustawia zakresy minimalną i maksymalną dla formantu paska postępu i ponownie rysuje pasku w celu uwzględnienia nowych zakresów.|  
-|[CProgressCtrl::SetState](#setstate)|Ustawia stan bieżącego formantu paska postępu.|  
+|[CProgressCtrl::SetMarquee](#setmarquee)|Włącza tryb zaznaczenia lub wyłącz bieżące formantu paska postępu.|  
+|[CProgressCtrl::SetPos](#setpos)|Ustawia bieżącej pozycji formantu paska postępu i ponownie rysuje na pasku, aby odzwierciedlić nowe położenie.|  
+|[CProgressCtrl::SetRange](#setrange)|Ustawia minimalną i maksymalną zakresy dla formantu paska postępu i ponownie rysuje paska, aby odzwierciedlić nowe zakresy.|  
+|[CProgressCtrl::SetState](#setstate)|Ustawia stan bieżący formant paska postępu.|  
 |[CProgressCtrl::SetStep](#setstep)|Określa przyrost krok dla formantu paska postępu.|  
-|[CProgressCtrl::StepIt](#stepit)|Przechodzi przez przyrost krok bieżącego położenia kontrolki paska postępu (zobacz [SetStep](#setstep)) i ponownie rysuje pasku w celu uwzględnienia nowej pozycji.|  
+|[CProgressCtrl::StepIt](#stepit)|Bieżące położenie formantu paska postępu jest przesuwany o przyrost kroku (zobacz [SetStep](#setstep)) i ponownie rysuje na pasku, aby odzwierciedlić nowe położenie.|  
   
 ## <a name="remarks"></a>Uwagi  
- Kontrolka paska postępu jest oknem, używaną przez aplikację do przedstawienia postępu długotrwałej operacji. Składa się z prostokąt stopniowo jest wypełniony, od lewej do prawej strony, w systemie kolor zaznaczenia w trakcie operacji.  
+ Formant paska postępu jest oknem które aplikacja może użyć do informowania o postępie długotrwałej operacji. Składa się z prostokąt, który stopniowo jest wypełniony, od lewej do prawej, w systemie kolor wyróżnienia w miarę postępów operacji.  
   
- Kontrolka paska postępu ma zakres i bieżącego położenia. Zakres reprezentuje całkowity czas trwania operacji, a bieżące położenie — postęp wprowadzone aplikacji ukończenia operacji. Procedurę okna korzysta z zakresu i bieżącą pozycję, aby określić procent pasek postępu, aby wypełnić kolorem wyróżnienia. Ponieważ zakresu i bieżące wartości pozycji są wyrażane jako liczb całkowitych ze znakiem, jest możliwej bieżącej wartości pozycji od -2,147,483,648 2 147 483 647 włącznie.  
+ Formant paska postępu ma zakres i bieżącej pozycji. Zakres reprezentuje łączny czas trwania operacji, a bieżąca pozycja reprezentuje postęp, wprowadzone przez aplikację do wykonywania operacji. Procedurę okna używa zakres i bieżącej pozycji, aby ustalić procent pasek postępu, aby wypełnić kolor wyróżnienia. Ponieważ zakres i bieżącej wartości pozycji są wyrażane jako liczby całkowite ze znakiem, zakres możliwych wartości bieżącej pozycji obejmuje adresy od -2,147,483,648 do 2 147 483 647 (włącznie).  
   
- Aby uzyskać więcej informacji na temat używania `CProgressCtrl`, zobacz [formanty](../../mfc/controls-mfc.md) i [przy użyciu CProgressCtrl](../../mfc/using-cprogressctrl.md).  
+ Aby uzyskać więcej informacji na temat korzystania z `CProgressCtrl`, zobacz [kontrolki](../../mfc/controls-mfc.md) i [korzystanie z CProgressCtrl](../../mfc/using-cprogressctrl.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -125,13 +125,13 @@ CProgressCtrl();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Po konstruowania `CProgressCtrl` obiekt, należy wywołać `CProgressCtrl::Create` można utworzyć formantu paska postępu.  
+ Po konstruowanie `CProgressCtrl` obiektu, wywołaj `CProgressCtrl::Create` Aby utworzyć formant paska postępu.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CProgressCtrl#1](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_1.cpp)]  
   
 ##  <a name="create"></a>  CProgressCtrl::Create  
- Tworzy kontrolkę paska postępu i dołącza go do `CProgressCtrl` obiektu.  
+ Tworzy kontrolkę paska postępu i dołącza je do `CProgressCtrl` obiektu.  
   
 ```  
 virtual BOOL Create(
@@ -143,26 +143,26 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Określa styl formantu paska postępu. Zastosuj dowolną kombinację stylesdescribed okna w [właściwości CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie SDK systemu Windows oprócz pasek stylów formantu do formantu postępu następujące:  
+ Określa styl formantu paska postępu. Zastosuj dowolną kombinację stylesdescribed okna w [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie SDK Windows, oprócz pasek style kontrolki do kontrolki postępu następujące:  
   
-- `PBS_VERTICAL` Wyświetla postęp informacji w pionie, od góry do dołu. Bez tej flagi formantu paska postępu Wyświetla poziomie, do lewej do prawej.  
+- Pbs_vertical — Wyświetla postęp informacji w pionie, od góry do dołu. Bez tej flagi kontrolkę paska postępu Wyświetla poziomie, w lewo po prawej stronie.  
   
-- `PBS_SMOOTH` Wyświetla stopniowe, smooth wypełnianie formantu paska postępu. Bez tej flagi formantu wprowadzi bloków.  
+- Wyświetla pbs_smooth — stopniowe, smooth, wypełniając kontrolkę paska postępu. Bez tej flagi kontrolki spowoduje wypełnienie przy użyciu bloków.  
   
  *Rect*  
- Określa rozmiar i położenie formantu paska postępu. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Ponieważ formantu musi być oknem podrzędnym, określonych współrzędnych są względem obszaru klienckiego *pParentWnd*.  
+ Określa rozmiar i położenie formantu paska postępu. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury. Ponieważ kontrolki musi być okna podrzędnego, określonych współrzędnych są względne wobec obszaru klienckiego *pParentWnd*.  
   
  *pParentWnd*  
- Określa postęp paska okno nadrzędne kontrolki, zwykle `CDialog`. Nie może być **wartości NULL.**  
+ Określa pasek okno nadrzędne kontrolki, postępu, zwykle `CDialog`. Nie może być równa NULL.  
   
  *nID*  
- Określa identyfikator formantu paska postępu.  
+ Określa identyfikator kontrolki paska postępu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- **Wartość TRUE,** Jeśli `CProgressCtrl` obiektu jest pomyślnie utworzony; w przeciwnym razie **FALSE**.  
+ Wartość TRUE, jeśli `CProgressCtrl` obiekt jest pomyślnie utworzony; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Możesz utworzyć `CProgressCtrl` obiektu w dwóch krokach. Najpierw należy wywołać konstruktora, który tworzy `CProgressCtrl` obiekt, a następnie wywołać `Create`, która tworzy kontrolkę paska postępu.  
+ Konstruowanie `CProgressCtrl` obiektu w dwóch krokach. Po pierwsze wywołanie konstruktora, który tworzy `CProgressCtrl` obiektu, a następnie wywołaj `Create`, która tworzy kontrolkę paska postępu.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CProgressCtrl#2](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_2.cpp)]  
@@ -181,13 +181,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Określa styl rozszerzony formantu tworzona. Aby uzyskać listę rozszerzone style systemu Windows, zobacz *dwExStyle* parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
   
  *dwStyle*  
- Określa styl formantu paska postępu. Zastosuj dowolną kombinację Style okna opisanego w [właściwości CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie Windows SDK.  
+ Określa styl formantu paska postępu. Zastosuj dowolną kombinację Style okna ramowego opisanego w [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie Windows SDK.  
   
  *Rect*  
- Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujące rozmiar i położenie okna, które ma zostać utworzony w współrzędne klienta *pParentWnd*.  
+ Odwołanie do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.  
   
  *pParentWnd*  
  Wskaźnik do okna, które jest elementem nadrzędnym formantu.  
@@ -196,10 +196,10 @@ virtual BOOL CreateEx(
  Identyfikator formantu okna podrzędnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj `CreateEx` zamiast [Utwórz](#create) dotyczyć rozszerzone style systemu Windows, określone przez wstępu rozszerzonego stylu Windows **WS_EX_**.  
+ Użyj `CreateEx` zamiast [Utwórz](#create) do zastosowania rozszerzone style Windows, określonego przez tekst wstępny rozszerzonego stylu Windows **WS_EX_**.  
   
 ##  <a name="getbarcolor"></a>  CProgressCtrl::GetBarColor  
  Pobiera kolor paska wskaźnika postępu dla bieżącego formantu paska postępu.  
@@ -209,10 +209,10 @@ COLORREF GetBarColor() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Kolor bieżącego pasek postępu, reprezentowane jako [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość, lub `CLR_DEFAULT` Jeśli kolor paska wskaźnika postępu jest domyślny kolor.  
+ Kolor bieżącego pasek postępu, reprezentowane jako [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość lub CLR_DEFAULT Jeśli kolor paska wskaźnika postępu jest domyślny kolor.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [PBM_GETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760826) komunikat, który jest opisany w zestawie SDK systemu Windows.  
+ Ta metoda wysyła [PBM_GETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760826) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="getbkcolor"></a>  CProgressCtrl::GetBkColor  
  Pobiera kolor tła bieżącego pasek postępu.  
@@ -222,10 +222,10 @@ COLORREF GetBkColor() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Kolor tła paska postępu bieżącego reprezentowane jako [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartości.  
+ Kolor tła bieżącego pasek postępu, reprezentowane jako [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartości.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [PBM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760828) komunikat, który jest opisany w zestawie SDK systemu Windows.  
+ Ta metoda wysyła [PBM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760828) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ##  <a name="getpos"></a>  CProgressCtrl::GetPos  
  Pobiera bieżącą pozycję pasek postępu.  
@@ -235,16 +235,16 @@ int GetPos();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Pozycja formantu paska postępu.  
+ Położenie formantu paska postępu.  
   
 ### <a name="remarks"></a>Uwagi  
- Pozycja formantu paska postępu nie jest to lokalizację fizyczną na ekranie, ale raczej między górny i dolny zakres określonej w [SetRange](#setrange).  
+ Położenie formantu paska postępu nie lokalizację fizyczną na ekranie, ale raczej między górny i dolny zakres określonej w [SetRange](#setrange).  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CProgressCtrl#3](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_3.cpp)]  
   
 ##  <a name="getrange"></a>  CProgressCtrl::GetRange  
- Pobiera bieżący limity dolna i górna lub zakresu formantu paska postępu.  
+ Pobiera bieżący dolny i górny limit lub zakresu formantu paska postępu.  
   
 ```  
 void GetRange(
@@ -254,13 +254,13 @@ void GetRange(
   
 ### <a name="parameters"></a>Parametry  
  *nLower*  
- Odwołanie do typu integer odbieranie dolny limit formantu paska postępu.  
+ Odwołanie do wartości całkowitej odbieranie dolną granicę kontrolkę paska postępu.  
   
  *nUpper*  
- Odwołanie do typu integer odbieranie górne granice formantu paska postępu.  
+ Odwołanie do wartości całkowitej odbieranie górny limit kontrolkę paska postępu.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja kopiuje wartości limitów dolna i górna na liczby całkowite, odwołuje się *nLower* i *nUpper*odpowiednio.  
+ Ta funkcja kopiuje wartości dolny i górny limit liczby całkowite, odwołuje się *nLower* i *nUpper*, odpowiednio.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CProgressCtrl#4](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_4.cpp)]  
@@ -273,19 +273,19 @@ int GetState() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Stan bieżący formantu paska postępu, które jest jednym z następujących wartości:  
+ Stan bieżący formantu paska postępu, który będzie miał jedną z następujących wartości:  
   
 |Wartość|Stan|  
 |-----------|-----------|  
-|`PBST_NORMAL`|W toku|  
-|`PBST_ERROR`|Błąd|  
-|`PBST_PAUSED`|Wstrzymane|  
+|PBST_NORMAL|W toku|  
+|PBST_ERROR|Błąd|  
+|PBST_PAUSED|Wstrzymano|  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [PBM_GETSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760834) komunikat, który jest opisany w zestawie SDK systemu Windows.  
+ Ta metoda wysyła [PBM_GETSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760834) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykładowy kod definiuje zmienną, `m_progressCtrl`, która jest używana do uzyskania programowego dostępu do formantu paska postępu. Ta zmienna jest używana w następnym przykładzie.  
+ Poniższy kod definiuje zmienną, `m_progressCtrl`, która jest używana do uzyskania programowego dostępu formantu paska postępu. Ta zmienna jest używana w następnym przykładzie.  
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_5.h)]  
   
@@ -295,40 +295,40 @@ int GetState() const;
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#5](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_6.cpp)]  
   
 ##  <a name="getstep"></a>  CProgressCtrl::GetStep  
- Pobiera przyrost kroku paska postępu bieżącego formantu paska postępu.  
+ Pobiera przyrost krok aż pasek postępu bieżącego formantu paska postępu.  
   
 ```  
 int GetStep() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Przyrost krok pasek postępu.  
+ Wartość przyrostu kroku pasek postępu.  
   
 ### <a name="remarks"></a>Uwagi  
- Przyrost kroku jest wartość, o którą wywołanie [CProgressCtrl::StepIt](#stepit) zwiększa bieżąca pozycja paska postępu.  
+ Wartość, o którą jest zwiększenie kroku wywołanie [CProgressCtrl::StepIt](#stepit) zwiększa bieżącego położenia obiektu pasek postępu.  
   
- Ta metoda wysyła [PBM_GETSTEP](http://msdn.microsoft.com/library/windows/desktop/bb760836) komunikat, który jest opisany w zestawie SDK systemu Windows.  
+ Ta metoda wysyła [PBM_GETSTEP](http://msdn.microsoft.com/library/windows/desktop/bb760836) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykładowy kod definiuje zmienną, `m_progressCtrl`, która jest używana do uzyskania programowego dostępu do formantu paska postępu. Ta zmienna jest używana w następnym przykładzie.  
+ Poniższy kod definiuje zmienną, `m_progressCtrl`, która jest używana do uzyskania programowego dostępu formantu paska postępu. Ta zmienna jest używana w następnym przykładzie.  
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_5.h)]  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykładowy kod pobiera przyrost krok bieżącego formantu paska postępu.  
+ Poniższy przykładowy kod pobiera przyrost kroku bieżącego formantu paska postępu.  
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#3](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_7.cpp)]  
   
 ##  <a name="offsetpos"></a>  CProgressCtrl::OffsetPos  
- Przechodzi przez określony przez wartość przyrostu pasek bieżącego położenia kontrolki postępu *nPos* i ponownie rysuje pasku w celu uwzględnienia nowej pozycji.  
+ Pasek bieżące położenie kontrolki postępu jest przesuwany o określony przez wartość przyrostu *npos —* i ponownie rysuje na pasku, aby odzwierciedlić nowe położenie.  
   
 ```  
 int OffsetPos(int nPos);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *nPos*  
- Kwota można poprawić położenie.  
+ *npos —*  
+ Kwota Przejdź położenie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Poprzedniej pozycji formantu paska postępu.  
@@ -337,7 +337,7 @@ int OffsetPos(int nPos);
  [!code-cpp[NVC_MFC_CProgressCtrl#5](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_8.cpp)]  
   
 ##  <a name="setbarcolor"></a>  CProgressCtrl::SetBarColor  
- Ustawia kolor linii paska wskaźnika postępu w bieżącym formantu paska postępu.  
+ Ustawia kolor paska wskaźnika postępu w bieżącym formantu paska postępu.  
   
 ```  
 COLORREF SetBarColor(COLORREF clrBar);
@@ -347,23 +347,23 @@ COLORREF SetBarColor(COLORREF clrBar);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *clrBar*|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość, która określa nowy kolor paska wskaźnika postępu. Określ `CLR_DEFAULT` spowodować pasek postępu użyć jego domyślny kolor.|  
+|[in] *clrBar*|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość, która określa nowy kolor paska wskaźnika postępu. Określ CLR_DEFAULT do powodują pasek postępu używać jej domyślny kolor.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Poprzednie kolor pasek postępu wskaźnika reprezentowane jako [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość, lub `CLR_DEFAULT` Jeśli kolor paska wskaźnika postępu jest domyślny kolor.  
+ Poprzedni kolor paska wskaźnika postępu, reprezentowane jako [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość lub CLR_DEFAULT Jeśli kolor paska wskaźnika postępu jest domyślny kolor.  
   
 ### <a name="remarks"></a>Uwagi  
  `SetBarColor` Metoda ustawia pasek koloru tylko wtedy, gdy postępu [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] [motyw](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx) nie jest włączone.  
   
- Ta metoda wysyła [PBM_SETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760838) komunikat, który jest opisany w zestawie SDK systemu Windows.  
+ Ta metoda wysyła [PBM_SETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760838) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykładowy kod definiuje zmienną, `m_progressCtrl`, która jest używana do uzyskania programowego dostępu do formantu paska postępu. Ta zmienna jest używana w następnym przykładzie.  
+ Poniższy kod definiuje zmienną, `m_progressCtrl`, która jest używana do uzyskania programowego dostępu formantu paska postępu. Ta zmienna jest używana w następnym przykładzie.  
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_5.h)]  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykład kodu zmienia kolor pasek postępu do czerwony, zielony, niebieski lub wartość domyślną.  
+ Poniższy przykład kodu zmienia kolor paska postępu czerwony, zielony, niebieski lub wartość domyślną.  
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_9.cpp)]  
   
@@ -376,16 +376,16 @@ COLORREF SetBkColor(COLORREF clrNew);
   
 ### <a name="parameters"></a>Parametry  
  *clrNew*  
- A **COLORREF** wartość, która określa nowy kolor tła. Określ `CLR_DEFAULT` wartość domyślny kolor tła dla pasek postępu.  
+ Wartość COLORREF, która określa nowy kolor tła. Określ wartość CLR_DEFAULT na potrzeby domyślny kolor tła paska postępu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość wskazującą poprzedniej kolor tła lub **CLR_DEFAULT** Jeśli kolor tła jest domyślny kolor.  
+ [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość wskazującą poprzedni kolor tła lub CLR_DEFAULT, jeśli kolor domyślny kolor tła.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CProgressCtrl#6](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_10.cpp)]  
   
 ##  <a name="setmarquee"></a>  CProgressCtrl::SetMarquee  
- Włącza tryb ustawiony na marquee lub wyłącz bieżącego formantu paska postępu.  
+ Włącza tryb zaznaczenia lub wyłącz bieżące formantu paska postępu.  
   
 ```  
 BOOL SetMarquee(
@@ -397,49 +397,49 @@ BOOL SetMarquee(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *fMarqueeMode*|`true` Aby włączyć tryb zaznaczenia, lub `false` wyłączyć tryb ustawiony na marquee.|  
-|[in] *Ninterwał*|Czas w milisekundach między aktualizacjami animacji neonu.|  
+|[in] *fMarqueeMode*|Wartość true, Włącz tryb zaznaczenia na, lub FAŁSZ, aby wyłączyć tryb zaznaczenia.|  
+|[in] *Ninterwał*|Czas w milisekundach między aktualizacjami ramki animacji.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Ta metoda zawsze zwraca `true`.  
+ Ta metoda zawsze zwraca wartość TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
- Gdy jest włączony tryb zaznaczenia, paska postępu jest animowany i przewija, takich jak logowania ramkę kina.  
+ Gdy jest włączony tryb zaznaczenia, jest animowany pasek postępu i przewija, takich jak logowania theater ruchome obramowanie.  
   
- Ta metoda wysyła [PBM_SETMARQUEE](http://msdn.microsoft.com/library/windows/desktop/bb760842) komunikat, który jest opisany w zestawie SDK systemu Windows.  
+ Ta metoda wysyła [PBM_SETMARQUEE](http://msdn.microsoft.com/library/windows/desktop/bb760842) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykładowy kod definiuje zmienną, `m_progressCtrl`, która jest używana do uzyskania programowego dostępu do formantu paska postępu. Ta zmienna jest używana w następnym przykładzie.  
+ Poniższy kod definiuje zmienną, `m_progressCtrl`, która jest używana do uzyskania programowego dostępu formantu paska postępu. Ta zmienna jest używana w następnym przykładzie.  
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_5.h)]  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykładowy kod uruchamia i zatrzymuje neon przewijanie animacji.  
+ Poniższy przykładowy kod uruchamia i zatrzymuje ramki animacji przewijania.  
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_11.cpp)]  
   
 ##  <a name="setpos"></a>  CProgressCtrl::SetPos  
- Ustawia postęp paska bieżącego położenia kontrolki określony przez *nPos* i ponownie rysuje pasku w celu uwzględnienia nowej pozycji.  
+ Ustawia postęp paska bieżące położenie kontrolki określony przez *npos —* i ponownie rysuje na pasku, aby odzwierciedlić nowe położenie.  
   
 ```  
 int SetPos(int nPos);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *nPos*  
+ *npos —*  
  Nowa pozycja formantu paska postępu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Poprzedniej pozycji formantu paska postępu.  
   
 ### <a name="remarks"></a>Uwagi  
- Pozycja formantu paska postępu nie jest to lokalizację fizyczną na ekranie, ale raczej między górny i dolny zakres określonej w [SetRange](#setrange).  
+ Położenie formantu paska postępu nie lokalizację fizyczną na ekranie, ale raczej między górny i dolny zakres określonej w [SetRange](#setrange).  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CProgressCtrl#7](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_12.cpp)]  
   
 ##  <a name="setrange"></a>  CProgressCtrl::SetRange  
- Ustawia górny i dolny limit pasek zakresu formantu postępu i ponownie rysuje pasku w celu uwzględnienia nowych zakresów.  
+ Ustawia górny i dolny limit pasek zakresu kontrolki postępu i ponownie rysuje paska, aby odzwierciedlić nowe zakresy.  
   
 ```  
 void SetRange(
@@ -454,19 +454,19 @@ void SetRange32(
   
 ### <a name="parameters"></a>Parametry  
  *nLower*  
- Określa dolny limit zakresu (wartość domyślna to zero).  
+ Określa dolną granicę zakres (wartość domyślna to zero).  
   
  *nUpper*  
- Określa górny limit zakresu (wartość domyślna to 100).  
+ Określa górną granicę zakres (wartość domyślna to 100).  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja członkowska `SetRange32` ustawia zakresu 32-bitowych formantu postępu.  
+ Funkcja elementu członkowskiego `SetRange32` Ustawia zakres 32-bitowych formantu postępu.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CProgressCtrl#8](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_13.cpp)]  
   
 ##  <a name="setstate"></a>  CProgressCtrl::SetState  
- Ustawia stan bieżącego formantu paska postępu.  
+ Ustawia stan bieżący formant paska postępu.  
   
 ```  
 int SetState(int iState);
@@ -476,21 +476,21 @@ int SetState(int iState);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *iState*|Stan można ustawić pasek postępu. Użyj jednej z następujących wartości:<br /><br /> - `PBST_NORMAL` — W toku<br />- `PBST_ERROR` — Błąd<br />- `PBST_PAUSED` -Wstrzymana|  
+|[in] *iState*|Stan, aby ustawić pasek postępu. Użyj jednej z następujących wartości:<br /><br /> -PBST_NORMAL — w toku<br />-PBST_ERROR — błąd<br />-PBST_PAUSED - wstrzymana|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Poprzedni stan bieżący formantu paska postępu.  
+ Poprzedni stan bieżący formant paska postępu.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [PBM_SETSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760850) komunikat, który jest opisany w zestawie SDK systemu Windows.  
+ Ta metoda wysyła [PBM_SETSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760850) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykładowy kod definiuje zmienną, `m_progressCtrl`, która jest używana do uzyskania programowego dostępu do formantu paska postępu. Ta zmienna jest używana w następnym przykładzie.  
+ Poniższy kod definiuje zmienną, `m_progressCtrl`, która jest używana do uzyskania programowego dostępu formantu paska postępu. Ta zmienna jest używana w następnym przykładzie.  
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#9](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_5.h)]  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykład kodu ustawia stan bieżącego formantu paska postępu, wstrzymana lub w toku.  
+ Poniższy przykład kodu ustawia stan bieżący formant paska postępu Wstrzymano "lub" w toku.  
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#4](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_14.cpp)]  
   
@@ -509,15 +509,15 @@ int SetStep(int nStep);
  Przyrost poprzedniego kroku.  
   
 ### <a name="remarks"></a>Uwagi  
- Przyrost kroku jest wartość, o którą wywołanie `CProgressCtrl::StepIt` zwiększa postęp paska jego bieżącym położeniu.  
+ Wartość, o którą jest zwiększenie kroku wywołanie `CProgressCtrl::StepIt` zwiększa postęp paska w bieżącym położeniu.  
   
- Wartość kroku domyślna to 10.  
+ Wartość kroku domyślna wynosi 10.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CProgressCtrl#9](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_15.cpp)]  
   
 ##  <a name="stepit"></a>  CProgressCtrl::StepIt  
- Przesuwa bieżącego położenia kontrolki paska postępu przez przyrost kroku i ponownie rysuje pasku w celu uwzględnienia nowej pozycji.  
+ Bieżące położenie formantu paska postępu jest przesuwany o przyrost kroku i ponownie rysuje na pasku, aby odzwierciedlić nowe położenie.  
   
 ```  
 int StepIt();
@@ -527,7 +527,7 @@ int StepIt();
  Poprzedniej pozycji formantu paska postępu.  
   
 ### <a name="remarks"></a>Uwagi  
- Przyrost kroku jest ustawiana przez `CProgressCtrl::SetStep` funkcję elementu członkowskiego.  
+ Przyrost kroku jest ustawiana przez `CProgressCtrl::SetStep` funkcja elementu członkowskiego.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CProgressCtrl#10](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_16.cpp)]  

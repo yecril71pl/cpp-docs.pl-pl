@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ede515f0b8bc95d454fec48c6c6bd2109c43ce74
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: c1723e93320129fae232bb850caa123d1638a37b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040197"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853085"
 ---
 # <a name="codbcfieldinfo-structure"></a>CODBCFieldInfo — Struktura
-`CODBCFieldInfo` Struktura zawiera informacje dotyczące pól w źródle danych ODBC.  
+`CODBCFieldInfo` Struktura zawiera informacje o polach w źródle danych ODBC.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,16 +45,16 @@ struct CODBCFieldInfo
  Nazwa pola.  
   
  *m_nSQLType*  
- Typ danych SQL pola. Może to być typ danych ODBC SQL lub sterownika typ danych SQL. Aby uzyskać listę prawidłowe typy danych ODBC SQL zobacz "Typy danych SQL" w zestawie Windows SDK. Informacje na temat typów danych SQL sterownika sterownika dokumentacji.  
+ Typ danych SQL pola. Może to być typu danych ODBC SQL lub typ danych SQL specyficzne dla sterownika. Aby uzyskać listę prawidłowe typy danych ODBC SQL zobacz "Typy danych SQL" w zestawie Windows SDK. Aby uzyskać informacje o typach danych SQL specyficzne dla sterownika można znaleźć w temacie sterownika dokumentacji.  
   
  *m_nPrecision*  
- Maksymalna dokładność pola. Aby uzyskać więcej informacji zobacz "Precyzja, skala długość i rozmiar wyświetlania" w zestawie Windows SDK.  
+ Maksymalna dokładność pola. Aby uzyskać szczegółowe informacje zobacz "Dokładność, skala, długość i rozmiar wyświetlania" w zestawie Windows SDK.  
   
  *m_nScale*  
- Skala pola. Aby uzyskać więcej informacji zobacz "Precyzja, skala długość i rozmiar wyświetlania" w zestawie Windows SDK.  
+ Skala pola. Aby uzyskać szczegółowe informacje zobacz "Dokładność, skala, długość i rozmiar wyświetlania" w zestawie Windows SDK.  
   
  *m_nNullability*  
- Określa, czy pole akceptuje wartości Null. Może to być jedną z dwóch wartości: **SQL_NULLABLE** Jeśli pole akceptuje wartości Null lub **SQL_NO_NULLS** Jeśli pole nie akceptuje wartości Null.  
+ Czy pole akceptuje wartości Null. Może to być jeden z dwóch wartości: SQL_NULLABLE, jeśli pole akceptuje wartości Null lub SQL_NO_NULLS, jeśli pole nie akceptuje wartości Null.  
   
 ## <a name="remarks"></a>Uwagi  
  Aby pobrać te informacje, należy wywołać [CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo).  

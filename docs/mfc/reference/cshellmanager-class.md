@@ -38,15 +38,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1052c7197d8679272cc917402a8936983649acb
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 0752d278f0459c3558021d02fbcddb6ba234df53
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079241"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852389"
 ---
 # <a name="cshellmanager-class"></a>Klasa CShellManager
-Implementuje kilka metod, które umożliwiają pracę z wskaźniki do listy identyfikator (PIDLs).  
+Implementuje kilka metod, które umożliwiają użytkownikowi pracować ze wskaźnikami do list identyfikatorów (PIDLs).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -66,21 +66,21 @@ class CShellManager : public CObject
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CShellManager::BrowseForFolder](#browseforfolder)|Wyświetla okno dialogowe, które umożliwia użytkownikowi wybranie folderu powłoki.|  
+|[CShellManager::BrowseForFolder](#browseforfolder)|Wyświetlane jest okno dialogowe, który umożliwia użytkownikowi wybranie folderu powłoki.|  
 |[CShellManager::ConcatenateItem](#concatenateitem)|Łączy dwa PIDLs.|  
 |[CShellManager::CopyItem](#copyitem)|Tworzy nowy PIDL i kopiuje PIDL dostarczony do niego.|  
 |[CShellManager::CreateItem](#createitem)|Tworzy nowy PIDL o określonym rozmiarze.|  
 |[CShellManager::FreeItem](#freeitem)|Usuwa podany PIDL.|  
-|[CShellManager::GetItemCount](#getitemcount)|Zwraca liczbę elementów w PIDL dostarczony.|  
-|[CShellManager::GetItemSize](#getitemsize)|Zwraca rozmiar podany PIDL.|  
+|[CShellManager::GetItemCount](#getitemcount)|Zwraca liczbę elementów w podanej PIDL.|  
+|[CShellManager::GetItemSize](#getitemsize)|Zwraca rozmiar PIDL podane.|  
 |[CShellManager::GetNextItem](#getnextitem)|Zwraca następny element PIDL.|  
-|[CShellManager::GetParentItem](#getparentitem)|Pobiera element nadrzędny dostarczonego elementu.|  
-|[CShellManager::ItemFromPath](#itemfrompath)|Pobiera PIDL dla elementu identyfikowana na podstawie podanej ścieżki.|  
+|[CShellManager::GetParentItem](#getparentitem)|Pobiera element nadrzędny elementu podane.|  
+|[CShellManager::ItemFromPath](#itemfrompath)|Pobiera PIDL dla elementu identyfikowane przez podana ścieżka.|  
   
 ## <a name="remarks"></a>Uwagi  
- Metody `CShellManager` klasy dotyczą wszystkich PIDLs. PIDL jest unikatowym identyfikatorem dla obiekt powłoki.  
+ Metody `CShellManager` klasy dotyczą wszystkich PIDLs. PIDL jest unikatowy identyfikator obiektu powłoki.  
   
- Nie należy tworzyć `CShellManager` obiekt ręcznie. Go zostaną utworzone automatycznie w ramach aplikacji. Jednak należy wywołać [CWinAppEx::InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager) podczas procesu inicjowania aplikacji. Aby uzyskać wskaźnika shell manager dla aplikacji, należy wywołać [CWinAppEx::GetShellManager](../../mfc/reference/cwinappex-class.md#getshellmanager).  
+ Nie należy tworzyć `CShellManager` obiektu ręcznie. Zostanie on utworzony automatycznie przez strukturę aplikacji. Jednakże, należy wywołać [CWinAppEx::InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager) podczas procesu inicjowania aplikacji. Aby uzyskać wskaźnik do Menedżera powłoki aplikacji, należy wywołać [CWinAppEx::GetShellManager](../../mfc/reference/cwinappex-class.md#getshellmanager).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -91,7 +91,7 @@ class CShellManager : public CObject
  **Nagłówek:** afxshellmanager.h  
   
 ##  <a name="browseforfolder"></a>  CShellManager::BrowseForFolder  
- Wyświetla okno dialogowe, które umożliwia użytkownikowi wybranie folderu powłoki.  
+ Wyświetlane jest okno dialogowe, który umożliwia użytkownikowi wybranie folderu powłoki.  
   
 ```  
 BOOL BrowseForFolder(
@@ -105,36 +105,36 @@ BOOL BrowseForFolder(
   
 ### <a name="parameters"></a>Parametry  
  [out] *strOutFolder*  
- Ciąg używany przez metodę do przechowywania ścieżkę do wybranego folderu.  
+ Ciąg używany przez metodę do przechowywania ścieżka do wybranego folderu.  
   
  [in] *pWndParent*  
  Wskaźnik do okna nadrzędnego.  
   
  [in] *lplszInitialFolder*  
- Ciąg, który zawiera folder, który jest domyślnie zaznaczona, gdy zostanie wyświetlone okno dialogowe.  
+ Ciąg, który zawiera folder, który jest domyślnie wybierany, gdy zostanie wyświetlone okno dialogowe.  
   
  [in] *lpszTitle*  
  Tytuł okna dialogowego.  
   
  [in] *ulFlags*  
- Flag określając opcje w oknie dialogowym. Zobacz [BROWSEINFO](http://msdn.microsoft.com/library/windows/desktop/bb773205) szczegółowy opis.  
+ Flagi określające opcje dla okna dialogowego. Zobacz [BROWSEINFO](http://msdn.microsoft.com/library/windows/desktop/bb773205) szczegółowy opis.  
   
  [out] *piFolderImage*  
- Wskaźnik do wartości całkowitej, gdy metoda zapisuje indeks obrazu wybranego folderu.  
+ Wskaźnik do wartości całkowitej, gdzie metoda zapisuje indeks obrazu wybranego folderu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli użytkownik wybierze folder z okna dialogowego; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli użytkownik wybierze folder, w oknie dialogowym. w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Gdy ta metoda jest wywoływana, aplikacja tworzy i wyświetla okno dialogowe, które umożliwia użytkownikowi wybranie folderu. Metoda zapisze ścieżkę folderu w *strOutFolder* parametru.  
+ Jeśli chcesz wywołać tę metodę, aplikacja tworzy i wyświetla okno dialogowe, który umożliwia użytkownikowi wybrać folder. Metoda zapisze ścieżkę do folderu *strOutFolder* parametru.  
   
 ### <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, jak pobrać odwołanie do `CShellManager` obiektu za pomocą `CWinAppEx::GetShellManager` — metoda i sposobu użycia `BrowseForFolder` metody. Następujący fragment kodu jest częścią [przykładowy Eksplorator](../../visual-cpp-samples.md).  
+ Poniższy przykład pokazuje, jak pobrać odwołanie do `CShellManager` obiektu za pomocą `CWinAppEx::GetShellManager` metody i sposobu używania `BrowseForFolder` metody. Ten fragment kodu jest częścią [Eksplorator kondycji](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_Explorer#6](../../mfc/reference/codesnippet/cpp/cshellmanager-class_1.cpp)]  
   
 ##  <a name="concatenateitem"></a>  CShellManager::ConcatenateItem  
- Tworzy nową listę zawierającą PIDLs dwa.  
+ Tworzy nową listę zawierającą dwa PIDLs.  
   
 ```  
 LPITEMIDLIST ConcatenateItem(
@@ -150,10 +150,10 @@ LPITEMIDLIST ConcatenateItem(
  Drugi element.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do nowego listy element, jeśli funkcja zakończy się powodzeniem, w przeciwnym razie `NULL`.  
+ Wskaźnik do nowej listy elementów, jeśli funkcja się powiedzie, w przeciwnym razie wartość NULL.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda tworzy nowy [ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321) wystarczająco duże, aby obie zawierają *pidl1* i *pidl2*. Następnie kopiuje *pidl1* i *pidl2* na nową listę.  
+ Ta metoda tworzy nowy [ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321) wystarczająco duży, aby zawierać równocześnie *pidl1* i *pidl2*. Następnie kopiuje *pidl1* i *pidl2* do nowej listy.  
   
 ##  <a name="copyitem"></a>  CShellManager::CopyItem  
  Kopiuje listy elementów.  
@@ -164,13 +164,13 @@ LPITEMIDLIST CopyItem(LPCITEMIDLIST pidlSource);
   
 ### <a name="parameters"></a>Parametry  
  [in] *pidlSource*  
- Oryginalnej listy elementów.  
+ Oryginalna lista elementów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do nowo utworzonego elementu listy w przypadku powodzenia; w przeciwnym razie `NULL`.  
+ Wskaźnik do nowo utworzonego elementu listy, jeśli to się powiedzie; w przeciwnym razie wartość NULL.  
   
 ### <a name="remarks"></a>Uwagi  
- Lista nowo utworzonego elementu ma taki sam rozmiar jak listy elementów źródła.  
+ Lista nowo utworzony element ma taki sam rozmiar jak listy elementów źródła.  
   
 ##  <a name="createitem"></a>  CShellManager::CreateItem  
  Tworzy nowy PIDL.  
@@ -184,7 +184,7 @@ LPITEMIDLIST CreateItem(UINT cbSize);
  Rozmiar listy elementów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do utworzonego elementu listy w przypadku powodzenia; w przeciwnym razie `NULL`.  
+ Wskaźnik do listy utworzonego elementu, jeśli to się powiedzie; w przeciwnym razie wartość NULL.  
   
 ##  <a name="cshellmanager"></a>  CShellManager::CShellManager  
  Konstruuje `CShellManager` obiektu.  
@@ -194,7 +194,7 @@ CShellManager();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- W większości przypadków, nie trzeba tworzyć `CShellManager` bezpośrednio. Domyślnie platformę tworzy ją. Aby uzyskać wskaźnik do `CShellManager`, wywołaj [CWinAppEx::GetShellManager](../../mfc/reference/cwinappex-class.md#getshellmanager). Jeśli utworzysz `CShellManager` ręcznie, należy go zainicjować z metodą [CWinAppEx::InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager).  
+ W większości przypadków nie trzeba tworzyć `CShellManager` bezpośrednio. Domyślnie struktura utworzy go dla Ciebie. Aby uzyskać wskaźnik do `CShellManager`, wywołaj [CWinAppEx::GetShellManager](../../mfc/reference/cwinappex-class.md#getshellmanager). Jeśli tworzysz `CShellManager` ręcznie, należy go zainicjować za pomocą metody [CWinAppEx::InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager).  
   
 ##  <a name="freeitem"></a>  CShellManager::FreeItem  
  Usuwa listy elementów.  
@@ -236,7 +236,7 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
  Rozmiar listy elementów.  
   
 ##  <a name="getnextitem"></a>  CShellManager::GetNextItem  
- Pobiera element dalej ze wskaźnika do listy (identyfikatorów elementów PIDL).  
+ Pobiera następny element ze wskaźnika do listy (identyfikatorów elementów PIDL).  
   
 ```  
 LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
@@ -244,13 +244,13 @@ LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
   
 ### <a name="parameters"></a>Parametry  
  [in] *pidl*  
- Na liście elementów w celu wykonania iteracji.  
+ Lista elementów do iteracji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Wskaźnik do następnego elementu na liście.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli istnieje więcej elementów na liście, ta metoda zwraca `NULL`.  
+ Jeśli istnieje więcej elementów na liście, ta metoda zwraca wartość NULL.  
   
 ##  <a name="getparentitem"></a>  CShellManager::GetParentItem  
  Pobiera element nadrzędny wskaźnik do listy (identyfikatorów elementów PIDL).  
@@ -263,19 +263,19 @@ int GetParentItem(
   
 ### <a name="parameters"></a>Parametry  
  [in] *lpidl*  
- PIDL, których elementem nadrzędnym zostaną pobrane.  
+ PIDL, których elementem nadrzędnym, które mają zostać pobrane.  
   
  [out] *lpidlParent*  
- Odwołanie do PIDL, na której metoda będzie przechowywać wynik.  
+ Odwołanie do PIDL, której metody będą przechowywać wynik.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Poziom elementu nadrzędnego PIDL.  
   
 ### <a name="remarks"></a>Uwagi  
- Poziom PIDL jest określana względem pulpitu. Pulpitu PIDL została uznana za poziom 0.  
+ Poziom PIDL jest określana względem pulpitu. Aby uzyskać odpowiedni poziom 0 uznaje się PIDL pulpitu.  
   
 ##  <a name="itemfrompath"></a>  CShellManager::ItemFromPath  
- Pobiera wskaźnik do listy (identyfikatorów elementów PIDL) z elementu identyfikowana na podstawie ciągu ścieżki.  
+ Pobiera wskaźnik do listy (identyfikatorów elementów PIDL) z elementu identyfikowane przez ciąg ścieżki.  
   
 ```  
 HRESULT ItemFromPath(
@@ -288,10 +288,10 @@ HRESULT ItemFromPath(
  Ciąg, który określa ścieżkę do elementu.  
   
  [out] *pidl*  
- Odwołanie do PIDL. Metoda używa tego PIDL do przechowywania wskaźnik do jego wartości zwracanej.  
+ Odwołanie do PIDL. Metoda używa tego PIDL do przechowywania wskaźnika do wartości zwracanej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca `NOERROR` w przypadku powodzenia; wartość zdefiniowana OLE błędu.  
+ Zwraca brak błędu, jeśli to się powiedzie; wartość błędu zdefiniowany OLE.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

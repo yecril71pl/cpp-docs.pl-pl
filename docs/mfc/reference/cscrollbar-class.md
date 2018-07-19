@@ -40,15 +40,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86827a2f01e387eb6e7c8b2184567cb204f184e6
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 7c37e8cb4d69e93fd0842aa7cb2149331f502eae
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079124"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850048"
 ---
 # <a name="cscrollbar-class"></a>Klasa CScrollBar
-Udostępnia funkcje systemu Windows formantu paska przewijania.  
+Oferuje funkcje formantu paska przewijania Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -68,30 +68,30 @@ class CScrollBar : public CWnd
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CScrollBar::Create](#create)|Tworzy pasek przewijania systemu Windows i dołącza go do `CScrollBar` obiektu.|  
+|[CScrollBar::Create](#create)|Tworzy pasek przewijania Windows i dołącza je do `CScrollBar` obiektu.|  
 |[CScrollBar::EnableScrollBar](#enablescrollbar)|Włącza lub wyłącza jeden lub oba strzałek przewijania na pasku przewijania.|  
-|[CScrollBar::GetScrollBarInfo](#getscrollbarinfo)|Pobiera informacje o pasek przy użyciu przewijania `SCROLLBARINFO` struktury.|  
+|[CScrollBar::GetScrollBarInfo](#getscrollbarinfo)|Pobiera informacje o paska przewijania, za pomocą `SCROLLBARINFO` struktury.|  
 |[CScrollBar::GetScrollInfo](#getscrollinfo)|Pobiera informacje o paska przewijania.|  
 |[CScrollBar::GetScrollLimit](#getscrolllimit)|Pobiera limit paska przewijania|  
-|[CScrollBar::GetScrollPos](#getscrollpos)|Pobiera bieżącą pozycję pola przewijania.|  
-|[CScrollBar::GetScrollRange](#getscrollrange)|Pobiera dla paska przewijania danego bieżącej pozycji minimalną i maksymalną paska przewijania.|  
+|[CScrollBar::GetScrollPos](#getscrollpos)|Pobiera bieżące położenie suwaka.|  
+|[CScrollBar::GetScrollRange](#getscrollrange)|Pobiera dla paska przewijania danego bieżącej pozycji minimalne i maksymalne paska przewijania.|  
 |[CScrollBar::SetScrollInfo](#setscrollinfo)|Ustawia informacje o paska przewijania.|  
-|[CScrollBar::SetScrollPos](#setscrollpos)|Ustawia bieżącą pozycję pola przewijania.|  
-|[CScrollBar::SetScrollRange](#setscrollrange)|Ustawia wartości minimalną i maksymalną pozycji na pasku przewijania danego.|  
+|[CScrollBar::SetScrollPos](#setscrollpos)|Ustawia bieżącej pozycji suwaka.|  
+|[CScrollBar::SetScrollRange](#setscrollrange)|Ustawia położenie minimalne i maksymalne wartości dla paska przewijania danego.|  
 |[CScrollBar::ShowScrollBar](#showscrollbar)|Pokazuje lub ukrywa pasek przewijania.|  
   
 ## <a name="remarks"></a>Uwagi  
- Można utworzyć formantu paska przewijania w dwóch krokach. Po pierwsze wywołanie konstruktora `CScrollBar` do skonstruowania `CScrollBar` obiekt, a następnie wywołaj [Utwórz](#create) funkcji członkowskiej Tworzenie formantu paska przewijania systemu Windows i dołączenie go do `CScrollBar` obiektu.  
+ Utworzysz formantu paska przewijania w dwóch krokach. Po pierwsze wywołanie konstruktora `CScrollBar` do konstruowania `CScrollBar` obiektu, a następnie wywołaj [Utwórz](#create) funkcja elementu członkowskiego, aby utworzyć formantu paska przewijania Windows i dołączyć go do `CScrollBar` obiektu.  
   
- W przypadku utworzenia `CScrollBar` obiektu w oknie dialogowym (za pośrednictwem zasób okna dialogowego), `CScrollBar` zostanie zniszczony automatycznie, gdy użytkownik zamyka okno dialogowe.  
+ Jeśli tworzysz `CScrollBar` obiektu w oknie dialogowym (za pośrednictwem zasobu okna dialogowego), `CScrollBar` automatycznie jest niszczony, kiedy użytkownik zamknie okno dialogowe.  
   
- W przypadku utworzenia `CScrollBar` obiektów w ramach okna, może być również konieczne zniszczenia.  
+ Jeśli tworzysz `CScrollBar` obiekt w tym oknie, konieczne może zniszczyć ją.  
   
- W przypadku utworzenia `CScrollBar` obiektów na stosie, zostanie zniszczony automatycznie. W przypadku utworzenia `CScrollBar` obiektów na stercie przy użyciu **nowe** funkcji, należy wywołać **usunąć** obiektu zniszczyć ją, gdy użytkownik kończy pasek przewijania systemu Windows.  
+ Jeśli tworzysz `CScrollBar` obiektów na stosie, zostanie zniszczony automatycznie. Jeśli tworzysz `CScrollBar` obiektów na stosie przy użyciu **nowe** funkcji, należy wywołać **Usuń** obiektu zniszczyć ją, gdy użytkownik kończy Windows paska przewijania.  
   
- Jeśli Przydziel wszystkie pamięci w `CScrollBar` obiektów, Zastąp `CScrollBar` destruktora zlikwidować alokacje.  
+ Jeśli przydzielisz wszystkie pamięci w `CScrollBar` obiektów, Zastąp `CScrollBar` destruktora w celu usunięcia alokacje.  
   
- Powiązane informacje o używaniu `CScrollBar`, zobacz [formanty](../../mfc/controls-mfc.md).  
+ Aby uzyskać powiązane informacje o używaniu `CScrollBar`, zobacz [formantów](../../mfc/controls-mfc.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -106,7 +106,7 @@ class CScrollBar : public CWnd
  **Nagłówek:** afxwin.h  
   
 ##  <a name="create"></a>  CScrollBar::Create  
- Tworzy pasek przewijania systemu Windows i dołącza go do `CScrollBar` obiektu.  
+ Tworzy pasek przewijania Windows i dołącza je do `CScrollBar` obiektu.  
   
 ```  
 virtual BOOL Create(
@@ -118,32 +118,32 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Określa przewijania styl paska. Zastosuj dowolną kombinację [Style paska przewijania](../../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles) na pasku przewijania.  
+ Określa przewijania styl paska. Zastosuj dowolną kombinację [Style paska przewijania](../../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles) paska przewijania.  
   
  *Rect*  
- Określa rozmiar paska przewijania i pozycji. Może to być albo `RECT` struktury lub `CRect` obiektu.  
+ Określa rozmiar paska przewijania i pozycji. Może być `RECT` struktury lub `CRect` obiektu.  
   
  *pParentWnd*  
- Określa przewijania okno nadrzędne paska, zwykle `CDialog` obiektu. Nie może być **NULL**.  
+ Określa przewijania okno nadrzędne paska, zwykle `CDialog` obiektu. Nie może być równa NULL.  
   
  *nID*  
  Identyfikator formantu paska przewijania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Możesz utworzyć `CScrollBar` obiektu w dwóch krokach. Najpierw należy wywołać konstruktora, który konstruuje `CScrollBar` obiektu; wywoływać `Create`, która tworzy i inicjuje skojarzone pasek przewijania systemu Windows i dołącza go do `CScrollBar` obiektu.  
+ Konstruowanie `CScrollBar` obiektu w dwóch krokach. Po pierwsze wywołanie konstruktora, który tworzy `CScrollBar` obiektu; następnie wywołać `Create`, który tworzy i inicjuje skojarzone paska przewijania Windows i dołącza go do `CScrollBar` obiektu.  
   
- Zastosuj następujące [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles) pasek przewijania:  
+ Zastosuj następujące [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles) pasek przewijania:  
   
-- **Ws_child —** zawsze  
+- WS_CHILD zawsze  
   
-- **Ws_visible —** zwykle  
+- WS_VISIBLE zwykle  
   
-- **Ws_disabled —** rzadko  
+- WS_DISABLED rzadko  
   
-- **Ws_group —** na grupowanie formantów  
+- WS_GROUP kontrolek grupy  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CScrollBar#1](../../mfc/reference/codesnippet/cpp/cscrollbar-class_1.cpp)]  
@@ -156,7 +156,7 @@ CScrollBar();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Po konstruowania obiektu, należy wywołać **Utwórz** funkcji członkowskiej na tworzenie i Inicjowanie paska przewijania systemu Windows.  
+ Po konstruowanie obiektu, wywołaj `Create` funkcja elementu członkowskiego, aby utworzyć i zainicjować Windows paska przewijania.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CScrollBar#2](../../mfc/reference/codesnippet/cpp/cscrollbar-class_2.h)]  
@@ -170,24 +170,24 @@ BOOL EnableScrollBar(UINT nArrowFlags = ESB_ENABLE_BOTH);
   
 ### <a name="parameters"></a>Parametry  
  *nArrowFlags*  
- Określa, czy włączać lub wyłączać strzałki przewijania i strzałek, które są włączone lub wyłączone. Ten parametr może mieć jedną z następujących wartości:  
+ Określa, czy włączać lub wyłączać strzałki przewijania i strzałek, które są włączone lub wyłączone. Ten parametr może być jedną z następujących wartości:  
   
-- **ESB_ENABLE_BOTH** umożliwia zarówno strzałek przewijania na pasku przewijania.  
+- ESB_ENABLE_BOTH umożliwia zarówno strzałek przewijania na pasku przewijania.  
   
-- **ESB_DISABLE_LTUP** wyłącza strzałkę poziomego paska przewijania w lewo lub strzałki w górę na pionowy pasek przewijania.  
+- ESB_DISABLE_LTUP wyłącza pasek przewijania poziomego strzałkę w lewo lub strzałki w górę pionowy pasek przewijania.  
   
-- **ESB_DISABLE_RTDN** wyłącza strzałki w prawo działania poziomego paska przewijania lub strzałkę w dół pionowy pasek przewijania.  
+- ESB_DISABLE_RTDN wyłącza strzałkę poziomy pasek przewijania w prawo lub strzałkę w dół na pionowy pasek przewijania.  
   
-- **ESB_DISABLE_BOTH** wyłącza zarówno strzałek przewijania na pasku przewijania.  
+- ESB_DISABLE_BOTH wyłącza zarówno strzałek przewijania na pasku przewijania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli strzałki są włączone lub wyłączone określone; w przeciwnym razie wartość 0, co oznacza, że strzałki są już żądany stan lub wystąpił błąd.  
+ Wartość różną od zera, jeśli włączone lub wyłączone określonych; strzałki w przeciwnym razie 0, co oznacza, że strzałki znajdują się już w żądany stan lub wystąpił błąd.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CScrollBar::SetScrollRange](#setscrollrange).  
   
 ##  <a name="getscrollbarinfo"></a>  CScrollBar::GetScrollBarInfo  
- Pobiera informacje o który **SCROLLBARINFO** struktury przechowuje o pasek przewijania.  
+ Pobiera informacje o który `SCROLLBARINFO` struktury przechowuje informacje paska przewijania.  
   
 ```  
 BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;  
@@ -198,13 +198,13 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
  Wskaźnik do [SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787535) struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca **TRUE** w przypadku powodzenia **FALSE** w przypadku awarii.  
+ Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska emuluje funkcje [SBM_SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787545) komunikatu, zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja członkowska emuluje funkcjonalność [SBM_SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787545) komunikat, zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="getscrollinfo"></a>  CScrollBar::GetScrollInfo  
- Pobiera informacje o który `SCROLLINFO` struktury przechowuje o pasek przewijania.  
+ Pobiera informacje o który `SCROLLINFO` struktury przechowuje informacje paska przewijania.  
   
 ```  
 BOOL GetScrollInfo(
@@ -214,20 +214,20 @@ BOOL GetScrollInfo(
   
 ### <a name="parameters"></a>Parametry  
  *lpScrollInfo*  
- Wskaźnik do [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) struktury. Zobacz Windows SDK, aby uzyskać więcej informacji na temat tej struktury.  
+ Wskaźnik do [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) struktury. Zobacz zestaw SDK Windows, aby uzyskać więcej informacji na temat tej struktury.  
   
  *nMask*  
- Określa parametry paska przewijania do pobrania. Typowy sposób, SIF_ALL, określa kombinację SIF_PAGE, SIF_POS SIF_TRACKPOS i SIF_RANGE. Zobacz `SCROLLINFO` uzyskać więcej informacji o wartości nMask.  
+ Określa parametry paska przewijania, do pobrania. Typowy SIF_ALL, określa kombinację SIF_PAGE, SIF_POS, SIF_TRACKPOS i SIF_RANGE. Zobacz `SCROLLINFO` więcej informacji na temat wartości nMask.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Czy wiadomości pobierane wartości, jest zwracany **TRUE**. W przeciwnym razie jest **FALSE**.  
+ W przypadku komunikatu pobrania wszelkie wartości, zwracany jest TRUE. W przeciwnym razie ma wartość FAŁSZ.  
   
 ### <a name="remarks"></a>Uwagi  
- `GetScrollInfo` Umożliwia aplikacjom używać pozycji przewijania 32-bitowych.  
+ `GetScrollInfo` Umożliwia aplikacjom używanie pozycji przewijania 32-bitowych.  
   
- [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) struktura zawiera informacje o paska, w tym minimalne i maksymalne przewijanie pozycji, rozmiar strony i pozycja pola przewijania (przenośny) przewijania. Zobacz `SCROLLINFO` struktury tematu w zestawie SDK systemu Windows, aby uzyskać więcej informacji na temat zmiany ustawień domyślnych struktury.  
+ [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) struktura zawiera informacje dotyczące paska, w tym minimalne i maksymalne przewijanie położenia, rozmiaru strony i położenie suwaka (thumb) przewijania. Zobacz `SCROLLINFO` struktury tematu w zestawie SDK Windows, aby uzyskać więcej informacji na temat zmiany ustawień domyślnych struktury.  
   
- Programy obsługi, które wskazują położenie paska przewijania, wiadomości MFC Windows [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) i [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll), podaj tylko 16 bitów danych pozycji. `GetScrollInfo` i `SetScrollInfo` Podaj 32 bity pasek danych położenie przewijania. W związku z tym, aplikacja może wywołać `GetScrollInfo` podczas przetwarzania albo `CWnd::OnHScroll` lub `CWnd::OnVScroll` do uzyskiwania danych pozycja paska przewijania 32-bitowych.  
+ Windows MFC komunikatu programów obsługi, które wskazują na położenie paska przewijania, [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) i [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll), podaj tylko 16 bitów danych position. `GetScrollInfo` i `SetScrollInfo` zapewniają 32 bity danych position — pasek przewijania. W związku z tym, aplikacja może wywołać `GetScrollInfo` podczas przetwarzania albo `CWnd::OnHScroll` lub `CWnd::OnVScroll` do uzyskania danych położenie paska przewijania 32-bitowych.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
@@ -240,29 +240,29 @@ int GetScrollLimit();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Określa maksymalną pozycja paska przewijania w przypadku powodzenia; w przeciwnym razie 0.  
+ Określa maksymalną położenie paska przewijania, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
 ##  <a name="getscrollpos"></a>  CScrollBar::GetScrollPos  
- Pobiera bieżącą pozycję pola przewijania.  
+ Pobiera bieżące położenie suwaka.  
   
 ```  
 int GetScrollPos() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Określa bieżącą pozycję pola przewijania w przypadku powodzenia; w przeciwnym razie 0.  
+ Określa bieżące położenie paska przewijania, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Bieżące położenie jest względna wartość, która jest zależna od bieżącego przewijanego zakresu. Na przykład jeśli pole przewijania jest w trakcie paska przewijania zakres wynosi od 100 do 200, bieżące położenie jest 150.  
+ Bieżące położenie jest względna wartość, która jest zależna od bieżącego zakresu przewijania. Na przykład jeśli pole przewijania jest w trakcie pasek przewijania zakres wynosi 100, 200, bieżące położenie jest 150.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
 ##  <a name="getscrollrange"></a>  CScrollBar::GetScrollRange  
- Kopiuje bieżącego położenia minimalną i maksymalną pasek przewijania dla paska przewijania danego do lokalizacji określonej przez *lpMinPos* i *lpMaxPos*.  
+ Kopiuje bieżącego położenia minimalne i maksymalne paska przewijania dla paska przewijania danego do lokalizacji określonej przez *lpMinPos* i *lpMaxPos*.  
   
 ```  
 void GetScrollRange(
@@ -272,19 +272,19 @@ void GetScrollRange(
   
 ### <a name="parameters"></a>Parametry  
  *lpMinPos*  
- Wskazuje zmiennej liczba całkowita, która będzie odbierać minimalna pozycji.  
+ Wskazuje zmienną całkowitą, który ma otrzymać minimalne pozycji.  
   
  *lpMaxPos*  
- Wskazuje zmiennej liczba całkowita, która będzie odbierać maksymalną pozycji.  
+ Wskazuje zmienną całkowitą, który ma otrzymać maksymalna pozycji.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślny zakres dla formantu paska przewijania jest pusty (obie wartości to 0).  
+ Domyślny zakres dla formantu paska przewijania jest pusty (obie wartości są 0).  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
 ##  <a name="setscrollinfo"></a>  CScrollBar::SetScrollInfo  
- Ustawia informacje, które `SCROLLINFO` struktury przechowuje o pasek przewijania.  
+ Ustawia informacje o `SCROLLINFO` struktury przechowuje informacje paska przewijania.  
   
 ```  
 BOOL SetScrollInfo(
@@ -297,21 +297,21 @@ BOOL SetScrollInfo(
  Wskaźnik do [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) struktury.  
   
  *bRedraw*  
- Określa, czy pasek przewijania powinien być narysowany ponownie w celu odzwierciedlenia nowych informacji. Jeśli *bRedraw* jest **TRUE**, zostanie narysowany ponownie na pasku przewijania. Jeśli jest **FALSE**, nie jest rysowane. Pasek przewijania jest odświeżana domyślnie.  
+ Określa, czy pasek przewijania powinien być narysowany ponownie, aby odzwierciedlić nowe informacje. Jeśli *bRedraw* ma wartość TRUE, jest odświeżana, pasek przewijania. Jeśli jest to wartość FALSE, nie jest narysowany na ponownie. Pasek przewijania jest odświeżana, domyślnie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Jeśli pomyślnie, zwracany jest **TRUE**. W przeciwnym razie jest **FALSE**.  
+ Jeśli to się powiedzie, zwracana jest wartość TRUE. W przeciwnym razie ma wartość FAŁSZ.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy podać wartości wymagane przez `SCROLLINFO` struktury parametrów, takich jak wartości flag.  
+ Należy podać wartości wymagane przez `SCROLLINFO` struktury parametrów, w tym wartości flag.  
   
- `SCROLLINFO` Struktura zawiera informacje o paska, w tym minimalne i maksymalne przewijanie pozycji, rozmiar strony i pozycja pola przewijania (przenośny) przewijania. Zobacz [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) struktury tematu w zestawie SDK systemu Windows, aby uzyskać więcej informacji na temat zmiany ustawień domyślnych struktury.  
+ `SCROLLINFO` Struktura zawiera informacje dotyczące paska, w tym minimalne i maksymalne przewijanie położenia, rozmiaru strony i położenie suwaka (thumb) przewijania. Zobacz [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) struktury tematu w zestawie SDK Windows, aby uzyskać więcej informacji na temat zmiany ustawień domyślnych struktury.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CScrollBar#3](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]  
   
 ##  <a name="setscrollpos"></a>  CScrollBar::SetScrollPos  
- Ustawia określoną przez bieżącą pozycję pola przewijania *nPos* i, jeśli jest określony, ponownie rysuje paska przewijania w celu uwzględnienia nowej pozycji.  
+ Ustawia określoną przez bieżące położenie suwaka *npos —* i, jeśli zostanie określony, odrysowuje pasek przewijania, aby odzwierciedlić nowe położenie.  
   
 ```  
 int SetScrollPos(
@@ -320,23 +320,23 @@ int SetScrollPos(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *nPos*  
- Określa nową pozycję pola przewijania. Musi ona należeć do zakresu przewijania.  
+ *npos —*  
+ Określa nowe położenie suwaka. Musi ona należeć do zakresu przewijania.  
   
  *bRedraw*  
- Określa, czy pasek przewijania powinien być narysowany ponownie, aby uwzględnić nowe położenie. Jeśli *bRedraw* jest **TRUE**, zostanie narysowany ponownie na pasku przewijania. Jeśli jest **FALSE**, nie jest rysowane. Pasek przewijania jest odświeżana domyślnie.  
+ Określa, czy pasek przewijania powinien być narysowany ponownie, aby odzwierciedlić nowe miejsce. Jeśli *bRedraw* ma wartość TRUE, jest odświeżana, pasek przewijania. Jeśli jest to wartość FALSE, nie jest narysowany na ponownie. Pasek przewijania jest odświeżana, domyślnie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Określa poprzedniej pozycji suwaka w przypadku powodzenia; w przeciwnym razie 0.  
+ Określa poprzednie położenie suwaka, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ustaw *bRedraw* do **FALSE** po każdej zmianie narysowania paska przewijania przez kolejne wywołanie do innej funkcji uniknąć narysowany ponownie dwa razy w ciągu przez krótki czas pasek przewijania.  
+ Ustaw *bRedraw* FAŁSZ zawsze, gdy pasek przewijania zostaną narysowane ponownie przez kolejne wywołanie do innej funkcji, aby uniknąć paska przewijania, odświeżana, dwa razy w krótkim przedziale czasu.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CScrollBar::SetScrollRange](#setscrollrange).  
   
 ##  <a name="setscrollrange"></a>  CScrollBar::SetScrollRange  
- Ustawia wartości minimalną i maksymalną pozycji na pasku przewijania danego.  
+ Ustawia położenie minimalne i maksymalne wartości dla paska przewijania danego.  
   
 ```  
 void SetScrollRange(
@@ -347,20 +347,20 @@ void SetScrollRange(
   
 ### <a name="parameters"></a>Parametry  
  *nMinPos*  
- Określa minimalny położenie przewijania.  
+ Określa co najmniej położenie przewijania.  
   
  *nMaxPos*  
  Określa maksymalny położenie przewijania.  
   
  *bRedraw*  
- Określa, czy pasek przewijania powinien być narysowany ponownie, aby odzwierciedlić zmianę. Jeśli *bRedraw* jest **TRUE**, rysowane na pasku przewijania; Jeśli **FALSE**, nie jest rysowane. Zostanie narysowany ponownie domyślnie.  
+ Określa, czy pasek przewijania powinien być narysowany ponownie, aby odzwierciedlić zmiany. Jeśli *bRedraw* ma wartość TRUE, jest odświeżana, na pasku przewijania; w przypadku wartości FAŁSZ nie jest rysowane. Jest ponownie rysowany domyślnie.  
   
 ### <a name="remarks"></a>Uwagi  
- Ustaw *nMinPos* i *nMaxPos* na 0, aby ukryć paski przewijania standardowa.  
+ Ustaw *nMinPos* i *nMaxPos* na 0, aby ukryć paski przewijania standardowych.  
   
- Nie wywołuj tej funkcji, aby ukryć pasek przewijania podczas przetwarzania komunikatu powiadomienia paska przewijania.  
+ Nie wywołuj tę funkcję, aby ukryć pasek przewijania podczas przetwarzania komunikatu powiadomienia paska przewijania.  
   
- Jeśli wywołanie `SetScrollRange` od razu następuje po wywołaniu `SetScrollPos` funkcji członkowskiej, ustaw *bRedraw* w `SetScrollPos` na 0, aby zapobiec są rysowane dwukrotnie pasek przewijania.  
+ Jeśli wywołanie `SetScrollRange` następuje bezpośrednio po wywołaniu `SetScrollPos` funkcja elementu członkowskiego zestawu *bRedraw* w `SetScrollPos` na 0, aby uniemożliwić pasek przewijania jest odświeżana, dwa razy.  
   
  Różnica między wartościami określony przez *nMinPos* i *nMaxPos* nie może być większa niż 32 767 znaków. Domyślny zakres dla formantu paska przewijania jest pusty (zarówno *nMinPos* i *nMaxPos* 0).  
   
@@ -376,10 +376,10 @@ void ShowScrollBar(BOOL bShow = TRUE);
   
 ### <a name="parameters"></a>Parametry  
  *bShow*  
- Określa, czy pasek przewijania jest pokazywany lub ukryty. Jeśli ten parametr ma **TRUE**, jest wyświetlana na pasku przewijania; w przeciwnym razie jest ukryty.  
+ Określa, czy pasek przewijania jest wyświetlany, czy ukryty. Jeśli ten parametr ma wartość TRUE, jest wyświetlany na pasku przewijania; w przeciwnym razie jest ukryty.  
   
 ### <a name="remarks"></a>Uwagi  
- Aplikacja nie powinny wywoływać tej funkcji, aby ukryć pasek przewijania podczas przetwarzania komunikatu powiadomienia paska przewijania.  
+ Aplikacja nie powinna wywołać tę funkcję, aby ukryć pasek przewijania podczas przetwarzania komunikatu powiadomienia paska przewijania.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CScrollBar::Create](#create).  

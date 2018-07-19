@@ -88,15 +88,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61ab69daadcb7e030511362932be41a3919dd087
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: af14457e10758c696a4141e58249e43134cf385a
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039326"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851529"
 ---
 # <a name="cmfcribbongallery-class"></a>Klasa CMFCRibbonGallery
-Implementuje galerii wstążki stylu pakietu Office 2007.  
+Implementacja galerię wstążki stylu pakietu Office 2007.  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ## <a name="syntax"></a>Składnia  
@@ -117,23 +117,23 @@ class CMFCRibbonGallery : public CMFCRibbonButton
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CMFCRibbonGallery::AddGroup](#addgroup)|Dodaje nową grupę do galerii.|  
+|[CMFCRibbonGallery::AddGroup](#addgroup)|Dodaje nową grupę, do galerii.|  
 |[CMFCRibbonGallery::AddSubItem](#addsubitem)|Dodaje nowy element menu do menu rozwijanego.|  
 |[CMFCRibbonGallery::Clear](#clear)|Czyści zawartość elementu galerii.|  
-|[CMFCRibbonGallery::EnableMenuResize](#enablemenuresize)|Włącza lub wyłącza możliwość zmiany rozmiaru panelu menu.|  
-|[CMFCRibbonGallery::EnableMenuSideBar](#enablemenusidebar)|Włącza lub wyłącza z lewej strony menu podręcznego paska bocznego.|  
+|[CMFCRibbonGallery::EnableMenuResize](#enablemenuresize)|Włącza lub wyłącza zmianę rozmiaru panelu menu.|  
+|[CMFCRibbonGallery::EnableMenuSideBar](#enablemenusidebar)|Włącza lub wyłącza pasku bocznym po lewej stronie z menu podręcznego.|  
 |[CMFCRibbonGallery::GetCompactSize](#getcompactsize)|(Przesłania [CMFCRibbonButton::GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|  
 |[CMFCRibbonGallery::GetDroppedDown](#getdroppeddown)|(Przesłania [CMFCRibbonBaseElement::GetDroppedDown](../../mfc/reference/cmfcribbonbaseelement-class.md#getdroppeddown).)|  
-|[CMFCRibbonGallery::GetGroupName](#getgroupname)|Zwraca nazwę grupy, która znajduje się w określonym indeksie.|  
+|[CMFCRibbonGallery::GetGroupName](#getgroupname)|Zwraca nazwę grupy, który jest umieszczony pod określonym indeksem.|  
 |[CMFCRibbonGallery::GetGroupOffset](#getgroupoffset)||  
 |[CMFCRibbonGallery::GetIconsInRow](#geticonsinrow)|Zwraca liczbę elementów w wierszu galerii wstążki.|  
 |[CMFCRibbonGallery::GetItemToolTip](#getitemtooltip)|Zwraca tekst etykietki narzędzia, który jest skojarzony z elementu w galerii.|  
-|[CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem)|Zwraca indeks ostatniego elementu w galerii, którą użytkownik wybrał.|  
+|[CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem)|Zwraca indeks ostatniego elementu w galerii, wybrany przez użytkownika.|  
 |[CMFCRibbonGallery::GetPaletteID](#getpaletteid)|Zwraca identyfikator polecenia bieżącego galerii.|  
 |[CMFCRibbonGallery::GetRegularSize](#getregularsize)|(Przesłania [CMFCRibbonButton::GetRegularSize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).)|  
 |[CMFCRibbonGallery::GetSelectedItem](#getselecteditem)||  
 |[CMFCRibbonGallery::HasMenu](#hasmenu)|(Przesłania [CMFCRibbonButton::HasMenu](../../mfc/reference/cmfcribbonbutton-class.md#hasmenu).)|  
-|[CMFCRibbonGallery::IsButtonMode](#isbuttonmode)|Określa, czy galerii znajduje się w galerii przycisku.|  
+|[CMFCRibbonGallery::IsButtonMode](#isbuttonmode)|Określa, czy Galeria znajduje się w przycisk galerii.|  
 |[CMFCRibbonGallery::IsMenuResizeEnabled](#ismenuresizeenabled)|Określa, czy zmiana rozmiaru menu jest włączone lub wyłączone.|  
 |[CMFCRibbonGallery::IsMenuResizeVertical](#ismenuresizevertical)||  
 |[CMFCRibbonGallery::IsMenuSideBar](#ismenusidebar)|Określa, czy pasek boczny jest włączone.|  
@@ -141,28 +141,28 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 |[CMFCRibbonGallery::OnDraw](#ondraw)|(Przesłania [CMFCRibbonButton::OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).)|  
 |[CMFCRibbonGallery::OnEnable](#onenable)|(Przesłania `CMFCRibbonBaseElement::OnEnable`.)|  
 |[CMFCRibbonGallery::OnRTLChanged](#onrtlchanged)|(Przesłania [CMFCRibbonBaseElement::OnRTLChanged](../../mfc/reference/cmfcribbonbaseelement-class.md#onrtlchanged).)|  
-|[CMFCRibbonGallery::RedrawIcons](#redrawicons)|Ponownie rysuje galerii.|  
+|[CMFCRibbonGallery::RedrawIcons](#redrawicons)|Odrysowuje galerii.|  
 |[CMFCRibbonGallery::RemoveItemToolTips](#removeitemtooltips)|Usuwa etykietki narzędzi z wszystkich elementów w galerii.|  
 |[CMFCRibbonGallery::SelectItem](#selectitem)||  
 |[CMFCRibbonGallery::SetACCData](#setaccdata)|(Przesłania [CMFCRibbonButton::SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|  
-|[CMFCRibbonGallery::SetButtonMode](#setbuttonmode)|Określa, czy mają być wyświetlane galerii wstążki jako przycisk rozwijany lub palety bezpośrednio na Wstążce.|  
-|[CMFCRibbonGallery::SetGroupName](#setgroupname)|Ustawia nazwę grupy.|  
-|[CMFCRibbonGallery::SetIconsInRow](#seticonsinrow)|Definiuje liczbę elementów w wierszu w galerii.|  
-|[CMFCRibbonGallery::SetItemToolTip](#setitemtooltip)|Ustawia tekst etykietki narzędzia dla elementu w galerii.|  
-|[CMFCRibbonGallery::SetPalette](#setpalette)|Dołącza palety do galerii wstążki.|  
-|[CMFCRibbonGallery::SetPaletteID](#setpaletteid)|Określa identyfikator polecenia, który jest wysyłany w komunikacie WM_COMMAND, jeśli wybrano element galerii.|  
+|[CMFCRibbonGallery::SetButtonMode](#setbuttonmode)|Określa, czy mają być wyświetlane w galerii wstążki, jako przycisk listy rozwijanej lub palety bezpośrednio na Wstążce.|  
+|[CMFCRibbonGallery::SetGroupName](#setgroupname)|Określa nazwę grupy.|  
+|[CMFCRibbonGallery::SetIconsInRow](#seticonsinrow)|Definiuje liczbę elementów na wiersz w galerii.|  
+|[CMFCRibbonGallery::SetItemToolTip](#setitemtooltip)|Ustawia tekst etykietki narzędzia elementu w galerii.|  
+|[CMFCRibbonGallery::SetPalette](#setpalette)|Dołącza paletę do galerii wstążki.|  
+|[CMFCRibbonGallery::SetPaletteID](#setpaletteid)|Określa identyfikator polecenia, który będzie wysyłany w wiadomości WM_COMMAND, po wybraniu elementu w galerii.|  
   
 ### <a name="protected-methods"></a>Metody chronione  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CMFCRibbonGallery::OnDrawPaletteIcon](#ondrawpaletteicon)|Wywoływane przez platformę narysować ikony galerii.|  
+|[CMFCRibbonGallery::OnDrawPaletteIcon](#ondrawpaletteicon)|Wywoływane przez platformę podczas rysowania ikon galerii.|  
   
 ## <a name="remarks"></a>Uwagi  
- Przycisk Galeria zachowuje się jak przycisk menu regularne, z wyjątkiem, że po otwarciu on wyświetla galerii. Po wybraniu elementu w galerii platformę wysyła komunikat WM_COMMAND oraz identyfikator polecenia przycisku. Podczas obsługi wiadomości, należy wywołać [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) ustalenie, który element wybrano z galerii.  
+ Przycisk galerii zachowuje się jak przycisk menu regularnych, z tą różnicą, że wyświetla galerii, gdy użytkownik otwiera go. Po wybraniu elementu w galerii, struktura wysyła komunikatów WM_COMMAND wraz z Identyfikatorem polecenia przycisku. Podczas obsługi wiadomości, należy wywołać [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) ustalenie, który element został wybrany w galerii.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano sposób użycia różnych metod w `CMFCRibbonGallery` klasa do konfigurowania `CMFCRibbonGallery` obiektu. Określ liczbę elementów w wierszu w galerii, włącz możliwość zmiany rozmiaru panelu menu, włączanie paska bocznego z lewej strony menu podręcznego i wyświetlić galerii wstążki jako palety bezpośrednio w pasku wstążki pokazano w przykładzie. Następujący fragment kodu jest częścią [rysowania klienta — przykład](../../visual-cpp-samples.md).  
+ Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCRibbonGallery` klasa umożliwiająca skonfigurowanie `CMFCRibbonGallery` obiektu. W przykładzie pokazano, jak określić liczbę elementów na wiersz w galerii, włącz opcję zmiany rozmiaru panelu menu, Włącz pasku bocznym po lewej stronie menu podręczne i galerii wstążki są wyświetlane jako palety bezpośrednio w pasku wstążki. Ten fragment kodu jest częścią [Rysowanie Client sample](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DrawClient#6](../../mfc/reference/codesnippet/cpp/cmfcribbongallery-class_1.cpp)]  
   
@@ -175,7 +175,7 @@ class CMFCRibbonGallery : public CMFCRibbonButton
  **Nagłówek:** afxRibbonPaletteGallery.h  
   
 ##  <a name="addgroup"></a>  CMFCRibbonGallery::AddGroup  
- Dodaje nową grupę do galerii.  
+ Dodaje nową grupę, do galerii.  
   
 ```  
 void AddGroup(
@@ -199,19 +199,19 @@ void AddGroup(
  Określa nazwę grupy.  
   
  [in] *uiImagesPaletteResID*  
- Określa identyfikator zasobu listy obrazów, zawierający obrazy dla grupy.  
+ Określa identyfikator zasobu z listy obrazów, który zawiera obrazy dla grupy.  
   
  [in] *cxPaletteImage*  
  Określa szerokość obrazu w pikselach.  
   
  [in] *imagesGroup*  
- Odwołanie do listy obrazów, zawierający obrazy grupy.  
+ Odwołanie do listy obrazów, który zawiera grupę obrazów.  
   
  [in] *nIconsNum*  
- Określa liczbę ikon w grupie. Ten parametr powinien być określony tylko dla niestandardowego (rysowane przez właściciela) grupy.  
+ Określa liczbę ikon w grupie. Ten parametr należy określić tylko dla niestandardowego (właściciel rysowane) grup.  
   
 ### <a name="remarks"></a>Uwagi  
- Elementy galerii Wstążki można podzielić na wiele grup, wywołując tę metodę. Każda grupa może mieć podpisu.  
+ Elementy w galerii Wstążki można podzielić na wiele grup, przez wywołanie tej metody. Każda grupa może mieć podpisu.  
   
 ##  <a name="addsubitem"></a>  CMFCRibbonGallery::AddSubItem  
  Dodaje nowy element menu do menu rozwijanego.  
@@ -231,15 +231,15 @@ void AddSubItem(
  Określa liczony od zera indeks lokalizacji, gdzie można wstawić elementu.  
   
  [in] *bOnTop*  
- `TRUE` Aby określić, czy element powinien zostać wstawiony przed galerii wstążki; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, aby określić, czy element powinien zostać wstawiony przed galerii wstążki; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Menu podręczne galerie można łączyć z elementami menu podręcznego przez wywołanie tej metody. Elementy menu mogą być umieszczone przed lub po galerii.  
+ Przez wywołanie tej metody, można połączyć galerie okno podręczne z elementów menu podręcznego. Elementy menu można umieścić przed lub po galerii.  
   
- Aby wstawić element przed galerii, ustaw *bOnTop* do `TRUE`. Ustaw *bOnTop* do `FALSE` do wstawienia elementu poniżej galerii.  
+ Aby wstawić element przed galerii, należy ustawić *bOnTop* na wartość TRUE. Ustaw *bOnTop* na wartość FALSE, aby wstawić element poniżej galerii.  
   
 > [!NOTE]
->  Parametr *nIndex* Określa indeks wstawiania zarówno w górnej części galerii, jak i w dolnej części galerii. Na przykład wstawić element o jedną pozycję przed galerii należy ustawić *nIndex* 1 i *bOnTop* do `TRUE`. Podobnie wstawić element o jedną pozycję projektowanie należy ustawić *nIndex* 1 i *bOnTop* do `FALSE`.  
+>  Parametr *nIndex* Określa indeks wstawiania zarówno w górnej części galerii, jak i w dolnej części galerii. Na przykład, jeśli potrzebujesz wstawić element o jedną pozycję przed galerii, ustaw *nIndex* 1 i *bOnTop* na wartość TRUE. Podobnie, jeśli potrzebujesz wstawić element o jedną pozycję pod galerię, ustaw *nIndex* 1 i *bOnTop* na wartość FALSE.  
   
 ##  <a name="clear"></a>  CMFCRibbonGallery::Clear  
  Czyści zawartość elementu galerii.  
@@ -249,7 +249,7 @@ virtual void Clear();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołaj tę metodę, aby usunąć całą zawartość z galerii wstążki. Należy to zrobić przed dołączeniem nowego galerii Wstążki lub zbiór grup do galerii wstążki.  
+ Wywołaj tę metodę, aby usunąć całą zawartość z galerii wstążki. Należy to zrobić przed dołączeniem nową galerię Wstążki lub zbiór grup do galerii wstążki.  
   
 ##  <a name="cmfcribbongallery"></a>  CMFCRibbonGallery::CMFCRibbonGallery  
  Tworzy i inicjuje [CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md) obiektu.  
@@ -284,39 +284,39 @@ CMFCRibbonGallery (
   
 ### <a name="parameters"></a>Parametry  
  *nID*  
- Określa identyfikator polecenia do wykonania, gdy użytkownik kliknie przycisk polecenia.  
+ Określa identyfikator polecenia polecenie do wykonania, gdy użytkownik kliknie przycisk.  
   
  *lpszText*  
  Określa tekst wyświetlany na przycisku.  
   
  *nSmallImageIndex*  
- Liczony od zera indeks mały obraz wyświetlany na przycisku.  
+ Liczony od zera indeks mały obraz była wyświetlana na przycisku.  
   
  *nLargeImageIndex*  
- Liczony od zera indeks duży obraz wyświetlany na przycisku.  
+ Liczony od zera indeks duży obraz, który wyświetlany na przycisku.  
   
  *imagesPalette*  
- Odwołanie do [CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md) obiekt, który zawiera obrazy widoczne w galerii.  
+ Odwołanie do [CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md) obiekt, który zawiera obrazy, które ma być wyświetlana w galerii.  
   
  *uiImagesPaletteResID*  
- Identyfikator zasobu z listy obrazów do wyświetlenia w galerii.  
+ Identyfikator zasobu listy obrazów do wyświetlania w galerii.  
   
  *cxPaletteImage*  
- Określa szerokość obrazu w pikselach, w galerii.  
+ Określa szerokość w pikselach, obraz w galerii.  
   
  *sizeIcon*  
- Określa rozmiar obrazu w pikselach, galerii.  
+ Określa rozmiar w pikselach obrazu z galerii.  
   
  *nIconsNum*  
  Określa liczbę ikon w galerii.  
   
  *bDefaultButtonStyle*  
- Określa, czy użyć domyślnych stylów przycisków rysowanych przez właściciela.  
+ Określa, czy ma być używane domyślne lub stylu przyciskiem rysowanym przez właściciela.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="enablemenuresize"></a>  CMFCRibbonGallery::EnableMenuResize  
- Włącza lub wyłącza możliwość zmiany rozmiaru panelu menu.  
+ Włącza lub wyłącza zmianę rozmiaru panelu menu.  
   
 ```  
 void EnableMenuResize(
@@ -326,16 +326,16 @@ void EnableMenuResize(
   
 ### <a name="parameters"></a>Parametry  
  [in] *bWłączenie*  
- `TRUE` Aby umożliwić zmianę rozmiaru menu. w przeciwnym razie `FALSE`.  
+ Wartość TRUE powoduje włączenie rozmiaru menu. w przeciwnym razie wartość FALSE.  
   
  [in] *bVertcalOnly*  
- `TRUE` Aby określić, że galerii można zmieniać tylko w pionie; `FALSE` do określenia, że galerii można zmienić rozmiar zarówno w pionie i w poziomie.  
+ Wartość TRUE, aby określić tylko w pionie; rozmiar galerii Wartość FALSE, aby określić, że galerii rozmiar można zmieniać w pionie i w poziomie.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj tej metody, aby włączyć lub wyłączyć zmiana rozmiaru galerii wstążki. Po włączeniu zmiana rozmiaru galerii wstążki Wyświetla uchwytu, które użytkownik może używać do zmieniania rozmiaru.  
+ Ta metoda umożliwia włączanie lub wyłączanie zmiany rozmiaru w galerii wstążki. Po włączeniu zmiany rozmiaru w galerii wstążki Wyświetla uchwytu, które użytkownik może używać, aby zmienić jego rozmiar.  
   
 ##  <a name="enablemenusidebar"></a>  CMFCRibbonGallery::EnableMenuSideBar  
- Włącza lub wyłącza z lewej strony menu podręcznego paska bocznego.  
+ Włącza lub wyłącza pasku bocznym po lewej stronie z menu podręcznego.  
   
 ```  
 void EnablMenuSideBar(BOOL bEnable=TRUE);
@@ -343,10 +343,10 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>Parametry  
  [in] *bWłączenie*  
- `TRUE` Aby określić, czy włączono paska bocznego; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, aby określić, czy włączono pasku bocznym; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie tej metody, aby włączyć lub wyłączyć Office XP-style paska bocznego w lewej części menu.  
+ Wywołaj tę metodę, aby włączyć lub wyłączyć pasku bocznym stylu XP pakietu Office, w menu po lewej stronie.  
   
 ##  <a name="getcompactsize"></a>  CMFCRibbonGallery::GetCompactSize  
 
@@ -374,7 +374,7 @@ virtual CMFCRibbonBaseElement* GetDroppedDown();
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="getgroupname"></a>  CMFCRibbonGallery::GetGroupName  
- Zwraca nazwę grupy, która znajduje się w określonym indeksie.  
+ Zwraca nazwę grupy, który jest umieszczony pod określonym indeksem.  
   
 ```  
 LPCTSTR GetGroupName(int nGroupIndex) const;  
@@ -382,10 +382,10 @@ LPCTSTR GetGroupName(int nGroupIndex) const;
   
 ### <a name="parameters"></a>Parametry  
  [in] *nGroupIndex*  
- Określa liczony od zera indeks dla grupy, której nazwa ma zostać pobrane.  
+ Określa liczony od zera indeks grupy, której nazwa ma zostać pobrane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Nazwa grupy znajduje się w określonym indeksie. Przekazywanie nieprawidłowy indeks spowoduje potwierdzenia nie powiodło się.  
+ Nazwa grupy znajduje się w określonym indeksie. Przekazywanie nieprawidłowy indeks powoduje potwierdzenie nie powiodło się.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -421,15 +421,15 @@ LPCTSTR GetItemToolTip(int nItemIndex) const;
   
 ### <a name="parameters"></a>Parametry  
  [in] *nItemIndex*  
- Określa liczony od zera indeks elementu, dla którego można pobrać tekst etykietki narzędzia.  
+ Określa liczony od zera indeks elementu, dla którego mają zostać pobrane tekst etykietki narzędzia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do ciągu etykietki narzędzia przypisany do elementu w galerii wstążki. Można ją `NULL` Jeśli tooltip nie jest przypisany do tego elementu.  
+ Wskaźnik do ciągu etykietki narzędzia, przypisany do elementu w galerii wstążki. Jeśli nie etykietka narzędzia jest przypisany do tego elementu może być NULL.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="getlastselecteditem"></a>  CMFCRibbonGallery::GetLastSelectedItem  
- Zwraca indeks ostatniego elementu w galerii wstążki wybranego użytkownika.  
+ Zwraca indeks ostatniego elementu w galerii wstążki, który użytkownik zaznaczył.  
   
 ```  
 static int GetLastSelectedItem(UINT uiCmdID);
@@ -437,22 +437,22 @@ static int GetLastSelectedItem(UINT uiCmdID);
   
 ### <a name="parameters"></a>Parametry  
  [in] *uiCmdID*  
- Określa identyfikator polecenia menu, które otworzyć galerii wstążki.  
+ Określa identyfikator polecenia elementu menu, który otwarty galerii wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Gdy użytkownik wybierze dowolnego elementu w galerii wstążki, biblioteki wysyła komunikat WM_COMMAND oraz identyfikator polecenia przycisku menu, która otwarta galerii wstążki.  
+ Gdy użytkownik wybierze dowolny element w galerii wstążki, biblioteka wysyła komunikatów WM_COMMAND wraz z identyfikator polecenia przycisku menu, który otwarty galerii wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="getpaletteid"></a>  CMFCRibbonGallery::GetPaletteID  
- Zwraca identyfikator polecenia bieżącej palety.  
+ Zwraca identyfikator bieżącej palecie poleceń.  
   
 ```  
 int GetPaletteID() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Identyfikator polecenia aktualnie zaznaczonego palety.  
+ Identyfikator polecenia aktualnie wybranego palety.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -493,26 +493,26 @@ virtual BOOL HasMenu() const;
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="isbuttonmode"></a>  CMFCRibbonGallery::IsButtonMode  
- Określa, czy palety znajduje się w galerii przycisku.  
+ Określa, czy palety znajduje się w przycisk galerii.  
   
 ```  
 BOOL IsButtonMode() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli palecie jest wyświetlany jako przycisk menu rozwijanego; `FALSE` Jeśli palecie jest wyświetlana bezpośrednio na Wstążce.  
+ Wartość TRUE, jeśli palety jest wyświetlany jako przycisk menu rozwijanego; Wartość FALSE, jeśli palety jest wyświetlana bezpośrednio na Wstążce.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="ismenuresizeenabled"></a>  CMFCRibbonGallery::IsMenuResizeEnabled  
- Określa, czy włączone jest zmiana rozmiaru menu.  
+ Określa, czy włączono zmianę rozmiaru menu.  
   
 ```  
 BOOL IsMenuResizeEnabled() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli zmiana rozmiaru menu został włączony; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli włączono zmianę rozmiaru menu; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -535,7 +535,7 @@ BOOL IsMenuSideBar() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli paska bocznego Office XP — styl rysowania po lewej stronie menu podręcznego; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli pasek boczny stylu XP pakietu Office jest rysowana w lewej części menu podręcznego. w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -564,7 +564,7 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="ondrawpaletteicon"></a>  CMFCRibbonGallery::OnDrawPaletteIcon  
- Wywoływane przez platformę narysować ikony galerii.  
+ Wywoływane przez platformę podczas rysowania ikon galerii.  
   
 ```  
 virtual void OnDrawPaletteIcon(
@@ -580,19 +580,19 @@ virtual void OnDrawPaletteIcon(
  Wskaźnik do kontekstu urządzenia, który jest używany do rysowania.  
   
  [in] *rectIcon*  
- Określa ikonę, aby narysować prostokąt ograniczający.  
+ Określa ikonę Aby narysować prostokąt otaczający.  
   
  [in] *nIconIndex*  
- Określa liczony od zera indeks na liście obrazów w galerii ikon ikony do rysowania.  
+ Określa liczony od zera indeks, z listy obrazów z galerii ikon ikonę Aby narysować.  
   
  [in] *pIcon*  
  Wskaźnik do ikony rysowania.  
   
  [in] *clrText*  
- Określa kolor tekstu elementu do rysowania.  
+ Określa kolor tekstu elementu, aby narysować.  
   
 ### <a name="remarks"></a>Uwagi  
- Można przesłonić tę metodę w klasie pochodnej, aby dostosować wygląd galerii wstążki.  
+ Można zastąpić tę metodę w klasie pochodnej, aby dostosować wygląd galerii wstążki.  
   
 ##  <a name="onenable"></a>  CMFCRibbonGallery::OnEnable  
 
@@ -619,14 +619,14 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="redrawicons"></a>  CMFCRibbonGallery::RedrawIcons  
- Ponownie rysuje galerii.  
+ Odrysowuje galerii.  
   
 ```  
 void RedrawIcons();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie tej funkcji, aby odświeżyć galerii. Tej metody należy wywołać, jeśli zmieniono zawartość elementu galerii w czasie wykonywania.  
+ Wywołaj tę funkcję, aby odświeżyć galerii. Musisz wywołać tę metodę, jeżeli zmieniono zawartość galerii w czasie wykonywania.  
   
 ##  <a name="removeitemtooltips"></a>  CMFCRibbonGallery::RemoveItemToolTips  
  Usuwa etykietki narzędzi z wszystkich elementów w galerii.  
@@ -650,7 +650,7 @@ void SelectItem(int nItemIndex);
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonGallery::SetACCData  
- Wypełnia określony `CAccessibilityData` obiektu przy użyciu danych dostępności z galerii wstążki.  
+ Wypełnia określony `CAccessibilityData` obiektu przy użyciu danych ułatwień dostępu z galerii wstążki.  
   
 ```  
 virtual BOOL SetACCData(
@@ -663,15 +663,15 @@ virtual BOOL SetACCData(
  Okno nadrzędne okna Galerii wstążki.  
   
  [out] *danych*  
- A `CAccessibilityData` obiekt, który odbiera dane ułatwień dostępu z poziomu galerii wstążki.  
+ A `CAccessibilityData` obiekt, który odbiera dane dostępności z galerii wstążki.  
   
 ### <a name="return-value"></a>Wartość zwracana  
   
 ### <a name="remarks"></a>Uwagi  
- `TRUE` Jeśli metoda zakończy się pomyślnie; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli metoda się powiedzie; w przeciwnym razie wartość FALSE.  
   
 ##  <a name="setbuttonmode"></a>  CMFCRibbonGallery::SetButtonMode  
- Określa, czy mają być wyświetlane galerii wstążki jako przycisk rozwijany lub palety bezpośrednio na Wstążce.  
+ Określa, czy mają być wyświetlane w galerii wstążki, jako przycisk listy rozwijanej lub palety bezpośrednio na Wstążce.  
   
 ```  
 void SetButtonMode(BOOL bSet=TRUE);
@@ -679,12 +679,12 @@ void SetButtonMode(BOOL bSet=TRUE);
   
 ### <a name="parameters"></a>Parametry  
  [in] *bUstawienie*  
- `TRUE` Aby wyświetlić galerii wstążki jako przycisk menu rozwijanego; `FALSE` do wyświetlenia zawartości galerii wstążki bezpośrednio na Wstążce.  
+ Wartość TRUE, aby galerii wstążki są wyświetlane jako przycisk menu rozwijanego; Wartość FALSE, aby wyświetlić zawartość galerii wstążki bezpośrednio na Wstążce.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="setgroupname"></a>  CMFCRibbonGallery::SetGroupName  
- Ustawia nazwę grupy.  
+ Określa nazwę grupy.  
   
 ```  
 void SetGroupName(
@@ -694,16 +694,16 @@ void SetGroupName(
   
 ### <a name="parameters"></a>Parametry  
  [in] *nGroupIndex*  
- Określa liczony od zera indeks dla grupy, dla którego nazwa została zmieniona.  
+ Określa liczony od zera indeks grupy, dla którego nazwa jest zmieniany.  
   
  [in] *lpszGroupName*  
  Określa nową nazwę grupy.  
   
 ### <a name="remarks"></a>Uwagi  
- Grupy, którego nazwa jest zmieniane musi zostały dodane przy użyciu [CMFCRibbonGallery::AddGroup](#addgroup) metody.  
+ Grupy, którego nazwa jest zmieniane, należy dodać za pomocą [CMFCRibbonGallery::AddGroup](#addgroup) metody.  
   
 ##  <a name="seticonsinrow"></a>  CMFCRibbonGallery::SetIconsInRow  
- Określa liczbę elementów w wierszu w galerii.  
+ Określa liczbę elementów na wiersz w galerii.  
   
 ```  
 void SetIconsInRow(int nIconsInRow);
@@ -711,13 +711,13 @@ void SetIconsInRow(int nIconsInRow);
   
 ### <a name="parameters"></a>Parametry  
  [in] *nIconsInRow*  
- Określa liczbę elementów, które mają być widoczne w każdym wierszu galerii.  
+ Określa liczbę elementów, które mają być wyświetlane w każdym wierszu w galerii.  
   
 ### <a name="remarks"></a>Uwagi  
  Użyj tej metody, aby określić szerokość galerii wstążki.  
   
 ##  <a name="setitemtooltip"></a>  CMFCRibbonGallery::SetItemToolTip  
- Ustawia tekst etykietki narzędzia dla elementu w galerii.  
+ Ustawia tekst etykietki narzędzia elementu w galerii.  
   
 ```  
 void SetItemToolTip(
@@ -727,15 +727,15 @@ void SetItemToolTip(
   
 ### <a name="parameters"></a>Parametry  
  [in] *nItemIndex*  
- Liczony od zera indeks elementu palety, z którą chcesz skojarzyć element tooltip.  
+ Liczony od zera indeks elementu palety, z którą chcesz skojarzyć etykietki narzędzia.  
   
  [in] *lpszToolTip*  
- Tekst wyświetlany na elemencie tooltip.  
+ Tekst, który ma być wyświetlana w etykietce narzędzia.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="setpalette"></a>  CMFCRibbonGallery::SetPalette  
- Dołącza palety do galerii wstążki.  
+ Dołącza paletę do galerii wstążki.  
   
 ```  
 void SetPalette(CMFCToolBarImages& imagesPalette);
@@ -748,18 +748,18 @@ void SetPalette(
   
 ### <a name="parameters"></a>Parametry  
  [in] *imagesPalette*  
- Określa listę obrazu z ikonami widoczne w galerii.  
+ Określa listę obrazu który zawiera ikony są wyświetlane w galerii.  
   
  [in] *uiImagesPaletteResID*  
- Określa identyfikator zasobu listy obrazów z ikonami widoczne w galerii.  
+ Określa identyfikator zasobu z listy obrazów, który zawiera ikony są wyświetlane w galerii.  
   
  [in] *cxPaletteImage*  
- Określa szerokość obrazu w pikselach, w galerii.  
+ Określa szerokość w pikselach, obraz w galerii.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="setpaletteid"></a>  CMFCRibbonGallery::SetPaletteID  
- Określa identyfikator polecenia, wysyłany komunikat WM_COMMAND, gdy użytkownik wybierze elementu galerii.  
+ Określa identyfikator polecenia, który będzie wysyłany w wiadomości WM_COMMAND, gdy użytkownik wybierze element galerii.  
   
 ```  
 void SetPaletteID(UINT nID);
@@ -767,10 +767,10 @@ void SetPaletteID(UINT nID);
   
 ### <a name="parameters"></a>Parametry  
  [in] *nID*  
- Określa identyfikator polecenia, wysyłany komunikat WM_COMMAND, gdy użytkownik wybierze elementu galerii.  
+ Określa identyfikator polecenia, który będzie wysyłany w wiadomości WM_COMMAND, gdy użytkownik wybierze element galerii.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby ustalić określony element wybranego użytkownika z galerii, należy wywołać [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) metody statycznej.  
+ Aby ustalić konkretny element, który użytkownik zaznaczył w galerii, należy wywołać [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) metody statycznej.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
