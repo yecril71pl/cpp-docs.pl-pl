@@ -1,7 +1,7 @@
 ---
 title: db_command — | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/10/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -17,21 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e0fe3f712566345bb069b798207cfdb10a0aa636
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70399b15081de89d8da49268c8d62d3ad390858d
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33886414"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "38954984"
 ---
 # <a name="dbcommand"></a>db_command
-Tworzy polecenia OLE DB.  
+Tworzy polecenie OLE DB.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
-  
-      [ db_command(   
+```cpp
+[ db_command(   
    command,   
    name,   
    source_name,   
@@ -41,59 +40,58 @@ Tworzy polecenia OLE DB.
 ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- `command`  
- Ciąg polecenia zawierające tekst polecenia OLE DB. Jest to prosty przykład:  
+### <a name="parameters"></a>Parametry  
+
+*Polecenie*  
+Polecenie ciąg zawierający tekst polecenia OLE DB. Prostym przykładem jest:  
   
-```  
+```cpp
 [ db_command ( command = "Select * from Products" ) ]  
 ```  
   
- *Polecenia* ma następującą składnię:  
+*Polecenia* składnia jest następująca:  
+    
+> Powiązanie parametru blok 1  
+> &nbsp;&nbsp;Polecenia OLE DB  
+> Powiązanie parametru blok 2  
+> &nbsp;&nbsp;kontynuacja polecenia OLE DB  
+> Powiązanie parametru blok 3  
+> ...  
   
-```  
-binding parameter block 1  
-   OLE DB command  
-binding parameter block 2  
-   continuation of OLE DB command  
-binding parameter block 3  
-...  
-```  
+A *blok parametrów powiązania* jest zdefiniowana w następujący sposób:  
   
- A *bloku parametrów wiązania* jest zdefiniowane w następujący sposób:  
-  
- **([** `bindtype` **]** *szVar1* [*, szVar2* [, *nVar3* [,...]]] **)**  
+> **(\[**  *bindtype* **]** *szVar1* \[, *szVar2* \[, *nVar3* \[,...]]] **)**  
   
  gdzie:  
   
- **(** oznacza początek bloku powiązania danych.  
+- **(** oznacza początek bloku powiązania danych.  
   
- **[** `bindtype` **]** jest jednym z następujących ciągów bez uwzględniania wielkości liter:  
+- **\[** *bindtype* **]** jest jednym z następujących ciągów bez uwzględniania wielkości liter:  
   
--   **[db_column —]**  wiąże wszystkich zmiennych Członkowskich z kolumną w zestawie wierszy.  
+  -   **\[db_column —]** wszystkich zmiennych składowych jest powiązana z kolumną w zestawie wierszy.  
   
--   **[bindto]**  (taki sam jak **[db_column —]**).  
+  -   **\[bindto]** (taka sama jak  **\[db_column —]**).  
   
--   **[in]**  wiąże zmiennych Członkowskich jako parametry wejściowe.  
+  -   **\[w]** wiąże zmiennych składowych jako parametry wejściowe.  
   
--   **[out]**  wiąże zmiennych Członkowskich jako parametry wyjściowe.  
+  -   **\[out]** wiąże zmiennych składowych jako parametrów wyjściowych.  
   
--   **[w, out]**  wiąże zmiennych Członkowskich jako parametry wejścia/wyjścia.  
+  -   **\[w, poza]** wiąże zmiennych składowych jako parametry wejścia/wyjścia.  
   
- *SzVarX* rozpoznawane jako zmienna elementu członkowskiego w bieżącym zakresie.  
+- *szVarX*, *nVarX* jest rozpoznawana jako zmienną składową w bieżącym zakresie.  
   
- **)** oznacza koniec bloku powiązania danych.  
+- **)** oznacza koniec bloku powiązania danych.  
   
- Jeśli ciąg polecenia zawiera co najmniej jeden specyfikatory takich jak [in] [limit] lub [We/Wy], **db_command —** kompiluje mapy parametru.  
+Jeśli ciąg polecenia zawiera jeden lub więcej specyfikatorów, takie jak \[w], \[out], lub \[we/wy], **db_command —** tworzy mapę parametru.  
   
- Jeśli ciąg polecenia zawiera jeden lub więcej parametrów, takich jak [db_column —] lub [bindto] **db_command —** generuje zestawu wierszy i mapowanie dostępu do obsługi tych powiązania zmiennych. Zobacz [db_accessor —](../windows/db-accessor.md) Aby uzyskać więcej informacji.  
+Jeśli ciąg polecenia zawiera jeden lub więcej parametrów, takich jak \[db_column —] lub \[bindto], **db_command —** generuje zestawu wierszy i mapy akcesora do obsługi tych powiązanych zmiennych. Zobacz [db_accessor —](../windows/db-accessor.md) Aby uzyskać więcej informacji.  
   
 > [!NOTE]
->  [`bindtype`] składni i `bindings` parametru nie są prawidłowe w przypadku korzystania z **db_command —** na poziomie klasy.  
+> \[*bindtype*] składnia i *powiązania* parametru nie są prawidłowe w przypadku korzystania z **db_command —** na poziomie klasy.  
   
- Oto kilka przykładów bloki parametru wiązania. Poniższy przykład wiąże `m_au_fname` i `m_au_lname` elementy członkowskie danych do `au_fname` i `au_lname` kolumn, odpowiednio, z tabeli Autorzy w bazie danych pubs:  
+ Oto kilka przykładów bloki parametru wiązania. Poniższy przykład tworzy powiązanie `m_au_fname` i `m_au_lname` elementów członkowskich danych `au_fname` i `au_lname` kolumn, odpowiednio, z tabeli Autorzy w bazie danych pubs:  
   
-```  
+```cpp  
 TCHAR m_au_fname[21];  
 TCHAR m_au_lname[41];  
 TCHAR m_state[3] = 'CA';  
@@ -102,52 +100,51 @@ TCHAR m_state[3] = 'CA';
    command = "SELECT au_fname([bindto]m_au_fname), au_lname([bindto]m_au_lname) " \  
    "FROM dbo.authors " \  
    "WHERE state = ?([in]m_state)")  
-```  
+]
+```
   
- ]  
+*Nazwa* (opcjonalnie)  
+Nazwa uchwyt, używanej do pracy z zestawu wierszy. Jeśli określisz *nazwa*, **db_command —** generuje klasę o określonej *nazwa*, które mogą służyć do przechodzenia w zestawie wierszy lub wykonywać wiele zapytań akcji. Jeśli nie określisz *nazwa*, nie będzie możliwe do zwrócenia więcej niż jeden wiersz wyników użytkownikowi.  
   
- *Nazwa* (opcjonalnie)  
- Nazwa dojście służy do pracy z zestawu wierszy. Jeśli określisz *nazwa*, **db_command —** generuje klasę z określonym *nazwa*, które mogą służyć do przechodzenia w zestawie wierszy lub wykonywać wiele akcji kwerendy. Jeśli nie określisz *nazwa*, nie będzie można przywrócić więcej niż jeden wiersz wyników użytkownika.  
+*source_name* (opcjonalnie)  
+`CSession` Zmiennej lub wystąpienia klasy, która ma `db_source` zastosowany do niego, w którym polecenie zostanie wykonane. Zobacz [db_source —](../windows/db-source.md).  
   
- *source_name* (opcjonalnie)  
- `CSession` Zmiennej lub wystąpienia klasy, która ma `db_source` atrybut zastosowany do niego, na którym wykonuje polecenie. Zobacz [db_source —](../windows/db-source.md).  
+**db_command —** kontrole, aby upewnić się, że zmienna umożliwiający *source_name* jest poprawny, dlatego należy określona zmienna w funkcji lub zakresu globalnego.  
   
- **db_command —** sprawdza, upewnij się, że zmienna dla *source_name* jest poprawny, dlatego określonej zmiennej musi należeć do funkcji lub zakresie globalnym.  
+*HRESULT* (opcjonalnie)  
+Identyfikuje zmienna, która otrzyma `HRESULT` tego polecenia bazy danych. Jeśli zmienna nie istnieje, jego zostanie automatycznie dodany przez atrybut.  
   
- `hresult` (opcjonalnie)  
- Identyfikuje zmienna, która odbierze `HRESULT` tego polecenia bazy danych. Jeśli zmienna nie istnieje, jej zostaną automatycznie dodane przez atrybut.  
+*powiązania* (opcjonalnie)  
+Pozwala na oddzielne Parametry wiążące polecenia OLE DB.  
   
- *powiązania* (opcjonalnie)  
- Służy do rozdzielenia parametrów powiązanie polecenia OLE DB.  
+Jeśli określono wartość dla *powiązania*, **db_command —** będzie analizować skojarzoną wartość i nie można przeanalizować \[ *bindtype*] parametru. Użycie tych umożliwia należy użyć składni dostawcy OLE DB. Aby wyłączyć analizy bez wiązania parametrów, należy określić **powiązania = ""**.  
   
- Jeśli określono wartość dla `bindings`, **db_command —** będzie analizować skojarzona wartość i nie można przeanalizować [`bindtype`] parametru. To użycie umożliwia przy użyciu składni dostawcy OLE DB. Aby wyłączyć analizowania bez wiązania parametrów, określ **powiązania = ""**.  
+Jeśli nie określisz wartości *powiązania*, **db_command —** będzie analizować blok parametrów powiązania, wyszukiwanie "**(**", a następnie **\[** _bindtype_**]** w nawiasy kwadratowe, przez co najmniej jeden wcześniej zadeklarowanej C++ zmienne Członkowskie, a następnie "**)**". Cały tekst w nawiasach zostanie usunięta, a wynikowy polecenia, a te parametry, będą używane do konstruowania kolumny i parametru powiązania dla tego polecenia.  
   
- Jeśli nie określisz wartości `bindings`, **db_command —** będzie analizować bloku parametrów powiązania, wyszukiwanie "**(**", a następnie **[** `bindtype` **]**  w nawiasy kwadratowe, przez co najmniej jeden poprzednio zadeklarowana C++ zmienne Członkowskie, a następnie "**)**". Cały tekst w nawiasach zostanie usunięte z polecenia wynikowy, a te parametry ma być użyty do utworzenia powiązania kolumny i parametrów dla tego polecenia.  
+*bulk_fetch* (opcjonalnie)  
+Wartość całkowita określająca liczbę wierszy do pobrania.  
   
- *bulk_fetch*(opcjonalnie)  
- Wartość całkowita określająca liczbę wierszy do pobrania.  
+Wartość domyślna to 1, który określa pobieranie pojedynczego wiersza (zestaw wierszy będzie mieć typ [CRowset](../data/oledb/crowset-class.md)).  
   
- Wartość domyślna to 1, który określa pobieranie pojedynczy wiersz (zestaw wierszy będzie typu [CRowset](../data/oledb/crowset-class.md)).  
+Określa wartość większą niż 1, zbiorcze pobieranie z wiersza. Zbiorcze pobieranie z wiersza odwołuje się do możliwości zbiorcze zestawy wierszy można pobrać dojścia do wielu wierszy (rowset będzie mieć typ [cbulkrowset —](../data/oledb/cbulkrowset-class.md) i wywoła `SetRows` o określoną liczbę wierszy).  
   
- Wartość większą niż 1 określa zbiorcze pobieranie z wiersza. Zbiorcze pobieranie z wiersza odwołuje się do możliwość pobrania wielu dojść do wierszy zbiorcze zestawy wierszy (zestaw wierszy będzie typu [cbulkrowset —](../data/oledb/cbulkrowset-class.md) i wywoła `SetRows` o określoną liczbę wierszy).  
-  
- Jeśli *bulk_fetch* jest mniejsza niż jedna `SetRows` , którą będzie zwracać zera.  
+Jeśli *bulk_fetch* jest mniejsza niż jeden `SetRows` zwróci wartość zero.  
   
 ## <a name="remarks"></a>Uwagi  
- **db_command —** tworzy [CCommand](../data/oledb/ccommand-class.md) obiektu, który jest używany przez konsumenta OLE DB do wykonania polecenia.  
+**db_command —** tworzy [CCommand](../data/oledb/ccommand-class.md) obiektu, który jest używany przez konsumenta OLE DB do wykonania polecenia.  
   
- Można użyć **db_command —** z zakresem klasy lub funkcji; podstawowa różnica polega na zakresie `CCommand` obiektu. W zakresie funkcji dane, takie jak powiązania przerwanie na końcu funkcji. Klasy OLE DB szablon klienta obejmują zarówno klasy, jak i funkcja zakres użycia **CCommand <>**, ale argumenty szablonu różnią się w przypadku funkcji i klasy. W przypadku funkcji, powiązania nie zostaną wprowadzone **akcesor** zmiennych lokalnych, który obejmuje podczas wywnioskuje użycia klasy `CAccessor`-klasy jako argument. Gdy jest używany jako atrybut class, **db_command —** działa w połączeniu z **db_column —**.  
+Możesz użyć **db_command —** z zakresem klasy lub funkcji; główna różnica polega na zakres `CCommand` obiektu. Z zakresem funkcji danych, np. powiązania zakończenie na końcu funkcji. Klasa i funkcja użycia zakresu obejmują klasy OLE DB szablon konsumenta **CCommand\<>**, ale argumentów szablonu różnią się w przypadkach, funkcji i klas. W przypadku funkcji, powiązania nie zostaną wprowadzone **akcesor** zmiennych lokalnych, która obejmuje podczas wywnioskuje użycie klasy `CAccessor`-klasy jako argument. Gdy jest używana jako atrybut class **db_command —** działa w połączeniu z **db_column —**.  
   
- **db_command —** może służyć do wykonywania poleceń, które nie zwracają zestaw wyników.  
+**db_command —** może służyć do wykonywania poleceń, które nie zwracają zestaw wyników.  
   
- Gdy dostawca atrybutu konsumenta stosuje ten atrybut do klasy, kompilator spowoduje zmianę nazwy klasy, która ma \_ *YourClassName*dostępu, gdzie *YourClassName* jest nazwa nadana klasy i kompilator utworzy klasy o nazwie *YourClassName*, co wynika ze \_ *YourClassName*metody dostępu.  W widoku klasy zostanie wyświetlona zarówno klasy.  
+ Gdy dostawca atrybucie odbiorcy dotyczy ten atrybut do klasy, kompilator spowoduje zmianę nazwy klasy, która ma \_ *YourClassName*dostępu, których *YourClassName* jest nazwa nadana klasy i kompilator utworzy klasę o nazwie *YourClassName*, która jest pochodną \_ *YourClassName*metody dostępu.  W widoku klas pojawi się, obie klasy.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie definiuje polecenie, które wybiera imiona i nazwiska z tabeli, jeśli odpowiada "CA" w kolumnie Stan. **db_command —** tworzy i odczytuje zestawu wierszy, na którym należy wywołać generowane przez Kreatora funkcji takich jak [OpenAll i CloseAll](../data/oledb/consumer-wizard-generated-methods.md), jak również `CRowset` takich jak funkcje Członkowskie [MoveNext](../data/oledb/crowset-movenext.md).  
+ W tym przykładzie definiuje polecenie, które polega na wybraniu imiona i nazwiska z tabelą, jeśli kolumna stanu odpowiada "CA". **db_command —** tworzy i odczytuje zestawu wierszy, w którym może wywołać generowane przez kreatora funkcje takie jak [openall — i closeall —](../data/oledb/consumer-wizard-generated-methods.md), a także `CRowset` takich jak funkcje Członkowskie [MoveNext](../data/oledb/crowset-movenext.md).  
   
- Należy pamiętać, że ten kod musisz podać własne parametry połączenia, które nawiązuje połączenie z bazą danych pubs. Aby uzyskać informacje, jak to zrobić w środowisku programistycznym, zobacz [jak: połączenie z bazą danych Eksploratora serwera](http://msdn.microsoft.com/en-us/7c1c3067-0d77-471b-872b-639f9f50db74) i [porady: dodawanie nowych połączeń danych w Eksploratorze Explorer/bazy danych serwera](http://msdn.microsoft.com/en-us/fb2f513b-ddad-4142-911e-856bba0054c8).  
+ Należy pamiętać, że ten kod należy podać własne parametry połączenia, który nawiązuje połączenie z bazą danych pubs. Aby uzyskać informacje, jak to zrobić w środowisku programistycznym, zobacz [jak: łączenie się z bazą danych i przeglądanie istniejących obiektów](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) i [dodać nowe połączenia](/visualstudio/data-tools/add-new-connections).  
   
-```  
+```cpp  
 // db_command.h  
 #include <atlbase.h>  
 #include <atlplus.h>  
@@ -184,7 +181,7 @@ struct CAuthors {
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp  
 // db_command.cpp  
 // compile with: /c  
 #include "db_command.h"  
@@ -213,9 +210,9 @@ int main(int argc, _TCHAR* argv[]) {
 ```  
   
 ## <a name="example"></a>Przykład  
- W przykładzie użyto `db_source` klasy źródła danych `CMySource`, i `db_command` w klasach polecenia `CCommand1` i `CCommand2`.  
+ W tym przykładzie użyto `db_source` w klasie źródła danych `CMySource`, i `db_command` w klasach polecenia `CCommand1` i `CCommand2`.  
   
-```  
+```cpp  
 // db_command_2.cpp  
 // compile with: /c  
 #include <atlbase.h>  
@@ -257,17 +254,17 @@ int main() {
   
 ## <a name="requirements"></a>Wymagania  
   
-### <a name="attribute-context"></a>Atrybut kontekstu  
+### <a name="attribute-context"></a>Kontekst atrybutu  
   
 |||  
 |-|-|  
-|**Dotyczy**|**Klasa**, `struct`, elementu członkowskiego, metoda, lokalnego|  
+|**Dotyczy**|**Klasa**, **struktury**, elementu członkowskiego, metoda, lokalne|  
 |**Powtarzalne**|Nie|  
 |**Wymaganych atrybutów**|Brak|  
 |**Nieprawidłowe atrybuty**|Brak|  
   
- Aby uzyskać więcej informacji na temat konteksty atrybutu, zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
+ Aby uzyskać więcej informacji na temat konteksty atrybutu zobacz [konteksty atrybutu](../windows/attribute-contexts.md).  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  [Atrybuty konsumentów OLE DB](../windows/ole-db-consumer-attributes.md)   
  [Oddzielne atrybuty](../windows/stand-alone-attributes.md)   

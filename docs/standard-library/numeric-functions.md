@@ -1,5 +1,5 @@
 ---
-title: '&lt;liczbowa&gt; funkcje | Dokumentacja firmy Microsoft'
+title: '&lt;liczbowe&gt; funkcje | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -16,23 +16,23 @@ helpviewer_keywords:
 - std::inner_product [C++]
 - std::iota [C++]
 - std::partial_sum [C++]
-ms.openlocfilehash: d5504ed83ce41f38dc69f3fb612438800285d905
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 47ac885152b0fdfbb9ce1ab77f6597db00c5bc07
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862585"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960255"
 ---
-# <a name="ltnumericgt-functions"></a>&lt;liczbowa&gt; funkcji
+# <a name="ltnumericgt-functions"></a>&lt;liczbowe&gt; funkcji
 
 ||||
 |-|-|-|
 |[accumulate](#accumulate)|[adjacent_difference](#adjacent_difference)|[inner_product](#inner_product)|
-|[iota](#iota)|[partial_sum](#partial_sum)|
+|[iota](#iota)|[partial_sum —](#partial_sum)|
 
 ## <a name="accumulate"></a>  accumulate
 
-Oblicza sumę wszystkich elementów w określonym zakresie m.in. niektóre wartości początkowej przez obliczanie sum częściowych kolejnych lub oblicza wynik kolejne wyniki częściowe podobnie uzyskany przy użyciu określonej operacji binarnych sumą.
+Oblicza sumę wszystkich elementów w określonym zakresie, w tym niektóre wartości początkowe przez obliczanie kolejnych sum częściowych, lub oblicza kolejne wyniki częściowe podobnie uzyskanej przy użyciu określonej operacji binarnej niż suma.
 
 ```cpp
 template <class InputIterator, class Type>
@@ -48,21 +48,21 @@ Type accumulate(
 
 ### <a name="parameters"></a>Parametry
 
-`first` Iteratora wejściowych adresowania pierwszym elementem w zakresie sumowane lub łączone zgodnie z określonym operację binarną.
+*pierwszy* iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie sumowane lub scalony według określonej operacji binarnej.
 
-`last` Wejściowy iteratora adresowania ostatnim elementem w zakresie można sumowane lub łączone zgodnie z określonym operację binarną, która jest poza ostatniego elementu faktycznie częścią gromadzenia iterated o jedną pozycję.
+*ostatni* iterator danych wejściowych odnoszący się do ostatniego elementu w zakresie sumowane lub scalony według określonej operacji binarnej, który jest o jedną pozycję poza ostatnim elementem faktycznie zawierał włączonym w iterowaną akumulację.
 
-`val` Wartość początkowa, do której każdy element jest z kolei dodane lub łączyć z zgodnie z określonym operację binarną.
+*Val* wartość początkową, do której każdy element z kolei jest dodane lub w połączeniu z według określonej operacji binarnej.
 
-`binary_op` Operacja pliku binarnego, która ma zostać zastosowany do każdego elementu w określony zakres oraz wynik jego poprzedniej aplikacji.
+*binary_op* operacja binarna, który ma być stosowana do każdego elementu w określonym zakresie i wynik jego starszymi aplikacjami.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Suma `val` i wszystkie elementy w określonym zakresie pierwszej funkcji szablonu lub drugiej funkcji szablonu wynik zastosowania operację binarną, zamiast operacji sum, aby określić ( *PartialResult, \* ITER*), gdzie *PartialResult* jest wynikiem aplikacji poprzedniej operacji i `Iter` jest iteratora wskazuje element w zakresie.
+Suma *val* i wszystkie elementy w określonym zakresie, pierwsza funkcja szablonu lub, druga funkcja szablonu wynik zastosowania operacja binarna określona zamiast operacji sumowania (  *PartialResult, \*Iter*), gdzie *PartialResult* jest wynikiem starszymi aplikacjami operacji i `Iter` jest iteratora wskazującego elementu w zakresie.
 
 ### <a name="remarks"></a>Uwagi
 
-Wartość początkowa temu, że będzie wynik dobrze zdefiniowany podczas zakres jest pusta, w którym to przypadku `val` jest zwracany. Operację binarną nie musi być asocjacyjnej lub Przemienne. Wynik jest ustawiana na wartość początkową `val` , a następnie *wynik*  =  `binary_op` ( *wynik*, **\*** `Iter`) oblicza się wielokrotnie powtarzane za pomocą zakresu, gdzie `Iter` jest iteratora wskazuje element kolejnych w zakresie. Zakres musi być prawidłowy, i złożoność jest liniowa o rozmiarze z zakresu. Typ zwracany operatora binarnego musi być możliwe do przekonwertowania na **typu** do zapewnienia podczas iteracji.
+Początkowa wartość ubezpieczycielom, że zawsze będą wynik wyraźnie określone, gdy zakres jest pusta, w którym to przypadku *val* jest zwracana. Operacja binarna nie musi być asocjacyjna ani komutatywna. Wynik jest ustawiana na wartość początkową *val* i następnie *wynik*  =  `binary_op` ( *wynik*, **\*** `Iter`) jest obliczana iteracyjne przy użyciu zakresu, gdzie `Iter` jest iteratora wskazującego kolejnych elementu w zakresie. Zakres musi być prawidłowy i złożoność jest liniowa z rozmiarem zakresu. Zwracany typ operatora binarnego musi być konwertowany na **typu** zapewnienie zamknięcia podczas iteracji.
 
 ### <a name="example"></a>Przykład
 
@@ -184,27 +184,27 @@ OutputIterator adjacent_difference(
 
 ### <a name="parameters"></a>Parametry
 
-`first` Wejściowy iteratora adresowania pierwszym elementem w zakresie wejściowym, których elementy mają być differenced z ich odpowiednich starsza wersja lub gdy para wartości jest obsługiwany przez inny określić operację binarną.
+*pierwszy* iterator danych wejściowych, odnoszący się do pierwszego elementu zakresu wejściowego, którego elementy mają być zróżnicowane z ich odpowiednimi poprzednikami lub gdzie parze wartości ma być obsługiwany przez żadnego innego określoną operacją binarną.
 
-`last` Wejściowy iteratora adresowania ostatnim elementem w zakresie wejściowym, których elementy mają być differenced z ich odpowiednich starsza wersja lub gdy para wartości jest obsługiwany przez inny określić operację binarną.
+*ostatni* iterator danych wejściowych, odnoszący się do ostatniego elementu z zakresu wejściowego, którego elementy mają być zróżnicowane z ich odpowiednimi poprzednikami lub gdzie parze wartości ma być obsługiwany przez żadnego innego określoną operacją binarną.
 
-`result` Dane wyjściowe iteratora adresowania pierwszy element docelowy zakres, w którym ma być przechowywany serii różnice lub wyniki określonej operacji.
+*wynik* iterator danych wyjściowych odnoszący się do pierwszego elementu zakresu docelowego, gdzie ma być przechowywany szereg różnic lub wyniki określonej operacji.
 
-`binary_op` Operacja pliku binarnego, która ma być stosowany w ogólnych operację zastępuje operacja odejmowania w procedurze różnicowych.
+*binary_op* operacja binarna, który ma być stosowana w ogólnej operacji zastępującej operację odejmowania w procedurze różnicującej.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iteratora dane wyjściowe adresowania końca zakresu docelowego: `result` + ( `last`  -  `first`).
+Iterator danych wyjściowych odnoszący końca zakresu docelowego: `result` + ( `last`  -  `first`).
 
 ### <a name="remarks"></a>Uwagi
 
-_ Iteratora dane wyjściowe *wynik* może być tego samego iteratora jako wejściowych iteratora * pierwszy, *, aby `adjacent_difference`s może być obliczane w miejscu.
+Iterator wyjściowy _ *wynik* może być tym samym iteratorem, co iterator danych wejściowych * pierwszy, *, aby `adjacent_difference`mogą być obliczone w miejscu.
 
-Sekwencji wartości *a*1, *a*2, *a*3 zakresu wejściowego pierwszej funkcji szablonu przechowuje kolejnych **partial_difference**s *a*1, *a*2 - *a*1, a3 - *a*2, w zakresie docelowym.
+Dla sekwencji wartości *a*1, *a*2, *a*3, w zakresie wejściowym, pierwsza funkcja szablonu przechowuje kolejne `partial_difference`s *a*1 , *a*2 - *a*1, a3 — *a*2, w zakresie docelowym.
 
-Sekwencji wartości *a*1, *a*2, *a*3 wejściowych zakresu, a drugi funkcji szablonu przechowuje kolejnych **partial_difference**s *a*1, *a*2 `binary_op` *a*1, *a*3 `binary_op` *a*2 w docelowy zakres.
+Dla sekwencji wartości *a*1, *a*2, *a*3, w zakresie wejściowym, druga funkcja szablonu przechowuje kolejne `partial_difference`s *a* 1, *a*2 `binary_op` *a*1, *a*3 `binary_op` *a*2, w zakresie docelowym.
 
-Operację binarną `binary_op` asocjacyjnej lub Przemienne nie jest wymagane, ponieważ dotyczy kolejność operacji jest całkowicie określony.
+Operacja binarna `binary_op` nie musi być asocjacyjna ani komutatywna, ponieważ kolejność operacji, które mają zastosowanie, jest całkowicie określona.
 
 ### <a name="example"></a>Przykład
 
@@ -267,9 +267,9 @@ int main( )
 }
 ```
 
-## <a name="inner_product"></a>  inner_product
+## <a name="inner_product"></a>  inner_product —
 
-Oblicza sumę element-wise iloczyn dwóch zakresów i dodaje go do określonej wartości początkowej lub oblicza wynik uogólniony procedury, których operacji binarnych sum i produktu są zastępowane przez inne operacje określonego pliku binarnego.
+Oblicza sumę mnożenia elementów z dwóch zakresów i dodaje go do określonej wartości początkowej lub oblicza wynik ogólnej procedury, gdzie operacje sumowania i danych binarnych są zastępowane przez inne określone operacje binarne.
 
 ```cpp
 template <class InputIterator1, class InputIterator2, class Type>
@@ -291,35 +291,35 @@ Type inner_product(
 
 ### <a name="parameters"></a>Parametry
 
-`first1` Adresowanie pierwszym elementem w pierwszego zakresu, w których wewnętrzny produktu lub uogólniony produktu wewnętrzny z drugiego zakresu jest ma zostać obliczony iteratora wejściowego.
+*first1* iterator danych wejściowych, odnoszący się do pierwszego elementu w zakresie pierwszego którego wewnętrzna produktem, czy uogólnionego wewnętrzny z drugiego zakresu jest ma zostać obliczony.
 
-`last1` Adresowanie ostatnim elementem w pierwszego zakresu, w których wewnętrzny produktu lub uogólniony produktu wewnętrzny z drugiego zakresu jest ma zostać obliczony iteratora wejściowego.
+*Nazwisko1* iterator danych wejściowych, odnoszący się do ostatniego elementu w zakresie pierwszego którego wewnętrzna produktem, czy uogólnionego wewnętrzny z drugiego zakresu jest ma zostać obliczony.
 
-`first2` Adresowanie pierwszym elementem w drugiego zakresu, w których wewnętrzny produktu lub uogólniony produktu wewnętrzny z pierwszego zakresu jest ma zostać obliczony iteratora wejściowego.
+*first2* iterator danych wejściowych, odnoszący się do pierwszego elementu w drugim zakresu którego produktu wewnętrzny lub uogólnionego produktu wewnętrzny z pierwszego zakresu jest ma zostać obliczony.
 
-`val` Wartość początkowa, do której ma zostać dodany produktu wewnętrzny lub uogólniony produktu wewnętrzny między zakresów.
+*Val* wartość początkową, do którego ma zostać dodany produkt wewnętrzny lub uogólnionego produktu wewnętrzny między zakresów.
 
-*binary_op1* operację binarną, który zastępuje operację produktu wewnętrzny sum w stosunku do element-wise produktów w generalizacji produktu wewnętrzny.
+*binary_op1* operacja binarna, który zastępuje operacja produktu wewnętrzny sumy w stosunku do element-wise produktów w generalizacji produktu wewnętrzny.
 
-*binary_op2* operację binarną, zastępujący produktu wewnętrzny element-wise działanie wielokrotnie w generalizacji produktu wewnętrzny.
+*binary_op2* operacja binarna, który zastępuje produktu wewnętrzny element-wise działanie wielokrotnie w generalizacji produktu wewnętrzny.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Pierwszy funkcji członkowskiej zwraca sumę element-wise produktów i dodaje do niej określona wartość początkowa. Tak dla zakresów wartości *a*i i *b*i zwraca:
+Pierwsza funkcja elementu członkowskiego zwraca sumę element-wise produktów i dodaje do niego określonej wartości początkowej. Tak dla zakresów wartości *a*i i *b*i zwraca:
 
 `val` + ( *a*1 \* *b*1 ) + ( *a*2 \* *b*2 ) + ... + ( *a*n \* *b*n )
 
-Wielokrotnie powtarzane zastępując `val` z `val` + ( *a*i \* *b*i).
+iteracyjne zastępując *val* z `val` + ( *a*i \* *b*i ).
 
-Zwraca funkcję drugiego elementu członkowskiego:
+Druga funkcja elementu członkowskiego zwraca:
 
 `val` *binary_op1* ( *a*1 *binary_op2* *b*1) *binary_op1* ( *a*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* ( *a*n *binary_op2* *b*n)
 
-Wielokrotnie powtarzane zastępując `val` z `val` *binary_op1* ( *a*i *binary_op2* *b*i).
+iteracyjne zastępując *val* z `val` *binary_op1* ( *a*i *binary_op2* *b*i ).
 
 ### <a name="remarks"></a>Uwagi
 
-Zapewnia to wartość początkowa będzie dobrze zdefiniowany wynik przypadku zakres jest pusta, w którym to przypadku `val` jest zwracany. Operacje danych binarnych nie trzeba asocjacyjnej lub Przemienne. Zakres musi być prawidłowy, i złożoność jest liniowa o rozmiarze z zakresu. Typ zwracany operatora binarnego musi być możliwe do przekonwertowania na **typu** do zapewnienia podczas iteracji.
+Początkowa wartość zapewnia, że zawsze będą wynik wyraźnie określone, gdy zakres jest pusta, w którym to przypadku *val* jest zwracana. Operacji binarnych nie trzeba zespolonego lub przemiennego. Zakres musi być prawidłowy i złożoność jest liniowa z rozmiarem zakresu. Zwracany typ operatora binarnego musi być konwertowany na **typu** zapewnienie zamknięcia podczas iteracji.
 
 ### <a name="example"></a>Przykład
 
@@ -413,7 +413,7 @@ int main()
 
 ## <a name="iota"></a>  iota
 
-Przechowuje wartość początkową, zaczynając od pierwszego elementu i wypełnianie kolejne przyrosty wartości ( ` value++`) w każdym z elementów w interwale `[ first,  last)`.
+Przechowuje wartość początkową, zaczynając od pierwszego elementu i wypełniając kolejne przyrosty wartości (` value++`) we wszystkich elementów w interwale `[ first,  last)`.
 
 ```cpp
 template <class ForwardIterator, class Type>
@@ -422,17 +422,17 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 
 ### <a name="parameters"></a>Parametry
 
-`first` Iterator wejściowych, którego dotyczy pierwszym elementem w zakresie zostać wypełnione.
+*pierwszy* iterator danych wejściowych, odnoszący się do pierwszego elementu w zakresie, który ma zostać wypełniony.
 
-`last` Iterator wejściowych, którego dotyczy ostatnim elementem w zakresie zostać wypełnione.
+*ostatni* iterator danych wejściowych, odnoszący się do ostatniego elementu w zakresie, który ma zostać wypełniony.
 
-`value` Wartość początkową do przechowywania w pierwszym elementem i kolejno przyrost kolejnych elementów.
+*wartość* wartości początkowej do przechowywania w pierwszym elemencie i kolejno przyrostu dla kolejnych elementów.
 
 ### <a name="remarks"></a>Uwagi
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano niektóre zastosowania `iota` funkcja wypełniając [listy](../standard-library/list.md) liczb całkowitych i następnie wypełnianie [wektor](../standard-library/vector.md) z `list` , aby [random_ losowo](../standard-library/algorithm-functions.md#random_shuffle) funkcja może być używana.
+W poniższym przykładzie pokazano do niektórych zastosowań `iota` funkcji, wypełniając [listy](../standard-library/list.md) liczb całkowitych i następnie wypełnianie [wektor](../standard-library/vector.md) z `list` tak, aby [random_ shuffle](../standard-library/algorithm-functions.md#random_shuffle) funkcja może być używana.
 
 ```cpp
 // compile by using: cl /EHsc /nologo /W4 /MTd
@@ -472,9 +472,9 @@ int main(void)
 }
 ```
 
-## <a name="partial_sum"></a>  partial_sum
+## <a name="partial_sum"></a>  partial_sum —
 
-Oblicza szereg sum zakresu wejściowego od pierwszego elementu za pomocą *i*th element i zapisuje wynik każdego kwoty w *i*element th zakresu docelowego lub oblicza wynik gdy operacja sum zostało zastąpione przez inną operację binarną określonego uogólniony procedury.
+Oblicza serię sum zakresu wejściowego od pierwszego elementu przez *i*Ty element i zapisuje wynik każdej takiej sumy w *i*-tym elemencie zakresu docelowego lub oblicza wynik ogólnej procedury, gdzie suma operacji jest zastępowana inną określoną operację binarną.
 
 ```cpp
 template <class InputIterator, class OutIt>
@@ -493,27 +493,27 @@ OutputIterator partial_sum(
 
 ### <a name="parameters"></a>Parametry
 
-`first` Iteratora wejściowych adresowania pierwszym elementem w zakresie częściowo równy określonemu procentowi lub połączonych zgodnie z określonym operację binarną.
+*pierwszy* iterator danych wejściowych odnoszący się do pierwszego elementu w zakresie ma być częściowo sumowany lub scalony według określonej operacji binarnej.
 
-`last` Wejściowy iteratora adresowania ostatnim elementem w zakresie można częściowo sumowane lub łączone zgodnie z określonym operację binarną, która jest poza ostatniego elementu faktycznie częścią gromadzenia iterated o jedną pozycję.
+*ostatni* iterator danych wejściowych odnoszący się do ostatniego elementu w zakresie ma być częściowo sumowany lub scalony według określonej operacji binarnej, który jest o jedną pozycję poza ostatnim elementem faktycznie zawierał włączonym w iterowaną akumulację.
 
-`result` Dane wyjściowe iteratora adresowania pierwszy element docelowy zakres, w którym ma być przechowywany serii sumy częściowe lub wyniki określonej operacji.
+*wynik* iterator danych wyjściowych odnoszący się do pierwszego elementu zakresu docelowego, gdzie ma być przechowywany szereg częściowych sum lub wyniki określonej operacji.
 
-`binary_op` Operacja pliku binarnego, która ma być stosowany w ogólnych operację zastępuje operacja sum w procedurze sum częściowych.
+*binary_op* operacja binarna, który ma być stosowana w ogólnej operacji zastępującej operację sumowania w procedurze częściowej sumy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Iteratora dane wyjściowe adresowania końca zakresu docelowego: `result` + ( `last`  -  `first`),
+Iterator danych wyjściowych odnoszący końca zakresu docelowego: `result` + (`last` - `first`),
 
 ### <a name="remarks"></a>Uwagi
 
-Dane wyjściowe iteratora `result` może być tego samego iteratora jako wejściowych iteratora `first`, dzięki czemu może można obliczyć sumy częściowe w miejscu.
+Iterator danych wyjściowych *wynik* może być tym samym iteratorem, co iterator danych wejściowych *pierwszy*, dzięki czemu sumy częściowe mogą być obliczone w miejscu.
 
 Sekwencji wartości *a*1, *a*2, *a*3, zakresu wejściowego pierwszej funkcji szablonu przechowuje kolejnych sum częściowych w zakresie docelowym gdzie *i*th element jest określany przez ((( *a*1 + *a*2) + *a*3) *a*i).
 
 Sekwencji wartości *a*1, *a*2, *a*3, zakresu wejściowego drugi funkcji szablonu przechowuje kolejnych sum częściowych w zakresie docelowym, gdzie jest wskazującego element podana przez ((( *a*1 `binary_op` *a*2) `binary_op` *a*3) *a*i).
 
-Operację binarną `binary_op` asocjacyjnej lub Przemienne nie jest wymagane, ponieważ dotyczy kolejność operacji jest całkowicie określony.
+Operacja binarna *binary_op* nie musi być asocjacyjna ani komutatywna, ponieważ kolejność operacji, które mają zastosowanie, jest całkowicie określona.
 
 ### <a name="example"></a>Przykład
 
@@ -577,4 +577,4 @@ int main( )
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<liczbowa >](../standard-library/numeric.md)<br/>
+[\<liczbowe >](../standard-library/numeric.md)<br/>
