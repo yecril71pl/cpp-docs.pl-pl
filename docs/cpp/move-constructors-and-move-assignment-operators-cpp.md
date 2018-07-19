@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Definiowanie konstruktory przenoszenia i przenoszące operatory przypisania (C++) | Dokumentacja firmy Microsoft'
+title: 'Porady: Definiowanie konstruktory przenoszące i przenoszące operatory przypisania (C++) | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 03/05/2018
 ms.technology:
@@ -14,16 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad5f54bc0366b0da9286631294a10f4904b7cb30
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: af1220cbb6b872ebd0370cfa526aba47338e70e6
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028154"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Konstruktory przenoszące i przenoszące operatory przypisania (C++)
-W tym temacie opisano sposób zapisania *przenoszenie konstruktora* i operator przypisania przenoszenia, dla klasy C++. Konstruktor przenoszący umożliwia zasobów należących do r-wartości obiektu do przeniesienia do l-wartością bez kopiowania. Aby uzyskać więcej informacji na temat semantyki przenoszenia zobacz [deklarator odwołania do r-wartości: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
+W tym temacie opisano sposób pisania *Konstruktor przenoszący* i operator przypisania przenoszenia dla klasy języka C++. Konstruktor przenoszący umożliwia zasoby należące do obiektem wartościowanym prawostronnie do przeniesienia do l-wartości bez kopiowania. Aby uzyskać więcej informacji dotyczących semantyki przenoszenia, zobacz [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
- W tym temacie opisano następujące klasy C++, `MemoryBlock`, która zarządza bufora pamięci.  
+ Ten temat opiera się na następującej klasy C++ `MemoryBlock`, która zarządza buforem pamięci.  
   
 ```cpp  
 // MemoryBlock.h  
@@ -101,11 +102,11 @@ private:
 };  
 ```  
   
- Poniższe procedury opisano sposób zapisu Konstruktor przenoszący oraz operator przypisania przenoszenia, na przykład klasy C++.  
+ W poniższych procedurach opisano jak napisać Konstruktor przenoszący i operator przypisania przenoszenia dla przykładowej klasy języka C++.  
   
-### <a name="to-create-a-move-constructor-for-a-c-class"></a>Aby utworzyć Konstruktor przenoszący dla klasy C++  
+### <a name="to-create-a-move-constructor-for-a-c-class"></a>Aby utworzyć Konstruktor przenoszący dla klasy języka C++  
   
-1.  Zdefiniuj metodę pustego konstruktora, która przyjmuje jako jego parametr odwołania do r-wartości na typ klasy, jak pokazano w poniższym przykładzie:  
+1.  Zdefiniuj metodę pustego konstruktora, który przyjmuje odwołanie rvalue do typu klasy jako parametr, jak pokazano w poniższym przykładzie:  
   
     ```cpp  
     MemoryBlock(MemoryBlock&& other)  
@@ -115,23 +116,23 @@ private:
     }  
     ```  
   
-2.  W Konstruktorze przenoszenia Przypisz elementy członkowskie danych klasy z obiektu źródłowego do obiektu, który jest budowany:  
+2.  W Konstruktorze przenoszącym Przypisz elementy członkowskie danych klasy z obiektu źródłowego do obiektu, który jest konstruowany:  
   
     ```cpp  
     _data = other._data;  
     _length = other._length;  
     ```  
   
-3.  Elementy członkowskie danych obiektu źródłowego można przypisać wartości domyślne. Zapobiega to zwolnić zasobów (np. pamięci) wielokrotnie destruktor:  
+3.  Przypisz elementy członkowskie danych obiektu źródłowego do wartości domyślnych. Zapobiega to zwalnianiu zasobów (takich jak pamięć) wielokrotnie przez destruktor:  
   
     ```cpp  
     other._data = nullptr;  
     other._length = 0;  
     ```  
   
-### <a name="to-create-a-move-assignment-operator-for-a-c-class"></a>Aby utworzyć operator przypisania przenoszenia, dla klasy C++  
+### <a name="to-create-a-move-assignment-operator-for-a-c-class"></a>Aby utworzyć operator przypisania przenoszenia dla klasy języka C++  
 
-1.  Definiowanie operatora przypisania pusta, która przyjmuje odwołania do r-wartości na typ klasy, jak jej parametr i zwraca odwołanie do typu klasy, jak pokazano w poniższym przykładzie:  
+1.  Zdefiniuj pusty operator przypisania przyjmuje odwołanie rvalue do typu klasy jako parametr i zwraca odwołanie do typu klasy, jak pokazano w poniższym przykładzie:  
   
     ```cpp  
     MemoryBlock& operator=(MemoryBlock&& other)  
@@ -139,7 +140,7 @@ private:
     }  
     ```  
   
-2.  W operator przypisania przenoszenia Dodaj instrukcji warunkowej, Jeśli spróbujesz przypisać obiekt do siebie nie wykonuje żadnej operacji.  
+2.  W operatorze przypisywania przenoszenia Dodaj instrukcję warunkową, która wykonuje żadnej operacji, jeśli użytkownik próbuje przypisać obiekt do samego siebie.  
   
     ```cpp  
     if (this != &other)  
@@ -147,16 +148,16 @@ private:
     }  
     ```  
   
-3.  W instrukcji warunkowej bez żadnych zasobów (np. pamięci) z obiektu, który jest przypisany do.  
+3.  W instrukcji warunkowej należy zwolnić wszystkie zasoby (takie jak pamięć) z obiektu, który jest przypisany do.  
   
-     Poniższy przykład powoduje zwolnienie `_data` elementu członkowskiego z obiektu, który jest przypisany do:  
+     Poniższy przykład powoduje zwolnienie `_data` składowej z obiektu, który jest przypisany do:  
   
     ```cpp  
     // Free the existing resource.  
     delete[] _data;  
     ```  
   
-     Wykonaj kroki 2 i 3 w ramach pierwszej procedury można przetransferować elementy członkowskie danych z obiektu źródłowego na obiekt, który jest budowany:  
+     Wykonaj kroki 2 i 3 w pierwszej procedury, aby przenieść elementy członkowskie danych z obiektu źródłowego do obiektu, który jest konstruowany:  
   
     ```cpp  
     // Copy the data pointer and its length from the   
@@ -177,7 +178,7 @@ private:
     ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono pełną przenoszenie konstruktora oraz przenoszący operator przypisania dla `MemoryBlock` klasy:  
+ Poniższy przykład pokazuje kompletny Konstruktor przenoszący i operator przypisania przenoszenia dla `MemoryBlock` klasy:  
   
 ```cpp  
 // Move constructor.  
@@ -225,7 +226,7 @@ MemoryBlock& operator=(MemoryBlock&& other)
 ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, jak semantyki przenoszenia może poprawić wydajność aplikacji. Przykład dodaje dwa elementy do obiektu vector i wstawia nowy element między dwoma elementami istniejących. `vector` Używa klasy Przenieś semantyki można wykonać operacji wstawiania efektywnie przenosząc elementów wektora zamiast kopiować je.  
+ Poniższy przykład pokazuje, jak semantyka przenoszenia może zwiększyć wydajność aplikacji. Przykład dodaje dwa elementy do obiektu wektora, a następnie wstawiono nowy element między dwa istniejące elementy. `vector` Klasa używa semantyki przenoszenia do wykonania operacji wstawiania efektywnie przez przeniesienie elementów wektora, nie zaś ich kopiowanie.  
   
 ```cpp  
 // rvalue-references-move-semantics.cpp  
@@ -293,16 +294,17 @@ In ~MemoryBlock(). length = 50. Deleting resource.
 In ~MemoryBlock(). length = 75. Deleting resource.  
 ```  
   
- Wersja tego przykładu, że używa przenosić semantyki jest bardziej efektywne niż wersja, które nie korzystają bezpośrednio z semantyki przenoszenia, ponieważ wykonuje mniej kopiowania, Alokacja pamięci i operacji cofania alokacji pamięci.  
+ Wersja tego przykładu, który używa semantyki przenoszenia jest bardziej wydajna niż wersja, która nie używa semantyki przenoszenia, ponieważ wykonuje mniejszą liczbę kopii, alokacji pamięci i operacji dezalokacji pamięci.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
- Aby zapobiec przecieków zasobów, zawsze wolne w operator przypisania przenoszenia zasobów (np. pamięci, dojścia do plików i gniazda).  
+ Aby zapobiec przeciekom zasobów, należy zawsze bezpłatne zasoby (takie jak pamięć, dojścia do plików i gniazda) w operatorze przypisania przenoszenia.  
   
- Aby zapobiec nieodwracalny zniszczenie zasobów, poprawnie obsługiwać własny przypisanie operator przypisania przenoszenia.  
+ Aby zapobiec nieodwracalnemu niszczeniu zasobów, należy prawidłowo Obsługuj własny przydziału w operatorze przypisania przenoszenia.  
   
- Jeśli podasz zarówno Konstruktor przenoszenia i operator przypisania przenoszenia dla klasy można wyeliminować nadmiarowy kod pisząc Konstruktor przenoszący operator przypisania przenoszenia wywołać. W poniższym przykładzie przedstawiono nowej wersji Konstruktor przenoszenia, która wywołuje operator przypisania przenoszenia:  
+ Jeśli podasz zarówno konstruktora przenoszącego, jak i operator przypisania przenoszenia dla klasy, można wyeliminować nadmiarowy kod, pisząc Konstruktor przenoszący, aby wywołać operator przypisania przenoszenia. Poniższy przykład przedstawia poprawioną wersję konstruktora przenoszącego, który wywołuje operator przypisania przenoszenia:  
   
-```  
+```cpp
+  
 // Move constructor.  
 MemoryBlock(MemoryBlock&& other)  
    : _data(nullptr)  
@@ -312,8 +314,8 @@ MemoryBlock(MemoryBlock&& other)
 }  
 ```  
   
- [Std::move](../standard-library/utility-functions.md#move) funkcja zachowuje r-wartości właściwości `other` parametru.  
+ [Std::move](../standard-library/utility-functions.md#move) funkcji zachowuje własność rvalue *innych* parametru.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Deklarator odwołania do wartości r: & &](../cpp/rvalue-reference-declarator-amp-amp.md)   
- [\<narzędzie > Przenieś](http://msdn.microsoft.com/en-us/abef7e85-9dd6-4724-85da-d7f7fe95dca9)
+ [\<Narzędzia > Przenieś](http://msdn.microsoft.com/abef7e85-9dd6-4724-85da-d7f7fe95dca9)

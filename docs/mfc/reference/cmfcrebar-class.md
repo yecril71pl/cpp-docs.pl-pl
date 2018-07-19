@@ -38,15 +38,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcef7bab4fd2b0cd913c0da929534d6964730215
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 292de0795033e40d93a30840be620e10369f87ce
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037964"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028219"
 ---
 # <a name="cmfcrebar-class"></a>Klasa CMFCReBar
-A `CMFCReBar` obiekt jest pasek sterowania, który zapewnia układu, trwałości i informacje o formantach paska pomocniczego stanie.  
+A `CMFCReBar` obiekt jest pasek sterowania, który zawiera układ, trwałość i informacje o stanie dla formantów rebar.  
    [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
 ## <a name="syntax"></a>Składnia  
   
@@ -60,25 +60,25 @@ class CMFCReBar : public CPane
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CMFCReBar::AddBar](#addbar)|Dodaje grupy do paska pomocniczego.|  
+|[CMFCReBar::AddBar](#addbar)|Dodaje obiekt band do paska pomocniczego.|  
 |[CMFCReBar::CalcFixedLayout](#calcfixedlayout)|(Przesłania [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|  
 |[CMFCReBar::CanFloat](#canfloat)|(Przesłania [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).)|  
-|[CMFCReBar::Create](#create)|Tworzy kontrolkę paska pomocniczego i dołącza go do `CMFCReBar` obiektu.|  
+|[CMFCReBar::Create](#create)|Tworzy kontrolkę paska pomocniczego i dołącza je do `CMFCReBar` obiektu.|  
 |[CMFCReBar::EnableDocking](#enabledocking)|(Przesłania [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).)|  
 |[CMFCReBar::GetReBarBandInfoSize](#getrebarbandinfosize)||  
-|[CMFCReBar::GetReBarCtrl](#getrebarctrl)|Zapewnia bezpośredni dostęp do odpowiadającego [crebarctrl —](../../mfc/reference/crebarctrl-class.md) formantu wspólnego.|  
+|[CMFCReBar::GetReBarCtrl](#getrebarctrl)|Zapewnia bezpośredni dostęp do podstawowych [z CReBarCtrl](../../mfc/reference/crebarctrl-class.md) wspólnej kontroli.|  
 |[CMFCReBar::OnShowControlBarMenu](#onshowcontrolbarmenu)|(Przesłania [CPane::OnShowControlBarMenu](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu).)|  
 |[CMFCReBar::OnToolHitTest](#ontoolhittest)|(Przesłania [CWnd::OnToolHitTest](../../mfc/reference/cwnd-class.md#ontoolhittest).)|  
-|[CMFCReBar::OnUpdateCmdUI](#onupdatecmdui)|(Przesłania [CBasePane::OnUpdateCmdUI](http://msdn.microsoft.com/en-us/e139f06a-9793-4ee2-bc3d-517389368c77).)|  
+|[CMFCReBar::OnUpdateCmdUI](#onupdatecmdui)|(Przesłania [CBasePane::OnUpdateCmdUI](http://msdn.microsoft.com/e139f06a-9793-4ee2-bc3d-517389368c77).)|  
 |[CMFCReBar::SetPaneAlignment](#setpanealignment)|(Przesłania [CBasePane::SetPaneAlignment](../../mfc/reference/cbasepane-class.md#setpanealignment).)|  
   
 ## <a name="remarks"></a>Uwagi  
- A `CMFCReBar` obiekt może zawierać wiele podrzędnych systemu Windows. W tym pola edycji, paski narzędzi i pola listy. Można zmienić rozmiar paska pomocniczego programowo, lub użytkownik może ręcznie zmienić rozmiar paska pomocniczego przez przeciągnięcie jego paska uchwytu. Można również ustawić tła obiektu paska pomocniczego do mapy bitowej wybranych przez użytkownika.  
+ Element `CMFCReBar` obiektu może zawierać wiele okien podrzędnych. W tym pola tekstowe, paski narzędzi i pól listy. Można zmienić rozmiar paska pomocniczego programowo lub użytkownik może ręcznie zmienić rozmiar paska pomocniczego przeciągając pasek uchwytu. Tło obiektu paska pomocniczego można również ustawić do mapy bitowej wybranych przez użytkownika.  
   
- Obiekt paska pomocniczego działa podobnie do obiektu paska narzędzi. Formantu paska pomocniczego może zawierać jeden lub więcej grup i każdej grupy mogą zawierać pasek uchwytu, mapy bitowej etykietę tekstową i okna podrzędnego.  
+ Obiekt paska pomocniczego działa podobnie jak obiekt paska narzędzi. Kontrolki paska pomocniczego może zawierać jeden lub więcej grup i każdej grupy mogą zawierać pasek uchwytu, mapy bitowej, etykietę tekstową i okna podrzędnego.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano sposób użycia różnych metod w `CMFCReBar` klasy. W przykładzie Tworzenie formantu paska pomocniczego i Dodaj do niej grupy. Funkcje poza pasmem jako wewnętrzne paska narzędzi. Następujący fragment kodu jest częścią [paska pomocniczego próbki](../../visual-cpp-samples.md).  
+ Poniższy przykład pokazuje, jak korzystać z różnych metod w `CMFCReBar` klasy. W przykładzie pokazano, jak utworzyć kontrolkę paska pomocniczego i dodawanie grupy do niej. Funkcje pasek narzędzi wewnętrznych. Ten fragment kodu jest częścią [paska pomocniczego próbkę](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_RebarTest#1](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_1.h)]  
 [!code-cpp[NVC_MFC_RebarTest#2](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_2.cpp)]  
@@ -92,7 +92,7 @@ class CMFCReBar : public CPane
  **Nagłówek:** afxRebar.h  
   
 ##  <a name="addbar"></a>  CMFCReBar::AddBar  
- Dodaje grupy do paska pomocniczego.  
+ Dodaje obiekt band do paska pomocniczego.  
   
 ```  
 BOOL AddBar(
@@ -111,16 +111,16 @@ BOOL AddBar(
   
 ### <a name="parameters"></a>Parametry  
  [in] [out] *pBar*  
- Wskaźnik do okna podrzędnego, który ma zostać wstawione do paska pomocniczego. Odwołuje się do obiektu musi mieć **ws_child —** styl okna.  
+ Wskaźnik do okna podrzędnego, który ma zostać wstawiony do paska pomocniczego. Przywoływany obiekt musi mieć **WS_CHILD** styl okna.  
   
  [in] *pszText*  
- Określa tekst wyświetlany na paska pomocniczego. Tekst nie jest częścią okna podrzędnego. Zamiast jest wyświetlany na paska pomocniczego, do samej siebie.  
+ Określa tekst do wyświetlenia na paska pomocniczego. Tekst nie jest częścią okna podrzędnego. Przeciwnie jest wyświetlany na paska pomocniczego, sam.  
   
  [in] [out] *pbmp*  
- Określa mapy bitowej, który będzie wyświetlany na tła paska pomocniczego.  
+ Określa mapy bitowej, który będzie wyświetlany w tle paska pomocniczego.  
   
  [in] *dwStyle*  
- Zawiera styl, aby zastosować do grupy. Pełną listę stylów poza pasmem, zobacz opis `fStyle` w [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) struktury w dokumentacji zestawu SDK systemu Windows.  
+ Zawiera style, które można zastosować do grupy. Aby uzyskać pełną listę style poza pasmem, zobacz opis `fStyle` w [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) struktury w dokumentacji zestawu Windows SDK.  
   
  [in] *clrFore*  
  Reprezentuje kolor pierwszego planu paska pomocniczego.  
@@ -129,10 +129,10 @@ BOOL AddBar(
  Reprezentuje kolor tła paska pomocniczego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli grupy zostało pomyślnie dodane do paska pomocniczego; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli pasmo zostało pomyślnie dodane do paska pomocniczego; w przeciwnym razie wartość FALSE.  
   
 ##  <a name="create"></a>  CMFCReBar::Create  
- Tworzy kontrolkę paska pomocniczego i dołącza go do [CMFCReBar](../../mfc/reference/cmfcrebar-class.md) obiektu.  
+ Tworzy kontrolkę paska pomocniczego i dołącza je do [CMFCReBar](../../mfc/reference/cmfcrebar-class.md) obiektu.  
   
 ```  
 BOOL Create(
@@ -144,34 +144,34 @@ BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  [in] [out] *pParentWnd*  
- Wskaźnik do okna nadrzędnego tego formantu paska pomocniczego.  
+ Wskaźnik do nadrzędnego okna tej kontrolki paska pomocniczego.  
   
  [in] *dwCtrlStyle*  
- Określa styl formantu paska pomocniczego. Styl wartość domyślna to **RBS_BANDBORDERS**, która wyświetla zawęzić wierszy w celu rozdzielenia sąsiadujących paskami w formancie paska pomocniczego. Lista prawidłowy style, zobacz [stylów formantu paska pomocniczego](http://msdn.microsoft.com/library/windows/desktop/bb774377) w dokumentacji zestawu SDK systemu Windows.  
+ Określa styl kontrolki paska pomocniczego. Domyślna wartość stylu jest **RBS_BANDBORDERS**, który wyświetla zawęzić zakres wierszy w celu rozdzielenia sąsiadujących paskami w formancie paska pomocniczego. Aby uzyskać listę prawidłowe style, zobacz [style kontrolki paska pomocniczego](http://msdn.microsoft.com/library/windows/desktop/bb774377) w dokumentacji zestawu Windows SDK.  
   
  [in] *dwStyle*  
- Styl okna w formancie paska pomocniczego. Lista prawidłowy style, zobacz [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+ Styl okna formantu paska pomocniczego. Aby uzyskać listę prawidłowe style, zobacz [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
  [in] *nID*  
- Identyfikator paska pomocniczego okna podrzędnego.  
+ Identyfikator okna podrzędnego paska pomocniczego  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli pomyślnie; utworzono paska pomocniczego w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli pomyślnie; utworzono paska pomocniczego w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="getrebarctrl"></a>  CMFCReBar::GetReBarCtrl  
- Zapewnia bezpośredni dostęp do `CReBarCtrl` podstawowej formantu wspólnego dla `CMFCReBar` obiektów.  
+ Zapewnia bezpośredni dostęp do `CReBarCtrl` bazowego formantu typowego dla `CMFCReBar` obiektów.  
   
 ```  
 CReBarCtrl& GetReBarCtrl() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Odwołanie do odpowiadającego `CReBarCtrl` obiektu.  
+ Odwołanie do bazowej `CReBarCtrl` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie tej metody, aby móc korzystać z funkcji systemu Windows paska pomocniczego wspólnej kontroli w przypadku dostosowywania z paska pomocniczego.  
+ Wywołaj tę metodę, aby móc korzystać z funkcji Windows paska pomocniczego wspólnej kontroli, dostosowując swoje paska pomocniczego.  
   
 ##  <a name="calcfixedlayout"></a>  CMFCReBar::CalcFixedLayout  
 
@@ -285,5 +285,5 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [Klasy](../../mfc/reference/mfc-classes.md)   
- [Crebarctrl — klasa](../../mfc/reference/crebarctrl-class.md)   
+ [Klasa CReBarCtrl](../../mfc/reference/crebarctrl-class.md)   
  [Klasa CPane](../../mfc/reference/cpane-class.md)

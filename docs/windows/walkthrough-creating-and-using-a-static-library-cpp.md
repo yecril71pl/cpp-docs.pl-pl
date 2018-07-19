@@ -1,7 +1,7 @@
 ---
 title: 'Wskazówki: Tworzenie i używanie biblioteki statycznej (C++) | Dokumentacja firmy Microsoft'
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 07/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -16,119 +16,114 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d136dae553f623cbd607a69ab710fa9c6fe6c91b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1bcbf5747b667615c96ced3488e16f2a8fc0ef2d
+ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33891584"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39034806"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>Wskazówki: tworzenie i używanie biblioteki statycznej (C++)
-Ten przewodnik krok po kroku przedstawiono sposób tworzenia biblioteki statycznej (pliku lib) do użytku z aplikacjami C++. Używanie biblioteki statycznej jest to dobry sposób na ponowne użycie kodu. Zamiast ponownego wykonywania tej samej procedury w każdej aplikacji, która wymaga funkcji, zapisze je jeden raz w bibliotece statycznej i odwoływanie się z aplikacji. Kod powiązany z biblioteką statyczną staje się częścią aplikacji — nie trzeba zainstalować inny plik do kodu.  
+Ten przewodnik krok po kroku przedstawiono sposób tworzenia biblioteki statycznej (plik .lib) do użytku z aplikacjami C++. Używanie biblioteki statycznej to doskonały sposób na ponowne użycie kodu. Zamiast ponownej implementacji tych samych procedur w każdej aplikacji, która wymaga funkcji, napisz je jeden raz w bibliotece statycznej, a następnie Odwołaj się do niego z aplikacji. Kod powiązany ze statyczneą biblioteką staje się częścią Twojej aplikacji — nie trzeba zainstalować innego pliku, aby użyć kodu.  
   
- Ten przewodnik obejmuje następujące zadania:  
+ W tym przewodniku opisano następujące zadania:  
   
--   [Tworzenie projektu biblioteki statycznej](#BKMK_CreateLibProject)  
+-   [Tworzenie projektu biblioteki statycznej](#CreateLibProject)  
   
--   [Dodawanie klasy z biblioteką statyczną](#BKMK_AddClassToLib)  
+-   [Dodawanie klasy z biblioteką statyczną](#AddClassToLib)  
   
--   [Tworzenie aplikacji konsoli C++, która odwołuje się do biblioteki statycznej](#BKMK_CreateAppToRefTheLib)  
+-   [Tworzenie aplikacji konsoli C++, który odwołuje się do biblioteki statycznej](#CreateAppToRefTheLib)  
   
--   [Korzystając z funkcji z biblioteki statycznej w aplikacji](#BKMK_UseLibInApp)  
+-   [Korzystając z funkcji z biblioteki statycznej w aplikacji](#UseLibInApp)  
   
--   [Aplikację](#BKMK_RunApp)  
+-   [Uruchamianie aplikacji](#RunApp)  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Po zrozumieniu podstaw języka C++.  
   
-##  <a name="BKMK_CreateLibProject"></a> Tworzenie projektu biblioteki statycznej  
+##  <a name="CreateLibProject"></a> Tworzenie projektu biblioteki statycznej  
   
 #### <a name="to-create-a-static-library-project"></a>Aby utworzyć projekt biblioteki statycznej  
   
-1.  Na pasku menu wybierz **pliku**, **nowy**, **projektu**.  
+1.  Na pasku menu wybierz **pliku**, **New**, **projektu**.  
   
-2.  W lewym okienku **nowy projekt** okna dialogowego rozwiń **zainstalowana**, **szablony**, **Visual C++**, a następnie wybierz  **Win32**.  
+2. W okienku po lewej stronie **nowy projekt** okna dialogowego rozwiń **zainstalowane, Visual C++**, a następnie wybierz pozycję **pulpitu Windows**.
   
-3.  W środkowym okienku wybierz **aplikacji konsoli Win32**.  
+3. W środkowym okienku wybierz **kreatora pulpitu Windows**.  
   
 4.  Określ nazwę dla projektu — na przykład **MathFuncsLib**— w **nazwa** pole. Określ nazwę dla rozwiązania — na przykład **StaticLibrary**— w **Nazwa rozwiązania** pole. Wybierz **OK** przycisku.  
   
-5.  Na **omówienie** strony **Kreator aplikacji Win32** oknie dialogowym wybierz **dalej** przycisku.  
+5. W obszarze **typ aplikacji**, wybierz opcję biblioteka statyczna (.lib).  
   
-6.  Na **ustawienia aplikacji** w obszarze **typu aplikacji**, wybierz pozycję **biblioteki statycznej.**  
+6. W obszarze **dodatkowe opcje**, usuń zaznaczenie **prekompilowany nagłówek** pole wyboru.
   
-7.  Na **ustawienia aplikacji** w obszarze **dodatkowe opcje**, wyczyść **Prekompilowanego nagłówka** pole wyboru.  
+7. Wybierz **OK** do tworzenia projektu.  
+ 
+##  <a name="AddClassToLib"></a> Dodawanie klasy z biblioteką statyczną  
   
-8.  Wybierz **Zakończ** przycisk, aby utworzyć projekt.  
+#### <a name="to-add-a-class-to-the-static-library"></a>Aby dodać klasę do biblioteki statycznej  
   
-##  <a name="BKMK_AddClassToLib"></a> Dodawanie klasy z biblioteką statyczną  
+1.  Aby utworzyć plik nagłówka dla nowej klasy, otwórz menu skrótów dla **MathFuncsLib** projektu w **Eksploratora rozwiązań**, a następnie wybierz **Dodaj**, **nowy element** . W **Dodaj nowy element** okno dialogowe, w okienku po lewej stronie w obszarze **Visual C++**, wybierz opcję **kodu**. W środkowym okienku wybierz **plik nagłówka (.h)**. Określ nazwę dla pliku nagłówka — na przykład **MathFuncsLib.h**— a następnie wybierz **Dodaj** przycisku. Pusty nagłówek pliku jest wyświetlany.  
   
-#### <a name="to-add-a-class-to-the-static-library"></a>Aby dodać klasę z biblioteką statyczną  
-  
-1.  Aby utworzyć plik nagłówka dla nowej klasy, otwórz menu skrótów dla **MathFuncsLib** projektu w **Eksploratora rozwiązań**, a następnie wybierz pozycję **Dodaj**, **nowy element** . W **Dodaj nowy element** okna dialogowego, w lewym okienku w obszarze **Visual C++**, wybierz pozycję **kod**. W środkowym okienku wybierz **plik nagłówków (.h)**. Określ nazwę pliku nagłówka — na przykład **MathFuncsLib.h**— a następnie wybierz pozycję **Dodaj** przycisku. Plik pusty nagłówek jest wyświetlany.  
-  
-2.  Dodaj klasę o nazwie **MyMathFuncs** celu typowych operacji matematycznych, takich jak dodawanie, odejmowanie mnożenia i dzielenia. Kod powinien wyglądać następująco:  
+2.  Dodaj klasę o nazwie **MyMathFuncs** można wykonywać typowe operacje matematyczne, takie jak dodawanie, odejmowanie, mnożenie i dzielenie. Kod powinien wyglądać następująco:  
   
      [!code-cpp[NVC_Walkthrough_Create_Static_Lib#100](../windows/codesnippet/CPP/walkthrough-creating-and-using-a-static-library-cpp_1.h)]  
   
-3.  Aby utworzyć plik źródłowy dla nowej klasy, otwórz menu skrótów **MathFuncsLib** projektu w **Eksploratora rozwiązań**, a następnie wybierz pozycję **Dodaj**, **nowy element** . W **Dodaj nowy element** okna dialogowego, w lewym okienku w obszarze **Visual C++**, wybierz pozycję **kod**. W środkowym okienku wybierz **plik C++ (.cpp)**. Określ nazwę pliku źródłowego — na przykład **MathFuncsLib.cpp**— a następnie wybierz pozycję **Dodaj** przycisku. Plik źródłowy puste, zostanie wyświetlony.  
+3.  Aby utworzyć plik źródłowy dla nowej klasy, otwórz menu skrótów dla **MathFuncsLib** projektu w **Eksploratora rozwiązań**, a następnie wybierz **Dodaj**, **nowy element** . W **Dodaj nowy element** okno dialogowe, w okienku po lewej stronie w obszarze **Visual C++**, wybierz opcję **kodu**. W środkowym okienku wybierz **plik C++ (.cpp)**. Określ nazwę dla pliku źródłowego — na przykład **MathFuncsLib.cpp**— a następnie wybierz **Dodaj** przycisku. Pusty nagłówek pliku źródłowego jest wyświetlany.  
   
-4.  Używanie tego pliku źródłowego do implementowania **MyMathFuncs**. Kod powinien wyglądać następująco:  
+4.  Użyj tego pliku źródłowego do implementowania **MyMathFuncs**. Kod powinien wyglądać następująco:  
   
      [!code-cpp[NVC_Walkthrough_Create_Static_Lib#110](../windows/codesnippet/CPP/walkthrough-creating-and-using-a-static-library-cpp_2.cpp)]  
   
-5.  Kompilowanie biblioteki statycznej, wybierając **kompilacji**, **Kompiluj rozwiązanie** na pasku menu. Spowoduje to utworzenie bibliotekę statyczną, które mogą być używane przez inne programy.  
+5.  Kompilowanie statycznej biblioteki łączy, wybierając **kompilacji**, **Kompiluj rozwiązanie** na pasku menu. Tworzy to bibliotekę statyczną, które mogą być używane przez inne programy.  
   
     > [!NOTE]
-    >  Podczas kompilowania w wierszu polecenia programu Visual Studio, należy utworzyć program w dwóch krokach. Najpierw uruchom **/ehsc /c cl MathFuncsLib.cpp** skompilować kod i Utwórz plik obiektu o nazwie **MathFuncsLib.obj**. ( **Cl** polecenia wywołuje kompilator Cl.exe i **/c** opcja określa Kompiluj bez konsolidacji. Aby uzyskać więcej informacji, zobacz [/c (Kompiluj bez konsolidacji)](../build/reference/c-compile-without-linking.md).) Po drugie, uruchom **lib MathFuncsLib.obj** link kodu i tworzenia biblioteki statycznej **MathFuncsLib.lib**. ( **Lib** Library Manager Lib.exe wywołuje polecenie. Aby uzyskać więcej informacji, zobacz [odwołanie do biblioteki LIB](../build/reference/lib-reference.md).)  
+    >  W przypadku tworzenia w wierszu polecenia programu Visual Studio, należy utworzyć program w dwóch krokach. Najpierw uruchom **/ehsc /c cl MathFuncsLib.cpp** skompilować kod i utworzyć plik obiektu o nazwie **MathFuncsLib.obj**. ( **Cl** polecenia wywołuje kompilator Cl.exe i **/c** opcja określa kompilacji bez konsolidacji. Aby uzyskać więcej informacji, zobacz [/c (Kompiluj bez konsolidacji)](../build/reference/c-compile-without-linking.md).) Po drugie, uruchom **lib MathFuncsLib.obj** połączyć kod i utworzyć statyczne biblioteki **MathFuncsLib.lib**. ( **Lib** olecenie wywołuje Library Manager, Lib.exe. Aby uzyskać więcej informacji, zobacz [odwołanie do biblioteki LIB](../build/reference/lib-reference.md).)  
   
-##  <a name="BKMK_CreateAppToRefTheLib"></a> Tworzenie aplikacji konsoli C++, która odwołuje się do biblioteki statycznej  
+##  <a name="CreateAppToRefTheLib"></a> Tworzenie aplikacji konsoli C++, który odwołuje się do biblioteki statycznej  
   
-#### <a name="to-create-a-c-console-app-that-references-the-static-library"></a>Aby utworzyć aplikację konsoli języka C++, która odwołuje się do biblioteki statycznej  
+#### <a name="to-create-a-c-console-app-that-references-the-static-library"></a>Aby utworzyć aplikację konsoli C++, który odwołuje się do biblioteki statycznej  
   
-1.  Na pasku menu wybierz **pliku**, **nowy**, **projektu**.  
+1.  Na pasku menu wybierz **pliku**, **New**, **projektu**.  
   
-2.  W lewym okienku w obszarze **Visual C++**, wybierz pozycję **Win32**.  
+2. W okienku po lewej stronie **nowy projekt** okna dialogowego rozwiń **zainstalowane, Visual C++**, a następnie wybierz pozycję **pulpitu Windows**.  
+
+3. W środkowym okienku wybierz **kreatora pulpitu Windows**.  
   
-3.  W środkowym okienku wybierz **aplikacji konsoli Win32**.  
+4.  Określ nazwę dla projektu — na przykład **MyExecRefsLib**— w **nazwa** pole. Z listy rozwijanej liście obok **rozwiązania**, wybierz opcję **Dodaj do rozwiązania**. Spowoduje to dodanie nowego projektu do rozwiązania, które zawiera bibliotekę statyczną. Wybierz **OK** przycisku.  
+5. W obszarze **typ aplikacji**, wybierz opcję **Aplikacja konsoli (.exe)**.
+
+6. W obszarze **opcje Additioal**, usuń zaznaczenie **prekompilowany nagłówek** pole wyboru.
+
+7. Wybierz **OK** do tworzenia projektu.  
   
-4.  Określ nazwę dla projektu — na przykład **MyExecRefsLib**— w **nazwa** pole. W polu listy rozwijanej obok pozycji listy **rozwiązania**, wybierz pozycję **dodać do rozwiązania**. Spowoduje to dodanie nowego projektu do rozwiązania, które zawiera biblioteki statycznej. Wybierz **OK** przycisku.  
+##  <a name="UseLibInApp"></a> Korzystając z funkcji z biblioteki statycznej w aplikacji  
   
-5.  Na **omówienie** strony **Kreator aplikacji Win32** oknie dialogowym wybierz **dalej** przycisku.  
+#### <a name="to-use-the-functionality-from-the-static-library-in-the-app"></a>Aby użyć funkcjonalności z biblioteki statycznej w aplikacji  
   
-6.  Na **ustawienia aplikacji** w obszarze **typu aplikacji**, wybierz pozycję **aplikacja Konsolowa**.  
+1.  Po utworzeniu aplikacji konsoli pusty program zostanie utworzony. Nazwa pliku źródłowego jest taka sama jak nazwa, która została wybrana wcześniej. W tym przykładzie jest on nazwany **MyExecRefsLib.cpp**.  
   
-7.  Na **ustawienia aplikacji** w obszarze **dodatkowe opcje**, wyczyść **Prekompilowanego nagłówka** pole wyboru.  
+2.  Przed użyciem procedury matematyczne w bibliotece statycznej, należy to odwołać. Aby to zrobić, otwórz menu skrótów dla projektu MyExecRefsLib w **Eksploratora rozwiązań**, a następnie wybierz **dodać, odwołać**.  
   
-8.  Wybierz **Zakończ** przycisk, aby utworzyć projekt.  
+3.  **Dodaj odwołanie** okno dialogowe wyświetla listę bibliotek, których można się odwołać. **Projektów** zawiera listę wszystkich projektów w bieżącym rozwiązaniu i wszystkie biblioteki w nich zawarte. Na **projektów** zaznacz **MathFuncsLib** pole wyboru, a następnie wybierz **OK** przycisku.  
   
-##  <a name="BKMK_UseLibInApp"></a> Korzystając z funkcji z biblioteki statycznej w aplikacji  
+4.  Odwołania do **MathFuncsLib.h** pliku nagłówkowym, musisz zmodyfikować zawartą ścieżkę katalogów. W **stron właściwości** okno dialogowe **MyExecRefsLib**, rozwiń węzeł **właściwości konfiguracji** węzła, rozwiń węzeł **C/C++** węzeł, i następnie wybierz pozycję **ogólne**. Obok pozycji **dodatkowe katalogi dołączenia**, określ ścieżkę **MathFuncsLib** katalogu lub wyszukaj go.  
   
-#### <a name="to-use-the-functionality-from-the-static-library-in-the-app"></a>Aby korzystać z funkcji z biblioteki statycznej w aplikacji  
+     Aby wyszukać ścieżkę katalogu, Otwórz listę rozwijaną listę wartości właściwości, a następnie wybierz **Edytuj**. W **dodatkowe katalogi dołączenia** okno dialogowe, w polu tekstowym zaznacz pusty wiersz, a następnie wybierz przycisk wielokropka (**...** ) na końcu wiersza. W **wybierz katalog** okno dialogowe, wybierz **MathFuncsLib** katalogu, a następnie wybierz **wybierz Folder** przycisk, aby zapisać swój wybór i zamknąć okno dialogowe. W **dodatkowe katalogi dołączenia** okna dialogowego wybierz **OK** przycisku, a następnie w polu **stron właściwości** okna dialogowego wybierz **OK**przycisk, aby zapisać zmiany w projekcie.  
   
-1.  Po utworzeniu aplikacji konsoli programu pusty jest tworzona. Nazwa pliku źródłowego jest taka sama jak nazwa, które wcześniej wybrano. W tym przykładzie o nazwie **MyExecRefsLib.cpp**.  
-  
-2.  Przed użyciem procedury matematyczne w bibliotece statycznej, musi odwoływać się go. Aby to zrobić, otwórz menu skrótów **MyExecRefsLib** projektu w **Eksploratora rozwiązań**, a następnie wybierz pozycję **odwołania**. W **stron MyExecRefsLibProperty** okna dialogowego rozwiń **wspólne właściwości** węzła, wybierz opcję **Framework i odwołania**, a następnie wybierz **Dodaj Nowe odwołanie** przycisku. Aby uzyskać więcej informacji na temat **odwołania** okno dialogowe, zobacz [Dodawanie odwołań](../ide/adding-references-in-visual-cpp-projects.md).  
-  
-3.  **Dodaj odwołanie** okno dialogowe zawiera listę bibliotek, których można się odwołać. **Projekty** kartę Lista projektów w bieżącym rozwiązaniu i żadnych bibliotek, które zawierają. Na **projekty** wybierz opcję **MathFuncsLib** pole wyboru, a następnie wybierz pozycję **OK** przycisku.  
-  
-4.  Aby odwołać się do **MathFuncsLib.h** pliku nagłówka, należy zmodyfikować katalogi uwzględniona ścieżka. W **strony właściwości** okno dialogowe **MyExecRefsLib**, rozwiń węzeł **właściwości konfiguracji** węzła, rozwiń węzeł **C/C++** węzeł, i następnie wybierz **ogólne**. Obok pozycji **dodatkowe katalogi dołączenia**, podaj ścieżkę pliku **MathFuncsLib** katalogu lub wyszukaj go.  
-  
-     Aby przeglądać w poszukiwaniu ścieżki katalogu, otwarcie listy rozwijanej wartości właściwości, a następnie wybierz **Edytuj**. W **dodatkowe katalogi dołączenia** okno dialogowe, w polu tekstowym wybierz pusty wiersz, a następnie wybierz przycisk wielokropka (**...** ) na końcu linii. W **wybierz katalog** okno dialogowe, wybierz **MathFuncsLib** katalogu, a następnie wybierz **wybierz Folder** przycisk, aby zapisać wybrane opcje i zamknąć okno dialogowe. W **dodatkowe katalogi dołączenia** okna dialogowego wybierz **OK** przycisk, a następnie w **strony właściwości** okno dialogowe Wybierz **OK**przycisk, aby zapisać zmiany w projekcie.  
-  
-5.  Można teraz używać **MyMathFuncs** klasy w tej aplikacji. Aby to zrobić, Zamień zawartość **MyExecRefsLib.cpp** o tym kodzie:  
+5.  Teraz możesz używać **MyMathFuncs** klasy w tej aplikacji. Aby to zrobić, Zastąp zawartość **MyExecRefsLib.cpp** przy użyciu tego kodu:  
   
      [!code-cpp[NVC_Walkthrough_Create_Static_Lib#120](../windows/codesnippet/CPP/walkthrough-creating-and-using-a-static-library-cpp_3.cpp)]  
   
 6.  Tworzenie pliku wykonywalnego, wybierając **kompilacji**, **Kompiluj rozwiązanie** na pasku menu.  
   
-##  <a name="BKMK_RunApp"></a> Aplikację  
+##  <a name="RunApp"></a> Uruchamianie aplikacji  
   
 #### <a name="to-run-the-app"></a>Aby uruchomić aplikację  
   
-1.  Upewnij się, że **MyExecRefsLib** został wybrany jako domyślny projekt, otwierając menu skrótów **MyExecRefsLib** w **Eksploratora rozwiązań**, a następnie wybierając  **Ustaw jako projekt startowy**.  
+1.  Upewnij się, że **MyExecRefsLib** jest wybrany jako domyślny projekt przez otwarcie menu skrótów dla **MyExecRefsLib** w **Solution Explorer**, a następnie wybierając  **Ustaw jako projekt startowy**.  
   
-2.  Aby uruchomić projekt, na pasku menu, wybierz **debugowania**, **uruchomić bez debugowania**. Wynik powinien przypominać poniższe:  
+2.  Aby uruchomić projekt, na pasku menu, wybierz opcję **debugowania**, **Rozpocznij bez debugowania**. Wynik powinien przypominać poniższe:  
   
     ```Output  
     a + b = 106.4  

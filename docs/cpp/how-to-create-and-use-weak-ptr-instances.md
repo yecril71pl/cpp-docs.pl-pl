@@ -1,7 +1,7 @@
 ---
 title: 'Porady: Tworzenie wystąpień weak_ptr i korzystanie | Dokumentacja firmy Microsoft'
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 07/12/2018
 ms.technology:
 - cpp-language
 ms.topic: conceptual
@@ -12,28 +12,83 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8fbbf9d3b427c2451fafe0fae93a531dfd45ad8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 73b70a68226be14b7e99afe125b3dcd8b6784601
+ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415148"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39034819"
 ---
 # <a name="how-to-create-and-use-weakptr-instances"></a>Porady: tworzenie wystąpień weak_ptr i korzystanie z nich
-Czasami muszą być przechowywane sposobem uzyskania dostępu do obiektu źródłowego obiektu `shared_ptr` bez spowodowania, że liczba odwołań do jest zwiększany. Zwykle ta sytuacja występuje, gdy masz cykliczne odwołanie pomiędzy `shared_ptr` wystąpień.  
-  
- Projekt najlepiej jest uniknąć udostępnionego własność wskaźników zawsze, gdy użytkownik może. Jednak jeśli należy udostępnić własność `shared_ptr` wystąpienia, należy unikać odwołania cykliczne między nimi. Gdy odwołania cykliczne są nieuniknione lub nawet preferowanym jakiegoś powodu, użyj `weak_ptr` aby zapewnić co najmniej jeden właścicieli słabe odwołanie do innego `shared_ptr`. Za pomocą `weak_ptr`, można utworzyć `shared_ptr` dołączaną do istniejącego zestawu powiązanych wystąpień, ale tylko wtedy, jeśli podstawowy zasobów pamięci jest nadal ważny. A `weak_ptr` sam nie uczestniczy w liczenie odwołań i w związku z tym go nie można zapobiec liczba odwołań do zera. Można jednak użyć `weak_ptr` spróbować uzyskać nową kopię `shared_ptr` z którego został zainicjowany. Jeśli została już usunięta pamięć, **bad_weak_ptr —** wyjątku. Jeśli ilość pamięci jest nadal ważny, nowy wskaźnik udostępnionego zwiększa liczbę odwołania i gwarantuje, że pamięć będzie nieprawidłowa tak długo, jak `shared_ptr` zmiennej pozostaje w zakresie.  
-  
+Czasami obiekt musi przechowywać sposób dostępu do podstawowego obiektu z obiektu `shared_ptr` bez zwiększania licznika odwołań rośnie. Zazwyczaj ta sytuacja występuje kiedy istnieją cykliczne odwołania między `shared_ptr` wystąpień.  
+
+ Projekt najlepiej jest unikać wspólnej własności wskaźników, kiedy to tylko możliwe. Jednakże jeśli musisz współużytkować własność `shared_ptr` wystąpień, unikaj odwołań cyklicznych między nimi. Gdy odwołania cykliczne są nieuniknione lub preferowane jakiegoś powodu, użyj `weak_ptr` zapewnienie jednego lub większej ilości właścicieli słabe odwołanie do innego `shared_ptr`. Za pomocą `weak_ptr`, możesz utworzyć `shared_ptr` dołącza do istniejącego zestawu wystąpień powiązanych, ale tylko wtedy, jeśli zasób pamięci podstawowej jest nadal ważny. A `weak_ptr` sam nie uczestniczy w zliczaniu odwołań i dlatego jego nie uniemożliwia licznik odwołań odwołańdo zera. Można jednak użyć `weak_ptr` by spróbować uzyskać nową kopię `shared_ptr` za pomocą którego został zainicjowany. Jeśli pamięć już została usunięta, `bad_weak_ptr` wyjątku. Jeśli pamięć jest nadal ważny, nowy wspólny wskaźnik zwiększa liczbę odwołań i gwarantuje, że pamięć będzie obowiązywać tak długo, jak `shared_ptr` zmiennej pozostaje w zakresie.  
+
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu pokazuje przypadku gdzie `weak_ptr` służy do zapewnienia prawidłowego usuwania obiektów, które mają zależności cykliczne. Jako przykład należy zbadać, założono, że została ona utworzona tylko wtedy, gdy zostały uznane za rozwiązań alternatywnych. `Controller` Reprezentować niektórych aspektów procesu maszyny i działają niezależnie. Każdy kontroler musi być w stanie zapytać o stan innych kontrolerów w dowolnym momencie, a każda z nich zawiera prywatnej `vector<weak_ptr<Controller>>` w tym celu. Każdy wektor zawiera odwołanie cykliczne i w związku z tym `weak_ptr` wystąpienia są używane zamiast `shared_ptr`.  
-  
+ Poniższy przykład kodu pokazuje przypadek gdzie `weak_ptr` służy do zapewnienia prawidłowego usuwania obiektów, które mają zależności cykliczne. Jak analizując przykład założono, że został on utworzony tylko wtedy, gdy zostały rozważone alternatywne rozwiązania. `Controller` Obiekty reprezentują niektóre aspekty procesu maszynowego i działają one niezależnie. Każdy kontroler musi być w stanie zbadać stan innych kontrolerów w dowolnym momencie, a każdy z nich zawiera prywatny `vector<weak_ptr<Controller>>` do tego celu. Każdy wektor zawiera odwołanie cykliczne, dlatego `weak_ptr` wystąpienia są używane zamiast `shared_ptr`.  
+
  [!code-cpp[stl_smart_pointers#222](../cpp/codesnippet/CPP/how-to-create-and-use-weak-ptr-instances_1.cpp)]  
-  
+
 ```Output  
-Creating Controller0Creating Controller1Creating Controller2Creating Controller3Creating Controller4push_back to v[0]: 1push_back to v[0]: 2push_back to v[0]: 3push_back to v[0]: 4push_back to v[1]: 0push_back to v[1]: 2push_back to v[1]: 3push_back to v[1]: 4push_back to v[2]: 0push_back to v[2]: 1push_back to v[2]: 3push_back to v[2]: 4push_back to v[3]: 0push_back to v[3]: 1push_back to v[3]: 2push_back to v[3]: 4push_back to v[4]: 0push_back to v[4]: 1push_back to v[4]: 2push_back to v[4]: 3use_count = 1Status of 1 = OnStatus of 2 = OnStatus of 3 = OnStatus of 4 = Onuse_count = 1Status of 0 = OnStatus of 2 = OnStatus of 3 = OnStatus of 4 = Onuse_count = 1Status of 0 = OnStatus of 1 = OnStatus of 3 = OnStatus of 4 = Onuse_count = 1Status of 0 = OnStatus of 1 = OnStatus of 2 = OnStatus of 4 = Onuse_count = 1Status of 0 = OnStatus of 1 = OnStatus of 2 = OnStatus of 3 = OnDestroying Controller0Destroying Controller1Destroying Controller2Destroying Controller3Destroying Controller4Press any key  
+Creating Controller0  
+Creating Controller1  
+Creating Controller2  
+Creating Controller3  
+Creating Controller4  
+push_back to v[0]: 1  
+push_back to v[0]: 2  
+push_back to v[0]: 3  
+push_back to v[0]: 4  
+push_back to v[1]: 0  
+push_back to v[1]: 2  
+push_back to v[1]: 3  
+push_back to v[1]: 4  
+push_back to v[2]: 0  
+push_back to v[2]: 1  
+push_back to v[2]: 3  
+push_back to v[2]: 4  
+push_back to v[3]: 0  
+push_back to v[3]: 1  
+push_back to v[3]: 2  
+push_back to v[3]: 4  
+push_back to v[4]: 0  
+push_back to v[4]: 1  
+push_back to v[4]: 2  
+push_back to v[4]: 3
+use_count = 1  
+Status of 1 = On  
+Status of 2 = On  
+Status of 3 = On  
+Status of 4 = On  
+use_count = 1  
+Status of 0 = On  
+Status of 2 = On  
+Status of 3 = On  
+Status of 4 = On  
+use_count = 1  
+Status of 0 = On  
+Status of 1 = On  
+Status of 3 = On  
+Status of 4 = On  
+use_count = 1  
+Status of 0 = O  
+nStatus of 1 = On  
+Status of 2 = On  
+Status of 4 = On  
+use_count = 1  
+Status of 0 = On  
+Status of 1 = On  
+Status of 2 = On  
+Status of 3 = On  
+Destroying Controller0  
+Destroying Controller1  
+Destroying Controller2  
+Destroying Controller3  
+Destroying Controller4  
+Press any key  
 ```  
-  
- Jako eksperyment, zmodyfikuj wektor `others` jako `vector<shared_ptr<Controller>>`i w danych wyjściowych, zwróć uwagę, że destruktory nie są wywoływane podczas `TestRun` zwraca.  
-  
+
+ Jako eksperyment, należy zmodyfikować wektor `others` jako `vector<shared_ptr<Controller>>`, a następnie w danych wyjściowych, zwróć uwagę, że destruktory nie są wywoływane gdy `TestRun` zwraca.  
+
 ## <a name="see-also"></a>Zobacz też  
  [Wskaźniki inteligentne](../cpp/smart-pointers-modern-cpp.md)

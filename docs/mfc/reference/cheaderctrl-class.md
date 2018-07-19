@@ -1,5 +1,5 @@
 ---
-title: Cheaderctrl — klasa | Dokumentacja firmy Microsoft
+title: Klasa CHeaderCtrl | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -74,15 +74,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e765241029c0380dce7b28fa9fb4f9c84410d515
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: faa96bdb0471a4ff6a93006225a9492429d18bd2
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041961"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028281"
 ---
-# <a name="cheaderctrl-class"></a>Cheaderctrl — klasa
-Udostępnia funkcje formantu nagłówka wspólne systemu Windows.  
+# <a name="cheaderctrl-class"></a>Klasa CHeaderCtrl
+Oferuje funkcje formantu typowego nagłówka Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -103,52 +103,52 @@ class CHeaderCtrl : public CWnd
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[CHeaderCtrl::ClearAllFilters](#clearallfilters)|Usuwa wszystkie filtry dla formantu nagłówka.|  
-|[CHeaderCtrl::ClearFilter](#clearfilter)|Czyści filtr dla kontrolki nagłówka.|  
-|[CHeaderCtrl::Create](#create)|Tworzy kontrolkę nagłówka i dołącza go do `CHeaderCtrl` obiektu.|  
+|[CHeaderCtrl::ClearFilter](#clearfilter)|Usuwa filtr dla kontrolki nagłówka.|  
+|[CHeaderCtrl::Create](#create)|Tworzy kontrolki nagłówka i dołącza je do `CHeaderCtrl` obiektu.|  
 |[CHeaderCtrl::CreateDragImage](#createdragimage)|Tworzy przezroczyste wersję obrazu elementu w formancie nagłówka.|  
-|[CHeaderCtrl::CreateEx](#createex)|Tworzy kontrolkę nagłówka w określonym stylu rozszerzonej systemu Windows i dołącza go do `CListCtrl` obiektu.|  
+|[CHeaderCtrl::CreateEx](#createex)|Tworzy kontrolki nagłówka przy użyciu określonego stylów rozszerzonej Windows i dołącza je do `CListCtrl` obiektu.|  
 |[CHeaderCtrl::DeleteItem](#deleteitem)|Usuwa element z formantem nagłówka.|  
-|[CHeaderCtrl::DrawItem](#drawitem)|Pobiera określony element formantu nagłówka.|  
-|[CHeaderCtrl::EditFilter](#editfilter)|Uruchamia edycji określony filtr formantu nagłówka.|  
-|[CHeaderCtrl::GetBitmapMargin](#getbitmapmargin)|Pobiera szerokość marginesów mapy bitowej w formancie nagłówka.|  
-|[CHeaderCtrl::GetFocusedItem](#getfocuseditem)|Pobiera identyfikator elementu w bieżącym formantu nagłówka, który ma fokus.|  
-|[CHeaderCtrl::GetImageList](#getimagelist)|Pobiera dojście listy obrazów, który jest używany do rysowania elementy nagłówka w formancie nagłówka.|  
+|[CHeaderCtrl::DrawItem](#drawitem)|Rysuje określony element kontrolki nagłówka.|  
+|[CHeaderCtrl::EditFilter](#editfilter)|Uruchamia określony filtr kontrolki nagłówka do edycji.|  
+|[CHeaderCtrl::GetBitmapMargin](#getbitmapmargin)|Pobiera szerokość na marginesie mapy bitowej w formancie nagłówka.|  
+|[CHeaderCtrl::GetFocusedItem](#getfocuseditem)|Pobiera identyfikator elementu w bieżącym kontrolki nagłówka, który ma fokus.|  
+|[CHeaderCtrl::GetImageList](#getimagelist)|Pobiera uchwyt listy obrazów, który jest używany do rysowania elementy nagłówka w formancie nagłówka.|  
 |[CHeaderCtrl::GetItem](#getitem)|Pobiera informacje o elemencie w formancie nagłówka.|  
 |[CHeaderCtrl::GetItemCount](#getitemcount)|Pobiera liczbę elementów w formancie nagłówka.|  
-|[CHeaderCtrl::GetItemDropDownRect](#getitemdropdownrect)|Pobiera dane prostokąt ograniczający określonego przycisku rozwijanego w formancie nagłówka.|  
-|[CHeaderCtrl::GetItemRect](#getitemrect)|Pobiera prostokąt ograniczający dla danego elementu w formancie nagłówka.|  
-|[CHeaderCtrl::GetOrderArray](#getorderarray)|Pobiera kolejność elementów w formancie nagłówka od lewej do prawej.|  
-|[CHeaderCtrl::GetOverflowRect](#getoverflowrect)|Pobiera prostokąt ograniczający przycisku przeciążenia dla bieżącego formantu nagłówka.|  
-|[CHeaderCtrl::HitTest](#hittest)|Określa, który element nagłówka, znajduje się w określonym punkcie.|  
+|[CHeaderCtrl::GetItemDropDownRect](#getitemdropdownrect)|Pobiera prostokąt otaczający dotycząca określonego przycisk listy rozwijanej w formancie nagłówka.|  
+|[CHeaderCtrl::GetItemRect](#getitemrect)|Pobiera prostokąt otaczający dla danego elementu w formancie nagłówka.|  
+|[CHeaderCtrl::GetOrderArray](#getorderarray)|Pobiera kolejność od lewej do prawej strony elementów w formancie nagłówka.|  
+|[CHeaderCtrl::GetOverflowRect](#getoverflowrect)|Pobiera bieżący kontrolki nagłówka prostokąt otaczający przycisku przepełnienia.|  
+|[CHeaderCtrl::HitTest](#hittest)|Określa, który element nagłówka, znajduje się w określonym momencie.|  
 |[CHeaderCtrl::InsertItem](#insertitem)|Wstawia nowy element do formantu nagłówka.|  
 |[CHeaderCtrl::Layout](#layout)|Pobiera rozmiar i położenie formantu nagłówka w obrębie danego prostokąta.|  
-|[CHeaderCtrl::OrderToIndex](#ordertoindex)|Pobiera wartość indeksu dla elementu na podstawie jego kolejności w formancie nagłówka.|  
-|[CHeaderCtrl::SetBitmapMargin](#setbitmapmargin)|Ustawia szerokość marginesów mapy bitowej w formancie nagłówka.|  
-|[CHeaderCtrl::SetFilterChangeTimeout](#setfilterchangetimeout)|Ustawia limit czasu między czasem zmiany odbywa się w atrybuty filtru i delegowania `HDN_FILTERCHANGE` powiadomień.|  
-|[CHeaderCtrl::SetFocusedItem](#setfocuseditem)|Ustawia element określonego nagłówka w formancie nagłówka bieżącego fokus.|  
-|[CHeaderCtrl::SetHotDivider](#sethotdivider)|Zmiany linię podziału między elementy nagłówka w celu wskazania ręcznego przeciągnij i upuść element nagłówka.|  
-|[CHeaderCtrl::SetImageList](#setimagelist)|Przypisuje listy obrazów formantu nagłówka.|  
+|[CHeaderCtrl::OrderToIndex](#ordertoindex)|Pobiera wartość indeksu dla elementu na podstawie jego zamówienia w formancie nagłówka.|  
+|[CHeaderCtrl::SetBitmapMargin](#setbitmapmargin)|Określa szerokość mapy bitowej na marginesie w formancie nagłówka.|  
+|[CHeaderCtrl::SetFilterChangeTimeout](#setfilterchangetimeout)|Ustawia limit czasu między czasu zmiany odbywa się w atrybutach filtrów i delegowania `HDN_FILTERCHANGE` powiadomień.|  
+|[CHeaderCtrl::SetFocusedItem](#setfocuseditem)|Ustawia element określonego nagłówka w formancie nagłówka bieżący fokus.|  
+|[CHeaderCtrl::SetHotDivider](#sethotdivider)|Zmiany, linię podziału między elementy nagłówka w celu wskazania ręcznego przeciągania i upuszczania elementu nagłówka.|  
+|[CHeaderCtrl::SetImageList](#setimagelist)|Przypisuje listy obrazów kontrolki nagłówka.|  
 |[CHeaderCtrl::SetItem](#setitem)|Ustawia atrybuty określonego elementu w formancie nagłówka.|  
-|[CHeaderCtrl::SetOrderArray](#setorderarray)|Ustawia kolejność od lewej do prawej elementów w formancie nagłówka.|  
+|[CHeaderCtrl::SetOrderArray](#setorderarray)|Ustawia kolejność od lewej do prawej strony elementów w formancie nagłówka.|  
   
 ## <a name="remarks"></a>Uwagi  
- Kontrolki nagłówka jest oknem, który zazwyczaj znajduje się nad zestawem kolumn tekst lub liczby. Zawiera tytuł dla każdej kolumny, a można podzielić na części. Użytkownik może przeciągać separatorów, które rozdzielić można ustawić szerokość każdej kolumny. Ilustracja formantu nagłówka, zobacz [kontrolki nagłówka](http://msdn.microsoft.com/library/windows/desktop/bb775238).  
+ Kontrolki nagłówka o jest oknem które zazwyczaj jest umieszczana powyżej kolumny tekstu lub liczb. Zawiera on tytuł dla każdej kolumny, a można podzielić na części. Użytkownik może przeciągać separatorów, których części, aby ustawić szerokość każdej kolumny. Ilustracja kontrolki nagłówka znajduje się [kontrolki nagłówka](http://msdn.microsoft.com/library/windows/desktop/bb775238).  
   
- Ten formant (i w związku z tym `CHeaderCtrl` klasy) jest dostępne tylko dla programów uruchamianych w wersji Windows 95/98 i Windows NT 3.51 lub nowszej.  
+ Ta kontrolka (i w związku z tym `CHeaderCtrl` klasy) jest dostępna tylko dla programów, które działają w wersji Windows 95/98 i Windows NT 3.51 lub nowszej.  
   
- Funkcje dodane dla formantów standardowych systemu Windows 95/Internet Explorer w wersji 4.0 jest następująca:  
+ Funkcje dodane do wspólnych formantów Windows 95/Internet Explorer 4.0 obejmuje następujące funkcje:  
   
 -   Nagłówek elementu niestandardowego porządkowania.  
   
--   Element nagłówka przeciągnij i upuść, do zmiany kolejności elementów nagłówka. Użyj `HDS_DRAGDROP` stylów podczas tworzenia `CHeaderCtrl` obiektu.  
+-   Element nagłówka przeciągnij i upuść, do zmiany kolejności elementów nagłówka. Hds_dragdrop — styl są używane podczas tworzenia `CHeaderCtrl` obiektu.  
   
--   Tekst kolumny nagłówka stale widoczny podczas zmiany rozmiaru kolumny. Użyj `HDS_FULLDRAG` stylów podczas tworzenia `CHeaderCtrl` obiektu.  
+-   Tekst kolumny nagłówek jest stale wyświetlane podczas zmiany rozmiaru kolumn. Styl HDS_FULLDRAG są używane podczas tworzenia `CHeaderCtrl` obiektu.  
   
--   Nagłówek aktywne śledzenie, co powoduje elementu nagłówka, gdy wskaźnik myszy jest umieszczony nad nim. Użyj `HDS_HOTTRACK` stylów podczas tworzenia `CHeaderCtrl` obiektu.  
+-   Nagłówek aktywne śledzenie, co powoduje elementu nagłówka, gdy wskaźnik myszy znajduje się nad nią. Styl HDS_HOTTRACK są używane podczas tworzenia `CHeaderCtrl` obiektu.  
   
--   Obsługa listy obrazów. Elementy nagłówka może zawierać obrazy przechowywane w `CImageList` obiekt lub tekst.  
+-   Obsługa listy obrazów. Elementy nagłówka może zawierać obrazów przechowywanych w `CImageList` obiektu lub tekstu.  
   
- Aby uzyskać więcej informacji o korzystaniu z `CHeaderCtrl`, zobacz [formanty](../../mfc/controls-mfc.md) i [przy użyciu CHeaderCtrl](../../mfc/using-cheaderctrl.md).  
+ Aby uzyskać więcej informacji o korzystaniu z `CHeaderCtrl`, zobacz [kontrolki](../../mfc/controls-mfc.md) i [korzystanie z CHeaderCtrl](../../mfc/using-cheaderctrl.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -180,16 +180,16 @@ BOOL ClearAllFilters();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
+ Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda implementuje zachowanie komunikatu Win32 [HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306) przy użyciu kolumny wartości -1, zgodnie z opisem w zestawie Windows SDK.  
+ Ta metoda implementuje zachowanie komunikatu Win32 [HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306) z wartością kolumny-1, zgodnie z opisem w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CHeaderCtrl#2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_2.cpp)]  
   
 ##  <a name="clearfilter"></a>  CHeaderCtrl::ClearFilter  
- Czyści filtr dla kontrolki nagłówka.  
+ Usuwa filtr dla kontrolki nagłówka.  
   
 ```  
 BOOL ClearFilter(int nColumn);
@@ -197,10 +197,10 @@ BOOL ClearFilter(int nColumn);
   
 ### <a name="parameters"></a>Parametry  
  *nColumn*  
- Wartość kolumny wskazujący, który filtr, aby wyczyścić.  
+ Wartość kolumny, wskazujące, której filtr, aby wyczyścić.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
+ Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda implementuje zachowanie komunikatu Win32 [HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306), zgodnie z opisem w zestawie Windows SDK.  
@@ -209,7 +209,7 @@ BOOL ClearFilter(int nColumn);
  [!code-cpp[NVC_MFC_CHeaderCtrl#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_3.cpp)]  
   
 ##  <a name="create"></a>  CHeaderCtrl::Create  
- Tworzy kontrolkę nagłówka i dołącza go do `CHeaderCtrl` obiektu.  
+ Tworzy kontrolki nagłówka i dołącza je do `CHeaderCtrl` obiektu.  
   
 ```  
 virtual BOOL Create(
@@ -221,56 +221,56 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parametry  
  *dwStyle*  
- Określa styl nagłówka formantu. Opis elementu style formantu nagłówka, zobacz [stylów formantu nagłówka](http://msdn.microsoft.com/library/windows/desktop/bb775241) w zestawie Windows SDK.  
+ Określa styl kontrolki nagłówka. Aby uzyskać opis style kontrolki nagłówka, zobacz [style kontrolki nagłówka](http://msdn.microsoft.com/library/windows/desktop/bb775241) w zestawie Windows SDK.  
   
  *Rect*  
- Określa rozmiar i położenie formantu nagłówka. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
+ Określa rozmiar i położenie kontrolki nagłówka. Może być albo [CRect](../../atl-mfc-shared/reference/crect-class.md) obiektu lub [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury.  
   
  *pParentWnd*  
- Określa okno nadrzędne kontrolki nagłówka, zwykle `CDialog`. Nie może być **NULL**.  
+ Określa okno nadrzędne kontrolki nagłówka, zwykle `CDialog`. Nie może być równa NULL.  
   
  *nID*  
- Określa identyfikator formantu nagłówka.  
+ Określa identyfikator kontrolki nagłówka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli inicjowanie zakończyło się pomyślnie; w przeciwnym razie wartość zero.  
+ Wartość różną od zera, jeśli inicjowanie się powiodła. w przeciwnym razie wartość zero.  
   
 ### <a name="remarks"></a>Uwagi  
- Możesz utworzyć `CHeaderCtrl` obiektu w dwóch krokach. Najpierw należy wywołać konstruktora, a następnie wywołać `Create`, która tworzy kontrolkę nagłówka i dołącza go do `CHeaderCtrl` obiektu.  
+ Konstruowanie `CHeaderCtrl` obiektu w dwóch krokach. Po pierwsze wywołanie konstruktora, a następnie wywołać `Create`, który tworzy kontrolki nagłówka i dołącza go do `CHeaderCtrl` obiektu.  
   
- Oprócz stylów formantu nagłówka, można użyć następujących najczęściej używane style kontrolki do określenia sposobu formantu nagłówka umieszcza i samodzielnie zmienia rozmiar (zobacz [najczęściej używane style formantu](http://msdn.microsoft.com/library/windows/desktop/bb775498) Aby uzyskać więcej informacji):  
+ Oprócz style kontrolki nagłówka, można użyć następujących najczęściej używane style kontrolki do określenia pozycji i zmienia rozmiar samego formantu nagłówka (zobacz [najczęściej używane style kontrolki](http://msdn.microsoft.com/library/windows/desktop/bb775498) Aby uzyskać więcej informacji):  
   
-- `CCS_BOTTOM` Powoduje, że formant umieść się w dolnej części obszaru klienckiego okna nadrzędnego i ustawia szerokość, która jest taka sama jak nadrzędnego szerokość okna.  
+- CCS_BOTTOM powoduje, że formant do samej pozycji w dolnej części obszaru klienckiego okna nadrzędnego i ustawia szerokość, która jest taka sama jak nadrzędnego szerokość okna.  
   
-- `CCS_NODIVIDER` Wyróżnij dwa pikseli zapobiega rysowana w górnej części kontrolki.  
+- Zapobiega CCS_NODIVIDER pikseli dwóch zaznacz z możliwością rysowania na górze kontrolki.  
   
-- `CCS_NOMOVEY` Powoduje, że formant Zmienianie rozmiaru i przenoszenie się w poziomie, ale nie w pionie, w odpowiedzi na `WM_SIZE` wiadomości. Jeśli `CCS_NORESIZE` styl jest używana, nie ma zastosowania tego stylu. Kontrolki nagłówka domyślnie mają ten styl.  
+- CCS_NOMOVEY powoduje, że formant zmienić rozmiar i Przenieś sam w poziomie, ale nie w pionie, w odpowiedzi na wiadomość WM_SIZE. Jeśli styl CCS_NORESIZE ten styl nie ma zastosowania. Kontrolki nagłówka mają ten styl domyślnie.  
   
-- `CCS_NOPARENTALIGN` Formant uniemożliwia automatyczne przeniesienie do góry lub u dołu okna nadrzędnego. Zamiast tego formant zachowuje jej położenie w obrębie okna nadrzędnego, niezależnie od zmian do rozmiaru okna nadrzędnego. Jeśli `CCS_TOP` lub `CCS_BOTTOM` styl jest również używana, wysokość jest dostosowywana do ustawień domyślnych, ale pozycji i szerokość pozostają niezmienione.  
+- CCS_NOPARENTALIGN uniemożliwia jego automatyczne przejście do góry lub u dołu okna nadrzędnego. Zamiast tego formant zachowuje jego położenie w oknie nadrzędnym, niezależnie od zmian do rozmiaru okna nadrzędnego. Jeśli styl CCS_TOP lub CCS_BOTTOM jest również używany, wysokość jest dostosowana do domyślnego, ale pozycji i szerokość pozostają niezmienione.  
   
-- `CCS_NORESIZE` Zapobiega przy użyciu domyślnej szerokości i wysokości, ustawiając jego początkowy rozmiar lub nowy rozmiar formantu. Zamiast tego formantu używa szerokość i wysokość określony w żądaniu tworzenia lub zmiany rozmiaru.  
+- CCS_NORESIZE zapobiega przy użyciu domyślnej szerokości i wysokości, ustawiając jego początkowy rozmiar lub nowy rozmiar kontrolki. Zamiast tego formantu używa szerokość i wysokość określony w żądaniu do tworzenia lub zmiany rozmiaru.  
   
-- `CCS_TOP` Powoduje, że formant umieść się u góry obszaru klienckiego okna nadrzędnego i ustawia szerokość, która jest taka sama jak nadrzędnego szerokość okna.  
+- CCS_TOP powoduje, że formant do samej pozycji w górnej części obszaru klienckiego okna nadrzędnego i ustawia szerokość, która jest taka sama jak nadrzędnego szerokość okna.  
   
- Można również zastosować następujące style okna do formantu nagłówka (zobacz [Style okna](../../mfc/reference/styles-used-by-mfc.md#window-styles) Aby uzyskać więcej informacji):  
+ Następujące style okna ramowego również można zastosować do formantu nagłówka (zobacz [Style okna ramowego](../../mfc/reference/styles-used-by-mfc.md#window-styles) Aby uzyskać więcej informacji):  
   
-- **Ws_child —** tworzy okno podrzędne. Nie można używać z `WS_POPUP` stylu.  
+- WS_CHILD tworzy okno podrzędne. Nie można używać ze stylem WS_POPUP.  
   
-- **Ws_visible —** tworzy okna, które jest początkowo widoczne.  
+- WS_VISIBLE tworzy okno, które jest początkowo widoczne.  
   
-- **Ws_disabled —** tworzy okno, które jest początkowo wyłączone.  
+- WS_DISABLED tworzy okno, które jest początkowo wyłączone.  
   
-- **Ws_group —** Określa pierwszą kontrolkę grupy formantów, w których użytkownik może przechodzić z jednego formantu do drugiego za pomocą klawiszy strzałek. Wszystkie formanty zdefiniowane z **ws_group —** styl po pierwszą kontrolkę należą do tej samej grupy. Następnego formantu z **ws_group —** styl kończy się grupie styl i uruchamia następnej grupy (oznacza to, że jedna grupa kończy się którym rozpoczyna się następne).  
+- WS_GROUP Określa pierwszy formant grupy formantów, w których użytkownik może przechodzić z jednego formantu do drugiego za pomocą klawiszy strzałek. Wszystkie formanty zdefiniowane przy użyciu stylu WS_GROUP po pierwszej kontroli należą do tej samej grupy. Następny formant ze stylem WS_GROUP kończy grupy stylów i rozpoczyna następną grupę (oznacza to, że jedna grupa kończy się gdzie rozpoczyna się następna).  
   
-- **Ws_tabstop —** określa jeden z dowolną liczbę formantów za pomocą których użytkownik może przenieść za pomocą klawisza TAB. Klawisz TAB przenosi użytkownika do następnego formantu określony przez **ws_tabstop —** stylu.  
+- WS_TABSTOP określa jeden z wielu formantów, za pomocą których użytkownik może poruszać się używając klawisza TAB. Klawisz TAB przesuwa użytkownika do następnej kontrolki określonej przez styl WS_TABSTOP.  
   
- Jeśli chcesz style rozszerzonej systemu windows za pomocą formantu wywołanie [CreateEx](#createex) zamiast `Create`.  
+ Style rozszerzone systemu windows za pomocą formantu należy wywołać [CreateEx](#createex) zamiast `Create`.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CHeaderCtrl#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_4.cpp)]  
   
 ##  <a name="createex"></a>  CHeaderCtrl::CreateEx  
- Tworzy kontrolkę (okno podrzędne) i skojarz ją z `CHeaderCtrl` obiektu.  
+ Tworzy kontrolkę (okno podrzędne) i powiąż ją z `CHeaderCtrl` obiektu.  
   
 ```  
 virtual BOOL CreateEx(
@@ -283,13 +283,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parametry  
  *dwExStyle*  
- Określa styl rozszerzony formantu tworzona. Aby uzyskać listę rozszerzone style systemu Windows, zobacz *dwExStyle* parametr [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ Określa styl rozszerzony kontrolki tworzona. Aby uzyskać listę rozszerzone style Windows, zobacz *dwExStyle* parametr [elementu CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
   
  *dwStyle*  
- Styl formantu nagłówka. Opis elementu style formantu nagłówka, zobacz [stylów formantu nagłówka](http://msdn.microsoft.com/library/windows/desktop/bb775241) w zestawie Windows SDK. Zobacz [Utwórz](#create) listę dodatkowych style.  
+ Styl kontrolki nagłówka. Aby uzyskać opis style kontrolki nagłówka, zobacz [style kontrolki nagłówka](http://msdn.microsoft.com/library/windows/desktop/bb775241) w zestawie Windows SDK. Zobacz [Utwórz](#create) listę dodatkowe style.  
   
  *Rect*  
- Odwołanie do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujące rozmiar i położenie okna, które ma zostać utworzony w współrzędne klienta *pParentWnd*.  
+ Odwołanie do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury opisujących rozmiar i położenie okna, można utworzyć klienta współrzędne *pParentWnd*.  
   
  *pParentWnd*  
  Wskaźnik do okna, które jest elementem nadrzędnym formantu.  
@@ -298,10 +298,10 @@ virtual BOOL CreateEx(
  Identyfikator formantu okna podrzędnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj `CreateEx` zamiast `Create` dotyczyć rozszerzone style systemu Windows, określone przez wstępu rozszerzonego stylu Windows **WS_EX_**.  
+ Użyj `CreateEx` zamiast `Create` do zastosowania rozszerzone style Windows, określonego przez tekst wstępny rozszerzonego stylu Windows **WS_EX_**.  
   
 ##  <a name="createdragimage"></a>  CHeaderCtrl::CreateDragImage  
  Tworzy przezroczyste wersję obrazu elementu w formancie nagłówka.  
@@ -312,15 +312,15 @@ CImageList* CreateDragImage(int nIndex);
   
 ### <a name="parameters"></a>Parametry  
  *nIndex*  
- Liczony od zera indeks elementu w formancie nagłówka. Obraz przypisany do tego elementu jest podstawą przezroczystego obrazu.  
+ Liczony od zera indeks elementu w formancie nagłówka. Obraz przypisane do tego elementu jest podstawą przezroczystego obrazu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do [CImageList](../../mfc/reference/cimagelist-class.md) obiektu w przypadku powodzenia; w przeciwnym razie **NULL**. Zwracana lista zawiera tylko jeden obraz.  
+ Wskaźnik do [CImageList](../../mfc/reference/cimagelist-class.md) obiektu, jeśli operacja się powiedzie; w przeciwnym razie wartość NULL. Zwracana lista zawiera tylko jeden obraz.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [HDM_CREATEDRAGIMAGE](http://msdn.microsoft.com/library/windows/desktop/bb775308), zgodnie z opisem w zestawie Windows SDK. Znajduje się on do obsługi nagłówka elementu przeciągania i upuszczania.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [HDM_CREATEDRAGIMAGE](http://msdn.microsoft.com/library/windows/desktop/bb775308), zgodnie z opisem w zestawie Windows SDK. Jest ona udostępniana do obsługuje nagłówka towaru przeciągania i upuszczania.  
   
- `CImageList` Obiektu, do którego punktów zwrócony wskaźnik jest obiektem tymczasowym i zostanie usunięty z następnego przetwarzania czas bezczynności.  
+ `CImageList` Obiekt, do którego punktów zwrócony wskaźnik jest obiektem tymczasowym i zostanie usunięty z następnego przetwarzania czas bezczynności (%).  
   
 ##  <a name="deleteitem"></a>  CHeaderCtrl::DeleteItem  
  Usuwa element z formantem nagłówka.  
@@ -330,17 +330,17 @@ BOOL DeleteItem(int nPos);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *nPos*  
+ *npos —*  
  Określa liczony od zera indeks elementu do usunięcia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CHeaderCtrl#5](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_5.cpp)]  
   
 ##  <a name="drawitem"></a>  CHeaderCtrl::DrawItem  
- Wywoływane przez platformę, gdy visual aspekt rysowania przez właściciela nagłówka kontroli zmian.  
+ Metoda wywoływana przez platformę, gdy zmieni się wizualny aspekt zmian kontrolki nagłówka rysowane przez właściciela.  
   
 ```  
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
@@ -348,20 +348,20 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
 ### <a name="parameters"></a>Parametry  
  *lpDrawItemStruct*  
- Wskaźnik do [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) opisujące elementu, który ma zostać narysowany struktury.  
+ Wskaźnik do [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) struktura zawierająca opis elementu do narysowania.  
   
 ### <a name="remarks"></a>Uwagi  
- **ItemAction** członkiem `DRAWITEMSTRUCT` struktury definiuje rysowania akcję, która ma zostać wykonane.  
+ `itemAction` Członkiem `DRAWITEMSTRUCT` struktury definiuje rysowania akcję, która ma zostać wykonane.  
   
- Domyślnie ta funkcja członkowska nie działa. Przesłonić tę funkcję elementu członkowskiego, aby zaimplementować rysunku rysowania przez właściciela `CHeaderCtrl` obiektu.  
+ Domyślnie ta funkcja elementu członkowskiego nic nie robi. Zastąpienie tej funkcji elementu członkowskiego do zaimplementowania rysunku do rysowania przez właściciela `CHeaderCtrl` obiektu.  
   
- Aplikacja powinna przywrócenie wszystkich obiektów grafiki urządzenia interfejsu (GDI), wybrane kontekst wyświetlania dostarczane w *lpDrawItemStruct* przed ten element członkowski kończy funkcji.  
+ Aplikacja powinna przywrócenie wszystkich obiektów grafiki urządzenia interface (GDI), wybrany dla kontekstu wyświetlana podana w *lpDrawItemStruct* przed ten element członkowski funkcja kończy.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CHeaderCtrl#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_6.cpp)]  
   
 ##  <a name="editfilter"></a>  CHeaderCtrl::EditFilter  
- Rozpoczyna edycję określony filtr formantu nagłówka.  
+ Rozpoczyna edycję określony filtr kontrolki nagłówka.  
   
 ```  
 BOOL EditFilter(
@@ -371,15 +371,15 @@ BOOL EditFilter(
   
 ### <a name="parameters"></a>Parametry  
  *nColumn*  
- Kolumny do edycji.  
+ Kolumna do edycji.  
   
  *bDiscardChanges*  
- Wartość, która określa sposób obsługi użytkownika do edycji zmiany, jeśli użytkownik jest w trakcie edycji filtru podczas [HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312) jest wysyłany komunikat.  
+ Wartość, która określa sposób obsługi użytkownika przez edytowanie zmian, jeśli użytkownik jest w trakcie edycji filtru po [HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312) zostanie wysłana wiadomość.  
   
- Określ `true` odrzucić zmiany wprowadzone przez użytkownika, lub `false` celu zaakceptowania zmian wprowadzonych przez użytkownika.  
+ Określ wartość TRUE, aby odrzucić zmiany wprowadzone przez użytkownika, lub FAŁSZ, aby zatwierdzić zmiany wprowadzone przez użytkownika.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
+ Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda implementuje zachowanie komunikatu Win32 [HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312), zgodnie z opisem w zestawie Windows SDK.  
@@ -388,23 +388,23 @@ BOOL EditFilter(
  [!code-cpp[NVC_MFC_CHeaderCtrl#7](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_7.cpp)]  
   
 ##  <a name="getbitmapmargin"></a>  CHeaderCtrl::GetBitmapMargin  
- Pobiera szerokość marginesów mapy bitowej w formancie nagłówka.  
+ Pobiera szerokość na marginesie mapy bitowej w formancie nagłówka.  
   
 ```  
 int GetBitmapMargin() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Szerokość marginesów mapy bitowej w pikselach.  
+ Szerokość marginesu mapy bitowej w pikselach.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [HDM_GETBITMAPMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb775314), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [HDM_GETBITMAPMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb775314), zgodnie z opisem w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CHeaderCtrl#8](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_8.cpp)]  
   
 ##  <a name="getfocuseditem"></a>  CHeaderCtrl::GetFocusedItem  
- Pobiera indeks elementu, który ma fokus w bieżącym formantu nagłówka.  
+ Pobiera indeks elementu, który ma fokus w bieżącym kontrolki nagłówka.  
   
 ```  
 int GetFocusedItem() const;  
@@ -414,20 +414,20 @@ int GetFocusedItem() const;
  Liczony od zera indeks elementu nagłówka, który ma fokus.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [HDM_GETFOCUSEDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775330) komunikat, który jest opisany w zestawie SDK systemu Windows.  
+ Ta metoda wysyła [HDM_GETFOCUSEDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775330) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykładowy kod definiuje zmienną, `m_headerCtrl`, która jest używane do dostępu bieżącego formantu nagłówka. Ta zmienna jest używana w następnym przykładzie.  
+ Poniższy kod definiuje zmienną, `m_headerCtrl`, to znaczy umożliwiają dostęp do bieżącego kontrolki nagłówka. Ta zmienna jest używana w następnym przykładzie.  
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykład kodu pokazuje `SetFocusedItem` i `GetFocusedItem` metody. W starszej sekcji kodu utworzyliśmy kontrolki nagłówka o pięć kolumn. Jednak możesz przeciągnąć separator kolumn tak, aby ta kolumna nie jest widoczne. W poniższym przykładzie ustawia i następnie potwierdza nagłówek ostatniej kolumny jako element fokus.  
+ Poniższy przykład kodu demonstruje `SetFocusedItem` i `GetFocusedItem` metody. W starszych sekcji kodu utworzyliśmy kontrolki nagłówka z pięciu kolumnach. Jednak można przeciągnąć separator kolumn, tak, aby ta kolumna nie jest widoczny. Poniższy przykład ustawia i następnie potwierdza nagłówek ostatniej kolumny jako element fokus.  
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]  
   
 ##  <a name="getimagelist"></a>  CHeaderCtrl::GetImageList  
- Pobiera dojście listy obrazów, który jest używany do rysowania elementy nagłówka w formancie nagłówka.  
+ Pobiera uchwyt listy obrazów, który jest używany do rysowania elementy nagłówka w formancie nagłówka.  
   
 ```  
 CImageList* GetImageList() const;  
@@ -437,13 +437,13 @@ CImageList* GetImageList() const;
  Wskaźnik do [CImageList](../../mfc/reference/cimagelist-class.md) obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [HDM_GETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb775332), zgodnie z opisem w zestawie Windows SDK. `CImageList` Obiektu, do którego punktów zwrócony wskaźnik jest obiektem tymczasowym i zostanie usunięty z następnego przetwarzania czas bezczynności.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [HDM_GETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb775332), zgodnie z opisem w zestawie Windows SDK. `CImageList` Obiekt, do którego punktów zwrócony wskaźnik jest obiektem tymczasowym i zostanie usunięty z następnego przetwarzania czas bezczynności (%).  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CHeaderCtrl#9](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_11.cpp)]  
   
 ##  <a name="getitem"></a>  CHeaderCtrl::GetItem  
- Pobiera informacje o elementach formantu nagłówka.  
+ Pobiera informacje o elementach kontrolki nagłówka.  
   
 ```  
 BOOL GetItem(
@@ -452,14 +452,14 @@ BOOL GetItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *nPos*  
+ *npos —*  
  Określa liczony od zera indeks elementu do pobrania.  
   
  *pHeaderItem*  
- Wskaźnik do [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) struktury, która odbiera nowy element. Ta struktura jest używany z `InsertItem` i `SetItem` funkcji elementów członkowskich. Ustaw flagi **maski** element upewnij się, że wartości w odpowiednie elementy są poprawnie wypełnione po powrocie. Jeśli **maski** element jest ustawiony na wartość zero, wartości w innych elementach struktury nie mają znaczenia.  
+ Wskaźnik do [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) strukturę, która otrzymuje nowy element. Ta struktura jest używana z `InsertItem` i `SetItem` funkcji elementów członkowskich. Flagi, ustaw w `mask` element upewnij się, że wartości w odpowiednich elementów są poprawnie wypełnione po powrocie. Jeśli `mask` element jest ustawiony na wartość zero, wartości w innych elementach struktury są bez znaczenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CHeaderCtrl#10](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_12.cpp)]  
@@ -472,13 +472,13 @@ int GetItemCount() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczba elementów formantu nagłówka w przypadku powodzenia; w przeciwnym razie wartość - 1.  
+ Liczba elementy kontrolki nagłówka, jeśli to się powiedzie; w przeciwnym razie - 1.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CHeaderCtrl::DeleteItem](#deleteitem).  
   
 ##  <a name="getitemdropdownrect"></a>  CHeaderCtrl::GetItemDropDownRect  
- Pobiera element nagłówka w formancie nagłówka bieżący prostokąt ograniczający przycisku rozwijanego.  
+ Pobiera element nagłówka w formancie nagłówka bieżący prostokąt otaczający przycisk listy rozwijanej.  
   
 ```  
 BOOL GetItemDropDownRect(
@@ -490,27 +490,27 @@ BOOL GetItemDropDownRect(
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[in] *towaru*|Liczony od zera indeks elementu nagłówka o stylu `HDF_SPLITBUTTON`. Aby uzyskać więcej informacji, zobacz `fmt` członkiem [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) struktury.|  
-|[out] *lprect —*|Wskaźnik do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury do odbierania informacji prostokąt ograniczający.|  
+|[in] *towaru*|Liczony od zera indeks elementu nagłówek, którego styl jest HDF_SPLITBUTTON. Aby uzyskać więcej informacji, zobacz `fmt` członkiem [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) struktury.|  
+|[out] *lprect —*|Wskaźnik do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury do uzyskiwania informacji prostokąt otaczający.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli ta funkcja zakończy się pomyślnie; w przeciwnym razie `false`.  
+ Wartość TRUE, jeśli funkcja się powiedzie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [HDM_GETITEMDROPDOWNRECT](http://msdn.microsoft.com/library/windows/desktop/bb775339) komunikat, który jest opisany w zestawie SDK systemu Windows.  
+ Ta metoda wysyła [HDM_GETITEMDROPDOWNRECT](http://msdn.microsoft.com/library/windows/desktop/bb775339) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykładowy kod definiuje zmienną, `m_headerCtrl`, która jest używane do dostępu bieżącego formantu nagłówka. Ta zmienna jest używana w następnym przykładzie.  
+ Poniższy kod definiuje zmienną, `m_headerCtrl`, to znaczy umożliwiają dostęp do bieżącego kontrolki nagłówka. Ta zmienna jest używana w następnym przykładzie.  
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykład kodu pokazuje `GetItemDropDownRect` metody. W starszej sekcji kodu utworzyliśmy kontrolki nagłówka o pięć kolumn. Poniższy przykładowy kod rysuje prostokąt 3D wokół lokalizację, w pierwszej kolumnie, które jest zastrzeżone dla przycisku rozwijanego nagłówka.  
+ Poniższy przykład kodu demonstruje `GetItemDropDownRect` metody. W starszych sekcji kodu utworzyliśmy kontrolki nagłówka z pięciu kolumnach. Poniższy kod rysuje prostokąt 3D wokół lokalizację, w pierwszej kolumnie FF zarezerwowanego dla nagłówka przycisk listy rozwijanej.  
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_13.cpp)]  
   
 ##  <a name="getitemrect"></a>  CHeaderCtrl::GetItemRect  
- Pobiera prostokąt ograniczający dla danego elementu w formancie nagłówka.  
+ Pobiera prostokąt otaczający dla danego elementu w formancie nagłówka.  
   
 ```  
 BOOL GetItemRect(
@@ -523,16 +523,16 @@ BOOL GetItemRect(
  Liczony od zera indeks elementu kontrolki nagłówka.  
   
  *lprect —*  
- Wskaźnik do adresu [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, który odbiera dane prostokąt ograniczający.  
+ Wskaźnik na adres [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która otrzymuje informacje prostokąt otaczający.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda implementuje zachowanie komunikatu Win32 [HDM_GETITEMRECT](http://msdn.microsoft.com/library/windows/desktop/bb775341), zgodnie z opisem w zestawie Windows SDK.  
   
 ##  <a name="getorderarray"></a>  CHeaderCtrl::GetOrderArray  
- Pobiera kolejność elementów w formancie nagłówka od lewej do prawej.  
+ Pobiera kolejność od lewej do prawej strony elementów w formancie nagłówka.  
   
 ```  
 BOOL GetOrderArray(
@@ -542,22 +542,22 @@ BOOL GetOrderArray(
   
 ### <a name="parameters"></a>Parametry  
  *piArray*  
- Wskaźnik do adres buforu, który odbiera wartości indeksu elementów w formancie nagłówka, w kolejności, w jakiej widnieją od lewej do prawej.  
+ Wskaźnik na adres buforu, który otrzymuje wartości indeksu elementów w formancie nagłówka, w kolejności, w którym są wyświetlane od lewej do prawej.  
   
  *iCount*  
  Liczba elementów do formantu nagłówka. Musi być nieujemna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [HDM_GETORDERARRAY](http://msdn.microsoft.com/library/windows/desktop/bb775343), zgodnie z opisem w zestawie Windows SDK. Znajduje się on do obsługi kolejność elementów nagłówka.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [HDM_GETORDERARRAY](http://msdn.microsoft.com/library/windows/desktop/bb775343), zgodnie z opisem w zestawie Windows SDK. Jest ona udostępniana do obsługi porządkowanie elementu nagłówka.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CHeaderCtrl#11](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_14.cpp)]  
   
 ##  <a name="getoverflowrect"></a>  CHeaderCtrl::GetOverflowRect  
- Pobiera prostokąt ograniczający bieżącego nagłówka formantu przycisku przeciążenia.  
+ Pobiera prostokąt otaczający przycisku przepełnienia bieżącego formantu nagłówka.  
   
 ```  
 BOOL GetOverflowRect(LPRECT lpRect) const;  
@@ -567,28 +567,28 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[out] *lprect —*|Wskaźnik do [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struktury, który odbiera dane prostokąt ograniczający.|  
+|[out] *lprect —*|Wskaźnik do [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) strukturę, która otrzymuje informacje prostokąt otaczający.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli ta funkcja zakończy się pomyślnie; w przeciwnym razie `false`.  
+ Wartość TRUE, jeśli funkcja się powiedzie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Formant nagłówka zawiera więcej elementów niż można wyświetlić jednocześnie, formantu wyświetlić przycisku przeciążenia, które jest przewijane elementów, które nie są widoczne. Formant nagłówka musi mieć `HDS_OVERFLOW` i `HDF_SPLITBUTTON` style, aby wyświetlić przycisku przeciążenia. Prostokąt ograniczający umieszcza przycisku przeciążenia i istnieje tylko wtedy, gdy jest wyświetlana w przycisku przeciążenia. Aby uzyskać więcej informacji, zobacz [stylów formantu nagłówka](http://msdn.microsoft.com/library/windows/desktop/bb775241).  
+ Jeśli kontrolki nagłówka zawiera więcej elementów niż można wyświetlić jednocześnie, formant może wyświetlić przycisku przeciążenia, który przewija do elementów, które nie są widoczne. Kontrolki nagłówka musi mieć style HDS_OVERFLOW i HDF_SPLITBUTTON, aby wyświetlić przycisk przepełnienia. Prostokąt otaczający otacza przycisku przeciążenia i istnieje tylko wtedy, gdy jest wyświetlany przycisk przepełnienia. Aby uzyskać więcej informacji, zobacz [style kontrolki nagłówka](http://msdn.microsoft.com/library/windows/desktop/bb775241).  
   
- Ta metoda wysyła [HDM_GETOVERFLOWRECT](http://msdn.microsoft.com/library/windows/desktop/bb775345) komunikat, który jest opisany w zestawie SDK systemu Windows.  
+ Ta metoda wysyła [HDM_GETOVERFLOWRECT](http://msdn.microsoft.com/library/windows/desktop/bb775345) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykładowy kod definiuje zmienną, `m_headerCtrl`, która jest używane do dostępu bieżącego formantu nagłówka. Ta zmienna jest używana w następnym przykładzie.  
+ Poniższy kod definiuje zmienną, `m_headerCtrl`, to znaczy umożliwiają dostęp do bieżącego kontrolki nagłówka. Ta zmienna jest używana w następnym przykładzie.  
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykład kodu pokazuje `GetOverflowRect` metody. W starszej sekcji kodu utworzyliśmy kontrolki nagłówka o pięć kolumn. Jednak możesz przeciągnąć separator kolumn tak, aby ta kolumna nie jest widoczne. Jeśli niektóre kolumny nie są widoczne, formantu nagłówka rysuje przycisku przeciążenia. Poniższy przykładowy kod rysuje prostokąt 3D wokół lokalizację przycisku przeciążenia.  
+ Poniższy przykład kodu demonstruje `GetOverflowRect` metody. W starszych sekcji kodu utworzyliśmy kontrolki nagłówka z pięciu kolumnach. Jednak można przeciągnąć separator kolumn, tak, aby ta kolumna nie jest widoczny. Jeśli niektóre kolumny nie są widoczne, kontrolki nagłówka rysuje przycisku przepełnienia. Poniższy kod rysuje prostokąt 3D wokół lokalizacji przycisku przepełnienia.  
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_15.cpp)]  
   
 ##  <a name="hittest"></a>  CHeaderCtrl::HitTest  
- Określa, który element nagłówka, znajduje się w określonym punkcie.  
+ Określa, który element nagłówka, znajduje się w określonym momencie.  
   
 ```  
 int HitTest(LPHDHITTESTINFO* phdhti);
@@ -598,21 +598,21 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|[w, out] *phdhti*|Wskaźnik do [HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245) struktury, która określa punkt do testowania i odbiera wyniki testu.|  
+|[out w] *phdhti*|Wskaźnik do [HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245) struktura, która określa punkt do testowania i otrzymuje wyniki testu.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczony od zera indeks elementu nagłówka, jeśli istnieje w określonej pozycji; w przeciwnym razie wartość -1.  
+ Liczony od zera indeks elementu nagłówka, jeśli istnieje w określonej pozycji; w przeciwnym razie, wartość -1.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [HDM_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb775349) komunikat, który jest opisany w zestawie SDK systemu Windows.  
+ Ta metoda wysyła [HDM_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb775349) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykładowy kod definiuje zmienną, `m_headerCtrl`, która jest używane do dostępu bieżącego formantu nagłówka. Ta zmienna jest używana w następnym przykładzie.  
+ Poniższy kod definiuje zmienną, `m_headerCtrl`, to znaczy umożliwiają dostęp do bieżącego kontrolki nagłówka. Ta zmienna jest używana w następnym przykładzie.  
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykład kodu pokazuje `HitTest` metody. W sekcji wcześniej w tym przykładzie kodu utworzyliśmy kontrolki nagłówka o pięć kolumn. Jednak możesz przeciągnąć separator kolumn tak, aby ta kolumna nie jest widoczne. W tym przykładzie indeks kolumny raportów, jeśli jest on widoczny, -1, jeśli kolumna nie jest widoczna.  
+ Poniższy przykład kodu demonstruje `HitTest` metody. W wcześniejszej sekcji tego przykładu kodu utworzyliśmy kontrolki nagłówka o pięciu kolumnach. Jednak można przeciągnąć separator kolumn, tak, aby ta kolumna nie jest widoczny. W tym przykładzie zgłasza indeks kolumny, jeśli nie jest widoczny, -1, jeśli kolumna nie jest widoczna.  
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_16.cpp)]  
   
@@ -626,14 +626,14 @@ int InsertItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *nPos*  
- Liczony od zera indeks elementu do wstawienia. Jeśli wartość wynosi zero, element są wstawiane na początku nagłówka formantu. Jeśli wartość jest większa niż wartość maksymalna, element są wstawiane na końcu formantu nagłówka.  
+ *npos —*  
+ Liczony od zera indeks elementu, który ma zostać wstawiony. Jeśli wartość wynosi zero, element zostanie wstawiony na początku formantu nagłówka. Jeśli wartość jest większa niż wartość maksymalna, element zostanie wstawiony na końcu kontrolki nagłówka.  
   
  *phdi*  
- Wskaźnik do [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) strukturę, która zawiera informacje o elemencie do wstawienia.  
+ Wskaźnik do [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) strukturę, która zawiera informacje na temat elementu, który ma zostać wstawiony.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Indeks nowego elementu w przypadku powodzenia; w przeciwnym razie wartość - 1.  
+ Indeks nowy element, jeśli to się powiedzie; w przeciwnym razie - 1.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CHeaderCtrl#12](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_17.cpp)]  
@@ -647,19 +647,19 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
   
 ### <a name="parameters"></a>Parametry  
  *pHeaderLayout*  
- Wskaźnik do [HDLAYOUT](http://msdn.microsoft.com/library/windows/desktop/bb775249) struktury, która zawiera informacje używane do definiowania rozmiar i położenie formantu nagłówka.  
+ Wskaźnik do [HDLAYOUT](http://msdn.microsoft.com/library/windows/desktop/bb775249) struktury, która zawiera informacje używane do ustawiania rozmiaru i położenia kontrolki nagłówka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja służy do określania odpowiednich wymiarów dla nowego nagłówka formantu zajmować danego prostokąt.  
+ Ta funkcja jest używana do określania odpowiednich wymiarów dla nowego formantu nagłówka, który jest zajmować danego prostokąta.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CHeaderCtrl#13](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_18.cpp)]  
   
 ##  <a name="ordertoindex"></a>  CHeaderCtrl::OrderToIndex  
- Pobiera wartość indeksu dla elementu na podstawie jego kolejności w formancie nagłówka.  
+ Pobiera wartość indeksu dla elementu na podstawie jego zamówienia w formancie nagłówka.  
   
 ```  
 int OrderToIndex(int nOrder) const;  
@@ -667,16 +667,16 @@ int OrderToIndex(int nOrder) const;
   
 ### <a name="parameters"></a>Parametry  
  *nOrder*  
- Liczony od zera kolejność element jest wyświetlany w formancie nagłówka od lewej do prawej.  
+ Kolejność liczony od zera element jest wyświetlany w formancie nagłówka od lewej do prawej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Indeks elementu, na podstawie jego kolejności w formancie nagłówka. Indeks zlicza od lewej do prawej, począwszy od 0.  
+ Indeks elementu, w oparciu o ich kolejność w formancie nagłówka. Indeks jest liczona od lewej do prawej, począwszy od 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska implementuje zachowanie makra Win32 [HDM_ORDERTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb775355), zgodnie z opisem w zestawie Windows SDK. Znajduje się on do obsługi kolejność elementów nagłówka.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie makra Win32 [HDM_ORDERTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb775355), zgodnie z opisem w zestawie Windows SDK. Jest ona udostępniana do obsługi porządkowanie elementu nagłówka.  
   
 ##  <a name="setbitmapmargin"></a>  CHeaderCtrl::SetBitmapMargin  
- Ustawia szerokość marginesów mapy bitowej w formancie nagłówka.  
+ Określa szerokość mapy bitowej na marginesie w formancie nagłówka.  
   
 ```  
 int SetBitmapMargin(int nWidth);
@@ -684,19 +684,19 @@ int SetBitmapMargin(int nWidth);
   
 ### <a name="parameters"></a>Parametry  
  *nWidth*  
- Szerokość określone w pikselach margines wokół mapy bitowej w ramach istniejącego formantu nagłówka.  
+ Szerokość w pikselach marginesu, który otacza mapy bitowej w ramach istniejącej kontrolki nagłówka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Szerokość marginesów mapy bitowej w pikselach.  
+ Szerokość marginesu mapy bitowej w pikselach.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [HDM_SETBITMAPMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb775357), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [HDM_SETBITMAPMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb775357), zgodnie z opisem w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CHeaderCtrl#14](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_19.cpp)]  
   
 ##  <a name="setfilterchangetimeout"></a>  CHeaderCtrl::SetFilterChangeTimeout  
- Ustawia limit czasu między czasem zmiany odbywa się w atrybuty filtru i delegowania [HDN_FILTERCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb775277) powiadomień.  
+ Ustawia limit czasu między czasu zmiany odbywa się w atrybutach filtrów i delegowania [HDN_FILTERCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb775277) powiadomień.  
   
 ```  
 int SetFilterChangeTimeout(DWORD dwTimeOut);
@@ -710,13 +710,13 @@ int SetFilterChangeTimeout(DWORD dwTimeOut);
  Indeks formant filtru jest modyfikowany.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [HDM_SETFILTERCHANGETIMEOUT](http://msdn.microsoft.com/library/windows/desktop/bb775359), zgodnie z opisem w zestawie Windows SDK.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [HDM_SETFILTERCHANGETIMEOUT](http://msdn.microsoft.com/library/windows/desktop/bb775359), zgodnie z opisem w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CHeaderCtrl#15](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_20.cpp)]  
   
 ##  <a name="setfocuseditem"></a>  CHeaderCtrl::SetFocusedItem  
- Ustawia element określonego nagłówka w formancie nagłówka bieżącego fokus.  
+ Ustawia element określonego nagłówka w formancie nagłówka bieżący fokus.  
   
 ```  
 BOOL SetFocusedItem(int iItem);
@@ -729,23 +729,23 @@ BOOL SetFocusedItem(int iItem);
 |[in] *towaru*|Liczony od zera indeks elementu nagłówka.|  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli ta metoda zakończy się pomyślnie; w przeciwnym razie `false`.  
+ Wartość TRUE, jeśli ta metoda jest kończy się pomyślnie; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wysyła [HDM_SETFOCUSEDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775361) komunikat, który jest opisany w zestawie SDK systemu Windows.  
+ Ta metoda wysyła [HDM_SETFOCUSEDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775361) komunikat, który jest opisany w zestawie Windows SDK.  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykładowy kod definiuje zmienną, `m_headerCtrl`, która jest używane do dostępu bieżącego formantu nagłówka. Ta zmienna jest używana w następnym przykładzie.  
+ Poniższy kod definiuje zmienną, `m_headerCtrl`, to znaczy umożliwiają dostęp do bieżącego kontrolki nagłówka. Ta zmienna jest używana w następnym przykładzie.  
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_9.h)]  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykład kodu pokazuje `SetFocusedItem` i `GetFocusedItem` metody. W starszej sekcji kodu utworzyliśmy kontrolki nagłówka o pięć kolumn. Jednak możesz przeciągnąć separator kolumn tak, aby ta kolumna nie jest widoczne. W poniższym przykładzie ustawia i następnie potwierdza nagłówek ostatniej kolumny jako element fokus.  
+ Poniższy przykład kodu demonstruje `SetFocusedItem` i `GetFocusedItem` metody. W starszych sekcji kodu utworzyliśmy kontrolki nagłówka z pięciu kolumnach. Jednak można przeciągnąć separator kolumn, tak, aby ta kolumna nie jest widoczny. Poniższy przykład ustawia i następnie potwierdza nagłówek ostatniej kolumny jako element fokus.  
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]  
   
 ##  <a name="sethotdivider"></a>  CHeaderCtrl::SetHotDivider  
- Zmiany linię podziału między elementy nagłówka w celu wskazania ręcznego przeciągnij i upuść element nagłówka.  
+ Zmiany, linię podziału między elementy nagłówka w celu wskazania ręcznego przeciągania i upuszczania elementu nagłówka.  
   
 ```  
 int SetHotDivider(CPoint pt);  
@@ -753,8 +753,8 @@ int SetHotDivider(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *PT*  
- Pozycja wskaźnika. Formant nagłówka prezentuje odpowiednią linię podziału na podstawie położenia wskaźnika.  
+ *(czas pacyficzny)*  
+ Pozycja wskaźnika. Kontrolki nagłówka wyróżnia odpowiednią linię podziału na podstawie położenia wskaźnika.  
   
  *nIndex*  
  Indeks wyróżnione podziału.  
@@ -763,13 +763,13 @@ int SetHotDivider(int nIndex);
  Indeks wyróżnione podziału.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [HDM_SETHOTDIVIDER](http://msdn.microsoft.com/library/windows/desktop/bb775363), zgodnie z opisem w zestawie Windows SDK. Znajduje się on do obsługi nagłówka elementu przeciągania i upuszczania.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [HDM_SETHOTDIVIDER](http://msdn.microsoft.com/library/windows/desktop/bb775363), zgodnie z opisem w zestawie Windows SDK. Jest ona udostępniana do obsługuje nagłówka towaru przeciągania i upuszczania.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFC_CHeaderCtrl#16](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_21.cpp)]  
   
 ##  <a name="setimagelist"></a>  CHeaderCtrl::SetImageList  
- Przypisuje listy obrazów formantu nagłówka.  
+ Przypisuje listy obrazów kontrolki nagłówka.  
   
 ```  
 CImageList* SetImageList(CImageList* pImageList);
@@ -777,13 +777,13 @@ CImageList* SetImageList(CImageList* pImageList);
   
 ### <a name="parameters"></a>Parametry  
  *pImageList*  
- Wskaźnik do `CImageList` obiekt, który zawiera listy obrazów, który ma być przypisany do formantu nagłówka.  
+ Wskaźnik do `CImageList` obiekt, który zawiera listy obrazów do przypisania do formantu nagłówka.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do [CImageList](../../mfc/reference/cimagelist-class.md) obiekt wcześniej przypisany do formantu nagłówka.  
+ Wskaźnik do [CImageList](../../mfc/reference/cimagelist-class.md) obiektu wcześniej przypisany do formantu nagłówka.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska implementuje zachowanie komunikatu Win32 [HDM_SETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb775365), zgodnie z opisem w zestawie Windows SDK. `CImageList` Obiektu, do którego punktów zwrócony wskaźnik jest obiektem tymczasowym i zostanie usunięty z następnego przetwarzania czas bezczynności.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie komunikatu Win32 [HDM_SETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb775365), zgodnie z opisem w zestawie Windows SDK. `CImageList` Obiekt, do którego punktów zwrócony wskaźnik jest obiektem tymczasowym i zostanie usunięty z następnego przetwarzania czas bezczynności (%).  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CHeaderCtrl::GetImageList](#getimagelist).  
@@ -798,20 +798,20 @@ BOOL SetItem(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *nPos*  
- Liczony od zera indeks elementu, który ma być modyfikowany w zakresie.  
+ *npos —*  
+ Liczony od zera indeks elementu do można modyfikować.  
   
  *pHeaderItem*  
- Wskaźnik do [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) struktury, który zawiera informacje dotyczące nowego elementu.  
+ Wskaźnik do [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) strukturę, która zawiera informacje dotyczące nowego elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CHeaderCtrl::GetItem](#getitem).  
   
 ##  <a name="setorderarray"></a>  CHeaderCtrl::SetOrderArray  
- Ustawia kolejność od lewej do prawej elementów w formancie nagłówka.  
+ Ustawia kolejność od lewej do prawej strony elementów w formancie nagłówka.  
   
 ```  
 BOOL SetOrderArray(
@@ -824,13 +824,13 @@ BOOL SetOrderArray(
  Liczba elementów do formantu nagłówka.  
   
  *piArray*  
- Wskaźnik do adres buforu, który odbiera wartości indeksu elementów w formancie nagłówka, w kolejności, w jakiej widnieją od lewej do prawej.  
+ Wskaźnik na adres buforu, który otrzymuje wartości indeksu elementów w formancie nagłówka, w kolejności, w którym są wyświetlane od lewej do prawej.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja członkowska implementuje zachowanie makra Win32 [HDM_SETORDERARRAY](http://msdn.microsoft.com/library/windows/desktop/bb775369), zgodnie z opisem w zestawie Windows SDK. Znajduje się on do obsługi kolejność elementów nagłówka.  
+ Ta funkcja elementu członkowskiego implementuje zachowanie makra Win32 [HDM_SETORDERARRAY](http://msdn.microsoft.com/library/windows/desktop/bb775369), zgodnie z opisem w zestawie Windows SDK. Jest ona udostępniana do obsługi porządkowanie elementu nagłówka.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [CHeaderCtrl::GetOrderArray](#getorderarray).  
@@ -838,6 +838,6 @@ BOOL SetOrderArray(
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CWnd](../../mfc/reference/cwnd-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
- [Ctabctrl — klasa](../../mfc/reference/ctabctrl-class.md)   
- [Clistctrl — klasa](../../mfc/reference/clistctrl-class.md)   
+ [Klasa CTabCtrl](../../mfc/reference/ctabctrl-class.md)   
+ [Klasa CListCtrl](../../mfc/reference/clistctrl-class.md)   
  [Klasa CImageList](../../mfc/reference/cimagelist-class.md)

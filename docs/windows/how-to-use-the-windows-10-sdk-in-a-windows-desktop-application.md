@@ -1,7 +1,7 @@
 ---
-title: 'Porady: używanie systemu Windows 10 SDK w aplikacji pulpitu systemu Windows | Dokumentacja firmy Microsoft'
+title: 'Porady: używanie systemu Windows 10 SDK w aplikacji pulpitu Windows | Dokumentacja firmy Microsoft'
 ms.custom: get-started-article
-ms.date: 04/19/2018
+ms.date: 07/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -13,58 +13,60 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2dae6f31082176c94cdf12cf0cdb42ba13aa93fe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 07cd0d02edc586697e42e4733df478a7ae394e0f
+ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882827"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39034783"
 ---
-# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Porady: używanie systemu Windows 10 SDK w aplikacji pulpitu systemu Windows
-Po utworzeniu klasycznego projekt pulpitu systemu Windows w programie Visual Studio 2017 ją skonfigurowano domyślnie do kompilacji z wersją systemu Windows 10 SDK został zainstalowany, gdy obciążenie pulpitu C++ został zainstalowany lub ostatniej aktualizacji. Ta wersja zestawu Windows SDK jest zgodna z wszystkich najnowszych wersji systemu Windows. Jeśli chcesz przeanalizować starszej wersji zestawu SDK, można otworzyć projektu | Właściwości i wybierz jedną z dostępnych na liście rozwijanej zestawu SDK systemu Windows w wersji wersji zestawu SDK.  
+# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Porady: używanie systemu Windows 10 SDK w aplikacji pulpitu Windows
+Po utworzeniu klasycznego projektu pulpitu Windows w programie Visual Studio 2017 on skonfigurowano domyślnie do tworzenia z wersją systemu Windows 10 SDK został zainstalowany, gdy obciążenie C++ na komputerach został zainstalowany lub jego ostatniej aktualizacji. Ta wersja zestawu Windows SDK jest zgodny, system Windows 7 lub nowszy. Zobacz [przy użyciu nagłówków Windows](/windows/desktop/WinProg/using-the-windows-headers) Aby uzyskać więcej informacji na temat przeznaczony dla określonej wersji systemu Windows.
+
+Jeśli chcesz przeanalizować wcześniejszej wersji zestawu SDK, możesz otworzyć **projektu | Właściwości** i wybierz jedną z dostępnych w menu rozwijanym wersja zestawu SDK Windows wersji zestawu SDK.
   
- Począwszy od programu Visual Studio 2015 i zestawu Windows 10 SDK, biblioteka CRT został podzielony na dwie części jednego (ucrtbase) zawiera funkcje, które są dozwolone do użycia w aplikacji uniwersalnych systemu Windows, a drugi zawierający wszystkie inne elementy (vcruntime140). Ponieważ zestaw Windows 10 SDK zawiera nowe funkcje, takie jak wiele funkcji C99, należy wykonać następujące kroki, aby można było używać tych funkcji. Zobacz [funkcje bibliotek CRT](../c-runtime-library/crt-library-features.md).  
+ Począwszy od programu Visual Studio 2015 i zestawu Windows 10 SDK, biblioteki CRT zostało podzielone na dwie części: outside (ucrtbase) zawiera funkcje, które są akceptowane można używać w Universal Windows Apps i która zawiera wszystkie inne elementy (vcruntime140). Ponieważ zestawu Windows 10 SDK zawiera nowe funkcje, takie jak wiele funkcji C99, musisz wykonaj następujące kroki, aby można było używać tych funkcji. Zobacz [funkcje biblioteki CRT](../c-runtime-library/crt-library-features.md).  
   
-### <a name="to-target-the-windows-10-sdk"></a>Docelowy zestaw Windows 10 SDK  
+### <a name="to-target-the-windows-10-sdk"></a>Do obiektu docelowego zestawu Windows 10 SDK  
   
-1.  Upewnij się, że jest zainstalowany zestaw Windows 10 SDK. Zestaw Windows 10 SDK jest instalowane jako część **tworzenia klasycznych aplikacji w języku C++** obciążenia. Autonomiczna wersja jest dostępna na [pliki do pobrania i narzędzi dla systemu Windows 10](https://developer.microsoft.com/windows/downloads).
+1.  Upewnij się, że zainstalowano zestaw SDK systemu Windows 10. Windows 10 SDK jest zainstalowany jako część **programowanie aplikacji klasycznych w języku C++** obciążenia. Wersja autonomiczna jest dostępna w [pliki do pobrania i narzędzia dla systemu Windows 10](https://developer.microsoft.com/windows/downloads).
 
   
-2.  Otwórz menu skrótów węzła projektu i wybierz polecenie **Przekieruj zestawu SDK w wersji**.  
+2.  Otwórz menu skrótów dla węzła projektu, a następnie wybierz **przekierowanie wersji zestawu SDK**.  
   
-     ![Przekieruj do zestawu SDK w wersji](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")  
+     ![Przekierowanie wersji zestawu SDK](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")  
   
-     **Przeglądu rozwiązania akcje** zostanie wyświetlone okno dialogowe.  
+     **Przegląd akcji rozwiązania** zostanie wyświetlone okno dialogowe.  
   
-     ![Przejrzyj akcje rozwiązania](../windows/media/retargetingwindowssdk2.PNG "RetargetingWindowsSDK2")  
+     ![Przegląd akcji rozwiązania](../windows/media/retargetingwindowssdk2.PNG "RetargetingWindowsSDK2")  
   
-3.  W **docelową wersję platformy** listy rozwijanej wybierz wersję docelową zestawu Windows 10 SDK. Wybierz przycisk OK, aby zastosować zmiany.  
+3.  W **wersji platformy docelowej** listy rozwijanej wybierz wersję docelową zestawu Windows 10 SDK. Wybierz przycisk OK, aby zastosować zmiany.  
   
-     Należy pamiętać, że 8.1, w tym kontekście odwołuje się do wersji zestawu Windows SDK, który jest także wstecznie zgodne z systemem Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 i Windows Vista.  
+     Należy pamiętać, że 8.1, w tym kontekście odwołuje się do wersji zestawu Windows SDK, który również jest wstecznie zgodne z systemem Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 i Windows Vista.  
   
-     Jeśli ten krok zakończy się pomyślnie, zostanie wyświetlony następujący tekst w oknie danych wyjściowych:  
+     Jeśli ten krok zakończy się pomyślnie, w oknie danych wyjściowych zostanie wyświetlony następujący tekst:  
   
      `Retargeting End: 1 completed, 0 failed, 0 skipped`  
   
-4.  Otwórz właściwości projektu, a następnie w **właściwości konfiguracji, ogólne** sekcji, zwróć uwagę na wartości z **docelową wersję platformy Windows**. Zmiana w tym miejscu wartość ma ten sam efekt co następującej procedury. Zobacz [ogólna strona właściwości (projekt)](../ide/general-property-page-project.md).  
+4.  Otwórz właściwości projektu, a następnie w **właściwości konfiguracji, ogólne** sekcji, zwróć uwagę na wartości z **wersji platformy docelowej Windows**. Zmiana wartości w tym miejscu ma taki sam skutek jak następującej procedury. Zobacz [strona właściwości ogólnych (projekt)](../ide/general-property-page-project.md).  
   
-     ![Docelowa wersja platformy](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")  
+     ![Wersja platformy docelowej](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")  
   
-     Ta akcja umożliwia zmianę wartości makra projektu, które ścieżki do plików nagłówka i pliki bibliotek dołączanych plików. Aby zobaczyć, co zmieniono w sekcji Visual C++ katalogów okna dialogowego właściwości projektu i wybierz jedną z właściwości, takie jak katalogi dołączenia, wybierz Otwórz listę rozwijaną, a następnie wybierz pozycję \<Edytuj >. **Katalogi dołączenia** zostanie wyświetlone okno dialogowe.  
+     Ta akcja powoduje zmianę wartości makra projektu, które zawierają ścieżki do plików biblioteki i pliki nagłówkowe. Aby zobaczyć, co zmieniło w sekcji katalogi Visual C++ w oknie dialogowym właściwości projektu, wybierz jedną z właściwości, takie jak katalogi dołączenia, wybierz otworzyć listę rozwijaną, a następnie wybierz \<Edytuj >. **Dołącz katalogi** zostanie wyświetlone okno dialogowe.  
   
-     ![Obejmują katalogów — okno dialogowe](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")  
+     ![Obejmują katalogi, okno dialogowe](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")  
   
-     Wybierz **makra >>** przycisk, a następnie przewiń w dół listę makra makr zestawu Windows SDK, aby zobaczyć nowe wartości.  
+     Wybierz **makra >>** przycisk, a następnie przewiń w dół listę makra do makr zestawu Windows SDK, aby zobaczyć nowe wartości.  
   
-     ![Makra zestawu SDK systemu Windows](../windows/media/retargetingwindowssdk5.PNG "RetargetingWindowsSDK5")  
+     ![Windows SDK makra](../windows/media/retargetingwindowssdk5.PNG "RetargetingWindowsSDK5")  
   
-5.  W razie potrzeby powtórz dla innych projektów i ponownie skompiluj rozwiązanie.  
+5.  Powtarzaj tę procedurę dla innych projektów i ponownie skompiluj rozwiązanie.  
   
 ### <a name="to-target-the-windows-81-sdk"></a>Docelowy zestaw SDK Windows 8.1  
   
-1.  Otwórz menu skrótów węzła projektu i wybierz polecenie **Przekieruj zestawu SDK w wersji**.  
+1.  Otwórz menu skrótów dla węzła projektu, a następnie wybierz **przekierowanie wersji zestawu SDK**.  
   
-2.  Na liście rozwijanej docelową wersję platformy wybierz 8.1.  
+2.  Na liście rozwijanej wersji platformy docelowej wybierz 8.1.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Aplikacje systemu Windows (Visual C++)](../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)
+ [Windows aplikacji komputerowych (Visual C++)](../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)
