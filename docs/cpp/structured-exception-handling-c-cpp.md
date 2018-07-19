@@ -1,5 +1,5 @@
 ---
-title: (C/C++) Obsługa wyjątków strukturalnych | Dokumentacja firmy Microsoft
+title: (C/C++) obsługi wyjątków strukturalnych | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,49 +19,49 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5b6aafa91ecfde27cc38cccc52f36af43ad21ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 64ff69a4ab75189dd069e774eb05266e6140ff77
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424273"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940498"
 ---
 # <a name="structured-exception-handling-cc"></a>Obsługa wyjątków strukturalnych (C/C++)
-Chociaż system Windows i program Visual C++ obsługuje (SEH) do obsługi wyjątków strukturalnych, zalecane jest użycie normy ISO Obsługa wyjątków języka C++ ponieważ sprawia, że kod bardziej przenośne i elastyczne. Niemniej jednak w istniejącym kodzie lub konkretnej rodzaje programów, użytkownik nadal może być konieczne użycie SEH.  
+Chociaż Windows i Visual C++ obsługi wyjątków strukturalnych (SEH) obsługi, zaleca się używać ISO standard C++ obsługi wyjątków, ponieważ dzięki niej kod jest bardziej przenośny i elastyczny. Niemniej jednak w istniejącym kodzie lub dla szczególnych typów programów możesz nadal może być konieczne używanie SEH.  
   
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
   
 ## <a name="grammar"></a>Gramatyka  
  *instrukcji z wyjątkiem try* :  
   
- `__try` *złożone — instrukcja*  
+ `__try` *Compound-statement*  
   
- `__except` ( `expression` ) *złożonej instrukcji*  
+ `__except` ( `expression` ) *compound-statement*  
   
 ## <a name="remarks"></a>Uwagi  
- Z SEH można zapewnić, że zasoby, takie jak bloki pamięci i pliki są poprawnie Jeśli wykonanie następuje nieoczekiwane zakończenie. Można również obsługiwać określonych problemów — na przykład za mało pamięci — przy użyciu zwięzły strukturalny, które nie korzystają z `goto` instrukcji lub testowania złożonych kodów powrotnych.  
+ Z SEH można zagwarantować, że zasoby, takie jak bloki pamięci i pliki są poprawnie Jeśli wykonanie następuje nieoczekiwane zakończenie. Może również obsługiwać konkretnych problemów — na przykład brak wystarczającej ilości pamięci — przy użyciu zwięzłe ze strukturą kodu, które nie zależą od **goto** instrukcji lub rozbudowane testowania kody powrotne.  
   
- Try-except i try-finally deklaracji określonych w tym artykule są rozszerzenia Microsoft do języka C. Obsługują one SEH, umożliwiając aplikacji przejąć kontrolę nad program po zdarzenia, które w przeciwnym razie spowoduje przerwanie wykonywania. Chociaż SEH działa zawierający pliki źródłowe C++, jego jest nie zaprojektowane specjalnie dla języka C++. Jeśli używasz programu C++ skompilować przy użyciu SEH [/EH](../build/reference/eh-exception-handling-model.md) opcji — wraz z niektórych Modyfikatory — zostaną wywołane destruktory dla obiektów lokalnego, ale inne sposób wykonywania nie może być oczekiwań. (Ilustrację, zobacz przykład w dalszej części tego artykułu). W większości przypadków, zamiast SEH firma Microsoft zaleca użycie normy ISO [C++, obsługa wyjątków](../cpp/try-throw-and-catch-statements-cpp.md), który obsługuje również Visual C++. Za pomocą C++, obsługa wyjątków, można Sprawdź, czy kod jest przenośną, i może obsłużyć wyjątki dowolnego typu.  
+ Try-except i try-finally, określone w tym artykule są rozszerzenia Microsoft do języka C. Obsługiwane są też SEH, dzięki czemu aplikacje mogą przejąć kontrolę nad programem po zdarzenia, które w przeciwnym razie zakończy się wykonywanie. Mimo że SEH działa przy użyciu plików źródłowych języka C++, go nie opracowano specjalnie dla języka C++. Jeśli używasz strukturalnej obsługi wyjątków w programie C++, który kompilujesz przy użyciu [/EH](../build/reference/eh-exception-handling-model.md) opcji — wraz z niektórych Modyfikatory — destruktory obiektów lokalnych są wywoływane, ale inne zachowanie wykonywania może nie być, czego oczekiwać. (Ilustrację, zobacz przykład w dalszej części tego artykułu). W większości przypadków zamiast SEH firma Microsoft zaleca użycie ISO standard [obsługi wyjątków C++](../cpp/try-throw-and-catch-statements-cpp.md), który obsługuje również Visual C++. Korzystając z obsługi wyjątków C++, można upewnić się, że Twój kod będzie bardziej przenośny i może obsługiwać wyjątki dowolnego typu.  
   
- Jeśli masz modułów C, które używają SEH można łączyć je z modułami C++ tego użycia C++, obsługa wyjątków. Aby uzyskać informacje, zobacz [różnice obsługi wyjątków](../cpp/exception-handling-differences.md).  
+ W przypadku modułów języka C, które SEH należy używać można łączyć je z modułami C++ tej obsługi wyjątków C++ użycia. Aby uzyskać informacje, zobacz [różnice w obsłudze wyjątków](../cpp/exception-handling-differences.md).  
   
- Istnieją dwa mechanizmy SEH:  
+ Istnieją dwa mechanizmy strukturalnej obsługi wyjątków:  
   
--   [Programy obsługi wyjątków](../cpp/writing-an-exception-handler.md), które odpowiadają na, lub odrzucić wyjątek.  
+-   [Programy obsługi wyjątków](../cpp/writing-an-exception-handler.md), które można odpowiedzieć na lub odrzucać wyjątek.  
   
--   [Programy obsługi zakończenia](../cpp/writing-a-termination-handler.md), które są nazywane, gdy wyjątek powoduje przerwanie w bloku kodu.  
+-   [Programy obsługi zakończenia](../cpp/writing-a-termination-handler.md), które są wywoływane, gdy wyjątek powoduje przerwanie w bloku kodu.  
   
- Te dwa rodzaje programów obsługi są różne, ale są ściśle powiązane za pośrednictwem procesu nazywanego "odwijanie stosu." Po wystąpieniu wyjątku, system Windows wyszukuje niedawno zainstalowany program obsługi wyjątku, który jest obecnie aktywny. Program obsługi można wykonać jedną z trzech zdarzeń:  
+ Te dwa rodzaje obsługi różniące się od siebie, ale są ściśle powiązane przez proces ten jest znany jako "odwijania stosu." Gdy wystąpi wyjątek, Windows wyszukuje ostatnio zainstalowane obsługi wyjątków, który jest obecnie aktywny. Program obsługi, można wykonać jedną z trzech zdarzeń:  
   
--   Nie można rozpoznać wyjątek i przekazanie sterowania do innych programów obsługi.  
+-   Nie można rozpoznać wyjątek i przekazać sterowanie do innych programów obsługi.  
   
 -   Rozpoznaje wyjątek, ale je zamknąć.  
   
--   Rozpoznaje wyjątek, a jego obsługa.  
+-   Rozpoznaje wyjątek, a następnie go obsłużyć.  
   
- Program obsługi wyjątku, który rozpoznaje wyjątku nie może być w funkcję, która była uruchomiona w chwili Wystąpił wyjątek. W niektórych przypadkach może być znacznie wyższa na stosie funkcji. Funkcja aktualnie uruchomione i inne funkcje w ramce stosu są zakończone. W trakcie tego procesu stos jest "oddzielić;" oznacza to, że zmienne lokalne funkcji zakończone — o ile nie są one `static`— zostały wyczyszczone ze stosu.  
+ Program obsługi wyjątku, który rozpoznaje wyjątek, może nie być w funkcji, która była uruchomiona w chwili wystąpienia wyjątku. W niektórych przypadkach może być w funkcji znacznie wyższa na stosie. Aktualnie uruchomionej funkcji i innych funkcji na ramce stosu są kończone. W trakcie tego procesu stos jest "rozwinięty"; oznacza to, zmiennych lokalnych funkcji zakończone — chyba że są one **statyczne**— są usuwane ze stosu.  
   
- Zgodnie z jego cofa stosu, system operacyjny wywołuje programy obsługi zakończenia, które zostały napisane dla każdej funkcji. Za pomocą programu obsługi zakończenia, możesz wyczyścić zasoby, które w przeciwnym razie pozostanie otwarty z powodu przerwania pracy. Jeśli wprowadzono sekcja krytyczna, możesz zakończyć działanie programu obsługi zakończenia. Jeżeli program będzie można zamknąć, można wykonywać inne zadania celów, takich jak zamykania i usuwanie plików tymczasowych.  
+ Zgodnie z jego rozwija stos, system operacyjny wywołuje programy obsługi zakończenia, które zostały napisane dla każdej funkcji. Za pomocą programu obsługi zakończenia, możesz wyczyścić zasoby, które w przeciwnym razie mogłyby pozostają otwarte, jeśli ze względu na Nienormalne zakończenie. Jeśli zostały wprowadzone sekcję krytyczną, możesz wyjść programu obsługi zakończenia. Jeśli program będzie zamknięty, można wykonywać inne zadania celów, takich jak zamknięcie i usuwanie plików tymczasowych.  
   
  Aby uzyskać więcej informacji, zobacz:  
   
@@ -72,7 +72,7 @@ Chociaż system Windows i program Visual C++ obsługuje (SEH) do obsługi wyjąt
 -   [Korzystanie z obsługi wyjątków strukturalnych za pomocą języka C++](../cpp/using-structured-exception-handling-with-cpp.md)  
   
 ## <a name="example"></a>Przykład  
- Jak wspomniano wcześniej, destruktory dla lokalnych obiektów są nazywane, jeśli używasz SEH programu C++ i skompiluj go za pomocą **/EH** opcji z niektórych Modyfikatory — na przykład **/ehsc** i   **/eha**. Jednak w zachowanie podczas wykonywania oczekiwać Jeśli używane są również wyjątki C++ nie może być. W poniższym przykładzie pokazano te różnice funkcjonalne.  
+ Jak wspomniano wcześniej, destruktory dla obiektów lokalnych są wywoływane, jeśli SEH należy używać w programie C++ i skompiluj go za pomocą **/EH** opcji z niektórych Modyfikatory — na przykład **/ehsc** i   **/eha**. Jednakże zachowanie podczas wykonywania może nie być, oczekują Jeśli używane są również wyjątki C++. W poniższym przykładzie pokazano te różnice w zachowaniu.  
   
 ```cpp  
 #include <stdio.h>  
@@ -122,7 +122,7 @@ int main()
   
 ```  
   
- Jeśli używasz **/ehsc** skompilować ten kod, ale formant lokalnego testu `CPPEX` jest niezdefiniowana, nie istnieje żadne wykonywanie `TestClass` destruktor i dane wyjściowe wygląda podobnie do następującej:  
+ Jeśli używasz **/ehsc** skompilować ten kod, ale kontroli lokalnego testu `CPPEX` jest niezdefiniowana, istnieje nie wykonywania `TestClass` destruktor i dane wyjściowe wyglądają podobnie do następującego:  
   
 ```Output  
 Triggering SEH exception  
@@ -137,7 +137,7 @@ Destroying TestClass!
 Executing SEH __except block  
 ```  
   
- Jeśli używasz **/eha** skompilować kod, `TestClass` destruktora wykonuje niezależnie od tego, czy wyjątek został zgłoszony przy użyciu `std::throw` lub za pomocą SEH do wyzwolenia wyjątek (`CPPEX` określone lub nie). Dane wyjściowe wyglądają następująco:  
+ Jeśli używasz **/eha** do kompilowania kodu, `TestClass` destruktor jest wykonywany niezależnie od tego, czy wyjątek został zgłoszony za pomocą `std::throw` lub za pomocą wyzwalacza wyjątek SEH (`CPPEX` zdefiniowany lub nie). Dane wyjściowe wyglądają następująco:  
   
 ```Output  
 Throwing C++ exception  
@@ -147,11 +147,11 @@ Executing SEH __except block
   
  Aby uzyskać więcej informacji, zobacz [/EH (Model obsługi wyjątku)](../build/reference/eh-exception-handling-model.md).  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa wyjątków](../cpp/exception-handling-in-visual-cpp.md)   
  [Keywords](../cpp/keywords-cpp.md)   
  [\<wyjątku >](../standard-library/exception.md)   
  [Błędy w obsłudze wyjątków](../cpp/errors-and-exception-handling-modern-cpp.md)   
- [(System Windows) do obsługi wyjątków strukturalnych](http://msdn.microsoft.com/library/windows/desktop/ms680657.aspx)
+ [(Windows) do obsługi wyjątków strukturalnych](http://msdn.microsoft.com/library/windows/desktop/ms680657.aspx)

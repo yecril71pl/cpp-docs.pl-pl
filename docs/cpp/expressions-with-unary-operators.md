@@ -16,33 +16,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e1b8db2e02e6ab3e2a70d94ba5f6fe3516e464e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9301d4fdb09c63b7dc8e875e2b03a4990acec054
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416174"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941161"
 ---
 # <a name="expressions-with-unary-operators"></a>Wyrażenia z operatorami jednoargumentowymi
-Operatory jednoargumentowe działa tylko jedno operandu w wyrażeniu. Operatory jednoargumentowe są następujące:  
+Operatory jednoargumentowe działa tylko jeden argument w wyrażeniu. Operatory jednoargumentowe, są następujące:  
   
 -   [Operator pośredni (*)](../cpp/indirection-operator-star.md)  
   
--   [Operator adresu (&)](../cpp/address-of-operator-amp.md)  
+-   [Operator Address-of (&)](../cpp/address-of-operator-amp.md)  
   
--   [Jednoargumentowe plus (+) — operator](../cpp/unary-plus-and-negation-operators-plus-and.md)  
+-   [Jednoargumentowy operator (+) plus](../cpp/unary-plus-and-negation-operators-plus-and.md)  
   
 -   [Jednoargumentowy operator negacji (-)](../cpp/unary-plus-and-negation-operators-plus-and.md)  
   
 -   [Operator logiczny negacji (!)](../cpp/logical-negation-operator-exclpt.md)  
   
--   [Na jeden operator dopełnienia jednostkowego (~)](../cpp/one-s-complement-operator-tilde.md)  
+-   [Operator dopełnienia jednostkowego (~)](../cpp/one-s-complement-operator-tilde.md)  
   
 -   [Prefiks operator inkrementacji (++)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)  
   
--   [Operator dekrementacji prefiksu (-)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)  
+-   [Prefiks operator dekrementacji (--)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)  
   
--   [Rzutowanie (operator)](../cpp/cast-operator-parens.md)  
+-   [CAST — operator)](../cpp/cast-operator-parens.md)  
   
 -   [sizeof — operator](../cpp/sizeof-operator.md)  
   
@@ -54,11 +54,11 @@ Operatory jednoargumentowe działa tylko jedno operandu w wyrażeniu. Operatory 
   
 -   [delete — operator](../cpp/delete-operator-cpp.md)  
   
- Operatorzy te mają łączność od prawej do lewej. Wyrażenie jednoargumentowe zazwyczaj obejmują składni poprzedzający przyrostek lub wyrażenia podstawowego.  
+ Te operatory mają łączność od prawej do lewej. Wyrażenie jednoargumentowe generalnie wymagają składni, który poprzedza przyrostka lub wyrażenie podstawowe.  
   
- Poniżej przedstawiono możliwe formy jednoargumentowy wyrażeń.  
+ Poniżej przedstawiono możliwe formy wyrażeń jednoargumentowy.  
   
--   *Operatory przyrostka wyrażenia*  
+-   *wyrażeniem przyrostkowym*  
   
 -   `++` *wyrażenie jednoargumentowe*  
   
@@ -66,25 +66,25 @@ Operatory jednoargumentowe działa tylko jedno operandu w wyrażeniu. Operatory 
   
 -   *operator jednoargumentowy* *wyrażenie cast*  
   
--   `sizeof` *wyrażenie jednoargumentowe*  
+-   **Operator sizeof** *jednoargumentowe wyrażenie*  
   
 -   `sizeof(` *Nazwa typu* `)`  
   
--   `decltype(` *wyrażenie* `)`  
+-   `decltype(` *Wyrażenie* `)`  
   
 -   *wyrażenie alokacji*  
   
--   *wyrażenie dezalokacji*  
+-   *wyrażenie cofania alokacji*  
   
- Wszelkie *wyrażenie przyrostek* jest uznawany za *wyrażenie jednoargumentowe*, i ponieważ przyjęto, że wszystkie wyrażenia podstawowego *przyrostek wyrażenie*, jest wszystkie wyrażenia podstawowe uznawane za *wyrażenie jednoargumentowe* również. Aby uzyskać więcej informacji, zobacz [wyrażenia przyrostków](../cpp/postfix-expressions.md) i [wyrażenia podstawowe](../cpp/primary-expressions.md).  
+ Wszelkie *wyrażeniem przyrostkowym* jest uważany za *jednoargumentowe wyrażenie*, i ponieważ dowolne wyrażenie głównej jest uznawana za *postfix-expression*, jest dowolnego wyrażenia podstawowe uważane za *jednoargumentowe wyrażenie* również. Aby uzyskać więcej informacji, zobacz [wyrażenia przyrostkowe](../cpp/postfix-expressions.md) i [wyrażenia podstawowe](../cpp/primary-expressions.md).  
   
- A *operatora jednoargumentowego* składa się z co najmniej jeden z następujących symboli: `* & + - ! ~`  
+ A *operatora jednoargumentowego* składa się z co najmniej jedną z następujących symboli: `* & + - ! ~`  
   
- *Wyrażenie cast* wyrażenie jednoargumentowe z opcjonalne Rzutowanie na typ zmiany. Aby uzyskać więcej informacji, zobacz [Operator rzutowania: ()](../cpp/cast-operator-parens.md).  
+ *Wyrażenie cast* wyrażenie jednoargumentowe z opcjonalnych rzutowania, aby zmienić typ. Aby uzyskać więcej informacji, zobacz [Operator rzutowania: ()](../cpp/cast-operator-parens.md).  
   
- *Wyrażenie* może być dowolne wyrażenie. Aby uzyskać więcej informacji, zobacz [wyrażenia](../cpp/expressions-cpp.md).  
+ *Wyrażenie* może być każdym wyrażeniem. Aby uzyskać więcej informacji, zobacz [wyrażenia](../cpp/expressions-cpp.md).  
   
- *Wyrażenie alokacji* odwołuje się do `new` operatora. *Wyrażenie dezalokacji* odwołuje się do `delete` operatora. Aby uzyskać więcej informacji zobacz linki wcześniej w tym temacie.  
+ *Wyrażenie alokacji* odwołuje się do **nowe** operatora. *Wyrażenie dezalokacji* odwołuje się do **Usuń** operatora. Aby uzyskać więcej informacji zobacz linki we wcześniejszej części tego tematu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Typy wyrażeń](../cpp/types-of-expressions.md)

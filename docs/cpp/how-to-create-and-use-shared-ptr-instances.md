@@ -13,21 +13,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1a2aad184a1f388df6f7a6941aa9e5f302f35b12
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.sourcegitcommit: 894b3b3a91fcd8894b582747b03135c0be450c1f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418370"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38102901"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>Porady: tworzenie wystąpień shared_ptr i korzystanie z nich
 Typ `shared_ptr` jest inteligentnym wskaźnikiem w standardowej bibliotece języka C++ przeznaczonym dla scenariuszy, w których więcej niż jeden właściciel może być zmuszony do zarządzania okresem istnienia obiektu w pamięci. Po zainicjowaniu wskaźnika `shared_ptr` można go kopiować, przekazywać wg wartości w argumentach funkcji oraz przypisywać do innych wystąpień wskaźnika `shared_ptr`. Wszystkie wystąpienia wskazują ten sam obiekt oraz mają wspólny dostęp do jednego „bloku sterującego”, który zwiększa i zmniejsza liczbę odwołań po każdym dodaniu nowego wskaźnika `shared_ptr`, wykroczeniu przez wskaźnik poza zakres lub jego zresetowaniu. Gdy licznik odwołań osiągnie zero, blok sterujący usuwa zasób pamięci i samego siebie.  
   
  Na ilustracji poniżej widać kilka wystąpień wskaźnika `shared_ptr`, które wskazują jedną lokalizację w pamięci.  
   
- [![Wskaźnik udostępnionego](../cpp/media/shared_ptr.png "shared_ptr")](assetId:///9785ad08-31d8-411a-86a9-fb9cd9684c27)  
+ [![Wspólny wskaźnik](../cpp/media/shared_ptr.png "shared_ptr")](assetId:///9785ad08-31d8-411a-86a9-fb9cd9684c27)  
   
 ## <a name="example"></a>Przykład  
- Jeśli to możliwe, użyj [make_shared —](../standard-library/memory-functions.md#make_shared) funkcja służąca do tworzenia `shared_ptr` utworzenia zasobu pamięci po raz pierwszy. Funkcja `make_shared` jest bezpieczna pod względem wyjątków. Używa tego samego wywołania w celu przydzielenia pamięci blokowi sterującemu i zasobowi, w związku z czym mniej obciąża system podczas konstruowania. Jeśli funkcja `make_shared` nie będzie używana, należy za pomocą jawnego nowego wyrażenia utworzyć obiekt, a następnie przekazać go do konstruktora `shared_ptr`. Poniższy przykład pokazuje różne sposoby deklarowania i inicjowania wskaźnika `shared_ptr` razem z nowym obiektem.  
+ Możliwe, używaj [make_shared](../standard-library/memory-functions.md#make_shared) funkcji, aby utworzyć `shared_ptr` podczas tworzenia zasobu pamięci po raz pierwszy. Funkcja `make_shared` jest bezpieczna pod względem wyjątków. Używa tego samego wywołania w celu przydzielenia pamięci blokowi sterującemu i zasobowi, w związku z czym mniej obciąża system podczas konstruowania. Jeśli funkcja `make_shared` nie będzie używana, należy za pomocą jawnego nowego wyrażenia utworzyć obiekt, a następnie przekazać go do konstruktora `shared_ptr`. Poniższy przykład pokazuje różne sposoby deklarowania i inicjowania wskaźnika `shared_ptr` razem z nowym obiektem.  
   
  [!code-cpp[stl_smart_pointers#1](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]  
   
@@ -37,7 +37,7 @@ Typ `shared_ptr` jest inteligentnym wskaźnikiem w standardowej bibliotece języ
  [!code-cpp[stl_smart_pointers#2](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_2.cpp)]  
   
 ## <a name="example"></a>Przykład  
- `shared_ptr` jest również przydatne w kontenerach standardowa biblioteka C++ korzystając z algorytmów kopiowanie elementów. We wskaźniku `shared_ptr` można opakować elementy, po czym skopiować go do innych kontenerów przy założeniu, że bazowa pamięć jest zajęta tylko przez niezbędny czas, nie dłużej. Poniższy przykład pokazuje, jak używać algorytmu `replace_copy_if` do wystąpień wskaźnika `shared_ptr` w wektorze.  
+ `shared_ptr` jest również przydatne w przypadku kontenerów standardowej biblioteki języka C++, gdy są używane algorytmy kopiujące elementy. We wskaźniku `shared_ptr` można opakować elementy, po czym skopiować go do innych kontenerów przy założeniu, że bazowa pamięć jest zajęta tylko przez niezbędny czas, nie dłużej. Poniższy przykład pokazuje, jak używać algorytmu `replace_copy_if` do wystąpień wskaźnika `shared_ptr` w wektorze.  
   
  [!code-cpp[stl_smart_pointers#4](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]  
   

@@ -30,22 +30,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1343d7dd5f6a35bb222b731294ec897116b9e4b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b0bfe0cdb5ea9dd524f2e81fcb2719bf40001758
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947897"
 ---
 # <a name="comptrt-extractors"></a>_com_ptr_t — Ekstraktory
 **Microsoft Specific**  
   
- Wyodrębnij hermetyzowany wskaźnika interfejsu COM.  
+ Wyodrębnij zhermetyzowanego wskaźnika interfejsu COM.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
   
-      operator Interface*( ) const throw( );   
+operator Interface*( ) const throw( );   
 operator Interface&( ) const;   
 Interface& operator*( ) const;   
 Interface* operator->( ) const;   
@@ -55,19 +56,19 @@ operator bool( ) const throw( );
   
 ## <a name="remarks"></a>Uwagi  
   
--   **Operator interfejsu\***  zwraca wskaźnik zhermetyzowany interfejs, który może być **NULL**.  
+-   **Operator interfejsu\***  zwraca wskaźnik zhermetyzowany interfejs, który może mieć wartości NULL.  
   
--   **Operator interfejsu &** zwraca odwołanie do wskaźnika interfejsu hermetyzowany i generuje błąd, jeśli wskaźnik jest **NULL**.  
+-   **Operator interfejs &** zwraca odwołanie do wskaźnika zhermetyzowany interfejs i generuje błąd, jeśli wskaźnik jest pusty.  
   
--   **operator\***  umożliwia działa tak, jakby była to rzeczywista interfejsu hermetyzowany podczas wyłuskiwany obiekt wskaźnika inteligentnego.  
+-   **operator\***  umożliwia obiekt inteligentny wskaźnik do działania, tak jakby był to rzeczywisty zhermetyzowany interfejs podczas wyłuskiwany.  
   
--   **operator ->** umożliwia działa tak, jakby była to rzeczywista interfejsu hermetyzowany podczas wyłuskiwany obiekt wskaźnika inteligentnego.  
+-   **operator ->** umożliwia obiekt inteligentny wskaźnik do działania, tak jakby był to rzeczywisty zhermetyzowany interfejs podczas wyłuskiwany.  
   
--   **Operator &** zwalnia wszelkie wskaźnika zhermetyzowany interfejs, zastępuje go tekstem **NULL**i zwraca adres hermetyzowany wskaźnika. Dzięki temu wskaźnika inteligentnego, należy przesłać za pomocą adresu funkcji, które ma **limit** parametru za pomocą którego zwraca wskaźnika interfejsu.  
+-   **Operator &** zwalnia dowolny wskaźnik zhermetyzowany interfejs, zastępując wartość NULL i zwraca adres zhermetyzowanego wskaźnika. Umożliwia to inteligentny wskaźnik do przekazania do funkcji, która ma, przy użyciu adresu *się* parametru za pomocą którego funkcja zwraca wskaźnik interfejsu.  
   
--   **Operator bool** umożliwia obiekt wskaźnika inteligentnego do użycia w wyrażeniu warunkowym. Ten operator zwraca **true** Jeśli wskaźnik jest nie **NULL**.  
+-   **Operator bool** umożliwia obiekt inteligentny wskaźnik do użycia w wyrażeniu warunkowym. Ten operator zwraca wartość PRAWDA, jeśli wskaźnik nie jest równa NULL.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [_com_ptr_t, klasa](../cpp/com-ptr-t-class.md)

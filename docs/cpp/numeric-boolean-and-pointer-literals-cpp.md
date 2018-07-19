@@ -1,5 +1,5 @@
 ---
-title: Liczbowe, Boolean i literały wskaźnika (C++) | Dokumentacja firmy Microsoft
+title: Literały numeryczne, atrybut typu wartość logiczna i wskaźnika (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ce5f2c6703b18747dd4a2c51fe540d01370b38b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 178c75efa84ebc7d27c19feb81e81314dc4c5bd7
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947879"
 ---
-# <a name="numeric-boolean-and-pointer-literals--c"></a>Liczbowe, Boolean i literały wskaźnika (C++)
-Literał jest element program, który bezpośrednio reprezentuje wartość. W tym artykule omówiono literałów typu Integer liczb zmiennoprzecinkowych, boolean i wskaźnika. Informacje o literały ciągów i znakowe znajdują się w temacie [ciągu i literały znaków (C++)](../cpp/string-and-character-literals-cpp.md). Istnieje również możliwość definiowania własnych literały według dowolnej z tych kategorii; Aby uzyskać więcej informacji, zobacz [zdefiniowane przez użytkownika literałów (C++)](../cpp/user-defined-literals-cpp.md)  
+# <a name="numeric-boolean-and-pointer-literals--c"></a>Literały numeryczne, atrybut typu wartość logiczna i wskaźnika (C++)
+Literał jest element program, który bezpośrednio reprezentuje wartość. W tym artykule opisano literałów typu całkowitego, zmiennoprzecinkowego, wartości logicznych i wskaźników. Dla informacji na temat literały ciągów i znakowe [ciąg znaków i literały znaków (C++)](../cpp/string-and-character-literals-cpp.md). Można również definiować własne literały według dowolnej z tych kategorii; Aby uzyskać więcej informacji, zobacz [literały zdefiniowane przez użytkownika (C++)](../cpp/user-defined-literals-cpp.md)  
   
- . Literały w wielu sytuacjach, ale większość często zainicjować zmienne nazwanego i służy do przekazania argumentów do funkcji:  
+ . Umożliwia literały w wielu kontekstach, ale większość często do inicjowania zmiennych nazwanych i aby przekazać argumenty do funkcji:  
   
-```  
+```cpp 
 const int answer = 42; // integer literal  
 double d = sin(108.87);     //floating point literal passed to sin function  
 bool b = true;              // boolean literal  
@@ -35,18 +36,18 @@ MyClass* mc = nullptr;      // pointer literal
   
 ```  
   
- Czasami jest ważne nakazuje kompilatorowi interpretowanie literału lub jakie określonego typu, aby przekazać do niego. W tym celu dołączanie prefiksy lub sufiksy literału. Na przykład prefiks 0 x informuje kompilator, aby zinterpretować numer następującym jako wartość szesnastkowa, na przykład 0x35. Sufiks EŁNA informuje kompilator, aby wartość jest traktowana `unsigned long long` typu, jak 5894345ULL. Zobacz następujące sekcje, aby uzyskać pełną listę prefiksów i sufiksów dla każdego typu literału.  
+ Czasami jest ważne poinformować kompilator, jak interpretować literału lub jakie określonego typu, aby zapewnić do niego. Można to zrobić, dodając prefiksów lub sufiksów do literału. Na przykład prefiksu 0 x informuje kompilator, aby zinterpretować numer, który po nim następuje jako wartość szesnastkową, na przykład 0x35. Sufiks EŁNY informuje kompilator, aby traktować wartości jako **unsigned long long** typu, tak jak 5894345ULL. Zobacz poniższe sekcje, aby uzyskać pełną listę prefiksów i sufiksów dla każdego typu literału.  
   
 ## <a name="syntax"></a>Składnia  
   
 ## <a name="integer-literals"></a>Literały całkowite  
- Literały całkowite rozpoczyna się od cyfry i nie ułamkowych części ani wykładniki. Literały całkowite można określić w postaci dziesiętnej, ósemkowe lub szesnastkową. Mogą one określać typy oznaczone lub nieoznaczone oraz typy long lub short.  
+ Literały całkowite zaczynać się cyfrą i mieć nie części ułamkowych lub wykładników. Możesz określić literały całkowite w formie dziesiętnej, ósemkowej lub szesnastkowej. Mogą one określać typy oznaczone lub nieoznaczone oraz typy long lub short.  
   
- Jeśli występuje nie prefiksu lub sufiksu kompilator zapewni typu całkowitego wartość literału `int` (32-bitowy), jeśli wartość zmieści się, w przeciwnym razie zapewnia on typ `long long` (64-bitowy).  
+ Gdy nie prefiksu lub sufiksu jest obecny, kompilator umożliwi typu całkowitego wartości literału **int** (32-bitowy), jeśli wartość mieści się, w przeciwnym razie daje on typ **long long** (64-bitowy).  
   
- Aby określić dziesiętną literał całkowity, Rozpocznij specyfikacji z różną od zera cyfrę. Na przykład:  
+ Aby określić dziesiętny literał typu całkowitego, należy rozpocząć Określanie od cyfry niezerowych. Na przykład:  
   
-```  
+```cpp 
 int i = 157;   // Decimal literal  
 int j = 0198;       // Not a decimal number; erroneous octal literal  
 int k = 0365;       // Leading zero specifies octal literal, not decimal  
@@ -54,23 +55,23 @@ int m = 36'000'000  // digit separators make large values more readable
 int   
 ```  
   
- Aby określić ósemkowe literał całkowity, Rozpocznij Specyfikacja o 0, następuje sekwencję cyfr w zakresie od 0 do 7. 8 do 9 cyfr są błędy określania ósemkowe literal. Na przykład:  
+ Aby określić ósemkową literał typu całkowitego, należy rozpocząć Określanie od 0, następuje sekwencja cyfr z zakresu od 0 do 7. Cyfry 8 i 9 są błędy podczas określania ósemkową literału. Na przykład:  
   
-```  
+```cpp 
 int i = 0377;   // Octal literal  
 int j = 0397;        // Error: 9 is not an octal digit  
 ```  
   
- Aby określić szesnastkowe literał całkowity, Rozpocznij specyfikacji z `0x` lub `0X` (wielkość liter "x" nie ma znaczenia), następuje sekwencję cyfr w zakresie `0` za pośrednictwem `9` i `a` (lub `A`) za pomocą `f` (lub `F`). Cyfry szesnastkowe od `a` (lub `A`) do `f` (lub `F`) reprezentują wartości z zakresu od 10 do 15. Na przykład:  
+ Aby określić szesnastkowy literał typu całkowitego, należy rozpocząć Określanie od `0x` lub `0X` (wielkość liter "x" nie ma znaczenia), następuje sekwencja cyfr w zakresie `0` za pośrednictwem `9` i `a` (lub `A`) za pomocą `f` (lub `F`). Cyfry szesnastkowe od `a` (lub `A`) do `f` (lub `F`) reprezentują wartości z zakresu od 10 do 15. Na przykład:  
   
-```  
+```cpp 
 int i = 0x3fff;   // Hexadecimal literal  
 int j = 0X3FFF;        // Equal to i  
 ```  
   
- Aby określić typ bez znaku, użyj **u** lub **U** sufiks. Aby określić typu long, użyj **l** lub **L** sufiks. Aby określić 64-bitowego typu całkowitego, użyj LL lub ll sufiks. Sufiks komputerach 64 nadal jest obsługiwany, ale należy unikać, ponieważ specyficzne dla firmy Microsoft i nie jest przenośnej. Na przykład:  
+ Aby określić typ nieoznaczony, należy użyć `u` lub `U` sufiks. Aby określić typ long, należy użyć `l` lub `L` sufiks. Aby określić 64-bitowy typ całkowity, użyj LL lub ll sufiks. Sufiks i64 nadal są obsługiwane, ale należy unikać, ponieważ zależy od firmy Microsoft i nie jest przenośny. Na przykład:  
   
-```  
+```cpp 
 unsigned val_1 = 328u;             // Unsigned value  
 long val_2 = 0x7FFFFFL;                 // Long value specified   
                                         //  as hex literal  
@@ -79,72 +80,72 @@ auto val_4 = 108LL;                           // signed long long
 auto val_4 = 0x8000000000000000ULL << 16;     // unsigned long long   
 ```  
   
- **Separatory cyfr**: znak pojedynczego cudzysłowu (apostrof) można użyć wartości miejsce w większą liczbą ułatwi ich dla ludzi do odczytu. Separatory nie mają wpływu na kompilacji.  
+ **Separatory cyfr**: znak pojedynczego cudzysłowu (apostrof) służy do oddzielania wartości miejsce w większą liczbą, aby były one bardziej czytelne dla człowieka do odczytu. Separatory nie mają wpływu na kompilację.  
   
-```  
+```cpp 
 long long i = 24'847'458'121  
 ```  
   
-## <a name="floating-point-literals"></a>Literały punkcie zmiennoprzecinkowych  
- Literały zmiennoprzecinkowe określić wartości, które muszą mieć część ułamkowa. Wartości te zawierają miejsc dziesiętnych (**.**) i może zawierać wykładniki.  
+## <a name="floating-point-literals"></a>Literały punktu zmiennoprzecinkowego  
+ Literały zmiennoprzecinkowych określić wartości, które muszą mieć część ułamkową. Wartości te zawierają dziesiętnymi (**.**) i może zawierać wykładników.  
   
- Literały liczb zmiennoprzecinkowych zostały "mantysy,", która określa wartość numer, "wykładnik," który określa wielkość numer, i opcjonalnie sufiks, który określa typ literału. Mantysa jest określony jako sekwencję cyfr następuje okres, opcjonalne sekwencji cyfr reprezentujący ułamkową część liczby. Na przykład:  
+ Literały zmiennoprzecinkowych mieć "mantysy," który określa wartość numer, "wykładnik,", który określa wielkość liczbą, i opcjonalnie sufiks, który określa typ literału. Mantysy jest określony jako sekwencję cyfr, następuje kropka, a następnie opcjonalnie sekwencję cyfr, reprezentujących część ułamkową liczby. Na przykład:  
   
-```  
+```cpp 
 18.46  
 38.  
 ```  
   
- Wykładnik, jeśli jest obecny, określa wielkość liczby jako potęgi 10, jak pokazano w poniższym przykładzie:  
+ Wykładnik, jeśli jest obecny, określa wielkość numer jako potęga 10, jak pokazano w poniższym przykładzie:  
   
-```  
+```cpp 
 18.46e0      // 18.46  
 18.46e1           // 184.6  
 ```  
   
- Wykładnik może być określona za pomocą **e** lub **E**, które mają takie samo znaczenie znakiem opcjonalne (+ lub -) i sekwencji cyfr.  Jeśli występuje wykładnik końcowej punktu dziesiętnego nie jest konieczne w liczbach takich jak `18E0`.  
+ Wykładnik może być określony przy użyciu `e` lub `E`, które mają takie samo znaczenie, następuje opcjonalny znak (+ lub -) i sekwencję cyfr.  Jeśli wykładnik jest obecny, końcowe punktu dziesiętnego nie jest konieczne w liczbach takich jak `18E0`.  
   
- Literały zmiennoprzecinkowe domyślne na typ **podwójne**. Za pomocą sufiksy **f** lub **l** (lub **F** lub **L** — sufiks nie jest uwzględniana wielkość liter), można określić jako literał  **float** lub `long double`odpowiednio.  
+ Literały zmiennoprzecinkowych domyślnie wpisz **double**. Za pomocą sufiksy `f` lub `l` (lub `F` lub `L` — sufiks nie uwzględnia wielkości liter), literał może być określony jako **float** lub **typu long double**, odpowiednio.  
   
- Mimo że `long double` i **podwójne** ma reprezentacji w tym samym, nie są tego samego typu. Na przykład możesz można mieć przeciążonej funkcji, takich jak  
+ Mimo że **typu long double** i **double** mają tę samą reprezentację, nie są tego samego typu. Na przykład możesz mogą mieć przeciążone funkcje, takie jak  
   
-```  
+```cpp 
 void func( double );  
 ```  
   
  and  
   
-```  
+```cpp 
 void func( long double );  
 ```  
   
-## <a name="boolean-literals"></a>Literałów wartości logicznych  
- Literałów wartości logicznych są `true` i `false`.  
+## <a name="boolean-literals"></a>Wartość logiczna literałów  
+ Wartość logiczna literały są **true** i **false**.  
   
-## <a name="pointer-literal-c11"></a>Literał wskaźnika (C ++ 11)  
- Wprowadza C++ [nullptr](../cpp/nullptr.md) literału, aby określić wskaźnik zainicjowane przez zero. Kod przenośny `nullptr` powinna być używana zamiast funkcji całkowitym typu zero lub makra takie jak wartości NULL.  
+## <a name="pointer-literal-c11"></a>Wskaźnik literał (C ++ 11)  
+ Wprowadza C++ [nullptr](../cpp/nullptr.md) literału do określenia wskaźnika inicjowany z wartością zerową. W kodzie przenośnym **nullptr** powinny być używane zamiast typu całkowitego zero lub makra takie jak wartości NULL.  
   
-## <a name="binary-literals-c14"></a>Literały binarnego (C ++ 14)  
- Literał binarny można określić za pomocą `0B` lub `0b` prefiksu, następuje sekwencji 1 i 0:  
+## <a name="binary-literals-c14"></a>Literały binarne (C ++ 14)  
+ Można określić przy użyciu literału binarnego `0B` lub `0b` prefiksu, następuje Sekwencja 1 i 0:  
   
-```  
+```cpp 
   
 auto x = 0B001101 ; // int  
 auto y = 0b000001 ; // int  
 ```  
   
 ## <a name="avoid-using-literals-as-magic-constants"></a>Unikaj używania literałów jako "stałe magic"  
- Chociaż nie zawsze jest dobrym rozwiązaniem programowania, można użyć literałów bezpośrednio w wyrażenia i instrukcje:  
+ Można użyć literały bezpośrednio w wyrażeniach i instrukcji, chociaż nie zawsze jest dobrą praktyką programowania:  
   
-```  
+```cpp 
 if (num < 100)  
     return "Success";  
   
 ```  
   
- W poprzednim przykładzie może być lepiej jest użyć nazwanej stałej, przekazujący wyczyść znaczenie, na przykład "MAXIMUM_ERROR_THRESHOLD". Jeśli wartość zwracana przez "Powodzenie" jest widoczny dla użytkowników końcowych, to może być lepiej jest użyć stałą ciągu o nazwie, które mogą być przechowywane w jednym miejscu w pliku, z którym może być lokalizowany na inne języki. Używanie o nazwie stałe pomaga w innym, a także aby zrozumieć celem kod.  
+ W poprzednim przykładzie może być lepiej używać nazwanych stałą, która wywołuje wyczyść znaczenia, na przykład "MAXIMUM_ERROR_THRESHOLD". A jeśli wartość zwracaną, którą "Success" jest widoczny dla użytkowników końcowych, a następnie ją może być lepiej używać stałą ciągu o nazwie, które mogą być przechowywane w jednej lokalizacji w pliku, z którym może być lokalizowana w innych językach. Za pomocą nazwanych stałych pomaga innych użytkowników, a także aby zrozumieć intencje kodu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Konwencje leksykalne](../cpp/lexical-conventions.md)   
  [Literały ciągu języka C++](../cpp/string-and-character-literals-cpp.md)   
- [Literały definiowane przez użytkownika C++](../cpp/user-defined-literals-cpp.md)
+ [Literały zdefiniowane przez użytkownika języka C++](../cpp/user-defined-literals-cpp.md)

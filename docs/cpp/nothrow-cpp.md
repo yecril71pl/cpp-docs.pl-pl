@@ -17,30 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69a706577cf112c3d8a3b7748f72679f7213936d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7efbd22c846327c5731cf3ab14ba1f2045c8636f
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420660"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939152"
 ---
 # <a name="nothrow-c"></a>nothrow (C++)
 
 **Microsoft Specific**
 
-A `__declspec` rozszerzonych atrybutów, które mogą być używane w deklaracji funkcji.
+A **__declspec** atrybutów rozszerzonych, które mogą być używane w deklaracji funkcji.
 
 ## <a name="syntax"></a>Składnia  
   
-> *zwracanego typu* __declspec(nothrow) [*konwencji wywołania*] *nazwy funkcji* ([*listy argumentów*])
+> *zwracany typ* __declspec(nothrow) [*konwencji wywołania*] *nazwy funkcji* ([*listy argumentów*])
 
 ## <a name="remarks"></a>Uwagi
 
 Zalecane jest użycie wszystkich nowy kod [noexcept](noexcept-cpp.md) operator zamiast `__declspec(nothrow)`.
 
-Ten atrybut informuje kompilator, że zadeklarowanej funkcji i funkcji wywoływanych przez nią nigdy nie zgłoszenia wyjątku. Jednak nie wymusza dyrektywy. Innymi słowy, nigdy nie powoduje [std::terminate](../standard-library/exception-functions.md#terminate) do wywołania, w odróżnieniu od `noexcept`, lub w **std:c ++ 17** trybu (Visual Studio 2017 wersji 15.5 i nowszych), `throw()`.
+Ten atrybut informuje kompilator, że funkcja zadeklarowana i funkcji wywoływanych przez nią nigdy nie zgłasza wyjątku. Dyrektywa nie są jednak wymusić. Innymi słowy, nigdy nie powoduje [std::terminate](../standard-library/exception-functions.md#terminate) do wywołania, w odróżnieniu od `noexcept`, lub **STD: c ++ 17** trybu (Visual Studio 2017 w wersji 15.5 lub nowszej), `throw()`.
 
-Z wyjątkiem synchroniczne obsługi modelu, a teraz domyślne, kompilator można wyeliminować mechanika śledzenia okres istnienia niektórych obiektów unwindable w tych funkcji i znacznie zmniejszyć rozmiar kodu. Biorąc pod uwagę następujące dyrektywy preprocesora, deklaracje funkcji trzy poniżej są równoważne w **/std:c ++ 14** tryb:
+Z wyjątkiem synchroniczne obsługi modelu, a teraz domyślne, kompilator może wyeliminować mechanika śledzenia okresu istnienia niektórych odwracalnych obiektów w takich funkcji, a znacznie zmniejszyć rozmiar kodu. Biorąc pod uwagę następujące dyrektywy preprocesora, deklaracje funkcji trzy poniższe są równoważne w **/STD: c ++ 14** trybu:
 
 ```cpp
 #define WINAPI __declspec(nothrow) __stdcall
@@ -50,11 +50,11 @@ void __declspec(nothrow) __stdcall f2();
 void __stdcall f3() throw();
 ```
 
-W **/std:c ++ 17** trybie `throw()` nie jest odpowiednikiem korzystających z innych `__declspec(nothrow)` ponieważ powoduje ona `std::terminate` do wywołania, jeśli funkcja jest zgłaszany wyjątek.
+W **/STD: c ++ 17** trybie `throw()` nie jest odpowiednikiem osobom, które używają `__declspec(nothrow)` ponieważ powoduje ona `std::terminate` do wywołania, jeśli wyjątek jest generowany przez funkcję.
 
-`void __stdcall f3() throw();` Deklaracji używa składni zdefiniowanych przez C++ standard. W języku C ++ 17 `throw()` — słowo kluczowe została uznana za przestarzałą.
+`void __stdcall f3() throw();` Deklaracji używa składni zdefiniowanej przez C++ standard. W języku C ++ 17 `throw()` — słowo kluczowe została zakończona.
 
-**KOŃCOWY określonych firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

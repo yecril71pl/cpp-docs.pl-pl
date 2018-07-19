@@ -14,17 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 365beedce529e29be73c02caa57e5c6236565b9c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b01a7f2ca1af2ef114347d7355fbd1be973b8af
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37948260"
 ---
 # <a name="new-operator-c"></a>new — Operator (C++)
-Przydziela pamięć dla obiekt lub tablicę obiektów *nazwy typu* z bezpłatną magazynu i zwraca wskaźnik typizowany odpowiednio, różną od zera do obiektu.  
+Przydziela pamięć dla obiektu lub tablicy obiektów *nazwy typu* z wolnego magazynu i zwraca wskaźnik odpowiednio wpisany, różniącego wartość różną od zera do obiektu.  
   
 > [!NOTE]
->  Rozszerzenia składnika C++ firmy Microsoft zapewnia obsługę `new` — słowo kluczowe, aby dodać wpisy gniazda vtable. Aby uzyskać więcej informacji, zobacz [new (nowe gniazdo w vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)  
+>  Rozszerzenia składnik C++ firmy Microsoft zapewnia obsługę **nowe** — słowo kluczowe, aby dodać wpisy szczeliny vtable. Aby uzyskać więcej informacji, zobacz [new (nowe gniazdo w vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,53 +35,53 @@ Przydziela pamięć dla obiekt lub tablicę obiektów *nazwy typu* z bezpłatną
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- W przypadku niepowodzenia **nowe** zwraca zero lub zgłasza wyjątek; zobacz [nowy i delete — operatory](../cpp/new-and-delete-operators.md) Aby uzyskać więcej informacji. To zachowanie domyślne można zmienić, tworząc niestandardowe procedury obsługi wyjątków i wywoływania [_set_new_handler —](../c-runtime-library/reference/set-new-handler.md) funkcja biblioteki wykonawczej nazwą funkcji jako jej argument.  
+ W przypadku niepowodzenia **nowe** zwraca wartość zero lub zgłasza wyjątek; zobacz [nowy i delete — operatory](../cpp/new-and-delete-operators.md) Aby uzyskać więcej informacji. Można zmienić to zachowanie domyślne, tworząc niestandardowe procedury obsługi wyjątków i wywoływania [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) funkcji biblioteki wykonawczej z nazwą Twojej funkcji jako argumentem.  
   
- Aby uzyskać informacje dotyczące sposobu tworzenia obiektów na stercie zarządzanej, zobacz [gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md).  
+ Aby uzyskać informacje na temat tworzenia obiektu w zarządzanym stosie, zobacz [gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md).  
   
- Gdy **nowe** jest używana, można przydzielić pamięci dla obiekt klasy C++, konstruktora obiektu jest wywoływana po jest przydzielana pamięć.  
+ Gdy **nowe** jest używany, można przydzielić pamięci dla obiektu klasy C++, Konstruktor obiektu jest wywoływana po alokowaniu pamięci.  
   
- Użyj [usunąć](../cpp/delete-operator-cpp.md) operatora, aby zwolnić pamięć przydzielona z **nowe** operatora.  
+ Użyj [Usuń](../cpp/delete-operator-cpp.md) operator, aby dealokować pamięć alokowaną z **nowe** operatora.  
   
- W poniższym przykładzie przydziela i następnie zwalnia jest tablicą dwuwymiarową znaków rozmiar `dim` przez 10. Podczas przydzielania tablicy wielowymiarowej, wszystkie wymiary oprócz pierwszego muszą być stałych wyrażeń określających wartości dodatnie. wymiar tablicy po lewej stronie może być dowolne wyrażenie, którego wynikiem jest wartość dodatnia. Podczas przydzielania tablicy przy użyciu **nowe** operatora, pierwszy wymiar może być równa zero — **nowe** operator zwraca wskaźnik unikatowy.  
+ Poniższy przykład przydziela i następnie zwalnia dwuwymiarową tablicę znaków o rozmiarze `dim` przez 10. Przy alokowaniu wielowymiarowej tablicy, wszystkie wymiary, z wyjątkiem pierwszej muszą być wyrażeniami stałymi, które obliczają do wartości dodatnich; wymiar tablicy skrajnie po lewej stronie może być dowolne wyrażenie, którego wynikiem jest wartość dodatnią. Alokując tablicę przy użyciu **nowe** operatora, pierwszy wymiar może być zerem — **nowe** operator zwraca unikalny wskaźnik.  
   
-```  
+```cpp 
 char (*pchar)[10] = new char[dim][10];  
 delete [] pchar;  
 ```  
   
- *Nazwy typu* nie może zawierać **const**, `volatile`, deklaracji klasy lub deklaracji wyliczenia. W związku z tym następujące wyrażenie jest niedozwolone:  
+ *Nazwy typu* nie może zawierać **const**, **volatile**, deklaracji klasy lub deklaracji enumeracji. W związku z tym poniższe wyrażenie jest niedozwolone:  
   
-```  
+```cpp 
 volatile char *vch = new volatile char[20];  
 ```  
   
- **Nowe** operator nie przydzielić typy odwołań, ponieważ nie są obiektami.  
+ **Nowe** operator nie przydziela typów odwołań, ponieważ nie są obiektami.  
   
- **Nowe** przydzielić funkcji nie można używać operatora, ale może służyć do przydzielenia wskaźniki do funkcji. Poniższy przykład przydziela i następnie zwalnia tablicę siedmiu wskaźniki do funkcji zwracających liczb całkowitych.  
+ **Nowe** operator nie może służyć do przydzielania funkcji, ale może służyć do przydzielania wskaźników do funkcji. Poniższy przykład przydziela i następnie zwalnia tablicę siedmiu wskaźników do funkcji, które zwracają liczby całkowite.  
   
-```  
+```cpp 
 int (**p) () = new (int (*[7]) ());  
 delete *p;  
 ```  
   
- Jeśli używasz operator **nowe** bez żadnych dodatkowych argumentów i skompiluj z [/GX](../build/reference/gx-enable-exception-handling.md), [/eha](../build/reference/eh-exception-handling-model.md), lub [/EHS](../build/reference/eh-exception-handling-model.md) opcja, kompilator będzie Generuj kod wywoła operator **usunąć** Jeśli w Konstruktorze zgłasza wyjątek.  
+ Jeśli korzystasz z operatora **nowe** bez żadnych dodatkowych argumentów i kompilujesz z [/GX](../build/reference/gx-enable-exception-handling.md), [/eha](../build/reference/eh-exception-handling-model.md), lub [/EHS](../build/reference/eh-exception-handling-model.md) opcja, kompilator będzie Generuj kod aby wywołać operator **Usuń** Jeśli Konstruktor zgłasza wyjątek.  
   
  Na poniższej liście opisano elementy gramatyki **nowe**:  
   
  *placement*  
- Umożliwia przekazywanie dodatkowe argumenty, jeśli można przeciążać **nowe**.  
+ Zapewnia możliwość przekazywania dodatkowych argumentów, jeśli przeładujesz **nowe**.  
   
  *Nazwa typu*  
- Określa typ do przydzielenia; może być typu wbudowanego lub zdefiniowanej przez użytkownika. Jeśli specyfikacja typu jest skomplikowane, może być ujęte w nawiasy, aby wymusić kolejności wiązania.  
+ Określa typ ma zostać przydzielony; może być typ wbudowany lub zdefiniowany przez użytkownika. Jeśli specyfikacja typu jest skomplikowana, może być otoczona nawiasami, aby wymusić kolejność wiązania.  
   
  *initializer*  
- Zawiera wartość dla obiekt zainicjowane. Nie można określić Inicjatory dla tablic. **Nowe** operator utworzy tablice obiektów tylko wtedy, gdy klasa ma konstruktora domyślnego.  
+ Oferuje wartości dla zainicjowanego obiektu. Nie można określić inicjatorów dla tablic. **Nowe** operator spowoduje utworzenie tablic obiektów tylko wtedy, gdy klasa ma domyślnego konstruktora.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu przydziela tablicy znaków i obiekt klasy `CName` , a następnie pozwala im.  
+ Poniższy przykład kodu przydziela tablicy znaków i obiekt klasy `CName` i następnie zwalnia je.  
   
-```  
+```cpp 
 // expre_new_Operator.cpp  
 // compile with: /EHsc  
 #include <string.h>  
@@ -122,9 +123,9 @@ int main() {
 ```  
   
 ## <a name="example"></a>Przykład  
- Jeśli używasz nowego formularza umieszczania z **nowe** operatora formularza z argumentami oprócz rozmiar alokacji kompilator nie obsługuje formularza umieszczania **usunąć** — operator Jeśli Konstruktor zgłasza wyjątek. Na przykład:  
+ Jeśli korzystasz z formularza nowego położenia z **nowe** operatora, formularza z argumentami prócz rozmiaru alokacji, kompilator nie obsługuje formularza położenia **Usuń** operator Jeśli Konstruktor zgłasza wyjątek. Na przykład:  
   
-```  
+```cpp 
 // expre_new_Operator2.cpp  
 // C2660 expected  
 class A {  
@@ -156,10 +157,10 @@ int main() {
 }  
 ```  
   
-## <a name="initializing-object-allocated-with-new"></a>Inicjowanie obiektów przydzielonych za pomocą instrukcji new  
- Opcjonalny *inicjatora* pole jest uwzględniane w gramatyce dla **nowe** operatora. Dzięki temu nowe obiekty mogą zostać zainicjowane z konstruktorów zdefiniowanych przez użytkownika. Aby uzyskać więcej informacji dotyczących sposobu inicjowania jest wykonywane, zobacz [inicjatory](../cpp/initializers.md). Poniższy przykład przedstawia sposób użycia wyrażenia inicjowania z **nowe** operator:  
+## <a name="initializing-object-allocated-with-new"></a>Inicjowanie obiektów przydzielonych za pomocą nowego  
+ Opcjonalny *inicjatora* pole jest uwzględniane w gramatyce dla **nowe** operatora. Dzięki temu nowe obiekty mogą zostać zainicjowane z konstruktorów zdefiniowanych przez użytkownika. Aby uzyskać więcej informacji dotyczących sposobu inicjalizacji, zobacz [inicjatory](../cpp/initializers.md). Poniższy przykład ilustruje sposób użycia wyrażenia inicjowania **nowe** operator:  
   
-```  
+```cpp 
 // expre_Initializing_Objects_Allocated_with_new.cpp  
 class Acct  
 {  
@@ -181,24 +182,24 @@ int main()
 }  
 ```  
   
- W tym przykładzie obiekt `CheckingAcct` jest przydzielany przy użyciu **nowe** określono operatora, ale nie inicjowanie domyślnych. W związku z tym, wywoływany jest domyślny konstruktor dla klasy `Acct()`. Następnie obiekt `SavingsAcct` jest przydzielany ten sam sposób, chyba że wyraźnie jest zainicjowany na 34.98. Ponieważ typ jest 34.98 **podwójne**, Konstruktor, który przyjmuje argument typu jest wywoływana w celu inicjowania obsługi. Wreszcie, typ nonclass `HowMuch` jest zainicjowany na 43.0.  
+ W tym przykładzie obiekt `CheckingAcct` jest przydzielany za pomocą **nowe** operatora, ale nie domyślna Inicjalizacja jest określony. W związku z tym, wywoływany jest domyślny konstruktor dla klasy `Acct()`. Następnie obiekt `SavingsAcct` jest przydzielany ten sam sposób, chyba że wyraźnie jest zainicjowany na 34.98. Ponieważ 34.98 jest typu **double**, Konstruktor, który przyjmuje argument typu jest wywoływana w celu zainicjowania obsługi. Wreszcie, typ nonclass `HowMuch` jest zainicjowany na 43.0.  
   
- Jeśli obiekt jest typu klasy, a klasy ma konstruktorów (tak jak w poprzednim przykładzie), można zainicjować obiektu przez **nowe** operator tylko wtedy, gdy jest spełniony jeden z następujących warunków:  
+ Jeśli obiekt jest typu klasy i klasa ma konstruktory (tak jak w poprzednim przykładzie), obiekty mogą być zainicjowane przez **nowe** operatora tylko wtedy, gdy jest spełniony jeden z następujących warunków:  
   
 -   Argumenty dostarczone w inicjatorze zgadzają się z tymi z konstruktora.  
   
 -   Klasa ma domyślny konstruktor (konstruktor, który można wywołać bez argumentów).  
   
- Nie inicjowania elementu jawne może odbywać się podczas przydzielania stałych przy użyciu **nowe** operator; tylko Konstruktor domyślny, jeśli istnieje, jest nazywany. Zobacz [argumenty domyślne](../cpp/default-arguments.md) Aby uzyskać więcej informacji.  
+ Inicjowanie elementu jawnego nie może odbywać się podczas przydzielania tablic przy użyciu **nowe** operator; tylko Konstruktor domyślny, jeśli jest obecny, jest wywoływana. Zobacz [argumenty domyślne](../cpp/default-arguments.md) Aby uzyskać więcej informacji.  
   
- Jeśli alokacja pamięci nie powiedzie się (`operator new` zwraca wartość 0), inicjowanie nie jest wykonywane. Chroni to przed próbami inicjalizacji danych, które nie istnieją.  
+ Jeśli alokacja pamięci nie powiedzie się (**nowy operator** zwraca wartość 0), inicjowanie nie jest wykonywane. Chroni to przed próbami inicjalizacji danych, które nie istnieją.  
   
- Podobnie jak w przypadku wywołań funkcji, kolejność oceny inicjowanych wyrażeń nie jest zdefiniowana. Ponadto, nie należy zakładać, że te wyrażenia zostaną całkowicie ocenione przed wykonaniem alokacji pamięci. Jeśli alokacja pamięci nie powiedzie się i **nowe** operator zwraca zero, niektóre inicjatora może nie być całkowicie obliczone wyrażenia.  
+ Podobnie jak w przypadku wywołań funkcji, kolejność oceny inicjowanych wyrażeń nie jest zdefiniowana. Ponadto, nie należy zakładać, że te wyrażenia zostaną całkowicie ocenione przed wykonaniem alokacji pamięci. Jeśli alokacja pamięci nie powiedzie się i **nowe** operator zwraca zero, niektóre wyrażenia w inicjatorze mogą nie zostać całkowicie ocenione.  
   
-## <a name="lifetime-of-objects-allocated-with-new"></a>Okres istnienia obiektów przydzielonych za pomocą instrukcji new  
- Obiektów przydzielonych za pomocą **nowe** operator nie zostaną zniszczone, gdy zakres, w którym są definiowane jest zakończony. Ponieważ **nowe** operator zwraca wskaźnik do przydzielania obiektów, program musi definiować wskaźnika z odpowiedniego zakresu dostępu do tych obiektów. Na przykład:  
+## <a name="lifetime-of-objects-allocated-with-new"></a>Okres istnienia obiektów przydzielonych za pomocą nowego  
+ Obiekty przydzielone za pomocą **nowe** operator nie są niszczone, gdy zostanie zakończone zakresu, w której są zdefiniowane. Ponieważ **nowe** operator zwraca wskaźnik do obiektów, przydziela, program musi definiować wskaźnik przy użyciu odpowiedniego zakresu dostępu do tych obiektów. Na przykład:  
   
-```  
+```cpp 
 // expre_Lifetime_of_Objects_Allocated_with_new.cpp  
 // C2541 expected  
 int main()  
@@ -221,38 +222,38 @@ int main()
 }  
 ```  
   
- Raz wskaźnik `AnotherArray` zbliża się poza zakresem w przykładzie obiekt już nie mogą zostać usunięte.  
+ Gdy wskaźnik myszy `AnotherArray` zbliża się poza zakresem, w tym przykładzie obiekt już nie może zostać usunięty.  
   
-## <a name="how-new-works"></a>Jak nowe działania  
- *Wyrażenie alokacji* — wyrażenia zawierającego **nowe** operator — trzy elementy:  
+## <a name="how-new-works"></a>Działa jak nowe  
+ *Wyrażenie alokacji* — wyrażenie zawierające **nowe** operator — wykonuje trzy rzeczy:  
   
 -   Lokalizuje i rezerwuje pamięć dla obiektu lub obiektów, które mają zostać przydzielone. Po ukończeniu tego etapu, poprawna ilość pamięci jest przydzielana, ale nie jest jeszcze obiektem.  
   
 -   Inicjalizuje obiekt(y). Po zakończeniu inicjalizacji, wystarczająca ilość informacji jest obecna dla przydzielenia pamięci, która ma być obiektem.  
   
--   Zwraca wskaźnik do obiektów typu wskaźnika pochodną *nową nazwę typu* lub *nazwy typu*. Program używa tego wskaźnika do dostępu do nowo przydzielonego obiektu.  
+-   Zwraca wskaźnik do obiektu(ów) typu wskaźnika pochodną *nową nazwę typu* lub *nazwy typu*. Program używa tego wskaźnika do dostępu do nowo przydzielonego obiektu.  
   
- **Nowe** operator wywołuje funkcję `operator new`. Dla tablic dowolnego typu, a dla obiektów, które nie mają **klasy**, `struct`, lub **Unii** typów, funkcją globalną **:: nowy operator**, jest wywoływana, aby przydzielić magazyn. Obiekty typu klasy mogą definiować własne statyczne funkcje składowe `operator new` na podstawie klasy.  
+ **Nowe** operator wywołuje funkcję **nowy operator**. Dla tablic dowolnego typu i obiektów, które nie są **klasy**, **struktury**, lub **Unii** typów, funkcja globalna **:: nowy operator**, jest wywołuje się, aby przydzielić magazyn. Obiekty typu klasy mogą definiować własne **nowy operator** funkcja statycznej składowej na podstawie klasy.  
   
- Gdy wystąpi kompilator **nowe** operator można przydzielić obiektu typu `type`, wystawia wywołanie `type` **:: nowy operator (sizeof (** `type` **))**  lub, jeśli nie, zdefiniowane przez użytkownika `operator new` jest zdefiniowany, **:: nowy operator (sizeof (** `type` **))**. W związku z tym **nowe** operator może Przydziel poprawną ilość pamięci dla obiektu.  
-  
-> [!NOTE]
->  Argument `operator new` jest typu **size_t**. Ten typ jest zdefiniowany w \<direct.h >, \<malloc.h >, \<memory.h >, \<search.h >, \<stddef.h >, \<stdio.h >, \<stdlib.h >, \<string.h >, a \<time.h >.  
-  
- Opcja w gramatyce umożliwia określenie *umieszczania* (zobacz gramatyki dla [operatora new](../cpp/new-operator-cpp.md)). *Umieszczania* parametr może zostać użyty tylko w przypadku wdrożeń użytkownika `operator new`; umożliwia dodatkowe informacje, które mają być przekazane do `operator new`. Wyrażenia z *umieszczania* pola, takie jak `T *TObject = new ( 0x0040 ) T;` jest translacji `T *TObject = T::operator new( sizeof( T ), 0x0040 );` Jeśli klasa T operator członkowski nowe, w przeciwnym razie `T *TObject = ::operator new( sizeof( T ), 0x0040 );`.  
-  
- Oryginalny zamiar *umieszczania* pole było umożliwiające obiektów zależnych od sprzętu można przydzielić na adresy określone przez użytkownika.  
+ Gdy kompilator napotka **nowe** operator można przydzielić obiektu typu **typu**, emituje wywołanie `type` **:: nowy operator (sizeof (** `type` **))** lub, jeśli nie zdefiniowana przez użytkownika **nowy operator** jest zdefiniowany, **:: nowy operator (sizeof (** `type` **))**. W związku z tym **nowe** — operator może alokować poprawną ilość pamięci dla obiektu.  
   
 > [!NOTE]
->  Mimo że w poprzednim przykładzie pokazano tylko jeden argument w *umieszczania* pola nie podlega ograniczeniom, na ile dodatkowe argumenty mogą zostać przekazane do `operator new` w ten sposób.  
+>  Argument **nowy operator** typu `size_t`. Ten typ jest zdefiniowany w \<direct.h >, \<malloc.h >, \<memory.h >, \<search.h >, \<stddef.h >, \<stdio.h >, \<stdlib.h >, \<string.h >, a \<time.h >.  
   
- Nawet jeśli `operator new` został zdefiniowany dla typu klasy, globalny operator może być używany za pomocą formy w tym przykładzie:  
+ Opcja w gramatyce umożliwia specyfikację *umieszczania* (zobacz gramatyka dla [operatora new](../cpp/new-operator-cpp.md)). *Umieszczania* parametru należy używać tylko w przypadku implementacji użytkownika **nowy operator**; umożliwia dodatkowe informacje, które zostaną przekazane do **nowy operator**. Wyrażenia z *umieszczania* pola, takie jak `T *TObject = new ( 0x0040 ) T;` jest tłumaczona na `T *TObject = T::operator new( sizeof( T ), 0x0040 );` Jeśli klasa T ma operator składowy new, w przeciwnym razie do `T *TObject = ::operator new( sizeof( T ), 0x0040 );`.  
   
-```  
+ Oryginalny zamiar *umieszczania* pole było dopuszcza się użycia obiektów zależnych od sprzętu do przydzielenia w określonym przez użytkownika.  
+  
+> [!NOTE]
+>  Mimo że w poprzednim przykładzie pokazano tylko jeden argument w *umieszczania* pola, nie ma żadnych ograniczeń, o ile dodatkowych argumentów może być przekazywany do **nowy operator** w ten sposób.  
+  
+ Nawet wtedy, gdy **nowy operator** został zdefiniowany dla typu klasy, globalny operator może służyć za pomocą formularza, w tym przykładzie:  
+  
+```cpp 
 T *TObject =::new TObject;  
 ```  
   
- Operator rozpoznawanie zakresów (`::`) wymusza stosowanie globalnej **nowe** operatora.  
+ Operator rozpoznawania zakresu (`::`) wymusza użycie globalnego **nowe** operatora.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wyrażenia z operatorami Jednoargumentowymi](../cpp/expressions-with-unary-operators.md)   

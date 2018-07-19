@@ -21,27 +21,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7f242fac0d81c6d46c2d810bf07459fde2fb2ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6f20268e9d67ed59e52f3716e9203dadd2a2715d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421063"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941694"
 ---
 # <a name="overloading-unary-operators"></a>Przeładowanie operatorów jednoargumentowych
 Operatory jednoargumentowe, które mogą być przeciążone, są następujące:  
   
-1.  `!` ([NEGACJA](../cpp/logical-negation-operator-exclpt.md))  
+1.  `!` ([logiczne NOT](../cpp/logical-negation-operator-exclpt.md))  
   
 2.  `&` ([adresu](../cpp/address-of-operator-amp.md))  
   
-3.  `~` ([osoby dopełnienia](../cpp/one-s-complement-operator-tilde.md))  
+3.  `~` ([uzupełnienie jedynkowe](../cpp/one-s-complement-operator-tilde.md))  
   
-4.  `*` ([wyłuskania wskaźnika](../cpp/indirection-operator-star.md))  
+4.  `*` ([wyłuskanie wskaźnika](../cpp/indirection-operator-star.md))  
   
-5.  `+` ([jednoargumentowe plus](../cpp/additive-operators-plus-and.md))  
+5.  `+` ([plus jednoargumentowy](../cpp/additive-operators-plus-and.md))  
   
-6.  `-` ([negacji jednoargumentowy](../cpp/additive-operators-plus-and.md))  
+6.  `-` ([Negacja Jednoargumentowa](../cpp/additive-operators-plus-and.md))  
   
 7.  `++` ([przyrostu](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))  
   
@@ -49,24 +49,24 @@ Operatory jednoargumentowe, które mogą być przeciążone, są następujące:
   
 9. operatory konwersji  
   
- Operatory przyrostka inkrementacji i dekrementacji operatory (`++` i **--**) są traktowane odrębnie w [zwiększyć i zmniejszyć](../cpp/increment-and-decrement-operator-overloading-cpp.md).  
+ Przyrostka inkrementacji i dekrementacji operatorów (`++` i `--`) są omówione oddzielnie w części [AddRef()](../cpp/increment-and-decrement-operator-overloading-cpp.md).  
   
- Operatory konwersji omówiono także w innym temacie; zobacz [zdefiniowane przez użytkownika konwersje typów](../cpp/user-defined-type-conversions-cpp.md).  
+ Operatory konwersji zostały również omówione w osobnym temacie; zobacz [konwersje typów zdefiniowane przez użytkownika](../cpp/user-defined-type-conversions-cpp.md).  
   
  Następujące reguły są prawdziwe dla wszystkich innych operatorów jednoargumentowych. Aby zadeklarować funkcję operatora jednoargumentowego jako niestatyczny element członkowski, należy zadeklarować ją w postaci:  
   
  `ret-type operator` `op` `()`  
   
- gdzie `ret-type` jest zwracany typ i `op` jest jednym z podmiotów wymienione w powyższej tabeli.  
+ gdzie `ret-type` jest typem zwracanym i `op` jest jeden z operatorów wymienionych w powyższej tabeli.  
   
  Aby zadeklarować funkcję operatora jednoargumentowego jako funkcję globalną, należy zadeklarować ją w postaci:  
   
  `ret-type operator` `op` (`arg` )  
   
- gdzie `ret-type` i `op` są zgodnie z opisem dla funkcji Członkowskich operatora i `arg` jest argumentem typu klasy, w którym ma działać.  
+ gdzie `ret-type` i `op` są opisane dla funkcji operatora składowej i `arg` jest argumentem typu klasy, na którym będą wykonywane.  
   
 > [!NOTE]
->  Nie ma żadnych ograniczeń pod względem typów zwracanych operatorów jednoargumentowych. Na przykład, warto dla NEGACJA (`!`) do zwrócenia z wartością całkowitą, ale nie jest wymuszana.  
+>  Nie ma żadnych ograniczeń pod względem typów zwracanych operatorów jednoargumentowych. Na przykład, dobrym pomysłem dla logicznego nie (`!`) do zwrócenia wartości całkowitoliczbowej, ale to nie jest wymuszana.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przeładowanie operatora](../cpp/operator-overloading.md)

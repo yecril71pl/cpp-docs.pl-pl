@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93b2f5e28dc0306a996b4c8bdb799122fe4646ab
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f9b4b9e2526d621e9e9fee1d1f8c05c5a05d3312
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410002"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941681"
 ---
 # <a name="auto-keyword"></a>auto — słowo kluczowe
-`auto` — Słowo kluczowe jest Specyfikator deklaracji. Jednak C++ standard definiuje oryginalny i poprawione znaczenie dla tego słowa kluczowego. Przed Visual C++ 2010 `auto` — słowo kluczowe deklaruje zmienną w *automatyczne* Klasa magazynu; oznacza to, że zmienna, która ma lokalnego czas istnienia. Począwszy od programu Visual C++ 2010, `auto` — słowo kluczowe deklaruje zmienną, którego typ jest ustalane z wyrażenia inicjowania w jego deklaracji. [/Zc: Auto&#91;-&#93; ](../build/reference/zc-auto-deduce-variable-type.md) — opcja kompilatora steruje znaczenie `auto` — słowo kluczowe.  
+**Automatycznie** — słowo kluczowe jest Specyfikator deklaracji. Jednak C++ standard definiuje oryginału i poprawione znaczenie słowa kluczowego. Przed Visual C++ 2010 **automatycznie** — słowo kluczowe deklaruje zmienną w *automatyczne* klasę magazynu, czyli zmiennej, która ma lokalne okresy istnienia. Począwszy od programu Visual C++ 2010, **automatycznie** — słowo kluczowe deklaruje zmienną, którego typ jest ustalić na podstawie wyrażenia inicjowania w jego deklaracji. [/Zc: Auto&#91;-&#93; ](../build/reference/zc-auto-deduce-variable-type.md) — opcja kompilatora kontroluje znaczenie **automatycznie** — słowo kluczowe.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -30,14 +30,14 @@ auto declarator initializer;
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Definicja `auto` zmiany słów kluczowych w języku programowania C++, ale nie w języku programowania C.  
+ Definicja **automatycznie** zmiany słów kluczowych w języku programowania C++, ale nie w języku programowania C.  
   
- W poniższych tematach opisano `auto` — słowo kluczowe i odpowiedniej opcji kompilatora:  
+ W poniższych tematach opisano **automatycznie** — słowo kluczowe i odpowiadające opcje kompilatora:  
   
--   [automatycznie](../cpp/auto-cpp.md) opisano nową definicję `auto` — słowo kluczowe.  
+-   [automatyczne](../cpp/auto-cpp.md) opisuje nową definicję **automatycznie** — słowo kluczowe.  
   
   
--   [/ Zc: Auto (dedukuj typ zmiennej)](../build/reference/zc-auto-deduce-variable-type.md) opisuje opcję kompilatora, która informuje kompilator, która definicja `auto` — słowo kluczowe do użycia.  
+-   [/ Zc: Auto (dedukuj typ zmiennej)](../build/reference/zc-auto-deduce-variable-type.md) opisuje opcję kompilatora, która informuje kompilator, która definicja **automatycznie** — słowo kluczowe do użycia.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Słowa kluczowe](../cpp/keywords-cpp.md)

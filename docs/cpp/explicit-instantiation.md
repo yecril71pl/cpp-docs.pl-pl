@@ -16,48 +16,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4925a60843ada350a2795709d9257ab796616a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 834a71f5fd670874fd7dad5a77cb89a837119c2d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415190"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940618"
 ---
 # <a name="explicit-instantiation"></a>Jawne tworzenie wystąpienia
-Jawne tworzenie wystąpienia można użyć do utworzenia wystąpienia szablonu klasy lub funkcja nie jest używana w kodzie. Ponieważ jest to przydatne podczas tworzenia biblioteki plików (lib), które używają szablonów do dystrybucji, definicje szablonów bez wystąpień nie są umieszczane w plikach obiektu (.obj).  
+Jawne tworzenie wystąpienia można użyć do utworzenia wystąpienia szablonu klasy lub funkcji bez rzeczywistego używania w kodzie. Ponieważ jest to przydatne, gdy tworzysz biblioteki pliki (lib), które używają szablonów do dystrybucji, bez wystąpień szablonu definicji nie są umieszczane w plikach obiektowych (.obj).  
   
- Ten kod jawnie tworzy `MyStack` dla `int` zmiennych i sześć elementów:  
+ Ten kod tworzy jawnie wystąpienie `MyStack` dla **int** zmiennych oraz sześć elementów:  
   
 ```cpp  
 template class MyStack<int, 6>;  
 ```  
   
- Ta instrukcja tworzy instancją typu `MyStack` bez rezerwowania dowolny magazyn dla obiekt. Kod jest generowany dla wszystkich elementów członkowskich.  
+ Ta instrukcja tworzy wystąpienia `MyStack` bez zarezerwowanie magazynu dla obiektu. Kod jest generowany dla wszystkich członków.  
   
- Następnego wiersza tworzy jawnie funkcji członkowskiej konstruktora:  
+ Następny wiersz tworzy jawnie funkcja elementu członkowskiego Konstruktor:  
   
 ```cpp  
 template MyStack<int, 6>::MyStack( void );  
 ```  
   
- Można jawnie utworzyć wystąpienia szablonów funkcji za pomocą argumentu określonego typu można ponownie zadeklarować, jak pokazano w przykładzie w [Tworzenie wystąpienia szablonu funkcji](../cpp/function-template-instantiation.md).  
+ Można jawnie utworzyć wystąpienie szablonów funkcji, przy użyciu argumentu określonego typu można ponownie zadeklarować je, jak pokazano w przykładzie w [Tworzenie wystąpienia szablonu funkcji](../cpp/function-template-instantiation.md).  
   
- Można użyć `extern` — słowo kluczowe, aby uniknąć automatycznego tworzenia wystąpień elementów członkowskich. Na przykład:  
+ Możesz użyć **extern** — słowo kluczowe, aby uniemożliwić automatyczne utworzenie wystąpienia elementów członkowskich. Na przykład:  
   
 ```cpp  
 extern template class MyStack<int, 6>;  
 ```  
   
- Analogicznie można oznaczyć członków określonych jako zewnętrzne i nie wystąpień:  
+ Podobnie można oznaczyć określonych członków jako zewnętrzne i nie wystąpień:  
   
 ```cpp  
 extern template MyStack<int, 6>::MyStack( void );  
 ```  
   
- Można użyć `extern` — słowo kluczowe, aby uniknąć generowania tego samego kodu podczas tworzenia wystąpienia w więcej niż jeden moduł obiektu kompilatora. Należy utworzyć wystąpienia funkcji szablonu przy użyciu parametrów określonego jawnego szablonu w co najmniej jeden moduł połączonego, jeśli funkcja jest wywoływana lub wystąpi błąd konsolidatora podczas tworzenia programu.  
+ Możesz użyć **extern** — słowo kluczowe, aby uniemożliwić kompilatorowi generowania tego samego kodu podczas tworzenia wystąpienia w więcej niż jeden moduł obiektu. Funkcja szablonu trzeba utworzyć przy użyciu parametrów określonego jawnego szablonu w co najmniej jeden moduł połączone, czy funkcja jest wywoływana, otrzymasz błąd konsolidatora, gdy program jest skompilowany.  
   
 > [!NOTE]
->  `extern` — Słowo kluczowe w specjalizacji ma zastosowanie tylko do funkcji członkowskiej zdefiniowanej poza treścią klasy. Funkcje zdefiniowane wewnątrz deklaracji klasy są traktowane jako funkcji śródwierszowych i są zawsze wystąpienia.  
+>  **Extern** — słowo kluczowe w specjalizacji ma zastosowanie tylko do funkcji składowej zdefiniowanej poza treścią klasy. Funkcje zdefiniowane w obrębie deklaracji klasy są traktowane jako wbudowane funkcje i są zawsze tworzone.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Szablony funkcji](../cpp/function-templates.md)

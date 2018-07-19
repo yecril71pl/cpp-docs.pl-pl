@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 692c5243a7fe2984d43a1e70fc39616de5cbcc9c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d21fcc27b5b4f92b690d8fae7669a18a5fcc1c46
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845365"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964941"
 ---
 # <a name="islvaluereference-class"></a>is_lvalue_reference — Klasa
 
-Testy, jeśli typ odwołania do wartości.
+Sprawdza, czy typ jest odwołaniem lvalue.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,17 +37,17 @@ struct is_lvalue_reference;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zapytania.
+*Ty* typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienia tego typu predykatu przechowuje wartość PRAWDA, jeśli typ `Ty` jest odwołaniem do obiektu lub funkcji, w przeciwnym razie posiada wartość false. Należy pamiętać, że `Ty` nie może być odwołaniem wartościowanym prawostronnie. Aby uzyskać więcej informacji o rvalues, zobacz [deklarator odwołania do r-wartości: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+Wystąpienie tego typu predykatu ma wartość true, jeśli typ *Ty* jest odwołaniem do obiektu lub funkcji, w przeciwnym razie przechowuje wartość false. Należy pamiętać, że *Ty* nie może być odwołaniem rvalue. Aby uzyskać więcej informacji o rvalue, zobacz [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

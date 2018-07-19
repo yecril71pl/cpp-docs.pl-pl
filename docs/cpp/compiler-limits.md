@@ -14,31 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc7cd26add0a46bab8df7669fb6dfb6060b0010e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ecf3351180fbff4d6872c7027eee90b92e560059
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412140"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37938902"
 ---
 # <a name="compiler-limits"></a>Limity kompilatora
-C++ standard zaleca limity dotyczące konstrukcji języka różne. Poniżej znajduje się lista przypadków, w którym kompilator języka Visual C++ nie implementuje zalecane limity. Pierwsza liczba jest limit, która jest określana w ISO C++ 11 standardowe (INCITS/ISO/IEC 14882 2011 [2012] załącznik B), a druga liczba jest limit implementowane przez Visual C++:  
+C++ standard zaleca limity dla różnych konstrukcji językowych. Oto lista przypadków, w którym kompilator języka Visual C++ nie implementuje zalecane limity. Pierwsza liczba jest to limit, który jest określana w ISO standardzie c ++ 11 (Stowarzyszenie INCITS/ISO/IEC 14882 2011 [2012], w załączniku B), a druga liczba jest limit implementowaną przez Visual C++:  
   
--   Poziomów zagnieżdżenia instrukcje złożone, struktury sterujące iteracji i wybór kontrolowanie struktury — C++ standard: 256, kompilator języka Visual C++: zależy od kombinacji instrukcji, które są zagnieżdżone, ale zazwyczaj w przedziale od 100 do 110.  
+-   Poziomów zagnieżdżenia instrukcje złożone struktury sterujące iteracji i wybór kontrolować struktur — C++ standard: 256, kompilator języka Visual C++: zależy od kombinacji instrukcji, które są zagnieżdżone, ale zazwyczaj zakresu od 100 do 110.  
   
--   Parametry w definicji makra jeden — C++ standard: 256, kompilator języka Visual C++: 127.  
+-   Parametrów w definicji makra jeden — C++ standard: 256, kompilator języka Visual C++: 127 znaków.  
   
--   Argumentów w wywołaniu makra jeden — C++ standard: 256, kompilator języka Visual C++ 127.  
+-   Argumenty w wywołaniu makra jeden — C++ standard: 256, kompilator języka Visual C++ 127 znaków.  
   
--   Znaki znakiem ciągu literału ciągu literału lub szerokie (po łączenia) - C++ standard: 65536, kompilator języka Visual C++: 65535 znaków jednobajtowych, w tym `null` terminatora i 32767 znaków dwubajtowych, w tym `null` terminator.  
+-   Znaki w znaku ciągu literału lub szerokiego literału ciągu znaków (po łączenie) — C++ standard: 65536, kompilator języka Visual C++: 65535 znaków jednobajtowych, w tym terminator o wartości NULL i 32767 znaków dwubajtowych, w tym terminator o wartości NULL.  
   
--   Poziomów zagnieżdżonych klasy, struktury lub Unii definicje w jednej `struct-declaration-list` — C++ standard: 256, kompilator języka Visual C++: 16.  
+-   Poziomów zagnieżdżonych klasy, struktury lub union definicje w jednym `struct-declaration-list` — C++ standard: 256, kompilator języka Visual C++: 16.  
   
--   Inicjatorów elementów członkowskich w definicji konstruktora — C++ standard: 6144, kompilator języka Visual C++: co najmniej 6144.  
+-   Inicjatorów składowych w Konstruktorze definicji — C++ standard: 6144, kompilator języka Visual C++: co najmniej 6144.  
   
--   Zakres kwalifikacji jeden identyfikator - C++ standard: 256, kompilator języka Visual C++: 127.  
+-   Zakres kwalifikacji jeden identyfikator — C++ standard: 256, kompilator języka Visual C++: 127 znaków.  
   
--   Zagnieżdżone `extern` specyfikacje — C++ standard: 1024, kompilator języka Visual C++: 9 (bez uwzględnienia niejawne `extern` w zakresie globalnym lub 10, jeśli niejawne liczenia specyfikacja `extern` w zakresie globalnym specyfikacja..  
+-   Zagnieżdżone **extern** specyfikacje — C++ standard: 1024, kompilator języka Visual C++: 9 (bez uwzględnienia niejawny **extern** specyfikacji w zakresie globalnym lub 10, jeśli liczyć niejawny **extern**  specyfikacji w zakresie globalnym...  
   
 -   Argumenty szablonu w deklaracji szablonu — C++ standard: 1024, kompilator języka Visual C++: 2046.  
   

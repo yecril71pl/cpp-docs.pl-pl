@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6de11114eafe423e80c885f3b1a5d00a70b449e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4eab6d6ce44655177d20073ca5c5cda3859cb8b3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864050"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966384"
 ---
 # <a name="ispolymorphic-class"></a>is_polymorphic — Klasa
 
-Testy, jeśli typ ma funkcję wirtualną.
+Sprawdza, czy typ ma funkcję wirtualną.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,11 +37,11 @@ struct is_polymorphic;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zapytania.
+*Ty* typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typ `Ty` jest klasa, która deklaruje lub dziedziczy funkcji wirtualnych, w przeciwnym razie posiada wartość false.
+Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* to klasa, która deklaruje lub dziedziczy wirtualnej funkcji, w przeciwnym razie przechowuje wartość false.
 
 ## <a name="example"></a>Przykład
 
@@ -98,7 +98,7 @@ is_polymorphic<throws> == true
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

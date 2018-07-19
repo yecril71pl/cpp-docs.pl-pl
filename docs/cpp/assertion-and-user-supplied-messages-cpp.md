@@ -17,31 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e93798dadee3e4270d82eac84a794c6133c05c07
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 61531ad8471a7409a42fdd2d55b27a82d08ba340
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411708"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941031"
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>Potwierdzanie i komunikaty dostarczone przez użytkownika (C++)
-C++ języka obsługuje trzy obsługi błędów mechanizmy ułatwiające debugowania aplikacji: [dyrektywa #error](../preprocessor/hash-error-directive-c-cpp.md), [static_assert](../cpp/static-assert.md) — słowo kluczowe i [assert — makro, _assert, _ wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) makra. Wszystkie trzy mechanizmy emitują komunikaty o błędach a dwa testują również potwierdzenia oprogramowania. Potwierdzenie oprogramowania określa warunek, który będzie mieć wartość true w określonym punkcie w programie. Jeśli potwierdzenia w czasie kompilacji zakończą się niepowodzeniem, kompilator generuje komunikat diagnostyczny i błąd kompilacji. Jeśli potwierdzenia czasu wykonania nie powiodą się, system operacyjny wysyła komunikat diagnostyczny i zamyka aplikację.  
+C++ języka obsługuje trzy mechanizmy obsługi błędów, które ułatwiają debugowanie aplikacji: [dyrektywa #error](../preprocessor/hash-error-directive-c-cpp.md), [static_assert](../cpp/static-assert.md) — słowo kluczowe i [assert — makro, _assert, _ wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) makra. Wszystkie trzy mechanizmy emitują komunikaty o błędach a dwa testują również potwierdzenia oprogramowania. Potwierdzenie oprogramowania określa warunek, który będzie mieć wartość true w określonym punkcie w programie. Jeśli potwierdzenia w czasie kompilacji zakończą się niepowodzeniem, kompilator generuje komunikat diagnostyczny i błąd kompilacji. Jeśli potwierdzenia czasu wykonania nie powiodą się, system operacyjny wysyła komunikat diagnostyczny i zamyka aplikację.  
   
 ## <a name="remarks"></a>Uwagi  
  Okres istnienia aplikacji składa się z fazy przetwarzania wstępnego, fazy kompilacji i fazy czasu wykonywania. Każdy mechanizm obsługi błędów uzyskuje dostęp do informacji debugowania, które są dostępne podczas jednej z tych faz. Aby debugować skutecznie, wybierz ten mechanizm, który zapewnia odpowiednie informacje na temat tej fazy:  
   
--   [Dyrektywa #error](../preprocessor/hash-error-directive-c-cpp.md) jest włączona w przetwarzaniu wstępnym czasu. Bezwarunkowo emituje komunikat określony przez użytkownika i powoduje niepowodzenie wskutek błędu kompilacji. Wiadomość może zawierać tekst, który jest przetwarzany przez dyrektywy preprocesora, ale żadne wyrażenie warunkowe nie zostaje ocenione.  
+-   [Dyrektywa #error](../preprocessor/hash-error-directive-c-cpp.md) jest aktywna w czasie przetwarzania wstępnego. Bezwarunkowo emituje komunikat określony przez użytkownika i powoduje niepowodzenie wskutek błędu kompilacji. Wiadomość może zawierać tekst, który jest przetwarzany przez dyrektywy preprocesora, ale żadne wyrażenie warunkowe nie zostaje ocenione.  
   
--   [Static_assert](../cpp/static-assert.md) deklaracja jest obowiązująca w czasie kompilacji. Sprawdza potwierdzenia oprogramowania, które są reprezentowane przez wyrażenia integralne określone przez użytkownika, które można przekonwertować na wartość logiczną. Jeśli wyrażenie ma wartość zero (false), kompilator generuje komunikat określony przez użytkownika i kompilacja nie powiedzie się z powodu błędu.  
+-   [Static_assert](../cpp/static-assert.md) deklaracji jest aktywna w czasie kompilacji. Sprawdza potwierdzenia oprogramowania, które są reprezentowane przez wyrażenia integralne określone przez użytkownika, które można przekonwertować na wartość logiczną. Jeśli wyrażenie ma wartość zero (false), kompilator generuje komunikat określony przez użytkownika i kompilacja nie powiedzie się z powodu błędu.  
   
      Deklaracja `static_assert` jest szczególnie przydatna podczas debugowania szablonów, ponieważ argumenty szablonu mogą być zawarte w wyrażeniu określonym przez użytkownika.  
   
--   [Assert — makro, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) makro jest włączona w czasie wykonywania. Ocenia wyrażenia określone przez użytkownika, a jeśli wynik wynosi zero, system wysyła komunikat diagnostyczny i zamyka aplikację. Wiele makr, takich jak[_ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) i `_ASSERTE`, przypominają to makro, ale wystawiać inne komunikaty diagnostyczne zdefiniowane przez system lub użytkownik.  
+-   [Assert — makro, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) — makro jest aktywna w czasie wykonywania. Ocenia wyrażenia określone przez użytkownika, a jeśli wynik wynosi zero, system wysyła komunikat diagnostyczny i zamyka aplikację. Wiele innych makr, takich jak[_ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) i _asserte —, przypominają to makro, ale emitują różne komunikaty diagnostyczne zdefiniowane przez system lub zdefiniowanych przez użytkownika.  
   
 ## <a name="see-also"></a>Zobacz też  
  [#error — dyrektywa (C/C++)](../preprocessor/hash-error-directive-c-cpp.md)   
  [assert Macro, _assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)   
  [_ASSERT, _asserte —, _ASSERT_EXPR makra](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)   
  [static_assert](../cpp/static-assert.md)   
- [_Static_assert — makro](../c-runtime-library/reference/static-assert-macro.md)   
+ [_STATIC_ASSERT — makro](../c-runtime-library/reference/static-assert-macro.md)   
  [Szablony](../cpp/templates-cpp.md)

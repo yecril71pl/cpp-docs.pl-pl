@@ -20,14 +20,14 @@ helpviewer_keywords:
 - std::operator&lt; (list)
 - std::operator&lt;= (list)
 - std::operator== (list)
-ms.openlocfilehash: b2647cf836fb565115b8a582085b6108c01a3420
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ba77722abb28f246d305b44fb78379b2297ccc14
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856651"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965720"
 ---
-# <a name="ltlistgt-operators"></a>&lt;Lista&gt; operatory
+# <a name="ltlistgt-operators"></a>&lt;Lista&gt; operatorów
 
 ||||
 |-|-|-|
@@ -36,7 +36,7 @@ ms.locfileid: "33856651"
 
 ## <a name="op_neq"></a>  operator! =
 
-Testy, jeśli obiekt listy po lewej stronie operatora nie jest taki sam jak obiekt listy po prawej stronie.
+Sprawdza, czy obiekt listy po lewej stronie operatora nie jest równy obiektowi listy po prawej stronie.
 
 ```cpp
 bool operator!=(
@@ -46,17 +46,17 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu **listy**.
+*po lewej stronie* obiektu typu `list`.
 
-`right` Obiekt typu **listy**.
+*prawy* obiektu typu `list`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** list nie są równe; **false** listy są równe.
+**wartość true,** listy nie są równe; **false** list są równe.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie listę obiektów jest oparta na parowania porównanie ich elementów. Dwie listy są takie same, jeśli mają one taką samą liczbę elementów i ich odpowiednich elementy mają takie same wartości. W przeciwnym razie ich nie są równe.
+Porównanie między obiektami listy opiera się na parowania porównania ich elementów. Dwie listy są równe, jeśli mają taką samą liczbę elementów i ich odpowiednie elementy mają te same wartości. W przeciwnym razie są nierówne.
 
 ### <a name="example"></a>Przykład
 
@@ -85,7 +85,7 @@ Lists not equal.
 
 ## <a name="op_lt"></a>  Operator&lt;
 
-Testy, jeśli obiekt listy po lewej stronie operatora jest mniejsza niż obiekt listy po prawej stronie.
+Sprawdza, czy obiekt listy, po lewej stronie operatora jest mniejszy niż obiekt listy po prawej stronie.
 
 ```cpp
 bool operator<(
@@ -95,17 +95,17 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu **listy**.
+*po lewej stronie* obiektu typu `list`.
 
-`right` Obiekt typu **listy**.
+*prawy* obiektu typu `list`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli lista po lewej stronie operatora jest mniejsza niż, ale nie równa liście po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true,** Jeśli na liście po lewej stronie operatora jest mniejszy niż, ale nie równa listy po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie listę obiektów jest oparta na parowania porównanie ich elementów. Less — niż relacji między dwoma obiektami jest oparta na porównanie pierwszego pary nierówne elementów.
+Porównanie między obiektami listy opiera się na parowania porównania ich elementów. Mniej-niż relacji między dwoma obiektami opiera się na porównanie pierwszy pary nierówne elementów.
 
 ### <a name="example"></a>Przykład
 
@@ -138,7 +138,7 @@ List c1 is less than list c2.
 
 ## <a name="op_lt_eq"></a>  Operator&lt;=
 
-Testy, jeśli obiekt listy po lewej stronie operatora jest mniejsza niż lub równe obiekt listy po prawej stronie.
+Sprawdza, czy lista obiektów po lewej stronie operatora jest mniejszy niż lub równy obiektowi listy po prawej stronie.
 
 ```cpp
 bool operator<=(
@@ -148,17 +148,17 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu **listy**.
+*po lewej stronie* obiektu typu `list`.
 
-`right` Obiekt typu **listy**.
+*prawy* obiektu typu `list`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli lista po lewej stronie operatora jest mniejsza niż lub równa liście po prawej stronie operatora, w przeciwnym **false**.
+**wartość true,** Jeśli lista po lewej stronie operatora jest mniejszy niż lub równe do listy po prawej stronie operatora; w przeciwnym **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie listę obiektów jest oparta na parowania porównanie ich elementów. Mniejsze niż lub równe do relacji między dwoma obiektami jest oparta na porównanie pierwszego pary nierówne elementów.
+Porównanie między obiektami listy opiera się na parowania porównania ich elementów. Mniejszą lub równą do relacji między dwoma obiektami opiera się na porównaniu pierwszy pary nierówne elementów.
 
 ### <a name="example"></a>Przykład
 
@@ -191,7 +191,7 @@ List c1 is less than or equal to list c2.
 
 ## <a name="op_eq_eq"></a>  operator ==
 
-Testy, jeśli obiekt listy po lewej stronie operatora jest taki sam jak obiekt listy po prawej stronie.
+Sprawdza, czy obiekt listy po lewej stronie operatora jest równy obiektowi listy po prawej stronie.
 
 ```cpp
 bool operator==(
@@ -201,17 +201,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu **listy**.
+*po lewej stronie* obiektu typu `list`.
 
-`right` Obiekt typu **listy**.
+*prawy* obiektu typu `list`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli lista po lewej stronie operatora jest równa liście po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true,** Jeśli lista po lewej stronie operatora jest równy listy po prawej stronie operatora, a w przeciwnym **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie listę obiektów jest oparta na parowania porównanie ich elementów. Dwie listy są takie same, jeśli mają one taką samą liczbę elementów i ich odpowiednich elementy mają takie same wartości. W przeciwnym razie ich nie są równe.
+Porównanie między obiektami listy opiera się na parowania porównania ich elementów. Dwie listy są równe, jeśli mają taką samą liczbę elementów i ich odpowiednie elementy mają te same wartości. W przeciwnym razie są nierówne.
 
 ### <a name="example"></a>Przykład
 
@@ -240,7 +240,7 @@ The lists are equal.
 
 ## <a name="op_gt"></a>  Operator&gt;
 
-Testy, jeśli obiekt listy po lewej stronie operatora jest większy niż obiekt listy po prawej stronie.
+Sprawdza, czy obiekt listy po lewej stronie operatora jest większy niż obiekt listy po prawej stronie.
 
 ```cpp
 bool operator>(
@@ -250,17 +250,17 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu **listy**.
+*po lewej stronie* obiektu typu `list`.
 
-`right` Obiekt typu **listy**.
+*prawy* obiektu typu `list`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli lista po lewej stronie operatora jest większa niż liście po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true,** Jeśli lista po lewej stronie operatora jest większy niż listy po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie listę obiektów jest oparta na parowania porównanie ich elementów. Większa-niż relacji między dwoma obiektami jest oparta na porównanie pierwszego pary nierówne elementów.
+Porównanie między obiektami listy opiera się na parowania porównania ich elementów. Większą-niż relacji między dwoma obiektami opiera się na porównanie pierwszy pary nierówne elementów.
 
 ### <a name="example"></a>Przykład
 
@@ -293,7 +293,7 @@ List c1 is greater than list c2.
 
 ## <a name="op_gt_eq"></a>  Operator&gt;=
 
-Testy, jeśli obiekt listy po lewej stronie operatora jest większa niż lub równa obiekt listy po prawej stronie.
+Sprawdza, czy obiekt listy po lewej stronie operatora jest większy lub równy obiektowi listy po prawej stronie.
 
 ```cpp
 bool operator>=(
@@ -303,17 +303,17 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu **listy**.
+*po lewej stronie* obiektu typu `list`.
 
-`right` Obiekt typu **listy**.
+*prawy* obiektu typu `list`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli lista po lewej stronie operatora jest większa niż lub równa liście po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true,** Jeśli lista po lewej stronie operatora jest większy niż lub równe do listy po prawej stronie operatora; w przeciwnym **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie listę obiektów jest oparta na parowania porównanie ich elementów. Większa niż lub równa relacji między dwoma obiektami opiera się na porównanie pierwszego pary nierówne elementów.
+Porównanie między obiektami listy opiera się na parowania porównania ich elementów. Większa lub równa relacji między dwoma obiektami opiera się na porównaniu pierwszy pary nierówne elementów.
 
 ### <a name="example"></a>Przykład
 

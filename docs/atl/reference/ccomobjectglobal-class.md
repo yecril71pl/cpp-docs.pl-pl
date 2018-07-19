@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3614962d3bebada0c63b7fe804b52efaa965c6a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5d96af29f03da472c8e9cc829c89b60d0eaa591c
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362446"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880638"
 ---
 # <a name="ccomobjectglobal-class"></a>Klasa CComObjectGlobal
-Ta klasa zarządza liczebności referencyjnej na moduł zawierający Twoje `Base` obiektu.  
+Ta klasa zarządza moduł zawierający licznik odwołań do Twojej `Base` obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,8 +40,8 @@ class CComObjectGlobal : public Base
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `Base`  
- Pochodne klasy, [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak również od innych interfejsu mają być obsługiwane w obiekcie.  
+ *podstawowy*  
+ Z klasą pochodną [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak również od innych interfejsu mają być obsługiwane w obiekcie.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -56,20 +56,20 @@ class CComObjectGlobal : public Base
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CComObjectGlobal::AddRef](#addref)|Implementuje globalnym `AddRef`.|  
-|[CComObjectGlobal::QueryInterface](#queryinterface)|Implementuje globalnym `QueryInterface`.|  
-|[CComObjectGlobal::Release](#release)|Implementuje globalnym **wersji**.|  
+|[CComObjectGlobal::AddRef](#addref)|Implementuje globalną `AddRef`.|  
+|[CComObjectGlobal::QueryInterface](#queryinterface)|Implementuje globalną `QueryInterface`.|  
+|[CComObjectGlobal::Release](#release)|Implementuje globalną `Release`.|  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CComObjectGlobal::m_hResFinalConstruct](#m_hresfinalconstruct)|Zawiera **HRESULT** zwrócony podczas tworzenia `CComObjectGlobal` obiektu.|  
+|[CComObjectGlobal::m_hResFinalConstruct](#m_hresfinalconstruct)|Zawiera wartość HRESULT zwracane podczas konstruowania z `CComObjectGlobal` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CComObjectGlobal` zarządza liczebności referencyjnej na moduł zawierający Twoje `Base` obiektu. `CComObjectGlobal` gwarantuje, że obiekt nie zostaną usunięte, tak długo, jak moduł nie jest zwalniany. Obiektu tylko zostaną usunięte, gdy liczba odwołań na cały moduł przechodzi od zera.  
+ `CComObjectGlobal` zarządza moduł zawierający licznik odwołań do Twojej `Base` obiektu. `CComObjectGlobal` gwarantuje, że obiekt nie zostaną usunięte, tak długo, jak moduł nie jest zwalniane. Obiekt zostanie usunięty, tylko gdy licznik odwołań na cały moduł zbliża się do zera.  
   
- Na przykład za pomocą `CComObjectGlobal`, fabrykę klas mogą zawierać wspólnej obiekt globalny, który jest współużytkowany przez wszystkich klientów.  
+ Na przykład za pomocą `CComObjectGlobal`, fabrykę klas może przechowywać wspólne obiekt globalny, który jest współużytkowany przez wszystkich klientów.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `Base`  
@@ -80,7 +80,7 @@ class CComObjectGlobal : public Base
  **Nagłówek:** atlcom.h  
   
 ##  <a name="addref"></a>  CComObjectGlobal::AddRef  
- Zwiększa liczbę odwołanie do obiektu o 1.  
+ Zwiększa licznik odwołań obiektu o 1.  
   
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -90,17 +90,17 @@ STDMETHOD_(ULONG, AddRef)();
  Wartość, która może być przydatne w przypadku diagnostyki i testowania.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślnie `AddRef` wywołania **_Module::Lock**, gdzie **_Module** jest globalne wystąpienie [ccommodule —](../../atl/reference/ccommodule-class.md) lub klasą pochodną go.  
+ Domyślnie `AddRef` wywołania `_Module::Lock`, gdzie `_Module` jest globalne wystąpienie [CComModule](../../atl/reference/ccommodule-class.md) lub klasa pochodnej od niego.  
   
 ##  <a name="ccomobjectglobal"></a>  CComObjectGlobal::CComObjectGlobal  
- Konstruktor. Wywołania `FinalConstruct` , a następnie ustawia [m_hResFinalConstruct](#m_hresfinalconstruct) do `HRESULT` zwrócony przez `FinalConstruct`.  
+ Konstruktor. Wywołania `FinalConstruct` , a następnie ustawia [m_hResFinalConstruct](#m_hresfinalconstruct) do `HRESULT` zwrócone przez `FinalConstruct`.  
   
 ```
 CComObjectGlobal(void* = NULL));
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli nie ma pochodzi z klasy podstawowej [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), należy podać własne `FinalConstruct` metody. Wywołania destruktora `FinalRelease`.  
+ Jeśli masz nie pochodzi z klasy podstawowej [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), należy podać własne `FinalConstruct` metody. Wywołania destruktora `FinalRelease`.  
   
 ##  <a name="dtor"></a>  CComObjectGlobal:: ~ CComObjectGlobal  
  Destruktor.  
@@ -113,47 +113,47 @@ CComObjectGlobal();
  Zwalnia wszystkie przydzielone zasoby i wywołania [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
   
 ##  <a name="m_hresfinalconstruct"></a>  CComObjectGlobal::m_hResFinalConstruct  
- Zawiera `HRESULT` z wywołaniem `FinalConstruct` podczas budowy `CComObjectGlobal` obiektu.  
+ Zawiera wartość HRESULT z wywołaniem `FinalConstruct` podczas konstruowania `CComObjectGlobal` obiektu.  
   
 ```
 HRESULT m_hResFinalConstruct;
 ```  
   
 ##  <a name="queryinterface"></a>  CComObjectGlobal::QueryInterface  
- Pobiera wskaźnik na wskaźnik żądanego interfejsu.  
+ Pobiera wskaźnik do wskaźnika żądanego interfejsu.  
   
 ```
 STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iid`  
- [in] Identyfikator GUID żądanego interfejsu.  
+ *IID*  
+ [in] Identyfikator GUID interfejsu żądanej.  
   
- `ppvObject`  
- [out] Wskaźnik do wskaźnika interfejsu identyfikowany przez identyfikator iid, lub **NULL** Jeśli nie można odnaleźć interfejsu.  
+ *ppvObject*  
+ [out] Wskaźnik do wskaźnika interfejsu identyfikowane przez identyfikator iid lub wartość NULL, jeśli nie można odnaleźć interfejsu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standard `HRESULT` wartość.  
+ Standardowe wartości HRESULT.  
   
 ### <a name="remarks"></a>Uwagi  
- `QueryInterface` Obsługuje tylko interfejsy COM tabeli mapy.  
+ `QueryInterface` obsługuje tylko interfejsów COM tabeli mapy.  
   
 ##  <a name="release"></a>  CComObjectGlobal::Release  
- Zmniejsza odwołanie liczba obiektu o 1.  
+ Dekrementuje liczbę odwołań obiektu o 1.  
   
 ```
 STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- W kompilacjach do debugowania **wersji** zwróci wartość, która może być przydatne w przypadku diagnostyki i testowania. W kompilacjach do debugowania z systemem innym niż **wersji** zawsze zwraca wartość 0.  
+ W kompilacjach do debugowania `Release` zwraca wartość, która może być przydatne w przypadku diagnostyki i testowania. W kompilacjach nieprzeznaczonych do debugowania `Release` zawsze zwraca wartość 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślnie **wersji** wywołania **_Module::Unlock**, gdzie **_Module** jest globalne wystąpienie [ccommodule —](../../atl/reference/ccommodule-class.md) lub klasą pochodną go.  
+ Domyślnie `Release` wywołania `_Module::Unlock`, gdzie `_Module` jest globalne wystąpienie [CComModule](../../atl/reference/ccommodule-class.md) lub klasa pochodnej od niego.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CComObjectStack](../../atl/reference/ccomobjectstack-class.md)   
  [Klasa CComAggObject](../../atl/reference/ccomaggobject-class.md)   
- [Element CComObject — klasa](../../atl/reference/ccomobject-class.md)   
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Klasa CComObject](../../atl/reference/ccomobject-class.md)   
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

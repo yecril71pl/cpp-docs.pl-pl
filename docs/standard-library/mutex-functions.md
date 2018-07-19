@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::defer_lock [C++]
 - std::lock [C++]
 - std::try_to_lock [C++]
-ms.openlocfilehash: 85ed95250b5563cd8a7c1ef9cfc0ee048cb3bc60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: df52b5bdf9b7054fd838b1892c4e641cdf9d4dcc
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858215"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962191"
 ---
 # <a name="ltmutexgt-functions-and-variables"></a>&lt;mutex&gt; funkcje i zmienne
 
@@ -32,7 +32,7 @@ ms.locfileid: "33858215"
 
 ## <a name="adopt_lock"></a>  adopt_lock — zmienna
 
-Reprezentuje obiekt, który może być przekazane do konstruktorów dla [lock_guard](../standard-library/lock-guard-class.md) i [unique_lock](../standard-library/unique-lock-class.md) aby wskazać, że obiektu mutex, który również jest przekazywany do konstruktora jest zablokowany.
+Reprezentuje obiekt, który może być przekazywany do konstruktory [lock_guard](../standard-library/lock-guard-class.md) i [unique_lock](../standard-library/unique-lock-class.md) do wskazania, że obiekt mutex, który również jest przekazywana do konstruktora jest zablokowany.
 
 ```cpp
 const adopt_lock_t adopt_lock;
@@ -40,7 +40,7 @@ const adopt_lock_t adopt_lock;
 
 ## <a name="call_once"></a>  call_once —
 
-Udostępnia mechanizm wywoływania dokładnie raz określony obiekt można wywołać podczas wykonywania.
+Udostępnia mechanizm do wywoływania określonego wywoływanego obiektu tylko raz podczas wykonywania.
 
 ```cpp
 template <class Callable, class... Args>
@@ -50,25 +50,25 @@ void call_once(once_flag& Flag,
 
 ### <a name="parameters"></a>Parametry
 
-`Flag` A [once_flag —](../standard-library/once-flag-structure.md) obiekt, który zapewnia, że można wywołać obiektu jest wywołana tylko raz.
+*Flaga* A [once_flag](../standard-library/once-flag-structure.md) obiekt, który gwarantuje, że obiekt jest wywoływana tylko raz.
 
-`F` Można wywołać obiektu.
+*F* wywoływanego obiektu.
 
-`A` Lista argumentów.
+*A* listy argumentów.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli `Flag` jest nieprawidłowa, funkcja zwraca [system_error —](../standard-library/system-error-class.md) mający z kodem błędu `invalid_argument`. W przeciwnym razie używa funkcji szablonu jego `Flag` argumentu, aby upewnić się, że wymaga `F(A...)` pomyślnie tylko raz, niezależnie od tego, ile razy szablonu wywołania funkcji. Jeśli `F(A...)` wyjścia przez Zgłaszanie wyjątku, wywołanie zakończyła się niepowodzeniem.
+Jeśli *flagi* jest nieprawidłowy, funkcja zgłasza [system_error](../standard-library/system-error-class.md) zawierający kod błędu `invalid_argument`. W przeciwnym razie używa funkcji szablonu jego *flagi* argumentu, aby upewnić się, że wywołuje on `F(A...)` pomyślnie dokładnie jeden raz, niezależnie od tego, ile razy funkcji szablonu jest wywoływana. Jeśli `F(A...)` wyjścia, zostanie zgłoszony wyjątek, wywołanie nie powiodło się.
 
 ## <a name="defer_lock"></a>  defer_lock — zmienna
 
-Reprezentuje obiekt, który może zostać przekazany do konstruktora dla [unique_lock](../standard-library/unique-lock-class.md). Oznacza to, że konstruktora nie powinna zablokować obiektu mutex, który również jest przekazywany do niego.
+Reprezentuje obiekt, który może być przekazywany do konstruktora dla [unique_lock](../standard-library/unique-lock-class.md). Oznacza to, że Konstruktor nie powinien być blokowany obiektu mutex, który również jest przekazywana do niego.
 
 ```cpp
 const defer_lock_t defer_lock;
 ```
 
-## <a name="lock"></a>  blokady
+## <a name="lock"></a>  Blokady
 
 Próbuje zablokować wszystkie argumenty bez zakleszczenia.
 
@@ -79,13 +79,13 @@ void lock(L1&, L2&, L3&...);
 
 ### <a name="remarks"></a>Uwagi
 
-Argumenty funkcji szablonu musi być *typów obiektu mutex*, z wyjątkiem tego, który odwołuje się do `try_lock` może zgłaszać wyjątków.
+Argumenty do funkcji szablonu musi być *typów obiektu mutex*, z wyjątkiem który wywołuje w celu `try_lock` może zgłaszać wyjątki.
 
-Funkcja blokuje wszystkie argumenty bez zakleszczenie wywołań `lock`, `try_lock`, i `unlock`. Jeśli wywołanie `lock` lub `try_lock` zgłasza wyjątek, wywołania funkcji `unlock` na dowolny obiekt mutex, które pomyślnie zostały zablokowane przed ponowne generowanie wyjątek.
+Funkcja blokuje wszystkie jej argumenty bez zakleszczenia wywołań `lock`, `try_lock`, i `unlock`. Jeśli wywołanie `lock` lub `try_lock` zgłasza wyjątek, wywołania funkcji `unlock` na obiekty mutex, które zostały pomyślnie zablokowane przed ponowne generowanie wyjątku.
 
 ## <a name="try_to_lock"></a>  try_to_lock — zmienna
 
-Reprezentuje obiekt, który może zostać przekazany do konstruktora dla [unique_lock](../standard-library/unique-lock-class.md) wskazująca, czy konstruktora należy dążyć do odblokowania `mutex` który jest również przekazywany do niego bez blokowania.
+Reprezentuje obiekt, który może być przekazywany do konstruktora dla [unique_lock](../standard-library/unique-lock-class.md) do wskazania, konstruktora powinien próbować odblokować `mutex` , również przekazywaną do niego bez blokowania.
 
 ```cpp
 const try_to_lock_t try_to_lock;

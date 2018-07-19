@@ -1,5 +1,5 @@
 ---
-title: Globalne funkcje zabezpieczeń | Dokumentacja firmy Microsoft
+title: Funkcje globalne zabezpieczeń | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,18 +26,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad9ad170706b72c9d236e095db0e2b6df00031ff
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3e6dcaeed793a81580b9ca5ed93ad7e267b534fe
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365057"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881178"
 ---
-# <a name="security-global-functions"></a>Globalne funkcje zabezpieczeń
-Funkcje te zapewniają obsługę modyfikowanie obiektów identyfikator SID i listy kontroli dostępu.  
+# <a name="security-global-functions"></a>Funkcje globalne zabezpieczeń
+Te funkcje zapewniają obsługę modyfikowanie obiektów SID i listy ACL.  
   
 > [!IMPORTANT]
->  Funkcje wymienione w poniższej tabeli nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Funkcje wymienione w poniższej tabeli nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 |||  
 |-|-|  
@@ -58,7 +58,7 @@ Funkcje te zapewniają obsługę modyfikowanie obiektów identyfikator SID i lis
  Wywołaj tę funkcję, aby pobrać informacje o poufnej liście kontroli dostępu (DACL) określonego obiektu.  
   
 > [!IMPORTANT]
->  Nie można użyć tej funkcji w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta funkcja nie może służyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ```
 inline bool AtlGetDacl(
@@ -68,26 +68,26 @@ inline bool AtlGetDacl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hObject`  
- Dojście do obiektu, który można pobrać informacji o zabezpieczeniach.  
+ *hObject*  
+ Uchwytu do obiektu, dla którego mają zostać pobrane informacje o zabezpieczeniach.  
   
- `ObjectType`  
- Określa wartość z zakresu od [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) wyliczenia wskazująca typ obiektu identyfikowane przez `hObject` parametru.  
+ *Typ obiektu*  
+ Określa wartość z zakresu od [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.  
   
- `pDacl`  
- Wskaźnik do obiektu listy DACL, który będzie zawierać informacje o zabezpieczeniach pobrane.  
+ *pDacl*  
+ Wskaźnik do obiektu DACL, który będzie zawierać informacji o zabezpieczeniach pobrane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość true w przypadku powodzenia; wartość false w razie niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- W kompilacjach debugowania, wystąpi błąd potwierdzenia Jeśli `hObject` lub `pDacl` jest nieprawidłowy.  
+ W kompilacjach debugowania, wystąpi błąd asercji Jeśli *hObject* lub *pDacl* jest nieprawidłowy.  
   
 ##  <a name="atlsetdacl"></a>  AtlSetDacl  
  Wywołaj tę funkcję, aby ustawić informacje o poufnej liście kontroli dostępu (DACL) określonego obiektu.  
   
 > [!IMPORTANT]
->  Nie można użyć tej funkcji w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta funkcja nie może służyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ```
 inline bool AtlSetDacl(
@@ -98,23 +98,23 @@ inline bool AtlSetDacl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hObject`  
- Dojście do obiektu, do których chcesz ustawić informacji zabezpieczeń.  
+ *hObject*  
+ Uchwytu do obiektu, dla której chcesz ustawić informacje o zabezpieczeniach.  
   
- `ObjectType`  
- Określa wartość z zakresu od [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) wyliczenia wskazująca typ obiektu identyfikowane przez `hObject` parametru.  
+ *Typ obiektu*  
+ Określa wartość z zakresu od [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.  
   
- `rDacl`  
+ *rDacl*  
  Lista DACL zawierającego nowe informacje o zabezpieczeniach.  
   
- `dwInheritanceFlowControl`  
+ *dwInheritanceFlowControl*  
  Sterowanie przepływem dziedziczenia. Ta wartość może być 0 (domyślnie), PROTECTED_DACL_SECURITY_INFORMATION lub UNPROTECTED_DACL_SECURITY_INFORMATION.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość true w przypadku powodzenia; wartość false w razie niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- W kompilacjach debugowania, wystąpi błąd potwierdzenia Jeśli `hObject` jest nieprawidłowy, lub jeśli `dwInheritanceFlowControl` nie jest jednym z trzech wartości dozwolonych.  
+ W kompilacjach debugowania, wystąpi błąd asercji Jeśli *hObject* jest nieprawidłowa lub jeśli *dwInheritanceFlowControl* nie jest jednym z trzech wartości dozwolonych.  
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlsecurity.h 
 
@@ -122,7 +122,7 @@ inline bool AtlSetDacl(
  Wywołaj tę funkcję, aby pobrać identyfikator zabezpieczeń grupy (SID) obiektu.  
   
 > [!IMPORTANT]
->  Nie można użyć tej funkcji w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta funkcja nie może służyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ```
 inline bool AtlGetGroupSid(
@@ -132,14 +132,14 @@ inline bool AtlGetGroupSid(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hObject`  
- Dojście do obiektu, z którego można pobrać informacji o zabezpieczeniach.  
+ *hObject*  
+ Uchwytu do obiektu, z którego można pobrać informacji o zabezpieczeniach.  
   
- `ObjectType`  
- Określa wartość z zakresu od [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) wyliczenia wskazująca typ obiektu identyfikowane przez `hObject` parametru.  
+ *Typ obiektu*  
+ Określa wartość z zakresu od [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.  
   
- `pSid`  
- Wskaźnik do `CSid` obiektu, który będzie zawierać nowych informacji o zabezpieczeniach.  
+ *pSid*  
+ Wskaźnik do `CSid` obiektu, który będzie zawierać nowe informacje o zabezpieczeniach.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość true w przypadku powodzenia; wartość false w razie niepowodzenia.  
@@ -151,7 +151,7 @@ inline bool AtlGetGroupSid(
  Wywołaj tę funkcję, aby ustawić identyfikator zabezpieczeń grupy (SID) obiektu.  
   
 > [!IMPORTANT]
->  Nie można użyć tej funkcji w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta funkcja nie może służyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ```
 inline bool AtlSetGroupSid(
@@ -161,13 +161,13 @@ inline bool AtlSetGroupSid(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hObject`  
- Dojście do obiektu, do których chcesz ustawić informacji zabezpieczeń.  
+ *hObject*  
+ Uchwytu do obiektu, dla której chcesz ustawić informacje o zabezpieczeniach.  
   
- `ObjectType`  
- Określa wartość z zakresu od [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) wyliczenia wskazująca typ obiektu identyfikowane przez `hObject` parametru.  
+ *Typ obiektu*  
+ Określa wartość z zakresu od [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.  
   
- `rSid`  
+ *rSid*  
  `CSid` Obiektu zawierającego nowe informacje o zabezpieczeniach.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -180,7 +180,7 @@ inline bool AtlSetGroupSid(
  Wywołaj tę funkcję, aby pobrać identyfikator zabezpieczeń właściciela (SID) obiektu.  
   
 > [!IMPORTANT]
->  Nie można użyć tej funkcji w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta funkcja nie może służyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ```
 inline bool AtlGetOwnerSid(
@@ -190,14 +190,14 @@ inline bool AtlGetOwnerSid(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hObject`  
- Dojście do obiektu, z którego można pobrać informacji o zabezpieczeniach.  
+ *hObject*  
+ Uchwytu do obiektu, z którego można pobrać informacji o zabezpieczeniach.  
   
- `ObjectType`  
- Określa wartość z zakresu od [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) wyliczenia wskazująca typ obiektu identyfikowane przez `hObject` parametru.  
+ *Typ obiektu*  
+ Określa wartość z zakresu od [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.  
   
- `pSid`  
- Wskaźnik do `CSid` obiektu, który będzie zawierać nowych informacji o zabezpieczeniach.  
+ *pSid*  
+ Wskaźnik do `CSid` obiektu, który będzie zawierać nowe informacje o zabezpieczeniach.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość true w przypadku powodzenia; wartość false w razie niepowodzenia.  
@@ -209,7 +209,7 @@ inline bool AtlGetOwnerSid(
  Wywołaj tę funkcję, aby ustawić identyfikator zabezpieczeń właściciela (SID) obiektu.  
   
 > [!IMPORTANT]
->  Nie można użyć tej funkcji w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta funkcja nie może służyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ```
 inline bool AtlSetOwnerSid(
@@ -219,13 +219,13 @@ inline bool AtlSetOwnerSid(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hObject`  
- Dojście do obiektu, do których chcesz ustawić informacji zabezpieczeń.  
+ *hObject*  
+ Uchwytu do obiektu, dla której chcesz ustawić informacje o zabezpieczeniach.  
   
- `ObjectType`  
- Określa wartość z zakresu od [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) wyliczenia wskazująca typ obiektu identyfikowane przez `hObject` parametru.  
+ *Typ obiektu*  
+ Określa wartość z zakresu od [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.  
   
- `rSid`  
+ *rSid*  
  `CSid` Obiektu zawierającego nowe informacje o zabezpieczeniach.  
   
 ### <a name="return-value"></a>Wartość zwracana  
@@ -238,7 +238,7 @@ inline bool AtlSetOwnerSid(
  Wywołaj tę funkcję, aby pobrać informacje o systemowej liście kontroli dostępu (SACL) określonego obiektu.  
   
 > [!IMPORTANT]
->  Nie można użyć tej funkcji w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta funkcja nie może służyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ```
 inline bool AtlGetSacl(
@@ -249,23 +249,23 @@ inline bool AtlGetSacl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hObject`  
- Dojście do obiektu, z którego można pobrać informacji o zabezpieczeniach.  
+ *hObject*  
+ Uchwytu do obiektu, z którego można pobrać informacji o zabezpieczeniach.  
   
- `ObjectType`  
- Określa wartość z zakresu od [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) wyliczenia wskazująca typ obiektu identyfikowane przez `hObject` parametru.  
+ *Typ obiektu*  
+ Określa wartość z zakresu od [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.  
   
- `pSacl`  
- Wskaźnik do obiektu SACL, który będzie zawierać informacje o zabezpieczeniach pobrane.  
+ *pSacl*  
+ Wskaźnik do obiektu SACL, który będzie zawierać informacji o zabezpieczeniach pobrane.  
   
- `bRequestNeededPrivileges`  
- Jeśli PRAWDA, funkcja podejmie próbę włączenia uprawnień SE_SECURITY_NAME i przywróć ją po zakończeniu.  
+ *bRequestNeededPrivileges*  
+ W przypadku opcji true funkcja będzie podejmować próby włączenia uprawnień SE_SECURITY_NAME i przywrócić ją po zakończeniu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość true w przypadku powodzenia; wartość false w razie niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `AtlGetSacl` jest wywoływana wiele razy na wiele różnych obiektów, będzie bardziej wydajne, aby włączyć uprawnień SE_SECURITY_NAME raz, przed wywołaniem funkcji, z `bRequestNeededPrivileges` ustawiony na wartość false.  
+ Jeśli `AtlGetSacl` jest wywoływana wiele razy na wiele różnych obiektów, będzie bardziej wydajne, aby włączyć uprawnienia SE_SECURITY_NAME raz przed wywołaniem funkcji, z *bRequestNeededPrivileges* ustawiony na wartość false.  
 
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlsecurity.h 
@@ -274,7 +274,7 @@ inline bool AtlGetSacl(
  Wywołaj tę funkcję, aby ustawić informacje o systemowej liście kontroli dostępu (SACL) określonego obiektu.  
   
 > [!IMPORTANT]
->  Nie można użyć tej funkcji w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta funkcja nie może służyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ```
 inline bool AtlSetSacl(
@@ -286,28 +286,28 @@ inline bool AtlSetSacl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hObject`  
- Dojście do obiektu, do których chcesz ustawić informacji zabezpieczeń.  
+ *hObject*  
+ Uchwytu do obiektu, dla której chcesz ustawić informacje o zabezpieczeniach.  
   
- `ObjectType`  
- Określa wartość z zakresu od [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) wyliczenia wskazująca typ obiektu identyfikowane przez `hObject` parametru.  
+ *Typ obiektu*  
+ Określa wartość z zakresu od [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) wyliczenie, które wskazuje typ obiektu identyfikowane przez *hObject* parametru.  
   
  *rSacl*  
- Lista SACL zawierającego nowe informacje o zabezpieczeniach.  
+ SACL, zawierającego nowe informacje o zabezpieczeniach.  
   
- `dwInheritanceFlowControl`  
+ *dwInheritanceFlowControl*  
  Sterowanie przepływem dziedziczenia. Ta wartość może być 0 (domyślnie), PROTECTED_SACL_SECURITY_INFORMATION lub UNPROTECTED_SACL_SECURITY_INFORMATION.  
   
- `bRequestNeededPrivileges`  
- Jeśli PRAWDA, funkcja podejmie próbę włączenia uprawnień SE_SECURITY_NAME i przywróć ją po zakończeniu.  
+ *bRequestNeededPrivileges*  
+ W przypadku opcji true funkcja będzie podejmować próby włączenia uprawnień SE_SECURITY_NAME i przywrócić ją po zakończeniu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość true w przypadku powodzenia; wartość false w razie niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- W kompilacjach debugowania, wystąpi błąd potwierdzenia Jeśli `hObject` jest nieprawidłowy, lub jeśli `dwInheritanceFlowControl` nie jest jednym z trzech wartości dozwolonych.  
+ W kompilacjach debugowania, wystąpi błąd asercji Jeśli *hObject* jest nieprawidłowa lub jeśli *dwInheritanceFlowControl* nie jest jednym z trzech wartości dozwolonych.  
   
- Jeśli `AtlSetSacl` jest wywoływana wiele razy na wiele różnych obiektów, będzie bardziej wydajne, aby włączyć uprawnień SE_SECURITY_NAME raz, przed wywołaniem funkcji, z `bRequestNeededPrivileges` ustawiony na wartość false.  
+ Jeśli `AtlSetSacl` jest wywoływana wiele razy na wiele różnych obiektów, będzie bardziej wydajne, aby włączyć uprawnienia SE_SECURITY_NAME raz przed wywołaniem funkcji, z *bRequestNeededPrivileges* ustawiony na wartość false.  
 
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlsecurity.h 
@@ -316,7 +316,7 @@ inline bool AtlSetSacl(
  Wywołaj tę funkcję, aby pobrać deskryptor zabezpieczeń danego obiektu.  
   
 > [!IMPORTANT]
->  Nie można użyć tej funkcji w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta funkcja nie może służyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ```
 inline bool AtlGetSecurityDescriptor(
@@ -331,25 +331,25 @@ inline bool AtlGetSecurityDescriptor(
   
 ### <a name="parameters"></a>Parametry  
  *pszObjectName*  
- Wskaźnik do zerem ciąg, który określa nazwę obiektu, z którego można pobrać informacji o zabezpieczeniach.  
+ Wskaźnik na ciąg zakończony znakiem null, który określa nazwę obiektu, z którego można pobrać informacji o zabezpieczeniach.  
   
- `ObjectType`  
- Określa wartość z zakresu od [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) wyliczenia wskazująca typ obiektu identyfikowane przez *pszObjectName* parametru.  
+ *Typ obiektu*  
+ Określa wartość z zakresu od [SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593) wyliczenie, które wskazuje typ obiektu identyfikowane przez *pszObjectName* parametru.  
   
  *pSecurityDescriptor*  
  Obiekt, który odbiera deskryptora zabezpieczeń żądanej.  
   
  *requestedInfo*  
- Zestaw [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573) bit flagi, które określają typ informacji o zabezpieczeniach do pobrania. Ten parametr może być kombinacją następujących wartości.  
+ Zbiór [SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573) bit flagi wskazujące rodzaj informacji o zabezpieczeniach do pobrania. Ten parametr może być kombinacją następujących wartości.  
   
- `bRequestNeededPrivileges`  
- Jeśli PRAWDA, funkcja podejmie próbę włączenia uprawnień SE_SECURITY_NAME i przywróć ją po zakończeniu.  
+ *bRequestNeededPrivileges*  
+ W przypadku opcji true funkcja będzie podejmować próby włączenia uprawnień SE_SECURITY_NAME i przywrócić ją po zakończeniu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość true w przypadku powodzenia; wartość false w razie niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `AtlGetSecurityDescriptor` jest wywoływana wiele razy na wiele różnych obiektów, będzie bardziej wydajne, aby włączyć uprawnień SE_SECURITY_NAME raz, przed wywołaniem funkcji, z `bRequestNeededPrivileges` ustawiony na wartość false.  
+ Jeśli `AtlGetSecurityDescriptor` jest wywoływana wiele razy na wiele różnych obiektów, będzie bardziej wydajne, aby włączyć uprawnienia SE_SECURITY_NAME raz przed wywołaniem funkcji, z *bRequestNeededPrivileges* ustawiony na wartość false.  
 
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlsecurity.h 

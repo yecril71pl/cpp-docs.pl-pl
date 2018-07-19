@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa16122a1cb3a5f8378397363a45cd28ddaef6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3603f93c5b6430cd5aa11e4f43c99f75a838497
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357805"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879247"
 ---
 # <a name="ca2caex-class"></a>Klasa CA2CAEX
-Ta klasa jest używana przez makra konwersji ciągu `CA2CTEX` i `CT2CAEX`i typedef **CA2CA**.  
+Ta klasa jest używana przez makra konwersji ciągów CA2CTEX i CT2CAEX i typedef CA2CA.  
   
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,7 +40,7 @@ class CA2CAEX
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `t_nBufferLength`  
+ *t_nBufferLength*  
  Rozmiar buforu używany w procesie tłumaczenia. Domyślna długość to 128 bajtów.  
   
 ## <a name="members"></a>Elementy członkowskie  
@@ -62,27 +62,27 @@ class CA2CAEX
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CA2CAEX::m_psz](#m_psz)|Element członkowski danych, która przechowuje ciąg źródłowy.|  
+|[CA2CAEX::m_psz](#m_psz)|Element członkowski danych, który przechowuje ciąg źródłowy.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli wymagane jest dodatkowe funkcje, użyj `CA2CTEX`, `CT2CAEX`, lub **CA2CA** w swoim własnym kodem.  
+ O ile nie jest wymagane dodatkowe funkcje, należy użyć CA2CTEX, CT2CAEX lub CA2CA we własnym kodzie.  
   
- Ta klasa jest bezpiecznie korzystać w pętli i nie będzie przepełnienia stosu. Domyślnie klasy konwersji ATL i makra użyje stronę kodową ANSI bieżącego wątku dla konwersji.  
+ Ta klasa jest bezpiecznym rozwiązaniem jest użycie w pętli i nie będzie przepełnienia stosu. Domyślnie klasy konwersji ATL i makra użyje stronę kodową ANSI bieżący wątek dla konwersji.  
   
  Następujące makra są oparte na tej klasy:  
   
-- `CA2CTEX`  
+- CA2CTEX  
   
-- `CT2CAEX`  
+- CT2CAEX  
   
- Następujący element typedef jest oparty na tej klasy:  
+ Następujący element typedef opiera się na tej klasy:  
   
-- **CA2CA**  
+- CA2CA  
   
- Aby uzyskać informacje dotyczące tych makr konwersji tekstu, zobacz [ATL i makr konwersji MFC ciąg](string-conversion-macros.md).  
+ Omówienie tych makr konwersji tekstu, zobacz [ATL i makr konwersji ciągu MFC](string-conversion-macros.md).  
   
 ## <a name="example"></a>Przykład  
- Zobacz [ATL i makr konwersji MFC ciąg](string-conversion-macros.md) przykład używanie makr konwersji te parametry.  
+ Zobacz [ATL i makr konwersji ciągu MFC](string-conversion-macros.md) na przykład używanie makr konwersji tych parametrów.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlconv.h  
@@ -96,14 +96,14 @@ CA2CAEX(LPCSTR psz) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `psz`  
+ *psz*  
  Ciąg tekstowy, który ma zostać przekonwertowany.  
   
- `nCodePage`  
+ *nCodePage*  
  Nieużywane w tej klasie.  
   
 ### <a name="remarks"></a>Uwagi  
- Tworzy wymagane do tłumaczenia buforu.  
+ Tworzy buforu wymagane do tłumaczenia.  
   
 ##  <a name="dtor"></a>  CA2CAEX:: ~ CA2CAEX  
  Destruktor.  
@@ -116,7 +116,7 @@ CA2CAEX(LPCSTR psz) throw(...);
  Zwalnia przydzielonego buforu.  
   
 ##  <a name="m_psz"></a>  CA2CAEX::m_psz  
- Element członkowski danych, która przechowuje ciąg źródłowy.  
+ Element członkowski danych, który przechowuje ciąg źródłowy.  
   
 ```
 LPCSTR m_psz;
@@ -130,7 +130,7 @@ operator LPCSTR() const throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca ciąg tekstowy jako typ `LPCSTR`.  
+ Zwraca ciąg tekstowy jako typu LPCSTR.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CA2AEX](../../atl/reference/ca2aex-class.md)   
@@ -138,4 +138,4 @@ operator LPCSTR() const throw();
  [Klasa CW2AEX](../../atl/reference/cw2aex-class.md)   
  [Klasa CW2CWEX](../../atl/reference/cw2cwex-class.md)   
  [Klasa CW2WEX](../../atl/reference/cw2wex-class.md)   
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

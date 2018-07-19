@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 226e9895d7ddc199e2f15c3721228f59c0e5a0ac
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5b9ae4ae3b7d741624d220ba00006d51a61fd20
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853560"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962165"
 ---
 # <a name="modulus-struct"></a>modulus — Struktura
 
-Obiekt wstępnie zdefiniowanych funkcji, który wykonuje operację dzielenie modulo ( `operator%`) na jego argumenty.
+Obiekt wstępnie zdefiniowana funkcja, która wykonuje operację dzielenie modulo (`operator%`) na jego argumenty.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,19 +49,19 @@ struct modulus<void>
 
 ### <a name="parameters"></a>Parametry
 
-`Type`, `T`, `U` Dowolnego typu, który obsługuje `operator%` pobierającej argumentów operacji typu określonego lub wywnioskowany.
+*Typ*, *T*, *U* dowolnego typu, który obsługuje `operator%` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
 
-`Left` Lewy operand operacji modułu. Szablon klasy niespecjalizowanej przyjmuje argument odwołania l-wartością typu `Type`. Specjalne szablonu doskonała przekazującej lewostronnie i argumenty odwołanie do r-wartości wywnioskować typu `T`.
+*Po lewej stronie* lewy operand operacji modulo. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
 
-`Right` Prawy argument operacji modulo. Szablon klasy niespecjalizowanej przyjmuje argument odwołania l-wartością typu `Type`. Specjalne szablonu doskonała przekazującej lewostronnie i argumenty odwołanie do r-wartości wywnioskować typu `U`.
+*Po prawej stronie* prawy operand operacji modulo. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wynik `Left % Right`. Specjalne szablonu doskonała przekazywanie wynik, który ma typ zwracany przez `operator%`.
+Wynik `Left % Right`. Szablon wyspecjalizowane doskonała przekazywania wyniku, który ma typ, który jest zwracany przez `operator%`.
 
 ## <a name="remarks"></a>Uwagi
 
-`modulus` Obiekt jest ograniczony do typów całkowitych dla danych podstawowych lub do zdefiniowanych przez użytkownika typów, które implementują `operator%`.
+`modulus` Teoria jest ograniczony do typów całkowitych dla podstawowych typów danych lub do zdefiniowanych przez użytkownika typami, które implementują `operator%`.
 
 ## <a name="example"></a>Przykład
 
@@ -123,7 +123,7 @@ The element-wise remainders of the modular division
 
 **Nagłówek:** \<funkcjonalności >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

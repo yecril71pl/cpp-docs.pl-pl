@@ -1,5 +1,5 @@
 ---
-title: is_trivially_copy_constructible — klasa | Dokumentacja firmy Microsoft
+title: is_trivially_copy_constructible, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01c95007f1db1bcaf549398fa8865a9e51fe23d1
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: 410566c623595cc941ab6e6ad21dd95bd70fe516
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33954105"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963670"
 ---
 # <a name="istriviallycopyconstructible-class"></a>is_trivially_copy_constructible — klasa
 
-Testy, jeśli typ ma konstruktora kopiującego prosta.
+Sprawdza, czy typ ma konstruktora kopiującego prosta.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,19 +36,19 @@ struct is_trivially_copy_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ do zapytania.
+*T* typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typ `T` jest klasa, która ma trivial konstruktora kopiującego, w przeciwnym razie posiada wartość false.
+Wystąpienie typu predykatu ma wartość true, jeśli typ *T* to klasa, która ma Konstruktor kopiujący prosta w przeciwnym razie przechowuje wartość false.
 
-Konstruktor kopiujący dla klasy `T` jest proste, jeśli jest niejawnie zadeklarowany jako, klasa `T` nie ma funkcje wirtualne ani wirtualnych typów podstawowych, bezpośrednie podstawy klasy `T` mieć konstruktorów trivial kopiowania, klas wszystkich niestatyczna elementy członkowskie danych typu klasy mają trivial kopiowanie konstruktorów i klasy wszystkich członków danych niestatycznych tablicy typu klasy trivial kopiowanie konstruktorów.
+Konstruktor kopiujący klasy *T* jest proste, jeśli zostanie ona niejawnie zadeklarowana, klasa *T* nie ma funkcje wirtualne ani baz wirtualnych bezpośrednie podstawy klasy *T* mają Konstruktory kopiujące prosta, klasy wszystkie składowe danych niestatycznych typu klasy mają konstruktory kopiujące trivial i klasy wszystkie składowe danych niestatycznych typu tablicowego klasy mają konstruktory kopiujące trivial.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

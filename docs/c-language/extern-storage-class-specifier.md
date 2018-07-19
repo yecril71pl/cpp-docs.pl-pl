@@ -1,7 +1,7 @@
 ---
-title: extern Specyfikator klasy składującej | Dokumentacja firmy Microsoft
+title: extern — Specyfikator klasy magazynowania | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/10/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,69 +18,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08a578514aaf6de4132bd856900b0ec31d31835c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 365f4cf424ee51c493859e1d79f733b2cfcf331c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388731"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964187"
 ---
 # <a name="extern-storage-class-specifier"></a>extern — specyfikator klasy magazynowania
-Zmienna zadeklarowana ze specyfikatorem klasy magazynu `extern` jest odwołaniem do zmiennej o tej samej nazwie, zdefiniowanej na poziomie zewnętrznym w dowolnym z plików źródłowych programu. Wewnętrzna deklaracja `extern` jest używana, aby uwidocznić definicję zmiennej poziomu zewnętrznego w bloku. O ile nie została zgłoszona na poziomie zewnętrznym, zmienna zadeklarowana ze słowem kluczowym `extern` jest widoczna tylko w bloku, w którym jest zadeklarowana.  
+
+Zmienna zadeklarowana ze **extern** Specyfikator klasy magazynowania jest odwołanie do zmiennej o tej samej nazwie, które są zdefiniowane w innym pliku źródłowym. Jest on używany aby uwidocznić definicję zmiennej poziomu zewnętrznego. Zmienna zadeklarowana jako **extern** nie ma magazyn jest przydzielany dla siebie; jest tylko nazwę. 
   
 ## <a name="example"></a>Przykład  
  Ten przykład ilustruje deklaracje na poziomie wewnętrznym i zewnętrznym:  
   
-```  
-// extern_StorageClassSpecified.c  
+```c  
+
+// Source1.c  
+
+int i = 1;
+
+
+// Source2. c
+
 #include <stdio.h>  
-  
-void other( void );  
-  
-int main()  
-{  
-    // Reference to i, defined below:   
-    extern int i;  
-  
-    // Initial value is zero; a is visible only within main:   
-    static int a;  
-  
-    // b is stored in a register, if possible:   
-    register int b = 0;  
-  
-    // Default storage class is auto:   
-    int c = 0;  
-  
-    // Values printed are 1, 0, 0, 0:   
-    printf_s( "%d\n%d\n%d\n%d\n", i, a, b, c );  
-    other();  
-    return;  
-}  
-  
-int i = 1;  
-  
-void other( void )  
-{  
+
+// Refers to the i that is defined in Source1.c:   
+extern int i;
+
+void func(void);
+
+int main()
+{
+    // Prints 1:   
+    printf_s("%d\n", i);
+    func();
+    return;
+}
+
+void func(void)
+{
     // Address of global i assigned to pointer variable:  
-    static int *external_i = &i;  
-  
-    // i is redefined; global i no longer visible:   
-    int i = 16;  
-  
-    // This a is visible only within the other function:   
-    static int a = 2;  
-  
-    a += 2;  
-    // Values printed are 16, 4, and 1:  
-    printf_s( "%d\n%d\n%d\n", i, a, *external_i );  
-}  
+    static int *external_i = &i;
+
+    // This definition of i hides the global i in Source.c:   
+    int i = 16;
+
+    // Prints 16, 1:  
+    printf_s("%d\n%d\n", i, *external_i);
+}
 ```  
   
- W tym przykładzie zmienna `i` jest zdefiniowana na poziomie zewnętrznym z wartością początkową 1. Deklaracja `extern` w funkcji `main` jest używana do zadeklarowania odwołania do poziomu zewnętrznego `i`. **Statycznych** zmiennej `a` jest ustawiana na 0 domyślnie, ponieważ pominięto inicjatora. Wywołanie `printf` drukuje wartości 1, 0, 0 i 0.  
-  
- W `other` funkcja, adres zmiennej globalnej `i` służy do inicjowania **statycznych** zmiennej wskaźnikowej `external_i`. To działa, ponieważ ma zmiennej globalnej **statycznych** okres istnienia, co oznacza jego adres nie zmienia się podczas wykonywania programu. Następnie, zmienna `i` jest ponownie definiowana jako zmienna lokalna o wartości początkowej 16. To ponowne zdefiniowanie nie wpływa na wartość poziomu zewnętrznego `i`, który jest ukryty przy użyciu jego nazwy zmiennej lokalnej. Wartość globalna `i` jest teraz dostępna tylko pośrednio w ramach tego bloku, poprzez wskaźnik `external_i`. Spróbuje przypisać adres **automatycznie** zmiennej `i` na wskaźnik nie działa, ponieważ może być inny zawsze jest wprowadzana bloku. Zmienna `a` jest zadeklarowany jako **statycznych** zmiennej i została zainicjowana na 2. To `a` nie powoduje konfliktu z `a` w `main`, ponieważ **statycznych** zmienne na poziomie wewnętrznym są widoczne tylko w bloku, w którym je zadeklarowano.  
-  
- Zmienna `a` jest zwiększana o 2, dając w wyniku 4. Jeśli funkcja `other` była nazywana ponownie w tym samym programie, początkowa wartość `a` wynosi 4. Wewnętrzny **statycznych** zmienne zachować ich wartości, gdy program kończy działanie, a następnie reenters bloku, w którym je zadeklarowano.  
+ W tym przykładzie zmienna `i` jest zdefiniowany w Source1.c o początkowej wartości 1. **Extern** deklaracji w Source2.c to sprawia, że "i" widoczne w tym pliku. 
+
+ W `func` funkcji, adres zmiennej globalnej `i` służy do inicjowania **statyczne** zmiennej wskaźnikowej `external_i`. To działa, ponieważ zmienna globalna ma **statyczne** okres istnienia, co oznacza jego adres nie zmienia się podczas wykonywania programu. Następnie, zmienna `i` jest zdefiniowany w zakresie `func` jako zmienna lokalna o wartości początkowej 16. Ta definicja nie ma wpływu na wartość poziomu zewnętrznego `i`, który jest ukryty przy użyciu jego nazwy zmiennej lokalnej. Wartość globalna `i` jest teraz dostępna wyłącznie za pośrednictwem wskaźnik `external_i`.   
   
 ## <a name="see-also"></a>Zobacz też  
  [Specyfikatory klasy magazynowania dla deklaracji na poziomie wewnętrznym](../c-language/storage-class-specifiers-for-internal-level-declarations.md)

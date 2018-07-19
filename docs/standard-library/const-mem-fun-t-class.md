@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1cc88fab5584d92d79bb0dabb816898f3925546
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc28cdb34148a525b193a93bec8d881bbbeb43f8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843070"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963004"
 ---
 # <a name="constmemfunt-class"></a>const_mem_fun_t — Klasa
 
-Klasa karty, która umożliwia stałej funkcji członkowskiej, która nie przyjmuje żadnych argumentów do wywołania jako obiekt funkcja jednoargumentowy po zainicjowaniu z argumentem odwołania.
+Klasa adaptera, która umożliwia const funkcja elementu członkowskiego, która nie przyjmuje żadnych argumentów, które ma być wywoływana jako obiekt funkcji jednoargumentowe podczas inicjowania przy użyciu argument odwołania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,27 +40,27 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 
 ### <a name="parameters"></a>Parametry
 
-`Pm` Wskaźnik do funkcji członkowskiej klasy **typu** do przekonwertowania na obiekt funkcji.
+*PM* wskaźnik do funkcji składowej klasy typu `Type` do konwersji na obiekt funkcyjny.
 
-`Pleft` Obiekt który `Pm` funkcja członkowska jest wywoływana na.
+*Pleft* obiektu, *Pm* wywoływana jest funkcja elementu członkowskiego.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcja dostosowywalne jednoargumentowy.
+Funkcję jednoargumentową dostosowywalne.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasy szablonów przechowuje kopię `Pm`, która musi być wskaźnikiem do funkcji członkowskiej klasy **typu**, w obiekcie prywatnego elementu członkowskiego. Definiuje jego funkcji członkowskiej `operator()` jako zwracanie ( `Pleft` -> \* `Pm`) () **const**.
+Klasa szablonu przechowuje kopię *Pm*, który musi być wskaźnikiem do funkcji składowej klasy `Type`, w obiekcie prywatnego elementu członkowskiego. Definiuje jej funkcji członkowskiej `operator()` powrotu ( `Pleft` -> \* `Pm`) () **const**.
 
 ## <a name="example"></a>Przykład
 
-Konstruktor obiektu `const_mem_fun_t` nie jest zwykle używana bezpośrednio; funkcja Pomocnika `mem_fun` umożliwia dostosowanie funkcji elementów członkowskich. Zobacz [mem_fun —](../standard-library/functional-functions.md#mem_fun) przykład sposobu użycia karty funkcja elementu członkowskiego.
+Konstruktor obiektu `const_mem_fun_t` nie jest zazwyczaj używana bezpośrednio; funkcja Pomocnika `mem_fun` umożliwia dostosowanie funkcji elementów członkowskich. Zobacz [mem_fun —](../standard-library/functional-functions.md#mem_fun) przykład sposobu użycia adapterów funkcja elementu członkowskiego.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<funkcjonalności >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

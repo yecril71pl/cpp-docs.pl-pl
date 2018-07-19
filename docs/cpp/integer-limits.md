@@ -17,46 +17,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 656873dc510f53fc05250a28c61cc452078c4aca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 174025fc1a44ce0db96a5a7038502dfabe90bfd6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420614"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940137"
 ---
 # <a name="integer-limits"></a>Limity liczb całkowitych
 
 **Microsoft Specific**
 
-W poniższej tabeli wymieniono limity dla typów całkowitych. Te limity również są zdefiniowane w pliku standardowy nagłówek < Limits.h — >.
+Limity dla typów całkowitoliczbowych są wymienione w poniższej tabeli. Limity te są również określone w pliku standardowy nagłówek < limits.h >.
 
-## <a name="limits-on-integer-constants"></a>Limity stałe całkowite
+## <a name="limits-on-integer-constants"></a>Limity dla stałych liczba całkowita
 
 |Stała|Znaczenie|Wartość|
 |--------------|-------------|-----------|
-|**CHAR_BIT**|Liczba bitów w najmniejszą zmiennej, która nie jest polem bitowym.|8|
-|**SCHAR_MIN**|Minimalna wartość dla zmiennej typu **podpisany char**.|-128|
-|**SCHAR_MAX**|Maksymalna wartość dla zmiennej typu **podpisany char**.|127|
-|**UCHAR_MAX**|Maksymalna wartość dla zmiennej typu **unsigned char**.|255 (0xff)|
-|**CHAR_MIN —**|Minimalna wartość dla zmiennej typu **char**.|-128; 0, jeśli używana z opcją /|
-|**CHAR_MAX**|Maksymalna wartość dla zmiennej typu **char**.|127; 255, jeśli używana z opcją /|
-|**MB_LEN_MAX**|Maksymalna liczba bajtów w literał stałej.|5|
-|**SHRT_MIN**|Minimalna wartość dla zmiennej typu **krótki**.|-32768|
-|**SHRT_MAX**|Maksymalna wartość dla zmiennej typu **krótki**.|32767|
-|**USHRT_MAX**|Maksymalna wartość dla zmiennej typu **niepodpisane krótko**.|65535 (0xffff)|
-|**INT_MIN**|Minimalna wartość dla zmiennej typu **int**.|-2147483648|
-|**INT_MAX**|Maksymalna wartość dla zmiennej typu **int**.|2147483647|
-|**UINT_MAX**|Maksymalna wartość dla zmiennej typu **unsigned int**.|4294967295 (0xffffffff)|
-|**LONG_MIN —**|Minimalna wartość dla zmiennej typu **długi**.|-2147483648|
-|**LONG_MAX**|Maksymalna wartość dla zmiennej typu **długi**.|2147483647|
-|**ULONG_MAX**|Maksymalna wartość dla zmiennej typu **unsigned long**.|4294967295 (0xffffffff)|
-|**LLONG_MIN**|Minimalna wartość dla zmiennej typu **długi czas**|-9223372036854775808|
-|**LLONG_MAX**|Maksymalna wartość dla zmiennej typu **długi czas**|9223372036854775807|
-|**ULLONG_MAX**|Maksymalna wartość dla zmiennej typu **unsigned long long**|18446744073709551615 (0xffffffffffffffff)|
+|CHAR_BIT|Liczba bitów w najmniejszym zmiennej, która nie jest polem bitowym.|8|
+|SCHAR_MIN|Minimalna wartość do zmiennej typu **podpisany char**.|-128|
+|SCHAR_MAX|Maksymalna wartość dla zmiennej typu **podpisany char**.|127|
+|UCHAR_MAX|Maksymalna wartość dla zmiennej typu **unsigned char**.|255 (0xff)|
+|CHAR_MIN|Minimalna wartość do zmiennej typu **char**.|od -128; 0, jeśli używana z opcją/j.|
+|CHAR_MAX|Maksymalna wartość dla zmiennej typu **char**.|127; 255, jeśli używana z opcją/j.|
+|MB_LEN_MAX|Maksymalna liczba bajtów w stała multicharacter składa.|5|
+|SHRT_MIN|Minimalna wartość do zmiennej typu **krótki**.|-32768|
+|SHRT_MAX|Maksymalna wartość dla zmiennej typu **krótki**.|32767|
+|USHRT_MAX|Maksymalna wartość dla zmiennej typu **typ unsigned short**.|65535 (0xffff)|
+|INT_MIN|Minimalna wartość do zmiennej typu **int**.|-2147483648|
+|INT_MAX|Maksymalna wartość dla zmiennej typu **int**.|2147483647|
+|UINT_MAX|Maksymalna wartość dla zmiennej typu **unsigned int**.|4294967295 (0xffffffff)|
+|LONG_MIN|Minimalna wartość do zmiennej typu **długie**.|-2147483648|
+|LONG_MAX|Maksymalna wartość dla zmiennej typu **długie**.|2147483647|
+|ULONG_MAX|Maksymalna wartość dla zmiennej typu **unsigned long**.|4294967295 (0xffffffff)|
+|LLONG_MIN|Minimalna wartość do zmiennej typu **długi długi**|-9223372036854775808|
+|LLONG_MAX|Maksymalna wartość dla zmiennej typu **długi długi**|9223372036854775807|
+|ULLONG_MAX|Maksymalna wartość dla zmiennej typu **unsigned long long**|18446744073709551615 (0xffffffffffffffff)|
 
-Jeśli wartość przekracza reprezentacją największa liczba całkowita, kompilator Microsoft generuje błąd.
+Jeśli wartość przekracza największych reprezentacja liczby całkowitej, kompilator Microsoft generuje błąd.
 
-**KOŃCOWY określonych firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz też
 

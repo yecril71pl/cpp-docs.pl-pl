@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 882248ab4f9ed692aa36bac5873251867b2fff54
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a1695306ddc53a8150917eef8b27f5d3edce2bf3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856638"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961867"
 ---
 # <a name="ltstrstreamgt"></a>&lt;strstream&gt;
 
-Definiuje kilka klas, które obsługują operacje iostream sekwencji przechowywane w tablicy przydzielone `char` obiektu. Takie sekwencje są łatwo konwertowane do i z ciągów C.
+Definiuje kilka klas, które obsługują operacje iostreams w sekwencji przechowywane w tablicy przydzielonego **char** obiektu. Takie sekwencje łatwo są konwertowane do i z ciągami C.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,19 +36,19 @@ Definiuje kilka klas, które obsługują operacje iostream sekwencji przechowywa
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekty typu `strstream` współpracują `char` *, które są ciągami C. Użyj [ \<sstream — >](../standard-library/sstream.md) do pracy z obiektami typu [basic_string —](../standard-library/basic-string-class.md).
+Obiekty typu `strstream` działają z `char` *, które są ciągami C. Użyj [ \<strumienia >](../standard-library/sstream.md) do pracy z obiektami typu [basic_string](../standard-library/basic-string-class.md).
 
 > [!NOTE]
-> Klasy w \<strstream — > są przestarzałe. Rozważ użycie klasy w \<sstream — > zamiast tego.
+> Klasy w \<strstream — > są przestarzałe. Należy wziąć pod uwagę przy użyciu klas w \<strumienia > zamiast tego.
 
 ### <a name="classes"></a>Klasy
 
 |Class|Opis|
 |-|-|
-|[strstreambuf, klasa](../standard-library/strstreambuf-class.md)|Klasa opisuje buforu strumienia, który kontroluje przesyłania elementów do i z sekwencję elementy przechowywane w `char` tablicy obiektów.|
-|[istrstream, klasa](../standard-library/istrstream-class.md)|Klasa opisuje obiekt, który kontroluje wyodrębniania elementów i zakodowanego obiektów z buforu strumienia klasy [strstreambuf —](../standard-library/strstreambuf-class.md).|
-|[ostrstream, klasa](../standard-library/ostrstream-class.md)|Klasa opisuje obiekt, który kontroluje wstawiania elementów i obiektów zakodowanych do buforu strumienia klasy [strstreambuf —](../standard-library/strstreambuf-class.md).|
-|[strstream, klasa](../standard-library/strstream-class.md)|Klasa opisuje obiekt, który kontroluje wstawiania i wyodrębniania elementów i obiektów zakodowany przy użyciu buforu strumienia klasy [strstreambuf —](../standard-library/strstreambuf-class.md).|
+|[strstreambuf, klasa](../standard-library/strstreambuf-class.md)|Klasa opisuje buforu strumieni, który kontroluje przekazywanie elementów do i z sekwencji elementów przechowywanych w **char** obiektu array.|
+|[istrstream, klasa](../standard-library/istrstream-class.md)|Klasa opisuje obiekt, który kontroluje wyodrębniania elementów i zakodowany obiektów z bufor strumienia klasy [strstreambuf —](../standard-library/strstreambuf-class.md).|
+|[ostrstream, klasa](../standard-library/ostrstream-class.md)|Klasa opisuje obiekt, który kontroluje wstawiania elementów i zakodowany obiekty do bufora strumienia, klasy [strstreambuf —](../standard-library/strstreambuf-class.md).|
+|[strstream, klasa](../standard-library/strstream-class.md)|Klasa opisuje obiekt, który kontroluje wstawienia i wydobycia elementów i obiektów zakodowanych przy użyciu bufor strumienia klasy [strstreambuf —](../standard-library/strstreambuf-class.md).|
 
 ## <a name="see-also"></a>Zobacz także
 

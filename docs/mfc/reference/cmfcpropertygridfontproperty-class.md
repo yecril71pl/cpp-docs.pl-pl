@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f224def5d91d47cad0cb61938f1ce9a538109014
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 3ea43fefabe43bec8a5bf9b00404491a405e5416
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039046"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852984"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>Klasa CMFCPropertyGridFontProperty
-`CMFCPropertyGridFileProperty` Klasa obsługuje elementu formantu listy właściwości, które umożliwia otwarcie okna dialogowego wyboru czcionki.  
+`CMFCPropertyGridFileProperty` Klasa obsługuje element formantu listy właściwości, który powoduje otwarcie okna dialogowego wyboru czcionki.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -51,11 +51,11 @@ class CMFCPropertyGridFontProperty : public CMFCPropertyGridProperty
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|`CMFCPropertyGridFontProperty::FormatProperty`|Formatuje tekstowa reprezentacja wartości właściwości. (Przesłania [CMFCPropertyGridProperty::FormatProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|  
-|[CMFCPropertyGridFontProperty::GetColor](#getcolor)|Pobiera kolor czcionki, który użytkownik wybiera z czcionki — okno dialogowe.|  
-|[CMFCPropertyGridFontProperty::GetLogFont](#getlogfont)|Pobiera czcionkę, której użytkownik wybiera z czcionki — okno dialogowe.|  
-|`CMFCPropertyGridFontProperty::GetThisClass`|Używany przez platformę do uzyskania wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiekt, który jest skojarzony z tym typem klasy.|  
-|`CMFCPropertyGridFontProperty::OnClickButton`|Wywoływane przez platformę, gdy użytkownik kliknie przycisk, który znajduje się we właściwości. (Przesłania [CMFCPropertyGridProperty::OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|  
+|`CMFCPropertyGridFontProperty::FormatProperty`|Formatuje tekst reprezentujący wartość właściwości. (Przesłania [CMFCPropertyGridProperty::FormatProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|  
+|[CMFCPropertyGridFontProperty::GetColor](#getcolor)|Pobiera kolor czcionki, który użytkownik wybiera z okno dialogowe czcionki.|  
+|[CMFCPropertyGridFontProperty::GetLogFont](#getlogfont)|Pobiera czcionki, który użytkownik wybiera z okno dialogowe czcionki.|  
+|`CMFCPropertyGridFontProperty::GetThisClass`|Używane przez architekturę, aby uzyskać wskaźnik do [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) obiektu, który jest skojarzony z tym typem klasy.|  
+|`CMFCPropertyGridFontProperty::OnClickButton`|Wywoływane przez platformę, gdy użytkownik kliknie przycisk, który jest zawarty we właściwości. (Przesłania [CMFCPropertyGridProperty::OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -87,30 +87,30 @@ CMFCPropertyGridFontProperty(
  Nazwa właściwości.  
   
  [in] *lf*  
- Struktura logiczna czcionki, która określa atrybuty czcionki.  
+ Struktury logicznej czcionek, która określa atrybuty czcionki.  
   
  [in] *dwFontDialogFlags*  
- Style, które są stosowane do czcionki — okno dialogowe wyświetlane po kliknięciu przycisku rozwijanego wartości właściwości. Wartość domyślna to bitowe połączenie (lub) CF_EFFECTS i CF_SCREENFONTS. Aby uzyskać więcej informacji, zobacz *flagi* parametr [struktury CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
+ Style, które są stosowane do czcionki okna dialogowego wyświetlanego po kliknięciu przycisku rozwijanego wartości właściwości. Wartością domyślną jest bitową kombinacją (lub) CF_EFFECTS i CF_SCREENFONTS. Aby uzyskać więcej informacji, zobacz *flagi* parametru [struktury CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
   
  [in] *lpszDescr*  
- Opis właściwości czcionki. Wartość domyślna to `NULL`.  
+ Opis właściwości czcionki. Wartością domyślną jest NULL.  
   
  [in] *dwData*  
- Dane specyficzne dla aplikacji, takich jak liczby całkowitej lub wskaźnika do innych danych, która jest skojarzona z właściwością. Wartość domyślna to 0.  
+ Dane specyficzne dla aplikacji, takich jak liczby całkowitej lub wskaźnika do innych danych, który jest skojarzony z właściwością. Wartość domyślna to 0.  
   
  [in] *kolorów*  
  Kolor czcionki. Wartość domyślna to domyślny kolor.  
   
 ### <a name="remarks"></a>Uwagi  
- A `CMFCPropertyGridFontProperty` obiekt reprezentuje właściwości font w formancie czcionki siatki właściwości.  
+ A `CMFCPropertyGridFontProperty` obiekt reprezentuje właściwość czcionki w kontrolce czcionki siatki właściwości.  
   
 ### <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano sposób tworzenia obiektu `CMFCPropertyGridFontProperty` klasy. Ten przykład jest częścią [próbki nowe formanty](../../visual-cpp-samples.md).  
+ Poniższy przykład pokazuje, jak skonstruować obiekt `CMFCPropertyGridFontProperty` klasy. W tym przykładzie jest częścią [przykładowe nowych formantów](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_NewControls#26](../../mfc/reference/codesnippet/cpp/cmfcpropertygridfontproperty-class_1.cpp)]  
   
 ##  <a name="getcolor"></a>  CMFCPropertyGridFontProperty::GetColor  
- Pobiera kolor czcionki, który użytkownik wybiera z czcionki — okno dialogowe.  
+ Pobiera kolor czcionki, który użytkownik wybiera z okno dialogowe czcionki.  
   
 ```  
 COLORREF GetColor() const;  
@@ -122,14 +122,14 @@ COLORREF GetColor() const;
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="getlogfont"></a>  CMFCPropertyGridFontProperty::GetLogFont  
- Pobiera czcionkę, której użytkownik wybiera z czcionki — okno dialogowe.  
+ Pobiera czcionki, który użytkownik wybiera z okno dialogowe czcionki.  
   
 ```  
 LPLOGFONT GetLogFont();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) struktury, która opisuje wybranej czcionki.  
+ Wskaźnik do [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) strukturę, która opisuje wybranej czcionki.  
   
 ### <a name="remarks"></a>Uwagi  
   

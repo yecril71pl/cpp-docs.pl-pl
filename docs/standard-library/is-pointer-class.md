@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf9f05b77adc7d989d37afcbce040405ccbfdf03
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30234c932aad28d16830b80fd19e4ad334ba407c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852113"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962819"
 ---
 # <a name="ispointer-class"></a>is_pointer — Klasa
 
-Testy, jeśli wskaźnik jest typu.
+Sprawdza, czy typ jest wskaźnikiem.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,11 +37,11 @@ struct is_pointer;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zapytania.
+*Ty* typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typ `Ty` jest wskaźnikiem do `void`, wskaźnik do obiektu lub wskaźnik do funkcji lub a `cv-qualified` formularza jednego z nich, w przeciwnym razie posiada wartość false. Należy pamiętać, że `is_pointer` blokad wartość false, gdy `Ty` jest wskaźnik do elementu członkowskiego lub wskaźnika do funkcji członkowskiej.
+Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* jest wskaźnikiem do **void**, wskaźnik do obiektu lub wskaźnik do funkcji lub na `cv-qualified` postaci jednego z tych funkcji, w przeciwnym razie przechowuje wartość false. Należy pamiętać, że `is_pointer` przechowuje FAŁSZ Jeśli *Ty* jest wskaźnik do składowej lub wskaźnika do funkcji składowej.
 
 ## <a name="example"></a>Przykład
 
@@ -86,7 +86,7 @@ is_pointer<int *> == true
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

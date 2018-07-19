@@ -1,5 +1,5 @@
 ---
-title: '&lt;Tuple&gt; funkcje | Dokumentacja firmy Microsoft'
+title: '&lt;Krotka&gt; funkcje | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
-ms.openlocfilehash: d6f921f85ffc6ef6d7985d66fe8637f044965176
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f0b995c4a966481e02ebd96748b247fd8844f19f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858815"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966410"
 ---
-# <a name="lttuplegt-functions"></a>&lt;Tuple&gt; funkcji
+# <a name="lttuplegt-functions"></a>&lt;Krotka&gt; funkcji
 
 ||||
 |-|-|-|
@@ -32,7 +32,7 @@ ms.locfileid: "33858815"
 
 ## <a name="get"></a>  Pobierz
 
-Pobiera element na podstawie `tuple` obiekt przez indeks lub (w języku C ++ 14) według typu.
+Pobiera element z `tuple` obiektu za pomocą indeksu lub (w języku C ++ 14) według typu.
 
 ```cpp
 // by index:
@@ -64,19 +64,23 @@ template <class T, class... Types>
 
 ### <a name="parameters"></a>Parametry
 
-`Index` Indeks elementu do pobrania.
+*Index*  
+ Indeks elementu do pobrania.
 
-`Types` Sekwencja typy zadeklarowane w spójnej kolekcji w kolejności deklaracji.
+*Typy*  
+ Sekwencja typów zadeklarowane w spójnej kolekcji, w kolejności deklaracji.
 
-`T` Typ elementu do pobrania.
+*T*  
+ Typ elementu do pobrania.
 
-`Tuple` Std::tuple, który zawiera dowolną liczbę elementów.
+*Krotki*  
+ Std::tuple, który zawiera dowolną liczbę elementów.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcje szablonów zwraca odwołanie do wartości w indeksie `Index`, lub typu `T` w `tuple` obiektu.
+Funkcje szablonów zwracają odwołanie do wartości w indeksie *indeksu*, lub typu *T* w `tuple` obiektu.
 
-Wywoływanie `get<T>(Tuple)` spowoduje błąd kompilatora, jeśli krotka zawiera więcej lub mniej niż jeden element typu T.
+Wywoływanie `get<T>(Tuple)` generuje błąd kompilatora, jeśli krotka zawiera więcej lub mniej niż jeden element typu T.
 
 ### <a name="example"></a>Przykład
 
@@ -109,7 +113,7 @@ int main() {
 
 ## <a name="make_tuple"></a>  make_tuple —
 
-Sprawia, że `tuple` od wartości elementu.
+Sprawia, że `tuple` z wartości elementu.
 
 ```cpp
 template <class T1, class T2, ..., class TN>
@@ -118,15 +122,17 @@ template <class T1, class T2, ..., class TN>
 
 ### <a name="parameters"></a>Parametry
 
-`TN` Typ parametru funkcji n-ty.
+*TN*  
+ Typ parametru funkcji n-ty.
 
-`tN` Wartość parametru funkcji n-ty.
+*TN*  
+ Wartość parametru funkcji n-ty.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu `tuple<V1, V2, ..., VN>(t1, t2, ..., tN)`, gdzie każdy typ `Vi` jest `X&` podczas wpisywania odpowiadającego `Ti` jest `cv` `reference_wrapper<X>`; w przeciwnym razie jest `Ti`.
+Funkcja szablonu zwraca `tuple<V1, V2, ..., VN>(t1, t2, ..., tN)`, gdzie każdy typ `Vi` jest `X&` podczas wpisywania odpowiednich `Ti` jest `cv` `reference_wrapper<X>`; w przeciwnym razie jest `Ti`.
 
-Jedną z zalet `make_tuple` typów obiektów, które są przechowywane są automatycznie określane przez kompilator i nie muszą być jawnie określona. Nie używaj takich jak jawne argumenty szablonu `make_tuple<int, int>(1, 2)` korzystając `make_tuple` ponieważ jest niepotrzebnie pełne i dodaje złożonych r-wartości odwołania problemów, które mogą spowodować niepowodzenie kompilacji.
+Jedną z zalet `make_tuple` są określane automatycznie przez kompilator i nie muszą być jawnie określone typy obiektów, które są przechowywane. Nie używaj jawnych argumentów szablonów takich jak `make_tuple<int, int>(1, 2)` zastosowania `make_tuple` ponieważ jest to niepotrzebne powielenie informacji i dodaje problemy z odwołaniami rvalue złożonych, które mogą spowodować błąd kompilacji.
 
 ### <a name="example"></a>Przykład
 
@@ -165,7 +171,7 @@ int main() {
 
 ## <a name="tie"></a>  Powiązanie
 
-Sprawia, że `tuple` z odwołania do elementu.
+Sprawia, że `tuple` z odwołań elementu.
 
 ```cpp
 template <class T1, class T2, ..., class TN>
@@ -174,11 +180,12 @@ tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 
 ### <a name="parameters"></a>Parametry
 
-`TN` Typ podstawowy elementu n-ty spójnej kolekcji.
+*TN*  
+ Podstawowy typ krotki n-ty element.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu `tuple<T1&, T2&, ..., TN&>(t1, t2, ..., tN)`.
+Funkcja szablonu zwraca `tuple<T1&, T2&, ..., TN&>(t1, t2, ..., tN)`.
 
 ### <a name="example"></a>Przykład
 

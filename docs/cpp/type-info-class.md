@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3e3138c9028f72327c9d4bf2c2f2e82c942dbde
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 54e4f4a2ac9be9dc68320e5121bc86e5a4280807
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422439"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941044"
 ---
 # <a name="typeinfo-class"></a>type_info — Klasa
-**Type_info —** klasa opisuje informacje o typie w program generowane przez kompilator. Obiekty tej klasy skutecznie przechowują wskaźnik do nazwy typu. **Type_info —** klasy przechowuje także zakodowaną wartość odpowiednie do porównywania dwóch typów równości lub kolejności sortowania. Reguły kodowania i sekwencja typów sortowania są nieokreślone i mogą się różnić między programami.  
+`type_info` Klasa opisuje typ informacji generowanych w programie przez kompilator. Obiekty tej klasy skutecznie przechowują wskaźnik do nazwy typu. `type_info` Klasa zapisuje również zakodowaną wartość odpowiednią do porównywania dwóch typów dla równości lub kolejności sortowania. Reguły kodowania i sekwencja typów sortowania są nieokreślone i mogą się różnić między programami.  
   
- `<typeinfo>` Pliku nagłówka musi być uwzględniony, aby można było używać **type_info —** klasy. Interfejs dla **type_info —** klasa jest:  
+ `<typeinfo>` Plik nagłówka musi być uwzględniony, aby można było używać `type_info` klasy. Interfejs `type_info` klasa jest:  
   
 ```cpp
 class type_info {  
@@ -42,19 +42,19 @@ public:
 };  
 ```  
   
- Nie można utworzyć wystąpienia obiektów **type_info —** klasy bezpośrednio, ponieważ klasa ma tylko konstruktora kopiującego prywatnych. Jedynym sposobem, aby utworzyć (tymczasowe) **type_info —** obiektu jest użycie [typeid](../cpp/typeid-operator.md) operatora. Operator przypisania również jest prywatny, nie można skopiować lub przypisać obiektów klasy **type_info —**.  
+ Nie można utworzyć wystąpienia obiektów `type_info` klasy bezpośrednio, ponieważ klasa ma Konstruktor kopii prywatnej. Jedynym sposobem, aby skonstruować (tymczasowo) `type_info` obiektu jest użycie [typeid](../cpp/typeid-operator.md) operatora. Ponieważ operator przypisania jest również prywatny, nie można kopiować lub przypisywać obiektów klasy `type_info`.  
   
- **type_info::hash_code** definiuje odpowiedni w przypadku mapowania wartości typu funkcji skrótu **typeinfo** dystrybucji wartości indeksu.  
+ `type_info::hash_code` definiuje funkcję mieszania odpowiednią do mapowania wartości typu `typeinfo` do rozłożenia wartości indeksu.  
   
- Operatory `==` i `!=` może służyć do porównania równości i nierówności z innymi **type_info —** obiekty odpowiednio.  
+ Operatory `==` i `!=` może służyć do porównywania równości i nierówności z innymi `type_info` obiektów, odpowiednio.  
   
- Nie ma żadnego połączenia między określoną kolejnością typów i relacjami dziedziczenia. Użyj **type_info::before** funkcji członkowskiej, aby określić kolejność sortowania typów. Nie ma żadnych gwarancji, że **type_info::before** umożliwia uzyskanie takiego samego wyniku w różnych programów lub nawet innej serii ten sam program. W ten sposób **type_info::before** jest podobny do adresu z **(&)** operatora.  
+ Nie ma żadnego połączenia między określoną kolejnością typów i relacjami dziedziczenia. Użyj `type_info::before` funkcja elementu członkowskiego, aby określić kolejność sortowania typów. Nie ma żadnej gwarancji, `type_info::before` da ten sam wynik w różnych programach lub nawet cyklach tego samego programu. W ten sposób `type_info::before` przypomina address-of `(&)` operatora.  
   
- **Type_info::name** zwraca funkcja członkowska **const char\***  do zerem ciąg reprezentujący czytelną nazwę typu. Wskazywana pamięć jest buforowana i nigdy nie powinna być bezpośrednio dealokowana.  
+ `type_info::name` Funkcja elementu członkowskiego zwraca `const char*` na ciąg zakończony znakiem null, reprezentujący zrozumiałą nazwę typu. Wskazywana pamięć jest buforowana i nigdy nie powinna być bezpośrednio dealokowana.  
   
- **Type_info::raw_name** zwraca funkcja członkowska **const char\***  do zerem ciąg reprezentujący nazwę ozdobione typu obiektu. Nazwa rzeczywiście jest przechowywana w formie urządzonej, aby zaoszczędzić miejsce. W związku z tym, ta funkcja jest szybsza niż **type_info::name** , ponieważ nie trzeba undecorate nazwy. Długość ciągu zwróconego przez **type_info::raw_name** funkcja jest przydatna podczas wykonywania operacji porównania, ale nie jest do odczytu. Ciąg zrozumiałą dla użytkownika, należy użyć **type_info::name** zamiast tego działania.  
+ `type_info::raw_name` Funkcja elementu członkowskiego zwraca `const char*` na ciąg zakończony znakiem null, który reprezentuje dekorowaną nazwę typu obiektu. Nazwa rzeczywiście jest przechowywana w formie urządzonej, aby zaoszczędzić miejsce. W związku z tym, ta funkcja jest szybsza niż `type_info::name` , ponieważ nie trzeba unikać oszczędzania nazwy. Ciąg zwracany przez `type_info::raw_name` funkcji jest przydatny w operacjach porównania, ale nie jest czytelny. Ciąg czytelny dla człowieka, należy użyć `type_info::name` zamiast tego funkcji.  
   
- Informacje o typie jest generowane dla klasy polimorficzne tylko wtedy, gdy [/GR (Włącz Run-Time informacji o typie)](../build/reference/gr-enable-run-time-type-information.md) określono opcję kompilatora.  
+ Informacje o typie jest generowana dla polimorficznych klas tylko wtedy, gdy [/GR (Włącz Run-Time informacje o typie)](../build/reference/gr-enable-run-time-type-information.md) określono opcję kompilatora.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Informacje o typach uzyskiwane w czasie rzeczywistym](../cpp/run-time-type-information.md)

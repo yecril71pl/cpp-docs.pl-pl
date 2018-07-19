@@ -16,33 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6dbf91f2d354bf3a68ce0f251bc6b5d9675af7f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2683daf4fd1293d3fad043037165fa3cbc13de3c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947748"
 ---
 # <a name="convertstringtobstr"></a>ConvertStringToBSTR
 **Microsoft Specific**  
   
- Konwertuje **char \***  do wartości `BSTR`.  
+ Konwertuje **char \***  wartość `BSTR`.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
   
-      BSTR __stdcall ConvertStringToBSTR(  
-   const char* pSrc  
-)  
+BSTR __stdcall ConvertStringToBSTR(const char* pSrc)  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `pSrc`  
+ *pSrc*  
  A **char \***  zmiennej.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp 
 // ConvertStringToBSTR.cpp  
 #include <comutil.h>  
 #include <stdio.h>  
@@ -66,7 +65,7 @@ char * text: Test
 BSTR text: Test  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<comutil.h >  

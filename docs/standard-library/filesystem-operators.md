@@ -22,16 +22,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 546e601afeb05e0347dba8bf792611f20068c69b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e93cbd4298a0f2094c2c5950220610a17642512
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845378"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965581"
 ---
-# <a name="ltfilesystemgt-operators"></a>&lt;System plików&gt; operatory
+# <a name="ltfilesystemgt-operators"></a>&lt;System plików&gt; operatorów
 
-Operatory wykonać leksykalne porównanie dwóch ścieżek jako ciągi. Użyj **równoważne** funkcji, aby określić, czy dwie ścieżki (na przykład ścieżka względna i ścieżką bezwzględną) odnoszą się do tego samego pliku lub katalogu na dysku.
+Operatory wykonać leksykalne porównanie dwóch ścieżek jako ciągi. Użyj `equivalent` funkcję, aby określić, czy dwie ścieżki (na przykład ścieżki względnej i ścieżką bezwzględną) odwoływać się do tego samego pliku lub katalogu na dysku.
 
 Aby uzyskać więcej informacji, zobacz [nawigacji systemu plików (C++)](../standard-library/file-system-navigation.md).
 
@@ -49,7 +49,7 @@ Funkcja zwraca left.native() == right.native().
 bool operator!=(const path& left, const path& right) noexcept;
 ```
 
-Funkcja zwraca! (po lewej == prawo).
+Funkcja zwraca! (== lewej po prawej stronie).
 
 ## <a name="operator"></a>operator<
 
@@ -65,7 +65,7 @@ Funkcja zwraca left.native() < right.native().
 bool operator<=(const path& left, const path& right) noexcept;
 ```
 
-Funkcja zwraca! (prawo \< po lewej stronie).
+Funkcja zwraca! (prawy \< po lewej stronie).
 
 ## <a name="operator"></a>operator>
 
@@ -73,7 +73,7 @@ Funkcja zwraca! (prawo \< po lewej stronie).
 bool operator>(const path& left, const path& right) noexcept;
 ```
 
-Funkcja zwraca prawo \< po lewej stronie.
+Funkcja zwraca bezpośrednio \< po lewej stronie.
 
 ## <a name="operator"></a>operator>=
 
@@ -104,7 +104,7 @@ template <class Elem, class Traits>
 basic_ostream<Elem, Traits>& operator<<(basic_ostream<Elem, Traits>& os, const path& pval);
 ```
 
-Funkcja zwraca os << pval.string\<elementu, cech > ().
+Funkcja zwraca os << pval.string\<Elem, cechy > ().
 
 ## <a name="operator"></a>operator>>
 

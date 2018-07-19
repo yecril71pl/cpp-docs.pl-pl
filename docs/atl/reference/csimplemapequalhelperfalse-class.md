@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bebd9c6628924b5927fb48518925bdd665b0ee14
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70cea341e7f78032cdaca260e3c891f4c762e0b6
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360021"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882627"
 ---
 # <a name="csimplemapequalhelperfalse-class"></a>Klasa CSimpleMapEqualHelperFalse
 Ta klasa jest pomocnika dla [CSimpleMap](../../atl/reference/csimplemap-class.md) klasy.  
@@ -42,33 +42,33 @@ class CSimpleMapEqualHelperFalse
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CSimpleMapEqualHelperFalse::IsEqualKey](#isequalkey)|(Statyczny) Testy dwa klucze pod kątem równości.|  
+|[CSimpleMapEqualHelperFalse::IsEqualKey](#isequalkey)|(Statyczny) Testuje dwa klucze pod kątem równości.|  
 |[CSimpleMapEqualHelperFalse::IsEqualValue](#isequalvalue)|(Statyczny) Zwraca wartość false.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta klasa cech jest dodatek do `CSimpleMap` klasy. Zapewnia on metodę porównywania dwóch elementów zawartych w `CSimpleMap` obiektu, w szczególności dwa elementy wartość lub dwa elementy klucza.  
+ Ta klasa cech jest uzupełnieniem `CSimpleMap` klasy. Zapewnia metodę porównywania dwóch elementów zawartych w słowniku `CSimpleMap` obiektu, w szczególności dwa elementy wartości lub dwa kluczowe elementy.  
   
- Porównanie wartości zawsze zwróci wartość false, a ponadto wywoła `ATLASSERT` z argumentu o wartości false, jeśli kiedykolwiek jest wywoływany. W sytuacjach, w którym testu równości nie jest wystarczająco zdefiniowany, ta klasa umożliwia mapy zawierający pary klucz wartość, aby działać prawidłowo w przypadku większości metod, ale się nie powieść w sposób wyraźnie określone dla metod, które są zależne od porównań, takich jak [CSimpleMap:: FindVal](../../atl/reference/csimplemap-class.md#findval).  
+ Porównanie wartości zawsze zwróci wartość false, a ponadto wywoła `ATLASSERT` z nieprawidłowym argumentem wartość false, jeśli nigdy nie jest wywoływany. W sytuacjach, w którym testu równości nie jest wystarczająco zdefiniowana ta klasa umożliwia mapę zawierający pary klucz/wartość, aby działać prawidłowo w przypadku większości metod, ale nie działać w sposób dobrze zdefiniowanych dla metod, które są zależne od porównań, takich jak [CSimpleMap:: FindVal](../../atl/reference/csimplemap-class.md#findval).  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlsimpcoll.h  
   
 ##  <a name="isequalkey"></a>  CSimpleMapEqualHelperFalse::IsEqualKey  
- Testy dwa klucze pod kątem równości.  
+ Testuje dwa klucze pod kątem równości.  
   
 ```
 static bool IsEqualKey(const TKey& k1, const TKey& k2);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `k1`  
+ *K1*  
  Pierwszy klucz.  
   
- `k2`  
+ *K2*  
  Drugi klucz.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość PRAWDA, jeśli klucze są takie same, wartość false w przeciwnym razie wartość.  
+ Zwraca wartość PRAWDA, jeśli klucze są takie same, wartość false w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
  Ta metoda wywołuje [CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md).  
@@ -84,8 +84,8 @@ static bool IsEqualValue(const TVal&, const TVal&);
  Zwraca wartość false.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda zawsze zwraca wartość false, a wywoła `ATLASSERT` z argumentu o wartości false, jeśli kiedykolwiek jest wywoływany. Celem `CSimpleMapEqualHelperFalse::IsEqualValue` jest wymuszenie metod, które się nie powieść w sposób wyraźnie określone podczas testów równości nie zostały odpowiednio zdefiniowane za pomocą porównania.  
+ Ta metoda zawsze zwraca wartość false i wywoła `ATLASSERT` z nieprawidłowym argumentem wartość false, jeśli nigdy nie jest wywoływany. Celem `CSimpleMapEqualHelperFalse::IsEqualValue` jest wymuszenie metod, które się nie powieść w dobrze zdefiniowany sposób w przypadku równości testy nie zostały odpowiednio zdefiniowane za pomocą porównania.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CSimpleMapEqualHelper](../../atl/reference/csimplemapequalhelper-class.md)   
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

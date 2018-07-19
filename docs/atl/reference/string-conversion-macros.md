@@ -1,5 +1,5 @@
 ---
-title: Makra konwersji ciągu | Dokumentacja firmy Microsoft
+title: Makra konwersji ciągów | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,24 +21,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 917afc7dae7a0ed96d5d5cc476b4f8394abe8913
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ee63cf7f5ec2bd0d6ed76bf891ed82492c76560d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362978"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885158"
 ---
-# <a name="string-conversion-macros"></a>Makra konwersji ciągu
+# <a name="string-conversion-macros"></a>Makra konwersji ciągów
 
-Te makra Podaj funkcji konwersji.  
+Te makra wprowadzić parametry funkcji konwersji.  
  
-##  <a name="atl_and_mfc_string_conversion_macros"></a>  ATL i makr konwersji MFC ciągu
+##  <a name="atl_and_mfc_string_conversion_macros"></a>  ATL i makr konwersji ciągu MFC
 
-Makra konwersji ciągu omówione w tym miejscu są prawidłowe dla ATL i MFC. Aby uzyskać więcej informacji o konwersji ciągu MFC, zobacz [TN059: za pomocą makr konwersji MFC MBCS/Unicode](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) i [makr MFC i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md).
+Makra konwersji ciągów omówionych w tym miejscu są prawidłowe dla biblioteki ATL i MFC. Aby uzyskać więcej informacji na temat konwersji ciągów MFC, zobacz [TN059: wykorzystanie makr konwersji MFC MBCS/Unicode](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) i [makr MFC i funkcje globalne](../../mfc/reference/mfc-macros-and-globals.md).
 
-##  <a name="devmode_and_textmetric_string_conversion_macros"></a>  DEVMODE i makra konwersji ciągu TEXTMETRIC
+##  <a name="devmode_and_textmetric_string_conversion_macros"></a>  DEVMODE i makra konwersji ciągów TEXTMETRIC
 
-Te makra Utwórz kopię [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) lub [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) struktury i konwertowanie ciągów w strukturze nowe na nowy typ ciągu. Makra przydzielić pamięci na stosie dla nowej struktury i zwraca wskaźnik do nowej struktury.  
+Te makra Utwórz kopię [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) lub [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) struktury i konwertowanie ciągów w ramach nowej struktury na nowy typ ciągu. Makra przydzielić pamięci na stosie dla nowej struktury i zwracają wskaźnik do nowej struktury.  
   
 ```cpp
 MACRONAME( address_of_structure )
@@ -54,31 +54,31 @@ i:
   
 [!code-cpp[NVC_ATL_Utilities#129](../../atl/codesnippet/cpp/string-conversion-macros_2.cpp)]  
   
-W nazwach makro typu ciąg w strukturze źródła jest po lewej stronie (na przykład **A**) i jest typ ciąg w strukturze docelowej po prawej stronie (na przykład **W**). **A** oznacza `LPSTR`, **OLE** oznacza `LPOLESTR`, **T** oznacza `LPTSTR`, i **W** oznacza `LPWSTR`.  
+W polu nazwy makra typ ciągu w strukturze źródłowej jest po lewej stronie (na przykład **A**) i typ ciągu w strukturze docelowej jest po prawej stronie (na przykład **W**). **A** to LPSTR, **OLE** oznacza LPOLESTR, **T** oznacza LPTSTR, i **W** oznacza LPWSTR.  
   
-W związku z tym **DEVMODEA2W** kopie `DEVMODE` struktury z `LPSTR` ciągi do `DEVMODE` struktury z `LPWSTR` ciągów, **TEXTMETRICOLE2T** kopiuje `TEXTMETRIC`struktury z `LPOLESTR` ciągi do `TEXTMETRIC` struktury z `LPTSTR` ciągów itd.  
+W związku z tym, kopiuje DEVMODEA2W `DEVMODE` strukturę LPSTR ciągów do `DEVMODE` struktury z ciągami LPWSTR, kopie TEXTMETRICOLE2T `TEXTMETRIC` strukturę LPOLESTR ciągów do `TEXTMETRIC` struktury z ciągami LPTSTR i tak dalej.  
   
-Dwa ciągi w `DEVMODE` struktury są nazwy urządzenia (`dmDeviceName`) i nazwa formularza (`dmFormName`). `DEVMODE` Makra konwersji ciągu również zaktualizować rozmiar struktury (`dmSize`).  
+Dwa ciągi w `DEVMODE` struktury są nazwy urządzenia (`dmDeviceName`) i nazwa formularza (`dmFormName`). `DEVMODE` Makra konwersji ciągów również zaktualizować rozmiar struktury (`dmSize`).  
   
-Cztery ciągi w `TEXTMETRIC` struktury są pierwszego znaku (`tmFirstChar`), po ostatnim znaku (`tmLastChar`), domyślny znak (`tmDefaultChar`) i znak podziału (`tmBreakChar`).
+Cztery ciągi w `TEXTMETRIC` struktury jest pierwszym znakiem (`tmFirstChar`), ostatni znak (`tmLastChar`), domyślny znak (`tmDefaultChar`), a znak podziału (`tmBreakChar`).
   
-Zachowanie `DEVMODE` i `TEXTMETRIC` makra konwersji ciągu jest zależna od dyrektywy kompilatora w rezultacie ewentualne. Jeśli typy źródłowy i docelowy są takie same, odbywa się bez konwersji. Dyrektywy kompilatora zmienić **T** i **OLE** w następujący sposób:  
+Zachowanie `DEVMODE` i `TEXTMETRIC` makra konwersji ciągu jest zależna od dyrektywy kompilatora, w efekcie Jeśli istnieje. Jeśli typy źródłowy i docelowy są takie same, odbywa się bez konwersji. Dyrektywy kompilatora zmienić **T** i **OLE** w następujący sposób:  
   
-|Dyrektywy kompilatora w obiekcie|Staje się T|Staje się OLE|  
+|Dyrektywy kompilatora efektu|Staje się T|Staje się OLE|  
 |----------------------------------|---------------|-----------------|  
 |brak|**A**|**W**|  
 |**\_UNICODE**|**W**|**W**|  
 |**OLE2ANSI**|**A**|**A**|  
 |**\_UNICODE** i **OLE2ANSI**|**W**|**A**|  
   
- W poniższej tabeli wymieniono `DEVMODE` i `TEXTMETRIC` ciągu makra konwersji.  
+ W poniższej tabeli wymieniono `DEVMODE` i `TEXTMETRIC` makra konwersji ciągów.  
   
 |||  
 |-|-|  
-|`DEVMODEA2W`|`TEXTMETRICA2W`|  
-|`DEVMODEOLE2T`|`TEXTMETRICOLE2T`|  
-|`DEVMODET2OLE`|`TEXTMETRICT2OLE`|  
-|`DEVMODEW2A`|`TEXTMETRICW2A`|  
+|DEVMODEA2W|TEXTMETRICA2W|  
+|DEVMODEOLE2T|TEXTMETRICOLE2T|  
+|DEVMODET2OLE|TEXTMETRICT2OLE|  
+|DEVMODEW2A|TEXTMETRICW2A|  
 
 ## <a name="see-also"></a>Zobacz też
 

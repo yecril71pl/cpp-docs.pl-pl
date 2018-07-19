@@ -16,20 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54d421f00839d21236741e8d33f1415fe129b18c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b7334fdc420c096c42360dd6b75fc400b8b34f3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420298"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941801"
 ---
 # <a name="nonstandard-behavior"></a>Niestandardowe zachowanie
 Poniższa sekcja wymienia niektóre z miejsc, w których implementacja C++ w języku Visual C++ jest niezgodna ze standardem C++. Numery sekcji podane poniżej odnoszą się do numerów sekcji w standardzie C++11 (ISO/IEC 14882:2011(E)).  
   
- Lista limity kompilatora, które różnią się od tych określonych w C++ standard znajduje się w [limity kompilatora](../cpp/compiler-limits.md).  
+ Wykaz limitów kompilatora, które różnią się od tych zdefiniowanych w standardzie C++ znajduje się [limity kompilatora](../cpp/compiler-limits.md).  
   
 ## <a name="covariant-return-types"></a>Kowariantne typy zwracane  
- Wirtualne klasy bazowe nie są obsługiwane jako kowariantne typy zwracane, gdy funkcja wirtualna ma zmienną liczbę argumentów. Jest to niezgodne z sekcją 10.3.7 specyfikacji ISO C++. Poniższy przykład kompilacja niemożliwa, podając błąd kompilatora [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)  
+ Wirtualne klasy bazowe nie są obsługiwane jako kowariantne typy zwracane, gdy funkcja wirtualna ma zmienną liczbę argumentów. Jest to niezgodne z sekcją 10.3.7 specyfikacji ISO C++. Poniższe przykłady nie kompiluje się, dając błąd kompilatora [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)  
   
 ```cpp  
 // CovariantReturn.cpp  
@@ -71,17 +71,17 @@ int main() {
 ```  
   
 ## <a name="function-exception-specifiers"></a>Specyfikatory wyjątku w funkcji.  
- Specyfikatory wyjątków funkcji innych niż `throw()` przeanalizować, ale nie używane. Jest to niezgodne z sekcją 15.4 specyfikacji ISO C++. Na przykład:  
+ Specyfikatory wyjątku w funkcji inne niż `throw()` są analizowane, lecz nie jest używany. Jest to niezgodne z sekcją 15.4 specyfikacji ISO C++. Na przykład:  
   
 ```cpp  
 void f() throw(int); // parsed but not used  
 void g() throw();    // parsed and used  
 ```  
   
- Aby uzyskać więcej informacji na specyfikacje wyjątków, zobacz [specyfikacje wyjątków](../cpp/exception-specifications-throw-cpp.md).  
+ Aby uzyskać więcej informacji dotyczących specyfikacji wyjątków, zobacz [specyfikacje wyjątków](../cpp/exception-specifications-throw-cpp.md).  
   
 ## <a name="chartraitseof"></a>char_traits::eof()  
- C++ standard stwierdza, że [char_traits::eof](../standard-library/char-traits-struct.md#eof) nie musi odpowiadać na prawidłową `char_type` wartość. Kompilator Visual C++ wymusza to ograniczenie dla typu `char`, ale nie dla typu `wchar_t`. Jest to niezgodne z wymogami określonymi w tabeli 62 w sekcji 12.1.1 specyfikacji ISO C++. Prezentuje to poniższy przykład.  
+ C++ standard stanowi, że [char_traits::eof](../standard-library/char-traits-struct.md#eof) może nie odpowiadać ważnej `char_type` wartość. Kompilator języka Visual C++ wymusza to ograniczenie dla typu **char**, ale nie dla typu `wchar_t`. Jest to niezgodne z wymogami określonymi w tabeli 62 w sekcji 12.1.1 specyfikacji ISO C++. Prezentuje to poniższy przykład.  
   
 ```cpp  
 #include <iostream>  

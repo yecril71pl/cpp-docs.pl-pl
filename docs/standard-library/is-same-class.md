@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b886b805eb551831ad2d559b041df0d38c5987
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c931e81b27c3a5eb95d546119e0abee118f6e76a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857873"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964980"
 ---
 # <a name="issame-class"></a>is_same — Klasa
 
-Testy, jeśli dwa typy są takie same.
+Sprawdza, czy dwa typy są takie same.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,13 +37,13 @@ struct is_same;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty1` Typ pierwszego zapytania.
+*Ty1* pierwszy typ do zapytania.
 
-`Ty2` Typ drugiego zapytania.
+*Ty2* drugi typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typy `Ty1` i `Ty2` są tego samego typu, w przeciwnym razie ma wartość false.
+Wystąpienie typu predykatu ma wartość true, jeśli typy *Ty1* i *Ty2* są tego samego typu, w przeciwnym razie przechowuje wartość false.
 
 ## <a name="example"></a>Przykład
 
@@ -93,7 +93,7 @@ is_same<int, const int> == false
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

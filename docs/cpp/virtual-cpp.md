@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 909fd3fde92479b2e5407608026cb01ec17fced2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9eba5462caf739d78236e10df018fc07421ea876
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421799"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939123"
 ---
 # <a name="virtual-c"></a>wirtualne (C++)
-`virtual` — Słowo kluczowe deklaruje funkcję wirtualną lub wirtualnej klasy podstawowej.  
+**Wirtualnego** — słowo kluczowe deklaruje funkcję wirtualną lub wirtualnej klasy bazowej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,22 +38,22 @@ virtual [access-specifier] base-class-name
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `type-specifiers`  
- Określa typ zwracany funkcji wirtualnego elementu członkowskiego.  
+ *Specyfikatory typów*  
+ Określa typ zwracany funkcja wirtualna elementu członkowskiego.  
   
- `member-function-declarator`  
- Deklaruje funkcję elementu członkowskiego.  
+ *deklaratora w przypadku funkcji składowej*  
+ Deklaruje funkcję członkowską.  
   
- `access-specifier`  
- Określa poziom dostępu do klasy podstawowej `public`, `protected` lub `private`. Może występować przed lub po `virtual` — słowo kluczowe.  
+ *Specyfikator dostępu*  
+ Określa poziom dostępu do klasy bazowej, **publicznych**, **chronione** lub **prywatnej**. Może znajdować się przed lub po **wirtualnego** — słowo kluczowe.  
   
- `base-class-name`  
- Określa typ klasy poprzednio zadeklarowana.  
+ *Base-class-name*  
+ Określa typ klasy zadeklarowanej wcześniej.  
   
 ## <a name="remarks"></a>Uwagi  
  Zobacz [funkcji wirtualnych](../cpp/virtual-functions.md) Aby uzyskać więcej informacji.  
   
- Zobacz też Poniższe słowa kluczowe: [klasy](../cpp/class-cpp.md), [prywatnej](../cpp/private-cpp.md), [publicznego](../cpp/public-cpp.md), i [chronione](../cpp/protected-cpp.md).  
+ Zobacz też następujące słowa kluczowe: [klasy](../cpp/class-cpp.md), [prywatnej](../cpp/private-cpp.md), [publicznych](../cpp/public-cpp.md), i [chronione](../cpp/protected-cpp.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Słowa kluczowe](../cpp/keywords-cpp.md)

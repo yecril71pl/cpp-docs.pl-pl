@@ -17,44 +17,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7341695ad0cbc8384da859b80a72a63d8d52215f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8e982ebd9a09d4dfcb5e4b5e150b42a1e8d5c75
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947936"
 ---
 # <a name="comptrtattach"></a>_com_ptr_t::Attach
 **Microsoft Specific**  
   
- Hermetyzuje wskaźnik interfejsu pierwotnego, typu wskaźnika inteligentnego.  
+ Hermetyzuje surowego wskaźnika interfejsu tego inteligentnego wskaźnika typu.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
   
-      void Attach(  
-   Interface* pInterface   
-) throw( );  
-void Attach(  
-   Interface* pInterface,  
-   bool fAddRef   
-) throw( );  
+void Attach( Interface* pInterface ) throw( );  
+void Attach( Interface* pInterface, bool fAddRef ) throw( );  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `pInterface`  
- Wskaźnik interfejsu pierwotnego.  
+ *pInterface*  
+ Surowego wskaźnika interfejsu.  
   
- `fAddRef`  
- Jeśli jest **true**, następnie `AddRef` jest wywoływana. Jeśli jest **false**, `_com_ptr_t` obiektu przejmuje wskaźnik interfejsu pierwotnego, bez wywoływania elementu `AddRef`.  
+ *fAddRef*  
+ Jeśli ma wartość PRAWDA, następnie `AddRef` jest wywoływana. Jeśli wartość FAŁSZ, `_com_ptr_t` obiektu przejmuje na własność surowego wskaźnika interfejsu bez wywoływania `AddRef`.  
   
 ## <a name="remarks"></a>Uwagi  
   
--   **Dołącz (**`pInterface`**)** `AddRef` nie jest wywoływany.     Własność interfejsu jest przekazywana do `_com_ptr_t` obiektu. **Wersja** jest wywoływana, aby zmniejszyć licznika odwołań do wcześniej hermetyzowany wskaźnika.  
+-   **Dołącz (***pInterface***)** `AddRef` nie zostanie wywołana.     Własność interfejsu jest przekazywany do tego `_com_ptr_t` obiektu. `Release` jest wywoływana, aby zmniejszyć licznikiem odwołań do wcześniej zhermetyzowanego wskaźnika.  
   
--   **Dołącz (** `pInterface` **,**`fAddRef`**)** Jeśli `fAddRef` jest **true**, `AddRef` jest wywoływana, aby zwiększyć odwołania Liczba dla wskaźnika interfejsu hermetyzowany.       Jeśli `fAddRef` jest **false**, to `_com_ptr_t` obiektu przejmuje wskaźnik interfejsu pierwotnego, bez wywoływania elementu `AddRef`. **Wersja** jest wywoływana, aby zmniejszyć licznika odwołań do wcześniej hermetyzowany wskaźnika.  
+-   **Dołącz (***pInterface* **,***fAddRef***)** Jeśli *fAddRef* ma wartość PRAWDA, `AddRef`jest wywoływana, aby zwiększyć licznik odwołań dla interfejsu zhermetyzowanego wskaźnika.       Jeśli *fAddRef* ma wartość FAŁSZ, to `_com_ptr_t` obiektu przejmuje na własność surowego wskaźnika interfejsu bez wywoływania `AddRef`. `Release` jest wywoływana, aby zmniejszyć licznikiem odwołań do wcześniej zhermetyzowanego wskaźnika.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [_com_ptr_t, klasa](../cpp/com-ptr-t-class.md)

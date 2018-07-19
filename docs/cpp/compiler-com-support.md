@@ -15,22 +15,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d6e916cbd7cd8f5fbb259ff096159f9a49202ac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a21b7dd00aa0bb0894da4cc13cf0f6f40078ee1b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412715"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941830"
 ---
 # <a name="compiler-com-support"></a>Obsługa kompilatora COM
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
- Kompilator Visual C++ bezpośrednio może odczytywać bibliotek typów model (COM) obiektu składnika i tłumaczenie zawartość do kodu źródłowego języka C++, która może być uwzględniony w kompilacji. Rozszerzenia językowe są dostępne dla ułatwienia COM programowania po stronie klienta.  
+ Kompilator języka Visual C++ może bezpośrednio odczytywać bibliotek typów model (COM) obiektu składnika i tłumaczy zawartość do kodu źródłowego języka C++, które mogą być zawarte w kompilacji. Rozszerzenia językowe są dostępne dla ułatwienia COM programowanie po stronie klienta.  
   
- Za pomocą [dyrektywy preprocesora #import](../preprocessor/hash-import-directive-cpp.md), kompilator może odczytać biblioteki typów i przekonwertować go do pliku nagłówka C++, który opisuje COM interfejsy klas. Zestaw `#import` atrybutów jest dostępna dla formantu użytkownika zawartości pliki wynikowe nagłówka biblioteki typów.  
+ Za pomocą [#import — dyrektywa preprocesora](../preprocessor/hash-import-directive-cpp.md), kompilator może odczytywać bibliotekę typów i przekonwertować go na plik nagłówka C++, który opisuje COM interfejsy klas. Zbiór `#import` atrybutów jest dostępna dla kontrolki użytkownika zawartości wynikowe pliki nagłówkowe biblioteki typów.  
   
- Można użyć [__declspec](../cpp/declspec.md) rozszerzonych atrybutów [uuid](../cpp/uuid-cpp.md) można przypisać do obiektu COM Unikatowy identyfikator globalny (GUID). Słowo kluczowe [__uuidof](../cpp/uuidof-operator.md) służy do wyodrębniania identyfikatora GUID skojarzony z obiektem COM. Inny `__declspec` atrybutu, [właściwości](../cpp/property-cpp.md), może służyć do określenia **uzyskać** i **ustawić** metody dla elementu członkowskiego danych obiektu COM.  
+ Możesz użyć [__declspec](../cpp/declspec.md) atrybutów rozszerzonych [uuid](../cpp/uuid-cpp.md) można przypisać unikatowy identyfikator globalny (GUID) do obiektu COM. Słowo kluczowe [__uuidof](../cpp/uuidof-operator.md) pozwala wyodrębnić identyfikator GUID skojarzony z obiektem COM. Inny `__declspec` atrybutu, [właściwość](../cpp/property-cpp.md), może służyć do określania **uzyskać** i **ustaw** metody element członkowski danych obiektu COM.  
   
- Zestaw klasy i funkcje globalne obsługi modelu COM został dostarczony do obsługi **VARIANT** i `BSTR` typy, wdrożenie wskaźniki inteligentne i Hermetyzowanie obiektu błąd zgłoszony przez `_com_raise_error`:  
+ Zestaw klasy i funkcje globalne obsługi COM znajduje się do obsługi `VARIANT` i `BSTR` typów, implementować inteligentne wskaźniki i hermetyzacji obiekt błędu zgłoszony przez `_com_raise_error`:  
   
 -   [Funkcje globalne kompilatora COM](../cpp/compiler-com-global-functions.md)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "32412715"
   
 -   [_variant_t](../cpp/variant-t-class.md)  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kompilator klas obsługi COM](../cpp/compiler-com-support-classes.md)   

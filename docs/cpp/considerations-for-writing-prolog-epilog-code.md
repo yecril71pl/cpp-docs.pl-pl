@@ -1,5 +1,5 @@
 ---
-title: Zagadnienia dotyczące pisania kodu prologu epilogu | Dokumentacja firmy Microsoft
+title: Zagadnienia dotyczące pisania kodu prologu/epilogu | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bd87d4af4c797d324e6f882cc5c2e139a784543
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b7f4e2c25d7ead3399020221c1e0e9633557d24
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414773"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942110"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>Zagadnienia dotyczące pisania kodu prologu/epilogu
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
- Przed napisaniem własnej sekwencji kodu prologu i epilogu należy zrozumieć ułożenie ramki stosu. Warto również wiedzieć, jak używać **__local_size —** symbolu.  
+ Przed napisaniem własnej sekwencji kodu prologu i epilogu należy zrozumieć ułożenie ramki stosu. Warto również wiedzieć, jak użyć symbolu __LOCAL_SIZE.  
   
-##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a> Ramka stosu — układ  
+##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a> Układ ramki stosu  
  W tym przykładzie pokazano standardowy kod prologu, który może pojawić się w 32-bitowej funkcji:  
   
 ```  
@@ -48,19 +48,19 @@ pop         ebp           ; Restore ebp
 ret                       ; Return from function  
 ```  
   
- Stos zawsze powiększa się w dół (od najwyższego do najniższego adresu pamięci). Podstawowy wskaźnik (`ebp`) wskazuje na umieszczoną wartość `ebp`. Zmienne lokalne obszaru zaczyna się od `ebp-4`. Aby uzyskać dostęp do zmiennych lokalnych, należy obliczyć przesunięcie z `ebp` przez odjęcie odpowiedniej wartości od `ebp`.  
+ Stos zawsze powiększa się w dół (od najwyższego do najniższego adresu pamięci). Podstawowy wskaźnik (`ebp`) wskazuje na umieszczoną wartość `ebp`. Obszar zmiennych lokalnych rozpoczyna się od `ebp-4`. Aby uzyskać dostęp do zmiennych lokalnych, należy obliczyć przesunięcie z `ebp` przez odjęcie odpowiedniej wartości od `ebp`.  
   
-##  <a name="_pluslang___local_size"></a> __LOCAL_SIZE —  
- Kompilator zawiera symbol, **__local_size —**, do użycia w bloku asemblera wbudowanego kodu prologu funkcji. Ten symbol jest używany do przydzielenia miejsca dla zmiennych lokalnych w ramce stosu w prologu niestandardowego kodu.  
+##  <a name="_pluslang___local_size"></a> __LOCAL_SIZE  
+ Kompilator zawiera symbol __LOCAL_SIZE do użycia w bloku asemblera wbudowanego w kodzie prologu funkcji. Ten symbol jest używany do alokowania miejsca dla zmiennych lokalnych na ramce stosu w niestandardowym kodzie prologu.  
   
- Kompilator określa wartość **__local_size —**. Wartość jest to całkowita liczba bajtów wszystkich zdefiniowanych przez użytkownika zmiennych lokalnych i generowane przez kompilator zmiennych tymczasowych. **__Local_size —** mogą być używane tylko jako argumentu natychmiastowego; nie można użyć w wyrażeniu. Nie musisz zmienić lub zmień definicję wartość tego symbolu. Na przykład:  
+ Kompilator określa wartość __LOCAL_SIZE. Jego wartość to całkowita liczba bajtów wszystkich zmiennych lokalnych zdefiniowanych przez użytkownika i zmiennych tymczasowych wygenerowanych przez kompilator. __LOCAL_SIZE mogą być używane tylko jako bezpośredni argument; Nie można użyć w wyrażeniu. Nie musisz zmienić lub ponownie definiować wartości tego symbolu. Na przykład:  
   
 ```  
 mov        eax, __LOCAL_SIZE           ;Immediate operand--Okay  
 mov        eax, [ebp - __LOCAL_SIZE]   ;Error  
 ```  
   
- Poniższy przykład przedstawia funkcji naked zawierający niestandardowe prolog i epilog sekwencji używa **__local_size —** symbol w prologu sekwencji:  
+ Poniższy przykład funkcji "naked", zawierający niestandardową sekwencję prologu i epilogu sekwencji używa __LOCAL_SIZE symbol w sekwencji prologu:  
   
 ```  
 // the__local_size_symbol.cpp  
@@ -84,7 +84,7 @@ __declspec ( naked ) int main() {
 }  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wywołania funkcji Naked](../cpp/naked-function-calls.md)

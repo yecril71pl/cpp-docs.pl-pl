@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88accb8b614a5a07a7abf688790a80786f465607
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4895153abe248265e0aacfbe636b9a4bd46ed205
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409973"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941200"
 ---
 # <a name="bstrtgetaddress"></a>_bstr_t::GetAddress
 **Microsoft Specific**  
   
- Zwalnia wszelkie istniejące parametry i zwraca adres nowoprzydzielonych ciągu.  
+ Zwalnia wszelkie istniejących parametrów i zwraca adres nowo przydzielonego ciągu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,12 +40,12 @@ BSTR* GetAddress( );
  Wskaźnik do `BSTR` opakowane przez `_bstr_t`.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetAddress` dotyczy wszystkich `_bstr_t` obiekty tego udziału `BSTR`. Więcej niż jeden `_bstr_t` mogą udostępniać `BSTR` przy użyciu konstruktora kopiującego i i `operator=`.  
+ `GetAddress` ma wpływ na wszystkie `_bstr_t` obiekty udziału `BSTR`. Więcej niż jeden `_bstr_t` mogą udostępniać `BSTR` za pomocą konstruktora kopiującego i i **operator =**.  
   
 ## <a name="example"></a>Przykład  
  Zobacz [_bstr_t::przypisanie](../cpp/bstr-t-assign.md) na przykład użycie `GetAddress`.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [_bstr_t, klasa](../cpp/bstr-t-class.md)

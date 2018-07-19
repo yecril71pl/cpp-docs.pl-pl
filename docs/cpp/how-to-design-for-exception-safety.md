@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbad81c5014c2aa3bcf10b083fa974615e4669e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3dd7448d50debc54cde075b8a6879af8b1be62c9
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417971"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940327"
 ---
 # <a name="how-to-design-for-exception-safety"></a>Porady: projektowanie pod kątem bezpieczeństwa wyjątków
 Jedna z zalet mechanizmu wyjątków polega na tym, że wykonywanie, wraz z danymi o wyjątku, przechodzi bezpośrednio z instrukcji generującej wyjątek do pierwszej instrukcji „catch” zdolnej go obsłużyć. Program obsługi może się znajdować o dowolną liczbę poziomów wyżej w stosie wywołań. Funkcje wywoływane między instrukcjami „try” i „throw” nie muszą nic wiedzieć o zgłaszanym wyjątku.  Muszą jednak być zaprojektowane w taki sposób, aby mogły wykroczyć poza zakres „niespodziewanie” w każdym momencie, gdy istnieje ryzyko rozpowszechnienia wyjątku z niższego poziomu, nie pozostawiając przy tym za sobą żadnych częściowo utworzonych obiektów, przecieków pamięci ani struktur danych w bezużytecznych stanach.  
@@ -28,7 +28,7 @@ Jedna z zalet mechanizmu wyjątków polega na tym, że wykonywanie, wraz z danym
  Bez względu na to, jak funkcja obsługuje wyjątek, w celu zagwarantowania jej „bezpieczeństwa pod względem wyjątków” musi być zaprojektowana zgodnie z poniższymi podstawowymi zasadami.  
   
 ### <a name="keep-resource-classes-simple"></a>Prostota klas zasobów  
- Podczas hermetyzowania ręcznego zarządzania zasobami w klasach należy stosować klasy, które nie wykonują żadnych innych zadań w dziedzinie zarządzania danymi zasobami. W przeciwnym razie mogą się pojawić przecieki pamięci. Użyj [wskaźniki inteligentne](../cpp/smart-pointers-modern-cpp.md) Jeśli to możliwe, jak pokazano w poniższym przykładzie. Przykład jest celowo sztuczny i uproszczony, aby podkreślić różnice względem stosowania wskaźników `shared_ptr`.  
+ Podczas hermetyzowania ręcznego zarządzania zasobami w klasach należy stosować klasy, które nie wykonują żadnych innych zadań w dziedzinie zarządzania danymi zasobami. W przeciwnym razie mogą się pojawić przecieki pamięci. Użyj [inteligentne wskaźniki](../cpp/smart-pointers-modern-cpp.md) Jeśli to możliwe, jak pokazano w poniższym przykładzie. Przykład jest celowo sztuczny i uproszczony, aby podkreślić różnice względem stosowania wskaźników `shared_ptr`.  
   
 ```cpp  
 // old-style new/delete version  
@@ -90,10 +90,10 @@ public:
 ```  
   
 ### <a name="use-the-raii-idiom-to-manage-resources"></a>Zarządzanie zasobami przy użyciu idiomu RAII  
- Aby funkcja była bezpieczna pod względem wyjątków, musi gwarantować, że obiekty, które przydzieliła za pomocą funkcji `malloc` lub `new`, zostaną zniszczone, a wszystkie zasoby, takie jak dojścia do plików, zostaną zamknięte lub zwolnione nawet w razie zgłoszenia wyjątku. *Inicjowania jest nabywania zasobów* idiom (RAII) wiąże zarządzania takich zasobów do czasu działania automatycznych zmiennych. Kiedy funkcja wykracza poza swój zakres, powracając do stanu wyjściowego normalnie lub z powodu wyjątku, następuje wywołanie destruktorów wszystkich w pełni skonstruowanym automatycznych zmiennych. Obiekt otoki idiomu RAII, taki jak inteligentny wskaźnik, wywołuje w destruktorze odpowiednią funkcje usunięcia lub zamknięcia. W kodzie bezpiecznym pod względem wyjątków kluczowe znaczenie ma natychmiastowe przekazywanie własności każdego zasobu do jakiegoś obiektu RAII. Należy pamiętać, że `vector`, `string`, `make_shared`, `fstream`, i podobne klasy obsługi nabycia zasobu dla Ciebie.  Jednak `unique_ptr` i tradycyjny `shared_ptr` konstrukcji są specjalne nabywania zasobów jest wykonywana przez użytkownika, a nie obiektem; w związku z tym liczone jako *zasobów wersji jest zniszczenie* , ale są wątpliwe jako RAII.  
+ Była bezpieczna pod względem wyjątków, funkcja upewnij się, że obiekty, które przydzieliła za pomocą `malloc` lub **nowe** zostaną zniszczone i wszystkie zasoby, takie jak dojścia do plików zostaną zamknięte lub zwolnione nawet wtedy, gdy zostanie zgłoszony wyjątek. *Inicjowania jest pozyskiwanie zasobów* idiom (RAII) wiąże zarządzanie takimi zasobami z okresem istnienia zmiennych automatycznych. Kiedy funkcja wykracza poza swój zakres, powracając do stanu wyjściowego normalnie lub z powodu wyjątku, następuje wywołanie destruktorów wszystkich w pełni skonstruowanym automatycznych zmiennych. Obiekt otoki idiomu RAII, taki jak inteligentny wskaźnik, wywołuje w destruktorze odpowiednią funkcje usunięcia lub zamknięcia. W kodzie bezpiecznym pod względem wyjątków kluczowe znaczenie ma natychmiastowe przekazywanie własności każdego zasobu do jakiegoś obiektu RAII. Należy pamiętać, że `vector`, `string`, `make_shared`, `fstream`, i podobnie klasy obsługi pozyskiwanie zasobów dla Ciebie.  Jednak `unique_ptr` i tradycyjne `shared_ptr` konstrukcje są specyficzne, ponieważ pozyskiwanie zasobów jest wykonywane przez użytkownika, a nie obiekt; dlatego są uznawane za idiomy *zniszczenia jest wersji zasobu* , ale są idiomów RAII.  
   
 ## <a name="the-three-exception-guarantees"></a>Trzy gwarancje w dziedzinie obsługi wyjątków  
- Zazwyczaj omówiono wyjątek bezpieczeństwa pod względem gwarancji trzy wyjątków, które zapewniają funkcję: *kończyć się niepowodzeniem nie gwarancji*, *silnej gwarancji*i *gwarancji podstawowe* .  
+ Zazwyczaj bezpieczeństwa wyjątków jest rozważane w kontekście trzech gwarancji wyjątku, które może zapewnić funkcja: *gwarancja braku niepowodzenia*, *Silna gwarancja*i *Gwarancja podstawowa* .  
   
 ### <a name="no-fail-guarantee"></a>Gwarancja braku niepowodzenia  
  Gwarancja braku niepowodzenia (lub „braku zgłaszania wyjątków”) jest najsilniejszą gwarancją, jaką może zapewnić funkcja. Stwierdza, że funkcja nie będzie generować wyjątków ani nie pozwoli ich rozpowszechnianie. Gwarancji takiej można wiarygodnie udzielić tylko w przypadku, gdy (a) wiadomo, że wszystkie funkcje wywoływane przez tę funkcję również zapewniają brak niepowodzeń, lub (b) wiadomo, że wszystkie zgłaszane wyjątki są przechwytywane zanim dotrą do tej funkcji, lub (c) wiadomo, jak poprawnie przechwytywać i obsługiwać wszystkie wyjątki mogące docierać do tej funkcji.  

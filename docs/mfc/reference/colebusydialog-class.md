@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4af90e9354e7d443cb50acbafaa1468c99c12c85
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 5f9ed49115a82f6e032404b862b8eca0ad922a34
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040915"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853072"
 ---
 # <a name="colebusydialog-class"></a>Klasa COleBusyDialog
-Używana w oknach dialogowych OLE serwer nie odpowiada lub serwer jest zajęty.  
+Używane dla okien dialogowych OLE serwer nie odpowiada lub serwer jest zajęty.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -53,16 +53,16 @@ class COleBusyDialog : public COleDialog
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[COleBusyDialog::DoModal](#domodal)|Wyświetla okno dialogowe w OLE serwer jest zajęty.|  
-|[COleBusyDialog::GetSelectionType](#getselectiontype)|Określa z wyborem dokonanym w oknie dialogowym.|  
+|[COleBusyDialog::GetSelectionType](#getselectiontype)|Określa, z wyborem dokonanym w oknie dialogowym.|  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[COleBusyDialog::m_bz](#m_bz)|Struktura typu **OLEUIBUSY** steruje zachowaniem okna dialogowego.|  
+|[COleBusyDialog::m_bz](#m_bz)|Struktura typu OLEUIBUSY kontrolujące zachowanie okna dialogowego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Utwórz obiekt klasy `COleBusyDialog` aby wywołać tych okien dialogowych. Po `COleBusyDialog` obiekt został skonstruowany, możesz użyć [m_bz](#m_bz) struktury zainicjować wartości lub stany formantów w oknie dialogowym. `m_bz` Struktura jest typu **OLEUIBUSY**. Aby uzyskać więcej informacji o korzystaniu z tej klasy okien dialogowych, zobacz [DoModal](#domodal) funkcję elementu członkowskiego.  
+ Utwórz obiekt klasy `COleBusyDialog` gdy zachodzi potrzeba wywołania tych okien dialogowych. Po `COleBusyDialog` obiekt został skonstruowany, możesz użyć [m_bz](#m_bz) strukturę, aby zainicjować wartości lub stany formantów w oknie dialogowym. `m_bz` Struktury jest typu OLEUIBUSY. Aby uzyskać więcej informacji o korzystaniu z tej klasy okien dialogowych, zobacz [DoModal](#domodal) funkcja elementu członkowskiego.  
   
 > [!NOTE]
 >  Kod kontenera generowane przez Kreatora aplikacji korzysta z tej klasy.  
@@ -90,7 +90,7 @@ class COleBusyDialog : public COleDialog
  **Nagłówek:** afxodlgs.h  
   
 ##  <a name="colebusydialog"></a>  COleBusyDialog::COleBusyDialog  
- Ta funkcja jedynie tworzy `COleBusyDialog` obiektu.  
+ Ta funkcja tylko tworzy `COleBusyDialog` obiektu.  
   
 ```  
 explicit COleBusyDialog(
@@ -105,58 +105,58 @@ explicit COleBusyDialog(
  Dojście do zadania serwera, który jest zajęty.  
   
  *bNotResponding*  
- Jeśli **TRUE**, wywołaj okno dialogowe nie odpowiada zamiast okna dialogowego serwer jest zajęty. Treść w oknie dialogowym nie odpowiada są nieco inne niż treść w oknie dialogowym serwer jest zajęty, a przycisk Anuluj jest wyłączony.  
+ W przypadku opcji TRUE Wywołaj okno dialogowe nie odpowiada zamiast okna dialogowego serwer jest zajęty. Treść w oknie dialogowym nie odpowiada są nieco inne niż treść serwer jest zajęty w oknie dialogowym, a przycisk Anuluj jest wyłączony.  
   
- *wartość elementu dwFlags*  
- Flagi tworzenia. Może zawierać zero lub więcej z następujących wartości, które są połączone z operator Alternatywy:  
+ *Flagidw*  
+ Flagi tworzenia. Może zawierać zero lub więcej z następujących wartości, które są połączone za pomocą operatora bitowego OR:  
   
-- **BZ_DISABLECANCELBUTTON** Wyłącz przycisk Anuluj, podczas wywoływania okna dialogowego.  
+- Podczas wywoływania okno dialogowe, BZ_DISABLECANCELBUTTON wyłączyć przycisk Anuluj.  
   
-- **BZ_DISABLESWITCHTOBUTTON** Wyłącz przycisk przełącznika do podczas wywoływania okna dialogowego.  
+- Wyłącz BZ_DISABLESWITCHTOBUTTON Przełącz do przycisku podczas wywoływania okno dialogowe.  
   
-- **BZ_DISABLERETRYBUTTON** wyłącza przycisk Ponów próbę, podczas wywoływania okna dialogowego.  
+- Podczas wywoływania okno dialogowe, BZ_DISABLERETRYBUTTON wyłączyć przycisk Ponów próbę.  
   
  *pParentWnd*  
- Wskazuje obiekt okna nadrzędnego lub właściciela (typu `CWnd`) do której należy obiektu okna dialogowego. Jeśli jest **NULL**, okno nadrzędne obiektu okna dialogowego ma ustawioną wartość okna głównego aplikacji.  
+ Wskazuje na obiekt okna nadrzędnego lub właściciela (typu `CWnd`) do którego należy obiekt okna dialogowego. Jeśli ma wartość NULL, okno nadrzędne z obiektu okna dialogowego jest ustawiony na okna głównego aplikacji.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby wyświetlić okno dialogowe, wywołaj [DoModal](#domodal).  
+ Aby wyświetlić okno dialogowe, należy wywołać [DoModal](#domodal).  
   
  Aby uzyskać więcej informacji, zobacz [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) struktury w zestawie Windows SDK.  
   
 ##  <a name="domodal"></a>  COleBusyDialog::DoModal  
- Wywołanie tej funkcji, aby wyświetlić okno dialogowe OLE serwer jest zajęty lub serwer nie odpowiada.  
+ Wywołaj tę funkcję, aby wyświetlić okno dialogowe OLE serwer jest zajęty lub serwer nie odpowiada.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Stan ukończenia dla okna dialogowego. Jedna z następujących wartości:  
+ Stan ukończenia dla okna dialogowego. Jeden z następujących wartości:  
   
-- **IDOK** Jeśli pomyślnie zostało wyświetlone okno dialogowe.  
+- IDOK, jeśli pomyślnie zostało wyświetlone okno dialogowe.  
   
-- **IDCANCEL** Jeśli użytkownik anulował okno dialogowe.  
+- IDCANCEL, jeśli użytkownik anulował okno dialogowe.  
   
-- **IDABORT** Jeśli wystąpił błąd. Jeśli **IDABORT** jest zwracany, wywołaj `COleDialog::GetLastError` funkcji członkowskiej, aby uzyskać więcej informacji o typie wystąpił błąd. Aby uzyskać listę możliwych błędów, zobacz [OleUIBusy](http://msdn.microsoft.com/library/windows/desktop/ms680125) funkcji w zestawie Windows SDK.  
+- IDABORT, jeśli wystąpił błąd. Jeśli zwracana jest IDABORT, wywołaj `COleDialog::GetLastError` funkcja elementu członkowskiego, aby uzyskać więcej informacji o typie błędu, który wystąpił. Aby uzyskać listę możliwych błędów, zobacz [OleUIBusy](http://msdn.microsoft.com/library/windows/desktop/ms680125) funkcji w zestawie Windows SDK.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli chcesz zainicjować różnych formantów okna dialogowego przez ustawienie członkami [m_bz](#m_bz) struktury, ten krok należy wykonać przed wywołaniem `DoModal`, ale po konstruowania obiektu okna dialogowego.  
+ Aby inicjowanie różne formanty okna dialogowego, ustawiając członkowie [m_bz](#m_bz) struktury, należy to zrobić przed wywołaniem `DoModal`, ale po jest konstruowany obiektu okna dialogowego.  
   
- Jeśli `DoModal` zwraca **IDOK**, innego członka można wywołać funkcji, aby uzyskać ustawienia i informacje, które zostało wprowadzone przez użytkownika do okna dialogowego.  
+ Jeśli `DoModal` zwraca IDOK, może wywołać inny członek funkcje, które można pobrać ustawień lub informacje, które zostało wprowadzone przez użytkownika do okna dialogowego.  
   
 ##  <a name="getselectiontype"></a>  COleBusyDialog::GetSelectionType  
- Wywołanie tej funkcji można pobrać typu Wybór wybierany przez użytkownika w oknie dialogowym serwer jest zajęty.  
+ Wywołaj tę funkcję można pobrać typu Wybór wybierany przez użytkownika w oknie dialogowym serwer jest zajęty.  
   
 ```  
 UINT GetSelectionType() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Typ wybranego.  
+ Typ dokonano wyboru.  
   
 ### <a name="remarks"></a>Uwagi  
- Zwracany typ wartości są określane przez **wybór** typ wyliczeniowy zadeklarowany w `COleBusyDialog` klasy.  
+ Wartości zwracanej są określane przez `Selection` typ wyliczeniowy zadeklarowany w `COleBusyDialog` klasy.  
   
 ```  
 enum Selection {
@@ -166,23 +166,23 @@ enum Selection {
     };
 ```  
   
- Wykonaj krótkie opisy z następujących wartości:  
+ Wykonaj krótkie opisy tych wartości:  
   
-- **COleBusyDialog::switchTo** został naciśnięty przycisk przełącznika do.  
+- `COleBusyDialog::switchTo` Przełącz do przycisk został naciśnięty.  
   
-- **COleBusyDialog::retry** został naciśnięty przycisk Ponów próbę.  
+- `COleBusyDialog::retry` Został naciśnięty przycisk Ponów próbę.  
   
-- **COleBusyDialog::callUnblocked** wywołanie, aby uaktywnić serwer jest teraz odblokowany.  
+- `COleBusyDialog::callUnblocked` Wywołanie, aby uaktywnić serwer jest teraz odblokowana.  
   
 ##  <a name="m_bz"></a>  COleBusyDialog::m_bz  
- Struktura typu **OLEUIBUSY** służące do sterowania zachowaniem okna dialogowego serwer jest zajęty.  
+ Struktury typu OLEUIBUSY używane do sterowania zachowaniem serwer zajęty okno dialogowe.  
   
 ```  
 OLEUIBUSY m_bz;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Elementy członkowskie tej konstrukcji może być modyfikowany bezpośrednio lub za pośrednictwem funkcji elementów członkowskich.  
+ Można modyfikować składowe tej struktury, bezpośrednio lub za pośrednictwem funkcji elementów członkowskich.  
   
  Aby uzyskać więcej informacji, zobacz [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) struktury w zestawie Windows SDK.  
   

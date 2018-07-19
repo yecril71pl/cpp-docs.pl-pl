@@ -1,7 +1,7 @@
 ---
-title: 'Logiczny OR Operator: || | Dokumentacja firmy Microsoft'
+title: 'Operator logiczny OR: || | Dokumentacja firmy Microsoft'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/14/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -19,61 +19,61 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd0642e9759eaa4d39eac680ba165af7dbbb0d44
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2ce7b3085a66cf731da4373c534a95d09225d8ae
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947763"
 ---
 # <a name="logical-or-operator-"></a>Operator logiczny OR: ||
-## <a name="syntax"></a>Składnia  
-  
-```  
-  
-logical-or-expression   
-||  
- logical-and-expression  
-  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- Operator logiczny OR (`||`) zwraca wartość boolean **true** Jeśli lub obydwa argumenty operacji **true** i zwraca **false** inaczej. Argumenty operacji są niejawnie konwertowane na typ `bool` przed oceny i wynik jest typu `bool`. Logiczne lub ma łączność od lewej do prawej.  
-  
- Operandów w celu operator logiczny OR nie muszą być tego samego typu, ale muszą być typu wartości całkowitej lub wskaźnika. Argumenty operacji są często relacyjne lub wyrażeń równości.  
-  
- Pierwszy argument operacji jest całkowicie obliczane i wszystkie efekty uboczne są wykonywane przed kontynuowaniem Obliczanie wyrażenia logicznego OR.  
-  
- Drugi argument operacji jest oceniane tylko wtedy, gdy pierwszy argument operacji daje w wyniku wartość false (0). Eliminuje to zbędne oceny drugiego argumentu operacji, gdy wyrażenia logicznego lub ma wartość true.  
-  
-```  
-printf( "%d" , (x == w || x == y || x == z) );  
-```  
-  
- W powyższym przykładzie Jeśli `x` jest równa albo `w`, `y`, lub `z`, drugi argument `printf` funkcja zwraca wartość true, a wartość 1 jest drukowana. W przeciwnym razie jest spełniony, drukowana wartość 0. Gdy tylko jeden z warunków zwraca wartość true, wygasa oceny.  
-  
-## <a name="operator-keyword-for-124124"></a>Operator — słowo kluczowe dla&#124;&#124;  
- **Lub** operator jest odpowiednikiem tekstu `||`. Istnieją dwa sposoby **lub** operatora w programach: uwzględnić plik nagłówka `iso646.h`, lub skompiluj z [/Za](../build/reference/za-ze-disable-language-extensions.md) — opcja kompilatora (Wyłącz rozszerzenia językowe).  
-  
-## <a name="example"></a>Przykład  
-  
-```  
-// expre_Logical_OR_Operator.cpp  
-// compile with: /EHsc  
-// Demonstrate logical OR  
-#include <iostream>  
-using namespace std;  
-int main() {  
-   int a = 5, b = 10, c = 15;  
-   cout  << boolalpha  
-         << "The true expression "  
-         << "a < b || b > c yields "  
-         << (a < b || b > c) << endl  
-         << "The false expression "  
-         << "a > b || b > c yields "  
-         << (a > b || b > c) << endl;  
-}  
-```  
-  
-## <a name="see-also"></a>Zobacz też  
-[Operatory C++ wbudowanych priorytet i łączność](cpp-built-in-operators-precedence-and-associativity.md) [operatory C++ wbudowanych, priorytet i łączność](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Operatory logiczne języka C](../c-language/c-logical-operators.md)
+
+## <a name="syntax"></a>Składnia
+
+> *lub wyrażenie logiczne* **||** *-i wyrażenie logiczne*
+
+## <a name="remarks"></a>Uwagi
+
+Operator logiczny OR (**||**) zwraca wartość logiczną PRAWDA, jeśli ma wartość TRUE lub obydwa operandy, a w przeciwnym razie zwraca wartość FALSE. Argumenty operacji są niejawnie konwertowane na typ **bool** przed oceny, a wynik jest typu **bool**. Operator logiczny lub ma łączność od lewej do prawej.
+
+Argumenty operacji dla operatora logicznego OR nie muszą być tego samego typu, ale muszą być typu wartości całkowitej lub wskaźnika. Argumenty operacji są często relacyjnych lub wyrażeniach porównania.
+
+Pierwszy operand jest obliczane całkowicie, wraz ze wszystkimi efektami ubocznymi odbywa się przed kontynuowaniem oceny wyrażenie logiczne OR.
+
+Drugi operand jest oceniany, tylko wtedy, gdy pierwszy operand wartość false (0). Pozwala to wyeliminować niepotrzebnego oceny drugiego operandu, gdy wyrażenie logiczne OR ma wartość true.
+
+```cpp
+printf( "%d" , (x == w || x == y || x == z) );
+```
+
+W powyższym przykładzie Jeśli `x` jest równa albo `w`, `y`, lub `z`, drugi argument `printf` funkcja zwraca wartość true, a wartość 1, wydrukowaniu. W przeciwnym razie zwróci wartość false, a wartość 0, wydrukowaniu. Tak szybko, jak jeden z warunków jest spełniony, zakończenie oceny.
+
+## <a name="operator-keyword-for-124124"></a>Operator — słowo kluczowe dla&#124;&#124;
+
+**Lub** operator jest odpowiednikiem tekstu **||**. Istnieją dwa sposoby dostępu do **lub** operatora w programach: uwzględnić plik nagłówka \<iso646.h >, lub kompilowanie z [/Za](../build/reference/za-ze-disable-language-extensions.md) — opcja kompilatora (Wyłącz rozszerzenia językowe).
+
+## <a name="example"></a>Przykład
+
+```cpp
+// expre_Logical_OR_Operator.cpp
+// compile with: /EHsc
+// Demonstrate logical OR
+#include <iostream>
+using namespace std;
+int main() {
+   int a = 5, b = 10, c = 15;
+   cout  << boolalpha
+         << "The true expression "
+         << "a < b || b > c yields "
+         << (a < b || b > c) << endl
+         << "The false expression "
+         << "a > b || b > c yields "
+         << (a > b || b > c) << endl;
+}
+```
+
+## <a name="see-also"></a>Zobacz także
+
+- [Operatory języka C++ wbudowane pierwszeństwo i łączność](cpp-built-in-operators-precedence-and-associativity.md)
+- [Wbudowane operatory, pierwszeństwo i kojarzenie języka C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+- [Operatory logiczne języka C](../c-language/c-logical-operators.md)

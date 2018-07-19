@@ -1,5 +1,5 @@
 ---
-title: Błędy i obsługa wyjątków (Modern C++) | Dokumentacja firmy Microsoft
+title: Błędy i obsłudze wyjątków (Modern C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,29 +12,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a9e75770e822c89ea65a745a2fca491f175d95
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ee05e7008795056ee197ce45f68084e6c633f23c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569865"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939744"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Błędy w obsłudze wyjątków (Modern C++)
-W nowoczesnych wersji języka C++, w większości przypadków preferowany sposób raportu i obsługiwać zarówno błędów logicznych i błędów czasu wykonywania jest używać wyjątków. Dotyczy to zwłaszcza stosu może zawierać kilka wywołania funkcji między funkcję, która wykrywa błąd i funkcji, która ma kontekstu wiedzieć, jak je obsłużyć. Wyjątki umożliwiają formalne, dobrze zdefiniowany kod, który wykryje błędy do przekazywania informacji w górę stosu wywołań.  
+W nowoczesnym C++, w większości scenariuszy preferowanym sposobem raportowania i obsługi błędów logicznych oraz błędów środowiska uruchomieniowego jest skorzystanie z wyjątków. Jest to szczególnie istotne w przypadku, gdy stos może zawierać kilka wywołać funkcji między funkcją, która wykryje błąd i funkcję, która posiada kontekst pozwalający na jego obsługę. Wyjątki umożliwiają formalny, dobrze zdefiniowany kodowi wykrywającemu błędy przekazywanie informacji w górę stosu wywołań.  
   
- Błędy programu zazwyczaj są podzielone na dwie kategorie: błędy logiki, które są spowodowane programowania błędów, na przykład, błąd "indeks poza zakresem" i błędy środowiska wykonawczego, które są poza kontrolą programisty, na przykład "usługi sieciowej niedostępna" Wystąpił błąd. Raportowanie błędów jest zarządzany w stylu języka C programowania i w modelu COM, zwracając wartość, która reprezentuje kod błędu lub kod stanu dla określonej funkcji lub przez ustawienie zmiennej globalnej, który element wywołujący może opcjonalnie pobrać po co wywołanie funkcji, aby wyświetlić Określa, czy zostały zgłoszone błędy. Na przykład programowania COM używa zwracana wartość HRESULT do komunikowania się błędy do obiektu wywołującego, i interfejs API Win32 ma Funkcja GetLastError można pobrać ostatniego błędu, który został zgłoszony przez stos wywołań. W obu przypadkach to obiekt wywołujący, aby rozpoznać kodu i reagowania do niego. Jeśli element wywołujący nie obsługuje jawnie kodu błędu, program może ulec awarii bez ostrzeżenia lub nadal wykonywane za pomocą nieprawidłowych danych i prowadzić do niepoprawnych wyników.  
+ Błędy programu można ogólnie podzielić na dwie kategorie: Błędy logiczne, które są spowodowane przez błędy programowania, na przykład błąd "indeks poza zakresem" i błędy czasu wykonywania, które są poza kontrolą programisty, na przykład "Usługa sieciowa niedostępna" Wystąpił błąd. W programowaniu w stylu języka C oraz w COM raportowanie błędów jest zarządzane, zwracając wartość, która reprezentuje kod błędu lub kod stanu dla określonej funkcji lub przez ustawienie zmiennej globalnej, obiekt wywołujący mógł opcjonalnie pobrać po każdym wywołaniu funkcji, aby wyświetlić czy zostały zgłoszone błędy. Na przykład programowanie COM używa zwracanej wartości HRESULT do komunikowania się błędy do obiektu wywołującego, a Win32 API zawiera funkcję GetLastError, by odtworzyć ostatni błąd zgłoszony przez stos wywołań. W obu tych przypadkach jest od wywołującego zależy rozpoznanie kodu i odpowiadać na nie go odpowiednio. Jeśli obiekt wywołujący nie obsługuje jawnie kodu błędu, program może ulec awarii bez ostrzeżenia lub kontynuować wykonywanie złych danych i wygenerować niepoprawne wyniki.  
   
- Wyjątki są preferowane w nowoczesnych wersji języka C++ z następujących powodów:  
+ Wyjątki są preferowane w nowoczesnym języku C++ z następujących powodów:  
   
--   Wystąpił wyjątek wymusza kod wywołujący do rozpoznania warunek błędu i jego obsługa. Nieobsługiwane wyjątki zatrzymania wykonywania programu.  
+-   Wyjątek wymusza, żeby kod wywołujący rozpoznał warunek błędu i obsługiwał go. Nieobsługiwane wyjątki zatrzymują wykonywanie programu.  
   
--   Wystąpił wyjątek przechodzi do punktu w stosie wywołań, jaką może obsłużyć błąd. Funkcje pośredniego pozwolić propagowanie wyjątku. Nie mają do zapewnienia koordynacji z innych warstw.  
+-   Wyjątek skacze do punktu w stos wywołań, który może obsłużyć błąd. Funkcje pośrednie mogą umożliwić propagowanie wyjątku. Nie muszą współgrać z innymi warstwami.  
   
--   Mechanizm odwijanie stosu wyjątków niszczy wszystkich obiektów w zakresie zgodnie z regułami dobrze zdefiniowany po jest zgłaszany wyjątek.  
+-   Mechanizm odwracania stosu wyjątku niszczy wszystkie obiekty w zakresie zgodnie z regułami wyraźnie określonymi po zgłaszany jest wyjątek.  
   
--   Wystąpił wyjątek umożliwia czyste rozdzielenie kod, który wykryje błąd i kod, który obsługuje błąd.  
+-   Wyjątek umożliwia czystą separacji między kodem, który wykrywa błąd i kod, który obsłuży błąd.  
   
- Poniższy przykład uproszczony przedstawia składni konieczne zgłaszanie i przechwytywanie wyjątków w języku C++.  
+ Poniższy uproszczony przykład pokazuje składnię niezbędną dla tworzenia i przechwytywania wyjątków w języku C++.  
   
 ```cpp  
 #include <stdexcept>  
@@ -71,41 +71,41 @@ int main()
   
 ```  
   
- Przypomina wyjątków w języku C++ w językach takich jak C# i Java. W `try` zablokować, jeśli wyjątek jest *zgłoszony* będzie *przechwycono* przez pierwszy skojarzone `catch` blok, którego typ jest zgodna z wersją wyjątku. Innymi słowy, wykonanie przechodzi z `throw` instrukcji `catch` instrukcji. Jeśli zostanie znaleziony nie bloku catch można używać, `std::terminate` jest wywoływany i wyjście z programu. W języku C++ może zostać zgłoszony dowolnego typu; jednak zaleca się generowanie typ, który pochodzi bezpośrednio lub pośrednio z `std::exception`. W poprzednim przykładzie typ wyjątku [invalid_argument —](../standard-library/invalid-argument-class.md), jest zdefiniowany w standardowej bibliotece w [ \<stdexcept — >](../standard-library/stdexcept.md) pliku nagłówka. C++ nie udostępnia i nie wymaga `finally` bloku, aby upewnić się, że wszystkie zasoby są zwalniane, jeśli wyjątek. Nabycie zasobów jest idiom inicjowania (RAII), która używa wskaźniki inteligentne, udostępnia funkcje wymagane dla oczyszczania zasobu. Aby uzyskać więcej informacji, zobacz [porady: Projektowanie pod kątem bezpieczeństwa wyjątków](../cpp/how-to-design-for-exception-safety.md). Informacje o mechanizm odwijanie stosu C++, zobacz [wyjątki i Odwijaniem stosu](../cpp/exceptions-and-stack-unwinding-in-cpp.md).  
+ Wyjątki w języku C++ przypominają wyjątki w językach takich jak C# i Java. W **spróbuj** zablokować, jeśli wyjątek jest *zgłoszony* będzie *przechwycono* przez pierwszy związany **catch** blok, którego typ jest zgodny z typem wyjątek. Innymi słowy, wykonywanie przeskakuje z **throw** instrukcję, aby **catch** instrukcji. Jeśli zostanie znalezione nie bloku catch można używać, `std::terminate` jest wywoływany i program jest zamykany. W języku C++ można wygenerować dowolny typ; Jednak firma Microsoft zaleca generowanie typu, który pochodzi bezpośrednio lub pośrednio z `std::exception`. W poprzednim przykładzie, typ wyjątku [invalid_argument](../standard-library/invalid-argument-class.md), jest zdefiniowany w bibliotece standardowej w [ \<stdexcept >](../standard-library/stdexcept.md) pliku nagłówka. C++ nie udostępnia i nie wymaga **na koniec** bloku, aby upewnić się, że wszystkie zasoby są zwalniane, jeśli wyjątek jest zgłaszany. Pobieranie źródeł to idiom inicjalizacji (RAII), który wykorzystuje inteligentne wskaźniki, zapewnia wymaganą funkcję czyszczenia źródeł. Aby uzyskać więcej informacji, zobacz [porady: Projektowanie pod kątem bezpieczeństwa wyjątków](../cpp/how-to-design-for-exception-safety.md). Aby uzyskać informacje o mechanizmie odwracania stosu C++, zobacz [wyjątków i rozwijania stosu](../cpp/exceptions-and-stack-unwinding-in-cpp.md).  
   
-## <a name="basic-guidelines"></a>Podstawowe wskazówki  
- Niezawodna obsługa tego błędu jest trudna w dowolnym języku programowania. Chociaż wyjątki zapewnia kilka funkcji, które obsługują dobrej obsługi błędów, one nie może wykonać całą pracę dla Ciebie. Aby wykorzystać zalety mechanizm wyjątków, pamiętać wyjątków podczas projektowania kodu.  
+## <a name="basic-guidelines"></a>Podstawowe wytyczne  
+ Obsługa błędów grubych jest trudna w dowolnym języku programowania. Chociaż wyjątki zapewniają kilka funkcji, które obsługują dobrą obsługę błędów, nie mogą one wykonać całą pracę za Ciebie. Aby korzystać z zalet mechanizmu wyjątków, pamiętaj o wyjątkach Projektując kod.  
   
--   Użyj potwierdza, aby wyszukać błędy, które nigdy nie powinno wystąpić. Użyj wyjątki, aby sprawdzić błędy, które mogą wystąpić, na przykład błędy sprawdzania poprawności danych wejściowych na parametry funkcji publicznych. Aby uzyskać więcej informacji, zobacz sekcji **vs wyjątków. Potwierdzenia**.  
+-   Użyj deklaracji rozkazujących pod kątem błędów, które nie powinny wystąpić nigdy. Użyj wyjątków, aby wyszukać błędy, które mogą wystąpić na przykład błędy w walidacji danych wejściowych na parametrach funkcji publicznych. Aby uzyskać więcej informacji, zobacz sekcję pod tytułem **vs wyjątków. Potwierdzenia**.  
   
--   Użyj wyjątków, jeśli kod obsługujący ten błąd może być oddzielony od kod, który wykryje błąd co najmniej jeden pośredniczące wywołania funkcji. Należy rozważyć, czy używać kody błędów zamiast tego w pętli wydajności o znaczeniu krytycznym, gdy kod obsługujący ten błąd jest sprzężona ściśle do kodu, który wykryje. 
+-   Użyj wyjątków, kiedy kod obsługujący błąd może być oddzielony od kodu, który wykrywa błąd przez jeden lub więcej interweniujących wywołań funkcji. Rozważ, czy używać kodów błędów zamiast w pętli wydajność krytycznych, gdy kod, który obsłuży błąd jest sprzężona ściśle do kodu, który wykrywa go. 
   
--   Dla każdej funkcji, która może zgłosić lub propagowanie wyjątku, podaj jeden z gwarancje trzy wyjątek: silnej gwarancji, podstawowe gwarancji lub gwarancji nothrow (noexcept). Aby uzyskać więcej informacji, zobacz [porady: Projektowanie pod kątem bezpieczeństwa wyjątków](../cpp/how-to-design-for-exception-safety.md).  
+-   Dla każdej funkcji, która może zgłosić lub propagować wyjątek, należy podać jedną z trzech gwarancji wyjątku: silną gwarancję, podstawową gwarancję lub gwarancję nothrow (noexcept). Aby uzyskać więcej informacji, zobacz [porady: Projektowanie pod kątem bezpieczeństwa wyjątków](../cpp/how-to-design-for-exception-safety.md).  
   
--   Zgłaszanie wyjątków według wartości, catch ich przez odwołanie. Nie catch nie może obsłużyć. 
+-   Wyzwalaj wątki według wartości, wyłapuj je przez odwołanie. Nie Złap, czego nie możesz obsłużyć. 
   
--   Nie używaj specyfikacje wyjątków, które zostały uznane za przestarzałe w języku C ++ 11. Aby uzyskać więcej informacji, zobacz sekcji **specyfikacje wyjątków i noexcept**.  
+-   Nie używaj specyfikacji wyjątków, które zostały zaniechane w C ++ 11. Aby uzyskać więcej informacji, zobacz sekcję pod tytułem **specyfikacje wyjątku i noexcept**.  
   
--   Standardowa biblioteka typów wyjątków należy użyć, gdy mają one zastosowanie. Pochodzi typów wyjątków niestandardowych z [wyjątek klasy](../standard-library/exception-class.md) hierarchii.  
+-   Użyj standardowych typów wyjątków biblioteki, kiedy obowiązują. Uzyskania wyjątku niestandardowych typów z [wyjątek klasy](../standard-library/exception-class.md) hierarchii.  
   
--   Nie zezwalaj na wyjątki, aby wyjść z destruktory lub pamięci — funkcje cofania alokacji.  
+-   Nie zezwalaj na wyjątki uciekały z destruktorów lub funkcji pamięć dezalokacji.  
   
-## <a name="exceptions-and-performance"></a>Wyjątki i wydajności  
- Mechanizm wyjątków ma minimalne wydajność, jeśli nie jest wyjątek. Jeśli wyjątek koszty przechodzenie stosu i odwijaniem jest porównywalna około koszt wywołania funkcji. Dodatkowe dane struktury są wymagane do śledzenia stosu wywołań po `try` bloku została wprowadzona, oraz dodatkowe instrukcje są wymagane do operacji unwind stosu, jeśli jest zgłaszany wyjątek. Jednak w większości przypadków koszt wydajność i zużycie pamięci nie ma znaczenia. Niekorzystny wpływ wyjątków na wydajność jest prawdopodobnie znaczący tylko w systemach bardzo ograniczone pamięci lub w wydajności krytyczne pętli którym błąd prawdopodobnie wykonywane są regularnie i kod, aby jego obsługa jest ściśle powiązane do kodu, który zgłasza. W każdym przypadku jest niemożliwe znać rzeczywistej wartości wyjątki bez profilowania i pomiaru. Nawet w rzadkich przypadkach, gdy koszt jest istotne, możesz można porównać ją przed poprawność zwiększona, ułatwia utrzymanie i inne korzyści zapewniane przez zasadę dobrze zaprojektowanego wyjątek.  
+## <a name="exceptions-and-performance"></a>Wyjątki i wydajność  
+ Mechanizm wyjątku charakteryzuje się bardzo niewielkimi kosztem działania, jeśli jest zgłaszany żaden wyjątek. Jeśli wyjątek jest zgłaszany, koszty przechodzenia przez stos i rozwijania są w przybliżeniu porównywalne do kosztu wywołania funkcji. Struktury dodatkowe danych są wymagane do śledzenia stosu wywołań po **spróbuj** wprowadzeniu bloku i dodatkowe instrukcje są wymagane do odkręcanie stosu, jeśli zostanie zgłoszony wyjątek. Jednak w większości scenariuszy koszt w zakresie wydajności i zużycia pamięci nie ma znaczenia. Niekorzystny wpływ wyjątków na wydajność może być istotne tylko w systemach o bardzo ograniczonej pamięci lub w newralgicznym dla wydajności w pętli gdzie błąd prawdopodobnie będzie występować regularnie, a kod obsługujący jest ściśle powiązany kod, który go zgłasza. W każdym przypadku jest niemożliwe znać rzeczywisty koszt wyjątków bez profilowania i dokonywania pomiarów. Nawet w tych rzadkich przypadkach, gdy koszt jest znaczący, użytkownik może przemyślane zwiększoną poprawność, łatwiejszą konserwację i inne korzyści, które są dostarczane przez dobrze zaprojektowanego wyjątki od zasad.  
   
-## <a name="exceptions-vs-assertions"></a>Wyjątki, a potwierdzenia  
- Wyjątki i potwierdzeń są dwa różne mechanizmy wykrywanie błędów czasu wykonywania w programie. Użyj deklaracji rozkazujących do testowania dla warunków podczas projektowania, które nigdy nie powinien mieć wartość PRAWDA, jeśli cały kod jest poprawny. Nie ma żadnych punktu obsługi takiego błędu przy użyciu wyjątek, ponieważ błąd oznacza, że coś w kodzie ma, należy naprawić w i nie zawiera warunek, który zawiera program pozwoli na odzyskanie w czasie wykonywania. Assert zatrzymuje wykonywanie w instrukcji, aby sprawdzić stan programu w debugerze; Wystąpił wyjątek kontynuuje wykonywanie z pierwszego programu obsługi catch odpowiednie. Użyj wyjątki, aby sprawdzić błędy, które mogą wystąpić w czasie wykonywania, nawet jeśli kod jest poprawny, na przykład "nie można odnaleźć pliku" lub "za mało pamięci." Można odzyskać z tych warunków, nawet jeśli odzyskiwanie po prostu wysyła komunikat do dziennika i kończy się program. Sprawdzać argumentów do funkcji publiczny za pomocą wyjątków. Nawet jeśli funkcja jest wolny od błędów, nie masz pełną kontrolę nad argumenty, które użytkownik może przekazać do niego.  
+## <a name="exceptions-vs-assertions"></a>Wyjątki a potwierdzenia  
+ Wyjątki i potwierdzenia to dwa odrębne mechanizmy wykrywania błędów czasu wykonywania programu. Użyj zapewnień, aby skontrolować przetestować warunki podczas rozwoju które nigdy nie może mieć wartość true, jeśli Twój kod jest poprawny. Brak ma sensu obsługi takiego błędu przy użyciu wyjątku, ponieważ błąd oznacza, że w kodzie coś musi zostać naprawione, a nie oznacza warunek, którego program musi odzyskać w czasie wykonywania. Potwierdzenie zatrzymuje wykonywanie w instrukcji, dzięki czemu można sprawdzić stan programu w debugerze; wyjątek kontynuuje wykonywanie od pierwszego odpowiedniego elemetu obsługi catch. Użyj wyjątków, aby sprawdzić warunki błędów, które mogą wystąpić w czasie wykonywania, nawet jeżeli Twój kod jest poprawny, na przykład "nie znaleziono pliku" lub "za mało pamięci." Można odzyskać z tych warunków, nawet jeśli odzyskiwanie po prostu wyświetla komunikat w dzienniku i kończy się program. Zawsze sprawdzaj argumenty do funkcji publicznych za pomocą wyjątków. Nawet jeśli funkcja jest wolna od błędów, możesz nie mieć pełną kontrolę nad argumentami, które użytkownik może przenieść do niegho.  
   
-## <a name="c-exceptions-versus-windows-seh-exceptions"></a>Wyjątki C++ i wyjątki SEH systemu Windows  
- Programy zarówno C i C++ mogą używać wyjątków strukturalnych obsługę mechanizmem (SEH) w systemie operacyjnym Windows. Pojęcia związane z SEH przypomina w wyjątków języka C++ z tą różnicą, że używa SEH `__try`, `__except`, i `__finally` tworzy zamiast `try` i `catch`. W programie Visual C++ wyjątki C++ są zaimplementowane w przypadku SEH. Jednak podczas pisania kodu C++, należy użyć składni wyjątków C++.  
+## <a name="c-exceptions-versus-windows-seh-exceptions"></a>Wyjątki C++ a wyjątki Windows SEH  
+ Programy C i C++ mogą wykorzystywać mechanizm (SEH), w systemie operacyjnym Windows obsługi wyjątków strukturalnych. Koncepcje w SEH przypominają te w wyjątkach C++, z tą różnicą, że używa SEH `__try`, `__except`, i `__finally` tworzy zamiast **spróbuj** i **catch**. W programie Visual C++ wyjątki C++ są implementowane dla SEH. Jednak podczas pisania kodu w języku C++, należy użyć składni wyjątków języka C++.  
   
- Aby uzyskać więcej informacji na temat SEH, zobacz [strukturalnych obsługi wyjątków (C/C++)](../cpp/structured-exception-handling-c-cpp.md).  
+ Aby uzyskać więcej informacji o bibliotece SEH, zobacz [obsługi wyjątków strukturalnych, (C/C++)](../cpp/structured-exception-handling-c-cpp.md).  
   
 ## <a name="exception-specifications-and-noexcept"></a>Specyfikacje wyjątków i noexcept  
- Specyfikacje wyjątków zostały wprowadzone w języku C++ w sposób określenia wyjątki, które może zgłosić funkcji. Jednak specyfikacje wyjątków okazały powodować problemy w praktyce i zostały uznane za przestarzałe w standardzie C ++ 11 wersji roboczej. Firma Microsoft zaleca, nie używaj specyfikacje wyjątków z wyjątkiem `throw()`, co oznacza, że funkcja umożliwia bez wyjątków wyjść. Jeśli musisz użyć specyfikacje wyjątków typu `throw(` *typu*`)`, należy pamiętać, że Visual C++ wychodzi z standard w określony sposób. Aby uzyskać więcej informacji, zobacz [specyfikacje wyjątków (throw)](../cpp/exception-specifications-throw-cpp.md). `noexcept` Specyfikator wprowadzono w języku C ++ 11 preferowanych alternatywę dla `throw()`.  
+ Specyfikacje wyjątków zostały wprowadzone w języku C++ jako sposób określania wyjątków, które mogą zgłosić funkcji. Jednak specyfikacje wyjątków okazały się w praktyce problematyczne i zostały zaniechane w standardzie roboczym C++ 11. Firma Microsoft zaleca, nie używaj specyfikacji wyjątków z wyjątkiem `throw()`, co oznacza, że funkcja pozwala bez wyjątków anulować. Jeśli musisz użyć specyfikacji wyjątku typu `throw(` *typu*`)`, należy pamiętać, że Visual C++ odbiega od normy w określony sposób. Aby uzyskać więcej informacji, zobacz [specyfikacje wyjątków (throw)](../cpp/exception-specifications-throw-cpp.md). `noexcept` Specyfikator został wprowadzony w C ++ 11 jako preferowana alternatywa dla `throw()`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Porady: interfejs między kodem obsługi wyjątków a innym kodem](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)   
- [Zapraszamy ponownie do języka C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [Witamy z powrotem w C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)   
  [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)

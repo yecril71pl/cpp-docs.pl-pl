@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f35560c6f29e341b05f6b8bdf22873847644d7c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 969930c3918cdc0d2e38747796279c7135aba5a7
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420585"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941343"
 ---
 # <a name="restrictions-on-termination-handlers"></a>Ograniczenia dotyczące programu obsługi zakończenia
-Nie można użyć `goto` instrukcji, aby przejść do `__try` blok instrukcji lub `__finally` blok instrukcji. Zamiast tego należy wprowadzić bloku instrukcji za pomocą przepływu sterowania. (Można jednak przechodzić z `__try` blok instrukcji.) Ponadto nie można zagnieżdżać obsługi wyjątków lub programu obsługi zakończenia wewnątrz `__finally` bloku.  
+Nie można użyć **goto** instrukcję, aby przejść do **__try** blok instrukcji lub **__finally** blok instrukcji. Zamiast tego musisz wprowadzić blok instrukcji za pomocą Normalny przepływ sterowania. (Możesz jednak przejść z **__try** blok instrukcji.) Ponadto nie można zagnieździć obsługi wyjątków lub program obsługi przerwania wewnątrz **__finally** bloku.  
   
- Ponadto niektóre rodzaje kodu w programu obsługi zakończenia utworzyć wątpliwa wyników, należy ich używać ostrożnie, jeśli w ogóle. Jedna jest `goto` instrukcji, która przechodzi poza `__finally` blok instrukcji. Jeśli blok jest wykonywane w ramach normalnych zakończenia, nic nietypowe się nie dzieje. Ale jeśli system jest odwijanie stosu, który przejmuje odwijaniem przerywa działanie i bieżącej funkcji kontroli tak, jakby nie było żadnych przerwania pracy.  
+ Ponadto niektóre rodzaje kodu, dozwolone w programu obsługi zakończenia dać wątpliwe wyników, więc należy ich używać z rozwagą, jeśli w ogóle. Jeden jest **goto** instrukcję, która przechodzi z **__finally** blok instrukcji. Jeśli blok jest wykonywany jako część normalnego zakończenia, nic nietypowe się nie dzieje. Ale jeśli system jest odwinięciu stosu, który zatrzymuje odwijania i bieżącą funkcję uzyska kontrolować tak, jakby nie było żadnych Nienormalne zakończenie.  
   
- A `return` instrukcja wewnątrz `__finally` blok instrukcji przedstawia informacje o około samej sytuacji. Zwraca sterowania do bezpośredniego obiektu wywołującego funkcji zawierające programu obsługi zakończenia. Jeśli system został odwijanie stosu, ten proces jest zatrzymywane, a program będzie kontynuowane tak, jakby nie był nie wystąpił wyjątek.  
+ A **zwracają** instrukcji wewnątrz **__finally** blok instrukcji przedstawia informacje o około samej sytuacji. Formant powraca do bezpośredniego obiektu wywołującego funkcji zawierający programu obsługi zakończenia. Jeśli system został odwinięciu stosu, ten proces jest zatrzymywane, a program będzie kontynuowane tak, jakby była nie wystąpił wyjątek.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Pisanie programu obsługi zakończenia](../cpp/writing-a-termination-handler.md)   

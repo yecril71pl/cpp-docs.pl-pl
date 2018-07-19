@@ -26,18 +26,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b26d979ccb99d3d99bc91af03c4836603d31c01
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c45a9ab0e709366d5f391e574c9b8b3a5db4a53a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363939"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881730"
 ---
 # <a name="cwin32heap-class"></a>Klasa CWin32Heap
 Ta klasa implementuje [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) przy użyciu funkcji alokacji sterty Win32.  
   
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -58,22 +58,22 @@ class CWin32Heap : public IAtlMemMgr
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CWin32Heap::Allocate](#allocate)|Przydziela bloku pamięci z obiektu heap.|  
-|[CWin32Heap::Attach](#attach)|Dołącza obiektu heap do istniejącego stosu.|  
-|[CWin32Heap::Detach](#detach)|Odłącza obiektu sterty z istniejącego stosu.|  
-|[CWin32Heap::Free](#free)|Zwalnia pamięć przydzielona wcześniej ze stosu.|  
-|[CWin32Heap::GetSize](#getsize)|Zwraca rozmiar blok pamięci przydzielony z obiektu heap.|  
-|[CWin32Heap::Reallocate](#reallocate)|Przydziela ponownie blok pamięci z obiektu heap.|  
+|[CWin32Heap::Allocate](#allocate)|Przydziela blok pamięci z obiektu sterty.|  
+|[CWin32Heap::Attach](#attach)|Dołącza obiekt sterty do istniejącej sterty.|  
+|[CWin32Heap::Detach](#detach)|Odłącza obiekt sterty od istniejącej sterty.|  
+|[CWin32Heap::Free](#free)|Zwalnia pamięci uprzednio przydzielony w stercie.|  
+|[CWin32Heap::GetSize](#getsize)|Zwraca rozmiar bloku pamięci zaalokowanej z obiekt sterty.|  
+|[CWin32Heap::Reallocate](#reallocate)|Przydzieli blok pamięci z obiektu sterty.|  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CWin32Heap::m_bOwnHeap](#m_bownheap)|Flaga używana do określenia bieżącego prawa własności dojścia stosu.|  
-|[CWin32Heap::m_hHeap](#m_hheap)|Dojście do obiektu heap.|  
+|[CWin32Heap::m_bOwnHeap](#m_bownheap)|Flaga używana do określania bieżącego własności uchwyt sterty.|  
+|[CWin32Heap::m_hHeap](#m_hheap)|Uchwytu do obiektu sterty.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CWin32Heap` implementuje metody alokacji pamięci za pomocą funkcji alokacji sterty Win32, w tym [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597) i [HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701). W przeciwieństwie do innych klas sterty `CWin32Heap` wymaga dojścia prawidłowy sterty należy wprowadzić, aby przydzielić pamięci: wartość domyślna klasy przy użyciu sterty procesu. Dojście mogą być dostarczane do konstruktora lub do [CWin32Heap::Attach](#attach) metody. Zobacz [CWin32Heap::CWin32Heap](#cwin32heap) metody, aby uzyskać więcej informacji.  
+ `CWin32Heap` implementuje metody alokacji pamięci za pomocą funkcji alokacji sterty Win32, w tym [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597) i [HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701). W przeciwieństwie do innych klas sterty `CWin32Heap` wymaga prawidłowym uchwytem sterty należy podać przed pamięć jest alokowana: innych klas domyślnie używa sterty procesu. Dojście mogą być dostarczane do konstruktora lub do [CWin32Heap::Attach](#attach) metody. Zobacz [CWin32Heap::CWin32Heap](#cwin32heap) metody, aby uzyskać więcej informacji.  
   
 ## <a name="example"></a>Przykład  
  Zobacz przykład [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
@@ -87,40 +87,40 @@ class CWin32Heap : public IAtlMemMgr
  **Nagłówek:** atlmem.h  
   
 ##  <a name="allocate"></a>  CWin32Heap::Allocate  
- Przydziela bloku pamięci z obiektu heap.  
+ Przydziela blok pamięci z obiektu sterty.  
   
 ```
 virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nBytes`  
- Żądana liczba bajtów w nowego bloku pamięci.  
+ *nBytes*  
+ Żądana liczba bajtów w nowy blok pamięci.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wskaźnik do bloku nowo alokacji pamięci.  
+ Zwraca wskaźnik do bloku pamięci nowo przydzielone.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie [CWin32Heap::Free](#free) lub [CWin32Heap::Reallocate](#reallocate) zwolnienia pamięci przydzielonej przez tę metodę.  
+ Wywołaj [CWin32Heap::Free](#free) lub [CWin32Heap::Reallocate](#reallocate) zwolnienie pamięci przydzielonej przez tę metodę.  
   
- Implementowane za pomocą [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597).  
+ Implementowany przy użyciu [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597).  
   
 ##  <a name="attach"></a>  CWin32Heap::Attach  
- Dołącza obiektu heap do istniejącego stosu.  
+ Dołącza obiekt sterty do istniejącej sterty.  
   
 ```
 void Attach(HANDLE hHeap, bool bTakeOwnership) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hHeap`  
- Dojście do istniejących sterty.  
+ *hHeap*  
+ Istniejący uchwyt sterty.  
   
- `bTakeOwnership`  
- Jeśli wskazujące flagi `CWin32Heap` obiekt ma przejąć prawo własności zasobów sterty.  
+ *bTakeOwnership*  
+ Jeśli wskazujące flagi `CWin32Heap` celem jest przejęcie na własność nad zasobami sterty.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `bTakeOwnership` ma wartość PRAWDA, `CWin32Heap` obiektu jest odpowiedzialny za usuwanie dojście stosu.  
+ Jeśli *bTakeOwnership* ma wartość PRAWDA, `CWin32Heap` obiekt jest odpowiedzialny za usunięcie uchwyt sterty.  
   
 ##  <a name="cwin32heap"></a>  CWin32Heap::CWin32Heap  
  Konstruktor.  
@@ -135,34 +135,34 @@ CWin32Heap(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hHeap`  
+ *hHeap*  
  Istniejący obiekt sterty.  
   
- `dwFlags`  
+ *Flagidw*  
  Flagi używane do tworzenia sterty.  
   
  *nInitialSize*  
  Początkowy rozmiar sterty.  
   
- `nMaxSize`  
+ *nMaxSize*  
  Maksymalny rozmiar sterty.  
   
 ### <a name="remarks"></a>Uwagi  
- Przed przydzielania pamięci, jest niezbędne do zapewnienia `CWin32Heap` obiektu z dojściem sterty prawidłowe. Najprościej to osiągnąć przy użyciu sterty procesu:  
+ Przed przydzieleniem pamięci jest zapewnienie `CWin32Heap` obiektu z prawidłowym uchwytem sterty. Najprościej to osiągnąć przy użyciu sterty procesu:  
   
  [!code-cpp[NVC_ATL_Utilities#92](../../atl/codesnippet/cpp/cwin32heap-class_1.cpp)]  
   
- Użytkownik może również dostarczyć istniejący uchwyt sterty do konstruktora, w którym to przypadku nowy obiekt nie przejmuje sterty na własność. Oryginalny dojście sterty nadal będzie prawidłowy podczas `CWin32Heap` obiekt jest usunięty.  
+ Użytkownik może również dostarczyć istniejący uchwyt sterty do konstruktora, w którym to przypadku nowy obiekt nie przejmuje sterty na własność. Oryginalny uchwyt sterty nadal będzie ważny po `CWin32Heap` obiekt zostanie usunięty.  
   
- Istniejące sterty również można dołączyć do nowego obiektu, przy użyciu [CWin32Heap::Attach](#attach).  
+ Istniejącą stertę można również dołączyć do nowego obiektu przy użyciu [CWin32Heap::Attach](#attach).  
   
  Jeśli sterta jest wymagana tam, gdzie wszystkie operacje są wykonywane z jednego wątku, najlepszym sposobem jest utworzenie obiektu w następujący sposób:  
   
  [!code-cpp[NVC_ATL_Utilities#93](../../atl/codesnippet/cpp/cwin32heap-class_2.cpp)]  
   
- Parametr **HEAP_NO_SERIALIZE** Określa, że wzajemne wykluczenie nie będzie można używać, jeśli funkcje sterty przydzielić i zwolnić pamięć, zgodnie z zwiększania wydajności.  
+ Parametr HEAP_NO_SERIALIZE Określa, że wzajemne wykluczenie nie będą używane, gdy funkcje sterty przydzielają i zwalniają pamięć, z adekwatnym wzrostem wydajności.  
   
- Domyślne ustawienie trzeciego parametru to 0, dzięki czemu sterta może się rozrastać zgodnie z potrzebami. Zobacz [HeapCreate](http://msdn.microsoft.com/library/windows/desktop/aa366599\(v=vs.85\).aspx) wyjaśnienie flagi i wielkości pamięci.  
+ Domyślne ustawienie trzeciego parametru to 0, dzięki czemu sterta może się rozrastać zgodnie z potrzebami. Zobacz [HeapCreate](http://msdn.microsoft.com/library/windows/desktop/aa366599\(v=vs.85\).aspx) objaśnienia dotyczące rozmiarów pamięci i flag.  
   
 ##  <a name="dtor"></a>  CWin32Heap:: ~ CWin32Heap  
  Destruktor.  
@@ -172,82 +172,82 @@ CWin32Heap(
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Niszczy dojście sterty, jeśli `CWin32Heap` obiekt ma własność sterty.  
+ Niszczy uchwyt sterty, jeśli `CWin32Heap` obiekt ma sterty na własność.  
   
 ##  <a name="detach"></a>  CWin32Heap::Detach  
- Odłącza obiektu sterty z istniejącego stosu.  
+ Odłącza obiekt sterty od istniejącej sterty.  
   
 ```
 HANDLE Detach() throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca dojście do stosu, do której obiekt był wcześniej dołączony.  
+ Zwraca uchwyt sterty, do której wcześniej był dołączony obiekt.  
   
 ##  <a name="free"></a>  CWin32Heap::Free  
- Zwalnia pamięć przydzielona wcześniej ze stosu przez [CWin32Heap::Allocate](#allocate) lub [CWin32Heap::Reallocate](#reallocate).  
+ Powoduje zwolnienie pamięci uprzednio przydzielonej ze stosu przez [CWin32Heap::Allocate](#allocate) lub [CWin32Heap::Reallocate](#reallocate).  
   
 ```
 virtual void Free(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `p`  
- Wskaźnik do bloku pamięci zwolnienia. Wartość NULL jest nieprawidłowa i nie działają.  
+ *p*  
+ Wskaźnik do bloku pamięci, aby zwolnić. Wartość NULL jest prawidłową wartością i nic nie robi.  
   
 ##  <a name="getsize"></a>  CWin32Heap::GetSize  
- Zwraca rozmiar blok pamięci przydzielony z obiektu heap.  
+ Zwraca rozmiar bloku pamięci zaalokowanej z obiekt sterty.  
   
 ```
 virtual size_t GetSize(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `p`  
- Wskaźnik do którego metoda będzie pobierał rozmiar bloku pamięci. Jest to wskaźnik zwrócony przez [CWin32Heap::Allocate](#allocate) lub [CWin32Heap::Reallocate](#reallocate).  
+ *p*  
+ Wskaźnik do bloku pamięci, której rozmiar osiągnie metody. Jest to wskaźnik zwracany przez [CWin32Heap::Allocate](#allocate) lub [CWin32Heap::Reallocate](#reallocate).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca rozmiar w bajtach blok pamięci przydzielony.  
+ Zwraca rozmiar w bajtach, blok pamięci przydzielony.  
   
 ##  <a name="m_bownheap"></a>  CWin32Heap::m_bOwnHeap  
- Flaga używana do określenia bieżącego prawa własności dojścia sterty przechowywane w [m_hHeap](#m_hheap).  
+ Flagi używane do określania bieżącego własności uchwyt sterty, przechowywane w [m_hHeap](#m_hheap).  
   
 ```
 bool m_bOwnHeap;
 ```  
   
 ##  <a name="m_hheap"></a>  CWin32Heap::m_hHeap  
- Dojście do obiektu heap.  
+ Uchwytu do obiektu sterty.  
   
 ```
 HANDLE m_hHeap;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zmienna używany do przechowywania dojścia do obiektu heap.  
+ Zmienna, używany do przechowywania dojścia do obiektu sterty.  
   
 ##  <a name="reallocate"></a>  CWin32Heap::Reallocate  
- Przydziela ponownie blok pamięci z obiektu heap.  
+ Przydzieli blok pamięci z obiektu sterty.  
   
 ```
 virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `p`  
- Wskaźnik do bloku pamięci, aby ponownie przydzielić.  
+ *p*  
+ Wskaźnik do bloku pamięci w celu ponownego przydzielenia.  
   
- `nBytes`  
- Nowy rozmiar w bajtach przydzielony blok. Blok jest możliwe większy lub mniejszy.  
+ *nBytes*  
+ Nowy rozmiar w bajtach przydzielonego bloku. Blok jest możliwe większy lub mniejszy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wskaźnik do bloku nowo alokacji pamięci.  
+ Zwraca wskaźnik do bloku pamięci nowo przydzielone.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `p` ma wartość NULL, zakłada się, że blok pamięci nie został jeszcze przydzielony i [CWin32Heap::Allocate](#allocate) jest wywoływana z argumentem `nBytes`.  
+ Jeśli *p* ma wartość NULL, zakłada się, że blok pamięci nie jest jeszcze przydzielone i [CWin32Heap::Allocate](#allocate) jest wywoływana z argumentem *nBytes*.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../../atl/atl-class-overview.md)   
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)   
  [Klasa IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)   
  [Klasa CLocalHeap](../../atl/reference/clocalheap-class.md)   
  [Klasa CGlobalHeap](../../atl/reference/cglobalheap-class.md)   

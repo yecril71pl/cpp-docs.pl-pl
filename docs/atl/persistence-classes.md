@@ -17,26 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16490105f0ec2ded73f45e54d0f8a6700264893c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85c085e6e5a8f0bbddba5be2905b437425d9a5c3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353721"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963657"
 ---
 # <a name="persistence-classes"></a>Klasy trwałości
-Następujące klasy zaimplementować trwałości obiektu:  
+Następujące klasy implementuje trwałości obiektu:  
   
--   [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) umożliwia klientowi przy ładowaniu i zapisywaniu właściwości obiektu do zbioru właściwości.  
+-   [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) umożliwia klientowi, ładowanie i zapisywanie właściwości obiektu do zbioru właściwości.  
   
--   [IPersistStreamInitImpl](../atl/reference/ipersiststreaminitimpl-class.md) umożliwia klientowi przy ładowaniu i zapisywaniu trwałych danych obiektu do strumienia.  
+-   [IPersistStreamInitImpl](../atl/reference/ipersiststreaminitimpl-class.md) umożliwia klientowi ładują i zapisują dane trwałego obiektu do strumienia.  
   
--   [IPersistStorageImpl](../atl/reference/ipersiststorageimpl-class.md) umożliwia klientowi przy ładowaniu i zapisywaniu trwałych danych obiektu do magazynu.  
+-   [IPersistStorageImpl](../atl/reference/ipersiststorageimpl-class.md) umożliwia klientowi załadować i zapisać trwałych danych obiektu magazynu.  
   
 ## <a name="related-articles"></a>Powiązane artykuły  
  [ALT — samouczek](../atl/active-template-library-atl-tutorial.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../atl/atl-class-overview.md)   
+ [Klasa — Przegląd](../atl/atl-class-overview.md)   
  [Makra mapy właściwości](../atl/reference/property-map-macros.md)
 

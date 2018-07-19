@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0db0ea95fe3f5491780cd0297e8d3f56b6800e1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4772c62db1443beaf6a5fff962a52a71823674bc
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947923"
 ---
 # <a name="varianttoperator-"></a>_variant_t::operator =
 **Microsoft Specific**  
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      _variant_t& operator=(  
+_variant_t& operator=(  
    const VARIANT& varSrc   
 );  
   
@@ -127,39 +128,39 @@ _variant_t& operator=(
 ## <a name="remarks"></a>Uwagi  
  Operator przypisuje nową wartość do `_variant_t` obiektu:  
   
--   **Operator = (***varSrc***)** przypisuje istniejące **VARIANT** do `_variant_t` obiektu.      
+-   **Operator = (***varSrc***)** przypisuje istniejące `VARIANT` do `_variant_t` obiektu.      
   
--   **Operator = (***pVarSrc***)** przypisuje istniejące **VARIANT** do `_variant_t` obiektu.      
+-   **Operator = (***pVarSrc***)** przypisuje istniejące `VARIANT` do `_variant_t` obiektu.      
   
--   **Operator = (***var_t_Src***)** przypisuje istniejące `_variant_t` do obiektu `_variant_t` obiektu.      
+-   **Operator = (***var_t_Src***)** przypisuje istniejące `_variant_t` obiekt `_variant_t` obiektu.      
   
--   **Operator = (***sSrc***)** przypisuje **krótki** wartość całkowitą `_variant_t` obiektu.      
+-   **Operator = (***sSrc***)** przypisuje **krótki** wartość całkowitą na `_variant_t` obiektu.      
   
--   **Operator = (**`lSrc`**)** przypisuje **długi** wartość całkowitą `_variant_t` obiektu.      
+-   **Operator = (**`lSrc`**)** przypisuje **długie** wartość całkowitą na `_variant_t` obiektu.      
   
--   **Operator = (***fltSrc***)** przypisuje **float** wartość liczbową `_variant_t` obiektu.      
+-   **Operator = (***fltSrc***)** przypisuje **float** wartość liczbową celu `_variant_t` obiektu.      
   
--   **Operator = (***dblSrc***)** przypisuje **podwójne** wartość liczbową `_variant_t` obiektu.      
+-   **Operator = (***dblSrc***)** przypisuje **double** wartość liczbową celu `_variant_t` obiektu.      
   
--   **Operator = (***cySrc***)** przypisuje **CY** do obiektu `_variant_t` obiektu.      
+-   **Operator = (***cySrc***)** przypisuje `CY` obiekt `_variant_t` obiektu.      
   
--   **Operator = (***bstrSrc***)** przypisuje `BSTR` do obiektu `_variant_t` obiektu.      
+-   **Operator = (***bstrSrc***)** przypisuje `BSTR` obiekt `_variant_t` obiektu.      
   
--   **Operator = (***wstrSrc***)** przypisuje ciąg Unicode `_variant_t` obiektu.      
+-   **Operator = (***wstrSrc***)** przypisuje ciąg Unicode na `_variant_t` obiektu.      
   
--   **Operator = (**`strSrc`**)** przypisuje wielobajtowe ciąg `_variant_t` obiektu.      
+-   **Operator = (**`strSrc`**)** przypisuje wielobajtowy ciąg do `_variant_t` obiektu.      
   
--   **Operator = (** `bSrc` **)** przypisuje `bool` do wartości `_variant_t` obiektu.    
+-   **Operator = (** `bSrc` **)** przypisuje **bool** wartość `_variant_t` obiektu.    
   
--   **Operator = (***pDispSrc***)** przypisuje **VT_DISPATCH** do obiektu `_variant_t` obiektu.      
+-   **Operator = (***pDispSrc***)** przypisuje `VT_DISPATCH` obiekt `_variant_t` obiektu.      
   
--   **Operator = (***pIUnknownSrc***)** przypisuje **VT_UNKNOWN** do obiektu `_variant_t` obiektu.      
+-   **Operator = (***pIUnknownSrc***)** przypisuje `VT_UNKNOWN` obiekt `_variant_t` obiektu.      
   
--   **Operator = (***decSrc***)** przypisuje **DZIESIĘTNĄ** do wartości `_variant_t` obiektu.      
+-   **Operator = (***decSrc***)** przypisuje `DECIMAL` wartość `_variant_t` obiektu.      
   
--   **Operator = (** `bSrc` **)** przypisuje **BAJTÓW** do wartości `_variant_t` obiektu.    
+-   **Operator = (** `bSrc` **)** przypisuje `BYTE` wartość `_variant_t` obiektu.    
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [_variant_t, klasa](../cpp/variant-t-class.md)

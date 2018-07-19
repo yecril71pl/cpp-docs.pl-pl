@@ -12,16 +12,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 742270c77d47c178d0254ca9b9882f73fe3b8293
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f4b8635f082f706ef07697653d56155414c5199d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411770"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940914"
 ---
 # <a name="definitions-and-declarations-c"></a>Definicje i deklaracje (C++)
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft
- Interfejsu biblioteki DLL odwołuje się do wszystkich elementów (funkcje i dane), które są znane do wyeksportowania przez program w systemie; oznacza to, że wszystkie elementy, które są zadeklarowane jako `dllimport` lub `dllexport`. Wszystkie deklaracje objęte interfejsu biblioteki DLL należy określić albo `dllimport` lub `dllexport` atrybutu. Jednak tylko określić definicję `dllexport` atrybutu. Na przykład następujące definicji funkcji generuje błąd kompilatora:
+ Interfejsu biblioteki DLL, który odwołuje się do wszystkich elementów (funkcje i dane), które są znane mają zostać wyeksportowane przez program w systemie; oznacza to, że wszystkie elementy, które są zadeklarowane jako **dllimport** lub **dllexport**. Należy określić wszystkie deklaracje objęte interfejsu biblioteki DLL **dllimport** lub **dllexport** atrybutu. Jednak tylko określić definicję **dllexport** atrybutu. Na przykład następująca definicja funkcji generuje błąd kompilatora:
 
 ```
 __declspec( dllimport ) int func() {   // Error; dllimport
@@ -30,7 +30,7 @@ __declspec( dllimport ) int func() {   // Error; dllimport
 }
 ```
 
- Ten kod również generuje błąd:
+ Ten kod jest również generuje błąd:
 
 ```
 __declspec( dllimport ) int i = 10;  // Error; this is a definition.
@@ -42,7 +42,7 @@ __declspec( dllimport ) int i = 10;  // Error; this is a definition.
 __declspec( dllexport ) int i = 10;  // Okay--export definition
 ```
 
- Korzystanie z `dllexport` oznacza definicję, podczas gdy `dllimport` oznacza deklaracji. Należy użyć `extern` — słowo kluczowe z `dllexport` Aby wymusić deklarację; w przeciwnym razie jest domniemane definicji. W związku z tym następujące przykłady są prawidłowe:
+ Korzystanie z **dllexport** oznacza definicję, podczas gdy **dllimport** zakłada deklarację. Należy użyć **extern** — słowo kluczowe z **dllexport** Aby wymusić deklarację; w przeciwnym razie jest implikowane definicję. W tym samym poniższe przykłady są prawidłowe:
 
 ```
 #define DllImport   __declspec( dllimport )
@@ -52,7 +52,7 @@ extern DllExport int k; // These are both correct and imply a
 DllImport int j;        // declaration.
 ```
 
- Poniższe przykłady wyjaśnienia, poprzedni:
+ Poniższe przykłady wyjaśnienia kroku:
 
 ```
 static __declspec( dllimport ) int l; // Error; not declared extern.
@@ -73,7 +73,7 @@ void func() {
 }
 ```
 
-**KOŃCOWY określonych firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz też
  [dllexport, dllimport](../cpp/dllexport-dllimport.md)

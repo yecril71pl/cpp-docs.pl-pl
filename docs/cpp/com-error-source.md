@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a33834df20606e8380e6a328a41435522185ac70
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f904fa11195c27f8e08856ef391d0ba8adbedece
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412348"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939680"
 ---
 # <a name="comerrorsource"></a>_com_error::Source
 **Microsoft Specific**  
   
- Wywołania **IErrorInfo::GetSource** funkcji.  
+ Wywołania `IErrorInfo::GetSource` funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,12 +37,12 @@ _bstr_t Source() const;
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca wynik **IErrorInfo::GetSource** dla **IErrorInfo** obiektu zarejestrowane w ramach `_com_error` obiektu. BSTR wynikowe są umieszczane w `_bstr_t` obiektu. Jeśli nie **IErrorInfo** jest rejestrowane, zwraca pustą `_bstr_t`.  
+ Zwraca wynik `IErrorInfo::GetSource` dla `IErrorInfo` obiektu rejestrować się w ramach `_com_error` obiektu. Wynikowy BSTR jest hermetyzowany w `_bstr_t` obiektu. Jeśli nie `IErrorInfo` jest rejestrowane, zwraca pustą `_bstr_t`.  
   
 ## <a name="remarks"></a>Uwagi  
- Wszelkie wystąpił błąd podczas wywoływania **IErrorInfo::GetSource** metody jest ignorowana.  
+ Jakiekolwiek niepowodzenie podczas wywoływania `IErrorInfo::GetSource` metody jest ignorowana.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [_com_error, klasa](../cpp/com-error-class.md)

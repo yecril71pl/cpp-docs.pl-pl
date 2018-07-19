@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f431542ab85b4ae540622651967f3a5520ff5f7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 33161d622bf43b79b33c91a5abc6f703c48c4f2e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853446"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953065"
 ---
 # <a name="pointertounaryfunction-class"></a>pointer_to_unary_function — Klasa
 
-Konwertuje wskaźnik funkcji jednoargumentowy funkcja dostosowywalne jednoargumentowy.
+Konwertuje funkcję jednoargumentową potężnej jednoargumentowe wskaźnika funkcji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,27 +43,27 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-`pfunc` Funkcja binarnej ma zostać przekonwertowany.
+*pfunc* binarnego funkcja ma zostać przekonwertowany.
 
-`left` Obiekt który  *\*pfunc* jest wywoływana na.
+*po lewej stronie* obiektu,  *\*pfunc* jest wywoływana w.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Klasy szablonów przechowuje kopię **pfunc**. Definiuje jego funkcji członkowskiej `operator()` jako zwracanie (\* **pfunc**) (_ *lewej*).
+Klasa szablonu przechowuje kopię `pfunc`. Definiuje jej funkcji członkowskiej `operator()` powrotu (\* **pfunc**) (_ *po lewej stronie*).
 
 ## <a name="remarks"></a>Uwagi
 
-Jednoargumentowy wskaźnika funkcji jest obiektem funkcji i mogą być przekazywane do dowolnego algorytmu standardowa biblioteka C++, która oczekuje funkcji jednoargumentowy jako parametr, ale nie jest to dostosowywalne. Aby używać go z karty, takie jak powiązania wartości do niego lub użyciu negator, musi być zasilane zagnieżdżone typy **argument_type** i **result_type** który umożliwiają takie dostosowanie. Konwersja poprzez `pointer_to_unary_function` umożliwia adapterów funkcja do wykonania wskaźniki funkcji binarnego.
+Jednoargumentowy wskaźnika funkcji jest obiektem funkcji i może być przekazywany do dowolnego algorytmu biblioteki standardowej języka C++, który oczekuje funkcję jednoargumentową jako parametru, ale nie jest dostosowana. Do korzystania z adaptera, takich jak powiązania wartości do niego lub użyciu negator, należy podać przy użyciu typów zagnieżdżonych `argument_type` i `result_type` , umożliwiają dostosowanie takie. Konwersja przez `pointer_to_unary_function` umożliwia adapterów funkcji do pracy z wskaźników funkcji binarnego.
 
 ## <a name="example"></a>Przykład
 
-Konstruktor obiektu `pointer_to_unary_function` jest rzadko używana bezpośrednio. Zobacz opis funkcji pomocnika [ptr_fun —](../standard-library/functional-functions.md#ptr_fun) przykład sposobu deklarowanie i użycie `pointer_to_unary_function` predykatu karty.
+Konstruktor obiektu `pointer_to_unary_function` jest rzadko używana bezpośrednio. Zobacz opis funkcji pomocnika [ptr_fun —](../standard-library/functional-functions.md#ptr_fun) przykładowy sposób deklarowania i użyj `pointer_to_unary_function` predykatu adaptera.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<funkcjonalności >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

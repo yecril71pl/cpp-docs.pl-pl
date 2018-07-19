@@ -39,11 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 556a56de97c6e1b547b9a67387acfcdd3205913c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40834c7c41bc19b395958b4a173a68bd014b2e70
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947895"
 ---
 # <a name="bstrt-relational-operators"></a>_bstr_t — Operatory relacyjne
 **Microsoft Specific**  
@@ -54,31 +55,19 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      bool operator!( ) const throw( );   
-bool operator==(  
-   const _bstr_t& str   
-) const throw( );  
-bool operator!=(  
-   const _bstr_t& str   
-) const throw( );  
-bool operator<(  
-   const _bstr_t& str   
-) const throw( );  
-bool operator>(  
-   const _bstr_t& str   
-) const throw( );  
-bool operator<=(  
-   const _bstr_t& str   
-) const throw( );  
-bool operator>=(  
-   const _bstr_t& str   
-) const throw( );  
+bool operator!( ) const throw( );   
+bool operator==(const _bstr_t& str) const throw( );  
+bool operator!=(const _bstr_t& str) const throw( );  
+bool operator<(const _bstr_t& str) const throw( );  
+bool operator>(const _bstr_t& str) const throw( );  
+bool operator<=(const _bstr_t& str) const throw( );  
+bool operator>=(const _bstr_t& str) const throw( );  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Te operatory porównania dwóch `_bstr_t` lexicographically obiektów. Operatory zwracać **true** w przypadku przechowywania porównań, w przeciwnym razie zwraca **false**.  
+ Te operatory porównania dwóch `_bstr_t` leksykograficznie obiektów. Operatory zwraca wartość TRUE, jeśli mają porównania, w przeciwnym razie zwraca wartość FALSE.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [_bstr_t, klasa](../cpp/bstr-t-class.md)

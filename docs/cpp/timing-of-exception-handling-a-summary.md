@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 446925b6e00f4771229357effee0707af3fae52a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ff2ac5abb13ae700e464635efc90a91c4a5835ab
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422179"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939419"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>Chronometraż dla obsługi wyjątków: podsumowanie
-Program obsługi przerwania jest wykonywany niezależnie od tego, w jaki sposób został przerwany blok instrukcji `__try`. Przyczyny obejmują skok na zewnątrz bloku `__try`, instrukcję `longjmp`, która przenosi sterowanie na zewnątrz bloku i odwinięcie stosu wskutek obsługi wyjątku.  
+Program obsługi przerwania jest wykonywany niezależnie od tego, jak **__try** został przerwany blok instrukcji. Przyczyny obejmują skok na zewnątrz **__try** bloku `longjmp` instrukcję, która przenosi sterowanie na zewnątrz bloku i odwinięcie stosu wskutek obsługi wyjątku.  
   
 > [!NOTE]
 >  Język Visual C++ obsługuje dwie postacie instrukcji `setjmp` i `longjmp`. Szybka wersja omija obsługę przerwania, ale jest bardziej wydajna. Aby użyć tej wersji, Dołącz plik \<setjmp.h >. Druga wersja zapewnia obsługę przerwania opisaną w poprzednim akapicie. Aby użyć tej wersji, Dołącz plik \<setjmpex.h >. Wzrost wydajności z użycia wersji szybkiej zależy od konfiguracji sprzętowej.  
@@ -44,7 +44,7 @@ Program obsługi przerwania jest wykonywany niezależnie od tego, w jaki sposób
   
 3.  Jeśli filtr przekaże sterowanie (zwróci 0), proces jest kontynuowany, dopóki nie zostanie znaleziony filtr, który nie przekaże sterowania.  
   
-4.  Jeśli filtr zwróci wartość -1, wykonywanie będzie kontynuowane, gdzie został zgłoszony wyjątek, a nie zakończenia ma miejsce.  
+4.  Jeśli filtr zwróci wartość -1, wykonywanie jest kontynuowane, gdy wyjątek został zgłoszony, a przerwanie nie zachodzi miejsce.  
   
 5.  Jeśli filtr zwróci 1, zachodzą następujące zdarzenia:  
   

@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c380ba7b6c2c13f178a15263e1ff510f9f3c31c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ca7b7d38c204d7dd8402b9d610a5800dcef6ced9
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363301"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883232"
 ---
 # <a name="ccomenumonstl-class"></a>Klasa CComEnumOnSTL
-Ta klasa definiuje obiekt modułu wyliczającego COM oparte na kolekcji standardowa biblioteka C++.  
+Ta klasa definiuje obiekt modułu wyliczającego COM, na podstawie kolekcji standardowej biblioteki języka C++.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,43 +40,43 @@ class ATL_NO_VTABLE CComEnumOnSTL : public IEnumOnSTLImpl<Base, piid,
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `Base`  
+ *podstawowy*  
  Moduł wyliczający COM ( [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) interfejsu.  
   
- `piid`  
+ *piid*  
  Wskaźnik do Identyfikatora interfejsu interfejsu modułu wyliczającego.  
   
- `T`  
+ *T*  
  Typ elementu udostępnianych przez interfejs modułu wyliczającego.  
   
- `Copy`  
+ *Kopiuj*  
  A [Kopiuj zasady](../../atl/atl-copy-policy-classes.md) klasy.  
   
- `CollType`  
- Klasa standardowa biblioteka C++ kontenera.  
+ *CollType*  
+ Klasa kontenera standardowej biblioteki języka C++.  
   
 ## <a name="remarks"></a>Uwagi  
- `CComEnumOnSTL` Definiuje obiekt modułu wyliczającego COM oparte na kolekcji standardowa biblioteka C++. Ta klasa może być używana samodzielnie lub w połączeniu z [ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md). Typowe kroki do używania tej klasy są przedstawione poniżej. Aby uzyskać więcej informacji, zobacz [kolekcje i wyliczenia ATL](../../atl/atl-collections-and-enumerators.md).  
+ `CComEnumOnSTL` Definiuje obiekt modułu wyliczającego COM, na podstawie kolekcji standardowej biblioteki języka C++. Ta klasa może być używana, samodzielnie lub w połączeniu z [ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md). Typowe kroki dotyczące korzystania z tej klasy są przedstawione poniżej. Aby uzyskać więcej informacji, zobacz [kolekcje i wyliczenia ATL](../../atl/atl-collections-and-enumerators.md).  
   
-## <a name="to-use-this-class-with-icollectiononstlimpl"></a>Aby użyć tej klasy z ICollectionOnSTLImpl:  
+## <a name="to-use-this-class-with-icollectiononstlimpl"></a>Aby użyć tej klasy przy użyciu ICollectionOnSTLImpl:  
   
-- `typedef` Specjalizacja tej klasy.  
+- **Element TypeDef** specjalizacji tej klasy.  
   
--   Użyj `typedef` jako ostatnim argumentem szablonu w specjalizacji `ICollectionOnSTLImpl`.  
+-   Użyj **typedef** jako ostatnim argumentem szablonu w specjalizacji `ICollectionOnSTLImpl`.  
   
  Zobacz [kolekcje i wyliczenia ATL](../../atl/atl-collections-and-enumerators.md) przykład.  
   
 ## <a name="to-use-this-class-independently-of-icollectiononstlimpl"></a>Aby użyć tej klasy, niezależnie od ICollectionOnSTLImpl:  
   
-- `typedef` Specjalizacja tej klasy.  
+- **Element TypeDef** specjalizacji tej klasy.  
   
--   Użyj `typedef` jako argument szablonu w specjalizacji `CComObject`.  
+-   Użyj **typedef** jako argument szablonu w specjalizacji `CComObject`.  
   
--   Utwórz wystąpienie `CComObject` specjalizacji.  
+-   Utwórz wystąpienie obiektu `CComObject` specjalizacji.  
   
--   Zainicjowania obiektu modułu wyliczającego wywołując [IEnumOnSTLImpl::Init](../../atl/reference/ienumonstlimpl-class.md#init).  
+-   Inicjują obiekt modułu wyliczającego, wywołując [IEnumOnSTLImpl::Init](../../atl/reference/ienumonstlimpl-class.md#init).  
   
--   Zwraca moduł wyliczający interfejsu do klienta.  
+-   Zwraca interfejs modułu wyliczającego do klienta.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `CComObjectRootBase`  
@@ -93,20 +93,20 @@ class ATL_NO_VTABLE CComEnumOnSTL : public IEnumOnSTLImpl<Base, piid,
  **Nagłówek:** atlcom.h  
   
 ## <a name="example"></a>Przykład  
- Kodem przedstawionym poniżej zawiera ogólne funkcji obsługi tworzenia i inicjowania obiektu modułu wyliczającego:  
+ Kodu pokazany poniżej zawiera funkcję ogólną, do obsługi tworzenia i inicjowania obiekt modułu wyliczającego:  
   
  [!code-cpp[NVC_ATL_COM#34](../../atl/codesnippet/cpp/ccomenumonstl-class_1.h)]  
   
- Ta funkcja szablonu może służyć do zaimplementowania `_NewEnum` właściwość interfejsu kolekcji, jak pokazano poniżej:  
+ Ta funkcja szablonu może służyć do implementowania `_NewEnum` właściwość interfejsu kolekcji, jak pokazano poniżej:  
   
  [!code-cpp[NVC_ATL_COM#35](../../atl/codesnippet/cpp/ccomenumonstl-class_2.h)]  
   
- Ten kod tworzy `typedef` dla `CComEnumOnSTL` który uwidacznia wektorem `CComVariant`s za pomocą klasy **interfejsu IEnumVariant** interfejsu. **CVariantCollection** klasy po prostu specjalizuje się **CreateSTLEnumerator** do pracy z modułu wyliczającego obiektów tego typu.  
+ Ten kod tworzy **typedef** dla `CComEnumOnSTL` który uwidacznia wektor `CComVariant`s poprzez `IEnumVariant` interfejsu. `CVariantCollection` Klasy po prostu specjalizuje się `CreateSTLEnumerator` do pracy z obiektami modułu wyliczającego tego typu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)   
- [Przykład ATLCollections: Pokazuje klasy zasady niestandardowe kopiowania, CComEnumOnSTL i ICollectionOnSTLImpl](../../visual-cpp-samples.md)   
- [Przegląd klas](../../atl/atl-class-overview.md)   
+ [Przykład ATLCollections: Pokazuje kopii niestandardowych zasad klas, ICollectionOnSTLImpl i CComEnumOnSTL](../../visual-cpp-samples.md)   
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)   
  [Klasa CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   
  [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)   
  [Klasa IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)

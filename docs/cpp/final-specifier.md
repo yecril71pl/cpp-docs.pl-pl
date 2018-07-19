@@ -16,34 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82fb9e13fc5dbbafcc37905716a37322b2966c6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 594bc432cb12b63c76172b06ee078d5b0f72de55
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947747"
 ---
 # <a name="final-specifier"></a>final, specyfikator
-Można użyć `final` — słowo kluczowe do wyznaczenia wirtualnego funkcje, których nie można zastąpić w klasie pochodnej. Można również użyć do wyznaczenia klasy, które nie może być dziedziczona.  
+Możesz użyć **końcowego** — słowo kluczowe, aby wyznaczyć funkcje wirtualne, które nie mogą być zastępowane w klasie pochodnej. Można również użyć do wyznaczenia klas, które nie może być dziedziczona.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
   
 function-declaration final;  
-```  
-  
-```  
-  
 class class-name final base-classes  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- `final` kontekstowa i ma specjalne znaczenie tylko wtedy, gdy jest używany po deklaracji funkcji lub nazwy klasy; w przeciwnym razie nie jest zarezerwowanym słowem kluczowym.  
+ **końcowe** jest zależny od kontekstu i ma specjalne znaczenie, gdy jest używany po deklarację funkcji lub klasy nazwę; w przeciwnym razie, nie jest zarezerwowanym słowem kluczowym tylko.  
   
- Gdy `final` jest używany w deklaracjach klas `base-classes` jest opcjonalnym składnikiem deklaracji.  
+ Gdy **końcowego** jest używany w deklaracjach klas `base-classes` jest opcjonalnym składnikiem deklaracji.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto `final` — słowo kluczowe, aby określić, czy funkcji wirtualnej nie można zastąpić.  
+ W poniższym przykładzie użyto **końcowego** — słowo kluczowe, aby określić, czy funkcja wirtualna nie może być zastąpiona.  
   
 ```cpp  
 class BaseClass  
@@ -58,9 +55,9 @@ class DerivedClass: public BaseClass
 };  
 ```  
   
- Informacje o sposobie określania funkcje Członkowskie mogą zostać zastąpione, zobacz [specyfikator przesłonięcia](../cpp/override-specifier.md).  
+ Uzyskać informacji o sposobie określania, funkcje składowe można przesłonić, zobacz [specyfikator override](../cpp/override-specifier.md).  
   
- W następnym przykładzie użyto `final` — słowo kluczowe, aby określić, że klasa nie może być dziedziczona.  
+ W następnym przykładzie użyto **końcowego** — słowo kluczowe, aby określić, że klasa nie może być dziedziczona.  
   
 ```cpp  
 class BaseClass final   

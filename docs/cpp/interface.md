@@ -16,24 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eea8f2585a1e385795a42c745aa95e180c6bb352
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03964b224603d86064290aa68344c828c2630a17
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947863"
 ---
 # <a name="interface"></a>__interface
 **Microsoft Specific**  
   
  Interfejs Visual C++ można zdefiniować w następujący sposób:  
   
--   Może dziedziczyć od zera lub większej interfejsach podstawowych.  
+-   Może dziedziczyć z zero lub więcej podstawowych interfejsów.  
   
--   Nie można dziedziczyć po klasie podstawowej.  
+-   Nie można dziedziczyć z klasy bazowej.  
   
 -   Może zawierać tylko publiczne, czystych metod wirtualnych.  
   
--   Nie może zawierać konstruktorów, destruktory lub Operatorzy.  
+-   Nie może zawierać konstruktory, destruktory lub operatorów.  
   
 -   Nie może zawierać metod statycznych.  
   
@@ -43,36 +44,35 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-modifier  
- __interface interface-name {interface-definition};  
+modifier __interface interface-name {interface-definition};  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- C++ [klasy](../cpp/class-cpp.md) lub [struktury](../cpp/struct-cpp.md) może być realizowane za pomocą tych zasad, ale `__interface` wymusza je.  
+ C++ [klasy](../cpp/class-cpp.md) lub [struktury](../cpp/struct-cpp.md) implementacji przy użyciu tych zasad, ale **__interface** je egzekwuje.  
   
- Na przykład Oto przykład definicji interfejsu:  
+ Na przykład Oto przykładowa definicja interfejsu:  
   
-```  
+```cpp 
 __interface IMyInterface {  
    HRESULT CommitX();  
    HRESULT get_X(BSTR* pbstrName);  
 };  
 ```  
   
- Uzyskać informacji o zarządzanych interfejsów, temacie [interfejsu klasy](../windows/interface-class-cpp-component-extensions.md).  
+ Aby uzyskać informacji na temat interfejsów zarządzanych, zobacz [interfejsu klasy](../windows/interface-class-cpp-component-extensions.md).  
   
- Powiadomienie, że nie trzeba jawnie wskazać, że `CommitX` i `get_X` są czystych funkcji wirtualnych. Odpowiednik deklaracji dla pierwszej funkcji mogą być następujące:  
+ Zwróć uwagę, że nie trzeba jawnie wskazać, że `CommitX` i `get_X` są czyste funkcje wirtualne. Równoważną deklarację dla pierwszej funkcji mogą być następujące:  
   
-```  
+```cpp 
 virtual HRESULT CommitX() = 0;  
 ```  
   
- `__interface` oznacza [novtable](../cpp/novtable.md) `__declspec` modyfikator.  
+ **__interface** oznacza [novtable](../cpp/novtable.md) **__declspec** modyfikator.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia sposób użycia właściwości zadeklarowany w interfejsie.  
+ Poniższy przykład pokazuje sposób użycia właściwości zadeklarowanych w interfejsie.  
   
-```  
+```cpp 
 // deriv_interface.cpp  
 #define _ATL_ATTRIBUTES 1  
 #include <atlbase.h>  
@@ -150,7 +150,7 @@ p->int_data = 100
 bstr_data = Testing  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Keywords](../cpp/keywords-cpp.md)   

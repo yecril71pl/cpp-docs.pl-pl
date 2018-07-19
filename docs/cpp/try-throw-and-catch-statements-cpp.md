@@ -1,5 +1,5 @@
 ---
-title: Spróbuj, throw i catch instrukcji (C++) | Dokumentacja firmy Microsoft
+title: TRY, throw i catch instrukcji (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,26 +29,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fac31e9a31ab560973e986e37b4cf56f5d7e4621
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: da07786c3aac6bfce2f74a16088b3c09184a8106
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947767"
 ---
 # <a name="try-throw-and-catch-statements-c"></a>Instrukcje try, throw i catch (C++)
-Aby zaimplementować obsługi wyjątków w języku C++, należy użyć `try`, `throw`, i `catch` wyrażenia.  
+Aby zaimplementować obsługę wyjątków w języku C++, należy użyć **spróbuj**, **throw**, i **catch** wyrażenia.  
   
- Najpierw użyj `try` bloku, aby załączyć przynajmniej jednej instrukcji, które może zgłosić wyjątek.  
+ Najpierw za pomocą **spróbuj** blok należy ująć jedną lub więcej instrukcji, które mogą zgłosić wyjątek.  
   
- A `throw` wyrażenie sygnalizuje, że warunek wyjątkowych — często, błąd — wystąpił w `try` bloku. Obiekt dowolnego typu może być używany jako argument operacji `throw` wyrażenia. Obiekt ten jest zazwyczaj używany do przekazywania informacji o błędzie. W większości przypadków zaleca się użycie [std::exception](../standard-library/exception-class.md) klasy lub jednej z klas pochodnych, które są zdefiniowane w standardowej bibliotece. Jeśli nie jest jednym z tych właściwe, firma Microsoft zaleca klasy wyprowadzonej własne klasy wyjątków z `std::exception`.  
+ A **throw** wyrażenie informuje, że wyjątkowy warunek — zazwyczaj błąd — wystąpił w **spróbuj** bloku. Można użyć dowolnego typu obiektu jako operandu **throw** wyrażenia. Obiekt ten jest zazwyczaj używany do przekazywania informacji o błędzie. W większości przypadków zaleca się, że używasz [std::exception](../standard-library/exception-class.md) klasy lub jednej z klas pochodnych, które są zdefiniowane w bibliotece standardowej. Jeśli jeden z nich nie jest właściwa, firma Microsoft zaleca wyprowadzenie własne klasy wyjątku z `std::exception`.  
   
- Do obsługi wyjątków, które może zostać zgłoszony, zaimplementować jedną lub więcej `catch` bloki bezpośrednio po `try` bloku. Każdy `catch` bloku określa typ wyjątku może obsługiwać.  
+ Aby obsłużyć wyjątki, które mogą być generowane, zaimplementuj jeden lub więcej **catch** bloki natychmiast po **spróbuj** bloku. Każdy **catch** bloku określa typ wyjątku może obsługiwać.  
   
- W tym przykładzie pokazano `try` bloku i jego obsługi. Przyjęto założenie, że `GetNetworkResource()` uzyskuje danych za pośrednictwem połączenia sieciowego i czy typów wyjątków dwie klasy zdefiniowane przez użytkownika, które pochodzą z `std::exception`. Należy zauważyć, że wyjątki są przechwytywane przez `const` odwołania w `catch` instrukcji. Firma Microsoft zaleca, aby generować wyjątki przez wartość i przechwytywać przez odniesienie const.  
+ W tym przykładzie **spróbuj** bloku i jego obsługę. Przyjęto założenie, że `GetNetworkResource()` uzyskuje dane poprzez połączenie sieciowe i że dwa typy wyjątków to klasy zdefiniowane przez użytkownika, które wynikają z `std::exception`. Należy zauważyć, że wyjątki są przechwytywane przez **const** odwoływać w **catch** instrukcji. Firma Microsoft zaleca, aby generować wyjątki przez wartość i przechwytywać przez odniesienie const.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp 
   
 MyData md;  
 try {  
@@ -82,11 +83,11 @@ MyData GetNetworkResource()
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Kod po `try` klauzula jest zabezpieczona sekcji kodu. `throw` Wyrażenie *zgłasza*— to znaczy zgłasza — Wystąpił wyjątek. Blok kodu po `catch` klauzula jest program obsługi wyjątku. To jest program obsługi który *przechwytuje* wyjątek, który jest generowany, jeśli typy w `throw` i `catch` wyrażenia są zgodne. Lista reguł, które będą zarządzały sposobem dopasowania w `catch` bloków, zobacz [są obliczane bloki przechwytywania w sposób](../cpp/how-catch-blocks-are-evaluated-cpp.md). Jeśli `catch` instrukcji określa wielokropek (...) zamiast typu `catch` bloku obsługi każdego typu wyjątku. Podczas kompilacji z [/eha](../build/reference/eh-exception-handling-model.md) opcji mogą do nich wyjątki C strukturalnych i generowanych przez system lub wygenerowane w aplikacji wyjątków asynchronicznych np. naruszenia dzielenie przez zero i typem zmiennoprzecinkowym ochrony pamięci . Ponieważ `catch` bloki są przetwarzane w kolejności programu można znaleźć zgodnego typu, program obsługi wielokropka musi być ostatnim obsługi skojarzonych z nim `try` bloku. Użyj `catch(...)` ostrożnie; nie zezwalaj na program kontynuować, chyba że blok catch potrafi obsłużyć określony wyjątek, który zostanie przechwycony. Zazwyczaj `catch(...)` blok służy do dziennika błędów i wykonać specjalne oczyszczania przed wykonania programu została zatrzymana.  
+ Kod po **spróbuj** klauzula jest zabezpieczona sekcja kodu. **Throw** wyrażenie *zgłasza*— czyli generuje — wyjątek. Blok kodu po **catch** klauzula jest program obsługi wyjątków. To jest program obsługi, *przechwytuje* wyjątek, który jest generowany, jeśli typy w **throw** i **catch** wyrażenia są zgodne. Aby uzyskać listę reguł, które określają dopasowanie typu w **catch** bloków, zobacz [jak Catch Blocks are Evaluated](../cpp/how-catch-blocks-are-evaluated-cpp.md). Jeśli **catch** Instrukcja określa wielokropek (...), a nie typ, **catch** blok obsługuje każdy typ wyjątku. Podczas kompilacji z [/eha](../build/reference/eh-exception-handling-model.md) opcji należą wyjątki strukturalne C oraz wyjątki asynchroniczne generowanych przez system lub wygenerowane w aplikacji takich jak pamięci ochrony, dzielenie przez zero i zmiennoprzecinkowych naruszeń . Ponieważ **catch** bloki są przetwarzane w kolejności programu w celu znalezienia pasującego typu, kod obsługi wielokropka musi być ostatnim kodem obsługi skojarzonego **spróbuj** bloku. Użyj `catch(...)` z ostrożnością; nie Zezwalaj programowi na kontynuację, chyba że blok catch wie, jak obsłużyć określony wyjątek, który zostanie przechwycony. Zazwyczaj `catch(...)` blok jest używany do rejestrowania błędów i wykonywania specjalnej operacji czyszczenia, zanim wykonywanie programu zostanie zatrzymane.  
   
- A `throw` wyrażenie, które nie operand ponownie zgłasza wyjątek, w obecnie obsługiwane. Zaleca się tę formę podczas ponownego zgłaszania wyjątku, ponieważ pozwala to zachować informacje o polimorficznym typie oryginalnego wyjątku. Takie wyrażenie należy używać tylko w `catch` obsługi lub funkcję, która jest wywoływana z `catch` obsługi. Ponownie zgłoszony obiekt wyjątku to oryginalny obiekt wyjątku, a nie kopia.  
+ A **throw** wyrażenie, które ma nie operandu, ponownie zgłasza aktualnie obsługiwany wyjątek. Zaleca się tę formę podczas ponownego zgłaszania wyjątku, ponieważ pozwala to zachować informacje o polimorficznym typie oryginalnego wyjątku. Takie wyrażenie można używać tylko w **catch** obsługi lub w funkcji, która jest wywoływana z **catch** programu obsługi. Ponownie zgłoszony obiekt wyjątku to oryginalny obiekt wyjątku, a nie kopia.  
   
-```  
+```cpp 
 try {  
    throw CSomeOtherException();  
 }  
@@ -100,7 +101,7 @@ catch(...) {
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [C++, obsługa wyjątków](../cpp/cpp-exception-handling.md)   
+ [Obsługa wyjątków języka C++](../cpp/cpp-exception-handling.md)   
  [Keywords](../cpp/keywords-cpp.md)   
  [Nieobsługiwane wyjątki języka C++](../cpp/unhandled-cpp-exceptions.md)   
  [__uncaught_exception](../c-runtime-library/reference/uncaught-exception.md)

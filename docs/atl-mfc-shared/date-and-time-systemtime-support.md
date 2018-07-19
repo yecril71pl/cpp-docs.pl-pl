@@ -21,39 +21,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecbfd517a0fd535a23920ae21d03f1756babc113
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cf48881b3baeb7dc5ab48483ae9b075a9c048a38
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355403"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883570"
 ---
 # <a name="date-and-time-systemtime-support"></a>Data i godzina: Obsługa SYSTEMTIME
-[Ctime —](../atl-mfc-shared/reference/ctime-class.md) klasa ma konstruktorów akceptujących czas systemu i plik z Win32. Jeśli używasz `CTime` obiektów w tym celu należy zmodyfikować inicjalizacji odpowiednio, zgodnie z opisem w tym artykule.  
+[CTime](../atl-mfc-shared/reference/ctime-class.md) klasa ma konstruktory, które akceptują czasu systemu i plików z systemu Win32. Jeśli używasz `CTime` obiektów w tym celu należy zmodyfikować inicjalizacji w związku z tym zgodnie z opisem w tym artykule.  
   
  Aby uzyskać informacje o struktura SYSTEMTIME, zobacz [SYSTEMTIME](../mfc/reference/systemtime-structure1.md). Aby uzyskać informacje o struktura FILETIME, zobacz [FILETIME](../mfc/reference/filetime-structure.md).  
   
- MFC nadal zawiera `CTime` konstruktorów przyjmujących argumentów czasu w stylu MS-DOS, ale, począwszy od wersji 3.0 lub nowszej, MFC `CTime` klasa obsługuje również konstruktora przyjmującego Win32 `SYSTEMTIME` struktury oraz inne, które przyjmuje Win32 `FILETIME` struktury.  
+ Biblioteka MFC nadal zawiera `CTime` konstruktorów, które przyjmują argumentów czasu w stylu systemu MS-DOS, ale, począwszy od wersji 3.0, MFC `CTime` klasy obsługuje również konstruktora przyjmującego Win32 `SYSTEMTIME` struktury i drugiego, która przyjmuje Win32 `FILETIME` struktury.  
   
- Nowe `CTime` konstruktory są:  
+ Nowy `CTime` konstruktory są:  
   
--   Ctime — (const SYSTEMTIME & `sysTime`);  
+-   CTime (const SYSTEMTIME & `sysTime`);  
   
--   Ctime — (const FILETIME & `fileTime`);  
+-   CTime (const FILETIME & `fileTime`);  
   
- `fileTime` Parametr jest odwołanie do Win32 `FILETIME` struktury, która reprezentuje czas jako wartość 64-bitowy format wygodniejsze dla magazynu wewnętrznego niż `SYSTEMTIME` struktury i format używany przez Win32 do reprezentowania czasu pliku Tworzenie.  
+ *FileTime* parametr to odwołanie do systemu Win32 `FILETIME` strukturę, która reprezentuje godzinę jako wartość 64-bitowych, bardziej wygodne formatu dla magazynu wewnętrznego niż `SYSTEMTIME` struktury i format używany przez systemu Win32 w celu reprezentuje czas tworzenia pliku.  
   
- Jeśli w kodzie `CTime` obiektu zainicjowany z czasem systemowym, należy użyć `SYSTEMTIME` konstruktora w Win32.  
+ Jeśli kod zawiera `CTime` obiekt został zainicjowany z czasem systemowym, należy użyć `SYSTEMTIME` konstruktora w systemie Win32.  
   
- Prawdopodobnie nie będzie używać `CTime` `FILETIME` inicjowania bezpośrednio. Jeśli używasz `CFile` obiekt do manipulowania pliku [CFile::GetStatus](../mfc/reference/cfile-class.md#getstatus) pobiera sygnatury czasowej pliku dla Ciebie za pośrednictwem `CTime` zainicjować obiektu z `FILETIME` struktury.  
+ Najprawdopodobniej nie będzie używać `CTime` `FILETIME` inicjowania bezpośrednio. Jeśli używasz `CFile` obiekt do manipulowania plikiem [CFile::GetStatus](../mfc/reference/cfile-class.md#getstatus) pobiera sygnatura czasowa pliku dla za pomocą `CTime` obiekt inicjowany za pomocą `FILETIME` struktury.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat  
   
--   [Ogólne Data i godzina Programowanie w MFC](../atl-mfc-shared/date-and-time.md)  
+-   [Ogólne Data i godzina programowania w MFC](../atl-mfc-shared/date-and-time.md)  
   
--   [Obsługa automatyzacji daty i czasu programowania](../atl-mfc-shared/date-and-time-automation-support.md)  
+-   [Obsługa automatyzacji daty i godziny programowania](../atl-mfc-shared/date-and-time-automation-support.md)  
   
--   [Klasy ogólnego przeznaczenia dla daty i czasu programowania](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
+-   [Klasy ogólnego przeznaczenia dla daty i godziny programowania](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Data i godzina](../atl-mfc-shared/date-and-time.md)

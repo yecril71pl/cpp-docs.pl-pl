@@ -1,5 +1,5 @@
 ---
-title: Makra mapy COM | Dokumentacja firmy Microsoft
+title: Makra mapy modelu COM | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74f8903d81a126a6647bc43018f8422296ddf970
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00c15bf8567456254c8a338ed395a726fcbe8c9b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358426"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879312"
 ---
-# <a name="com-map-macros"></a>Makra mapy COM
-Te makra zdefiniuj mapy interfejsu COM.  
+# <a name="com-map-macros"></a>Makra mapy modelu COM
+Te makra definiują mapy interfejsu COM.  
   
 |||  
 |-|-|  
@@ -36,7 +36,7 @@ Te makra zdefiniuj mapy interfejsu COM.
  **Nagłówek:** atlcom.h  
    
 ##  <a name="begin_com_map"></a>  BEGIN_COM_MAP  
- Mapa COM jest mechanizm, który udostępnia interfejsy na obiekt, aby klienta za pośrednictwem `QueryInterface`.  
+ Mapy interfejsu COM to mechanizm, który uwidacznia interfejsy na obiekt, do klienta za pośrednictwem `QueryInterface`.  
   
 ```
 BEGIN_COM_MAP(x)
@@ -44,14 +44,14 @@ BEGIN_COM_MAP(x)
   
 ### <a name="parameters"></a>Parametry  
  *x*  
- [in] Nazwa obiektu klasy, które interfejsy są udostępnianie na.  
+ [in] Nazwa obiektu klasy, które wyświetlasz interfejsów znajduje się na.  
   
 ### <a name="remarks"></a>Uwagi  
- [CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) tylko zwraca wskaźników interfejsów w mapie modelu COM. Uruchom mapy interfejsu z `BEGIN_COM_MAP` makra, dodanie wpisów dla poszczególnych interfejsów z [com_interface_entry —](com-interface-entry-macros.md#com_interface_entry) makro lub jednej z jej wariantów i ukończyć mapy [END_COM_MAP](#end_com_map) makra.  
+ [CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) zwraca tylko wskaźników dla interfejsów mapy interfejsu COM. Rozpoczynać mapie interfejsu makro BEGIN_COM_MAP, dodać wpisy dla wszystkich interfejsów sieci za pomocą [com_interface_entry —](com-interface-entry-macros.md#com_interface_entry) — makro lub jedna z jej wariantów i ukończyć mapy za pomocą [END_COM_MAP](#end_com_map) makra.  
 
   
 ### <a name="example"></a>Przykład  
- Z ATL [BEEPER](../../visual-cpp-samples.md) próbki:  
+ Od ATL [BEEPER](../../visual-cpp-samples.md) próbki:  
   
  [!code-cpp[NVC_ATL_COM#1](../../atl/codesnippet/cpp/com-map-macros_1.h)]  
   

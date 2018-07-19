@@ -21,20 +21,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb58d5da479d686cac0d18c9d36e500bd6b5a632
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7f4de54cbbe978534a42dcb9cbfa677eb1597aa5
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420653"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939139"
 ---
 # <a name="wildcard-expansion"></a>Rozwijanie symbolu wieloznacznego
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
  Można używać symboli wieloznacznych — znak zapytania (?) i gwiazdki (*), aby określić nazwę pliku i ścieżkę argumenty w wierszu polecenia.  
   
- Argumenty wiersza polecenia są obsługiwane przez procedury o nazwie **_setargv —** (lub **_wsetargv** w środowisku znaków dwubajtowych), które domyślnie nie zwiększa symbole wieloznaczne w oddzielnych ciągów w `argv`tablicy ciągów. Aby uzyskać więcej informacji na temat włączania rozwijanie symbolu wieloznacznego, zapoznaj się [rozszerzanie argumentów z symbolami wieloznacznymi](../c-language/expanding-wildcard-arguments.md).  
+ Argumenty wiersza polecenia są obsługiwane przez procedurę o nazwie `_setargv` (lub `_wsetargv` w środowisku znaków dwubajtowych), które domyślnie nie jest powiększony, symboli wieloznacznych do oddzielnych ciągów w `argv` tablicy ciągów. Aby uzyskać więcej informacji na temat włączania rozszerzenia symboli wieloznacznych, zobacz [rozszerzanie argumentów z symbolami wieloznacznymi](../c-language/expanding-wildcard-arguments.md).  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [main: uruchamianie programu](../cpp/main-program-startup.md)

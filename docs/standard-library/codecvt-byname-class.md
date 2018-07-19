@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48b1d6e93aa929d95032c04a58b5b419ca312f8d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 822d19e1333163dbe37a1734ce315048f81cb802
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842797"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964375"
 ---
 # <a name="codecvtbyname-class"></a>codecvt_byname — Klasa
 
@@ -53,21 +53,21 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-`_Locname` Nazwane ustawień regionalnych.
+*_Locname* o nazwie ustawień regionalnych.
 
-`_Refs` Liczba początkowa odwołania.
+*_Refs* licznik odwołań początkowej.
 
 ## <a name="remarks"></a>Uwagi
 
-Aspekty byname są automatycznie tworzone podczas nazwanego ustawień regionalnych jest tworzony.
+Aspekty byname są tworzone automatycznie, gdy jest konstruowany o nazwie ustawień regionalnych.
 
-Jego zachowanie jest określany przez nazwany ustawień regionalnych `_Locname`. Każdy Konstruktor inicjuje jego obiektu podstawowego z [codecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType > ( `_Refs`).
+Jego zachowanie jest określana przez nazwany ustawień regionalnych *_Locname*. Każdy Konstruktor inicjuje jego podstawowego obiektu z [codecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType > ( `_Refs`).
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<ustawień regionalnych >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

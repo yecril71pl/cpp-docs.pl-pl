@@ -20,14 +20,14 @@ helpviewer_keywords:
 - std::operator&lt; (utility)
 - std::operator&lt;= (utility)
 - std::operator== (utility)
-ms.openlocfilehash: e5ed9d81e4b63dd57ebaf5f41ecc8422eaf166dd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f5dc68dcd2b29b77b54bcc5af7e9dc8e4e79a897
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861613"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962029"
 ---
-# <a name="ltutilitygt-operators"></a>&lt;Narzędzie&gt; operatory
+# <a name="ltutilitygt-operators"></a>&lt;Narzędzie&gt; operatorów
 
 ||||
 |-|-|-|
@@ -36,7 +36,7 @@ ms.locfileid: "33861613"
 
 ## <a name="op_neq"></a>  operator! =
 
-Testy, jeśli obiekt pary po lewej stronie operatora nie jest taki sam jak obiekt pary po prawej stronie.
+Sprawdza, czy obiekt pary po lewej stronie operatora nie jest równy obiektowi pary po prawej stronie.
 
 ```cpp
 template <class Type>
@@ -48,9 +48,11 @@ constexpr bool operator!=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu **pary.**
+*left*  
+ Obiekt typu `pair`.
 
-`right` Obiekt typu `pair`.
+*right*  
+ Obiekt typu `pair`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -58,7 +60,7 @@ constexpr bool operator!=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="remarks"></a>Uwagi
 
-Jedna para jest równa kolejną parę, jeśli każdy z ich odpowiednich elementów jest taki sam. Dwie pary nie są równe, jeśli pierwszy lub drugi element jednego nie jest równa odpowiadającego mu elementu innych pary.
+Jedna para jest równy inną parę, jeśli każdy z ich odpowiednich elementów jest taki sam. Dwie pary są nierówne, jeśli pierwszy lub drugi element jednego nie równa się odpowiedni element inne pary.
 
 ### <a name="example"></a>Przykład
 
@@ -109,7 +111,7 @@ The pairs p1 and p3 are equal.
 
 ## <a name="op_eq_eq"></a>  operator ==
 
-Testy, jeśli obiekt pary po lewej stronie operatora jest taki sam jak obiekt pary po prawej stronie.
+Sprawdza, czy obiekt pary po lewej stronie operatora jest równy obiektowi pary po prawej stronie.
 
 ```cpp
 template <class T, class U>
@@ -118,9 +120,9 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu **pary.**
+*po lewej stronie* obiektu typu `pair`.
 
-`right` Obiekt typu `pair`.
+*prawy* obiektu typu `pair`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -128,7 +130,7 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="remarks"></a>Uwagi
 
-Jedna para jest równa kolejną parę, jeśli każdy z ich odpowiednich elementów jest taki sam. Funkcja zwraca `left`. **pierwszy** == `right`. **pierwszy** && `left`. **drugi** == `right`. **drugi**. Dwie pary nie są równe, jeśli pierwszy lub drugi element jednego nie jest równa odpowiadającego mu elementu innych pary.
+Jedna para jest równy inną parę, jeśli każdy z ich odpowiednich elementów jest taki sam. Funkcja zwraca `left`. **pierwszy** == `right`. **pierwszy** && `left`. **drugi** == `right`. **drugi**. Dwie pary są nierówne, jeśli pierwszy lub drugi element jednego nie równa się odpowiedni element inne pary.
 
 ### <a name="example"></a>Przykład
 
@@ -170,7 +172,7 @@ int main( )
 
 ## <a name="op_lt"></a>  Operator&lt;
 
-Testy, jeśli obiekt pary po lewej stronie operatora jest mniejsza niż obiekt pary po prawej stronie.
+Sprawdza, czy pary obiektu po lewej stronie operatora jest mniejszy niż obiekt pary po prawej stronie.
 
 ```cpp
 template <class T, class U>
@@ -179,9 +181,11 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu `pair` po lewej stronie operatora.
+*left*  
+ Obiekt typu `pair` po lewej stronie operatora.
 
-`right` Obiekt typu `pair` po prawej stronie operatora.
+*right*  
+ Obiekt typu `pair` po prawej stronie operatora.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -189,9 +193,9 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="remarks"></a>Uwagi
 
-`left` `pair` Obiektu jest określane jako ściśle mniejsza niż `right` `pair` obiekt zostanie `left` jest mniejsza niż i nie jest równa `right`.
+`left` `pair` Obiekt jest nazywany ściśle mniejsza niż `right` `pair` obiektu, jeśli *po lewej stronie* jest mniejsza niż i nie jest równa *prawo*.
 
-W porównaniu z par pierwszych elementów dwóch par wartości ma najwyższy priorytet. Jeśli będą się różnić, wynik ich porównanie są wykonywane w wyniku porównania pary. Jeśli wartości pierwszych elementów nie są różne, wartości drugi elementów są porównywane i pochodzi wynik ich porównanie wyniku porównania pary.
+W odróżnieniu od par wartości pierwszych elementów z dwóch par mają najwyższy priorytet. Jeśli będą się różnić, wynik porównania ich jest traktowana jako wynik porównania pary. Jeśli wartości pierwszych elementów nie są różne, są porównywane wartości elementów drugiej, a wynik porównania ich jest traktowana jako wynik porównania pary.
 
 ### <a name="example"></a>Przykład
 
@@ -242,7 +246,7 @@ The pair p1 is not less than the pair p3.
 
 ## <a name="op_lt_eq"></a>  Operator&lt;=
 
-Testy, jeśli obiekt pary po lewej stronie operatora jest mniejsza niż lub równe obiekt pary po prawej stronie.
+Sprawdza, czy pary obiektu po lewej stronie operatora jest mniejszy niż lub równy obiektowi pary po prawej stronie.
 
 ```cpp
 template <class Type>
@@ -254,17 +258,19 @@ constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu `pair` po lewej stronie operatora.
+*left*  
+ Obiekt typu `pair` po lewej stronie operatora.
 
-`right` Obiekt typu `pair` po prawej stronie operatora.
+*right*  
+ Obiekt typu `pair` po prawej stronie operatora.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli `pair` po lewej stronie operatora jest mniejsze niż lub równe `pair` po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true,** Jeśli `pair` po lewej stronie operatora jest mniejszy niż lub równe `pair` po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-W porównaniu z par pierwszych elementów dwóch par wartości ma najwyższy priorytet. Jeśli będą się różnić, wynik ich porównanie są wykonywane w wyniku porównania pary. Jeśli wartości pierwszych elementów nie są różne, wartości drugi elementów są porównywane i pochodzi wynik ich porównanie wyniku porównania pary.
+W odróżnieniu od par wartości pierwszych elementów z dwóch par mają najwyższy priorytet. Jeśli będą się różnić, wynik porównania ich jest traktowana jako wynik porównania pary. Jeśli wartości pierwszych elementów nie są różne, są porównywane wartości elementów drugiej, a wynik porównania ich jest traktowana jako wynik porównania pary.
 
 ### <a name="example"></a>Przykład
 
@@ -325,7 +331,7 @@ The pair p1 is less than or equal to the pair p4.
 
 ## <a name="op_gt"></a>  Operator&gt;
 
-Testy, jeśli obiekt pary po lewej stronie operatora jest większy niż obiekt pary po prawej stronie.
+Sprawdza, czy obiekt pary po lewej stronie operatora jest większy niż obiekt pary po prawej stronie.
 
 ```cpp
 template <class Type>
@@ -337,9 +343,11 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu `pair` po lewej stronie operatora.
+*left*  
+ Obiekt typu `pair` po lewej stronie operatora.
 
-`right` Obiekt typu `pair` po prawej stronie operatora.
+*right*  
+ Obiekt typu `pair` po prawej stronie operatora.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -347,9 +355,9 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="remarks"></a>Uwagi
 
-`left` `pair` Obiektu jest określany jako większa niż `right` `pair` obiekt zostanie `left` jest większa i nie jest równa `right`.
+`left` `pair` Obiekt jest nazywany być ściśle większa niż `right` `pair` obiektu, jeśli *po lewej stronie* jest większa niż i nie jest równa *prawo*.
 
-W porównaniu z par pierwszych elementów dwóch par wartości ma najwyższy priorytet. Jeśli będą się różnić, wynik ich porównanie są wykonywane w wyniku porównania pary. Jeśli wartości pierwszych elementów nie są różne, wartości drugi elementów są porównywane i pochodzi wynik ich porównanie wyniku porównania pary.
+W odróżnieniu od par wartości pierwszych elementów z dwóch par mają najwyższy priorytet. Jeśli będą się różnić, wynik porównania ich jest traktowana jako wynik porównania pary. Jeśli wartości pierwszych elementów nie są różne, są porównywane wartości elementów drugiej, a wynik porównania ich jest traktowana jako wynik porównania pary.
 
 ### <a name="example"></a>Przykład
 
@@ -410,7 +418,7 @@ The pair p1 is not greater than the pair p4.
 
 ## <a name="op_gt_eq"></a>  Operator&gt;=
 
-Testy, jeśli obiekt pary po lewej stronie operatora jest większa niż lub równa obiekt pary po prawej stronie.
+Sprawdza, czy obiekt pary po lewej stronie operatora jest większy lub równy obiektowi pary po prawej stronie.
 
 ```cpp
 template <class Type>
@@ -422,17 +430,19 @@ constexpr bool operator>=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu `pair` po lewej stronie operatora.
+*left*  
+ Obiekt typu `pair` po lewej stronie operatora.
 
-`right` Obiekt typu `pair` po prawej stronie operatora.
+*right*  
+ Obiekt typu `pair` po prawej stronie operatora.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli `pair` po lewej stronie operatora jest większa niż lub równa `pair` po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true,** Jeśli `pair` po lewej stronie operatora jest większy niż lub równa `pair` po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-W porównaniu z par pierwszych elementów dwóch par wartości ma najwyższy priorytet. Jeśli będą się różnić, wynik ich porównanie są wykonywane w wyniku porównania pary. Jeśli wartości pierwszych elementów nie są różne, wartości drugi elementów są porównywane i pochodzi wynik ich porównanie wyniku porównania pary.
+W odróżnieniu od par wartości pierwszych elementów z dwóch par mają najwyższy priorytet. Jeśli będą się różnić, wynik porównania ich jest traktowana jako wynik porównania pary. Jeśli wartości pierwszych elementów nie są różne, są porównywane wartości elementów drugiej, a wynik porównania ich jest traktowana jako wynik porównania pary.
 
 ### <a name="example"></a>Przykład
 

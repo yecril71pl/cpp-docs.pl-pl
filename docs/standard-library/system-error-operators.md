@@ -9,14 +9,14 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
-ms.openlocfilehash: d0a556505370078f599d6d667fa856723d9bac8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 974b1294f8ef23936d79e64926595779a9019368
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856801"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963696"
 ---
-# <a name="ltsystemerrorgt-operators"></a>&lt;system_error —&gt; operatory
+# <a name="ltsystemerrorgt-operators"></a>&lt;system_error —&gt; operatorów
 
 ||||
 |-|-|-|
@@ -24,7 +24,7 @@ ms.locfileid: "33856801"
 
 ## <a name="op_eq_eq"></a>  operator ==
 
-Testy, jeśli obiekt po lewej stronie operatora jest taki sam jak obiekt po prawej stronie.
+Sprawdza, czy obiekt po lewej stronie operatora jest równy obiektowi po prawej stronie.
 
 ```cpp
 bool operator==(const error_code& left,
@@ -38,8 +38,8 @@ bool operator==(const error_condition& left,
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`left`|Obiekt pod kątem równości.|
-|`right`|Obiekt pod kątem równości.|
+|*left*|Obiekt, który ma zostać przetestowana pod kątem równości.|
+|*right*|Obiekt, który ma zostać przetestowana pod kątem równości.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -51,7 +51,7 @@ Ta funkcja zwraca `left.category() == right.category() && left.value() == right.
 
 ## <a name="op_neq"></a>  operator! =
 
-Testy, jeśli obiekt po lewej stronie operatora nie jest taki sam jak obiekt po prawej stronie.
+Sprawdza, czy obiekt po lewej stronie operatora nie jest równy obiektowi po prawej stronie.
 
 ```cpp
 bool operator!=(const error_code& left,
@@ -65,12 +65,12 @@ bool operator!=(const error_condition& left,
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`left`|Obiekt pod kątem nierówności.|
-|`right`|Obiekt pod kątem nierówności.|
+|*left*|Obiekt, który ma zostać przetestowana pod kątem nierówności.|
+|*right*|Obiekt, który ma zostać przetestowana pod kątem nierówności.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli przekazano obiekt `left` nie jest równa przekazano obiekt `right`; w przeciwnym razie **false**.
+**wartość true,** Jeśli obiekt przekazany w *po lewej stronie* nie jest równa przekazany obiekt *prawo*; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -108,12 +108,12 @@ inline bool operator<(
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`left`|Obiekt do porównania.|
-|`right`|Obiekt do porównania.|
+|*left*|Obiekt do porównania.|
+|*right*|Obiekt do porównania.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli przekazano obiekt `left` jest mniejsza niż przekazano obiekt `right`; W przeciwnym razie **false**.
+**wartość true,** Jeśli obiekt przekazany w *po lewej stronie* jest mniejszy niż obiekt przekazany w *prawo*; W przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 

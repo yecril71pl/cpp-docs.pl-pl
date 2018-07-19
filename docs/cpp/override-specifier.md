@@ -1,5 +1,5 @@
 ---
-title: Specyfikator przesłonięcia | Dokumentacja firmy Microsoft
+title: override, Specyfikator | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d43620ceeb0404c3ad8b10cee3d0a00e7b2f467
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b50ffc096cc710f4028c7effc2dda8822f077f29
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420184"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940657"
 ---
 # <a name="override-specifier"></a>override, specyfikator
-Można użyć `override` — słowo kluczowe do wyznaczenia elementu członkowskiego, funkcji, które przesłonić funkcję wirtualną w klasie podstawowej.  
+Możesz użyć **zastąpienia** — słowo kluczowe, aby wyznaczyć element członkowski funkcji, które zastępują funkcję wirtualną w klasie bazowej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,10 +32,10 @@ function-declaration override;
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- `override` kontekstowa i ma specjalne znaczenie tylko wtedy, gdy jest używany po deklaracji funkcji Członkowskich; w przeciwnym razie nie jest zarezerwowanym słowem kluczowym.  
+ **Zastąp** jest zależny od kontekstu i ma specjalne znaczenie tylko wtedy, gdy jest używany po deklarację funkcji członkowskiej; w przeciwnym razie nie jest zarezerwowanym słowem kluczowym.  
   
 ## <a name="example"></a>Przykład  
- Użyj `override` pomagające zapobiec nieumyślnemu dziedziczenia w kodzie. W poniższym przykładzie przedstawiono where, bez użycia `override`, zachowanie funkcji elementu członkowskiego klasy pochodnej mogą nie mieć zostały przeznaczone. Kompilator nie Emituj błędów dla tego kodu.  
+ Użyj **zastąpienia** pomagające zapobiec nieumyślnemu dziedziczeniu w kodzie. Poniższy przykład ukazuje gdzie, bez używania **zastąpienia**, zachowanie funkcji członkowskiej klasy pochodnej może nie być planowane. Kompilator nie emituje żadnych błędów dla tego kodu.  
   
 ```cpp  
 class BaseClass  
@@ -61,7 +61,7 @@ class DerivedClass: public BaseClass
   
 ```  
   
- Jeśli używasz `override`, kompilator generuje błędy zamiast dyskretnie tworzenia nowego elementu członkowskiego funkcji.  
+ Kiedy używasz **zastąpienia**, kompilator generuje błędy zamiast dyskretnie tworzyć nowe funkcje Członkowskie.  
   
 ```cpp  
 class BaseClass  
@@ -89,7 +89,7 @@ class DerivedClass: public BaseClass
   
 ```  
   
- Aby określić funkcje nie może zostać zastąpione i nie może być dziedziczona klas, użyj [końcowego](../cpp/final-specifier.md) — słowo kluczowe.  
+ Aby określić funkcje nie mogą być zastępowane i że klasy nie może być dziedziczona, użyj [końcowego](../cpp/final-specifier.md) — słowo kluczowe.  
   
 ## <a name="see-also"></a>Zobacz też  
  [final, Specyfikator](../cpp/final-specifier.md)   

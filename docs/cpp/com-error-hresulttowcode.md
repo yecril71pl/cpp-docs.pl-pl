@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e3955fcda665e08e5415652a1e8f1f232d0fe13
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dbcbd73f1a4a6d80ed30a5d70ca43d5fe45677f9
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412267"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941720"
 ---
 # <a name="comerrorhresulttowcode"></a>_com_error::HRESULTToWCode
 **Microsoft Specific**  
   
- Mapuje 32-bitowych `HRESULT` do 16-bitowych `wCode`.  
+ Mapuje HRESULT 32-bitowego do 16-bitowych `wCode`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,16 +38,16 @@ ms.locfileid: "32412267"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `hr`  
- 32-bitową `HRESULT` mają być mapowane do 16-bitowych `wCode`.  
+ *godz.*  
+ HRESULT 32-bitowe mają być mapowane do 16-bitowych `wCode`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- 16-bitowych `wCode` zamapowany z 32-bitową `HRESULT`.  
+ 16-bitowych `wCode` mapowane z HRESULT 32-bitowych.  
   
 ## <a name="remarks"></a>Uwagi  
  Zobacz [_com_error::WCode](../cpp/com-error-wcode.md) Aby uzyskać więcej informacji.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [_com_error::WCode](../cpp/com-error-wcode.md)   

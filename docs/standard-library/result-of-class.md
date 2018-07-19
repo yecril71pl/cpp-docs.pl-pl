@@ -21,16 +21,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c13dcadc87c23e288c7f8c8a7f5bc9752aae5db7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b385d822c2f58d26938b3300207a790dc1193060
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853654"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953052"
 ---
 # <a name="resultof-class"></a>result_of — Klasa
 
-Określa typ zwracany można wywołać typu, który pobiera określone typy argumentów.
+Określa typ zwracany typ możliwy do wywołania, który przyjmuje określone typy argumentów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -48,19 +48,19 @@ template<class T>
 
 ### <a name="parameters"></a>Parametry
 
-`Fn` Typ można wywołać w zapytaniu.
+*FN* wywoływalnej typ do zapytania.
 
-`ArgTypes` Typy z listą argumentów do typu można wywołać w celu zapytania.
+*ArgTypes* typy argumentów na typ możliwy do wywołania do wykonywania zapytań.
 
 ## <a name="remarks"></a>Uwagi
 
-Ten szablon służy do określenia w czasie kompilacji typu wyników `Fn`(`ArgTypes`), gdzie `Fn` jest typu można wywołać, odwołania do funkcji lub odwołanie do typu można wywołać, wywoływane przy użyciu listy argumentów typu `ArgTypes`. `type` Elementu członkowskiego klasy szablonu nazwy typu wyników `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` Jeśli wyrażenie nieznanym `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` jest poprawnie sformułowany. W przeciwnym razie klasy szablonu ma elementu członkowskiego `type`. Typ `Fn` i wszystkie typy w pakiecie parametru `ArgTypes` musi być ukończone typy `void`, lub tablic z nieznanym powiązaniem.
+Użyj tego szablonu, aby określić, w czasie kompilacji, typ wyniku `Fn`(`ArgTypes`), gdzie *Fn* jest typ możliwy do wywołania, odwołania do funkcji lub odwołanie do typu możliwy do wywołania, wywoływane przy użyciu listy argumentów typów w  *ArgTypes*. `type` Składowej klasy szablonu, nazwy typ wyniku `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` Jeśli wyrażenie nieobliczonym `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` jest poprawnie sformułowany. W przeciwnym razie klasa szablonu nie ma składowej `type`. Typ *Fn* i wszystkie typy w pakiecie parametr *ArgTypes* muszą być typami pełnymi **void**, lub tablic nieznany powiązane z.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

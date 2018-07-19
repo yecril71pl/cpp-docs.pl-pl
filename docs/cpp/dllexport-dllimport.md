@@ -20,17 +20,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d57287723da1bb7fbe7f75dece05674142bd417
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a330ecf221d210134425c4bf39c17bac0f5006dc
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414207"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940537"
 ---
 # <a name="dllexport-dllimport"></a>dllexport, dllimport
 **Microsoft Specific**  
   
- `dllexport` i **dllimport** atrybuty klasy magazynu są specyficzne dla firmy Microsoft przez rozszerzenia języków C i C++. Można używać ich do eksportowania i importowania obiektów, danych i funkcji do lub z biblioteki DLL.  
+ **Dllexport** i **dllimport** atrybuty klasy magazynu są rozszerzeniami specyficzne dla firmy Microsoft do języków C i C++. Można ich użyć do eksportowania i importowania funkcji, danych i obiektów do i z biblioteki DLL.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,15 +41,15 @@ ms.locfileid: "32414207"
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Te atrybuty jawnie definiować interfejsu biblioteki DLL do klienta, który może być pliku wykonywalnego lub innej bibliotece DLL. Deklarowanie funkcji jako `dllexport` eliminuje potrzebę stosowania pliku definicji modułu (.def), co najmniej względem specyfikacji wyeksportowanej funkcji. `dllexport` Atrybutu zastępuje `__export` — słowo kluczowe.  
+ Atrybuty te jawnie definiują interfejs DLL dla jego klienta, który może być plikiem wykonawczym lub innym DLL. Deklarowanie funkcji jako **dllexport** eliminuje potrzebę stosowania pliku definicji modułu (.def), co najmniej w odniesieniu do specyfikacji eksportowanych funkcji. **Dllexport** atrybutu zastępuje **__export** — słowo kluczowe.  
   
- Jeśli klasa jest oznaczona declspec(dllexport), wszelkie specjalizacje szablonów klas w hierarchii klasy niejawnie są oznaczone jako declspec(dllexport). Oznacza to, że szablonów klas jawnie są tworzone i elementów członkowskich klasy musi być zdefiniowany.  
+ Jeśli klasa jest oznaczona declspec(dllexport), wszystkie specjalizacje szablonów klas w hierarchii klas są niejawnie oznaczone jako declspec(dllexport). Oznacza to, że szablony klas są jawnie tworzone i elementy członkowskie klas muszą być zdefiniowane.  
   
- `dllexport` funkcji udostępnia funkcję z nazwy ozdobione. Dla funkcji języka C++ w tym przekręcona nazwa. Funkcje języka C lub funkcje, które są zadeklarowane jako `extern "C"`, w tym decoration specyficzne dla platformy, który bazuje na Konwencja wywoływania. Aby uzyskać informacje na nazwij dekorację w kodzie C/C++, zobacz [dekorowane nazwy](../build/reference/decorated-names.md). Nie nazwij dekorację jest stosowany do wyeksportowanej funkcji języka C lub C++ `extern "C"` funkcji przy użyciu `__cdecl` konwencji wywoływania.  
+ **dllexport** funkcja udostępnia funkcję z nazwy dekoracyjnej. W przypadku funkcji C++ obejmuje to dekorowanie nazw. Dla funkcji języka C lub funkcji, które są zadeklarowane jako `extern "C"`, obejmuje to dekorację specyficzną dla platformy, który jest oparty na konwencji wywoływania. Aby uzyskać informacji na temat dekorowania nazw w kodzie języka C/C++, zobacz [nazwy dekorowane](../build/reference/decorated-names.md). Nie dekorowania nazw jest stosowany do eksportowanych funkcji języka C lub C++ `extern "C"` funkcji przy użyciu `__cdecl` konwencji wywoływania.  
   
- Aby wyeksportować bez nazwy, można połączyć się przy użyciu pliku definicji modułu (.def), który definiuje nazwę bez w sekcji eksportu. Aby uzyskać więcej informacji, zobacz [EKSPORTÓW](../build/reference/exports.md). Inny sposób, aby wyeksportować bez nazwy jest użycie `#pragma comment(linker, "/export:alias=decorated_name")` dyrektywy w kodzie źródłowym.  
+ Aby wyeksportować nieozdobioną nazwę, możesz połączyć przy użyciu pliku definicji modułu (.def), który definiuje nieozdobioną nazwę zawartej w sekcji. Aby uzyskać więcej informacji, zobacz [EKSPORTY](../build/reference/exports.md). Innym sposobem, aby wyeksportować nieozdobioną nazwę jest użycie `#pragma comment(linker, "/export:alias=decorated_name")` dyrektywę w kodzie źródłowym.  
   
- Gdy zadeklarować `dllexport` lub **dllimport**, należy użyć [rozszerzona Składnia atrybutu](../cpp/declspec.md) i `__declspec` — słowo kluczowe.  
+ Kiedy Deklarujesz **dllexport** lub **dllimport**, należy użyć [rozszerzonej składni atrybutu](../cpp/declspec.md) i **__declspec** — słowo kluczowe.  
   
 ## <a name="example"></a>Przykład  
   
@@ -59,7 +59,7 @@ __declspec( dllimport ) int i;
 __declspec( dllexport ) void func();  
 ```  
   
- Alternatywnie aby zwiększyć czytelność kodu, można użyć definicje makr:  
+ Ewentualnie Aby zwiększyć czytelność kodu, można użyć definicje makr:  
   
 ```cpp  
 #define DllImport   __declspec( dllimport )  
@@ -81,7 +81,7 @@ DllExport int n;
   
 -   [Korzystanie z dllimport i dllexport w klasach C++](../cpp/using-dllimport-and-dllexport-in-cpp-classes.md)  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [__declspec](../cpp/declspec.md)   

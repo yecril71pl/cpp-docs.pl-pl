@@ -16,36 +16,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 986fc35d1a84737b441d7259bba78459a42404e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1278ab84ea8888b34290c9738e0eb88a4485e99c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947847"
 ---
 # <a name="convertbstrtostring"></a>ConvertBSTRToString
 **Microsoft Specific**  
   
- Konwertuje `BSTR` do wartości **char \*** .  
+ Konwertuje `BSTR` wartość **char \*** .  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
   
-      char* __stdcall ConvertBSTRToString(  
-   BSTR pSrc  
-);  
+char* __stdcall ConvertBSTRToString(BSTR pSrc);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `pSrc`  
+ *pSrc*  
  Zmienna BSTR.  
   
 ## <a name="remarks"></a>Uwagi  
- `ConvertBSTRToString` przydziela ciąg, który należy usunąć.  
+ `ConvertBSTRToString` przydziela ciąg znaków, które należy usunąć.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp 
 // ConvertBSTRToString.cpp  
 #include <comutil.h>  
 #include <stdio.h>  
@@ -69,7 +68,7 @@ BSTR text: Test
 char * text: Test  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<comutil.h >.  

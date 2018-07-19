@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9612cf65479e474b9a6e89a8f5a57ca078c9ed0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 66fd7b267a70b962bb5c28bb5835bd96d44a92f0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361629"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879192"
 ---
 # <a name="ipropertynotifysinkcp-class"></a>Klasa IPropertyNotifySinkCP
-Ta klasa przedstawia [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfejs jako wychodzących interfejs dla obiektu składnika.  
+Ta klasa udostępnia [ipropertynotifysink —](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfejs jako interfejsu wychodzącego w obiekcie składnika.  
   
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,20 +41,20 @@ class IPropertyNotifySinkCP
 ```    
   
 #### <a name="parameters"></a>Parametry  
- `T`  
+ *T*  
  Z klasą pochodną `IPropertyNotifySinkCP`.  
   
- `CDV`  
- Klasa, która zarządza połączeniami między punktem połączenia i jego sink. Wartość domyślna to [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), dzięki czemu nieograniczoną liczbę połączeń. Można również użyć [CComUnkArray](../../atl/reference/ccomunkarray-class.md), który określa stałą liczbę połączeń.  
+ *KOR*  
+ Klasa, która zarządza połączeniami między punktem połączenia i jego ujścia. Wartość domyślna to [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), co umożliwia nieograniczone połączenia. Można również użyć [CComUnkArray](../../atl/reference/ccomunkarray-class.md), która określa stałą liczbę połączeń.  
   
 ## <a name="remarks"></a>Uwagi  
- `IPropertyNotifySinkCP` dziedziczy wszystkie metody, za pośrednictwem swojej klasy podstawowej [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md).  
+ `IPropertyNotifySinkCP` dziedziczy wszystkie metody, za pośrednictwem swojej klasy bazowej, [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md).  
   
- [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfejs umożliwiający obiekt sink otrzymywać powiadomienia o zmianach właściwości. Klasa `IPropertyNotifySinkCP` udostępnia tego interfejsu jako interfejsu wychodzącego składnika obiektu. Klient musi implementować `IPropertyNotifySink` metody dla obiekt sink.  
+ [Ipropertynotifysink —](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfejs umożliwia obiekt sink otrzymywać powiadomienia o zmianie właściwości. Klasa `IPropertyNotifySinkCP` udostępnia ten interfejs jako interfejsu wychodzącego w obiekcie składnika. Klient musi implementować `IPropertyNotifySink` metody na obiekt sink.  
   
- Pochodzi z klasy `IPropertyNotifySinkCP` gdy chcesz utworzyć punkt połączenia reprezentującą `IPropertyNotifySink` interfejsu.  
+ Pochodzi z klasy `IPropertyNotifySinkCP` gdy chcesz utworzyć punkt połączenia, który reprezentuje `IPropertyNotifySink` interfejsu.  
   
- Aby uzyskać więcej informacji o używaniu punkty połączenia w ATL, zobacz artykuł [punkty połączenia](../../atl/atl-connection-points.md).  
+ Aby uzyskać więcej informacji dotyczących używania punktów połączenia w ATL, zobacz artykuł [punkty połączenia](../../atl/atl-connection-points.md).  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlctl.h  
@@ -62,4 +62,4 @@ class IPropertyNotifySinkCP
 ## <a name="see-also"></a>Zobacz też  
  [Klasa IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)   
  [Klasa IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)   
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

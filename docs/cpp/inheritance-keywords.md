@@ -28,11 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1088a920e5d023e4dea78e55610bebc0f20c2bac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 44cdb2b8149d2e8faf09ed715f96bc069620076b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947846"
 ---
 # <a name="inheritance-keywords"></a>Słowa kluczowe dziedziczenia
 **Microsoft Specific**  
@@ -50,20 +51,20 @@ class [__virtual_inheritance] class-name;
   
  C++ umożliwia deklarację wskaźnika do składowej klasy przed definicją klasy. Na przykład:  
   
-```  
+```cpp 
 class S;  
 int S::*p;  
 ```  
   
- W powyższym kodzie `p` został zadeklarowany jako wskaźnik do elementu członkowskiego klasy S. liczba całkowita Jednak `class S` ma jeszcze nie zostały zdefiniowane w tym kodzie; tylko została ona zadeklarowana. Gdy kompilator napotka taki wskaźnik, musi stworzyć uogólnioną reprezentację wskaźnika. Rozmiar reprezentacji zależy od określonego modelu dziedziczenia. Istnieją cztery sposoby określania modelu dziedziczenia w kompilatorze:  
+ W powyższym kodzie `p` jest deklarowana jako wskaźnik do liczby całkowitej składowej klasy S. Jednak `class S` ma jeszcze nie została zdefiniowana w niniejszym kodzie; go została tylko zadeklarowana. Gdy kompilator napotka taki wskaźnik, musi stworzyć uogólnioną reprezentację wskaźnika. Rozmiar reprezentacji zależy od określonego modelu dziedziczenia. Istnieją cztery sposoby określania modelu dziedziczenia w kompilatorze:  
   
--   W środowisku IDE w obszarze **reprezentacja wskaźnika do elementu członkowskiego**  
+-   W środowisku IDE, w obszarze **reprezentacja wskaźnika do elementu członkowskiego**  
   
--   Za pomocą wiersza polecenia [/vmg](../build/reference/vmb-vmg-representation-method.md) przełącznika  
+-   W wierszu polecenia za pomocą [/vmg](../build/reference/vmb-vmg-representation-method.md) przełącznika  
   
--   Przy użyciu [pointers_to_members](../preprocessor/pointers-to-members.md) pragma  
+-   Za pomocą [pointers_to_members](../preprocessor/pointers-to-members.md) pragma  
   
--   Za pomocą słów kluczowych dziedziczenia `__single_inheritance`, `__multiple_inheritance` i `__virtual_inheritance`. Technika ta kontroluje model dziedziczenia na podstawie klasy.  
+-   Za pomocą słów kluczowych dziedziczenia **__single_inheritance**, **__multiple_inheritance**, i **__virtual_inheritance**. Technika ta kontroluje model dziedziczenia na podstawie klasy.  
   
     > [!NOTE]
     >  Jeśli zawsze deklarowany jest wskaźnik do składowej klasy po zdefiniowaniu klasy, nie trzeba używać żadnej z tych opcji.  
@@ -72,7 +73,7 @@ int S::*p;
   
  Jeśli powyższy przykład zmienimy na:  
   
-```  
+```cpp 
 class __single_inheritance S;  
 int S::*p;  
 ```  
@@ -82,7 +83,7 @@ int S::*p;
 > [!NOTE]
 >  Taka sama wczesna reprezentacja wskaźnika składowej klasy powinna występować w każdej jednostce translacji, która deklaruje wskaźniki do składowych tej klasy, a deklaracja powinna występować przed deklaracją wskaźników do składowych.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Słowa kluczowe](../cpp/keywords-cpp.md)

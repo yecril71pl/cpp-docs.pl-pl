@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8746bf216be417fb569aae58421b272c983914b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 967ae999811e829ae7a890d367a6cdc16fb28239
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360690"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880492"
 ---
 # <a name="cstringrefelementtraits-class"></a>Klasa CStringRefElementTraits
-Ta klasa udostępnia statyczne funkcje związane z przechowywane w obiektach klasy kolekcji ciągów. Obiekty ciągu są traktowane jako odwołania.  
+Ta klasa dostarcza statyczne funkcje związane z przechowywanych w obiektach klasy kolekcji ciągów. Obiektów w postaci ciągów są traktowane jako odwołania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,8 +38,8 @@ class CStringRefElementTraits : public CElementTraitsBase<T>
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Typ danych ma być przechowywany w kolekcji.  
+ *T*  
+ Typ danych, które mają być przechowywane w kolekcji.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -47,12 +47,12 @@ class CStringRefElementTraits : public CElementTraitsBase<T>
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CStringRefElementTraits::CompareElements](#compareelements)|Wywołanie tej funkcji statycznych, można porównać dwóch elementów ciąg pod kątem równości.|  
-|[CStringRefElementTraits::CompareElementsOrdered](#compareelementsordered)|Wywołanie tej funkcji statycznych, aby porównać dwa elementy ciągu.|  
-|[CStringRefElementTraits::Hash](#hash)|Wywołanie tej funkcji statycznych, aby obliczyć wartość skrótu dla elementu dany ciąg znaków.|  
+|[CStringRefElementTraits::CompareElements](#compareelements)|Wywołaj tę funkcję statycznej, aby porównać dwa elementy ciągu dla równości.|  
+|[CStringRefElementTraits::CompareElementsOrdered](#compareelementsordered)|Wywołaj tę funkcję statycznej, aby porównać dwa elementy ciągu.|  
+|[CStringRefElementTraits::Hash](#hash)|Wywołaj tę funkcję statycznej, aby obliczyć wartość skrótu dla elementu dany ciąg znaków.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta klasa udostępnia statyczne funkcje dotyczące porównywanie ciągów i tworzenia wartość skrótu. Funkcje te są przydatne do przechowywania danych na podstawie ciągu przy użyciu klasy kolekcji. W odróżnieniu od [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md) i [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md), `CStringRefElementTraits` powoduje, że `CString` argumenty do przekazania jako **const cstring — &** odwołania.  
+ Ta klasa dostarcza statycznej funkcji porównywania ciągów i tworzenia wartość skrótu. Te funkcje są przydatne w przypadku korzystania z klasy kolekcji do przechowywania danych w ciągu. W odróżnieniu od [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md) i [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md), `CStringRefElementTraits` powoduje, że `CString` argumenty do przekazania jako **const** `CString&` odwołania.  
   
  Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-collection-classes.md).  
   
@@ -65,53 +65,53 @@ class CStringRefElementTraits : public CElementTraitsBase<T>
  **Nagłówek:** atlcoll.h  
   
 ##  <a name="compareelements"></a>  CStringRefElementTraits::CompareElements  
- Wywołanie tej funkcji statycznych, można porównać dwóch elementów ciąg pod kątem równości.  
+ Wywołaj tę funkcję statycznej, aby porównać dwa elementy ciągu dla równości.  
   
 ```
 static bool CompareElements(INARGTYPE element1, INARGTYPE element2) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `element1`  
+ *element1*  
  Pierwszy ciąg elementu.  
   
- `element2`  
+ *element2*  
  Drugi ciąg elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość PRAWDA, jeśli elementy są takie same, wartość false w przeciwnym razie wartość.  
+ Zwraca wartość PRAWDA, jeśli elementy są równe, wartość false w przeciwnym razie.  
   
 ##  <a name="compareelementsordered"></a>  CStringRefElementTraits::CompareElementsOrdered  
- Wywołanie tej funkcji statycznych, aby porównać dwa elementy ciągu.  
+ Wywołaj tę funkcję statycznej, aby porównać dwa elementy ciągu.  
   
 ```
 static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `str1`  
+ *str1*  
  Pierwszy ciąg elementu.  
   
- `str2`  
+ *str2*  
  Drugi ciąg elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zero, jeśli ciągi są identyczne, < 0 Jeśli `str1` jest mniejsza niż `str2`, lub > 0 Jeśli `str1` jest większa niż `str2`. [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) metoda jest używana do wykonania porównania.  
+ Zero, jeśli ciągi są identyczne, < 0 Jeśli *str1* jest mniejsza niż *str2*, lub > 0 Jeśli *str1* jest większa niż *str2*. [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) metoda służy do przeprowadzania porównania.  
   
 ##  <a name="hash"></a>  CStringRefElementTraits::Hash  
- Wywołanie tej funkcji statycznych, aby obliczyć wartość skrótu dla elementu dany ciąg znaków.  
+ Wywołaj tę funkcję statycznej, aby obliczyć wartość skrótu dla elementu dany ciąg znaków.  
   
 ```
 static ULONG Hash(INARGTYPE str) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `str`  
- String element.  
+ *str*  
+ Element ciągu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość skrótu obliczane przy użyciu zawartości ciągu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)   
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

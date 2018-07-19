@@ -18,44 +18,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70731665ca2a2eba739f139678e0f7eaface2b85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92f7e0f3652a1142c97f878784edba6229fb19cd
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947856"
 ---
 # <a name="uuidof-operator"></a>Operator __uuidof
 **Microsoft Specific**  
   
- Pobiera identyfikator GUID dołączony do wyrażenia.  
+ Pobiera identyfikator GUID podłączony do wyrażenia.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
   
-      __uuidof (  
-   expression   
-)  
+__uuidof (expression)  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- *Wyrażenie* może być nazwa typu, wskaźnik, odwołanie lub tablicy tego typu, szablon specjalizowany w tych typów lub zmienną z tych typów. Argument jest prawidłowy, jak kompilator służy można znaleźć dołączonego identyfikatora GUID.  
+ *Wyrażenie* może być nazwą typu, wskaźnik, odwołanie lub tablicy tego typu, szablon przeznaczone specjalnie dla tych typów lub zmienną typu. Argument jest nieprawidłowy, tak długo, jak kompilator służy można znaleźć dołączonego identyfikatora GUID.  
   
- Jest szczególnych przypadkach tym wewnętrznych, gdy albo **0** lub **NULL** jest podana jako argument. W takim przypadku `__uuidof` zwraca identyfikator GUID składa się z zer.  
+ Przypadek specjalny tym wewnętrznych jest, gdy albo **0** lub wartość NULL jest dostarczany jako argument. W tym przypadku **__uuidof** zwróci identyfikator GUID składają się z zer.  
   
- Użyj słowa kluczowego można wyodrębnić identyfikatora GUID dołączony do:  
+ Użyj słowa kluczowego, aby wyodrębnić identyfikator GUID podłączony do:  
   
--   Obiekt o [uuid](../cpp/uuid-cpp.md) rozszerzonych atrybutów.  
+-   Obiekt o [uuid](../cpp/uuid-cpp.md) atrybutów rozszerzonych.  
   
--   Blok biblioteki utworzone za pomocą [modułu](../windows/module-cpp.md) atrybutu.  
+-   Blok biblioteki utworzonych za pomocą [modułu](../windows/module-cpp.md) atrybutu.  
   
 > [!NOTE]
->  W kompilację debugowania `__uuidof` zawsze inicjuje obiekt dynamicznie (w czasie wykonywania). W kompilacji wydania `__uuidof` statycznie (w czasie kompilacji) można zainicjować obiektu.  
+>  Do kompilacji debugowanej **__uuidof** zawsze inicjuje obiekt dynamicznie (w czasie wykonywania). W kompilacji wydania **__uuidof** statycznie (w czasie kompilacji) można zainicjować obiektu.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod (skompilowane z ole32.lib) do wyświetlenia identyfikatora uuid bloku biblioteki utworzone za pomocą atrybutu modułu:  
+ Poniższy kod (skompilowany przy użyciu ole32.lib) spowoduje wyświetlenie uuid bloku biblioteki utworzonych za pomocą atrybutu modułu:  
   
-```  
+```cpp 
 // expre_uuidof.cpp  
 // compile with: ole32.lib  
 #include "stdio.h"  
@@ -77,13 +76,13 @@ int main() {
 ```  
   
 ## <a name="comments"></a>Komentarze  
- W przypadkach, gdy nazwa biblioteki nie jest już w zakresie, można użyć __LIBID\_ zamiast `__uuidof`. Na przykład:  
+ W przypadkach, w którym nazwa biblioteki nie jest już w zakresie, można użyć `__LIBID_` zamiast **__uuidof**. Na przykład:  
   
-```  
+```cpp 
 StringFromCLSID(__LIBID_, &lpolestr);  
 ```  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wyrażenia z operatorami Jednoargumentowymi](../cpp/expressions-with-unary-operators.md)   

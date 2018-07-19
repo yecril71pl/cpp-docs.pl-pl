@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 824108b78ede3999a83b1c7c1ac75cc847f182f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fb2e870c7418c0d0a6cf3cd82bc0a8acb45466a0
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413287"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941268"
 ---
 # <a name="bstrtbstrt"></a>_bstr_t::_bstr_t
 **Microsoft Specific**  
@@ -53,37 +53,37 @@ _bstr_t(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `s1`  
- A `_bstr_t` obiektu do skopiowania.  
+ *S1*  
+ A `_bstr_t` kopiowanego obiektu.  
   
- `s2`  
+ *S2*  
  Ciąg znaków wielobajtowych.  
   
- `s3`  
+ *S3*  
  Ciąg Unicode  
   
- `var`  
+ *var*  
  A [_variant_t](../cpp/variant-t-class.md) obiektu.  
   
- `bstr`  
+ *BSTR*  
  Istniejące `BSTR` obiektu.  
   
- `fCopy`  
- Jeśli `false`, `bstr` argument jest dołączony do nowego obiektu bez tworzenia kopii przez wywołanie metody `SysAllocString`.  
+ *fCopy*  
+ W przypadku wartości FAŁSZ *bstr* argument jest dołączony do nowego obiektu bez skopiowanie przez wywołanie metody `SysAllocString`.  
   
 ## <a name="remarks"></a>Uwagi  
  W poniższej tabeli opisano `_bstr_t` konstruktorów.  
   
 |Konstruktor|Opis|  
 |-----------------|-----------------|  
-|`_bstr_t( )`|Tworzy domyślny `_bstr_t` obiekt hermetyzujący wartość null `BSTR` obiektu.|  
-|`_bstr_t( _bstr_t&`  `s1`  `)`|Konstruuje `_bstr_t` obiektu jest kopią innego.<br /><br /> Jest to *skrócona* kopia, co zwiększa liczbę odwołanie z hermetyzowany `BSTR` obiektu zamiast tworzenia nowej.|  
-|`_bstr_t( char*`  `s2`  `)`|Konstruuje `_bstr_t` obiektu przez wywołanie metody `SysAllocString` do tworzenia nowego `BSTR` obiekt, a następnie zamyka go.<br /><br /> Ten konstruktor najpierw jest przeprowadzane wielobajtowe do konwersji Unicode.|  
-|`_bstr_t( wchar_t*`  `s3`  `)`|Konstruuje `_bstr_t` obiektu przez wywołanie metody `SysAllocString` do tworzenia nowego `BSTR` obiekt, a następnie zamyka go.|  
-|`_bstr_t( _variant_t&`  `var`  `)`|Konstruuje `_bstr_t` obiekt z `_variant_t` obiektu przez pobranie pierwszy `BSTR` obiektu z obiektu hermetyzowany VARIANT.|  
-|`_bstr_t( BSTR`  `bstr` `, bool`  `fCopy`  `)`|Konstruuje `_bstr_t` obiektu z istniejącego `BSTR` (w przeciwieństwie do `wchar_t*` ciągu). Jeśli `fCopy` ma wartość false, podane `BSTR` jest dołączony do nowego obiektu bez tworzenia nowej kopii z `SysAllocString`.<br /><br /> Ten konstruktor jest używany przez funkcje otoki w nagłówkach biblioteki typu do Hermetyzowanie i przejąć na własność `BSTR` który jest zwracany przez metodę interfejsu.|  
+|`_bstr_t( )`|Tworzy domyślny `_bstr_t` obiekt, który hermetyzuje wartość null `BSTR` obiektu.|  
+|`_bstr_t( _bstr_t&`  `s1`  `)`|Konstruuje `_bstr_t` obiektu jako kopię innej.<br /><br /> Jest to *płytka* kopia, która zwiększa liczbę odwołań z zhermetyzowany `BSTR` obiektu zamiast tworzenia nowej.|  
+|`_bstr_t( char*`  `s2`  `)`|Konstruuje `_bstr_t` obiektu przez wywołanie metody `SysAllocString` do tworzenia nowego `BSTR` obiektu, a następnie zamyka go.<br /><br /> Ten konstruktor wykonuje najpierw wielobajtowych do konwersji z Unicode.|  
+|`_bstr_t( wchar_t*`  `s3`  `)`|Konstruuje `_bstr_t` obiektu przez wywołanie metody `SysAllocString` do tworzenia nowego `BSTR` obiektu, a następnie zamyka go.|  
+|`_bstr_t( _variant_t&`  `var`  `)`|Konstruuje `_bstr_t` obiektu z `_variant_t` obiektu przez pobranie pierwszy `BSTR` obiektu z zhermetyzowanego obiektu VARIANT.|  
+|`_bstr_t( BSTR`  `bstr` `, bool`  `fCopy`  `)`|Konstruuje `_bstr_t` obiektu z istniejącego `BSTR` (w przeciwieństwie do `wchar_t*` ciągu). Jeśli `fCopy` ma wartość FAŁSZ, podane `BSTR` jest dołączony do nowego obiektu bez wprowadzania nowej kopii z `SysAllocString`.<br /><br /> Ten konstruktor jest używany przez funkcje otoki w nagłówkach biblioteki typów do hermetyzacji i przejęcie na własność `BSTR` zwracanym przez metodę interfejsu.|  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [_bstr_t — klasa](../cpp/bstr-t-class.md)   

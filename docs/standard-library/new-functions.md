@@ -7,14 +7,14 @@ f1_keywords:
 - new/std::nothrow
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
-ms.openlocfilehash: c52376f504e526c03d4f2c2afd39c029761f3c99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f930fb43ea554e1dd445dabb382adecc6f67e35f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852611"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964967"
 ---
-# <a name="ltnewgt-functions"></a>&lt;nowe&gt; funkcje
+# <a name="ltnewgt-functions"></a>&lt;nowe&gt; funkcji
 
 |||
 |-|-|
@@ -22,7 +22,7 @@ ms.locfileid: "33852611"
 
 ## <a name="nothrow"></a>  nothrow
 
-Udostępnia obiekt ma być używany jako argument `nothrow` wersji **nowe** i **usunąć**.
+Zapewnia obiekt ma być używany jako argument dla **nothrow** wersje **nowe** i **Usuń**.
 
 ```cpp
 extern const std::nothrow_t nothrow;
@@ -30,15 +30,15 @@ extern const std::nothrow_t nothrow;
 
 ### <a name="remarks"></a>Uwagi
 
-Obiekt służy jako argument funkcji jest zgodny z typem parametru [std::nothrow_t](../standard-library/nothrow-t-structure.md).
+Obiekt jest używany jako argumentu funkcji będzie pasował do typu parametru [std::nothrow_t](../standard-library/nothrow-t-structure.md).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [nowy operator](../standard-library/new-operators.md#op_new) i [nowy operator&#91; &#93; ](../standard-library/new-operators.md#op_new_arr) przykłady `std::nothrow_t` jest używany jako parametr funkcji.
+Zobacz [nowy operator](../standard-library/new-operators.md#op_new) i [nowy operator&#91; &#93; ](../standard-library/new-operators.md#op_new_arr) przykładów dotyczących sposobów `std::nothrow_t` jest używany jako parametr funkcji.
 
-## <a name="set_new_handler"></a>  set_new_handler —
+## <a name="set_new_handler"></a>  set_new_handler
 
-Instaluje funkcji użytkownika, który ma być wywoływana, gdy `operator new` nie powiedzie się może przydzielić pamięci.
+Instaluje funkcję użytkownika, który ma być wywoływana, gdy **nowy operator** zakończy się niepowodzeniem w próba przydzielić pamięci.
 
 ```cpp
 new_handler set_new_handler(new_handler Pnew) throw();
@@ -46,7 +46,8 @@ new_handler set_new_handler(new_handler Pnew) throw();
 
 ### <a name="parameters"></a>Parametry
 
-`Pnew` New_handler do zainstalowania.
+*Pnew*  
+`new_handler` Do zainstalowania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -54,7 +55,7 @@ new_handler set_new_handler(new_handler Pnew) throw();
 
 ### <a name="remarks"></a>Uwagi
 
-Magazyny funkcja `Pnew` w statycznego [nowy program obsługi](../standard-library/new-typedefs.md#new_handler) wskaźnika, który przechowuje, zwracana wartość wcześniej zapisanych we wskaźniku. Nowy program obsługi jest używany przez [nowy operator](../standard-library/new-operators.md#op_new)( **size_t**).
+Magazyny funkcja *Pnew* w statycznych [nowy program obsługi](../standard-library/new-typedefs.md#new_handler) wskaźnika, który przechowuje, zwracana wartość wcześniej przechowywany we wskaźniku. Nowy program obsługi jest używany przez [nowy operator](../standard-library/new-operators.md#op_new)(**size_t**).
 
 ### <a name="example"></a>Przykład
 

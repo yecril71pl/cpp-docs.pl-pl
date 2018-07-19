@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cda5485fee6ae0d8a7de8c9212e7e27c76f430ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8e3ec18d00c50db29c6a08956d4c3375a4dc7ae
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33905370"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962387"
 ---
 # <a name="isvolatile-class"></a>is_volatile — Klasa
 
-Testy, jeśli typ jest nietrwały.
+Sprawdza, czy typ jest nietrwały.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,11 +37,11 @@ struct is_volatile;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zapytania.
+*Ty* typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true, jeśli `Ty` jest `volatile-qualified`.
+Wystąpienie typu predykatu ma wartość true, jeśli *Ty* jest `volatile-qualified`.
 
 ## <a name="example"></a>Przykład
 
@@ -83,7 +83,7 @@ is_volatile<volatile int> == true
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

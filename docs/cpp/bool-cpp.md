@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2af648b2b93d2d01eaf66f5b642b6514063577d6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f3bd43c9ceb4f0a0f73b86e3a4ecf4d851d504b3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410866"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939315"
 ---
 # <a name="bool-c"></a>bool (C++)
 
-To słowo kluczowe jest typu wbudowanego. Zmienna tego typu może mieć wartości [true](../cpp/true-cpp.md) i [false](../cpp/false-cpp.md). Wyrażenia warunkowe ma typ `bool` , więc wartości typu `bool`. Na przykład `i!=0` ma teraz **true** lub **false** w zależności od wartości `i`.  
+To słowo kluczowe jest typu wbudowanego. Zmienna tego typu może mieć wartości [true](../cpp/true-cpp.md) i [false](../cpp/false-cpp.md). Wyrażenia warunkowe mają typ **bool** i dlatego mają wartości typu **bool**. Na przykład `i!=0` ma teraz wartość PRAWDA lub FAŁSZ w zależności od wartości `i`.  
 
-**Visual Studio 2017 wersji 15.3 i nowszych** (dostępnych z [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)): argument przyrostek lub prefiks inkrementacji lub dekrementacji operator nie może być typu **bool**. Innymi słowy, podane zmiennej **b** typu **bool**, wyrażenia te nie są już dozwolone:
+**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): argument przyrostka lub przedrostka inkrementacji lub dekrementacji operator nie może być typu **bool**. Innymi słowy, biorąc pod uwagę zmienną `b` typu **bool**, te wyrażenia nie są już dozwolone:
 
 ```cpp
     b++;
@@ -38,7 +38,7 @@ To słowo kluczowe jest typu wbudowanego. Zmienna tego typu może mieć wartośc
     --b;
 ```
   
-Wartości **true** i **false** ma następującej relacji:  
+Wartości TRUE i FALSE mają następującą relację:  
   
 ```cpp  
 !false == true  
@@ -51,14 +51,14 @@ W poniższej instrukcji:
 if (condexpr1) statement1;   
 ```  
   
-Jeśli `condexpr1` jest **true**, `statement1` jest zawsze wykonywane; Jeśli `condexpr1` jest **false**, `statement1` nie został wykonany.  
+Jeśli `condexpr1` ma wartość PRAWDA, `statement1` jest zawsze wykonywana; Jeśli `condexpr1` ma wartość FAŁSZ, `statement1` nigdy nie jest wykonywana.  
   
-Operatory przyrostka lub prefiks **++** operator jest stosowany do zmiennej typu **bool**, zmienna ma ustawioną **true**. 
-**Visual Studio 2017 wersji 15.3 i nowszych**: operator ++ dla **bool** została usunięta z języka i nie jest już obsługiwana.
+Gdy przyrostka lub przedrostka **++** operator jest stosowany do zmiennej typu **bool**, zmienna jest ustawiana na wartość TRUE. 
+**Visual Studio 2017 w wersji 15.3 lub nowszej**: operator ++ dla **bool** został usunięty z języka i nie jest już obsługiwana.
 
-Operatory przyrostka lub prefiks **--** do zmiennej tego typu nie można zastosować operatora.  
+Przyrostka lub przedrostka **--** do zmiennej tego typu nie można zastosować operatora.  
   
- **Bool** typ uczestniczy w promocje typów całkowitych. R typu **bool** można przekonwertować typu r **int**, z **false** staje się zero i **true** która staje się jeden. Jako typu różne **bool** uczestniczy w Rozpoznanie przeciążenia.  
+ **Bool** typ uczestniczy w promocjach integralnych. Wartości typu **bool** można przekonwertować wartości typu **int**z FALSE staje się zero i wartość TRUE, staje się jedynką. Jako typ samodzielny **bool** uczestniczy w przeciążeniu rozdzielczości.  
   
 ## <a name="see-also"></a>Zobacz także
 

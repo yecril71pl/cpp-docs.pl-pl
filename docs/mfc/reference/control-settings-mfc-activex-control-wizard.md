@@ -1,5 +1,5 @@
 ---
-title: Sterowanie ustawieniami, Kreator formantów MFC ActiveX | Dokumentacja firmy Microsoft
+title: Ustawienia kontrolki, Kreator kontrolek ActiveX MFC | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,78 +16,78 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2161cea739d918bc0f5772a6cb08c29082a6e670
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db62ce0770199b3a928e3f01c04b7f0600ad2dcd
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371865"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853718"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>Ustawienia kontrolki, kreator kontrolek ActiveX MFC
-Ta strona kreatora można określić sposób formantu ma zachowywać się. Można na przykład podstawowa formantu na standardowe typy formantów systemu Windows, zoptymalizować jego działanie i wygląd lub wskazują, że formant może działać jako kontener dla innych formantów.  
+Aby określić, jak kontrolka zachowuje się, należy użyć tej strony kreatora. Można na przykład podstawowa kontrolki w standardowych typów formantów Windows, optymalizowanie jego zachowania i wyglądu lub wskazują, że formant może działać jako kontener dla innych kontrolek.  
   
- Aby uzyskać więcej informacji na temat wybierania opcji na tej stronie, aby zmaksymalizować wydajność formantu, zobacz [kontrolki ActiveX MFC: Optymalizacja](../../mfc/mfc-activex-controls-optimization.md).  
+ Aby uzyskać więcej informacji o tym, jak wybrać opcje na tej stronie, aby zmaksymalizować wydajność formantu, zobacz [kontrolki ActiveX MFC: Optymalizacja](../../mfc/mfc-activex-controls-optimization.md).  
   
 ## <a name="uielement-list"></a>Lista elementów UI  
- **Tworzenie formantu na podstawie**  
- Na tej liście można wybrać rodzaj formantu, z którego powinny dziedziczyć formantu. Lista jest podzbiorem klasy formantów, które są dostępne dla `CreateWindowEx` i dodatkowe formanty standardowe, które są określone w commctrl.h. Wybór określa styl formantu w `PreCreateWindow` działać w *nazwa_projektu.nazwa_modułu.nazwa_procedury*Ctrl.cpp pliku. Aby uzyskać więcej informacji, zobacz [kontrolki ActiveX MFC: Tworzenie podklasy kontrolki okna](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).  
+ **Tworzenie kontrolki na podstawie**  
+ Na tej liście możesz wybrać rodzaj kontrolki, z którego powinien dziedziczyć formantu. Lista jest podzbiorem klasy kontrolek, które są dostępne dla `CreateWindowEx` i dodatkowe formanty standardowe, które są określone w commctrl.h. Ten wybór decyduje styl formantu w `PreCreateWindow` działa w programach *ProjName*Ctrl.cpp pliku. Aby uzyskać więcej informacji, zobacz [kontrolki ActiveX MFC: Tworzenie podklasy kontrolki Windows](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).  
   
 |Formant|Opis|  
 |-------------|-----------------|  
-|**PRZYCISK**|Kontrolkę przycisku systemu Windows|  
-|**POLA KOMBI COMBOBOX**|Kontrolka pola kombi systemu Windows|  
-|**EDYTUJ**|Pole edycji systemu Windows|  
-|**POLA LISTY**|Pole listy systemu Windows|  
-|**PASEK PRZEWIJANIA**|Pasek przewijania systemu Windows|  
-|**STATYCZNE**|Kontrolki statycznej systemu Windows|  
+|**PRZYCISK**|Kontrolka przycisku Windows|  
+|**POLE KOMBI COMBOBOX**|Kontrolka pola kombi Windows|  
+|**EDYTUJ**|Formant pola edycji Windows|  
+|**POLE LISTY**|Pole listy Windows|  
+|**PASEK PRZEWIJANIA**|Windows pasek przewijania|  
+|**STATYCZNE**|Formant statyczny Windows|  
 |**msctls_hotkey32**|Formantu wspólnego klawisza dostępu|  
-|**msctls_progress32**|Pasek formantu wspólnego postępu|  
-|**msctls_statusbar32**|Stan paska formantu wspólnego|  
-|**msctls_trackbar32**|Śledź superpaska formantu wspólnego|  
-|**msctls_updown32**|Przycisk pokrętła (lub góra dół) formantu wspólnego|  
+|**msctls_progress32**|Pasek wspólne kontrolki postępu|  
+|**msctls_statusbar32**|Stan paska formantu typowego|  
+|**msctls_trackbar32**|Śledź paska formantu typowego|  
+|**msctls_updown32**|Przycisk pokrętła (lub góra dół) wspólną kontrolą|  
 |**SysAnimate32**|Typowe formantu animacji|  
 |**SysHeader32**|Typowe kontrolki nagłówka|  
-|**SysListView32**|Typowe kontrolki widoku listy|  
+|**SysListView32**|Wspólnego formantu widoku listy|  
 |**SysTabControl32**|Typowe formantu karty|  
-|**SysTreeView32**|Typowe kontrolki widoku drzewa|  
+|**SysTreeView32**|Wspólnego formantu widoku drzewa|  
   
- **Aktywuje, gdy jest widoczne**  
- Określa, że okna dla formantu, gdy jest on dostępny. Domyślnie **uaktywnia się, gdy widoczny** opcja jest zaznaczona. Aby odłożyć aktywację sterowania, dopóki kontenera wymaga (na przykład gdy użytkownik kliknie przycisk myszy), usuń zaznaczenie tej opcji. Jeśli ta funkcja jest wyłączona, formantu nie pociągnąć za sobą konieczności tworzenia okna dopóki nie jest to wymagane. Aby uzyskać więcej informacji, zobacz [wyłączenie aktywować podczas widoczna opcja](../../mfc/turning-off-the-activate-when-visible-option.md).  
+ **Aktywowany, gdy widoczny**  
+ Określa, czy okno został utworzony dla kontrolki, gdy jest on dostępny. Domyślnie **aktywowany, gdy widoczny** opcja jest zaznaczona. Jeśli chcesz odłożyć aktywację kontroli, dopóki kontener wymaga (na przykład, gdy użytkownik kliknie przycisk myszy), usuń zaznaczenie tej opcji. Gdy ta funkcja jest wyłączona, formant nie są naliczane pieniędzy na tworzenie okien, dopóki nie jest to wymagane. Aby uzyskać więcej informacji, zobacz [wyłączanie opcji aktywacji w przypadku widoczności](../../mfc/turning-off-the-activate-when-visible-option.md).  
   
  **Niewidoczne w czasie wykonywania**  
- Określa, czy formant nie ma interfejsu użytkownika w czasie wykonywania. Czasomierz jest rodzajem formantu, który ma być niewidoczna.  
+ Określa, że kontrolka nie ma interfejsu użytkownika w czasie wykonywania. Czasomierz to rodzaj kontrolki, które prawdopodobnie chcą być niewidoczna.  
   
- **Zawiera informacje — okno dialogowe**  
- Określa, czy formant ma standard Windows **o** okno dialogowe, które wyświetla numer wersji i informacje o prawach autorskich.  
+ **Ma okno dialogowe informacje**  
+ Określa, że kontrolka ma Standardowy Windows **o** okno dialogowe, które wyświetla numer wersji i informacje o prawach autorskich.  
   
 > [!NOTE]
->  Jak użytkownik uzyskuje dostęp do pomocy dla formantu zależy od tego, jak zostały zaimplementowane pomocy i określa, czy pomoc w kontroli jest zintegrowana z kontenera pomocy. Aby uzyskać więcej informacji na temat sposobu integracji Pomocy, na [biblioteki MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) witryny sieci Web, wyszukaj "Dodawanie Context-Sensitive pomoc do MFC formantu ActiveX".  
+>  Jak użytkownik uzyskuje dostęp do pomocy dla formantu zależy od tego, jak zostały zaimplementowane pomocy i czy zintegrowano pomoc do kontrolek za pomocą kontenerów. Aby uzyskać więcej informacji na temat sposobu integrowania pomocy, na [biblioteki MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) witryny sieci Web, wyszukiwanie "Dodawanie Context-Sensitive pomoc do kontrolki ActiveX MFC".  
   
- Po wybraniu tej opcji wstawia `AboutBox` kontrolować metody w klasie kontroli projektu (C*nazwa_projektu.nazwa_modułu.nazwa_procedury*Ctrl.cpp) i dodaje AboutBox do mapy wysyłania projektu. Domyślnie ta opcja jest zaznaczona.  
+ Po wybraniu tej opcji, wstawia `AboutBox` kontrolować metody w klasie kontrolki projektu (C*ProjName*Ctrl.cpp) i dodaje AboutBox do mapy wysyłania projektu. Domyślnie ta opcja jest zaznaczona.  
   
- **Kod zoptymalizowany rysowania**  
- Określa, że kontener przywraca oryginalne obiekty GDI automatycznie po wszystkich kontrole kontenerów, które są rysowane w kontekście tego samego urządzenia, zostały wystawione. Aby uzyskać więcej informacji na temat tej funkcji, zobacz [Optymalizacja rysowania formantów](../../mfc/optimizing-control-drawing.md).  
+ **Zoptymalizowany kod rysowania**  
+ Określa, że kontener przywraca oryginalne obiekty GDI automatycznie po wszystkich kontrole kontenerów, które są rysowane na ten sam kontekst urządzenia, zostały wystawione. Aby uzyskać więcej informacji na temat tej funkcji, zobacz [Optymalizacja rysowania formantów](../../mfc/optimizing-control-drawing.md).  
   
- **Aktywacja bez okien**  
- Określa, że kontrolka nie tworzy okno jest uaktywniany. Aktywacji niepowiązanej z oknami umożliwia nieprostokątny lub przezroczyste formantów, a formantem bez okien wymaga wymaga mniejsze obciążenie systemu niż formantu, który ma okna. Formant niepowiązane z oknami nie zezwala na nieobcinanego kontekstu urządzenia lub aktywacji pozbawionej migotania. Kontenery, które zostały utworzone przed 1996 nie obsługują aktywacji niepowiązanej z oknami. Aby uzyskać więcej informacji o tym, jak użyć tej opcji, zobacz [zapewnianie aktywacji niepowiązanej z oknami](../../mfc/providing-windowless-activation.md).  
+ **Aktywacji niepowiązanej z oknami**  
+ Określa, że kontrolka nie generuje okna podczas aktywowania jej. Aktywacji niepowiązanej z oknami umożliwia nieprostokątne lub przezroczyste formantów i kontrolce wymaga wymaga mniejsze obciążenie systemu niż formant z okna. Nieobcinanego kontekstu urządzenia lub aktywacji pozbawionej migotania nie zezwala na kontrolce. Kontenery, które zostały utworzone przed 1996 roku nie obsługują aktywacji niepowiązanej z oknami. Aby uzyskać więcej informacji o tym, jak użyć tej opcji, zobacz [zapewnianie aktywacji niepowiązanej z oknami](../../mfc/providing-windowless-activation.md).  
   
  **Nieobcinanego kontekstu urządzenia**  
- Zastępuje [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags) w nagłówku formantu (*nazwa_projektu.nazwa_modułu.nazwa_procedury*ctrl.h) można wyłączyć wywołanie `IntersectClipRect` przez `COleControl`. Po wybraniu tej opcji zapewnia korzyści małej szybkości. W przypadku wybrania **aktywacji niepowiązanej z oknami**, ta funkcja jest niedostępna. Aby uzyskać więcej informacji, zobacz [używanie Nieobcinanego kontekstu urządzenia](../../mfc/using-an-unclipped-device-context.md).  
+ Zastępuje [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags) w nagłówku kontroli (*projname*ctrl.h) można wyłączyć wywołanie `IntersectClipRect` przez `COleControl`. Po wybraniu tej opcji, zapewnia korzyści małej szybkości. Jeśli wybierzesz **aktywacji niepowiązanej z oknami**, ta funkcja nie jest dostępna. Aby uzyskać więcej informacji, zobacz [używanie Nieobcinanego kontekstu urządzenia](../../mfc/using-an-unclipped-device-context.md).  
   
  **Aktywacji pozbawionej migotania**  
- Eliminuje operacje rysowania i towarzyszące im migotanie, które występują między Stanami aktywną i nieaktywną formantu. W przypadku wybrania **aktywacji niepowiązanej z oknami**, ta funkcja jest niedostępna. Po ustawieniu tej opcji `noFlickerActivate` flaga jest jedną z flag, które są zwracane przez [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags). Aby uzyskać więcej informacji, zobacz [zapewnianie aktywacji pozbawionej migotania](../../mfc/providing-flicker-free-activation.md).  
+ Eliminuje operacji rysowania i towarzyszący migotania visual, która występuje między Stanami aktywnych i nieaktywnych formantu. Jeśli wybierzesz **aktywacji niepowiązanej z oknami**, ta funkcja nie jest dostępna. Po ustawieniu tej opcji `noFlickerActivate` flaga jest jednym z flagi, które są zwracane przez [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags). Aby uzyskać więcej informacji, zobacz [zapewnianie aktywacji pozbawionej migotania](../../mfc/providing-flicker-free-activation.md).  
   
  **Dostępne w oknie dialogowym Wstaw obiekt**  
- Określa, czy formant będzie dostępny w **Wstaw obiekt** okno dialogowe włączone kontenerów. Po wybraniu tej opcji, `afxRegInsertable` flaga jest jedną z flag, które są zwracane przez `AfxOleRegisterControlClass`. Za pomocą **Wstaw obiekt** okno dialogowe, użytkownik może wstawiać nowo utworzony lub istniejące obiekty do dokumentu złożonego.  
+ Określa, że formant będzie dostępny w **Wstawianie obiektu** okno dialogowe włączonych kontenerów. Po wybraniu tej opcji `afxRegInsertable` flaga jest jednym z flagi, które są zwracane przez `AfxOleRegisterControlClass`. Za pomocą **Wstawianie obiektu** okno dialogowe, użytkownik może wstawiać nowo utworzone lub istniejące obiekty w dokumencie złożonym.  
   
- **Powiadomienia wskaźnika myszy, gdy nieaktywny**  
- Umożliwia formant powiadomienia wskaźnika myszy proces, czy formant jest aktywny, czy nie. Po wybraniu tej opcji, `pointerInactive` flaga jest jedną z flag, które są zwracane przez [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags). Aby uzyskać więcej informacji o tym, jak użyć tej opcji, zobacz [dostarczanie myszy interakcji podczas nieaktywne](../../mfc/providing-mouse-interaction-while-inactive.md).  
+ **Powiadomienia wskaźnika myszy, gdy nieaktywna**  
+ Umożliwia kontrolowanie, które można przetworzyć powiadomień wskaźnika myszy, czy kontrolka jest aktywny, czy nie. Po wybraniu tej opcji `pointerInactive` flaga jest jednym z flagi, które są zwracane przez [COleControl::GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags). Aby uzyskać więcej informacji o tym, jak użyć tej opcji, zobacz [dostarczanie myszy interakcji podczas nieaktywne](../../mfc/providing-mouse-interaction-while-inactive.md).  
   
- **Działa jako formant ramki proste**  
- Określa, czy formant jest kontenerem dla innych formantów przez ustawienie `OLEMISC_SIMPLEFRAME` bit dla formantu. Aby uzyskać więcej informacji na [biblioteki MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) witryny sieci Web, wyszukaj "Proste zawierania lokacji ramki".  
+ **Działa jako kontrolka proste ramki**  
+ Określa, czy kontrolka jest kontenerem dla innych kontrolek, ustawiając OLEMISC_SIMPLEFRAME bitów formantu. Aby uzyskać więcej informacji na [biblioteki MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) witryny sieci Web, wyszukiwanie "Proste ramki lokacji zawierania".  
   
- **Ładuje właściwości w sposób asynchroniczny**  
- Włącza Resetowanie wszelkich wcześniejszych danych asynchronicznych i inicjuje nowego załadowania właściwości asynchronicznej formantu.  
+ **Ładuje właściwości asynchronicznie**  
+ Umożliwia zresetowanie wszelkie poprzednie dane asynchronicznego i inicjuje nowe obciążenie asynchronicznego właściwości formantu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kreator kontrolek ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md)   

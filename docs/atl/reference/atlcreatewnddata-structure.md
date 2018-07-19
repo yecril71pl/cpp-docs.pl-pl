@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66388c12def72a9da5b5aeb7e4713ca61c23a6e0
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: cf51197750e9595570a7b011c179c2ed4c7902c3
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255798"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880011"
 ---
 # <a name="atlcreatewnddata-structure"></a>Struktura _AtlCreateWndData
-Ta struktura zawiera dane wystąpienia klasy w kodzie okien w ATL.  
+Ta struktura zawiera dane wystąpienia klasy w kodzie obsługi okien w ATL.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,13 +40,13 @@ Ta struktura zawiera dane wystąpienia klasy w kodzie okien w ATL.
 ```  
   
 ## <a name="members"></a>Elementy członkowskie  
- **m_pThis**  
- **To** wskaźnik został użyty do uzyskania dostępu do wystąpienia klasy w procedury okna.  
+ `m_pThis`  
+ **To** wskaźnik używany do uzyskiwania dostępu do wystąpienia klasy w procedury okna.  
   
  `m_dwThreadID`  
  Identyfikator wątku bieżącego wystąpienia klasy.  
   
- **m_pNext**  
+ `m_pNext`  
  Wskaźnik do następnego `_AtlCreateWndData` obiektu.  
   
 ## <a name="requirements"></a>Wymagania  

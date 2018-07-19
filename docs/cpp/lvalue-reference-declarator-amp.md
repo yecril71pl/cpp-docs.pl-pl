@@ -17,14 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de716ec8c29bbdb50462cd6ea642ed603d411c2a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d16ed882b1037123963f105b1a78bf8e1023d332
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37948220"
 ---
 # <a name="lvalue-reference-declarator-amp"></a>Deklarator odwołania do wartości: &amp;
-Przechowuje adres obiektu, ale składniowo zachowuje się jak obiektu.  
+Przechowuje adres obiektu, ale składniowo zachowuje się jak obiekt.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,16 +35,16 @@ type-id & cast-expression
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Odwołania do wartości można traktować jako inną nazwę dla obiektu. Deklaracja odwołania l-wartością składa się z opcjonalną listę specyfikatory następuje deklarator odwołania. Odwołanie musi zostać zainicjowany i nie można zmienić.  
+ Odwołanie lvalue można traktować jako inną nazwę dla obiektu. Deklaracja odwołania wartościowanego lewostronnie składa się z opcjonalną listę specyfikatorów następuje deklarator odwołania. Odwołanie musi zostać zainicjowany i nie można jej zmienić.  
   
- Każdy obiekt, którego adres można przekonwertować na typ wskaźnika danego również można przekonwertować na podobny typ referencyjny. Na przykład dowolny obiekt, którego adres może być konwertowana na typ `char *` również można przekonwertować na typ `char &`.  
+ Można też przekonwertować dowolnego obiektu, którego adres można przekonwertować na typ wskaźnika danego podobne typem odwołania. Na przykład dowolnego obiektu, którego adres można przekonwertować na typ `char *` można też przekonwertować na typ `char &`.  
   
- Nie należy mylić deklaracje odwołanie z użyciem [operator address-of](../cpp/address-of-operator-amp.md). Gdy `&` *identyfikator* jest poprzedzony typu, takich jak `int` lub `char`, *identyfikator* jest zadeklarowany jako odwołanie do typu. Gdy `&` *identyfikator* nie jest poprzedzony przez typ, użycie, jest operator address-of.  
+ Nie należy mylić deklaracje odwołania przy użyciu [operatora address-of](../cpp/address-of-operator-amp.md). Gdy `&` *identyfikator* jest poprzedzony przez typ, takich jak **int** lub **char**, *identyfikator* jest zadeklarowany jako odwołanie do Typ. Gdy `&` *identyfikator* nie jest poprzedzony przez typ, użycie jest operator address-of.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano deklarator odwołania do przez zadeklarowanie `Person` obiektu i odwołania do tego obiektu. Ponieważ `rFriend` jest odwołaniem do `myFriend`, aktualizowania, albo zmiennej zmiany tego samego obiektu.  
+ W poniższym przykładzie pokazano deklarator odwołania do przez zadeklarowanie `Person` obiektu i odwołanie do tego obiektu. Ponieważ `rFriend` jest odwołaniem do `myFriend`, aktualizowanie albo zmiennej zmiany tego samego obiektu.  
   
-```  
+```cpp 
 // reference_declarator.cpp  
 // compile with: /EHsc  
 // Demonstrates the reference declarator.  

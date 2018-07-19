@@ -13,16 +13,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 09d09e47103fa263adc4c5cf288803835b112142
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 782acd7fda671d84252ab226d095fe21c75645bf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846145"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965461"
 ---
-# <a name="ltarraygt-operators"></a>&lt;Tablica&gt; operatory
+# <a name="ltarraygt-operators"></a>&lt;Tablica&gt; operatorów
 
-\<Tablicy > Nagłówek zawiera te `array` porównania niebędący elementem członkowskim szablonu funkcji.
+\<Array > Nagłówek zawiera te **tablicy** porównania nieczłonkowskie funkcje szablonu.
 
 ||||
 |-|-|-|
@@ -31,7 +31,7 @@ ms.locfileid: "33846145"
 
 ## <a name="op_neq"></a>  operator! =
 
-Porównanie tablicy nie jest równa.
+Porównanie tablicy nie jest równe.
 
 ```cpp
 template <Ty, std::size_t N>
@@ -42,17 +42,17 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ elementu.
+*Ty* typ elementu.
 
-`N` Rozmiar tablicy.
+*N* rozmiar tablicy.
 
-`left` Po lewej stronie kontenera do porównania.
+*po lewej stronie* po lewej stronie kontenera do porównania.
 
-`right` Kontener prawo do porównania.
+*prawy* odpowiednim kontenerze do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu `!(left == right)`.
+Funkcja szablonu zwraca `!(left == right)`.
 
 ### <a name="example"></a>Przykład
 
@@ -111,17 +111,17 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ elementu.
+*Ty* typ elementu.
 
-`N` Rozmiar tablicy.
+*N* rozmiar tablicy.
 
-`left` Po lewej stronie kontenera do porównania.
+*po lewej stronie* po lewej stronie kontenera do porównania.
 
-`right` Kontener prawo do porównania.
+*prawy* odpowiednim kontenerze do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Przeciążenia funkcji szablonu `operator<` do porównywania dwóch obiektów klasy szablonu [array — klasa](../standard-library/array-class-stl.md). Funkcja zwraca `lexicographical_compare(left.begin(), left.end(), right.begin())`.
+Przeciążenia funkcji szablonu `operator<` do porównywania dwóch obiektów klasy szablonu [array, klasa](../standard-library/array-class-stl.md). Funkcja zwraca `lexicographical_compare(left.begin(), left.end(), right.begin())`.
 
 ### <a name="example"></a>Przykład
 
@@ -170,7 +170,7 @@ true
 
 ## <a name="op_lt_eq"></a>  Operator&lt;=
 
-Porównanie tablicy mniejsza lub równa.
+Porównanie tablicy, mniejsze niż lub równe.
 
 ```cpp
 template <Ty, std::size_t N>
@@ -181,17 +181,17 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ elementu.
+*Ty* typ elementu.
 
-`N` Rozmiar tablicy.
+*N* rozmiar tablicy.
 
-`left` Po lewej stronie kontenera do porównania.
+*po lewej stronie* po lewej stronie kontenera do porównania.
 
-`right` Kontener prawo do porównania.
+*prawy* odpowiednim kontenerze do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu `!(right < left)`.
+Funkcja szablonu zwraca `!(right < left)`.
 
 ### <a name="example"></a>Przykład
 
@@ -240,7 +240,7 @@ false
 
 ## <a name="op_eq_eq"></a>  operator ==
 
-Porównanie tablicy takie same.
+Porównanie tablicy równa.
 
 ```cpp
 template <Ty, std::size_t N>
@@ -251,17 +251,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ elementu.
+*Ty* typ elementu.
 
-`N` Rozmiar tablicy.
+*N* rozmiar tablicy.
 
-`left` Po lewej stronie kontenera do porównania.
+*po lewej stronie* po lewej stronie kontenera do porównania.
 
-`right` Kontener prawo do porównania.
+*prawy* odpowiednim kontenerze do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Przeciążenia funkcji szablonu `operator==` do porównywania dwóch obiektów klasy szablonu [array — klasa](../standard-library/array-class-stl.md). Funkcja zwraca `equal(left.begin(), left.end(), right.begin())`.
+Przeciążenia funkcji szablonu `operator==` do porównywania dwóch obiektów klasy szablonu [array, klasa](../standard-library/array-class-stl.md). Funkcja zwraca `equal(left.begin(), left.end(), right.begin())`.
 
 ### <a name="example"></a>Przykład
 
@@ -310,7 +310,7 @@ false
 
 ## <a name="op_gt"></a>  Operator&gt;
 
-Porównanie tablicy przekracza.
+Porównanie tablicy większa.
 
 ```cpp
 template <Ty, std::size_t N>
@@ -321,17 +321,17 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ elementu.
+*Ty* typ elementu.
 
-`N` Rozmiar tablicy.
+*N* rozmiar tablicy.
 
-`left` Po lewej stronie kontenera do porównania.
+*po lewej stronie* po lewej stronie kontenera do porównania.
 
-`right` Kontener prawo do porównania.
+*prawy* odpowiednim kontenerze do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu `(right < left)`.
+Funkcja szablonu zwraca `(right < left)`.
 
 ### <a name="example"></a>Przykład
 
@@ -391,17 +391,17 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ elementu.
+*Ty* typ elementu.
 
-`N` Rozmiar tablicy.
+*N* rozmiar tablicy.
 
-`left` Po lewej stronie kontenera do porównania.
+*po lewej stronie* po lewej stronie kontenera do porównania.
 
-`right` Kontener prawo do porównania.
+*prawy* odpowiednim kontenerze do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu `!(left < right)`.
+Funkcja szablonu zwraca `!(left < right)`.
 
 ### <a name="example"></a>Przykład
 

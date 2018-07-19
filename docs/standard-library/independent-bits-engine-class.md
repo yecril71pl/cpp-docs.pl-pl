@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f89e6e0fc83a83ece82793050441fec9a1e7978b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f802dc91c3429ba718778d122d1a787aad0dec87
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844500"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964226"
 ---
 # <a name="independentbitsengine-class"></a>independent_bits_engine — Klasa
 
-Generuje sekwencję losowych liczb z określoną liczbę bitów za pomocą liczby bitów przepakowania spośród wartości zwróconych przez silnik podstawowej.
+Generuje losową sekwencję liczb z określoną liczbą bitów za pomocą liczby bitów przepakowanie na podstawie wartości zwracanych przez silnik podstawowy.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,11 +36,11 @@ class independent_bits_engine;
 
 ### <a name="parameters"></a>Parametry
 
-`Engine` Typ podstawowy aparatu.
+*Aparat* typu podstawowego aparatu.
 
-`W` **Word rozmiar**. Rozmiar w bitach każdą liczbę wygenerowany. **Warunek wstępny**: `0 < W ≤ numeric_limits<UIntType>::digits`
+*W* **Word rozmiar**. Rozmiar w bitach poszczególnych liczb wygenerowany. **Warunek wstępny**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-`UIntType` Typ wyniku liczbę całkowitą bez znaku. Dla typów możliwych [ \<losowe >](../standard-library/random.md).
+*UIntType* typ wyniku liczby całkowitej bez znaku. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -49,18 +49,18 @@ class independent_bits_engine;
 |`independent_bits_engine::independent_bits_engine`|`independent_bits_engine::base`|`independent_bits_engine::discard`|
 |`independent_bits_engine::operator()`|`independent_bits_engine::base_type`|`independent_bits_engine::seed`|
 
-Aby uzyskać więcej informacji na temat aparatu członków zobacz [ \<losowe >](../standard-library/random.md).
+Aby uzyskać więcej informacji na temat elementów członkowskich aparatu zobacz [ \<losowy >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa szablonu opisuje *karty aparatu* daje wartości przez przepakowaniu bitów spośród wartości zwróconych przez silnik podstawowej, co powoduje `W`-bit wartości.
+Ta klasa szablonu opisuje *łącznik aparatu* która wytwarza wartości przez przepakowaniu bitów z wartości zwracanych przez silnik podstawowy skutkuje *W*— wartości bitowe.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowe >
+**Nagłówek:** \<losowy >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<losowe >](../standard-library/random.md)<br/>
+[\<losowy >](../standard-library/random.md)<br/>

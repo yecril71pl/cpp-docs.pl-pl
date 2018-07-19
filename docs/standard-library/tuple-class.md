@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5d265938eb024a41d8b90f3b9891c35ec1ec251
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3735b6cd8b0397ae1e1092fdb37ba094248ab507
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858802"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963929"
 ---
 # <a name="tuple-class"></a>tuple — Klasa
 
-Opakowuje o stałej długości sekwencję elementów.
+Opakowuje o stałej długości sekwencji elementów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -48,17 +48,18 @@ public:
    template <class U1, class U2>
       tuple& operator=(const pair<U1, U2>&); // N == 2
    };
+```
 
-### Parameters
+### <a name="parameters"></a>Parametry
 
-`TN`
- The type of the Nth tuple element.
+*TN*  
+ Typ elementu spójnej kolekcji n-ty.
 
-## Remarks
+## <a name="remarks"></a>Uwagi
 
-The template class describes an object that stores N objects of types `T1`, `T2`, ..., `TN`, respectively, where where `0 <= N <= Nmax`. The extent of a tuple instance `tuple<T1, T2, ..., TN>` is the number `N` of its template arguments. The index of the template argument `Ti` and of the corresponding stored value of that type is `i - 1`. Thus, while we number the types from 1 to N in this documentation, the corresponding index values range from 0 to N - 1.
+Klasa szablonu opisuje obiekt przechowujący N obiektów typów `T1`, `T2`,..., `TN`, odpowiednio, w którym gdzie `0 <= N <= Nmax`. Zakres wystąpień krotki `tuple<T1, T2, ..., TN>` jest to liczba `N` z jej argumentów szablonu. Indeks argument szablonu `Ti` i odpowiednie przechowywaną wartość tego typu jest `i - 1`. W związku z tym gdy firma Microsoft numer typy z zakresu od 1 do N w tej dokumentacji, odpowiedni indeks wartości z zakresu od 0 do N - 1.
 
-## Example
+## <a name="example"></a>Przykład
 
 ```cpp
 // tuple.cpp
@@ -130,7 +131,7 @@ The tuples in the vector are
 
 **Nagłówek:** \<krotki >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="op_eq"></a>  Tuple::operator =
 
@@ -153,15 +154,17 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parametry
 
-`UN` Typ określona liczba skopiowany element spójnej kolekcji.
+*NZ*  
+ Typ n-tej skopiować element spójnej kolekcji.
 
-`right` Spójna kolekcja znajdująca się do skopiowania.
+*right*  
+ Krotka do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy operatorów Członkowskich dwóch przypisać elementy `right` do odpowiednich elementów `*this`. Trzeci operator członkowski przypisuje `right.first` na element pod indeksem 0 `*this` i `right.second` na element pod indeksem 1. Zwróć wszystkie operatory trzech elementów członkowskich `*this`.
+Pierwszy operatory dwóch elementów członkowskich Przypisz elementy *prawo* do odpowiednich elementów `*this`. Trzeci operator składowy przypisuje `right.first` do elementu w indeksie 0 `*this` i `right.second` na element pod indeksem 1. Zwróć wszystkie operatory trzech członków `*this`.
 
-Pozostałe operatorów Członkowskich są analogs wcześniejsze, ale z [deklarator odwołania do r-wartości: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+Pozostałe operatory elementów członkowskich są analogs starszych z nich, ale z [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ### <a name="example"></a>Przykład
 
@@ -215,7 +218,7 @@ x 4
 
 ## <a name="tuple_swap"></a>  Tuple:swap
 
-Zamienia elementy dwie spójne kolekcje.
+Zamienia elementy z dwóch krotek.
 
 ```cpp
 template <class... Types>
@@ -226,12 +229,12 @@ template <class... Types>
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`left`|Krotka, której elementy są wymienianych z tymi spójnej kolekcji `right`.|
-|`right`|Krotka, której elementy są wymienianych z tymi spójnej kolekcji `left`.|
+|*left*|Spójna kolekcja, której elementy są wymieniane z tymi krotki *prawo*.|
+|*right*|Spójna kolekcja, której elementy są wymieniane z tymi krotki *po lewej stronie*.|
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja wykonuje `left.swap(right)`.
+Wykonuje funkcję `left.swap(right)`.
 
 ## <a name="tuple"></a>  Tuple::Tuple
 
@@ -260,21 +263,23 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Parametry
 
-`UN` Typ określona liczba skopiowany element spójnej kolekcji.
+*NZ*  
+ Typ n-tej skopiować element spójnej kolekcji.
 
-`right` Spójna kolekcja znajdująca się do skopiowania.
+*right*  
+ Krotka do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy konstruktora tworzy obiekt, której elementy są domyślne skonstruowany.
+Pierwszy Konstruktor konstruuje obiekt, którego elementy mają domyślne.
 
-Drugi Konstruktor konstrukcji obiektu, której elementy są utworzone na podstawie argumentów kopiowania `P1`, `P2`,..., `PN` z każdym `Pi` inicjowanie element pod indeksem `i - 1`.
+Drugi Konstruktor konstruuje obiekt, którego elementy mają kopiowania skonstruowany na podstawie argumentów `P1`, `P2`,..., `PN` z każdym `Pi` inicjowanie element w indeksie `i - 1`.
 
-Konstruktory trzeci i czwarty konstruowania obiektu, której elementy są utworzone na podstawie odpowiadającego mu elementu z kopii `right`.
+Konstruktory trzecia i czwarta skonstruować obiekt, w której elementy są konstruowane na podstawie odpowiedniego elementu kopii *prawo*.
 
-Piąty konstrukcje Konstruktor obiektu, którego element pod indeksem 0 jest kopią utworzone na podstawie `right.first` i którego element pod indeksem 1 jest kopiowania utworzone na podstawie `right.second`.
+Piąty Konstruktor konstruuje obiekt, którego element pod indeksem 0 jest kopią skonstruowany na podstawie `right.first` i którego element pod indeksem 1 jest kopia zbudowane z `right.second`.
 
-Pozostałe konstruktory są analogs wcześniejsze, ale z [deklarator odwołania do r-wartości: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+Pozostałe konstruktory są analogs starszych z nich, ale z [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ### <a name="example"></a>Przykład
 

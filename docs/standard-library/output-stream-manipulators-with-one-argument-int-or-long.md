@@ -1,5 +1,5 @@
 ---
-title: Manipulatory strumieni wyjściowych z jednym argumentem (int lub long) | Dokumentacja firmy Microsoft
+title: Stream manipulatory wyjściowych z jednym argumentem (int lub long) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3238ffcbd03f40c6eac0423d0212a65719fb33d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f569b064d2ee5de5bd1aa39c9d443c8a49ca2677
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853076"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961854"
 ---
 # <a name="output-stream-manipulators-with-one-argument-int-or-long"></a>Manipulatory strumieni wyjściowych z jednym argumentem (int lub long)
 
-Iostream — Biblioteka klas zapewnia zbiór makra do tworzenia manipulatory sparametryzowana. Manipulatory za pomocą jednej `int` lub `long` argumentu są szczególnych przypadkach. Aby utworzyć manipulatora strumienia wyjściowego, który akceptuje pojedynczy `int` lub `long` argumentu (takich jak `setw`), należy użyć makra _Smanip, która jest zdefiniowana w \<iomanip — >. W tym przykładzie definiuje `fillblank` manipulatora, która wstawia określoną liczbę puste wartości do strumienia:
+Iostream — Biblioteka klas zawiera zbiór makra do tworzenia manipulatory sparametryzowanych. Manipulatory za pomocą jednego **int** lub **długie** argument jest przypadkiem szczególnym. Do utworzenia manipulator strumienia wyjściowego, który akceptuje pojedynczy **int** lub **długie** argumentu (takich jak `setw`), należy użyć makro _Smanip, która jest zdefiniowana w \<iomanip >. Ten przykład definiuje `fillblank` manipulator, który wstawia określoną liczbę wartości pustych w strumieniu:
 
 ## <a name="example"></a>Przykład
 

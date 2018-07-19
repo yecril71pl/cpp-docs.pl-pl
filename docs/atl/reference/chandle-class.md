@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b57aab927380f8801c3b9cab258a695c7d8a59d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cd962e32f423baba6cfabb90f1d9f7fa5d69e170
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363074"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880235"
 ---
 # <a name="chandle-class"></a>Klasa CHandle
 Ta klasa dostarcza metody do tworzenia i używania obiektu uchwyt.  
@@ -51,15 +51,15 @@ class CHandle
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CHandle::Attach](#attach)|Wywołanie tej metody, aby dołączyć `CHandle` obiektu do istniejącego dojścia.|  
-|[CHandle::Close](#close)|Wywołanie tej metody, aby zamknąć `CHandle` obiektu.|  
-|[CHandle::Detach](#detach)|Wywołanie tej metody można odłączyć dojścia z `CHandle` obiektu.|  
+|[CHandle::Attach](#attach)|Wywołaj tę metodę, aby dołączyć `CHandle` obiektu istniejące dojście.|  
+|[CHandle::Close](#close)|Wywołaj tę metodę, aby zamknąć `CHandle` obiektu.|  
+|[CHandle::Detach](#detach)|Wywołanie tej metody można odłączyć uchwyt z `CHandle` obiektu.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CHandle::operator dojścia](#operator_handle)|Zwraca wartość przechowywanej dojścia.|  
+|[CHandle::operator UCHWYTU](#operator_handle)|Zwraca wartość przechowywanych dojście.|  
 |[CHandle::operator =](#operator_eq)|Operator przypisania.|  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
@@ -69,27 +69,27 @@ class CHandle
 |[CHandle::m_h](#m_h)|Zmiennej członkowskiej, która przechowuje dojście.|  
   
 ## <a name="remarks"></a>Uwagi  
- A `CHandle` obiektu można użyć w każdym przypadku, gdy jest wymagane dojście: główną różnicą jest to, że `CHandle` obiekt zostanie automatycznie usunięty.  
+ A `CHandle` obiekt może być używany w każdym przypadku, gdy jego uchwyt jest wymagana: główną różnicą jest to, że `CHandle` obiekt zostanie automatycznie usunięty.  
   
 > [!NOTE]
->  Niektóre funkcje interfejsu API będzie używać wartości NULL jako pusty lub nieprawidłowy uchwyt, podczas gdy inne INVALID_HANDLE_VALUE. `CHandle` używa tylko wartości NULL i będzie traktować INVALID_HANDLE_VALUE jako prawdziwe dojścia. Wywołanie interfejsu API, która może zwracać INVALID_HANDLE_VALUE, należy sprawdzić, czy ta wartość przed wywołaniem [CHandle::Attach](#attach) lub przekazanie jej do `CHandle` konstruktora, a zamiast tego należy przekazać wartość NULL.  
+>  Niektóre funkcje API użyje wartości NULL jako puste lub nieprawidłowe dojście, a inni korzystają INVALID_HANDLE_VALUE. `CHandle` używane tylko o wartości NULL i będzie INVALID_HANDLE_VALUE należy traktować jako rzeczywistych dojście. Wywołanie interfejsu API, która może zwracać INVALID_HANDLE_VALUE zaewidencjonowania dla tej wartości przed wywołaniem [CHandle::Attach](#attach) lub przekazanie jej do `CHandle` konstruktora i zamiast tego Przekaż wartość NULL.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlbase.h  
   
 ##  <a name="attach"></a>  CHandle::Attach  
- Wywołanie tej metody, aby dołączyć `CHandle` obiektu do istniejącego dojścia.  
+ Wywołaj tę metodę, aby dołączyć `CHandle` obiektu istniejące dojście.  
   
 ```
 void Attach(HANDLE h) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `h`  
- `CHandle` zostanie przejąć na własność dojście `h`.  
+ *h*  
+ `CHandle` potrwa własność uchwytu *h*.  
   
 ### <a name="remarks"></a>Uwagi  
- Przypisuje `CHandle` do obiektu `h` obsługi. W kompilacjach debuguje ATLASSERT zostanie wygenerowany, jeśli `h` ma wartość NULL. Nie inne co ważności dojście dokonuje.  
+ Przypisuje `CHandle` obiekt *h* obsługi. W kompilacjach debuguje ATLASSERT zostanie wygenerowany, jeśli *h* ma wartość NULL. Jest wykonywane nie inne sprawdzenie co ważności uchwytu.  
   
 ##  <a name="chandle"></a>  CHandle::CHandle  
  Konstruktor.  
@@ -101,11 +101,11 @@ explicit CHandle(HANDLE h) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `h`  
+ *h*  
  Istniejące dojście lub `CHandle`.  
   
 ### <a name="remarks"></a>Uwagi  
- Tworzy nowy `CHandle` obiektu, opcjonalnie przy użyciu istniejących dojścia lub `CHandle` obiektu.  
+ Tworzy nową `CHandle` obiektu opcjonalnie przy użyciu istniejących dojścia lub `CHandle` obiektu.  
   
 ##  <a name="dtor"></a>  CHandle:: ~ CHandle  
  Destruktor.  
@@ -118,24 +118,24 @@ explicit CHandle(HANDLE h) throw();
  Zwalnia `CHandle` obiektu przez wywołanie metody [CHandle::Close](#close).  
   
 ##  <a name="close"></a>  CHandle::Close  
- Wywołanie tej metody, aby zamknąć `CHandle` obiektu.  
+ Wywołaj tę metodę, aby zamknąć `CHandle` obiektu.  
   
 ```
 void Close() throw();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zamyka otwarty obiekt dojścia. Jeśli dojście ma wartość NULL, która będzie w przypadku, gdy **Zamknij** została już wywołana, ATLASSERT zostanie wygenerowany w kompilacjach debugowania.  
+ Zamyka otwarte dojście. Jeśli uchwyt ma wartość NULL, które będą odpowiadać sytuacji, gdy `Close` została już wywołana, ATLASSERT zostanie wygenerowany w kompilacjach do debugowania.  
   
 ##  <a name="detach"></a>  CHandle::Detach  
- Wywołanie tej metody można odłączyć dojścia z `CHandle` obiektu.  
+ Wywołanie tej metody można odłączyć uchwyt z `CHandle` obiektu.  
   
 ```
 HANDLE Detach() throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca dojście odłączany.  
+ Zwraca uchwyt odłączany.  
   
 ### <a name="remarks"></a>Uwagi  
  Zwalnia własność uchwytu.  
@@ -155,24 +155,24 @@ CHandle& operator=(CHandle& h) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `h`  
- `CHandle` zostanie przejąć na własność dojście `h`.  
+ *h*  
+ `CHandle` potrwa własność uchwytu *h*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca odwołanie do nowego `CHandle` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `CHandle` obiektu zawiera obecnie uchwytu, zostanie zamknięte. `CHandle` Obiekt przekazywany będzie mieć odwołanie dojścia wartość NULL. Gwarantuje to, że dwa `CHandle` obiekty nigdy nie będzie zawierać tej samej aktywnej dojścia.  
+ Jeśli `CHandle` obiekt zawiera obecnie uchwyt, zostaną zamknięte. `CHandle` Obiekt przekazywany będzie miał odwołanie uchwyt, wartość NULL. Gwarantuje to, że dwa `CHandle` obiektów nigdy nie będzie zawierać tej samej aktywnej dojście.  
   
-##  <a name="operator_handle"></a>  CHandle::operator dojścia  
- Zwraca wartość przechowywanej dojścia.  
+##  <a name="operator_handle"></a>  CHandle::operator UCHWYTU  
+ Zwraca wartość przechowywanych dojście.  
   
 ```  
 operator HANDLE() const throw();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zwraca wartość przechowywana we [CHandle::m_h](#m_h).  
+ Zwraca wartość przechowywaną w [CHandle::m_h](#m_h).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

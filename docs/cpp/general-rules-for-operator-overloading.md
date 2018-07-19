@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6912d410018966432ef66331354213bd70dfa8b
-ms.sourcegitcommit: e3b4ef19b534a2ed48bb9091e5197a6e536f16c1
+ms.openlocfilehash: cd7e7a64b1dfc30d1827da614f67a5b47bd42218
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34814342"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947783"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Zasady ogólne dotyczące przeciążania operatorów
-Następujące reguły ograniczają sposób implementacji przeciążonych operatorów. Jednak nie dotyczą one [nowe](../cpp/new-operator-cpp.md) i [usunąć](../cpp/delete-operator-cpp.md) operatory, które są przedstawione oddzielnie.  
+Następujące reguły ograniczają sposób implementacji przeciążonych operatorów. Jednak nie mają zastosowania do [nowe](../cpp/new-operator-cpp.md) i [Usuń](../cpp/delete-operator-cpp.md) operatorów, które zostały omówione oddzielnie.  
   
 -   Nie można definiować nowych operatorów, takich jak **.**.  
   
@@ -47,15 +47,15 @@ Następujące reguły ograniczają sposób implementacji przeciążonych operato
     }  
     ```  
   
-     Poprzedni przykład kodu deklaruje operator „mniejszy niż” jako funkcję członkowską; jednakże operatory dodawania są zadeklarowane jako funkcje globalne, które mają dostęp zaprzyjaźniony. Należy zauważyć, że więcej niż jedna implementacja może być dostarczona dla danego operatora. W przypadku poprzedniego operatora dodawania, dwie implementacje są dostarczane w celu ułatwienia przemienności. Tak samo prawdopodobne jest to, że operatory, które dodają `Point` do `Point`, `int` do `Point` itd., mogą zostać zaimplementowane.  
+     Poprzedni przykład kodu deklaruje operator „mniejszy niż” jako funkcję członkowską; jednakże operatory dodawania są zadeklarowane jako funkcje globalne, które mają dostęp zaprzyjaźniony. Należy zauważyć, że więcej niż jedna implementacja może być dostarczona dla danego operatora. W przypadku poprzedniego operatora dodawania, dwie implementacje są dostarczane w celu ułatwienia przemienności. Jest po prostu jako prawdopodobnie tego operatory, które dodają `Point` do `Point`, **int** do `Point`i tak dalej, mogą zostać zaimplementowane.  
   
--   Operatory przestrzegają zasad pierwszeństwa, grupowania i liczby operandów podyktowanej ich typowym zastosowaniem w typach wbudowanych. W związku z tym nie istnieje sposób Express pojęcie "Dodaj 2 i 3 do obiektu typu `Point`," Oczekiwano 2, które mają zostać dodane do *x* współrzędnych i 3, które mają zostać dodane do *y* współrzędną.  
+-   Operatory przestrzegają zasad pierwszeństwa, grupowania i liczby operandów podyktowanej ich typowym zastosowaniem w typach wbudowanych. W związku z tym, nie istnieje żaden sposób, aby zapisać koncepcję "dodanie 2 i 3 do obiektu typu `Point`," Oczekiwano 2, które mają zostać dodane do *x* współrzędnych i 3, które mają zostać dodane do *y* koordynacji.  
   
 -   Operatory jednoargumentowe deklarowane jako funkcje członkowskie nie przyjmują argumentów; jeśli są zadeklarowane jako funkcje globalne, przyjmują jeden argument.  
   
 -   Operatory binarne deklarowane jako funkcje członkowskie przyjmują jeden argument; jeśli są zadeklarowane jako funkcje globalne, przyjmują dwa argumenty.  
   
--   Jeśli operator może służyć jako jednoargumentowy lub operator binarny (__&__, __*__, __+__, i __-__), można przeciążać każdego zastosowania osobno.  
+-   Jeśli operator może służyć jako jednoargumentowy lub binarny (__&__, __*__, __+__, i __-__), może doprowadzić do przeciążenia każdego zastosowania oddzielnie.  
   
 -   Przeciążone operatory nie mogą mieć argumentów domyślnych.  
   
@@ -63,9 +63,9 @@ Następujące reguły ograniczają sposób implementacji przeciążonych operato
   
 -   Pierwszy argument dla przeciążonego operatora funkcji składowej jest zawsze typem klasy obiektu, dla którego operator jest wywoływany (klasy, w której operator jest zadeklarowany lub klasa pochodnej dla tej klasy). Konwersje nie są dostarczane dla pierwszego argumentu.  
   
- Należy zauważyć, że znaczenie któregokolwiek z operatorów może być całkowicie zmienione. Zawiera znaczenie adresu z (**&**), przypisanie (**=**) i operatory wywołania funkcji. Tożsamości, które mogą być powoływane dla wbudowanych typów, mogą być zmienione za pomocą przeciążenia operatora. Na przykład, poniższe cztery instrukcje są zazwyczaj równoważne po całkowitym obliczeniu:  
+ Należy zauważyć, że znaczenie któregokolwiek z operatorów może być całkowicie zmienione. Który uwzględnia znaczenie address-of (**&**), przypisanie (**=**) i operatory wywołania funkcji. Tożsamości, które mogą być powoływane dla wbudowanych typów, mogą być zmienione za pomocą przeciążenia operatora. Na przykład, poniższe cztery instrukcje są zazwyczaj równoważne po całkowitym obliczeniu:  
   
-```  
+```cpp 
 var = var + 1;  
 var += 1;  
 var++;  

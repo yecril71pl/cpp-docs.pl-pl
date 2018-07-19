@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 805045e4ea63f153e9a35b0d4b068bd69874b93f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3195d2c988abcfb2d62acb4ece957c8c5156bbd7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864089"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965691"
 ---
 # <a name="moneybase-class"></a>money_base — Klasa
 
-Klasa opisuje, wyliczenia i struktury wspólne dla wszystkich specjalizacji szablonu klasy [moneypunct —](../standard-library/moneypunct-class.md).
+Klasa opisuje, wyliczenia i struktury, które są wspólne dla wszystkich specjalizacje szablonu klasy [moneypunct](../standard-library/moneypunct-class.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,23 +38,23 @@ struct pattern
 
 ## <a name="remarks"></a>Uwagi
 
-Wyliczenie **części** opisano możliwe wartości w elementach pola tablicy we wzorcu struktury. Wartości **części** są:
+Wyliczanie `part` opisano możliwe wartości w elementach pola tablicy we wzorcu struktury. Wartości `part` są:
 
-- **Brak** odpowiada zero lub więcej spacji lub wygenerowanie nothing.
+- `none` Aby dopasować zero lub więcej spacji lub generowanie nothing.
 
-- **znak** zgodny lub wygenerowanie znak dodatnią lub ujemną.
+- `sign` Aby dopasować lub generowanie znaku dodatniego lub ujemnego.
 
-- **miejsce** odpowiada zero lub więcej spacji lub wygenerowanie spacją.
+- `space` Aby dopasować zero lub więcej spacji lub generowanie spację.
 
-- **symbol** zgodny lub wygenerowanie symbol waluty.
+- `symbol` Aby dopasować lub wygenerowania symbolu waluty.
 
-- **wartość** zgodny lub wygenerowanie wartość pieniężną.
+- `value` Aby dopasować lub wygenerować wartość pieniężną.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<ustawień regionalnych >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

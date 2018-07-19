@@ -18,33 +18,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb25713ad4f4a8ab1821eac4f7bf05d671bb101
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1ef6bf658cd290e23be59eb7d26a6b0d353b52c6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415410"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941775"
 ---
 # <a name="identifiers-c"></a>Identyfikatory (C++)
-Identyfikator jest sekwencji znaków używany do określenia jedną z następujących czynności:  
+Identyfikator jest sekwencja znaków używany do określenia jednej z następujących czynności:  
   
--   Nazwa obiektu lub zmienna  
+-   Nazwa zmiennej lub obiektu  
   
--   Klasy, struktury lub nazwą Unii  
+-   Klasy, struktury lub nazwa związku  
   
--   Nazwa typu wyliczeniowego  
+-   Nazwa wymienionego typu  
   
--   Element członkowski klasy, struktury, Unią lub — wyliczenie  
+-   Element członkowski klasy, struktury, Unii lub wyliczenie  
   
--   Funkcji lub elementu członkowskiego klasy  
+-   Funkcja lub funkcji składowej klasy  
   
--   Nazwa typu TypeDef  
+-   Nazwa TypeDef  
   
 -   Nazwa etykiety  
   
 -   Nazwa makra  
   
--   Parametr — makro  
+-   Parametr makra  
   
  Następujące znaki są dozwolone jako dowolny znak identyfikatora:  
   
@@ -55,9 +55,9 @@ A B C D E F G H I J K L M
 N O P Q R S T U V W X Y Z  
 ```  
   
- Określone zakresy uniwersalne nazwy znaków również są dozwolone w identyfikatorze.  Nazwa zawierająca znaki uniwersalne w identyfikatorze nie może wyznaczyć znaku kontrolnego lub znak w zestawie znaków źródła podstawowych. Aby uzyskać więcej informacji, zobacz [zestawów znaków](../cpp/character-sets.md). Te Unicode kod punktu numer są dozwolone zakresy jako uniwersalny nazwy znaków dowolny znak w identyfikatorze:  
+ Określone zakresy uniwersalne nazwy znaków są również dozwolone w identyfikatorze.  Nazwę znaki uniwersalne w identyfikatorze nie może wyznaczyć znaku kontrolnego lub znaków w zestawie znaków podstawowego źródła. Aby uzyskać więcej informacji, zobacz [zestawów znaków](../cpp/character-sets.md). Te Unicode kod punktu liczb są dozwolone zakresy jako uniwersalne nazwy znaków dowolny znak w identyfikatorze:  
   
--   00A8, 00AA, 00AD, 00AF, 00B2 00B5, 00B7 00BA, 00BC-00BE 00C 0 00 D 6, 8-00F6 00D, 00F8 00FF, 02FF 0100, 0370 167F, D 1681 180, 180F 1DBF, 1E00 1FFF, 200B - 200D, 202A 202E, 2040 203F, 2054, 206F 2060, 20CF 2070, 218F 2100, 2460-24FF, 2776-2793 00 2C-2DFF, 2E80 2FFF, 3004 3007, 3021 302F, 3031 303F, 3040 D7FF, CSA F900 FD3D, FD40 FDCF, FDF0 FE1F, FE30 FE44, FE47 FFFD 10000 1FFFD, 20000 2FFFD, 30000 3FFFD, 40000 4FFFD, 50000 5FFFD, 60000 6FFFD, 70000 7FFFD, 80000 8FFFD, 9FFFD 90000, A0000 AFFFD, D0000 BFFFD B0000, C0000-CFFFD-DFFFD, E0000 EFFFD  
+-   00A8, 00AA, 00AD, 00AF, 00B2 00B5, 00B7 00BA 00BC 00BE, D 00C 0-00 6, 8-00F6 00D, 00F8 00FF 02FF 0100, 0370 167F, D 1681 180, 180F 1DBF, 1E00 1FFF, 200B 200D, 202A 202E, 2040 203F, 2054, 206F 2060, 20CF 2070, 218F 2100, 2460-24FF, 2776 2793, 2C 00-2DFF, 2E80 2FFF, 3004 3007, 3021 302F, 3031 303F, 3040-D7FF F900 FD3D, FD40 FDCF, FDF0 FE1F, FE30 FE44, FE47 FFFD 10000 1FFFD, 20000 2FFFD, 40000 4FFFD, 80000 8FFFD, 50000 5FFFD, 70000 7FFFD, 30000 3FFFD, 60000 6FFFD, 9FFFD 90000, A0000 AFFFD, BFFFD B0000, C0000-CFFFD D0000-DFFFD E0000 EFFFD  
   
  Następujące znaki są dozwolone jako dowolny znak w identyfikatorze oprócz pierwszego:  
   
@@ -65,21 +65,21 @@ N O P Q R S T U V W X Y Z
 0 1 2 3 4 5 6 7 8 9  
 ```  
   
- Te kod punktu liczba zakresów Unicode również są dozwolone jako uniwersalny nazwy znaków dowolny znak w identyfikatorze oprócz pierwszego:  
+ Te Unicode kod punktu liczb są również dozwolone zakresy jako uniwersalne nazwy znaków dowolny znak w identyfikatorze oprócz pierwszego:  
   
 -   0300-036F 1DC0 1DFF, 0 20D-20FF, FE20 FE2F  
   
  **Microsoft Specific**  
   
- Tylko pierwszy 2048 znaków identyfikatory Microsoft C++ są istotne. Nazwy dla typów zdefiniowanych przez użytkownika są "dekorowane" przez kompilator, aby zachować informacje o typie. Nazwa wynikowe, wraz z informacjami typu nie może być dłuższa niż 2048 znaków. (Zobacz [dekorowane nazwy](../build/reference/decorated-names.md) Aby uzyskać więcej informacji.) Czynniki wpływające długość identyfikatora ozdobione są:  
+ Tylko pierwsze 2048 znaków identyfikatorów Microsoft C++ są znaczące. Nazwy dla typów zdefiniowanych przez użytkownika są "dekorowane" przez kompilator, aby zachować informacje o typie. Wynikowe nazwę, w tym informacje o typie nie może być dłuższe niż 2048 znaków. (Zobacz [nazwy dekorowane](../build/reference/decorated-names.md) Aby uzyskać więcej informacji.) Dostępne są następujące czynniki, które mogą mieć wpływ na długość identyfikatora dekorowanego:  
   
--   Określa, czy identyfikator oznacza obiekt typu zdefiniowanego przez użytkownika lub typ pochodny typu zdefiniowanego przez użytkownika.  
+-   Czy identyfikator oznacza obiekt typu zdefiniowanego przez użytkownika lub typ pochodzi z typu zdefiniowanego przez użytkownika.  
   
--   Określa, czy identyfikator Określa funkcja lub typ pochodny funkcji.  
+-   Czy identyfikator oznacza funkcję lub typ wywodzący się z funkcji.  
   
 -   Liczba argumentów funkcji.  
   
- Znak dolara `$` jest prawidłowym identyfikatorem znak w języku Visual C++. Visual C++ można też użyć znakom reprezentowany przez dozwolonych zakresy uniwersalne nazwy znaków w identyfikatorach. Aby korzystać z tych znaków, musisz zapisać plik przy użyciu pliku kodowanie stronę kodową, która je zawiera.  W tym przykładzie pokazano, jak rozszerzyć zarówno znaków i uniwersalne nazwy znaków mogą być używane zamiennie w kodzie.  
+ Znak dolara `$` jest znakiem prawidłowym identyfikatorem języka Visual C++. Visual C++ pozwala również na używanie rzeczywiste znaki, które są reprezentowane przez dozwolone zakresy uniwersalne nazwy znaków w identyfikatorach. Aby korzystać z tych znaków, musisz zapisać plik przy użyciu pliku kodowania stronę kodową, która je zawiera.  Ten przykład przedstawia, jak rozszerzyć zarówno znaki i uniwersalne nazwy znaków mogą być używane zamiennie w kodzie.  
   
 ```  
 // extended_identifier.cpp  
@@ -96,15 +96,15 @@ int main() {
 }  
 ```  
   
- Zakres znaków dozwolonych w identyfikatorze jest mniej restrykcyjne w przypadku kompilowania kodu C + +/ CLI kodu. Identyfikatory w kodzie skompilowanym za pomocą/CLR, należy stosować [standardowe ECMA-335: infrastruktury języka wspólnego (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+ Zakres znaków dozwolonych w identyfikatorze jest mniej restrykcyjny gdy kompilacja C + +/ kodu interfejsu wiersza polecenia. Identyfikatory w kodzie skompilowanym za pomocą/CLR powinien być zgodny [Standard ECMA-335: Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
- Pierwszy znak identyfikatora muszą być litery, wielkie i małe litery, lub znaku podkreślenia ( **_** ). Ponieważ identyfikatory C++ jest uwzględniana wielkość liter, `fileName` różni się od `FileName`.  
+ Pierwszy znak identyfikatora musi być znakiem alfabetycznym, wielką lub małą literą lub podkreśleniem ( **_** ). Ponieważ identyfikatory języka C++ jest uwzględniana wielkość liter `fileName` różni się od `FileName`.  
   
- Identyfikatory nie mogą być dokładnie taką samą pisownię i przypadku jako słowa kluczowe. Identyfikatory zawierające słowa kluczowe są prawnych. Na przykład `Pint` jest identyfikatorem prawnych, mimo że zawiera on `int`, który jest słowem kluczowym.  
+ Identyfikatory nie może być dokładnie tej samej pisowni i wielkości liter jak słowa kluczowe. Identyfikatory zawierające słowa kluczowe są dozwolone. Na przykład `Pint` jest dozwolonym identyfikatorem, mimo że zawiera on **int**, które jest słowem kluczowym.  
   
- Użyj dwóch znaków podkreślenia sekwencyjnych ( **__** ) na początku identyfikatora lub pojedynczy podkreślenia wiodące następuje polecenie wielkiej litery jest zarezerwowany dla implementacji C++ w wszystkich zakresów. Należy unikać przy użyciu jednej podkreśleniem początku następuje małej litery w nazwach z zakresem pliku z powodu konfliktów z obecne lub przyszłe identyfikatory zastrzeżone.  
+ Użycie dwóch podkreślników ( **__** ) na początku identyfikatora lub pojedynczego wiodącego podkreślnika, a po nim wielkiej litery, jest zarezerwowane dla implementacji C++ we wszystkich zakresach. Należy unikać używania jednego wiodącego podkreślenia następuje mała litera dla nazw z zakresem pliku z powodu możliwych konfliktów z bieżącym lub przyszłymi zarezerwowanymi identyfikatorami.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Konwencje leksykalne](../cpp/lexical-conventions.md)

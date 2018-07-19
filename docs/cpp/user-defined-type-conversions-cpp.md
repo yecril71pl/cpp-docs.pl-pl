@@ -32,56 +32,57 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfe76a74a46a6da48e22cc07232457f8c0957fbc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4c41e2cf0765c036715377038357d587a755196f
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37948248"
 ---
-# <a name="user-defined-type-conversions-c"></a>Typ zdefiniowany przez użytkownika konwersje (C++)
-A *konwersji* tworzy nową wartość typu z wartością innego typu. *Konwersje standardowe* są wbudowane w języku C++ i pomocy technicznej, można utworzyć swoją wbudowanych typów, a *zdefiniowane przez użytkownika konwersje* do wykonywania konwersji do z i między typy danych zdefiniowane przez użytkownika.  
+# <a name="user-defined-type-conversions-c"></a>Konwersje typów zdefiniowane przez użytkownika (C++)
+A *konwersji* tworzy nową wartość ciągu określonego typu z wartością innego typu. *Konwersje standardowe* wbudowane funkcje języka C++ i pomocy technicznej, jego typy wbudowane i możesz utworzyć *zdefiniowane przez użytkownika konwersje* do wykonywania konwersji do z lub między typami zdefiniowanymi przez użytkownika.  
   
- Konwersje standardowe wykonywania konwersji między wbudowanych typów między wskaźniki lub odwołania do typy powiązane z dziedziczenie do i z wskaźniki typu void i wskaźnika null. Aby uzyskać więcej informacji, zobacz [konwersje standardowe](../cpp/standard-conversions.md). Konwersje zdefiniowane przez użytkownika wykonywania konwersji między typy danych zdefiniowane przez użytkownika lub wbudowane typy i typy danych zdefiniowane przez użytkownika. Można wdrożyć je jako [konstruktory konwersji](#ConvCTOR) lub jako [funkcji konwersji](#ConvFunc).  
+ Konwersje standardowe wykonywania konwersji między wbudowanych typów między wskaźniki lub odwołania do typów powiązane przez dziedziczenie, do i z wskaźników typu void i wskaźnika o wartości null. Aby uzyskać więcej informacji, zobacz [konwersje standardowe](../cpp/standard-conversions.md). Konwersje zdefiniowane przez użytkownika wykonywać konwersje między typami zdefiniowanymi przez użytkownika lub między typami zdefiniowanymi przez użytkownika i typy wbudowane. Można wdrożyć je jako [konstruktory konwersji](#ConvCTOR) lub jako [funkcje konwersji](#ConvFunc).  
   
- Konwersje może być albo jawne — gdy programistę odwołuje się do jednego typu ma zostać przekonwertowany do innego, tak jak cast lub bezpośredniego inicjowania — ani niejawnych — gdy języka lub program odwołuje się do innego typu niż podany przez programistę.  
+ Konwersje mogą być albo jawne — po potwierdzeniu programisty wywołuje dla jednego typu ma zostać przekonwertowany do innego, tak jak rzutowania lub inicjalizacji bezpośredniej — lub niejawne — gdy język lub program wywołuje dla innego typu niż ten, który został podany przez programistę.  
   
  Niejawne konwersje są próby po:  
   
 -   Argument przekazany do funkcji nie ma tego samego typu co parametr dopasowania.  
   
--   Wartość zwrócona przez funkcję nie ma ten sam typ co typ zwracany funkcji.  
+-   Wartość zwrócona przez funkcję nie ma taki sam typ co typ zwracany funkcji.  
   
--   Wyrażenia inicjatora nie ma tego samego typu co obiekt, który jest podczas inicjowania.  
+-   Wyrażenie inicjatora nie ma tego samego typu co obiekt, który inicjuje go.  
   
--   Wyrażenie, które kontroluje instrukcji warunkowej, konstrukcji pętli lub przełącznik nie ma typ wyniku, które są wymagane do nad nim kontroli.  
+-   Wyrażenie kontrolujące instrukcji warunkowej, pętli konstrukcja lub przełącznik nie ma typu wyniku, które są wymagane do nad nim kontroli.  
   
--   Argument przekazany do operator nie ma tego samego typu co dopasowywania parametru argument. Dla wbudowanych operatorów oba argumenty muszą być tego samego typu i są konwertowane na wspólny typ, mogącej reprezentować jednocześnie. Aby uzyskać więcej informacji, zobacz [konwersje standardowe](standard-conversions.md). Dla operatorów zdefiniowanych przez użytkownika każdy operand musi być taki sam typ jak dopasowywania parametru argument.  
+-   Argument podany dla operatora nie ma tego samego typu jako zgodnego parametr argumentu operacji. Dla wbudowanych operatorów oba operandy muszą mieć taki sam typ, a są konwertowane na wspólny typ, który może reprezentować oba. Aby uzyskać więcej informacji, zobacz [konwersje standardowe](standard-conversions.md). Dla operatorów zdefiniowanych przez użytkownika każdy argument musi mieć tego samego typu jako zgodnego parametr argumentu operacji.  
   
- Po jednym konwersja standardowa nie może ukończyć niejawna konwersja, kompilator może być konwersji zdefiniowanych przez użytkownika, a następnie opcjonalnie dodatkowe konwersja standardowa zakończyć je.  
+ Gdy jeden konwersja standardowa nie może ukończyć niejawnej konwersji, kompilator służy konwersji zdefiniowanej przez użytkownika, a następnie opcjonalnie dodatkowe konwersją standardową, oznacz go jako ukończony.  
   
- Jeśli co najmniej dwa zdefiniowane przez użytkownika konwersje, które dokonać konwersji tego samego są dostępne w witrynie konwersji, konwersja jest określany jako niejednoznaczne. Takie niejednoznaczności są błąd kompilatora nie może ustalić, które z nich dostępne konwersje należy wybrać. Jednak nie jest błąd tak, aby zdefiniować wiele sposobów wykonywania tego samego konwersji, ponieważ zestaw dostępnych konwersji mogą być różne w różnych lokalizacjach w kodzie źródłowym — na przykład, w zależności od tego, które nagłówka pliki znajdują się w pliku źródłowym. Tak długo, jak tylko jedna konwersja jest dostępny w witrynie konwersji, nie istnieje żadne niejednoznaczności. Istnieje kilka metod, które mogą wystąpić Niejednoznaczne konwersje, ale są najbardziej typowe:  
+ Co najmniej dwóch zdefiniowane przez użytkownika konwersje, wykonujących tej samej konwersji są dostępne w witrynie konwersji, konwersja jest określane jako niejednoznaczny. Takie niejednoznaczności są błąd, ponieważ kompilator nie może określić, który z nich dostępne konwersje należy wybrać. Jednak nie jest to błąd, wystarczy, aby zdefiniować wiele sposobów wykonania tej samej konwersji, ponieważ zestaw dostępne konwersje mogą być różne w różnych miejscach w kodzie źródłowym — na przykład, w zależności od tego, który nagłówek pliki znajdują się w pliku źródłowym. Tak długo, jak tylko jednej konwersji jest dostępny w witrynie konwersji, nie ma żadnych niejednoznaczności. Istnieje kilka sposobów, mogą wystąpić Niejednoznaczne konwersje, które najbardziej typowymi są:  
   
--   Dziedziczenie wielokrotne. Konwersja jest zdefiniowany w więcej niż jedną klasę podstawową. 
+-   Wielokrotne dziedziczenie. Konwersja jest zdefiniowany w więcej niż jednej klasy bazowej. 
   
--   Wywołanie funkcji niejednoznaczne. Konwersja jest zdefiniowany jako konstruktora konwersji typu docelowego, a funkcji konwersji typu źródłowego. Aby uzyskać więcej informacji, zobacz [funkcji konwersji](#ConvFunc).  
+-   Wywołanie funkcji niejednoznaczne. Konwersja jest zdefiniowany jako Konstruktor konwersji typu docelowego, a funkcję konwersji typu źródłowego. Aby uzyskać więcej informacji, zobacz [funkcje konwersji](#ConvFunc).  
   
- Zwykle można usunąć niejednoznaczność, wystarczy kwalifikowanie nazwę typu zaangażowane w pełnym lub wykonując jawnego rzutowania Sprecyzuj wyrażenie z.  
+ Zwykle można rozwiązać niejednoznaczność, po prostu kwalifikując nazwę typu zaangażowanych w pełnym lub wykonując jawnego rzutowania w celu wyjaśnienia intencji użytkownika.  
   
- Zarówno konstruktory konwersji, jak i funkcji konwersji przestrzegać zasad kontroli dostępu do elementu członkowskiego, ale dostępność konwersje tylko uważa się wtedy, gdy można ustalić jednoznaczne konwersji. To oznacza, że konwersja może być niejednoznaczna nawet wtedy, gdy poziom dostępu konkurencyjnych konwersji uniemożliwiłyby on używany. Aby uzyskać więcej informacji o ułatwieniach dostępu elementu członkowskiego, zobacz [kontroli dostępu elementu członkowskiego](../cpp/member-access-control-cpp.md).  
+ Konstruktory konwersji i funkcje konwersji przestrzegają zasad kontroli dostępu do elementu członkowskiego, ale dostępność konwersje jest uwzględniana tylko, jeśli można określić jednoznaczna konwersja. Oznacza to, że konwersja może być niejednoznaczna, nawet wtedy, gdy poziom dostępu konkurencyjnych konwersji uniemożliwiałyby jej użycia. Aby uzyskać więcej informacji na temat ułatwień dostępu elementu członkowskiego zobacz [kontrola dostępu do składowych](../cpp/member-access-control-cpp.md).  
   
-## <a name="the-explicit-keyword-and-problems-with-implicit-conversion"></a>Explicit — słowo kluczowe i problemów z niejawna konwersja  
- Domyślnie podczas tworzenia konwersji zdefiniowanej przez użytkownika, kompilator służy do wykonywania niejawnej konwersji. Czasami jest to, co ma, ale innym razem prostych reguł, które prowadzą kompilatora w podejmowaniu niejawne konwersje może doprowadzić do kodu, których nie chcesz, aby zaakceptować.  
+## <a name="the-explicit-keyword-and-problems-with-implicit-conversion"></a>Explicit — słowo kluczowe i problemy z niejawnej konwersji  
+ Domyślnie po utworzeniu konwersji zdefiniowanej przez użytkownika, kompilator służy do wykonywania niejawnej konwersji. Czasami jest to, co chcesz zrobić, ale innym razem prostych reguł, które prowadzą kompilatora w podejmowaniu niejawnych konwersji może doprowadzić do kodu, których nie chcesz, aby zaakceptować.  
   
- Dobrze znane przykładem niejawnej konwersji, która może spowodować problemy jest konwersja `bool`. Istnieje wiele przyczyn, które można utworzyć typu klasy, które mogą być używane w kontekście Boolean — na przykład, tak że służy do sterowania `if` instrukcji lub pętli — gdy kompilator wykonuje zdefiniowane przez użytkownika konwersji na typ wbudowany , kompilator może zastosować później dodatkowe konwersja standardowa. Celem tego dodatkowe konwersja standardowa jest umożliwienie dla elementów, jak podwyższenia poziomu z `short` do `int`, zostanie otwarte także drzwi konwersje mniej oczywista, ale — na przykład z `bool` do `int`, co pozwala na klasę Typ ma być używany w kontekstach liczba całkowita, który nigdy nie powinien. Tego konkretnego problemu nosi nazwę *bezpieczne Bool Problem*. Tego rodzaju problem jest where `explicit` — słowo kluczowe może pomóc.  
+ Dobrze znane przykładem niejawnej konwersji, które mogą powodować problemy jest konwersja **bool**. Istnieje wiele przyczyn, które można utworzyć typu klasy, które mogą być używane w kontekście Boolean — na przykład, tak że może służyć do sterowania **Jeśli** instrukcji lub pętli — ale kiedy kompilator wykonuje konwersja zdefiniowana przez użytkownika, aby wbudowany typ, kompilator może zastosować później dodatkowe konwersja standardowa. Celem tego dodatkowe konwersja standardowa jest umożliwiające elementów, takich jak promocji z **krótki** do **int**, ale również otwiera drzwi biblioteki mniej oczywistych konwersje — na przykład z  **wartość logiczna** do **int**, co pozwala danego typu klasa, ma być używany w kontekstach liczby całkowitej, nigdy nie jest przeznaczony. Tego konkretnego problemu jest znany jako *bezpieczne Bool Problem*. Tego rodzaju problemy to lokalizacja **jawne** — słowo kluczowe może pomóc.  
   
- `explicit` — Słowo kluczowe informuje kompilator, że określonej konwersji nie może służyć do wykonywania niejawnej konwersji. Jeśli potrzebujesz składni wygodę niejawne konwersje przed `explicit` wprowadzono — słowo kluczowe, musieli zaakceptować niezamierzonych konsekwencji tego niejawna konwersja czasami tworzone albo użyj konwersji wygodny bez, o nazwie Funkcje jako obejście tego problemu. Teraz, używając `explicit` — słowo kluczowe, możesz utworzyć wygodny konwersje, które mogą służyć tylko do wykonaj jawne rzutowanie lub bezpośredniego inicjowania i który nie będzie prowadzić do rodzaju problemów wyjaśnienie działania przez bezpieczne Bool Problem.  
+ **Jawne** — słowo kluczowe informuje kompilator, że określonej konwersji nie może służyć do wykonywania niejawnej konwersji. Jeśli chcesz składni wygody niejawne konwersje przed **jawne** wprowadzono — słowo kluczowe, musieli akceptować niezamierzone konsekwencje tego niejawna konwersja czasami tworzone albo użyj mniej wygodne Funkcje konwersji o nazwie obejść ten problem. Teraz, korzystając z **jawne** — słowo kluczowe, możesz utworzyć wygodne konwersji, należy używać tylko do wykonywania jawnych rzutowań lub inicjalizacji bezpośredniej i który nie zaprowadzi do rodzaju wyjaśnienie działania na bezpieczne Bool Problem problemów.  
   
- `explicit` — Słowo kluczowe może odnosić się do konstruktory konwersji od języka C ++ 98 oraz do funkcji konwersji od języka C ++ 11. Poniższe sekcje zawierają więcej informacji o sposobie używania `explicit` — słowo kluczowe.  
+ **Jawne** — słowo kluczowe może odnosić się do konstruktorów konwersji od C ++ 98 i funkcje konwersji, ponieważ C ++ 11. Poniższe sekcje zawierają więcej informacji o sposobie używania **jawne** — słowo kluczowe.  
   
-##  <a name="ConvCTOR"></a> Konwersja konstruktorów  
- Konstruktory konwersji zdefiniuj konwersje z typów zdefiniowanych przez użytkownika lub wbudowanych do typu zdefiniowanego przez użytkownika. W poniższym przykładzie pokazano konwersji konstruktora, który konwertuje z typu wbudowanego `double` do typu zdefiniowanego przez użytkownika `Money`.  
+##  <a name="ConvCTOR"></a> Konstruktory konwersji  
+ Konstruktory konwersji zdefiniować konwersje z typów zdefiniowanych przez użytkownika lub wbudowane do typu zdefiniowanego przez użytkownika. W poniższym przykładzie pokazano Konstruktor konwersji, która konwertuje typ wbudowany **double** na typ zdefiniowany przez użytkownika `Money`.  
   
-```  
+```cpp 
 #include <iostream>  
   
 class Money  
@@ -110,23 +111,23 @@ int main(int argc, char* argv[])
 }  
 ```  
   
- Powiadomienie, że pierwsze wywołanie funkcji `display_balance`, który przyjmuje argument typu `Money`, nie wymaga konwersji, ponieważ jej argument jest nieprawidłowego typu. Jednak na drugie wywołanie `display_balance`, konwersja jest potrzebna, ponieważ typ argumentu, `double` o wartości `49.95`, to nie to, co Funkcja spodziewa się. Funkcji nie można użyć tej wartości bezpośrednio, ale ponieważ brak konwersji z typu argumentu —`double`— typowi parametru dopasowania —`Money`— wartości tymczasowej typu `Money` jest tworzony w argumencie i używane do Ukończenie wywołania funkcji. W wywołaniu trzeci `display_balance`, zwróć uwagę, że argument nie jest `double`, ale zamiast tego jest `float` o wartości `9.99`— i jeszcze wywołania funkcji nadal może być ukończona, ponieważ kompilator można wykonać konwersji standardowej — w takim przypadku , z `float` do `double`— a następnie dokonaj konwersji zdefiniowanej przez użytkownika z `double` do `Money` do wykonania niezbędnych konwersji.  
+ Zwróć uwagę, że pierwsze wywołanie do funkcji `display_balance`, który przyjmuje argument typu `Money`, nie wymaga konwersji, ponieważ jej argument ma poprawnego typu. Jednak na drugie wywołanie `display_balance`, konwersja jest niezbędne, ponieważ typ argumentu, **double** o wartości `49.95`, to nie funkcja oczekiwaniom. Funkcja nie może bezpośrednio, użyj tej wartości, ale ponieważ nie istnieje konwersja z typu argumentu —**double**— typ pasującej do parametru —`Money`— tymczasowej wartości typu `Money` jest zbudowany z argument i przeznaczyć na wykonywanie wywołań funkcji. W trzecim wywołaniu `display_balance`, zwróć uwagę, że argument nie jest **double**, jest jednak **float** o wartości `9.99`— i jeszcze wywołanie funkcji nadal może zostać ukończona, ponieważ kompilatora można wykonać konwersji standardowej — w tym przypadku z **float** do **double**— a następnie dokonaj konwersji zdefiniowanej przez użytkownika z **double** do `Money` można ukończyć konwersji konieczne.  
   
 ### <a name="declaring-conversion-constructors"></a>Deklarowanie konstruktorów konwersji  
- Następujące reguły dotyczą deklarowanie konstruktora konwersji:  
+ Obowiązują następujące reguły do deklarowania konstruktora konwersji:  
   
--   Typ docelowy konwersji jest typ zdefiniowany przez użytkownika jest tworzona.  
+-   Typ docelowy konwersji jest typ zdefiniowany przez użytkownika, który jest konstruowany.  
   
--   Konstruktory konwersji zwykle zajmują dokładnie jednego argumentu, który jest typem źródła. Konstruktor konwersji można jednak określić dodatkowe parametry, jeśli każdy dodatkowy parametr ma wartość domyślną. Typ źródła pozostaje typ pierwszego parametru.  
+-   Konstruktory konwersji zwykle po dokładnie jednego argumentu, który jest typem źródła. Konstruktor konwersji można jednak określić dodatkowe parametry, jeśli każdy dodatkowy parametr ma wartość domyślną. Typ źródłowy pozostaje typ pierwszego parametru.  
   
--   Konstruktory konwersji, podobnie jak wszystkie konstruktory nie należy określać typu zwracanego. Określanie zwracanego typu w deklaracji występuje błąd.  
+-   Konstruktory konwersji, podobnie jak wszystkie konstruktory nie należy określać typ zwracany. Określanie zwracanego typu w deklaracji występuje błąd.  
   
--   Konstruktory konwersji może być jawnego.  
+-   Konstruktory konwersji może być jawne.  
   
 ### <a name="explicit-conversion-constructors"></a>Jawna konwersja konstruktorów  
- Przez zadeklarowanie konstruktora konwersji za `explicit`, mogą być używane tylko, wykonać bezpośredniego inicjowania obiektu lub wykonać jawnego rzutowania. Zapobiega to funkcje, które akceptuje argumentu typu klasy z również niejawnie przyjmuje argumenty konstruktora konwersji typu źródłowego i uniemożliwia typu klasy kopiowania zainicjowany z wartością typu źródłowego. W poniższym przykładzie pokazano sposób definiowania konstruktora jawnej konwersji i efekt, który ma na jakie kodu jest poprawnie sformułowany.  
+ Przez zadeklarowanie konstruktora konwersji za **jawne**, tylko można przeprowadzić bezpośredniego inicjowania obiektu lub wykonać jawnego rzutowania. Zapobiega to funkcje, które zaakceptowanie argumentu o typie danej klasy z również niejawnie przyjmuje argumenty typu źródła Konstruktor konwersji i zapobiega typu klasy kopiowania inicjowane z wartością typu źródłowego. Poniższy przykład pokazuje jak zdefiniować Konstruktor jawnej konwersji i efekt, który ma to na jaki kod jest poprawnie sformułowany.  
   
-```  
+```cpp 
 #include <iostream>  
   
 class Money  
@@ -155,14 +156,14 @@ int main(int argc, char* argv[])
 }  
 ```  
   
- W tym przykładzie zwróć uwagę, można nadal używać konstruktora jawnej konwersji do wykonania bezpośredniego inicjowania `payable`. Gdyby zamiast kopiowania zainicjować `Money payable = 79.99;`, może wystąpić błąd. W pierwszym wywołaniu `display_balance` jest nie dotyczy, ponieważ argument jest nieprawidłowego typu. Drugie wywołanie `display_balance` jest błąd, ponieważ Konstruktor konwersji nie mogą posłużyć do wykonania niejawne konwersje. Trzeci wywołanie `display_balance` jest dozwolony z powodu jawne Rzutowanie na `Money`, ale należy zauważyć, że kompilator nadal pomogła wykonać rzutowanie wstawiając niejawne rzutowanie z `float` do `double`.  
+ W tym przykładzie należy zauważyć, można nadal używać konstruktora jawną konwersję do wykonania bezpośredniego inicjowania `payable`. Gdyby natomiast Inicjowanie kopiowania `Money payable = 79.99;`, byłoby błąd. Pierwsze wywołanie `display_balance` jest nienaruszona, ponieważ argument jest poprawnego typu. Drugie wywołanie `display_balance` występuje błąd, ponieważ Konstruktor konwersji nie można używać do wykonywania niejawnej konwersji. Trzecie wywołanie `display_balance` jest legalna ze względu na jawne Rzutowanie na `Money`, ale Zwróć uwagę, że kompilator nadal pomogła wykonaj rzutowanie, wstawiając niejawne rzutowanie z **float** do **double**.  
   
- Chociaż wygodę zezwalanie niejawne konwersje może być kuszące, spowoduje to mogą stać się twarde do znalezienia usterek. Zasadą jest zapewnienie wszystkie konstruktory konwersji jawnej z wyjątkiem przypadków, gdy wiesz, które mają określone konwersji występuje niejawnie.  
+ Chociaż wygody umożliwienia konwersji niejawnych; może być kuszące, spowoduje to więc wprowadzić twardych do znalezienia błędów. Podstawową zasadą jest zapewnienie wszystkie konstruktory konwersji jawnej, z wyjątkiem sytuacji, gdy wiesz, mają określone konwersję niejawnie wystąpić.  
   
 ##  <a name="ConvFunc"></a> Funkcje konwersji  
- Funkcje konwersji zdefiniuj konwersji z typu zdefiniowanego przez użytkownika na inne typy. Te funkcje są czasami określane jako "operatory rzutowania" ponieważ, wraz z konstruktory konwersji, są one nazywane gdy wartość jest rzutowane do innego typu. W poniższym przykładzie pokazano konwertuje z typu zdefiniowanego przez użytkownika funkcja konwersji `Money`, na typ wbudowany `double`:  
+ Funkcje konwersji zdefiniować konwersji z typu zdefiniowanego przez użytkownika do innych typów. Te funkcje są czasami określane jako "operatorami rzutowania" ponieważ one wraz z konstruktorów konwersji są wywoływane, gdy wartość jest rzutowany na innego typu. W poniższym przykładzie pokazano funkcję konwersji, która konwertuje typ zdefiniowany przez użytkownika `Money`, do typu wbudowanego **double**:  
   
-```  
+```cpp 
 #include <iostream>  
   
 class Money  
@@ -183,31 +184,31 @@ void display_balance(const Money balance)
   
 ```  
   
- Zwróć uwagę, że zmiennej członkowskiej `amount` staje się prywatne i publiczne konwersji funkcja wpisz `double` wprowadza się tylko w celu zwracania wartości `amount`. W funkcji `display_balance`, niejawna konwersja występuje, gdy wartość `balance` przesyłane strumieniowo do wyjścia standardowego za pomocą operatora wstawiania strumienia `<<`. Ponieważ żaden operator wstawiania strumienia nie jest zdefiniowana dla typu zdefiniowanego przez użytkownika `Money`, ale jest on dostępny dla typu wbudowanego `double`, kompilator można użyć funkcji konwersji z `Money` do `double` do zaspokojenia wstawiania strumienia operator.  
+ Należy zauważyć, że zmiennej składowej `amount` wykonano prywatnych i publicznych konwersji funkcja wpisz **double** wprowadza się tylko do zwracania wartości `amount`. W funkcji `display_balance`, niejawna konwersja występuje, gdy wartość `balance` jest przesyłany strumieniowo do wyjścia standardowego za pomocą operatora wstawiania strumienia `<<`. Ponieważ żaden operator wstawiania strumienia jest zdefiniowany dla typu zdefiniowanego przez użytkownika `Money`, ale jest on dostępny dla typu wbudowanego **double**, kompilator może używać funkcji konwersji z `Money` do **podwójnejprecyzji** spełnić operator wstawiania strumienia.  
   
- Funkcje konwersji są dziedziczone przez klasy pochodnej. Funkcji konwersji w klasie pochodnej zastąpić funkcji konwersji dziedziczone tylko jeśli Konwertuj dokładnie tego samego typu. Na przykład funkcja zdefiniowana przez użytkownika konwersja klasy pochodnej `operator int` nie przesłania — lub nawet wpływu — funkcja zdefiniowana przez użytkownika konwersja klasy podstawowej `operator short`, mimo że konwersje standardowe zdefiniuj konwersji Relacja między `int` i `short`.  
+ Funkcje konwersji są dziedziczone przez klasy pochodne. Funkcje konwersji w klasie pochodnej tylko musi zostać zastąpiona funkcja konwersji odziedziczone po konwertują do dokładnie tego samego typu. Na przykład konwersja zdefiniowana przez użytkownika funkcja klasy pochodnej **operator int** nie zastępuje — lub nawet wpływu — konwersja zdefiniowana przez użytkownika funkcji klasy podstawowej **operator krótki**nawet Chociaż konwersje standardowe zdefiniować relację konwersji między **int** i **krótki**.  
   
-### <a name="declaring-conversion-functions"></a>Deklarowanie funkcji konwersji  
- Następujące reguły dotyczą deklarowania funkcji konwersji:  
+### <a name="declaring-conversion-functions"></a>Deklarowania funkcji konwersji  
+ Do deklarowania funkcji konwersji stosowane następujące reguły:  
   
--   Typ docelowy konwersji musi być zadeklarowana przed deklaracji funkcji konwersji. Nie można zadeklarować klasy, struktury, wyliczenia i definicji typów w deklaracji funkcji konwersji.  
+-   Typ docelowy konwersji musi być zadeklarowany przed deklaracją funkcji konwersji. Nie można zadeklarować klasy, struktury, wyliczenia i definicje typów w ramach deklaracji funkcji konwersji.  
   
-    ```  
+    ```cpp 
     operator struct String { char string_storage; }() // illegal  
     ```  
   
 -   Funkcje konwersji nie przyjmują argumentów. Określanie parametrów w deklaracji występuje błąd.  
   
--   Funkcje konwersji ma typ zwracany jest określony przez nazwę funkcji konwersji, który jest także nazwa typ docelowy konwersji. Określanie zwracanego typu w deklaracji występuje błąd.  
+-   Funkcje konwersji mają zwracany typ, który jest określony przez nazwę funkcji konwersji, która jest również nazwą typ docelowy konwersji. Określanie zwracanego typu w deklaracji występuje błąd.  
   
 -   Funkcje konwersji mogą być wirtualne.  
   
--   Funkcje konwersji może być jawnego.  
+-   Funkcje konwersji może być jawne.  
   
-### <a name="explicit-conversion-functions"></a>Jawna konwersja funkcji  
- Gdy funkcja konwersji został zadeklarowany jako jawne, tylko umożliwia przeprowadzenie jawnego rzutowania. Zapobiega to funkcje, które akceptuje argumentu typu docelowego funkcji konwersji z również niejawnie przyjmuje argumenty typu klasy i uniemożliwia wystąpień typu docelowego kopii zainicjowany z wartością typu klasy. W poniższym przykładzie pokazano sposób definiowania funkcji jawnej konwersji oraz wpływ ma na jakie kodu jest poprawnie sformułowany.  
+### <a name="explicit-conversion-functions"></a>Funkcje konwersji jawnej  
+ Gdy funkcja konwersji jest zadeklarowany jawnie, może tylko służyć do wykonywania jawnego rzutowania. Zapobiega to funkcje, które akceptują argument typu docelowego funkcję konwersji z również niejawnie przyjmuje argumenty typu klasy i zapobiega wystąpień typu docelowego kopii inicjowane z wartością typu klasy. Poniższy przykład pokazuje jak zdefiniować funkcję konwersji jawnej i efekt, ma to na jaki kod jest dobrze sformułowany.  
   
-```  
+```cpp 
 #include <iostream>  
   
 class Money  
@@ -228,5 +229,5 @@ void display_balance(const Money balance)
   
 ```  
   
- Tutaj funkcji konwersji `operator double` wprowadzono jawne i jawne Rzutowanie na typ `double` został wprowadzony w funkcji `display_balance` do wykonania konwersji. Pominięcie tego rzutowania zostały kompilator będzie mógł zlokalizować operator odpowiedniego wstawiania strumienia `<<` dla typu `Money` i może wystąpić błąd.  
+ Tutaj funkcję konwersji **operator double** wykonano jawnej i jawnego rzutowania na typ **double** został wprowadzony w funkcji `display_balance` dokonać konwersji. W przypadku pominięcia to rzutowanie były kompilator nie będzie można zlokalizować operator odpowiednie wstawiania strumienia `<<` dla typu `Money` i mógłby wystąpić błąd.  
   

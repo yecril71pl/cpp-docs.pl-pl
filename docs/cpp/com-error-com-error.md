@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d26239f6edf98e90f9d4d773d654025da410a97
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ec16faa9881fc1c69dca5f8f39b8797cf0fcff0d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947854"
 ---
 # <a name="comerrorcomerror"></a>_com_error::_com_error
 **Microsoft Specific**  
@@ -31,43 +32,41 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      _com_error(  
+_com_error(  
    HRESULT hr,  
    IErrorInfo* perrinfo = NULL,  
-   bool fAddRef=false  
-) throw( );  
-_com_error(  
-   const _com_error& that   
-) throw( );  
+   bool fAddRef=false) throw( );  
+
+_com_error( const _com_error& that ) throw( );  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `hr`  
- `HRESULT` Informacje.  
+ *godz.*  
+ Informacje o HRESULT.  
   
- `perrinfo`  
- **IErrorInfo** obiektu.  
+ *perrinfo*  
+ `IErrorInfo` obiekt.  
   
- **wartość logiczna fAddRef = false**  
- Konstruktor do wywołania AddRef na inną niż null powoduje, że **IErrorInfo** interfejsu. Zapewnia to poprawne zliczanie w typowych przypadkach, gdy przekazany własność interfejsu `_com_error` obiektów, takich jak:  
+ `bool fAddRef=false`  
+ Powoduje, że Konstruktor może wywołać inną niż null AddRef `IErrorInfo` interfejsu. Zapewnia to poprawne zliczanie w przypadku typowych, której własność interfejsu jest przekazywana do `_com_error` obiektów, takich jak:  
   
-```  
+```cpp 
 throw _com_error(hr, perrinfo);  
 ```  
   
- Jeśli nie chcesz swój kod, aby przetransferować własność do `_com_error` obiektu i `AddRef` jest wymagany do przesunięcia **wersji** w `_com_error` destruktor, konstruowania obiektu w następujący sposób:  
+ Jeśli nie chcesz swój kod, aby przenieść własność na `_com_error` obiektu i `AddRef` jest wymagany, o które zostanie przesunięte `Release` w `_com_error` destruktora, konstruowania obiektu w następujący sposób:  
   
-```  
+```cpp 
 _com_error err(hr, perrinfo, true);  
 ```  
   
- `that`  
+ *który*  
  Istniejące `_com_error` obiektu.  
   
 ## <a name="remarks"></a>Uwagi  
- Pierwszy konstruktora tworzy nowy obiekt podane `HRESULT` i opcjonalne **IErrorInfo** obiektu. Drugi tworzy kopię istniejącego `_com_error` obiektu.  
+ Pierwszy Konstruktor tworzy nowy obiekt, biorąc pod uwagę na HRESULT i opcjonalnie `IErrorInfo` obiektu. Drugi tworzy kopię istniejącego `_com_error` obiektu.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [_com_error, klasa](../cpp/com-error-class.md)

@@ -16,37 +16,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed5daf503024b2c3f843faeeaedbd9ec9bf64b7c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 89ed2b161c5b8f73d68fb22eb29eb00e057d7029
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947883"
 ---
 # <a name="constcast-operator"></a>Operator const_cast
-Usuwa **const**, `volatile`, i **__unaligned** atrybutów z klasy.  
+Usuwa **const**, **volatile**, i **__unaligned** atrybutów z klasy.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
   
-const_cast <   
-type-id  
- > (   
-expression  
- )  
+const_cast <type-id> (expression)  
   
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Wskaźnik do dowolnego typu obiektu lub wskaźnika do elementu członkowskiego danych można jawnie konwertować na typ, który jest identyczny z wyjątkiem **const**, `volatile`, i **__unaligned** kwalifikatorów. Wskaźniki i odwołań wynik będzie odnosić się do oryginalnego obiektu. Dla wskaźników do elementów członkowskich danych wynik będzie odnosić się do elementu członkowskiego jako oryginalnego (uncast) wskaźnik do elementu członkowskiego danych. W zależności od typu obiektu, do którego istnieje odwołanie operacja zapisu za pośrednictwem wynikowego wskaźnika, reference lub wskaźnik do elementu członkowskiego danych może je spowodować niezdefiniowane zachowanie.  
+ Wskaźnik do dowolnego typu obiektu lub wskaźnika do składowej danych może być jawnie konwertowane na typ, który jest identyczny, z wyjątkiem **const**, **volatile**, i **__unaligned** Kwalifikatory. Wskaźniki i odwołania wynik będzie odnosił się do oryginalnego obiektu. Dla wskaźników do składowych danych wynik będzie odnosił się do tego samego elementu członkowskiego jako oryginalny wskaźnik (uncast), aby element członkowski danych. W zależności od typu przywoływanego obiektu niezdefiniowane zachowanie może powodować generowanie operacji zapisu za pośrednictwem wynikowego wskaźnika, odwołanie lub wskaźnik do składowej danych.  
   
- Nie można użyć `const_cast` operatora, aby bezpośrednio zastąpić stan stałej zmiennej stałej.  
+ Nie można użyć `const_cast` operator bezpośrednio zastąpić stan stałej zmiennej stałej.  
   
- `const_cast` Operator konwertuje wartość wskaźnika o wartości null na wartość pustego wskaźnika typu docelowego.  
+ `const_cast` Operator konwertuje wartość pustego wskaźnika do wartości pustego wskaźnika typu miejsca docelowego.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp 
 // expre_const_cast_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -75,7 +72,7 @@ int main() {
 }  
 ```  
   
- Na wiersz zawierający `const_cast`, typ danych miary `this` wskaźnika jest `const CCTest *`. `const_cast` Operator zmienia typ danych `this` wskaźnik do `CCTest *`, dzięki czemu element członkowski `number` do zmodyfikowania. Rzutowanie ważny tylko w pozostałej części instrukcji, w której znajduje się.  
+ Na wiersz zawierający `const_cast`, typ danych **to** wskaźnik jest `const CCTest *`. `const_cast` Operator zmienia typu danych **to** wskaźnik do `CCTest *`, dzięki czemu element członkowski `number` do zmodyfikowania. Rzutowanie jest ważny tylko dla pozostałych instrukcji, w której występuje.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Operatory rzutowania](../cpp/casting-operators.md)   

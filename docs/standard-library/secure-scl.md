@@ -16,35 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88e7153fa77c7a0aa213bfb01587f2ea080c6ddd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f6a9fa05a4cb8c421a511a30fd62310d69003fde
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854093"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966436"
 ---
 # <a name="securescl"></a>_SECURE_SCL
 
-Zastąpiony przez [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), definiuje to makro czy [zaznaczone Iteratory](../standard-library/checked-iterators.md) są włączone. Domyślnie zaznaczone Iteratory są włączone w kompilacjach debugowania i wyłączone w sprzedaży detalicznej kompilacji.
+Zastąpione przez [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), definiuje to makro czy [Checked Iterators](../standard-library/checked-iterators.md) są włączone. Domyślnie Iteratory sprawdzane są włączone w kompilacjach do debugowania i wyłączone w sprzedaży detalicznej.
 
 > [!IMPORTANT]
-> Bezpośrednie użycie `_SECURE_SCL` makro jest przestarzały. Zamiast tego należy użyć `_ITERATOR_DEBUG_LEVEL` do kontrolowania ustawień zaznaczone iteratora. Aby uzyskać więcej informacji, zobacz [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
+> Bezpośrednie korzystanie z makro _SECURE_SCL jest przestarzały. Zamiast tego należy użyć _ITERATOR_DEBUG_LEVEL ustawienia iteratora kontroli sprawdzane. Aby uzyskać więcej informacji, zobacz [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Zaznaczone Iteratory są włączone, niebezpieczne użycie iteratora powoduje błąd w czasie wykonywania, a program zostanie zakończony. Aby włączyć zaznaczone Iteratory, ustaw `_ITERATOR_DEBUG_LEVEL` 1 lub 2. Jest to równoważne `_SECURE_SCL` ustawienie 1 lub włączone:
+Gdy Iteratory sprawdzane są włączone, niebezpieczne użycie iteratora powoduje błąd w czasie wykonywania, a program jest zamykany. Aby włączyć Iteratory sprawdzane, ustaw _ITERATOR_DEBUG_LEVEL 1 lub 2. Jest odpowiednikiem ustawienia _SECURE_SCL 1 lub włączone:
 
 ```cpp
 #define _ITERATOR_DEBUG_LEVEL 1
 ```
 
-Aby wyłączyć zaznaczone Iteratory, ustaw `_ITERATOR_DEBUG_LEVEL` na 0. Jest to równoważne `_SECURE_SCL` ustawienie 0 lub wyłączone:
+Aby wyłączyć Iteratory sprawdzane, należy ustawić _ITERATOR_DEBUG_LEVEL na 0. Jest odpowiednikiem _SECURE_SCL ustawienie wartości 0 lub wyłączone:
 
 ```cpp
 #define _ITERATOR_DEBUG_LEVEL 0
 ```
 
-Aby uzyskać informacje na temat sposobu Wyłącz ostrzeżenia o zaznaczone Iteratory, zobacz [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).
+Aby uzyskać informacji na temat sposobu wyłączania ostrzeżeń dotyczących sprawdzonych iteratorów, zobacz [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).
 
 ## <a name="see-also"></a>Zobacz także
 

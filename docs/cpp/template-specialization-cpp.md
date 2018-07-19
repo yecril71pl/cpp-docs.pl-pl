@@ -14,20 +14,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2cc25bab72532e1bfb425646d76b69aaf07f5d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: edef104cafc4b56b5f785537db1c836da4e427dc
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422712"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941174"
 ---
 # <a name="template-specialization-c"></a>Specjalizacja szablonu (C++)
 
-Szablony klas może być częściowo specjalizowany i wynikowa klasy jest nadal szablonu. Częściowa specjalizacja umożliwia kod szablonu do częściowo dostosowania dla określonych typów w sytuacjach, takich jak:  
+Szablony klas mogą być częściowo specjalizowany, a wynikowe klasy nadal jest szablonem. Częściowa specjalizacja umożliwia kodu szablonu częściowo dostosować do określonych typów w sytuacjach, takich jak:  
   
--   Szablon ma wiele typów i tylko niektóre z nich musi być specjalizowany. Wynik jest szablon sparametryzowana pozostałych typów.  
+-   Szablon ma wiele typów, a tylko niektóre z nich muszą być wyspecjalizowane pod. Wynik jest szablonem sparametryzowane o pozostałych typach.  
   
--   Szablon ma tylko jeden typ, ale specjalizacji jest wymagany dla wskaźnika, odwołanie, wskaźnik do elementu członkowskiego lub typów wskaźnika funkcji. Specjalizacja, sam jest nadal szablonu wskazywał lub odwołuje się do typu.  
+-   Szablon ma tylko jeden typ, ale wymagane jest specjalizacją wskaźników, odwołań, wskaźnik do elementu członkowskiego lub typy wskaźników funkcji. Specjalizacja, sama jest nadal szablonu dla typu wskazywanego ani mieć odwołania.  
   
 ## <a name="example"></a>Przykład  
   
@@ -80,7 +80,7 @@ PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1
   
 ## <a name="example"></a>Przykład
 
- Jeśli masz pobierającej dowolnego typu klasy kolekcji szablonu **T**, można utworzyć częściowej specjalizacji pobierającej dowolnego typu wskaźnika ** T ***. Poniższy kod przedstawia szablonu klasy kolekcji `Bag` i częściowa specjalizacja dla typów wskaźnika, w których kolekcji wyłuskań typów wskaźnika przed skopiowaniem ich do tablicy. Następnie kolekcji przechowuje wartości, które są wskazywał. Z oryginalnym szablonie tylko wskaźniki się czy były przechowywane w kolekcji, pozostawiając dane są narażone na usuwanie lub zmiana. W tej wersji specjalne wskaźnika kolekcji kodu do sprawdzenia wartości null wskaźnika w `add` metoda jest dodawana.  
+ Jeśli masz szablonu klasy kolekcji, która przyjmuje dowolnego typu `T`, możesz utworzyć częściowa specjalizacja, która przyjmuje dowolny typ wskaźnika `T*`. Poniższy przykład demonstruje szablonu klasy kolekcji `Bag` i częściowej specjalizacji dla typów wskaźnika, w których kolekcja wyłuskań typów wskaźnika przed skopiowaniem ich do tablicy. Następnie kolekcja przechowuje wartości, które są wskazywał. Z oryginalnym szablonem wskaźniki, samodzielnie czy były przechowywane w kolekcji, pozostawiając dane są narażone na usunięcie lub zmiana. W tej wersji specjalne wskaźnika kolekcji kodu pod kątem wartości null wskaźnika w `add` metoda jest dodawana.  
   
 ```cpp
 // partial_specialization_of_class_templates2.cpp  
@@ -192,7 +192,7 @@ Null pointer!
   
 ## <a name="example"></a>Przykład
 
- W poniższym przykładzie zdefiniowano szablonu klasy, która przyjmuje pary żadnych dwa typy i następnie definiuje częściowa specjalizacja szablonów klas wyspecjalizowanych tak, aby jeden z typów `int`. Specjalizacja definiuje metodę dodatkowe sortowania, która implementuje sortowanie proste bąbelków oparte na liczbę całkowitą.  
+ W poniższym przykładzie zdefiniowano szablonu klasy, która przyjmuje pary wszelkie dwa typy i następnie definiuje częściowa specjalizacja szablonu klasy przeznaczone specjalnie tak, aby jeden z typów **int**. Specjalizacja definiuje metody dodatkowe sortowania, która implementuje sortowanie bąbelków proste, oparte na liczbę całkowitą.  
   
 ```cpp
 // partial_specialization_of_class_templates3.cpp  

@@ -1,5 +1,5 @@
 ---
-title: integral_constant — klasa, bool_constant klasy | Dokumentacja firmy Microsoft
+title: integral_constant, klasa, bool_constant, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d59c994cba47cf609c13a1d35fbc7fed60fc531f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8bff57549307eeaa9245c0bb4083b206471fe726
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844539"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962536"
 ---
-# <a name="integralconstant-class-boolconstant-class"></a>integral_constant — klasa, bool_constant — klasa
+# <a name="integralconstant-class-boolconstant-class"></a>integral_constant, klasa, bool_constant, klasa
 
-Sprawia, że typem całkowitym stałej od typu i wartości.
+Sprawia, że całkowita stałe od typu i wartości.
 
 ## <a name="syntax"></a>Składnia
 
@@ -46,15 +46,15 @@ struct integral_constant {
 
 ### <a name="parameters"></a>Parametry
 
-*T* typu stałej.
+*T* typ stałej.
 
 *v* wartość stałej.
 
 ## <a name="remarks"></a>Uwagi
 
-`integral_constant` Klasy szablonu, gdy specjalizowany z typem całkowitym *T* i wartość *v* tego typu reprezentuje obiekt przechowujący stałą tego typu całkowitego na określoną wartość. Element członkowski o nazwie `type` jest aliasem typ wygenerowanego szablonu specjalizacji i `value` elementu członkowskiego zawiera wartość *v* pozwala utworzyć specjalizacji.
+`integral_constant` Klasy szablonu, gdy wyspecjalizowane z typem całkowitym *T* i wartość *v* tego typu reprezentuje obiekt, który zawiera stałą całkowitą typu z określoną wartością. Element członkowski o nazwie `type` jest aliasem dla typu specjalizacji wygenerowany szablon i `value` elementu członkowskiego zawiera wartość *v* użyty do utworzenia specjalizacji.
 
-`bool_constant` Jawna specjalizacja częściowa jest szablon klasy `integral_constant` używającą `bool` jako *T* argumentu.
+`bool_constant` Klasy szablonu jest jawna specjalizacja częściowe `integral_constant` , który używa **bool** jako *T* argumentu.
 
 ## <a name="example"></a>Przykład
 
@@ -85,7 +85,7 @@ integral_constant<bool, false> == false
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

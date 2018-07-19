@@ -26,16 +26,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fffa778854519bff6f947aec779e36b77fd4e202
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a6f45f8a445420d85c539de2f5ba485c0a47127b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861301"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962559"
 ---
 # <a name="regexiterator-class"></a>regex_iterator — Klasa
 
-Klasa iteratora dopasowań.
+Iterator — klasa dopasowania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -75,15 +75,15 @@ private:
 
 ### <a name="parameters"></a>Parametry
 
-`BidIt` Typ iteratora submatches.
+*BidIt* typ iteratora dla poddopasowania.
 
-`Elem` Typ elementów w celu dopasowania.
+*Elem* typ elementów do dopasowania.
 
-`RXtraits` Klasa cech elementów.
+*RXtraits* klasa cech dla elementów.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje obiekt stałej iteratora do przodu. Wyodrębnia on obiektów typu `match_results<BidIt>` wielokrotnie, stosując jego obiektu będącego wyrażeniem regularnym `*pregex` do sekwencji znaków, zdefiniowane przez zakres iteratora `[begin, end)`.
+Klasa szablonu opisuje obiekt stały iterator do przodu. Wyodrębnia obiekty typu `match_results<BidIt>` wielokrotnie, stosując jego obiektu będącego wyrażeniem regularnym `*pregex` sekwencję znaków, definiowane przez zakres iteratora `[begin, end)`.
 
 ## <a name="examples"></a>Przykłady
 
@@ -99,13 +99,13 @@ Zobacz poniższe tematy zawierają przykłady dotyczące wyrażeń regularnych:
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<regex >
+**Nagłówek:** \<wyrażenia regularnego >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="difference_type"></a>  regex_iterator::difference_type
 
-Typ iteratora różnicy.
+Typ różnicy iteratora.
 
 ```cpp
 typedef std::ptrdiff_t difference_type;
@@ -113,7 +113,7 @@ typedef std::ptrdiff_t difference_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem `std::ptrdiff_t`.
+Typ jest synonimem dla `std::ptrdiff_t`.
 
 ### <a name="example"></a>Przykład
 
@@ -160,7 +160,7 @@ match == a
 
 ## <a name="iterator_category"></a>  regex_iterator::iterator_category
 
-Typ iteratora kategorii.
+Typ kategorii iteratora.
 
 ```cpp
 typedef std::forward_iterator_tag iterator_category;
@@ -168,7 +168,7 @@ typedef std::forward_iterator_tag iterator_category;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem `std::forward_iterator_tag`.
+Typ jest synonimem dla `std::forward_iterator_tag`.
 
 ### <a name="example"></a>Przykład
 
@@ -223,11 +223,11 @@ bool operator!=(const regex_iterator& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` Iterator do porównania.
+*prawy* iteratora do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca funkcję elementu członkowskiego `!(*this == right)`.
+Funkcja elementu członkowskiego zwraca `!(*this == right)`.
 
 ### <a name="example"></a>Przykład
 
@@ -274,7 +274,7 @@ match == a
 
 ## <a name="op_star"></a>  regex_iterator::operator *
 
-Uzyskuje dostęp do wyznaczonych dopasowania.
+Uzyskuje dostęp do wyznaczonej dopasowania.
 
 ```cpp
 const match_results<BidIt>& operator*();
@@ -282,7 +282,7 @@ const match_results<BidIt>& operator*();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca przechowywana wartość `match`.
+Funkcja elementu członkowskiego zwraca przechowywaną wartość `match`.
 
 ### <a name="example"></a>Przykład
 
@@ -329,7 +329,7 @@ match == a
 
 ## <a name="op_add_add"></a>  regex_iterator::operator ++
 
-Zwiększa iteratora.
+Inkrementuje iterator.
 
 ```cpp
 regex_iterator& operator++();
@@ -338,9 +338,9 @@ regex_iterator& operator++(int);
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli bieżące dopasowanie ma żadne znaki nie wywołuje metodę operatora pierwszy `regex_search(begin, end, match, *pregex, flags | regex_constants::match_prev_avail | regex_constants::match_not_null)`; w przeciwnym razie przechodzi ona przechowywana wartość `begin` wskaż pierwszego znaku po bieżącej następnie dopasowywania wywołań `regex_search(begin, end, match, *pregex, flags | regex_constants::match_prev_avail)`. W obu przypadkach Jeśli wyszukiwanie nie powiedzie się operator ustawia obiekt iteratora sekwencja kończenia. Zwraca obiekt.
+Jeśli bieżące dopasowanie nie ma żadnych znaków pierwszy operator wywołuje `regex_search(begin, end, match, *pregex, flags | regex_constants::match_prev_avail | regex_constants::match_not_null)`; w przeciwnym razie przechodzi przechowywaną wartość `begin` wskaż pierwszy znak po bieżącej następnie dopasowywania wywołań `regex_search(begin, end, match, *pregex, flags | regex_constants::match_prev_avail)`. W obu przypadkach Jeśli wyszukiwanie zakończy się niepowodzeniem, operator ustawia obiekt iteratora sekwencja kończenia. Operator zwraca obiekt.
 
-Drugi operator tworzy kopię obiektu, zwiększa obiektu, a następnie zwraca kopii.
+Drugi operator tworzy kopię obiektu, zwiększa obiektu, a następnie zwraca kopię.
 
 ### <a name="example"></a>Przykład
 
@@ -395,11 +395,11 @@ bool operator==(const regex_iterator& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` Iterator do porównania.
+*prawy* iteratora do porównania.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca wartość PRAWDA, jeśli `*this` i `right` Iteratory sekwencja kończenia lub jeśli nie jest iteratora sekwencja kończenia i `begin == right.begin`, `end == right.end`, `pregex == right.pregex`, i `flags == right.flags`. W przeciwnym razie zwraca wartość false.
+Funkcja elementu członkowskiego zwraca wartość PRAWDA, jeśli `*this` i *prawo* Iteratory sekwencja kończenia lub jeśli żadna z nich nie jest iteratorem sekwencja kończenia i `begin == right.begin`, `end == right.end`, `pregex == right.pregex`, i `flags == right.flags`. W przeciwnym razie zwraca wartość false.
 
 ### <a name="example"></a>Przykład
 
@@ -446,7 +446,7 @@ match == a
 
 ## <a name="op_arrow"></a>  regex_iterator::operator-&gt;
 
-Uzyskuje dostęp do wyznaczonych dopasowania.
+Uzyskuje dostęp do wyznaczonej dopasowania.
 
 ```cpp
 const match_results<BidIt> * operator->();
@@ -454,7 +454,7 @@ const match_results<BidIt> * operator->();
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca adres przechowywana wartość `match`.
+Funkcja elementu członkowskiego zwraca adres przechowywaną wartość `match`.
 
 ### <a name="example"></a>Przykład
 
@@ -509,7 +509,7 @@ typedef match_results<BidIt> *pointer;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem `match_results<BidIt>*`, gdzie `BidIt` jest parametr szablonu.
+Typ jest synonimem dla `match_results<BidIt>*`, gdzie `BidIt` jest parametr szablonu.
 
 ### <a name="example"></a>Przykład
 
@@ -564,7 +564,7 @@ typedef match_results<BidIt>& reference;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem `match_results<BidIt>&`, gdzie `BidIt` jest parametr szablonu.
+Typ jest synonimem dla `match_results<BidIt>&`, gdzie `BidIt` jest parametr szablonu.
 
 ### <a name="example"></a>Przykład
 
@@ -612,7 +612,7 @@ match == a
 
 ## <a name="regex_iterator"></a>  regex_iterator::regex_iterator
 
-Tworzy iteratora.
+Tworzy iterator.
 
 ```cpp
 regex_iterator();
@@ -625,17 +625,17 @@ regex_iterator(BidIt first,
 
 ### <a name="parameters"></a>Parametry
 
-`first` Początek sekwencji do dopasowania.
+*pierwszy* początek sekwencji w celu dopasowania.
 
-`last` Koniec sekwencji do dopasowania.
+*ostatni* koniec sekwencji do dopasowania.
 
-`re` Wyrażenie regularne do dopasowania.
+*ponownie* wyrażenia regularnego do dopasowania.
 
-`f` Flagi do dopasowania.
+*f* flagi dla dopasowań.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy konstruktora tworzy iteratora sekwencja kończenia. Drugi Konstruktor inicjuje przechowywana wartość `begin` z `first`, przechowywana wartość `end` z `last`, przechowywana wartość `pregex` z `&re`i przechowywana wartość `flags` z `f`. Następnie wywołuje `regex_search(begin, end, match, *pregex, flags)`. Jeśli wyszukiwanie nie powiedzie się, konstruktora ustawia obiekt iteratora sekwencja kończenia.
+Pierwszy Konstruktor konstruuje iterator sekwencja kończenia. Drugi Konstruktor inicjuje przechowywaną wartość `begin` z *pierwszy*, przechowywaną wartość `end` z *ostatniego*, przechowywaną wartość `pregex` z `&re`i przechowywaną wartość `flags` z *f*. Następnie wywołuje `regex_search(begin, end, match, *pregex, flags)`. Jeśli wyszukiwanie zakończy się niepowodzeniem, Konstruktor ustawia obiekt do iteratora sekwencja kończenia.
 
 ### <a name="example"></a>Przykład
 
@@ -691,7 +691,7 @@ typedef basic_regex<Elem, RXtraits> regex_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Element typedef jest synonimem `basic_regex<Elem, RXtraits>`.
+Typedef jest synonimem dla `basic_regex<Elem, RXtraits>`.
 
 ### <a name="example"></a>Przykład
 
@@ -739,7 +739,7 @@ match == a
 
 ## <a name="value_type"></a>  regex_iterator::value_type
 
-Rodzaj dopasowania.
+Typ dopasowania.
 
 ```cpp
 typedef match_results<BidIt> value_type;
@@ -747,7 +747,7 @@ typedef match_results<BidIt> value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem `match_results<BidIt>`, gdzie `BidIt` jest parametr szablonu.
+Typ jest synonimem dla `match_results<BidIt>`, gdzie `BidIt` jest parametr szablonu.
 
 ### <a name="example"></a>Przykład
 
@@ -798,9 +798,9 @@ match == a
 [\<regex>](../standard-library/regex.md)<br/>
 [regex_constants, klasa](../standard-library/regex-constants-class.md)<br/>
 [regex_error, klasa](../standard-library/regex-error-class.md)<br/>
-[\<wyrażenie regularne > Funkcje](../standard-library/regex-functions.md)<br/>
+[\<wyrażenie regularne > funkcji](../standard-library/regex-functions.md)<br/>
 [regex_iterator, klasa](../standard-library/regex-iterator-class.md)<br/>
-[\<wyrażenie regularne > operatory](../standard-library/regex-operators.md)<br/>
+[\<wyrażenie regularne > operatorów](../standard-library/regex-operators.md)<br/>
 [regex_token_iterator, klasa](../standard-library/regex-token-iterator-class.md)<br/>
 [regex_traits, klasa](../standard-library/regex-traits-class.md)<br/>
 [\<wyrażenie regularne > definicje typów](../standard-library/regex-typedefs.md)<br/>

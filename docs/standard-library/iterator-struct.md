@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9cd414e2e6f23cb2fe44e6de4b5f53b33ef3555
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a399fa8a9f8fc9a73d75605f31245e42a2154b7c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857886"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963631"
 ---
 # <a name="iterator-struct"></a>iterator — Struktura
 
-Pusty podstawowej struktury używane do zapewnienia klasy zdefiniowanej przez użytkownika iteratora działa poprawnie z **iterator_trait**s.
+Pusta Struktura podstawowego, pozwala zagwarantować, że klasy zdefiniowane przez użytkownika iteratora działa poprawnie przy użyciu `iterator_trait`s.
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,31 +43,31 @@ struct iterator {
 
 ## <a name="remarks"></a>Uwagi
 
-Struktura szablonu służy jako typu podstawowego dla wszystkich Iteratory. Definiowanie typów elementów członkowskich
+Struktura szablonu służy jako typ podstawowy dla wszystkich iteratorów. Definiuje typy elementów członkowskich
 
-- `iterator_category` (synonim parametru szablonu `Category`).
+- `iterator_category` (synonim dla parametru szablonu `Category`).
 
-- `value_type` (synonim parametru szablonu **typu**).
+- `value_type` (synonim dla parametru szablonu `Type`).
 
-- `difference_type` (synonim parametru szablonu `Distance`).
+- `difference_type` (synonim dla parametru szablonu `Distance`).
 
-- `distance_type` (synonim parametru szablonu `Distance`)
+- `distance_type` (synonim dla parametru szablonu `Distance`)
 
-- `pointer` (synonim parametru szablonu `Pointer`).
+- `pointer` (synonim dla parametru szablonu `Pointer`).
 
-- `reference` (synonim parametru szablonu `Reference`).
+- `reference` (synonim dla parametru szablonu `Reference`).
 
-Należy pamiętać, że `value_type` nie powinien być typu stałej, nawet jeśli **wskaźnika** punkty na obiekt const **typu** i odwołanie określa obiekt const **typu**.
+Należy pamiętać, że `value_type` nie powinny być nawet wtedy, gdy typ stałej `pointer` punktów w obiekt **const** `Type` i odwołanie wskazuje obiekt **const** `Type`.
 
 ## <a name="example"></a>Przykład
 
-Zobacz [iterator_traits](../standard-library/iterator-traits-struct.md) przykład sposobu deklarowanie i użycie typów w klasie podstawowej iteratora.
+Zobacz [iterator_traits —](../standard-library/iterator-traits-struct.md) przykładowy sposób deklarowania i korzystają z typów w klasie bazowej iteratora.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<iteratora >
+**Nagłówek:** \<iterator >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

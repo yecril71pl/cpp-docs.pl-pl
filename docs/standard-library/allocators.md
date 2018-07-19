@@ -15,16 +15,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d7ae039fefc0137d317a15a803a0bf5d8205c31
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cc84748e35807ef0f270fe8fbbd7560a9a18e3b2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850017"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963498"
 ---
 # <a name="allocators"></a>Allocators
 
-Allocators — są używane przez standardowa biblioteka C++ do obsługi alokacji i dezalokacji elementy przechowywane w kontenerach. Wszystkie kontenery standardowa biblioteka C++ z wyjątkiem std::array ma parametrem szablonu typu `allocator<Type>`, gdzie `Type` reprezentuje typ kontenera. Na przykład klasa vector jest zadeklarowany w następujący sposób:
+Buforów są używane przez standardowej biblioteki języka C++ do obsługi alokacji i dezalokacji elementy przechowywane w kontenerach. Wszystkie kontenery standardowej biblioteki języka C++ z wyjątkiem std::array mają parametrem szablonu typu `allocator<Type>`, gdzie `Type` reprezentuje typ elementu kontenera. Na przykład klasa vector jest zadeklarowana w następujący sposób:
 
 ```cpp
 template <
@@ -34,13 +34,13 @@ template <
 class vector
 ```
 
-Standardowa biblioteka C++ udostępnia domyślną implementację dla przydzielania. W języku C ++ 11 i nowszych alokatora domyślne zostało zaktualizowane do uwidacznia interfejsu mniejszych; nowy program przydzielania jest wywoływana *minimalnego alokatora*. W szczególności, minimalnym alokatora przez `construct()` element członkowski obsługuje semantyki przeniesienia, która może znacznie poprawić wydajność. W większości przypadków to alokatora domyślne powinno wystarczyć. W języku C ++ 11 wszystkie biblioteki standardowej typy i funkcje, które zająć alokatora Obsługa parametru typu interfejsu minimalnego alokatora tym `std::function`, `shared_ptr, allocate_shared()`, i `basic_string`.  Aby uzyskać więcej informacji na alokatora domyślne, zobacz [Allocator — klasa](../standard-library/allocator-class.md).
+Standardowa biblioteka C++ udostępnia domyślną implementację interfejsu dla alokatora. W języku C ++ 11 i nowszych domyślnego alokatora jest aktualizowany do udostępnienia mniejszych interfejs; nosi nazwę nowego programu przydzielania *minimalnych*. W szczególności minimalny alokatora firmy `construct()` element członkowski obsługuje semantykę przenoszenia, co może znacznie poprawić wydajność. W większości przypadków ta domyślnego programu przydzielania powinny być wystarczające. W języku C ++ 11 standardową bibliotekę typów i funkcji podjąć wszystkie alokatora Obsługa parametr typu interfejsu minimalnych, w tym `std::function`, `shared_ptr, allocate_shared()`, i `basic_string`.  Aby uzyskać więcej informacji na temat domyślnego programu przydzielania, zobacz [alokatora klasy](../standard-library/allocator-class.md).
 
-## <a name="writing-your-own-allocator-c11"></a>Pisanie własnych alokatora (C ++ 11)
+## <a name="writing-your-own-allocator-c11"></a>Zapisywanie swój własny alokator (C ++ 11)
 
-Używa programu przydzielania domyślne `new` i `delete` można przydzielić i cofnięcia przydzielenia pamięci. Jeśli chcesz użyć innej metody przydziału pamięci, na przykład za pomocą pamięci współużytkowanej, należy utworzyć własny przydzielania. Przeznaczona dla języka C ++ 11, należy wpisać nowy, niestandardowy program przydzielania była minimalnego alokatora Jeśli to możliwe. Nawet jeśli już zaimplementowano program przydzielania w starym stylu, zaleca się zmodyfikowanie należy *minimalnego alokatora* Aby korzystać z bardziej wydajne `construct()` metody, które zostaną dostarczone dla Ciebie automatycznie.
+Korzysta z domyślnego programu przydzielania **nowe** i **Usuń** można przydzielić i cofnąć alokacji pamięci. Jeśli chcesz użyć innej metody alokacji pamięci, takich jak przy użyciu pamięci współużytkowanej, należy utworzyć swój własny alokator. Jeśli są przeznaczone dla języka C ++ 11, należy wpisać nowy, niestandardowy alokator ułatwiają alokatora minimalny, jeśli jest to możliwe. Nawet wtedy, gdy zostało już zaimplementowane alokatora w starym stylu, należy wziąć pod uwagę modyfikowania go jako *minimalnych* mogło skorzystać z bardziej wydajne `construct()` metody, która będzie dostępna dla Ciebie automatycznie.
 
-Minimalny alokatora wymaga znacznie mniej typowe i pozwalają skoncentrować się na `allocate` i `deallocate` funkcji elementów członkowskich, które spełniają wszystkie informacje o pracy. Podczas tworzenia alokatora minimalne, nie implementują żadnych elementów członkowskich, z wyjątkiem pól w przykładzie poniżej:
+Minimalny alokatora wymaga znacznie mniejszym stopniu deklaratywnie i pozwalają skoncentrować się na `allocate` i `deallocate` funkcji elementów członkowskich, które spełniają wszystkie zadania. Podczas tworzenia alokatora minimalne, nie implementuje żadnych elementów członkowskich, z wyjątkiem tych, jak pokazano w przykładzie poniżej:
 
 1. Konwertowanie konstruktora kopiującego (Zobacz przykład)
 
@@ -50,14 +50,14 @@ Minimalny alokatora wymaga znacznie mniej typowe i pozwalają skoncentrować si�
 
 1. allocate
 
-1. Cofnięcie przydziału
+1. Cofnij Przydział
 
-C ++ 11 domyślne `construct()` Członkowskie, które zostaną dostarczone dla Ciebie doskonała, przekazywanie i umożliwia przenoszenie semantyki; jest bardziej wydajne w wielu przypadkach niż starszej wersji.
+Wartość C ++ 11 domyślna `construct()` elementu członkowskiego, która będzie dostępna dla Ciebie doskonała, przekazywanie i umożliwia przenoszenie semantyki; jest znacznie bardziej efektywne w wielu przypadkach niż starszej wersji.
 
 > [!WARNING]
-> W czasie kompilacji standardowa biblioteka C++ allocator_traits — klasa wykrywa elementów członkowskich, które zostały jawnie podane i udostępnia domyślną implementację dla żadnych elementów członkowskich, które nie są dostępne. Nie zakłóca ten mechanizm, podając specjalizacja allocator_traits — Twoje alokatora!
+> W czasie kompilacji standardowej biblioteki C++ klasy allocator_traits wykrywa elementów członkowskich, które podane jawnie i udostępnia domyślną implementację interfejsu dla jakichkolwiek członków, które nie są obecne. Nie zakłóca tego mechanizmu, zapewniając specjalizacja allocator_traits dla Twojego programu przydzielania!
 
-W poniższym przykładzie przedstawiono minimalnego wdrożenia programu przydzielania, która używa `malloc` i `free`. Zwróć uwagę na użycie nowego typu wyjątku `std::bad_array_new_length` który jest generowany, jeśli rozmiar tablicy jest mniejsza niż zero lub większa niż maksymalny dozwolony rozmiar.
+W poniższym przykładzie przedstawiono minimalne wykonanie alokatora, który używa `malloc` i `free`. Zwróć uwagę na użycie nowy typ wyjątku `std::bad_array_new_length` którego jest generowany, jeśli rozmiar tablicy jest mniejsza od zera lub większa niż maksymalny dozwolony rozmiar.
 
 ```cpp
 #pragma once
@@ -107,9 +107,9 @@ void Mallocator<T>::deallocate(T * const p, size_t) const noexcept
 }
 ```
 
-## <a name="writing-your-own-allocator-c03"></a>Pisanie własnych alokatora (03 C ++)
+## <a name="writing-your-own-allocator-c03"></a>Zapisywanie swój własny alokator (C ++ 03)
 
-W języku C ++ 03 wszelkie alokatora używane z kontenerami standardowa biblioteka C++ musi implementować następujące definicje typów:
+W języku C ++ 03 wszelkie alokator używany z kontenerami standardowej biblioteki języka C++, należy zaimplementować następujące definicje typów:
 
 |||
 |-|-|
@@ -118,7 +118,7 @@ W języku C ++ 03 wszelkie alokatora używane z kontenerami standardowa bibliote
 |`difference_type`|`size_type`|
 |`pointer`|`value_type`|
 
-Ponadto wszystkie alokatora używane z kontenerami standardowa biblioteka C++ musi implementować następujące metody:
+Ponadto wszelkie alokator używany z kontenerami standardowej biblioteki języka C++ należy zaimplementować następujące metody:
 
 |||
 |-|-|
@@ -129,7 +129,7 @@ Ponadto wszystkie alokatora używane z kontenerami standardowa biblioteka C++ mu
 |`allocate`|`operator!=`|
 |`construct`||
 
-Aby uzyskać więcej informacji o tych definicje typów i metod, zobacz [Allocator — klasa](../standard-library/allocator-class.md).
+Aby uzyskać więcej informacji na temat tych definicji typów i metod, zobacz [alokatora klasy](../standard-library/allocator-class.md).
 
 ## <a name="see-also"></a>Zobacz także
 

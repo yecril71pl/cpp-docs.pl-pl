@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd64960469c9c4ca069611f6ebeefeaac8b29ba0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 18a7cdd80c1d7b6b17a988d8f3581c7757f69823
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947860"
 ---
 # <a name="reinterpretcast-operator"></a>Operator reinterpret_cast
-Umożliwia żadnych wskaźnika do przekonwertowania na inny typ wskaźnika. Umożliwia także dowolnego typu całkowitego ma zostać przekonwertowany do dowolnego typu wskaźnika i na odwrót.  
+Umożliwia dowolny wskaźnik do przekonwertowania na dowolny inny typ wskaźnika. Umożliwia również dowolnego typu całkowitoliczbowego ma zostać przekonwertowany na dowolny typ wskaźnika i odwrotnie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,19 +33,19 @@ reinterpret_cast < type-id > ( expression )
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Nieprawidłowe użycie `reinterpret_cast` łatwo operator może być niebezpieczne. Chyba, że żądane konwersja jest z założenia niskiego poziomu, należy użyć jednej z innych operatory rzutowania.  
+ Nieprawidłowe użycie **reinterpret_cast** łatwo operator może być niebezpieczne. Chyba że żądany konwersji jest natury niskiego poziomu, należy użyć jednego z innych operatorów rzutowania.  
   
- `reinterpret_cast` Operator może służyć do konwersji takich jak `char*` do `int*`, lub `One_class*` do `Unrelated_class*`, które są z założenia niebezpieczne.  
+ **Reinterpret_cast** operator może służyć do konwersji takich jak `char*` do `int*`, lub `One_class*` do `Unrelated_class*`, które są założenia niebezpieczne.  
   
- Wynik `reinterpret_cast` bezpiecznie nie można użyć do wszelkich innych niż jest rzutowany jego oryginalnego typu. Innych celów są, co najlepiej nonportable.  
+ Wynik **reinterpret_cast** bezpiecznie nie można używać do coś innego niż rzutowany powrót do oryginalnego typu. Inne zastosowania to, co najlepiej nonportable.  
   
- `reinterpret_cast` Operatora nie można rzutować optymalizacji **const**, `volatile`, lub **__unaligned** atrybutów. Zobacz [const_cast Operator](../cpp/const-cast-operator.md) informacji o usuwaniu te atrybuty.  
+ **Reinterpret_cast** operator nie może oddać **const**, **volatile**, lub **__unaligned** atrybutów. Zobacz [const_cast Operator](../cpp/const-cast-operator.md) informacji na temat usuwania tych atrybutów.  
   
- `reinterpret_cast` Operator konwertuje wartość wskaźnika o wartości null na wartość pustego wskaźnika typu docelowego.  
+ **Reinterpret_cast** operator konwertuje wartość pustego wskaźnika do wartości pustego wskaźnika typu miejsca docelowego.  
   
- Jeden praktyczne wykorzystanie `reinterpret_cast` znajduje się w funkcji skrótu, zmapowanym wartość do indeksu w taki sposób, że dwa różne wartości rzadko zakończenia się o tym samym indeksie.  
+ Jednym z zastosowań praktycznych **reinterpret_cast** znajduje się w funkcji mieszania, mapująca wartość do indeksu w taki sposób, że dwóch odrębnych wartości rzadko zakończenia się przy użyciu tego samego indeksu.  
   
-```  
+```cpp 
 #include <iostream>  
 using namespace std;  
   
@@ -84,7 +85,7 @@ Output:
 64829  
 ```  
   
- `reinterpret_cast` Umożliwia wskaźnika powinien być traktowany jako typ całkowity. Wynik jest następnie bit przesunięte i XORed ze sobą, aby wygenerować unikatowego indeksu (unikatowe wysokiego stopnia prawdopodobieństwa). Indeks jest następnie obcięty przez standardowe C-styl rzutowany na typ zwracany funkcji.  
+ **Reinterpret_cast** umożliwia wskaźnika, który powinien być traktowany jako typ całkowitoliczbowy. Wynik jest następnie bit przesunięte i XORed z samym sobą, aby wygenerować unikatowego indeksu (unikatowe wysokiego stopnia prawdopodobieństwa). Indeks jest następnie obcięte przez standard C rzutowania w stylu zwracany typ funkcji.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Operatory rzutowania](../cpp/casting-operators.md)   

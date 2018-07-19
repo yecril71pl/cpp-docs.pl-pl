@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66c6cc1484ef84ce53ffaf5529575eea43431869
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e480fe81f8a6181aa8543710d050f0f20f288681
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359182"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884834"
 ---
 # <a name="ccomqiptr-class"></a>Klasa CComQIPtr
-Klasa wskaźnika inteligentnego do wskaźników interfejsów COM. zarządzania.  
+Klasa inteligentnego wskaźnika do zarządzania wskaźniki interfejsu COM.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,11 +36,11 @@ class CComQIPtr: public CComPtr<T>
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Interfejs COM, określenie typu wskaźnika do zapisania.  
+ *T*  
+ Interfejs COM, określając typ wskaźnika, które mają być przechowywane.  
   
- `piid`  
- Wskaźnik na celu uzyskanie identyfikatora IID `T`.  
+ *piid*  
+ Wskaźnik do identyfikatora IID z *T*.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -54,10 +54,10 @@ class CComQIPtr: public CComPtr<T>
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CComQIPtr::operator =](#operator_eq)|Przypisuje wskaźnik na wskaźnik elementu członkowskiego.|  
+|[CComQIPtr::operator =](#operator_eq)|Przypisuje wskaźnik do wskaźnika elementu członkowskiego.|  
   
 ## <a name="remarks"></a>Uwagi  
- ATL używa `CComQIPtr` i [CComPtr](../../atl/reference/ccomptr-class.md) do zarządzania wskaźniki interfejsu COM, które pochodzi od [CComPtrBase](../../atl/reference/ccomptrbase-class.md). Automatyczne zliczanie za pośrednictwem wywołania wykonać obie klasy `AddRef` i **wersji**. Operatory przeciążone obsługiwać operacje wskaźnika.  
+ Używa ATL `CComQIPtr` i [CComPtr](../../atl/reference/ccomptr-class.md) Zarządzanie wskaźniki interfejsu COM, z których oba dziedziczyć [CComPtrBase](../../atl/reference/ccomptrbase-class.md). Obie klasy wykonywać automatyczne zliczanie za pośrednictwem wywołania `AddRef` i `Release`. Przeciążone operatory obsługiwać operacje wskaźnika.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CComPtrBase](../../atl/reference/ccomptrbase-class.md)  
@@ -80,14 +80,14 @@ CComQIPtr(const CComQIPtr<T, piid>& lp) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lp`  
- Używane w celu zainicjowania wskaźnika interfejsu.  
+ *LP*  
+ Używane do zainicjowania wskaźnika interfejsu.  
   
- `T`  
+ *T*  
  Interfejs COM.  
   
- `piid`  
- Wskaźnik na celu uzyskanie identyfikatora IID `T`.  
+ *piid*  
+ Wskaźnik do identyfikatora IID z *T*.  
   
 ##  <a name="operator_eq"></a>  CComQIPtr::operator =  
  Operator przypisania.  
@@ -99,14 +99,14 @@ T* operator= (IUnknown* lp) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lp`  
- Używane w celu zainicjowania wskaźnika interfejsu.  
+ *LP*  
+ Używane do zainicjowania wskaźnika interfejsu.  
   
- `T`  
+ *T*  
  Interfejs COM.  
   
- `piid`  
- Wskaźnik na celu uzyskanie identyfikatora IID `T`.  
+ *piid*  
+ Wskaźnik do identyfikatora IID z *T*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wskaźnik do zaktualizowanego `CComQIPtr` obiektu.  
@@ -115,5 +115,5 @@ T* operator= (IUnknown* lp) throw();
  [CComPtr::CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)   
  [CComQIPtr::CComQIPtr](#ccomqiptr)   
  [Klasa CComPtrBase](../../atl/reference/ccomptrbase-class.md)   
- [Przegląd klas](../../atl/atl-class-overview.md)   
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)   
  [Klasa CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)

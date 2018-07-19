@@ -18,38 +18,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6343abec7e80bcbc47595856e6fd71a3e204ed54
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0190b62491dbb9d15ee4f01a1cbc4c2741f74dbe
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947951"
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>Sposób oceniania bloków Catch (C++)
-C++ umożliwia wyrzucanie wyjątków dowolnego typu, jednak ogólnie zaleca się wyrzucanie typów, który pochodzą od std::exception. Przechwycił wyjątek C++ **catch** obsługi, która określa tego samego typu, jako zwrócony wyjątek lub przez program obsługi, który można przechwycić dowolnego typu wyjątku.  
+C++ umożliwia wyrzucanie wyjątków dowolnego typu, jednak ogólnie zaleca się wyrzucanie typów, który pochodzą od std::exception. Wyjątek C++ może zostać przechwycony przez **catch** program obsługi, który określa ten sam typ co Wyrzucony wyjątek lub przez program obsługi, który może przechwycić wyjątek dowolnego typu.  
   
  Jeśli typ wyrzuconego wyjątku to klasa, która posiada również klasę bazową (lub klasy) wyjątek może zostać przechwycony przez program obsługi, który akceptuje klasy bazowe typu wyjątku, jak również odwołania do klasy bazowej typu wyjątku. Należy zauważyć, że gdy wyjątek zostaje przechwycony przez odwołanie, następuje jego powiązanie z rzeczywistym wyrzuconym obiektem wyjątku; w przeciwnym razie jest kopią (prawie tak samo jak argument do funkcji).  
   
- Gdy jest zgłaszany wyjątek, może być przechwycony przez następujące typy **catch** programów obsługi:  
+ Gdy wyjątek jest generowany, może zostać przechwycony przez następujące typy **catch** programów obsługi:  
   
 -   Program obsługi, który może akceptować dowolny typ (przy użyciu składni wielokropka).  
   
--   Program obsługi, który akceptuje tego samego typu co obiekt wyjątku; ponieważ to jest kopia do **const** i `volatile` Modyfikatory są ignorowane.  
+-   Program obsługi, który akceptuje tego samego typu co obiekt wyjątku; ponieważ jest to kopia **const** i **volatile** Modyfikatory są ignorowane.  
   
 -   Program obsługi, który akceptuje odwołanie do tego samego typu co obiekt wyjątku.  
   
--   Program obsługi, który przyjmuje odwołanie do **const** lub `volatile` formę tego samego typu co obiekt wyjątku.  
+-   Program obsługi, który akceptuje odwołanie do **const** lub **volatile** formularza tego samego typu co obiekt wyjątku.  
   
--   Program obsługi, który akceptuje klasę podstawową tego samego typu co obiekt wyjątku; ponieważ chodzi o kopiowanie przez **const** i `volatile` Modyfikatory są ignorowane. **Catch** obsługi dla klasy podstawowej nie musi poprzedzać **catch** obsługi dla klasy pochodnej.  
+-   Program obsługi, który akceptuje klasę bazową tego samego typu co obiekt wyjątku; ponieważ jest to kopia **const** i **volatile** Modyfikatory są ignorowane. **Catch** obsługi dla klasy bazowej nie może poprzedzać **catch** obsługi dla klasy pochodnej.  
   
 -   Program obsługi, który akceptuje odwołanie do klasy bazowej tego samego typu co obiekt wyjątku.  
   
--   Program obsługi, który przyjmuje odwołanie do **const** lub `volatile` formularza z klasą podstawową dla tego samego typu co obiekt wyjątku.  
+-   Program obsługi, który akceptuje odwołanie do **const** lub **volatile** formularza klasy bazowej tego samego typu co obiekt wyjątku.  
   
 -   Program obsługi, który akceptuje wskaźnik, do którego można przekonwertować wyrzucony obiekt wskaźnika za pomocą standardowych reguł konwersji wskaźnika.  
   
- Kolejność **catch** obsługi są wyświetlane jest ważna, ponieważ programy obsługi dla danego **spróbuj** bloku są sprawdzane w kolejności ich wyglądu. Na przykład, błędem jest umieszczenie programu obsługi dla klasy bazowej przed programem obsługi dla klasy pochodnej. Po odpowiadającego mu **catch** odnaleźć programu obsługi, kolejne obsługi nie są sprawdzane. Dzięki temu wielokropek **catch** Obsługa musi być ostatnim obsługi dla jego **spróbuj** bloku. Na przykład:  
+ Kolejność, w której **catch** pojawiają się programy obsługi jest ważna, ponieważ programy obsługi dla danego **spróbuj** bloku są badane w kolejności ich występowania. Na przykład, błędem jest umieszczenie programu obsługi dla klasy bazowej przed programem obsługi dla klasy pochodnej. Po pasujący obiekt typu **catch** program obsługi zostanie znaleziony, kolejne programy obsługi nie będą badane. Dzięki temu usługa wielokropek **catch** obsługi musi być ostatnim programem obsługi dla jego **spróbuj** bloku. Na przykład:  
   
-```  
+```cpp 
 // ...  
 try  
 {  
@@ -70,7 +71,7 @@ catch( CExcptClass E )
 }  
 ```  
   
- W tym przykładzie wielokropka **catch** program obsługi jest tylko program obsługi, która się zbadana.  
+ W tym przykładzie wielokropka **catch** program obsługi jest tylko program obsługi, który jest sprawdzany pod.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa wyjątków języka C++](../cpp/cpp-exception-handling.md)

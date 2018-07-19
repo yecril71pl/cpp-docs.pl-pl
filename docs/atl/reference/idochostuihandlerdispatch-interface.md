@@ -17,18 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07d6d861bfa4a41d7d9ee6697dd72cba0da2ceda
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 936d9b30f18f5ef84c68c55a1607cfcd88d45525
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364248"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884616"
 ---
 # <a name="idochostuihandlerdispatch-interface"></a>Interfejs IDocHostUIHandlerDispatch
-Interfejs do analizowania Microsoft HTML i aparatu renderowania.  
+Interfejs do analizowania Microsoft HTML i aparat renderowania.  
   
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,28 +41,28 @@ interface IDocHostUIHandlerDispatch : IDispatch
 ### <a name="public-methods"></a>Metody publiczne  
   
 > [!NOTE]
->  Łącza w poniższej tabeli są tematy dokumentacji zestawu SDK INet dla członków [IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx) interfejsu. `IDocHostUIHandlerDispatch` ma te same funkcje co **IDocUIHostHandler**, z tą różnicą, że trwa `IDocHostUIHandlerDispatch` jest dispinterface **IDocUIHostHandler** jest niestandardowy interfejs.  
+>  Łącza w tabeli poniżej dotyczą tematy referencyjne INet zestawu SDK dla uczestników programu [IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx) interfejsu. `IDocHostUIHandlerDispatch` ma taką samą funkcjonalność jak `IDocUIHostHandler`, z tą różnicą, że `IDocHostUIHandlerDispatch` jest dispinterface, natomiast `IDocUIHostHandler` jest niestandardowy interfejs.  
   
 |||  
 |-|-|  
-|[EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx)|Wywoływać z implementacji MSHTML [IOleInPlaceActiveObject::EnableModeless](http://msdn.microsoft.com/library/windows/desktop/ms680115). Wywołuje się także, gdy MSHTML Wyświetla modalne interfejsu użytkownika.|  
-|[FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx)|Wywołuje się na hoście przez MSHTML umożliwia hosta zamienić MSHTML dla obiekt danych.|  
-|[GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)|Wywoływane przez MSHTML, gdy jest on używany jako miejsca docelowego w jakim host do dostarczania zamiast [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679).|  
-|[GetExternal](https://msdn.microsoft.com/library/aa753256.aspx)|Metoda wywoływana przez MSHTML w celu uzyskania interfejsu IDispatch hosta.|  
-|[GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx)|Pobiera funkcje interfejsu użytkownika MSHTML hosta.|  
-|[GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx)|Zwraca klucz rejestru, w którym MSHTML są przechowywane preferencje użytkownika.|  
-|[HideUI](https://msdn.microsoft.com/library/aa753259.aspx)|Wywoływane, gdy MSHTML Usuwa menu i pasków narzędzi.|  
+|[EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx)|Wywoływać z implementacji MSHTML [IOleInPlaceActiveObject::EnableModeless](http://msdn.microsoft.com/library/windows/desktop/ms680115). Wywołuje się również, gdy MSHTML Wyświetla modalnego interfejsu użytkownika.|  
+|[FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx)|Wywoływane na hoście przez MSHTML, aby zezwolić na hosta zastąpić obiekt danych firmy MSHTML.|  
+|[GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)|Wywoływane przez MSHTML, gdy jest on używany jako miejsca docelowego umożliwia hosta, które umożliwiają określanie wartości zamiast [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679).|  
+|[GetExternal](https://msdn.microsoft.com/library/aa753256.aspx)|Metoda wywoływana przez MSHTML można uzyskać interfejsu IDispatch hosta.|  
+|[GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx)|Pobiera funkcje interfejsu użytkownika hosta MSHTML.|  
+|[GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx)|Zwraca klucz rejestru, w którym są przechowywane preferencje użytkownika MSHTML.|  
+|[HideUI](https://msdn.microsoft.com/library/aa753259.aspx)|Wywołuje się, gdy MSHTML usuwa jego menu i paski narzędzi.|  
 |[OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx)|Wywoływać z implementacji MSHTML [IOleInPlaceActiveObject::OnDocWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms687281).|  
 |[OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx)|Wywoływać z implementacji MSHTML [IOleInPlaceActiveObject::OnFrameWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms683969).|  
 |[ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx)|Wywoływać z implementacji MSHTML [IOleInPlaceActiveObject::ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053).|  
 |[ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx)|Wywoływana z MSHTML, aby wyświetlić menu kontekstowe.|  
-|[ShowUI](https://msdn.microsoft.com/library/aa753265.aspx)|Umożliwia hosta zastąpić MSHTML menu i pasków narzędzi.|  
+|[ShowUI](https://msdn.microsoft.com/library/aa753265.aspx)|Zezwalaj hostowi na Zastąp MSHTML menu i paski narzędzi.|  
 |[TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx)|Wywoływane przez MSHTML podczas [IOleInPlaceActiveObject::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693360) lub [IOleControlSite::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693756) jest wywoływana.|  
-|[TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx)|Metoda wywoływana przez MSHTML umożliwia hosta pozwala zmodyfikować adres URL do załadowania.|  
+|[TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx)|Metoda wywoływana przez MSHTML, aby zezwolić na hoście szansy sprzedaży zmodyfikować adres URL do załadowania.|  
 |[UpdateUI](https://msdn.microsoft.com/library/aa753268.aspx)|Powiadamia hosta, że stan polecenia został zmieniony.|  
   
 ## <a name="remarks"></a>Uwagi  
- Hosta można zastąpić menu, paski narzędzi i menu kontekstowe używane przez Microsoft HTML podczas analizowania i aparatu renderowania (MSHTML) z zastosowaniem tego interfejsu.  
+ Hosta można zastąpić, menu, paski narzędzi i menu kontekstowe używane przez Microsoft HTML podczas analizowania i aparat renderowania (MSHTML) poprzez implementację tego interfejsu.  
   
 ## <a name="requirements"></a>Wymagania  
  Definicja tego interfejsu jest dostępna jako IDL lub C++, jak pokazano poniżej.  
@@ -70,7 +70,7 @@ interface IDocHostUIHandlerDispatch : IDispatch
 |Typ definicji|Plik|  
 |---------------------|----------|  
 |IDL|ATLIFace.idl|  
-|C++|ATLIFace.h (również zawarte w ATLBase.h)|  
+|C++|ATLIFace.h (dołączone do dodatków ATLBase.h)|  
   
 ## <a name="see-also"></a>Zobacz też  
  [IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx)

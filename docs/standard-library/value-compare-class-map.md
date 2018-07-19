@@ -19,16 +19,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: effa754f50f8c092cef727969a0f4036e765f888
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 46f8d00877aa4147e4b3e4ec2a6a23b70d8154c8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856049"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965851"
 ---
 # <a name="valuecompare-class-ltmapgt"></a>value_compare — klasa (&lt;mapy&gt;)
 
-Udostępnia obiekt funkcji, który można porównać elementów mapy porównując wartości ich kluczy, aby określić ich kolejność względne w planie.
+Dostarcza obiekt funkcji, która może porównać elementy mapy przez porównanie wartości ich kluczy, aby określić ich względną kolejność w mapie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,19 +45,19 @@ protected:
 
 ## <a name="remarks"></a>Uwagi
 
-Kryterium porównania dostarczonych przez `value_compare` między **value_types** elementów całego zawarty w mapie powstaniu porównanie między kluczami elementów odpowiednich przez konstrukcji klasy pomocniczej. Operator funkcji Członkowskich używa obiektu **kompozycji** typu `key_compare` przechowywane w dostarczony przez obiekt funkcja `value_compare` do porównania składniki klucza sortowania z dwóch elementów.
+Kryterium porównania, dostarczone przez `value_compare` między `value_types` całego elementów zawartych w mapie wywołane z porównania między kluczami elementów odpowiednich wynikające z konstrukcji klasy pomocniczej. Operator funkcji elementów członkowskich używa obiektu `comp` typu `key_compare` przechowywanych w obiekcie funkcji dostarczonych przez `value_compare` do porównania składniki klucz sortowania w dwóch elementów.
 
-Zestawów i multisets, będących kontenerami proste, których wartości klucza są takie same jak wartości elementu, `value_compare` jest odpowiednikiem `key_compare`; map i nie są one jako wartość typu multimaps `pair` elementów nie jest taka sama jak wartość klucza elementu.
+Zestawów i multisets, będących kontenerami prosty, gdzie wartości klucza są identyczne do wartości elementów, `value_compare` jest odpowiednikiem `key_compare`; w przypadku map i multimaps są, jako wartość typu `pair` elementów nie jest taka sama jak wartość klucza elementu.
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [value_comp](../standard-library/map-class.md#value_comp) przykład sposobu deklarowanie i użycie `value_compare`.
+Zobacz przykład dotyczący [value_comp —](../standard-library/map-class.md#value_comp) przykładowy sposób deklarowania i użyj `value_compare`.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<mapy >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

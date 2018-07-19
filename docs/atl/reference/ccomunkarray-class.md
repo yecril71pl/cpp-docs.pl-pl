@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0de49180052a6fdb7bde32274e032ea1dd9bfb87
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 90622638c2cf26c8d34ec9b584611f91bc1836f4
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364421"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883986"
 ---
 # <a name="ccomunkarray-class"></a>Klasa CComUnkArray
-Ta klasa przechowuje **IUnknown** wskaźniki i jest przeznaczony do użycia jako parametr [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) klasy szablonu.  
+Ta klasa przechowuje `IUnknown` wskaźników i jest przeznaczony do użycia jako parametr do [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) klasy szablonu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,7 +44,7 @@ class CComUnkArray
   
 #### <a name="parameters"></a>Parametry  
  *nMaxSize*  
- Maksymalna liczba **IUnknown** wskaźników, które można przechowywać w statycznej tablicy.  
+ Maksymalna liczba `IUnknown` wskaźników, które mogą być przechowywane w tablicy statycznej.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -58,28 +58,28 @@ class CComUnkArray
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CComUnkArray::Add](#add)|Wywołanie tej metody, aby dodać **IUnknown** wskaźnika do tablicy.|  
-|[CComUnkArray::begin](#begin)|Zwraca wskaźnik do pierwszego **IUnknown** wskaźnika w kolekcji.|  
-|[CComUnkArray::end](#end)|Zwraca wskaźnik do jednego poza ostatniego **IUnknown** wskaźnika w kolekcji.|  
-|[CComUnkArray::GetCookie](#getcookie)|Wywołanie tej metody, aby uzyskać plik cookie skojarzone z danym **IUnknown** wskaźnika.|  
-|[CComUnkArray::GetUnknown](#getunknown)|Wywołanie tej metody, aby uzyskać **IUnknown** wskaźnika skojarzone z danym pliku cookie.|  
-|[CComUnkArray::Remove](#remove)|Wywołanie tej metody, aby usunąć **IUnknown** wskaźnika z tablicy.|  
+|[CComUnkArray::Add](#add)|Wywołaj tę metodę, aby dodać `IUnknown` wskaźnika do tablicy.|  
+|[CComUnkArray::begin](#begin)|Zwraca wskaźnik do pierwszego `IUnknown` wskaźnika w kolekcji.|  
+|[CComUnkArray::end](#end)|Zwraca wskaźnik do pierwszego do ostatniego `IUnknown` wskaźnika w kolekcji.|  
+|[CComUnkArray::GetCookie](#getcookie)|Wywołaj tę metodę, aby pobrać plik cookie skojarzone z danym `IUnknown` wskaźnika.|  
+|[CComUnkArray::GetUnknown](#getunknown)|Wywołaj tę metodę, aby uzyskać `IUnknown` kursor skojarzony z danym pliku cookie.|  
+|[CComUnkArray::Remove](#remove)|Wywołaj tę metodę, aby usunąć `IUnknown` wskaźnika z tablicy.|  
   
 ## <a name="remarks"></a>Uwagi  
- **CComUnkArray** przechowuje stałej liczby **IUnknown** wskaźniki, każdy punkt interfejsu połączenia. **CComUnkArray** mogą być używane jako parametr [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) klasy szablonu. **CComUnkArray\<1 >** jest specjalizacją szablonu **CComUnkArray** który został zoptymalizowany dla punktu jedno połączenie.  
+ `CComUnkArray` zawiera stałą liczbą `IUnknown` wskaźników, każdy punkt interfejsu połączenia. `CComUnkArray` może służyć jako parametr do [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) klasy szablonu. `CComUnkArray<1>` jest specjalizacją szablonu `CComUnkArray` , został zoptymalizowany dla punktu jedno połączenie.  
   
- **CComUnkArray** metody [rozpocząć](#begin) i [zakończenia](#end) może służyć do pętli wszystkie punkty połączenia (na przykład, gdy zdarzenie jest wywoływane).  
+ `CComUnkArray` Metody [rozpocząć](#begin) i [zakończenia](#end) może służyć do pętli wszystkich punktów połączenia (na przykład, gdy zdarzenie jest wyzwalane).  
   
- Zobacz [dodanie do niej punkty połączenia do obiektu](../../atl/adding-connection-points-to-an-object.md) szczegółowe informacje na temat automatyzacji tworzenia połączenia punktu proxy.  
+ Zobacz [Dodawanie punktów połączenia do obiektu](../../atl/adding-connection-points-to-an-object.md) szczegółowe informacje dotyczące automatyzacji tworzenia połączenia punktu proxy.  
   
 > [!NOTE]
-> **Uwaga** klasy [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md) jest używany przez **Dodaj klasę** kreatora podczas tworzenia formant, który ma punkty połączenia. Jeśli chcesz ręcznie określić liczbę punktów połączenia, zmień odwołania z **CComDynamicUnkArray** do `CComUnkArray<` *n* `>`, gdzie *n*jest to liczba punktów połączenia wymagane.  
+> **Uwaga** klasy [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md) jest używany przez **Dodaj klasę** kreatora podczas tworzenia kontrolki, która ma punkty połączenia. Jeśli chcesz ręcznie określić liczbę punktów połączenia, zmień odwołanie z `CComDynamicUnkArray` do `CComUnkArray<` *n* `>`, gdzie *n* liczbę punktów połączenia Wymagane.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlcom.h  
   
 ##  <a name="add"></a>  CComUnkArray::Add  
- Wywołanie tej metody, aby dodać **IUnknown** wskaźnika do tablicy.  
+ Wywołaj tę metodę, aby dodać `IUnknown` wskaźnika do tablicy.  
   
 ```
 DWORD Add(IUnknown* pUnk);
@@ -87,13 +87,13 @@ DWORD Add(IUnknown* pUnk);
   
 ### <a name="parameters"></a>Parametry  
  *pUnk*  
- Wywołanie tej metody, aby dodać **IUnknown** wskaźnika do tablicy.  
+ Wywołaj tę metodę, aby dodać `IUnknown` wskaźnika do tablicy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca plik cookie skojarzone z nowo dodanego wskaźnika lub 0, jeśli tablica nie jest wystarczająco duży, aby zawierać nowego wskaźnika.  
+ Zwraca plik cookie skojarzone z wskaźnik nowo dodanych lub 0, jeśli tablica nie jest wystarczająco duży, aby zawierała nowy wskaźnik.  
   
 ##  <a name="begin"></a>  CComUnkArray::begin  
- Zwraca kursor na początku kolekcji **IUnknown** wskaźniki interfejsu.  
+ Zwraca wskaźnik do początku kolekcji `IUnknown` wskaźniki interfejsu.  
   
 ```
 IUnknown**
@@ -101,12 +101,12 @@ IUnknown**
 ```     
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do **IUnknown** wskaźnika interfejsu.  
+ Wskaźnik do `IUnknown` wskaźnika interfejsu.  
   
 ### <a name="remarks"></a>Uwagi  
- Kolekcja zawiera wskaźniki do interfejsów lokalnie przechowywane jako **IUnknown**. Rzutowanie każdego **IUnknown** interfejsu do typu rzeczywistego interfejs, a następnie wywołać przy jego użyciu. Nie trzeba najpierw zapytania dla interfejsu.  
+ Kolekcja zawiera wskaźniki do interfejsów przechowywane lokalnie, jak `IUnknown`. Każdy rzutowania `IUnknown` interfejs do typu rzeczywistego interfejsu, a następnie wywołać przy jego użyciu. Nie trzeba najpierw wyszukać interfejsu.  
   
- Przed użyciem **IUnknown** interfejsu, należy sprawdzić, czy nie jest **NULL**.  
+ Przed rozpoczęciem korzystania z `IUnknown` interfejsu, należy sprawdzić, czy nie ma wartość NULL.  
   
 ##  <a name="ccomunkarray"></a>  CComUnkArray::CComUnkArray  
  Konstruktor.  
@@ -116,10 +116,10 @@ CComUnkArray();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ustawia kolekcję do przechowywania `nMaxSize` **IUnknown** wskaźniki i inicjuje wskaźniki do **NULL**.  
+ Ustawia kolekcję zawierającą `nMaxSize` `IUnknown` wskaźników i inicjuje wskaźniki do wartości NULL.  
   
 ##  <a name="end"></a>  CComUnkArray::end  
- Zwraca wskaźnik do jednego poza ostatniego **IUnknown** wskaźnika w kolekcji.  
+ Zwraca wskaźnik do pierwszego do ostatniego `IUnknown` wskaźnika w kolekcji.  
   
 ```
 IUnknown**
@@ -127,58 +127,58 @@ IUnknown**
 ```     
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do **IUnknown** wskaźnika interfejsu.  
+ Wskaźnik do `IUnknown` wskaźnika interfejsu.  
   
 ### <a name="remarks"></a>Uwagi  
- `CComUnkArray` Metody **rozpocząć** i **zakończenia** może służyć do pętli wszystkich punktów połączenia, na przykład, gdy zdarzenie jest wywoływane.  
+ `CComUnkArray` Metody `begin` i `end` może służyć do pętli wszystkich punktów połączenia, na przykład, gdy zdarzenie jest wywoływane.  
   
  [!code-cpp[NVC_ATL_COM#44](../../atl/codesnippet/cpp/ccomunkarray-class_1.cpp)]  
   
 ##  <a name="getcookie"></a>  CComUnkArray::GetCookie  
- Wywołanie tej metody, aby uzyskać plik cookie skojarzone z danym **IUnknown** wskaźnika.  
+ Wywołaj tę metodę, aby pobrać plik cookie skojarzone z danym `IUnknown` wskaźnika.  
   
 ```
 DWORD WINAPI GetCookie(IUnknown** ppFind);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ppFind`  
- **IUnknown** wskaźnika, dla których skojarzony plik cookie jest wymagana.  
+ *ppFind*  
+ `IUnknown` Wskaźnika, dla których skojarzone pliki cookie jest wymagana.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca plik cookie skojarzone z **IUnknown** wskaźnika lub 0, jeśli pasujących **IUnknown** znajduje się wskaźnik.  
+ Zwraca wartość pliku cookie skojarzona z `IUnknown` wskaźnika lub 0, jeśli brak zgodności `IUnknown` znajduje się kursor.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli istnieje więcej niż jedno wystąpienie tego samego **IUnknown** wskaźnika, ta funkcja zwraca wartość pliku cookie dla pierwszego z nich.  
+ Jeśli istnieje więcej niż jedno wystąpienie tego samego `IUnknown` wskaźnikiem, funkcja zwraca wartość pliku cookie dla pierwszej.  
   
 ##  <a name="getunknown"></a>  CComUnkArray::GetUnknown  
- Wywołanie tej metody, aby uzyskać **IUnknown** wskaźnika skojarzone z danym pliku cookie.  
+ Wywołaj tę metodę, aby uzyskać `IUnknown` kursor skojarzony z danym pliku cookie.  
   
 ```
 IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwCookie`  
- Plik cookie, dla których skojarzone **IUnknown** wskaźnika jest wymagana.  
+ *dwCookie*  
+ Plik cookie, dla którego skojarzonego `IUnknown` wskaźnika jest wymagana.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca **IUnknown** wskaźnika lub wartość NULL, jeśli nie dopasowania zostanie znaleziony cookie.  
+ Zwraca `IUnknown` wskaźnika lub wartość NULL, jeśli znaleziono nie pasującego pliku cookie.  
   
 ##  <a name="remove"></a>  CComUnkArray::Remove  
- Wywołanie tej metody, aby usunąć **IUnknown** wskaźnika z tablicy.  
+ Wywołaj tę metodę, aby usunąć `IUnknown` wskaźnika z tablicy.  
   
 ```
 BOOL Remove(DWORD dwCookie);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwCookie`  
- Odwołanie do pliku cookie **IUnknown** wskaźnika do usunięcia z tablicy.  
+ *dwCookie*  
+ Odwołanie do pliku cookie `IUnknown` wskaźnika do usunięcia z tablicy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca **TRUE** usunięcie wskaźnika **FALSE** inaczej.  
+ Zwraca wartość TRUE, jeśli wskaźnik jest usunięte, wartość FALSE w przeciwnym razie.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)   
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

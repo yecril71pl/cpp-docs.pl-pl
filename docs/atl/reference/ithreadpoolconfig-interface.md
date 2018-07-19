@@ -21,18 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 237671ce971d54209f3889fd93396fb4e0a42fee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 935175f522dd0b41851763f7b76781228c1881c0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363732"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880157"
 ---
 # <a name="ithreadpoolconfig-interface"></a>Interfejs IThreadPoolConfig
-Ten interfejs umożliwia stosowanie metod konfigurowania puli wątków.  
+Ten interfejs zapewnia metody konfigurowania puli wątków.  
   
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,10 +47,10 @@ __interface
   
 |||  
 |-|-|  
-|[GetSize](#getsize)|Wywołaj tę metodę, aby pobrać liczbę wątków w puli.|  
-|[GetTimeout](#gettimeout)|Wywołanie tej metody, aby uzyskać maksymalny czas (w milisekundach) oczekiwania na wątek zamknięcia puli wątków.|  
-|[SetSize](#setsize)|Wywołanie tej metody, aby ustawić liczbę wątków w puli.|  
-|[SetTimeout](#settimeout)|Wywołaj tę metodę, aby ustawić maksymalny czas (w milisekundach) oczekiwania na wątek zamknięcia puli wątków.|  
+|[GetSize](#getsize)|Wywołaj tę metodę, aby uzyskać liczbę wątków w puli.|  
+|[GetTimeout](#gettimeout)|Wywołaj tę metodę, aby uzyskać maksymalny czas (w milisekundach) oczekiwania na wątek zamknąć puli wątków.|  
+|[SetSize](#setsize)|Wywołaj tę metodę, aby ustawić liczbę wątków w puli.|  
+|[SetTimeout —](#settimeout)|Wywołaj tę metodę, aby ustawić maksymalny czas (w milisekundach) oczekiwania na wątek zamknąć puli wątków.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ten interfejs jest implementowany przez [CThreadPool](../../atl/reference/cthreadpool-class.md).  
@@ -59,73 +59,73 @@ __interface
  **Nagłówek:** atlutil.h  
   
 ##  <a name="getsize"></a>  IThreadPoolConfig::GetSize  
- Wywołaj tę metodę, aby pobrać liczbę wątków w puli.  
+ Wywołaj tę metodę, aby uzyskać liczbę wątków w puli.  
   
 ```
 STDMETHOD(GetSize)(int* pnNumThreads);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pnNumThreads`  
- [out] Adres zmiennej, która w przypadku powodzenia otrzymuje to liczba wątków w puli.  
+ *pnNumThreads*  
+ [out] Adres zmiennej, która w przypadku powodzenia, otrzyma liczbę wątków w puli.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku awarii.  
+ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/ithreadpoolconfig-interface_1.cpp)]  
   
 ##  <a name="gettimeout"></a>  IThreadPoolConfig::GetTimeout  
- Wywołanie tej metody, aby uzyskać maksymalny czas (w milisekundach) oczekiwania na wątek zamknięcia puli wątków.  
+ Wywołaj tę metodę, aby uzyskać maksymalny czas (w milisekundach) oczekiwania na wątek zamknąć puli wątków.  
   
 ```
 STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pdwMaxWait`  
- [out] Adres zmiennej, która w przypadku powodzenia otrzymuje maksymalny czas (w milisekundach) oczekiwania na wątek zamknięcia puli wątków.  
+ *pdwMaxWait*  
+ [out] Adres zmiennej, która w przypadku powodzenia odbiera maksymalny czas (w milisekundach) oczekiwania na wątek zamknąć puli wątków.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku awarii.  
+ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="example"></a>Przykład  
  Zobacz [IThreadPoolConfig::GetSize](#getsize).  
   
 ##  <a name="setsize"></a>  IThreadPoolConfig::SetSize  
- Wywołanie tej metody, aby ustawić liczbę wątków w puli.  
+ Wywołaj tę metodę, aby ustawić liczbę wątków w puli.  
   
 ```
 STDMETHOD(SetSize)int nNumThreads);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nNumThreads`  
+ *nNumThreads*  
  Żądana liczba wątków w puli.  
   
- Jeśli `nNumThreads` jest ujemna, jego wartość bezwzględna zostanie pomnożona przez liczbę procesorów na maszynie, aby uzyskać łączna liczba wątków.  
+ Jeśli *nNumThreads* jest ujemna, jego wartość bezwzględna będzie pomnożona przez liczbę procesorów w komputerze, aby uzyskać łączna liczba wątków.  
   
- Jeśli `nNumThreads` wynosi zero, [ATLS_DEFAULT_THREADSPERPROC](http://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571) zostanie pomnożona przez liczbę procesorów na maszynie, aby uzyskać łączna liczba wątków.  
+ Jeśli *nNumThreads* wynosi zero, [ATLS_DEFAULT_THREADSPERPROC](http://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571) zostanie pomnożona przez liczbę procesorów w komputerze, aby uzyskać łączna liczba wątków.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku awarii.  
+ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="example"></a>Przykład  
  Zobacz [IThreadPoolConfig::GetSize](#getsize).  
   
 ##  <a name="settimeout"></a>  IThreadPoolConfig::SetTimeout  
- Wywołaj tę metodę, aby ustawić maksymalny czas (w milisekundach) oczekiwania na wątek zamknięcia puli wątków.  
+ Wywołaj tę metodę, aby ustawić maksymalny czas (w milisekundach) oczekiwania na wątek zamknąć puli wątków.  
   
 ```
 STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwMaxWait`  
- Żądana maksymalny czas (w milisekundach) oczekiwania na wątek zamknięcia puli wątków.  
+ *dwMaxWait*  
+ Żądany maksymalny czas (w milisekundach) oczekiwania na wątek zamknąć puli wątków.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku awarii.  
+ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="example"></a>Przykład  
  Zobacz [IThreadPoolConfig::GetSize](#getsize).  

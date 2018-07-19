@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7f9fa0ac67592c5fca805eaa4bb4ec4b0ca153
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
-ms.translationtype: HT
+ms.openlocfilehash: 27dd0ad9bb64c8e708b228ec13a9fbf0e33fa589
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361482"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884119"
 ---
 # <a name="ccomobjectnolock-class"></a>Klasa CComObjectNoLock
-Ta klasa implementuje **IUnknown** dla obiekt nieagregowane, ale nie nie przyrostu liczbę blokad modułu w konstruktorze.  
+Ta klasa implementuje `IUnknown` nieagregowane obiektu, ale ma nie przyrostu liczbę blokad modułu w konstruktorze.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,8 +39,8 @@ class CComObjectNoLock : public Base
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `Base`  
- Pochodne klasy, [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak również od innych interfejsu mają być obsługiwane w obiekcie.  
+ *podstawowy*  
+ Z klasą pochodną [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak również od innych interfejsu mają być obsługiwane w obiekcie.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -55,14 +55,14 @@ class CComObjectNoLock : public Base
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CComObjectNoLock::AddRef](#addref)|Zwiększa liczbę odwołanie do obiektu.|  
+|[CComObjectNoLock::AddRef](#addref)|Zwiększa liczbę odwołań do obiektu.|  
 |[CComObjectNoLock::QueryInterface](#queryinterface)|Zwraca wskaźnik do żądanego interfejsu.|  
-|[CComObjectNoLock::Release](#release)|Zmniejsza liczba odwołanie do obiektu.|  
+|[CComObjectNoLock::Release](#release)|Dekrementuje liczbę odwołań do obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CComObjectNoLock` przypomina [element CComObject](../../atl/reference/ccomobject-class.md) w tym implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) dla obiekt nieagregowane; jednak `CComObjectNoLock` jest liczba przyrostu blokady modułu w konstruktorze.  
+ `CComObjectNoLock` jest podobny do [CComObject](../../atl/reference/ccomobject-class.md) , implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) nieagregowane obiektu; jednak `CComObjectNoLock` jest przyrost blokady modułu count w konstruktorze.  
   
- ATL używa `CComObjectNoLock` wewnętrznie dla fabryki klas. Ogólnie rzecz biorąc nie użyjesz tej klasy bezpośrednio.  
+ Używa ATL `CComObjectNoLock` wewnętrznie dla fabryki klas. Ogólnie rzecz biorąc nie użyjesz tej klasy bezpośrednio.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `Base`  
@@ -73,17 +73,17 @@ class CComObjectNoLock : public Base
  **Nagłówek:** atlcom.h  
   
 ##  <a name="addref"></a>  CComObjectNoLock::AddRef  
- Zwiększa liczbę odwołanie do obiektu.  
+ Zwiększa liczbę odwołań do obiektu.  
   
 ```
 STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość, która może być przydatne w przypadku diagnostyki lub testowania.  
+ Wartość, która może być użyteczna, diagnostykę lub testowania.  
   
 ##  <a name="ccomobjectnolock"></a>  CComObjectNoLock::CComObjectNoLock  
- Konstruktor. W odróżnieniu od [element CComObject](../../atl/reference/ccomobject-class.md), nie zwiększa liczbę blokad modułu.  
+ Konstruktor. W odróżnieniu od [CComObject](../../atl/reference/ccomobject-class.md), nie zwiększa liczbę blokad modułu.  
   
 ```
 CComObjectNoLock(void* = NULL);
@@ -91,7 +91,7 @@ CComObjectNoLock(void* = NULL);
   
 ### <a name="parameters"></a>Parametry  
  **Void\***  
- [in] Ten parametr nienazwany nie jest używany. Istnieje dla symetrycznego z innymi **CCom *** XXX*`Object`*XXX* konstruktorów.  
+ [in] Ten parametr nienazwany nie jest używany. Istnieje symetrii z innymi **CCom *** XXX*`Object`*XXX* konstruktorów.  
   
 ##  <a name="dtor"></a>  CComObjectNoLock:: ~ CComObjectNoLock  
  Destruktor.  
@@ -112,24 +112,24 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iid`  
- [in] Identyfikator żądanego interfejsu.  
+ *IID*  
+ [in] Identyfikator interfejsu żądanej.  
   
- `ppvObject`  
- [out] Wskaźnik do wskaźnika interfejsu identyfikowane przez `iid`. Jeśli obiekt nie obsługuje ten interfejs `ppvObject` ustawiono **NULL**.  
+ *ppvObject*  
+ [out] Wskaźnik do wskaźnika interfejsu identyfikowane przez *iid*. Jeśli obiekt nie obsługuje ten interfejs *ppvObject* ma wartość NULL.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standard `HRESULT` wartość.  
+ Standardowe wartości HRESULT.  
   
 ##  <a name="release"></a>  CComObjectNoLock::Release  
- Zmniejsza liczba odwołanie do obiektu.  
+ Dekrementuje liczbę odwołań do obiektu.  
   
 ```
 STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- W kompilacjach do debugowania **wersji** zwróci wartość, która może być przydatne w przypadku diagnostyki lub testowania. W kompilacjach do debugowania z systemem innym niż **wersji** zawsze zwraca wartość 0.  
+ W kompilacjach do debugowania `Release` zwraca wartość, która może być użyteczna, diagnostykę lub testowania. W kompilacjach nieprzeznaczonych do debugowania `Release` zawsze zwraca wartość 0.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

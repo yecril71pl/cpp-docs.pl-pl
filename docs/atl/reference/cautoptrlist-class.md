@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9101d66de6782d1a060a8acdfb0d02e9971bb9c5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5d942c0611b408303922f3e6ab91000630ce8774
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357548"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883596"
 ---
 # <a name="cautoptrlist-class"></a>Klasa CAutoPtrList
-Ta klasa dostarcza metody przydatne podczas konstruowania listy wskaźniki inteligentne.  
+Ta klasa dostarcza metody przydatne podczas tworzenia listy inteligentne wskaźniki.  
   
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,7 +40,7 @@ class CAutoPtrList :
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `E`  
+ *E*  
  Typ wskaźnika.  
   
 ## <a name="members"></a>Elementy członkowskie  
@@ -52,7 +52,7 @@ class CAutoPtrList :
 |[CAutoPtrList::CAutoPtrList](#cautoptrlist)|Konstruktor.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta klasa zawiera konstruktora i pochodzi z metody [CAtlList](../../atl/reference/catllist-class.md) i [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) do utworzenia obiektu listy przechowywania wskaźniki inteligentne pomocy. Klasa [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) udostępnia podobną funkcję dla obiekt array.  
+ Ta klasa zawiera konstruktora i pochodzi z metody z [CAtlList](../../atl/reference/catllist-class.md) i [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) ułatwiające tworzenie obiekt listy przechowywania inteligentnych wskaźników. Klasa [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) udostępnia podobną funkcję do tablicy obiektów.  
   
  Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-collection-classes.md).  
   
@@ -72,13 +72,13 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nBlockSize`  
+ *nBlockSize*  
  Rozmiar bloku z domyślną 10.  
   
 ### <a name="remarks"></a>Uwagi  
- Rozmiar bloku jest miarą ilość pamięci przydzielonej, gdy nowy element jest wymagany. Większe rozmiary bloków zmniejszyć wywołania procedury alokacji pamięci, ale użyj więcej zasobów.  
+ Rozmiar bloku jest miarą ilość pamięci przydzielonej, gdy nowy element jest wymagany. Większe rozmiary bloków zmniejszają liczbę interwencji do procedur alokacji pamięci, ale używa więcej zasobów.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CAtlList](../../atl/reference/catllist-class.md)   
  [Klasa CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)   
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

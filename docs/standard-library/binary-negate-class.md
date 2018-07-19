@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3db081a3baa3b8e5d974080275fc75b372009b6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f54f036c6e647c3f04bb202b68109e227061bf7a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850134"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961925"
 ---
 # <a name="binarynegate-class"></a>binary_negate — Klasa
 
-Klasy szablonów zapewnianie funkcji członkowskiej, która Negacja zwracana wartość określona funkcja binarnej.
+Klasa szablonu, zapewniając funkcją składową, negujące wartość zwracaną określoną funkcję binarny.
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,21 +44,21 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-`Func` Binarny funkcję, która ma być zanegowane.
+*FUNC* binarne funkcję, aby być ujemna.
 
-`left` Lewy argument operacji binarnego funkcję, która ma być zanegowane.
+*po lewej stronie* lewy operand binarne funkcję, aby być ujemna.
 
-`right` Prawy argument operacji binarnego funkcję, która ma być zanegowane.
+*prawy* prawy operand binarne funkcję, aby być ujemna.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Negacja funkcja binarnej.
+Negacja binarne funkcji.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasy szablonu przechowuje kopię _ obiektu binarnego funkcja *Func*. Definiuje jego funkcji członkowskiej `operator()` jako zwracanie **!**\_ *FUNC (w lewo, prawo).*
+Klasa szablonu przechowuje kopię _ obiektu binarnego funkcja *Func*. Definiuje jej funkcji członkowskiej `operator()` powrotu **!**\_ *FUNC (lewo, prawo).*
 
-Konstruktor obiektu `binary_negate` jest rzadko używana bezpośrednio. Funkcja Pomocnika [not2 —](../standard-library/functional-functions.md#not2) jest zwykle preferowany nad deklarowanie i użycie **binary_negator** predykatu karty.
+Konstruktor obiektu `binary_negate` jest rzadko używana bezpośrednio. Funkcja Pomocnika [not2 —](../standard-library/functional-functions.md#not2) zwykle są preferowane dla deklarowanie i użycie **binary_negator** predykatu adaptera.
 
 ## <a name="example"></a>Przykład
 
@@ -127,7 +127,7 @@ Resorted vector v1 = ( 3739828298 3715465425 2621500314 2233879413 580942933 626
 
 **Nagłówek:** \<funkcjonalności >
 
-Standard
+standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

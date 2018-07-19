@@ -19,68 +19,69 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93d067daf34538e3745e9a4efdd91fda65ef4de9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2ebb76d2f373862b39f2a3742481e14523a7a94b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360890"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882224"
 ---
 # <a name="urect-class"></a>Klasa _U_RECT
-Ta klasa karta argument umożliwia albo `RECT` wskaźniki lub odwołania do przekazania do funkcji, która jest zaimplementowana w postaci wskaźników.  
+Ta klasa adaptera argument umożliwia albo `RECT` wskaźników lub odwołań, które zostaną przekazane do funkcji, która jest zaimplementowana w zakresie wskaźników.  
   
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```
-class _U_RECT```  
+class _U_RECT
+```  
   
-## Members  
+## <a name="members"></a>Elementy członkowskie  
   
-### Public Constructors  
+### <a name="public-constructors"></a>Konstruktory publiczne  
   
-|Name|Description|  
+|Nazwa|Opis|  
 |----------|-----------------|  
-|[_U_RECT::_U_RECT](#_u_rect___u_rect)|The constructor.|  
+|[_U_RECT::_U_RECT](#_u_rect___u_rect)|Konstruktor.|  
   
-### Public Data Members  
+### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
-|Name|Description|  
+|Nazwa|Opis|  
 |----------|-----------------|  
-|[_U_RECT::m_lpRect](#_u_rect__m_lprect)|Pointer to a `RECT`.|  
+|[_U_RECT::m_lpRect](#_u_rect__m_lprect)|Wskaźnik do `RECT`.|  
   
-## Remarks  
- The class defines two constructor overloads: one accepts a **RECT&** argument and the other accepts an `LPRECT` argument. The first constructor stores the address of the reference argument in the class's single data member, [m_lpRect](#_u_rect__m_lprect). The argument to the pointer constructor is stored directly without conversion.  
+## <a name="remarks"></a>Uwagi  
+ Klasa definiuje dwa przeciążenia konstruktora: jeden akceptuje **Prostokąt &** argument, a druga akceptuje `LPRECT` argumentu. Pierwszy Konstruktor przechowuje adres argument odwołania w tej klasy danych jednego członka, [m_lpRect](#_u_rect__m_lprect). Argument Pro Konstruktor wskaźnik myszy znajduje się bezpośrednio, bez konwersji.  
   
-## Requirements  
- **Header:** atlwin.h  
+## <a name="requirements"></a>Wymagania  
+ **Nagłówek:** atlwin.h  
   
 ##  <a name="_u_rect__m_lprect"></a>  _U_RECT::m_lpRect  
- The class holds the value passed to either of its constructors as a public `LPRECT` data member.  
+ Klasa przechowuje wartość przekazana do jednej z jego konstruktorów jako publiczny `LPRECT` element członkowski danych.  
   
 ```
-Lprect — m_lpRect;
+LPRECT m_lpRect;
 ```  
   
 ##  <a name="_u_rect___u_rect"></a>  _U_RECT::_U_RECT  
- The address of the reference argument is stored in the class's single data member, [m_lpRect](#_u_rect__m_lprect).  
+ Adres argument odwołania są przechowywane w składowej danych jednego klasy, [m_lpRect](#_u_rect__m_lprect).  
   
 ```
-_U_RECT (RECT & rc);  
-_U_RECT (lprect — lprect —);
+_U_RECT(RECT& rc);  
+_U_RECT(LPRECT lpRect);
 ```  
   
-### Parameters  
- `rc`  
- A `RECT` reference.  
+### <a name="parameters"></a>Parametry  
+ *RC*  
+ A `RECT` odwołania.  
   
- `lpRect`  
- A `RECT` pointer.  
+ *lprect —*  
+ A `RECT` wskaźnika.  
   
-### Remarks  
- The argument to the pointer constructor is stored directly without conversion.  
+### <a name="remarks"></a>Uwagi  
+ Argument Pro Konstruktor wskaźnik myszy znajduje się bezpośrednio, bez konwersji.  
   
-## See Also  
- [Class Overview](../../atl/atl-class-overview.md)
+## <a name="see-also"></a>Zobacz też  
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

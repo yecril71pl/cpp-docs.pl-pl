@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be47c9525098cb3bd444cefff39dbbf25b88d396
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: abc3721159dfa7470106e6935664f3119ae4d264
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364992"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885042"
 ---
 # <a name="ccomtearoffobject-class"></a>Klasa CComTearOffObject
-Ta klasa implementuje interfejs oderwania.  
+Ta klasa implementuje interfejs odrywania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,10 +43,10 @@ class CComTearOffObject : public Base
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `Base`  
- Pochodne klasy oderwania, `CComTearOffObjectBase` i interfejsy ma obiekt oderwania do obsługi.  
+ *podstawowy*  
+ Twoje odrywania klasą pochodną `CComTearOffObjectBase` i interfejsy odrywania obiektu do obsługi.  
   
- ATL implementuje interfejsy oderwania w dwóch fazach — `CComTearOffObjectBase` metod obsługi liczebności referencyjnej i `QueryInterface`, podczas gdy `CComTearOffObject` implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509).  
+ ATL implementuje interfejsy odrywania w dwóch fazach — `CComTearOffObjectBase` metody obsługują licznik odwołań i `QueryInterface`, podczas gdy `CComTearOffObject` implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509).  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -61,9 +61,9 @@ class CComTearOffObject : public Base
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CComTearOffObject::AddRef](#addref)|Zwiększa liczbę odwołania dla `CComTearOffObject` obiektu.|  
-|[CComTearOffObject::QueryInterface](#queryinterface)|Zwraca wskaźnik do żądanego interfejsu w klasie oderwania lub klasy właściciela.|  
-|[CComTearOffObject::Release](#release)|Zmniejsza liczba odwołanie o `CComTearOffObject` obiektu i niszczy go.|  
+|[CComTearOffObject::AddRef](#addref)|Zwiększa liczbę odwołań dla `CComTearOffObject` obiektu.|  
+|[CComTearOffObject::QueryInterface](#queryinterface)|Zwraca wskaźnik do żądanego interfejsu w klasie odrywania lub klasy właściciela.|  
+|[CComTearOffObject::Release](#release)|Dekrementuje liczbę odwołań dla `CComTearOffObject` obiektu, a następnie niszczy go.|  
   
 ### <a name="ccomtearoffobjectbase-methods"></a>Metody CComTearOffObjectBase  
   
@@ -78,13 +78,13 @@ class CComTearOffObject : public Base
 |[m_pOwner](#m_powner)|Wskaźnik do `CComObject` pochodzi od klasy właściciela.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CComTearOffObject` implementuje interfejs oderwania jako oddzielny obiekt, który zostanie uruchomiony tylko wtedy, gdy ten interfejs jest kwerenda usługi. Oderwania jest usuwany po jego liczba odwołań wynosi zero. Zazwyczaj należy utworzyć interfejs oderwania dla interfejsu, który jest rzadko używana, ponieważ przy użyciu oderwania zapisuje wskaźnikiem vtable we wszystkich wystąpieniach obiektu głównego.  
+ `CComTearOffObject` implementuje interfejs odrywania jako oddzielny obiekt, który zostanie uruchomiony tylko wtedy, gdy zostaje przesłane zapytanie interfejsu. Odrywania jest usuwany po jego licznik odwołań staje się zerem. Zwykle tworzysz interfejs odrywania dla interfejsu, który jest rzadko używana, ponieważ przy użyciu odrywania zapisuje wskaźnik vtable we wszystkich wystąpieniach obiektu głównego.  
   
- Klasa implementacji oderwania z powinien pochodzić `CComTearOffObjectBase` i z jednego z tych interfejsów ma obiekt oderwania do obsługi. `CComTearOffObjectBase` którego ma zastosowany jest szablon się na klasie właściciela i modelu wątku. Klasa właściciela jest klasę obiektu, dla którego oderwania jest implementowana. Jeśli modelu wątków nie zostanie określony, używany jest domyślny model wątków.  
+ Powinien pochodzić klasy Implementowanie odrywania z `CComTearOffObjectBase` i z dowolnego interfejsy mają obiektu odrywania do obsługi. `CComTearOffObjectBase` jest szablonowana na klasę właściciela i modelu wątku. Klasa właściciel jest klasę obiektu, dla którego odrywania jest implementowana. Jeśli nie określisz modelu wątku, jest używany domyślny model wątku.  
   
- Należy utworzyć mapę COM dla klasy oderwania. Gdy występuje ATL oderwania, utworzy on **CComTearOffObject\<CYourTearOffClass >** lub **CComCachedTearOffObject\<CYourTearOffClass >**.  
+ Należy utworzyć mapę COM dla swojej klasy odrywania. Gdy występuje ATL odrywania, utworzy on `CComTearOffObject<CYourTearOffClass>` lub `CComCachedTearOffObject<CYourTearOffClass>`.  
   
- Na przykład w przykładowej BEEPER `CBeeper2` klasa jest klasą oderwania i `CBeeper` klasa jest klasą właściciela:  
+ Na przykład, w tym przykładzie BEEPER `CBeeper2` klasa jest klasą odrywania i `CBeeper` klasa jest klasą właściciela:  
   
  [!code-cpp[NVC_ATL_COM#43](../../atl/codesnippet/cpp/ccomtearoffobject-class_1.h)]  
   
@@ -97,7 +97,7 @@ class CComTearOffObject : public Base
  **Nagłówek:** atlcom.h  
   
 ##  <a name="addref"></a>  CComTearOffObject::AddRef  
- Zwiększa liczbę odwołanie z `CComTearOffObject` obiekt o jeden.  
+ Zwiększa liczbę odwołań z `CComTearOffObject` obiekt o jeden.  
   
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -114,8 +114,8 @@ CComTearOffObject(void* pv);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pv`  
- [in] Wskaźnik, który zostanie przekonwertowany na wskaźnik do **element CComObject\<właściciela >** obiektu.  
+ *Wa*  
+ [in] Wskaźnik, który zostanie przekonwertowany na wskaźnik do `CComObject<Owner>` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
  Zwiększa liczbę odwołań właściciela o jeden.  
@@ -128,7 +128,7 @@ CComTearOffObject(void* pv);
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zwalnia wszystkie przydzielone zasoby, wywołują FinalRelease i zmniejsza moduł zablokować count.  
+ Zwalnia wszystkie przydzielone zasoby, wywołuje moduł FinalRelease i zmniejsza zablokować count.  
   
 ##  <a name="ccomtearoffobjectbase"></a>  CComTearOffObject::CComTearOffObjectBase  
  Konstruktor.  
@@ -138,10 +138,10 @@ CComTearOffObjectBase();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Inicjuje [m_pOwner](#m_powner) członka **NULL**.  
+ Inicjuje [m_pOwner](#m_powner) elementu członkowskiego na wartość NULL.  
   
 ##  <a name="m_powner"></a>  CComTearOffObject::m_pOwner  
- Wskaźnik do [element CComObject](../../atl/reference/ccomobject-class.md) pochodną obiektu *właściciela*.  
+ Wskaźnik do [CComObject](../../atl/reference/ccomobject-class.md) pochodną obiektu *właściciela*.  
   
 ```
 CComObject<Owner>* m_pOwner;
@@ -149,10 +149,10 @@ CComObject<Owner>* m_pOwner;
   
 ### <a name="parameters"></a>Parametry  
  *Właściciel*  
- [in] Klasa, dla którego oderwania jest implementowana.  
+ [in] Klasa, dla którego odrywania jest implementowana.  
   
 ### <a name="remarks"></a>Uwagi  
- Wskaźnik jest ustawiana na **NULL** podczas konstruowania.  
+ Wskaźnik jest inicjowany do wartości NULL podczas konstruowania.  
   
 ##  <a name="queryinterface"></a>  CComTearOffObject::QueryInterface  
  Pobiera wskaźnik do żądanego interfejsu.  
@@ -162,28 +162,28 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iid`  
- [in] Uzyskanie identyfikatora IID interfejsu żądanej.  
+ *IID*  
+ [in] Identyfikator IID interfejsu żądanej.  
   
- `ppvObject`  
- [out] Wskaźnik do wskaźnika interfejsu identyfikowane przez `iid`, lub **NULL** Jeśli nie można odnaleźć interfejsu.  
+ *ppvObject*  
+ [out] Wskaźnik do wskaźnika interfejsu identyfikowane przez *iid*, lub wartość NULL, jeśli nie można odnaleźć interfejsu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standard `HRESULT` wartość.  
+ Standardowe wartości HRESULT.  
   
 ### <a name="remarks"></a>Uwagi  
- Zapytania najpierw dla interfejsów w klasie oderwania. Jeśli interfejs nie jest, zapytania dotyczące interfejsu właściciela obiektu. Jeśli jest żądany interfejs **IUnknown**, zwraca **IUnknown** właściciela.  
+ Kwerendy, najpierw dla interfejsów w klasie odrywania. Jeśli interfejs nie jest dostępne, zapytania dotyczące interfejsu na obiekt właściciela. Jeśli jest żądany interfejs `IUnknown`, zwraca `IUnknown` właściciela.  
   
 ##  <a name="release"></a>  CComTearOffObject::Release  
- Zmniejsza odwołanie liczba przez jedną i, jeśli liczba odwołań wynosi zero, usuwa `CComTearOffObject`.  
+ Dekrementuje liczbę odwołań za pomocą jednej i, jeśli licznik odwołań wynosi zero, usuwa `CComTearOffObject`.  
   
 ```
 STDMETHOD_ULONG Release();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- W kompilacjach do debugowania z systemem innym niż zawsze zwraca wartość zero. W kompilacjach debugowania zwraca wartość, która może być przydatne w przypadku diagnostyki lub testowania.  
+ W kompilacjach nieprzeznaczonych do debugowania zawsze zwraca wartość zero. W przypadku kompilacji do debugowania zwraca wartość, która może być użyteczna, diagnostykę lub testowania.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)   
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

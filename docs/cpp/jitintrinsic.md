@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71cd88882ea104275e4c1a43ccf05494a859d303
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8b1c932f53651b8ad116139724348714b183506
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418757"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939393"
 ---
 # <a name="jitintrinsic"></a>jitintrinsic
-Oznacza funkcji jako istotne dla 64-bitowego środowiska CLR. Jest ono używane w przypadku niektórych funkcji w bibliotekach udostępnionych przez firmę Microsoft.  
+Oznacza funkcję jako istotny dla 64-bitowe środowisko uruchomieniowe języka wspólnego. Jest on używany w przypadku pewnych funkcji w bibliotekach udostępnionych przez firmę Microsoft.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,7 +37,7 @@ __declspec(jitintrinsic)
 ## <a name="remarks"></a>Uwagi  
  `jitintrinsic` dodaje MODOPT (<xref:System.Runtime.CompilerServices.IsJitIntrinsic>) do sygnatury funkcji.  
   
- Użytkownicy są odradzane ze za pomocą tej `__declspec` modyfikator, jako nieoczekiwane wyniki mogą wystąpić.  
+ Użytkownicy są odradzane ze za pomocą tego **__declspec** modyfikator, jako nieoczekiwane wyniki mogą wystąpić.  
   
 ## <a name="see-also"></a>Zobacz też  
  [__declspec](../cpp/declspec.md)   

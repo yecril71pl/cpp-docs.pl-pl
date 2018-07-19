@@ -1,5 +1,5 @@
 ---
-title: allocator_traits — klasa | Dokumentacja firmy Microsoft
+title: allocator_traits, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -50,16 +50,16 @@ helpviewer_keywords:
 - std::allocator_traits [C++], select_on_container_copy_construction
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be3b8fc232c6d692dd6e4f80018ab571e4e0cb34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9bae212ec3d8edfacc7cd3afb37ab3c13dc11aef
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847718"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962453"
 ---
 # <a name="allocatortraits-class"></a>allocator_traits — klasa
 
-Obiekt, który uzupełnia opisano klasy szablonu *typu alokatora*. Typ alokatora jest dowolnego typu, który opisuje alokatora obiektu, który jest używany do zarządzania przydzielone magazynu. W szczególności dla dowolnego typu alokatora `Alloc`, można użyć `allocator_traits<Alloc>` ustalenie, wszystkie informacje, które są wymagane przez kontener włączone przydzielania. Aby uzyskać więcej informacji, zobacz domyślne [Allocator — klasa](../standard-library/allocator-class.md).
+Klasa szablonu opisuje obiekt, który uzupełnia *typ programu przydzielania*. Typ alokatora jest dowolny typ, który opisuje obiekt alokatora, który jest używany do zarządzania przydzielonej pamięci. W szczególności dla dowolnego typu alokatora `Alloc`, możesz użyć `allocator_traits<Alloc>` ustalenie, wszystkie informacje, które są wymagane przez kontener z obsługą alokatora. Aby uzyskać więcej informacji, zobacz domyślnie [alokatora klasy](../standard-library/allocator-class.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -72,40 +72,40 @@ class allocator_traits;
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`allocator_traits::allocator_type`|Ten typ jest synonimem parametru szablonu `Alloc`.|
-|`allocator_traits::const_pointer`|Ten typ jest `Alloc::const_pointer`, jeśli jest poprawnie sformułowanym typu; w przeciwnym razie ten typ jest `pointer_traits<pointer>::rebind<const value_type>`.|
-|`allocator_traits::const_void_pointer`|Ten typ jest `Alloc::const_void_pointer`, jeśli jest poprawnie sformułowanym typu; w przeciwnym razie ten typ jest `pointer_traits<pointer>::rebind<const void>`.|
-|`allocator_traits::difference_type`|Ten typ jest `Alloc::difference_type`, jeśli jest poprawnie sformułowanym typu; w przeciwnym razie ten typ jest `pointer_traits<pointer>::difference_type`.|
-|`allocator_traits::pointer`|Ten typ jest `Alloc::pointer`, jeśli jest poprawnie sformułowanym typu; w przeciwnym razie ten typ jest `value_type *`.|
-|`allocator_traits::propagate_on_container_copy_assignment`|Ten typ jest `Alloc::propagate_on_container_copy_assignment`, jeśli jest poprawnie sformułowanym typu; w przeciwnym razie ten typ jest `false_type`.|
-|`allocator_traits::propagate_on_container_move_assignment`|Ten typ jest `Alloc::propagate_on_container_move_assignment`, jeśli jest poprawnie sformułowanym typu; w przeciwnym razie ten typ jest `false_type`. Jeśli typ jest spełniony, kontener włączone alokatora kopiuje jego alokatora przechowywanych na przypisania przenoszenia.|
-|`allocator_traits::propagate_on_container_swap`|Ten typ jest `Alloc::propagate_on_container_swap`, jeśli jest poprawnie sformułowanym typu; w przeciwnym razie ten typ jest `false_type`. Jeśli typ jest spełniony, kontener włączone alokatora zamienia jego alokatora przechowywanych na zamiana.|
-|`allocator_traits::size_type`|Ten typ jest `Alloc::size_type`, jeśli jest poprawnie sformułowanym typu; w przeciwnym razie ten typ jest `make_unsigned<difference_type>::type`.|
+|`allocator_traits::allocator_type`|Ten typ jest synonimem dla parametru szablonu `Alloc`.|
+|`allocator_traits::const_pointer`|Ten typ jest `Alloc::const_pointer`, jeśli czy typ jest poprawnie sformułowanym; w przeciwnym razie ten typ jest `pointer_traits<pointer>::rebind<const value_type>`.|
+|`allocator_traits::const_void_pointer`|Ten typ jest `Alloc::const_void_pointer`, jeśli czy typ jest poprawnie sformułowanym; w przeciwnym razie ten typ jest `pointer_traits<pointer>::rebind<const void>`.|
+|`allocator_traits::difference_type`|Ten typ jest `Alloc::difference_type`, jeśli czy typ jest poprawnie sformułowanym; w przeciwnym razie ten typ jest `pointer_traits<pointer>::difference_type`.|
+|`allocator_traits::pointer`|Ten typ jest `Alloc::pointer`, jeśli czy typ jest poprawnie sformułowanym; w przeciwnym razie ten typ jest `value_type *`.|
+|`allocator_traits::propagate_on_container_copy_assignment`|Ten typ jest `Alloc::propagate_on_container_copy_assignment`, jeśli czy typ jest poprawnie sformułowanym; w przeciwnym razie ten typ jest `false_type`.|
+|`allocator_traits::propagate_on_container_move_assignment`|Ten typ jest `Alloc::propagate_on_container_move_assignment`, jeśli czy typ jest poprawnie sformułowanym; w przeciwnym razie ten typ jest `false_type`. Prawdziwe typu kontener z obsługą alokatora kopiuje jego alokatora przechowywanych na przeniesienia przypisania.|
+|`allocator_traits::propagate_on_container_swap`|Ten typ jest `Alloc::propagate_on_container_swap`, jeśli czy typ jest poprawnie sformułowanym; w przeciwnym razie ten typ jest `false_type`. Jeśli prawdziwe typu kontener z obsługą alokatora zamienia jego alokatora przechowywanych na zamiany.|
+|`allocator_traits::size_type`|Ten typ jest `Alloc::size_type`, jeśli czy typ jest poprawnie sformułowanym; w przeciwnym razie ten typ jest `make_unsigned<difference_type>::type`.|
 |`allocator_traits::value_type`|Ten typ jest synonimem `Alloc::value_type`.|
-|`allocator_traits::void_pointer`|Ten typ jest `Alloc::void_pointer`, jeśli jest poprawnie sformułowanym typu; w przeciwnym razie ten typ jest `pointer_traits<pointer>::rebind<void>`.|
+|`allocator_traits::void_pointer`|Ten typ jest `Alloc::void_pointer`, jeśli czy typ jest poprawnie sformułowanym; w przeciwnym razie ten typ jest `pointer_traits<pointer>::rebind<void>`.|
 
 ### <a name="static-methods"></a>Metody statyczne
 
-Następujące metody statyczne wywołania odpowiedniej metody w parametrze danego przydzielania.
+Następujące metody statyczne wywołać metody odpowiedniego parametru danego programu przydzielania.
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[allocate](#allocate)|Metoda statyczna przydziela pamięć przy użyciu parametru danego przydzielania.|
-|[construct](#construct)|Metoda statyczna używa określonego programu przydzielania do utworzenia obiektu.|
-|[Cofnięcie przydziału](#deallocate)|Metoda statyczna używa określonego alokatora można cofnąć alokacji określoną liczbę obiektów.|
-|[destroy](#destroy)|Metoda statyczna używa określonego alokatora aby wywołać destruktor dla obiekt bez cofanie przydziału pamięci.|
-|[max_size](#max_size)|Metoda statyczna używa określonego alokatora Aby określić maksymalną liczbę obiektów, które mogą być przydzielone.|
-|[select_on_container_copy_construction](#select_on_container_copy_construction)|Statyczna metoda, która wywołuje `select_on_container_copy_construction` na określony program przydzielania.|
+|[allocate](#allocate)|Statyczna metoda, która przydziela pamięć przy użyciu parametru danego programu przydzielania.|
+|[construct](#construct)|Metoda statyczna, który używa określonego alokatora do konstruowania obiektu.|
+|[Cofnij Przydział](#deallocate)|Metoda statyczna, która używa określonego alokatora można cofnąć alokacji określoną liczbę obiektów.|
+|[destroy](#destroy)|Metoda statyczna, który używa określonego programu przydzielania może wywołać destruktor obiektu bez Trwa cofanie alokacji pamięci.|
+|[max_size](#max_size)|Metoda statyczna, który używa określonego programu przydzielania, aby określić maksymalną liczbę obiektów, które mogą być przydzielone.|
+|[select_on_container_copy_construction](#select_on_container_copy_construction)|Statyczna metoda, która wywołuje `select_on_container_copy_construction` na określonego alokatora.|
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<pamięci >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
-## <a name="allocate"></a>  allocator_traits::allocate
+## <a name="allocate"></a>  allocator_traits::allocate —
 
-Metoda statyczna przydziela pamięć przy użyciu parametru danego przydzielania.
+Statyczna metoda, która przydziela pamięć przy użyciu parametru danego programu przydzielania.
 
 ```cpp
 static pointer allocate(Alloc& al, size_type count);
@@ -116,23 +116,23 @@ static pointer allocate(Alloc& al, size_type count,
 
 ### <a name="parameters"></a>Parametry
 
-`al` Obiekt programu przydzielania.
+*Al* obiekt programu przydzielania.
 
-`count` Liczba elementów do przydzielenia.
+*Liczba* liczbę elementów do przydzielenia.
 
-`hint` A `const_pointer` który może ułatwić obiektu alokatora spełniające żądanie dla magazynu dzięki umieszczeniu adresu przydzielonego obiektu przed żądania. Pustego wskaźnika jest traktowany jako bez wskazówki.
+*Wskazówka* A `const_pointer` może ułatwiającymi obiekt alokatora który spełnia żądanie dla magazynu, znajdując adres przydzielonego obiektu przed żądaniem. Wskaźnikiem typu null, jest traktowany jako bez wskazówki.
 
 ### <a name="return-value"></a>Wartość zwracana
 
 Każda metoda zwraca wskaźnik do przydzielonego obiektu.
 
-Zwraca pierwszy metody statycznej `al.allocate(count)`.
+Zwraca pierwszy statycznej metody `al.allocate(count)`.
 
-Druga metoda zwraca `al.allocate(count, hint)`, jeśli wyrażenie jest być dobrze uformowany; w przeciwnym razie zwraca `al.allocate(count)`.
+Druga metoda zwraca `al.allocate(count, hint)`, jeśli, wyrażenie jest dobrze sformułowany; w przeciwnym razie zwraca `al.allocate(count)`.
 
 ## <a name="construct"></a>  allocator_traits::Construct
 
-Metoda statyczna używa określonego programu przydzielania do utworzenia obiektu.
+Metoda statyczna, który używa określonego alokatora do konstruowania obiektu.
 
 ```cpp
 template <class Uty, class Types>
@@ -141,19 +141,19 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 ### <a name="parameters"></a>Parametry
 
-`al` Obiekt programu przydzielania.
+*Al* obiekt programu przydzielania.
 
-`ptr` Wskaźnik do lokalizacji, w którym ma być skonstruowany obiekt.
+*PTR* wskaźnik do lokalizacji, w której obiekt ma zostać skonstruowane.
 
-`args` Lista argumentów została przekazana do konstruktora obiektu.
+*argumenty* listy argumentów, który jest przekazywany do konstruktora obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania funkcji statyczny element członkowski `al.construct(ptr, args...)`, jeśli wyrażenie jest być dobrze uformowany; w przeciwnym razie oblicza `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`.
+Wywołania funkcji członka statycznego `al.construct(ptr, args...)`, jeśli, wyrażenie jest dobrze sformułowany; w przeciwnym razie oblicza `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`.
 
-## <a name="deallocate"></a>  allocator_traits::deallocate
+## <a name="deallocate"></a>  allocator_traits::deallocate —
 
-Metoda statyczna używa określonego alokatora można cofnąć alokacji określoną liczbę obiektów.
+Metoda statyczna, która używa określonego alokatora można cofnąć alokacji określoną liczbę obiektów.
 
 ```cpp
 static void deallocate(Alloc al,
@@ -163,21 +163,21 @@ static void deallocate(Alloc al,
 
 ### <a name="parameters"></a>Parametry
 
-`al` Obiekt programu przydzielania.
+*Al* obiekt programu przydzielania.
 
-`ptr` Wskaźnik do lokalizacji początkowej obiektów do przydzielenia.
+*PTR* wskaźnika, począwszy od lokalizacji obiektów, które można cofnąć przydziału.
 
-`count` Liczba obiektów można cofnąć alokacji.
+*Liczba* liczbę obiektów, które można cofnąć alokacji.
 
 ### <a name="remarks"></a>Uwagi
 
 Ta metoda wywołuje `al.deallocate(ptr, count)`.
 
-Ta metoda zgłasza nothing.
+Ta metoda wyrzuca nothing.
 
-## <a name="destroy"></a>  allocator_traits::Destroy
+## <a name="destroy"></a>  allocator_traits::Destroy —
 
-Metoda statyczna używa określonego alokatora aby wywołać destruktor dla obiekt bez cofanie przydziału pamięci.
+Metoda statyczna, który używa określonego programu przydzielania może wywołać destruktor obiektu bez Trwa cofanie alokacji pamięci.
 
 ```cpp
 template <class Uty>
@@ -186,17 +186,17 @@ static void destroy(Alloc& al, Uty* ptr);
 
 ### <a name="parameters"></a>Parametry
 
-`al` Obiekt programu przydzielania.
+*Al* obiekt programu przydzielania.
 
-`ptr` Wskaźnik do lokalizacji obiektu.
+*PTR* wskaźnik do lokalizacji obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda wywołuje `al.destroy(ptr)`, jeśli wyrażenie jest być dobrze uformowany; w przeciwnym razie oblicza `ptr->~Uty()`.
+Ta metoda wywołuje `al.destroy(ptr)`, jeśli, wyrażenie jest dobrze sformułowany; w przeciwnym razie oblicza `ptr->~Uty()`.
 
-## <a name="max_size"></a>  allocator_traits::max_size
+## <a name="max_size"></a>  allocator_traits::max_size —
 
-Metoda statyczna używa określonego alokatora Aby określić maksymalną liczbę obiektów, które mogą być przydzielone.
+Metoda statyczna, który używa określonego programu przydzielania, aby określić maksymalną liczbę obiektów, które mogą być przydzielone.
 
 ```cpp
 static size_type max_size(const Alloc& al);
@@ -204,15 +204,15 @@ static size_type max_size(const Alloc& al);
 
 ### <a name="parameters"></a>Parametry
 
-`al` Obiekt programu przydzielania.
+*Al* obiekt programu przydzielania.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda zwraca `al.max_size()`, jeśli wyrażenie jest być dobrze uformowany; w przeciwnym razie zwraca `numeric_limits<size_type>::max()`.
+Ta metoda zwraca `al.max_size()`, jeśli, wyrażenie jest dobrze sformułowany; w przeciwnym razie zwraca `numeric_limits<size_type>::max()`.
 
 ## <a name="select_on_container_copy_construction"></a>  allocator_traits::select_on_container_copy_construction
 
-Statyczna metoda, która wywołuje `select_on_container_copy_construction` na określony program przydzielania.
+Statyczna metoda, która wywołuje `select_on_container_copy_construction` na określonego alokatora.
 
 ```cpp
 static Alloc select_on_container_copy_construction(const Alloc& al);
@@ -220,15 +220,15 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 ### <a name="parameters"></a>Parametry
 
-`al` Obiekt programu przydzielania.
+*Al* obiekt programu przydzielania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ta metoda zwraca `al.select_on_container_copy_construction()`, jeśli; w przeciwnym razie zwraca czy typ jest poprawnie sformułowany `al`.
+Ta metoda zwraca `al.select_on_container_copy_construction()`, jeśli czy typ jest dobrze sformułowany; w przeciwnym razie zwraca *al*.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta metoda służy do określania przydzielania, gdy skojarzone kontenera jest tworzony kopii.
+Ta metoda jest używana do określania alokatora, gdy skojarzony kontener jest konstruowany przez kopiowanie.
 
 ## <a name="see-also"></a>Zobacz także
 

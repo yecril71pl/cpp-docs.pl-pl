@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02afac78de5eb5908d477f8503ceeebffe46f672
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 21f2da8c10b9b796740144f81d0390f1af124cab
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412585"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942058"
 ---
 # <a name="comerrorerror"></a>_com_error::Error
 **Microsoft Specific**  
   
- Pobiera `HRESULT` przekazany do konstruktora.  
+ Pobiera wartość HRESULT przekazany do konstruktora.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,12 +38,12 @@ HRESULT Error( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Nieprzetworzona `HRESULT` element przekazany do konstruktora.  
+ Nieprzetworzone elementu HRESULT przekazany do konstruktora.  
   
 ## <a name="remarks"></a>Uwagi  
- Pobiera hermetyzowany `HRESULT` elementu `_com_error` obiektu.  
+ Pobiera element HRESULT hermetyzowany w `_com_error` obiektu.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [_com_error, klasa](../cpp/com-error-class.md)

@@ -17,14 +17,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e84ed8ed97a529d67c6d136fd8464cd13c8a502
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1b9bc37213ed2e5690f85fca738d44e6eecfaa8c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845222"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962052"
 ---
-# <a name="ltfunctionalgt-operators"></a>&lt;funkcjonalności&gt; operatory
+# <a name="ltfunctionalgt-operators"></a>&lt;funkcjonalności&gt; operatorów
 
 |||
 |-|-|
@@ -32,7 +32,7 @@ ms.locfileid: "33845222"
 
 ## <a name="op_eq_eq"></a>  operator ==
 
-Testy, jeśli można wywołać obiektu jest pusta.
+Sprawdza, czy obiekt jest pusty.
 
 ```cpp
 template <class Fty>
@@ -44,15 +44,15 @@ bool operator==(null_ptr_type npc, const function<Fty>& f);
 
 ### <a name="parameters"></a>Parametry
 
-`Fty` Typ funkcji do zakodowania.
+*Fty* typu funkcji do opakowania.
 
-`f` Obiekt funkcji
+*f* obiektu — funkcja
 
-`npc` Wskaźnika o wartości null.
+*npc* wskaźnikiem typu null.
 
 ### <a name="remarks"></a>Uwagi
 
-Operatory zarówno zająć argument, który jest odwołaniem do `function` obiektu, a argument jest stałą pustego wskaźnika. Zwrócą wartość true tylko wtedy, gdy `function` obiekt jest pusty.
+Operatory zarówno przyjmują argument, który jest odwołaniem do `function` obiektu i argument, który jest stałą pustego wskaźnika. Oba zwracają wartość true tylko wtedy, gdy `function` obiekt jest pusty.
 
 ### <a name="example"></a>Przykład
 
@@ -89,7 +89,7 @@ empty == false
 
 ## <a name="op_neq"></a>  operator! =
 
-Testy, jeśli można wywołać obiektu nie jest pusty.
+Sprawdza, czy obiekt nie jest pusty.
 
 ```cpp
 template <class Fty>
@@ -101,15 +101,15 @@ bool operator!=(null_ptr_type npc, const function<Fty>& f);
 
 ### <a name="parameters"></a>Parametry
 
-`Fty` Typ funkcji do zakodowania.
+*Fty* typu funkcji do opakowania.
 
-`f` Obiekt funkcji
+*f* obiektu — funkcja
 
-`npc` Wskaźnika o wartości null.
+*npc* wskaźnikiem typu null.
 
 ### <a name="remarks"></a>Uwagi
 
-Operatory zarówno zająć argument, który jest odwołaniem do `function` obiektu, a argument jest stałą pustego wskaźnika. Zwrócą wartość true tylko wtedy, gdy `function` obiektu nie jest pusty.
+Operatory zarówno przyjmują argument, który jest odwołaniem do `function` obiektu i argument, który jest stałą pustego wskaźnika. Oba zwracają wartość true tylko wtedy, gdy `function` obiektu nie jest pusty.
 
 ### <a name="example"></a>Przykład
 

@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bb54ae332dac556333516c5e50129b9ba43ce07
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 01eb327458331ca457b7b7f23d8c69668fbf1fa7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845079"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964161"
 ---
 # <a name="binaryfunction-struct"></a>binary_function — Struktura
 
-Pusty podstawowej struktury definiujący typy, które mogą być dziedziczone przez klasy pochodne udostępniający obiektu binarnego funkcji.
+Pusty podstawowej struktury, która definiuje typy, które mogą być dziedziczone przez klasy pochodne, który dostarcza obiekt funkcji binarnego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,13 +39,13 @@ struct binary_function {
 
 ## <a name="remarks"></a>Uwagi
 
-Struktura szablonu służy jako podstawa dla klas definiujących funkcji członkowskiej formularza:
+Struktura szablonu służy jako podstawowa dla klas definiujących funkcji składowej typu formularza:
 
 **result_type operator()**( **constfirst_argument_type&**,
 
 **Const second_argument_type &** ) **const**
 
-Wszystkie takie funkcje binarne mogą odwoływać się do ich pierwszy argument typu jako **first_argument_type**, ich drugi argument typu jako **second_argument_type**i ich typ zwracany jako ***result_type*** .
+Wszystkie takie funkcje binarne mogą odwoływać się do swojego pierwszego typu argumentu jako `first_argument_type`, ich drugi argument typu jako `second_argument_type`oraz ich typ zwrotu jako ***element result_type***.
 
 ## <a name="example"></a>Przykład
 
@@ -112,7 +112,7 @@ The element-wise averages are: ( 5.5 1.75 -0.166667 -1.625 -2.9 -4.08333 )
 
 **Nagłówek:** \<funkcjonalności >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

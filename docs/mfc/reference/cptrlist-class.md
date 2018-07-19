@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 421373969beb83d033ce8ca14bd11fdb5d8dcb14
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 36746c7979511890bb450c9204c0c7a908bbace3
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078624"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853897"
 ---
 # <a name="cptrlist-class"></a>Klasa CPtrList
-Obsługuje listy wskaźniki typu void.  
+Obsługuje listy wskaźników typu void.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,22 +35,22 @@ class CPtrList : public CObject
 ```  
   
 ## <a name="members"></a>Elementy członkowskie  
- Funkcje Członkowskie `CPtrList` są podobne do funkcji Członkowskich klasy [CObList](../../mfc/reference/coblist-class.md). Ze względu na to podobieństwa, można użyć `CObList` odwołania dokumentacji charakterystykę funkcja elementu członkowskiego. Po wyświetleniu `CObject` wskaźnika jako parametr funkcji lub wartości zwracanej, Zastąp wskaźnik do **void**.  
+ Funkcje elementów członkowskich `CPtrList` są podobne do funkcji elementów członkowskich klasy [CObList](../../mfc/reference/coblist-class.md). Ze względu na to podobieństwa można użyć `CObList` dokumentacji kątem specyfiki funkcja elementu członkowskiego. Po wyświetleniu `CObject` wskaźnik jako funkcja parametru lub zwracanej wartości, Wstaw wskaźnik do **void**.  
   
  `CObject*& CObList::GetHead() const;`  
   
- na przykład umożliwia to  
+ na przykład przekłada się na  
   
  `void*& CPtrList::GetHead() const;`  
   
 ## <a name="remarks"></a>Uwagi  
- `CPtrList` zawiera `IMPLEMENT_DYNAMIC` makro do obsługi dostępu typu run-time i zrzucanie `CDumpContext` obiektu. Zrzut wskaźnika poszczególnych elementów listy, należy do co najmniej 1 należy ustawić głębokość kontekstu zrzutu.  
+ `CPtrList` dołącza IMPLEMENT_DYNAMIC — makro do obsługi dostępu typu run-time i zrzucanie `CDumpContext` obiektu. Zrzut elementów listy poszczególnych wskaźnika, należy należy ustawić głębokość kontekstu zrzutu do 1 lub większą.  
   
- Nie można zserializować list wskaźnika.  
+ Nie można serializować list wskaźnika.  
   
- Gdy `CPtrList` obiekt jest usunięty lub gdy jego elementy są usuwane, są usuwane tylko wskaźniki, nie odwołują się do jednostek.  
+ Gdy `CPtrList` obiekt zostanie usunięty lub usunięcie jej elementy są usuwane tylko wskaźników, nie mogą odwoływać się do jednostki.  
   
- Aby uzyskać więcej informacji na temat używania `CPtrList`, zapoznaj się z artykułem [kolekcji](../../mfc/collections.md).  
+ Aby uzyskać więcej informacji na temat korzystania z `CPtrList`, zapoznaj się z artykułem [kolekcje](../../mfc/collections.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -61,6 +61,6 @@ class CPtrList : public CObject
  **Nagłówek:** afxcoll.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [CObject — klasa](../../mfc/reference/cobject-class.md)   
+ [Klasa CObject](../../mfc/reference/cobject-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [Klasa CObList](../../mfc/reference/coblist-class.md)

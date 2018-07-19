@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e1ef431fdba40ef9e8fd46b8c0e5d9cf7b32eda
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 68ca39b459b0d0e60305105986d3e76aa86a5bed
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844006"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961655"
 ---
 # <a name="equalto-struct"></a>equal_to — Struktura
 
-Predykat binarny, który wykonuje operacje równości ( `operator==`) na jego argumenty.
+Predykat binarny, który wykonuje operacje równości (`operator==`) na jego argumenty.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,19 +49,19 @@ struct equal_to<void>
 
 ### <a name="parameters"></a>Parametry
 
-`Type`, `T`, `U` Dowolnego typu, który obsługuje `operator==` pobierającej argumentów operacji typu określonego lub wywnioskowany.
+*Typ*, *T*, *U* dowolnego typu, który obsługuje `operator==` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
 
-`Left` Lewy operand operacji równości. Szablon klasy niespecjalizowanej przyjmuje argument odwołania l-wartością typu `Type`. Specjalne szablonu doskonała przekazującej lewostronnie i argumenty odwołanie do r-wartości wywnioskować typu `T`.
+*Po lewej stronie* lewy operand operacji porównania. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
 
-`Right` Prawy argument operacji równości. Szablon klasy niespecjalizowanej przyjmuje argument odwołania l-wartością typu `Type`. Specjalne szablonu doskonała przekazującej lewostronnie i argumenty odwołanie do r-wartości wywnioskować typu `U`.
+*Po prawej stronie* prawy operand operacji porównania. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wynik `Left == Right`. Specjalne szablonu doskonała przekazywanie wynik, który ma typ zwracany przez `operator==`.
+Wynik `Left == Right`. Szablon wyspecjalizowane doskonała przekazywania wyniku, który ma typ, który jest zwracany przez `operator==`.
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekty typu `Type` musi umożliwiać porównywanie równości. Takie rozwiązanie wymaga `operator==` zdefiniowane na zestaw obiektów spełnia właściwości matematyczne równoważność relacji. Wszystkie typy wbudowane liczbowych i wskaźnik spełnienia tego wymagania.
+Obiekty typu *typu* musi umożliwiać porównywanie równości. Takie rozwiązanie wymaga `operator==` zdefiniowane na zestaw obiektów spełnia matematyczne właściwości relacji równoważności. Wszystkie wbudowane typy liczbowe i wskaźnik spełnienia tego wymagania.
 
 ## <a name="example"></a>Przykład
 

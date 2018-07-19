@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b52479cc433f59d76dd40cfb752550e51652892d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c655ea4adec0364f35d0b43c637eae9c270cdb0e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856775"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962068"
 ---
 # <a name="ispod-class"></a>is_pod — Klasa
 
-Testy, jeśli typ jest POD.
+Sprawdza, czy typ jest ZASOBNIKÓW.
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,31 +41,31 @@ struct is_pod;
 
 ## <a name="remarks"></a>Uwagi
 
-`is_pod<T>::value` jest `true` Jeśli typ *T* jest zwykły stare dane (POD). W przeciwnym razie jest `false`.
+`is_pod<T>::value` jest **true** Jeśli typ *T* to zwykłe stare dane (POD). W przeciwnym razie jest **false**.
 
-Typów arytmetycznych, Typy wyliczeniowe typów wskaźnikowych i wskaźnika do elementu członkowskiego typy są POD.
+Arytmetyczne typy, Typy wyliczeniowe, typy wskaźników i wskaźnik na typy Członkowskie są ZASOBNIKÓW.
 
-Kwalifikowana cv wersji typ POD jest typ POD.
+Kwalifikowana cv wersji typu ZASOBNIKA jest typem POD.
 
-Tablica POD jest POD.
+Tablica ZASOBNIKA jest ZASOBNIKÓW.
 
-Struktura lub związek, w których elementy członkowskie danych niestatyczna są POD, jest POD jeśli ma ona:
+Struktury lub Unii, są wszystkie których elementy członkowskie danych niestatycznych ZASOBNIKÓW, sama jest ZASOBNIKA jeśli ma ona:
 
-- Nie konstruktorów zadeklarowanych przez użytkownika.
+- Zgłoszone przez użytkownika konstruktorów.
 
-- Nie członków prywatnych lub chronionych danych niestatycznego.
+- Nie prywatnych lub chronionych niestatycznych składowych danych.
 
 - Nie mają klas bazowych.
 
-- Nie funkcji wirtualnych.
+- Żadnych funkcji wirtualnych.
 
-- Nie niestatyczna elementy członkowskie danych typu referencyjnego.
+- Nie niestatycznych elementów członkowskich danych typu referencyjnego.
 
-- Nie operatora przypisania kopii zdefiniowane przez użytkownika.
+- Żaden operator przypisywania kopiowania zdefiniowanych przez użytkownika.
 
-- Nie ma destruktora zdefiniowane przez użytkownika.
+- Nie destruktor zdefiniowany przez użytkownika.
 
-W związku z tym można rekursywnie kompilacji POD struktury i tablic zawierających POD struktury i tablic.
+W związku z tym można rekursywnie kompilacji POD struktur i tablic, które zawierają ZASOBNIKA struktur i tablic.
 
 ## <a name="example"></a>Przykład
 
@@ -107,7 +107,7 @@ is_pod<throws> == false
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

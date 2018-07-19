@@ -34,14 +34,14 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: e65d11ef95b5305988fe77ab258bb39c2b80de57
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c297ddf24c1ed357a0756c5e0e5631e7b3d1c02
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862471"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964837"
 ---
-# <a name="ltvalarraygt-operators"></a>&lt;valarray —&gt; operatory
+# <a name="ltvalarraygt-operators"></a>&lt;valarray —&gt; operatorów
 
 ||||
 |-|-|-|
@@ -54,7 +54,7 @@ ms.locfileid: "33862471"
 
 ## <a name="op_neq"></a>  operator! =
 
-Sprawdza, czy są odpowiednie elementy dwóch valarrays równej wielkości nierównej lub czy są równe wszystkie elementy valarray — określona wartość.
+Sprawdza, czy odpowiadające elementy dwóch valarrays równej wielkości są różne lub tego, czy wszystkie elementy tablicy valarray są nierówne określoną wartość.
 
 ```cpp
 template <class Type>
@@ -78,21 +78,23 @@ operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Pierwszy z dwóch valarrays, których elementy mają być sprawdzane pod kątem nierówności.
+*left*  
+ Pierwsza z dwóch valarrays, którego elementy mają być sprawdzane pod kątem nierówności.
 
-`right` Drugi dwóch valarrays, których elementy mają być sprawdzane pod kątem nierówności.
+*right*  
+ Drugi dwóch valarrays, którego elementy mają być sprawdzane pod kątem nierówności.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray — wartości logicznych, z których każdy jest:
+Valarray wartości logiczne, z których każdy jest:
 
 - **wartość true,** Jeśli odpowiednie elementy nie są równe.
 
-- **FALSE** Jeśli odpowiednie elementy nie są równe.
+- **FALSE** Jeśli odpowiednie elementy są nierówne.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy operator szablonu zwraca obiekt klasy [valarray —\<bool >](../standard-library/valarray-bool-class.md), każdy z elementów, których `I` jest `left[I] != right[I]`.
+Pierwszy operator szablonu zwraca obiekt klasy [valarray\<bool >](../standard-library/valarray-bool-class.md), każdy z elementów, których `I` jest `left[I] != right[I]`.
 
 Drugi operator szablonu są przechowywane w elemencie `I` `left[I] != right`.
 
@@ -145,9 +147,9 @@ The element-by-element result of the not equal comparison test is the
 *\
 ```
 
-## <a name="op_mod"></a>  % — operator
+## <a name="op_mod"></a>  operator %
 
-Uzyskuje resztę z dzielenia odpowiednie elementy dwóch valarrays równej wielkości lub podzielenie valarray — przez określoną wartość lub podziału przez valarray — określona wartość.
+Uzyskuje resztę z dzielenia odpowiadające elementy dwóch valarrays równej wielkości lub podzielenie tablicę valarray przez określoną wartość lub dzielenia określonej wartości w tablicy valarray.
 
 ```cpp
 template <class Type>
@@ -171,13 +173,15 @@ operator%(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Wartość lub valarray —, która służy jako dzielna, w którym inną wartość lub valarray — jest podzielona.
+*left*  
+ Wartość lub tablicy valarray, która służy jako dzielna na inną wartość, która lub tablicy valarray jest podzielona.
 
-`right` Wartość lub valarray —, który służy jako dzielnik i który dzieli inną wartość lub valarray —.
+*right*  
+ Wartość lub tablicy valarray, który służy jako dzielnik i który dzieli inną wartość lub tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray —, której elementy są element-wise reszty z `left` rozdzielonych `right`.
+Valarray, której elementy są element-wise reszty z *po lewej stronie* podzielona przez *prawo*.
 
 ### <a name="example"></a>Przykład
 
@@ -228,7 +232,7 @@ The remainders from the element-by-element division is the
 
 ## <a name="op_amp"></a>  Operator&amp;
 
-Uzyskuje operatora testu koniunkcji **i** między odpowiednie elementy dwóch valarrays równej wielkości lub valarray — i określoną wartość typu elementu.
+Uzyskuje bitowe **i** między odpowiadające elementy dwóch valarrays równej wielkości lub tablicę valarray i określoną wartość typu elementu.
 
 ```cpp
 template <class Type>
@@ -252,19 +256,21 @@ operator&(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Pierwszy z dwóch valarrays, której elementy odpowiednich mają być łączone z bitowego **i** lub określoną wartość typu elementu, aby można było połączyć alternatywy bitowej z każdym elementem valarray —.
+*left*  
+ Pierwsza z dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `AND` lub określoną wartość typu elementu, który ma być wyłączny sumy bitowej połączona z każdego elementu tablicy valarray.
 
-`right` Drugi dwóch valarrays, której elementy odpowiednich mają być łączone z bitowego **i** lub określoną wartość typu elementu, aby można było połączyć alternatywy bitowej z każdym elementem valarray —.
+*right*  
+ Drugi dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `AND` lub określoną wartość typu elementu, który ma być wyłączny sumy bitowej połączona z każdego elementu tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray —, której elementy są element-wise kombinacją operacji i z `left` i `right`.
+Valarray, której elementy są element-wise kombinacji operacja bitowa i z *po lewej stronie* i *prawo*.
 
 ### <a name="remarks"></a>Uwagi
 
-Operacji można używać tylko do manipulowania bitów w `char` i `int` typy danych i wariantów, a nie na **float**, **podwójne**, **longdouble**, `void`, `bool` lub inne, bardziej złożone typy danych.
+Operacja bitowa należy używać tylko do manipulowania bitów **char** i **int** typów danych i wariantów a nie w systemie **float**, **double**, **longdouble**, **void**, **bool** lub innych, bardziej złożone typy danych.
 
-Bitowe **i** ma tej samej tabeli prawdy jako logiczny **i** , ale odnoszące się do typu danych na poziomie poszczególnych bitów. [— Operator & &](../standard-library/valarray-operators.md#amp) stosowana na poziomie elementu inwentaryzacji wszystkich niezerowe wartości jako true, a wynik jest valarray — wartości logicznych. Bitowe **ANDoperator &**, z kolei może spowodować valarray — wartości innych niż 0 lub 1, w zależności od wyniku operacji.
+Operatora testu koniunkcji `AND` ma tej samej tabeli prawdziwych danych jako logiczny `AND` , ale ma zastosowanie do typu danych na poziomie pojedynczych bitów. [Operator & &](../standard-library/valarray-operators.md#amp) ma zastosowanie na poziomie elementu inwentaryzacji wszystkich wartości niezerowych jako PRAWDA, a wynik jest valarray wartościami logicznymi. Operatora testu koniunkcji **ANDoperator &**, z kolei może doprowadzić do tablicy valarray, o wartości innej niż 0 lub 1, w zależności od wyniku operacji na poziomie bitowym.
 
 ### <a name="example"></a>Przykład
 
@@ -315,7 +321,7 @@ The element-by-element result of the bitwise operator & is the
 
 ## <a name="op_amp_amp"></a>  Operator&amp;&amp;
 
-Uzyskuje logicznym **i** między odpowiednie elementy dwóch valarrays równej wielkości lub valarray — i określoną wartość valarray — typ elementu.
+Uzyskuje logicznej **i** między odpowiadające elementy dwóch valarrays równej wielkości lub tablicę valarray i określoną wartość typ elementu tablicy valarray.
 
 ```cpp
 template <class Type>
@@ -339,17 +345,19 @@ operator&&(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Pierwszy z dwóch valarrays, której odpowiednie elementy mają być łączone z logicznym **i** lub określoną wartość typu elementu, aby można było połączyć z każdym elementem valarray —.
+*left*  
+ Pierwsza z dwóch valarrays, którego odpowiednie elementy, które mają być łączone z logicznym `AND` lub określoną wartość typu elementu, który ma być połączona z każdego elementu tablicy valarray.
 
-`right` Drugi dwóch valarrays, której odpowiednie elementy mają być łączone z logicznym **i** lub określoną wartość typu elementu, aby można było połączyć z każdym elementem valarray —.
+*right*  
+ Drugi dwóch valarrays, którego odpowiednie elementy, które mają być łączone z logicznym `AND` lub określoną wartość typu elementu, który ma być połączona z każdego elementu tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray —, której elementy są typu bool i element-wise kombinacja logicznym **i** działania `left` i `right`.
+Valarray, której elementy są typu wartość logiczna i element-wise kombinacja logicznej `AND` operacji *po lewej stronie* i *prawo*.
 
 ### <a name="remarks"></a>Uwagi
 
-Logiczny **ANDoperator & &** stosowana na poziomie elementu inwentaryzacji wszystkich niezerowe wartości jako true, a wynik jest valarray — wartości logicznych. Wersja bitowe **i**, [operatora &,](../standard-library/valarray-operators.md#op_amp), z kolei może spowodować valarray — wartości innych niż 0 lub 1, w zależności od wyniku operacji.
+Logiczny `ANDoperator&&` ma zastosowanie na poziomie elementu inwentaryzacji wszystkich wartości niezerowych jako PRAWDA, a wynik jest valarray wartościami logicznymi. Bitowe wersję `AND`, [operatora &,](../standard-library/valarray-operators.md#op_amp), z kolei może doprowadzić do tablicy valarray, o wartości innej niż 0 lub 1, w zależności od wyniku operacji na poziomie bitowym.
 
 ### <a name="example"></a>Przykład
 
@@ -400,7 +408,7 @@ The element-by-element result of the logical AND operator&& is the
 
 ## <a name="op_gt"></a>  Operator&gt;
 
-Sprawdza, czy elementy jeden valarray — są większe niż elementów równej wielkości valarray — lub czy wszystkie elementy valarray — większa lub mniejsza niż określona wartość.
+Sprawdza, czy elementów tworzonej tablicy valarray jednego są większe niż elementów tworzonej tablicy valarray równej wielkości lub tego, czy wszystkie elementy tablicy valarray jest większa lub mniejsza niż określona wartość.
 
 ```cpp
 template <class Type>
@@ -424,21 +432,23 @@ operator>(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Pierwszy z dwóch valarrays, których elementy mają zostać porównane lub określoną wartość ma zostać porównane z każdym elementem valarray —.
+*left*  
+ Pierwsza z dwóch valarrays, którego elementy mają być porównane lub określoną wartość ma zostać porównane z każdego elementu tablicy valarray.
 
-`right` Drugi dwóch valarrays, których elementy mają zostać porównane lub określoną wartość do porównania z każdym elementem valarray —.
+*right*  
+ Drugi dwóch valarrays, którego elementy mają być porównane lub określoną wartość do porównania z każdego elementu tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray — wartości logicznych, z których każdy jest:
+Valarray wartości logiczne, z których każdy jest:
 
-- **wartość true,** Jeśli `left` element lub wartość jest większa niż odpowiadający mu `right` element lub wartość.
+- **wartość true,** Jeśli *po lewej stronie* element lub wartość jest większa niż odpowiadające *prawo* element lub wartość.
 
-- **FALSE** Jeśli `left` nie jest większa niż odpowiadający mu element lub wartość `right` element lub wartość.
+- **FALSE** Jeśli *po lewej stronie* element lub wartość nie jest większa niż odpowiadające *prawo* element lub wartość.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli liczba elementów w dwóch valarrays nie jest taki sam, wynikiem jest niezdefiniowany.
+Jeśli liczba elementów w dwóch valarrays nie jest taki sam, wynik jest niezdefiniowany.
 
 ### <a name="example"></a>Przykład
 
@@ -489,7 +499,7 @@ The element-by-element result of the greater than comparison test is the
 
 ## <a name="op_gt_eq"></a>  Operator&gt;=
 
-Sprawdza, czy elementy jeden valarray — są większe niż lub równe elementów równej wielkości valarray — lub czy wszystkie elementy valarray — są większe niż lub równe lub mniejsze niż lub równa określonej wartości.
+Sprawdza, czy elementów tworzonej tablicy valarray jednego są większe niż lub równa elementy równej wielkości tablicy valarray lub tego, czy wszystkie elementy tablicy valarray są większe niż lub równe lub mniejsze niż lub równa określonej wartości.
 
 ```cpp
 template <class Type>
@@ -513,21 +523,23 @@ operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Pierwszy z dwóch valarrays, których elementy mają zostać porównane lub określoną wartość ma zostać porównane z każdym elementem valarray —.
+*left*  
+ Pierwsza z dwóch valarrays, którego elementy mają być porównane lub określoną wartość ma zostać porównane z każdego elementu tablicy valarray.
 
-`right` Drugi dwóch valarrays, których elementy mają zostać porównane lub określoną wartość do porównania z każdym elementem valarray —.
+*right*  
+ Drugi dwóch valarrays, którego elementy mają być porównane lub określoną wartość do porównania z każdego elementu tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray — wartości logicznych, z których każdy jest:
+Valarray wartości logiczne, z których każdy jest:
 
-- **wartość true,** Jeśli `left` element lub wartość jest większa niż lub równa odpowiadającego `right` element lub wartość.
+- **wartość true,** Jeśli *po lewej stronie* element lub wartość jest większa niż lub równa odpowiednich *prawo* element lub wartość.
 
-- **FALSE** Jeśli `left` element lub wartość jest mniejsza niż odpowiadający mu `right` element lub wartość.
+- **FALSE** Jeśli *po lewej stronie* element lub wartość jest mniejsza niż odpowiadające *prawo* element lub wartość.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli liczba elementów w dwóch valarrays nie jest taki sam, wynikiem jest niezdefiniowany.
+Jeśli liczba elementów w dwóch valarrays nie jest taki sam, wynik jest niezdefiniowany.
 
 ### <a name="example"></a>Przykład
 
@@ -578,7 +590,7 @@ The element-by-element result of the greater than or equal test is the
 
 ## <a name="op_gt_gt"></a>  Operator&gt;&gt;
 
-Prawo zmian usługi bits dla każdego elementu valarray — określonej liczby miejsc lub element-wise wartość określoną w drugim valarray —.
+Po prawej stronie przesunięcia bitów dla każdego elementu tablicy valarray określoną liczbę pozycji i według określonej ilości element-wise określony przez drugi tablicy valarray.
 
 ```cpp
 template <class Type>
@@ -602,17 +614,19 @@ operator>>(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Wartość lekkie lub valarray —, której elementy mają zostać przesunięte.
+*left*  
+ Wartość jest przesuwany lub tablicy valarray, którego elementy mają zostać przesunięte.
 
-`right` Wartość wskazująca przesunięcia w prawo lub valarray —, której elementy wskazują element-wise wielkość przesunięcia w prawo.
+*right*  
+ Wartość wskazująca, wielkość przesunięcia bitowego w prawo lub wskazać element-wise ilość przesunięcia bitowego w prawo, której elementy w tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray —, której elementy ma prawo przesunięte o określonej szerokości.
+Valarray, której elementy mają prawo przesunięte według określonej ilości.
 
 ### <a name="remarks"></a>Uwagi
 
-Numery podpisem mają swoje znaki zachowane.
+Oznaczone liczby ma znak zachowane.
 
 ### <a name="example"></a>Przykład
 
@@ -663,7 +677,7 @@ The element-by-element result of the right shift is the
 
 ## <a name="op_lt"></a>  Operator&lt;
 
-Sprawdza, czy elementy valarray — co jest mniejsza od elementów równej wielkości valarray — lub czy wszystkie elementy valarray — większa lub mniejsza niż określona wartość.
+Sprawdza, czy elementów tworzonej tablicy valarray jednego są mniejsze niż elementów równej wielkości tablicy valarray lub tego, czy wszystkie elementy tablicy valarray jest większa lub mniejsza niż określona wartość.
 
 ```cpp
 template <class Type>
@@ -687,21 +701,23 @@ operator<(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Pierwszy z dwóch valarrays, których elementy mają zostać porównane lub określoną wartość ma zostać porównane z każdym elementem valarray —.
+*left*  
+ Pierwsza z dwóch valarrays, którego elementy mają być porównane lub określoną wartość ma zostać porównane z każdego elementu tablicy valarray.
 
-`right` Drugi dwóch valarrays, których elementy mają zostać porównane lub określoną wartość do porównania z każdym elementem valarray —.
+*right*  
+ Drugi dwóch valarrays, którego elementy mają być porównane lub określoną wartość do porównania z każdego elementu tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray — wartości logicznych, z których każdy jest:
+Valarray wartości logiczne, z których każdy jest:
 
-- **wartość true,** Jeśli `left` element lub wartość jest mniejsza niż odpowiadający mu `right` element lub wartość.
+- **wartość true,** Jeśli *po lewej stronie* element lub wartość jest mniejsza niż odpowiadające *prawo* element lub wartość.
 
-- **FALSE** Jeśli `left` element lub wartość nie jest mniejsza niż odpowiadający mu `right` element lub wartość.
+- **FALSE** Jeśli *po lewej stronie* element lub wartość nie jest mniejsza niż odpowiadające *prawo* element lub wartość.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli liczba valarrays dwóch elementów nie jest taki sam, wynikiem jest niezdefiniowany.
+Jeśli liczba valarrays dwóch elementów nie jest taki sam, wynik jest niezdefiniowany.
 
 ### <a name="example"></a>Przykład
 
@@ -752,7 +768,7 @@ The element-by-element result of the less-than comparson test is the
 
 ## <a name="op_lt_eq"></a>  Operator&lt;=
 
-Sprawdza, czy elementy jeden valarray — są mniejsze niż lub równe elementów równej wielkości valarray — lub czy wszystkie elementy valarray — są większe niż lub równe lub mniejsze niż lub równa określonej wartości.
+Sprawdza, czy elementów tworzonej tablicy valarray jednego są mniejsze niż lub równe elementów tworzonej tablicy valarray równej wielkości, czy wszystkie elementy tablicy valarray są większe niż lub równe lub mniejsze niż lub równa określonej wartości.
 
 ```cpp
 template <class Type>
@@ -776,21 +792,23 @@ operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Pierwszy z dwóch valarrays, których elementy mają zostać porównane lub określoną wartość ma zostać porównane z każdym elementem valarray —.
+*left*  
+ Pierwsza z dwóch valarrays, którego elementy mają być porównane lub określoną wartość ma zostać porównane z każdego elementu tablicy valarray.
 
-`right` Drugi dwóch valarrays, których elementy mają zostać porównane lub określoną wartość do porównania z każdym elementem valarray —.
+*right*  
+ Drugi dwóch valarrays, którego elementy mają być porównane lub określoną wartość do porównania z każdego elementu tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray — wartości logicznych, z których każdy jest:
+Valarray wartości logiczne, z których każdy jest:
 
-- **wartość true,** Jeśli `left` element lub wartość jest mniejsza niż lub równa odpowiadającego `right` element lub wartość.
+- **wartość true,** Jeśli *po lewej stronie* element lub wartość jest mniejsza niż lub równe do odpowiednich *prawo* element lub wartość.
 
-- **FALSE** Jeśli `left` element lub wartość jest większa niż odpowiadający mu `right` element lub wartość.
+- **FALSE** Jeśli *po lewej stronie* element lub wartość jest większa niż odpowiadające *prawo* element lub wartość.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli liczba valarrays dwóch elementów nie jest taki sam, wynikiem jest niezdefiniowany.
+Jeśli liczba valarrays dwóch elementów nie jest taki sam, wynik jest niezdefiniowany.
 
 ### <a name="example"></a>Przykład
 
@@ -841,7 +859,7 @@ The element-by-element result of the less than or equal test is the
 
 ## <a name="op_lt_lt"></a>  Operator&lt;&lt;
 
-Po lewej wykonuje przesunięcie bitów dla każdego elementu valarray — określonej liczby miejsc lub element-wise wartość określoną w drugim valarray —.
+Po lewej stronie wykonuje przesunięcie bitów dla każdego elementu tablicy valarray określoną liczbę pozycji i według określonej ilości element-wise określony przez drugi tablicy valarray.
 
 ```cpp
 template <class Type>
@@ -865,17 +883,19 @@ operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Wartość lekkie lub valarray —, której elementy mają zostać przesunięte.
+*left*  
+ Wartość jest przesuwany lub tablicy valarray, którego elementy mają zostać przesunięte.
 
-`right` Wartość wskazująca przesunięcia w lewo lub valarray —, której elementy wskazują element-wise wielkość przesunięcia w lewo.
+*right*  
+ Wartość wskazująca, wielkość przesunięcia w lewo lub wskazać element-wise ilość przesunięcia w lewo, której elementy w tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray — elementy, których ma zostać przesunięty w określonym.
+Valarray, której elementy zostały przesunięte określonego po lewej stronie.
 
 ### <a name="remarks"></a>Uwagi
 
-Numery podpisem mają swoje znaki zachowane.
+Oznaczone liczby ma znak zachowane.
 
 ### <a name="example"></a>Przykład
 
@@ -926,7 +946,7 @@ The element-by-element result of the left shift is the
 
 ## <a name="op_star"></a>  operator *
 
-Uzyskuje element-wise produktu między elementami odpowiedniego dwóch valarrays równej wielkości typu lub między valarray — określona wartość.
+Uzyskuje mnożenia między odpowiadające elementy dwóch valarrays równej wielkości lub z między określoną wartość w tablicy valarray.
 
 ```cpp
 template <class Type>
@@ -950,13 +970,15 @@ operator*(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Pierwszy z dwóch valarrays, których elementy mają zostać pomnożona lub określoną wartość mnoży się z każdym elementem valarray —.
+*left*  
+ Pierwsze dwa valarrays, którego elementy mają zostać pomnożona lub określoną wartość pomnożenie z każdego elementu tablicy valarray.
 
-`right` Drugi dwóch valarrays, których elementy mają zostać pomnożona lub określoną wartość mnożona z każdym elementem valarray —.
+*right*  
+ Drugi dwóch valarrays, którego elementy mają zostać pomnożona lub określoną wartość pomnożenie z każdego elementu tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray —, której elementy są element-wise produktu z `left` i `right`.
+Valarray, której elementy są mnożenia z *po lewej stronie* i *prawo*.
 
 ### <a name="example"></a>Przykład
 
@@ -1007,7 +1029,7 @@ The element-by-element result of the multiplication is the
 
 ## <a name="op_add"></a>  operator +
 
-Uzyskuje element-wise Suma między elementami odpowiedniego dwóch valarrays równej wielkości typu lub między valarray — określona wartość.
+Uzyskuje element-wise Suma między odpowiadające elementy dwóch valarrays równej wielkości lub z między określoną wartość w tablicy valarray.
 
 ```cpp
 template <class Type>
@@ -1031,13 +1053,15 @@ operator+(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Pierwszy z dwóch valarrays, których elementy mają być dodawane lub określoną wartość ma zostać dodana z każdym elementem valarray —.
+*left*  
+ Pierwszego dnia dwóch valarrays, której elementy mają być dodawane lub określoną wartość do dodania z każdego elementu tablicy valarray.
 
-`right` Drugi dwóch valarrays, których elementy mają być dodawane lub określoną wartość do dodania z każdym elementem valarray —.
+*right*  
+ Drugi dwóch valarrays, której elementy mają być dodawane lub określoną wartość do dodania z każdego elementu tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray —, której elementy są element-wise Suma z `left` i `right`.
+Valarray, której elementy są element-wise sum z *po lewej stronie* i *prawo*.
 
 ### <a name="example"></a>Przykład
 
@@ -1088,7 +1112,7 @@ The element-by-element result of the sum is the
 
 ## <a name="operator-"></a>  operator-
 
-Uzyskuje element-wise różnica między odpowiednie elementy tego dwa valarrays równej wielkości lub między valarray — określona wartość.
+Uzyskuje element-wise różnica między odpowiadające elementy dwóch valarrays równej wielkości lub z między określoną wartość w tablicy valarray.
 
 ```cpp
 template <class Type>
@@ -1112,19 +1136,21 @@ operator-(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Wartość lub valarray —, która służy jako minuend, z której można odejmować w stanowiące różnicę mają inne wartości lub valarrays.
+*left*  
+ Wartość lub tablicy valarray, która służy jako odjemna, z której można odejmować w stanowiące różnicę mają inne wartości lub valarrays.
 
-`right` Wartość lub valarray —, która służy jako subtrahend, który odjęta od innych wartości lub valarrays w stanowiące różnicę.
+*right*  
+ Wartość lub tablicy valarray, służąca jako odjemnik do odjęcia od innych wartości lub valarrays w stanowiące różnicę.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray —, której elementy są element-wise różnica z `left` i `right`.
+Valarray, której elementy są element-wise różnica z *po lewej stronie* i *prawo*.
 
 ### <a name="remarks"></a>Uwagi
 
-Arytmetyczny terminologii przy odejmowanie:
+Terminologia arytmetyczne, używana do opisywania odejmowania:
 
-Różnica = minuend - subtrahend
+Różnica = odjemna - odjemnik
 
 ### <a name="example"></a>Przykład
 
@@ -1175,7 +1201,7 @@ The element-by-element result of the difference is the
 
 ## <a name="op_div"></a>  operator /
 
-Uzyskuje element-wise iloraz między elementami odpowiedniego dwóch valarrays równej wielkości typu lub między valarray — określona wartość.
+Uzyskuje element-wise iloraz między odpowiadające elementy dwóch valarrays równej wielkości lub z między określoną wartość w tablicy valarray.
 
 ```cpp
 template <class Type>
@@ -1199,19 +1225,21 @@ operator/(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Wartość lub valarray —, która służy jako dzielna, w którym inną wartość lub valarray — jest podzielona w tworzeniu iloraz.
+*left*  
+ Wartość lub tablicy valarray, która służy jako dzielna na inną wartość, która lub tablicy valarray jest podzielona w tworzeniu ilorazu.
 
-`right` Wartość lub valarray —, który służy jako dzielnik i który dzieli innej wartości lub valarray — w tworzeniu iloraz.
+*right*  
+ Wartość lub tablicy valarray, który służy jako dzielnik i który dzieli inną wartość lub tablicy valarray w tworzeniu ilorazu.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray —, której elementy są element-wise iloraz z `left` rozdzielonych `right`.
+Valarray, której elementy są element-wise iloraz z *po lewej stronie* podzielona przez *prawo*.
 
 ### <a name="remarks"></a>Uwagi
 
-Arytmetyczny terminologii przy podziale:
+Terminologia arytmetyczne, używana do opisywania dzielenia:
 
-iloraz = dzielna / dzielnik.
+iloraz = dzielnik / dzielnik.
 
 ### <a name="example"></a>Przykład
 
@@ -1262,7 +1290,7 @@ The element-by-element result of the quotient is the
 
 ## <a name="op_eq_eq"></a>  operator ==
 
-Testy, czy są odpowiednie elementy dwóch valarrays równej wielkości większy lub czy są wszystkie elementy valarray — równa określonej wartości.
+Testy, czy odpowiadające elementy dwóch valarrays równej wielkości są równe, lub czy są wszystkie elementy tablicy valarray równa określonej wartości.
 
 ```cpp
 template <class Type>
@@ -1286,13 +1314,15 @@ operator==(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Pierwszy z dwóch valarrays, których elementy mają być sprawdzane pod kątem równości.
+*left*  
+ Pierwsza z dwóch valarrays, którego elementy mają być sprawdzane pod kątem równości.
 
-`right` Drugi dwóch valarrays, których elementy mają być sprawdzane pod kątem równości.
+*right*  
+ Drugi dwóch valarrays, którego elementy mają być sprawdzane pod kątem równości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray — wartości logicznych, z których każdy jest:
+Valarray wartości logiczne, z których każdy jest:
 
 - **wartość true,** odpowiednie elementy są równe.
 
@@ -1300,7 +1330,7 @@ Valarray — wartości logicznych, z których każdy jest:
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy operator szablonu zwraca obiekt klasy [valarray —\<bool >](../standard-library/valarray-bool-class.md), każdy z elementów, których `I` jest `left[I] == right[I]`. Drugi operator szablonu są przechowywane w elemencie `I` `left[I] == right`. Trzeci operator szablonu są przechowywane w elemencie `I` `left == right[I]`.
+Pierwszy operator szablonu zwraca obiekt klasy [valarray\<bool >](../standard-library/valarray-bool-class.md), każdy z elementów, których `I` jest `left[I] == right[I]`. Drugi operator szablonu są przechowywane w elemencie `I` `left[I] == right`. Trzeci operator szablonu są przechowywane w elemencie `I` `left == right[I]`.
 
 ### <a name="example"></a>Przykład
 
@@ -1351,7 +1381,7 @@ The element-by-element result of the equality comparison test is the
 
 ## <a name="op_xor"></a>  operator ^
 
-Uzyskuje operator wyłączny `OR` ( **XOR**) między odpowiednie elementy dwóch valarrays równej wielkości lub valarray — i określoną wartość typu elementu.
+Uzyskuje wyłączny sumy bitowej `OR` ( **XOR**) między odpowiadające elementy dwóch valarrays równej wielkości lub tablicę valarray i określoną wartość typu elementu.
 
 ```cpp
 template <class Type>
@@ -1375,19 +1405,21 @@ operator^(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Pierwszy z dwóch valarrays, której elementy odpowiednich mają być łączone z bitowego **XOR** lub określoną wartość typu elementu, aby można było połączyć alternatywy bitowej z każdym elementem valarray —.
+*left*  
+ Pierwsza z dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji **XOR** lub określoną wartość typu elementu, który ma być wyłączny sumy bitowej połączona z każdego elementu tablicy valarray.
 
-`right` Drugi dwóch valarrays, której elementy odpowiednich mają być łączone z bitowego **XOR** lub określoną wartość typu elementu, aby można było połączyć alternatywy bitowej z każdym elementem valarray —.
+*right*  
+ Drugi dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji **XOR** lub określoną wartość typu elementu, który ma być wyłączny sumy bitowej połączona z każdego elementu tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray —, której elementy są element-wise kombinację operatora testu koniunkcji **XOR** działania `left` i `right`.
+Valarray, której elementy są element-wise kombinacji operatora testu koniunkcji **XOR** operacji *po lewej stronie* i *prawo*.
 
 ### <a name="remarks"></a>Uwagi
 
-Operacji można używać tylko do manipulowania bitów w `char` i `int` typy danych i wariantów, a nie na **float**, **podwójne**, `long double`, `void`, `bool` lub inne, bardziej złożone typy danych.
+Operacja bitowa należy używać tylko do manipulowania bitów **char** i **int** typów danych i wariantów a nie w systemie **float**, **double**, **typu long double**, **void**, **bool** lub innych, bardziej złożone typy danych.
 
-Operator wyłączny `OR` ( **XOR**) ma następujące semantykę: podane bitów *b*1 i *b*2, *b*1  **XOR** *b*2 jest **true** Jeśli dokładnie jeden z bitów jest PRAWDA. **false** Jeśli oba bity są false lub jeśli spełnione są oba bity.
+Wyłączny sumy bitowej `OR` ( **XOR**) charakteryzuje się następującą semantyką: podany bitów *b*1 i *b*2, *b*1  **XOR** *b*2 jest **true** Jeśli dokładnie jeden z bitów jest PRAWDA. **false** Jeśli oba bity są fałszywe lub jeśli spełnione są oba bity.
 
 ### <a name="example"></a>Przykład
 
@@ -1442,7 +1474,7 @@ The element-by-element result of the bitwise XOR operator^ is the
 
 ## <a name="op_or"></a>  operator&#124;
 
-Uzyskuje operatora testu koniunkcji `OR` między odpowiednie elementy dwóch valarrays równej wielkości lub valarray — i określoną wartość typu elementu.
+Uzyskuje bitowe `OR` między odpowiadające elementy dwóch valarrays równej wielkości lub tablicę valarray i określoną wartość typu elementu.
 
 ```cpp
 template <class Type>
@@ -1466,19 +1498,21 @@ operator|(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Pierwszy z dwóch valarrays, której elementy odpowiednich mają być łączone z bitowego `OR` lub określoną wartość typu elementu, aby można było połączyć alternatywy bitowej z każdym elementem valarray —.
+*left*  
+ Pierwsza z dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `OR` lub określoną wartość typu elementu, który ma być wyłączny sumy bitowej połączona z każdego elementu tablicy valarray.
 
-`right` Drugi dwóch valarrays, której elementy odpowiednich mają być łączone z bitowego `OR` lub określoną wartość typu elementu, aby można było połączyć alternatywy bitowej z każdym elementem valarray —.
+*right*  
+ Drugi dwóch valarrays, w której odpowiednie elementy, które mają być łączone za pomocą operatora testu koniunkcji `OR` lub określoną wartość typu elementu, który ma być wyłączny sumy bitowej połączona z każdego elementu tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray —, której elementy są element-wise kombinację operatora testu koniunkcji `OR` działania `left` i `right`.
+Valarray, której elementy są element-wise kombinacji operatora testu koniunkcji `OR` operacji *po lewej stronie* i *prawo*.
 
 ### <a name="remarks"></a>Uwagi
 
-Operacji można używać tylko do manipulowania bitów w `char` i `int` typy danych i wariantów, a nie na **float**, **podwójne**, **longdouble**, `void`, `bool` lub inne, bardziej złożone typy danych.
+Operacja bitowa należy używać tylko do manipulowania bitów **char** i **int** typów danych i wariantów a nie w systemie **float**, **double**, **longdouble**, **void**, **bool** lub innych, bardziej złożone typy danych.
 
-Bitowe lub ma tej samej tabeli prawdy jako logiczny `OR`, ale odnoszące się do typu danych na poziomie poszczególnych bitów. Podane bitów *b*1 i *b*2, *b*1 `OR` *b*2 jest **true** Jeśli co najmniej jeden z usługi bits wartość TRUE lub **false** Jeśli oba bity są wartość false. Logiczny `OR` [operator&#124; &#124; ](../standard-library/valarray-operators.md#op_lor) stosowana na poziomie elementu, inwentaryzacji wszystkich niezerowe wartości jako **true**, i valarray — wartości logicznych. Bitowe lub `operator|`, z kolei może spowodować valarray — wartości innych niż 0 lub 1, w zależności od wyniku operacji.
+Bitowe OR ma tej samej tabeli prawdziwych danych jako logiczny `OR`, ale ma zastosowanie do typu danych na poziomie pojedynczych bitów. Biorąc pod uwagę bitów *b*1 i *b*2, *b*1 `OR` *b*2 jest **true** Jeśli co najmniej jeden z bitów jest wartość TRUE lub **false** Jeśli oba bity mają wartość false. Logiczny `OR` [operator&#124; &#124; ](../standard-library/valarray-operators.md#op_lor) ma zastosowanie na poziomie elementu wszystkich wartości niezerowych co inwentaryzacji **true**, a wynik jest valarray wartościami logicznymi. Bitowe OR `operator|`, z kolei może doprowadzić do tablicy valarray, o wartości innej niż 0 lub 1, w zależności od wyniku operacji na poziomie bitowym.
 
 ### <a name="example"></a>Przykład
 
@@ -1533,7 +1567,7 @@ The element-by-element result of the bitwise OR operator| is the
 
 ## <a name="op_lor"></a>  operator&#124;&#124;
 
-Uzyskuje logicznym `OR` między odpowiednie elementy dwóch valarrays równej wielkości lub valarray — i określoną wartość valarray — typ elementu.
+Uzyskuje logicznej `OR` między odpowiadające elementy dwóch valarrays równej wielkości lub tablicę valarray i określoną wartość typu elementu tablicy valarray.
 
 ```cpp
 template <class Type>
@@ -1557,17 +1591,19 @@ operator||(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Pierwszy z dwóch valarrays, której odpowiednie elementy mają być łączone z logicznym `OR` lub określoną wartość typu elementu, aby można było połączyć z każdym elementem valarray —.
+*left*  
+ Pierwsza z dwóch valarrays, którego odpowiednie elementy, które mają być łączone z logicznym `OR` lub określoną wartość typu elementu, który ma być połączona z każdego elementu tablicy valarray.
 
-`right` Drugi dwóch valarrays, której odpowiednie elementy mają być łączone z logicznym `OR` lub określoną wartość typu elementu, aby można było połączyć z każdym elementem valarray —.
+*right*  
+ Drugi dwóch valarrays, którego odpowiednie elementy, które mają być łączone z logicznym `OR` lub określoną wartość typu elementu, który ma być połączona z każdego elementu tablicy valarray.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Valarray —, której elementy są typu `bool` i element-wise kombinacja operacje logiczne OR `left` i `right`.
+Valarray, której elementy są typu **bool** i element-wise kombinacji operacje logiczne OR *po lewej stronie* i *prawo*.
 
 ### <a name="remarks"></a>Uwagi
 
-Logiczny `OR` `operator||` stosowana na poziomie elementu, inwentaryzacji wszystkich niezerowe wartości jako **true**, a wynik jest valarray — wartości logicznych. Wersja bitowe `OR`, [operator&#124; ](../standard-library/valarray-operators.md#op_or) z kolei może spowodować valarray — wartości innych niż 0 lub 1, w zależności od wyniku operacji.
+Logiczny `OR` `operator||` ma zastosowanie na poziomie elementu wszystkich wartości niezerowych co inwentaryzacji **true**, a wynik jest valarray wartościami logicznymi. Bitowe wersję `OR`, [operator&#124; ](../standard-library/valarray-operators.md#op_or) z kolei może doprowadzić do tablicy valarray, o wartości innej niż 0 lub 1, w zależności od wyniku operacji na poziomie bitowym.
 
 ### <a name="example"></a>Przykład
 

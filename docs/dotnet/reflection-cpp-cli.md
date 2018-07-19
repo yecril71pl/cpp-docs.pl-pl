@@ -15,37 +15,45 @@ helpviewer_keywords:
 - .NET Framework [C++], reflection
 - data types [C++], reflection
 - reflection [C++}
+- plug-ins [C++]
+- reflection [C++}, plug-ins
+- assemblies [C++], enumerating data types in
+- public types [C++]
+- reflection [C++], external assemblies
+- assemblies [C++]
+- data types [C++], enumerating
+- public members [C++]
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d41d7f627a50dd1a09f4256fbd8448d82c6d5f27
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 505049d6580f41253a483dfe1c64608d0ea9ed3d
+ms.sourcegitcommit: 27be37ae07ee7b657a54d23ed34438220d977fdc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705247"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39110011"
 ---
 # <a name="reflection-ccli"></a>Odbicie (C++/CLI)
 
-Odbicie umożliwia znanych typów poddanych w czasie wykonywania. Odbicie umożliwia wyliczanie typów danych w ramach danego zestawu, a członkami danego typu klasy lub wartości, które mogą być wykrywane. Dotyczy to niezależnie od tego, czy wiadomo lub odwołuje się do kompilacji typu. Dzięki temu odbicia przydatna funkcja dla rozwoju i narzędzia do zarządzania kodem.
+Odbicie umożliwia znanych danych typy poddanych w czasie wykonywania. Odbicie umożliwia wyliczanie typów danych w danym zestawie i elementy członkowskie typu danej klasy lub wartości, które mogą być wykrywane. Ta zasada obowiązuje niezależnie od tego, czy typ został znane lub odwołania w czasie kompilacji. To sprawia, że odbicie to przydatne dla rozwoju i narzędzia do zarządzania kodem.
 
-Należy pamiętać, że podana nazwa zestawu jest silnej nazwy (zobacz [tworzenie i zestawy Using Strong-Named](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)), która obejmuje zestaw w wersji, kultury i podpisywania informacji. Należy pamiętać, że nazwa przestrzeni nazw, w którym zdefiniowano typ danych można pobrać, wraz z nazwą klasy podstawowej.
+Należy pamiętać, że podana nazwa zestawu silną nazwę (zobacz [tworzenie i zestawy Using Strong-Named](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)), która obejmuje wersję zestawu, kultura i informacje o podpisywaniu. Należy zauważyć, że nazwa przestrzeni nazw, w którym zdefiniowano typ danych mogą być pobierane, wraz z nazwą klasy bazowej.
 
-Najczęściej dostęp do funkcji odbicia odbywa się za pośrednictwem <xref:System.Object.GetType%2A> metody. Ta metoda jest zapewniana przez [System::Object](https://msdn.microsoft.com/en-us/library/system.object.aspx), z którego pochodzi wszystkie klasy zbierane pamięci.
+Najczęstszym sposobem uzyskania dostępu do funkcji odbicie jest za pośrednictwem <xref:System.Object.GetType%2A> metody. Ta metoda jest dostarczany przez [System::Object](https://msdn.microsoft.com/en-us/library/system.object.aspx), z której pochodzą wszystkie klasy zebranych elementów bezużytecznych.
 
 > [!NOTE]
-> Odbicie w .exe skompilowanej za pomocą kompilatora Visual C++ jest dozwolone tylko, jeśli .exe jest zbudowany z **/CLR: pure** lub **/CLR: Safe** — opcje kompilatora. **/CLR: pure** i **/CLR: Safe** — opcje kompilatora są przestarzałe w programie Visual Studio 2015 i niedostępne w programie Visual Studio 2017 r. Zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md) Aby uzyskać więcej informacji.
+> Rozważania na temat .exe utworzonych za pomocą kompilatora języka Visual C++ jest dozwolone tylko, jeśli .exe został utworzony za pomocą **/CLR: pure** lub **/CLR: Safe** opcje kompilatora. **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i niedostępne w programie Visual Studio 2017. Zobacz [/CLR (kompilacja języka wspólnego środowiska uruchomieniowego)](../build/reference/clr-common-language-runtime-compilation.md) Aby uzyskać więcej informacji.
 
-Aby uzyskać więcej informacji, zobacz [System.Reflection Namespace](https://msdn.microsoft.com/en-us/library/system.reflection.aspx)
+Aby uzyskać więcej informacji, zobacz [Namespace System.Reflection](https://msdn.microsoft.com/en-us/library/system.reflection.aspx)
 
 ## <a name="example-gettype"></a>Przykład: GetType
 
-`GetType` Metoda zwraca wskaźnik do <xref:System.Type> klasy obiektu, który opisuje typ, podczas gdy obiekt jest oparty. ( **Typu** obiekt nie zawiera żadnych informacji specyficznych dla wystąpienia.) Jeden taki element jest pełna nazwa typu, który może być wyświetlany w następujący sposób:
+`GetType` Metoda zwraca wskaźnik do <xref:System.Type> klasy obiektu, który opisuje typ, podczas gdy obiekt jest oparty. ( **Typu** obiekt nie zawiera żadnych informacji specyficznych dla danego wystąpienia.) Jeden taki element jest pełna nazwa typu, który może być wyświetlany w następujący sposób:
 
-Należy pamiętać, że nazwa typu zawiera pełnego zakresu, w którym zdefiniowano typ, włącznie z przestrzenią nazw, i że jest wyświetlany w składni .NET z kropką jako operator rozpoznawania zakresów.
+Należy pamiętać, że nazwa typu zawiera pełnego zakresu, w którym zdefiniowano typ, włącznie z przestrzenią nazw, i że jest wyświetlana w składni .NET z dot jako operatora rozpoznawania zakresu.
 
 ```cpp
 // vcpp_reflection.cpp
@@ -61,7 +69,7 @@ int main() {
 full type name of 'sample string' is 'System.String'
 ```
 
-## <a name="example-boxed-value-types"></a>Przykład: spakowanymi typami wartości
+## <a name="example-boxed-value-types"></a>Przykład: spakowane typy wartości
 
 Typy wartości mogą być używane z `GetType` również działać, ale musi zostać opakowany najpierw.
 
@@ -82,9 +90,9 @@ type of i = 'System.Int32'
 
 ## <a name="example-typeid"></a>Przykład: typeid
 
-Jak `GetType` metody [typeid](../windows/typeid-cpp-component-extensions.md) operator zwraca wskaźnik do **typu** obiektu, dlatego ten kod wskazuje nazwę typu **System.Int32**. Wyświetlanie nazwy typów jest najbardziej podstawową funkcją odbicia, ale jest technika potencjalnie bardziej użyteczne inspekcja lub odnajdywanie prawidłowe wartości dla typów wyliczenia. Można to zrobić za pomocą statycznych **Enum::GetNames** funkcji, która zwraca tablicę ciągów, każda z nich zawiera wartość wyliczenia w postaci tekstu.  Poniższy przykład pobiera tablicę ciągów, które opisano wartości wyliczenia wartości **opcje** wyliczenia (CLR) i wyświetla je w pętli.
+Podobnie jak w przypadku `GetType` metody [typeid](../windows/typeid-cpp-component-extensions.md) operator zwraca wskaźnik do **typu** obiektu, dlatego ten kod wskazuje nazwę typu **System.Int32**. Wyświetlanie nazwy typu jest najbardziej podstawowa funkcja odbicia, ale potencjalnie bardziej przydatną techniką jest sprawdzić lub odnajdywanie prawidłowe wartości dla typów wyliczeniowych. Można to zrobić przy użyciu statycznej **Enum::GetNames** funkcja, która zwraca tablicę ciągów, każdy z nich zawierający wartości wyliczenia w postaci tekstu.  Poniższy przykład pobiera tablicę ciągów, które opisano w wartości wyliczenia wartości **opcje** wyliczenia (CLR) i wyświetla je w pętli.
 
-Jeśli opcja czwarty jest dodawany do **opcje** wyliczenia, ten kod będzie zgłaszać nową opcję bez ponownej kompilacji, nawet jeśli wyliczenia jest zdefiniowany w osobny zestaw.
+Jeśli dostępny czwarty etap jest dodawany do **opcje** wyliczenia, ten kod będzie zgłaszać nowa opcja bez ponownej kompilacji, nawet jeśli nie zdefiniowano wyliczenia w osobnym zestawie.
 
 ```cpp
 // vcpp_reflection_3.cpp
@@ -117,9 +125,9 @@ there are 3 options in enum 'Options'
 value of 'o' is Option2
 ```
 
-## <a name="example-gettype-members-and-properties"></a>Przykład: Elementy członkowskie GetType i właściwości
+## <a name="example-gettype-members-and-properties"></a>Przykład: Właściwości i elementy członkowskie gettype —
 
-`GetType` Obiektu obsługuje wiele elementów członkowskich i właściwości, których można użyć do sprawdzenia typu. Ten kod pobiera i przedstawia niektóre z tych informacji:
+`GetType` Obiekt obsługuje szereg elementów członkowskich i właściwości, których można użyć do sprawdzenia typu. Ten kod pobiera i wyświetla niektóre z tych informacji:
 
 ```cpp
 // vcpp_reflection_4.cpp
@@ -158,7 +166,7 @@ is class: True
 
 ## <a name="example-enumeration-of-types"></a>Przykład: Wyliczanie typów
 
-Odbicie umożliwia także wyliczanie typów w zestawie i elementów członkowskich w klasach. Aby zademonstrować tę funkcję, zdefiniuj prostą klasę:
+Odbicie umożliwia także wyliczanie typów w zestawie i członków w ramach klasy. Aby zademonstrować tę funkcję, należy zdefiniować prostą klasę:
 
 ```cpp
 // vcpp_reflection_5.cpp
@@ -178,15 +186,15 @@ public:
 };
 ```
 
-## <a name="example-inspection-of-assemblies"></a>Przykład: kontroli zestawów
+## <a name="example-inspection-of-assemblies"></a>Przykład: inspekcja zestawów
 
-Jeśli powyższy kod jest kompilowany do biblioteki DLL o nazwie vcpp_reflection_6.dll, następnie umożliwia odbicia sprawdzić zawartość tego zestawu. Obejmuje to przy użyciu odbicia statycznych funkcji API [Assembly::Load](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.load.aspx) można załadować zestawu. Ta funkcja zwraca adres **zestawu** obiekt, który następnie można tworzyć zapytania dotyczące modułów i typów w ciągu.
+Jeśli powyższy kod jest kompilowany do biblioteki DLL o nazwie vcpp_reflection_6.dll, można następnie używać odbicia, aby sprawdzić zawartość tego zestawu. Wiąże się to przy użyciu odbicia statycznych funkcji interfejsu API [Assembly::Load](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.load.aspx) można załadować zestawu. Ta funkcja zwróci adres **zestawu** obiektu, który następnie może być odpytywany modułów i typów w ramach informacje.
 
-Gdy system odbicia pomyślnie ładuje zestaw na tablicę **typu** obiekty są pobierane z [Assembly::GetTypes](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.gettypes.aspx) funkcji. Każdy element tablicy zawiera informacje o jest innego typu, mimo że w takim przypadku tylko jedna klasa jest zdefiniowana. Przy użyciu pętli, każdy **typu** tej tablicy zapytanie o elementy członkowskie typu przy użyciu **Type::GetMembers** funkcji. Ta funkcja zwraca tablicę **MethodInfo** obiektów, każdy obiekt zawierający informacje o funkcji członkowskiej, element członkowski danych lub właściwości w typie.
+Gdy system odbicia pomyślnie ładuje zestaw tablicę **typu** obiektów jest pobierany za pomocą [Assembly::GetTypes](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.gettypes.aspx) funkcji. Każdy element tablicy informacjami o innego typu, mimo że w tym przypadku tylko jedna klasa jest zdefiniowana. Za pomocą pętli, każdy **typu** w tej tablicy jest wysyłane zapytanie o elementy członkowskie typu przy użyciu **Type::GetMembers** funkcji. Ta funkcja zwraca tablicę **MethodInfo** obiektów, każdy obiekt zawierający informacje o funkcji elementu członkowskiego, element członkowski danych lub właściwości w typie.
 
-Uwaga listy metod jawnie zawiera funkcje zdefiniowane w **TestClass** i funkcje niejawnie dziedziczone z **System::Object** klasy. W ramach są opisane w środowisku .NET, a nie w składni języka Visual C++ właściwości są wyświetlane jako podstawowy element członkowski danych używane przez funkcje get/set. Funkcje get/set są wyświetlane na liście jako prawidłowe metody. Odbicie jest obsługiwana przez środowisko uruchomieniowe języka wspólnego, nie za pomocą kompilatora Visual C++.
+Uwaga lista metod jawnie obejmuje funkcje zdefiniowane w **TestClass** i funkcji niejawnie dziedziczone z **System::Object** klasy. W ramach opisywanego na platformie .NET, a nie przy użyciu składni języka Visual C++ właściwości są wyświetlane jako podstawowy element członkowski danych uzyskiwał dostęp do funkcji get/set. Funkcje get/set są wyświetlane na tej liście jako metody regularnego. Odbicie jest obsługiwany przez środowisko uruchomieniowe języka wspólnego, nie przez kompilator języka Visual C++.
 
-Chociaż ten kod jest używany do zbadania zestawu, który zdefiniowano, umożliwia także ten kod do zbadania zestawów platformy .NET. Na przykład jeśli zmienisz TestAssembly mscorlib, zostanie wyświetlona lista każdego typu i metody zdefiniowanej w pliku mscorlib.dll.
+Mimo że ten kod jest używany do inspekcji zestawu, który został zdefiniowany, umożliwia także ten kod do inspekcji zestawy .NET. Na przykład jeśli zmienisz TestAssembly do mscorlib, następnie zobaczysz listę każdego typu i metody zdefiniowanej w mscorlib.dll.
 
 ```cpp
 // vcpp_reflection_6.cpp
@@ -234,6 +242,167 @@ int main() {
    totalTypes, totalMembers);
 }
 ```
+
+## <a name="implement"></a> Porady: implementacja architektury składnika Plug-In przy użyciu odbicia
+Poniższe przykłady kodu ilustrują użycie odbicia do implementowania prostego architektury "wtyczki". Pierwszy listy jest aplikacją, a drugi ma wtyczce. Aplikacja jest wiele formularza dokumentu, która wypełnia się przy użyciu klas na podstawie formularza w biblioteki DLL dodatku plug-in dostarczana jako argument wiersza polecenia.  
+  
+ Aplikacja próbuje załadować zestaw podany przy użyciu <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> metody. Jeśli operacja się powiedzie, typy w zestawie są wyliczane przy użyciu <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName> metody. Każdy typ są następnie sprawdzane pod kątem zgodności za pomocą <xref:System.Type.IsAssignableFrom%2A?displayProperty=fullName> metody. W tym przykładzie klasach znalezionych w zestawie podana, musi pochodzić od <xref:System.Windows.Forms.Form> klasy, aby kwalifikować się jako dodatku typu plug-in.  
+  
+ Zgodne klasy następnie są tworzone za pomocą <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> metody, która akceptuje <xref:System.Type> jako argument i zwraca wskaźnik do nowego wystąpienia. Każde nowe wystąpienie jest następnie dołączony do formularza i wyświetlane.  
+  
+ Należy pamiętać, że <xref:System.Reflection.Assembly.Load%2A> metoda akceptuje nazwy zestawów, zawierające rozszerzenie pliku. Funkcji main w aplikacji przycina wszystkie podane rozszerzenia, więc poniższy kod działa w obu przypadkach.  
+  
+### <a name="example"></a>Przykład  
+ Poniższy kod definiuje aplikację, która akceptuje wtyczek. Jako pierwszy argument musi być podana nazwa zestawu. Ten zestaw może zawierać co najmniej jedną publiczną <xref:System.Windows.Forms.Form> typu pochodnego.  
+  
+```cpp
+// plugin_application.cpp  
+// compile with: /clr /c  
+#using <system.dll>  
+#using <system.drawing.dll>  
+#using <system.windows.forms.dll>  
+  
+using namespace System;  
+using namespace System::Windows::Forms;  
+using namespace System::Reflection;  
+  
+ref class PluggableForm : public Form  {  
+public:  
+   PluggableForm() {}  
+   PluggableForm(Assembly^ plugAssembly) {  
+      Text = "plug-in example";  
+      Size = Drawing::Size(400, 400);  
+      IsMdiContainer = true;  
+  
+      array<Type^>^ types = plugAssembly->GetTypes( );  
+      Type^ formType = Form::typeid;  
+  
+      for (int i = 0 ; i < types->Length ; i++) {  
+         if (formType->IsAssignableFrom(types[i])) {  
+            // Create an instance given the type description.  
+            Form^ f = dynamic_cast<Form^> (Activator::CreateInstance(types[i]));  
+            if (f) {  
+               f->Text = types[i]->ToString();  
+               f->MdiParent = this;  
+               f->Show();  
+            }  
+         }  
+      }  
+   }  
+};  
+  
+int main() {  
+   Assembly^ a = Assembly::LoadFrom("plugin_application.exe");  
+   Application::Run(gcnew PluggableForm(a));  
+}  
+```  
+  
+### <a name="example"></a>Przykład  
+ Poniższy kod definiuje trzy klasy pochodne <xref:System.Windows.Forms.Form>. Jeśli nazwa wynikowa Nazwa zestawu jest przekazywany do pliku wykonywalnego na poprzedniej liście, każda z tych trzech klas będą wykrywane i wystąpienia, pomimo faktu, że były wszystkie nieznane do hostowania aplikacji w czasie kompilacji.  
+  
+```cpp  
+// plugin_assembly.cpp  
+// compile with: /clr /LD  
+#using <system.dll>  
+#using <system.drawing.dll>  
+#using <system.windows.forms.dll>  
+  
+using namespace System;  
+using namespace System::Windows::Forms;  
+using namespace System::Reflection;  
+using namespace System::Drawing;  
+  
+public ref class BlueForm : public Form {  
+public:  
+   BlueForm() {  
+      BackColor = Color::Blue;  
+   }  
+};  
+  
+public ref class CircleForm : public Form {  
+protected:  
+   virtual void OnPaint(PaintEventArgs^ args) override {  
+      args->Graphics->FillEllipse(Brushes::Green, ClientRectangle);  
+   }  
+};  
+  
+public ref class StarburstForm : public Form {  
+public:  
+   StarburstForm(){  
+      BackColor = Color::Black;  
+   }  
+protected:  
+   virtual void OnPaint(PaintEventArgs^ args) override {  
+      Pen^ p = gcnew Pen(Color::Red, 2);  
+      Random^ r = gcnew Random( );  
+      Int32 w = ClientSize.Width;  
+      Int32 h = ClientSize.Height;  
+      for (int i=0; i<100; i++) {  
+         float x1 = w / 2;  
+         float y1 = h / 2;  
+         float x2 = r->Next(w);  
+         float y2 = r->Next(h);  
+         args->Graphics->DrawLine(p, x1, y1, x2, y2);  
+      }  
+   }  
+};  
+```  
+
+## <a name="enumerate"></a> Porady: Wyliczanie typów danych w zestawach za pomocą odbicia
+Poniższy przykład demonstruje wyliczanie typów publicznych i elementów członkowskich przy użyciu <xref:System.Reflection>.  
+  
+ Podana nazwa zestawu, w katalogu lokalnym lub w pamięci podręcznej GAC, poniższy kod próbuje otworzyć zestaw i pobrać opisy. Jeśli to się powiedzie, każdy typ jest wyświetlany z jego publiczne elementy członkowskie.  
+  
+ Należy pamiętać, że <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> wymaga, że jest używana bez rozszerzenia pliku. W związku z tym za pomocą "mscorlib.dll" jako argumentu wiersza polecenia zakończy się niepowodzeniem, gdy za pomocą tylko "mscorlib" spowoduje wyświetlanie typów programu .NET Framework. Jeśli nazwa zestawu nie zostanie podany, kod wykryje i zgłaszać typów w bieżącym zestawie (EXE, wynikające z tego kodu).  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// self_reflection.cpp  
+// compile with: /clr  
+using namespace System;  
+using namespace System::Reflection;  
+using namespace System::Collections;  
+  
+public ref class ExampleType {  
+public:  
+   ExampleType() {}  
+   void Func() {}  
+};  
+  
+int main() {  
+   String^ delimStr = " ";  
+   array<Char>^ delimiter = delimStr->ToCharArray( );  
+   array<String^>^ args = Environment::CommandLine->Split( delimiter );  
+  
+// replace "self_reflection.exe" with an assembly from either the local  
+// directory or the GAC  
+   Assembly^ a = Assembly::LoadFrom("self_reflection.exe");  
+   Console::WriteLine(a);  
+  
+   int count = 0;  
+   array<Type^>^ types = a->GetTypes();  
+   IEnumerator^ typeIter = types->GetEnumerator();  
+  
+   while ( typeIter->MoveNext() ) {  
+      Type^ t = dynamic_cast<Type^>(typeIter->Current);  
+      Console::WriteLine("   {0}", t->ToString());  
+  
+      array<MemberInfo^>^ members = t->GetMembers();  
+      IEnumerator^ memberIter = members->GetEnumerator();  
+      while ( memberIter->MoveNext() ) {  
+         MemberInfo^ mi = dynamic_cast<MemberInfo^>(memberIter->Current);  
+         Console::Write("      {0}", mi->ToString( ) );  
+         if (mi->MemberType == MemberTypes::Constructor)  
+            Console::Write("   (constructor)");  
+  
+         Console::WriteLine();  
+      }  
+      count++;  
+   }  
+   Console::WriteLine("{0} types found", count);  
+}  
+```  
 
 ## <a name="see-also"></a>Zobacz także
 

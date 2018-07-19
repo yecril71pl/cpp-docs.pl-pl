@@ -1,5 +1,5 @@
 ---
-title: if-else — instrukcja (C++) | Dokumentacja firmy Microsoft
+title: if-else, instrukcja (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 07/17/2017
 ms.technology:
@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8de2511096766cc4852c1c612eccb7dc65713218
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 42174837f0f60f9a4e3ba9f19702210d6d34ccca
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947745"
 ---
 # <a name="if-else-statement-c"></a>if-else — instrukcja (C++)
-Formanty warunkowego rozgałęziania. Instrukcje w *bloku if* są wykonywane tylko wtedy, gdy *wyrażenie if* ma wartość inną niż zero (lub `true`). Jeśli wartość *wyrażenie* jest różna od zera, *statement1* i inne instrukcje w bloku są wykonywane oraz innego bloku, jeśli istnieje, zostanie pominięty. Jeśli wartość *wyrażenie* wynosi zero, a następnie bloku Jeśli zostanie pominięta i innego bloku, jeśli istnieje, jest wykonywane. Są wyrażenia, których ocena ma inną niż zero
-- `true`
-- wskaźnik inną niż null
-- wszelkie arytmetyczne wartości niezerowej, lub 
-- Typ klasy, który określa jednoznaczne konwersji arytmetyczne, boolean lub wskaźnika typu. (Aby uzyskać informacje o konwersji, zobacz [konwersje standardowe](../cpp/standard-conversions.md).)   
+Formanty warunkowych gałęzi. Instrukcje w *bloku if* są wykonywane tylko wtedy, gdy *wyrażenie if* daje w wyniku wartość różna od zera (lub wartość PRAWDA). Jeśli wartość *wyrażenie* jest różna od zera, *instrukcja1* i wszelkie inne instrukcje w bloku są wykonywane, oraz innego bloku, jeśli jest obecny, jest pomijana. Jeśli wartość *wyrażenie* wynosi zero, a następnie bloku if zostanie pominięta i innego bloku, jeśli jest obecny, jest wykonywany. Wyrażenia, które dają różna od zera są
+- WARTOŚĆ TRUE
+- wskaźnik zerowy
+- dowolna wartość arytmetyczne różna od zera, lub 
+- Typ klasy, który definiuje jednoznaczną konwersję na operacje arytmetyczne, boolean lub wskaźnika typu. (Aby uzyskać informacji dotyczących konwersji, zobacz [konwersje standardowe](../cpp/standard-conversions.md).)   
   
 ## <a name="syntax"></a>Składnia  
   
@@ -71,8 +72,10 @@ else  // optional
    ...
 } 
 ```  
+
 ## <a name="example"></a>Przykład  
-```  
+
+```cpp  
 // if_else_statement.cpp  
 #include <iostream>
 
@@ -117,8 +120,8 @@ int main()
     }
 }
 ```  
-## <a name="if-statement-with-an-initializer"></a>Jeśli instrukcja przy użyciu inicjatora
-**Visual Studio 2017 wersji 15.3 i nowszych** (dostępnych z [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)): **Jeśli** instrukcja może również zawierać wyrażenie, które deklaruje i inicjuje nazwanej zmiennej. Skorzystaj z tego formularza instrukcji if, gdy zmienna jest wymagana tylko w zakresie bloku if. 
+## <a name="if-statement-with-an-initializer"></a>Jeśli instrukcja za pomocą inicjatora
+**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **Jeśli** instrukcji może również zawierać wyrażenie, które deklaruje i inicjuje zmienną o nazwie. Użyj tego formularza, instrukcji if, gdy zmienna jest wymagana tylko w zakresie bloku if. 
 
 ```cpp
 ## Example  
@@ -166,12 +169,12 @@ int main()
 }
 ```
 
- W przypadku wszystkich rodzajów **Jeśli** instrukcji, *wyrażenie*, która może zawierać żadnej wartości, z wyjątkiem strukturą, jest obliczane, w tym wszystkie efekty uboczne. Formant przekazuje z **Jeśli** instrukcji do następnej instrukcji w programie chyba że jedną z *instrukcji*zawiera s [podziału](../cpp/break-statement-cpp.md), [kontynuować](../cpp/continue-statement-cpp.md), lub [goto](../cpp/goto-statement-cpp.md).  
+ We wszystkich rodzajach **Jeśli** instrukcji *wyrażenie*, która może zawierać żadnej wartości, z wyjątkiem strukturę, jest obliczane, łącznie ze wszystkimi efektami ubocznymi. Kontrola przechodzi z **Jeśli** instrukcji do następnej instrukcji w programie chyba że jeden z *instrukcji*zawiera s [podziału](../cpp/break-statement-cpp.md), [nadal](../cpp/continue-statement-cpp.md), lub [goto](../cpp/goto-statement-cpp.md).  
   
- **Else** klauzuli `if...else` instrukcja jest skojarzony z najbardziej poprzedniej **Jeśli** instrukcji w tym samym zakresie, który nie ma odpowiadającego **else** instrukcji.   
+ **Else** klauzuli `if...else` instrukcja jest skojarzone z najbliższą poprzedniej **Jeśli** instrukcji w tym samym zakresie, który nie ma odpowiadającego **else** Instrukcja.   
 
-## <a name="constexpr-if-statements"></a>constexpr Jeśli — instrukcje
-**Visual Studio 2017 wersji 15.3 i nowszych** (dostępne z [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)): Szablony funkcji można **constexpr Jeśli** instrukcji podejmowanie decyzji rozgałęziania kompilacji bez o odwołać się do wielu przeciążeń funkcji. Na przykład można napisać jednej funkcji tego dojścia do parametru rozpakowywania (niezbędne żadne przeciążenie parametru zero): 
+## <a name="constexpr-if-statements"></a>wyrażenia constexpr Jeśli instrukcji
+**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): W funkcji szablonów, można użyć `constexpr if` instrukcję, aby podejmować decyzje rozgałęziania kompilacji bez konieczności uciekania się do wielu przeciążenia funkcji. Na przykład można napisać pojedynczą funkcję tego dojścia parametru podczas rozpakowywania (wymagane żadne przeciążenie parametr zero): 
 
 ```cpp
 template <class T, class... Rest>
@@ -196,6 +199,6 @@ void f(T&& t, Rest&&... r)
   
  
 ## <a name="see-also"></a>Zobacz też  
- [Zaznaczenie — instrukcje](../cpp/selection-statements-cpp.md)   
+ [Instrukcje wyboru](../cpp/selection-statements-cpp.md)   
  [Keywords](../cpp/keywords-cpp.md)   
  [switch, instrukcja (C++)](../cpp/switch-statement-cpp.md)

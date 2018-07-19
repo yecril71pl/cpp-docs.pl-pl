@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddce07ed7f79c167d4cf819b85de1484346bba93
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f0c6ed9fb68e685a7b8a59b049277e61f41fd2ce
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363988"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885728"
 ---
 # <a name="cstringelementtraits-class"></a>Klasa CStringElementTraits
-Ta klasa udostępnia funkcje statyczne używane przez klasy kolekcji przechowywania `CString` obiektów.  
+Ta klasa udostępnia statyczne funkcje używane przez klasy kolekcji przechowywania `CString` obiektów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,30 +42,30 @@ class CStringElementTraits
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Typ danych ma być przechowywany w kolekcji.  
+ *T*  
+ Typ danych, które mają być przechowywane w kolekcji.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CStringElementTraits::INARGTYPE](#inargtype)|Typ danych służących do dodawania elementów do obiektu klasy kolekcji.|  
-|[CStringElementTraits::OUTARGTYPE](#outargtype)|Typ danych używany do pobierania elementów z kolekcji klasy obiektu.|  
+|[CStringElementTraits::INARGTYPE](#inargtype)|Typ danych na potrzeby dodawania elementów do obiektu klasy kolekcji.|  
+|[CStringElementTraits::OUTARGTYPE](#outargtype)|Typ danych używany do pobierania elementów z obiektu klasy kolekcji.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CStringElementTraits::CompareElements](#compareelements)|(Statyczny) Wywołanie tej funkcji można porównać dwóch elementów ciąg pod kątem równości.|  
-|[CStringElementTraits::CompareElementsOrdered](#compareelementsordered)|(Statyczny) Wywołanie tej funkcji można porównać dwóch elementów ciągu.|  
-|[CStringElementTraits::CopyElements](#copyelements)|(Statyczny) Wywołanie tej funkcji, aby skopiować `CString` elementy przechowywane w obiekcie klasy kolekcji.|  
-|[CStringElementTraits::Hash](#hash)|(Statyczny) Wywołanie tej funkcji, aby obliczyć wartość skrótu dla elementu dany ciąg znaków.|  
-|[CStringElementTraits::RelocateElements](#relocateelements)|(Statyczny) Wywołanie tej funkcji może przenosić `CString` elementy przechowywane w obiekcie klasy kolekcji.|  
+|[CStringElementTraits::CompareElements](#compareelements)|(Statyczny) Wywołaj tę funkcję, aby porównać dwa elementy ciągu dla równości.|  
+|[CStringElementTraits::CompareElementsOrdered](#compareelementsordered)|(Statyczny) Wywołaj tę funkcję, aby porównać dwa elementy ciągu.|  
+|[CStringElementTraits::CopyElements](#copyelements)|(Statyczny) Wywołaj tę funkcję, aby skopiować `CString` elementów przechowywanych w obiekcie klasy kolekcji.|  
+|[CStringElementTraits::Hash](#hash)|(Statyczny) Wywołaj tę funkcję, aby obliczyć wartość skrótu dla elementu dany ciąg znaków.|  
+|[CStringElementTraits::RelocateElements](#relocateelements)|(Statyczny) Wywołaj tę funkcję, aby przenieść `CString` elementów przechowywanych w obiekcie klasy kolekcji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta klasa udostępnia statyczne funkcje kopiowania, przenoszenie i porównywanie ciągów i tworzenia wartość skrótu. Funkcje te są przydatne do przechowywania danych na podstawie ciągu przy użyciu klasy kolekcji. Użyj [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md) podczas porównania bez uwzględniania wielkości liter są wymagane. Użyj [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) kiedy mają będzie traktowane jako odwołania do obiektów typu string.  
+ Ta klasa udostępnia funkcje statyczne, kopiowanie, przenoszenie i porównywanie ciągów, a także do tworzenia wartości skrótu. Te funkcje są przydatne w przypadku korzystania z klasy kolekcji do przechowywania danych w ciągu. Użyj [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md) podczas porównania bez uwzględniania wielkości liter są wymagane. Użyj [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) kiedy mają będzie traktowane jako odwołania do obiektów w postaci ciągów.  
   
  Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-collection-classes.md).  
   
@@ -73,42 +73,42 @@ class CStringElementTraits
  **Nagłówek:** cstringt.h  
   
 ##  <a name="compareelements"></a>  CStringElementTraits::CompareElements  
- Wywołanie tej funkcji statycznych, można porównać dwóch elementów ciąg pod kątem równości.  
+ Wywołaj tę funkcję statycznej, aby porównać dwa elementy ciągu dla równości.  
   
 ```
 static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `str1`  
+ *str1*  
  Pierwszy ciąg elementu.  
   
- `str2`  
+ *str2*  
  Drugi ciąg elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość PRAWDA, jeśli elementy są takie same, wartość false w przeciwnym razie wartość.  
+ Zwraca wartość PRAWDA, jeśli elementy są równe, wartość false w przeciwnym razie.  
   
 ##  <a name="compareelementsordered"></a>  CStringElementTraits::CompareElementsOrdered  
- Wywołanie tej funkcji statycznych, aby porównać dwa elementy ciągu.  
+ Wywołaj tę funkcję statycznej, aby porównać dwa elementy ciągu.  
   
 ```
 static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `str1`  
+ *str1*  
  Pierwszy ciąg elementu.  
   
- `str2`  
+ *str2*  
  Drugi ciąg elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zero, jeśli ciągi są identyczne, < 0 Jeśli `str1` jest mniejsza niż `str2`, lub > 0 Jeśli `str1` jest większa niż `str2`. [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) metoda jest używana do wykonania porównania.  
+ Zero, jeśli ciągi są identyczne, < 0 Jeśli *str1* jest mniejsza niż *str2*, lub > 0 Jeśli *str1* jest większa niż *str2*. [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) metoda służy do przeprowadzania porównania.  
 
   
 ##  <a name="copyelements"></a>  CStringElementTraits::CopyElements  
- Wywołanie tej funkcji statycznych, aby skopiować `CString` elementy przechowywane w obiekcie klasy kolekcji.  
+ Wywołaj tę funkcję statycznej, aby skopiować `CString` elementów przechowywanych w obiekcie klasy kolekcji.  
   
 ```
 static void CopyElements(
@@ -118,48 +118,48 @@ static void CopyElements(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDest`  
- Wskaźnik do pierwszego elementu, który będzie otrzymywał skopiowanych danych.  
+ *pDest*  
+ Wskaźnik do pierwszego elementu, który będzie otrzymywać dane skopiowane.  
   
- `pSrc`  
- Wskaźnik pierwszy element do skopiowania.  
+ *pSrc*  
+ Wskaźnik do pierwszego elementu, aby skopiować.  
   
- `nElements`  
+ *nElements*  
  Liczba elementów do skopiowania.  
   
 ### <a name="remarks"></a>Uwagi  
- Elementy źródłowe i docelowe nie powinny się nakładać.  
+ Elementy źródłowe i docelowe nie powinny nakładać się na.  
   
 ##  <a name="hash"></a>  CStringElementTraits::Hash  
- Wywołanie tej funkcji statycznych, aby obliczyć wartość skrótu dla elementu dany ciąg znaków.  
+ Wywołaj tę funkcję statycznej, aby obliczyć wartość skrótu dla elementu dany ciąg znaków.  
   
 ```
 static ULONG Hash(INARGTYPE str);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `str`  
- String element.  
+ *str*  
+ Element ciągu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wartość skrótu obliczane przy użyciu zawartości ciągu.  
   
 ##  <a name="inargtype"></a>  CStringElementTraits::INARGTYPE  
- Typ danych służących do dodawania elementów do obiektu klasy kolekcji.  
+ Typ danych na potrzeby dodawania elementów do obiektu klasy kolekcji.  
   
 ```
 typedef T::PCXSTR INARGTYPE;
 ```  
   
 ##  <a name="outargtype"></a>  CStringElementTraits::OUTARGTYPE  
- Typ danych używany do pobierania elementów z kolekcji klasy obiektu.  
+ Typ danych używany do pobierania elementów z obiektu klasy kolekcji.  
   
 ```
 typedef T& OUTARGTYPE;
 ```  
   
 ##  <a name="relocateelements"></a>  CStringElementTraits::RelocateElements  
- Wywołanie tej funkcji statycznych może przenosić `CString` elementy przechowywane w obiekcie klasy kolekcji.  
+ Wywołaj tę funkcję statycznego przenosić `CString` elementów przechowywanych w obiekcie klasy kolekcji.  
   
 ```
 static void RelocateElements(
@@ -169,19 +169,19 @@ static void RelocateElements(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pDest`  
- Wskaźnik do pierwszego elementu, który otrzyma przeniesiono danych.  
+ *pDest*  
+ Wskaźnik do pierwszego elementu, który będzie otrzymywać dane przenoszone.  
   
- `pSrc`  
- Wskaźnik do pierwszego elementu do przeniesienia.  
+ *pSrc*  
+ Wskaźnik do pierwszego elementu przenosić.  
   
- `nElements`  
+ *nElements*  
  Liczba elementów do przeniesienia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja statyczna wywołuje [memmove —](../../c-runtime-library/reference/memmove-wmemmove.md), która jest wystarczające dla większości typów danych. Jeśli obiekty przenoszony zawierają wskaźniki do ich własnych elementów członkowskich, ta funkcja statyczna musi zostać zastąpiona.  
+ Ta funkcja statyczna wywołuje [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), który jest wystarczające dla większości typów danych. Jeśli obiektów jest przenoszony zawierają wskaźniki do ich własnych elementów członkowskich, ta funkcja statyczna muszą zostać zastąpiona.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)   
  [Klasa CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)   
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

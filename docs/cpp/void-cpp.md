@@ -18,24 +18,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de70ec6758109bc765d0cec3552762288d51ded2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 81dd7717940bb6f78063b0fba64dd5d7f8cad583
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947865"
 ---
 # <a name="void-c"></a>void (C++)
-Gdy jest używany jako typ zwracany funkcji, `void` — słowo kluczowe Określa, że funkcja nie zwraca wartości. Gdy jest używany dla listy wartości parametru funkcji void określa funkcja nie przyjmuje żadnych parametrów. Gdy jest używany w deklaracji wskaźnika, void Określa, że wskaźnik "uniwersalne".  
+Gdy jest używana jako zwracany typ funkcji, **void** — słowo kluczowe Określa, że funkcja nie zwraca wartości. Gdy jest używana dla listy wartości parametru funkcji void Określa, że funkcja nie przyjmuje żadnych parametrów. W przypadku użycia w deklaracji wskaźnika, typ void Określa, że wskaźnik "uniwersalne".  
   
- Jeśli typ wskaźnika jest **void \*** , wskaźnik może wskazywać żadnych zmiennej, która nie jest zadeklarowany z **const** lub `volatile` — słowo kluczowe. Nie można usunąć odwołania wskaźnika typu void, chyba że jest rzutowane do innego typu. Wskaźnik void może zostać przekonwertowany do żadnego innego typu wskaźnika danych.  
+ Jeśli typ wskaźnika **void \*** , wskaźnik może wskazywać jakakolwiek zmienna, która nie jest zadeklarowana za pomocą **const** lub **volatile** — słowo kluczowe. Nie można usunąć odwołania wskaźnika void, chyba że jest rzutowane do innego typu. Dowolny inny typ wskaźnika danych, można przekonwertować na wskaźnik typu void.  
   
- Wskazać void wskaźnika do funkcji, ale nie do elementu członkowskiego klasy w języku C++.  
+ Pusty wskaźnik może wskazywać na funkcję, ale nie do składowej klasy w języku C++.  
   
- Nie można zadeklarować zmiennej typu void.  
+ Nie można zadeklarować zmienną typu void.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp 
 // void.cpp  
 void vobject;   // C2182  
 void *pv;   // okay  
@@ -45,7 +46,7 @@ int main() {
    // Cast optional in C required in C++  
    pint = (int *)pv;  
 }   
-```  
+``` 
   
 ## <a name="see-also"></a>Zobacz też  
  [Keywords](../cpp/keywords-cpp.md)   

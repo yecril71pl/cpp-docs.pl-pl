@@ -17,23 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 283ff09c320b67686e353f0497c665828cd8b5d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3ad0c50330d174a6139ce6e588b278e03cd99562
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947888"
 ---
 # <a name="novtable"></a>novtable
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
- Jest to `__declspec` rozszerzonych atrybutów.  
+ Jest to **__declspec** atrybutów rozszerzonych.  
   
- Ta forma `__declspec` mogą być stosowane do każdej deklaracji klasy, ale powinny być stosowane tylko do klasy czystego interfejsu, oznacza to, klasy, które nigdy nie będzie można utworzyć wystąpienia samodzielnie. `__declspec` Zatrzymuje kompilatora z generowania kodu zainicjować vfptr constructor(s) i destruktora klasy. W wielu przypadkach powoduje usunięcie tylko odwołania do vtable, które są skojarzone z klasą i w związku z tym konsolidator spowoduje jej usunięcia. Przy użyciu tej formy `__declspec` może spowodować znacznego zmniejszenia rozmiaru kodu.  
+ Ta forma **__declspec** mogą być stosowane do dowolnej deklaracji klasy, ale tylko stosuje się do klasy interfejsu czystego, oznacza to, klas, które nigdy nie zostać utworzone samodzielnie. **__Declspec** zatrzymuje kompilator generuje kod, aby zainicjować vfptr constructor(s) i destruktor klasy. W wielu przypadkach spowoduje to usunięcie tylko odwołania do vtable, które są skojarzone z klasy i w związku z tym, konsolidator spowoduje usunięcie go. Przy użyciu tej formy **__declspec** może doprowadzić do znacznego zmniejszenia rozmiaru kodu.  
   
- Przy próbie utworzenia wystąpienia klasy oznaczonej jako `novtable` , a następnie uzyskiwanie dostępu do członka klasy, zostanie wyświetlony naruszenia zasad dostępu (AV).  
+ Jeśli użytkownik podejmie próbę utworzenia wystąpienia klasy oznaczone `novtable` i następnie uzyskać dostęp do składowej klasy, zostanie wyświetlony naruszenie zasad dostępu (pliki audio i wideo).  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp 
 // novtable.cpp  
 #include <stdio.h>  
   
@@ -60,7 +61,7 @@ int main() {
 In Y  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [__declspec](../cpp/declspec.md)   

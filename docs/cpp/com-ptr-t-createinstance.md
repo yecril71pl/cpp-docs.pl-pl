@@ -16,22 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70ccd73980295bdda67a4c49d034b6d185d2d93c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8aca9422c4798cd798d048ce42443c4f38bd170
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947851"
 ---
 # <a name="comptrtcreateinstance"></a>_com_ptr_t::CreateInstance
 **Microsoft Specific**  
   
- Tworzy nowe wystąpienie obiektu podane **CLSID** lub **ProgID**.  
+ Tworzy nowe wystąpienie obiektu, biorąc pod uwagę `CLSID` lub `ProgID`.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
   
-      HRESULT CreateInstance(  
+HRESULT CreateInstance(  
    const CLSID& rclsid,  
    IUnknown* pOuter=NULL,  
    DWORD dwClsContext = CLSCTX_ALL   
@@ -49,31 +50,31 @@ HRESULT CreateInstance(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `rclsid`  
- **CLSID** obiektu.  
+ *rclsid*  
+ `CLSID` Obiektu.  
   
- `clsidString`  
- Ciąg Unicode, która przechowuje albo **CLSID** (począwszy od "**{**") lub **ProgID**.  
+ *clsidString*  
+ Ciąg Unicode, który zawiera jedną `CLSID` (począwszy od "**{**") lub `ProgID`.  
   
- `clsidStringA`  
- Ciąg wielobajtowy przy użyciu strony kodowej ANSI, którym jest przechowywana albo **CLSID** (począwszy od "**{**") lub **ProgID**.  
+ *clsidStringA*  
+ Wielobajtowy ciąg przy użyciu stronę kodową ANSI, który zawiera jedną `CLSID` (począwszy od "**{**") lub `ProgID`.  
   
- `dwClsContext`  
- Kontekst do uruchomienia kodu wykonywalnego.  
+ *dwClsContext*  
+ Kontekst do uruchamiania kodu wykonywalnego.  
   
- `pOuter`  
+ *pOuter*  
  Zewnętrzne nieznany dla [agregacji](../atl/aggregation.md).  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołanie funkcji tych elementów członkowskich `CoCreateInstance` do utworzenia nowego obiektu modelu COM, a następnie zapytania dla typu interfejsu wskaźnika inteligentnego. Wynikowa wskaźnika jest następnie hermetyzowany w ramach tego `_com_ptr_t` obiektu. **Wersja** jest wywoływana, aby zmniejszyć licznika odwołań do wcześniej hermetyzowany wskaźnika. Ta procedura zwraca `HRESULT` do wskazania powodzenia lub niepowodzenia.  
+ Te funkcje elementów członkowskich wywołać `CoCreateInstance` Aby utworzyć nowy obiekt COM, a następnie zapytania dla typu interfejsu to inteligentny wskaźnik. Wskaźnik wynikowy następnie są hermetyzowane w ramach tej `_com_ptr_t` obiektu. `Release` jest wywoływana, aby zmniejszyć licznikiem odwołań do wcześniej zhermetyzowanego wskaźnika. Ta procedura zwraca wartość HRESULT do wskazania powodzenia lub niepowodzenia.  
   
--   **CreateInstance (** `rclsid` **,**`dwClsContext`**)** tworzy nowe wystąpienie uruchomionych danego obiektu **CLSID**.        
+-   **CreateInstance — (***rclsid* **,***dwClsContext***)** tworzy nowe wystąpienie uruchomionego obiektu, biorąc pod uwagę `CLSID`.        
   
--   **CreateInstance (** `clsidString` **,**`dwClsContext`**)** tworzy uruchomione nowe wystąpienie obiektu podany ciąg Unicode, która przechowuje albo **CLSID**(począwszy od "**{**") lub **ProgID**.        
+-   **CreateInstance — (***clsidString* **,***dwClsContext***)** tworzy nowe wystąpienie uruchomionej danego obiektu Ciąg w formacie Unicode, który zawiera jedną `CLSID` (począwszy od "**{**") lub `ProgID`.        
   
--   **CreateInstance (** `clsidStringA` **,**`dwClsContext`**)** tworzy uruchomione nowe wystąpienie obiektu podany ciąg znaków wielobajtowych, który przechowuje albo **CLSID**  (począwszy od "**{**") lub **ProgID**.       Wywołania [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), który zakłada, że ten ciąg w stronę kodową ANSI zamiast strony kodowej OEM.  
+-   **CreateInstance — (***clsidStringA* **,***dwClsContext***)** tworzy nowe wystąpienie uruchomionej danego obiektu ciąg znaków wielobajtowych, który zawiera jedną `CLSID` (począwszy od "**{**") lub `ProgID`.       Wywołania [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), która zakłada, że ten ciąg jest w stronę kodową ANSI zamiast stronę kodową OEM.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [_com_ptr_t, klasa](../cpp/com-ptr-t-class.md)

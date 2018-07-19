@@ -17,21 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04d794041df385a9e18a8a4b25460d961a340cda
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dad1f9a223d8eb97c8e59e955bd5358b27dafd08
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947859"
 ---
 # <a name="pointers-c"></a>Wskaźników (C++)
-Wskaźniki zadeklarowane za pomocą następującej.  
+Wskaźniki zadeklarowane za pomocą następującej sekwencji.  
   
 ```  
 [storage-class-specifiers] [cv-qualifiers] type-specifiers   
 [ms-modifier] declarator ;  
 ```  
   
- gdzie deklarator dowolnego prawidłowego wskaźnika mogą być używane do `declarator`.  Składnia deklaratora wskaźnika prostego wygląda następująco:  
+ gdzie wszelkie deklaratora nieprawidłowy wskaźnik mogą być używane do `declarator`.  Składnia deklaratora wskaźnika prostego jest następująca:  
   
 ```  
 * [cv-qualifiers] identifier [= expression]  
@@ -39,25 +40,25 @@ Wskaźniki zadeklarowane za pomocą następującej.
   
  1. Specyfikatory deklaracji:  
   
--   Specyfikator klasy magazynu opcjonalne. Aby uzyskać więcej informacji, zobacz [specyfikatory](../cpp/specifiers.md).  
+    - Specyfikator klasy magazynowania opcjonalne. Aby uzyskać więcej informacji, zobacz [specyfikatory](../cpp/specifiers.md).  
   
--   Opcjonalny `const` lub `volatile` typu obiektu, który ma być odnosi się do — słowo kluczowe.  
+    - Opcjonalny **const** lub **volatile** — słowo kluczowe zastosowania do typu obiektu, który ma być wskazywany.  
   
--   Specyfikator typu: Nazwa typu reprezentujący typ obiektu, aby wskazać, aby.  
+    - Specyfikator typu: Nazwa typu reprezentujący typ obiektu do będzie wskazywał na.  
   
- 2. Deklarator:  
+ 2. Specyfikator:  
   
--   Opcjonalne Microsoft określonych modyfikatora. Aby uzyskać więcej informacji, zobacz [Modyfikatory specyficzne dla firmy Microsoft](../cpp/microsoft-specific-modifiers.md).  
+    - Opcjonalny modyfikator właściwy dla Microsoft. Aby uzyskać więcej informacji, zobacz [Modyfikatory specyficzne dla Microsoft](../cpp/microsoft-specific-modifiers.md).  
   
--   Operator `*`.  
+    - Operator `*`.  
   
--   Opcjonalny `const` lub `volatile` — słowo kluczowe zastosowania do wskaźnika, sam.  
+    - Opcjonalny **const** lub **volatile** — słowo kluczowe zastosowania do wskaźnika jako takiego.  
   
--   Identyfikator.  
+    - Identyfikator.  
   
--   Opcjonalne inicjatora.  
+    - Opcjonalny inicjator.  
   
- Deklarator dla wskaźnika do funkcji wygląda następująco:  
+     Deklaratora dla wskaźnika do funkcji wygląda następująco:  
   
 ```  
 (* [cv-qualifiers] identifier )( argument-list ) [cv-qualifers]  
@@ -70,35 +71,35 @@ Wskaźniki zadeklarowane za pomocą następującej.
 * identifier [ [ constant-expression ] ]  
 ```  
   
--   Wiele deklaratorów i ich inicjatory mogą występować razem w jednej deklaracji w rozdzielana przecinkami lista po Specyfikator deklaracji.  
+-   Wiele deklaratorów i ich inicjatory mogą występować razem w jednej deklaracji w rozdzielana przecinkami lista następujące Specyfikator deklaracji.  
   
- Prosty przykład deklaracji wskaźnika jest:  
+ Prosty przykład deklarację wskaźnika jest:  
   
-```  
+```cpp 
 char *pch;  
 ```  
   
- Poprzedniej deklaracji określa, że `pch` wskazuje na obiekt typu `char`.  
+ Poprzedzająca deklaracja określa, że `pch` wskazuje na obiekt typu **char**.  
   
- Jest bardziej złożonego przykładu  
+ Jest bardziej złożonym przykładem  
   
-```  
+```cpp 
 static unsigned int * const ptr;  
 ```  
   
- Poprzedniej deklaracji określa, że `ptr` stałej wskaźnika do obiektu typu `unsigned` `int` ze statycznym okresem magazynu.  
+ Poprzedzająca deklaracja określa, że `ptr` jest stały wskaźnik do obiektu typu **niepodpisane** **int** ze statycznym okresem magazynu.  
   
- W kolejnym przykładzie pokazano, jak wiele wskaźniki są zadeklarowane i zainicjować:  
+ W kolejnym przykładzie pokazano, jak wiele wskaźniki są deklarowane i inicjowane:  
   
-```  
+```cpp 
 static int *p = &i, *q = &j;  
 ```  
   
- W powyższym przykładzie p wskaźników i q wskaż obiektów typu `int` i zainicjować adresy i oraz j odpowiednio.  Specyfikator klasy magazynu `static` dotyczy zarówno wskaźników.  
+ W powyższym przykładzie p wskaźników i q wskaż obiektów typu **int** i są inicjowane na adresy i oraz j odpowiednio.  Specyfikator klasy magazynu **statyczne** ma zastosowanie do obu wskaźników.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp 
 // pointer.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -187,9 +188,9 @@ dog dog
 ```  
   
 ## <a name="example"></a>Przykład  
- Inny przykład przedstawia użycie wskaźników w strukturach danych; w tym przypadku połączonej listy.  
+ Inny przykład ilustruje użycie wskaźniki w strukturach danych; w tym przypadku połączonej listy.  
   
-```  
+```cpp 
 // pointer_linkedlist.cpp  
 // compile with: /EHsc  
 #include <iostream>  

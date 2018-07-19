@@ -1,5 +1,5 @@
 ---
-title: Obsługa plików i -O (C + +/ CLI) | Dokumentacja firmy Microsoft
+title: Obsługa plików i we / wy (C + +/ CLI) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,40 +12,331 @@ helpviewer_keywords:
 - files [C++], .NET Framework and
 - I/O [C++], .NET Framework applications
 - .NET Framework [C++], I/O
+- files [C++], listing files
+- directories [C++], listing files
+- monitoring file system events
+- FileSystemWatcher class, examples
+- examples [C++], monitoring file system changes
+- events [C++], monitoring
+- file system events [C++]
+- files [C++], binary
+- binary files, reading in C++
+- reading text files
+- text files, reading
+- files [C++], retrieving information about
+- FileInfo class
+- binary files, writing in C++
+- files [C++], binary
+- files [C++], text
+- text files, writing in C++
 ms.assetid: 3296fd59-a83a-40d4-bd4a-6096cc13101b
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5af048d2686d3e435ff9f312c7acad8ca24ddeee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 515d74b30e63fbc40411ec9cd62b2b1ab6d92591
+ms.sourcegitcommit: b8b1cba85ff423142d73c888be26baa8c33f3cdc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33108315"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093010"
 ---
 # <a name="file-handling-and-io-ccli"></a>Obsługa plików i we/wy (C++/CLI)
-Przedstawia różne operacje pliku przy użyciu programu .NET Framework.  
+Demonstruje różne operacje na plikach za pomocą programu .NET Framework.  
   
- Poniższe tematy przedstawiają sposób używania klas zdefiniowanych w <xref:System.IO> przestrzeni nazw do wykonywania różnych plików operacji.  
+ W poniższych tematach pokazano użycie klas zdefiniowanych w <xref:System.IO> przestrzeni nazw, aby wykonywać różne operacje na plikach.  
   
-## <a name="in-this-section"></a>W tej sekcji  
+## <a name="enumerate"></a> Wyliczanie plików w katalogu
+Poniższy przykład kodu pokazuje, jak można pobrać listy plików w katalogu. Ponadto podkatalogi są wyliczane. Poniższy przykład kodu wykorzystuje <xref:System.IO.Directory.GetFiles%2A> <xref:System.IO.Directory.GetFiles%2A> i <xref:System.IO.Directory.GetDirectories%2A> metody, aby wyświetlić zawartość katalogu C:\Windows.  
   
--   [Instrukcje: wyliczanie plików w katalogu (C++/CLI)](../dotnet/how-to-enumerate-files-in-a-directory-cpp-cli.md)  
+### <a name="example"></a>Przykład  
   
--   [Instrukcje: monitorowane zmian systemu plików (C++/CLI)](../dotnet/how-to-monitor-file-system-changes-cpp-cli.md)  
+```cpp  
+// enum_files.cpp  
+// compile with: /clr  
+using namespace System;  
+using namespace System::IO;  
   
--   [Instrukcje: odczytywanie pliku binarnego (C++/CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md)  
+int main()  
+{  
+   String^ folder = "C:\\";  
+   array<String^>^ dir = Directory::GetDirectories( folder );  
+   Console::WriteLine("--== Directories inside '{0}' ==--", folder);  
+   for (int i=0; i<dir->Length; i++)  
+      Console::WriteLine(dir[i]);  
   
--   [Instrukcje: odczytywanie pliku tekstowego (C++/CLI)](../dotnet/how-to-read-a-text-file-cpp-cli.md)  
+   array<String^>^ file = Directory::GetFiles( folder );  
+   Console::WriteLine("--== Files inside '{0}' ==--", folder);  
+   for (int i=0; i<file->Length; i++)  
+      Console::WriteLine(file[i]);  
   
--   [Instrukcje: pobieranie informacji o pliku (C++/CLI)](../dotnet/how-to-retrieve-file-information-cpp-cli.md)  
+   return 0;  
+}  
+```  
+
+## <a name="monitor"></a> Monitorowanie zmian systemu plików
+Poniższy przykład kodu wykorzystuje <xref:System.IO.FileSystemWatcher> do rejestrowania zdarzeń jest tworzone, zmienione, usunięty lub zmieniono nazwy plików. Zamiast okresowe sondowanie katalogu dla zmian w plikach, możesz użyć <xref:System.IO.FileSystemWatcher> klasy wyzwolenie zdarzenia po wykryciu zmiany.  
   
--   [Instrukcje: wpisywanie danych do pliku binarnego (C++/CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md)  
+### <a name="example"></a>Przykład  
   
--   [Instrukcje: wpisywanie tekstu do pliku tekstowego (C++/CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md)  
+```cpp  
+// monitor_fs.cpp  
+// compile with: /clr  
+#using <system.dll>  
   
- 
-## <a name="see-also"></a>Zobacz też  
+using namespace System;  
+using namespace System::IO;  
+  
+ref class FSEventHandler  
+{  
+public:  
+    void OnChanged (Object^ source, FileSystemEventArgs^ e)  
+    {  
+        Console::WriteLine("File: {0} {1}",   
+               e->FullPath, e->ChangeType);  
+    }  
+    void OnRenamed(Object^ source, RenamedEventArgs^ e)  
+    {  
+        Console::WriteLine("File: {0} renamed to {1}",   
+                e->OldFullPath, e->FullPath);  
+    }  
+};  
+  
+int main()  
+{  
+   array<String^>^ args = Environment::GetCommandLineArgs();  
+  
+   if(args->Length < 2)  
+   {  
+      Console::WriteLine("Usage: Watcher.exe <directory>");  
+      return -1;  
+   }  
+  
+   FileSystemWatcher^ fsWatcher = gcnew FileSystemWatcher( );  
+   fsWatcher->Path = args[1];  
+   fsWatcher->NotifyFilter = static_cast<NotifyFilters>   
+              (NotifyFilters::FileName |   
+               NotifyFilters::Attributes |   
+               NotifyFilters::LastAccess |   
+               NotifyFilters::LastWrite |   
+               NotifyFilters::Security |   
+               NotifyFilters::Size );  
+  
+    FSEventHandler^ handler = gcnew FSEventHandler();   
+    fsWatcher->Changed += gcnew FileSystemEventHandler(   
+            handler, &FSEventHandler::OnChanged);  
+    fsWatcher->Created += gcnew FileSystemEventHandler(   
+            handler, &FSEventHandler::OnChanged);  
+    fsWatcher->Deleted += gcnew FileSystemEventHandler(   
+            handler, &FSEventHandler::OnChanged);  
+    fsWatcher->Renamed += gcnew RenamedEventHandler(   
+            handler, &FSEventHandler::OnRenamed);  
+  
+    fsWatcher->EnableRaisingEvents = true;  
+  
+    Console::WriteLine("Press Enter to quit the sample.");  
+    Console::ReadLine( );  
+}  
+```  
+
+## <a name="read_binary"></a> Odczytywanie pliku binarnego
+Poniższy przykład kodu pokazuje, jak odczytywać dane binarne z pliku, przy użyciu dwóch klas z <xref:System.IO?displayProperty=fullName> przestrzeni nazw: <xref:System.IO.FileStream> i <xref:System.IO.BinaryReader>. <xref:System.IO.FileStream> reprezentuje rzeczywisty plik. <xref:System.IO.BinaryReader> udostępnia interfejs do strumienia, który zezwala na dostęp binarny.  
+  
+ Przykładowy kod odczytuje plik o nazwie data.bin i zawiera liczby całkowite w formacie binarnym. Aby uzyskać informacji na temat tego typu plików, zobacz [jak: zapisu pliku binarnego (C + +/ interfejsu wiersza polecenia)](../dotnet/how-to-write-a-binary-file-cpp-cli.md).  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// binary_read.cpp  
+// compile with: /clr  
+#using<system.dll>  
+using namespace System;  
+using namespace System::IO;  
+  
+int main()   
+{  
+   String^ fileName = "data.bin";  
+   try  
+   {  
+      FileStream^ fs = gcnew FileStream(fileName, FileMode::Open);  
+      BinaryReader^ br = gcnew BinaryReader(fs);  
+  
+      Console::WriteLine("contents of {0}:", fileName);  
+      while (br->BaseStream->Position < br->BaseStream->Length)  
+         Console::WriteLine(br->ReadInt32().ToString());  
+  
+      fs->Close( );  
+   }  
+   catch (Exception^ e)  
+   {  
+      if (dynamic_cast<FileNotFoundException^>(e))  
+         Console::WriteLine("File '{0}' not found", fileName);  
+      else  
+         Console::WriteLine("Exception: ({0})", e);  
+      return -1;  
+   }  
+   return 0;  
+}  
+```  
+## <a name="read_text"></a> Odczytywanie pliku tekstowego
+Poniższy przykład kodu pokazuje, jak otworzyć i odczytać jeden wiersz pliku tekstowego w czasie, za pomocą <xref:System.IO.StreamReader> klasy, która jest zdefiniowana w <xref:System.IO?displayProperty=fullName> przestrzeni nazw. Wystąpienie tej klasy jest używany do otwierania pliku tekstowego i następnie <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> metoda służy do pobierania każdego wiersza.  
+  
+ Ten przykładowy kod odczytuje plik o nazwie textfile.txt i zawiera tekst. Aby uzyskać informacji na temat tego typu plików, zobacz [porady: wpisywanie tekstu do pliku (C + +/ interfejsu wiersza polecenia)](../dotnet/how-to-write-a-text-file-cpp-cli.md).  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// text_read.cpp  
+// compile with: /clr  
+#using<system.dll>  
+using namespace System;  
+using namespace System::IO;  
+  
+int main()  
+{  
+   String^ fileName = "textfile.txt";  
+   try   
+   {  
+      Console::WriteLine("trying to open file {0}...", fileName);  
+      StreamReader^ din = File::OpenText(fileName);  
+  
+      String^ str;  
+      int count = 0;  
+      while ((str = din->ReadLine()) != nullptr)   
+      {  
+         count++;  
+         Console::WriteLine("line {0}: {1}", count, str );  
+      }  
+   }  
+   catch (Exception^ e)  
+   {  
+      if (dynamic_cast<FileNotFoundException^>(e))  
+         Console::WriteLine("file '{0}' not found", fileName);  
+      else  
+         Console::WriteLine("problem reading file '{0}'", fileName);  
+   }  
+  
+   return 0;  
+}  
+```  
+
+## <a name="retrieve"></a> Pobieranie informacji o pliku 
+Poniższy przykład kodu demonstruje <xref:System.IO.FileInfo> klasy. Jeśli nazwa pliku, można użyć tej klasy można pobrać informacji o pliku, np. rozmiar pliku, katalogu, imię i nazwisko oraz datę i godzinę utworzenia i ostatniej modyfikacji.  
+  
+ Ten kod pobiera informacje o plikach dla Notepad.exe.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// file_info.cpp  
+// compile with: /clr  
+using namespace System;  
+using namespace System::IO;  
+  
+int main()  
+{  
+   array<String^>^ args = Environment::GetCommandLineArgs();  
+   if (args->Length < 2)  
+   {  
+      Console::WriteLine("\nUSAGE : file_info <filename>\n\n");  
+      return -1;  
+   }  
+  
+   FileInfo^ fi = gcnew FileInfo( args[1] );  
+  
+   Console::WriteLine("file size: {0}", fi->Length );  
+  
+   Console::Write("File creation date:  ");  
+   Console::Write(fi->CreationTime.Month.ToString());  
+   Console::Write(".{0}", fi->CreationTime.Day.ToString());  
+   Console::WriteLine(".{0}", fi->CreationTime.Year.ToString());  
+  
+   Console::Write("Last access date:  ");  
+   Console::Write(fi->LastAccessTime.Month.ToString());  
+   Console::Write(".{0}", fi->LastAccessTime.Day.ToString());  
+   Console::WriteLine(".{0}", fi->LastAccessTime.Year.ToString());  
+  
+   return 0;  
+}  
+```  
+
+## <a name="write_binary"></a> Wpisywanie do pliku binarnego
+Poniższy przykład kodu pokazuje zapisu w pliku danych binarnych. Dwie klasy z <xref:System.IO> przestrzeni nazw są używane: <xref:System.IO.FileStream> i <xref:System.IO.BinaryWriter>. <xref:System.IO.FileStream> reprezentuje rzeczywisty plik podczas <xref:System.IO.BinaryWriter> zapewnia interfejs do strumienia, który zezwala na dostęp binarny.  
+  
+ Poniższy przykład kodu zapisuje plik zawierający liczb całkowitych w formacie binarnym. Ten plik można odczytać z kodu w [porady: odczytywanie pliku binarnego (C + +/ CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md).  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// binary_write.cpp  
+// compile with: /clr  
+#using<system.dll>  
+using namespace System;  
+using namespace System::IO;  
+  
+int main()  
+{  
+   array<Int32>^ data = {1, 2, 3, 10000};  
+  
+   FileStream^ fs = gcnew FileStream("data.bin", FileMode::Create);  
+   BinaryWriter^ w = gcnew BinaryWriter(fs);  
+  
+   try   
+   {  
+      Console::WriteLine("writing data to file:");  
+      for (int i=0; i<data->Length; i++)  
+      {  
+         Console::WriteLine(data[i]);  
+         w->Write(data[i]);  
+      }  
+   }  
+   catch (Exception^)   
+   {  
+     Console::WriteLine("data could not be written");  
+     fs->Close();  
+     return -1;  
+   }  
+  
+   fs->Close();  
+   return 0;  
+}  
+```  
+
+## <a name="write_text"></a> Wpisywanie tekstu do pliku
+Poniższy przykład kodu pokazuje, jak utworzyć plik tekstowy i wpisać tekst za pomocą <xref:System.IO.StreamWriter> klasy, która jest zdefiniowana w <xref:System.IO> przestrzeni nazw. <xref:System.IO.StreamWriter> Konstruktor przyjmuje nazwę pliku, który ma zostać utworzony. Jeśli plik istnieje, zostanie zastąpiony (chyba że przyjmie wartość True jako drugi <xref:System.IO.StringWriter> argumentu konstruktora).  
+  
+ Plik jest złożony za pomocą <xref:System.IO.StreamWriter.Write%2A> i <xref:System.IO.TextWriter.WriteLine%2A> funkcji.  
+  
+### <a name="example"></a>Przykład  
+  
+```cpp  
+// text_write.cpp  
+// compile with: /clr  
+using namespace System;  
+using namespace System::IO;  
+  
+int main()   
+{  
+   String^ fileName = "textfile.txt";  
+  
+   StreamWriter^ sw = gcnew StreamWriter(fileName);  
+   sw->WriteLine("A text file is born!");  
+   sw->Write("You can use WriteLine");  
+   sw->WriteLine("...or just Write");  
+   sw->WriteLine("and do {0} output too.", "formatted");  
+   sw->WriteLine("You can also send non-text objects:");  
+   sw->WriteLine(DateTime::Now);  
+   sw->Close();  
+   Console::WriteLine("a new file ('{0}') has been written", fileName);  
+  
+   return 0;  
+}  
+```  
+
+## <a name="see-also"></a>Zobacz też   
  [Programowanie .NET w języku C++/interfejsie wiersza polecenia (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+
+ [Plik i Stream we/wy](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)
+
+ [System.IO — przestrzeń nazw](https://msdn.microsoft.com/library/system.io.aspx)

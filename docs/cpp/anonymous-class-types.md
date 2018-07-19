@@ -15,16 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e4200548100804d1e64c16311875e85ffcdd717
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49149a055f60cb24c6f676b91a2d9ddd55132a3a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37948228"
 ---
 # <a name="anonymous-class-types"></a>Anonimowe typy klas
-Klasy mogą być anonimowy — czyli może być zadeklarowana bez *identyfikator*. Jest to przydatne, gdy musisz zastąpić nazwę klasy o `typedef` nazwę, co przedstawiono poniżej:  
+Klasy mogą być anonimowy — czyli może być deklarowana bez *identyfikator*. Jest to przydatne podczas zamiany nazwy klasy za pomocą **typedef** nazwę, co przedstawiono poniżej:  
   
-```  
+```cpp 
 typedef struct  
 {  
     unsigned x;  
@@ -33,11 +34,11 @@ typedef struct
 ```  
   
 > [!NOTE]
->  Korzystanie z klasy anonimowy w poprzednim przykładzie jest przydatne w celu zachowania zgodności z istniejącego kodu C. W niektórych kodu C, użycie `typedef` w połączeniu z struktury anonimowe jest powszechnie znane.  
+>  Korzystanie z klasy anonimowe pokazano w poprzednim przykładzie przydaje się do zachowania zgodności z istniejącego kodu języka C. W kodzie C, niektóre użytkowania **typedef** w połączeniu z struktury anonimowe są powszechnie znane.  
   
- Anonimowe klasy także są przydatne w przypadku, gdy ma odwołanie do elementu członkowskiego klasy wrażenie, że nie zostały zawarte w osobnej klasy, tak jak poniżej:  
+ Klasy anonimowe są przydatne także w przypadku, gdy ma odwołanie do składowej klasy się tak, jakby nie były zawarte w osobnej klasy, tak jak poniżej:  
   
-```  
+```cpp 
 struct PTValue  
 {  
     POINT ptLoc;  
@@ -51,28 +52,28 @@ struct PTValue
 PTValue ptv;  
 ```  
   
- W powyższym kodzie `iValue` jest możliwy przy użyciu operatora wyboru elementu członkowskiego obiektu (**.**) w następujący sposób:  
+ W poprzednim kodzie `iValue` można uzyskać dostęp za pomocą operatora wyboru elementu członkowskiego obiektu (**.**) w następujący sposób:  
   
-```  
+```cpp 
 int i = ptv.iValue;  
 ```  
   
- Anonimowe klasy obowiązują pewne ograniczenia. (Aby uzyskać więcej informacji na temat związki anonimowe, zobacz [unie](../cpp/unions.md).) Anonimowe klasy:  
+ Klasy anonimowe podlegają pewne ograniczenia. (Aby uzyskać więcej informacji na temat związki anonimowe, zobacz [unie](../cpp/unions.md).) Klasy anonimowe:  
   
--   Nie może mieć konstruktora lub destruktora.  
+-   Nie może mieć Konstruktor lub destruktor.  
   
--   Nie można przekazać jako argumenty do funkcji (chyba, że kontrola typów jest bezcelowe, przy użyciu elipsy).  
+-   Nie można przekazać jako argumenty do funkcji (chyba że sprawdzania typu jest bezcelowe, przy użyciu wielokropka).  
   
--   Nie można zwrócić wartości jako zwracane z funkcji.  
+-   Nie można zwrócić jako wartości zwracane przez funkcje.  
   
 ## <a name="anonymous-structs"></a>Struktury anonimowe  
   
 ### <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
- Rozszerzenia Microsoft C można zadeklarować zmiennej struktury w inną strukturę bez nadanie mu nazwy. Te struktury zagnieżdżone są nazywane struktury anonimowe. Struktury anonimowe są niedozwolone w C++.  
+ Rozszerzenie Microsoft C umożliwia przy deklarowaniu zmiennej struktury w obrębie innej struktury bez nadając mu nazwę. Te struktury zagnieżdżone są nazywane struktury anonimowe. C++ nie zezwala na struktury anonimowe.  
   
- Tak, jakby były członkami w strukturze zawierającego można uzyskać dostępu do elementów członkowskich struktury anonimowe.  
+ Ma dostęp do członków struktury anonimowe, tak jakby były członkami w strukturze zawierającej.  
   
-```  
+```cpp 
 // anonymous_structures.c  
 #include <stdio.h>  
   
@@ -99,5 +100,5 @@ int main()
 //Output: 1234567  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   

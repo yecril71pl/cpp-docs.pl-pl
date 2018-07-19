@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cede3ee6efb063141fc9ba7db58c6ec1dbcae845
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 16a4d3e663c0cb8d80d3b154f23082d88b446b6f
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424605"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942097"
 ---
 # <a name="string-and-character-literals--c"></a>Literały ciągów i znakowe (C++)
-C++ obsługuje różne typy ciągów i znakowe i zapewnia sposobów express wartości literałów dla każdego z tych typów. W kodzie źródłowym express jest zawartość z literały znaków i ciąg, przy użyciu zestawu znaków. Uniwersalne nazwy znaków i znaki specjalne umożliwia express dowolny ciąg przy użyciu zestawu znaków podstawowego źródła. Nieprzetworzonego literału ciągu pozwala uniknąć przy użyciu znaki specjalne i może służyć do express wszystkie typy literałów ciągów. Można również utworzyć literałów std::string bez konieczności wykonać kroki konwersji lub dodatkowe konstrukcji.  
+C++ obsługuje różne typy ciągów i znakowe i zapewnia metody do wyrażenia wartości literału w każdej z tych typów. W kodzie źródłowym można wyrazić zawartość literały znakowe i przy użyciu zestawu znaków. Uniwersalne nazwy znaków i znaków ucieczki umożliwiają express dowolny ciąg przy użyciu tylko zestaw znaków podstawowego źródła. Nieprzetworzony literał ciągu pozwala uniknąć przy użyciu znaków ucieczki i może służyć do express wszystkie rodzaje literałów ciągów. Można również utworzyć literały std::string, bez konieczności wykonywania dodatkowych konstrukcji lub konwersji kroki.  
   
 ```cpp  
 #include <string>  
@@ -79,50 +79,50 @@ int main()
 }  
 ```  
   
- Literały ciągu nie może mieć bez prefiksu lub `u8`, `L`, `u`, i `U` prefiksów w celu określenia zawęzić odpowiednio znaków (jednobajtowe i wielobajtowe), znaków UTF-8, dwubajtowe (UCS 2 lub UTF-16), UTF-16 i kodowania UTF-32. Może mieć nieprzetworzonego literału ciągu `R`, `u8R`, `LR`, `uR` i `UR` prefiksów dla odpowiedników pierwotnych wersji tych kodowania.  Do tworzenia wartości tymczasowej lub statycznej std::string, można użyć literałów ciągów lub literały nieprzetworzony ciąg z `s` sufiks. Aby uzyskać więcej informacji zobacz sekcję literałów ciągu poniżej. Aby uzyskać więcej informacji na znak źródłowy podstawowego zestawu uniwersalne nazwy znaków i przy użyciu znaków z rozszerzonego strony kodowe w kodzie źródłowym, zobacz [zestawów znaków](../cpp/character-sets.md).  
+ Literały ciągów może mieć żadnego prefiksu lub `u8`, `L`, `u`, i `U` prefiksów do oznaczania zawęzić odpowiednio znak (pojedynczych bajtów lub wielobajtowego), UTF-8, szerokości znaków (UCS-2 lub UTF-16), UTF-16 i kodowania UTF-32. Nieprzetworzony literał ciągu może zawierać `R`, `u8R`, `LR`, `uR` i `UR` prefiksów odpowiedników pierwotnych wersji tych kodowaniach.  Aby utworzyć tymczasowy lub statycznych std::string wartości, można użyć literałów ciągu lub surowe Literały ciągu z `s` sufiks. Aby uzyskać więcej informacji zobacz sekcję Literały ciągu poniżej. Aby uzyskać więcej informacji na temat znaków podstawowgoe źródła Ustaw uniwersalne nazwy znaków i za pomocą znaków z rozszerzonych strony kodowe w kodzie źródłowym, zobacz [zestawów znaków](../cpp/character-sets.md).  
   
-## <a name="character-literals"></a>Literały znaków  
- A *literał znaku* składa się z stałej znaków. Odpowiada on ujęta w cudzysłów pojedynczy znak. Istnieje pięć rodzajów literały znaków:  
+## <a name="character-literals"></a>Literały znakowe  
+ A *literału znakowego* składa się ze stałych znaków. Reprezentowany jest przez znak ujęty w znaki pojedynczego cudzysłowu. Istnieje pięć rodzaje literałów znakowych:  
   
--   Literały znaków zwykłej typu `char`, na przykład `'a'`  
+-   Zwykły znak literały ciągów typu **char**, na przykład `'a'`  
   
--   Literały znaków UTF-8 typu `char`, na przykład `u8'a'`  
+-   Literały znaków UTF-8 typu **char**, na przykład `u8'a'`  
   
--   Literały znaków dwubajtowych typu `wchar_t`, na przykład `L'a'`  
+-   Szerokie literały znakowe typu `wchar_t`, na przykład `L'a'`  
   
 -   Literały znaków UTF-16 typu `char16_t`, na przykład `u'a'`  
   
 -   Literały znaków UTF-32 typu `char32_t`, na przykład `U'a'`  
   
- Znak używany dla literał znakowy może być dowolny znak, z wyjątkiem ukośnik odwrotny zarezerwowanych znaków ("\\"), apostrofu (') lub znakami nowego wiersza. Zarezerwowanych znaków można określić przy użyciu sekwencji ucieczki. Znaki można określić za pomocą uniwersalne nazwy znaków, tak długo, jak typ jest wystarczająco duży, aby pomieścić znak.  
+ Znak używany dla literału znakowego może być dowolnym znakiem, z wyjątkiem znaków zarezerwowanych kreski ułamkowej odwróconej ("\\"), pojedynczego cudzysłowu (') lub nowego wiersza. Zastrzeżone znaki można określić przy użyciu sekwencji unikowej. Znaki mogą być określone przy użyciu uniwersalne nazwy znaków, tak długo, jak typ jest wystarczająco duży, aby pomieścić znak.  
   
 ### <a name="encoding"></a>Kodowanie  
- Literały znaków są zakodowane inaczej na podstawie ich prefiks.  
+ Literały znaków są zakodowane w różny sposób na podstawie ich prefiks.  
   
--   Bez prefiksu literał znakowy jest literał znakowy zwykłej. Wartość literału znaku zwykłej zawierający pojedynczy znak sekwencji specjalnej lub nazwa zawierająca znaki uniwersalne, który może być reprezentowany w zestaw znaków wykonania ma wartość równą wartości liczbowe Kodowanie zestawu znaków wykonywania. Zwykłe literał znakowy zawierający więcej niż jeden znak sekwencji ucieczki i Uniwersalna nazwa znaku jest *literał wieloznakowy*. Literał literał lub literał zwykłej znaku, który nie może być reprezentowany w zestaw znaków wykonania jest warunkowo obsługiwane, ma typ int i jej wartość jest zdefiniowane w implementacji.  
+-   Znak literału bez prefiksu to zwykły znak literału. Wartość zwykły znak literału zawierający pojedynczy znak sekwencji unikowej lub znaki uniwersalne nazwę, którą można przedstawić w zestawie znaków wykonywania ma wartość równą wartości liczbowej kodowania w zestawie znaków wykonywania. Zwykły znak literału zawierającego więcej niż jeden znak, sekwencja unikowa lub znaki uniwersalne nazwy to *literał wieloznakowy*. Literał wieloznakowe lub literałem zwykły znak, który nie może być przedstawiony w zestawie znaków wykonywania jest warunkowo obsługiwane, ma typ int, a jego wartość jest zdefiniowane w implementacji.  
   
--   Literał znaku, który rozpoczyna się od prefiksu L jest literałem znaków dwubajtowych. Wartość literału znaków dwubajtowych zawierający pojedynczy znak, sekwencja unikowa lub Uniwersalna nazwa znaku ma wartość równą wartości liczbowe jego kodowania znaków dwubajtowych wykonywania ustawić, chyba że literał znaków nie ma reprezentacji zestaw znaków dwubajtowych wykonywania, w takim przypadku wartość jest zdefiniowane w implementacji. Wartość literału znaków dwubajtowych zawierający wiele znaki unikowe i uniwersalne nazwy znaków jest zdefiniowane w implementacji.  
+-   Literał znakowy, który zaczyna się od prefiksu L jest literałem znaków dwubajtowych. Wartość literału znaku dwubajtowego, zawierający pojedynczy znak, sekwencja unikowa lub znaki uniwersalne nazwy ma wartość równą wartości liczbowej jego kodowania znaków dwubajtowych wykonywania ustawić, chyba że literału znakowego nie ma reprezentacji zestaw znaków dwubajtowych wykonania, w takim przypadku wartość jest zdefiniowane w implementacji. Wartość literału znaku dwubajtowego zawierające wiele znaków, sekwencji unikowych lub uniwersalne nazwy znaków zależy od implementacji.  
   
--   Literał znaku, który rozpoczyna się od prefiksu u8 jest literału znaku UTF-8. Wartość literału znaku UTF-8 zawierający pojedynczy znak sekwencji specjalnej lub Uniwersalna nazwa znaku ma wartość równą jej wartość punktu kodu ISO 10646, jeśli może być reprezentowany przez pojedynczą jednostkę kodu UTF-8 (odpowiadający C0 kontrolek i Łaciński podstawowy Blok Unicode). Jeśli wartość nie może być reprezentowany przez pojedynczą jednostkę kodu UTF-8, program jest źle sformułowany. Zawierających więcej niż jeden znak, sekwencja unikowa lub Uniwersalna nazwa znaku literału znaku UTF-8 jest źle sformułowany.  
+-   Literał znakowy, który rozpoczyna się prefiksem u8 jest literał znakowy UTF-8. Wartość literału znaku UTF-8 zawierający pojedynczy znak sekwencji unikowej lub znaki uniwersalne nazwy ma wartość równą wartości punktu kodu ISO 10646, jeśli może być reprezentowany przez pojedynczą jednostkę kodu UTF-8 (odpowiadający C0 kontrolek i Łaciński podstawowy Blok Unicode). Jeśli wartość nie może być przedstawiona przez pojedynczą jednostkę kodu UTF-8, program jest nieprawidłowo sformułowany. Literału zawierającego więcej niż jeden znak, sekwencja unikowa lub znaki uniwersalne nazwy znaków UTF-8 jest nieprawidłowo sformułowany.  
   
--   Literał znaku, który rozpoczyna się od prefiksu u jest literału znaku UTF-16. Wartość literału znaku UTF-16 zawierający pojedynczy znak sekwencji specjalnej lub Uniwersalna nazwa znaku ma wartość równą jej wartość punktu kodu ISO 10646, jeśli może być reprezentowany przez pojedynczą jednostkę kodu UTF-16 (odpowiadający podstawowe płaszczyzny wielu języków ). Jeśli wartość nie może być reprezentowany przez pojedynczą jednostkę kodu UTF-16, program jest źle sformułowany. Zawierających więcej niż jeden znak, sekwencja unikowa lub Uniwersalna nazwa znaku literału znaku UTF-16 jest źle sformułowany.  
+-   Literał znakowy, który rozpoczyna się od prefiksu u jest literał znakowy UTF-16. Wartość literału znaku UTF-16 zawierający pojedynczy znak sekwencji unikowej lub znaki uniwersalne nazwy ma wartość równą jej wartość punktu kodu ISO 10646, jeśli może być reprezentowany przez pojedynczą jednostkę kodu UTF-16 (odpowiadający płaszczyzny wielojęzycznej podstawowe ). Jeśli wartość nie może być przedstawiona przez pojedynczą jednostkę kodu UTF-16, program jest nieprawidłowo sformułowany. Literału zawierającego więcej niż jeden znak, sekwencja unikowa lub znaki uniwersalne nazwy znaków UTF-16 jest nieprawidłowo sformułowany.  
   
--   Literał znaku, który rozpoczyna się od prefiksu U jest literału znaku UTF-32. Wartość literału znaku UTF-32 zawierający pojedynczy znak sekwencji specjalnej lub Uniwersalna nazwa znaku ma wartość równą jej wartość punktu kodu ISO 10646. Zawierających więcej niż jeden znak, sekwencja unikowa lub Uniwersalna nazwa znaku literału znaku UTF-8 jest źle sformułowany.  
+-   Literał znakowy, który rozpoczyna się od prefiksu U jest literał znakowy UTF-32. Wartość literału znaku UTF-32 zawierający pojedynczy znak sekwencji unikowej lub znaki uniwersalne nazwa ma wartość równą jej wartość punktu kodu ISO 10646. Literału zawierającego więcej niż jeden znak, sekwencja unikowa lub znaki uniwersalne nazwy znaków UTF-8 jest nieprawidłowo sformułowany.  
   
 ###  <a name="bkmk_Escape"></a> Sekwencje unikowe  
- Istnieją trzy rodzaje sekwencji unikowych: prosty, ósemkowe i szesnastkowe. Sekwencje unikowe może być jedną z następujących czynności:  
+ Istnieją trzy typy sekwencji wyjścia: prosta, ósemkowa i szesnastkowa. Sekwencje ucieczki mogą być jednym z następujących czynności:  
   
-|Wartość|Sekwencja specjalna|Wartość|Sekwencja specjalna|  
+|Wartość|Sekwencja unikowa|Wartość|Sekwencja unikowa|  
 |-----------|---------------------|-----------|---------------------|  
-|nowy wiersz|\n|ukośnik odwrotny|\\\|  
-|Tabulator poziomy|\t|znak zapytania|? lub \\?|  
-|Tabulator pionowy|\v|pojedynczy cudzysłów|\\'|  
-|BACKSPACE|\b|podwójnego cudzysłowu|\\"|  
+|nowy wiersz|\n|Ukośnik odwrotny|\\\|  
+|tabulator poziomy|\t|znak zapytania|? lub \\?|  
+|tabulator pionowy|\v|pojedynczy cudzysłów|\\'|  
+|BACKSPACE|\b|podwójny cudzysłów|\\"|  
 |powrót karetki|\r|znak null|\0|  
 |Wysuw strony|\f|ósemkowy|\ooo|  
-|Alert (dzwonka)|\a|szesnastkowo|\xhhh|  
+|alert (dzwonek)|\a|szesnastkowo|\xhhh|  
   
- Poniższy kod przedstawia niektóre przykłady znaków zmienionym przy użyciu zwykłej znak literały. Taka sama składnia sekwencji ucieczki jest prawidłowa dla innych typów literału znaku.  
+ Poniższy kod przedstawia kilka przykładów znaki ucieczki przestają być za pomocą literałów zwykły znak. Tej samej składni sekwencji ucieczki jest prawidłowy dla innych typów literałów znaków.  
   
 ```cpp  
 #include <iostream>  
@@ -146,21 +146,21 @@ int main() {
   
  **Microsoft Specific**  
   
- Aby utworzyć wartość ze zwykłej literał znakowy (tych bez prefiksu), kompilator konwertuje znak lub sekwencja znaków między apostrofy do wartości 8-bitową w 32-bitową liczbę całkowitą. Wielu znaków w literale wypełnienia odpowiednich bajtów odpowiednio z znaczących znaczącymi bitami. Aby utworzyć `char` wartość, kompilator zajmuje mniej znaczącego bajtu. Aby utworzyć `wchar_t` lub `char16_t` wartość, kompilator przyjmuje word znaczącymi bitami. Kompilator ostrzega, że wynik został obcięty, jeśli wszystkie bity zostały ustawione powyżej przydzielonych bajtów lub word.  
+ Aby utworzyć wartość z zakresu od zwykły znak literału (te bez prefiksu), kompilator konwertuje znaku lub sekwencji znaków między apostrofy do wartości 8-bitowa w 32-bitową liczbę całkowitą. Wielu znaków w literale wypełnienia odpowiednich bajtów, zgodnie z potrzebami z wyższego rzędu do niskiego rzędu. Aby utworzyć **char** wartości, kompilator zajmuje mniej znaczący bajt. Aby utworzyć `wchar_t` lub `char16_t` wartości, kompilator przyjmuje word niskiego rzędu. Kompilator wyświetla ostrzeżenie, że wynik został obcięty, jeśli wszystkie bity są ustawione powyżej przydzielonych bajtów lub word.  
   
 ```cpp  
 char c0    = 'abcd';    // C4305, C4309, truncates to 'd'  
 wchar_t w0 = 'abcd';    // C4305, C4309, truncates to '\x6364'  
 ```  
   
- Ósemkowa sekwencja unikowa jest ukośnik odwrotny następuje sekwencję maksymalnie 3 ósemkowe cyfr. Zachowanie ósemkową sekwencja, które może zawierać więcej niż trzech cyfr jest traktowane jako ósemkowe sekwencję 3-cyfrowy następuje kolejnych cyfr jako znaków; daje to zaskakująco wyników. Na przykład:  
+ Sekwencja unikowa ósemkowa jest ukośnikiem sekwencji z maksymalnie 3 cyframi ósemkowymi. Zachowanie ósemkowej sekwencji ucieczki, mogą zawierać więcej niż trzy cyfry jest traktowany jako sekwencja ósemkową 3-cyfrowy i kolejne cyfry jako znaki; może to dawać Zaskakujące wyniki. Na przykład:  
   
 ```cpp  
 char c1 = '\100';   // '@'  
 char c2 = '\1000';  // C4305, C4309, truncates to '0'   
 ```  
   
- Sekwencje unikowe, które ma zawierać znaków — są oceniane jako ósemkową sekwencja maksymalnie po ostatnim znaku ósemkowe następuje pozostałych znaków. Na przykład:  
+ Sekwencje unikowe, które mogą zawierać znaki inne niż ósemkowe, są oceniane jako ósemkowej sekwencji do ostatniego znaku ósemkową, następuje pozostałe znaki. Na przykład:  
   
 ```cpp  
 char c3 = '\009';   // '9'  
@@ -168,14 +168,14 @@ char c4 = '\089';   // C4305, C4309, truncates to '9'
 char c5 = '\qrs';   // C4129, C4305, C4309, truncates to 's'  
 ```  
   
- Szesnastkowa sekwencja unikowa się ukośnikiem odwrotnym i znakiem `x`, a następnie sekwencji cyfr szesnastkowych. Błąd kompilatora C2153 powoduje — sekwencja specjalna zawierający nie cyfr szesnastkowych: "literały szesnastkowe musi mieć co najmniej jedną cyfrę szesnastkową". Zera wiodące są ignorowane. Sekwencja specjalna, który wydaje się być znaków szesnastkowych i inny niż szesnastkowy jest szacowana jako szesnastkowa sekwencja unikowa maksymalnie ostatnich znaków szesnastkowych, następują znaki inny niż szesnastkowy.   W zwykłych i prefiksem u8 literał znakowy największa wartość szesnastkowa jest 0xFF. W prefiksem L lub prefiksem u literał znaków typu wide największa wartość szesnastkowa jest 0xFFFF. W prefiksem U literał znaków typu wide największa wartość szesnastkowa jest 0xFFFFFFFF.  
+ Szesnastkowa sekwencja unikowa to ukośnik odwrotny, po którym następuje znak `x`, a następnie sekwencja znaków szesnastkowych. Sekwencja wyjścia niezawierająca cyfr szesnastkowych powoduje błąd kompilatora C2153: "literały szesnastkowe muszą mieć co najmniej jedną cyfrę szesnastkową". Zera wiodące są ignorowane. Sekwencja unikowa, która ma znaki szesnastkowe i nieszesnastkowe, zostanie potraktowana jako szesnastkowa sekwencja unikowa maksymalnie ostatnich znaków szesnastkowych następują znaki inne niż szesnastkowe.   W zwykłych i prefiksem u8 literał znakowy najwyższa wartość szesnastkowa to 0xFF. W prefiksem L lub prefiks u szeroki literał znakowy najwyższa wartość szesnastkowa to 0xFFFF. W prefiks U szerokiego literału znakowego najwyższa wartość szesnastkowa to 0xFFFFFFFF.  
   
 ```cpp  
 char c6 = '\x0050'; // 'P'  
 char c7 = '\x0pqr'; // C4305, C4309, truncates to 'r'  
 ```  
   
- Jeśli literał znaków typu wide prefiksem `L` zawiera więcej niż jeden znak, wartość jest pobierana z pierwszego znaku. W przeciwieństwie do zachowania równoważne literał znakowy zwykłej kolejne znaki są ignorowane.  
+ Jeśli szeroki literał znakowy prefiks `L` zawiera więcej niż jeden znak, wartość jest pobierana z pierwszego znaku. Kolejne znaki są ignorowane, w odróżnieniu od zachowania równoważne zwykły znak literału.  
   
 ```cpp  
 wchar_t w1 = L'\100';   // L'@'  
@@ -187,12 +187,12 @@ wchar_t w6 = L'\x0050'; // L'P'
 wchar_t w7 = L'\x0pqr'; // C4066 L'\0', pqr ignored  
 ```  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
- Znak ukośnika odwrotnego (\\) jest znak kontynuacji wiersza, gdy znajduje się na końcu linii. Jeśli chcesz, aby były wyświetlane jako literał znakowy ukośnikiem odwrotnym, należy wpisać dwa razy w wierszu (`\\`). Aby uzyskać więcej informacji na temat znak kontynuacji wiersza, zobacz [fazy tłumaczenia](../preprocessor/phases-of-translation.md).  
+ Znak ukośnika odwrotnego (\\) jest znakiem kontynuacji wiersza umieszczone na końcu wiersza. Jeśli chcesz, aby znak ukośnika odwrotnego, tak aby pojawiało się jako literał znakowy, należy wpisać dwa ukośniki odwrotne w wierszu (`\\`). Aby uzyskać więcej informacji na temat wstawić znak kontynuacji wiersza, zobacz [etapy translacji](../preprocessor/phases-of-translation.md).  
   
 ###  <a name="bkmk_UCN"></a> Uniwersalne nazwy znaków  
- Literały znaków i literały macierzystego (z systemem innym niż — raw) ciągu znaków mogą być reprezentowane przez nazwa zawierająca znaki uniwersalne.  Uniwersalne nazwy znaków są utworzone przez prefiks, który \U po której następują, 8 cyfrowy kod znaku Unicode, lub \u prefiks następuje punkt kodu Unicode czterocyfrowej. Wszystkie osiem lub cztery cyfry, odpowiednio, musi występować aby nazwa zawierająca znaki uniwersalne poprawnie sformułowany.  
+ Literały znakowe i (natywnego innego niż surowe) Literały ciągu dowolny znak może być reprezentowany przez nazwę znaki uniwersalne.  Uniwersalne nazwy znaków są utworzone przez prefiks, który \U, a następnie przez punkt kodu Unicode osiem cyfr lub \u prefiks następuje punkt kodu Unicode czterocyfrowa. Odpowiednio wszystkich osiem lub cztery cyfry, musi być obecny można utworzyć nazwy sformułowany znaki uniwersalne.  
   
 ```cpp  
 char u1 = 'A';          // 'A'  
@@ -202,17 +202,17 @@ char u4 = '\u0041';     // \u UCN 'A'
 char u5 = '\U00000041'; // \U UCN 'A'  
 ```  
   
- **Znaki dwuskładnikowe**  
+ **Pary zastępcze**  
   
- Uniwersalne nazwy znaków nie można zakodować wartości zakresu punktów kodowych Surogat D800 DFFF. Dla Znaki dwuskładnikowe Unicode, należy określić nazwa zawierająca znaki uniwersalne za pomocą `\UNNNNNNNN`, gdzie NNNNNNNN jest punkt 8 cyfrowy kod znaku. Kompilator generuje para zastępcza, jeśli jest to wymagane.  
+ Uniwersalne nazwy znaków nie może zakodować wartości w zakresie punkt kodu D800 DFFF zastępczy. Dla pary zastępcze Unicode, należy określić nazwę znaki uniwersalne za pomocą `\UNNNNNNNN`, gdzie NNNNNNNN jest punkt 8 cyfrowym kodem znaku. Kompilator generuje parę zastępczą, jeśli jest to wymagane.  
   
- W języku C ++ 03 języka tylko dozwolone podzbiór znaków może być reprezentowana przez ich uniwersalne nazwy znaków oraz dozwolone niektóre uniwersalne nazwy znaków, które faktycznie nie reprezentują żadnych prawidłowych znaków Unicode. Problem został rozwiązany w standardem C ++ 11. W języku C ++ 11 zarówno znaków i ciągu literałów i identyfikatory mogą używać uniwersalne nazwy znaków.  Aby uzyskać więcej informacji dotyczących uniwersalne nazwy znaków, zobacz [zestawów znaków](../cpp/character-sets.md). Aby uzyskać więcej informacji na temat Unicode, zobacz [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx). Aby uzyskać więcej informacji na temat Znaki dwuskładnikowe, zobacz [Znaki dwuskładnikowe i dodatkowe znaki](http://msdn.microsoft.com/library/dd374069\(v=vs.85\).aspx).  
+ W języku C ++ 03 język tylko podzestaw znaków, które mają być reprezentowane przez ich uniwersalne nazwy znaków mogą oraz dozwolone niektóre uniwersalne nazwy znaków, które faktycznie nie reprezentują żadnych prawidłowych znaków Unicode. Ten problem został rozwiązany w standardem C ++ 11. W języku C ++ 11 zarówno literały znakowe i i identyfikatory mogą używać uniwersalne nazwy znaków.  Aby uzyskać więcej informacji na temat uniwersalne nazwy znaków, zobacz [zestawów znaków](../cpp/character-sets.md). Aby uzyskać więcej informacji na temat systemu Unicode, zobacz [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx). Aby uzyskać więcej informacji dotyczących par zastępczych, zobacz [pary zastępcze i znaki dodatkowe](http://msdn.microsoft.com/library/dd374069\(v=vs.85\).aspx).  
   
 ## <a name="string-literals"></a>Literały ciągu  
- Literał ciągu reprezentuje sekwencji znaków, które tworzą ciąg znaków zakończony znakiem null. Znaki muszą być ujęte w cudzysłów podwójny. Dostępne są następujące rodzaje literałów ciągu:  
+ Literał ciągu znaków reprezentuje sekwencję znaków, które razem tworzą ciąg zakończony znakiem null. Znaki muszą być ujęte w znaki podwójnego cudzysłowu. Istnieją następujące rodzaje literałów ciągów:  
   
-### <a name="narrow-string-literals"></a>Literały ciągu wąskie  
- Literał ciągu wąskie jest-prefiksem, podwójnego cudzysłowu rozdzielone, zerem tablicą typu `const char[n]`, gdzie n to długość tablicy w bajtach. Literał ciągu wąskie może zawierać znaków grafiki, z wyjątkiem podwójnego cudzysłowu (`"`), ukośnik odwrotny (`\`), lub znakiem nowego wiersza. Literał ciągu wąskie może również zawierać nazwy znaków wymienionych powyżej i uniwersalnych sekwencji ucieczki, które mieszczą się w bajt.  
+### <a name="narrow-string-literals"></a>Wąskie literały.  
+ Wąskiego literału ciągu jest — prefiks, podwójny cudzysłów tablicy rozdzielany, zakończony wartością null typu `const char[n]`, gdzie n to długość tablicy bajtów. Wąski literał ciągu może zawierać dowolny znak graficzny oprócz podwójnego cudzysłowu (`"`), ukośnika odwrotnego (`\`), lub znak nowego wiersza. Wąski literał ciągu może również zawierać nazwy wymienione powyżej i uniwersalnych znaków sekwencji ucieczki, które mieszczą się w bajt.  
   
 ```cpp  
 const char *narrow = "abcd";  
@@ -223,15 +223,15 @@ const char *escaped = "yes\\no";
   
 #### <a name="utf-8-encoded-strings"></a>Ciągi kodowany w formacie UTF-8  
   
- Ciąg kodowany w formacie UTF-8 jest prefiksem u8, podwójnego cudzysłowu rozdzielone, zerem tablicą typu `const char[n]`, gdzie n to długość zakodowanego tablicy w bajtach. Literał ciągu prefiksem u8 może zawierać znaków grafiki, z wyjątkiem podwójnego cudzysłowu (`"`), ukośnik odwrotny (`\`), lub znakiem nowego wiersza. Literał ciągu prefiksem u8 może również zawierać specjalne, które sekwencje wymienione powyżej i wszelkie Uniwersalna nazwa znaku.  
+ Ciąg kodowany w formacie UTF-8 jest prefiksem u8, podwójny cudzysłów tablicy rozdzielany, zakończony wartością null typu `const char[n]`, gdzie n to długość zakodowanego tablicy bajtów. Literał ciągu prefiksem u8 mogą zawierać dowolny znak graficzny oprócz podwójnego cudzysłowu (`"`), ukośnika odwrotnego (`\`), lub znak nowego wiersza. Literał ciągu prefiksem u8 może również zawierać znak ucieczki, który sekwencje wymienionych powyżej i dowolną nazwę znaki uniwersalne.  
   
 ```cpp  
 const char* str1 = u8"Hello World";  
 const char* str2 = u8"\U0001F607 is O:-)";  
 ```  
   
-### <a name="wide-string-literals"></a>Literały ciągu typu Wide  
- Literał ciągu typu wide jest tablicą zerem stałej `wchar_t` który prefiks "`L`" i zawiera wszystkie graficzne znaku z wyjątkiem podwójnego cudzysłowu ("), ukośnik odwrotny (\\), lub znakiem nowego wiersza. Szerokiego literału ciągu może zawierać specjalne, które sekwencje wymienione powyżej i wszelkie Uniwersalna nazwa znaku.  
+### <a name="wide-string-literals"></a>Literały szerokiego ciągu  
+ Szerokiego literału ciągu jest tablicą zakończoną znakiem null stałej `wchar_t` , jest poprzedzony przez "`L`" i zawiera dowolny znak graficzny oprócz podwójnego cudzysłowu ("), ukośnika odwrotnego (\\), lub znak nowego wiersza. Szerokiego literału ciągu może zawierać znak ucieczki, który sekwencje wymienionych powyżej i dowolną nazwę znaki uniwersalne.  
   
 ```cpp  
 const wchar_t* wide = L"zyxw";  
@@ -240,15 +240,15 @@ const wchar_t* newline = L"hello\ngoodbye";
   
 #### <a name="char16t-and-char32t-c11"></a>char16_t i char32_t (C ++ 11)  
   
- C ++ 11 wprowadza komputer przenośny `char16_t` (16-bitowych Unicode) i `char32_t` (32-bitowych Unicode) typów znaków:  
+ C ++ 11 wprowadza przenośnym `char16_t` (16-bitowych Unicode) i `char32_t` (32-bitowych Unicode) typów znaków:  
   
 ```cpp  
 auto s3 = u"hello"; // const char16_t*  
 auto s4 = U"hello"; // const char32_t*  
 ```  
   
-### <a name="raw-string-literals-c11"></a>Literały ciągu surowego (C ++ 11)  
- Nieprzetworzonego literału ciągu jest tablicą zerem — dowolnego typu znak — zawiera dowolny znak grafiki, w tym podwójny cudzysłów ("), ukośnik odwrotny (\\), lub znakiem nowego wiersza. Literały ciągu pierwotnych są często używane w wyrażeniach regularnych korzystających z klas znaków i ciągi kodu HTML i XML ciągów. Aby uzyskać przykłady, zobacz następujący artykuł: [Bjarne Stroustrup — często zadawane pytania na C ++ 11](http://go.microsoft.com/fwlink/p/?linkid=401172).  
+### <a name="raw-string-literals-c11"></a>Surowe Literały ciągu (C ++ 11)  
+ Literał ciągu surowego jest tablicą zakończoną znakiem null — dowolnego znaku typu — zawierającą dowolny znak graficzny, w tym podwójny cudzysłów ("), ukośnika odwrotnego (\\), lub znak nowego wiersza. Surowe Literały ciągu są często używane w wyrażeniach regularnych, które używają klas znaku, a także w ciągach HTML i XML. Aby uzyskać przykłady, zapoznaj się z następującym artykułem: [Bjarne'a Stroustrupa często zadawane pytania dotyczące języka C ++ 11](http://go.microsoft.com/fwlink/p/?linkid=401172).  
   
 ```cpp  
 // represents the string: An unescaped \ character  
@@ -259,20 +259,20 @@ const char16_t* raw_utf16 = uR"(An unescaped \ character)";
 const char32_t* raw_utf32 = UR"(An unescaped \ character)";  
 ```  
   
- Ogranicznik jest zdefiniowane przez użytkownika sekwencją maksymalnie 16 znaków bezpośrednio przed otwierającym nawiasem nieprzetworzonego literału ciągu, który poniższą jego nawiasu zamykającego.  Na przykład w `R"abc(Hello"\()abc"` jest sekwencja ogranicznika `abc` , a zawartość ciągu `Hello"\(`. Ogranicznik służy do odróżniania raw ciągi, które zawierają cudzysłowy podwójne i nawiasy. Powoduje to błąd kompilatora:  
+ Ogranicznik jest zdefiniowane przez użytkownika sekwencją do 16 znaków bezpośrednio poprzedza nawias otwierający nieprzetworzonego literału ciągu, który następuje bezpośrednio po jego nawiasie zamykającym.  Na przykład w `R"abc(Hello"\()abc"` jest sekwencja ogranicznika `abc` , a zawartość ciągu `Hello"\(`. Aby zapewnić rozróżnianie ciągów pierwotne, które zawierają znaki cudzysłowu podwójnego i nawiasy, można użyć ogranicznika. To powoduje błąd kompilatora:  
   
 ```cpp  
 // meant to represent the string: )"  
 const char* bad_parens = R"()")";  // error C2059  
 ```  
   
- Ale ogranicznik rozpoznaje ją:  
+ Ale ogranicznik rozwiązuje to:  
   
 ```cpp  
 const char* good_parens = R"xyz()")xyz";  
 ```  
   
- Można utworzyć nieprzetworzonego literału ciągu w którym w źródle jest nowym wierszem (nie ze zmienionym znaczeniem znaku):  
+ Możesz utworzyć nieprzetworzony literał ciągu w którym znajduje się nowy wiersz (nie znak wyjścia) w źródle:  
   
 ```cpp  
 // represents the string: hello  
@@ -282,7 +282,7 @@ goodbye)";
 ```  
   
 ### <a name="stdstring-literals-c14"></a>STD::String literały (C ++ 14)  
- literały STD::String są biblioteki standardowej implementacji literały definiowane przez użytkownika (patrz poniżej), które są prezentowane w postaci "xyx" s (z `s` sufiks). Tego rodzaju literału ciągu tworzy tymczasowy obiekt typu std::string, std::wstring, std::u32string lub std::u16string w zależności od prefiks, który został określony. W przypadku bez prefiksu jako powyżej, std::string jest generowany. L "xyz" s tworzy std::wstring. Tworzy s u "xyz" [std::u16string](../standard-library/string-typedefs.md#u16string)i tworzy s U "xyz" [std::u32string](../standard-library/string-typedefs.md#u32string).  
+ literały STD::String są biblioteki standardowej implementacji literały definiowane przez użytkownika (patrz poniżej), które są reprezentowane jako "xyx" s (ze `s` sufiks). Tego rodzaju literału ciągu tworzy tymczasowego obiektu tego typu std::string, std::wstring, std::u32string lub std::u16string w zależności od prefiks, który jest określony. Gdy używany jest żadnego prefiksu, jak powyżej, std::string jest generowany. L "xyz" s, produkuje std::wstring. Tworzy s u "xyz" [std::u16string](../standard-library/string-typedefs.md#u16string)i tworzy s U "xyz" [std::u32string](../standard-library/string-typedefs.md#u32string).  
   
 ```cpp  
 //#include <string>  
@@ -294,83 +294,83 @@ u16string str4{ u"hello"s };
 u32string str5{ U"hello"s };  
 ```  
   
- Sufiks s może być również używany na literały nieprzetworzony ciąg:  
+ Sufiks s może być również na surowe Literały ciągu:  
   
 ```cpp  
 u32string str6{ UR"(She said "hello.")"s };  
 ```  
   
- literały STD::String są zdefiniowane w przestrzeni nazw `std::literals::string_literals` w \<ciągu > pliku nagłówka. Ponieważ `std::literals::string_literals`, i `std::literals` jako są zadeklarowane [przestrzenie nazw wbudowanego](../cpp/namespaces-cpp.md), `std::literals::string_literals` automatycznie jest traktowana tak, jakby należały go bezpośrednio w przestrzeni nazw `std`.  
+ literały STD::String są zdefiniowane w przestrzeni nazw `std::literals::string_literals` w \<ciągu > pliku nagłówka. Ponieważ `std::literals::string_literals`, i `std::literals` jako są deklarowane [wbudowane przestrzenie nazw](../cpp/namespaces-cpp.md), `std::literals::string_literals` jest automatycznie traktowany tak, jakby należała bezpośrednio w przestrzeni nazw `std`.  
   
 ### <a name="size-of-string-literals"></a>Rozmiar literałów ciągu  
- Dla znaków ANSI\* ciągów i innych jednobajtowe kodowania (nie UTF-8), rozmiar (w bajtach) literału ciągu jest to liczba znaków plus 1 znak końcowy null. Dla wszystkich innych typów ciąg rozmiar nie jest ściśle powiązana z liczby znaków. UTF-8 używa maksymalnie cztery elementy char do kodowania niektóre *kodu jednostki*i char16_t lub wchar_t zakodowane jako UTF-16 może Użyj dwa elementy (dla wszystkich czterech bajtów) do kodowania pojedynczy *jednostki kodu*.   Ten przykład przedstawia literału w bajtach rozmiar ciąg typu wide:  
+ Dla znaków ANSI\* ciągów i innych pojedynczych bajtów kodowania (nie UTF-8), rozmiar (w bajtach) literału ciągu jest liczbą znaków plus 1 w przypadku końcowego znaku null. Dla wszystkich innych typów ciągów rozmiar nie jest ściśle powiązany do liczby znaków. UTF-8 używa do czterech elementów char do zakodowania niektóre *jednostki kodu*i char16_t lub wchar_t zakodowane jako UTF-16 może na użytek dwa elementy (łącznie z czterech bajtów) do zakodowania pojedynczej *jednostki kodu*.   W tym przykładzie przedstawiono rozmiar szerokiego ciągu literału w bajtach:  
   
 ```cpp  
 const wchar_t* str = L"Hello!";  
 const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);  
 ```  
   
- Zwróć uwagę, że `strlen()` i `wcslen()` nie dołączaj rozmiar znak końcowy null, którego rozmiar jest równy rozmiarowi elementu typu string: jednego bajtu na ciąg znaków *, dwa bajty na wchar_t\* lub char16_t\* ciągów, i czterech bajtów na char32_t\* ciągów.  
+ Należy zauważyć, że `strlen()` i `wcslen()` nie zawierają rozmiaru kończącego znaku null, którego rozmiar jest równy rozmiarowi elementu typu string: jednego bajtu w ciągu char *, dwóch bajtów na wchar_t\* lub char16_t\* ciągów i cztery bajty na char32_t\* ciągów.  
   
- Maksymalna długość literału ciągu znaków wynosi 65 535 bajtów. Ten limit dotyczy zarówno literały wąski ciąg, jak i literały ciągu typu wide.  
+ Maksymalna długość literału ciągu wynosi 65 535 bajtów. Ten limit dotyczy zarówno literałów wąskich, jak i szerokich.  
   
 ### <a name="modifying-string-literals"></a>Modyfikowanie literałów ciągów  
- Ponieważ literałów ciągu (nie w tym literały std:string) są stałe, w trakcie modyfikowania ich — na przykład str [2] = "A" — powoduje błąd kompilatora.  
+ Ponieważ literały ciągów (z wykluczeniem literały std:string) są stałe, próba zmodyfikowania ich — na przykład str [2] = 'A' — powoduje wystąpienie błędu kompilatora.  
   
  **Microsoft Specific**  
   
- W programie Visual C++ można użyć literału ciągu do zainicjowania wskaźnika do elementu niebędącego stałą `char` lub `wchar_t`. To jest dozwolona w kodzie C99, ale jest przestarzała w języku C ++ 98 i usunąć w języku C ++ 11. Próba zmodyfikować ciąg spowoduje naruszenie zasad dostępu, jak w poniższym przykładzie:  
+ W programie Visual C++ można użyć literału ciągu do zainicjowania wskaźnika do wartości innej niż stała **char** lub `wchar_t`. Jest dozwolona w kodzie C99, ale jest przestarzała w języku C ++ 98 i usunięte w C ++ 11. Próba zmodyfikowania ciągu powoduje naruszenie zasad dostępu, jak w poniższym przykładzie:  
   
 ```cpp  
 wchar_t* str = L"hello";  
 str[2] = L'a'; // run-time error: access violation  
 ```  
   
- Może spowodować kompilatora emitować wystąpił błąd podczas konwersji literału ciągu na wskaźnik znak non_const po ustawieniu [/Zc: strictstrings (Wyłączanie konwersji typów literału ciągu)](../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) — opcja kompilatora. Firma Microsoft zaleca zgodny ze standardami kodu przenośnego. Jest również dobrym rozwiązaniem, aby użyć `auto` — słowo kluczowe, aby zadeklarować ciąg zainicjować literał wskaźników, ponieważ rozpoznawany poprawnego typu (const). Na przykład w tym przykładzie kodu przechwytuje próba zapisu z ciągiem literału w czasie kompilacji:  
+ Użytkownik może spowodować, że kompilator będzie emitował błąd, gdy literał ciągu jest konwertowana na wskaźnik znak non_const po ustawieniu [/Zc: strictstrings (Wyłączanie konwersji typów literału ciągu)](../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) — opcja kompilatora. Firma Microsoft zaleca zgodnych ze standardami kodu przenośnego. Jest również dobrym rozwiązaniem, aby użyć **automatycznie** — słowo kluczowe do deklarowania wskaźników zainicjowanych literałami ciągów, ponieważ jest on rozpoznawany jako poprawny typ (const). Na przykład w tym przykładzie kodu przechwytywana próba zapisu do literału ciągu w czasie kompilacji:  
   
 ```cpp  
 auto str = L"hello";  
 str[2] = L'a'; // C3892: you cannot assign to a variable that is const.  
 ```  
   
- W niektórych przypadkach można stosować literały ciągu identyczne aby zaoszczędzić miejsce w pliku wykonywalnego. W puli literał ciągu przyczyny kompilatora wszystkie odwołania do konkretnego literału ciągu na punkt w tej samej lokalizacji w pamięci, zamiast odwołanie do każdego punktu do oddzielnego wystąpienia literału ciągu. Aby włączyć buforowanie ciągów, za pomocą [/GF](../build/reference/gf-eliminate-duplicate-strings.md) — opcja kompilatora.  
+ W niektórych przypadkach mogą być połączone identyczne literały ciągów, aby zaoszczędzić miejsce w pliku wykonywalnym. W grupowaniu literałów ciągów kompilator powoduje, że wszystkie odwołania do określonego literału ciągu wskazują w tej samej lokalizacji w pamięci, a nie każde odwołanie wskaż osobne wystąpienie literału ciągu. Aby włączyć buforowanie ciągów, należy użyć [/GF](../build/reference/gf-eliminate-duplicate-strings.md) — opcja kompilatora.  
   
- **Końcowy określonych firmy Microsoft**  
+ **End specyficzny dla Microsoft**  
   
-### <a name="concatenating-adjacent-string-literals"></a>Łączenie literałów ciągu sąsiadujących ze sobą  
- Literały sąsiadujących ze sobą szeroki lub wąski ciąg są połączone. Ta deklaracja:  
+### <a name="concatenating-adjacent-string-literals"></a>Powiązanie literałów ciągów sąsiadujących  
+ Literały ciągów sąsiadujących szeroki lub wąski są łączone. Deklaracja ta:  
   
 ```cpp  
 char str[] = "12" "34";  
 ```  
   
- jest taka sama jak tej deklaracji:  
+ jest identyczny z niniejszą deklaracją:  
   
 ```cpp  
 char atr[] = "1234";  
 ```  
   
- i tej deklaracji:  
+ i do tej deklaracji:  
   
 ```cpp  
 char atr[] =  "12\  
 34";  
 ```  
   
- Za pomocą kody osadzonych szesnastkowe ESC, aby określić Literały ciągu może spowodować nieoczekiwane wyniki. Poniższy przykład zamierza utworzyć literał ciągu zawiera znak ASCII 5, a następnie f znaków i v i e:  
+ Używanie osadzonych szesnastkowych kodów wyjścia do określania literałów ciągów może spowodować nieoczekiwane rezultaty. Poniższy przykład jest przeznaczony do tworzenia ciągu literału zawierającego znak ASCII 5, a następnie znaki f, i, v i e:  
   
 ```cpp  
 "\x05five"  
 ```  
   
- Rzeczywisty wynik jest 5F szesnastkowa, która jest kod znaku podkreślenia poprzedzającą znaki ASCII i v i e. Aby uzyskać poprawny wynik, użyj jednej z tych:  
+ Rzeczywisty wynik jest szesnastkową 5F, co w kodzie ASCII, podkreślenie, następują znaki i, v i e. Aby uzyskać odpowiedni wynik, użyj jednej z tych:  
   
 ```cpp  
 "\005five"     // Use octal literal.  
 "\x05" "five"  // Use string splicing.  
 ```  
   
- literały STD::String, ponieważ są one typy std::string może zostać połączony z + — operator, który jest zdefiniowany dla [basic_string —](../standard-library/basic-string-class.md) typów. Mogą one również zostać połączony w taki sam sposób jak literały ciągu sąsiadujących ze sobą. W obu przypadkach musi być zgodna z kodowaniem ciągu i sufiksu:  
+ literały STD::String, ponieważ są one typy std::string, mogą być łączone z + — operator, który jest zdefiniowany dla [basic_string](../standard-library/basic-string-class.md) typów. Mogą one również być łączone w taki sam sposób jak w przylegającymi literałami ciągu. W obu przypadkach muszą być zgodne kodowanie ciągu i sufiksu:  
   
 ```cpp  
 auto x1 = "hello" " " " world"; // OK  
@@ -379,8 +379,8 @@ auto x3 = u8"hello" " "s u8"world"s; // OK, agree on prefixes and suffixes
 auto x4 = u8"hello" " "s u8"world"z; // C3688, disagree on suffixes  
 ```  
   
-### <a name="string-literals-with-universal-character-names"></a>Literały ciągu z uniwersalne nazwy znaków  
- Literały macierzystego ciągu (z systemem innym niż — raw) można używać uniwersalne nazwy znaków do reprezentowania dowolny znak, tak długo, jak nazwa zawierająca znaki uniwersalne mogą być kodowane jako co najmniej jeden znak w typu ciąg.  Na przykład nazwa zawierająca znaki uniwersalne reprezentujący rozszerzonego znaków nie może zostać zakodowany w ciągu typu narrow przy użyciu strony kodowej ANSI, ale mogą być kodowane w ciągach wąskie niektóre strony kodowe wielobajtowe, ani ciągi znaków UTF-8 lub ciąg typu wide. W języku C ++ 11, obsługi formatu Unicode zostanie przedłużony char16_t * i char32_t\* ciągu typów:  
+### <a name="string-literals-with-universal-character-names"></a>Literały ciągów ze uniwersalne nazwy znaków  
+ (Natywne inne niż surowe) Literały ciągu można używać uniwersalne nazwy znaków do reprezentowania dowolny znak, tak długo, jak nazwa znaki uniwersalne mogą być zakodowane jako jeden lub więcej znaków w typu string.  Na przykład nazwę znaki uniwersalne reprezentujący znak rozszerzony nie może zostać zakodowana w ciągu wąskiego przy użyciu strony kodowej ANSI, ale mogą być zakodowane w ciągach wąskie w niektórych stron kodu wielobajtowego lub UTF-8 ciągów lub ciąg znaków dwubajtowych. W języku C ++ 11, obsługa formatu Unicode rozszerzoną char16_t * i char32_t\* typów ciągów:  
   
 ```cpp  
 // ASCII smiling face  
@@ -401,5 +401,5 @@ const char32_t* s5 = U"😎 = \U0001F60E is B-)";
   
 ## <a name="see-also"></a>Zobacz też  
  [Zestawy znaków](../cpp/character-sets.md)   
- [Liczbowe, Boolean i literały wskaźnika](../cpp/numeric-boolean-and-pointer-literals-cpp.md)   
+ [Literały numeryczne, atrybut typu wartość logiczna i wskaźnik](../cpp/numeric-boolean-and-pointer-literals-cpp.md)   
  [Literały definiowane przez użytkownika](../cpp/user-defined-literals-cpp.md)

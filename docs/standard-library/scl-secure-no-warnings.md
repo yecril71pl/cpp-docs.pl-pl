@@ -18,46 +18,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec02ce5aab3d8a7f95ec9020fe3e2a00c1f5bef7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b24012825b883550de6f58e6ce2d53b826f746ca
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854356"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965503"
 ---
 # <a name="sclsecurenowarnings"></a>_SCL_SECURE_NO_WARNINGS
 
-Wywoływanie metod potencjalnie niebezpiecznych w standardowa biblioteka C++ powoduje [C4996 ostrzeżenie kompilatora (poziom 3)](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Aby wyłączyć to ostrzeżenie, zdefiniuj makra **_SCL_SECURE_NO_WARNINGS** w kodzie:
+Wywoływanie metod potencjalnie niebezpiecznych w standardowej biblioteki C++ powoduje [ostrzeżenie kompilatora (poziom 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Aby wyłączyć to ostrzeżenie, należy zdefiniować _SCL_SECURE_NO_WARNINGS makra w kodzie:
 
 ```cpp
 #define _SCL_SECURE_NO_WARNINGS
 ```
 
-Użycie prekompilowanych nagłówków, przed wprowadzeniem żadnych Biblioteka środowiska wykonawczego języka C lub nagłówki biblioteki standardowej umieść tej dyrektywy w pliku prekompilowanego nagłówka. Umieszczenie go w pliku kodu źródłowego poszczególnych przed wprowadzeniem prekompilowanego pliku nagłówkowego, jest ignorowana przez kompilator.
+Jeśli używasz wstępnie skompilowanych nagłówków, należy umieścić tej dyrektywy w pliku wstępnie skompilowanego nagłówka przed wprowadzeniem wszystkie biblioteki wykonawczej języka C lub nagłówki standardowej biblioteki. Jeśli umieścisz go w pliku kodu źródłowego poszczególnych przed wprowadzeniem prekompilowanego pliku nagłówkowego, jest on ignorowany przez kompilator.
 
 ## <a name="remarks"></a>Uwagi
 
-Inne sposoby wyłączenia ostrzeżenie C4996 obejmują:
+Inne sposoby, aby wyłączyć ostrzeżenia C4996 obejmują:
 
-- Przy użyciu [/D (definicje preprocesora)](../build/reference/d-preprocessor-definitions.md) — opcja kompilatora:
+- Za pomocą [/D (definicje preprocesora)](../build/reference/d-preprocessor-definitions.md) — opcja kompilatora:
 
-   > Cl myfile.cpp /D_SCL_SECURE_NO_WARNINGS [innych opcji kompilatora]
+   > myfile.cpp /D_SCL_SECURE_NO_WARNINGS [inne opcje kompilatora] cl
 
-- Przy użyciu [/w](../build/reference/compiler-option-warning-level.md) — opcja kompilatora:
+- Za pomocą [Wn](../build/reference/compiler-option-warning-level.md) — opcja kompilatora:
 
-   > Cl /wd4996 [innych opcji kompilatora] myfile.cpp
+   > Cl /wd4996 [inne opcje kompilatora] myfile.cpp
 
-- Przy użyciu [ostrzeżenie #pragma](../preprocessor/warning.md) dyrektywy:
+- Za pomocą [ostrzeżenie #pragma](../preprocessor/warning.md) dyrektywy:
 
    ```cpp
    #pragma warning(disable:4996)
    ```
 
-Ponadto możesz ręcznie zmienić poziom ostrzeżenia C4996 z **/w\<l >\<n >** — opcja kompilatora. Na przykład, aby ustawić ostrzeżenie C4996 poziom 4:
+Ponadto, możesz ręcznie zmienić poziom ostrzeżenia C4996 z **Wn\<l >\<n >** — opcja kompilatora. Na przykład, aby ustawić ostrzeżenie C4996 poziom 4:
 
-> Cl /w44996 [innych opcji kompilatora] myfile.cpp
+> Cl /w44996 [inne opcje kompilatora] myfile.cpp
 
-Aby uzyskać więcej informacji, zobacz [/w, /W0, /W1, /W2, /W3, / W4, /w1, /w2, /w3, / W4, / Wall, /wd, / możemy /wo, /Wv, wx (poziom ostrzegawczy)](../build/reference/compiler-option-warning-level.md).
+Aby uzyskać więcej informacji, zobacz [Wn /W0, / W1, / W2, / W3, / W4, / W1, / W2, / W3, / W4, / Wall / wo, WV, /WX (poziom ostrzegawczy)](../build/reference/compiler-option-warning-level.md).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7a80ffbfbcfb8c350eecc54e87c4cadaaab0295
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 85efc646daf6ddb55f37c1f46157671eda2f13a8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841421"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963579"
 ---
 # <a name="addpointer-class"></a>add_pointer — Klasa
 
@@ -40,17 +40,17 @@ using add_pointer_t = typename add_pointer<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-*T* typu do zmodyfikowania.
+*T* typ do modyfikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Element członkowski typedef `type` nazwy tego samego typu co `remove_reference<T>::type*`. Alias `add_pointer_t` to skrót do dostępu — element członkowski typedef `type`.
+Element członkowski **typedef** `type` nazwy tego samego typu co `remove_reference<T>::type*`. Alias `add_pointer_t` to skrót umożliwiający dostęp do elementu członkowskiego **typedef** `type`.
 
-Ponieważ jest on nieprawidłowy wskaźnik z odwołania, aby `add_pointer` Usuwa odwołanie, z określonego typu przed nią sprawia, że wskaźnik do typu. W związku z tym, można użyć typu z `add_pointer` bez trwa zależy od tego, czy typ jest odwołanie.
+Ponieważ jest ono nieprawidłowe tworzenie wskaźnika z odwołania `add_pointer` Usuwa odwołanie, jeśli istnieje, z określonego typu, zanim sprawia, że wskaźnik do typu. W związku z tym, można użyć typu z `add_pointer` nie, czy typ jest odwołaniem.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano, że `add_pointer` typu jest taka sama jak wskaźnik do typu.
+Poniższy przykład pokazuje, że `add_pointer` typu jest taki sam jak wskaźnik do tego typu.
 
 ```cpp
 #include <type_traits>
@@ -76,7 +76,7 @@ add_pointer_t<int> == int *
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

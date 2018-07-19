@@ -1,5 +1,5 @@
 ---
-title: Przy użyciu wyjść ani zwracać | Dokumentacja firmy Microsoft
+title: Za pomocą zakończyć pracę lub powrócić | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45885cc6dbac50a693bb84abb797469d8aff93a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 41c5d00efa0f827b9e1c3cd7f3647c966eed67e4
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947761"
 ---
 # <a name="using-exit-or-return"></a>Użycie exit lub return
-Podczas wywoływania **zakończyć** lub wykonać `return` instrukcji z **głównego**, statyczne obiekty zostaną zniszczone w odwrotnej kolejności ich inicjowania. W poniższym przykładzie przedstawiono sposób działania takich inicjowanie i oczyszczanie.  
+Gdy wywołujesz **wyjść** lub wykonania **zwracają** instrukcji z `main`, statyczne obiekty są niszczone w odwrotnej kolejności ich inicjowania. Poniższy kod przedstawia sposób działania takich inicjowanie i oczyszczanie.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp 
 // using_exit_or_return1.cpp  
 #include <stdio.h>  
 class ShowData {  
@@ -64,11 +65,11 @@ int main() {
 }  
 ```  
   
- W powyższym przykładzie statycznych obiektów `sd1` i `sd2` są tworzone i zainicjowany przed wejściem do `main`. Po ten program zakończy przy użyciu `return` instrukcji, pierwsza `sd2` jest niszczony, a następnie `sd1`. Destruktor dla elementu `ShowData` klasy zamyka plików skojarzonych z tymi obiektami statycznych.   
+ W powyższym przykładzie obiektów statycznych `sd1` i `sd2` są tworzone i inicjowane przed wejściem do `main`. Po ten program kończy się za pomocą **zwracają** instrukcji, pierwsza `sd2` jest niszczony, a następnie `sd1`. Destruktor dla `ShowData` klasy zamyka pliki skojarzone z tych obiektów statycznych.   
   
- Jest napisać ten kod w inny sposób, aby zadeklarować `ShowData` obiektów o zakresie bloku, dzięki czemu mogą zostać zniszczone, gdy przejdą poza zakresem:  
+ Innym sposobem na napisać ten kod jest do deklarowania `ShowData` obiektów o zakresie bloku, umożliwiając im niszczone, gdy wykraczają poza zakres:  
   
-```  
+```cpp 
 int main() {  
    ShowData sd1, sd2( "hello.dat" );  
   

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 484fc4a68d0421cb12e901b2d56f30e95f6cb79b
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: d48d863cdbe8e5528824b3ffbad10e1117277e0c
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34256421"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885343"
 ---
 # <a name="atlbasemodule70-structure"></a>Struktura _ATL_BASE_MODULE70
 Używane przez dowolny projekt, który używa ATL.  
@@ -46,31 +46,31 @@ struct _ATL_BASE_MODULE70 {
   
 ## <a name="members"></a>Elementy członkowskie  
  `cbSize`  
- Rozmiar struktury, używane do przechowywania wersji.  
+ Rozmiar struktury, używane do obsługi wersji.  
   
  `m_hInst`  
- **Wystąpienie hInstance** dla tego modułu (plik exe lub dll).  
+ `hInstance` Dla tego modułu (plik exe lub dll).  
   
  `m_hInstResource`  
- Dojście do zasobu wystąpienia domyślnego.  
+ Dojście do zasobu wystąpienie domyślne.  
   
- **m_bNT5orWin98**  
- Informacje o wersji systemu operacyjnego. Używana wewnętrznie przez ATL.  
+ `m_bNT5orWin98`  
+ Informacje o wersji systemu operacyjnego. Używane wewnętrznie przez ATL.  
   
- **dwAtlBuildVer**  
- Przechowuje wersji ATL. Obecnie 0x0700.  
+ `dwAtlBuildVer`  
+ Przechowuje wersję ATL. Obecnie 0x0700.  
   
- **pguidVer**  
- Wewnętrzny identyfikator GUID w ATL.  
+ `pguidVer`  
+ ATL wewnętrzny identyfikator GUID.  
   
- **m_csResource**  
- Używane do dostępu do synchronizowania **m_rgResourceInstance** tablicy. Używana wewnętrznie przez ATL.  
+ `m_csResource`  
+ Używane do synchronizowania dostępu do `m_rgResourceInstance` tablicy. Używane wewnętrznie przez ATL.  
   
- **m_rgResourceInstance**  
- Służy do wyszukiwania zasobów we wszystkich wystąpieniach zasobów, których ATL jest świadome tablicy. Używana wewnętrznie przez ATL.  
+ `m_rgResourceInstance`  
+ Tablica używanych do wyszukiwania zasobów we wszystkich wystąpieniach zasobów, których ATL zdaje sobie sprawę. Używane wewnętrznie przez ATL.  
   
 ## <a name="remarks"></a>Uwagi  
- [_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module) jest zdefiniowany jako element typedef z `_ATL_BASE_MODULE70`.  
+ [_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module) jest zdefiniowany jako element typedef _ATL_BASE_MODULE70.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlcore.h  

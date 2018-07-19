@@ -21,18 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 299c672d65d7568539473dfc284833c2583a2220
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8e0489d46ada0e68456f6ae16e7cd702c892a7b9
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363561"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880118"
 ---
 # <a name="clocalheap-class"></a>Klasa CLocalHeap
-Ta klasa implementuje [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) przy użyciu funkcji lokalnego stosu Win32.  
+Ta klasa implementuje [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) przy użyciu funkcji lokalnej sterty systemu Win32.  
   
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,16 +46,16 @@ class CLocalHeap : public IAtlMemMgr
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CLocalHeap::Allocate](#allocate)|Wywołanie tej metody można przydzielić bloku pamięci.|  
-|[CLocalHeap::Free](#free)|Wywołanie tej metody, aby zwolnić blok pamięci przydzielonej przez ten Menedżer pamięci.|  
-|[CLocalHeap::GetSize](#getsize)|Wywołaj tę metodę, aby pobrać przydzielony rozmiar bloku pamięci przydzielonej przez ten Menedżer pamięci.|  
-|[CLocalHeap::Reallocate](#reallocate)|Wywołaj tę metodę, aby ponownie przydzielić pamięci przydzielonej przez ten Menedżer pamięci.|  
+|[CLocalHeap::Allocate](#allocate)|Wywołaj tę metodę można przydzielić bloku pamięci.|  
+|[CLocalHeap::Free](#free)|Wywołaj tę metodę w celu zwolnienia bloku pamięci przydzielonej przez tego menedżera pamięci.|  
+|[CLocalHeap::GetSize](#getsize)|Wywołaj tę metodę, aby uzyskać przydzielony rozmiar bloku pamięci przydzielonej przez tego menedżera pamięci.|  
+|[CLocalHeap::Reallocate](#reallocate)|Wywołaj tę metodę w celu ponownego przydzielenia pamięci przydzielonej przez tego menedżera pamięci.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CLocalHeap` implementuje funkcje alokacji pamięci przy użyciu funkcji lokalnego stosu Win32.  
+ `CLocalHeap` implementuje funkcje alokacji pamięci za pomocą funkcji lokalnej sterty systemu Win32.  
   
 > [!NOTE]
->  Funkcje sterty lokalnego wolniej niż inne funkcje zarządzania pamięcią i nie zapewnia tylu funkcji. W związku z tym nowe aplikacje powinny używać [stercie funkcji](http://msdn.microsoft.com/library/windows/desktop/aa366711). Są one dostępne w [CWin32Heap](../../atl/reference/cwin32heap-class.md) klasy.  
+>  Funkcje lokalnej sterty wolniej niż inne funkcje zarządzania pamięcią i nie są oferowane jako wiele funkcji. W związku z tym, nowe aplikacje powinny używać [sterty funkcji](http://msdn.microsoft.com/library/windows/desktop/aa366711). Są one dostępne w [CWin32Heap](../../atl/reference/cwin32heap-class.md) klasy.  
   
 ## <a name="example"></a>Przykład  
  Zobacz przykład [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
@@ -69,79 +69,79 @@ class CLocalHeap : public IAtlMemMgr
  **Nagłówek:** atlmem.h  
   
 ##  <a name="allocate"></a>  CLocalHeap::Allocate  
- Wywołanie tej metody można przydzielić bloku pamięci.  
+ Wywołaj tę metodę można przydzielić bloku pamięci.  
   
 ```
 virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nBytes`  
- Żądana liczba bajtów w nowego bloku pamięci.  
+ *nBytes*  
+ Żądana liczba bajtów w nowy blok pamięci.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wskaźnik do rozpoczęcia bloku nowo alokacji pamięci.  
+ Zwraca wskaźnik do początku bloku nowo alokacji pamięci.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie [CLocalHeap::Free](#free) lub [CLocalHeap::Reallocate](#reallocate) zwolnienia pamięci przydzielonej przez tę metodę.  
+ Wywołaj [CLocalHeap::Free](#free) lub [CLocalHeap::Reallocate](#reallocate) zwolnienie pamięci przydzielonej przez tę metodę.  
   
- Implementowane za pomocą [Funkcja LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723) z parametrem flagi **LMEM_FIXED**.  
+ Implementowany przy użyciu [Funkcja LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723) z parametrem flagi LMEM_FIXED.  
   
 ##  <a name="free"></a>  CLocalHeap::Free  
- Wywołanie tej metody, aby zwolnić blok pamięci przydzielonej przez ten Menedżer pamięci.  
+ Wywołaj tę metodę w celu zwolnienia bloku pamięci przydzielonej przez tego menedżera pamięci.  
   
 ```
 virtual void Free(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `p`  
- Wskaźnik do pamięci przydzielonej wcześniej przez tego menedżera pamięci. Wartość NULL jest nieprawidłowa i nie działają.  
+ *p*  
+ Wskaźnik do pamięci uprzednio przydzielonej przez tego menedżera pamięci. Wartość NULL jest prawidłową wartością i nic nie robi.  
   
 ### <a name="remarks"></a>Uwagi  
- Implementowane za pomocą [LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730).  
+ Implementowany przy użyciu [LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730).  
   
 ##  <a name="getsize"></a>  CLocalHeap::GetSize  
- Wywołaj tę metodę, aby pobrać przydzielony rozmiar bloku pamięci przydzielonej przez ten Menedżer pamięci.  
+ Wywołaj tę metodę, aby uzyskać przydzielony rozmiar bloku pamięci przydzielonej przez tego menedżera pamięci.  
   
 ```
 virtual size_t GetSize(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `p`  
- Wskaźnik do pamięci przydzielonej wcześniej przez tego menedżera pamięci.  
+ *p*  
+ Wskaźnik do pamięci uprzednio przydzielonej przez tego menedżera pamięci.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca blok pamięci przydzielony rozmiar w bajtach.  
+ Zwraca rozmiar bloku ilość przydzielonej pamięci w bajtach.  
   
 ### <a name="remarks"></a>Uwagi  
- Implementowane za pomocą [LocalSize](http://msdn.microsoft.com/library/windows/desktop/aa366745).  
+ Implementowany przy użyciu [LocalSize](http://msdn.microsoft.com/library/windows/desktop/aa366745).  
   
 ##  <a name="reallocate"></a>  CLocalHeap::Reallocate  
- Wywołaj tę metodę, aby ponownie przydzielić pamięci przydzielonej przez ten Menedżer pamięci.  
+ Wywołaj tę metodę w celu ponownego przydzielenia pamięci przydzielonej przez tego menedżera pamięci.  
   
 ```
 virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `p`  
- Wskaźnik do pamięci przydzielonej wcześniej przez tego menedżera pamięci.  
+ *p*  
+ Wskaźnik do pamięci uprzednio przydzielonej przez tego menedżera pamięci.  
   
- `nBytes`  
- Żądana liczba bajtów w nowego bloku pamięci.  
+ *nBytes*  
+ Żądana liczba bajtów w nowy blok pamięci.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wskaźnik do rozpoczęcia bloku nowo alokacji pamięci.  
+ Zwraca wskaźnik do początku bloku nowo alokacji pamięci.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie [CLocalHeap::Free](#free) zwolnienia pamięci przydzielonej przez tę metodę.  
+ Wywołaj [CLocalHeap::Free](#free) zwolnienie pamięci przydzielonej przez tę metodę.  
   
- Implementowane za pomocą [LocalReAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366742).  
+ Implementowany przy użyciu [LocalReAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366742).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../../atl/atl-class-overview.md)   
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)   
  [Klasa CComHeap](../../atl/reference/ccomheap-class.md)   
  [Klasa CWin32Heap](../../atl/reference/cwin32heap-class.md)   
  [Klasa CGlobalHeap](../../atl/reference/cglobalheap-class.md)   

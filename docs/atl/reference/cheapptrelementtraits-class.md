@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa4b29f5893a0b1536a087b0c516e6340eca8449
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1aa3921f79e8c368fe4a42c3b56ede27f436e25
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360080"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884103"
 ---
 # <a name="cheapptrelementtraits-class"></a>Klasa CHeapPtrElementTraits
-Ta klasa udostępnia metody statyczne funkcje i definicje typów przydatne podczas tworzenia kolekcji wskaźniki stosu.  
+Ta klasa dostarcza metody, funkcje statyczne i definicje typów przydatne podczas tworzenia kolekcji wskaźniki stosu.  
   
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,23 +41,23 @@ class CHeapPtrElementTraits :
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Typ obiektu do zapisania w klasie kolekcji.  
+ *T*  
+ Typ obiektu, który ma być przechowywany w klasie kolekcji.  
   
- `Allocator`  
+ *Allocator*  
  Klasa alokacji pamięci do użycia. Wartość domyślna to [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CHeapPtrElementTraits::INARGTYPE](#inargtype)|Typ danych służących do dodawania elementów do obiektu klasy kolekcji.|  
-|[CHeapPtrElementTraits::OUTARGTYPE](#outargtype)|Typ danych używany do pobierania elementów z kolekcji klasy obiektu.|  
+|[CHeapPtrElementTraits::INARGTYPE](#inargtype)|Typ danych na potrzeby dodawania elementów do obiektu klasy kolekcji.|  
+|[CHeapPtrElementTraits::OUTARGTYPE](#outargtype)|Typ danych używany do pobierania elementów z obiektu klasy kolekcji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta klasa udostępnia metody statyczne funkcje i definicje typów dla nawiąże tworzenie kolekcji obiektów klasy zawierające wskaźniki stosu. Klasa `CHeapPtrList` pochodną `CHeapPtrElementTraits`.  
+ Ta klasa dostarcza metody, funkcje statyczne i definicje typów dla łatwiejszemu tworzenia typów obiektów klas kolekcji zawierające wskaźniki stosu. Klasa `CHeapPtrList` pochodzi od klasy `CHeapPtrElementTraits`.  
   
  Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-collection-classes.md).  
   
@@ -76,14 +76,14 @@ class CHeapPtrElementTraits :
  **Nagłówek:** atlcoll.h  
   
 ##  <a name="inargtype"></a>  CHeapPtrElementTraits::INARGTYPE  
- Typ danych służących do dodawania elementów do obiektu klasy kolekcji.  
+ Typ danych na potrzeby dodawania elementów do obiektu klasy kolekcji.  
   
 ```
 typedef CHeapPtr<T, Allocator>& INARGTYPE;
 ```  
   
 ##  <a name="outargtype"></a>  CHeapPtrElementTraits::OUTARGTYPE  
- Typ danych używany do pobierania elementów z kolekcji klasy obiektu.  
+ Typ danych używany do pobierania elementów z obiektu klasy kolekcji.  
   
 ```
 typedef T *& OUTARGTYPE;
@@ -92,4 +92,4 @@ typedef T *& OUTARGTYPE;
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
  [Klasa CComHeapPtr](../../atl/reference/ccomheapptr-class.md)   
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

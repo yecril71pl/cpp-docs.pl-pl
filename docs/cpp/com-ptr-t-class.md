@@ -16,28 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ec54735fce39cc54bdb5e396da7c637b889b92c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb343431a52df9fae32bb17f3303738c04385cf5
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947770"
 ---
 # <a name="comptrt-class"></a>_com_ptr_t — Klasa
 **Microsoft Specific**  
   
- A `_com_ptr_t` obiekt hermetyzuje wskaźnika interfejsu COM i nosi nazwę "inteligentne" wskaźnik. Ta klasa szablonu zarządza alokacji zasobów i dezalokacji za pośrednictwem wywołania funkcji **IUnknown** funkcji elementów członkowskich: `QueryInterface`, `AddRef`, i **wersji**.  
+ A `_com_ptr_t` obiekt hermetyzuje wskaźnika interfejsu COM i nosi nazwę "eleganckie" wskaźnik. Tej klasy szablonu zarządza alokacją i dezalokacją za pośrednictwem wywołania funkcji zasobów `IUnknown` elementów członkowskich: `QueryInterface`, `AddRef`, i `Release`.  
   
- Wskaźnika inteligentnego jest zwykle przywołany przez definicję typedef dostarczonych przez **_COM_SMARTPTR_TYPEDEF** makra. To makro przyjmuje nazwę interfejsu i uzyskanie identyfikatora IID i deklaruje specjalizacji `_com_ptr_t` z nazwą interfejsu z dodanym sufiksem z `Ptr`. Na przykład:  
+ Zazwyczaj odwołuje się w zgodnie z definicją typedef, dostarczone przez makra _COM_SMARTPTR_TYPEDEF inteligentnego wskaźnika. To makro przyjmuje nazwę interfejsu i identyfikatora IID i deklaruje specjalizacją `_com_ptr_t` nazwą interfejsu oraz sufiks `Ptr`. Na przykład:  
   
-```  
+```cpp 
 _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));  
 ```  
   
- deklaruje `_com_ptr_t` specjalizacji **IMyInterfacePtr**.  
+ deklaruje `_com_ptr_t` specjalizacji `IMyInterfacePtr`.  
   
- Zestaw [funkcji szablony](../cpp/relational-function-templates.md), nie jest członkiem tego szablonu klasy porównania pomocy technicznej za pomocą wskaźnika inteligentnego po prawej stronie operatora porównania.  
+ Zbiór [funkcji szablonów](../cpp/relational-function-templates.md), niebędących członkami tego szablonu klasy pomocy technicznej porównania z wartością inteligentny wskaźnik po prawej stronie operatora porównania.  
   
-### <a name="construction"></a>Konstrukcji  
+### <a name="construction"></a>Konstrukcja  
   
 |||  
 |-|-|  
@@ -47,24 +48,24 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
 |||  
 |-|-|  
-|[AddRef](../cpp/com-ptr-t-addref.md)|Wywołania `AddRef` funkcji członkowskiej klasy **IUnknown** na wskaźnik hermetyzowany interfejsu.|  
-|[Attach](../cpp/com-ptr-t-attach.md)|Hermetyzuje wskaźnik interfejsu pierwotnego, typu wskaźnika inteligentnego.|  
-|[CreateInstance](../cpp/com-ptr-t-createinstance.md)|Tworzy nowe wystąpienie obiektu podane **CLSID** lub **ProgID**.|  
-|[Detach](../cpp/com-ptr-t-detach.md)|Wyodrębnia i zwraca wskaźnik hermetyzowany interfejsu.|  
-|[GetActiveObject](../cpp/com-ptr-t-getactiveobject.md)|Dołącza do istniejącego wystąpienia obiektu podane **CLSID** lub **ProgID**.|  
-|[GetInterfacePtr](../cpp/com-ptr-t-getinterfaceptr.md)|Zwraca wskaźnik hermetyzowany interfejsu.|  
-|[QueryInterface](../cpp/com-ptr-t-queryinterface.md)|Wywołania `QueryInterface` funkcji członkowskiej klasy **IUnknown** na wskaźnik hermetyzowany interfejsu.|  
-|[Wersja](../cpp/com-ptr-t-release.md)|Wywołania **wersji** funkcji członkowskiej klasy **IUnknown** na wskaźnik hermetyzowany interfejsu.|  
+|[AddRef](../cpp/com-ptr-t-addref.md)|Wywołania `AddRef` funkcji składowej typu `IUnknown` interfejsu zhermetyzowanego wskaźnika.|  
+|[Attach](../cpp/com-ptr-t-attach.md)|Hermetyzuje surowego wskaźnika interfejsu tego inteligentnego wskaźnika typu.|  
+|[CreateInstance](../cpp/com-ptr-t-createinstance.md)|Tworzy nowe wystąpienie obiektu, biorąc pod uwagę `CLSID` lub `ProgID`.|  
+|[Detach](../cpp/com-ptr-t-detach.md)|Wyodrębnia i zwraca wskaźnik zhermetyzowany interfejs.|  
+|[Getactiveobject —](../cpp/com-ptr-t-getactiveobject.md)|Dołącza do istniejącego wystąpienia danego obiektu `CLSID` lub `ProgID`.|  
+|[GetInterfacePtr](../cpp/com-ptr-t-getinterfaceptr.md)|Zwraca wskaźnik zhermetyzowany interfejs.|  
+|[QueryInterface](../cpp/com-ptr-t-queryinterface.md)|Wywołania `QueryInterface` funkcji składowej typu `IUnknown` interfejsu zhermetyzowanego wskaźnika.|  
+|[Wersja](../cpp/com-ptr-t-release.md)|Wywołania `Release` funkcji składowej typu `IUnknown` interfejsu zhermetyzowanego wskaźnika.|  
   
 ### <a name="operators"></a>Operatory  
   
 |||  
 |-|-|  
 |[operator =](../cpp/com-ptr-t-operator-equal.md)|Przypisuje nową wartość do istniejącej `_com_ptr_t` obiektu.|  
-|[operatory ==,! =, \<, >, \<=, > =](../cpp/com-ptr-t-relational-operators.md)|Porównuje obiekt wskaźnika inteligentnego do innego wskaźnika inteligentnego wskaźnik interfejsu pierwotnego, lub **NULL**.|  
-|[Ekstraktory](../cpp/com-ptr-t-extractors.md)|Wyodrębnij hermetyzowany wskaźnika interfejsu COM.|  
+|[operatory ==,! =, \<, >, \<=, > =](../cpp/com-ptr-t-relational-operators.md)|Porównuje obiekt inteligentny wskaźnik do innego wskaźnika inteligentnego, surowego wskaźnika interfejsu, lub wartość NULL.|  
+|[Ekstraktory](../cpp/com-ptr-t-extractors.md)|Wyodrębnij zhermetyzowanego wskaźnika interfejsu COM.|  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<comip.h >  

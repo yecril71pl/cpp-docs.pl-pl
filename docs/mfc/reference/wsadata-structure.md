@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93c98f792e1d72d3e6d4a8e15b8347c653b32f46
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dadc502900285d879f2fd77af69b1fcf08a4ba1e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380087"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880934"
 ---
 # <a name="wsadata-structure"></a>Struktura WSADATA
-`WSADATA` Struktury jest używany do przechowywania informacji inicjowania Windows Sockets zwrócony przez wywołanie do `AfxSocketInit` funkcji globalnej.  
+`WSADATA` Struktury jest używany do przechowywania informacji na temat inicjalizacji Windows Sockets zwracany przez wywołanie `AfxSocketInit` funkcja globalna.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,28 +42,28 @@ struct WSAData {
   
 #### <a name="parameters"></a>Parametry  
  *wVersion*  
- Wersja specyfikacji Windows Sockets, że biblioteki DLL Windows Sockets oczekuje obiekt wywołujący, aby użyć.  
+ Wersja specyfikacji Windows Sockets, że biblioteki DLL Windows Sockets oczekuje, że obiekt wywołujący, aby użyć.  
   
  *wHighVersion*  
- Najwyższa wersja specyfikacji Windows Sockets, która może obsługiwać tę bibliotekę DLL (również kodowany jak powyżej). Zazwyczaj jest to ten sam **wVersion**.  
+ Najwyższa wersja specyfikacji Windows Sockets, który może obsługiwać tę bibliotekę DLL (również kodowane tak jak powyżej). Zazwyczaj jest taka sama jak *wVersion*.  
   
  *szDescription*  
- Ciąg ASCII zerem, do którego biblioteki DLL Windows Sockets kopiuje opis implementacji Windows Sockets, w tym identyfikator dostawcy. Tekst (do 256 znaków) może zawierać żadnych znaków, ale dostawców są cautioned przed tym kontroli i formatowanie znaków: jest najprawdopodobniej użycia, która aplikacja umieści to do wyświetlania (prawdopodobnie obcięte) komunikatu o stanie.  
+ Ciąg ASCII zakończony znakiem null, w której Biblioteka DLL Windows Sockets kopiuje opis implementacji Windows Sockets, w tym identyfikator dostawcy. Tekst (maksymalnie 256 znaków) może zawierać żadnych znaków, ale dostawców są ostrzeżenie przed tym kontroli i formatowanie znaków: najprawdopodobniej użycia, która aplikacja umieści to do trwa do wyświetlania go (prawdopodobnie obcięty) komunikatu o stanie.  
   
  *szSystemStatus*  
- Ciąg ASCII zerem, do którego biblioteki DLL Windows Sockets kopiuje istotne informacje dotyczące stanu i konfiguracji. Biblioteki DLL Windows Sockets należy użyć w tym polu tylko wtedy, gdy informacje mogą być przydatne do użytkownika lub obsługuje personel; go nie należy traktować jako rozszerzenie **szDescription** pola.  
+ Ciąg ASCII zakończony znakiem null, do którego biblioteki DLL Windows Sockets kopiuje odpowiednie informacje o stanie lub konfiguracji. Biblioteki DLL Windows Sockets należy użyć tego pola, tylko wtedy, gdy informacje mogą być przydatne dla użytkownika lub obsługi pracowników nie należy jej w rozszerzenie *szDescription* pola.  
   
  *iMaxSockets*  
- Maksymalna liczba gniazd, które potencjalnie może otworzyć jednego procesu. Implementacja Windows Sockets zapewniają globalnej puli gniazd do przydzielenia do dowolnego procesu; Alternatywnie go przydzielić zasobów na proces dla gniazda. Numer można również odzwierciedlają sposób, w którym skonfigurowano biblioteki DLL Windows Sockets lub oprogramowanie sieciowe. Numer ten może posłużyć surowych wskazuje, czy jest używana przez aplikację implementacji usługi Windows Sockets zapisywania aplikacji. Na przykład X w systemie Windows server może sprawdzić **iMaxSockets** podczas pierwszego uruchomienia: Jeśli jest mniejszy niż 8, aplikacja będzie wyświetlony komunikat o błędzie Jeśli użytkownik ponownie skonfigurować oprogramowanie sieciowe. (Jest to sytuacja, w którym **szSystemStatus** tekst może być używany.) Oczywiście nie ma żadnej gwarancji, określonej aplikacji faktycznie można przydzielić **iMaxSockets** gniazda, ponieważ może być używane inne aplikacje Windows Sockets.  
+ Maksymalna liczba gniazd, które potencjalnie otworzeniem pojedynczego procesu. Implementacja Windows Sockets może zapewnić globalnej puli gniazd dla przydziału procesowi; Alternatywnie go przydzielić zasoby na proces dla gniazda. Numer można również odzwierciedlają sposób, w której została skonfigurowana biblioteka DLL Windows Sockets lub oprogramowanie sieciowe. Numer ten może posłużyć surowych wskazanie, czy może być używany przez aplikację jest implementacja Windows Sockets autorzy aplikacji. Na przykład na serwerze Windows X może również obejmować kontrolę *iMaxSockets* podczas pierwszego uruchomienia: Jeśli jest to mniej niż 8, aplikacja zostanie wyświetlony komunikat o błędzie Jeśli użytkownik ponownie skonfigurować oprogramowanie sieciowe. (Jest to sytuacja, w którym *szSystemStatus* tekst może być używany.) Oczywiście nie ma żadnej gwarancji, która faktycznie przydzielić określonej aplikacji *iMaxSockets* gniazd, ponieważ może być używane inne aplikacje Windows Sockets.  
   
  *iMaxUdpDg*  
- Rozmiar w bajtach największego datagramu protokołu UDP (User Datagram), które mogą być wysyłane lub odbierane przez aplikację usługi Windows Sockets. Jeśli implementacja nakłada brak limitu **iMaxUdpDg** wynosi zero. Wiele implementacji gniazd Berkeley ma niejawne limit 8192 bajtów na datagramy protokołu UDP, (która jest pofragmentowana. Jeśli to konieczne). Implementacja Windows Sockets można nakładają limit, na przykład na podstawie przyznawania bufory ponownego asemblowania fragmentu. Minimalna wartość **iMaxUdpDg** zgodne usługi Windows Sockets implementacja jest 512. Należy pamiętać, że niezależnie od wartości **iMaxUdpDg**, nie zaleca się próbę wysłania emisji datagramu, który jest większy niż maksymalna jednostka transmisji (MTU) dla sieci. (Gniazda interfejsu API systemu Windows nie zapewnia mechanizm, aby dowiedzieć się, rozmiar jednostki MTU, ale musi być mniejsza niż 512 bajtów).  
+ Rozmiar w bajtach największego datagramu protokołu UDP (User Datagram), które mogą być wysyłane lub odbierane przez aplikację Windows Sockets. Jeśli implementacja nakłada bez ograniczeń *iMaxUdpDg* wynosi zero. W wielu implementacjach Berkeley gniazd ma niejawne limit 8192 bajtów na datagramy protokołu UDP, (która jest pofragmentowana. Jeśli to konieczne). Implementacja Windows Sockets może nałożyć limit, na przykład na podstawie alokacji buforów ponownego asemblowania fragmentu. Minimalna wartość *iMaxUdpDg* zgodności usługi Windows Sockets implementacja to 512. Należy pamiętać, że bez względu na wartość *iMaxUdpDg*, nie zaleca się próba wysłania emisji datagramu, który jest większy niż maksymalna jednostka transmisji (MTU) dla sieci. (Interfejs API Windows Sockets nie udostępniają mechanizm odnajdywania rozmiar jednostki MTU, ale musi być nie mniejsza niż 512 bajtów).  
   
  *lpVendorInfo*  
- Daleko wskaźnik do struktury danych specyficznych dla dostawcy. Definicja tej struktury (Jeśli podany) wykracza poza zakres specyfikacji Windows Sockets.  
+ Daleki wskaźnik do struktury danych specyficznych dla dostawcy. Definicja tej struktury (Jeśli podano) wykracza poza zakres specyfikacji Windows Sockets.  
   
 > [!NOTE]
->  W MFC `WSADATA` struktury jest zwracany przez `AfxSocketInit` funkcji, należy wywołać w Twojej `InitInstance` funkcji. Można pobrać struktury i zapisz go w programie, jeśli należy użyć informacji z niego później.  
+>  W MFC `WSADATA` struktury jest zwracany przez `AfxSocketInit` funkcji, która wywołania w swojej `InitInstance` funkcji. Można pobrać struktury i zapisz go w programie, jeśli należy użyć informacji z niego później.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** winsock2.h  

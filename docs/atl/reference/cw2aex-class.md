@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62fd48a34b82e0671d417a882e040a87a7691c01
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 30031a4da36e4efdf91177c983691dda38b426f4
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364001"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882679"
 ---
 # <a name="cw2aex-class"></a>Klasa CW2AEX
-Ta klasa jest używana przez makra konwersji ciągu `CT2AEX`, `CW2TEX`, `CW2CTEX`, i `CT2CAEX`i typedef **CW2A**.  
+Ta klasa jest używana przez makra konwersji ciągów CT2AEX, CW2TEX, CW2CTEX i CT2CAEX i typedef CW2A.  
   
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,7 +41,7 @@ class CW2AEX
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `t_nBufferLength`  
+ *t_nBufferLength*  
  Rozmiar buforu używany w procesie tłumaczenia. Domyślna długość to 128 bajtów.  
   
 ## <a name="members"></a>Elementy członkowskie  
@@ -63,36 +63,36 @@ class CW2AEX
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CW2AEX::m_psz](#m_psz)|Element członkowski danych, która przechowuje ciąg źródłowy.|  
-|[CW2AEX::m_szBuffer](#m_szbuffer)|Bufor statycznych, używany do przechowywania skonwertowany ciąg.|  
+|[CW2AEX::m_psz](#m_psz)|Element członkowski danych, który przechowuje ciąg źródłowy.|  
+|[CW2AEX::m_szBuffer](#m_szbuffer)|Bufor statyczne, używane do przechowywania przekonwertowany ciąg.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli wymagane jest dodatkowe funkcje, użyj `CT2AEX`, `CW2TEX`, `CW2CTEX`, `CT2CAEX`, lub **CW2A** w kodzie.  
+ O ile nie jest wymagane dodatkowe funkcje, należy użyć CT2AEX, CW2TEX, CW2CTEX, CT2CAEX lub CW2A w kodzie.  
   
- Ta klasa zawiera w buforze statycznych stałym rozmiarze, który jest używany do przechowywania wynik konwersji. Jeśli wynik jest za duży, aby mieścił się w buforze statycznych, klasa przydziela pamięć przy użyciu `malloc`, zwalnianie pamięci, gdy obiekt wykracza poza zakres. Dzięki temu, w przeciwieństwie do tekstu makra konwersji dostępne w poprzednich wersjach ATL, ta klasa jest bezpiecznie korzystać w pętli i że nie będzie przepełnienia stosu.  
+ Ta klasa zawiera buforu statyczne stałym rozmiarze, który jest używany do przechowywania wynik konwersji. Jeśli wynik jest za duży, aby mieściły się w statycznych buforu, klasa przydziela pamięć przy użyciu **— funkcja malloc**, zwalniając pamięć, gdy obiekt wykracza poza zakres. Dzięki temu, w przeciwieństwie do tekstu makra konwersji dostępne w poprzednich wersjach biblioteki ATL, ta klasa bezpiecznym rozwiązaniem jest użycie w pętli i że nie będzie to przepełnienia stosu.  
   
- Jeśli klasa próbuje przydzielić pamięci na stercie i kończy się niepowodzeniem, zostanie wywołany `AtlThrow` z argumentem **E_OUTOFMEMORY**.  
+ Jeśli klasa próbuje przydzielić pamięci na stosie i kończy się niepowodzeniem, wywoła `AtlThrow` z nieprawidłowym argumentem E_OUTOFMEMORY.  
   
- Domyślnie klasy konwersji ATL i makra do konwersji Użyj stronę kodową ANSI bieżącego wątku. Do zastąpienia tego zachowania dla określonej konwersji, należy określić strona kodowa jako drugiego parametru konstruktora dla klasy.  
+ Domyślnie klasy konwersji ATL i makra stronę kodową ANSI bieżącego wątku na użytek konwersji. Aby zastąpić to zachowanie dla określonej konwersji z wersji, należy określić strony kodowej jako drugi parametr do konstruktora dla klasy.  
   
  Następujące makra są oparte na tej klasy:  
   
-- `CT2AEX`  
+- CT2AEX  
   
-- `CW2TEX`  
+- CW2TEX  
   
-- `CW2CTEX`  
+- CW2CTEX  
   
-- `CT2CAEX`  
+- CT2CAEX  
   
- Następujący element typedef jest oparty na tej klasy:  
+ Następujący element typedef opiera się na tej klasy:  
   
-- **CW2A**  
+- CW2A  
   
- Aby uzyskać informacje dotyczące tych makr konwersji tekstu, zobacz [ATL i makr konwersji MFC ciąg](string-conversion-macros.md).  
+ Omówienie tych makr konwersji tekstu, zobacz [ATL i makr konwersji ciągu MFC](string-conversion-macros.md).  
   
 ## <a name="example"></a>Przykład  
- Zobacz [ATL i makr konwersji MFC ciąg](string-conversion-macros.md) przykład używanie makr konwersji te parametry.  
+ Zobacz [ATL i makr konwersji ciągu MFC](string-conversion-macros.md) na przykład używanie makr konwersji tych parametrów.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlconv.h  
@@ -106,14 +106,14 @@ CW2AEX(LPCWSTR psz) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `psz`  
+ *psz*  
  Ciąg tekstowy, który ma zostać przekonwertowany.  
   
- `nCodePage`  
- Strona kodowa używane w celu wykonania konwersji. Zawiera omówienie kodu strony parametr dla funkcji Windows SDK [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072) więcej szczegółów.  
+ *nCodePage*  
+ Strona kodowa używany do wykonywania konwersji. Zobacz Omówienie kodu strony parametrów dla funkcji Windows SDK [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072) Aby uzyskać więcej informacji.  
   
 ### <a name="remarks"></a>Uwagi  
- Przydziela bufora używanego w procesie tłumaczenia.  
+ Przydziela bufor używany w procesie tłumaczenia.  
   
 ##  <a name="dtor"></a>  CW2AEX:: ~ CW2AEX  
  Destruktor.  
@@ -126,14 +126,14 @@ CW2AEX(LPCWSTR psz) throw(...);
  Zwalnia przydzielonego buforu.  
   
 ##  <a name="m_psz"></a>  CW2AEX::m_psz  
- Element członkowski danych, która przechowuje ciąg źródłowy.  
+ Element członkowski danych, który przechowuje ciąg źródłowy.  
   
 ```
 LPSTR m_psz;
 ```  
   
 ##  <a name="m_szbuffer"></a>  CW2AEX::m_szBuffer  
- Bufor statycznych, używany do przechowywania skonwertowany ciąg.  
+ Bufor statyczne, używane do przechowywania przekonwertowany ciąg.  
   
 ```
 char m_szBuffer[t_nBufferLength];
@@ -147,7 +147,7 @@ operator LPSTR() const throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca ciąg tekstowy jako typ **LPSTR.**  
+ Zwraca ciąg tekstowy jako typu LPSTR.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CA2AEX](../../atl/reference/ca2aex-class.md)   
@@ -155,4 +155,4 @@ operator LPSTR() const throw();
  [Klasa CA2WEX](../../atl/reference/ca2wex-class.md)   
  [Klasa CW2CWEX](../../atl/reference/cw2cwex-class.md)   
  [Klasa CW2WEX](../../atl/reference/cw2wex-class.md)   
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

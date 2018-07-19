@@ -16,55 +16,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42196e437c8ff2ee43f733e1826b2a19c5dbb0a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c73a8990687633eb5fe6bc15a76563bd1237eaf
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373801"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885780"
 ---
 # <a name="user-interface-features-mfc-application-wizard"></a>Funkcje interfejsu użytkownika, kreator aplikacji MFC
-W tym temacie opisano opcje używane do określania wyglądu aplikacji. Funkcje interfejsu użytkownika dostępne dla projektu są zależne od typu aplikacji określonej w [typ aplikacji, Kreator aplikacji MFC](../../mfc/reference/application-type-mfc-application-wizard.md) Kreatora aplikacji MFC. Na przykład można utworzyć aplikację interfejsu pojedynczego dokumentu, nie można dodać style ramki podrzędnych.  
+W tym temacie opisano opcje, które można użyć, aby określić wygląd aplikacji. Funkcje interfejsu użytkownika dostępnych dla Twojego projektu są zależne od typu aplikacji określony w [typ aplikacji, Kreator aplikacji MFC](../../mfc/reference/application-type-mfc-application-wizard.md) strony Kreatora aplikacji MFC. Na przykład w przypadku tworzenia aplikacji interfejsu pojedynczego dokumentu nie można dodać style ramki podrzędnej.  
   
  **Style ramki głównej**  
  Ustawia funkcje ramki okna głównego aplikacji.  
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**Grubą ramką**|Tworzy okno obramowaniem zmiany rozmiaru. Domyślnie.|  
-|**Pole minimalizacji**|Zawiera pole minimalizacji głównego okna ramowego. Domyślnie.|  
-|**Pole maksymalizacji**|Zawiera pole maksymalizacji głównego okna ramowego. Domyślnie.|  
-|**Zminimalizowany**|Otwiera główną ramkę okna w postaci ikony.|  
-|**Zmaksymalizowane**|Otwiera okno ramowe głównego do pełnego rozmiaru ekranu.|  
-|**Menu systemowe**|Zawiera menu systemowe w głównego okna ramowego. Domyślnie.|  
-|**Pole informacji**|Obejmuje **o** pole dla aplikacji. Użytkownik ma dostęp to pole z poziomu aplikacji **pomocy** menu. Wartość domyślna i zmieniać dopiero po wybraniu **okno dialogowe na podstawie**w [typ aplikacji, Kreator aplikacji MFC](../../mfc/reference/application-type-mfc-application-wizard.md) strony.<br /><br /> **Uwaga** zazwyczaj niedostępne opcję oznacza, że kreatora nie zastosowania opcji do projektu, czy element niedostępny pole wyboru jest zaznaczone lub wyczyszczone. W takim przypadku Kreator zawsze dodaje **o** pola do projektu, chyba że określony projekt jako okna dialogowego na podstawie i usuń zaznaczenie pola.|  
-|**Pasek stanu początkowego**|Dodaje pasek stanu do aplikacji. Pasek stanu zawiera automatyczne wskaźników klawiatury włączony klawisz CAPS LOCK, NUM LOCK i blokady PRZEWIJANIA kluczy i wiersz wiadomości, który wyświetla Pomoc parametrów dla polecenia menu i paska narzędzi przycisków. Po kliknięciu tej opcji doda również polecenia menu, aby wyświetlić lub ukryć pasek stanu. Domyślnie aplikacja ma paska stanu. Nie jest dostępna dla typów aplikacji opartych na oknach dialogowych.|  
-|**Okna podziału**|Udostępnia pasek podziału. Pasek podziału dzieli widoków aplikacji. W wielu aplikacji interfejsu (MDI) dokumentu ramki podrzędnych MDI klienta okno jest oknem podziału, a w aplikacji (SDI) interfejsu pojedynczego dokumentu i wielu aplikacji na najwyższym poziomie dokumentu główną ramkę okna klienta okna podziału. Nie jest dostępna dla typów aplikacji opartych na oknach dialogowych.|  
+|**Grubą ramą**|Tworzy okno które ma granicę z ustalanym. Domyślnie.|  
+|**Minimalizuj okno**|Zawiera pole minimalizacji w oknie głównym ramki. Domyślnie.|  
+|**Maksymalizuj okno**|Zawiera pole maksymalizacji w oknie głównym ramki. Domyślnie.|  
+|**Zminimalizowany**|Zostanie otwarty w oknie głównym ramki jako ikona.|  
+|**Zmaksymalizowany**|Zostanie otwarty w oknie głównym ramki do pełnego rozmiaru ekranu.|  
+|**Menu systemowe**|Zawiera menu systemowe w oknie głównym ramki. Domyślnie.|  
+|**Pole informacji**|Obejmuje **o** pole dla aplikacji. Użytkownik ma dostęp do tego pola z aplikacji **pomocy** menu. Domyślnie i nie będzie zmieniana dopiero po wybraniu **oparte o okna dialogowe**w [typ aplikacji, Kreator aplikacji MFC](../../mfc/reference/application-type-mfc-application-wizard.md) strony.<br /><br /> **Uwaga** zwykle niedostępne opcja wskazuje, że Kreator nie dotyczy opcji projektu, czy pole wyboru niedostępności elementu lub odznaczane. W takim przypadku Kreator zawsze dodaje **o** pole do projektu, chyba że określono projektu jako oparte o okna dialogowe, a następnie usuń zaznaczenie pola.|  
+|**Pasek stanu początkowego**|Dodaje pasek stanu aplikacji. Na pasku stanu zawiera automatyczne wskaźniki klawiatury włączony klawisz CAPS LOCK i NUM LOCK, SCROLL LOCK kluczy i wiersz wiadomości, która wyświetla Pomoc ciągi dla polecenia menu i paska narzędzi przycisków. Kliknięcie tej opcji dodaje także polecenia menu, aby wyświetlić lub ukryć pasek stanu. Domyślnie aplikacja ma pasek stanu. Niedostępne dla typów aplikacji oparta na oknach dialogowych.|  
+|**Podziel okno**|Zawiera pasek podziału. Pasek podziału rozdziela widokach głównych aplikacji. W wielu dokumentów (MDI) aplikację z interfejsem okno klienta ramki podrzędnej MDI jest oknem podziału, oraz w aplikacji interfejsu (SDI) pojedynczego dokumentu oraz wielu aplikacji najwyższego poziomu dokumentu głównej ramki okna klienta okna rozdzielacza. Niedostępne dla typów aplikacji oparta na oknach dialogowych.|  
   
- **Style ramki podrzędne**  
- Określa wygląd i stan początkowy ramek podrzędnych w aplikacji. Style ramki podrzędne są dostępne tylko aplikacje MDI.  
-  
-|Opcja|Opis|  
-|------------|-----------------|  
-|**Pole minimalizacji podrzędne**|Określa, czy okno podrzędne ma przycisk Minimalizuj (domyślnie włączony).|  
-|**Pole maksymalizacji podrzędne**|Określa, czy okno podrzędne znajduje się przycisk Maksymalizuj (domyślnie włączony).|  
-|**Zmaksymalizowane podrzędne**|Określa, czy okno podrzędne jest początkowo zmaksymalizowane przez ustawienie flagi cs.style **ws_maximize —** w [PreCreateWindow](../../mfc/reference/cwnd-class.md#precreatewindow) funkcji członkowskiej klasy `CChildFrame`.|  
-  
- **Paski poleceń (menu/pasek narzędzi/Wstążka)**  
- Wskazuje, czy aplikacja zawiera menu, paski narzędzi i/lub wstążki. Nie jest dostępna dla aplikacji opartych na oknach dialogowych.  
+ **Style ramki podrzędnej**  
+ Określa wygląd i początkowy stan ramki podrzędne w aplikacji. Style ramki podrzędnej są dostępne tylko w aplikacji MDI.  
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**Użyj klasycznego menu**|Określa, czy aplikacja zawiera menu klasycznego, możliwością przeciągania.|  
-|**Użyj klasycznego, dokującego paska narzędzi**|Dodaje standardowych narzędzi systemu Windows do aplikacji. Pasek narzędzi zawiera przyciski do tworzenia nowego dokumentu; Otwieranie i zapisywanie plików dokumentu. Wycinanie, kopiowanie, wklejanie lub drukowanie tekstu. i trybu pomocy. Włączenie tej opcji doda również polecenia menu umożliwia wyświetlanie lub ukrywanie paska narzędzi.|  
-|**Użyj paska narzędzi stylu przeglądarki**|Dodaje paska narzędzi w stylu Eksploratora Internetu do aplikacji.|  
-|**Użyj paska menu i paska narzędzi**|Wskazuje, że aplikacja zawiera pasek możliwością przeciągania menu i paska narzędzi.|  
-|**Zdefiniowane przez użytkownika paski narzędzi i obrazy**|Umożliwia to użytkownikowi dostosowywanie paska narzędzi i obrazy pasków narzędzi w czasie wykonywania.|  
-|**Zachowanie spersonalizowane menu**|Określa, czy menu zawiera pełną listę elementów po otwarciu lub jeśli zawiera tylko polecenia najczęściej wykorzystywanych przez użytkowników.|  
-|**Użyj wstążki**|Używa wstążki pakietu Office 2007 przypominającej aplikacji zamiast na pasku menu lub pasek narzędzi.|  
+|**Pole minimalizacji podrzędne**|Określa, czy okno podrzędne znajduje się przycisk Minimalizuj (domyślnie włączone).|  
+|**Pole maksymalizacji podrzędne**|Określa, czy okno podrzędne znajduje się przycisk Maksymalizuj (domyślnie włączone).|  
+|**Zmaksymalizowane podrzędne**|Określa, czy okno podrzędne początkowo jest zmaksymalizowane, ustawiając cs.style Flaga WS_MAXIMIZE w [PreCreateWindow](../../mfc/reference/cwnd-class.md#precreatewindow) funkcji składowej typu `CChildFrame`.|  
+  
+ **Paski poleceń (menu narzędzi/wstążki)**  
+ Wskazuje, czy aplikacja zawiera menu, paski narzędzi lub Wstążkę. Nie jest dostępna dla aplikacji oparta na oknach dialogowych.  
+  
+|Opcja|Opis|  
+|------------|-----------------|  
+|**Użyj klasycznego menu**|Określa, że aplikacja zawiera menu klasyczne, niewizualnych.|  
+|**Użyj klasycznego, dokującego paska narzędzi**|Dodaje standardowy pasek narzędzi Windows do aplikacji. Pasek narzędzi zawiera przyciski do tworzenia nowego dokumentu. Otwieranie i zapisywanie plików dokumentów. Wycinanie, kopiowanie, wklejanie lub drukowanie tekstu. i trybu pomocy. Włączenie tej opcji dodaje także polecenia menu, aby wyświetlić lub ukryć pasek narzędzi.|  
+|**Użyj paska narzędzi w stylu przeglądarki**|Dodaje pasek narzędzi w stylu Eksploratora Internet do aplikacji.|  
+|**Użyj paska menu i paska narzędzi**|Wskazuje, że aplikacja zawiera pasek przeciąganego menu i paska narzędzi.|  
+|**Paski narzędzi zdefiniowane przez użytkownika i obrazy**|Umożliwia to użytkownikowi dostosowywanie paska narzędzi i paska narzędzi obrazów w czasie wykonywania.|  
+|**Zachowanie menu spersonalizowanego**|Określa, czy menu zawiera pełną listę elementów, po otwarciu lub jeśli zawiera polecenia, używanych przez tego użytkownika najczęściej.|  
+|**Użyj wstążki**|Używa wstążki Office 2007 podobne w aplikacji, zamiast paska menu lub paska narzędzi.|  
   
  **Tytuł okna dialogowego**  
- Aby uzyskać [cdialog — klasa](../../mfc/reference/cdialog-class.md)— aplikacje oparte na tylko ten tytuł pojawi się na pasku tytułu okna dialogowego. Aby edytować tego pola, musisz najpierw wybrać **okno dialogowe na podstawie** opcję w obszarze **typu aplikacji**. Aby uzyskać więcej informacji, zobacz [typ aplikacji, Kreator aplikacji MFC](../../mfc/reference/application-type-mfc-application-wizard.md).  
+ Aby uzyskać [klasa CDialog](../../mfc/reference/cdialog-class.md)— aplikacje oparte na tylko ten tytuł pojawi się na pasku tytułu okna dialogowego. Aby edytować tego pola, należy najpierw wybrać **oparte o okna dialogowe** opcji w obszarze **typ aplikacji**. Aby uzyskać więcej informacji, zobacz [typ aplikacji, Kreator aplikacji MFC](../../mfc/reference/application-type-mfc-application-wizard.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kreator aplikacji MFC](../../mfc/reference/mfc-application-wizard.md)

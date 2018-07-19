@@ -32,15 +32,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 358798e3945378d0fa43fa6e2fa91d686212efab
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 5c32aed9d50e0575893c99a9552c74e6e491ecb9
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040184"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853023"
 ---
 # <a name="colepropertiesdialog-class"></a>Klasa COlePropertiesDialog
-Hermetyzuje okno dialogowe właściwości obiektów OLE wspólne systemu Windows.  
+Hermetyzuje wspólne okno dialogowe właściwości obiektu OLE Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -60,7 +60,7 @@ class COlePropertiesDialog : public COleDialog
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[COlePropertiesDialog::DoModal](#domodal)|Wyświetla okno dialogowe i umożliwia użytkownikowi dokonanie wyboru.|  
+|[COlePropertiesDialog::DoModal](#domodal)|Zostanie wyświetlone okno dialogowe i umożliwia użytkownikowi dokonać wyboru.|  
 |[COlePropertiesDialog::OnApplyScale](#onapplyscale)|Wywoływane przez platformę, gdy skalowanie element dokumentu został zmieniony.|  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
@@ -68,17 +68,17 @@ class COlePropertiesDialog : public COleDialog
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[COlePropertiesDialog::m_gp](#m_gp)|Struktury używane do zainicjowania strony "Ogólne" `COlePropertiesDialog` obiektu.|  
-|[COlePropertiesDialog::m_lp](#m_lp)|Struktura używaną do inicjalizacji na stronie "Link" `COlePropertiesDialog` obiektu.|  
-|[COlePropertiesDialog::m_op](#m_op)|Używany do inicjowania struktury `COlePropertiesDialog` obiektu.|  
+|[COlePropertiesDialog::m_lp](#m_lp)|Struktury używane do zainicjowania strony "Link" `COlePropertiesDialog` obiektu.|  
+|[COlePropertiesDialog::m_op](#m_op)|Struktury używane do zainicjowania `COlePropertiesDialog` obiektu.|  
 |[COlePropertiesDialog::m_psh](#m_psh)|Struktura służy do dodawania dodatkowych niestandardowe strony właściwości.|  
-|[COlePropertiesDialog::m_vp](#m_vp)|Struktury używane w celu dostosowania strony "Widok" `COlePropertiesDialog` obiektu.|  
+|[COlePropertiesDialog::m_vp](#m_vp)|Struktury używane w celu dostosowania strony "View" `COlePropertiesDialog` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wspólne okna dialogowe właściwości obiektów OLE umożliwiają łatwe do wyświetlanie i modyfikowanie właściwości elementu dokumentu OLE w sposób zgodny ze standardami systemu Windows. Te właściwości obejmują między innymi informacje o pliku reprezentowanego przez element dokumentu, opcje wyświetlania ikonę i skalowanie obrazów i informacje na łącze do elementu (jeśli jest połączony element).  
+ Wspólne okna dialogowe właściwości obiektu OLE zapewniają prosty sposób wyświetlania i modyfikacji właściwości elementu dokumentu OLE w sposób zgodny ze standardami Windows. Te właściwości obejmują między innymi informacje o pliku, reprezentowane przez element dokumentu, opcje wyświetlania ikon i skalowanie obrazów oraz informacje na łącze do elementu (jeśli jest połączony element).  
   
- Aby użyć `COlePropertiesDialog` obiektów, najpierw utwórz obiekt przy użyciu `COlePropertiesDialog` konstruktora. Po skonstruowaniu okno dialogowe, wywołaj `DoModal` funkcji członkowskiej, aby wyświetlić okno dialogowe i Zezwalaj użytkownikowi na modyfikowanie właściwości elementu. `DoModal` Zwraca czy użytkownik wybrał OK ( **IDOK**) lub Anuluj ( **IDCANCEL**) przycisku. Oprócz przycisku OK i Anuluj znajduje się przycisk Zastosuj. Po wybraniu Zastosuj wszelkie zmiany wprowadzone do właściwości elementu dokumentu są stosowane do elementu i jego obrazu zostanie automatycznie zaktualizowana, ale pozostaje aktywna.  
+ Aby użyć `COlePropertiesDialog` obiektów, najpierw utwórz obiekt przy użyciu `COlePropertiesDialog` konstruktora. Po został skonstruowany okno dialogowe, wywołania `DoModal` funkcja elementu członkowskiego, aby wyświetlić okno dialogowe i umożliwia użytkownikowi modyfikowanie właściwości elementu. `DoModal` Zwraca, czy użytkownik wybrał przycisk anulowania (IDCANCEL) lub OK (IDOK). Oprócz przyciskami OK i Anuluj ma przycisk Zastosuj. Po wybraniu Zastosuj wszelkie zmiany wprowadzone do właściwości elementu dokumentu są stosowane do elementu, a obraz jest automatycznie aktualizowana, ale pozostaje aktywna.  
   
- [M_psh](#m_psh) elementu członkowskiego danych jest wskaźnikiem do **PROPSHEETHEADER** struktury i w większości przypadków, nie musisz jawnie do niego dostęp. Jedynym wyjątkiem jest, gdy potrzebne są dodatkowe strony właściwości innych niż domyślne strony Ogólne, widok i łącza. W takim przypadku można zmodyfikować `m_psh` element członkowski danych do uwzględnienia stronach niestandardowych przed wywołaniem `DoModal` funkcję elementu członkowskiego.  
+ [M_psh](#m_psh) element członkowski danych jest wskaźnikiem do `PROPSHEETHEADER` struktury i w większości przypadków nie musisz jawnie do niego dostęp. Jedynym wyjątkiem jest, gdy będą potrzebne dodatkowe strony właściwości poza domyślne strony Ogólne, widok i łącza. W takim przypadku można zmodyfikować `m_psh` element członkowski danych do uwzględnienia Twoich stron niestandardowych przed wywołaniem `DoModal` funkcja elementu członkowskiego.  
   
  Aby uzyskać więcej informacji dotyczących okien dialogowych OLE, zobacz artykuł [okna dialogowe w OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -113,7 +113,7 @@ COlePropertiesDialog(
   
 ### <a name="parameters"></a>Parametry  
  *pItem*  
- Wskaźnik do elementu dokument, którego właściwości są używane.  
+ Wskaźnik do elementu dokumentu, którego właściwości są używane.  
   
  *nScaleMin*  
  Minimalny procent dla obrazu elementu dokumentu skalowania.  
@@ -122,103 +122,103 @@ COlePropertiesDialog(
  Maksymalny procent dla obrazu elementu dokumentu skalowania.  
   
  *pParentWnd*  
- Wskaźnik do nadrzędnego okna dialogowego lub właściciela.  
+ Wskaźnik do nadrzędnej lub właściciela okno dialogowe.  
   
 ### <a name="remarks"></a>Uwagi  
- Klasy wspólnych okien dialogowych właściwości obiektów OLE z pochodzi `COlePropertiesDialog` w celu wdrożenia skalowania dla elementów dokumentu. Wszystkie okna dialogowe zaimplementowana przez wystąpienie tej klasy nie obsługuje skalowania elementu dokumentu.  
+ Pochodzi z klasy wspólnych okien dialogowych właściwości obiektu OLE z `COlePropertiesDialog` w celu wdrożenia, skalowania elementów dokumentu. Wszystkie okna dialogowe implementowany przez wystąpienie tej klasy nie obsługuje skalowania element dokumentu.  
   
- Domyślnie okno dialogowe właściwości obiektów OLE typowe ma trzy domyślne strony:  
+ Domyślnie przez wspólne okno dialogowe właściwości obiektu OLE ma trzy strony domyślnej:  
   
 -   Ogólne  
   
-     Ta strona zawiera informacje o systemie dla pliku reprezentowany przez element wybrany dokument. Na tej stronie użytkownika można przekonwertować wybranego elementu do innego typu.  
+     Ta strona zawiera informacje o systemie dla pliku, reprezentowane przez element wybrany dokument. Na tej stronie użytkownika można przekonwertować wybrany element do innego typu.  
   
 -   Widok  
   
-     Ta strona zawiera opcje wyświetlania elementu, Zmiana ikony oraz zmienianie skalowanie obrazu.  
+     Ta strona zawiera opcje wyświetlania elementu, Zmiana ikony i zmienianie skalowania obrazu.  
   
 -   Łącze  
   
-     Ta strona zawiera opcje zmiany lokalizacji połączonego elementu i aktualizowanie połączonego elementu. Na tej stronie użytkownik może przerwać łącze wybranego elementu.  
+     Ta strona zawiera opcje dotyczące zmiany lokalizacji połączony element i aktualizowanie połączonego elementu. Z tej strony użytkownik może przerwać łącze wybranego elementu.  
   
- Aby dodać strony poza tymi, które domyślnie dostępne, zmodyfikuj [m_psh](#m_psh) zmiennej członkowskiej przed zamknięciem konstruktora z `COlePropertiesDialog`-pochodnej klasy. Jest to implementacja zaawansowane `COlePropertiesDialog` konstruktora.  
+ Aby dodać strony poza tymi, które domyślnie dostępne, należy zmodyfikować [m_psh](#m_psh) zmiennej składowej przed opuszczeniem konstruktora obiektu usługi `COlePropertiesDialog`-klasy pochodnej. Jest to zaawansowana implementacja `COlePropertiesDialog` konstruktora.  
   
 ##  <a name="domodal"></a>  COlePropertiesDialog::DoModal  
- Wywołanie tej funkcji Członkowskich, aby wyświetlić okno dialogowe właściwości obiektów OLE wspólne systemu Windows i Zezwalaj użytkownikom na wyświetlanie i/lub zmienić różne właściwości element dokumentu.  
+ Wywołaj tę funkcję elementu członkowskiego, aby wyświetlić wspólne okno dialogowe właściwości obiektu OLE Windows i umożliwia użytkownikowi wyświetlanie i/lub zmienić różne właściwości element dokumentu.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- **IDOK** lub **IDCANCEL** przypadku powodzenia; w przeciwnym razie wartość 0. **IDOK** i **IDCANCEL** są stałe, które wskazują, czy użytkownik wybrał przycisk OK, lub przycisk Anuluj.  
+ IDOK lub IDCANCEL, jeśli to się powiedzie; w przeciwnym razie 0. IDOK i IDCANCEL są stałe, które wskazują, czy użytkownik wybrał przycisk OK, lub przycisk Anuluj.  
   
- Jeśli **IDCANCEL** jest zwracany, należy wywołać systemu Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) funkcji, aby ustalić, czy wystąpił błąd.  
+ Jeśli zwracana jest IDCANCEL, można wywołać Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) funkcję, aby ustalić, czy wystąpił błąd.  
   
 ##  <a name="m_gp"></a>  COlePropertiesDialog::m_gp  
- Struktura typu [OLEUIGNRLPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687297)używane do zainicjowania strony Ogólne okna dialogowego właściwości obiektu OLE.  
+ Struktury typu [OLEUIGNRLPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687297), który jest używany do zainicjowania strony Ogólne okna dialogowego właściwości obiektu OLE.  
   
 ```  
 OLEUIGNRLPROPS m_gp;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ta strona zawiera typ i rozmiar osadzenia i zezwala użytkownikowi na dostęp do okna dialogowego Convert. Ta strona zawiera również link docelowy Jeśli obiekt jest łącze.  
+ Ta strona pokazuje typ i rozmiar osadzania i pozwala użytkownikowi na dostęp do okna dialogowego konwersji. Ta strona zawiera również miejsce docelowe łącza czy obiekt jest linkiem.  
   
- Aby uzyskać więcej informacji na temat **OLEUIGNRLPROPS** struktury, zobacz zestaw Windows SDK.  
+ Aby uzyskać więcej informacji na temat `OLEUIGNRLPROPS` struktury, zobacz zestaw Windows SDK.  
   
 ##  <a name="m_lp"></a>  COlePropertiesDialog::m_lp  
- Struktura typu [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735)używane do zainicjowania łącza strony okna dialogowego właściwości obiektu OLE.  
+ Struktury typu [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735), który jest używany do zainicjowania strony łącze okna dialogowego właściwości obiektu OLE.  
   
 ```  
 OLEUILINKPROPS m_lp;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ta strona zawiera lokalizację połączonego elementu i umożliwia użytkownikowi aktualizacji lub przerwać łącze do elementu.  
+ Ta strona pokazuje lokalizację połączony element i pozwala użytkownikowi na aktualizowanie lub przerwać łącze do elementu.  
   
- Aby uzyskać więcej informacji na temat **OLEUILINKPROPS** struktury, zobacz zestaw Windows SDK.  
+ Aby uzyskać więcej informacji na temat `OLEUILINKPROPS` struktury, zobacz zestaw Windows SDK.  
   
 ##  <a name="m_op"></a>  COlePropertiesDialog::m_op  
- Struktura typu [OLEUIOBJECTPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687199), używana zainicjować okno dialogowe właściwości obiektów OLE wspólnej.  
+ Struktury typu [OLEUIOBJECTPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687199), który jest używany do zainicjowania wspólne okno dialogowe właściwości obiektu OLE.  
   
 ```  
 OLEUIOBJECTPROPS m_op;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ta struktura zawiera elementy członkowskie używany do inicjowania strony Ogólne, łączy i widoku.  
+ Ta struktura zawiera elementy członkowskie, używane do zainicjowania ogólne, Link i widoku strony.  
   
- Aby uzyskać więcej informacji, zobacz **OLEUIOBJECTPROPS** i [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735) struktury w zestawie Windows SDK.  
+ Aby uzyskać więcej informacji, zobacz OLEUIOBJECTPROPS i [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735) struktur w zestawie Windows SDK.  
   
 ##  <a name="m_psh"></a>  COlePropertiesDialog::m_psh  
- Struktura typu [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546), której członkowie przechowywania właściwości obiektu okna dialogowego.  
+ Struktury typu [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546), której członkowie przechowywania właściwości obiektu okna dialogowego.  
   
 ```  
 PROPSHEETHEADER m_psh;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Po konstruowania `COlePropertiesDialog` obiektu, można użyć `m_psh` można ustawić różne aspekty okna dialogowego przed wywołaniem `DoModal` funkcję elementu członkowskiego.  
+ Po konstruowanie `COlePropertiesDialog` obiektu, możesz użyć `m_psh` można ustawić różne aspekty okno dialogowe przed wywołaniem `DoModal` funkcja elementu członkowskiego.  
   
  Jeśli zmodyfikujesz `m_psh` element członkowski danych bezpośrednio, spowoduje zastąpienie wszelkich zachowanie domyślne.  
   
- Aby uzyskać więcej informacji na temat **PROPSHEETHEADER** struktury, zobacz zestaw Windows SDK.  
+ Aby uzyskać więcej informacji na temat `PROPSHEETHEADER` struktury, zobacz zestaw Windows SDK.  
   
 ##  <a name="m_vp"></a>  COlePropertiesDialog::m_vp  
- Struktura typu [OLEUIVIEWPROPS](http://msdn.microsoft.com/library/windows/desktop/ms693751)używane do zainicjowania strony widoku okna dialogowego właściwości obiektu OLE.  
+ Struktury typu [OLEUIVIEWPROPS](http://msdn.microsoft.com/library/windows/desktop/ms693751), który jest używany do zainicjowania strony widoku okna dialogowego właściwości obiektu OLE.  
   
 ```  
 OLEUIVIEWPROPS m_vp;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ta strona umożliwia użytkownikowi przełączanie się między "zawartość" i "odpowiednikiem" widoki obiektu i zmienić jej skalowanie w kontenerze. Również umożliwia użytkownikowi dostęp do okna dialogowego Zmień ikonę, gdy obiekt jest wyświetlany w postaci ikony.  
+ Ta strona umożliwia użytkownikowi przełączanie się między "treści" i "ikony" widoki obiektu i zmienić jej skalowanie w kontenerze. Umożliwia również użytkownikom dostęp do okna dialogowego Zmień ikonę po obiekcie są wyświetlane jako ikona.  
   
- Aby uzyskać więcej informacji na temat **OLEUIVIEWPROPS** struktury, zobacz zestaw Windows SDK.  
+ Aby uzyskać więcej informacji na temat `OLEUIVIEWPROPS` struktury, zobacz zestaw Windows SDK.  
   
 ##  <a name="onapplyscale"></a>  COlePropertiesDialog::OnApplyScale  
- Wywoływane przez platformę, gdy zmieniono wartość skalowania i wybrano OK lub Zastosuj.  
+ Wywoływane przez platformę, gdy zmieniono wartość skalowania i OK lub Zastosuj został wybrany.  
   
 ```  
 virtual BOOL OnApplyScale(
@@ -229,25 +229,25 @@ virtual BOOL OnApplyScale(
   
 ### <a name="parameters"></a>Parametry  
  *pItem*  
- Wskaźnik do elementu dokument, którego właściwości są używane.  
+ Wskaźnik do elementu dokumentu, którego właściwości są używane.  
   
  *nCurrentScale*  
- Liczbowa wartość skalowania okna dialogowego.  
+ Wartość liczbową o skali okna dialogowego.  
   
  *bRelativeToOrig*  
- Wskazuje, czy skalowanie stosuje się do oryginalnego rozmiaru element dokumentu.  
+ Wskazuje, czy skalowanie mają zastosowanie do oryginalnego rozmiaru element dokumentu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli obsługiwane; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli obsługiwane; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja nie działa. Konieczne jest przesłonięcie tej funkcji, aby włączyć formanty skalowania.  
+ Domyślna implementacja nic nie robi. Musisz przesłonić tę funkcję, aby włączyć kontrolki skalowania.  
   
 > [!NOTE]
->  Przed wyświetleniem wspólne okno dialogowe właściwości obiektu OLE, struktura wywołuje tę funkcję z **NULL** dla *pItem* i 1 dla *nCurrentScale*. Jest to realizowane ustalenie skalowania kontrolki powinno być włączone.  
+>  Przed wyświetleniem wspólne okno dialogowe właściwości obiektu OLE, struktura wywołuje tę funkcję z wartość NULL w przypadku *pItem* i 1 dla *nCurrentScale*. W ten sposób ustalić skalowania kontrolki powinno być włączone.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykładowe MFC OK](../../visual-cpp-samples.md)   
+ [Próbki MFC OK](../../visual-cpp-samples.md)   
  [Klasa COleDialog](../../mfc/reference/coledialog-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [Klasa COleDialog](../../mfc/reference/coledialog-class.md)   

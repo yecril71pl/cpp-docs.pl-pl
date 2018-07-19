@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ca25ca31475d2870e62d00676e7bf3717c10fa3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ccff761cb9b738de9e2f0debc470746d1482ab56
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414748"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940371"
 ---
 # <a name="comptrtgetactiveobject"></a>_com_ptr_t::GetActiveObject
 **Microsoft Specific**  
   
- Dołącza do istniejącego wystąpienia obiektu podane **CLSID** lub **ProgID**.  
+ Dołącza do istniejącego wystąpienia danego obiektu `CLSID` lub `ProgID`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,25 +44,25 @@ HRESULT GetActiveObject(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `rclsid`  
- **CLSID** obiektu.  
+ *rclsid*  
+ `CLSID` Obiektu.  
   
- `clsidString`  
- Ciąg Unicode, która przechowuje albo **CLSID** (począwszy od "**{**") lub **ProgID**.  
+ *clsidString*  
+ Ciąg Unicode, który zawiera jedną `CLSID` (począwszy od "**{**") lub `ProgID`.  
   
- `clsidStringA`  
- Ciąg wielobajtowy przy użyciu strony kodowej ANSI, którym jest przechowywana albo **CLSID** (począwszy od "**{**") lub **ProgID**.  
+ *clsidStringA*  
+ Wielobajtowy ciąg przy użyciu stronę kodową ANSI, który zawiera jedną `CLSID` (począwszy od "**{**") lub `ProgID`.  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołanie funkcji tych elementów członkowskich `GetActiveObject` pobrać wskaźnika do uruchomionego obiektu, który został zarejestrowany z OLE, a następnie typ interfejsu zapytania dotyczące wskaźnika inteligentnego. Wynikowa wskaźnika jest następnie hermetyzowany w ramach tego `_com_ptr_t` obiektu. **Wersja** jest wywoływana, aby zmniejszyć licznika odwołań do wcześniej hermetyzowany wskaźnika. Ta procedura zwraca `HRESULT` do wskazania powodzenia lub niepowodzenia.  
+ Wywołania tych funkcji elementów członkowskich `GetActiveObject` pobrać wskaźnika do uruchomionego obiektu, który został zarejestrowany przy użyciu OLE i następnie typ interfejsu zapytania dotyczące tej inteligentnego wskaźnika. Wskaźnik wynikowy następnie są hermetyzowane w ramach tej `_com_ptr_t` obiektu. `Release` jest wywoływana, aby zmniejszyć licznikiem odwołań do wcześniej zhermetyzowanego wskaźnika. Ta procedura zwraca wartość HRESULT do wskazania powodzenia lub niepowodzenia.  
   
--   **GetActiveObject (**`rclsid`**)** dołącza do istniejącego wystąpienia obiektu podane **CLSID**.      
+-   **Getactiveobject — (**`rclsid`**)** dołącza do istniejącego wystąpienia danego obiektu `CLSID`.      
   
--   **GetActiveObject (**`clsidString`**)** dołącza do istniejącego wystąpienia obiektu podany ciąg Unicode, która przechowuje albo **CLSID** (począwszy od "**{**") lub **ProgID**.      
+-   **Getactiveobject — (**`clsidString`**)** dołącza do istniejącego wystąpienia obiektu, który został podany ciąg Unicode, który zawiera jedną `CLSID` (począwszy od "**{**") lub `ProgID`.      
   
--   **GetActiveObject (**`clsidStringA`**)** dołącza do istniejącego wystąpienia obiektu podany ciąg znaków wielobajtowych, który przechowuje albo **CLSID** (począwszy od "**{** ") lub **ProgID**.     Wywołania [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), który zakłada, że ten ciąg w stronę kodową ANSI zamiast strony kodowej OEM.  
+-   **Getactiveobject — (**`clsidStringA`**)** dołącza do istniejącego wystąpienia obiektu, który został podany ciąg znaku wielobajtowego, który zawiera jedną `CLSID` (począwszy od "**{**") lub `ProgID`.     Wywołania [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), która zakłada, że ten ciąg jest w stronę kodową ANSI zamiast stronę kodową OEM.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [_com_ptr_t, klasa](../cpp/com-ptr-t-class.md)

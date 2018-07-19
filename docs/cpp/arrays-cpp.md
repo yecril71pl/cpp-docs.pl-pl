@@ -16,18 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fe8e5f53d05ac159fd577b260268f297b59d146
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 60c7baaaf20158c29c34aea364e70c0d040a42e3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947867"
 ---
 # <a name="arrays-c"></a>Tablice (C++)
-Tablica jest kolekcją jak w przypadku obiektów. Najprostszym przypadku tablicy jest wektorem, który może być deklarowana przez następująca sekwencja:  
+Tablica jest zbiorem podobnych obiektów. Najprostszym przypadku tablicy jest wektor, który może być zdeklarowany przez poniższą sekwencję:  
   
 ```  
   
-      decl-specifier identifier [ constant-expression ]  
+decl-specifier identifier [ constant-expression ]  
 decl-specifier identifier []  
 decl-specifier identifer [][ constant-expression] . . .  
 decl-specifier identifier [ constant-expression ]  
@@ -36,27 +37,27 @@ decl-specifier identifier [ constant-expression ]
   
  1. Specyfikator deklaracji:  
   
--   Specyfikator klasy magazynu opcjonalne.  
+-   Specyfikator klasy magazynowania opcjonalne.  
   
--   Opcjonalne **const** i/lub `volatile` specyfikatory.  
+-   Opcjonalnie **const** i/lub **volatile** specyfikatorów.  
   
--   Nazwa typu elementu tablicy.  
+-   Nazwa typu elementów tablicy.  
   
- 2. Deklarator:  
+ 2. Specyfikator:  
   
 -   Identyfikator.  
   
--   Wyrażenie stałe typu całkowitego w nawiasach, **[].** Jeśli wiele wymiarów zadeklarowane za pomocą dodatkowe nawiasy, można pominąć stałego wyrażenia na pierwszy zestaw nawiasów.  
+-   Wyrażenie stałe typu Liczba całkowita ujęte w nawiasy kwadratowe, **[]**. Jeśli wiele wymiarów są deklarowane przy użyciu dodatkowe nawiasy, można pominąć wyrażenie stałe na pierwszy zestaw nawiasów.  
   
--   Opcjonalne dodatkowe nawiasy otaczające wyrażenia stałe.  
+-   Opcjonalne dodatkowe nawiasy zamykające stałe wyrażenia.  
   
- 3. Opcjonalne inicjatora.  Zobacz [inicjatory](../cpp/initializers.md).  
+ 3. Opcjonalny inicjator.  Zobacz [inicjatory](../cpp/initializers.md).  
   
- Liczba elementów w tablicy jest podawany przez wyrażenie stałe. Pierwszy element w tablicy jest 0th element i jest ostatnim elementem (*n*-1) elementu, gdzie *n* jest liczba elementów tablicy może zawierać. *Wyrażenia* musi być typem całkowitym i musi być większa niż 0. Zerowy rozmiar tablicy jest dozwolony tylko wtedy, gdy tablica jest ostatnim polu `struct` lub **Unii** oraz gdy są włączone rozszerzenia Microsoft (/Ze).  
+ Liczba elementów w tablicy jest podana przez wyrażenie stałe. Pierwszy element w tablicy jest elementem 0, a wartość ostatniego elementu wynosi (*n*-1) elementu, gdzie *n* jest liczba elementów tablicy mogą zawierać. *Wyrażenie_stałe* musi być typu całkowitego i musi być większa niż 0. Tablicą o rozmiarze zero jest legalna tylko wtedy, gdy tablica jest ostatnim polu **struktury** lub **Unii** i jeżeli są włączone rozszerzenia Microsoft (/Ze).  
   
- Poniższy przykład przedstawia sposób definiowania tablicy w czasie wykonywania:  
+ Poniższy przykład pokazuje, jak zdefiniować tablicę w czasie wykonywania:  
   
-```  
+```cpp 
 // arrays.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -77,22 +78,22 @@ int main() {
 }  
 ```  
   
- Tablice typów pochodnych i w związku z tym mogą zostać utworzone na podstawie żadnego innego typu pochodnego lub podstawowych z wyjątkiem funkcji, odwołań, oraz `void`.  
+ Tablice są typami pochodnymi i dlatego mogą być wykonany z żadnych innych pochodnego lub typu podstawowegoz wyjątkiem funkcji, odwołań, a **void**.  
   
- Tablice utworzone na podstawie tablic są tablice wielowymiarowe. Te tablice wielowymiarowe są określane przez umieszczenie wiele stałych wyrażeń w nawiasach kwadratowych w sekwencji. Rozważmy na przykład tej deklaracji:  
+ Tablice wykonane z innych tablic są tablicami wielowymiarowymi. Te Wielowymiarowe tablice są określone poprzez umieszczenie wielu stałych wyrażeń w nawiasach kwadratowych w sekwencji. Na przykład rozważmy tę deklarację:  
   
-```  
+```cpp 
 int i2[5][7];  
 ```  
   
- Określa tablicę typu `int`, koncepcyjnie uszeregowanych w macierzy dwuwymiarowa pięć wierszy i kolumn siedmiu, jak pokazano na poniższej ilustracji:  
+ Określa on tablicę typu **int**, koncepcyjnie ułożoną w dwuwymiarowej macierzy pięciu wierszy i siedmiu kolumn, jak pokazano na poniższej ilustracji:  
   
- ![Koncepcyjny układ multi&#45;tablicą wielowymiarową](../cpp/media/vc38rc1.gif "vc38RC1")  
+ ![Koncepcyjny układ wielu&#45;tablicą wielowymiarową](../cpp/media/vc38rc1.gif "vc38RC1")  
 Koncepcyjny układ tablicy wielowymiarowej  
   
- W deklaracjach multidimensioned tablic, których listy inicjatorów (zgodnie z opisem w [inicjatory](../cpp/initializers.md)), można pominąć wyrażenie stałe, który określa granice wymiar. Na przykład:  
+ W deklaracjach inicjującą tablic, które posiadają listę (zgodnie z opisem w [inicjatory](../cpp/initializers.md)), można pominąć wyrażenie stałe, które określają granice dla pierwszego wymiaru. Na przykład:  
   
-```  
+```cpp 
 // arrays2.cpp  
 // compile with: /c  
 const int cMarkets = 4;  
@@ -104,7 +105,7 @@ double TransportCosts[][cMarkets] = {
 };  
 ```  
   
- Poprzedniej deklaracji definiuje tablicę, która jest trzy wiersze przez cztery kolumny. Fabryki reprezentują wiersze i kolumny reprezentują rynkach, do których wysłać fabryk. Wartości są kosztów transportu z fabryki na rynku. Pierwszy wymiar tablicy pozostało, ale kompilator wypełnia ją znaleźć, sprawdzając inicjatora.  
+ Poprzedzająca deklaracja określa tablicę składającą się z trzech wierszy i czterech kolumn. Wiersze reprezentują fabryki, a kolumny reprezentują rynki, na które fabryki dostarczają. Dopuszczalne wartości to koszt transportu z fabryk na rynki. Pierwszy wymiar tablicy jest wykluczony, ale kompilator wypełnia go poprzez zbadanie inicjatora.  
   
  Tematy w tej sekcji:  
   
@@ -119,9 +120,9 @@ double TransportCosts[][cMarkets] = {
 -   [Porządkowanie tablic C++](../cpp/ordering-of-cpp-arrays.md)  
   
 ## <a name="example"></a>Przykład  
- Techniki pominięcie specyfikacji granice wymiar tablicy wielowymiarowej można także w deklaracji funkcji w następujący sposób:  
+ Technika pomijania specyfikacji powiązań dla pierwszego wymiaru wielowymiarowej tablicy może również służyć w deklaracjach funkcji w następujący sposób:  
   
-```  
+```cpp 
 // multidimensional_arrays.cpp  
 // compile with: /EHsc  
 // arguments: 3  
@@ -173,7 +174,7 @@ The minimum cost to Market 3 is: 17.29
 ```  
   
 ## <a name="comments"></a>Komentarze  
- Funkcja `FindMinToMkt` są zapisywane w taki sposób, że dodawanie nowych fabryki nie wymaga żadnych zmian kodu, po prostu ponownej kompilacji.  
+ Funkcja `FindMinToMkt` są zapisywane w taki sposób, że dodanie nowych fabryk nie wymaga żadnych zmian w kodzie, tylko ponownej kompilacji.  
   
 ## <a name="see-also"></a>Zobacz też  
  

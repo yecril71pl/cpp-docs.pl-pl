@@ -1,5 +1,5 @@
 ---
-title: Zapraszamy ponownie do języka C++ (Modern C++) | Dokumentacja firmy Microsoft
+title: Witamy z powrotem na C++ (Modern C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,41 +12,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63e73657c7e018d2a4eb71170561e310aeba9d5b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 220c8f27aec52fe707e0482eb041ea71c5bd8291
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424870"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939380"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Zapraszamy ponownie do języka C++ (Modern C++)
-C++ jest jednym z najpopularniejszych języków programowania na świecie. Programy dobrze napisane w języku C++ są szybkie i wydajne. Język jest bardziej elastyczna niż innych języków, ponieważ służy do tworzenia szerokiej gamy aplikacji — od fun i gry atrakcyjnych, wysokiej wydajności naukowych oprogramowaniem, sterowników urządzeń, osadzonych programy i aplikacje klienta systemu Windows. Ponad 20 lat C++ został użyty do rozwiązywania problemów, takich jak te i wiele innych. Co może być niemożliwe jest coraz programistów języka C++ ma złożony dowdy programowania stylu języka C wczoraj oraz ma zamiast tego donned nowoczesnych wersji języka C++.  
+Język C++ jest jednym z najczęściej używanych języków programowania na świecie. Dobrze napisane programy ++ są szybkie i wydajne. Język jest bardziej elastyczny niż inne języki, ponieważ służy do tworzenia szerokiej gamy aplikacji — od zabawnych i emocjonujących gier do wysokiej wydajności naukowego oprogramowania, sterowników urządzeń, programów osadzonych i aplikacji klienckich Windows. Ponad 20 lat firma C++ został użyty do rozwiązywania problemów, takich jak te i wiele innych. Co możesz nie znać jest, że rosnąca liczba programistów C++ ma składanych zapasową wyświechtanego stylu programowania C już przeszłość i przyjęła nowoczesny C++, zamiast tego.  
   
- Jeden z oryginalnego wymagania dla języka C++ jest zgodność z poprzednimi wersjami z językiem C. Od tego czasu powstał C++ za pomocą kilku iteracji — C za pomocą klasy, a następnie oryginalnego specyfikacja języka C++ i następnie wiele udoskonaleń kolejnych. C++ z powodu tego dziedzictwa jest często określany jako języka programowania wielu modelu. W języku C++ możesz to zrobić wyłącznie procedurach programowania stylu języka C, która obejmuje raw wskaźników, tablic ciągów znaków zakończony znakiem null, struktur danych niestandardowych i inne funkcje, które mogą umożliwić doskonałą wydajność, ale można też zduplikować usterki i złożoności.  Ponieważ programowania w języku C-style jest zawsze duże perils, takich jak te, jednym z celów założenia dla języka C++ było programy zarówno bezpieczne i łatwiejsze do zapisu, rozszerzać i konserwacji. Na wczesnym etapie C++ przyjętych wzorcami programowania, takich jak programowanie zorientowane obiektowo. Całościowo funkcje zostały dodane do języka, wraz z wysokiej przetestowane standardowych bibliotek struktur danych i algorytmów. Jest te dodatki, które mają możliwe stylu modern C++.  
+ Jednym z pierwotnych wymagań w zakresie języka C++ była zgodność ze starszymi wersjami przy użyciu języka C. Od tamtej pory C++ został przekształcony za pomocą kilku iteracji — C z klasami, a następnie pierwotną specyfikacją języka C++ i następnie wieloma kolejnymi rozszerzeniami. Z powodu tego dziedzictwa C++ często nazywa się wielo paradygmowym językiem programowania. W języku C++ można wykonać czysto proceduralne programowania stylu C, które obejmuje surowe wskaźniki, tablice, ciągi znaków zakończone symbolem null, struktury danych niestandardowych i inne funkcje, które mogą umożliwić doskonałą wydajność, ale także mogą mnożyć błędy i złożoności.  Ponieważ programowania stylu C jest obarczone zagrożeniami takimi jak te, jednym z celów założenia dla języka C++ jest wykonywanie programów zarówno bezpiecznego typu i łatwiejsze do pisania, rozszerzenia i utrzymywania. Na wczesnym etapie C++ przyjął modele programowania takich jak programowanie zorientowane obiektowo. W ciągu lat funkcje zostały dodane do języka, łącznie z wysoce testowanymi bibliotekami standardowymi struktur danych i algorytmów. To te dodatki, które umożliwiły współczesny styl C++ możliwe.  
   
- Zwrócono szczególną uwagę na nowoczesnych wersji języka C++:  
+ Podkreśla nowoczesny język C++:  
   
--   Zakres opartego na stosie, zamiast stosu lub statycznego zakresu globalnego.  
+-   Zakres oparty na stosie, zamiast stosu lub stercie lub globalnego zakresu statycznego.  
   
--   Wnioskowanie o typie automatycznie zamiast jawnego typu nazw.  
+-   Auto wnioskowanie zamiast nazw typu jawnego.  
   
--   Wskaźniki inteligentne zamiast wskaźniki raw.  
+-   Sprytne wskaźniki zamiast surowych wskaźników.  
   
--   `std::string` i `std::wstring` typów (zobacz [ \<ciąg >](../standard-library/string.md)) zamiast raw `char[]` tablic.  
+-   `std::string` i `std::wstring` typów (zobacz [ \<ciągu >](../standard-library/string.md)) a nie raw `char[]` tablic.  
   
--   [Standardowa biblioteka C++](../standard-library/cpp-standard-library-header-files.md) , takich jak kontenery `vector`, `list`, i `map` zamiast tablice raw lub niestandardowych kontenerów. Zobacz [ \<wektor >](../standard-library/vector.md), [ \<listy >](../standard-library/list.md), i [ \<mapy >](../standard-library/map.md).  
+-   [Standardowa biblioteka C++](../standard-library/cpp-standard-library-header-files.md) kontenery `vector`, `list`, i `map` zamiast surowych tablic czy kontenerów niestandardowych. Zobacz [ \<wektor >](../standard-library/vector.md), [ \<listy >](../standard-library/list.md), i [ \<mapy >](../standard-library/map.md).  
   
--   Standardowa biblioteka C++ [algorytmy](../standard-library/algorithm.md) zamiast ręcznie kodowanego te.  
+-   Standardowa biblioteka C++ [algorytmy](../standard-library/algorithm.md) zamiast ręcznie kodowanych.  
   
--   Wyjątki, raport i obsługi błędów.  
+-   Wyjątki, raport i obsługują warunki błędu.  
   
--   Blokady bez komunikacji między wątku przy użyciu standardowej biblioteki C++ `std::atomic<>` (zobacz [ \<atomic >](../standard-library/atomic.md)) zamiast innych mechanizmów komunikacji między wątku.  
+-   Komunikacja między wątku komunikacji przy użyciu standardowej biblioteki języka C++ wolne od blokady `std::atomic<>` (zobacz [ \<atomic >](../standard-library/atomic.md)) zamiast innych mechanizmów komunikacji między wątku.  
   
--   Wbudowany [funkcje lambda](../cpp/lambda-expressions-in-cpp.md) zamiast małe funkcje zaimplementowana oddzielnie.  
+-   Wbudowane [funkcje lambda](../cpp/lambda-expressions-in-cpp.md) zamiast małych funkcji realizowanych oddzielnie.  
   
--   Na podstawie zakresu dla pętli do zapisania pętle bardziej niezawodne, które współpracują z tablic, kontenery standardowa biblioteka C++ i środowiska wykonawczego systemu Windows w postaci `for ( for-range-declaration : expression )`. Jest to część obsługi języka podstawowego. Aby uzyskać więcej informacji, zobacz [opartej na zakresie — instrukcja (C++)](../cpp/range-based-for-statement-cpp.md).  
+-   Zakresu pętli for opierających do pisania bardziej niezawodnych pętli, współpracujących z tablic, kontenery standardowej biblioteki języka C++ i środowiska wykonawczego Windows w postaci `for ( for-range-declaration : expression )`. Jest to część obsługi rdzenia języka. Aby uzyskać więcej informacji, zobacz [Range-based for Statement (C++)](../cpp/range-based-for-statement-cpp.md).  
   
- Również powstał języka C++, do samej siebie. Porównaj poniższe fragmenty kodu. Ta pokazuje, jak używać w języku C++:  
+ Sam język C++ także się rozwinął. Porównaj następujące fragmenty kodu. To pokazuje jak kiedyś w języku C++:  
   
 ```cpp  
 
@@ -78,7 +78,7 @@ void f()
 } // end f()
 ```
 
- Oto jak to samo odbywa się w nowoczesnych wersji języka C++:  
+ Poniżej przedstawiono, jak to samo jest realizowane w nowoczesnym C++:  
   
 ```cpp
 
@@ -102,17 +102,17 @@ void f()
 
 ```
 
- W nowoczesnych wersji języka C++ nie trzeba używać nowych lub usuń lub obsługi, ponieważ wskaźniki inteligentne mogą używać zamiast niej jawne wyjątków. Jeśli używasz `auto` wpisz wnioskowanie i [funkcja lambda](../cpp/lambda-expressions-in-cpp.md), można napisać kod szybszy, zwiększyć jego i zrozumienie go lepiej. I opartej na zakresie `for` pętla jest czyszczący, łatwiejsza w użyciu i mniej podatna na błędy niezamierzone niż stylu języka C `for` pętli. Schematyczny wraz z minimalnym wierszy kodu można użyć do pisania aplikacji. I wprowadzić ten kod wyjątek bezpieczny i bezpieczne pamięci i mieć żadnych kodów alokacji/dezalokacji lub błąd radzenia sobie z.  
+ W nowoczesnym C++ nie trzeba używać nowy/Usuń lub obsługi jawnych wyjątków ponieważ zamiast tego można użyć sprytnych wskaźników. Kiedy używasz **automatycznie** Ustalanie typu z i [funkcji lambda](../cpp/lambda-expressions-in-cpp.md), można napisać kod szybciej, zacieśniać go i lepiej zrozumieć. I opartej na zakresie **dla** pętla jest bardziej przejrzysty, łatwiejszy w obsłudze i mniej podatny na błędy niezamierzone niż stylu C **dla** pętli. Standardowy wraz z minimalnym wierszy kodu można użyć, aby napisać własną aplikację. I sprawić, że kod wyjątku i pamięci są bezpieczne i mają nie alokacji/dezalokacji ani kodów błędu do przeciwdziałania.  
   
- Modern C++ zawiera dwa rodzaje polimorfizm: kompilacji, za pomocą szablonów i środowiska wykonawczego, za pośrednictwem dziedziczenia i wirtualizacji. Można mieszać dwa rodzaje polimorfizm w celu dużą. Standardowa biblioteka C++ szablonu `shared_ptr` używa wewnętrznego metod wirtualnych celu jego usunięcia najwyraźniej łatwe typu. Ale nie nadmiernie wirtualizacji dla polimorfizm kiedy szablon jest lepszym rozwiązaniem. Szablony mogą być bardzo zaawansowane.  
+ Nowoczesny język C++ zawiera dwa rodzaje polimorfizmu: kompilacji, za pomocą szablonów i środowisko wykonawcze, poprzez dziedziczenie i wirtualizację. Możesz mieszać dwa rodzaje polimorfizmu, aby efekt. Szablon standardowej biblioteki języka C++ `shared_ptr` używa wewnętrznych metod wirtualnych, aby wykonać jego usunięcie pozoru typu. Ale nie nadużywaj na wirtualizacji dla polimorfizmu, gdy szablon jest lepszym rozwiązaniem. Szablony mogą być bardzo skuteczne.  
   
- Jeśli w przypadku wychodzącego C++ w innym języku, szczególnie ze zarządzanego języka, w której większość typów są typy referencyjne i są bardzo nieliczne typy wartości, należy sprawdzić, czy klasy C++ są typy wartości domyślne. Można jednak określić ich jako typów referencyjnych, aby włączyć polimorficznych zachowania, która obsługuje programowanie zorientowane obiektowo. Przydatne perspektywy: typy wartości są więcej informacji o pamięci i formant układu, typy referencyjne więcej informacji na temat klas podstawowych i funkcji wirtualnych do obsługi polimorfizm. Typy wartości są domyślnie copyable — każdy z nich ma konstruktora kopiującego i operatora przypisania kopii. Po określeniu typu odwołania, ustawić klasę z systemem innym niż copyable — Wyłącz konstruktora kopiującego i operatora przypisania kopii — i użyj destruktor wirtualny, który obsługuje polimorfizm. Typy wartości są również dotyczące zawartości, które, gdy są one kopiowane zapewniają dwa niezależne wartości, które można modyfikować oddzielnie. Typy odwołań są o tożsamości, ale — co rodzaj obiektu jest — i z tego powodu są czasami określane jako typach polimorficznych.  
+ Jeśli podchodzisz do języka C++ w innym języku, zwłaszcza z języka zarządzanego, w którym większość typów stanowią typy odwołań, i tylko kilka to typy wartości, należy wiedzieć, że klasy C++ są domyślnie typami wartości. Jednak możesz je określić jako typy odwołań, aby umożliwić zachowanie polimorficzne, która obsługuje programowanie zorientowane obiektowo. Pomocne perspektywy: typy wartości są są więcej informacji na temat pamięci a układ sterowania, typy odwołań bardziej dotyczą klas podstawowych i funkcji wirtualnych do obsługi polimorfizmu. Typy wartości są domyślnie możliwe do kopiowania — każda z nich Konstruktor kopiujący i operator przypisania kopiowania. Kiedy określasz typ odwołania, Zmień klasę niekopiowalnych — Wyłącz konstruktora kopii i operatora zadań kopiowania — i użyj wirtualnego destruktora, który obsługuje polimorfizm. Typy wartości są również związane z zawartości, które, gdy są one kopiowane zapewniają dwie niezależne wartości, które możesz oddzielnie modyfikować. Ale są typy odwołań dotyczących tożsamości — jaki rodzaj obiektu jest — i z tego powodu są czasami określane jako polimorficzne typy.  
   
- C++ występują odrodzenia ponieważ zasilania jest najważniejsza ponownie. W językach Java i C# są dobrym programisty wydajności jest ważne, ale pokazywały ich ograniczenia, gdy mocy i wydajności są podstawowym. Wysokiej wydajności i zasilania, szczególnie w przypadku urządzeń, które mają ograniczoną sprzętu nic nie uderzeń nowoczesnych wersji języka C++.  
+ C++ przeżywa odrodzenia, ponieważ moc jest ponownie królem. W językach Java i C# są dobre, gdy wydajność pracy programisty jest ważna, ale wykazują swoje ograniczenia, gdy moc i wydajność mają ogromne znaczenie. Wysokiej wydajności i mocy, zwłaszcza na urządzeniach, które mają ograniczenia sprzętowe nic nie uderzeń nowoczesnym języku C++.  
   
- Nie tylko język jest nowoczesnych, narzędzi programistycznych są zbyt. [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] powoduje, że wszystkie części cyklu programowanie niezawodny i efektywny. Obejmuje narzędzia do zarządzania cyklem życia aplikacji (ALM), IDE ulepszenia, takie jak IntelliSense, narzędzie przyjaznego mechanizmów XAML i kompilowanie, debugowanie i wiele innych narzędzi.  
+ Nie tylko język jest nowoczesny, narzędzia programistyczne są zbyt. [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] sprawia, że wszystkie części cyklu rozwoju odporne i wydajne. Obejmuje narzędzia do zarządzania cyklem życia aplikacji (ALM), ulepszenia IDE, takie jak IntelliSense, mechanizmy z przyjaznymi narzędzie narzędziami jak XAML i kompilowanie, debugowanie i wiele innych narzędzi.  
   
- Artykuły w tej części dokumentacji zawierają ogólne wskazówki i najlepsze rozwiązania dotyczące najważniejszych funkcjach i techniki pisanie programów modern C++.  
+ Artykuły w tej części dokumentacji zapewniają wytyczne wysokiego poziomu i najlepsze praktyki dotyczące najważniejszych funkcji i technik pisania nowoczesnych programów w C++.  
   
 -   [System typów języka C++](../cpp/cpp-type-system-modern-cpp.md)  
   
@@ -124,22 +124,22 @@ void f()
   
 -   [Wskaźniki inteligentne](../cpp/smart-pointers-modern-cpp.md)  
   
--   [Mechanizm pimpl hermetyzacji w czasie kompilacji w czasie](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md)  
+-   [Mechanizm Pimpl hermetyzacji w czasie kompilacji](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md)  
   
 -   [Kontenery](../cpp/containers-modern-cpp.md)  
   
 -   [Algorytmy](../cpp/algorithms-modern-cpp.md)  
   
--   [Ciągów i we/wy formatowania (Modern C++)](../cpp/string-and-i-o-formatting-modern-cpp.md)  
+-   [Ciągów i we/wy formatowanie (Modern C++)](../cpp/string-and-i-o-formatting-modern-cpp.md)  
   
 -   [Błędy w obsłudze wyjątków](../cpp/errors-and-exception-handling-modern-cpp.md)  
   
 -   [Przenośność na granicach ABI](../cpp/portability-at-abi-boundaries-modern-cpp.md)  
   
- Aby uzyskać więcej informacji, zobacz artykuł StackOverflow [idioms C++, które zostały uznane za przestarzałe w języku C ++ 11](http://go.microsoft.com/fwlink/p/?linkid=402836)  
+ Aby uzyskać więcej informacji, zobacz artykuł StackOverflow [jakie idiomy C++ zostały zaniechane w C ++ 11](http://go.microsoft.com/fwlink/p/?linkid=402836)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)   
  [Wyrażenia lambda](../cpp/lambda-expressions-in-cpp.md)   
  [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)  
- [Visual zgodność języka C++](../visual-cpp-language-conformance.md)  
+ [Wizualne zgodność języka C++](../visual-cpp-language-conformance.md)  

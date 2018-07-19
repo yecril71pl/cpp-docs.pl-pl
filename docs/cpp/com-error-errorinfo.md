@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fbc735dfae1b30209eccfd14f1170826fb07680
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 52935c81849ded072cb20d6c835b3a71b66c2871
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410996"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941317"
 ---
 # <a name="comerrorerrorinfo"></a>_com_error::ErrorInfo
 **Microsoft Specific**  
   
- Pobiera **IErrorInfo** obiekt przekazany do konstruktora.  
+ Pobiera `IErrorInfo` obiekt przekazany do konstruktora.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,12 +37,12 @@ IErrorInfo * ErrorInfo( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Nieprzetworzona **IErrorInfo** element przekazany do konstruktora.  
+ Nieprzetworzone `IErrorInfo` element przekazany do konstruktora.  
   
 ## <a name="remarks"></a>Uwagi  
- Pobiera hermetyzowany **IErrorInfo** elementu `_com_error` obiekt, lub **NULL** Jeśli nie **IErrorInfo** elementu jest rejestrowany. Obiekt wywołujący musi wywołać **wersji** na zwracanym obiekcie po zakończeniu używa jej.  
+ Pobiera zhermetyzowany `IErrorInfo` pozycja `_com_error` obiekt lub wartość NULL, jeśli nie `IErrorInfo` elementu są rejestrowane. Obiekt wywołujący musi wywołać `Release` na zwracanym obiekcie po zakończeniu korzystania z niego.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [_com_error, klasa](../cpp/com-error-class.md)

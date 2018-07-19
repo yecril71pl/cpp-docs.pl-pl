@@ -17,36 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93bd00c89df69d655f42c06509ef0360eff0c092
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a95f012b36e30c171fde1cbc8d28a21a074e281
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947772"
 ---
 # <a name="raise"></a>__raise
-Zwrócono szczególną uwagę na miejsce wywołania zdarzenia.  
+Kładzie nacisk witryny wywołania zdarzenia.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
   
-__raise   
-method-declarator  
-;  
+__raise method-declarator;  
   
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Z kodu zarządzanego zdarzenia można tylko wygenerowany z należące do klasy, w którym jest zdefiniowana. Zobacz [zdarzeń](../windows/event-cpp-component-extensions.md) Aby uzyskać więcej informacji.  
+ Z poziomu kodu zarządzanego zdarzenie można tylko będzie zgłaszany z w obrębie klasy, w którym jest zdefiniowana. Zobacz [zdarzeń](../windows/event-cpp-component-extensions.md) Aby uzyskać więcej informacji.  
   
- Słowo kluczowe `__raise` powoduje błąd wysyłanego, jeśli wywołujesz niepowiązane zdarzeń.  
+ Słowo kluczowe **__raise** powoduje, że błąd emitowane, jeśli wywołasz niepowiązane zdarzeń.  
   
 > [!NOTE]
->  Szablonu klasy lub struktury nie mogą zawierać zdarzenia.  
+>  Szablonem klasy lub struktury nie mogą zawierać zdarzenia.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp 
 // EventHandlingRef_raise.cpp  
 struct E {  
    __event void func1();  

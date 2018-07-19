@@ -1,5 +1,5 @@
 ---
-title: aligned_union — klasa | Dokumentacja firmy Microsoft
+title: aligned_union, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a149269117f83b18838d54c728d6d8da580882b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bdd2a8417f66c0e095f571c914d5a4624179fdb6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840703"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962116"
 ---
 # <a name="alignedunion-class"></a>aligned_union — klasa
 
-Zawiera typ POD wystarczająco duży i odpowiednio wyrównany do przechowywania typem Unii i rozmiar wymagany.
+Zawiera typ POD wystarczająco duże i odpowiednio wyrównany do przechowywania typu złożenia i rozmiarem wymaganym.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,17 +39,17 @@ using aligned_union_t = typename aligned_union<Len, Types...>::type;
 
 ### <a name="parameters"></a>Parametry
 
-`Len` Wartość wyrównania największy typu złożenia.
+*Len* wartość wyrównania największego typu w Unii.
 
-`Types` Różne typy w podstawowej Unii.
+*Typy* różne typy w podstawowej Unii.
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj klasy szablonu, aby pobrać niezbędne do przechowywania w magazynie niezainicjowanej Unii wielkości i. Element członkowski typedef `type` wpisz odpowiednie do przechowywania dowolnego typu na liście nazw POD `Types`; rozmiar minimalny to `Len`. Statyczny element członkowski `alignment_value` typu `std::size_t` zawiera najbardziej rygorystyczne wyrównanie wymagane wszystkich typów na liście `Types`.
+Użyj klasy szablonu, aby pobrać niezbędne do przechowywania Unii w magazynie niezainicjowanej wielkości i. Element TypeDef stanowi element członkowski `type` nazwy ZASOBNIK, wpisz odpowiednie do przechowywania dowolnego typu na liście *typy*; minimalny rozmiar to *Len*. Statyczny element członkowski `alignment_value` typu `std::size_t` zawiera najbardziej rygorystyczne wyrównanie wymagane przez wszystkie typy, które są wymienione w *typy*.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład przedstawia użycie `aligned_union` można przydzielić bufora stosu wyrównany umieścić Unii.
+Poniższy przykład pokazuje, jak używać `aligned_union` można przydzielić bufora stosu wyrównane do umieszczenia Unii.
 
 ```cpp
 // std__type_traits__aligned_union.cpp
@@ -89,7 +89,7 @@ value of u->i is 1065353216
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

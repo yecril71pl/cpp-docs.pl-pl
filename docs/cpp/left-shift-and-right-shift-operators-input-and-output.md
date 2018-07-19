@@ -23,28 +23,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d8835d096575f3f7a9d50c7be26fa435e5d6bcd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6f38b5ec30626f73ab3681f674fb39c5492eb49
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422400"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939733"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operatory przesunięcia w lewo i w prawo (&gt; &gt; i &lt; &lt;)
-Operatory przesunięcia bitowego to operator przesunięcia w prawo (>>), który przenosi bity *wyrażenia przesunięcia* w prawo i operator przesunięcia w lewo (<<), który przenosi bity *shiftwyrażenie* po lewej stronie. <sup>1</sup>  
+Operatory przesunięcia bitowego to operator przesunięcia w prawo (>>), który przesuwa bity *shift-expression* w prawo i operator przesunięcia w lewo (<<), który przesuwa bity *shift-expression* po lewej stronie. <sup>1</sup>  
   
 ## <a name="syntax"></a>Składnia  
   
-> *wyrażenie SHIFT* `<<` *wyrażenie dodatku*  
-> *wyrażenie SHIFT* `>>` *wyrażenie dodatku*  
+> *SHIFT-expression* `<<` *additive-expression*  
+> *SHIFT-expression* `>>` *additive-expression*  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!IMPORTANT]
-> Następujące opisy i przykłady są prawidłowe w systemie Windows dla architektur x86 i x64. Implementacja operatorów przesunięcia w lewo i przesunięcia w prawo znacznie się różni w systemie Windows RT dla urządzeń ARM. Aby uzyskać więcej informacji, zobacz sekcję "Shift — operatory" [Hello ARM](http://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx) wpis w blogu.  
+> Następujące opisy i przykłady są prawidłowe w systemie Windows dla architektur x86 i x64. Implementacja operatorów przesunięcia w lewo i przesunięcia w prawo znacznie się różni w systemie Windows RT dla urządzeń ARM. Aby uzyskać więcej informacji, zobacz sekcję "Operatory przesunięcia" [Hello ARM](http://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx) wpis w blogu.  
   
 ## <a name="left-shifts"></a>Przesunięcia w lewo  
- Operator przesunięcia w lewo powoduje, że usługa bits w *wyrażenia przesunięcia* lekkie po lewej stronie przez liczbę pozycji określony przez *dodatku wyrażenia*. Pozycje bitów, które zostały zwolnione w wyniku operacji przesunięcia, są wypełniane przez zera. Przesunięcie w lewo to przesunięcie logiczne (bity, które zostaną przesunięte poza koniec, są odrzucane, łącznie z bitem znaku). Aby uzyskać więcej informacji o rodzajach bitowe zmian, zobacz [przesunięcia bitowego](http://en.wikipedia.org/wiki/Bitwise_shift).  
+ Operator przesunięcia w lewo powoduje, że bity w *shift-expression* są przesuwane w lewo o liczbę pozycji określoną przez *additive-expression*. Pozycje bitów, które zostały zwolnione w wyniku operacji przesunięcia, są wypełniane przez zera. Przesunięcie w lewo to przesunięcie logiczne (bity, które zostaną przesunięte poza koniec, są odrzucane, łącznie z bitem znaku). Aby uzyskać więcej informacji o rodzajach przesunięć, zobacz [przesunięć](http://en.wikipedia.org/wiki/Bitwise_shift).  
   
  W poniższym przykładzie pokazano operacje przesunięcia w lewo przy użyciu liczb bez znaku. W przykładzie pokazano, co się dzieje z bitami, poprzez reprezentowanie wartości jako zestawu bitów. Aby uzyskać więcej informacji, zobacz [bitset — klasa](../standard-library/bitset-class.md).  
   
@@ -92,7 +92,7 @@ int main() {
 ```  
   
 ## <a name="right-shifts"></a>Przesunięcia w prawo  
- Operator przesunięcia w prawo powoduje wzorca bitowego w *wyrażenia przesunięcia* lekkie po prawej stronie przez liczbę pozycji określony przez *dodatku wyrażenia*. W przypadku liczb bez znaku, pozycje bitów, które zostały zwolnione w wyniku operacji przesunięcia, są wypełniane przez zera. W przypadku liczb ze znakiem, bit znaku jest używany do wypełniania opuszczonych pozycji bitów. Innymi słowy, jeśli liczba jest dodatnia, używane jest 0, a jeśli liczba jest ujemna, używane jest 1.  
+ Operator przesunięcia w prawo powoduje, że wzorzec bitowy *shift-expression* jest przesuwany w prawo o liczbę pozycji określoną przez *additive-expression*. W przypadku liczb bez znaku, pozycje bitów, które zostały zwolnione w wyniku operacji przesunięcia, są wypełniane przez zera. W przypadku liczb ze znakiem, bit znaku jest używany do wypełniania opuszczonych pozycji bitów. Innymi słowy, jeśli liczba jest dodatnia, używane jest 0, a jeśli liczba jest ujemna, używane jest 1.  
   
 > [!IMPORTANT]
 > Wynik przesunięcia w prawo liczby ujemnej ze znakiem zależy od implementacji. Mimo że Visual C++ używa bitu znaku do wypełnienia zwolnionych pozycji bitów, nie ma gwarancji, że inne implementacje działają tak samo.  
@@ -176,9 +176,9 @@ int main() {
 ```  
   
 ## <a name="shifts-and-promotions"></a>Przesunięcia i awansowania  
- Wyrażenia po obu stronach operatora przesunięcia muszą być typami całkowitoliczbowymi. Promocje typów całkowitych są wykonywane zgodnie z opisem w temacie regułami [konwersje standardowe](standard-conversions.md). Typ wyniku jest taki sam jak typ awansowana *wyrażenia przesunięcia*.  
+ Wyrażenia po obu stronach operatora przesunięcia muszą być typami całkowitoliczbowymi. Promocje typów całkowitych są wykonywane zgodnie z zasadami opisanymi w [konwersje standardowe](standard-conversions.md). Typ wyniku jest taki sam jak typ awansowanego *shift-expression*.  
   
- W poniższym przykładzie zmienna typu `char` jest podwyższany do `int`.  
+ W poniższym przykładzie zmienna typu **char** zostanie podwyższony do **int**.  
   
 ```cpp  
 #include <iostream>  
@@ -198,7 +198,7 @@ int main() {
 ```  
   
 ## <a name="additional-details"></a>Dodatkowe szczegóły  
- Wynik operacji shift jest niezdefiniowana, jeśli *dodatku wyrażenie* jest ujemny lub, jeśli *dodatku wyrażenie* jest większa lub równa liczbie bitów w (awansowana)  *wyrażenie SHIFT*. Jeśli to nie przeprowadzono żadnej operacji shift *dodatku wyrażenie* ma wartość 0.  
+ Wynik operacji przesunięcia jest niezdefiniowane, jeżeli *additive-expression* jest ujemny lub jeśli *additive-expression* jest większa niż lub równa liczbie bitów w (awansowanym)  *SHIFT-expression*. Operacja przesunięcia nie jest wykonywane, jeśli *additive-expression* wynosi 0.  
   
 ```cpp  
 #include <iostream>  
@@ -224,11 +224,11 @@ int main() {
 ```  
   
 ## <a name="footnotes"></a>Przypisy dolne  
- 1 poniżej przedstawiono opis operatory przesunięcia w języku C ++ 11 ISO specyfikacji (14882-2011[2012]) INCITS/ISO/IEC, sekcje 5.8.2 i 5.8.3.  
+ 1 poniżej znajduje się opis operatorów przesunięcia w specyfikacji C ++ 11 ISO (Stowarzyszenie INCITS/ISO/IEC 14882-2011[2012]), ppkt 5.8.2 i 5.8.3.  
   
- Wartość **E1 << E2** jest **E1** przesunięte lewej **E2** bit pozycji; vacated bity są wypełnione zero. Jeśli **E1** ma typ bez znaku, wartość wyniku jest **E1, x 2**<sup>**E2**</sup>, zmniejszenie modulo jeden większa niż wartość maksymalna, można przedstawić w Typ wyniku. W przeciwnym razie, jeśli **E1** typu ze znakiem i wartość nieujemną i **E1, x 2**<sup>**E2** </sup> jest można przedstawić w odpowiedni typ bez znaku następnie typu wyniku tej wartości przekonwertowane na typ wyniku jest wartość wynikową; w przeciwnym razie jest niezdefiniowany.  
+ Wartość `E1 << E2` jest `E1` przesunięte w lewo `E2` ; opuszczone bity są wypełnione przez zera. Jeśli `E1` ma typ bez znaku, wartość wyniku jest **E1, x 2**<sup>**E2**</sup>, zmniejszone modulo o jeden większa niż wartość maksymalna reprezentowana w typie wyniku. W przeciwnym razie, jeśli `E1` ma typ ze znakiem i wartość nieujemną, i **E1, x 2**<sup>**E2** </sup> jest reprezentowanych w odpowiedni typ bez znaku typu wyniku, Ta wartość, konwertowana na typ wyniku jest wartością wynikową; w przeciwnym razie zachowanie jest niezdefiniowane.  
   
- Wartość **E1 >> E2** jest **E1** przesunięte prawo **E2** bit pozycji. Jeśli **E1** ma typ bez znaku lub, jeśli **E1** poziomu typu ze znakiem i wartość nieujemną, wartość wyniku jest integralną częścią iloraz **E1/2** <sup> **E2**</sup>. Jeśli **E1** poziomu typu ze znakiem i wartością ujemną, wartość wynikową jest zdefiniowane w implementacji.  
+ Wartość `E1 >> E2` jest `E1` przesunięte w prawo `E2` pozycje bitów. Jeśli `E1` ma typ bez znaku lub jeśli `E1` ma typ ze znakiem i wartość nieujemną, wartość wyniku jest integralną częścią ilorazu **E1/2**<sup>**E2** </sup>. Jeśli `E1` ma typ ze znakiem i wartość ujemną, wartość wynikowa zależy od implementacji.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wyrażenia z operatorami Dwuargumentowymi](../cpp/expressions-with-binary-operators.md)   

@@ -1,5 +1,5 @@
 ---
-title: Klasa is_nothrow_assignable | Dokumentacja firmy Microsoft
+title: is_nothrow_assignable, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f11e1ce8b016ab8c6e8af04e351e80307b2189e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 424fcf5b960182326dc1192d8d60f168ead59d98
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843447"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965418"
 ---
-# <a name="isnothrowassignable-class"></a>is_nothrow_assignable — klasa
+# <a name="isnothrowassignable-class"></a>is_nothrow_assignable, klasa
 
-Sprawdza, czy wartość `From` typu mogą być przypisane do `To` typu i przypisanie wiadomo, że nie throw.
+Sprawdza, czy wartość *z* typu mogą być przypisane do *do* typu i przypisanie jest znane throw.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,19 +37,19 @@ struct is_nothrow_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-Typ obiektu, który odbiera przypisania.
+*Aby* typ obiektu, który odbiera przypisania.
 
-Z typu obiektu, który zawiera wartość.
+*Z* typ obiektu, który zawiera wartość.
 
 ## <a name="remarks"></a>Uwagi
 
-Wyrażenie `declval<To>() = declval<From>()` musi być poprawnie sformułowany i musi być znane w kompilatorze nie throw. Zarówno `From` i `To` musi być ukończone typy `void`, lub tablic z nieznanym powiązaniem.
+Wyrażenie `declval<To>() = declval<From>()` musi być poprawnie sformułowany i musi być znane, aby kompilator nie zostać zgłoszony. Zarówno *z* i *do* muszą być typami pełnymi **void**, lub tablic nieznany powiązane z.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

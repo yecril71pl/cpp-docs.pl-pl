@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a29dfc976ca29405814bbae81f42a02a74300d74
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e6a8364c6f0491344eef7faf381d701944f66d9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847627"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965672"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
-Definiuje klasę szablonu kontenera **złożonych** i jego obsługi szablonów.
+Definiuje klasę szablonu pojemnika `complex` i jego szablonów pomocniczych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,17 +36,17 @@ Definiuje klasę szablonu kontenera **złożonych** i jego obsługi szablonów.
 
 ## <a name="remarks"></a>Uwagi
 
-Liczba złożonych jest uporządkowanej pary liczb rzeczywistych. W sposób całkowicie geometryczne płaszczyzna złożone jest prawdziwe, dwuwymiarowa płaszczyzny. Specjalne jakości płaszczyzny złożone, które odróżniający go od rzeczywistych osi są spowodowane o dodatkowe algebraicznych struktury. Ta struktura algebraicznych ma dwie podstawowe operacje:
+Liczby zespolonej jest uporządkowana para liczb rzeczywistych. W warunkach czysto geometryczne płaszczyzna złożone jest prawdziwe, dwuwymiarowy płaszczyzny. Specjalne właściwości płaszczyzny złożone, które odróżnia go od rzeczywistego płaszczyzny są spowodowane przez o dodatkowe algebraicznych struktury. Ta struktura algebraicznych ma dwie podstawowe operacje:
 
 - Dodanie zdefiniowany jako (*a*, *b*) + (*c*, *d*) = (*a* + *c* , *b* + *d*)
 
 - Zdefiniowany jako mnożenia (*a*, *b*) \* (*c*, *d*) = (*ac*  -  *bd*, *ad* + *bc*)
 
-Zbiór liczb złożone z operacjami Dodawanie złożone i mnożenie złożone są pola w tym sensie algebraicznych standardowe:
+Zestaw liczby zespolone z operacjami złożonych Dodawanie i mnożenie złożone są z polem w standardowym sensie algebraicznych:
 
-- Operacje dodawania i mnożenia to przemienne i asocjacyjnej i mnożenia dystrybuuje przez dodanie dokładnie tak jak w przypadku dodaniu prawdziwe i mnożenia pola liczb rzeczywistych.
+- Operacje Dodawanie i mnożenie to przemiennego i asocjacyjnych i mnożenia dystrybuuje przez dodanie dokładnie tak jak w przypadku rzeczywistych Dodawanie i mnożenie pola liczb rzeczywistych.
 
-- Liczba złożonych (0, 0) jest tożsamość dodatku i (1, 0) jest mnożenia tożsamości.
+- Liczby zespolonej (0, 0) jest tożsamość dodatku i (1, 0) mnożenia tożsamości.
 
 - Odwrotność dodatku dla liczbą (*a*, *b*) jest (-*a*, -*b*) i multiplicative dla takiej liczby złożone z wyjątkiem (0, 0) jest
 
@@ -60,76 +60,76 @@ Przez reprezentujący liczbą *z* = (*a*, *b*) w formie *z* = *a*  +  *bi*, gdzi
    = (2 - 6) + (3 + 4)*i*  
    = -4 + 7*i*
 
-Liczby złożone systemu jest polem, ale nie jest polem uporządkowane. Nie ma żadnych kolejności numerów złożone z powodu pola liczb rzeczywistych i jego podzbiorów, więc nierówności nie można zastosować do liczby złożone, ponieważ mają one liczb rzeczywistych.
+System liczby zespolone jest polem, ale nie jest polem uporządkowany. Nie ma, nie porządkowanie liczby zespolone, ponieważ ma pola liczb rzeczywistych i jego podzestawy tak nierówności nie można zastosować do liczby zespolone, ponieważ są one na liczby rzeczywiste.
 
-Istnieją trzy często występującą formą reprezentujący liczbą *z*:
+Istnieją trzy typowe rodzaje reprezentujący liczby zespolonej *z*:
 
 - Kartezjańskimi: *z* = *a* + *analizy biznesowej*
 
 - Biegunowego: *z* = *r* (cos *p* + *i* sin *p*)
 
-- Wykładnicza: *z* = *r* \* *e*<sup>*ip*</sup>
+- Wartość wykładnicza: *z* = *r* \* *e*<sup>*adresu ip*</sup>
 
-Terminów używanych w tych standardowe reprezentacje liczbą są określane w następujący sposób:
+Terminy używane w tych standardowych reprezentacje liczby zespolonej są określane w następujący sposób:
 
 - Składnik rzeczywistym kartezjańskimi lub część rzeczywista *a*.
 
-- Wyrażenie Liczba_zespolona kartezjańskimi składnika lub urojony części *b*.
+- Urojone części Kartezjańskiego lub urojone części *b*.
 
-- Modulo lub wartość bezwzględna liczby złożone *r*.
+- Modulo lub wartość bezwzględną liczby zespolonej *r*.
 
-- Kąt argument lub faza *p* w radianach.
+- Kąt argument lub fazy *p* w radianach.
 
-Inaczej, funkcji zwracających wiele wartości są musi zwrócić wartość główną dla ich argumentów większa niż - π i mniejsza niż lub równe + π, ich jednej wartości. Kąty wszystkie muszą być wyrażone w radianach, których koło istnieje radianach 2π (360 stopni).
+Chyba że określono inaczej, funkcji, które mogą zwrócić wiele wartości są wymagane w celu zwrócenia wartości podmiotu zabezpieczeń dla swoich argumentów, większa niż - π i mniejsza niż lub równe + π, zachować je w pojedynczej wartości. Wszystkie kąty musi być wyrażony w radianach, których 2π radianów (360 stopni) znajduje się w okręgu.
 
 ### <a name="functions"></a>Funkcje
 
 |Funkcja|Opis|
 |-|-|
 |[ABS](../standard-library/complex-functions.md#abs)|Oblicza resztę z liczbą.|
-|[ARG](../standard-library/complex-functions.md#arg)|Wyodrębnia argument z liczbą.|
+|[ARG](../standard-library/complex-functions.md#arg)|Wyodrębnia argumentu z liczbą.|
 |[conj](../standard-library/complex-functions.md#conj)|Zwraca zespolonej liczbą.|
-|[COS](../standard-library/complex-functions.md#cos)|Zwraca cosinus liczby złożonej.|
-|[COSH](../standard-library/complex-functions.md#cosh)|Zwraca cosinus hiperboliczny dla liczby złożonej.|
-|[EXP](../standard-library/complex-functions.md#exp)|Zwraca funkcja wykładnicza z liczbą.|
-|[imag](../standard-library/complex-functions.md#imag)|Wyodrębnia urojony składnik liczbą.|
-|[log](../standard-library/complex-functions.md#log)|Zwraca logarytm naturalny liczby złożonej.|
+|[COS](../standard-library/complex-functions.md#cos)|Zwraca cosinus liczby zespolonej.|
+|[COSH](../standard-library/complex-functions.md#cosh)|Zwraca cosinus hiperboliczny liczby zespolonej.|
+|[EXP](../standard-library/complex-functions.md#exp)|Zwraca wartość funkcji wykładniczej liczby zespolonej.|
+|[imag](../standard-library/complex-functions.md#imag)|Wyodrębnia urojone części liczby zespolonej.|
+|[log](../standard-library/complex-functions.md#log)|Zwraca logarytm naturalny liczby zespolonej.|
 |[log10](../standard-library/complex-functions.md#log10)|Zwraca logarytm 10 liczbą.|
-|[norm —](../standard-library/complex-functions.md#norm)|Wyodrębnia normy liczbą.|
-|[polar](../standard-library/complex-functions.md#polar)|Zwraca liczby złożonej, co odpowiada określonym modulo i argumentu, w postaci kartezjańskimi.|
-|[Pow](../standard-library/complex-functions.md#pow)|Oblicza liczby złożonej uzyskany przez zwiększenie base, która jest liczbą do potęgi równej innej liczbie złożone.|
-|[rzeczywiste](../standard-library/complex-functions.md#real)|Wyodrębnia rzeczywistych składnik liczbą.|
-|[SIN](../standard-library/complex-functions.md#sin)|Zwraca sinus liczby złożonej.|
-|[SINH](../standard-library/complex-functions.md#sinh)|Zwraca sinus hiperboliczny liczby złożonej.|
-|[sqrt](../standard-library/complex-functions.md#sqrt)|Zwraca pierwiastek kwadratowy z liczby złożonej.|
-|[tan](../standard-library/complex-functions.md#tan)|Zwraca tangens liczby złożonej.|
-|[TANH](../standard-library/complex-functions.md#tanh)|Zwraca tangens hiperboliczny dla liczby złożonej.|
+|[norm](../standard-library/complex-functions.md#norm)|Wyodrębnia normy liczbą.|
+|[polar](../standard-library/complex-functions.md#polar)|Zwraca liczby zespolonej, odnoszące się do określonego modułu, a argument w postaci kartezjańskich wizualizacji.|
+|[Pow](../standard-library/complex-functions.md#pow)|Oblicza liczby zespolonej uzyskać, tworząc podstawowy, która jest liczbą do potęgi innej liczby zespolonej.|
+|[rzeczywiste](../standard-library/complex-functions.md#real)|Wyodrębnia rzeczywisty składnik liczby zespolonej.|
+|[SIN](../standard-library/complex-functions.md#sin)|Zwraca sinus liczby zespolonej.|
+|[SINH](../standard-library/complex-functions.md#sinh)|Zwraca sinus hiperboliczny liczby zespolonej.|
+|[sqrt](../standard-library/complex-functions.md#sqrt)|Zwraca pierwiastek kwadratowy liczby zespolonej.|
+|[tan](../standard-library/complex-functions.md#tan)|Zwraca tangens liczby zespolonej.|
+|[TANH](../standard-library/complex-functions.md#tanh)|Zwraca tangens hiperboliczny liczby zespolonej.|
 
 ### <a name="operators"></a>Operatory
 
 |Operator|Opis|
 |-|-|
-|[operator!=](../standard-library/complex-operators.md#op_neq)|Testy pod kątem nierówności między dwie liczb zespolonych, jeden lub oba mogą należeć do podzbioru typ części rzeczywistych i urojony.|
-|[operator *](../standard-library/complex-operators.md#op_star)|Mnoży dwie liczby złożone, przynajmniej jeden z nich może należeć do podzbioru typ części rzeczywistych i urojony.|
-|[operator +](../standard-library/complex-operators.md#op_add)|Dodaje dwie liczb zespolonych, przynajmniej jeden z nich może należeć do podzbioru typ części rzeczywistych i urojony.|
-|[operator-](../standard-library/complex-operators.md#operator-)|Odejmuje dwie liczby złożone, przynajmniej jeden z nich może należeć do podzbioru typ części rzeczywistych i urojony.|
-|[operator /](../standard-library/complex-operators.md#op_div)|Dzieli dwie liczby złożone, przynajmniej jeden z nich może należeć do podzbioru typ części rzeczywistych i urojony.|
-|[Operator <\<](../standard-library/complex-operators.md#op_lt_lt)|Funkcja szablonu, która wstawia liczby złożonej do strumienia wyjściowego.|
-|[operator==](../standard-library/complex-operators.md#op_eq_eq)|Testy równości między dwie liczb zespolonych, jeden lub oba mogą należeć do podzbioru typ części rzeczywistych i urojony.|
-|[operator>>](../standard-library/complex-operators.md#op_gt_gt)|Funkcja szablonu, który wyodrębnia złożona wartość ze strumienia wejściowego.|
+|[operator!=](../standard-library/complex-operators.md#op_neq)|Testuje pod kątem nierówności pomiędzy dwóch liczb zespolonych, jednego lub obu z nich mogą należeć do podzbioru typu rzeczywiste i urojone części.|
+|[operator *](../standard-library/complex-operators.md#op_star)|Mnoży dwie liczby zespolone, jednego lub obu z nich może należeć do podzbioru typu rzeczywiste i urojone części.|
+|[operator +](../standard-library/complex-operators.md#op_add)|Dodaje dwie liczby zespolone, jeden lub oba może należeć do podzbioru typu rzeczywiste i urojone części.|
+|[operator-](../standard-library/complex-operators.md#operator-)|Odejmuje dwie liczby zespolone, jednego lub obu z nich może należeć do podzbioru typu rzeczywiste i urojone części.|
+|[operator /](../standard-library/complex-operators.md#op_div)|Dzieli dwie liczby zespolone, jednego lub obu z nich mogą należeć do podzbioru typu rzeczywiste i urojone części.|
+|[Operator <\<](../standard-library/complex-operators.md#op_lt_lt)|Funkcja szablonu, który wstawia liczby zespolonej do strumienia wyjściowego.|
+|[operator==](../standard-library/complex-operators.md#op_eq_eq)|Testuje pod kątem równości pomiędzy dwóch liczb zespolonych, jednego lub obu z nich mogą należeć do podzbioru typu rzeczywiste i urojone części.|
+|[operator>>](../standard-library/complex-operators.md#op_gt_gt)|Funkcja szablonu, która wyodrębnia wartość złożoną ze strumienia wejściowego.|
 
 ### <a name="classes"></a>Klasy
 
 |Class|Opis|
 |-|-|
-|[złożone\<podwójne >](../standard-library/complex-double.md)|Klasa jawnie specjalne szablonu opisuje obiekt, który przechowuje uporządkowanej parę obiektów, zarówno typu **podwójne**, gdzie część rzeczywista liczbą reprezentuje pierwszy i drugi reprezentuje wyrażenie Liczba_zespolona część.|
-|[złożone\<float >](../standard-library/complex-float.md)|Klasa jawnie specjalne szablonu opisuje obiekt, który przechowuje uporządkowanej parę obiektów, zarówno typu **float**, gdzie część rzeczywista liczbą reprezentuje pierwszy i drugi reprezentuje wyrażenie Liczba_zespolona część.|
-|[złożone\<podwójnej długości >](../standard-library/complex-long-double.md)|Klasa jawnie specjalne szablonu opisuje obiekt, który przechowuje uporządkowanej parę obiektów, zarówno typu **podwójnej długości**, gdzie część rzeczywista liczbą reprezentuje pierwszy i drugi reprezentuje wyrażenie Liczba_zespolona część.|
-|[complex](../standard-library/complex-class.md)|Klasa szablonu opisuje obiekt, który reprezentuje system liczby złożonej i wykonywanie operacji arytmetycznych złożonych.|
+|[złożone\<double >](../standard-library/complex-double.md)|Klasa jawnie wyspecjalizowane szablonu opisuje obiekt przechowujący uporządkowana para obiektów, oba typu **double**, gdzie pierwszy reprezentuje część rzeczywista liczby zespolonej, a druga urojone części.|
+|[złożone\<float >](../standard-library/complex-float.md)|Klasa jawnie wyspecjalizowane szablonu opisuje obiekt przechowujący uporządkowana para obiektów, oba typu **float**, gdzie pierwszy reprezentuje część rzeczywista liczby zespolonej, a druga urojone części.|
+|[złożone\<typu long double >](../standard-library/complex-long-double.md)|Klasa jawnie wyspecjalizowane szablonu opisuje obiekt przechowujący uporządkowana para obiektów, oba typu **typu long double**, gdzie pierwszy reprezentuje część rzeczywista liczby zespolonej, a druga urojone części.|
+|[complex](../standard-library/complex-class.md)|Klasa szablonu opisuje obiekt używany do reprezentowania liczby zespolonej systemu i wykonywać złożone operacje arytmetyczne.|
 
 ### <a name="literals"></a>Literały
 
-\<Złożonych > nagłówka definiuje następujące [literały definiowane przez użytkownika](../cpp/user-defined-literals-cpp.md) którego Utwórz wiele złożone z rzeczywistego trwa zero i urojony część jest wartość parametru wejściowego.
+\<Złożonych > nagłówka definiuje następujące [literały definiowane przez użytkownika](../cpp/user-defined-literals-cpp.md) którego tworzenie liczby zespolonej przy użyciu rzeczywistego trwa zero i urojone część jest wartość parametru wejściowego.
 
 |||
 |-|-|

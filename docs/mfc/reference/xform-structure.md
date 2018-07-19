@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a1c3a8abd39f7f190f36a18e7691475d951cab8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6084882bed6690269fbb926f394159491d22978a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379489"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885887"
 ---
 # <a name="xform-structure"></a>Struktura XFORM
-`XFORM` Struktury ma następujący format:  
+`XFORM` Struktura ma następującą postać:  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,14 +40,14 @@ typedef struct  tagXFORM {  /* xfrm */
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- `XFORM` Struktury określa miejsce na świecie do przekształcania miejsca strony. **EDx** i **eDy** elementów członkowskich określają odpowiednio składniki tłumaczenia poziomie i w pionie. W poniższej tabeli przedstawiono, jak są używane inne elementy członkowskie, w zależności od operacji:  
+ `XFORM` Struktury określa miejsce na świecie transformację miejsce na stronie. `eDx` i `eDy` członków Określ składniki poziome i pionowe tłumaczenia, odpowiednio. W poniższej tabeli przedstawiono, jak inni członkowie są używane, w zależności od operacji:  
   
 |Operacja|eM11|eM12|eM21|eM22|  
 |---------------|----------|----------|----------|----------|  
 |`Rotation`|Cosinus kąta obrotu|Sinus kąta obrotu|Ujemna sinus kąta obrotu|Cosinus kąta obrotu|  
-|**Skalowanie**|Skalowania składowej poziomej|Nothing|Nothing|Skalowania składowej pionowej|  
-|**Zmienianie**|Nothing|Stała proporcjonalności pozioma|Stała proporcjonalności pionowe|Nothing|  
-|**Odbicie**|Składnik poziome odbicia|Nothing|Nothing|Składnik pionowego odbicia|  
+|`Scaling`|Poziomy skalowania składnika|Nothing|Nothing|Składnik skalowanie pionowe|  
+|`Shear`|Nothing|Poziomy proporcjonalności — stała|Pionowe proporcjonalności — stała|Nothing|  
+|`Reflection`|Składnik poziomy odbicia|Nothing|Nothing|Składnik pionowy odbicia|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** wingdi.h  

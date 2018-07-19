@@ -1,5 +1,5 @@
 ---
-title: Klasa is_default_constructible | Dokumentacja firmy Microsoft
+title: is_default_constructible, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 267f0d83ee8f92eb73bddfbcd383f59db83c8a83
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 23a361362d574910d21b0031d5687331f8c11dda
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850349"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964258"
 ---
-# <a name="isdefaultconstructible-class"></a>is_default_constructible — klasa
+# <a name="isdefaultconstructible-class"></a>is_default_constructible, klasa
 
-Testy, jeśli typ ma konstruktora domyślnego.
+Sprawdza, czy typ ma konstruktora domyślnego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,11 +36,11 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ do zapytania.
+*T* typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typ `T` jest typem klasy, który ma domyślny konstruktor, w przeciwnym razie posiada wartość false. Jest to równoważne predykatu `is_constructible<T>`. Typ `T` musi być typem pełną `void`, lub tablicy z nieznanym powiązaniem.
+Wystąpienie typu predykatu ma wartość true, jeśli typ *T* jest typu klasy, która ma Konstruktor domyślny w przeciwnym razie przechowuje wartość false. Jest to równoważne do predykatu `is_constructible<T>`. Typ *T* musi być typem kompletnym **void**, lub tablicę nieznany powiązane z.
 
 ## <a name="example"></a>Przykład
 
@@ -81,7 +81,7 @@ is_default_constructible<Simple2> == false
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

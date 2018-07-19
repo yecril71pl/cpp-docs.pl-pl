@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d344beea880bb576a681a4797c7bdd8ff8d88e5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2ada95adb2d82bfccf05f3b9141a1b940feaed50
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843603"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966449"
 ---
 # <a name="isclass-class"></a>is_class — Klasa
 
-Testy, jeśli typ to klasa.
+Sprawdza, czy typ jest klasą.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,11 +37,11 @@ struct is_class;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zapytania.
+*Ty* typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typ `Ty` typ jest zdefiniowany jako `class` lub `struct`, lub `cv-qualified` formularza jednego z nich, w przeciwnym razie posiada wartość false.
+Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* typ jest zdefiniowany jako **klasy** lub **struktury**, lub `cv-qualified` postaci jednego z tych funkcji, w przeciwnym razie przechowuje wartość false.
 
 ## <a name="example"></a>Przykład
 
@@ -77,7 +77,7 @@ is_class<int> == false
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,18 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ee906061c7b51ade818b164c1d371a88ef3d462
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8bec66d25be2cb56c75f42f60af2ccd5e3f759ad
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37948219"
 ---
 # <a name="transfers-of-control"></a>Transferowanie kontroli
-Można użyć `goto` instrukcji lub **przypadku** etykiety w `switch` instrukcji, aby określić program, który gałęzi poza inicjatora. Taki kod jest niedozwolone, chyba że deklaracji, która zawiera inicjator jest w bloku wewnątrz bloku, w której występuje instrukcja przeskoku.  
+Możesz użyć **goto** instrukcji lub **przypadek** etykiety w **Przełącz** instrukcję, aby określić program, który gałęzie ostatnie inicjatora. Taki kod jest niedozwolone, chyba że deklaracja, która zawiera inicjator jest w bloku ujęta w bloku, w której występuje instrukcja skoku.  
   
- W poniższym przykładzie przedstawiono pętli, który deklaruje i inicjuje obiekty `total`, `ch`, i `i`. Istnieje również błędne `goto` instrukcji, która przekazuje sterowanie poza inicjatora.  
+ Poniższy przykład pokazuje pętlę, która deklaruje i inicjuje obiekty `total`, `ch`, i `i`. Istnieje również błędne **goto** instrukcji, która przenosi sterowanie na ostatnie inicjatora.  
   
-```  
+```cpp 
 // transfers_of_control.cpp  
 // compile with: /W1  
 // Read input until a nonnumeric character is entered.  
@@ -56,7 +57,7 @@ int main()
 }  
 ```  
   
- W powyższym przykładzie `goto` instrukcji próbuje przekazywania kontroli poza inicjowanie `i`. Jednak jeśli `i` zostały zadeklarowane, ale nie został zainicjowany, transfer byłoby prawnych.  
+ W powyższym przykładzie **goto** instrukcji spróbuje przekazać sterowanie ostatnie inicjowanie `i`. Jednak jeśli `i` zostały zadeklarowane, ale nie został zainicjowany, transfer będą prawnych.  
   
- Obiekty `total` i `ch`, zadeklarowanych w bloku, która służy jako *instrukcji* z `while` instrukcji, zostaną zniszczone po tym bloku jest zakończony, przy użyciu `break` instrukcji.  
+ Obiekty `total` i `ch`, zadeklarowanych w bloku, który służy jako *instrukcji* z **podczas** instrukcji, są niszczone, gdy tego bloku jest został zakończony, za pomocą  **podział** instrukcji.  
   

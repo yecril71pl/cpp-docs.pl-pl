@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2be5d5a777d4b9aed9ee4d07016771ee91c913b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5291ae4783e252341371844ca08e390958c3ff89
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365285"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882575"
 ---
 # <a name="catlmodule-class"></a>Klasa CAtlModule
 Ta klasa udostępnia metody używane przez kilka klasy modułów ALT.  
@@ -60,29 +60,29 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)|Zastępuje tę metodę, aby dodać parametry do mapy zastępczy składnik rejestru Alt (Rejestrator).|  
-|[CAtlModule::AddTermFunc](#addtermfunc)|Dodaje nowe funkcja wywoływana, gdy kończy modułu.|  
+|[CAtlModule::AddTermFunc](#addtermfunc)|Dodaje nową funkcję wywoływana, gdy kończy się modułu.|  
 |[CAtlModule::GetGITPtr](#getgitptr)|Zwraca wskaźnik interfejsu globalnego.|  
 |[CAtlModule::GetLockCount](#getlockcount)|Zwraca liczbę blokad.|  
 |[CAtlModule::Lock](#lock)|Zwiększa liczbę blokad.|  
-|[CAtlModule::Term](#term)|Zwalnia wszystkie elementy członkowskie danych.|  
+|[CAtlModule::Term](#term)|Zwalnia wszystkie składowe danych.|  
 |[CAtlModule::Unlock](#unlock)|Zmniejsza liczbę blokad.|  
-|[CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced)|Uruchamia skrypt zawartych w określonym zasobie do zarejestrowania lub wyrejestrowania obiektu.|  
-|[CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper)|Ta metoda jest wywoływana przez `UpdateRegistryFromResourceD` do przeprowadzenia aktualizacji rejestru.|  
-|[CAtlModule::UpdateRegistryFromResourceS](#updateregistryfromresources)|Uruchamia skrypt zawartych w określonym zasobie do zarejestrowania lub wyrejestrowania obiektu. Ta metoda statycznie łączy się składnik rejestru ALT.|  
+|[CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced)|Uruchamia skrypt zawarte w określonego zasobu, aby zarejestrować lub wyrejestrować obiektu.|  
+|[CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper)|Ta metoda jest wywoływana `UpdateRegistryFromResourceD` wykonywania aktualizacji rejestru.|  
+|[CAtlModule::UpdateRegistryFromResourceS](#updateregistryfromresources)|Uruchamia skrypt zawarte w określonego zasobu, aby zarejestrować lub wyrejestrować obiektu. Ta metoda statycznie łączy składnik rejestru ALT.|  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[CAtlModule::m_libid](#m_libid)|Zawiera unikatowy identyfikator GUID bieżącego modułu.|  
-|[CAtlModule::m_pGIT](#m_pgit)|Wskaźnik do Tabela interfejsu globalnego.|  
+|[CAtlModule::m_pGIT](#m_pgit)|Wskaźnik do tabeli interfejsu globalnego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta klasa jest używana przez [klasy CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md), [klasy CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md), i [klasy CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) zapewnia obsługę biblioteki DLL, aplikacje, EXE i Usługi systemu Windows, odpowiednio.  
+ Ta klasa jest używana przez [klasa CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md), [klasa CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md), i [klasa CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) zapewnia obsługę biblioteki DLL, aplikacje, EXE i Windows usług, odpowiednio.  
   
- Aby uzyskać więcej informacji o modułach w ATL, zobacz [klasy modułów ALT](../../atl/atl-module-classes.md).  
+ Aby uzyskać więcej informacji na temat modułów ATL, zobacz [klasy modułów ATL](../../atl/atl-module-classes.md).  
   
- Ta klasa zastępuje przestarzałe [ccommodule — klasa](../../atl/reference/ccommodule-class.md) używany w starszych wersjach ATL.  
+ Ta klasa zastępuje przestarzałe [klasa CComModule](../../atl/reference/ccommodule-class.md) stosowane we wcześniejszych wersjach ATL.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [_ATL_MODULE](atl-typedefs.md#_atl_module)  
@@ -104,15 +104,15 @@ virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw(
  Zastrzeżone.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku awarii.  
+ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Parametry wymienne Zezwalaj klientowi rejestratora Określ dane czasu wykonywania. Aby to zrobić, rejestratora obsługuje mapy zastąpienia, w której wchodzi wartości skojarzone z parametry zmienne w skrypcie. Rejestratora sprawia, że te wpisy w czasie wykonywania.  
+ Parametry wymienne pozwalają rejestratora klientów określić dane czasu wykonywania. Aby to zrobić, Rejestrator przechowuje mapy zastąpienia, w którym wchodzi wartości skojarzone z parametry zmienne w skrypcie. Rejestrator sprawia, że te wpisy w czasie wykonywania.  
   
- Zobacz temat [przy użyciu parametry wymienne (Rejestrator preprocesora)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) więcej szczegółów.  
+ Zobacz temat [przy użyciu zastępowalnych parametrów (Preprocesor rejestratora)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) Aby uzyskać więcej informacji.  
   
 ##  <a name="addtermfunc"></a>  CAtlModule::AddTermFunc  
- Dodaje nowe funkcja wywoływana, gdy kończy modułu.  
+ Dodaje nową funkcję wywoływana, gdy kończy się modułu.  
   
 ```
 HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
@@ -120,13 +120,13 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
   
 ### <a name="parameters"></a>Parametry  
  *pFunc*  
- Wskaźnik funkcji do dodania.  
+ Wskaźnik do funkcji, które można dodać.  
   
- `dw`  
- Dane zdefiniowane przez użytkownika, przekazany do funkcji.  
+ *Magazyn danych*  
+ Danych zdefiniowane przez użytkownika, przekazana do funkcji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku awarii.  
+ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ##  <a name="catlmodule"></a>  CAtlModule::CAtlModule  
  Konstruktor.  
@@ -136,7 +136,7 @@ CAtlModule() throw();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Inicjuje elementów członkowskich danych i inicjuje sekcja krytyczna wokół modułu wątku.  
+ Inicjuje elementy członkowskie danych i inicjuje sekcję krytyczną wokół wątek modułu.  
   
 ##  <a name="dtor"></a>  CAtlModule:: ~ CAtlModule  
  Destruktor.  
@@ -146,7 +146,7 @@ CAtlModule() throw();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zwalnia wszystkie elementy członkowskie danych.  
+ Zwalnia wszystkie składowe danych.  
   
 ##  <a name="getgitptr"></a>  CAtlModule::GetGITPtr  
  Pobiera wskaźnik do Tabela interfejsu globalnego.  
@@ -156,18 +156,18 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `ppGIT`  
- Wskaźnik do zmiennej, która zostanie wyświetlony wskaźnik do Tabela interfejsu globalnego.  
+ *ppGIT*  
+ Wskaźnik do zmiennej, która zostanie wyświetlony wskaźnik, aby tabela interfejsu globalnego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK na powodzenie lub błąd o kodzie błędu. E_POINTER jest zwracany, gdy `ppGIT` jest równa NULL.  
+ Zwraca wartość S_OK w przypadku powodzenia lub kod błędu. E_POINTER jest zwracany, jeśli *ppGIT* jest równa NULL.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli tabela interfejsu globalnego obiekt nie istnieje, jest tworzona i jego adresu są przechowywane w zmiennej członkowskiej [CAtlModule::m_pGIT](#m_pgit).  
+ Jeśli obiekt Tabela interfejsu globalnego nie istnieje, jest ona tworzona i adresu jest przechowywany w zmiennej składowej [CAtlModule::m_pGIT](#m_pgit).  
   
- W kompilacjach debugowania, wystąpi błąd potwierdzenia Jeśli `ppGIT` jest równa NULL, lub jeśli nie można uzyskać wskaźnika Tabela interfejsu globalnego.  
+ W kompilacjach debugowania, wystąpi błąd asercji Jeśli *ppGIT* jest równa NULL, lub jeśli nie można uzyskać wskaźnik Tabela interfejsu globalnego.  
   
- Zobacz [IGlobalInterfaceTable](http://msdn.microsoft.com/library/windows/desktop/ms678517) dla informacji na temat Tabela interfejsu globalnego.  
+ Zobacz [IGlobalInterfaceTable](http://msdn.microsoft.com/library/windows/desktop/ms678517) uzyskać informacji na temat Tabela interfejsu globalnego.  
   
 ##  <a name="getlockcount"></a>  CAtlModule::GetLockCount  
  Zwraca liczbę blokad.  
@@ -187,7 +187,7 @@ virtual LONG Lock() throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwiększa liczbę blokad i zwraca zaktualizowanej wartości. Ta wartość może być przydatne w przypadku diagnostyki i debugowania.  
+ Zwiększa liczbę blokad i zwraca zaktualizowaną wartość. Ta wartość może być przydatne w przypadku diagnostyki i debugowania.  
   
 ##  <a name="m_libid"></a>  CAtlModule::m_libid  
  Zawiera unikatowy identyfikator GUID bieżącego modułu.  
@@ -197,21 +197,21 @@ static GUID m_libid;
 ```  
   
 ##  <a name="m_pgit"></a>  CAtlModule::m_pGIT  
- Wskaźnik do Tabela interfejsu globalnego.  
+ Wskaźnik do tabeli interfejsu globalnego.  
   
 ```
 IGlobalInterfaceTable* m_pGIT;
 ```  
   
 ##  <a name="term"></a>  CAtlModule::Term  
- Zwalnia wszystkie elementy członkowskie danych.  
+ Zwalnia wszystkie składowe danych.  
   
 ```
 void Term() throw();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zwalnia wszystkie elementy członkowskie danych. Ta metoda jest wywoływana przez destruktor.  
+ Zwalnia wszystkie składowe danych. Ta metoda jest wywoływana przez destruktor.  
   
 ##  <a name="unlock"></a>  CAtlModule::Unlock  
  Zmniejsza liczbę blokad.  
@@ -221,10 +221,10 @@ virtual LONG Unlock() throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zmniejsza liczbę blokad i zwraca zaktualizowanej wartości. Ta wartość może być przydatne w przypadku diagnostyki i debugowania.  
+ Liczbę blokad zmniejsza i zwraca zaktualizowaną wartość. Ta wartość może być przydatne w przypadku diagnostyki i debugowania.  
   
 ##  <a name="updateregistryfromresourced"></a>  CAtlModule::UpdateRegistryFromResourceD  
- Uruchamia skrypt zawartych w określonym zasobie do zarejestrowania lub wyrejestrowania obiektu.  
+ Uruchamia skrypt zawarte w określonego zasobu, aby zarejestrować lub wyrejestrować obiektu.  
   
 ```
 HRESULT WINAPI UpdateRegistryFromResourceD(
@@ -239,30 +239,30 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszRes`  
+ *lpszRes*  
  Nazwa zasobu.  
   
- `nResID`  
+ *nResID*  
  Identyfikator zasobu.  
   
- `bRegister`  
- **Wartość TRUE,** Jeśli obiekt powinien zostać zarejestrowany; **FALSE** inaczej.  
+ *bRegister*  
+ Wartość TRUE, jeśli obiekt powinien zostać zarejestrowany; Wartość FALSE w przeciwnym razie.  
   
- `pMapEntries`  
- Wskaźnik do przechowywania wartości skojarzone z parametry wymienne skryptu mapy zastąpienia. ATL automatycznie używa modułu %. Aby korzystać z dodatkowych parametrów do zastąpienia, zobacz [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements). W przeciwnym razie użyj **NULL** wartość domyślna.  
+ *pMapEntries*  
+ Wskaźnik do mapy zastąpienie przechowywania wartości skojarzone z parametrów zastępowalnych skryptu. ATL automatycznie używa modułu %. Aby korzystać z dodatkowych parametrów zastępowalnych, zobacz [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements). W przeciwnym razie użyj wartości domyślnej o wartości NULL.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku awarii.  
+ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Uruchamia skrypt zawarte w zasobie określonym przez *lpszRes lub nResID*. Jeśli `bRegister` jest **TRUE**, ta metoda rejestruje obiekt w rejestrze systemu; w przeciwnym razie usuwa obiekt z rejestru.  
+ Uruchamia skrypt zawarte w zasób określony przez *lpszRes lub nResID*. Jeśli *bRegister* ma wartość TRUE, ta metoda rejestruje obiekt w rejestrze systemowym; w przeciwnym razie usuwa obiekt z rejestru.  
   
- Aby połączyć statycznie składnik rejestru Alt (Rejestrator), zobacz [CAtlModule::UpdateRegistryFromResourceS](#updateregistryfromresources).  
+ Aby statycznie połączyć składnik rejestru Alt (Rejestrator), zobacz [CAtlModule::UpdateRegistryFromResourceS](#updateregistryfromresources).  
   
  Ta metoda wywołuje [CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper) i [IRegistrar::ResourceUnregister](iregistrar-class.md#resourceunregister).  
   
 ##  <a name="updateregistryfromresourcedhelper"></a>  CAtlModule::UpdateRegistryFromResourceDHelper  
- Ta metoda jest wywoływana przez `UpdateRegistryFromResourceD` do przeprowadzenia aktualizacji rejestru.  
+ Ta metoda jest wywoływana `UpdateRegistryFromResourceD` wykonywania aktualizacji rejestru.  
   
 ```
 inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(  
@@ -272,23 +272,23 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszRes`  
+ *lpszRes*  
  Nazwa zasobu.  
   
- `bRegister`  
+ *bRegister*  
  Wskazuje, czy obiekt powinien zostać zarejestrowany.  
   
- `pMapEntries`  
- Wskaźnik do przechowywania wartości skojarzone z parametry wymienne skryptu mapy zastąpienia. ATL automatycznie używa modułu %. Aby korzystać z dodatkowych parametrów do zastąpienia, zobacz [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements). W przeciwnym razie użyj **NULL** wartość domyślna.  
+ *pMapEntries*  
+ Wskaźnik do mapy zastąpienie przechowywania wartości skojarzone z parametrów zastępowalnych skryptu. ATL automatycznie używa modułu %. Aby korzystać z dodatkowych parametrów zastępowalnych, zobacz [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements). W przeciwnym razie użyj wartości domyślnej o wartości NULL.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku awarii.  
+ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda zapewnia implementacji [CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced).  
+ Ta metoda zapewnia wykonania [CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced).  
   
 ##  <a name="updateregistryfromresources"></a>  CAtlModule::UpdateRegistryFromResourceS  
- Uruchamia skrypt zawartych w określonym zasobie do zarejestrowania lub wyrejestrowania obiektu. Ta metoda statycznie łączy się składnik rejestru ALT.  
+ Uruchamia skrypt zawarte w określonego zasobu, aby zarejestrować lub wyrejestrować obiektu. Ta metoda statycznie łączy składnik rejestru ALT.  
   
 ```
 HRESULT WINAPI UpdateRegistryFromResourceS(  
@@ -303,26 +303,26 @@ HRESULT WINAPI UpdateRegistryFromResourceS(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nResID`  
+ *nResID*  
  Identyfikator zasobu.  
   
- `lpszRes`  
+ *lpszRes*  
  Nazwa zasobu.  
   
- `bRegister`  
+ *bRegister*  
  Wskazuje, czy skrypt zasobu powinny być rejestrowane.  
   
- `pMapEntries`  
- Wskaźnik do przechowywania wartości skojarzone z parametry wymienne skryptu mapy zastąpienia. ATL automatycznie używa modułu %. Aby korzystać z dodatkowych parametrów do zastąpienia, zobacz [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements). W przeciwnym razie użyj **NULL** wartość domyślna.  
+ *pMapEntries*  
+ Wskaźnik do mapy zastąpienie przechowywania wartości skojarzone z parametrów zastępowalnych skryptu. ATL automatycznie używa modułu %. Aby korzystać z dodatkowych parametrów zastępowalnych, zobacz [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements). W przeciwnym razie użyj wartości domyślnej o wartości NULL.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku awarii.  
+ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Podobnie jak [CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced) z wyjątkiem `CAtlModule::UpdateRegistryFromResourceS` tworzy statyczne łącze do składnik rejestru Alt (Rejestrator).  
+ Podobnie jak [CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced) z wyjątkiem `CAtlModule::UpdateRegistryFromResourceS` tworzy statycznego linku do składnik rejestru Alt (Rejestrator).  
   
 ## <a name="see-also"></a>Zobacz też  
  [_ATL_MODULE](atl-typedefs.md#_atl_module)   
- [Przegląd klas](../../atl/atl-class-overview.md)   
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)   
  [Klasy modułów](../../atl/atl-module-classes.md)   
  [Składnik rejestru (Rejestrator)](../../atl/atl-registry-component-registrar.md)  

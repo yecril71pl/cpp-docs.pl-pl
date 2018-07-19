@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 066f7c50940e6c68bb0fca554bb3bc56fc20b93c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 674be7ebd819b48cfdf22376565f2bea90787330
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32425702"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939212"
 ---
 # <a name="unions"></a>Unie
-A `union` jest typem zdefiniowane przez użytkownika, w której wszyscy członkowie mają tę samą lokalizację pamięci. Oznacza to, w danym momencie Unii może zawierać nie więcej niż jeden obiekt z listy elementów członkowskich. Oznacza to również, że niezależnie od tego, jak wiele elementów członkowskich Unii ma, zawsze używa tylko wystarczającej ilości pamięci do przechowywania największy element członkowski.  
+A **Unii** jest typ zdefiniowany przez użytkownika, w którym wszystkie elementy członkowskie udostępnianie tej samej lokalizacji pamięci. Oznacza to, że w danym momencie Unia może zawierać nie więcej niż jeden obiekt z listy jej składowych. Oznacza to również, że niezależnie od tego, jak wiele elementów członkowskich Unii ma, zawsze używa tylko wystarczającej ilości pamięci do przechowywania zajmuje największy element członkowski.  
   
- Unie może być przydatne w przypadku efektywne wykorzystanie pamięci, jeśli masz wiele obiektów i/lub ograniczonej pamięci. Jednak wymagają one szczególną uwagę używać poprawnie, ponieważ jest odpowiedzialny za zapewnienie zawsze dostęp do ostatniego członka, które zostało zapisane. Wszystkie typy elementów członkowskich ma nieuproszczone konstruktora, należy zapisać dodatkowy kod w celu jawnego utworzenia i zniszcz ten element członkowski. Przed użyciem Unii, należy wziąć pod uwagę czy problem, który chcesz rozwiązać, można lepiej można wyrazić przy użyciu klasy podstawowej i klas pochodnych.  
+ Unie może być przydatne w przypadku efektywne wykorzystanie pamięci, jeśli masz wiele obiektów i/lub ograniczone pamięci. Jednak wymagają one szczególną ostrożność należy zachować do użycia poprawnie, ponieważ jesteś odpowiedzialny za zapewnienie zawsze dostęp do ostatniego elementu, który został zapisany. Żadnych typów elementu członkowskiego ma nieuproszczone konstruktora bez parametrów, należy napisać dodatkowy kod, aby jawnie utworzyć i zniszcz ten element członkowski. Przed użyciem Unii, należy wziąć pod uwagę czy problem, który próbujesz rozwiązać mogą być lepiej wyrażone za pomocą klasy podstawowej i klasy pochodne.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,16 +36,16 @@ union [name]  { member-list };
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `name`  
+ *Nazwa*  
  Nazwa typu nadana unii.  
   
- `member-list`  
- Elementy członkowskie, które mogą zawierać Unii. Zobacz uwagi.  
+ *Lista elementów członkowskich*  
+ Elementy członkowskie, które Unia może zawierać. Zobacz uwagi.  
   
 ## <a name="remarks"></a>Uwagi  
   
 ## <a name="declaring-a-union"></a>Deklarowanie unii  
- Rozpocznij deklaracji typu union z `union` — słowo kluczowe i ująć w nawiasy klamrowe listy elementów członkowskich:  
+ Rozpocznij deklaracji typu Unii z **Unii** — słowo kluczowe, a następnie zamieścić listę elementów członkowskich w nawiasach klamrowych:  
   
 ```cpp  
 // declaring_a_union.cpp  
@@ -66,8 +66,8 @@ int main()
 }  
 ```  
   
-## <a name="using-unions"></a>Przy użyciu Unii  
- W poprzednim przykładzie kodu, który uzyskuje dostęp do Unii musi wiedzieć, który element członkowski jest zawierający dane. Najbardziej typowe rozwiązania tego problemu jest Unii, należy ująć w strukturze wraz z elementu członkowskiego wyliczenia dodatkowych, który wskazuje typ danych obecnie przechowywanych w Unii. Ta metoda jest wywoływana *Suma rozłączna Unii* i w poniższym przykładzie przedstawiono podstawowe wzorca.  
+## <a name="using-unions"></a>Za pomocą Unii  
+ W poprzednim przykładzie wszelki kod, który uzyskuje dostęp do Unii musi wiedzieć, który członek organizuje dane. Najbardziej typowe rozwiązania tego problemu jest Unia, należy ująć w strukturze wraz z składowej wyliczenia dodatkowych, który wskazuje na typ danych znajdujących się aktualnie w Unii. Jest to nazywane *Suma rozłączna Unii* i poniższy kod przedstawia podstawowy wzorzec.  
   
 ```cpp  
 #include "stdafx.h"  
@@ -152,14 +152,14 @@ void Initialize()
   
 ```  
   
- W poprzednim przykładzie należy pamiętać, że Unii w strukturze danych wejściowych nie ma nazwy. To jest anonimowa Unia i jej elementów członkowskich jest dostępny, tak jakby były bezpośrednie elementy członkowskie struktury. Aby uzyskać więcej informacji na temat związki anonimowe zobacz sekcję poniżej.  
+ W poprzednim przykładzie należy pamiętać, że Unii w strukturze danych wejściowych nie ma nazwy. Jest to anonimowej Unii i składowych jest możliwy, tak jakby były one bezpośredni członkowie struktury. Aby uzyskać więcej informacji na temat związki anonimowe zobacz sekcję poniżej.  
   
- Oczywiście w poprzednim przykładzie przedstawiono problem, który może również zostać rozwiązane z wykorzystaniem klas pochodzących od wspólna klasa podstawowa i rozgałęzianie kodu na podstawie typu środowiska uruchomieniowego poszczególnych obiektów w kontenerze. Może to spowodować, że łatwiejsze do utrzymywania i zrozumieć, jednak może być również wolniej niż przy użyciu unie kodu. Ponadto z Unii, można przechowywać całkowicie niepowiązanych typów i dynamicznie Zmień typ wartości przechowywanych bez zmiany typu union samej zmiennej. W związku z tym można utworzyć heterogenicznych tablicę MyUnionType, której elementy przechowywać różne wartości różnych typów.  
+ Oczywiście w poprzednim przykładzie pokazano problemu, która również może zostać rozwiązany przez korzystającego z klas, które wynikają z wspólna klasa bazowa i rozgałęziania kodu na podstawie typu środowiska uruchomieniowego każdy obiekt w kontenerze. Może to spowodować, że kod, łatwiejsze utrzymanie i dowiedzieć się, ale jej może być również wolniej niż używanie związków. Ponadto za pomocą Unii, można przechowywać całkowicie niepowiązane typy i dynamicznie zmieniać typ wartości, która jest przechowywana bez zmiany typu złożenia sama zmienna. Ten sposób można utworzyć heterogenicznych tablicę MyUnionType, której elementy przechowywać różne wartości różnych typów.  
   
- Należy pamiętać, że `Input` struktury w poprzednim przykładzie można łatwo użyte. Jest całkowicie użytkownika na potrzeby rozróżniacza poprawnie dostęp do elementu członkowskiego, który zawiera dane. Można chronić przed niewłaściwym użyciem przez tworzenie prywatnych Unii i udostępniając specjalne funkcje, jak pokazano w następnym przykładzie.  
+ Należy pamiętać, że `Input` struktury w powyższym przykładzie można łatwo użyte. Jest całkowicie użytkownika na potrzeby rozróżniacza poprawnie dostęp do elementu członkowskiego, która przechowuje dane. Można chronić przed niewłaściwym użyciem przez tworzenie prywatnych Unii i udostępniając specjalne funkcje, jak pokazano w następnym przykładzie.  
   
-## <a name="unrestricted-unions-c11"></a>Nieograniczonych Unii (C ++ 11)  
- W języku C ++ 03 i starszych Unii może zawierać elementy członkowskie danych statyczna z typu klasy, tak długo, jak typ nie ma konstruktorów podane przez użytkownika, destruktorów ani operatory przypisania. W języku C ++ 11 te ograniczenia zostały usunięte. Jeśli dołączysz element członkowski w związku z następnie kompilator automatycznie spowoduje oznaczenie żadnych specjalnych funkcji Członkowskich, które nie są podane jako usunięty przez użytkownika. Jeśli Unii anonimowej Unii wewnątrz klasy lub struktury, żadnych specjalnych funkcji Członkowskich klasy lub struktury, które nie są podane przez użytkownika są oznaczone jako usunięte. Poniższy przykład przedstawia sposób obsługi w przypadku, gdy jeden z elementów członkowskich Unii ma elementu członkowskiego, który wymaga specjalnego traktowania:  
+## <a name="unrestricted-unions-c11"></a>Nieograniczone unie (C ++ 11)  
+ W języku C ++ 03 i starszych Unii może zawierać elementy członkowskie danych niestatycznych z klasą typu, tak długo, jak typ nie ma podane przez użytkownika konstruktorów, destruktorów ani operatorów przypisania. W języku C ++ 11 te ograniczenia są usuwane. Jeśli dołączysz takiego członka w swojej Unii w kompilator będzie automatycznie oznaczyć żadnych specjalnych funkcji Członkowskich, które nie są podane jako usunięte przez użytkownika. Jeśli Unii anonimowej Unii wewnątrz klasy lub struktury, wszelkie specjalne funkcje Członkowskie klasy lub struktury, które nie są podane przez użytkownika są oznaczone jako usunięte. Poniższy przykład pokazuje, jak obsłużyć przypadek, gdy jeden z elementów członkowskich Unii ma element członkowski, który wymaga specjalnego traktowania:  
   
 ```cpp  
 // for MyVariant  
@@ -606,7 +606,7 @@ private:
   
 ```  
   
- Unie nie można zapisać odwołań. Unie nie obsługuje dziedziczenia, w związku z tym Unii sam nie może służyć jako klasę podstawową lub dziedziczyć po innej klasie lub mieć funkcji wirtualnych.  
+ Unie nie można zapisać odwołania. Unie nie obsługują dziedziczenia, w związku z tym samego Unii nie można użyć jako klasę bazową dziedziczył z innej klasy lub mieć funkcji wirtualnych.  
   
 ## <a name="initializing-unions"></a>Inicjowanie Unii  
  Można zadeklarować i zainicjować unię w tej samej instrukcji przez przypisanie wyrażenia ujętego w nawiasy klamrowe. Wyrażenie jest oceniane i przypisywane do pierwszego pola unii.  
@@ -638,28 +638,28 @@ int main()
   
  Unia `NumericType` jest umieszczona w pamięci (koncepcyjnie), jak pokazano na poniższym rysunku.  
   
- ![Przechowywanie danych w Unii typ liczbowy](../cpp/media/vc38ul1.png "vc38UL1")  
+ ![Przechowywanie danych w Unii typu numerycznego](../cpp/media/vc38ul1.png "vc38UL1")  
 Przechowywanie danych w unii NumericType  
   
 ## <a name="anonymous_unions"></a> Związki anonimowe  
- Związki anonimowe są Unii, które są zadeklarowane bez *Nazwa klasy* lub *deklarator listy*.  
+ Związki anonimowe są rozłączne, które są zadeklarowane bez *Nazwa klasy* lub *lista deklaratorów*.  
   
 ```cpp  
 union  {  member-list  }    
 ```  
   
-Zadeklarowany w anonimowym związku używane są nazwy bezpośrednio, takich jak zmienne niebędący elementem członkowskim. W związku z tym nazwy zadeklarowany w anonimowa Unia musi być unikatowy w otaczającym zasięgu.  
+Nazwy zadeklarowane w anonimowej Unii są używane bezpośrednio, takich jak niebędących zmiennych. W związku z tym nazwy zadeklarowane w anonimowej Unii musi być unikatowy w otaczającym zakresie.  
   
-Oprócz ograniczeń dla nazwanego unie związki anonimowe obowiązują następujące dodatkowe ograniczenia:  
+Oprócz ograniczeń Unii o nazwie związki anonimowe podlegają następującymi ograniczeniami dodatkowymi:  
   
--   Również musi być zadeklarowany jako **statycznych** zadeklarowana w zakresie pliku lub przestrzeni nazw.  
+-   Musi być także zadeklarowana jako **statyczne** zadeklarowana w zakresie pliku lub przestrzeni nazw.  
   
--   Mogą oni mieć tylko publiczne elementy członkowskie; prywatnych i chronionych elementów członkowskich w anonimowych uniach generować błędy.  
+-   Mogą mieć tylko publiczne składowe prywatnych i chronionych elementów członkowskich w związki anonimowe generować błędy.  
   
--   Funkcje Członkowskie nie mogą jednak mieć.  
+-   Nie mają elementów członkowskich.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasy i struktury](../cpp/classes-and-structs-cpp.md)   
  [Keywords](../cpp/keywords-cpp.md)   
- [Klasy](../cpp/class-cpp.md)   
+ [Klasa](../cpp/class-cpp.md)   
  [struct](../cpp/struct-cpp.md)

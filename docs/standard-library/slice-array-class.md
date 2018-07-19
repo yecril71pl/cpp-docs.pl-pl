@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67ffb39df8f02df233a31cfffeea5ab5ddcdf933
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7cb34fd44214ac503c8b9e201d07dbe1a6eb85de
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855445"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965769"
 ---
 # <a name="slicearray-class"></a>slice_array — Klasa
 
-Klasy wewnętrzne, pomocnicze szablonu, która obsługuje obiekty wycinek zapewniając operacji między macierzami z podzbioru zdefiniowanych przez wycinka valarray —.
+Klasy wewnętrzne, pomocnicze w ramach szablonu, która obsługuje obiekty wycinek, zapewniając operacji między macierzami z podzbioru zdefiniowanych przez wycinek tablicy valarray.
 
 ## <a name="syntax"></a>Składnia
 
@@ -52,23 +52,23 @@ public:
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa opisuje obiekt, który zawiera odwołanie do obiektu klasy [valarray —](../standard-library/valarray-class.md)**\<typu >**, wraz z obiektu klasy [wycinka](../standard-library/slice-class.md), która Zawiera opis sekwencji elementów można wybierać **valarray —\<typu >** obiektu.
+Klasa opisująca obiekt, który zawiera odwołanie do obiektu klasy [valarray](../standard-library/valarray-class.md)**\<typ >**, oraz obiekt klasy [wycinek](../standard-library/slice-class.md), który Zawiera opis sekwencji elementów, które można wybierać **valarray\<typ >** obiektu.
 
-Klasy szablonów jest tworzony pośrednio przez niektóre operacje valarray — i nie można użyć bezpośrednio w programie. Klasy wewnętrzne, pomocnicze szablonu używanego przez operator indeksu dolnego wycinka:
+Klasa szablonu jest pośrednio tworzony przez niektóre operacje valarray i nie można użyć bezpośrednio w programie. Klasa szablonu pomocnicze, wewnętrzne, która jest używana przez operatora indeksu dolnego wycinek:
 
 `slice_array`\< **Typ**> `valarray`< **typu**:: `operator[]` ( `slice`).
 
-Możesz utworzyć **slice_array —\<typu >** obiektu Pisząc wyrażenie w postaci [va&#91;sl&#93;](../standard-library/valarray-class.md#op_at), dla wycinek **sl** z valarray — **va**. Funkcje Członkowskie slice_array — klasa następnie zachowania odpowiedniego sygnatury funkcji zdefiniowane dla **valarray —\<typu >**, ale dotyczy tylko sekwencji wybrane elementy. Sekwencja kontrolowane przez slice_array — jest definiowana za trzy parametry konstruktora wycinka, indeks pierwszego elementu w wycinka, liczba elementów i odległość między elementami. Slice_array — obcięty z valarray — **va** deklarowana przez **va**[ `slice`(2, 5, 3)] wybiera elementy indeksami 2, 5, 8, 11 i 14 z **va**. Indeksy muszą być prawidłowe dla procedury identyfikator był prawidłowy.
+Konstruowanie `slice_array<Type>` obiektu Pisząc wyrażenie w formie [oceny luk w zabezpieczeniach&#91;sl&#93;](../standard-library/valarray-class.md#op_at), dla wycinka `sl` z tablicy valarray `va`. Funkcje Członkowskie slice_array — klasa następnie zachowują się jak odpowiedniej sygnatury funkcji zdefiniowanych dla `valarray<Type>`, z tą różnicą, że dotyczy tylko kolejność wybranych elementów. Na sekwencję kontrolowaną przez slice_array — jest definiowany przez trzy parametry konstruktora wycinek, indeksu pierwszego elementu w wycinek, liczbę elementów i odległości między elementami. Tablica typu slice_array obcięty z tablicy valarray `va` zdeklarowane **oceny luk w zabezpieczeniach**[ `slice`(2, 5, 3)] wybiera elementy z indeksów, 2, 5, 8, 11 i 14 z `va`. Indeksy muszą być prawidłowe procedury był prawidłowy.
 
 ## <a name="example"></a>Przykład
 
-Zobacz przykład [slice::slice](../standard-library/slice-class.md#slice) przykład sposobu deklarowanie i użycie slice_array —.
+Zobacz przykład [slice::slice](../standard-library/slice-class.md#slice) przykładowy sposób deklarowania i użyj Tablica typu slice_array.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<valarray — >
+**Nagłówek:** \<valarray >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

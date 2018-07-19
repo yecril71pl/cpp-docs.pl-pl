@@ -25,16 +25,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab7f4e185f19b07ddcec47b8f167e7040a5bef28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5f0d38ebd24c38579f73bceea0fff50ab361638
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863416"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962783"
 ---
-# <a name="vectorltboolgt-class"></a>Wektor&lt;bool&gt; — klasa
+# <a name="vectorltboolgt-class"></a>Wektor&lt;bool&gt; klasy
 
-`vector<bool>` Klasy jest częściowa specjalizacja [wektor](../standard-library/vector-class.md) dla elementów typu `bool`. Ma ona alokatora dla typu podstawowego, który jest używany przez specjalizacji, co zapewnia optymalizacji miejsca dzięki przechowywaniu jedną `bool` wartość w każdej z bitowego.
+`vector<bool>` Klasa to częściowa specjalizacja [wektor](../standard-library/vector-class.md) dla elementów typu **bool**. Ma alokator dla podstawowego typu używanego przez specjalizację, który zapewnia optymalizację miejsca poprzez przechowywanie jednej **bool** wartość na bit.
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,44 +45,44 @@ class vector<bool, Allocator>
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa specjalizacja szablonu zachowuje się jak wektora, z wyjątkiem różnice opisane w tym artykule.
+Taka specjalizacja szablonu klasy zachowuje się jak wektora, z wyjątkiem różnic opisanych w tym artykule.
 
-Operacje, które zajmują się `bool` typu odpowiadają wartościom w magazynie kontenera. `allocator_traits::construct` nie jest używany do tworzenia tych wartości.
+Operacje, które zajmują się **bool** typu odpowiadają wartościom w pamięci kontenera. `allocator_traits::construct` nie jest używana do konstruowania tych wartości.
 
 ### <a name="typedefs"></a>Typedefs
 
 |Nazwa typu|Opis|
 |-|-|
-|[const_pointer](#const_pointer)|Element typedef do `const_iterator` który może służyć jako stałej wskaźnika do elementu logiczna `vector<bool>`.|
-|[const_reference](#const_reference)|Element typedef dla `bool`. Po zainicjowaniu nie zwraca uwagi na aktualizacje do wartości pierwotnej.|
-|[pointer](#pointer)|Element typedef do `iterator` który może służyć jako wskaźnik do elementu Boolean elementu `vector<bool>`.|
+|[const_pointer](#const_pointer)|Element typedef do `const_iterator` który może służyć jako stały wskaźnik do elementu typu Boolean `vector<bool>`.|
+|[const_reference](#const_reference)|Element typedef dla **bool**. Po zainicjowaniu nie zwraca uwagi na aktualizacje do wartości pierwotnej.|
+|[pointer](#pointer)|Element typedef do `iterator` który może służyć jako wskaźnik do elementu typu Boolean `vector<bool>`.|
 
 ### <a name="member-functions"></a>Funkcje Członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja elementu członkowskiego|Opis|
 |-|-|
 |[Przerzuć](#flip)|Odwraca wszystkie bity w `vector<bool>`.|
-|[swap](#swap)|Zamienia elementy dwóch `vector<bool>`s.|
-|[operator&#91;&#93;](#op_at)|Zwraca symulowane odwołanie do `vector<bool>` elementu w określonej pozycji.|
-|`at`|Odpowiada to klasy niespecjalizowanej [wektor](../standard-library/vector-class.md):: w funkcji, z wyjątkiem, że używa klasy serwera proxy [wektor\<bool >:: odwołanie](#reference_class). Zobacz też [operator&#91;&#93;](#op_at).|
-|`front`|Odpowiada to klasy niespecjalizowanej [wektor](../standard-library/vector-class.md):: FrontPage funkcji, z wyjątkiem tego, że używa klasy serwera proxy [wektor\<bool >:: odwołanie](#reference_class). Zobacz też [operator&#91;&#93;](#op_at).|
-|`back`|Odpowiada to klasy niespecjalizowanej [wektor](../standard-library/vector-class.md):: kopii funkcji, z wyjątkiem tego, że używa klasy serwera proxy [wektor\<bool >:: odwołanie](#reference_class). Zobacz też [operator&#91;&#93;](#op_at).|
+|[swap](#swap)|Zamienia elementy z dwóch `vector<bool>`s.|
+|[operator&#91;&#93;](#op_at)|Zwraca symulowane odwołanie do `vector<bool>` elementu na określonej pozycji.|
+|`at`|Działa tak samo, jak Niewyspecjalizowana [wektor](../standard-library/vector-class.md):: w funkcji, z wyjątkiem, że używa klasy proxy [wektor\<bool >:: odwołanie](#reference_class). Zobacz też [operator&#91;&#93;](#op_at).|
+|`front`|Działa tak samo, jak Niewyspecjalizowana [wektor](../standard-library/vector-class.md):: frontonu funkcji, z tą różnicą, że używa klasy proxy [wektor\<bool >:: odwołanie](#reference_class). Zobacz też [operator&#91;&#93;](#op_at).|
+|`back`|Działa tak samo, jak Niewyspecjalizowana [wektor](../standard-library/vector-class.md):: kopii funkcji, z tą różnicą, że używa klasy proxy [wektor\<bool >:: odwołanie](#reference_class). Zobacz też [operator&#91;&#93;](#op_at).|
 
 ### <a name="proxy-class"></a>Klasa proxy
 
 |||
 |-|-|
-|[Wektor\<bool > klasę referencyjną](#reference_class)|Klasa, która działa jako serwer proxy, aby symulować `bool&` zachowanie i których obiekty zapewniają odwołania do elementów (pojedynczy bits) w ramach `vector<bool>` obiektu.|
+|[Wektor\<bool > reference — klasa](#reference_class)|Klasa, która działa jako serwer proxy do symulacji `bool&` zachowanie i której obiekty mogą dostarczyć odniesienia do elementów (pojedynczych bitów) w ramach `vector<bool>` obiektu.|
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek**: \<wektor >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="const_pointer"></a>  Wektor\<bool >:: const_pointer
 
-Typ, który opisuje obiekt, który może służyć jako stałej wskaźnika do elementu logiczna sekwencji zawarty w `vector<bool>` obiektu.
+Typ opisujący obiekt, który może służyć jako stały wskaźnik do elementu Boolean sekwencji zawartej w `vector<bool>` obiektu.
 
 ```cpp
 typedef const_iterator const_pointer;
@@ -90,7 +90,7 @@ typedef const_iterator const_pointer;
 
 ## <a name="const_reference"></a>  Wektor\<bool >:: const_reference
 
-Typ, który opisuje obiekt, który może służyć jako odwołanie stałej dla elementu logiczna sekwencji zawarty w `vector<bool>` obiektu.
+Typ opisujący obiekt, który może służyć jako stałe odwołanie do elementu Boolean sekwencji zawartej w `vector<bool>` obiektu.
 
 ```cpp
 typedef bool const_reference;
@@ -98,9 +98,9 @@ typedef bool const_reference;
 
 ### <a name="remarks"></a>Uwagi
 
-Aby uzyskać więcej informacji oraz przykłady kodu, zobacz [wektor&lt;bool&gt;:: reference::operator =](#reference_operator_eq).
+Aby uzyskać więcej informacji i przykłady kodu, zobacz [wektor&lt;bool&gt;:: reference::operator =](#reference_operator_eq).
 
-## <a name="flip"></a>  Wektor\<bool >:: Przerzuć
+## <a name="flip"></a>  Wektor\<bool >:: przerzucanie
 
 Odwraca wszystkie bity w `vector<bool>`.
 
@@ -139,9 +139,9 @@ int main()
 
 ```
 
-## <a name="op_at"></a>  Wektor\<bool >:: — operator]
+## <a name="op_at"></a>  Wektor\<bool >:: operator]
 
-Zwraca symulowane odwołanie do `vector<bool>` elementu w określonej pozycji.
+Zwraca symulowane odwołanie do `vector<bool>` elementu na określonej pozycji.
 
 ```cpp
 vector<bool>::reference operator[](size_type Pos);
@@ -153,7 +153,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 |Parametr|Opis|
 |-|-|
-|`Pos`|Pozycja `vector<bool>` elementu.|
+|*punktu sprzedaży*|Pozycja `vector<bool>` elementu.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -163,11 +163,11 @@ Jeśli określona pozycja jest większa niż lub równa rozmiarowi kontenera, wy
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli kompilacji z `_ITERATOR_DEBUG_LEVEL` ustawiona, błędów czasu wykonywania wystąpi przy próbie uzyskania dostępu do elementu poza granicami wektora.  Aby uzyskać więcej informacji, zobacz [zaznaczone Iteratory](../standard-library/checked-iterators.md).
+Jeśli kompilujesz z zestawem _ITERATOR_DEBUG_LEVEL błędów czasu wykonywania występuje, jeśli użytkownik podejmie próbę uzyskania dostępu do elementu poza granicami wektora.  Aby uzyskać więcej informacji, zobacz [Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Przykład
 
-W tym przykładzie kodu pokazano sposób użycia poprawne `vector<bool>::operator[]` i dwie typowe kody błędów, które są oznaczone jako komentarz. Te błędy powodować błędy, ponieważ adres `vector<bool>::reference` obiekt, który `vector<bool>::operator[]` zwraca nie można wykonywać.
+W tym przykładzie kodu pokazano sposób poprawnego użycia z `vector<bool>::operator[]` i dwie częste pomyłki w kodowaniu, które są zakomentowane. Te pomyłki powodują błędy, ponieważ adres `vector<bool>::reference` obiekt `vector<bool>::operator[]` zwraca nie może być przyjęty.
 
 ```cpp
 // cl.exe /EHsc /nologo /W4 /MTd
@@ -198,19 +198,19 @@ int main()
 
 ## <a name="pointer"></a>  Wektor\<bool >:: wskaźnika
 
-Typ, który opisuje obiekt, który może służyć jako wskaźnik do elementu logiczna zawarty w sekwencji `vector<bool>` obiektu.
+Typ opisujący obiekt, który może służyć jako wskaźnik do elementu Boolean sekwencji zawartej w `vector<bool>` obiektu.
 
 ```cpp
 typedef iterator pointer;
 ```
 
-## <a name="reference_class"></a>  Wektor\<bool >:: klasę referencyjną
+## <a name="reference_class"></a>  Wektor\<bool >:: reference — klasa
 
-`vector<bool>::reference` Klasa jest klasą proxy dostarczonych przez [wektor\<bool > klasy](../standard-library/vector-bool-class.md) do symulowania `bool&`.
+`vector<bool>::reference` Klasa jest klasą proxy dostarczoną przez [wektor\<bool > klasa](../standard-library/vector-bool-class.md) do symulacji `bool&`.
 
 ### <a name="remarks"></a>Uwagi
 
-Symulowane odwołanie jest wymagane, ponieważ C++ nie zezwala natywnie na bezpośrednie odwołania do bitów. `vector<bool>` używa tylko jeden bit na element, który można odwoływać się za pomocą tej klasy serwera proxy. Jednakże symulacja odwołania nie jest kompletna, ponieważ niektóre przypisania nie są prawidłowe. Na przykład ponieważ adres `vector<bool>::reference` obiektu nie można wykonywać, następujący kod, który używa [wektor\<bool >:: operator&#91; &#93; ](#op_at) jest nieprawidłowy:
+Symulowane odwołanie jest wymagane, ponieważ C++ nie zezwala natywnie na bezpośrednie odwołania do bitów. `vector<bool>` używa tylko jednego bitu na element, który można odwoływać się za pomocą tej klasy proxy. Jednakże symulacja odwołania nie jest kompletna, ponieważ niektóre przypisania nie są prawidłowe. Na przykład ponieważ adres `vector<bool>::reference` obiektu nie może być przyjęty, następujący kod, który używa [wektor\<bool >:: operator&#91; &#93; ](#op_at) jest nieprawidłowy:
 
 ```cpp
 vector<bool> vb;
@@ -221,7 +221,7 @@ bool& refb = vb[1];   // conversion error - do not use
 
 ###  <a name="reference_flip"></a>  Wektor\<bool >:: reference::flip
 
-Odwraca wartość logiczną odwoływany [wektor\<bool >](../standard-library/vector-bool-class.md) elementu.
+Odwraca wartość logiczną odnośnego [wektor\<bool >](../standard-library/vector-bool-class.md) elementu.
 
 ```cpp
 void flip();
@@ -268,7 +268,7 @@ The vector with first element flipped is:
 
 ###  <a name="reference_operator_bool"></a>  Wektor\<bool >:: reference::operator bool
 
-Udostępnia niejawna konwersja z `vector<bool>::reference` do `bool`.
+Dostarcza niejawną konwersję z `vector<bool>::reference` do **bool**.
 
 ```cpp
 operator bool() const;
@@ -280,7 +280,7 @@ Wartość logiczna elementu wektora\<bool > obiektu.
 
 #### <a name="remarks"></a>Uwagi
 
-`vector<bool>` Obiektu nie może modyfikować tego operatora.
+`vector<bool>` Ten operator nie można zmodyfikować obiektu.
 
 ###  <a name="reference_operator_eq"></a>  Wektor\<bool >:: reference::operator =
 
@@ -293,9 +293,11 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>Parametry
 
-`Right` Odwołanie do elementu, którego wartość ma być przypisana do bitu.
+*Po prawej stronie*  
+ Odwołanie elementu, którego wartość ma być przypisana do bitu.
 
-`Val` Wartość logiczna ma być przypisany do bitu.
+*Val*  
+ Wartość logiczna, który ma być przypisana do bitu.
 
 #### <a name="example"></a>Przykład
 
@@ -368,9 +370,9 @@ The original value of the 2nd element still stored in a bool: false
 The original value of the 3rd element still stored in a bool: false
 ```
 
-## <a name="swap"></a>  Wektor\<bool >:: wymiany
+## <a name="swap"></a>  Wektor\<bool >:: swap
 
-Funkcja statycznego elementu członkowskiego, który wymienia dwa elementy wektorów logiczna ( `vector<bool>`) przy użyciu klasy serwera proxy [wektor\<bool >:: odwołanie](#reference_class).
+Funkcja statycznej składowej, która wymienia dwa elementy wektorów typu Boolean ( `vector<bool>`) za pomocą klasy proxy [wektor\<bool >:: odwołanie](#reference_class).
 
 ```cpp
 static void swap(
@@ -380,13 +382,15 @@ static void swap(
 
 ### <a name="parameters"></a>Parametry
 
-`Left` Element wymienianych z `Right` elementu.
+*Po lewej stronie*  
+ Element wymieniane z *po prawej stronie* elementu.
 
-`Right` Element wymienianych z `Left` elementu.
+*Po prawej stronie*  
+ Element wymieniane z *po lewej stronie* elementu.
 
 ### <a name="remarks"></a>Uwagi
 
-To przeciążenie obsługuje proxy specjalne wymagania `vector<bool>`. [Wektor](../standard-library/vector-class.md):: wymiany ma te same funkcje co przeciążenia jednym argumentem `vector<bool>::swap()`.
+To przeciążenie obsługuje wymagania specjalne proxy `vector<bool>`. [Wektor](../standard-library/vector-class.md):: swap ma taką samą funkcjonalność jak przeciążenie jednego argumentu `vector<bool>::swap()`.
 
 ## <a name="see-also"></a>Zobacz także
 

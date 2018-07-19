@@ -14,16 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c2140dbe786a5d2a2a1b86eca17912e5e06b922
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 980aaa5bf0b9472e8fb1c6d7f6b3c56aa255d00b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947764"
 ---
 # <a name="using-arrays-c"></a>Używanie tablic (C++)
-Dostęp do poszczególnych elementów w tablicy za pomocą operatora indeksu dolnego tablicy (`[ ]`). Jeśli jest tablicą jednowymiarową jest używany w wyrażeniu, która ma indeks nie, nazwa tablicy ocenia się na wskaźnik do pierwszego elementu w tablicy.  
+Dostęp do poszczególnych elementów tablicy za pomocą operatora indeksu dolnej tablicy (`[ ]`). Jeśli Jednowymiarowa tablica jest używany w wyrażeniu, które nie posiada indeksu dolnego, nazwa tablicy ocenia do wskaźnika do pierwszego elementu w tablicy.  
   
-```  
+```cpp 
 // using_arrays.cpp  
 int main() {  
    char chArray[10];  
@@ -33,9 +34,9 @@ int main() {
 }  
 ```  
   
- Użycie tablic wielowymiarowych, można używać różnych w wyrażeniach.  
+ Użycie tablic wielowymiarowych, można użyć różnych kombinacji w wyrażeniach.  
   
-```  
+```cpp 
 // using_arrays_2.cpp  
 // compile with: /EHsc /W1  
 #include <iostream>  
@@ -54,7 +55,7 @@ int main() {
 }  
 ```  
   
- W powyższym kodzie `multi` jest tablicą trójwymiarową typu `double`. `p2multi` Wskazuje wskaźnik do tablicy typu `double` rozmiaru trzech. W tym przykładzie tablicy jest używany z jednego, dwóch do trzech indeksów dolnych. Chociaż jest bardziej popularne, aby określić wszystkie indeksy dolne, podobnie jak w `cout` instrukcji, jest czasami warto wybrać konkretnego podzestawu elementów tablicy, jak pokazano w instrukcji, które należy wykonać `cout`.  
+ W poprzednim kodzie `multi` jest tablicą trójwymiarową typu **double**. `p2multi` Wskaźnik wskazuje na tablicę typu **double** o rozmiarze 3. W tym przykładzie tablica jest używana z jednym, dwoma i trzema indeksami dolnymi. Mimo że jest to bardziej powszechne, aby określić wszystkie indeksy dolne, jak w `cout` instrukcji, warto czasami wybrać określony podzbiór elementów tablicy, jak pokazano w następujących instrukcjach `cout`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Tablice](../cpp/arrays-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Etykietą instrukcji | Dokumentacja firmy Microsoft
+title: Instrukcje oznaczone | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55d9456a62c97a2edf1523634268582a7f568b79
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8b54eb2757f4f58acd0339a058c8bee999b4c8b7
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947744"
 ---
 # <a name="labeled-statements"></a>Labeled — instrukcje
-Etykiety są używane do przekazywania kontroli programu bezpośrednio do określonej instrukcji.  
+Etykiety są używane do program kontrola jest przekazywana bezpośrednio do określonej instrukcji.  
   
 ```  
 identifier :  statement  
@@ -30,10 +31,10 @@ case constant-expression :  statement
 default :  statement  
 ```  
   
- Zakres etykiety jest całą funkcję, w którym jest zadeklarowany.  
+ Zakres etykiety jest całą funkcję, w którym jest zdeklarowana.  
   
 ## <a name="remarks"></a>Uwagi  
- Istnieją trzy typy labeled — instrukcje. Dwukropek wszystkie służy do oddzielania pewien typ etykiety z instrukcji. Etykiety case i domyślne są specyficzne dla instrukcji case.  
+ Istnieją trzy typy labeled — instrukcje. Wszystkie Użyj dwukropka do oddzielenia pewien rodzaj etykiety z instrukcji. Wielkość liter i domyślne etykiety są specyficzne dla instrukcji case.  
   
 ```cpp  
 #include <iostream>   
@@ -64,13 +65,13 @@ int main() {
   
  **Goto — instrukcja**  
   
- Wygląd *identyfikator* etykiety w programie źródłowym deklaruje etykiety. Tylko [goto](../cpp/goto-statement-cpp.md) instrukcji można przenosić formant *identyfikator* etykiety. Poniższy fragment kodu przedstawia użycie `goto` instrukcji i *identyfikator* etykiety:  
+ Wygląd *identyfikator* etykieta w programie źródłowym deklaruje etykietę. Tylko [goto](../cpp/goto-statement-cpp.md) instrukcji można przekazać sterowanie do *identyfikator* etykiety. Poniższy fragment kodu przedstawia sposób używania metody **goto** instrukcji i *identyfikator* etykiety:  
   
- Etykiety nie może występować samodzielnie, ale zawsze musi być dołączony do instrukcji. Jeśli etykieta nie jest konieczne samodzielnie, umieść instrukcję null po etykiecie.  
+ Etykiety nie może występować samodzielnie, ale zawsze musi być dołączony do instrukcji. Jeśli etykieta jest potrzebny samodzielnie, należy umieścić instrukcja o wartości null po etykiecie.  
   
- Etykieta ma zakres funkcji i nie można ponownie zadeklarować w funkcji. Jednak takiej samej nazwie może służyć jako etykieta w różnych funkcji.  
+ Etykieta ma zakres funkcji i nie może być ponownie zadeklarowany wewnątrz funkcji. Jednak takiej samej nazwie może służyć jako etykieta w różnych funkcji.  
   
-```  
+```cpp 
 // labels_with_goto.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -89,9 +90,9 @@ int main() {
   
  **Case — instrukcja**  
   
- Po etykietach, które są wyświetlane po **przypadku** — słowo kluczowe także nie może występować poza `switch` instrukcji. (To ograniczenie ma również zastosowanie do **domyślne** — słowo kluczowe.) Poniższy fragment kodu przedstawia poprawnego używania **przypadku** etykiety:  
+ Etykiety, które pojawiają się po **przypadek** — słowo kluczowe także nie może występować poza **Przełącz** instrukcji. (To ograniczenie dotyczy także **domyślne** — słowo kluczowe.) Poniższy fragment kodu przedstawia poprawnego użycia **przypadek** etykiety:  
   
-```  
+```cpp 
 // Sample Microsoft Windows message processing loop.  
 switch( msg )  
 {  
@@ -117,10 +118,10 @@ switch( msg )
 }  
 ```  
   
-## <a name="labels-in-the-case-statement"></a>Etykiety case — instrukcja  
- Po etykietach, które są wyświetlane po **przypadku** — słowo kluczowe także nie może występować poza `switch` instrukcji. (To ograniczenie ma również zastosowanie do **domyślne** — słowo kluczowe.) Poniższy fragment kodu przedstawia poprawnego używania **przypadku** etykiety:  
+## <a name="labels-in-the-case-statement"></a>Etykiet w instrukcji case  
+ Etykiety, które pojawiają się po **przypadek** — słowo kluczowe także nie może występować poza **Przełącz** instrukcji. (To ograniczenie dotyczy także **domyślne** — słowo kluczowe.) Poniższy fragment kodu przedstawia poprawnego użycia **przypadek** etykiety:  
   
-```  
+```cpp 
 // Sample Microsoft Windows message processing loop.  
 switch( msg )  
 {  
@@ -162,13 +163,13 @@ switch( msg )
 ```  
   
 ## <a name="labels-in-the-goto-statement"></a>Etykiety instrukcji goto  
- Wygląd *identyfikator* etykiety w programie źródłowym deklaruje etykiety. Tylko [goto](../cpp/goto-statement-cpp.md) instrukcji można przenosić formant *identyfikator* etykiety. Poniższy fragment kodu przedstawia użycie `goto` instrukcji i *identyfikator* etykiety:  
+ Wygląd *identyfikator* etykieta w programie źródłowym deklaruje etykietę. Tylko [goto](../cpp/goto-statement-cpp.md) instrukcji można przekazać sterowanie do *identyfikator* etykiety. Poniższy fragment kodu przedstawia sposób używania metody **goto** instrukcji i *identyfikator* etykiety:  
   
- Etykiety nie może występować samodzielnie, ale zawsze musi być dołączony do instrukcji. Jeśli etykieta nie jest konieczne samodzielnie, umieść instrukcję null po etykiecie.  
+ Etykiety nie może występować samodzielnie, ale zawsze musi być dołączony do instrukcji. Jeśli etykieta jest potrzebny samodzielnie, należy umieścić instrukcja o wartości null po etykiecie.  
   
- Etykieta ma zakres funkcji i nie można ponownie zadeklarować w funkcji. Jednak takiej samej nazwie może służyć jako etykieta w różnych funkcji.  
+ Etykieta ma zakres funkcji i nie może być ponownie zadeklarowany wewnątrz funkcji. Jednak takiej samej nazwie może służyć jako etykieta w różnych funkcji.  
   
-```  
+```cpp 
 // labels_with_goto.cpp  
 // compile with: /EHsc  
 #include <iostream>  

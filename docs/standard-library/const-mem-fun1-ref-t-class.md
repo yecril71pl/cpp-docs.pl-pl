@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c465ce95ecbf2ecb50e79e6e4cbaafce8cf7a407
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ddd340f0a5d988709804698f53918462f4b4e512
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843681"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964534"
 ---
 # <a name="constmemfun1reft-class"></a>const_mem_fun1_ref_t — Klasa
 
-Klasa karty, który umożliwia **const** funkcji członkowskiej, która pobiera jeden argument ma być wywoływana jako obiektu binarnego funkcja po zainicjowaniu z argumentem odwołania.
+Klasa adaptera, który umożliwia **const** funkcja elementu członkowskiego, który przyjmuje jeden argument do wywoływania jako obiektu binarnego funkcja podczas inicjowania przy użyciu argument odwołania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -41,29 +41,29 @@ class const_mem_fun1_ref_t
 
 ### <a name="parameters"></a>Parametry
 
-`Pm` Wskaźnik do funkcji członkowskiej klasy **typu** do przekonwertowania na obiekt funkcji.
+*PM* wskaźnik do funkcji składowej klasy typu `Type` do konwersji na obiekt funkcyjny.
 
-`left` **Const** obiekt, który `Pm` funkcja członkowska jest wywoływana na.
+*po lewej stronie* **const** obiekt *Pm* wywoływana jest funkcja elementu członkowskiego.
 
-`right` Argument, który są przyznawane `Pm`.
+*prawy* argument, który jest umożliwiającej *Pm*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Dostosowywalne funkcja binarnej.
+Dostosowywalne funkcja binarnego.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasy szablonów przechowuje kopię `Pm`, która musi być wskaźnikiem do funkcji członkowskiej klasy **typu**, w obiekcie prywatnego elementu członkowskiego. Definiuje jego funkcji członkowskiej `operator()` jako zwracanie ( `left`.\* *PM*) ( `right`) **const**.
+Klasa szablonu przechowuje kopię *Pm*, który musi być wskaźnikiem do funkcji składowej klasy `Type`, w obiekcie prywatnego elementu członkowskiego. Definiuje jej funkcji członkowskiej `operator()` powrotu ( `left`.\* *PM*) ( `right`) **const**.
 
 ## <a name="example"></a>Przykład
 
-Konstruktor obiektu `const_mem_fun1_ref_t` nie jest zwykle używana bezpośrednio; funkcja Pomocnika `mem_fun_ref` umożliwia dostosowanie funkcji elementów członkowskich. Zobacz [mem_fun_ref —](../standard-library/functional-functions.md#mem_fun_ref) przykłady dotyczące używania karty funkcja elementu członkowskiego.
+Konstruktor obiektu `const_mem_fun1_ref_t` nie jest zazwyczaj używana bezpośrednio; funkcja Pomocnika `mem_fun_ref` umożliwia dostosowanie funkcji elementów członkowskich. Zobacz [mem_fun_ref —](../standard-library/functional-functions.md#mem_fun_ref) przykłady sposobów użycia adapterów funkcja elementu członkowskiego.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<funkcjonalności >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

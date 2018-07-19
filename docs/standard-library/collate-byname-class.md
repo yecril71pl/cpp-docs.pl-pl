@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f619554db0a85ee8aafbdb8792d8fe233cc392a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f104736d1c8f9d0ed60f2afd374345ab227300b4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843018"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964915"
 ---
 # <a name="collatebyname-class"></a>collate_byname — Klasa
 
@@ -49,19 +49,19 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-`_Locname` Nazwane ustawień regionalnych.
+*_Locname* o nazwie ustawień regionalnych.
 
-`_Refs` Liczba początkowa odwołania.
+*_Refs* licznik odwołań początkowej.
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekt, który może służyć jako opis klasy szablonu [aspektu ustawień regionalnych](../standard-library/locale-class.md#facet_class) typu [collate](../standard-library/collate-class.md#collate)\<CharType >. Jego zachowanie jest określany przez [o nazwie](../standard-library/locale-class.md#name) ustawień regionalnych `_Locname`. Każdy Konstruktor inicjuje jego obiektu podstawowego z [collate](../standard-library/collate-class.md#collate)\<CharType > ( `_Refs`).
+Klasa szablonu opisuje obiekt, który może służyć jako [reguł ustawień regionalnych](../standard-library/locale-class.md#facet_class) typu [collate](../standard-library/collate-class.md#collate)\<CharType >. Jego zachowanie jest określana przez [o nazwie](../standard-library/locale-class.md#name) ustawień regionalnych *_Locname*. Każdy Konstruktor inicjuje jego podstawowego obiektu z [collate](../standard-library/collate-class.md#collate)\<CharType > ( `_Refs`).
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<ustawień regionalnych >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

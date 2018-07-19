@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3eaae998f1ca975e8eb4d102c8f7793ac8ab3b34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 413223636efb735303ec600b09803472370ff306
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912787"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965594"
 ---
 # <a name="isobject-class"></a>is_object — Klasa
 
-Testy, jeśli typ jest typem obiektu.
+Sprawdza, czy typ jest typem obiektu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,11 +37,11 @@ struct is_object;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zapytania.
+*Ty* typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu przechowuje wartość false, jeśli typ `Ty` jest typem referencyjnym, typem funkcji lub void, lub `cv-qualified` formularza jednego z nich, w przeciwnym razie jest spełniony.
+Wystąpienie typu predykatu przechowuje wartość false, jeśli typ *Ty* jest typem referencyjnym, typ funkcji lub void "," lub `cv-qualified` postaci jednego z tych funkcji, w przeciwnym razie prawdziwe.
 
 ## <a name="example"></a>Przykład
 
@@ -91,7 +91,7 @@ is_object<void> == false
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

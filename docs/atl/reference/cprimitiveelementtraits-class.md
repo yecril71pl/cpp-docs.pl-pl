@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bec944c4b9a505cc817dbe7aa3ce09a317954f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2219be699e879afb6ec19ad84acc50f18d93a9a9
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359146"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885812"
 ---
 # <a name="cprimitiveelementtraits-class"></a>Klasa CPrimitiveElementTraits
-Ta klasa dostarcza metody domyślnej i funkcje do klasy kolekcji składa się z następujących typów danych pierwotnych.  
+Ta klasa dostarcza metody domyślne i funkcji dla klasy kolekcji składa się z pierwotnych typów danych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,20 +37,20 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
+ *T*  
  Typ danych, które mają być przechowywane w obiekcie klasy kolekcji.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
-### <a name="public-typedefs"></a>Definicje typów publicznych  
+### <a name="public-typedefs"></a>Publiczne definicje typów  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CPrimitiveElementTraits::INARGTYPE](#inargtype)|Typ danych służących do dodawania elementów do obiektu klasy kolekcji.|  
-|[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|Typ danych używany do pobierania elementów z kolekcji klasy obiektu.|  
+|[CPrimitiveElementTraits::INARGTYPE](#inargtype)|Typ danych na potrzeby dodawania elementów do obiektu klasy kolekcji.|  
+|[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|Typ danych używany do pobierania elementów z obiektu klasy kolekcji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta klasa udostępnia domyślny statyczne funkcje i metody przenoszenia, kopiowania, porównanie i tworzenia skrótów elementy typu pierwotnych danych przechowywanych w obiekcie klasy kolekcji.  
+ Ta klasa udostępnia domyślną statyczne funkcje i metody przenoszenie, kopiowanie, porównywanie i wyznaczania wartości skrótu przechowywanych w obiekcie klasy kolekcji elementy typu danych pierwotnych.  
   
  Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-collection-classes.md).  
   
@@ -69,14 +69,14 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
  **Nagłówek:** atlcoll.h  
   
 ##  <a name="inargtype"></a>  CPrimitiveElementTraits::INARGTYPE  
- Typ danych służących do dodawania elementów do obiektu klasy kolekcji.  
+ Typ danych na potrzeby dodawania elementów do obiektu klasy kolekcji.  
   
 ```
 typedef T INARGTYPE;
 ```  
   
 ##  <a name="outargtype"></a>  CPrimitiveElementTraits::OUTARGTYPE  
- Typ danych używany do pobierania elementów z kolekcji klasy obiektu.  
+ Typ danych używany do pobierania elementów z obiektu klasy kolekcji.  
   
 ```
 typedef T& OUTARGTYPE;
@@ -84,4 +84,4 @@ typedef T& OUTARGTYPE;
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

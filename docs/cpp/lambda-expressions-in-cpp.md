@@ -16,23 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1cfcb210d3de7ce818d39ecf1703299defedc5d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bc8457371ef266c5628e225eff8f05328190e52d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424052"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941970"
 ---
 # <a name="lambda-expressions-in-c"></a>Wyrażenia lambda w języku C++
-W języku C ++ 11 i nowszych wyrażenia lambda — często nazywane *lambda*— jest to wygodny sposób definiowania obiektu funkcji anonimowej ( *zamknięcia*) w lokalizacji, gdzie jest wywoływany lub przekazanego jako argument do funkcji. Wyrażenia lambda są używane zwykle do Hermetyzowanie kilku wierszy kodu, które są przekazywane do algorytmów lub metod asynchronicznych. W tym artykule zdefiniowano, czym są lambdy, porównano je z innymi technikami programowania, omówiono ich zalety i dostarczono podstawowe przykłady.  
+W języku C ++ 11 i nowszych wersjach Wyrażenie lambda — często nazywana *lambda*— to wygodny sposób definiowania obiektu funkcja anonimowa ( *zamknięcia*) bezpośrednio w lokalizacji, gdzie jest wywoływana lub przekazywany jako argument do funkcji. Wyrażenia lambda są zazwyczaj używane w celu hermetyzacji kilku wierszy kodu, które są przekazywane do algorytmów lub metod asynchronicznych. W tym artykule zdefiniowano, czym są lambdy, porównano je z innymi technikami programowania, omówiono ich zalety i dostarczono podstawowe przykłady.  
 
 ## <a name="related-topics"></a>Tematy pokrewne
-- [Wyrażenia lambda a obiekty funkcji](lambda-expression-syntax.md)
+- [Wyrażenia lambda, a obiekty funkcji](lambda-expression-syntax.md)
 - [Praca z wyrażenia lambda](examples-of-lambda-expressions.md)
-- [wyrażenia lambda constexpr](lambda-expressions-constexpr.md)
+- [wyrażenia constexpr, wyrażenia lambda](lambda-expressions-constexpr.md)
 
 ## <a name="parts-of-a-lambda-expression"></a>Części wyrażenia Lambda  
- Standardowi ISO C++ zawiera proste lambda, który jest przekazywany jako trzeci argument `std::sort()` funkcji:  
+ Standard ISO C++ pokazuje prosty lambda, który jest przekazywany jako trzeci argument `std::sort()` funkcji:  
   
 ```cpp  
 #include <algorithm>  
@@ -49,28 +49,28 @@ void abssort(float* x, unsigned n) {
   
 ```  
   
- Na tej ilustracji przedstawiono elementy wyrażenia lambda:  
+ Ta ilustracja przedstawia części wyrażenia lambda:  
   
- ![Elementy wyrażenia lambda](../cpp/media/lambdaexpsyntax.png "LambdaExpSyntax")  
+ ![Elementy strukturalne wyrażenia lambda](../cpp/media/lambdaexpsyntax.png "LambdaExpSyntax")  
   
-1.  *Przechwyć klauzuli* (znanej także jako *lambda introducer* w specyfikacji języka C++.)  
+1.  *Klauzula przechwytywania* (znany także jako *lambda-introducer* w specyfikacji języka C++.)  
   
-2.  *Lista parametrów* opcjonalne. (Znanej także jako *deklarator lambda*)  
+2.  *Lista parametrów* atrybut opcjonalny. (Nazywane również *lambda declarator*)  
   
-3.  *Specyfikacja modyfikowalną* opcjonalne.  
+3.  *Specyfikacja modyfikowalna* atrybut opcjonalny.  
   
-4.  *Specyfikacja wyjątku* opcjonalne.  
+4.  *Specyfikacja wyjątku* atrybut opcjonalny.  
   
-5.  *końcowe zwracanego typu* opcjonalne.  
+5.  *trailing-return-type* atrybut opcjonalny.  
   
 6.  *Treść lambda*)  
   
 ### <a name="capture-clause"></a>Klauzula przechwytywania  
- Wyrażenie lambda, może wprowadzić nowe zmienne w jego treści (w **C ++ 14**) i może również dostęp, lub *przechwytywania*, zmiennych z otaczającego zakresu. Wyrażenie lambda rozpoczyna się od klauzuli przechwytywania (*lambda introducer* w standardowej składni), który określa, które zmienne są przechwytywane oraz czy przechwytywania jest według wartości lub według odwołania. Zmienne, które mają handlowego "i" (`&`) prefiks są udostępniane przez odwołanie i zmienne, które nie mają uzyskują wartości.  
+ Wyrażenia lambda mogą wprowadzać nowe zmienne w jej treści (w **C ++ 14**), a także dostęp, lub *przechwytywania*, zmiennych z otaczającego zakresu. Zaczyna się klauzuli przechwytywania wyrażenia lambda (*lambda-introducer* w standardowej składni), który określa zmienne, które są przechwytywane oraz czy przechwytywania to przez wartość lub przez odwołanie. Zmienne, które mają znak ampersand (`&`) prefiks są dostępne dla odwołań i zmienne, które nie mają są dostępne przez wartość.  
   
- Klauzula pusty przechwytywania `[ ]`, wskazuje, że treść wyrażenia lambda uzyskuje dostęp do żadnych zmiennych w otaczającym zakresie.  
+ Klauzula przechwytywania pustego `[ ]`, wskazuje, że treść wyrażenia lambda uzyskuje dostęp do żadnych zmiennych w obejmującym zakresie.  
   
- Można użyć domyślny tryb przechwytywania (*domyślna przechwytywania* w standardowej składni) do wskazania sposobu przechwytywania zewnętrznego zmienne, do których istnieją odwołania w wyrażeniu lambda: `[&]` oznacza, że wszystkie zmienne odwołujące się do są przechwytywane przez odwołanie, i `[=]` oznacza, że są one przechwycone przez wartość. Można użyć domyślny tryb przechwytywania, a następnie określ tryb przeciwną jawnie określonych zmiennych. Na przykład jeśli zmienna zewnętrznych uzyskuje dostęp do treści wyrażenia lambda `total` przez odwołanie, a zmienna zewnętrznych `factor` wg wartości, następnie poniższych klauzul przechwytywania są równoważne:  
+ Można użyć domyślny tryb przechwytywania (*domyślna przechwytywania* w standardowej składni) do wskazania sposobu przechwytywania wszelkich zewnętrznych zmiennych, które są określone w wyrażeniu lambda: `[&]` oznacza, że wszystkie zmienne odwołujące do są przechwytywane przez odwołania, a `[=]` oznacza, że są one przechwytywane przez wartość. Można użyć domyślny tryb przechwytywania, a następnie określ tryb przeciwny jawnie określonych zmiennych. Na przykład, jeśli treść lambda uzyskuje dostęp do zewnętrznej zmiennej `total` przez odwołanie, a do zewnętrznej zmiennej `factor` według wartości, następnie następujące klauzule przechwytywania są równoważne:  
   
 ```cpp  
 [&total, factor]  
@@ -81,9 +81,9 @@ void abssort(float* x, unsigned n) {
 [&total, =]  
 ```  
   
- Tylko w przypadku zmiennych, które są wymienione w wyrażeniu lambda są przechwytywane, gdy jest używana wartość domyślna przechwytywania.  
+ Tylko te zmienne, które są wymienione w lambdzie są przechwytywane, gdy jest używana wartość domyślna przechwytywania.  
   
- Jeśli domyślna przechwytywania zawiera klauzulę przechwytywania `&`, nie `identifier` w `capture` tego przechwytywania klauzuli może mieć postać `& identifier`. Podobnie jeśli klauzula przechwytywania zawiera wartość domyślna przechwytywania `=`, nie `capture` tego przechwytywania klauzuli może mieć postać `= identifier`. Identyfikator lub `this` nie może występować więcej niż raz w klauzuli przechwytywania. Poniższy fragment kodu ilustruje kilka przykładów.  
+ Jeśli klauzula przechwytywania zawiera wartość domyślna przechwytywania `&`, a następnie nie `identifier` w `capture` przechwytywania tej klauzuli mogą mieć postaci `& identifier`. Podobnie jeśli klauzula przechwytywania zawiera wartość domyślna przechwytywania `=`, a następnie nie `capture` przechwytywania tej klauzuli mogą mieć postaci `= identifier`. Identyfikator lub **to** nie może występować więcej niż jeden raz w klauzuli przechwytywania. Poniższy fragment kodu ilustruje kilka przykładów.  
   
 ```cpp  
 struct S { void f(int i); };  
@@ -97,7 +97,7 @@ void S::f(int i) {
 }  
 ```  
   
- Przechwytywanie następuje wielokropek jest rozwinięciem pakietu, jak pokazano w tym [ze zmienną liczbą argumentów szablonu](../cpp/ellipses-and-variadic-templates.md) przykład:  
+ Przechwytywanie następuje wielokropek jest rozwinięciem pakietu, jak pokazano w tym [szablonu wariadycznego](../cpp/ellipses-and-variadic-templates.md) przykładu:  
   
 ```cpp  
 template<class... Args>  
@@ -107,23 +107,23 @@ void f(Args... args) {
 }  
 ```  
   
- Aby użyć wyrażenia lambda w treści metody klasy, należy przekazać `this` wskaźnik do klauzuli przechwytywania zapewniające dostęp do elementów członkowskich danych i metod klasy otaczającej. 
+ Aby używać wyrażeń lambda w treści metody klasy, należy przekazać `this` wskaźnik do klauzuli przechwytywania, aby zapewnić dostęp do metod i składowych danych otaczającej klasy. 
  
-**Visual Studio 2017 wersji 15.3 i nowszych** (dostępnych z [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)): `this` wskaźnika może być przechwytywany przez wartość określając `*this` w klauzuli przechwytywania. Przechwytywanie przez wartość oznacza, że cały *zamknięcia*, który jest obiektem funkcji anonimowej tego encapulates wyrażenia lambda, zostanie skopiowany do każdej lokacji wywołania przywołane lambda. Przechwytywanie przez wartość jest przydatne, gdy wyrażenie lambda będą wykonywane w ramach operacji równoległych lub asynchroniczne, szczególnie w przypadku niektórych architektury sprzętu, takich jak NUMA. 
+**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **to** wskaźnik mogą być przechwytywane przez wartość, określając `*this` w klauzuli przechwytywania. Przechwytywania przez wartość oznacza, że cały *zamknięcia*, które jest obiektem funkcja anonimowa tego encapulates Wyrażenie lambda, jest kopiowany do każdej lokacji wywołania, gdy wyrażenie lambda jest wywoływana. Przechwytywania przez wartość jest przydatne, gdy wyrażenie lambda będzie wykonywany w operacji równoległych lub asynchroniczny, zwłaszcza w przypadku niektórych architektur sprzętu, takich jak architektura NUMA. 
 
-Na przykład pokazujący sposób wyrażenia lambda za pomocą metody klasy, zobacz "Przykład: przy użyciu Lambda wyrażenia w metody" w [przykłady wyrażeń Lambda](../cpp/examples-of-lambda-expressions.md).  
+Na przykład, który pokazuje, jak używać wyrażeń lambda z metodami klasy, zobacz "Przykład: przy użyciu Lambda wyrażenia w metody" w [Examples of Lambda Expressions](../cpp/examples-of-lambda-expressions.md).  
   
- Użycie klauzuli przechwytywania, firma Microsoft zaleca zachowanie tych punktów na uwadze, szczególnie w przypadku, gdy używasz wyrażeń lambda z wielowątkowość:  
+ Użycie klauzuli przechwytywania, zaleca się utrzymywanie tych punktów należy pamiętać, szczególnie w przypadku, gdy używasz wyrażeń lambda z wielowątkowością:  
   
--   Odwołanie do przechwytywania może służyć do modyfikowania zmiennych poza, ale nie przechwytywania wartość. (`mutable` umożliwia kopie ma być zmodyfikowana, ale nie oryginału.)  
+-   Przechwytywania przez odniesienie może służyć do modyfikacji zmiennych na zewnątrz, ale nie przechwytywania przez wartość. (**mutable** umożliwia kopii, które ma zostać zmodyfikowana, ale nie oryginału.)  
   
--   Odwołanie do przechwytywania odzwierciedlanie aktualizacji do zmiennych poza, ale wartość przechwytywania nie.  
+-   Przechwytywania przez odniesienie odzwierciedlały aktualizacje zmiennych na zewnątrz, ale nie obsługują przechwytywania przez wartość.  
   
--   Odwołanie do przechwytywania wprowadzenie zależności okres istnienia, ale przechwytywania wartość ma żadnych zależności okres istnienia. Jest to szczególnie ważne w przypadku, gdy wyrażenie lambda jest uruchamiane asynchronicznie. Jeśli lokalnym są przechwytywane przez odwołanie w wyrażeniu lambda asynchroniczne, tego lokalnego bardzo prawdopodobnie znikną przez przy uruchomieniu Wyrażenie lambda, co powoduje naruszenie zasad dostępu w czasie wykonywania.  
+-   Przechwytywania przez odniesienie wprowadzają zależność okresu istnienia, ale przechwytywania przez wartość nie ma żadnych zależności okresu istnienia. Jest to szczególnie ważne w przypadku, gdy wyrażenie lambda jest uruchamiane asynchronicznie. Jeśli lokalny jest przechwytywane przez odwołanie w lambdy asynchronicznej, że lokalny bardzo prawdopodobnie znikną przez przy uruchomieniu Wyrażenie lambda, spowodowało naruszenie zasad dostępu w czasie wykonywania.  
   
-### <a name="generalized-capture-c-14"></a>Przechwytywanie uogólniony (C++ 14)  
+### <a name="generalized-capture-c-14"></a>Przechwytywanie uogólnionej (C++ 14)  
   
- W języku C ++ 14 możesz wprowadzić i zainicjować nowe zmienne w klauzuli przechwytywania, bez konieczności posiadania tych zmiennych istnieje w otaczającym zakresie funkcja lambda. Inicjowanie może zostać wyrażona jako dowolne wyrażenie dowolnego; Typ nowej zmiennej jest ustalane od typu utworzonego przez wyrażenie. Jedną z korzyści płynących z tej funkcji jest, że w języku C ++ 14 można przechwytywać tylko do przeniesienia zmienne (takie jak std::unique_ptr) z otaczającego zakresu i ich używać w wyrażeniu lambda.  
+ W języku C ++ 14 możesz wprowadzić, a zainicjować nowe zmienne w klauzuli przechwytywania, bez konieczności posiadania tych zmiennych w zasięgu funkcji lambda. Inicjowanie mogą być wyrażone jako dowolne wyrażenie dowolnego; Typ nowej zmiennej jest wnioskowany z typu, o których produkowane przez wyrażenie. Jedną z zalet tej funkcji jest, że w języku C ++ 14 można przechwytywać obsługujące tylko przenoszenie zmienne (na przykład std::unique_ptr) z otaczającego zakresu i używać ich w wyrażenia lambda.  
   
 ```cpp  
 pNums = make_unique<vector<int>>(nums);  
@@ -135,7 +135,7 @@ pNums = make_unique<vector<int>>(nums);
 ```  
   
 ### <a name="parameter-list"></a>Lista parametrów  
- Oprócz przechwytywania zmienne, wyrażeniu lambda może przyjmować parametry wejściowe. Lista parametrów (*deklarator lambda* w standardowej składni) jest opcjonalna i w większości aspektów podobny listy parametrów dla funkcji.  
+ Oprócz zmiennych, wyrażenia lambda może akceptować parametry wejściowe. Lista parametrów (*lambda declarator* w standardowej składni) jest opcjonalny, a w większości aspektów odpowiada liście parametrów dla funkcji.  
   
 ```cpp  
 auto y = [] (int first, int second)  
@@ -145,7 +145,7 @@ auto y = [] (int first, int second)
   
 ```  
   
- W **C++ 14**, jeśli typ parametru jest rodzajowy, auto — słowo kluczowe można użyć jako specyfikatora typu. Ta wartość informuje kompilator, aby utworzyć operator wywołania funkcji jako szablon. Każde wystąpienie automatycznie na liście parametrów jest równoważna z parametrem typu distinct.  
+ W **C++ 14**, jeśli typ parametru jest ogólna, można użyć słowa kluczowego auto jako Specyfikator typu. Informuje kompilator, aby utworzyć operator wywołania funkcji jako szablon. Każde wystąpienie automatycznie na liście parametrów jest równoważna z parametrem distinct typu.  
   
 ```cpp  
 auto y = [] (auto first, auto second)  
@@ -154,15 +154,15 @@ auto y = [] (auto first, auto second)
 };  
 ```  
   
- Wyrażenie lambda może przyjmować inne wyrażenie lambda jako argument. Aby uzyskać więcej informacji, zobacz "Wyższego kolejność wyrażenia Lambda" w temacie [przykłady wyrażeń Lambda](../cpp/examples-of-lambda-expressions.md).  
+ Wyrażenie lambda może przyjmować inne wyrażenie lambda jako argument. Aby uzyskać więcej informacji, zobacz "Wyrażenia Lambda wyższego rzędu" w temacie [Examples of Lambda Expressions](../cpp/examples-of-lambda-expressions.md).  
   
- Ponieważ parametr jest opcjonalny, można pominąć pustych nawiasów, jeśli argument nie jest przekazywany do wyrażenia lambda i jego deklarator lambda nie zawiera *specyfikacji wyjątku*,  *końcowe zwracanego typu*, lub `mutable`.  
+ Ponieważ parametr jest opcjonalny, puste nawiasy można pominąć, jeśli nie przepuszczasz argumentów do wyrażenia lambda i nie zawiera jego lambda-declarator *Specyfikacja wyjątku*,  *trailing-return-type*, lub **mutable**.  
   
 ### <a name="mutable-specification"></a>Specyfikacja modyfikowalna  
- Operator wywołania funkcji Wyrażenie lambda jest zwykle stałą wartość, ale użycie `mutable` — słowo kluczowe anuluje ten. Nie generuje to modyfikowalnych elementów członkowskich danych. Specyfikacja modyfikowalna umożliwia treści wyrażenia lambda modyfikację zmiennych, które są przechwytywane przez wartość. Przykłady w tym artykule przedstawiono sposoby używania `mutable`.  
+ Zazwyczaj operator wywołania funkcji lambda to stała wartość, ale użytkowania **mutable** to anuluje przez słowo kluczowe. Nie generuje to modyfikowalnych elementów członkowskich danych. Specyfikacja modyfikowalna umożliwia treści wyrażenia lambda modyfikację zmiennych, które są przechwytywane przez wartość. Przykłady w dalszej części tego artykułu przedstawiono sposoby używania **mutable**.  
   
 ### <a name="exception-specification"></a>Specyfikacja wyjątku  
- Można użyć `noexcept` specyfikacji wyjątku, aby wskazać, czy wyrażenia lambda nie zgłasza wszelkie wyjątki. Zgodnie ze zwykłej funkcji kompilatora Visual C++ generuje ostrzeżenie [C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md) Jeśli wyrażenie lambda deklaruje `noexcept` specyfikacji wyjątku i treści lambda zgłasza wyjątek, jak pokazano poniżej:  
+ Możesz użyć `noexcept` Specyfikacja wyjątku, aby wskazać, że wyrażenie lambda nie generuje żadnych wyjątków. Zgodnie z zwykłe funkcje, kompilator języka Visual C++ generuje ostrzeżenie [C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md) jeżeli wyrażenie lambda deklaruje `noexcept` Specyfikacja wyjątku i treść lambda zgłasza wyjątek, jak pokazano poniżej:  
   
 ```cpp  
 // throw_lambda_expression.cpp  
@@ -176,9 +176,9 @@ int main() // C4297 expected
  Aby uzyskać więcej informacji, zobacz [specyfikacje wyjątków (throw)](../cpp/exception-specifications-throw-cpp.md).  
   
 ### <a name="return-type"></a>Zwracany typ  
- Zwracany typ wyrażenia lambda jest automatycznie ustalana. Nie trzeba używać [automatycznie](../cpp/auto-cpp.md) — słowo kluczowe chyba że zostanie *końcowe zwracanego typu*. *Końcowe zwracanego typu* podobny zwracanego typu część zwykłej metody lub funkcji. Jednak zwracany typ należy postępować zgodnie z listą parametrów i musi zawierać słowa kluczowego końcowe zwracanego typu `->` przed zwracanym typem.  
+ Zwracany typ wyrażenia lambda jest wyprowadzony automatycznie. Nie trzeba stosować [automatycznie](../cpp/auto-cpp.md) — słowo kluczowe, chyba że określisz *trailing-return-type*. *Trailing-return-type* przypomina część zwracanego typu zwykłej metody lub funkcji. Jednak zwracany typ musi stosować się na liście parametrów i musi zawierać słowo kluczowe trailing-return-type `->` przed zwracanym typem.  
   
- Można pominąć części zwracanego typu wyrażenia lambda, jeśli treść lambda zawiera tylko jedną instrukcję return lub wyrażenie nie zwraca wartości. Jeśli jednostka lambda zawiera jedną instrukcję return, kompilator deduces zwracanego typu z typu zwracane wyrażenie. W przeciwnym razie kompilator deduces zwracany typ `void`. Rozważmy następujące przykładowe fragmenty kodu, które ilustrują tę zasadę.  
+ Możesz pominąć część zwracanego typu wyrażenia lambda, jeżeli treść lambda zawiera tylko jedną instrukcję return lub wyrażenie nie zwraca wartości. Jeżeli treść lambda zawiera jedną instrukcję return, kompilator określi typ zwracany z typu wyrażenia return. W przeciwnym razie kompilator określi typ zwrotu na **void**. Rozważmy następujące przykładowe fragmenty kodu, które ilustrują tę zasadę.  
   
 ```cpp  
 auto x1 = [](int i){ return i; }; // OK: return type is int  
@@ -186,22 +186,22 @@ auto x2 = []{ return{ 1, 2 }; };  // ERROR: return type is void, deducing
                                   // return type from braced-init-list is not valid  
 ```  
   
- Wyrażenie lambda może generować inne wyrażenie lambda jako wartość zwracaną. Aby uzyskać więcej informacji, zobacz "Wyższego kolejność wyrażenia Lambda" w [przykłady wyrażeń Lambda](../cpp/examples-of-lambda-expressions.md).  
+ Wyrażenie lambda może generować inne wyrażenie lambda jako wartość zwracaną. Aby uzyskać więcej informacji, zobacz "Wyrażenia Lambda wyższego rzędu" w [Examples of Lambda Expressions](../cpp/examples-of-lambda-expressions.md).  
   
 ### <a name="lambda-body"></a>Treść lambda  
- Treść lambda (*instrukcji złożonej* w standardowej składni) wyrażenia lambda wyrażenia mogą zawierać wszystko, co może zawierać treść zwykłej metody lub funkcji. Treść zwykłej funkcji, jak i wyrażenia lambda, mogą uzyskiwać dostęp do tego rodzaju zmiennych:  
+ Treść lambda (*compound-statement* w standardowej składni) wyrażenia lambda wyrażenia może zawierać wszystko, co może zawierać treść zwykłej metody lub funkcji. Treść zwykłej funkcji i wyrażenia lambda mogą uzyskiwać dostęp do tego rodzaju zmiennych:  
   
--   Przechwyconych zmiennych z otaczającego zakresu, jak opisano wcześniej.  
+-   Przechwycone zmienne z otaczającego zakresu, zgodnie z wcześniejszym opisem.  
   
 -   Parametry  
   
 -   Lokalnie deklarowane zmienne  
   
--   Klasa elementy członkowskie danych, gdy zadeklarowana w klasie i `this` przechwytywania  
+-   Składowe danych, klasy, gdy zadeklarowana wewnątrz klasy i **to** są przechwytywane  
   
--   Wszelkie zmiennej, która jest statycznym okresem magazynu — na przykład zmienne globalne  
+-   Jakakolwiek zmienna, która ma statyczny czas magazynowania — na przykład, zmienne globalne  
   
- Poniższy przykład zawiera wyrażenie lambda, które jawnie przechwytuje zmiennej `n` według wartości i niejawnie przechwytuje zmiennej `m` przez odwołanie:  
+ Poniższy przykład zawiera wyrażenie lambda, które jawnie przechwytuje zmienną `n` według wartości i niejawnie przechwytuje zmienną `m` przez odwołanie:  
   
 ```cpp  
 // captures_lambda_expression.cpp  
@@ -223,9 +223,9 @@ int main()
 0  
 ```  
   
- Ponieważ zmiennej `n` jest przechwytywany przez wartość, jego wartość pozostaje `0` po wywołaniu wyrażenia lambda. `mutable` Specyfikacja umożliwia `n` można zmodyfikować w lambda.  
+ Ponieważ zmienna `n` jest przechwytywana przez wartość, jej wartośc pozostaje `0` po wywołaniu wyrażneia lambda. **Mutable** umożliwia specyfikację `n` można zmodyfikować w ramach lambda.  
   
- Mimo że wyrażenie lambda może przechwytywać tylko zmienne, które mają automatyczny czas trwania przechowywania, można używać zmiennych o statycznym czasie trwania przechowywania w treści wyrażenia lambda. W poniższym przykładzie użyto `generate` funkcji i wyrażenia lambda do przypisania wartości dla każdego elementu w `vector` obiektu. Wyrażenie lambda modyfikuje zmienną statyczną, aby wygenerować wartość następnego elementu.  
+ Mimo że wyrażenie lambda może przechwytywać tylko zmienne, które mają automatyczny czas trwania przechowywania, można używać zmiennych o statycznym czasie trwania przechowywania w treści wyrażenia lambda. W poniższym przykładzie użyto `generate` funkcji i wyrażenia lambda do przypisania wartości do każdego elementu w `vector` obiektu. Wyrażenie lambda modyfikuje zmienną statyczną, aby wygenerować wartość następnego elementu.  
   
 ```cpp  
 void fillVector(vector<int>& v)  
@@ -243,7 +243,7 @@ void fillVector(vector<int>& v)
   
  Aby uzyskać więcej informacji, zobacz [Generowanie](../standard-library/algorithm-functions.md#generate).  
   
- Poniższy przykład kodu wykorzystuje funkcję z poprzedniego przykładu i dodaje przykład wyrażenia lambda, który używa algorytmu standardowa biblioteka C++ `generate_n`. To wyrażenie lambda przypisuje element `vector` obiektu Suma poprzednich dwóch elementów. `mutable` Słowo kluczowe jest używane, aby treść wyrażenia lambda można modyfikować jej kopii zmiennych zewnętrznych `x` i `y`, który przechwytuje wyrażenia lambda przez wartość. Ponieważ wyrażenia lambda przechwytuje oryginalnego zmienne `x` i `y` wg wartości, ich wartości pozostają `1` po wykonaniu lambda.  
+ Poniższy przykład kodu używa funkcji z poprzedniego przykładu i dodano przykład wyrażenia lambda, które używa algorytmu standardowej biblioteki języka C++ `generate_n`. To wyrażenie lambda przypisuje element obiektu `vector` do sumy dwóch poprzednich elementów. **Mutable** słowo kluczowe jest używane, tak aby treść wyrażenia lambda mogła modyfikować swoje kopie zmiennych zewnętrznych `x` i `y`, które Wyrażenie lambda przechwytuje przez wartość. Ponieważ wyrażenie lambda przechwytuje oryginalne zmienne `x` i `y` według wartości, ich wartości pozostają `1` po wykonaniu lambdy.  
   
 ```cpp  
 // compile with: /W4 /EHsc  
@@ -325,8 +325,8 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
   
  Aby uzyskać więcej informacji, zobacz [generate_n](../standard-library/algorithm-functions.md#generate_n).  
 
-## <a name="constexpr-lambda-expressions"></a>wyrażenia lambda constexpr
-**Visual Studio 2017 wersji 15.3 i nowszych** (dostępnych z [/std:c ++ 17](../build/reference/std-specify-language-standard-version.md)): wyrażenia lambda, może być zadeklarowana jako `constexpr` lub użyć w wyrażeniu stałym podczas inicjowania dla każdego elementu członkowskiego danych it Przechwytuje lub wprowadza jest dozwolona w wyrażeniu stałym.  
+## <a name="constexpr-lambda-expressions"></a>wyrażenia constexpr, wyrażenia lambda
+**Visual Studio 2017 w wersji 15.3 lub nowszej** (udostępniono [/STD: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Wyrażenie lambda może być zadeklarowana jako `constexpr` lub używany w wyrażeniu stałym podczas inicjowania każdy element członkowski danych jej Przechwytuje lub wprowadza jest dozwolona w wyrażeniu stałym.  
 
 ```cpp
     int y = 32;
@@ -342,7 +342,7 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
     }
 
 ``` 
-Wyrażenie lambda jest niejawnie `constexpr` Jeśli wynik spełnia wymagania `constexpr` funkcji:
+Wyrażenie lambda jest niejawnie `constexpr` Jeśli wynik nie spełnia wymagań `constexpr` funkcji:
 ```cpp
     auto answer = [](int n) 
     {
@@ -351,7 +351,7 @@ Wyrażenie lambda jest niejawnie `constexpr` Jeśli wynik spełnia wymagania `co
 
     constexpr int response = answer(10);
 ``` 
-Jeśli wyrażenie lambda jest jawnie lub niejawnie `constexpr`, tworzy konwersji do wskaźnika funkcji `constexpr` funkcji:
+Jeśli wyrażenie lambda jest jawnie lub niejawnie `constexpr`, konwersja wskaźnika funkcji tworzy `constexpr` funkcji:
 
 ```cpp
     auto Increment = [](int n)
@@ -363,20 +363,20 @@ Jeśli wyrażenie lambda jest jawnie lub niejawnie `constexpr`, tworzy konwersji
 ```
   
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
- Wyrażenia lambda nie są obsługiwane w następujących wspólnych jednostki zarządzane środowiska uruchomieniowego (języka wspólnego CLR) języka: `ref class`, `ref struct`, `value class`, lub `value struct`.  
+ Wyrażenia lambda nie są obsługiwane w następujących jednostkach zarządzanych środowiska uruchomieniowego (języka wspólnego CLR) języka wspólnego: **klasy referencyjnej**, **ref struct**, **klasę wartości**, lub **wartość — Struktura** .  
   
- Jeśli używasz modyfikator specyficzne dla firmy Microsoft takich jak [__declspec](../cpp/declspec.md), można wstawić je do wyrażenia lambda natychmiast po `parameter-declaration-clause`— na przykład:  
+ Jeśli używasz Modyfikatory specyficzne dla firmy Microsoft takich jak [__declspec](../cpp/declspec.md), Wstaw go do wyrażenia lambda natychmiast po `parameter-declaration-clause`— na przykład:  
   
 ```cpp  
 auto Sqr = [](int t) __declspec(code_seg("PagedMem")) -> int { return t*t; };  
 ```  
   
- Aby ustalić, czy modyfikujący jest obsługiwana przez wyrażeń lambda, zobacz artykuł o nim w [Modyfikatory specyficzne dla firmy Microsoft](../cpp/microsoft-specific-modifiers.md) sekcji dokumentacji.  
+ Aby ustalić, czy modyfikatorem jest obsługiwane przez wyrażenia lambda, zobacz artykuł o nim w [Modyfikatory specyficzne dla Microsoft](../cpp/microsoft-specific-modifiers.md) sekcji dokumentacji.  
   
- Oprócz języka C ++ 11 lambda standardowe funkcje program Visual Studio obsługuje bezstanowych wyrażeń lambda, które są rozproszone — możliwe do przekonwertowania na wskaźników funkcji, korzystających z dowolnego konwencji wywoływania.  
+ Oprócz funkcje C ++ 11 standardowa lambda program Visual Studio obsługuje bezstanowe lambdy, które można uniwersalnie przekonwertować do wskaźników funkcji, które używają dowolne Konwencje wywoływania.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)   
  [Obiekty funkcji w standardowej bibliotece C++](../standard-library/function-objects-in-the-stl.md)   
- [Wywołania funkcji](../cpp/function-call-cpp.md)   
+ [Wywołanie funkcji](../cpp/function-call-cpp.md)   
  [for_each](../standard-library/algorithm-functions.md#for_each)

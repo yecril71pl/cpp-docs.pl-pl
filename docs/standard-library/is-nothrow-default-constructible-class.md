@@ -1,5 +1,5 @@
 ---
-title: is_nothrow_default_constructible — klasa | Dokumentacja firmy Microsoft
+title: is_nothrow_default_constructible, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bf12a91fc4dd1485e0129e8ce9049d3401c181c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 38e076d5a8e552efa353be711d84485c96f6ffd3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844806"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962991"
 ---
 # <a name="isnothrowdefaultconstructible-class"></a>is_nothrow_default_constructible —  klasa
 
-Sprawdza, czy typ ma konstruktora domyślnego z systemem innym niż Trwa zgłaszanie wyjątku.
+Sprawdza, czy typ ma niezgłaszające domyślnego konstruktora.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,17 +36,17 @@ struct is_nothrow_default_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zapytania.
+*Ty* typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typ `Ty` ma nothrow Konstruktor domyślny, w przeciwnym razie posiada wartość false. Wystąpienie typu predykatu jest odpowiednikiem `is_nothrow_constructible<Ty>`.
+Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* ma nothrow Konstruktor domyślny, w przeciwnym razie przechowuje wartość false. Wystąpienie typu predykatu jest odpowiednikiem `is_nothrow_constructible<Ty>`.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c09754e44b2cf1d7bda4bde35b8d76335d96711
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b50995ff1d5eb730bf6593679194d32d5300b9d7
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947740"
 ---
 # <a name="badcast-exception"></a>bad_cast — Wyjątek
-`bad_cast` Wyjątku przez `dynamic_cast` operatora w wyniku nie powiodło się Rzutowanie na typ referencyjny.  
+`bad_cast` Wyjątek jest generowany przez `dynamic_cast` operatora w wyniku zakończone niepowodzeniem Rzutowanie na typ odwołania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,9 +36,9 @@ catch (bad_cast)
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Interfejs dla `bad_cast` jest:  
+ Interfejs `bad_cast` jest:  
   
-```  
+```cpp 
 class bad_cast : public exception {  
 public:  
    bad_cast(const char * _Message = "bad cast");  
@@ -46,9 +47,9 @@ public:
 };  
 ```  
   
- Poniższy kod zawiera przykład nieudanej `dynamic_cast` który zgłasza `bad_cast` wyjątku.  
+ Poniższy kod zawiera przykład niepowodzenia `dynamic_cast` która zgłasza `bad_cast` wyjątku.  
   
-```  
+```cpp 
 // expre_bad_cast_Exception.cpp  
 // compile with: /EHsc /GR  
 #include <typeinfo.h>  
@@ -77,16 +78,16 @@ int main() {
 }  
 ```  
   
- Wyjątek jest generowany, gdy jest rzutowanie obiektu (kształtu) nie pochodzi od typu określone rzutowanie (okrąg). Aby uniknąć tego wyjątku, Dodaj następujące deklaracje `main`:  
+ Wyjątek jest zgłaszany, ponieważ obiekt rzutowany (kształt) nie pochodzi od typu określone rzutowanie (Circle). Aby uniknąć wyjątek, należy dodać te deklaracje **głównego**:  
   
-```  
+```cpp 
 Circle circle_instance;  
 Circle& ref_circle = circle_instance;  
 ```  
   
- Wycofać rzutowania w tym sensie `try` zablokować w następujący sposób:  
+ Wycofać poczucie rzutowanie w **spróbuj** blokowania w następujący sposób:  
   
-```  
+```cpp 
 Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);  
 ```  
   

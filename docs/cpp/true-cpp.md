@@ -16,27 +16,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44df8d3e9429c272d83025b600fc8d43cc8f8b73
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5a469b47d54cef9084ba686538219d62a2d5ec50
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947776"
 ---
 # <a name="true-c"></a>true (C++)
 ## <a name="syntax"></a>Składnia  
   
 ```  
   
-      bool-identifier = true ;  
+bool-identifier = true ;  
 bool-expression logical-operator true ;  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- To słowo kluczowe jest jednym z dwóch wartości dla zmiennej typu [bool](../cpp/bool-cpp.md) lub wyrażenia warunkowego (wyrażenia warunkowego jest teraz wyrażenie logiczne true). Jeśli `i` jest typu `bool`, następnie instrukcji `i = true;` przypisuje **true** do `i`.  
+ To słowo kluczowe jest jedną z dwóch wartości do zmiennej typu [bool](../cpp/bool-cpp.md) lub wyrażenia warunkowego (wyrażenia warunkowego jest teraz wyrażenie logiczne true). Jeśli `i` typu **bool**, then — instrukcja `i = true;` przypisuje **true** do `i`.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp 
 // bool_true.cpp  
 #include <stdio.h>  
 int main()  

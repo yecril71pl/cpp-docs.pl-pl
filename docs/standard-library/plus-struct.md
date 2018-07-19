@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a56c5ef5f8cc5a3061b18ec2ffcdc83bf850d641
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 73c7faa1146c7784076c75a468e87a717a8d03da
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853937"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965733"
 ---
 # <a name="plus-struct"></a>plus — Struktura
 
-Obiekt funkcji wstępnie zdefiniowanej, który wykonuje operacje dodawania (binarne `operator+`) na jego argumentów.
+Obiekt wstępnie zdefiniowana funkcja, która wykonuje operację dodawania (binarne `operator+`) na jego argumenty.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,15 +49,15 @@ struct plus<void>
 
 ### <a name="parameters"></a>Parametry
 
-`Type`, `T`, `U` Typu, który obsługuje dane binarne `operator+` pobierającej argumentów operacji typu określonego lub wywnioskowany.
+*Typ*, *T*, *U* typu, który obsługuje dane binarne `operator+` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
 
-`Left` Lewy operand operacji dodawania. Szablon klasy niespecjalizowanej przyjmuje argument odwołania l-wartością typu `Type`. Specjalne szablonu doskonała przekazującej lewostronnie i argumenty odwołanie do r-wartości wywnioskować typu `T`.
+*Po lewej stronie* lewy operand operacji dodawania. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
 
-`Right` Prawy argument operacji dodawania. Szablon klasy niespecjalizowanej przyjmuje argument odwołania l-wartością typu `Type`. Specjalne szablonu doskonała przekazującej lewostronnie i argumenty odwołanie do r-wartości wywnioskować typu `U`.
+*Po prawej stronie* prawy operand operacji dodawania. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wynik `Left + Right`. Specjalne szablonu doskonała przekazywanie wynik, który ma typ zwracany przez dane binarne `operator+`.
+Wynik `Left + Right`. Wyspecjalizowane szablonu doskonała przekazywania wyniku, który ma typ, który jest zwracany przez plik binarny `operator+`.
 
 ## <a name="example"></a>Przykład
 
@@ -113,7 +113,7 @@ The element-wise sums are: ( -4 -2 0 2 4 6 )
 
 **Nagłówek:** \<funkcjonalności >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

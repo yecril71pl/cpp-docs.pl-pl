@@ -1,5 +1,5 @@
 ---
-title: Podwójne interfejsy wielu | Dokumentacja firmy Microsoft
+title: Wiele podwójnych interfejsów | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,29 +19,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e23682bd0b7c923a1e377463405f84a6c6ee1221
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ace347148f3a339c75fd9a1069be368c7373d351
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356722"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38952932"
 ---
-# <a name="multiple-dual-interfaces"></a>Wiele podwójne interfejsy
-Możesz połączyć korzyści wynikające z dwoma interfejsami (to znaczy elastyczność vtable i późne powiązania, w związku z tym udostępnienie klasy języków skryptów, a także C++) techniki dziedziczenie wielokrotne.  
+# <a name="multiple-dual-interfaces"></a>Wiele podwójnych interfejsów
+Możesz chcieć połączyć zalety podwójnego interfejsu (czyli elastyczność zarówno vtable, jak i późne powiązania, w związku z tym udostępnia klasy do języków skryptów, a także C++) za pomocą metod wielokrotnego dziedziczenia.  
   
- Chociaż jest możliwe do udostępnienia wielu podwójne interfejsy na pojedynczy obiekt COM, nie zaleca. Jeśli istnieje wiele podwójne interfejsy, musi istnieć tylko jeden `IDispatch` interfejsu widoczne. Metody dostępne upewnić się, że jest to przenoszenia kary, takich jak utraty funkcji lub złożoność zwiększona kodu. Developer, biorąc pod uwagę takie podejście dokładnie należy porównać zalety i wady.  
+ Chociaż jest to możliwe do udostępnienia wiele podwójnych interfejsów na pojedynczy obiekt COM, nie jest zalecane. Jeśli istnieje wiele podwójnych interfejsów, musi istnieć tylko jeden `IDispatch` interfejsu widoczne. Metody dostępne upewnić się, że jest to możliwe wykonania kary, takie jak utrata funkcji lub kod zwiększenia złożoności. Dla deweloperów, biorąc pod uwagę podejście to dokładnie porównać zalety i wady.  
   
 ## <a name="exposing-a-single-idispatch-interface"></a>Udostępnianie jednego interfejsu IDispatch  
- Można udostępnić wielu podwójne interfejsy na pojedynczy obiekt wywodzące się z dwóch lub więcej specjalizacjach `IDispatchImpl`. Jednak jeśli Zezwalaj klientom na wykonanie kwerendy `IDispatch` interfejsu, należy użyć [COM_INTERFACE_ENTRY2](reference/com-interface-entry-macros.md#com_interface_entry2) makro (lub [COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid))) do określenia, które klasy podstawowej dla Implementacja `IDispatch`.  
+ Można udostępnić wiele podwójnych interfejsów na pojedynczy obiekt z co najmniej dwóch specjalizacje `IDispatchImpl`. Jednak w przypadku zezwalania klientom na wykonanie kwerendy `IDispatch` interfejsu, należy użyć [COM_INTERFACE_ENTRY2](reference/com-interface-entry-macros.md#com_interface_entry2) — makro (lub [COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid))) aby określić, która klasa bazowa dla Implementacja `IDispatch`.  
   
  [!code-cpp[NVC_ATL_COM#23](../atl/codesnippet/cpp/multiple-dual-interfaces_1.h)]  
   
- Ponieważ tylko jeden `IDispatch` interfejsu jest narażony, klientów, którzy mogą uzyskiwać dostęp tylko do obiektów za pomocą `IDispatch` interfejsu nie będzie można uzyskać dostępu do metody lub właściwości w inny interfejs.  
+ Ponieważ tylko jeden `IDispatch` interfejsu jest widoczna, klienci, którzy mają dostęp tylko do obiektów za pomocą `IDispatch` interfejsu nie będzie można uzyskać dostępu do metody lub właściwości w innym interfejsie.  
   
-## <a name="combining-multiple-dual-interfaces-into-a-single-implementation-of-idispatch"></a>Łączenie wielu podwójne interfejsy w pojedynczej implementacji interfejsu IDispatch  
- ATL nie ma żadnych pomocy technicznej dla łączenie wielu podwójne interfejsy w pojedynczej implementacji właściwości `IDispatch`. Jednak jest kilka metod znane, aby ręcznie łączenie interfejsów, takich jak tworzenie szablonu klasy, która zawiera Unię szczegółowych `IDispatch` interfejsy tworzenia nowego obiektu w celu wykonania `QueryInterface` funkcji lub przy użyciu na podstawie informacji o typach wdrożenia zagnieżdżonych obiektów, aby utworzyć `IDispatch` interfejsu.  
+## <a name="combining-multiple-dual-interfaces-into-a-single-implementation-of-idispatch"></a>Łącząc wiele podwójnych interfejsów w pojedynczej implementacji interfejsu IDispatch  
+ ATL nie świadczenia pomocy technicznej dla łącząc wiele podwójnych interfejsów w pojedynczej implementacji właściwości `IDispatch`. Istnieją różne techniki znanych ręcznie łączenie interfejsów, takich jak tworzenie oparte na szablonach klasę, która zawiera sumę oddzielne `IDispatch` interfejsów, utworzenie nowego obiektu do wykonania `QueryInterface` funkcji lub przy użyciu na podstawie informacji o typach wdrożenia obiekty zagnieżdżone, aby utworzyć `IDispatch` interfejsu.  
   
- Te metody występują problemy z potencjalnych konfliktów nazw, a także kod złożoności i łatwości konserwacji. Nie zaleca się utworzenie wielu podwójne interfejsy.  
+ Te metody występują problemy z potencjalnych konfliktów nazw, a także kod złożoności i łatwości konserwacji. Nie zaleca się, że utworzono wiele podwójnych interfejsów.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Podwójne interfejsy i ATL](../atl/dual-interfaces-and-atl.md)

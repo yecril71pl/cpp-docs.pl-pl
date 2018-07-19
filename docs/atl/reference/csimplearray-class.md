@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 187dee79cd09e366fb56d9cd0e71395589476a69
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2ef8a6a9b803cb7e1828537027bbf09b2ffd2067
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364274"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881636"
 ---
 # <a name="csimplearray-class"></a>Klasa CSimpleArray
-Ta klasa dostarcza metody do zarządzania proste tablicy.  
+Ta klasa dostarcza metody do zarządzania macierzą proste.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,11 +44,11 @@ class CSimpleArray
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Typ danych, które mają być przechowywane w tablicy.  
+ *T*  
+ Typ danych do przechowywania w tablicy.  
   
- `TEqual`  
- Obiekt cechy Definiowanie testu równości dla elementów typu `T`.  
+ *TEqual*  
+ Obiekt cech, definiujący testu równości dla elementów typu *T*.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -56,18 +56,18 @@ class CSimpleArray
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CSimpleArray::CSimpleArray](#csimplearray)|Konstruktor proste tablicy.|  
-|[CSimpleArray:: ~ CSimpleArray](#dtor)|Destruktor dla elementu tablicy proste.|  
+|[CSimpleArray::CSimpleArray](#csimplearray)|Konstruktor dla prostej tablicy.|  
+|[CSimpleArray:: ~ CSimpleArray](#dtor)|Destruktor dla prostej tablicy.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[CSimpleArray::Add](#add)|Dodaje nowy element do tablicy.|  
-|[CSimpleArray::Find](#find)|Odnajduje element w tablicy.|  
+|[CSimpleArray::Find](#find)|Wyszukuje element w tablicy.|  
 |[CSimpleArray::GetData](#getdata)|Zwraca wskaźnik do danych przechowywanych w tablicy.|  
-|[CSimpleArray::GetSize](#getsize)|Zwraca liczbę elementów przechowywane w tablicy.|  
-|[CSimpleArray::Remove](#remove)|Usuwa określonego elementu z tablicy.|  
+|[CSimpleArray::GetSize](#getsize)|Zwraca liczbę elementów przechowywanych w tablicy.|  
+|[CSimpleArray::Remove](#remove)|Usuwa dany element z tablicy.|  
 |[CSimpleArray::RemoveAll](#removeall)|Usuwa wszystkie elementy z tablicy.|  
 |[CSimpleArray::RemoveAt](#removeat)|Usuwa określony element z tablicy.|  
 |[CSimpleArray::SetAtIndex](#setatindex)|Ustawia określony element w tablicy.|  
@@ -81,9 +81,9 @@ class CSimpleArray
 
   
 ## <a name="remarks"></a>Uwagi  
- `CSimpleArray` udostępnia metody do tworzenia i zarządzania proste tablica danego typu `T`.  
+ `CSimpleArray` zawiera metody służące do tworzenia i zarządzania nimi w prostej tablicy każdego typu `T`.  
   
- Parametr `TEqual` umożliwia definiowanie funkcję porównania dla dwóch elementów typu `T`. Tworząc podobny do klasy [CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md), można zmienić zachowanie testu równości dla dowolnej podanej tablicy. Na przykład podczas pracy nad tablicy wskaźników, może być przydatne do definiowania równości w zależności od wartości, które odwołują się wskaźniki. Domyślna implementacja używa **operator=()**.  
+ Parametr `TEqual` umożliwia definiowanie funkcją porównania dla dwóch elementów typu `T`. Tworząc podobny do klasy [CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md), istnieje możliwość zmiany zachowania testu równości dla dowolnej podanej tablicy. Przykładowo zajmujące się tablicę wskaźników, może być przydatne do definiowania równości w zależności od wartości, które odwołują się wskaźniki. Domyślna implementacja używa **operator=()**.  
   
  Zarówno `CSimpleArray` i [CSimpleMap](../../atl/reference/csimplemap-class.md) są przeznaczone dla niewielkiej liczby elementów. [CAtlArray](../../atl/reference/catlarray-class.md) i [CAtlMap](../../atl/reference/catlmap-class.md) powinna być używana, gdy tablica zawiera dużą liczbę elementów.  
   
@@ -102,16 +102,16 @@ BOOL Add(const T& t);
   
 ### <a name="parameters"></a>Parametry  
  *t*  
- Element, aby dodać do tablicy.  
+ Element do dodania do tablicy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość PRAWDA, jeśli element został pomyślnie dodany do tablicy, wartość FALSE w przeciwnym razie wartość.  
+ Zwraca wartość TRUE, jeśli element został pomyślnie dodany do tablicy, a wartość FALSE w przeciwnym razie.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Utilities#87](../../atl/codesnippet/cpp/csimplearray-class_2.cpp)]  
   
 ##  <a name="csimplearray"></a>  CSimpleArray::CSimpleArray  
- Konstruktor dla obiekt array.  
+ Konstruktor obiektu array.  
   
 ```
 CSimpleArray(const CSimpleArray<T, TEqual>& src);  
@@ -123,7 +123,7 @@ CSimpleArray();
  Istniejące `CSimpleArray` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Inicjuje elementy członkowskie danych, tworzenie nowych pusta `CSimpleArray` obiektu lub kopię istniejącej `CSimpleArray` obiektu.  
+ Inicjuje składowe danych, tworząc nowe puste `CSimpleArray` obiektu lub kopię istniejącego `CSimpleArray` obiektu.  
   
 ##  <a name="dtor"></a>  CSimpleArray:: ~ CSimpleArray  
  Destruktor.  
@@ -136,7 +136,7 @@ CSimpleArray();
  Zwalnia wszystkie przydzielone zasoby.  
   
 ##  <a name="find"></a>  CSimpleArray::Find  
- Odnajduje element w tablicy.  
+ Wyszukuje element w tablicy.  
   
 ```
 int Find(const T& t) const;
@@ -163,14 +163,14 @@ T* GetData() const;
  Zwraca wskaźnik do danych w tablicy.  
   
 ##  <a name="getsize"></a>  CSimpleArray::GetSize  
- Zwraca liczbę elementów przechowywane w tablicy.  
+ Zwraca liczbę elementów przechowywanych w tablicy.  
   
 ```
 int GetSize() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca liczbę elementów przechowywane w tablicy.  
+ Zwraca liczbę elementów przechowywanych w tablicy.  
   
 ##  <a name="operator_at"></a>  CSimpleArray::operator \[\]  
  Pobiera element z tablicy.  
@@ -180,11 +180,11 @@ T& operator[](int nindex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Indeks elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca element tablicy odwołuje się `nIndex`.  
+ Zwraca element tablicy odwołuje się *nIndex*.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Utilities#89](../../atl/codesnippet/cpp/csimplearray-class_4.cpp)]  
@@ -206,13 +206,13 @@ CSimpleArray<T, TEqual>
  Zwraca wskaźnik do zaktualizowanego `CSimpleArray` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Kopiuje wszystkie elementy z `CSimpleArray` zawiera odwołanie do obiektu *src* do bieżącego obiektu tablicy zastąpienie wszystkich istniejących danych.  
+ Kopiuje wszystkie elementy z `CSimpleArray` zawiera odwołanie do obiektu *src* do bieżącego obiektu array, zastępując wszystkie istniejące dane.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Utilities#90](../../atl/codesnippet/cpp/csimplearray-class_5.cpp)]  
   
 ##  <a name="remove"></a>  CSimpleArray::Remove  
- Usuwa określonego elementu z tablicy.  
+ Usuwa dany element z tablicy.  
   
 ```
 BOOL Remove(const T& t);
@@ -220,13 +220,13 @@ BOOL Remove(const T& t);
   
 ### <a name="parameters"></a>Parametry  
  *t*  
- Element, aby usunąć z tablicy.  
+ Element do usunięcia z tablicy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość PRAWDA, jeśli element jest znaleziono i usunięty, wartość FALSE w przeciwnym razie wartość.  
+ Zwraca wartość TRUE, jeśli element jest znaleziono i usunięte, wartość FALSE w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
- Po usunięciu elementu pozostałych elementów w tablicy są numerowane do wypełnienia pustego miejsca.  
+ Gdy element zostanie usunięty, pozostałe elementy w tablicy są numerowane, aby wypełnić puste miejsce.  
   
 ##  <a name="removeall"></a>  CSimpleArray::RemoveAll  
  Usuwa wszystkie elementy z tablicy.  
@@ -236,7 +236,7 @@ void RemoveAll();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Usuwa wszystkie elementy przechowywane w tablicy.  
+ Usuwa wszystkie elementy, które obecnie są przechowywane w tablicy.  
   
 ##  <a name="removeat"></a>  CSimpleArray::RemoveAt  
  Usuwa określony element z tablicy.  
@@ -246,14 +246,14 @@ BOOL RemoveAtint nIndex);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
- Indeks wskazuje element do usunięcia.  
+ *nIndex*  
+ Indeks wskazujący element do usunięcia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość PRAWDA, jeśli element został usunięty, wartość FALSE, jeśli indeks jest nieprawidłowy.  
+ Zwraca wartość TRUE, jeśli element został usunięty, wartość FALSE, jeśli indeks jest nieprawidłowy.  
   
 ### <a name="remarks"></a>Uwagi  
- Po usunięciu elementu pozostałych elementów w tablicy są numerowane do wypełnienia pustego miejsca.  
+ Gdy element zostanie usunięty, pozostałe elementy w tablicy są numerowane, aby wypełnić puste miejsce.  
   
 ##  <a name="setatindex"></a>  CSimpleArray::SetAtIndex  
  Ustaw określony element w tablicy.  
@@ -265,14 +265,14 @@ BOOL SetAtIndex(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Indeks elementu do zmiany.  
   
  *t*  
  Wartość do przypisania do określonego elementu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość PRAWDA, jeśli powodzenia lub wartość FALSE Jeśli indeks jest nieprawidłowy.  
+ Zwraca wartość PRAWDA, jeśli powodzenia lub wartość FAŁSZ Jeśli indeks jest nieprawidłowy.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

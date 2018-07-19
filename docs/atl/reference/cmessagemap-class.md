@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 187d9964da0929516207a67b0e3a769649fc375b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 663ee462bf03e76ab15cbac05790c89dcaf07dca
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359022"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884857"
 ---
 # <a name="cmessagemap-class"></a>Klasa CMessageMap
-Ta klasa umożliwia mapy wiadomości obiektu jako dostępu przez inny obiekt.  
+Ta klasa umożliwia mapy wiadomości obiektu, aby mieć dostęp przez inny obiekt.  
   
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,24 +45,24 @@ class ATL_NO_VTABLE CMessageMap
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CMessageMap::ProcessWindowMessage](#processwindowmessage)|Uzyskuje dostęp do mapy komunikatów w `CMessageMap`-klasy.|  
+|[CMessageMap::ProcessWindowMessage](#processwindowmessage)|Uzyskuje dostęp do mapy komunikatów w `CMessageMap`-klasy pochodnej.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CMessageMap` jest to abstrakcyjna klasa podstawowa umożliwiająca komunikat obiektu mapy można uzyskać dostęp przez inny obiekt. Aby dla obiekt do udostępnienia jej mapy komunikatów, jej klasa musi pochodzić od `CMessageMap`.  
+ `CMessageMap` jest abstrakcyjna klasa bazowa, umożliwiająca komunikat obiektu mapuje uzyskiwał dostęp do innego obiektu. Aby obiekt do udostępnienia jej mapy komunikatów, swojej klasie musi pochodzić od klasy `CMessageMap`.  
   
- ATL używa `CMessageMap` zawarte pomocy technicznej systemu windows i łańcucha mapy wiadomości dynamicznych. Na przykład wszystkie klasy zawierające [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) obiekt musi pochodzić od `CMessageMap`. Poniższy kod jest pobierana z [SUBEDIT](../../visual-cpp-samples.md) próbki. Za pomocą [CComControl](../../atl/reference/ccomcontrol-class.md), `CAtlEdit` automatycznie pochodną klasy `CMessageMap`.  
+ Używa ATL `CMessageMap` znajdujących się w pomocy technicznej systemu windows i łańcuch mapy wiadomości dynamiczne. Na przykład wszystkie klasy zawierające [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) obiekt musi pochodzić od klasy `CMessageMap`. Poniższy kod jest pobierana z [SUBEDIT](../../visual-cpp-samples.md) próbki. Za pomocą [CComControl](../../atl/reference/ccomcontrol-class.md), `CAtlEdit` automatycznie pochodną klasy `CMessageMap`.  
   
  [!code-cpp[NVC_ATL_Windowing#90](../../atl/codesnippet/cpp/cmessagemap-class_1.h)]  
   
- Ponieważ zawartego okna `m_EditCtrl`, będzie używać mapy komunikatów w klasie zawierającej `CAtlEdit` pochodną `CMessageMap`.  
+ Ponieważ zawartego okna `m_EditCtrl`, będzie używać mapy komunikatów w klasie zawierającej `CAtlEdit` pochodzi od klasy `CMessageMap`.  
   
- Aby uzyskać więcej informacji na temat mapy komunikatów, zobacz [mapy wiadomości](../../atl/message-maps-atl.md) w artykule "Klas okien ALT".  
+ Aby uzyskać więcej informacji na temat mapy komunikatów zobacz [mapy wiadomości](../../atl/message-maps-atl.md) w artykule "Klas okien ATL."  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlwin.h  
   
 ##  <a name="processwindowmessage"></a>  CMessageMap::ProcessWindowMessage  
- Uzyskuje dostęp do mapy komunikatów identyfikowane przez `dwMsgMapID` w `CMessageMap`-klasy.  
+ Uzyskuje dostęp do mapy komunikatów identyfikowane przez *dwMsgMapID* w `CMessageMap`-klasy pochodnej.  
   
 ```
 virtual BOOL ProcessWindowMessage(  
@@ -75,32 +75,32 @@ virtual BOOL ProcessWindowMessage(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hWnd`  
- [in] Dojście do okna odbierania wiadomości.  
+ *hWnd*  
+ [in] Dojście do okna odbierania komunikatów.  
   
- `uMsg`  
+ *uMsg*  
  [in] Komunikat wysyłany do okna.  
   
- `wParam`  
+ *wParam*  
  [in] Dodatkowe informacje specyficzne dla wiadomości.  
   
- `lParam`  
+ *lParam*  
  [in] Dodatkowe informacje specyficzne dla wiadomości.  
   
- `lResult`  
- [out] Wynik przetwarzania komunikatów.  
+ *lResult*  
+ [out] Wynik przetwarzania wiadomości.  
   
- `dwMsgMapID`  
- [in] Identyfikator mapę komunikatów, która będzie przetwarzać komunikatu. Domyślną mapę komunikatów zadeklarowana z [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), jest identyfikowany przez 0. Mapy wiadomości alternatywny zadeklarowana z [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), jest identyfikowany przez `msgMapID`.  
+ *dwMsgMapID*  
+ [in] Identyfikator mapy komunikatów, która będzie przetwarzać komunikat. Mapy wiadomości domyślnej, zadeklarowany za pomocą [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), jest identyfikowany przez 0. Mapy wiadomości alternatywny zadeklarowane za pomocą [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), jest identyfikowany przez `msgMapID`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- **Wartość TRUE,** Jeśli komunikat jest w pełni obsługiwany; w przeciwnym razie **FALSE**.  
+ Wartość TRUE, jeśli komunikat jest w pełni obsługiwany; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywoływane przez procedurę okna z [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) obiektu lub obiektu, który jest dynamicznie tworzenie łańcuchów do mapy wiadomości.  
+ Wywoływane przez procedurę okna z [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) obiektu lub obiektu, który jest dynamicznie powiązany z na mapie komunikatów.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CDynamicChain](../../atl/reference/cdynamicchain-class.md)   
  [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
  [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

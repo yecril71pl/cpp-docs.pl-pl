@@ -25,16 +25,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4adbf2c0b6f3ce6d1bababf0a69bb6720ef6be77
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 13b46bcd29624d696ae22494c394fa028d58fa8a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859020"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961977"
 ---
 # <a name="shuffleorderengine-class"></a>shuffle_order_engine — Klasa
 
-Generuje losowe sekwencji zmiana kolejności wartości zwracane z jego podstawowej aparatu.
+Generuje losową sekwencję przez zmianę kolejności wartości zwracanych z silnika podstawowego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,9 +45,9 @@ class shuffle_order_engine;
 
 ### <a name="parameters"></a>Parametry
 
-`Engine` Typ podstawowy aparatu.
+*Aparat* typu podstawowego aparatu.
 
-`K` **Tabela rozmiar**. Liczba elementów w buforze (tabeli). **Warunek wstępny**: `0 < K`
+*K* **tabeli rozmiar**. Liczba elementów w buforze (tabela). **Warunek wstępny**: `0 < K`
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -56,18 +56,18 @@ class shuffle_order_engine;
 |`shuffle_order_engine::shuffle_order_engine`|`shuffle_order_engine::base`|`shuffle_order_engine::discard`|
 |`shuffle_order_engine::operator()`|`shuffle_order_engine::base_type`|`shuffle_order_engine::seed`|
 
-Aby uzyskać więcej informacji na temat aparatu członków zobacz [ \<losowe >](../standard-library/random.md).
+Aby uzyskać więcej informacji na temat elementów członkowskich aparatu zobacz [ \<losowy >](../standard-library/random.md).
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa szablonu opisuje *karty aparatu* daje wartości zmiana kolejności wartości zwracane przez silnik podstawowej. Każdy konstruktora wypełnienia tabeli wewnętrznej z `K` wartości zwracane przez aparat podstawowej, a element losowe wybrano z tabeli zleconą wartość.
+Ta klasa szablonu opisuje *łącznik aparatu* która wytwarza wartości przez zmianę kolejności wartości zwracanych przez silnik podstawowy. Każdy Konstruktor wypełnia tabelę wewnętrznego *K* wartości zwracane przez silnik podstawowy, a element losowy jest zaznaczona z tabeli, gdy wartość jest wymagane.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowe >
+**Nagłówek:** \<losowy >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<losowe >](../standard-library/random.md)<br/>
+[\<losowy >](../standard-library/random.md)<br/>

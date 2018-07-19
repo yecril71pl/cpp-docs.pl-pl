@@ -1,5 +1,5 @@
 ---
-title: za pomocą deklaracji | Dokumentacja firmy Microsoft
+title: Użycie — deklaracja | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4cb07e2d56527ad4907b7b144ba5f3bc04196a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c40a69e9c8d584d91a1b6401ec0da57368641975
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424473"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941528"
 ---
 # <a name="using-declaration"></a>użycie — deklaracja
-Za pomocą deklaracji wprowadza nazwę do regionu deklaratywne, w którym za pomocą deklaracji jest wyświetlana.  
+Użycie — deklaracja wprowadza nazwę do deklaratywne regionów, w których użycie — deklaracja jest wyświetlana.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,17 +38,17 @@ using declarator-list ;
   
 ### <a name="parameters"></a>Parametry
   
-*zagnieżdżone — nazwa — Specyfikator*  
-    Sekwencja przestrzeni nazw, klasy lub wyliczenia nazw i operatory rozpoznawania zakresu (:), został przerwany przez operator rozpoznawania zakresów. Operator rozpoznawania pojedynczy zakres może służyć do wprowadzenia nazwy z globalnej przestrzeni nazw. Słowo kluczowe `typename` jest opcjonalna i może być używany do rozpoznania nazwy zależne przy wprowadzaniu szablonu klasy z klasy podstawowej.  
+*zagnieżdżone name-specifier*  
+    Sekwencja obszaru nazw, klasy lub wyliczenia nazw i operatory rozpoznawania zakresu (:) został przerwany przez operator rozpoznawania zakresów. Operator rozpoznawania pojedynczy zakres może służyć do wprowadzić nazwę z globalnej przestrzeni nazw. Słowo kluczowe **typename** jest opcjonalna i może służyć do rozpoznawania nazwy zależne przy wprowadzaniu do szablonu klasy z klasy bazowej.  
   
 *niekwalifikowane identyfikator*  
-    Niekwalifikowane identyfikator wyrażenia, które mogą być identyfikatora, nazwy przeciążonego operatora, zdefiniowane przez użytkownika literałów operatora lub konwersji nazwę funkcji, nazwa destruktora klasy lub listę nazw i argument szablonu.  
+    Niekwalifikowane identyfikator — wyrażenia, które mogą być identyfikator, nazwę przeciążonego operatora, zdefiniowane przez użytkownika literałów operatora lub konwersji nazwę funkcji, nazwy destruktor klasy lub szablonu nazwą i listą argumentów.  
   
-*Lista deklarator*  
-    Rozdzielana przecinkami lista [`typename`] *zagnieżdżone name specyfikator* *niekwalifikowane identyfikator* deklaratorów, a następnie opcjonalnie wielokropkiem.
+*Lista deklaratorów*  
+    Rozdzielana przecinkami lista [**typename**] *zagnieżdżone name-specifier* *niekwalifikowanej identyfikator* deklaratorów, opcjonalnie następuje wielokropek.
     
 ## <a name="remarks"></a>Uwagi  
-A za pomocą deklaracji wprowadza nazwą niekwalifikowaną jako synonim dla jednostki zadeklarowany w innym miejscu. Umożliwia on nazwę jednego z określonych przestrzeni nazw, aby można używać bez jawna Kwalifikacja w regionie deklaracji, w których występuje. Jest to contrast do [dyrektywa using](../cpp/namespaces-cpp.md#using_directives), co pozwala *wszystkie* nazwy w przestrzeni nazw, aby bez kwalifikacji można używać. `using` — Słowo kluczowe służy także do [aliasów typów](../cpp/aliases-and-typedefs-cpp.md).  
+A za pomocą deklaracji wprowadza niekwalifikowanej nazwy jako synonim dla jednostki zadeklarowane w innym miejscu. Umożliwia ona nazwę jednego z określonych przestrzeni nazw bez jawna Kwalifikacja w regionie deklaracji, w której występuje. Jest to w przeciwieństwie do [użycie dyrektywy](../cpp/namespaces-cpp.md#using_directives), co pozwala *wszystkich* nazwy w przestrzeni nazw, aby bez kwalifikacji można używać. **Przy użyciu** — słowo kluczowe jest również używany do [aliasów typów](../cpp/aliases-and-typedefs-cpp.md).  
   
 ## <a name="example"></a>Przykład  
  A za pomocą deklaracji mogą być używane w definicji klasy.  
@@ -96,7 +96,7 @@ In B::g()
 ```  
   
 ## <a name="example"></a>Przykład  
-W przypadku zastosowania do deklaruje elementu członkowskiego using deklaracji musi odwoływać się do elementu członkowskiego klasy podstawowej.  
+Gdy jest używana do zadeklarowania elementu członkowskiego, przy użyciu deklaracji musi odwoływać się do składowej klasy bazowej.  
   
 ```cpp  
 // using_declaration2.cpp  
@@ -135,7 +135,7 @@ In B::f()
 ```  
   
 ## <a name="example"></a>Przykład  
-Zadeklarowane elementy członkowskie przy użyciu using deklaracja może odwoływać się przy użyciu jawna kwalifikacja. `::` Prefiks, który odwołuje się do globalnej przestrzeni nazw.  
+Elementy członkowskie są zadeklarowane za pomocą można odwoływać się za pomocą jawna kwalifikacja deklaracji. `::` Prefiks, który odwołuje się do globalnej przestrzeni nazw.  
   
 ```cpp  
 // using_declaration3.cpp  
@@ -174,9 +174,9 @@ In A::g
 ```  
   
 ## <a name="example"></a>Przykład  
-Korzystając z zgłoszenia, synonim utworzone przez deklaracja odnosi się tylko do definicji, które są prawidłowe w punkcie za pomocą deklaracji. Definicje dodany do przestrzeni nazw, po użyciu deklaracji nie są prawidłowe synonimy.  
+Korzystając z zgłoszenia, synonimu utworzone przez tę deklarację odwołuje się tylko do definicji, które są prawidłowe w punkcie używając deklaracji. Definicje dodany do przestrzeni nazw, po zakończeniu korzystania z deklaracji nie są prawidłowe synonimy.  
   
-Zdefiniowane przez nazwę `using` deklaracja jest aliasu dla jego oryginalną nazwę. Nie dotyczy tego typu, połączenie lub inne atrybuty oryginalnej deklaracji.  
+Nazwa zdefiniowana przez **przy użyciu** deklaracji jest aliasem dla jego oryginalną nazwę. Nie dotyczy tego typu, powiązania lub inne atrybuty oryginalnej deklaracji.  
   
 ```cpp  
 // post_declaration_namespace_additions.cpp  
@@ -202,7 +202,7 @@ void b() {
 ```  
   
 ## <a name="example"></a>Przykład  
-W odniesieniu do funkcji w przestrzeni nazw, jeśli zestaw deklaracje lokalne i użyciem deklaracji w odniesieniu do jednej nazwy są podane w regionie deklaratywne, musi wszystkie odnoszą się do tej samej jednostki lub musi wszystkie odnoszą się do funkcji.  
+W odniesieniu do funkcji w przestrzeniach nazw, jeśli zestaw deklaracji lokalnego i za pomocą deklaracji dla jednej nazwy są podane w regionie deklaratywne, musi wszystkie odnoszą się do tej samej jednostki lub musi wszystkie odnoszą się do funkcji.  
   
 ```cpp  
 // functions_in_namespaces1.cpp  
@@ -221,10 +221,10 @@ void g() {
 }  
 ```  
   
- W powyższym przykładzie `using B::i` instrukcja powoduje drugiej `int i` podawane w `g()` funkcji. `using B::f` Instrukcji nie powoduje konfliktu z `f(char)` działać, ponieważ wynikające z nazwy funkcji `B::f` mają różne typy parametrów.  
+ W powyższym przykładzie `using B::i` instrukcji powoduje, że drugi `int i` deklaruje się w `g()` funkcji. `using B::f` Instrukcji nie powoduje konfliktu z `f(char)` działać, ponieważ wynikające z nazwy funkcji `B::f` mają typy różnych parametrów.  
   
 ## <a name="example"></a>Przykład  
- Deklaracji funkcji lokalnej nie może mieć taką samą nazwę i typ jako funkcja wprowadzone za pomocą deklaracji. Na przykład:  
+ Deklaracja funkcji lokalnej nie może mieć taką samą nazwę i typ jako funkcja wprowadza się przy użyciu deklaracji. Na przykład:  
   
 ```cpp  
 // functions_in_namespaces2.cpp  
@@ -250,7 +250,7 @@ void h() {
 ```  
   
 ## <a name="example"></a>Przykład  
- Względem dziedziczenia korzystając z deklaracji wprowadza nazwę z klasy podstawowej w zakresie klasy pochodnej, funkcje Członkowskie w funkcjach wirtualnego elementu członkowskiego klasy pochodnej zastąpienie z tymi samymi typami nazwy i argument w klasie podstawowej.  
+ W odniesieniu do dziedziczenia korzystając z deklaracji wprowadza nazwę z klasy bazowej do zakresu klasy pochodnej, funkcje składowe w funkcji wirtualnych elementów członkowskich przesłonięcia w klasie pochodnej z tymi samymi typami nazwy i argument w klasie bazowej.  
   
 ```cpp  
 // using_declaration_inheritance1.cpp  
@@ -307,9 +307,9 @@ In D::g(char)
 ```  
   
 ## <a name="example"></a>Przykład  
-Wszystkie wystąpienia nazwy wspomnianego używającego deklaracji muszą być dostępne. W szczególności, jeśli Klasa pochodna używa używającego deklaracji można uzyskać dostępu do elementu członkowskiego klasy podstawowej, nazwę elementu członkowskiego musi być dostępna. Jeśli nazwa jest funkcja przeciążonego elementu członkowskiego, a następnie wszystkich funkcji o nazwie muszą być dostępne.  
+Wszystkie wystąpienia nazwy wymienione w za pomocą deklaracji musi być dostępna. W szczególności, jeśli Klasa pochodna odbywa się przy użyciu deklarację do uzyskania dostępu do członka klasy bazowej, nazwę elementu członkowskiego muszą być dostępne. Jeśli nazwa jest funkcją członka przeciążonego, a następnie wszystkich funkcji o nazwie muszą być dostępne.  
   
-Aby uzyskać więcej informacji o ułatwieniach dostępu elementów członkowskich, zobacz [kontroli dostępu do elementu członkowskiego](../cpp/member-access-control-cpp.md).  
+Aby uzyskać więcej informacji na temat ułatwień dostępu członków, zobacz [kontroli dostępu do elementu członkowskiego](../cpp/member-access-control-cpp.md).  
   
 ```cpp  
 // using_declaration_inheritance2.cpp  

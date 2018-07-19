@@ -1,5 +1,5 @@
 ---
-title: Obiekt okres istnienia i zarządzanie zasobami (Modern C++) | Dokumentacja firmy Microsoft
+title: Obiekt okresu istnienia i zarządzanie zasobami (Modern C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,27 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 634bef1bf9d2d3128497a1321631ca8665fed144
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fccba0fe09c6e2fcc636d478824c7dfcc699d653
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423499"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941554"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>Okres istnienia obiektów i zarządzanie zasobami (Modern C++)
-W przeciwieństwie do zarządzanego języków C++ nie ma wyrzucanie elementów bezużytecznych (GC), który automatycznie zwalnia zasoby nie dłużej użycia pamięci podczas działania programu. W języku C++ zarządzanie zasobami jest bezpośrednio powiązana z okres istnienia obiektu. W tym dokumencie opisano czynników, które mają wpływ na okres istnienia obiektu w języku C++ oraz sposób zarządzania nim.  
+W odróżnieniu od języków zarządzanych C++ nie ma wyrzucania elementów bezużytecznych (GC), który automatycznie zwalnia wszystkie zasoby pamięci nie dłużej — używane podczas działania programu. W języku C++ zarządzania zasobami bezpośrednio dotyczą okres istnienia obiektu. Ten dokument zawiera opis czynników wpływających na okres istnienia obiektów w języku C++ i sposobu zarządzania nimi.  
   
- C++ nie ma GC, przede wszystkim, ponieważ nie obsługuje zasobów — do pamięci. Destruktory deterministyczna, podobnie jak w języku C++ może obsługiwać tylko zasoby pamięci i innych niż pamięci jednakowo. Wykaz Globalny ma również inne problemy, takie jak wyższe koszty w pamięci i użycie procesora CPU i lokalizacji. Ale powszechności podstawowych problem, który nie skorygowane przez inteligentne optymalizacji.  
+ C++ nie ma GC, przede wszystkim, ponieważ jej nie obsługuje zasobów — do pamięci. Tylko deterministyczne destruktory, podobnie jak w języku C++ może równie obsługiwać zasoby pamięci i innych niż ilość pamięci. GC zawiera również inne problemy, takie jak wyższe koszty w użycie procesora CPU i pamięci oraz miejscowości. Ale powszechności podstawowego problemu, nie da się ograniczyć przy użyciu Sprytne optymalizacji.  
   
 ## <a name="concepts"></a>Pojęcia  
- Hermetyzacja jest ważną kwestią w przystawce Zarządzanie okres istnienia obiektu — osoba używa obiektu nie musi wiedzieć, zasobów, które obiekt, do którego należy, lub jak je usuwać, lub nawet Określa, czy jest właścicielem żadnych zasobów w ogóle. Posiada zniszczyć obiektu. Podstawowe języka C++ ma na celu zapewnienie, że obiekty zostały zniszczone w właściwym czasie, oznacza to, jak bloki są zakończone, w kolejności odwrotnej konstrukcji. Gdy obiekt zostanie zniszczony, jego baz i elementów członkowskich zostaną zniszczone w określonej kolejności.  Język automatycznie niszczy obiektów, dopiero po wykonaniu specjalnych np. Alokacja sterty lub nowego położenia.  Na przykład [wskaźniki inteligentne](../cpp/smart-pointers-modern-cpp.md) jak `unique_ptr` i `shared_ptr`, i, takich jak kontenery standardowa biblioteka C++ `vector`, Hermetyzowanie `new` / `delete` i `new[]` / `delete[]` w obiektach, które mają destruktory. Dlatego tak ważne użyć wskaźniki inteligentne i kontenery standardowa biblioteka C++.  
+ Ważne w okresie istnienia obiektu zarządzania jest hermetyzacja — osoba używa obiektu nie musi wiedzieć, zasoby, które obiekt, do którego należy, lub sposobu ich usuwanie lub nawet tego, czy jest właścicielem wszystkich zasobów w każdym. Po prostu ma do zniszczenia obiektu. Język podstawowy C++ zaprojektowano w celu zapewnienia, że obiekty są niszczone w właściwym czasie, oznacza to, jak bloki są zakończone, w odwrotnej kolejności konstrukcji. Gdy obiekt jest niszczony, jego baz i elementów członkowskich są niszczone w określonej kolejności.  Język automatycznie niszczy obiekty, chyba że użytkownik nadanie specjalne alokacji stosu lub umieszczania nowych.  Na przykład [inteligentne wskaźniki](../cpp/smart-pointers-modern-cpp.md) takich jak `unique_ptr` i `shared_ptr`, i kontenery standardowej biblioteki C++, takich jak `vector`, hermetyzacji **nowe** /  **Usuń** i `new[]` / `delete[]` w obiektach, które mają destruktory. Dlatego tak ważne do używania inteligentnych wskaźników i kontenery standardowej biblioteki języka C++.  
   
- Innym ważnym pojęciem w zarządzanie okresem istnienia: destruktorów. Destruktory hermetyzować zwolnienia zasobów.  (Często używane klawisz skrótu jest RRID, zniszczenie jest zwolnienia zasobów).  Zasób, to element, którego można uzyskać od "system" i muszą być ponownie później.  Pamięci jest najbardziej typowych zasobów, ale istnieją także pliki, sockets tekstury i innych zasobów z systemem innym niż pamięci. Zasób "właścicielem" oznacza, można go użyć, gdy zajdzie taka potrzeba, ale również mają zostać zwolnione po zakończeniu pracy z nim.  Gdy obiekt zostanie zniszczony, jego destruktora zwalnia zasoby, które są jego własnością.  
+ Kolejnym ważnym pojęciem w zarządzanie okresem istnienia: destruktorów. Destruktory hermetyzacji zasobu wersji.  (Często użyty mnemonik jest RRID, zniszczenia jest wersji zasobu).  Zasób jest coś, co można uzyskać od "system" i konieczne jest nadanie ponownie później.  Pamięć jest najbardziej typowych zasobów, ale istnieją również pliki, gniazda, tekstury i inne zasoby bez pamięci. Zasób "właścicielem" oznacza, można go użyć, gdy ich potrzebujesz, ale musisz też zwolnij go po zakończeniu pracy z nim.  Gdy obiekt jest niszczony, jego destruktor zwalnia zasoby, które jego właścicielem.  
   
- Końcowe koncepcja jest DAG (skierowane wykresu acyklicznego.).  Struktury własności w programie formularzy DAG. Obiekt nie może należeć do samego siebie — nie jest to tylko możliwe, ale także z założenia jest bez znaczenia. Jednak dwa obiekty można udostępniać prawo własności obiektu trzecich.  Kilka rodzajów łącza są w grupie DAG, jak to możliwe: A jest członkiem grupy B (A właścicielem B), magazyny C `vector<D>` (C jest właścicielem każdy element D), magazyny E `shared_ptr<F>` (E udostępnia własność F, prawdopodobnie z innymi obiektami), itd.  Tak długo, jak nie ma żadnych cykle i każde łącze w DAG jest reprezentowana przez obiekt ma destruktora (zamiast raw wskaźnik, dojście lub inny mechanizm), a następnie przecieków zasobów jest niemożliwe, ponieważ język uniemożliwia je. Zasoby są wydawane natychmiast po nie są już potrzebne, bez modułu zbierającego elementy bezużyteczne uruchomiona. Okres istnienia, śledzenie jest wolny koszty dla zakresu stosu, zasad, członków i powiązanych przypadków i niedrogie dla `shared_ptr`.  
+ Końcowe koncepcja jest DAG (przekierowanie acykliczne wykresy).  Struktury własności w programie stanowi grupy DAG. Żaden obiekt nie może należeć do samego siebie — to nie tylko możliwe, ale również natury jest bez znaczenia. Jednak dwa obiekty można współwłaścicielem trzeci obiekt.  Kilka rodzajów łącza są możliwe w grupie DAG, takich jak to: element jest elementem członkowskim B (B jest właścicielem A), magazynów C `vector<D>` (C należą do każdego elementu D), magazynów E `shared_ptr<F>` (E udostępnia własności F, prawdopodobnie z innymi obiektami), itd.  Tak długo, jak istnieją żadne cykle i każde łącze na grafie DAG jest reprezentowany przez obiekt ma destruktor (zamiast surowy wskaźnik, dojście lub inny mechanizm), a następnie przeciekom zasobów jest niemożliwe, ponieważ język uniemożliwia ich. Zasoby są zwalniane, natychmiast po zakończeniu nie są już potrzebne, bez modułu zbierającego elementy bezużyteczne uruchomiona. Okres istnienia śledzenia jest bezpłatne obciążenie dla zakresu stosu, podstaw, członków i pokrewnych przypadków i tanią `shared_ptr`.  
   
-### <a name="heap-based-lifetime"></a>Na podstawie sterty okres istnienia  
- Okres istnienia obiektu sterty, można użyć [wskaźniki inteligentne](../cpp/smart-pointers-modern-cpp.md). Użyj `shared_ptr` i `make_shared` jako wskaźnik domyślne i przydzielania. Użyj `weak_ptr` aby przerwać cykle, czy buforowanie i obserwować obiektów bez wpływu na i przy założeniu niczego o ich życia.  
+### <a name="heap-based-lifetime"></a>Oparte na stosie okresu istnienia  
+ Okres istnienia obiektów na stosie, można użyć [inteligentne wskaźniki](../cpp/smart-pointers-modern-cpp.md). Użyj `shared_ptr` i `make_shared` jako wskaźnik domyślne oraz alokatorem. Użyj `weak_ptr` Przerwij cykle, czy buforowanie i obserwować obiektów bez wpływu na lub zakładając, że nic o ich życia.  
   
 ```cpp  
 void func() {  
@@ -45,13 +45,13 @@ p->draw();
   
 ```  
   
- Użyj `unique_ptr` dla unikatowy własność, na przykład w *mechanizm pimpl w czasie* idiom. (Zobacz [mechanizm pimpl hermetyzacji w czasie kompilacji w czasie](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md).) Wprowadź `unique_ptr` podstawowym celem wszystkie jawne `new` wyrażenia.  
+ Użyj `unique_ptr` dla unikatowe własności, na przykład w *pimpl* idiom. (Zobacz [Pimpl hermetyzacji w czasie kompilacji](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md).) Wprowadź `unique_ptr` podstawowym celem wszystkie jawne **nowe** wyrażenia.  
   
 ```cpp  
 unique_ptr<widget> p(new widget());  
 ```  
   
- Wskaźniki raw służącego do innych niż własności i obserwacji. Może dangle wskaźnik będącej właścicielem, ale nie nastąpił przeciek.  
+ Za stosowanie surowych wskaźników dla braku własności i obserwacji. Wskaźnik nie będący właścicielem może dangle, ale go nie przecieki pamięci.  
   
 ```cpp  
 class node {  
@@ -64,10 +64,10 @@ node::node() : parent(...) { children.emplace_back(new node(...) ); }
   
 ```  
   
- Gdy wymagana jest optymalizacji wydajności, może być konieczne użycie *dobrze hermetyzowany* będącej właścicielem, wskaźniki i jawnego wywołania do usunięcia. Przykładem jest podczas implementowania struktury danych niskiego poziomu.  
+ Gdy Optymalizacja wydajności jest wymagana, użytkownik może być konieczne użycie *dobrze zhermetyzowany* będącej właścicielem, wskaźniki i jawnych wywołań do usunięcia. Przykładem jest podczas implementowania strukturę danych niskiego poziomu.  
   
-### <a name="stack-based-lifetime"></a>Na podstawie stosu okres istnienia  
- W nowoczesnych wersji języka C++ *opartego na stosie zakresu* wydajny sposób do pisania kodu, niezawodne, ponieważ oznacza połączenie automatyczne *istnienia stosu* i *okres istnienia elementu członkowskiego danych* o wysokiej wydajności — okres istnienia śledzenia jest zasadniczo bezpłatne koszty. Okres istnienia obiektów sterty wymaga większego ręcznego zarządzania i może być źródłem przecieków zasobów i wydajność, szczególnie w przypadku, gdy użytkownik pracuje z pierwotnych wskaźniki. Należy wziąć pod uwagę ten kod, który pokazuje zakresu na podstawie stosu:  
+### <a name="stack-based-lifetime"></a>Oparty na stosie okresu istnienia  
+ W nowoczesnym C++ *zakres oparty na stosie* jest wydajnym sposobem pisania kodu niezawodne, ponieważ łączy ona automatyczne *okres istnienia stosu* i *okres istnienia element członkowski danych* o wysokiej wydajności — okres istnienia śledzenia jest zasadniczo obciążenie. Okres istnienia obiektu sterty wymaga skrupulatne poprawianie listy ręczne zarządzanie i może być źródłem przeciekom zasobów i niskiej wydajności, szczególnie w przypadku, gdy pracujesz z surowych wskaźników. Rozważmy ten kod, który pokazuje zakres oparty na stosie:  
   
 ```cpp  
 class widget {  
@@ -88,9 +88,9 @@ void functionUsingWidget () {
   // as if "finally { w.dispose(); w.g.dispose(); }"  
 ```  
   
- Oszczędnie korzystać statycznego okresu istnienia (globalne statyczna, funkcja statyczna lokalnych), ponieważ mogą wystąpić problemy. Co się stanie, gdy Konstruktor jest obiekt globalny zgłasza wyjątek? Zazwyczaj błędów aplikacji w taki sposób, który może być trudne do debugowania. Kolejność konstrukcji jest problematyczne statycznego okresu istnienia obiektów i nie jest bezpieczne współbieżności. Nie tylko słowo konstrukcji obiektów problem, może być skomplikowane, kolejność likwidacji, szczególnie w przypadku polimorfizm. Nawet jeśli z obiektu lub zmienna nie jest polimorficzny i nie ma złożonych konstrukcji/zniszczenia kolejności, występuje nadal problem wątkowo współbieżności. Aplikacji wielowątkowych bezpiecznie nie można modyfikować danych w obiektach statyczne bez magazynu lokalnego wątku, blokowania zasobów i inne specjalne środki ostrożności.  
+ Oszczędnie korzystać statyczny okres istnienia (globalne statyczne, funkcji lokalnej statycznej), ponieważ mogą wystąpić problemy. Co się stanie, gdy Konstruktor dla obiektów globalnych zgłasza wyjątek? Zazwyczaj błędy aplikacji w sposób, który może być trudne do debugowania. Kolejność konstrukcji jest problematyczne statyczny okres istnienia obiektów i nie jest bezpieczna pod kątem współbieżności. Nie tylko jest konstruowanie obiektu problemu, kolejność zniszczenia może być skomplikowane, zwłaszcza w przypadku polimorfizmu. Nawet jeśli zmiennej lub obiektu nie jest polimorficzny, nie ma złożone tworzenie/niszczenie obiektu porządkowanie się nadal istnieje problem współbieżności metodą o bezpiecznych wątkach. Aplikacja wielowątkowa bezpiecznie nie można zmodyfikować danych w obiektach statycznych bez konieczności lokalny magazyn wątków, blokad zasobów i innych specjalne środki ostrożności.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zapraszamy ponownie do języka C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [Witamy z powrotem w C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)   
  [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)

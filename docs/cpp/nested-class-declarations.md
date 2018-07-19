@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fe55a1f67ff3c6ac06f1d6431e6e1a2fb8052d8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 86c61792ab20bc0c10c9297d2a66588dd3c066ef
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947792"
 ---
 # <a name="nested-class-declarations"></a>Zagnieżdżone deklaracje klas
 Klasa może być zadeklarowana w zakresie innej klasy. Taka klasa nosi nazwę „klasy zagnieżdżonej”. Klasy zagnieżdżone są rozważane w zakresie otaczającej klasy i są dostępne do użycia w tym zakresie. Aby odwołać się do klasy zagnieżdżonej z zakresu innego niż jego bezpośredni zasięg, należy użyć w pełni kwalifikowanej nazwy.  
   
  Poniższy przykład pokazuje sposób deklarowania klas zagnieżdżonych:  
   
-```  
+```cpp 
 // nested_class_declarations.cpp  
 class BufferedIO  
 {  
@@ -73,7 +74,7 @@ int main()
   
  Wyjątkiem zakresu widoczności deklaracji klasy zagnieżdżonej jest nazwa typu zadeklarowana wraz z deklaracją do przodu.  W tym przypadku nazwa klasy zadeklarowanej deklaracji do przodu jest widoczna spoza otaczającej klasy z jej zakresem zdefiniowanym jako najmniejszy otaczający zakres.  Na przykład:  
   
-```  
+```cpp 
 // nested_class_declarations_2.cpp  
 class C  
 {  
@@ -99,12 +100,12 @@ int main()
 ```  
   
 ## <a name="access-privilege-in-nested-classes"></a>Uprawnienia dostępu w zagnieżdżonych klasach  
- Zagnieżdżanie klasy w innej klasy nie oznacza udzielenia uprawnienia dostępu specjalnego do funkcji Członkowskich klasy zagnieżdżonej. Podobnie funkcji Członkowskich otaczającej klasy nie mają specjalne dostępu do członków klasy zagnieżdżonej.  
+ Zagnieżdżanie klasy, w ramach innej klasy nie daje uprawnień dostępu do składowych klasy zagnieżdżonej. Podobnie funkcji elementów członkowskich otaczającej klasy nie mają specjalne dostępu do składowych klasy zagnieżdżone.  
   
-## <a name="member-functions-in-nested-classes"></a>Funkcje elementów członkowskich w klasach zagnieżdżonych  
- Funkcje Członkowskie zadeklarowany w zagnieżdżonych klasach można zdefiniować w zakresie pliku. Można zostały zapisane w poprzednim przykładzie:  
+## <a name="member-functions-in-nested-classes"></a>Zaprzyjaźnione funkcje w zagnieżdżonych klasach  
+ Funkcji elementów członkowskich zadeklarowanych w klasach zagnieżdżonych można zdefiniować w zakresie pliku. Poprzedni przykład może być napisane tak:  
   
-```  
+```cpp 
 // member_functions_in_nested_classes.cpp  
 class BufferedIO  
 {  
@@ -140,26 +141,26 @@ int main()
 }  
 ```  
   
- W powyższym przykładzie *kwalifikowanego typu nazwa-* składni służy do deklarowania nazwę funkcji. Deklaracja:  
+ W powyższym przykładzie *kwalifikowana type-name* używana jest składnia do deklarowania nazwy funkcji. Deklaracji:  
   
-```  
+```cpp 
 BufferedIO::BufferedInput::read()  
 ```  
   
- oznacza, że " `read` funkcja, która jest elementem członkowskim `BufferedInput` klasy, która znajduje się w zakresie `BufferedIO` klasy." Ponieważ ta deklaracja używa *kwalifikowanego typu nazwa-* składni, są możliwe w konstrukcji następującą postać:  
+ oznacza, że " `read` funkcja, która jest elementem członkowskim `BufferedInput` klasę, która znajduje się w zakresie `BufferedIO` klasy." Ponieważ ta deklaracja korzysta *kwalifikowana type-name* składni, możliwe są konstrukcje następującą postać:  
   
-```  
+```cpp 
 typedef BufferedIO::BufferedInput BIO_INPUT;  
   
 int BIO_INPUT::read()  
 ```  
   
- Poprzedniej deklaracji jest odpowiednikiem poprzedniego, ale używa `typedef` nazwa zamiast nazwy klasy.  
+ Poprzednia deklaracja jest równoważna do poprzedniego, ale używa on **typedef** nazwę zamiast nazwy klas.  
   
-## <a name="friend-functions-in-nested-classes"></a>Friend — funkcje w zagnieżdżonych klasach  
- Friend — funkcje zadeklarowana w klasie zagnieżdżone są traktowane jako znajdował się w zakresie klasy zagnieżdżonej klasy otaczającej. Friend — funkcje uzyskać nie uprawnienia dostępu specjalnego do elementów członkowskich lub funkcji elementów członkowskich klasy otaczającej. Jeśli chcesz użyć nazwy, która jest zadeklarowana w klasie zagnieżdżonych w funkcji zaprzyjaźnionej funkcji zaprzyjaźnionej jest zdefiniowana w zakresie pliku, użyj kwalifikowane nazwy typów w następujący sposób:  
+## <a name="friend-functions-in-nested-classes"></a>Zaprzyjaźnione funkcje w zagnieżdżonych klasach  
+ Friend — funkcje zadeklarowane w klasie zagnieżdżonej są uznawane za w zakresie klasy zagnieżdżonej nie otaczającej klasy. Friend — funkcje uzyskać nie uprawnienia dostępu do członków ani funkcji elementów członkowskich otaczającej klasy. Jeśli chcesz użyć nazwy, która jest zadeklarowana w klasie zagnieżdżonej w funkcji zaprzyjaźnionej, funkcja zaprzyjaźniona jest zdefiniowana w zakresie pliku użyć kwalifikowanych nazw typów w następujący sposób:  
   
-```  
+```cpp 
 // friend_functions_and_nested_classes.cpp  
   
 #include <string.h>  
@@ -203,13 +204,13 @@ int main()
 }  
 ```  
   
- Poniższy kod przedstawia funkcję `GetExtendedErrorStatus` zadeklarowana jako funkcja zaprzyjaźniona. W funkcję, która jest zdefiniowana w zakresie pliku, komunikat zostanie skopiowany z tablicą statyczny do elementu członkowskiego klasy. Należy pamiętać, że lepszej realizacji `GetExtendedErrorStatus` jest, aby zadeklarować jako:  
+ Poniższy kod przedstawia funkcję `GetExtendedErrorStatus` zadeklarowana jako funkcja zaprzyjaźniona. W funkcji, która jest zdefiniowana w zakresie pliku, komunikat jest kopiowana z tablicy statycznej do składowej klasy. Należy pamiętać, że lepszej realizacji `GetExtendedErrorStatus` jest Zadeklaruj go jako:  
   
-```  
+```cpp 
 int GetExtendedErrorStatus( char *message )  
 ```  
   
- Interfejs poprzedniego kilka klas mogą korzystać z usług tej funkcji przez przekazanie lokalizacji pamięci, w którym mają być kopiowane komunikat o błędzie.  
+ Poprzedni interfejs kilka klas może korzystać z usług tę funkcję, przekazując lokalizacji pamięci, gdzie mają być kopiowane komunikat o błędzie.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasy i struktury](../cpp/classes-and-structs-cpp.md)

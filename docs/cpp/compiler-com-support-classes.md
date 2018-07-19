@@ -17,26 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4fe4e7c26d1b32f16d524407279e5e71534d00c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eba4ae92f9db67dfff58ec111b294b6cd26eff5a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411247"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939822"
 ---
 # <a name="compiler-com-support-classes"></a>Kompilator klas obsługi COM
 **Microsoft Specific**  
   
- Standardowa klas są używane do obsługi typów COM. Klasy są zdefiniowane w \<comdef.h > i pliki nagłówkowe wygenerowane z biblioteki typów.  
+ Standardowych klas są używane do obsługi niektórych typów modelu COM. Klasy są zdefiniowane w \<comdef.h > i pliki nagłówkowe wygenerowane z biblioteki typów.  
   
 |Class|Cel|  
 |-----------|-------------|  
-|[_bstr_t](../cpp/bstr-t-class.md)|Opakowuje `BSTR` typu zapewnienie przydatne operatory i metody.|  
-|[_com_error](../cpp/com-error-class.md)|Definiuje obiekt błąd zgłoszony przez [_com_raise_error —](../cpp/com-raise-error.md) w większość awarii.|  
-|[_com_ptr_t](../cpp/com-ptr-t-class.md)|Hermetyzuje wskaźników interfejsów COM. i zautomatyzować wymagane wywołań `AddRef`, **wersji**, i `QueryInterface`.|  
-|[_variant_t](../cpp/variant-t-class.md)|Opakowuje **VARIANT** typu zapewnienie przydatne operatory i metody.|  
+|[_bstr_t](../cpp/bstr-t-class.md)|Opakowuje `BSTR` typu przydatne operatory i metody.|  
+|[_com_error](../cpp/com-error-class.md)|Definiuje obiekt błędu zgłoszony przez [_com_raise_error —](../cpp/com-raise-error.md) w większości błędów.|  
+|[_com_ptr_t](../cpp/com-ptr-t-class.md)|Hermetyzuje wskaźniki interfejsu COM i automatyzuje wymaganego wywołania `AddRef`, `Release`, i `QueryInterface`.|  
+|[_variant_t](../cpp/variant-t-class.md)|Opakowuje `VARIANT` typu przydatne operatory i metody.|  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa kompilatora COM](../cpp/compiler-com-support.md)   

@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6a7d350f7bd50476c1c327d824089981d3e8321
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d2832b9866145d9af510302c8c6d327972205495
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359035"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38952971"
 ---
 # <a name="ccomobjectroot-class"></a>Klasa CComObjectRoot
-Ten element typedef z [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) którego jest ma zastosowany szablon domyślny model serwera wątków.  
+Ten element typedef dla [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) jest szablonowana na domyślny model serwera wątków.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,17 +34,16 @@ typedef CComObjectRootEx<CComObjectThreadModel> CComObjectRoot;
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- `CComObjectRoot` jest `typedef` z [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) którego ma zastosowany szablon domyślny model serwera wątków. W związku z tym [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) będzie odwoływać się albo [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) lub [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md).  
+ `CComObjectRoot` jest `typedef` z [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) szablonowana na domyślny model serwera wątków. Ten sposób [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) będzie odwoływać się albo [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) lub [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md).  
   
- `CComObjectRootEx` obsługuje zarządzanie liczba odwołanie do obiektu zarówno nieagregowane zagregowane obiekty i. Jeśli obiekt nie jest agregowana i przechowuje wskaźnik do nieznanego zewnętrzne, jeśli obiekt jest agregowana posiada liczebności referencyjnej obiektu. Zagregowane obiekty `CComObjectRootEx` metody może służyć do obsługi błędów wewnętrzny obiekt w celu utworzenia i ochrony obiektu zewnętrznego przed usunięciem po udostępnieniu wewnętrzny interfejsów lub wewnętrzny obiekt jest usunięty.  
+ `CComObjectRootEx` obsługuje zarządzanie liczba odwołanie do obiektu nieagregowane i zagregowane obiekty. Jeśli obiekt nie są agregowane i przechowuje wskaźnik nieznany zewnętrznego, jeśli obiekt są agregowane, przechowuje licznik odwołań obiektu. Zagregowane obiekty `CComObjectRootEx` metody może służyć do obsługi błędu wewnętrznego obiektu do utworzenia i ma być chroniony obiektu zewnętrznego przed usunięciem zwolnionych interfejsów wewnętrznych lub wewnętrzny obiekt zostanie usunięty.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlcom.h  
   
 ## <a name="see-also"></a>Zobacz też  
- [Elementy CComObjectRootEx klas](http://msdn.microsoft.com/en-us/e3ce9c3d-9c8e-4fe5-b682-8e56740a0164)   
  [Klasa CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   
  [Klasa CComAggObject](../../atl/reference/ccomaggobject-class.md)   
- [Element CComObject — klasa](../../atl/reference/ccomobject-class.md)   
+ [Klasa CComObject](../../atl/reference/ccomobject-class.md)   
  [Klasa CComPolyObject](../../atl/reference/ccompolyobject-class.md)   
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

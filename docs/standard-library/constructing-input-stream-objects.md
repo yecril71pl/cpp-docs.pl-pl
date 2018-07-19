@@ -1,5 +1,5 @@
 ---
-title: Konstruowanie obiektów strumienia wejściowego | Dokumentacja firmy Microsoft
+title: Konstruowanie obiektów danych wejściowych Stream | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,26 +14,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7066ffe50dc76c26528e7bfcd3dc9e9778e1473a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c640f1b338fa4b0aa6dbcc408e0729fbf8ff90a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842875"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963553"
 ---
 # <a name="constructing-input-stream-objects"></a>Konstruowanie obiektów strumienia danych wejściowych
 
-Jeśli używasz tylko `cin` obiektu, nie trzeba utworzyć strumienia wejściowego. Strumień wejściowy musi utworzyć, korzystając z:
+Jeśli używasz tylko `cin` obiektu, nie trzeba utworzyć strumień wejściowy. Jeśli używasz, musi utworzyć strumień wejściowy:
 
-- [Konstruktory strumienia wejściowego](#vclrfinputfilestreamconstructorsanchor8)
+- [Konstruktory Stream pliku wejściowego](#vclrfinputfilestreamconstructorsanchor8)
 
-- [Ciąg wejściowy strumienia konstruktorów](#vclrfinputstringstreamconstructorsanchor9)
+- [Ciąg wejściowy Stream konstruktorów](#vclrfinputstringstreamconstructorsanchor9)
 
-## <a name="vclrfinputfilestreamconstructorsanchor8"></a> Konstruktory strumienia wejściowego
+## <a name="vclrfinputfilestreamconstructorsanchor8"></a> Konstruktory Stream pliku wejściowego
 
 Istnieją dwa sposoby tworzenia strumienia pliku wejściowego:
 
-- Użyj `void` konstruktora argumentów wywoływać `open` funkcji członkowskiej:
+- Użyj **void** argument konstruktora, następnie wywołać `open` funkcja elementu członkowskiego:
 
    ```cpp
    ifstream myFile; // On the stack
@@ -43,15 +43,15 @@ Istnieją dwa sposoby tworzenia strumienia pliku wejściowego:
    pmyFile->open("filename");
    ```
 
-- Określ flagi nazwę pliku i tryb w wywołaniu konstruktora, w ten sposób otwierania pliku podczas procesu tworzenia:
+- Określ flagi nazwę pliku i tryb w wywołaniu konstruktora, w ten sposób otwierania pliku w procesie tworzenia:
 
    ```cpp
    ifstream myFile("filename");
    ```
 
-## <a name="vclrfinputstringstreamconstructorsanchor9"></a> Ciąg wejściowy strumienia konstruktorów
+## <a name="vclrfinputstringstreamconstructorsanchor9"></a> Ciąg wejściowy Stream konstruktorów
 
-Ciąg wejściowy strumienia konstruktorów wymagają adresu przydzielony wstępnie, wstępnie zainicjowanych magazynu:
+Ciąg wejściowy strumień konstruktory wymagają adres przydzielony wstępnie preinitialized magazynu:
 
 ```cpp
 string s("123.45");

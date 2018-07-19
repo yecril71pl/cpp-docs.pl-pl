@@ -9,16 +9,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: 25e40157c1872df3e970bb234accab5c487c6287
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0bc4ce7c36d3ba097b04b1704fea7633eb7d26ea
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841131"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962959"
 ---
-# <a name="ltallocatorsgt-operators"></a>&lt;allocators —&gt; operatory
+# <a name="ltallocatorsgt-operators"></a>&lt;allocators —&gt; operatorów
 
-Są to globalne szablonu funkcji operatora zdefiniowanych w &lt;allocators —&gt;. Funkcje operatorów elementu członkowskiego klasy znajduje się w dokumentacji klasy.
+Są to funkcje operatora szablon globalny, które są zdefiniowane w &lt;buforów&gt;. Funkcje operatorów składowych klasy znajduje się w dokumentacji klasy.
 
 |||
 |-|-|
@@ -39,12 +39,12 @@ bool operator!=(
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`left`|Jeden z obiektów alokatora pod kątem nierówności.|
-|`right`|Jeden z obiektów alokatora pod kątem nierówności.|
+|*left*|Jeden z obiektami alokatora, który ma zostać przetestowana pod kątem nierówności.|
+|*right*|Jeden z obiektami alokatora, który ma zostać przetestowana pod kątem nierówności.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** alokatora obiekty nie są równe; **false** alokatora obiekty są równe.
+**wartość true,** obiektami alokatora nie są równe; **false** alokatora obiekty są równe.
 
 ### <a name="remarks"></a>Uwagi
 
@@ -65,16 +65,16 @@ bool operator==(
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`left`|Jeden z obiektów alokatora pod kątem równości.|
-|`right`|Jeden z obiektów alokatora pod kątem równości.|
+|*left*|Jeden z obiektami alokatora, który ma zostać przetestowana pod kątem równości.|
+|*right*|Jeden z obiektami alokatora, który ma zostać przetestowana pod kątem równości.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** alokatora obiekty są równe; **false** alokatora obiekty nie są równe.
+**wartość true,** obiektami alokatora są równe; **false** obiektami alokatora nie są równe.
 
 ### <a name="remarks"></a>Uwagi
 
-Ten operator szablonu zwraca `left.equals(right)`.
+Ten szablon operator zwraca `left.equals(right)`.
 
 ## <a name="see-also"></a>Zobacz także
 

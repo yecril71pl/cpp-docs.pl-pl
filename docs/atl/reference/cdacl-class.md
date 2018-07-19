@@ -23,18 +23,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2724eebd218cea2795d483351ef91b34c9f1bf39
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3cd66c7c0637b4874f6a40bd77b3387191f00d35
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364773"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881204"
 ---
 # <a name="cdacl-class"></a>Klasa CDacl
-Ta klasa jest otoki dla struktury DACL (listy DACL kontroli dostępu).  
+Ta klasa jest otoką dla struktury DACL (list arbitralnej kontroli dostępu).  
   
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -55,11 +55,11 @@ class CDacl : public CAcl
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CDacl::AddAllowedAce](#addallowedace)|Dodaje wpis ACE dozwolonych (wpisu kontroli dostępu) do `CDacl` obiektu.|  
+|[CDacl::AddAllowedAce](#addallowedace)|Dodaje dozwolonych ACE (wpis kontroli dostępu) do `CDacl` obiektu.|  
 |[CDacl::AddDeniedAce](#adddeniedace)|Dodaje odmowy ACE `CDacl` obiektu.|  
-|[CDacl::GetAceCount](#getacecount)|Zwraca liczbę ACE (wpisy kontroli dostępu) w `CDacl` obiektu.|  
-|[CDacl::RemoveAce](#removeace)|Usuwa określone ACE (wpis kontroli dostępu) `CDacl` obiektu.|  
-|[CDacl::RemoveAllAces](#removeallaces)|Usuwa wszystkie wpisy kontroli dostępu zawarte w `CDacl` obiektu.|  
+|[CDacl::GetAceCount](#getacecount)|Zwraca liczbę wpisy kontroli dostępu (wpisy kontroli dostępu) w `CDacl` obiektu.|  
+|[CDacl::RemoveAce](#removeace)|Usuwa określone ACE (wpis kontroli dostępu) z `CDacl` obiektu.|  
+|[CDacl::RemoveAllAces](#removeallaces)|Usuwa wszystkie wpisy kontroli dostępu, zawarte w `CDacl` obiektu.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
@@ -68,13 +68,13 @@ class CDacl : public CAcl
 |[CDacl::operator =](#operator_eq)|Operator przypisania.|  
   
 ## <a name="remarks"></a>Uwagi  
- Obiekt deskryptora zabezpieczeń może zawierać lista DACL dotycząca. Lista DACL dotycząca zawiera zero lub więcej ACE (wpisy kontroli dostępu), które identyfikują użytkowników i grupy, którzy mogą uzyskiwać dostęp do obiektu. Jeśli lista DACL dotycząca jest pusta (to znaczy nie zawiera zero ACE), bez dostępu ma jawnie przyznane uprawnienia, aby jawnie odmówiono dostępu. Jednak jeśli deskryptora zabezpieczeń obiektu nie ma listy DACL, obiekt nie jest chroniony i każdy ma pełny dostęp.  
+ Deskryptora zabezpieczeń obiektu może zawierać DACL. Lista DACL zawiera zero lub więcej wpisów ACE (wpisy kontroli dostępu), które identyfikują użytkowników i grupy, którzy mogą uzyskiwać dostęp do obiektu. Jeśli lista DACL jest pusty (czyli zawiera zero ACE), bez dostępu ma jawnie przyznane uprawnienia, aby niejawnie odmowa dostępu. Jeśli jednak deskryptora zabezpieczeń obiektu ma DACL, obiekt nie jest chroniony i każdy z nich ma pełny dostęp.  
   
- Aby uzyskać dostęp do POUFNEJ, możesz muszą być właściciela obiektu lub READ_CONTROL dostępu do tego obiektu. Aby zmienić POUFNEJ, musi mieć WRITE_DAC dostępu do tego obiektu.  
+ Można pobrać listy DACL w obiekcie, musisz być właścicielem obiektu lub mieć READ_CONTROL dostępu do obiektu. Aby zmienić DACL obiektu, musi mieć WRITE_DAC dostępu do obiektu.  
   
- Użycie metod klasy do tworzenia, dodawania, usuwania i Usuń wpisy kontroli dostępu z `CDacl` obiektu. Zobacz też [AtlGetDacl](security-global-functions.md#atlgetdacl) i [AtlSetDacl](security-global-functions.md#atlsetdacl).  
+ Należy użyć metod klasy dostarczonych do tworzenia, dodawania, usuwania i Usuń wpisy kontroli dostępu z `CDacl` obiektu. Zobacz też [AtlGetDacl](security-global-functions.md#atlgetdacl) i [AtlSetDacl](security-global-functions.md#atlsetdacl).  
   
- Aby obejrzeć wprowadzenie do modelu kontroli dostępu w systemie Windows, temacie [kontroli dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374860) w zestawie Windows SDK.  
+ Wprowadzenie do modelu kontroli dostępu w Windows, zobacz [kontroli dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374860) w zestawie Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CAcl](../../atl/reference/cacl-class.md)  
@@ -85,7 +85,7 @@ class CDacl : public CAcl
  **Nagłówek:** atlsecurity.h  
   
 ##  <a name="addallowedace"></a>  CDacl::AddAllowedAce  
- Dodaje wpis ACE dozwolonych (wpisu kontroli dostępu) do `CDacl` obiektu.  
+ Dodaje dozwolonych ACE (wpis kontroli dostępu) do `CDacl` obiektu.  
   
 ```
 bool AddAllowedAce(  
@@ -102,28 +102,28 @@ bool AddAllowedAce(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rSid`  
+ *rSid*  
  A [CSid](../../atl/reference/csid-class.md) obiektu.  
   
- `AccessMask`  
- Określa maski praw dostępu mogą być dla określonego `CSid` obiektu.  
+ *AccessMask*  
+ Określa maskę prawa dostępu, które mają być dozwolone dla określonego `CSid` obiektu.  
   
- `AceFlags`  
- Zestaw z bitowego flagi dziedziczenia ACE tego formantu.  
+ *AceFlags*  
+ Zestaw flag bitowych, określające ACE dziedziczenia.  
   
- `pObjectType`  
+ *pObjectType*  
  Typ obiektu.  
   
- `pInheritedObjectType`  
+ *pInheritedObjectType*  
  Typ obiektu dziedziczone.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca **true** Jeśli wpisu ACE jest dodawany do `CDacl` obiektu **false** w przypadku awarii.  
+ Zwraca wartość PRAWDA, jeśli ACE jest dodawany do `CDacl` obiektu FALSE w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- A `CDacl` obiekt zawiera zero lub więcej ACE (wpisy kontroli dostępu), które identyfikują użytkowników i grupy, którzy mogą uzyskiwać dostęp do obiektu. Ta metoda dodaje wpisu kontroli dostępu, która umożliwia dostęp do `CDacl` obiektu.  
+ A `CDacl` obiektów zawiera zero lub więcej wpisów ACE (wpisy kontroli dostępu), które identyfikują użytkowników i grupy, którzy mogą uzyskiwać dostęp do obiektu. Metoda ta umożliwia dodanie wpisu kontroli dostępu, który umożliwia dostęp do `CDacl` obiektu.  
   
- Zobacz [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) opis różnych flagi, które można ustawić w `AceFlags` parametru.  
+ Zobacz [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) opis różnych flag, które można ustawić w `AceFlags` parametru.  
   
 ##  <a name="adddeniedace"></a>  CDacl::AddDeniedAce  
  Dodaje odmowy ACE (wpis kontroli dostępu) do `CDacl` obiektu.  
@@ -143,28 +143,28 @@ bool AddDeniedAce(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rSid`  
- A `CSid` obiektu.  
+ *rSid*  
+ Element `CSid` obiektu.  
   
- `AccessMask`  
+ *AccessMask*  
  Określa maskę odmawiania praw dostępu dla określonego `CSid` obiektu.  
   
- `AceFlags`  
- Zestaw z bitowego flagi dziedziczenia ACE tego formantu. Wartość domyślna to 0 z pierwszego formularza metody.  
+ *AceFlags*  
+ Zestaw flag bitowych, określające ACE dziedziczenia. Wartość domyślna to 0, w pierwszej formie metody.  
   
- `pObjectType`  
+ *pObjectType*  
  Typ obiektu.  
   
- `pInheritedObjectType`  
+ *pInheritedObjectType*  
  Typ obiektu dziedziczone.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca **true** Jeśli wpisu ACE jest dodawany do `CDacl` obiektu **false** w przypadku awarii.  
+ Zwraca wartość PRAWDA, jeśli ACE jest dodawany do `CDacl` obiektu FALSE w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- A `CDacl` obiekt zawiera zero lub więcej ACE (wpisy kontroli dostępu), które identyfikują użytkowników i grupy, którzy mogą uzyskiwać dostęp do obiektu. Ta metoda dodaje wpisu kontroli dostępu, która odmawia dostępu `CDacl` obiektu.  
+ A `CDacl` obiektów zawiera zero lub więcej wpisów ACE (wpisy kontroli dostępu), które identyfikują użytkowników i grupy, którzy mogą uzyskiwać dostęp do obiektu. Metoda ta umożliwia dodanie wpisu kontroli dostępu, który nie zezwala na dostęp do `CDacl` obiektu.  
   
- Zobacz [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) opis różnych flagi, które można ustawić w `AceFlags` parametru.  
+ Zobacz [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) opis różnych flag, które można ustawić w `AceFlags` parametru.  
   
 ##  <a name="cdacl"></a>  CDacl::CDacl  
  Konstruktor.  
@@ -175,11 +175,11 @@ CDacl () throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rhs`  
- Istniejące **ACL** struktury (lista kontroli dostępu).  
+ *RHS*  
+ Istniejące `ACL` struktury (lista kontroli dostępu).  
   
 ### <a name="remarks"></a>Uwagi  
- `CDacl` Obiektu można opcjonalnie utworzyć przy użyciu istniejącego **ACL** struktury. Należy pamiętać, aby tylko DACL (listy DACL kontroli dostępu), a nie listę kontroli dostępu (listy kontroli dostępu system), powinien zostać przekazany jako parametr. W kompilacjach do debugowania przekazywanie SACL spowoduje potwierdzenia. W kompilacjach wydania przekazywanie SACL spowoduje, że wpisy kontroli dostępu (wpisy kontroli dostępu) na liście ACL mają być ignorowane, a błąd nie nastąpi.  
+ `CDacl` Obiektu można opcjonalnie utworzyć przy użyciu istniejącego `ACL` struktury. Należy pamiętać, że tylko DACL (list arbitralnej kontroli dostępu), a nie SACL (systemowa lista kontroli dostępu), powinien zostać przekazany jako parametr. W kompilacjach debugowania przekazywanie SACL spowoduje, że ASERCJA. W kompilacjach do wydania przekazywanie SACL spowoduje, że wpisy kontroli dostępu (wpisy kontroli dostępu) na liście ACL są ignorowane, a błąd nie wystąpi.  
   
 ##  <a name="dtor"></a>  CDacl:: ~ CDacl  
  Destruktor.  
@@ -189,17 +189,17 @@ CDacl () throw();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Destruktor zwalnia wszystkie zasoby uzyskaną przez obiekt, w tym wszystkie wpisy kontroli dostępu (wpisy kontroli dostępu) przy użyciu [CDacl::RemoveAllAces](#removeallaces).  
+ Destruktor zwalnia wszystkie zasoby uzyskanych przez obiekt, w tym wszystkie wpisy kontroli dostępu (wpisy kontroli dostępu) za pomocą [CDacl::RemoveAllAces](#removeallaces).  
   
 ##  <a name="getacecount"></a>  CDacl::GetAceCount  
- Zwraca liczbę ACE (wpisy kontroli dostępu) w `CDacl` obiektu.  
+ Zwraca liczbę wpisy kontroli dostępu (wpisy kontroli dostępu) w `CDacl` obiektu.  
   
 ```
 UINT GetAceCount() const throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca liczbę ACE zawarte w `CDacl` obiektu.  
+ Zwraca liczbę wpisów ACE zawarte w `CDacl` obiektu.  
   
 ##  <a name="operator_eq"></a>  CDacl::operator =  
  Operator przypisania.  
@@ -209,28 +209,28 @@ CDacl& operator= (const ACL& rhs) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rhs`  
- Listy kontroli dostępu (listy kontroli dostępu) można przypisać do istniejącego obiektu.  
+ *RHS*  
+ Listy kontroli dostępu (listy kontroli dostępu) do przypisania do istniejącego obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca odwołanie do zaktualizowanego `CDacl` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy upewnić się, tylko przekazać DACL (listy DACL kontroli dostępu) do tej funkcji. Przekazywanie SACL (systemowa lista kontroli dostępu) do tej funkcji spowoduje, że ASSERT w kompilacjach debugowania, ale spowoduje, że żaden błąd w kompilacjach wydania.  
+ Należy upewnić się, aby były tylko przekazywane DACL (list arbitralnej kontroli dostępu) do tej funkcji. Przekazywanie SACL (systemowa lista kontroli dostępu) do tej funkcji spowoduje, że ASERCJA w kompilacjach debugowania, ale spowoduje nie błąd w wydawanych wersjach.  
   
 ##  <a name="removeace"></a>  CDacl::RemoveAce  
- Usuwa określone ACE (wpis kontroli dostępu) `CDacl` obiektu.  
+ Usuwa określone ACE (wpis kontroli dostępu) z `CDacl` obiektu.  
   
 ```
 void RemoveAce(UINT nIndex) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Indeks wpisu ACE do usunięcia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda jest określana na podstawie [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat).  
+ Ta metoda jest tworzony na podstawie [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat).  
   
 ##  <a name="removeallaces"></a>  CDacl::RemoveAllAces  
  Usuwa wszystkie wpisy kontroli dostępu (wpisy kontroli dostępu) zawartych w `CDacl` obiektu.  
@@ -240,12 +240,12 @@ void RemoveAllAces() throw();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Usuwa co **ACE** (wpisu kontroli dostępu) struktury (jeśli istnieją) w `CDacl` obiektu.  
+ Usuwa co `ACE` struktury (wpis kontroli dostępu) (jeśli istnieją) w `CDacl` obiektu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczenia — przykład](../../visual-cpp-samples.md)   
  [Klasa CAcl](../../atl/reference/cacl-class.md)   
  [Listy kontroli dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
- [ACE](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
- [Przegląd klas](../../atl/atl-class-overview.md)   
+ [Wpisy kontroli dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)   
  [Funkcje globalne zabezpieczeń](../../atl/reference/security-global-functions.md)

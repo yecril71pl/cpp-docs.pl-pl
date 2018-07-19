@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeb9e61f94ddd5f41ff3de26728c1fbe155f809d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e5ec6ebf4329ff03c75240dc7cec93e9ba46331
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373641"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885741"
 ---
 # <a name="sockaddrin-structure"></a>SOCKADDR_IN — Struktura
-W rodzinie adresu internetowego `SOCKADDR_IN` struktury jest używany przez usługi Windows Sockets, aby określić adres lokalny lub zdalny punkt końcowy do połączenia gniazda.  
+W rodzinie adresów internetowych `SOCKADDR_IN` struktury jest używany przez Windows Sockets do określenia adresu lokalnego lub zdalnego punktu końcowego, do którego ma zostać połączenia gniazda.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,21 +39,21 @@ struct in_addr sin_addr;
   
 #### <a name="parameters"></a>Parametry  
  *sin_family*  
- Rodzina adresów (musi być **AF_INET**).  
+ Rodzina adresów (musi być AF_INET).  
   
  *sin_port*  
- IP port.  
+ Port adresu IP.  
   
  *sin_addr*  
  Adres IP.  
   
  *sin_zero*  
- Dopełnienie dokonanie struktury taki sam rozmiar jak `SOCKADDR`.  
+ Wypełnienie w celu uzyskania struktury taki sam rozmiar jak `SOCKADDR`.  
   
 ## <a name="remarks"></a>Uwagi  
- Jest to formę `SOCKADDR` struktury specyficzne dla rodziny adresów internetowych i mogą być rzutowane na `SOCKADDR`.  
+ To jest to forma `SOCKADDR` struktury specyficzne dla internetowej rodziny adresowej i może być rzutowany `SOCKADDR`.  
   
- Ta struktura składnika adres IP jest typu **IN_ADDR**. **IN_ADDR** struktury jest zdefiniowana w pliku nagłówka Windows Sockets WINSOCK. H w następujący sposób:  
+ Składnik adresu IP tej struktury jest typu `IN_ADDR`. `IN_ADDR` Struktura jest zdefiniowana w pliku nagłówkowym Windows Sockets WINSOCK. H w następujący sposób:  
   
 ```  
 struct in_addr {

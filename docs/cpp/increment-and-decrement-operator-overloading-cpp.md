@@ -17,27 +17,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee35098dbf78e04241f04687c74c40ded1a0010
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3ed5cee9d3742410c4316b0eb8c3c80b2f41353
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37948235"
 ---
 # <a name="increment-and-decrement-operator-overloading-c"></a>Przeładowanie operatorów inkrementacji i dekrementacji (C++)
-Operatory inkrementacji i dekrementacji należą do specjalnej kategorii, ponieważ istnieją dwie odmiany każdego:  
+Operatory inkrementacji i dekrementacji dzielą się na specjalnej kategorii, ponieważ istnieją dwa warianty każdego z nich:  
   
--   Preincrement i postincrement  
+-   Operacja preinkrementacji i postincrement  
   
--   Predecrement i postdecrement  
+-   Operacja predekrementacji i postdecrement  
   
- Podczas pisania funkcji Przeciążony operator może być przydatne do wdrożenia różne wersje prefiks i przyrostka wersje tych operatorów. Aby rozróżnić, zaobserwowano następującą regułę: forma przedrostkowa operatora zadeklarowano dokładnie taki sam sposób jak inne operatora jednoargumentowego; dodatkowy argument typu akceptuje przyrostkowej formy `int`.  
+ Kiedy piszesz funkcje przeciążonego operatora, może być przydatne do zaimplementowania oddzielnych wersji dla prefiksu i przyrostkowe wersje tych operatorów. Aby rozróżnić dwa, następująca reguła zostanie wykryty: forma przedrostkowa operatora zadeklarowano dokładnie taki sam sposób jak inne operatora jednoargumentowego; przyrostkowej formy akceptuje dodatkowy argument typu **int**.  
   
 > [!NOTE]
->  Podczas określania Przeciążony operator formularza przyrostkowego operatora inkrementacji lub dekrementacji, dodatkowy argument musi być typu `int`; generuje błąd, określając innego typu.  
+>  Podczas określania przeciążonego operatora formularza przyrostkowego operatora inkrementacji lub dekrementacji, dodatkowy argument musi być typu **int**; generuje błąd, określając innego typu.  
   
- Poniższy przykład przedstawia sposób określają prefiks przyrostka inkrementacji i dekrementacji operatory `Point` klasy:  
+ Poniższy przykład pokazuje, jak zdefiniować prefiksu i zwiększenie przyrostkowe operatory dekrementacji `Point` klasy:  
   
-```  
+```cpp  
 // increment_and_decrement1.cpp  
 class Point  
 {  
@@ -96,18 +97,18 @@ int main()
 }  
 ```  
   
- Operatory tego samego można zdefiniować w zakresie pliku (globalny) przy użyciu następujących głowic funkcji:  
+ Ten sam operatorów można zdefiniować w zakresie pliku (globalnie) przy użyciu następujących głowic funkcji:  
   
-```  
+```cpp  
 friend Point& operator++( Point& )      // Prefix increment  
 friend Point& operator++( Point&, int ) // Postfix increment  
 friend Point& operator--( Point& )      // Prefix decrement  
 friend Point& operator--( Point&, int ) // Postfix decrement  
 ```  
   
- Argument typu `int` oznacza, że przyrostkowej formy przyrost lub zmniejszenie operator nie jest często używana do przekazywanie argumentów. Zwykle zawiera wartość 0. Jednak może służyć w następujący sposób:  
+ Argument typu **int** oznacza, że przyrostkowej formy przyrost lub operatora dekrementacyjnego nie jest najczęściej używany do przekazywania argumentów. Zawiera on zazwyczaj wartość 0. Jednak może służyć w następujący sposób:  
   
-```  
+```cpp  
 // increment_and_decrement2.cpp  
 class Int  
 {  
@@ -132,7 +133,7 @@ int main()
 }  
 ```  
   
- Brak składnię przy użyciu operatorów inkrementacji lub dekrementacji przekazać te wartości innych niż jawnego wywołania, jak pokazano w poprzednim kodzie. Jest więcej łatwe do wykonania tej funkcji do przeciążenia operatora dodawania/przypisania (`+=`).  
+ Nie ma składni do przy użyciu operatorów inkrementacji lub dekrementacji przekazać te wartości innych niż jawnego wywołania, jak pokazano w poprzednim kodzie. Bardziej bezpośredni sposób zaimplementowania tej funkcji jest przeciążyć operator dodawania/przypisania (`+=`).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przeładowanie operatora](../cpp/operator-overloading.md)

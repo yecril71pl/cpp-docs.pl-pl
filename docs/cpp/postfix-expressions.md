@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a116e4f1c937a1656f337396a8b10206e0776c0e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6299249b477b568579063f7ee61060514c3028bd
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37948236"
 ---
 # <a name="postfix-expressions"></a>Wyrażenia przyrostków
 Wyrażenia przyrostkowe składają się z podstawowego wyrażenia lub wyrażeń, w których operatory przyrostkowe następują po wyrażeniu podstawowym. Operatory przyrostkowe są wymienione w poniższej tabeli.  
@@ -33,20 +34,20 @@ Wyrażenia przyrostkowe składają się z podstawowego wyrażenia lub wyrażeń,
 |[Operator wywołania funkcji](../cpp/function-call-operator-parens.md)|**( )**|  
 |[Operator jawnej konwersji typu](../cpp/explicit-type-conversion-operator-parens.md)|*Nazwa typu* **)**|  
 |[Operator dostępu do elementu członkowskiego](../cpp/member-access-operators-dot-and.md)|**.** lub **->**|  
-|[Operator inkrementacji przyrostka](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|`++`|  
-|[Operator dekrementacji przyrostka](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|  
+|[Operator inkrementacji przyrostkowej](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|`++`|  
+|[Operator dekrementacji przyrostkowej](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|  
   
  Następująca składnia opisuje możliwe wyrażenia przyrostkowe:  
   
 ```  
   
-      primary-expression   
+primary-expression   
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )  
 ```  
   
- *Wyrażenie przyrostek* powyżej może być wyrażeniem podstawowego lub innego wyrażenia przyrostek.  Zobacz **wyrażenia podstawowe**.  Grupa wyrażeń przyrostkowych od lewej do prawej, umożliwia w ten sposób łączenie wyrażeń w następujący sposób:  
+ *Wyrażeniem przyrostkowym* powyżej może być wyrażeniem podstawowym lub innym wyrażeniem przyrostkowym.  Zobacz **wyrażenia podstawowe**.  Grupa wyrażeń przyrostkowych od lewej do prawej, umożliwia w ten sposób łączenie wyrażeń w następujący sposób:  
   
-```  
+```cpp 
 func(1)->GetValue()++  
 ```  
   
@@ -56,15 +57,15 @@ func(1)->GetValue()++
   
  Forma wyrażenia przyrostkowego  
   
-```  
+```cpp 
 simple-type-name ( expression-list )  
 ```  
   
  wskazuje wywołanie konstruktora.  Jeśli simple-type-name jest typem podstawowym, lista wyrażeń musi być wyrażeniem pojedynczym, a to wyrażenie wskazuje rzutowanie wartości wyrażenia na typ podstawowy.  Ten typ wyrażenia rzutującego naśladuje konstruktor.  Jako że ta forma umożliwia konstruowanie podstawowych typów i klas przy użyciu tej samej składni, ta forma jest szczególnie przydatna podczas definiowania klas szablonów.  
   
- *— Słowo kluczowe rzutowania* jest jednym z `dynamic_cast`, `static_cast` lub `reinterpret_cast`.  Więcej informacji można znaleźć w **dynamic_cast**, **static_cast** i **reinterpet_cast**.  
+ *Cast-keyword* jest jednym z **dynamic_cast**, **static_cast** lub **reinterpret_cast**.  Więcej informacji można znaleźć w **dynamic_cast**, **static_cast** i **reinterpet_cast**.  
   
- Operator `typeid` jest uważany za wyrażenie przyrostkowe.  Zobacz **operatora typeid**.  
+ **Typeid** operator jest uważany za wyrażenie przyrostkowe.  Zobacz **typeid operator**.  
   
 ## <a name="formal-and-actual-arguments"></a>Argumenty formalne i rzeczywiste  
  Wywoływanie programów przekazuje informacje do wywołanych funkcji w „bieżących argumentach”. Wywołane funkcje mają dostęp do informacji za pomocą odpowiadających im „argumentów formalnych”.  
@@ -75,7 +76,7 @@ simple-type-name ( expression-list )
   
 -   Każdy argument formalny jest inicjowany z odpowiadającym mu argumentem rzeczywistym na liście wyrażeń. (Argument formalny to argument, który jest zadeklarowany w nagłówku funkcji i używany w treści funkcji). Operacje są wykonywane jakby przez inicjowanie — konwersje standardowe i zdefiniowane przez użytkownika są wykonywane w konwersji rzeczywistego argumentu do poprawnego typu. Wykonywane inicjowanie zostało koncepcyjnie zilustrowane przez następujący kod:  
   
-    ```  
+    ```cpp 
     void Func( int i ); // Function prototype  
     ...  
     Func( 7 );          // Execute function call  
@@ -83,24 +84,24 @@ simple-type-name ( expression-list )
   
      Koncepcyjne inicjalizacje przed wywołaniem to:  
   
-    ```  
+    ```cpp 
     int Temp_i = 7;  
     Func( Temp_i );  
     ```  
   
      Należy zauważyć, że inicjalizacja jest wykonywana jakby przy użyciu składni znaku równości zamiast składni nawiasów. Kopia `i` została utworzona przed przekazaniem wartości do funkcji. (Aby uzyskać więcej informacji, zobacz [inicjatory](../cpp/initializers.md) i [konwersje](../cpp/user-defined-type-conversions-cpp.md)).  
   
-     W związku z tym jeśli prototypu funkcji (deklaracji) odwołuje się do argumentu typu **długi**, a jeśli program wywołujący dostarcza rzeczywiste argumentu typu `int`, rzeczywisty argument jest podwyższany, za pomocą konwersji standardowej Aby wpisać **długi** (zobacz [konwersje standardowe](../cpp/standard-conversions.md)).  
+     W związku z tym jeśli prototyp funkcji (deklaracja) wymaga argumentu typu **długie**, a jeśli program wywołujący dostarcza rzeczywisty argument typu **int**, rzeczywisty argument jest podnoszony za pomocą Konwersja standardowa typu na typ **długie** (zobacz [konwersje standardowe](../cpp/standard-conversions.md)).  
   
      Błędem jest podawanie rzeczywistego argumentu, dla którego nie ma żadnych standardowych lub zdefiniowanych przez użytkownika konwersji do typu argumentu formalnego.  
   
-     Dla rzeczywistych argumentów typu klasy, argument formalny jest inicjowany przez wywołanie konstruktora klasy. (Zobacz [konstruktorów](../cpp/constructors-cpp.md) Aby uzyskać więcej informacji o tych funkcjach Członkowskich klasy specjalnej.)  
+     Dla rzeczywistych argumentów typu klasy, argument formalny jest inicjowany przez wywołanie konstruktora klasy. (Zobacz [konstruktory](../cpp/constructors-cpp.md) więcej informacji na temat tych funkcji składowych klas specjalnych.)  
   
 -   Wywołanie funkcji jest wykonywane.  
   
  Poniższy fragment programu demonstruje wywołanie funkcji:  
   
-```  
+```cpp 
 // expre_Formal_and_Actual_Arguments.cpp  
 void func( long param1, double param2 );  
   
@@ -119,14 +120,14 @@ void func( long param1, double param2 )
 }  
 ```  
   
- Gdy `func` jest wywoływana z głównym, formalny parametr `param1` został zainicjowany z wartością `i` (`i` jest konwertowana na typ **długi** odpowiadać poprawnego typu przy użyciu standardowego Konwersja) i parametr formalny `param2` został zainicjowany z wartością `j` (`j` jest konwertowana na typ **podwójne** za pomocą konwersji standardowej).  
+ Gdy `func` jest wywoływana z main, parametr formalny `param1` jest inicjowany z wartością `i` (`i` jest konwertowany na typ **długie** odpowiadać poprawnego typu przy użyciu standardowego Konwersja) i parametru formalnego `param2` jest inicjowany z wartością `j` (`j` jest konwertowany na typ **double** za pomocą konwersji standardowej).  
   
 ## <a name="treatment-of-argument-types"></a>Traktowanie typów argumentu  
- Argumenty formalne deklarowane jako const typów nie można zmienić w treści funkcji. Funkcje można zmienić dowolny z argumentów nie jest typu **const**. Jednak zmiana jest lokalny dla funkcji i nie wpływa na rzeczywisty argument wartości, chyba że rzeczywisty argument jest odwołaniem do obiektu nie jest typu **const**.  
+ Argumenty formalne zadeklarowane jako typy stałe, nie można zmienić w treści funkcji. Funkcje można zmienić którykolwiek z argumentów ma typ inny niż **const**. Jednak zmiana jest lokalny dla funkcji i nie wpływa wartość rzeczywistego argumentu, chyba że rzeczywisty argument jest odwołaniem do obiektu nie jest typu **const**.  
   
- Następujące funkcje zilustrować niektóre z tych pojęć:  
+ Następujące funkcje przedstawiają niektóre z tych pojęć:  
   
-```  
+```cpp 
 // expre_Treatment_of_Argument_Types.cpp  
 int func1( const int i, int j, char *c ) {  
    i = 7;   // C3892 i is const.  
@@ -143,23 +144,23 @@ double& func2( double& d, const char *c ) {
 ```  
   
 ## <a name="ellipses-and-default-arguments"></a>Wielokropki i argumenty domyślne  
- Funkcje mogą być deklarowane akceptować argumenty mniej niż określona w definicji funkcji, przy użyciu jednej z dwóch metod: wielokropka (`...`) lub argumenty domyślne.  
+ Funkcje mogą być zadeklarowane do akceptowania mniej argumentów niż określono w definicji funkcji przy użyciu jednej z dwóch metod: wielokropka (`...`) lub domyślnych argumentów.  
   
- Wielokropek oznaczają, że argumenty mogą być wymagane, ale że liczbę i typy nie są określone w deklaracji. Jest to zwykle niską praktyki programowania C++, ponieważ jego pozbawia jedną z zalet C++: bezpieczeństwo typu. Przekształceniami są stosowane do funkcji zadeklarowany z wielokropkiem niż do tych funkcji, które są znane typy argumentów formalne i rzeczywiste:  
+ Elipsy oznaczają, że argumenty mogą być wymagane, ale że liczba i typy nie są określone w deklaracji. Jest to zwykle niska praktyka programowania C++, ponieważ unieważnia jedną z zalet języka C++: bezpieczeństwo typów. Różne konwersje są stosowane do funkcji zadeklarowanych z wielokropkiem niż te funkcje, dla których są znane typy argumentów formalne i rzeczywiste:  
   
--   Jeśli rzeczywisty argument jest typu **float**, jest podwyższany do typu **podwójne** przed wywołaniem funkcji.  
+-   Jeżeli rzeczywisty argument jest typu **float**, jest promowany do typu **double** przed wywołaniem funkcji.  
   
--   Wszystkie podpisane lub unsigned `char`, **krótki**, typ wyliczeniowy lub pola bitowego jest konwertowana na zalogowany lub niepodpisany `int` przy użyciu promocję typu całkowitego.  
+-   Wszystkie podpisane lub niepodpisane **char**, **krótki**, typ wyliczeniowy lub pole bitowe są konwertowane na podpisane lub niepodpisane **int** za pomocą promocji integralnej.  
   
--   Dowolny z argumentów typu klasy jest przekazywany przez wartość jako struktura danych; Kopia zostanie utworzona przez skopiowanie binarne zamiast wywołując konstruktora kopiowania klasy (jeśli istnieje).  
+-   Każdy argument dla typu klasy jest przekazywany przez wartość jako struktura danych; Kopia zostanie utworzona przez skopiowanie binarne zamiast przez wywołanie konstruktora kopiowania klasy (jeśli istnieje).  
   
- Wielokropek, jeśli używany, musi być zadeklarowany ostatniego na liście argumentów. Aby uzyskać więcej informacji na temat przekazywanie zmienna liczba argumentów można znaleźć w omówieniu [va_arg, makra va_start i va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) w *odwołanie do biblioteki wykonawczej*.  
+ Elipsy, jeśli używane, muszą być zagwarantowane ostatnio na liście argumentów. Aby uzyskać więcej informacji o przekazywaniu zmienną liczbę argumentów, zobacz Omówienie [va_arg, va_start i va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) w *odwołanie do biblioteki wykonawczej*.  
   
- Uzyskać informacji o domyślnych argumentów w programowaniu CLR, zobacz [zmiennej listy argumentów (...) (C + +/ CLI) ](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).  
+ Aby uzyskać informacje o domyślnych argumentach w programowaniu CLR, zobacz [zmiennej listy argumentów (...) (C + +/ CLI) ](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).  
   
- Argumenty domyślne umożliwiają wartości argumentu powinien założyć, jeśli nie zostanie podana w wywołaniu funkcji. Poniższy fragment kodu przedstawia, jak działają argumenty domyślne. Aby uzyskać więcej informacji na temat ograniczeń dotyczących dotyczące określania argumentów domyślnych, zobacz [argumenty domyślne](../cpp/default-arguments.md).  
+ Argumenty domyślne umożliwiają określenie wartości, które argument założyć, że jeśli nie zostanie podana w wywołaniu funkcji. Poniższy fragment kodu pokazuje, jak działają argumenty domyślne. Aby uzyskać więcej informacji na temat ograniczeń w określaniu domyślnych argumentów, zobacz [argumenty domyślne](../cpp/default-arguments.md).  
   
-```  
+```cpp 
 // expre_Ellipses_and_Default_Arguments.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -190,9 +191,9 @@ void print( const char *string, const char *terminator )
 }  
 ```  
   
- Program poprzedniego deklaruje funkcję, `print`, która przyjmuje dwa argumenty. Jednak drugi argument `terminator`, ma wartość domyślną `"\n"`. W **głównego**, dwa pierwsze wywołania `print` Zezwalaj na drugi argument domyślny dostarczyć nowy wiersz, aby zakończyć drukowanymi ciągu. Trzeci wywołanie określa jawną wartość jako drugi argument. Dane wyjściowe z programu  
+ Poprzedni program deklaruje funkcję, `print`, która przyjmuje dwa argumenty. Jednakże drugi argument `terminator`, ma wartość domyślną `"\n"`. W `main`, dwa pierwsze wywołania `print` Zezwalaj domyślnemu drugiemu argumentowi dostarczyć nowy wiersz, aby zakończyć drukowany ciąg. Trzecie wywołanie określa wartość dla drugiego argumentu. Dane wyjściowe z programu  
   
-```  
+```Output 
 hello,  
 world!  
 good morning, sunshine.  

@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ddde025fa633ccc1b9561acf595de186548ba3a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e402f103a29dd4c4af49fa1c34b9cae71fc6e9af
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857172"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964850"
 ---
 # <a name="messagesbase-class"></a>messages_base — Klasa
 
-W tym artykule opisano klasy podstawowej `int` typ katalogu wiadomości.
+W tym artykule opisano klasy bazowej **int** typu dla katalogu komunikatów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,13 +38,13 @@ struct messages_base : locale::facet {
 
 ## <a name="remarks"></a>Uwagi
 
-Katalog typu to synonim dla typu `int` możliwe wartości zwracane z wiadomości, który opisuje:: [do_open](../standard-library/messages-class.md#do_open).
+Wykaz typ jest synonimem typu **int** możliwych wartości zwracanych z wiadomości, który opisuje:: [do_open —](../standard-library/messages-class.md#do_open).
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<ustawień regionalnych >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

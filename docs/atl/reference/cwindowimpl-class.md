@@ -28,18 +28,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4884bbacd03675d00cb1a49b937265ab5faa2835
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c773cb242b3ac432ad5c0482bfad318c4c33b78a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366159"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883859"
 ---
 # <a name="cwindowimpl-class"></a>Klasa CWindowImpl
-Udostępnia metody do tworzenia lub Tworzenie podklasy okna.  
+Zawiera metody służące do tworzenia lub Tworzenie podklasy okna.  
   
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -49,14 +49,14 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 ```    
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Nowa klasa pochodzi od `CWindowImpl`.  
+ *T*  
+ Nowa klasa jest pochodną `CWindowImpl`.  
   
- *TBase*  
- Klasa podstawowa klasy. Domyślnie klasa podstawowa jest [CWindow](../../atl/reference/cwindow-class.md).  
+ *Tpodstawowe*  
+ Klasa bazowa, klasy. Domyślnie klasa bazowa jest [CWindow](../../atl/reference/cwindow-class.md).  
   
- `TWinTraits`  
- A [klasa cech](../../atl/understanding-window-traits.md) definiuje styl okna. Wartość domyślna to `CControlWinTraits`.  
+ *TWinTraits*  
+ A [klasa cech](../../atl/understanding-window-traits.md) definiujący Style okna. Wartość domyślna to `CControlWinTraits`.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -70,51 +70,51 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
   
 |||  
 |-|-|  
-|[DefWindowProc](#defwindowproc)|Udostępnia domyślne przetwarzania komunikatów.|  
+|[DefWindowProc](#defwindowproc)|Udostępnia domyślne przetwarzanie komunikatów.|  
 |[GetCurrentMessage](#getcurrentmessage)|Zwraca bieżący komunikat.|  
 |[GetWindowProc](#getwindowproc)|Zwraca bieżącą procedurę okna.|  
-|[OnFinalMessage](#onfinalmessage)|Metoda wywoływana po otrzymaniu ostatniego komunikatu (zazwyczaj `WM_NCDESTROY`).|  
+|[OnFinalMessage](#onfinalmessage)|Metoda wywoływana po odebraniu komunikatu ostatniej (zazwyczaj WM_NCDESTROY).|  
 |[SubclassWindow](#subclasswindow)|Podklasy okna.|  
-|[UnsubclassWindow](#unsubclasswindow)|Przywraca uprzednio podklasą okna.|  
+|[UnsubclassWindow](#unsubclasswindow)|Przywraca wcześniej będące podklasami okna.|  
   
 ### <a name="static-methods"></a>Metody statyczne  
   
 |||  
 |-|-|  
 |[GetWndClassInfo](#getwndclassinfo)|Zwraca wystąpienie statyczne klasy [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md), który zarządza informacjami klasy okna.|  
-|[WindowProc](#windowproc)|Przetwarza wiadomości wysyłane do okna.|  
+|[WindowProc](#windowproc)|Przetwarza komunikaty wysyłane do okna.|  
   
 ### <a name="data-members"></a>Elementy członkowskie danych  
   
 |||  
 |-|-|  
-|[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)|Wskazuje klasę okna oryginalną procedurę okna.|  
+|[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)|Wskazuje klasę okna oryginalnego procedurę okna.|  
   
 ## <a name="remarks"></a>Uwagi  
- Można użyć `CWindowImpl` można utworzyć okna lub podklasa klasy istniejącego okna. `CWindowImpl` procedurę okna używa mapy komunikatów do kierowania wiadomości na odpowiednie programy obsługi.  
+ Możesz użyć `CWindowImpl` tworzenia okna lub podklasy istniejącego okna. `CWindowImpl` procedurę okna przy użyciu mapy komunikatów kieruje komunikaty do odpowiedniej procedury obsługi.  
   
- `CWindowImpl::Create` Tworzy okno na podstawie informacji klasy okna, który jest zarządzany przez [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md). `CWindowImpl` zawiera [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) makra, co oznacza `CWndClassInfo` rejestruje nową klasę okna. Jeśli chcesz superklasie istniejącej klasy okna, pochodzi z klasy `CWindowImpl` i obejmują [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) makra. W takim przypadku `CWndClassInfo` rejestruje klasę okna, jest oparta na istniejącej klasy, która używa `CWindowImpl::WindowProc`. Na przykład:  
+ `CWindowImpl::Create` Tworzy okno, na podstawie informacji klasy okna, który jest zarządzany przez [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md). `CWindowImpl` zawiera [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) makra, która oznacza, że `CWndClassInfo` rejestruje nowe klasy okna. Chcąc superklasie istniejącej klasy okna, pochodzi z klasy `CWindowImpl` i obejmują [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) makra. W tym przypadku `CWndClassInfo` rejestruje klasę okna, która opiera się na istniejącej klasy, ale używa `CWindowImpl::WindowProc`. Na przykład:  
   
  [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwindowimpl-class_1.h)]  
   
 > [!NOTE]
->  Ponieważ `CWndClassInfo` zarządza informacjami dla tylko jednej klasy okna, każde okno został utworzony za pomocą wystąpienia `CWindowImpl` opiera się na tej samej klasy okna.  
+>  Ponieważ `CWndClassInfo` zarządza informacjami dla tylko jedną klasę okna, każde okno utworzonymi za pomocą wystąpienia `CWindowImpl` opiera się na tej samej klasy okna.  
   
- `CWindowImpl` obsługuje również podklasy okna. `SubclassWindow` Metody dołącza do istniejącego okna `CWindowImpl` obiektu i zmienia procedurę okna `CWindowImpl::WindowProc`. Każde wystąpienie `CWindowImpl` można podklasy innego okna.  
+ `CWindowImpl` obsługuje również podklasy okna. `SubclassWindow` Metoda dołącza do istniejącego okna `CWindowImpl` obiektu i zmienia procedury okna `CWindowImpl::WindowProc`. Każde wystąpienie `CWindowImpl` można podklasy innego okna.  
   
 > [!NOTE]
->  Dla żadnej podanej `CWindowImpl` obiektu, albo wywoływać **Utwórz** lub `SubclassWindow`. Nie należy wywoływać obu metod dla tego samego obiektu.  
+>  Dla dowolnej podanej `CWindowImpl` obiektu, albo użyć wywołania `Create` lub `SubclassWindow`. Nie należy wywoływać obu metod na tym samym obiekcie.  
   
- Oprócz `CWindowImpl`, zapewnia ATL [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) można utworzyć okna, który jest zawarty w innym obiekcie.  
+ Oprócz `CWindowImpl`, ATL dostarcza [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) można utworzyć okna, który jest zawarty w innym obiekcie.  
   
- Destruktor klasy podstawowej (~ **CWindowImplRoot**) zapewnia, że okno jest usunięty przed obiekt zostanie zniszczony.  
+ Destruktor klasy podstawowej (~ `CWindowImplRoot`) gwarantuje, że okno jest zniknął, zanim obiekt zostanie zniszczony.  
   
- `CWindowImpl` pochodną **CWindowImplBaseT**, co wynika ze **CWindowImplRoot**, co wynika ze **TBase** i [CMessageMap](../../atl/reference/cmessagemap-class.md).  
+ `CWindowImpl` pochodzi od klasy `CWindowImplBaseT`, które wywodzi się z `CWindowImplRoot`, która pochodzi od klasy `TBase` i [CMessageMap](../../atl/reference/cmessagemap-class.md).  
   
 |Aby uzyskać więcej informacji dotyczących|Zobacz|  
 |--------------------------------|---------|  
 |Tworzenie formantów|[ALT — samouczek](../../atl/active-template-library-atl-tutorial.md)|  
-|Przy użyciu systemu windows w ATL|[Klasy okien ATL](../../atl/atl-window-classes.md)|  
+|Korzystanie z systemu windows w ATL|[Klasy okien ATL](../../atl/atl-window-classes.md)|  
 |Kreator projektu ATL|[Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
@@ -132,7 +132,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
  **Nagłówek:** atlwin.h  
   
 ##  <a name="create"></a>  CWindowImpl::Create  
- Tworzy okno oparte na nową klasę okna.  
+ Tworzy okno, w oparciu o nowe klasy okna.  
   
 ```
 HWND Create(
@@ -146,43 +146,43 @@ HWND Create(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hWndParent`  
+ *hWndParent*  
  [in] Dojście do okna nadrzędnego lub właściciela.  
   
- `rect`  
- [in] A [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktura określająca położenie okna. `RECT` Mogą być przekazywane przez wskaźnik lub odwołanie.  
+ *Rect*  
+ [in] A [Prostokąt](http://msdn.microsoft.com/library/windows/desktop/dd162897) Struktura określająca położenie okna. `RECT` Mogą być przekazywane przez wskaźnik lub przez odwołanie.  
   
- `szWindowName`  
- [in] Określa nazwę okna. Wartość domyślna to **NULL**.  
+ *szWindowName*  
+ [in] Określa nazwę okna. Wartością domyślną jest NULL.  
   
- `dwStyle`  
- [in] Styl okna. Ta wartość jest połączona z styl podał klasa cech okna. Wartość domyślna zapewnia cechy klasy pełną kontrolę nad styl. Aby uzyskać listę możliwych wartości, zobacz [właściwości CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie Windows SDK.  
+ *dwStyle*  
+ [in] Styl okna. Ta wartość zostanie połączona z style zapewniany przez klasę cech okna. Wartość domyślna zapewnia cech klasy pełną kontrolę nad stylu. Aby uzyskać listę możliwych wartości, zobacz [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) w zestawie Windows SDK.  
   
- `dwExStyle`  
- [in] Styl okna rozszerzonej. Ta wartość jest połączona z styl podał klasa cech okna. Wartość domyślna zapewnia cechy klasy pełną kontrolę nad styl. Aby uzyskać listę możliwych wartości, zobacz [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
+ *dwExStyle*  
+ [in] Styl okna rozszerzonej. Ta wartość zostanie połączona z style zapewniany przez klasę cech okna. Wartość domyślna zapewnia cech klasy pełną kontrolę nad stylu. Aby uzyskać listę możliwych wartości, zobacz [elementu CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) w zestawie Windows SDK.  
   
- `MenuOrID`  
- [in] Dla okna podrzędnego identyfikator okna. W ramach najwyższego poziomu okna, menu uchwyt okna. Wartość domyślna to **0U**.  
+ *MenuOrID*  
+ [in] Dla okna podrzędnego identyfikator okna. Aby uzyskać oknem najwyższego poziomu uchwyt menu dla okna. Wartość domyślna to **0U**.  
   
- `lpCreateParam`  
- [in] Wskaźnik do danych tworzenie okien. Aby uzyskać pełny opis, zobacz opis ostatni parametr, aby [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680).  
+ *lpCreateParam*  
+ [in] Wskaźnik do danych tworzenie okien. Aby uzyskać pełny opis, zobacz opis ostatni parametr do [elementu CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- W przypadku powodzenia dojścia do okna nowo utworzony. W przeciwnym razie **NULL**.  
+ Jeśli to się powiedzie, uchwyt do nowo utworzonego okna. W przeciwnym razie wartość NULL.  
   
 ### <a name="remarks"></a>Uwagi  
- **Utwórz** najpierw rejestruje klasę okna, jeśli nie została jeszcze zarejestrowana. Nowo utworzony okna są automatycznie dołączane do `CWindowImpl` obiektu.  
+ `Create` najpierw rejestruje klasę okna, jeśli nie została jeszcze zarejestrowana. Nowo utworzony okna jest automatycznie dołączany do `CWindowImpl` obiektu.  
   
 > [!NOTE]
->  Nie wywołuj **Utwórz** Jeśli już o nazwie [SubclassWindow](#subclasswindow).  
+>  Nie wywołuj `Create` już ona wywołana [SubclassWindow](#subclasswindow).  
   
- Aby używać klasy okna, która jest oparta na istniejącej klasy okna, pochodzi z klasy `CWindowImpl` i obejmują [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) makra. Procedurę okna istniejącej klasy okna jest zapisywany w [m_pfnSuperWindowProc](#m_pfnsuperwindowproc). Aby uzyskać więcej informacji, zobacz [CWindowImpl](../../atl/reference/cwindowimpl-class.md) omówienie.  
+ Aby użyć klasy okna, w oparciu o istniejące klasy okna, pochodzi z klasy `CWindowImpl` i obejmują [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) makra. Istniejące klasy okna procedurę okna jest zapisywany w [m_pfnSuperWindowProc](#m_pfnsuperwindowproc). Aby uzyskać więcej informacji, zobacz [CWindowImpl](../../atl/reference/cwindowimpl-class.md) Przegląd.  
   
 > [!NOTE]
->  Jeśli 0 jest używany jako wartość `MenuOrID` parametru musi być określona jako 0U (wartość domyślna), aby uniknąć błędów kompilatora.  
+>  Jeśli 0 jest używany jako wartość *MenuOrID* parametru musi być określona jako 0U (wartość domyślna) w celu uniknięcia błędu kompilatora.  
   
 ##  <a name="defwindowproc"></a>  CWindowImpl::DefWindowProc  
- Wywoływane przez [WindowProc](#windowproc) do przetwarzania komunikatów, które nie są obsługiwane przez mapy komunikatów.  
+ Wywoływane przez [WindowProc](#windowproc) przetwarzania komunikatów, które nie są obsługiwane przez mapie komunikatów.  
   
 ```
 LRESULT DefWindowProc(
@@ -194,17 +194,17 @@ LRESULT DefWindowProc();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `uMsg`  
+ *uMsg*  
  [in] Komunikat wysyłany do okna.  
   
- `wParam`  
+ *wParam*  
  [in] Dodatkowe informacje specyficzne dla wiadomości.  
   
- `lParam`  
+ *lParam*  
  [in] Dodatkowe informacje specyficzne dla wiadomości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wynik przetwarzania komunikatów.  
+ Wynik przetwarzania wiadomości.  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie `DefWindowProc` wywołania [CallWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633571) Win32/funkcja do wysyłania informacji wiadomości do procedury okna, określony w [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
@@ -212,7 +212,7 @@ LRESULT DefWindowProc();
  Funkcja bez parametrów automatycznie pobiera wymagane parametry z bieżącego komunikatu.  
   
 ##  <a name="getcurrentmessage"></a>  CWindowImpl::GetCurrentMessage  
- Zwraca bieżący komunikat w `MSG` struktury.  
+ Zwraca bieżący komunikat, spakowane w `MSG` struktury.  
   
 ```
 const MSG* GetCurrentMessage();
@@ -235,24 +235,24 @@ virtual WNDPROC GetWindowProc();
  Zastępuje tę metodę, aby zastąpić procedurę okna swoją własną.  
   
 ##  <a name="getwndclassinfo"></a>  CWindowImpl::GetWndClassInfo  
- Wywoływane przez [Utwórz](#create) dostępu do informacji klasy okna.  
+ Wywoływane przez [Utwórz](#create) uzyskiwać dostęp do informacji klasy okna.  
   
 ```
 static CWndClassInfo& GetWndClassInfo();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Statyczne wystąpienia [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md).  
+ Statyczne wystąpienie [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md).  
   
 ### <a name="remarks"></a>Uwagi  
  Domyślnie `CWindowImpl` uzyskuje tej metody za pomocą [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) makra, która określa nowe klasy okna.  
   
- Aby superklasie istniejącej klasy okna, pochodzi z klasy `CWindowImpl` i obejmują [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) makra, aby zastąpić `GetWndClassInfo`. Aby uzyskać więcej informacji, zobacz [CWindowImpl](../../atl/reference/cwindowimpl-class.md) omówienie.  
+ Aby superklasie istniejącej klasy okna pochodną klasy z `CWindowImpl` i obejmują [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) makra, aby zastąpić `GetWndClassInfo`. Aby uzyskać więcej informacji, zobacz [CWindowImpl](../../atl/reference/cwindowimpl-class.md) Przegląd.  
   
- Oprócz funkcji `DECLARE_WND_CLASS` i `DECLARE_WND_SUPERCLASS` makra, można zastąpić `GetWndClassInfo` z własną implementację.  
+ Oprócz za pomocą makra DECLARE_WND_CLASS i DECLARE_WND_SUPERCLASS, można zastąpić `GetWndClassInfo` z Twojej własnej implementacji.  
   
 ##  <a name="m_pfnsuperwindowproc"></a>  CWindowImpl::m_pfnSuperWindowProc  
- W zależności od oknie wskazuje na jedną z poniższych procedur okna.  
+ W zależności od okna punkty do jednej z poniższych procedur okna.  
   
 ```
 WNDPROC m_pfnSuperWindowProc;
@@ -262,58 +262,58 @@ WNDPROC m_pfnSuperWindowProc;
   
 |Typ okna|Procedury okna|  
 |--------------------|----------------------|  
-|Okno oparte na nową klasę okna, określony przez [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) makra.|[DefWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633572) funkcji Win32.|  
-|Okno oparte na klasę okna, które modyfikuje istniejącej klasy, określonej za pomocą [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) makra.|Procedurę okna istniejącej klasy okna.|  
-|Będące podklasami okna.|Okno podklasą oryginalną procedurę okna.|  
+|Okno oparte na nową klasę okna, określony przez [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) makra.|[DefWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633572) funkcję Win32.|  
+|Okno w oparciu klasy okna, która modyfikuje istniejącej klasy, określony przez [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) makra.|Istniejące klasy okna procedurę okna.|  
+|Będące podklasami okno.|Okno będące podklasami oryginalnego procedurę okna.|  
   
- [CWindowImpl::DefWindowProc](#defwindowproc) wysyła komunikat informacji do procedury okna zapisane w `m_pfnSuperWindowProc`.  
+ [CWindowImpl::DefWindowProc](#defwindowproc) wysyła komunikat informacje zapisane w procedurę okna `m_pfnSuperWindowProc`.  
   
 ##  <a name="onfinalmessage"></a>  CWindowImpl::OnFinalMessage  
- Wywołuje się po otrzymaniu ostatniego komunikatu (zazwyczaj `WM_NCDESTROY`).  
+ Wywołuje się po otrzymaniu ostatniego komunikatu (zazwyczaj WM_NCDESTROY).  
   
 ```
 virtual void OnFinalMessage(HWND hWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hWnd`  
- [in] Dojście do okna zostaną zniszczone.  
+ *hWnd*  
+ [in] Dojście do okna niszczone.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja `OnFinalMessage` nie działa, ale można ją zastąpić tę funkcję, aby obsłużyć oczyszczania, zanim niszczenie okna. Jeśli chcesz automatycznie usunąć obiekt na zniszczenie okna, należy wywołać `delete this;` w tej funkcji.  
+ Domyślna implementacja klasy `OnFinalMessage` nie robi nic, ale możesz zastąpić tę funkcję, aby obsłużyć czyszczenia, zanim niszczenie okna. Jeśli chcesz automatycznie usunąć obiektu na zniszczenie okna, można wywołać **usunąć ten;** w tej funkcji.  
   
 ##  <a name="subclasswindow"></a>  CWindowImpl::SubclassWindow  
- Podklasy okna identyfikowane przez `hWnd` i dołącza go do `CWindowImpl` obiektu.  
+ Podklasy okna identyfikowane przez *hWnd* i dołącza je do `CWindowImpl` obiektu.  
   
 ```
 BOOL SubclassWindow(HWND hWnd);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hWnd`  
- [in] Dojście do okna jest podklasą klasy.  
+ *hWnd*  
+ [in] Uchwyt okna jest podklasą klasy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- **Wartość TRUE,** czy okno jest pomyślnie podklasą; w przeciwnym razie **FALSE**.  
+ Wartość TRUE, jeśli pomyślnie jest podklasą klasy okna; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Używa teraz podklasą okna [CWindowImpl::WindowProc](#windowproc). Oryginalną procedurę okna jest zapisywany w [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
+ Używa teraz będące podklasami okna [CWindowImpl::WindowProc](#windowproc). Oryginalny procedurę okna jest zapisywany w [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
   
 > [!NOTE]
->  Nie wywołuj `SubclassWindow` Jeśli już o nazwie [Utwórz](#create).  
+>  Nie wywołuj `SubclassWindow` już ona wywołana [Utwórz](#create).  
   
 ##  <a name="unsubclasswindow"></a>  CWindowImpl::UnsubclassWindow  
- Odłącza okno podklasą od `CWindowImpl` obiektu i przywraca oryginalną procedurę okna zapisane w [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
+ Odłącza okno będące podklasami z `CWindowImpl` obiektu i przywrócenie oryginalnego procedurę okna, zapisane w [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
   
 ```
 HWND UnsubclassWindow();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Dojście do wcześniej utworzono podklasę okna.  
+ Dojście do okna, wcześniej należy do podklasy.  
   
 ##  <a name="windowproc"></a>  CWindowImpl::WindowProc  
- Ta funkcja statyczna wykonuje procedurę okna.  
+ Ta funkcja statyczna implementuje procedurę okna.  
   
 ```
 static LRESULT CALLBACK WindowProc(
@@ -324,33 +324,33 @@ static LRESULT CALLBACK WindowProc(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `hWnd`  
+ *hWnd*  
  [in] Dojście do okna.  
   
- `uMsg`  
+ *uMsg*  
  [in] Komunikat wysyłany do okna.  
   
- `wParam`  
+ *wParam*  
  [in] Dodatkowe informacje specyficzne dla wiadomości.  
   
- `lParam`  
+ *lParam*  
  [in] Dodatkowe informacje specyficzne dla wiadomości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wynik przetwarzania komunikatów.  
+ Wynik przetwarzania wiadomości.  
   
 ### <a name="remarks"></a>Uwagi  
- `WindowProc` używa domyślnej mapy komunikatów (zadeklarowana z [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)) do kierowania wiadomości na odpowiednie programy obsługi. W razie potrzeby `WindowProc` wywołania [DefWindowProc](#defwindowproc) dla przetwarzania dodatkowych komunikatów. Jeśli komunikatu końcowego nie jest obsługiwana, `WindowProc` wykonuje następujące czynności:  
+ `WindowProc` używa domyślnej mapy komunikatów (zadeklarowanych za pomocą [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)) do przekierowywania komunikatów do odpowiedniej procedury obsługi. Jeśli to konieczne, `WindowProc` wywołania [DefWindowProc](#defwindowproc) do przetwarzania komunikatów dodatkowe. Jeśli komunikat końcowy nie jest obsługiwany, `WindowProc` wykonuje następujące czynności:  
   
 -   Wykonuje unsubclassing, jeśli unsubclassed okna.  
   
 -   Czyści `m_hWnd`.  
   
--   Wywołania [OnFinalMessage](#onfinalmessage) przed okna.  
+-   Wywołania [OnFinalMessage](#onfinalmessage) przed okno zostanie zniszczone.  
   
- Można zastąpić `WindowProc` na inny mechanizm obsługi wiadomości.  
+ Można zastąpić `WindowProc` inny mechanizm obsługi wiadomości.  
   
 ## <a name="see-also"></a>Zobacz też  
  [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
  [Klasa CComControl](../../atl/reference/ccomcontrol-class.md)   
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

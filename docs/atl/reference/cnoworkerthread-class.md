@@ -24,18 +24,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85e1962d10f274f4f8c35ba27cb05c41e8bf19cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 16eafd8c33bf1c9a42b95c31a333ff1df55b3495
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363087"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962507"
 ---
 # <a name="cnoworkerthread-class"></a>Klasa CNoWorkerThread
-Klasa jest używana jako argument dla `MonitorClass` parametr szablonu klasy pamięci podręcznej, jeśli chcesz wyłączyć konserwacji dynamiczne pamięci podręcznej.  
+Klasa jest używana jako argument dla `MonitorClass` parametr szablonu klasy pamięci podręcznej, jeśli chcesz wyłączyć obsługi dynamicznej pamięci podręcznej.  
   
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -49,24 +49,24 @@ class CNoWorkerThread
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CNoWorkerThread::AddHandle](#addhandle)|Odpowiednik współzależności funkcjonalnych [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).|  
-|[CNoWorkerThread::AddTimer](#addtimer)|Odpowiednik współzależności funkcjonalnych [CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer).|  
-|[CNoWorkerThread::GetThreadHandle](#getthreadhandle)|Odpowiednik współzależności funkcjonalnych [CWorkerThread::GetThreadHandle](../../atl/reference/cworkerthread-class.md#getthreadhandle).|  
-|[CNoWorkerThread::GetThreadId](#getthreadid)|Odpowiednik współzależności funkcjonalnych [CWorkerThread::GetThreadId](../../atl/reference/cworkerthread-class.md#getthreadid).|  
-|[CNoWorkerThread::Initialize](#initialize)|Odpowiednik współzależności funkcjonalnych [CWorkerThread::Initialize](../../atl/reference/cworkerthread-class.md#initialize).|  
-|[CNoWorkerThread::RemoveHandle](#removehandle)|Odpowiednik współzależności funkcjonalnych [CWorkerThread::RemoveHandle](../../atl/reference/cworkerthread-class.md#removehandle).|  
-|[CNoWorkerThread::Shutdown](#shutdown)|Odpowiednik współzależności funkcjonalnych [CWorkerThread::Shutdown](../../atl/reference/cworkerthread-class.md#shutdown).|  
+|[CNoWorkerThread::AddHandle](#addhandle)|Wielokrotność nie funkcjonalne [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).|  
+|[CNoWorkerThread::AddTimer](#addtimer)|Wielokrotność nie funkcjonalne [CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer).|  
+|[CNoWorkerThread::GetThreadHandle](#getthreadhandle)|Wielokrotność nie funkcjonalne [CWorkerThread::GetThreadHandle](../../atl/reference/cworkerthread-class.md#getthreadhandle).|  
+|[CNoWorkerThread::GetThreadId](#getthreadid)|Wielokrotność nie funkcjonalne [CWorkerThread::GetThreadId](../../atl/reference/cworkerthread-class.md#getthreadid).|  
+|[CNoWorkerThread::Initialize](#initialize)|Wielokrotność nie funkcjonalne [CWorkerThread::Initialize](../../atl/reference/cworkerthread-class.md#initialize).|  
+|[CNoWorkerThread::RemoveHandle](#removehandle)|Wielokrotność nie funkcjonalne [CWorkerThread::RemoveHandle](../../atl/reference/cworkerthread-class.md#removehandle).|  
+|[CNoWorkerThread::Shutdown](#shutdown)|Wielokrotność nie funkcjonalne [CWorkerThread::Shutdown](../../atl/reference/cworkerthread-class.md#shutdown).|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta klasa zawiera ten sam interfejs publiczny jako [CWorkerThread](../../atl/reference/cworkerthread-class.md). Ten interfejs powinien zapewniać `MonitorClass` parametr szablonu klasy pamięci podręcznej.  
+ Ta klasa udostępnia ten sam interfejs publiczny co [CWorkerThread](../../atl/reference/cworkerthread-class.md). Ten interfejs powinien być dostarczona przez `MonitorClass` parametr szablonu klasy pamięci podręcznej.  
   
- Metody tej klasy zostaną zaimplementowane nic nie rób. Metody, które zawsze zwracają HRESULT zwracają wartość S_OK i metody, które zwracają identyfikator dojścia lub wątek zawsze zwraca 0.  
+ Metody tej klasy są implementowane na nic nie rób. Metody, które zwracają HRESULT zawsze zwracają S_OK i metody, które zwraca identyfikator dojścia lub wątku zawsze zwracają 0.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlutil.h  
   
 ##  <a name="addhandle"></a>  CNoWorkerThread::AddHandle  
- Odpowiednik współzależności funkcjonalnych [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
+ Wielokrotność nie funkcjonalne [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
   
 ```
 HRESULT AddHandle(HANDLE /* hObject
@@ -81,10 +81,10 @@ HRESULT AddHandle(HANDLE /* hObject
  Zawsze zwraca wartość S_OK.  
   
 ### <a name="remarks"></a>Uwagi  
- Implementacja udostępniane przez tę klasę nie działa.  
+ Implementacja dostarczane przez tę klasę nic nie robi.  
   
 ##  <a name="addtimer"></a>  CNoWorkerThread::AddTimer  
- Odpowiednik współzależności funkcjonalnych [CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer).  
+ Wielokrotność nie funkcjonalne [CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer).  
   
 ```
 HRESULT AddTimer(DWORD /* dwInterval
@@ -101,10 +101,10 @@ HRESULT AddTimer(DWORD /* dwInterval
  Zawsze zwraca wartość S_OK.  
   
 ### <a name="remarks"></a>Uwagi  
- Implementacja udostępniane przez tę klasę nie działa.  
+ Implementacja dostarczane przez tę klasę nic nie robi.  
   
 ##  <a name="getthreadhandle"></a>  CNoWorkerThread::GetThreadHandle  
- Odpowiednik współzależności funkcjonalnych [CWorkerThread::GetThreadHandle](../../atl/reference/cworkerthread-class.md#getthreadhandle).  
+ Wielokrotność nie funkcjonalne [CWorkerThread::GetThreadHandle](../../atl/reference/cworkerthread-class.md#getthreadhandle).  
   
 ```
 HANDLE GetThreadHandle() throw();
@@ -114,10 +114,10 @@ HANDLE GetThreadHandle() throw();
  Zawsze zwraca wartość NULL.  
   
 ### <a name="remarks"></a>Uwagi  
- Implementacja udostępniane przez tę klasę nie działa.  
+ Implementacja dostarczane przez tę klasę nic nie robi.  
   
 ##  <a name="getthreadid"></a>  CNoWorkerThread::GetThreadId  
- Odpowiednik współzależności funkcjonalnych [CWorkerThread::GetThreadId](../../atl/reference/cworkerthread-class.md#getthreadid).  
+ Wielokrotność nie funkcjonalne [CWorkerThread::GetThreadId](../../atl/reference/cworkerthread-class.md#getthreadid).  
   
 ```
 DWORD GetThreadId() throw();
@@ -127,10 +127,10 @@ DWORD GetThreadId() throw();
  Zawsze zwraca wartość 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Implementacja udostępniane przez tę klasę nie działa.  
+ Implementacja dostarczane przez tę klasę nic nie robi.  
   
 ##  <a name="initialize"></a>  CNoWorkerThread::Initialize  
- Odpowiednik współzależności funkcjonalnych [CWorkerThread::Initialize](../../atl/reference/cworkerthread-class.md#initialize).  
+ Wielokrotność nie funkcjonalne [CWorkerThread::Initialize](../../atl/reference/cworkerthread-class.md#initialize).  
   
 ```
 HRESULT Initialize() throw();
@@ -140,10 +140,10 @@ HRESULT Initialize() throw();
  Zawsze zwraca wartość S_OK.  
   
 ### <a name="remarks"></a>Uwagi  
- Implementacja udostępniane przez tę klasę nie działa.  
+ Implementacja dostarczane przez tę klasę nic nie robi.  
   
 ##  <a name="removehandle"></a>  CNoWorkerThread::RemoveHandle  
- Odpowiednik współzależności funkcjonalnych [CWorkerThread::RemoveHandle](../../atl/reference/cworkerthread-class.md#removehandle).  
+ Wielokrotność nie funkcjonalne [CWorkerThread::RemoveHandle](../../atl/reference/cworkerthread-class.md#removehandle).  
   
 ```
 HRESULT RemoveHandle(HANDLE /* hObject
@@ -154,10 +154,10 @@ HRESULT RemoveHandle(HANDLE /* hObject
  Zawsze zwraca wartość S_OK.  
   
 ### <a name="remarks"></a>Uwagi  
- Implementacja udostępniane przez tę klasę nie działa.  
+ Implementacja dostarczane przez tę klasę nic nie robi.  
   
 ##  <a name="shutdown"></a>  CNoWorkerThread::Shutdown  
- Odpowiednik współzależności funkcjonalnych [CWorkerThread::Shutdown](../../atl/reference/cworkerthread-class.md#shutdown).  
+ Wielokrotność nie funkcjonalne [CWorkerThread::Shutdown](../../atl/reference/cworkerthread-class.md#shutdown).  
   
 ```
 HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
@@ -167,4 +167,4 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
  Zawsze zwraca wartość S_OK.  
   
 ### <a name="remarks"></a>Uwagi  
- Implementacja udostępniane przez tę klasę nie działa.
+ Implementacja dostarczane przez tę klasę nic nie robi.

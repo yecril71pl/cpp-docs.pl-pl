@@ -18,33 +18,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e9544e10ff0af41c0ff08fa51293c67c9977f2b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 495f0fe9faf0c75257f2ac7bbe0a3457438ffdf9
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420109"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942045"
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>Połączenie wyjątków języka C (strukturalnych) i C++
-Aby napisać bardziej przenośny kod, nie jest zalecane wykorzystanie strukturalnej obsługi wyjątków w programie w języku C++. Jednak czasami można skompilować z **/eha** mieszać wyjątki strukturalne i kod źródłowy C++ i wymagają niektóre funkcje obsługi obu rodzajów wyjątków. Ponieważ program obsługi wyjątków strukturalnych nie ma żadnych koncepcji obiektów lub typu wyjątki, nie może obsługiwać wyjątków zgłaszanych przez kod C++; jednak C++ **catch** programy obsługi można Obsługa wyjątków strukturalnych. Jako takie, Obsługa składni wyjątków języka C++ (**spróbuj**, `throw`, **catch**) nie jest akceptowane przez kompilator języka C, ale składni obsługi wyjątków strukturalnych (`__try`, `__except`, `__finally`) jest obsługiwana przez kompilator języka C++.  
+Aby napisać bardziej przenośny kod, nie jest zalecane wykorzystanie strukturalnej obsługi wyjątków w programie w języku C++. Jednak czasami warto skompilować z **/eha** i wymieszać strukturalne wyjątki kodu źródłowego języka C++, a zatem potrzebne są funkcje obsługi obu rodzajów wyjątków. Ponieważ program obsługi wyjątków strukturalnych nie ma koncepcji obiektów lub wyjątków z określonym typem, nie może obsługiwać wyjątki generowane przez kod języka C++; jednak C++ **catch** obsługi mogą obsługiwać wyjątki strukturalne. Jako taka, składnia obsługi wyjątków C++ (**spróbuj**, **throw**, **catch**) nie jest akceptowana przez kompilator C, natomiast składnia obsługi wyjątków strukturalnych (**__try** , **__except**, **__finally**) jest obsługiwana przez kompilator języka C++.  
   
- Zobacz [_set_se_translator —](../c-runtime-library/reference/set-se-translator.md) informacji dotyczących obsługi wyjątków strukturalnych wyjątków C++.  
+ Zobacz [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) uzyskać informacji na temat obsługi wyjątków strukturalnych jako wyjątków C++.  
   
  Po przemieszaniu wyjątków strukturalnych z wyjątkami C++, należy pamiętać o następujących kwestiach:  
   
 1.  Wyjątki C++ i wyjątki strukturalne nie mogą być mieszane w obrębie tej samej funkcji.  
   
-2.  Programy obsługi zakończenia (bloki `__finally`) są wykonywane zawsze, nawet w trakcie rozwijania po zgłoszeniu wyjątku.  
+2.  Programy obsługi zakończenia (**__finally** bloków) są wykonywane zawsze, nawet w trakcie rozwijania po zgłaszany jest wyjątek.  
   
-3.  Można przechwycić C++, obsługa wyjątków i Zachowaj unwind semantyki we wszystkich modułach skompilowane z [/EH](../build/reference/eh-exception-handling-model.md) — opcja kompilatora (Ta opcja umożliwia semantyką rozwinięć).  
+3.  Obsługa wyjątków języka C++ może wychwycić i zachować semantykę operacji unwind we wszystkich modułach skompilowanych z [/EH](../build/reference/eh-exception-handling-model.md) — opcja kompilatora (opcja ta włącza semantykę rozwijania).  
   
 4.  Istnieją sytuacje, w których funkcje destruktora nie są wywoływane dla wszystkich obiektów. Na przykład, jeśli wyjątek strukturalny występuje podczas próby wywołania funkcji przez niezainicjowany wskaźnik funkcji i funkcja ta przyjmuje jako parametry obiekty, które zostały zbudowane przed wywołaniem, destruktory tych obiektów nie będą wywoływane podczas odwijania stosu.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o?  
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat?  
   
--   [Przy użyciu setjmp / longjmp w programach języka C++](../cpp/using-setjmp-longjmp.md)  
+-   [Wykorzystanie setjmp lub longjmp w programach języka C++](../cpp/using-setjmp-longjmp.md)  
   
--   [Różnice między SEH i C++ EH](../cpp/exception-handling-differences.md)  
+-   [Różnice między SEH i EH w języku C++](../cpp/exception-handling-differences.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Obsługa wyjątków języka C++](../cpp/cpp-exception-handling.md)

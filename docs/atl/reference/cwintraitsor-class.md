@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3df5081d8584d821737350176740b6fd067ac78f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a996b1f2a9b81e9d74548f3e69883cee447ac3a0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361463"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881620"
 ---
 # <a name="cwintraitsor-class"></a>Klasa CWinTraitsOR
-Ta klasa udostępnia metodę standaryzacji style używane podczas tworzenia obiektu okna.  
+Ta klasa dostarcza metody do standaryzacji stylów używanych podczas tworzenia obiektu okna.  
   
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,10 +43,10 @@ class CWinTraitsOR
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `t_dwStyle`  
- Style okna domyślne.  
+ *t_dwStyle*  
+ Style okna ramowego domyślne.  
   
- `t_dwExStyle`  
+ *t_dwExStyle*  
  Domyślnie rozszerzone Style okna.  
   
 ## <a name="members"></a>Elementy członkowskie  
@@ -59,44 +59,44 @@ class CWinTraitsOR
 |[CWinTraitsOR::GetWndStyle](#getwndstyle)|Pobiera standardowe style dla `CWinTraitsOR` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- To [cech okna](../../atl/understanding-window-traits.md) klasa udostępnia prostą metodę standaryzacji stylów używany do tworzenia obiektu ATL okna. Użyj specjalizacji tej klasy jako parametr szablonu w celu [CWindowImpl](../../atl/reference/cwindowimpl-class.md) lub innej klasy okien ALT firmy do określenia minimalny zestaw standardowych i rozszerzone style do zastosowania w przypadku wystąpienia tej klasy okna.  
+ To [cech okna](../../atl/understanding-window-traits.md) klasa udostępnia prostą metodę standaryzacji stylów używany do tworzenia obiektu ATL okna. Użyj specjalizacji tej klasy jako parametr szablonu [CWindowImpl](../../atl/reference/cwindowimpl-class.md) lub innej klasy okien ATL, aby określić minimalny zestaw standardowych i rozszerzone style ma być używany dla wystąpień tej klasy okna.  
   
- Użyj specjalizacja szablonu, jeśli chcesz upewnić się, że niektóre style są ustawione dla wszystkich wystąpień klasy okna umożliwiając inne style można konfigurować na poszczególnych wystąpień w wywołaniu [CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create).  
+ Użyj specjalizacji tego szablonu, jeśli chcesz upewnić się, że określone style są ustawione dla wszystkich wystąpień klasy okna umożliwiając innymi stylami, należy ustawić na podstawie poszczególnych wystąpień w wywołaniu [CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create).  
   
- Jeśli chcesz podać domyślne style okna, które będą używane tylko wtedy, gdy nie inne style są określone w wywołaniu `CWindowImpl::Create`, użyj [CWinTraits](../../atl/reference/cwintraits-class.md) zamiast tego.  
+ Jeśli chcesz udostępnić domyślne style okna, które będą używane tylko wtedy, gdy nie inne style są określone w wywołaniu `CWindowImpl::Create`, użyj [CWinTraits](../../atl/reference/cwintraits-class.md) zamiast tego.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlwin.h  
   
 ##  <a name="getwndstyle"></a>  CWinTraitsOR::GetWndStyle  
- Wywołanie tej funkcji można pobrać kombinację (przy użyciu operatora logicznego OR) standardowe style `CWinTraits` obiektów i określonej przez domyślne style `t_dwStyle`.  
+ Wywołaj tę funkcję, aby pobrać kombinacji (przy użyciu operatora logicznego OR) standardowa style `CWinTraits` obiektu i style domyślne określone przez *t_dwStyle*.  
   
 ```
 static DWORD GetWndStyle(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
- Style używane do tworzenia okna.  
+ *dwStyle*  
+ Style służy do tworzenia okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Kombinacja style, które są przekazywane w `dwStyle` i domyślne te określone przez `t_dwStyle`, przy użyciu operatora logicznego OR.  
+ Kombinacja style, które są przekazywane w *dwStyle* i domyślne te określone przez `t_dwStyle`, przy użyciu operatora logicznego OR.  
   
 ##  <a name="getwndexstyle"></a>  CWinTraitsOR::GetWndExStyle  
- Wywołanie tej funkcji można pobrać kombinację (przy użyciu operatora logicznego OR) rozszerzone style `CWinTraits` obiektów i określonej przez domyślne style `t_dwStyle`.  
+ Wywołaj tę funkcję, aby pobrać kombinacji (przy użyciu operatora logicznego OR) rozszerzone style `CWinTraits` obiektu i style domyślne określone przez `t_dwStyle`.  
   
 ```
 static DWORD GetWndExStyle(DWORD dwExStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwExStyle`  
- Rozszerzone style używany do tworzenia okna.  
+ *dwExStyle*  
+ Rozszerzone style służy do tworzenia okna.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Kombinacja rozszerzone style, które są przekazywane w `dwExStyle` i domyślne określony przez `t_dwExStyle`, przy użyciu operator logiczny OR  
+ Kombinacja rozszerzone style, które są przekazywane w *dwExStyle* i określonych przez domyślne `t_dwExStyle`, przy użyciu operatora logicznego OR  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../../atl/atl-class-overview.md)   
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)   
  [Opis cech okna](../../atl/understanding-window-traits.md)
 

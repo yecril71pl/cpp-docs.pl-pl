@@ -1,5 +1,5 @@
 ---
-title: Element CComObject klasy | Dokumentacja firmy Microsoft
+title: Klasa CComObject | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af84d64d326ed7746b76db39ef26181ab96ca88d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
-ms.translationtype: HT
+ms.openlocfilehash: 89a909b715633488cff37fa87ea5950681e208cd
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361489"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881844"
 ---
-# <a name="ccomobject-class"></a>Element CComObject — klasa
-Ta klasa implementuje **IUnknown** dla obiekt nieagregowane.  
+# <a name="ccomobject-class"></a>Klasa CComObject
+Ta klasa implementuje `IUnknown` nieagregowane obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,8 +40,8 @@ class CComObject : public Base
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `Base`  
- Pochodne klasy, [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak również od innych interfejsów mają być obsługiwane w obiekcie.  
+ *podstawowy*  
+ Z klasą pochodną [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak również od innych interfejsów, które chcesz obsługiwać obiektu.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -56,13 +56,13 @@ class CComObject : public Base
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CComObject::AddRef](#addref)|Zwiększa liczbę odwołanie do obiektu.|  
+|[CComObject::AddRef](#addref)|Zwiększa liczbę odwołań do obiektu.|  
 |[CComObject::CreateInstance](#createinstance)|(Statyczny) Tworzy nową `CComObject` obiektu.|  
 |[CComObject::QueryInterface](#queryinterface)|Pobiera wskaźnik do żądanego interfejsu.|  
-|[CComObject::Release](#release)|Zmniejsza liczba odwołanie do obiektu.|  
+|[CComObject::Release](#release)|Dekrementuje liczbę odwołań do obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CComObject` implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) dla obiekt nieagregowane. Jednak wywołań `QueryInterface`, `AddRef`, i **wersji** mają delegowane do `CComObjectRootEx`.  
+ `CComObject` implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) nieagregowane obiektu. Jednak wywołania `QueryInterface`, `AddRef`, i `Release` są delegowane `CComObjectRootEx`.  
   
  Aby uzyskać więcej informacji o korzystaniu z `CComObject`, zapoznaj się z artykułem [podstawy ATL obiektów COM](../../atl/fundamentals-of-atl-com-objects.md).  
   
@@ -75,14 +75,14 @@ class CComObject : public Base
  **Nagłówek:** atlcom.h  
   
 ##  <a name="addref"></a>  CComObject::AddRef  
- Zwiększa liczbę odwołanie do obiektu.  
+ Zwiększa liczbę odwołań do obiektu.  
   
 ```
 STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Ta funkcja zwraca nowy licznik zwiększany odwołanie do obiektu. Ta wartość może być przydatne w przypadku diagnostyki lub testowania.  
+ Ta funkcja zwraca nowy licznik odwołań zwiększona w obiekcie. Ta wartość może być przydatne w przypadku diagnostyki lub testowania aplikacji.  
   
 ##  <a name="ccomobject"></a>  CComObject::CComObject  
  Konstruktor zwiększa liczbę blokad modułu.  
@@ -93,12 +93,12 @@ CComObject(void* = NULL);
   
 ### <a name="parameters"></a>Parametry  
  **Void\***  
- [in] Ten parametr nienazwany nie jest używany. Istnieje dla symetrycznego z innymi **CCom *** XXX*`Object`*XXX* konstruktorów.  
+ [in] Ten parametr nienazwany nie jest używany. Istnieje symetrii z innymi **CCom *** XXX*`Object`*XXX* konstruktorów.  
   
 ### <a name="remarks"></a>Uwagi  
- Zmniejsza destruktora go.  
+ Dekrementuje destruktor go.  
   
- Jeśli `CComObject`-obiektu pochodnego pomyślnie jest tworzony przy użyciu **nowe** operatora, liczba początkowa odwołania to 0. Aby ustawić liczbę odwołań do poprawnej wartości (1), wywoływania [AddRef](#addref) funkcji.  
+ Jeśli `CComObject`— obiekt pochodnej pomyślnie jest tworzony przy użyciu **nowe** operatora, licznik odwołań początkowy to 0. Aby ustawić liczbę odwołań do prawidłowego wartość (1), wywoływania [AddRef](#addref) funkcji.  
   
 ##  <a name="dtor"></a>  CComObject::~CComObject  
  Destruktor.  
@@ -108,27 +108,27 @@ CComObject();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zwalnia wszystkie przydzielone zasoby, wywołania [FinalRelease](ccomobjectrootex-class.md#finalrelease), i zmniejsza liczbę blokad modułu.  
+ Zwalnia wszystkie przydzielone zasoby, wywołania [FinalRelease](ccomobjectrootex-class.md#finalrelease), oraz liczbę blokad modułu zmniejsza.  
 
   
 ##  <a name="createinstance"></a>  CComObject::CreateInstance  
- Ta funkcja statyczna służy do tworzenia nowego **element CComObject <** `Base` **>** obiektu bez ponoszenia dodatkowych nakładów [wywołanie funkcji CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ Ta funkcja statyczna służy do tworzenia nowego **CComObject <** `Base` **>** obiektu, bez konieczności [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
 ```
 static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pp`  
- [out] Wskaźnik do **element CComObject <** `Base` **>** wskaźnika. Jeśli `CreateInstance` zakończy się niepowodzeniem, `pp` ustawiono **NULL**.  
+ *strony*  
+ [out] Wskaźnik do **CComObject <** `Base` **>** wskaźnika. Jeśli `CreateInstance` zakończy się niepowodzeniem, *pp* ma wartość NULL.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standard `HRESULT` wartość.  
+ Standardowe wartości HRESULT.  
   
 ### <a name="remarks"></a>Uwagi  
- Obiekt zwrócony ma liczebności referencyjnej równej zero, dlatego wywołania `AddRef` natychmiast, następnie użyć **wersji** zwolnienia odwołania na wskaźnik do obiektu, gdy wszystko będzie gotowe.  
+ Zwrócony obiekt ma liczebności referencyjnej równej zero, więc wywołanie `AddRef` natychmiast, następnie użyć `Release` zwolnienie odwołania na wskaźnik do obiektu, gdy wszystko będzie gotowe.  
   
- Jeśli nie wymagają bezpośredni dostęp do obiektu, ale mimo to chcesz utworzyć nowy obiekt bez ponoszenia dodatkowych nakładów `CoCreateInstance`, użyj [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) zamiast tego.  
+ Jeśli nie potrzebujesz bezpośredni dostęp do obiektu, ale mimo to chcesz utworzyć nowy obiekt bez konieczności `CoCreateInstance`, użyj [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) zamiast tego.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_COM#38](../../atl/codesnippet/cpp/ccomobject-class_1.h)]  
@@ -145,31 +145,31 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iid`  
- [in] Identyfikator żądanego interfejsu.  
+ *IID*  
+ [in] Identyfikator interfejsu żądanej.  
   
- `ppvObject`  
- [out] Wskaźnik do wskaźnika interfejsu identyfikowane przez `iid`. Jeśli obiekt nie obsługuje ten interfejs `ppvObject` ustawiono **NULL**.  
+ *ppvObject*  
+ [out] Wskaźnik do wskaźnika interfejsu identyfikowane przez *iid*. Jeśli obiekt nie obsługuje ten interfejs *ppvObject* ma wartość NULL.  
   
- `pp`  
- [out] Wskaźnik do wskaźnika interfejsu identyfikowanych według typu `Q`. Jeśli obiekt nie obsługuje ten interfejs `pp` ustawiono **NULL**.  
+ *strony*  
+ [out] Wskaźnik do wskaźnika interfejsu identyfikowanych według typu `Q`. Jeśli obiekt nie obsługuje ten interfejs *pp* ma wartość NULL.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standard `HRESULT` wartość.  
+ Standardowe wartości HRESULT.  
   
 ##  <a name="release"></a>  CComObject::Release  
- Zmniejsza liczba odwołanie do obiektu.  
+ Dekrementuje liczbę odwołań do obiektu.  
   
 ```
 STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Ta funkcja zwraca liczby nowych zmniejszany odwołanie do obiektu. W kompilacjach debugowania zwracana wartość może być przydatne w przypadku diagnostyki lub testowania. W kompilacjach do debugowania z systemem innym niż **wersji** zawsze zwraca wartość 0.  
+ Ta funkcja zwraca nowy licznik odwołań wraz z przydzielaniem obiektu. W kompilacjach debugowania zwracana wartość może być użyteczna, diagnostykę lub testowania. W kompilacjach nieprzeznaczonych do debugowania `Release` zawsze zwraca wartość 0.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CComAggObject](../../atl/reference/ccomaggobject-class.md)   
  [Klasa CComPolyObject](../../atl/reference/ccompolyobject-class.md)   
  [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   
  [DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

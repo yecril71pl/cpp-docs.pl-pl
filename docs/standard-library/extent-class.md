@@ -1,5 +1,5 @@
 ---
-title: Extent — klasa | Dokumentacja firmy Microsoft
+title: Extent, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fb721b23f473c59051e72edc969e5de38f1c984
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2e6df4526eea3b0b8b4e91fa4f3e6a89cdd8adb7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843252"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964313"
 ---
 # <a name="extent-class"></a>extent — Klasa
 
@@ -37,13 +37,13 @@ struct extent;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zapytania.
+*Ty* typ do zapytania.
 
-`I` Tablica jest powiązana z zapytania.
+*Czy mogę* tablicy powiązany z zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli `Ty` jest typem tablicy, która ma co najmniej `I` wymiarów, zapytania typu zawiera liczbę elementów w wymiarze określony przez `I`. Jeśli `Ty` nie jest typem tablicowym lub jego pozycja jest mniejsza niż `I`, lub, jeśli `I` wynosi zero i `Ty` jest typu "granica tablicy nieznany `U`", zapytanie typu ma wartość 0.
+Jeśli *Ty* jest typem tablicy, który ma co najmniej *I* wymiarów, zapytania typu przechowuje liczbę elementów w wymiarze określony przez *I*. Jeśli *Ty* nie jest typem tablicowym lub rangę jest mniejsza niż *I*, lub jeśli *I* wynosi zero i *Ty* jest typu "granica tablicy nieznany `U` ", typu zapytania zawiera wartość 0.
 
 ## <a name="example"></a>Przykład
 
@@ -74,7 +74,7 @@ extent 1 == 10
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

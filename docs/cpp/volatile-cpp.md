@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295654586a3fe251526a4764d54f80f3a70c7014
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ae3419cc7df0b9ed436981d5e845764a762c8ee8
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423964"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940972"
 ---
 # <a name="volatile-c"></a>volatile (C++)
-Kwalifikator typu można użyć, aby zadeklarować, że obiekt może być modyfikowany w programie przez sprzęt.  
+Kwalifikator typu, który można użyć, aby zadeklarować, że można zmodyfikować obiekt w programie przez sprzęt.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,44 +37,44 @@ volatile declarator ;
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Można użyć [/volatile](../build/reference/volatile-volatile-keyword-interpretation.md) przełącznika kompilatora, aby zmodyfikować interpretowanie kompilator to słowo kluczowe.  
+ Możesz użyć [/volatile](../build/reference/volatile-volatile-keyword-interpretation.md) przełącznika kompilatora, aby zmodyfikować, jak kompilator interpretuje słowa kluczowego.  
   
- Visual Studio interpretuje `volatile` — słowo kluczowe inaczej w zależności od architektury docelowej. Dla ARM, jeśli nie **/volatile** określono opcję kompilatora, wykonuje kompilator tak, jakby **/volatile:iso** zostały określone. Architektur innych niż ARM, jeśli nie **/volatile** określono opcję kompilatora, wykonuje kompilator tak, jakby **/volatile:ms** określono; w związku z tym dla architektur innych niż ARM firma Microsoft zdecydowanie Zalecamy, aby w przypadku określenia **/volatile:iso**, używanie jawna synchronizacja elementów podstawowych i funkcje wewnętrzne kompilatora, jeśli mamy do czynienia pamięci, który jest współużytkowany przez wątki.  
+ Program Visual Studio interpretuje **volatile** — słowo kluczowe inaczej w zależności od architektury docelowej. Dla ARM, jeśli nie **/volatile** — opcja kompilatora jest określony, kompilator wykonuje tak, jakby **/volatile:iso** zostały określone. Dla architektur niż ARM, jeśli nie **/volatile** — opcja kompilatora jest określony, kompilator wykonuje tak, jakby **/volatile:ms** zostały określone; w związku z tym, dla architektur innych niż ARM firma Microsoft zdecydowanie Zaleca się, który określisz **/volatile:iso**, używanie jawnymi podstawami synchronizacji i niejawnymi kompilacjami, gdy masz do czynienia z pamięcią, która jest udostępniona w wielu wątkach.  
   
- Można użyć `volatile` kwalifikator w celu zapewnienia dostępu do lokalizacji pamięci, które są używane przez procesy asynchronicznego, takie jak programy obsługi przerwań.  
+ Możesz użyć **volatile** kwalifikatora w celu zapewnienia dostępu do lokalizacji pamięci, które są używane przez proces asynchroniczny, takich jak programy obsługi przerwań.  
   
- Gdy `volatile` jest używany w zmiennej, która ma również [__restrict](../cpp/extension-restrict.md) — słowo kluczowe, `volatile` ma pierwszeństwo.  
+ Gdy **volatile** jest używany w zmiennej, która także ma [element __restrict](../cpp/extension-restrict.md) — słowo kluczowe, **volatile** ma pierwszeństwo przed.  
   
- Jeśli `struct` elementu członkowskiego jest oznaczony jako `volatile`, następnie `volatile` są propagowane w strukturze całego. Jeśli struktura nie ma długości, która może zostać skopiowana na bieżącej architektury za pomocą jednej instrukcji `volatile` mogą zostać utracone całkowicie na tej struktury.  
+ Jeśli **struktury** element członkowski jest oznaczony jako **volatile**, następnie **volatile** jest propagowana do całej struktury. Jeśli struktura nie ma długości, która może zostać skopiowany na bieżącej architektury za pomocą jednej instrukcji **volatile** mogą zostać utracone całkowicie na tej struktury.  
   
- `volatile` — Słowo kluczowe może nie mają wpływu na pole, jeśli jest spełniony jeden z następujących warunków:  
+ **Volatile** — słowo kluczowe może mieć żadnego wpływu na pola, jeśli jest spełniony jeden z następujących warunków:  
   
 -   Długość pola nietrwałego przekracza maksymalny rozmiar, który można skopiować na bieżącej architektury za pomocą jednej instrukcji.  
   
--   Długość peryferyjnych zawierający `struct`— lub jeśli jest ono członkiem prawdopodobnie zagnieżdżonych `struct`— przekracza maksymalny rozmiar, który można skopiować na bieżącej architektury za pomocą jednej instrukcji.  
+-   Długość najbardziej zewnętrznej zawierającego **struktury**— lub jeśli jest ono członkiem prawdopodobnie zagnieżdżonych **struktury**— przekracza maksymalny rozmiar, który można skopiować na bieżącej architektury za pomocą jednej instrukcji.  
   
- Mimo że procesor nie zmienić kolejność uzyskuje dostęp do pamięci bez buforowalnej, zmienne bez buforowalnej musi być oznaczona jako `volatile` aby zagwarantować, że kompilator nie zmienić kolejność pamięć uzyskuje dostęp.  
+ Mimo, że procesor nie zmieniać kolejność dostępów do pamięci nie podlega buforowaniu, zmienne nie podlega buforowaniu, musi być oznaczona jako **volatile** celu zagwarantowania, że kompilator nie mogli zmienić kolejności pamięci uzyskuje dostęp.  
   
- Obiekty, które są zadeklarowane jako `volatile` nie są używane w niektórych optymalizacji, ponieważ ich wartości można zmienić w dowolnym momencie.  System ma zawsze wartość bieżącą wartość obiektu volatile żądanie, nawet jeśli poprzednie instrukcji wyświetlony monit o podanie wartości z tego samego obiektu.  Ponadto wartość obiektu jest zapisywane bezpośrednio na przypisania.  
+ Obiekty, które są zadeklarowane jako **volatile** nie są używane w niektórych optymalizacji, ponieważ ich wartości można zmienić w dowolnym momencie.  System ma zawsze wartość bieżącą wartość obiektu volatile żądanego, nawet w przypadku poprzednich instrukcji o podanie wartości z tego samego obiektu.  Ponadto wartość obiektu są zapisywane bezpośrednio na przypisanie.  
   
 ## <a name="iso-compliant"></a>ISO zgodne  
- Zapoznać się z kluczowego volatile C# lub zapoznać się z zachowaniem `volatile` we wcześniejszych wersjach programu Visual C++, należy pamiętać, że C ++ 11 normy ISO `volatile` — słowo kluczowe jest inna i jest obsługiwany w programie Visual Studio po [/ volatile: iso](../build/reference/volatile-volatile-keyword-interpretation.md) określono opcję kompilatora. (Dla ARM, określono domyślnie). `volatile` — Słowo kluczowe języka C ++ 11 kodu normy ISO ma być używany tylko w przypadku dostępu do sprzętu; nie należy używać do komunikacji między wątku. Do komunikacji między wątku używa mechanizmów takich jak [std::atomic\<T >](../standard-library/atomic.md) z [standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md).  
+ Jeśli jesteś zaznajomiony z C# nietrwałych słów kluczowych lub zapoznać się z zachowaniem **volatile** we wcześniejszych wersjach programu Visual C++, należy pamiętać, który C ++ 11 Standard ISO **volatile** — słowo kluczowe jest inny i jest obsługiwane w programie Visual Studio podczas [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) określono opcję kompilatora. (Dla ARM, określono domyślnie). **Volatile** — słowo kluczowe w C ++ 11 ISO standardowy kod ma być używany tylko w przypadku dostępu do sprzętu; nie należy jej używać do komunikacji między wątku. Do komunikacji między wątku, użyj mechanizmów takich jak [std::atomic\<T >](../standard-library/atomic.md) z [standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md).  
   
 ## <a name="end-of-iso-compliant"></a>Koniec ISO zgodne  
   
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
- Gdy **/volatile:ms** jest używana opcja kompilatora — domyślnie, gdy są przeznaczone dla architektury niż ARM — kompilator generuje dodatkowy kod w celu zachowania kolejności między odwołania do obiektów volatile oprócz obsługi kolejność odwołań do innych obiektów globalnych. W szczególności:  
+ Gdy **/volatile:ms** — opcja kompilatora jest używany — domyślnie, gdy architekturą docelową są architektur niż ARM — kompilator generuje dodatkowego kodu, aby zachować kolejność wśród odwołań do obiektów volatile oprócz obsługi kolejność z odwołaniami do innych obiektów globalnych. W szczególności:  
   
--   Zapis do obiektów volatile (znanej także jako nietrwałe zapisu) ma semantykę wersji; oznacza to, że odwołanie do obiektu globalnych lub statycznych, które występują przed zapisu do obiektu volatile w sekwencji instrukcji nastąpi przed tym volatile zapisu w skompilowanym plikiem binarnym.  
+-   Zapis do obiektów volatile (znany także jako volatile zapis) ma semantykę wersji; oznacza to, że odwołanie do obiektu globalnych lub statycznych, który występuje przed zapisu do obiektu volatile w sekwencji instrukcji wystąpi przed tym volatile zapisu w skompilowanym plikiem binarnym.  
   
--   Odczytu obiektu volatile (znanej także jako odczytu volatile) ma semantykę pobierania; oznacza to, że odwołanie do obiektu globalnej lub statycznej, występujący po odczytu volatile pamięci w sekwencji instrukcji następuje po tym volatile odczytu w skompilowanym plikiem binarnym.  
+-   Odczyt obiektu volatile (znany także jako odczyt volatile) ma semantykę nabywania; oznacza to, że odwołania do obiektów globalnych lub statycznych, występujący po odczytu volatile pamięci w sekwencji instrukcji nastąpi po tym volatile odczytu w skompilowanym plikiem binarnym.  
   
- Dzięki temu obiekty nietrwałe służący do blokowania pamięci i zwalnia w aplikacjach wielowątkowych.  
+ Dzięki temu obiektów volatile służący do blokowania pamięci i wersji w aplikacjach wielowątkowych.  
   
 > [!NOTE]
->  Gdy jest zależne od rozszerzonej gwarancji, że została podana podczas **/volatile:ms** jest używana opcja kompilatora, kod jest nieprzenośne.  
+>  Gdy opiera się na rozszerzone gwarancji, że gdy udostępnił **/volatile:ms** — opcja kompilatora jest używany, kod nie jest przenośna.  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Keywords](../cpp/keywords-cpp.md)   

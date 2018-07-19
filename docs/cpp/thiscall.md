@@ -1,5 +1,5 @@
 ---
-title: Konwencja __thiscall | Dokumentacja firmy Microsoft
+title: __thiscall | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,34 +17,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4912628529ae0b47a5a5b938ab8e6d25a9099510
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d1b7718e4c6d270536f5d7973a1b5a3ec0e61f28
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704406"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941590"
 ---
 # <a name="thiscall"></a>__thiscall
 
 **Microsoft Specific**
 
-`__thiscall` Konwencji wywoływania jest używana dla funkcji Członkowskich i konwencji wywoływania domyślne używane przez funkcji Członkowskich C++, które nie korzystają z argumentami zmiennych. W obszarze `__thiscall`, wywoływany czyści stosu, w którym nie ma możliwości `vararg` funkcji. Argumenty są przenoszone na stosie od prawej do lewej, z `this` wskaźnika przekazywany za pomocą rejestru ECX, a nie na stosie na x86 architektury.
+**__Thiscall** konwencja wywołania jest używany dla funkcji składowych i to domyślna konwencja wywołania posługują się funkcji składowych języka C++, które nie korzystają z zmiennych argumentów. W obszarze **__thiscall**, wywoływany obiekt czyści stos, który nie ma możliwości `vararg` funkcji. Argumenty są wypychane na stosie od prawej do lewej, za pomocą **to** wskaźnik przekazywany za pośrednictwem rejestru ECX, a nie na stosie, na x86 architektury.
 
-Jedną z przyczyn do użycia `__thiscall` jest klas, w których element członkowski funkcji Użyj `__clrcall` domyślnie. W takim przypadku można użyć `__thiscall` dokonanie poszczególnych elementów członkowskich funkcji z kodu macierzystego.
+Jednym z powodów używania **__thiscall** znajduje się w klasach funkcje Członkowskie, których korzystają `__clrcall` domyślnie. W takim przypadku można użyć **__thiscall** się poszczególnym członkom funkcji można wywołać za pomocą kodu natywnego.
 
-Podczas kompilowania za pomocą [/CLR: pure](../build/reference/clr-common-language-runtime-compilation.md), są wszystkie funkcje i wskaźniki funkcji `__clrcall` chyba że określono inaczej. **/CLR: pure** i **/CLR: Safe** — opcje kompilatora są używane w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r.
+Podczas kompilowania za pomocą [/CLR: pure](../build/reference/clr-common-language-runtime-compilation.md), wszystkie funkcje i wskaźników do funkcji są `__clrcall` chyba że określono inaczej. **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
 
-W wersjach przed Visual C++ 2005 `__thiscall` konwencji wywoływania może nie być jawnie określona w programie, ponieważ `__thiscall` nie jest słowem kluczowym.
+W wersjach przed Visual C++ 2005 **__thiscall** konwencji wywoływania nie można jawnie określić w programie, ponieważ **__thiscall** nie jest słowem kluczowym.
 
-`vararg` Funkcje Członkowskie użyj `__cdecl` konwencji wywoływania. Wszystkie argumenty funkcji są przenoszone na stosie, z `this` wskaźnika ostatnio umieszczane na stosie
+`vararg` Funkcje Członkowskie korzystają **__cdecl** konwencji wywoływania. Wszystkie argumenty funkcji są wypychane na stos, za pomocą **to** umieszczenie w stosie ostatniego wskaźnika
 
-Konwencja wywoływania dotyczy tylko C++, nie istnieje żaden schemat decoration nazwa C.
+Ta konwencja wywołania ma zastosowanie wyłącznie do języka C++, nie istnieje żaden schemat dekorowania nazw języka C.
 
-Na ARM i x64 maszyny, `__thiscall` i akceptowany jest ignorowana przez kompilator.
+Na ARM i x64 maszyn, **__thiscall** jest akceptowane i ignorowane przez kompilator.
 
 W przypadku funkcji niestatycznych klas, jeśli funkcja jest zdefiniowana poza wierszem, modyfikator konwencji wywoływania nie musi być określony w definicji poza wierszem. Oznacza to, że dla metod niestatycznej składowej klasy przyjmowana jest konwencja wywoływania określona podczas deklaracji w punkcie definicji.
 
-**KOŃCOWY określonych firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

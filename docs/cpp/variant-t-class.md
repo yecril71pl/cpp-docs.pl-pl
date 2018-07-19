@@ -20,19 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ebe850e4b0d0d9fd352df0e60c4ea0737b9fd8a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70a3406d53296c778eba2ce9a6794afac2c846bd
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422982"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939809"
 ---
 # <a name="variantt-class"></a>_variant_t — Klasa
 **Microsoft Specific**  
   
- A `_variant_t` hermetyzuje `VARIANT` — typ danych. Klasa zarządza alokacji zasobów i dezalokacji i wykonywania wywołań funkcji do **VariantInit** i **VariantClear** odpowiednio.  
+ A `_variant_t` hermetyzuje `VARIANT` typu danych. Klasa zarządza alokacją i dezalokacją zasobów i sprawia, że wywołania funkcji `VariantInit` i `VariantClear` odpowiednio.  
   
-### <a name="construction"></a>Konstrukcji  
+### <a name="construction"></a>Konstrukcja  
   
 |||  
 |-|-|  
@@ -42,21 +42,21 @@ ms.locfileid: "32422982"
   
 |||  
 |-|-|  
-|[Attach](../cpp/variant-t-attach.md)|Dołącza **VARIANT** obiekt do `_variant_t` obiektu.|  
-|[Wyczyść](../cpp/variant-t-clear.md)|Czyści hermetyzowany **VARIANT** obiektu.|  
-|[ChangeType](../cpp/variant-t-changetype.md)|Zmienia typ `_variant_t` wskazany obiekt **VARTYPE**.|  
-|[Detach](../cpp/variant-t-detach.md)|Odłącza hermetyzowany **VARIANT** obiektu z tego `_variant_t` obiektu.|  
-|[SetString](../cpp/variant-t-setstring.md)|Przypisuje to ciąg `_variant_t` obiektu.|  
+|[Attach](../cpp/variant-t-attach.md)|Dołącza `VARIANT` do obiektu `_variant_t` obiektu.|  
+|[Usuń zaznaczenie](../cpp/variant-t-clear.md)|Czyści zhermetyzowany `VARIANT` obiektu.|  
+|[ChangeType](../cpp/variant-t-changetype.md)|Zmienia typ `_variant_t` wskazany obiekt `VARTYPE`.|  
+|[Detach](../cpp/variant-t-detach.md)|Odłącza zhermetyzowany `VARIANT` obiektu z tego `_variant_t` obiektu.|  
+|[Setstring —](../cpp/variant-t-setstring.md)|Przypisuje ten ciąg `_variant_t` obiektu.|  
   
 ### <a name="operators"></a>Operatory  
   
 |||  
 |-|-|  
 |[operator =](../cpp/variant-t-operator-equal.md)|Przypisuje nową wartość do istniejącej `_variant_t` obiektu.|  
-|[operator ==,! =](../cpp/variant-t-relational-operators.md)|Porównać dwa `_variant_t` obiektów równości i nierówności.|  
-|[Ekstraktory](../cpp/variant-t-extractors.md)|Wyodrębnianie danych z hermetyzowany **VARIANT** obiektu.|  
+|[operator ==,! =](../cpp/variant-t-relational-operators.md)|Porównanie dwóch `_variant_t` obiektów dla równości i nierówności.|  
+|[Ekstraktory](../cpp/variant-t-extractors.md)|Wyodrębnianie danych z zhermetyzowany `VARIANT` obiektu.|  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<comutil.h >  

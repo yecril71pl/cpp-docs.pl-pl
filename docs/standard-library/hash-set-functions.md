@@ -7,12 +7,12 @@ f1_keywords:
 - hash_set/std::swap
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
-ms.openlocfilehash: 083d928198d8d83d8a56d8a74a6204e94c86aa67
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ad8041ff6a4abab84272d2bbbdee290bfce4eff6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846288"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961880"
 ---
 # <a name="lthashsetgt-functions"></a>&lt;hash_set —&gt; funkcji
 
@@ -20,12 +20,12 @@ ms.locfileid: "33846288"
 |-|-|
 |[swap](#swap)|[swap (hash_multiset)](#swap_hash_multiset)|
 
-## <a name="swap"></a>  Swap
+## <a name="swap"></a>  swap
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [unordered_set — klasa](../standard-library/unordered-set-class.md).
+> Ten interfejs API jest nieaktualny. Alternatywą jest [unordered_set, klasa](../standard-library/unordered-set-class.md).
 
-Zamienia hash_sets dwa elementy.
+Zamienia elementy z dwóch hash_sets.
 
 ```cpp
 void swap(
@@ -35,28 +35,28 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-`right` Hash_set dostarczanie elementy zamianę lub hash_set, której elementy są wymienianych z tymi hash_set `left`.
+*prawy* hash_set zawierająca elementy, które mają być zamienione lub hash_set, której elementy są wymieniane z tymi hash_set *po lewej stronie*.
 
-`left` Hash_set —, której elementy są wymienianych z tymi hash_set `right`.
+*po lewej stronie* hash_set, której elementy są wymieniane z tymi hash_set *prawo*.
 
 ### <a name="remarks"></a>Uwagi
 
-`swap` Funkcji szablonu jest algorytm specjalizowany na hash_set — klasa kontenera do wykonywania funkcji członkowskiej `left.` [wymiany](../standard-library/hash-set-class.md#swap)( `right`). To wystąpienie częściowe porządkowanie szablonów funkcji przez kompilator. Gdy funkcje szablonów są przeciążone w taki sposób, dopasowania szablonu z wywołaniem funkcji nie jest unikatowa, kompilator wybierze najbardziej specjalna wersja funkcji szablonu. Ogólne wersji szablonu funkcji
+`swap` Funkcji szablonu jest algorytm przeznaczone na hash_set — klasa kontenera na wykonanie funkcji elementu członkowskiego `left.` [wymiany](../standard-library/hash-set-class.md#swap)(`right`). To wystąpienie częściowe porządkowanie szablonów funkcji przez kompilator. Gdy funkcje szablonu przeciążone są w sposób dopasowania szablonu za pomocą wywołania funkcji nie jest unikatowa, kompilator wybierze najbardziej wyspecjalizowaną wersję funkcji szablonu. Ogólne wersję funkcji szablonu
 
-**Szablon \<klasy T > wymiany void (T &, T &),**
+**Szablon \<klasa T > void swap (T &, T &),**
 
-w algorytmie klasa działa przez przypisanie i jest wolne działanie. Specjalna wersja w poszczególnych kontenerach jest znacznie szybsze może współpracować z reprezentacji wewnętrznej klasy kontenera.
+w algorytmie klasa działa przez przypisanie i jest wolne działanie. Specjalizowanej wersji w każdym kontenerze jest znacznie szybsza, ponieważ może współpracować z reprezentacji wewnętrznej klasy kontenera.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład kodu dla elementu członkowskiego klasy [hash_set::swap](../standard-library/hash-set-class.md#swap) na przykład, który używa wersji szablonu `swap`.
+Zobacz przykład kodu klasy członkowskiej [hash_set::swap](../standard-library/hash-set-class.md#swap) przykład, który używa szablonu wersji `swap`.
 
 ## <a name="swap_hash_multiset"></a>  swap (hash_multiset)
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [unordered_set — klasa](../standard-library/unordered-set-class.md).
+> Ten interfejs API jest nieaktualny. Alternatywą jest [unordered_set, klasa](../standard-library/unordered-set-class.md).
 
-Zamienia hash_multisets dwa elementy.
+Zamienia elementy z dwóch hash_multisets.
 
 ```cpp
 void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Traits, Allocator>& right);
@@ -64,21 +64,21 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
 
 ### <a name="parameters"></a>Parametry
 
-`right` Hash_multiset dostarczanie elementy zamianę lub hash_multiset, której elementy są wymienianych z tymi hash_multiset `left`.
+*prawy* hash_multiset zawierająca elementy, które mają być zamienione lub hash_multiset, której elementy są wymieniane z tymi hash_multiset *po lewej stronie*.
 
-`left` Hash_multiset —, której elementy są wymienianych z tymi hash_multiset `right`.
+*po lewej stronie* hash_multiset, której elementy są wymieniane z tymi hash_multiset *prawo*.
 
 ### <a name="remarks"></a>Uwagi
 
-`swap` Funkcji szablonu jest algorytm specjalizowany na hash_multiset — klasa kontenera do wykonywania funkcji członkowskiej `left.` [wymiany](../standard-library/hash-multiset-class.md#swap)( `right`). To wystąpienie częściowe porządkowanie szablonów funkcji przez kompilator. Gdy funkcje szablonów są przeciążone w taki sposób, dopasowania szablonu z wywołaniem funkcji nie jest unikatowa, kompilator wybierze najbardziej specjalna wersja funkcji szablonu. Ogólne wersji szablonu funkcji
+`swap` Funkcji szablonu jest algorytm przeznaczone na hash_multiset — klasa kontenera na wykonanie funkcji elementu członkowskiego `left.` [wymiany](../standard-library/hash-multiset-class.md#swap)(`right`). To wystąpienie częściowe porządkowanie szablonów funkcji przez kompilator. Gdy funkcje szablonu przeciążone są w sposób dopasowania szablonu za pomocą wywołania funkcji nie jest unikatowa, kompilator wybierze najbardziej wyspecjalizowaną wersję funkcji szablonu. Ogólne wersję funkcji szablonu
 
-**Szablon \<klasy T > wymiany void (T &, T &),**
+**Szablon \<klasa T > void swap (T &, T &),**
 
-w algorytmie klasa działa przez przypisanie i jest wolne działanie. Specjalna wersja w poszczególnych kontenerach jest znacznie szybsze może współpracować z reprezentacji wewnętrznej klasy kontenera.
+w algorytmie klasa działa przez przypisanie i jest wolne działanie. Specjalizowanej wersji w każdym kontenerze jest znacznie szybsza, ponieważ może współpracować z reprezentacji wewnętrznej klasy kontenera.
 
 ### <a name="example"></a>Przykład
 
-Zobacz przykład kodu dla elementu członkowskiego klasy [hash_multiset::swap](../standard-library/hash-multiset-class.md#swap) na przykład, który używa wersji szablonu `swap`.
+Zobacz przykład kodu klasy członkowskiej [hash_multiset::swap](../standard-library/hash-multiset-class.md#swap) przykład, który używa szablonu wersji `swap`.
 
 ## <a name="see-also"></a>Zobacz także
 

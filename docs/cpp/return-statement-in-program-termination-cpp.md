@@ -1,5 +1,5 @@
 ---
-title: Instrukcja return Kończenie działania programu (C++) | Dokumentacja firmy Microsoft
+title: Return, instrukcja w zakończeniu programu (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61d09c1b3aaea799c227686436486efa48fc7857
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb594eb10e8068d5f5b3ed124d5e77b48ced728e
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947742"
 ---
 # <a name="return-statement-in-program-termination-c"></a>return — instrukcja w zakończeniu działania programu (C++)
-Wystawianie `return` instrukcji z **głównego** jest funkcjonalnym odpowiednikiem wywołania **zakończyć** funkcji. Rozważmy następujący przykład:  
+Wystawianie `return` instrukcji z **głównego** jest funkcjonalnym odpowiednikiem wywołania **wyjść** funkcji. Rozważmy następujący przykład:  
   
-```  
+```cpp 
 // return_statement.cpp  
 #include <stdlib.h>  
 int main()  
@@ -35,7 +36,7 @@ int main()
 }  
 ```  
   
- **Zakończyć** i `return` instrukcje w powyższym przykładzie są funkcjonalnie identyczne. C++ wymaga jednak funkcje, które mają inne niż zwracanych typów `void` zwracają wartość. `return` Umożliwia zwrócona wartość **głównego**.  
+ **Wyjść** i **zwracają** instrukcji w powyższym przykładzie są funkcjonalnie identyczny. Jednak C++ wymaga funkcji, które mają inne niż zwracane typy **void** zwracają wartość. **Zwracają** instrukcji umożliwia zwracanie wartości z `main`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kończenie działania programu](../cpp/program-termination.md)

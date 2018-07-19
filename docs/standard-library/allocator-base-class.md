@@ -48,16 +48,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c078933ad35cff1a52de433b1ae5d321db1985c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9f27cb2bc1a711b77006fa496cc080f546e539ab
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847783"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962462"
 ---
 # <a name="allocatorbase-class"></a>allocator_base — Klasa
 
-Definiuje klasę podstawową i typowe funkcje niezbędne do utworzenia programu przydzielania zdefiniowane przez użytkownika z filtru synchronizacji.
+Definiuje klasę bazową i typowe funkcje potrzebne do utworzenia programu przydzielania zdefiniowanych przez użytkownika z filtru synchronizacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -70,8 +70,8 @@ class allocator_base
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`Type`|Typ elementów przydzielonej przez program przydzielania.|
-|`Sync`|Zasady synchronizacji dla programu przydzielania, jest [sync_none — klasa](../standard-library/sync-none-class.md), [sync_per_container — klasa](../standard-library/sync-per-container-class.md), [sync_per_thread — klasa](../standard-library/sync-per-thread-class.md), lub [sync_shared — Klasa](../standard-library/sync-shared-class.md).|
+|*Typ*|Typ elementów przydzielonej przez alokator.|
+|*Synchronizacja*|Zasady synchronizacji dla alokatora, który jest [sync_none — klasa](../standard-library/sync-none-class.md), [sync_per_container — klasa](../standard-library/sync-per-container-class.md), [sync_per_thread — klasa](../standard-library/sync-per-thread-class.md), lub [sync_shared — Klasa](../standard-library/sync-shared-class.md).|
 
 ### <a name="constructors"></a>Konstruktorów
 
@@ -83,36 +83,36 @@ class allocator_base
 
 |Nazwa typu|Opis|
 |-|-|
-|[const_pointer](#const_pointer)|Typ, który udostępnia stałej wskaźnika do typu obiektu zarządzanego przez program przydzielania.|
-|[const_reference](#const_reference)|Typ, który zapewnia stałą odwołanie do typu obiektu zarządzanego przez program przydzielania.|
-|[difference_type](#difference_type)|Podpisany typ całkowity może reprezentować różnica między wartościami wskaźniki do typu obiektu zarządzanego przez program przydzielania.|
+|[const_pointer](#const_pointer)|Typ, który zapewnia stały wskaźnik do typu obiektu zarządzanego przez program przydzielania.|
+|[const_reference](#const_reference)|Typ, który zawiera stałe odwołanie do typu obiektu zarządzanego przez program przydzielania.|
+|[difference_type](#difference_type)|Podpisany typ całkowity, który może reprezentować różnicy między wartościami wskaźniki do typu obiektu zarządzanego przez program przydzielania.|
 |[pointer](#pointer)|Typ, który dostarcza wskaźnik do typu obiektu zarządzanego przez program przydzielania.|
 |[Odwołanie](#reference)|Typ, który zawiera odwołanie do typu obiektu zarządzanego przez program przydzielania.|
-|[size_type](#size_type)|Sekwencja typem całkowitym bez znaku, mogącej reprezentować długość każdego obiektu klasy szablonu `allocator_base` można przydzielić.|
+|[size_type](#size_type)|Sekwencja nieoznaczoną liczbę całkowitą reprezentujące długość każdego obiekt klasy szablonu `allocator_base` można przydzielić.|
 |[value_type](#value_type)|Typ, który jest zarządzany przez program przydzielania.|
 
 ### <a name="member-functions"></a>Funkcje Członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[_Charalloc](#charalloc)|Przydziela magazynu dla tablicy typu `char`.|
-|[_Chardealloc](#chardealloc)|Zwalnia magazynu dla macierzy zawierających elementy typu `char`.|
-|[Adres](#address)|Umożliwia znalezienie adresu obiektu, którego wartość jest określona.|
-|[allocate](#allocate)|Przydziela bloku pamięci wystarczająco duże, aby przechowywać przynajmniej określoną liczbę elementów.|
-|[construct](#construct)|Tworzy określonego typu obiektu na określony adres, który został zainicjowany z określoną wartością.|
-|[Cofnięcie przydziału](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu rozpoczynający się od określonej pozycji.|
-|[destroy](#destroy)|Wywołanie destruktora obiektów bez cofanie przydziału pamięci przechowywania obiektu.|
-|[max_size](#max_size)|Zwraca liczbę elementów typu `Type` który może zostać przydzielony przez obiekt klasy alokatora przed wolnej pamięci jest używany w.|
+|[_Charalloc](#charalloc)|Przydziela pamięć dla tablicy typu **char**.|
+|[_Chardealloc](#chardealloc)|Zwalnia pamięć dla tablicę zawierającą elementy typu **char**.|
+|[Adres](#address)|Wyszukuje adres obiektu, którego wartość jest określona.|
+|[allocate](#allocate)|Przydziela blok pamięci jest wystarczająco duży, aby zapisać co najmniej określonej liczby elementów.|
+|[construct](#construct)|Tworzy określonego typu obiektu pod określony adres, który jest inicjowany z określoną wartością.|
+|[Cofnij Przydział](#deallocate)|Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.|
+|[destroy](#destroy)|Wywołuje destruktora obiektów bez Trwa cofanie alokacji pamięci, do przechowywania obiektu.|
+|[max_size](#max_size)|Zwraca liczbę elementów typu *typu* , może zostać przydzielone przez obiekt alokatora klas, zanim zostaną użyte wolnej pamięci w.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<allocators — >
+**Nagłówek:** \<buforów >
 
-**Namespace:** stdext —
+**Namespace:** stdext
 
 ## <a name="charalloc"></a>  allocator_base::_Charalloc
 
-Przydziela magazynu dla tablicy typu `char`.
+Przydziela pamięć dla tablicy typu **char**.
 
 ```cpp
 char *_Charalloc(size_type count);
@@ -122,7 +122,7 @@ char *_Charalloc(size_type count);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`count`|Liczba elementów w tablicy do przydzielenia.|
+|*Liczba*|Liczba elementów w tablicy do przydzielenia.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -130,11 +130,11 @@ Wskaźnik do przydzielonego obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska jest używany przez kontenery, gdy skompilowano z kompilatorem, którego nie można skompilować ponownie Utwórz wiązanie. Implementuje `_Charalloc` do przydzielania zdefiniowane przez użytkownika, zwracając wynik wywołania `allocate` funkcja filtr synchronizacji.
+Ta funkcja członkowska jest używanych przez kontenery, gdy skompilowano z opcją kompilatora, które nie można skompilować ponowne wiązanie. Implementuje `_Charalloc` do przydzielania zdefiniowanych przez użytkownika, zwracając wynik wywołania `allocate` funkcja filtr synchronizacji.
 
 ## <a name="chardealloc"></a>  allocator_base::_Chardealloc
 
-Zwalnia magazynu dla macierzy zawierających elementy typu `char`.
+Zwalnia pamięć dla tablicę zawierającą elementy typu **char**.
 
 ```cpp
 void _Chardealloc(void* ptr, size_type count);
@@ -144,16 +144,16 @@ void _Chardealloc(void* ptr, size_type count);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`ptr`|Wskaźnik do pierwszego obiektu do cofnięcia alokacji z magazynu.|
-|`count`|Liczba obiektów do cofnięcia alokacji z magazynu.|
+|*ptr*|Wskaźnik do pierwszego obiektu można cofnąć przydziału z magazynu.|
+|*Liczba*|Liczba obiektów, które można cofnąć przydziału z magazynu.|
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska jest używany przez kontenery, gdy skompilowano z kompilatorem, którego nie można skompilować ponownie Utwórz wiązanie. Implementuje `_Chardealloc` do przydzielania zdefiniowane przez użytkownika, wywołując `deallocate` funkcja filtr synchronizacji. Ptr wskaźnika musi wcześniej zwróconych przez wywołanie do `_Charalloc` dla obiekt przydzielania, który porównuje równa `*this`, przydzielania tablicy obiektów o takiej samej wielkości i typu. `_Chardealloc` nigdy nie zgłasza wyjątek.
+Ta funkcja członkowska jest używanych przez kontenery, gdy skompilowano z opcją kompilatora, które nie można skompilować ponowne wiązanie. Implementuje `_Chardealloc` do przydzielania zdefiniowanych przez użytkownika, wywołując `deallocate` funkcja filtr synchronizacji. Ptr wskaźnik musi zostały wcześniej zwrócone przez wywołanie `_Charalloc` dla obiekt alokatora, który porównuje równa `*this`, przydzielania tablicy obiektu tego samego rozmiaru i typu. `_Chardealloc` nigdy nie zgłasza wyjątek.
 
 ## <a name="address"></a>  allocator_base::Address
 
-Umożliwia znalezienie adresu obiektu, którego wartość jest określona.
+Wyszukuje adres obiektu, którego wartość jest określona.
 
 ```cpp
 pointer address(reference val);
@@ -163,19 +163,19 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>Parametry
 
-`val` Wartość kwalifikatora const ani nonconst obiektu, którego adres są wyszukiwane.
+*Val* const lub nonconst wartość obiektu, którego adres są wyszukiwane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wartości, odpowiednio, stały lub nonconst znaleźć typu const ani nonconst wskaźnik do obiektu.
+"Const" lub nonconst wskaźnik do obiektu znaleźć wartości, odpowiednio, const lub nonconst.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska jest zaimplementowany dla przydzielania zdefiniowane przez użytkownika przez zwrócenie `&val`.
+Ta funkcja elementu członkowskiego został zaimplementowany dla alokatora zdefiniowanych przez użytkownika, zwracając `&val`.
 
 ## <a name="allocate"></a>  allocator_base::allocate
 
-Przydziela bloku pamięci wystarczająco duże, aby przechowywać przynajmniej określoną liczbę elementów.
+Przydziela blok pamięci jest wystarczająco duży, aby zapisać co najmniej określonej liczby elementów.
 
 ```cpp
 template <class Other>
@@ -188,8 +188,8 @@ pointer allocate(size_type _Nx);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`_Nx`|Liczba elementów w tablicy do przydzielenia.|
-|`_Hint`|Ten parametr jest ignorowany.|
+|*_Nx*|Liczba elementów w tablicy do przydzielenia.|
+|*_Hint*|Ten parametr jest ignorowany.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -197,7 +197,7 @@ Wskaźnik do przydzielonego obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska implementuje alokacji pamięci do przydzielania zdefiniowane przez użytkownika, zwracając wynik wywołania `allocate` funkcja filtr synchronizacji typu Type `*` Jeśli `_Nx == 1`, w przeciwnym razie, zwracając wynik wywołanie `operator new(_Nx * sizeof(Type))` Rzutowanie na typ typu `*`.
+Funkcja elementu członkowskiego implementuje alokacji pamięci dla programu przydzielania zdefiniowanych przez użytkownika, zwracając wynik wywołania `allocate` funkcji filtru synchronizacji typu typ `*` Jeśli `_Nx == 1`, inaczej, zwracając wynik wywołanie `operator new(_Nx * sizeof(Type))` Rzutowanie na typ typu `*`.
 
 ## <a name="allocator_base"></a>  allocator_base::allocator_base
 
@@ -214,15 +214,15 @@ allocator_base(const allocator_base<Other, Sync>& right);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`right`|Obiekt alokatora do skopiowania.|
+|*right*|Obiekt alokatora, który ma być skopiowany.|
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy konstrukcje konstruktora [allocator_base —](../standard-library/allocator-base-class.md) wystąpienia. Drugi konstrukcje konstruktora `allocator_base` takie wystąpienie dla żadnego `allocator_base<Type, _Sync>` wystąpienia `a`, `allocator_base<Type, Sync>(allocator_base<Other, Sync>(a)) == a`.
+Pierwszy Konstruktor konstruuje [allocator_base —](../standard-library/allocator-base-class.md) wystąpienia. Drugi Konstruktor konstruuje `allocator_base` takie wystąpienie, dla każdego `allocator_base<Type, _Sync>` wystąpienia `a`, `allocator_base<Type, Sync>(allocator_base<Other, Sync>(a)) == a`.
 
 ## <a name="const_pointer"></a>  allocator_base::const_pointer
 
-Typ, który udostępnia stałej wskaźnika do typu obiektu zarządzanego przez program przydzielania.
+Typ, który zapewnia stały wskaźnik do typu obiektu zarządzanego przez program przydzielania.
 
 ```cpp
 typedef const Type *const_pointer;
@@ -230,7 +230,7 @@ typedef const Type *const_pointer;
 
 ## <a name="const_reference"></a>  allocator_base::const_reference
 
-Typ, który zapewnia stałą odwołanie do typu obiektu zarządzanego przez program przydzielania.
+Typ, który zawiera stałe odwołanie do typu obiektu zarządzanego przez program przydzielania.
 
 ```cpp
 typedef const Type& const_reference;
@@ -238,7 +238,7 @@ typedef const Type& const_reference;
 
 ## <a name="construct"></a>  allocator_base::Construct
 
-Tworzy określonego typu obiektu na określony adres, który został zainicjowany z określoną wartością.
+Tworzy określonego typu obiektu pod określony adres, który jest inicjowany z określoną wartością.
 
 ```cpp
 void construct(pointer ptr, const Type& val);
@@ -248,16 +248,16 @@ void construct(pointer ptr, const Type& val);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`ptr`|Wskaźnik do lokalizacji, w którym ma być skonstruowany obiekt.|
-|`val`|Wartość, z którym tworzona jest zainicjowane.|
+|*ptr*|Wskaźnik do lokalizacji, w której obiekt ma zostać skonstruowane.|
+|*Val*|Wartość za pomocą którego generowana jest zainicjowane.|
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska jest zaimplementowany dla przydzielania zdefiniowane przez użytkownika przez wywołanie metody `new((void*)ptr Type(val)`.
+Ta funkcja elementu członkowskiego został zaimplementowany dla alokatora zdefiniowanych przez użytkownika, wywołując `new((void*)ptr Type(val)`.
 
 ## <a name="deallocate"></a>  allocator_base::deallocate
 
-Zwalnia określoną liczbę obiektów z magazynu rozpoczynający się od określonej pozycji.
+Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.
 
 ```cpp
 void deallocate(pointer ptr, size_type _Nx);
@@ -267,16 +267,16 @@ void deallocate(pointer ptr, size_type _Nx);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`ptr`|Wskaźnik do pierwszego obiektu do cofnięcia alokacji z magazynu.|
-|`_Nx`|Liczba obiektów do cofnięcia alokacji z magazynu.|
+|*ptr*|Wskaźnik do pierwszego obiektu można cofnąć przydziału z magazynu.|
+|*_Nx*|Liczba obiektów, które można cofnąć przydziału z magazynu.|
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcji członkowskiej jest zaimplementowany dla alokatora zdefiniowane przez użytkownika, wywołując `deallocate(ptr)` w filtrze synchronizacji `Sync` Jeśli `_Nx == 1`, w przeciwnym razie przez wywołanie metody `operator delete(_Nx * ptr)`.
+Ta funkcja elementu członkowskiego został zaimplementowany dla alokatora zdefiniowanych przez użytkownika, wywołując `deallocate(ptr)` filtr synchronizacji `Sync` Jeśli `_Nx == 1`, w przeciwnym razie, wywołując `operator delete(_Nx * ptr)`.
 
 ## <a name="destroy"></a>  allocator_base::Destroy
 
-Wywołanie destruktora obiektów bez cofanie przydziału pamięci przechowywania obiektu.
+Wywołuje destruktora obiektów bez Trwa cofanie alokacji pamięci, do przechowywania obiektu.
 
 ```cpp
 void destroy(pointer ptr);
@@ -286,15 +286,15 @@ void destroy(pointer ptr);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`ptr`|Wskaźnik wyznaczenie adres obiektu, które mają zostać zniszczone.|
+|*ptr*|Wskaźnik, wyznaczanie adres obiektu, które mają zostać zniszczone.|
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska jest zaimplementowany dla przydzielania zdefiniowane przez użytkownika przez wywołanie metody `ptr->~Type()`.
+Ta funkcja elementu członkowskiego został zaimplementowany dla alokatora zdefiniowanych przez użytkownika, wywołując `ptr->~Type()`.
 
 ## <a name="difference_type"></a>  allocator_base::difference_type
 
-Podpisany typ całkowity może reprezentować różnica między wartościami wskaźniki do typu obiektu zarządzanego przez program przydzielania.
+Podpisany typ całkowity, który może reprezentować różnicy między wartościami wskaźniki do typu obiektu zarządzanego przez program przydzielania.
 
 ```cpp
 typedef std::ptrdiff_t difference_type;
@@ -302,7 +302,7 @@ typedef std::ptrdiff_t difference_type;
 
 ## <a name="max_size"></a>  allocator_base::max_size
 
-Zwraca liczbę elementów typu `Type` który może zostać przydzielony przez obiekt klasy alokatora przed wolnej pamięci jest używany w.
+Zwraca liczbę elementów typu `Type` , może zostać przydzielone przez obiekt alokatora klas, zanim zostaną użyte wolnej pamięci w.
 
 ```cpp
 size_type max_size() const;
@@ -310,11 +310,11 @@ size_type max_size() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba elementów, które może zostać przydzielony.
+Liczba elementów, które może zostać przydzielone.
 
 ### <a name="remarks"></a>Uwagi
 
-Ta funkcja członkowska jest zaimplementowany dla przydzielania zdefiniowane przez użytkownika przez zwrócenie `(size_t)-1 / sizeof(Type)` Jeśli `0 < (size_t)-1 / sizeof(Type)`, w przeciwnym razie `1`.
+Ta funkcja elementu członkowskiego został zaimplementowany dla alokatora zdefiniowanych przez użytkownika, zwracając `(size_t)-1 / sizeof(Type)` Jeśli `0 < (size_t)-1 / sizeof(Type)`, w przeciwnym razie `1`.
 
 ## <a name="pointer"></a>  allocator_base::Pointer
 
@@ -334,7 +334,7 @@ typedef Type& reference;
 
 ## <a name="size_type"></a>  allocator_base::size_type
 
-Sekwencja typem całkowitym bez znaku, mogącej reprezentować długość każdego obiektu klasy szablonu `allocator_base` można przydzielić.
+Sekwencja nieoznaczoną liczbę całkowitą reprezentujące długość każdego obiekt klasy szablonu `allocator_base` można przydzielić.
 
 ```cpp
 typedef std::size_t size_type;

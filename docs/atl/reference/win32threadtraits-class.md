@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b863808a2367cae8878728403dbf11265b9e819
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c61ba91fe29610f4b313cf31c65f514ef8e46f96
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362019"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883677"
 ---
 # <a name="win32threadtraits-class"></a>Klasa Win32ThreadTraits
-Ta klasa udostępnia funkcję tworzenia dla wątku systemu Windows. Użyj tej klasy, jeśli wątek nie będzie używać funkcji CRT.  
+Ta klasa udostępnia funkcję tworzenia wątku Windows. Jeśli wątek nie użyje funkcji CRT, należy użyć tej klasy.  
   
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,24 +45,24 @@ class Win32ThreadTraits
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[Win32ThreadTraits::CreateThread](#createthread)|(Statyczny) Wywołanie tej funkcji można utworzyć wątku, który nie należy używać funkcji CRT.|  
+|[Win32ThreadTraits::CreateThread](#createthread)|(Statyczny) Wywołaj tę funkcję, aby utworzyć wątek, który nie należy używać funkcji CRT.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wątek cechy są klasy, które zapewniają funkcję tworzenia dla określonego typu wątku. Funkcja tworzenia ma taką samą sygnaturę i semantyki jako systemu Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) funkcji.  
+ Klasy, które zapewniają funkcję tworzenia dla określonego typu wątku z nich są cechami wątku. Funkcja tworzenia ma ten sam podpis i semantyka jako Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) funkcji.  
   
- Wątek cechy są używane przez następujące klasy:  
+ Cechy wątku są używane przez następujące klasy:  
   
 - [CThreadPool](../../atl/reference/cthreadpool-class.md)  
   
 - [CWorkerThread](../../atl/reference/cworkerthread-class.md)  
   
- Jeśli wątek będziesz używać funkcji CRT, użyj [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) zamiast tego.  
+ Jeśli wątek będzie używać funkcji CRT, użyj [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) zamiast tego.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlbase.h  
   
 ##  <a name="createthread"></a>  Win32ThreadTraits::CreateThread  
- Wywołanie tej funkcji można utworzyć wątku, który nie należy używać funkcji CRT.  
+ Wywołaj tę funkcję, aby utworzyć wątek, który nie należy używać funkcji CRT.  
   
 ```
 static HANDLE CreateThread(
@@ -75,31 +75,31 @@ static HANDLE CreateThread(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpsa`  
+ *lpsa*  
  Atrybuty zabezpieczeń dla nowego wątku.  
   
- `dwStackSize`  
+ *dwStackSize*  
  Rozmiar stosu dla nowego wątku.  
   
- `pfnThreadProc`  
- Procedury wątku nowego wątku.  
+ *pfnThreadProc*  
+ Procedura wątku nowego wątku.  
   
- `pvParam`  
- Parametr do przekazania do procedury wątku.  
+ *pvParam*  
+ Parametr, który zostanie przekazany do procedury wątku.  
   
- `dwCreationFlags`  
+ *dwCreationFlags*  
  Tworzenie flagi (0 lub CREATE_SUSPENDED).  
   
- `pdwThreadId`  
- [out] Adres zmiennej DWORD odbierająca, w przypadku powodzenia, identyfikator wątku nowo utworzony wątku.  
+ *pdwThreadId*  
+ [out] Adres zmiennej typu DWORD, że w przypadku powodzenia odbiera identyfikator wątku dla nowo utworzonego wątku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca dojście do nowo utworzonej wątku lub wartość NULL w przypadku awarii. Wywołanie [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) do pobrania rozszerzone informacje o błędzie.  
+ Zwraca uchwyt do nowo utworzonego wątku lub wartość NULL w przypadku niepowodzenia. Wywołaj [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) Aby uzyskać rozszerzone informacje o błędzie.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) Aby uzyskać więcej informacji o parametrach tej funkcji.  
+ Zobacz [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) więcej informacji na temat parametrów dotyczących wyłącznie tej funkcji.  
   
- Ta funkcja wymaga `CreateThread` można utworzyć wątku.  
+ Ta funkcja wywołuje `CreateThread` można utworzyć wątku.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

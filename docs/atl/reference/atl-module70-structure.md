@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a374ee01387c576a5d1a727857badc7ef7139ad
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 9666d73eec770ff8231e5730e01520b0bee68012
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255469"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886222"
 ---
 # <a name="atlmodule70-structure"></a>Struktura _ATL_MODULE70
-Zawiera dane używane przez co moduł ATL.  
+Zawiera dane używane przez każdy moduł ATL.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,19 +42,19 @@ struct _ATL_MODULE70 {
   
 ## <a name="members"></a>Elementy członkowskie  
  `cbSize`  
- Rozmiar struktury, używane do przechowywania wersji.  
+ Rozmiar struktury, używane do obsługi wersji.  
   
  `m_nLockCnt`  
- Liczba odwołanie ustalenie, jak długo modułu powinny pozostać aktywne.  
+ Aby określić, jak długo moduł powinien pozostaną aktywne liczbę odwołań.  
   
- **m_pTermFuncs**  
- Funkcje ścieżek, które zostały zarejestrowane ma być wywoływana podczas zamykania ATL.  
+ `m_pTermFuncs`  
+ Funkcje ścieżki, które zostały zarejestrowane wywoływana, gdy zamyka ATL.  
   
- **m_csStaticDataInitAndTypeInfo**  
+ `m_csStaticDataInitAndTypeInfo`  
  Używane do koordynowania dostępu do danych wewnętrznych w sytuacjach wielowątkowych.  
   
 ## <a name="remarks"></a>Uwagi  
- [_ATL_MODULE](atl-typedefs.md#_atl_module) jest zdefiniowany jako element typedef z `_ATL_MODULE70`.  
+ [_ATL_MODULE](atl-typedefs.md#_atl_module) jest zdefiniowany jako element typedef dla `_ATL_MODULE70`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlbase.h  

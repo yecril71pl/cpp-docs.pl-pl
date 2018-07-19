@@ -20,25 +20,25 @@ helpviewer_keywords:
 - std::operator&lt; (set)
 - std::operator&lt;= (set)
 - std::operator== (set)
-ms.openlocfilehash: a7ec98b2c6fc4de1a85b0f942dd109dfe94839f1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: adc817c92bfaa79422dacafd17e4b1706e5a1af8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861769"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965646"
 ---
-# <a name="ltsetgt-operators"></a>&lt;Ustaw&gt; operatory
+# <a name="ltsetgt-operators"></a>&lt;Ustaw&gt; operatorów
 
 ||||
 |-|-|-|
-|[Operator! = (set)](#op_neq)|[operator&gt; (wartość)](#op_gt)|[operator&gt;= (set)](#eq)|
-|[operator&lt; (wartość)](#op_lt)|[operator&lt;= (set)](#eq)|[Operator == (set)](#op_eq_eq)|
+|[Operator! = (set)](#op_neq)|[operator&gt; (ustawiona)](#op_gt)|[operator&gt;= (set)](#eq)|
+|[operator&lt; (ustawiona)](#op_lt)|[operator&lt;= (set)](#eq)|[Operator == (set)](#op_eq_eq)|
 |[Operator! = (multiset)](#op_neq_multiset)|[operator&gt; (multiset)](#op_gt_multiset)|[operator&gt;= (multiset)](#op_gt_eq_multiset)|
 |[operator&lt; (multiset)](#op_lt_multiset)|[operator&lt;= (multiset)](#op_lt_eq_multiset)|[Operator == (multiset)](#op_eq_eq_multiset)|
 
 ## <a name="op_neq"></a>  Operator! = (set)
 
-Testy, jeśli obiekt zestawu po lewej stronie operatora nie jest taki sam jak obiekt zestawu po prawej stronie.
+Sprawdza, czy obiekt zestawu po lewej stronie operatora nie jest równy obiektowi zestaw po prawej stronie.
 
 ```cpp
 bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
@@ -46,9 +46,9 @@ bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu **ustawić**.
+*po lewej stronie* obiektu typu `set`.
 
-`right` Obiekt typu **ustawić**.
+*prawy* obiektu typu `set`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -56,7 +56,7 @@ bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie obiektów zbioru opiera się na parowania porównanie ich elementów. Dwa zestawy są takie same, jeśli mają one taką samą liczbę elementów i ich odpowiednich elementy mają takie same wartości. W przeciwnym razie ich nie są równe.
+Porównanie obiektów zbioru opiera się na parowania porównanie ich elementów. Dwa zestawy są równe, jeśli mają taką samą liczbę elementów i ich odpowiednie elementy mają te same wartości. W przeciwnym razie są nierówne.
 
 ### <a name="example"></a>Przykład
 
@@ -95,9 +95,9 @@ The sets s1 and s3 are equal.
 *\
 ```
 
-## <a name="op_lt"></a>  operator&lt; (wartość)
+## <a name="op_lt"></a>  operator&lt; (ustawiona)
 
-Testy, jeśli obiekt zestawu po lewej stronie operatora jest mniejsza niż obiektu zestawu po prawej stronie.
+Sprawdza, czy obiekt zestawu, po lewej stronie operatora jest mniejszy niż obiekt zestawu po prawej stronie.
 
 ```cpp
 bool operator<(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
@@ -105,17 +105,17 @@ bool operator<(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu **ustawić**.
+*po lewej stronie* obiektu typu `set`.
 
-`right` Obiekt typu **ustawić**.
+*prawy* obiektu typu `set`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli zestaw po lewej stronie operatora jest ściśle mniejsza niż zestaw po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true,** Jeśli zestaw po lewej stronie operatora jest mniejsza niż zestaw po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie obiektów zbioru opiera się na parowania porównanie ich elementów. Less — niż relacji między dwoma obiektami jest oparta na porównanie pierwszego pary nierówne elementów.
+Porównanie obiektów zbioru opiera się na parowania porównania ich elementów. Mniej-niż relacji między dwoma obiektami opiera się na porównanie pierwszy pary nierówne elementów.
 
 ### <a name="example"></a>Przykład
 
@@ -156,7 +156,7 @@ The set s1 is not less than the set s3.
 
 ## <a name="op_lt_eq"></a>  operator&lt;= (set)
 
-Testy, jeśli zestaw obiektów po lewej stronie operatora jest mniejsza niż lub równe obiektu zestawu po prawej stronie.
+Sprawdza, czy zestaw obiektów po lewej stronie operatora jest mniejszy niż lub równy obiektowi zestaw po prawej stronie.
 
 ```cpp
 bool operator!<=(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
@@ -164,17 +164,17 @@ bool operator!<=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu **ustawić**.
+*po lewej stronie* obiektu typu `set`.
 
-`right` Obiekt typu **ustawić**.
+*prawy* obiektu typu `set`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli zestaw po lewej stronie operatora jest mniejsza niż lub równa zestaw po prawej stronie operatora, w przeciwnym **false**.
+**wartość true,** Jeśli zestaw po lewej stronie operatora jest mniejszy niż lub równe do zestawu po prawej stronie operatora; w przeciwnym **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie obiektów zbioru opiera się na parowania porównanie ich elementów. Mniejsze niż lub równe do relacji między dwoma obiektami jest oparta na porównanie pierwszego pary nierówne elementów.
+Porównanie obiektów zbioru opiera się na parowania porównania ich elementów. Mniejszą lub równą do relacji między dwoma obiektami opiera się na porównaniu pierwszy pary nierówne elementów.
 
 ### <a name="example"></a>Przykład
 
@@ -222,7 +222,7 @@ Set s1 is less than or equal to the set s4.
 
 ## <a name="op_eq_eq"></a>  Operator == (set)
 
-Testy, jeśli obiekt zestawu po lewej stronie operatora jest taki sam jak obiekt zestawu po prawej stronie.
+Sprawdza, czy obiekt zestawu po lewej stronie operatora jest równy obiektowi zestaw po prawej stronie.
 
 ```cpp
 bool operator!==(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
@@ -230,17 +230,17 @@ bool operator!==(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu **ustawić**.
+*po lewej stronie* obiektu typu `set`.
 
-`right` Obiekt typu **ustawić**.
+*prawy* obiektu typu `set`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli zestaw po lewej stronie operatora jest taki sam zestaw po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true,** Jeśli zestaw po lewej stronie operatora jest równy zestaw po prawej stronie operatora, a w przeciwnym **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie obiektów zbioru opiera się na parowania porównanie ich elementów. Dwa zestawy są takie same, jeśli mają one taką samą liczbę elementów i ich odpowiednich elementy mają takie same wartości. W przeciwnym razie ich nie są równe.
+Porównanie obiektów zbioru opiera się na parowania porównania ich elementów. Dwa zestawy są równe, jeśli mają taką samą liczbę elementów i ich odpowiednie elementy mają te same wartości. W przeciwnym razie są nierówne.
 
 ### <a name="example"></a>Przykład
 
@@ -279,9 +279,9 @@ The sets s1 and s3 are equal.
 *\
 ```
 
-## <a name="op_gt"></a>  operator&gt; (wartość)
+## <a name="op_gt"></a>  operator&gt; (ustawiona)
 
-Testy, jeśli obiekt zestawu po lewej stronie operatora jest większy niż obiekt zestawu po prawej stronie.
+Sprawdza, czy obiekt zestawu po lewej stronie operatora jest większy niż obiekt zestawu po prawej stronie.
 
 ```cpp
 bool operator>(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
@@ -289,17 +289,17 @@ bool operator>(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu **ustawić**.
+*po lewej stronie* obiektu typu `set`.
 
-`right` Obiekt typu **ustawić**.
+*prawy* obiektu typu `set`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli zestaw po lewej stronie operatora jest większa niż zestaw po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true,** Jeśli zestaw po lewej stronie operatora jest większy niż zestaw po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie obiektów zbioru opiera się na parowania porównanie ich elementów. Większa-niż relacji między dwoma obiektami jest oparta na porównanie pierwszego pary nierówne elementów.
+Porównanie obiektów zbioru opiera się na parowania porównania ich elementów. Większą-niż relacji między dwoma obiektami opiera się na porównanie pierwszy pary nierówne elementów.
 
 ### <a name="example"></a>Przykład
 
@@ -340,7 +340,7 @@ The set s1 is greater than the set s3.
 
 ## <a name="op_gt_eq"></a>  operator&gt;= (set)
 
-Testy, jeśli obiekt zestawu po lewej stronie operatora jest większa niż lub równa obiektu zestawu po prawej stronie.
+Sprawdza, czy obiekt zestawu po lewej stronie operatora jest większy lub równy obiektowi zestaw po prawej stronie.
 
 ```cpp
 bool operator!>=(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
@@ -348,17 +348,17 @@ bool operator!>=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu **ustawić**.
+*po lewej stronie* obiektu typu `set`.
 
-`right` Obiekt typu **ustawić**.
+*prawy* obiektu typu `set`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli zestaw po lewej stronie operatora jest większa niż lub równa zestaw po prawej stronie listy, w przeciwnym **false**.
+**wartość true,** Jeśli zestaw po lewej stronie operatora jest większy niż lub równe do zestawu po prawej stronie listy; w przeciwnym **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie obiektów zbioru opiera się na parowania porównanie ich elementów. Większa niż lub równa relacji między dwoma obiektami opiera się na porównanie pierwszego pary nierówne elementów.
+Porównanie obiektów zbioru opiera się na parowania porównania ich elementów. Większa lub równa relacji między dwoma obiektami opiera się na porównaniu pierwszy pary nierówne elementów.
 
 ### <a name="example"></a>Przykład
 
@@ -406,7 +406,7 @@ Set s1 is greater than or equal to set s4.
 
 ## <a name="op_neq_multiset"></a>  Operator! = (multiset)
 
-Testy, jeśli obiekt multiset — po lewej stronie operatora nie jest taki sam jak obiekt multiset — po prawej stronie.
+Sprawdza, czy obiekt multiset — po lewej stronie operatora nie jest równy obiektowi multiset — po prawej stronie.
 
 ```cpp
 bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
@@ -414,9 +414,9 @@ bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <K
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu `multiset`.
+*po lewej stronie* obiektu typu `multiset`.
 
-`right` Obiekt typu `multiset`.
+*prawy* obiektu typu `multiset`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -424,7 +424,7 @@ bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <K
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie multiset — obiekty opiera się na parowania porównanie ich elementów. Dwa zestawy lub multisets są takie same, jeśli mają one taką samą liczbę elementów i ich odpowiednich elementy mają takie same wartości. W przeciwnym razie ich nie są równe.
+Porównanie multiset — obiekty opiera się na parowania porównanie ich elementów. Dwa zestawy lub multisets są takie same, jeśli mają taką samą liczbę elementów i ich odpowiednie elementy mają te same wartości. W przeciwnym razie są nierówne.
 
 ### <a name="example"></a>Przykład
 
@@ -465,7 +465,7 @@ The multisets s1 and s3 are equal.
 
 ## <a name="op_lt_multiset"></a>  operator&lt; (multiset)
 
-Testy, jeśli obiekt multiset — po lewej stronie operatora jest mniejsza niż obiekt multiset — po prawej stronie.
+Sprawdza, czy multiset — obiekt po lewej stronie operatora jest mniejszy niż obiekt multiset — po prawej stronie.
 
 ```cpp
 bool operator<(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
@@ -473,17 +473,17 @@ bool operator<(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu `multiset`.
+*po lewej stronie* obiektu typu `multiset`.
 
-`right` Obiekt typu `multiset`.
+*prawy* obiektu typu `multiset`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli multiset po lewej stronie operatora jest ściśle mniejsza niż multiset po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true,** Jeśli multiset po lewej stronie operatora jest mniejsza niż multiset po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie multiset — obiekty opiera się na parowania porównanie ich elementów. Less — niż relacji między dwoma obiektami jest oparta na porównanie pierwszego pary nierówne elementów.
+Porównanie multiset — obiekty opiera się na parowania porównania ich elementów. Mniej-niż relacji między dwoma obiektami opiera się na porównanie pierwszy pary nierówne elementów.
 
 ### <a name="example"></a>Przykład
 
@@ -528,7 +528,7 @@ The multiset s1 is not less than the multiset s3.
 
 ## <a name="op_lt_eq_multiset"></a>  operator&lt;= (multiset)
 
-Testy, jeśli obiekt multiset po lewej stronie operatora jest mniejsza lub równa zestawów wielokrotnych obiektu po prawej stronie.
+Sprawdza, czy zestaw wielokrotny obiektu po lewej stronie operatora jest mniejszy niż lub równy obiektowi multiset — po prawej stronie.
 
 ```cpp
 bool operator!<=(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
@@ -536,17 +536,17 @@ bool operator!<=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu `multiset`.
+*po lewej stronie* obiektu typu `multiset`.
 
-`right` Obiekt typu `multiset`.
+*prawy* obiektu typu `multiset`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli multiset po lewej stronie operatora jest mniejsza niż lub równa multiset po prawej stronie operatora, w przeciwnym **false**.
+**wartość true,** Jeśli multiset po lewej stronie operatora jest mniejszy niż lub równa multiset po prawej stronie operatora; w przeciwnym **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie multiset — obiekty opiera się na parowania porównanie ich elementów. Mniejsze niż lub równe do relacji między dwoma obiektami jest oparta na porównanie pierwszego pary nierówne elementów.
+Porównanie multiset — obiekty opiera się na parowania porównania ich elementów. Mniejszą lub równą do relacji między dwoma obiektami opiera się na porównaniu pierwszy pary nierówne elementów.
 
 ### <a name="example"></a>Przykład
 
@@ -600,7 +600,7 @@ The multiset s1 is less than or equal to the multiset s4.
 
 ## <a name="op_eq_eq_multiset"></a>  Operator == (multiset)
 
-Testy, jeśli obiekt multiset — po lewej stronie operatora jest taki sam jak obiekt multiset — po prawej stronie.
+Sprawdza, czy multiset — obiekt po lewej stronie operatora jest równy obiektowi multiset — po prawej stronie.
 
 ```cpp
 bool operator!==(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
@@ -608,17 +608,17 @@ bool operator!==(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu `multiset`.
+*po lewej stronie* obiektu typu `multiset`.
 
-`right` Obiekt typu `multiset`.
+*prawy* obiektu typu `multiset`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli multiset po lewej stronie operatora jest równa multiset po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true,** Jeśli multiset po lewej stronie operatora jest równy multiset po prawej stronie operatora; w przeciwnym **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie multiset — obiekty opiera się na parowania porównanie ich elementów. Dwa zestawy lub multisets są takie same, jeśli mają one taką samą liczbę elementów i ich odpowiednich elementy mają takie same wartości. W przeciwnym razie ich nie są równe.
+Porównanie multiset — obiekty opiera się na parowania porównania ich elementów. Dwa zestawy lub multisets są takie same, jeśli mają taką samą liczbę elementów i ich odpowiednie elementy mają te same wartości. W przeciwnym razie są nierówne.
 
 ### <a name="example"></a>Przykład
 
@@ -659,7 +659,7 @@ The multisets s1 and s3 are equal.
 
 ## <a name="op_gt_multiset"></a>  operator&gt; (multiset)
 
-Testy, jeśli obiekt multiset — po lewej stronie operatora jest większy niż obiekt multiset — po prawej stronie.
+Sprawdza, czy multiset — obiekt po lewej stronie operatora jest większy niż obiekt multiset — po prawej stronie.
 
 ```cpp
 bool operator>(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
@@ -667,17 +667,17 @@ bool operator>(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu `multiset`.
+*po lewej stronie* obiektu typu `multiset`.
 
-`right` Obiekt typu `multiset`.
+*prawy* obiektu typu `multiset`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli multiset po lewej stronie operatora jest większe wielokrotny po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true,** Jeśli multiset po lewej stronie operatora jest większy niż multiset po prawej stronie operatora; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie multiset — obiekty opiera się na parowania porównanie ich elementów. Większa-niż relacji między dwoma obiektami jest oparta na porównanie pierwszego pary nierówne elementów.
+Porównanie multiset — obiekty opiera się na parowania porównania ich elementów. Większą-niż relacji między dwoma obiektami opiera się na porównanie pierwszy pary nierówne elementów.
 
 ### <a name="example"></a>Przykład
 
@@ -722,7 +722,7 @@ The multiset s1 is greater than the multiset s3.
 
 ## <a name="op_gt_eq_multiset"></a>  operator&gt;= (multiset)
 
-Testy, jeśli obiekt multiset — po lewej stronie operatora jest większa niż lub równa zestawów wielokrotnych obiektu po prawej stronie.
+Sprawdza, czy multiset — obiekt po lewej stronie operatora jest większy lub równy obiektowi multiset — po prawej stronie.
 
 ```cpp
 bool operator!>=(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
@@ -730,17 +730,17 @@ bool operator!>=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu `multiset`.
+*po lewej stronie* obiektu typu `multiset`.
 
-`right` Obiekt typu `multiset`.
+*prawy* obiektu typu `multiset`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli multiset po lewej stronie operatora jest większa niż lub równa multiset po prawej stronie listy; w przeciwnym razie **false**.
+**wartość true,** Jeśli multiset po lewej stronie operatora jest większy niż lub równa multiset po prawej stronie listy; w przeciwnym **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie multiset — obiekty opiera się na parowania porównanie ich elementów. Większa niż lub równa relacji między dwoma obiektami opiera się na porównanie pierwszego pary nierówne elementów.
+Porównanie multiset — obiekty opiera się na parowania porównania ich elementów. Większa lub równa relacji między dwoma obiektami opiera się na porównaniu pierwszy pary nierówne elementów.
 
 ### <a name="example"></a>Przykład
 

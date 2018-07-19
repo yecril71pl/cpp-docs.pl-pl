@@ -16,29 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba50965199128726f325fc0dcf9260c6415bf0d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1e81484f7b40417320078700332b512cbc81d7e6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947756"
 ---
 # <a name="comptrtgetinterfaceptr"></a>_com_ptr_t::GetInterfacePtr
 **Microsoft Specific**  
   
- Zwraca wskaźnik hermetyzowany interfejsu.  
+ Zwraca wskaźnik zhermetyzowany interfejs.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
   
-      Interface* GetInterfacePtr( ) const throw( );   
+Interface* GetInterfacePtr( ) const throw( );   
 Interface*& GetInterfacePtr() throw();  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Zwraca wskaźnik zhermetyzowany interfejs, który może być **NULL**.  
+ Zwraca wskaźnik zhermetyzowany interfejs, który może mieć wartości NULL.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [_com_ptr_t, klasa](../cpp/com-ptr-t-class.md)

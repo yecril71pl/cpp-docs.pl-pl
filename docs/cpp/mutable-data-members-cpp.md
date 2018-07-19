@@ -1,5 +1,5 @@
 ---
-title: Modyfikowalne elementy członkowskie danych (C++) | Dokumentacja firmy Microsoft
+title: Modyfikowalne składowe danych (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7dd639cbf1ef076dee6e447f317533bf12dae10
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 65d2fc42021a01a1260b57f9516e53c439c8e604
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947958"
 ---
 # <a name="mutable-data-members-c"></a>Modyfikowalne elementy członkowskie danych (C++)
-To słowo kluczowe można stosować do elementów członkowskich danych niestatyczna i z systemem innym niż stała klasy. Jeśli element członkowski danych jest zadeklarowany jako `mutable`, wówczas jest można przypisać wartości do tego elementu członkowskiego danych z **const** funkcji członkowskiej.  
+This — słowo kluczowe dotyczą wyłącznie elementy członkowskie danych niestatyczna i wartości innej niż stała klasy. Zadeklarowana składowa danych **mutable**, a następnie jest legalne, aby przypisać wartość do tego elementu członkowskiego danych, z **const** funkcja elementu członkowskiego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -33,9 +34,9 @@ mutable member-variable-declaration;
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Na przykład następujący kod zostanie skompilowany bez błędów, ponieważ `m_accessCount` został zadeklarowany jako `mutable`i może być modyfikowany przez `GetFlag` mimo że `GetFlag` jest funkcją członkowską const.  
+ Na przykład, poniższy kod zostanie skompilowana bez błędów, ponieważ `m_accessCount` został zadeklarowany jako **mutable**i może być modyfikowana przez `GetFlag` mimo że `GetFlag` jest funkcją składową const.  
   
-```  
+```cpp 
 // mutable.cpp  
 class X  
 {  

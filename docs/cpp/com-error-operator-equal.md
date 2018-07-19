@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 744a4b344a336ec502e184e9be9ffb236c863708
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b358bc38ad055ed5e485dea566238de06242e7f
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410635"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942032"
 ---
 # <a name="comerroroperator-"></a>_com_error::operator =
 **Microsoft Specific**  
   
- Przypisuje istniejące `_com_error` obiektu do innego.  
+ Przypisuje istniejące `_com_error` obiektu do drugiego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,10 +40,10 @@ ms.locfileid: "32410635"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `that`  
- A `_com_error` obiektu.  
+ *który*  
+ Element `_com_error` obiektu.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [_com_error, klasa](../cpp/com-error-class.md)

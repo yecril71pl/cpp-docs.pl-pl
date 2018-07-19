@@ -21,24 +21,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a26e8d602010ce637114464a844d2f95e635c9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7473bed5e4bf973dcea4d186e9b5b3367fb03ff1
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363061"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880362"
 ---
 # <a name="registry-data-exchange-macros"></a>Makra wymiany danych rejestru
-Te makra operacji wymiana danych z rejestru.  
+Te makra wykonywanie operacji wymiany danych rejestru.  
   
 |||  
 |-|-|  
 |[BEGIN_RDX_MAP](#begin_rdx_map)|Oznacza początek mapy wymiany danych rejestru.|  
 |[END_RDX_MAP](#end_rdx_map)|Oznacza koniec mapy wymiany danych rejestru.|  
-|[RDX_BINARY](#rdx_binary)|Kojarzy określony wpis rejestru z określonego elementu członkowskiego zmiennej typu BYTE.|  
-|[RDX_CSTRING_TEXT](#rdx_cstring_text)|Kojarzy określony wpis rejestru z określonego elementu członkowskiego zmiennej typu obiektu CString.|  
-|[RDX_DWORD](#rdx_dword)|Kojarzy określony wpis rejestru z określonego elementu członkowskiego zmiennej typu DWORD.|  
-|[RDX_TEXT](#rdx_text)|Kojarzy określony wpis rejestru z określonego elementu członkowskiego zmiennej typu tchar —.|  
+|[RDX_BINARY](#rdx_binary)|Kojarzy określony wpis rejestru przy użyciu zmiennej określonego elementu członkowskiego typu BYTE.|  
+|[RDX_CSTRING_TEXT](#rdx_cstring_text)|Kojarzy określony wpis rejestru przy użyciu zmiennej określonego elementu członkowskiego typu CString.|  
+|[RDX_DWORD](#rdx_dword)|Kojarzy określony wpis rejestru przy użyciu zmiennej określonego elementu członkowskiego typu DWORD.|  
+|[RDX_TEXT](#rdx_text)|Kojarzy określony wpis rejestru przy użyciu zmiennej określonego elementu członkowskiego typu TCHAR.|  
 
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlplus.h  
@@ -51,16 +51,16 @@ BEGIN_RDX_MAP
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Następujące makra są używane w mapie wymiany danych rejestru do odczytu i zapisu wpisy w rejestrze systemu:  
+ Następujące makra są używane w mapie wymiany danych rejestru, aby odczytywać i zapisywać wpisy w rejestrze systemu:  
   
 |Macro|Opis|  
 |-----------|-----------------|  
-|[RDX_BINARY](#rdx_binary)|Kojarzy określony wpis rejestru z określonego elementu członkowskiego zmiennej typu BYTE.|  
-|[RDX_DWORD](#rdx_dword)|Kojarzy określony wpis rejestru z określonego elementu członkowskiego zmiennej typu DWORD.|  
-|[RDX_CSTRING_TEXT](#rdx_cstring_text)|Kojarzy określony wpis rejestru z określonego elementu członkowskiego zmiennej typu obiektu CString.|  
-|[RDX_TEXT](#rdx_text)|Kojarzy określony wpis rejestru z określonego elementu członkowskiego zmiennej typu tchar —.|  
+|[RDX_BINARY](#rdx_binary)|Kojarzy określony wpis rejestru przy użyciu zmiennej określonego elementu członkowskiego typu BYTE.|  
+|[RDX_DWORD](#rdx_dword)|Kojarzy określony wpis rejestru przy użyciu zmiennej określonego elementu członkowskiego typu DWORD.|  
+|[RDX_CSTRING_TEXT](#rdx_cstring_text)|Kojarzy określony wpis rejestru przy użyciu zmiennej określonego elementu członkowskiego typu CString.|  
+|[RDX_TEXT](#rdx_text)|Kojarzy określony wpis rejestru przy użyciu zmiennej określonego elementu członkowskiego typu TCHAR.|  
   
- Funkcja globalna [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), lub funkcja członkowska o takiej samej nazwie utworzone przez `BEGIN_RDX_MAP` i `END_RDX_MAP` makra, powinna być używana zawsze, gdy kod musi wymiany danych między rejestru systemowego i określone w planie RDX zmienne.  
+ Funkcja globalna [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), lub funkcji składowej o takiej samej nazwie, utworzone przez BEGIN_RDX_MAP i END_RDX_MAP makra, należy używać zawsze wtedy, gdy kod musi wymianę danych między rejestru systemowego i określone w mapowaniu RDX zmienne.  
   
 ##  <a name="end_rdx_map"></a>  END_RDX_MAP  
  Oznacza koniec mapy wymiany danych rejestru.  
@@ -70,7 +70,7 @@ END_RDX_MAP
 ```  
   
 ##  <a name="rdx_binary"></a>  RDX_BINARY  
- Kojarzy określony wpis rejestru z określonego elementu członkowskiego zmiennej typu BYTE.  
+ Kojarzy określony wpis rejestru przy użyciu zmiennej określonego elementu członkowskiego typu BYTE.  
   
 ```
 RDX_BINARY(
@@ -82,26 +82,26 @@ RDX_BINARY(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rootkey`  
+ *KLUCZ_GŁÓWNY*  
  Głównego klucza rejestru.  
   
- `subkey`  
+ *podklucza*  
  Podklucz rejestru.  
   
- `valuename`  
+ *VALUENAME*  
  Klucz rejestru.  
   
- `member`  
- Zmiennej członkowskiej do skojarzenia z określony wpis rejestru.  
+ *Element członkowski*  
+ Zmiennej składowej do skojarzenia z określony wpis rejestru.  
   
- `member_size`  
- Rozmiar w bajtach zmiennej członka.  
+ *member_size*  
+ Rozmiar w bajtach zmiennej składowej.  
   
 ### <a name="remarks"></a>Uwagi  
- To makro jest używane w połączeniu z `BEGIN_RDX_MAP` i `END_RDX_MAP` makra do skojarzenia z wpisu rejestru danego zmiennej członkowskiej. Funkcja globalna [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), lub funkcja członkowska o takiej samej nazwie utworzone przez `BEGIN_RDX_MAP` i `END_RDX_MAP` makra, powinny być używane do wykonywania wymiany danych między rejestru systemowego i element członkowski zmienne w mapie RDX.  
+ To makro jest używane w połączeniu z BEGIN_RDX_MAP i END_RDX_MAP makra, aby skojarzyć zmienną składową z wpisu rejestru danego. Funkcja globalna [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), lub funkcji składowej o takiej samej nazwie, utworzone przez BEGIN_RDX_MAP i END_RDX_MAP makra, powinny być używane do wykonania wymiany danych między rejestru systemowego i zmienne Członkowskie na mapie RDX.  
   
 ##  <a name="rdx_cstring_text"></a>  RDX_CSTRING_TEXT  
- Kojarzy określony wpis rejestru z określonego elementu członkowskiego zmiennej typu obiektu CString.  
+ Kojarzy określony wpis rejestru przy użyciu zmiennej określonego elementu członkowskiego typu CString.  
   
 ```
 RDX_CSTRING_TEXT(
@@ -113,26 +113,26 @@ RDX_CSTRING_TEXT(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rootkey`  
+ *KLUCZ_GŁÓWNY*  
  Głównego klucza rejestru.  
   
- `subkey`  
+ *podklucza*  
  Podklucz rejestru.  
   
- `valuename`  
+ *VALUENAME*  
  Klucz rejestru.  
   
- `member`  
- Zmiennej członkowskiej do skojarzenia z określony wpis rejestru.  
+ *Element członkowski*  
+ Zmiennej składowej do skojarzenia z określony wpis rejestru.  
   
- `member_size`  
- Rozmiar w bajtach zmiennej członka.  
+ *member_size*  
+ Rozmiar w bajtach zmiennej składowej.  
   
 ### <a name="remarks"></a>Uwagi  
- To makro jest używane w połączeniu z `BEGIN_RDX_MAP` i `END_RDX_MAP` makra do skojarzenia z wpisu rejestru danego zmiennej członkowskiej. Funkcja globalna [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), lub funkcja członkowska o takiej samej nazwie utworzone przez `BEGIN_RDX_MAP` i `END_RDX_MAP` makra, powinny być używane do wykonywania wymiany danych między rejestru systemowego i element członkowski zmienne w mapie RDX.  
+ To makro jest używane w połączeniu z BEGIN_RDX_MAP i END_RDX_MAP makra, aby skojarzyć zmienną składową z wpisu rejestru danego. Funkcja globalna [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), lub funkcji składowej o takiej samej nazwie, utworzone przez BEGIN_RDX_MAP i END_RDX_MAP makra, powinny być używane do wykonania wymiany danych między rejestru systemowego i zmienne Członkowskie na mapie RDX.  
   
 ##  <a name="rdx_dword"></a>  RDX_DWORD  
- Kojarzy określony wpis rejestru z określonego elementu członkowskiego zmiennej typu DWORD.  
+ Kojarzy określony wpis rejestru przy użyciu zmiennej określonego elementu członkowskiego typu DWORD.  
   
 ```
 RDX_DWORD(
@@ -144,26 +144,26 @@ RDX_DWORD(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rootkey`  
+ *KLUCZ_GŁÓWNY*  
  Głównego klucza rejestru.  
   
- `subkey`  
+ *podklucza*  
  Podklucz rejestru.  
   
- `valuename`  
+ *VALUENAME*  
  Klucz rejestru.  
   
- `member`  
- Zmiennej członkowskiej do skojarzenia z określony wpis rejestru.  
+ *Element członkowski*  
+ Zmiennej składowej do skojarzenia z określony wpis rejestru.  
   
- `member_size`  
- Rozmiar w bajtach zmiennej członka.  
+ *member_size*  
+ Rozmiar w bajtach zmiennej składowej.  
   
 ### <a name="remarks"></a>Uwagi  
- To makro jest używane w połączeniu z `BEGIN_RDX_MAP` i `END_RDX_MAP` makra do skojarzenia z wpisu rejestru danego zmiennej członkowskiej. Funkcja globalna [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), lub funkcja członkowska o takiej samej nazwie utworzone przez `BEGIN_RDX_MAP` i `END_RDX_MAP` makra, powinny być używane do wykonywania wymiany danych między rejestru systemowego i element członkowski zmienne w mapie RDX.  
+ To makro jest używane w połączeniu z BEGIN_RDX_MAP i END_RDX_MAP makra, aby skojarzyć zmienną składową z wpisu rejestru danego. Funkcja globalna [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), lub funkcji składowej o takiej samej nazwie, utworzone przez BEGIN_RDX_MAP i END_RDX_MAP makra, powinny być używane do wykonania wymiany danych między rejestru systemowego i zmienne Członkowskie na mapie RDX.  
   
 ##  <a name="rdx_text"></a>  RDX_TEXT  
- Kojarzy określony wpis rejestru z określonego elementu członkowskiego zmiennej typu tchar —.  
+ Kojarzy określony wpis rejestru przy użyciu zmiennej określonego elementu członkowskiego typu TCHAR.  
   
 ```
 RDX_TEXT(
@@ -175,23 +175,23 @@ RDX_TEXT(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rootkey`  
+ *KLUCZ_GŁÓWNY*  
  Głównego klucza rejestru.  
   
- `subkey`  
+ *podklucza*  
  Podklucz rejestru.  
   
- `valuename`  
+ *VALUENAME*  
  Klucz rejestru.  
   
- `member`  
- Zmiennej członkowskiej do skojarzenia z określony wpis rejestru.  
+ *Element członkowski*  
+ Zmiennej składowej do skojarzenia z określony wpis rejestru.  
   
- `member_size`  
- Rozmiar w bajtach zmiennej członka.  
+ *member_size*  
+ Rozmiar w bajtach zmiennej składowej.  
   
 ### <a name="remarks"></a>Uwagi  
- To makro jest używane w połączeniu z `BEGIN_RDX_MAP` i `END_RDX_MAP` makra do skojarzenia z wpisu rejestru danego zmiennej członkowskiej. Funkcja globalna [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), lub funkcja członkowska o takiej samej nazwie utworzone przez `BEGIN_RDX_MAP` i `END_RDX_MAP` makra, powinny być używane do wykonywania wymiany danych między rejestru systemowego i element członkowski zmienne w mapie RDX.  
+ To makro jest używane w połączeniu z BEGIN_RDX_MAP i END_RDX_MAP makra, aby skojarzyć zmienną składową z wpisu rejestru danego. Funkcja globalna [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange), lub funkcji składowej o takiej samej nazwie, utworzone przez BEGIN_RDX_MAP i END_RDX_MAP makra, powinny być używane do wykonania wymiany danych między rejestru systemowego i zmienne Członkowskie na mapie RDX.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Makra](../../atl/reference/atl-macros.md)   

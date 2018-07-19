@@ -1,5 +1,5 @@
 ---
-title: Tworzenie indeksów dolnych | Dokumentacja firmy Microsoft
+title: Subscripting | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,19 +19,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65798eb9983273cf3b8b2b136be9a9acc082cb4f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a55aca3abe95d189c40c7571db39fc48edf5f4cc
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947864"
 ---
 # <a name="subscripting"></a>Tworzenie indeksów dolnych
-Operator indeksu dolnego (**[**), takiej jak operator wywołania funkcji jest uznawany za operatora binarnego. Operator indeksu dolnego musi być funkcja niestatycznego elementu członkowskiego, który pobiera jeden argument. Ten argument może być dowolnego typu i wyznacza indeks dolny tablicy żądany.  
+Operator indeksu dolnego (**[**), takiej jak operator wywołania funkcji jest uznawany za operatora binarnego. Operator indeksu dolnego, musi być funkcją niestatycznej składowej, która przyjmuje jeden argument. Ten argument może być dowolnego typu i wyznacza indeks dolny tablicy żądaną.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, jak utworzyć typu `int` implementującej sprawdzanie granic:  
+ Poniższy przykład przedstawia sposób tworzenia wektorów typu **int** implementującej sprawdzanie granic:  
   
-```  
+```cpp 
 // subscripting.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -97,9 +98,9 @@ Element: [10] = 10
 ```  
   
 ## <a name="comments"></a>Komentarze  
- Gdy `i` osiągnie 10 w poprzednim program `operator[]` wykrywa, że zdalne dolnego jest używana i generuje komunikat o błędzie.  
+ Gdy `i` osiągnie 10 poprzedni program `operator[]` wykryje, że liczbach indeksu jest używana i wysyła komunikat o błędzie.  
   
- Należy pamiętać, że funkcja `operator[]` zwraca typ referencyjny. Powoduje to być wartością l-value, co umożliwia użycie jako wyrażeń po obu stronach operatory przypisania.  
+ Należy pamiętać, że funkcja `operator[]` zwraca typ odwołania. To powoduje, że do l wartością, co pozwala na korzystanie z indeksem wyrażeń po obu stronach operatory przypisania.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przeładowanie operatora](../cpp/operator-overloading.md)

@@ -1,5 +1,5 @@
 ---
-title: Klasa program CMFCVisualManagerOffice2003 | Dokumentacja firmy Microsoft
+title: Klasa CMFCVisualManagerOffice2003 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -102,15 +102,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb3757aaced6fd9fe27c91da8f4382a133801fb2
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: dbfa31831fd2db73fb1154c20cd9d246efad4917
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039365"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854138"
 ---
-# <a name="cmfcvisualmanageroffice2003-class"></a>Program CMFCVisualManagerOffice2003 — klasa
-`CMFCVisualManagerOffice2003` daje aplikacji wygląd pakietu Microsoft Office 2003.  
+# <a name="cmfcvisualmanageroffice2003-class"></a>Klasa CMFCVisualManagerOffice2003
+`CMFCVisualManagerOffice2003` Nadaje aplikacji wygląd programu Microsoft Office 2003.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -124,97 +124,97 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CMFCVisualManagerOffice2003::DrawComboBorderWinXP](#drawcomboborderwinxp)|Rysuje obramowanie pola kombi przy użyciu bieżącego motywu systemu Windows XP. (Przesłania [CMFCVisualManager::DrawComboBorderWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawcomboborderwinxp).)|  
-|[CMFCVisualManagerOffice2003::DrawComboDropButtonWinXP](#drawcombodropbuttonwinxp)|Rysuje przycisku rozwijanego pola kombi przy użyciu bieżącego motywu systemu Windows XP. (Przesłania [CMFCVisualManager::DrawComboDropButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawcombodropbuttonwinxp).)|  
+|[CMFCVisualManagerOffice2003::DrawComboBorderWinXP](#drawcomboborderwinxp)|Rysuje obramowanie pola kombi, przy użyciu bieżącego motywu Windows XP. (Przesłania [CMFCVisualManager::DrawComboBorderWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawcomboborderwinxp).)|  
+|[CMFCVisualManagerOffice2003::DrawComboDropButtonWinXP](#drawcombodropbuttonwinxp)|Rysuje przycisku rozwijanego pola kombi, przy użyciu bieżącego motywu Windows XP. (Przesłania [CMFCVisualManager::DrawComboDropButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawcombodropbuttonwinxp).)|  
 |[CMFCVisualManagerOffice2003::DrawCustomizeButton](#drawcustomizebutton)|Rysuje przycisk Dostosuj.|  
-|[CMFCVisualManagerOffice2003::DrawPushButtonWinXP](#drawpushbuttonwinxp)|Rysuje przycisku polecenia przy użyciu bieżącego motywu systemu Windows XP. (Przesłania [CMFCVisualManager::DrawPushButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawpushbuttonwinxp).)|  
+|[CMFCVisualManagerOffice2003::DrawPushButtonWinXP](#drawpushbuttonwinxp)|Rysuje przycisku polecenia przy użyciu bieżącego motywu Windows XP. (Przesłania [CMFCVisualManager::DrawPushButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawpushbuttonwinxp).)|  
 |[CMFCVisualManagerOffice2003::GetBaseThemeColor](#getbasethemecolor)|Pobiera kolor podstawowy motywu.|  
-|[CMFCVisualManagerOffice2003::GetHighlightMenuItemColor](#gethighlightmenuitemcolor)|Pobiera kolor używany dla elementu menu zaznaczony.|  
-|[CMFCVisualManagerOffice2003::GetPropertyGridGroupColor](#getpropertygridgroupcolor)|Struktura wywołuje tę metodę, aby uzyskać listę właściwości kolor tła. (Przesłania `CMFCVisualManagerOfficeXP::GetPropertyGridGroupColor`.)|  
-|[CMFCVisualManagerOffice2003::GetPropertyGridGroupTextColor](#getpropertygridgrouptextcolor)|Struktura wywołuje tę metodę w celu pobrania listy właściwości kolor tekstu. (Przesłania `CMFCVisualManagerOfficeXP::GetPropertyGridGroupTextColor`.)|  
+|[CMFCVisualManagerOffice2003::GetHighlightMenuItemColor](#gethighlightmenuitemcolor)|Pobiera kolor używany dla elementu menu wyróżnione.|  
+|[CMFCVisualManagerOffice2003::GetPropertyGridGroupColor](#getpropertygridgroupcolor)|Struktura wywołuje tę metodę, aby pobrać kolor tła listy właściwości. (Przesłania `CMFCVisualManagerOfficeXP::GetPropertyGridGroupColor`.)|  
+|[CMFCVisualManagerOffice2003::GetPropertyGridGroupTextColor](#getpropertygridgrouptextcolor)|Struktura wywołuje tę metodę, aby pobrać kolor tekstu, listy właściwości. (Przesłania `CMFCVisualManagerOfficeXP::GetPropertyGridGroupTextColor`.)|  
 |[CMFCVisualManagerOffice2003::GetShowAllMenuItemsHeight](#getshowallmenuitemsheight)|Zwraca wysokość wszystkich elementów menu. (Przesłania [CMFCVisualManager::GetShowAllMenuItemsHeight](../../mfc/reference/cmfcvisualmanager-class.md#getshowallmenuitemsheight).)|  
-|[CMFCVisualManagerOffice2003::GetSmartDockingBaseGuideColors](#getsmartdockingbaseguidecolors)|Ustawia kolor tła określonej grupy podstawowej i kolor obramowania. (Przesłania `CMFCVisualManagerOfficeXP::GetSmartDockingBaseGuideColors`.)|  
-|[CMFCVisualManagerOffice2003::GetSmartDockingHighlightToneColor](#getsmartdockinghighlighttonecolor)|Pobiera kolor sygnału wyróżnienia. (Przesłania [CMFCVisualManager::GetSmartDockingHighlightToneColor](../../mfc/reference/cmfcvisualmanager-class.md#getsmartdockinghighlighttonecolor).)|  
-|[CMFCVisualManagerOffice2003::GetTabFrameColors](#gettabframecolors)|Struktura wywołuje tej funkcji, gdy ma pobrać zestaw kolorów rysunku okno karty. (Przesłania [CMFCVisualManager::GetTabFrameColors](../../mfc/reference/cmfcvisualmanager-class.md#gettabframecolors).)|  
-|[CMFCVisualManagerOffice2003::GetToolBarCustomizeButtonMargin](#gettoolbarcustomizebuttonmargin)|Pobiera margines przycisk Dostosuj pasek narzędzi. (Przesłania `CMFCVisualManager::GetToolBarCustomizeButtonMargin`.)|  
+|[CMFCVisualManagerOffice2003::GetSmartDockingBaseGuideColors](#getsmartdockingbaseguidecolors)|Ustawia określona grupa podstawowa kolor tła i koloru obramowania. (Przesłania `CMFCVisualManagerOfficeXP::GetSmartDockingBaseGuideColors`.)|  
+|[CMFCVisualManagerOffice2003::GetSmartDockingHighlightToneColor](#getsmartdockinghighlighttonecolor)|Pobiera tonowe kolor wyróżnienia. (Przesłania [CMFCVisualManager::GetSmartDockingHighlightToneColor](../../mfc/reference/cmfcvisualmanager-class.md#getsmartdockinghighlighttonecolor).)|  
+|[CMFCVisualManagerOffice2003::GetTabFrameColors](#gettabframecolors)|Struktura wywołuje tę funkcję, gdy należy pobrać zestaw kolorów dla okno kartę rysunku. (Przesłania [CMFCVisualManager::GetTabFrameColors](../../mfc/reference/cmfcvisualmanager-class.md#gettabframecolors).)|  
+|[CMFCVisualManagerOffice2003::GetToolBarCustomizeButtonMargin](#gettoolbarcustomizebuttonmargin)|Pobiera na marginesie przycisk Dostosuj pasek narzędzi. (Przesłania `CMFCVisualManager::GetToolBarCustomizeButtonMargin`.)|  
 |[CMFCVisualManagerOffice2003::GetToolbarDisabledColor](#gettoolbardisabledcolor)|Pobiera kolor wyłączonego paska narzędzi. (Przesłania `CMFCVisualManager::GetToolbarDisabledColor`.)|  
-|[CMFCVisualManagerOffice2003::GetToolTipInfo](#gettooltipinfo)|Wywoływane przez platformę, by pobrać informacji o etykietka narzędzia. (Przesłania [CMFCVisualManager::GetToolTipInfo](../../mfc/reference/cmfcvisualmanager-class.md#gettooltipinfo).)|  
-|[CMFCVisualManagerOffice2003::IsDefaultWinXPColorsEnabled](#isdefaultwinxpcolorsenabled)|Wskazuje, czy Menedżer visual używa natywnego kolorów motywu systemu Windows XP.|  
-|[CMFCVisualManagerOffice2003::IsDockingTabHasBorder](#isdockingtabhasborder)|Zwraca czy bieżący Menedżer visual rysuje obramowań okienka zadokowane i kartach. (Przesłania [CMFCVisualManager::IsDockingTabHasBorder](../../mfc/reference/cmfcvisualmanager-class.md#isdockingtabhasborder).)|  
-|[CMFCVisualManagerOffice2003::IsHighlightOneNoteTabs](#ishighlightonenotetabs)|Wskazuje, czy karty OneNote powinien być zaznaczony. (Przesłania `CMFCVisualManager::IsHighlightOneNoteTabs`.)|  
-|[CMFCVisualManagerOffice2003::IsOffsetPressedButton](#isoffsetpressedbutton)|Wywoływane przez platformę, gdy rysunek przycisku paska narzędzi. (Przesłania `CMFCVisualManager::IsOffsetPressedButton`.)|  
-|[CMFCVisualManagerOffice2003::IsStatusBarOfficeXPLook](#isstatusbarofficexplook)|Wskazuje, czy pasek stanu wyglądu pakietu Office XP.|  
-|[CMFCVisualManagerOffice2003::IsToolbarRoundShape](#istoolbarroundshape)|Wskazuje, czy określony narzędzi round kształtu. (Przesłania [CMFCVisualManager::IsToolbarRoundShape](../../mfc/reference/cmfcvisualmanager-class.md#istoolbarroundshape).)|  
-|[CMFCVisualManagerOffice2003::IsUseGlobalTheme](#isuseglobaltheme)|Wskazuje, czy globalne kompozycji systemu Windows XP.|  
-|[CMFCVisualManagerOffice2003::IsWindowsThemingSupported](#iswindowsthemingsupported)|Wskazuje, czy obsługiwane jest motywów systemu Windows. (Przesłania [CMFCVisualManager::IsWindowsThemingSupported](../../mfc/reference/cmfcvisualmanager-class.md#iswindowsthemingsupported).)|  
-|[CMFCVisualManagerOffice2003::OnDrawAutoHideButtonBorder](#ondrawautohidebuttonborder)|Struktura wywołuje tę metodę po go rysuje obramowanie przycisku autoukrywania. (Przesłania [CMFCVisualManager::OnDrawAutoHideButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawautohidebuttonborder).)|  
-|[CMFCVisualManagerOffice2003::OnDrawBarGripper](#ondrawbargripper)|Wywoływane przez platformę, gdy go rysuje uchwytu dla pasek sterowania. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawBarGripper`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawBrowseButton](#ondrawbrowsebutton)|Platformę wywołuje tę metodę, gdy go rysuje przycisku przeglądania kontrolki edycji. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawBrowseButton`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawButtonBorder](#ondrawbuttonborder)|Struktura wywołuje tę metodę, gdy go rysuje obramowanie przycisku paska narzędzi. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawButtonBorder`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawCaptionBarBorder](#ondrawcaptionbarborder)|Struktura wywołuje tę metodę, gdy go rysuje obramowanie [klasy CMFCCaptionBar](../../mfc/reference/cmfccaptionbar-class.md) obiektu. (Przesłania [CMFCVisualManager::OnDrawCaptionBarBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcaptionbarborder).)|  
-|[CMFCVisualManagerOffice2003::OnDrawCheckBoxEx](#ondrawcheckboxex)|Struktura wywołuje tę metodę po go Rysuje pole wyboru. (Przesłania [CMFCVisualManager::OnDrawCheckBoxEx](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcheckboxex).)|  
-|[CMFCVisualManagerOffice2003::OnDrawComboBorder](#ondrawcomboborder)|Struktura wywołuje tę metodę po go rysuje obramowanie wokół [klasy CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawComboBorder`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawComboDropButton](#ondrawcombodropbutton)|Struktura wywołuje tę metodę po go rysuje przycisk Usuń [CMFCToolBarComboBoxButton klasy](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md). (Przesłania `CMFCVisualManagerOfficeXP::OnDrawComboDropButton`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawControlBorder](#ondrawcontrolborder)|Struktura wywołuje tę metodę po go rysuje obramowania formantu. (Przesłania [CMFCVisualManager::OnDrawControlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcontrolborder).)|  
-|[CMFCVisualManagerOffice2003::OnDrawExpandingBox](#ondrawexpandingbox)|Platformę wywołuje tę metodę, gdy go Rysuje pole powiększających się. (Przesłania [CMFCVisualManager::OnDrawExpandingBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawexpandingbox).)|  
-|[CMFCVisualManagerOffice2003::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|Struktura wywołuje tę metodę po go rysuje obramowanie wystąpienia [CMFCHeaderCtrl klasy](../../mfc/reference/cmfcheaderctrl-class.md). (Przesłania [CMFCVisualManager::OnDrawHeaderCtrlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder).)|  
-|[CMFCVisualManagerOffice2003::OnDrawMenuBorder](#ondrawmenuborder)|Struktura wywołuje tę metodę, gdy go rysuje obramowanie [CMFCPopupMenu klasy](../../mfc/reference/cmfcpopupmenu-class.md). (Przesłania `CMFCVisualManagerOfficeXP::OnDrawMenuBorder`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawOutlookBarSplitter](#ondrawoutlookbarsplitter)|Platformę wywołuje tę metodę, gdy go rysuje podziału paska programu Outlook. (Przesłania [CMFCVisualManager::OnDrawOutlookBarSplitter](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookbarsplitter).)|  
+|[CMFCVisualManagerOffice2003::GetToolTipInfo](#gettooltipinfo)|Metoda wywoływana przez platformę, by uzyskać informacje. (Przesłania [CMFCVisualManager::GetToolTipInfo](../../mfc/reference/cmfcvisualmanager-class.md#gettooltipinfo).)|  
+|[CMFCVisualManagerOffice2003::IsDefaultWinXPColorsEnabled](#isdefaultwinxpcolorsenabled)|Wskazuje, czy Menedżer wizualny używa natywnego kolory motywu Windows XP.|  
+|[CMFCVisualManagerOffice2003::IsDockingTabHasBorder](#isdockingtabhasborder)|Zwraca czy bieżące Menedżera visual rysuje obramowania wokół okienek, które są zadokowane i na kartach. (Przesłania [CMFCVisualManager::IsDockingTabHasBorder](../../mfc/reference/cmfcvisualmanager-class.md#isdockingtabhasborder).)|  
+|[CMFCVisualManagerOffice2003::IsHighlightOneNoteTabs](#ishighlightonenotetabs)|Wskazuje, czy powinien być wyróżniony karty programu OneNote. (Przesłania `CMFCVisualManager::IsHighlightOneNoteTabs`.)|  
+|[CMFCVisualManagerOffice2003::IsOffsetPressedButton](#isoffsetpressedbutton)|Wywoływane przez platformę, gdy przycisk paska narzędzi. (Przesłania `CMFCVisualManager::IsOffsetPressedButton`.)|  
+|[CMFCVisualManagerOffice2003::IsStatusBarOfficeXPLook](#isstatusbarofficexplook)|Wskazuje, czy pasek stanu, wyglądu Office XP.|  
+|[CMFCVisualManagerOffice2003::IsToolbarRoundShape](#istoolbarroundshape)|Wskazuje, czy określony narzędzi ma okrągły kształtu. (Przesłania [CMFCVisualManager::IsToolbarRoundShape](../../mfc/reference/cmfcvisualmanager-class.md#istoolbarroundshape).)|  
+|[CMFCVisualManagerOffice2003::IsUseGlobalTheme](#isuseglobaltheme)|Wskazuje, czy ma być używana motyw globalny Windows XP.|  
+|[CMFCVisualManagerOffice2003::IsWindowsThemingSupported](#iswindowsthemingsupported)|Wskazuje, czy motywy Windows jest obsługiwana. (Przesłania [CMFCVisualManager::IsWindowsThemingSupported](../../mfc/reference/cmfcvisualmanager-class.md#iswindowsthemingsupported).)|  
+|[CMFCVisualManagerOffice2003::OnDrawAutoHideButtonBorder](#ondrawautohidebuttonborder)|Struktura wywołuje tę metodę, gdy jej rysuje obramowanie przycisku automatycznego ukrywania. (Przesłania [CMFCVisualManager::OnDrawAutoHideButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawautohidebuttonborder).)|  
+|[CMFCVisualManagerOffice2003::OnDrawBarGripper](#ondrawbargripper)|Wywoływane przez platformę, gdy jej rysuje uchwyt paska sterowania. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawBarGripper`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawBrowseButton](#ondrawbrowsebutton)|Struktura wywołuje tę metodę, gdy jej rysuje przycisk Przeglądaj, aby formant edycji. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawBrowseButton`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawButtonBorder](#ondrawbuttonborder)|Struktura wywołuje tę metodę, gdy jej rysuje obramowanie przycisku paska narzędzi. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawButtonBorder`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawCaptionBarBorder](#ondrawcaptionbarborder)|Platforma wywołuje tę metodę, gdy jej rysuje obramowanie [klasa CMFCCaptionBar](../../mfc/reference/cmfccaptionbar-class.md) obiektu. (Przesłania [CMFCVisualManager::OnDrawCaptionBarBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcaptionbarborder).)|  
+|[CMFCVisualManagerOffice2003::OnDrawCheckBoxEx](#ondrawcheckboxex)|Struktura wywołuje tę metodę, gdy jej rysuje pola wyboru. (Przesłania [CMFCVisualManager::OnDrawCheckBoxEx](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcheckboxex).)|  
+|[CMFCVisualManagerOffice2003::OnDrawComboBorder](#ondrawcomboborder)|Platforma wywołuje tę metodę, gdy jej rysuje obramowanie wokół [klasa CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawComboBorder`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawComboDropButton](#ondrawcombodropbutton)|Platforma wywołuje tę metodę, gdy jej rysuje przycisk listy [klasa CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md). (Przesłania `CMFCVisualManagerOfficeXP::OnDrawComboDropButton`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawControlBorder](#ondrawcontrolborder)|Struktura wywołuje tę metodę podczas jego rysuje obramowania formantu. (Przesłania [CMFCVisualManager::OnDrawControlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcontrolborder).)|  
+|[CMFCVisualManagerOffice2003::OnDrawExpandingBox](#ondrawexpandingbox)|Struktura wywołuje tę metodę, gdy jej rysuje rozwijającego się pola. (Przesłania [CMFCVisualManager::OnDrawExpandingBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawexpandingbox).)|  
+|[CMFCVisualManagerOffice2003::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|Platforma wywołuje tę metodę, gdy jej rysuje obramowanie wokół wystąpienie [klasa CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md). (Przesłania [CMFCVisualManager::OnDrawHeaderCtrlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder).)|  
+|[CMFCVisualManagerOffice2003::OnDrawMenuBorder](#ondrawmenuborder)|Platforma wywołuje tę metodę, gdy jej rysuje obramowanie [klasa CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md). (Przesłania `CMFCVisualManagerOfficeXP::OnDrawMenuBorder`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawOutlookBarSplitter](#ondrawoutlookbarsplitter)|Struktura wywołuje tę metodę, gdy jej rysuje podziału paska Outlook. (Przesłania [CMFCVisualManager::OnDrawOutlookBarSplitter](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookbarsplitter).)|  
 |[CMFCVisualManagerOffice2003::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|Wywoływane przez platformę, gdy go rysuje obramowanie przycisku strony programu Outlook. (Przesłania [CMFCVisualManager::OnDrawOutlookPageButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookpagebuttonborder).)|  
-|[CMFCVisualManagerOffice2003::OnDrawPaneBorder](#ondrawpaneborder)|Struktura wywołuje tę metodę, gdy go rysuje obramowanie [klasy CPane](../../mfc/reference/cpane-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawPaneBorder`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawPaneCaption](#ondrawpanecaption)|Struktura wywołuje tę metodę po go rysuje podpis [klasy CDockablePane](../../mfc/reference/cdockablepane-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawPaneCaption`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawPopupWindowBorder](#ondrawpopupwindowborder)|Struktura wywołuje tę metodę po go rysuje obramowanie okna podręcznego. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawPopupWindowBorder`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawPopupWindowButtonBorder](#ondrawpopupwindowbuttonborder)|Struktura wywołuje tę metodę po go rysuje obramowanie przycisku w oknie podręcznym. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawPopupWindowButtonBorder`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawPopupWindowCaption](#ondrawpopupwindowcaption)|Struktura wywołuje tę metodę po go rysuje podpis okna podręcznego. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawPopupWindowCaption`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawRibbonButtonsGroup](#ondrawribbonbuttonsgroup)|Platformę wywołuje tę metodę, gdy grupa przycisków go rysuje na Wstążce. (Przesłania [CMFCVisualManager::OnDrawRibbonButtonsGroup](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonbuttonsgroup).)|  
-|[CMFCVisualManagerOffice2003::OnDrawRibbonCategoryCaption](#ondrawribboncategorycaption)|Struktura wywołuje tę metodę po go rysuje pasek podpisu dla kategorii wstążki. (Przesłania [CMFCVisualManager::OnDrawRibbonCategoryCaption](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategorycaption).)|  
-|[CMFCVisualManagerOffice2003::OnDrawRibbonCategoryTab](#ondrawribboncategorytab)|Platformę wywołuje tę metodę, gdy go rysuje kartę kategorii wstążki. (Przesłania [CMFCVisualManager::OnDrawRibbonCategoryTab](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategorytab).)|  
-|[CMFCVisualManagerOffice2003::OnDrawRibbonProgressBar](#ondrawribbonprogressbar)|Struktura wywołuje tę metodę, gdy go rysuje [CMFCRibbonProgressBar klasy](../../mfc/reference/cmfcribbonprogressbar-class.md). (Przesłania [CMFCVisualManager::OnDrawRibbonProgressBar](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonprogressbar).)|  
-|[CMFCVisualManagerOffice2003::OnDrawRibbonQuickAccessToolBarSeparator](#ondrawribbonquickaccesstoolbarseparator)|Platformę wywołuje tę metodę, gdy go rysuje separatora na pasku narzędzi Szybki dostęp do wstążki. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawRibbonQuickAccessToolBarSeparator`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawRibbonSliderChannel](#ondrawribbonsliderchannel)|Struktura wywołuje tę metodę po go rysuje kanału [CMFCRibbonSlider klasy](../../mfc/reference/cmfcribbonslider-class.md). (Przesłania [CMFCVisualManager::OnDrawRibbonSliderChannel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderchannel).)|  
-|[CMFCVisualManagerOffice2003::OnDrawRibbonSliderThumb](#ondrawribbonsliderthumb)|Struktura wywołuje tę metodę po go rysuje uchwytu [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) obiektu. (Przesłania [CMFCVisualManager::OnDrawRibbonSliderThumb](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderthumb).)|  
-|[CMFCVisualManagerOffice2003::OnDrawRibbonSliderZoomButton](#ondrawribbonsliderzoombutton)|Struktura wywołuje tę metodę po go rysuje przycisków powiększenia dla [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) obiektu. (Przesłania [CMFCVisualManager::OnDrawRibbonSliderZoomButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderzoombutton).)|  
-|[CMFCVisualManagerOffice2003::OnDrawRibbonStatusBarPane](#ondrawribbonstatusbarpane)|Struktura wywołuje tę metodę po go rysuje okienko na pasku stanu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawRibbonStatusBarPane`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawScrollButtons](#ondrawscrollbuttons)|Struktura wywołuje tę metodę po go rysuje przyciski przewijania. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawScrollButtons`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawSeparator](#ondrawseparator)|Struktura wywołuje tę metodę po go rysuje separatora. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawSeparator`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawShowAllMenuItems](#ondrawshowallmenuitems)|Struktura wywołuje tę metodę po go rysuje wszystkie elementy w menu. (Przesłania [CMFCVisualManager::OnDrawShowAllMenuItems](../../mfc/reference/cmfcvisualmanager-class.md#ondrawshowallmenuitems).)|  
-|[CMFCVisualManagerOffice2003::OnDrawStatusBarPaneBorder](#ondrawstatusbarpaneborder)|Struktura wywołuje tę metodę po go rysuje obramowanie [CMFCStatusBar — klasa](../../mfc/reference/cmfcstatusbar-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawStatusBarPaneBorder`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawStatusBarProgress](#ondrawstatusbarprogress)|Struktura wywołuje tę metodę po go rysuje wskaźnika postępu [CMFCStatusBar —](../../mfc/reference/cmfcstatusbar-class.md) obiektu. (Przesłania [CMFCVisualManager::OnDrawStatusBarProgress](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarprogress).)|  
-|[CMFCVisualManagerOffice2003::OnDrawStatusBarSizeBox](#ondrawstatusbarsizebox)|Struktura wywołuje tę metodę po go rysuje rozmiar pola [CMFCStatusBar —](../../mfc/reference/cmfcstatusbar-class.md). (Przesłania [CMFCVisualManager::OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarsizebox).)|  
-|[CMFCVisualManagerOffice2003::OnDrawTab](#ondrawtab)|Struktura wywołuje tę metodę po go rysuje kartach [klasy CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawTab`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawTabsButtonBorder](#ondrawtabsbuttonborder)|Struktura wywołuje tę metodę po go rysuje obramowanie przycisku kartę. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawTabsButtonBorder`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawTask](#ondrawtask)|Struktura wywołuje tę metodę, gdy go rysuje [klasy CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawTask`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawTasksGroupAreaBorder](#ondrawtasksgroupareaborder)|Struktura wywołuje tę metodę po go rysuje obramowanie wokół grupy w [klasy CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawTasksGroupAreaBorder`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawTasksGroupCaption](#ondrawtasksgroupcaption)|Struktura wywołuje tę metodę po go rysuje podpis [klasy CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawTasksGroupCaption`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawTearOffCaption](#ondrawtearoffcaption)|Struktura wywołuje tę metodę po go rysuje podpis [klasy CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawTearOffCaption`.)|  
-|[CMFCVisualManagerOffice2003::OnErasePopupWindowButton](#onerasepopupwindowbutton)|Struktura wywołuje tę metodę po go na partycje powoduje usunięcie przycisk w oknie podręcznym. (Przesłania `CMFCVisualManagerOfficeXP::OnErasePopupWindowButton`.)|  
-|[CMFCVisualManagerOffice2003::OnEraseTabsArea](#onerasetabsarea)|Platformę wywołuje tę metodę, gdy go na partycje powoduje usunięcie wartości obszar karty okna kartę. (Przesłania `CMFCVisualManagerOfficeXP::OnEraseTabsArea`.)|  
-|[CMFCVisualManagerOffice2003::OnEraseTabsButton](#onerasetabsbutton)|Platformę wywołuje tę metodę, gdy go na partycje powoduje usunięcie ikona przycisku kartę i tekst. (Przesłania `CMFCVisualManagerOfficeXP::OnEraseTabsButton`.)|  
-|[CMFCVisualManagerOffice2003::OnEraseTabsFrame](#onerasetabsframe)|Struktura wywołuje tę metodę po go na partycje powoduje usunięcie ramki na [CMFCBaseTabCtrl klasy](../../mfc/reference/cmfcbasetabctrl-class.md). (Przesłania [CMFCVisualManager::OnEraseTabsFrame](../../mfc/reference/cmfcvisualmanager-class.md#onerasetabsframe).)|  
-|[CMFCVisualManagerOffice2003::OnFillAutoHideButtonBackground](#onfillautohidebuttonbackground)|Struktura wywołuje tę metodę po zapełnieniu tła automatyczne ukrywanie przycisku. (Przesłania [CMFCVisualManager::OnFillAutoHideButtonBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillautohidebuttonbackground).)|  
-|[CMFCVisualManagerOffice2003::OnFillBarBackground](#onfillbarbackground)|Struktura wywołuje tę metodę po zapełnieniu tła [klasy CBasePane](../../mfc/reference/cbasepane-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnFillBarBackground`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawPaneBorder](#ondrawpaneborder)|Platforma wywołuje tę metodę, gdy jej rysuje obramowanie [klasa CPane](../../mfc/reference/cpane-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawPaneBorder`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawPaneCaption](#ondrawpanecaption)|Platforma wywołuje tę metodę, gdy jej rysuje podpis dla [klasa CDockablePane](../../mfc/reference/cdockablepane-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawPaneCaption`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawPopupWindowBorder](#ondrawpopupwindowborder)|Struktura wywołuje tę metodę, gdy jej rysuje obramowanie, okna podręcznego. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawPopupWindowBorder`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawPopupWindowButtonBorder](#ondrawpopupwindowbuttonborder)|Struktura wywołuje tę metodę, gdy jej rysuje obramowanie przycisku w oknie podręcznym. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawPopupWindowButtonBorder`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawPopupWindowCaption](#ondrawpopupwindowcaption)|Struktura wywołuje tę metodę, gdy go rysuje podpis oknie podręcznym. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawPopupWindowCaption`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawRibbonButtonsGroup](#ondrawribbonbuttonsgroup)|Struktura wywołuje tę metodę, gdy jej rysuje Grupa przycisków na Wstążce. (Przesłania [CMFCVisualManager::OnDrawRibbonButtonsGroup](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonbuttonsgroup).)|  
+|[CMFCVisualManagerOffice2003::OnDrawRibbonCategoryCaption](#ondrawribboncategorycaption)|Struktura wywołuje tę metodę, gdy jej rysuje pasku podpisu dla kategorii wstążki. (Przesłania [CMFCVisualManager::OnDrawRibbonCategoryCaption](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategorycaption).)|  
+|[CMFCVisualManagerOffice2003::OnDrawRibbonCategoryTab](#ondrawribboncategorytab)|Struktura wywołuje tę metodę, gdy jej rysuje na karcie kategorii wstążki. (Przesłania [CMFCVisualManager::OnDrawRibbonCategoryTab](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategorytab).)|  
+|[CMFCVisualManagerOffice2003::OnDrawRibbonProgressBar](#ondrawribbonprogressbar)|Platforma wywołuje tę metodę, gdy jej rysuje [klasa CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md). (Przesłania [CMFCVisualManager::OnDrawRibbonProgressBar](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonprogressbar).)|  
+|[CMFCVisualManagerOffice2003::OnDrawRibbonQuickAccessToolBarSeparator](#ondrawribbonquickaccesstoolbarseparator)|Struktura wywołuje tę metodę, gdy jej rysuje separatorem w paska narzędzi szybkiego dostępu dla wstążki. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawRibbonQuickAccessToolBarSeparator`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawRibbonSliderChannel](#ondrawribbonsliderchannel)|Platforma wywołuje tę metodę, gdy jej rysuje kanału [klasa CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md). (Przesłania [CMFCVisualManager::OnDrawRibbonSliderChannel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderchannel).)|  
+|[CMFCVisualManagerOffice2003::OnDrawRibbonSliderThumb](#ondrawribbonsliderthumb)|Platforma wywołuje tę metodę, gdy jej rysuje uchwytu [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) obiektu. (Przesłania [CMFCVisualManager::OnDrawRibbonSliderThumb](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderthumb).)|  
+|[CMFCVisualManagerOffice2003::OnDrawRibbonSliderZoomButton](#ondrawribbonsliderzoombutton)|Platforma wywołuje tę metodę, gdy jej rysuje przycisków powiększenia dla [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) obiektu. (Przesłania [CMFCVisualManager::OnDrawRibbonSliderZoomButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderzoombutton).)|  
+|[CMFCVisualManagerOffice2003::OnDrawRibbonStatusBarPane](#ondrawribbonstatusbarpane)|Struktura wywołuje tę metodę, gdy jej rysuje okienko na pasku stanu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawRibbonStatusBarPane`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawScrollButtons](#ondrawscrollbuttons)|Struktura wywołuje tę metodę, gdy jej rysuje przyciski przewijania. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawScrollButtons`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawSeparator](#ondrawseparator)|Struktura wywołuje tę metodę, gdy go rysuje separatora. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawSeparator`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawShowAllMenuItems](#ondrawshowallmenuitems)|Struktura wywołuje tę metodę, gdy jej pobiera wszystkie elementy w menu. (Przesłania [CMFCVisualManager::OnDrawShowAllMenuItems](../../mfc/reference/cmfcvisualmanager-class.md#ondrawshowallmenuitems).)|  
+|[CMFCVisualManagerOffice2003::OnDrawStatusBarPaneBorder](#ondrawstatusbarpaneborder)|Platforma wywołuje tę metodę, gdy jej rysuje obramowanie [klasa CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawStatusBarPaneBorder`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawStatusBarProgress](#ondrawstatusbarprogress)|Platforma wywołuje tę metodę, gdy jej rysuje wskaźnika postępu w [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) obiektu. (Przesłania [CMFCVisualManager::OnDrawStatusBarProgress](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarprogress).)|  
+|[CMFCVisualManagerOffice2003::OnDrawStatusBarSizeBox](#ondrawstatusbarsizebox)|Platforma wywołuje tę metodę, gdy go rysuje rozmiar pola [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md). (Przesłania [CMFCVisualManager::OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarsizebox).)|  
+|[CMFCVisualManagerOffice2003::OnDrawTab](#ondrawtab)|Platforma wywołuje tę metodę, gdy jej rysuje karty [klasa CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawTab`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawTabsButtonBorder](#ondrawtabsbuttonborder)|Struktura wywołuje tę metodę, gdy go rysuje obramowanie przycisku kartę. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawTabsButtonBorder`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawTask](#ondrawtask)|Platforma wywołuje tę metodę, gdy jej rysuje [klasa CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawTask`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawTasksGroupAreaBorder](#ondrawtasksgroupareaborder)|Platforma wywołuje tę metodę, gdy jej rysuje obramowanie wokół grupy w [klasa CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawTasksGroupAreaBorder`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawTasksGroupCaption](#ondrawtasksgroupcaption)|Platforma wywołuje tę metodę, gdy jej rysuje podpis [klasa CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawTasksGroupCaption`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawTearOffCaption](#ondrawtearoffcaption)|Platforma wywołuje tę metodę, gdy jej rysuje podpis [klasa CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnDrawTearOffCaption`.)|  
+|[CMFCVisualManagerOffice2003::OnErasePopupWindowButton](#onerasepopupwindowbutton)|Struktura wywołuje tę metodę, gdy go na partycje powoduje usunięcie przycisku w oknie podręcznym. (Przesłania `CMFCVisualManagerOfficeXP::OnErasePopupWindowButton`.)|  
+|[CMFCVisualManagerOffice2003::OnEraseTabsArea](#onerasetabsarea)|Struktura wywołuje tę metodę, gdy go na partycje powoduje usunięcie obszaru karty w oknie kartę. (Przesłania `CMFCVisualManagerOfficeXP::OnEraseTabsArea`.)|  
+|[CMFCVisualManagerOffice2003::OnEraseTabsButton](#onerasetabsbutton)|Struktura wywołuje tę metodę, gdy go na partycje powoduje usunięcie tekst i ikona przycisku kartę. (Przesłania `CMFCVisualManagerOfficeXP::OnEraseTabsButton`.)|  
+|[CMFCVisualManagerOffice2003::OnEraseTabsFrame](#onerasetabsframe)|Platforma wywołuje tę metodę, gdy go na partycje powoduje usunięcie ramkę na [klasa CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md). (Przesłania [CMFCVisualManager::OnEraseTabsFrame](../../mfc/reference/cmfcvisualmanager-class.md#onerasetabsframe).)|  
+|[CMFCVisualManagerOffice2003::OnFillAutoHideButtonBackground](#onfillautohidebuttonbackground)|Struktura wywołuje tę metodę podczas jego wypełniania tła przycisku automatycznego ukrywania. (Przesłania [CMFCVisualManager::OnFillAutoHideButtonBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillautohidebuttonbackground).)|  
+|[CMFCVisualManagerOffice2003::OnFillBarBackground](#onfillbarbackground)|Struktura wywołuje tę metodę podczas jego wypełniania tła [klasa CBasePane](../../mfc/reference/cbasepane-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnFillBarBackground`.)|  
 |[CMFCVisualManagerOffice2003::OnFillButtonInterior](#onfillbuttoninterior)|Struktura wywołuje tę metodę po zapełnieniu tło przycisku paska narzędzi. (Przesłania `CMFCVisualManagerOfficeXP::OnFillButtonInterior`.)|  
-|[CMFCVisualManagerOffice2003::OnFillCommandsListBackground](#onfillcommandslistbackground)|Struktura wywołuje tę metodę po zapełnieniu tło przycisku paska narzędzi, który należy do listy poleceń. (Przesłania `CMFCVisualManagerOfficeXP::OnFillCommandsListBackground`.)|  
+|[CMFCVisualManagerOffice2003::OnFillCommandsListBackground](#onfillcommandslistbackground)|Struktura wywołuje tę metodę podczas jego wypełniania tło przycisku paska narzędzi, który należy do listy poleceń. (Przesłania `CMFCVisualManagerOfficeXP::OnFillCommandsListBackground`.)|  
 |[CMFCVisualManagerOffice2003::OnFillHeaderCtrlBackground](#onfillheaderctrlbackground)|Struktura wywołuje tę metodę po zapełnieniu tła formantu nagłówka. (Przesłania [CMFCVisualManager::OnFillHeaderCtrlBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillheaderctrlbackground).)|  
-|[CMFCVisualManagerOffice2003::OnFillHighlightedArea](#onfillhighlightedarea)|Struktura wywołuje tę metodę po zapełnieniu wyróżnionym obszarze przycisku paska narzędzi. (Przesłania `CMFCVisualManagerOfficeXP::OnFillHighlightedArea`.)|  
-|[CMFCVisualManagerOffice2003::OnFillOutlookBarCaption](#onfilloutlookbarcaption)|Struktura wywołuje tę metodę po zapełnieniu tło paska podpisu programu Outlook. (Przesłania [CMFCVisualManager::OnFillOutlookBarCaption](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookbarcaption).)|  
-|[CMFCVisualManagerOffice2003::OnFillOutlookPageButton](#onfilloutlookpagebutton)|Struktura wywołuje tę metodę po zapełnieniu wewnętrznych programu Outlook przycisk Strona. (Przesłania [CMFCVisualManager::OnFillOutlookPageButton](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookpagebutton).)|  
-|[CMFCVisualManagerOffice2003::OnFillPopupWindowBackground](#onfillpopupwindowbackground)|Struktura wywołuje tę metodę po zapełnieniu tła w oknie podręcznym. (Przesłania `CMFCVisualManagerOfficeXP::OnFillPopupWindowBackground`.)|  
-|[CMFCVisualManagerOffice2003::OnFillTab](#onfilltab)|Struktura wywołuje tę metodę po zapełnieniu tło okna kartę. (Przesłania `CMFCVisualManagerOfficeXP::OnFillTab`.)|  
-|[CMFCVisualManagerOffice2003::OnFillTasksGroupInterior](#onfilltasksgroupinterior)|Struktura wywołuje tę metodę po zapełnieniu wnętrza [klasy CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnFillTasksGroupInterior`.)|  
-|[CMFCVisualManagerOffice2003::OnFillTasksPaneBackground](#onfilltaskspanebackground)|Struktura wywołuje tę metodę po zapełnieniu tła [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) formantu. (Przesłania [CMFCVisualManager::OnFillTasksPaneBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfilltaskspanebackground).)|  
-|[CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton](#onhighlightquickcustomizemenubutton)|Framework wywołania tej metody, gdy go rysuje wyróżnione szybkie — dostosowywanie przycisku menu. (Przesłania `CMFCVisualManagerOfficeXP::OnHighlightQuickCustomizeMenuButton`.)|  
-|[CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|Struktura wywołuje tę metodę po go rysuje wyróżnione polecenie. (Przesłania `CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems`.)|  
-|[CMFCVisualManagerOffice2003::OnUpdateSystemColors](#onupdatesystemcolors)|Struktura wywołuje tej funkcji, gdy kolory systemowe zostaną zmienione. (Przesłania `CMFCVisualManagerOfficeXP::OnUpdateSystemColors`.)|  
-|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|Określa, czy Menedżer visual należy używać natywnego kolorów motywu systemu Windows XP lub kolory uzyskane z [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371).|  
-|[CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook](#setstatusbarofficexplook)|Określa, czy ma być używany motyw globalny systemu Windows XP.|  
-|[CMFCVisualManagerOffice2003::SetUseGlobalTheme](#setuseglobaltheme)|Określa, czy Menedżer visual używa motyw globalny.|  
+|[CMFCVisualManagerOffice2003::OnFillHighlightedArea](#onfillhighlightedarea)|Struktura wywołuje tę metodę podczas jego wypełniania wyróżnionym obszarze przycisku paska narzędzi. (Przesłania `CMFCVisualManagerOfficeXP::OnFillHighlightedArea`.)|  
+|[CMFCVisualManagerOffice2003::OnFillOutlookBarCaption](#onfilloutlookbarcaption)|Struktura wywołuje tę metodę po zapełnieniu tła paska Outlook podpis. (Przesłania [CMFCVisualManager::OnFillOutlookBarCaption](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookbarcaption).)|  
+|[CMFCVisualManagerOffice2003::OnFillOutlookPageButton](#onfilloutlookpagebutton)|Struktura wywołuje tę metodę po zapełnieniu wewnętrznych przycisk Strona programu Outlook. (Przesłania [CMFCVisualManager::OnFillOutlookPageButton](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookpagebutton).)|  
+|[CMFCVisualManagerOffice2003::OnFillPopupWindowBackground](#onfillpopupwindowbackground)|Struktura wywołuje tę metodę podczas jego wypełniania tła w oknie podręcznym. (Przesłania `CMFCVisualManagerOfficeXP::OnFillPopupWindowBackground`.)|  
+|[CMFCVisualManagerOffice2003::OnFillTab](#onfilltab)|Struktura wywołuje tę metodę podczas jego wypełniania tło okna karty. (Przesłania `CMFCVisualManagerOfficeXP::OnFillTab`.)|  
+|[CMFCVisualManagerOffice2003::OnFillTasksGroupInterior](#onfilltasksgroupinterior)|Struktura wywołuje tę metodę podczas jego wypełniania wnętrza [klasa CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) obiektu. (Przesłania `CMFCVisualManagerOfficeXP::OnFillTasksGroupInterior`.)|  
+|[CMFCVisualManagerOffice2003::OnFillTasksPaneBackground](#onfilltaskspanebackground)|Struktura wywołuje tę metodę podczas jego wypełniania tła [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) kontroli. (Przesłania [CMFCVisualManager::OnFillTasksPaneBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfilltaskspanebackground).)|  
+|[CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton](#onhighlightquickcustomizemenubutton)|Struktura wywołuje tę metodę, gdy jej rysuje wyróżnione szybkie — dostosowywanie przycisku menu. (Przesłania `CMFCVisualManagerOfficeXP::OnHighlightQuickCustomizeMenuButton`.)|  
+|[CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|Struktura wywołuje tę metodę, gdy jej rysuje wyróżnione polecenie. (Przesłania `CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems`.)|  
+|[CMFCVisualManagerOffice2003::OnUpdateSystemColors](#onupdatesystemcolors)|Struktura wywołuje tę funkcję, gdy zmieniają się kolory systemowe. (Przesłania `CMFCVisualManagerOfficeXP::OnUpdateSystemColors`.)|  
+|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|Określa, czy Menedżer wizualny należy używać natywnego kolory motywu Windows XP lub kolory uzyskany z [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371).|  
+|[CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook](#setstatusbarofficexplook)|Określa, że powinny być używane motyw globalny Windows XP.|  
+|[CMFCVisualManagerOffice2003::SetUseGlobalTheme](#setuseglobaltheme)|Określa, czy Menedżer wizualny używa motyw globalny.|  
   
 ## <a name="remarks"></a>Uwagi  
- Możesz użyć `CMFCVisualManagerOffice2003` klasę, aby zmienić wygląd aplikacji, aby przypominały pakietu Microsoft Office 2003.  
+ Możesz użyć `CMFCVisualManagerOffice2003` klasy, aby zmienić wygląd aplikacji, aby przypominały pakietu Microsoft Office 2003.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, jak skonfigurować Menedżera visual pakietu office 2003. Następujący fragment kodu jest częścią [próbka Demo alertu pulpitu](../../visual-cpp-samples.md).  
+ Poniższy przykład pokazuje, jak Ustaw menedżera pakietu office 2003. Ten fragment kodu jest częścią [próbka Demo alertu pulpitu](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#6](../../mfc/reference/codesnippet/cpp/cmfcvisualmanageroffice2003-class_1.cpp)]  
   
@@ -225,15 +225,15 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
   
  [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)  
   
- [Program CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)  
+ [CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)  
   
- [Program CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)  
+ [CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxvisualmanageroffice2003.h  
   
 ##  <a name="drawcomboborderwinxp"></a>  CMFCVisualManagerOffice2003::DrawComboBorderWinXP  
- Rysuje obramowanie pola kombi przy użyciu bieżącego motywu systemu Windows XP.  
+ Rysuje obramowanie pola kombi, przy użyciu bieżącego motywu Windows XP.  
   
 ```  
 virtual BOOL DrawComboBorderWinXP(
@@ -249,24 +249,24 @@ virtual BOOL DrawComboBorderWinXP(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *rect*  
- Prostokąt ograniczający obramowanie pola kombi.  
+ Prostokąt otaczający obramowanie pola kombi.  
   
  [in] *bWyłączone*  
- Określa, czy obramowanie pola kombi jest wyłączone.  
+ Określa, czy obramowanie pola kombi jest wyłączona.  
   
  [in] *bIsDropped*  
- Określa, czy jest rozwijana obramowanie pola kombi.  
+ Określa, czy obramowanie pola kombi jest rozwijana.  
   
  [in] *bIsHighlighted*  
- Określa, czy zostanie wyróżniona obramowanie pola kombi.  
+ Określa, czy obramowanie pola kombi jest wyróżniona.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca `TRUE` po włączeniu interfejs API kompozycji lub `FALSE` , jeśli nie.  
+ Zwraca wartość PRAWDA, jeśli motyw interfejsu API jest włączone, lub FAŁSZ, jeśli nie.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="drawcombodropbuttonwinxp"></a>  CMFCVisualManagerOffice2003::DrawComboDropButtonWinXP  
- Rysuje przycisku rozwijanego pola kombi przy użyciu bieżącego motywu systemu Windows XP.  
+ Rysuje przycisku rozwijanego pola kombi, przy użyciu bieżącego motywu Windows XP.  
   
 ```  
 virtual BOOL DrawComboDropButtonWinXP(
@@ -282,19 +282,19 @@ virtual BOOL DrawComboDropButtonWinXP(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *rect*  
- Prostokąt ograniczający przycisku rozwijanego pola kombi.  
+ Prostokąt otaczający przycisku rozwijanego pola kombi.  
   
  [in] *bWyłączone*  
- Określa, czy przycisk listy rozwijanej pola kombi jest wyłączone.  
+ Określa, czy przycisk listy rozwijanej pola kombi jest wyłączona.  
   
  [in] *bIsDropped*  
- Określa, czy jest rozwijana przycisku rozwijanego pola kombi.  
+ Określa, czy przycisk listy rozwijanej pola kombi jest rozwijana.  
   
  [in] *bIsHighlighted*  
- Określa, czy zostanie wyróżniona przycisku rozwijanego pola kombi.  
+ Określa, czy przycisk listy rozwijanej pola kombi jest wyróżniona.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca `TRUE` po włączeniu interfejs API kompozycji lub `FALSE` , jeśli nie.  
+ Zwraca wartość PRAWDA, jeśli motyw interfejsu API jest włączone, lub FAŁSZ, jeśli nie.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -313,27 +313,27 @@ virtual void DrawCustomizeButton(
   
 ### <a name="parameters"></a>Parametry  
  [in] *podstawowego kontrolera domeny*  
- Wskaźnik do wyświetlania kontekstu.  
+ Wskaźnik do kontekstu wyświetlania.  
   
  [in] *rect*  
- Prostokąt ograniczający przycisku  
+ Prostokąt otaczający przycisku  
   
  [in] *bIsHorz*  
- `TRUE` Jeśli przycisk jest poziomy, lub `FALSE` przypadku pionowej.  
+ Wartość TRUE, jeśli przycisk jest poziomy, lub FAŁSZ, jeśli jest pionowy.  
   
  [in] *stanu*  
- Stan przycisku, ponieważ to jest narysowanie (regularne, naciśniętego lub wyróżniony).  
+ Stan przycisku, ponieważ jest do rysowania (regularnie, po naciśnięciu lub wyróżniony).  
   
  [in] *bIsCustomize*  
- `TRUE` Jeśli Dostosuj Strzałka w dół lub Strzałka w lewo obraz ma być rysowany w prostokącie przycisk lub `FALSE` , jeśli nie.  
+ Wartość TRUE, jeśli obraz strzałkę w dół lub Strzałka w lewo Dostosuj ma być rysowany w prostokącie przycisku, lub FAŁSZ, jeśli nie.  
   
  [in] *bIsMoreButtons*  
- `TRUE` Jeśli pionowa lub pozioma dostosowania więcej przycisków obraz ma być rysowany w prostokącie przycisk lub `FALSE` , jeśli nie.  
+ Wartość TRUE, jeśli poziomą lub pionową dostosować więcej przycisków obraz ma być rysowany w prostokącie przycisku lub FALSE, jeśli tak nie jest.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="drawpushbuttonwinxp"></a>  CMFCVisualManagerOffice2003::DrawPushButtonWinXP  
- Rysuje przycisku polecenia przy użyciu bieżącego motywu systemu Windows XP.  
+ Rysuje przycisku polecenia przy użyciu bieżącego motywu Windows XP.  
   
 ```  
 virtual BOOL DrawPushButtonWinXP(
@@ -348,16 +348,16 @@ virtual BOOL DrawPushButtonWinXP(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *rect*  
- Prostokąt ograniczający przycisku polecenia.  
+ Prostokąt otaczający przycisku polecenia.  
   
  [in] *pButton*  
- Wskaźnik do [klasy CMFCButton](../../mfc/reference/cmfcbutton-class.md) obiektu do rysowania.  
+ Wskaźnik do [klasa CMFCButton](../../mfc/reference/cmfcbutton-class.md) obiektu do rysowania.  
   
  [in] *uiState*  
  Ignorowane. Stan jest pobierana z *pButton*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli włączono interfejs API motywu; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli interfejs API motywu jest włączony; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -369,24 +369,24 @@ virtual COLORREF GetBaseThemeColor();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca kolor motywu podstawowej motywu, jeśli jest on ustawiony lub kolor przedniej pasek koloru.  
+ Zwraca kolor motywu podstawowy motywu, jeśli jest on ustawiony lub kolor ściany paska kolorów.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="gethighlightmenuitemcolor"></a>  CMFCVisualManagerOffice2003::GetHighlightMenuItemColor  
- Pobiera kolor używany dla elementu menu zaznaczony.  
+ Pobiera kolor używany dla elementu menu wyróżnione.  
   
 ```  
 virtual COLORREF GetHighlightMenuItemColor() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca kolor używany dla elementu menu zaznaczony.  
+ Zwraca kolor używany dla elementu menu wyróżnione.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="getpropertygridgroupcolor"></a>  CMFCVisualManagerOffice2003::GetPropertyGridGroupColor  
- Struktura wywołuje tę metodę, aby uzyskać listę właściwości kolor tła.  
+ Struktura wywołuje tę metodę, aby pobrać kolor tła listy właściwości.  
   
 ```  
 virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
@@ -394,7 +394,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
   
 ### <a name="parameters"></a>Parametry  
  [in] *pPropList*  
- Wskaźnik do listy właściwości, która jest rysowania platformę.  
+ Wskaźnik do listy właściwości, która jest rysowanie platformę.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca kolor tła *pPropList*.  
@@ -403,7 +403,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
  Należy przesłonić tę funkcję, aby dostosować kolor tła listę właściwości w aplikacji.  
   
 ##  <a name="getpropertygridgrouptextcolor"></a>  CMFCVisualManagerOffice2003::GetPropertyGridGroupTextColor  
- Struktura wywołuje tę metodę w celu pobrania listy właściwości kolor tekstu.  
+ Struktura wywołuje tę metodę, aby pobrać kolor tekstu, listy właściwości.  
   
 ```  
 virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
@@ -417,7 +417,7 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
  Zwraca kolor tekstu na liście określonej właściwości.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę funkcję, aby dostosować kolor tekstu w aplikacji listy właściwości.  
+ Należy przesłonić tę funkcję, aby dostosować kolor tekstu, listy właściwości w aplikacji.  
   
 ##  <a name="getshowallmenuitemsheight"></a>  CMFCVisualManagerOffice2003::GetShowAllMenuItemsHeight  
  Zwraca wysokość wszystkich elementów menu.  
@@ -436,12 +436,12 @@ virtual int GetShowAllMenuItemsHeight(
  Domyślny rozmiar menu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Domyślnie zwraca wysokość wszystkie obrazy menu oraz marginesy.  
+ Domyślnie zwraca wysokość wszystkie obrazy w menu, a także marginesy.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="getsmartdockingbaseguidecolors"></a>  CMFCVisualManagerOffice2003::GetSmartDockingBaseGuideColors  
- Ustawia kolor tła określonej grupy podstawowej i kolor obramowania.  
+ Ustawia określona grupa podstawowa kolor tła i koloru obramowania.  
   
 ```  
 virtual void GetSmartDockingBaseGuideColors(
@@ -451,27 +451,27 @@ virtual void GetSmartDockingBaseGuideColors(
   
 ### <a name="parameters"></a>Parametry  
  [in] *clrBaseGroupBackground*  
- Odwołanie do [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) można ustawić na kolor tła.  
+ Odwołanie do [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Aby ustawić kolor tła.  
   
  [in] *clrBaseGroupBorder*  
- Odwołanie do [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) można ustawić na kolor obramowania.  
+ Odwołanie do [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Aby ustawić kolor obramowania.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="getsmartdockinghighlighttonecolor"></a>  CMFCVisualManagerOffice2003::GetSmartDockingHighlightToneColor  
- Zwraca kolor sygnału wyróżnienia.  
+ Zwraca kolor podświetlenia sygnału.  
   
 ```  
 virtual COLORREF GetSmartDockingHighlightToneColor();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) zawiera kolor sygnału wyróżnienia.  
+ Zwraca [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) zawierający tonowe kolor wyróżnienia.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="gettabframecolors"></a>  CMFCVisualManagerOffice2003::GetTabFrameColors  
- Struktura wywołuje tej funkcji, gdy ma pobrać zestaw kolorów rysunku okno karty.  
+ Struktura wywołuje tę funkcję, gdy należy pobrać zestaw kolorów dla okno kartę rysunku.  
   
 ```  
 virtual void GetTabFrameColors(
@@ -488,36 +488,36 @@ virtual void GetTabFrameColors(
   
 ### <a name="parameters"></a>Parametry  
  [in] *pTabWnd*  
- Wskaźnik do okna z kartami, gdzie ramki jest rysowania karty.  
+ Wskaźnik do okna z kartami, gdzie ramki jest rysowanie kartę.  
   
  [out] *clrDark*  
- Odwołanie do [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametru tej metody, w których przechowują się kolor obramowania ciemny karty.  
+ Odwołanie do [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametru, w której ta metoda przechowuje kolor ciemnego obramowania karty.  
   
  [out] *clrBlack*  
- Odwołanie do `COLORREF` parametru tej metody, w których przechowują się kolor obramowania okna kartę. Domyślny kolor obramowania jest czarny.  
+ Odwołania do parametru COLORREF, w której ta metoda przechowuje kolor obramowania okna karty. Domyślny kolor obramowania jest czarny.  
   
  [out] *clrHighlight*  
- Odwołanie do `COLORREF` parametru tej metody, w których przechowują się kolor stan wyróżnienia okna kartę.  
+ Odwołania do parametru COLORREF, w której ta metoda przechowuje kolor wyróżnienia stan okna karty.  
   
  [out] *clrFace*  
- Odwołanie do `COLORREF` parametru tej metody, w których przechowują się kolor dla powierzchni okno karty.  
+ Odwołania do parametru COLORREF, w której ta metoda przechowuje kolor twarzy okna karty.  
   
  [out] *clrDarkShadow*  
- Odwołanie do `COLORREF` parametru tej metody, w których przechowują się kolor cienia okno karty.  
+ Odwołania do parametru COLORREF, w której ta metoda przechowuje kolor cienia okno karty.  
   
  [out] *clrLight*  
- Odwołanie do `COLORREF` parametru tej metody, w których przechowują się kolor światła krawędź okna kartę.  
+ Odwołania do parametru COLORREF, w której ta metoda przechowuje koloru światła krawędź okna karty.  
   
  [out] *pbrFace*  
- Wskaźnik do odwołania do pędzla. Ta metoda przechowuje pędzel używany do wypełnienia kroju okno karty w tym parametrze.  
+ Wskaźnik do odwołania dla pędzla. Ta metoda przechowuje pędzla, używaną do wypełniania twarzy okna karty, w tym parametrze.  
   
  [out] *pbrBlack*  
- Wskaźnik do odwołania do pędzla. Ta metoda przechowuje pędzla, używanych do wypełnienia czarny krawędź okna kartę w tym parametrze.  
+ Wskaźnik do odwołania dla pędzla. Ta metoda przechowuje pędzla, używanych do wypełnienia czarne krawędź okna karty, w tym parametrze.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="gettoolbarcustomizebuttonmargin"></a>  CMFCVisualManagerOffice2003::GetToolBarCustomizeButtonMargin  
- Pobiera margines dla przycisku Dostosowywanie paska narzędzi.  
+ Pobiera wartość marginesu przycisk Dostosuj pasek narzędzi.  
   
 ```  
 virtual int GetToolBarCustomizeButtonMargin() const;  
@@ -536,12 +536,12 @@ virtual COLORREF GetToolbarDisabledColor() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) zawiera wyłączenia kolorów.  
+ Zwraca [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) zawierającą wyłączonego kolorów.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="gettooltipinfo"></a>  CMFCVisualManagerOffice2003::GetToolTipInfo  
- Wywoływane przez platformę, by pobrać informacji o etykietka narzędzia.  
+ Metoda wywoływana przez platformę, by uzyskać informacje.  
   
 ```  
 virtual BOOL GetToolTipInfo(
@@ -551,50 +551,50 @@ virtual BOOL GetToolTipInfo(
   
 ### <a name="parameters"></a>Parametry  
  [out] *params*  
- Odwołanie do [klasy CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) obiektu, gdy ta metoda zwraca informacje etykietka narzędzia.  
+ Odwołanie do [klasa CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) obiektu, w której ta metoda zwraca informacje.  
   
- [in] *Npowiadomienia*  
- Wpisywanie informacji o informacje etykietki narzędzia ma zostać zwrócona.  
+ [in] *nNie*  
+ Wpisz informacje o informacje etykietki narzędzia ma zostać zwrócona.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca `TRUE` Jeśli etykietka narzędzia informacje są zwracane, i `FALSE` inaczej.  
+ W przeciwnym razie zwraca wartość TRUE, jeśli informacje etykietki narzędzi są zwracane, a wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="isdefaultwinxpcolorsenabled"></a>  CMFCVisualManagerOffice2003::IsDefaultWinXPColorsEnabled  
- Wskazuje, czy Menedżer visual używa motywu kolorów, które są natywne dla systemu Windows XP.  
+ Wskazuje, czy Menedżer wizualny używa kolory motywu, które są natywne Windows XP.  
   
 ```  
 static BOOL IsDefaultWinXPColorsEnabled();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli Menedżer visual używa natywnego kolorów; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli visual manager używa natywnego kolorów; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji o natywnych kolorów, zobacz [CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors).  
+ Aby dowiedzieć się więcej o natywnych kolorów, zobacz [CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors).  
   
 ##  <a name="isdockingtabhasborder"></a>  CMFCVisualManagerOffice2003::IsDockingTabHasBorder  
- Zwraca czy bieżący Menedżer visual rysuje obramowań okienka zadokowane i kartach.  
+ Zwraca czy bieżące Menedżera visual rysuje obramowania wokół okienek, które są zadokowane i na kartach.  
   
 ```  
 virtual BOOL IsDockingTabHasBorder();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli Menedżer visual rysuje obramowań okienka zadokowane i kartach; `FALSE` inaczej.  
+ Wartość TRUE, jeśli Menedżer wizualny rysuje obramowanie wokół okienek, które są zadokowane i kartami; Wartość FALSE w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="ishighlightonenotetabs"></a>  CMFCVisualManagerOffice2003::IsHighlightOneNoteTabs  
- Wskazuje, czy karty OneNote powinien być zaznaczony.  
+ Wskazuje, czy powinien być wyróżniony karty programu OneNote.  
   
 ```  
 virtual BOOL IsHighlightOneNoteTabs() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca `TRUE`.  
+ Zwraca wartość TRUE.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -608,10 +608,10 @@ virtual BOOL IsOffsetPressedButton() const;
 ### <a name="return-value"></a>Wartość zwracana  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja zwraca `FALSE`.  
+ Domyślna implementacja zwraca wartość FALSE.  
   
 ##  <a name="isstatusbarofficexplook"></a>  CMFCVisualManagerOffice2003::IsStatusBarOfficeXPLook  
- Wskazuje, czy pasek stanu wyglądu pakietu Office XP.  
+ Wskazuje, czy pasek stanu, wyglądu Office XP.  
   
 ```  
 static BOOL __stdcall IsStatusBarOfficeXPLook();
@@ -620,10 +620,10 @@ static BOOL __stdcall IsStatusBarOfficeXPLook();
 ### <a name="return-value"></a>Wartość zwracana  
   
 ### <a name="remarks"></a>Uwagi  
- Zwraca `TRUE` przypadku pasek stanu wyglądu Office XP lub `FALSE` , jeśli nie.  
+ Zwraca wartość PRAWDA, jeśli ma paska stanu, wyglądu XP pakietu Office lub wartość FALSE, jeśli nie.  
   
 ##  <a name="istoolbarroundshape"></a>  CMFCVisualManagerOffice2003::IsToolbarRoundShape  
- Wskazuje, czy określony narzędzi round.  
+ Wskazuje, czy określony narzędzi Rundy.  
   
 ```  
 virtual BOOL IsToolbarRoundShape(CMFCToolBar* pToolBar);
@@ -634,37 +634,37 @@ virtual BOOL IsToolbarRoundShape(CMFCToolBar* pToolBar);
  Wskaźnik do paska narzędzi.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca `TRUE` Jeśli pasek narzędzi jest round, lub `FALSE` Jeśli jest pasek menu.  
+ Zwraca wartość TRUE, jeśli pasek narzędzi jest round, lub FAŁSZ, jeśli jest paska menu.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="isuseglobaltheme"></a>  CMFCVisualManagerOffice2003::IsUseGlobalTheme  
- Wskazuje, czy aplikacja korzysta z systemu Windows XP motywu.  
+ Wskazuje, czy Twoja aplikacja używa motywu Windows XP.  
   
 ```  
 static BOOL IsUseGlobalTheme();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli Menedżer visual używa motywu systemu Windows XP. w przeciwnym razie `FALSE`.  
+ Wartość TRUE, jeśli visual manager używa motywu Windows XP. w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj metody [CMFCVisualManagerOffice2003::SetUseGlobalTheme](#setuseglobaltheme) Aby określić, czy visual Menedżera używa kompozycji systemu Windows XP.  
+ Użyj metody [CMFCVisualManagerOffice2003::SetUseGlobalTheme](#setuseglobaltheme) Aby określić, czy Menedżer wizualny używa motywu Windows XP.  
   
 ##  <a name="iswindowsthemingsupported"></a>  CMFCVisualManagerOffice2003::IsWindowsThemingSupported  
- Wskazuje, czy obsługiwane jest motywów systemu Windows.  
+ Wskazuje, czy motywy Windows jest obsługiwana.  
   
 ```  
 virtual BOOL IsWindowsThemingSupported() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca `TRUE` Jeśli motywów systemu Windows jest obsługiwana, lub `FALSE` , jeśli nie.  
+ Zwraca wartość TRUE, jeśli są obsługiwane motywy Windows, lub FAŁSZ, jeśli nie.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="ondrawautohidebuttonborder"></a>  CMFCVisualManagerOffice2003::OnDrawAutoHideButtonBorder  
- Struktura wywołuje tę metodę po go rysuje obramowanie przycisku autoukrywania.  
+ Struktura wywołuje tę metodę, gdy jej rysuje obramowanie przycisku automatycznego ukrywania.  
   
 ```  
 virtual void OnDrawAutoHideButtonBorder(
@@ -679,21 +679,21 @@ virtual void OnDrawAutoHideButtonBorder(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *rectBounds*  
- Rozmiar i położenie przycisku autoukrywania.  
+ Rozmiar i położenie przycisku automatycznego ukrywania.  
   
  [in] *rectBorderSize*  
  Rozmiary obramowania.  
   
  [in] *pButton*  
- Wskaźnik do automatyczne ukrywanie przycisku. Platformę rysowania obramowania dla tego przycisku.  
+ Wskaźnik do przycisku automatycznego ukrywania. Struktura jest rysowanie granicy dla tego przycisku.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę metodę w klasie pochodnej, jeśli chcesz dostosować wygląd obramowania przycisku autoukrywania. Domyślnie ta metoda wypełnia płaskiej obramowanie z domyślny kolor cienia dla aplikacji.  
+ Należy przesłonić tę metodę w klasie pochodnej, jeśli chcesz dostosować wygląd obramowania przycisku automatycznego ukrywania. Domyślnie ta metoda wypełnia prostego obramowanie z domyślny kolor w tle dla swojej aplikacji.  
   
- *RectBorderSize* parametru nie zawiera współrzędne obramowania. Zawiera on rozmiar obramowania w `top`, `bottom`, `left`, i `right` elementy członkowskie danych. Wartość mniejsza niż lub równa 0 wskazuje brak obramowania na tej stronie automatyczne ukrywanie przycisku.  
+ *RectBorderSize* parametr nie zawiera współrzędne obramowania. Zawiera on rozmiaru obramowania w `top`, `bottom`, `left`, i `right` składowych danych. Wartość mniejsze niż lub równe 0 oznacza brak obramowania na tej stronie przycisku automatycznego ukrywania.  
   
 ##  <a name="ondrawbargripper"></a>  CMFCVisualManagerOffice2003::OnDrawBarGripper  
- Wywoływane przez platformę, gdy go rysuje uchwytu dla pasek sterowania.  
+ Wywoływane przez platformę, gdy jej rysuje uchwyt paska sterowania.  
   
 ```  
 virtual void OnDrawBarGripper(
@@ -705,19 +705,19 @@ virtual void OnDrawBarGripper(
   
 ### <a name="parameters"></a>Parametry  
  [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia pasek sterowania.  
+ Wskaźnik do kontekstu urządzenia dla paska sterowania.  
   
  [in] *rectGripper*  
- Prostokąt ograniczający pasek sterowania.  
+ Prostokąt otaczający paska sterowania.  
   
  [in] *bHorz*  
- Parametr wartość logiczna określająca, czy pasek sterowania jest zadokowany poziomo czy pionowo.  
+ Parametr logiczny, który określa, czy pasek sterowania jest zadokowany poziomo czy pionowo.  
   
  [in] *pBar*  
- Wskaźnik do pasek sterowania. Menedżer visual rysuje uchwytu ten pasek sterowania.  
+ Wskaźnik do paska sterowania. Menedżer wizualny rysuje uchwytu ten pasek sterowania.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja tej metody, wyświetla standardowe uchwytu. Aby dostosować wygląd uchwytu, przesłonić tę metodę w niestandardowej klasy pochodzącej od [program CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md) klasy.  
+ Domyślna implementacja tej metody, wyświetla standardowe uchwytu. Aby dostosować wygląd uchwytu, należy przesłonić tę metodę w niestandardowej klasy pochodzącej od [CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md) klasy.  
   
 ##  <a name="ondrawbrowsebutton"></a>  CMFCVisualManagerOffice2003::OnDrawBrowseButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -743,7 +743,7 @@ virtual BOOL OnDrawBrowseButton(
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="ondrawbuttonborder"></a>  CMFCVisualManagerOffice2003::OnDrawButtonBorder  
- Struktura wywołuje tę metodę, gdy go rysuje obramowanie przycisku paska narzędzi.  
+ Struktura wywołuje tę metodę, gdy jej rysuje obramowanie przycisku paska narzędzi.  
   
 ```  
 virtual void OnDrawButtonBorder(
@@ -758,21 +758,21 @@ virtual void OnDrawButtonBorder(
  Wskaźnik do kontekstu urządzenia przycisku paska narzędzi.  
   
  [in] *pButton*  
- Wskaźnik do przycisku paska narzędzi. Platformę rysuje obramowanie tego przycisku.  
+ Wskaźnik na przycisku paska narzędzi. Struktura rysuje obramowanie tego przycisku.  
   
  [in] *rect*  
  Prostokąt, który określa granice przycisku paska narzędzi.  
   
  [in] *stanu*  
- Typ wyliczeniowy danych, który określa aktualny stan przycisku paska narzędzi.  
+ Typ wyliczany danych, który określa bieżący stan przycisku paska narzędzi.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja tej metody, wyświetla standardowe obramowania. Należy przesłonić tę metodę w pochodnej Menedżera visual Aby dostosować wygląd obramowania przycisku paska narzędzi.  
+ Domyślna implementacja tej metody, wyświetla standardowe obramowania. Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd obramowania przycisku paska narzędzi.  
   
  Możliwe stany przycisku paska narzędzi są `ButtonsIsRegular`, `ButtonsIsPressed`, lub `ButtonsIsHighlighted`.  
   
 ##  <a name="ondrawcaptionbarborder"></a>  CMFCVisualManagerOffice2003::OnDrawCaptionBarBorder  
- Struktura wywołuje tę metodę, gdy go rysuje obramowanie [klasy CMFCCaptionBar](../../mfc/reference/cmfccaptionbar-class.md) obiektu.  
+ Platforma wywołuje tę metodę, gdy jej rysuje obramowanie [klasa CMFCCaptionBar](../../mfc/reference/cmfccaptionbar-class.md) obiektu.  
   
 ```  
 virtual void OnDrawCaptionBarBorder(
@@ -788,22 +788,22 @@ virtual void OnDrawCaptionBarBorder(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *pBar*  
- Wskaźnik do [klasy CMFCCaptionBar](../../mfc/reference/cmfccaptionbar-class.md) obiektu. Platformę rysuje ten pasek podpisu.  
+ Wskaźnik do [klasa CMFCCaptionBar](../../mfc/reference/cmfccaptionbar-class.md) obiektu. Struktura rysuje ten pasek podpisu.  
   
  [in] *rect*  
- Prostokąt określa granice pasek tytułu.  
+ Prostokąt, który określa granice pasek podpisu.  
   
  [in] *clrBarBorder*  
  Kolor obramowania.  
   
  [in] *bFlatBorder*  
- `TRUE` czy obramowania powinien mieć wygląd płaski, 2D lub `FALSE` , jeśli nie.  
+ Wartość TRUE, jeśli obramowania powinna mieć wygląd stałą, 2D, lub FAŁSZ, jeśli nie.  
   
 ### <a name="remarks"></a>Uwagi  
- Zastępuje tę metodę w klasie pochodnej, aby dostosować wygląd obramowania paska podpisu.  
+ Należy przesłonić tę metodę w klasie pochodnej, aby dostosować wygląd obramowania paska podpisu.  
   
 ##  <a name="ondrawcheckboxex"></a>  CMFCVisualManagerOffice2003::OnDrawCheckBoxEx  
- Wywoływane przez platformę, gdy rysunek jest pole wyboru.  
+ Wywoływane przez platformę, gdy pole wyboru.  
   
 ```  
 virtual void OnDrawCheckBoxEx(
@@ -820,24 +820,24 @@ virtual void OnDrawCheckBoxEx(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *rect*  
- Prostokąt ograniczający pole wyboru.  
+ Prostokąt otaczający pole wyboru.  
   
  [in] *nInformacje*  
- Stan pola wyboru: 0, jeśli nie jest zaznaczone, 1, jeśli zaznaczone, 2 po zaznaczeniu mieszanego.  
+ Stan pola wyboru: 0, jeśli nie jest zaznaczone, 1, jeśli pole jest zaznaczone, 2 po zaznaczeniu mieszane.  
   
  [in] *bHighlighted*  
- `TRUE` Jeśli pole wyboru jest podświetlona, lub `FALSE` , jeśli nie.  
+ Wartość TRUE, jeśli pole wyboru jest wyróżniony, lub FAŁSZ, jeśli nie.  
   
  [in] *bPressed*  
- `TRUE` Jeśli pole wyboru zostanie naciśnięty, lub `FALSE` , jeśli nie.  
+ Wartość TRUE, jeśli pole wyboru jest wciśnięty, lub FAŁSZ, jeśli nie.  
   
  [in] *bWłączony*  
- `TRUE` Jeśli pole wyboru jest włączone, lub `FALSE` , jeśli nie.  
+ Wartość TRUE, jeśli pole wyboru jest włączone, lub FAŁSZ, jeśli nie.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="ondrawcomboborder"></a>  CMFCVisualManagerOffice2003::OnDrawComboBorder  
- Struktura wywołuje tę metodę po go rysuje obramowanie wystąpienia [CMFCToolBarComboBoxButton klasy](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md).  
+ Platforma wywołuje tę metodę, gdy jej rysuje obramowanie wokół wystąpienie [klasa CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md).  
   
 ```  
 virtual void OnDrawComboBorder(
@@ -851,28 +851,28 @@ virtual void OnDrawComboBorder(
   
 ### <a name="parameters"></a>Parametry  
  [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia przycisku pola kombi.  
+ Wskaźnik do kontekstu urządzenia przycisk pola kombi.  
   
  [in] *rect*  
  Prostokąt, który określa granice przycisk pola kombi.  
   
  [in] *bWyłączone*  
- Parametrów typu Boolean wskazującą, czy przycisk pola kombi jest niedostępny.  
+ Parametrów logiczny, który wskazuje, czy przycisk pola kombi jest niedostępny.  
   
  [in] *bIsDropped*  
- Parametrów typu Boolean wskazującą, czy jest rozwijana pola kombi.  
+ Parametr logiczny, który wskazuje, czy jest rozwijana pola kombi.  
   
  [in] *bIsHighlighted*  
- Parametrów typu Boolean wskazującą, czy przycisk pola kombi zostanie wyróżniona.  
+ Parametr logiczny, który wskazuje, czy przycisk pola kombi jest wyróżniona.  
   
  [in] *pButton*  
- Wskaźnik do `CMFCToolBarComboBoxButton` obiektu. Platformę rysuje ten przycisk pola kombi.  
+ Wskaźnik do `CMFCToolBarComboBoxButton` obiektu. Struktura rysuje ten przycisk pola kombi.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę metodę w pochodnej Menedżera visual Aby dostosować wygląd obramowania pola kombi.  
+ Należy przesłonić tę metodę w pochodnej Menedżera visual dostosować wygląd obramowania pola kombi.  
   
 ##  <a name="ondrawcombodropbutton"></a>  CMFCVisualManagerOffice2003::OnDrawComboDropButton  
- Struktura wywołuje tę metodę po go rysuje przycisk Usuń [CMFCToolBarComboBoxButton klasy](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md).  
+ Platforma wywołuje tę metodę, gdy jej rysuje przycisk listy [klasa CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md).  
   
 ```  
 virtual void OnDrawComboDropButton(
@@ -889,25 +889,25 @@ virtual void OnDrawComboDropButton(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *rect*  
- Prostokąt określa granice przycisk Usuń.  
+ Prostokąt, który określa granice przycisk listy.  
   
  [in] *bWyłączone*  
- Parametrów typu Boolean wskazującą, czy przycisk Usuń jest niedostępny.  
+ Parametrów logiczny, który wskazuje, czy przycisk listy jest niedostępny.  
   
  [in] *bIsDropped*  
- Parametrów typu Boolean wskazującą, czy jest rozwijana pola kombi.  
+ Parametr logiczny, który wskazuje, czy jest rozwijana pola kombi.  
   
  [in] *bIsHighlighted*  
- Parametrów typu Boolean wskazującą, czy jest podświetlony przycisk Usuń.  
+ Parametrów logiczny, który wskazuje, czy przycisk listy jest wyróżniony.  
   
  [in] *pButton*  
- Wskaźnik do `CMFCToolBarComboBoxButton` obiektu. Platformę rysuje przycisk docelowej dla tego przycisku pola kombi  
+ Wskaźnik do `CMFCToolBarComboBoxButton` obiektu. Struktura rysuje listy przycisk to przycisk pola kombi  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę metodę w pochodnej Menedżera visual dostosować wygląd przycisku upuszczania przycisku pola kombi.  
+ Należy przesłonić tę metodę w pochodnej Menedżera visual do dostosowywania wyglądu przycisku upuszczania przycisk pola kombi.  
   
 ##  <a name="ondrawcontrolborder"></a>  CMFCVisualManagerOffice2003::OnDrawControlBorder  
- Struktura wywołuje tę metodę po go rysuje obramowania formantu.  
+ Struktura wywołuje tę metodę podczas jego rysuje obramowania formantu.  
   
 ```  
 virtual void OnDrawControlBorder(CWnd* pWndCtrl);
@@ -915,7 +915,7 @@ virtual void OnDrawControlBorder(CWnd* pWndCtrl);
   
 ### <a name="parameters"></a>Parametry  
  [in] *pWndCtrl*  
- Wskaźnik do [klasa CWnd](../../mfc/reference/cwnd-class.md) obiekt reprezentujący do rysowania obramowania formantu.  
+ Wskaźnik do [klasa CWnd](../../mfc/reference/cwnd-class.md) obiekt reprezentujący kontrolki, dla którego ma zostać Rysuj obramowania.  
   
 ### <a name="remarks"></a>Uwagi  
   
@@ -935,18 +935,18 @@ virtual void OnDrawExpandingBox(
  Wskaźnik do kontekstu wyświetlania, w którym ma być rysowany rozwijającego się pola.  
   
  [in] *rect*  
- Prostokąt ograniczający powiększające pola do narysowania.  
+ Prostokąt otaczający rozszerzającym się pole do narysowania.  
   
  [in] *bIsOpened*  
- `TRUE` Jeśli pole w celu narysowania został otwarty, lub `FALSE` , jeśli nie.  
+ Wartość TRUE, jeśli pole do narysowania jest otwarty, lub FAŁSZ, jeśli nie.  
   
  [in] *colorBox*  
- Kolor obramowania poza pola do narysowania.  
+ Kolor poza obramowanie pola do narysowania.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="ondrawheaderctrlborder"></a>  CMFCVisualManagerOffice2003::OnDrawHeaderCtrlBorder  
- Struktura wywołuje tę metodę po go rysuje obramowanie wystąpienia [CMFCHeaderCtrl klasy](../../mfc/reference/cmfcheaderctrl-class.md).  
+ Platforma wywołuje tę metodę, gdy jej rysuje obramowanie wokół wystąpienie [klasa CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md).  
   
 ```  
 virtual void OnDrawHeaderCtrlBorder(
@@ -959,7 +959,7 @@ virtual void OnDrawHeaderCtrlBorder(
   
 ### <a name="parameters"></a>Parametry  
  [in] *pCtrl*  
- Wskaźnik do [klasy CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) obiektu. Platformę rysuje obramowanie tego formantu nagłówka.  
+ Wskaźnik do [klasa CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) obiektu. Struktura rysuje krawędzią tej kontrolki nagłówka.  
   
  [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
@@ -969,13 +969,13 @@ virtual void OnDrawHeaderCtrlBorder(
   
  [in] *bIsPressed*  
  [in] *bIsHighlighted*  
- Parametrów typu Boolean wskazującą, czy nagłówka formantu zostanie naciśnięty.  
+ Parametr logiczny, który wskazuje, czy użytkownik naciśnie kontrolkę nagłówka.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę metodę w pochodnej Menedżera visual dostosować obramowania formantu nagłówka.  
+ Należy przesłonić tę metodę w pochodnej Menedżer wizualnego do dostosowywania obramowania formantu nagłówka.  
   
 ##  <a name="ondrawmenuborder"></a>  CMFCVisualManagerOffice2003::OnDrawMenuBorder  
- Struktura wywołuje tę metodę, gdy go rysuje obramowanie [CMFCPopupMenu klasy](../../mfc/reference/cmfcpopupmenu-class.md).  
+ Platforma wywołuje tę metodę, gdy jej rysuje obramowanie [klasa CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md).  
   
 ```  
 virtual void OnDrawMenuBorder(
@@ -986,19 +986,19 @@ virtual void OnDrawMenuBorder(
   
 ### <a name="parameters"></a>Parametry  
  [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia [klasy CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) obiektu.  
+ Wskaźnik do kontekstu urządzenia dla [klasa CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) obiektu.  
   
  [in] *pMenu*  
- Wskaźnik do [klasy CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) obiektu. Platformę rysuje obramowanie tego menu podręcznego.  
+ Wskaźnik do [klasa CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) obiektu. Struktura rysuje obramowanie wokół tego menu podręcznego.  
   
  [in] *rect*  
- Prostokąt określa granice menu podręczne.  
+ Prostokąt, który określa granice z menu podręcznego.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja tej metody, wyświetla standardowe menu obramowanie. Należy przesłonić tę metodę w pochodnej Menedżera visual Aby dostosować wygląd obramowania menu.  
+ Domyślna implementacja tej metody, wyświetla standardowe menu obramowanie. Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd obramowania menu.  
   
 ##  <a name="ondrawoutlookbarsplitter"></a>  CMFCVisualManagerOffice2003::OnDrawOutlookBarSplitter  
- Platformę wywołuje tę metodę, gdy go rysuje podziału paska programu Outlook.  
+ Struktura wywołuje tę metodę, gdy jej rysuje podziału paska Outlook.  
   
 ```  
 virtual void OnDrawOutlookBarSplitter(
@@ -1014,7 +1014,7 @@ virtual void OnDrawOutlookBarSplitter(
  Prostokąt, który określa granice rozdzielacza.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę metodę w pochodnej Menedżera visual do dostosowywania wyglądu rozdzielaczy na pasku programu Outlook.  
+ Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd rozdzielaczy pasek programu Outlook.  
   
 ##  <a name="ondrawoutlookpagebuttonborder"></a>  CMFCVisualManagerOffice2003::OnDrawOutlookPageButtonBorder  
  Wywoływane przez platformę, gdy go rysuje obramowanie przycisku strony programu Outlook.  
@@ -1032,19 +1032,19 @@ virtual void OnDrawOutlookPageButtonBorder(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *rectBtn*  
- Prostokąt określa granicy przycisk Strona programu Outlook.  
+ Prostokąt, który określa granica przycisk Strona programu Outlook.  
   
  [in] *bIsHighlighted*  
- Wartość logiczna określająca, czy przycisk jest podświetlona.  
+ Wartość logiczna określająca, czy przycisk jest wyróżniona.  
   
  [in] *bIsPressed*  
- Wartość logiczna określająca, czy przycisk jest naciśnięty.  
+ Wartość logiczna określająca, czy przycisk jest wciśnięty.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę metodę w niestandardowych Menedżera visual Aby zmienić wygląd przycisku strony programu Outlook.  
+ Należy przesłonić tę metodę w niestandardowych Menedżer wizualnego, aby zmienić wygląd programu Outlook przycisk Strona.  
   
 ##  <a name="ondrawpaneborder"></a>  CMFCVisualManagerOffice2003::OnDrawPaneBorder  
- Struktura wywołuje tę metodę, gdy go rysuje obramowanie [klasy CPane](../../mfc/reference/cpane-class.md) obiektu.  
+ Platforma wywołuje tę metodę, gdy jej rysuje obramowanie [klasa CPane](../../mfc/reference/cpane-class.md) obiektu.  
   
 ```  
 virtual void OnDrawPaneBorder(
@@ -1055,19 +1055,19 @@ virtual void OnDrawPaneBorder(
   
 ### <a name="parameters"></a>Parametry  
  [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia na pasku przewijania formantu.  
+ Wskaźnik do kontekstu urządzenia paska sterowania.  
   
  [in] *pBar*  
- Wskaźnik do okienka. Menedżer visual rysuje obramowanie w tym okienku.  
+ Wskaźnik do okienka. Menedżer visual rysuje obramowanie to okienko.  
   
  [in] *rect*  
- Prostokąt oznacza granice okienka.  
+ Prostokąt, który wskazuje granice okienka.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja tej metody, wyświetla standardowe obramowania. Zastępuje tę metodę w klasie pochodnej, aby dostosować wygląd obramowania.  
+ Domyślna implementacja tej metody, wyświetla standardowe obramowania. Należy przesłonić tę metodę w klasie pochodnej, aby dostosować wygląd obramowania.  
   
 ##  <a name="ondrawpanecaption"></a>  CMFCVisualManagerOffice2003::OnDrawPaneCaption  
- Struktura wywołuje tę metodę po go rysuje podpis [klasy CDockablePane](../../mfc/reference/cdockablepane-class.md) obiektu.  
+ Platforma wywołuje tę metodę, gdy jej rysuje podpis dla [klasa CDockablePane](../../mfc/reference/cdockablepane-class.md) obiektu.  
   
 ```  
 virtual COLORREF OnDrawPaneCaption(
@@ -1083,24 +1083,24 @@ virtual COLORREF OnDrawPaneCaption(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *pBar*  
- Wskaźnik do [klasy CDockablePane](../../mfc/reference/cdockablepane-class.md) obiektu. Platformę rysuje podpis dla tego okienka.  
+ Wskaźnik do [klasa CDockablePane](../../mfc/reference/cdockablepane-class.md) obiektu. Struktura rysuje podpis dla tego okienka.  
   
  [in] *bWykonywanie aktywnych*  
- Parametrów typu Boolean wskazującą, czy pasek sterowania jest aktywna.  
+ Parametrów logiczny, który wskazuje, czy pasek sterowania jest aktywna.  
   
  [in] *rectCaption*  
  Prostokąt, który określa granice podpis.  
   
  [in] *rectButtons*  
- Prostokąt określa granice przycisków podpis.  
+ Prostokąt, który określa granice przyciski podpisu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametr, który wskazuje kolor tekstu podpisu.  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametrem, który wskazuje kolor tekstu podpis.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="ondrawpopupwindowborder"></a>  CMFCVisualManagerOffice2003::OnDrawPopupWindowBorder  
- Struktura wywołuje tę metodę po go rysuje obramowanie okna podręcznego.  
+ Struktura wywołuje tę metodę, gdy jej rysuje obramowanie, okna podręcznego.  
   
 ```  
 virtual void OnDrawPopupWindowBorder(
@@ -1113,12 +1113,12 @@ virtual void OnDrawPopupWindowBorder(
  Wskaźnik do kontekstu urządzenia okna podręcznego.  
   
  [in] *rect*  
- Prostokąt ograniczający w oknie podręcznym.  
+ Prostokąt otaczający w oknie podręcznym.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="ondrawpopupwindowbuttonborder"></a>  CMFCVisualManagerOffice2003::OnDrawPopupWindowButtonBorder  
- Struktura wywołuje tę metodę po go rysuje obramowanie przycisku w oknie podręcznym.  
+ Struktura wywołuje tę metodę, gdy jej rysuje obramowanie przycisku w oknie podręcznym.  
   
 ```  
 virtual void OnDrawPopupWindowButtonBorder(
@@ -1132,15 +1132,15 @@ virtual void OnDrawPopupWindowButtonBorder(
  Wskaźnik do kontekstu urządzenia przycisku.  
   
  [in] *rectClient*  
- Prostokąt ograniczający przycisku.  
+ Prostokąt otaczający przycisku.  
   
  [in] *pButton*  
- Wskaźnik do przycisku ( [klasy CMFCDesktopAlertWndButton](../../mfc/reference/cmfcdesktopalertwndbutton-class.md) obiektu).  
+ Wskaźnik do przycisku ( [klasa CMFCDesktopAlertWndButton](../../mfc/reference/cmfcdesktopalertwndbutton-class.md) obiektu).  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="ondrawpopupwindowcaption"></a>  CMFCVisualManagerOffice2003::OnDrawPopupWindowCaption  
- Struktura wywołuje tę metodę po go rysuje podpis okna podręcznego.  
+ Struktura wywołuje tę metodę, gdy go rysuje podpis oknie podręcznym.  
   
 ```  
 virtual COLORREF OnDrawPopupWindowCaption(
@@ -1154,19 +1154,19 @@ virtual COLORREF OnDrawPopupWindowCaption(
  Wskaźnik do kontekstu urządzenia podpisu.  
   
  [in] *rectCaption*  
- Prostokąt ograniczający podpisu.  
+ Prostokąt otaczający podpisu.  
   
  [in] *pPopupWnd*  
  Wskaźnik do okna podręcznego, dla którego ma być rysowany podpis.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Kolor tekstu podpisu.  
+ Kolor tekstu podpis.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę metodę w pochodnej Menedżera visual do dostosowywania wyglądu w oknie podręcznym podpisów.  
+ Należy przesłonić tę metodę w pochodnej Menedżer wizualnego do dostosowywania wyglądu napisów w oknie podręcznym.  
   
 ##  <a name="ondrawribbonbuttonsgroup"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonButtonsGroup  
- Platformę wywołuje tę metodę, gdy grupa przycisków go rysuje na Wstążce.  
+ Struktura wywołuje tę metodę, gdy jej rysuje Grupa przycisków na Wstążce.  
   
 ```  
 virtual COLORREF OnDrawRibbonButtonsGroup(
@@ -1180,19 +1180,19 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *pGroup*  
- Wskaźnik do grupy przycisków na Wstążce. Platformę rysuje przycisków z tej grupy.  
+ Wskaźnik do grupy przycisków na Wstążce. Struktura rysuje przycisków z tej grupy.  
   
  [in] *rectGroup*  
  Prostokąt, który określa granice tej grupy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartością zastrzeżoną. Domyślna implementacja zwraca -1.  
+ Zastrzeżonej wartości. Domyślna implementacja zwraca wartość -1.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę metodę w pochodnej Menedżera visual do dostosowywania wyglądu grupy przycisków na Wstążce.  
+ Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd Grupa przycisków na Wstążce.  
   
 ##  <a name="ondrawribboncategorycaption"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonCategoryCaption  
- Struktura wywołuje tę metodę po go rysuje pasek podpisu dla kategorii wstążki.  
+ Struktura wywołuje tę metodę, gdy jej rysuje pasku podpisu dla kategorii wstążki.  
   
 ```  
 virtual COLORREF OnDrawRibbonCategoryCaption(
@@ -1202,19 +1202,19 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
   
 ### <a name="parameters"></a>Parametry  
  [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia kategorii wstążki.  
+ Wskaźnik do kontekstu urządzenia należącego do kategorii wstążki.  
   
  [in] *pContextCaption*  
- Wskaźnik do paska podpisu. Menedżer visual rysuje to [CMFCRibbonContextCaption klasy](../../mfc/reference/cmfcribboncontextcaption-class.md).  
+ Wskaźnik do paska podpisu. Menedżer wizualny rysuje to [klasa CMFCRibbonContextCaption](../../mfc/reference/cmfcribboncontextcaption-class.md).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametrem, który wskazuje kolor tekstu na pasku podpisu.  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parametrem, który wskazuje koloru tekstu na pasku podpisu.  
   
 ### <a name="remarks"></a>Uwagi  
- Zastępuje tę metodę w klasie pochodnej, aby dostosować wygląd paska podpisu dla kategorii wstążki.  
+ Należy przesłonić tę metodę w klasie pochodnej, aby dostosować wygląd paska podpisu dla kategorii wstążki.  
   
 ##  <a name="ondrawribboncategorytab"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonCategoryTab  
- Platformę wywołuje tę metodę, gdy go rysuje kartę kategorii wstążki.  
+ Struktura wywołuje tę metodę, gdy jej rysuje na karcie kategorii wstążki.  
   
 ```  
 virtual COLORREF OnDrawRibbonCategoryTab(
@@ -1228,19 +1228,19 @@ virtual COLORREF OnDrawRibbonCategoryTab(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *pTab*  
- Wskaźnik do obiektu karty wstążki. Platformę rysuje na tej karcie.  
+ Wskaźnik do obiektu karty wstążki. Struktura rysuje na tej karcie.  
   
  [in] *bIsActive*  
- `TRUE` Jeśli karta jest aktywny, lub `FALSE` , jeśli nie.  
+ Wartość TRUE, jeśli karta jest aktywny, lub FAŁSZ, jeśli nie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Kolor, który jest używany w karcie kategorii wstążki.  
+ Kolor, który jest używany dla tekstu, na karcie kategorii wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę metodę w pochodnej Menedżera visual do dostosowywania wyglądu karty kategorii wstążki.  
+ Należy przesłonić tę metodę w pochodnej Menedżer wizualnego do dostosowywania wyglądu karty kategorii wstążki.  
   
 ##  <a name="ondrawribbonprogressbar"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonProgressBar  
- Struktura wywołuje tę metodę, gdy go rysuje [klasy CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md)obiektu.  
+ Platforma wywołuje tę metodę, gdy jej rysuje [klasa CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md)obiektu.  
   
 ```  
 virtual void OnDrawRibbonProgressBar(
@@ -1256,22 +1256,22 @@ virtual void OnDrawRibbonProgressBar(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *pProgress*  
- Wskaźnik do [klasy CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md) obiektu. Platformę rysuje ten pasek postępu.  
+ Wskaźnik do [klasa CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md) obiektu. Struktura rysuje ten pasek postępu.  
   
  [in] *rectProgress*  
  Prostokąt, który określa granice pasek postępu.  
   
  [in] *rectChunk*  
- Prostokąt określa granice obszaru otaczającego pasek postępu.  
+ Prostokąt, który określa granice obszar otaczający pasek postępu.  
   
  [in] *bInfiniteMode*  
- `TRUE` Jeśli pasek jest w trybie nieskończone lub `FALSE` , jeśli nie. Domyślna implementacja nie korzysta z tego parametru.  
+ Wartość TRUE, jeśli pasek nie jest w trybie nieskończoną lub, jeśli wartość FALSE. Domyślna implementacja nie używać tego parametru.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w klasie pochodnej, aby dostosować wygląd paska postępu  
   
 ##  <a name="ondrawribbonquickaccesstoolbarseparator"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonQuickAccessToolBarSeparator  
- Platformę wywołuje tę metodę, gdy go rysuje separatora na pasku narzędzi Szybki dostęp do wstążki.  
+ Struktura wywołuje tę metodę, gdy jej rysuje separatorem w paska narzędzi szybkiego dostępu dla wstążki.  
   
 ```  
 virtual void OnDrawRibbonQuickAccessToolBarSeparator(
@@ -1285,16 +1285,16 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *pSeparator*  
- Wskaźnik do [klasy CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md) obiektu. Platformę rysuje tego separatora wstążki.  
+ Wskaźnik do [klasa CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md) obiektu. Struktura rysuje tego separatora wstążki.  
   
  [in] *rect*  
- Prostokąt określa granice separatora.  
+ Prostokąt, który określa granice separatora.  
   
 ### <a name="remarks"></a>Uwagi  
- Zastępuje tę metodę w klasie pochodnej, aby dostosować wygląd separatorów wstążki na pasku narzędzi Szybki dostęp.  
+ Należy przesłonić tę metodę w klasie pochodnej, aby dostosować wygląd separatory wstążki na pasku narzędzi Szybki dostęp.  
   
 ##  <a name="ondrawribbonsliderchannel"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonSliderChannel  
- Struktura wywołuje tę metodę po go rysuje kanału [CMFCRibbonSlider klasy](../../mfc/reference/cmfcribbonslider-class.md).  
+ Platforma wywołuje tę metodę, gdy jej rysuje kanału [klasa CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md).  
   
 ```  
 virtual void OnDrawRibbonSliderChannel(
@@ -1308,16 +1308,16 @@ virtual void OnDrawRibbonSliderChannel(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *pSlider*  
- Wskaźnik do [klasy CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) obiektu. Platformę rysuje kanału dla suwak wstążki.  
+ Wskaźnik do [klasa CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) obiektu. Struktura rysuje kanał dla tego suwaka wstążki.  
   
  [in] *rect*  
- Prostokąt określa granice dla kanału suwaka wstążki.  
+ Prostokąt, który określa granice dla kanału suwaka wstążki.  
   
 ### <a name="remarks"></a>Uwagi  
- Zastępuje tę metodę w klasie pochodnej, aby dostosować wygląd kanału suwaka wstążki.  
+ Należy przesłonić tę metodę w klasie pochodnej, aby dostosować wygląd kanał suwaka wstążki.  
   
 ##  <a name="ondrawribbonsliderthumb"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonSliderThumb  
- Struktura wywołuje tę metodę po go rysuje uchwytu [klasy CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) obiektu  
+ Platforma wywołuje tę metodę, gdy jej rysuje uchwytu [klasa CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) obiektu  
   
 ```  
 virtual void OnDrawRibbonSliderThumb(
@@ -1334,25 +1334,25 @@ virtual void OnDrawRibbonSliderThumb(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *pSlider*  
- Wskaźnik do [CMFCRibbonSlider klasy](../../mfc/reference/cmfcribbonslider-class.md). Platformę rysuje thumb dla suwak wstążki.  
+ Wskaźnik do [klasa CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md). Struktura rysuje miniatury dla tego suwaka wstążki.  
   
  [in] *rect*  
- Prostokąt określa granice thumb suwakiem wstążki.  
+ Prostokąt, który określa granice miniatury dla suwaka wstążki.  
   
  [in] *bIsHighlighted*  
- Parametrów typu Boolean wskazującą, czy zostanie wyróżniona stronie przycisku suwaka.  
+ Parametrów logiczny, który wskazuje, czy jest wyróżniona przycisku suwaka.  
   
  [in] *bIsPressed*  
- Parametrów typu Boolean wskazującą, czy naciśnięciu przycisku suwaka.  
+ Parametr logiczny, który wskazuje, czy naciśnięciu przycisku suwaka.  
   
  [in] *bIsDisabled*  
- Parametrów typu Boolean wskazującą, czy jest niedostępny.  
+ Parametrów logiczny, który wskazuje, czy jest niedostępny.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę metodę w pochodnej Menedżera visual Aby dostosować wygląd przycisku przewijania suwakiem wstążki.  
+ Należy przesłonić tę metodę w pochodnej Menedżer wizualnego do dostosowywania wyglądu przycisku przewijania suwaka wstążki.  
   
 ##  <a name="ondrawribbonsliderzoombutton"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonSliderZoomButton  
- Struktura wywołuje tę metodę po go rysuje przycisków powiększenia dla [klasy CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) obiektu.  
+ Platforma wywołuje tę metodę, gdy jej rysuje przycisków powiększenia dla [klasa CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) obiektu.  
   
 ```  
 virtual void OnDrawRibbonSliderZoomButton(
@@ -1370,28 +1370,28 @@ virtual void OnDrawRibbonSliderZoomButton(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *pSlider*  
- Wskaźnik do [klasy CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) obiektu. Platformę rysuje suwak wstążki.  
+ Wskaźnik do [klasa CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) obiektu. Struktura rysuje tego suwaka wstążki.  
   
  [in] *rect*  
- Prostokąt określa granice przycisków powiększenia na suwaku wstążki.  
+ Prostokąt, który określa granice przycisków powiększenia suwaka wstążki.  
   
  [in] *bIsZoomOut*  
- `TRUE` Jeśli lewy przycisk powinien być rysowany w ramach " **-**" dla powiększenia, lub `FALSE` Jeśli prawy przycisk powinien być rysowany w ramach " **+**" dla powiększanie.  
+ Wartość TRUE, jeśli lewy przycisk z powinien być rysowany w ramach " **-**" dla powiększenia, lub FAŁSZ, jeśli prawy przycisk powinien być rysowany w ramach " **+**" dla powiększanie.  
   
  [in] *bIsHighlighted*  
- Parametrów typu Boolean wskazującą, czy przycisk jest podświetlona.  
+ Parametr logiczny, który wskazuje, czy przycisk jest wyróżniona.  
   
  [in] *bIsPressed*  
- Parametrów typu Boolean wskazującą, czy przycisk jest naciśnięty.  
+ Parametr logiczny, który wskazuje, czy przycisk jest wciśnięty.  
   
  [in] *bIsDisabled*  
- Parametrów typu Boolean wskazującą, czy przycisk jest niedostępny.  
+ Parametr logiczny, który wskazuje, czy przycisk jest niedostępny.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślnie przycisków powiększenia na suwaku wstążki są koło albo **+** lub **-** Zaloguj się w środku. Aby dostosować wygląd przycisków powiększenia, należy przesłonić tę metodę w pochodnej Menedżera visual.  
+ Domyślnie przycisków powiększenia na suwaku wstążki są koło z oboma **+** lub **-** Zaloguj się w środku. Aby dostosować wygląd przycisków powiększenia, należy przesłonić tę metodę w pochodnej Menedżer wizualnego.  
   
 ##  <a name="ondrawribbonstatusbarpane"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonStatusBarPane  
- Struktura wywołuje tę metodę po go rysuje okienko na pasku stanu.  
+ Struktura wywołuje tę metodę, gdy jej rysuje okienko na pasku stanu.  
   
 ```  
 virtual COLORREF OnDrawRibbonStatusBarPane(
@@ -1408,16 +1408,16 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
  Wskaźnik do paska stanu, który zawiera okienka.  
   
  [in] *pPane*  
- Wskaźnik do okienku paska stanu. Platformę rysuje to [klasy CMFCRibbonStatusBarPane](../../mfc/reference/cmfcribbonstatusbarpane-class.md) obiektu.  
+ Wskaźnik do okienka paska stanu. Struktura rysuje to [klasa CMFCRibbonStatusBarPane](../../mfc/reference/cmfcribbonstatusbarpane-class.md) obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartością zastrzeżoną. Domyślna implementacja zwraca -1.  
+ Zastrzeżonej wartości. Domyślna implementacja zwraca wartość -1.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę metodę w pochodnej Menedżera visual do dostosowywania wyglądu okienko na pasku stanu.  
+ Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd okienku na pasku stanu.  
   
 ##  <a name="ondrawscrollbuttons"></a>  CMFCVisualManagerOffice2003::OnDrawScrollButtons  
- Struktura wywołuje tę metodę po go rysuje przyciski przewijania.  
+ Struktura wywołuje tę metodę, gdy jej rysuje przyciski przewijania.  
   
 ```  
 virtual void OnDrawScrollButtons(
@@ -1433,21 +1433,21 @@ virtual void OnDrawScrollButtons(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *rect*  
- Prostokąt ograniczający przyciski przewijania.  
+ Prostokąt otaczający przyciski przewijania.  
   
  [in] *nBorderSize*  
- Rozmiar obramowania do rysowania wokół przyciski przewijania.  
+ Rozmiar obramowania, aby narysować dookoła przyciski przewijania.  
   
  [in] *iImage*  
  Identyfikator obrazu do rysowania w przyciski przewijania.  
   
  [in] *bHilited*  
- `TRUE` Jeśli zostały wyróżnione przyciski przewijania, lub `FALSE` , jeśli nie.  
+ Wartość TRUE, jeśli przyciski przewijania są wyróżnione, lub FAŁSZ, jeśli nie.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="ondrawseparator"></a>  CMFCVisualManagerOffice2003::OnDrawSeparator  
- Struktura wywołuje tę metodę po go rysuje separatora.  
+ Struktura wywołuje tę metodę, gdy go rysuje separatora.  
   
 ```  
 virtual void OnDrawSeparator(
@@ -1459,22 +1459,22 @@ virtual void OnDrawSeparator(
   
 ### <a name="parameters"></a>Parametry  
  [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia pasek sterowania.  
+ Wskaźnik do kontekstu urządzenia dla paska sterowania.  
   
  [in] *pBar*  
- Wskaźnik do okienka zawierającego separatora.  
+ Wskaźnik do okienka, który zawiera separatora.  
   
  [in] *rect*  
- Prostokąt określa granice separatora.  
+ Prostokąt, który określa granice separatora.  
   
  [in] *bIsHoriz*  
- `TRUE` Jeśli okienko jest zadokowany poziomo lub `FALSE` Jeśli panel jest zadokowany w pionie.  
+ Wartość TRUE, jeśli okienko jest zadokowany w poziomie, lub FAŁSZ, jeśli panel jest zadokowany w pionie.  
   
 ### <a name="remarks"></a>Uwagi  
- Separatory są używane na paski sterowania do oddzielnych grup powiązane ikony. Domyślna implementacja tej metody zawiera standardowe separatora. Należy przesłonić tę metodę w pochodnej Menedżera visual do dostosowywania wyglądu separatora.  
+ Separatory są używane na paski sterowania do oddzielania grup powiązane ikony. Domyślna implementacja tej metody powoduje wyświetlenie standardowa separatora. Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd separatora.  
   
 ##  <a name="ondrawshowallmenuitems"></a>  CMFCVisualManagerOffice2003::OnDrawShowAllMenuItems  
- Struktura wywołuje tę metodę po go rysuje wszystkie elementy w menu.  
+ Platforma wywołuje tę metodę, gdy jej pobiera wszystkie elementy w menu  
   
 ```  
 virtual void OnDrawShowAllMenuItems(
@@ -1488,7 +1488,7 @@ virtual void OnDrawShowAllMenuItems(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *rect*  
- Prostokąt ograniczający menu do narysowania.  
+ Prostokąt otaczający menu do narysowania.  
   
  [in] *stanu*  
  Stan przycisku.  
@@ -1496,7 +1496,7 @@ virtual void OnDrawShowAllMenuItems(
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="ondrawstatusbarpaneborder"></a>  CMFCVisualManagerOffice2003::OnDrawStatusBarPaneBorder  
- Struktura wywołuje tę metodę po go rysuje obramowanie [CMFCStatusBar — klasa](../../mfc/reference/cmfcstatusbar-class.md) obiektu.  
+ Platforma wywołuje tę metodę, gdy jej rysuje obramowanie [klasa CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) obiektu.  
   
 ```  
 virtual void OnDrawStatusBarPaneBorder(
@@ -1512,22 +1512,22 @@ virtual void OnDrawStatusBarPaneBorder(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *pBar*  
- Wskaźnik do [CMFCStatusBar — klasa](../../mfc/reference/cmfcstatusbar-class.md) obiektu. Platformę rysuje tego obiektu paska stanu.  
+ Wskaźnik do [klasa CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) obiektu. Struktura rysuje ten obiekt paska stanu.  
   
  [in] *rectPane*  
- Prostokąt określa granice na pasku stanu.  
+ Prostokąt, który określa granice na pasku stanu.  
   
  [in] *uiID*  
  Identyfikator na pasku stanu.  
   
  [in] *nStyle*  
- Styl na pasku stanu.  
+ Styl paska stanu.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę metodę w pochodnej Menedżera visual Aby dostosować wygląd obramowania dla `CMFCStatusBar` obiektu.  
+ Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd obramowania dla `CMFCStatusBar` obiektu.  
   
 ##  <a name="ondrawstatusbarprogress"></a>  CMFCVisualManagerOffice2003::OnDrawStatusBarProgress  
- Struktura wywołuje tę metodę po go rysuje wskaźnika postępu [CMFCStatusBar — klasa](../../mfc/reference/cmfcstatusbar-class.md) obiektu  
+ Platforma wywołuje tę metodę, gdy jej rysuje wskaźnika postępu w [klasa CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) obiektu  
   
 ```  
 virtual void OnDrawStatusBarProgress(
@@ -1544,10 +1544,10 @@ virtual void OnDrawStatusBarProgress(
   
 ### <a name="parameters"></a>Parametry  
  [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia dla paska stanu  
+ Wskaźnik do kontekstu urządzenia na pasek stanu  
   
  [in] *pStatusBar*  
- [CMFCStatusBar — klasa](../../mfc/reference/cmfcstatusbar-class.md) obiekt, który zawiera pasek postępu.  
+ [Klasa CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) obiekt, który zawiera pasek postępu.  
   
  [in] *rectProgress*  
  Prostokąt, który określa granice pasek postępu.  
@@ -1556,20 +1556,20 @@ virtual void OnDrawStatusBarProgress(
  Całkowita liczba pasek postępu.  
   
  [in] *nProgressCurr*  
- Bieżący postęp pasek postępu.  
+ Bieżący postęp dla paska postępu.  
   
  [in] *clrBar*  
- Początkowy kolor pasek postępu. Wartość jest początkowy kolor gradientu lub pełny kolor pasek postępu.  
+ Kolor początkowy pasek postępu. Wartość jest początek gradientu koloru albo pełny kolor paska postępu.  
   
  [in] *clrProgressBarDest*  
  [in] *clrProgressText*  
  [in] *bProgressText*  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę metodę w pochodnej Menedżera visual Aby dostosować wygląd paska postępu na pasku stanu.  
+ Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd paska postępu na pasku stanu.  
   
 ##  <a name="ondrawstatusbarsizebox"></a>  CMFCVisualManagerOffice2003::OnDrawStatusBarSizeBox  
- Struktura wywołuje tę metodę po go rysuje rozmiar pola [CMFCStatusBar — klasa](../../mfc/reference/cmfcstatusbar-class.md).  
+ Platforma wywołuje tę metodę, gdy go rysuje rozmiar pola [klasa CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md).  
   
 ```  
 virtual void OnDrawStatusBarSizeBox(
@@ -1583,16 +1583,16 @@ virtual void OnDrawStatusBarSizeBox(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *pStatBar*  
- Wskaźnik do paska stanu. Platformę rysuje polu Rozmiar tego paska stanu.  
+ Wskaźnik na pasku stanu. Struktura rysuje polu Rozmiar tego paska stanu.  
   
  [in] *rectSizeBox*  
- Prostokąt określa granice polu rozmiar.  
+ Prostokąt, który określa granice okno rozmiaru.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę metodę w pochodnej Menedżera visual do dostosowywania wyglądu rozmiar pola na pasku stanu.  
+ Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd pola rozmiar na pasku stanu.  
   
 ##  <a name="ondrawtab"></a>  CMFCVisualManagerOffice2003::OnDrawTab  
- Struktura wywołuje tę metodę po go rysuje kartach [klasy CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) obiektu.  
+ Platforma wywołuje tę metodę, gdy jej rysuje karty [klasa CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) obiektu.  
   
 ```  
 virtual void OnDrawTab(
@@ -1608,22 +1608,22 @@ virtual void OnDrawTab(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *rectTab*  
- Prostokąt, który określa granice formantu karty.  
+ Prostokąt, który określa granice formantu.  
   
  [in] *iTab*  
- Indeks karcie rysuje platformę.  
+ Indeks karty, który rysuje platformę.  
   
  [in] *bIsActive*  
- Parametr wartość logiczna określająca, czy karta jest aktywna.  
+ Parametr logiczny, który określa, czy karta jest aktywny.  
   
  [in] *pTabWnd*  
- Wskaźnik do [klasy CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) obiektu. Platformę rysuje tego formantu karty.  
+ Wskaźnik do [klasa CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) obiektu. Struktura rysuje ten formant karty.  
   
 ### <a name="remarks"></a>Uwagi  
- A `CMFCBaseTabCtrl` obiektu wywołuje tę metodę, gdy przetwarza komunikat WM_PAINT. Zastępuje tę metodę w klasie pochodnej, aby dostosować wygląd kart.  
+ Element `CMFCBaseTabCtrl` obiektu wywołuje tę metodę, gdy przetwarza komunikat WM_PAINT. Należy przesłonić tę metodę w klasie pochodnej, aby dostosować wygląd karty.  
   
 ##  <a name="ondrawtabsbuttonborder"></a>  CMFCVisualManagerOffice2003::OnDrawTabsButtonBorder  
- Struktura wywołuje tę metodę po go rysuje obramowanie przycisku kartę.  
+ Struktura wywołuje tę metodę, gdy go rysuje obramowanie przycisku kartę.  
   
 ```  
 virtual void OnDrawTabsButtonBorder(
@@ -1639,22 +1639,22 @@ virtual void OnDrawTabsButtonBorder(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *rect*  
- Prostokąt określa granice przycisk tab.  
+ Prostokąt, który określa granice przycisku kartę.  
   
  [in] *pButton*  
- Wskaźnik do [klasy CMFCButton](../../mfc/reference/cmfcbutton-class.md) dla którego ramach rysuje obramowanie.  
+ Wskaźnik do [klasa CMFCButton](../../mfc/reference/cmfcbutton-class.md) dla którego ramach rysuje obramowanie.  
   
  [in] *uiState*  
  Stan przycisku (zobacz [CButton::GetState](../../mfc/reference/cbutton-class.md#getstate)).  
   
  [in] *pWndTab*  
- Wskaźnik do nadrzędnego okna kartę.  
+ Wskaźnik do nadrzędnego okna karty.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę metodę w pochodnej Menedżera visual Aby dostosować wygląd obramowania przycisku kartę.  
+ Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd obramowania przycisku kartę.  
   
 ##  <a name="ondrawtask"></a>  CMFCVisualManagerOffice2003::OnDrawTask  
- Struktura wywołuje tę metodę, gdy go rysuje [klasy CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md) obiektu.  
+ Platforma wywołuje tę metodę, gdy jej rysuje [klasa CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md) obiektu.  
   
 ```  
 virtual void OnDrawTask(
@@ -1670,22 +1670,22 @@ virtual void OnDrawTask(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *pTask*  
- Wskaźnik do [klasy CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md) obiektu. To zadanie jest rysowane przez platformę.  
+ Wskaźnik do [klasa CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md) obiektu. Struktura rysuje tego zadania.  
   
  [in] *pIcons*  
- Wskaźnik do listy obrazów skojarzonych z okienka zadań. Każde zadanie zawiera indeks obrazu na tej liście.  
+ Wskaźnik do listy obrazów skojarzone z okienka zadań. Każde zadanie zawiera indeks obrazu na tej liście.  
   
  [in] *bIsHighlighted*  
- Parametr wartość logiczna określająca, czy wyświetlane zadania zostanie wyróżniona.  
+ Parametrów logiczny, który określa, czy wyświetlane zadania zostanie wyróżniona.  
   
  [in] *bIsSelected*  
- Wartość logiczna parametr, który określa, czy wyświetlane zadania jest zaznaczone.  
+ Parametr logiczny, który określa, czy wybrana jest wyświetlane zadanie.  
   
 ### <a name="remarks"></a>Uwagi  
- Platformę Wyświetla zadania na pasku zadań jako ikonę i tekst. `pIcons` Parametr zawiera ikonę wskazanego przez zadania `pTask`. Zastępuje tę metodę w klasie pochodnej, aby dostosować wygląd zadania na pasku zadań.  
+ Struktura wyświetla zadania, na pasku zadań jako ikonę i tekst. *PIcons* parametr zawiera ikonę wskazanego przez zadania *pTask*. Należy przesłonić tę metodę w klasie pochodnej, aby dostosować wygląd zadania na pasku zadań.  
   
 ##  <a name="ondrawtasksgroupareaborder"></a>  CMFCVisualManagerOffice2003::OnDrawTasksGroupAreaBorder  
- Struktura wywołuje tę metodę po go rysuje obramowanie wokół grupy w [klasy CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) obiektu.  
+ Platforma wywołuje tę metodę, gdy jej rysuje obramowanie wokół grupy w [klasa CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) obiektu.  
   
 ```  
 virtual void OnDrawTasksGroupAreaBorder(
@@ -1700,19 +1700,19 @@ virtual void OnDrawTasksGroupAreaBorder(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *rect*  
- Prostokąt określa granice obszaru grupy w okienku zadań.  
+ Prostokąt, który określa granice przestrzeni grupy w okienku zadań.  
   
  [in] *bOpcje specjalne*  
- Parametr wartość logiczna określająca, czy obramowania zostanie wyróżniona. Wartość `TRUE` wskazuje, że zostanie wyróżniona obramowania.  
+ Parametr logiczny określający, jeśli zostanie wyróżniona obramowania. Wartość TRUE wskazuje, że obramowanie jest wyróżniona.  
   
  [in] *bNoTitle*  
- Wartość logiczna parametr, który określa, czy obszar grupy ma tytuł. Wartość `TRUE` oznacza, że obszar grupy nie mają tytuł.  
+ Parametr logiczny, który określa, czy w obszarze grupy ma tytuł. Wartość TRUE oznacza, że w obszarze grupy ma tytuł.  
   
 ### <a name="remarks"></a>Uwagi  
- Przesłonić tę funkcję w klasie pochodnej, aby dostosować obramowania wokół obszaru grupy, w okienku zadań.  
+ Przesłonić tę funkcję w klasie pochodnej, aby dostosować obramowanie wokół obszaru grupy, w okienku zadań.  
   
 ##  <a name="ondrawtasksgroupcaption"></a>  CMFCVisualManagerOffice2003::OnDrawTasksGroupCaption  
- Struktura wywołuje tę metodę po go rysuje podpis [klasy CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) obiektu.  
+ Platforma wywołuje tę metodę, gdy jej rysuje podpis [klasa CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) obiektu.  
   
 ```  
 virtual void OnDrawTasksGroupCaption(
@@ -1728,22 +1728,22 @@ virtual void OnDrawTasksGroupCaption(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *pGroup*  
- Wskaźnik do [klasy CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) obiektu. Platformę rysuje podpis dla tej grupy.  
+ Wskaźnik do [klasa CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) obiektu. Struktura rysuje podpis dla tej grupy.  
   
  [in] *bIsHighlighted*  
- Parametrów typu Boolean wskazującą, czy grupa zostanie wyróżniona.  
+ Parametr logiczny, który wskazuje, czy grupa jest wyróżniona.  
   
  [in] *bIsSelected*  
- Parametrów typu Boolean wskazującą, czy grupa jest aktualnie zaznaczone.  
+ Parametr logiczny, który wskazuje, czy grupa jest aktualnie wybrany.  
   
  [in] *bCanCollapse*  
- Parametrów typu Boolean wskazującą, czy grupa może zostać zwinięty.  
+ Parametr logiczny, który wskazuje, czy grupa może zostać zwinięty.  
   
 ### <a name="remarks"></a>Uwagi  
  Należy przesłonić tę metodę w klasie pochodnej, aby dostosować podpis `CMFCTasksPaneTaskGroup`.  
   
 ##  <a name="ondrawtearoffcaption"></a>  CMFCVisualManagerOffice2003::OnDrawTearOffCaption  
- Struktura wywołuje tę metodę po go rysuje podpis [klasy CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) obiektu.  
+ Platforma wywołuje tę metodę, gdy jej rysuje podpis [klasa CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) obiektu.  
   
 ```  
 virtual void OnDrawTearOffCaption(
@@ -1760,15 +1760,15 @@ virtual void OnDrawTearOffCaption(
  Prostokąt, który określa granice podpis.  
   
  [in] *bIsActive*  
- `TRUE` Jeśli podpis jest aktywna; `FALSE` inaczej.  
+ Wartość TRUE, jeśli podpis jest aktywny; Wartość FALSE w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja jest wywoływana przez platformę, gdy [klasy CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) obiektu przetwarza komunikat WM_PAINT i wystawić oderwania podpis.  
+ Ta funkcja jest wywoływana przez platformę, gdy [klasa CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) obiekt przetwarza komunikat WM_PAINT i należy narysować odrywania podpis.  
   
- Zastępuje tę metodę w klasie pochodnej, aby dostosować wygląd podpisów oderwania pasków.  
+ Zastępuje tę metodę w klasie pochodnej, aby dostosować wygląd podpisy odrywania pasków.  
   
 ##  <a name="onerasepopupwindowbutton"></a>  CMFCVisualManagerOffice2003::OnErasePopupWindowButton  
- Struktura wywołuje tę metodę po go na partycje powoduje usunięcie przycisk w oknie podręcznym.  
+ Struktura wywołuje tę metodę, gdy go na partycje powoduje usunięcie przycisku w oknie podręcznym.  
   
 ```  
 virtual void OnErasePopupWindowButton(
@@ -1785,12 +1785,12 @@ virtual void OnErasePopupWindowButton(
  Prostokąt, który określa obszar klienta okna podręcznego.  
   
  [in] *pButton*  
- Wskaźnik do przycisk, aby zostać wymazane.  
+ Wskaźnik na przycisku, aby zostać wymazane.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onerasetabsarea"></a>  CMFCVisualManagerOffice2003::OnEraseTabsArea  
- Platformę wywołuje tę metodę, gdy go na partycje powoduje usunięcie wartości obszar karty okna kartę.  
+ Struktura wywołuje tę metodę, gdy go na partycje powoduje usunięcie obszaru karty w oknie kartę.  
   
 ```  
 virtual void OnEraseTabsArea(
@@ -1807,15 +1807,15 @@ virtual void OnEraseTabsArea(
  Prostokąt, który określa granice wartości obszar karty.  
   
  [in] *pTabWnd*  
- Wskaźnik do okna kartę. Platformę na partycje powoduje usunięcie wartości obszar karty w oknie określonej karty.  
+ Wskaźnik do okna karty. Struktura usuwa obszaru karty w oknie zakładek.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja jest wywoływana przez platformę, gdy [klasy CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) obiekt przetwarza komunikat WM_PAINT i spowoduje usunięcie wartości obszar karty.  
+ Ta funkcja jest wywoływana przez platformę, gdy [klasa CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) obiekt przetwarza komunikat WM_PAINT i usuwa wartości obszar karty.  
   
- Należy przesłonić tę metodę w pochodnej Menedżera visual dostosować wygląd kart.  
+ Należy przesłonić tę metodę w pochodnej Menedżer wizualnego do dostosowywania wyglądu karty.  
   
 ##  <a name="onerasetabsbutton"></a>  CMFCVisualManagerOffice2003::OnEraseTabsButton  
- Platformę wywołuje tę metodę, gdy go na partycje powoduje usunięcie ikona przycisku kartę i tekst.  
+ Struktura wywołuje tę metodę, gdy go na partycje powoduje usunięcie tekst i ikona przycisku kartę.  
   
 ```  
 virtual void OnEraseTabsButton(
@@ -1830,21 +1830,21 @@ virtual void OnEraseTabsButton(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *rect*  
- Prostokąt określa granice przycisk tab.  
+ Prostokąt, który określa granice przycisku kartę.  
   
  [in] *pButton*  
- Wskaźnik do przycisku kartę. Platformę usuwa tekstu i ikony dla przycisku.  
+ Wskaźnik do przycisku kartę. Struktura Usuwa tekst i ikona dla tego przycisku.  
   
  [in] *pWndTab*  
- Wskaźnik do formantu karty, który zawiera przycisk kartę.  
+ Wskaźnik do formantu karty, która zawiera przycisk kartę.  
   
 ### <a name="remarks"></a>Uwagi  
- Usuwa platformę tekstu i ikony dla przycisku po [klasy CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) obiektu przetwarza komunikat WM_ERASEBKGND  
+ Struktura Usuwa tekst i ikona przycisku po [klasa CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) obiektu przetwarza komunikat WM_ERASEBKGND  
   
- Należy przesłonić tę metodę w pochodnej Menedżera visual Aby dostosować wygląd przycisków karty.  
+ Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd przycisków karty.  
   
 ##  <a name="onerasetabsframe"></a>  CMFCVisualManagerOffice2003::OnEraseTabsFrame  
- Struktura wywołuje tę metodę po go na partycje powoduje usunięcie ramki na [klasy CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) obiektu.  
+ Platforma wywołuje tę metodę, gdy go na partycje powoduje usunięcie ramkę na [klasa CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) obiektu.  
   
 ```  
 virtual BOOL OnEraseTabsFrame(
@@ -1858,19 +1858,19 @@ virtual BOOL OnEraseTabsFrame(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *rect*  
- Prostokąt określa granice okna kartę.  
+ Prostokąt, który określa granice tego okna karty.  
   
  [in] *pTabWnd*  
- Wskaźnik do okna kartę. Platformę usuwa ramki dla tego [CMFCBaseTabCtrl klasy](../../mfc/reference/cmfcbasetabctrl-class.md).  
+ Wskaźnik do okna karty. Struktura usuwa ramki, w tym [klasa CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- `TRUE` Jeśli metoda zakończy się pomyślnie lub `FALSE` , jeśli nie.  
+ Wartość TRUE, jeśli metoda powiodło się, lub FAŁSZ, jeśli nie.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda wypełnia obszaru wskazanego *rect* kolorem tła active karty. Jest to, kiedy `CMFCBaseTabCtrl` obiekt przetwarza komunikat WM_PAINT i usuwa ramki kartę.  
+ Ta metoda wypełni obszaru wskazanego *prostokąt* kolorem tła aktywne karty. Jest ona wywoływana, gdy `CMFCBaseTabCtrl` obiekt przetwarza komunikat WM_PAINT i usuwa ramki kartę.  
   
 ##  <a name="onfillautohidebuttonbackground"></a>  CMFCVisualManagerOffice2003::OnFillAutoHideButtonBackground  
- Struktura wywołuje tę metodę po zapełnieniu tła automatyczne ukrywanie przycisku.  
+ Struktura wywołuje tę metodę podczas jego wypełniania tła przycisku automatycznego ukrywania.  
   
 ```  
 virtual void OnFillAutoHideButtonBackground(
@@ -1884,16 +1884,16 @@ virtual void OnFillAutoHideButtonBackground(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *rect*  
- Prostokąt określa granice automatyczne ukrywanie przycisku.  
+ Prostokąt, który określa granice przycisk Autoukrywanie.  
   
  [in] *pButton*  
- Wskaźnik do [klasy CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) obiektu. Platformę wypełnienia tła dla tego przycisku autoukrywania.  
+ Wskaźnik do [klasa CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) obiektu. Struktura wypełnienia tła dla tego przycisku automatycznego ukrywania.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę metodę w pochodnej Menedżera visual do dostosowywania wyglądu automatyczne ukrywanie przycisku.  
+ Należy przesłonić tę metodę w pochodnej Menedżer wizualnego do dostosowywania wyglądu przycisku automatycznego ukrywania.  
   
 ##  <a name="onfillbarbackground"></a>  CMFCVisualManagerOffice2003::OnFillBarBackground  
- Struktura wywołuje tę metodę po zapełnieniu tła [klasy CBasePane](../../mfc/reference/cbasepane-class.md) obiektu.  
+ Struktura wywołuje tę metodę podczas jego wypełniania tła [klasa CBasePane](../../mfc/reference/cbasepane-class.md) obiektu.  
   
 ```  
 virtual void OnFillBarBackground(
@@ -1906,24 +1906,24 @@ virtual void OnFillBarBackground(
   
 ### <a name="parameters"></a>Parametry  
  [in] *podstawowego kontrolera domeny*  
- Wskaźnik do kontekstu urządzenia pasek sterowania.  
+ Wskaźnik do kontekstu urządzenia dla paska sterowania.  
   
  [in] *pBar*  
- Wskaźnik do [klasy CBasePane](../../mfc/reference/cbasepane-class.md) obiektu. Platformę wypełnienia tła w tym okienku.  
+ Wskaźnik do [klasa CBasePane](../../mfc/reference/cbasepane-class.md) obiektu. Struktura wypełnienia tła w tym okienku.  
   
  [in] *rectClient*  
- Prostokąt określa granice okienka.  
+ Prostokąt, który określa granice okienka.  
   
  [in] *rectClip*  
  Prostokąt, który określa obszar przycinania okienka.  
   
  [in] *bNCArea*  
- Wartością zastrzeżoną.  
+ Zastrzeżonej wartości.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja tej metody wypełnia tło paska 3d kolor tła w zmiennej globalnej `afxGlobalData`.  
+ Domyślna implementacja tej metody wypełnienia tła paska kolorem tła 3d ze zmienną globalną `afxGlobalData`.  
   
- Należy przesłonić tę metodę w pochodnej Menedżera visual dostosować tła okienka.  
+ Należy przesłonić tę metodę w pochodnej Menedżer wizualnego Dostosowywanie tła panelu.  
   
 ##  <a name="onfillbuttoninterior"></a>  CMFCVisualManagerOffice2003::OnFillButtonInterior  
  Struktura wywołuje tę metodę po zapełnieniu tło przycisku paska narzędzi.  
@@ -1950,10 +1950,10 @@ virtual void OnFillButtonInterior(
  Stan przycisku paska narzędzi (możliwe stany przycisku paska narzędzi są `ButtonsIsRegular`, `ButtonsIsPressed`, lub `ButtonsIsHighlighted`).  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja tej metody jest używany kolor domyślne do wypełnienia tła. Należy przesłonić tę metodę w pochodnej Menedżera visual dostosować tło przycisku paska narzędzi.  
+ Domyślna implementacja tej metody używa domyślny kolor do wypełnienia tła. Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować tło przycisku paska narzędzi.  
   
 ##  <a name="onfillcommandslistbackground"></a>  CMFCVisualManagerOffice2003::OnFillCommandsListBackground  
- Struktura wywołuje tę metodę po zapełnieniu tło przycisku paska narzędzi, który należy do listy poleceń. Ta lista poleceń jest częścią oknie dialogowym dostosowywania.  
+ Struktura wywołuje tę metodę podczas jego wypełniania tło przycisku paska narzędzi, który należy do listy poleceń. Ta lista poleceń jest częścią oknie dialogowym dostosowywania.  
   
 ```  
 virtual COLORREF OnFillCommandsListBackground(
@@ -1967,16 +1967,16 @@ virtual COLORREF OnFillCommandsListBackground(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *rect*  
- Prostokąt, który określa granice przycisku.  
+ Prostokąt, który określa granice tego przycisku.  
   
  [in] *bIsSelected*  
- Parametrów typu Boolean wskazującą, czy przycisk jest zaznaczony.  
+ Parametr logiczny, który wskazuje, czy przycisk jest zaznaczony.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Kolor tekstu dla przycisku paska narzędzi.  
+ Kolor tekstu przycisku paska narzędzi.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji o liście dostosowania, zobacz [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist). Domyślna implementacja tej metody wypełnienia tła oparte na schemat kolorów aktualnie wybranej karnacji.  
+ Aby uzyskać więcej informacji na temat listy dostosowywania, zobacz [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist). Domyślna implementacja tej metody wypełnienia tła oparte na schemacie kolorów w aktualnie wybranego skórki.  
   
 ##  <a name="onfillheaderctrlbackground"></a>  CMFCVisualManagerOffice2003::OnFillHeaderCtrlBackground  
  Struktura wywołuje tę metodę po zapełnieniu tła formantu nagłówka.  
@@ -1990,7 +1990,7 @@ virtual void OnFillHeaderCtrlBackground(
   
 ### <a name="parameters"></a>Parametry  
  [in] *pCtrl*  
- Wskaźnik do [klasy CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) obiektu. Platformę wypełnienia tła tego formantu nagłówka.  
+ Wskaźnik do [klasa CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) obiektu. Struktura wypełnienia tła dla tego formantu nagłówka.  
   
  [in] *podstawowego kontrolera domeny*  
  Wskaźnik do kontekstu urządzenia.  
@@ -1999,10 +1999,10 @@ virtual void OnFillHeaderCtrlBackground(
  Prostokąt, który określa granice formantu nagłówka.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę metodę w pochodnej Menedżera visual do dostosowywania wyglądu formantu nagłówka.  
+ Należy przesłonić tę metodę w pochodnej Menedżer wizualnego do dostosowywania wyglądu formantu nagłówka.  
   
 ##  <a name="onfillhighlightedarea"></a>  CMFCVisualManagerOffice2003::OnFillHighlightedArea  
- Struktura wywołuje tę metodę po zapełnieniu wyróżnionym obszarze przycisku paska narzędzi.  
+ Struktura wywołuje tę metodę podczas jego wypełniania wyróżnionym obszarze przycisku paska narzędzi.  
   
 ```  
 virtual void OnFillHighlightedArea(
@@ -2017,18 +2017,18 @@ virtual void OnFillHighlightedArea(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *rect*  
- Prostokąt ograniczający wyróżnione obszar, aby wypełnić.  
+ Podświetlony obszar, aby wypełnić prostokąt otaczający.  
   
  [in] *pBrush*  
- Pędzla do użycia w wypełniające obszar zaznaczony.  
+ Pędzel do użycia w wypełnianie wyróżnionym obszarze.  
   
  [in] *pButton*  
- Wskaźnik do [klasy CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) obiektu, który wypełnił obszar zaznaczony.  
+ Wskaźnik do [klasa CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) obiektu, do których chcesz wypełnić wyróżnionym obszarze.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onfilloutlookbarcaption"></a>  CMFCVisualManagerOffice2003::OnFillOutlookBarCaption  
- Struktura wywołuje tę metodę po zapełnieniu tło paska podpisu programu Outlook.  
+ Struktura wywołuje tę metodę po zapełnieniu tła paska Outlook podpis.  
   
 ```  
 virtual void OnFillOutlookBarCaption(
@@ -2042,18 +2042,18 @@ virtual void OnFillOutlookBarCaption(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *rectCaption*  
- Prostokąt określa granice pasek tytułu.  
+ Prostokąt, który określa granice pasek podpisu.  
   
  [out] *clrText*  
- Odwołanie do `COLORREF` obiektu, do którego ta metoda zapisuje koloru tekstu na pasku podpisu.  
+ Odwołanie do obiektu COLORREF, do którego ta metoda zapisuje koloru tekstu na pasku podpisu.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja tej metody wypełnia pasek tytułu kolorem dla cieni oparte na bieżącej skórki.  
+ Domyślna implementacja tej metody wypełnia pasek podpisu przy użyciu koloru dla cieni, w oparciu o bieżące skórki.  
   
- Należy przesłonić tę metodę w pochodnej Menedżera visual dostosować kolor pasek tytułu programu Outlook.  
+ Należy przesłonić tę metodę w pochodnej Menedżer wizualnego dostosować kolor pasek podpisu programu Outlook.  
   
 ##  <a name="onfilloutlookpagebutton"></a>  CMFCVisualManagerOffice2003::OnFillOutlookPageButton  
- Struktura wywołuje tę metodę po zapełnieniu wewnętrznych programu Outlook przycisk Strona.  
+ Struktura wywołuje tę metodę po zapełnieniu wewnętrznych przycisk Strona programu Outlook.  
   
 ```  
 virtual void OnFillOutlookPageButton(
@@ -2069,22 +2069,22 @@ virtual void OnFillOutlookPageButton(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *rect*  
- Prostokąt, który określa granice programu Outlook przycisk Strona.  
+ Prostokąt, który określa granice przycisk Strona programu Outlook.  
   
  [in] *bIsHighlighted*  
- Parametr wartość logiczna określająca, czy przycisk jest podświetlona.  
+ Parametr logiczny, który określa, czy przycisk jest wyróżniona.  
   
  [in] *bIsPressed*  
- Parametr wartość logiczna określająca, czy przycisk jest naciśnięty.  
+ Parametr logiczny, który określa, czy przycisk jest wciśnięty.  
   
  [out] *clrText*  
- Odwołanie do `COLORREF` obiektu, gdy ta metoda przechowuje kolor tekstu przycisku strony programu outlook.  
+ Odwołanie do obiektu COLORREF, w której ta metoda przechowuje kolor tekstu przycisku Strona programu outlook.  
   
 ### <a name="remarks"></a>Uwagi  
- Przesłonić tę funkcję w pochodnej manager visual dostosować wygląd przycisków strony programu Outlook.  
+ Przesłonić tę funkcję w pochodnej Menedżer wizualnego, aby dostosować wygląd przycisków strony programu Outlook.  
   
 ##  <a name="onfillpopupwindowbackground"></a>  CMFCVisualManagerOffice2003::OnFillPopupWindowBackground  
- Struktura wywołuje tę metodę po zapełnieniu tła w oknie podręcznym.  
+ Struktura wywołuje tę metodę podczas jego wypełniania tła w oknie podręcznym.  
   
 ```  
 virtual void OnFillPopupWindowBackground(
@@ -2097,13 +2097,13 @@ virtual void OnFillPopupWindowBackground(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *rect*  
- Prostokąt, który określa granice okna podręcznego.  
+ Prostokąt, który określa granice tego okna podręcznego.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę metodę w pochodnej Menedżera visual do dostosowywania wyglądu okien wyskakujących.  
+ Należy przesłonić tę metodę w pochodnej Menedżer wizualnego do dostosowywania wyglądu wyskakujących okienek.  
   
 ##  <a name="onfilltab"></a>  CMFCVisualManagerOffice2003::OnFillTab  
- Struktura wywołuje tę metodę po zapełnieniu tło okna kartę.  
+ Struktura wywołuje tę metodę podczas jego wypełniania tło okna karty.  
   
 ```  
 virtual void OnFillTab(
@@ -2120,25 +2120,25 @@ virtual void OnFillTab(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *rectFill*  
- Prostokąt określa granice okna kartę.  
+ Prostokąt, który określa granice dla okna karty.  
   
  [in] *pbrFill*  
- Wskaźnik do pędzel używany do wypełnienia okna kartę platformę.  
+ Wskaźnik do pędzla, w ramach używanej do wypełnienia okna karty.  
   
  [in] *iTab*  
  Liczony od zera indeks karty, dla którego ramach wypełnienia tła.  
   
  [in] *bIsActive*  
- `TRUE` Jeśli karta jest aktywny lub `FALSE` , jeśli nie.  
+ Wartość TRUE, jeśli karta jest aktywne, lub FAŁSZ, jeśli nie.  
   
  [in] *pTabWnd*  
- Wskaźnik do formantu nadrzędnego.  
+ Wskaźnik do kontrolki nadrzędnej karty.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę metodę w pochodnej Menedżera visual dostosować wygląd kart.  
+ Należy przesłonić tę metodę w pochodnej Menedżer wizualnego do dostosowywania wyglądu karty.  
   
 ##  <a name="onfilltasksgroupinterior"></a>  CMFCVisualManagerOffice2003::OnFillTasksGroupInterior  
- Struktura wywołuje tę metodę po zapełnieniu wnętrza [klasy CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) obiektu.  
+ Struktura wywołuje tę metodę podczas jego wypełniania wnętrza [klasa CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) obiektu.  
   
 ```  
 virtual void OnFillTasksGroupInterior(
@@ -2155,13 +2155,13 @@ virtual void OnFillTasksGroupInterior(
  Prostokąt, który określa granice tej grupy zadań.  
   
  [in] *bOpcje specjalne*  
- Wartość logiczna wskazująca, czy wewnętrznych jest wypełniony kolorem specjalne.  
+ Wartość logiczna wskazująca, jeśli wewnętrznych zostanie wypełniony kolorem specjalne.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę metodę w pochodnej Menedżera visual do dostosowywania wyglądu grupy zadań.  
+ Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd grupy zadań.  
   
 ##  <a name="onfilltaskspanebackground"></a>  CMFCVisualManagerOffice2003::OnFillTasksPaneBackground  
- Struktura wywołuje tę metodę po zapełnieniu tła [klasy CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) formantu.  
+ Struktura wywołuje tę metodę podczas jego wypełniania tła [klasa CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) kontroli.  
   
 ```  
 virtual void OnFillTasksPaneBackground(
@@ -2174,13 +2174,13 @@ virtual void OnFillTasksPaneBackground(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *rectWorkArea*  
- Prostokąt określa granice w okienku zadań.  
+ Prostokąt, który określa granice okienka zadań.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę metodę w pochodnej Menedżera visual dostosować wygląd [klasy CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) obiektu.  
+ Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, aby dostosować wygląd [klasa CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) obiektu.  
   
 ##  <a name="onhighlightquickcustomizemenubutton"></a>  CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton  
- Framework wywołania tej metody, gdy go rysuje wyróżnione szybkie — dostosowywanie przycisku menu.  
+ Struktura wywołuje tę metodę, gdy jej rysuje wyróżnione szybkie — dostosowywanie przycisku menu.  
   
 ```  
 virtual void OnHighlightQuickCustomizeMenuButton(
@@ -2194,15 +2194,15 @@ virtual void OnHighlightQuickCustomizeMenuButton(
  Wskaźnik do kontekstu urządzenia dla przycisku.  
   
  [in] *pButton*  
- Wskaźnik na przycisku.  
+ Wskaźnik do przycisku.  
   
  [in] *rect*  
- Prostokąt ograniczający przycisku.  
+ Prostokąt otaczający przycisku.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onhighlightrarelyusedmenuitems"></a>  CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems  
- Struktura wywołuje tę metodę po go rysuje wyróżnione polecenie.  
+ Struktura wywołuje tę metodę, gdy jej rysuje wyróżnione polecenie.  
   
 ```  
 virtual void OnHighlightRarelyUsedMenuItems(
@@ -2215,23 +2215,23 @@ virtual void OnHighlightRarelyUsedMenuItems(
  Wskaźnik do kontekstu urządzenia.  
   
  [in] *rectRarelyUsed*  
- Prostokąt określa granice wyróżnione polecenie.  
+ Prostokąt, który określa granice podświetlone polecenie.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę metodę w pochodnej Menedżera visual do dostosowywania wyglądu polecenia menu zaznaczony.  
+ Należy przesłonić tę metodę w pochodnej Menedżer wizualnego do dostosowywania wyglądu polecenia menu wyróżnione.  
   
 ##  <a name="onupdatesystemcolors"></a>  CMFCVisualManagerOffice2003::OnUpdateSystemColors  
- Struktura wywołuje tej funkcji, gdy kolory systemowe zostaną zmienione.  
+ Struktura wywołuje tę funkcję, gdy zmieniają się kolory systemowe.  
   
 ```  
 virtual void OnUpdateSystemColors();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Struktura wywołuje tę metodę jako część przetwarza komunikat WM_SYSCOLORCHANGE. Przesłonić tę metodę w pochodnej Menedżera visual, jeśli chcesz wykonać kod niestandardowy kolory zmiany w aplikacji.  
+ Struktura wywołuje tę metodę w ramach przetwarzania komunikatu WM_SYSCOLORCHANGE. Należy przesłonić tę metodę w pochodnej Menedżer wizualnego, jeśli chcesz wykonać kod niestandardowy, gdy zmieniają się kolory w aplikacji.  
   
 ##  <a name="setdefaultwinxpcolors"></a>  CMFCVisualManagerOffice2003::SetDefaultWinXPColors  
- Określa, czy Menedżer visual należy używać natywnego kolorów motywu systemu Windows XP lub kolory uzyskane z [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371).  
+ Określa, czy Menedżer wizualny należy używać natywnego kolory motywu Windows XP lub kolory uzyskany z [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371).  
   
 ```  
 static void SetDefaultWinXPColors(BOOL bDefaultWinXPColors = TRUE);
@@ -2239,15 +2239,15 @@ static void SetDefaultWinXPColors(BOOL bDefaultWinXPColors = TRUE);
   
 ### <a name="parameters"></a>Parametry  
  [in] *bDefaultWinXPColors*  
- Określa, czy visual manager będzie używać natywnego kolorów systemu Windows XP.  
+ Określa, czy Menedżer visual użyje natywnej kolorów Windows XP.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli *bDefaultWinXPColors* jest `TRUE`, visual manager będzie używać natywnego kolorów systemu Windows XP blue, oliwek lub silver. W przeciwnym razie visual manager będzie używać kolory uzyskane z `GetSysColor`. Visual manager używa elementy wizualne, takie jak `COLOR_3DFACE`, `COLOR_3DSHADOW`, `COLOR_3DHIGHLIGHT`, `COLOR_3DDKSHADOW`, i `COLOR_3DLIGHT`.  
+ Jeśli *bDefaultWinXPColors* ma wartość PRAWDA, visual manager będzie używać natywnego kolorów Windows XP, takie jak blue, oliwek lub silver. W przeciwnym razie visual Menedżera użyje kolory uzyskany z `GetSysColor`. Menedżer visual używa elementy wizualne, takie jak COLOR_3DFACE, COLOR_3DSHADOW, COLOR_3DHIGHLIGHT, COLOR_3DDKSHADOW i COLOR_3DLIGHT.  
   
- Domyślnie `CMFCVisualManagerOffice2003` obiekt używa natywnego kolorów motywu systemu Windows XP.  
+ Domyślnie `CMFCVisualManagerOffice2003` obiekt używa natywnego kolory motywu Windows XP.  
   
 ##  <a name="setstatusbarofficexplook"></a>  CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook  
- Określa, czy ma być używany motyw globalny systemu Windows XP.  
+ Określa, że powinny być używane motyw globalny Windows XP.  
   
 ```  
 static void __stdcall SetStatusBarOfficeXPLook(BOOL bStatusBarOfficeXPLook = TRUE);
@@ -2255,12 +2255,12 @@ static void __stdcall SetStatusBarOfficeXPLook(BOOL bStatusBarOfficeXPLook = TRU
   
 ### <a name="parameters"></a>Parametry  
  [in] *bStatusBarOfficeXPLook*  
- `TRUE` Jeśli motyw globalny systemu Windows XP należy używać (domyślnie), lub `FALSE` , jeśli nie.  
+ Wartość TRUE, jeśli motyw globalny Windows XP powinny być używane (ustawienie domyślne), lub FAŁSZ, jeśli nie.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="setuseglobaltheme"></a>  CMFCVisualManagerOffice2003::SetUseGlobalTheme  
- Określa, czy Menedżer visual używa motyw globalny.  
+ Określa, czy Menedżer wizualny używa motyw globalny.  
   
 ```  
 static void SetUseGlobalTheme(BOOL bUseGlobalTheme = TRUE);
@@ -2268,16 +2268,16 @@ static void SetUseGlobalTheme(BOOL bUseGlobalTheme = TRUE);
   
 ### <a name="parameters"></a>Parametry  
  [in] *bUseGlobalTheme*  
- `TRUE` Jeśli chcesz, aby visual manager do używania motyw globalny; `FALSE` inaczej.  
+ Wartość TRUE, jeśli chcesz, aby visual menedżera, aby używać globalnego motywu. Wartość FALSE w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `CMFCVisualManagerOffice2003` obiekt używa motyw globalny, go rysuje elementów graficznego interfejsu użytkownika przy użyciu [klasy program CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md).  
+ Jeśli `CMFCVisualManagerOffice2003` obiekt używa motyw globalny, jego rysuje elementy graficznego interfejsu użytkownika przy użyciu [klasa CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md).  
   
- Jeśli `CMFCVisualManagerOffice2003` obiektu nie korzysta z motyw globalny, go rysuje elementów graficznego interfejsu użytkownika przy użyciu [klasy program CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md).  
+ Jeśli `CMFCVisualManagerOffice2003` obiektu nie korzysta z motyw globalny, jego rysuje elementy graficznego interfejsu użytkownika przy użyciu [klasa CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [Klasy](../../mfc/reference/mfc-classes.md)   
  [Klasa CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)   
- [Program CMFCVisualManagerOfficeXP — klasa](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)   
+ [Klasa CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)   
  [Klasa CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md)

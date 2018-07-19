@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 921ab0d8a18e8bb50f7ca5ea02002aa16244abcd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: abfda38c6c35c3e7172b187c89fa78bed5ee7616
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947869"
 ---
 # <a name="event"></a>__event
 Deklaruje zdarzenie.  
@@ -31,17 +32,15 @@ Deklaruje zdarzenie.
   
 ```  
   
-      __event   
-      method-declarator  
-      ;  
+__event method-declarator;  
 __event __interface interface-specifier;  
 __event member-declarator;  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Słowo kluczowe `__event` może odnosić się do deklaracji metody, deklaracji interfejsu lub deklaracji elementu członkowskiego danych. Nie można jednak użyć `__event` — słowo kluczowe na kwalifikować się elementem członkowskim klasy zagnieżdżonej.  
+ Słowo kluczowe **__event** można zastosować do deklaracji metody, deklaracji interfejsu lub deklaracja składowej danych. Nie można jednak użyć **__event** — słowo kluczowe, aby zakwalifikować składową klasy zagnieżdżone.  
   
- W zależności od tego, czy źródło zdarzenia, a odbiornik natywnych języka C++, COM lub zarządzany (.NET Framework) można użyć jako zdarzenia następujące elementy:  
+ W zależności od tego, czy Twoje źródło zdarzeń i odbiorcy są natywnych języka C++, COM lub zarządzany (.NET Framework) następujące konstrukcje służy jako zdarzenia:  
   
 |Natywnych języka C++|Model COM|Zarządzany (.NET Framework)|  
 |------------------|---------|--------------------------------|  
@@ -49,56 +48,56 @@ __event member-declarator;
 |—|interface|—|  
 |—|—|element członkowski danych|  
   
- Użyj [__hook](../cpp/hook.md) w odbiorca zdarzenia do skojarzenia z metodą zdarzeń metoda obsługi. Należy pamiętać, że po utworzeniu zdarzenia `__event` — słowo kluczowe, wszystkie programy obsługi zdarzeń, następnie argumentów podłączono do tego zdarzenia zostanie wywołana po wywołaniu zdarzenia.  
+ Użyj [__hook](../cpp/hook.md) w odbiorcy zdarzeń, aby skojarzyć metodę programu obsługi z metodę zdarzeń. Należy pamiętać, że po utworzeniu zdarzenia o **__event** — słowo kluczowe, wszystkich procedur obsługi zdarzeń, następnie jest podłączone do tego zdarzenia będzie wywoływany, gdy zdarzenie jest wywoływane.  
   
- `__event` Deklaracja metody nie może mieć definicji; definicji jest generowany niejawnie, tak jak w przypadku dowolnej zwykłej metody można wywołać metody zdarzeń.  
+ **__Event** deklaracji metody nie może mieć definicji; definicja jest generowane niejawnie, tak jak w przypadku dowolnej zwykłej metody można wywołać metody zdarzeń.  
   
 > [!NOTE]
->  Szablonu klasy lub struktury nie mogą zawierać zdarzenia.  
+>  Szablonem klasy lub struktury nie mogą zawierać zdarzenia.  
   
-## <a name="native-events"></a>Natywny zdarzenia  
- Zdarzenia natywnego metodami. Typ zwracany jest zwykle `HRESULT` lub `void`, ale mogą być dowolnego typu całkowitego, łącznie z `enum`. Gdy zdarzenie używa zwracanym typem całkowitym, warunek błędu jest definiowany podczas obsługi zdarzeń zwraca wartość różną od zera, w którym wywoła zdarzeń zgłaszanych przypadku innych obiektów delegowanych.  
+## <a name="native-events"></a>Macierzystych zdarzeń  
+ Macierzystych zdarzeń są metodami. Typ zwracany jest zazwyczaj HRESULT lub **void**, ale może być dowolnym typem integralnym, w tym **wyliczenia**. Gdy zdarzenie używa zwracanym typem całkowitym, warunek błędu definiuje się program obsługi zdarzeń, zwraca wartość różną od zera, w którym będzie wywoływać przypadków dla wywoływanego zdarzenia innych obiektów delegowanych.  
   
-```  
+```cpp 
 // Examples of native C++ events:  
 __event void OnDblClick();  
 __event HRESULT OnClick(int* b, char* s);  
 ```  
   
- Zobacz [obsługi zdarzeń w natywnym kodzie C++](../cpp/event-handling-in-native-cpp.md) przykładowy kod.  
+ Zobacz [zdarzenie obsługi w natywnym kodzie C++](../cpp/event-handling-in-native-cpp.md) przykładowy kod.  
   
 ## <a name="com-events"></a>Zdarzenia COM  
- Zdarzenia COM są interfejsy. Parametry metody w interfejsie źródła zdarzeń powinny być **w** parametrów (ale to nie jest wymuszana szczegółowa analiza), ponieważ **limit** parametr nie jest przydatne w przypadku multiemisji. Ostrzeżenia poziomu 1 będą wystawiane, jeśli używasz **limit** parametru.  
+ Zdarzenia COM to interfejsy. Parametry metody w interfejsie źródła zdarzeń powinny być `in` parametrów (ale nie jest to wymuszane rygorystycznie), ponieważ `out` parametr jest przydatne, gdy multiemisji. Ostrzeżenia poziomu 1 będą wystawiane, jeśli używasz `out` parametru.  
   
- Typ zwracany jest zwykle `HRESULT` lub `void`, ale mogą być dowolnego typu całkowitego, łącznie z `enum`. Jeśli zdarzenie używa zwracanym typem całkowitym i program obsługi zdarzeń zwraca wartość niezerową, jest błąd, w których przypadku zdarzeń zgłaszanych przerywa wywołania do innych obiektów delegowanych. Należy pamiętać, kompilator automatycznie oznaczy interfejs źródła zdarzeń jako [źródła](../windows/source-cpp.md) w wygenerowanym pliku IDL.  
+ Typ zwracany jest zazwyczaj HRESULT lub **void**, ale może być dowolnym typem integralnym, w tym **wyliczenia**. Gdy zdarzenie używa zwracanym typem całkowitym i program obsługi zdarzeń zwraca wartość różną od zera, jest warunkiem błędu, w których przypadku dla wywoływanego zdarzenia przerywa wywołań do innych obiektów delegowanych. Należy pamiętać, kompilator automatycznie oznaczy interfejsu źródła zdarzeń jako [źródła](../windows/source-cpp.md) w wygenerowanym pliku IDL.  
   
- [__Interface](../cpp/interface.md) — słowo kluczowe jest zawsze wymagane po `__event` źródła zdarzeń COM.  
+ [__Interface](../cpp/interface.md) — słowo kluczowe jest zawsze wymagana po **__event** dla źródła zdarzenia COM.  
   
-```  
+```cpp 
 // Example of a COM event:  
 __event __interface IEvent1;  
 ```  
   
- Zobacz [obsługi zdarzeń w modelu COM](../cpp/event-handling-in-com.md) przykładowy kod.  
+ Zobacz [zdarzenie obsługi w modelu COM](../cpp/event-handling-in-com.md) przykładowy kod.  
   
-## <a name="managed-events"></a>Zdarzeń zarządzanych  
- Aby informacji na temat kodowania zdarzeń w nowej składni, zobacz [zdarzeń](../windows/event-cpp-component-extensions.md).  
+## <a name="managed-events"></a>Zdarzenia zarządzane  
+ Aby uzyskać informacji na temat kodowania zdarzenia w nowej składni, zobacz [zdarzeń](../windows/event-cpp-component-extensions.md).  
   
- Zarządzane zdarzenia są elementy członkowskie danych lub metody. W przypadku użycia z zdarzenia, typ zwracany delegata musi być zgodny z [specyfikacja języka wspólnego](/dotnet/standard/language-independence-and-language-independent-components). Zwracany typ obsługi zdarzeń musi odpowiadać zwracanym typem obiektu delegowanego. Aby uzyskać więcej informacji na delegatów, zobacz [delegaci i zdarzenia](../dotnet/delegates-and-events.md). W przypadku zarządzanych zdarzeń jest elementem członkowskim danych, musi być typu wskaźnik do delegata.  
+ Zdarzenia zarządzane są elementy członkowskie danych lub metody. W przypadku użycia ze zdarzeniem, zwracany typ delegata muszą być zgodne z [specyfikacja Common Language Specification](/dotnet/standard/language-independence-and-language-independent-components). Zwracany typ procedury obsługi zdarzeń musi odpowiadać zwracany typ delegata. Aby uzyskać więcej informacji na temat obiektów delegowanych, zobacz [delegaci i zdarzenia](../dotnet/delegates-and-events.md). Jeśli zdarzenie zarządzane jest element członkowski danych, jego typ musi być wskaźnikiem do delegata.  
   
- W programie .NET Framework można traktować elementu członkowskiego danych tak, jakby była samej metody (oznacza to, `Invoke` metody swojego delegata odpowiedniego). Typ delegata musi wstępnie deklarowania element danych zarządzanych zdarzeń. Z kolei metody zarządzanych zdarzeń niejawnie definiuje odpowiedniego delegata zarządzanych, jeśli nie jest już zdefiniowany. Na przykład można zadeklarować wartość zdarzenia, takie jak `OnClick` jako zdarzenie w następujący sposób:  
+ W .NET Framework, można traktować element członkowski danych, tak jakby sama metoda (czyli `Invoke` metoda jego odpowiedniego delegata). Do deklarowania element członkowski danych zdarzenie zarządzane, należy wstępnie typ delegata. Z kolei metoda zdarzenie zarządzane niejawnie definiuje odpowiedniego zarządzanego obiektu delegowanego, jeśli nie jest już zdefiniowany. Na przykład, można zadeklarować wartość zdarzenia, takie jak `OnClick` jako zdarzenie w następujący sposób:  
   
-```  
+```cpp 
 // Examples of managed events:  
 __event ClickEventHandler* OnClick;  // data member as event  
 __event void OnClick(String* s);  // method as event  
 ```  
   
- Przy deklarowaniu niejawnie zarządzanych zdarzeń, można określić dostępu, które będą wywoływane podczas dodawania lub usuwania programów obsługi zdarzeń add i remove. Istnieje także możliwość zdefiniowania metody, która wywołuje (zgłasza) zdarzenia z poza klasą.  
+ Podczas deklarowania niejawnie zdarzenie zarządzane, można określić dostępu, które będą wywoływane podczas obsługi zdarzeń są dodawane lub usuwane add i remove. Można również zdefiniować metodę, która wywołuje (generuje) zdarzenie z poza klasy.  
   
-## <a name="example-native-events"></a>Przykład: Native zdarzenia  
+## <a name="example-native-events"></a>Przykład: Macierzystych zdarzeń  
   
-```  
+```cpp 
 // EventHandling_Native_Event.cpp  
 // compile with: /c  
 [event_source(native)]  
@@ -108,9 +107,9 @@ public:
 };  
 ```  
   
-## <a name="example-com-events"></a>Przykład: Zdarzeń COM  
+## <a name="example-com-events"></a>Przykład: Zdarzenia COM  
   
-```  
+```cpp 
 // EventHandling_COM_Event.cpp  
 // compile with: /c  
 #define _ATL_ATTRIBUTES 1  
@@ -137,7 +136,7 @@ public:
 ## <a name="see-also"></a>Zobacz też  
  [Keywords](../cpp/keywords-cpp.md)   
  [Obsługa zdarzeń](../cpp/event-handling.md)   
- [event_source —](../windows/event-source.md)   
+ [event_source](../windows/event-source.md)   
  [event_receiver](../windows/event-receiver.md)   
  [__hook](../cpp/hook.md)   
  [__unhook](../cpp/unhook.md)   

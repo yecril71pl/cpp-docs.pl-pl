@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7123fcf5859ce3fc373b29b4cb3e7b32109b464e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e800bd3100fa0199534f3e9bdf6646aa0ffc6860
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410827"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940901"
 ---
 # <a name="comerrorhelpcontext"></a>_com_error::HelpContext
 **Microsoft Specific**  
   
- Wywołania **IErrorInfo::GetHelpContext** funkcji.  
+ Wywołania `IErrorInfo::GetHelpContext` funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,12 +37,12 @@ DWORD HelpContext( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca wynik **IErrorInfo::GetHelpContext** dla **IErrorInfo** obiektu zarejestrowane w ramach `_com_error` obiektu. Jeśli nie **IErrorInfo** obiektu jest rejestrowany, zwracana jest wartość zero.  
+ Zwraca wynik `IErrorInfo::GetHelpContext` dla `IErrorInfo` obiektu rejestrować się w ramach `_com_error` obiektu. Jeśli nie `IErrorInfo` obiektu jest rejestrowane, zwracana jest wartość zero.  
   
 ## <a name="remarks"></a>Uwagi  
- Wszelkie wystąpił błąd podczas wywoływania **IErrorInfo::GetHelpContext** metody jest ignorowana.  
+ Jakiekolwiek niepowodzenie podczas wywoływania `IErrorInfo::GetHelpContext` metody jest ignorowana.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [_com_error, klasa](../cpp/com-error-class.md)

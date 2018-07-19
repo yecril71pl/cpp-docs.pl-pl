@@ -16,27 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 710faeef504e9d2963837f721200c51386540d64
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b3ca1bf5c716be10d079beaec3e49ae014df0932
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354958"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882101"
 ---
-# <a name="formatting-time-automation-classes"></a>Formatowania czas: Klasy automatyzacji
-#### <a name="to-format-a-time"></a>Aby sformatować godzinę  
+# <a name="formatting-time-automation-classes"></a>Czas formatowania: Klasy automatyzacji
+#### <a name="to-format-a-time"></a>Na formatowanie godziny  
   
-1.  Użyj **Format** funkcji członkowskiej klasy albo [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) lub [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) można utworzyć ciągu znaków reprezentuje czas lub czas, który upłynął.  
+ Użyj `Format` funkcja elementu członkowskiego albo [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) lub [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) utworzyć ciąg znaków reprezentujący czas lub czas.  
   
      [!code-cpp[NVC_ATLMFC_Utilities#179](../atl-mfc-shared/codesnippet/cpp/formatting-time-automation-classes_1.cpp)]  
   
  Aby uzyskać więcej informacji, zobacz klasy [COleVariant](../mfc/reference/colevariant-class.md).  
   
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat  
   
--   [Ogólne Data i godzina Programowanie w MFC](../atl-mfc-shared/date-and-time.md)  
+-   [Ogólne Data i godzina programowania w MFC](../atl-mfc-shared/date-and-time.md)  
   
--   [Klasy ogólnego przeznaczenia dla daty i czasu programowania](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
+-   [Klasy ogólnego przeznaczenia dla daty i godziny programowania](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
   
 -   [Praca z SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)  
   

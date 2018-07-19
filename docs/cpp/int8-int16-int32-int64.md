@@ -24,31 +24,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8083d37d2526820ccd75104f9ee8a748eb5d33bc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 409197ec99a8df9ad1999b20edd1537f10ced085
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947781"
 ---
 # <a name="int8-int16-int32-int64"></a>__int8, __int16, __int32, __int64
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
- Typy całkowite o określonym rozmiarze obsługuje funkcje Microsoft C/C++. 8 - 16-, 32- i 64-bitową liczbę całkowitą zmienne można zadeklarować przy użyciu **__int *** n* wpisz specyfikator, gdzie *n* jest 8, 16, 32 lub 64.  
+ Funkcje Microsoft C/C++ obsługuje typy wielkości liczb całkowitych. 8-, 16-, 32- lub 64-bitową liczbę całkowitą zmiennych można zadeklarować za pomocą **__int *** n* wpisz specyfikator, gdzie *n* jest 8, 16, 32 lub 64.  
   
- Poniższy przykład deklaruje jedną zmienną dla każdego typu liczb całkowitych o rozmiarze:  
+ Poniższy przykład deklaruje jedną zmienną dla każdego z tych typów całkowitych o rozmiarze:  
   
-```  
+```cpp 
 __int8 nSmall;      // Declares 8-bit integer  
 __int16 nMedium;    // Declares 16-bit integer  
 __int32 nLarge;     // Declares 32-bit integer  
 __int64 nHuge;      // Declares 64-bit integer  
 ```  
   
- Typy `__int8`, `__int16`, i `__int32` są synonimy dla typów ANSI, które mają taki sam rozmiar i są użyteczne do pisania kodu przenośnego zachowuje się tak samo na wielu platformach. `__int8` — Typ danych jest tożsame z typem `char`, `__int16` jest tożsame z typem **krótki**, i `__int32` jest synonimem typu `int`. `__int64` Tożsame z typem jest typ `long long`.  
+ Typy **__int8**, **__int16**, i **__int32** są synonimy typy ANSI, które mają taki sam rozmiar i są przydatne przy pisaniu przenośny kod, który zachowuje się tak samo na wielu platformach. **__Int8** typ danych jest synonimem typu **char**, **__int16** jest synonimem typu **krótki**, i **__int32**  jest synonimem typu **int**. **__Int64** typ jest synonimem typu **long long**.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia __int*xx* parametr zostanie podwyższony do `int`:  
+ Poniższy przykład pokazuje, że __int*xx* parametr zostanie podniesiony do **int**:  
   
-```  
+```cpp 
 // sized_int_types.cpp  
   
 #include <stdio.h>  
@@ -69,7 +70,7 @@ int main()
 func  
 ```  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Keywords](../cpp/keywords-cpp.md)   

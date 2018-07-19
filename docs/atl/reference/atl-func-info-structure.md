@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa81e83d353c542ea5b2b6e8e5e8fe32f7c57606
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 8852deacfd36ba988b9b31bdad363c05aee12b6e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255625"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882211"
 ---
 # <a name="atlfuncinfo-structure"></a>Struktura _ATL_FUNC_INFO
-Zawiera informacje o typie opisuje metody lub właściwości w elemencie dispinterface.  
+Zawiera informacje o typie opisuje metody lub właściwości na dispinterface.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,32 +41,32 @@ struct _ATL_FUNC_INFO {
 ```  
   
 ## <a name="members"></a>Elementy członkowskie  
- **cc**  
- Konwencja wywoływania. Korzystając z tej struktury z [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) klasy, ten element członkowski musi być **CC_STDCALL**. `CC_CDECL` jest to jedyna opcja obsługiwana w systemie Windows CE dla `CALLCONV` pole `_ATL_FUNC_INFO` struktury. Wszelkie inne wartości są nieobsługiwane w związku z tym niezdefiniowane zachowanie.  
+ `cc`  
+ Konwencja wywoływania. Korzystając z tej struktury z [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) klasy, ten element członkowski musi być CC_STDCALL. `CC_CDECL` jest to jedyna opcja obsługiwana w Windows CE dla `CALLCONV` pole `_ATL_FUNC_INFO` struktury. Dowolna inna wartość nie jest obsługiwany związku z tym jego zachowanie jest niezdefiniowane.  
   
- **vtReturn**  
- Typ wariantu funkcji zwracają wartość.  
+ `vtReturn`  
+ Typ wariantu funkcji zwraca wartość.  
   
- **nParams**  
+ `nParams`  
  Liczba parametrów funkcji.  
   
- **pVarTypes**  
- Tablica typów variant parametrów funkcji.  
+ `pVarTypes`  
+ Tablica typu variant typy parametrów funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- Wewnętrznie ATL używa tej struktury do przechowywania informacji uzyskanych z biblioteki typów. Konieczne może być bezpośrednio manipulowania tej struktury, podając informacje o typie dla programu obsługi zdarzeń używane z [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) klasy i [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info) makra.  
+ ATL używa wewnętrznie, ta struktura do przechowywania informacji uzyskanych z biblioteki typów. Może być konieczne do manipulowania tej struktury bezpośrednio, jeśli podasz informacje o typie dla programu obsługi zdarzeń używane z [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) klasy i [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info) makra.  
   
 ## <a name="example"></a>Przykład  
- Podana metoda dispinterface w pliku IDL:  
+ Podana metoda dispinterface zdefiniowana w pliku IDL:  
   
  [!code-cpp[NVC_ATL_Windowing#139](../../atl/codesnippet/cpp/atl-func-info-structure_1.idl)]  
   
- należy zdefiniować `_ATL_FUNC_INFO` struktury:  
+ należy zdefiniować `_ATL_FUNC_INFO` strukturę:  
   
  [!code-cpp[NVC_ATL_Windowing#140](../../atl/codesnippet/cpp/atl-func-info-structure_2.h)]  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** atlcom.h  
+ Nagłówek: atlcom.h  
   
 ## <a name="see-also"></a>Zobacz też  
   [Klasy i struktury](../../atl/reference/atl-classes.md)  

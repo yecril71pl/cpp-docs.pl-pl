@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a3250d9a090dcbd5eaa9a3cc0d51df84600ed3e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 66f9401bed0a6c9d0b1ffa09a10f98afa258069d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912878"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964759"
 ---
-# <a name="ltlimitsgt"></a>&lt;Limity&gt;
+# <a name="ltlimitsgt"></a>&lt;limity&gt;
 
-Definiuje klasę szablonu `numeric_limits` i wyliczenia dwie liczb zmiennoprzecinkowych oświadczenia dotyczące i zaokrąglania.
+Definiuje klasę szablonu `numeric_limits` i dwa wyliczenia dotyczącymi reprezentacji zmiennoprzecinkowe i zaokrąglania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,20 +37,20 @@ Definiuje klasę szablonu `numeric_limits` i wyliczenia dwie liczb zmiennoprzeci
 
 ## <a name="remarks"></a>Uwagi
 
-Jawne specjalizacje z `numeric_limits` klasy opisują wiele właściwości typów podstawowych, w tym znaków, liczbą całkowitą i typów zmiennoprzecinkowych i `bool` implementacji zdefiniowana, a nie rozwiązany przez reguły języka C++, które są język. Właściwości opisane w \<limity > obejmują dokładność, minimum i maksimum o rozmiarze reprezentacje zaokrąglania i sygnalizowania błędów typu.
+Jawne specjalizacje `numeric_limits` klasy opisują wiele właściwości typów podstawowych, w tym znak, liczba całkowita i typów zmiennoprzecinkowych i **bool** , które są implementacji zdefiniowane, a nie przez reguły języka C++. Właściwości opisane w \<limity > obejmują dokładności, minimalnej i maksymalnej wielkości oświadczenia, zaokrąglania oraz trybu sygnalizowania błędów typu.
 
 ### <a name="enumerations"></a>Wyliczenia
 
 |||
 |-|-|
-|[float_denorm_style](../standard-library/limits-enums.md#float_denorm_style)|Wyliczenie zawiera opis różnych metod, które można wybrać implementację reprezentujący nieznormalizowany wartość zmiennoprzecinkowa — jeden za mały, aby reprezentować znormalizowaną wartość:|
-|[float_round_style](../standard-library/limits-enums.md#float_round_style)|Wyliczenie zawiera opis różnych metod, które można wybrać implementację zaokrąglania wartości zmiennoprzecinkowej na wartość całkowitą.|
+|[float_denorm_style](../standard-library/limits-enums.md#float_denorm_style)|Wyliczenia w tym artykule opisano różne metody, które można wybrać implementacji reprezentujący wartość zmiennoprzecinkowa nieznormalizowany — jeden zbyt mała, aby przedstawić jako wartość znormalizowaną:|
+|[float_round_style](../standard-library/limits-enums.md#float_round_style)|Wyliczenia w tym artykule opisano różne metody wdrażania można wybrać podczas zaokrąglania wartość zmiennoprzecinkowa wartość będącą liczbą całkowitą.|
 
 ### <a name="classes"></a>Klasy
 
 |Class|Opis|
 |-|-|
-|[numeric_limits, klasa](../standard-library/numeric-limits-class.md)|Klasa szablonu opisuje arytmetyczne właściwości wbudowanych typów wartości liczbowych.|
+|[numeric_limits, klasa](../standard-library/numeric-limits-class.md)|Klasa szablonu opisuje arytmetyczne właściwości wbudowanych typów liczbowych.|
 
 ## <a name="see-also"></a>Zobacz także
 

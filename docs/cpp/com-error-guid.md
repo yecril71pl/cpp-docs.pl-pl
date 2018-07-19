@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee1952e50251cfac7563357c7626ab8603589e4d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e324a84a16874a7e33f8687943b1302fbdd73a7a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409693"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939029"
 ---
 # <a name="comerrorguid"></a>_com_error::GUID
 **Microsoft Specific**  
   
- Wywołania **IErrorInfo::GetGUID** funkcji.  
+ Wywołania `IErrorInfo::GetGUID` funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,12 +37,12 @@ GUID GUID( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca wynik **IErrorInfo::GetGUID** dla **IErrorInfo** obiektu zarejestrowane w ramach `_com_error` obiektu. Jeśli nie **IErrorInfo** obiektu jest rejestrowany, zwraca `GUID_NULL`.  
+ Zwraca wynik `IErrorInfo::GetGUID` dla `IErrorInfo` obiektu rejestrować się w ramach `_com_error` obiektu. Jeśli nie `IErrorInfo` obiektu jest rejestrowane, zwraca GUID_NULL.  
   
 ## <a name="remarks"></a>Uwagi  
- Wszelkie wystąpił błąd podczas wywoływania **IErrorInfo::GetGUID** metody jest ignorowana.  
+ Jakiekolwiek niepowodzenie podczas wywoływania `IErrorInfo::GetGUID` metody jest ignorowana.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [_com_error, klasa](../cpp/com-error-class.md)

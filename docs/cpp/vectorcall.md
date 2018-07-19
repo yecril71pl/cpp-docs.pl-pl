@@ -12,32 +12,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29c202a888d4c741a9a9fb54a84109100038d32a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c05707f3d6d6e323bf9605c3c742f6bef417d817
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424737"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939783"
 ---
 # <a name="vectorcall"></a>__vectorcall
 **Microsoft Specific**  
   
- `__vectorcall` Konwencji wywoływania Określa, że argumenty funkcji są przekazywane w rejestrach, gdy jest to możliwe. `__vectorcall` używa rejestrów więcej argumentów niż [__fastcall](../cpp/fastcall.md) lub wartość domyślną [x64 konwencji wywoływania](../build/overview-of-x64-calling-conventions.md) użycia. `__vectorcall` Konwencji wywoływania jest obsługiwana tylko w kodzie natywnym na x86 i x64 procesorów, które obejmują Streaming SIMD Extensions 2 (SSE2) lub nowszym. Użyj `__vectorcall` szybkości funkcje, które przejdą kilka liczb zmiennoprzecinkowych lub argumentów wektorów SIMD i wykonywać operacje, które korzystają z argumentów załadowany w rejestrach. Poniższa lista zawiera funkcje, które są wspólne dla implementacji x86 i x64 `__vectorcall`. Różnice zostały omówione w dalszej części tego artykułu.  
+ `__vectorcall` Konwencji wywoływania Określa, że argumenty funkcji są przekazywane do rejestrów, gdy jest to możliwe. `__vectorcall` używa więcej rejestrów dla argumentów niż [__fastcall](../cpp/fastcall.md) lub wartość domyślną [x64 konwencji wywoływania](../build/overview-of-x64-calling-conventions.md) użycia. `__vectorcall` Konwencja wywołania jest obsługiwana tylko w kodzie macierzystym na procesorach x86 i x64, obejmujących Streaming SIMD Extensions 2 (SSE2) i nowszych. Użyj `__vectorcall` przyspieszyć funkcje, które wychodzą za kilka zmiennoprzecinkowego lub argumentów wektora SIMD i wykonywać operacje, które wykorzystują argumenty załadowane w rejestrach. Poniższa lista zawiera funkcje, które są wspólne dla implementacji x86 i x64 `__vectorcall`. Różnice zostały wyjaśnione w dalszej części tego artykułu.  
   
 |Element|Implementacja|  
 |-------------|--------------------|  
-|Konwencja nazwij dekorację C|Z dwóch "znaków @@ następuje liczba bajtów (dziesiętna) na liście parametrów w" są sufiksem nazwy funkcji.|  
-|Konwencja translacji wielkości liter|Nie przypadków tłumaczenia jest wykonywane.|  
+|Konwencja dekorowania nazw języka C|Nazwy funkcji są umieszczone dwa "znaki (@@), następuje liczba bajtów (w zapisie dziesiętnym na liście parametrów) at".|  
+|Konwencja translacji wielkości liter|Translacja wielkości liter nie jest wykonywane.|  
   
- Przy użyciu [GV](../build/reference/gd-gr-gv-gz-calling-convention.md) — opcja kompilatora powoduje poszczególnych funkcji w module skompilować jako `__vectorcall` chyba, że funkcja jest funkcją członkowską, jest zadeklarowana z atrybutem powodujące konflikt konwencji wywoływania, używa `vararg` zmiennej Lista argumentów lub ma nazwę `main`.  
+ Za pomocą [GV](../build/reference/gd-gr-gv-gz-calling-convention.md) — opcja kompilatora powoduje, że każda funkcja w module jest skompilowana jako `__vectorcall` chyba, że funkcja jest funkcją składową, jest zadeklarowane ze sprzecznym atrybutem konwencji wywoływania, używa `vararg` zmiennej Lista argumentów lub ma nazwę `main`.  
   
- Można przekazać trzy rodzaje argumentów przez rejestr w `__vectorcall` funkcji: *typu Liczba całkowita* wartości, *wektorów typu* wartości, i *agregacji jednorodnych wektor* (HVA ) wartości.  
+ Możesz przekazać trzy rodzaje argumenty przez rejestr w `__vectorcall` funkcji: *typu Liczba całkowita* wartości *typu wektor* wartości i *agregacji agregat wektora jednorodnego* (HVA ) wartości.  
   
- Typu integer spełniający wymagania dwóch: mieści się w rozmiar natywnego rejestru procesora — na przykład 4 bajty na x86 maszyny lub 8 bajtów na x64 maszyny — i do przekonwertowania na liczbę całkowitą z rejestru długości i z powrotem jest ponownie bez zmieniania jego bit reprezentacja wartości. Na przykład dla dowolnego typu, który może być podwyższony do `int` na x86 (`long long` na x64) — na przykład `char` lub `short`— lub mogą być rzutowane na `int` (`long long` na x64) i z powrotem do jej oryginalnej typ bez zmian jest liczbą całkowitą Typ. Typy całkowite obejmują wskaźnika, odwołanie, i `struct` lub `union` typy 4 bajty (8 bajtów x64) lub mniej. Na x64 platform większych `struct` i `union` typy są przekazywane przez odwołanie do pamięci przydzielonej przez obiekt wywołujący; na x86 platformy, są one przekazywane się według wartości na stosie.  
+ Typ liczby całkowitej spełnia dwa wymogi: pasuje do rozmiaru rejestru macierzystego procesora — na przykład 4 bajty na x86 maszyny lub 8 bajtów na x64 maszyny — i jest konwertowany na liczbę całkowitą długości rejestru i ponownie ponownie bez zmiany jego bitowej Reprezentacja. Na przykład dowolny typ, który może być podwyższony do **int** na x86 (**long long** na x64) — na przykład **char** lub **krótki**— lub mogą być rzutowane na **int** (**long long** na x64) i z powrotem do oryginalnego typu bez zmiany typu integer. Całkowitoliczbowe obejmują wskaźnik, odniesieni i **struktury** lub **Unii** typy 4 bajty (8 bajtów x64) lub mniej. Na x64 platform, w większych **struktury** i **Unii** typy są przekazywane przez odwołanie do pamięci przydzielonej przez obiekt wywołujący; x86 platform, są przekazywane przez wartość na stosie.  
   
- Zmiennoprzecinkowe typu jest typu wektora — na przykład `float` lub `double`— lub typ wektorów SIMD — na przykład `__m128` lub `__m256`.  
+ Typem wektora jest typ zmiennoprzecinkowy — na przykład **float** lub **double**— lub typ wektora SIMD — na przykład **__m128** lub **__m256**.  
   
- Typ HVA jest typu złożonego do czterech elementy członkowskie danych, których typy wektorów identyczne. Typ HVA ma ten sam wymóg wyrównanie jako typ wektora jego elementów członkowskich. Jest to przykład HVA `struct` definicji, która zawiera trzy typy wektorów identyczne i wyrównanie 32 bajtów jest:  
+ Typ HVA jest typu złożonego do czterech elementów członkowskich danych, które mają identyczne typy wektorów. Typ HVA ma ten sam wymóg wyrównania jako typ wektora jego członków. Jest to przykład HVA **struktury** definicji, który zawiera trzy identyczne typy wektorów i ma 32-bajtowe wyrównanie:  
   
 ```cpp  
 typedef struct {  
@@ -48,13 +48,13 @@ typedef struct {
   
 ```  
   
- Deklarowanie funkcji jawnie z `__vectorcall` — słowo kluczowe w pliki nagłówkowe, aby umożliwić oddzielnie skompilowany kod, aby połączyć się bez błędów. Funkcje musi być prototypowana do użycia `__vectorcall`i nie można użyć `vararg` listy argumentów o zmiennej długości.  
+ Deklaruj swoje funkcje jawnie z `__vectorcall` — słowo kluczowe w plikach nagłówkowych, aby umożliwić oddzielnie skompilowanemu kodowi utworzenie łącza bez błędów. Funkcje muszą być prototypowane używać `__vectorcall`i nie można użyć `vararg` listy argumentów o zmiennej długości.  
   
- Funkcja członkowska mogą być deklarowane jako za pomocą `__vectorcall` specyfikator. Ukrytego `this` wskaźnika jest przekazywana przez rejestru jako pierwszy argument typu Liczba całkowita.  
+ Funkcja członka może być zadeklarowana za pomocą `__vectorcall` specyfikator. Ukryte **to** wskaźnik jest przekazywany przez rejestr jako pierwszy argument typu Liczba całkowita.  
   
- Na maszynach ARM `__vectorcall` i akceptowany jest ignorowana przez kompilator.  
+ Na maszynach ARM `__vectorcall` jest akceptowane i ignorowane przez kompilator.  
   
- Dla klasy niestatycznej funkcji członkowskiej Jeśli funkcja jest zdefiniowane poza zewnętrznych, modyfikatora konwencji wywoływania nie ma określonych w definicji wiersza. Oznacza to elementów członkowskich klas niestatyczna, Konwencja wywoływania określona podczas deklaracji przyjęto, że w punkcie definicji. Biorąc pod uwagę tę definicję klasy:  
+ Przypadku niestatycznych funkcji składowych Jeśli funkcja jest zdefiniowana poza wierszem, modyfikator konwencji wywoływania nie ma zostać określony w definicji poza wierszem. Oznacza to dla niestatycznych składowych, przyjmowana jest Konwencja wywoływania określona podczas deklaracji punkcie definicji. Biorąc pod uwagę tę definicję klasy:  
   
 ```cpp  
 struct MyClass {  
@@ -74,24 +74,24 @@ void MyClass::mymethod() { return; }
 void __vectorcall MyClass::mymethod() { return; }  
 ```  
   
- `__vectorcall` Modyfikatora konwencji wywoływania musi być określona gdy wskaźnik do `__vectorcall` tworzenia funkcji. W następnym przykładzie jest tworzony `typedef` dla wskaźnika do `__vectorcall` funkcja, która przyjmuje cztery `double` argumentów i zwraca `__m256` wartość:  
+ `__vectorcall` Modyfikator Konwencja wywoływania musi być określona gdy wskaźnik do `__vectorcall` zostanie utworzona funkcja. Następny przykład tworzy **typedef** dla wskaźnika do `__vectorcall` funkcja, która pobiera cztery **double** argumenty i zwraca **__m256** wartość:  
   
 ```cpp  
 typedef __m256 (__vectorcall * vcfnptr)(double, double, double, double);  
 ```  
   
-## <a name="vectorcall-convention-on-x64"></a>__vectorcall Konwencja na x64  
- `__vectorcall` Konwencji wywoływania na x64 rozszerza x64 standardowej konwencji, aby móc korzystać z dodatkowych rejestrów wywoływania. Zarówno argumentów typu Liczba całkowita, jak i argumentów typu wektora są mapowane do rejestrów na podstawie pozycji w liście argumentów. Argumenty HVA są przydzielone do rejestrów nieużywane wektora.  
+## <a name="vectorcall-convention-on-x64"></a>Konwencja __vectorcall x64  
+ `__vectorcall` Konwencji wywoływania na x64 rozszerza standardowe x64 konwencji wywoływania, aby móc korzystać z dodatkowych rejestrów. Zarówno argumenty typu Liczba całkowita, jak i argumentów typu wektor są mapowane do rejestrów na podstawie pozycji na liście argumentów. Argumenty agregatów HVA są przydzielane do nieużywanych rejestrów wektorowych.  
   
- Po pierwsze cztery argumenty w kolejności od lewej do prawej są argumentów typu Liczba całkowita, są przekazywane do rejestru, który odpowiada w odpowiednim miejscu — RCX, RDX, R8 lub R9. Ukryty `this` wskaźnika jest traktowany jako pierwszy argument typu Liczba całkowita. Jeśli argument HVA pierwsze cztery argumenty nie mogą być przekazywane w rejestrach dostępne, odwołanie do pamięć przydzielona wywołującego jest przekazywany w rejestrze odpowiedniego typu Liczba całkowita. Argumentów typu Liczba całkowita po czwartym pozycja parametru są przekazywane na stosie.  
+ Jeśli którekolwiek z pierwszych czterech argumentów w porządku od lewej do prawej są argumentami typu Liczba całkowita, są one przekazywane do rejestru, który odpowiada tej pozycji — RCX, RDX, R8 lub R9. Ukryty **to** wskaźnik jest traktowany jako pierwszy argument typu Liczba całkowita. Jeśli argument HVA w jednym z pierwszych czterech argumentów nie można przekazać w dostępnych rejestrach, odwołanie do pamięci przydzielonej przez obiekt wywołujący jest przekazywane w odpowiednim rejestrze typu Liczba całkowita. Argumenty typu całkowitoliczbowego po czwartej pozycji parametru są przekazywane na stosie.  
   
- Jeśli dowolny argument pierwszych sześciu w kolejności od lewej do prawej czy wektorów argumentów typu, są one przekazywane przez wartość w rejestrach wektor SSE 0 – 5, zgodnie z pozycja argumentu. Zmiennoprzecinkowe i `__m128` typy są przekazywane w rejestrach XMM i `__m256` typy są przekazywane w YMM rejestruje. To różni się od standardowego x64 wywoływanie Konwencji, ponieważ typy wektorów są przekazywane przez wartość, a nie przez odwołanie, i są używane rejestry dodatkowe. Miejsca stosu w tle przydzielone dla argumentów typu wektora jest ustalony na 8 bajtów i [/homeparams](../build/reference/homeparams-copy-register-parameters-to-stack.md) opcja nie dotyczy. Argumentów typu wektora w pozycji siódmego i nowsze parametrów są przekazywane na stosie w odniesieniu do pamięci przydzielonej przez obiekt wywołujący.  
+ Jeśli którekolwiek z pierwszych sześciu argumentów w porządku od lewej do prawej są argumentami typu wektor, są one przekazywane przez wartość w rejestrach wektora SSE od 0 do 5, zgodnie z pozycją argumentu. Zmiennoprzecinkowe i **__m128** typy są przekazywane w rejestrach XMM, a **__m256** typy są przekazywane w rejestrach YMM rejestruje. To różni się od standardowego x64 Konwencja wywoływania, ponieważ typy wektorowe są przekazywane przez wartość, a nie przez odwołanie, a używane są dodatkowe rejestry. Obszar stosu cienia przydzielony dla argumentów typu wektor jest ustalony na 8 bajtów i [/homeparams](../build/reference/homeparams-copy-register-parameters-to-stack.md) opcja nie ma zastosowania. Argumenty typu wektora w siódmej i dalszych pozycjach parametru są przekazywane na stosie przez odwołanie do pamięci przydzielonej przez obiekt wywołujący.  
   
- Po rejestrów są przydzielone dla argumentów wektora, elementy członkowskie danych argumentów HVA są przydzielone, rosnąco do nieużywanych wektor rejestrach XMM0 XMM5 (lub YMM0 do YMM5, dla `__m256` typy), jak długo są dostępne dla wystarczającej liczby rejestrów cały HVA. Jeśli nie wystarczającej liczby rejestrów są dostępne, HVA argument jest przekazywana przez odwołanie do pamięci przydzielonej przez obiekt wywołujący. Miejsca stosu w tle dla argumentu HVA ustala się na 8 bajtów z zawartością niezdefiniowany. Argumenty HVA są przypisane do rejestrów w kolejności od lewej do prawej na liście parametrów i może znajdować się w dowolnym miejscu. HVA argumentów w jednym z pierwszych czterech argumentu pozycji, które nie są przypisane do wektorów rejestrów są przekazywane przez odwołanie w rejestrze liczba całkowita, która odpowiada na tej pozycji. Argumenty HVA przekazywana przez odwołanie, po czwartym pozycja parametru są przenoszone na stosie.  
+ Po dla argumentów wektora, dane członków argumentów HVA są przydzielane w kolejności rosnącej do nieużywanych wektorów rejestrujących xmm0 do XMM5 (lub YMM0 do YMM5, dla **__m256** typów), tak długo, jak istnieje niewystarczająca liczba rejestrów dostępne dla całego HVA. Jeśli niewystarczająca liczba rejestrów jest dostępna, argument agregatu HVA jest przekazywany przez odwołanie do pamięci przydzielonej przez obiekt wywołujący. Obszar stosu cienia dla argumentu HVA jest ustalony na 8 bajtów z zawartością niezdefiniowaną. Argumenty agregatów HVA są przypisane do rejestrów w kolejności od lewej do prawej na liście parametrów i może być w dowolnym miejscu. Argumenty agregatów HVA w jednym z pierwszych czterech argumentów, pozycje, które nie są przypisane do rejestrów wektorowych, są przekazywane przez odwołanie w całkowitoliczbowym, które odpowiada tej pozycji. Argumenty agregatów HVA przekazywane przez odwołanie po czwartej pozycji parametru są wypychane na stosie.  
   
- Wyniki `__vectorcall` funkcje są zwracane przez wartość w rejestrach, gdy jest to możliwe. Typu Liczba całkowita, tym struktury lub Unii 8 bajtów lub mniej, są zwracane przez wartość w RAX. Wektor typu są zwracane przez wartość XMM0 lub YMM0, w zależności od wielkości. Wyniki HVA muszą każdego elementu danych zwracanych przez wartość w rejestrach XMM0:XMM3 lub YMM0:YMM3, w zależności od rozmiaru elementu. Typy wyników, które nie mieszczą się w rejestrach odpowiedniego są zwracane przez odwołanie do pamięci przydzielonej przez obiekt wywołujący.  
+ Wyniki `__vectorcall` funkcje są zwracane przez wartość w rejestrach, jeżeli jest to możliwe. Wyniki typu Liczba całkowita, włącznie ze strukturami lub związkami 8 bajtów lub mniej, są zwracane według wartości w RAX. Wyniki typu wektor są zwracane przez wartość w XMM0 lub YMM0, w zależności od rozmiaru. Wyniki agregatu HVA mają każdy element danych zwracany przez wartość w rejestrach xmm0: xmm3 lub ymm0: ymm3, w zależności od rozmiaru elementu. Typy wyników, które nie pasują do odpowiednich rejestrów są zwracane przez odwołanie do pamięci przydzielonej przez obiekt wywołujący.  
   
- Stos jest obsługiwana przez obiekt wywołujący w x64 implementacja `__vectorcall`. Prolog i epilog kod wywołujący przydziela i spowoduje wyczyszczenie stosu dla wywołanej funkcji. Argumenty są przenoszone na stosie od prawej do lewej, a tle stosu miejsce jest przydzielane dla argumentów przekazywane w rejestrach.  
+ Stos jest utrzymywany przez obiekt wywołujący w x64 implementacji `__vectorcall`. Kod prologu i epilogu wywołującego przydziela i czyści stos dla wywołanej funkcji. Argumenty są wypychane na stosie od prawej do lewej, a cień obszaru stosu jest przydzielany do argumentów przekazywanych do rejestrów.  
   
  Przykłady:  
   
@@ -190,18 +190,18 @@ int __cdecl main( void )
   
 ```  
   
-## <a name="vectorcall-convention-on-x86"></a>__vectorcall Konwencja na x86  
- `__vectorcall` Następujące konwencji wywoływania `__fastcall` Konwencji dla argumentów typu Liczba całkowita 32-bitowe i wykorzystuje rejestrów wektor SSE argumenty HVA i typu wektora.  
+## <a name="vectorcall-convention-on-x86"></a>Konwencja __vectorcall x86  
+ `__vectorcall` Kroczy za Konwencją **__fastcall** Konwencji argumenty typu Liczba całkowita 32-bitowa i wykorzystuje rejestry wektora SSE dla typu wektora i argumentów HVA.  
   
- Pierwszy całkowitą dwóch argumentów typu znaleziona na liście parametrów od lewej do prawej są umieszczane w ECX i EDX, odpowiednio Ukryty `this` wskaźnika jest traktowany jako pierwszy argument typu Liczba całkowita i jest przekazywany ECX. Pierwszy argumentów typu wektora sześciu są przekazywane przez wartość za pośrednictwem rejestrów wektor SSE 0 – 5, w rejestrach XMM lub YMM, w zależności od wielkości argumentu.  
+ Pierwsze dwa argumenty typu Liczba całkowita znalezione na liście parametrów od lewej do prawej są umieszczone w ECX i EDX, odpowiednio. Ukryty **to** wskaźnik jest traktowany jako pierwszy argument typu Liczba całkowita i przechodzi w ECX. Pierwsze sześć argumentów typu wektor są przekazywane przez wartość przez rejestry wektorów SSE 0-5, w rejestrach XMM lub YMM, w zależności od rozmiaru argumentu.  
   
- Pierwszy sześciu wektorów argumentów typu w kolejności od lewej do prawej są przekazywane przez wartość w rejestrach wektor SSE 0 – 5. Zmiennoprzecinkowe i `__m128` typy są przekazywane w rejestrach XMM i `__m256` typy są przekazywane w YMM rejestruje. Nie miejsca na stosie tle został przydzielony dla argumentów typu wektora przekazany przez rejestr. Wektor siódmego i kolejne argumenty typu są przekazywane na stosie w odniesieniu do pamięci przydzielonej przez obiekt wywołujący. Błąd kompilatora ograniczenia [C2719](../error-messages/compiler-errors-2/compiler-error-c2719.md) nie ma zastosowania do tych argumentów.  
+ Vector — pierwsze sześć argumentów typu w kolejności od lewej do prawej są przekazywane przez wartość w rejestrach wektora SSE od 0 do 5. Zmiennoprzecinkowe i **__m128** typy są przekazywane w rejestrach XMM, a **__m256** typy są przekazywane w rejestrach YMM rejestruje. Nie obszar stosu cienia jest przydzielany do argumentów typu wektorowego przekazywanych przez rejestr. Argumenty typu wektora siódmego i kolejnych są przekazywane na stosie przez odwołanie do pamięci przydzielonej przez obiekt wywołujący. Ograniczenie błędu kompilatora [C2719](../error-messages/compiler-errors-2/compiler-error-c2719.md) nie ma zastosowania do tych argumentów.  
   
- Po rejestrów są przydzielone dla argumentów wektora, dane członkami HVA argumenty są przydzielane w kolejności rosnącej do nieużywanych wektor rejestruje XMM0 do XMM5 (lub YMM0 do YMM5, dla `__m256` typy), jak długo są dostępne dla całej wystarczającej liczby rejestrów HVA. Jeśli nie wystarczającej liczby rejestrów są dostępne, HVA argument jest przekazywany na stosie w odniesieniu do pamięci przydzielonej przez obiekt wywołujący. Nie miejsca na stosie tle argumentu HVA został przydzielony. Argumenty HVA są przypisane do rejestrów w kolejności od lewej do prawej na liście parametrów i może znajdować się w dowolnym miejscu.  
+ Po dla argumentów wektora, dane członków argumentów HVA są przydzielane w kolejności rosnącej do nieużywanych wektorów rejestrujących xmm0 do XMM5 (lub YMM0 do YMM5, dla **__m256** typów), tak długo, jak istnieje niewystarczająca liczba rejestrów dostępne dla całego HVA. Jeśli niewystarczająca liczba rejestrów jest dostępna, argument agregatu HVA jest przekazywany w stosie przez odwołanie do pamięci przydzielonej przez obiekt wywołujący. Nie obszar stosu cienia dla argumentu HVA jest przydzielany. Argumenty agregatów HVA są przypisane do rejestrów w kolejności od lewej do prawej na liście parametrów i może być w dowolnym miejscu.  
   
- Wyniki `__vectorcall` funkcje są zwracane przez wartość w rejestrach, gdy jest to możliwe. Typu Liczba całkowita, tym struktury lub Unii 4 bajty lub mniej, są zwracane przez wartość EAX. Unie 8 bajtów lub mniej lub struktur typu Liczba całkowita są zwracane przez wartość EDX:EAX. Wektor typu są zwracane przez wartość XMM0 lub YMM0, w zależności od wielkości. Wyniki HVA muszą każdego elementu danych zwracanych przez wartość w rejestrach XMM0:XMM3 lub YMM0:YMM3, w zależności od rozmiaru elementu. Inne typy wyników są zwracane przez odwołanie do pamięci przydzielonej przez obiekt wywołujący.  
+ Wyniki `__vectorcall` funkcje są zwracane przez wartość w rejestrach, jeżeli jest to możliwe. Wyniki typu Liczba całkowita, włącznie ze strukturami lub związkami 4 bajtów lub mniej, są zwracane według wartości w EAX. Liczba całkowita typu strukturami lub związkami 8 bajtów lub mniej są zwracane przez wartość w parametrze EDX: EAX. Wyniki typu wektor są zwracane przez wartość w XMM0 lub YMM0, w zależności od rozmiaru. Wyniki agregatu HVA mają każdy element danych zwracany przez wartość w rejestrach xmm0: xmm3 lub ymm0: ymm3, w zależności od rozmiaru elementu. Inne typy wyników są zwracane przez odwołanie do pamięci przydzielonej przez obiekt wywołujący.  
   
- X86 implementacja `__vectorcall` następujące Konwencji argumenty wypychana na stosie od prawej do lewej przez wywołującego i wywołana funkcja spowoduje wyczyszczenie stosu tuż przed zwraca. Tylko argumenty, które nie znajdują się w rejestrach są przenoszone na stosie.  
+ X86 implementacji `__vectorcall` następuje po Konwencji argumentów wypychane na stos od prawej do lewej przez wywołującego, po czym wywołana funkcja czyści stos tuż przed zwróceniem. Tylko argumenty, które nie są wprowadzane w rejestrach, są wypychane na stosie.  
   
  Przykłady:  
   
@@ -296,7 +296,7 @@ int __cdecl main( void )
   
 ```  
   
- **Końcowy określonych firmy Microsoft**  
+ **End specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przekazywanie argumentów i konwencje nazewnictwa](../cpp/argument-passing-and-naming-conventions.md)   

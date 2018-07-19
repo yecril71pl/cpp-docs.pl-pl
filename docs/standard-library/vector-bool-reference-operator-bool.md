@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0fd249dd7591caaaf62a0b8a698085efedb1f25
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 00ccd9e9ffbab78534c5b6417b7567ba03d007ab
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854538"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963683"
 ---
 # <a name="vectorltboolgtreferenceoperator-bool"></a>Wektor&lt;bool&gt;:: reference::operator bool
 
-Udostępnia niejawna konwersja z `vector<bool>::reference` do `bool`.
+Dostarcza niejawną konwersję z `vector<bool>::reference` do **bool**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,19 +39,19 @@ operator bool() const;
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wartość logiczna elementu [wektor\<bool >](../standard-library/vector-bool-class.md) obiektu.
+Wartość logiczna elementu obiektu [wektor\<bool >](../standard-library/vector-bool-class.md) obiektu.
 
 ## <a name="remarks"></a>Uwagi
 
-`vector<bool>` Obiektu nie może modyfikować tego operatora.
+`vector<bool>` Ten operator nie można zmodyfikować obiektu.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<wektor >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wektor\<bool >:: klasę referencyjną](../standard-library/vector-bool-reference-class.md)<br/>
+[Wektor\<bool >:: reference — klasa](../standard-library/vector-bool-reference-class.md)<br/>
 [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>

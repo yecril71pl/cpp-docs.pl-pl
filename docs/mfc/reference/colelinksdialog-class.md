@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb24b73ba23b430e29ed9144e51372eefdb673a3
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 5dd17c0541b573cba40146c55b46d14143209c87
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042537"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853881"
 ---
 # <a name="colelinksdialog-class"></a>Klasa COleLinksDialog
-Używane dla okna dialogowego OLE Edytuj łącza.  
+Stosowane dla okna dialogowego OLE Edytuj łącza.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -50,16 +50,16 @@ class COleLinksDialog : public COleDialog
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[COleLinksDialog::DoModal](#domodal)|Wyświetla okno dialogowe OLE Edytuj łącza.|  
+|[COleLinksDialog::DoModal](#domodal)|Wyświetla okna dialogowego OLE Edytuj łącza.|  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[COleLinksDialog::m_el](#m_el)|Struktura typu **OLEUIEDITLINKS** steruje zachowaniem okna dialogowego.|  
+|[COleLinksDialog::m_el](#m_el)|Struktura typu OLEUIEDITLINKS kontrolujące zachowanie okna dialogowego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Utwórz obiekt klasy `COleLinksDialog` umożliwia wywołanie tego okna dialogowego. Po `COleLinksDialog` obiekt został skonstruowany, możesz użyć [m_el](#m_el) struktury zainicjować wartości lub stany formantów w oknie dialogowym. `m_el` Struktura jest typu **OLEUIEDITLINKS**. Aby uzyskać więcej informacji o korzystaniu z tej klasy okien dialogowych, zobacz [DoModal](#domodal) funkcję elementu członkowskiego.  
+ Utwórz obiekt klasy `COleLinksDialog` umożliwia wywołanie tego okna dialogowego. Po `COleLinksDialog` obiekt został skonstruowany, możesz użyć [m_el](#m_el) strukturę, aby zainicjować wartości lub stany formantów w oknie dialogowym. `m_el` Struktury jest typu OLEUIEDITLINKS. Aby uzyskać więcej informacji o korzystaniu z tej klasy okien dialogowych, zobacz [DoModal](#domodal) funkcja elementu członkowskiego.  
   
 > [!NOTE]
 >  Kod kontenera generowane przez Kreatora aplikacji korzysta z tej klasy.  
@@ -87,23 +87,23 @@ class COleLinksDialog : public COleDialog
  **Nagłówek:** afxodlgs.h  
   
 ##  <a name="domodal"></a>  COleLinksDialog::DoModal  
- Wyświetla okno dialogowe OLE Edytuj łącza.  
+ Wyświetla okna dialogowego OLE Edytuj łącza.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Stan ukończenia dla okna dialogowego. Jedna z następujących wartości:  
+ Stan ukończenia dla okna dialogowego. Jeden z następujących wartości:  
   
-- **IDOK** Jeśli pomyślnie zostało wyświetlone okno dialogowe.  
+- IDOK, jeśli pomyślnie zostało wyświetlone okno dialogowe.  
   
-- **IDCANCEL** Jeśli użytkownik anulował okno dialogowe.  
+- IDCANCEL, jeśli użytkownik anulował okno dialogowe.  
   
-- **IDABORT** Jeśli wystąpił błąd. Jeśli **IDABORT** jest zwracany, wywołaj `COleDialog::GetLastError` funkcji członkowskiej, aby uzyskać więcej informacji o typie wystąpił błąd. Aby uzyskać listę możliwych błędów, zobacz [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) funkcji w zestawie Windows SDK.  
+- IDABORT, jeśli wystąpił błąd. Jeśli zwracana jest IDABORT, wywołaj `COleDialog::GetLastError` funkcja elementu członkowskiego, aby uzyskać więcej informacji o typie błędu, który wystąpił. Aby uzyskać listę możliwych błędów, zobacz [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) funkcji w zestawie Windows SDK.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli chcesz zainicjować różnych formantów okna dialogowego przez ustawienie członkami [m_el](#m_el) struktury, należy to zrobić przed wywołaniem `DoModal`, ale po konstruowania obiektu okna dialogowego.  
+ Aby inicjowanie różne formanty okna dialogowego, ustawiając członkowie [m_el](#m_el) struktury, należy to zrobić przed wywołaniem `DoModal`, ale po jest konstruowany obiektu okna dialogowego.  
   
 ##  <a name="colelinksdialog"></a>  COleLinksDialog::COleLinksDialog  
  Konstruuje `COleLinksDialog` obiektu.  
@@ -118,29 +118,29 @@ COleLinksDialog (
   
 ### <a name="parameters"></a>Parametry  
  *pDoc*  
- Wskazuje dokumentu OLE, który zawiera łącza do edycji.  
+ Wskazuje dokument OLE, który zawiera łącza do edycji.  
   
  *pView*  
  Wskazuje bieżący widok na *pDoc*.  
   
- *wartość elementu dwFlags*  
- Tworzenie flagę zawiera albo 0 lub **ELF_SHOWHELP** do określenia, czy przycisk Pomoc, będzie wyświetlana, gdy zostanie wyświetlone okno dialogowe.  
+ *Flagidw*  
+ Flagi tworzenia zawiera 0 lub ELF_SHOWHELP, aby określić, czy przycisk Pomoc, będzie wyświetlane, gdy zostanie wyświetlone okno dialogowe.  
   
  *pParentWnd*  
- Wskazuje obiekt okna nadrzędnego lub właściciela (typu `CWnd`) do której należy obiektu okna dialogowego. Jeśli jest **NULL**, okno nadrzędne, okno dialogowe ma ustawioną wartość okna głównego aplikacji.  
+ Wskazuje na obiekt okna nadrzędnego lub właściciela (typu `CWnd`) do którego należy obiekt okna dialogowego. Jeśli ma wartość NULL, okno nadrzędne, okno dialogowe jest ustawiony na okna głównego aplikacji.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja tworzy tylko `COleLinksDialog` obiektu. Aby wyświetlić okno dialogowe, wywołaj [DoModal](#domodal) funkcji.  
+ Ta funkcja tworzy tylko `COleLinksDialog` obiektu. Aby wyświetlić okno dialogowe, należy wywołać [DoModal](#domodal) funkcji.  
   
 ##  <a name="m_el"></a>  COleLinksDialog::m_el  
- Struktura typu **OLEUIEDITLINKS** służące do sterowania zachowaniem okna dialogowego Edytowanie łączy.  
+ Struktury typu OLEUIEDITLINKS używane do sterowania zachowaniem okno dialogowe Edytuj linki.  
   
 ```  
 OLEUIEDITLINKS m_el;  
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Elementy członkowskie tej konstrukcji może być modyfikowany bezpośrednio lub za pośrednictwem funkcji elementów członkowskich.  
+ Elementy członkowskie tej struktury można zmodyfikować bezpośrednio lub za pośrednictwem funkcji elementów członkowskich.  
   
  Aby uzyskać więcej informacji, zobacz [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) struktury w zestawie Windows SDK.  
   

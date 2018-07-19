@@ -22,16 +22,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 540f5085d1f2ab3b641e023654d05f1e9e66bae2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9fe7672a925105bff3b63032a709353388143c0c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857340"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953013"
 ---
 # <a name="syncnone-class"></a>sync_none — Klasa
 
-W tym artykule opisano [filtr synchronizacji](../standard-library/allocators-header.md) zapewnia ma synchronizacji.
+W tym artykule opisano [filtr synchronizacji](../standard-library/allocators-header.md) zapewniający Brak synchronizacji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,25 +44,25 @@ class sync_none
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`Cache`|Typ pamięci podręcznej skojarzone z filtrem synchronizacji. Może to być [cache_chunklist —](../standard-library/cache-chunklist-class.md), [cache_freelist —](../standard-library/cache-freelist-class.md), lub [cache_suballoc —](../standard-library/cache-suballoc-class.md).|
+|`Cache`|Typ pamięci podręcznej skojarzone z filtrem synchronizacji. Może to być [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md), lub [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
 ### <a name="member-functions"></a>Funkcje Członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[allocate](#allocate)|Przydziela bloku pamięci.|
-|[Cofnięcie przydziału](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu rozpoczynający się od określonej pozycji.|
-|[equals](#equals)|Porównuje dwa pamięci podręcznych pod kątem równości.|
+|[allocate](#allocate)|Przydziela blok pamięci.|
+|[Cofnij Przydział](#deallocate)|Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.|
+|[equals](#equals)|Porównuje dwa pamięci podręczne dla równości.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<allocators — >
+**Nagłówek:** \<buforów >
 
-**Namespace:** stdext —
+**Namespace:** stdext
 
 ## <a name="allocate"></a>  sync_none::allocate
 
-Przydziela bloku pamięci.
+Przydziela blok pamięci.
 
 ```cpp
 void *allocate(std::size_t count);
@@ -72,15 +72,15 @@ void *allocate(std::size_t count);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`count`|Liczba elementów w tablicy do przydzielenia.|
+|*Liczba*|Liczba elementów w tablicy do przydzielenia.|
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca `cache.allocate(count)`, gdzie `cache` obiektu pamięci podręcznej.
+Funkcja elementu członkowskiego zwraca `cache.allocate(count)`, gdzie `cache` jest buforowany obiekt.
 
 ## <a name="deallocate"></a>  sync_none::deallocate
 
-Zwalnia określoną liczbę obiektów z magazynu rozpoczynający się od określonej pozycji.
+Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.
 
 ```cpp
 void deallocate(void* ptr, std::size_t count);
@@ -90,16 +90,16 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`ptr`|Wskaźnik do pierwszego obiektu do cofnięcia alokacji z magazynu.|
-|`count`|Liczba obiektów do cofnięcia alokacji z magazynu.|
+|*ptr*|Wskaźnik do pierwszego obiektu można cofnąć przydziału z magazynu.|
+|*Liczba*|Liczba obiektów, które można cofnąć przydziału z magazynu.|
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania funkcji Członkowskich `cache.deallocate(ptr, count)`, gdzie `cache` reprezentuje buforowany obiekt.
+Wywołania funkcji elementu członkowskiego `cache.deallocate(ptr, count)`, gdzie `cache` reprezentuje buforowany obiekt.
 
 ## <a name="equals"></a>  sync_none::Equals
 
-Porównuje dwa pamięci podręcznych pod kątem równości.
+Porównuje dwa pamięci podręczne dla równości.
 
 ```cpp
 bool equals(const sync<Cache>& Other) const;
@@ -109,12 +109,12 @@ bool equals(const sync<Cache>& Other) const;
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`Cache`|Buforowany obiekt filtr synchronizacji.|
-|`Other`|Buforowany obiekt do porównania równości.|
+|*Cache*|Buforowany obiekt filtr synchronizacji.|
+|*Inne*|Buforowany obiekt do porównania dla równości.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Funkcja członkowska zawsze zwraca `true`.
+Funkcja elementu członkowskiego zwraca zawsze **true**.
 
 ### <a name="remarks"></a>Uwagi
 

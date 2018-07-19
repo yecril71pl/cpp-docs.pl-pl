@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57a7e7127135837a426436c15e8ae8aff60227da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 50cdb9899582b3e398909e4fcb7ad571025dbcf0
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413963"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941577"
 ---
 # <a name="hardware-exceptions"></a>Wyjątki sprzętowe
 Do większości standardowych wyjątków rozpoznawanych przez system operacyjny należą wyjątki zdefiniowane przez sprzęt. System Windows rozpoznaje kilka wyjątków oprogramowania niskiego poziomu, ale są one zazwyczaj najlepiej obsługiwane przez system operacyjny.  
@@ -34,20 +34,20 @@ Do większości standardowych wyjątków rozpoznawanych przez system operacyjny 
   
 |Kod wyjątku|Przyczyna wyjątku|  
 |--------------------|------------------------|  
-|**STATUS_ACCESS_VIOLATION**|Odczyt lub zapis do niedostępnej lokalizacji pamięci.|  
-|**STATUS_BREAKPOINT**|Napotkanie punktu przerwania zdefiniowanego przez sprzęt; używane tylko przez debugery.|  
-|**STATUS_DATATYPE_MISALIGNMENT**|Odczyt lub zapis danych na adres, który jest nieodpowiednio wyrównany; na przykład jednostki 16-bitowe muszą być wyrównane do 2-bajtowych granic. (Nie dotyczy Intel 80*x*86 procesorów.)|  
-|**STATUS_FLOAT_DIVIDE_BY_ZERO**|Dzielenie liczb typu zmiennoprzecinkowego przez 0.0.|  
-|**STATUS_FLOAT_OVERFLOW**|Przekroczenie maksymalnego dodatniego wykładnika typu zmiennoprzecinkowego.|  
-|**STATUS_FLOAT_UNDERFLOW**|Przekroczenie wielkości najmniejszego ujemnego wykładnika typu zmiennoprzecinkowego.|  
-|**STATUS_FLOATING_RESEVERED_OPERAND**|Użycie zastrzeżonego formatu zmiennoprzecinkowego (nieprawidłowe użycie formatu).|  
-|**STATUS_ILLEGAL_INSTRUCTION**|Podjęcie próby wykonania kodu instrukcji nie zdefiniowanej przez procesor.|  
-|**STATUS_PRIVILEGED_INSTRUCTION**|Wykonywanie instrukcji niedozwolonej w bieżącym trybie komputera.|  
-|**STATUS_INTEGER_DIVIDE_BY_ZERO**|Dzielenie liczby całkowitej przez 0.|  
-|**STATUS_INTEGER_OVERFLOW**|Podjęcie próby wykonania operacji, która wykracza poza zakres liczby całkowitej.|  
-|**STATUS_SINGLE_STEP**|Wykonywanie pojedynczej instrukcji w trybie pracy krokowej; używane tylko przez debugery.|  
+|STATUS_ACCESS_VIOLATION|Odczyt lub zapis do niedostępnej lokalizacji pamięci.|  
+|STATUS_BREAKPOINT|Napotkanie punktu przerwania zdefiniowanego przez sprzęt; używane tylko przez debugery.|  
+|STATUS_DATATYPE_MISALIGNMENT|Odczyt lub zapis danych na adres, który jest nieodpowiednio wyrównany; na przykład jednostki 16-bitowe muszą być wyrównane do 2-bajtowych granic. (Nie dotyczy Intel 80*x*86 procesorów.)|  
+|STATUS_FLOAT_DIVIDE_BY_ZERO|Dzielenie liczb typu zmiennoprzecinkowego przez 0.0.|  
+|STATUS_FLOAT_OVERFLOW|Przekroczenie maksymalnego dodatniego wykładnika typu zmiennoprzecinkowego.|  
+|STATUS_FLOAT_UNDERFLOW|Przekroczenie wielkości najmniejszego ujemnego wykładnika typu zmiennoprzecinkowego.|  
+|STATUS_FLOATING_RESEVERED_OPERAND|Użycie zastrzeżonego formatu zmiennoprzecinkowego (nieprawidłowe użycie formatu).|  
+|STATUS_ILLEGAL_INSTRUCTION|Podjęcie próby wykonania kodu instrukcji nie zdefiniowanej przez procesor.|  
+|STATUS_PRIVILEGED_INSTRUCTION|Wykonywanie instrukcji niedozwolonej w bieżącym trybie komputera.|  
+|STATUS_INTEGER_DIVIDE_BY_ZERO|Dzielenie liczby całkowitej przez 0.|  
+|STATUS_INTEGER_OVERFLOW|Podjęcie próby wykonania operacji, która wykracza poza zakres liczby całkowitej.|  
+|STATUS_SINGLE_STEP|Wykonywanie pojedynczej instrukcji w trybie pracy krokowej; używane tylko przez debugery.|  
   
- Wiele wyjątków wymienionych w powyższej tabeli jest przeznaczonych do obsługi przez debugery, system operacyjny lub inny kod niskiego poziomu. Z wyjątkiem błędów liczb całkowitych i zmiennoprzecinkowych, kod nie powinien obsługiwać tych błędów. Zatem zazwyczaj należy korzystać z filtru obsługi wyjątków w celu ignorowania wyjątków (obliczania do 0). W przeciwnym razie można uniemożliwić prawidłową odpowiedź mechanizmom niskiego poziomu. Można jednak podjąć odpowiednie środki ostrożności przed potencjalnego wpływu te błędy niskiego poziomu [pisanie programu obsługi zakończenia](../cpp/writing-a-termination-handler.md).  
+ Wiele wyjątków wymienionych w powyższej tabeli jest przeznaczonych do obsługi przez debugery, system operacyjny lub inny kod niskiego poziomu. Z wyjątkiem błędów liczb całkowitych i zmiennoprzecinkowych, kod nie powinien obsługiwać tych błędów. Zatem zazwyczaj należy korzystać z filtru obsługi wyjątków w celu ignorowania wyjątków (obliczania do 0). W przeciwnym razie można uniemożliwić prawidłową odpowiedź mechanizmom niskiego poziomu. Można jednak podjąć odpowiednie środki ostrożności przeciwko potencjalnemu wpływowi tych błędów niskiego poziomu przez [napisanie programów obsługi zakończenia](../cpp/writing-a-termination-handler.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Pisanie programu do obsługi wyjątków](../cpp/writing-an-exception-handler.md)   

@@ -1,5 +1,5 @@
 ---
-title: once_flag — struktura | Dokumentacja firmy Microsoft
+title: once_flag, struktura | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,32 +14,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8a8d28f19e32988bfa179642a87e880413bb0ff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4275b99ada0dbfe1c974446d21862f7fa73aab38
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852341"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964499"
 ---
 # <a name="onceflag-structure"></a>once_flag — Struktura
 
-Reprezentuje `struct` używany przy użyciu funkcji szablonu [call_once —](../standard-library/mutex-functions.md#call_once) aby upewnić się, że inicjowania kodu zostanie wywołana tylko raz, nawet w obecności wielu wątków wykonywania.
+Reprezentuje **struktury** używany za pomocą funkcji szablonu [call_once —](../standard-library/mutex-functions.md#call_once) aby upewnić się, że inicjowanie kodu jest wywoływana tylko raz, nawet w obecności wielu wątków wykonania.
 
 ## <a name="syntax"></a>Składnia
 
-once_flag — struktura {constexpr once_flag() noexcept; once_flag(const once_flag&); once_flag — & — operator =(const once_flag&);};
+once_flag — struktura {constexpr once_flag() noexcept; once_flag(const once_flag&); once_flag & — operator =(const once_flag&);};
 
 ## <a name="remarks"></a>Uwagi
 
-`once_flag` `struct` Ma konstruktora domyślnego.
+`once_flag` **Struktury** ma Konstruktor domyślny.
 
-Obiekty typu `once_flag` mogą być tworzone, ale nie można skopiować.
+Obiekty typu `once_flag` mogą być tworzone, ale ich nie można skopiować.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<obiektu mutex >
+**Nagłówek:** \<mutex >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

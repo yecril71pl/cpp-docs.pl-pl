@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5537f4ad3abbac9686272e15d06bfa5df0bfca6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43e28aa7d7b3682c45f4f8b7a94e990374d83b46
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947741"
 ---
 # <a name="bstrtoperator-"></a>_bstr_t::operator =
 **Microsoft Specific**  
@@ -32,37 +33,29 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      _bstr_t& operator=(  
-   const _bstr_t& s1   
-) throw ( );  
-_bstr_t& operator=(  
-   const char* s2   
-);  
-_bstr_t& operator=(  
-   const wchar_t* s3   
-);  
-_bstr_t& operator=(  
-   const _variant_t& var   
-);  
+_bstr_t& operator=(const _bstr_t& s1) throw ( );  
+_bstr_t& operator=(const char* s2);  
+_bstr_t& operator=(const wchar_t* s3);  
+_bstr_t& operator=(const _variant_t& var);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
  *S1*  
- A `_bstr_t` obiektu do przypisania do istniejącej `_bstr_t` obiektu.  
+ A `_bstr_t` obiekt ma być przypisane do istniejącej `_bstr_t` obiektu.  
   
  *S2*  
- Ciąg wielobajtowy do przypisania do istniejącej `_bstr_t` obiektu.  
+ Wielobajtowy ciąg ma być przypisane do istniejącej `_bstr_t` obiektu.  
   
- `s3`  
- Ciąg Unicode do przypisania do istniejącej `_bstr_t` obiektu.  
+ *S3*  
+ Ciąg Unicode ma być przypisane do istniejącej `_bstr_t` obiektu.  
   
- `var`  
- A `_variant_t` obiektu do przypisania do istniejącej `_bstr_t` obiektu.  
+ *var*  
+ A `_variant_t` obiekt ma być przypisane do istniejącej `_bstr_t` obiektu.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="example"></a>Przykład  
- Zobacz [_bstr_t::przypisanie](../cpp/bstr-t-assign.md) przykład przy użyciu `operator=`.  
+ Zobacz [_bstr_t::przypisanie](../cpp/bstr-t-assign.md) na przykład za pomocą **operator =**.  
   
 ## <a name="see-also"></a>Zobacz też  
  [_bstr_t, klasa](../cpp/bstr-t-class.md)

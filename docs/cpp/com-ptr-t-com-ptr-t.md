@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d47cfc48a7d73ca1159c4a1862281c01c16cc11
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f27d6f1a09f46dfb3906825bdf4f2347a02f2d38
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413937"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939074"
 ---
 # <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
 **Microsoft Specific**  
@@ -143,31 +143,31 @@ explicit _com_ptr_t(
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `pInterface`  
- Wskaźnik interfejsu pierwotnego.  
+ *pInterface*  
+ Surowego wskaźnika interfejsu.  
   
- `fAddRef`  
- Jeśli **true**, `AddRef` nosi nazwę należy zwiększyć wartość odwołanie wskaźnika zhermetyzowany interfejs.  
+ *fAddRef*  
+ W przypadku opcji TRUE `AddRef` jest wywoływana, aby zwiększyć licznik odwołań interfejsu zhermetyzowanego wskaźnika.  
   
- *Zasady certyfikatów*  
- A `_com_ptr_t` obiektu.  
+ *CP*  
+ Element `_com_ptr_t` obiektu.  
   
- `p`  
- Wskaźnik interfejsu pierwotnego, jego typ jest inny niż typ wskaźnika inteligentnego `_com_ptr_t` obiektu.  
+ *p*  
+ Surowego wskaźnika interfejsu, jego typ jest inny niż typ inteligentnego wskaźnika `_com_ptr_t` obiektu.  
   
  *varSrc*  
- A `_variant_t` obiektu.  
+ Element `_variant_t` obiektu.  
   
- `clsid`  
- **CLSID** z klasy coclass.  
+ *Identyfikator klasy*  
+ `CLSID` Klasy coclass.  
   
- `dwClsContext`  
- Kontekst do uruchomienia kodu wykonywalnego.  
+ *dwClsContext*  
+ Kontekst do uruchamiania kodu wykonywalnego.  
   
  *lpcStr*  
- Wielobajtowe ciąg, który przechowuje albo **CLSID** (począwszy od "**{**") lub **ProgID**.  
+ Wielobajtowy ciąg, który zawiera jedną `CLSID` (począwszy od "**{**") lub `ProgID`.  
   
- `pOuter`  
+ *pOuter*  
  Zewnętrzne nieznany dla [agregacji](http://msdn.microsoft.com/library/windows/desktop/ms686558).  
   
 ## <a name="see-also"></a>Zobacz też  

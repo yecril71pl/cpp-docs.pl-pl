@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3679ad27683e5f7ff9a13f5b5021710f7894c04
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00a1122dffac0bdb61ba3799ce78ed3403e6d478
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947862"
 ---
 # <a name="break-statement-c"></a>break — instrukcja (C++)
-`break` Instrukcji kończy wykonywanie najbliższej otaczającej pętli lub instrukcji warunkowej, w których występuje. Jeśli po końcu przerwanej instrukcji występuje kolejna, sterowanie przechodzi do niej.  
+**Podziału** instrukcja kończy wykonywanie najbliższej otaczającej pętli lub instrukcji warunkowej, w której występuje. Jeśli po końcu przerwanej instrukcji występuje kolejna, sterowanie przechodzi do niej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,16 +33,16 @@ break;
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- `break` z warunkowej używana jest instrukcja [przełącznika](../cpp/switch-statement-cpp.md) instrukcji i [czy](../cpp/do-while-statement-cpp.md), [dla](../cpp/for-statement-cpp.md), i [podczas](../cpp/while-statement-cpp.md) pętli instrukcje.  
+ **Podziału** instrukcja jest używane z zasad dostępu [Przełącz](../cpp/switch-statement-cpp.md) instrukcji i [czy](../cpp/do-while-statement-cpp.md), [dla](../cpp/for-statement-cpp.md), i [podczas](../cpp/while-statement-cpp.md) instrukcje pętli.  
   
- W `switch` instrukcji, `break` instrukcja powoduje, że program do uruchomienia następnej instrukcji poza `switch` instrukcji. Bez `break` instrukcji, co instrukcji z dopasowanej `case` etykiet na końcu `switch` instrukcji, w tym `default` klauzuli jest wykonywana.  
+ W **Przełącz** instrukcji **podziału** instrukcji powoduje, że program do uruchomienia następnej instrukcji poza **Przełącz** instrukcji. Bez **podziału** instrukcji, każda instrukcja z dopasowanej **przypadek** etykiet na końcu **Przełącz** instrukcji, w tym **domyślne**klauzuli, jest wykonywany.  
   
- W pętli `break` instrukcji kończy wykonywanie najbliższej otaczającej `do`, `for`, lub `while` instrukcji. Sterowanie przechodzi do instrukcji następującej po zakończonej, jeśli taka istnieje.  
+ W pętlach **podziału** instrukcja kończy wykonywanie najbliższej otaczającej **czy**, **dla**, lub **podczas** instrukcji. Sterowanie przechodzi do instrukcji następującej po zakończonej, jeśli taka istnieje.  
   
- W zagnieżdżonych instrukcjach `break` instrukcji kończy się tylko `do`, `for`, `switch`, lub `while` instrukcji ograniczający natychmiast go. Można użyć `return` lub `goto` instrukcji do przekazywania kontroli z więcej głęboko zagnieżdżone struktury.  
+ W obrębie zagnieżdżonych instrukcji **podziału** kończy tylko instrukcję instrukcji **czy**, **dla**, **Przełącz**, lub **podczas**instrukcja, która bezpośrednio ją obejmuje. Możesz użyć **zwracają** lub **goto** instrukcję, aby przekazać sterowanie z głęboko zagnieżdżonych struktur.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod przedstawia sposób użycia `break` instrukcji w `for` pętli.  
+ Poniższy kod przedstawia sposób użycia **podziału** instrukcji w **dla** pętli.  
   
 ```cpp  
 #include <iostream>  
@@ -52,9 +53,10 @@ int main()
     // An example of a standard for loop  
     for (int i = 1; i < 10; i++)  
     {  
-        cout << i << '\n';  
-        if (i == 4)  
+        if (i == 4) {  
             break;  
+        }  
+        cout << i << '\n';  
     }  
   
     // An example of a range-based for loop  
@@ -76,7 +78,7 @@ In each case:
 3  
 ```  
   
- Poniższy kod przedstawia sposób użycia `break` w `while` pętli i `do` pętli.  
+ Poniższy kod przedstawia sposób użycia **podziału** w **podczas** pętli i **czy** pętli.  
   
 ```cpp  
 #include <iostream>  
@@ -109,7 +111,7 @@ In each case:
 0123  
 ```  
   
- Poniższy kod przedstawia sposób użycia `break` w instrukcji switch. Należy użyć `break` w każdym przypadku, jeśli chcesz obsługiwać każdego przypadku oddzielnie; Jeśli nie używasz `break`, wykonanie kodu znajduje się za pośrednictwem dalej wielkość liter.  
+ Poniższy kod przedstawia sposób użycia **podziału** w instrukcji switch. Należy użyć **podziału** w każdym przypadku, jeśli chcesz obsługiwać każde wystąpienie case oddzielnie; Jeśli nie używasz **podziału**, wykonanie kodu przejdzie do następnego wystąpienia case.  
   
 ```cpp  
 #include <iostream>  

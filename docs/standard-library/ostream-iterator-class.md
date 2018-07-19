@@ -22,16 +22,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49626cbb33ed1220ad82cbec10ad675769b054d6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ee931abb2273ab3119fa62b9219ad69448b2048
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863611"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963527"
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator — Klasa
 
-Ostream_iterator — klasa szablonu opisuje obiekt iteratora wyjściowy, który zapisuje kolejne elementy do strumienia wyjściowego o wyodrębnianiu **operator <<**.
+Klasa szablonu ostream_iterator obiekt iteratora wyjściowego, który zapisuje kolejne elementy do strumienia wyjściowego przy użyciu wyodrębniania `operator <<`.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,45 +42,45 @@ class ostream_iterator
 
 ### <a name="parameters"></a>Parametry
 
-*Typ* typ obiektu, które ma zostać wstawiony do strumienia wyjściowego.
+*Typ* typ obiektu, który ma zostać wstawiony do strumienia wyjściowego.
 
-`CharType` Typ reprezentujący typ znaków `ostream_iterator`. Ten argument jest opcjonalny, a wartość domyślna to `char`.
+*CharType* typ, który reprezentuje typ znaków dla `ostream_iterator`. Ten argument jest opcjonalny, a wartość domyślna to **char**.
 
-`Traits` Typ reprezentujący typ znaków `ostream_iterator`. Ten argument jest opcjonalny, a wartość domyślna to `char_traits` \< *CharType >.*
+*Cechy* typ, który reprezentuje typ znaków dla `ostream_iterator`. Ten argument jest opcjonalny, a wartość domyślna to `char_traits` \< *CharType >.*
 
-Klasa ostream_iterator musi spełniać wymagania dla iteratora wyjściowego. Algorytmy mogą być zapisywane dane bezpośrednio do danych wyjściowych strumieni przy użyciu `ostream_iterator`.
+Klasa ostream_iterator musi spełniać wymagania dla iteratora wyjściowego. Algorytmy mogą być pisane bezpośrednio do wyjściowych strumieni za pomocą `ostream_iterator`.
 
 ### <a name="constructors"></a>Konstruktorów
 
 |Konstruktor|Opis|
 |-|-|
-|[ostream_iterator](#ostream_iterator)|Konstruuje `ostream_iterator` czyli zainicjować i ograniczony do zapisu do strumienia wyjściowego.|
+|[ostream_iterator](#ostream_iterator)|Konstruuje `ostream_iterator` który jest inicjowany i ograniczany do zapisu do strumienia wyjściowego.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Nazwa typu|Opis|
 |-|-|
-|[char_type](#char_type)|Typ, który zawiera znak typu `ostream_iterator`.|
-|[ostream_type](#ostream_type)|Typ, który udostępnia dla typu strumienia `ostream_iterator`.|
-|[traits_type](#traits_type)|Typ, który zawiera typ cech znaków `ostream_iterator`.|
+|[char_type](#char_type)|Typ, który zapewnia typ znaków `ostream_iterator`.|
+|[ostream_type](#ostream_type)|Typ, który zapewnia typ ciągu `ostream_iterator`.|
+|[traits_type](#traits_type)|Typ, który zapewnia typ cechy znaków `ostream_iterator`.|
 
 ### <a name="operators"></a>Operatory
 
 |Operator|Opis|
 |-|-|
-|[operator *](#op_star)|Operator usuwania odwołań używaną do zaimplementowania wyrażenia iteratora dane wyjściowe * `i`  =  `x`.|
-|[operator++](#op_add_add)|Operator inkrementacji prawidłowo, który zwraca `ostream_iterator` do tego samego obiektu adresowane, zanim została wywołana w operacji.|
-|[operator=](#op_eq)|Operator przypisania używaną do zaimplementowania wyrażenia iteratora dane wyjściowe * `i`  =  `x` do zapisywania do strumienia wyjściowego.|
+|[operator *](#op_star)|Operator dereferencji używany do implementowania wyrażenie iteratora wyjściowego * `i`  =  `x`.|
+|[operator++](#op_add_add)|Operator inkrementacji prawidłowo, który zwraca `ostream_iterator` ten sam obiekt się odnosił przed wywołaniem operacji.|
+|[operator=](#op_eq)|Operator przypisania używany do implementowania wyrażenie iteratora wyjściowego * `i`  =  `x` do zapisywania do strumienia wyjściowego.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<iteratora >
+**Nagłówek:** \<iterator >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="char_type"></a>  ostream_iterator::char_type
 
-Typ, który zawiera typ znakowy iteratora.
+Typ, który zapewnia typ znaków iteratora.
 
 ```cpp
 typedef CharType char_type;
@@ -88,7 +88,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem parametru szablonu **CharType**.
+Typ jest synonimem dla parametru szablonu `CharType`.
 
 ### <a name="example"></a>Przykład
 
@@ -129,7 +129,7 @@ by intOut are:
 
 ## <a name="op_star"></a>  ostream_iterator::operator *
 
-Operator usuwania odwołań używaną do zaimplementowania wyrażenia iteratora dane wyjściowe \* *ii* = *x*.
+Operator dereferencji używany do implementowania wyrażenia iteratora danych wyjściowych \* *ii* = *x*.
 
 ```cpp
 ostream_iterator<Type, CharType, Traits>& operator*();
@@ -141,7 +141,7 @@ Odwołanie do `ostream_iterator`.
 
 ### <a name="remarks"></a>Uwagi
 
-Wymagania dotyczące iteratora dane wyjściowe który `ostream_iterator` muszą spełniać wymagają tylko wyrażenia \* *ii* = *t* ważność i mówi nic o **operator** lub `operator=` samodzielnie. Zwraca element członkowski operatora w tej implementacji  **\*to**.
+Wymagania dla iteratora wyjściowego, `ostream_iterator` musi spełniać wymagają tylko wyrażenia \* *ii* = *t* ważność i nie mówi nic o **operator** lub `operator=` własnych. Operator elementów członkowskich w tej implementacji zwraca  **\*to**.
 
 ### <a name="example"></a>Przykład
 
@@ -178,7 +178,7 @@ Elements written to output stream:
 
 ## <a name="op_add_add"></a>  ostream_iterator::operator ++
 
-Operator inkrementacji prawidłowo, który zwraca `ostream_iterator` do tego samego obiektu adresowane, zanim została wywołana w operacji.
+Operator inkrementacji prawidłowo, który zwraca `ostream_iterator` ten sam obiekt się odnosił przed wywołaniem operacji.
 
 ```cpp
 ostream_iterator<Type, CharType, Traits>& operator++();
@@ -191,7 +191,7 @@ Odwołanie do `ostream_iterator`.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca te operatorów Członkowskich zarówno  **\*to**.
+Te operatory elementów członkowskich oba zwracają  **\*to**.
 
 ### <a name="example"></a>Przykład
 
@@ -228,7 +228,7 @@ Elements written to output stream:
 
 ## <a name="op_eq"></a>  ostream_iterator::operator =
 
-Operator przypisania używaną do zaimplementowania wyrażenie output_iterator * `i`  =  `x` do zapisywania do strumienia wyjściowego.
+Operator przypisania używany do implementowania wyrażenia output_iterator * `i`  =  `x` do zapisywania do strumienia wyjściowego.
 
 ```cpp
 ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
@@ -236,15 +236,15 @@ ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
 
 ### <a name="parameters"></a>Parametry
 
-`val` Wartość typu obiektu `Type` ma zostać wstawiony do strumienia wyjściowego.
+*Val* wartość obiektu typu `Type` ma zostać wstawiony do strumienia wyjściowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wstawia — operator `val` do strumienia wyjściowego skojarzony z obiektem, a następnie Ogranicznik podany w [ostream_iterator — Konstruktor](#ostream_iterator) (jeśli istnieje), a następnie zwraca odwołanie do `ostream_iterator`.
+Wstawia operator *val* do strumienia wyjściowego, skojarzony z obiektem, a następnie według ogranicznika określone w [ostream_iterator — Konstruktor](#ostream_iterator) (jeśli istnieje) i zwraca odwołanie do `ostream_iterator`.
 
 ### <a name="remarks"></a>Uwagi
 
-Wymagania dotyczące iteratora dane wyjściowe który `ostream_iterator` muszą spełniać wymagają tylko wyrażenie * `ii`  =  `t` ważność i mówi nic o operator lub operator = samodzielnie. Ten operator członkowski zwraca `*this`.
+Wymagania dla iteratora wyjściowego, `ostream_iterator` musi spełniać wymagają tylko wyrażenia * `ii`  =  `t` ważność i nie mówi nic o operator lub operator = własnych. Ten operator elementu członkowskiego zwraca `*this`.
 
 ### <a name="example"></a>Przykład
 
@@ -281,7 +281,7 @@ Elements written to output stream:
 
 ## <a name="ostream_iterator"></a>  ostream_iterator::ostream_iterator
 
-Konstruuje `ostream_iterator` czyli zainicjować i ograniczony do zapisu do strumienia wyjściowego.
+Konstruuje `ostream_iterator` który jest inicjowany i ograniczany do zapisu do strumienia wyjściowego.
 
 ```cpp
 ostream_iterator(
@@ -294,15 +294,15 @@ ostream_iterator(
 
 ### <a name="parameters"></a>Parametry
 
-`_Ostr` Strumień wyjściowy typu [ostream_iterator::ostream_type](#ostream_type) należy powtórzyć za pośrednictwem.
+*_Ostr* w strumieniu wyjściowym typu [ostream_iterator::ostream_type](#ostream_type) należy powtórzyć za pośrednictwem.
 
-`_Delimiter` Ogranicznik, które są wstawiane do strumienia wyjściowego między wartościami.
+*_Delimiter* ogranicznik, który jest wstawiany do strumienia wyjściowego między wartościami.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor inicjuje wskaźnik strumienia danych wyjściowych z `&_Ostr`. Wskaźnik ciągu ogranicznik wyznacza ciągiem pustym.
+Pierwszy Konstruktor inicjuje wskaźnik strumienia wyjściowego przy użyciu `&_Ostr`. Wskaźnik ciągu ogranicznik wyznacza pusty ciąg.
 
-Drugi Konstruktor inicjuje wskaźnika strumienia wyjściowego za pomocą `&_Ostr` i wskaźnikiem do ciągu ogranicznik z `_Delimiter`.
+Drugi Konstruktor inicjuje wskaźnik strumienia wyjściowego przy użyciu `&_Ostr` i wskaźnik ciąg ograniczników z *_Delimiter*.
 
 ### <a name="example"></a>Przykład
 
@@ -361,15 +361,15 @@ typedef basic_ostream<CharType, Traits> ostream_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem [basic_ostream —](../standard-library/basic-ostream-class.md)< `CharType`, `Traits`>, klasę strumienia hierarchii iostream definiuje obiekty, które mogą służyć do zapisu.
+Typ jest synonimem dla [basic_ostream](../standard-library/basic-ostream-class.md)< `CharType`, `Traits`>, klasa strumienia w hierarchii iostream, który definiuje obiekty, które mogą służyć do zapisu.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [ostream_iterator —](#ostream_iterator) przykład sposobu deklarowanie i użycie `ostream_type`.
+Zobacz [ostream_iterator](#ostream_iterator) przykładowy sposób deklarowania i użyj `ostream_type`.
 
 ## <a name="traits_type"></a>  ostream_iterator::traits_type
 
-Typ, który zawiera znak cech typu iteratora.
+Typ, który zapewnia typ cechy znaków iteratora.
 
 ```cpp
 typedef Traits traits_type;
@@ -377,7 +377,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ jest synonimem parametru szablonu **cech**.
+Typ jest synonimem dla parametru szablonu `Traits`.
 
 ### <a name="example"></a>Przykład
 

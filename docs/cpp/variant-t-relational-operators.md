@@ -25,49 +25,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 663d8e24af8362de8ea809bc37a68c33d3278bc7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 08d7f5c7c244d242c3d1dd7af7d2c2af017bcc78
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947849"
 ---
 # <a name="variantt-relational-operators"></a>_variant_t — Operatory relacyjne
 **Microsoft Specific**  
   
- Porównać dwa `_variant_t` obiektów równości i nierówności.  
+ Porównanie dwóch `_variant_t` obiektów dla równości i nierówności.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
   
-      bool operator==(  
-   const VARIANT& varSrc   
-) const;  
 bool operator==(  
-   const VARIANT* pSrc   
-) const;  
+   const VARIANT& varSrc) const;  
+bool operator==(  
+   const VARIANT* pSrc) const;  
 bool operator!=(  
-   const VARIANT& varSrc   
-) const;  
+   const VARIANT& varSrc) const;  
 bool operator!=(  
-   const VARIANT* pSrc   
-) const;  
+   const VARIANT* pSrc) const;  
 ```  
   
 #### <a name="parameters"></a>Parametry  
  *varSrc*  
- A **VARIANT** ma zostać porównane z `_variant_t` obiektu.  
+ A `VARIANT` ma zostać porównane z `_variant_t` obiektu.  
   
- `pSrc`  
- Wskaźnik do **VARIANT** ma zostać porównane z `_variant_t` obiektu.  
+ *pSrc*  
+ Wskaźnik do `VARIANT` ma zostać porównane z `_variant_t` obiektu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca **true** Jeśli przechowuje porównania, **false** , jeśli nie.  
+ Zwraca **true** Jeśli przechowuje porównania, **false** w przeciwnym razie.  
   
 ## <a name="remarks"></a>Uwagi  
- Porównuje `_variant_t` obiekt z **VARIANT**, testowanie równości i nierówności.  
+ Porównuje `_variant_t` obiekt z `VARIANT`, testowanie dla równości i nierówności.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [_variant_t, klasa](../cpp/variant-t-class.md)

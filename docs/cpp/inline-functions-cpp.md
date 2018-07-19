@@ -18,19 +18,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6661996669e454e655d0149f1dbb1df505116469
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3c2fc99d4349a158bc4ce944be96e9c6141700cf
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947785"
 ---
 # <a name="inline-functions-c"></a>Funkcje śródwierszowe (C++)
-Funkcji zdefiniowanej w treści deklaracji klasy jest wbudowanej funkcji.  
+Funkcję zdefiniowaną w treści deklaracji klasy jest funkcją śródwierszową.  
   
 ## <a name="example"></a>Przykład  
- W deklaracji klasy następujące `Account` Konstruktor jest wbudowanej funkcji. Funkcje Członkowskie `GetBalance`, `Deposit`, i `Withdraw` nie są określone jako **wbudowanego** , ale może być zaimplementowany jako funkcji śródwierszowych.  
+ W poniższej deklaracji klasy `Account` Konstruktor jest funkcją śródwierszową. Funkcje elementów członkowskich `GetBalance`, `Deposit`, i `Withdraw` nie są określone jako **wbudowane** , ale można zaimplementować jako wbudowane funkcje.  
   
-```  
+```cpp 
 // Inline_Member_Functions.cpp  
 class Account  
 {  
@@ -63,42 +64,42 @@ int main()
 ```  
   
 > [!NOTE]
->  W deklaracji klasy funkcje zostały zgłoszone bez **wbudowanego** — słowo kluczowe. **Wbudowanego** — słowo kluczowe może być określony w deklaracji klasy; wynik jest taka sama.  
+>  W deklaracji klasy, funkcje zostały zadeklarowane bez **wbudowane** — słowo kluczowe. **Wbudowane** — słowo kluczowe może być określony w deklaracji klasy; wynik jest taki sam.  
   
- Funkcji wbudowanej danego elementu członkowskiego musi być zadeklarowana tak samo w każdej jednostki kompilacji. Wbudowane funkcje do zachowują się tak, jakby były wystąpień funkcji powoduje, że to ograniczenie. Ponadto musi być dokładnie jednej definicji wbudowanej funkcji.  
+ Wbudowane danej funkcji składowej musi być zadeklarowany w taki sam sposób, w każdej jednostki kompilacji. To ograniczenie powoduje, że wbudowane funkcje, aby zachowywać się tak, jakby były one funkcje wystąpień. Ponadto musi być dokładnie jednej definicji wbudowanej funkcji.  
   
- Funkcja członkowska klasy Domyślnie połączenie zewnętrzne o ile nie zawiera definicji dla tej funkcji **wbudowanego** specyfikator. W poprzednim przykładzie pokazano, że funkcje te nie muszą jawnie deklarować z **wbudowanego** specyfikator; przy użyciu **wbudowanego** w funkcji definicji powoduje, że należy wbudowanej funkcji. Jednak nie jest dozwolone ponownie zadeklarować funkcji jako **wbudowanego** po wywołaniu tej funkcji.  
+ Funkcji składowej klasy wartość domyślna to powiązanie zewnętrzne, chyba że zawiera definicję dla tej funkcji **wbudowane** specyfikator. Powyższy przykład pokazuje, że te funkcje nie musi jawnie zadeklarowane z **wbudowane** specyfikator; przy użyciu **wbudowane** w funkcji definicji powoduje, że do wbudowanej funkcji. Jednak nie jest dozwolone ponownie zadeklarować funkcję jako **wbudowane** po wywołaniu tej funkcji.  
   
 ## <a name="inline-inline-and-forceinline"></a>W tekście, __inline, i \__forceinline  
- `inline` i `__inline` specyfikatory poinstruować kompilator, aby wstawić kopię treści funkcji do każdego miejsca wywołania funkcji.  
+ **Wbudowane** i **__inline** specyfikatory poinstruować kompilator, aby wstawić kopię treści funkcji do każdego miejsca, w wywołaniu funkcji.  
   
- Wstawiania (wywołać rozszerzenie funkcji wbudowanej lub ze śródwierszowaniem) występuje tylko wtedy, gdy analiza kosztów i korzyści kompilatora wyświetleniem być korzystne. Rozszerzenie funkcji wbudowanej wyeliminować wywołania funkcji narzut na potencjalne koszty większego rozmiaru kodu.  
+ Wstawianie (o nazwie wbudowane rozwijanie lub inlining) występuje tylko wtedy, gdy analizy kosztów i korzyści kompilatora wyświetlane jako zysków. Wbudowane rozwijanie pozwala uniknąć wywołania funkcji obciążenie na potencjalnych kosztów większego rozmiaru kodu.  
   
- `__forceinline` — Słowo kluczowe zastępuje analizy kosztów i korzyści i zamiast tego opiera się na ocenie programisty. Należy zachować ostrożność przy użyciu `__forceinline`. Niekontrolowane stosowanie `__forceinline` może powodować większe kodu za pomocą tylko wzrost wydajności brzegowego lub, w niektórych przypadkach, nawet spadek wydajności (ze względu na zwiększenie stronicowania większych pliku wykonywalnego, na przykład).  
+ **__Forceinline** — słowo kluczowe zastępuje analizy kosztów i korzyści i opiera się na ocenie programisty. Należy zachować ostrożność przy użyciu **__forceinline**. Użycie nieograniczonego **__forceinline** może powodować większe kodu za pomocą tylko wzrost wydajności brzegowych lub, w niektórych przypadkach nawet spadek wydajności (z powodu zwiększonej stronicowanie większe pliki wykonywalne, na przykład).  
   
- Przy użyciu funkcji śródwierszowych można szybciej program ponieważ eliminuje obciążenia związanego z wywołania funkcji. Funkcje rozwinięte wbudowanego podlegają optymalizacji kodu nie jest dostępny do normalnej pracy.  
+ Za pomocą wbudowanych funkcji można szybciej program ponieważ eliminuje obciążenia związanego z wywołania funkcji. Rozwinięty wbudowanych funkcji jest zależna od optymalizacji kodu nie jest dostępna do normalnej pracy.  
   
- Kompilator traktuje wbudowane opcje rozszerzeń i słowa kluczowe jako sugestie. Nie ma żadnej gwarancji, że funkcje są wbudowane. Nie można wymusić na kompilatorze wbudowanego konkretną funkcję, nawet w przypadku `__forceinline` — słowo kluczowe. Podczas kompilowania za pomocą **/CLR**, kompilator będzie niewyrównane funkcji w przypadku atrybutów zabezpieczeń zastosowanych dla funkcji.  
+ Kompilator traktuje opcje rozszerzenia wbudowane i słów kluczowych jako sugestie. Nie ma żadnej gwarancji, funkcje będą śródwierszowych. Nie można wymusić na kompilatorze wbudowane określonej funkcji, nawet w przypadku **__forceinline** — słowo kluczowe. Podczas kompilowania za pomocą **/CLR**, kompilator będzie niewyrównane funkcji w przypadku atrybutów zabezpieczeń zastosowanych do funkcji.  
   
- **Wbudowanego** — słowo kluczowe jest dostępna tylko w języku C++. `__inline` i `__forceinline` słowa kluczowe są dostępne zarówno C i C++. Zgodność z poprzednimi wersjami **_inline** jest synonimem `__inline`.  
+ **Wbudowane** — słowo kluczowe jest dostępne tylko w języku C++. **__Inline** i **__forceinline** słowa kluczowe są dostępne w C i C++. W celu zgodności z poprzednimi wersjami **_inline** jest synonimem dla **__inline**.  
   
- **Wbudowanego** — słowo kluczowe informuje kompilator, że rozszerzenie funkcji wbudowanej jest preferowana. Jednak utworzyć oddzielnego wystąpienia funkcji Kompilator (wystąpienia) i tworzenia standardowego powiązań wywoływania zamiast Wstawianie wbudowanego kodu. Przypadków, gdy jest to możliwe są następujące:  
+ **Wbudowane** — słowo kluczowe informuje kompilator, że wbudowane rozwijanie jest preferowana. Jednak kompilator może utworzyć osobne wystąpienie funkcji (wystąpienia) i tworzenia standardowych powiązań wywoływania zamiast Wstawianie kod inline. Są dwa przypadki, w których taka sytuacja może wystąpić:  
   
 -   Funkcje rekursywne.  
   
--   Funkcje, które są określane za pomocą wskaźnika w innym miejscu w jednostce tłumaczenia.  
+-   Funkcje, które są określane za pomocą wskaźnika w innym miejscu w jednostce translacji.  
   
- Z tego względu może zakłócać ze śródwierszowaniem, *jak inne osoby mogą*, według uznania kompilatora; nie należy uwzględniać na **wbudowanego** specyfikator spowodować funkcję, która ma zostać umieszczona w tekście.  
+ Z tego powodu może zakłócać wstawienia, zrównoważenia *jak inne osoby mogą*, według uznania kompilatora; użytkownik nie powinien zależeć **wbudowane** specyfikator, aby wywołać funkcję, która ma być śródwierszowa.  
   
- Podobnie jak w przypadku normalnej pracy jest nie zdefiniowanej kolejności obliczania argumentów do wbudowanej funkcji. W rzeczywistości może być inna niż kolejność, w którym argumenty są oceniane po upływie przy użyciu protokołu wywołanie funkcji normalnego.  
+ Podobnie jak w przypadku normalnych funkcji ma ma zdefiniowanej kolejności oceny argumenty do wbudowanej funkcji. W rzeczywistości może być inna niż kolejność, w której argumenty są obliczane przy przekazywaniu przy użyciu protokołu wywołanie normalnej funkcji.  
   
- [/Ob](../build/reference/ob-inline-function-expansion.md) opcję optymalizacji kompilatora pozwala określić, czy rozszerzenie funkcji wbudowanej funkcji rzeczywiście występowała.  
+ [/Ob](../build/reference/ob-inline-function-expansion.md) opcja optymalizacji kompilatora pomaga ustalić, czy rozwijania funkcji inline rzeczywiście występuje.  
   
- [/ LTCG](../build/reference/ltcg-link-time-code-generation.md) wykonuje między modułami niezależnie od tego, czy żądano w kodzie źródłowym.  
+ [/ LTCG](../build/reference/ltcg-link-time-code-generation.md) wykonuje optimalizaci Mezi wbudowanie niezależnie od tego, czy zażądano w kodzie źródłowym.  
   
 ### <a name="example-1"></a>Przykład 1  
   
-```  
+```cpp 
 // inline_keyword1.cpp  
 // compile with: /c  
 inline int max( int a , int b ) {  
@@ -108,11 +109,11 @@ inline int max( int a , int b ) {
 }  
 ```  
   
- Funkcje elementów członkowskich klasy mogą być deklarowane przy użyciu wbudowanego **wbudowanego** — słowo kluczowe lub umieszczając definicji funkcji w definicji klasy.  
+ Funkcje składowych klasy mogą być deklarowane przy użyciu wbudowanego **wbudowane** — słowo kluczowe lub umieszczając definicji funkcji w ramach definicji klasy.  
   
 ### <a name="example-2"></a>Przykład 2  
   
-```  
+```cpp 
 // inline_keyword2.cpp  
 // compile with: /EHsc /c  
 #include <iostream>  
@@ -127,47 +128,47 @@ private:
 ```  
   
 ### <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
- `__inline` — Słowo kluczowe jest odpowiednikiem **wbudowanego**.  
+ **__Inline** — słowo kluczowe jest odpowiednikiem **wbudowane**.  
   
- Nawet w przypadku `__forceinline`, kompilator nie kodu wbudowanego we wszystkich okolicznościach. Kompilator nie wbudowanej funkcji, jeśli:  
+ Nawet w przypadku **__forceinline**, kompilator nie kodu wbudowanego w każdych okolicznościach. Kompilator nie wbudowanych funkcji, jeśli:  
   
--   Funkcja lub swojego obiektu wywołującego jest skompilowana przy użyciu /Ob0 (domyślną opcją debugowania kompilacji).  
+-   Funkcja lub jego element wywołujący jest kompilowany za pomocą /Ob0 (opcja domyślna do debugowania kompilacji).  
   
--   Funkcja i wywołującego używają różnych typów (C++, obsługa wyjątków w jednej, obsługi w innych wyjątków strukturalnych) obsługi wyjątków.  
+-   Funkcja i element wywołujący używają różnych typów (Obsługa wyjątków języka C++ w jednym, obsługa w innych wyjątków strukturalnych) obsługi wyjątków.  
   
 -   Funkcja ma listy zmiennych argumentów.  
   
--   Funkcja używa zestawu wbudowanego, chyba że kompilowane /Og, OX, / O1 lub/O2.  
+-   Funkcja używa zestawu wbudowanego, chyba że skompilowany przy użyciu /Og, OX, / O1 lub/O2.  
   
--   Funkcja jest rekursywny i nie towarzyszy **#pragma inline_recursion(on)**. Z pragma funkcje rekurencyjne są wbudowane do domyślnego głębokości wywołań 16. Aby zmniejszyć ze śródwierszowaniem głębokość, użyj [inline_depth](../preprocessor/inline-depth.md) pragma.  
+-   Funkcja plików jest cykliczna i nie towarzyszy **#pragma inline_recursion(on)**. Pragma śródwierszowych na domyślne głębokość wywołań 16 są funkcji rekursywnych. Aby zmniejszyć wbudowanie głębi, użyj [inline_depth](../preprocessor/inline-depth.md) pragmy.  
   
--   Funkcja jest wirtualna i nosi nazwę wirtualną. Bezpośrednie wywołania funkcji wirtualnych mogą być wbudowane.  
+-   Funkcja jest wirtualny i nosi nazwę praktycznie. Bezpośrednie wywołania do funkcji wirtualnych może być śródwierszowa.  
   
--   Program pobiera adres funkcji i wywołanie za pomocą wskaźnika do funkcji. Bezpośrednie wywołania funkcji, które miały adresu pobranego mogą być wbudowane.  
+-   Program przyjmuje adres funkcji i wywołanie za pomocą wskaźnika do funkcji. Bezpośrednie wywołania do funkcji, które były ich zajęty adres może być śródwierszowa.  
   
--   Funkcja jest również oznaczona atrybutem [naked](../cpp/naked-cpp.md) [__declspec](../cpp/declspec.md) modyfikator.  
+-   Funkcja również jest oznaczona za pomocą ["naked"](../cpp/naked-cpp.md) [__declspec](../cpp/declspec.md) modyfikator.  
   
- Jeśli kompilator nie wbudowanego funkcja zadeklarowana ze `__forceinline`, generuje ostrzeżenia poziomu 1, chyba że:
+ Jeśli kompilator nie wbudowanej funkcji zadeklarowanych za pomocą **__forceinline**, generuje ostrzeżenia poziomu 1, z wyjątkiem sytuacji, gdy:
   
--   Funkcja jest skompilowana przy użyciu /Od lub /Ob0. Nie ze śródwierszowaniem jest oczekiwany w tych przypadkach.     
+-   Funkcja jest kompilowany przy użyciu /Od lub /Ob0. Nie wbudowanie oczekuje się w tych przypadkach.     
   
--   Funkcja została zdefiniowana w zewnętrznie, biblioteki dołączony lub w innej jednostce tłumaczenia, lub jest docelowy wywołania wirtualnych lub celu pośrednie wywołania. Kompilator nie może zidentyfikować-wbudowanego kodu, który nie może odnaleźć w bieżącej jednostce tłumaczenia.  
+-   Funkcja jest zdefiniowana zewnętrznie, biblioteka lub innej jednostce translacji, lub jest cel wywołania wirtualnego cel wywołania pośredniego. Kompilator nie może zidentyfikować-śródwierszowych kod, który nie można znaleźć w bieżącej jednostce tłumaczenia.  
   
- Funkcje rekursywne może być wbudowany podstawione o szerokości określonej przez [inline_depth](../preprocessor/inline-depth.md) pragma maksymalnie 16 wywołań. Po tym głębokość wywołania funkcji rekursywnych są traktowane jako połączenia z wystąpieniem funkcji.  Głębokość do cyklicznego, które funkcje są sprawdzane przez Algorytm heurystyczny wbudowanego nie może przekraczać 16. [Inline_recursion](../preprocessor/inline-recursion.md) pragma steruje rozszerzenie funkcji wbudowanej funkcji aktualnie w ramach rozszerzenia. Zobacz [rozszerzenie funkcji wbudowanej](../build/reference/ob-inline-function-expansion.md) (/ Ob) — opcja kompilatora powiązane informacje.  
+ Funkcje rekursywne mogą być wbudowane podstawione o szerokości określonej przez [inline_depth](../preprocessor/inline-depth.md) pragma maksymalnie 16 wywołań. Po tym głębokość wywołania funkcji rekursywnych są traktowane jako wywołania wystąpienie funkcji.  Głębokość do cyklicznego, które funkcje są sprawdzane przez Algorytm heurystyczny tekście nie może przekraczać 16. [Inline_recursion](../preprocessor/inline-recursion.md) pragma kontroluje wbudowane rozwijanie funkcji umieszczono rozszerzenia. Zobacz [rozszerzenie funkcji wbudowanej](../build/reference/ob-inline-function-expansion.md) (/ Ob) opcję kompilatora, aby uzyskać powiązane informacje.  
   
-**KOŃCOWY określonych firmy Microsoft**  
- Aby uzyskać więcej informacji na temat używania **wbudowanego** specyfikator, zobacz:  
+**END specyficzny dla Microsoft**  
+ Aby uzyskać więcej informacji na temat korzystania z **wbudowane** specyfikator, zobacz:  
   
--   [Wbudowane funkcje elementu członkowskiego klasy](../cpp/inline-functions-cpp.md)  
+-   [Funkcje Członkowskie klasy wewnętrznej](../cpp/inline-functions-cpp.md)  
   
 -   [Definiowanie funkcji śródwierszowych języka C++ z dllexport i dllimport](../cpp/defining-inline-cpp-functions-with-dllexport-and-dllimport.md)  
   
 ## <a name="when-to-use-inline-functions"></a>Kiedy należy używać funkcji śródwierszowych  
- Wbudowane funkcje najlepiej są używane dla małych funkcji, takich jak uzyskiwanie dostępu do danych prywatnych elementów członkowskich. Głównym celem tych funkcji "metody dostępu" jednego lub dwóch wiersza jest do zwracania informacji o stanie dotyczących obiektów; krótkich funkcji są wrażliwe na obciążenie związane z wywołania funkcji. Funkcje dłużej poświęcają proporcjonalnie mniej czasu w wywołaniu/zwracanie sekwencji i korzystać od ze śródwierszowaniem.  
+ Funkcje śródwierszowe, najlepiej sprawdzają się dla małych funkcji, takich jak uzyskiwanie dostępu do danych prywatnych elementów członkowskich. Głównym celem tych funkcji "metody dostępu" jednego lub dwóch wierszy jest do zwracania informacji o stanie dotyczących obiektów; krótkich funkcji są wrażliwe na obciążenie związane z wywołania funkcji. Dłużej funkcje poświęcać proporcjonalnie w sekwencji wywołania/zwracaniu i mniejszy od korzyści ze śródwierszowaniem.  
   
- A `Point` klasy mogą być zdefiniowane w następujący sposób:  
+ Element `Point` klasy można zdefiniować w następujący sposób:  
   
-```  
+```cpp 
 // when_to_use_inline_functions.cpp  
 class Point  
 {  
@@ -194,32 +195,32 @@ int main()
 }  
 ```  
   
- Przy założeniu manipulowania współrzędnych jest stosunkowo typowych operacji w kliencie takie klasy, określając dwie funkcje dostępu (`x` i `y` w poprzednim przykładzie) jako **wbudowanego** zwykle zapisuje Obciążenie:  
+ Zakładając, manipulowania współrzędnych jest stosunkowo typowych operacji w kliencie klasy takie, określając dwie funkcje metod dostępu (`x` i `y` w powyższym przykładzie) jako **wbudowane** zwykle zapisuje Obciążenie:  
   
--   Wywołania funkcji (w tym przekazywanie parametru i wprowadzania adresu obiektu na stosie)  
+-   Wywołania funkcji (w tym przekazywanie parametrów i wprowadzania adresu obiektu na stosie)  
   
 -   Zachowanie obiektu wywołującego ramki stosu  
   
--   Nowe ustawienia ramki stosu  
+-   Konfiguracja nowej ramki stosu  
   
--   Wartość zwracaną komunikacji  
+-   Zwracana wartość komunikacji  
   
 -   Stary przywracania ramki stosu  
   
--   Zwraca  
+-   Wróć  
   
 ## <a name="inline-functions-vs-macros"></a>Funkcje śródwierszowe a makra  
- Mimo że wbudowane funkcje są podobne do makra (ponieważ kod funkcji jest rozwinięta w punkcie połączenia w czasie kompilacji), funkcji śródwierszowych są analizowane przez kompilator, makra są rozszerzony przez preprocesora. W związku z tym istnieje kilka istotnych różnic:  
+ Chociaż funkcje wbudowane są podobne do makra (ponieważ jest to kod funkcji jest rozwinięte punkcie rozmowy w czasie kompilacji), wbudowane funkcje są analizowane przez kompilator, a makra rozwijane przez preprocesor. W rezultacie istnieje kilka istotnych różnic:  
   
 -   Wbudowane funkcje wykonaj wszystkie protokoły bezpieczeństwa typu wymuszane na normalnej pracy.  
   
--   Wbudowane funkcje są określane przy użyciu takiej samej składni innych funkcji, z wyjątkiem tego, że zawierają one **wbudowanego** — słowo kluczowe w deklaracji funkcji.  
+-   Wbudowane funkcje są określane za pomocą tej samej składni w innych funkcji, z tą różnicą, że zawierają one **wbudowane** — słowo kluczowe w deklaracji funkcji.  
   
--   Wyrażenia przekazywane jako argumenty do funkcji śródwierszowych są oceniane raz. W niektórych przypadkach wyrażenia przekazywane jako argumenty do makra może przyjąć więcej niż raz.  
+-   Wyrażenia przekazywane jako argumenty do funkcji śródwierszowych są wykonywane tylko raz. W niektórych przypadkach wyrażenia przekazywane jako argumenty do makra mogą być obliczane więcej niż jeden raz.  
   
- W poniższym przykładzie przedstawiono makra, który konwertuje małych liter na wielkie litery:  
+ Poniższy przykład pokazuje makra, która konwertuje małe litery na wielkie litery:  
   
-```  
+```cpp 
 // inline_functions_macro.c  
 #include <stdio.h>  
 #include <conio.h>  
@@ -237,13 +238,13 @@ int main() {
   
 ```  
   
- Celem wyrażenie `toupper(getc(stdin))` jest, że znak są odczytywane z urządzenia konsoli (`stdin`) i, jeśli to konieczne, przekonwertowany na wielkie litery.  
+ Celem wyrażenie `toupper(getc(stdin))` jest, że znak są odczytywane z urządzenia z konsoli (`stdin`) i, jeśli to konieczne, są konwertowane na wielkie litery.  
   
- Z powodu wykonania makra `getc` raz wykonane, aby określić, czy znak jest większa niż lub równe "a", a po ustalenie, czy jest mniejsza niż lub równa "z". Jeśli w tym zakresie `getc` jest wykonywane ponownie przekonwertować znak na wielkie litery. Oznacza to, że program oczekuje na dwóch lub trzech znaków, gdy najlepszym rozwiązaniem, wymaga tylko jednego.  
+ Ze względu na implementację makra `getc` raz wykonane, aby ustalić, czy znak jest większa niż lub równe "a", a po ustalenie, czy jest mniejsze niż lub równe "z". Jeśli w tym zakresie `getc` jest ponownie wykonywane w celu konwersji znaku na wielkie litery. Oznacza to, że program oczekuje na dwóch lub trzech znaków, gdy w idealnym przypadku należy czekać tylko dla jednego.  
   
- Funkcje śródwierszowe rozwiązać problem opisany powyżej:  
+ Funkcje śródwierszowe rozwiązać problem opisany wcześniej:  
   
-```  
+```cpp 
 // inline_functions_inline.cpp  
 #include <stdio.h>  
 #include <conio.h>  

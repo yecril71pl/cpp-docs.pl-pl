@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb5003c94793bc3b8195ebad48b438786b85ce84
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9c0230c92a448eedf0cae7c80778c2bd4c48d077
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844045"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963170"
 ---
 # <a name="codecvtutf8"></a>codecvt_utf8
 
-Reprezentuje [ustawień regionalnych](../standard-library/locale-class.md) aspekt, który wykonuje konwersję między znaki dwubajtowe zakodowane jako UCS 2 lub UCS 4 i strumień bajtów zakodowane jako UTF-8.
+Reprezentuje [ustawień regionalnych](../standard-library/locale-class.md) reguł, który wykonuje konwersję między zakodowanymi w formacie UCS-2 lub UCS-4 znaki dwubajtowe, a strumień bajtów zakodowanymi w formacie UTF-8.
 
 ```cpp
 template<class Elem, unsigned long Maxcode = 0x10ffff, codecvt_mode Mode = (codecvt_mode)0>
@@ -34,14 +34,14 @@ class codecvt_utf8 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>Parametry
 
-`Elem` Typ elementu znaków dwubajtowych.
-`Maxcode` Maksymalna liczba znaków aspekt ustawień regionalnych.
-`Mode` Informacje o konfiguracji aspekt ustawień regionalnych.
+*Elem* typ elementu znaków dwubajtowych.
+*Maxcode* maksymalną liczbę znaków dla zestawu reguł ustawień regionalnych.
+*Tryb* informacje o konfiguracji dla zestawu reguł ustawień regionalnych.
 
 ## <a name="remarks"></a>Uwagi
 
-Strumień bajtów można zapisać pliku binarnego lub pliku tekstowego.
+Strumień bajtów można zapisać do pliku binarnego lub pliku tekstowego.
 
 ## <a name="requirements"></a>Wymagania
 
-Nagłówek: <codecvt> Namespace: Standard
+Nagłówek: <codecvt> Namespace: standardowe

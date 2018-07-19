@@ -1,5 +1,5 @@
 ---
-title: Klasa CStringData | Dokumentacja firmy Microsoft
+title: CStringData, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,15 +29,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 187892b74536de47079324d90bb21b2569e00498
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b872312352037e4cc0430c9b8dbb05df51ae7ac2
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363574"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881018"
 ---
-# <a name="cstringdata-class"></a>Klasa CStringData
-Ta klasa reprezentuje dane z obiektem ciągu.  
+# <a name="cstringdata-class"></a>CStringData, klasa
+Ta klasa reprezentuje dane obiektu string.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -51,30 +51,30 @@ struct CStringData
   
 |||  
 |-|-|  
-|[AddRef](#addref)|Zwiększa liczbę odwołanie do obiektu danych ciągu.|  
-|[Dane](#data)|Pobiera dane znaków z obiektem ciągu.|  
-|[IsLocked](#islocked)|Określa, czy jest on zablokowany buforu z obiektem ciągu skojarzone.|  
-|[IsShared](#isshared)|Określa, czy buforu z obiektem ciągu skojarzona jest aktualnie udostępniony.|  
-|[blokady](#lock)|Blokuje buforu z obiektem ciągu skojarzone.|  
+|[AddRef](#addref)|Zwiększa licznik odwołań obiektu danych ciągu.|  
+|[Dane](#data)|Pobiera dane znaków obiektu ciągu.|  
+|[IsLocked](#islocked)|Określa, jeśli bufor z obiektem ciągu skojarzone jest zablokowany.|  
+|[IsShared](#isshared)|Określa, jeśli bufor z obiektem ciągu skojarzone jest obecnie udostępniana.|  
+|[Blokady](#lock)|Blokuje buforu ciągu skojarzonego obiektu.|  
 |[Wersja](#release)|Zwalnia obiektu określonego ciągu.|  
-|[odblokowywanie](#unlock)|Umożliwia odblokowanie buforu z obiektem ciągu skojarzone.|  
+|[Odblokowywanie](#unlock)|Odblokowuje buforu ciągu skojarzonego obiektu.|  
   
 ### <a name="data-members"></a>Elementy członkowskie danych  
   
 |||  
 |-|-|  
-|[nAllocLength](#nalloclength)|Długość danych przydzielone w `XCHAR`s (bez przerywania null)|  
-|[nDataLength](#ndatalength)|Długość danych aktualnie używanego w `XCHAR`s (bez przerywania null)|  
-|[nRefs](#nrefs)|Bieżąca liczba odwołanie do obiektu.|  
-|[pStringMgr](#pstringmgr)|Wskaźnik do Menedżera ciągu tego obiektu na ciąg.|  
+|[nAllocLength](#nalloclength)|Długość danych przydzielone w `XCHAR`s (bez uwzględniania zakończenia o wartości null)|  
+|[nDataLength](#ndatalength)|Długość danych aktualnie używanego w `XCHAR`s (bez uwzględniania zakończenia o wartości null)|  
+|[nRefs](#nrefs)|Bieżąca liczba odwołań obiektu.|  
+|[pStringMgr](#pstringmgr)|Wskaźnik do Menedżera ciągów tego obiektu ciągu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta klasa powinna być używana tylko przez deweloperom wdrażanie menedżerów niestandardowy ciąg. Aby uzyskać więcej informacji na menedżerów niestandardowy ciąg, zobacz [zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)  
+ Ta klasa powinna wykorzystywane przez deweloperów, implementowanie menedżerów niestandardowy ciąg. Aby uzyskać więcej informacji na temat niestandardowy ciąg menedżerów, zobacz [zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)  
   
- Ta klasa hermetyzuje różnych typów informacji i danych skojarzonych z obiektem nowszej ciąg, takich jak [CStringT](../../atl-mfc-shared/reference/cstringt-class.md), [CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md), lub [CFixedStringT](../../atl-mfc-shared/reference/cfixedstringt-class.md) obiekty. Każdy obiekt nowszej ciąg zawiera wskaźnik do jego skojarzony `CStringData` obiektu, dzięki czemu wiele obiektów ciąg wskazywały ten sam obiekt danych ciągu. Ta relacja jest reprezentowana przez liczbę odwołań ( `nRefs`) z `CStringData` obiektu.  
+ Ta klasa hermetyzuje różnego rodzaju informacje i dane związane z obiektem ciągu wyższe, takie jak [CStringT](../../atl-mfc-shared/reference/cstringt-class.md), [CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md), lub [CFixedStringT](../../atl-mfc-shared/reference/cfixedstringt-class.md) obiekty. Każdy wyższe obiekt ciągu zawiera wskaźnik do związanych z nią `CStringData` obiektu, dzięki czemu wiele obiektów ciągu wskazywały ten sam obiekt ciąg w danych. Ta relacja jest reprezentowany przez licznik odwołań (`nRefs`) z `CStringData` obiektu.  
   
 > [!NOTE]
->  W niektórych przypadkach typu ciąg (takich jak **CFixedString**) nie będą współużytkować obiekt ciągu danych z więcej niż jeden obiekt nowszej ciąg. Aby uzyskać więcej informacji o tym, zobacz [zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
+>  W niektórych przypadkach typu string (takie jak `CFixedString`) nie współużytkują obiekt danych ciągu z więcej niż jeden obiekt ciągu wyższy. Aby uzyskać więcej informacji na temat tego, zobacz [zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
  Te dane składa się z:  
   
@@ -82,72 +82,72 @@ struct CStringData
   
 -   Bieżąca długość ( [nDataLength](#ndatalength)) ciągu.  
   
--   Długość przydzielone ( [nAllocLength](#nalloclength)) ciągu. Ze względu na wydajność to może się różnić od bieżącej długości ciągu  
+-   Przydzielone długość ( [nAllocLength](#nalloclength)) ciągu. Ze względu na wydajność to może być inna niż bieżąca długość ciągu  
   
--   Bieżąca liczba odwołań ( [nRefs](#nrefs)) z `CStringData` obiektu. Ta wartość jest używana w określeniu, jak wiele obiektów typu string są takie same udostępnianie `CStringData` obiektu.  
+-   Bieżąca liczba odwołań ( [nRefs](#nrefs)) z `CStringData` obiektu. Ta wartość jest używana w określeniu, jak wiele obiektów w postaci ciągów, którzy udostępniają takie same `CStringData` obiektu.  
   
--   Znak, który faktycznie buforu ( [danych](#data)) ciągu.  
+-   Bufor znak, który faktycznie ( [danych](#data)) ciągu.  
   
     > [!NOTE]
-    >  Bufor znak, który faktycznie z obiektem ciągu jest przydzielany przez Menedżera ciągu i jest dołączany do `CStringData` obiektu.  
+    >  Bufor znak, który faktycznie z obiektem ciągu jest przydzielany przez Menedżera ciągów i jest dołączany do `CStringData` obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlsimpstr.h  
   
 ##  <a name="addref"></a>  CStringData::AddRef  
- Zwiększa liczbę odwołanie z obiektem ciągu.  
+ Zwiększa licznik odwołań obiektu ciągu.  
   
 ```
 void AddRef() throw();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zwiększa liczbę odwołanie z obiektem ciągu.  
+ Zwiększa licznik odwołań obiektu ciągu.  
   
 > [!NOTE]
->  Nie wywołuj tej metody w ciągu z liczbą ujemną odwołanie ponieważ ujemna liczebność wskazuje, że buforu ciągu jest zablokowany.  
+>  Nie wywołać tę metodę w ciągu z liczbą ujemną odwołanie, ponieważ liczba ujemna oznacza, że buforu ciągu jest zablokowany.  
   
 ##  <a name="data"></a>  CStringData::data  
- Zwraca wskaźnik do buforu znak z obiektem ciągu.  
+ Zwraca wskaźnik do buforu znaku obiektu ciągu.  
   
 ```
 void* data() throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do buforu znak z obiektem ciągu.  
+ Wskaźnik do buforu znaków ciągu obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie tej funkcji, aby powrócić do bieżącego buforu znaku w ciągu skojarzonego obiektu.  
+ Wywołaj tę funkcję, aby powrócić do bieżącego buforu znaku w ciągu skojarzonego obiektu.  
   
 > [!NOTE]
->  Ten bufor nie jest przydzielony przez `CStringData` obiektu, ale przez Menedżera ciągu w razie potrzeby. Przydzielone, bufor jest dołączany do obiektu danych ciągu.  
+>  Ten bufor nie jest przydzielany przez `CStringData` obiektu, ale przez Menedżera ciągów, w razie. Przydzielone, rozmiar buforu jest dołączany do ciągu obiektu danych.  
   
 ##  <a name="islocked"></a>  CStringData::IsLocked  
- Określa, czy bufor znak jest zablokowany.  
+ Określa, jeśli jest zablokowana buforu znaków.  
   
 ```
 bool IsLocked() const throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca **true** Jeśli bufor jest zablokowany; w przeciwnym razie **false**.  
+ Zwraca wartość PRAWDA, jeśli bufor jest zablokowany; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie tej funkcji w celu ustalenia, jeśli bufor znaków ciągu obiektu jest zablokowany.  
+ Wywołaj tę funkcję, aby określić, jeśli bufor znaków obiekt ciągu jest obecnie zablokowany.  
   
 ##  <a name="isshared"></a>  CStringData::IsShared  
- Określa, jeśli bufor znak jest udostępniony.  
+ Określa, jeśli jest udostępniana buforu znaków.  
   
 ```
 bool IsShared() const throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca **true** Jeśli bufor jest udostępniony; w przeciwnym razie **false**.  
+ Zwraca wartość PRAWDA, jeśli bufor jest udostępniony; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie tej funkcji, aby ustalić, jeśli bufor znaków ciągu obiektu danych obecnie współużytkowany wiele obiektów typu string.  
+ Wywołaj tę funkcję, aby określić, jeśli bufor znaków obiektu ciągu danych obecnie jest współużytkowana przez wiele obiektów w postaci ciągów.  
   
 ##  <a name="lock"></a>  CStringData::Lock  
  Blokuje buforu znaków ciągu skojarzonego obiektu.  
@@ -157,10 +157,10 @@ void Lock() throw();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie tej funkcji do blokowania bufora znaków ciągu obiektu danych. Blokowanie i odblokowywanie jest używany, gdy wymagany jest bezpośredni dostęp do buforu znak przez dewelopera. Dobrym przykładem blokowania dowodzą [LockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer) i [UnlockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer) metody `CSimpleStringT`.  
+ Wywołaj tę funkcję do blokowania bufora znaków ciągu obiektu danych. Blokowanie i odblokowywanie jest używany, gdy bezpośredni dostęp do buforu znaków jest wymagany przez dewelopera. Dobrym przykładem blokowania obrazuje [LockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer) i [UnlockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer) metody `CSimpleStringT`.  
   
 > [!NOTE]
->  Bufor znak może być zablokowany, jeśli bufor nie jest udostępniana między nowszej ciąg obiektów.  
+>  Bufor znaków może być zablokowany, jeśli bufor nie jest współużytkowana przez wyższe obiektów w postaci ciągów.  
   
 ##  <a name="nalloclength"></a>  CStringData::nAllocLength  
  Długość buforu przydzielone znaków.  
@@ -170,7 +170,7 @@ int nAllocLength;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Przechowuje długość buforu danych przydzielone w `XCHAR`s (bez przerywania null).  
+ Przechowuje długość buforu przydzielone dane w `XCHAR`s (bez uwzględniania zakończenia o wartości null).  
   
 ##  <a name="ndatalength"></a>  CStringData::nDataLength  
  Bieżąca długość z obiektem ciągu.  
@@ -180,17 +180,17 @@ int nDataLength;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Przechowuje długość danych aktualnie używanego w `XCHAR`s (bez przerywania null).  
+ Przechowuje długość danych aktualnie używanego w `XCHAR`s (bez uwzględniania zakończenia o wartości null).  
   
 ##  <a name="nrefs"></a>  CStringData::nRefs  
- Liczba odwołań do obiektów danych ciągu.  
+ Licznik odwołań obiektu danych ciągu.  
   
 ```
 long nRefs;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Przechowuje liczebności referencyjnej obiektu danych ciągu. Ten licznik wskazuje liczbę wyższej obiektów string skojarzonych z obiektem danych ciągu. Ujemna wartość oznacza obiekt danych ciągu jest obecnie zablokowany.  
+ Przechowuje licznik odwołań obiektu danych ciągu. Ten licznik wskazuje liczbę wyższe obiektów ciągu, które są skojarzone z obiektem ciągu danych. Ujemna wartość oznacza obiekt ciągu danych jest obecnie zablokowany.  
   
 ##  <a name="pstringmgr"></a>  CStringData::pStringMgr  
  Menedżer pamięci obiektu skojarzone parametry.  
@@ -200,39 +200,39 @@ IAtlStringMgr* pStringMgr;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Przechowuje Menedżer pamięci dla obiektu skojarzone parametry. Aby uzyskać więcej informacji na menedżerów zarządzania pamięcią i ciągów, zobacz [zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
+ Przechowuje Menedżer pamięci dla obiektu skojarzonego ciągu. Aby uzyskać więcej informacji na temat menedżerów zarządzania pamięcią i ciągi, zobacz [zarządzanie pamięcią i CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
 ##  <a name="release"></a>  CStringData::Release  
- Zmniejsza odwołanie liczba obiektu danych ciągu.  
+ Dekrementuje liczbę odwołań dla obiektu danych ciągu.  
   
 ```
 void Release() throw();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie tej funkcji, aby zmniejszyć liczbę odwołań zwalnianie `CStringData` struktury, jeśli liczba odwołań trafienia zero. Często jest to zrobić, gdy obiekt ciągu zostanie usunięta, a więc nie musi już odwołuje się do obiektu danych ciągu.  
+ Wywołaj tę funkcję, aby zmniejszyć liczbę odwołań zwalnianie `CStringData` struktury, jeśli liczba odwołań osiąga zero. Odbywa się często, gdy obiekt ciągu, który zostanie usunięty, a w związku z tym nie jest już musi odwoływać się do obiektu danych ciągu.  
   
- Na przykład następujący kod spowodowałoby wywołanie `CStringData::Release` dla obiekt ciągu danych skojarzonych z `str1`:  
+ Na przykład, poniższy kod wywoływałby `CStringData::Release` dla obiektu danych ciągu związanych z `str1`:  
   
  [!code-cpp[NVC_ATLMFC_Utilities#104](../../atl-mfc-shared/codesnippet/cpp/cstringdata-class_1.cpp)]  
   
 ##  <a name="unlock"></a>  CStringData::Unlock  
- Umożliwia odblokowanie buforu znaków ciągu skojarzonego obiektu.  
+ Odblokowuje buforu znaków ciągu skojarzonego obiektu.  
   
 ```
 void Unlock() throw();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie tej funkcji, aby odblokować buforu znaków ciągu obiektu danych. Po odblokowaniu bufor jest możliwe do udostępnienia i może odwołanie do zliczenia.  
+ Wywołaj tę funkcję, aby odblokować buforu znaków ciągu obiektu danych. Po odblokowaniu bufor jest możliwa do udostępniania i może być odwołania liczony.  
   
 > [!NOTE]
->  Każde wywołanie `Lock` musi pasować do odpowiedniego wywołania `Unlock`.  
+>  Każde wywołanie `Lock` musi towarzyszyć do odpowiedniego wywołania `Unlock`.  
   
- Blokowanie i odblokowywanie jest używany, gdy deweloper musi zapewnić, że dane ciągu nie można udostępnić. Dobrym przykładem blokowania dowodzą [LockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer) i [UnlockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer) metody `CSimpleStringT`.  
+ Blokowanie i odblokowywanie jest używany, gdy deweloper należy upewnić się, że dane ciągu nie można udostępnić. Dobrym przykładem blokowania obrazuje [LockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer) i [UnlockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer) metody `CSimpleStringT`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
- [ATL/MFC udostępnionych klas](../../atl-mfc-shared/atl-mfc-shared-classes.md)
+ [Klasy współdzielone ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 
 

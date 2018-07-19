@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 407da94d8d813e4951f12ad9951dc64ac298f61d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 256ca308160a2e34341c6156ee761473c13142e1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863650"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964486"
 ---
 # <a name="matchresults-class"></a>match_results — Klasa
 
-Zawiera sekwencję submatches.
+Zawiera sekwencję poddopasowania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -69,19 +69,19 @@ class match_results {
 
 ### <a name="parameters"></a>Parametry
 
-`BidIt` Typ iteratora submatches.
+*BidIt* typ iteratora dla poddopasowania.
 
-`Alloc` Typ alokatora dla Zarządzanie magazynem.
+*ALLOC* typ alokatora do zarządzania pamięcią.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje obiekt, który kontroluje sekwencji nie można modyfikować elementów typu `sub_match<BidIt>` wygenerowane za pomocą wyrażeń regularnych wyszukiwania. Wskazuje każdy element podsekwencji, pasujących grup przechwytywania odpowiadający tego elementu.
+Klasa szablonu opisuje obiekt, który kontroluje uniemożliwiającym sekwencje elementów typu `sub_match<BidIt>` generowane przez wyszukiwanie wyrażenia regularnego. Każdy element wskazuje podsekwencję, która pasuje do grupy przechwytywania, odpowiadający tego elementu.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<regex >
+**Nagłówek:** \<wyrażenia regularnego >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="allocator_type"></a>  match_results::allocator_type
 
@@ -93,7 +93,7 @@ typedef Alloc allocator_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Element typedef jest synonimem argument szablonu `Alloc`.
+Typedef jest synonimem dla argumentu szablonu *alokacji*.
 
 ### <a name="example"></a>Przykład
 
@@ -206,7 +206,7 @@ empty == false
 
 ## <a name="begin"></a>  match_results::BEGIN
 
-Określa początek submatch sekwencji.
+Określa początek poddopasowanie sekwencji.
 
 ```cpp
 const_iterator begin() const;
@@ -214,7 +214,7 @@ const_iterator begin() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca iteratora dostępie swobodnym tego punktów w pierwszym elementem sekwencji (lub bezpośrednio po zakończeniu pustej sekwencji).
+Funkcja elementu członkowskiego zwraca iterator dostępu losowego, który wskazuje na pierwszy element sekwencji (lub tuż za koniec pustej sekwencji).
 
 ### <a name="example"></a>Przykład
 
@@ -335,7 +335,7 @@ typedef typename iterator_traits<BidIt>::value_type char_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Element typedef jest synonimem typu `iterator_traits<BidIt>::value_type`, który jest typem elementu sekwencji znaków, która została przeszukiwane.
+Typedef jest synonimem typu `iterator_traits<BidIt>::value_type`, który jest typem elementu sekwencji znaków, który został przeszukane.
 
 ### <a name="example"></a>Przykład
 
@@ -448,7 +448,7 @@ empty == false
 
 ## <a name="const_iterator"></a>  match_results::const_iterator
 
-Stała typu iteratora submatches.
+Typ iteratora stałych dla poddopasowania.
 
 ```cpp
 typedef T0 const_iterator;
@@ -456,7 +456,7 @@ typedef T0 const_iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typedef opisuje obiekt, który może służyć jako stałej iteratora dostępie swobodnym w kontrolowanej sekwencji.
+Typedef opisuje obiekt, który może służyć jako stały iterator dostępu swobodnego dla kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -569,7 +569,7 @@ empty == false
 
 ## <a name="const_reference"></a>  match_results::const_reference
 
-Typ stałej odwołania do elementu.
+Typ odwołania do elementu const.
 
 ```cpp
 typedef const typename Alloc::const_reference const_reference;
@@ -577,7 +577,7 @@ typedef const typename Alloc::const_reference const_reference;
 
 ### <a name="remarks"></a>Uwagi
 
-Element typedef zawiera opis obiektu, który może służyć jako stałej odwołanie do elementu w kontrolowanej sekwencji.
+Typedef opisuje obiekt, który może służyć jako stałe odwołanie do elementu w kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -690,7 +690,7 @@ empty == false
 
 ## <a name="difference_type"></a>  match_results::difference_type
 
-Typ iteratora różnicy.
+Typ różnicy iteratora.
 
 ```cpp
 typedef typename iterator_traits<BidIt>::difference_type difference_type;
@@ -698,7 +698,7 @@ typedef typename iterator_traits<BidIt>::difference_type difference_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Element typedef jest synonimem typu `iterator_traits<BidIt>::difference_type`; opisuje obiekt, który może reprezentować różnica między żadnych dwóch Iteratory wskazujące na elementy kontrolowanej sekwencji.
+Typedef jest synonimem typu `iterator_traits<BidIt>::difference_type`; opisuje obiekt, który może reprezentować różnicę między dwoma iteratorami, które wskazują na elementy kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -811,7 +811,7 @@ empty == false
 
 ## <a name="empty"></a>  match_results::Empty
 
-Testy nie submatches.
+Testuje pod kątem nie poddopasowania.
 
 ```cpp
 bool empty() const;
@@ -819,7 +819,7 @@ bool empty() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca wartość PRAWDA, tylko wtedy, gdy wyrażenie regularne wyszukiwania nie powiodło się.
+Funkcja elementu członkowskiego zwraca wartość true tylko wtedy, gdy wyszukiwanie wyrażenia regularnego nie powiodło się.
 
 ### <a name="example"></a>Przykład
 
@@ -932,7 +932,7 @@ empty == false
 
 ## <a name="end"></a>  match_results::end
 
-Określa koniec sekwencji submatch.
+Określa koniec poddopasowanie sekwencji.
 
 ```cpp
 const_iterator end() const;
@@ -940,7 +940,7 @@ const_iterator end() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca iteratora tego punkty bezpośrednio po zakończeniu sekwencji.
+Funkcja elementu członkowskiego zwraca iterator, który wskazuje tuż za koniec sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -1066,19 +1066,19 @@ string_type format(const string_type& fmt, match_flag_type flags = format_defaul
 
 ### <a name="parameters"></a>Parametry
 
-`OutIt` Typ iteratora w danych wyjściowych.
+*OutIt* typ iteratora danych wyjściowych.
 
-`out` Strumienia wyjściowego do zapisu.
+*limit* strumienia wyjściowego do zapisu.
 
-`fmt` Ciąg formatu.
+*FMT* ciągu formatu.
 
-`flags` Flag formatu.
+*flagi* flagi formatu.
 
 ### <a name="remarks"></a>Uwagi
 
-Tekst sformatowany pod kontrolą format generuje każdej funkcji członkowskiej `fmt`. Pierwszy funkcji członkowskiej zapisuje tekst sformatowany sekwencji zdefiniowany przez jej argument `out` i zwraca `out`. Druga funkcja elementu członkowskiego zwraca obiekt ciągu, który zawiera kopię sformatowanego tekstu.
+Każda funkcja elementu członkowskiego generuje sformatowany tekst pod kontrolą formatu *fmt*. Pierwsza funkcja elementu członkowskiego zapisuje sformatowany tekst do sekwencji zdefiniowanej przez jej argument *się* i zwraca *się*. Druga funkcja elementu członkowskiego zwraca obiekt ciągu, który zawiera kopię sformatowanego tekstu.
 
-Aby wygenerować tekst sformatowany. Literały tekstowe w ciągu formatu zwykle jest kopiowany do docelowej sekwencji. Każda sekwencja unikowa w ciągu formatu jest zastępowana przez tekst, który reprezentuje. Szczegóły dotyczące kopiowania i wymiany są kontrolowane przez flagi formatu przekazane do funkcji.
+Aby wygenerować sformatowany tekst. tekst dosłowny w ciągu formatu jest zwyczajnie kopiowany do sekwencji docelowej. Każda sekwencja unikowa w ciągu formatu jest zastępowana przez tekst, który reprezentuje. Szczegóły dotyczące kopiowania i wymiany są kontrolowane przez flagi formatu przekazane do funkcji.
 
 ### <a name="example"></a>Przykład
 
@@ -1191,7 +1191,7 @@ empty == false
 
 ## <a name="get_allocator"></a>  match_results::get_allocator
 
-Zwraca alokatora przechowywane.
+Zwraca przechowywaną alokatora.
 
 ```cpp
 allocator_type get_allocator() const;
@@ -1199,7 +1199,7 @@ allocator_type get_allocator() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca kopię obiekt alokatora używany przez `*this` przydzielić jej `sub_match` obiektów.
+Funkcja elementu członkowskiego zwraca kopię obiektu programu przydzielania posługują się `*this` przydzielić jej `sub_match` obiektów.
 
 ### <a name="example"></a>Przykład
 
@@ -1312,7 +1312,7 @@ empty == false
 
 ## <a name="iterator"></a>  match_results::iterator
 
-Typ iteratora submatches.
+Typ iteratora poddopasowania.
 
 ```cpp
 typedef const_iterator iterator;
@@ -1320,7 +1320,7 @@ typedef const_iterator iterator;
 
 ### <a name="remarks"></a>Uwagi
 
-Typ zawiera opis obiektu, który może służyć jako iterator dostępie swobodnym w kontrolowanej sekwencji.
+Typ opisuje obiekt, który może służyć jako iterator dostępu swobodnego dla kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -1433,7 +1433,7 @@ empty == false
 
 ## <a name="length"></a>  match_results::length
 
-Zwraca długość submatch.
+Zwraca długość poddopasowanie.
 
 ```cpp
 difference_type length(size_type sub = 0) const;
@@ -1441,11 +1441,11 @@ difference_type length(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parametry
 
-`sub` Indeks submatch.
+*Sub* indeks poddopasowanie.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca funkcję elementu członkowskiego `(*this)[sub].length()`.
+Funkcja elementu członkowskiego zwraca `(*this)[sub].length()`.
 
 ### <a name="example"></a>Przykład
 
@@ -1568,13 +1568,13 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>Parametry
 
-`alloc` Obiekt programu przydzielania, aby zapisać.
+*ALLOC* obiekt alokatora, który ma być przechowywany.
 
-`right` Match_results — obiekt do skopiowania.
+*prawy* match_results — obiekt do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy konstrukcje konstruktora `match_results` obiekt przechowujący nie submatches. Drugi konstrukcje konstruktora `match_results` obiekt, który jest kopią `right`.
+Pierwszy Konstruktor konstruuje `match_results` obiekt, który przechowuje nie poddopasowania. Drugi Konstruktor konstruuje `match_results` obiekt, który jest kopią *prawo*.
 
 ### <a name="example"></a>Przykład
 
@@ -1687,7 +1687,7 @@ empty == false
 
 ## <a name="max_size"></a>  match_results::max_size
 
-Pobiera największą liczbę submatches.
+Pobiera największą liczbę poddopasowania.
 
 ```cpp
 size_type max_size() const;
@@ -1695,7 +1695,7 @@ size_type max_size() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca długość najdłuższym sekwencji, który można kontrolować obiektem.
+Funkcja elementu członkowskiego zwraca długość najdłuższej sekwencji, która może kontrolować obiekt.
 
 ### <a name="example"></a>Przykład
 
@@ -1816,11 +1816,11 @@ match_results& operator=(const match_results& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` Match_results — obiekt do skopiowania.
+*prawy* match_results — obiekt do skopiowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator członkowski zastępuje sekwencji kontrolowane przez `*this` kopię sekwencji kontrolowane przez `right`.
+Operator składowy zastępuje sekwencji kontrolowanej przez `*this` kopię sekwencji kontrolowanej przez *prawo*.
 
 ### <a name="example"></a>Przykład
 
@@ -1931,7 +1931,7 @@ next submatch: matched == false
 empty == false
 ```
 
-## <a name="op_at"></a>  [match_results::operator]
+## <a name="op_at"></a>  [] match_results::operator
 
 Dostęp do podobiektów.
 
@@ -1941,11 +1941,11 @@ const_reference operator[](size_type n) const;
 
 ### <a name="parameters"></a>Parametry
 
-`n` Indeks submatch.
+*n* indeksu poddopasowanie.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca odwołanie do elementu `n` kontrolowanej sekwencji lub odwołanie do pustego `sub_match` obiekt zostanie `size() <= n` lub, jeśli przechwytywania grupy `n` nie jest częścią dopasowania.
+Funkcja elementu członkowskiego zwraca odwołanie do elementu *n* kontrolowanej sekwencji lub odwołanie do pustego `sub_match` obiektu, jeśli `size() <= n` lub grupę przechwytywania, jeśli *n* nie było częścią dopasowanie.
 
 ### <a name="example"></a>Przykład
 
@@ -2066,11 +2066,11 @@ difference_type position(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parametry
 
-`sub` Indeks submatch.
+*Sub* indeksu poddopasowanie.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca `std::distance(prefix().first, (*this)[sub].first)`, czyli odległość od pierwszego znaku w sekwencji docelowych do pierwszego znaku w submatch wskazywana przez element `n` kontrolowanej sekwencji.
+Funkcja elementu członkowskiego zwraca `std::distance(prefix().first, (*this)[sub].first)`, czyli odległość od pierwszego znaku w sekwencji docelowej, do pierwszego znaku w poddopasowanie wskazywany przez element `n` kontrolowanej sekwencji.
 
 ### <a name="example"></a>Przykład
 
@@ -2183,7 +2183,7 @@ empty == false
 
 ## <a name="prefix"></a>  match_results::prefix
 
-Pobiera sekwencję przed pierwszym submatch.
+Pobiera sekwencję przed pierwszym poddopasowanie.
 
 ```cpp
 const_reference prefix() const;
@@ -2191,7 +2191,7 @@ const_reference prefix() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca odwołanie do obiektu typu `sub_match<BidIt>` wskazującego sekwencja znaków, który rozpoczyna się na początku sekwencji docelowych i kończy się na `(*this)[0].first`, oznacza to, że wskazuje tekst, który poprzedza podsekwencji dopasowany.
+Funkcja elementu członkowskiego zwraca odwołanie do obiektu typu `sub_match<BidIt>` który wskazuje na sekwencję znaków, która rozpoczyna się na początku sekwencji docelowej, a kończy się na `(*this)[0].first`, oznacza to, że wskazuje on poprzedzająca podsekwencję, dopasowany tekst.
 
 ### <a name="example"></a>Przykład
 
@@ -2425,7 +2425,7 @@ empty == false
 
 ## <a name="size"></a>  match_results::size
 
-Zlicza submatches.
+Zlicza poddopasowania.
 
 ```cpp
 size_type size() const;
@@ -2433,7 +2433,7 @@ size_type size() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Element członkowski funkcja zwraca co więcej niż określona liczba grup przechwytywania w wyrażeniu regularnym, którego użyto do wyszukiwania lub zero, jeśli wyszukiwanie nie zostały wprowadzone.
+Element członkowski funkcja zwraca jeden więcej niż liczba grup przechwytywania w wyrażeniu regularnym, który był używany podczas wyszukiwania lub zero, jeśli wyszukiwanie nie zostały wprowadzone.
 
 ### <a name="example"></a>Przykład
 
@@ -2546,7 +2546,7 @@ empty == false
 
 ## <a name="size_type"></a>  match_results::size_type
 
-Typ liczby submatch.
+Typ liczby poddopasowanie.
 
 ```cpp
 typedef typename Alloc::size_type size_type;
@@ -2667,7 +2667,7 @@ empty == false
 
 ## <a name="str"></a>  match_results::str
 
-Zwraca submatch.
+Zwraca poddopasowanie.
 
 ```cpp
 string_type str(size_type sub = 0) const;
@@ -2675,11 +2675,11 @@ string_type str(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parametry
 
-`sub` Indeks submatch.
+*Sub* indeksu poddopasowanie.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca funkcję elementu członkowskiego `string_type((*this)[sub])`.
+Funkcja elementu członkowskiego zwraca `string_type((*this)[sub])`.
 
 ### <a name="example"></a>Przykład
 
@@ -2913,7 +2913,7 @@ empty == false
 
 ## <a name="suffix"></a>  match_results::suffix
 
-Pobiera sekwencję po ostatnim submatch.
+Pobiera sekwencję po ostatnie poddopasowanie.
 
 ```cpp
 const_reference suffix() const;
@@ -2921,7 +2921,7 @@ const_reference suffix() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca odwołanie do obiektu typu `sub_match<BidIt>` wskazującego sekwencja znaków, który rozpoczyna się od `(*this)[size() - 1].second` i kończy się na końcu sekwencji docelowych, to znaczy wskazuje tekst następujący podsekwencji dopasowany.
+Funkcja elementu członkowskiego zwraca odwołanie do obiektu typu `sub_match<BidIt>` który wskazuje na sekwencję znaków, która rozpoczyna się od `(*this)[size() - 1].second` i kończy się na końcu sekwencji docelowej, oznacza to, że wskazuje tekst, który następuje po podsekwencji dopasowany.
 
 ### <a name="example"></a>Przykład
 
@@ -3042,11 +3042,11 @@ void swap(const match_results& right) throw();
 
 ### <a name="parameters"></a>Parametry
 
-`right` Match_results — obiekt wymiany.
+*prawy* match_results — obiekt do wymiany.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zamienia zawartość `*this` i `right` w czasie stała i nie zgłaszają wyjątki.
+Funkcja elementu członkowskiego zamienia zawartości `*this` i *prawo* w czasie stała i nie zgłasza wyjątków.
 
 ### <a name="example"></a>Przykład
 
@@ -3159,7 +3159,7 @@ empty == false
 
 ## <a name="value_type"></a>  match_results::value_type
 
-Typ submatch.
+Typ poddopasowanie.
 
 ```cpp
 typedef sub_match<BidIt> value_type;
@@ -3167,7 +3167,7 @@ typedef sub_match<BidIt> value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-Element typedef jest synonimem typu `sub_match<BidIt>`.
+Typedef jest synonimem typu `sub_match<BidIt>`.
 
 ### <a name="example"></a>Przykład
 

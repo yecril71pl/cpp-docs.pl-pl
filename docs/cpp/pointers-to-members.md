@@ -1,5 +1,5 @@
 ---
-title: Wskaźniki do elementów członkowskich | Dokumentacja firmy Microsoft
+title: Wskaźniki do składowych | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0354d0a910db0f4237a56607a7322acb7a1b57a0
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 1cc84a0190430caea9592bf4eb8e47ad5bc1f6ce
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34686854"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947948"
 ---
 # <a name="pointers-to-members"></a>Wskaźniki do elementów członkowskich
 Deklaracje wskaźników do elementów członkowskich są specjalne przypadki deklaracje wskaźników.  Są deklarowane za pomocą następującej sekwencji:  
@@ -33,45 +33,33 @@ Deklaracje wskaźników do elementów członkowskich są specjalne przypadki dek
 [= & qualified-name :: member-name];  
 ```  
   
-1.  Specyfikator deklaracji:  
+1. Specyfikator deklaracji:  
+  - Specyfikator klasy magazynowania opcjonalne.  
   
-    -   Specyfikator klasy magazynu opcjonalne.  
+  - Opcjonalnie **const** i/lub **volatile** specyfikatorów.  
   
-    -   Opcjonalne **const** i/lub `volatile` specyfikatory.  
+  - Specyfikator typu: Nazwa typu.  Jest to typ elementu członkowskiego, aby wskazywał, nie klasy.  
   
-    -   Specyfikator typu: Nazwa typu.  Jest to typ elementu członkowskiego, aby wskazywał, nie klasy.  
+1. Specyfikator:  
+
+  - Opcjonalny modyfikator właściwy dla Microsoft. Aby uzyskać więcej informacji, zobacz [Modyfikatory specyficzne dla Microsoft](../cpp/microsoft-specific-modifiers.md).  
+1. Kwalifikowana nazwa klasy zawierającej członków do będzie wskazywał na.  
+  - :: Operator.  
+  - **\*** Operatora.  
+  - Opcjonalnie **const** i/lub **volatile** specyfikatorów.  
+  - Identyfikator nazwy wskaźnika do składowej.  
   
-2.  Deklarator:  
+  - Opcjonalny inicjator:  
+  - **=** Operatora.  
+  - **&** Operatora.  
+  - Kwalifikowana nazwa klasy.  
+  - Operator `::`.  
+  - Nazwa niestatycznej składowej klasy odpowiedniego typu.  
+  -  Jak zawsze wiele deklaratorów (i wszystkie skojarzone inicjatory) są dozwolone w jednej deklaracji.  
   
-    -   Opcjonalne Microsoft określonych modyfikatora. Aby uzyskać więcej informacji, zobacz [Modyfikatory specyficzne dla firmy Microsoft](../cpp/microsoft-specific-modifiers.md).  
+ Wskaźnik do składowej klasy typu różni się od normalnych wskaźnika, ponieważ zawiera ona informacje o typie dla typu elementu członkowskiego i klasy, do której należy dany element członkowski. Identyfikuje normalny wskaźnik (ma adres) pojedynczego obiektu w pamięci. Wskaźnik do składowej klasy identyfikuje ten element członkowski w żadnym wystąpieniu klasy. Poniższy przykład deklaruje klasę, `Window`i niektóre wskaźników do danych elementów członkowskich.  
   
-    -   Kwalifikowana nazwa klasy zawierającej elementy członkowskie, które można wskazywał.   
-  
-    -   :: — Operator.  
-  
-    -   **\*** Operatora.  
-  
-    -   Opcjonalne **const** i/lub `volatile` specyfikatory.  
-  
-    -   Identyfikator nazewnictwa wskaźnik do elementu członkowskiego.  
-  
-    -   Inicjator opcjonalne:  
-  
- **=** Operatora.  
-  
- **&** Operatora.  
-  
- Kwalifikowana nazwa klasy.  
-  
- Operator `::`.  
-  
- Nazwa niestatycznego elementu członkowskiego klasy odpowiedniego typu.  
-  
- Jak zawsze wiele deklaratorów (i wszystkie skojarzone inicjatory) są dozwolone w jednej deklaracji.  
-  
- Wskaźnik do elementu członkowskiego klasy różni się od normalny wskaźnik, ponieważ zawiera ona informacje o typie dla typu elementu członkowskiego i klasy, do której należy element członkowski. Identyfikuje normalny wskaźnik (ma adres) pojedynczego obiektu w pamięci. Wskaźnik do elementu członkowskiego klasy identyfikuje ten element członkowski w żadnym wystąpieniu klasy. Poniższy przykład deklaruje klasy `Window`, a niektóre wskaźników do elementu członkowskiego danych.  
-  
-```  
+```cpp 
 // pointers_to_members1.cpp  
 class Window  
 {  
@@ -91,16 +79,16 @@ int main()
 }  
 ```  
   
- W powyższym przykładzie `pwCaption` wskaźnik do dowolnego elementu członkowskiego klasy `Window` mający typ **char\***. Typ `pwCaption` jest `char * Window::* `. Fragment kodu w następnym deklaruje wskaźniki do `SetCaption` i `GetCaption` funkcji elementów członkowskich.  
+ W powyższym przykładzie `pwCaption` jest wskaźnikiem do wszystkich elementów członkowskich klasy `Window` zawierający typ **char\***. Typ `pwCaption` jest `char * Window::* `. Następny fragment kodu deklaruje wskaźniki do `SetCaption` i `GetCaption` funkcji elementów członkowskich.  
   
-```  
+```cpp 
 const char * (Window::*pfnwGC)() = &Window::GetCaption;  
 bool (Window::*pfnwSC)( const char * ) = &Window::SetCaption;  
 ```  
   
- Wskaźniki `pfnwGC` i `pfnwSC` wskaż `GetCaption` i `SetCaption` z `Window` odpowiednio class. Kod kopiuje informacje tytuł okna bezpośrednio przy użyciu wskaźnika do elementu członkowskiego `pwCaption`:  
+ Wskaźniki `pfnwGC` i `pfnwSC` wskaż `GetCaption` i `SetCaption` z `Window` klasy, odpowiednio. Kod kopiuje informacje tytuł okna bezpośrednio za pomocą wskaźnika do składowej `pwCaption`:  
   
-```  
+```cpp 
 Window wMainWindow;  
 Window *pwChildWindow = new Window;  
 char   *szUntitled    = "Untitled -  ";  
@@ -113,13 +101,13 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';  
 ```  
   
- Różnica między **.\***  i **-> \*** operatory (operatory wskaźników do elementów członkowskich) oznacza, że **.\***  operator wybiera członków danego obiektu lub odwołanie do obiektu, podczas gdy **-> \*** operator wybiera elementów członkowskich za pomocą wskaźnika. (Aby uzyskać więcej informacji o tych operatorów, zobacz [wyrażenia z operatorami wskaźnika do elementu członkowskiego](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
+ Różnica między **.\***  i **-> \*** operatorów (operatory wskaźników do elementów członkowskich) jest to, że **.\***  operator wybiera elementy członkowskie danego obiektu lub odwołanie do obiektu, podczas gdy **-> \*** operator wybiera elementy członkowskie za pomocą wskaźnika. (Aby uzyskać więcej informacji o tych operatorów, zobacz [wyrażenia zawierające operatory wskaźników do elementów członkowskich](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
   
- Wynik operatory wskaźników do elementów członkowskich jest typem elementu członkowskiego — w takim przypadku **char \*** .  
+ Wynik operatory wskaźników do elementów członkowskich jest typ elementu członkowskiego — w tym przypadku **char \*** .  
   
- Poniższy fragment kodu wywołuje funkcje Członkowskie `GetCaption` i `SetCaption` przy użyciu wskaźników do elementów członkowskich:  
+ Poniższy fragment kodu wywołuje funkcje elementów członkowskich `GetCaption` i `SetCaption` za pomocą wskaźników do elementów członkowskich:  
   
-```  
+```cpp 
 // Allocate a buffer.  
 enum {  
     sizeOfBuffer = 100  
@@ -135,16 +123,16 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 ```  
   
 ## <a name="restrictions-on-pointers-to-members"></a>Ograniczenia dotyczące wskaźników do elementów członkowskich  
- Adres statyczny element członkowski nie jest wskaźnikiem do elementu członkowskiego. Jest to zwykły wskaźnik do pojedynczego wystąpienia statycznego elementu członkowskiego. Ponieważ istnieje tylko jedno wystąpienie statycznego elementu członkowskiego dla wszystkich obiektów klasy danego zwykłej address-of **(&)** i wyłuskania **(\*)** można używać operatorów.  
+ Adres statyczny element członkowski nie jest wskaźnik do elementu członkowskiego. Jest to zwykły wskaźnik do jednego wystąpienia statycznego elementu członkowskiego. Ponieważ istnieje tylko jedno wystąpienie statyczny element członkowski, dla wszystkich obiektów klasy danego zwykłych address-of **(&)** i wyłuskania **(\*)** można używać operatorów.  
   
 ## <a name="pointers-to-members-and-virtual-functions"></a>Wskaźniki do elementów członkowskich i funkcji wirtualnych  
- Wywoływanie funkcji wirtualnej za pomocą funkcji wskaźnika do elementu członkowskiego działa tak, jakby funkcji ma została wywołana bezpośrednio; odpowiedniej funkcji jest wyszukiwana w tabeli v i wywoływane.  
+ Wywoływanie funkcji wirtualnej za pomocą funkcji wskaźnika do składowej działa tak, jakby funkcja jakby została ona bezpośrednio wywołana; poprawnej funkcji są wyszukiwane w tabeli v i wywołana.  
   
- Klucz do funkcji wirtualnych, praca, jak zawsze wywołuje je za pomocą wskaźnika do klasy podstawowej. (Aby uzyskać więcej informacji na temat funkcji wirtualnych, zobacz [funkcji wirtualnych](../cpp/virtual-functions.md).)  
+ Klucz do funkcji wirtualnych działa, jak zawsze wywołuje je za pomocą wskaźnika do klasy bazowej. (Aby uzyskać więcej informacji na temat funkcji wirtualnych, zobacz [funkcji wirtualnych](../cpp/virtual-functions.md).)  
   
- Poniższy kod przedstawia sposób wywołania funkcji wirtualnej za pomocą funkcji wskaźników do elementów członkowskich:  
+ Poniższy kod przedstawia sposób wywołania funkcji wirtualnej za pomocą funkcji wskaźnika do elementu członkowskiego:  
   
-```  
+```cpp 
 // virtual_functions.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -152,35 +140,35 @@ using namespace std;
   
 class Base  
 {  
-public:  
-virtual void Print();  
+    public:  
+    virtual void Print();  
 };  
 void (Base ::* bfnPrint)() = &Base :: Print;  
 void Base :: Print()  
 {  
-cout << "Print function for class Base\n";  
+    cout << "Print function for class Base\n";  
 }  
   
 class Derived : public Base  
 {  
-public:  
-void Print();  // Print is still a virtual function.  
+    public:  
+    void Print();  // Print is still a virtual function.  
 };  
   
 void Derived :: Print()  
 {  
-cout << "Print function for class Derived\n";  
+    cout << "Print function for class Derived\n";  
 }  
   
 int main()  
 {  
     Base   *bPtr;  
     Base    bObject;  
-Derived dObject;  
-bPtr = &bObject;    // Set pointer to address of bObject.  
-(bPtr->*bfnPrint)();  
-bPtr = &dObject;    // Set pointer to address of dObject.  
-(bPtr->*bfnPrint)();  
+    Derived dObject;  
+    bPtr = &bObject;    // Set pointer to address of bObject.  
+    (bPtr->*bfnPrint)();  
+    bPtr = &dObject;    // Set pointer to address of dObject.  
+    (bPtr->*bfnPrint)();  
 }  
   
 //Output: Print function for class Base  

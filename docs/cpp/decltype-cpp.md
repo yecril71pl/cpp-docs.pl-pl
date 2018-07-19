@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac9fe7ebf3d3e406854308e56d38e37567acc07a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7fceb9ce3433a4255619a6c7bac4e952b15ac04d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418042"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941291"
 ---
 # <a name="decltype--c"></a>decltype (C++)
-`decltype` Specyfikatora typu daje typ określonego wyrażenia. `decltype` Wpisz specyfikator, wraz z [auto — słowo kluczowe](../cpp/auto-cpp.md), przydaje się głównie do deweloperów, którzy zapisu biblioteki szablonów. Użyj `auto` i `decltype` do zadeklarowania funkcji szablonu, którego zwracany typ zależy od typów argumentów szablonu. Lub użyj `auto` i `decltype` do zadeklarowania funkcji szablonu, który opakowuje wywołania do innej funkcji, a następnie zwraca typ zwracany funkcji opakowana.  
+`decltype` Specyfikator typu daje typu określonego wyrażenia. `decltype` Specyfikator, typu, łącznie z [auto — słowo kluczowe](../cpp/auto-cpp.md), jest przydatne głównie dla deweloperów, którzy zapisu biblioteki szablonów. Użyj **automatycznie** i `decltype` do deklarowania funkcji szablonu, którego zwracany typ jest zależny od typów argumentów szablonu. Możesz też korzystać z **automatycznie** i `decltype` do deklarowania funkcji szablonu, który zawija wywołanie do innej funkcji, a następnie zwraca typ zwracany opakowana funkcja.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,23 +39,23 @@ decltype( expression )
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|`expression`|Wyrażenie. Aby uzyskać więcej informacji, zobacz [wyrażenia](../cpp/expressions-cpp.md).|  
+|*Wyrażenie*|Wyrażenie. Aby uzyskać więcej informacji, zobacz [wyrażenia](../cpp/expressions-cpp.md).|  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Typ `expression` parametru.  
+ Typ *wyrażenie* parametru.  
   
 ## <a name="remarks"></a>Uwagi  
- `decltype` Specyfikatora typu jest obsługiwane w Visual C++ 2010 lub nowszy i może być używany z kodu natywnego lub zarządzanego. `decltype(auto)` (C ++ 14) jest obsługiwana w programie Visual Studio 2015 i nowszych.  
+ `decltype` Specyfikator typu jest obsługiwana w Visual C++ 2010 lub nowszy i może być używany z kodu natywnego lub zarządzanych. `decltype(auto)` (C ++ 14) jest obsługiwana w programie Visual Studio 2015 i nowszych wersjach.  
   
- Kompilator używa następujących reguł w celu określenia typu `expression` parametru.  
+ Kompilator używa następujących reguł, aby określić typ *wyrażenie* parametru.  
   
--   Jeśli `expression` parametru jest identyfikatorem lub [dostęp do elementu członkowskiego klasy](../cpp/member-access-operators-dot-and.md), `decltype(expression)` jest typem jednostki o nazwie `expression`. Jeśli istnieje taka jednostka lub `expression` zestaw funkcji przeciążenia nazwy parametrów, kompilator zapewnia komunikat o błędzie.  
+-   Jeśli *wyrażenie* parametru jest identyfikatorem lub [dostęp do składowej klasy](../cpp/member-access-operators-dot-and.md), `decltype(expression)` jest typem jednostki o nazwie określonej przez *wyrażenie*. Jeśli nie ma takich jednostki lub *wyrażenie* zestaw przeciążonych funkcji nazwy parametrów, kompilator daje komunikat o błędzie.  
   
--   Jeśli `expression` parametr jest wywołaniem funkcji lub funkcja Przeciążony operator `decltype(expression)` jest zwracany typ funkcji. Nawiasy otaczające Przeciążony operator są ignorowane.  
+-   Jeśli *wyrażenie* parametru jest wywołaniem funkcji lub funkcję przeciążonego operatora `decltype(expression)` jest zwracany typ funkcji. Nawiasy wokół przeciążonego operatora są ignorowane.  
   
--   Jeśli `expression` parametr jest [prawostronnie](../cpp/lvalues-and-rvalues-visual-cpp.md), `decltype(expression)` jest typem `expression`. Jeśli `expression` parametr jest [l-wartością](../cpp/lvalues-and-rvalues-visual-cpp.md), `decltype(expression)` jest [odwołania do wartości](../cpp/lvalue-reference-declarator-amp.md) do typu `expression`.  
+-   Jeśli *wyrażenie* parametr jest [rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md), `decltype(expression)` jest typem *wyrażenie*. Jeśli *wyrażenie* parametr jest [l-wartości](../cpp/lvalues-and-rvalues-visual-cpp.md), `decltype(expression)` jest [odwołanie lvalue](../cpp/lvalue-reference-declarator-amp.md) do typu *wyrażenie*.  
   
- W poniższym przykładzie kodu pokazano niektóre zastosowania `decltype` Specyfikator typu. Najpierw przyjęto założenie, że zostały zakodowane następujące instrukcje.  
+ Poniższy przykład kodu demonstruje niektórych zastosowań `decltype` Specyfikator typu. Najpierw Przyjmij, które mają kodowane następujące instrukcje.  
   
 ```cpp  
 int var;  
@@ -64,32 +64,32 @@ struct A { double x; }
 const A* a = new A();  
 ```  
   
- Następnie sprawdź typy, które są zwracane przez cztery `decltype` instrukcje w poniższej tabeli.  
+ Następnie sprawdź typy, które są zwracane przez cztery `decltype` instrukcji w poniższej tabeli.  
   
 |Instrukcja|Typ|Uwagi|  
 |---------------|----------|-----------|  
-|`decltype(fx());`|`const int&&`|[Odwołania do wartości](../cpp/rvalue-reference-declarator-amp-amp.md) do `const int`.|  
-|`decltype(var);`|`int`|Typ zmiennej `var`.|  
-|`decltype(a->x);`|`double`|Rodzaj dostępu do elementu członkowskiego.|  
-|`decltype((a->x));`|`const double&`|Wewnętrzny nawiasów, że instrukcja ma zostać obliczone jako wyrażenie zamiast dostępu elementu członkowskiego. Ponieważ `a` jest zadeklarowany jako `const` wskaźnika typu jest odwołaniem do `const double`.|  
+|`decltype(fx());`|`const int&&`|[Odwołanie rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) do **const int**.|  
+|`decltype(var);`|**int**|Typ zmiennej `var`.|  
+|`decltype(a->x);`|**double**|Typ dostępu do elementu członkowskiego.|  
+|`decltype((a->x));`|`const double&`|Wewnętrzny nawiasy, że instrukcja ma zostać obliczone jako wyrażenia zamiast dostęp do elementu członkowskiego. A ponieważ `a` jest zadeklarowany jako `const` wskaźnika, typ jest odwołaniem do **const double**.|  
   
 ## <a name="decltype-and-auto"></a>Decltype i automatycznie  
- W języku C ++ 14, można użyć `decltype(auto)` z końcowego typu zwracanego do zadeklarowania funkcji szablonu, którego typ zwracany zależy od typów argumentów szablonu.  
+ W języku C ++ 14, można użyć `decltype(auto)` z końcowym typem zwracanym do deklarowania funkcji szablonu, którego typem zwracanym zależy od typów argumentów szablonu.  
   
- W języku C ++ 11, można użyć `decltype` specyfikator na końcowego typu zwracanego typu razem z `auto` — słowo kluczowe do zadeklarowania funkcji szablonu, którego typ zwracany zależy od typów argumentów szablonu. Rozważmy na przykład w poniższym przykładzie kodu, w którym typ zwracany funkcji szablonu zależy od typów argumentów szablonu. W przykładzie kodu *nieznany* symbolu zastępczego wskazuje, że nie można określić zwracanego typu.  
+ W języku C ++ 11, możesz użyć `decltype` wpisz specyfikatora na końcowym typem zwracanym, wraz z **automatycznie** — słowo kluczowe do deklarowania funkcji szablonu, którego typem zwracanym jest zależna od typów argumentów szablonu. Rozważmy na przykład poniższy kod, w której zwracany typ funkcji szablonu zależy od typów argumentów szablonu. W przykładzie kodu *nieznany* symbolu zastępczego wskazuje, że nie można określić typ zwracany.  
   
 ```cpp  
 template<typename T, typename U>  
 UNKNOWN func(T&& t, U&& u){ return t + u; };   
 ```  
   
- Wprowadzenie `decltype` specyfikatora typu umożliwia deweloperom uzyskać typ wyrażenie, które zwraca funkcja szablonu. Użyj *Składnia deklaracji funkcji alternatywnych* który przedstawiono później, `auto` — słowo kluczowe i `decltype` specyfikator Aby zadeklarować typu *późne określony* typ zwracany. Późne określony zwracany typ jest ustalany w chwili deklaracji jest kompilowany zamiast po jest kodowany.  
+ Wprowadzenie `decltype` Specyfikator typu umożliwia zatem programistą, aby uzyskać typ wyrażenia, które zwraca funkcja szablonu. Użyj *Składnia deklaracji funkcji alternatywne* , jest wyświetlany później **automatycznie** — słowo kluczowe i `decltype` specyfikator do deklarowania typu *późno określony* Typ zwracany. Opóźnione określony typ zwracany jest określana podczas deklaracji jest kompilowany, zamiast po kanonicznej zakodowanej.  
   
- Następujące prototypu ilustruje składnię deklaracji funkcji alternatywnych. Należy pamiętać, że `const` i `volatile` kwalifikatorów i `throw` [specyfikacji wyjątku](../cpp/exception-specifications-throw-cpp.md) są opcjonalne. *Function_body* złożonej instrukcji, która określa, jak działa funkcja reprezentuje symbol zastępczy. Jako najlepszym rozwiązaniem, kodowania *wyrażenie* symbol zastępczy w `decltype` instrukcji powinna być zgodna z wyrażeniem określonym przez `return` instrukcji, jeśli istnieje w *function_body*.  
+ Poniższy prototyp ilustruje Składnia deklaracji funkcji alternatywne. Należy pamiętać, że **const** i **volatile** kwalifikatorów i **throw** [Specyfikacja wyjątku](../cpp/exception-specifications-throw-cpp.md) są opcjonalne. *Function_body* symbol zastępczy reprezentuje instrukcję złożonego, która określa, jak działa funkcja. Jako kodowania rozwiązaniem jest najlepszym *wyrażenie* symbol zastępczy w `decltype` instrukcji powinien być zgodny z wyrażeniem określonym przez **zwracają** instrukcji, jeśli istnieje w *function_body* .  
   
- **automatycznie** *nazwa_funkcji* **(** *parametry*<sub>opt</sub> **)**  **Const**<sub>opt</sub> **volatile**<sub>opt</sub> **->** **decltype (** *wyrażenie* **)** **throw**<sub>opt</sub> **{** *function_body* **};**  
+ **automatyczne** *nazwa_funkcji* **(** *parametry*<sub>zoptymalizowany pod kątem</sub> **)**  **Const**<sub>zoptymalizowany pod kątem</sub> **volatile**<sub>zoptymalizowany pod kątem</sub> **->** **decltype (** *wyrażenie* **)** **throw**<sub>zoptymalizowany pod kątem</sub> **{** *function_body* **};**  
   
- W poniższym przykładzie kodu późne określony zwracany typ `myFunc` funkcji szablonu jest określana przez typy `t` i `u` argumentów szablonu. Jako najlepsze praktyki kodowania, przykładowy kod używa również odwołania do r-wartości i `forward` szablonu funkcji, które obsługuje *doskonała przekazywania*. Aby uzyskać więcej informacji, zobacz [deklarator odwołania do r-wartości: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
+ W poniższym przykładzie kodu późno określony zwracany typ `myFunc` funkcji szablonu jest określana przez typy `t` i `u` argumentów szablonu. Jako najlepsze praktyki programowania, przykładowy kod używa również odwołania rvalue i `forward` funkcji szablonu, który obsługuje *doskonała przekazywania*. Aby uzyskać więcej informacji, zobacz [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
 ```cpp  
 //C++11  
@@ -104,13 +104,13 @@ decltype(auto) myFunc(T&& t, U&& u)
   
 ```  
   
-## <a name="decltype-and-forwarding-functions-c11"></a>Decltype i przekazywanie funkcji (C ++ 11)  
- Funkcje przekazywania otoczenie wywołania innych funkcji. Należy wziąć pod uwagę szablonu funkcji, która przekazuje argumenty lub wyniki wyrażenie, które obejmuje tych argumentów, na inną funkcję. Ponadto funkcja przesyłania dalej zwraca wynik wywołania innych funkcji. W tym scenariuszu należy zwracany typ funkcji przesyłania dalej, taki sam jak typ zwracany funkcji opakowana.  
+## <a name="decltype-and-forwarding-functions-c11"></a>Decltype i funkcji przekazywania (C ++ 11)  
+ Funkcje przekazywania owijają odwołania do innych funkcji. Należy wziąć pod uwagę szablonu funkcji, która przekazuje argumenty lub wyniki wyrażenia, które obejmuje tych argumentów, do innej funkcji. Ponadto funkcja przesyłania dalej zwraca wynik wywołania innych funkcji. W tym scenariuszu zwracany typ funkcji przekazywania powinna być taka sama, jako typ zwracany funkcji opakowana.  
   
- W tym scenariuszu nie można zapisać wyrażenia odpowiedniego typu bez `decltype` Specyfikator typu. `decltype` Specyfikatora typu zapewnia funkcje ogólnego przekazywania, ponieważ nie traci wymaganych informacji dotyczących tego, czy funkcja zwraca typ referencyjny. Na przykład kodu funkcji przekazywania, zobacz poprzedni `myFunc` przykładzie funkcja szablonu.  
+ W tym scenariuszu nie można zapisać odpowiedni typ wyrażenia bez `decltype` Specyfikator typu. `decltype` Specyfikator typu umożliwia przekazywanie ogólnych funkcji, ponieważ nie traci wymaganych informacji na temat tego, czy funkcja zwraca typ odwołania. Dla przykładu kodu funkcji przekazywania, zobacz poprzedni `myFunc` przykład funkcji szablonu.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykładowy kod deklaruje późne określonym przez typ zwracany funkcji szablonu `Plus()`. `Plus` Funkcja przetwarza dwóch argumentów z `operator+` przeciążenia. W rezultacie interpretacji operator plus (+) i typ zwracany `Plus` funkcji zależy od typów argumentów funkcji.  
+ Poniższy przykład kodu deklaruje późno określony zwracany typ funkcji szablonu `Plus()`. `Plus` Funkcja przetwarza dwóch argumentów operacji za pomocą `operator+` przeciążenia. W związku z tym, interpretacja operatora znaku plus (+) i zwracanym typem `Plus` funkcji zależy od typów argumentów funkcji.  
   
 ```cpp  
 // decltype_1.cpp  
@@ -183,9 +183,9 @@ x3.Dump() = 42
 ```
   
 ## <a name="example"></a>Przykład
-**Visual Studio 2017 lub nowszy:** kompilator analizuje decltype argumenty podczas szablony są zadeklarowane zamiast wystąpienia. W związku z tym jeśli specjalizacji zależny od innych niż zostanie znaleziony w argumencie decltype, nie zostanie odłożone na czas tworzenia wystąpienia, a zostaną niezwłocznie przetworzone i wyniki zostanie zdiagnozowany w tym czasie.
+**Visual Studio 2017 i nowszym:** kompilator analizuje decltype argumentów, gdy szablony są deklarowane, a nie uruchomiony. W związku z tym jeśli specjalizacji zależne od innych znajduje się w argumencie decltype, nie zostaną przeniesione czasu wystąpienia i zostaną niezwłocznie przetworzone i wszystkie wynikowe błędy będą zdiagnozować, w tym czasie.
 
-W poniższym przykładzie przedstawiono takie wystąpi błąd kompilatora, która jest zgłaszane w punkcie deklaracji:
+Poniższy przykład przedstawia takich błąd kompilatora, który jest wywoływany w punkcie deklaracji:
 
 ```cpp
 #include <utility>
@@ -209,5 +209,5 @@ static_assert(test2, "PASS2");
 ## <a name="requirements"></a>Wymagania  
  Visual C++ 2010 lub nowszy.  
   
- `decltype(auto)` wymaga programu Visual Studio 2015 lub nowszego.  
+ `decltype(auto)` wymaga programu Visual Studio 2015 lub nowszej.  
   

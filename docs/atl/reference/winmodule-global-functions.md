@@ -1,5 +1,5 @@
 ---
-title: Funkcje globalne WinModule | Dokumentacja firmy Microsoft
+title: Globalne elementu Winmodule | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,29 +15,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 514703e2c7c968035e9defc7677943377778a761
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9ac96acaf337ad3ee73f0b6f93ae6893632962e9
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362300"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884567"
 ---
-# <a name="winmodule-global-functions"></a>Funkcje globalne WinModule
-Funkcje te zapewniają obsługę `_AtlCreateWndData` struktury operacji.  
+# <a name="winmodule-global-functions"></a>Globalne elementu Winmodule
+Te funkcje zapewniają obsługę `_AtlCreateWndData` struktury operacji.  
   
 > [!IMPORTANT]
->  Funkcje wymienione w poniższej tabeli nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Funkcje wymienione w poniższej tabeli nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 |||  
 |-|-|  
-|[AtlWinModuleAddCreateWndData](#atlwinmoduleaddcreatewnddata)|Ta funkcja służy do inicjowania i dodać `_AtlCreateWndData` struktury.|  
-|[AtlWinModuleExtractCreateWndData](#atlwinmoduleextractcreatewnddata)|Wywołanie tej funkcji, aby wyodrębnić istniejące `_AtlCreateWndData` struktury.|  
+|[AtlWinModuleAddCreateWndData](#atlwinmoduleaddcreatewnddata)|Ta funkcja jest używana do inicjowania i dodawania `_AtlCreateWndData` struktury.|  
+|[AtlWinModuleExtractCreateWndData](#atlwinmoduleextractcreatewnddata)|Wywołaj tę funkcję, aby wyodrębnić istniejącą `_AtlCreateWndData` struktury.|  
 
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlbase.h  
   `            
 ##  <a name="atlwinmoduleaddcreatewnddata"></a>  AtlWinModuleAddCreateWndData  
- Ta funkcja służy do inicjowania i dodać `_AtlCreateWndData` struktury.  
+ Ta funkcja jest używana do inicjowania i dodawania `_AtlCreateWndData` struktury.  
    
 ```
 ATLINLINE ATLAPI_(void) AtlWinModuleAddCreateWndData(
@@ -47,34 +47,34 @@ ATLINLINE ATLAPI_(void) AtlWinModuleAddCreateWndData(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWinModule`  
+ *pWinModule*  
  Wskaźnik do modułu [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md) struktury.  
   
- `pData`  
- Wskaźnik do [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) struktury inicjowanie i dodany do bieżącego modułu.  
+ *pData*  
+ Wskaźnik do [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) struktury, inicjowanie i dodawane do bieżącego modułu.  
   
- `pObject`  
+ *Obiekt*  
  Wskaźnik do obiektu **to** wskaźnika.  
   
 ### <a name="remarks"></a>Uwagi  
- Inicjuje `_AtlCreateWndData` struktury, która jest używana do przechowywania **to** wskaźnika użyta w odwołaniu do wystąpień klas i dodaje go do listy odwołuje się moduł `_ATL_WIN_MODULE70` struktury. Wywoływane przez [CAtlWinModule::AddCreateWndData](catlwinmodule-class.md#addcreatewnddata).  
+ Inicjuje `_AtlCreateWndData` struktury, która jest używana do przechowywania **to** wskaźnik umożliwia odwoływanie się do wystąpienia klasy i dodaje go do listy odwołuje się moduł `_ATL_WIN_MODULE70` struktury. Wywoływane przez [CAtlWinModule::AddCreateWndData](catlwinmodule-class.md#addcreatewnddata).  
   
 ##  <a name="atlwinmoduleextractcreatewnddata"></a>  AtlWinModuleExtractCreateWndData  
- Wywołanie tej funkcji, aby wyodrębnić istniejące `_AtlCreateWndData` struktury.  
+ Wywołaj tę funkcję, aby wyodrębnić istniejącą `_AtlCreateWndData` struktury.  
  
 ```
 ATLINLINE ATLAPI_(void*) AtlWinModuleExtractCreateWndData(_ATL_WIN_MODULE* pWinModule);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pWinModule`  
+ *pWinModule*  
  Wskaźnik do modułu [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md) struktury.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca wskaźnik do [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) struktury.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja zostanie wyodrębniona istniejące `_AtlCreateWndData` struktury z listy odwołuje się moduł `_ATL_WIN_MODULE70` struktury.  
+ Ta funkcja będzie wyodrębnić istniejącą `_AtlCreateWndData` struktury z listy odwołuje się moduł `_ATL_WIN_MODULE70` struktury.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Funkcje](../../atl/reference/atl-functions.md)

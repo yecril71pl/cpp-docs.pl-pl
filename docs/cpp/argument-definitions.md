@@ -18,16 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca012d7b391e011d9658b0b74e0f4433d5dc9fd4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4a401caad212978372bcb02b412fa8a9648b7170
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37948255"
 ---
 # <a name="argument-definitions"></a>Definicje argumentu
 Argumenty w prototypie  
   
-```  
+```cpp 
   
 int main( int argc, char* argv[], char* envp[]);
 int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);  
@@ -35,27 +36,27 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
   
  umożliwiają wygodne przetwarzanie argumentów z poziomu wiersza polecenia oraz, opcjonalnie, dostęp do zmiennych środowiskowych. Definicje argumentów są następujące:  
   
- `argc`  
- Liczba całkowita, która zawiera liczbę argumentów następujących w `argv`. Parametr `argc` jest zawsze większy lub równy 1.  
+ *argc —*  
+ Liczba całkowita, która zawiera liczbę argumentów, które należy wykonać w *argv*. *Argc —* parametru jest zawsze większa lub równa 1.  
   
- `argv`  
- Tablica ciągów zakończonych znakiem null, która reprezentuje argumenty wiersza polecenia wprowadzone przez użytkownika programu. Według konwencji `argv` **[0]** polecenia, z którym program zostanie wywołany, `argv` **[1]** jest pierwszy argument wiersza polecenia i tak dalej, aż do `argv`  **[**`argc`**]**, która jest zawsze **NULL**. Zobacz [Dostosowywanie przetwarzania wiersza polecenia](../cpp/customizing-cpp-command-line-processing.md) uzyskać informacji o pomijanie przetwarzania w wierszu polecenia.  
+ *ARGV*  
+ Tablica ciągów zakończonych znakiem null, która reprezentuje argumenty wiersza polecenia wprowadzone przez użytkownika programu. Zgodnie z Konwencją `argv` **[0]** jest poleceniem, z którym wywoływany jest program `argv` **[1]** jest pierwszym argumentem wiersza polecenia i tak dalej, aż do `argv`  **[**`argc`**]**, która zawsze ma wartość NULL. Zobacz [Dostosowywanie przetwarzania wiersza polecenia](../cpp/customizing-cpp-command-line-processing.md) uzyskać informacje dotyczące pomijania przetwarzania w wierszu polecenia.  
   
- Pierwszy argument wiersza polecenia jest zawsze `argv` **[1]** i jest ostatni z nich `argv` **[** `argc` - 1 **]**.  
+ Pierwszym argumentem wiersza polecenia jest zawsze `argv` **[1]** i jest ostatni z nich `argv` **[** `argc` - 1 **]**.  
   
 > [!NOTE]
->  Według konwencji `argv` **[0]** polecenia, z którym program jest wywoływany.  Jednak jest możliwe zduplikować procesu przy użyciu [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) i użycie pierwszy i drugi argument (`lpApplicationName` i `lpCommandLine`), `argv` **[0]** nie może być Nazwa pliku wykonywalnego; Użyj [Funkcja GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) można pobrać nazwy pliku wykonywalnego, a jego w pełni kwalifikowaną ścieżkę.  
+>  Zgodnie z Konwencją `argv` **[0]** jest poleceniem, z którym wywoływany jest program.  Jednak jest możliwe, aby utworzyć proces przy użyciu [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) i jeśli korzystasz z pierwszego i drugiego argumentu (`lpApplicationName` i `lpCommandLine`), `argv` **[0]** może nie być Nazwa pliku wykonywalnego; Użyj [Funkcja GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) można pobrać nazwy pliku wykonywalnego oraz jego w pełni kwalifikowanej ścieżki.  
   
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
- `envp`  
- Tablica `envp`, która jest typowym rozszerzeniem w wielu systemach Unix, jest używana w języku Microsoft C++. Jest to tablica ciągów reprezentujących zestaw zmiennych w środowisku użytkownika. Ta tablica jest został przerwany przez **NULL** wpisu. Mogą być deklarowane jako tablicy wskaźników do **char (char** \*[envp —**)** lub jako wskaźnik do wskaźników do **char (char** \* \* envp —**)**. Jeśli używany przez program **wmain** zamiast **głównego**, użyj `wchar_t` zamiast typów danych `char`. Blok środowiska przekazany do **głównego** i **wmain** jest "zablokowane" kopię bieżącego środowiska. Jeśli użytkownik zmieni środowiska przez wywołanie **putenv —** lub `_wputenv`, czy bieżące środowisko (zwrócony przez `getenv` / `_wgetenv` i `_environ` /  `_wenviron` zmiennej) będzie zmiany, ale blok wskazywana przez envp — nie zmieni się. Zobacz [Dostosowywanie przetwarzania wiersza polecenia](../cpp/customizing-cpp-command-line-processing.md) uzyskać informacji o pomijanie przetwarzania w środowisku. Ten argument jest zgodny ze standardem ANSI w języku C, ale nie w języku C++.  
+ *envp*  
+ *Envp* tablicy, która jest typowym rozszerzeniem w wielu systemach UNIX, jest używany w Microsoft C++. Jest to tablica ciągów reprezentujących zestaw zmiennych w środowisku użytkownika. Tablica jest zakończona wpisem o wartości NULL. Mogą być deklarowane jako tablica wskaźników do **char (char** \*envp []**)** lub jako wskaźnik do wskaźników do **char (char** \* \* envp **)**. Jeśli program używa **wmain** zamiast **głównego**, użyj **wchar_t** typu danych zamiast **char**. Blok środowiska przekazany do **głównego** i **wmain** jest "zamrożoną" kopią bieżącego środowiska. Jeśli następnie zmienisz środowisko przez wywołanie **putenv** lub `_wputenv`, bieżące środowisko (zwrócone przez `getenv` / `_wgetenv` i `_environ` /  `_wenviron` zmiennej) będzie zmieni się, ale blok wskazywany przez envp nie zmieni się. Zobacz [Dostosowywanie przetwarzania wiersza polecenia](../cpp/customizing-cpp-command-line-processing.md) uzyskać informacje dotyczące pomijania przetwarzania środowiska. Ten argument jest zgodny ze standardem ANSI w języku C, ale nie w języku C++.  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia użycie `argc`, `argv`, i `envp` argumenty **głównego**:  
+ Poniższy przykład pokazuje, jak używać *argc —*, *argv*, i *envp* argumenty **głównego**:  
   
-```  
+```cpp 
 // argument_definitions.cpp  
 // compile with: /EHsc  
 #include <iostream>  

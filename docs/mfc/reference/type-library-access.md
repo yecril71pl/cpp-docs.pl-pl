@@ -16,27 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb81a8aa7d9262992da29a2d93cf770fad754316
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: afba5d2c2d0cd0b84e12cbd13cedba473b535587
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373214"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885900"
 ---
 # <a name="type-library-access"></a>Dostęp do biblioteki typów
-Biblioteki typów uwidacznia interfejsów kontrolkę OLE do innych aplikacji obsługujących OLE. Każda kontrolka OLE musi mieć biblioteki typów, jeśli jeden lub więcej interfejsów mają być widoczne.  
+Biblioteki typów uwidacznia interfejsów, które kontrolki OLE do innych aplikacji obsługujących OLE. Każda kontrolka OLE musi mieć bibliotekę typów, jeśli co najmniej jeden interfejs narażonych.  
   
- Zezwalaj na następujące makra formantu OLE w celu zapewnienia dostępu do jego własnej biblioteki typów:  
+ Następujące makra Zezwalaj na kontrolkę OLE w celu zapewnienia dostępu do jego własnej biblioteki typów:  
   
 ### <a name="type-library-access"></a>Dostęp do biblioteki typów  
   
 |||  
 |-|-|  
-|[DECLARE_OLETYPELIB —](#declare_oletypelib)|Deklaruje `GetTypeLib` funkcji członkowskiej formantów OLE (należy użyć w deklaracji klasy).|  
-|[IMPLEMENT_OLETYPELIB —](#implement_oletypelib)|Implementuje `GetTypeLib` funkcji członkowskiej formantów OLE (musi być zastosowany w implementacji klasy).|  
+|[DECLARE_OLETYPELIB](#declare_oletypelib)|Deklaruje `GetTypeLib` funkcji składowej typu kontrolkę OLE (muszą być używane w deklaracji klasy).|  
+|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Implementuje `GetTypeLib` funkcji składowej typu kontrolkę OLE (muszą być używane w implementacji klasy).|  
   
-##  <a name="declare_oletypelib"></a>  DECLARE_OLETYPELIB —  
- Deklaruje `GetTypeLib` funkcji członkowskiej klasy formantu.  
+##  <a name="declare_oletypelib"></a>  DECLARE_OLETYPELIB  
+ Deklaruje `GetTypeLib` funkcji składowej klasy kontrolki.  
   
 ```   
 DECLARE_OLETYPELIB(class_name)   
@@ -44,16 +44,16 @@ DECLARE_OLETYPELIB(class_name)
   
 ### <a name="parameters"></a>Parametry  
  *class_name*  
- Nazwa klasy formantu związane z biblioteki typów.  
+ Nazwa klasy kontrolki powiązane z biblioteki typów.  
   
 ### <a name="remarks"></a>Uwagi  
- Użyj tego makra w pliku nagłówka klasy formantu.  
+ Użyj tego makra w pliku nagłówkowym klasy kontrolki.  
 
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdisp.h  
 
-##  <a name="implement_oletypelib"></a>  IMPLEMENT_OLETYPELIB —  
- Implementuje formantu `GetTypeLib` funkcję elementu członkowskiego.  
+##  <a name="implement_oletypelib"></a>  IMPLEMENT_OLETYPELIB  
+ Implementuje formant `GetTypeLib` funkcja elementu członkowskiego.  
   
 ```   
 IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)   
@@ -61,19 +61,19 @@ IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
   
 ### <a name="parameters"></a>Parametry  
  *class_name*  
- Nazwa klasy formantu związane z biblioteki typów.  
+ Nazwa klasy kontrolki powiązane z biblioteki typów.  
   
  *tlid*  
- Identyfikator biblioteki typów.  
+ Numer identyfikacyjny biblioteki typów.  
   
- `wVerMajor`  
- Numer wersji głównej biblioteki typu.  
+ *wVerMajor*  
+ Wpisz biblioteki główny numer wersji.  
   
- `wVerMinor`  
- Typ biblioteki podrzędny numer wersji.  
+ *wVerMinor*  
+ Wpisz biblioteki pomocniczy numer wersji.  
   
 ### <a name="remarks"></a>Uwagi  
- To makro musi występować w pliku implementacji dla dowolnej klasy formantu, który używa `DECLARE_OLETYPELIB` makra.  
+ To makro musi znajdować się w pliku implementacji dla każdej klasy kontrolki, która używa DECLARE_OLETYPELIB — makro.  
 
 ### <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdisp.h  

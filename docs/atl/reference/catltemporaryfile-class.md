@@ -32,18 +32,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49adcb572e355c62e6f21081eb033496e60e2369
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3492f71ab119bb272576fe8c67bc6d05163785fb
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366068"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883147"
 ---
 # <a name="catltemporaryfile-class"></a>Klasa CAtlTemporaryFile
-Ta klasa dostarcza metody do tworzenia i używania pliku tymczasowego.  
+Ta klasa zawiera metody służące do tworzenia i używania pliku tymczasowego.  
   
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -64,29 +64,29 @@ class CAtlTemporaryFile
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CAtlTemporaryFile::Close](#close)|Wywołanie tej metody, aby zamknąć plik tymczasowy i albo usunąć jej zawartość lub przechowywać je w obszarze określonej nazwy pliku.|  
-|[CAtlTemporaryFile::Create](#create)|Wywołanie tej metody można utworzyć pliku tymczasowego.|  
-|[CAtlTemporaryFile::Flush](#flush)|Wywołanie tej metody, aby wymusić żadnych danych pozostałych w buforze pliku do zapisania pliku tymczasowego.|  
-|[CAtlTemporaryFile::GetPosition](#getposition)|Wywołanie tej metody, aby uzyskać bieżącą pozycję wskaźnika pliku.|  
-|[CAtlTemporaryFile::GetSize](#getsize)|Wywołaj tę metodę, aby pobrać rozmiar w bajtach pliku tymczasowego.|  
-|[CAtlTemporaryFile::HandsOff](#handsoff)|Wywołanie tej metody, aby usunąć skojarzenie pliku z `CAtlTemporaryFile` obiektu.|  
+|[CAtlTemporaryFile::Close](#close)|Wywołanie tej metody, aby zamknąć plik tymczasowy i albo usunąć jej zawartość lub przechowywać je zgodnie z określoną nazwą pliku.|  
+|[CAtlTemporaryFile::Create](#create)|Wywołaj tę metodę można utworzyć pliku tymczasowego.|  
+|[CAtlTemporaryFile::Flush](#flush)|Wywołaj tę metodę, aby wymusić wszelkie dane pozostały w buforze plików, które są zapisywane w pliku tymczasowego.|  
+|[CAtlTemporaryFile::GetPosition](#getposition)|Wywołaj tę metodę, aby uzyskać bieżącą pozycję wskaźnika w pliku.|  
+|[CAtlTemporaryFile::GetSize](#getsize)|Wywołaj tę metodę, aby uzyskać rozmiar w bajtach pliku tymczasowego.|  
+|[CAtlTemporaryFile::HandsOff](#handsoff)|Wywołaj tę metodę, aby usunąć skojarzenie pliku z `CAtlTemporaryFile` obiektu.|  
 |[CAtlTemporaryFile::HandsOn](#handson)|Wywołaj tę metodę, aby otworzyć istniejący plik tymczasowy i umieść kursor na końcu pliku.|  
-|[CAtlTemporaryFile::LockRange](#lockrange)|Wywołaj tę metodę, aby zablokować region, w pliku, aby uniemożliwić dostęp do jej przez inne procesy.|  
-|[CAtlTemporaryFile::Read](#read)|Wywołanie tej metody można odczytać danych z pliku tymczasowego, zaczynając od pozycji wskaźnika pliku.|  
-|[CAtlTemporaryFile::Seek](#seek)|Wywołaj tę metodę, aby przenieść wskaźnik pliku tymczasowego pliku.|  
-|[CAtlTemporaryFile::SetSize](#setsize)|Wywołaj tę metodę, aby określić rozmiar pliku tymczasowego.|  
+|[CAtlTemporaryFile::LockRange](#lockrange)|Wywołaj tę metodę, aby zablokować region, w pliku, aby uniemożliwić innym procesom uzyskiwanie do niej dostępu.|  
+|[CAtlTemporaryFile::Read](#read)|Wywołaj tę metodę można odczytać danych z pliku tymczasowego, zaczynając od pozycji wskazywanym przez wskaźnik pliku.|  
+|[CAtlTemporaryFile::Seek](#seek)|Wywołaj tę metodę, aby przesunąć wskaźnik pliku plik tymczasowy.|  
+|[CAtlTemporaryFile::SetSize](#setsize)|Wywołaj tę metodę, aby ustawić rozmiar pliku tymczasowego.|  
 |[CAtlTemporaryFile::TempFileName](#tempfilename)|Wywołaj tę metodę, aby zwrócić nazwę pliku tymczasowego.|  
-|[CAtlTemporaryFile::UnlockRange](#unlockrange)|Wywołaj tę metodę, aby odblokować obszaru pliku tymczasowego.|  
-|[CAtlTemporaryFile::Write](#write)|Wywołanie tej metody można zapisać danych do pliku tymczasowego, zaczynając od pozycji wskaźnika pliku.|  
+|[CAtlTemporaryFile::UnlockRange](#unlockrange)|Wywołaj tę metodę w celu odblokowania region pliku tymczasowego.|  
+|[CAtlTemporaryFile::Write](#write)|Wywołaj tę metodę można zapisać danych do pliku tymczasowego, zaczynając od pozycji wskazywanym przez wskaźnik pliku.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CAtlTemporaryFile::operator dojścia](#operator_handle)|Zwraca dojście do pliku tymczasowego.|  
+|[CAtlTemporaryFile::operator UCHWYTU](#operator_handle)|Zwraca uchwyt do pliku tymczasowego.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CAtlTemporaryFile` ułatwia tworzenie i używanie pliku tymczasowego. Plik jest automatycznie o nazwie, otworzyć zamknięty i usunięty. Jeśli zawartość pliku są wymagane, po zamknięciu pliku, zapisaniem do nowego pliku o określonej nazwie.  
+ `CAtlTemporaryFile` ułatwia tworzenie i używanie pliku tymczasowego. Plik jest automatycznie o nazwie, otwarte, zamknięte i usunąć. Jeśli zawartość pliku są wymagane, po zamknięciu pliku, może można zapisać do nowego pliku o określonej nazwie.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlfile.h  
@@ -102,7 +102,7 @@ CAtlTemporaryFile() throw();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Plik nie jest rzeczywiście otwarty do momentu połączenie jest nawiązywane w przypadku [CAtlTemporaryFile::Create](#create).  
+ Plik nie jest faktycznie otwarte do momentu połączenie jest nawiązywane w przypadku [CAtlTemporaryFile::Create](#create).  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Utilities#73](../../atl/codesnippet/cpp/catltemporaryfile-class_1.cpp)]  
@@ -118,7 +118,7 @@ CAtlTemporaryFile() throw();
  Wywołania destruktora [CAtlTemporaryFile::Close](#close).  
   
 ##  <a name="close"></a>  CAtlTemporaryFile::Close  
- Wywołanie tej metody, aby zamknąć plik tymczasowy i albo usunąć jej zawartość lub przechowywać je w obszarze określonej nazwy pliku.  
+ Wywołanie tej metody, aby zamknąć plik tymczasowy i albo usunąć jej zawartość lub przechowywać je zgodnie z określoną nazwą pliku.  
   
 ```
 HRESULT Close(LPCTSTR szNewName = NULL) throw();
@@ -126,93 +126,93 @@ HRESULT Close(LPCTSTR szNewName = NULL) throw();
   
 ### <a name="parameters"></a>Parametry  
  *szNewName*  
- Nazwa nowego pliku do przechowywania zawartości pliku tymczasowego w. Jeśli ten argument ma wartość NULL, są usuwane zawartość pliku tymczasowego.  
+ Nazwa nowego pliku do przechowywania zawartości pliku tymczasowego w. Jeśli ten argument ma wartość NULL, zawartość pliku tymczasowego zostaną usunięte.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca `S_OK` na powodzenie lub błąd `HRESULT` w przypadku awarii.  
+ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).  
   
 ##  <a name="create"></a>  CAtlTemporaryFile::Create  
- Wywołanie tej metody można utworzyć pliku tymczasowego.  
+ Wywołaj tę metodę można utworzyć pliku tymczasowego.  
   
 ```
 HRESULT Create(LPCTSTR pszDir = NULL, DWORD dwDesiredAccess = GENERIC_WRITE) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pszDir`  
- Ścieżka do pliku tymczasowego. Jeśli jest to wartość NULL, [GetTempPath](http://msdn.microsoft.com/library/windows/desktop/aa364992) zostanie wywołana w celu przypisania ścieżki.  
+ *pszDir*  
+ Ścieżka do pliku tymczasowego. Jeśli jest to wartość NULL, [GetTempPath](http://msdn.microsoft.com/library/windows/desktop/aa364992) zostanie wywołana w celu Przypisz ścieżkę.  
   
- `dwDesiredAccess`  
- Żądany dostęp. Zobacz `dwDesiredAccess` w [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) w systemie Windows SDK.  
+ *dwDesiredAccess*  
+ Żądany dostęp. Zobacz *dwDesiredAccess* w [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) w zestawie Windows SDK.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca `S_OK` na powodzenie lub błąd `HRESULT` w przypadku awarii.  
+ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).  
   
 ##  <a name="flush"></a>  CAtlTemporaryFile::Flush  
- Wywołanie tej metody, aby wymusić żadnych danych pozostałych w buforze pliku do zapisania pliku tymczasowego.  
+ Wywołaj tę metodę, aby wymusić wszelkie dane pozostały w buforze plików, które są zapisywane w pliku tymczasowego.  
   
 ```
 HRESULT Flush() throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca `S_OK` na powodzenie lub błąd `HRESULT` w przypadku awarii.  
+ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Podobnie jak [CAtlTemporaryFile::HandsOff](#handsoff), z wyjątkiem tego, że plik nie jest zamknięty.  
+ Podobnie jak [CAtlTemporaryFile::HandsOff](#handsoff), z tą różnicą, że plik nie jest zamknięty.  
   
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).  
   
 ##  <a name="getposition"></a>  CAtlTemporaryFile::GetPosition  
- Wywołanie tej metody, aby uzyskać bieżącą pozycję wskaźnika pliku.  
+ Wywołaj tę metodę, aby uzyskać bieżącą pozycję wskaźnika w pliku.  
   
 ```
 HRESULT GetPosition(ULONGLONG& nPos) const throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPos`  
+ *npos —*  
  Pozycja w bajtach.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca `S_OK` na powodzenie lub błąd `HRESULT` w przypadku awarii.  
+ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby zmienić pozycję wskaźnika pliku, użyj [CAtlTemporaryFile::Seek](#seek).  
+ Aby zmienić położenie wskaźnik pliku, użyj [CAtlTemporaryFile::Seek](#seek).  
   
 ##  <a name="getsize"></a>  CAtlTemporaryFile::GetSize  
- Wywołaj tę metodę, aby pobrać rozmiar w bajtach pliku tymczasowego.  
+ Wywołaj tę metodę, aby uzyskać rozmiar w bajtach pliku tymczasowego.  
   
 ```
 HRESULT GetSize(ULONGLONG& nLen) const throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nLen`  
+ *nLen*  
  Liczba bajtów w pliku.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca `S_OK` na powodzenie lub błąd `HRESULT` w przypadku awarii.  
+ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ##  <a name="handsoff"></a>  CAtlTemporaryFile::HandsOff  
- Wywołanie tej metody, aby usunąć skojarzenie pliku z `CAtlTemporaryFile` obiektu.  
+ Wywołaj tę metodę, aby usunąć skojarzenie pliku z `CAtlTemporaryFile` obiektu.  
   
 ```
 HRESULT HandsOff() throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca `S_OK` na powodzenie lub błąd `HRESULT` w przypadku awarii.  
+ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- `HandsOff` i [CAtlTemporaryFile::HandsOn](#handson) są używane do usuwania skojarzenia pliku z obiektu i dołączyć go w razie potrzeby. `HandsOff` zostanie wymusić żadnych danych pozostałych w buforze pliku do zapisania pliku tymczasowego, a następnie zamknij plik. Jeśli chcesz zamknąć i trwale usunąć plik, lub jeśli chcesz zamknąć i zachować zawartość pliku o podanej nazwie, użyj [CAtlTemporaryFile::Close](#close).  
+ `HandsOff` i [CAtlTemporaryFile::HandsOn](#handson) umożliwiają usunięcie skojarzenia pliku z obiektu i dołączyć go ponownie, jeśli to konieczne. `HandsOff` spowoduje wymuszenie wszelkie dane pozostały w buforze plików, które są zapisywane w pliku tymczasowego, a następnie zamknij plik. Jeśli chcesz zamknąć i trwale usunąć plik, lub jeśli chcesz zamknąć i zachować zawartość pliku o określonej nazwie, użyj [CAtlTemporaryFile::Close](#close).  
   
 ##  <a name="handson"></a>  CAtlTemporaryFile::HandsOn  
  Wywołaj tę metodę, aby otworzyć istniejący plik tymczasowy i umieść kursor na końcu pliku.  
@@ -222,40 +222,40 @@ HRESULT HandsOn() throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca `S_OK` na powodzenie lub błąd `HRESULT` w przypadku awarii.  
+ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- [CAtlTemporaryFile::HandsOff](#handsoff) i `HandsOn` są używane do usuwania skojarzenia pliku z obiektu i dołączyć go w razie potrzeby.  
+ [CAtlTemporaryFile::HandsOff](#handsoff) i `HandsOn` umożliwiają usunięcie skojarzenia pliku z obiektu i dołączyć go ponownie, jeśli to konieczne.  
   
 ##  <a name="lockrange"></a>  CAtlTemporaryFile::LockRange  
- Wywołaj tę metodę, aby zablokować region, w pliku tymczasowym, aby uniemożliwić dostęp do jej przez inne procesy.  
+ Wywołaj tę metodę, aby zablokować region, w pliku tymczasowym, aby uniemożliwić innym procesom uzyskiwanie do niej dostępu.  
   
 ```
 HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPos`  
- Pozycja w pliku, w którym powinny one zacząć blokady.  
+ *npos —*  
+ Pozycja w pliku, w którym ma się zacząć blokady.  
   
- `nCount`  
+ *nCount*  
  Długość zakresu bajtów do zablokowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca `S_OK` na powodzenie lub błąd `HRESULT` w przypadku awarii.  
+ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Blokowanie bajtów w pliku uniemożliwia dostęp do tych bajtów przez inne procesy. Można zablokować więcej niż jeden region, pliku, ale nie nakładające się regiony są dozwolone. Aby pomyślnie odblokować regionu, użyj [CAtlTemporaryFile::UnlockRange](#unlockrange), zapewniając zakres bajtów dokładnie odpowiada region, który wcześniej był zablokowany. `LockRange` Scala sąsiadujących ze sobą regionów; Jeśli dwóch regionach zablokowanym sąsiadujących ze sobą, należy odblokować każdego oddzielnie.  
+ Blokowanie bajtów w pliku uniemożliwia dostęp do tych bajtów przez inne procesy. Możesz zablokować więcej niż jeden region pliku, ale nie nakładających się regiony są dozwolone. Aby pomyślnie odblokować regionu, należy użyć [CAtlTemporaryFile::UnlockRange](#unlockrange), zapewniając zakres bajtów dokładnie odpowiada region, który wcześniej został zablokowany. `LockRange` Scala sąsiadujących regiony; Jeśli dwa regiony zablokowane sąsiadujących ze sobą, musisz odblokować każdego oddzielnie.  
   
-##  <a name="operator_handle"></a>  CAtlTemporaryFile::operator dojścia  
- Zwraca dojście do pliku tymczasowego.  
+##  <a name="operator_handle"></a>  CAtlTemporaryFile::operator UCHWYTU  
+ Zwraca uchwyt do pliku tymczasowego.  
   
 ```  
 operator HANDLE() throw();
 ```  
   
 ##  <a name="read"></a>  CAtlTemporaryFile::Read  
- Wywołanie tej metody można odczytać danych z pliku tymczasowego, zaczynając od pozycji wskaźnika pliku.  
+ Wywołaj tę metodę można odczytać danych z pliku tymczasowego, zaczynając od pozycji wskazywanym przez wskaźnik pliku.  
   
 ```
 HRESULT Read(
@@ -265,63 +265,63 @@ HRESULT Read(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pBuffer`  
- Wskaźnik do buforu, który będzie odbierać dane z pliku do odczytu.  
+ *pBuffer*  
+ Wskaźnik do buforu, który będzie otrzymywać dane odczytane z pliku.  
   
- `nBufSize`  
+ *nBufSize*  
  Rozmiar buforu w bajtach.  
   
- `nBytesRead`  
- Liczba bajtów odczytanych.  
+ *nBytesRead*  
+ Liczba odczytanych bajtów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca `S_OK` na powodzenie lub błąd `HRESULT` w przypadku awarii.  
+ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołania [CAtlFile::Read](../../atl/reference/catlfile-class.md#read). Aby zmienić pozycję wskaźnika pliku, należy wywołać [CAtlTemporaryFile::Seek](#seek).  
+ Wywołania [CAtlFile::Read](../../atl/reference/catlfile-class.md#read). Aby zmienić położenie wskaźnikiem pliku, należy wywołać [CAtlTemporaryFile::Seek](#seek).  
   
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).  
   
 ##  <a name="seek"></a>  CAtlTemporaryFile::Seek  
- Wywołaj tę metodę, aby przenieść wskaźnik pliku tymczasowego pliku.  
+ Wywołaj tę metodę, aby przesunąć wskaźnik pliku plik tymczasowy.  
   
 ```
 HRESULT Seek(LONGLONG nOffset, DWORD dwFrom = FILE_CURRENT) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nOffset`  
- Przesunięcie, w bajtach, od początkowego punktu określonego przez *dwFrom.*  
+ *nOffset*  
+ Przesunięcie, w bajtach, od początkowego punktu określonego przez właściwość *dwFrom.*  
   
- `dwFrom`  
+ *dwFrom*  
  Punkt początkowy (FILE_BEGIN, FILE_CURRENT lub FILE_END).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca `S_OK` na powodzenie lub błąd `HRESULT` w przypadku awarii.  
+ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołania [CAtlFile::Seek](../../atl/reference/catlfile-class.md#seek). Aby uzyskać bieżącą pozycję wskaźnika pliku, należy wywołać [CAtlTemporaryFile::GetPosition](#getposition).  
+ Wywołania [CAtlFile::Seek](../../atl/reference/catlfile-class.md#seek). Aby uzyskać bieżącą pozycję wskaźnika w pliku, należy wywołać [CAtlTemporaryFile::GetPosition](#getposition).  
   
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).  
   
 ##  <a name="setsize"></a>  CAtlTemporaryFile::SetSize  
- Wywołaj tę metodę, aby określić rozmiar pliku tymczasowego.  
+ Wywołaj tę metodę, aby ustawić rozmiar pliku tymczasowego.  
   
 ```
 HRESULT SetSize(ULONGLONG nNewLen) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nNewLen`  
+ *nNewLen*  
  Długość nowego pliku w bajtach.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca `S_OK` na powodzenie lub błąd `HRESULT` w przypadku awarii.  
+ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołania [CAtlFile::SetSize](../../atl/reference/catlfile-class.md#setsize). Przy powrocie wskaźnika pliku znajduje się na końcu pliku.  
+ Wywołania [CAtlFile::SetSize](../../atl/reference/catlfile-class.md#setsize). Przy powrocie wskaźnik pliku jest umieszczony na końcu pliku.  
   
 ##  <a name="tempfilename"></a>  CAtlTemporaryFile::TempFileName  
  Wywołaj tę metodę, aby zwrócić nazwę pliku tymczasowego.  
@@ -331,33 +331,33 @@ LPCTSTR TempFileName() throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca `LPCTSTR` wskazujące na nazwę pliku.  
+ Zwraca LPCTSTR wskazuje nazwę pliku.  
   
 ### <a name="remarks"></a>Uwagi  
- Nazwa pliku jest generowana w [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile) wywołaniem [GetTempFile](http://msdn.microsoft.com/library/windows/desktop/aa364991)funkcji zestawu SDK systemu Windows. Rozszerzenie pliku jest zawsze "TFR" dla pliku tymczasowego.  
+ Nazwa pliku jest generowana w [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile) wywołaniem [GetTempFile](http://msdn.microsoft.com/library/windows/desktop/aa364991)funkcja zestawu Windows SDK. Rozszerzenie pliku jest zawsze "TFR" dla pliku tymczasowego.  
   
 ##  <a name="unlockrange"></a>  CAtlTemporaryFile::UnlockRange  
- Wywołaj tę metodę, aby odblokować obszaru pliku tymczasowego.  
+ Wywołaj tę metodę w celu odblokowania region pliku tymczasowego.  
   
 ```
 HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nPos`  
- Pozycja w pliku, w którym powinny one zacząć unlock.  
+ *npos —*  
+ Pozycja w pliku, w którym ma się zacząć unlock.  
   
- `nCount`  
+ *nCount*  
  Długość zakresu bajtów do odblokowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca `S_OK` na powodzenie lub błąd `HRESULT` w przypadku awarii.  
+ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołania [CAtlFile::UnlockRange](../../atl/reference/catlfile-class.md#unlockrange).  
   
 ##  <a name="write"></a>  CAtlTemporaryFile::Write  
- Wywołanie tej metody można zapisać danych do pliku tymczasowego, zaczynając od pozycji wskaźnika pliku.  
+ Wywołaj tę metodę można zapisać danych do pliku tymczasowego, zaczynając od pozycji wskazywanym przez wskaźnik pliku.  
   
 ```
 HRESULT Write(  
@@ -367,17 +367,17 @@ HRESULT Write(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pBuffer`  
- Bufor zawierający dane do zapisania do pliku.  
+ *pBuffer*  
+ Bufor zawierające dane są zapisywane w pliku.  
   
- `nBufSize`  
- Liczba bajtów do przeniesienia z buforu.  
+ *nBufSize*  
+ Liczba bajtów, które mają zostać przeniesione z buforu.  
   
- `pnBytesWritten`  
+ *pnBytesWritten*  
  Liczba zapisanych bajtów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca `S_OK` na powodzenie lub błąd `HRESULT` w przypadku awarii.  
+ Zwraca wartość S_OK w przypadku powodzenia lub błędu HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
  Wywołania [CAtlFile::Write](../../atl/reference/catlfile-class.md#write).  
@@ -386,5 +386,5 @@ HRESULT Write(
  Zobacz przykład [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../../atl/atl-class-overview.md)   
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)   
  [Klasa CAtlFile](../../atl/reference/catlfile-class.md)

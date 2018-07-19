@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e50e613885215cf13504f8c9b72e0e48d5a6447
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e02a48fddfb2e5ff8f85b59b1ff241492461e521
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852728"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966358"
 ---
 # <a name="notequalto-struct"></a>not_equal_to — Struktura
 
-Predykat binarny, który wykonuje operacje nierówności ( `operator!=`) na jego argumenty.
+Predykat binarny, który wykonuje operacje nierówności (`operator!=`) na jego argumenty.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,19 +49,19 @@ struct not_equal_to<void>
 
 ### <a name="parameters"></a>Parametry
 
-`Type`, `T`, `U` Dowolnego typu, który obsługuje `operator!=` pobierającej argumentów operacji typu określonego lub wywnioskowany.
+*Typ*, *T*, *U* dowolnego typu, który obsługuje `operator!=` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
 
-`Left` Lewy operand operacji nierówności. Szablon klasy niespecjalizowanej przyjmuje argument odwołania l-wartością typu `Type`. Specjalne szablonu doskonała przekazującej lewostronnie i argumenty odwołanie do r-wartości wywnioskować typu `T`.
+*Po lewej stronie* lewy operand operacji nierówności. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
 
-`Right` Prawy argument operacji nierówności. Szablon klasy niespecjalizowanej przyjmuje argument odwołania l-wartością typu `Type`. Specjalne szablonu doskonała przekazującej lewostronnie i argumenty odwołanie do r-wartości wywnioskować typu `U`.
+*Po prawej stronie* prawy operand operacji nierówności. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wynik `Left != Right`. Specjalne szablonu doskonała przekazywanie wynik, który ma typ zwracany przez `operator!=`.
+Wynik `Left != Right`. Szablon wyspecjalizowane doskonała przekazywania wyniku, który ma typ, który jest zwracany przez `operator!=`.
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekty typu `Type` musi umożliwiać porównywanie równości. Takie rozwiązanie wymaga `operator!=` zdefiniowane na zestaw obiektów spełnia właściwości matematyczne równoważność relacji. Wszystkie typy wbudowane liczbowych i wskaźnik spełnienia tego wymagania.
+Obiekty typu *typu* musi umożliwiać porównywanie równości. Takie rozwiązanie wymaga `operator!=` zdefiniowane na zestaw obiektów spełnia matematyczne właściwości relacji równoważności. Wszystkie wbudowane typy liczbowe i wskaźnik spełnienia tego wymagania.
 
 ## <a name="example"></a>Przykład
 
@@ -126,7 +126,7 @@ between v1 & v2 is: ( 0 0 1 0 1 0 )
 
 **Nagłówek:** \<funkcjonalności >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -19,52 +19,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0f456d217119020f5683a58560283a1ff08ac75
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f268dd12ca0eca55cbc91bffe5daccbc23ef4dbe
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422738"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940153"
 ---
 # <a name="thread"></a>wątek
 
 **Microsoft Specific**
 
-**Wątku** modyfikator klasy magazynu rozszerzonego służy do deklarowania zmiennej lokalnej wątku. Komputer przenośny równoważne w języku C ++ 11 i nowszych można użyć [element thread_local](../cpp/storage-classes-cpp.md#thread_local) Specyfikator klasy magazynu dla przenośnego kodu. W systemie Windows **element thread_local** jest realizowana za pomocą **__declspec(thread)**.
+**Wątku** modyfikator klasy magazynu rozszerzonego służy do deklarowania zmiennej lokalnej wątku. Przenośna równoważne w C ++ 11 i nowsze, można użyć [thread_local](../cpp/storage-classes-cpp.md#thread_local) Specyfikator klasy magazynowania dla przenośnego kodu. Na Windows `thread_local` jest implementowane za pomocą `__declspec(thread)`.
 
 ## <a name="syntax"></a>Składnia
 
-> **__declspec (wątek)** *deklarator*  
+> **__declspec (wątek)** *deklaratora*  
 
 ## <a name="remarks"></a>Uwagi
 
-Pamięć lokalna wątku (TLS) to mechanizm, za pomocą którego każdy wątek w procesie wielowątkowym przydziela pamięć dla danych specyficznych wątku. W standardowych programach wielowątkowych, dane są współużytkowane przez wszystkie wątki danego procesu, natomiast pamięć lokalna wątku jest mechanizmem przydzielania danych osobno dla danego wątku. Aby uzyskać szczegółowe omówienie wątków, zobacz [Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
+Pamięć lokalna wątku (TLS) to mechanizm, za pomocą którego każdy wątek w procesie wielowątkowym przydziela pamięć dla danych specyficznych wątku. W standardowych programach wielowątkowych, dane są współużytkowane przez wszystkie wątki danego procesu, natomiast pamięć lokalna wątku jest mechanizmem przydzielania danych osobno dla danego wątku. Aby uzyskać pełne omówienie wątków, zobacz [wielowątkowość](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
-Deklaracje zmiennych lokalnych wątku należy użyć [rozszerzona Składnia atrybutu](../cpp/declspec.md) i `__declspec` — słowo kluczowe z **wątku** — słowo kluczowe. Na przykład, poniższy kod deklaruje lokalną zmienną całkowitą wątku i inicjuje ją wartością:
+Deklaracje zmiennych lokalnych wątku muszą używać [rozszerzonej składni atrybutu](../cpp/declspec.md) i **__declspec** — słowo kluczowe z **wątku** — słowo kluczowe. Na przykład, poniższy kod deklaruje lokalną zmienną całkowitą wątku i inicjuje ją wartością:
 
 ```cpp
 __declspec( thread ) int tls_i = 1;
 ```
 
-Używając zmiennych thread-local w bibliotekach ładowane dynamicznie, należy zwrócić uwagę czynników, które mogą spowodować zmiennej lokalnej wątku nie można poprawnie zainicjować:
+Używając zmiennych thread-local w bibliotekach ładowane dynamicznie, musisz być znane czynniki, które może spowodować, że nie można poprawnie zainicjować zmienną lokalną wątku:
 
-1. Jeśli zmienna jest inicjowany z wywołania funkcji (łącznie z konstruktorów), ta funkcja będzie można wywołać tylko dla wątku, który spowodował binary/DLL załadować w procesie, a dla tych wątków, które są uruchomione, gdy załadowano danych binarnych/DLL. Funkcje inicjowania nie są nazywane do innego wątku, który jest już uruchomiona, gdy biblioteka DLL została załadowana. Dynamiczna Inicjalizacja występuje na wywołanie funkcji DllMain dla DLL_THREAD_ATTACH, ale plik DLL, który nigdy nie pobiera, które komunikatów, jeśli plik DLL, który nie jest w procesie uruchomienia wątku.
+1. Jeśli zmienna jest inicjowana za pomocą wywołania funkcji (w tym konstruktory), ta funkcja tylko będzie wywoływana w wątku, który spowodował pliku binarnego/DLL do załadowania do procesu i te wątki, które są uruchomione, gdy załadowano danych binarnych/DLL. Inicjowanie funkcji nie są wywoływane dla każdego wątku, w którym jest już uruchomiona, gdy biblioteka DLL został załadowany. Dynamiczna Inicjalizacja odbywa się na wywołanie funkcji DllMain DLL_THREAD_ATTACH, ale biblioteki DLL nigdy nie pobiera, które komunikatów Jeśli biblioteka DLL nie jest w trakcie procesu podczas uruchamiania wątku.
 
-1. Zmienne lokalne wątków, zawierającymi statycznie o stałej wartości zwykle są poprawnie zainicjowane na wszystkie wątki. Począwszy od grudnia 2017 istnieje jednak problem zgodność znane w kompilatorze języka Microsoft Visual C++ zgodnie z którymi odbierania constexpr zmienne dynamiczne zamiast statycznego inicjowania.
+1. Zmiennymi lokalnymi wątku, które są statycznie inicjowane przy użyciu stałych wartości zwykle są inicjowane poprawnie we wszystkich wątkach. Jednak grudnia 2017 r. występuje znanej zgodności problem w kompilatorze Microsoft Visual C++, według której otrzymywać zmienne constexpr dynamicznego zamiast statycznego inicjowania.
 
-   Uwaga: Oba te problemy mogą naprawiony w przyszłych aktualizacji kompilatora.
+   Uwaga: Oba powyższe problemy powinny rozwiązany w przyszłych aktualizacji kompilatora.
 
-Ponadto narzucają wytyczne podczas deklarowania zmiennych i obiektów lokalnej wątku:
+Ponadto musisz przestrzegać następujących wytycznych podczas deklarowania zmiennych i obiektów lokalnych wątku:
 
-- Możesz zastosować **wątku** atrybutu tylko do klasy i danych deklaracje i definicje; **wątku** nie można użyć w deklaracji lub definicji funkcji.
+- Można zastosować **wątku** atrybutu tylko do klasy i deklaracje i definicje danych; **wątku** nie można używać w deklaracji lub definicji funkcji.
 
-- Można określić **wątku** atrybutu tylko dla elementów danych ze statycznym okresem magazynu. Obejmuje to obiekty danych globalnych (zarówno **statycznych** i **extern**), lokalnego obiektu statycznego i danymi statycznymi członkami klas. Nie można zadeklarować obiekty automatyczne dane o **wątku** atrybutu.
+- Można określić **wątku** atrybutu tylko dla elementów danych ze statycznym okresem magazynu. Obejmuje to globalnych obiektów danych (zarówno **statyczne** i **extern**), lokalnych obiektów statycznych i statycznych składowych danych klas. Nie można deklarować automatycznych obiektów danych z **wątku** atrybutu.
 
-- Należy użyć **wątku** atrybutu deklaracji i definicji obiektu lokalnego wątku czy deklaracji i definicji są wykonywane w tym samym pliku lub oddzielnych plików.
+- Należy użyć **wątku** atrybutu dla deklaracji i definicji lokalnego obiektu wątku, czy deklaracja i definicja występują w ten sam plik lub osobnych plikach.
 
-- Nie można użyć **wątku** atrybut modyfikator typu.
+- Nie można użyć **wątku** atrybutu jako modyfikatora typu.
 
-- Ponieważ deklaracji obiektów, które używają **wątku** atrybut jest dozwolony, te dwa przykłady są semantycznie równoważne:
+- Ponieważ deklaracja dla obiektów, które używają **wątku** atrybut jest dozwolony, dwa poniższe przykłady są semantycznie równoważne:
 
     ```cpp
     // declspec_thread_2.cpp
@@ -91,9 +91,9 @@ Ponadto narzucają wytyczne podczas deklarowania zmiennych i obiektów lokalnej 
    Thread int tls_i = sizeof( tls_i );   // Okay in C and C++
    ```
 
-   Należy pamiętać, że **sizeof** wyrażenia, która zawiera obiekt inicjowany w C i C++ jest dozwolone i nie stanowi odwołanie do samej siebie.
+   Należy pamiętać, że **sizeof** wyrażenie, które zawiera inicjowany obiekt nie stanowi odwołanie do samego siebie i jest dozwolone w językach C i C++.
 
-**KOŃCOWY określonych firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

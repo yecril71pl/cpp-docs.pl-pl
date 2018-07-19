@@ -1,5 +1,5 @@
 ---
-title: Organizowanie funkcje globalne | Dokumentacja firmy Microsoft
+title: Funkcje globalne kierowania | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d93839002ce5136d735e4740388109e855561fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 44c5205416ff19eeb849b0532d015275e4eb166e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362830"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879342"
 ---
-# <a name="marshaling-global-functions"></a>Organizowanie globalne funkcje
-Funkcje te zapewniają obsługę organizowanie i konwersji organizowania danych do wskaźników interfejsów.  
+# <a name="marshaling-global-functions"></a>Funkcje globalne kierowania
+Te funkcje zapewniają obsługę do organizowania i konwersji organizowania danych na wskaźniki interfejsu.  
   
 > [!IMPORTANT]
->  Funkcje wymienione w poniższej tabeli nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Funkcje wymienione w poniższej tabeli nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 |||  
 |-|-|  
-|[AtlFreeMarshalStream](#atlfreemarshalstream)|Kierowanie dane są uwalniane i `IStream` wskaźnika.|  
-|[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Tworzy nowy obiekt strumienia i marshals wskaźnika określonego interfejsu.|  
-|[AtlUnmarshalPtr](#atlunmarshalptr)|Konwertuje dane kierowania strumienia wskaźnika interfejsu.|  
+|[AtlFreeMarshalStream](#atlfreemarshalstream)|Zwalnia dane organizatora i `IStream` wskaźnika.|  
+|[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Tworzy nowy obiekt strumienia i organizuje określony wskaźnik interfejsu.|  
+|[AtlUnmarshalPtr](#atlunmarshalptr)|Konwertuje dane dotyczące organizowania strumienia na wskaźnik interfejsu.|  
 
 ## <a name="requirements"></a>Wymagania:
 **Nagłówek:** atlbase.h
@@ -46,8 +46,8 @@ HRESULT AtlFreeMarshalStream(IStream* pStream);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pStream`  
- [in] Wskaźnik do `IStream` interfejs używany do przekazywania międzyprocesowego strumienia.  
+ *pStream*  
+ [in] Wskaźnik do `IStream` interfejsu dla strumienia używane do kierowania.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [AtlMarshalPtrInProc](#atlmarshalptrinproc).  
@@ -64,23 +64,23 @@ HRESULT AtlMarshalPtrInProc(
   
 ### <a name="parameters"></a>Parametry  
  *pUnk*  
- [in] Wskaźnik do interfejsu, który ma być przekazywane.  
+ [in] Wskaźnik do interfejs, który ma być organizowany.  
   
- `iid`  
- [in] Identyfikator GUID interfejsu są organizowane.  
+ *IID*  
+ [in] Identyfikator GUID interfejsu są przekazywane.  
   
- `ppStream`  
- [out] Wskaźnik do `IStream` interfejs dla nowego obiektu strumienia, używany do przekazywania międzyprocesowego.  
+ *ppStream*  
+ [out] Wskaźnik do `IStream` interfejsu na nowy obiekt strumienia używane do kierowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standardowa wartość HRESULT.  
+ Standardowe wartości HRESULT.  
   
 ### <a name="remarks"></a>Uwagi  
- **MSHLFLAGS_TABLESTRONG** flaga jest ustawiona dlatego wskaźnik mogą być przekazywane do wielu strumieni. Wskaźnik może być również wchodzącej wiele razy.  
+ Ustawiono flagę MSHLFLAGS_TABLESTRONG, dzięki czemu mogą być organizowane wskaźnik do wielu strumieni. Wskaźnik może być również wycofana wiele razy.  
   
- Jeśli przekazywanie zakończy się niepowodzeniem, zwolnieniu wskaźnika strumienia.  
+ Jeśli przekazywanie zakończy się niepowodzeniem, wskaźnik strumienia jest zwalniana.  
   
- `AtlMarshalPtrInProc` można użyć tylko na wskaźnik do obiektu w trakcie.  
+ `AtlMarshalPtrInProc` należy używać tylko na wskaźnik do obiektu w trakcie.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_COM#50](../../atl/codesnippet/cpp/marshaling-global-functions_1.cpp)]  
@@ -96,17 +96,17 @@ HRESULT AtlUnmarshalPtr(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pStream`  
- [in] Wskaźnik do strumienia zostanie wycofana.  
+ *pStream*  
+ [in] Wskaźnik do strumienia jest wycofana.  
   
- `iid`  
- [in] Identyfikator GUID interfejsu zostanie wycofana.  
+ *IID*  
+ [in] Identyfikator GUID jest wycofana interfejsu.  
   
- `ppUnk`  
+ *ppUnk*  
  [out] Wskaźnik do interfejsu wycofana.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standardowa wartość HRESULT.  
+ Standardowe wartości HRESULT.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [AtlMarshalPtrInProc](#atlmarshalptrinproc).  

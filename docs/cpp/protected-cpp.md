@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be866cda09ddc1770cf8d4b1ac0433e3c2701520
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b01c2f9ec4fa48cd2f11bd4176110384c1f8d288
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947754"
 ---
 # <a name="protected-c"></a>chronione (C++)
 ## <a name="syntax"></a>Składnia  
@@ -33,7 +34,7 @@ protected base-class
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- `protected` — Słowo kluczowe określa dostęp do elementów członkowskich klasy w *listy członków* do następnego specyfikator dostępu (**publicznego** lub `private`) lub na końcu definicji klasy. Składowe klasy zadeklarowane jako `protected` mogą być używane tylko przez następujące:  
+ **Chronione** — słowo kluczowe określa dostęp do składowych klasy w *listę elementów członkowskich* aż do następnego specyfikatora dostępu (**publicznych** lub **prywatne**) lub na końcu definicji klasy. Składowe klasy zadeklarowane jako **chronione** mogą być używane tylko przez następujące czynności:  
   
 -   Funkcje składowe klasy, która pierwotnie zadeklarowała te składowe.  
   
@@ -43,25 +44,25 @@ protected base-class
   
 -   Bezpośrednie klasy pochodne prywatnie, które także mają prywatny dostęp do chronionych składowych.  
   
- Gdy nazwę klasy podstawowej poprzedza słowo kluczowe `protected`, określa ono, że publiczne i chronione składowe klasy podstawowej są chronionymi składowymi klas pochodnych.  
+ Gdy nazwę klasy podstawowej poprzedza **chronione** — słowo kluczowe Określa, że publiczne i chronione składowe klasy podstawowej są chronionymi składowymi jej klas pochodnych.  
   
- Chronione elementy członkowskie nie są jako prywatny jako `private` elementów członkowskich, które są dostępne tylko dla elementów członkowskich klasy, w której zostały zgłoszone, ale nie są one jako publiczną jako **publicznego** elementów członkowskich, które są dostępne w żadnych funkcji.  
+ Chronione składowe nie są tak prywatne jak **prywatnej** elementów członkowskich, które są dostępne tylko dla składowych klasy, w którym są one zadeklarowane, ale nie są tak publiczne jak **publicznych** elementów członkowskich, które są dostępne w żadnej funkcji.  
   
- Elementy członkowskie, które także są deklarowane jako chronione **statycznych** są dostępne dla dowolnej funkcji friend lub elementu członkowskiego klasy pochodnej. Elementy członkowskie, które nie są deklarowane jako chronione **statycznych** są dostępne dla znajomych i funkcje Członkowskie w klasie pochodnej tylko za pośrednictwem wskaźnik do odwołania do, lub obiekt klasy pochodnej.  
+ Chronione składowe, które są również deklarowane jako **statyczne** są dostępne dla dowolnego friend lub funkcji składowej klasy pochodnej. Chronione składowe, które nie są deklarowane jako **statyczne** są dostępne dla funkcji zaprzyjaźnionych i funkcji składowych w klasie pochodnej tylko przez wskaźnik, odwołanie lub obiekt klasy pochodnej.  
   
- Powiązane informacje, zobacz [friend](../cpp/friend-cpp.md), [publicznego](../cpp/public-cpp.md), [prywatnej](../cpp/private-cpp.md), a tabelą dostęp do elementu członkowskiego w [kontrolowanie dostępu do członków klasy](member-access-control-cpp.md) .  
+ Aby uzyskać powiązane informacje, zobacz [friend](../cpp/friend-cpp.md), [publicznych](../cpp/public-cpp.md), [prywatnej](../cpp/private-cpp.md)i tabelę dostępu do elementu członkowskiego w [kontrolowanie dostępu do składowych klasy](member-access-control-cpp.md) .  
   
 ## <a name="clr-specific"></a>Specyficzne dla /clr  
- W typach CLR C++ dostępu specyfikator słowa kluczowe (**publicznego**, `private`, i `protected`) mogą wpłynąć na widoczność typów i metod w odniesieniu do zestawów. Aby uzyskać więcej informacji, zobacz [kontroli dostępu elementu członkowskiego](member-access-control-cpp.md).  
+ W typach CLR, kluczowe specyfikatorów dostępu C++ (**publicznych**, **prywatnej**, i **chronione**) mogą wpływać na widoczność typów i metod w odniesieniu do zestawów. Aby uzyskać więcej informacji, zobacz [kontrola dostępu do składowych](member-access-control-cpp.md).  
   
 > [!NOTE]
->  Skompilowane pliki z [/LN](../build/reference/ln-create-msil-module.md) nie dotyczy to zachowanie. W tym przypadku, widoczne będą wszystkie klasy zarządzane (publiczne lub prywatne).  
+>  Pliki skompilowane z [/LN](../build/reference/ln-create-msil-module.md) nie dotyczy to zachowanie. W tym przypadku, widoczne będą wszystkie klasy zarządzane (publiczne lub prywatne).  
   
 ## <a name="end-clr-specific"></a>KONIEC specyficzne dla /clr  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp 
 // keyword_protected.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -94,5 +95,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Kontrolowanie dostępu do członków klasy](member-access-control-cpp.md)   
+ [Kontrolowanie dostępu do składowych klasy](member-access-control-cpp.md)   
  [Słowa kluczowe](../cpp/keywords-cpp.md)

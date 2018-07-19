@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0451b8565a4d021181d79d15437637e1b2f3b27
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5433c9ff76b8b6f218cfff5e5fd39a0ad7166613
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841801"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963618"
 ---
 # <a name="decay-class"></a>decay — Klasa
 
-Tworzy typ jako przekazany przez wartość. Sprawia, że typem referencyjnym, wartością stałą, trwałej lub sprawia, że wskaźnik do typu z funkcją lub typem tablicy.
+Tworzy typ, jak przekazać przez wartość. Tworzy typ niebędący odniesieniem, niestały, trwałej lub tworzy wskaźnik do typu z funkcją lub typem tablicowym.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,11 +39,11 @@ using decay_t = typename decay<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ do zmodyfikowania.
+*T* typ do modyfikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Szablon zanikania wygenerowało wynikowy typ tak, jakby typ został przekazany przez wartość jako argument. Typedef elementu członkowskiego szablonu klasy `type` zawiera typ zmodyfikowane, który jest zdefiniowany w następujących etapach:
+Wybierz szablon zanikania i generuje wynikowy typ tak, jakby typ został przekazany przez wartość jako argument. Typedef składowej klasy szablonu `type` ma zmodyfikowany typ, który jest zdefiniowany w następujących etapach:
 
 - Typ `U` jest zdefiniowany jako `remove_reference<T>::type`.
 
@@ -57,7 +57,7 @@ Szablon zanikania wygenerowało wynikowy typ tak, jakby typ został przekazany p
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

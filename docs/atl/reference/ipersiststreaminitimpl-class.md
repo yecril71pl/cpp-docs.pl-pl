@@ -25,18 +25,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a51dd5e198a86b7bb17a6182c1edb098f23a8e47
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b862d6b0fc99184232621432ec1c2a1027f8a9d5
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360459"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881506"
 ---
 # <a name="ipersiststreaminitimpl-class"></a>Klasa IPersistStreamInitImpl
-Ta klasa implementuje **IUnknown** i udostępnia domyślną implementację elementu [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273) interfejsu.  
+Ta klasa implementuje `IUnknown` i udostępnia domyślną implementację elementu [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273) interfejsu.  
   
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,7 +47,7 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
+ *T*  
  Z klasą pochodną `IPersistStreamInitImpl`.  
   
 ## <a name="members"></a>Elementy członkowskie  
@@ -57,16 +57,16 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[IPersistStreamInitImpl::GetClassID](#getclassid)|Pobiera identyfikator CLSID obiektu.|  
-|[IPersistStreamInitImpl::GetSizeMax](#getsizemax)|Pobiera rozmiar strumienia potrzebnych do zapisania danych obiektu. Zwraca implementację ATL **E_NOTIMPL**.|  
+|[IPersistStreamInitImpl::GetSizeMax](#getsizemax)|Pobiera rozmiar strumienia potrzebnych do zapisania danych obiektu. Implementacja biblioteki ATL zwraca E_NOTIMPL.|  
 |[IPersistStreamInitImpl::InitNew](#initnew)|Inicjuje nowo utworzony obiekt.|  
-|[IPersistStreamInitImpl::IsDirty](#isdirty)|Sprawdza, czy dane obiektu zostały zmienione od ostatniego zapisu.|  
+|[IPersistStreamInitImpl::IsDirty](#isdirty)|Sprawdza, czy danych obiektu został zmieniony od ostatniego zapisu.|  
 |[IPersistStreamInitImpl::Load](#load)|Ładuje właściwości obiektu z określonego strumienia.|  
 |[IPersistStreamInitImpl::Save](#save)|Zapisuje właściwości obiektu do określonego strumienia.|  
   
 ## <a name="remarks"></a>Uwagi  
- [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273) interfejs umożliwia klientowi żądania, że obiekt załadowanie i zapisanie jej trwałych danych do jednego strumienia. Klasa `IPersistStreamInitImpl` udostępnia domyślną implementację tego interfejsu i implementuje **IUnknown** , wysyłając informacje o do zrzutu kompilacje urządzenia podczas debugowania.  
+ [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273) interfejs umożliwia klientowi żądanie czy obiekt ładuje i zapisuje jego trwałych danych na jednym strumień. Klasa `IPersistStreamInitImpl` udostępnia domyślną implementację tego interfejsu i implementuje `IUnknown` , wysyłając informacje o do zrzutu kompilacji urządzenia podczas debugowania.  
   
- **Innych pokrewnych artykułach** [ALT — samouczek](../../atl/active-template-library-atl-tutorial.md), [tworzenie Projekt ATL](../../atl/reference/creating-an-atl-project.md)  
+ **Powiązane artykuły** [ALT — samouczek](../../atl/active-template-library-atl-tutorial.md), [Tworzenie projektu ATL](../../atl/reference/creating-an-atl-project.md)  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `IPersistStreamInit`  
@@ -84,7 +84,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [metody IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) w systemie Windows SDK.  
+ Zobacz [IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) w Windows SDK.  
   
 ##  <a name="getsizemax"></a>  IPersistStreamInitImpl::GetSizeMax  
  Pobiera rozmiar strumienia potrzebnych do zapisania danych obiektu.  
@@ -94,10 +94,10 @@ STDMETHOD(GetSizeMax)(ULARGE_INTEGER FAR* pcbSize);
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca **E_NOTIMPL**.  
+ Zwraca E_NOTIMPL.  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IPersistStreamInit::GetSizeMax](http://msdn.microsoft.com/library/windows/desktop/ms687287) w systemie Windows SDK.  
+ Zobacz [IPersistStreamInit::GetSizeMax](http://msdn.microsoft.com/library/windows/desktop/ms687287) w Windows SDK.  
   
 ##  <a name="initnew"></a>  IPersistStreamInitImpl::InitNew  
  Inicjuje nowo utworzony obiekt.  
@@ -107,17 +107,17 @@ STDMETHOD(InitNew)();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IPersistStreamInit::InitNew](http://msdn.microsoft.com/library/windows/desktop/ms690234) w systemie Windows SDK.  
+ Zobacz [IPersistStreamInit::InitNew](http://msdn.microsoft.com/library/windows/desktop/ms690234) w Windows SDK.  
   
 ##  <a name="isdirty"></a>  IPersistStreamInitImpl::IsDirty  
- Sprawdza, czy dane obiektu zostały zmienione od ostatniego zapisu.  
+ Sprawdza, czy danych obiektu został zmieniony od ostatniego zapisu.  
   
 ```
 STDMETHOD(IsDirty)();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IPersistStreamInit::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms680092) w systemie Windows SDK.  
+ Zobacz [IPersistStreamInit::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms680092) w Windows SDK.  
   
 ##  <a name="load"></a>  IPersistStreamInitImpl::Load  
  Ładuje właściwości obiektu z określonego strumienia.  
@@ -127,9 +127,9 @@ STDMETHOD(Load)(LPSTREAM pStm);
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- ATL używa mapę właściwości obiektu do pobrania tych informacji.  
+ ATL używa map właściwości obiektu do pobrania tych informacji.  
   
- Zobacz [IPersistStreamInit::Load](http://msdn.microsoft.com/library/windows/desktop/ms680730) w systemie Windows SDK.  
+ Zobacz [IPersistStreamInit::Load](http://msdn.microsoft.com/library/windows/desktop/ms680730) w Windows SDK.  
   
 ##  <a name="save"></a>  IPersistStreamInitImpl::Save  
  Zapisuje właściwości obiektu do określonego strumienia.  
@@ -139,10 +139,10 @@ STDMETHOD(Save)(LPSTREAM pStm, BOOL fClearDirty);
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- ATL używa mapę właściwości obiektu do przechowywania tych informacji.  
+ ATL używa map właściwości obiektu do przechowywania tych informacji.  
   
- Zobacz [IPersistStreamInit::Save](http://msdn.microsoft.com/library/windows/desktop/ms694439) w systemie Windows SDK.  
+ Zobacz [IPersistStreamInit::Save](http://msdn.microsoft.com/library/windows/desktop/ms694439) w Windows SDK.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Kontenery i strumienie](http://msdn.microsoft.com/library/windows/desktop/aa380352)   
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

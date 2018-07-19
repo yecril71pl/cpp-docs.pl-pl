@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de37ee92805d35b25e73e0682ce8abe79822a8b5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bbd2f2c652c619a954b789a3b765fc636a03c33e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841183"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962727"
 ---
 # <a name="binder2nd-class"></a>binder2nd — Klasa
 
-Klasy szablonów dostarczanie konstruktora, który konwertuje obiektu binarnego funkcja na obiekt funkcja jednoargumentowy przez powiązanie drugi argument funkcji binarnego do określonej wartości.
+Klasa szablonu, zapewniając konstruktora, który konwertuje obiekt binarny funkcji do obiektu funkcyjnego jednoargumentowe przez powiązanie drugi argument funkcji binarnego na określoną wartość.
 
 ## <a name="syntax"></a>Składnia
 
@@ -53,21 +53,21 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-`Func` Obiekt binarny funkcji do przekonwertowania na obiekt funkcja jednoargumentowy.
+*FUNC* obiektu binarnego funkcja do konwersji na obiekt funkcyjny jednoargumentowy.
 
-`right` Wartość, do której ma zostać powiązany drugi argument obiektu binarnego funkcji.
+*prawy* wartości, do którego ma zostać powiązany drugi argument obiektu binarnego funkcji.
 
-`left` Wartość argumentu, który porównuje dostosowane obiektu binarnego stała wartość drugiego argumentu.
+*po lewej stronie* wartość argumentu, który porównuje dostosowane obiektu binarnego stała wartość drugiego argumentu.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Obiekt funkcji jednoargumentowy będącą wynikiem powiązanie drugi argument obiektu, funkcja binarnej na wartość `right.`
+Obiekt funkcji Jednoelementowy, będącą wynikiem powiązanie drugi argument obiektu binarnego funkcji z wartością *prawo*.
 
 ## <a name="remarks"></a>Uwagi
 
-Klasy szablonu przechowuje kopię _ obiektu binarnego funkcja *Func* w **op**, a kopia `right` w **wartość**. Definiuje jego funkcji członkowskiej `operator()` jako zwracanie **op**( `left`, **wartość**).
+Klasa szablonu przechowuje kopię _ obiektu binarnego funkcja *Func* w `op`, a kopia *prawo* w `value`. Definiuje jej funkcji członkowskiej `operator()` powrotu **op**( `left`, **wartość**).
 
-Jeśli `Func` jest obiektem typu **operacji** i c to stała, następnie [bind2nd —](../standard-library/functional-functions.md#bind2nd) ( `Func`, `c` ) jest odpowiednikiem `binder2nd` konstruktora klasy `binder2nd` \< **Operacji**> ( `Func`, `c` ) i wygodniejsze.
+Jeśli `Func` jest obiektem typu `Operation` i języka c jest stałą, następnie [bind2nd —](../standard-library/functional-functions.md#bind2nd) ( `Func`, `c` ) jest odpowiednikiem `binder2nd` konstruktora klasy `binder2nd` \<  **Operacja**> ( `Func`, `c` ) i wygodniejsze.
 
 ## <a name="example"></a>Przykład
 
@@ -123,7 +123,7 @@ The number of elements in v1 less than 10 is: 2.
 
 **Nagłówek:** \<funkcjonalności >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

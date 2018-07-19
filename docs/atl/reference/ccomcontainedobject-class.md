@@ -24,18 +24,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0d4b0a6491aaeb27e4a1d986db01c03d1c5314d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26f6216d5e78ae8ee95eb9f43d70f13aeb5f4874
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360178"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881061"
 ---
 # <a name="ccomcontainedobject-class"></a>Klasa CComContainedObject
-Ta klasa implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) przez delegowanie do obiektu właściciela **IUnknown**.  
+Ta klasa implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) przez delegowanie do obiektu właściciela `IUnknown`.  
   
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,8 +45,8 @@ class CComContainedObject : public Base
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `Base`  
- Pochodne klasy, [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md).  
+ *podstawowy*  
+ Z klasą pochodną [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) lub [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md).  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -61,13 +61,13 @@ class CComContainedObject : public Base
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CComContainedObject::AddRef](#addref)|Zwiększa liczbę odwołanie do obiektu właściciela.|  
+|[CComContainedObject::AddRef](#addref)|Zwiększa liczbę odwołań dla obiektu właściciela.|  
 |[CComContainedObject::GetControllingUnknown](#getcontrollingunknown)|Pobiera obiekt właściciela `IUnknown`.|  
-|[CComContainedObject::QueryInterface](#queryinterface)|Pobiera wskaźnik do interfejsu żądana właściciela obiektu.|  
-|[CComContainedObject::Release](#release)|Zmniejsza liczba odwołanie do obiektu właściciela.|  
+|[CComContainedObject::QueryInterface](#queryinterface)|Pobiera wskaźnik do interfejsu zażądana obiekt właściciela.|  
+|[CComContainedObject::Release](#release)|Dekrementuje liczbę odwołań dla obiektu właściciela.|  
   
 ## <a name="remarks"></a>Uwagi  
- ATL używa `CComContainedObject` w klasach [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md), i [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject` implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) przez delegowanie do obiektu właściciela **IUnknown**. (Właścicielem jest obiekt zewnętrzne agregacji lub obiekt, dla której utworzona jest interfejsem oderwania). `CComContainedObject` wywołania `CComObjectRootEx`w `OuterQueryInterface`, `OuterAddRef`, i `OuterRelease`, wszystkie odziedziczone przez `Base`.  
+ Używa ATL `CComContainedObject` w klasach [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md), i [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md). `CComContainedObject` implementuje [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) przez delegowanie do obiektu właściciela `IUnknown`. (Właściciel jest zewnętrzny obiekt agregacji lub obiekt, dla którego jest tworzony interfejs odrywania). `CComContainedObject` wywołania `CComObjectRootEx`firmy `OuterQueryInterface`, `OuterAddRef`, i `OuterRelease`, wszystkie odziedziczone za pośrednictwem `Base`.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `Base`  
@@ -78,14 +78,14 @@ class CComContainedObject : public Base
  **Nagłówek:** atlcom.h  
   
 ##  <a name="addref"></a>  CComContainedObject::AddRef  
- Zwiększa liczbę odwołanie do obiektu właściciela.  
+ Zwiększa liczbę odwołań dla obiektu właściciela.  
   
 ```
 STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wartość, która może być przydatne w przypadku diagnostyki lub testowania.  
+ Wartość, która może być użyteczna, diagnostykę lub testowania.  
   
 ##  <a name="ccomcontainedobject"></a>  CComContainedObject::CComContainedObject  
  Konstruktor.  
@@ -95,11 +95,11 @@ CComContainedObject(void* pv);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pv`  
- [in] Obiekt właściciela **IUnknown**.  
+ *Wa*  
+ [in] Obiekt właściciela `IUnknown`.  
   
 ### <a name="remarks"></a>Uwagi  
- Ustawia `m_pOuterUnknown` wskaźnik elementu członkowskiego (dziedziczone przez `Base` klasy) do `pv`.  
+ Zestawy `m_pOuterUnknown` wskaźnika elementu członkowskiego (dziedziczone `Base` klasy) do *pv*.  
   
 ##  <a name="dtor"></a>  CComContainedObject:: ~ CComContainedObject  
  Destruktor.  
@@ -112,20 +112,20 @@ CComContainedObject(void* pv);
  Zwalnia wszystkie przydzielone zasoby.  
   
 ##  <a name="getcontrollingunknown"></a>  CComContainedObject::GetControllingUnknown  
- Zwraca `m_pOuterUnknown` wskaźnik elementu członkowskiego (dziedziczone przez *Base* klasy) zawierającego obiektu właściciela **IUnknown**.  
+ Zwraca `m_pOuterUnknown` wskaźnika elementu członkowskiego (dziedziczone *Base* klasy) zawierający obiekt właściciela `IUnknown`.  
   
 ```
 IUnknown* GetControllingUnknown();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Obiekt właściciela **IUnknown**.  
+ Obiekt właściciela `IUnknown`.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda może być wirtualny Jeśli `Base` została zadeklarowana [DECLARE_GET_CONTROLLING_UNKNOWN](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) makra.  
+ Ta metoda może być wirtualny Jeśli `Base` zadeklarował [DECLARE_GET_CONTROLLING_UNKNOWN](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) makra.  
   
 ##  <a name="queryinterface"></a>  CComContainedObject::QueryInterface  
- Pobiera wskaźnik do interfejsu żądana właściciela obiektu.  
+ Pobiera wskaźnik do interfejsu zażądana obiekt właściciela.  
   
 ```
 STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
@@ -134,27 +134,27 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iid`  
- [in] Identyfikator żądanego interfejsu.  
+ *IID*  
+ [in] Identyfikator interfejsu żądanej.  
   
- `ppvObject`  
- [out] Wskaźnik do wskaźnika interfejsu identyfikowane przez `iid`. Jeśli obiekt nie obsługuje ten interfejs `ppvObject` ustawiono **NULL**.  
+ *ppvObject*  
+ [out] Wskaźnik do wskaźnika interfejsu identyfikowane przez *iid*. Jeśli obiekt nie obsługuje ten interfejs *ppvObject* ma wartość NULL.  
   
- `pp`  
- [out] Wskaźnik do wskaźnika interfejsu identyfikowanych według typu `Q`. Jeśli obiekt nie obsługuje ten interfejs `pp` ustawiono **NULL**.  
+ *strony*  
+ [out] Wskaźnik do wskaźnika interfejsu identyfikowanych według typu `Q`. Jeśli obiekt nie obsługuje ten interfejs *pp* ma wartość NULL.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standard `HRESULT` wartość.  
+ Standardowe wartości HRESULT.  
   
 ##  <a name="release"></a>  CComContainedObject::Release  
- Zmniejsza liczba odwołanie do obiektu właściciela.  
+ Dekrementuje liczbę odwołań dla obiektu właściciela.  
   
 ```
 STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- W kompilacjach do debugowania **wersji** zwróci wartość, która może być przydatne w przypadku diagnostyki lub testowania. W kompilacjach do debugowania z systemem innym niż **wersji** zawsze zwraca wartość 0.  
+ W kompilacjach do debugowania `Release` zwraca wartość, która może być użyteczna, diagnostykę lub testowania. W kompilacjach nieprzeznaczonych do debugowania `Release` zawsze zwraca wartość 0.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

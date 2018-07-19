@@ -44,16 +44,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0515bc45f0791960b3eb62ada243f792ba48922d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 01a3d5aa898dccd680ea575a5753bc5cc3b8abf9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848716"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962832"
 ---
 # <a name="bitset-class"></a>bitset — Klasa
 
-Opisuje typ obiektu, który przechowuje sekwencji składającej się z określoną liczbę bitów, które umożliwiają compact zachowania flagi zbiór elementów lub warunków. Bitset — klasa obsługuje operacje na obiektach typu bitset — zawierających kolekcję usługi bits, a każdy bit stała czas udostępnienia.
+Opisuje typ obiektu, który przechowuje sekwencji składającej się z stałą liczbą bitów, które zapewniają zwarty sposób zachowania flagi dla zestawu elementów lub warunki. Bitset — klasa obsługuje operacje na obiektach bitset — typ, które zawierają kolekcję usługi bits i udostępnienia czasie stałym każdy bit.
 
 ## <a name="syntax"></a>Składnia
 
@@ -64,74 +64,74 @@ class bitset
 
 ### <a name="parameters"></a>Parametry
 
-*N* określa liczbę bitów w obiekcie bitset — całkowitą różną od zera typu **size_t** musi być znane w czasie kompilacji.
+*N* określa liczbę bitów w obiekcie bitset — z liczbą całkowitą różną od zera typu `size_t` musi być znane w czasie kompilacji.
 
 ## <a name="remarks"></a>Uwagi
 
-W przeciwieństwie do podobnych [wektor\<bool > klasy](../standard-library/vector-bool-class.md), bitset — klasa nie ma Iteratory i nie jest kontenerem standardowa biblioteka C++. Również różni się od wektor\<bool > przez ich niektórych określony rozmiar rozwiązany w czasie kompilacji zgodnie z rozmiaru określonego przez parametr szablonu **N** podczas **bitset —\<N\>**  jest zadeklarowany.
+W odróżnieniu od podobny [wektor\<bool > klasa](../standard-library/vector-bool-class.md), bitset — klasa nie ma iteratorów, a nie jest kontenerem standardowej biblioteki języka C++. Również różni się od wektor\<bool > przez ich niektóre określonego rozmiaru, które są ustalane w czasie kompilacji, zgodnie z rozmiaru określonego przez parametr szablonu *N* podczas **bitset —\<N\>**  jest zadeklarowana.
 
-Bit jest ustawiona, jeśli jego wartość wynosi 1 i zresetowanie, jeśli jego wartość wynosi 0. Przerzuć lub odwrócić bit jest zmiana jego wartość z 1 na 0 lub od 0 do 1. **N** bitów bitset — są indeksowane według wartości liczby całkowitej z zakresu od 0 do **N** -1, gdzie 0 indeksuje pierwszą pozycję z bitowego i **N** - 1 pozycja bitu końcowym.
+Bit jest ustawiona, jeśli jego wartość wynosi 1 i zresetowanie, jeśli jego wartość wynosi 0. Przerzuć lub odwracanie bit jest zmień jej wartość z zakresu od 1 na 0 lub od 0 do 1. *N* bitów zestawu bitów są indeksowane według wartości liczby całkowitej z zakresu od 0 do *N* -1, gdzie 0 indeksuje pierwszy pozycja bitu i *N* - 1 końcowe bit pozycji.
 
 ### <a name="constructors"></a>Konstruktorów
 
 |Konstruktor|Opis|
 |-|-|
-|[bitset —](#bitset)|Tworzy obiekt klasy `bitset\<N>` i inicjuje usługi bits do zera, niektóre określona wartość lub wartości z znaków w ciągu.|
+|[bitset —](#bitset)|Tworzy obiekt klasy `bitset\<N>` i inicjuje bitów na zero, niektóre określonej wartości lub wartości uzyskane z znaków w ciągu.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Nazwa typu|Opis|
 |-|-|
-|[element_type](#element_type)|Typ, który jest synonimem dla typu danych `bool` i może służyć do odwołania elementu bitów `bitset`.|
+|[element_type](#element_type)|Typ, który jest synonimem dla typu danych **bool** i może służyć do odwołania elementu bitów `bitset`.|
 
 ### <a name="member-functions"></a>Funkcje Członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[Wszystkie](#all)|Sprawdza wszystkie bity w tym `bitset` do ustalenia, czy są ustawione `true`.|
-|[wszystkie](#any)|Funkcja członkowska sprawdza, czy wszystkie bit w sekwencji jest ustawiony na wartość 1.|
-|[Liczba](#count)|Funkcja członkowska zwraca liczbę bitów z bitowego sekwencji.|
-|[Przerzuć](#flip)|Odwraca wartość wszystkie bity w `bitset` lub odwraca jednej ręki na określonej pozycji.|
-|[Brak](#none)|Testy, jeżeli nie bitowe nie ustawiono na wartość 1 w `bitset` obiektu.|
-|[Resetowanie](#reset)|Resetuje wszystkie bity w `bitset` 0 lub resetuje nieco na określonej pozycji na 0.|
+|[Wszystkie](#all)|Sprawdza wszystkie bity, w tym `bitset` do ustalenia, czy są gotowi do **true**.|
+|[Wszystkie](#any)|Funkcja elementu członkowskiego sprawdza, czy każdego bitu w sekwencji jest ustawiona na 1.|
+|[Liczba](#count)|Element członkowski funkcji zwraca liczbę bitów w bitową sekwencję.|
+|[Przerzuć](#flip)|Odwraca wszystkie bity w wartości `bitset` lub odwraca pojedynczy bit na określonej pozycji.|
+|[Brak](#none)|Sprawdza, czy ustawiono nie bit na 1 `bitset` obiektu.|
+|[Resetuj](#reset)|Resetuje wszystkie bity w `bitset` na 0 lub resetuje chwilę na określonej pozycji na 0.|
 |[set](#set)|Ustawia wszystkie bity w `bitset` 1 lub ustawia bit na określonej pozycji 1.|
 |[Rozmiar](#size)|Zwraca liczbę bitów w `bitset` obiektu.|
-|[Test](#test)|Testy czy bitowych na określonej pozycji w `bitset` jest ustawiona na 1.|
-|[to_string](#to_string)|Konwertuje `bitset` obiekt do reprezentacji w postaci ciągu.|
-|[to_ullong](#to_ullong)|Zwraca sumę wartości bitowe w `bitset` jako `unsigned long long`.|
-|[to_ulong](#to_ulong)|Konwertuje `bitset` do obiektu `unsigned long` która powoduje wygenerowanie sekwencji bitów znajdujące się używaną do inicjalizacji `bitset`.|
+|[Test](#test)|Testy czy bit na określonej pozycji w `bitset` jest ustawiona na 1.|
+|[to_string](#to_string)|Konwertuje `bitset` obiektu na reprezentację ciągu.|
+|[to_ullong](#to_ullong)|Zwraca sumę wartości bitowe w `bitset` jako **unsigned long long**.|
+|[to_ulong](#to_ulong)|Konwertuje `bitset` obiekt **unsigned long** , wygenerowanie sekwencji bitów zawartych, jeśli jest używane do zainicjowania `bitset`.|
 
 ### <a name="member-classes"></a>Element członkowski klasy
 
 |Element członkowski klasy|Opis|
 |-|-|
-|[Odwołanie](#reference)|Klasy serwera proxy, który zawiera odwołania do usługi bits zawarte w `bitset` używany do uzyskiwania dostępu i manipulowania wszystkie bity jako klasa pomocy dla `operator[]` klasy `bitset`.|
+|[Odwołanie](#reference)|Klasy serwera proxy, który zawiera odwołania do bitów zawartych w `bitset` używany do uzyskiwania dostępu i manipulowania pojedynczych bitów jako klasa pomocnicza do `operator[]` klasy `bitset`.|
 
 ### <a name="operators"></a>Operatory
 
 |Operator|Opis|
 |-|-|
-|[operator!=](#op_neq)|Testy docelowy `bitset` pod kątem nierówności z określonym `bitset`.|
-|[operator&=](#op_and_eq)|Wykonuje bitowe połączenie bitsets z logicznym `AND` operacji.|
-|[Operator <<](#op_lshift)|Wykonuje przesunięcie bitów w `bitset` określoną liczbę pozycji z lewej strony i zwraca wynik do nowego `bitset`.|
-|[Operator << =](#op_lshift_eq)|Wykonuje przesunięcie bitów w `bitset` określoną liczbę pozycji z lewej strony i zwraca wynik na docelową `bitset`.|
-|[operator==](#op_eq_eq)|Testy docelowy `bitset` równości z określonym `bitset`.|
+|[operator!=](#op_neq)|Testuje, obiekt docelowy `bitset` pod kątem nierówności z określonym `bitset`.|
+|[operator&=](#op_and_eq)|Wykonuje bitową kombinację bitsets z logicznym `AND` operacji.|
+|[Operator <<](#op_lshift)|Wykonuje przesunięcie bitów w `bitset` określoną liczbę pozycji po lewej stronie i zwraca wynik do nowego `bitset`.|
+|[Operator << =](#op_lshift_eq)|Wykonuje przesunięcie bitów w `bitset` określoną liczbę pozycji po lewej stronie i zwraca wynik na docelową `bitset`.|
+|[operator==](#op_eq_eq)|Testuje, obiekt docelowy `bitset` pod kątem równości z określonym `bitset`.|
 |[operator>>](#op_rshift)|Wykonuje przesunięcie bitów w `bitset` określoną liczbę pozycji po prawej stronie i zwraca wynik do nowego `bitset`.|
 |[operator>>=](#op_rshift_eq)|Wykonuje przesunięcie bitów w `bitset` określoną liczbę pozycji po prawej stronie i zwraca wynik na docelową `bitset`.|
-|[operator&#91;&#93;](#op_at)|Zwraca odwołanie do bitowej na określonej pozycji w `bitset` Jeśli `bitset` można modyfikować, a w przeciwnym razie zwraca wartość z bitowego na tej pozycji.|
-|[operator^=](#op_xor_eq)|Wykonuje bitowe połączenie bitsets z wyłączne `OR` operacji.|
-|[operator&#124;=](#op_or_eq')|Wykonuje bitowe połączenie bitsets z wartościami granicznymi `OR` operacji.|
-|[operator ~](#op_dtor)|Odwraca wybór wszystkie bity w celu `bitset` i zwraca wynik.|
+|[operator&#91;&#93;](#op_at)|Zwraca odwołanie do bitu na określonej pozycji w `bitset` Jeśli `bitset` jest modyfikowalny; w przeciwnym razie zwraca wartość bitu na tej pozycji.|
+|[operator^=](#op_xor_eq)|Wykonuje bitową kombinację bitsets z jedynego `OR` operacji.|
+|[operator&#124;=](#op_or_eq')|Wykonuje bitową kombinację bitsets z włącznie `OR` operacji.|
+|[operator ~](#op_dtor)|Odwraca wszystkie bity w elemencie docelowym `bitset` i zwraca wynik.|
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<bitset — >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="all"></a>  bitset::all
 
-Testy wszystkie bity w tym bitset — do określenia, czy są ustawione na wartość true.
+Sprawdza wszystkie bity, w tym bitset — Aby ustalić, czy są ustawione na wartość true.
 
 ```cpp
 bool all() const;
@@ -139,11 +139,11 @@ bool all() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca wartość PRAWDA, jeśli spełnione są wszystkie bity w tym zestawie. Zwraca **false** Jeśli jeden lub więcej bitów jest false.
+Zwraca wartość PRAWDA, jeśli spełnione są wszystkie bity w tym zestawie. Zwraca **false** Jeśli co najmniej jeden usługi bits mają wartość false.
 
 ## <a name="any"></a>  bitset::any
 
-Sprawdza, czy wszystkie bit w sekwencji jest ustawiony na wartość 1.
+Sprawdza, czy każdego bitu w sekwencji jest ustawiona na 1.
 
 ```cpp
 bool any() const;
@@ -151,7 +151,7 @@ bool any() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli żadnych bit bitset — jest ustawiona na 1; **false** Jeśli wszystkie bity są równe 0.
+**wartość true,** Jeśli każdego bitu, bitset — jest ustawiona na 1; **false** Jeśli wszystkie bity są równe 0.
 
 ### <a name="example"></a>Przykład
 
@@ -206,7 +206,7 @@ None of the bits in bitset b1 are set to 1.
 
 ## <a name="bitset"></a>  bitset::bitset
 
-Tworzy obiekt klasy `bitset\<N>` i inicjuje bitów na wartość 0, lub niektóre określonej wartości lub wartości z znaków w ciągu.
+Tworzy obiekt klasy `bitset\<N>` i inicjuje bity na wartość 0, lub na określoną wartość lub wartości uzyskane z znaków w ciągu.
 
 ```cpp
 bitset();
@@ -237,35 +237,35 @@ explicit bitset(
 
 ### <a name="parameters"></a>Parametry
 
-`val` Niepodpisane liczba całkowita, którego reprezentacja base dwa służy do inicjowania usługi bits w bitset — tworzona.
+*Val* liczba całkowita bez znaku, którego reprezentacja base dwóch służy do inicjowania usługi bits w bitset — są zbudowane.
 
-`str` Ciąg zera i używane do zainicjowania wartości bitowe bitset —.
+*str* ciąg zer i używane do zainicjowania wartości bitowe bitset —.
 
-`_CStr` Ciąg stylu języka C zera i używane do zainicjowania wartości bitowe bitset —.
+*_CStr* ciąg stylu C zer i używane do zainicjowania wartości bitowe bitset —.
 
-`_Pos` Pozycja znaku w ciągu, licząc od lewej do prawej, a począwszy od zera, używaną do inicjalizacji pierwszy bit w bitset —.
+*_Pos* pozycja znaku w ciągu, licząc od lewej do prawej i od zaczynając od zera, używany do inicjowania pierwszego bitu bitset —.
 
-`count` Liczba znaków w ciągu, który służy do zapewnienia usługi BITS w bitset — wartości początkowe.
+*Liczba* liczbę znaków w ciągu, który służy do zapewnienia wartości początkowe usługi bits w bitset —.
 
-`_Zero` Znak, który jest używany do reprezentowania zero. Wartość domyślna to "0".
+*_Zero* znak, który jest używany do reprezentowania zero. Wartość domyślna to "0".
 
-`_One` Znak, który jest używany do reprezentowania na. Wartość domyślna to "1".
+*_Jedna* znak, który jest używany do reprezentowania jednego. Wartość domyślna to "1".
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruktory trzy może służyć do konstruowania obects klasy `bitset\<N>`:
+Trzy konstruktory może służyć do konstruowania obects klasy `bitset\<N>`:
 
-- Pierwszy konstruktora akceptuje Brak parametrów, tworzy obiekt klasy `bitset\<N>` i inicjuje wszystkie bity N na wartość domyślną równą zero.
+- Pierwszy Konstruktor akceptuje żadnych parametrów, konstruuje obiekt klasy `bitset\<N>` i inicjuje wszystkie bity N na wartość domyślną równą zero.
 
-- Drugi Konstruktor tworzy obiekt klasy `bitset\<N>` i inicjuje usługi bits przy użyciu jednego `unsigned long long` parametru.
+- Drugi Konstruktor konstruuje obiekt klasy `bitset\<N>` i inicjuje usługi bits przy użyciu pojedynczej precyzji **unsigned long long** parametru.
 
-- Trzeci konstruktora tworzy obiekt klasy `bitset\<N>`, inicjowanie N liczby bitów na wartości, które odpowiadają znaków w ciągu znaków w stylu języka c zera i z nich. Wywołanie konstruktora bez rzutowania ciągu na typ ciągu: `bitset<5> b5("01011");`
+- Trzeci Konstruktor konstruuje obiekt klasy `bitset\<N>`, inicjowanie N bits do wartości, które odnoszą się do znaków w ciągu znaków stylu c zer i z nich. Wywołanie konstruktora bez rzutowania ciąg do typu string: `bitset<5> b5("01011");`
 
-Dostępne są również dwa szablony konstruktora udostępniane:
+Istnieją dwa szablony konstruktora, pod warunkiem:
 
-- Pierwszy szablon konstruktora tworzy obiekt klasy `bitset\<N>` i inicjuje usługi bits z liter dostarczone w parametrach zera i z nich. Jeśli wszystkie znaki w ciągu są inne niż 0 lub 1, konstruktora zgłasza obiekt klasy [nieprawidłowy argument](../standard-library/invalid-argument-class.md). Jeśli zostanie określona pozycja ( `_Pos`) wykracza poza długość ciągu znaków, a następnie konstruktora zgłasza obiekt klasy [out_of_range —](../standard-library/out-of-range-class.md). Konstruktor ustawia tylko te usługi bits na pozycji *j* w bitset —, dla którego znak w ciągu na pozycji `_Pos + j` 1. Domyślnie `_Pos` ma wartość 0.
+- Pierwszy szablon Konstruktor konstruuje obiekt klasy `bitset\<N>` i inicjuje bitów ze znaków w ciągu zer i z nich. Jeśli dowolne znaki ciągu są inne niż 0 lub 1, Konstruktor wyrzuca obiekt klasy [nieprawidłowy argument](../standard-library/invalid-argument-class.md). Jeśli określona pozycja (*_Pos*) wykracza poza długość ciągu, a następnie Konstruktor wyrzuca obiekt klasy [out_of_range —](../standard-library/out-of-range-class.md). Konstruktor określa tylko te usługi bits w położeniu *"j"* w bitset —, dla której znak w ciągu w położeniu `_Pos + j` 1. Domyślnie *_Pos* wynosi 0.
 
-- Drugi szablon Konstruktor jest podobny do pierwszej, ale zawiera dodatkowy parametr ( `count`) używany do określania liczby bitów zainicjować. Ma również dwa parametry opcjonalne, `_Zero` i `_One`, które wskazują, co znak w `str` ma oznacza 0 i 1 bitowe, odpowiednio.
+- Drugi Konstruktor, który jest podobny do pierwszego, ale zawiera dodatkowy parametr (*liczba*) używany do określenia liczby bitów, aby zainicjować. Ma również dwa parametry opcjonalne, *_Zero* i *_Jedna*, które wskazują, jakie znak w *str* ma być interpretowany jako oznaczenie 0 bit i 1 bit odpowiednio.
 
 ### <a name="example"></a>Przykład
 
@@ -344,7 +344,7 @@ The set of bits in bitset<9> b7( bitval, 2 ) is ( 110011011 ).
 
 ## <a name="count"></a>  bitset::Count
 
-Zwraca liczbę bitów z bitowego sekwencji.
+Zwraca liczbę bitów w bitową sekwencję.
 
 ```cpp
 size_t count() const;
@@ -352,11 +352,11 @@ size_t count() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba bitów w sekwencji z bitowego.
+Liczba bitów w bitową sekwencję.
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano użycie funkcji członkowskiej bitset::count.
+Poniższy przykład demonstruje użycie bitset::count funkcja elementu członkowskiego.
 
 ```cpp
 // bitset_count.cpp
@@ -400,7 +400,7 @@ The number of bits in the bitset set to 1 is: 4.
 
 ## <a name="element_type"></a>  bitset::ELEMENT_TYPE
 
-Typ, który jest synonimem dla typu danych `bool` i może służyć do odwołania elementu bitów bitset —.
+Typ, który jest synonimem dla typu danych **bool** i może służyć do odwołania elementu bitów zestawu bitów.
 
 ```cpp
 typedef bool element_type;
@@ -456,7 +456,7 @@ The bit at position 2 of bitset b1has a value of 1.
 
 ## <a name="flip"></a>  bitset::Flip
 
-Odwraca wartość wszystkie bity w bitset — lub odwraca jednej ręki na określonej pozycji.
+Odwraca wartość wszystkie bity w zestawu bitów lub odwraca pojedynczy bit na określonej pozycji.
 
 ```cpp
 bitset\<N>& flip();
@@ -465,15 +465,15 @@ bitset\<N>& flip(size_t _Pos);
 
 ### <a name="parameters"></a>Parametry
 
-`_Pos` Pozycja bitu, którego wartość ma być zmieniany.
+*_Pos* Pozycja bitu, którego wartość ma być zmieniany.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Kopia zmodyfikowanych bitset —, dla którego została wywołana funkcja elementu członkowskiego.
+Kopia zmodyfikowane bitset —, dla którego została wywołana funkcja elementu członkowskiego.
 
 ### <a name="remarks"></a>Uwagi
 
-Zgłasza wyjątek, drugi funkcji członkowskiej [out_of_range —](../standard-library/out-of-range-class.md) wyjątek, jeśli pozycja określona jako parametr jest większy niż rozmiar *N* z **bitset —\<***N***  >**  których bit został odwrócony.
+Funkcja drugiego członka zgłasza [out_of_range —](../standard-library/out-of-range-class.md) wyjątek, jeśli określona jako parametr pozycja jest większa niż rozmiar *N* z **bitset —\<***N***  >**  którego bitowa została odwrócona.
 
 ### <a name="example"></a>Przykład
 
@@ -528,7 +528,7 @@ After flipping the fourth bit, the bitset becomes: ( 10001 )
 
 ## <a name="none"></a>  bitset::none
 
-Testy, jeżeli nie bitowe nie ustawiono na wartość 1 w obiekcie bitset —.
+Sprawdza, czy bit nie została ustawiona na 1 w obiekcie bitset —.
 
 ```cpp
 bool none() const;
@@ -536,7 +536,7 @@ bool none() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli nie bit bitset — nie ustawiono 1; **false** Jeśli co najmniej jeden bit została ustawiona na 1.
+**wartość true,** Jeśli nie bitu bitset — została ustawiona na 1; **false** Jeśli co najmniej jeden bit została ustawiona na 1.
 
 ### <a name="example"></a>Przykład
 
@@ -585,7 +585,7 @@ None of the bits in bitset b1 are set to 1.
 
 ## <a name="op_neq"></a>  bitset::operator! =
 
-Testy docelowej bitset do — pod kątem nierówności z określonym bitset —.
+Testy zestawu docelowego bitów pod kątem nierówności z określonego zestawu bitów.
 
 ```cpp
 bool operator!=(const bitset\<N>& right) const;
@@ -593,15 +593,15 @@ bool operator!=(const bitset\<N>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-`right` Bitset — należy porównać do bitset — docelowy pod kątem nierówności.
+*prawy* bitset —, który ma być porównywana z bitset — docelowego pod kątem nierówności.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli bitsets są różne; **false** jeśli są one takie same.
+**wartość true,** Jeśli bitsets różnią się; **false** jeśli są takie same.
 
 ### <a name="remarks"></a>Uwagi
 
-Bitsets musi być taki sam rozmiar pod kątem nierówności przez funkcję operator elementu członkowskiego.
+Bitsets musi być taki sam rozmiar, ma zostać przetestowana pod kątem nierówności przy użyciu funkcji operatora składowej.
 
 ### <a name="example"></a>Przykład
 
@@ -646,7 +646,7 @@ Bitset b1 is different from bitset b3.
 
 ## <a name="op_and_eq"></a>  bitset::operator&amp;=
 
-Wykonuje bitowe połączenie bitsets z logicznym **i** operacji.
+Wykonuje bitową kombinację bitsets z logicznym `AND` operacji.
 
 ```cpp
 bitset\<N>& operator&=(const bitset\<N>& right);
@@ -654,17 +654,17 @@ bitset\<N>& operator&=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` Bitset — ma łączyć alternatywy bitowej z bitset — docelowy.
+*prawy* bitset —, będącego ma być wyłączny sumy bitowej połączona z bitset — docelowy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bitset — zmodyfikowane docelowej, która wynika z bitowego **i** operację, podając bitset —, określony jako parametr.
+Bitset — modyfikowanych docelowych, która wynika z operatora testu koniunkcji `AND` operację, podając bitset — określony jako parametr.
 
 ### <a name="remarks"></a>Uwagi
 
-Dwa bity łączone przez **i** zwracany operatora **true** Jeśli każdy bit ma wartość PRAWDA; w przeciwnym razie ich kombinacja zwraca **false**.
+Dwa bity są połączone za `AND` operator zwrotny **true** Jeśli każdy bit ma wartość PRAWDA; w przeciwnym razie ich kombinacji zwraca **false**.
 
-Bitsets musi być taki sam rozmiar, aby można było połączyć alternatywy bitowej z **i** operator przez funkcję operator elementu członkowskiego.
+Bitsets musi być taki sam rozmiar, ma być wyłączny sumy bitowej połączona z `AND` operator przy użyciu funkcji operatora składowej.
 
 ### <a name="example"></a>Przykład
 
@@ -712,7 +712,7 @@ The parameter bitset b2 remains: ( 01011 ).
 
 ## <a name="op_lshift"></a> bitset::operator\<\<
 
-Przesuwa bitów w bitset — w lewo określoną liczbę pozycji i zwraca wynik do nowego bitset —.
+Przesuwa bity w zestawu bitów w lewo określoną liczbę pozycji i zwraca wynik do nowego zestawu bitów.
 
 ```cpp
 bitset\<N> operator<<(size_t _Pos) const;
@@ -720,15 +720,15 @@ bitset\<N> operator<<(size_t _Pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-`_Pos` Liczba pozycji z lewej strony, który bitów w bitset — mają zostać przesunięte.
+*_Pos* liczbę pozycji z lewej strony, że bity w bitset — są lekkie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zmodyfikowane bitset — z bitami przesunięte w lewo wymaganej liczby pozycji.
+Zmodyfikowane bitset — za pomocą usługi bits przesuwane w lewo, wymagana liczba stanowisk.
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca element członkowski funkcji operatora **bitset —**(  **\*to**) **<< = pos,** gdzie [ <<= ](#op_lshift_eq) przewiduje Usługa bits w bitset — określoną liczbę pozycji z lewej strony i zwraca wynik do docelowej bitset —.
+Funkcja operator elementu członkowskiego zwraca **bitset —**(  **\*to**) **<< = punktu sprzedaży,** gdzie [ <<= ](#op_lshift_eq) przenosi bity w zestawu bitów określoną liczbę pozycji po lewej stronie i zwraca wynik do docelowych bitset —.
 
 ### <a name="example"></a>Przykład
 
@@ -761,9 +761,9 @@ int main( )
 }
 ```
 
-## <a name="op_lshift_eq"></a> bitset::operator&lt;&lt;=
+## <a name="op_lshift_eq"></a>  bitset::operator&lt;&lt;=
 
-Przesuwa bitów w bitset — w lewo określoną liczbę pozycji i zwraca wynik do docelowej bitset —.
+Przesuwa bity w zestawu bitów w lewo określoną liczbę pozycji i zwraca wynik do docelowych bitset —.
 
 ```cpp
 bitset\<N>& operator<<=(size_t _Pos);
@@ -771,15 +771,15 @@ bitset\<N>& operator<<=(size_t _Pos);
 
 ### <a name="parameters"></a>Parametry
 
-`_Pos` Liczba pozycji w lewo, bitów w bitset — mają zostać przesunięte.
+*_Pos* liczbę pozycji z lewej strony, bity w bitset — są lekkie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Docelowe bitset — zmodyfikować tak, aby były bity spowoduje przesunięcie w lewo wymaganej liczby pozycji.
+Docelowe bitset — zmodyfikowany tak, że bity zostały przesunięte w lewo wymagana liczba stanowisk.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli żaden element istnieje spowoduje przejście do pozycji, funkcja czyści wartość 0.
+Jeśli element nie istnieje spowoduje przejście do pozycji, funkcja czyści na wartość 0.
 
 ### <a name="example"></a>Przykład
 
@@ -809,7 +809,7 @@ After shifting the bits 2 positions to the left,
 
 ## <a name="op_eq_eq"></a>  bitset::operator ==
 
-Testy docelowej bitset do — równości z określonym bitset —.
+Testy zestawu docelowego bitów pod kątem równości z określonego zestawu bitów.
 
 ```cpp
 bool operator==(const bitset\<N>& right) const;
@@ -817,15 +817,15 @@ bool operator==(const bitset\<N>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-`right` Bitset — należy porównać do bitset — docelowy pod kątem równości.
+*prawy* bitset —, będącego ma być porównywana bitset — docelowego pod kątem równości.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli bitsets są takie same; **false** jeśli są one różne.
+**wartość true,** Jeśli bitsets są takie same; **false** są różne.
 
 ### <a name="remarks"></a>Uwagi
 
-Bitsets musi być taki sam rozmiar pod kątem równości przez funkcję operator elementu członkowskiego.
+Bitsets musi być taki sam rozmiar, ma zostać przetestowana pod kątem równości, funkcji operatora składowej.
 
 ### <a name="example"></a>Przykład
 
@@ -869,7 +869,7 @@ Bitset b1 is different from bitset b3.
 
 ## <a name="op_rshift"></a>  bitset::operator&gt;&gt;
 
-Przenosi bitów w bitset — po prawej stronie określoną liczbę pozycji i zwraca wynik do nowego bitset —.
+Przesuwa bity w bitset — z prawej strony określoną liczbę pozycji i zwraca wynik do nowego zestawu bitów.
 
 ```cpp
 bitset\<N> operator>>(size_t _Pos) const;
@@ -877,11 +877,11 @@ bitset\<N> operator>>(size_t _Pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-`_Pos` Liczba pozycji w prawo, bitów w bitset — mają zostać przesunięte.
+*_Pos* liczbę pozycji po prawej stronie, bity w bitset — są lekkie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bitset — nowy, gdy zostały bity spowoduje przesunięcie w prawo wymaganej liczby pozycji względem docelowe bitset —.
+Nowe bitset —, gdy bity zostały przesunięte w prawo wymaganą liczbę pozycji względem docelowych bitset —.
 
 ### <a name="example"></a>Przykład
 
@@ -919,9 +919,9 @@ After shifting the bits 1 position to the right,
  the bitset b3 is: ( 01110 ).
 ```
 
-## <a name="op_rshift_eq"></a> bitset::operator&gt;&gt;=
+## <a name="op_rshift_eq"></a>  bitset::operator&gt;&gt;=
 
-Przenosi bitów w bitset — po prawej stronie określoną liczbę pozycji i zwraca wynik do docelowej bitset —.
+Przesuwa bity w bitset — z prawej strony określoną liczbę pozycji i zwraca wynik do docelowych bitset —.
 
 ```cpp
 bitset\<N>& operator>>=(size_t _Pos);
@@ -929,15 +929,15 @@ bitset\<N>& operator>>=(size_t _Pos);
 
 ### <a name="parameters"></a>Parametry
 
-`_Pos` Liczba pozycji w prawo, bitów w bitset — mają zostać przesunięte.
+*_Pos* liczbę pozycji po prawej stronie, bity w bitset — są lekkie.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Docelowe bitset — zmodyfikować tak, aby były bity spowoduje przesunięcie w prawo wymaganej liczby pozycji.
+Docelowe bitset — zmodyfikowany tak, że bity zostały przesunięte w prawo wymagana liczba stanowisk.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli żaden element istnieje spowoduje przejście do pozycji, funkcja czyści wartość 0.
+Jeśli element nie istnieje spowoduje przejście do pozycji, funkcja czyści na wartość 0.
 
 ### <a name="example"></a>Przykład
 
@@ -968,7 +968,7 @@ After shifting the bits 2 positions to the right,
 
 ## <a name="op_at"></a>  bitset::operator]
 
-Zwraca odwołanie do bitowych na określonej pozycji w bitset — w przypadku bitset — można modyfikować; w przeciwnym wypadku zwraca wartość z bitowego na tej pozycji.
+Zwraca odwołanie do bitu na określonej pozycji w bitset — w przypadku modyfikowalnych; bitset — w przeciwnym razie zwraca wartość bitu na tej pozycji.
 
 ```cpp
 bool operator[](size_t _Pos) const;
@@ -977,11 +977,11 @@ reference operator[](size_t _Pos);
 
 ### <a name="parameters"></a>Parametry
 
-`_Pos` Pozycja lokalizowanie bit w bitset —.
+*_Pos* pozycji lokalizowanie bit w bitset —.
 
 ### <a name="remarks"></a>Uwagi
 
-Podczas definiowania [ \_ITERATOR\_debugowania\_poziom](../standard-library/iterator-debug-level.md) jako 1 lub 2 w kompilacji, błąd wykonania będą podejmowane w pliku wykonywalnego przy próbie uzyskania dostępu do elementu poza granicami bitset —. Aby uzyskać więcej informacje, zobacz [zaznaczone Iteratory](../standard-library/checked-iterators.md).
+Podczas definiowania [ \_ITERATORA\_debugowania\_poziom](../standard-library/iterator-debug-level.md) jako 1 lub 2 w kompilacji, wystąpi błąd czasu wykonywania w plik wykonywalny przy próbie uzyskania dostępu do elementu poza granicami bitset —. Aby uzyskać więcej informacji dotyczących, zobacz [Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Przykład
 
@@ -1011,7 +1011,7 @@ int main( )
 
 ## <a name="op_xor_eq"></a>  bitset::operator ^ =
 
-Wykonuje bitowe połączenie bitsets z wyłączne `OR` operacji.
+Wykonuje bitową kombinację bitsets z jedynego `OR` operacji.
 
 ```cpp
 bitset\<N>& operator^=(const bitset\<N>& right);
@@ -1019,17 +1019,17 @@ bitset\<N>& operator^=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` Bitset — ma łączyć alternatywy bitowej z bitset — docelowy.
+*prawy* bitset —, będącego ma być wyłączny sumy bitowej połączona z bitset — docelowy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bitset — docelowy zmodyfikowane, będącą wynikiem operator wyłączny `OR` operację, podając bitset —, określony jako parametr.
+Bitset — modyfikowanych docelowych, które powstały na skutek wyłączny sumy bitowej `OR` operację, podając bitset — określony jako parametr.
 
 ### <a name="remarks"></a>Uwagi
 
-Dwa bity łączone przez jedynego **lub** zwracany operatora **true** co najmniej jeden, ale nie oba bitów jest **true**; w przeciwnym razie ich kombinacja zwraca **false**.
+Dwa bity połączone przez jedynego **lub** operator zwrotny **true** Jeśli co najmniej jeden, ale nie obu bitów jest **true**; w przeciwnym razie ich kombinacji zwraca **false**.
 
-Bitsets musi być taki sam rozmiar, aby można było połączyć alternatywy bitowej z wyłączne `OR` operator przez funkcję operator elementu członkowskiego.
+Bitsets musi być taki sam rozmiar, ma być wyłączny sumy bitowej połączona z jedynego `OR` operator przy użyciu funkcji operatora składowej.
 
 ### <a name="example"></a>Przykład
 
@@ -1076,7 +1076,7 @@ The parameter bitset b2 remains: ( 01011 ).
 
 ## <a name="op_or_eq"></a>  bitset::operator&#124;=
 
-Wykonuje bitowe połączenie bitsets z wartościami granicznymi `OR` operacji.
+Wykonuje bitową kombinację bitsets z włącznie `OR` operacji.
 
 ```cpp
 bitset\<N>& operator|=(const bitset\<N>& right);
@@ -1084,17 +1084,17 @@ bitset\<N>& operator|=(const bitset\<N>& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` Bitset — ma łączyć alternatywy bitowej z bitset — docelowy.
+*prawy* bitset —, będącego ma być wyłączny sumy bitowej połączona z bitset — docelowy.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bitset — zmodyfikowane docelowej, która wynika z bitowego włącznie `OR` operację, podając bitset —, określony jako parametr.
+Bitset — modyfikowanych docelowych, która wynika z operatora testu koniunkcji włącznie `OR` operację, podając bitset — określony jako parametr.
 
 ### <a name="remarks"></a>Uwagi
 
-Dwa bity łączone przez włącznie `OR` zwracany operatora **true** Jeśli co najmniej jeden z usługi bits jest **true**; Jeśli oba bity są **false**, zwraca ich kombinacja **false**.
+Dwa bity w połączeniu, włącznie `OR` operator zwrotny **true** Jeśli co najmniej jeden z bitów jest **true**; Jeśli oba bity są **false**, zwraca ich kombinacji **false**.
 
-Bitsets musi być taki sam rozmiar, aby można było połączyć alternatywy bitowej z wartościami granicznymi `OR` operator przez funkcję operator elementu członkowskiego.
+Bitsets musi być taki sam rozmiar, które można połączyć alternatywy bitowej przy użyciu włącznie `OR` operator przy użyciu funkcji operatora składowej.
 
 ### <a name="example"></a>Przykład
 
@@ -1142,7 +1142,7 @@ The parameter bitset b2 remains: ( 01011 ).
 
 ## <a name="op_dtor"></a>  bitset::operator ~
 
-Odwraca wybór wszystkie bity w docelowej bitset — i zwraca wynik.
+Odwraca wszystkie bity w docelowego zestawu bitów i zwraca wynik.
 
 ```cpp
 bitset\<N> operator~() const;
@@ -1150,7 +1150,7 @@ bitset\<N> operator~() const;
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Bitset — jego bitów odwrócony względem docelowe bitset —.
+Bitset — za pomocą jego bitów odwrócony w odniesieniu do docelowych bitset —.
 
 ### <a name="example"></a>Przykład
 
@@ -1187,7 +1187,7 @@ Bitset b3 = b1.flip( ) is: ( 11000 ).
 
 ## <a name="reference"></a>  bitset::Reference
 
-Klasy serwera proxy, który zawiera odwołania do zawartych w bitset —, który służy do uzyskiwania dostępu i manipulowania wszystkie bity jako klasa pomocy dla usługi bits `operator[]` z bitset — klasa.
+Klasa serwera proxy, która zawiera odwołania do bitów zawartych w bitset —, używanego do uzyskiwania dostępu i manipulowania pojedynczych bitów jako klasa pomocnicza do `operator[]` z bitset — klasa.
 
 ```cpp
 class reference {
@@ -1203,25 +1203,25 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-`val` Wartość typu obiektu `bool` przypisuje się nieco w bitset —.
+*Val* wartość obiektu typu **bool** przypisuje się nieco w zestawu bitów.
 
-`_Bitref` Odwołanie do formularza *x [i]* -bitowy na pozycji *i* w bitset — *x*.
+*_Bitref* odwołanie do formularza *x [i]* do bitu w położeniu *i* w bitset — *x*.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odwołanie do bitu w bitset —, określony przez pozycja argumentu pierwszy, drugi, i piątej funkcje Członkowskie odwołania klasy i **true** lub **false**, aby odzwierciedlić wartość zmodyfikowanego bit w bitset — dla funkcji trzeci i czwarty element członkowski odwołania do klasy.
+Odwołanie do bitu w bitset — określone przez pozycja argumentu dla pierwszego, drugiego i piąty funkcje składowe odwołań do klas i **true** lub **false**w celu odzwierciedlenia wartości zmodyfikowane bit w bitset — funkcji elementu członkowskiego trzecia i czwarta odwołania do klasy.
 
 ### <a name="remarks"></a>Uwagi
 
-Klasa `reference` istnieje tylko jako klasy pomocniczej do bitset — `operator[]`. Klasy członkowskiej opisuje obiekt, który można uzyskać dostępu do poszczególnych bitowe w bitset —. Let *b* być obiektem typu `bool`, *x* i *y* obiektów typu **bitset —\<***N*** >** , i *i* i *j* prawidłowe pozycje w ramach takiego obiektu. Notacja *x [i]* odwołuje się do bitu w pozycji *i* w bitset — *x*. Funkcje Członkowskie klasy `reference` Podaj kolejno następujące operacje:
+Klasa `reference` istnieje tylko jako klasa pomocnicza do bitset — `operator[]`. Klasa składowej opisuje obiekt, który mogą uzyskiwać dostęp do poszczególnych bitowe, w ramach zestawu bitów. Pozwól *b* być obiektem typu **bool**, *x* i *y* obiektów typu **bitset —\<***N***  >** , i *i* i *"j"* prawidłowe położenie takiego obiektu. Notacja *x [i]* odwołuje się do bitu w położeniu *i* w bitset — *x*. Funkcje elementów członkowskich klasy `reference` zapewniają kolejno następujące operacje:
 
 |Operacja|Definicja|
 |---------------|----------------|
-|*x*[*i*] = *b*|Magazyny `bool` wartość *b* na pozycji z bitowego *i* w bitset — *x*.|
-|*x*[*i*] = *y*[*j*]|Przechowuje wartość bitu *y*[ *j*] na pozycji z bitowego *i* w bitset — *x*.|
-|*b* = ~ *x*[*i*]|Przechowuje wartość odwrócony bitu *x*[ *i*] w `bool` *b*.|
-|*b* = *x*[*i*]|Przechowuje wartość bitu *x*[ *i*] w `bool` *b*.|
-|*x*[*i*]. `flip`( )|Przechowuje wartość odwrócony bitu *x*[ *i*] w pozycji z bitowego *i* w *x*.|
+|*x*[*i*] = *b*|Magazyny **bool** wartość *b* pozycja bit *i* w bitset — *x*.|
+|*x*[*i*] = *y*[*j*]|Przechowuje wartość bitu *y*[ *"j"*] pozycja bit *i* w bitset — *x*.|
+|*b* = ~ *x*[*i*]|Przechowuje wartość odwrócony bitu *x*[ *i*] w **bool** *b*.|
+|*b* = *x*[*i*]|Przechowuje wartość bitu *x*[ *i*] w **bool** *b*.|
+|*x*[*i*]. `flip`( )|Przechowuje wartość odwrócony bitu *x*[ *i*] w pozycji bitu *i* w *x*.|
 
 ### <a name="example"></a>Przykład
 
@@ -1307,7 +1307,7 @@ After a second flip, the value of the position 4 bit in b2 is now: 1.
 
 ## <a name="reset"></a>  bitset::reset
 
-Resetuje wszystkie bity w bitset — 0 lub resetuje nieco na określonej pozycji na 0.
+Resetuje wszystkie bity w zestawu bitów na 0 lub resetuje chwilę na określonej pozycji na 0.
 
 ```cpp
 bitset\<N>& reset();
@@ -1316,7 +1316,7 @@ bitset\<N>& reset(size_t _Pos);
 
 ### <a name="parameters"></a>Parametry
 
-`_Pos` Pozycja bitu w bitset — zostaną zresetowane do 0.
+*_Pos* Pozycja bitu w bitset — aby zresetowane do wartości 0.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1324,7 +1324,7 @@ Kopia bitset —, dla którego została wywołana funkcja elementu członkowskie
 
 ### <a name="remarks"></a>Uwagi
 
-Zgłasza wyjątek, drugi funkcji członkowskiej [out_of_range —](../standard-library/out-of-range-class.md) wyjątek, jeśli pozycja określona jest większy niż rozmiar bitset —.
+Funkcja drugiego członka zgłasza [out_of_range —](../standard-library/out-of-range-class.md) wyjątek, jeśli określona pozycja jest większa niż rozmiar bitset —.
 
 ### <a name="example"></a>Przykład
 
@@ -1366,7 +1366,7 @@ The collecion of bits obtained from resetting all
 
 ## <a name="set"></a>  bitset::set
 
-Ustawia bit wszystkie bity w bitset — 1 lub zestawów na określonej pozycji 1.
+Ustawia bit wszystkie bity w zestawu bitów 1 lub zestawy na określonej pozycji 1.
 
 ```cpp
 bitset\<N>& set();
@@ -1378,9 +1378,9 @@ bitset\<N>& set(
 
 ### <a name="parameters"></a>Parametry
 
-`_Pos` Pozycja bitu w bitset — należy ustawić przypisanej wartości.
+*_Pos* Pozycja bitu w bitset — należy ustawić przypisana wartość.
 
-`val` Wartość do przypisania do bitu w określonej pozycji.
+*Val* wartość do przypisania do bitu na określonej pozycji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -1388,7 +1388,7 @@ Kopia bitset —, dla którego została wywołana funkcja elementu członkowskie
 
 ### <a name="remarks"></a>Uwagi
 
-Zgłasza wyjątek, drugi funkcji członkowskiej [out_of_range —](../standard-library/out-of-range-class.md) wyjątek, jeśli pozycja określona jest większy niż rozmiar bitset —.
+Funkcja drugiego członka zgłasza [out_of_range —](../standard-library/out-of-range-class.md) wyjątek, jeśli określona pozycja jest większa niż rozmiar bitset —.
 
 ### <a name="example"></a>Przykład
 
@@ -1442,7 +1442,7 @@ Liczba bitów, *N*, w bitset —\<N >.
 
 ### <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano użycie funkcji członkowskiej bitset::size.
+Poniższy przykład demonstruje użycie bitset::size funkcja elementu członkowskiego.
 
 ```cpp
 // bitset_size.cpp
@@ -1474,7 +1474,7 @@ The number of bits in bitset b1 is: 5.
 
 ## <a name="test"></a>  bitset::test
 
-Sprawdza, czy z bitowego na określonej pozycji w bitset — jest ustawiona na 1.
+Sprawdza, czy bit na określonej pozycji w zestawu bitów jest ustawiona na 1.
 
 ```cpp
 bool test(size_t _Pos) const;
@@ -1482,13 +1482,13 @@ bool test(size_t _Pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-`_Pos` Pozycja bitu w bitset — pod kątem jego wartość.
+*_Pos* Pozycja bitu w bitset — do przetestowania jako jej wartość.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli ustawiono bit określony przez pozycja argumentu 1; w przeciwnym razie **false**.
+**wartość true,** Jeśli bitu określonego przez argument pozycji jest ustawiona na 1; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zgłasza [out_of_range —](../standard-library/out-of-range-class.md)
+Funkcja elementu członkowskiego zgłasza [out_of_range —](../standard-library/out-of-range-class.md)
 

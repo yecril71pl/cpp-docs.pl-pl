@@ -17,20 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d46a9c593826e804c62ab67b8afa894912d15bd8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7721e617541b962994b115344f33e1ec59e4acaf
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37948247"
 ---
 # <a name="hook"></a>__hook
-Kojarzy metoda obsługi ze zdarzeniem.  
+Kojarzy metody obsługi ze zdarzeniem.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
   
-      long __hook(  
+long __hook(  
    &SourceClass::EventMethod,  
    source,  
    &ReceiverClass::HandlerMethod  
@@ -44,68 +45,68 @@ long __hook(
   
 #### <a name="parameters"></a>Parametry  
  **&** *SourceClass* `::` *EventMethod*  
- Wskaźnik do metody zdarzeń, do którego zostanie utworzenie punktu zaczepienia metoda obsługi zdarzeń:  
+ Wskaźnik do metody zdarzeń, do której należy dołączyć metody obsługi zdarzeń:  
   
--   Natywny zdarzenia C++: *SourceClass* jest klasa źródła zdarzeń i *EventMethod* jest zdarzenie.  
+-   Zdarzenia natywnego języka C++: *SourceClass* jest klasie źródła zdarzeń i *EventMethod* jest zdarzenie.  
   
--   Zdarzenia COM: *SourceClass* jest interfejsem źródła zdarzeń i *EventMethod* jest jedną z metod.  
+-   Zdarzenia COM: *SourceClass* interfejs źródła zdarzeń i *EventMethod* jest jednym z jej metody.  
   
--   Zarządzanych zdarzeń: *SourceClass* jest klasa źródła zdarzeń i *EventMethod* jest zdarzenie.  
+-   Zarządzanych zdarzeń: *SourceClass* jest klasie źródła zdarzeń i *EventMethod* jest zdarzenie.  
   
- `interface`  
- Nazwa interfejsu, jest powiązana z `receiver`, tylko dla odbiorcy zdarzeń COM, w którym *layout_dependent* parametr [event_receiver](../windows/event-receiver.md) atrybutu **true**.  
+ *interface*  
+ Nazwa interfejsu, są podłączone do *odbiorcy*, tylko w przypadku odbiorników zdarzeń COM, w którym *layout_dependent* parametru [event_receiver](../windows/event-receiver.md) atrybut jest **true**.  
   
  *source*  
- Wskaźnik do wystąpienia źródła zdarzenia. W zależności od kodu `type` określony w **event_receiver**, *źródła* może być jedną z następujących czynności:  
+ Wskaźnik na wystąpienie źródła zdarzeń. W zależności od kodu `type` określonych w `event_receiver`, *źródła* może być jedną z następujących czynności:  
   
--   Wskaźnik obiektu źródła zdarzeń macierzystego.  
+-   Wskaźnik obiektu źródła zdarzeń macierzystych.  
   
--   **IUnknown**— na podstawie wskaźnika (COM źródła).  
+-   `IUnknown`-Oparte wskaźnikiem (źródło modelu COM).  
   
 -   Wskaźnik zarządzanego obiektu (w przypadku zarządzanych zdarzeń).  
   
  **&** *ReceiverClass* `::` `HandlerMethod`  
- Wskaźnik do metoda obsługi zdarzeń, aby być dołączane do zdarzeń. Program obsługi jest określony jako metody klasy lub odwołanie do tego samego; Jeśli nie określisz nazwy klasy `__hook` zakłada klasy się, że w którym jest wywoływana.  
+ Wskaźnik do metody obsługi zdarzeń, aby być dołączane do zdarzenia. Program obsługi jest określony jako metoda klasy lub odwołanie do tej samej; Jeśli nie określisz nazwy klasy, **__hook** przyjęto założenie, klasy, która ma być, że w którym jest wywoływana.  
   
--   Natywny zdarzenia C++: *ReceiverClass* jest klasy odbiorcy zdarzeń i `HandlerMethod` jest programem obsługi.  
+-   Zdarzenia natywnego języka C++: *ReceiverClass* jest klasy odbiorcy zdarzeń i `HandlerMethod` jest programem obsługi.  
   
--   Zdarzenia COM: *ReceiverClass* jest interfejsem odbiorcy zdarzeń i `HandlerMethod` jest jednym z jego obsługi.  
+-   Zdarzenia COM: *ReceiverClass* interfejs odbiorcy zdarzeń i `HandlerMethod` jest jednym z jego obsługę.  
   
 -   Zarządzanych zdarzeń: *ReceiverClass* jest klasy odbiorcy zdarzeń i `HandlerMethod` jest programem obsługi.  
   
- `receiver`(opcjonalnie)  
- Wskaźnik do wystąpienia klasy odbiorcy zdarzeń. Jeśli odbiornik nie zostanie określony, wartością domyślną jest odbiornik klasy lub struktury, w którym `__hook` jest wywoływana.  
+ *odbiornik*(opcjonalnie)  
+ Wskaźnik do wystąpienia klasy odbiorcy zdarzeń. Jeśli odbiornik nie zostanie określony, wartością domyślną jest odbiorcy klasy lub struktury, w którym **__hook** jest wywoływana.  
   
 ## <a name="usage"></a>Użycie  
- Może być używany w żadnych zakresu funkcji, w tym głównym poza klasy odbiorcy zdarzeń.  
+ Może być użycie w zakresie dowolnej funkcji, łącznie z głównym, poza klasy odbiorcy zdarzeń.  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj funkcji wewnętrznej `__hook` w odbiornik zdarzeń, aby skojarzyć lub utworzenie punktu zaczepienia metody obsługi z metoda zdarzeń. Określona Obsługa następnie jest wywoływane, gdy źródło uruchamia określone zdarzenie. Zostanie utworzenie punktu zaczepienia kilka obsługi do jednego zdarzenia lub utworzenie punktu zaczepienia kilka zdarzeń do pojedynczego programu obsługi.  
+ Funkcja wewnętrzna **__hook** w odbiorcy zdarzeń, aby skojarzyć lub utworzenie punktu zaczepienia metody obsługi, za pomocą metody zdarzeń. Określona Obsługa następnie jest wywoływana, gdy źródło zgłasza określonego zdarzenia. Można podłączyć kilka programów obsługi pojedynczego zdarzenia lub podłączyć kilka zdarzeń do jednego programu obsługi.  
   
- Istnieją dwie formy `__hook`. Użyj pierwszego formularza (cztery argument) w większości przypadków, w szczególności dla odbiorcy zdarzeń COM, w którym *layout_dependent* parametr [event_receiver](../windows/event-receiver.md) atrybutu **false** .  
+ Istnieją dwa rodzaje **__hook**. Pierwszy formularz (4 argument), w większości przypadków można użyć w szczególności dla odbiorcy zdarzeń COM, w którym *layout_dependent* parametru [event_receiver](../windows/event-receiver.md) atrybut jest **false** .  
   
- W takich przypadkach jest konieczne utworzenie punktu zaczepienia wszystkie metody w interfejsie, zanim zostanie zainicjowane zdarzenie na jednej z metod; Metoda obsługi zdarzeń musi być punktem zaczepienia. Można użyć drugiej formy (dwuargumentowej) `__hook` tylko dla odbiorcy zdarzeń COM, w którym * layout_dependent ***= true**.  
+ W takiej sytuacji nie trzeba podłączyć wszystkie metody w interfejsie przed wyzwoleniem zdarzenia na jednej z metod; metody obsługi zdarzenia musi być dołączane. Można użyć drugiej formy (dwuargumentową) **__hook** tylko dla odbiorcy zdarzenia COM, w którym * layout_dependent ***= true**.  
   
- `__hook` Zwraca wartość typu long. Podano niezerowe wartości zwracanej wskazuje wystąpił błąd (Zgłoś wyjątek zarządzanych zdarzeń).  
+ **__hook** zwraca wartość typu long. Wartość różną od zera zwracana wartość wskazuje, że wystąpił błąd (zdarzenia zarządzane throw wyjątku).  
   
- Kompilator sprawdza istnienie zdarzeń oraz że z sygnaturą zdarzenia zgadza się z podpisu delegata.  
+ Kompilator sprawdza istnienie zdarzeń oraz że podpis zdarzeń są zgodne z podpis delegata.  
   
- Z wyjątkiem zdarzeń COM `__hook` i `__unhook` może być wywołana poza odbiorcy zdarzeń.  
+ Z wyjątkiem zdarzeń COM **__hook** i **__unhook** może być wywołana poza odbiorcy zdarzeń.  
   
- Zamiast `__hook` jest użycie += — operator.  
+ Alternatywa dla użycia **__hook** polega na użyciu += operator.  
   
  Aby uzyskać informacji na temat kodowania zarządzanych zdarzeń w nowej składni, zobacz [zdarzeń](../windows/event-cpp-component-extensions.md).  
   
 > [!NOTE]
->  Szablonu klasy lub struktury nie mogą zawierać zdarzenia.  
+>  Szablonem klasy lub struktury nie mogą zawierać zdarzenia.  
   
 ## <a name="example"></a>Przykład  
- Zobacz [obsługi zdarzeń w natywnym kodzie C++](../cpp/event-handling-in-native-cpp.md) i [obsługi zdarzeń w modelu COM](../cpp/event-handling-in-com.md) dla przykładów.  
+ Zobacz [zdarzenie obsługi w natywnym kodzie C++](../cpp/event-handling-in-native-cpp.md) i [zdarzenie obsługi w modelu COM](../cpp/event-handling-in-com.md) przykładów.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Keywords](../cpp/keywords-cpp.md)   
  [Obsługa zdarzeń](../cpp/event-handling.md)   
- [event_source —](../windows/event-source.md)   
+ [event_source](../windows/event-source.md)   
  [event_receiver](../windows/event-receiver.md)   
  [__unhook](../cpp/unhook.md)   
  [__raise](../cpp/raise.md)

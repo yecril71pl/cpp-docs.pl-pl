@@ -35,15 +35,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ceeaf5250cc9dc5cb4cb25c47b3fe179c7c5295
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c54771b7cf66cb980c2b711760589ffd41019799
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365559"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880485"
 ---
 # <a name="catlarray-class"></a>Klasa CAtlArray
-Ta klasa implementuje tablicy obiektów.  
+Ta klasa implementuje obiektu array.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -65,45 +65,45 @@ class CAtlArray
   
 |||  
 |-|-|  
-|[Dodaj](#add)|Wywołaj tę metodę w celu dodania elementu do obiektu array.|  
-|[Dołącz](#append)|Wywołanie tej metody, aby dodać do końca innej zawartości tablicy.|  
-|[AssertValid](#assertvalid)|Wywołanie tej metody, aby upewnić się, że obiekt tablicy jest prawidłowy.|  
+|[Dodaj](#add)|Wywołaj tę metodę, aby dodać element do obiektu tablicy.|  
+|[Dołącz](#append)|Wywołaj tę metodę, aby dodać zawartość jednej tablicy do końca innej.|  
+|[AssertValid](#assertvalid)|Wywołaj tę metodę, aby upewnić się, że obiekt array jest prawidłowy.|  
 |[CAtlArray](#catlarray)|Konstruktor.|  
 |[~ CAtlArray](#dtor)|Destruktor.|  
-|[Kopiuj](#copy)|Wywołanie tej metody można kopiować elementy tablicy jednego do drugiego.|  
-|[FreeExtra](#freeextra)|Wywołaj tę metodę, aby usunąć wszelkie puste elementy z tablicy.|  
+|[Kopiuj](#copy)|Wywołaj tę metodę, aby skopiować elementy tablicy do innej.|  
+|[FreeExtra](#freeextra)|Wywołaj tę metodę w celu usunięcia żadnych pustych elementów z tablicy.|  
 |[GetAt](#getat)|Wywołaj tę metodę, aby pobrać jeden element z obiektu tablicy.|  
-|[GetCount](#getcount)|Wywołaj tę metodę, aby zwrócić liczby elementy przechowywane w tablicy.|  
-|[GetData](#getdata)|Wywołaj tę metodę w celu zwraca wskaźnik do pierwszego elementu w tablicy.|  
-|[InsertArrayAt](#insertarrayat)|Wywołanie tej metody, aby wstawić jedną tablicę do innego.|  
-|[InsertAt](#insertat)|Wywołaj tę metodę, aby wstawić nowego elementu (lub wiele kopii elementu) w obiekcie tablicy.|  
-|[IsEmpty](#isempty)|Wywołanie tej metody, aby sprawdzić, czy tablica jest pusta.|  
+|[GetCount](#getcount)|Wywołaj tę metodę, aby zwrócić liczbę elementów przechowywanych w tablicy.|  
+|[GetData](#getdata)|Wywołaj tę metodę, aby zwrócić wskaźnik do pierwszego elementu w tablicy.|  
+|[InsertArrayAt](#insertarrayat)|Wywołaj tę metodę, aby wstawić jednej tablicy do innej.|  
+|[InsertAt](#insertat)|Wywołaj tę metodę, aby wstawić nowego elementu (lub wiele kopii elementu) do obiektu tablicy.|  
+|[IsEmpty](#isempty)|Wywołaj tę metodę, aby sprawdzić, czy tablica jest pusta.|  
 |[RemoveAll](#removeall)|Wywołaj tę metodę, aby usunąć wszystkie elementy z obiektu array.|  
-|[Element RemoveAt](#removeat)|Wywołaj tę metodę, aby usunąć co najmniej jednego elementu z tablicy.|  
-|[SetAt](#setat)|Wywołanie tej metody można ustawić wartości elementu w obiekcie tablicy.|  
-|[SetAtGrow](#setatgrow)|Wywołaj tę metodę, aby ustawić wartość elementu w obiekcie tablicy, rozszerzanie tablicy zgodnie z potrzebami.|  
-|[SetCount](#setcount)|Wywołaj tę metodę, aby ustawić rozmiar obiektu tablicy.|  
+|[Element RemoveAt](#removeat)|Wywołaj tę metodę, aby usunąć jeden lub więcej elementów z tablicy.|  
+|[SetAt](#setat)|Wywołaj tę metodę, aby ustawić wartość elementu w obiekcie tablicy.|  
+|[SetAtGrow](#setatgrow)|Wywołaj tę metodę, aby ustawić wartość elementu w obiekcie tablicy, rozszerzając tablicy zgodnie z potrzebami.|  
+|[SetCount](#setcount)|Wywołaj tę metodę, aby ustawić rozmiar obiektu array.|  
   
 ### <a name="operators"></a>Operatory  
   
 |||  
 |-|-|  
-|[operator&#91;&#93;](#operator_at)|Wywołanie tego operatora zwraca odwołanie do elementu w tablicy.|  
+|[operator&#91;&#93;](#operator_at)|Wywołaj Ten operator zwraca odwołanie do elementu w tablicy.|  
 
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[INARGTYPE](#inargtype)|Typ danych służących do dodawania elementów do tablicy.|  
+|[INARGTYPE](#inargtype)|Typ danych na potrzeby dodawania elementów do tablicy.|  
 |[OUTARGTYPE](#outargtype)|Typ danych używany do pobierania elementów z tablicy.|  
   
 ## <a name="remarks"></a>Uwagi  
- **CAtlArray** udostępnia metody do tworzenia i zarządzania tablicę elementów typu zdefiniowanego przez użytkownika. Mimo że jest to podobne do tablic C standard, **CAtlArray** obiektu dynamicznie można zmniejszyć rozmiar i wzrostu w razie potrzeby. Indeks tablicy zawsze rozpoczyna się na pozycji 0, a górną granicę można stałe, lub można rozwinąć w miarę dodawania nowych elementów.  
+ `CAtlArray` zawiera metody służące do tworzenia i zarządzania nimi tablicy elementów typu zdefiniowanego przez użytkownika. Mimo że jest to podobne do standardowego tablice języka C, `CAtlArray` obiektu można dynamicznie zmniejszać i powiększać w razie. Indeks tablicy zawsze uruchamia się na pozycji 0, a górną granicę mogą być rozwiązane lub mogą rozszerzyć w miarę dodawania nowych elementów.  
   
  Dla tablic z mniejszą liczbą elementów klasy ATL [CSimpleArray](../../atl/reference/csimplearray-class.md) mogą być używane.  
   
- **CAtlArray** jest ściśle powiązana z MFC **carray —** klasy i będzie działać w projekcie MFC, choć bez obsługi serializacji.  
+ `CAtlArray` jest ściśle powiązane z biblioteki MFC `CArray` klasy i będzie działać w projekcie MFC, jednakże bez obsługi serializacji.  
   
  Aby uzyskać więcej informacji, zobacz [klasy kolekcji ATL](../../atl/atl-collection-classes.md).  
   
@@ -111,7 +111,7 @@ class CAtlArray
  **Nagłówek:** atlcoll.h  
   
 ##  <a name="add"></a>  CAtlArray::Add  
- Wywołaj tę metodę w celu dodania elementu do obiektu array.  
+ Wywołaj tę metodę, aby dodać element do obiektu tablicy.  
   
 ```
 size_t Add(INARGTYPE element);
@@ -119,51 +119,51 @@ size_t Add();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `element`  
+ *Element*  
  Element, który ma zostać dodany do tablicy.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca indeks elementu dodany.  
+ Zwraca indeks elementu dodane.  
   
 ### <a name="remarks"></a>Uwagi  
- Nowy element zostanie dodany do końca tablicy. Jeśli nie ma żadnego elementu pod warunkiem dodaniu pustego elementu; oznacza to, że tablicy zwiększa się rozmiar tak, jakby został dodany element prawdziwe. W przypadku niepowodzenia operacji [AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow) jest wywoływana z argumentem E_OUTOFMEMORY.  
+ Nowy element zostanie dodany do końca tablicy. Jeśli element nie zostanie podana, pusty element zostanie dodany; oznacza to, że tablica jest zwiększyć rozmiar tak, jakby rzeczywistych element został dodany. Jeśli operacja zakończy się niepowodzeniem, [AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow) jest wywoływana z argumentem E_OUTOFMEMORY.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Utilities#1](../../atl/codesnippet/cpp/catlarray-class_1.cpp)]  
   
 ##  <a name="append"></a>  CAtlArray::Append  
- Wywołanie tej metody, aby dodać do końca innej zawartości tablicy.  
+ Wywołaj tę metodę, aby dodać zawartość jednej tablicy do końca innej.  
   
 ```
 size_t Append(const CAtlArray<E, ETraits>& aSrc);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `aSrc`  
- Tablica, która ma zostać dołączony.  
+ *aSrc*  
+ Tablica do dołączenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca indeks pierwszego elementu dołączany.  
+ Zwraca indeks pierwszego elementu dołączonych.  
   
 ### <a name="remarks"></a>Uwagi  
- Elementy w podanej tablicy są dodawane na końcu istniejącej tablicy. W razie potrzeby będzie można przydzielić pamięci w celu uwzględnienia nowych elementów.  
+ Elementy w tablicy podane są dodawane na końcu istniejącej tablicy. Jeśli to konieczne, aby uwzględnić nowe elementy zostaną przydzielone pamięci.  
   
- Tablice muszą być tego samego typu, a nie jest możliwe do dołączenia tablicy do samej siebie.  
+ Tablice muszą być tego samego typu, a nie jest możliwe, Dołącz tablicę do samego siebie.  
   
- W kompilacjach do debugowania ATLASSERT zostanie wygenerowany, jeśli `CAtlArray` argument nie jest prawidłową tablicy lub, jeśli `aSrc` odwołuje się do tego samego obiektu. Nieprawidłowe argumenty w kompilacjach wydania może spowodować nieprzewidywalne zachowanie.  
+ W kompilacjach do debugowania ATLASSERT zostanie wygenerowany, jeśli `CAtlArray` argument nie jest prawidłową tablicą lub jeśli *aSrc* odwołuje się do tego samego obiektu. W kompilacjach do wydania nieprawidłowe argumenty może prowadzić do nieprzewidywalne zachowanie.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Utilities#2](../../atl/codesnippet/cpp/catlarray-class_2.cpp)]  
   
 ##  <a name="assertvalid"></a>  CAtlArray::AssertValid  
- Wywołanie tej metody, aby upewnić się, że obiekt tablicy jest prawidłowy.  
+ Wywołaj tę metodę, aby upewnić się, że obiekt array jest prawidłowy.  
   
 ```
 void AssertValid() const;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli obiekt tablicy nie jest prawidłowy, `ATLASSERT` zgłosi potwierdzenia. Ta metoda jest dostępna tylko wtedy, gdy zdefiniowano _DEBUG.  
+ Jeśli obiekt tablicy nie jest prawidłowy, ATLASSERT zgłosi potwierdzenie. Ta metoda jest dostępna tylko wtedy, gdy zdefiniowano _DEBUG.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Utilities#3](../../atl/codesnippet/cpp/catlarray-class_3.cpp)]  
@@ -192,31 +192,31 @@ CAtlArray() throw();
  Zwalnia wszelkie zasoby używane przez obiekt array.  
   
 ##  <a name="copy"></a>  CAtlArray::Copy  
- Wywołanie tej metody można kopiować elementy tablicy jednego do drugiego.  
+ Wywołaj tę metodę, aby skopiować elementy tablicy do innej.  
   
 ```
 void Copy(const CAtlArray<E, ETraits>& aSrc);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `aSrc`  
- Źródło elementów, aby skopiować do tablicy.  
+ *aSrc*  
+ Źródło elementy do skopiowania do tablicy.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołaj tę metodę, aby zastąpić elementów co tablica elementów innej tablicy. W razie potrzeby będzie można przydzielić pamięci w celu uwzględnienia nowych elementów. Nie jest możliwe kopiowanie elementów tablicy do samej siebie.  
+ Wywołaj tę metodę w celu zastąpienia elementów tablicy elementów innej tablicy. Jeśli to konieczne, aby uwzględnić nowe elementy zostaną przydzielone pamięci. Nie jest możliwe skopiować elementy tablicy do samego siebie.  
   
  Jeśli ma zostać zachowana istniejącą zawartość elementu tablicy, użyj [CAtlArray::Append](#append) zamiast tego.  
   
- W kompilacjach do debugowania ATLASSERT zostanie wygenerowany, jeśli istniejące `CAtlArray` obiekt nie jest prawidłowa, lub jeśli `aSrc` odwołuje się do tego samego obiektu. Nieprawidłowe argumenty w kompilacjach wydania może spowodować nieprzewidywalne zachowanie.  
+ W kompilacjach do debugowania ATLASSERT zostanie wygenerowany, jeśli istniejące `CAtlArray` obiekt nie jest prawidłowa, lub jeśli *aSrc* odwołuje się do tego samego obiektu. W kompilacjach do wydania nieprawidłowe argumenty może prowadzić do nieprzewidywalne zachowanie.  
   
 > [!NOTE]
-> `CAtlArray::Copy` nie obsługuje tablic składające się z utworzonych z elementów [CAutoPtr](../../atl/reference/cautoptr-class.md) klasy.  
+> `CAtlArray::Copy` obsługuje tablice składające się z elementów utworzonych za pomocą [CAutoPtr](../../atl/reference/cautoptr-class.md) klasy.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Utilities#5](../../atl/codesnippet/cpp/catlarray-class_5.cpp)]  
   
 ##  <a name="freeextra"></a>  CAtlArray::FreeExtra  
- Wywołaj tę metodę, aby usunąć wszelkie puste elementy z tablicy.  
+ Wywołaj tę metodę w celu usunięcia żadnych pustych elementów z tablicy.  
   
 ```
 void FreeExtra() throw();
@@ -225,10 +225,10 @@ void FreeExtra() throw();
 ### <a name="remarks"></a>Uwagi  
  Wszelkie puste elementy są usuwane, ale rozmiar i górna granica tablicy pozostają niezmienione.  
   
- W kompilacjach do debugowania ATLASSERT zostanie wygenerowany, jeśli obiekt CAtlArray jest nieprawidłowy lub tablica może spowodować przekroczenie maksymalnego rozmiaru.  
+ W kompilacjach do debugowania ATLASSERT zostanie wygenerowany, jeśli obiekt CAtlArray jest nieprawidłowy lub tablicy spowodowałoby przekroczenie maksymalnego rozmiaru.  
   
 ##  <a name="getat"></a>  CAtlArray::GetAt  
- Wywołanie, że tę metodę w celu pobiera jeden element z obiektu array.  
+ Za pośrednictwem wywołania tej metody pobiera pojedynczy element z obiektu array.  
   
 ```
 const E& GetAt(size_t iElement) const throw();
@@ -236,36 +236,36 @@ E& GetAt(size_t iElement) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iElement`  
+ *iElement*  
  Wartość indeksu elementu tablicy do zwrócenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca odwołanie do elementu tablicy wymagane.  
   
 ### <a name="remarks"></a>Uwagi  
- W kompilacjach do debugowania ATLASSERT zostanie wygenerowany, jeśli `iElement` przekracza liczbę elementów w tablicy. Nieprawidłowy argument w kompilacjach wydania może spowodować nieprzewidywalne zachowanie.  
+ W kompilacjach do debugowania ATLASSERT zostanie wygenerowany, jeśli *iElement* przekracza liczbę elementów w tablicy. W kompilacjach do wydania nieprawidłowy argument może prowadzić do nieprzewidywalne zachowanie.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Utilities#6](../../atl/codesnippet/cpp/catlarray-class_6.cpp)]  
   
 ##  <a name="getcount"></a>  CAtlArray::GetCount  
- Wywołaj tę metodę, aby zwrócić liczby elementy przechowywane w tablicy.  
+ Wywołaj tę metodę, aby zwrócić liczbę elementów przechowywanych w tablicy.  
   
 ```
 size_t GetCount() const throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca liczbę elementów przechowywane w tablicy.  
+ Zwraca liczbę elementów przechowywanych w tablicy.  
   
 ### <a name="remarks"></a>Uwagi  
- Pierwszy element w tablicy jest dostępna na pozycji 0, wartość zwracana przez `GetCount` ma zawsze numer 1 większa niż największa wartość indeksu.  
+ Podobnie jak do pierwszego elementu w tablicy na pozycji 0, wartość zwracana przez `GetCount` ma zawsze numer 1 większy od największego indeksu.  
   
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CAtlArray::GetAt](#getat).  
   
 ##  <a name="getdata"></a>  CAtlArray::GetData  
- Wywołaj tę metodę w celu zwraca wskaźnik do pierwszego elementu w tablicy.  
+ Wywołaj tę metodę, aby zwrócić wskaźnik do pierwszego elementu w tablicy.  
   
 ```
 E* GetData() throw();
@@ -273,86 +273,86 @@ const E* GetData() const throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wskaźnik do lokalizacji pamięci przechowywania pierwszego elementu w tablicy. Jeśli elementy nie są dostępne, zostanie zwrócona wartość NULL.  
+ Zwraca wskaźnik do lokalizacji pamięci, przechowywania pierwszego elementu w tablicy. Jeśli żadne elementy są dostępne, zwracana jest wartość NULL.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Utilities#7](../../atl/codesnippet/cpp/catlarray-class_7.cpp)]  
   
 ##  <a name="inargtype"></a>  CAtlArray::INARGTYPE  
- Typ danych służących do dodawania elementów do tablicy.  
+ Typ danych na potrzeby dodawania elementów do tablicy.  
   
 ```
 typedef ETraits::INARGTYPE INARGTYPE;
 ```  
   
 ##  <a name="insertarrayat"></a>  CAtlArray::InsertArrayAt  
- Wywołanie tej metody, aby wstawić jedną tablicę do innego.  
+ Wywołaj tę metodę, aby wstawić jednej tablicy do innej.  
   
 ```
 void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iStart`  
- Indeks, jaką tablica jest do wstawienia.  
+ *iStart*  
+ Indeks, w którym ma zostać wstawiony tablicy.  
   
- `paNew`  
- Tablica do wstawienia.  
+ *paNew*  
+ Tablica, która ma zostać wstawiony.  
   
 ### <a name="remarks"></a>Uwagi  
- Elementy z tablicy `paNew` są kopiowane do obiektu tablicy, zaczynając od elementu `iStart`. Istniejące elementy tablicy są przenoszone w celu uniknięcia zastąpieniem.  
+ Elementy z tablicy *paNew* są kopiowane do obiektu tablicy, zaczynając od elementu *iStart*. Istniejące elementy tablicy są przenoszone w celu uniknięcia zastąpieniem.  
   
- W kompilacjach do debugowania ATLASSERT zostanie wygenerowany, jeśli `CAtlArray` obiekt nie jest prawidłowa, lub jeśli `paNew` wskaźnika jest wartością NULL lub jest nieprawidłowy.  
+ W kompilacjach do debugowania ATLASSERT zostanie wygenerowany, jeśli `CAtlArray` obiekt nie jest prawidłowa, lub jeśli *paNew* wskaźnik jest wartość NULL lub jest nieprawidłowy.  
   
 > [!NOTE]
-> `CAtlArray::InsertArrayAt` nie obsługuje tablic składające się z utworzonych z elementów [CAutoPtr](../../atl/reference/cautoptr-class.md) klasy.  
+> `CAtlArray::InsertArrayAt` obsługuje tablice składające się z elementów utworzonych za pomocą [CAutoPtr](../../atl/reference/cautoptr-class.md) klasy.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Utilities#8](../../atl/codesnippet/cpp/catlarray-class_8.cpp)]  
   
 ##  <a name="insertat"></a>  CAtlArray::InsertAt  
- Wywołaj tę metodę, aby wstawić nowego elementu (lub wiele kopii elementu) w obiekcie tablicy.  
+ Wywołaj tę metodę, aby wstawić nowego elementu (lub wiele kopii elementu) do obiektu tablicy.  
   
 ```
 void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iElement`  
+ *iElement*  
  Indeks, w którym element lub elementy mają zostać wstawione.  
   
- `element`  
+ *Element*  
  Wartość elementu lub elementów do wstawienia.  
   
- `nCount`  
+ *nCount*  
  Liczba elementów do dodania.  
   
 ### <a name="remarks"></a>Uwagi  
- Wstawia jedną lub więcej elementów do tablicy, zaczynając od indeksu `iElement`. Istniejące elementy zostaną przeniesione do uniknięcia zastąpieniem.  
+ Wstawia jedną lub więcej elementów do tablicy, zaczynając od indeksu *iElement*. Istniejące elementy są przenoszone w celu uniknięcia zastąpieniem.  
   
- W kompilacjach do debugowania ATLASSERT zostanie wygenerowany, jeśli `CAtlArray` obiektu jest nieprawidłowa, liczba elementów do dodania wynosi zero lub łączna liczba elementów jest za duża dla tablicy, tak aby zawierać. W kompilacjach sprzedaży detalicznej nieprawidłowe parametry przekazywania może spowodować nieoczekiwane wyniki.  
+ W kompilacjach do debugowania ATLASSERT zostanie wygenerowany, jeśli `CAtlArray` obiekt jest nieprawidłowy, liczbę elementów do dodania ma wartość zero lub łączna liczba elementów jest za duży dla tablicy zawiera. W kompilacjach do sprzedaży detalicznej przekazując nieprawidłowe parametry mogą powodować nieprzewidywalne skutki.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Utilities#9](../../atl/codesnippet/cpp/catlarray-class_9.cpp)]  
   
 ##  <a name="isempty"></a>  CAtlArray::IsEmpty  
- Wywołanie tej metody, aby sprawdzić, czy tablica jest pusta.  
+ Wywołaj tę metodę, aby sprawdzić, czy tablica jest pusta.  
   
 ```
 bool IsEmpty() const throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość PRAWDA, jeśli tablica jest pusta, wartość false w przeciwnym razie wartość.  
+ Zwraca wartość PRAWDA, jeśli tablica jest pusta, wartość false w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
- Tablica jest określany jako pustą, jeśli go nie zawiera żadnych elementów. W związku z tym nawet jeśli tablica zawiera puste elementy, nie jest pusty.  
+ Tablica jest określane jako puste, jeśli go nie zawiera żadnych elementów. W związku z tym nawet jeśli tablica zawiera puste elementy, nie jest pusty.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Utilities#10](../../atl/codesnippet/cpp/catlarray-class_10.cpp)]  
   
-##  <a name="operator_at"></a>  [CAtlArray::operator]  
- Wywołanie tego operatora zwraca odwołanie do elementu w tablicy.  
+##  <a name="operator_at"></a>  [] CAtlArray::operator  
+ Wywołaj Ten operator zwraca odwołanie do elementu w tablicy.  
   
 ```
 E& operator[](size_t ielement) throw();
@@ -360,16 +360,16 @@ const E& operator[](size_t ielement) const throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iElement`  
+ *iElement*  
  Wartość indeksu elementu tablicy do zwrócenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Zwraca odwołanie do elementu tablicy wymagane.  
   
 ### <a name="remarks"></a>Uwagi  
- Pełni podobną funkcję do [CAtlArray::GetAt](#getat). W odróżnieniu od klasy MFC [carray —](../../mfc/reference/carray-class.md), nie można użyć tego operatora w zastępstwie [CAtlArray::SetAt](#setat).  
+ Pełni funkcję podobną do [CAtlArray::GetAt](#getat). W odróżnieniu od klasy MFC [CArray](../../mfc/reference/carray-class.md), nie można używać tego operatora w zastępstwie [CAtlArray::SetAt](#setat).  
   
- W kompilacjach do debugowania ATLASSERT zostanie wygenerowany, jeśli `iElement` przekracza całkowitą liczbę elementów w tablicy. W kompilacjach detalicznej nieprawidłowy parametr może spowodować nieoczekiwane wyniki.  
+ W kompilacjach do debugowania ATLASSERT zostanie wygenerowany, jeśli *iElement* przekracza całkowitą liczbę elementów w tablicy. W kompilacjach do sprzedaży detalicznej nieprawidłowy parametr mogą powodować nieprzewidywalne skutki.  
   
 ##  <a name="outargtype"></a>  CAtlArray::OUTARGTYPE  
  Typ danych używany do pobierania elementów z tablicy.  
@@ -388,94 +388,94 @@ void RemoveAll() throw();
 ### <a name="remarks"></a>Uwagi  
  Usuwa wszystkie elementy z obiektu array.  
   
- Ta metoda wywołuje [CAtlArray::SetCount](#setcount) zmiany rozmiaru tablicy, a następnie zwalnia wszelkie alokacji pamięci.  
+ Ta metoda wywołuje [CAtlArray::SetCount](#setcount) zmiany rozmiaru tablicy i następnie zwalnia wszelkie ilość przydzielonej pamięci.  
   
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CAtlArray::IsEmpty](#isempty).  
   
 ##  <a name="removeat"></a>  CAtlArray::RemoveAt  
- Wywołaj tę metodę, aby usunąć co najmniej jednego elementu z tablicy.  
+ Wywołaj tę metodę, aby usunąć jeden lub więcej elementów z tablicy.  
   
 ```
 void RemoveAt(size_t iElement, size_t nCount = 1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iElement`  
+ *iElement*  
  Indeks pierwszego elementu do usunięcia.  
   
- `nCount`  
+ *nCount*  
  Liczba elementów do usunięcia.  
   
 ### <a name="remarks"></a>Uwagi  
- Usuwa co najmniej jednego elementu z tablicy. Wszystkie pozostałe elementy są przesuwane w dół. Górna granica jest zmniejszana, ale pamięci nie jest zwalniane do wywołania [CAtlArray::FreeExtra](#freeextra) staje się.  
+ Usuwa jeden lub więcej elementów z tablicy. Wszystkie pozostałe elementy są przesuwane w dół. Górna granica zostanie zmniejszony, ale pamięć nie jest zwalniana do momentu wywołania [CAtlArray::FreeExtra](#freeextra) wykonano.  
   
- W kompilacjach do debugowania ATLASSERT zostanie wygenerowany, jeśli `CAtlArray` obiekt nie jest prawidłowa, lub, jeśli łączna liczba `iElement` i `nCount` przekracza całkowitą liczbę elementów w tablicy. W kompilacjach sprzedaży detalicznej nieprawidłowe parametry może spowodować nieoczekiwane wyniki.  
+ W kompilacjach do debugowania ATLASSERT zostanie wygenerowany, jeśli `CAtlArray` obiekt nie jest prawidłowa, lub jeśli łączna liczba *iElement* i *nCount* przekracza całkowitą liczbę elementów w tablicy. W kompilacjach do sprzedaży detalicznej nieprawidłowe parametry mogą powodować nieprzewidywalne skutki.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Utilities#11](../../atl/codesnippet/cpp/catlarray-class_11.cpp)]  
   
 ##  <a name="setat"></a>  CAtlArray::SetAt  
- Wywołanie tej metody można ustawić wartości elementu w obiekcie tablicy.  
+ Wywołaj tę metodę, aby ustawić wartość elementu w obiekcie tablicy.  
   
 ```
 void SetAt(size_t iElement, INARGTYPE element);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iElement`  
- Indeks wskazanie do elementu tablicy można ustawić.  
+ *iElement*  
+ Indeks wskazujący element tablicy do ustawienia.  
   
- `element`  
+ *Element*  
  Nowa wartość określonego elementu.  
   
 ### <a name="remarks"></a>Uwagi  
- W kompilacjach do debugowania ATLASSERT zostanie wygenerowany, jeśli `iElement` przekracza liczbę elementów w tablicy. Nieprawidłowy parametr w kompilacjach sprzedaży detalicznej, może spowodować nieoczekiwane wyniki.  
+ W kompilacjach do debugowania ATLASSERT zostanie wygenerowany, jeśli *iElement* przekracza liczbę elementów w tablicy. Nieprawidłowy parametr w kompilacjach do sprzedaży detalicznej, może spowodować nieprzewidywalne rezultaty.  
   
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CAtlArray::GetAt](#getat).  
   
 ##  <a name="setcount"></a>  CAtlArray::SetCount  
- Wywołaj tę metodę, aby ustawić rozmiar obiektu tablicy.  
+ Wywołaj tę metodę, aby ustawić rozmiar obiektu array.  
   
 ```
 bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nNewSize`  
+ *nNewSize*  
  Wymagany rozmiar tablicy.  
   
- `nGrowBy`  
- Wartość używana do określenia wielkość bufora. Wartość -1 powoduje, że wewnętrznie obliczonej wartości do użycia.  
+ *nGrowBy*  
+ Wartość używana do określenia wielkość bufora. Wartość -1 powoduje, że wewnętrznie obliczoną wartość ma być używany.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość PRAWDA, jeśli tablica jest pomyślnie zmieniony, wartość false w przeciwnym razie wartość.  
+ Zwraca wartość PRAWDA, jeśli tablica jest pomyślnie o zmienionym rozmiarze, wartość false w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
- Można zwiększyć lub zmniejszyć rozmiar tablicy. Po zwiększeniu, bardzo puste elementy są dodawane do tablicy. Jeśli zmniejszyć, zostaną usunięte elementy z największych indeksami i zwolnienie pamięci.  
+ Można zwiększyć lub zmniejszyć rozmiar tablicy. Jeśli zwiększona, bardzo puste elementy są dodawane do tablicy. Jeśli spadły, elementy z największych indeksy zostaną usunięte, a pamięć zwolniona.  
   
- Ta metoda umożliwia ustawienie rozmiaru tablicy przed jego użyciem. Jeśli `SetCount` nie jest używany, proces dodawania elementów — i wykonać alokacji pamięci kolejnych — zmniejsza wydajność i fragmentu pamięci.  
+ Użyj tej metody można ustawić rozmiar tablicy przed jego użyciem. Jeśli `SetCount` nie jest używany, proces dodawania elementów — i wykonać alokacji pamięci kolejnych — spowoduje to zmniejszyć wydajność i fragmentu pamięci.  
   
 ### <a name="example"></a>Przykład  
  Zobacz przykład [CAtlArray::GetData](#getdata).  
   
 ##  <a name="setatgrow"></a>  CAtlArray::SetAtGrow  
- Wywołaj tę metodę, aby ustawić wartość elementu w obiekcie tablicy, rozszerzanie tablicy zgodnie z potrzebami.  
+ Wywołaj tę metodę, aby ustawić wartość elementu w obiekcie tablicy, rozszerzając tablicy zgodnie z potrzebami.  
   
 ```
 void SetAtGrow(size_t iElement, INARGTYPE element);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `iElement`  
- Indeks wskazanie do elementu tablicy można ustawić.  
+ *iElement*  
+ Indeks wskazujący element tablicy do ustawienia.  
   
- `element`  
+ *Element*  
  Nowa wartość określonego elementu.  
   
 ### <a name="remarks"></a>Uwagi  
- Zamienia wartość elementu wskazywanej przez indeks. Jeśli `iElement` jest większy niż bieżący rozmiar tablicy, tablicy jest automatycznie zwiększana przy użyciu wywołania do [CAtlArray::SetCount](#setcount). W kompilacjach do debugowania ATLASSERT zostanie wygenerowany, jeśli `CAtlArray` obiekt jest nieprawidłowy. W kompilacjach sprzedaży detalicznej nieprawidłowe parametry może spowodować nieoczekiwane wyniki.  
+ Zamienia wartość elementu wskazywanego przez indeks. Jeśli *iElement* jest większy niż bieżący rozmiar tablicy, tablica jest automatycznie zwiększana przy użyciu wywołania do [CAtlArray::SetCount](#setcount). W kompilacjach do debugowania ATLASSERT zostanie wygenerowany, jeśli `CAtlArray` obiektu jest nieprawidłowy. W kompilacjach do sprzedaży detalicznej nieprawidłowe parametry mogą powodować nieprzewidywalne skutki.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Utilities#12](../../atl/codesnippet/cpp/catlarray-class_12.cpp)]  
@@ -484,6 +484,6 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
  [Przykładowe MMXSwarm](../../visual-cpp-samples.md)   
  [Przykładowe DynamicConsumer](../../visual-cpp-samples.md)   
  [Przykładowe UpdatePV](../../visual-cpp-samples.md)   
- [Przykładowe ramki](../../visual-cpp-samples.md)   
+ [Przykładowe Neon](../../visual-cpp-samples.md)   
  [Carray — klasa](../../mfc/reference/carray-class.md)   
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

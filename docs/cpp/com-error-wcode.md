@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1354d490446795e55b41fa0c548e8dd8aa38c71b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 810a5c16df1027aba976bea3c165b19f765d15a6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411539"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941843"
 ---
 # <a name="comerrorwcode"></a>_com_error::WCode
 **Microsoft Specific**  
   
- Pobiera kod błędu 16-bitowych przypisywane do hermetyzowany `HRESULT`.  
+ Pobiera kod błędu 16-bitowych zmapowany do zhermetyzowanego HRESULT.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,12 +37,12 @@ WORD WCode ( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Jeśli `HRESULT` znajduje się w zakresie 0x80040200 do 0x8004FFFF **Kodostrzeżenia** metoda zwraca `HRESULT` minus 0x80040200; w przeciwnym razie zwraca wartość zero.  
+ Jeśli wynik HRESULT znajduje się w zakresie 0x80040200 do 0x8004FFFF `WCode` metoda zwróci wartość HRESULT minus 0x80040200; w przeciwnym razie zwraca wartość zero.  
   
 ## <a name="remarks"></a>Uwagi  
- **Kodostrzeżenia** metoda jest używana do cofnąć mapowanie, które odbywa się w modelu COM kod obsługi. Otoka dla **dispinterface** właściwości lub metody wywołuje procedura obsługi pakietów argumentów i wywołania **IDispatch::Invoke**. Po powrocie, jeśli błąd `HRESULT` z `DISP_E_EXCEPTION` jest zwracany, informacje o błędzie jest pobierana z **EXCEPINFO** struktury przekazany do **IDispatch::Invoke**. Kod błędu może być wartością 16-bitowych przechowywane w `wCode` członkiem **EXCEPINFO** struktury lub pełnej 32-bitową wartość w **scode** członkiem **EXCEPINFO**struktury. Jeśli 16-bitowych `wCode` jest zwracany, najpierw musi zostać zmapowana na awarie 32-bitowych `HRESULT`.  
+ `WCode` Metoda służy do cofania mapowanie odbywa się w modelu COM kod pomocy technicznej. Otoka dla `dispinterface` właściwość lub metoda wywołuje procedurę obsługi, która pakietów wywołań i argumenty `IDispatch::Invoke`. Po powrocie, jeśli błąd HRESULT DISP_E_EXCEPTION jest zwracana, informacje o błędzie jest pobierana z `EXCEPINFO` struktury przekazany do `IDispatch::Invoke`. Kod błędu mogą być 16-bitową wartość przechowywana w `wCode` członkiem `EXCEPINFO` struktury lub pełnej 32-bitową wartość w `scode` członkiem `EXCEPINFO` struktury. Jeśli 16-bitowych `wCode` ma zostać zwrócona, najpierw musi być zamapowany na 32-bitowych błąd HRESULT.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [_com_error::HRESULTToWCode](../cpp/com-error-hresulttowcode.md)   

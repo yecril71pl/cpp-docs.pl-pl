@@ -1,5 +1,5 @@
 ---
-title: Kontynuuj — instrukcja (C++) | Dokumentacja firmy Microsoft
+title: Continue — instrukcja (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b153c9f5dfae93f1a5cb83dc2b9bcfc09e77af07
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97422a09f890686c4d414eea13da7db891494cc4
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947954"
 ---
 # <a name="continue-statement-c"></a>continue — instrukcja (C++)
-Wymusza przekazanie sterowania do kontrolowania wyrażenia najmniejszą otaczającej [czy](../cpp/do-while-statement-cpp.md), [dla](../cpp/for-statement-cpp.md), lub [podczas](../cpp/while-statement-cpp.md) pętli.  
+Wymusza transfer kontroli do kontrolowania wyrażenia najmniejszy otaczający [czy](../cpp/do-while-statement-cpp.md), [dla](../cpp/for-statement-cpp.md), lub [podczas](../cpp/while-statement-cpp.md) pętli.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,17 +33,17 @@ continue;
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Wszystkie pozostałe instrukcje w bieżącej iteracji nie są wykonywane. Następnej iteracji pętli jest określane w następujący sposób:  
+ Wszystkie pozostałe instrukcje w bieżącej iteracji nie zostaną wykonane. Następnej iteracji pętli jest określane w następujący sposób:  
   
--   W `do` lub `while` pętli następnej iteracji rozpoczyna się od wyrażenia kontrolowanie reevaluating `do` lub `while` instrukcji.  
+-   W **czy** lub **podczas** pętli, następnej iteracji należy zacząć od reevaluating kontrolowanie wyrażenia **czy** lub **podczas** instrukcji.  
   
--   W `for` pętli (przy użyciu składni `for`(`init-expr`; `cond-expr`; `loop-expr`)), `loop-expr` klauzuli jest wykonywana. Następnie przy użyciu `cond-expr` klauzuli jest ponownie oceniane i, w zależności od wyniku pętli albo kończy się lub innego iteracji.  
+-   W **dla** pętli (przy użyciu składni `for`(`init-expr`; `cond-expr`; `loop-expr`)), `loop-expr` klauzula jest wykonywany. A następnie `cond-expr` klauzula jest ponownie oceniane i, w zależności od wyniku pętli albo kończy się lub występuje innej iteracji.  
   
- W poniższym przykładzie przedstawiono sposób `continue` instrukcji można użyć do obejścia fragmentów kodu i rozpocząć następnej iteracji pętli.  
+ W poniższym przykładzie pokazano sposób, w jaki **nadal** instrukcja może być używana do obejścia sekcje kodu i rozpocząć kolejnej iteracji pętli.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp 
 // continue_statement.cpp  
 #include <stdio.h>  
 int main()  

@@ -1,5 +1,5 @@
 ---
-title: złożone&lt;podwójnej długości&gt; | Dokumentacja firmy Microsoft
+title: złożone&lt;typu long double&gt; | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 083ef4cea345e7b600782c09a7bdfdc09b4af3d2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7bf1de055318f61c4d4322a2c9149c8c28b9afb9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844676"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962861"
 ---
-# <a name="complexltlong-doublegt"></a>złożone&lt;podwójnej długości&gt;
+# <a name="complexltlong-doublegt"></a>złożone&lt;typu long double&gt;
 
-Opisuje obiekt, który przechowuje uporządkowanej parę obiektów zarówno typu `long double`, najpierw reprezentujący część liczby złożonej, a drugi rzeczywista reprezentujący urojony części.
+Opisuje obiekt, który przechowuje uporządkowana para obiektów zarówno typu **typu long double**, najpierw reprezentujących część liczby zespolonej, a druga rzeczywista reprezentujący urojone części.
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,21 +47,21 @@ complex(
 
 ### <a name="parameters"></a>Parametry
 
-`_RealVal` Wartość typu **podwójnej długości** rzeczywistych część liczby złożonej tworzona.
+*_RealVal* wartości typu **typu long double** rzeczywistych część liczby zespolonej budowany.
 
-`_ImagVal` Wartość typu `long double` urojony część liczby złożonej tworzona.
+*_ImagVal* wartości typu **typu long double** dla urojone części liczb zespolonych budowany.
 
-`complexNum` Liczby złożonej typu **podwójne** lub typu **float** których części rzeczywistą i urojony są używane do zainicjowania liczbą typu `long double` tworzona.
+*complexNum* liczby zespolonej typu **double** lub typu **float** którego rzeczywiste i urojone części są stosowane do inicjalizacji liczby zespolonej typu **double**budowany.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Liczba złożonych typu `long double`.
+Liczby zespolonej typu **typu long double**.
 
 ## <a name="remarks"></a>Uwagi
 
-Jawna specjalizacja szablonu klasy złożone, aby złożonych klasy typu `long double` różni się od klasy szablonu tylko w przypadku konstruktorów definiuje. Konwersja z `long double` do **float** może być pośrednie, ale konwersja z **podwójne** do `long double` musi być **jawne**. Korzystanie z **jawne** wyklucza rozpoczęciu konwersji typu przy użyciu składni przypisania.
+Jawna specjalizacja szablonu klasy złożone i klasy złożone typu **typu long double** różni się od klasy szablonu, tylko w konstruktorach definiuje. Konwersja z **typu long double** do **float** może być niejawne, ale konwersja z **double** do **typu long double** jest wymagana jako **jawne**. Korzystanie z **jawne** wyklucza rozpoczęcia z konwersję typu przy użyciu składni przypisania.
 
-Aby uzyskać więcej informacji na klasy szablonu `complex`, zobacz [klasy złożone](../standard-library/complex-class.md). Aby uzyskać listę elementów członkowskich klasy szablonu `complex`, zobacz.
+Aby uzyskać więcej informacji na temat klasy szablonu `complex`, zobacz [complex — klasa](../standard-library/complex-class.md). Aby uzyskać listę elementów członkowskich klasy szablonu `complex`, zobacz.
 
 ## <a name="example"></a>Przykład
 
@@ -122,7 +122,7 @@ Argument of c3 is recovered from c3 using:
 
 **Nagłówek**: \<złożonych >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

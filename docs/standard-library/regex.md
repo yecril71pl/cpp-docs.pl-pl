@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 109d7ee960b6788468c473e88321a00a38fb4379
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7ff0fffeffd10f382f4d0d4fe6361c2eddac55e3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862393"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963134"
 ---
 # <a name="ltregexgt"></a>&lt;regex&gt;
 
-Definiuje klasę szablonu, aby przeanalizować [wyrażenia regularne (C++)](../standard-library/regular-expressions-cpp.md)oraz kilka klas szablonów i funkcji do wyszukiwania tekstu pasuje do obiektu będącego wyrażeniem regularnym.
+Definiuje klasę szablonu, można przeanalizować [wyrażenia regularne (C++)](../standard-library/regular-expressions-cpp.md)oraz kilka klas szablonów i funkcji do wyszukiwania tekstu dopasowania do obiektu będącego wyrażeniem regularnym.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,73 +35,73 @@ Definiuje klasę szablonu, aby przeanalizować [wyrażenia regularne (C++)](../s
 
 ## <a name="remarks"></a>Uwagi
 
-Aby utworzyć obiekt będący wyrażeniem regularnym, użyj klasy szablonu [basic_regex — klasa](../standard-library/basic-regex-class.md) lub jednego z jego specjalizacje [regex](../standard-library/regex-typedefs.md#regex) i [wregex](../standard-library/regex-typedefs.md#wregex), wraz z flagami składni Typ [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type).
+Aby utworzyć obiekt będący wyrażeniem regularnym, użyj klasy szablonu [basic_regex — klasa](../standard-library/basic-regex-class.md) lub jeden z jego specjalizacji [wyrażenia regularnego](../standard-library/regex-typedefs.md#regex) i [wregex](../standard-library/regex-typedefs.md#wregex), wraz z flagami składni Typ [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type).
 
-Do wyszukiwania tekstu pasuje do obiektu będącego wyrażeniem regularnym, należy użyć funkcji szablonu [regex_match —](../standard-library/regex-functions.md#regex_match) i [regex_search —](../standard-library/regex-functions.md#regex_search), wraz z flagami dopasowanie typu [regex_constants::match_ flag_type](../standard-library/regex-constants-class.md#match_flag_type). Funkcje zwracają wyniki za pomocą klasy szablonu [match_results — klasa](../standard-library/match-results-class.md) i jego specjalizacje [cmatch](../standard-library/regex-typedefs.md#cmatch), [wcmatch](../standard-library/regex-typedefs.md#wcmatch), [smatch](../standard-library/regex-typedefs.md#smatch), i [wsmatch](../standard-library/regex-typedefs.md#wsmatch), wraz z klasy szablonu [sub_match — klasa](../standard-library/sub-match-class.md) i jego specjalizacje [csub_match](../standard-library/regex-typedefs.md#csub_match), [wcsub_ odpowiada](../standard-library/regex-typedefs.md#wcsub_match), [ssub_match](../standard-library/regex-typedefs.md#ssub_match), i [wssub_match](../standard-library/regex-typedefs.md#wssub_match).
+Aby wyszukać tekst dopasowania do obiektu będącego wyrażeniem regularnym, należy użyć funkcji szablonu [regex_match —](../standard-library/regex-functions.md#regex_match) i [regex_search —](../standard-library/regex-functions.md#regex_search), wraz z użyciem flag dopasowanie typu [regex_constants::match_ flag_type](../standard-library/regex-constants-class.md#match_flag_type). Te funkcje zwracają wyniki za pomocą klasy szablonu [match_results, klasa](../standard-library/match-results-class.md) i jego specjalizacji [cmatch](../standard-library/regex-typedefs.md#cmatch), [wcmatch](../standard-library/regex-typedefs.md#wcmatch), [smatch](../standard-library/regex-typedefs.md#smatch), i [wsmatch](../standard-library/regex-typedefs.md#wsmatch), wraz z klasą szablonu [sub_match, klasa](../standard-library/sub-match-class.md) i jego specjalizacji [csub_match](../standard-library/regex-typedefs.md#csub_match), [wcsub_ odpowiada](../standard-library/regex-typedefs.md#wcsub_match), [ssub_match](../standard-library/regex-typedefs.md#ssub_match), i [wssub_match](../standard-library/regex-typedefs.md#wssub_match).
 
-Aby zastąpić tekst, który pasuje do obiektu będącego wyrażeniem regularnym, należy użyć funkcji szablonu [regex_replace —](../standard-library/regex-functions.md#regex_replace), wraz z flagami dopasowanie typu [regex_constants::match_flag_type](../standard-library/regex-constants-class.md#match_flag_type).
+Aby zamienić tekst, który odpowiada obiektu będącego wyrażeniem regularnym, należy użyć funkcji szablonu [regex_replace —](../standard-library/regex-functions.md#regex_replace), wraz z użyciem flag dopasowanie typu [regex_constants::match_flag_type](../standard-library/regex-constants-class.md#match_flag_type).
 
-Aby Iterowanie za pomocą wielu dopasowań obiektu będącego wyrażeniem regularnym, należy użyć klasy szablonu [regex_iterator — klasa](../standard-library/regex-iterator-class.md) i [regex_token_iterator — klasa](../standard-library/regex-token-iterator-class.md) lub jednej z ich specjalizacje [ cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator), [sregex_iterator](../standard-library/regex-typedefs.md#sregex_iterator), [wcregex_iterator](../standard-library/regex-typedefs.md#wcregex_iterator), [wsregex_iterator](../standard-library/regex-typedefs.md#wsregex_iterator), [cregex_token_iterator ](../standard-library/regex-typedefs.md#cregex_token_iterator), [sregex_token_iterator](../standard-library/regex-typedefs.md#sregex_token_iterator), [wcregex_token_iterator](../standard-library/regex-typedefs.md#wcregex_token_iterator), lub [wsregex_token_iterator](../standard-library/regex-typedefs.md#wsregex_token_iterator), wraz z flagami dopasowanie typu [regex_constants::match_flag_type](../standard-library/regex-constants-class.md#match_flag_type).
+Do iteracji przez wiele dopasowań obiektu będącego wyrażeniem regularnym, należy użyć klas szablonów [regex_iterator, klasa](../standard-library/regex-iterator-class.md) i [regex_token_iterator, klasa](../standard-library/regex-token-iterator-class.md) lub jednej z ich specjalizacje [ cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator), [sregex_iterator](../standard-library/regex-typedefs.md#sregex_iterator), [wcregex_iterator](../standard-library/regex-typedefs.md#wcregex_iterator), [wsregex_iterator](../standard-library/regex-typedefs.md#wsregex_iterator), [cregex_token_iterator ](../standard-library/regex-typedefs.md#cregex_token_iterator), [sregex_token_iterator](../standard-library/regex-typedefs.md#sregex_token_iterator), [wcregex_token_iterator](../standard-library/regex-typedefs.md#wcregex_token_iterator), lub [wsregex_token_iterator](../standard-library/regex-typedefs.md#wsregex_token_iterator), wraz z użyciem flag dopasowanie typu [regex_constants::match_flag_type](../standard-library/regex-constants-class.md#match_flag_type).
 
-Aby zmodyfikować szczegóły gramatyki wyrażeń regularnych, zapisać klasy, która implementuje cech wyrażenia regularnego.
+Aby zmodyfikować szczegóły gramatyki wyrażeń regularnych, należy napisać klasę, która implementuje cechy wyrażeń regularnych.
 
 ### <a name="classes"></a>Klasy
 
 |Class|Opis|
 |-|-|
 |[basic_regex](../standard-library/basic-regex-class.md)|Owija wyrażenie regularne.|
-|[match_results](../standard-library/match-results-class.md)|Zawiera sekwencję submatches.|
-|[regex_constants](../standard-library/regex-constants-class.md)|Stałe wybrane blokad.|
-|[regex_error](../standard-library/regex-error-class.md)|Raporty nieprawidłowe wyrażenie regularne.|
-|[regex_iterator](../standard-library/regex-iterator-class.md)|Wykonuje iterację dopasowania wyników.|
-|[regex_traits —](../standard-library/regex-traits-class.md)|Opisuje właściwości elementów do dopasowania.|
-|[regex_traits —\<char >](../standard-library/regex-traits-char-class.md)|Opisuje właściwości `char` do dopasowania.|
-|[regex_traits — < wchar_t >](../standard-library/regex-traits-wchar-t-class.md)|Opisuje właściwości `wchar_t` do dopasowania.|
-|[regex_token_iterator](../standard-library/regex-token-iterator-class.md)|Wykonuje iterację submatches.|
-|[sub_match](../standard-library/sub-match-class.md)|W tym artykule opisano submatch.|
+|[match_results](../standard-library/match-results-class.md)|Zawiera sekwencję poddopasowania.|
+|[regex_constants](../standard-library/regex-constants-class.md)|Stałe są formatowane przy blokad.|
+|[regex_error](../standard-library/regex-error-class.md)|Zgłasza zły wyrażenia regularnego.|
+|[regex_iterator](../standard-library/regex-iterator-class.md)|Wykonuje iterację przez dopasowanie wyników.|
+|[regex_traits](../standard-library/regex-traits-class.md)|Zawiera opis właściwości elementów do dopasowania.|
+|[regex_traits\<char >](../standard-library/regex-traits-char-class.md)|W tym artykule opisano charakterystyki **char** do dopasowania.|
+|[regex_traits < wchar_t >](../standard-library/regex-traits-wchar-t-class.md)|W tym artykule opisano charakterystyki **wchar_t** do dopasowania.|
+|[regex_token_iterator](../standard-library/regex-token-iterator-class.md)|Wykonuje iterację przez poddopasowania.|
+|[sub_match](../standard-library/sub-match-class.md)|W tym artykule opisano poddopasowanie.|
 
 ### <a name="type-definitions"></a>Definicje typów
 
 |||
 |-|-|
-|[cmatch](../standard-library/regex-typedefs.md#cmatch)|Definicji dla typu `char` `match_results`.|
-|[cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator)|Definicji dla typu `char` `regex_iterator`.|
-|[cregex_token_iterator](../standard-library/regex-typedefs.md#cregex_token_iterator)|Definicji dla typu `char` `regex_token_iterator`.|
-|[csub_match](../standard-library/regex-typedefs.md#csub_match)|Definicji dla typu `char` `sub_match`.|
-|[regex](../standard-library/regex-typedefs.md#regex)|Definicji dla typu `char` `basic_regex`.|
-|[smatch](../standard-library/regex-typedefs.md#smatch)|Definicji dla typu `string` `match_results`.|
-|[sregex_iterator](../standard-library/regex-typedefs.md#sregex_iterator)|Definicji dla typu `string` `regex_iterator`.|
-|[sregex_token_iterator](../standard-library/regex-typedefs.md#sregex_token_iterator)|Definicji dla typu `string` `regex_token_iterator`.|
-|[ssub_match](../standard-library/regex-typedefs.md#ssub_match)|Definicji dla typu `string` `sub_match`.|
-|[wcmatch](../standard-library/regex-typedefs.md#wcmatch)|Definicji dla typu `wchar_t` `match_results`.|
-|[wcregex_iterator](../standard-library/regex-typedefs.md#wcregex_iterator)|Definicji dla typu `wchar_t` `regex_iterator`.|
-|[wcregex_token_iterator](../standard-library/regex-typedefs.md#wcregex_token_iterator)|Definicji dla typu `wchar_t` `regex_token_iterator`.|
-|[wcsub_match](../standard-library/regex-typedefs.md#wcsub_match)|Definicji dla typu `wchar_t` `sub_match`.|
-|[wregex](../standard-library/regex-typedefs.md#wregex)|Definicji dla typu `wchar_t` `basic_regex`.|
-|[wsmatch](../standard-library/regex-typedefs.md#wsmatch)|Definicji dla typu `wstring` `match_results`.|
-|[wsregex_iterator](../standard-library/regex-typedefs.md#wsregex_iterator)|Definicji dla typu `wstring` `regex_iterator`.|
-|[wsregex_token_iterator](../standard-library/regex-typedefs.md#wsregex_token_iterator)|Definicji dla typu `wstring` `regex_token_iterator`.|
-|[wssub_match](../standard-library/regex-typedefs.md#wssub_match)|Definicji dla typu `wstring` `sub_match`.|
+|[cmatch](../standard-library/regex-typedefs.md#cmatch)|Wpisz definicję dla **char** `match_results`.|
+|[cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator)|Wpisz definicję dla **char** `regex_iterator`.|
+|[cregex_token_iterator](../standard-library/regex-typedefs.md#cregex_token_iterator)|Wpisz definicję dla **char** `regex_token_iterator`.|
+|[csub_match](../standard-library/regex-typedefs.md#csub_match)|Wpisz definicję dla **char** `sub_match`.|
+|[regex](../standard-library/regex-typedefs.md#regex)|Wpisz definicję dla **char** `basic_regex`.|
+|[smatch](../standard-library/regex-typedefs.md#smatch)|Wpisz definicję dla `string` `match_results`.|
+|[sregex_iterator](../standard-library/regex-typedefs.md#sregex_iterator)|Wpisz definicję dla `string` `regex_iterator`.|
+|[sregex_token_iterator](../standard-library/regex-typedefs.md#sregex_token_iterator)|Wpisz definicję dla `string` `regex_token_iterator`.|
+|[ssub_match](../standard-library/regex-typedefs.md#ssub_match)|Wpisz definicję dla `string` `sub_match`.|
+|[wcmatch](../standard-library/regex-typedefs.md#wcmatch)|Wpisz definicję dla **wchar_t** `match_results`.|
+|[wcregex_iterator](../standard-library/regex-typedefs.md#wcregex_iterator)|Wpisz definicję dla **wchar_t** `regex_iterator`.|
+|[wcregex_token_iterator](../standard-library/regex-typedefs.md#wcregex_token_iterator)|Wpisz definicję dla **wchar_t** `regex_token_iterator`.|
+|[wcsub_match](../standard-library/regex-typedefs.md#wcsub_match)|Wpisz definicję dla **wchar_t** `sub_match`.|
+|[wregex](../standard-library/regex-typedefs.md#wregex)|Wpisz definicję dla **wchar_t** `basic_regex`.|
+|[wsmatch](../standard-library/regex-typedefs.md#wsmatch)|Wpisz definicję dla `wstring` `match_results`.|
+|[wsregex_iterator](../standard-library/regex-typedefs.md#wsregex_iterator)|Wpisz definicję dla `wstring` `regex_iterator`.|
+|[wsregex_token_iterator](../standard-library/regex-typedefs.md#wsregex_token_iterator)|Wpisz definicję dla `wstring` `regex_token_iterator`.|
+|[wssub_match](../standard-library/regex-typedefs.md#wssub_match)|Wpisz definicję dla `wstring` `sub_match`.|
 
 ### <a name="functions"></a>Funkcje
 
 |Funkcja|Opis|
 |-|-|
-|[regex_match](../standard-library/regex-functions.md#regex_match)|Dokładnie odpowiada wyrażeniu regularnemu.|
-|[regex_replace](../standard-library/regex-functions.md#regex_replace)|Zamienia dopasowaniu wyrażenia regularne.|
-|[regex_search](../standard-library/regex-functions.md#regex_search)|Wyszukuje wyrażenie regularne zgodne.|
+|[regex_match](../standard-library/regex-functions.md#regex_match)|Dokładnie pasuje do wyrażenia regularnego.|
+|[regex_replace](../standard-library/regex-functions.md#regex_replace)|Zamienia dopasowany wyrażeń regularnych.|
+|[regex_search](../standard-library/regex-functions.md#regex_search)|Wyszukuje dopasowania wyrażenia regularnego.|
 |[swap](../standard-library/regex-functions.md#swap)|Zamienia `basic_regex` lub `match_results` obiektów.|
 
 ### <a name="operators"></a>Operatory
 
 |Operator|Opis|
 |-|-|
-|[operator==](../standard-library/regex-operators.md#op_eq_eq)|Porównanie różnych obiektów, takie same.|
-|[operator!=](../standard-library/regex-operators.md#op_neq)|Porównanie różnych obiektów, nie jest równa.|
+|[operator==](../standard-library/regex-operators.md#op_eq_eq)|Porównanie różnych obiektów, taki sam.|
+|[operator!=](../standard-library/regex-operators.md#op_neq)|Porównanie różnych obiektów, nie równa się.|
 |[Operator <](../standard-library/regex-operators.md#op_lt)|Porównanie różnych obiektów, poniżej.|
-|[Operator\<=](../standard-library/regex-operators.md#op_gt_eq)|Porównanie różnych obiektów, co najwyżej.|
-|[operator>](../standard-library/regex-operators.md#op_gt)|Porównanie różnych obiektów, większe.|
-|[operator>=](../standard-library/regex-operators.md#op_gt_eq)|Porównanie różnych obiektów, większe lub równe.|
+|[Operator\<=](../standard-library/regex-operators.md#op_gt_eq)|Porównanie różnych obiektów, mniejsze niż lub równe.|
+|[operator>](../standard-library/regex-operators.md#op_gt)|Porównanie różnych obiektów, większa.|
+|[operator>=](../standard-library/regex-operators.md#op_gt_eq)|Porównanie różnych obiektów, większe niż lub równe.|
 |[Operator <<](../standard-library/regex-operators.md#op_lt_lt)|Wstawia `sub_match` w strumieniu.|
 
 ## <a name="see-also"></a>Zobacz także
@@ -109,9 +109,9 @@ Aby zmodyfikować szczegóły gramatyki wyrażeń regularnych, zapisać klasy, k
 [Wyrażenia regularne (C++)](../standard-library/regular-expressions-cpp.md)<br/>
 [regex_constants, klasa](../standard-library/regex-constants-class.md)<br/>
 [regex_error, klasa](../standard-library/regex-error-class.md)<br/>
-[\<wyrażenie regularne > Funkcje](../standard-library/regex-functions.md)<br/>
+[\<wyrażenie regularne > funkcji](../standard-library/regex-functions.md)<br/>
 [regex_iterator, klasa](../standard-library/regex-iterator-class.md)<br/>
-[\<wyrażenie regularne > operatory](../standard-library/regex-operators.md)<br/>
+[\<wyrażenie regularne > operatorów](../standard-library/regex-operators.md)<br/>
 [regex_token_iterator, klasa](../standard-library/regex-token-iterator-class.md)<br/>
 [regex_traits, klasa](../standard-library/regex-traits-class.md)<br/>
 [\<wyrażenie regularne > definicje typów](../standard-library/regex-typedefs.md)<br/>

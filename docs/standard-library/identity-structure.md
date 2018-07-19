@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83180020c20f78c16af0b1b33bada91936b6af9b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f065f7c00d3853d00c1063cd5b2838ec6d1d27b4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844409"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953000"
 ---
 # <a name="identity-structure"></a>identity — Struktura
 
-Struktury, zapewniająca definicją typu jako parametru szablonu.
+Struktury, która zawiera definicję dla typu jako parametru szablonu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,19 +40,19 @@ struct identity {
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`left`|Wartość do identyfikacji.|
+|*left*|Wartość do identyfikacji.|
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa zawiera definicję typu publicznego `type`, który jest taki sam jak typ parametru szablonu. Jest on używany w połączeniu z funkcją szablonu [do przodu](../standard-library/utility-functions.md#forward) aby upewnić się, że parametr funkcji ma żądanego typu.
+Klasa zawiera definicję typu publicznego `type`, która jest taka sama jak wartość parametru szablonu typu. Jest używana w połączeniu z funkcją szablonu [do przodu](../standard-library/utility-functions.md#forward) to upewnić się, że parametr funkcji żądanego typu.
 
-Zgodność ze starszego kodu, klasa definiuje również funkcji identity `operator()` zwraca jej argument `left`.
+Zgodność z starszego kodu, klasa definiuje również funkcji identity `operator()` zwraca jej argument *po lewej stronie*.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<narzędzie >
+**Nagłówek:** \<Narzędzia >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

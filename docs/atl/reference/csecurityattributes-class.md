@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03bda174fb85fa6857e22b851b93bcf1b3192716
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4bc37dd8025009e4f904373fc8aa106c93dc8210
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357509"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879350"
 ---
 # <a name="csecurityattributes-class"></a>Klasa CSecurityAttributes
-Ta klasa jest cienką otoką dla struktury atrybutów zabezpieczeń.  
+Ta klasa jest otoką alokowania elastycznego w strukturze atrybuty zabezpieczeń.  
   
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -53,9 +53,9 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 |[CSecurityAttributes::Set](#set)|Wywołanie tej metody, aby ustawić atrybuty `CSecurityAttributes` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- **SECURITY_ATTRIBUTES** struktura zawiera [deskryptora zabezpieczeń](http://msdn.microsoft.com/library/windows/desktop/aa379561) używany do tworzenia obiektu i określa, czy dziedziczne dojście pobierane przez określenie tej struktury.  
+ `SECURITY_ATTRIBUTES` Struktura zawiera [deskryptora zabezpieczeń](http://msdn.microsoft.com/library/windows/desktop/aa379561) używane do tworzenia obiektu i określa, czy uchwyt pobierane przez określenie tej struktury jest dziedziczone.  
   
- Aby obejrzeć wprowadzenie do modelu kontroli dostępu w systemie Windows, temacie [kontroli dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374860) w zestawie Windows SDK.  
+ Wprowadzenie do modelu kontroli dostępu w Windows, zobacz [kontroli dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374860) w zestawie Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `SECURITY_ATTRIBUTES`  
@@ -74,11 +74,11 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rSecurityDescriptor`  
+ *rSecurityDescriptor*  
  Odwołanie do deskryptora zabezpieczeń.  
   
- `bInheritsHandle`  
- Określa, czy zwrócone dojścia jest dziedziczone po utworzeniu nowego procesu. Jeśli ten element członkowski ma wartość true, nowy proces dziedziczy dojście.  
+ *bInheritsHandle*  
+ Określa, czy zwracany uchwyt jest dziedziczone, po utworzeniu nowego procesu. Jeśli ten element członkowski ma wartość true, nowy proces dziedziczy uchwytu.  
   
 ##  <a name="set"></a>  CSecurityAttributes::Set  
  Wywołanie tej metody, aby ustawić atrybuty `CSecurityAttributes` obiektu.  
@@ -88,18 +88,18 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rSecurityDescriptor`  
+ *rSecurityDescriptor*  
  Odwołanie do deskryptora zabezpieczeń.  
   
- `bInheritHandle`  
- Określa, czy zwrócone dojścia jest dziedziczone po utworzeniu nowego procesu. Jeśli ten element członkowski ma wartość true, nowy proces dziedziczy dojście.  
+ *bInheritHandle*  
+ Określa, czy zwracany uchwyt jest dziedziczone, po utworzeniu nowego procesu. Jeśli ten element członkowski ma wartość true, nowy proces dziedziczy uchwytu.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda jest używana przez konstruktora zainicjować `CSecurityAttributes` obiektu.  
+ Ta metoda jest używana przez konstruktora, aby zainicjować `CSecurityAttributes` obiektu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczenia — przykład](../../visual-cpp-samples.md)   
  [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)   
  [Deskryptor zabezpieczeń](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
- [Przegląd klas](../../atl/atl-class-overview.md)   
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)   
  [Funkcje globalne zabezpieczeń](../../atl/reference/security-global-functions.md)

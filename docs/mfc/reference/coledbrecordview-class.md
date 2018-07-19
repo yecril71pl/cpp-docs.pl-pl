@@ -1,5 +1,5 @@
 ---
-title: Coledbrecordview — klasa | Dokumentacja firmy Microsoft
+title: Klasa COleDBRecordView | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 122ceb1715323e1482b2a8a8544cbe3f6270c713
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 623ba901d1998a899a443d235d65c6b205cfea4f
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037860"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853696"
 ---
 # <a name="coledbrecordview-class"></a>Coledbrecordview — klasa
-Widok, który wyświetla rekordów bazy danych w kontrolkach.  
+Widok wyświetlający rekordy bazy danych w kontrolkach.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -50,20 +50,20 @@ class COleDBRecordView : public CFormView
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[COleDBRecordView::OnGetRowset](#ongetrowset)|Zwraca standard `HRESULT` wartość.|  
-|[COleDBRecordView::OnMove](#onmove)|Aktualizuje bieżącego rekordu (jeśli jest zanieczyszczony) w źródle danych, a następnie przechodzi do określonego rekordu (następnego, poprzedniego, pierwszego lub ostatniego).|  
+|[COleDBRecordView::OnGetRowset](#ongetrowset)|Zwraca wartość HRESULT standardową.|  
+|[COleDBRecordView::OnMove](#onmove)|(Jeśli jest zanieczyszczony) aktualizacji bieżący rekord w źródle danych, a następnie przechodzi do określonego rekordu (dalej, poprzedniego, pierwszego lub ostatniego).|  
   
 ## <a name="remarks"></a>Uwagi  
- Widok jest widokiem formularza bezpośrednio podłączone do `CRowset` obiektu. Widok jest tworzony na podstawie zasobu szablonu okna dialogowego i są wyświetlane pola `CRowset` obiektu w formantach szablonu okna dialogowego. `COleDBRecordView` Obiekt używa wymiana danych okna dialogowego (DDX) i nawigacyjne funkcje wbudowane w `CRowset`, aby zautomatyzować przepływ danych między kontrolek w formularzu i pola zestawu wierszy. `COleDBRecordView` również udostępnia domyślną implementację przenoszenia jako pierwszy dalej, poprzedniego lub ostatniego rekordu i interfejs aktualizowania rekordu w widoku.  
+ Widok jest podłączone bezpośrednio do widoku formularza `CRowset` obiektu. Widok jest tworzony z zasobu szablonu okna dialogowego i są wyświetlane pola `CRowset` obiektu w kontrolkach szablonu okna dialogowego. `COleDBRecordView` Obiekt używa wymiana danych okna dialogowego (DDX) i wyposażone w funkcję nawigacji `CRowset`, aby zautomatyzować przepływ danych między pól zestawu wierszy i formantów w formularzu. `COleDBRecordView` dostarcza również domyślna implementacja przechodzenia do pierwszego, dalej, poprzednie lub ostatni rekord a interfejsem aktualizowania rekordu aktualnie w widoku.  
   
- Możesz użyć funkcji DDX z **coledbrecordview —** Pobierz dane bezpośrednio z rekordów bazy danych i wyświetlić je w formancie okna dialogowego. Należy używać **DDX_\***  metod (takich jak `DDX_Text`), a nie **ddx_field —\***  funkcje (takie jak `DDX_FieldText`) z **coledbrecordview —** . `DDX_FieldText` nie będzie działać z **coledbrecordview —** ponieważ `DDX_FieldText` ma dodatkowy argument typu **crecordset —\***  (dla `CRecordView`) lub **cdaorecordset —\***  (dla `CDaoRecordView`).  
+ Można użyć funkcji DDX z `COleDbRecordView` pobieranie danych bezpośrednio z rekordów bazy danych i wyświetlania ich w formantu w oknie dialogowym. Należy używać **funkcje DDX_\***  metody (takie jak `DDX_Text`), a nie **funkcje DDX_Field\***  funkcji (takich jak `DDX_FieldText`) przy użyciu `COleDbRecordView`. `DDX_FieldText` nie będzie działać z `COleDbRecordView` ponieważ `DDX_FieldText` ma dodatkowy argument typu **CRecordset\***  (dla `CRecordView`) lub **CDaoRecordset\***  (dla `CDaoRecordView`).  
   
 > [!NOTE]
->  Jeśli pracujesz z klas obiektów DAO (Data Access), a nie klasy OLE DB szablon konsumenta, należy użyć klasy [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) zamiast tego. Aby uzyskać więcej informacji, zobacz artykuł [omówienie: programowania bazy danych](../../data/data-access-programming-mfc-atl.md).  
+>  Jeśli pracujesz z klas obiektów dostępu do danych (DAO), a nie klasy OLE DB szablon konsumenta, użyj klasy [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) zamiast tego. Aby uzyskać więcej informacji, zobacz artykuł [omówienie: programowania bazy danych](../../data/data-access-programming-mfc-atl.md).  
   
- `COleDBRecordView` przechowuje informacje o pozycji użytkownika w zestawie wierszy, dzięki czemu widoku rekordu można zaktualizować interfejsu użytkownika. Gdy użytkownik zostanie przeniesiony do jednego z końców zestawu wierszy, widoku rekordu wyłącza obiekty interfejsu użytkownika — takich jak elementy menu lub przycisków paska narzędzi — przenoszenie więcej w tym samym kierunku.  
+ `COleDBRecordView` przechowuje informacje o jego pozycja w zestawie wierszy tak, aby zaktualizować interfejs użytkownika widoku rekordu. Po użytkownik przenosi się do dowolnego końca zestawu wierszy, widoku rekordu wyłącza obiektów interfejsu użytkownika — np. w menu i przycisków paska narzędzi — przenoszenia w tym samym kierunku.  
   
- Aby uzyskać więcej informacji na temat klasy zestawów wierszy, zobacz [przy użyciu OLE DB szablony konsumentów](../../data/oledb/ole-db-consumer-templates-cpp.md) artykułu.  
+ Aby uzyskać więcej informacji na temat klasy zestawów wierszy, zobacz [przy użyciu szablony OLE DB konsumenta](../../data/oledb/ole-db-consumer-templates-cpp.md) artykułu.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -72,7 +72,7 @@ class COleDBRecordView : public CFormView
   
  [CWnd](../../mfc/reference/cwnd-class.md)  
   
- [Cview —](../../mfc/reference/cview-class.md)  
+ [CView](../../mfc/reference/cview-class.md)  
   
  [CScrollView](../../mfc/reference/cscrollview-class.md)  
   
@@ -93,19 +93,19 @@ COleDBRecordView(UINT nIDTemplate);
   
 ### <a name="parameters"></a>Parametry  
  *lpszTemplateName*  
- Zawiera ciąg zerem, który jest nazwa zasobu szablonu okna dialogowego.  
+ Zawiera ciąg zakończony zerem, która jest nazwą zasobu szablonu okna dialogowego.  
   
  *nIDTemplate*  
  Zawiera identyfikator zasobu szablonu okna dialogowego.  
   
 ### <a name="remarks"></a>Uwagi  
- Podczas tworzenia obiektu typu pochodną `COleDBRecordView`, wywołać za pomocą jednego z konstruktorów do utworzenia obiektu widoku i identyfikacji zasobu okna dialogowego, na której oparto widoku. Zasób można zidentyfikować przez nazwę (pass ciąg jako argument do konstruktora) lub za pomocą jego Identyfikatora (pass całkowitą bez znaku jako argument).  
+ Po utworzeniu obiektu typu pochodną `COleDBRecordView`, wywołać za pomocą jednego z konstruktorów do utworzenia obiektu widoku i identyfikacji zasobu okna dialogowego, na którym bazuje widoku. Zasób można zidentyfikować przez nazwę (pass ciąg jako argument konstruktora) lub za pomocą jego Identyfikatora (pass liczbą całkowitą bez znaku jako argument).  
   
 > [!NOTE]
->  Klasy pochodne *musi* podać własne konstruktora. W konstruktorze, należy wywołać konstruktora, `COleDBRecordView::COleDBRecordView`, o nazwy zasobu lub identyfikatorze jako argument.  
+>  Klasy pochodne *musi* podać swój własny konstruktora. W konstruktorze, należy wywołać konstruktora, `COleDBRecordView::COleDBRecordView`, przy użyciu nazwy zasobu lub identyfikator jako argument.  
   
 ##  <a name="ongetrowset"></a>  COleDBRecordView::OnGetRowset  
- Zwraca uchwyt dla **CRowset <>** obiekt skojarzony z widokiem rekordów.  
+ Zwraca uchwyt do **CRowset <>** obiekt skojarzony z widokiem rekordów.  
   
 ```  
 virtual CRowset<>* OnGetRowset() = 0;  
@@ -113,21 +113,21 @@ virtual CRowset<>* OnGetRowset() = 0;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standard `HRESULT` wartość.  
+ Standardowe wartości HRESULT.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę funkcję elementu członkowskiego, utworzyć lub uzyskać obiektu zestawu wierszy i przywrócenie dojścia. Deklarowanie klasy widoków rekordów z ClassWizard kreator zapisuje zastąpienie domyślnego dla Ciebie. W ClassWizard Domyślna implementacja zwraca dojście wierszy przechowywane w widoku rekordu, jeśli taka istnieje. Jeśli nie, tworzy go typu obiektu zestawu wierszy określono wywołań i ClassWizard jego `Open` element członkowski funkcji można otworzyć tabeli, lub uruchomić zapytanie, a następnie zwraca uchwyt do obiektu.  
+ Konieczne jest przesłonięcie tej funkcji elementu członkowskiego, konstruowania lub uzyskać obiektu zestawu wierszy i zwraca uchwyt do niego. Deklarowanie klasy widoków rekordów z ClassWizard kreator zapisuje zastąpienia domyślnej dla Ciebie. ClassWizard firmy Domyślna implementacja zwraca uchwyt zestawu wierszy, przechowywane w widoku rekordu, jeśli taka istnieje. Jeśli nie, jego tworzy typ obiektu zestawu wierszy określono ClassWizard i wywołuje jego `Open` element członkowski funkcji Otwórz tabelę lub uruchom zapytanie, a następnie zwraca uchwyt do obiektu.  
   
 > [!NOTE]
->  Wstecz, aby MFC 7.0 `OnGetRowset` zwrócił wskaźnik do `CRowset`. Jeśli masz kod, który wywołuje `OnGetRowset`, należy zmienić typ zwracany do szablonowej klasy **CRowset <>**.  
+>  Wcześniejszych niż MFC 7.0 `OnGetRowset` zwrócony wskaźnik do `CRowset`. Jeśli masz kod, który wywołuje `OnGetRowset`, należy zmienić typ zwracany do szablonowej klasy **CRowset <>**.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCDatabase#38](../../mfc/codesnippet/cpp/coledbrecordview-class_1.cpp)]  
   
- Aby uzyskać dodatkowe informacje i przykłady, zobacz artykuł [widoków rekordów: Używanie widoku rekordu](../../data/using-a-record-view-mfc-data-access.md).  
+ Aby uzyskać więcej informacji i przykładów, zobacz artykuł [widoków rekordów: Używanie widoku rekordu](../../data/using-a-record-view-mfc-data-access.md).  
   
 ##  <a name="onmove"></a>  COleDBRecordView::OnMove  
- Przenosi do innego rekordu w zestawie wierszy i wyświetlić jego pola w formantach rekordu w widoku.  
+ Przechodzi do innego rekordu w zestawie wierszy i wyświetlania jej pola w kontrolkach rekordu w widoku.  
   
 ```  
 virtual BOOL OnMove(UINT nIDMoveCommand);
@@ -135,27 +135,27 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
   
 ### <a name="parameters"></a>Parametry  
  *nIDMoveCommand*  
- Jedna z następujących wartości Identyfikatora standardowego polecenia:  
+ Jeden z następujących wartości Identyfikatora standardowe polecenia:  
   
-- `ID_RECORD_FIRST` — Przejście do pierwszego rekordu w zestawie rekordów.  
+- ID_RECORD_FIRST — Przejście do pierwszego rekordu w zestawie rekordów.  
   
-- `ID_RECORD_LAST` — Przejdź do ostatniego rekordu w zestawie rekordów.  
+- ID_RECORD_LAST — Przejdź do ostatniego rekordu w zestawie rekordów.  
   
-- `ID_RECORD_NEXT` — Przejście do następnego rekordu w zestawie rekordów.  
+- ID_RECORD_NEXT — Przejście do następnego rekordu w zestawie rekordów.  
   
-- `ID_RECORD_PREV` — Przejście do poprzedniego rekordu w zestawie rekordów.  
+- ID_RECORD_PREV — Przejście do poprzedniego rekordu w zestawie rekordów.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli przeniesienie zakończyło się pomyślnie; w przeciwnym razie 0, jeśli żądanie przeniesienia zostało odrzucone.  
+ Wartość różną od zera, jeśli przeniesienie zostało wykonane prawidłowo; w przeciwnym razie 0, jeśli żądanie przeniesienia zostało odrzucone.  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja wywołuje odpowiednie `Move` funkcji członkowskiej klasy `CRowset` obiekt skojarzony z widokiem rekordów.  
+ Domyślna implementacja wywołuje odpowiednią `Move` funkcji składowej typu `CRowset` obiekt skojarzony z widokiem rekordów.  
   
- Domyślnie `OnMove` aktualizacji bieżącego rekordu w źródle danych, jeśli użytkownik zmienił się on w widoku rekordu.  
+ Domyślnie `OnMove` aktualizacji bieżący rekord w źródle danych, jeśli użytkownik zmienił się ona w widoku rekordu.  
   
- Kreator aplikacji tworzy zasobów menu z pierwszego rekordu, ostatni rekord następnego rekordu i poprzedniego rekordu elementów menu. Jeśli wybrano opcję dokującego paska narzędzi, Kreator aplikacji tworzy przyciskami odpowiadający tych poleceń paska narzędzi.  
+ Kreator aplikacji umożliwia utworzenie zasobu menu z elementami menu pierwszy rekord, ostatni rekord, następny rekord i poprzedni rekord. Jeśli wybierzesz opcję Dokowalne narzędzi, Kreator aplikacji tworzy także paska narzędzi za pomocą przycisków odpowiadający tych poleceń.  
   
- Po przeniesieniu poza ostatni rekord w zestawie rekordów widoku rekordu jest nadal wyświetlana ostatniego rekordu. Po przeniesieniu poza pierwszy rekord wstecz widoku rekordu jest nadal wyświetlana pierwszy rekord.  
+ Jeśli przenosisz poza ostatni rekord w zestawie, widoku rekordu to jest nadal wyświetlany ostatni rekord. Jeśli możesz przejść wstecz pierwszy rekord, widoku rekordu w dalszym ciągu wyświetlić pierwszy rekord.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wykres hierarchii](../../mfc/hierarchy-chart.md)

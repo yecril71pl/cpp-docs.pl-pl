@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abe2a27a79705e9850df2c9fb54037278abd8cd5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a471cdd63ed46e15c9ec41968ed341eefaf36963
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843265"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965395"
 ---
 # <a name="codecvtbase-class"></a>codecvt_base — Klasa
 
-Klasa podstawowa dla codecvt — klasa, która służy do definiowania typu wyliczeniowego, określany jako **wynik**, używana jako typ zwracany dla funkcji Członkowskich aspektu wyniku konwersji.
+Klasa bazowa dla klasy codecvt, która służy do definiowania typu wyliczenia, określane jako `result`, który jest używany jako typ zwracany dla funkcji składowych zestawu reguł, aby wskazać wynik konwersji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -48,21 +48,21 @@ protected:
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa opisuje wyliczenia, które są wspólne dla wszystkich specjalizacji szablonu klasy [codecvt](../standard-library/codecvt-class.md). Wynik wyliczenie opisano możliwe wartości zwracane z [do_in](../standard-library/codecvt-class.md#do_in) lub [do_out](../standard-library/codecvt-class.md#do_out):
+Klasa opisuje wyliczenie, które są wspólne dla wszystkich specjalizacje szablonu klasy [codecvt](../standard-library/codecvt-class.md). Wynik wyliczenia w tym artykule opisano możliwe wartości zwracane z [do_in](../standard-library/codecvt-class.md#do_in) lub [do_out](../standard-library/codecvt-class.md#do_out):
 
-- **OK** Jeśli konwersja między kodowanie znaków wewnętrznych i zewnętrznych zakończy się powodzeniem.
+- `ok` Jeśli konwersja między kodowaniem znaków wewnętrznych i zewnętrznych zakończy się powodzeniem.
 
-- **częściowe** Jeśli element docelowy nie jest wystarczająco duży dla konwersja powiodła się.
+- `partial` Jeśli miejsce docelowe nie jest wystarczająco duży dla konwersja powiodła się.
 
-- **Błąd** Jeśli sekwencji źródłowej jest dotknięty sformułowany.
+- `error` Jeśli sekwencja źródłowa jest ill sformułowana.
 
-- **noconv** , gdy funkcja wykonuje brak konwersji.
+- `noconv` Jeśli funkcja nie wykonuje żadnych konwersji.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<ustawień regionalnych >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -36,16 +36,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f1bcdfa87eac674d935eeaa8007434f930636e9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 52f9c1335304cc3eefec76abde641e62932eb727
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854993"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964411"
 ---
 # <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution — Klasa
 
-Generuje ujemny dwumianowy.
+Generuje rozkład dwumianowy ujemny.
 
 ## <a name="syntax"></a>Składnia
 
@@ -77,36 +77,36 @@ public:
     result_type min() const;
     result_type max() const;
 };
+```
 
-### Parameters
+### <a name="parameters"></a>Parametry
 
-*IntType*
-The integer result type, defaults to `int`. For possible types, see [\<random>](../standard-library/random.md).
+*IntType* typ wyniku liczby całkowitej, wartość domyślna to **int**. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
 
-## Remarks
+## <a name="remarks"></a>Uwagi
 
-The template class describes a distribution that produces values of a user-specified integral type, or type `int` if none is provided, distributed according to the Negative Binomial Distribution discrete probability function. The following table links to articles about individual members.
+Klasa szablonu opisuje dystrybucji, który tworzy wartości całkowitego określone przez użytkownika typ lub typ **int** rozkładane Jeśli nie zostanie podana, prawdopodobieństwa dyskretnych rozkład dwumianowy ujemny. Poniższa tabela zawiera linki do artykułów na temat poszczególnych elementów członkowskich.
 
 ||||
 |-|-|-|
-|[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
+|[negative_binomial_distribution —](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
 |`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
 
-The property members `k()` and `p()` return the currently stored distribution parameter values *k* and *p* respectively.
+Właściwości elementów członkowskich `k()` i `p()` zwraca aktualnie przechowywana rozkład wartości parametrów *k* i *p* odpowiednio.
 
-The property member `param()` sets or returns the `param_type` stored distribution parameter package.
+Właściwość elementu członkowskiego `param()` Ustawia lub zwraca `param_type` pakiet parametrów przechowywanych dystrybucji.
 
-The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.
+`min()` i `max()` funkcje Członkowskie zwracają najmniejsza możliwa wynik i największych możliwych wyników, odpowiednio.
 
-The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.
+`reset()` Funkcja elementu członkowskiego odrzuca wszystkie wartości z pamięci podręcznej, tak aby wynik następnego wywołania metody `operator()` nie zależy od żadnych wartości uzyskane z aparatu przed wywołaniem.
 
-The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
+`operator()` Funkcje Członkowskie zwracają dalej wygenerowaną wartość opartą na aparacie URNG, z bieżącego pakietu parametrów lub pakietu określony parametr.
 
-For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).
+Aby uzyskać więcej informacji o dystrybucji klasy i składowe, zobacz [ \<losowy >](../standard-library/random.md).
 
-For detailed information about the negative binomial distribution discrete probability function, see the Wolfram MathWorld article [Negative Binomial Distribution](http://go.microsoft.com/fwlink/p/?linkid=400516).
+Aby uzyskać szczegółowe informacje na temat funkcji dyskretnych prawdopodobieństwo rozkład dwumianowy ujemny, zobacz artykuł Wolfram MathWorld [rozkład dwumianowy ujemny](http://go.microsoft.com/fwlink/p/?linkid=400516).
 
-## Example
+## <a name="example"></a>Przykład
 
 ```cpp
 // compile with: /EHsc /W4
@@ -181,7 +181,7 @@ Histogram for 100 samples:
     5 ::
 ```
 
-Druga instalacja:
+Uruchom drugie:
 
 ```Output
 Use CTRL-Z to bypass data entry and run using default values.
@@ -227,13 +227,13 @@ Histogram for 100 samples:
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<losowe >
+**Nagłówek:** \<losowy >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="negative_binomial_distribution"></a>  negative_binomial_distribution::negative_binomial_distribution
 
-Tworzy dystrybucji.
+Tworzy rozkład.
 
 ```cpp
 explicit negative_binomial_distribution(result_type k = 1, double p = 0.5);
@@ -246,23 +246,23 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 *p* `p` parametru dystrybucji.
 
-*Parametr* struktury parametr używany do budowy dystrybucji.
+*Parametr* struktury parametr, używane do konstruowania dystrybucji.
 
 ### <a name="remarks"></a>Uwagi
 
 **Warunek wstępny:** `0.0 < k` i `0.0 < p ≤ 1.0`
 
-Pierwszy Konstruktor konstrukcji obiektu których przechowywane `p` wartość zawiera wartość *p* i których przechowywane `k` wartość przechowuje wartość *k*.
+Pierwszy Konstruktor konstruuje obiekt, którego przechowywane `p` wartość przechowuje wartość *p* i którego przechowywane `k` wartość przechowuje wartość *k*.
 
-Drugi Konstruktor konstrukcji obiektu, którego parametry przechowywane są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżących parametrów istniejącego dystrybucji przez wywołanie metody `param()` funkcję elementu członkowskiego.
+Drugi Konstruktor konstruuje obiekt, którego przechowywane parametry są inicjowane z *parametr*. Możesz uzyskać i ustawić bieżących parametrów istniejącego dystrybucji przez wywołanie metody `param()` funkcja elementu członkowskiego.
 
 ## <a name="param_type"></a>  negative_binomial_distribution::param_type
 
 Przechowuje parametry dystrybucji.
 
-param_type — struktura {negative_binomial_distribution — typedef`<`result_type > distribution_type; param_type (result_type k = 1, dwukrotnie p = 0,5); k() result_type const; dwukrotnie p() const;
+param_type — struktura {negative_binomial_distribution — typedef`<`element result_type > distribution_type; param_type — (k element result_type = 1, dwukrotnie p = 0,5); element result_type k() const; dwukrotnie p() const;
 
-   bool — operator == (const param_type & prawej) const; bool — operator! = (const param_type & prawej) const; };
+   bool — operator == (const param_type — i po prawej stronie) const; bool — operator! = (const param_type — i po prawej stronie) const; };
 
 ### <a name="parameters"></a>Parametry
 
@@ -276,8 +276,8 @@ param_type — struktura {negative_binomial_distribution — typedef`<`result_ty
 
 **Warunek wstępny:** `0.0 < k` i `0.0 < p ≤ 1.0`
 
-Ta struktura może być przekazany do konstruktora klasy dystrybucji przy tworzeniu wystąpienia, do `param()` funkcji członkowskiej, aby ustawić parametry przechowywane istniejących dystrybucji oraz do `operator()` do użycia zamiast przechowywane parametry.
+Ta struktura może być przekazywany do konstruktora klasy dystrybucji przy konkretyzacji, do `param()` funkcję elementu członkowskiego, aby ustawić przechowywanych parametrów istniejącego dystrybucji oraz do `operator()` ma być używany zamiast przechowywanych parametrów.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<losowe >](../standard-library/random.md)<br/>
+[\<losowy >](../standard-library/random.md)<br/>

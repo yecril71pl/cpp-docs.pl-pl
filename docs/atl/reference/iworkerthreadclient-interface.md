@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8336edb07d02bbbcd5775eaf3ef8fe0f735d3adb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 86e35910469128ecaf38751d6db73094adf3422e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359820"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884728"
 ---
 # <a name="iworkerthreadclient-interface"></a>Interfejs IWorkerThreadClient
 `IWorkerThreadClient` interfejs implementowany przez klientów [CWorkerThread](../../atl/reference/cworkerthread-class.md) klasy.  
   
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,17 +44,17 @@ __interface IWorkerThreadClient
   
 |||  
 |-|-|  
-|[Funkcji CloseHandle:](#closehandle)|Zaimplementuj tę metodę, aby zamknąć dojścia skojarzone z tym obiektem.|  
-|[Wykonanie](#execute)|Zaimplementuj tę metodę do wykonania kodu, gdy staje się sygnalizowane dojścia skojarzone z tym obiektem.|  
+|[Funkcja CloseHandle](#closehandle)|Zaimplementuj tę metodę, aby zamknąć dojście skojarzone z tym obiektem.|  
+|[Wykonywanie](#execute)|Zaimplementuj tę metodę w celu wykonania kodu, gdy staje się sygnalizowane uchwyt skojarzone z tym obiektem.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli masz kod, który ma zostać wykonane na wątek roboczy w odpowiedzi do uchwytu staje się sygnalizowane zawierać implementację tego interfejsu.  
+ Jeśli masz kod, który można wykonać w wątku roboczego w odpowiedzi na uchwyt, który jest sygnalizowany, należy zaimplementować ten interfejs.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlutil.h  
   
 ##  <a name="closehandle"></a>  IWorkerThreadClient::CloseHandle  
- Zaimplementuj tę metodę, aby zamknąć dojścia skojarzone z tym obiektem.  
+ Zaimplementuj tę metodę, aby zamknąć dojście skojarzone z tym obiektem.  
   
 ```
 HRESULT CloseHandle(HANDLE  hHandle);
@@ -62,41 +62,41 @@ HRESULT CloseHandle(HANDLE  hHandle);
   
 ### <a name="parameters"></a>Parametry  
  *hHandle*  
- Dojście do zamknięcia.  
+ Uchwyt zostanie zamknięty.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK na powodzenie lub błąd HRESULT w przypadku awarii.  
+ Zwraca S_OK na powodzenie lub błąd HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Dojście przekazane do tej metody został wcześniej skojarzony z tym obiektem przez wywołanie do [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
+ Dojście przekazane do tej metody był wcześniej skojarzony z tym obiektem przez wywołanie [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
   
 ### <a name="example"></a>Przykład  
- Poniższy kod przedstawia prostych implementacji `IWorkerThreadClient::CloseHandle`.  
+ Poniższy kod przedstawia proste wdrażanie `IWorkerThreadClient::CloseHandle`.  
   
  [!code-cpp[NVC_ATL_Utilities#135](../../atl/codesnippet/cpp/iworkerthreadclient-interface_1.cpp)]  
   
 ##  <a name="execute"></a>  IWorkerThreadClient::Execute  
- Zaimplementuj tę metodę do wykonania kodu, gdy staje się sygnalizowane dojścia skojarzone z tym obiektem.  
+ Zaimplementuj tę metodę w celu wykonania kodu, gdy staje się sygnalizowane uchwyt skojarzone z tym obiektem.  
   
 ```
 HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwParam`  
+ *dwParam*  
  Parametr użytkownika.  
   
- `hObject`  
- Dojście stają się sygnalizowane.  
+ *hObject*  
+ Uchwyt, który ma być sygnalizowane.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wartość S_OK na powodzenie lub błąd HRESULT w przypadku awarii.  
+ Zwraca S_OK na powodzenie lub błąd HRESULT w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Dojście i przekazane do tej metody na wskaźnik DWORD były wcześniej skojarzone z tym obiektem przez wywołanie do [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
+ Dojście i przekazany do tej metody na wskaźnik typu DWORD były wcześniej skojarzone z tego obiektu przez wywołanie [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
   
 ### <a name="example"></a>Przykład  
- Poniższy kod przedstawia prostych implementacji `IWorkerThreadClient::Execute`.  
+ Poniższy kod przedstawia proste wdrażanie `IWorkerThreadClient::Execute`.  
   
  [!code-cpp[NVC_ATL_Utilities#136](../../atl/codesnippet/cpp/iworkerthreadclient-interface_2.cpp)]  
   

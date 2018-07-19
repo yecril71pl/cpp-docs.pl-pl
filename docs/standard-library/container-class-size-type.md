@@ -14,19 +14,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17c1c987ac2034fa11de72ad96c5e85669ee7ee9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 191dee69d9c25df677e9e30fb0b1d451b520f5ac
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844162"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962416"
 ---
 # <a name="container-classsizetype"></a>Kontener Class::size_type
 
 > [!NOTE]
-> Ten temat dotyczy w dokumentacji Visual C++ prawidłowo przykład kontenerów używanych w standardowej bibliotece C++. Aby uzyskać więcej informacji, zobacz [standardowe kontenery biblioteki C++](../standard-library/stl-containers.md).
+> Ten temat dotyczy w dokumentacji języka Visual C++ jako prawidłowo przykład kontenerów używanych w standardowej biblioteki języka C++. Aby uzyskać więcej informacji, zobacz [standardowych kontenerów biblioteki języka C++](../standard-library/stl-containers.md).
 
-Opis obiektu, który może reprezentować długość żadnych kontrolowanej sekwencji.
+Opisuje obiekt, który może reprezentować długość wszelkie kontrolowanej sekwencji.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,7 +37,7 @@ typedef T0 size_type;
 
 ## <a name="remarks"></a>Uwagi
 
-Jest on opisany tutaj jako synonimem nieokreślonego typu **T0** (zazwyczaj **Alloc::size_type**).
+Jest on opisany tutaj jako synonim dla nieokreślonego typu `T0` (zazwyczaj `Alloc::size_type`).
 
 ## <a name="see-also"></a>Zobacz także
 

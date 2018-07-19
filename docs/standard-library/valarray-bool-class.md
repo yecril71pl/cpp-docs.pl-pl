@@ -1,5 +1,5 @@
 ---
-title: valarray —&lt;bool&gt; klasy | Dokumentacja firmy Microsoft
+title: valarray&lt;bool&gt; klasy | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 291abd2cc3ec1d40a448e593b5dc09d64ab95ec3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b6b9cd3778ceb90e5e73a927f098c62d2c1e9bad
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855308"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964300"
 ---
-# <a name="valarrayltboolgt-class"></a>valarray —&lt;bool&gt; — klasa
+# <a name="valarrayltboolgt-class"></a>valarray&lt;bool&gt; klasy
 
-Specjalna wersja klasy szablonu **valarray —\<typu >** do elementów typu `bool`.
+Specjalizowanej wersji szablonu klasy **valarray\<typ >** do elementów typu **bool**.
 
 ## <a name="syntax"></a>Składnia
 
@@ -83,9 +83,9 @@ The result of the less-than comparison test is the
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<valarray — >
+**Nagłówek:** \<valarray >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

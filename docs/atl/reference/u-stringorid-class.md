@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a601b1c64b28681c13a0b9e8f42156d8820cb4b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 611fecad210b9297b6c7cd16c83dbd0c6c3e41a8
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359665"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886170"
 ---
 # <a name="ustringorid-class"></a>Klasa _U_STRINGorID
-Ta klasa karta argument umożliwia albo nazw zasobów ( `LPCTSTR`s) lub identyfikatory zasobów ( **UINT**s) mają być przekazane do funkcji bez konieczności obiekt wywołujący, aby przekonwertować ciąg za pomocą Identyfikatora **MAKEINTRESOURCE** makra.  
+Ta klasa adaptera argument umożliwia nazw zasobów (LPCTSTRs) lub identyfikatory zasobów (UINTs), który zostanie przekazany do funkcji bez konieczności obiekt wywołujący, aby przekonwertować na ciąg przy użyciu makra MAKEINTRESOURCE identyfikator.  
   
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -53,22 +53,22 @@ class _U_STRINGorID
 |[_U_STRINGorID::m_lpstr](#_u_stringorid__m_lpstr)|Identyfikator zasobu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta klasa jest przeznaczony do implementacji otoki interfejsu API Menedżera zasobów systemu Windows, takich jak [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042), [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072), i [LoadMenu](http://msdn.microsoft.com/library/windows/desktop/ms647990) funkcji, które akceptują `LPCTSTR` argumentu, który może być nazwa zasobu lub jego identyfikator.  
+ Ta klasa jest przeznaczona dla takich jak wdrażanie otoki, aby interfejs API zarządzania zasobami Windows [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042), [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072), i [LoadMenu](http://msdn.microsoft.com/library/windows/desktop/ms647990) funkcji, które akceptują argument LPCTSTR, który może być nazwy zasobu lub jego identyfikator.  
   
- Klasa definiuje dwa przeciążenia konstruktora: jeden akceptuje `LPCTSTR` akceptuje argument, a druga **UINT** argumentu. **UINT** argument jest konwertowana na typ zasobu zgodne z funkcji zarządzania zasobami systemu Windows przy użyciu **MAKEINTRESOURCE** makro i wynik przechowywany w element członkowski danych klasy, [m_lpstr](#_u_stringorid__m_lpstr). Argument `LPCTSTR` konstruktora są przechowywane bezpośrednio, bez konwersji.  
+ Klasa definiuje dwa przeciążenia konstruktora: przyjmuje jeden LPCTSTR argument, a druga akceptuje UINT argument. UINT argument jest konwertowany na typ zasobu, zgodny z funkcji zarządzania zasobami Windows przy użyciu makra MAKEINTRESOURCE i wynik przechowywany w element członkowski danych jednej klasy, [m_lpstr](#_u_stringorid__m_lpstr). Argument Pro Konstruktor LPCTSTR są przechowywane bezpośrednio, bez konwersji.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlwin.h  
   
 ##  <a name="_u_stringorid__m_lpstr"></a>  _U_STRINGorID::m_lpstr  
- Klasa zawiera wartość przekazywane do jednego z jego konstruktorów jako publiczną `LPCTSTR` element członkowski danych.  
+ Klasa przechowuje wartość przekazana do jednej z jego konstruktorów jako publicznej składowej danych LPCTSTR.  
   
 ```
 LPCTSTR m_lpstr;
 ```  
   
 ##  <a name="_u_stringorid___u_stringorid"></a>  _U_STRINGorID::_U_STRINGorID  
- **UINT** Konstruktor konwertuje jej argument typu zasobu zgodne z funkcji zarządzania zasobami systemu Windows przy użyciu **MAKEINTRESOURCE** makro i wynik są przechowywane w jednym klasy element członkowski danych, [m_lpstr](#_u_stringorid__m_lpstr).  
+ Konstruktor UINT konwertuje jej argument niezgodny z funkcji zarządzania zasobami Windows przy użyciu makra MAKEINTRESOURCE typu zasobu, a wynik jest przechowywany w elemencie członkowskim danych jednego tej klasy, [m_lpstr](#_u_stringorid__m_lpstr).  
   
 ```
 _U_STRINGorID(UINT nID);  
@@ -76,14 +76,14 @@ _U_STRINGorID(LPCTSTR lpString);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nID`  
+ *nID*  
  Identyfikator zasobu.  
   
- `lpString`  
+ *lpString*  
  Nazwa zasobu.  
   
 ### <a name="remarks"></a>Uwagi  
- Argument `LPCTSTR` konstruktora są przechowywane bezpośrednio, bez konwersji.  
+ Argument Pro Konstruktor LPCTSTR są przechowywane bezpośrednio, bez konwersji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

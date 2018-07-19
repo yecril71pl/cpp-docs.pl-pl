@@ -1,5 +1,5 @@
 ---
-title: Funkcje globalne punkt połączenia z | Dokumentacja firmy Microsoft
+title: Funkcje globalne punktu połączenia | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,24 +18,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dc6cd11cb1f04ba877524cd1ae6134a7dd93d09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b85da5991357f1b67c6d2249d854e6084ee48c23
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362794"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884064"
 ---
-# <a name="connection-point-global-functions"></a>Globalne funkcje punktu połączenia
-Funkcje te zapewniają obsługę punkty połączenia i sink mapy.  
+# <a name="connection-point-global-functions"></a>Funkcje globalne punktu połączenia
+Te funkcje umożliwiają punkty połączenia i ujście mapy.  
   
 > [!IMPORTANT]
->  Funkcje wymienione w poniższej tabeli nie można używać w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Funkcje wymienione w poniższej tabeli nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 |||  
 |-|-|  
 |[AtlAdvise](#atladvise)|Tworzy połączenie między punktem połączenia obiektu a zbiornikiem klienta.|  
-|[AtlUnadvise](#atlunadvise)|Przerywa połączenie nawiązane za pośrednictwem `AtlAdvise`.|  
-|[AtlAdviseSinkMap](#atladvisesinkmap)|Zaleceniem lub unadvises wpisów w mapie obiekt sink zdarzenia.|  
+|[AtlUnadvise](#atlunadvise)|Przerywa połączenie ustanowione przez `AtlAdvise`.|  
+|[AtlAdviseSinkMap](#atladvisesinkmap)|Z informacją o tym, lub unadvises wpisy na mapie obiektu sink zdarzenia.|  
 
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlbase.h  
@@ -44,7 +44,7 @@ Funkcje te zapewniają obsługę punkty połączenia i sink mapy.
  Tworzy połączenie między punktem połączenia obiektu a zbiornikiem klienta.  
   
 > [!IMPORTANT]
->  Nie można użyć tej funkcji w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta funkcja nie może służyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ```
 HRESULT    AtlAdvise(
@@ -55,32 +55,32 @@ HRESULT    AtlAdvise(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pUnkCP`  
- [in] Wskaźnik do **IUnknown** obiektu chce nawiązać połączenie z klienta.  
+ *pUnkCP*  
+ [in] Wskaźnik do `IUnknown` obiektu klient chce się nawiązać połączenia z.  
   
  *pUnk*  
- [in] Wskaźnik do klienta **IUnknown**.  
+ [in] Wskaźnik do klienta `IUnknown`.  
   
- `iid`  
- [in] Identyfikator GUID punktu połączenia. Zazwyczaj jest to ten sam interfejs wychodzących, zarządzane przez punkt połączenia.  
+ *IID*  
+ [in] Identyfikator GUID punktu połączenia. Zazwyczaj jest taka sama jak interfejsu wychodzącego zarządzane przez punkt połączenia.  
   
- `pdw`  
+ *PDW*  
  [out] Wskaźnik do pliku cookie, który unikatowo identyfikuje połączenie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standardowa wartość HRESULT.  
+ Standardowe wartości HRESULT.  
   
 ### <a name="remarks"></a>Uwagi  
- Obiekt sink implementuje interfejs wychodzących obsługiwanych przez punkt połączenia. Klient używa `pdw` pliku cookie do usunięcia tego połączenia, przekazując go do [AtlUnadvise](#atlunadvise).  
+ Obiekt sink implementuje interfejsu wychodzącego obsługiwane przez punkt połączenia. Klient używa *pdw* plików cookie, aby usunąć połączenie przez przekazanie jej do [AtlUnadvise](#atlunadvise).  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Windowing#91](../../atl/codesnippet/cpp/connection-point-global-functions_1.cpp)]  
   
 ##  <a name="atlunadvise"></a>  AtlUnadvise  
- Przerywa połączenie nawiązane za pośrednictwem [AtlAdvise](#atladvise).  
+ Przerywa połączenie ustanowione przez [AtlAdvise](#atladvise).  
   
 > [!IMPORTANT]
->  Nie można użyć tej funkcji w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta funkcja nie może służyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ```
 HRESULT    AtlUnadvise(
@@ -90,17 +90,17 @@ HRESULT    AtlUnadvise(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `pUnkCP`  
- [in] Wskaźnik do **IUnknown** obiektu, który klient jest połączony z.  
+ *pUnkCP*  
+ [in] Wskaźnik do `IUnknown` obiektu, który klient jest połączony z.  
   
- `iid`  
- [in] Identyfikator GUID punktu połączenia. Zazwyczaj jest to ten sam interfejs wychodzących, zarządzane przez punkt połączenia.  
+ *IID*  
+ [in] Identyfikator GUID punktu połączenia. Zazwyczaj jest taka sama jak interfejsu wychodzącego zarządzane przez punkt połączenia.  
   
- `dw`  
+ *Magazyn danych*  
  [in] Plik cookie, który unikatowo identyfikuje połączenie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standardowa wartość HRESULT.  
+ Standardowe wartości HRESULT.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Windowing#96](../../atl/codesnippet/cpp/connection-point-global-functions_2.cpp)]  
@@ -109,21 +109,21 @@ HRESULT    AtlUnadvise(
  Wywołaj tę funkcję, aby przeprowadzić operację advise lub unadvise na wszystkich wpisach w mapie zdarzeń zbiornika obiektu.  
   
 > [!IMPORTANT]
->  Nie można użyć tej funkcji w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta funkcja nie może służyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ```
 HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *PT*  
+ *(CZAS PACYFICZNY)*  
  [in] Wskaźnik do obiektu zawierającego mapy ujścia.  
   
- `bAdvise`  
- [in] **true** wszystkie wpisy zbiornika mają zaleceniem; **false** wszystkie wpisy zbiornika mają być unadvised.  
+ *bAdvise*  
+ [in] Wartość TRUE, jeśli wszystkie wpisy ujścia zaleceniem; Wartość FALSE, jeśli mają być unadvised wszystkie wpisy ujścia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Standardowa wartość HRESULT.  
+ Standardowe wartości HRESULT.  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_ATL_Windowing#92](../../atl/codesnippet/cpp/connection-point-global-functions_3.h)]  

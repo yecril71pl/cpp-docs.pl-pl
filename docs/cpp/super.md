@@ -16,39 +16,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91ce48232884d1ab242ed52f82f614de058a2f91
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9caa3d08140887da45916b931b6a4850358db16
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37948252"
 ---
 # <a name="super"></a>__super
 **Microsoft Specific**  
   
- Można jawnie określać dla funkcji, które są zastępowanie wywoływania implementacji klasy podstawowej.  
+ Można jawnie określać dla funkcji, które są zastępowanie wywołujesz implementacji klasy podstawowej.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
   
-__super::  
-member_function  
-();  
+__super::member_function();  
   
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Podczas fazy rozpoznawanie przeciążenia uwzględniane są wszystkie dostępne metody klasy podstawowej, a funkcja, która udostępnia najlepsze dopasowanie jest tą, która jest wywoływana.  
+ Wszystkie dostępne metody klasy podstawowej są traktowane jako fazie rozdzielczość przeciążenia, a funkcja, która udostępnia najlepsze dopasowanie jest tą, która jest wywoływana.  
   
- `__super` może wystąpić tylko w treści funkcji członkowskiej.  
+ **__super** może wystąpić tylko wewnątrz treści funkcji składowej.  
   
- `__super` Nie można używać z używającego deklaracji. Zobacz [za pomocą deklaracji](../cpp/using-declaration.md) Aby uzyskać więcej informacji.  
+ **__super** nie można używać z za pomocą deklaracji. Zobacz [użycie — deklaracja](../cpp/using-declaration.md) Aby uzyskać więcej informacji.  
   
- Wraz z wprowadzeniem [atrybuty](../windows/cpp-attributes-reference.md) który wstrzyknięcie kodu, kod może zawierać co najmniej jednej klasy podstawowej nazwy, których użytkownik może nie wiedzieć, lecz zawiera metody, które chcesz wywołać.  
+ Wraz z wprowadzeniem [atrybuty](../windows/cpp-attributes-reference.md) , wstrzyknięcie kodu, Twój kod może zawierać jeden lub więcej klas bazowych, których nazwy, może nie wiesz, ale które zawierają metody, które chcesz wywołać.  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp 
 // deriv_super.cpp  
 // compile with: /c  
 struct B1 {  
@@ -69,7 +68,7 @@ struct D : B1, B2 {
 };  
 ```  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [Słowa kluczowe](../cpp/keywords-cpp.md)

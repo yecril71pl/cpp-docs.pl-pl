@@ -1,5 +1,5 @@
 ---
-title: Klasa is_move_constructible | Dokumentacja firmy Microsoft
+title: is_move_constructible, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d87eac720b205560993a7d6995be8a8fe6ad6194
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 979e726e1374ac37844472d9e2f9ae8ddd5ddf4d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843525"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965805"
 ---
-# <a name="ismoveconstructible-class"></a>is_move_constructible — klasa
+# <a name="ismoveconstructible-class"></a>is_move_constructible, klasa
 
-Sprawdza, czy typ ma konstruktora przenoszenia.
+Sprawdza, czy typ ma konstruktora przenoszącego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,17 +36,17 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-Typ T, ma zostać obliczone
+*T* typu, który ma zostać obliczone
 
 ## <a name="remarks"></a>Uwagi
 
-Predykat typów, która daje w wyniku wartość true, jeśli typ `T` może być skonstruowany przy użyciu operacji przenoszenia. Odpowiada to predykatu `is_constructible<T, T&&>`.
+Predykat typów, które daje w wyniku wartość true, jeśli typ *T* można skonstruować przy użyciu operacji przenoszenia. Ten predykat jest odpowiednikiem `is_constructible<T, T&&>`.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

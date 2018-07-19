@@ -36,15 +36,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46210f5a8c785a60a95b3cbfacf03b4f84ed2dda
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: af6e9ce4c252e2d798615292291dcd3e21cbd72a
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037291"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853673"
 ---
 # <a name="cmfckeymapdialog-class"></a>Klasa CMFCKeyMapDialog
-`CMFCKeyMapDialog` Klasa obsługuje formant, który mapuje poleceń z klawiszami na klawiaturze.  
+`CMFCKeyMapDialog` Klasy obsługuje formant, który mapuje polecenia na klawisze klawiatury.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -64,25 +64,25 @@ class CMFCKeyMapDialog : public CDialogEx
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CMFCKeyMapDialog::DoModal](#domodal)|Wyświetla okno dialogowe mapowania klawiatury.|  
+|[CMFCKeyMapDialog::DoModal](#domodal)|Wyświetlane jest okno dialogowe mapowania klawiatury.|  
   
 ### <a name="protected-methods"></a>Metody chronione  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CMFCKeyMapDialog::FormatItem](#formatitem)|Wywoływane przez platformę, by kompilacji ciąg opisujący klucza mapowania. Domyślnie ten ciąg zawiera nazwę polecenia, klawiszy skrótów i opis klawiszy skrótów.|  
-|[CMFCKeyMapDialog::GetCommandKeys](#getcommandkeys)|Pobiera ciąg, który zawiera listę klawiszy skrótu skojarzony z określonego polecenia.|  
-|[CMFCKeyMapDialog::OnInsertItem](#oninsertitem)|Wywoływane przez platformę przed wstawieniem nowy element do formantu listy wewnętrzny, który obsługuje kontrolkę mapowania klawiatury.|  
-|[CMFCKeyMapDialog::OnPrintHeader](#onprintheader)|Wywoływane przez platformę, by wydrukować nagłówka mapy klawiatury na nowej stronie.|  
-|[CMFCKeyMapDialog::OnPrintItem](#onprintitem)|Wywoływane przez platformę, by wydrukować element mapowania klawiatury.|  
-|[CMFCKeyMapDialog::OnSetColumns](#onsetcolumns)|Wywoływane przez platformę, by ustawić podpisy kolumn w formancie listy wewnętrznej, który obsługuje kontrolkę mapowania klawiatury.|  
+|[CMFCKeyMapDialog::FormatItem](#formatitem)|Metoda wywoływana przez platformę, by tworzyć ciąg, który opisuje mapowanie klawiszy. Domyślnie ciąg zawiera nazwę polecenia klawiszy skrótów i Opis klucza skrótu.|  
+|[CMFCKeyMapDialog::GetCommandKeys](#getcommandkeys)|Pobiera ciąg, który zawiera listę skrótów skojarzony z określonym poleceniem.|  
+|[CMFCKeyMapDialog::OnInsertItem](#oninsertitem)|Wywoływane przez platformę, zanim nowy element jest wstawiany do formantu listy wewnętrzny, który obsługuje kontrolę mapowania klawiatury.|  
+|[CMFCKeyMapDialog::OnPrintHeader](#onprintheader)|Metoda wywoływana przez platformę, by wydrukować nagłówek mapy klawiatury na nowej stronie.|  
+|[CMFCKeyMapDialog::OnPrintItem](#onprintitem)|Metoda wywoływana przez platformę, by wydrukować element mapowania klawiatury.|  
+|[CMFCKeyMapDialog::OnSetColumns](#onsetcolumns)|Metoda wywoływana przez platformę, by ustawić podpisy dla kolumn w formancie listy wewnętrznej, który obsługuje kontrolę mapowania klawiatury.|  
 |[CMFCKeyMapDialog::PrintKeyMap](#printkeymap)|Wywoływane przez platformę, gdy użytkownik kliknie **drukowania** przycisku.|  
-|[CMFCKeyMapDialog::SetColumnsWidth](#setcolumnswidth)|Wywoływane przez platformę, by ustawić szerokość kolumn w formancie listy wewnętrznej, który obsługuje kontrolkę mapowania klawiatury.|  
+|[CMFCKeyMapDialog::SetColumnsWidth](#setcolumnswidth)|Metoda wywoływana przez platformę, by ustawić szerokość kolumn w formancie listy wewnętrznej, który obsługuje kontrolę mapowania klawiatury.|  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj `CMFCKeyMapDialog` klasy do zaimplementowania okno dialogowe mapowania klawiatury o zmiennym rozmiarze. Okno dialogowe używa formantu widoku listy, aby wyświetlić skróty klawiaturowe i skojarzone z nimi polecenia.  
+ Użyj `CMFCKeyMapDialog` klasy do zaimplementowania okno dialogowe mapowania klawiatury o zmiennym rozmiarze. Okno dialogowe użyto kontrolka widoku listy, aby wyświetlić skróty klawiaturowe i skojarzone z nimi polecenia.  
   
- Aby użyć `CMFCKeyMapDialog` klasy w aplikacji, Przekaż wskaźnik do głównego okna ramowego jako parametr `CMFCKeyMapDialog` konstruktora. Następnie wywołaj `DoModal` metodę, aby uruchomić modalne okno dialogowe.  
+ Aby użyć `CMFCKeyMapDialog` klasy w aplikacji, przekazać wskaźnik do ramki głównego okna jako parametr do `CMFCKeyMapDialog` konstruktora. Następnie wywołaj `DoModal` metodę, aby uruchomić okno modalne okno dialogowe.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -114,30 +114,30 @@ CMFCKeyMapDialog(
  Wskaźnik do okna nadrzędnego `CMFCKeyMapDialog` obiektu.  
   
  [in] *bEnablePrint*  
- `TRUE` Jeśli można go wydrukować lista klawiszy skrótów; w przeciwnym razie `FALSE`. Wartość domyślna to `FALSE`.  
+ Wartość TRUE, jeśli lista klawiszy skrótów, może zostać zrealizowane; w przeciwnym razie wartość FALSE. Wartość domyślna to FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ### <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano sposób tworzenia obiektu `CMFCKeyMapDialog` klasy. Ten przykład jest częścią [programu Visual Studio przykład](../../visual-cpp-samples.md).  
+ W poniższym przykładzie pokazano sposób tworzenia obiektu `CMFCKeyMapDialog` klasy. W tym przykładzie jest częścią [Visual Studio przykład](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#21](../../mfc/codesnippet/cpp/cmfckeymapdialog-class_1.cpp)]  
   
 ##  <a name="domodal"></a>  CMFCKeyMapDialog::DoModal  
- Wyświetla okno dialogowe mapowania klawiatury.  
+ Wyświetlane jest okno dialogowe mapowania klawiatury.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Całkowita, takich jak `IDOK` lub `IDCANCEL`, która jest przekazywany do [CDialog::EndDialog](../../mfc/reference/cdialog-class.md#enddialog) metody. Metoda z kolei zamknięcie okna dialogowego. Aby uzyskać więcej informacji, zobacz [CDialog::DoModal](../../mfc/reference/cdialog-class.md#domodal).  
+ Liczba całkowita ze znakiem, takich jak IDOK lub IDCANCEL, który jest przekazywany do [CDialog::EndDialog](../../mfc/reference/cdialog-class.md#enddialog) metody. Metody, z kolei zamknięcie okna dialogowego. Aby uzyskać więcej informacji, zobacz [CDialog::DoModal](../../mfc/reference/cdialog-class.md#domodal).  
   
 ### <a name="remarks"></a>Uwagi  
- Okno dialogowe mapowania klawiatury umożliwia wybieranie i przypisywanie klawiszy skrótów do różnych kategorii poleceń. Ponadto klucze wybrany Akcelerator i ich opisy można skopiować do Schowka.  
+ Okno dialogowe mapowania klawiatury pozwala sposób wybierania i przypisywania klawiszy skrótów do różnych kategorii poleceń. Ponadto możesz skopiować wybrany klawiszy i ich opisy do Schowka.  
   
 ##  <a name="formatitem"></a>  CMFCKeyMapDialog::FormatItem  
- Wywoływane przez platformę, by kompilacji ciąg opisujący klucza mapowania. Domyślnie ten ciąg zawiera nazwę polecenia, klawiszy skrótów i opis klawiszy skrótów.  
+ Metoda wywoływana przez platformę, by tworzyć ciąg, który opisuje mapowanie klawiszy. Domyślnie ciąg zawiera nazwę polecenia klawiszy skrótów i Opis klucza skrótu.  
   
 ```  
 virtual CString FormatItem(int nItem) const;  
@@ -145,7 +145,7 @@ virtual CString FormatItem(int nItem) const;
   
 ### <a name="parameters"></a>Parametry  
  [in] *nItem*  
- Liczony od zera indeks elementu na wewnętrznej liście mapowań klucza.  
+ Liczony od zera indeks elementu na liście wewnętrznych mapowań klucza.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  A `CString` obiekt, który zawiera tekst sformatowany elementu.  
@@ -153,7 +153,7 @@ virtual CString FormatItem(int nItem) const;
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="getcommandkeys"></a>  CMFCKeyMapDialog::GetCommandKeys  
- Pobiera wartość ciągu. Ciąg zawiera listę klawiszy skrótów, które są skojarzone z określonego polecenia.  
+ Pobiera wartość ciągu. Ciąg zawiera listę skrótów klawiaturowych, które są skojarzone z określonym poleceniem.  
   
 ```  
 virtual CString GetCommandKeys(UINT uiCmdID) const;  
@@ -164,12 +164,12 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
  Identyfikator polecenia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Rozdzielana średnikami (';') lista klawiszy skrótu skojarzony z określonego polecenia.  
+ Rozdzielana średnikami (";") lista klawiszy skrótu, który jest skojarzony z określonym poleceniem.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="oninsertitem"></a>  CMFCKeyMapDialog::OnInsertItem  
- Wywoływane przez platformę, zanim nowy element jest wstawiany formant listy wewnętrznej, który obsługuje sterowania mapowania klawiatury.  
+ Wywoływane przez platformę, zanim nowy element jest wstawiany do kontrolkę listy wewnętrznej, która obsługuje kontrolę mapowania klawiatury.  
   
 ```  
 virtual void OnInsertItem(
@@ -179,15 +179,15 @@ virtual void OnInsertItem(
   
 ### <a name="parameters"></a>Parametry  
  [in] *pButton*  
- Wskaźnik do przycisku paska narzędzi, który jest używany do mapowania klawiatury kombinacji klawiszy polecenia nazwę i opis. Element mapy klucza jest przechowywany w formancie listy wewnętrznej.  
+ Wskaźnik na przycisku paska narzędzi, który służy do mapowania klawiatury kombinacji klawiszy polecenia nazwę i opis. Element mapy kluczy są przechowywane w kontrolce listy wewnętrznej.  
   
  [in] *nItem*  
- Liczony od zera indeks, który określa, gdzie Wstaw nowy element mapy klucza w formancie listy wewnętrznej.  
+ Liczony od zera indeks, który określa lokalizację wstawić nowy element mapy kluczy w formancie listy wewnętrznej.  
   
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="onprintheader"></a>  CMFCKeyMapDialog::OnPrintHeader  
- Wywoływane przez platformę, by wydrukować nagłówka mapy klawiatury na nowej stronie.  
+ Metoda wywoływana przez platformę, by wydrukować nagłówek mapy klawiatury na nowej stronie.  
   
 ```  
 virtual int OnPrintHeader(
@@ -201,19 +201,19 @@ virtual int OnPrintHeader(
  Kontekst urządzenia dla drukarki.  
   
  [in] *nPage*  
- Numer strony do drukowania.  
+ Numer strony do wydrukowania.  
   
  [in] *cx*  
  Przesunięcie w poziomie nagłówka, w pikselach.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- W przypadku powodzenia wysokość drukowanej tekstu. Aby uzyskać więcej informacji, zobacz sekcję zwrócić wartość [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext).  
+ Jeśli to się powiedzie, wysokość drukowanego tekstu. Aby uzyskać więcej informacji, zobacz sekcję zwracają wartość [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext).  
   
 ### <a name="remarks"></a>Uwagi  
- Platformę używa tej metody do drukowania mapy klawiatury. Domyślnie ta metoda Wyświetla numer strony, nazwa aplikacji i tytuł okna dialogowego.  
+ Struktura używa tej metody, aby wydrukować mapy klawiatury. Domyślnie ta metoda drukuje numer strony, nazwę aplikacji i tytuł okna dialogowego.  
   
 ##  <a name="onprintitem"></a>  CMFCKeyMapDialog::OnPrintItem  
- Wywoływane przez platformę, by wydrukować element mapowania klawiatury.  
+ Metoda wywoływana przez platformę, by wydrukować element mapowania klawiatury.  
   
 ```  
 virtual int OnPrintItem(
@@ -235,26 +235,26 @@ virtual int OnPrintItem(
  Przesunięcie w pionie między górnej części strony i pozycja elementu.  
   
  [in] *cx*  
- Przesunięcie w poziomie między po lewej stronie i pozycja elementu.  
+ Przesunięcie w poziomie między lewym rogu strony i pozycja elementu.  
   
  [in] *bCalcHeight*  
- `TRUE` Aby obliczyć najlepsze wysokość elementu wydruku; `FALSE` obcięcia wydruku elementu, tak aby zmieścił domyślna przestrzeń.  
+ Wartość TRUE, aby obliczyć najlepsze wysokość elementu wydruku; Wartość FAŁSZ, aby obciąć drukowania elementu, tak aby zmieścił domyślna przestrzeń.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wysokość elementu wydruku.  
+ Wysokość elementu drukowanych.  
   
 ### <a name="remarks"></a>Uwagi  
- Struktura wywołuje tę metodę, aby wydrukować elementu okna dialogowego kluczy mapy. Domyślnie ta metoda Wyświetla nazwa polecenia, klawiszy skrótów i opis polecenia do elementu.  
+ Struktura wywołuje tę metodę, aby wydrukować elementu okna dialogowego mapy kluczy. Domyślnie ta metoda drukuje elementu nazwa polecenia klawiszy skrótów i opis polecenia.  
   
 ##  <a name="onsetcolumns"></a>  CMFCKeyMapDialog::OnSetColumns  
- Wywoływane przez platformę, by ustawić podpisy kolumn w formancie listy wewnętrznej, który obsługuje kontrolkę mapowania klawiatury.  
+ Metoda wywoływana przez platformę, by ustawić podpisy dla kolumn w formancie listy wewnętrznej, który obsługuje kontrolę mapowania klawiatury.  
   
 ```  
 virtual void OnSetColumns();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślnie ta metoda uzyskuje podpisy kolumn z trzech zasobów. Polecenie Podpis kolumny pochodzi z IDS_AFXBARRES_COMMAND, podpis kolumny klucza jest z IDS_AFXBARRES_KEYS, a podpis opis kolumny jest IDS_AFXBARRES_DESCRIPTION.  
+ Domyślnie ta metoda uzyskuje dostęp do transkrypcji dla kolumn z trzech zasobów. Polecenie Podpis kolumny pochodzi z IDS_AFXBARRES_COMMAND, podpis kolumny klucza jest z IDS_AFXBARRES_KEYS, i podpis opis kolumny pochodzi z IDS_AFXBARRES_DESCRIPTION.  
   
 ##  <a name="printkeymap"></a>  CMFCKeyMapDialog::PrintKeyMap  
  Wywoływane przez platformę, gdy użytkownik kliknie **drukowania** przycisku.  
@@ -264,17 +264,17 @@ virtual void PrintKeyMap();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `PrintKeyMap` Metoda drukuje kluczy mapy. Inicjuje nowe zadanie drukowania, a następnie w wielokrotnie wywołuje [CMFCKeyMapDialog::OnPrintHeader](#onprintheader) i [CMFCKeyMapDialog::OnPrintItem](#onprintitem) metody do momentu są drukowane mapowań klucza.  
+ `PrintKeyMap` Metoda drukuje mapy kluczy. Inicjuje nowe zadanie drukowania, a następnie w wielokrotnie wywołuje [CMFCKeyMapDialog::OnPrintHeader](#onprintheader) i [CMFCKeyMapDialog::OnPrintItem](#onprintitem) metody do momentu, wydrukowaniu mapowań klucza.  
   
 ##  <a name="setcolumnswidth"></a>  CMFCKeyMapDialog::SetColumnsWidth  
- Wywoływane przez platformę, by ustawić szerokość kolumn w formancie listy wewnętrznej, który obsługuje kontrolkę mapowania klawiatury.  
+ Metoda wywoływana przez platformę, by ustawić szerokość kolumn w formancie listy wewnętrznej, który obsługuje kontrolę mapowania klawiatury.  
   
 ```  
 virtual void SetColumnsWidth();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda umożliwia wewnętrzny listy kolumn formantu do domyślnej szerokości. Po pierwsze jest obliczana szerokość kolumny klawiszy skrótów. Następnie jedna trzecia szerokości jest przydzielony do kolumny polecenia i pozostałych dwóch jest przydzielony do kolumny opis.  
+ Ta metoda umożliwia określenie listy wewnętrznych kolumn formantu do domyślnej szerokości. Po pierwsze jest obliczana szerokość kolumny klawiszy skrótów. Następnie jedną trzecią szerokości jest przydzielany do kolumny polecenia i pozostałych dwóch jest przydzielany do opis kolumny.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   

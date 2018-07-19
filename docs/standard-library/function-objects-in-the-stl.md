@@ -17,22 +17,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa2694e9f5bb477447d08ab976cac60634ef3b60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 09123f4b8d0200d133ae04244d38b615640f7d30
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845456"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964930"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>Obiekty funkcji w standardowej bibliotece C++
 
-A *obiekt funkcji*, lub *obiekt*, jest dowolnego typu, który implementuje operator(). Ten operator jest określany jako *operator wywołania* lub czasami *operatora aplikacji*. Standardowa biblioteka C++ używa funkcji obiektów głównie jako kryteria dla kontenerów i algorytmy sortowania.
+A *obiektu funkcyjnego*, lub *funktor*, jest dowolny typ, który implementuje operator(). Ten operator jest określany jako *operator wywołania* lub czasami *operatora aplikacji*. Standardowa biblioteka C++ używa obiektów funkcyjnych, przede wszystkim jako kryteria dla kontenerów i algorytmów sortowania.
 
-Obiekty funkcji Podaj dwie główne zalety wywoływanej funkcji proste. Pierwsza to, że obiekt funkcji może zawierać stanu. Drugim jest obiektem funkcji jest typem oraz mogą być używane jako parametr szablonu.
+Obiekty funkcyjne zapewniają dwie główne korzyści wywoływanej funkcji proste. Pierwsza to, że obiekt funkcji może zawierać stanu. Drugim jest, że obiektu funkcyjnego jest typem i dlatego może służyć jako parametr szablonu.
 
 ## <a name="creating-a-function-object"></a>Tworzenie obiektu — funkcja
 
-Aby utworzyć obiekt funkcji, tworzenie typu i implementować operator(), takich jak:
+Aby utworzyć obiekt funkcji, Utwórz typ i zaimplementować operator(), takich jak:
 
 ```cpp
 class Functor
@@ -45,11 +45,11 @@ public:
 };
 ```
 
-Ostatni wiersz `main` funkcja pokazuje, jak wywołać obiekt funkcji. To wywołanie wygląda wywołanie funkcji, ale faktycznie dzwoni operator() typu obiekt. Ta podobieństwa między wywoływania obiektem funkcji i funkcji jest jak obiekt funkcji termin pochodzi.
+Ostatni wiersz `main` funkcji pokazuje, jak wywołać obiekt funkcji. Tego wywołania wygląda wywołanie do funkcji, ale faktycznie dzwoni operator() typu Funktor. Podobieństwo wywołanie obiektu funkcji i funkcji jest jak obiekt funkcji, który termin dostarczone.
 
 ## <a name="function-objects-and-containers"></a>Funkcja obiektów i kontenerów
 
-Standardowa biblioteka C++ zawiera kilka funkcji obiektów w [ \<funkcjonalności >](../standard-library/functional.md) pliku nagłówka. Jedno użycie tych obiektów funkcji jest jako kryterium sortowania dla kontenerów. Na przykład `set` kontenera jest zadeklarowany w następujący sposób:
+Standardowa biblioteka C++ zawiera kilka obiektów funkcyjnych w [ \<funkcjonalności >](../standard-library/functional.md) pliku nagłówka. Jest jednym z tych obiektów funkcyjnych zastosowań jako kryterium sortowania dla kontenerów. Na przykład `set` kontenera jest zadeklarowana w następujący sposób:
 
 ```cpp
 template <class Key,
@@ -58,11 +58,11 @@ template <class Key,
 class set
 ```
 
-Typ drugiego argumentu szablonu jest obiektem funkcji `less`. Ten obiekt funkcja zwraca `true` Jeśli pierwszy parametr przekazany do jest mniejsza niż drugi parametr przekazany. Ponieważ niektóre kontenery posortować ich elementów, kontener musi sposób porównywania dwóch elementów i odbywa się przy użyciu obiektu funkcji. Możesz definiować własne kryteria dla kontenerów sortowania tworzenia obiektu funkcji i określając go na liście szablonów dla kontenera.
+Typ drugiego argumentu szablonu jest obiektem funkcji `less`. Ta funkcja zwraca **true** czy pierwszy parametr przekazany do jest mniejszy niż drugi parametr przekazany. Ponieważ niektóre kontenery sortowanie swoich elementów, kontener musi sposób porównywania dwóch elementów, a jest to realizowane przy użyciu obiektu funkcji. Można zdefiniować własne sortowanie kryteria dla kontenerów, tworząc obiekt funkcji, a następnie określając jej na liście szablonów dla kontenera.
 
-## <a name="function-objects-and-algorithms"></a>Algorytmy i obiekty funkcji
+## <a name="function-objects-and-algorithms"></a>Obiekty funkcji i algorytmy
 
-Użyj innego funkcjonalności obiektów jest algorytmów. Na przykład `remove_if` algorytm jest zadeklarowany w następujący sposób:
+Innym zastosowaniem obiektów funkcjonalności jest algorytmów. Na przykład `remove_if` algorytm jest zadeklarowana w następujący sposób:
 
 ```cpp
 template <class ForwardIterator, class Predicate>
@@ -72,7 +72,7 @@ ForwardIterator remove_if(
     Predicate pred);
 ```
 
-Ostatni argument `remove_if` jest obiektem funkcji, która zwraca wartość logiczną ( *predykatu*). Jeśli wynik obiekt funkcji jest `true`, a następnie element zostanie usunięty z kontenera, do której uzyskuje dostęp Iteratory `first` i `last`. Można użyć dowolnego z obiektów funkcja zadeklarowana w [ \<funkcjonalności >](../standard-library/functional.md) nagłówka dla argumentu `pred` lub Utwórz swój własny.
+Ostatni argument `remove_if` jest obiektem funkcji, która zwraca wartość logiczną ( *predykatu*). Jeśli wynik obiekt funkcji, który jest **true**, a następnie element zostanie usunięty z kontenera, w której uzyskuje dostęp przez Iteratory `first` i `last`. Można użyć dowolnego z obiektów funkcyjnych, zadeklarowany w [ \<funkcjonalności >](../standard-library/functional.md) nagłówka dla argumentu `pred` lub możesz utworzyć swój własny.
 
 ## <a name="see-also"></a>Zobacz także
 

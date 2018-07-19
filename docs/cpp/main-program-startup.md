@@ -1,5 +1,5 @@
 ---
-title: 'main: uruchamianie programu | Dokumentacja firmy Microsoft'
+title: 'główne: uruchamianie programu | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,50 +22,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2999596fe30afca4c9945efc34a8537e9f45e14a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2f78a122837fc2cb9a89083d5be8fd2b488c1772
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939227"
 ---
 # <a name="main-program-startup"></a>main: uruchamianie programu
-Specjalnych funkcji o nazwie `main` jest punktem początkowym wykonywania dla wszystkich programów C i C++. Jeśli jesteś pisanie kodu, która jest zgodna [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] modelu programowania, można użyć `wmain`, która jest wersja znaków dwubajtowych `main`.  
+Specjalną funkcję o nazwie `main` jest punktem początkowym wykonanie wszystkich programów C i C++. Jeśli jesteś pisanie kodu, która jest zgodna [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] modelu programowania, można użyć `wmain`, która jest wersją znaków dwubajtowych z `main`.  
   
- `main` Funkcja nie jest wstępnie zdefiniowana przez kompilator. Musi zostać dostarczony w tekście program.  
+ `main` Funkcja nie jest wstępnie zdefiniowana przez kompilator. Wymagane jest podanie tekstu programu.  
   
  Składnia deklaracji `main` jest  
   
-```  
+```cpp 
 int main();  
 ```  
   
  lub, opcjonalnie,  
   
-```  
+```cpp 
 int main(int argc, char *argv[], char *envp[]);  
 ```  
   
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
- Składnia deklaracji `wmain` wygląda następująco:  
+ Składnia deklaracji `wmain` jest następująca:  
   
-```  
+```cpp 
 int wmain( );  
 ```  
   
  lub, opcjonalnie,  
   
-```  
+```cpp 
 int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);  
 ```  
   
- Można również użyć `_tmain`, która jest zdefiniowana w pliku TCHAR.h. `_tmain` jest rozpoznawana jako `main` Jeśli _unicode — nie jest zdefiniowany. W takim przypadku `_tmain` jest rozpoznawana jako `wmain`.  
+ Można również użyć `_tmain`, która została zdefiniowana w TCHAR.h. `_tmain` jest rozpoznawana jako `main` , chyba że _UNICODE zdefiniowano. W takim przypadku `_tmain` jest rozpoznawana jako `wmain`.  
   
- Alternatywnie `main` i `wmain` funkcje mogą być deklarowane jako zwracanie `void` (Brak wartości zwracanej). W przypadku `main` lub `wmain` jako zwracanie `void`, nie można zwrócić kod zakończenia procesu nadrzędnego lub systemu operacyjnego za pomocą [zwracać](../cpp/return-statement-in-program-termination-cpp.md) instrukcji. Aby powrócić zakończenia kodu, gdy `main` lub `wmain` jest zadeklarowany jako `void`, należy użyć [zakończyć](../cpp/exit-function.md) funkcji.  
+ Alternatywnie `main` i `wmain` funkcje mogą być zadeklarowane jako zwracanie **void** (nie zwraca wartości). Jeśli zadeklarujesz `main` lub `wmain` powrotu **void**, nie można zwrócić kod wyjścia procesu nadrzędnego lub systemu operacyjnego za pomocą [zwracają](../cpp/return-statement-in-program-termination-cpp.md) instrukcji. Do zwrócenia wyjście kodu, gdy `main` lub `wmain` jest zadeklarowany jako **void**, należy użyć [wyjść](../cpp/exit-function.md) funkcji.  
   
-**KOŃCOWY określonych firmy Microsoft**  
- Typy dla `argc` i `argv` są definiowane przez język. Nazwy `argc`, `argv`, i `envp` są tradycyjne, ale nie są wymagane przez kompilator. Aby uzyskać więcej informacji i przykład zobacz [definicje argumentu](../cpp/argument-definitions.md).  
+**END specyficzny dla Microsoft**  
+ Typy dla `argc` i `argv` są definiowane przez język. Nazwy `argc`, `argv`, i `envp` są tradycyjne, ale nie są wymagane przez kompilator. Aby uzyskać więcej informacji i obejrzeć przykład, zobacz [definicje argumentu](../cpp/argument-definitions.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Keywords](../cpp/keywords-cpp.md)   
  [Korzystanie z wmain zamiast main](../cpp/using-wmain-instead-of-main.md)   
- [Ograniczenia funkcji main](../cpp/main-function-restrictions.md)
+ [Ograniczenia funkcji Main](../cpp/main-function-restrictions.md)   
+ [Analizowanie argumentów wiersza polecenia języka C++](../cpp/parsing-cpp-command-line-arguments.md)

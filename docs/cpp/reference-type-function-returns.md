@@ -16,29 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 867313625ccc90924eed0c0c9405970f2cb90f8a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 12b86ee4505792fbc3a90d34ece8e714eb3565ff
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947760"
 ---
 # <a name="reference-type-function-returns"></a>Zwracanie funkcji typu odwołania
-Funkcje mogą być deklarowane jak zwracany typ odwołania. Istnieją dwie przyczyny dokonanie takiego oświadczenia:  
+Funkcje mogą być zadeklarowane do zwrócenia typu odwołania. Istnieją dwa powody, aby taką deklarację:  
   
--   Informacje są zwracane jest wystarczająco duży obiekt, który, zwracanie odwołania jest bardziej efektywne niż zwracanie kopii.  
+-   Informacje zwracane jest wystarczająco duży obiekt, który, zwracanie odwołania jest bardziej wydajne niż zwraca kopię.  
   
--   Typ funkcji musi być wartością l-value.  
+-   Typ funkcji musi być wartością l.  
   
--   Nie przejdzie do określonego obiektu poza zakresem, gdy funkcja zwraca.  
+-   Do określonego obiektu będzie wykroczy poza zakres, gdy funkcja zwraca.  
   
- Podobnie jak może być bardziej wydajne, aby przekazać duże obiekty *do* funkcje przez odwołanie, również może być bardziej wydajne, aby zwrócić duże obiekty *z* funkcje przez odwołanie. Protokół odwołanie zwracane eliminuje konieczność obiekt kopiowany do lokalizacji tymczasowej przed zwróceniem.  
+ Tak samo jak może być bardziej efektywne przekazywanie dużych obiektów *do* funkcji przez odwołanie, również może być bardziej efektywne, aby zwrócić dużych obiektów *z* funkcji przez odwołanie. Odwołanie do zwrócenia protokół eliminuje konieczność obiekt jest kopiowany do lokalizacji tymczasowej przed zwróceniem wyniku.  
   
- Typy zwracane odwołanie również może być przydatne, gdy funkcja musi być wartością l-value. Najbardziej przeciążone operatory należą do tej kategorii, szczególnie operator przypisania. Przeciążone operatory są objęte [przeciążone operatory](../cpp/operator-overloading.md).  
+ Typy zwracane odwołanie również może być przydatne, gdy funkcja musi być wartością l. Najbardziej przeciążonych operatorów należą do tej kategorii, szczególnie operator przypisania. Przeciążone operatory są objęte [przeciążone operatory](../cpp/operator-overloading.md).  
   
 ## <a name="example"></a>Przykład  
- Należy wziąć pod uwagę `Point` przykład:  
+ Należy wziąć pod uwagę `Point` przykładu:  
   
-```  
+```cpp 
 // refType_function_returns.cpp  
 // compile with: /EHsc  
   
@@ -82,29 +83,29 @@ cout << "x = " << ThePoint.x() << "\n"
   
 ## <a name="output"></a>Dane wyjściowe  
   
-```  
+```Output  
 x = 7  
 y = 9  
 ```  
   
- Zwróć uwagę, że funkcje `x` i `y` są deklarowane jako zwracanie typy referencyjne. Po obu stronach instrukcji przypisania można używać tych funkcji.  
+ Należy zauważyć, że funkcje `x` i `y` są deklarowane jako zwracania typów odwołań. Te funkcje można używane po obu stronach instrukcji przypisania.  
   
- Należy też zauważyć, że w głównym, obiekt ThePoint pozostaje w zakresie, a w związku z tym jego elementy członkowskie odwołania są wciąż jest aktywny i mogą bezpiecznie uzyskiwać.  
+ Należy zauważyć, że w głównym oknie, obiekt ThePoint pozostaje w zakresie, a w związku z tym jego składowe odwołania są wciąż jest aktywny i można bezpiecznie uzyskać dostęp.  
   
- Deklaracje typów referencyjnych musi zawierać inicjatory z wyjątkiem w następujących przypadkach:  
+ Deklaracje typu referencyjnego musi zawierać inicjatory, z wyjątkiem w następujących przypadkach:  
   
--   Jawne `extern` deklaracji  
+-   Jawne **extern** deklaracji  
   
--   Deklaracja elementu członkowskiego klasy  
+-   Deklaracja składowej klasy  
   
 -   Deklaracja w obrębie klasy  
   
 -   Deklaracja argumentu dla funkcji lub typ zwracany dla funkcji  
   
-## <a name="caution-returning-address-of-local"></a>Zwracanie adresu lokalnej Uwaga  
- W przypadku obiektu w zakresie lokalnym, ten obiekt zostanie zniszczona po powrocie z funkcji. Jeśli funkcja zwraca odwołanie do tego obiektu, odwołujące się prawdopodobnie spowoduje naruszenie zasad dostępu w czasie wykonywania, jeśli element wywołujący próbuje użyć odwołanie o wartości null.  
+## <a name="caution-returning-address-of-local"></a>Ostrzeżenie zwracanie adresu lokalnej  
+ Jeśli zadeklarujesz obiekt w zakresie lokalnym ten obiekt jest niszczony, gdy funkcja zwraca. Jeśli funkcja zwraca odwołanie do tego obiektu, tego odwołania prawdopodobnie spowoduje naruszenie zasad dostępu w czasie wykonywania, jeśli obiekt wywołujący podejmują próbę użycia odwołania o wartości null.  
   
-```  
+```cpp 
 // C4172 means Don’t do this!!!  
 Foo& GetFoo()  
 {  
@@ -114,7 +115,7 @@ Foo& GetFoo()
 } // f is destroyed here  
 ```  
   
- Kompilator generuje ostrzeżenie w tym przypadku: `warning C4172: returning address of local variable or temporary`. W programach proste jest czasami nie naruszenie zasad dostępu będzie wystąpić Jeśli odwołanie jest dostępny przez obiekt wywołujący, zanim zostanie zastąpiony lokalizacji pamięci. Jest to spowodowane szczęścia znaczne zmniejszenie. Uwzględnianie ostrzeżenia.  
+ Kompilator generuje ostrzeżenie, w tym przypadku: `warning C4172: returning address of local variable or temporary`. W programach proste jest możliwe, że od czasu do czasu nie naruszenie zasad dostępu wystąpi, jeśli odwołanie jest dostępny przez obiekt wywołujący, zanim zostanie zastąpiony lokalizacji pamięci. Jest to spowodowane szczęścia znaczne zmniejszenie. Uwzględnianie ostrzeżenia.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Odwołania](../cpp/references-cpp.md)

@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84cc8ade8d844b591d6cb848ebee0fb3b05fb932
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5c0e37eb0eaa7f0a6e40f385315822742f15516e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33851905"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962374"
 ---
 # <a name="isscalar-class"></a>is_scalar — Klasa
 
-Testy, jeśli typ jest skalarny.
+Sprawdza, czy typ jest skalarna.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,11 +37,11 @@ struct is_scalar;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zapytania.
+*Ty* typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typ `Ty` jest typem całkowitym zmiennoprzecinkowa typ, typ wyliczenia, typ wskaźnika lub wskaźnik do typu elementu członkowskiego lub `cv-qualified` formularza jednego z nich, w przeciwnym razie posiada wartość false.
+Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* to integralny typ, zmiennoprzecinkowa typ, typ wyliczenia, typ wskaźnika lub wskaźnik do typu elementu członkowskiego lub `cv-qualified` postaci jednego z tych funkcji, w przeciwnym razie przechowuje wartość false.
 
 ## <a name="example"></a>Przykład
 
@@ -83,7 +83,7 @@ is_scalar<float> == true
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

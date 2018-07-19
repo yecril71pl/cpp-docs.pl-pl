@@ -16,20 +16,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56eac7eef1feba1ba287af0dcd0d581335e395c4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2450f57d755b70170165d1b2e46e4b00788fe573
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843707"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965864"
 ---
 # <a name="custom-manipulators-with-arguments"></a>Niestandardowe manipulatory z argumentami
 
-W tej sekcji opisano sposób tworzenia manipulatory strumieni wyjściowych z jednego lub więcej argumentów i jak używać manipulatory strumieni nonoutput.
+W tej sekcji opisano sposób tworzenia manipulatory strumieni danych wyjściowych za pomocą jednego lub więcej argumentów i sposobu używania manipulatory dla nonoutput strumieni.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Manipulatory strumieni wyjściowych z jednym argumentem](../standard-library/output-stream-manipulators-with-one-argument-int-or-long.md) (`int` lub `long`)
+[Stream manipulatory wyjściowych z jednym argumentem](../standard-library/output-stream-manipulators-with-one-argument-int-or-long.md) (**int** lub **długie**)
 
 [Inne manipulatory strumieni wyjściowych z jednym argumentem](../standard-library/other-one-argument-output-stream-manipulators.md)
 

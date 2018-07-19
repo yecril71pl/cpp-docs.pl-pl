@@ -14,22 +14,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37d54fbe9391cb53cca1d84401e90bb6fd47a479
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4d45468674d274c5f20b5533d782390cf2a6cec6
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358592"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881399"
 ---
 # <a name="device-context-global-functions"></a>Funkcje globalne kontekstu urządzenia
-Ta funkcja tworzy kontekstu urządzenia dla danego urządzenia.  
+Ta funkcja tworzy kontekst urządzenia dla danego urządzenia.  
   
 |||  
 |-|-|  
 |[AtlCreateTargetDC](#atlcreatetargetdc)|Tworzy kontekst urządzenia.|  
   
 ##  <a name="atlcreatetargetdc"></a>  AtlCreateTargetDC  
- Tworzy kontekstu urządzenia urządzenia określone w [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) struktury.  
+ Tworzy kontekst urządzenia dla urządzenia określonego w [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) struktury.  
   
 ```
 HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
@@ -37,18 +37,18 @@ HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
   
 ### <a name="parameters"></a>Parametry  
  *elementu hdc*  
- [in] Istniejące uchwyt kontekstu urządzenia, lub **NULL**.  
+ [in] Istniejący uchwyt kontekstu urządzenia, lub wartość NULL.  
   
- `ptd`  
- [in] Wskaźnik do **DVTARGETDEVICE** struktury, który zawiera informacje o urządzeniu docelowym.  
+ *ptd*  
+ [in] Wskaźnik do `DVTARGETDEVICE` strukturę, która zawiera informacje o urządzeniu docelowym.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca dojście do kontekstu urządzenia urządzenia określone w **DVTARGETDEVICE**. Jeśli urządzenie nie jest określone, zwraca dojście do domyślnego ekranu urządzenia.  
+ Zwraca uchwyt kontekst urządzenia dla urządzenia określonego w `DVTARGETDEVICE`. Jeśli urządzenie nie zostanie określona, zwraca uchwyt do domyślnego ekranu urządzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli struktura jest **NULL** i *elementu hdc* jest **NULL**, tworzy dla urządzenia wyświetlającego domyślnego kontekstu urządzenia.  
+ Jeśli struktura ma wartość NULL i *elementu hdc* ma wartość NULL, tworzy kontekst urządzenia dla urządzenia wyświetlającego domyślne.  
   
- Jeśli *elementu hdc* nie jest **NULL** i `ptd` jest **NULL**, funkcja zwraca istniejące *elementu hdc*.  
+ Jeśli *elementu hdc* nie ma wartości NULL i *ptd* ma wartość NULL, funkcja zwraca istniejące *elementu hdc*.  
 
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlwin.h  

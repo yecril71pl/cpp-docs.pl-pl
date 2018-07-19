@@ -28,15 +28,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cd166cac7d6d2cddbc12b3cbaa14b28d00c1357
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 296e288f017373563b867b02ad26f25ec6bc6227
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037272"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853650"
 ---
 # <a name="cmonikerfile-class"></a>Klasa CMonikerFile
-Reprezentuje strumienia danych ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) o nazwie [imoniker —](http://msdn.microsoft.com/library/windows/desktop/ms679705).  
+Przedstawia strumień danych ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) o nazwie określonej przez [imoniker —](http://msdn.microsoft.com/library/windows/desktop/ms679705).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -56,10 +56,10 @@ class CMonikerFile : public COleStreamFile
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CMonikerFile::Close](#close)|Odłącza i zwalnia strumienia i zwalnia krótkiej nazwy.|  
-|[CMonikerFile::Detach](#detach)|Odłącza `IMoniker` tego `CMonikerFile` obiektu.|  
+|[CMonikerFile::Close](#close)|Powoduje odłączenie i zwalnia strumienia, a następnie zwalnia moniker.|  
+|[CMonikerFile::Detach](#detach)|Odłącza `IMoniker` z tego `CMonikerFile` obiektu.|  
 |[CMonikerFile::GetMoniker](#getmoniker)|Zwraca bieżący krótkiej nazwy.|  
-|[CMonikerFile::Open](#open)|Otwiera określony plik można uzyskać strumienia.|  
+|[CMonikerFile::Open](#open)|Otwiera określony plik, aby uzyskać strumienia.|  
   
 ### <a name="protected-methods"></a>Metody chronione  
   
@@ -68,18 +68,18 @@ class CMonikerFile : public COleStreamFile
 |[CMonikerFile::CreateBindContext](#createbindcontext)|Pobiera kontekst powiązania lub tworzy domyślnie zainicjowane, kontekst powiązania.|  
   
 ## <a name="remarks"></a>Uwagi  
- Krótka nazwa zawiera informacje, podobnie jak ścieżka do pliku. Jeśli masz wskaźnik do obiektu moniker `IMoniker` interfejsu, może uzyskać dostęp do określonych plików bez potrzeby innych szczegółowych informacji o którym rzeczywiście znajduje się plik.  
+ Krótka nazwa zawiera informacje, podobnie jak w nazwie ścieżki do pliku. Jeśli masz wskaźnik do obiektu moniker `IMoniker` interfejsu, mogą uzyskać dostęp do wskazany plik bez innych szczegółowych informacji o których faktycznie znajduje się plik.  
   
- Pochodną `COleStreamFile`, `CMonikerFile` przyjmuje krótka nazwa lub reprezentację ciągu go do krótkiej nazwy i wiąże strumienia, dla której krótka nazwa jest nazwą. Następnie można odczytać i zapisać w strumieniu. Rzeczywistego celu `CMonikerFile` jest zapewnienie dostępu `IStream`o nazwie s `IMoniker`s, dzięki czemu nie trzeba powiązać strumienia samodzielnie, jeszcze `CFile` funkcji do strumienia.  
+ Pochodną `COleStreamFile`, `CMonikerFile` krótka lub ciąg reprezentujący może sprawić, że do krótka i wiąże strumień, dla którego przydomek jest nazwą. Można następnie odczytu i zapisu do tego strumienia. Rzeczywistego celu `CMonikerFile` ma na celu dostarczenie prosty dostęp do `IStream`s o nazwie określonej przez `IMoniker`s tak, że nie masz można powiązać strumienia samodzielnie, jeszcze `CFile` funkcjonalność do strumienia.  
   
- `CMonikerFile` Nie można powiązać z innym niż strumienia. Jeśli chcesz powiązać z magazynu lub obiekt, należy użyć `IMoniker` interfejsu bezpośrednio.  
+ `CMonikerFile` Nie można powiązać z coś innego niż strumienia. Jeśli chcesz powiązać z magazynu lub obiektu, należy użyć `IMoniker` interfejs bezpośrednio.  
   
- Aby uzyskać więcej informacji o strumieni i monikerów, zobacz [COleStreamFile](../../mfc/reference/colestreamfile-class.md) w *odwołania MFC* i [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) i [imoniker —](http://msdn.microsoft.com/library/windows/desktop/ms679705) w Zestaw Windows SDK.  
+ Aby uzyskać więcej informacji na temat strumieni i monikerów, zobacz [COleStreamFile](../../mfc/reference/colestreamfile-class.md) w *odwołanie MFC* i [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) i [imoniker —](http://msdn.microsoft.com/library/windows/desktop/ms679705) w Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [Cfile —](../../mfc/reference/cfile-class.md)  
+ [CFile](../../mfc/reference/cfile-class.md)  
   
  [COleStreamFile](../../mfc/reference/colestreamfile-class.md)  
   
@@ -89,14 +89,14 @@ class CMonikerFile : public COleStreamFile
  **Nagłówek:** afxole.h  
   
 ##  <a name="close"></a>  CMonikerFile::Close  
- Wywołanie tej funkcji, odłącz i wersji strumienia i zwolnić krótkiej nazwy.  
+ Wywołaj tę funkcję do odłączenia i wersji strumienia i zwolnić moniker.  
   
 ```  
 virtual void Close();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Można wywołać dla strumieni nieotwarte lub już zamknięty.  
+ Można wywołać dla strumieni nieotwarte lub już zamknięte.  
   
 ##  <a name="cmonikerfile"></a>  CMonikerFile::CMonikerFile  
  Konstruuje `CMonikerFile` obiektu.  
@@ -106,7 +106,7 @@ CMonikerFile();
 ```  
   
 ##  <a name="createbindcontext"></a>  CMonikerFile::CreateBindContext  
- Wywołanie tej funkcji można utworzyć kontekstu wiązania domyślnie zainicjowane.  
+ Wywołaj tę funkcję, aby utworzyć domyślnie zainicjowane, kontekstu powiązania.  
   
 ```  
 IBindCtx* CreateBindContext(CFileException* pError);
@@ -114,16 +114,16 @@ IBindCtx* CreateBindContext(CFileException* pError);
   
 ### <a name="parameters"></a>Parametry  
  *pError*  
- Wskaźnik do wyjątku plików. W przypadku wystąpienia błędu zostanie ustawiona do przyczyna.  
+ Wskaźnik do wyjątku plików. W przypadku wystąpienia błędu zostanie ustawiona przyczynie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do kontekstu powiązania [IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755) powiązania z w przypadku powodzenia; w przeciwnym razie **NULL**. Jeśli wystąpienie została otwarta z `IBindHost` interfejsu, kontekst powiązania są pobierane z `IBindHost`. W przypadku nie `IBindHost` interfejsu lub interfejsu nie może zwracać kontekstu powiązania, tworzenia kontekstu powiązania. Opis [IBindHost](http://msdn.microsoft.com/library/ie/ms775076) interfejsu, zobacz zestaw Windows SDK.  
+ Wskaźnik do kontekstu powiązania [IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755) do powiązania z, jeśli operacja się powiedzie; w przeciwnym razie wartość NULL. Jeśli wystąpienie zostało otwarte z `IBindHost` interfejsu, kontekst powiązania jest pobierana z `IBindHost`. Jeśli ma nie `IBindHost` interfejsu lub interfejs nie zwraca kontekst powiązania, tworzenia kontekstu powiązania. Aby uzyskać opis [IBindHost](http://msdn.microsoft.com/library/ie/ms775076) interfejsu, zobacz zestaw Windows SDK.  
   
 ### <a name="remarks"></a>Uwagi  
- Kontekst powiązania jest obiekt, który przechowuje informacje dotyczące operacji wiązania określonego krótkiej nazwy. Można zastąpić tę funkcję, aby zapewnić kontekstu wiązania niestandardowego.  
+ Kontekst powiązania jest obiektem, który przechowuje informacje o operacji wiązania określonej krótkiej nazwy. Można zastąpić tę funkcję, aby zapewnić kontekst niestandardowego powiązania.  
   
 ##  <a name="detach"></a>  CMonikerFile::Detach  
- Wywołanie tej funkcji, aby zamknąć strumienia.  
+ Wywołaj tę funkcję, aby zamknąć strumień.  
   
 ```  
 BOOL Detach(CFileException* pError = NULL);
@@ -131,26 +131,26 @@ BOOL Detach(CFileException* pError = NULL);
   
 ### <a name="parameters"></a>Parametry  
  *pError*  
- Wskaźnik do wyjątku plików. W przypadku wystąpienia błędu zostanie ustawiona do przyczyna.  
+ Wskaźnik do wyjątku plików. W przypadku wystąpienia błędu zostanie ustawiona przyczynie.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ##  <a name="getmoniker"></a>  CMonikerFile::GetMoniker  
- Wywołanie tej funkcji można pobrać wskaźnik do bieżącego krótkiej nazwy.  
+ Wywołaj tę funkcję, aby pobrać wskaźnika do bieżącego krótkiej nazwy.  
   
 ```  
 IMoniker* GetMoniker() const;  
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do bieżącego interfejsu moniker ( [imoniker —](http://msdn.microsoft.com/library/windows/desktop/ms679705)).  
+ Wskaźnik do bieżącego interfejsu krótkiej nazwy ( [imoniker —](http://msdn.microsoft.com/library/windows/desktop/ms679705)).  
   
 ### <a name="remarks"></a>Uwagi  
- Ponieważ `CMonikerFile` nie jest interfejsem, zwrócony wskaźnik nie zwiększa się liczba odwołań (za pośrednictwem [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)), i krótka nazwa zostanie zwolniony podczas `CMonikerFile` obiektu zostanie zwolniony. Jeśli chcesz przechowywać na moniker lub zwolnij samodzielnie, należy najpierw `AddRef` go.  
+ Ponieważ `CMonikerFile` nie jest interfejsem, zwrócony wskaźnik nie zwiększa liczbę odwołań (za pośrednictwem [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)), i moniker jest zwalniany podczas `CMonikerFile` obiektu jest zwalniany. Jeśli chcesz przechowywać na monikera lub wersji samodzielnie, musisz najpierw `AddRef` go.  
   
 ##  <a name="open"></a>  CMonikerFile::Open  
- Wywołanie tej funkcji członkowskich można otworzyć obiektu pliku lub krótkiej nazwy.  
+ Wywołaj tę funkcję elementu członkowskiego, aby otworzyć plik lub krótkiej nazwy obiektu.  
   
 ```  
 virtual BOOL Open(
@@ -165,25 +165,25 @@ virtual BOOL Open(
   
 ### <a name="parameters"></a>Parametry  
  *lpszURL*  
- Adres URL lub nazwa pliku, który ma zostać otwarty.  
+ Adres URL lub nazwę pliku, który ma zostać otwarty.  
   
  *pError*  
- Wskaźnik do wyjątku plików. W przypadku wystąpienia błędu zostanie ustawiona do przyczyna.  
+ Wskaźnik do wyjątku plików. W przypadku wystąpienia błędu zostanie ustawiona przyczynie.  
   
  *pMoniker*  
  Wskaźnik do interfejsu moniker `IMoniker` ma być używany do uzyskania strumienia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, w przypadku powodzenia; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli to się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- *LpszURL* parametru nie można używać na komputerze Macintosh. Tylko *pMoniker* formę **Otwórz** może być używany na komputerze Macintosh.  
+ *LpszURL* parametru nie można używać na komputerze Macintosh. Tylko *pMoniker* formy `Open` może być używany na komputerze Macintosh.  
   
- Możesz użyć adresu URL lub nazwę pliku dla *lpszURL* parametru. Na przykład:  
+ Możesz użyć adresu URL lub nazwę pliku do *lpszURL* parametru. Na przykład:  
   
  [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/cmonikerfile-class_1.cpp)]  
   
- - lub -  
+ - lub —  
   
  [!code-cpp[NVC_MFCWinInet#7](../../mfc/codesnippet/cpp/cmonikerfile-class_2.cpp)]  
   

@@ -23,18 +23,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08f6d09546d4514950b5b45ffb9494116294d051
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a279dac7e2a9f4e58954ac6637eaf2b56ad801b2
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364267"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884145"
 ---
 # <a name="cdynamicchain-class"></a>Klasa CDynamicChain
-Ta klasa zawiera metody pomocnicze dynamiczne tworzenie łańcuchów mapy komunikatów.  
+Ta klasa dostarcza metody obsługi dynamicznego łańcucha mapy komunikatów.  
   
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -55,20 +55,20 @@ class CDynamicChain
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CDynamicChain::CallChain](#callchain)|Określa, że wiadomości do innego obiektu mapy komunikatów systemu Windows.|  
-|[CDynamicChain::RemoveChainEntry](#removechainentry)|Usuwa wpisu mapy komunikatów z kolekcji.|  
+|[CDynamicChain::CallChain](#callchain)|Określa, że komunikat Windows do innego obiektu mapie komunikatów.|  
+|[CDynamicChain::RemoveChainEntry](#removechainentry)|Usuwa wpis mapy wiadomości z kolekcji.|  
 |[CDynamicChain::SetChainEntry](#setchainentry)|Dodaje wpis mapy wiadomości do kolekcji lub modyfikuje istniejący wpis.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CDynamicChain` Zarządza kolekcją mapy komunikatów, włączanie komunikatów systemu Windows, będą kierowane w czasie wykonywania, do innego obiektu mapy wiadomości.  
+ `CDynamicChain` Umożliwia zarządzanie kolekcją mapy komunikatów, umożliwiając komunikat Windows były kierowane w czasie wykonywania, do innego obiektu mapy komunikatów.  
   
- Aby dodać obsługę dynamiczne tworzenie łańcuchów mapy komunikatów, wykonaj następujące czynności:  
+ Aby dodać obsługę dynamicznej łańcuch mapy wiadomości, wykonaj następujące czynności:  
   
--   Pochodzi z klasy `CDynamicChain`. Mapy wiadomości określ [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) makro do tworzenia łańcucha mapy komunikatów domyślną innego obiektu.  
+-   Pochodzi z klasy `CDynamicChain`. W mapie komunikatów, należy określić [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) makra do tworzenia łańcucha mapy komunikatów domyślne innego obiektu.  
   
--   Pochodzi z klasy, co ma być powiązane z [CMessageMap](../../atl/reference/cmessagemap-class.md). `CMessageMap` Umożliwia obiektu do udostępnienia jej mapy wiadomości do innych obiektów.  
+-   Pochodzi każdej klasy, aby utworzyć łańcuch z [CMessageMap](../../atl/reference/cmessagemap-class.md). `CMessageMap` zezwala na obiekt uwidocznić jej mapy wiadomości do innych obiektów.  
   
--   Wywołanie `CDynamicChain::SetChainEntry` do identyfikowania, której obiekt i komunikat, który mapuje możesz do tworzenia łańcucha.  
+-   Wywołaj `CDynamicChain::SetChainEntry` do identyfikowania, której obiekt i jaką komunikaty zmapowana do tworzenia łańcucha.  
   
  Na przykład załóżmy, że klasa jest zdefiniowana w następujący sposób:  
   
@@ -78,15 +78,15 @@ class CDynamicChain
   
  [!code-cpp[NVC_ATL_Windowing#89](../../atl/codesnippet/cpp/cdynamicchain-class_2.cpp)]  
   
- gdzie `chainedObj` jest obiektem łańcuchowa i jest wystąpieniem klasy pochodzącej od `CMessageMap`. Teraz Jeśli `myCtl` odbiera komunikat, który nie jest obsługiwany przez `OnPaint` lub `OnSetFocus`, procedurę okna kieruje do wiadomości `chainedObj`przez mapy komunikat domyślny.  
+ gdzie `chainedObj` jest obiektem, połączonych i jest wystąpieniem obiektu klasy pochodzącej od `CMessageMap`. Teraz Jeśli `myCtl` odbiera komunikat, który nie jest obsługiwany przez `OnPaint` lub `OnSetFocus`, procedurę okna kieruje wiadomości do `chainedObj`firmy domyślne mapy wiadomości.  
   
- Aby uzyskać więcej informacji na temat łańcucha mapy komunikatów, zobacz [mapy komunikatów](../../atl/message-maps-atl.md) w artykule "Klas okien ALT".  
+ Aby uzyskać więcej informacji na temat łańcuch mapy wiadomości zobacz [mapy komunikatów](../../atl/message-maps-atl.md) w artykule "Klas okien ATL."  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlwin.h  
   
 ##  <a name="callchain"></a>  CDynamicChain::CallChain  
- Określa, że komunikatów systemu Windows do innego obiektu mapy wiadomości.  
+ Określa, że komunikat Windows mapy komunikatów innego obiektu.  
   
 ```
 BOOL CallChain(  
@@ -99,31 +99,31 @@ BOOL CallChain(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwChainID`  
- [in] Unikatowy identyfikator skojarzony z łańcuchowa obiekt i jego mapę komunikatów.  
+ *dwChainID*  
+ [in] Unikatowy identyfikator skojarzony z połączonych obiekt i jego mapy komunikatów.  
   
- `hWnd`  
- [in] Dojście do okna odbierania wiadomości.  
+ *hWnd*  
+ [in] Dojście do okna odbierania komunikatów.  
   
- `uMsg`  
+ *uMsg*  
  [in] Komunikat wysyłany do okna.  
   
- `wParam`  
+ *wParam*  
  [in] Dodatkowe informacje specyficzne dla wiadomości.  
   
- `lParam`  
+ *lParam*  
  [in] Dodatkowe informacje specyficzne dla wiadomości.  
   
- `lResult`  
- [out] Wynik przetwarzania komunikatów.  
+ *lResult*  
+ [out] Wynik przetwarzania wiadomości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- **Wartość TRUE,** Jeśli komunikat jest w pełni przetworzone; w przeciwnym razie **FALSE**.  
+ Wartość TRUE, jeśli komunikat jest w pełni przetwarzany; w przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołaj procedurę okna `CallChain`, należy określić [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) makra mapy wiadomości. Na przykład zobacz [CDynamicChain](../../atl/reference/cdynamicchain-class.md) omówienie.  
+ Wywołaj procedurę okna `CallChain`, należy określić [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) makra w mapie wiadomości. Aby uzyskać przykład, zobacz [CDynamicChain](../../atl/reference/cdynamicchain-class.md) Przegląd.  
   
- `CallChain` poprzednie wywołanie wymaga [SetChainEntry](#setchainentry) do skojarzenia `dwChainID` wartości z obiektu i jego mapę komunikatów.  
+ `CallChain` wymaga poprzednie wywołanie [SetChainEntry](#setchainentry) skojarzyć *dwChainID* wartości z obiektu i jego mapie komunikatów.  
   
 ##  <a name="cdynamicchain"></a>  CDynamicChain::CDynamicChain  
  Konstruktor.  
@@ -150,11 +150,11 @@ BOOL RemoveChainEntry(DWORD dwChainID);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwChainID`  
- [in] Unikatowy identyfikator skojarzony z łańcuchowa obiekt i jego mapę komunikatów. Pierwotnie określić tę wartość za pośrednictwem wywołania [SetChainEntry](#setchainentry).  
+ *dwChainID*  
+ [in] Unikatowy identyfikator skojarzony z połączonych obiekt i jego mapy komunikatów. Pierwotnie zdefiniować tę wartość za pomocą wywołania [SetChainEntry](#setchainentry).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- **Wartość TRUE,** Jeśli mapy komunikatów został pomyślnie usunięty z kolekcji. W przeciwnym razie **FALSE**.  
+ Wartość TRUE, jeśli Mapa komunikat został pomyślnie usunięty z kolekcji. W przeciwnym razie wartość FALSE.  
   
 ##  <a name="setchainentry"></a>  CDynamicChain::SetChainEntry  
  Dodaje określony komunikat mapy do kolekcji.  
@@ -167,21 +167,21 @@ BOOL SetChainEntry(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwChainID`  
- [in] Unikatowy identyfikator skojarzony z łańcuchowa obiekt i jego mapę komunikatów.  
+ *dwChainID*  
+ [in] Unikatowy identyfikator skojarzony z połączonych obiekt i jego mapy komunikatów.  
   
- `pObject`  
- [in] Wskaźnik do obiektu łańcuchowa deklarowania map wiadomości. Ten obiekt musi pochodzić od [CMessageMap](../../atl/reference/cmessagemap-class.md).  
+ *Obiekt*  
+ [in] Wskaźnik do obiektu łańcuchowych, deklarowanie mapie komunikatów. Ten obiekt musi pochodzić od klasy [CMessageMap](../../atl/reference/cmessagemap-class.md).  
   
- `dwMsgMapID`  
- [in] Identyfikator mapę komunikatów w obiekcie łańcuchowych. Wartość domyślna to 0, co identyfikuje mapy komunikatów domyślne zadeklarowana z [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Aby określić mapę komunikatów alternatywny zadeklarowana z [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), Przekaż `msgMapID`.  
+ *dwMsgMapID*  
+ [in] Identyfikator mapy komunikatów w połączonych obiektów. Wartość domyślna to 0, który identyfikuje mapy komunikatów domyślne, które są zadeklarowane za pomocą [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Aby określić mapy komunikatów alternatywne zadeklarowane za pomocą [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), przekazać `msgMapID`.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- **Wartość TRUE,** Jeśli mapy komunikatów został pomyślnie dodany do kolekcji. W przeciwnym razie **FALSE**.  
+ Wartość TRUE, jeśli Mapa komunikat został pomyślnie dodany do kolekcji. W przeciwnym razie wartość FALSE.  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli `dwChainID` wartość już istnieje w kolekcji, jego skojarzony obiekt i mapy komunikatów są zastępowane przez `pObject` i `dwMsgMapID`odpowiednio. W przeciwnym razie jest dodawany nowy wpis.  
+ Jeśli *dwChainID* wartość już istnieje w kolekcji, jego skojarzonego obiektu i mapy komunikatów, które są zastępowane przez *obiekt* i *dwMsgMapID*, odpowiednio. W przeciwnym razie jest dodawany nowy wpis.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CWindowImpl](../../atl/reference/cwindowimpl-class.md)   
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

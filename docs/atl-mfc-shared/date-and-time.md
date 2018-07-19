@@ -17,23 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79af7c468da642f44cc01229da304ab33e1ea1e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 643347915e97f1c803047f91b72311c5642e6eef
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355564"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879562"
 ---
 # <a name="date-and-time"></a>Data i godzina
-MFC obsługuje różne sposoby pracy z daty i godziny. Należą do nich następujące elementy:  
+Biblioteka MFC obsługuje kilka różnych sposobów pracy z datami i godzinami. Należą do nich następujące elementy:  
   
--   Klasy czasu ogólnego przeznaczenia. [Ctime —](../atl-mfc-shared/reference/ctime-class.md) i [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md) klasy Hermetyzowanie większość funkcji skojarzonych z biblioteką czasu standardu ANSI, który został zadeklarowany w czasie. H.  
+-   Klasy czasu ogólnego przeznaczenia. [CTime](../atl-mfc-shared/reference/ctime-class.md) i [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md) klasy hermetyzacji większość funkcjonalności powiązane z biblioteką czasu standardu ANSI, która jest zadeklarowana w czasie. H.  
   
--   Obsługa zegara systemowego. Z MFC w wersji 3.0, dodano obsługę `CTime` dla środowiska Win32 `SYSTEMTIME` i `FILETIME` typy danych.  
+-   Obsługa zegara systemowego. Za pomocą MFC w wersji 3.0, dodano obsługę `CTime` dla Win32 `SYSTEMTIME` i `FILETIME` typy danych.  
   
--   Obsługa automatyzacji [DATE — typ danych](../atl-mfc-shared/date-type.md). **Data** wartości obsługuje daty, godziny i daty/godziny. [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) i [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) klasy Hermetyzowanie tej funkcji. Funkcje te działają w [COleVariant](../mfc/reference/colevariant-class.md) przy użyciu automatyzacji pomocy technicznej.  
+-   Obsługa automatyzacji [DATE — typ danych](../atl-mfc-shared/date-type.md). Data obsługuje daty, godziny i wartości daty/godziny. [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) i [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) klasy hermetyzacji tej funkcji. Działają one z [COleVariant](../mfc/reference/colevariant-class.md) klasy przy użyciu obsługi automatyzacji.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej o  
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcesz dowiedzieć się więcej na temat  
   
 -   [Data i godzina: klasy ogólnego przeznaczenia](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
   

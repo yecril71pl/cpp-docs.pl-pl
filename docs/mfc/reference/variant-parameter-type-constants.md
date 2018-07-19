@@ -45,50 +45,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13820ff4fb07c3743f36ba3ebe33ee56a3a79c7d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d61930bda4560baaf628ce018cc0161527d9d07e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379863"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885952"
 ---
 # <a name="variant-parameter-type-constants"></a>Stałe typów parametru Variant
-W tym temacie wymieniono nowe stałe, które wskazują typów parametru variant przeznaczony do użytku z klasy formantów OLE programu Microsoft Foundation Class Library.  
+W tym temacie opisano nowe stałe, które wskazują typów parametru variant przeznaczony do użytku z klasy formantów OLE z biblioteki klas Microsoft Foundation.  
   
- Poniżej przedstawiono listę stałe klasy:  
+ Poniżej przedstawiono listę stałych, klas:  
   
 ##  <a name="_mfc_variant_data_constants"></a> Variant — stałe danych  
   
--   **Vts_color —** A 32-bitowa liczba całkowita, używany do reprezentowania wartości kolorów RGB.  
+-   VTS_COLOR 32-bitowa liczba całkowita, używany do reprezentowania wartości kolorów RGB.  
   
--   **Vts_font —** wskaźnik do **IFontDisp** interfejsu obiektu czcionki.  
+-   Wskaźnik A VTS_FONT `IFontDisp` interfejs obiektu czcionki.  
   
--   **Vts_handle —** wartość obsługi systemu Windows.  
+-   Wartość dojścia VTS_HANDLE Windows.  
   
--   **Vts_picture —** wskaźnik do `IPictureDisp` interfejsu obiektu obrazu.  
+-   Wskaźnik A VTS_PICTURE `IPictureDisp` interfejs obiektu obrazu.  
   
--   **Vts_optexclusive —** A 16-bitową wartość używany dla formantu, który jest przeznaczony do użycia w grupie formanty, takie jak przyciski radiowe. Ten typ Określa, że kontenera czy jeśli jedne kontrolować w grupie ma **TRUE** wartości wszystkich innych atrybutów muszą być **FALSE**.  
+-   VTS_OPTEXCLUSIVE 16-bitową wartość dla formantu, który jest przeznaczony do użycia w grupie formanty, takie jak przyciski radiowe. Ten typ informuje kontener, jeśli jeden formant w grupie ma wartość TRUE, wszystkie inne musi być równa FALSE.  
   
--   **Vts_tristate —** A 16-bitową liczbę całkowitą ze znakiem używane dla właściwości, które mogą mieć jeden z trzech wartości (wybrane, wyczyszczone, niedostępny), na przykład pole wyboru.  
+-   VTS_TRISTATE 16-bitowa liczba całkowita używane dla właściwości, które mogą mieć jeden z trzech wartości (wybrane, wyczyszczone, niedostępny), na przykład pole wyboru.  
   
--   **Vts_xpos_himetric —** używany do reprezentowania położenie wzdłuż osi x liczbę całkowitą bez znaku A 32-bitowych **HIMETRIC** jednostki.  
+-   VTS_XPOS_HIMETRIC 32-bitowa liczba całkowita bez znaku używany do reprezentowania pozycja wzdłuż osi x w jednostkach HIMETRIC.  
   
--   **Vts_ypos_himetric —** używany do reprezentowania położenie wzdłuż osi y w liczbę całkowitą bez znaku A 32-bitowych **HIMETRIC** jednostki.  
+-   VTS_YPOS_HIMETRIC 32-bitowa liczba całkowita bez znaku używany do reprezentowania pozycja wzdłuż osi y w jednostkach HIMETRIC.  
   
--   **Vts_xpos_pixels —** używany do reprezentowania położenie na osi x w pikselach liczbę całkowitą bez znaku A 32-bitowych.  
+-   VTS_XPOS_PIXELS 32-bitowa liczba całkowita bez znaku używany do reprezentowania pozycja wzdłuż osi x w pikselach.  
   
--   **Vts_ypos_pixels —** używany do reprezentowania położenie wzdłuż osi y w pikselach liczbę całkowitą bez znaku A 32-bitowych.  
+-   VTS_YPOS_PIXELS 32-bitowa liczba całkowita bez znaku używany do reprezentowania pozycja wzdłuż osi y w pikselach.  
   
--   **Vts_xsize_pixels —** używany do reprezentowania szerokość obiektu ekranu w pikselach liczbę całkowitą bez znaku A 32-bitowych.  
+-   VTS_XSIZE_PIXELS 32-bitowa liczba całkowita bez znaku używany do reprezentowania szerokość ekranu obiektu w pikselach.  
   
--   **Vts_ysize_pixels —** używany do reprezentowania wysokość obiektu ekranu w pikselach liczbę całkowitą bez znaku A 32-bitowych.  
+-   VTS_YSIZE_PIXELS 32-bitowa liczba całkowita bez znaku używany do reprezentowania wysokość obiekt ekranu w pikselach.  
   
--   **Vts_xsize_himetric —** używany do reprezentowania szerokość obiektu ekranu na liczbę całkowitą bez znaku A 32-bitowych **HIMETRIC** jednostki.  
+-   VTS_XSIZE_HIMETRIC 32-bitowa liczba całkowita bez znaku używany do reprezentowania szerokość ekranu obiektu w jednostkach HIMETRIC.  
   
--   **Vts_ysize_himetric —** używany do reprezentowania wysokość obiektu ekranu na liczbę całkowitą bez znaku A 32-bitowych **HIMETRIC** jednostki.  
+-   VTS_YSIZE_HIMETRIC 32-bitowa liczba całkowita bez znaku używany do reprezentowania wysokość obiekt ekranu w jednostkach HIMETRIC.  
   
     > [!NOTE]
-    >  Dodatkowe stałe variant zostały zdefiniowane dla wszystkich typów variant, z wyjątkiem produktów **vts_font —** i **vts_picture —**, które zapewniają wskaźnik co danych variant nstant. Stałe te są nazywane przy użyciu **VTS_P** `constantname` Konwencji. Na przykład **VTS_PCOLOR** jest wskaźnikiem do **vts_color —** stałej.  
+    >  Dodatkowe variant — stałe zostały zdefiniowane dla wszystkich wariantów typów, z wyjątkiem VTS_FONT i VTS_PICTURE, stanowiące wskaźnik ze stałą danych variant. Te stałe są nazywane przy użyciu VTS_P`constantname` Konwencji. Na przykład VTS_PCOLOR jest wskaźnikiem do VTS_COLOR — stała.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdisp.h  

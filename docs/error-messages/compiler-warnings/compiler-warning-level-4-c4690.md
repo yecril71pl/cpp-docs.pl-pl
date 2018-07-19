@@ -1,7 +1,7 @@
 ---
-title: Kompilatora (poziom 4) ostrzeżenie C4690 | Dokumentacja firmy Microsoft
+title: Kompilator ostrzeżenie (poziom 4) C4690 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/03/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,24 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c8285fd3763b93c8a320a6cb984168b88d2e9ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 04fb68bdab762f0f541849fad1568caff836b623
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293624"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853325"
 ---
-# <a name="compiler-warning-level-4-c4690"></a>Kompilator C4690 ostrzegawcze (poziom 4)
-[emitidl (pop)]: więcej zdejmowań niż włożeń  
-  
- [Emitidl](../../windows/emitidl.md) atrybut został zdjęte ze stosu jeszcze raz, który został naciśnięty go.  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład generuje C4690.  
-  
-```  
-// C4690.cpp  
-// compile with: /c /W4  
-[emitidl(pop)];   // C4690  
-class x {};  
+# <a name="compiler-warning-level-4-c4690"></a>Kompilator ostrzeżenie (poziom 4) C4690
+
+> \[ emitidl (pop)]: więcej zdejmowań niż włożeń
+
+## <a name="remarks"></a>Uwagi
+
+[Emitidl](../../windows/emitidl.md) atrybut został zdjęte ze stosu jeszcze raz, że został on wypchnięty.
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład spowoduje wygenerowanie C4690. Aby rozwiązać ten problem, upewnij się, że ten atrybut jest zdejmowany dokładnie dowolną liczbę razy, ile jest on wypchnięty.
+
+```cpp
+// C4690.cpp
+// compile with: /c /W4
+[emitidl(pop)];   // C4690
+class x {};
 ```

@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c626db62a02fba70f926776ea214e664d2f7f82
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3a9403ed1a4ba82a1e60c42ed0e57e975e73d1dd
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362042"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883791"
 ---
 # <a name="iobjectwithsiteimpl-class"></a>Klasa IObjectWithSiteImpl
-Ta klasa dostarcza metody, dzięki czemu obiekt do komunikacji z jej lokacją.  
+Ta klasa dostarcza metody, dzięki czemu obiekt, do komunikacji z jej lokacją.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,7 +40,7 @@ template <class T>
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
+ *T*  
  Z klasą pochodną `IObjectWithSiteImpl`.  
   
 ## <a name="members"></a>Elementy członkowskie  
@@ -49,22 +49,22 @@ template <class T>
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[IObjectWithSiteImpl::GetSite](#getsite)|Wysyła zapytanie do lokacji dla wskaźnika interfejsu.|  
-|[IObjectWithSiteImpl::SetChildSite](#setchildsite)|Udostępnia obiekt z witryny **IUnknown** wskaźnika.|  
-|[IObjectWithSiteImpl::SetSite](#setsite)|Udostępnia obiekt z witryny **IUnknown** wskaźnika.|  
+|[IObjectWithSiteImpl::GetSite](#getsite)|Wysyła zapytanie do witryny dla wskaźnika interfejsu.|  
+|[IObjectWithSiteImpl::SetChildSite](#setchildsite)|Udostępnia obiekt w witrynie `IUnknown` wskaźnika.|  
+|[IObjectWithSiteImpl::SetSite](#setsite)|Udostępnia obiekt w witrynie `IUnknown` wskaźnika.|  
   
 ### <a name="public-data-members"></a>Publiczne elementy członkowskie danych  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|Zarządza witryny **IUnknown** wskaźnika.|  
+|[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|Zarządza witryny `IUnknown` wskaźnika.|  
   
 ## <a name="remarks"></a>Uwagi  
- [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) interfejs umożliwiający obiekt do komunikacji z jej lokacją. Klasa `IObjectWithSiteImpl` udostępnia domyślną implementację tego interfejsu i implementuje **IUnknown** , wysyłając informacje o do zrzutu kompilacje urządzenia podczas debugowania.  
+ [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) interfejs umożliwia obiekt, do komunikacji z jej lokacją. Klasa `IObjectWithSiteImpl` udostępnia domyślną implementację tego interfejsu i implementuje `IUnknown` , wysyłając informacje o do zrzutu kompilacji urządzenia podczas debugowania.  
   
- `IObjectWithSiteImpl` Określa dwie metody. Pierwsze wywołania klienta `SetSite`, przekazywanie witryny **IUnknown** wskaźnika. Ten wskaźnik jest przechowywany wewnątrz obiektu, a później mogą zostać pobrane za pośrednictwem wywołania `GetSite`.  
+ `IObjectWithSiteImpl` Określa dwie metody. Pierwszy wywołań klienta `SetSite`, przekazując witryny `IUnknown` wskaźnika. This, wskaźnik jest przechowywany w obiekcie, a później mogą być pobierane za pomocą wywołania `GetSite`.  
   
- Zwykle, pochodzi z klasy `IObjectWithSiteImpl` podczas tworzenia obiektu, który nie jest formantem. Dla formantów, pochodzi z klasy [IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md), zapewniające wskaźnik lokacji. Nie pochodzi z klasy z obu `IObjectWithSiteImpl` i `IOleObjectImpl`.  
+ Zazwyczaj pochodzą z klasy `IObjectWithSiteImpl` podczas tworzenia obiektu, który nie jest formantem. W przypadku kontrolek pochodzi z klasy [IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md), zapewniającą wskaźnik lokacji. Pochodzi z klasy z obu `IObjectWithSiteImpl` i `IOleObjectImpl`.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `IObjectWithSite`  
@@ -75,7 +75,7 @@ template <class T>
  **Nagłówek:** atlcom.h  
   
 ##  <a name="getsite"></a>  IObjectWithSiteImpl::GetSite  
- Wysyła zapytanie do lokacji dla wskaźnika interfejsu identyfikowane przez `riid`.  
+ Zapytania witryny dla wskaźnika do interfejsu identyfikowane przez `riid`.  
   
 ```
 STDMETHOD(GetSite)(
@@ -84,22 +84,22 @@ STDMETHOD(GetSite)(
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli lokacja obsługuje ten interfejs, za pośrednictwem zwracany jest wskaźnik `ppvSite`. W przeciwnym razie `ppvSite` ustawiono **NULL**.  
+ Jeśli lokacja obsługuje ten interfejs, wskaźnik jest zwracany za pośrednictwem `ppvSite`. W przeciwnym razie `ppvSite` ma wartość NULL.  
   
- Zobacz [IObjectWithSite::GetSite](http://msdn.microsoft.com/library/windows/desktop/ms694452) w systemie Windows SDK.  
+ Zobacz [IObjectWithSite::GetSite](http://msdn.microsoft.com/library/windows/desktop/ms694452) w Windows SDK.  
   
 ##  <a name="m_spunksite"></a>  IObjectWithSiteImpl::m_spUnkSite  
- Zarządza witryny **IUnknown** wskaźnika.  
+ Zarządza witryny `IUnknown` wskaźnika.  
   
 ```
 CComPtr<IUnknown> m_spUnkSite;
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- `m_spUnkSite` początkowo odbiera ten wskaźnik poprzez wywołanie [SetSite](#setsite).  
+ `m_spUnkSite` początkowo otrzyma ten wskaźnik poprzez wywołanie [setsite —](#setsite).  
   
 ##  <a name="setchildsite"></a>  IObjectWithSiteImpl::SetChildSite  
- Udostępnia obiekt z witryny **IUnknown** wskaźnika.  
+ Udostępnia obiekt w witrynie `IUnknown` wskaźnika.  
   
 ```
 HRESULT SetChildSite(IUnknown* pUnkSite);
@@ -107,20 +107,20 @@ HRESULT SetChildSite(IUnknown* pUnkSite);
   
 ### <a name="parameters"></a>Parametry  
  *pUnkSite*  
- [in] Wskaźnik do **IUnknown** wskaźnika interfejsu witryny Zarządzanie tego obiektu. Jeśli wartość NULL, obiekt powinien wywoływać `IUnknown::Release` na istniejącą witrynę w takim przypadku obiekt zna już do niego lokacji.  
+ [in] Wskaźnik do `IUnknown` wskaźnika interfejsu lokacji zarządzania tego obiektu. Jeśli ma wartość NULL, obiekt powinien wywoływać `IUnknown::Release` witrynie istniejący w tym momencie obiektu nie jest już zna do niego lokacji.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca `S_OK`.  
+ Zwraca wartość S_OK.  
   
 ##  <a name="setsite"></a>  IObjectWithSiteImpl::SetSite  
- Udostępnia obiekt z witryny **IUnknown** wskaźnika.  
+ Udostępnia obiekt w witrynie `IUnknown` wskaźnika.  
   
 ```
 STDMETHOD(SetSite)(IUnknown* pUnkSite);
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Zobacz [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869) w systemie Windows SDK.  
+ Zobacz [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869) w Windows SDK.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

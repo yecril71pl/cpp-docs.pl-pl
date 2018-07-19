@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31b9df8305d0eea772979904f63847f6d6c2325a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dce98775007360e3fdd4177141f7a550548d3679
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413378"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939198"
 ---
 # <a name="comerrorwcodetohresult"></a>_com_error::WCodeToHRESULT
 **Microsoft Specific**  
   
- Mapuje 16-bitowych `wCode` do 32-bitowych `HRESULT`.  
+ Mapuje 16-bitowych *wcode —* HRESULT 32-bitowych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,16 +38,16 @@ ms.locfileid: "32413378"
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `wCode`  
- 16-bitowych `wCode` można mapować na 32-bitowych `HRESULT`.  
+ *Wcode —*  
+ 16-bitowych *wcode —* mają być mapowane na HRESULT 32-bitowych.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- 32-bitowych `HRESULT` zamapowany z 16-bitowych `wCode`.  
+ 32-bitowych HRESULT mapowane z 16-bitowych *wcode —*.  
   
 ## <a name="remarks"></a>Uwagi  
- Zobacz [Kodostrzeżenia](../cpp/com-error-wcode.md) funkcję elementu członkowskiego.  
+ Zobacz [wcode —](../cpp/com-error-wcode.md) funkcja elementu członkowskiego.  
   
- **KOŃCOWY określonych firmy Microsoft**  
+ **END specyficzny dla Microsoft**  
   
 ## <a name="see-also"></a>Zobacz też  
  [_com_error::WCode](../cpp/com-error-wcode.md)   

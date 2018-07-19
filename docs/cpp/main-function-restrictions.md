@@ -16,21 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed5be2df6e152b26bcade1970b35ad33655e8e02
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3114f1ef379495f36f4231dbad6fd41ac145bcfe
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419688"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941749"
 ---
 # <a name="main-function-restrictions"></a>Ograniczenia funkcji main
-Kilku ograniczeniom **głównego** funkcji, które nie dotyczą żadnych innych funkcji języka C++. **Głównego** funkcji:  
+Kilku ograniczeniom `main` funkcji, które nie mają zastosowanie do innych funkcji w języku C++. `main` Funkcji:  
   
--   Nie może zostać przeciążony (zobacz [przeciążanie funkcji](function-overloading.md)).  
+-   Nie mogą być przeciążone (zobacz [przeciążanie funkcji](function-overloading.md)).  
   
--   Nie można zadeklarować jako **wbudowanego**.  
+-   Nie można zadeklarować jako **wbudowane**.  
   
--   Nie można zadeklarować jako **statycznych**.  
+-   Nie można zadeklarować jako **statyczne**.  
   
 -   Nie można jej adres miały.  
   

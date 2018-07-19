@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12be6ffa2eba8d53a8972994ebf03138947df404
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 749877c670d1c40f0cc7ff4d7e438fdd8c96ca5b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860076"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964876"
 ---
 # <a name="removeextent-class"></a>remove_extent — Klasa
 
@@ -40,11 +40,11 @@ using remove_extent_t = typename remove_extent<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ do zmodyfikowania.
+*T* typ do modyfikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie `remove_extent<T>` przechowuje zmodyfikowane — typ danych `T1` podczas `T` ma postać `T1[N]`, w przeciwnym razie `T`.
+Wystąpienie `remove_extent<T>` przechowuje zmodyfikowany typ, który jest `T1` podczas *T* ma postać `T1[N]`, w przeciwnym razie *T*.
 
 ## <a name="example"></a>Przykład
 
@@ -77,7 +77,7 @@ remove_extent_t<int[5][10]> == int [10]
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

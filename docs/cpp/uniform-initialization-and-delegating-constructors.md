@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df40eef538ec09a0189bf6c1e6b4881edb59f5c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92174ceefa350b739567ac3e67c2ca023afb6008
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32423525"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939835"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Jednolite inicjowanie i delegowanie konstruktorów
-W nowoczesnych wersji języka C++, można użyć *nawiasy inicjowania* dla dowolnego typu bez znaku równości. Ponadto umożliwia konstruktory delegujące uprościć kod, jeśli masz wiele konstruktorów, które wykonały podobne.  
+W nowoczesnym C++, można użyć *nawiasów inicjowania* dla dowolnego typu, bez znaku równości. Ponadto możesz użyć konstruktory delegujące można uprościć kod, jeśli masz wiele konstruktorów, które mają podobne działanie.  
   
-## <a name="brace-initialization"></a>Inicjowanie nawiasu klamrowego  
- Inicjowanie nawias klamrowy służącego do dowolnej klasy, struktury lub związku. Jeśli typ ma konstruktora domyślnego jawnie lub niejawnie zadeklarowany, można użyć domyślnego nawiasu klamrowego inicjowania (z pustymi nawiasami klamrowymi). Na przykład następującej klasy mogą być inicjowane przez przy użyciu domyślnych i inicjowania nawiasu klamrowego innych niż domyślne:  
+## <a name="brace-initialization"></a>Nawiasów klamrowych  
+ Można użyć nawiasów klamrowych dla dowolnej klasy, struktury lub Unii. Jeśli typ ma konstruktora domyślnego, jawnie lub niejawnie zadeklarowany, możesz użyć domyślnego nawiasów klamrowych (za pomocą pustych nawiasów klamrowych). Na przykład następującej klasy może być inicjowane za pomocą domyślnego i innych niż domyślne nawiasów klamrowych:  
   
 ```cpp  
 #include <string>  
@@ -53,7 +53,7 @@ int main()
   
 ```  
   
- Jeśli klasa ma konstruktorów innych niż domyślne, kolejność klasy, które elementy członkowskie w inicjatorze nawiasów klamrowych jest kolejność wyświetlania odpowiednich parametrów w konstruktorze, nie kolejność, w którym są deklarowane jako członkowie (jak `class_a` w poprzedniego przykładu). W przeciwnym razie jeśli typ nie ma zadeklarowane konstruktora, kolejność wyświetlania elementów członkowskich w inicjatorze nawias klamrowy jest taka sama jak kolejność, w którym jest zadeklarowany; w takim przypadku należy można zainicjować dowolnej liczby publicznych elementów członkowskich mają, ale nie można pominąć dowolnego elementu członkowskiego. W poniższym przykładzie przedstawiono kolejność, która jest używana podczas inicjowania nawias klamrowy, gdy nie istnieje żaden konstruktor zadeklarowane:  
+ Jeśli klasa ma konstruktory inne niż domyślne, kolejności, w której klasy elementy członkowskie są wyświetlane w inicjatorze nawias klamrowy jest kolejność wyświetlania odpowiednich parametrów w konstruktorze, nie kolejności, w którym są zadeklarowane elementy członkowskie (podobnie jak w przypadku `class_a` w poprzedniego przykładu). W przeciwnym razie jeśli typ nie ma zadeklarowany konstruktora, kolejność wyświetlania elementów członkowskich w inicjatorze nawias klamrowy jest taka sama jak kolejność, w którym są one zadeklarowane; w takim przypadku można zainicjować tyle publiczne elementy członkowskie jako użytkownik chce, ale nie można pominąć dowolnego elementu członkowskiego. Poniższy przykład przedstawia kolejność, która jest używana w nawiasów klamrowych, po żaden konstruktor zadeklarowana:  
   
 ```cpp  
 class class_d {  
@@ -75,7 +75,7 @@ int main()
 }   
 ```  
   
- Jeśli domyślny konstruktor jest jawnie zadeklarowana, ale oznaczone jako usunięte, nie można użyć inicjowanie nawiasu klamrowego domyślnych:  
+ Jeśli domyślny konstruktor jest jawnie zadeklarowana, lecz oznaczony jako usunięty, nie można użyć domyślnego nawiasów klamrowych:  
   
 ```cpp  
 class class_f {  
@@ -91,7 +91,7 @@ int main()
 }  
 ```  
   
- Można użyć nawiasów klamrowych inicjowania dowolnym zwykle należy inicjowanie — na przykład jako parametr funkcji lub wartości zwracanej lub z `new` — słowo kluczowe:  
+ Możesz użyć nawiasów klamrowych dowolnym miejscu, należy zwykle wykonać inicjowania — na przykład, jako parametr funkcji lub wartość zwracana lub z **nowe** — słowo kluczowe:  
   
 ```cpp  
 class_d* cf = new class_d{4.5};  
@@ -100,17 +100,17 @@ return { 4.5 };
   
 ```  
   
-## <a name="initializerlist-constructors"></a>initializer_list konstruktorów  
- [Initializer_list klasy](../standard-library/initializer-list-class.md) reprezentuje listę obiektów określonego typu, które mogą być używane w Konstruktorze i w innych kontekstach. Można utworzyć initializer_list przy użyciu inicjowania nawiasu klamrowego:  
+## <a name="initializerlist-constructors"></a>Lista initializer_list konstruktorów  
+ [Initializer_list, klasa](../standard-library/initializer-list-class.md) reprezentuje listę obiektów określonego typu, który może służyć w konstruktorze, a w innych kontekstach. Można skonstruować initializer_list, za pomocą nawiasów klamrowych:  
   
 ```cpp  
 initializer_list<int> int_list{5, 6, 7};  
 ```  
   
 > [!IMPORTANT]
->  Aby korzystać z tej klasy, należy uwzględnić [< initializer_list >](../standard-library/initializer-list.md) nagłówka.  
+>  Aby użyć tej klasy, należy dołączyć [< initializer_list >](../standard-library/initializer-list.md) nagłówka.  
   
- `initializer_list` Mogą zostać skopiowane. W takim przypadku nową listę elementów członkowskich są odwołania do elementów członkowskich oryginalnej listy:  
+ `initializer_list` Mogą być kopiowane. W tym przypadku nową listę elementów członkowskich są odwołaniami do oryginalnej listy elementów członkowskich:  
   
 ```cpp  
 initializer_list<int> ilist1{ 5, 6, 7 };  
@@ -120,7 +120,7 @@ if (ilist1.begin() == ilist2.begin())
   
 ```  
   
- Klasy kontenerów biblioteki standardowej, a także `string`, `wstring`, i `regex`, ma `initializer_list` konstruktorów. Poniższe przykłady pokazują, jak nawiasy inicjowania konstruktorów te:  
+ Klasy kontenerów standardowej biblioteki, a także `string`, `wstring`, i `regex`, mają `initializer_list` konstruktorów. W poniższych przykładach pokazano, jak być ujmowana w nawiasy inicjowania za pomocą tych konstruktorów:  
   
 ```cpp  
 vector<int> v1{ 9, 10, 11 };   
@@ -130,7 +130,7 @@ regex rgx{'x', 'y', 'z'};
 ```  
   
 ## <a name="delegating-constructors"></a>Delegowanie konstruktorów  
- Wiele klas ma wiele konstruktorów, które wykonują podobnych elementów — na przykład Waliduj parametry:  
+ Wiele klas ma wiele konstruktorów, które wykonują podobne elementy — na przykład sprawdza poprawność parametrów:  
   
 ```cpp  
 class class_c {  
@@ -155,7 +155,7 @@ public:
 };  
 ```  
   
- Pozwala zredukować kodu powtarzających się przez dodanie funkcji, który wykonuje wszystkie sprawdzania poprawności, ale kod `class_c` będzie można łatwiej zrozumieć i konserwacji, jeśli jeden konstruktor może przekazywać niektóre pracy z innym. Aby dodać konstruktory delegujące, użyj `constructor (. . .) : constructor (. . .)` składni:  
+ Całość wielokrotnie używanego kodu może zmniejszyć, dodając funkcję, która wykonuje całą sprawdzania poprawności, ale kod `class_c` będą łatwiejsze do zrozumienia i utrzymania, jeśli jeden konstruktor może delegować część obciążenia pracą na inny. Aby dodać konstruktory delegujące, użyj `constructor (. . .) : constructor (. . .)` składni:  
   
 ```cpp  
 class class_c {  
@@ -181,9 +181,9 @@ int main() {
   
 ```  
   
- Jak można kroków opisanych w poprzednim przykładzie, zwróć uwagę, że Konstruktor `class_c(int, int, int)` najpierw wywołuje konstruktor `class_c(int, int)`, który z kolei wywołuje `class_c(int)`. Każdy z konstruktorów wykonuje pracy, który nie jest wykonywane przez inne konstruktorów.  
+ Podczas wykonywania kroków za pomocą poprzedniego przykładu, należy zauważyć, że Konstruktor `class_c(int, int, int)` najpierw wywołuje konstruktor `class_c(int, int)`, który z kolei wywołuje `class_c(int)`. Każda z konstruktorów wykonuje pracę, która nie jest wykonywane przez inne konstruktory.  
   
- Pierwszy Konstruktor, który jest nazywany inicjuje obiekt tak, aby wszystkie jego elementy członkowskie są inicjowane w tym momencie. Inicjowanie elementu członkowskiego w konstruktora, który deleguje do innego konstruktora, nie są w sposób pokazany poniżej:  
+ Pierwszy Konstruktor, który jest nazywany inicjuje obiekt tak, aby wszystkie jego elementy członkowskie są inicjowane w tym momencie. Inicjowanie składowej w konstruktorze, który delegował do innego konstruktora, nie są, jak pokazano poniżej:  
   
 ```cpp  
 class class_a {  
@@ -204,7 +204,7 @@ public:
   
 ```  
   
- Kolejnym przykładzie pokazano sposób użycia inicjatory niestatycznego elementu członkowskiego danych. Zwróć uwagę, że jeśli Konstruktor inicjuje także członkiem danych danego, zastąpić inicjator elementu członkowskiego:  
+ W kolejnym przykładzie pokazano użycie inicjatory niestatycznego elementu członkowskiego danych. Zwróć uwagę, że jeśli Konstruktor inicjuje również element członkowski danych danego, zastąpić inicjator składowej:  
   
 ```cpp  
 class class_a {  
@@ -222,7 +222,7 @@ int main() {
 }  
 ```  
   
- Składni konstruktora delegowania nie zapobiega przypadkowemu tworzeniu rekursji konstruktora — Constructor1 wywołuje Constructor2, która wywołuje Constructor1 — i nie są generowane błędy momentu przepełnienia stosu. Jest obowiązek pominąć cykli.  
+ Konstruktor delegowania składni nie uniemożliwia przypadkowe tworzenie rekursji konstruktora — Constructor1 wywołuje Constructor2, która wywołuje Constructor1 — i nie są generowane błędy momentu przepełnienia stosu. Jest odpowiedzialny za uniknięcia cyklów.  
   
 ```cpp  
 class class_f{  

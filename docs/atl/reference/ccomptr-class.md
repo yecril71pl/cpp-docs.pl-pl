@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5254e463050d685840ff90334ecbdb94372f27ef
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8513a3de54f8a99191936dfff5b894962c597381
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358543"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881594"
 ---
 # <a name="ccomptr-class"></a>Klasa CComPtr
-Klasa wskaźnika inteligentnego do wskaźników interfejsów COM. zarządzania.  
+Klasa inteligentnego wskaźnika do zarządzania wskaźniki interfejsu COM.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,8 +36,8 @@ class CComPtr
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `T`  
- Interfejs COM, określenie typu wskaźnika do zapisania.  
+ *T*  
+ Interfejs COM, określając typ wskaźnika, które mają być przechowywane.  
   
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -51,18 +51,18 @@ class CComPtr
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CComPtr::operator =](#operator_eq)|Przypisuje wskaźnik na wskaźnik elementu członkowskiego.|  
+|[CComPtr::operator =](#operator_eq)|Przypisuje wskaźnik do wskaźnika elementu członkowskiego.|  
   
 ## <a name="remarks"></a>Uwagi  
- ATL używa `CComPtr` i [CComQIPtr](../../atl/reference/ccomqiptr-class.md) do wskaźników interfejsów COM. zarządzania. Oba wynikają z [CComPtrBase](../../atl/reference/ccomptrbase-class.md), i jednocześnie wykonywać automatyczne liczenie odwołań.  
+ Używa ATL `CComPtr` i [CComQIPtr](../../atl/reference/ccomqiptr-class.md) Zarządzanie wskaźniki interfejsu COM. Oba są uzyskiwane z [CComPtrBase](../../atl/reference/ccomptrbase-class.md), i jednocześnie wykonywać automatyczne liczenie odwołań.  
   
- **CComPtr** i [CComQIPtr](../../atl/reference/ccomqiptr-class.md) klasy mogą pomóc w eliminowaniu przecieki pamięci, wykonując automatyczne liczenie odwołań.  Następujące funkcje obu wykonywania tych samych operacji logicznych; Zwróć jednak uwagę, jak druga wersja może być mniej podatne na błędy przy użyciu **CComPtr** klasy:  
+ `CComPtr` i [CComQIPtr](../../atl/reference/ccomqiptr-class.md) klas mogą pomóc wyeliminować przecieki pamięci, wykonując automatyczne liczenie odwołań.  Następujące funkcje zarówno wykonywania tej samej operacji logicznej; należy jednak zauważyć, jak druga wersja może być mniej podatne na błędy przy użyciu `CComPtr` klasy:  
   
  [!code-cpp[NVC_ATL_Utilities#130](../../atl/codesnippet/cpp/ccomptr-class_1.cpp)]  
   
  [!code-cpp[NVC_ATL_Utilities#131](../../atl/codesnippet/cpp/ccomptr-class_2.cpp)]  
   
- W kompilacjach do debugowania łącza atlsd.lib kod śledzenia.  
+ W kompilacjach do debugowania link atlsd.lib śledzenia kodu.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CComPtrBase](../../atl/reference/ccomptrbase-class.md)  
@@ -82,10 +82,10 @@ CComPtr (const CComPtr<T>& lp) throw ();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lp`  
- Używane w celu zainicjowania wskaźnika interfejsu.  
+ *LP*  
+ Używane do zainicjowania wskaźnika interfejsu.  
   
- `T`  
+ *T*  
  Interfejs COM.  
   
 ##  <a name="operator_eq"></a>  CComPtr::operator =  
@@ -100,9 +100,9 @@ T* operator= (const CComPtr<T>& lp) throw ();
  Zwraca wskaźnik do zaktualizowanego `CComPtr` obiektu  
   
 ### <a name="remarks"></a>Uwagi  
- Ta operacja AddRefs nowego obiektu i wersjach istniejący obiekt, jeśli istnieje.  
+ Ta operacja AddRefs nowego obiektu i wersji istniejącego obiektu, jeśli taki istnieje.  
   
 ## <a name="see-also"></a>Zobacz też  
  [CComPtr::CComPtr](#ccomptr)   
  [CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)   
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

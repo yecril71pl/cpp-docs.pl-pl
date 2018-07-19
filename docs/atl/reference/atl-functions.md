@@ -15,63 +15,63 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c5e63e884a44b310330c05fc4a77e3e7f37bec5
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: bbd6e799998abcac650ee32dd86739c157f1035d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34257103"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879475"
 ---
 # <a name="atl-functions"></a>Funkcje ATL
 
 
-Aby znaleźć funkcja ATL według kategorii, zobacz następujące tematy.  
+Aby znaleźć funkcję ATL według kategorii, zobacz następujące tematy.  
   
  [Funkcje ścieżki ATL](../../atl/reference/com-map-global-functions.md)  
- Zapewnia obsługę manipulowanie ścieżki do pliku.
+ Zapewnia obsługę manipulowania ścieżki pliku.
  
  [Funkcje globalne mapy interfejsu COM](../../atl/reference/com-map-global-functions.md)  
- Zapewniają obsługę dla modelu COM mapy **IUnknown** implementacji.  
+ Zapewnia obsługę mapy interfejsu COM `IUnknown` implementacji.  
   
  [Funkcje globalne kontrolek złożonych](../../atl/reference/composite-control-global-functions.md)  
- Zapewniają obsługę tworzenia okna dialogowe, a także do tworzenia, obsługi i licencjonowanie formantów ActiveX.  
+ Zapewniają obsługę do utworzenia okien dialogowych i tworzenie, hostowanie i licencjonowanie kontrolek ActiveX.  
   
  [Funkcje globalne punktu połączenia](../../atl/reference/connection-point-global-functions.md)  
  Obsługuje punkty połączenia i mapy wychwytywania.  
   
  [Funkcje globalne debugowania i raportowania błędów](../../atl/reference/debugging-and-error-reporting-global-functions.md)  
- Udostępniać przydatne narzędzia debugowania i śledzenia.  
+ Udostępniać przydatne narzędzia do debugowania i śledzenia.  
   
  [Funkcje globalne kontekstu urządzenia](../../atl/reference/device-context-global-functions.md)  
- Tworzy kontekstu urządzenia dla danego urządzenia.  
+ Tworzy kontekst urządzenia dla danego urządzenia.  
   
  [Funkcje globalne obsługi zdarzeń](../../atl/reference/event-handling-global-functions.md)  
  Udostępnia program obsługi zdarzeń.  
   
  [Funkcje globalne kierowania](../../atl/reference/marshaling-global-functions.md)  
- Zapewnia obsługę organizowanie konwertowanie przekazywanie danych do wskaźników interfejsów.  
+ Zapewnia obsługę organizowania i konwertowania kierowania danych do wskaźniki interfejsu.  
   
- [Funkcje globalne pikseli/HIMETRIC konwersji](../../atl/reference/pixel-himetric-conversion-global-functions.md)  
- Konwertowanie do i z pikseli i jednostki HIMETRIC zapewniają obsługę.  
+ [Funkcje globalne konwersji HIMETRIC/pikseli](../../atl/reference/pixel-himetric-conversion-global-functions.md)  
+ Zapewnia obsługę konwersji do i z pikseli i jednostkach HIMETRIC.  
   
  [Funkcje globalne rejestru i elementu TypeLib](../../atl/reference/registry-and-typelib-global-functions.md)  
- Zapewnia obsługę ładowania rejestrowania biblioteki typów.  
+ Zapewnia obsługę ładowania i rejestrowania biblioteki typów.  
   
  [Funkcje globalne zabezpieczeń](../../atl/reference/security-global-functions.md)  
- Modyfikowanie obiektów identyfikator SID i listy ACL zapewniają obsługę.  
+ Modyfikowanie obiektów SID i listę ACL zapewniają obsługę.  
   
  [Funkcje globalne identyfikatora zabezpieczeń](../../atl/reference/security-identifier-global-functions.md)  
- Zwraca obiekty typowych dobrze znany identyfikator SID.  
+ Zwraca typowe znaną wartością identyfikatora SID obiektów.  
   
  [Funkcje globalne rejestracji serwera](../../atl/reference/server-registration-global-functions.md)  
- Zapewniają obsługę rejestrowanie i wyrejestrowywanie obiektów serwera w mapie obiektu.  
+ Zapewnia obsługę zarejestrować lub wyrejestrować serwer obiektów na mapie obiektu.  
   
  [Funkcje globalne elementu WinModule](../../atl/reference/winmodule-global-functions.md)  
- Zapewniają obsługę `_AtlCreateWndData` struktury operacji.  
+ Zapewnia pomoc techniczną dla `_AtlCreateWndData` struktury operacji.  
   
 ## <a name="see-also"></a>Zobacz też  
     
- [Składniki COM pulpitu ATL](../../atl/atl-com-desktop-components.md)   
+ [Składniki ATL COM pulpitu](../../atl/atl-com-desktop-components.md)   
  [Makra](../../atl/reference/atl-macros.md)   
  [Zmienne globalne](../../atl/reference/atl-global-variables.md)   
  [Definicje typów](../../atl/reference/atl-typedefs.md)   

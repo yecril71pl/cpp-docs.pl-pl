@@ -17,31 +17,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f281007bea3f23bc8e7cebcdd68b9a306b500e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fc826b588f133abb93c9942e7907dd8b0fce9574
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947778"
 ---
 # <a name="while-statement-c"></a>while — instrukcja (C++)
-Wykonuje *instrukcji* wielokrotnie do *wyrażenie* oblicza od zera.  
+Wykonuje *instrukcji* wielokrotnie do momentu *wyrażenie* osiągnie wartość zero.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
   
-      while ( expression )  
+while ( expression )  
    statement  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Badania *wyrażenie* ma miejsce przed każdym wykonywania pętli; w związku z tym `while` pętla jest wykonywana zero lub więcej razy. *wyrażenie* musi być typem całkowitym, typem wskaźnika lub typ klasy jednoznaczne konwersji na typy całkowite lub typu wskaźnika.  
+ Test *wyrażenie* ma miejsce przed każdym wykonaniu pętli, dlatego **podczas** pętla jest wykonywana zero lub więcej razy. *wyrażenie* musi być typem całkowitym, typem wskaźnika lub typu klasy za pomocą jednoznaczną konwersję na całkowite lub typu wskaźnika.  
   
- A `while` pętli można również przerwanie podczas [podziału](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), lub [zwracać](../cpp/return-statement-cpp.md) w instrukcji treści jest wykonywana. Użyj [kontynuować](../cpp/continue-statement-cpp.md) zakończyć bez zamykania bieżącej iteracji `while` pętli. **kontynuować** przekazuje formantu do następnej iteracji `while` pętli.  
+ A **podczas** pętli można także zakończyć, gdy [podziału](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), lub [zwracają](../cpp/return-statement-cpp.md) w ramach instrukcja zostaje wykonana. Użyj [nadal](../cpp/continue-statement-cpp.md) zakończenie bieżącej iteracji bez zamykania **podczas** pętli. **Kontynuuj** przekazuje kontrolę do następnej iteracji **podczas** pętli.  
   
- Poniższy kod używa `while` pętli, aby przyciąć, końcowy znak podkreślenia z ciągu:  
+ Poniższy kod używa **podczas** pętli można przycięcia końcowe podkreślenia z ciągu:  
   
-```  
+```cpp 
 // while_statement.cpp  
   
 #include <string.h>  
@@ -68,10 +69,10 @@ int main()
 }  
 ```  
   
- Warunek zakończenia jest obliczane w górnej części pętli. Jeśli nie ma żadnych końcowe znaki podkreślenia, pętli nigdy nie wykonuje.  
+ Warunku zakończenia jest oceniany u góry pętli. Jeśli nie ma żadnych końcowe znaki podkreślenia, pętla nigdy nie jest wykonywany.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Iteracja — instrukcje](../cpp/iteration-statements-cpp.md)   
+ [Instrukcje iteracji](../cpp/iteration-statements-cpp.md)   
  [Keywords](../cpp/keywords-cpp.md)   
  [czy-while — instrukcja (C++)](../cpp/do-while-statement-cpp.md)   
  [for — instrukcja (C++)](../cpp/for-statement-cpp.md)   

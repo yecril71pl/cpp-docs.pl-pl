@@ -14,14 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c020d9fc4a8bc5275fe77b05eff74fdcec25ec6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cff0103a9debe63def6dbbcf7e3730a8e09dcbc2
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947848"
 ---
 # <a name="aliases-and-typedefs-c"></a>Aliasy i definicje typów (C++)
-Można użyć *Deklaracja aliasu* Aby zadeklarować nazwa ma być używana jako synonim wcześniej zadeklarowanego typu. (Ten mechanizm jest również nazywany nieformalnego *alias typu*). Ten mechanizm również służy do tworzenia *szablonu aliasu*, które mogą być szczególnie przydatne w przypadku niestandardowych allocators —.  
+Możesz użyć *Deklaracja aliasu* do deklarowania Nazwa do użycia jako synonim wcześniej zadeklarowanym typem. (Ten mechanizm jest również nazywane nieformalnie *alias typu*). Ten mechanizm również służy do tworzenia *szablonu aliasu*, które mogą być szczególnie przydatne dla niestandardowych alokatorów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,11 +35,11 @@ using identifier = type;
  Nazwa aliasu.  
   
  `type`  
- Identyfikator typu tworzonego alias.  
+ Identyfikator typu tworzonej alias.  
   
- Alias nie wprowadza nowych typów i nie może zmienić znaczenie istniejącej nazwy typu.  
+ Alias nie wprowadza nowy typ i nie może zmienić znaczenie istniejącej nazwy typu.  
   
- Najprostsza forma alias jest odpowiednikiem `typedef` mechanizmu z języka C ++ 03:  
+ Najprostsza forma aliasu jest odpowiednikiem **typedef** mechanizm z C ++ 03:  
   
 ```cpp  
 // C++11  
@@ -48,7 +49,7 @@ using counter = long;
 // typedef long counter;  
 ```  
   
- Oba te umożliwiają tworzenie zmiennych typu "licznika". Coś lepszym rozwiązaniem byłoby alias typu podobny do tego dla `std::ios_base::fmtflags`:  
+ Oba te umożliwiają tworzenie zmiennych typu "counter". Coś, co jest bardziej użyteczny, byłoby alias typu, podobny do tego dla `std::ios_base::fmtflags`:  
   
 ```cpp  
 // C++11  
@@ -63,7 +64,7 @@ fmtfl fl_hex = (fl_orig & ~std::cout.basefield) | std::cout.showbase | std::cout
 std::cout.flags(fl_hex);  
 ```  
   
- Aliasy również współpracować z wskaźników funkcji, ale są bardziej czytelny niż równoważne typedef:  
+ Aliasy również pracować ze wskaźnikami funkcji, ale są bardziej czytelne niż równoważna typedef:  
   
 ```cpp  
 // C++11  
@@ -78,7 +79,7 @@ func fptr = &actual_function;
   
 ```  
   
- Ograniczenie `typedef` mechanizm jest, że ta funkcja nie działa z szablonami. Jednak składni typu aliasu w języku C ++ 11 umożliwia tworzenie szablonów alias:  
+ To ograniczenie **typedef** mechanizm jest, to nie zadziała za pomocą szablonów. Jednak w składni aliasu typu C ++ 11 umożliwia tworzenie szablony alias:  
   
 ```cpp  
 template<typename T> using ptr = T*;   
@@ -89,7 +90,7 @@ ptr<int> ptr_int;
 ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, jak używać szablonu aliasu z niestandardowego zarządcę — w takim przypadku całkowitą wektorów typu. Można użyć dowolnego typu dla `int` Aby utworzyć alias wygodny spowoduje ukrycie parametru złożonych wymieniono w kodzie funkcjonalności głównych. Używając programu przydzielania niestandardowych w całym kodzie można poprawić czytelność i zmniejszyć ryzyko wprowadzenia błędy spowodowane literówki.  
+ Poniższy przykład ilustruje sposób używania szablonu aliasu za pomocą niestandardowego zarządcy — w tym przypadku całkowitą vector typu. Można użyć dowolnego typu dla **int** Aby utworzyć alias wygodne do ukrywania złożonych parametru wyświetla w kodzie funkcjonalności głównych. Za pomocą niestandardowego zarządcy w całym kodzie można zwiększyć czytelność i zmniejszyć ryzyko wprowadzenia błędy spowodowane przez błędy pisowni.  
   
 ```cpp  
 #include <stdlib.h>  
@@ -148,24 +149,24 @@ int main ()
 ```  
   
 ## <a name="typedefs"></a>Typedefs  
- A `typedef` deklaracji wprowadza nazwę zakresu, staje się synonim dla typu określonego przez *deklaracji typu* część deklaracji.  
+ A **typedef** deklaracji wprowadza nazwę, która w swoim zakresie staje się synonimem typu podanego przez *deklaracji typu* część deklaracji.  
   
  Deklaracji typedef można używać do tworzenia krótszych, bardziej znaczących nazw typów już zdefiniowanych przez język lub zdefiniowanych ręcznie. Nazwy zdefiniowane przez typedef pozwalają na hermetyzację szczegółów implementacji, które mogą się zmieniać.  
   
- Contrast do **klasy**, `struct`, **Unii**, i `enum` deklaracje, `typedef` deklaracje nie znajdą się nowe typy — one wprowadzenia nowych nazw istniejących typów.  
+ W przeciwieństwie do **klasy**, **struktury**, **Unii**, i **wyliczenia** deklaracji, **typedef** nie wprowadzają nowych typów-wprowadzają one nowe nazwy istniejących typów.  
   
- Zadeklarowane za pomocą nazwy `typedef` zajmować tego samego obszaru nazw jako innych identyfikatorów (z wyjątkiem etykiety instrukcji). W związku z tym nie mogą używać tego samego identyfikatora jako nazwę poprzednio zadeklarowana z wyjątkiem w deklaracji typu klasy. Rozważmy następujący przykład:  
+ Nazwy zadeklarowane za pomocą **typedef** zajmować tej samej przestrzeni nazw jako inne identyfikatory (z wyjątkiem etykiet instrukcji). W związku z tym nie używają tego samego identyfikatora, jak poprzednio zadeklarowany nazwa, z wyjątkiem w deklaracji typu klasy. Rozważmy następujący przykład:  
   
-```  
+```cpp 
 // typedef_names1.cpp  
 // C2377 expected  
 typedef unsigned long UL;   // Declare a typedef name, UL.  
 int UL;                     // C2377: redefined.  
 ```  
   
- Reguły ukrywanie nazwy, które odnoszą się do innych identyfikatorów również decydować widoczność deklarowany przy użyciu nazwy `typedef`. W związku z tym przykładzie jest dozwolony w języku C++:  
+ Reguły ukrywaniem nazwy, które odnoszą się do innych identyfikatorów również decydować o widoczności nazwy zadeklarowane za pomocą **typedef**. W związku z tym poniższy przykład jest niedozwolony w języku C++:  
   
-```  
+```cpp 
 // typedef_names2.cpp  
 typedef unsigned long UL;   // Declare a typedef name, UL  
 int main()  
@@ -177,7 +178,7 @@ int main()
 ```  
  
   
-```  
+```cpp 
 // typedef_specifier1.cpp  
 typedef char FlagType;  
   
@@ -193,33 +194,33 @@ void myproc( int )
   
  Podczas deklarowania identyfikatora o zakresie lokalnym o tej samej nazwie co element typedef lub podczas deklarowania elementu struktury lub unii w tym samym zakresie lub w zakresie wewnętrznym, należy określić specyfikator typu. Na przykład:  
   
-```  
+```cpp 
 typedef char FlagType;  
 const FlagType x;  
 ```  
   
  Aby ponownie użyć nazwy `FlagType` dla identyfikatora, elementu struktury lub unii musi zostać dostarczony typ:  
   
-```  
+```cpp 
 const int FlagType;  // Type specifier required  
 ```  
   
  Nie wystarczy powiedzieć  
   
-```  
+```cpp 
 const FlagType;      // Incomplete specification  
 ```  
   
  ponieważ `FlagType` uważa się za część typu, a nie identyfikatora, który jest ponownie deklarowany. Taką deklarację uważa się za niedozwoloną, tak jak  
   
-```  
+```cpp 
 int;  // Illegal declaration   
 ```  
   
  Można zadeklarować dowolny typ z typedef, w tym wskaźnik, funkcję i typy tablic. Można zadeklarować nazwę typedef wskaźnika na strukturę lub unię przed zdefiniowaniem struktury lub unii, tak długo jak definicja ma taką samą widoczność jak deklaracja.  
   
 ### <a name="examples"></a>Przykłady  
- Jednym z zastosowań deklaracji `typedef` jest sprawienie, że deklaracje staną się bardziej jednolite i zwarte. Na przykład:  
+ Jednym z zastosowań **typedef** oświadczeń jest, że deklaracje staną się bardziej jednolite i zwarte. Na przykład:  
   
 ```cpp  
 typedef char CHAR;          // Character type.  
@@ -229,31 +230,31 @@ typedef unsigned long ulong;
 ulong ul;     // Equivalent to "unsigned long ul;"  
 ```  
   
- Aby użyć `typedef` do określania typów podstawowych i pochodnych w tej samej deklaracji, można rozdzielić deklaratory przecinkami. Na przykład:  
+ Aby użyć **typedef** do określania typów podstawowych i pochodnych w tej samej deklaracji, można rozdzielić deklaratory przecinkami. Na przykład:  
   
-```  
+```cpp 
 typedef char CHAR, *PSTR;  
 ```  
   
  W następującym przykładzie podano typ `DRAWF` dla funkcji niezwracającej wartości i przyjmującej dwa argumenty typu int:  
   
-```  
+```cpp 
 typedef void DRAWF( int, int );  
 ```  
   
- Po powyższym wyrażeniu `typedef`, deklaracja  
+ Po powyższym wyrażeniu **typedef** , deklaracja  
   
-```  
+```cpp 
 DRAWF box;   
 ```  
   
  byłaby równoważna z deklaracją  
   
-```  
+```cpp 
 void box( int, int );  
 ```  
   
- `typedef` często łączy się z `struct` aby zadeklarować i nazwać typy zdefiniowane przez użytkownika:  
+ **Element TypeDef** często łączy się z **struktury** Aby zadeklarować i nazwać typy zdefiniowane przez użytkownika:  
   
 ```cpp  
 // typedef_specifier2.cpp  
@@ -272,14 +273,14 @@ int main()
     ms.f = 0.99;  
     printf_s("%d   %f\n", ms.i, ms.f);  
 }  
-```  
+``` 
   
 ```Output  
 10   0.990000  
-```  
+``` 
   
 ### <a name="re-declaration-of-typedefs"></a>Ponowna deklaracja definicje typów  
- `typedef` Deklaracji można ponownie zadeklarować tej samej nazwie, aby odwołać się do tego samego typu. Na przykład:  
+ **Typedef** deklaracja może służyć do ponownego zadeklarowania takiej samej nazwie, aby odwołać się do tego samego typu. Na przykład:  
   
 ```cpp  
 // FILE1.H  
@@ -291,18 +292,18 @@ typedef char CHAR;
 // PROG.CPP  
 #include "file1.h"  
 #include "file2.h"   // OK  
-```  
+``` 
   
- Program programu. CPP zawiera dwa pliki nagłówkowe, które zawierają `typedef` deklaracje dla nazwy `CHAR`. Tak długo, jak obie deklaracje odwołują się do tego samego typu, takiego ponowna deklaracja jest dopuszczalne.  
+ Program *programu. CPP* zawiera dwa pliki nagłówkowe, które zawierają **typedef** deklaracje dla nazwy `CHAR`. Tak długo, jak obie deklaracje odwoływać się do tego samego typu, takiego ponowna deklaracja jest dopuszczalne.  
   
- A `typedef` nie można ponownie zdefiniować nazwę, który został wcześniej zadeklarowany jako innego typu. W związku z tym jeśli Plik2. Zawiera H  
+ A **typedef** nie można ponownie zdefiniować nazwę, który został wcześniej zadeklarowany jako innego typu. W związku z tym jeśli *Plik2. H* zawiera  
   
 ```cpp  
 // FILE2.H  
 typedef int CHAR;     // Error  
-```  
+``` 
   
- Kompilator generuje błąd z powodu próby ponownie zadeklarować nazwę `CHAR` do odwoływania się do innego typu. Spowoduje to rozszerzenie do konstrukcji takich jak:  
+ Kompilator generuje błąd z powodu można ponownie zadeklarować nazwy `CHAR` do odwoływania się do innego typu. Spowoduje to rozszerzenie do konstrukcji takich jak:  
   
 ```cpp  
 typedef char CHAR;  
@@ -313,10 +314,10 @@ typedef union REGS      // OK: name REGS redeclared
     struct wordregs x;  //  same meaning.  
     struct byteregs h;  
 } REGS;  
-```  
+``` 
   
-### <a name="typedefs-in-c-vs-c"></a>definicje typów w programie C++ vs. C  
- Użycie `typedef` specyfikator z typami klasy jest obsługiwany w dużej mierze z powodu deklarowanie struktury bez nazwy w praktyce ANSI C `typedef` deklaracji. Na przykład wielu programistów C należy użyć następujących czynności:  
+### <a name="typedefs-in-c-vs-c"></a>definicje typów w programie vs języka C++. C  
+ Korzystanie z **typedef** specyfikator z typami klasy jest obsługiwany w dużej mierze ze względu na ANSI C praktyką deklarowanie struktury nienazwane w **typedef** deklaracji. Na przykład wielu programistów C, użyj następujących czynności:  
   
 ```cpp  
 // typedef_with_class_types1.cpp  
@@ -326,21 +327,21 @@ typedef struct {   // Declare an unnamed structure and give it the
    unsigned x;  
    unsigned y;  
 } POINT;  
-```  
+``` 
   
- Zaletą takiego oświadczenia jest możliwość deklaracje, takich jak:  
+ Zaletą takiego oświadczenia jest umożliwienie deklaracji, takich jak:  
   
-```  
+```cpp  
 POINT ptOrigin;  
-```  
+``` 
   
  Zamiast:  
   
-```  
+```cpp 
 struct point_t ptOrigin;  
 ```  
   
- W języku C++ różnica między `typedef` nazwy i typy rzeczywistych (zadeklarowana z **klasy**, `struct`, **Unii**, i `enum` słowa kluczowe) różni się więcej. Mimo że deklarowanie bez struktury w praktyce C `typedef` instrukcji nadal działa, zapewnia nie korzyści notational co w C.  
+ W języku C++, różnica między **typedef** nazwy i typy rzeczywiste (zadeklarowane za pomocą **klasy**, **struktury**, **Unii**i **wyliczenia** słowa kluczowe) różni się więcej. Mimo że C praktyką deklarowanie pustego struktury w **typedef** instrukcji nadal działa, zapewnia nie korzyści notational co w C.  
   
 ```cpp  
 // typedef_with_class_types2.cpp  
@@ -352,10 +353,10 @@ typedef struct {
 } POINT;  
 ```  
   
- Powyższy przykład deklaruje klasę o nazwie `POINT` za pomocą nazwy klasy `typedef` składni. `POINT` jest traktowany jako nazwy klasy; jednak następujące ograniczenia dotyczące nazw wprowadzonych w ten sposób:  
+ Poprzedni przykład deklaruje klasę o nazwie `POINT` przy użyciu nazwy klasy **typedef** składni. `POINT` jest traktowany jako nazwy klasy; jednak następujące ograniczenia dotyczą nazwy wprowadzone w ten sposób:  
   
--   Nazwa (synonim) nie może występować po **klasy**, `struct`, lub **Unii** prefiks.  
+-   Nazwa (synonim) nie może występować po **klasy**, **struktury**, lub **Unii** prefiks.  
   
--   Nazwa nie może służyć jako nazwy konstruktora lub destruktora wewnątrz deklaracji klasy.  
+-   Nazwa nie może służyć jako konstruktor lub destruktor nazwy w obrębie deklaracji klasy.  
   
  Podsumowując ta składnia nie zapewnia mechanizm dziedziczenia, utworzenia lub zniszczenia.  

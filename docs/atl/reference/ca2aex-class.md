@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdbdebb1ab79ceab44a408fc182b6037f2d32fae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 94e9c33fb69b439cc6c99d87d00d24f60e87d780
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358449"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882133"
 ---
 # <a name="ca2aex-class"></a>Klasa CA2AEX
-Ta klasa jest używana przez makra konwersji ciągu `CA2TEX` i `CT2AEX`i typedef **CA2A**.  
+Ta klasa jest używana przez makra konwersji ciągów CA2TEX i CT2AEX i typedef CA2A.  
   
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,7 +41,7 @@ class CA2AEX
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `t_nBufferLength`  
+ *t_nBufferLength*  
  Rozmiar buforu używany w procesie tłumaczenia. Domyślna długość to 128 bajtów.  
   
 ## <a name="members"></a>Elementy członkowskie  
@@ -63,32 +63,32 @@ class CA2AEX
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CA2AEX::m_psz](#m_psz)|Element członkowski danych, która przechowuje ciąg źródłowy.|  
-|[CA2AEX::m_szBuffer](#m_szbuffer)|Bufor statycznych, używany do przechowywania skonwertowany ciąg.|  
+|[CA2AEX::m_psz](#m_psz)|Element członkowski danych, który przechowuje ciąg źródłowy.|  
+|[CA2AEX::m_szBuffer](#m_szbuffer)|Bufor statyczne, używane do przechowywania przekonwertowany ciąg.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli wymagane jest dodatkowe funkcje, użyj `CA2TEX`, `CT2AEX`, lub **CA2A** w swoim własnym kodem.  
+ O ile nie jest wymagane dodatkowe funkcje, należy użyć CA2TEX, CT2AEX lub CA2A we własnym kodzie.  
   
- Ta klasa zawiera w buforze statycznych stałym rozmiarze, który jest używany do przechowywania wynik konwersji. Jeśli wynik jest za duży, aby mieścił się w buforze statycznych, klasa przydziela pamięć przy użyciu `malloc`, zwalnianie pamięci, gdy obiekt wykracza poza zakres. Dzięki temu, w przeciwieństwie do tekstu makra konwersji dostępne w poprzednich wersjach ATL, ta klasa jest bezpiecznie korzystać w pętli i że nie będzie przepełnienia stosu.  
+ Ta klasa zawiera buforu statyczne stałym rozmiarze, który jest używany do przechowywania wynik konwersji. Jeśli wynik jest za duży, aby mieściły się w statycznych buforu, klasa przydziela pamięć przy użyciu **— funkcja malloc**, zwalniając pamięć, gdy obiekt wykracza poza zakres. Dzięki temu, w przeciwieństwie do tekstu makra konwersji dostępne w poprzednich wersjach biblioteki ATL, ta klasa bezpiecznym rozwiązaniem jest użycie w pętli i że nie będzie to przepełnienia stosu.  
   
- Jeśli klasa próbuje przydzielić pamięci na stercie i kończy się niepowodzeniem, zostanie wywołany `AtlThrow` z argumentem **E_OUTOFMEMORY**.  
+ Jeśli klasa próbuje przydzielić pamięci na stosie i kończy się niepowodzeniem, wywoła `AtlThrow` z nieprawidłowym argumentem E_OUTOFMEMORY.  
   
- Domyślnie klasy konwersji ATL i makra do konwersji Użyj stronę kodową ANSI bieżącego wątku.  
+ Domyślnie klasy konwersji ATL i makra stronę kodową ANSI bieżącego wątku na użytek konwersji.  
   
  Następujące makra są oparte na tej klasy:  
   
-- `CA2TEX`  
+- CA2TEX  
   
-- `CT2AEX`  
+- CT2AEX  
   
- Następujący element typedef jest oparty na tej klasy:  
+ Następujący element typedef opiera się na tej klasy:  
   
-- **CA2A**  
+- CA2A  
   
- Aby uzyskać informacje dotyczące tych makr konwersji tekstu, zobacz [ATL i makr konwersji MFC ciąg](string-conversion-macros.md).  
+ Omówienie tych makr konwersji tekstu, zobacz [ATL i makr konwersji ciągu MFC](string-conversion-macros.md).  
   
 ## <a name="example"></a>Przykład  
- Zobacz [ATL i makr konwersji MFC ciąg](string-conversion-macros.md) przykład używanie makr konwersji te parametry.  
+ Zobacz [ATL i makr konwersji ciągu MFC](string-conversion-macros.md) na przykład używanie makr konwersji tych parametrów.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlconv.h  
@@ -102,14 +102,14 @@ CA2AEX(LPCSTR psz) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `psz`  
+ *psz*  
  Ciąg tekstowy, który ma zostać przekonwertowany.  
   
- `nCodePage`  
+ *nCodePage*  
  Nieużywane w tej klasie.  
   
 ### <a name="remarks"></a>Uwagi  
- Tworzy wymagane do tłumaczenia buforu.  
+ Tworzy buforu wymagane do tłumaczenia.  
   
 ##  <a name="dtor"></a>  CA2AEX:: ~ CA2AEX  
  Destruktor.  
@@ -122,14 +122,14 @@ CA2AEX(LPCSTR psz) throw(...);
  Zwalnia przydzielonego buforu.  
   
 ##  <a name="m_psz"></a>  CA2AEX::m_psz  
- Element członkowski danych, która przechowuje ciąg źródłowy.  
+ Element członkowski danych, który przechowuje ciąg źródłowy.  
   
 ```
 LPSTR m_psz;
 ```  
   
 ##  <a name="m_szbuffer"></a>  CA2AEX::m_szBuffer  
- Bufor statycznych, używany do przechowywania skonwertowany ciąg.  
+ Bufor statyczne, używane do przechowywania przekonwertowany ciąg.  
   
 ```
 char m_szBuffer[ t_nBufferLength];
@@ -143,7 +143,7 @@ operator LPSTR() const throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca ciąg tekstowy jako typ **LPSTR**.  
+ Zwraca ciąg tekstowy jako typu LPSTR.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CA2CAEX](../../atl/reference/ca2caex-class.md)   
@@ -151,4 +151,4 @@ operator LPSTR() const throw();
  [Klasa CW2AEX](../../atl/reference/cw2aex-class.md)   
  [Klasa CW2CWEX](../../atl/reference/cw2cwex-class.md)   
  [Klasa CW2WEX](../../atl/reference/cw2wex-class.md)   
- [Przegląd klas](../../atl/atl-class-overview.md)
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)

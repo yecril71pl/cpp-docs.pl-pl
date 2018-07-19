@@ -1,5 +1,5 @@
 ---
-title: Omówienie elementu członkowskiego klasy | Dokumentacja firmy Microsoft
+title: Omówienie składowej klasy | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd280255afe98aa5ca512c63bb00623891eafc4f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ee52b42c65a34316454ea6653447938712590327
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37948256"
 ---
 # <a name="class-member-overview"></a>Omówienie elementu członkowskiego klasy
-Klasy lub struktury składa się z jego elementów członkowskich. Pracy, który wykonuje klasy jest wykonywane przez funkcje elementu członkowskiego. Stan, który przechowuje jest przechowywany w jego elementów członkowskich danych. Inicjowania elementów członkowskich odbywa się przez konstruktory i oczyszczania pracy, takich jak zwalnianie pamięci i zwolnienie zasobów jest realizowane przez destruktorów. W języku C ++ 11 i nowszych, elementy członkowskie danych można i zazwyczaj powinien być inicjowane w punkcie deklaracji.  
+Klasa lub Struktura składa się z jej członków. Pracy, która jest klasą odbywa się przez jego elementów członkowskich. Stan, który przechowuje są przechowywane w składowych danych. Inicjowanie elementów członkowskich jest wykonywane przez konstruktory i pracy czyszczenia, taką jak zwalnianie pamięci, a przy zwalnianiu zasobów jest wykonywane przez destruktory. W języku C ++ 11 i nowszych wersjach elementy członkowskie danych można i zwykle należy zostać zainicjowana w punkcie deklaracji.  
   
-## <a name="kinds-of-class-members"></a>Typy elementów członkowskich klasy  
- Pełna lista kategorii elementu członkowskiego jest następujący:  
+## <a name="kinds-of-class-members"></a>Rodzaje elementów członkowskich klas  
+ Pełna lista kategorii elementu członkowskiego jest następująca:  
   
 -   [Specjalne funkcje Członkowskie](special-member-functions.md).  
   
 -   [Przegląd funkcji Członkowskich](overview-of-member-functions.md).  
   
--   [Elementy członkowskie danych](static-members-cpp.md) tym wbudowane typy i innych użytkowników zdefiniowanych typów.  
+-   [Elementy członkowskie danych](static-members-cpp.md) w tym wbudowane typy i innych użytkowników zdefiniowanych typów.  
   
 -   Operatory  
   
@@ -53,9 +54,9 @@ Klasy lub struktury składa się z jego elementów członkowskich. Pracy, który
     >  Elementy zaprzyjaźnione są ujęte w powyższej liście, ponieważ są zawarte w deklaracji klasy. Jednak nie są one prawdziwymi składowymi klasy, ponieważ nie są one w zakresie tej klasy.  
   
 ## <a name="example-class-declaration"></a>Przykład deklaracji klasy  
- W poniższym przykładzie przedstawiono deklaracji klasy prosty:  
+ Poniższy przykład przedstawia deklarację klasy proste:  
   
-```  
+```cpp 
 // TestRun.h  
   
 class TestRun  
@@ -96,20 +97,20 @@ private:
 int TestRun::_instances{ 0 };  
 ```  
   
-## <a name="member-accessibility"></a>Dostępność elementu członkowskiego  
- Elementy członkowskie klasy są zadeklarowane na liście elementów członkowskich. Listy elementów członkowskich klasy mogą być podzielone dowolną liczbę `private`, `protected` i **publicznego** sekcje słów kluczowych, znany jako specyfikatory dostępu.  Dwukropek **:** musi występować po specyfikatorze dostępu.  Sekcje nie muszą być ciągłe, to znaczy dowolne z tych słów kluczowych mogą wystąpić kilka razy na liście elementów członkowskich.  Słowo kluczowe wyznacza dostęp do wszystkich elementów członkowskich aż do następnego specyfikatora dostępu lub nawiasu zamykającego. Aby uzyskać więcej informacji, zobacz [kontroli dostępu do elementu członkowskiego (C++)](../cpp/member-access-control-cpp.md).  
+## <a name="member-accessibility"></a>Ułatwienia dostępu członków  
+ Elementy członkowskie klasy są zadeklarowane na liście elementów członkowskich. Lista składowych klasy może być podzielona na dowolnej liczbie **prywatnej**, **chronione** i **publicznych** sekcje przy użyciu słów kluczowych, znanych jako specyfikatory dostępu.  Dwukropek **:** musi określać specyfikator dostępu.  Sekcje nie muszą być ciągłe, to znaczy dowolne z tych słów kluczowych mogą wystąpić kilka razy na liście elementów członkowskich.  Słowo kluczowe wyznacza dostęp do wszystkich elementów członkowskich aż do następnego specyfikatora dostępu lub nawiasu zamykającego. Aby uzyskać więcej informacji, zobacz [kontroli dostępu do elementu członkowskiego (C++)](../cpp/member-access-control-cpp.md).  
   
 ## <a name="static-members"></a>Statyczne elementy członkowskie  
- Element członkowski danych mogą być deklarowane jako jako statyczne, co oznacza, że wszystkie obiekty klasy mają dostęp do tej samej kopii. Funkcji członkowskiej mogą być zadeklarowane jako statyczne, w takim przypadku go mają dostęp tylko statyczne elementy członkowskie danych klasy (i nie ma *to* wskaźnika). Aby uzyskać więcej informacji, zobacz [statyczne elementy członkowskie danych](../cpp/static-members-cpp.md).  
+ Element członkowski danych może być zadeklarowana jako statyczne, co oznacza, że wszystkie obiekty klasy mają dostęp do tej samej kopii. Funkcji składowej może być zadeklarowane jako statyczne, w którym to przypadku dostępne tylko statyczne elementy członkowskie danych klasy (i nie ma *to* wskaźnika). Aby uzyskać więcej informacji, zobacz [statyczne elementy członkowskie danych](../cpp/static-members-cpp.md).  
   
 ## <a name="special-member-functions"></a>Specjalne funkcje Członkowskie  
- Specjalne funkcje Członkowskie są funkcje, które są automatycznie udostępniane przez kompilator, jeśli nie określisz je w kodzie źródłowym.  
+ Specjalne funkcje Członkowskie są funkcje, które są obsługiwane automatycznie przez kompilator, jeśli nie określisz je w kodzie źródłowym.  
   
 1.  Konstruktor domyślny  
   
 2.  Konstruktor kopiujący  
   
-3.  **(C ++ 11)**  Konstruktor przenoszenia  
+3.  **(C ++ 11)**  Konstruktor przenoszący  
   
 4.  Operator przypisania kopiowania  
   
@@ -117,12 +118,12 @@ int TestRun::_instances{ 0 };
   
 6.  Destruktor  
   
-Aby uzyskać więcej informacji, zobacz [specjalne funkcje Członkowskie](../cpp/special-member-functions.md).
+Aby uzyskać więcej informacji, zobacz [specjalnych funkcji Członkowskich](../cpp/special-member-functions.md).
   
-## <a name="memberwise-initialization"></a>Inicjowanie memberwise  
- W języku C ++ 11 i nowszych deklaratorów niestatycznego elementu członkowskiego może zawierać inicjatory.  
+## <a name="memberwise-initialization"></a>Inicjowanie elementów członkowskich  
+ W języku C ++ 11 i nowszych wersjach niestatycznej składowej deklaratory mogą zawierać inicjatory.  
   
-```  
+```cpp 
   
 class CanInit  
 {  
@@ -143,11 +144,11 @@ int main()
 }  
 ```  
   
- Jeśli element członkowski jest przypisywana wartość w konstruktorze, ta wartość zastępuje wartość, której element członkowski został zainicjowany w punkcie deklaracji.  
+ Jeśli członek jest przypisywana wartość w konstruktorze, ta wartość zastępuje wartość, z którym element członkowski została zainicjowana w punkcie deklaracji.  
   
- Istnieje tylko jedna kopia udostępnionych danych statycznych składowych dla wszystkich obiektów typu danej klasy. Dane statyczne członków muszą być zdefiniowane i mogą być zainicjowane w zakresie pliku. (Aby uzyskać więcej informacji na temat statyczne elementy członkowskie danych, zobacz [statyczne elementy członkowskie danych](../cpp/static-members-cpp.md).) Poniższy przykład pokazuje sposób wykonywania takiego inicjowania:  
+ Istnieje tylko jedna kopia udostępnionych danych statycznych składowych dla wszystkich obiektów typu danej klasy. Dane statyczne członków muszą być zdefiniowane i mogą być zainicjowane w zakresie pliku. (Aby uzyskać więcej informacji na temat elementów członkowskich danych statycznych, zobacz [statyczne elementy członkowskie danych](../cpp/static-members-cpp.md).) Poniższy przykład pokazuje sposób wykonywania takiego inicjowania:  
   
-```  
+```cpp 
 // class_members2.cpp  
 class CanInit2  
 {  

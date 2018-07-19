@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fae7d6e9e3a50ad6a0b78d2b47a732b6b5fa9fc0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7983857b3814f8ddd9c10ab37676bc2e87e9a59c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853706"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964148"
 ---
 # <a name="regexerror-class"></a>regex_error — Klasa
 
-Raporty obiektu basic_regex — zła.
+Raporty obiektu basic_regex zła.
 
 ## <a name="syntax"></a>Składnia
 
@@ -44,13 +44,13 @@ public:
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa opisuje obiekt wyjątek zgłoszony zgłosić błąd podczas konstruowania lub użycie `basic_regex` obiektu.
+Klasa opisuje obiekt wyjątku wyzwolony, aby zgłosić błąd w konstrukcji lub użytkowania `basic_regex` obiektu.
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<regex >
+**Nagłówek:** \<wyrażenia regularnego >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="code"></a>  regex_error::Code
 
@@ -62,7 +62,7 @@ regex_constants::error_code code() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca wartość, który został przekazany do konstruktora obiektu.
+Element członkowski funkcji zwraca wartość, która została przekazana do konstruktora obiektu.
 
 ### <a name="example"></a>Przykład
 
@@ -111,11 +111,11 @@ regex_error(regex_constants::error_code error);
 
 ### <a name="parameters"></a>Parametry
 
-`error` Kod błędu.
+*Błąd* kod błędu.
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruktor tworzy obiekt przechowujący wartość `error`.
+Konstruktor konstruuje obiekt, który przechowuje wartość *błąd*.
 
 ### <a name="example"></a>Przykład
 
@@ -158,9 +158,9 @@ regex error: unbalanced parentheses
 
 [\<regex>](../standard-library/regex.md)<br/>
 [regex_constants, klasa](../standard-library/regex-constants-class.md)<br/>
-[\<wyrażenie regularne > Funkcje](../standard-library/regex-functions.md)<br/>
+[\<wyrażenie regularne > funkcji](../standard-library/regex-functions.md)<br/>
 [regex_iterator, klasa](../standard-library/regex-iterator-class.md)<br/>
-[\<wyrażenie regularne > operatory](../standard-library/regex-operators.md)<br/>
+[\<wyrażenie regularne > operatorów](../standard-library/regex-operators.md)<br/>
 [regex_token_iterator, klasa](../standard-library/regex-token-iterator-class.md)<br/>
 [regex_traits, klasa](../standard-library/regex-traits-class.md)<br/>
 [\<wyrażenie regularne > definicje typów](../standard-library/regex-typedefs.md)<br/>

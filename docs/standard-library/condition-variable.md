@@ -1,5 +1,5 @@
 ---
-title: '&lt;condition_variable —&gt; | Dokumentacja firmy Microsoft'
+title: '&lt;condition_variable&gt; | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,18 +14,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a54045dfdebf3ab7c9f7ad04611bc9e267faea0d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7becd4cb5700cfb31acacc244d2640498bf8120e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845729"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963475"
 ---
-# <a name="ltconditionvariablegt"></a>&lt;condition_variable —&gt;
+# <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
 
-Określa klasy [condition_variable —](../standard-library/condition-variable-class.md) i [condition_variable_any —](../standard-library/condition-variable-any-class.md) służące do tworzenia obiektów, które poczekaj, aż warunek miał wartość true.
+Określa klasy [condition_variable](../standard-library/condition-variable-class.md) i [condition_variable_any](../standard-library/condition-variable-any-class.md) służące do tworzenia obiektów, które poczekaj, aż zdefiniowany warunek nakazujący są prawdziwe.
 
-Ten nagłówek używa współbieżność środowiska wykonawczego (ConcRT), tak aby można go używać razem z innych mechanizmów ConcRT. Aby uzyskać więcej informacji o ConcRT, zobacz [współbieżność środowiska wykonawczego](../parallel/concrt/concurrency-runtime.md).
+Środowisko uruchomieniowe współbieżności (ConcRT) korzysta z tego pliku nagłówkowego, aby można go używać razem z innych mechanizmów ConcRT. Aby uzyskać więcej informacji na temat ConcRT zobacz [współbieżność środowiska wykonawczego](../parallel/concrt/concurrency-runtime.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,38 +34,38 @@ Ten nagłówek używa współbieżność środowiska wykonawczego (ConcRT), tak 
 ```
 
 > [!NOTE]
-> W kodzie, który ma być kompilowana przy użyciu **/CLR**, ten nagłówek jest zablokowany.
+> W kodzie, który jest kompilowany przy użyciu **/CLR**, tego pliku nagłówkowego jest zablokowany.
 
 ### <a name="remarks"></a>Uwagi
 
-Kod, który oczekuje dla zmiennej warunku należy również użyć `mutex`. Wątek wywołujący musi zablokować `mutex` przed wywołaniem funkcji oczekiwania dla zmiennej stanu. `mutex` Jest następnie zablokowana, gdy wywoływana funkcja zwraca. `mutex` Nie jest zablokowane, gdy wątek oczekuje na warunek miał wartość true. Tak, aby nie są nieprzewidywalne wyniki, każdy wątek, który oczekuje na zmienną warunek musi używać tego samego `mutex` obiektu.
+Kod, który oczekuje zmienną warunek musi także zostać użyta `mutex`. Zablokować wątek wywołujący `mutex` przed wywołaniem funkcji, które oczekiwania dla zmiennej stanu. `mutex` Następnie zostanie zablokowana, gdy wywołana funkcja zwraca. `mutex` Nie jest zablokowany, podczas gdy wątek oczekuje na warunek, którego chcesz stać się wartość true. Tak, aby nie są nieprzewidywalne wyniki, każdy wątek, który oczekuje na zmiennej warunek musi używać tego samego `mutex` obiektu.
 
-Obiekty typu `condition_variable_any` może być używany z obiektu mutex dowolnego typu. Typ obiektu mutex, który jest używany nie trzeba udostępniać `try_lock` metody. Obiekty typu `condition_variable` można używać tylko z obiektu mutex typu `unique_lock<mutex>`. Obiekty tego typu może być szybsza niż obiekty typu `condition_variable_any<unique_lock<mutex>>`.
+Obiekty typu `condition_variable_any` mogą być używane z elementu mutex dowolnego typu. Typ obiektu mutex, która jest używana nie trzeba podawać `try_lock` metody. Obiekty typu `condition_variable` należy używać tylko za pomocą elementu mutex typu `unique_lock<mutex>`. Obiekty tego typu może być szybsza niż obiekty typu `condition_variable_any<unique_lock<mutex>>`.
 
-Oczekiwania na zdarzenie, najpierw blokady obiektu mutex, a następnie wywołać jeden z `wait` metody zmiennej stanu. `wait` Wywołać bloków, aż inny wątek sygnały zmiennej stanu.
+Oczekiwania na zdarzenie, najpierw zablokować element mutex, a następnie wywołać jedną z `wait` metod na zmiennej stanu. `wait` Wywołania bloki, aż inny wątek sygnalizuje zmiennej stanu.
 
-*Fałszywe wakeups* wystąpić, gdy wątków, które oczekują na zmienne warunków zostać odblokowany bez potrzeby powiadomienia. Rozpoznawanie takie fałszywe wakeups, kod, który oczekuje na warunek miał wartość true jawnie należy sprawdzić warunku kod zwrócona przez funkcję oczekiwania. Zwykle odbywa się przy użyciu pętli. można użyć `wait(unique_lock<mutex>& lock, Predicate pred)` Aby wykonać tę pętlę.
+*Fałszywe wakeups* występują, gdy wątków, które oczekują na zmienne warunków zostają odblokowane bez odpowiednich powiadomień. Rozpoznawanie takie fałszywe wakeups, kod, który oczekuje na warunek, aby stać się true jawnie należy sprawdzić tego warunku, kod zwrócona przez funkcję oczekiwania. Zwykle odbywa się za pomocą pętli. Możesz użyć `wait(unique_lock<mutex>& lock, Predicate pred)` wykonać tę pętlę.
 
 ```cpp
 while (condition is false)
     wait for condition variable;
 ```
 
-`condition_variable_any` i `condition_variable` klasy każdy ma trzy metody oczekiwania dla warunku.
+`condition_variable_any` i `condition_variable` klasy każdy ma trzy metody, które oczekiwania dla warunku.
 
-- `wait` czeka na okres bez ograniczeń.
+- `wait` w tym czasie czeka w przedziale czasu niepowiązanych.
 
 - `wait_until` czeka, aż do określonej `time`.
 
 - `wait_for` czeka na określoną `time interval`.
 
-Każda z tych metod ma dwie wersje przeciążona. Tylko jedna czeka i wybudzania spuriously. Druga przyjmuje argument dodatkowe szablonu, który definiuje predykatu. Metoda nie zwraca momentu predykatu `true`.
+Każda z tych metod ma dwie przeciążone wersje. Tylko jedna czeka i można obudzić błędnie. Druga przyjmuje argument dodatkowe szablony, który definiuje predykat. Metoda nie zwraca do momentu predykat **true**.
 
-Każda klasa ma również dwie metody, które są używane do powiadamiania warunek zmiennej, która jest jego stan `true`.
+Każda klasa ma również dwie metody, które są używane do powiadamiania zmiennej warunku, która jest jego stan **true**.
 
-- `notify_one` budzi się jeden z wątków, które oczekuje na zmiennej stanu.
+- `notify_one` zostanie wznowiona jeden z wątków, które oczekuje na zmiennej stanu.
 
-- `notify_all` budzi wszystkie wątki, które czekają zmiennej stanu.
+- `notify_all` budzi wszystkie wątki, które oczekują na zmiennej stanu.
 
 ## <a name="see-also"></a>Zobacz także
 

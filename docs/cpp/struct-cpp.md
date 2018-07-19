@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a9ea6bea20ad1591db9b07507b4db959d10a318
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4f4b343097be6c15b5a273fd4e2a59198858d576
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947765"
 ---
 # <a name="struct-c"></a>struktura (C++)
-`struct` — Słowo kluczowe definiuje typ struktury i/lub zmiennej typu struktury.  
+**Struktury** — słowo kluczowe definiuje typ struktury i/lub zmienną typu struktury.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,46 +37,46 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `template-spec`  
- Opcjonalne specyfikacje szablonu. Aby uzyskać więcej informacji, zapoznaj się [specyfikacje szablonu](templates-cpp.md).  
+ *specyfikacje szablonu*  
+ Opcjonalne specyfikacje szablonu. Aby uzyskać więcej informacji, zobacz [specyfikacje szablonu](templates-cpp.md).  
   
- `struct`  
- `struct` — Słowo kluczowe.  
+ *struct*  
+ **Struktury** — słowo kluczowe.  
   
- `ms-decl-spec`  
- Opcjonalna specyfikacja klasy magazynowania. Aby uzyskać więcej informacji, zapoznaj się [__declspec](../cpp/declspec.md) — słowo kluczowe.  
+ *MS-decl-spec*  
+ Opcjonalna specyfikacja klasy magazynowania. Aby uzyskać więcej informacji, zobacz [__declspec](../cpp/declspec.md) — słowo kluczowe.  
   
- `tag`  
+ *Tag*  
  Nazwa typu nadana strukturze. Znacznik staje się słowem zastrzeżonym w obrębie struktury. Znacznik jest opcjonalny. W przypadku pominięcia zostanie zdefiniowana anonimowa struktura. Aby uzyskać więcej informacji, zobacz [anonimowe typy klas](../cpp/anonymous-class-types.md).  
   
- `base-list`  
- Opcjonalna lista klas lub struktur, z której pochodzą składowe tej struktury. Zobacz [klasy podstawowej](../cpp/base-classes.md) Aby uzyskać więcej informacji. Każda podstawowa nazwa klasy lub struktury może być poprzedzone specyfikator dostępu ([publicznego](../cpp/public-cpp.md), [prywatnej](../cpp/private-cpp.md), [chronione](../cpp/protected-cpp.md)) i [wirtualnego](../cpp/virtual-cpp.md) słowo kluczowe. Znajdują się w tabeli dostęp do elementu członkowskiego [kontrolowanie dostępu do członków klasy](member-access-control-cpp.md) Aby uzyskać więcej informacji.  
+ *Lista podstawowego*  
+ Opcjonalna lista klas lub struktur, z której pochodzą składowe tej struktury. Zobacz [klasy podstawowej](../cpp/base-classes.md) Aby uzyskać więcej informacji. Każda podstawowa nazwy klasy lub struktury może być poprzedzona przez specyfikator dostępu ([publicznych](../cpp/public-cpp.md), [prywatnej](../cpp/private-cpp.md), [chronione](../cpp/protected-cpp.md)) i [wirtualnego](../cpp/virtual-cpp.md) słowo kluczowe. Zobacz tabelę dostępu do elementu członkowskiego w [kontrolowanie dostępu do składowych klasy](member-access-control-cpp.md) Aby uzyskać więcej informacji.  
   
- `member-list`  
- Lista składników struktury. Zapoznaj się [omówienie elementu członkowskiego klasy](../cpp/class-member-overview.md) Aby uzyskać więcej informacji. Jedyną różnicą jest to, że `struct` jest używany zamiast `class`.  
+ *Lista elementów członkowskich*  
+ Lista składników struktury. Zapoznaj się [omówienie składowej klasy](../cpp/class-member-overview.md) Aby uzyskać więcej informacji. Jedyną różnicą jest to, że **struktury** jest używana zamiast **klasy**.  
   
- `declarators`  
- Lista deklaratora określająca nazwy klasy. Listy deklaratorów deklarują jedno lub więcej wystąpień typu struktury. Deklaratory może zawierać listy inicjatorów, jeśli są wszystkie elementy członkowskie danych klasy `public`. Listy inicjatorów są często używane w strukturach, ponieważ są elementy członkowskie danych `public` domyślnie.  Zobacz [Przegląd Deklaratorów](../cpp/overview-of-declarators.md) Aby uzyskać więcej informacji.  
+ *deklaratory*  
+ Lista deklaratora określająca nazwy klasy. Listy deklaratorów deklarują jedno lub więcej wystąpień typu struktury. Deklaratory mogą zawierać listy inicjatorów, jeśli wszystkie składowe danych klasy są **publicznych**. Listy inicjatorów są wspólne w strukturach, ponieważ elementy członkowskie danych są **publicznych** domyślnie.  Zobacz [Przegląd Deklaratorów](../cpp/overview-of-declarators.md) Aby uzyskać więcej informacji.  
   
 ## <a name="remarks"></a>Uwagi  
  Typ struktury jest zdefiniowanym przez użytkownika typem złożonym. Składa się z pól lub elementów członkowskich, które mogą mieć różne typy.  
   
- W języku C++ struktury jest taka sama jak klasa z tą różnicą, że jej elementów członkowskich są `public` domyślnie.  
+ W języku C++ struktura jest taka sama jak klasa z tą różnicą, że jej składowe są **publicznych** domyślnie.  
   
- Informacje dotyczące zarządzanych klas i struktur, zobacz [klas i struktur](../windows/classes-and-structs-cpp-component-extensions.md).  
+ Aby uzyskać informacje dotyczące zarządzanych klas i struktur, zobacz [klas i struktur](../windows/classes-and-structs-cpp-component-extensions.md).  
   
 ## <a name="using-a-structure"></a>Korzystanie ze struktury  
- W języku C, należy jawnie użyć `struct` — słowo kluczowe, aby zadeklarować struktury. W języku C++ nie trzeba używać `struct` — słowo kluczowe po typ został zdefiniowany.  
+ W języku C, trzeba jawnie użyć **struktury** — słowo kluczowe, aby zadeklarować strukturę. W języku C++, nie trzeba używać **struktury** — słowo kluczowe po zdefiniowaniu typu.  
   
  Istnieje opcja zadeklarowania zmiennych, kiedy typ struktury jest definiowany, przez umieszczenie jednej lub więcej nazw zmiennych, oddzielonych przecinkami, między zamykającym nawiasem klamrowym i średnikiem.  
   
  Zmienne struktury mogą być inicjowane. Inicjowanie dla każdej zmiennej musi być ujęte w nawiasy klamrowe.  
   
- Aby uzyskać odpowiednie informacje, zobacz [klasy](../cpp/class-cpp.md), [Unii](../cpp/unions.md), i [wyliczenia](../cpp/enumerations-cpp.md).  
+ Aby uzyskać powiązane informacje, zobacz [klasy](../cpp/class-cpp.md), [Unii](../cpp/unions.md), i [wyliczenia](../cpp/enumerations-cpp.md).  
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp 
 #include <iostream>  
 using namespace std;  
   

@@ -20,48 +20,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30d31f30971184356374b3991fedda474ca27465
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2283e74c00867e373d2ba117fd5dfbf70f137c75
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857301"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966014"
 ---
 # <a name="using-c-library-headers"></a>Korzystanie z nagłówków biblioteki C++
 
-Dołącz zawartość standardowy nagłówek nazw w dyrektywy include.
+Obejmują zawartość standardowy nagłówek nadawania jej nazwy w dyrektywie include.
 
 ```cpp
 #include <iostream>// include I/O facilities
 ```
 
-Możesz dołączać standardowych nagłówków w dowolnej kolejności, standardowy nagłówek więcej niż raz lub dwa lub więcej standardowych nagłówków definiujących makra tej samej lub tego samego typu. Nie dołączaj standardowy nagłówek w deklaracji. Nie definiują makra, które mają takie same nazwy jako słowa kluczowe przed wprowadzeniem standardowy nagłówek.
+Może zawierać standardowych nagłówków w dowolnej kolejności, standardowy nagłówek więcej niż jeden raz lub dwa lub więcej standardowych nagłówków, które definiują ten sam makro lub tego samego typu. Nie dołączaj standardowy nagłówek w deklaracji. Definiuje makra, które mają takie same nazwy słowa kluczowe przed wprowadzeniem standardowy nagłówek.
 
-Nagłówków biblioteki C++ obejmuje wszystkie inne nagłówków biblioteki C++ musi definiować wymagane typy domen. (Zawsze obejmuje jawnie żadnych nagłówków biblioteki C++, które są potrzebne w jednostce tłumaczenia, ale co najmniej przypuszczalnie problem o jego rzeczywistego zależności). Nagłówek standardowy C nigdy nie zawiera inny standardowy nagłówek. Standardowy nagłówek deklaruje lub określa jednostki, w tym dokumencie opisano dla niego.
+Nagłówków biblioteki C++ obejmuje wszystkie inne nagłówków biblioteki C++ musi definiować typy wymaganych domen. (Zawsze obejmuje jawnie żadnych nagłówków biblioteki C++, które są potrzebne w jednostce translacji, jednak co najmniej przypuszczalnie problem o jego rzeczywista zależności). Nagłówek standardowej C nigdy nie zawiera inny standardowy nagłówek. Standardowy nagłówek deklaruje i definiuje tylko jednostek, które są opisane dla niego w tym dokumencie.
 
-Każda funkcja w bibliotece jest zadeklarowana w standardowy nagłówek. W odróżnieniu od w standardowe C standardowy nagłówek nigdy nie podano maskowania makro z taką samą nazwę jak funkcja, która maski deklaracji funkcji i osiąga ten sam efekt. Aby uzyskać więcej informacji na maskowania makra, zobacz [konwencje biblioteki C++](../standard-library/cpp-library-conventions.md).
+Każda funkcja w bibliotece jest zadeklarowany w standardowy nagłówek. W odróżnieniu od w standardowej C standardowy nagłówek nigdy nie zapewnia maskowania makra o takiej samej nazwie jak funkcja maskuje deklaracji funkcji, która osiąga ten sam efekt. Aby uzyskać więcej informacji na temat maskowania makr, zobacz [konwencje biblioteki C++](../standard-library/cpp-library-conventions.md).
 
-Nazwy wszystkich innych niż `operator delete` i `operator new` w bibliotece C++ nagłówki są zdefiniowane w `std` przestrzeni nazw lub w przestrzeni nazw zagnieżdżone w obrębie `std` przestrzeni nazw. Możesz odwoływać się do nazwy `cin`, na przykład jako `std::cin`. Należy jednak pamiętać, że nazwy makr nie podlegają kwalifikacji przestrzeni nazw, więc zawsze pisać `__STD_COMPLEX` bez kwalifikatora przestrzeni nazw.
+Nazwy wszystkich innych niż **operatora delete** i **nowy operator** w bibliotece C++ nagłówki są zdefiniowane w `std` przestrzeni nazw, lub w przestrzeni nazw zagnieżdżone w obrębie `std` przestrzeni nazw. Możesz odwołać się do nazwy `cin`, na przykład jako `std::cin`. Należy jednak pamiętać, że nazwy makr nie podlegają kwalifikacji przestrzeni nazw, więc zawsze pisać `__STD_COMPLEX` bez kwalifikatora przestrzeni nazw.
 
-W niektórych środowiskach tłumaczenia, łącznie z nagłówków biblioteki C++ może Wózek nośny nazw zewnętrznych zadeklarowany w `std` przestrzeni nazw w globalnej przestrzeni nazw jak również z poszczególnymi `using` deklaracje dla każdej nazwy. W przeciwnym razie wartość nagłówka jest *nie* wprowadzenia nazwy biblioteki do bieżącej przestrzeni nazw.
+W niektórych środowiskach tłumaczenia, łącznie z nagłówków biblioteki C++ może przenieść nazw zewnętrznych zadeklarowanych w `std` przestrzeni nazw w globalnej przestrzeni nazw, z poszczególnymi **przy użyciu** deklaracje dla każdej z nazw. W przeciwnym razie jest nagłówek *nie* wprowadzać żadnych nazw bibliotek w bieżącej przestrzeni nazw.
 
-C++ Standard wymaga, aby C standardowych nagłówków zadeklarować wszystkie nazwy zewnętrzne w przestrzeni nazw `std`, następnie Wózek nośny ich do globalnej przestrzeni nazw z poszczególnymi `using` deklaracje dla każdej nazwy. Ale w niektórych środowiskach tłumaczenia C Standard nagłówki obejmują nie deklaracje przestrzeni nazw, deklarowanie wszystkie nazwy bezpośrednio w globalnej przestrzeni nazw. W związku z tym większość przenośnych metody radzenia sobie z przestrzeni nazw ma dwie reguły:
+C++ Standard wymaga, że nagłówki C Standard zadeklarować wszystkich nazw zewnętrznych w przestrzeni nazw `std`, następnie przenieść je do globalnej przestrzeni nazw z poszczególnymi **przy użyciu** deklaracje dla każdej z nazw. Jednak w niektórych środowiskach tłumaczenia przez Standard C nagłówki obejmują nie deklaracji przestrzeni nazw, deklarowanie wszystkich nazw bezpośrednio w globalnej przestrzeni nazw. W związku z tym większość przenośnych metody radzenia sobie z przestrzeni nazw jest wykonanie czynności opisanych dwie reguły:
 
-- Aby assuredly zadeklarować w przestrzeni nazw `std` zewnętrzną nazwę tradycyjnie jest zadeklarowana w \<stdlib.h >, na przykład, Dołącz nagłówek \<cstdlib — >. Wiadomo, że nazwa może być również zadeklarowany w globalnej przestrzeni nazw.
+- Aby assuredly zadeklarować w przestrzeni nazw `std` zewnętrzną nazwę, która zazwyczaj jest zadeklarowana w \<stdlib.h >, na przykład zawierać nagłówek \<cstdlib — >. Wiadomo, że nazwy mogą być deklarowane w globalnej przestrzeni nazw.
 
-- Aby zadeklarować assuredly w globalnej przestrzeni nazw zewnętrzna nazwa zadeklarowana w \<stdlib.h >, Dołącz nagłówek \<stdlib.h > bezpośrednio. Wiedzieć, że nazwa może być również zadeklarowany w przestrzeni nazw `std`.
+- Do deklarowania assuredly w globalnej przestrzeni nazw zewnętrzną nazwę zadeklarowanych w \<stdlib.h >, dołączyć nagłówek \<stdlib.h > bezpośrednio. Dowiedzieć się, że nazwy mogą być deklarowane w przestrzeni nazw `std`.
 
-W związku z tym jeśli chcesz wywołać `std::abort` spowodują przerwania pracy, należy uwzględnić \<cstdlib — >. Jeśli chcesz wywołać `abort`, należy uwzględnić \<stdlib.h >.
+W związku z tym jeśli chcesz wywołać `std::abort` spowodować Nienormalne zakończenie, należy uwzględnić \<cstdlib — >. Jeśli chcesz wywołać `abort`, powinien zawierać \<stdlib.h >.
 
-Alternatywnie można zapisać deklaracji:
+Alternatywnie można napisać deklaracji:
 
 ```cpp
 using namespace std;
 ```
 
-które powoduje przeniesienie wszystkich nazw biblioteki do bieżącej przestrzeni nazw. Jeśli piszesz tej deklaracji natychmiast po wszystkich zawiera dyrektywy, które, Wózek nośny nazwy w globalnej przestrzeni nazw. Zagadnienia dotyczące przestrzeni nazw w pozostałej jednostce tłumaczenia, później możesz zignorować. Można również uniknąć większości różnice tłumaczenia różnych środowiskach.
+wszystkie nazwy biblioteki która wnosi do bieżącej przestrzeni nazw. Jeśli piszesz tej deklaracji natychmiast po wszystkich zawiera dyrektywy, przenieść nazwy do globalnej przestrzeni nazw. Zagadnienia dotyczące przestrzeni nazw w pozostałej części jednostki translacji, później możesz zignorować. Można także uniknąć większość różnic w środowiskach różnych tłumaczeń.
 
-Chyba że w szczególności, nie mogą określić nazwy w `std` przestrzeni nazw lub w przestrzeni nazw zagnieżdżone w obrębie `std` przestrzeni nazw w programie.
+Jeśli nie postanowiono inaczej, nie mogą definiować nazwy w `std` przestrzeni nazw, lub w przestrzeni nazw zagnieżdżone w obrębie `std` przestrzeni nazw, w ramach programu.
 
 ## <a name="see-also"></a>Zobacz także
 

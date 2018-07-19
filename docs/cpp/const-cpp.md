@@ -16,27 +16,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 882181bd3ac69257b69a79f42e12c2573f2f1da4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b6fea501724b24c07ab8b2199410a369d62dc9d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947894"
 ---
 # <a name="const-c"></a>const (C++)
-Podczas modyfikowania deklaracji danych **const** — słowo kluczowe Określa, czy obiektu lub zmienna nie jest można modyfikować.  
+Podczas modyfikowania deklarację danych **const** — słowo kluczowe Określa, że obiekt lub zmienna nie można modyfikować.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
   
-      const declaration ;  
+const declaration ;  
 member-function const ;  
 ```  
   
 ## <a name="const-values"></a>wartości stałych  
- **Const** — słowo kluczowe Określa, że wartość zmiennej jest stałe i informuje kompilator, aby zapobiec dla programisty modyfikowania jej.  
+ **Const** — słowo kluczowe Określa, że wartość zmiennej jest stała i informuje kompilator, aby uniemożliwić modyfikowanie przez programistę.  
   
-```  
+```cpp 
 // constant_values1.cpp  
 int main() {  
    const int i = 5;  
@@ -45,9 +46,9 @@ int main() {
 }  
 ```  
   
- W języku C++, można użyć **const** słowa kluczowego zamiast [#define](../preprocessor/hash-define-directive-c-cpp.md) dyrektywy preprocesora do definiowania stałej wartości. Wartości zdefiniowane z **const** podlegają Sprawdzanie typu, a następnie można użyć zamiast wyrażenia stałe. W języku C++, można określić rozmiaru tablicy o **const** zmiennej w następujący sposób:  
+ W języku C++, można użyć **const** słowa kluczowego zamiast [#define](../preprocessor/hash-define-directive-c-cpp.md) dyrektywy preprocesora do definiowania wartości stałych. Wartości zdefiniowane za pomocą **const** podlegają kontroli typów i mogą być używane zamiast wyrażeń stałych. W języku C++, można określić rozmiar tablicy o liczbie **const** zmiennej w następujący sposób:  
   
-```  
+```cpp 
 // constant_values2.cpp  
 // compile with: /c  
 const int maxarray = 255;  
@@ -56,9 +57,9 @@ char store_char[maxarray];  // allowed in C++; not allowed in C
   
  W języku C, domyślne wartości są stałe w zewnętrznych powiązaniach, więc mogą być one wyświetlane tylko w plikach źródłowych. W języku C++, wartości stałe są domyślne wewnątrz powiązania, co pozwala im pojawiać się w plikach nagłówkowych.  
   
- **Const** — słowo kluczowe można również w deklaracji wskaźnika.  
+ **Const** również można użyć słowa kluczowego w deklaracjach wskaźnika.  
   
-```  
+```cpp 
 // constant_values3.cpp  
 int main() {  
    char *mybuf = 0, *yourbuf;  
@@ -68,9 +69,9 @@ int main() {
 }  
 ```  
   
- Wskaźnik do zmiennej zadeklarowany jako **const** można przypisać tylko do wskaźnika, który jest również zadeklarowany jako **const**.  
+ Wskaźnik do zmiennej, zadeklarowanej jako **const** można przypisać tylko do wskaźnika, który także jest zadeklarowany jako **const**.  
   
-```  
+```cpp 
 // constant_values4.cpp  
 #include <stdio.h>  
 int main() {  
@@ -87,21 +88,21 @@ int main() {
   
  Można użyć wskaźników do danych stałych, takich jak parametry funkcji, aby zapobiec modyfikowaniu parametru przekazywanego za pomocą wskaźnika funkcji.  
   
- Dla obiektów, które są zadeklarowane jako **const**, użytkownik może wywołać tylko członek stałej funkcji. Dzięki temu stały obiekt nie jest nigdy modyfikowany.  
+ Dla obiektów, które są zadeklarowane jako **const**, może wywołać tylko stałe elementy członkowskie funkcji. Dzięki temu stały obiekt nie jest nigdy modyfikowany.  
   
-```  
+```cpp 
 birthday.getMonth();    // Okay  
 birthday.setMonth( 4 ); // Error  
 ```  
   
- Stałe lub niestałe funkcje członkowskie można wywoływać dla obiektu niestałego. Można także przeciążyć funkcji Członkowskich przy użyciu **const** słowa kluczowego; dzięki temu inna wersja funkcja wywoływana dla obiektów nieunikatowego i stałych.  
+ Stałe lub niestałe funkcje członkowskie można wywoływać dla obiektu niestałego. Można także przeciążyć funkcji składowej za pomocą **const** słowa kluczowego; dzięki temu w innej wersji programu funkcja będzie wywoływana dla obiektów stałych i niestałych.  
   
- Nie można zadeklarować konstruktorów ani destruktorów z **const** — słowo kluczowe.  
+ Nie można zadeklarować konstruktorów i destruktorów ze **const** — słowo kluczowe.  
   
-## <a name="const-member-functions"></a>stałe funkcje Członkowskie  
- Deklarowanie funkcji członkowskiej z **const** — słowo kluczowe Określa, że funkcja jest funkcja "tylko do odczytu", która nie modyfikuje obiektu, dla którego jest wywoływana. Funkcja członkowska stałej nie można zmodyfikować żadnych elementów członkowskich danych niestatyczna ani wywołanie funkcji, które nie są stałe dowolnego elementu członkowskiego. Aby zadeklarować funkcji członkowskiej stałej, umieść **const** — słowo kluczowe po nawiasie zamykającym listy argumentów. **Const** — słowo kluczowe jest wymagany w deklaracji i definicji.  
+## <a name="const-member-functions"></a>Funkcje składowe const  
+ Deklarowanie funkcji składowej z **const** — słowo kluczowe Określa, że funkcja jest funkcją "tylko do odczytu", która nie powoduje modyfikacji obiektu, dla którego jest wywoływana. Stała składowa nie można modyfikować żadnych składowych danych niestatycznych lub wywołania funkcji, które nie są stałe dowolnego elementu członkowskiego. Aby zadeklarować funkcję stałe elementy członkowskie, umieść **const** — słowo kluczowe po nawiasie zamykającym listy argumentów. **Const** — słowo kluczowe jest wymagany w deklaracji i definicji.  
   
-```  
+```cpp 
 // constant_member_function.cpp  
 class Date  
 {  
@@ -132,40 +133,40 @@ int main()
 ```  
   
 ## <a name="c-and-c-const-differences"></a>Różnice dotyczące słowa kluczowego const w C i C++  
- Gdy zadeklarować zmiennej jako **const** w pliku kodu źródłowego C, możesz to zrobić jako:  
+ Kiedy Deklarujesz zmienną **const** w pliku kodu źródłowego C, możesz to zrobić jako:  
   
-```  
+```cpp 
 const int i = 2;  
 ```  
   
  Tej zmiennej można następnie użyć w innym module w następujący sposób:  
   
-```  
+```cpp 
 extern const int i;  
 ```  
   
- Jednak aby uzyskać takie samo zachowanie w języku C++, należy zadeklarować Twojej **const** zmiennej jako:  
+ Jednak aby uzyskać takie samo zachowanie w języku C++, należy zadeklarować swoje **const** zmiennej jako:  
   
-```  
+```cpp 
 extern const int i = 2;  
 ```  
   
- Jeśli chcesz zadeklarować zmienną `extern` w pliku kodu źródłowego języka C++ do użytku w pliku kodu źródłowego C, należy użyć:  
+ Jeśli chcesz zadeklarować **extern** zmiennej w pliku kodu źródłowego języka C++ do użycia w pliku kodu źródłowego C, użyj:  
   
-```  
+```cpp 
 extern "C" const int x=10;  
 ```  
   
  Aby zapobiec przekręcaniu nazwy przez kompilator języka C++.  
   
 ## <a name="remarks"></a>Uwagi  
- Po liście parametrów funkcji członkowskiej, **const** — słowo kluczowe określa funkcja nie modyfikuje obiektu, dla którego jest wywoływany.  
+ Jeśli zgodnie z listą parametrów dla funkcji członkowskiej, **const** — słowo kluczowe określa funkcja nie powoduje modyfikacji obiektu, dla której zostanie wywołana.  
   
  Aby uzyskać więcej informacji na temat **const**, zobacz następujące tematy:  
     
 -   [Wskaźniki stałe i nietrwałe](../cpp/const-and-volatile-pointers.md)  
   
--   [Kwalifikatory typów (Dokumentacja języka C)](../c-language/type-qualifiers.md)  
+-   [Kwalifikatory typów (Skorowidz języka c)](../c-language/type-qualifiers.md)  
   
 -   [volatile](../cpp/volatile-cpp.md)  
   

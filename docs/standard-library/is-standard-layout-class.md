@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d899d9c56ecc8b27b18498de225bbba6f0d110d2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6223151acbce299178101735db05f7b4bd516f2f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852087"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965516"
 ---
 # <a name="isstandardlayout-class"></a>is_standard_layout — Klasa
 
-Testy, jeśli typ jest standardowego układu.
+Sprawdza, czy typ jest standardowego układu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,17 +39,17 @@ struct is_standard_layout;
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`Ty`|Typ do zapytania|
+|*Ty*|Typ do zapytania|
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienia tego typu predykatu przechowuje wartość PRAWDA, jeśli typ `Ty` jest klasa, która ma układ standardowy wszystkich obiektów w pamięci, w przeciwnym razie posiada wartość false.
+Wystąpienie tego typu predykatu ma wartość true, jeśli typ *Ty* to klasa, która ma standardowy układ obiektów w pamięci w przeciwnym razie przechowuje wartość false.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

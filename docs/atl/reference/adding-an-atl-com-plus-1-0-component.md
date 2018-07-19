@@ -17,23 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0375c0c098d3e8328cb8c8a678b266053ef7e89
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 50529f5e229736c2d2688cb74edabee0ec492718
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355794"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963566"
 ---
 # <a name="adding-an-atl-com-10-component"></a>Dodawanie składnika ATL COM + 1.0
-Ten kreator dodaje obiekt do projektu obsługującego usług COM + 1.0, w tym transakcji.  
+Ten kreator dodaje obiekt do projektu, który obsługuje usługi COM + 1.0, w tym transakcji.  
   
-### <a name="to-add-an-atl-com-10-component-to-your-project"></a>Aby dodać do projektu składnika ATL COM + 1.0  
+### <a name="to-add-an-atl-com-10-component-to-your-project"></a>Dodawanie składnika ATL COM + 1.0 do projektu  
   
-1.  W jednym **Eksploratora rozwiązań** lub [widoku klasy](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), kliknij prawym przyciskiem myszy nazwę projektu, do której chcesz dodać składnika ATL COM + 1.0.  
+1.  W obu **Eksploratora rozwiązań** lub [Widok klas](/visualstudio/ide/viewing-the-structure-of-code), kliknij prawym przyciskiem myszy nazwę projektu, do którego chcesz dodać składnika ATL COM + 1.0.  
   
 2.  W menu skrótów kliknij **Dodaj**, a następnie kliknij przycisk **Dodaj klasę**.  
   
-3.  W [Dodaj klasę](../../ide/add-class-dialog-box.md) kliknij okno dialogowe, w okienku szablonów **składnika ATL COM + 1.0**, a następnie kliknij przycisk **Otwórz** do wyświetlenia [składnik kreatora ATL COM + 1.0 ](../../atl/reference/atl-com-plus-1-0-component-wizard.md).  
+3.  W [Dodaj klasę](../../ide/add-class-dialog-box.md) kliknij w okienku szablonów, w oknie dialogowym **składnika ATL COM + 1.0**, a następnie kliknij przycisk **Otwórz** do wyświetlenia [modelu COM + 1.0 Kreator składników ATL ](../../atl/reference/atl-com-plus-1-0-component-wizard.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dodawanie klasy](../../ide/adding-a-class-visual-cpp.md)   

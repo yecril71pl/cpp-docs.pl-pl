@@ -1,5 +1,5 @@
 ---
-title: noexcept (C++) | Dokumentacja firmy Microsoft
+title: Operator noexcept (C++) | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 01/12/2018
 ms.technology:
@@ -14,33 +14,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0cc12c5b82e1cb8cda8243020f91614fe840502
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8eb8e6900dc12e4f176daf63bb711198f5e41429
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420891"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939292"
 ---
 # <a name="noexcept-c"></a>noexcept (C++)
-**C ++ 11:** Określa, czy funkcja może zgłaszać wyjątków.  
+**C ++ 11:** Określa, czy funkcja może zgłaszać wyjątki.  
   
 ## <a name="syntax"></a>Składnia  
   
 > *wyrażenie noexcept*:  
-> &nbsp;&nbsp;&nbsp;&nbsp;**noexcept**  
-> &nbsp;&nbsp;&nbsp;&nbsp;**noexcept (** *wyrażenia* **)**  
+> &nbsp;&nbsp;&nbsp;&nbsp;**Operator noexcept**  
+> &nbsp;&nbsp;&nbsp;&nbsp;**Operator noexcept (** *wyrażenie_stałe* **)**  
   
 ### <a name="parameters"></a>Parametry  
  *constant-expression*  
- Wyrażenie stałe typu `bool` reprezentujący czy zestaw potencjalnych typów wyjątków jest pusta. Bezwarunkowe wersji jest odpowiednikiem `noexcept(true)`.  
+ Wyrażenie stałe typu **bool** reprezentujący, czy zestaw typów wyjątków potencjalnych jest pusty. Bezwarunkowe wersja jest odpowiednikiem `noexcept(true)`.  
   
 ## <a name="remarks"></a>Uwagi  
- A *wyrażenie noexcept* jest rodzajem elementu *specyfikacji wyjątku*, sufiks do deklaracji funkcji, która reprezentuje zestaw typów zgodnych przez obsługę wyjątków dla wszelkich wyjątek, który zamyka Funkcja. Jednoargumentowy operator warunkowy `noexcept(` *constant_expression* `)` gdzie *constant_expression* yeilds `true`, a jej bezwarunkowe synonim `noexcept`, Określ, czy zestaw potencjalnych typów wyjątków, które można zakończyć działanie funkcji jest pusta. Oznacza to, że funkcja nigdy nie zgłasza wyjątek i nigdy nie umożliwia wyjątek propagację poza jej zakres. Operator `noexcept(` *constant_expression* `)` gdzie *constant_expression* yeilds `false`, lub Brak specyfikacji wyjątku (innych niż dla Funkcja destruktora lub dezalokacji), wskazuje, że zestaw potencjalnych wyjątki, które można zakończyć działanie funkcji jest zestaw wszystkich typów.  
+ A *wyrażenie noexcept* jest rodzajem z *Specyfikacja wyjątku*, sufiks do deklaracji funkcji, które reprezentuje zestaw typów, które mogą towarzyszyć każdy wyjątek, który kończy działanie aparatu obsługi wyjątków Funkcja. Jednoargumentowy operator warunkowy `noexcept(` *constant_expression* `)` gdzie *constant_expression* yeilds **true**, a jej bezwarunkowe synonim `noexcept`, określić, że zestaw potencjalnych typy wyjątków, które można zakończyć działanie funkcji jest pusta. Oznacza to funkcja nigdy nie zgłasza wyjątek i nigdy nie zezwala na wyjątek dotyczący propagowane poza zakres. Operator `noexcept(` *constant_expression* `)` gdzie *constant_expression* yeilds **false**, lub brak Specyfikacja wyjątku (inne niż dla funkcji destruktora lub dezalokacji), oznacza to, że zestaw potencjalne wyjątki, które można zakończyć działanie funkcji jest zbiór wszystkich typów.  
  
- Oznacz jako funkcję `noexcept` tylko wtedy, gdy wszystkie funkcje, które wywołuje, bezpośrednio lub pośrednio, są również `noexcept` lub `const`. Kompilator nie sprawdza co ścieżka kodu dla wyjątków, które mogą bąbelkowy do `noexcept` funkcji. Jeśli wyjątek zakończyć zewnętrznym zakresie funkcji oznaczone `noexcept`, [std::terminate](../standard-library/exception-functions.md#terminate) jest wywoływana natychmiast, i nie ma żadnej gwarancji, zostanie wywołany destruktory wszystkie obiekty w zasięgu. Użyj `noexcept` zamiast specyfikator wyjątków dynamicznych `throw()`, która jest teraz przestarzałe w standardzie. Firma Microsoft zaleca, należy zastosować `noexcept` dowolnej funkcji, które nigdy nie umożliwia wyjątek propagowany aż stosu wywołań. Gdy funkcja jest zadeklarowany jako `noexcept`, umożliwia kompilatorowi generowanie kodu efektywniejsze w kilku różnych kontekstach. Aby uzyskać więcej informacji, zobacz [specyfikacje wyjątków](exception-specifications-throw-cpp.md).   
+ Oznacz funkcję jako `noexcept` tylko wtedy, gdy wszystkie funkcje, które wywołuje, bezpośrednio lub pośrednio, są również `noexcept` lub **const**. Kompilator nie sprawdza co ścieżka kodu do obsługi wyjątków, które być może będą się pojawiać do `noexcept` funkcji. Jeśli wyjątek wyjść zewnętrznym zakresie funkcji oznaczonej `noexcept`, [std::terminate](../standard-library/exception-functions.md#terminate) jest wywoływana bezpośrednio, a nie ma żadnej gwarancji, że zostaną wywołane destruktory wszystkich obiektów w zakresie. Użyj `noexcept` zamiast specyfikatora wyjątków dynamicznych `throw()`, który jest już przestarzały w standardzie. Zaleca się, należy zastosować `noexcept` dowolnej funkcji, które nigdy nie zezwala na wyjątek do propagowania na górę stosu wywołań. Gdy funkcja jest zadeklarowana `noexcept`, umożliwia kompilatorowi generowanie kodu bardziej wydajne w kilku różnych kontekstach. Aby uzyskać więcej informacji, zobacz [specyfikacje wyjątków](exception-specifications-throw-cpp.md).   
   
 ## <a name="example"></a>Przykład  
-Funkcja szablonu, który kopiuje jej argument może być zadeklarowana `noexcept` pod warunkiem, że obiekt kopiowane jest zwykły stary typ danych (POD). Tych funkcji można zadeklarować następująco:  
+Funkcja szablonu, który kopiuje jej argument może być zadeklarowana `noexcept` pod warunkiem, że obiekt, w której są kopiowane jest zwykłe stare dane typu (POD). Taka funkcja może być zadeklarowane następująco:  
   
 ```cpp  
 #include <type_traits>  

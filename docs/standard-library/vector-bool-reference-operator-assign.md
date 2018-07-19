@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6413737b6b442313b77f0f2b2115631a260cc40b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 037c6cfb9360f85c1ffdf92dcce11a86a0c458d7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855347"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965618"
 ---
 # <a name="vectorltboolgtreferenceoperator"></a>Wektor&lt;bool&gt;:: reference::operator =
 
@@ -41,9 +41,11 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>Parametry
 
-`Right` Odwołanie do elementu, którego wartość ma być przypisana do bitu.
+*Po prawej stronie*  
+ Odwołanie elementu, którego wartość ma być przypisana do bitu.
 
-`Val` Wartość logiczna ma być przypisany do bitu.
+*Val*  
+ Wartość logiczna, który ma być przypisana do bitu.
 
 ## <a name="example"></a>Przykład
 
@@ -123,9 +125,9 @@ The original value of the 3rd element still stored in a bool: false
 
 **Nagłówek:** \<wektor >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 
-[Wektor\<bool >:: klasę referencyjną](../standard-library/vector-bool-reference-class.md)<br/>
+[Wektor\<bool >:: reference — klasa](../standard-library/vector-bool-reference-class.md)<br/>
 [Dokumentacja standardowej biblioteki C++](../standard-library/cpp-standard-library-reference.md)<br/>

@@ -12,23 +12,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdd5742bb86992ce20f5a52f587c8557d46a97eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7ce233b4ffa33873b752ebc409fb8570856acbff
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412299"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940202"
 ---
 # <a name="algorithms-modern-c"></a>Algorytmy (Modern C++)
-Dla nowoczesnych programowania w języku C++, zalecane jest użycie algorytmów w [standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md). Oto kilka przykładów ważne:  
+Nowoczesnym programowaniu C++, zaleca się używanie algorytmów w [standardowej biblioteki języka C++](../standard-library/cpp-standard-library-reference.md). Poniżej przedstawiono kilka przykładów ważnych:  
   
--   `for_each`, który jest domyślnym algorytmem przechodzenie. (Również `transform` dla semantyki nie w miejscu.)  
+-   **for_each**, który jest domyślnym algorytmem przechodzenia. (Również **Przekształcanie** dla semantyki not-in-place.)  
   
--   `find_if`, która jest domyślny algorytm wyszukiwania.  
+-   **find_if**, który jest domyślnym algorytmem wyszukiwania.  
   
--   `sort`, `lower_bound`, wartością domyślną, sortowanie i wyszukiwanie algorytmów.  
+-   **Sortuj**, **lower_bound**i inne domyślne algorytmy wyszukiwania i sortowania.  
   
- Aby napisać komparatora, użyj strict `<` i użyj *o nazwie wyrażeń lambda* po można.  
+ Aby zapisać komparator, należy użyć ściśle **<** i użyj *o nazwie lambdas* kiedy to możliwe.  
   
 ```cpp  
 auto comp = [](const widget& w1, const widget& w2)  
@@ -40,7 +40,7 @@ auto i = lower_bound( v.begin(), v.end(), comp );
 ```  
   
 ## <a name="loops"></a>Pętle  
- Jeśli to możliwe, użyj opartej na zakresie `for` pętle wywołania algorytmu, i/lub zamiast odręcznego pętli.`copy`, `transform`, `count_if`, `remove_if`, i inne jak ich są znacznie lepszą niż odręcznie pętle ponieważ ich celem jest jasne, a umożliwiają łatwiejsze do pisania kodu bez błędów. Wiele algorytmów standardowa biblioteka C++ mieć optymalizacje implementacji, które były bardziej wydajne.  
+ Jeśli to możliwe, należy użyć opartej na zakresie **dla** pętli lub wywołań algorytmu lub obu, zamiast pętli napisanych ręcznie. **Kopiuj**, **Przekształcanie**, **count_if —**, **remove_if —**, i inne podobne do tych są znacznie lepsze niż pętle odręczne, ponieważ ich zamiar jest oczywisty i ułatwiają pisanie kodu wolny od błędów. Ponadto wiele algorytmów standardowej biblioteki języka C++ ma zoptymalizowane wdrażanie, które czyni je bardziej efektywnymi.  
   
  Zamiast starego C++ następująco:  
   
@@ -56,7 +56,7 @@ for ( ; i != v.end(); ++i ) {
 }  
 ```  
   
- Użyj nowoczesnych wersji języka C++ następująco:  
+ Użyj nowoczesnego C++ następująco:  
   
 ```cpp  
 for_each( begin(strings), end(strings), [](string& s) {  
@@ -66,19 +66,19 @@ for_each( begin(strings), end(strings), [](string& s) {
 auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );  
 ```  
   
-### <a name="range-based-for-loops"></a>Na podstawie zakresu dla pętli  
- Zakres oparty `for` pętla jest funkcją języka C ++ 11, języka, nie jest algorytm standardowa biblioteka C++. Ale wymaga ona uwagi w tej dyskusji o pętle. Oparta na zakresie `for` pętle są rozszerzeniem `for` — słowo kluczowe i zapewniają wygodne i skuteczny sposób zapisu pętli, które iteracja zakresu wartości. Standardowa biblioteka C++ kontenerów, ciągi i tablice są gotowe do opartej na zakresie `for` pętli. Aby włączyć tej nowej składni iteracji dla danego typu zdefiniowane przez użytkownika, należy dodać następujące możliwości:  
+### <a name="range-based-for-loops"></a>Zakresu pętli for opierających  
+ Bazująca na zakresie **dla** pętla jest funkcją języka C ++ 11, języka, nie algorytmów standardowej biblioteki języka C++. Ale to zasługuje na wzmiankę w tej dyskusji na temat pętli. Oparta na zakresie **dla** pętli stanowią rozszerzenie **dla** — słowo kluczowe i zapewniają wygodny i wydajny sposób pisania pętli, które przechodzą przez zakres wartości. Kontenery standardowej biblioteki C++, ciągi i tablice są gotowe do użycia dla opartej na zakresie **dla** pętli. Aby włączyć nową składnię iteracji dla Twojego typu zdefiniowanego przez użytkownika, należy dodać następującą obsługę:  
   
--   A `begin` metodę zwracającą iterator na początku struktury i `end` metodę zwracającą iterator na końcu struktury.  
+-   A **rozpocząć** metodę, która zwraca iterację do początku struktury i **zakończenia** metodę, która zwraca iterację na koniec struktury.  
   
--   Obsługa w iterator dotyczącej tych metod: `operator*`, `operator!=`, i `operator++` (prefiks wersji).  
+-   Wsparcie dla iteratorów dla tych metod: ** — operator *** **operator! =**, i **operator ++** (wersja prefiks).  
   
- Te metody można elementów członkowskich lub autonomicznych funkcji.  
+ Te metody mogą być członkami lub funkcjami autonomicznymi.  
   
 ## <a name="random-numbers"></a>Liczby losowe  
- Nie jest brak tajne który starego CRT `rand()` funkcja ma wiele błędów, które długości omówione w społeczności C++. W nowoczesnych wersji języka C++, nie trzeba uwzględniać tych nieprawidłowości — ani mieć magazynowa własne jednolicie rozproszonej generatora liczb losowych — narzędzia do szybkiego i łatwego tworzenia ich nie są dostępne w standardowej bibliotece C++, jak pokazano w [ \<losowe >](../standard-library/random.md).  
+ Nie jest tajemnicą, stare CRT **rand()** funkcja ma wiele wad, które zostały omówione szeroko w społeczności C++. W nowoczesnym C++, nie masz do czynienia z tymi niedociągnięciami — ani nie musisz wymyślić własnego równomiernie rozłożonego generatora liczb losowych, ponieważ narzędzia służące do szybkiego i łatwego tworzenia ich są dostępne w standardowej biblioteki C++, jak pokazano na [ \<losowy >](../standard-library/random.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zapraszamy ponownie do języka C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [Witamy z powrotem w C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)   
  [Standardowa biblioteka C++](../standard-library/cpp-standard-library-reference.md)

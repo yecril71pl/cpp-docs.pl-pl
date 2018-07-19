@@ -1,5 +1,5 @@
 ---
-title: __ptr32 i __ptr64 | Dokumentacja firmy Microsoft
+title: __ptr32, __ptr64 | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,34 +22,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5746c8f54a51e24bad23dcb66f6648266e2e4b56
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 39078cfef6b327aee60d98fce6cccc0b69c5953b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704818"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941707"
 ---
 # <a name="ptr32-ptr64"></a>__ptr32, __ptr64
 
 **Microsoft Specific**
 
-`__ptr32` reprezentuje wskaźnik natywny w systemie 32-bitowy, podczas gdy `__ptr64` reprezentuje wskaźnik natywny w 64-bitowym systemie.
+**__ptr32** reprezentuje wskaźnik natywny w systemie 32-bitowy, podczas gdy **__ptr64** reprezentuje wskaźnik natywny w systemie 64-bitowych.
 
-Poniższy przykład przedstawia sposób zadeklarować każdego z tych typów wskaźnika:
+Poniższy przykład pokazuje sposób deklarowania każdy z tych typów wskaźnika:
 
 ```cpp
 int * __ptr32 p32;
 int * __ptr64 p64;
 ```
 
- W systemie 32-bitowy, wskaźnik zadeklarowana z `__ptr64` został obcięty do wskaźnika 32-bitowych. W systemie 64-bitowym, wskaźnik zadeklarowana z `__ptr32` jest traktowany jak wskaźnik 64-bitowych.
+ W systemie 32-bitowe, wskaźnik jest zadeklarowany za pomocą **__ptr64** jest obcinana do wskaźnika 32-bitowego. W systemie 64-bitowy wskaźnik jest zadeklarowany za pomocą **__ptr32** jest traktowany jak wskaźnika 64-bitowego.
 
 > [!NOTE]
-> Nie można użyć `__ptr32` lub `__ptr64` podczas kompilowania za pomocą **/CLR: pure**. W przeciwnym razie zostanie wygenerowany C2472 błąd kompilatora. **/CLR: pure** i **/CLR: Safe** — opcje kompilatora są używane w programie Visual Studio 2015 i nieobsługiwane w programie Visual Studio 2017 r.
+> Nie można użyć **__ptr32** lub **__ptr64** podczas kompilowania za pomocą **/CLR: pure**. W przeciwnym razie zostanie wygenerowany błąd kompilatora C2472. **/CLR: pure** i **/CLR: Safe** opcje kompilatora są przestarzałe w programie Visual Studio 2015 i obsługiwane w programie Visual Studio 2017.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak można zadeklarować i przydzielić wskaźników za pomocą `__ptr32` i `__ptr64` słów kluczowych.
+Poniższy przykład pokazuje sposób deklarowania i przydzielania wskaźników za pomocą **__ptr32** i **__ptr64** słów kluczowych.
 
 ```cpp
 #include <cstdlib>
@@ -77,7 +77,7 @@ int main()
 64
 ```
 
-**KOŃCOWY określonych firmy Microsoft**
+**END specyficzny dla Microsoft**
 
 ## <a name="see-also"></a>Zobacz także
 

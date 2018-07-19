@@ -17,25 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90fab865a02b7ad00bd25b6d74f2d19b2678875c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2323af14472741901c4e4b7d8fe27e56e1d4d4f0
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37947959"
 ---
 # <a name="noreturn"></a>noreturn
 ## <a name="microsoft-specific"></a>Specyficzne dla firmy Microsoft  
- To `__declspec` atrybut informuje kompilator, że funkcja nie zwraca. W rezultacie, kompilator wie, że kod po wywołaniu **__declspec(noreturn)** funkcji jest nieosiągalny.  
+ To **__declspec** atrybut informuje kompilator, że funkcja nie zwraca. W rezultacie, kompilator wie, że kod następujący po wywołaniu **__declspec(noreturn)** funkcji jest nieosiągalny.  
   
- Jeśli kompilator znajdzie funkcji z ścieżka kontrolki, która nie zwraca wartości, generuje ostrzeżenie (C4715) lub komunikat o błędzie (C2202). Jeśli ścieżka kontroli nie można nawiązać połączenia z powodu funkcję, która nigdy nie powraca, możesz użyć **__declspec(noreturn)** Aby uniknąć tego ostrzeżenia lub błędu.  
+ Jeśli kompilator znajdzie funkcji ze ścieżką kontroli, która nie zwraca wartości, generuje ostrzeżenie (C4715) lub komunikat o błędzie (C2202). Jeśli ścieżka kontroli jest nieosiągalny z powodu funkcja, która nigdy nie powraca, możesz użyć **__declspec(noreturn)** Aby uniknąć tego ostrzeżenia lub błędu.  
   
 > [!NOTE]
->  Dodawanie **__declspec(noreturn)** funkcji, które powinien zwrócić może spowodować niezdefiniowane zachowanie.  
+>  Dodawanie **__declspec(noreturn)** do funkcji, która powinna zwrócić może spowodować niezdefiniowane zachowanie.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie **else** klauzuli nie zawiera instrukcji return.  Deklarowanie `fatal` jako **__declspec(noreturn)** pozwala uniknąć błąd lub ostrzeżenie.  
   
-```  
+```cpp 
 // noreturn2.cpp  
 __declspec(noreturn) extern void fatal () {}  
   

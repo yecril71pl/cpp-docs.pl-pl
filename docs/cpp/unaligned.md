@@ -16,22 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d73b082b9f41d03eb0b1a8c9fe772351ff4da91f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2a7a9de35e225dabadbf9f4a3731f6d57fd9e99a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420920"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940416"
 ---
 # <a name="unaligned"></a>__unaligned
 
-**Microsoft określonych**. Gdy zadeklarować wskaźnika z `__unaligned` modyfikator, kompilator przyjęto założenie, że wskaźnik adresów dane, które nie jest wyrównany. W związku z tym odpowiednie platformy kod jest generowane w celu obsługi niewyrównany odczytuje i zapisuje za pomocą wskaźnika.
+**Specyficzne dla firmy Microsoft**. Kiedy Deklarujesz wskaźnika za pomocą **__unaligned** modyfikator, kompilator zakłada, że wskaźnik adresów danych, który nie jest wyrównany. W związku z tym odpowiednich platform kod jest generowany w celu obsługi niewyrównanych odczytuje i zapisuje za pomocą wskaźnika.
 
 ## <a name="remarks"></a>Uwagi
 
-Modyfikator opisuje wyrównania danych dotyczy wskaźnika; przyjęto, że wskaźnik sam być wyrównane.
+Ten modyfikator opisuje wyrównanie danych adresowany przez wskaźnik; wskaźnik, sama zakłada się, że można wyrównać.
 
-Konieczność `__unaligned` — słowo kluczowe jest zależna od platformy i środowiska. Nie można oznaczyć odpowiednio danych może spowodować problemy z zakresu od spadku wydajności do błędów sprzętu. `__unaligned` Modyfikator nie jest prawidłowa dla x86 platformy.
+Konieczność **__unaligned** — słowo kluczowe jest zależna od platformy i środowiska. Nie można oznaczyć odpowiednio danych może spowodować problemy z zakresu od spadku wydajności na awarie sprzętu. **__Unaligned** modyfikator nie jest prawidłowa dla x86 platformy.
 
 Aby uzyskać więcej informacji na temat wyrównania zobacz:
 

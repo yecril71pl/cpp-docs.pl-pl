@@ -22,18 +22,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 116e66d36dde016ef902a0b345eec33e46177b6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 65375b764c0d8d8673a59fcfb47b4eecaf730cb5
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363587"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879959"
 ---
 # <a name="csacl-class"></a>Klasa CSacl
-Ta klasa jest otoki dla struktury SACL (systemowa lista kontroli dostępu).  
+Ta klasa jest otoką dla struktury SACL (systemowa lista kontroli dostępu).  
   
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -54,10 +54,10 @@ class CSacl : public CAcl
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CSacl::AddAuditAce](#addauditace)|Dodaje wpis inspekcji kontroli dostępu (ACE) do `CSacl` obiektu.|  
+|[CSacl::AddAuditAce](#addauditace)|Dodaje wpis kontroli dostępu (ACE) inspekcji `CSacl` obiektu.|  
 |[CSacl::GetAceCount](#getacecount)|Zwraca liczbę wpisów kontroli dostępu (ACE) w `CSacl` obiektu.|  
-|[CSacl::RemoveAce](#removeace)|Usuwa określone ACE (wpis kontroli dostępu) **CSacl** obiektu.|  
-|[CSacl::RemoveAllAces](#removeallaces)|Usuwa wszystkie wpisy kontroli dostępu zawarte w `CSacl` obiektu.|  
+|[CSacl::RemoveAce](#removeace)|Usuwa określone ACE (wpis kontroli dostępu) z `CSacl` obiektu.|  
+|[CSacl::RemoveAllAces](#removeallaces)|Usuwa wszystkie wpisy kontroli dostępu, zawarte w `CSacl` obiektu.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
@@ -66,13 +66,13 @@ class CSacl : public CAcl
 |[CSacl::operator =](#operator_eq)|Operator przypisania.|  
   
 ## <a name="remarks"></a>Uwagi  
- Lista SACL zawiera wpisy kontroli dostępu (ACE), określających typy prób dostępu, które generują rekordów inspekcji w dzienniku zdarzeń zabezpieczeń kontrolera domeny. Należy pamiętać, że Lista SACL generuje wpisy dziennika tylko na kontrolerze domeny, na których nastąpiła próba uzyskania dostępu, a nie na każdym kontrolerze domeny, zawierający repliki obiektu.  
+ DEFINIUJ zawiera wpisy kontroli dostępu (ACE), które określają typy prób dostępu, które generują rekordów inspekcji w dzienniku zdarzeń zabezpieczeń kontrolera domeny. Należy pamiętać, że SACL generuje wpisy dziennika tylko na kontrolerze domeny, w których wystąpiła próba uzyskania dostępu, a nie na każdym kontrolerze domeny, który zawiera repliki obiektu.  
   
- Aby ustawić lub pobrać SACL w deskryptora zabezpieczeń obiektu, uprawnień SE_SECURITY_NAME musi być włączony w wątku żądania tokenu dostępu. Grupa Administratorzy ma to uprawnienie przyznane przez domyślne i może zostać przydzielony do innych użytkowników lub grup. Posiadające uprawnienia przyznane nie jest wymagane jest: Aby można było wykonać operację, zdefiniowane przez uprawnienia, uprawnienie musi być włączony w token dostępu obowiązuje. Model pozwala uprawnienia do można włączyć tylko dla określonego systemu operacji, a następnie wyłączone, gdy nie są już potrzebne. Zobacz [AtlGetSacl](security-global-functions.md#atlgetsacl) i [AtlSetSacl](security-global-functions.md#atlsetsacl) przykłady włączenie SE_SECURITY_NAME.  
+ Aby ustawić lub pobrać SACL w deskryptora zabezpieczeń obiektu, uprawnień SE_SECURITY_NAME musi być włączona w tokenie dostępu żądania wątku. Grupa Administratorzy ma to uprawnienie przyznane domyślnie i mogą być udzielone innym użytkownikom lub grupom. Posiadanie uprawnień przyznanych nie jest wymagane jest: przed wykonaniem operacji zdefiniowanej przez uprawnienia, uprawnień musi być włączona w token dostępu, aby zaczęły obowiązywać. Model umożliwia uprawnienia, aby włączyć tylko w przypadku operacji systemu, a następnie wyłączone, gdy nie są już potrzebne. Zobacz [AtlGetSacl](security-global-functions.md#atlgetsacl) i [AtlSetSacl](security-global-functions.md#atlsetsacl) przykładów dotyczących włączania SE_SECURITY_NAME.  
   
- Użycie metod klasy do dodawania, usuwania, tworzenie i usuwanie ACE z **SACL** obiektu. Zobacz też [AtlGetSacl](security-global-functions.md#atlgetsacl) i [AtlSetSacl](security-global-functions.md#atlsetsacl).  
+ Należy użyć metod klasy dostarczonych do dodawania, usuwania, tworzyć i usuwać wpisy kontroli dostępu z `SACL` obiektu. Zobacz też [AtlGetSacl](security-global-functions.md#atlgetsacl) i [AtlSetSacl](security-global-functions.md#atlsetsacl).  
   
- Aby obejrzeć wprowadzenie do modelu kontroli dostępu w systemie Windows, temacie [kontroli dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374860) w zestawie Windows SDK.  
+ Wprowadzenie do modelu kontroli dostępu w Windows, zobacz [kontroli dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374860) w zestawie Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CAcl](../../atl/reference/cacl-class.md)  
@@ -83,7 +83,7 @@ class CSacl : public CAcl
  **Nagłówek:** atlsecurity.h  
   
 ##  <a name="addauditace"></a>  CSacl::AddAuditAce  
- Dodaje wpis inspekcji kontroli dostępu (ACE) do `CSacl` obiektu.  
+ Dodaje wpis kontroli dostępu (ACE) inspekcji `CSacl` obiektu.  
   
 ```
 bool AddAuditAce(
@@ -104,34 +104,34 @@ bool AddAuditAce(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rSid`  
+ *rSid*  
  [CSid](../../atl/reference/csid-class.md) obiektu.  
   
- `AccessMask`  
- Określa maski praw dostępu, które mają podlegać inspekcji dla określonego `CSid` obiektu.  
+ *AccessMask*  
+ Określa maskę uprawnień dostępu do inspekcji dla określonego `CSid` obiektu.  
   
- `bSuccess`  
- Określa, czy przeprowadzać inspekcję prób dozwolonych dostępu. Ustawienia tej flagi na wartość PRAWDA, aby włączyć inspekcję; w przeciwnym wypadku ustaw ją na wartość false.  
+ *bSuccess*  
+ Określa, czy prób dozwolonych dostępu są poddawane inspekcji. Należy ustawić tą flagę na wartość PRAWDA, aby włączyć inspekcję; w przeciwnym wypadku ustaw ją na wartość false.  
   
  *bFailure*  
- Określa, czy przeprowadzać inspekcję prób odmówiono dostępu. Ustawienia tej flagi na wartość PRAWDA, aby włączyć inspekcję; w przeciwnym wypadku ustaw ją na wartość false.  
+ Określa, czy prób odmowy dostępu są poddawane inspekcji. Należy ustawić tą flagę na wartość PRAWDA, aby włączyć inspekcję; w przeciwnym wypadku ustaw ją na wartość false.  
   
- `AceFlags`  
- Zestaw z bitowego flagi dziedziczenia ACE tego formantu.  
+ *AceFlags*  
+ Zestaw flag bitowych, określające ACE dziedziczenia.  
   
- `pObjectType`  
+ *pObjectType*  
  Typ obiektu.  
   
- `pInheritedObjectType`  
+ *pInheritedObjectType*  
  Typ obiektu dziedziczone.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca **true** Jeśli wpisu ACE jest dodawany do `CSacl` obiektu **false** w przypadku awarii.  
+ Zwraca wartość PRAWDA, jeśli ACE jest dodawany do `CSacl` obiektu FALSE w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- A `CSacl` obiekt zawiera wpisy kontroli dostępu (ACE), określających typy prób dostępu, które generują rekordów inspekcji w dzienniku zdarzeń zabezpieczeń. Ta metoda dodaje ACE, aby `CSacl` obiektu.  
+ A `CSacl` obiekt zawiera wpisy kontroli dostępu (ACE), które określają typy prób dostępu, które generują rekordów inspekcji w dzienniku zdarzeń zabezpieczeń. Metoda ta umożliwia dodanie AS, do `CSacl` obiektu.  
   
- Zobacz [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) opis różnych flagi, które można ustawić w `AceFlags` parametru.  
+ Zobacz [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) opis różnych flag, które można ustawić w *AceFlags* parametru.  
   
 ##  <a name="csacl"></a>  CSacl::CSacl  
  Konstruktor.  
@@ -142,11 +142,11 @@ CSacl(const ACL& rhs) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rhs`  
- Istniejące **ACL** struktury (lista kontroli dostępu).  
+ *RHS*  
+ Istniejące `ACL` struktury (lista kontroli dostępu).  
   
 ### <a name="remarks"></a>Uwagi  
- `CSacl` Obiektu można opcjonalnie utworzyć przy użyciu istniejącego **ACL** struktury. Upewnij się, że ten parametr jest systemowa lista kontroli dostępu (SACL), a nie listy DACL kontroli dostępu (DACL). W kompilacjach debugowania, jeśli podano listy DACL nastąpi potwierdzenia. W kompilacjach wydania wszystkie pozycje z listy DACL są ignorowane.  
+ `CSacl` Obiektu można opcjonalnie utworzyć przy użyciu istniejącego `ACL` struktury. Upewnij się, że ten parametr jest system listy kontroli dostępu (SACL) i nie list arbitralnej kontroli dostępu (DACL). W przypadku kompilacji do debugowania, jeśli nie dostarczono listy DACL potwierdzenie zostanie przeprowadzona. W kompilacjach wydania wszystkie wpisy z listy DACL są ignorowane.  
   
 ##  <a name="dtor"></a>  CSacl:: ~ CSacl  
  Destruktor.  
@@ -156,7 +156,7 @@ CSacl(const ACL& rhs) throw(...);
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Destruktor zwalnia wszystkie zasoby uzyskaną przez obiekt, w tym wszystkie wpisy kontroli dostępu (ACE).  
+ Destruktor zwalnia wszystkie zasoby, uzyskanych przez obiekt, w tym wszystkie wpisy kontroli dostępu (ACE).  
   
 ##  <a name="getacecount"></a>  CSacl::GetAceCount  
  Zwraca liczbę wpisów kontroli dostępu (ACE) w `CSacl` obiektu.  
@@ -166,7 +166,7 @@ UINT GetAceCount() const throw();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca liczbę ACE zawarte w `CSacl` obiektu.  
+ Zwraca liczbę wpisów ACE zawarte w `CSacl` obiektu.  
   
 ##  <a name="operator_eq"></a>  CSacl::operator =  
  Operator przypisania.  
@@ -176,25 +176,25 @@ CSacl& operator=(const ACL& rhs) throw(...);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `rhs`  
- **ACL** (lista kontroli dostępu) można przypisać do istniejącego obiektu.  
+ *RHS*  
+ `ACL` (Lista kontroli dostępu), aby przypisać do istniejącego obiektu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca odwołanie do zaktualizowanego `CSacl` obiektu. Upewnij się, że **ACL** parametr jest rzeczywiście systemu lista kontroli dostępu (SACL), a nie listy DACL kontroli dostępu (DACL). W kompilacjach debugowania nastąpi potwierdzenia, a w kompilacjach wydania **ACL** parametr zostanie zignorowany.  
+ Zwraca odwołanie do zaktualizowanego `CSacl` obiektu. Upewnij się, że `ACL` parametr jest w rzeczywistości systemu-listy kontroli dostępu (SACL) i nie list arbitralnej kontroli dostępu (DACL). W kompilacjach do debugowania nastąpi potwierdzenie, a w wydawanych wersjach `ACL` parametr zostanie zignorowany.  
   
 ##  <a name="removeace"></a>  CSacl::RemoveAce  
- Usuwa określone ACE (wpis kontroli dostępu) **CSacl** obiektu.  
+ Usuwa określone ACE (wpis kontroli dostępu) z `CSacl` obiektu.  
   
 ```
 void RemoveAce(UINT nIndex) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `nIndex`  
+ *nIndex*  
  Indeks wpisu ACE do usunięcia.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta metoda jest określana na podstawie [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat).  
+ Ta metoda jest tworzony na podstawie [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat).  
   
 ##  <a name="removeallaces"></a>  CSacl::RemoveAllAces  
  Usuwa wszystkie wpisy kontroli dostępu (ACE) zawartych w `CSacl` obiektu.  
@@ -204,11 +204,11 @@ void RemoveAllAces() throw();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Usuwa co **ACE** struktury (jeśli istnieją) w `CSacl` obiektu.  
+ Usuwa co `ACE` struktury (jeśli istnieją) w `CSacl` obiektu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CAcl](../../atl/reference/cacl-class.md)   
  [Listy kontroli dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
- [ACE](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
- [Przegląd klas](../../atl/atl-class-overview.md)   
+ [Wpisy kontroli dostępu](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)   
  [Funkcje globalne zabezpieczeń](../../atl/reference/security-global-functions.md)

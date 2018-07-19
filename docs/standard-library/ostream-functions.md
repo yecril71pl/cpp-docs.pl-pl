@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: e85ce2728aaaa8ae9b23067bfb1dcbb3ff2db7d0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d30ad23956c978ee47ef447463a0d5422a94d4b9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855549"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962325"
 ---
 # <a name="ltostreamgt-functions"></a>&lt;ostream&gt; funkcji
 
-Są to globalne szablonu funkcji zdefiniowanych w &lt;ostream&gt;. Dla funkcji Członkowskich [basic_ostream — klasa](basic-ostream-class.md) dokumentacji.
+Są to funkcje globalne szablonu, zdefiniowanych w &lt;ostream&gt;. Dla funkcji składowych [basic_ostream — klasa](basic-ostream-class.md) dokumentacji.
 
 ||||
 |-|-|-|
@@ -32,7 +32,7 @@ Są to globalne szablonu funkcji zdefiniowanych w &lt;ostream&gt;. Dla funkcji C
 
 ## <a name="endl"></a>endl
 
-Przerywa wiersza i opróżnia bufor.
+Kończy działanie wiersza i opróżnia bufor.
 
 ```cpp
 template class<Elem, Tr>
@@ -42,19 +42,19 @@ basic_ostream<Elem, Tr>& endl(
 
 ### <a name="parameters"></a>Parametry
 
-*Element* typ elementu.
+*Elem* typ elementu.
 
-*OSTR* typu obiektu **basic_ostream —**.
+*OSTR* obiektu typu **basic_ostream**.
 
-*TR* cech znaków.
+*TR* znak cech.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Obiekt typu **basic_ostream —**.
+Obiekt typu **basic_ostream**.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania manipulatora *Ostr*.[ Umieść](../standard-library/basic-ostream-class.md#put)(*Ostr*.[ widen](../standard-library/basic-ios-class.md#widen)(\n)), a następnie wywołuje *Ostr*.[ Flush](../standard-library/basic-ostream-class.md#flush). Zwraca *Ostr*.
+Wywołania manipulator *Ostr*.[ Umieść](../standard-library/basic-ostream-class.md#put)(*Ostr*.[ mogą zostać poszerzone](../standard-library/basic-ios-class.md#widen)('\n')), a następnie wywołuje *Ostr*.[ Flush](../standard-library/basic-ostream-class.md#flush). Zwraca *Ostr*.
 
 ### <a name="example"></a>Przykład
 
@@ -76,7 +76,7 @@ testing
 
 ## <a name="ends"></a>graniczne
 
-Kończy się ciągiem.
+Kończy ciąg.
 
 ```cpp
 template class<Elem, Tr>
@@ -86,19 +86,19 @@ basic_ostream<Elem, Tr>& ends(
 
 ### <a name="parameters"></a>Parametry
 
-*Element* typ elementu.
+*Elem* typ elementu.
 
-*OSTR* typu obiektu **basic_ostream —**.
+*OSTR* obiektu typu `basic_ostream`.
 
-*TR* cech znaków.
+*TR* znak cech.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Obiekt typu **basic_ostream —**.
+Obiekt typu `basic_ostream`.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania manipulatora *Ostr*.[ Umieść](../standard-library/basic-ostream-class.md#put)(*elementu*('\0')). Zwraca *Ostr*.
+Wywołania manipulator *Ostr*.[ Umieść](../standard-library/basic-ostream-class.md#put)(*Elem*('\0')). Zwraca *Ostr*.
 
 ### <a name="example"></a>Przykład
 
@@ -132,19 +132,19 @@ basic_ostream<Elem, Tr>& flush(
 
 ### <a name="parameters"></a>Parametry
 
-*Element* typ elementu.
+*Elem* typ elementu.
 
-*OSTR* typu obiektu **basic_ostream —**.
+*OSTR* obiektu typu `basic_ostream`.
 
-*TR* cech znaków.
+*TR* znak cech.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Obiekt typu **basic_ostream —**.
+Obiekt typu `basic_ostream`.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania manipulatora *Ostr*.[ Flush](../standard-library/basic-ostream-class.md#flush). Zwraca *Ostr*.
+Wywołania manipulator *Ostr*.[ Flush](../standard-library/basic-ostream-class.md#flush). Zwraca *Ostr*.
 
 ### <a name="example"></a>Przykład
 
@@ -166,7 +166,7 @@ testing
 
 ## <a name="swap"></a>swap
 
-Zamienia wartości dwu **basic_ostream —** obiektów.
+Wymienia dwie wartości `basic_ostream` obiektów.
 
 ```cpp
 template <class Elem, class Tr>
@@ -177,17 +177,17 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*Element* typ elementu.
+*Elem* typ elementu.
 
-*TR* cech znaków.
+*TR* znak cech.
 
-*po lewej stronie* odwołania do wartości do **basic_ostream —** obiektu.
+*po lewej stronie* odwołania wartościowanego lewostronnie do `basic_ostream` obiektu.
 
-*prawy* odwołania do wartości do **basic_ostream —** obiektu.
+*prawy* odwołania wartościowanego lewostronnie do `basic_ostream` obiektu.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja szablonu **wymiany** wykonuje `left.swap(right)`.
+Funkcja szablonu `swap` wykonuje `left.swap(right)`.
 
 ## <a name="see-also"></a>Zobacz także
 

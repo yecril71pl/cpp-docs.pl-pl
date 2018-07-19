@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d2fa3ef6113add6bcf72f85f74b8722033cb8d5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6b716248c6fe9d0734cd580800c9254cf01f2a17
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846613"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962877"
 ---
 # <a name="ltfstreamgt"></a>&lt;fstream&gt;
 
-Definiuje kilka klas, które obsługują operacje iostream sekwencji przechowywane w zewnętrznych plikach.
+Definiuje kilka klas, które obsługują operacje iostreams w sekwencji przechowywanych w zewnętrznych plikach.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,23 +38,23 @@ Definiuje kilka klas, które obsługują operacje iostream sekwencji przechowywa
 
 |Nazwa typu|Opis|
 |-|-|
-|[filebuf](../standard-library/fstream-typedefs.md#filebuf)|Typ `basic_filebuf` specjalne na `char` parametrów szablonu.|
-|[fstream](../standard-library/fstream-typedefs.md#fstream)|Typ `basic_fstream` specjalne na `char` parametrów szablonu.|
-|[ifstream](../standard-library/fstream-typedefs.md#ifstream)|Typ `basic_ifstream` specjalne na `char` parametrów szablonu.|
-|[ofstream](../standard-library/fstream-typedefs.md#ofstream)|Typ `basic_ofstream` specjalne na `char` parametrów szablonu.|
-|[wfstream](../standard-library/fstream-typedefs.md#wfstream)|Typ `basic_fstream` specjalne na `wchar_t` parametrów szablonu.|
-|[wifstream](../standard-library/fstream-typedefs.md#wifstream)|Typ `basic_ifstream` specjalne na `wchar_t` parametrów szablonu.|
-|[wofstream](../standard-library/fstream-typedefs.md#wofstream)|Typ `basic_ofstream` specjalne na `wchar_t` parametrów szablonu.|
-|[wfilebuf](../standard-library/fstream-typedefs.md#wfilebuf)|Typ `basic_filebuf` specjalne na `wchar_t` parametrów szablonu.|
+|[filebuf](../standard-library/fstream-typedefs.md#filebuf)|Typ `basic_filebuf` wyspecjalizowane na **char** parametry szablonu.|
+|[fstream](../standard-library/fstream-typedefs.md#fstream)|Typ `basic_fstream` wyspecjalizowane na **char** parametry szablonu.|
+|[ifstream](../standard-library/fstream-typedefs.md#ifstream)|Typ `basic_ifstream` wyspecjalizowane na **char** parametry szablonu.|
+|[ofstream](../standard-library/fstream-typedefs.md#ofstream)|Typ `basic_ofstream` wyspecjalizowane na **char** parametry szablonu.|
+|[wfstream](../standard-library/fstream-typedefs.md#wfstream)|Typ `basic_fstream` wyspecjalizowane na **wchar_t** parametry szablonu.|
+|[wifstream](../standard-library/fstream-typedefs.md#wifstream)|Typ `basic_ifstream` wyspecjalizowane na **wchar_t** parametry szablonu.|
+|[wofstream](../standard-library/fstream-typedefs.md#wofstream)|Typ `basic_ofstream` wyspecjalizowane na **wchar_t** parametry szablonu.|
+|[wfilebuf](../standard-library/fstream-typedefs.md#wfilebuf)|Typ `basic_filebuf` wyspecjalizowane na **wchar_t** parametry szablonu.|
 
 ### <a name="classes"></a>Klasy
 
 |Class|Opis|
 |-|-|
-|[basic_filebuf](../standard-library/basic-filebuf-class.md)|Klasa szablonu opisuje buforu strumienia, który kontroluje przekazywania elementów typu **elementu**, którego cech znaków są określane przez klasę **Tr**, do i z sekwencję elementy przechowywane w Plik zewnętrzny.|
-|[basic_fstream](../standard-library/basic-fstream-class.md)|Klasa szablonu opisuje obiekt, który kontroluje wstawiania i wyodrębniania elementów i obiektów zakodowany przy użyciu buforu strumienia klasy [basic_filebuf —](../standard-library/basic-filebuf-class.md)\<**elementu**,  **TR**>, elementami typu **elementu**, którego cech znaków są określane przez klasę **Tr**.|
-|[basic_ifstream](../standard-library/basic-ifstream-class.md)|Klasy szablonów opisuje obiekt, który kontroluje wyodrębniania elementów i zakodowanego obiektów z buforu strumienia klasy [basic_filebuf —](../standard-library/basic-filebuf-class.md)\<**elementu**, **Tr**>, elementami typu **elementu**, którego cech znaków są określane przez klasę **Tr**.|
-|[basic_ofstream](../standard-library/basic-ofstream-class.md)|Klasa szablonu opisuje obiekt, który kontroluje wstawiania elementów i obiektów zakodowanych do buforu strumienia klasy [basic_filebuf —](../standard-library/basic-filebuf-class.md)\<**elementu**, **Tr**>, elementami typu **elementu**, którego cech znaków są określane przez klasę **Tr**.|
+|[basic_filebuf](../standard-library/basic-filebuf-class.md)|Klasa szablonu opisuje buforu strumieni, który kontroluje transmisji elementów typu `Elem`, którego cech są określane przez klasę `Tr`, do i z sekwencji elementów przechowywanych w pliku zewnętrznym.|
+|[basic_fstream](../standard-library/basic-fstream-class.md)|Klasa szablonu opisuje obiekt, który kontroluje wstawienia i wydobycia elementów i obiektów zakodowanych przy użyciu bufor strumienia klasy [basic_filebuf —](../standard-library/basic-filebuf-class.md)\<**Elem**,  **TR**>, z elementami typu `Elem`, którego cech są określane przez klasę `Tr`.|
+|[basic_ifstream](../standard-library/basic-ifstream-class.md)|Klasa szablonu opisuje obiekt, który kontroluje wyodrębniania elementów i zakodowany obiektów z bufor strumienia klasy [basic_filebuf —](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, z elementami typu `Elem`, którego cech są określane przez klasę `Tr`.|
+|[basic_ofstream](../standard-library/basic-ofstream-class.md)|Klasa szablonu opisuje obiekt, który kontroluje wstawiania elementów i zakodowany obiekty do bufora strumienia, klasy [basic_filebuf —](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**>, z elementami typu `Elem`, którego cech są określane przez klasę `Tr`.|
 
 ## <a name="see-also"></a>Zobacz także
 
