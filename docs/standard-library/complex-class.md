@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0d3de4c7538c36ac1a55ea2519fa26a878663a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c7e43d5f528e85ea3233b9ea4a68e83ee0cfb7f3
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848248"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026410"
 ---
 # <a name="complex-class"></a>complex — Klasa
 
-Klasa szablonu opisuje obiekt, który przechowuje dwa obiekty typu **typu**, jedna reprezentuje rzeczywistą część liczbą i taki, który reprezentuje część urojony.
+Klasa szablonu opisuje obiekt, który przechowuje dwa obiekty typu `Type`, jedna reprezentuje rzeczywistą część liczby zespolonej i jedną, która reprezentuje urojone części.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,56 +42,56 @@ class complex
 
 ## <a name="remarks"></a>Uwagi
 
-Obiekt klasy **typu**:
+Obiekt klasy `Type`:
 
-- Ma publicznego konstruktora domyślnego, destruktor, konstruktora kopiującego i operatora przypisania z konwencjonalnej zachowanie.
+- Ma publicznego konstruktora domyślnego, destruktor, Konstruktor kopiujący i operator przypisania z konwencjonalnych zachowanie.
 
-- Można przypisać liczbą całkowitą lub wartości zmiennoprzecinkowych, lub wpisz Rzutowanie na takie wartości z konwencjonalnej zachowanie.
+- Liczba całkowita lub zmiennoprzecinkową wartości można przypisać lub wpisz Rzutowanie na takie wartości, z zachowaniem konwencjonalnych.
 
-- Definiuje operatory arytmetyczne i funkcje matematyczne, zgodnie z potrzebami, które są zdefiniowane dla typów zmiennoprzecinkowych z konwencjonalnej zachowanie.
+- Definiuje operatory arytmetyczne i funkcje matematyczne, zgodnie z potrzebami, które są zdefiniowane dla typów zmiennoprzecinkowych za pomocą konwencjonalnych zachowanie.
 
-W szczególności nie niewielkie różnice mogą istnieć między konstruowania kopiowania i konstrukcji domyślne następuje przypisania. Żadna z operacji w obiektach klasy **typu** może zgłaszać wyjątków.
+W szczególności nie subtelne może różnice między konstrukcja kopiowania i konstruowania domyślne następuje przypisanie. Brak operacji na obiekty klasy `Type` może zgłaszać wyjątki.
 
-Jawne specjalizacje szablonu klasy złożone istnieje dla trzech typów zmiennoprzecinkowych. W tej implementacji wartość innego typu **typu** jest rzutowanie typu do **podwójne** rzeczywiste obliczenia z **podwójne** wynik przypisany do obiektu przechowywane Typ **typu**`.`
+Jawne specjalizacje szablonu klasy złożone dla istnieją trzy typy zmiennoprzecinkowe. W tej implementacji wartość innego typu `Type` jest rzutowanie typu do **double** rzeczywiste obliczenia z **double** wynik przypisana z powrotem do przechowywany obiekt typu `Type``.`
 
 ### <a name="constructors"></a>Konstruktorów
 
 |Konstruktor|Opis|
 |-|-|
-|[complex](#complex)|Tworzy liczbą z określonej części rzeczywistych i urojony lub kopię inny numer złożone.|
+|[complex](#complex)|Tworzy liczby zespolonej z określonym rzeczywiste i urojone części lub jako kopię inne liczby zespolonej.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Nazwa typu|Opis|
 |-|-|
-|[value_type](#value_type)|Typ, który reprezentuje typ danych używany do reprezentowania rzeczywistą i urojony części liczbą.|
+|[value_type](#value_type)|Typ, który reprezentuje typ danych używany do reprezentowania rzeczywiste i urojone części liczb zespolonych.|
 
 ### <a name="member-functions"></a>Funkcje Członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[imag](#imag)|Wyodrębnia urojony składnik liczbą.|
-|[rzeczywiste](#real)|Wyodrębnia rzeczywistych składnik liczbą.|
+|[imag](#imag)|Wyodrębnia urojone części liczby zespolonej.|
+|[rzeczywiste](#real)|Wyodrębnia rzeczywisty składnik liczby zespolonej.|
 
 ### <a name="operators"></a>Operatory
 
 |Operator|Opis|
 |-|-|
-|[operator*=](#op_star_eq)|Mnoży liczbą docelowego przez współczynnik, który może być skomplikowane lub być tego samego typu są prawdziwe i urojony część liczby złożonej.|
-|[operator+=](#op_add_eq)|Dodaje numer liczbą docelowej, w przypadku, gdy liczba dodana może być złożony lub tego samego typu co są części rzeczywistych i urojony liczby złożonej, do którego jest dodawany.|
-|[operator-=](#operator-_eq)|Odejmuje liczbę z zakresu od liczby złożonej docelowej, w przypadku, gdy liczba odejmować może być złożony lub tego samego typu co są części rzeczywistych i urojony liczby złożonej, do którego jest dodawany.|
-|[/ = — operator](#op_div_eq)|Dzieli liczbą docelowego przez dzielnik, która może być skomplikowane lub być tego samego typu są prawdziwe i urojony część liczby złożonej.|
-|[operator=](#op_eq)|Przypisuje liczbę docelowych liczbą, gdzie numer przypisany może być skomplikowane lub tego samego typu co są prawdziwe i urojony część liczby złożonej, do której jest ona obecnie przypisywana.|
+|[operator*=](#op_star_eq)|Mnoży docelowej liczby zespolonej przez współczynnik, który może być złożonym procesem, lub być tego samego typu są rzeczywiste i urojone części liczb zespolonych.|
+|[operator+=](#op_add_eq)|Dodaje numer docelowej liczby zespolonej, w przypadku, gdy liczba dodawane mogą być skomplikowane, lub tego samego typu co są rzeczywiste i urojone części liczb zespolonych, do którego zostanie dodany.|
+|[operator-=](#operator-_eq)|Odejmuje liczbę od liczby zespolonej docelowego, w przypadku, gdy liczba odejmowana mogą być skomplikowane, lub tego samego typu co są rzeczywiste i urojone części liczb zespolonych, do którego zostanie dodany.|
+|[operator / =](#op_div_eq)|Dzieli docelowej liczby zespolonej przez dzielnik, która może być złożonym procesem lub być tego samego typu są rzeczywiste i urojone części liczb zespolonych.|
+|[operator=](#op_eq)|Przypisuje numer docelowej liczby zespolonej, gdzie mogą być skomplikowane numer przypisany lub tego samego typu co są rzeczywiste i urojone części liczb zespolonych, które są przypisane.|
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek**: \<złożonych >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="complex"></a>  COMPLEX::Complex
 
-Tworzy liczbą z określonej części rzeczywistych i urojony lub kopię inny numer złożone.
+Tworzy liczby zespolonej z określonym rzeczywiste i urojone części lub jako kopię inne liczby zespolonej.
 
 ```cpp
 constexpr complex(
@@ -108,31 +108,31 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parametry
 
-`_RealVal` Wartość część rzeczywista używaną do inicjalizacji liczby złożonej tworzona.
+*_RealVal* wartość rzeczywistego części, używane do zainicjowania liczby zespolonej budowany.
 
-`_ImagVal` Wartość części urojony używaną do inicjalizacji liczby złożonej tworzona.
+*_ImagVal* wartość urojone części, używane do zainicjowania liczby zespolonej budowany.
 
-`complexNum` Liczby złożonej, w których części rzeczywistą i urojony są używane do zainicjowania liczby złożonej tworzona.
+*complexNum* liczby zespolonej, w których rzeczywiste i urojone części są stosowane do inicjalizacji liczby zespolonej budowany.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor inicjuje zapisana rzeczywistym należą do _ *RealVal* i przechowywane części urojony do \_ *Imagval*. Drugi Konstruktor inicjuje zapisana rzeczywistym należą do `complexNum` **.real**() i przechowywane części urojony do `complexNum` **.imag**().
+Pierwszy Konstruktor inicjuje przechowywany rzeczywiste należą do _ *RealVal* i przechowywanych urojone części do \_ *Imagval*. Drugi Konstruktor inicjuje przechowywany rzeczywiste należą do `complexNum` **.real**() i przechowywane urojone części do `complexNum` **.imag**().
 
-W tej implementacji, jeśli translatora nie obsługuje funkcji szablonu elementu członkowskiego, szablon:
+W tej implementacji, jeśli translator nie obsługuje funkcji szablonów elementów członkowskich, szablon:
 
 ```cpp
 template <class Other>
 complex(const complex<Other>& right);
 ```
 
-jest zastępowany:
+zostaje zastąpiona opcją:
 
 ```
 
 complex(const complex& right);
 ```
 
-Konstruktor kopiujący jest.
+jest to Konstruktor kopiujący.
 
 ### <a name="example"></a>Przykład
 
@@ -176,7 +176,7 @@ int main( )
 
 ## <a name="imag"></a>  COMPLEX::imag
 
-Wyodrębnia urojony składnik liczbą.
+Wyodrębnia urojone części liczby zespolonej.
 
 ```cpp
 T imag() const;
@@ -187,15 +187,15 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` Liczba złożonych jest którego urojony wartość do wyodrębnienia.
+*prawy* liczby zespolonej, w których urojone wartość do wyodrębnienia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wyrażenie Liczba_zespolona część liczby złożonej.
+Urojone części liczb zespolonych.
 
 ### <a name="remarks"></a>Uwagi
 
-Dla liczbą *+ analizy biznesowej*, urojony części lub składnika jest *Im(a + bi) = b.*
+Dla liczby zespolonej *+ bi*, urojone części lub składnik jest *Im(a + bi) = b.*
 
 ### <a name="example"></a>Przykład
 
@@ -230,7 +230,7 @@ The imaginary part of c1 is c1.imag ( ) = 3.
 
 ## <a name="op_star_eq"></a>  COMPLEX::operator * =
 
-Mnoży liczbą docelowego przez współczynnik, który może być skomplikowane lub być tego samego typu są prawdziwe i urojony część liczby złożonej.
+Mnoży docelowej liczby zespolonej przez współczynnik, który może być złożonym procesem, lub być tego samego typu są rzeczywiste i urojone części liczb zespolonych.
 
 ```cpp
 template <class Other>
@@ -243,15 +243,15 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` Liczbą lub liczby, która jest tego samego typu jako parametru liczby zespolonej docelowej.
+*prawy* liczbą lub liczbą, która jest tego samego typu co parametr liczby zespolonej docelowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba złożonych, która została pomnożona przez liczbę określony jako parametr.
+Liczby zespolonej, który ma zostać pomnożona przez numer, który został określony jako parametr.
 
 ### <a name="remarks"></a>Uwagi
 
-Operacja jest przeciążona, dzięki czemu można wykonywać proste operacje arytmetyczne bez konwersji danych do określonego formatu.
+Operacji jest przeciążona, tak aby proste operacje arytmetyczne, mogą być wykonywane bez konwersji danych do określonego formatu.
 
 ### <a name="example"></a>Przykład
 
@@ -313,7 +313,7 @@ int main() {
 
 ## <a name="op_add_eq"></a>  COMPLEX::operator +=
 
-Dodaje numer liczbą docelowej, w przypadku, gdy liczba dodana może być złożony lub tego samego typu co są części rzeczywistych i urojony liczby złożonej, do którego jest dodawany.
+Dodaje numer docelowej liczby zespolonej, w przypadku, gdy liczba dodawane mogą być skomplikowane, lub tego samego typu co są rzeczywiste i urojone części liczb zespolonych, do którego zostanie dodany.
 
 ```cpp
 template <class Other>
@@ -326,15 +326,15 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` Liczbą lub liczby, która jest tego samego typu jako parametru liczby zespolonej docelowej.
+*prawy* liczbą lub liczbą, która jest tego samego typu co parametr liczby zespolonej docelowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczby złożonej, który miał podano jako parametr dodany.
+Liczby zespolonej, który miał numer, który został określony jako parametr dodany.
 
 ### <a name="remarks"></a>Uwagi
 
-Operacja jest przeciążona, dzięki czemu można wykonywać proste operacje arytmetyczne bez konwersji danych do określonego formatu.
+Operacji jest przeciążona, tak aby proste operacje arytmetyczne, mogą być wykonywane bez konwersji danych do określonego formatu.
 
 ### <a name="example"></a>Przykład
 
@@ -415,7 +415,7 @@ The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 
 ## <a name="complex__operator-_eq"></a>  COMPLEX::operator-=
 
-Odejmuje liczbę z zakresu od liczby złożonej docelowej, w przypadku, gdy liczba odejmować może być złożony lub tego samego typu co są części rzeczywistych i urojony liczby złożonej, do którego jest dodawany.
+Odejmuje liczbę od liczby zespolonej docelowego, w przypadku, gdy liczba odejmowana mogą być skomplikowane, lub tego samego typu co są rzeczywiste i urojone części liczb zespolonych, do którego zostanie dodany.
 
 ```cpp
 template <class Other>
@@ -428,17 +428,17 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-`complexNum` Liczby złożonej do odjęta od liczby złożonej docelowej.
+*complexNum* liczby zespolonej do odjęta od liczby zespolonej docelowego.
 
-`_RealPart` Liczba rzeczywista odjęta od liczby złożonej docelowej.
+*_RealPart* liczba rzeczywista jest odejmowana od liczby zespolonej docelowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczby złożonej, który miał podano jako parametr odjęta od niego.
+Liczby zespolonej, który miał numer, który został określony jako parametr odejmowany od niego.
 
 ### <a name="remarks"></a>Uwagi
 
-Operacja jest przeciążona, dzięki czemu można wykonywać proste operacje arytmetyczne bez konwersji danych do określonego formatu.
+Operacji jest przeciążona, tak aby proste operacje arytmetyczne, mogą być wykonywane bez konwersji danych do określonego formatu.
 
 ### <a name="example"></a>Przykład
 
@@ -521,7 +521,7 @@ The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 
 ## <a name="op_div_eq"></a>  COMPLEX::operator / =
 
-Dzieli liczbą docelowego przez dzielnik, która może być skomplikowane lub być tego samego typu są prawdziwe i urojony część liczby złożonej.
+Dzieli docelowej liczby zespolonej przez dzielnik, która może być złożonym procesem lub być tego samego typu są rzeczywiste i urojone części liczb zespolonych.
 
 ```cpp
 template <class Other>
@@ -534,17 +534,17 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametry
 
-`complexNum` Liczby złożonej do odjęta od liczby złożonej docelowej.
+*complexNum* liczby zespolonej do odjęta od liczby zespolonej docelowego.
 
-`_RealPart` Liczba rzeczywista odjęta od liczby złożonej docelowej.
+*_RealPart* liczba rzeczywista jest odejmowana od liczby zespolonej docelowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczby złożonej, który został podzielony przez liczbę określony jako parametr.
+Liczby zespolonej, który został podzielony przez liczbę, określony jako parametr.
 
 ### <a name="remarks"></a>Uwagi
 
-Operacja jest przeciążona, dzięki czemu można wykonywać proste operacje arytmetyczne bez konwersji danych do określonego formatu.
+Operacji jest przeciążona, tak aby proste operacje arytmetyczne, mogą być wykonywane bez konwersji danych do określonego formatu.
 
 ### <a name="example"></a>Przykład
 
@@ -623,7 +623,7 @@ The argument of cl2 is: 0.523599 radians, which is 30 degrees.
 
 ## <a name="op_eq"></a>  COMPLEX::operator =
 
-Przypisuje liczbę docelowych liczbą, gdzie numer przypisany może być skomplikowane lub tego samego typu co są prawdziwe i urojony część liczby złożonej, do której jest ona obecnie przypisywana.
+Przypisuje numer docelowej liczby zespolonej, gdzie mogą być skomplikowane numer przypisany lub tego samego typu co są rzeczywiste i urojone części liczb zespolonych, które są przypisane.
 
 ```cpp
 template <class Other>
@@ -634,15 +634,15 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` Liczbą lub liczby, która jest tego samego typu jako parametru liczby zespolonej docelowej.
+*prawy* liczbą lub liczbą, która jest tego samego typu co parametr liczby zespolonej docelowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Liczba złożonych przypisany numer określony jako parametr.
+Liczby zespolonej, który został przypisany numer, który został określony jako parametr.
 
 ### <a name="remarks"></a>Uwagi
 
-Operacja jest przeciążona, dzięki czemu można wykonywać proste operacje arytmetyczne bez konwersji danych do określonego formatu.
+Operacji jest przeciążona, tak aby proste operacje arytmetyczne, mogą być wykonywane bez konwersji danych do określonego formatu.
 
 ### <a name="example"></a>Przykład
 
@@ -700,7 +700,7 @@ The complex number (3, 4) assigned to the complex number cl2 is:
 
 ## <a name="real"></a>  COMPLEX::Real
 
-Pobiera lub ustawia składnik rzeczywistych liczbą.
+Pobiera lub ustawia rzeczywisty składnik liczby zespolonej.
 
 ```cpp
 constexpr T real() const;
@@ -711,15 +711,15 @@ T real(const T& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` Liczba złożonych, którego wartość rzeczywista jest do wyodrębnienia.
+*prawy* liczby zespolonej, którego rzeczywistą wartość do wyodrębnienia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Część rzeczywista liczby złożonej.
+Rzeczywiste część liczby zespolonej.
 
 ### <a name="remarks"></a>Uwagi
 
-Dla liczbą *+ analizy biznesowej*, część rzeczywista lub składnik jest *Re(a + bi) =.*
+Dla liczby zespolonej *+ bi*, część rzeczywista lub składnik jest *Re(a + bi) =.*
 
 ### <a name="example"></a>Przykład
 
@@ -754,7 +754,7 @@ The imaginary part of c1 is c1.imag ( ) = 3.
 
 ## <a name="value_type"></a>  COMPLEX::value_type
 
-Typ, który reprezentuje typ danych używany do reprezentowania rzeczywistą i urojony części liczbą.
+Typ, który reprezentuje typ danych używany do reprezentowania rzeczywiste i urojone części liczb zespolonych.
 
 ```
 
@@ -763,7 +763,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>Uwagi
 
-`value_type` jest synonimem klasy złożone **typu** parametru szablonu.
+`value_type` jest synonimem dla klasy złożone `Type` parametru szablonu.
 
 ### <a name="example"></a>Przykład
 
@@ -792,5 +792,5 @@ of type value_type: c1 = (3,4).
 
 ## <a name="see-also"></a>Zobacz także
 
-[złożonych elementów członkowskich](http://msdn.microsoft.com/en-us/d5c4466c-43a0-4817-aca1-9a5d492dae28)<br/>
+[złożonych elementów członkowskich](http://msdn.microsoft.com/d5c4466c-43a0-4817-aca1-9a5d492dae28)<br/>
 [Bezpieczeństwo wątku w standardowej bibliotece C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

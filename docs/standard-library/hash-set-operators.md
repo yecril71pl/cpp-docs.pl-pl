@@ -9,14 +9,14 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-ms.openlocfilehash: 4f8347ad891508e7cdf06db5a42ec7953fb7746a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ecc6640dd41fcc6a275de10becf1d9c03128f562
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847263"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966657"
 ---
-# <a name="lthashsetgt-operators"></a>&lt;hash_set —&gt; operatory
+# <a name="lthashsetgt-operators"></a>&lt;hash_set —&gt; operatorów
 
 ||||
 |-|-|-|
@@ -26,9 +26,9 @@ ms.locfileid: "33847263"
 ## <a name="op_neq"></a>  operator! =
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [unordered_set — klasa](../standard-library/unordered-set-class.md).
+> Ten interfejs API jest nieaktualny. Alternatywą jest [unordered_set, klasa](../standard-library/unordered-set-class.md).
 
-Testy, jeśli obiekt hash_set po lewej stronie operatora nie jest taki sam jak obiekt hash_set po prawej stronie.
+Sprawdza, czy obiekt hash_set po lewej stronie operatora nie jest równy obiektowi hash_set po prawej stronie.
 
 ```cpp
 bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <Key, Traits, Allocator>& right);
@@ -36,9 +36,9 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu `hash_set`.
+*po lewej stronie* obiektu typu `hash_set`.
 
-`right` Obiekt typu `hash_set`.
+*prawy* obiektu typu `hash_set`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -46,9 +46,9 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie hash_set — obiekty opiera się na parowania porównanie ich elementów. Dwa hash_sets są takie same, jeśli mają one taką samą liczbę elementów i ich odpowiednich elementy mają takie same wartości. W przeciwnym razie ich nie są równe.
+Porównanie obiektów hash_set opiera się na parowania porównanie ich elementów. Dwa hash_sets są takie same, jeśli mają taką samą liczbę elementów i ich odpowiednie elementy mają te same wartości. W przeciwnym razie są nierówne.
 
-Elementy członkowskie [< hash_map >](../standard-library/hash-map.md) i [< hash_set >](../standard-library/hash-set.md) pliki nagłówka są [stdext — Namespace](../standard-library/stdext-namespace.md).
+Elementy członkowskie [< hash_map >](../standard-library/hash-map.md) i [< hash_set >](../standard-library/hash-set.md) pliki nagłówkowe są [stdext Namespace](../standard-library/stdext-namespace.md).
 
 ### <a name="example"></a>Przykład
 
@@ -92,9 +92,9 @@ The hash_sets hs1 and hs3 are equal.
 ## <a name="op_eq_eq"></a>  operator ==
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [unordered_set — klasa](../standard-library/unordered-set-class.md).
+> Ten interfejs API jest nieaktualny. Alternatywą jest [unordered_set, klasa](../standard-library/unordered-set-class.md).
 
-Testy, jeśli obiekt hash_set po lewej stronie operatora jest taki sam jak obiekt hash_set po prawej stronie.
+Sprawdza, czy obiekt hash_set po lewej stronie operatora jest równy obiektowi hash_set po prawej stronie.
 
 ```cpp
 bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <Key, Traits, Allocator>& right);
@@ -102,17 +102,17 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu `hash_set`.
+*po lewej stronie* obiektu typu `hash_set`.
 
-`right` Obiekt typu `hash_set`.
+*prawy* obiektu typu `hash_set`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli hash_set po lewej stronie operatora jest równa hash_set po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true,** Jeśli hash_set po lewej stronie operatora jest równy hash_set po prawej stronie operatora; w przeciwnym **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie hash_set — obiekty opiera się na parowania porównanie ich elementów. Dwa hash_sets są takie same, jeśli mają one taką samą liczbę elementów i ich odpowiednich elementy mają takie same wartości. W przeciwnym razie ich nie są równe.
+Porównanie obiektów hash_set opiera się na parowania porównania ich elementów. Dwa hash_sets są takie same, jeśli mają taką samą liczbę elementów i ich odpowiednie elementy mają te same wartości. W przeciwnym razie są nierówne.
 
 ### <a name="example"></a>Przykład
 
@@ -156,9 +156,9 @@ The hash_sets s1 and s3 are equal.
 ## <a name="neq_hash_multiset"></a>  Operator! = (hash_multiset)
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [unordered_set — klasa](../standard-library/unordered-set-class.md).
+> Ten interfejs API jest nieaktualny. Alternatywą jest [unordered_set, klasa](../standard-library/unordered-set-class.md).
 
-Testy, jeśli obiekt hash_multiset po lewej stronie operatora nie jest taki sam jak obiekt hash_multiset po prawej stronie.
+Sprawdza, czy obiekt hash_multiset po lewej stronie operatora nie jest równy obiektowi hash_multiset po prawej stronie.
 
 ```cpp
 bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_multiset <Key, Traits, Allocator>& right);
@@ -166,9 +166,9 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu `hash_multiset`.
+*po lewej stronie* obiektu typu `hash_multiset`.
 
-`right` Obiekt typu `hash_multiset`.
+*prawy* obiektu typu `hash_multiset`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -176,7 +176,7 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie hash_multiset — obiekty opiera się na parowania porównanie ich elementów. Dwa hash_multisets są takie same, jeśli mają one taką samą liczbę elementów i ich odpowiednich elementy mają takie same wartości. W przeciwnym razie ich nie są równe.
+Porównanie hash_multiset — obiekty opiera się na parowania porównanie ich elementów. Dwa hash_multisets są takie same, jeśli mają taką samą liczbę elementów i ich odpowiednie elementy mają te same wartości. W przeciwnym razie są nierówne.
 
 ### <a name="example"></a>Przykład
 
@@ -220,9 +220,9 @@ The hash_multisets hs1 and hs3 are equal.
 ## <a name="eq_eq_hash_multiset"></a>  Operator == (hash_multiset)
 
 > [!NOTE]
-> Ten interfejs API jest nieaktualny. Alternatywą jest [unordered_set — klasa](../standard-library/unordered-set-class.md).
+> Ten interfejs API jest nieaktualny. Alternatywą jest [unordered_set, klasa](../standard-library/unordered-set-class.md).
 
-Testy, jeśli obiekt hash_multiset po lewej stronie operatora jest taki sam jak obiekt hash_multiset po prawej stronie.
+Sprawdza, czy obiekt hash_multiset po lewej stronie operatora jest równy obiektowi hash_multiset po prawej stronie.
 
 ```cpp
 bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_multiset <Key, Traits, Allocator>& right);
@@ -230,17 +230,17 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Parametry
 
-`left` Obiekt typu `hash_multiset`.
+*po lewej stronie* obiektu typu `hash_multiset`.
 
-`right` Obiekt typu `hash_multiset`.
+*prawy* obiektu typu `hash_multiset`.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli hash_multiset po lewej stronie operatora jest równa hash_multiset po prawej stronie operatora; w przeciwnym razie **false**.
+**wartość true,** Jeśli hash_multiset po lewej stronie operatora jest równy hash_multiset po prawej stronie operatora; w przeciwnym **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie hash_multiset — obiekty opiera się na parowania porównanie ich elementów. Dwa hash_multisets są takie same, jeśli mają one taką samą liczbę elementów i ich odpowiednich elementy mają takie same wartości. W przeciwnym razie ich nie są równe.
+Porównanie hash_multiset — obiekty opiera się na parowania porównania ich elementów. Dwa hash_multisets są takie same, jeśli mają taką samą liczbę elementów i ich odpowiednie elementy mają te same wartości. W przeciwnym razie są nierówne.
 
 ### <a name="example"></a>Przykład
 

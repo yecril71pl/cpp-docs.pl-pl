@@ -1,5 +1,5 @@
 ---
-title: Hosting formantów za pomocą biblioteki ATL AXHost | Dokumentacja firmy Microsoft
+title: Hosting kontrolek ActiveX przy użyciu ATL AXHost | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,39 +19,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5057a077e8e778fa3d943b736d51d19af8f60fc6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e26fd9e80b96c2b0196e3fd0e11b9c97f0f3bff3
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356256"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027209"
 ---
-# <a name="hosting-activex-controls-using-atl-axhost"></a>Hosting formantów za pomocą ATL AXHost
-Próbki w tym temacie przedstawiono sposób tworzenia AXHost oraz sposobu hostowania formantu ActiveX, przy użyciu różnych funkcji ATL. Przedstawiono również sposób zdarzeń odbioru i kontroli dostępu (przy użyciu [IDispEventImpl](../atl/reference/idispeventimpl-class.md)) z formantu, który jest obsługiwany. Przykład obsługuje formant kalendarza w głównym oknie lub okna podrzędnego.  
+# <a name="hosting-activex-controls-using-atl-axhost"></a>Hosting kontrolek ActiveX przy użyciu ATL AXHost
+Przykład w tym temacie pokazano, jak utworzyć AXHost oraz jak do hostowania kontrolki ActiveX przy użyciu różnych funkcji biblioteki ATL. Zawiera również instrukcje zdarzenia sink i kontroli dostępu (przy użyciu [IDispEventImpl](../atl/reference/idispeventimpl-class.md)) z formantu, który znajduje się. Przykład obsługuje formant kalendarza w głównym oknie lub okna podrzędnego.  
   
- Zwróć uwagę, definicji `USE_METHOD` symbolu. Można zmienić wartość tego symbolu do różnią się od 1 do 8. Wartość symbolu określa sposób tworzenia kontrolki:  
+ Zwróć uwagę, definicji symbolu USE_METHOD. Możesz zmienić wartość tego symbolu będzie się różnić od 1 do 8. Wartość symbolu określa sposób tworzenia kontrolki:  
   
--   Dla wartości parzystych `USE_METHOD`, wywołanie w celu utworzenia podklasy hosta okna i konwertuje ją na hosta formantu. Nieparzystą wartości kod tworzy okno podrzędne, który działa jako hosta.  
+-   Parzystych wartości USE_METHOD, wywołanie w celu utworzenia podklasy hosta okna i konwertuje je do hosta kontroli. W przypadku wartości nieparzystą kod tworzy okno podrzędne, który działa jako host.  
   
--   Dla wartości `USE_METHOD` od 1 do 4 dostępu do formantu i wychwytywanie zdarzeń są wykonywane w wywołaniu, które tworzy także hosta. Wartości od 5 do 8 zapytania hosta dla interfejsów i utworzenie punktu zaczepienia sink.  
+-   Dla wartości USE_METHOD od 1 do 4, uzyskać dostęp do formantu i wychwytywania zdarzeń są wykonywane w wywołaniu, wzrasta, powstaje hosta. Wartości z zakresu od 5 do 8 zapytania hosta dla interfejsów i podłączyć ujścia.  
   
- Poniżej przedstawiono podsumowanie:  
+Poniżej przedstawiono podsumowanie:  
   
-|USE_METHOD|Host|Kontrola dostępu i wychwytywanie zdarzeń|Przedstawiona — funkcja|  
+|USE_METHOD|Host|Kontrola dostępu i wychwytywania zdarzeń|Pokazano — funkcja|  
 |-----------------|----------|--------------------------------------|---------------------------|  
-|1|Okno podrzędne|Krok|CreateControlLicEx|  
-|2|Okno główne|Krok|AtlAxCreateControlLicEx|  
-|3|Okno podrzędne|Krok|CreateControlEx|  
-|4|Okno główne|Krok|AtlAxCreateControlEx|  
+|1|Okno podrzędne|Jeden krok|CreateControlLicEx|  
+|2|Okno główne|Jeden krok|AtlAxCreateControlLicEx|  
+|3|Okno podrzędne|Jeden krok|CreateControlEx|  
+|4|Okno główne|Jeden krok|AtlAxCreateControlEx|  
 |5|Okno podrzędne|Wiele kroków|CreateControlLic|  
 |6|Okno główne|Wiele kroków|AtlAxCreateControlLic|  
-|7|Okno podrzędne|Wiele kroków|CreateControl|  
+|7|Okno podrzędne|Wiele kroków|CreateControl —|  
 |8|Okno główne|Wiele kroków|AtlAxCreateControl|  
   
  [!code-cpp[NVC_ATL_AxHost#1](../atl/codesnippet/cpp/hosting-activex-controls-using-atl-axhost_1.cpp)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zawierania kontrolek — często zadawane pytania](../atl/atl-control-containment-faq.md)   
+ [Zawieranie kontrolek — często zadawane pytania](../atl/atl-control-containment-faq.md)   
  [AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol)   
  [AtlAxCreateControlEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)   
  [AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic)   

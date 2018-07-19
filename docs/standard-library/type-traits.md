@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c7d09615b5f9ec7f0f72acde965d5ffbd018c9c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f1b0ae8be5e9f33982d9a24d3004ebb46b6b8a4d
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863377"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026354"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
-Definiuje szablony, które zapewniają stałe kompilacji, które zapewniają informacje o właściwościach ich argumentów typu lub utworzyć przekształcenia typów.
+Określa szablony, które zapewniają, że stałe kompilacji, które podają informacje o właściwościach ich argumentów typu tworzą lub wykorzystują przekształcane typów.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,15 +36,15 @@ Definiuje szablony, które zapewniają stałe kompilacji, które zapewniają inf
 
 ## <a name="remarks"></a>Uwagi
 
-Klasy i szablonów w \<type_traits > są używane do obsługi wnioskowanie o typie, klasyfikacji i przekształcenie w czasie kompilacji, do wykrywania błędów związanych z typem i można zoptymalizować kod rodzajowy. Te klasy i szablony obejmują jednoargumentowy cech typu w kompilatorze opisujących właściwości typu cech typu binarnego, które opisują relacji między typami i przekształcenie cech, które modyfikują właściwości typu.
+Klasy i szablonów w \<type_traits > są używane do obsługi wnioskowanie o typie, klasyfikacji i transformacji, w czasie kompilacji, do wykrywania błędów dotyczących typu i ułatwiające optymalizację kodu ogólnego. Te klasy i szablony obejmują jednoargumentowe cech typu, które opisują właściwości typu, cech typu binary, które opisują relację między typami i cechy przekształcenie, które modyfikować właściwości typu.
 
-Do obsługi cech typu, klasę pomocy `integral_constant`, jest zdefiniowany. Ma ona specjalizacji szablonu `true_type` i `false_type` który tworzą klas podstawowych dla typu predykatów. A *predykatu typów* to szablon, który przyjmuje jeden lub więcej argumentów typu. Jeśli predykat typów *jest spełniony*, jest publicznie pochodną, bezpośrednio lub pośrednio, z [true_type](../standard-library/type-traits-typedefs.md#true_type). Jeśli predykat typów *przechowuje false*, jest publicznie pochodną, bezpośrednio lub pośrednio, z [false_type](../standard-library/type-traits-typedefs.md#false_type).
+Aby obsługiwać cech typu, klasę pomocy `integral_constant`, jest zdefiniowana. Ma ona specjalizacjami `true_type` i `false_type` , tworzą klas bazowych dla typu predykatów. A *predykatu typów* jest szablon, który przyjmuje jeden lub więcej argumentów typu. Jeśli predykat typów *prawdziwe*, publicznie pochodzi, bezpośrednio lub pośrednio z [true_type](../standard-library/type-traits-typedefs.md#true_type). Jeśli predykat typów *przechowuje wartość false*, publicznie pochodzi, bezpośrednio lub pośrednio z [false_type](../standard-library/type-traits-typedefs.md#false_type).
 
-A *modyfikator typu* lub *cechy przekształcania* szablon, który przyjmuje jeden lub więcej argumentów szablonu i ma jeden element członkowski, `type`, czyli synonimem typu zmodyfikowane.
+A *modyfikatora typu* lub *cech przekształcania* jest szablon, który przyjmuje jeden lub więcej argumentów szablonu, a ma jeden element członkowski, `type`, co jest synonimem typu zmodyfikowane.
 
-### <a name="alias-templates"></a>Szablonów aliasów
+### <a name="alias-templates"></a>Szablony aliasów
 
-Aby uprościć typu wyrażenia cech, [szablonów aliasów](../cpp/aliases-and-typedefs-cpp.md) dla `typename some_trait<T>::type` są dostarczane, gdzie " `some_trait`" jest nazwą klasy szablonu. Na przykład [add_const —](../standard-library/add-const-class.md) ma szablonu aliasu dla jego typu `add_const_t`, zdefiniowanej jako:
+Aby uprościć typ cechy wyrażeń, [szablony aliasów](../cpp/aliases-and-typedefs-cpp.md) dla `typename some_trait<T>::type` znajdują się, gdzie " `some_trait`" jest nazwą klasy szablonu. Na przykład [add_const —](../standard-library/add-const-class.md) ma szablonie aliasu dla tego typu `add_const_t`, zdefiniowany jako:
 
 ```cpp
 template <class T>
@@ -62,26 +62,26 @@ using add_const_t = typename add_const<T>::type;
 
 ### <a name="classes"></a>Klasy
 
-Klasa pomocy i definicje typów
+Klasa pomocnika i definicje typów
 
 |||
 |-|-|
-|[integral_constant](../standard-library/integral-constant-class-bool-constant-class.md)|Sprawia, że typem całkowitym stałej od typu i wartości.|
-|[true_type](../standard-library/type-traits-typedefs.md#true_type)|Przechowuje stałej o wartości true.|
-|[false_type](../standard-library/type-traits-typedefs.md#false_type)|Przechowuje stałej o wartości false.|
+|[integral_constant](../standard-library/integral-constant-class-bool-constant-class.md)|Sprawia, że całkowita stałe od typu i wartości.|
+|[true_type](../standard-library/type-traits-typedefs.md#true_type)|Zawiera stałą całkowitą o wartości true.|
+|[false_type](../standard-library/type-traits-typedefs.md#false_type)|Zawiera stałą całkowitą o wartości false.|
 
 Kategorie typu podstawowego
 
 |||
 |-|-|
-|[is_void —](../standard-library/is-void-class.md)|Sprawdza, czy typ jest `void`.|
+|[is_void —](../standard-library/is-void-class.md)|Sprawdza, czy typ jest **void**.|
 |[is_null_pointer](../standard-library/is-null-pointer-class.md)|Sprawdza, czy typ jest `std::nullptr_t`.|
 |[is_integral](../standard-library/is-integral-class.md)|Sprawdza, czy typ jest integralną częścią.|
 |[is_floating_point](../standard-library/is-floating-point-class.md)|Sprawdza, czy typ jest zmiennoprzecinkowych.|
 |[is_array](../standard-library/is-array-class.md)|Sprawdza, czy typ jest tablicą.|
-|[is_pointer](../standard-library/is-pointer-class.md)|Sprawdza, czy typ jest wskaźnik.|
-|[is_lvalue_reference](../standard-library/is-lvalue-reference-class.md)|Testy, jeśli typ odwołania do wartości.|
-|[is_rvalue_reference](../standard-library/is-rvalue-reference-class.md)|Testy, jeśli typ jest odwołanie do r-wartości.|
+|[is_pointer](../standard-library/is-pointer-class.md)|Sprawdza, czy typ jest wskaźnikiem.|
+|[is_lvalue_reference](../standard-library/is-lvalue-reference-class.md)|Sprawdza, czy typ jest odwołaniem lvalue.|
+|[is_rvalue_reference](../standard-library/is-rvalue-reference-class.md)|Sprawdza, czy typ jest odwołaniem rvalue.|
 |[is_member_object_pointer](../standard-library/is-member-object-pointer-class.md)|Sprawdza, czy typ jest wskaźnik do obiektu elementu członkowskiego.|
 |[is_member_function_pointer](../standard-library/is-member-function-pointer-class.md)|Sprawdza, czy typ jest wskaźnikiem do funkcji członkowskiej.|
 |[is_enum](../standard-library/is-enum-class.md)|Sprawdza, czy typ jest wyliczeniem.|
@@ -89,129 +89,129 @@ Kategorie typu podstawowego
 |[is_class](../standard-library/is-class-class.md)|Sprawdza, czy typ jest klasą.|
 |[is_function](../standard-library/is-function-class.md)|Sprawdza, czy typ jest typem funkcji.|
 
-Kategorie typu złożonego
+Typ złożony kategorii
 
 |||
 |-|-|
-|[is_reference](../standard-library/is-reference-class.md)|Sprawdza, czy typ jest odwołanie.|
+|[is_reference](../standard-library/is-reference-class.md)|Sprawdza, czy typ jest odwołaniem.|
 |[is_arithmetic](../standard-library/is-arithmetic-class.md)|Sprawdza, czy typ jest arytmetyczne.|
-|[is_fundamental](../standard-library/is-fundamental-class.md)|Sprawdza, czy typ jest `void` lub arytmetyczne.|
+|[is_fundamental](../standard-library/is-fundamental-class.md)|Sprawdza, czy typ jest **void** lub arytmetyczne.|
 |[is_object](../standard-library/is-object-class.md)|Sprawdza, czy typ jest typem obiektu.|
-|[is_scalar](../standard-library/is-scalar-class.md)|Sprawdza, czy typ jest skalarny.|
-|[is_compound —](../standard-library/is-compound-class.md)|Sprawdza, czy typ nie jest skalarny.|
+|[is_scalar](../standard-library/is-scalar-class.md)|Sprawdza, czy typ jest skalarna.|
+|[is_compound —](../standard-library/is-compound-class.md)|Sprawdza, czy określony typ nie jest skalarny.|
 |[is_member_pointer](../standard-library/is-member-pointer-class.md)|Sprawdza, czy typ jest wskaźnik do elementu członkowskiego.|
 
 Właściwości typu
 
 |||
 |-|-|
-|[is_const](../standard-library/is-const-class.md)|Sprawdza, czy typ jest `const`.|
-|[is_volatile](../standard-library/is-volatile-class.md)|Sprawdza, czy typ jest `volatile`.|
-|[is_trivial](../standard-library/is-trivial-class.md)|Sprawdza, czy typ jest prosta.|
-|[is_trivially_copyable](../standard-library/is-trivially-copyable-class.md)|Sprawdza, czy typ jest trivially copyable.|
-|[is_standard_layout —](../standard-library/is-standard-layout-class.md)|Testy, jeśli typ jest typem standardowego układu.|
-|[is_pod](../standard-library/is-pod-class.md)|Sprawdza, czy typ jest POD.|
-|[is_literal_type](../standard-library/is-literal-type-class.md)|Sprawdza, czy typ może być `constexpr` zmiennej lub używanych w `constexpr` funkcji.|
+|[is_const](../standard-library/is-const-class.md)|Sprawdza, czy typ jest **const**.|
+|[is_volatile](../standard-library/is-volatile-class.md)|Sprawdza, czy typ jest **volatile**.|
+|[is_trivial](../standard-library/is-trivial-class.md)|Sprawdza, czy typ jest proste.|
+|[is_trivially_copyable](../standard-library/is-trivially-copyable-class.md)|Sprawdza, czy typ jest kopiowania.|
+|[is_standard_layout](../standard-library/is-standard-layout-class.md)|Sprawdza, czy typ jest typem standardowego układu.|
+|[is_pod](../standard-library/is-pod-class.md)|Sprawdza, czy typ jest ZASOBNIK.|
+|[is_literal_type](../standard-library/is-literal-type-class.md)|Sprawdza, czy typ może być `constexpr` zmiennej lub używany w `constexpr` funkcji.|
 |[is_empty](../standard-library/is-empty-class.md)|Sprawdza, czy typ jest pustą klasę.|
-|[is_polymorphic](../standard-library/is-polymorphic-class.md)|Sprawdza, czy typ jest klasy polimorficznej.|
+|[is_polymorphic](../standard-library/is-polymorphic-class.md)|Sprawdza, czy typ jest polimorficznej klasy.|
 |[is_abstract](../standard-library/is-abstract-class.md)|Sprawdza, czy typ jest klasą abstrakcyjną.|
-|[is_final](../standard-library/is-final-class.md)|Sprawdza, czy typ jest oznaczony jako typ klasy `final`.|
-|[is_signed](../standard-library/is-signed-class.md)|Sprawdza, czy typ jest liczbę całkowitą ze znakiem.|
+|[is_final](../standard-library/is-final-class.md)|Sprawdza, czy typ jest typem klasy oznaczone `final`.|
+|[is_signed](../standard-library/is-signed-class.md)|Sprawdza, czy typ jest liczba całkowita ze znakiem.|
 |[is_unsigned](../standard-library/is-unsigned-class.md)|Sprawdza, czy typ jest liczbą całkowitą bez znaku.|
-|[is_constructible](../standard-library/is-constructible-class.md)|Sprawdza, czy typ jest umożliwia konstrukcji, przy użyciu określone typy argumentów.|
+|[is_constructible](../standard-library/is-constructible-class.md)|Sprawdza, czy typ jest konstrukcyjną, za pomocą określone typy argumentów.|
 |[is_default_constructible](../standard-library/type-traits-functions.md#is_default_constructible)|Sprawdza, czy typ ma konstruktora domyślnego.|
 |[is_copy_constructible](../standard-library/type-traits-functions.md#is_copy_constructible)|Sprawdza, czy typ ma konstruktora kopiującego.|
-|[is_move_constructible](../standard-library/type-traits-functions.md#is_move_constructible)|Sprawdza, czy typ ma konstruktora przenoszenia.|
-|[is_assignable](../standard-library/type-traits-functions.md#is_assignable)|Sprawdza, czy pierwszy typ można przypisać wartości typu drugiego.|
-|[is_copy_assignable](../standard-library/type-traits-functions.md#is_copy_assignable)|Sprawdza, czy można przypisać typu stałej wartości odwołania typu.|
-|[is_move_assignable](../standard-library/type-traits-functions.md#is_move_assignable)|Sprawdza, czy typ można przypisać odwołania do r-wartości typu.|
-|[is_destructible](../standard-library/is-destructible-class.md)|Sprawdza, czy typ jest które można zniszczyć.|
-|[is_trivially_constructible](../standard-library/is-trivially-constructible-class.md)|Sprawdza, czy typ korzysta z żadnych operacji nieuproszczony, gdy jest tworzony przy użyciu określonych typów.|
-|[is_trivially_default_constructible](../standard-library/is-trivially-default-constructible-class.md)|Sprawdza, czy typ używa ma nieuproszczone operacji, gdy utworzony domyślny.|
-|[is_trivially_copy_constructible](../standard-library/is-trivially-copy-constructible-class.md)|Sprawdza, czy typ używa ma nieuproszczone operacji podczas kopiowania skonstruowany.|
-|[is_trivially_move_constructible](../standard-library/type-traits-functions.md#is_trivially_move_constructible)|Sprawdza, czy typ używa ma nieuproszczone operacji podczas przenoszenia skonstruowany.|
-|[is_trivially_assignable](../standard-library/is-trivially-assignable-class.md)|Sprawdza, czy typy są można przypisać i nie ma operacji nieuproszczony korzysta z przypisania.|
-|[is_trivially_copy_assignable](../standard-library/type-traits-functions.md#is_trivially_copy_assignable)|Określa, czy typ jest kopii można przypisać oraz przypisanie korzysta z żadnych operacji nieuproszczony testy.|
-|[is_trivially_move_assignable](../standard-library/type-traits-functions.md#is_trivially_move_assignable)|Testy, czy typ jest możliwy do przypisania przenoszenia i przypisanie używa ma nieuproszczone operacji.|
-|[is_trivially_destructible](../standard-library/is-trivially-destructible-class.md)|Sprawdza, czy typ które można zniszczyć, a destruktor używa ma nieuproszczone operacji.|
-|[is_nothrow_constructible](../standard-library/is-nothrow-constructible-class.md)|Sprawdza, czy typ umożliwia konstrukcji, nie wiadomo throw, gdy jest tworzony przy użyciu określonych typów.|
-|[is_nothrow_default_constructible](../standard-library/is-nothrow-default-constructible-class.md)|Testy typ domyślny umożliwia konstrukcji, nie wiadomo throw, gdy utworzony domyślny.|
-|[is_nothrow_copy_constructible](../standard-library/is-nothrow-copy-constructible-class.md)|Sprawdza, czy typ jest kopią umożliwia konstrukcji, Konstruktor kopiujący wiadomo, że nie można zgłosić.|
-|[is_nothrow_move_constructible](../standard-library/is-nothrow-move-constructible-class.md)|Sprawdza, czy typ jest przeniesienie umożliwia konstrukcji, Konstruktor przenoszenia wiadomo, że nie można zgłosić.|
-|[is_nothrow_assignable](../standard-library/is-nothrow-assignable-class.md)|Sprawdza, czy typ jest możliwy do przypisania przy użyciu określonego typu i przypisanie wiadomo, że nie throw.|
-|[is_nothrow_copy_assignable](../standard-library/is-nothrow-copy-assignable-class.md)|Sprawdza, czy typ jest możliwy do przypisania kopiowania i przypisanie wiadomo, że nie throw.|
-|[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|Sprawdza, czy typ jest możliwy do przypisania przenoszenia i przypisanie wiadomo, że nie throw.|
-|[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|Sprawdza, czy typ jest które można zniszczyć, destruktor wiadomo, że nie można zgłosić.|
-|[has_virtual_destructor](http://msdn.microsoft.com/en-us/c0f85f0b-c63c-410d-a046-72eeaf44f7eb)|Sprawdza, czy typ ma destruktor wirtualny.|
+|[is_move_constructible](../standard-library/type-traits-functions.md#is_move_constructible)|Sprawdza, czy typ ma konstruktora przenoszącego.|
+|[is_assignable](../standard-library/type-traits-functions.md#is_assignable)|Sprawdza, czy pierwszy typ można przypisać wartości drugiego typu.|
+|[is_copy_assignable](../standard-library/type-traits-functions.md#is_copy_assignable)|Sprawdza, czy można przypisać typu const wartość odwołanie do typu.|
+|[is_move_assignable](../standard-library/type-traits-functions.md#is_move_assignable)|Sprawdza, czy typ można przypisać typu odwołanie rvalue.|
+|[is_destructible](../standard-library/is-destructible-class.md)|Sprawdza, czy typ jest zniszczalnych.|
+|[is_trivially_constructible](../standard-library/is-trivially-constructible-class.md)|Sprawdza, czy typ korzysta z żadnych operacji nietrywialnymi, gdy tworzony przy użyciu określonego typu.|
+|[is_trivially_default_constructible](../standard-library/is-trivially-default-constructible-class.md)|Sprawdza, czy typ używa ma nieuproszczone operacji, gdy domyślny skonstruowany.|
+|[is_trivially_copy_constructible](../standard-library/is-trivially-copy-constructible-class.md)|Sprawdza, czy typ używa żadne operacje nietrywialnymi podczas kopiowania skonstruowany.|
+|[is_trivially_move_constructible](../standard-library/type-traits-functions.md#is_trivially_move_constructible)|Sprawdza, czy typ używa ma nieuproszczone operacji, podczas przenoszenia skonstruowany.|
+|[is_trivially_assignable](../standard-library/is-trivially-assignable-class.md)|Sprawdza, czy typy są możliwe do przypisania i przypisanie używa ma nieuproszczone operacji.|
+|[is_trivially_copy_assignable](../standard-library/type-traits-functions.md#is_trivially_copy_assignable)|Sprawdza, czy typ jest możliwy do przypisania kopii oraz przypisanie korzysta z żadnych nietrywialnymi operacji.|
+|[is_trivially_move_assignable](../standard-library/type-traits-functions.md#is_trivially_move_assignable)|Sprawdza, czy typ jest możliwy do przypisania przenoszenia oraz przypisanie korzysta z żadnych nietrywialnymi operacji.|
+|[is_trivially_destructible](../standard-library/is-trivially-destructible-class.md)|Sprawdza, czy typ jest zniszczalnych i destruktor używa ma nieuproszczone operacji.|
+|[is_nothrow_constructible](../standard-library/is-nothrow-constructible-class.md)|Sprawdza, czy typ jest konstrukcyjną, wiadomo, nie zgłaszają, gdy jest tworzona przy użyciu określonego typu.|
+|[is_nothrow_default_constructible](../standard-library/is-nothrow-default-constructible-class.md)|Testy typ domyślny konstrukcyjną, wiadomo, nie zgłaszają, gdy domyślny skonstruowany.|
+|[is_nothrow_copy_constructible](../standard-library/is-nothrow-copy-constructible-class.md)|Sprawdza, czy typ jest kopią konstrukcyjną, Konstruktor kopiujący wiadomo, że nie zostać zgłoszony.|
+|[is_nothrow_move_constructible](../standard-library/is-nothrow-move-constructible-class.md)|Sprawdza, czy typ jest przeniesienie konstrukcyjną, Konstruktor przenoszący wiadomo, że nie zostać zgłoszony.|
+|[is_nothrow_assignable](../standard-library/is-nothrow-assignable-class.md)|Sprawdza, czy typ jest możliwy do przypisania, przy użyciu określonego typu, przypisanie wiadomo, że nie zostać zgłoszony.|
+|[is_nothrow_copy_assignable](../standard-library/is-nothrow-copy-assignable-class.md)|Sprawdza, czy typ jest możliwy do przypisania kopiowania, przypisanie wiadomo, że nie zostać zgłoszony.|
+|[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|Sprawdza, czy typ jest możliwy do przypisania przeniesienia, przypisanie wiadomo, że nie zostać zgłoszony.|
+|[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|Sprawdza, czy typ jest zniszczalnych, destruktor wiadomo, że nie zostać zgłoszony.|
+|[has_virtual_destructor](http://msdn.microsoft.com/c0f85f0b-c63c-410d-a046-72eeaf44f7eb)|Sprawdza, czy typ ma destruktor wirtualny.|
 
 Zapytania dotyczące właściwości typu
 
 |||
 |-|-|
-|[alignment_of](../standard-library/alignment-of-class.md)|Pobiera wyrównanie typu.|
+|[alignment_of](../standard-library/alignment-of-class.md)|Pobiera wyrównania tekstu.|
 |[Ranga](../standard-library/rank-class.md)|Pobiera liczbę wymiarów tablicy.|
 |[extent](../standard-library/extent-class.md)|Pobiera liczbę elementów w wymiarze określonej tablicy.|
 
-Relacje typów
+Typ relacji
 
 |||
 |-|-|
 |[is_same](../standard-library/is-same-class.md)|Sprawdza, czy dwa typy są takie same.|
 |[is_base_of](../standard-library/is-base-of-class.md)|Sprawdza, czy jest jeden typ podstawowy innego.|
-|[is_convertible](../standard-library/is-convertible-class.md)|Sprawdza, czy jest możliwe do przekonwertowania na inny.|
+|[is_convertible](../standard-library/is-convertible-class.md)|Sprawdza, czy jeden typ jest konwertowany na inny.|
 
 Modyfikacje Const-volatile
 
 |||
 |-|-|
-|[add_const —](../standard-library/add-const-class.md)|Tworzy `const` typu z typu.|
-|[add_volatile —](../standard-library/add-volatile-class.md)|Tworzy `volatile` typu z typu.|
-|[add_cv](../standard-library/add-cv-class.md)|Tworzy `const volatile` typu z typu.|
-|[remove_const](../standard-library/remove-const-class.md)|Tworzy z systemem innym niż stała typu z typu.|
-|[remove_volatile](../standard-library/remove-volatile-class.md)|Tworzy trwałą typu z typu.|
-|[remove_cv](../standard-library/remove-cv-class.md)|Tworzy typ trwałej z systemem innym niż stała typu.|
+|[add_const —](../standard-library/add-const-class.md)|Tworzy **const** typu z typu.|
+|[add_volatile —](../standard-library/add-volatile-class.md)|Tworzy **volatile** typu z typu.|
+|[add_cv](../standard-library/add-cv-class.md)|Tworzy **const volatile** typu z typu.|
+|[remove_const](../standard-library/remove-const-class.md)|Tworzy typ niestały z typu.|
+|[remove_volatile](../standard-library/remove-volatile-class.md)|Tworzy typ-volatile z typu.|
+|[remove_cv](../standard-library/remove-cv-class.md)|Tworzy typ niestały volatile z typu.|
 
-Modyfikacje odwołania
+Odwołanie do modyfikacji
 
 |||
 |-|-|
 |[add_lvalue_reference](../standard-library/add-lvalue-reference-class.md)|Tworzy odwołanie do typu z typu.|
-|[add_rvalue_reference](../standard-library/add-rvalue-reference-class.md)|Tworzy odwołania do r-wartości do typu z typu|
-|[remove_reference —](../standard-library/remove-reference-class.md)|Tworzy typ innych niż odwołania z typu.|
+|[add_rvalue_reference](../standard-library/add-rvalue-reference-class.md)|Tworzy odwołanie rvalue do typu z typu|
+|[remove_reference](../standard-library/remove-reference-class.md)|Tworzy typ inny niż odwołanie z typu.|
 
-Modyfikacje logowania
+Zmiany logowania
 
 |||
 |-|-|
-|[make_signed](../standard-library/make-signed-class.md)|Tworzy typ, jeśli podpisany lub najmniejszą podpisem typu mniejsza niż rozmiar typu.|
-|[make_unsigned](../standard-library/make-unsigned-class.md)|Tworzy typ, jeśli bez znaku lub najmniejszą typu bez znaku mniejsza niż rozmiar typu.|
+|[make_signed](../standard-library/make-signed-class.md)|Tworzy typ, jeśli podpisany lub najmniejszy typ ze znakiem mniejszy niż rozmiar do typu.|
+|[make_unsigned](../standard-library/make-unsigned-class.md)|Tworzy typ, jeśli bez znaku lub najmniejszego typu bez znaku mniejszy niż rozmiar, aby wpisać.|
 
 Modyfikacje tablicy
 
 |||
 |-|-|
-|[remove_all_extents —](../standard-library/remove-all-extents-class.md)|Tworzy typu nietablicowego z typem tablicy.|
-|[remove_extent](../standard-library/remove-extent-class.md)|Tworzy typ elementu z typem tablicy.|
+|[remove_all_extents —](../standard-library/remove-all-extents-class.md)|Tworzy typ inny niż tablica z typu tablicy.|
+|[remove_extent](../standard-library/remove-extent-class.md)|Tworzy typ elementu z typu tablicy.|
 
-Modyfikacje wskaźnika
+Wskaźnik zmiany
 
 |||
 |-|-|
-|[add_pointer](../standard-library/add-pointer-class.md)|Tworzy wskaźnika do typu z typu.|
+|[add_pointer](../standard-library/add-pointer-class.md)|Tworzy wskaźnik do typu z typu.|
 |[remove_pointer](../standard-library/remove-pointer-class.md)|Tworzy typ ze wskaźnika do typu.|
 
 Inne przekształcenia
 
 |||
 |-|-|
-|[aligned_storage](../standard-library/aligned-storage-class.md)|Przydziela niezainicjowanej pamięci dla typu wyrównane.|
-|[aligned_union](../standard-library/aligned-union-class.md)|Przydziela niezainicjowanej pamięci dla Unii wyrównany z nieuproszczony konstruktora lub destruktora.|
-|[common_type](../standard-library/common-type-class.md)|Tworzy spotykane typy pakiet parametrów.|
-|[warunkowe](../standard-library/conditional-class.md)|Jeśli warunek jest spełniony, tworzy pierwszy określonego typu, w przeciwnym razie drugi określonego typu.|
-|[decay](../standard-library/decay-class.md)|Tworzy typ jako przekazany przez wartość. Sprawia, że typ bez odwołań, wartością stałą lub trwałej lub sprawia, że wskaźnik do typu.|
+|[aligned_storage](../standard-library/aligned-storage-class.md)|Przydziela wyrównany typ. niezainicjowanej pamięci.|
+|[aligned_union](../standard-library/aligned-union-class.md)|Przydziela niezainicjowanej pamięci dla Unii wyrównany z nietrywialnymi Konstruktor lub destruktor.|
+|[common_type](../standard-library/common-type-class.md)|Tworzy typ wspólny wszystkich typów pakiet parametrów.|
+|[warunkowe](../standard-library/conditional-class.md)|Jeśli warunek jest spełniony, tworzy pierwszego określonego typu, w przeciwnym razie drugiego określonego typu.|
+|[decay](../standard-library/decay-class.md)|Tworzy typ, jak przekazać przez wartość. Tworzy typ niebędący odniesieniem, niestały lub trwałej lub tworzy wskaźnik do typu.|
 |[enable_if](../standard-library/enable-if-class.md)|Jeśli warunek jest spełniony, tworzy określonego typu, w przeciwnym razie bez typu.|
-|[result_of](../standard-library/result-of-class.md)|Określa typ zwracany można wywołać typu, który pobiera określone typy argumentów.|
-|[underlying_type](../standard-library/underlying-type-class.md)|Tworzy integralną typ podstawowy dla typu wyliczenia.|
+|[result_of](../standard-library/result-of-class.md)|Określa typ zwracany typ możliwy do wywołania, który przyjmuje określone typy argumentów.|
+|[underlying_type](../standard-library/underlying-type-class.md)|Tworzy podstawowy typ całkowitą typ wyliczenia.|
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -22,16 +22,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d268b9cd2ba7d83f44b5e0ebd516208d17ee726
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6ea34ac38b70defc873278ce964ff10b8383dcc5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858110"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966586"
 ---
 # <a name="ostrstream-class"></a>ostrstream — Klasa
 
-Opis obiektu, który kontroluje wstawiania elementów i obiektów zakodowanych do buforu strumienia klasy [strstreambuf —](../standard-library/strstreambuf-class.md).
+Opisuje obiekt, który kontroluje wstawiania elementów i obiektów zakodowanych do bufora strumienia, klasy [strstreambuf —](../standard-library/strstreambuf-class.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -54,22 +54,22 @@ Obiekt przechowuje obiekt klasy `strstreambuf`.
 
 ### <a name="member-functions"></a>Funkcje Członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[Blokowanie](#freeze)|Powoduje, że jest niedostępna za pośrednictwem operacji buforu strumienia buforu strumienia.|
-|[pcount](#pcount)|Zwraca liczbę z liczbą elementów zapisywane w kontrolowanej sekwencji.|
-|[rdbuf](#rdbuf)|Zwraca wskaźnik do strumienia powiązanych `strstreambuf` obiektu.|
-|[str](#str)|Wywołania [Zablokuj](../standard-library/strstreambuf-class.md#freeze), a następnie zwraca wskaźnik do początku kontrolowanej sekwencji.|
+|[blokowanie](#freeze)|Powoduje, że bufor strumienia będzie dostępny za pośrednictwem operacji buforu strumienia.|
+|[pcount —](#pcount)|Zwraca liczbę elementów zapisywane w kontrolowanej sekwencji.|
+|[rdbuf](#rdbuf)|Zwraca wskaźnik do strumienia skojarzonej `strstreambuf` obiektu.|
+|[str](#str)|Wywołania [freeze](../standard-library/strstreambuf-class.md#freeze), a następnie zwraca wskaźnik do początku kontrolowanej sekwencji.|
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<strstream — >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="freeze"></a>  ostrstream::FREEZE
 
-Powoduje, że jest niedostępna za pośrednictwem operacji buforu strumienia buforu strumienia.
+Powoduje, że bufor strumienia będzie dostępny za pośrednictwem operacji buforu strumienia.
 
 ```cpp
 void freeze(bool _Freezeit = true);
@@ -77,15 +77,15 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Parametry
 
-`_Freezeit` A `bool` wskazującą, czy ma strumień jest zablokowana.
+*_Freezeit* A **bool** wskazującą, czy chcesz, aby strumień jest zablokowana.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania funkcji Członkowskich [rdbuf](#rdbuf) -> [freeze](../standard-library/strstreambuf-class.md#freeze)(_ *Freezeit*).
+Wywołania funkcji elementu członkowskiego [rdbuf —](#rdbuf) -> [freeze](../standard-library/strstreambuf-class.md#freeze)(_ *Freezeit*).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [strstream::freeze](../standard-library/strstreambuf-class.md#freeze) na przykład, który używa **Zablokuj**.
+Zobacz [strstream::freeze](../standard-library/strstreambuf-class.md#freeze) przykład, który używa `freeze`.
 
 ## <a name="ostrstream"></a>  ostrstream::ostrstream
 
@@ -101,23 +101,23 @@ ostrstream(char* ptr,
 
 ### <a name="parameters"></a>Parametry
 
-`ptr` Bufor.
+*PTR* buforu.
 
-`count` Rozmiar buforu w bajtach.
+*Liczba* rozmiar buforu w bajtach.
 
-`_Mode` Tryb wejściowymi i wyjściowymi buforu. Zobacz [ios_base::openmode](../standard-library/ios-base-class.md#openmode) Aby uzyskać więcej informacji.
+*_Tryb* wejściowy i wyjściowy tryb buforu. Zobacz [ios_base::openmode](../standard-library/ios-base-class.md#openmode) Aby uzyskać więcej informacji.
 
 ### <a name="remarks"></a>Uwagi
 
-Oba konstruktory zainicjowanie klasy głównej przez wywołanie metody [ostream](../standard-library/ostream-typedefs.md#ostream)( **sb**), gdzie **sb** jest przechowywane obiekt klasy [strstreambuf —](../standard-library/strstreambuf-class.md). Pierwszy Konstruktor inicjuje również **sb** przez wywołanie metody `strstreambuf`. Drugi Konstruktor inicjuje klasy podstawowej, jeden z dwóch sposobów:
+Oba konstruktory inicjowania klasy bazowej, wywołując [ostream](../standard-library/ostream-typedefs.md#ostream)(**sb**), gdzie `sb` jest przechowywany obiekt klasy [strstreambuf —](../standard-library/strstreambuf-class.md). Pierwszy Konstruktor inicjuje również `sb` przez wywołanie metody `strstreambuf`. Drugi Konstruktor inicjuje klasę bazową, jeden z dwóch sposobów:
 
-- Jeśli `_Mode`  &  **ios_base::app**== 0, następnie `ptr` musi wyznaczyć pierwszy element tablicy `count` elementów i wywołania konstruktora `strstreambuf`( `ptr`, `count`, `ptr`).
+- Jeśli `_Mode`  &  **ios_base::app**== 0, następnie `ptr` należy wyznaczyć pierwszy element tablicy `count` elementów i Konstruktor wywołuje `strstreambuf`(`ptr`, `count`, `ptr`).
 
-- W przeciwnym razie `ptr` musi wyznaczyć pierwszy element tablicy liczba elementów zawierający parametry C których pierwszy element określony przez `ptr`i wywołania konstruktora `strstreambuf`( `ptr`, `count`, `ptr` + `strlen`( `ptr`) ).
+- W przeciwnym razie `ptr` należy wyznaczyć pierwszy element tablicy liczba elementów zawierające ciąg C którego pierwszy element określony przez `ptr`i wywołuje konstruktor `strstreambuf`(`ptr`, `count`, `ptr` + `strlen`( `ptr`) ).
 
 ## <a name="pcount"></a>  ostrstream::pcount
 
-Zwraca liczbę z liczbą elementów zapisywane w kontrolowanej sekwencji.
+Zwraca liczbę elementów zapisywane w kontrolowanej sekwencji.
 
 ```cpp
 streamsize pcount() const;
@@ -129,11 +129,11 @@ Liczba elementów zapisywane w kontrolowanej sekwencji.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca [rdbuf](#rdbuf) -> [pcount](../standard-library/strstreambuf-class.md#pcount).
+Funkcja elementu członkowskiego zwraca [rdbuf —](#rdbuf) -> [pcount —](../standard-library/strstreambuf-class.md#pcount).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [strstream::pcount](../standard-library/strstreambuf-class.md#pcount) dla przykładu korzystającego z `pcount`.
+Zobacz [strstream::pcount](../standard-library/strstreambuf-class.md#pcount) dla przykładu, który używa `pcount`.
 
 ## <a name="rdbuf"></a>  ostrstream::rdbuf
 
@@ -145,19 +145,19 @@ strstreambuf *rdbuf() const
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do strumienia powiązanych strstreambuf — obiektu.
+Strstreambuf — obiekt skojarzonej wskaźnik do strumienia.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca adres buforu strumienia przechowywanych typu **wskaźnika** do [strstreambuf —](../standard-library/strstreambuf-class.md).
+Funkcja elementu członkowskiego zwraca adres buforu strumienia przechowywanych typu `pointer` do [strstreambuf —](../standard-library/strstreambuf-class.md).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) dla przykładu korzystającego z `rdbuf`.
+Zobacz [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) dla przykładu, który używa `rdbuf`.
 
 ## <a name="str"></a>  ostrstream::str
 
-Wywołania [Zablokuj](../standard-library/strstreambuf-class.md#freeze), a następnie zwraca wskaźnik do początku kontrolowanej sekwencji.
+Wywołania [freeze](../standard-library/strstreambuf-class.md#freeze), a następnie zwraca wskaźnik do początku kontrolowanej sekwencji.
 
 ```cpp
 char *str();
@@ -165,15 +165,15 @@ char *str();
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Wskaźnik do początku kontrolowanej sekwencji.
+Wskaźnik na początek kontrolowanej sekwencji.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str).
+Funkcja elementu członkowskiego zwraca [rdbuf —](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str).
 
 ### <a name="example"></a>Przykład
 
-Zobacz [strstream::str](../standard-library/strstreambuf-class.md#str) dla przykładu korzystającego z **str**.
+Zobacz [strstream::str](../standard-library/strstreambuf-class.md#str) dla przykładu, który używa `str`.
 
 ## <a name="see-also"></a>Zobacz także
 

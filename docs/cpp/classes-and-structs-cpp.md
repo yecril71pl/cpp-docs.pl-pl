@@ -18,19 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61348578018a5bbddcaff293fa3ed76575eb16de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 88836d93d6ce3ba4dff817c7b470e87f48f61b14
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413248"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954180"
 ---
 # <a name="classes-and-structs-c"></a>Klasy i struktury (C++)
-W tej sekcji przedstawiono C++ klas i struktur. Dwa konstrukcje są takie same jak w języku C++, ale w strukturach dostępność domyślny jest publiczny, w klasach wartość domyślna jest prywatny.  
+Ta sekcja wprowadza C++ klas i struktur. Konstrukcje dwa są identyczne w języku C++, z tą różnicą, że w strukturach publiczne, jest wartość domyślna dostępu, natomiast w klasach, wartością domyślną jest prywatny.  
   
- Klasy i struktury są konstrukcje, zgodnie z którymi Definiowanie własnych typów. Klasy i struktury mogą jednocześnie zawierać elementów członkowskich danych i funkcji Członkowskich, które umożliwiają opisano stanu i zachowania typu.  
+ Klasy i struktury są konstrukcje, według których należy zdefiniować własne typy. Klasy i struktury można zawierają elementy członkowskie danych i funkcje Członkowskie, które umożliwiają opisują typ stanem i zachowaniem.  
   
- Omówiono następujące zagadnienia:  
+ Uwzględnione są następujące tematy:  
   
 -   [class](../cpp/class-cpp.md)  
   
@@ -58,17 +58,17 @@ W tej sekcji przedstawiono C++ klas i struktur. Dwa konstrukcje są takie same j
   
 -   [Pola bitowe języka C++](../cpp/cpp-bit-fields.md)  
   
- Klasa trzy typy struktury, klasy lub union. Są one uznane za pomocą [struktury](../cpp/struct-cpp.md), [klasy](../cpp/class-cpp.md), i [Unii](../cpp/unions.md) słowa kluczowe (zobacz [Definiowanie typu klasy](http://msdn.microsoft.com/en-us/e8c65425-0f3a-4dca-afc2-418c3b1e57da)). W poniższej tabeli przedstawiono różnice między typami trzy klasy.  
+ Typy trzy klasy są struktury, klasy lub union. Są deklarowane za pomocą [struktury](../cpp/struct-cpp.md), [klasy](../cpp/class-cpp.md), i [Unii](../cpp/unions.md) słów kluczowych. W poniższej tabeli przedstawiono różnice między typami trzy klasy.  
   
- Aby uzyskać więcej informacji, Unii, zobacz [unie](../cpp/unions.md). Informacje dotyczące zarządzanych klas i struktur, zobacz [klas i struktur](../windows/classes-and-structs-cpp-component-extensions.md).  
+ Aby uzyskać więcej informacji na temat Unii, zobacz [unie](../cpp/unions.md). Aby uzyskać informacje dotyczące zarządzanych klas i struktur, zobacz [klas i struktur](../windows/classes-and-structs-cpp-component-extensions.md).  
   
-### <a name="access-control-and-constraints-of-structures-classes-and-unions"></a>Kontrola dostępu i ograniczenia, struktur i Unii  
+### <a name="access-control-and-constraints-of-structures-classes-and-unions"></a>Kontrola dostępu i ograniczenia struktury, klasy i unie  
   
 |Struktury|Klasy|Unie|  
 |----------------|-------------|------------|  
-|klucz klasy `struct`|klucz klasy jest **— klasa**|klucz klasy jest **Unii**|  
-|Dostęp do domyślnej jest publiczny|Dostęp do domyślnej jest prywatny|Dostęp do domyślnej jest publiczny|  
-|Brak ograniczeń użycia|Brak ograniczeń użycia|Użyj tylko jeden element członkowski w czasie|  
+|klucz klasy jest **— struktura**|klucz klasy jest **klasy**|klucz klasy jest **Unii**|  
+|Dostęp domyślny jest publiczny|Dostęp domyślny jest prywatny|Dostęp domyślny jest publiczny|  
+|Bez ograniczeń użycia|Bez ograniczeń użycia|Użyj tylko jednego członka w czasie|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)

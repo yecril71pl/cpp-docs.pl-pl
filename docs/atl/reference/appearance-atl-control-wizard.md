@@ -1,5 +1,5 @@
 ---
-title: Wygląd, Kreator formantu ATL | Dokumentacja firmy Microsoft
+title: Wygląd, Kreator kontrolki ATL | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,87 +16,86 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1d27b46f529d8423bdaf733928a9f3e46b3f185
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3dd95e3e25cd015fd326c236f15a965e3fb9e801
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358605"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025883"
 ---
-# <a name="appearance-atl-control-wizard"></a>Wygląd, Kreator formantu ATL
-Tutaj należy wstawić "Wyszukiwanie" podsumowania.  
+# <a name="appearance-atl-control-wizard"></a>Wygląd, Kreator kontrolki ATL
+Tutaj Wstaw "Wyniki wyszukiwania" podsumowania.  
   
- Ta strona kreatora do identyfikowania użytkownika dodatkowe opcje elementu dla formantu. Ta strona jest dostępna dla formantów zidentyfikowane jako **standardowych formantów** w obszarze **kontroli typem** na [opcji, Kreator formantu ATL](../../atl/reference/options-atl-control-wizard.md) strony.  
+ Ta strona kreatora umożliwia zidentyfikowanie dodatkowego użytkownika elementu Opcje dla formantu. Ta strona jest dostępna dla kontrolki zidentyfikowane jako **standardowych kontrolek** w obszarze **kontrolowanie typu** na [opcji, Kreator kontrolki ATL](../../atl/reference/options-atl-control-wizard.md) strony.  
   
 ## <a name="uielement-list"></a>Lista elementów UI  
- **Wyświetl stan**  
- Określa wygląd formantu kontenera.  
+**Wyświetl stan**  
+Ustawia wyglądu formantu w kontenerze.  
   
--   **Nieprzezroczysta**: zestawy `VIEWSTATUS_OPAQUE` bitu w [podwójne](http://msdn.microsoft.com/library/windows/desktop/ms687201) wyliczenie i rysuje prostokąt kontroli cały przekazany do [CComControlBase::OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw) — metoda. Ten formant jest widoczny całkowicie nieprzezroczyste, a żaden z kontenera pokazuje poza granice formantu.  
+ -   **Nieprzezroczysty**: ustawia VIEWSTATUS_OPAQUE bit w [stan](http://msdn.microsoft.com/library/windows/desktop/ms687201) wyliczenie i rysuje prostokąt całego kontroli przekazany do [CComControlBase::OnDraw](../../atl/reference/ccomcontrolbase-class.md#ondraw) metody. Ten formant jest widoczny całkowicie nieprzezroczysty, a żaden z kontenera pokazuje poza granice formantu.      
+      
+        To ustawienie pozwala kontenera narysuj kontrolkę szybciej. Jeśli ta opcja nie jest zaznaczone, formant może zawierać części przezroczysty.  
+      
+        Tylko kontrolkę nieprzezroczyste może mieć jednolite tło.  
+      
+ -   Ustawia VIEWSTATUS_SOLIDBKGND bit w wyliczeniu stan. Tła formantu pojawia się jako jednolitego koloru nie wzorca.  
+      
+  Ta opcja jest dostępna tylko wtedy, gdy **nieprzezroczyste** jest również opcja.  
   
-     To ustawienie pomaga w kontenerze narysować kontrolkę szybciej. Jeśli ta opcja nie jest zaznaczona, formant może zawierać części przezroczysty.  
-  
-     Tylko nieprzezroczystości formantu może mieć jednolite tło.  
-  
--   Ustawia `VIEWSTATUS_SOLIDBKGND` bitu w `VIEWSTATUS` wyliczenia. Pełny kolor z wzorcem nie zostanie wyświetlony tła formantu.  
-  
-     Ta opcja jest dostępna tylko wtedy, gdy **nieprzezroczyste** wybrano również opcji.  
-  
- **Dodaj formant w oparciu**  
- Formant ma być oparta na typu kontrolki systemu Windows, dodając [CContainedWindow](ccontainedwindowt-class.md) element członkowski danych klasy Implementowanie formantu. Dodaje również mapy komunikatów i funkcji programu obsługi wiadomości do obsługi komunikatów systemu Windows dla formantu. Wybierz z listy Typ formantu systemu Windows, który chcesz utworzyć, jeśli istnieje.  
+**Dodaj kontrolkę na podstawie**  
+Formant opierać się na typ kontrolki Windows, dodając [CContainedWindow](ccontainedwindowt-class.md) element członkowski danych do klasy Implementowanie formantu. Dodaje także mapy komunikatów i funkcji obsługi komunikatów do obsługi komunikatów Windows dla formantu. Wybierz z listy Typ kontrolki Windows, który chcesz utworzyć, jeśli istnieje.  
 
+ -   `Button`  
+      
+ -   `ListBox`  
+      
+ -   `SysAnimate32`  
+      
+ -   `SysListView32`  
+      
+ -   `ComboBox`  
+      
+ -   `RichEdit`  
+      
+ -   `SysDateTimePick32`  
+      
+ -   `SysMonthCal32`  
+      
+ -   `ComboBoxEx32`  
+      
+ -   `ScrollBar`  
+      
+ -   `SysHeader32`  
+      
+ -   `SysTabControl32`  
+      
+ -   `Edit`  
+      
+ -   `Static`  
+      
+ -   `SysIPAddress32`  
+      
+ -   `SysTreeView32`  
   
--   `Button`  
+**Stan różne**  
+Określa dodatkowe opcje wygląd i zachowanie dla formantu.  
   
--   `ListBox`  
+ -   **Niewidoczne w czasie wykonywania**: formant ma być niewidoczna w czasie wykonywania. Niewidoczne formantów służy do wykonywania operacji w tle, takie jak wyzwalanie zdarzeń w określonych interwałach.  
+      
+ -   **Zachowuje się jak przycisk**: ustawia OLEMISC_ACTSLIKEBUTTON bit w [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) wyliczeniu, aby włączyć kontrolę do działania, takie jak przycisk. Jeśli kontener został oznaczony formantu lokacji klienta jako przycisk domyślny, wybranie tej opcji umożliwia kontrolki przycisku do wyświetlenia sama jako przycisk domyślny za pomocą rysowania sam grubszy ramki. Zobacz [CComControlBase::GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault) Aby uzyskać więcej informacji.  
+      
+  -   **Zachowuje się jak etykiety**: ustawia OLEMISC_ACTSLIKELABEL bit w wyliczeniu OLEMISC, aby włączyć kontrolę zamiast kontenera natywne etykiety. Kontener Określa, co należy zrobić z tą flagą Jeśli niczego.  
   
--   `SysAnimate32`  
+**Inne**  
+Ustawia zachowanie dodatkowe opcje dla formantu.  
   
--   `SysListView32`  
-  
--   `ComboBox`  
-  
--   `RichEdit`  
-  
--   `SysDateTimePick32`  
-  
--   `SysMonthCal32`  
-  
--   `ComboBoxEx32`  
-  
--   `ScrollBar`  
-  
--   `SysHeader32`  
-  
--   `SysTabControl32`  
-  
--   `Edit`  
-  
--   `Static`  
-  
--   `SysIPAddress32`  
-  
--   `SysTreeView32`  
-  
- **Stan obiektu**  
- Określa dodatkowe opcje wygląd i zachowanie dla formantu.  
-  
--   **Niewidoczne w czasie wykonywania**: formant ma być niewidoczna w czasie wykonywania. Niewidoczne formantów służy do wykonywania operacji w tle, takie jak wyzwalania zdarzenia w określonych interwałach.  
-  
--   **Zachowuje się jak przycisk**: zestawy `OLEMISC_ACTSLIKEBUTTON` bitu w [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) wyliczeniu, aby włączyć kontrolę do działania, takich jak przycisk. Po zaznaczeniu formantu lokacji klienta jako przycisk domyślny kontener wybranie tej opcji umożliwia formantu przycisku do wyświetlenia się jako przycisk domyślny za pomocą rysowania sam grubszy ramki. Zobacz [CComControlBase::GetAmbientDisplayAsDefault](../../atl/reference/ccomcontrolbase-class.md#getambientdisplayasdefault) Aby uzyskać więcej informacji.  
-  
--   **Zachowuje się jak etykiety**: zestawy `OLEMISC_ACTSLIKELABEL` bitu w `OLEMISC` wyliczeniu, aby włączyć kontrolę zamiast natywnego etykiety kontenera. Kontener określa czynności do wykonania tej flagi, jeśli wszystko.  
-  
- **Inne**  
- Ustawia opcje dodatkowe zachowanie dla formantu.  
-  
--   **Znormalizowany DC**: ustawia formant Utwórz znormalizowany kontekst urządzenia, gdy jest wywoływana do rysowania sam. Ta akcja standaryzuje wygląd formantu, ale powoduje Rysowanie w mniej wydajne.  
-  
--   **Tylko okno**: Określa, czy formant nie może być bez okien. Jeśli nie zaznaczysz tej opcji, formantu jest automatycznie bez okien w kontenerach obsługujących obiektów bez okien i jest automatycznie okna w kontenerach, które nie obsługuje obiektów bez okien. Ta opcja wymusza formantu za okna, nawet w kontenerach obsługujących obiektów bez okien.  
-  
--   **Insertable**: Wybierz tę opcję, aby mieć formantu są wyświetlane w **Wstaw obiekt** okna dialogowego aplikacji, takich jak Word i Excel. Następnie można wstawiać formantu przez dowolną aplikację, która obsługuje osadzonych obiektów za pomocą tego okna dialogowego.  
+ -   **Znormalizowane DC**: formant do utworzenia znormalizowany kontekst urządzenia, gdy jest wywoływana, aby narysować sam. Ta akcja standaryzuje wygląd formantu, ale to sprawia, że rysowania mniej wydajne rozwiązanie.  
+      
+ -   **Tylko okna**: Określa, że formant nie może być bez okien. Jeśli nie zaznaczysz tej opcji, formant jest automatycznie bez okien w kontenerach, które obsługują obiekty niepowiązanej z oknami, i jest automatycznie okna w kontenerach, które nie obsługują obiektów bez okien. Wybranie tej opcji wymusza kontroli nad się okna, nawet w przypadku kontenerów, które obsługują obiekty bez okien.  
+      
+ -   **Wstawianie**: Wybierz tę opcję, aby mieć formantu są wyświetlane w **Wstawianie obiektu** okna dialogowego aplikacji, takich jak Word i Excel. Następnie można wstawiać formantu przez dowolną aplikację, który obsługuje obiekty osadzone, za pomocą tego okna dialogowego.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Kreator formantu ATL](../../atl/reference/atl-control-wizard.md)   
- [SUBEDIT próbki: Nadklas formantu standardowego systemu Windows](http://msdn.microsoft.com/en-us/30e46bdc-ed92-417c-b6b8-359017265a7b)
+ [Kreator kontrolki ATL](../../atl/reference/atl-control-wizard.md)   
+ [SUBEDIT próbki: Superklas kontrolki Windows Standard](http://msdn.microsoft.com/30e46bdc-ed92-417c-b6b8-359017265a7b)
 

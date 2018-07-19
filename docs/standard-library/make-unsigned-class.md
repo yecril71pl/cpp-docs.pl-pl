@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37f121912a13d6e4dac1692d2dab1b5ffd34bd6d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f379500f9455ed9ad9a581966e0f8ed7bfed13f7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855565"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953917"
 ---
 # <a name="makeunsigned-class"></a>make_unsigned — Klasa
 
-Wpisz sprawia, że lub najmniejszą niepodpisanych wpisz większa niż lub równa o rozmiarze do typu.
+Tworzy typ lub najmniejszy niepodpisane wpisz większa lub równa rozmiarze do typu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,17 +42,17 @@ using make_unsigned_t = typename make_unsigned<T>::type;
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`T`|Typ do modyfikacji.|
+|*T*|Typ do modyfikacji.|
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie modyfikator typu przechowuje zmodyfikowane — typ danych `T` Jeśli `is_unsigned<T>` jest spełniony. W przeciwnym razie jest najmniejszą typu ze znakiem `ST` dla którego `sizeof (T) <= sizeof (ST)`.
+Wystąpienie modyfikatora typu przechowuje zmodyfikowany typ, który jest *T* Jeśli `is_unsigned<T>` prawdziwe. W przeciwnym razie jest najmniejszą typ ze znakiem `ST` dla którego `sizeof (T) <= sizeof (ST)`.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6310281aa86c48ae0a8b0fb313e79994d0b9b538
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1193e7ab65c49f0f79aeae52ca6563310296116d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863894"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953651"
 ---
 # <a name="ltistreamgt-functions"></a>&lt;IStream&gt; funkcji
 
@@ -24,9 +24,9 @@ ms.locfileid: "33863894"
 |-|-|
 |[swap](#istream_swap)|[ws](#ws)|
 
-## <a name="istream_swap"></a>  Swap
+## <a name="istream_swap"></a>  swap
 
-Zamienia elementy dwa obiekty stream.
+Zamienia elementy z dwóch obiektów strumienia.
 
 ```cpp
 template <class Elem, class Tr>
@@ -42,9 +42,9 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Strumień.
+*po lewej stronie* strumienia.
 
-`right` Strumień.
+*prawy* strumienia.
 
 ## <a name="ws"></a>  ws
 
@@ -56,7 +56,7 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 
 ### <a name="parameters"></a>Parametry
 
-`_Istr` Strumień.
+*_Istr* strumienia.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -64,13 +64,13 @@ Strumień.
 
 ### <a name="remarks"></a>Uwagi
 
-Manipulatora wyodrębnia i odrzuca wszystkie elementy `ch` dla którego [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype** \< **elementu**>> ( [getloc](../standard-library/ios-base-class.md#getloc)). **jest**( **ctype** \< **elementu**>:: **miejsca**, **ch**) ma wartość true.
+Manipulator wyodrębnia i odrzuca wszelkie elementy `ch` dla którego [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype** \< **Elem**>> ( [getloc —](../standard-library/ios-base-class.md#getloc)). **jest**( **ctype** \< **Elem**>:: **miejsca**, **ch**) ma wartość true.
 
-Wywołania funkcji [metoda setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) w przypadku wykrycia koniec pliku podczas wyodrębniania elementów. Zwraca `_Istr`.
+Wywołania funkcji [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) w przypadku wykrycia koniec pliku podczas wyodrębniania elementów. Zwraca *_Istr*.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [operator >>](../standard-library/istream-operators.md#op_gt_gt) przykład przy użyciu `ws`.
+Zobacz [operator >>](../standard-library/istream-operators.md#op_gt_gt) na przykład za pomocą `ws`.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -28,16 +28,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d48bd8dce38a5042c01b56f40cebb2e030be6f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70ffecdfdf661e7423a4db0898b05dfa2f5ce832
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858789"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954646"
 ---
 # <a name="referencewrapper-class"></a>reference_wrapper — Klasa
 
-Opakowuje odwołanie.
+Opakowuje odwołania.
 
 ## <a name="syntax"></a>Składnia
 
@@ -63,9 +63,9 @@ private:
 
 ## <a name="remarks"></a>Uwagi
 
-A `reference_wrapper<Ty>` kopiowania umożliwia konstrukcji i kopiowania można przypisać otokę odwołanie do obiektu lub funkcji typu `Ty`oraz posiada wskaźnika, który wskazuje obiekt tego typu. A `reference_wrapper` może służyć do przechowywania odwołań w kontenerach standardowe oraz przekazywanie obiektów w odniesieniu do `std::bind`.
+A `reference_wrapper<Ty>` kopiowania konstrukcyjną i kopiowania można przypisać otokę odwołanie do obiektu lub funkcji typu `Ty`i przechowuje wskaźnika, który wskazuje na obiekt tego typu. A `reference_wrapper` może służyć do przechowywania odwołań w standardowych kontenerów, a także do przekazywania obiektów w odniesieniu do `std::bind`.
 
-Typ `Ty` musi być typu obiektu lub typu funkcji lub statycznej assert kończy się niepowodzeniem w czasie kompilacji.
+Typ `Ty` musi być typu obiektu lub typu funkcji lub asercja statyczna kończy się niepowodzeniem w czasie kompilacji.
 
 Funkcje pomocnicze [std::ref](functional-functions.md#ref) i [std::cref](functional-functions.md#cref) może służyć do tworzenia `reference_wrapper` obiektów.
 
@@ -79,14 +79,14 @@ Funkcje pomocnicze [std::ref](functional-functions.md#ref) i [std::cref](functio
 
 |Nazwa typu|Opis|
 |-|-|
-|[result_type](#result_type)|Typ wyniku słabe opakowana odwołania.|
-|[Typ](#type)|Typ odwołania opakowana.|
+|[result_type](#result_type)|Typ wyniku słabe odwołanie opakowana.|
+|[Typ](#type)|Typ opakowany odwołania.|
 
 ### <a name="member-functions"></a>Funkcje Członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[get](#get)|Pobiera odwołanie opakowana.|
+|[get](#get)|Pobiera opakowany odwołania.|
 
 ### <a name="operators"></a>Operatory
 
@@ -98,11 +98,11 @@ Funkcje pomocnicze [std::ref](functional-functions.md#ref) i [std::cref](functio
 
 **Nagłówek:** \<funkcjonalności >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="get"></a>  reference_wrapper::Get
 
-Pobiera odwołanie opakowana.
+Pobiera opakowany odwołania.
 
 ```cpp
 Ty& get() const noexcept;
@@ -110,7 +110,7 @@ Ty& get() const noexcept;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca odwołanie opakowana.
+Funkcja elementu członkowskiego zwraca odwołanie opakowana.
 
 ### <a name="example"></a>Przykład
 
@@ -149,7 +149,7 @@ operator Ty&() const noexcept;
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca element członkowski operatora `*ptr`.
+Operator elementu członkowskiego zwraca `*ptr`.
 
 ### <a name="example"></a>Przykład
 
@@ -186,13 +186,13 @@ auto operator()(Types&&... args);
 
 ### <a name="parameters"></a>Parametry
 
-`Types` Typy listy argumentów.
+*Typy* typy listy argumentów.
 
-`args` Lista argumentów.
+*argumenty* listy argumentów.
 
 ### <a name="remarks"></a>Uwagi
 
-Element członkowski szablonu `operator()` zwraca `std::invoke(get(), std::forward<Types>(args)...)`.
+Szablon elementu członkowskiego `operator()` zwraca `std::invoke(get(), std::forward<Types>(args)...)`.
 
 ### <a name="example"></a>Przykład
 
@@ -229,13 +229,13 @@ reference_wrapper(Ty& val) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zakodowania.
+*Ty* typu do opakowania.
 
-`val` Wartość do zakodowania.
+*Val* wartość do zakodowania.
 
 ### <a name="remarks"></a>Uwagi
 
-Konstruktor ustawia przechowywana wartość `ptr` do `&val`.
+Konstruktor określa wartości przechowywanej `ptr` do `&val`.
 
 ### <a name="example"></a>Przykład
 
@@ -270,7 +270,7 @@ i = -1
 
 ## <a name="result_type"></a>  reference_wrapper::result_type
 
-Typ wyniku słabe opakowana odwołania.
+Typ wyniku słabe odwołanie opakowana.
 
 ```cpp
 typedef R result_type;
@@ -278,7 +278,7 @@ typedef R result_type;
 
 ### <a name="remarks"></a>Uwagi
 
-`result_type` Element typedef jest synonimem typu słabe wyników opakowana funkcja. Ten element typedef jest znaczący tylko dla typów funkcji.
+`result_type` Typedef jest synonimem dla typ wyniku słabe opakowana funkcja. Ten element typedef jest przydatny tylko dla typów funkcji.
 
 ### <a name="example"></a>Przykład
 
@@ -309,7 +309,7 @@ val = -3
 
 ## <a name="type"></a>  reference_wrapper::type
 
-Typ odwołania opakowana.
+Typ opakowany odwołania.
 
 ```cpp
 typedef Ty type;
@@ -317,7 +317,7 @@ typedef Ty type;
 
 ### <a name="remarks"></a>Uwagi
 
-Element typedef jest synonimem argument szablonu `Ty`.
+Typedef jest synonimem dla argumentu szablonu `Ty`.
 
 ### <a name="example"></a>Przykład
 

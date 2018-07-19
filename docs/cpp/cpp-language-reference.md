@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25315121d3004601914c5b8872b496e57acec99f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0c3886e710d0262068848304d9f2419c835b67c2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417206"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954196"
 ---
 # <a name="c-language-reference"></a>Materiał referencyjny na temat języka C++
-To źródło odniesienia wyjaśnia sposób implementacji C++ w Microsoft Visual C++. Organizacja jest oparta na *opatrzone adnotacjami C++ podręcznika* Margaret Ellis i Bjarne Stroustrup oraz na ANSI/ISO C++ międzynarodowej standardowy (ISO/IEC FDIS 14882). Implementacje funkcji języka C++ specyficzne dla Microsoft są uwzględnione.  
+To źródło odniesienia wyjaśnia sposób implementacji C++ w Microsoft Visual C++. Organizacja jest oparta na *The Annotated C++ Reference Manual* autorstwa Margaret Ellis i Bjarne'a Stroustrupa oraz na ANSI/ISO C++ Międzynarodowy Standard (ISO/IEC FDIS 14882). Implementacje funkcji języka C++ specyficzne dla Microsoft są uwzględnione.  
 
-Omówienie programowania rozwiązań nowoczesnych wersji języka C++, zobacz [języka c++ Zapraszamy ponownie](welcome-back-to-cpp-modern-cpp.md).
+Omówienie rozwiązania w zakresie programowania nowoczesnym języku C++, zobacz [powitalnej zwrotnie do C++](welcome-back-to-cpp-modern-cpp.md).
   
  Zobacz następujące tabele, aby szybko znaleźć słowo kluczowe lub operator:  
   
@@ -46,7 +46,7 @@ Omówienie programowania rozwiązań nowoczesnych wersji języka C++, zobacz [j�
  [Konwersje standardowe](../cpp/standard-conversions.md)  
  Konwersje typu między typami wbudowanymi lub „podstawowymi”. Ponadto konwersje arytmetyczne i konwersje między wskaźnikiem, odwołaniem i typem wskaźnika do elementu członkowskiego.  
   
- [Operatory, priorytet i łączność](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
+ [Operatory, pierwszeństwo i kojarzenie](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
  Operatory w języku C++.  
   
  [Wyrażenia](../cpp/expressions-cpp.md)  
@@ -61,26 +61,23 @@ Omówienie programowania rozwiązań nowoczesnych wersji języka C++, zobacz [j�
  [Deklaracje i definicje](declarations-and-definitions-cpp.md)  
  Specyfikatory klasy magazynowej, definicje funkcji, inicjalizacje, wyliczenia, deklaracje class, struct i union oraz deklaracje typedef. Ponadto wbudowane funkcje, słowo kluczowe const, przestrzenie nazw.  
   
- [Deklaratory](http://msdn.microsoft.com/en-us/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838)  
- Część instrukcji deklaracji, która nazywa obiekt, typ lub funkcję. Deklaratory abstrakcyjne, nazwy typów, inicjatory, deklaracje i definicje funkcji, tablice, odwołania.  
-  
  [Klas, struktur i Unii](../cpp/classes-and-structs-cpp.md)  
- Wprowadzenie do klas, struktur i unii. Ponadto funkcje Członkowskie, specjalnych funkcji Członkowskich, elementy członkowskie danych, pola bitowe, ten wskaźnik, zagnieżdżonych klas.  
+ Wprowadzenie do klas, struktur i unii. Ponadto funkcje Członkowskie, funkcji specjalnych elementów członkowskich, składowe danych, pola bitowe, wskaźnik this, klasy zagnieżdżone.  
   
  [Klasy pochodne](../cpp/inheritance-cpp.md)  
- Dziedziczenie pojedyncze lub wielokrotne, funkcje wirtualne, wiele klas bazowych, klasy abstrakcyjne, reguły zakresu. Ponadto słowa kluczowego __super i \__interfejs słów kluczowych.  
+ Dziedziczenie pojedyncze lub wielokrotne, funkcje wirtualne, wiele klas bazowych, klasy abstrakcyjne, reguły zakresu. Ponadto __super i \__interfejsu słów kluczowych.  
   
  [Kontrola dostępu do elementu członkowskiego](../cpp/member-access-control-cpp.md)  
  Kontrolowanie dostępu do składowych klasy: słowa kluczowe public, private i protected. Funkcje i klasy zaprzyjaźnione.  
   
- [Przeciążanie](operator-overloading.md)  
- Operatory przeciążone zasady dotyczące przeciążania operatorów.  
+ [Przeciążenie](operator-overloading.md)  
+ Przeciążone operatory, zasady dotyczące przeciążania operatorów.  
   
  [Obsługa wyjątków](../cpp/exception-handling-in-visual-cpp.md)  
  Obsługa wyjątków C++, obsługa wyjątków strukturalnych (SEH), słowa kluczowe używane w pisaniu instrukcji obsługi wyjątków.  
   
  [Potwierdzenia i komunikaty dostarczane przez użytkownika](../cpp/assertion-and-user-supplied-messages-cpp.md)  
- `#error` dyrektywa, `static_assert` — słowo kluczowe, `assert` makra.  
+ `#error` dyrektywy, **static_assert** — słowo kluczowe, `assert` makra.  
   
  [Szablony](../cpp/templates-cpp.md)  
  Specyfikacje szablonów, szablony funkcji, szablony klas, słowo kluczowe typename, szablony a makra, szablony i inteligentne wskaźniki.  
@@ -89,7 +86,7 @@ Omówienie programowania rozwiązań nowoczesnych wersji języka C++, zobacz [j�
  Deklarowanie zdarzeń i programów obsługi zdarzeń.  
   
  [Modyfikatory specyficzne dla firmy Microsoft](../cpp/microsoft-specific-modifiers.md)  
- Modyfikatory specyficzne dla Microsoft C++. Pamięć adresowania, wywoływanie Konwencji, używania funkcji naked, rozszerzone atrybuty klasy magazynu (__declspec), \__w64.  
+ Modyfikatory specyficzne dla Microsoft C++. Pamięć adresowania, Konwencje wywoływania, funkcje bez dodatków, rozszerzone atrybuty klasy magazynu (__declspec), \__w64.  
   
  [Wbudowany asembler](../assembler/inline/inline-assembler.md)  
  Korzystanie z języka asembler i C++ w blokach __asm.  
@@ -98,12 +95,12 @@ Omówienie programowania rozwiązań nowoczesnych wersji języka C++, zobacz [j�
  Odwołanie do klas specyficznych dla Microsoft i globalne funkcje używane do obsługi typów modelu COM.  
   
  [Rozszerzenia Microsoft](../cpp/microsoft-extensions.md)  
- Rozszerzenia Microsoft do języka C++.  
+ Rozszerzenia Microsoft do C++.  
   
  [Niestandardowe zachowanie](../cpp/nonstandard-behavior.md)  
  Informacje o niestandardowe zachowanie kompilatora Visual C++.  
 
- [Witamy z powrotem na C++](welcome-back-to-cpp-modern-cpp.md) omówienie programowania C++ nowoczesnych rozwiązań pisanie programów bezpieczne, prawidłowe i efektywne.
+ [Witamy z powrotem na C++](welcome-back-to-cpp-modern-cpp.md) Przegląd nowoczesnym programowaniu C++ wskazówki dotyczące pisania bezpiecznych, prawidłowego i efektywnego programów.
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Component Extensions dla platform środowiska uruchomieniowego](../windows/component-extensions-for-runtime-platforms.md)  
@@ -115,7 +112,7 @@ Omówienie programowania rozwiązań nowoczesnych wersji języka C++, zobacz [j�
  [Dokumentacja preprocesora języka C/C++](../preprocessor/c-cpp-preprocessor-reference.md)  
  Materiał referencyjny na temat pragm, dyrektyw preprocesora, wstępnie zdefiniowanych makr i preprocesora.  
   
- [Bibliotek języka Visual C++](../standard-library/cpp-standard-library-reference.md)  
+ [Biblioteki Visual C++](../standard-library/cpp-standard-library-reference.md)  
  Lista łączy do referencyjnych stron startowych na temat różnych bibliotek Visual C++.  
   
 ## <a name="see-also"></a>Zobacz też  

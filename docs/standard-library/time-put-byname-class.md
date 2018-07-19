@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39db2ead78a123c3274405e3560bca1c67cf1f5c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 10c01fcc7c75fb3ea9abf5803f5f17d3bd378333
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854145"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953904"
 ---
 # <a name="timeputbyname-class"></a>time_put_byname — Klasa
 
-Klasy pochodne szablonu opisuje obiekt, który może służyć jako zestaw reguł ustawień regionalnych typu `time_put` \< CharType, OutputIterator >.
+Klasa pochodna szablonu opisująca obiekt, który może służyć jako zestaw reguł ustawień regionalnych typu `time_put` \< CharType, OutputIterator >.
 
 ## <a name="syntax"></a>Składnia
 
@@ -50,19 +50,21 @@ protected:
 
 ### <a name="parameters"></a>Parametry
 
-`_Locname` Nazwa ustawień regionalnych.
+*_Locname*  
+ Nazwy ustawień regionalnych.
 
-`_Refs` Liczba początkowa odwołania.
+*_Refs*  
+ Licznik odwołań początkowej.
 
 ## <a name="remarks"></a>Uwagi
 
-Jego zachowanie jest określany przez [o nazwie](../standard-library/locale-class.md#name) ustawień regionalnych `_Locname`. Każdy Konstruktor inicjuje jego obiektu podstawowego z [time_put —](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator > ( `_Refs`).
+Jego zachowanie jest określana przez [o nazwie](../standard-library/locale-class.md#name) ustawień regionalnych *_Locname*. Każdy Konstruktor inicjuje jego podstawowego obiektu z [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator > (`_Refs`).
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<ustawień regionalnych >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

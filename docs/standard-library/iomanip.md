@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a410dae35771d89b9d9ae72c8221501f051d10e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f58622230541b0eedf4e7c73d12e81c36ea70fc9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846574"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953478"
 ---
 # <a name="ltiomanipgt"></a>&lt;iomanip&gt;
 
-Obejmują `iostreams` standardowy nagłówek \<iomanip — > Aby zdefiniować kilka manipulatory każdy wykonać jeden argument.
+Obejmują `iostreams` standardowy nagłówek \<iomanip > Aby zdefiniować kilka manipulatory wykonać każdy pojedynczy argument.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,23 +37,23 @@ Obejmują `iostreams` standardowy nagłówek \<iomanip — > Aby zdefiniować ki
 
 ## <a name="remarks"></a>Uwagi
 
-Zwraca każdy z tych manipulatory nieokreślonego typu o nazwie **T1** za pośrednictwem **T10**, który zarówno overloads `basic_istream` \< **elementu**, **Tr**>`::`[operator >>](../standard-library/istream-operators.md#op_gt_gt) i `basic_ostream` \< **elementu**, **Tr** > `::` [operator <<](../standard-library/ostream-operators.md#op_lt_lt).
+Każda z tych manipulatory zwraca nieokreślonego typu o nazwie `T1` za pośrednictwem `T10`, że oba przeciążenia `basic_istream` \< **Elem**, **Tr** > `::` [operator >>](../standard-library/istream-operators.md#op_gt_gt) i `basic_ostream` \< **Elem**, **Tr** > `::` [operator <<](../standard-library/ostream-operators.md#op_lt_lt).
 
 ### <a name="manipulators"></a>Manipulatory
 
 |||
 |-|-|
-|[get_money](../standard-library/iomanip-functions.md#iomanip_get_money)|Uzyskuje kwotę pieniężną, opcjonalnie w formacie międzynarodowej.|
+|[get_money](../standard-library/iomanip-functions.md#iomanip_get_money)|Pobiera wartość pieniężna opcjonalnie w formacie międzynarodowym.|
 |[get_time](../standard-library/iomanip-functions.md#iomanip_get_time)|Pobiera czas w strukturze czasu przy użyciu określonego formatu.|
-|[put_money](../standard-library/iomanip-functions.md#iomanip_put_money)|Udostępnia pieniężnego, opcjonalnie w formacie międzynarodowej.|
-|[put_time](../standard-library/iomanip-functions.md#iomanip_put_time)|Miejsce na godzinę w strukturze czasu i ciąg formatu do użycia.|
-|[w cudzysłowach](../standard-library/iomanip-functions.md#quoted)|Umożliwia wygodne dwustronną komunikację ciągów z operatorów wstawiania i wyodrębniania.|
-|[resetiosflags](../standard-library/iomanip-functions.md#resetiosflags)|Usuwa określone flagi.|
-|[setbase](../standard-library/iomanip-functions.md#setbase)|Ustaw podstawowej liczb całkowitych.|
-|[setfill](../standard-library/iomanip-functions.md#setfill)|Ustawia znak używany do wypełniania miejsc w prawej strony ekranu.|
+|[put_money](../standard-library/iomanip-functions.md#iomanip_put_money)|Zawiera kwotę pieniężną, opcjonalnie w formacie międzynarodowym.|
+|[put_time](../standard-library/iomanip-functions.md#iomanip_put_time)|Zawiera godzinę w strukturze czasu i ciąg formatu do użycia.|
+|[w cudzysłowach](../standard-library/iomanip-functions.md#quoted)|Umożliwia wygodne obustronne Konwertowanie ciągów z operatorów wstawiania i wyodrębniania.|
+|[resetiosflags](../standard-library/iomanip-functions.md#resetiosflags)|Czyści określone flagi.|
+|[setbase](../standard-library/iomanip-functions.md#setbase)|Ustawianie bazy dla liczb całkowitych.|
+|[setfill](../standard-library/iomanip-functions.md#setfill)|Określa znak, który będzie używany do wypełnienia miejsca do magazynowania w wyświetlaną z prawej strony.|
 |[setiosflags](../standard-library/iomanip-functions.md#setiosflags)|Ustawia określone flagi.|
-|[setprecision](../standard-library/iomanip-functions.md#setprecision)|Ustawia dokładność wartości zmiennoprzecinkowych.|
-|[setw](../standard-library/iomanip-functions.md#setw)|Określa szerokość pola wyświetlania.|
+|[setprecision](../standard-library/iomanip-functions.md#setprecision)|Ustawia precyzja wartości zmiennoprzecinkowych.|
+|[setw](../standard-library/iomanip-functions.md#setw)|Określa szerokość wyświetlanego pola.|
 
 ## <a name="see-also"></a>Zobacz także
 

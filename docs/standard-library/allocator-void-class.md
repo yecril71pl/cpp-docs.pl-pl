@@ -1,5 +1,5 @@
 ---
-title: Program przydzielania&lt;void&gt; klasy | Dokumentacja firmy Microsoft
+title: Allocator&lt;void&gt; klasy | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4179ddae0506d21ca3969559b05c618ab4d73e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0585396d2cacc2bb41abf364e3d01ca81629146f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846548"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953557"
 ---
-# <a name="allocatorltvoidgt-class"></a>Program przydzielania&lt;void&gt; — klasa
+# <a name="allocatorltvoidgt-class"></a>Allocator&lt;void&gt; klasy
 
-Specjalizacja szablonu alokatora klasy na typ `void`, definiowanie typów, które sensu, w tym kontekście.
+Specjalizacja alokatora klasy szablonu do typu **void**, definiowanie typów, które są uwzględnione w tym kontekście.
 
 ## <a name="syntax"></a>Składnia
 
@@ -51,7 +51,7 @@ class allocator<void> {
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa jawnie specjalizuje się klasy szablonu [alokatora](../standard-library/allocator-class.md) dla typu *void.* Operator przypisania and konstruktorów zachowanie takie same jak w przypadku klasy szablonu, ale definiuje on tylko następujących typów:
+Klasa jawnie specjalizuje się klasy szablonu [alokatora](../standard-library/allocator-class.md) dla typu **void**. Jego konstruktorów i operator przypisania działają takie same jak dla klasy szablonu, ale definiuje on tylko następujących typów:
 
 - [const_pointer](../standard-library/allocator-class.md#const_pointer).
 
@@ -59,13 +59,13 @@ Klasa jawnie specjalizuje się klasy szablonu [alokatora](../standard-library/al
 
 - [value_type](../standard-library/allocator-class.md#value_type).
 
-- [ponownie powiązać](../standard-library/allocator-class.md#rebind), zagnieżdżone klasy szablonu.
+- [ponownie powiązać](../standard-library/allocator-class.md#rebind), szablon klasy zagnieżdżonej.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<pamięci >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

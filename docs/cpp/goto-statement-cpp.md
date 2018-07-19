@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52e3bbd026a00306fb2d8e69df94fd9c0c913039
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7676f38e52734fa2f0ce8ecbc9b268be1939f6dc
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953398"
 ---
 # <a name="goto-statement-c"></a>goto — instrukcja (C++)
-`goto` Instrukcji bezwarunkowo przekazuje sterowanie do instrukcji, którego etykietą jest określony identyfikator.  
+**Goto** instrukcji bezwarunkowo przekazuje sterowanie do instrukcji, którego etykietą jest określony identyfikator.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,18 +33,18 @@ goto identifier;
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Instrukcja labeled wskazywany przez `identifier` musi znajdować się w bieżącej funkcji. Wszystkie `identifier` nazwy są członkami wewnętrznego obszaru nazw i w związku z tym nie zakłóca innych identyfikatorów.  
+ Instrukcja labeled wyznaczonym przez `identifier` musi znajdować się w bieżącej funkcji. Wszystkie `identifier` nazwy są elementami członkowskimi wewnętrznej przestrzeni nazw i w związku z tym kolidują z innymi identyfikatorami.  
   
- Etykieta instrukcji jest znaczący tylko `goto` instrukcji; w przeciwnym razie są ignorowane, etykiet instrukcji. Nie można ponownie zadeklarować etykiety.  
+ Etykieta instrukcji jest istotny tylko **goto** instrukcji; w przeciwnym razie etykiety instrukcji są ignorowane. Nie można ponownie zadeklarować etykiety.  
   
- Zaleca programowania stylu `break`, `continue`, i `return` instrukcje zamiast `goto` instrukcji, jeśli to możliwe. Jednak ponieważ `break` instrukcji zamknie tylko jeden poziom w pętli, może być konieczne użycie `goto` instrukcji, aby zakończyć głęboko zagnieżdżone pętli.  
+ Jest dobrą programowania stylu **podziału**, **nadal**, i **zwracają** instrukcji zamiast **przejdź do** instrukcji zawsze wtedy, gdy możliwe. Jednak ponieważ **podziału** instrukcji zamyka tylko jeden poziom w pętli, może być konieczne użycie **goto** instrukcję, aby zakończyć głęboko zagnieżdżonych pętli.  
   
- Aby uzyskać więcej informacji na temat etykiety i `goto` instrukcji, zobacz [Labeled — instrukcje](../cpp/labeled-statements.md) i [za pomocą etykiety instrukcji goto](http://msdn.microsoft.com/en-us/6cd7c31a-9822-4241-8566-f79f51be48fe).  
+ Aby uzyskać więcej informacji dotyczących etykiet i **goto** poufności informacji, zobacz [Labeled — instrukcje](../cpp/labeled-statements.md).  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie `goto` instrukcji przekazuje sterowanie do punktu z etykietą `stop` podczas `i` jest równe 3.  
+ W tym przykładzie **goto** instrukcji przekazuje sterowanie do punktu z etykietą `stop` podczas `i` jest równa 3.  
   
-```  
+```cpp  
 // goto_statement.cpp  
 #include <stdio.h>  
 int main()  

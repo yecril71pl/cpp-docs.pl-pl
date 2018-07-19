@@ -70,15 +70,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b85c64837f9bc7a0c8c1873f434855d77c01fb1b
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
-ms.translationtype: HT
+ms.openlocfilehash: ff18423aa981fc453850084bb2f315a5600cf6fd
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041636"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027641"
 ---
 # <a name="colesafearray-class"></a>Klasa COleSafeArray
-Klasa do pracy z tablicami dowolnego typu i wymiaru.  
+Klasa pracy z tablicami dowolnego typu i wymiar.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -98,45 +98,45 @@ class COleSafeArray : public tagVARIANT
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[COleSafeArray::AccessData](#accessdata)|Pobiera wskaźnik do tablicy danych.|  
+|[COleSafeArray::AccessData](#accessdata)|Pobiera wskaźnik do danych tablicy.|  
 |[COleSafeArray::AllocData](#allocdata)|Przydziela pamięć dla tablicy.|  
-|[COleSafeArray::AllocDescriptor](#allocdescriptor)|Przydziela pamięć dla deskryptora bezpiecznej tablicy.|  
-|[COleSafeArray::Attach](#attach)|Zapewnia kontrolę istniejącej **VARIANT** tablicy do `COleSafeArray` obiektu.|  
-|[COleSafeArray::Clear](#clear)|Zwalnia wszystkie dane w odpowiadającego **VARIANT**.|  
+|[COleSafeArray::AllocDescriptor](#allocdescriptor)|Przydziela pamięć dla deskryptora bezpieczną tablicą.|  
+|[COleSafeArray::Attach](#attach)|Zapewnia kontrolę nad istniejące `VARIANT` tablicy do `COleSafeArray` obiektu.|  
+|[COleSafeArray::Clear](#clear)|Zwalnia wszystkie dane w źródłowym `VARIANT`.|  
 |[COleSafeArray::Copy](#copy)|Tworzy kopię istniejącej tablicy.|  
-|[COleSafeArray::Create](#create)|Tworzy bezpiecznej tablicy.|  
-|[COleSafeArray::CreateOneDim](#createonedim)|Tworzy jednowymiarowa `COleSafeArray` obiektu.|  
+|[COleSafeArray::Create](#create)|Tworzy bezpieczną tablicą.|  
+|[COleSafeArray::CreateOneDim](#createonedim)|Tworzy jednowymiarową `COleSafeArray` obiektu.|  
 |[COleSafeArray::Destroy](#destroy)|Niszczy istniejącej tablicy.|  
 |[COleSafeArray::DestroyData](#destroydata)|Niszczy dane w bezpiecznej tablicy.|  
-|[COleSafeArray::DestroyDescriptor](#destroydescriptor)|Niszczy deskryptor bezpiecznej tablicy.|  
-|[COleSafeArray::Detach](#detach)|Odłącza **VARIANT** tablicy z `COleSafeArray` obiektu (tak, aby dane nie zostanie zwolniona).|  
-|[COleSafeArray::GetByteArray](#getbytearray)|Kopiuje zawartość do bezpiecznej tablicy w [CByteArray](../../mfc/reference/cbytearray-class.md).|  
-|[COleSafeArray::GetDim](#getdim)|Zwraca liczbę wymiarów tablicy.|  
-|[COleSafeArray::GetElement](#getelement)|Pobiera jeden element bezpiecznej tablicy.|  
-|[COleSafeArray::GetElemSize](#getelemsize)|Zwraca rozmiar w bajtach jeden element w bezpiecznej tablicy.|  
+|[COleSafeArray::DestroyDescriptor](#destroydescriptor)|Niszczy deskryptor bezpieczną tablicą.|  
+|[COleSafeArray::Detach](#detach)|Odłącza tablica wariant `COleSafeArray` obiektu (tak, aby dane nie zostanie zwolniona,).|  
+|[COleSafeArray::GetByteArray](#getbytearray)|Kopiuje zawartość do bezpiecznej tablicy do [CByteArray](../../mfc/reference/cbytearray-class.md).|  
+|[COleSafeArray::GetDim](#getdim)|Zwraca liczbę wymiarów w tablicy.|  
+|[COleSafeArray::GetElement](#getelement)|Pobiera pojedynczy element bezpieczną tablicą.|  
+|[COleSafeArray::GetElemSize](#getelemsize)|Zwraca rozmiar w bajtach, jeden element w tablicy bezpieczne.|  
 |[COleSafeArray::GetLBound](#getlbound)|Zwraca dolną granicę dla każdego wymiaru tablicy bezpiecznej.|  
-|[COleSafeArray::GetOneDimSize](#getonedimsize)|Zwraca liczbę elementów w jednowymiarowej tablicy `COleSafeArray` obiektu.|  
+|[COleSafeArray::GetOneDimSize](#getonedimsize)|Zwraca liczbę elementów w jednowymiarowy `COleSafeArray` obiektu.|  
 |[COleSafeArray::GetUBound](#getubound)|Zwraca górną granicę dla każdego wymiaru tablicy bezpiecznej.|  
-|[COleSafeArray::Lock](#lock)|Zwiększa liczbę blokad tablicy i umieszczenie wskaźnika do tablicy danych w deskryptorze tablicy.|  
+|[COleSafeArray::Lock](#lock)|Zwiększa liczbę blokad tablicy, a następnie umieszcza wskaźnik do danych w deskryptora tablicy.|  
 |[COleSafeArray::PtrOfIndex](#ptrofindex)|Zwraca wskaźnik do elementu indeksowanego.|  
-|[COleSafeArray::PutElement](#putelement)|Przypisuje pojedynczego elementu w tablicy.|  
-|[COleSafeArray::Redim](#redim)|Zmienia najmniej znaczący granica (po prawej stronie) bezpiecznej tablicy.|  
-|[COleSafeArray::ResizeOneDim](#resizeonedim)|Liczba elementów w jednowymiarowa zmienia `COleSafeArray` obiektu.|  
-|[COleSafeArray::UnaccessData](#unaccessdata)|Zmniejsza blokady liczba tablicy i unieważnia wskaźnika pobierane przez `AccessData`.|  
-|[COleSafeArray::Unlock](#unlock)|Zmniejsza liczbę blokad tablicy, może być zwolniony lub zmiany rozmiaru.|  
+|[COleSafeArray::PutElement](#putelement)|Przypisuje jeden element w tablicy.|  
+|[COleSafeArray::Redim](#redim)|Zmienia najmniej znaczący (po prawej stronie) granicę bezpiecznej tablicy.|  
+|[COleSafeArray::ResizeOneDim](#resizeonedim)|Zmienia liczbę elementów w jednowymiarowym `COleSafeArray` obiektu.|  
+|[COleSafeArray::UnaccessData](#unaccessdata)|Dekrementuje blokada count tablicę i unieważnia wskaźnika pobierane przez `AccessData`.|  
+|[COleSafeArray::Unlock](#unlock)|Zmniejsza liczbę blokad tablicy, może być zwolniona lub zmiany rozmiaru.|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[COleSafeArray::operator LPCVARIANT](#operator_lpcvariant)|Uzyskuje dostęp do odpowiadającego **VARIANT** struktury `COleSafeArray` obiektu.|  
-|[COleSafeArray::operator LPVARIANT](#operator_lpvariant)|Uzyskuje dostęp do odpowiadającego **VARIANT** struktury `COleSafeArray` obiektu.|  
-|[COleSafeArray::operator =](#operator_eq)|Kopiuje wartości do `COleSafeArray` obiektu ( **SAFEARRAY**, **VARIANT**, `COleVariant`, lub `COleSafeArray` tablicy).|  
-|[COleSafeArray::operator ==](#operator_eq_eq)|Porównuje dwie tablice typu variant ( **SAFEARRAY**, **VARIANT**, `COleVariant`, lub `COleSafeArray` tablice).|  
-|[COleSafeArray::operator &lt;&lt;](#operator_lt_lt)|Wyświetla zawartość `COleSafeArray` obiektu do kontekstu zrzutu.|  
+|[COleSafeArray::operator LPCVARIANT](#operator_lpcvariant)|Uzyskuje dostęp do podstawowych `VARIANT` struktury `COleSafeArray` obiektu.|  
+|[COleSafeArray::operator LPVARIANT](#operator_lpvariant)|Uzyskuje dostęp do podstawowych `VARIANT` struktury `COleSafeArray` obiektu.|  
+|[COleSafeArray::operator =](#operator_eq)|Kopiuje wartości do `COleSafeArray` obiektu (`SAFEARRAY`, `VARIANT`, `COleVariant`, lub `COleSafeArray` tablicy).|  
+|[COleSafeArray::operator ==](#operator_eq_eq)|Porównuje dwie tablice variant (`SAFEARRAY`, `VARIANT`, `COleVariant`, lub `COleSafeArray` tablicami).|  
+|[COleSafeArray::operator &lt;&lt;](#operator_lt_lt)|Wyświetla zawartość `COleSafeArray` obiektu kontekstu zrzutu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `COleSafeArray` pochodną OLE **VARIANT** struktury. OLE **SAFEARRAY** funkcji elementów członkowskich są dostępne za pośrednictwem `COleSafeArray`, jak również jako zestaw funkcji Członkowskich zaprojektowane specjalnie dla jednowymiarowe tablice bajtów.  
+ `COleSafeArray` pochodzi z OLE `VARIANT` struktury. OLE `SAFEARRAY` funkcje składowe są dostępne za pośrednictwem `COleSafeArray`, jak również jako zestaw elementów członkowskich zaprojektowane specjalnie dla tablic jednowymiarowych bajtów.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  `tagVARIANT`  
@@ -147,7 +147,7 @@ class COleSafeArray : public tagVARIANT
  **Nagłówek:** afxdisp.h  
   
 ##  <a name="accessdata"></a>  COleSafeArray::AccessData  
- Pobiera wskaźnik do tablicy danych.  
+ Pobiera wskaźnik do danych tablicy.  
   
 ```  
 void AccessData(void** ppvData);
@@ -158,23 +158,23 @@ void AccessData(void** ppvData);
  Wskaźnik do wskaźnika do tablicy danych.  
   
 ### <a name="remarks"></a>Uwagi  
- W przypadku błędu, funkcja zwraca [CMemoryException](../../mfc/reference/cmemoryexception-class.md) lub [COleException](../../mfc/reference/coleexception-class.md).  
+ W przypadku błędu, funkcja zgłasza [CMemoryException](../../mfc/reference/cmemoryexception-class.md) lub [COleException](../../mfc/reference/coleexception-class.md).  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCOleContainer#26](../../mfc/codesnippet/cpp/colesafearray-class_1.cpp)]  
   
 ##  <a name="allocdata"></a>  COleSafeArray::AllocData  
- Przydziela pamięć do bezpiecznej tablicy.  
+ Przydziela pamięć dla bezpiecznej tablicy.  
   
 ```  
 void AllocData();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- W przypadku błędu, funkcja zwraca [CMemoryException](../../mfc/reference/cmemoryexception-class.md) lub [COleException](../../mfc/reference/coleexception-class.md).  
+ W przypadku błędu, funkcja zgłasza [CMemoryException](../../mfc/reference/cmemoryexception-class.md) lub [COleException](../../mfc/reference/coleexception-class.md).  
   
 ##  <a name="allocdescriptor"></a>  COleSafeArray::AllocDescriptor  
- Przydziela pamięć dla deskryptora bezpiecznej tablicy.  
+ Przydziela pamięć dla deskryptora bezpieczną tablicą.  
   
 ```  
 void AllocDescriptor(DWORD dwDims);
@@ -185,10 +185,10 @@ void AllocDescriptor(DWORD dwDims);
  Liczba wymiarów w bezpiecznej tablicy.  
   
 ### <a name="remarks"></a>Uwagi  
- W przypadku błędu, funkcja zwraca [CMemoryException](../../mfc/reference/cmemoryexception-class.md) lub [COleException](../../mfc/reference/coleexception-class.md).  
+ W przypadku błędu, funkcja zgłasza [CMemoryException](../../mfc/reference/cmemoryexception-class.md) lub [COleException](../../mfc/reference/coleexception-class.md).  
   
 ##  <a name="attach"></a>  COleSafeArray::Attach  
- Zapewnia kontrolę nad danymi w istniejącym **VARIANT** tablicy do `COleSafeArray` obiektu.  
+ Zapewnia kontrolę nad danymi w istniejącym `VARIANT` tablicy do `COleSafeArray` obiektu.  
   
 ```  
 void Attach(VARIANT& varSrc);
@@ -196,23 +196,23 @@ void Attach(VARIANT& varSrc);
   
 ### <a name="parameters"></a>Parametry  
  *varSrc*  
- A **VARIANT** obiektu. *VarSrc* parametr musi mieć [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4)**VT_ARRAY**.  
+ Element `VARIANT` obiektu. *VarSrc* parametr musi mieć [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)VT_ARRAY.  
   
 ### <a name="remarks"></a>Uwagi  
- Źródło **VARIANT**jego typ jest ustawiony na `VT_EMPTY`. Ta funkcja usuwa bieżące dane tablicy ewentualne.  
+ Źródło `VARIANT`tego typu jest ustawiona na VT_EMPTY. Tę funkcję, czyści bieżące dane tablicy, jeśli istnieje.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [COleSafeArray::AccessData](#accessdata).  
   
 ##  <a name="clear"></a>  COleSafeArray::Clear  
- Czyści bezpiecznej tablicy.  
+ Czyści bezpieczną tablicą.  
   
 ```  
 void Clear();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja czyści bezpieczną tablicą przez ustawienie `VARTYPE` obiektu do `VT_EMPTY`. Bieżącą zawartość są wydawane i Tablica zostanie zwolniona.  
+ Funkcja czyści bezpieczną tablicą, ustawiając `VARTYPE` obiektu VT_EMPTY. Bieżącą zawartość zostaną zwolnione i tablicy jest zwalniana.  
   
 ##  <a name="colesafearray"></a>  COleSafeArray::COleSafeArray  
  Konstruuje `COleSafeArray` obiektu.  
@@ -238,27 +238,27 @@ COleSafeArray(const COleVariant& varSrc);
   
 ### <a name="parameters"></a>Parametry  
  *saSrc*  
- Istniejące `COleSafeArray` obiektu lub **SAFEARRAY** ma zostać skopiowany do nowego `COleSafeArray` obiektu.  
+ Istniejące `COleSafeArray` obiektu lub `SAFEARRAY` do skopiowania w nowe `COleSafeArray` obiektu.  
   
  *vtSrc*  
- **VARTYPE** nowej `COleSafeArray` obiektu.  
+ VARTYPE nowej `COleSafeArray` obiektu.  
   
  *psaSrc*  
- Wskaźnik do **SAFEARRAY** ma zostać skopiowany do nowego `COleSafeArray` obiektu.  
+ Wskaźnik do `SAFEARRAY` do skopiowania w nowe `COleSafeArray` obiektu.  
   
  *varSrc*  
- Istniejące **VARIANT** lub `COleVariant` obiekt ma zostać skopiowany do nowego `COleSafeArray` obiektu.  
+ Istniejące `VARIANT` lub `COleVariant` obiektu do skopiowania w nowe `COleSafeArray` obiektu.  
   
  *pSrc*  
- Wskaźnik do **VARIANT** obiekt ma zostać skopiowany do nowego `COleSafeArray` obiektu.  
+ Wskaźnik do `VARIANT` obiektu do skopiowania w nowe `COleSafeArray` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Wszystkie te konstruktorów tworzenia nowych `COleSafeArray` obiektów. Jeśli istnieje żaden parametr pustą `COleSafeArray` obiekt jest tworzony ( `VT_EMPTY`). Jeśli `COleSafeArray` zostaną skopiowane z innego tablica której [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) znany jest niejawnie ( `COleSafeArray`, `COleVariant`, lub **VARIANT**), **VARTYPE** z Tablica źródłowa jest zachowywana i nie musi być określony. Jeśli `COleSafeArray` zostaną skopiowane z innego tablica której **VARTYPE** nie jest znany ( **SAFEARRAY**), **VARTYPE** musi zostać określona w *vtSrc* parametru.  
+ Wszystkie te konstruktory tworzą nowe `COleSafeArray` obiektów. Jeśli nie ma parametru, pusta `COleSafeArray` obiekt zostanie utworzony (VT_EMPTY). Jeśli `COleSafeArray` jest kopiowany z innej tablicy, którego [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) jest niejawnie określany ( `COleSafeArray`, `COleVariant`, lub `VARIANT`), VARTYPE tablicy źródłowej są zachowywane i nie musi być określony. Jeśli `COleSafeArray` jest kopiowany z innej tablicy, w których VARTYPE jest nieznany (`SAFEARRAY`), VARTYPE musi być określona w *vtSrc* parametru.  
   
- W przypadku błędu, funkcja zwraca [CMemoryException](../../mfc/reference/cmemoryexception-class.md) lub [COleException](../../mfc/reference/coleexception-class.md).  
+ W przypadku błędu, funkcja zgłasza [CMemoryException](../../mfc/reference/cmemoryexception-class.md) lub [COleException](../../mfc/reference/coleexception-class.md).  
   
 ##  <a name="copy"></a>  COleSafeArray::Copy  
- Tworzy kopię istniejącego bezpiecznej tablicy.  
+ Tworzy kopię istniejącej bezpiecznej tablicy.  
   
 ```  
 void Copy(LPSAFEARRAY* ppsa);
@@ -266,13 +266,13 @@ void Copy(LPSAFEARRAY* ppsa);
   
 ### <a name="parameters"></a>Parametry  
  *ppsa*  
- Wskaźnik do lokalizacji, do której należy zwrócić nowego deskryptora tablicy.  
+ Wskaźnik do lokalizacji, w której ma zostać zwrócone nowego deskryptora tablicy.  
   
 ### <a name="remarks"></a>Uwagi  
- W przypadku błędu, funkcja zwraca [CMemoryException](../../mfc/reference/cmemoryexception-class.md) lub [COleException](../../mfc/reference/coleexception-class.md).  
+ W przypadku błędu, funkcja zgłasza [CMemoryException](../../mfc/reference/cmemoryexception-class.md) lub [COleException](../../mfc/reference/coleexception-class.md).  
   
 ##  <a name="create"></a>  COleSafeArray::Create  
- Przydziela i inicjuje dane dla tablicy.  
+ Przydziela i inicjuje danych tablicy.  
   
 ```  
 void Create(
@@ -289,19 +289,19 @@ void Create(
   
 ### <a name="parameters"></a>Parametry  
  *vtSrc*  
- Typ podstawowy elementu tablicy (to znaczy **VARTYPE** każdego elementu w tablicy). **VARTYPE** jest ograniczony do podzbioru typów variant. Ani **VT_ARRAY** ani **VT_BYREF** flagę można ustawić. **VT_EMPTY** i **VT_NULL** nie są prawidłowe typy podstawowe dla tablicy. Wszystkie inne typy są prawnych.  
+ Typ bazowy tablicy (czyli VARTYPE każdego elementu tablicy). VARTYPE jest ograniczona do podzbioru typów variant. Można ustawić flagi VT_BYREF ani VT_ARRAY. VT_EMPTY i VT_NULL nie są prawidłowe typy podstawowe dla tablicy. Wszystkie inne typy są dozwolone.  
   
  *dwDims*  
- Liczba wymiarów tablicy. Można to zmienić po utworzeniu tablicy o [Redim](#redim).  
+ Liczba wymiarów w tablicy. Można go zmienić po utworzeniu tablicy [Redim](#redim).  
   
  *rgElements*  
- Wskaźnik do liczby elementów w tablicy dla każdego wymiaru tablicy.  
+ Wskaźnik do tablicy liczbę elementów w tablicy dla każdego wymiaru.  
   
  *rgsabounds*  
- Wskaźnik do wektora granic (po jednej dla każdego wymiaru) do przydzielenia dla tablicy.  
+ Wskaźnik do wektora granic (po jednym dla każdego wymiaru) do przydzielenia dla tablicy.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja spowoduje wyczyszczenie bieżące dane tablicy, w razie potrzeby. W przypadku błędu, funkcja zwraca [CMemoryException](../../mfc/reference/cmemoryexception-class.md).  
+ Ta funkcja spowoduje wyczyszczenie bieżące dane tablicy, jeśli to konieczne. W przypadku błędu, funkcja zgłasza [CMemoryException](../../mfc/reference/cmemoryexception-class.md).  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCOleContainer#27](../../mfc/codesnippet/cpp/colesafearray-class_2.cpp)]  
@@ -319,34 +319,34 @@ void CreateOneDim(
   
 ### <a name="parameters"></a>Parametry  
  *vtSrc*  
- Typ podstawowy elementu tablicy (to znaczy **VARTYPE** każdego elementu w tablicy).  
+ Typ bazowy tablicy (czyli VARTYPE każdego elementu tablicy).  
   
  *dwElements*  
- Liczba elementów w tablicy. Można to zmienić po utworzeniu tablicy o [ResizeOneDim](#resizeonedim).  
+ Liczba elementów w tablicy. Można go zmienić po utworzeniu tablicy [ResizeOneDim](#resizeonedim).  
   
  *pvSrcData*  
- Wskaźnik do danych można skopiować do tablicy.  
+ Wskaźnik do danych do skopiowania do tablicy.  
   
  *nLBound*  
  Dolna granica tablicy.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja przydziela i inicjuje dane dla tablicy kopiowanie określone dane, jeśli wskaźnik *pvSrcData* nie jest **NULL**.  
+ Funkcja przydziela i inicjuje dane dla tablicy, kopiując określone dane, jeśli wskaźnik *pvSrcData* nie ma wartości NULL.  
   
- W przypadku błędu, funkcja zwraca [CMemoryException](../../mfc/reference/cmemoryexception-class.md).  
+ W przypadku błędu, funkcja zgłasza [CMemoryException](../../mfc/reference/cmemoryexception-class.md).  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCOleContainer#28](../../mfc/codesnippet/cpp/colesafearray-class_3.cpp)]  
   
 ##  <a name="destroy"></a>  COleSafeArray::Destroy  
- Niszczy istniejącego deskryptora tablicy i wszystkich danych w tablicy.  
+ Niszczy istniejących deskryptora tablicy i wszystkie dane w tablicy.  
   
 ```  
 void Destroy();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli obiekty są przechowywane w tablicy, każdy obiekt jest zwalniany. W przypadku błędu, funkcja zwraca [CMemoryException](../../mfc/reference/cmemoryexception-class.md) lub [COleException](../../mfc/reference/coleexception-class.md).  
+ Jeśli obiekty są przechowywane w tablicy, każdy obiekt jest zwalniana. W przypadku błędu, funkcja zgłasza [CMemoryException](../../mfc/reference/cmemoryexception-class.md) lub [COleException](../../mfc/reference/coleexception-class.md).  
   
 ##  <a name="destroydata"></a>  COleSafeArray::DestroyData  
  Niszczy wszystkich danych w bezpiecznej tablicy.  
@@ -356,38 +356,38 @@ void DestroyData();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli obiekty są przechowywane w tablicy, każdy obiekt jest zwalniany. W przypadku błędu, funkcja zwraca [CMemoryException](../../mfc/reference/cmemoryexception-class.md) lub [COleException](../../mfc/reference/coleexception-class.md).  
+ Jeśli obiekty są przechowywane w tablicy, każdy obiekt jest zwalniana. W przypadku błędu, funkcja zgłasza [CMemoryException](../../mfc/reference/cmemoryexception-class.md) lub [COleException](../../mfc/reference/coleexception-class.md).  
   
 ##  <a name="destroydescriptor"></a>  COleSafeArray::DestroyDescriptor  
- Niszczy deskryptor bezpiecznej tablicy.  
+ Niszczy deskryptor bezpieczną tablicą.  
   
 ```  
 void DestroyDescriptor();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- W przypadku błędu, funkcja zwraca [CMemoryException](../../mfc/reference/cmemoryexception-class.md) lub [COleException](../../mfc/reference/coleexception-class.md).  
+ W przypadku błędu, funkcja zgłasza [CMemoryException](../../mfc/reference/cmemoryexception-class.md) lub [COleException](../../mfc/reference/coleexception-class.md).  
   
 ##  <a name="detach"></a>  COleSafeArray::Detach  
- Odłącza **VARIANT** danych z `COleSafeArray` obiektu.  
+ Odłącza `VARIANT` dane z `COleSafeArray` obiektu.  
   
 ```  
 VARIANT Detach();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Podstawowa **VARIANT** wartość w `COleSafeArray` obiektu.  
+ Podstawowe `VARIANT` wartość w `COleSafeArray` obiektu.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja odłącza dane w bezpiecznej tablicy przez ustawienie [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) obiektu do `VT_EMPTY`. Wywołującego odpowiedzialność za wolny tablicy przez wywołanie funkcji systemu Windows [VariantClear](http://msdn.microsoft.com/en-us/28741d81-8404-4f85-95d3-5c209ec13835).  
+ Funkcja odłącza danych w bezpiecznej tablicy, ustawiając [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) obiektu VT_EMPTY. Odpowiada za wywołującego bezpłatne tablicy przez wywołanie funkcji Windows [VariantClear](http://msdn.microsoft.com/28741d81-8404-4f85-95d3-5c209ec13835).  
   
- W przypadku błędu, funkcja zwraca [COleException](../../mfc/reference/coleexception-class.md).  
+ W przypadku błędu, funkcja zgłasza [COleException](../../mfc/reference/coleexception-class.md).  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [COleSafeArray::PutElement](#putelement).  
   
 ##  <a name="getbytearray"></a>  COleSafeArray::GetByteArray  
- Kopiuje zawartość do bezpiecznej tablicy w `CByteArray`.  
+ Kopiuje zawartość do bezpiecznej tablicy do `CByteArray`.  
   
 ```  
 void GetByteArray(CByteArray& bytes);
@@ -411,7 +411,7 @@ DWORD GetDim();
  [!code-cpp[NVC_MFCOleContainer#27](../../mfc/codesnippet/cpp/colesafearray-class_2.cpp)]  
   
 ##  <a name="getelement"></a>  COleSafeArray::GetElement  
- Pobiera jeden element bezpiecznej tablicy.  
+ Pobiera pojedynczy element bezpieczną tablicą.  
   
 ```  
 void GetElement(
@@ -424,12 +424,12 @@ void GetElement(
  Wskaźnik do tablicy indeksów dla każdego wymiaru tablicy.  
   
  *pvData*  
- Wskaźnik do elementu tablicy na położenie.  
+ Wskaźnik na położenie elementu tablicy.  
   
 ### <a name="remarks"></a>Uwagi  
- Funkcja ta automatycznie wywołuje funkcje systemu windows `SafeArrayLock` i `SafeArrayUnlock` przed i po pobraniu elementu. Jeśli element danych jest ciąg, obiekt lub typ variant, funkcja kopiuje element w prawidłowy sposób. Parametr *pvData* powinny wskazywać na dużej wystarczająco dużego buforu zawiera element.  
+ Ta funkcja automatycznie wywołuje funkcje systemu windows `SafeArrayLock` i `SafeArrayUnlock` przed i po pobraniu elementu. Jeśli element danych jest ciąg, obiekt lub wariant, funkcja kopiuje element w prawidłowy sposób. Parametr *pvData* powinien wskazywać dużą wystarczająco dużego buforu zawiera element.  
   
- W przypadku błędu, funkcja zwraca [CMemoryException](../../mfc/reference/cmemoryexception-class.md) lub [COleException](../../mfc/reference/coleexception-class.md).  
+ W przypadku błędu, funkcja zgłasza [CMemoryException](../../mfc/reference/cmemoryexception-class.md) lub [COleException](../../mfc/reference/coleexception-class.md).  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCOleContainer#29](../../mfc/codesnippet/cpp/colesafearray-class_4.cpp)]  
@@ -442,10 +442,10 @@ DWORD GetElemSize();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Rozmiar w bajtach elementów bezpiecznej tablicy.  
+ Rozmiar w bajtach elementów bezpieczną tablicą.  
   
 ##  <a name="getlbound"></a>  COleSafeArray::GetLBound  
- Zwraca dolną granicę do żadnego wymiaru `COleSafeArray` obiektu.  
+ Zwraca dolną granicę dla żadnego wymiaru `COleSafeArray` obiektu.  
   
 ```  
 void GetLBound(
@@ -455,26 +455,26 @@ void GetLBound(
   
 ### <a name="parameters"></a>Parametry  
  *dwDim*  
- Wymiar tablicy, do których chcesz pobrać dolnej granicy.  
+ Wymiar tablicy, dla którego należy pobrać dolną granicę.  
   
  *pLBound*  
  Wskaźnik do lokalizacji zwraca dolną granicę.  
   
 ### <a name="remarks"></a>Uwagi  
- W przypadku błędu, funkcja zwraca [COleException](../../mfc/reference/coleexception-class.md).  
+ W przypadku błędu, funkcja zgłasza [COleException](../../mfc/reference/coleexception-class.md).  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCOleContainer#30](../../mfc/codesnippet/cpp/colesafearray-class_5.cpp)]  
   
 ##  <a name="getonedimsize"></a>  COleSafeArray::GetOneDimSize  
- Zwraca liczbę elementów w jednowymiarowej tablicy `COleSafeArray` obiektu.  
+ Zwraca liczbę elementów w jednowymiarowy `COleSafeArray` obiektu.  
   
 ```  
 DWORD GetOneDimSize();
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Liczba elementów w bezpiecznym jednowymiarową.  
+ Liczba elementów w tablicy jednowymiarowej bezpieczne.  
   
 ### <a name="example"></a>Przykład  
   Zobacz przykład [COleSafeArray::CreateOneDim](#createonedim).  
@@ -490,50 +490,50 @@ void GetUBound(
   
 ### <a name="parameters"></a>Parametry  
  *dwDim*  
- Wymiar tablicy, do których chcesz pobrać górną granicę.  
+ Wymiar tablicy, dla którego należy pobrać górną granicę.  
   
  *pUBound*  
  Wskaźnik do lokalizacji zwraca górną granicę.  
   
 ### <a name="remarks"></a>Uwagi  
- W przypadku błędu, funkcja zwraca [COleException](../../mfc/reference/coleexception-class.md).  
+ W przypadku błędu, funkcja zgłasza [COleException](../../mfc/reference/coleexception-class.md).  
   
 ### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCOleContainer#31](../../mfc/codesnippet/cpp/colesafearray-class_6.cpp)]  
   
 ##  <a name="lock"></a>  COleSafeArray::Lock  
- Zwiększa liczbę blokad tablicy i umieścić wskaźnik do tablicy danych w deskryptorze tablicy.  
+ Zwiększa liczbę blokad, tablicy i umieścić wskaźnik do tablicy danych deskryptora tablicy.  
   
 ```  
 void Lock();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- W przypadku błędu, zgłasza [COleException](../../mfc/reference/coleexception-class.md).  
+ W przypadku błędu, wyniku weryfikacji zgłasza wyjątek [COleException](../../mfc/reference/coleexception-class.md).  
   
- Wskaźnik w deskryptorze tablicy jest ważny do `Unlock` jest wywoływana. Wywołuje się `Lock` mogą być zagnieżdżane; równej liczby wywołań `Unlock` są wymagane.  
+ Wskaźnik w deskryptorze tablicy jest prawidłowy do momentu `Unlock` jest wywoływana. Wywołania `Lock` mogą być zagnieżdżone; równą liczbę wywołań `Unlock` są wymagane.  
   
- Nie można usunąć tablicy, gdy jest on zablokowany.  
+ Nie można usunąć tablicę, gdy jest on zablokowany.  
   
 ##  <a name="operator_lpcvariant"></a>  COleSafeArray::operator LPCVARIANT  
- Wywołanie tego operatora rzutowania do dostępu do podstawowych **VARIANT** to struktura `COleSafeArray` obiektu.  
+ Wywołanie tego operatora rzutowania do dostępu do podstawowych `VARIANT` struktury, w tym `COleSafeArray` obiektu.  
   
 ```  
 operator LPCVARIANT() const;  
 ```  
   
 ##  <a name="operator_lpvariant"></a>  COleSafeArray::operator LPVARIANT  
- Wywołanie tego operatora rzutowania do dostępu do podstawowych **VARIANT** to struktura `COleSafeArray` obiektu.  
+ Wywołanie tego operatora rzutowania do dostępu do podstawowych `VARIANT` struktury, w tym `COleSafeArray` obiektu.  
   
 ```  
 operator LPVARIANT();
 ```   
   
 ### <a name="remarks"></a>Uwagi  
- Należy pamiętać, zmienić wartość **VARIANT** struktury używane przez wskaźnik zwracane przez tę funkcję zmieni wartość tego `COleSafeArray` obiektu.  
+ Należy pamiętać, zmieniając wartość w `VARIANT` struktury używane przez wskaźnik zwracany przez tę funkcję zmieni wartość tego `COleSafeArray` obiektu.  
   
 ##  <a name="operator_eq"></a>  COleSafeArray::operator =  
- Te operatory przypisania przeciążone skopiuj wartość źródła do tego `COleSafeArray` obiektu.  
+ Te operatory przeciążone przypisania skopiowany wartość źródłowa to `COleSafeArray` obiektu.  
   
 ```  
 COleSafeArray& operator=(const COleSafeArray& saSrc);  
@@ -545,129 +545,133 @@ COleSafeArray& operator=(const COleVariant& varSrc);
 ### <a name="remarks"></a>Uwagi  
  Krótki opis każdego operatora następująco:  
   
-- **Operator = (** *saSrc* **)** umożliwia skopiowanie istniejącej `COleSafeArray` obiektu do tego obiektu.  
+- **Operator = (** *saSrc* **)** kopiuje istniejącą `COleSafeArray` obiektu do tego obiektu.  
   
-- **Operator = (** *varSrc ***)** umożliwia skopiowanie istniejącej **VARIANT** lub `COleVariant` tablicy do tego obiektu.  
+- **Operator = (** *varSrc ***)** kopiuje istniejącą `VARIANT` lub `COleVariant` tablicę do tego obiektu.  
   
-- **Operator = (** `pSrc` **)** kopie **VARIANT** tablicy obiektów z niego `pSrc` do tego obiektu.  
+- **Operator = (** `pSrc` **)** kopie `VARIANT` obiektu array uzyskują `pSrc` do tego obiektu.  
   
 ##  <a name="operator_eq_eq"></a>  COleSafeArray::operator ==  
- Ten operator porównuje dwie tablice ( **SAFEARRAY**, **VARIANT**, `COleVariant`, lub `COleSafeArray` tablic) i zwraca wartość niezerową, jeśli są równe; w przeciwnym razie wartość 0.  
+ Ten operator porównuje dwie tablice (`SAFEARRAY`, `VARIANT`, `COleVariant`, lub `COleSafeArray` tablice) i zwraca wartość różną od zera, jeśli są równe; w przeciwnym razie 0.  
   
 ```  
 BOOL operator==(const SAFEARRAY& saSrc) const;  BOOL operator==(LPCSAFEARRAY pSrc) const;  
    
 BOOL operator==(const COleSafeArray& saSrc) const;  BOOL operator==(const VARIANT& varSrc) const;  
    
-BOOL operator==(LPCVARIANT pSrc) const;  BOOL operator==(const COleVariant& varSrc) const;  ```  
+BOOL operator==(LPCVARIANT pSrc) const;  BOOL operator==(const COleVariant& varSrc) const;  
+```  
   
-### Remarks  
- Two arrays are equal if they have an equal number of dimensions, equal size in each dimension, and equal element values.  
+### <a name="remarks"></a>Uwagi  
+ Dwie tablice są równe, jeśli mają jednakową liczbę wymiarów, taki sam rozmiar każdego wymiaru i wartości równe elementów.  
   
 ##  <a name="operator_lt_lt"></a>  COleSafeArray::operator &lt;&lt;  
- The `COleSafeArray` insertion (<<) operator supports diagnostic dumping and storing of a `COleSafeArray` object to an archive.  
+ `COleSafeArray` Wstawiania (<<) — operator obsługuje diagnostycznych zrzucanie i przechowywania `COleSafeArray` obiektu do archiwum.  
   
 ```  
-Operator CDumpContext & AFXAPI << (CDumpContext & kontrolera domeny,  
-    COleSafeArray & saSrc);
+CDumpContext& AFXAPI operator<<(
+    CDumpContext& dc,  
+    COleSafeArray& saSrc);
 ```  
   
 ##  <a name="ptrofindex"></a>  COleSafeArray::PtrOfIndex  
- Returns a pointer to the element specified by the index values.  
+ Zwraca wskaźnik do elementu określonego przez wartości indeksu.  
   
 ```  
-PtrOfIndex void (Liczba długa * rgIndices,  
-    void ** ppvData);
+void PtrOfIndex(
+    long* rgIndices,  
+    void** ppvData);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>Parametry  
  *rgIndices*  
- An array of index values that identify an element of the array. All indexes for the element must be specified.  
+ Tablica wartości indeksu, które identyfikują elementu tablicy. Należy określić wszystkie indeksy dla elementu.  
   
  *ppvData*  
- On return, pointer to the element identified by the values in *rgIndices*.  
+ Powrót wskaźnika do elementu określonego przez wartości w *rgIndices*.  
   
 ##  <a name="putelement"></a>  COleSafeArray::PutElement  
- Assigns a single element into the array.  
+ Przypisuje jeden element w tablicy.  
   
 ```  
-PutElement void (Liczba długa * rgIndices,  
-    void * pvData);
+void PutElement(
+    long* rgIndices,  
+    void* pvData);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>Parametry  
  *rgIndices*  
- Pointer to an array of indexes for each dimension of the array.  
+ Wskaźnik do tablicy indeksów dla każdego wymiaru tablicy.  
   
  *pvData*  
- Pointer to the data to assign to the array. **VT_DISPATCH**, **VT_UNKNOWN**, and **VT_BSTR** variant types are pointers and do not require another level of indirection.  
+ Wskaźnik do danych, które można przypisać do tablicy. VT_DISPATCH VT_UNKNOWN i VT_BSTR typów variant wskaźników i nie wymagają innego poziomu pośredniego.  
   
-### Remarks  
- This function automatically calls the Windows functions [SafeArrayLock](https://msdn.microsoft.com/library/windows/desktop/ms221492.aspx) and [SafeArrayUnlock](https://msdn.microsoft.com/library/windows/desktop/ms221246.aspx) before and after assigning the element. If the data element is a string, object, or variant, the function copies it correctly, and if the existing element is a string, object, or variant, it is cleared correctly.  
+### <a name="remarks"></a>Uwagi  
+ Ta funkcja automatycznie wywołuje funkcje Windows [SafeArrayLock](https://msdn.microsoft.com/library/windows/desktop/ms221492.aspx) i [SafeArrayUnlock](https://msdn.microsoft.com/library/windows/desktop/ms221246.aspx) przed i po przypisaniu elementu. Jeśli element danych jest ciąg, obiekt lub wariant, funkcja go został poprawnie skopiowany, a w przypadku ciąg, obiekt lub wariant istniejącego elementu jest poprawnie wyczyszczone.  
   
- Note that you can have multiple locks on an array, so you can put elements into an array while the array is locked by other operations.  
+ Należy pamiętać, że masz kilka blokad w tablicy, dzięki czemu można umieścić elementy w tablicy, podczas gdy tablica jest zablokowany przez inne operacje.  
   
- On error, the function throws a [CMemoryException](../../mfc/reference/cmemoryexception-class.md) or [COleException](../../mfc/reference/coleexception-class.md).  
+ W przypadku błędu, funkcja zgłasza [CMemoryException](../../mfc/reference/cmemoryexception-class.md) lub [COleException](../../mfc/reference/coleexception-class.md).  
   
-### Example  
+### <a name="example"></a>Przykład  
  [!code-cpp[NVC_MFCOleContainer#32](../../mfc/codesnippet/cpp/colesafearray-class_7.cpp)]  
   
 ##  <a name="redim"></a>  COleSafeArray::Redim  
- Changes the least significant (rightmost) bound of a safe array.  
+ Zmienia najmniej znaczący (po prawej stronie) granicę bezpiecznej tablicy.  
   
 ```  
-Redim void (SAFEARRAYBOUND * psaboundNew);
+void Redim(SAFEARRAYBOUND* psaboundNew);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>Parametry  
  *psaboundNew*  
- Pointer to a new safe array bound structure containing the new array bound. Only the least significant dimension of an array may be changed.  
+ Wskaźnik do nowej tablicy bezpieczne powiązany struktury zawierającej nowej granicy tablicy. Tylko najmniej znaczącego wymiaru tablicy mogą ulec zmianie.  
   
-### Remarks  
- On error, the function throws a [COleException](../../mfc/reference/coleexception-class.md).  
+### <a name="remarks"></a>Uwagi  
+ W przypadku błędu, funkcja zgłasza [COleException](../../mfc/reference/coleexception-class.md).  
   
 ##  <a name="resizeonedim"></a>  COleSafeArray::ResizeOneDim  
- Changes the number of elements in a one-dimensional `COleSafeArray` object.  
+ Zmienia liczbę elementów w jednowymiarowym `COleSafeArray` obiektu.  
   
 ```  
-void ResizeOneDim (DWORD dwElements);
+void ResizeOneDim(DWORD dwElements);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>Parametry  
  *dwElements*  
- Number of elements in the one-dimensional safe array.  
+ Liczba elementów w tablicy jednowymiarowej bezpieczne.  
   
-### Remarks  
- On error, the function throws a [COleException](../../mfc/reference/coleexception-class.md).  
+### <a name="remarks"></a>Uwagi  
+ W przypadku błędu, funkcja zgłasza [COleException](../../mfc/reference/coleexception-class.md).  
   
-### Example  
-  See the example for [COleSafeArray::CreateOneDim](#createonedim).  
+### <a name="example"></a>Przykład  
+  Zobacz przykład [COleSafeArray::CreateOneDim](#createonedim).  
   
 ##  <a name="unaccessdata"></a>  COleSafeArray::UnaccessData  
- Decrements the lock count of an array and invalidates the pointer retrieved by `AccessData`.  
+ Dekrementuje blokada count tablicę i unieważnia wskaźnika pobierane przez `AccessData`.  
   
 ```  
 void UnaccessData();
 ```  
   
-### Remarks  
- On error, the function throws a [COleException](../../mfc/reference/coleexception-class.md).  
+### <a name="remarks"></a>Uwagi  
+ W przypadku błędu, funkcja zgłasza [COleException](../../mfc/reference/coleexception-class.md).  
   
-### Example  
-  See the example for [COleSafeArray::AccessData](#accessdata).  
+### <a name="example"></a>Przykład  
+  Zobacz przykład [COleSafeArray::AccessData](#accessdata).  
   
 ##  <a name="unlock"></a>  COleSafeArray::Unlock  
- Decrements the lock count of an array so it can be freed or resized.  
+ Zmniejsza liczbę blokad tablicy, może być zwolniona lub zmiany rozmiaru.  
   
 ```  
 void Unlock();
 ```  
   
-### Remarks  
- This function is called after access to the data in an array is finished. On error, it throws a [COleException](../../mfc/reference/coleexception-class.md).  
+### <a name="remarks"></a>Uwagi  
+ Ta funkcja jest wywoływana po zakończeniu dostępu do danych w tablicy. W przypadku błędu, wyniku weryfikacji zgłasza wyjątek [COleException](../../mfc/reference/coleexception-class.md).  
   
-## See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [COleVariant Class](../../mfc/reference/colevariant-class.md)   
- [CRecordset Class](../../mfc/reference/crecordset-class.md)   
- [CDatabase Class](../../mfc/reference/cdatabase-class.md)
+## <a name="see-also"></a>Zobacz też  
+ [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
+ [Klasa COleVariant](../../mfc/reference/colevariant-class.md)   
+ [Klasa CRecordset](../../mfc/reference/crecordset-class.md)   
+ [Klasa CDatabase](../../mfc/reference/cdatabase-class.md)

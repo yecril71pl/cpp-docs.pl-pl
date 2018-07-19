@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce1fc576bb37a76a2dafdee47546fdf0dd49fddb
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: e43f6704476879e1848ce82b3327b23efe2192a8
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951036"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026309"
 ---
 # <a name="cdockablepaneadapter-class"></a>Klasa CDockablePaneAdapter
-Zapewnia obsługę dokowania `CWnd`-pochodnych okienka.  
+Dodano obsługę dokującej `CWnd`-pochodnych okienek.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,14 +47,14 @@ class CDockablePaneAdapter : public CDockablePane
 |Nazwa|Opis|  
 |----------|-----------------|  
 |[CDockablePaneAdapter::GetWrappedWnd](#getwrappedwnd)|Zwraca okno opakowana.|  
-|[CDockablePaneAdapter::LoadState](#loadstate)|(Przesłania [CDockablePane::LoadState](http://msdn.microsoft.com/en-us/96110136-4f46-4764-8a76-3b4abaf77917).)|  
-|[CDockablePaneAdapter::SaveState](#savestate)|(Przesłania [CDockablePane::SaveState](http://msdn.microsoft.com/en-us/c5c24249-8d0d-46cb-96d9-9f5c6dc191db).)|  
+|[CDockablePaneAdapter::LoadState](#loadstate)|(Przesłania [CDockablePane::LoadState](http://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917).)|  
+|[CDockablePaneAdapter::SaveState](#savestate)|(Przesłania [CDockablePane::SaveState](http://msdn.microsoft.com/c5c24249-8d0d-46cb-96d9-9f5c6dc191db).)|  
 |[CDockablePaneAdapter::SetWrappedWnd](#setwrappedwnd)||  
   
 ## <a name="remarks"></a>Uwagi  
- Zazwyczaj platformę tworzy obiekty tej klasy, korzystając z [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) lub [CMFCBaseTabCtrl::InsertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) metody.  
+ Zazwyczaj ramach tworzy obiekty tej klasy, gdy używasz [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) lub [CMFCBaseTabCtrl::InsertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) metody.  
   
- Jeśli chcesz dostosować `CDockablePaneAdapter` zachowanie, tylko dziedziczyć nową klasę i ustaw informacje o klasie czasu wykonywania na kartach okna przy użyciu [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc).  
+ Jeśli chcesz dostosować `CDockablePaneAdapter` zachowanie, po prostu dziedziczyć po nim nową klasę i ustaw informacje o klasie czasu wykonywania do okna z kartami za pomocą [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md) [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)  
@@ -67,7 +67,7 @@ class CDockablePaneAdapter : public CDockablePane
  **Nagłówek:** afxDockablePaneAdapter.h  
   
 ##  <a name="getwrappedwnd"></a>  CDockablePaneAdapter::GetWrappedWnd  
- Zwraca podstawowej okna dokującego okienku karty.  
+ Zwraca okna bazowego dla karty dokowalne okienka.  
   
 ```  
 virtual CWnd* GetWrappedWnd() const;  
@@ -77,7 +77,7 @@ virtual CWnd* GetWrappedWnd() const;
  Wskaźnik do okna opakowana.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja służy do okna opakowana.  
+ Aby uzyskać dostęp do okna opakowana, należy użyć tej funkcji.  
   
 ##  <a name="loadstate"></a>  CDockablePaneAdapter::LoadState  
  Ładuje stan okienka z rejestru.  
@@ -128,7 +128,7 @@ virtual BOOL SaveState(
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="setwrappedwnd"></a>  CDockablePaneAdapter::SetWrappedWnd  
- Ustawia podstawowy okna dokującego okienku karty.  
+ Ustawia okno podstawowej karty dokowalne okienka.  
   
 ```  
 virtual BOOL SetWrappedWnd(CWnd* pWnd);
@@ -136,7 +136,7 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
   
 ### <a name="parameters"></a>Parametry  
  [in] *pWnd*  
- Wskaźnik do okna okienku karty do zakodowania.  
+ Wskaźnik do okna karty okienko do opakowania.  
   
 ### <a name="return-value"></a>Wartość zwracana  
   

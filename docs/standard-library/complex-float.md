@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 278a9e33fb305b73c2919c455f55b816de644e4b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: af6d3ce3beca7d9bb3b14ee9c9373a8505623376
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843395"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954008"
 ---
-# <a name="complexltfloatgt"></a>złożone&lt;liczb zmiennoprzecinkowych&gt;
+# <a name="complexltfloatgt"></a>złożone&lt;float&gt;
 
-Opisuje obiekt, który przechowuje uporządkowanej parę obiektów zarówno typu **float **** najpierw reprezentujący część liczby złożonej, a drugi rzeczywista reprezentujący urojony części.
+Opisuje obiekt, który przechowuje uporządkowana para obiektów zarówno typu **float **** najpierw reprezentujących część liczby zespolonej, a druga rzeczywista reprezentujący urojone części.
 
 ## <a name="syntax"></a>Składnia
 
@@ -51,21 +51,21 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parametry
 
-`_RealVal` Wartość typu **float** rzeczywistych część liczby złożonej tworzona.
+*_RealVal* wartości typu **float** rzeczywistych część liczby zespolonej budowany.
 
-`_ImagVal` Wartość typu **float** urojony część liczby złożonej tworzona.
+*_ImagVal* wartości typu **float** dla urojone części liczb zespolonych budowany.
 
-`complexNum` Liczby złożonej typu **podwójne** lub typu `long double` których części rzeczywistą i urojony są używane do zainicjowania liczbą typu **float** tworzona.
+*complexNum* liczby zespolonej typu **double** lub typu **typu long double** którego rzeczywiste i urojone części są stosowane do inicjalizacji liczby zespolonej typu **float**budowany.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Liczba złożonych typu **float**.
+Liczby zespolonej typu **float**.
 
 ## <a name="remarks"></a>Uwagi
 
-Jawna specjalizacja szablonu klasy złożone, aby złożonych klasy typu **float** różni się od klasy szablonu tylko w przypadku konstruktorów definiuje. Konwersja z **float** do **podwójne** może być pośrednie, ale mniej bezpieczne konwersja z **float** do `long double` musi być  **jawne**. Korzystanie z **jawne** wyklucza rozpoczęciu konwersji typu przy użyciu składni przypisania.
+Jawna specjalizacja szablonu klasy złożone i klasy złożone typu **float** różni się od klasy szablonu, tylko w konstruktorach definiuje. Konwersja z **float** do **double** może być niejawne, jednak mniej bezpieczne konwersja **float** do **typu long double** jest musi być **jawne**. Korzystanie z **jawne** wyklucza rozpoczęcia z konwersję typu przy użyciu składni przypisania.
 
-Aby uzyskać więcej informacji na klasy szablonu `complex`, zobacz [klasy złożone](../standard-library/complex-class.md). Aby uzyskać listę elementów członkowskich klasy szablonu `complex`, zobacz.
+Aby uzyskać więcej informacji na temat klasy szablonu `complex`, zobacz [complex — klasa](../standard-library/complex-class.md). Aby uzyskać listę elementów członkowskich klasy szablonu `complex`, zobacz.
 
 ## <a name="example"></a>Przykład
 
@@ -126,7 +126,7 @@ Argument of c3 is recovered from c3 using:
 
 **Nagłówek**: \<złożonych >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

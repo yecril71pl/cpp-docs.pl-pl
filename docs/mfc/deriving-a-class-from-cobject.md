@@ -23,35 +23,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d0b629617c1592387f3f959996fd3e9837242ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 05828283f560e73d4c5d2ddf2cbc05963cbb217f
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349360"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026120"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Wyprowadzanie klasy z obiektu CObject
-W tym artykule opisano minimalną kroki niezbędne do wyprowadzenia klasy z [CObject](../mfc/reference/cobject-class.md). Inne `CObject` klasy artykuły zawierają czynności, aby móc korzystać z określonych `CObject` funkcje, takie jak serializacji i diagnostycznych obsługę debugowania.  
+W tym artykule opisano minimalną procedurę niezbędną do wyprowadzenia klasy z [CObject](../mfc/reference/cobject-class.md). Inne `CObject` artykuły klasy opisują czynności, aby móc korzystać z określonych `CObject` funkcje, takie jak serializacji i diagnostycznych obsługę debugowania.  
   
- W dyskusjach `CObject`, warunki "plik interfejsu" i "pliku implementacji" są często używane. Plik interfejsu (często nazywane pliku nagłówka lub. Plik H) zawiera deklaracji klasy i inne informacje potrzebne do użycia klasy. Plik implementacji (lub. Pliku CPP) zawiera definicji klasy, a także kod, który implementuje funkcje Członkowskie klas. Na przykład dla klasy o nazwie `CPerson`, zazwyczaj należy utworzyć plik interfejs o nazwie osoby. H i pliku z implementacją o nazwie osoby. CPP. Jednak dla niektórych małych klas, które nie będą udostępniane między aplikacjami, czasami jest łatwiej łączyć interfejsu i wdrożenia w ramach jednej. Pliku CPP.  
+ W omówieniach dotyczących `CObject`, warunki interfejsu "pliku" i "plik implementacji" są często używane. Plik interfejsu (często nazywany plik nagłówkowy lub. Plik H) zawiera deklarację klasy i innych informacji potrzebnych do korzystania z tej klasy. Plik implementacji (lub). Plik CPP) zawiera definicji klasy, a także kod, który implementuje funkcje składowych klasy. Na przykład dla klasy o nazwie `CPerson`, zazwyczaj należy utworzyć plik interfejs o nazwie osoby. Godz. i pliku z implementacją o nazwie osoby. CPP. Jednak dla niektórych małych klas, które nie będą udostępniane między aplikacjami, czasami jest łatwiej łączyć interfejsu i implementacji w jednym. Plik CPP.  
   
- Można wybierać spośród czterech poziomów funkcjonalności podczas tworzenia klasy pochodnej z klasy `CObject`:  
+ Można wybierać spośród czterech poziomów funkcjonalności podczas wyprowadzania z klasy `CObject`:  
   
--   Podstawowe funkcje: nie obsługuje informacje o klasie czasu wykonywania lub serializacji ale obejmuje zarządzanie pamięcią diagnostycznych.  
+-   Podstawowe funkcje: Brak obsługi informacji o klasie czasu wykonywania lub serializacji, ale obejmuje zarządzanie diagnostyki pamięci.  
   
--   Podstawowe funkcje oraz pomocy technicznej, aby uzyskać informacje o klasie czasu wykonywania.  
+-   Podstawowe funkcje oraz wsparcie dla informacji o klasie czasu wykonywania.  
   
--   Podstawowe funkcje oraz obsługę informacji o klasie czasu wykonywania i tworzenie dynamiczne.  
+-   Podstawowe funkcje oraz wsparcie dla informacji o klasie czasu wykonywania dynamiczne tworzenie.  
   
--   Podstawowe funkcje oraz obsługę informacji o klasie czasu wykonywania, tworzenie dynamicznych i serializacji.  
+-   Podstawowe funkcje oraz wsparcie dla informacji o klasie czasu wykonywania, dynamiczne tworzenie i serializacji.  
   
- Klasy przeznaczone do ponownego użycia (te, które później będzie służyć jako klasy podstawowe) zawiera co najmniej klasie czasu wykonywania obsługi i pomocy technicznej serializacji, jeśli przewiduje się potrzeby przyszłych serializacji.  
+ Klasy przeznaczone do ponownego wykorzystania (te, które później będą służyć jako klay bazowe) zawiera co najmniej obsługę klasy środowiska wykonawczego i serializacji, jeśli przewidywanego na potrzeby przyszłych serializacji.  
   
- Wybierz poziom funkcjonalności przy użyciu określonych deklaracji i implementacji makra w deklaracji i stosowania pochodzi od klasy `CObject`.  
+ Wybierz poziom funkcjonalności przy użyciu określonych deklarację i implementację makr w deklarację i implementację klasy pochodzić od `CObject`.  
   
- W poniższej tabeli przedstawiono relacje między makra używane do obsługi serializacji i informacje czasu wykonywania.  
+ W poniższej tabeli przedstawiono relacje między makra używane do obsługi serializacji i informacje o czasie wykonywania.  
   
-### <a name="macros-used-for-serialization-and-run-time-information"></a>Makra używany do serializacji i informacje czasu wykonywania  
+### <a name="macros-used-for-serialization-and-run-time-information"></a>Makra używane w ramach serializacji i informacji czasu wykonywania  
   
 |Makra używane|CObject::IsKindOf|CRuntimeClass::<br /><br /> CreateObject|CArchive::operator >><br /><br /> CArchive::operator <<|  
 |----------------|-----------------------|--------------------------------------|-------------------------------------------------------|  
@@ -60,15 +60,15 @@ W tym artykule opisano minimalną kroki niezbędne do wyprowadzenia klasy z [COb
 |`DECLARE_DYNCREATE`|Tak|Tak|Nie|  
 |`DECLARE_SERIAL`|Tak|Tak|Tak|  
   
-#### <a name="to-use-basic-cobject-functionality"></a>Podstawowa funkcja CObject  
+#### <a name="to-use-basic-cobject-functionality"></a>Aby korzystać z podstawowych funkcji CObject  
   
-1.  Użyj normalnej składni języka C++ wyprowadzenia klasy z `CObject` (lub z klasy pochodzącej od `CObject`).  
+1.  Użyj normalnej składni języka C++ do wyprowadzenia klasy z `CObject` (lub z klasy pochodzącej od `CObject`).  
   
-     W poniższym przykładzie przedstawiono najprostszym przypadku wyprowadzenia klasy z `CObject`:  
+     W poniższym przykładzie pokazano najprostszym przypadku wyprowadzenia klasy z `CObject`:  
   
      [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]  
   
- Zwykle, jednak może zajść potrzeba zastępowania niektórych `CObject`w funkcji elementów członkowskich do obsługi szczegółowe informacje na temat nowej klasy. Na przykład, zwykle można zastąpić `Dump` funkcji `CObject` zapewnienie danych wyjściowych debugowania dla zawartości klasy. Aby uzyskać szczegółowe informacje o zastępowaniu `Dump`, zapoznaj się z artykułem [diagnostyki: zrzucanie zawartość obiektu](http://msdn.microsoft.com/en-us/727855b1-5a83-44bd-9fe3-f1d535584b59). Można również zastąpić `AssertValid` funkcji `CObject` zapewnienie testowania niestandardowych w celu zweryfikowania spójności danych członków klasy obiektów. Opis sposobu zastąpienia `AssertValid`, zobacz [assert_valid — MFC i CObject::AssertValid](http://msdn.microsoft.com/en-us/7654fb75-9e9a-499a-8165-0a96faf2d5e6).  
+ Zwykle jednak możesz zastąpić niektóre `CObject`przez funkcje składowe w celu obsługi szczegółowe informacje na temat nowej klasie. Na przykład zazwyczaj warto zastąpić `Dump` funkcji `CObject` zapewnienie dane wyjściowe debugowania zawartość swojej klasy. Aby uzyskać szczegółowe informacje o zastępowaniu `Dump`, zapoznaj się z artykułem [diagnostyki: zawartość zrzucania obiektów](http://msdn.microsoft.com/727855b1-5a83-44bd-9fe3-f1d535584b59). Możesz także Przesłoń `AssertValid` funkcji `CObject` zapewnienie dostosowane testowania w celu zweryfikowania spójności składowych danych klas obiektów. Opis sposobu zastąpienia `AssertValid`, zobacz [MFC ASSERT_VALID i CObject::AssertValid](http://msdn.microsoft.com/7654fb75-9e9a-499a-8165-0a96faf2d5e6).  
   
  Artykuł [Określanie poziomów funkcjonalności](../mfc/specifying-levels-of-functionality.md) opisuje sposób określenia innych poziomach funkcjonalności, w tym informacje o klasie czasu wykonywania, dynamiczne tworzenie obiektów i serializacji.  
   

@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c11ebaa7d315d09cea40b4ddc94d5afff498bf7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 787e9d5ac860e283d6eacc0f22b790a6196485f4
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335571"
 ---
 # <a name="cdaoerrorinfo-structure"></a>CDaoErrorInfo — Struktura
-`CDaoErrorInfo` Struktura zawiera informacje o obiektach błąd zdefiniowany dla obiektów dostępu do danych (DAO).  
+`CDaoErrorInfo` Struktura zawiera informacje dotyczące obiekt błędu zdefiniowany dla obiektów dostępu do danych (DAO).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,26 +42,26 @@ struct CDaoErrorInfo
   
 #### <a name="parameters"></a>Parametry  
  *m_lErrorCode*  
- Liczbowa kod błędu DAO. Zobacz temat "Przechwytywalny błędami dostępu do danych" w pomocy DAO.  
+ Kod liczbowy błąd DAO. Zobacz temat "Możliwe do wychwycenia błędami dostępu do danych" w Pomocy programu DAO.  
   
  *m_strSource*  
- Nazwa obiektu lub aplikacji, który pierwotnie wygenerował błąd. Właściwość Source Określa ciąg reprezentujący obiekt, który pierwotnie wygenerowany błąd; wyrażenie jest zwykle nazwa klasy obiektu. Aby uzyskać więcej informacji zobacz temat "Właściwości Source" w pomocy DAO.  
+ Nazwa obiektu lub aplikacji, który początkowo wygenerował błąd. Właściwość Source Określa ciąg reprezentujący obiekt, który oryginalnie błąd; wyrażenie jest zazwyczaj nazwy klasy obiektu. Aby uzyskać szczegółowe informacje zobacz temat "Właściwości Source" w Pomocy programu DAO.  
   
  *m_strDescription*  
- Ciąg opisujący skojarzony z błędem. Aby uzyskać więcej informacji zobacz temat "Opis właściwości" w pomocy DAO.  
+ Opisowy ciąg skojarzony z błędem. Aby uzyskać szczegółowe informacje zobacz temat "Właściwość Description" w Pomocy programu DAO.  
   
  *m_strHelpFile*  
- Pełna ścieżka do pliku Pomocy systemu Windows. Aby uzyskać więcej informacji zobacz temat "HelpContext HelpFile właściwości" w pomocy DAO.  
+ W pełni kwalifikowana ścieżka do pliku Pomocy programu Microsoft Windows. Aby uzyskać szczegółowe informacje w temacie "Helpcontext —, HelpFile właściwości" w Pomocy programu DAO.  
   
  *m_lHelpContext*  
- Identyfikator kontekstu dla tematu w pliku Pomocy systemu Windows. Aby uzyskać więcej informacji zobacz temat "HelpContext HelpFile właściwości" w pomocy DAO.  
+ Identyfikator kontekstu dla tematu w pliku Pomocy programu Microsoft Windows. Aby uzyskać szczegółowe informacje w temacie "Helpcontext —, HelpFile właściwości" w Pomocy programu DAO.  
   
 ## <a name="remarks"></a>Uwagi  
- MFC nie hermetyzować DAO błąd obiektów w klasie. Zamiast tego [CDaoException](../../mfc/reference/cdaoexception-class.md) klasa zapewnia interfejs do uzyskiwania dostępu do kolekcji błędów zawarte w obiekt DAO **interfejsu** obiektu, obiekt zawierający wszystkie obszary robocze. Podczas operacji MFC DAO zgłasza `CDaoException` obiektów, że zostaną wychwycone, wypełnia MFC `CDaoErrorInfo` struktury i zapisuje go w obiekcie wyjątek [m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo) elementu członkowskiego. (Jeśli wybierzesz wywoływanie obiektów DAO bezpośrednio, należy wywołać obiekt wyjątku [GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo) funkcji członkowskiej samodzielnie, aby wypełnić `m_pErrorInfo`.)  
+ MFC nie hermetyzuje DAO błąd obiektów w klasie. Zamiast tego [CDaoException](../../mfc/reference/cdaoexception-class.md) klasa zapewnia interfejs do uzyskiwania dostępu do kolekcji błędów zawarte w obiekt DAO `DBEngine` object, obiekt, który zawiera również wszystkie obszary robocze. Gdy operacja MFC DAO zgłosi `CDaoException` obiektu czy przechwytujesz, wypełnia MFC `CDaoErrorInfo` struktury i zapisuje go w obiekt wyjątku [m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo) elementu członkowskiego. (Jeśli wybierzesz wywoływanie obiektów DAO bezpośrednio, należy wywołać obiekt wyjątku [geterrorinfo —](../../mfc/reference/cdaoexception-class.md#geterrorinfo) funkcja elementu członkowskiego sobie, aby wypełnić `m_pErrorInfo`.)  
   
- Aby uzyskać więcej informacji na temat obsługi błędów DAO, zobacz artykuł [wyjątki: wyjątki bazy danych](../../mfc/exceptions-database-exceptions.md). Powiązane informacje zobacz temat "Błąd do obiektu" w pomocy DAO.  
+ Aby uzyskać więcej informacji na temat obsługi błędów DAO, zobacz artykuł [wyjątki: wyjątki bazy danych](../../mfc/exceptions-database-exceptions.md). Aby uzyskać powiązane informacje zobacz temat "Błąd do obiektu" w Pomocy programu DAO.  
   
- Informacje o pobrane przez [CDaoException::GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo) funkcja członkowska jest przechowywany w `CDaoErrorInfo` struktury. Sprawdź [m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo) element członkowski danych z `CDaoException` obiekt, który efektywnej obsługi wyjątków lub wywołanie `GetErrorInfo` z `CDaoException` obiektu utworzonego jawnie Aby sprawdzić błędy, które mogą mieć Wystąpił podczas bezpośredniego wywoływania interfejsów DAO. `CDaoErrorInfo` definiuje również `Dump` kompilacje funkcji członkowskiej podczas debugowania. Można użyć `Dump` do zrzutu zawartość `CDaoErrorInfo` obiektu.  
+ Informacje o pobrane przez [CDaoException::GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo) funkcja członkowska jest przechowywany w `CDaoErrorInfo` struktury. Sprawdź [m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo) element członkowski danych z `CDaoException` obiekt, który catch w program obsługi wyjątków lub wywołanie `GetErrorInfo` z `CDaoException` obiekt, który jawnie utworzyć w celu sprawdzenia błędów, które mogą mieć wystąpiły bezpośrednie wywołanie interfejsów DAO. `CDaoErrorInfo` definiuje również `Dump` kompilacje funkcja elementu członkowskiego podczas debugowania. Możesz użyć `Dump` do porzucenia zawartość `CDaoErrorInfo` obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdao.h  

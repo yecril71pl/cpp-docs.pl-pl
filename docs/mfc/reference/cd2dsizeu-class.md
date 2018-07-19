@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 560c496ac01dc09f4e49100eceea0b9f7af14d68
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: d0c3792ec315f21298cffa166777af61750fbd06
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950526"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335844"
 ---
 # <a name="cd2dsizeu-class"></a>Klasa CD2DSizeU
-Otoka dla D2D1_SIZE_U.  
+Otoka D2D1_SIZE_U.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,13 +42,13 @@ class CD2DSizeU : public D2D1_SIZE_U;
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CD2DSizeU::CD2DSizeU](#cd2dsizeu)|Przeciążone. Konstruuje `CD2DSizeU` obiekt z `D2D1_SIZE_U` obiektu.|  
+|[CD2DSizeU::CD2DSizeU](#cd2dsizeu)|Przeciążone. Konstruuje `CD2DSizeU` obiektu z `D2D1_SIZE_U` obiektu.|  
   
 ### <a name="public-methods"></a>Metody publiczne  
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CD2DSizeU::IsNull](#isnull)|Zwraca **logiczna** wartość, która wskazuje, czy wyrażenie nie zawiera prawidłowych danych ( **null**).|  
+|[CD2DSizeU::IsNull](#isnull)|Zwraca **logiczna** wartość, która wskazuje, czy wyrażenie nie zawiera żadnych prawidłowych danych (NULL).|  
   
 ### <a name="public-operators"></a>Operatory publiczne  
   
@@ -89,7 +89,7 @@ CD2DSizeU(
  wysokość źródła  
   
 ##  <a name="isnull"></a>  CD2DSizeU::IsNull  
- Zwraca wartość logiczną, wskazującą, czy wyrażenie nie zawiera prawidłowych danych (Null).  
+ Zwraca wartość logiczną wskazującą, czy wyrażenie nie zawiera żadnych prawidłowych danych (Null).  
   
 ```  
 BOOL IsNull() const;  
@@ -99,7 +99,7 @@ BOOL IsNull() const;
  Wartość TRUE, jeśli szerokość i wysokość są puste; w przeciwnym razie wartość FALSE.  
   
 ##  <a name="operator_csize"></a>  CD2DSizeU::operator CSize  
- Konwertuje obiekt CSize CD2DSizeU.  
+ Konwertuje CD2DSizeU CSize obiektu.  
   
 ```  
 operator CSize();

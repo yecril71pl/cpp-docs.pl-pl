@@ -1,5 +1,5 @@
 ---
-title: '&lt;streambuf&gt; | Dokumentacja firmy Microsoft'
+title: '&lt;streambuf —&gt; | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4f2b455b362bcb170a09c89a0bfef8013286971
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 138ec5bb28e108751a7d4b03651826db38c098fa
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855269"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026935"
 ---
 # <a name="ltstreambufgt"></a>&lt;streambuf&gt;
 
-Dołącz nagłówek standardowy iostream \<streambuf > w celu zdefiniowania szablonu klasy [basic_streambuf —](../standard-library/basic-streambuf-class.md), która jest podstawowe działania w klasach iostream. Ten nagłówek znajduje się zwykle dla Ciebie przez inną nagłówków iostream; rzadko należy dołączyć go bezpośrednio.
+Dołączyć standardowy nagłówek iostreams \<streambuf > Aby zdefiniować klasę szablonu [basic_streambuf](../standard-library/basic-streambuf-class.md), czyli podstawowy do operacji klasy iostreams. Ten nagłówek będzie zazwyczaj uwzględniony dla Ciebie żadnego innego nagłówków iostreams; rzadko musi go uwzględniać bezpośrednio.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,14 +38,14 @@ Dołącz nagłówek standardowy iostream \<streambuf > w celu zdefiniowania szab
 
 |Nazwa typu|Opis|
 |-|-|
-|[streambuf](../standard-library/streambuf-typedefs.md#streambuf)|Specjalizacji `basic_streambuf` używającą `char` jako parametry szablonu.|
-|[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|Specjalizacji `basic_streambuf` używającą `wchar_t` jako parametry szablonu.|
+|[streambuf](../standard-library/streambuf-typedefs.md#streambuf)|Specjalizacja `basic_streambuf` , który używa **char** jako parametry szablonu.|
+|[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|Specjalizacja `basic_streambuf` , który używa **wchar_t** jako parametry szablonu.|
 
 ### <a name="classes"></a>Klasy
 
 |Class|Opis|
 |-|-|
-|[basic_streambuf, klasa](http://msdn.microsoft.com/en-us/d9c706ba-ce01-43e0-b0b2-a558fc53ea8d)|Klasy szablonów opis abstrakcyjną klasę podstawową dla wyprowadzanie buforu strumienia, który kontroluje przesyłania elementów do i z reprezentację określonego strumienia.|
+|[basic_streambuf, klasa](http://msdn.microsoft.com/d9c706ba-ce01-43e0-b0b2-a558fc53ea8d)|Klasa szablonu opisuje abstrakcyjną klasę bazową dla elementu pochodnego dla buforu strumienia, który kontroluje przekazywanie elementów do i z reprezentację określonego strumienia.|
 
 ## <a name="see-also"></a>Zobacz także
 

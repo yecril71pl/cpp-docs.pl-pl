@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 829b3c90acb089bd91d71c498df5906fff919f22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6dbd9a921194146e260eb79f5266311caa3d0300
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379476"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026198"
 ---
 # <a name="windowplacement-structure"></a>Struktura WINDOWPLACEMENT
-`WINDOWPLACEMENT` Struktury zawiera informacje dotyczące rozmieszczenia okna na ekranie **.**  
+`WINDOWPLACEMENT` Struktura zawiera informacje dotyczące położenia okna na ekranie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,47 +40,47 @@ typedef struct tagWINDOWPLACEMENT {     /* wndpl */
 ```  
   
 #### <a name="parameters"></a>Parametry  
- *długość*  
- Określa długość w bajtach struktury **.**  
+*Długość*  
+Określa długość w bajtach, struktury.  
   
- `flags`  
- Określa flagi sterujące pozycji zminimalizowanego okna i metody, za pomocą którego jest przywracany okna. Ten element członkowski może być co najmniej jednej z następujących flag:  
+*flagi*  
+Określa flagi, które sterują położeniem zminimalizowanego okna, a także metoda, za pomocą którego jest przywracany okna. Ten element członkowski może być jeden lub oba z następujących flag:  
   
-- **WPF_SETMINPOSITION** Określa, czy można określić pozycji x i y zminimalizowanego okna **.** Ta flaga musi być określona, jeśli współrzędne są ustawiane w **ptMinPosition** elementu członkowskiego.  
+ - WPF_SETMINPOSITION Określa, że można określić pozycji x i y zminimalizowane okno. Ta flaga musi być określona, jeśli współrzędne są ustawiane w `ptMinPosition` elementu członkowskiego.  
+      
+ - WPF_RESTORETOMAXIMIZED Określa, że przywróconych okno będzie zmaksymalizowane, niezależnie od tego, czy został zmaksymalizowane, zanim został on zminimalizowany. To ustawienie jest prawidłowy tylko podczas następnego okna jest przywracany. Nie zmienia domyślne zachowanie przywracania. Ta flaga jest prawidłowy tylko wtedy, gdy określona jest wartość SW_SHOWMINIMIZED dla `showCmd` elementu członkowskiego.  
   
-- **WPF_RESTORETOMAXIMIZED** Określa, czy okno przywrócone zostaną zmaksymalizowane, niezależnie od tego, czy został zmaksymalizowany przed jego zostało zminimalizowane. To ustawienie jest prawidłowa tylko gdy okno jest przywrócone. Nie zmienia domyślne zachowanie przywracania. Ta flaga jest prawidłowe tylko w przypadku **SW_SHOWMINIMIZED** określono wartość dla **showCmd** elementu członkowskiego.  
+*showCmd*  
+Określa bieżący stan Pokaż okna. Ten element członkowski może być jednym z następujących wartości:  
   
- *showCmd*  
- Określa aktualny stan Pokaż okna. Ten element członkowski może być jedną z następujących wartości:  
+ - SW_HIDE ukrywa okno i przekazuje aktywacji do innego okna.  
+      
+ - SW_MINIMIZE minimalizuje określone okno i aktywuje okno najwyższego poziomu, na liście systemu.  
+      
+ - Aktywuje SW_RESTORE i wyświetla okno. Jeśli okno jest zminimalizowane lub zmaksymalizowane, Windows przywraca oryginalny rozmiar i położenie (tak jak SW_SHOWNORMAL).  
+      
+ - SW_SHOW aktywuje okno i wyświetla go w jego bieżący rozmiar i położenie.  
+      
+ - SW_SHOWMAXIMIZED aktywuje okno i wyświetla je jako zmaksymalizowane okno.  
+      
+ - SW_SHOWMINIMIZED aktywuje okno i wyświetla je jako ikona.  
+      
+ - SW_SHOWMINNOACTIVE wyświetli okno jako ikona. Okno, które jest obecnie aktywny pozostaje aktywna.  
+      
+ - SW_SHOWNA wyświetli okno w jego bieżącym stanie. Okno, które jest obecnie aktywny pozostaje aktywna.  
+      
+ - SW_SHOWNOACTIVATE wyświetli okno w najnowszych rozmiar i położenie. Okno, które jest obecnie aktywny pozostaje aktywna.  
+      
+ - Aktywuje SW_SHOWNORMAL i wyświetla okno. Jeśli okno jest zminimalizowane lub zmaksymalizowane, Windows przywraca oryginalny rozmiar i położenie (tak jak SW_RESTORE).  
   
-- **SW_HIDE** ukrywa okno i przekazuje aktywacji do innego okna.  
+*ptMinPosition*  
+Określa położenie w lewym górnym rogu okna, gdy okno jest zminimalizowana.  
   
-- **SW_MINIMIZE** minimalizuje określone okno i aktywuje okno najwyższego poziomu w liście systemu.  
+*ptMaxPosition*  
+Określa położenie w lewym górnym rogu okna, gdy okno jest zmaksymalizowane.  
   
-- **SW_RESTORE** Activates i wyświetla okno. Jeśli okno jest zminimalizowane lub zmaksymalizowane, Windows przywracania go w jego oryginalny rozmiar i położenie (taki sam jak **SW_SHOWNORMAL**).  
-  
-- **SW_SHOW** aktywuje okno i wyświetla je w jego bieżący rozmiar i położenie.  
-  
-- **SW_SHOWMAXIMIZED** aktywuje okno i wyświetla je jako okno zmaksymalizowane.  
-  
-- **SW_SHOWMINIMIZED** aktywuje okno i wyświetla je w postaci ikony.  
-  
-- **SW_SHOWMINNOACTIVE** Wyświetla okna w postaci ikony. Okno, który jest obecnie aktywny pozostaje aktywna.  
-  
-- **SW_SHOWNA** Wyświetla okno w bieżącym stanie. Okno, który jest obecnie aktywny pozostaje aktywna.  
-  
-- **SW_SHOWNOACTIVATE** Wyświetla okna w najnowszych rozmiar i położenie. Okno, który jest obecnie aktywny pozostaje aktywna.  
-  
-- **SW_SHOWNORMAL** Activates i wyświetla okno. Jeśli okno jest zminimalizowane lub zmaksymalizowane, Windows przywracania go w jego oryginalny rozmiar i położenie (taki sam jak **SW_RESTORE**).  
-  
- *ptMinPosition*  
- Określa położenie lewego górnego rogu okna, gdy okno jest zminimalizowany.  
-  
- `ptMaxPosition`  
- Określa położenie lewego górnego rogu okna, gdy okno jest zmaksymalizowane.  
-  
- *rcNormalPosition*  
- Określa współrzędne okna, gdy okno jest w normalnej pozycji (przywróconej).  
+*rcNormalPosition*  
+Określa współrzędne okna, gdy okno jest w normalnych pozycji (przywróconej).  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** winuser.h  

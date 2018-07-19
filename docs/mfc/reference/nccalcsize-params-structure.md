@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07db612cb6dbde0dd762cf709ac6040bbd836c4b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 095b66af9dab08e3d8fad040c43e2eaf8d2beb81
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369726"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335646"
 ---
 # <a name="nccalcsizeparams-structure"></a>NCCALCSIZE_PARAMS — Struktura
-`NCCALCSIZE_PARAMS` Struktury informacjami, używanego przez aplikację podczas przetwarzania `WM_NCCALCSIZE` komunikat do obliczenia rozmiaru, pozycji i Nieprawidłowa zawartość obszaru klienckiego okna.  
+`NCCALCSIZE_PARAMS` Struktura zawiera informacje, że aplikacja może użyć podczas przetwarzania komunikatu WM_NCCALCSIZE do obliczania rozmiarem, pozycją i prawidłową zawartość obszaru klienckiego okna.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,10 +37,10 @@ typedef struct tagNCCALCSIZE_PARAMS {
   
 #### <a name="parameters"></a>Parametry  
  *rgrc*  
- Określa tablicę prostokąty. Pierwszy zawiera współrzędne nowego okna, który został przeniesiony lub zmiany rozmiaru. Drugi zawiera współrzędne okna przed został przeniesiony lub zmiany rozmiaru. Trzeci zawiera współrzędne obszaru klienckiego okna przed został przeniesiony lub zmiany rozmiaru. Jeśli okno jest oknem podrzędnym, współrzędne są względem obszaru klienckiego okna nadrzędnego. Jeśli okno jest oknem najwyższego poziomu, współrzędne są podawane względem ekranu.  
+ Określa tablicę prostokąty. Pierwszy zawiera współrzędne nowe okno które zostały przeniesione lub zmiany rozmiaru. Drugi zawiera współrzędne okna, zanim został on przeniesiony lub ze zmienionym rozmiarem. Trzeci zawiera współrzędne obszaru klienckiego okna, zanim został on przeniesiony lub ze zmienionym rozmiarem. Jeśli okno jest oknem podrzędnym, współrzędne są podawane względem pola klienta okna nadrzędnego. Jeśli okno jest oknem najwyższego poziomu, współrzędne są podawane względem ekranu.  
   
  *lppos*  
- Wskazuje [WINDOWPOS](../../mfc/reference/windowpos-structure1.md) strukturę, która zawiera wartości rozmiar i położenie określony w operacji, który spowodował do przeniesienia lub zmiany rozmiaru okna.  
+ Wskazuje [WINDOWPOS](../../mfc/reference/windowpos-structure1.md) strukturę, która zawiera wartości rozmiaru i położenia określone w operacji, która spowodowała okna do przeniesienia lub zmiany rozmiaru.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** winuser.h  

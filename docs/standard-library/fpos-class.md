@@ -21,22 +21,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c7d7babe1112bbfcc80485d54d5a4a005b4dfc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3ce85d846d142e2c15a0fba6d2d3fb76c924b97f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848638"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966605"
 ---
 # <a name="fpos-class"></a>fpos — Klasa
 
-Klasa szablonu opisuje obiekt, który może przechowywać wszystkie informacje niezbędne do przywrócenia wskaźnik dowolnego położenie pliku w jakimkolwiek strumieniu. Obiekt fpos — klasa\< **St**> skutecznie przechowuje co najmniej dwa obiekty członek:
+Klasa szablonu opisuje obiekt, który można przechowywać wszystkie informacje niezbędne do przywrócenia wskaźnika dowolnego położenie pliku w dowolnej usłudze stream. Obiekt fpos — klasa\< **St**> skutecznie są przechowywane co najmniej dwa obiekty Członkowskie:
 
-- Przesunięcie bajtów, typu [streamoff](../standard-library/ios-typedefs.md#streamoff).
+- Liczbę bajtów względem typu [streamoff](../standard-library/ios-typedefs.md#streamoff).
 
-- Stan konwersji, do użytku przez obiekt basic_filebuf — klasa, typu **St**, zwykle `mbstate_t`.
+- Stan konwersji, do użytku przez obiekt basic_filebuf — klasa, typu `St`, zazwyczaj `mbstate_t`.
 
-Można również przechowywać pozycji dowolnego pliku do użycia przez obiekt klasy [basic_filebuf —](../standard-library/basic-filebuf-class.md), typu `fpos_t`. W środowisku ograniczone pliku o rozmiarze, jednak `streamoff` i `fpos_t` czasami mogą być używane zamiennie. Dla środowiska nie strumieni, których kodowanie zależne od stanu `mbstate_t` faktycznie może być nieużywane. W związku z tym liczba obiektów przechowywane może się różnić.
+Mogą być również przechowywane pozycji dowolnego pliku do użytku przez obiekt klasy [basic_filebuf —](../standard-library/basic-filebuf-class.md), typu `fpos_t`. W środowiskach ograniczony rozmiar, jednak `streamoff` i `fpos_t` czasami mogą być używane zamiennie. W środowiskach nie strumieni, które mają zależnej od stanu kodowania `mbstate_t` rzeczywiście być nieużywane. W związku z tym liczba przechowywanych obiektów mogą się różnić.
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,42 +47,42 @@ class fpos
 
 ### <a name="parameters"></a>Parametry
 
-*Statetype* informacji o stanie.
+*Statetype* informacje stanie.
 
 ### <a name="constructors"></a>Konstruktorów
 
 |Konstruktor|Opis|
 |-|-|
-|[fpos —](#fpos)|Utwórz obiekt, który zawiera informacje o stanie (przesunięcie) w strumieniu.|
+|[fpos —](#fpos)|Utwórz obiekt, który zawiera informacje o stanie (przesunięciem) w strumieniu.|
 
 ### <a name="member-functions"></a>Funkcje Członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[seekpos](#seekpos)|Używane przez standardowa biblioteka C++ tylko wewnętrznie. Nie wywołuj tej metody w kodzie.|
+|[seekpos —](#seekpos)|Używane przez standardowej biblioteki C++ tylko wewnętrznie. Nie wywołuj tej metody w kodzie.|
 |[state](#state)|Ustawia lub zwraca stan konwersji.|
 
 ### <a name="operators"></a>Operatory
 
 |Operator|Opis|
 |-|-|
-|[operator!=](#op_neq)|Testy wskaźników położenia pliku pod kątem nierówności.|
-|[operator +](#op_add)|Zwiększa wskaźnika położenia pliku.|
-|[operator+=](#op_add_eq)|Zwiększa wskaźnika położenia pliku.|
+|[operator!=](#op_neq)|Wskaźniki położenie pliku testów pod kątem nierówności.|
+|[operator +](#op_add)|Zwiększa wartość wskaźnika pozycji pliku.|
+|[operator+=](#op_add_eq)|Zwiększa wartość wskaźnika pozycji pliku.|
 |[operator-](#operator-)|Wskaźnik zmniejsza położenie pliku.|
 |[operator-=](#operator-_eq)|Wskaźnik zmniejsza położenie pliku.|
-|[operator==](#op_eq_eq)|Testy wskaźników położenia pliku pod kątem równości.|
-|[streamoff — operator](#op_streamoff)|Typ obiektu rzutowania `fpos` na obiekt typu `streamoff`.|
+|[operator==](#op_eq_eq)|Wskaźniki położenie pliku testów pod kątem równości.|
+|[streamoff — operator](#op_streamoff)|Typ obiektu rzutowania `fpos` do obiektu typu `streamoff`.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<systemu ios >
+**Nagłówek:** \<dla systemu ios >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="fpos"></a>  fpos::fpos
 
-Utwórz obiekt, który zawiera informacje o stanie (przesunięcie) w strumieniu.
+Utwórz obiekt, który zawiera informacje o stanie (przesunięciem) w strumieniu.
 
 ```cpp
 fpos(streamoff _Off = 0);
@@ -92,21 +92,21 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="parameters"></a>Parametry
 
-`_Off` Przesunięcie do strumienia.
+*_Off* przesunięcie w strumieniu.
 
-`_State` Początkowy stan `fpos` obiektu.
+*_Stanu* początkowy stan `fpos` obiektu.
 
-*_Filepos* przesunięcie do strumienia.
+*_Filepos* przesunięcie w strumieniu.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor przechowuje przesunięcie `_Off`względnych na początku pliku i jest w stanie początkowej konwersji (Jeśli który ma znaczenie). Jeśli `_Off` wynosi -1, wynikowy obiekt reprezentuje pozycji nieprawidłowy strumień.
+Pierwszy Konstruktor przechowuje przesunięcie *_Off*względnych na początku pliku, a stan konwersji początkowej (jeśli ma znaczenie,). Jeśli *_Off* wynosi -1, wynikowy obiekt reprezentuje pozycji nieprawidłowy strumień.
 
-Drugi Konstruktor przechowuje przesunięcia o wartości zero i obiekt `_State`.
+Drugi Konstruktor przechowuje zero przesunięcie i obiekt *_stanu*.
 
 ## <a name="op_neq"></a>  fpos::operator! =
 
-Testy wskaźników położenia pliku pod kątem nierówności.
+Wskaźniki położenie pliku testów pod kątem nierówności.
 
 ```cpp
 bool operator!=(const fpos<Statetype>& right) const;
@@ -114,7 +114,7 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-`right` Wskaźnik położenia pliku za pomocą którego chcesz porównać.
+*prawy* wskaźnik pozycji pliku, względem którego do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -122,7 +122,7 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca funkcję elementu członkowskiego `!(*this == right)`.
+Funkcja elementu członkowskiego zwraca `!(*this == right)`.
 
 ### <a name="example"></a>Przykład
 
@@ -178,7 +178,7 @@ int main( )
 
 ## <a name="op_add"></a>  fpos::operator +
 
-Zwiększa wskaźnika położenia pliku.
+Zwiększa wartość wskaźnika pozycji pliku.
 
 ```cpp
 fpos<Statetype> operator+(streamoff _Off) const;
@@ -186,7 +186,7 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 ### <a name="parameters"></a>Parametry
 
-`_Off` Przesunięcie, w którym mają być zwiększane wskaźnika położenia pliku.
+*_Off* przesunięcie, według którego mają być zwiększane wskaźnik położenia pliku.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -194,15 +194,15 @@ Pozycja w pliku.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca **fpos — (\*to) +=** `_Off`.
+Funkcja elementu członkowskiego zwraca **fpos — (\*to) +=** `_Off`.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [operator! =](#op_neq) przykładowe przy użyciu `operator+`.
+Zobacz [operator! =](#op_neq) przykład użycia `operator+`.
 
 ## <a name="op_add_eq"></a>  fpos::operator +=
 
-Zwiększa wskaźnika położenia pliku.
+Zwiększa wartość wskaźnika pozycji pliku.
 
 ```cpp
 fpos<Statetype>& operator+=(streamoff _Off);
@@ -210,7 +210,7 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="parameters"></a>Parametry
 
-`_Off` Przesunięcie, w którym mają być zwiększane wskaźnika położenia pliku.
+*_Off* przesunięcie, według którego mają być zwiększane wskaźnik położenia pliku.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -218,11 +218,11 @@ Pozycja w pliku.
 
 ### <a name="remarks"></a>Uwagi
 
-Dodaje funkcję elementu członkowskiego `_Off` przechowywane przesunięcia obiektu, a następnie zwraca  **\*to**. Pozycjonowanie w pliku, aby uzyskać wynik jest zwykle prawidłowe tylko dla danych binarnych strumieni, które nie mają kodowanie zależne od stanu.
+Funkcja elementu członkowskiego dodaje *_Off* przechowywanych przesunięcia elementu członkowskiego obiektu, a następnie zwraca  **\*to**. Do pozycjonowania w pliku, wynik jest zazwyczaj prawidłowy tylko w przypadku danych binarnych strumieni, które nie mają kodowanie zależnej od stanu.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [operator! =](#op_neq) przykładowe przy użyciu `operator+=`.
+Zobacz [operator! =](#op_neq) przykład użycia `operator+=`.
 
 ## <a name="fpos__operator-"></a>  fpos::operator-
 
@@ -236,17 +236,17 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 ### <a name="parameters"></a>Parametry
 
-`right` Położenie pliku.
+*prawy* położenie pliku.
 
-`_Off` Przesunięcia strumienia.
+*_Off* przesunięcie Stream.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca pierwszy funkcji członkowskiej `(streamoff)*this - (streamoff) right`. Zwraca drugie funkcji członkowskiej `fpos(*this) -= _Off`.
+Pierwsza funkcja elementu członkowskiego zwraca `(streamoff)*this - (streamoff) right`. Druga funkcja elementu członkowskiego zwraca `fpos(*this) -= _Off`.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [operator! =](#op_neq) przykładowe przy użyciu `operator-`.
+Zobacz [operator! =](#op_neq) przykład użycia `operator-`.
 
 ## <a name="fpos__operator-_eq"></a>  fpos::operator-=
 
@@ -258,23 +258,23 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 ### <a name="parameters"></a>Parametry
 
-`_Off` Przesunięcia strumienia.
+*_Off* przesunięcie Stream.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zwraca funkcję elementu członkowskiego `fpos(*this) -= _Off`.
+Funkcja elementu członkowskiego zwraca `fpos(*this) -= _Off`.
 
 ### <a name="remarks"></a>Uwagi
 
-Pozycjonowanie w pliku, aby uzyskać wynik jest zwykle prawidłowe tylko dla danych binarnych strumieni, które nie mają kodowanie zależne od stanu.
+Do pozycjonowania w pliku, wynik jest zazwyczaj prawidłowy tylko w przypadku danych binarnych strumieni, które nie mają kodowanie zależnej od stanu.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [operator! =](#op_neq) przykładowe przy użyciu `operator-=`.
+Zobacz [operator! =](#op_neq) przykład użycia `operator-=`.
 
 ## <a name="op_eq_eq"></a>  fpos::operator ==
 
-Testy wskaźników położenia pliku pod kątem równości.
+Wskaźniki położenie pliku testów pod kątem równości.
 
 ```cpp
 bool operator==(const fpos<Statetype>& right) const;
@@ -282,7 +282,7 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-`right` Wskaźnik położenia pliku za pomocą którego chcesz porównać.
+*prawy* wskaźnik pozycji pliku, względem którego do porównania.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -290,15 +290,15 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="remarks"></a>Uwagi
 
-Zwraca funkcję elementu członkowskiego `(streamoff)*this == (streamoff)right`.
+Funkcja elementu członkowskiego zwraca `(streamoff)*this == (streamoff)right`.
 
 ### <a name="example"></a>Przykład
 
-Zobacz [operator! =](#op_neq) przykładowe przy użyciu `operator+=`.
+Zobacz [operator! =](#op_neq) przykład użycia `operator+=`.
 
 ## <a name="op_streamoff"></a>  fpos::operator streamoff
 
-Rzutowanie obiektu typu `fpos` na obiekt typu `streamoff`.
+Rzutowanie obiektu typu `fpos` do obiektu typu `streamoff`.
 
 ```cpp
 operator streamoff() const;
@@ -306,7 +306,7 @@ operator streamoff() const;
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca przechowywanych przesunięcia element członkowski obiektu i wszelkie dodatkowe przesunięcie przechowywane jako część `fpos_t` obiektu elementu członkowskiego.
+Funkcja elementu członkowskiego zwraca przechowywaną przesunięcia elementu członkowskiego, obiekt i wszystkie dodatkowe przesunięcie przechowywane jako część `fpos_t` elementu członkowskiego obiektu.
 
 ### <a name="example"></a>Przykład
 
@@ -337,7 +337,7 @@ int main( )
 
 ## <a name="seekpos"></a>  fpos::seekpos
 
-Ta metoda jest używana wewnętrznie przez standardowa biblioteka C++ tylko. Nie wywołuj tej metody w kodzie.
+Ta metoda jest używana wewnętrznie przez standardowej biblioteki C++ tylko. Nie wywołuj tej metody w kodzie.
 
 ```cpp
 fpos_t seekpos() const;
@@ -355,7 +355,7 @@ void state(Statetype _State);
 
 ### <a name="parameters"></a>Parametry
 
-`_State` Nowy stan konwersji.
+*_Stanu* nowy stan konwersji.
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -363,7 +363,7 @@ Stan konwersji.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy funkcji członkowskiej zwraca wartość przechowywana we **St** obiektu elementu członkowskiego. Drugi magazynów funkcji Członkowskich `_State` w **St** obiektu elementu członkowskiego.
+Pierwsza funkcja elementu członkowskiego zwraca wartość przechowywaną w `St` elementu członkowskiego obiektu. Drugi magazynów funkcja elementu członkowskiego *_stanu* w `St` elementu członkowskiego obiektu.
 
 ### <a name="example"></a>Przykład
 

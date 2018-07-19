@@ -19,36 +19,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1553f7ccc3b22b4e3d76d8c49d94ba2a61c19e97
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 2a3b0e148104ff5620eddf7ac0d26693d96607d9
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122556"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025659"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Tworzenie aplikacji MFC w stylu przeglądarki sieci Web
-Do aplikacji w stylu przeglądarki sieci Web ma dostęp do informacji z Internetu (na przykład HTML lub aktywne dokumenty) lub intranet, jak również folderów w lokalnym systemie plików, a w sieci. Przez wyprowadzanie klasy widoku aplikacji z [CHtmlView](../../mfc/reference/chtmlview-class.md), efektywnie ułatwić przeglądarki sieci Web aplikacji, zapewniając widoku za pomocą formantu WebBrowser.  
+Aplikacji w stylu przeglądarki sieci Web można uzyskać dostęp do informacji w Internecie (takich jak HTML lub dokumenty aktywne) lub intranet, a także folderów w lokalnym systemie plików, a w sieci. Przez wyprowadzanie klasy widoku aplikacji z [CHtmlView](../../mfc/reference/chtmlview-class.md), efektywnie uczynić przeglądarki sieci Web aplikacji przesyłając widoku za pomocą formantu WebBrowser.  
   
-### <a name="to-create-a-web-browser-application-based-on-the-mfc-documentview-architecture"></a>Aby utworzyć aplikację przeglądarki sieci Web oparta na architekturze dokument/widok MFC  
+### <a name="to-create-a-web-browser-application-based-on-the-mfc-documentview-architecture"></a>Aby utworzyć aplikację przeglądarki sieci Web, w zależności od architektury dokument/widok MFC  
   
-1.  Postępuj zgodnie z instrukcjami w [tworzenie aplikacji MFC](../../mfc/reference/creating-an-mfc-application.md).  
+1.  Postępuj zgodnie z instrukcjami [tworzenie aplikacji MFC](../../mfc/reference/creating-an-mfc-application.md).  
   
-2.  W Kreatorze aplikacji MFC [typu aplikacji](../../mfc/reference/application-type-mfc-application-wizard.md) upewnij niektórych, że **architektury dokument/widok** zaznaczone pole. (Można wybrać **pojedynczego dokumentu** lub **wielu dokumentów**, ale nie **okno dialogowe na podstawie**.)  
+2.  W Kreatorze aplikacji MFC [typ aplikacji](../../mfc/reference/application-type-mfc-application-wizard.md) strony, należy pewne, że **architektury dokument/widok** pole jest zaznaczone. (Możesz wybrać dowolną **pojedynczego dokumentu** lub **wiele dokumentów**, ale nie **oparte o okna dialogowe**.)  
   
-3.  Na [Przejrzyj wygenerowane klasy](../../mfc/reference/generated-classes-mfc-application-wizard.md) użyj **klasa podstawowa** menu rozwijanego, aby wybrać `CHtmlView`.  
+3.  Na [przeglądu wygenerowane klasy](../../mfc/reference/generated-classes-mfc-application-wizard.md) stronie **klasy bazowej** menu rozwijanego, aby wybrać `CHtmlView`.  
   
-4.  Wybierz odpowiednie opcje mają wbudowane szkielet aplikacji.  
+4.  Wybierz odpowiednie opcje mają wbudowaną szkielet aplikacji.  
   
 5.  Kliknij przycisk **Zakończ**.  
   
- Formant WebBrowser obsługuje przeglądanie sieci Web za pomocą hiperłączy i nawigacja Uniform Resource Locator (URL). Formant obsługuje listy historii, który umożliwia użytkownikowi przeglądanie do przodu i do tyłu za pośrednictwem wcześniej przeglądanie witryn, folderów i dokumentów. Formant obsługuje bezpośrednio nawigacji, hiperłącza, listy historii, ulubionymi i zabezpieczeń. Aplikacje mogą używać formantu WebBrowser jako kontener dokumentów aktywnych do hosta także dokumenty aktywne. W związku z tym Bogato sformatowane dokumentów, takich jak arkusze kalkulacyjne programu Microsoft Excel lub dokumentów programu Word może zostać otwarty i edytowany w miejscu z wewnątrz formantu WebBrowser. Formant WebBrowser jest również kontenera formantu ActiveX, który może obsługiwać formantu ActiveX.  
+ WebBrowser — formant obsługuje przeglądanie sieci Web za pomocą hiperlinków i nawigacja Uniform Resource Locator (URL). Formant utrzymuje listę historii, który umożliwia użytkownikowi przejść do przodu i wstecz za pośrednictwem wcześniej przeglądane witryn, folderów i dokumentów. Kontrolka bezpośrednio obsługuje nawigacji, hiperłącza, listy historii, ulubionych i zabezpieczeń. Aplikacje mogą używać kontrolki WebBrowser jako kontener aktywnego dokumentu na hoście również dokumenty aktywne. W związku z tym Bogato sformatowane dokumenty, takie jak arkusze kalkulacyjne programu Excel lub dokumentów programu Word umożliwia otwarty i edytowany w miejscu z wewnątrz formantu WebBrowser. WebBrowser — formant jest również kontener formantu ActiveX, który może obsługiwać dowolną kontrolkę ActiveX.  
   
 > [!NOTE]
->  Formant WebBrowser ActiveX (i w związku z tym `CHtmlView`) jest dostępna tylko dla aplikacji uruchomionych w wersjach systemu Windows, w których Internet Explorer w wersji 4.0 lub nowszy został zainstalowany.  
+>  Kontrolki WebBrowser ActiveX (i w związku z tym `CHtmlView`) jest dostępna tylko dla aplikacji działających w ramach wersji Windows, w której program Internet Explorer 4.0 lub nowszy został zainstalowany.  
   
- Ponieważ `CHtmlView` po prostu implementuje formant przeglądarki Microsoft Web, jego obsługę drukowania nie jest jak inny [CView](../../mfc/reference/cview-class.md)-klas pochodnych. Zamiast formant WebBrowser implementuje interfejs użytkownika drukarki i wydruku. W związku z tym `CHtmlView` jest obsługuje Podgląd wydruku i nie zapewnia platformę dla innych funkcji obsługi drukowania: na przykład [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting), [CView::OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting), i [CView::OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting), które są dostępne w innych aplikacjach MFC.  
+ Ponieważ `CHtmlView` po prostu implementuje dodatek Microsoft Web formantu przeglądarki, jego obsługa drukowania jest podobnie jak inne [CView](../../mfc/reference/cview-class.md)-klas pochodnych. Zamiast formantu WebBrowser implementuje interfejs użytkownika drukarki i drukowania. W rezultacie `CHtmlView` jest podgląd wydruku nie jest obsługiwane i nie zapewnia platformę dla innych funkcji drukowania pomocy technicznej: na przykład [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting), [CView::OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting), i [CView::OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting), które są dostępne w innych aplikacjach MFC.  
   
- `CHtmlView` działa jako otoka dla formant przeglądarki sieci Web, co daje aplikacji widoku na sieci Web lub strony HTML. Kreator tworzy zastąpienia [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) funkcji w klasie widoku udostępnienie łącza nawigacji do witryny sieci Web Microsoft Visual C++:  
+ `CHtmlView` działa jako otoki dla formantu przeglądarki sieci Web, co daje aplikacji widoku sieci Web lub strony HTML na. Kreator utworzy zastąpienie [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) funkcja w klasie widoku, zapewniając łącze nawigacyjne do witryny sieci Web firmy Microsoft Visual C++:  
   
 ```cpp
 void CWebView::OnInitialUpdate()  
@@ -63,7 +63,7 @@ void CWebView::OnInitialUpdate()
 }
 ```
 
-Tej witryny można zastąpić własny lub użyć [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource) funkcji członkowskiej, aby otworzyć stronę HTML, która znajduje się w skrypt zasobów projektu jako domyślnej zawartości widoku. Na przykład:  
+Możesz zastąpić tę lokację własny, możesz też [loadfromresource —](../../mfc/reference/chtmlview-class.md#loadfromresource) funkcja elementu członkowskiego, aby otworzyć stronę HTML, która znajduje się w skrypt zasobów projektu jako domyślnej zawartości widoku. Na przykład:  
   
 ```cpp
 void CWebView::OnInitialUpdate()  
@@ -77,10 +77,10 @@ void CWebView::OnInitialUpdate()
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykładowe MFC MFCIE](http://msdn.microsoft.com/en-us/7391aa0c-fca8-4994-a6c9-6c5c7470fba0)   
+ [Próbki MFC MFCIE](http://msdn.microsoft.com/7391aa0c-fca8-4994-a6c9-6c5c7470fba0)   
  [Kreator aplikacji MFC](../../mfc/reference/mfc-application-wizard.md)   
  [Praca z właściwościami projektu](../../ide/working-with-project-properties.md)   
  [Strony właściwości](../../ide/property-pages-visual-cpp.md)   
  [Praca z właściwościami projektu](../../ide/working-with-project-properties.md)   
- [Wdrażanie aplikacji](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Wdrażanie aplikacji](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 

@@ -1,5 +1,5 @@
 ---
-title: Jeden z nich-Argument — manipulatory strumieni wyjściowych | Dokumentacja firmy Microsoft
+title: Jeden z nich — manipulatory Stream wyjściowych Argument | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cd9c9f643b6766dfca4f008f14c9d470a5bcc34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30523a7db07dba1359af59c9fcc988feb0e4ec18
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853326"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953829"
 ---
 # <a name="other-one-argument-output-stream-manipulators"></a>Inne manipulatory strumieni wyjściowych z jednym argumentem
 
-W poniższym przykładzie użyto klasy `money`, czyli `long` typu. `setpic` Manipulatora dołącza ciąg formatowania "obrazu" do klasy, która może służyć strumienia przeciążonego operatora wstawiania klasy `money`. Ciąg formatu jest przechowywana jako zmienna statyczna w `money` klasy, a nie jako element członkowski danych klasy strumienia, dlatego nie masz do uzyskania nowej klasy strumienia wyjściowego.
+W poniższym przykładzie użyto klasy `money`, czyli **długie** typu. `setpic` Manipulator dołącza ciąg formatowania "obraz" do klasy, która może być używany przez operator wstawiania strumienia przeciążonej klasy `money`. Ciąg formatu jest przechowywana jako zmienną statyczną w `money` klasy, a nie jako element członkowski danych klasy strumienia, dlatego nie masz do wyprowadzenia nową klasę strumienia wyjściowego.
 
 ## <a name="example"></a>Przykład
 

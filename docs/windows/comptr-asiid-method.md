@@ -1,7 +1,7 @@
 ---
-title: ComPtr::AsIID — metoda | Dokumentacja firmy Microsoft
+title: ComPtr::AsIID, metoda | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/11/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 26f56a9d94620067ae31f5b4984ff24fe703822e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: db5bc6b2547fb77dd887f96b6c33dee536e43f77
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870093"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025906"
 ---
 # <a name="comptrasiid-method"></a>ComPtr::AsIID — Metoda
-Zwraca obiekt comptr —, który reprezentuje interfejs identyfikowany przez identyfikator określonego interfejsu.  
+Zwraca obiekt ComPtr, który reprezentuje interfejs identyfikowane przez identyfikator określonego interfejsu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,10 +38,10 @@ WRL_NOTHROW HRESULT AsIID(
   
 #### <a name="parameters"></a>Parametry  
  `riid`  
- Identyfikatora interfejsu.  
+ Identyfikator interfejsu.  
   
  `p`  
- Jeśli jest to obsługiwane podwójnie pośredni wskaźnik do interfejsu określonego przez `riid` parametru; w przeciwnym razie wskaźnik IUnknown.  
+ Jeśli obiekt ma interfejs, którego identyfikator jest równy `riid`, podwójnie pośredniego wskaźnika do interfejsu, określonego przez `riid` parametru; w przeciwnym razie wskaźnik IUnknown.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK w przypadku powodzenia; w przeciwnym razie wartość HRESULT, która wskazuje błąd.  
@@ -49,7 +49,7 @@ WRL_NOTHROW HRESULT AsIID(
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** client.h  
   
- **Namespace:** Microsoft::wrl —  
+ **Namespace:** Microsoft::WRL  
   
 ## <a name="see-also"></a>Zobacz też  
  [ComPtr, klasa](../windows/comptr-class.md)

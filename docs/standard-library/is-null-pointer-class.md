@@ -1,5 +1,5 @@
 ---
-title: Klasa is_null_pointer | Dokumentacja firmy Microsoft
+title: is_null_pointer, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f1686900fe876d1fd884c8321654b7a7f866647
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6de5d24c0763e731b3123778e74b22c20798b729
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856674"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966540"
 ---
-# <a name="isnullpointer-class"></a>is_null_pointer — klasa
+# <a name="isnullpointer-class"></a>is_null_pointer, klasa
 
-Testy, jeśli typ jest typ std::nullptr_t.
+Sprawdza, czy typ jest std::nullptr_t.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,17 +37,17 @@ struct is_null_pointer;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ do zapytania.
+*T* typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typ `T` jest `std::nullptr_t`, w przeciwnym razie ma wartość false.
+Wystąpienie typu predykatu ma wartość true, jeśli typ *T* jest `std::nullptr_t`, w przeciwnym razie przechowuje wartość false.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

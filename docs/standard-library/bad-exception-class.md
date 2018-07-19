@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41b30763f1382b7a12f68cd6a45b87960f623649
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3813fae7a9ae6105d4a3dfe4e72ac1773a10e65
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842680"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954659"
 ---
 # <a name="badexception-class"></a>Klasa bad_exception
 
-Klasa opisuje wyjątek, który może zostać wygenerowany z nieoczekiwany obsługi.
+Klasa opisuje wyjątek, który może zostać wygenerowany z program obsługi nieoczekiwanych wyjątków.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,21 +35,21 @@ class bad_exception    : public exception {};
 
 ## <a name="remarks"></a>Uwagi
 
-[Nieoczekiwany](../standard-library/exception-functions.md#unexpected) zgłosi `bad_exception` zamiast przerywa lub zamiast kontaktować się z inną funkcję określony za pomocą [set_unexpected —](../standard-library/exception-functions.md#set_unexpected) Jeśli `bad_exception` jest uwzględniony na liście throw funkcji.
+[Nieoczekiwany](../standard-library/exception-functions.md#unexpected) zgłosi `bad_exception` zamiast przerywa lub zamiast wywoływania innej funkcji określony za pomocą [set_unexpected](../standard-library/exception-functions.md#set_unexpected) Jeśli `bad_exception` znajduje się na liście throw funkcji.
 
-Wartość zwrócona przez **co** to ciąg C zdefiniowane w implementacji. Brak funkcji Członkowskich generują żadnych wyjątków.
+Wartość zwrócona przez obiekt `what` jest ciągiem C zdefiniowanych w implementacji. Żadna z funkcji elementu członkowskiego generuje żadnych wyjątków.
 
-Aby uzyskać listę członków dziedziczonych przez `bad_exception` , zobacz [wyjątek klasy](../standard-library/exception-class.md).
+Aby uzyskać listę elementów członkowskich dziedziczonych przez `bad_exception` klasy, zobacz [wyjątek klasy](../standard-library/exception-class.md).
 
 ## <a name="example"></a>Przykład
 
-Zobacz [set_unexpected —](../standard-library/exception-functions.md#set_unexpected) na przykład użycie [nieoczekiwany](../standard-library/exception-functions.md#unexpected) zgłaszanie `bad_exception`.
+Zobacz [set_unexpected](../standard-library/exception-functions.md#set_unexpected) przykładem użycia [nieoczekiwany](../standard-library/exception-functions.md#unexpected) zgłaszanie `bad_exception`.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<wyjątku >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

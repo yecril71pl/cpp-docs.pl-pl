@@ -1,5 +1,5 @@
 ---
-title: is_nothrow_copy_constructible — klasa | Dokumentacja firmy Microsoft
+title: is_nothrow_copy_constructible, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd3a9818b6334ddd2d2769fc79c55fc8fd72e6dd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc4f839ed955048b96f6327c63cd2cc82fef8aca
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842563"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953776"
 ---
 # <a name="isnothrowcopyconstructible-class"></a>is_nothrow_copy_constructible — klasa
 
@@ -36,17 +36,17 @@ struct is_nothrow_copy_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zapytania.
+*Ty* typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typ `Ty` ma nothrow konstruktora kopiującego, w przeciwnym razie posiada wartość false.
+Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* ma nothrow Konstruktor kopiujący, w przeciwnym razie przechowuje wartość false.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

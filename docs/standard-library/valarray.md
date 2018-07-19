@@ -1,5 +1,5 @@
 ---
-title: '&lt;valarray —&gt; | Dokumentacja firmy Microsoft'
+title: '&lt;valarray&gt; | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 578dd43f747eddbf37f76c41a2fa35df8edca658
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98ee264d019e89ef3fbdf299a58c972ad895caed
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862160"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954802"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray —&gt;
 
-Definiuje valarray — klasa szablonu i wiele pomocniczych szablonu klasy i funkcje.
+Definiuje valarray klasy szablonu i wiele pomocniczych szablonu klasy i funkcje.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,70 +36,70 @@ Definiuje valarray — klasa szablonu i wiele pomocniczych szablonu klasy i funk
 
 ## <a name="remarks"></a>Uwagi
 
-Te klasy szablonu i funkcje są dozwolone nietypowe współrzędnych w celu lepszą wydajność. W szczególności dowolnej funkcji zwracających typ **valarray —\<** T1**>** może zwracać obiekt innego typu T2. W takim przypadku funkcji, które akceptuje jeden lub więcej argumentów typu **valarray —\<** T2**>** musi mieć przeciążeń, które akceptuje dowolne kombinacje tych argumentów, każdy argument typu T2 zastąpione.
+Te klasy szablonów i funkcje są dozwolone nietypowe szerokości geograficznej w celu poprawy wydajności. W szczególności żadnej funkcji, zwracająca typ **valarray\<** T1**>** może zwrócić obiekt innego typu T2. W takim przypadku funkcji, które przyjmuje jeden lub więcej argumentów typu **valarray\<** T2**>** musi mieć przeciążenia, które akceptują dowolnej kombinacji tych argumentów, każdy zastąpione argumentu typu T2.
 
 ### <a name="functions"></a>Funkcje
 
 |Funkcja|Opis|
 |-|-|
-|[ABS](../standard-library/valarray-functions.md#abs)|Działa na elementy wejściowe valarray —, zwracając valarray —, której elementy są równe wartość bezwzględną liczby elementów wejściowych valarray —.|
-|[ACOS](../standard-library/valarray-functions.md#acos)|Działa na elementy wejściowe valarray —, zwracając valarray —, której elementy są równe arcus cosinus liczby elementów wejściowych valarray —.|
-|[ASIN](../standard-library/valarray-functions.md#asin)|Działa na elementy wejściowe valarray —, zwracając valarray —, której elementy są równe arcus sinus elementów wejściowych valarray —.|
-|[atan](../standard-library/valarray-functions.md#atan)|Działa na elementy wejściowe valarray —, zwracając valarray —, której elementy są równe wartość główną arcus tangens elementów wejściowych valarray —.|
-|[atan2](../standard-library/valarray-functions.md#atan2)|Zwraca valarray —, której elementy są równe arcus tangens kartezjańskimi określone przez kombinację stałych i elementy valarrays składników.|
-|[COS](../standard-library/valarray-functions.md#cos)|Działa na elementy wejściowe valarray —, zwracając valarray —, której elementy są równe cosinus elementów wejściowych valarray —.|
-|[COSH](../standard-library/valarray-functions.md#cosh)|Działa na elementy wejściowe valarray —, zwracając valarray —, której elementy są równe cosinus hiperboliczny elementów wejściowych valarray —.|
-|[EXP](../standard-library/valarray-functions.md#exp)|Działa na elementy wejściowe valarray zwracanie valarray —, której elementy są równe wykładniczej elementów wejściowych valarray — naturalnego —.|
-|[log](../standard-library/valarray-functions.md#log)|Działa na elementy wejściowe valarray —, zwracając valarray —, której elementy są równe logarytm naturalny elementów wejściowych valarray —.|
-|[log10](../standard-library/valarray-functions.md#log10)|Działa na elementy wejściowe valarray —, zwracając valarray —, której elementy są takie same na podstawie 10 lub logarytmu elementów wejściowych valarray —.|
-|[Pow](../standard-library/valarray-functions.md#pow)|Działa w przypadku elementów wejściowych valarrays i stałe, zwracając valarray —, której elementy są równe podstawowej określone przez elementy wejściowe valarray — lub stałą podniesionej do potęgi określonej przez elementy wejściowe valarray — lub stała.|
-|[SIN](../standard-library/valarray-functions.md#sin)|Działa na elementy wejściowe valarray —, zwracając valarray —, której elementy są równe sinus elementów wejściowych valarray —.|
-|[SINH](../standard-library/valarray-functions.md#sinh)|Działa na elementy wejściowe valarray —, zwracając valarray —, której elementy są równe sinus hiperboliczny liczby elementów wejściowych valarray —.|
-|[sqrt](../standard-library/valarray-functions.md#sqrt)|Działa na elementy wejściowe valarray —, zwracając valarray —, której elementy są równe pierwiastek kwadratowy liczby elementów wejściowych valarray —.|
+|[ABS](../standard-library/valarray-functions.md#abs)|Działa na elementy wejściowe tablicy valarray, zwracając valarray, której elementy są równe wartość bezwzględną liczby elementów tworzonej tablicy valarray danych wejściowych.|
+|[ACOS](../standard-library/valarray-functions.md#acos)|Działa na elementy wejściowe tablicy valarray, zwracając valarray, której elementy są równe arcus cosinus liczby elementów tworzonej tablicy valarray danych wejściowych.|
+|[ASIN](../standard-library/valarray-functions.md#asin)|Działa na elementy wejściowe tablicy valarray, zwracając valarray, której elementy są równe arcus sinus liczby elementów tworzonej tablicy valarray danych wejściowych.|
+|[atan](../standard-library/valarray-functions.md#atan)|Działa na elementy wejściowe tablicy valarray, zwracając valarray, której elementy są równe wartość główną wartości arcus tangens elementów tworzonej tablicy valarray danych wejściowych.|
+|[atan2](../standard-library/valarray-functions.md#atan2)|Zwraca tablicę valarray, której elementy są równe arcus tangens Kartezjańskiego określone przez kombinację stałych i elementy valarrays składników.|
+|[COS](../standard-library/valarray-functions.md#cos)|Działa na elementy wejściowe tablicy valarray, zwracając valarray, której elementy są równe cosinus liczby elementów tworzonej tablicy valarray danych wejściowych.|
+|[COSH](../standard-library/valarray-functions.md#cosh)|Działa na elementy wejściowe tablicy valarray, zwracając valarray, której elementy są równe cosinus hiperboliczny liczby elementów tworzonej tablicy valarray danych wejściowych.|
+|[EXP](../standard-library/valarray-functions.md#exp)|Działa na elementy wejściowe tablicy valarray, zwracając valarray, której elementy są równe do naturalnym wykładniczą elementów tworzonej tablicy valarray danych wejściowych.|
+|[log](../standard-library/valarray-functions.md#log)|Działa na elementy wejściowe tablicy valarray, zwracając valarray, której elementy są równe logarytm naturalny elementów tworzonej tablicy valarray danych wejściowych.|
+|[log10](../standard-library/valarray-functions.md#log10)|Działa na elementy wejściowe tablicy valarray, zwracając valarray, której elementy są równe, na podstawie 10 lub logarytmu elementów wejściowych tablicy valarray.|
+|[Pow](../standard-library/valarray-functions.md#pow)|Działa w przypadku elementów wejściowych valarrays i stałe, zwracając valarray, której elementy są równe podstawowy określonej przez elementy wejściowe tablicy valarray lub stałą podniesioną do potęgi określonej przez elementy wejściowe tablicy valarray lub stała.|
+|[SIN](../standard-library/valarray-functions.md#sin)|Działa na elementy wejściowe tablicy valarray, zwracając valarray, której elementy są równe sinus elementów tworzonej tablicy valarray danych wejściowych.|
+|[SINH](../standard-library/valarray-functions.md#sinh)|Działa na elementy wejściowe tablicy valarray, zwracając valarray, której elementy są równe sinus hiperboliczny liczby elementów tworzonej tablicy valarray danych wejściowych.|
+|[sqrt](../standard-library/valarray-functions.md#sqrt)|Działa na elementy wejściowe tablicy valarray, zwracając valarray, której elementy są równe pierwiastek kwadratowy liczby elementów tworzonej tablicy valarray danych wejściowych.|
 |[swap](../standard-library/valarray-functions.md#swap)||
-|[tan](../standard-library/valarray-functions.md#tan)|Działa na elementy wejściowe valarray —, zwracając valarray —, której elementy są równe tangens elementów wejściowych valarray —.|
-|[TANH](../standard-library/valarray-functions.md#tanh)|Działa na elementy wejściowe valarray —, zwracając valarray —, której elementy są równe tangens hiperboliczny liczby elementów wejściowych valarray —.|
+|[tan](../standard-library/valarray-functions.md#tan)|Działa na elementy wejściowe tablicy valarray, zwracając valarray, której elementy są równe tangens elementów tworzonej tablicy valarray danych wejściowych.|
+|[TANH](../standard-library/valarray-functions.md#tanh)|Działa na elementy wejściowe tablicy valarray, zwracając valarray, której elementy są równe tangens hiperboliczny liczby elementów tworzonej tablicy valarray danych wejściowych.|
 
 ### <a name="operators"></a>Operatory
 
 |Operator|Opis|
 |-|-|
-|[operator!=](../standard-library/valarray-operators.md#op_neq)|Sprawdza, czy są odpowiednie elementy dwóch valarrays równej wielkości nierównej lub czy są równe wszystkie elementy valarray — określona wartość valarray — typ elementu.|
-|[operator%](../standard-library/valarray-operators.md#op_mod)|Uzyskuje resztę z dzielenia odpowiednie elementy dwóch valarrays równej wielkości lub podzielenie valarray — przez określoną wartość typu elementu valarray — lub podziału przez valarray — określona wartość.|
-|[Operator &](../standard-library/valarray-operators.md#op_amp)|Uzyskuje operatora testu koniunkcji **i** między odpowiednie elementy dwóch valarrays równej wielkości lub valarray — i określoną wartość typu elementu.|
-|[Operator & &](../standard-library/valarray-operators.md#op_amp_amp)|Uzyskuje logicznym **i** między odpowiednie elementy dwóch valarrays równej wielkości lub valarray — i określoną wartość valarray — typ elementu.|
-|[operator>](../standard-library/valarray-operators.md#op_gt)|Sprawdza, czy elementy jeden valarray — są większe niż elementów równej wielkości valarray — lub czy wszystkie elementy valarray — większa lub mniejsza niż określona wartość valarray — typ elementu.|
-|[operator>=](../standard-library/valarray-operators.md#op_gt_eq)|Sprawdza, czy elementy jeden valarray — są większe niż lub równe elementów równej wielkości valarray — lub czy wszystkie elementy valarray — są większe niż lub równe lub mniejsze niż lub równa określonej wartości.|
-|[operator>>](../standard-library/valarray-operators.md#op_gt_gt)|Prawo zmian usługi bits dla każdego elementu valarray — określonej liczby miejsc lub element-wise wartość określoną w drugim valarray —.|
-|[Operator <](../standard-library/valarray-operators.md#op_lt)|Sprawdza, czy elementy valarray — co jest mniejsza od elementów równej wielkości valarray — lub czy wszystkie elementy valarray — większa lub mniejsza niż określona wartość.|
-|[Operator < =](../standard-library/valarray-operators.md#op_lt_eq)|Sprawdza, czy elementy jeden valarray — są mniejsze niż lub równe elementów równej wielkości valarray — lub czy wszystkie elementy valarray — są większe niż lub równe lub mniejsze niż lub równa określonej wartości.|
-|[Operator <<](../standard-library/valarray-operators.md#op_lt_lt)|Po lewej wykonuje przesunięcie bitów dla każdego elementu valarray — określonej liczby miejsc lub element-wise wartość określoną w drugim valarray —.|
-|[operator *](../standard-library/valarray-operators.md#op_star)|Uzyskuje element-wise produktu między elementami odpowiedniego dwóch valarrays równej wielkości typu lub między valarray — określona wartość valarray — typ elementu.|
-|[operator +](../standard-library/valarray-operators.md#op_add)|Uzyskuje element-wise Suma między elementami odpowiedniego dwóch valarrays równej wielkości typu lub między valarray — określona wartość valarray — typ elementu.|
-|[operator-](../standard-library/valarray-operators.md#operator-)|Uzyskuje element-wise różnica między odpowiednie elementy tego dwa valarrays równej wielkości lub między valarray — określona wartość valarray — typ elementu.|
-|[operator /](../standard-library/valarray-operators.md#op_div)|Uzyskuje element-wise iloraz między elementami odpowiedniego dwóch valarrays równej wielkości typu lub między valarray — określona wartość valarray — typ elementu.|
-|[operator==](../standard-library/valarray-operators.md#op_eq_eq)|Testy, czy są odpowiednie elementy dwóch valarrays równej wielkości większy lub czy są wszystkie elementy valarray — równa określonej wartości typu elementu valarray —.|
-|[operator^](../standard-library/valarray-operators.md#op_xor)|Uzyskuje operator wyłączny `OR` między odpowiednie elementy dwóch valarrays równej wielkości lub valarray — i określoną wartość typu elementu.|
-|[operator&#124;](../standard-library/valarray-operators.md#op_or)|Uzyskuje operatora testu koniunkcji `OR` między odpowiednie elementy dwóch valarrays równej wielkości lub valarray — i określoną wartość typu elementu.|
-|[operator&#124;&#124;](../standard-library/valarray-operators.md#op_lor)|Uzyskuje logicznym `OR` między odpowiednie elementy dwóch valarrays równej wielkości lub valarray — i określoną wartość valarray — typ elementu.|
+|[operator!=](../standard-library/valarray-operators.md#op_neq)|Sprawdza, czy odpowiadające elementy dwóch valarrays równej wielkości są różne lub tego, czy wszystkie elementy tablicy valarray są nierówne określoną wartość typ elementu tablicy valarray.|
+|[operator%](../standard-library/valarray-operators.md#op_mod)|Uzyskuje resztę z dzielenia odpowiadające elementy dwóch valarrays równej wielkości lub podzielenie tablicę valarray przez określoną wartość, typ elementu tablicy valarray lub podzielenie określonej wartości w tablicy valarray.|
+|[Operator &](../standard-library/valarray-operators.md#op_amp)|Uzyskuje bitowe `AND` między odpowiadające elementy dwóch valarrays równej wielkości lub tablicę valarray i określoną wartość typu elementu.|
+|[Operator & &](../standard-library/valarray-operators.md#op_amp_amp)|Uzyskuje logicznej `AND` między odpowiadające elementy dwóch valarrays równej wielkości lub tablicę valarray i określoną wartość typ elementu tablicy valarray.|
+|[operator>](../standard-library/valarray-operators.md#op_gt)|Sprawdza, czy elementów tworzonej tablicy valarray jednego są większe niż elementów równej wielkości tablicy valarray lub tego, czy wszystkie elementy tablicy valarray jest większa lub mniejsza niż określona wartość typ elementu tablicy valarray.|
+|[operator>=](../standard-library/valarray-operators.md#op_gt_eq)|Sprawdza, czy elementów tworzonej tablicy valarray jednego są większe niż lub równa elementy równej wielkości tablicy valarray lub tego, czy wszystkie elementy tablicy valarray są większe niż lub równe lub mniejsze niż lub równa określonej wartości.|
+|[operator>>](../standard-library/valarray-operators.md#op_gt_gt)|Po prawej stronie przesunięcia bitów dla każdego elementu tablicy valarray określoną liczbę pozycji i według określonej ilości element-wise określony przez drugi tablicy valarray.|
+|[Operator <](../standard-library/valarray-operators.md#op_lt)|Sprawdza, czy elementów tworzonej tablicy valarray jednego są mniejsze niż elementów równej wielkości tablicy valarray lub tego, czy wszystkie elementy tablicy valarray jest większa lub mniejsza niż określona wartość.|
+|[Operator < =](../standard-library/valarray-operators.md#op_lt_eq)|Sprawdza, czy elementów tworzonej tablicy valarray jednego są mniejsze niż lub równe elementów tworzonej tablicy valarray równej wielkości, czy wszystkie elementy tablicy valarray są większe niż lub równe lub mniejsze niż lub równa określonej wartości.|
+|[Operator <<](../standard-library/valarray-operators.md#op_lt_lt)|Po lewej stronie wykonuje przesunięcie bitów dla każdego elementu tablicy valarray określoną liczbę pozycji i według określonej ilości element-wise określony przez drugi tablicy valarray.|
+|[operator *](../standard-library/valarray-operators.md#op_star)|Uzyskuje mnożenia między odpowiadające elementy dwóch valarrays równej wielkości lub z między valarray określoną wartość typ elementu tablicy valarray.|
+|[operator +](../standard-library/valarray-operators.md#op_add)|Uzyskuje element-wise Suma między odpowiadające elementy dwóch valarrays równej wielkości lub z między valarray określoną wartość typ elementu tablicy valarray.|
+|[operator-](../standard-library/valarray-operators.md#operator-)|Uzyskuje element-wise różnica między odpowiadające elementy dwóch valarrays równej wielkości lub z między valarray określoną wartość typ elementu tablicy valarray.|
+|[operator /](../standard-library/valarray-operators.md#op_div)|Uzyskuje element-wise iloraz między odpowiadające elementy dwóch valarrays równej wielkości lub z między valarray określoną wartość typ elementu tablicy valarray.|
+|[operator==](../standard-library/valarray-operators.md#op_eq_eq)|Testy czy odpowiadające elementy dwóch valarrays równej wielkości są równe, lub czy są wszystkie elementy tablicy valarray równa określonej wartości typu elementu tablicy valarray.|
+|[operator^](../standard-library/valarray-operators.md#op_xor)|Uzyskuje wyłączny sumy bitowej `OR` między odpowiadające elementy dwóch valarrays równej wielkości lub tablicę valarray i określoną wartość typu elementu.|
+|[operator&#124;](../standard-library/valarray-operators.md#op_or)|Uzyskuje bitowe `OR` między odpowiadające elementy dwóch valarrays równej wielkości lub tablicę valarray i określoną wartość typu elementu.|
+|[operator&#124;&#124;](../standard-library/valarray-operators.md#op_lor)|Uzyskuje logicznej `OR` między odpowiadające elementy dwóch valarrays równej wielkości lub tablicę valarray i określoną wartość typ elementu tablicy valarray.|
 
 ### <a name="classes"></a>Klasy
 
 |Class|Opis|
 |-|-|
-|[gslice, klasa](../standard-library/gslice-class.md)|Klasa narzędzia valarray —, który służy do definiowania wielowymiarowych wycinków valarray —.|
-|[gslice_array, klasa](../standard-library/gslice-array-class.md)|Klasy wewnętrzne, pomocnicze szablonu, która obsługuje obiekty ogólne wycinek zapewniając operacji między macierzami z podzbioru zdefiniowanych przez ogólne wycinek valarray —.|
-|[indirect_array, klasa](../standard-library/indirect-array-class.md)|Klasy wewnętrzne, pomocnicze szablonu, która obsługuje obiekty, które są podzbiorem valarrays zapewniając operacji między macierzami podzbioru zdefiniowanych przez określenie podzbiór indeksów valarray — nadrzędnego.|
-|[mask_array, klasa](../standard-library/mask-array-class.md)|Klasy wewnętrzne, pomocnicze szablonu, która obsługuje obiekty, które są podzbiorem valarrays nadrzędnego określić z wyrażenie logiczne, wprowadzając operacji między macierzami podzbioru.|
-|[slice, klasa](../standard-library/slice-class.md)|Klasa narzędzia valarray —, który służy do definiowania jednowymiarowa, vector przypominającej podzbiór valarray —.|
-|[slice_array, klasa](../standard-library/slice-array-class.md)|Klasy wewnętrzne, pomocnicze szablonu, która obsługuje obiekty wycinek zapewniając operacji między macierzami z podzbioru zdefiniowanych przez wycinka valarray —.|
-|[valarray, klasa](../standard-library/valarray-class.md)|Klasa szablonu opisuje obiekt, który określa sekwencję elementów typu **typu** który są przechowywane w postaci tablicy i przeznaczone do wykonywania operacji matematycznych o dużej szybkości, zoptymalizowana pod kątem wydajności obliczeniowej.|
+|[gslice, klasa](../standard-library/gslice-class.md)|Klasy narzędzi do tablicy valarray, który jest używany do definiowania wycinków wielowymiarowej tablicy valarray.|
+|[gslice_array, klasa](../standard-library/gslice-array-class.md)|Klasy wewnętrzne, pomocnicze w ramach szablonu, która obsługuje obiekty wycinek ogólne, zapewniając operacji między macierzami podzbioru zdefiniowanych przez ogólne wycinek tablicy valarray.|
+|[indirect_array, klasa](../standard-library/indirect-array-class.md)|Klasa szablonu wewnętrznego, pomocnicza, która obiektów obsługuje, które są podzbiorem valarrays, zapewniając operacji między macierzami podzbioru definiowaną przez określenie podzbiór indeksów valarray nadrzędnej.|
+|[mask_array, klasa](../standard-library/mask-array-class.md)|Klasa szablonu pomocnicze, wewnętrzne, który obiektów obsługuje, które są podzbiorem valarrays nadrzędnego, określony za pomocą wyrażenie logiczne, zapewniając operacji między macierzami podzbioru.|
+|[slice, klasa](../standard-library/slice-class.md)|Klasy narzędzi do tablicy valarray, który jest używany do definiowania jednowymiarowo, podobne do wektora podzbiór tablicy valarray.|
+|[slice_array, klasa](../standard-library/slice-array-class.md)|Klasy wewnętrzne, pomocnicze w ramach szablonu, która obsługuje obiekty wycinek, zapewniając operacji między macierzami z podzbioru zdefiniowanych przez wycinek tablicy valarray.|
+|[valarray, klasa](../standard-library/valarray-class.md)|Klasa szablonu opisuje obiekt, który kontroluje sekwencje elementów typu `Type` są przechowywane w postaci tablicy oraz przeznaczony do przeprowadzania szybkich operacji matematycznych, zoptymalizowana pod kątem wydajności obliczeniowej.|
 
 ### <a name="specializations"></a>Specjalizacje
 
 |||
 |-|-|
-|[valarray —\<bool > — klasa](../standard-library/valarray-bool-class.md)|Specjalna wersja valarray — klasa szablonu\<**typu**> do elementów typu `bool`.|
+|[valarray —\<bool > klasa](../standard-library/valarray-bool-class.md)|Specjalizowanej wersji szablonu valarray klasy\<**typu**> do elementów typu **bool**.|
 
 ## <a name="see-also"></a>Zobacz także
 

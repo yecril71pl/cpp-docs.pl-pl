@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93cbd58b3259821292254d8395f5d2435ecaa365
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f749f8cd43588eea8476c2746134b706737b6f5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966662"
 ---
 # <a name="explicit-type-conversion-operator-"></a>Operator jawnej konwersji typu: ()
 Język C++ pozwala na jawną konwersję typu przy użyciu składni podobnej do składni wywołania funkcji.  
@@ -34,9 +35,9 @@ simple-type-name ( expression-list )
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- A *nazwy typu prostego* następuje *lista wyrażeń* ujęta w nawiasy konstrukcji obiektu określonego typu przy użyciu określonego wyrażenia. W poniższym przykładzie pokazano jawną konwersję typu na typ int.  
+ A *simple-type-name* następuje *lista wyrażeń* ujęte w nawiasy konstrukcji obiektu określonego typu przy użyciu określonych wyrażeń. W poniższym przykładzie pokazano jawną konwersję typu na typ int.  
   
-```  
+```cpp 
 int i = int( d );  
 ```  
   
@@ -44,7 +45,7 @@ int i = int( d );
   
 ## <a name="example"></a>Przykład  
   
-```  
+```cpp 
 // expre_Explicit_Type_Conversion_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -90,14 +91,14 @@ int main()
   
 ## <a name="output"></a>Dane wyjściowe  
   
-```  
+```Output  
 x = 20, y = 10  
 x = 0, y = 0  
 ```  
   
  Mimo że w poprzednim przykładzie zademonstrowano jawną konwersję typu przy użyciu stałych, ta sama technika działa przy wykonywaniu konwersji na obiektach. Potwierdza to następujący fragment kodu:  
   
-```  
+```cpp 
 int i = 7;  
 float d;  
   
@@ -106,13 +107,16 @@ d = float( i );
   
  Jawne konwersje typu mogą być również określone przy użyciu składni „rzutowania”. Poprzedni przykład przepisany przy użyciu składni rzutowania:  
   
-```  
+```cpp
+
 d = (float)i;  
+
 ```  
   
  Zarówno rzutowanie, jak i konwersje w stylu funkcji, dają te same wyniki podczas konwertowania z pojedynczych wartości. Jednakże, w składni stylu funkcji można określić więcej niż jeden argument do konwersji. Różnica jest ważna dla typów zdefiniowanych przez użytkownika. Rozważ klasę `Point` i jej konwersje:  
   
-```  
+```cpp
+
 struct Point  
 {  
     Point( short x, short y ) { _x = x; _y = y; }  
@@ -121,14 +125,15 @@ struct Point
 };  
 ...  
 Point pt = Point( 3, 10 );  
-```  
+
+```
   
- Poprzedniego przykładu, który używa stylu funkcji konwersji, pokazano, jak przekonwertować dwóch wartości (po jednej dla *x* i jeden dla *y*) na typ zdefiniowany przez użytkownika `Point`.  
+ Poprzedni przykład, który używa konwersji stylu funkcji, pokazuje, jak konwertować dwie wartości (jedną dla *x* i jeden dla *y*) do typu zdefiniowanego przez użytkownika `Point`.  
   
 > [!CAUTION]
 >  Użyj jawnej konwersji typu z rozwagą, gdyż zastępuje ona kontrolę typów wbudowaną w kompilator C++.  
   
- [Rzutowania](../cpp/cast-operator-parens.md) notacji muszą być używane do konwersji na typy, które nie mają *nazwy typu prostego* (wskaźnik lub odwołanie typów, na przykład). Konwersji do typów, które można wyrazić przy *nazwy typu prostego* mogą być napisane w obu formularzy. Zobacz [specyfikatorze typu](http://msdn.microsoft.com/en-us/34b6c737-0ef1-4470-9b77-b26e46c0bbd4) informacje, co stanowi *nazwy typu prostego*.  
+ [Rzutowania](../cpp/cast-operator-parens.md) notacji muszą być używane do konwersji na typy, które nie mają *simple-type-name* (typy wskaźnikowe lub odwołania, na przykład). Konwersja na typy, które mogą być wyrażone za pomocą *simple-type-name* może być zapisana w dowolnej postaci.  
   
  W ramach rzutowań niedozwolone są definicje typu.  
   

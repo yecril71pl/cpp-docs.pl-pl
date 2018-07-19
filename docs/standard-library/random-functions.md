@@ -8,21 +8,21 @@ f1_keywords:
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 helpviewer_keywords:
 - std::generate_canonical
-ms.openlocfilehash: c8ee20759e66c7beb295de96b8311df46555ac6b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5b0cd634dad099669d803d4a2717fc9198151781
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852819"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954161"
 ---
 # <a name="ltrandomgt-functions"></a>&lt;losowe&gt; funkcji
 
 ## <a name="generate_canonical"></a>  generate_canonical
 
-Zwraca wartość zmiennoprzecinkową z sekwencję losowych.
+Zwraca wartość zmiennoprzecinkową z sekwencji losowej.
 
 > [!NOTE]
-> Stany standardowi ISO C++, ta funkcja powinna zwrócić wartości z zakresu [ `0`, `1`). Program Visual Studio nie jest jeszcze zgodne z tym ograniczeniem. Jako rozwiązanie alternatywne do generowania wartości w tym zakresie, użyj [uniform_real_distribution —](../standard-library/uniform-real-distribution-class.md).
+> Standardu ISO C++ stwierdzający, że ta funkcja powinna zwrócić wartości z zakresu [ `0`, `1`). Program Visual Studio nie jest jeszcze zgodne z tym ograniczeniem. Jako obejście do generowania wartości w tym zakresie, należy użyć [uniform_real_distribution —](../standard-library/uniform-real-distribution-class.md).
 
 ```cpp
 template <class RealType, size_t Bits, class Generator>
@@ -31,16 +31,16 @@ RealType generate_canonical(Generator& Gen);
 
 ### <a name="parameters"></a>Parametry
 
-`RealType` Zmiennoprzecinkowy typ całkowity. Dla typów możliwych [ \<losowe >](../standard-library/random.md).
+*RealType* zmiennoprzecinkowy typu całkowitego. Aby możliwych typów, zobacz [ \<losowy >](../standard-library/random.md).
 
-`Bits` Generator liczb losowych.
+*Usługa BITS* generator liczb losowych.
 
-`Gen` Generator liczb losowych.
+*Gen* generator liczb losowych.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania funkcji szablonu `operator()` z `Gen` wielokrotnie pakiety zwracanych wartości do wartości zmiennoprzecinkowych i `x` typu `RealType` dopóki zebrane określoną liczbę bitów mantysa `x`. Określona liczba jest mniejsza od `Bits` (który musi być różna od zera) i pełne liczba bitów mantysa `RealType`. Pierwsze wywołanie dostarcza najniższy znaczących bitów. Funkcja zwraca `x`.
+Wywołania funkcji szablonu `operator()` z *ogólnego* wielokrotnie pakiety wartości zwracane wartości zmiennoprzecinkowe i `x` typu *RealType* aż zebrane określoną liczbę mantysy bitów w `x`. Określony numer jest mniejszy od *bitów* (może być różna od zera) i Pełna liczba bitów mantysy *RealType*. Pierwsze wywołanie dostarcza bitów najniższego rzędu. Funkcja zwraca `x`.
 
 ## <a name="see-also"></a>Zobacz także
 
-[\<losowe >](../standard-library/random.md)<br/>
+[\<losowy >](../standard-library/random.md)<br/>

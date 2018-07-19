@@ -8,12 +8,12 @@ f1_keywords:
 - exception/std::terminate_handler
 - exception/std::unexpected_handler
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
-ms.openlocfilehash: 68f95407fe22c7e8b70426e555f46eb0a4c80338
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a1c32311109ee19056c0a73d922ab1a965e3fbbb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846262"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954128"
 ---
 # <a name="ltexceptiongt-typedefs"></a>&lt;wyjątek&gt; definicje typów
 
@@ -31,23 +31,23 @@ typedef unspecified exception_ptr;
 
 ### <a name="remarks"></a>Uwagi
 
-Nieokreślony wewnętrzny klasy, która służy do implementowania `exception_ptr` typu.
+Nieokreślona Klasa wewnętrzna, która jest używana do zaimplementowania `exception_ptr` typu.
 
-Użyj `exception_ptr` obiekt, aby odwoływać się do bieżącego wyjątku lub wystąpienie wyjątku określone przez użytkownika. W implementacji firmy Microsoft wyjątek jest reprezentowana przez [EXCEPTION_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082) struktury. Każdy `exception_ptr` obiektu zawiera pole odwołania wyjątek wskazujące kopię `EXCEPTION_RECORD` strukturę, która reprezentuje wyjątek.
+Użyj `exception_ptr` obiekt, aby odwoływać się do bieżącego wyjątku lub wystąpienia wyjątku określonego przez użytkownika. W implementacji firmy Microsoft wyjątek jest reprezentowany przez [EXCEPTION_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082) struktury. Każdy `exception_ptr` obiekt zawiera pole odwołania wyjątku wskazuje kopię `EXCEPTION_RECORD` strukturę, która reprezentuje wyjątek.
 
-Gdy zadeklarować `exception_ptr` zmiennej, zmienna nie jest skojarzony z żadnym wyjątku. To znaczy, że pole odwołania wyjątku ma wartość NULL. Takie `exception_ptr` nosi nazwę obiektu *null exception_ptr*.
+Kiedy Deklarujesz `exception_ptr` zmiennej, zmienna nie jest skojarzony z żadnym wyjątkiem. To znaczy, że pole odwołania wyjątku ma wartość NULL. Takie `exception_ptr` obiekt jest nazywany *null exception_ptr*.
 
-Użyj `current_exception` lub `make_exception_ptr` przypisanie wyjątek `exception_ptr` obiektu. Po przypisaniu wyjątek `exception_ptr` zmiennej, odwołanie do zmiennej wyjątek pola wskazuje kopię wyjątek. Jeśli jest za mało pamięci, aby skopiować wyjątek, pole odwołania wyjątek wskazuje kopię [std::bad_alloc](../standard-library/bad-alloc-class.md) wyjątku. Jeśli `current_exception` lub `make_exception_ptr` funkcji nie można skopiować wyjątek dla innego powodu, wywołania funkcji **przerwanie** funkcji CRT, aby zamknąć bieżącego procesu.
+Użyj `current_exception` lub `make_exception_ptr` funkcję, aby przypisać wyjątek do `exception_ptr` obiektu. Podczas przypisywania wyjątku do `exception_ptr` zmiennej, pole odwołania wyjątku zmiennej wskazuje kopię wyjątku. W przypadku braku pamięci, aby skopiować wyjątek, pole odwołania wyjątku wskazuje kopię [std::bad_alloc](../standard-library/bad-alloc-class.md) wyjątku. Jeśli `current_exception` lub `make_exception_ptr` funkcji nie może skopiować wyjątku jakiegokolwiek innego powodu, wywołania funkcji `terminate` funkcji CRT, aby zakończyć bieżący proces.
 
-Pomimo swojej nazwy `exception_ptr` obiektu sam nie jest wskaźnikiem. Nie podlega semantyka wskaźnika i nie można używać z dostęp do elementu członkowskiego wskaźnika ( `->`) lub operatory pośredni (*). `exception_ptr` Obiekt nie ma publicznych elementów członkowskich danych ani funkcji elementów członkowskich.
+Pomimo swojej nazwy `exception_ptr` obiektu sam nie jest wskaźnikiem. Go nie stosuje semantyki wskaźnika i nie można używać z dostępu do elementu członkowskiego wskaźnika ( `->`) lub operatory pośrednie (*). `exception_ptr` Obiekt nie ma publicznych elementów członkowskich danych ani funkcji elementów członkowskich.
 
 **Porównania:**
 
-Można użyć równości ( `==`) i nie równości ( `!=`) operatorów, aby porównać dwa `exception_ptr` obiektów. Operatory porównania nie wartość binarna (wzorca bitowego) `EXCEPTION_RECORD` struktur reprezentujących wyjątki. Zamiast tego operatory porównania adres w polu odwołania wyjątek `exception_ptr` obiektów. W rezultacie null `exception_ptr` i porównać jako równe wartości NULL.
+Możesz użyć równości ( `==`) i nierówności ( `!=`) operatory do porównywania dwóch `exception_ptr` obiektów. Operatory nie porównują wartość binarna (wzorca bitowego) `EXCEPTION_RECORD` struktur, które reprezentują wyjątki. Zamiast tego, operatory porównują adresy w polu odwołania do wyjątku `exception_ptr` obiektów. W związku z tym, o wartości null `exception_ptr` i porównywane równe wartości NULL.
 
 ## <a name="terminate_handler"></a>  terminate_handler
 
-Typ w tym artykule opisano wskaźnika do funkcji, które są odpowiednie do użycia jako `terminate_handler`.
+Typ opisuje wskaźnik do funkcji odpowiedni do użytku jako `terminate_handler`.
 
 ```cpp
 typedef void (*terminate_handler)();
@@ -59,11 +59,11 @@ Typ opisuje wskaźnik do funkcji odpowiedni do użytku jako program obsługi zak
 
 ### <a name="example"></a>Przykład
 
-Zobacz [set_terminate —](../standard-library/exception-functions.md#set_terminate) na przykład użycie `terminate_handler`.
+Zobacz [set_terminate](../standard-library/exception-functions.md#set_terminate) przykładem użycia `terminate_handler`.
 
 ## <a name="unexpected_handler"></a>  unexpected_handler
 
-Typ w tym artykule opisano wskaźnika do funkcji, które są odpowiednie do użycia jako `unexpected_handler`.
+Typ opisuje wskaźnik do funkcji odpowiedni do użytku jako `unexpected_handler`.
 
 ```cpp
 typedef void (*unexpected_handler)();
@@ -71,7 +71,7 @@ typedef void (*unexpected_handler)();
 
 ### <a name="example"></a>Przykład
 
-Zobacz [set_unexpected —](../standard-library/exception-functions.md#set_unexpected) na przykład użycie `unexpected_handler`.
+Zobacz [set_unexpected](../standard-library/exception-functions.md#set_unexpected) przykładem użycia `unexpected_handler`.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28dc4e52e2f114600ad3a22697500ce9d8594113
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ccc01372d08edb997ed6b0aaa70be69fde60a1e2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850310"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954326"
 ---
 # <a name="cachesuballoc-class"></a>cache_suballoc — Klasa
 
-Definiuje [zablokować alokatora](../standard-library/allocators-header.md) przydziela i zwalnia bloki pamięci o rozmiarze pojedynczego.
+Definiuje [block alokatora](../standard-library/allocators-header.md) który przydziela i zwalnia bloki pamięci o rozmiarze jednego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,13 +42,13 @@ class cache_suballoc
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`Sz`|Liczba elementów w tablicy do przydzielenia.|
+|*Sz*|Liczba elementów w tablicy do przydzielenia.|
 
 ## <a name="remarks"></a>Uwagi
 
-Cache_suballoc — klasa szablonu przechowuje bloki pamięci deallocated wolnego liście o długości niepowiązany przy użyciu `freelist<sizeof(Type), max_unbounded>`i suballocates bloki pamięci z większą fragmentu przydzielonych za pomocą `operator new` po wolnego lista jest pusta.
+Cache_suballoc — klasa szablonu przechowuje bloki cofnięcia przydziału pamięci w bezpłatnej listę o długości niepowiązane przy użyciu `freelist<sizeof(Type), max_unbounded>`i suballocates bloki pamięci z większych fragment przydzielonymi **nowy operator** po liście bezpłatne pusty.
 
-Przechowuje każdego fragmentu `Sz * Nelts` w bajtach dostępnej pamięci i danych który `operator new` i `operator delete` wymagają. Nigdy nie są zwalniane przydzielone fragmentów.
+Każdy fragment zawiera `Sz * Nelts` w bajtach dostępnej pamięci i danych, **nowy operator** i **operatora delete** wymagają. Przydzielone fragmenty nigdy nie są zwalniane.
 
 ### <a name="constructors"></a>Konstruktorów
 
@@ -58,20 +58,20 @@ Przechowuje każdego fragmentu `Sz * Nelts` w bajtach dostępnej pamięci i dany
 
 ### <a name="member-functions"></a>Funkcje Członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[allocate](#allocate)|Przydziela bloku pamięci.|
-|[Cofnięcie przydziału](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu rozpoczynający się od określonej pozycji.|
+|[allocate](#allocate)|Przydziela blok pamięci.|
+|[Cofnij Przydział](#deallocate)|Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<allocators — >
+**Nagłówek:** \<buforów >
 
-**Namespace:** stdext —
+**Namespace:** stdext
 
 ## <a name="allocate"></a>  cache_suballoc::allocate
 
-Przydziela bloku pamięci.
+Przydziela blok pamięci.
 
 ```cpp
 void *allocate(std::size_t count);
@@ -81,7 +81,7 @@ void *allocate(std::size_t count);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`count`|Liczba elementów w tablicy do przydzielenia.|
+|*Liczba*|Liczba elementów w tablicy do przydzielenia.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -101,7 +101,7 @@ cache_suballoc();
 
 ## <a name="deallocate"></a>  cache_suballoc::deallocate
 
-Zwalnia określoną liczbę obiektów z magazynu rozpoczynający się od określonej pozycji.
+Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.
 
 ```cpp
 void deallocate(void* ptr, std::size_t count);
@@ -111,8 +111,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`ptr`|Wskaźnik do pierwszego obiektu do cofnięcia alokacji z magazynu.|
-|`count`|Liczba obiektów do cofnięcia alokacji z magazynu.|
+|*ptr*|Wskaźnik do pierwszego obiektu można cofnąć przydziału z magazynu.|
+|*Liczba*|Liczba obiektów, które można cofnąć przydziału z magazynu.|
 
 ### <a name="remarks"></a>Uwagi
 

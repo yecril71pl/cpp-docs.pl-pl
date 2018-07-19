@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89d1e9269536ee28f2c8dd29819ff594c89c186b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b6720ef830563e24d887071e1ee1e4a8c31df05c
+ms.sourcegitcommit: bb4488366e4581c561ca1e573a2b99b71d4c6288
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363754"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38993571"
 ---
 # <a name="iregistrar-interface"></a>Interfejs IRegistrar
-Ten interfejs jest zdefiniowany w atliface.h i jest używana wewnętrznie przez funkcje Członkowskie CAtlModule takich jak [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   
+Ten interfejs jest zdefiniowany w atliface.h i jest używana wewnętrznie przez funkcje składowe CAtlModule takich jak [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,7 +41,7 @@ Ten interfejs jest zdefiniowany w atliface.h i jest używana wewnętrznie przez 
 typedef interface IRegistrar IRegistrar;
 ```  
 ## <a name="remarks"></a>Uwagi
-Zobacz temat [przy użyciu parametry wymienne (Rejestrator preprocesora)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) więcej szczegółów.  
+Zobacz temat [przy użyciu zastępowalnych parametrów (Preprocesor rejestratora)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) Aby uzyskać więcej informacji.  
 
 ## <a name="members"></a>Elementy członkowskie  
   
@@ -54,7 +54,7 @@ Zobacz temat [przy użyciu parametry wymienne (Rejestrator preprocesora)](../../
 |[IRegistrar::FileRegister](#fileregister)|Rejestruje plik.|  
 |[IRegistrar::FileUnregister](#fileunregister)|Wyrejestrowuje pliku.|  
 |[IRegistrar::StringRegister](#stringregister)|Rejestruje ciąg.|  
-|[IRegistrar::StringUnregister](#stringunregister)|Wyrejestrowuje ciąg|  
+|[IRegistrar::StringUnregister](#stringunregister)|Wyrejestrowuje ciągu|  
 |[IRegistrar::ResourceRegister](#resourceregister)|Rejestruje zasobu.|  
 |[IRegistrar::ResourceUnregister](#resourceunregister)|Wyrejestrowuje zasobu.| 
   
@@ -112,7 +112,7 @@ virtual HRESULT STDMETHODCALLTYPE StringRegister(
 ```  
   
 ##  <a name="stringunregister"></a>  IRegistrar::StringUnregister
- Wyrejestrowuje danych określonego ciągu.  
+ Wyrejestrowuje dane określonego ciągu.  
   
 ```
 virtualHRESULT STDMETHODCALLTYPE StringUnregister( 
@@ -143,6 +143,6 @@ virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
  
 ## <a name="see-also"></a>Zobacz też  
  [Używanie wymiennych parametrów (preprocesor rejestratora)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
- [Przegląd klas](../../atl/atl-class-overview.md)   
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)   
  [Klasy modułów](../../atl/atl-module-classes.md)   
  [Składnik rejestru (Rejestrator)](../../atl/atl-registry-component-registrar.md)  

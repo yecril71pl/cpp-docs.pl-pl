@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 531ee45aed64daa19f818bc5c8480a9c1b032d30
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58f3245e430ba1c74ea88f6262f14a4d38c1ca2c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844136"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954034"
 ---
 # <a name="isintegral-class"></a>is_integral — Klasa
 
-Testy, jeśli typ jest integralną częścią.
+Sprawdza, czy typ jest integralną częścią.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,13 +37,13 @@ struct is_integral;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zapytania.
+*Ty* typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typ `Ty` jest jednym z typów całkowitych lub `cv-qualified` postaci jednego z typów całkowitych, w przeciwnym razie posiada wartość false.
+Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* jest jednym z typów całkowitych lub `cv-qualified` postaci jednego z typów całkowitych, w przeciwnym razie przechowuje wartość false.
 
-Typ całkowity jest jednym z `bool`, `char`, `unsigned char`, `signed char`, `wchar_t`, `short`, `unsigned short`, `int`, `unsigned int`, `long`, i `unsigned long`. Ponadto z kompilatorów, które zapewniają im typ całkowity może być jedną z `long long`, `unsigned long long`, `__int64`, i `unsigned __int64`.
+Przykładem jest typem całkowitym **bool**, **char**, **unsigned char**, **podpisany char**, **wchar_t**, **krótki**, **typ unsigned short**, **int**, **unsigned int**, **długie**i **unsigned long**. Ponadto za pomocą kompilatorów, które zapewniają ich typ całkowity może być jednym z **long long**, **unsigned long long**, **__int64**, i **unsigned __int64**.
 
 ## <a name="example"></a>Przykład
 
@@ -82,7 +82,7 @@ is_integral<float> == false
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

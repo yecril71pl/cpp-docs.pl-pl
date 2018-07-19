@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e79c06c49c8245da4911e8b72020537aa2e7bb45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eff64a70b2a666a6df081601c0e2a24f04563317
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850681"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954070"
 ---
 # <a name="addconst-class"></a>add_const — Klasa
 
-Sprawia, że stała typu z typu.
+Tworzy typ const z typu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,11 +37,11 @@ struct add_const;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zmodyfikowania.
+*Ty* typ do modyfikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie modyfikator typu przechowuje zmodyfikowane — typ danych `Ty` Jeśli `Ty` jest odwołanie, funkcji lub kwalifikowanego typu const, w przeciwnym razie `const Ty`.
+Wystąpienie modyfikatora typu przechowuje zmodyfikowany typ, który jest *Ty* Jeśli *Ty* jest odwołaniem, funkcją lub kwalifikowanego typu const, w przeciwnym razie `const Ty`.
 
 ## <a name="example"></a>Przykład
 
@@ -71,7 +71,7 @@ add_const<int> == int
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 591c2dd65fdb9dde00f0ac1373c39affbe82da85
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b775b14cb2f6b0f87bca1c81938c1a4c05c1304
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373511"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335672"
 ---
 # <a name="rgndata-structure"></a>Struktura RGNDATA
-`RGNDATA` Struktura zawiera nagłówek i Tablica prostokąty tworzące region. Te prostokąty posortowane od góry do dołu w lewej do prawej, nie mogą się pokrywać.  
+`RGNDATA` Struktura zawiera nagłówek i tablicę prostokąty wchodzących w skład region. Tych prostokątów posortowane od góry do dołu od lewej do prawej, nie pokrywają się.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,10 +37,10 @@ typedef struct _RGNDATA { /* rgnd */
   
 #### <a name="parameters"></a>Parametry  
  *rdh*  
- Określa [RGNDATAHEADER](http://msdn.microsoft.com/library/windows/desktop/dd162941) struktury. (Aby uzyskać więcej informacji dotyczących tej struktury, zobacz zestaw Windows SDK). Elementy członkowskie tej struktury określenie typu regionu (czy jest prostokątne lub trapezoidal), liczba prostokąty wchodzące w skład regionu, rozmiar buforu, który zawiera struktury prostokąt i tak dalej.  
+ Określa [RGNDATAHEADER](http://msdn.microsoft.com/library/windows/desktop/dd162941) struktury. (Aby uzyskać więcej informacji na temat tej struktury, zobacz zestaw Windows SDK). Członkowie tej struktury Określ typ regionu (czy jest prostokątne lub trapezoidal), liczba prostokątami, które tworzą regionu, rozmiaru buforu, który zawiera struktury prostokąt, i tak dalej.  
   
- `Buffer`  
- Określa dowolnego rozmiaru buforu, który zawiera [RECT](../../mfc/reference/rect-structure1.md) struktury wchodzące w skład regionu.  
+ *Bufor*  
+ Określa dowolnego rozmiaru buforu, który zawiera [Prostokąt](../../mfc/reference/rect-structure1.md) struktur, które składają się na region.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** wingdi.h  

@@ -1,5 +1,5 @@
 ---
-title: Klasa CMFCDropDownToolbar — | Dokumentacja firmy Microsoft
+title: Klasa CMFCDropDownToolBar | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,15 +30,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74005682036e0a4d15d17d147b5994864fa97378
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 6e12799f10fe86ef5dd556eac4e344aa972e2503
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042121"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027313"
 ---
-# <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolbar — klasa
-Pasek narzędzi, który jest wyświetlany, gdy użytkownik naciśnie i przechowuje przycisku paska narzędzi najwyższego poziomu.  
+# <a name="cmfcdropdowntoolbar-class"></a>Klasa CMFCDropDownToolBar
+Pasek narzędzi, który pojawia się po naciśnięciu i przytrzymaniu przycisku paska narzędzi najwyższego poziomu.  
   
    [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
 ## <a name="syntax"></a>Składnia  
@@ -59,31 +59,31 @@ class CMFCDropDownToolBar : public CMFCToolBar
 |[CMFCDropDownToolBar::OnLButtonUp](#onlbuttonup)||  
 |[CMFCDropDownToolBar::OnMouseMove](#onmousemove)||  
 |[CMFCDropDownToolBar::OnSendCommand](#onsendcommand)|(Przesłania `CMFCToolBar::OnSendCommand`.)|  
-|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(Przesłania [CMFCToolBar::OnUpdateCmdUI](http://msdn.microsoft.com/en-us/571a38ab-2a56-4968-9796-273516126f80).)|  
+|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(Przesłania [CMFCToolBar::OnUpdateCmdUI](http://msdn.microsoft.com/571a38ab-2a56-4968-9796-273516126f80).)|  
   
 ### <a name="remarks"></a>Uwagi  
- A `CMFCDropDownToolBar` obiektu łączy wygląd paska narzędzi z zachowaniem menu podręcznego. Gdy użytkownik naciśnie i przechowuje przycisku paska narzędzi z listy rozwijanej (zobacz [klasy CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)), zostanie wyświetlony pasek narzędzi listy rozwijanej, a użytkownik może wybrać przycisk paska narzędzi listy rozwijanej przewijanie do niego i zwolnieniem przycisku myszy przycisk. Po użytkownik wybierze przycisk na pasku narzędzi z listy rozwijanej, ten przycisk jest wyświetlany jako przycisk bieżącego na pasku narzędzi najwyższego poziomu.  
+ Element `CMFCDropDownToolBar` obiektu łączy wygląd paska narzędzi z zachowaniem menu podręcznego. Po naciśnięciu i przytrzymaniu przycisku paska narzędzi z listy rozwijanej (zobacz [klasa CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)), zostanie wyświetlony pasek narzędzi listy rozwijanej i użytkownik może wybrać przycisk na pasku narzędzi listy rozwijanej, przewijania do niego i zwolnieniem przycisku myszy przycisk. Po użytkownik wybierze przycisk na pasku narzędzi listy rozwijanej, ten przycisk jest wyświetlana jako bieżący przycisk na pasku narzędzi najwyższego poziomu.  
   
- Nie można dostosować lub zadokowany pasek narzędzi listy rozwijanej, a nie ma stanu oderwania.  
+ Rozwijany pasek narzędzi nie może zostać dostosowany lub zadokowane, a nie ma stanu odrywania.  
   
- Na poniższej ilustracji pokazano `CMFCDropDownToolBar` obiektu:  
+ Poniższa ilustracja przedstawia `CMFCDropDownToolBar` obiektu:  
   
- ![Przykład CMFCDropDownToolbar —](../../mfc/reference/media/cmfcdropdown.png "cmfcdropdown")  
+ ![Przykład CMFCDropDownToolbar](../../mfc/reference/media/cmfcdropdown.png "cmfcdropdown")  
   
- Możesz utworzyć `CMFCDropDownToolBar` obiekt ten sam sposób utworzyć zwykłej paska narzędzi (zobacz [CMFCToolBar klasy](../../mfc/reference/cmfctoolbar-class.md)).  
+ Możesz utworzyć `CMFCDropDownToolBar` obiektu taki sam sposób utworzyć zwykłej paska narzędzi (zobacz [klasa CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)).  
   
- Aby wstawić pasek narzędzi listy rozwijanej do narzędzi nadrzędnej:  
+ Aby wstawić rozwijany pasek narzędzi do narzędzi nadrzędnego:  
   
- 1. Zarezerwować Identyfikatora fikcyjnego zasobu dla przycisku w zasobie nadrzędnym paska narzędzi.  
+ 1. Zarezerwuj identyfikator zasobu fikcyjnego przycisku w nadrzędnej zasób paska narzędzi.  
   
- 2. Utwórz `CMFCDropDownToolBarButton` obiekt, który zawiera pasek narzędzi listy rozwijanej (Aby uzyskać więcej informacji, zobacz [CMFCDropDownToolbarButton::CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md#cmfcdropdowntoolbarbutton)).  
+ 2. Tworzenie `CMFCDropDownToolBarButton` obiekt, który zawiera rozwijany pasek narzędzi (Aby uzyskać więcej informacji, zobacz [CMFCDropDownToolbarButton::CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md#cmfcdropdowntoolbarbutton)).  
   
- 3. Zastąp fikcyjny przycisk z `CMFCDropDownToolBarButton` obiektu za pomocą [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
+ 3. Zamień zastępczy button z `CMFCDropDownToolBarButton` obiektu za pomocą [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
   
- Aby uzyskać więcej informacji na temat przycisków paska narzędzi, zobacz [wskazówki: umieszczanie formantów na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md). Na przykład pasek narzędzi listy rozwijanej zobacz przykładowy projekt VisualStudioDemo.  
+ Aby uzyskać więcej informacji na temat przycisków paska narzędzi, zobacz [wskazówki: umieszczanie formantów na paskach narzędzi](../../mfc/walkthrough-putting-controls-on-toolbars.md). Aby uzyskać przykład rozwijany pasek narzędzi zobacz przykładowy projekt VisualStudioDemo.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano sposób użycia `Create` metoda `CMFCDropDownToolBar` klasy. Następujący fragment kodu jest częścią [programu Visual Studio przykład](../../visual-cpp-samples.md).  
+ Poniższy przykład pokazuje sposób użycia `Create` method in Class metoda `CMFCDropDownToolBar` klasy. Ten fragment kodu jest częścią [Visual Studio przykład](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#29](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_1.h)]  
 [!code-cpp[NVC_MFC_VisualStudioDemo#30](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_2.cpp)]  
@@ -103,7 +103,7 @@ class CMFCDropDownToolBar : public CMFCToolBar
   
  [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)  
   
- [CMFCDropDownToolbar —](../../mfc/reference/cmfcdropdowntoolbar-class.md)  
+ [CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md)  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** afxdropdowntoolbar.h  
@@ -120,7 +120,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
 ### <a name="remarks"></a>Uwagi  
   
 ##  <a name="loadbitmap"></a>  CMFCDropDownToolBar::LoadBitmap  
- Ładuje obrazy pasków narzędzi z zasobów aplikacji.  
+ Wczytuje obrazy paska narzędzi z zasobów aplikacji.  
   
 ```  
 virtual BOOL LoadBitmap(
@@ -134,30 +134,30 @@ virtual BOOL LoadBitmap(
   
 ### <a name="parameters"></a>Parametry  
  [in] *uiResID*  
- Identyfikator zasobu mapy bitowej, która odwołuje się do obrazów gorących paska narzędzi.  
+ Identyfikator zasobu mapy bitowej, która odwołuje się do gorąca paska narzędzi obrazów.  
   
  [in] *uiColdResID*  
- Identyfikator zasobu mapy bitowej, która odwołuje się do obrazów zimnych paska narzędzi.  
+ Identyfikator zasobu mapy bitowej, która odwołuje się do zimnej paska narzędzi obrazów.  
   
  [in] *uiMenuResID*  
  Identyfikator zasobu mapy bitowej, która odwołuje się do obrazów regularne menu.  
   
  [in] *zablokowane*  
- `TRUE` Aby zablokować narzędzi; w przeciwnym razie `FALSE`.  
+ Wartość TRUE, aby zablokować narzędzi; w przeciwnym razie wartość FALSE.  
   
  [in] *uiDisabledResID*  
- Identyfikator zasobu mapy bitowej, która odwołuje się do obrazów wyłączonego paska narzędzi.  
+ Identyfikator zasobu mapy bitowej, która odwołuje się do wyłączonego paska narzędzi obrazów.  
   
  [in] *uiMenuDisabledResID*  
  Identyfikator zasobu mapy bitowej, która odwołuje się do obrazów menu wyłączone.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli metoda zakończy się pomyślnie; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli metoda się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) metoda wywołuje tę metodę, aby załadować obrazów, które są skojarzone z paska narzędzi. Zastępuje tę metodę do wykonania niestandardowej ładowanie zasobów obrazu.  
+ [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) metoda wywołuje tę metodę, aby załadować obrazy, które są skojarzone z paska narzędzi. Zastępuje tę metodę do wykonywania niestandardowych ładowanie zasobów obrazu.  
   
- Wywołanie `LoadBitmapEx` metodę, aby załadować dodatkowe obrazy po utworzeniu paska narzędzi.  
+ Wywołaj `LoadBitmapEx` metodę, aby załadować dodatkowe obrazy, po utworzeniu paska narzędzi.  
   
 ##  <a name="loadtoolbar"></a>  CMFCDropDownToolBar::LoadToolBar  
 

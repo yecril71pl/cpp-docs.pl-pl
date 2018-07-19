@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d027f2c1e9d8f5d4172fd3deff179d9ec8336baf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 18332f0c5d452c04079ff68bebbbdae19c4ed0d5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853404"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953882"
 ---
 # <a name="removeallextents-class"></a>remove_all_extents — Klasa
 
@@ -40,11 +40,11 @@ using remove_all_extents_t = typename remove_all_extents<T>::type;
 
 ### <a name="parameters"></a>Parametry
 
-`T` Typ do zmodyfikowania.
+*T* typ do modyfikacji.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie `remove_all_extents<T>` przechowuje zmodyfikowane — typ danych typu elementu typu tablicy `T` z usunięte, wszystkie wymiary tablicy lub `T` Jeśli `T` nie jest typem tablicy.
+Wystąpienie `remove_all_extents<T>` przechowuje zmodyfikowany typ, który jest typem elementu typu tablicy *T* z usuniętymi, wszystkimi wymiarami tablicy lub *T* Jeśli *T* nie jest typem tablicy.
 
 ## <a name="example"></a>Przykład
 
@@ -72,7 +72,7 @@ int main()
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

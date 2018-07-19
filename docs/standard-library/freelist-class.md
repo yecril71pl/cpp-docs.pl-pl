@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e9a8bf702f4373040a6f7255d67f551b5dbfa60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 05354361bd460f64daced16684e9f8b70de94898
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846964"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954115"
 ---
 # <a name="freelist-class"></a>freelist — Klasa
 
@@ -43,12 +43,12 @@ class freelist
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`Sz`|Liczba elementów w tablicy do przydzielenia.|
-|`Max`|Max Klasa reprezentująca maksymalną liczbę elementów, które mają być przechowywane w liście wolne. Max klasa może być [max_none —](../standard-library/max-none-class.md), [max_unbounded —](../standard-library/max-unbounded-class.md), [max_fixed_size —](../standard-library/max-fixed-size-class.md), lub [max_variable_size —](../standard-library/max-variable-size-class.md).|
+|*Sz*|Liczba elementów w tablicy do przydzielenia.|
+|*Maksymalna*|Maksymalna Klasa reprezentująca maksymalną liczbę elementów, które mają być przechowywane na liście bezpłatne. Klasa max może być [max_none —](../standard-library/max-none-class.md), [max_unbounded —](../standard-library/max-unbounded-class.md), [max_fixed_size —](../standard-library/max-fixed-size-class.md), lub [max_variable_size —](../standard-library/max-variable-size-class.md).|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa szablonu zarządza listą bloki pamięci o rozmiarze `Sz` z maksymalną długość listy określony przez klasę max przekazano `Max`.
+Tej klasy szablonu zarządza listą bloki pamięci o rozmiarze *Sz* z maksymalną długość listy określane przez klasę max przekazanej *Max*.
 
 ### <a name="constructors"></a>Konstruktorów
 
@@ -58,16 +58,16 @@ Ta klasa szablonu zarządza listą bloki pamięci o rozmiarze `Sz` z maksymalną
 
 ### <a name="member-functions"></a>Funkcje Członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[POP](#pop)|Usuwa pierwszy blok pamięci z wolnego listy.|
-|[push](#push)|Dodaje blok pamięci do listy.|
+|[POP](#pop)|Usuwa pierwszy blok pamięci z bezpłatnych listy.|
+|[push](#push)|Blok pamięci dodaje do listy.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<allocators — >
+**Nagłówek:** \<buforów >
 
-**Namespace:** stdext —
+**Namespace:** stdext
 
 ## <a name="freelist"></a>  FreeList::FreeList
 
@@ -81,7 +81,7 @@ freelist();
 
 ## <a name="pop"></a>  FreeList::POP
 
-Usuwa pierwszy blok pamięci z wolnego listy.
+Usuwa pierwszy blok pamięci z bezpłatnych listy.
 
 ```cpp
 void *pop();
@@ -93,11 +93,11 @@ Zwraca wskaźnik do bloku pamięci usunięty z listy.
 
 ### <a name="remarks"></a>Uwagi
 
-Funkcja członkowska zwraca `NULL` Jeśli lista jest pusta. W przeciwnym razie pierwszy blok pamięci usuwa z listy.
+Element członkowski funkcji zwraca wartość NULL, jeśli lista jest pusta. W przeciwnym razie usuwa pierwszy blok pamięci z listy.
 
 ## <a name="push"></a>  FreeList::push
 
-Dodaje blok pamięci do listy.
+Blok pamięci dodaje do listy.
 
 ```cpp
 bool push(void* ptr);
@@ -107,15 +107,15 @@ bool push(void* ptr);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`ptr`|Wskaźnik do bloku pamięci do dodania do listy wolne.|
+|*ptr*|Wskaźnik do bloku pamięci, które mają zostać dodane do listy bezpłatne.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
-`true` Jeśli `full` zwraca funkcja max klasy `false`; w przeciwnym razie `push` funkcja zwraca `false`.
+**wartość true,** Jeśli `full` klasy max:: gettotalsize() zwróciło **false**; w przeciwnym razie `push` funkcja zwraca **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Jeśli `full` zwraca funkcja max klasy `false`, funkcji członkowskiej dodaje blok pamięci wskazywanej przez `ptr` nagłówek listy.
+Jeśli `full` klasy max:: gettotalsize() zwróciło **false**, ta funkcja elementu członkowskiego dodaje blok pamięci wskazywany przez *ptr* porównanie listy.
 
 ## <a name="see-also"></a>Zobacz także
 

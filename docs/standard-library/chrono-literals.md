@@ -12,16 +12,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 022f2bb5355b59ca9ee614c79fee310526e094d8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 059974efa00d384f669c88a3e2dafbc3a7bc5746
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840934"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953694"
 ---
 # <a name="chrono-literals"></a>literały chrono
 
-(C ++ 14) \<Chrono > nagłówka definiuje 12 [literały definiowane przez użytkownika](../cpp/user-defined-literals-cpp.md) ułatwiające przy użyciu literałów, które reprezentują godzin, minut, sekund, w milisekundach, mikrosekundach i nanosekundach. Każdy literału zdefiniowanego przez użytkownika ma całkowitych i zmiennoprzecinkowych przeciążenia. Literały są zdefiniowane w przestrzeni nazw wbudowanego literals::chrono_literals, który wejścia zakresu automatycznie po std::chrono znajduje się w zakresie.
+(C ++ 14) \<Chrono > nagłówka definiuje 12 [literały definiowane przez użytkownika](../cpp/user-defined-literals-cpp.md) ułatwiające pomocą literałów ciągów, które reprezentują godziny, minuty, sekundy, milisekundy, mikrosekund i nanosekundach. Każdy literału zdefiniowanego przez użytkownika ma całkowita i zmiennoprzecinkowa przeciążenia. Literały są zdefiniowane w przestrzeni nazw wbudowane literals::chrono_literals, którego zostanie przełączony w tryb do zakresu automatycznie po std::chrono znajduje się w zakresie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -70,11 +70,11 @@ inline namespace literals {
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Literały, które przyjmują `long long` argument zwracać wartość lub odpowiedniego typu. Literały, które przyjmują zmiennoprzecinkową punktu argument zwracany [czas trwania](../standard-library/duration-class.md).
+Literały, które przyjmują **long long** argument zwraca wartość lub odpowiedniego typu. Literały, które przyjmują zmiennoprzecinkowy punktu zwracaną argumentu [czas trwania](../standard-library/duration-class.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższe przykłady zasiewu sposób użycia literały chrono.
+Poniższe przykłady sow sposób używania literały chrono.
 
 ```cpp
 constexpr auto day = 24h;

@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86d8cf9b3011865fac58515fb3429a363dd5946f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0d6d8f5f8fa3867e1a9e38dc6bf919d57ead72de
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038962"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335607"
 ---
 # <a name="chtmleditdoc-class"></a>Klasa CHtmlEditDoc
-Z [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), funkcje platformy edycji WebBrowser w kontekście architektury dokument widok MFC.  
+Za pomocą [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), zapewnia funkcję platformy edycji WebBrowser w kontekście architektury widoku dokumentu MFC.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -69,7 +69,7 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
  **Nagłówek:** afxhtml.h  
   
 ##  <a name="chtmleditdoc"></a>  CHtmlEditDoc::CHtmlEditDoc  
- Konstruuje **CHtmlEditDoc** obiektu.  
+ Konstruuje `CHtmlEditDoc` obiektu.  
   
 ```  
 CHtmlEditDoc();
@@ -83,7 +83,7 @@ virtual CHtmlEditView* GetView() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca wskaźnik do dokumentu **CHtmlEditView** obiektu.  
+ Zwraca wskaźnik do dokumentu `CHtmlEditView` obiektu.  
   
 ##  <a name="ismodified"></a>  CHtmlEditDoc::IsModified  
  Zwraca, czy formant WebBrowser skojarzony widok zawiera dokument, który został zmodyfikowany przez użytkownika.  
@@ -104,7 +104,7 @@ virtual BOOL OpenURL(LPCTSTR lpszURL);
  Adres URL do otwarcia.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca **TRUE** w przypadku powodzenia **FALSE** w przypadku awarii.  
+ Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przykładowe HTMLEdit](../../visual-cpp-samples.md)   

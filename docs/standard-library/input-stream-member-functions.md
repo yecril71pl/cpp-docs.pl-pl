@@ -1,5 +1,5 @@
 ---
-title: Dane wejściowe Stream Member — funkcje | Dokumentacja firmy Microsoft
+title: Dane wejściowe funkcji elementów członkowskich Stream | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,36 +15,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41ab041fe3cee9a3b6065f22e5f96a44a56af030
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57288e7eb85e3d23fe8790ac3097cab82acdcf8b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850043"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954672"
 ---
 # <a name="input-stream-member-functions"></a>Input Stream Member — Funkcje
 
-Funkcje elementów członkowskich strumienia wejściowego służą do wprowadzania dysku. Funkcje Członkowskie obejmują:
+Funkcje składowe strumienia wejściowego są używane dla dysku danych wejściowych. Funkcje elementów członkowskich obejmują:
 
-- [Otwórz funkcji dla strumieni danych wejściowych](#vclrftheopenfunctionforinputstreamsanchor11)
+- [Otwórz funkcję dla strumieni danych wejściowych](#vclrftheopenfunctionforinputstreamsanchor11)
 
 - [Get](#vclrfthegetfunctionanchor12)
 
-- [Getline](#vclrfthegetlinefunctionanchor13)
+- [Getline —](#vclrfthegetlinefunctionanchor13)
 
 - [Odczyt](#vclrfthereadfunctionanchor14)
 
-- [Funkcje seekg i tellg](#vclrftheseekgandtellgfunctionsanchor7)
+- [Seekg — i tellg — funkcje](#vclrftheseekgandtellgfunctionsanchor7)
 
 - [Zamknij funkcji dla strumieni danych wejściowych](#vclrftheclosefunctionforinputstreamsanchor15)
 
-## <a name="vclrftheopenfunctionforinputstreamsanchor11"></a> Otwórz funkcji dla strumieni danych wejściowych
+## <a name="vclrftheopenfunctionforinputstreamsanchor11"></a> Otwórz funkcję dla strumieni danych wejściowych
 
-Jeśli używasz strumienia wejściowego (ifstream) należy skojarzyć strumieniu z określonego pliku. Można to zrobić w konstruktorze lub użyć **Otwórz** funkcji. W obu przypadkach argumenty są takie same.
+Jeśli używasz strumień pliku wejściowego (ifstream) należy skojarzyć tego strumienia z plikiem danych określony dysk. Można to zrobić w konstruktorze lub można użyć `open` funkcji. W obu przypadkach argumenty są takie same.
 
-Zazwyczaj określić [ios_base::openmode](../standard-library/ios-base-class.md#openmode) Flaga podczas otwierania pliku skojarzone z strumień wejściowy (jest to domyślny tryb **ios::in**). Aby uzyskać listę **open_mode** flagi, zobacz [Otwórz](#vclrftheopenfunctionforinputstreamsanchor11). Flagi można łączyć z bitowego OR ( &#124; ) operatora.
+Zwykle określasz [ios_base::openmode](../standard-library/ios-base-class.md#openmode) Flaga po otwarciu pliku skojarzone z strumień wejściowy (jest to domyślny tryb `ios::in`). Aby uzyskać listę `open_mode` flag zobacz [Otwórz](#vclrftheopenfunctionforinputstreamsanchor11). Flagi mogą być łączone z bitowe OR ( &#124; ) — operator.
 
-Aby odczytać plik, należy najpierw użyć **niepowodzenie** funkcji członkowskiej, aby określić, czy istnieje:
+Aby odczytać plik, należy najpierw użyć `fail` funkcja elementu członkowskiego, aby ustalić, czy istnieje:
 
 ```cpp
 istream ifile("FILENAME");
@@ -55,9 +55,9 @@ if (ifile.fail())
 
 ## <a name="vclrfthegetfunctionanchor12"></a> Get
 
-Niesformatowany **uzyskać** funkcji członkowskiej działa jak **>>** operatora z dwoma wyjątkami. Najpierw **uzyskać** funkcja zawiera białe znaki ekstraktor wyłącza biały znak podczas **skipws** flaga jest ustawiona (ustawienie domyślne). Drugi, **uzyskać** funkcji jest mniej może spowodować strumienia wyjściowego wiązanej (`cout`, na przykład) do opróżnienia.
+Niesformatowany `get` funkcja elementu członkowskiego działa jak `>>` operatora z dwoma wyjątkami. Po pierwsze, `get` funkcja zawiera białe znaki, ekstraktor wyłącza biały znak po `skipws` flaga jest ustawiona (ustawienie domyślne). Drugi `get` funkcji jest mniej prawdopodobne, że strumień wyjściowy wiązanej (`cout`, na przykład) opróżnienia.
 
-Odmiana **uzyskać** funkcja określa adres buforu i maksymalną liczbę znaków do odczytania. Jest to przydatne w przypadku ograniczenie liczby znaków wysyłane do określonej zmiennej, jak pokazano na poniższym przykładzie:
+Odmiana `get` funkcja określa adres buforu i maksymalną liczbę znaków do odczytania. Jest to przydatne w przypadku ograniczenie liczby znaków wysyłane do określonej zmiennej, jak pokazano w tym przykładzie:
 
 ```cpp
 // ioo_get_function.cpp
@@ -88,11 +88,11 @@ int main()
 1234
 ```
 
-## <a name="vclrfthegetlinefunctionanchor13"></a> Getline
+## <a name="vclrfthegetlinefunctionanchor13"></a> Getline —
 
-**Getline** funkcja członkowska jest podobny do **uzyskać** funkcji. Obie funkcje umożliwiają trzeci argument, który określa znaku zakończenia dla danych wejściowych. Wartość domyślna to znak nowego wiersza. Funkcjami zarezerwować dla wymaganego znaku zakończenia o jeden znak. Jednak **uzyskać** pozostawia znaku zakończenia w strumieniu i **getline** usuwa znaku zakończenia.
+`getline` Funkcja członkowska jest podobne do `get` funkcji. Obie funkcje umożliwiają trzeci argument, który określa kończącego znaku dla danych wejściowych. Wartość domyślna to znak nowego wiersza. Obie funkcje zarezerwować jednego znaku w przypadku końcowego znaku wymagane. Jednak `get` pozostawia kończący znak w strumieniu i `getline` usuwa kończącego znaku.
 
-W poniższym przykładzie znaku zakończenia dla strumienia wejściowego:
+W poniższym przykładzie określono kończący znak do strumienia danych wejściowych:
 
 ```cpp
 // getline_func.cpp
@@ -117,9 +117,9 @@ test
 
 ## <a name="vclrfthereadfunctionanchor14"></a> Odczyt
 
-**Odczytu** funkcji członkowskiej odczytuje bajtów z pliku do określonego obszaru pamięci. Długość argumentu określa liczbę bajtów do odczytu. Jeśli ten argument nie zostanie uwzględniony, odczytu zatrzymuje po osiągnięciu fizycznych koniec pliku, lub w przypadku pliku tekstowej, gdy osadzonych `EOF` znak jest do odczytu.
+`read` Funkcja elementu członkowskiego odczytuje bajtów z pliku do określonego obszaru pamięci. Długość argumentu określa liczbę odczytanych bajtów. Jeśli ten argument nie zostanie uwzględniony, odczytu nie będzie możliwy po przekroczeniu fizycznych koniec pliku, lub w przypadku trybu tekstowego pliku osadzonego `EOF` odczytem znaku.
 
-Ten przykład odczytuje binarne rekordu z pliku Lista płac w strukturze:
+W tym przykładzie odczytuje binarny rekordu z pliku listy płac w strukturze:
 
 ```cpp
 #include <fstream>
@@ -145,11 +145,11 @@ int main()
 }
 ```
 
-Program zakłada, czy rekordy są sformatowane dokładnie określone przez strukturę bez przerywania znaków powrotu karetki i wysuwu wiersza.
+Program przyjęto założenie, że rekordy są sformatowane dokładnie tak jak określono przez strukturę bez kończący znaków powrotu karetki i wysuwu wiersza.
 
-## <a name="vclrftheseekgandtellgfunctionsanchor7"></a> Funkcje seekg i tellg
+## <a name="vclrftheseekgandtellgfunctionsanchor7"></a> Seekg — i tellg — funkcje
 
-Plik wejściowy strumieni Zachowaj wewnętrznego wskaźnika do pozycji w pliku, w których dane są odczytywane obok. Ustaw ten wskaźnik z `seekg` funkcji, jak pokazano poniżej:
+Strumienie pliku wejściowego Zachowaj wewnętrzny wskaźnik do położenia w pliku, w którym dane są następnie odczytywane. Ustaw ten wskaźnik przy użyciu `seekg` funkcji, jak pokazano poniżej:
 
 ```cpp
 #include <iostream>
@@ -175,9 +175,9 @@ int main( )
 }
 ```
 
-Aby użyć `seekg` Aby zaimplementować systemy zarządzania zorientowane na rekordy danych, należy pomnożyć rozmiar rekordu o stałej długości przez numer uzyskać Pozycja bajtu względem koniec pliku, a następnie użyć **uzyskać** obiektu do odczytu rekord.
+Do użycia `seekg` do zaimplementowania dane zorientowane systemami zarządzania, należy pomnożyć rozmiar rekordu o stałej długości przez liczbę rekordów do uzyskania Pozycja bajtu względem koniec pliku, a następnie użyj `get` obiektu do odczytu w rekordzie.
 
-`tellg` Funkcji członkowskiej Zwraca bieżące położenie pliku do odczytu. Ta wartość jest typu `streampos`, `typedef` zdefiniowane w \<iostream >. W poniższym przykładzie odczytuje plik i wyświetla komunikaty informujące pozycji spacji.
+`tellg` Funkcja elementu członkowskiego zwraca bieżącą pozycję w pliku do odczytu. Ta wartość jest typu `streampos`, `typedef` zdefiniowane w \<iostream >. Poniższy przykład odczytuje plik i wyświetla komunikaty informujące pozycji miejsca do magazynowania.
 
 ```cpp
 #include <fstream>
@@ -204,7 +204,7 @@ int main( )
 
 ## <a name="vclrftheclosefunctionforinputstreamsanchor15"></a> Zamknij funkcji dla strumieni danych wejściowych
 
-**Zamknąć** funkcji członkowskiej zamyka skojarzone ze strumienia wejściowego pliku dysku i zwalnia dojście do pliku systemu operacyjnego. [Ifstream](../standard-library/basic-ifstream-class.md) destruktora zamyka plik dla Ciebie, ale może użyć **zamknąć** funkcji, aby otworzyć inny plik dla tego samego obiektu strumienia.
+`close` Funkcja elementu członkowskiego zamyka pliku dysku skojarzonego z strumienia pliku wejściowego i zwalnia uchwyt pliku systemu operacyjnego. [Ifstream](../standard-library/basic-ifstream-class.md) destruktor zamyka plik dla Ciebie, ale można użyć `close` działać, jeśli trzeba otworzyć inny plik dla tego samego obiektu strumienia.
 
 ## <a name="see-also"></a>Zobacz także
 

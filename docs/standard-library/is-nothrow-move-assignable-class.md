@@ -1,5 +1,5 @@
 ---
-title: Klasa is_nothrow_move_assignable | Dokumentacja firmy Microsoft
+title: is_nothrow_move_assignable, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 311f4f26b1f63c089c1771e36ac70060fab6b894
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d841428be45ae47eee94bec8c2f40d42e65e29a7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852126"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953250"
 ---
-# <a name="isnothrowmoveassignable-class"></a>is_nothrow_move_assignable — klasa
+# <a name="isnothrowmoveassignable-class"></a>is_nothrow_move_assignable, klasa
 
 Sprawdza, czy typ ma **nothrow** przenoszący operator przypisania.
 
@@ -36,17 +36,17 @@ struct is_nothrow_move_assignable;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zapytania.
+*Ty* typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typ `Ty` ma nothrow operator przypisania przenoszenia, w przeciwnym razie posiada wartość false.
+Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* ma nothrow operator przypisania przenoszenia, w przeciwnym razie przechowuje wartość false.
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

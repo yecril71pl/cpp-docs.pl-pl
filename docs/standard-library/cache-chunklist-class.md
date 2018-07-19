@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a71b6a45dbdb882cc666c72296938f970bba52ac
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 808340df89bb548fee57604f25409c117933cc4e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844949"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953263"
 ---
 # <a name="cachechunklist-class"></a>cache_chunklist — Klasa
 
-Definiuje [zablokować alokatora](../standard-library/allocators-header.md) przydziela i zwalnia bloki pamięci o rozmiarze pojedynczego.
+Definiuje [block alokatora](../standard-library/allocators-header.md) który przydziela i zwalnia bloki pamięci o rozmiarze jednego.
 
 ## <a name="syntax"></a>Składnia
 
@@ -42,13 +42,13 @@ class cache_chunklist
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`Sz`|Liczba elementów w tablicy do przydzielenia.|
+|*Sz*|Liczba elementów w tablicy do przydzielenia.|
 
 ## <a name="remarks"></a>Uwagi
 
-Ta klasa szablonu używa `operator new` przydzielić fragmentów pamięci, suballocating blokuje Aby przydzielić magazyn do bloku pamięci, gdy jest wymagane; przechowuje bloki pamięci deallocated w osobnej listy wolne dla każdego fragmentu i używa `operator delete` można cofnąć alokacji fragmentów, gdy żaden z jego bloki pamięci nie jest w użyciu.
+Korzysta z tej klasy szablonu **nowy operator** można przydzielić pamięci surowej fragmentów, blokuje suballocating do przydzielania pamięci dla bloku pamięci, w razie; bloki cofnięcia przydziału pamięci są przechowywane w osobnej listy bezpłatne dla każdego fragmentu i używa **operatora delete** można cofnąć alokacji fragment, gdy żaden z jej bloki pamięci jest w użyciu.
 
-Każdy blok pamięci przechowuje `Sz` w bajtach dostępnej pamięci i wskaźnika do fragmentów, do którego on należy. Przechowuje każdego fragmentu `Nelts` bloki pamięci, wskaźniki trzy, int i dane który `operator new` i `operator delete` wymagają.
+Każdy blok pamięci przechowuje *Sz* bajtach dostępnej pamięci i wskaźnik fragmentów, do którego on należy. Każdy fragment zawiera `Nelts` bloki pamięci, trzy wskaźniki, int i dane, **nowy operator** i **operatora delete** wymagają.
 
 ### <a name="constructors"></a>Konstruktorów
 
@@ -58,20 +58,20 @@ Każdy blok pamięci przechowuje `Sz` w bajtach dostępnej pamięci i wskaźnika
 
 ### <a name="member-functions"></a>Funkcje Członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[allocate](#allocate)|Przydziela bloku pamięci.|
-|[Cofnięcie przydziału](#deallocate)|Zwalnia określoną liczbę obiektów z magazynu rozpoczynający się od określonej pozycji.|
+|[allocate](#allocate)|Przydziela blok pamięci.|
+|[Cofnij Przydział](#deallocate)|Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.|
 
 ## <a name="requirements"></a>Wymagania
 
-**Nagłówek:** \<allocators — >
+**Nagłówek:** \<buforów >
 
-**Namespace:** stdext —
+**Namespace:** stdext
 
 ## <a name="allocate"></a>  cache_chunklist::allocate
 
-Przydziela bloku pamięci.
+Przydziela blok pamięci.
 
 ```cpp
 void *allocate(std::size_t count);
@@ -81,7 +81,7 @@ void *allocate(std::size_t count);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`count`|Liczba elementów w tablicy do przydzielenia.|
+|*Liczba*|Liczba elementów w tablicy do przydzielenia.|
 
 ### <a name="return-value"></a>Wartość zwracana
 
@@ -101,7 +101,7 @@ cache_chunklist();
 
 ## <a name="deallocate"></a>  cache_chunklist::deallocate
 
-Zwalnia określoną liczbę obiektów z magazynu rozpoczynający się od określonej pozycji.
+Zwalnia określoną liczbę obiektów z pamięci masowej rozpoczynający się od określonej pozycji.
 
 ```cpp
 void deallocate(void* ptr, std::size_t count);
@@ -111,8 +111,8 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametr|Opis|
 |---------------|-----------------|
-|`ptr`|Wskaźnik do pierwszego obiektu do cofnięcia alokacji z magazynu.|
-|`count`|Liczba obiektów do cofnięcia alokacji z magazynu.|
+|*ptr*|Wskaźnik do pierwszego obiektu można cofnąć przydziału z magazynu.|
+|*Liczba*|Liczba obiektów, które można cofnąć przydziału z magazynu.|
 
 ### <a name="remarks"></a>Uwagi
 

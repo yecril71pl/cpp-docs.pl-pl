@@ -1,5 +1,5 @@
 ---
-title: Składniki COM pulpitu ATL | Dokumentacja firmy Microsoft
+title: Składniki ATL COM pulpitu | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,50 +15,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fb459c10f7ead6960760c8d02b9a471a7b8f6c2
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e53f2dfd0181b85efbc71defbc528d452d32b4dd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255996"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953852"
 ---
-# <a name="atl-com-desktop-components"></a>Składniki COM pulpitu ATL
-Odwołanie do biblioteki ATL dokumentów aktywnych szablonu Library (ATL), zestaw na podstawie szablonu klasy C++, które upraszczają programowanie obiektów składnika modelu COM (Object). Aby w pełni korzystać z ATL, zaleca się pracy znajomość COM.  
+# <a name="atl-com-desktop-components"></a>Składniki ATL COM pulpitu
+Dokumentacja ATL dokumenty Active Template Library (ATL), zestaw na podstawie szablonu klasy C++, które upraszczają programowanie obiektów Component Object Model (COM). Aby w pełni wykorzystać ATL, zdecydowanie zaleca się pracę znajomość COM.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Przegląd klas ATL](../atl/atl-class-overview.md)  
- Zawiera linki do i krótkie opisy klasy ATL według kategorii.  
+ Zawiera łącza do i krótkie opisy klasy ATL, uporządkowane według kategorii.  
   
  [Klasy i struktury ATL](../atl/reference/atl-classes.md)  
- Zawiera materiały informacyjne dotyczące klas i struktur alfabetycznej.  
+ Oferuje materiały źródłowe dotyczące klas i struktur zorganizowane alfabetycznie.  
   
  [Funkcje ATL](../atl/reference/atl-functions.md)  
- Zawiera materiały informacyjne w przypadku funkcji globalnych alfabetycznej. Zawiera tematy organizowanie funkcje w kategorii.  
+ Oferuje materiały źródłowe w przypadku funkcji globalnych zorganizowane alfabetycznie. Zawiera tematy, organizowanie funkcje w kategorii.  
   
  [Zmienne globalne ATL](../atl/reference/atl-global-variables.md)  
- Zawiera materiały informacyjne dotyczące zmiennych globalnych alfabetycznej.  
+ Zawiera materiały referencyjne dotyczące zmiennych globalnych zorganizowane alfabetycznie.  
   
  [Makra ATL](../atl/reference/atl-macros.md)  
- Zawiera materiały informacyjne dotyczące makra alfabetycznej. Zawiera tematy organizowanie makra w kategorii.  
+ Zawiera materiały źródłowe dotyczące makra zorganizowane alfabetycznie. Zawiera tematy, organizowanie makra w kategorii.  
   
  [Definicje typów ATL](../atl/reference/atl-typedefs.md)  
- Zawiera definicje typów, alfabetycznej materiałów referencyjnych  
+ Zawiera materiały referencyjne dotyczące definicje typów zorganizowane alfabetycznie  
   
  [Archetyp procesu roboczego](../atl/reference/worker-archetype.md)  
- Zawiera łącza do archetype ATL procesu roboczego.  
-  
- [Tematy przestarzałe ATL](http://msdn.microsoft.com/en-us/7af0223d-148e-4a4c-bf9c-3e916a3b67ec)  
- Zawiera materiały informacyjne dotyczące klas, makra i funkcje, które są przestarzałe lub przestarzałe.  
+ Zawiera łącza do archetyp procesu roboczego ATL.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [ATL](../atl/active-template-library-atl-concepts.md)  
  Zawiera tematy dotyczące programowania przy użyciu Active Template Library (ATL).  
   
  [ALT — samouczek](../atl/active-template-library-atl-tutorial.md)  
- Poprowadzi Cię przez tworzenie formantu i przedstawiono niektóre podstawowe założenia ATL w procesie.  
+ Poprowadzi Cię przez tworzenie formantu i pokazuje podstawowe informacje dotyczące niektórych ATL w procesie.  
   
- [ATL — przykłady](../visual-cpp-samples.md)  
- Przykładowy kod przedstawia sposób użycia ATL do zapisywania obiektów COM.  
+ [Przykłady ATL](../visual-cpp-samples.md)  
+ Przykładowy kod, który pokazuje, jak na potrzeby zapisywania obiektów COM ATL.  
   
  [Szablony OLE DB](../data/oledb/ole-db-templates.md)  
- Udostępnia materiałów referencyjnych dla szablonów konsumentów i dostawcy OLE DB, zbiór szablonu klasy, które implementuje wiele często używane interfejsy OLE DB.  
+ Oferuje materiały źródłowe dla szablonów konsumentów i dostawcy OLE DB, zestaw klas szablonów, które implementują wiele powszechnie używanych interfejsy OLE DB.  

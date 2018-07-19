@@ -14,23 +14,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ada34aae858d8e29b119fa08d363a0c26013567
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51da4a44f99c83ba34ec035e77173946d2327fe9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414597"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953366"
 ---
 # <a name="expressions-c"></a>Wyrażenia (C++)
-W tej sekcji opisano wyrażeń języka C++. Wyrażenia są sekwencji operatory i argumenty, które są używane dla co najmniej jednego z tych celów:  
+W tej sekcji opisano wyrażeń języka C++. Wyrażenia są sekwencje, operatorów i argumentów operacji, które są używane do co najmniej jedną z tych celów:  
   
--   Obliczanie wartości od argumenty operacji.  
+-   Wykrywanie wartość z zakresu od argumentów.  
   
--   Wyznaczenie obiekty lub funkcje.  
+-   Wyznaczanie obiektów lub funkcji.  
   
--   Generowanie "efekty uboczne." (Skutki uboczne są wszystkie akcje innych niż obliczania wyrażenia — na przykład zmodyfikowanie wartości obiektu.)  
+-   Generowanie "efekty uboczne." (Efekty uboczne są wszystkie akcje inne niż obliczania wyrażenia — na przykład, zmieniając wartość obiektu.)  
   
- W języku C++ mogą być przeciążone operatory i ich znaczenie mogą być zdefiniowane przez użytkownika. Jednak ich priorytet i liczba argumentów operacji, które podejmują nie można modyfikować. W tej sekcji opisano składnię i semantyki operatorów dostarczeniu ich przy użyciu języka nie jest przeciążona. Oprócz [Typy wyrażeń](../cpp/types-of-expressions.md) i [semantyka wyrażeń](../cpp/semantics-of-expressions.md), zostały uwzględnione następujące tematy:  
+ W języku C++ mogą być przeciążone operatory i ich znaczenie może być zdefiniowana przez użytkownika. Jednak nie można modyfikować ich priorytet i liczba argumentów operacji, które przyjmują. W tej sekcji opisano składnia i semantyka operatorów, ponieważ są one dostarczane przy użyciu języka nie jest przeciążona. Oprócz [Typy wyrażeń](../cpp/types-of-expressions.md) i [semantyki wyrażeń](../cpp/semantics-of-expressions.md), omówiono następujące tematy:  
   
 -   [Wyrażenia podstawowe](../cpp/primary-expressions.md)  
   
@@ -46,8 +46,6 @@ W tej sekcji opisano wyrażeń języka C++. Wyrażenia są sekwencji operatory i
   
 -   [Wyrażenia stałe](../cpp/cpp-constant-expressions.md)  
   
--   [Wyrażenia z jawne konwersje typów](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae)  
-  
 -   [Operatory rzutowania](../cpp/casting-operators.md)  
   
 -   [Informacje typu Run-time](../cpp/run-time-type-information.md)  
@@ -61,7 +59,7 @@ W tej sekcji opisano wyrażeń języka C++. Wyrażenia są sekwencji operatory i
 -   [TypeID](../windows/typeid-cpp-component-extensions.md)  
   
     > [!NOTE]
-    >  Nie można przeciążać operatory typy wbudowane; wstępnie zdefiniowane ich zachowanie.  
+    >  Nie mogą być przeciążone operatory dla wbudowanych typów; ich zachowanie jest wstępnie zdefiniowane.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Dokumentacja języka C++](../cpp/cpp-language-reference.md)

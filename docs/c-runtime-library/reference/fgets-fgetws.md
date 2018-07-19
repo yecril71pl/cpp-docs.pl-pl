@@ -1,7 +1,7 @@
 ---
-title: fgets —, fgetws — | Dokumentacja firmy Microsoft
+title: fgets, fgetws — | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/11/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e92deea033443ec942895d2aef2d1a307ac89f34
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9c155150a364c2cbbd230c56678e6e7dcb4e4fde
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402023"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027170"
 ---
 # <a name="fgets-fgetws"></a>fgets, fgetws
 
@@ -68,39 +68,39 @@ wchar_t *fgetws(
 ### <a name="parameters"></a>Parametry
 
 *str*<br/>
-Lokalizacja magazynu danych.
+Lokalizacja magazynowa danych.
 
 *numChars*<br/>
 Maksymalna liczba znaków do odczytania.
 
-*Strumień*<br/>
+*Stream*<br/>
 Wskaźnik do **pliku** struktury.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Każdy z tych funkcji zwraca *str*. **Wartość NULL** jest zwracany błąd lub warunek końca pliku. Użyj **feof —** lub **ferror —** ustalenie, czy wystąpił błąd. Jeśli *str* lub *strumienia* jest wskaźnika o wartości null, lub *numChars* jest mniejsza lub równa zero, ta funkcja wywołuje program obsługi nieprawidłowych parametrów, zgodnie z opisem w [ Sprawdzanie poprawności parametru](../../c-runtime-library/parameter-validation.md). Jeśli jest dozwolone wykonywanie, aby kontynuować, **errno** ustawiono **einval —** i funkcja zwraca **NULL**.
+Każda z tych funkcji zwraca *str*. **Wartość NULL** zwracany jest, aby wskazać błąd lub warunek końca pliku. Użyj **feof** lub **ferror** do określenia, czy wystąpił błąd. Jeśli *str* lub *strumienia* jest wskaźnikiem wartości null lub *numChars* jest mniejszy niż lub równy zero, funkcja wywoła procedurę obsługi nieprawidłowego parametru, zgodnie z opisem w [ Walidacja parametru](../../c-runtime-library/parameter-validation.md). Jeśli wykonanie może być kontynuowane, **errno** ustawiono **EINVAL** a funkcja zwraca **NULL**.
 
-Zobacz [_doserrno —, errno, _sys_errlist — i _sys_nerr —](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów błędów.
+Zobacz [_doserrno, errno, _sys_errlist i _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Aby uzyskać więcej informacji na temat tych i innych kodów błędu,.
 
 ## <a name="remarks"></a>Uwagi
 
-**Fgets —** funkcja odczytuje ciągu wejściowego *strumienia* argumentu i przechowuje ją w *str*. **fgets —** odczytuje znaków z bieżącym stanie strumienia i pierwszego znaku nowego wiersza na koniec strumienia, w tym lub zapoznaniem liczba znaków wynosi *numChars* - 1, zależnie od zostanie osiągnięty jako pierwszy. Wynik przechowywany w *str* jest dołączany znakiem null. Znak nowego wiersza, jeśli do odczytu, jest uwzględniona w parametrach.
+**Fgets** funkcja odczytuje ciągu wejściowego *strumienia* argumentu i zapisuje go w *str*. **fgets** odczytuje znaki z bieżącym stanie strumienia i pierwszy znak nowego wiersza na koniec strumienia, w tym lub do momentu liczba znaków odczytanych jest równa *numChars* - 1, osiągnięta jako pierwsza. Wynik przechowywany w *str* jest dołączany znakiem null. Znak nowego wiersza, jeśli do odczytu, znajduje się w ciągu.
 
-**fgetws —** jest wersja znaków dwubajtowych **fgets —**.
+**fgetws —** to wersja znaku dwubajtowego **fgets**.
 
-**fgetws —** odczytuje argument znaków dwubajtowych *str* jako ciąg znaków wielobajtowych lub ciągiem znaków dwubajtowych zgodnie z czy *strumienia* jest otwarty w trybie tekstu lub w trybie binarnym odpowiednio. Aby uzyskać więcej informacji na temat używania trybach tekstowym i binarnym Unicode i wielobajtowe strumienia I/O zobacz [tekstu i we/wy binarne trybu pliku](../../c-runtime-library/text-and-binary-mode-file-i-o.md) i [we/wy strumienia w Unicode w trybach tekstowym i binarnym](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
+**fgetws —** odczytuje argument znaku dwubajtowego *str* jako ciąg znaków wielobajtowych lub ciąg znaków dwubajtowych, zgodnie z czy *strumienia* jest otwarty w trybie tekstu lub w trybie binarnym odpowiednio. Aby uzyskać więcej informacji na temat używania w trybach tekstowym i binarnym w Unicode i wielobajtowych strumienia we/wy, zobacz [tekstowych i binarnych We/Wy trybu](../../c-runtime-library/text-and-binary-mode-file-i-o.md) i [we/wy Stream w Unicode w trybach tekstowym i binarnym](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapowania procedur zwykłego tekstu
 
-|Procedura TCHAR.H|_Unicode — & _MBCS nie zdefiniowany|_MBCS zdefiniowano|_UNICODE zdefiniowano|
+|Procedura TCHAR.H|_UNICODE & _MBCS nie zdefiniowano|_MBCS zdefiniowano|_UNICODE zdefiniowano|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_fgetts —**|**fgets —**|**fgets —**|**fgetws —**|
+|**_fgetts —**|**fgets**|**fgets**|**fgetws —**|
 
 ## <a name="requirements"></a>Wymagania
 
 |Funkcja|Wymagany nagłówek|
 |--------------|---------------------|
-|**fgets —**|\<stdio.h>|
+|**fgets**|\<stdio.h>|
 |**fgetws —**|\<stdio.h > lub \<wchar.h >|
 
 Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runtime-library/compatibility.md).
@@ -109,9 +109,8 @@ Aby uzyskać dodatkowe informacje o zgodności, zobacz [zgodności](../../c-runt
 
 ```C
 // crt_fgets.c
-// This program uses fgets to display
-// a line from a file on the screen.
-//
+// This program uses fgets to display 
+// the first line from a file.
 
 #include <stdio.h>
 
@@ -146,7 +145,7 @@ Line one.
 
 ## <a name="see-also"></a>Zobacz także
 
-[We/Wy strumienia](../../c-runtime-library/stream-i-o.md)<br/>
+[Stream operacji We/Wy](../../c-runtime-library/stream-i-o.md)<br/>
 [fputs, fputws](fputs-fputws.md)<br/>
 [gets, _getws](../../c-runtime-library/gets-getws.md)<br/>
 [puts, _putws](puts-putws.md)<br/>

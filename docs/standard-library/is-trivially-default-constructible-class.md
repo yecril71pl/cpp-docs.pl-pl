@@ -1,5 +1,5 @@
 ---
-title: is_trivially_default_constructible — klasa | Dokumentacja firmy Microsoft
+title: is_trivially_default_constructible, klasa | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f2bd65fa7145325fd4c5c2f1a2483851d0738b7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: aa7b831790804005f0649dbae0dbb98df5121106
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852139"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954737"
 ---
 # <a name="istriviallydefaultconstructible-class"></a>is_trivially_default_constructible — klasa
 
-Testy, jeśli typ ma konstruktora domyślnego prosta.
+Sprawdza, czy typ ma konstruktora domyślnego prosta.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,31 +36,31 @@ struct is_trivially_default_constructible;
 
 ### <a name="parameters"></a>Parametry
 
-`Ty` Typ do zapytania.
+*Ty* typ do zapytania.
 
 ## <a name="remarks"></a>Uwagi
 
-Wystąpienie typu predykatu posiada wartość true Jeśli typ `Ty` jest klasa, która ma trivial Konstruktor, w przeciwnym razie posiada wartość false.
+Wystąpienie typu predykatu ma wartość true, jeśli typ *Ty* to klasa, która ma proste konstruktora, w przeciwnym razie przechowuje wartość false.
 
-Domyślny konstruktor dla klasy `Ty` jest prosta jeśli:
+Domyślny konstruktor dla klasy *Ty* jest proste jeśli:
 
 - jest niejawnie zadeklarowany Konstruktor domyślny
 
-- Klasa `Ty` ma żadnych funkcji wirtualnych
+- Klasa *Ty* ma żadnych funkcji wirtualnych
 
-- Klasa `Ty` ma nie wirtualnych typów podstawowych
+- Klasa *Ty* ma nie baz wirtualnych
 
-- wszystkie bezpośrednio podstawowych klasy `Ty` mieć konstruktorów prosta
+- wszystkie bezpośrednio baz klasy *Ty* mieć konstruktorów prosta
 
-- klasy wszystkich członków danych niestatycznych typu klasy mają trivial konstruktorów
+- klasy wszystkie składowe danych niestatycznych typu klasy mieć konstruktorów prosta
 
-- klasy wszystkich członków danych niestatycznych tablicy typu klasy mają trivial konstruktorów
+- klasy wszystkie składowe danych niestatycznych typu tablicowego klasy mieć konstruktorów prosta
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<type_traits >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

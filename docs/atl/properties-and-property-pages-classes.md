@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0bb0a23ca0d0c67be86db49c92b6782dd71eee1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 027eb9c91b03501560c7001a2688d7e494154bce
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355010"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953803"
 ---
 # <a name="properties-and-property-pages-classes"></a>Właściwości i klasy strony właściwości
-Następujące klasy pomocy technicznej, właściwości i strony właściwości:  
+Następujące klasy obsługują właściwości i strony właściwości:  
   
 -   [CComDispatchDriver](../atl/reference/atl-typedefs.md#ccomdispatchdriver) pobiera lub ustawia właściwości obiektu za pomocą `IDispatch` wskaźnika.  
   
@@ -34,11 +34,11 @@ Następujące klasy pomocy technicznej, właściwości i strony właściwości:
   
 -   [IPerPropertyBrowsingImpl](../atl/reference/iperpropertybrowsingimpl-class.md) uzyskuje dostęp do informacji na stronach właściwości obiektu.  
   
--   [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) przechowuje właściwości obiektów w zbiór właściwości dostarczonych przez klienta.  
+-   [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) właściwości obiektu są przechowywane w zbiorze właściwości dostarczonych przez klienta.  
   
 -   [IPropertyPageImpl](../atl/reference/ipropertypageimpl-class.md) zarządza określoną stronę właściwości w arkuszu właściwości.  
   
--   [IPropertyPage2Impl](../atl/reference/ipropertypage2impl-class.md) podobny do `IPropertyPageImpl`, ale również umożliwia klientowi wybierz określonej właściwości na stronie właściwości.  
+-   [IPropertyPage2Impl](../atl/reference/ipropertypage2impl-class.md) podobnie jak `IPropertyPageImpl`, ale również umożliwia klientowi wybrać określoną właściwość na stronie właściwości.  
   
 -   [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md) uzyskuje CLSID dla stron właściwości obsługiwanych przez obiekt.  
   
@@ -48,6 +48,6 @@ Następujące klasy pomocy technicznej, właściwości i strony właściwości:
  [Strony właściwości ALT COM](../atl/atl-com-property-pages.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd klas](../atl/atl-class-overview.md)   
+ [Klasa — Przegląd](../atl/atl-class-overview.md)   
  [Makra mapy właściwości](../atl/reference/property-map-macros.md)
 

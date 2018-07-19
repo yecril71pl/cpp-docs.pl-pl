@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fac4528c976e99a77ceec8bc170323846a0e3a28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7c146862a18d4292dd6c375dda83063bbcf4dee4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858919"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954358"
 ---
 # <a name="less-struct"></a>less — Struktura
 
-Predykat binarne wykonująca less — od operacji ( `operator<`) na argumenty.
+Predykat binarny, który wykonuje mniej-niż operacji (`operator<`) na jego argumenty.
 
 ## <a name="syntax"></a>Składnia
 
@@ -49,19 +49,19 @@ struct less<void>
 
 ### <a name="parameters"></a>Parametry
 
-`Type`, `T`, `U` Dowolnego typu, który obsługuje `operator<` pobierającej argumentów operacji typu określonego lub wywnioskowany.
+*Typ*, *T*, *U* dowolnego typu, który obsługuje `operator<` przyjmującej argumentów operacji typu określonego lub wywnioskowane uprawnienie.
 
-`Left` Lewy operand less — od operacji. Szablon klasy niespecjalizowanej przyjmuje argument odwołania l-wartością typu `Type`. Specjalne szablonu doskonała przekazującej lewostronnie i argumenty odwołanie do r-wartości wywnioskować typu `T`.
+*Po lewej stronie* lewy operand mniej-niż operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *T*.
 
-`Right` Prawy operand less — od operacji. Szablon klasy niespecjalizowanej przyjmuje argument odwołania l-wartością typu `Type`. Specjalne szablonu doskonała przekazującej lewostronnie i argumenty odwołanie do r-wartości wywnioskować typu `U`.
+*Po prawej stronie* prawy operand mniej-niż operacji. Szablon Niewyspecjalizowana przyjmuje argument odwołania l-wartości typu *typu*. Wyspecjalizowane szablonu doskonała przekazywania l-wartością i argumenty odwołania rvalue wywnioskować typu *U*.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Wynik `Left < Right`. Specjalne szablonu doskonała przekazywanie wynik, który ma typ zwracany przez `operator<`.
+Wynik `Left < Right`. Szablon wyspecjalizowane doskonała przekazywania wyniku, który ma typ, który jest zwracany przez `operator<`.
 
 ## <a name="remarks"></a>Uwagi
 
-Predykat binarne `less` <  `Type`> udostępnia strict słabe uporządkowanie zestawu wartości elementu typu `Type` do pełnienia roli równoważnika klas, tylko wtedy, gdy ten typ spełnia wymagania standardowe matematyczne Dlatego porządkowana. Specjalizacje dla dowolnego typu wskaźnika instrukcji yield całkowita kolejność elementów, w tym wszystkie elementy unikatowe wartości są uporządkowane względem siebie.
+Predykat dwuelementowy `less` <  `Type`> udostępnia ścisłe słabe porządkowanie zestaw wartości elementów typu *typu* na klasy równoważności, tylko wtedy, gdy ten typ spełnia standard matematyczne wymagania dotyczące więc szeregowane. Specjalizacje dla dowolnego typu wskaźnika yield, łączna liczba kolejność elementów, w tym, że wszystkie elementy unikatowe wartości są uporządkowane względem siebie.
 
 ## <a name="example"></a>Przykład
 
@@ -119,7 +119,7 @@ Sorted vector v1 = (41 6334 11478 15724 18467 19169 26500)
 
 **Nagłówek:** \<funkcjonalności >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

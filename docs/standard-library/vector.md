@@ -16,20 +16,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fc8fb21afe1f024e4e5418d3cc706f654946de6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e49fcc87c4c074494164a085e01581077bbfe118
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857639"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953865"
 ---
 # <a name="ltvectorgt"></a>&lt;Wektor&gt;
 
-Definiuje wektor klasy szablonu kontenera i kilku szablonów pomocniczych.
+Definiuje wektor klasy szablonu kontenera i kilka szablonów pomocniczych.
 
-`vector` Jest kontenerem, który służy do organizowania elementów danego typu w liniowej sekwencji. Umożliwia szybkie dostępie do elementu i dynamicznego dodawania i usuwania do i z sekwencji. `vector` Jest preferowany kontenera sekwencji, gdy jest dostępie swobodnym wydajności.
+`vector` Jest kontenerem, który służy do organizowania elementów danego typu w liniowej sekwencji. Umożliwia szybkiego losowego dostęp do dowolnego elementu i dynamiczne dodań i usunięć wpisów do i z sekwencji. `vector` Jest preferowanym kontenerem dla sekwencji, gdy wydajność dostępu swobodnego znajduje się w warstwie premium.
 
-Aby uzyskać więcej informacji o klasie `vector`, zobacz [vector — klasa](../standard-library/vector-class.md). Aby uzyskać informacje o specjalizacji `vector<bool>`, zobacz [wektor\<bool > klasy](../standard-library/vector-bool-class.md).
+Aby uzyskać więcej informacji o klasie `vector`, zobacz [vector, klasa](../standard-library/vector-class.md). Aby uzyskać informacje o specjalizacji `vector<bool>`, zobacz [wektora\<bool > klasa](../standard-library/vector-bool-class.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -83,42 +83,46 @@ void swap (
 
 ### <a name="parameters"></a>Parametry
 
-Parametr szablonu dla typu danych przechowywanych w wektorze typu.
+*Typ*  
+ Parametr szablonu dla typu danych przechowywanych w wektorze.
 
-Parametr szablonu dla obiekt przechowywanych alokatora odpowiedzialny za alokacją pamięci i dezalokacji przydzielania.
+*Allocator*  
+ Parametr szablonu, aby uzyskać przechowywany obiekt alokatora odpowiedzialny za alokacji i dezalokacji pamięci.
 
-`left` Pierwszy wektora (lewych) w operacji porównywania
+*left*  
+ Pierwszego wektora (po lewej stronie) w ramach operacji porównania
 
-`right` Drugi wektora (po prawej) w operacji porównywania.
+*right*  
+ Drugi wektor (po prawej) w ramach operacji porównania.
 
 ### <a name="operators"></a>Operatory
 
 |Operator|Opis|
 |-|-|
-|[operator! =](../standard-library/vector-operators.md#op_neq)|Testy, jeśli obiekt wektora po lewej stronie operatora nie jest taki sam jak obiekt wektora po prawej stronie.|
-|[Operator <](../standard-library/vector-operators.md#op_lt)|Testy, jeśli obiekt wektora po lewej stronie operatora jest mniejsza niż obiekt wektora po prawej stronie.|
-|[Operator\<=](../standard-library/vector-operators.md#op_gt_eq)|Testy, jeśli obiekt wektora po lewej stronie operatora jest mniejsza niż lub równe obiekt wektora po prawej stronie.|
-|[operator==](../standard-library/vector-operators.md#op_eq_eq)|Testy, jeśli obiekt wektora po lewej stronie operatora jest taki sam jak obiekt wektora po prawej stronie.|
-|[operator>](../standard-library/vector-operators.md#op_gt)|Testy, jeśli obiekt wektora po lewej stronie operatora jest większa niż obiekt wektora po prawej stronie.|
-|[operator>=](../standard-library/vector-operators.md#op_gt_eq)|Testy, jeśli obiekt wektora po lewej stronie operatora jest większa niż lub równa obiekt wektora po prawej stronie.|
+|[operator! =](../standard-library/vector-operators.md#op_neq)|Sprawdza, czy obiekt wektora po lewej stronie operatora nie jest równy obiektowi wektora po prawej stronie.|
+|[Operator <](../standard-library/vector-operators.md#op_lt)|Sprawdza, czy obiektu wektora po lewej stronie operatora jest mniejszy niż obiekt wektora po prawej stronie.|
+|[Operator\<=](../standard-library/vector-operators.md#op_gt_eq)|Sprawdza, czy wektora obiektu po lewej stronie operatora jest mniejszy niż lub równy obiektowi wektora po prawej stronie.|
+|[operator==](../standard-library/vector-operators.md#op_eq_eq)|Sprawdza, czy obiekt wektora po lewej stronie operatora jest równy obiektowi wektora po prawej stronie.|
+|[operator>](../standard-library/vector-operators.md#op_gt)|Sprawdza, czy obiekt wektora, po lewej stronie operatora jest większy niż obiektu wektora po prawej stronie.|
+|[operator>=](../standard-library/vector-operators.md#op_gt_eq)|Sprawdza, czy obiekt wektora po lewej stronie operatora jest większy lub równy obiektowi wektora po prawej stronie.|
 
 ### <a name="classes"></a>Klasy
 
 |Class|Opis|
 |-|-|
-|[vector, klasa](../standard-library/vector-class.md)|Klasy szablonów sekwencji kontenerów, które Rozmieść elementy danego typu w układzie liniowej i dostęp do szybkiego losowego dowolnego elementu.|
+|[vector, klasa](../standard-library/vector-class.md)|Klasa szablonu kontenerów sekwencji, które Rozmieść elementy danego typu w układzie liniowych i zezwolić na dostęp szybkiego losowego do dowolnego elementu.|
 
 ### <a name="specializations"></a>Specjalizacje
 
 |||
 |-|-|
-|[Wektor\<bool > — klasa](../standard-library/vector-bool-class.md)|Pełna specjalizacja wektor klasy szablonu dla elementów typu `bool` z alokatora dla typu źródłowego używane przez specjalizacji.|
+|[Wektor\<bool > klasa](../standard-library/vector-bool-class.md)|Pełne specjalizacji wektora klasy szablonu dla elementów typu `bool` z alokator dla podstawowego typu, które są używane przez specjalizację.|
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<wektor >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="see-also"></a>Zobacz także
 

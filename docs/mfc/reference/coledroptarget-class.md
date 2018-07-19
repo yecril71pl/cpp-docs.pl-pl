@@ -34,15 +34,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fec20d8bb960d48392f2d174dab9ee6497738c80
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0d54a22bd215a80f3e7cab3770a4ba12cd7baffb
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039605"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027445"
 ---
 # <a name="coledroptarget-class"></a>Klasa COleDropTarget
-Udostępnia mechanizm komunikacji między okna i bibliotek OLE.  
+Udostępnia mechanizm komunikacji między trybem okna a bibliotekami OLE.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -62,19 +62,19 @@ class COleDropTarget : public CCmdTarget
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[COleDropTarget::OnDragEnter](#ondragenter)|Wywoływane, gdy kursor po raz pierwszy najedzie okna.|  
-|[COleDropTarget::OnDragLeave](#ondragleave)|Wywoływane, gdy kursor jest przeciągany poza okna.|  
+|[COleDropTarget::OnDragEnter](#ondragenter)|Wywołuje się, gdy kursor po raz pierwszy najedzie okna.|  
+|[COleDropTarget::OnDragLeave](#ondragleave)|Wywołuje się, gdy kursor jest przeciągany poza okna.|  
 |[COleDropTarget::OnDragOver](#ondragover)|Wywołuje się wielokrotnie, gdy kursor jest przeciągany nad oknem.|  
-|[COleDropTarget::OnDragScroll](#ondragscroll)|Wywołuje się, by określić czy kursor jest przeciągany w regionie przewijania okna.|  
-|[COleDropTarget::OnDrop](#ondrop)|Wywoływane, gdy dane są przenoszone do okna, domyślny program obsługi.|  
-|[COleDropTarget::OnDropEx](#ondropex)|Wywoływane, gdy dane są przenoszone do okna obsługi początkowej.|  
-|[COleDropTarget::Register](#register)|Okno rejestrów jako prawidłowy miejsca docelowego.|  
-|[COleDropTarget::Revoke](#revoke)|Powoduje, że okno, aby zaprzestać jest prawidłowy miejsca docelowego.|  
+|[COleDropTarget::OnDragScroll](#ondragscroll)|Wywołuje się, by określić czy kursor jest przeciągany w regionie przewijania, okna.|  
+|[COleDropTarget::OnDrop](#ondrop)|Wywołuje się, gdy dane są przenoszone do okna, domyślny program obsługi.|  
+|[COleDropTarget::OnDropEx](#ondropex)|Wywołuje się, gdy dane są przenoszone do okna obsługi początkowej.|  
+|[COleDropTarget::Register](#register)|Rejestruje okna jako prawidłowe miejsca docelowego.|  
+|[COleDropTarget::Revoke](#revoke)|Powoduje, że okno zaprzestania są prawidłowe miejsca docelowego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Tworzenie obiektu ta klasa umożliwia okno, aby akceptować dane za pomocą mechanizmu przeciąganie i upuszczanie OLE.  
+ Tworzenie obiektu tej klasy pozwala oknu na akceptowanie danych za pośrednictwem mechanizmu OLE przeciągania i upuszczania.  
   
- Aby uzyskać okno, aby zaakceptować poleceń drop, należy najpierw utworzyć obiektu `COleDropTarget` klasy, a następnie wywołać [zarejestrować](#register) funkcji za pomocą wskaźnika do żądaną `CWnd` obiektu jako parametr tylko.  
+ Aby dostać okno aby zaakceptować poleceń drop, należy najpierw utworzyć obiekt `COleDropTarget` klasy, a następnie wywołaj [zarejestrować](#register) funkcji za pomocą wskaźnika do żądaną `CWnd` obiektu jako jedyny parametr.  
   
  Aby uzyskać więcej informacji na temat operacji przeciągania i upuszczania za pomocą mechanizmu OLE, zobacz artykuł [przeciąganie i upuszczanie (OLE)](../../mfc/drag-and-drop-ole.md).  
   
@@ -96,10 +96,10 @@ COleDropTarget();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Wywołanie [zarejestrować](#register) Aby powiązać ten obiekt z okna.  
+ Wywołaj [zarejestrować](#register) można powiązać ten obiekt z okna.  
   
 ##  <a name="ondragenter"></a>  COleDropTarget::OnDragEnter  
- Wywoływane przez platformę, gdy kursor najpierw zostanie przeciągnięty do okna.  
+ Wywoływane przez platformę, gdy kursor jest najpierw przeciągany do okna.  
   
 ```  
 virtual DROPEFFECT OnDragEnter(
@@ -111,37 +111,37 @@ virtual DROPEFFECT OnDragEnter(
   
 ### <a name="parameters"></a>Parametry  
  *pWnd*  
- Wprowadza punktów do okna kursora.  
+ Punkty do okna kursora jest wprowadzenie.  
   
- *Obiekt pDataObject*  
- Wskazuje na obiekt danych zawierające dane, które można było porzucić.  
+ *pDataObject*  
+ Wskazuje obiekt danych zawierające dane, które można było porzucić.  
   
  *dwKeyState*  
- Zawiera stan klawisze modyfikujące. To jest kombinacją dowolną liczbę następujących: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, i **MK_RBUTTON**.  
+ Zawiera stan klawisze modyfikujące. Jest to kombinacja pojawiły się następujące: MK_CONTROL, MK_SHIFT, MK_ALT MK_LBUTTON, MK_MBUTTON i MK_RBUTTON.  
   
  *Punkt*  
- Zawiera bieżącą lokalizację kursora we współrzędnych klienta.  
+ Zawiera bieżącą lokalizację kursor w współrzędne klienta.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wpływ, jaki sytuacji, gdy spadek podjęto w lokalizacji określonej przez *punktu*. Można co najmniej jeden z następujących czynności:  
+ Efekt, który byłby wynikiem, jeśli podjęto zrzutu w lokalizacji określonej przez *punktu*. Może być co najmniej jeden z następujących czynności:  
   
-- `DROPEFFECT_NONE` Spadek będzie niemożliwe.  
+- DROPEFFECT_NONE zrzutu będzie niedozwolone.  
   
-- `DROPEFFECT_COPY` Czy można wykonać operacji kopiowania.  
+- DROPEFFECT_COPY, który będzie można wykonać operacji kopiowania.  
   
-- `DROPEFFECT_MOVE` Czy można wykonać operacji przenoszenia.  
+- DROPEFFECT_MOVE, który będzie można wykonać operacji przenoszenia.  
   
-- `DROPEFFECT_LINK` Czy można ustanowić łącze z porzuconych danych do oryginalnych danych.  
+- Czy można nawiązać DROPEFFECT_LINK link pocztą e-mail od elementów usuniętych danych oryginalnych danych.  
   
-- `DROPEFFECT_SCROLL` Operację przeciągania przewijania może nastąpić lub występuje w miejscu docelowym.  
+- Operacja przewijania przeciągania A DROPEFFECT_SCROLL może nastąpić lub odbywa się w elemencie docelowym.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę funkcję, aby umożliwić operacji listy w oknie. Domyślna implementacja wywołuje [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter), która zwraca po prostu `DROPEFFECT_NONE` domyślnie.  
+ Należy przesłonić tę funkcję, aby umożliwić listy operacji w oknie. Domyślna implementacja wywołuje [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter), która po prostu zwraca DROPEFFECT_NONE domyślnie.  
   
  Aby uzyskać więcej informacji, zobacz [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) w zestawie Windows SDK.  
   
 ##  <a name="ondragleave"></a>  COleDropTarget::OnDragLeave  
- Wywoływane przez platformę, gdy kursor opuszcza okna podczas przeciągania operacji jest włączona.  
+ Wywoływane przez platformę, gdy kursor opuszcza okna operację przeciągania w czasie działania.  
   
 ```  
 virtual void OnDragLeave(CWnd* pWnd);
@@ -152,7 +152,7 @@ virtual void OnDragLeave(CWnd* pWnd);
  Opuszcza punktów do okna kursora.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę funkcję, jeśli mają specjalnego zachowania, gdy operacja przeciągania pozostawia określone okno. Domyślna implementacja ta funkcja wymaga [CView::OnDragLeave](../../mfc/reference/cview-class.md#ondragleave).  
+ Należy przesłonić tę funkcję, jeśli mają specjalne zachowanie podczas operacji przeciągania pozostawia określonego okna. Domyślna implementacja ta funkcja wywołuje [CView::OnDragLeave](../../mfc/reference/cview-class.md#ondragleave).  
   
  Aby uzyskać więcej informacji, zobacz [IDropTarget::DragLeave](http://msdn.microsoft.com/library/windows/desktop/ms680110) w zestawie Windows SDK.  
   
@@ -169,32 +169,32 @@ virtual DROPEFFECT OnDragOver(
   
 ### <a name="parameters"></a>Parametry  
  *pWnd*  
- Punkty do okna, nad którym znajduje się kursor.  
+ Wskazuje okna, nad którym znajduje się kursor.  
   
- *Obiekt pDataObject*  
- Wskazuje na obiekt danych, który zawiera dane, które ma być przerwane.  
+ *pDataObject*  
+ Wskazuje obiekt danych, który zawiera dane, które ma zostać przerwane.  
   
  *dwKeyState*  
- Zawiera stan klawisze modyfikujące. To jest kombinacją dowolną liczbę następujących: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, i **MK_RBUTTON**.  
+ Zawiera stan klawisze modyfikujące. Jest to kombinacja pojawiły się następujące: MK_CONTROL, MK_SHIFT, MK_ALT MK_LBUTTON, MK_MBUTTON i MK_RBUTTON.  
   
  *Punkt*  
- Zawiera bieżącą lokalizację kursora we współrzędnych klienta.  
+ Zawiera bieżącą lokalizację kursor w współrzędne klienta.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wpływ, jaki sytuacji, gdy spadek podjęto w lokalizacji określonej przez *punktu*. Można co najmniej jeden z następujących czynności:  
+ Efekt, który byłby wynikiem, jeśli podjęto zrzutu w lokalizacji określonej przez *punktu*. Może być co najmniej jeden z następujących czynności:  
   
-- `DROPEFFECT_NONE` Spadek będzie niemożliwe.  
+- DROPEFFECT_NONE zrzutu będzie niedozwolone.  
   
-- `DROPEFFECT_COPY` Czy można wykonać operacji kopiowania.  
+- DROPEFFECT_COPY, który będzie można wykonać operacji kopiowania.  
   
-- `DROPEFFECT_MOVE` Czy można wykonać operacji przenoszenia.  
+- DROPEFFECT_MOVE, który będzie można wykonać operacji przenoszenia.  
   
-- `DROPEFFECT_LINK` Czy można ustanowić łącze z porzuconych danych do oryginalnych danych.  
+- Czy można nawiązać DROPEFFECT_LINK link pocztą e-mail od elementów usuniętych danych oryginalnych danych.  
   
-- `DROPEFFECT_SCROLL` Wskazuje, że operacja przewijania przeciągania może nastąpić, lub jest wykonywana w celu.  
+- DROPEFFECT_SCROLL wskazuje, że operacji przeciągania przewijania może nastąpić lub odbywa się w elemencie docelowym.  
   
 ### <a name="remarks"></a>Uwagi  
- Aby umożliwić operacji listy w oknie powinna zostać zastąpiona tej funkcji. Domyślna implementacja ta funkcja wymaga [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover), która zwraca `DROPEFFECT_NONE` domyślnie. Ponieważ ta funkcja jest wywoływana często podczas operacji przeciągania i upuszczania, powinien być zoptymalizowany możliwie.  
+ Ta funkcja powinna zostać zastąpiona umożliwia listy operacji w oknie. Domyślna implementacja ta funkcja wywołuje [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover), która zwraca DROPEFFECT_NONE domyślnie. Ponieważ ta funkcja jest wywoływana często podczas operacji przeciągania i upuszczania, powinny być zoptymalizowane możliwie.  
   
  Aby uzyskać więcej informacji, zobacz [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129) w zestawie Windows SDK.  
   
@@ -202,7 +202,7 @@ virtual DROPEFFECT OnDragOver(
  [!code-cpp[NVC_MFCOleContainer#21](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
   
 ##  <a name="ondragscroll"></a>  COleDropTarget::OnDragScroll  
- Metoda wywoływana przez platformę przed wywołaniem [OnDragEnter](#ondragenter) lub [OnDragOver](#ondragover) ustalenie, czy *punktu* znajduje się w regionie przewijania.  
+ Metoda wywoływana przez platformę przed wywołaniem [ondragenter —](#ondragenter) lub [ondragover —](#ondragover) ustalenie, czy *punktu* znajduje się w regionie przewijania.  
   
 ```  
 virtual DROPEFFECT OnDragScroll(
@@ -213,29 +213,29 @@ virtual DROPEFFECT OnDragScroll(
   
 ### <a name="parameters"></a>Parametry  
  *pWnd*  
- Punkty do okna, gdy kursor jest aktualnie za pośrednictwem.  
+ Punkty do okna kursora jest obecnie dostępna za pośrednictwem.  
   
  *dwKeyState*  
- Zawiera stan klawisze modyfikujące. To jest kombinacją dowolną liczbę następujących: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, i **MK_RBUTTON**.  
+ Zawiera stan klawisze modyfikujące. Jest to kombinacja pojawiły się następujące: MK_CONTROL, MK_SHIFT, MK_ALT MK_LBUTTON, MK_MBUTTON i MK_RBUTTON.  
   
  *Punkt*  
- Zawiera lokalizację kursor w pikselach, względem ekranu.  
+ Zawiera lokalizacji kursora, w pikselach, względem ekranu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wpływ, jaki sytuacji, gdy spadek podjęto w lokalizacji określonej przez *punktu*. Można co najmniej jeden z następujących czynności:  
+ Efekt, który byłby wynikiem, jeśli podjęto zrzutu w lokalizacji określonej przez *punktu*. Może być co najmniej jeden z następujących czynności:  
   
-- `DROPEFFECT_NONE` Spadek będzie niemożliwe.  
+- DROPEFFECT_NONE zrzutu będzie niedozwolone.  
   
-- `DROPEFFECT_COPY` Czy można wykonać operacji kopiowania.  
+- DROPEFFECT_COPY, który będzie można wykonać operacji kopiowania.  
   
-- `DROPEFFECT_MOVE` Czy można wykonać operacji przenoszenia.  
+- DROPEFFECT_MOVE, który będzie można wykonać operacji przenoszenia.  
   
-- `DROPEFFECT_LINK` Czy można ustanowić łącze z porzuconych danych do oryginalnych danych.  
+- Czy można nawiązać DROPEFFECT_LINK link pocztą e-mail od elementów usuniętych danych oryginalnych danych.  
   
-- `DROPEFFECT_SCROLL` Wskazuje, że operacja przewijania przeciągania może nastąpić, lub jest wykonywana w celu.  
+- DROPEFFECT_SCROLL wskazuje, że operacji przeciągania przewijania może nastąpić lub odbywa się w elemencie docelowym.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy przesłonić tę funkcję, gdy chcesz zapewnić specjalnego zachowania dla tego zdarzenia. Domyślna implementacja ta funkcja wymaga [CView::OnDragScroll](../../mfc/reference/cview-class.md#ondragscroll), która zwraca `DROPEFFECT_NONE` i przewija okna, gdy kursor jest przeciągany do domyślnego regionu przewijania wewnątrz obramowania okna.  
+ Należy przesłonić tę funkcję, aby zapewnić specjalne zachowanie dla tego zdarzenia. Domyślna implementacja ta funkcja wywołuje [CView::OnDragScroll](../../mfc/reference/cview-class.md#ondragscroll), która zwraca DROPEFFECT_NONE i przewija okna, gdy kursor jest przeciągany w domyślnym regionie przewijania wewnątrz obramowania okna.  
   
 ##  <a name="ondrop"></a>  COleDropTarget::OnDrop  
  Wywoływane przez platformę, gdy ma wystąpić operacja przeciągania.  
@@ -249,31 +249,31 @@ virtual BOOL OnDrop(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *pWnd*  
- Punkty do okna, gdy kursor jest aktualnie za pośrednictwem.  
+*pWnd*  
+ Punkty do okna kursora jest obecnie dostępna za pośrednictwem.  
   
- *Obiekt pDataObject*  
- Wskazuje na obiekt danych, który zawiera dane, które ma być przerwane.  
+*pDataObject*  
+Wskazuje obiekt danych, który zawiera dane, które ma zostać przerwane.  
   
- *dropEffect*  
- Wpływ, jaki użytkownik wybrał dla operacji usuwania. Można co najmniej jeden z następujących czynności:  
+*dropEffect*  
+Wpływ, jaki użytkownik wybrał dla operacji listy. Może być co najmniej jeden z następujących czynności:  
   
-- `DROPEFFECT_COPY` Czy można wykonać operacji kopiowania.  
+ - DROPEFFECT_COPY, który będzie można wykonać operacji kopiowania.  
+       
+ - DROPEFFECT_MOVE, który będzie można wykonać operacji przenoszenia.  
+      
+ - Czy można nawiązać DROPEFFECT_LINK link pocztą e-mail od elementów usuniętych danych oryginalnych danych.  
   
-- `DROPEFFECT_MOVE` Czy można wykonać operacji przenoszenia.  
-  
-- `DROPEFFECT_LINK` Czy można ustanowić łącze z porzuconych danych do oryginalnych danych.  
-  
- *Punkt*  
- Zawiera lokalizację kursor w pikselach, względem ekranu.  
+*Punkt*  
+Zawiera lokalizacji kursora, w pikselach, względem ekranu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli listy zakończy się pomyślnie; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli kończy się pomyślnie; listy w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Pierwsze wywołania framework [OnDropEx](#ondropex). Jeśli `OnDropEx` funkcji nie obsługuje usuwania, struktura następnie wywołuje funkcji członkowskiej, `OnDrop`. Zwykle aplikacja zastępuje [OnDropEx](../../mfc/reference/cview-class.md#ondropex) w klasie widoku do obsługi prawego przycisku myszy przeciągania i upuszczania. Zazwyczaj klasa widoku [OnDrop](../../mfc/reference/cview-class.md#ondrop) umożliwia obsługę prostych operacji przeciągania i upuszczania.  
+ Struktura wywołuje pierwszy [ondropex —](#ondropex). Jeśli `OnDropEx` funkcji nie obsługuje listy, struktura wywołuje następnie ta funkcja elementu członkowskiego `OnDrop`. Zazwyczaj aplikacja zastępuje [ondropex —](../../mfc/reference/cview-class.md#ondropex) w klasie widoku w celu obsługi prawym przyciskiem myszy przeciągania i upuszczania. Zazwyczaj klasa widoku [OnDrop](../../mfc/reference/cview-class.md#ondrop) umożliwia obsługę prostych operacji przeciągania i upuszczania.  
   
- Domyślna implementacja `COleDropTarget::OnDrop` wywołania [CView::OnDrop](../../mfc/reference/cview-class.md#ondrop), która zwraca po prostu **FALSE** domyślnie.  
+ Domyślna implementacja klasy `COleDropTarget::OnDrop` wywołania [CView::OnDrop](../../mfc/reference/cview-class.md#ondrop), która po prostu zwraca wartość FALSE domyślnie.  
   
  Aby uzyskać więcej informacji, zobacz [IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) w zestawie Windows SDK.  
   
@@ -291,44 +291,44 @@ virtual DROPEFFECT OnDropEx(
   
 ### <a name="parameters"></a>Parametry  
  *pWnd*  
- Punkty do okna, gdy kursor jest aktualnie za pośrednictwem.  
+ Punkty do okna kursora jest obecnie dostępna za pośrednictwem.  
   
- *Obiekt pDataObject*  
- Wskazuje na obiekt danych, który zawiera dane, które ma być przerwane.  
+ *pDataObject*  
+ Wskazuje obiekt danych, który zawiera dane, które ma zostać przerwane.  
   
  *dropDefault*  
- Wpływ, jaki użytkownik wybrał dla operacji upuszczania domyślne na podstawie bieżącego stanu klucza. Można ją `DROPEFFECT_NONE`. Efekty upuszczania omówiono w sekcji uwag.  
+ Wpływ, jaki użytkownik wybrał dla operacji listy domyślne na podstawie bieżącego stanu klucza. Może to być DROPEFFECT_NONE. Efekty listy zostały omówione w sekcji uwag.  
   
  *listy rozwijanej*  
- Lista efekty upuszczania, które obsługuje miejsca źródłowego. Wartości efekt listy można łączyć, używając wartości bitowe lub ( **&#124;**) operacji. Efekty upuszczania omówiono w sekcji uwag.  
+ Lista efekty listy, które obsługuje miejsca źródłowego. Wartości efekt listy można łączyć, używając bitowe OR (**&#124;**) operacji. Efekty listy zostały omówione w sekcji uwag.  
   
  *Punkt*  
- Zawiera lokalizację kursor w pikselach, względem ekranu.  
+ Zawiera lokalizacji kursora, w pikselach, względem ekranu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Efekt upuszczania, który jest wynikiem próby porzucenia w lokalizacji określonej przez *punktu*. Efekty upuszczania omówiono w sekcji uwag.  
+ Efekt listy, który jest wynikiem próby porzucenia w lokalizacji określonej przez *punktu*. Efekty listy zostały omówione w sekcji uwag.  
   
 ### <a name="remarks"></a>Uwagi  
- Struktura wywołuje najpierw tej funkcji. Jeśli nie obsługuje usuwania, struktura następnie wywołuje [OnDrop](#ondrop). Zazwyczaj spowoduje zastąpienie [OnDropEx](../../mfc/reference/cview-class.md#ondropex) w klasie widoku do obsługi prawego przycisku myszy przeciągania i upuszczania. Zazwyczaj klasa widoku [OnDrop](../../mfc/reference/cview-class.md#ondrop) służy do obsługi w przypadku obsługę prostych operacji przeciągania i upuszczania.  
+ Struktura najpierw wywołuje tę funkcję. Jeśli nie obsługuje listy, struktura, następnie wywołuje [OnDrop](#ondrop). Zazwyczaj spowoduje przesłonięcie [ondropex —](../../mfc/reference/cview-class.md#ondropex) w klasie widoku w celu obsługi prawym przyciskiem myszy przeciągania i upuszczania. Zazwyczaj klasa widoku [OnDrop](../../mfc/reference/cview-class.md#ondrop) jest używana do obsługi wielkość liter obsługę prostych operacji przeciągania i upuszczania.  
   
- Domyślna implementacja `COleDropTarget::OnDropEx` wywołania [CView::OnDropEx](../../mfc/reference/cview-class.md#ondropex). Domyślnie [CView::OnDropEx](../../mfc/reference/cview-class.md#ondropex) po prostu zwraca wartość fikcyjny [OnDrop](#ondrop) powinna być wywoływana funkcja elementu członkowskiego.  
+ Domyślna implementacja klasy `COleDropTarget::OnDropEx` wywołania [CView::OnDropEx](../../mfc/reference/cview-class.md#ondropex). Domyślnie [CView::OnDropEx](../../mfc/reference/cview-class.md#ondropex) po prostu zwraca wartości do wskazania [OnDrop](#ondrop) powinna być wywoływana funkcja elementu członkowskiego.  
   
- Efekty upuszczania opisują akcję skojarzoną z operacji usuwania. Lista poniższych upuszczania efekty:  
+ Efekty listy opisują akcję skojarzoną z operacja przeciągania. Przejrzyj następującą listę upuszczania efektów:  
   
-- `DROPEFFECT_NONE` Spadek będzie niemożliwe.  
+ - DROPEFFECT_NONE zrzutu będzie niedozwolone.  
   
-- `DROPEFFECT_COPY` Czy można wykonać operacji kopiowania.  
+ - DROPEFFECT_COPY, który będzie można wykonać operacji kopiowania.  
   
-- `DROPEFFECT_MOVE` Czy można wykonać operacji przenoszenia.  
+ - DROPEFFECT_MOVE, który będzie można wykonać operacji przenoszenia.  
   
-- `DROPEFFECT_LINK` Czy można ustanowić łącze z porzuconych danych do oryginalnych danych.  
+ - Czy można nawiązać DROPEFFECT_LINK link pocztą e-mail od elementów usuniętych danych oryginalnych danych.  
   
-- `DROPEFFECT_SCROLL` Wskazuje, że operacja przewijania przeciągania może nastąpić, lub jest wykonywana w celu.  
+ - DROPEFFECT_SCROLL wskazuje, że operacji przeciągania przewijania może nastąpić lub odbywa się w elemencie docelowym.  
   
  Aby uzyskać więcej informacji, zobacz [IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) w zestawie Windows SDK.  
   
 ##  <a name="register"></a>  COleDropTarget::Register  
- Wywołanie tej funkcji można zarejestrować okna w OLE bibliotek DLL jako prawidłowy miejsca docelowego.  
+ Wywołaj tę funkcję, aby zarejestrować okna za pomocą OLE biblioteki DLL jako prawidłowe miejsca docelowego.  
   
 ```  
 BOOL Register(CWnd* pWnd);
@@ -336,31 +336,31 @@ BOOL Register(CWnd* pWnd);
   
 ### <a name="parameters"></a>Parametry  
  *pWnd*  
- Punkty do okna, które ma zostać zarejestrowany jako miejsca docelowego.  
+ Wskazuje okna, który ma zostać zarejestrowana jako miejsca docelowego.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Różna od zera, jeśli rejestracja zakończy się pomyślnie; w przeciwnym razie 0.  
+ Wartość różną od zera, jeśli rejestracja się powiedzie; w przeciwnym razie 0.  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja musi być wywołana dla operacji listy mają być akceptowane.  
+ Ta funkcja musi być wywołana dla operacji listy do zaakceptowania.  
   
  Aby uzyskać więcej informacji, zobacz [RegisterDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms678405) w zestawie Windows SDK.  
   
 ##  <a name="revoke"></a>  COleDropTarget::Revoke  
- Wywołanie tej funkcji przed niszczenie dowolnym oknie, który został zarejestrowany jako miejsca docelowego poprzez wywołanie [zarejestrować](#register) go usunąć z listy miejsc docelowych.  
+ Wywołaj tę funkcję, zanim niszczenie dowolne okno, które zostało zarejestrowane jako miejsca docelowego za pomocą wywołania [zarejestrować](#register) go usunąć z listy miejsc docelowych.  
   
 ```  
 virtual void Revoke();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Ta funkcja jest wywoływana automatycznie z [OnDestroy](../../mfc/reference/cwnd-class.md#ondestroy) obsługi dla elementu typu window, który został zarejestrowany, dlatego zazwyczaj nie jest konieczne jawnie wywołanie tej funkcji.  
+ Ta funkcja jest wywoływana automatycznie z [metoda OnDestroy](../../mfc/reference/cwnd-class.md#ondestroy) obsługi dla okna, który został zarejestrowany, więc zazwyczaj nie jest to konieczne jawnie wywołać tę funkcję.  
   
  Aby uzyskać więcej informacji, zobacz [RevokeDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms692643) w zestawie Windows SDK.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykładowe MFC HIERSVR](../../visual-cpp-samples.md)   
- [Przykładowe MFC OCLIENT](../../visual-cpp-samples.md)   
+ [Próbki MFC HIERSVR](../../visual-cpp-samples.md)   
+ [Próbki MFC OCLIENT](../../visual-cpp-samples.md)   
  [CCmdTarget — klasa](../../mfc/reference/ccmdtarget-class.md)   
  [Diagram hierarchii](../../mfc/hierarchy-chart.md)   
  [Klasa COleDropSource](../../mfc/reference/coledropsource-class.md)

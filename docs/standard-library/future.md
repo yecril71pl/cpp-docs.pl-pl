@@ -14,18 +14,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37e5e2ceff83704632a77ef0fb1eedecaa9e678b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 140bdea373442e1e987ce30c2421057b9355796b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847198"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954021"
 ---
-# <a name="ltfuturegt"></a>&lt;Przyszłe&gt;
+# <a name="ltfuturegt"></a>&lt;przyszłe&gt;
 
-Dołącz nagłówek standardowy \<przyszłych > do definiowania klas szablonów i obsługi szablonów, które upraszczają uruchomiona funkcja — prawdopodobnie w oddzielnym wątku — i pobierania jej wynik. Wynik jest wartością zwróconą przez funkcję lub wyjątek, który jest emitowany przez funkcję, ale nie zawiera funkcji.
+Dołączyć standardowy nagłówek \<przyszłych > do definiowania klas szablonów i szablonów pomocniczych, które upraszczają uruchomiona funkcja — prawdopodobnie w oddzielnym wątku — i pobierania jej wynik. Wynikiem jest wartość, która jest zwracana przez funkcję lub wyjątek, który jest emitowane przez funkcję, ale nie jest wyłapywany w funkcji.
 
-Ten nagłówek używa współbieżność środowiska wykonawczego (ConcRT), tak aby można go używać razem z innych mechanizmów ConcRT. Aby uzyskać więcej informacji o ConcRT, zobacz [współbieżność środowiska wykonawczego](../parallel/concrt/concurrency-runtime.md).
+Środowisko uruchomieniowe współbieżności (ConcRT) korzysta z tego pliku nagłówkowego, aby można go używać razem z innych mechanizmów ConcRT. Aby uzyskać więcej informacji na temat ConcRT zobacz [współbieżność środowiska wykonawczego](../parallel/concrt/concurrency-runtime.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,21 +36,21 @@ Ten nagłówek używa współbieżność środowiska wykonawczego (ConcRT), tak 
 ## <a name="remarks"></a>Uwagi
 
 > [!NOTE]
-> W kodzie, który ma być kompilowana przy użyciu **/CLR**, ten nagłówek jest zablokowany.
+> W kodzie, który jest kompilowany przy użyciu **/CLR**, tego pliku nagłówkowego jest zablokowany.
 
-*Asynchroniczne dostawcy* przechowuje wynikiem wywołania funkcji. *Asynchronicznego obiektu zwracanego* służy do pobierania wynikiem wywołania funkcji. *Skojarzony stan asynchronicznego* zapewnia komunikację między dostawcą asynchroniczne i co najmniej jeden obiekt zwracany asynchronicznego.
+*Dostawcę asynchronicznego* zapisuje wynik wywołania funkcji. *Asynchronicznego zwrotu obiektu* służy do pobierania wyników wywołania funkcji. *Asynchroniczny stan stowarzyszony* zapewnia komunikację między dostawcę asynchronicznego i co najmniej jeden obiekt zwracany asynchronicznego.
 
-Program nie tworzy bezpośrednio wszystkie obiekty skojarzony stan asynchronicznego. Program tworzy dostawcę asynchroniczne, musi on a niż tworzy asynchroniczne zwracany obiekt, który udostępnia asynchroniczne stanu skojarzone z dostawcą. Asynchroniczne dostawców i asynchronicznych obiektów zwracanych Zarządzanie obiektów, które przechowywać ich udostępnionego skojarzony stan asynchronicznego. Gdy ostatni obiekt, który odwołuje się do skojarzony stan asynchronicznego zwolnieniem, obiekt, który przechowuje skojarzony stan asynchronicznego zostanie zniszczony.
+Program nie tworzy bezpośrednio wszystkie obiekty stanu stowarzyszonego asynchronicznie. Program tworzy dostawcę asynchronicznego zawsze wtedy, gdy jeden potrzebuje i przy jego użyciu tworzy asynchronicznego zwrotu obiekt, który udostępnia jego asynchronicznie powiązanym stanie z dostawcą. Asynchroniczne dostawców i obiektów zwrotnych asynchronicznego zarządzać obiektów, które utrzymywać ich udostępnionego asynchroniczny stan stowarzyszony. Obiekt, który posiada asynchronicznego stanu stowarzyszonego jest niszczony, kiedy ostatni obiekt, który odwołuje się do asynchronicznego stanu stowarzyszonego zwolni on.
 
-Asynchroniczne dostawcy lub asynchroniczne zwracanego obiektu, który ma nie skojarzony stan asynchroniczne jest *pusty*.
+Dostawcę asynchronicznego lub asynchronicznego zwrotu obiekt, który ma nie asynchronicznego stanu stowarzyszonego *pusty*.
 
-Jest skojarzony stan asynchronicznego *gotowe* tylko wtedy, gdy jego dostawcą asynchroniczne przechowywanego wartości zwracanej albo przechowywane Wystąpił wyjątek.
+Jest asynchronicznego stanu stowarzyszonego *gotowe* tylko wtedy, gdy jego dostawcę asynchronicznego jest przechowywana wartość zwracaną lub przechowywane wyjątek.
 
-Funkcja szablonu `async` klasy szablonu i `promise` i `packaged_task` asynchroniczne dostawców. Klasy szablonów `future` i `shared_future` opisano asynchroniczne zwracanych obiektów.
+Funkcja szablonu `async` klasy szablonu i `promise` i `packaged_task` asynchronicznego dostawców. Klasy szablonów `future` i `shared_future` opisują asynchronicznego zwrotu obiekty.
 
-Każda z klas szablonu `promise`, `future`, i `shared_future` ma specjalizacji dla typu `void` i częściowa specjalizacja do przechowywania i pobierania wartość przez odwołanie. Te specjalizacje różnią się od podstawowego szablonu tylko w podpisów i semantykę funkcji, które przechowują i pobierają zwracanej wartości.
+Każdą z klas szablonu `promise`, `future`, i `shared_future` jest specjalizacją typu **void** i częściowa specjalizacja do przechowywania i pobierania wartości przez odwołanie. Te specjalizacje różnią się od szablonu podstawowego tylko w przypadku podpisów i semantyka funkcje, które przechowują i pobierają zwracanej wartości.
 
-Klasy szablonów `future` i `shared_future` nigdy nie bloku w ich destruktory, z wyjątkiem w jeden przypadek, który jest zachowane w celu zgodności z poprzednimi wersjami: w przeciwieństwie do innych prognoz dla `future`— lub ostatni `shared_future`— dołączony do zadania wprowadzenie do `std::async`, bloki destruktora Jeśli zadanie nie zostało ukończone; oznacza to, blokuje Jeśli tego wątku nie jeszcze wywołana `.get()` lub `.wait()` i zadanie jest uruchomione. Poniższe uwagi użyteczność został dodany do opisu `std::async` w standardzie projektu: "[Uwaga: Jeśli przyszłości uzyskane z std::async zostanie przeniesiona poza zakres lokalny, innego kodu, który używa przyszłości musi być pamiętać, że w przyszłości destruktora może blokować Aby gotowa. udostępniony stan — Uwaga zakończenia] "we wszystkich innych przypadkach `future` i `shared_future` destruktory są wymagane i dotrą do nigdy nie blokuj.
+Klasy szablonów `future` i `shared_future` nigdy nie należy zablokować w ich destruktory, z wyjątkiem w przypadku jednego, który jest zachowywana na potrzeby utrzymywania zgodności z poprzednimi wersjami: w przeciwieństwie do innych prognoz dla `future`— lub ostatni `shared_future`— dołączona do zadania wprowadzenie `std::async`, bloki destruktor Jeśli zadanie nie zostało ukończone; oznacza to, blokuje Jeśli tego wątku nie jeszcze wywołana `.get()` lub `.wait()` i nadal jest uruchomione zadanie. Następująca uwaga użyteczność została dodana do opisu `std::async` w standardzie projekt: "[Uwaga: Jeśli stan w przyszłości uzyskany z std::async zostanie przeniesiona poza zakresem lokalnym, inny kod, który używa przyszłość musi być pamiętać, że destruktor przyszłości może blokować udostępniony stan przestanie być gotowy. — uwagi końcowej] "we wszystkich innych przypadkach `future` i `shared_future` destruktory są wymagane i gwarantują blokowania.
 
 ## <a name="members"></a>Elementy członkowskie
 
@@ -58,36 +58,36 @@ Klasy szablonów `future` i `shared_future` nigdy nie bloku w ich destruktory, z
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[future, klasa](../standard-library/future-class.md)|W tym artykule opisano zwracanego obiektu asynchronicznego.|
-|[future_error, klasa](../standard-library/future-error-class.md)|Opisuje obiekt wyjątku, który może zostać wygenerowany przez metody typów, które zarządzają `future` obiektów.|
-|[packaged_task, klasa](../standard-library/packaged-task-class.md)|Opisuje dostawcę asynchroniczne wywołanie otoką i których sygnatury wywołania `Ty(ArgTypes...)`. Jego skojarzony stan asynchronicznego przechowuje kopię jego można wywołać obiektu oprócz potencjalnych wyników.|
+|[future, klasa](../standard-library/future-class.md)|Opisuje obiekt asynchronicznego zwrotu.|
+|[future_error, klasa](../standard-library/future-error-class.md)|Opisuje obiekt wyjątku, który może zostać wygenerowany za pomocą metod, typów, które zarządzają `future` obiektów.|
+|[packaged_task, klasa](../standard-library/packaged-task-class.md)|Opisuje dostawcę asynchronicznego, który jest otoką wywołania i ma podpis wywołania `Ty(ArgTypes...)`. Jego asynchronicznie powiązanym stanie przechowuje kopię jego wywoływanego obiektu, oprócz potencjalnym wynik.|
 |[promise, klasa](../standard-library/promise-class.md)|Opisuje dostawcę asynchronicznego.|
-|[shared_future, klasa](../standard-library/shared-future-class.md)|W tym artykule opisano zwracanego obiektu asynchronicznego. Contrast z `future` obiekt asynchroniczny dostawcy można skojarzyć z dowolną liczbę `shared_future` obiektów.|
+|[shared_future, klasa](../standard-library/shared-future-class.md)|Opisuje obiekt asynchronicznego zwrotu. W przeciwieństwie `future` obiektu dostawcę asynchronicznego można skojarzyć z dowolną liczbą `shared_future` obiektów.|
 
 ### <a name="structures"></a>Struktury
 
 |Nazwa|Opis|
 |----------|-----------------|
 |[is_error_code_enum, struktura](../standard-library/is-error-code-enum-structure.md)|Specjalizacja, która wskazuje, że `future_errc` nadaje się do przechowywania `error_code`.|
-|[uses_allocator, struktura](../standard-library/uses-allocator-structure.md)|Specjalizacja, który zawsze jest spełniony.|
+|[uses_allocator, struktura](../standard-library/uses-allocator-structure.md)|Specjalizacja, która zawsze prawdziwe.|
 
 ### <a name="functions"></a>Funkcje
 
 |Nazwa|Opis|
 |----------|-----------------|
 |[async](../standard-library/future-functions.md#async)|Reprezentuje dostawcę asynchronicznego.|
-|[future_category](../standard-library/future-functions.md#future_category)|Zwraca odwołanie do `error_category` obiektu, która charakteryzuje się błędy, które są skojarzone z `future` obiektów.|
-|[make_error_code](../standard-library/future-functions.md#make_error_code)|Tworzy `error_code` mający `error_category` obiekt, który charakteryzuje `future` błędy.|
-|[make_error_condition](../standard-library/future-functions.md#make_error_condition)|Tworzy `error_condition` mający `error_category` obiekt, który charakteryzuje `future` błędy.|
-|[swap](../standard-library/future-functions.md#swap)|Zamienia skojarzony stan asynchronicznego jednego `promise` innego obiektu.|
+|[future_category](../standard-library/future-functions.md#future_category)|Zwraca odwołanie do `error_category` obiektu, który charakteryzuje się błędy, które są skojarzone z `future` obiektów.|
+|[make_error_code](../standard-library/future-functions.md#make_error_code)|Tworzy `error_code` zawierający `error_category` obiektu, który charakteryzuje `future` błędy.|
+|[make_error_condition](../standard-library/future-functions.md#make_error_condition)|Tworzy `error_condition` zawierający `error_category` obiektu, który charakteryzuje `future` błędy.|
+|[swap](../standard-library/future-functions.md#swap)|Wymienia asynchronicznego stanu stowarzyszonego jednego `promise` obiektu z innego.|
 
 ### <a name="enumerations"></a>Wyliczenia
 
 |Nazwa|Opis|
 |----------|-----------------|
-|[future_errc](../standard-library/future-enums.md#future_errc)|Dostarcza nazw symbolicznych, błędów, które są zgłaszane przez `future_error` klasy.|
-|[future_status](../standard-library/future-enums.md#future_status)|Dostarcza nazw symbolicznych z powodów zwracających w funkcji czasu oczekiwania.|
-|[launch](../standard-library/future-enums.md#launch)|Reprezentuje typ maski, który opisuje możliwe tryby funkcji szablonu `async`.|
+|[future_errc](../standard-library/future-enums.md#future_errc)|Dostarcza nazw symbolicznych dla błędów, które są zgłaszane przez `future_error` klasy.|
+|[future_status](../standard-library/future-enums.md#future_status)|Dostarcza nazw symbolicznych dla przyczyn, które może zwracać funkcja Przekroczono limit czasu oczekiwania.|
+|[launch](../standard-library/future-enums.md#launch)|Reprezentuje typ maski bitów, który opisuje możliwe tryby funkcji szablonu `async`.|
 
 ## <a name="see-also"></a>Zobacz także
 

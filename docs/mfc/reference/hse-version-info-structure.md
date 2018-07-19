@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acdf63e062aab1407daee461e22f00f5d3c59cee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: daf1565c2fe2d7a4620f83b765671fea80502102
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369889"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335818"
 ---
 # <a name="hseversioninfo-structure"></a>HSE_VERSION_INFO — Struktura
-Ta struktura jest wskazywana przez `pVer` parametru w `CHttpServer::GetExtensionVersion` funkcję elementu członkowskiego. Zapewnia ISA numer wersji i opis ISA.  
+Ta struktura jest wskazywany przez *pVer* parametru w `CHttpServer::GetExtensionVersion` funkcja elementu członkowskiego. Zawiera numer wersji oprogramowania ISA i opis tekstowy ISA.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,7 +40,7 @@ typedef struct _HSE_VERSION_INFO {
  Numer wersji ISA.  
   
  *lpszExtensionDesc*  
- Opis tekstowy ISA. Domyślna implementacja zawiera tekst zastępczy; zastąpienie `CHttpServer::GetExtensionVersion` zapewnienie własny opis.  
+ Opis tekstowy ISA. Domyślna implementacja zawiera tekst symbolu zastępczego; Zastąp `CHttpServer::GetExtensionVersion` zapewnienie własny opis.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** httpext.h  

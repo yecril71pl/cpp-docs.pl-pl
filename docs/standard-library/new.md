@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2039da5462d360648f83ebd8890de2f2beba884
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 03d4019f86f99c73ccb25c5cf570637dbf0d7753
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864432"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966512"
 ---
 # <a name="ltnewgt"></a>&lt;new&gt;
 
-Definiuje kilka typy i funkcje tego formantu alokacji i zwalnianie magazynu pod kontrolą programu. Definiuje również składniki raportowania błędów zarządzania magazynu.
+Definiuje kilka typów i funkcji w tej kontrolki alokacji i zwalnianiem pamięci pod kontrolą programu. Definiuje również składniki raportowania błędów zarządzania magazynu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,41 +36,41 @@ Definiuje kilka typy i funkcje tego formantu alokacji i zwalnianie magazynu pod 
 
 ## <a name="remarks"></a>Uwagi
 
-Niektóre funkcje zadeklarowany w tym nagłówkiem są wymienne. Implementacja udostępnia domyślną wersję, w których zachowanie jest opisane w tym dokumencie. Program można jednak zdefiniować funkcja o tej samej sygnaturze, aby zamienić wersję domyślną w czasie łącza. Wersja zastąpienie musi spełniać wymagania opisane w tym dokumencie.
+Niektóre funkcje zadeklarowane w tym nagłówku są wymienne. Implementacja dostarcza domyślnej wersji, którego zachowanie jest opisane w tym dokumencie. Program można jednak zdefiniować funkcję z tym samym podpisie w celu zastąpienia domyślnej wersji w czasie połączenia. Wersja zastąpienie musi spełniać wymagania opisane w tym dokumencie.
 
 ### <a name="objects"></a>Obiekty
 
 |||
 |-|-|
-|[nothrow](../standard-library/new-functions.md#nothrow)|Udostępnia obiekt ma być używany jako argument `nothrow` wersji **nowe** i **usunąć**.|
+|[nothrow](../standard-library/new-functions.md#nothrow)|Zapewnia obiekt ma być używany jako argument dla **nothrow** wersje **nowe** i **Usuń**.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Nazwa typu|Opis|
 |-|-|
-|[new_handler](../standard-library/new-typedefs.md#new_handler)|Typ, który wskazuje na funkcję odpowiednie do użycia jako nowy program obsługi.|
+|[new_handler](../standard-library/new-typedefs.md#new_handler)|Typ, który wskazuje do funkcji odpowiedni do użytku jako nowy program obsługi.|
 
 ### <a name="functions"></a>Funkcje
 
 |Funkcja|Opis|
 |-|-|
-|[set_new_handler](../standard-library/new-functions.md#set_new_handler)|Instalowanie funkcji użytkownika, który jest wywoływany, gdy nowy może przydzielić pamięci nie powiedzie się.|
+|[set_new_handler](../standard-library/new-functions.md#set_new_handler)|Instaluje funkcję użytkownika, która jest wywoływana, gdy nowy może przydzielić pamięci nie powiedzie się.|
 
 ### <a name="operators"></a>Operatory
 
 |Operator|Opis|
 |-|-|
-|[Usuwanie operatora](../standard-library/new-operators.md#op_delete)|Funkcja wywoływana przez wyrażenie usunięcia, należy cofnąć magazynu dla poszczególnych obiektów.|
-|[Usuwanie operatora&#91;&#93;](../standard-library/new-operators.md#op_delete_arr)|Funkcja wywoływana przez wyrażenie usuwania można cofnąć alokacji pamięci masowej dla tablicy obiektów.|
-|[nowy operator](../standard-library/new-operators.md#op_new)|Funkcja wywoływana przez nowe wyrażenie, aby przydzielić magazyn dla poszczególnych obiektów.|
-|[nowy operator&#91;&#93;](../standard-library/new-operators.md#op_new_arr)|Funkcja wywoływana przez nowe wyrażenie, aby przydzielić magazyn na tablicę obiektów.|
+|[Usuwanie operatora](../standard-library/new-operators.md#op_delete)|Funkcja wywoływana przez wyrażenie delete, aby cofnięcie przydziału magazynu dla poszczególnych obiektów.|
+|[Usuwanie operatora&#91;&#93;](../standard-library/new-operators.md#op_delete_arr)|Funkcja wywoływana przez wyrażenie usunięcia można cofnąć alokacji pamięci masowej na tablicę obiektów.|
+|[nowy operator](../standard-library/new-operators.md#op_new)|Funkcja wywoływana przez nowe wyrażenie do przydzielania pamięci dla poszczególnych obiektów.|
+|[nowy operator&#91;&#93;](../standard-library/new-operators.md#op_new_arr)|Funkcja wywoływana przez nowe wyrażenie do przydzielania pamięci dla tablicy obiektów.|
 
 ### <a name="classes"></a>Klasy
 
 |Class|Opis|
 |-|-|
-|[bad_alloc, klasa](../standard-library/bad-alloc-class.md)|Klasa opisuje wyjątek, aby wskazać, że żądanie alokacji nie powiodła się.|
-|[nothrow_t — klasa](../standard-library/nothrow-t-structure.md)|Klasa jest używana jako parametru funkcji operatora nowe do wskazują, że funkcja powinna zwrócić pustego wskaźnika Zgłoś błąd alokacji zamiast Zgłoś wyjątek.|
+|[bad_alloc, klasa](../standard-library/bad-alloc-class.md)|Klasa opisuje wyjątek generowany, aby wskazać, że żądanie alokacji nie powiodła się.|
+|[nothrow_t — klasa](../standard-library/nothrow-t-structure.md)|Klasa jest używana jako parametru funkcji, operatorów nowych do wskazania, że funkcja powinna zwrócić wskaźnik o wartości null do raportu wystąpił błąd alokacji, a nie zgłasza wyjątku.|
 
 ## <a name="see-also"></a>Zobacz także
 

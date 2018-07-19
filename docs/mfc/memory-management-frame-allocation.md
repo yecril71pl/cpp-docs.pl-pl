@@ -1,5 +1,5 @@
 ---
-title: 'Zarządzanie pamięcią: Ramkę alokacji | Dokumentacja firmy Microsoft'
+title: 'Zarządzanie pamięcią: Klatki, Alokacja | Dokumentacja firmy Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,25 +28,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 264a3b5618b1c153219d5dee838af38bd7f49f49
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 27cde859c20f4c9cddc1ceb3e2cae568afb6e960
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931063"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027222"
 ---
 # <a name="memory-management-frame-allocation"></a>Zarządzanie pamięcią: alokacja ramek
-Podział na ramce przyjmuje nazwy z "ramki stosu", która jest ustawiona zawsze, gdy jest wywoływana funkcja. Ramka stosu jest to obszar pamięci, która tymczasowo przechowuje argumentów do funkcji, a także wszystkie zmienne, które są zdefiniowane lokalne do funkcji. Zmienne ramek są często nazywane zmiennych "Automatyczny", ponieważ kompilator automatycznie przydziela miejsce dla nich.  
+Alokacji na ramce przyjmuje jego nazwę z "ramki stosu", o które ustawiono zawsze, gdy funkcja jest wywoływana. Ramka stosu jest to obszar pamięci, który tymczasowo przechowuje argumenty do funkcji, jak również wszelkie zmienne, które są zdefiniowane lokalne do funkcji. Zmienne ramek są często nazywane zmiennymi "Automatyczny", ponieważ kompilator automatycznie przydziela miejsce dla nich.  
   
- Istnieją dwa główne cechy ramkę alokacji. Najpierw podczas definiowania zmiennej lokalnej wystarczającej ilości miejsca jest przydzielona do ramki stosu, aby pomieścić cały zmiennej, nawet jeśli jest dużą tablicę lub struktury danych. Po drugie zmienne ramek są automatycznie usuwane po ich się znaleźć poza zakresem:  
+ Istnieją dwa główne cechy ramkę alokacji. Najpierw podczas definiowania zmiennej lokalnej, wystarczająca ilość miejsca jest przydzielany na ramce stosu, aby pomieścić całą zmiennej, nawet jeśli jest on dużą tablicę lub struktury danych. Po drugie zmienne ramek są automatycznie usuwane po przejściu poza zakresem:  
   
  [!code-cpp[NVC_MFC_Utilities#10](../mfc/codesnippet/cpp/memory-management-frame-allocation_1.cpp)]  
   
- Dla zmiennych lokalnych funkcja przypadku wyjścia funkcji, ale zakresu zmiennej ramki może być mniejszy niż funkcji, jeśli używane są zagnieżdżone nawiasy klamrowe odbywa się to przejście zakresu. Ta funkcja automatycznego usuwania zmienne ramek jest bardzo ważne. W przypadku pierwotnych typów prostych (takich jak **int** lub **bajtów**), tablic lub struktury danych automatycznego usuwania po prostu zwraca pamięć używana przez zmienną. Ponieważ zmiennej wykroczyła poza zakres, nie są dostępne w mimo to. W przypadku obiektów języka C++ jednak proces automatycznego usuwania jest nieco bardziej skomplikowane.  
+ Dla zmiennych lokalnych funkcji to przejście zakresu występuje, gdy wyjścia funkcji, ale zakres zmiennej ramki może być mniejszy niż funkcja, jeśli używane są zagnieżdżonych nawiasów klamrowych. Bardzo ważne jest to automatyczne wykrywanie zmienne ramek. W przypadku prostych typów pierwotnych (takie jak **int** lub **bajtów**), tablic lub struktur danych, automatyczne wykrywanie po prostu odzyskuje pamięć używaną przez zmienną. Ponieważ zmienna stała się poza zakresem, nie są dostępne w mimo to. W przypadku obiektów języka C++ jednak proces automatycznego usuwania jest nieco bardziej skomplikowane.  
   
- Jeśli obiekt jest zdefiniowana jako zmienną ramki, jego konstruktor jest wywoływana automatycznie w momencie, gdy napotkano definicji. Gdy obiekt poza zakresem, jego destruktora jest wywoływana automatycznie przed jest odzyskać pamięci dla obiektu. To automatyczne konstruowania i zniszczenie może być bardzo przydatne, ale należy uwzględnić automatyczne wywołań, szczególnie w celu destruktor.  
+ Gdy obiekt jest zdefiniowany jako zmienna ramki, jego konstruktor jest wywoływana automatycznie w momencie, w którym występuje definicja. Gdy obiekt wykracza poza zakres, jego destruktor jest wywoływana automatycznie, zanim pamięci dla obiektu są odzyskiwane. To automatyczne konstrukcje i zniszczenie ruchu może być bardzo przydatne, ale należy pamiętać, automatyczne wywołań, szczególnie w celu destruktor.  
   
- Zaletą Alokacja obiektów w ramce jest, że są automatycznie usuwane. Podczas alokowania obiektów w ramce, nie trzeba martwić zapomniane obiektów, co powoduje przecieki pamięci. (Aby uzyskać szczegółowe informacje na przecieki pamięci, zobacz artykuł [wykrywanie przecieków pamięci w MFC](http://msdn.microsoft.com/en-us/29ee8909-96e9-4246-9332-d3a8aa8d4658).) Wadą Alokacja ramek jest, że zmienne ramek nie można użyć poza ich zakres. Innym czynnikiem, wybierając ramkę alokacji i Alokacja sterty dla dużych struktur i obiektów jest często lepiej użyć sterty zamiast stosu magazynu, ponieważ często wynosi miejsca na stosie.  
+ Zaletą alokowania obiektów w ramce jest, że są automatycznie usuwane. Podczas alokowania obiektów na ramce, nie trzeba martwić się o obiektach zapomniane, powodując przecieków pamięci. (Aby uzyskać szczegółowe informacje dotyczące przecieki pamięci, zobacz artykuł [wykrywania przecieków pamięci w MFC](http://msdn.microsoft.com/29ee8909-96e9-4246-9332-d3a8aa8d4658).) Alokacja ramek niedogodność polega na tym, że zmienne ramek nie można używać poza ich zakresem. Innym czynnikiem w wyborze ramkę alokacji i Alokacja sterty dla dużych struktur i obiektów, jest często lepiej używać sterty zamiast stosu magazynu, ponieważ obszar stosu często jest ograniczona.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zarządzanie pamięcią](../mfc/memory-management.md)

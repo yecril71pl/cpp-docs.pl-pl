@@ -24,14 +24,14 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: b0ca7da732786c2f0ff6087052b5867150702a5e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 728a0f643a77b47bf857d409517407bec3a1b8b4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862487"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966631"
 ---
-# <a name="ltstringgt-operators"></a>&lt;ciąg&gt; operatory
+# <a name="ltstringgt-operators"></a>&lt;ciąg&gt; operatorów
 
 ||||
 |-|-|-|
@@ -107,17 +107,17 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Ciąg w stylu języka C lub typu obiektu `basic_string` ma zostać połączony.
+*po lewej stronie* ciąg stylu C lub obiektu o typie `basic_string` ma zostać połączony.
 
-`right` Ciąg w stylu języka C lub typu obiektu `basic_string` ma zostać połączony.
+*prawy* ciąg stylu C lub obiektu o typie `basic_string` ma zostać połączony.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Ciąg, który jest złączeniem ciągów wejściowych.
+Ciąg, który jest łączenie ciągów wejściowych.
 
 ### <a name="remarks"></a>Uwagi
 
-Przeciążenie funkcji każdego `operator+` do łączenia dwóch obiektów klasy szablonu [basic_string — klasa](../standard-library/basic-string-class.md). Wszystkie skutecznie zwracany `basic_string` \< **CharType**, **cech**, **alokatora**> (_ *lewej*). [Dołącz](../standard-library/basic-string-class.md#append)(\_ *prawej*).
+Przeciążanie funkcji każdego `operator+` do łączenia dwóch obiektów klasy szablonu [basic_string — klasa](../standard-library/basic-string-class.md). Efektywnej zwracany `basic_string` \< **CharType**, **cech**, **alokatora**> (_ *po lewej stronie*). [Dołącz](../standard-library/basic-string-class.md#append)(\_ *po prawej stronie*).
 
 ### <a name="example"></a>Przykład
 
@@ -173,7 +173,7 @@ The string concatenating s1 & s3 is: antiheroine!
 
 ## <a name="op_neq"></a>  operator! =
 
-Testy, jeśli obiekt ciągu po lewej stronie operatora nie równa się z obiektem ciągu po prawej stronie.
+Sprawdza, czy obiekt ciągu po lewej stronie operatora nie jest taki sam jak obiekt ciągu z prawej strony.
 
 ```cpp
 template <class CharType, class Traits, class Allocator>
@@ -194,17 +194,17 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Ciąg w stylu języka C lub typu obiektu `basic_string` do porównania.
+*po lewej stronie* ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
 
-`right` Ciąg w stylu języka C lub typu obiektu `basic_string` do porównania.
+*prawy* ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli nie jest obiektem ciągu po lewej stronie operatora lexicographically taki sam obiekt ciągu po prawej stronie, a w przeciwnym **false**.
+**wartość true,** Jeśli z obiektem ciągu po lewej stronie operatora nie jest leksykograficznie taki sam jak obiekt ciągu z prawej strony, a w przeciwnym **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie obiektów string jest oparta na parowania lexicographical porównanie ich znaków. Dwa ciągi są takie same, jeśli mają taką samą liczbę znaków i ich wartości odpowiednich znaków są takie same. W przeciwnym razie ich nie są równe.
+Porównanie obiektów w postaci ciągów opiera się na parowania porównanie lexicographical ich znaków. Dwa ciągi są równe, jeśli mają taką samą liczbę znaków, a ich wartości odpowiednich znaków są takie same. W przeciwnym razie są nierówne.
 
 ### <a name="example"></a>Przykład
 
@@ -262,7 +262,7 @@ The strings s3 & s2 are not equal.
 
 ## <a name="op_eq_eq"></a>  operator ==
 
-Testy, jeśli obiekt ciągu po lewej stronie operatora jest taki sam jak obiekt ciągu po prawej stronie.
+Sprawdza, czy obiekt ciągu po lewej stronie operatora jest równy obiektowi ciągu z prawej strony.
 
 ```cpp
 template <class CharType, class Traits, class Allocator>
@@ -283,17 +283,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Ciąg w stylu języka C lub typu obiektu `basic_string` do porównania.
+*po lewej stronie* ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
 
-`right` Ciąg w stylu języka C lub typu obiektu `basic_string` do porównania.
+*prawy* ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli obiekt ciągu po lewej stronie operatora jest lexicographically taki sam obiekt ciągu po prawej stronie; w przeciwnym razie **false**.
+**wartość true,** Jeśli obiekt ciągu po lewej stronie operatora jest leksykograficznie taki sam jak obiekt ciągu z prawej strony, a w przeciwnym **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Porównanie obiektów string jest oparta na parowania lexicographical porównanie ich znaków. Dwa ciągi są takie same, jeśli mają taką samą liczbę znaków i ich wartości odpowiednich znaków są takie same. W przeciwnym razie ich nie są równe.
+Porównanie obiektów w postaci ciągów opiera się na parowania porównanie lexicographical ich znaków. Dwa ciągi są równe, jeśli mają taką samą liczbę znaków, a ich wartości odpowiednich znaków są takie same. W przeciwnym razie są nierówne.
 
 ### <a name="example"></a>Przykład
 
@@ -351,7 +351,7 @@ The strings s3 & s2 are not equal.
 
 ## <a name="op_lt"></a>  Operator&lt;
 
-Sprawdza, czy z obiektem ciągu po lewej stronie operatora jest mniejsza niż z obiektem ciągu po prawej stronie.
+Sprawdza, czy z obiektem ciągu po lewej stronie operatora jest mniejszy niż obiekt ciągu z prawej strony.
 
 ```cpp
 template <class CharType, class Traits, class Allocator>
@@ -372,23 +372,23 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Ciąg w stylu języka C lub typu obiektu `basic_string` do porównania.
+*po lewej stronie* ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
 
-`right` Ciąg w stylu języka C lub typu obiektu `basic_string` do porównania.
+*prawy* ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** w przypadku z obiektem ciągu po lewej stronie operatora lexicographically mniej niż obiekt ciągu po prawej stronie; w przeciwnym razie **false**.
+**wartość true,** Jeśli z obiektem ciągu po lewej stronie operatora jest leksykograficznie krótszy niż obiekt ciągu z prawej strony; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Lexicographical porównania ciągów porównuje je znak po znaku do:
+Porównanie lexicographical między ciągami porównuje je znak po znaku, aż do:
 
-- Znajdzie odpowiedniego znakami nierówne i pochodzi wynik ich porównanie wyniku porównania ciągów.
+- Znajdzie dwie odpowiadające im znaki nierówne, a wynik porównania ich jest traktowana jako wynik porównania ciągów.
 
-- Znalezione nie nierówności, ale jeden ciąg ma więcej znaków niż innych i krótszego ciągu jest uważany za mniej niż ciąg dłużej.
+- Znalezione nie nierówności, ale jeden ciąg zawiera więcej znaków niż drugi, krótszy ciąg jest uważany za mniej niż dłuższy ciąg.
 
-- Znalezione nie nierówności i wyszukuje czy ciągi mają taką samą liczbę znaków, a więc ciągi są takie same.
+- Znalezione nie nierówności i stwierdzi, że ciągi mają taką samą liczbę znaków, a więc ciągi są równe.
 
 ### <a name="example"></a>Przykład
 
@@ -445,7 +445,7 @@ The string s3 is less than the string s2.
 
 ## <a name="op_lt_eq"></a>  Operator&lt;=
 
-Testy, jeśli ciąg obiekt po lewej stronie operatora jest mniejsza niż lub równe z obiektem ciągu po prawej stronie.
+Sprawdza, czy ciąg obiektu po lewej stronie operatora jest mniejszy niż lub równy obiektowi ciągu po prawej stronie.
 
 ```cpp
 template <class CharType, class Traits, class Allocator>
@@ -466,23 +466,23 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Ciąg w stylu języka C lub typu obiektu `basic_string` do porównania.
+*po lewej stronie* ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
 
-`right` Ciąg w stylu języka C lub typu obiektu `basic_string` do porównania.
+*prawy* ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** w przypadku z obiektem ciągu po lewej stronie operatora lexicographically mniejsze niż lub równe z obiektem ciągu po prawej stronie, w przeciwnym **false**.
+**wartość true,** Jeśli z obiektem ciągu po lewej stronie operatora jest leksykograficznie krótszy niż lub równy obiektowi ciągu z prawej strony, w przeciwnym **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Lexicographical porównania ciągów porównuje je znak po znaku do:
+Porównanie lexicographical między ciągami porównuje je znak po znaku, aż do:
 
-- Znajdzie odpowiedniego znakami nierówne i pochodzi wynik ich porównanie wyniku porównania ciągów.
+- Znajdzie dwie odpowiadające im znaki nierówne, a wynik porównania ich jest traktowana jako wynik porównania ciągów.
 
-- Znalezione nie nierówności, ale jeden ciąg ma więcej znaków niż innych i krótszego ciągu jest uważany za mniej niż ciąg dłużej.
+- Znalezione nie nierówności, ale jeden ciąg zawiera więcej znaków niż drugi, krótszy ciąg jest uważany za mniej niż dłuższy ciąg.
 
-- Znalezione nie nierówności i stwierdzi, że ciągi mają taką samą liczbę znaków, dlatego ciągi są takie same.
+- Znalezione nie nierówności i stwierdzi, że ciągi mają taką samą liczbę znaków, więc ciągi są równe.
 
 ### <a name="example"></a>Przykład
 
@@ -557,21 +557,21 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametry
 
-_Ostr zapisywane do strumienia wyjściowego.
+*_Ostr* były zapisywane do strumienia wyjściowego.
 
-`str` Ciąg, który można wprowadzić do strumienia wyjściowego.
+*str* ciągu do wprowadzenia do strumienia wyjściowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Zapisuje wartość ciągu określona do strumienia wyjściowego `_Ostr`.
+Zapisuje wartość określony ciąg znaków do strumienia wyjściowego *_Ostr*.
 
 ### <a name="remarks"></a>Uwagi
 
-Przeciążenia funkcji szablonu **operator <<** do wstawienia _ obiektu *Str* szablonu klasy [basic_string —](../standard-library/basic-string-class.md) do strumienia \_  *OSTR.* Funkcja skutecznie zwraca \_ *Ostr*. **zapis**( \_ *Str*. [c_str](../standard-library/basic-string-class.md#c_str), \_ *Str*. [rozmiar](../standard-library/basic-string-class.md#size)).
+Przeciążenia funkcji szablonu **operator <<** do wstawienia _ obiektu *Str* szablonu klasy [basic_string](../standard-library/basic-string-class.md) w strumieniu \_  *OSTR.* Funkcja skutecznie zwraca \_ *Ostr*. **zapis**( \_ *Str*. [c_str —](../standard-library/basic-string-class.md#c_str), \_ *Str*. [rozmiar](../standard-library/basic-string-class.md#size)).
 
 ## <a name="op_gt"></a>  Operator&gt;
 
-Testy, jeśli obiekt ciągu po lewej stronie operatora jest większa niż z obiektem ciągu po prawej stronie.
+Sprawdza, czy obiekt ciągu po lewej stronie operatora jest większy niż z obiektem ciągu z prawej strony.
 
 ```cpp
 template <class CharType, class Traits, class Allocator>
@@ -592,23 +592,23 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Ciąg w stylu języka C lub typu obiektu `basic_string` do porównania.
+*po lewej stronie* ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
 
-`right` Ciąg w stylu języka C lub typu obiektu `basic_string` do porównania.
+*prawy* ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli obiekt ciągu po lewej stronie operatora jest lexicographically większy niż obiekt ciągu po prawej stronie; w przeciwnym razie **false**.
+**wartość true,** Jeśli obiekt ciągu po lewej stronie operatora jest leksykograficznie większy niż obiekt ciągu z prawej strony; w przeciwnym razie **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Lexicographical porównania ciągów porównuje je znak po znaku do:
+Porównanie lexicographical między ciągami porównuje je znak po znaku, aż do:
 
-- Znajdzie odpowiedniego znakami nierówne i pochodzi wynik ich porównanie wyniku porównania ciągów.
+- Znajdzie dwie odpowiadające im znaki nierówne, a wynik porównania ich jest traktowana jako wynik porównania ciągów.
 
-- Znalezione nie nierówności, ale jeden ciąg ma więcej znaków niż innych i krótszego ciągu jest uważany za mniej niż ciąg dłużej.
+- Znalezione nie nierówności, ale jeden ciąg zawiera więcej znaków niż drugi, krótszy ciąg jest uważany za mniej niż dłuższy ciąg.
 
-- Znalezione nie nierówności i wyszukuje czy ciągi mają taką samą liczbę znaków, a więc ciągi są takie same.
+- Znalezione nie nierówności i stwierdzi, że ciągi mają taką samą liczbę znaków, a więc ciągi są równe.
 
 ### <a name="example"></a>Przykład
 
@@ -672,7 +672,7 @@ The string s2 is greater than the string s3.
 
 ## <a name="op_gt_eq"></a>  Operator&gt;=
 
-Testy, jeśli obiekt ciągu po lewej stronie operatora jest większa niż lub równa z obiektem ciągu po prawej stronie.
+Sprawdza, czy obiekt ciągu po lewej stronie operatora jest większy lub równy obiektowi ciągu z prawej strony.
 
 ```cpp
 template <class CharType, class Traits, class Allocator>
@@ -693,23 +693,23 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametry
 
-`left` Ciąg w stylu języka C lub typu obiektu `basic_string` do porównania.
+*po lewej stronie* ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
 
-`right` Ciąg w stylu języka C lub typu obiektu `basic_string` do porównania.
+*prawy* ciąg stylu C lub obiektu o typie `basic_string` mają być porównane.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-**wartość true,** Jeśli obiekt ciągu po lewej stronie operatora jest lexicographically większa niż lub równa z obiektem ciągu po prawej stronie, a w przeciwnym **false**.
+**wartość true,** Jeśli obiekt ciągu po lewej stronie operatora jest leksykograficznie większa niż lub równy obiektowi ciągu z prawej strony, w przeciwnym **false**.
 
 ### <a name="remarks"></a>Uwagi
 
-Lexicographical porównania ciągów porównuje je znak po znaku do:
+Porównanie lexicographical między ciągami porównuje je znak po znaku, aż do:
 
-- Znajdzie odpowiedniego znakami nierówne i pochodzi wynik ich porównanie wyniku porównania ciągów.
+- Znajdzie dwie odpowiadające im znaki nierówne, a wynik porównania ich jest traktowana jako wynik porównania ciągów.
 
-- Znalezione nie nierówności, ale jeden ciąg ma więcej znaków niż innych i krótszego ciągu jest uważany za mniej niż ciąg dłużej.
+- Znalezione nie nierówności, ale jeden ciąg zawiera więcej znaków niż drugi, krótszy ciąg jest uważany za mniej niż dłuższy ciąg.
 
-- Znalezione nie nierówności i wyszukuje ciągi mają taką samą liczbę znaków, a więc ciągi są takie same.
+- Znalezione nie nierówności i znajdzie ciągi mają taką samą liczbę znaków, a więc ciągi są równe.
 
 ### <a name="example"></a>Przykład
 
@@ -784,29 +784,29 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parametry
 
-`_Istr` Strumień wejściowy używany do wyodrębnienia sekwencji
+*_Istr* strumienia wejściowego, służą do wyodrębniania sekwencji
 
-`right` Ciąg, który jest wyodrębniania ze strumienia wejściowego.
+*prawy* ciąg, który jest wyodrębniania ze strumienia wejściowego.
 
 ### <a name="return-value"></a>Wartość zwracana
 
-Odczytuje wartości z określonego ciągu `_Istr` i zwraca go do `right`.
+Odczytuje wartość określonego ciągu z *_Istr* i zwraca go do *prawo*.
 
 ### <a name="remarks"></a>Uwagi
 
-Operator pomija spacje początkowe białe, chyba że `skipws` flaga jest ustawiona. Odczytuje wszystkie następujące znaki do momentu następnej znak spacji lub zostanie osiągnięty koniec pliku.
+Operator pomija spacji wiodących, chyba że `skipws` flaga jest ustawiona. Odczytuje wszystkie następujące znaki do momentu następny znak spacji lub zostanie osiągnięty koniec pliku.
 
-Przeciążenia funkcji szablonu **operator >>** zastąpić sekwencji kontrolowane przez `right` z sekwencją elementów wyodrębnione ze strumienia `_Istr`. Zatrzymuje wyodrębniania:
+Przeciążenia funkcji szablonu **operator >>** sekwencji kontrolowanej przez zastąpienie *prawo* przy użyciu sekwencji elementów wyodrębnione ze strumienia *_Istr*. Zatrzymuje się wyodrębnienie:
 
 - Na końcu pliku.
 
-- Po wyodrębnia funkcji `_Istr`. **szerokość** elementy, jeśli ta wartość jest różna od zera.
+- Po funkcji wyodrębnia `_Istr`. **szerokość** elementów, jeśli ta wartość jest różna od zera.
 
-Po wyodrębnia funkcji `_Istr`. [max_size](../standard-library/basic-string-class.md#max_size) elementów.
+Po funkcji wyodrębnia `_Istr`. [max_size —](../standard-library/basic-string-class.md#max_size) elementów.
 
-- Po funkcji wyodrębnia element *ch* dla którego [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype** \< **CharType**> > ( `getloc`). **jest**( **ctype** \< **CharType**>:: **miejsca**, *ch*) ma wartość true, w którym to przypadku odłożyć znak .
+- Po funkcji wyodrębnia element *ch* dla którego [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype** \< **CharType**> > ( `getloc`). **jest**( **ctype** \< **CharType**>:: **miejsca**, *ch*) ma wartość true, w którym to przypadku znak jest przywracane .
 
-Jeśli funkcja wyodrębnia żadnych elementów, wywołuje metodę [metoda setstate](../standard-library/basic-ios-class.md#setstate)( `ios_base::failbit`). W każdym przypadku wywołuje **istr**. **szerokość**(0) i zwraca \* **to**.
+Jeśli funkcja wyodrębnia żadnych elementów, wywołuje metodę [setstate](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). W każdym przypadku wywoływanych przez nią **istr**. **szerokość**(0) i zwraca \* **to**.
 
 ### <a name="example"></a>Przykład
 

@@ -1,5 +1,5 @@
 ---
-title: Cgopherfile — klasa | Dokumentacja firmy Microsoft
+title: Klasa CGopherFile | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 275c35c7654f9a10a83f13482ca6d81b974c0dd6
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: c6c4f87ffb1538e581320e9d6f36e8d4fbc6fc12
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040977"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335685"
 ---
 # <a name="cgopherfile-class"></a>Cgopherfile — klasa
-Udostępnia funkcje znajdowania i odczytywania plików na serwerze gopher.  
+Oferuje funkcje w celu odnalezienia i odczytania plików na serwerze gophera.  
   
 > [!NOTE]
->  Klasy `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` i ich elementy członkowskie są przestarzałe, ponieważ nie działają na platformie Windows XP, ale będą one nadal działać na starszych platformach.  
+>  Klasy `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` i ich elementów członkowskich są przestarzałe, ponieważ nie działają na platformie Windows XP, ale będą one nadal działały na starszych platformach.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,14 +46,14 @@ class CGopherFile : public CInternetFile
 |[CGopherFile::CGopherFile](#cgopherfile)|Konstruuje `CGopherFile` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Usługa gopher nie zezwala użytkownikom można zapisać danych do pliku gopher, ponieważ ta usługa działa głównie jako interfejs opartemu na menu wyszukiwania informacji. `CGopherFile` Funkcje Członkowskie `Write`, `WriteString`, i `Flush` nie są zaimplementowane w przypadku `CGopherFile`. Wywoływanie funkcji `CGopherFile` obiekt zwraca [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
+ Usługa gopher nie zezwala użytkownikom można zapisać danych do pliku gopher, ponieważ ta usługa działa głównie jako interfejs do znajdowania informacji. `CGopherFile` Elementów członkowskich `Write`, `WriteString`, i `Flush` nie są zaimplementowane dla `CGopherFile`. Wywoływanie tych funkcji na `CGopherFile` obiektu i zwraca [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
   
- Aby dowiedzieć się więcej na temat `CGopherFile` współpracuje z innych klas MFC Internet, zapoznaj się z artykułem [Internet programowanie za pomocą interfejsu WinInet](../../mfc/win32-internet-extensions-wininet.md).  
+ Aby dowiedzieć się więcej o tym, jak `CGopherFile` współpracuje z innych klas MFC Internet, zapoznaj się z artykułem [Internet programowanie za pomocą interfejsu WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [Cfile —](../../mfc/reference/cfile-class.md)  
+ [CFile](../../mfc/reference/cfile-class.md)  
   
  [CStdioFile](../../mfc/reference/cstdiofile-class.md)  
   
@@ -65,7 +65,7 @@ class CGopherFile : public CInternetFile
  **Nagłówek:** afxinet.h  
   
 ##  <a name="cgopherfile"></a>  CGopherFile::CGopherFile  
- Ta funkcja elementu członkowskiego jest wywoływana w celu utworzenia `CGopherFile` obiektu.  
+ Ta funkcja członkowska jest wywoływana, aby skonstruować `CGopherFile` obiektu.  
   
 ```  
 CGopherFile(
@@ -83,8 +83,8 @@ CGopherFile(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- *hFile*  
- Dojście do `HINTERNET` pliku.  
+ *hFile —*  
+ Dojście do pliku HINTERNET.  
   
  *refLocator*  
  Odwołanie do [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) obiektu.  
@@ -96,18 +96,18 @@ CGopherFile(
  Dojście do bieżącej sesji Internet.  
   
  *pstrLocator*  
- Wskaźnik do ciągu używana do lokalizowania serwera gopher. Zobacz [sesji Gopher](cgopherlocator-class.md) Aby uzyskać więcej informacji na temat lokalizatorów gopher.  
+ Wskaźnik do ciągu, używana do lokalizowania serwera gopher. Zobacz [sesje Gopher](cgopherlocator-class.md) Aby uzyskać więcej informacji na temat lokalizatorów gopher.  
   
  *dwLocLen*  
- Wartość typu DWORD zawierającą liczbę bajtów w *pstrLocator*.  
+ DWORD zawierającą liczbę bajtów w *pstrLocator*.  
   
  *dwContext*  
- Wskaźnik do identyfikator kontekstu otwierany plik.  
+ Wskaźnik na identyfikator kontekstu otwierany plik.  
   
 ### <a name="remarks"></a>Uwagi  
- Należy `CGopherFile` obiektu do odczytu z pliku podczas sesji gopher Internet.  
+ Potrzebujesz `CGopherFile` obiektu do odczytu z pliku podczas sesji Internet gopher.  
   
- Nigdy nie twórz `CGopherFile` obiekt bezpośrednio. Zamiast tego wywołać [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) można otworzyć pliku na serwerze gopher.  
+ Nigdy nie twórz `CGopherFile` obiektu bezpośrednio. Zamiast tego należy wywołać [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) można otworzyć pliku na serwerze gophera.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa CInternetFile](../../mfc/reference/cinternetfile-class.md)   

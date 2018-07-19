@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95550c81235db58b1f8d372bf028750c003c7a9f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d59782b62ddfb51601505be6d12f01ce14cd4f1
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415728"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026637"
 ---
 # <a name="comerror-class"></a>_com_error — Klasa
 **Microsoft Specific**  
   
- A `_com_error` obiekt reprezentuje wykryte przez funkcje otoki obsługi błędów w plikach nagłówka wygenerowane z biblioteki typu lub jednej z klas obsługi COM warunku wyjątku. `_com_error` Klasa hermetyzuje `HRESULT` kod błędu i wszelkie powiązane `IErrorInfo Interface` obiektu.  
+ Element `_com_error` obiektu przedstawia warunek wyjątku, wykrywany przez funkcje otoki obsługi błędów w plikach nagłówkowych wygenerowane z biblioteki typów lub za pomocą jednej z klas obsługi COM. `_com_error` Klasa hermetyzuje kod błędu HRESULT i wszelkie powiązane `IErrorInfo Interface` obiektu.  
   
-### <a name="construction"></a>Konstrukcji  
+### <a name="construction"></a>Konstrukcja  
   
 |||  
 |-|-|  
@@ -38,15 +38,15 @@ ms.locfileid: "32415728"
   
 |||  
 |-|-|  
-|[operator =](../cpp/com-error-operator-equal.md)|Przypisuje istniejące `_com_error` obiektu do innego.|  
+|[operator =](../cpp/com-error-operator-equal.md)|Przypisuje istniejące `_com_error` obiektu do drugiego.|  
   
-### <a name="extractor-functions"></a>Funkcje katalogu  
+### <a name="extractor-functions"></a>Ekstraktor funkcji  
   
 |||  
 |-|-|  
-|[Error](../cpp/com-error-error.md)|Pobiera `HRESULT` przekazany do konstruktora.|  
+|[Error](../cpp/com-error-error.md)|Pobiera wartość HRESULT przekazany do konstruktora.|  
 |[ErrorInfo](../cpp/com-error-errorinfo.md)|Pobiera `IErrorInfo` obiekt przekazany do konstruktora.|  
-|[WCode](../cpp/com-error-wcode.md)|Pobiera kod błędu 16-bitowych przypisywane do hermetyzowany `HRESULT`.|  
+|[WCode](../cpp/com-error-wcode.md)|Pobiera kod błędu 16-bitowych zmapowany do zhermetyzowanego HRESULT.|  
   
 ### <a name="ierrorinfo-functions"></a>Funkcje IErrorInfo  
   
@@ -54,24 +54,24 @@ ms.locfileid: "32415728"
 |-|-|  
 |[Opis](../cpp/com-error-description.md)|Wywołania `IErrorInfo::GetDescription` funkcji.|  
 |[HelpContext](../cpp/com-error-helpcontext.md)|Wywołania `IErrorInfo::GetHelpContext` funkcji.|  
-|[HelpFile](../cpp/com-error-helpfile.md)|Wywołania `IErrorInfo::GetHelpFile` — funkcja|  
+|[HelpFile —](../cpp/com-error-helpfile.md)|Wywołania `IErrorInfo::GetHelpFile` — funkcja|  
 |[Źródło](../cpp/com-error-source.md)|Wywołania `IErrorInfo::GetSource` funkcji.|  
 |[IDENTYFIKATOR GUID](../cpp/com-error-guid.md)|Wywołania `IErrorInfo::GetGUID` funkcji.|  
   
-### <a name="format-message-extractor"></a>Format komunikatu wyodrębniania  
+### <a name="format-message-extractor"></a>Format komunikatu ekstraktory  
   
 |||  
 |-|-|  
-|[Komunikat o błędzie](../cpp/com-error-errormessage.md)|Pobiera ciąg komunikatu HRESULT przechowywane w `_com_error` obiektu.|  
+|[Komunikat o błędzie](../cpp/com-error-errormessage.md)|Pobiera ciąg komunikatu dla przechowywanych we właściwości HRESULT `_com_error` obiektu.|  
   
-### <a name="exepinfowcode-to-hresult-mappers"></a>ExepInfo.wCode do mapowań HRESULT  
+### <a name="exepinfowcode-to-hresult-mappers"></a>ExepInfo.wCode do liczby Maperów HRESULT  
   
 |||  
 |-|-|  
-|[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|Mapuje 32-bitowych `HRESULT` do 16-bitowych `wCode`.|  
-|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|Mapuje 16-bitowych `wCode` do 32-bitowych `HRESULT`.|  
+|[Hresulttowcode —](../cpp/com-error-hresulttowcode.md)|Mapuje HRESULT 32-bitowego do 16-bitowych `wCode`.|  
+|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|Mapuje 16-bitowych `wCode` HRESULT 32-bitowych.|  
   
-**KOŃCOWY określonych firmy Microsoft**  
+**END specyficzny dla Microsoft**  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** \<comdef.h >  
@@ -80,4 +80,4 @@ ms.locfileid: "32415728"
   
 ## <a name="see-also"></a>Zobacz też  
  [Kompilator klas obsługi COM](../cpp/compiler-com-support-classes.md)   
- [Interfejs IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)
+ [Interfejs IErrorInfo](http://msdn.microsoft.com/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)

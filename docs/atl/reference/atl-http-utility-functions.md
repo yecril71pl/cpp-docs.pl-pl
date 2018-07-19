@@ -1,5 +1,5 @@
 ---
-title: Funkcje pomocnicze ATL HTTP | Dokumentacja firmy Microsoft
+title: Funkcje pomocnicze protokołu HTTP ATL | Dokumentacja firmy Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -8,26 +8,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 476ca29de5a44e8ebb20d53ec0b88834c7b03eea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 36b0647863076661eb130da1cde694b128f49d47
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363787"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026091"
 ---
-# <a name="atl-http-utility-functions"></a>Funkcje pomocnicze HTTP ATL
+# <a name="atl-http-utility-functions"></a>Funkcje pomocnicze protokołu HTTP ATL
 
-Te funkcje obsługuje manipulowania adresów URL.
+Funkcje te obsługują manipulowania adresów URL.
 
 |||  
 |-|-|  
-|[AtlCanonicalizeUrl](#atlcanonicalizeurl)|Canonicalizes adresu URL, który zawiera przekształcania znaki niebezpieczne i spacje w sekwencji ucieczki.|  
-|[AtlCombineUrl](#atlcombineurl)|Łączy podstawowego adresu URL i względnym adresem URL w jednej, kanonicznej adresu URL.|  
-|[AtlEscapeUrl](#atlescapeurl)|Konwertuje wszystkie znaki niebezpieczny sekwencji ucieczki.|  
-|[AtlGetDefaultUrlPort](#atlgetdefaulturlport)|Pobiera domyślny numer portu skojarzonego z konkretnym protokołu internetowego lub schemat.|  
-|[AtlIsUnsafeUrlChar](#atlisunsafeurlchar)|Określa, czy znak jest bezpieczna do użycia w adresie URL.|  
-|[AtlUnescapeUrl](#atlunescapeurl)|Konwertuje wyjściowym znaków do ich oryginalnych wartości.|  
-|[RGBToHtml](#rgbtohtml)|Konwertuje [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość odpowiadającą tej wartości koloru tekstu w formacie HTML.|
+|[AtlCanonicalizeUrl](#atlcanonicalizeurl)|Canonicalizes adresu URL, co obejmuje konwersję niebezpiecznych znaków i spacji na sekwencje unikowe.|  
+|[AtlCombineUrl](#atlcombineurl)|Scala podstawowy adres URL i względny adres URL w jeden Kanoniczny adres URL.|  
+|[AtlEscapeUrl](#atlescapeurl)|Konwertuje wszystkie niebezpieczne znaki na sekwencje ucieczki.|  
+|[AtlGetDefaultUrlPort](#atlgetdefaulturlport)|Pobiera domyślny numer portu skojarzony z określonym protokołem lub schematem internetowym.|  
+|[AtlIsUnsafeUrlChar](#atlisunsafeurlchar)|Określa, czy znak jest bezpieczny dla adresu URL.|  
+|[AtlUnescapeUrl](#atlunescapeurl)|Konwertuje poprzedzone znakiem zmiany znaczenia znaków do ich oryginalnych wartości.|  
+|[RGBToHtml](#rgbtohtml)|Konwertuje [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość na tekst HTML odpowiadający wartości tego koloru.|
 |[SystemTimeToHttpDate](#systemtimetohttpdate)|Wywołaj tę funkcję, aby skonwertować czas systemowy na ciąg znaków w formacie odpowiednim do używania nagłówków HTTP.|
 
 ## <a name="requirements"></a>Wymagania  
@@ -45,31 +45,31 @@ inline BOOL AtlCanonicalizeUrl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `szUrl`  
- Adres URL, który można w postaci kanonicznej.  
+ *szUrl*  
+ Adres URL, aby zostać skanonikalizowana.  
   
- `szCanonicalized`  
- Przydzielone przez obiekt wywołujący bufor odbioru adres URL w postaci kanonicznej.  
+ *szCanonicalized*  
+ Przydzielonej przez obiekt wywołujący bufor odbioru adres URL w postaci kanonicznej.  
   
- `pdwMaxLength`  
- Wskaźnik do zmiennej, która zawiera długość w znakach `szCanonicalized`. Jeśli funkcja zakończy się powodzeniem, zmienna odbiera liczba znaków, zapisać w buforze, w tym znak końcowy null. W przypadku niepowodzenia funkcji zmiennej odbiera wymaganą długość w bajtach buforu, łącznie z miejsca na znak końcowy null.  
+ *pdwMaxLength*  
+ Wskaźnik do zmiennej, która zawiera długość w znakach *szCanonicalized*. Jeśli funkcja się powiedzie, zmienna odbiera liczbę znaków zapisanych w buforze, w tym kończącego znaku null. Jeśli funkcja zawiedzie, zmienna odbiera wymaganą długość w bajtach rozmiar buforu, co obejmuje miejsce w przypadku końcowego znaku null.  
   
- `dwFlags`  
- ATL_URL flagi sterujące zachowaniem tej funkcji. 
+ *Flagidw*  
+ Flagi ATL_URL sterowania zachowaniem tej funkcji. 
 
-- `ATL_URL_BROWSER_MODE` Nie kodowania i dekodowania znaków po "#" lub "?", a nie powoduje usunięcia końcu spację po "?". Jeśli ta wartość nie jest określona, cały adres URL jest zakodowany i usunięciu wiodących znaków odstępu.
-- `ATL_URL_DECODE` Konwertuje wszystkie sekwencje XX % znaków, w tym sekwencji unikowych przed analizowania adresu URL.
-- `ATL_URL_ENCODE_PERCENT` Koduje wszelkie znaki procentu napotkano. Domyślnie nie są kodowane procentu.
-- `ATL_URL_ENCODE_SPACES_ONLY` Koduje tylko spacje.
-- `ATL_URL_ESCAPE` Konwertuje wszystkie sekwencje unikowe (% XX) do ich odpowiednich znaków.
-- `ATL_URL_NO_ENCODE` Nie konwertuje sekwencje specjalne znaków niebezpieczne.
-- `ATL_URL_NO_META` Nie powoduje usunięcia meta sekwencje (takich jak "."i"..") z adresu URL. 
+- Nie ATL_URL_BROWSER_MODE kodowania lub dekodowania znaków po "#" lub "?", a nie powoduje usunięcia odstępu po "?". Jeśli ta wartość nie jest określona, cały adres URL jest zaszyfrowana i końcowe biały znak zostanie usunięta.
+- ATL_URL_DECODE konwertuje wszystkie % XX sekwencje znaków, w tym sekwencje ucieczki, aby adres URL jest analizowany.
+- Wszystkie znaki procentu koduje ATL_URL_ENCODE_PERCENT napotkał. Domyślnie nie są kodowane procentu.
+- Koduje ATL_URL_ENCODE_SPACES_ONLY tylko spacje.
+- Konwertuje ATL_URL_ESCAPE wszystkie sekwencje (% XX) escape, aby ich odpowiadające im znaki.
+- ATL_URL_NO_ENCODE nie konwertuje niebezpieczne znaki na sekwencje ucieczki.
+- ATL_URL_NO_META nie usuwa meta sekwencji (takie jak "."i"..") z adresu URL. 
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca **TRUE** w przypadku powodzenia **FALSE** w przypadku awarii.  
+ Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Zachowuje się jak bieżąca wersja [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342) , ale nie wymaga WinInet lub program Internet Explorer do zainstalowania.  
+ Zachowuje się jak bieżąca wersja [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342) , ale nie wymaga WinInet lub Internet Explorer do zainstalowania.  
   
 ### <a name="see-also"></a>Zobacz też  
  [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342)
@@ -91,22 +91,22 @@ inline BOOL AtlCombineUrl(
  Podstawowy adres URL.  
   
  *szRelativeUrl*  
- Adres URL względem podstawowego adresu URL.  
+ Adres URL, względem podstawowego adresu URL.  
   
- `szBuffer`  
- Przydzielone przez obiekt wywołujący bufor odbioru adres URL w postaci kanonicznej.  
+ *szBuffer*  
+ Przydzielonej przez obiekt wywołujący bufor odbioru adres URL w postaci kanonicznej.  
   
- `pdwMaxLength`  
- Wskaźnik do zmiennej, która zawiera długość w znakach `szBuffer`. Jeśli funkcja zakończy się powodzeniem, zmienna odbiera liczba znaków, zapisać w buforze, w tym znak końcowy null. W przypadku niepowodzenia funkcji zmiennej odbiera wymaganą długość w bajtach buforu, łącznie z miejsca na znak końcowy null.  
+ *pdwMaxLength*  
+ Wskaźnik do zmiennej, która zawiera długość w znakach *szBuffer*. Jeśli funkcja się powiedzie, zmienna odbiera liczbę znaków zapisanych w buforze, w tym kończącego znaku null. Jeśli funkcja zawiedzie, zmienna odbiera wymaganą długość w bajtach rozmiar buforu, co obejmuje miejsce w przypadku końcowego znaku null.  
   
- `dwFlags`  
+ *Flagidw*  
  Flagi sterujące zachowaniem tej funkcji. Zobacz [AtlCanonicalizeUrl](#atlcanonicalizeurl).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca **TRUE** w przypadku powodzenia **FALSE** w przypadku awarii.  
+ Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Zachowuje się jak bieżąca wersja [InternetCombineUrl](http://msdn.microsoft.com/library/windows/desktop/aa384355) , ale nie wymaga WinInet lub program Internet Explorer do zainstalowania.  
+ Zachowuje się jak bieżąca wersja [InternetCombineUrl](http://msdn.microsoft.com/library/windows/desktop/aa384355) , ale nie wymaga WinInet lub Internet Explorer do zainstalowania.  
   
 ## <a name="atlescapeurl"></a> AtlEscapeUrl
  Wywołaj tę funkcję, aby skonwertować wszystkie niebezpieczne znaki na sekwencje ucieczki.  
@@ -128,25 +128,25 @@ inline BOOL AtlEscapeUrl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszStringIn`  
- Adres URL do skonwertowania.  
+ *lpszStringIn*  
+ Adres URL, który ma zostać przekonwertowany.  
   
- `lpszStringOut`  
- Bufor przydzielone przez obiekt wywołujący, do której zostanie zapisany przekonwertowanego adresu URL.  
+ *lpszStringOut*  
+ Bufor przydzielonej przez obiekt wywołujący, do której zostanie zapisany przekonwertowanego adresu URL.  
   
- `pdwStrLen`  
- Wskaźnik do zmiennej typu DWORD. Jeśli funkcja zakończy się powodzeniem, `pdwStrLen` odbiera liczba znaków, zapisać w buforze, w tym znak końcowy null. W przypadku niepowodzenia funkcji zmiennej odbiera wymaganą długość w bajtach buforu, łącznie z miejsca na znak końcowy null. Podczas używania wersji znaków typu wide tej metody `pdwStrLen` odbiera wymagana liczba znaków, nie liczba bajtów.  
+ *pdwStrLen*  
+ Wskaźnik do zmiennej typu DWORD. Jeśli funkcja się powiedzie, *pdwStrLen* odbiera liczbę znaków zapisanych w buforze, w tym kończącego znaku null. Jeśli funkcja zawiedzie, zmienna odbiera wymaganą długość w bajtach rozmiar buforu, co obejmuje miejsce w przypadku końcowego znaku null. Korzystając z wersją znaków dwubajtowych tej metody *pdwStrLen* odbiera wymaganą liczbę znaków, nie liczbę bajtów.  
   
- `dwMaxLength`  
- Rozmiar buforu `lpszStringOut`.  
+ *dwMaxLength*  
+ Rozmiar buforu *lpszStringOut*.  
   
- `dwFlags`  
- ATL_URL flagi sterujące zachowaniem tej funkcji. Zobacz [ATLCanonicalizeUrl](#atlcanonicalizeurl) prawidłowych wartości.  
+ *Flagidw*  
+ Flagi ATL_URL sterowania zachowaniem tej funkcji. Zobacz [ATLCanonicalizeUrl](#atlcanonicalizeurl) uzyskać odpowiednie wartości.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca **TRUE** w przypadku powodzenia **FALSE** w przypadku awarii.  
+ Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.  
   
-## <a name="atlgetdefaulturlport"></a> 
+## <a name="atlgetdefaulturlport"></a> AtlGetDefaultUrlPort
  Wywołaj tę funkcję, aby uzyskać domyślny numer portu skojarzony z określonym protokołem lub schematem internetowym.  
   
 ```  
@@ -158,7 +158,7 @@ inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();
  [ATL_URL_SCHEME](atl-url-scheme-enum.md) wartość identyfikowanie schemat, dla którego chcesz uzyskać numer portu.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- [ATL_URL_PORT](atl-typedefs.md#atl_url_port) skojarzonych z określony schemat lub ATL_URL_INVALID_PORT_NUMBER, jeśli schemat nie został rozpoznany.  
+ [ATL_URL_PORT](atl-typedefs.md#atl_url_port) skojarzone z określonego schematu lub ATL_URL_INVALID_PORT_NUMBER, jeśli schemat nie został rozpoznany.  
 
 ## <a name="atlisunsafeurlchar"></a> AtlIsUnsafeUrlChar
  Wywołaj tę funkcję, aby się dowiedzieć, czy użycie danego znaku w adresie URL jest bezpieczne.  
@@ -168,14 +168,14 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `chIn`  
- Znak, który ma być sprawdzane pod kątem bezpieczeństwa.  
+ *chIn*  
+ Znak, który ma zostać przetestowana pod kątem bezpieczeństwa.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca **TRUE** gdy wprowadzany znak jest niebezpieczne, **FALSE** inaczej.  
+ Zwraca wartość TRUE, jeśli wprowadzanych znaków jest niebezpieczne, wartość FALSE w przeciwnym razie.  
   
 ### <a name="remarks"></a>Uwagi  
- Znaki, które nie powinny być używane w adresach URL można przetestować przy użyciu tej funkcji i konwertowane przy użyciu [AtlCanonicalizeUrl](#atlcanonicalizeurl).  
+ Znaki, które nie powinny być używane w adresach URL mogą być testowane przy użyciu tej funkcji i konwertowane przy użyciu [AtlCanonicalizeUrl](#atlcanonicalizeurl).  
   
 ## <a name="atlunescapeurl"></a> AtlUnescapeUrl
  Wywołaj tę funkcję, aby skonwertować znaki przetworzone przez sekwencje ucieczki z powrotem do ich oryginalnych wartości.  
@@ -195,26 +195,26 @@ inline BOOL AtlUnescapeUrl(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `lpszStringIn`  
- Adres URL do skonwertowania.  
+ *lpszStringIn*  
+ Adres URL, który ma zostać przekonwertowany.  
   
- `lpszStringOut`  
- Bufor przydzielone przez obiekt wywołujący, do której zostanie zapisany przekonwertowanego adresu URL.  
+ *lpszStringOut*  
+ Bufor przydzielonej przez obiekt wywołujący, do której zostanie zapisany przekonwertowanego adresu URL.  
   
- `pdwStrLen`  
- Wskaźnik do zmiennej typu DWORD. Jeśli funkcja zakończy się powodzeniem, zmienna odbiera liczba znaków, zapisać w buforze, w tym znak końcowy null. W przypadku niepowodzenia funkcji zmiennej odbiera wymaganą długość w bajtach buforu, łącznie z miejsca na znak końcowy null.  
+ *pdwStrLen*  
+ Wskaźnik do zmiennej typu DWORD. Jeśli funkcja się powiedzie, zmienna odbiera liczbę znaków zapisanych w buforze, w tym kończącego znaku null. Jeśli funkcja zawiedzie, zmienna odbiera wymaganą długość w bajtach rozmiar buforu, co obejmuje miejsce w przypadku końcowego znaku null.  
   
- `dwMaxLength`  
- Rozmiar buforu `lpszStringOut`.  
+ *dwMaxLength*  
+ Rozmiar buforu *lpszStringOut*.  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca **TRUE** w przypadku powodzenia **FALSE** w przypadku awarii.  
+ Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
  Odwraca proces konwersji stosowane przez [AtlEscapeUrl](#atlescapeurl).  
   
 ## <a name="rgbtohtml"></a> RGBToHtml
-Konwertuje [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość odpowiadającą tej wartości koloru tekstu w formacie HTML.  
+Konwertuje [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) wartość na tekst HTML odpowiadający wartości tego koloru.  
   
 ```  
 bool inline RGBToHtml(  
@@ -224,20 +224,20 @@ bool inline RGBToHtml(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `color`  
- Wartości kolorów RGB.  
+ *Kolor*  
+ Wartość koloru RGB.  
   
- `pbOut`  
- Przydzielone przez obiekt wywołujący bufor odbioru tekstu dla wartości koloru HTML. Rozmiar buforu musi mieć miejsca na co najmniej 8 znaków, w tym miejsce terminatorem null).  
+ *pbOut*  
+ Bufor przydzielonej przez obiekt wywołujący, aby otrzymać tekst HTML wartość koloru. Rozmiar buforu musi mieć miejsca dla co najmniej 8 znaków, w tym miejsce terminator o wartości null).  
   
  *nBuffer*  
- Rozmiar w bajtach buforu (w tym miejsce terminatorem null).  
+ Rozmiar w bajtach rozmiar buforu (w tym miejsce terminator o wartości null).  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Zwraca **TRUE** w przypadku powodzenia **FALSE** w przypadku awarii.  
+ Zwraca wartość TRUE w przypadku powodzenia, wartość FALSE w przypadku niepowodzenia.  
   
 ### <a name="remarks"></a>Uwagi  
- Wartość koloru HTML jest znakiem, następuje 6-cyfrowy wartość szesnastkowa cyfry 2 dla każdego składnika czerwony, zielonemu i niebieskiemu koloru (na przykład #FFFFFF jest białe).  
+ Wartość koloru HTML jest znak #, a następnie wartość szesnastkową 6-cyfrowy przy użyciu cyfr 2 dla poszczególnych składników czerwonego, zielonego i niebieskiego koloru (na przykład białe jest #FFFFFF).  
   
 ## <a name="systemtimetohttpdate"></a> SystemTimeToHttpDate
 Wywołaj tę funkcję, aby skonwertować czas systemowy na ciąg znaków w formacie odpowiednim do używania nagłówków HTTP.  
@@ -249,11 +249,11 @@ inline void SystemTimeToHttpDate(
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `st`  
+ *St*  
  Czas systemowy, które mają zostać uzyskane w postaci ciągu formatu HTTP.  
   
  *strTime*  
- Odwołanie do zmiennej ciągu otrzymywać HTTP Data i godzina, zgodnie z definicją w dokumencie RFC 2616 ([http://www.ietf.org/rfc/rfc2616.txt](http://www.ietf.org/rfc/rfc2616.txt)) i RFC 1123 ([http://www.ietf.org/rfc/rfc1123.txt](http://www.ietf.org/rfc/rfc1123.txt)).  
+ Odwołanie do zmiennej ciągu, aby otrzymać HTTP Data i godzina, zgodnie z definicją w dokumencie RFC 2616 ([http://www.ietf.org/rfc/rfc2616.txt](http://www.ietf.org/rfc/rfc2616.txt)) i RFC 1123 ([http://www.ietf.org/rfc/rfc1123.txt](http://www.ietf.org/rfc/rfc1123.txt)).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Pojęcia](../../atl/active-template-library-atl-concepts.md)   

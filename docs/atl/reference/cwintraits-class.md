@@ -23,18 +23,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea1eafc6376c44a09d13fb513d41f222048708d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e1e400352a6eca09fd26ea1a1e2ba5cff60888bc
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362511"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026104"
 ---
 # <a name="cwintraits-class"></a>Klasa CWinTraits
-Ta klasa udostępnia metodę standaryzacji style używane podczas tworzenia obiektu okna.  
+Ta klasa dostarcza metody do standaryzacji stylów używanych podczas tworzenia obiektu okna.  
   
 > [!IMPORTANT]
->  Nie można użyć tej klasy i jej elementów członkowskich w aplikacjach, które są wykonywane w środowisku wykonawczym systemu Windows.  
+>  Ta klasa i jej elementów członkowskich nie można użyć w aplikacjach korzystających ze środowiska wykonawczego Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,10 +43,10 @@ template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
 ```  
   
 #### <a name="parameters"></a>Parametry  
- `t_dwStyle`  
- Style okna Standardowy domyślny.  
+ *t_dwStyle*  
+ Domyślne style standardowego okna.  
   
- `t_dwExStyle`  
+ *t_dwExStyle*  
  Domyślnie rozszerzone Style okna.  
   
 ## <a name="members"></a>Elementy członkowskie  
@@ -59,55 +59,55 @@ template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
 |[CWinTraits::GetWndStyle](#getwndstyle)|(Statyczny) Pobiera standardowe style dla `CWinTraits` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- To [cech okna](../../atl/understanding-window-traits.md) klasa udostępnia prostą metodę standaryzacji stylów używany do tworzenia obiektu ATL okna. Użyj specjalizacji tej klasy jako parametr szablonu w celu [CWindowImpl](../../atl/reference/cwindowimpl-class.md) lub innej firmy ATL — klasy okna do określenia wartości domyślne standardowe i rozszerzone style używane dla wystąpień tej klasy okna.  
+ To [cech okna](../../atl/understanding-window-traits.md) klasa udostępnia prostą metodę standaryzacji stylów używany do tworzenia obiektu ATL okna. Użyj specjalizacji tej klasy jako parametr szablonu [CWindowImpl](../../atl/reference/cwindowimpl-class.md) lub innej klasy okien ATL, aby określić wartości domyślnej standardowe i rozszerzone stylów używanych dla wystąpień tej klasy okna.  
   
- Użyj tego szablonu, gdy chcesz zapewnić domyślne style okna, które będą używane tylko wtedy, gdy nie inne style są określone w wywołaniu [CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create).  
+ Użyj tego szablonu, które chcesz udostępnić domyślne style okna, które będą używane tylko wtedy, gdy nie inne style są określone w wywołaniu [CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create).  
   
- ATL zawiera trzy wstępnie zdefiniowane specjalizacji szablonu dla często używanych kombinacji Style okna:  
+ ATL zawiera trzy wstępnie zdefiniowane specjalizacje szablonu dla często używanych kombinacji Style okna ramowego:  
   
  `CControlWinTraits`  
- Przeznaczona dla okna formantu standardowego. Są używane następujące standardowe style: **ws_child —**, **ws_visible —**, **ws_clipchildren —**, i **ws_clipsiblings —**. Nie ma żadnych rozszerzone style.  
+ Zaprojektowana na potrzeby okna formantu standardowego. Używane są następujące standardowe style: WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN i WS_CLIPSIBLINGS. Nie istnieją żadne rozszerzone style.  
   
  `CFrameWinTraits`  
- Przeznaczona dla standardowych ramki okna. Standardowe style używane obejmują: **ws_overlappedwindow —**, **ws_clipchildren —**, i **ws_clipsiblings —**. Rozszerzone style używane obejmują: **ws_ex_appwindow —** i **ws_ex_windowedge —**.  
+ Zaprojektowana na potrzeby standardowych ramki okna. Standardowe style używane obejmują: WS_OVERLAPPEDWINDOW, WS_CLIPCHILDREN i WS_CLIPSIBLINGS. Rozszerzone style używane obejmują: WS_EX_APPWINDOW i WS_EX_WINDOWEDGE.  
   
  `CMDIChildWinTraits`  
- Przeznaczona dla standardowych okna podrzędnego MDI. Standardowe style używane obejmują: **ws_overlappedwindow —**, **ws_child —**, **ws_visible —**, **ws_clipchildren —** i **Ws_clipsiblings —**. Rozszerzone style używane obejmują: **ws_ex_mdichild —**.  
+ Zaprojektowana na potrzeby standardowe okno podrzędne MDI. Standardowe style używane obejmują: WS_OVERLAPPEDWINDOW, WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN i WS_CLIPSIBLINGS. Rozszerzone style używane obejmują: WS_EX_MDICHILD.  
   
- Jeśli chcesz upewnić się, że niektóre style są ustawione dla wszystkich wystąpień klasy okna, umożliwiając inne style określone na podstawie poszczególnych wystąpień [CWinTraitsOR](../../atl/reference/cwintraitsor-class.md) zamiast tego.  
+ Jeśli chcesz upewnić się, że określone style są ustawione dla wszystkich wystąpień klasy okna, umożliwiając innymi stylami należy ustawić na podstawie poszczególnych wystąpień [CWinTraitsOR](../../atl/reference/cwintraitsor-class.md) zamiast tego.  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** atlwin.h  
   
 ##  <a name="getwndstyle"></a>  CWinTraits::GetWndStyle  
- Wywołanie tej funkcji można pobrać standardowe style `CWinTraits` obiektu.  
+ Wywołaj tę funkcję, aby pobrać standardowa style `CWinTraits` obiektu.  
   
 ```
 static DWORD GetWndStyle(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwStyle`  
- Standardowe style używany do tworzenia okna. Jeśli `dwStyle` ma wartość 0, wartości stylu szablonu ( `t_dwStyle`) są zwracane. Jeśli `dwStyle` jest różna od zera, `dwStyle` jest zwracany.  
+ *dwStyle*  
+ Standardowe style służy do tworzenia okna. Jeśli *dwStyle* ma wartość 0, wartości styl szablonu (`t_dwStyle`) są zwracane. Jeśli *dwStyle* jest różna od zera, *dwStyle* jest zwracana.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Style okna standardowego obiektu.  
   
 ##  <a name="getwndexstyle"></a>  CWinTraits::GetWndExStyle  
- Wywołanie tej funkcji można pobrać rozszerzone style `CWinTraits` obiektu.  
+ Wywołaj tę funkcję, aby pobrać rozszerzone style `CWinTraits` obiektu.  
   
 ```
 static DWORD GetWndExStyle(DWORD dwExStyle);
 ```  
   
 ### <a name="parameters"></a>Parametry  
- `dwExStyle`  
- Rozszerzone style używany do tworzenia okna. Jeśli `dwExStyle` ma wartość 0, wartości stylu szablonu ( `t_dwExStyle`) są zwracane. Jeśli `dwExStyle` jest różna od zera, `dwExStyle` jest zwracany.  
+ *dwExStyle*  
+ Rozszerzone style służy do tworzenia okna. Jeśli *dwExStyle* ma wartość 0, wartości styl szablonu (`t_dwExStyle`) są zwracane. Jeśli *dwExStyle* jest różna od zera, *dwExStyle* jest zwracana.  
   
 ### <a name="return-value"></a>Wartość zwracana  
  Rozszerzone Style okna obiektu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Członkowie klasy](http://msdn.microsoft.com/en-us/dbe6a147-3f01-4aea-a3fb-fe6ebadc31f8)   
- [Przegląd klas](../../atl/atl-class-overview.md)   
+ [Elementy członkowskie klasy](http://msdn.microsoft.com/dbe6a147-3f01-4aea-a3fb-fe6ebadc31f8)   
+ [Klasa — Przegląd](../../atl/atl-class-overview.md)   
  [Opis cech okna](../../atl/understanding-window-traits.md)

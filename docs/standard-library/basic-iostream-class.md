@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de2f28feb775cd6e37116ea7c27691397d2dfce4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 662c4915753cc49534fa9f489eb61504907744c4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844279"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954711"
 ---
 # <a name="basiciostream-class"></a>basic_iostream — Klasa
 
-Klasy strumienia, który można wykonać obie czynności danych wejściowych i wyjściowych.
+Klasa strumienia, która może wykonać obie czynności danych wejściowych i wyjściowych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -45,7 +45,7 @@ public:
 
 ## <a name="remarks"></a>Uwagi
 
-Klasa szablonu opisuje obiekt, który kontroluje wstawienia za pośrednictwem swojej klasy podstawowej [basic_ostream —](../standard-library/basic-ostream-class.md)< `Elem`, `Tr`>, a ekstrakcje za pośrednictwem swojej klasy podstawowej [basic_ IStream](../standard-library/basic-istream-class.md)< `Elem`, `Tr`>. Dwa obiekty współużytkują wspólne wirtualna klasa podstawowa [basic_ios —](../standard-library/basic-ios-class.md)< `Elem`, `Tr`>. Również zarządzać wspólnej buforu strumienia, elementami typu `Elem`, którego cech znaków są określane przez klasę `Tr`. Konstruktor inicjuje jej klas podstawowych za pośrednictwem `basic_istream`( **strbuf**) i `basic_ostream`( **strbuf**).
+Klasa szablonu opisuje obiekt, który kontroluje za pośrednictwem jej klasa podstawowa liczba operacji wstawienia [basic_ostream](../standard-library/basic-ostream-class.md)< `Elem`, `Tr`> i wyodrębniania za pośrednictwem swojej klasy bazowej [basic_ IStream](../standard-library/basic-istream-class.md)< `Elem`, `Tr`>. Dwa obiekty współużytkują wspólne wirtualnej klasy bazowej [basic_ios —](../standard-library/basic-ios-class.md)< `Elem`, `Tr`>. Również zarządzać wspólnej bufora strumienia, elementami typu `Elem`, którego cech są określane przez klasę `Tr`. Konstruktor inicjuje jego klas podstawowych za pośrednictwem `basic_istream`( **strbuf**) i `basic_ostream`( **strbuf**).
 
 ### <a name="constructors"></a>Konstruktorów
 
@@ -55,21 +55,21 @@ Klasa szablonu opisuje obiekt, który kontroluje wstawienia za pośrednictwem sw
 
 ### <a name="member-functions"></a>Funkcje Członkowskie
 
-|Funkcja członkowska|Opis|
+|Funkcja elementu członkowskiego|Opis|
 |-|-|
-|[swap](#swap)|Zamienia zawartość dostarczonego `basic_iostream` obiektu dla zawartości tego obiektu.|
+|[swap](#swap)|Wymienia zawartość dostarczonego `basic_iostream` obiektu dla zawartości tego obiektu.|
 
 ### <a name="operators"></a>Operatory
 
 |Operator|Opis|
 |-|-|
-|[operator=](#op_eq)|Przypisuje wartość określonej `basic_iostream` obiektu do tego obiektu. Jest to dotyczące przypisania przenoszenia `rvalue` który nie pozostawione kopii.|
+|[operator=](#op_eq)|Przypisuje wartość określonego `basic_iostream` obiektu do tego obiektu. Jest to przeniesienia przypisania obejmujące `rvalue` , nie pozostawione kopię.|
 
 ## <a name="requirements"></a>Wymagania
 
 **Nagłówek:** \<istream >
 
-**Namespace:** Standard
+**Namespace:** standardowe
 
 ## <a name="basic_iostream"></a>  basic_iostream::basic_iostream
 
@@ -85,19 +85,19 @@ basic_iostream();
 
 ### <a name="parameters"></a>Parametry
 
-`strbuf` Istniejące `basic_streambuf` obiektu.
+*strbuf* istniejące `basic_streambuf` obiektu.
 
-`right` Istniejące `basic_iostream` obiekt, który jest używany do tworzenia nowego `basic_iostream`.
+*prawy* istniejące `basic_iostream` obiekt, który jest używany do tworzenia nowego `basic_iostream`.
 
 ### <a name="remarks"></a>Uwagi
 
-Pierwszy Konstruktor inicjuje obiektów podstawowych poprzez `basic_istream(strbuf)` i `basic_ostream(strbuf)`.
+Pierwszy Konstruktor inicjuje obiektów podstawowych za `basic_istream(strbuf)` i `basic_ostream(strbuf)`.
 
-Drugi Konstruktor inicjuje obiektów podstawowych, wywołując `move(right)`.
+Drugi Konstruktor inicjuje obiekty podstawowe, wywołując `move(right)`.
 
 ## <a name="op_eq"></a>  basic_iostream::operator =
 
-Przypisz wartość określonej `basic_iostream` obiektu do tego obiektu. Jest to przypisania przenoszenia, obejmujące r-wartości nie pozostawione kopii.
+Przypisz wartość określonego `basic_iostream` obiektu do tego obiektu. Jest to przeniesienia przypisania obejmujące rvalue, który nie pozostawione kopię.
 
 ```cpp
 basic_iostream& operator=(basic_iostream&& right);
@@ -105,15 +105,15 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` `rvalue` Odwołanie do `basic_iostream` obiektu w celu przypisania.
+*prawy* `rvalue` odwołanie do `basic_iostream` obiekt można przypisać z.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania operator elementu członkowskiego `swap(right)`.
+Element członkowski wywołuje operator `swap(right)`.
 
 ## <a name="swap"></a>  basic_iostream::swap
 
-Zamienia zawartość dostarczonego `basic_iostream` obiektu dla zawartości tego obiektu.
+Wymienia zawartość dostarczonego `basic_iostream` obiektu dla zawartości tego obiektu.
 
 ```cpp
 void swap(basic_iostream& right);
@@ -121,11 +121,11 @@ void swap(basic_iostream& right);
 
 ### <a name="parameters"></a>Parametry
 
-`right` `basic_iostream` Obiektu można zamienić.
+*prawy* `basic_iostream` obiekt do wymiany.
 
 ### <a name="remarks"></a>Uwagi
 
-Wywołania funkcji Członkowskich `swap(right)`.
+Wywołania funkcji elementu członkowskiego `swap(right)`.
 
 ## <a name="see-also"></a>Zobacz także
 

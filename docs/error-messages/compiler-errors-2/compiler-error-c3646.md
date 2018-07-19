@@ -1,7 +1,7 @@
 ---
-title: C3646 błąd kompilatora | Dokumentacja firmy Microsoft
+title: Błąd kompilatora C3646 | Dokumentacja firmy Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/14/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,27 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ad0a7f16b54d2a06586bdb4c26c87dbcf9ae7b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c038520c1a35fa5264e1e98b074687efb336d028
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "35658614"
 ---
-# <a name="compiler-error-c3646"></a>C3646 błąd kompilatora
-"specyfikatora": nieznany specyfikator przesłonięcia  
-  
- Kompilator znaleziono token na pozycji, których ona Oczekiwano znalezienia specyfikator przesłonięcia, ale token nie został rozpoznany przez kompilator.  
-  
- Aby uzyskać więcej informacji, zobacz [specyfikatory Override](../../windows/override-specifiers-cpp-component-extensions.md).  
-  
- Poniższy przykład generuje C3646:  
-  
-```  
-// C3646.cpp  
-// compile with: /clr /c  
-ref class C {  
-   void f() unknown;   // C3646  
-   // try the following line instead  
-   // virtual void f() abstract;  
-};  
+# <a name="compiler-error-c3646"></a>Błąd kompilatora C3646
+
+> "specyfikatora": nieznany specyfikator przesłonięcia
+
+## <a name="remarks"></a>Uwagi
+
+Tokenu można znaleźć kompilatora w miejscu, w którym ją Oczekiwano znalezienia specyfikator przesłonięcia, ale token nie został rozpoznany przez kompilator.
+
+Na przykład jeśli rozpoznane *specyfikator* jest **_NOEXCEPT**, zastąp ją ze słowem kluczowym **noexcept**.
+
+Aby uzyskać więcej informacji, zobacz [zastąpienie specyfikatorów](../../windows/override-specifiers-cpp-component-extensions.md).
+
+## <a name="example"></a>Przykład
+
+Poniższy przykład generuje C3646 i pokazuje sposób, aby rozwiązać ten problem:
+
+```cpp
+// C3646.cpp
+// compile with: /clr /c
+ref class C {
+   void f() unknown;   // C3646
+   // try the following line instead
+   // virtual void f() abstract;
+};
 ```

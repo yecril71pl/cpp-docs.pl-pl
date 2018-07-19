@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30daf42d54b66d4e3c4ad47a406748ab023be79d
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: dc498b96dad089276b248fbb2e420dde3c0bc514
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956635"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027141"
 ---
 # <a name="cdocobjectserveritem-class"></a>Klasa CDocObjectServerItem
-Implementuje zlecenia serwera OLE specjalnie z myślą o DocObject serwerów.  
+Implementuje zlecenia serwera OLE specjalnie dla serwerów DocObject.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -58,15 +58,15 @@ class CDocObjectServerItem : public COleServerItem
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|[CDocObjectServerItem::OnHide](#onhide)|Zgłasza wyjątek, jeśli w ramach próbuje ukryć element DocObject.|  
-|[CDocObjectServerItem::OnShow](#onshow)|Wywoływane przez platformę, by utworzyć DocObject elementu w miejscu aktywne. Jeśli element nie jest DocObject, wywołuje metodę [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow).|  
+|[CDocObjectServerItem::OnHide](#onhide)|Zgłasza wyjątek, jeśli struktura próbuje ukryć element DocObject.|  
+|[CDocObjectServerItem::OnShow](#onshow)|Wywoływane przez platformę, aby element DocObject elementu w miejscu active. Jeśli element nie jest obiekt DocObject, wywołuje metodę [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow).|  
   
 ## <a name="remarks"></a>Uwagi  
- `CDocObjectServerItem` Definiuje funkcje Członkowskie możliwym do zastąpienia: [OnHide](#onhide), [zdarzenia](http://msdn.microsoft.com/en-us/7a9b1363-6ad8-4732-9959-4e35c07644fd), i [metodzie OnShow](#onshow).  
+ `CDocObjectServerItem` Definiuje funkcje Członkowskie z możliwością: [OnHide](#onhide), [zdarzenia](http://msdn.microsoft.com/7a9b1363-6ad8-4732-9959-4e35c07644fd), i [metodzie OnShow](#onshow).  
   
- Umożliwia `CDocObjectServerItem`, zapewnić, że [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) zastąpienia w Twojej `COleServerDoc`-klasy pochodnej zwraca nową `CDocObjectServerItem` obiektu. Jeśli musisz zmienić dowolne funkcje w tego elementu, można utworzyć nowe wystąpienie klasy własne `CDocObjectServerItem`-klasy.  
+ Aby użyć `CDocObjectServerItem`, zapewnić, że [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) zastąpić w usługi `COleServerDoc`— klasie pochodnej zwraca nowy `CDocObjectServerItem` obiektu. Jeśli musisz zmienić żadnych funkcji Twojego elementu, można utworzyć nowe wystąpienie klasy własne `CDocObjectServerItem`-klasy pochodnej.  
   
- Aby uzyskać więcej informacji o DocObjects zobacz [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) i [COleCmdUI](../../mfc/reference/colecmdui-class.md) w *odwołania MFC*. Zobacz też [pierwsze kroki Internet: dokumenty aktywne](../../mfc/active-documents-on-the-internet.md) i [dokumenty aktywne](../../mfc/active-documents-on-the-internet.md).  
+ Aby uzyskać więcej informacji na temat DocObjects zobacz [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) i [COleCmdUI](../../mfc/reference/colecmdui-class.md) w *odwołanie MFC*. Zobacz też [Internet pierwszych kroków: dokumenty aktywne](../../mfc/active-documents-on-the-internet.md) i [dokumenty aktywne](../../mfc/active-documents-on-the-internet.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarchia dziedziczenia  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -94,7 +94,7 @@ CDocObjectServerItem(COleServerDoc* pServerDoc, BOOL bAutoDelete);
  Wskaźnik do dokumentu, który będzie zawierać nowy element DocObject.  
   
  *bAutoDelete*  
- Wskazuje, czy obiekt może zostać usunięta, gdy do niej łącza zostanie zwolniony. Argument ma wartość **FALSE** Jeśli `CDocObjectServerItem` obiekt jest integralną częścią danych dokumentu. Ustaw ją na **TRUE** Jeśli obiekt jest strukturą dodatkowej używany do identyfikowania zakresu w danych dokumentu, który może zostać usunięta przez platformę.  
+ Wskazuje, czy obiekt może zostać usunięty po udostępnieniu do niej łącza. Argument ma wartość FAŁSZ Jeśli `CDocObjectServerItem` obiekt jest integralną częścią danych dokumentu. Ustaw ją na wartość TRUE, jeśli obiekt jest struktura dodatkowych, używany do identyfikowania zakres danych dokumentu, który może zostać usunięta przez platformę.  
   
 ##  <a name="getdocument"></a>  CDocObjectServerItem::GetDocument  
  Pobiera wskaźnik do dokumentu, który zawiera element.  
@@ -104,30 +104,30 @@ COleServerDoc* GetDocument() const;
 ```  
   
 ### <a name="return-value"></a>Wartość zwracana  
- Wskaźnik do dokumentu, który zawiera element; **NULL** Jeśli element nie jest częścią dokumentu.  
+ Wskaźnik do dokumentu, który zawiera element; Wartość NULL, jeśli element nie jest częścią dokumentu.  
   
 ### <a name="remarks"></a>Uwagi  
- Dzięki temu dostęp do dokumentu serwera, który został przekazany jako argument [CDocObjectServerItem](#cdocobjectserveritem) konstruktora.  
+ Dzięki temu dostęp do dokumentu serwera, który jest przekazywany jako argument do [CDocObjectServerItem](#cdocobjectserveritem) konstruktora.  
   
 ##  <a name="onhide"></a>  CDocObjectServerItem::OnHide  
- Wywoływane przez platformę, by ukryć element.  
+ Metoda wywoływana przez platformę, by ukryć element.  
   
 ```  
 virtual void OnHide();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Domyślna implementacja zwraca wyjątek, jeśli element jest DocObject. Nie można ukryć aktywny element DocObject, ponieważ trwa całego widoku. Należy dezaktywować element DocObject, aby ją ukryć. Jeśli element nie jest DocObject, domyślna implementacja wywołuje [COleServerItem::OnHide](../../mfc/reference/coleserveritem-class.md#onhide).  
+ Domyślna implementacja zgłasza wyjątek, jeśli element znajduje się obiekt DocObject. Nie można ukryć aktywny element DocObject, ponieważ trwa całego widoku. Należy zdezaktywować element DocObject, aby zniknął. Jeśli element nie jest obiekt DocObject, domyślna implementacja wywołuje [COleServerItem::OnHide](../../mfc/reference/coleserveritem-class.md#onhide).  
   
 ##  <a name="onshow"></a>  CDocObjectServerItem::OnShow  
- Wywoływane przez platformę, aby nakazać aplikacji serwera, aby DocObject elementu w miejscu aktywne.  
+ Metoda wywoływana przez platformę w celu poinstruowania aplikacji serwera, aby element DocObject elementu w miejscu active.  
   
 ```  
 virtual void OnShow();
 ```  
   
 ### <a name="remarks"></a>Uwagi  
- Jeśli element nie jest DocObject, domyślna implementacja wywołuje [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onopen). Należy przesłonić tę funkcję, jeśli chcesz wykonać specjalne przetwarzania podczas otwierania elementu DocObject.  
+ Jeśli element nie jest obiekt DocObject, domyślna implementacja wywołuje [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onopen). Należy przesłonić tę funkcję, jeśli chcesz wykonać specjalnego przetwarzania podczas otwierania elementu DocObject.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Klasa COleServerItem](../../mfc/reference/coleserveritem-class.md)   
